@@ -14,7 +14,6 @@ export interface ProcessedRow {
         is_national: boolean;
         school_types: string[]; // 2-Year, 4-Year, Trade, Any
         is_renewable: boolean | null;
-        is_new: boolean;
         gap_year_allowed: boolean;
         requires_high_service: boolean;
         score: number;
@@ -32,7 +31,6 @@ export function normalizeRow(row: RawRow): ProcessedRow {
         is_national: false,
         school_types: [],
         is_renewable: null,
-        is_new: false,
         gap_year_allowed: true,
         requires_high_service: false,
         score: 0
@@ -88,8 +86,7 @@ export function normalizeRow(row: RawRow): ProcessedRow {
     const amtMatch = amountStr.replace(/,/g, '').match(/\\d+/);
     if (amtMatch) norm.amount_max = parseInt(amtMatch[0], 10);
 
-    // 8. New/Renewable
-    norm.is_new = (row['New for 2026!'] || '').toLowerCase() === 'x';
+    // 8. Renewable
     norm.is_renewable = (row['Renewing/ Non-Renewing'] || '').toLowerCase().includes('renewing');
 
     return { raw: row, normalized: norm };
@@ -184,8 +181,7 @@ export function processAndFilter(rows: RawRow[], answers: AnswerMap): RawRow[] {
         // Amount Boost
         score += (n.amount_max / 1000); // 1 point per $1,000
 
-        // New/Renewable
-        if (n.is_new) score += 5;
+        // Renewable
         if (n.is_renewable) score += 3;
 
         // Portal

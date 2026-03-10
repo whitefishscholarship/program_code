@@ -5,19 +5,13 @@ export async function downloadAsExcel(rows: Record<string, string>[]): Promise<s
         throw new Error('No scholarships to export.');
     }
 
-    // 1. Remove columns A and B ("New for 2025!", "New for 2026!")
-    const cleanRows = rows.map(row => {
-        const { 'New for 2025!': _1, 'New for 2026!': _2, 'New for 2025': _3, 'New for 2026': _4, ...rest } = row;
-        return rest;
-    });
-
     const workbook = new ExcelJS.Workbook();
-    // 2. Freeze the first line (headers)
+    // 1. Freeze the first line (headers)
     const worksheet = workbook.addWorksheet('Matches', {
         views: [{ state: 'frozen', xSplit: 0, ySplit: 1 }]
     });
 
-    const headers = Object.keys(cleanRows[0]).filter(k => !k.endsWith('_url'));
+    const headers = Object.keys(rows[0]).filter(k => !k.endsWith('_url'));
     worksheet.columns = headers.map(h => ({
         header: h,
         key: h,
@@ -26,7 +20,7 @@ export async function downloadAsExcel(rows: Record<string, string>[]): Promise<s
     }));
 
     // Add data rows, strictly dropping the synthetic _url tracking columns out of the print view
-    const structuredRows = cleanRows.map(row => {
+    const structuredRows = rows.map(row => {
         const newRow: Record<string, string> = {};
         headers.forEach(h => newRow[h] = row[h] || '');
         return newRow;
@@ -39,10 +33,10 @@ export async function downloadAsExcel(rows: Record<string, string>[]): Promise<s
 
         headers.forEach((h, colIndex) => {
             const urlField = `${h}_url`;
-            const rawVal = cleanRows[rowIndex][h] || '';
+            const rawVal = rows[rowIndex][h] || '';
 
             // Check for hidden hyperlink in parallel _url column, OR if the text itself is just a raw web URL
-            const hyperlink = cleanRows[rowIndex][urlField] || (rawVal.startsWith('http') ? rawVal : null);
+            const hyperlink = rows[rowIndex][urlField] || (rawVal.startsWith('http') ? rawVal : null);
 
             if (hyperlink) {
                 // exceljs cells are 1-indexed
