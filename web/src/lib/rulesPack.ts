@@ -3,14 +3,8 @@ export const RulesPack = {
 
     // High confidence keywords that drive hard excludes
     requirements: {
-        organizations: {
-            'military': [/veteran/i, /military/i, /air force/i, /navy/i, /marines/i, /army/i],
-            'first_responder': [/first responder/i, /police/i, /firefighter/i],
-            'farmers_union': [/farmers union/i],
-            'electric_coop': [/electric co-op/i, /electric cooperative/i],
-            'credit_union': [/credit union/i],
-            'elks_lodge': [/elks/i, /lodge/i]
-        },
+        // Deprecated: Shifted entirely into strict_exclude_criteria
+        organizations: {},
 
         // Hard exclude if required but student has < 50 hours
         service_hours: {
@@ -44,8 +38,17 @@ export const RulesPack = {
             lgbtqia: [/lgbtq/i, /transgender/i, /gay/i, /lesbian/i, /queer/i],
             female: [/women/i, /female/i, /girls/i],
             nonbinary: [/non-binary/i, /nonbinary/i],
-            military_veteran: [/veteran/i, /military/i, /air force/i, /navy/i, /marines/i, /army/i],
+            single_parent: [/single parent/i],
             mensa: [/mensa/i],
+
+            // Family, Employee & Org Affiliations
+            military_veteran: [/veteran/i, /military/i, /air force/i, /navy/i, /marines/i, /army/i],
+            first_responder: [/first responder/i, /police/i, /firefighter/i, /law enforcement/i, /emt/i],
+            farmers_union: [/farmers union/i],
+            electric_coop: [/electric co-op/i, /electric cooperative/i, /flathead electric/i],
+            credit_union: [/credit union/i, /whitefish credit union/i],
+            elks_lodge: [/elks/i, /lodge/i],
+            company_employee: [/dependent/i, /employee/i, /don k/i, /whitefish mountain resort/i],
         }
     },
 
@@ -63,7 +66,9 @@ export const RulesPack = {
             business_finance: [/business/i, /finance/i, /accounting/i, /marketing/i, /banking/i, /entrepreneur/i],
             public_service: [/public service/i, /social work/i, /community service/i, /education/i],
             law: [/law/i, /legal/i, /criminal justice/i, /paralegal/i],
-            arts_humanities: [/art/i, /music/i, /humanities/i, /graphic design/i, /creative/i]
+            arts_humanities: [/art/i, /music/i, /humanities/i, /graphic design/i, /creative/i],
+            agriculture_conservation: [/agriculture/i, /forestry/i, /conservation/i, /floriculture/i, /natural resources/i, /environmental/i],
+            athletics_sports: [/athlete/i, /sports/i, /referee/i, /golf/i, /athletics/i]
         },
         financial_need: [/financial need/i, /pell/i, /low income/i, /hardship/i],
         portal: [/portal/i, /foundation/i, /common application/i]

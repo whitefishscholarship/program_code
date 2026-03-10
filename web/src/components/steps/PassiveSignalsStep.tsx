@@ -15,7 +15,7 @@ export default function PassiveSignalsStep({
         updateData({ passiveSignals: { [field]: value } });
     };
 
-    const toggleArrayItem = (field: 'skills' | 'creative_skills' | 'organization_affiliations' | 'constraints' | 'career_interests' | 'special_criteria', item: string) => {
+    const toggleArrayItem = (field: 'skills' | 'creative_skills' | 'constraints' | 'career_interests' | 'special_criteria', item: string) => {
         const arr = passiveSignals[field] as string[];
         const isSelected = arr.includes(item);
         if (isSelected) {
@@ -58,7 +58,7 @@ export default function PassiveSignalsStep({
         { id: 'lgbtqia', category: 'Demographics & Identity', label: 'LGBTQIA+', tooltip: 'Lesbian, Gay, Bisexual, Transgender, Queer, Intersex, or Asexual identity.' },
         { id: 'female', category: 'Demographics & Identity', label: 'Female', tooltip: 'Often strongly considered for underrepresented fields like STEM or Aviation.' },
         { id: 'nonbinary', category: 'Demographics & Identity', label: 'Non-Binary', tooltip: '' },
-        { id: 'military_veteran', category: 'Demographics & Identity', label: 'Military or Veteran Affiliation', tooltip: 'Self or family member who is a veteran or active-duty military.' },
+        { id: 'single_parent', category: 'Demographics & Identity', label: 'Single Parent Household', tooltip: 'Raised by a single parent, or currently a single parent.' },
         { id: 'mensa', category: 'Demographics & Identity', label: 'Mensa Member', tooltip: 'You or a family member are a current member of Mensa.' },
 
         { id: 'aviation_pilot', category: 'Career Interests', label: 'Aviation - Pilot Training', tooltip: 'Flight training, commercial pilot, etc.' },
@@ -72,6 +72,17 @@ export default function PassiveSignalsStep({
         { id: 'public_service', category: 'Career Interests', label: 'Public Service & Social Impact', tooltip: 'Social work, early education, first responder, or community improvement.' },
         { id: 'law', category: 'Career Interests', label: 'Law & Legal Studies', tooltip: 'Pre-Law, Paralegal studies, or criminal justice.' },
         { id: 'arts_humanities', category: 'Career Interests', label: 'Arts & Humanities', tooltip: 'Music education, graphic design, or fine arts.' },
+        { id: 'agriculture_conservation', category: 'Career Interests', label: 'Agriculture & Conservation', tooltip: 'Forestry, farming, floriculture, or natural resources.' },
+
+        { id: 'athletics_sports', category: 'Extracurriculars & Activities', label: 'Student Athlete / Sports Background', tooltip: 'Involved in athletics, refereeing, or specific sports like golf.' },
+
+        { id: 'military_veteran', category: 'Family, Employee, & Org Affiliations', label: 'Military or Veteran Affiliation', tooltip: 'Self or family member who is a veteran or active-duty military.' },
+        { id: 'first_responder', category: 'Family, Employee, & Org Affiliations', label: 'First Responder Affiliation', tooltip: 'Self or family member who is a police officer, firefighter, EMT, etc.' },
+        { id: 'farmers_union', category: 'Family, Employee, & Org Affiliations', label: 'Farmers Union Member', tooltip: 'Family membership in the Farmers Union.' },
+        { id: 'electric_coop', category: 'Family, Employee, & Org Affiliations', label: 'Electric Co-op Member', tooltip: 'Family utilizes a local Electric Co-op (e.g. Flathead Electric).' },
+        { id: 'credit_union', category: 'Family, Employee, & Org Affiliations', label: 'Credit Union Member', tooltip: 'Family utilizes a local Credit Union (e.g. Whitefish Credit Union).' },
+        { id: 'elks_lodge', category: 'Family, Employee, & Org Affiliations', label: 'Elks Lodge Affiliation', tooltip: 'Family involvement with the Elks Lodge.' },
+        { id: 'company_employee', category: 'Family, Employee, & Org Affiliations', label: 'Corporate Sponsor Employee / Dependent', tooltip: 'Parent/Guardian is an employee of a major local sponsor (e.g. Don K, Whitefish Mountain Resort).' },
     ];
 
     // Group criteria by category for accordion UI
@@ -145,29 +156,7 @@ export default function PassiveSignalsStep({
                 </label>
             </section>
 
-            {/* AFFILIATIONS */}
-            <section>
-                <h3 className="font-semibold text-gray-800 text-lg mb-3">Family & Organization Affiliations</h3>
-                <p className="text-gray-500 text-sm mb-4">Are you or your family affiliated with any of the following?</p>
-                <div className="flex flex-wrap gap-2">
-                    {['Military', 'First Responder', 'Farmers Union', 'Electric Co-op', 'Credit Union', 'Elks Lodge'].map(org => {
-                        const isSelected = passiveSignals.organization_affiliations.includes(org);
-                        return (
-                            <button
-                                key={org}
-                                type="button"
-                                onClick={() => toggleArrayItem('organization_affiliations', org)}
-                                className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${isSelected
-                                    ? 'bg-blue-600 text-white border-blue-600'
-                                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
-                                    }`}
-                            >
-                                + {org}
-                            </button>
-                        )
-                    })}
-                </div>
-            </section>
+            {/* Affiliations specifically mapped to dynamic accordion logic */}
 
             {/* SPECIAL CIRCUMSTANCES / CHARACTERISTICS ACCORDIONS */}
             <section>

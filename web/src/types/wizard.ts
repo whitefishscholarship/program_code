@@ -20,7 +20,6 @@ export interface PassiveSignals {
     skills: string[];
     creative_skills: string[];
     financial_need: string; // boolean or intensity enum based on UI selection
-    organization_affiliations: string[];
     background_optional: Record<string, unknown>;
     constraints: string[];
     career_interests: string[];
@@ -53,7 +52,6 @@ export const initialPassiveSignals: PassiveSignals = {
     skills: [],
     creative_skills: [],
     financial_need: '',
-    organization_affiliations: [],
     background_optional: {},
     constraints: [],
     career_interests: [],

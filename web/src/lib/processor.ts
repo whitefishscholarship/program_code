@@ -16,7 +16,6 @@ export interface ProcessedRow {
         is_renewable: boolean | null;
         is_new: boolean;
         gap_year_allowed: boolean;
-        required_orgs: string[];
         requires_high_service: boolean;
         score: number;
     };
@@ -35,7 +34,6 @@ export function normalizeRow(row: RawRow): ProcessedRow {
         is_renewable: null,
         is_new: false,
         gap_year_allowed: true,
-        required_orgs: [],
         requires_high_service: false,
         score: 0
     };
@@ -82,13 +80,8 @@ export function normalizeRow(row: RawRow): ProcessedRow {
     const gap = row['Accepts Gap Year Applications Upon Return']?.toLowerCase() || '';
     if (gap === 'no') norm.gap_year_allowed = false;
 
-    // 6. Organization Requirements
+    // 6. Organization Requirements (Logic migrated to Tier 1 strict exclude engine)
     const summary = (row['Summary'] || '') + ' ' + (row['Focus'] || '');
-    for (const [org, patterns] of Object.entries(RulesPack.requirements.organizations)) {
-        if (patterns.some(p => p.test(summary))) {
-            norm.required_orgs.push(org);
-        }
-    }
 
     // 7. Amount Parsing (for ranking)
     const amountStr = row['Amount'] || '';
@@ -162,22 +155,7 @@ export function processAndFilter(rows: RawRow[], answers: AnswerMap): RawRow[] {
         // Check Gap Year Restrictions
         if (!n.gap_year_allowed && activeFacts.gap_year === true) return false;
 
-        // Organization Affiliations
-        if (n.required_orgs.length > 0) {
-            // Map 'Military' -> 'military'
-            const userOrgs = passiveSignals.organization_affiliations.map(o => {
-                if (o === 'Military') return 'military';
-                if (o === 'First Responder') return 'first_responder';
-                if (o === 'Farmers Union') return 'farmers_union';
-                if (o === 'Electric Co-op') return 'electric_coop';
-                if (o === 'Credit Union') return 'credit_union';
-                if (o === 'Elks Lodge') return 'elks_lodge';
-                return o.toLowerCase();
-            });
-
-            const hasOrg = n.required_orgs.some(org => userOrgs.includes(org));
-            if (!hasOrg) return false;
-        }
+        // Organization Affiliations logic has been merged into the Tier 1 Strict Exclusion engine below.
 
         // Tier 1: Strict Exclusion for Niche Criteria
         // Hardship, identity, and demographics should not be recommended to general students.
