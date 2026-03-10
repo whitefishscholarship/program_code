@@ -22,7 +22,7 @@ export default function Home() {
 
   // 15-minute retry window checking on load
   useEffect(() => {
-    const checkSession = () => {
+    const checkSession = async () => {
       try {
         const payloadStr = sessionStorage.getItem(SESSION_KEY);
         if (payloadStr) {
@@ -32,7 +32,8 @@ export default function Home() {
           if (nowUtc < payload.expires_at_utc) {
             setMatchedCount(payload.matched_rows.length);
             // Pre-bake the excel file for immediate Native HTML downloading
-            setExcelDataUri(downloadAsExcel(payload.matched_rows));
+            const uri = await downloadAsExcel(payload.matched_rows);
+            setExcelDataUri(uri);
             setAppState('EXPORT_SCREEN');
           } else {
             // Expired
@@ -79,7 +80,8 @@ export default function Home() {
       sessionStorage.setItem(SESSION_KEY, JSON.stringify(payload));
 
       // Pre-bake the excel file for immediate Native HTML downloading
-      setExcelDataUri(matched.length > 0 ? downloadAsExcel(matched) : '');
+      const uri = matched.length > 0 ? await downloadAsExcel(matched) : '';
+      setExcelDataUri(uri);
 
       // 4. Move to export screen and CLEAR answers from state
       setAnswers(null);
