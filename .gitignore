@@ -1,0 +1,29 @@
+# Ignore all dot-env files across the entire project
+.env
+.env.*
+!.env.example
+!.env.local.example
+
+# Ignore Node.js dependencies everywhere
+node_modules/
+
+# Python Virtual Environments & Caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Mac OS Directory Meta
+.DS_Store
+
+# Next.js Build Outputs
+web/.next/
+web/out/
+web/build/
+
+# Vercel Configurations
+.vercel/
+
+# TypeScript Cache
+web/*.tsbuildinfo
+web/next-env.d.ts
