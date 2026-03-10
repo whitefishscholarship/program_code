@@ -65,24 +65,18 @@ export async function GET() {
       return NextResponse.json({ error: "No sheets found in document" }, { status: 500 });
     }
 
-    // Grab the first tab (Master) and any tab named "Scraped Data" (if it exists)
+    // The system now strictly pulls from the Master Database tab.
+    // It intentionally ignores the "Scraped Data" tab, which the admin uses as a staging/cleanup area.
     const ranges: string[] = [];
 
     // Find the master structured tab by title
-    const masterTab = meta.data.sheets.find((s: { properties?: { title?: string | null } }) => s.properties?.title?.includes('WHS Senior Scholarships_Updated 2_3_26'));
+    const masterTab = meta.data.sheets.find((s: { properties?: { title?: string | null } }) => s.properties?.title?.includes('Master Database (MD)'));
+
     if (masterTab) {
       ranges.push(`'${masterTab.properties?.title}'!A:Z`);
-    } else if (meta.data.sheets.length > 2) {
-      // Fallback: we know it's probably the 3rd tab based on our script inspection
-      ranges.push(`'${meta.data.sheets[2].properties?.title}'!A:Z`);
     } else if (meta.data.sheets.length > 0) {
+      // Fallback: Just grab the very first tab if the exact name isn't found.
       ranges.push(`'${meta.data.sheets[0].properties?.title}'!A:Z`);
-    }
-
-    // Try to find the AI-generated Scraped Data tab
-    const scrapedTab = meta.data.sheets.find(s => s.properties?.title === 'Scraped Data');
-    if (scrapedTab) {
-      ranges.push(`'Scraped Data'!A:Z`);
     }
 
     // Fetch data including headers for both tabs
