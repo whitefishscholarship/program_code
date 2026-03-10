@@ -5,9 +5,9 @@ export async function downloadAsExcel(rows: Record<string, string>[]): Promise<s
         throw new Error('No scholarships to export.');
     }
 
-    // 1. Remove columns A and B ("New for 2025", "New for 2026")
+    // 1. Remove columns A and B ("New for 2025!", "New for 2026!")
     const cleanRows = rows.map(row => {
-        const { 'New for 2025': _1, 'New for 2026': _2, ...rest } = row;
+        const { 'New for 2025!': _1, 'New for 2026!': _2, 'New for 2025': _3, 'New for 2026': _4, ...rest } = row;
         return rest;
     });
 
