@@ -33,14 +33,16 @@ export async function downloadAsExcel(rows: Record<string, string>[]): Promise<s
     });
     worksheet.addRows(structuredRows);
 
-    // Iterate through the rows and apply synthetic _url columns natively to the Excel cells
     structuredRows.forEach((row, rowIndex) => {
         // exceljs rows are 1-indexed, and Row 1 is the header. So data starts at Row 2.
         const excelRow = worksheet.getRow(rowIndex + 2);
 
         headers.forEach((h, colIndex) => {
             const urlField = `${h}_url`;
-            const hyperlink = cleanRows[rowIndex][urlField];
+            const rawVal = cleanRows[rowIndex][h] || '';
+
+            // Check for hidden hyperlink in parallel _url column, OR if the text itself is just a raw web URL
+            const hyperlink = cleanRows[rowIndex][urlField] || (rawVal.startsWith('http') ? rawVal : null);
 
             if (hyperlink) {
                 // exceljs cells are 1-indexed
