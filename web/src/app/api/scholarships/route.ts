@@ -56,58 +56,66 @@ export async function GET() {
 
     const sheets = google.sheets({ version: 'v4', auth });
 
-    // Fetch metadata to find the titles of the first two sheets
-    const meta = await sheets.spreadsheets.get({
+    // Fetch BOTH the titles AND the grid data in a single efficient call
+    // This avoids the 'Unable to parse range' API bug when bounding grid data
+    const response = await sheets.spreadsheets.get({
       spreadsheetId: sheetId,
+      includeGridData: true,
+      fields: 'sheets(properties.title,data.rowData.values(formattedValue,hyperlink))'
     });
 
-    if (!meta.data.sheets || meta.data.sheets.length === 0) {
+    if (!response.data.sheets || response.data.sheets.length === 0) {
       return NextResponse.json({ error: "No sheets found in document" }, { status: 500 });
     }
 
-    // The system now strictly pulls from the Master Database tab.
-    // It intentionally ignores the "Scraped Data" tab, which the admin uses as a staging/cleanup area.
-    const ranges: string[] = [];
-
     // Find the master structured tab by title
-    const masterTab = meta.data.sheets.find((s: { properties?: { title?: string | null } }) => s.properties?.title?.includes('Master Database (MD)'));
+    let targetSheet = response.data.sheets.find((s: { properties?: { title?: string | null } }) => s.properties?.title?.includes('Master Database'));
 
-    if (masterTab) {
-      ranges.push(`'${masterTab.properties?.title}'!A:Z`);
-    } else if (meta.data.sheets.length > 0) {
-      // Fallback: Just grab the very first tab if the exact name isn't found.
-      ranges.push(`'${meta.data.sheets[0].properties?.title}'!A:Z`);
+    // Fallback: Just grab the very first tab if the exact name isn't found
+    if (!targetSheet) {
+      targetSheet = response.data.sheets[0];
     }
 
-    // Fetch data including headers for both tabs
-    const response = await sheets.spreadsheets.values.batchGet({
-      spreadsheetId: sheetId,
-      ranges: ranges,
-    });
-
-    if (!response.data.valueRanges || response.data.valueRanges.length === 0) {
+    const sheetData = targetSheet.data?.[0]?.rowData;
+    if (!sheetData || sheetData.length === 0) {
       return NextResponse.json({ data: [] });
     }
 
+    const headersNode = sheetData[0].values;
+    const headers = headersNode ? headersNode.map(v => v.formattedValue || '') : [];
+
     const allPayloads: Record<string, string>[] = [];
 
-    // Process rows into objects with keys matching exact headers for each tab
-    response.data.valueRanges.forEach((rangeData) => {
-      const rows = rangeData.values;
-      if (!rows || rows.length === 0) return;
+    // Process rows into objects with keys matching exact headers
+    for (let i = 1; i < sheetData.length; i++) {
+      const row = sheetData[i].values;
+      if (!row || row.length === 0) continue;
 
-      const headers = rows[0] as string[];
-      const payload = rows.slice(1).map(row => {
-        const rowObject: Record<string, string> = {};
-        headers.forEach((header, index) => {
-          // Handle empty trailing cells which the API omits
-          rowObject[header] = row[index] !== undefined ? row[index] : '';
-        });
-        return rowObject;
+      const rowObject: Record<string, string> = {};
+      let hasData = false;
+
+      headers.forEach((header, index) => {
+        if (!header) return; // Skip empty header columns
+        const cell = row[index];
+        const val = cell?.formattedValue || '';
+        const link = cell?.hyperlink || '';
+
+        rowObject[header] = val;
+
+        // If the cell contains an embedded hyperlink natively in Google Sheets,
+        // we attach it as a synthetic column so the export engine can style it later.
+        // The Next.js processor natively ignores these columns since they don't match rules.
+        if (link) {
+          rowObject[`${header}_url`] = link;
+        }
+
+        if (val) hasData = true;
       });
 
-      allPayloads.push(...payload);
-    });
+      if (hasData) {
+        allPayloads.push(rowObject);
+      }
+    }
 
     return NextResponse.json({ data: allPayloads });
 
