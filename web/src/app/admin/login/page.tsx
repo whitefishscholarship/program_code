@@ -57,6 +57,14 @@ export default function AdminLoginPage() {
                             </div>
                         </div>
 
+                        <div className="flex items-center justify-between">
+                            <div className="text-sm">
+                                <a href="/admin/recover" className="font-medium text-blue-600 hover:text-blue-500 transition-colors">
+                                    Forgot your access code?
+                                </a>
+                            </div>
+                        </div>
+
                         {error && (
                             <div className="rounded-md bg-red-50 p-4 animate-in slide-in-from-top-2">
                                 <div className="flex">

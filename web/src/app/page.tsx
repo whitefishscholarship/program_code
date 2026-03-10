@@ -202,6 +202,13 @@ export default function Home() {
         </div>
       )}
 
+      {/* Discrete Admin Link */}
+      <div className="mt-20 pt-8 border-t border-gray-200/60 max-w-4xl mx-auto flex justify-center opacity-40 hover:opacity-100 transition-opacity">
+        <a href="/admin" className="text-xs text-gray-400 hover:text-blue-600 font-medium">
+          Admin Login
+        </a>
+      </div>
+
     </main>
   );
 }
