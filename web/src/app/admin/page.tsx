@@ -15,11 +15,14 @@ export default function AdminDashboard() {
 
     // Staging Data
     const [stagedData, setStagedData] = useState<any | null>(null);
+    const [isPushing, setIsPushing] = useState(false);
+    const [pushSuccess, setPushSuccess] = useState(false);
 
     const handleExtract = async () => {
         setIsExtracting(true);
         setError(null);
         setStagedData(null);
+        setPushSuccess(false);
 
         try {
             const formData = new FormData();
@@ -55,6 +58,32 @@ export default function AdminDashboard() {
             setError(err.message || 'Failed to extract scholarship data.');
         } finally {
             setIsExtracting(false);
+        }
+    };
+
+    const handlePushToDatabase = async () => {
+        setIsPushing(true);
+        setError(null);
+
+        try {
+            const res = await fetch('/api/admin/push', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(stagedData)
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || 'Failed to push row to Master Database.');
+            }
+
+            setPushSuccess(true);
+
+        } catch (err: any) {
+            setError(err.message || 'Failed to push scholarship data.');
+        } finally {
+            setIsPushing(false);
         }
     };
 
@@ -210,7 +239,12 @@ export default function AdminDashboard() {
                                                 <td key={key} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                     <input
                                                         type="text"
-                                                        defaultValue={row[key]}
+                                                        value={row[key]}
+                                                        onChange={(e) => {
+                                                            const newData = [...stagedData];
+                                                            newData[i][key] = e.target.value;
+                                                            setStagedData(newData);
+                                                        }}
                                                         className="w-full bg-transparent border-b border-transparent hover:border-blue-300 focus:border-blue-500 focus:ring-0 outline-none transition-colors"
                                                     />
                                                 </td>
@@ -222,18 +256,31 @@ export default function AdminDashboard() {
                         </div>
 
                         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex justify-between items-center">
-                            <p className="text-xs text-gray-500 font-medium bg-red-100 text-red-700 px-2 py-1 rounded inline-flex items-center">
-                                ⚠️ This row has been evaluated but has NOT been published to the Google Sheet yet.
-                            </p>
+                            {pushSuccess ? (
+                                <p className="text-sm font-medium text-green-700 bg-green-100 py-1.5 px-3 rounded flex items-center">
+                                    <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                    Successfully Inserted into the Google Sheet!
+                                </p>
+                            ) : (
+                                <p className="text-xs text-gray-500 font-medium bg-red-100 text-red-700 px-2 py-1 rounded inline-flex items-center">
+                                    ⚠️ This row has been evaluated but has NOT been published to the Google Sheet yet.
+                                </p>
+                            )}
                             <div className="flex space-x-3">
-                                <button className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                                    Discard
+                                <button
+                                    onClick={() => setStagedData(null)}
+                                    className="px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                                >
+                                    Discard / Start Over
                                 </button>
-                                <button className="px-4 py-2 bg-green-600 rounded-lg text-sm font-medium text-white shadow hover:bg-green-700 transition-colors flex items-center">
-                                    <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                    Approve & Push to Database
+                                <button
+                                    onClick={handlePushToDatabase}
+                                    disabled={isPushing || pushSuccess}
+                                    className={`px-4 py-2 rounded-lg text-sm font-medium text-white shadow transition-colors flex items-center ${pushSuccess ? 'bg-green-700 opacity-50 cursor-not-allowed' :
+                                            isPushing ? 'bg-green-500 cursor-wait' : 'bg-green-600 hover:bg-green-700'
+                                        }`}
+                                >
+                                    {isPushing ? 'Pushing...' : pushSuccess ? 'Committed ✓' : 'Approve & Push to Database'}
                                 </button>
                             </div>
                         </div>
