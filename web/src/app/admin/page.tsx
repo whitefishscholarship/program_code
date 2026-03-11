@@ -22,14 +22,35 @@ export default function AdminDashboard() {
         setStagedData(null);
 
         try {
-            // Placeholder for API integration
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            setStagedData([{
-                "Name of Scholarship": "Test Extracted Scholarship",
-                "Amount": "$1,000",
-                "Due Date": "11/01/2026",
-                "Summary": "This is a placeholder extraction block."
-            }]);
+            const formData = new FormData();
+            formData.append('mode', mode);
+
+            if (mode === 'url' && inputUrl) {
+                formData.append('url', inputUrl);
+            } else if (mode === 'document' && file) {
+                formData.append('file', file);
+            } else if (mode === 'text' && inputText) {
+                formData.append('text', inputText);
+            } else {
+                throw new Error("Missing required exact input for the selected mode.");
+            }
+
+            const res = await fetch('/api/admin/extract', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                throw new Error(data.error || 'Failed to extract scholarship data.');
+            }
+            if (!data.success || !data.data || data.data.length === 0) {
+                throw new Error('AI returned an empty extraction. Try providing more text.');
+            }
+
+            setStagedData(data.data);
+
         } catch (err: any) {
             setError(err.message || 'Failed to extract scholarship data.');
         } finally {
