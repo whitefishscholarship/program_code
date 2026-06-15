@@ -4,7 +4,7 @@
 // parallel Python system; HANDOFF locked decision).
 import { GoogleGenAI, Type, Schema } from '@google/genai';
 import * as cheerio from 'cheerio';
-import { groundRecord, scoreConfidence } from './grounding';
+import { groundRecord, scoreConfidence, isFundTotal } from './grounding';
 
 // The Gemini structured-output schema (one object per distinct scholarship).
 export const scholarshipSchema: Schema = {
@@ -89,6 +89,13 @@ export async function extractScholarships(rawText: string, sourceRef: string): P
     const records: Record<string, unknown>[] = Array.isArray(parsed) ? parsed : [];
     return records.map((rec) => {
         const { record, flags } = groundRecord(rec, rawText);
+        // Reject fund/endowment/donation totals masquerading as an award amount — these
+        // pass value-grounding because the number really is on the page.
+        const amt = String(record['Amount'] ?? '');
+        if (amt && isFundTotal(amt)) {
+            record['Amount'] = '';
+            flags.push(`Amount "${amt.slice(0, 30)}" looks like a fund/endowment total, not an award — blanked`);
+        }
         return { ...record, _confidence: scoreConfidence(record, flags), _flags: flags, _source: sourceRef };
     });
 }

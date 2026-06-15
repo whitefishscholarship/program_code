@@ -75,26 +75,42 @@ function selectCandidates(scraped: Record<string, string>[]): { name: string; ur
     return out;
 }
 
-async function ensureStagingTab(sheets: sheets_v4.Sheets): Promise<void> {
+async function ensureStagingTab(sheets: sheets_v4.Sheets, clear: boolean): Promise<boolean> {
     const meta = await sheets.spreadsheets.get({ spreadsheetId: SHEET_ID, fields: 'sheets(properties(title))' });
     const exists = (meta.data.sheets || []).some((s) => s.properties?.title === STAGING_TAB);
     if (!exists) {
         await sheets.spreadsheets.batchUpdate({ spreadsheetId: SHEET_ID, requestBody: { requests: [{ addSheet: { properties: { title: STAGING_TAB } } }] } });
-    } else {
-        await sheets.spreadsheets.values.clear({ spreadsheetId: SHEET_ID, range: STAGING_TAB });
+        return false; // empty, needs header
     }
+    if (clear) {
+        await sheets.spreadsheets.values.clear({ spreadsheetId: SHEET_ID, range: STAGING_TAB });
+        return false; // cleared, needs header
+    }
+    return true; // existing rows preserved (append mode)
 }
 
-async function stage(): Promise<void> {
+async function stage(start = 0): Promise<void> {
     const sheets = getSheets();
     const [scraped, master] = await Promise.all([readTab(sheets, SCRAPED_TAB), readTab(sheets, MASTER_TAB)]);
     const masterRefs: MasterRef[] = master.map((r) => ({ name: r['Name of Scholarship'] || '', url: firstUrl(r['Application Link/Method'] || '') }));
-    const candidates = selectCandidates(scraped);
-    console.log(`Scraped rows: ${scraped.length} | Master rows: ${master.length} | single-scholarship URL candidates: ${candidates.length}`);
-    console.log(`Processing first ${PAGE_LIMIT} candidate pages; capturing ALL distinct scholarships per page (cap ${PAGE_CAP}).\n`);
+    const allCandidates = selectCandidates(scraped);
+    const candidates = allCandidates.slice(start, start + PAGE_LIMIT);
+    console.log(`Scraped rows: ${scraped.length} | Master rows: ${master.length} | total candidates: ${allCandidates.length}`);
+    console.log(`Processing candidate pages ${start}..${start + candidates.length - 1}; capturing ALL distinct scholarships per page (cap ${PAGE_CAP}).\n`);
 
     const stagedRefs: MasterRef[] = [];
     const stagingRows: string[][] = [];
+    // When continuing (start>0) we append below existing staging rows — seed dedupe with
+    // whatever is already staged (NEW / HOLD / DUPLICATE) so we don't re-stage them.
+    if (start > 0) {
+        try {
+            for (const pr of await readTab(sheets, STAGING_TAB)) {
+                const nm = pr['Name of Scholarship'];
+                if (nm) stagedRefs.push({ name: nm, url: firstUrl(pr['Application Link/Method'] || '') });
+            }
+            console.log(`Append mode: ${stagedRefs.length} rows already in "${STAGING_TAB}" preserved + seeded for dedupe.\n`);
+        } catch { /* tab will be created fresh */ }
+    }
     let attempts = 0;
 
     const today = new Date().toLocaleDateString('en-US'); // M/D/YYYY
@@ -156,16 +172,27 @@ async function stage(): Promise<void> {
         }
     }
 
-    await ensureStagingTab(sheets);
+    const hasExisting = await ensureStagingTab(sheets, start === 0);
     const header = [...STUDENT_HEADERS, ...STAGING_EXTRA];
-    await sheets.spreadsheets.values.update({
-        spreadsheetId: SHEET_ID,
-        range: `${STAGING_TAB}!A1`,
-        valueInputOption: 'RAW',
-        requestBody: { values: [header, ...stagingRows] },
-    });
+    if (hasExisting) {
+        // append below existing staging rows (preserves prior HOLD/NEW rows)
+        await sheets.spreadsheets.values.append({
+            spreadsheetId: SHEET_ID,
+            range: `${STAGING_TAB}!A1`,
+            valueInputOption: 'RAW',
+            insertDataOption: 'INSERT_ROWS',
+            requestBody: { values: stagingRows },
+        });
+    } else {
+        await sheets.spreadsheets.values.update({
+            spreadsheetId: SHEET_ID,
+            range: `${STAGING_TAB}!A1`,
+            valueInputOption: 'RAW',
+            requestBody: { values: [header, ...stagingRows] },
+        });
+    }
     const newCount = stagingRows.filter((r) => r[r.length - 1] === 'NEW').length;
-    console.log(`\nStaged ${stagingRows.length} attempt rows (${newCount} NEW) into "${STAGING_TAB}". Review there, then run with 'push'.`);
+    console.log(`\nStaged ${stagingRows.length} attempt rows (${newCount} NEW) ${hasExisting ? 'appended to' : 'into'} "${STAGING_TAB}". Review there, then run with 'push'.`);
 }
 
 // Build a staging row aligned to [STUDENT_HEADERS..., Confidence, Flags, Source URL, Status].
@@ -203,4 +230,5 @@ async function push(): Promise<void> {
 }
 
 const mode = process.argv[2] || 'stage';
-(mode === 'push' ? push() : stage()).catch((e) => { console.error(e); process.exit(1); });
+const startArg = parseInt(process.argv[3] || '0', 10) || 0; // for `stage <startIndex>`
+(mode === 'push' ? push() : stage(startArg)).catch((e) => { console.error(e); process.exit(1); });

@@ -9,6 +9,7 @@ import {
   scoreConfidence,
   findMasterDuplicate,
   findUrlCollision,
+  isFundTotal,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -49,6 +50,11 @@ const cHi = scoreConfidence(clean, []);
 const cLo = scoreConfidence(record, flags);
 check("confidence higher for clean grounded record", cHi > cLo, `clean=${cHi} fabricated=${cLo}`);
 check("confidence within 5..98", cHi <= 98 && cLo >= 5);
+
+// fund/endowment totals are not award amounts
+check("isFundTotal flags '$7.5 million fund'", isFundTotal("$7.5 million fund") === true);
+check("isFundTotal flags '$4.2 million endowment'", isFundTotal("$4.2 million endowment") === true);
+check("isFundTotal passes a real award", isFundTotal("$2,000 a year") === false);
 
 // trap-aware amount: donor total ignored
 const amt = normalizeAmount("Two $1,600 scholarships will be available. A donor has given over $50,000 to date.");

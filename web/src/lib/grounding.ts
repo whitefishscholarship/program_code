@@ -115,6 +115,13 @@ export function normalizeAmount(text: string): { display: string; value: number;
   return { display, value: hi, flags };
 }
 
+// True if an Amount string looks like a fund/endowment/donation TOTAL rather than an
+// award a student receives (e.g. "$7.5 million fund", "$4.2 million endowment"). These
+// pass value-grounding (the number IS on the page) so they must be caught by wording.
+export function isFundTotal(amount: string): boolean {
+  return /\b(million|billion|fund|endow|donat|raised|budget|portfolio|gift)\b/i.test(amount || '');
+}
+
 // ---------------------------------------------------------------- gpa
 // Returns a qualifying-GPA value (prefers "to qualify" over "to maintain") + flags.
 export function normalizeGpa(text: string): { value: string; flags: string[] } {
