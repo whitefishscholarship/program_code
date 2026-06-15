@@ -179,23 +179,28 @@ export interface MasterRef {
   url: string;
 }
 
-// Returns the matching master row's name if this record duplicates an existing entry
-// (same normalized URL, or name token-sets equal / subset), else null.
-export function findMasterDuplicate(
-  recName: string,
-  recUrl: string,
-  master: MasterRef[],
-): string | null {
-  const u = normalizeUrl(recUrl);
+// Returns the matching entry's name if this record duplicates an existing one by NAME
+// (token-sets equal, or the record's tokens are a subset of an existing entry's), else
+// null. Dedupe is name-based on purpose: many distinct scholarships share one landing
+// URL on list pages, so URL equality must NOT collapse them (use findUrlCollision to
+// flag those for review instead).
+export function findMasterDuplicate(recName: string, master: MasterRef[]): string | null {
   const tk = nameTokens(recName);
+  if (!tk.size) return null;
   for (const m of master) {
-    if (u && normalizeUrl(m.url) && u === normalizeUrl(m.url)) return m.name;
     const mtk = nameTokens(m.name);
-    if (tk.size && mtk.size) {
-      const equal = tk.size === mtk.size && [...tk].every((t) => mtk.has(t));
-      const subset = [...tk].every((t) => mtk.has(t));
-      if (equal || subset) return m.name;
-    }
+    if (mtk.size && [...tk].every((t) => mtk.has(t))) return m.name; // subset covers equality
+  }
+  return null;
+}
+
+// Returns the name of an entry sharing this record's normalized URL (a soft signal —
+// expected and harmless on multi-scholarship list pages), else null.
+export function findUrlCollision(recUrl: string, refs: MasterRef[]): string | null {
+  const u = normalizeUrl(recUrl);
+  if (!u) return null;
+  for (const m of refs) {
+    if (normalizeUrl(m.url) === u) return m.name;
   }
   return null;
 }

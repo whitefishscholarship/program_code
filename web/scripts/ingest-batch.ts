@@ -10,8 +10,8 @@ import { config } from 'dotenv';
 config({ path: '.env.local' }); // Next.js local env (GEMINI_API_KEY, sheet id, SA creds)
 import { google, sheets_v4 } from 'googleapis';
 import { fetchUrlToText, extractScholarships, GroundedRecord } from '../src/lib/extract';
-import { findMasterDuplicate, normalizeUrl, MasterRef } from '../src/lib/grounding';
-import { STUDENT_HEADERS, mapRecordToRow, assertWritableHeaders, normalizeHeader } from '../src/lib/pushMapping';
+import { findMasterDuplicate, findUrlCollision, nameTokens, MasterRef } from '../src/lib/grounding';
+import { STUDENT_HEADERS, mapRecordToRow, assertWritableHeaders } from '../src/lib/pushMapping';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID!;
 const SCRAPED_TAB = 'Scraped Data';
@@ -19,8 +19,8 @@ const MASTER_TAB = 'Master Database';
 const STAGING_TAB = 'Ingestion Staging';
 const STAGING_EXTRA = ['Confidence', 'Flags', 'Source URL', 'Status'];
 
-const BATCH_TARGET = 10; // successful NEW rows to collect
-const MAX_ATTEMPTS = 24; // cap URL fetches
+const PAGE_LIMIT = 18; // number of candidate PAGES to process (each may yield several scholarships)
+const PAGE_CAP = 10; // max scholarships kept per page (flag + cap big list pages)
 const BAD_HOSTS = ['google.com', 'bing.com', 'scholarships.com', 'fastweb', 'bold.org', 'goingmerry', 'scholarshipowl', 'niche.com', 'cappex', 'unigo', 'careeronestop', 'collegeboard', 'salliemae', 'petersons'];
 
 function getSheets(): sheets_v4.Sheets {
@@ -91,15 +91,16 @@ async function stage(): Promise<void> {
     const masterRefs: MasterRef[] = master.map((r) => ({ name: r['Name of Scholarship'] || '', url: firstUrl(r['Application Link/Method'] || '') }));
     const candidates = selectCandidates(scraped);
     console.log(`Scraped rows: ${scraped.length} | Master rows: ${master.length} | single-scholarship URL candidates: ${candidates.length}`);
-    console.log(`Targeting ${BATCH_TARGET} grounded NEW rows (max ${MAX_ATTEMPTS} fetch attempts).\n`);
+    console.log(`Processing first ${PAGE_LIMIT} candidate pages; capturing ALL distinct scholarships per page (cap ${PAGE_CAP}).\n`);
 
     const stagedRefs: MasterRef[] = [];
     const stagingRows: string[][] = [];
     let attempts = 0;
-    let collected = 0;
+
+    const today = new Date().toLocaleDateString('en-US'); // M/D/YYYY
 
     for (const cand of candidates) {
-        if (collected >= BATCH_TARGET || attempts >= MAX_ATTEMPTS) break;
+        if (attempts >= PAGE_LIMIT) break;
         attempts++;
         const label = `[${attempts}] ${cand.name.slice(0, 44)}`;
         let records: GroundedRecord[] = [];
@@ -111,34 +112,47 @@ async function stage(): Promise<void> {
             stagingRows.push(rowFor({ 'Name of Scholarship': cand.name }, 0, ['fetch/extract failed'], cand.url, 'FETCH-FAILED'));
             continue;
         }
-        // Keep the single best-grounded named record for this single-scholarship page.
-        const named = records.filter((r) => String(r['Name of Scholarship'] || '').trim());
+        // Keep ALL distinct grounded scholarships on the page (it may be a list page),
+        // de-duped within the page by name, highest-confidence first, capped per page.
+        let named = records.filter((r) => String(r['Name of Scholarship'] || '').trim());
+        named.sort((a, b) => (b._confidence || 0) - (a._confidence || 0));
+        const pageSeen: Array<Set<string>> = [];
+        named = named.filter((r) => {
+            const tk = nameTokens(String(r['Name of Scholarship']));
+            if ([...pageSeen].some((s) => s.size === tk.size && [...tk].every((t) => s.has(t)))) return false;
+            pageSeen.push(tk);
+            return true;
+        });
         if (!named.length) {
             console.log(`${label}  -> no grounded named record`);
             stagingRows.push(rowFor({ 'Name of Scholarship': cand.name }, 0, ['no grounded named record'], cand.url, 'EMPTY'));
             continue;
         }
-        named.sort((a, b) => (b._confidence || 0) - (a._confidence || 0));
-        const rec = named[0];
-        // Stamp the ingestion date so new rows are identifiable in Master Database even
-        // after the tab is re-sorted (filter/sort by Last Updated = today).
-        rec['Last Updated'] = new Date().toLocaleDateString('en-US'); // M/D/YYYY
-        const recName = String(rec['Name of Scholarship'] || '');
-        const recUrl = firstUrl(String(rec['Application Link/Method'] || '')) || cand.url;
+        const capped = named.length > PAGE_CAP;
+        const kept = named.slice(0, PAGE_CAP);
+        console.log(`${label}  -> page yielded ${named.length} scholarship(s)${capped ? ` (capped at ${PAGE_CAP})` : ''}`);
 
-        const dupMaster = findMasterDuplicate(recName, recUrl, masterRefs);
-        const dupBatch = findMasterDuplicate(recName, recUrl, stagedRefs);
-        let status = 'NEW';
-        const flags = [...(rec._flags || [])];
-        if (dupMaster) { status = `DUPLICATE (master: ${dupMaster})`; }
-        else if (dupBatch) { status = `DUPLICATE (batch: ${dupBatch})`; }
+        for (const rec of kept) {
+            rec['Last Updated'] = today; // stamp so new rows are findable after re-sort
+            const recName = String(rec['Name of Scholarship'] || '');
+            const recUrl = firstUrl(String(rec['Application Link/Method'] || '')) || cand.url;
+            const flags = [...(rec._flags || [])];
+            if (capped) flags.push(`page had ${named.length} scholarships — review source for any beyond the first ${PAGE_CAP}`);
 
-        stagingRows.push(rowFor(rec, rec._confidence || 0, flags, recUrl, status));
-        console.log(`${label}  -> ${status}  conf=${rec._confidence}  ${flags.length ? '⚑' + flags.length : ''}`);
+            const dupMaster = findMasterDuplicate(recName, masterRefs);
+            const dupBatch = findMasterDuplicate(recName, stagedRefs);
+            let status = 'NEW';
+            if (dupMaster) status = `DUPLICATE (master: ${dupMaster})`;
+            else if (dupBatch) status = `DUPLICATE (batch: ${dupBatch})`;
+            else {
+                // distinct NEW scholarship that happens to share a list-page URL: flag, don't merge
+                const coll = findUrlCollision(recUrl, [...masterRefs, ...stagedRefs]);
+                if (coll) flags.push(`shares source URL with "${coll}" (distinct scholarship on a list page)`);
+            }
 
-        if (status === 'NEW') {
-            stagedRefs.push({ name: recName, url: recUrl });
-            collected++;
+            stagingRows.push(rowFor(rec, rec._confidence || 0, flags, recUrl, status));
+            console.log(`      • ${status}  conf=${rec._confidence}  ${recName.slice(0, 50)}${flags.length ? '  ⚑' + flags.length : ''}`);
+            if (status === 'NEW') stagedRefs.push({ name: recName, url: recUrl });
         }
     }
 
@@ -186,8 +200,6 @@ async function push(): Promise<void> {
         requestBody: { values },
     });
     console.log(`Appended ${values.length} row(s) to ${MASTER_TAB}. ${resp.data.updates?.updatedRange || ''}`);
-    // sanity: confirm no forbidden header sneaked in
-    void normalizeUrl; void normalizeHeader;
 }
 
 const mode = process.argv[2] || 'stage';

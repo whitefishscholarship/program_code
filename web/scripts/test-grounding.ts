@@ -8,6 +8,7 @@ import {
   normalizeGpa,
   scoreConfidence,
   findMasterDuplicate,
+  findUrlCollision,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -57,14 +58,18 @@ check("normalizeAmount ignores donor total", amt.value === 1600, String(amt.valu
 const g = normalizeGpa("Students must have a 3.0 GPA to qualify. Recipients must maintain a 2.5 GPA to maintain.");
 check("normalizeGpa qualify over maintain", g.value === "3.0" && g.flags.some((f) => f.includes("maintain")), JSON.stringify(g));
 
-// dedupe vs master by URL and by name
+// dedupe vs master — NAME based (URL collisions must NOT merge distinct scholarships)
 const master = [
   { name: "ABC Merit Scholarship", url: "https://abc.org/apply" },
   { name: "Whitefish Community Scholarship", url: "" },
 ];
-check("dedupe by URL", findMasterDuplicate("Totally Different Name", "https://abc.org/apply?ref=x", master) === "ABC Merit Scholarship");
-check("dedupe by name subset", findMasterDuplicate("Whitefish Community Scholarship Fund", "", master) === "Whitefish Community Scholarship");
-check("non-duplicate returns null", findMasterDuplicate("Brand New Award", "https://new.org", master) === null);
+check("dedupe by name subset", findMasterDuplicate("Whitefish Community Scholarship Fund", master) === "Whitefish Community Scholarship");
+check("dedupe by name equal", findMasterDuplicate("ABC Merit Scholarship", master) === "ABC Merit Scholarship");
+check("distinct name on SAME url is NOT a dup", findMasterDuplicate("ABC Engineering Award", master) === null);
+check("non-duplicate returns null", findMasterDuplicate("Brand New Award", master) === null);
+// URL collision is reported separately (a soft flag, not a merge)
+check("findUrlCollision reports shared url", findUrlCollision("https://abc.org/apply?ref=x", master) === "ABC Merit Scholarship");
+check("findUrlCollision null when unique", findUrlCollision("https://new.org", master) === null);
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);
