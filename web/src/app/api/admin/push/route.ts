@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 import { ADMIN_COOKIE, verifyAdminToken } from '@/lib/adminAuth';
+import { mapRecordToRow, assertWritableHeaders } from '@/lib/pushMapping';
 
 export async function POST(req: NextRequest) {
     try {
@@ -38,42 +39,27 @@ export async function POST(req: NextRequest) {
 
         const sheets = google.sheets({ version: 'v4', auth });
 
-        // Map the array of objects explicitly into the ordered array of arrays required by Google Sheets
-        // Note: We match the order of the actual columns in the sheet exactly.
-        const headerBinding = [
-            "New for 2026!",
-            "New for 2025!",
-            "Last Updated",
-            "Due Date",
-            "In State / National",
-            "Portal / Scholarship",
-            "Amount",
-            "Location/Information",
-            "Name of Scholarship",
-            "Application Link/Method",
-            "Summary",
-            "Stated Min GPA",
-            "School Type",
-            "Renewing/Non-Renewing",
-            "Focus",
-            "Acute Financial Need",
-            "Accepts Gap Year Apps Upon Return",
-            "POC (Emails, Names, Phone)",
-            "Notes",
-            "Known Applicants 2025"
-        ];
-
-        const values = body.map((row: any) => {
-            return headerBinding.map(key => {
-                const val = row[key];
-                return val ? String(val) : "";
-            });
+        // Read the LIVE Master Database header row and write BY NAME (HANDOFF bug #6).
+        // The old code appended a fixed 20-col, master-shaped row positionally to A:T,
+        // which both drifted against the 15-col student tab and wrote 3 PII/staff columns.
+        const headerResp = await sheets.spreadsheets.values.get({
+            spreadsheetId: GOOGLE_SHEET_ID,
+            range: 'Master Database!1:1',
         });
+        const liveHeaders = (headerResp.data.values?.[0] || []).map((h) => String(h));
 
-        // Push data to the absolute bottom via 'append'
+        // Refuse to write if the target tab isn't the clean student schema (PII present
+        // or an expected student column missing) — fail loud rather than misalign/leak.
+        assertWritableHeaders(liveHeaders);
+
+        // Each staged record -> one row aligned to the live headers; PII/internal fields dropped.
+        const values = body.map((row: any) => mapRecordToRow(row, liveHeaders));
+
+        // Append after the last row; the row length matches the live header count so it
+        // lands aligned (15 cols -> A:O).
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: GOOGLE_SHEET_ID,
-            range: 'Master Database!A:T',
+            range: 'Master Database!A1',
             valueInputOption: 'USER_ENTERED',
             insertDataOption: 'INSERT_ROWS',
             requestBody: {

@@ -1,0 +1,201 @@
+// Grounding honesty gate over Gemini's extraction — TS port of the corrected
+// verify_pipeline.py logic (HANDOFF bugs #3 numeric value-match, #13 source grounding).
+//
+// Gemini stays the extractor; this module is the honesty check over its output: every
+// grounded field (and the NAME) must be provably present in the captured source text,
+// matched BY VALUE for numbers (not substring), or it is blanked and flagged. Each
+// record also gets a confidence score and dedupe helpers vs the live Master Database.
+
+// ---------------------------------------------------------------- value-match grounding
+// A number token: a full numeric literal with optional thousands-commas + decimal part.
+const NUM_TOKEN = /\d[\d,]*(?:\.\d+)?/g;
+
+function asNumber(tok: string): number | null {
+  const n = Number(tok.replace(/,/g, ""));
+  return Number.isFinite(n) ? Math.round(n * 10000) / 10000 : null;
+}
+
+function sourceNumbers(src: string): Set<number> {
+  const out = new Set<number>();
+  for (const tok of src.match(NUM_TOKEN) || []) {
+    const n = asNumber(tok);
+    if (n !== null) out.add(n);
+  }
+  return out;
+}
+
+// Sentinels that are categorical, not literal page text — always "grounded".
+const GROUND_SENTINELS = new Set(["any", "varies", "tbd", "full tuition / waiver", "n/a", ""]);
+
+// True if `value` is provably present in `sourceText`. Numeric values match by VALUE
+// against the discrete numbers in the source: $5,000 (5000) must NOT ground against a
+// page whose only figure is $50,000 (50000); GPA 3.5 must NOT ground against $13.50.
+export function groundValue(value: string, sourceText: string): boolean {
+  const v = (value ?? "").toString().trim();
+  if (!v || GROUND_SENTINELS.has(v.toLowerCase())) return true;
+  const src = sourceText.replace(/\s+/g, " ").toLowerCase();
+  const valNums = v.match(NUM_TOKEN);
+  if (valNums && valNums.length) {
+    const srcNums = sourceNumbers(src);
+    for (const tok of valNums) {
+      const n = asNumber(tok);
+      if (n === null || !srcNums.has(n)) return false;
+    }
+    return true;
+  }
+  const toks = v.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length > 2);
+  if (!toks.length) return true;
+  const hits = toks.filter((t) => src.includes(t)).length;
+  return hits / toks.length >= 0.6;
+}
+
+// The record fields that must be grounded against source (mirrors the Python set).
+// Keys cover both the extract-route schema spellings and the live-sheet spellings.
+const GROUNDED_FIELDS = [
+  ["Name of Scholarship", "name"],
+  ["Amount", "amount"],
+  ["Stated Min GPA", "Stated Min. GPA"],
+  ["Location/Information", "Scholarship Location/Information"],
+  ["Focus", "focus"],
+  ["Summary", "summary"],
+] as const;
+
+// Blank + flag any grounded field not provably in `sourceText`. Mutates a shallow copy.
+export function groundRecord<T extends Record<string, unknown>>(
+  record: T,
+  sourceText: string,
+): { record: T; flags: string[] } {
+  const rec = { ...record };
+  const flags: string[] = [];
+  const seen = new Set<string>();
+  for (const variants of GROUNDED_FIELDS) {
+    for (const key of variants) {
+      if (seen.has(key) || !(key in rec)) continue;
+      seen.add(key);
+      const val = rec[key];
+      if (val && !groundValue(String(val), sourceText)) {
+        (rec as Record<string, unknown>)[key] = "";
+        flags.push(`UNGROUNDED ${key} '${String(val).slice(0, 30)}' not found in source — blanked`);
+      }
+    }
+  }
+  return { record: rec, flags };
+}
+
+// ---------------------------------------------------------------- trap-aware amount
+const AMOUNT_AWARD_CUES = /scholarship|award|waiver|stipend|grant|prize|each|receive|valued|value of|per year|\/\s*yr|tuition/i;
+const AMOUNT_TRAP_CUES = /donat|pledg|endow|raised|\bgift\b|in memory|to fund|over the next|to date|\bmillion\b|\bbillion\b|budget|salary|has given|contribut|net worth/i;
+
+// Returns a trap-aware award amount derived from source text (donation/endowment
+// sentences are skipped). Used to cross-check Gemini's Amount and flag disagreement.
+export function normalizeAmount(text: string): { display: string; value: number; flags: string[] } {
+  const flags: string[] = [];
+  const low = text.toLowerCase();
+  if (/full[- ]tuition|tuition waiver|covers? full tuition/.test(low) && !/\$/.test(text)) {
+    return { display: "Full tuition / waiver", value: 0, flags: ["non-cash award"] };
+  }
+  const kept: number[] = [];
+  for (const sent of text.split(/(?<=[.;\n])\s+/)) {
+    if (AMOUNT_TRAP_CUES.test(sent)) continue;
+    if (!AMOUNT_AWARD_CUES.test(sent)) continue;
+    for (const m of sent.matchAll(/\$\s?([\d,]+(?:\.\d{2})?)/g)) {
+      const v = parseInt(m[1].replace(/,/g, "").split(".")[0], 10);
+      if (Number.isFinite(v)) kept.push(v);
+    }
+  }
+  if (!kept.length) {
+    if (/\bvaries\b|varies by|amount varies|tbd/.test(low)) return { display: "Varies", value: 0, flags: ["amount varies/TBD"] };
+    return { display: "", value: 0, flags: ["no grounded award amount found"] };
+  }
+  const hi = Math.max(...kept);
+  const lo = Math.min(...kept);
+  if (/up to\s*\$/.test(low)) flags.push("up-to (max, not guaranteed)");
+  if (hi > 0 && hi < 250) flags.push("implausibly low award (<$250) — verify at source");
+  const display = lo === hi ? `$${hi.toLocaleString("en-US")}` : `$${lo.toLocaleString("en-US")} – $${hi.toLocaleString("en-US")}`;
+  return { display, value: hi, flags };
+}
+
+// ---------------------------------------------------------------- gpa
+// Returns a qualifying-GPA value (prefers "to qualify" over "to maintain") + flags.
+export function normalizeGpa(text: string): { value: string; flags: string[] } {
+  const low = text.toLowerCase();
+  const flags: string[] = [];
+  if (/no (?:minimum |min\.? )?gpa|gpa.{0,8}not required|no gpa requirement/.test(low)) {
+    return { value: "Any", flags: ["explicitly no GPA minimum"] };
+  }
+  if (/top \d+\s*(?:%|percent)|class rank/.test(low)) flags.push("eligibility is class-rank, not a GPA number");
+  let qualify =
+    low.match(/(\d\.\d+)\s*(?:cumulative\s*)?gpa[^.]{0,40}(?:to (?:qualify|apply)|or higher|minimum|required)/) ||
+    low.match(/(?:minimum|min\.?|at least|gpa of|gpa:?)\s*(\d\.\d+)/) ||
+    low.match(/(\d\.\d+)\s*(?:or higher\s*)?(?:cumulative\s*)?gpa/);
+  const maintain = low.match(/(\d\.\d+)[^.]{0,30}to maintain/);
+  if (maintain && qualify && maintain[1] !== qualify[1]) {
+    flags.push(`${maintain[1]} GPA to maintain (separate from qualifying GPA)`);
+  }
+  if (qualify) return { value: qualify[1], flags };
+  return { value: "", flags: flags.length ? flags : ["no GPA stated"] };
+}
+
+// ---------------------------------------------------------------- confidence
+// 5..98 confidence. Starts at 50, rewards grounded core fields, penalizes blank/flagged.
+export function scoreConfidence(record: Record<string, unknown>, flags: string[]): number {
+  let c = 50;
+  const has = (...keys: string[]) => keys.some((k) => record[k] && String(record[k]).trim() !== "");
+  if (has("Amount", "amount")) c += 12;
+  if (has("Stated Min GPA", "Stated Min. GPA")) c += 8;
+  if (has("Due Date")) c += 8;
+  if (has("Name of Scholarship", "name")) c += 5;
+  if (has("Summary", "summary")) c += 5;
+  const ungrounded = flags.filter((f) => f.startsWith("UNGROUNDED")).length;
+  c -= 12 * ungrounded;
+  c -= 4 * (flags.length - ungrounded);
+  return Math.max(5, Math.min(98, c));
+}
+
+// ---------------------------------------------------------------- dedupe vs master
+const NAME_STOP = new Set([
+  "the", "a", "an", "scholarship", "scholarships", "award", "awards", "program", "programs",
+  "foundation", "memorial", "fund", "of", "for", "and", "annual",
+]);
+
+export function nameTokens(name: string): Set<string> {
+  return new Set(
+    (name || "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((t) => t.length > 2 && !NAME_STOP.has(t)),
+  );
+}
+
+// Normalize a URL for comparison (host + path, lowercased, no protocol/query/trailing slash).
+export function normalizeUrl(raw: string): string {
+  const m = (raw || "").match(/https?:\/\/([^\s"']+)/i);
+  if (!m) return "";
+  return m[1].toLowerCase().replace(/\/+$/, "").split(/[?#]/)[0];
+}
+
+export interface MasterRef {
+  name: string;
+  url: string;
+}
+
+// Returns the matching master row's name if this record duplicates an existing entry
+// (same normalized URL, or name token-sets equal / subset), else null.
+export function findMasterDuplicate(
+  recName: string,
+  recUrl: string,
+  master: MasterRef[],
+): string | null {
+  const u = normalizeUrl(recUrl);
+  const tk = nameTokens(recName);
+  for (const m of master) {
+    if (u && normalizeUrl(m.url) && u === normalizeUrl(m.url)) return m.name;
+    const mtk = nameTokens(m.name);
+    if (tk.size && mtk.size) {
+      const equal = tk.size === mtk.size && [...tk].every((t) => mtk.has(t));
+      const subset = [...tk].every((t) => mtk.has(t));
+      if (equal || subset) return m.name;
+    }
+  }
+  return null;
+}
