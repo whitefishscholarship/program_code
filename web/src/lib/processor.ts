@@ -83,7 +83,7 @@ export function normalizeRow(row: RawRow): ProcessedRow {
 
     // 7. Amount Parsing (for ranking)
     const amountStr = row['Amount'] || '';
-    const amtMatch = amountStr.replace(/,/g, '').match(/\\d+/);
+    const amtMatch = amountStr.replace(/,/g, '').match(/\d+/);
     if (amtMatch) norm.amount_max = parseInt(amtMatch[0], 10);
 
     // 8. Renewable
@@ -154,15 +154,15 @@ export function processAndFilter(rows: RawRow[], answers: AnswerMap): RawRow[] {
 
         // Organization Affiliations logic has been merged into the Tier 1 Strict Exclusion engine below.
 
-        // Tier 1: Strict Exclusion for Niche Criteria
-        // Hardship, identity, and demographics should not be recommended to general students.
+        // Hard eligibility GATES only: membership / affiliation / employer requirements.
+        // Identity, demographic, health, and hardship criteria are NOT excluded here — they only
+        // boost ranking (below), so an incidental mention never hides an eligible scholarship.
         const fullText = (item.raw['Summary'] || '') + ' ' + (item.raw['Focus'] || '') + ' ' + (item.raw['Name of Scholarship'] || '');
         const normText = fullText.toLowerCase();
 
-        for (const [criteriaId, patterns] of Object.entries(RulesPack.requirements.strict_exclude_criteria)) {
-            // If the scholarship explicitly asks for this niche criteria (e.g. dyslexia)
+        for (const [criteriaId, patterns] of Object.entries(RulesPack.requirements.eligibility_gates)) {
+            // If the scholarship requires this affiliation and the student did not select it, exclude.
             if (patterns.some(r => r.test(normText))) {
-                // If the student DID NOT select this criteria, throw the scholarship out entirely.
                 if (!passiveSignals.special_criteria.includes(criteriaId)) {
                     return false;
                 }
@@ -192,20 +192,20 @@ export function processAndFilter(rows: RawRow[], answers: AnswerMap): RawRow[] {
             score += 10;
         }
 
-        // Special Circumstance & Criteria Matches (Tier 1 Strict & Tier 2 Boosts)
+        // Criteria matches boost ranking — career interests, identity/demographic, AND affiliations.
+        // A selected criterion that the scholarship mentions floats it toward the top (+15).
         const fullText = sum + ' ' + (item.raw['Focus']?.toLowerCase() || '') + ' ' + (item.raw['Name of Scholarship']?.toLowerCase() || '');
         for (const criteriaId of passiveSignals.special_criteria) {
-            // Check Tier 2 Broad Boosts (e.g., STEM, Public Service)
-            const boostPatterns = RulesPack.boosts.special_criteria[criteriaId as keyof typeof RulesPack.boosts.special_criteria];
-            if (boostPatterns && boostPatterns.some(r => r.test(fullText))) {
-                score += 15; // Algorithm boost for niche matches
-            }
-
-            // Check Tier 1 Strict Restrictions (e.g., Dyslexia, First Gen)
-            // Even though we already passed the filter, we still want to reward exact matches with +15 points to rank them highest.
-            const strictPatterns = RulesPack.requirements.strict_exclude_criteria[criteriaId as keyof typeof RulesPack.requirements.strict_exclude_criteria];
-            if (strictPatterns && strictPatterns.some(r => r.test(fullText))) {
-                score += 15;
+            const patternGroups = [
+                RulesPack.boosts.special_criteria[criteriaId as keyof typeof RulesPack.boosts.special_criteria],
+                RulesPack.boosts.identity_criteria[criteriaId as keyof typeof RulesPack.boosts.identity_criteria],
+                RulesPack.requirements.eligibility_gates[criteriaId as keyof typeof RulesPack.requirements.eligibility_gates],
+            ];
+            for (const patterns of patternGroups) {
+                if (patterns && patterns.some(r => r.test(fullText))) {
+                    score += 15;
+                    break;
+                }
             }
         }
 
