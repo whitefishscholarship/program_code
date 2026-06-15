@@ -10,6 +10,7 @@ import {
   findMasterDuplicate,
   findUrlCollision,
   isFundTotal,
+  assessRelevance,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -55,6 +56,14 @@ check("confidence within 5..98", cHi <= 98 && cLo >= 5);
 check("isFundTotal flags '$7.5 million fund'", isFundTotal("$7.5 million fund") === true);
 check("isFundTotal flags '$4.2 million endowment'", isFundTotal("$4.2 million endowment") === true);
 check("isFundTotal passes a real award", isFundTotal("$2,000 a year") === false);
+
+// relevance for HS seniors
+check("relevance: graduate scholarship excluded", assessRelevance("Helene M. Overly Memorial Graduate Scholarship", "For graduate students in transportation.").level === "exclude");
+check("relevance: 'for Graduates' excluded", assessRelevance("Leadership Legacy Scholarship for Graduates", "").level === "exclude");
+check("relevance: type rating -> review", assessRelevance("CAE Citation Bravo Type Rating Scholarship", "Earn a type rating.").level === "review");
+check("relevance: membership -> review", assessRelevance("Lodge Award", "Open to members of the association.").level === "review");
+check("relevance: undergraduate NOT excluded", assessRelevance("Sharon D. Banks Memorial Undergraduate Scholarship", "For undergraduate students.").level === "ok");
+check("relevance: plain HS scholarship ok", assessRelevance("Conquering Cancer Scholarship", "For a graduating high school senior.").level === "ok");
 
 // trap-aware amount: donor total ignored
 const amt = normalizeAmount("Two $1,600 scholarships will be available. A donor has given over $50,000 to date.");

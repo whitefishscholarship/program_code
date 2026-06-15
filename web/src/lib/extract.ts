@@ -4,7 +4,7 @@
 // parallel Python system; HANDOFF locked decision).
 import { GoogleGenAI, Type, Schema } from '@google/genai';
 import * as cheerio from 'cheerio';
-import { groundRecord, scoreConfidence, isFundTotal } from './grounding';
+import { groundRecord, scoreConfidence, isFundTotal, assessRelevance } from './grounding';
 
 // The Gemini structured-output schema (one object per distinct scholarship).
 export const scholarshipSchema: Schema = {
@@ -61,6 +61,7 @@ export type GroundedRecord = Record<string, unknown> & {
     _confidence: number;
     _flags: string[];
     _source: string;
+    _relevance: 'ok' | 'review' | 'exclude';
 };
 
 // Fetch a URL and reduce it to clean body text (same reduction the admin route uses).
@@ -96,6 +97,9 @@ export async function extractScholarships(rawText: string, sourceRef: string): P
             record['Amount'] = '';
             flags.push(`Amount "${amt.slice(0, 30)}" looks like a fund/endowment total, not an award — blanked`);
         }
-        return { ...record, _confidence: scoreConfidence(record, flags), _flags: flags, _source: sourceRef };
+        // Relevance for a graduating HS senior (grad-level / professional-only eligibility).
+        const rel = assessRelevance(String(record['Name of Scholarship'] ?? ''), String(record['Summary'] ?? ''));
+        if (rel.reasons.length) flags.push(`relevance(${rel.level}): ${rel.reasons.join('; ')}`);
+        return { ...record, _confidence: scoreConfidence(record, flags), _flags: flags, _source: sourceRef, _relevance: rel.level };
     });
 }

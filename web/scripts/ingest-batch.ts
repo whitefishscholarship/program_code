@@ -157,18 +157,23 @@ async function stage(start = 0): Promise<void> {
 
             const dupMaster = findMasterDuplicate(recName, masterRefs);
             const dupBatch = findMasterDuplicate(recName, stagedRefs);
-            let status = 'NEW';
+            let status: string;
             if (dupMaster) status = `DUPLICATE (master: ${dupMaster})`;
             else if (dupBatch) status = `DUPLICATE (batch: ${dupBatch})`;
+            else if (capped) status = 'HOLD (link-hub/directory — review)';
+            else if (rec._relevance === 'exclude') status = 'HOLD (not HS-senior — review)';
+            else if (rec._relevance === 'review') status = 'REVIEW (eligibility — check)';
             else {
-                // distinct NEW scholarship that happens to share a list-page URL: flag, don't merge
+                status = 'NEW';
+                // distinct scholarship that happens to share a list-page URL: flag, don't merge
                 const coll = findUrlCollision(recUrl, [...masterRefs, ...stagedRefs]);
                 if (coll) flags.push(`shares source URL with "${coll}" (distinct scholarship on a list page)`);
             }
 
             stagingRows.push(rowFor(rec, rec._confidence || 0, flags, recUrl, status));
             console.log(`      • ${status}  conf=${rec._confidence}  ${recName.slice(0, 50)}${flags.length ? '  ⚑' + flags.length : ''}`);
-            if (status === 'NEW') stagedRefs.push({ name: recName, url: recUrl });
+            // dedupe future rows against anything we staged (except master/batch duplicates)
+            if (!status.startsWith('DUPLICATE')) stagedRefs.push({ name: recName, url: recUrl });
         }
     }
 

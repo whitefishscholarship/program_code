@@ -122,6 +122,29 @@ export function isFundTotal(amount: string): boolean {
   return /\b(million|billion|fund|endow|donat|raised|budget|portfolio|gift)\b/i.test(amount || '');
 }
 
+// ---------------------------------------------------------------- relevance (HS senior)
+// Assess whether a scholarship plausibly applies to a graduating U.S. high-school senior.
+// Conservative: returns 'exclude' only for clear grad-level signals, 'review' for narrow
+// professional/membership eligibility, else 'ok'. Reasons drive a HOLD/REVIEW status in
+// staging — never an auto-delete (a human confirms).
+export function assessRelevance(name: string, summary: string): { level: 'ok' | 'review' | 'exclude'; reasons: string[] } {
+  // mask "undergraduate" so it doesn't trip the "graduate" check
+  const text = `${name} ${summary}`.toLowerCase().replace(/undergraduate/g, 'ugrad');
+  const reasons: string[] = [];
+  if (/\b(graduate students?|graduate scholarship|for graduates|master'?s (?:degree|student|program)|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
+    return { level: 'exclude', reasons: ['graduate/professional-school level — not for HS seniors'] };
+  }
+  const reviewCues: [RegExp, string][] = [
+    [/\b(a&p|airframe and powerplant)\b/, 'A&P mechanic certification'],
+    [/\btype rating\b/, 'pilot type rating (for existing pilots)'],
+    [/\b(cfi|atp certificate|commercial pilot certificate|currently certificated|already hold)\b/, 'requires an existing pilot/professional certificate'],
+    [/\b(members? of|membership in|employees? of|dependents? of (?:members|employees))\b/, 'membership/employer-restricted eligibility'],
+    [/\bcurrently enrolled (?:in|at) (?:a |an )?(?:college|university|graduate)\b/, 'for students already enrolled in college'],
+  ];
+  for (const [re, why] of reviewCues) if (re.test(text)) reasons.push(why);
+  return { level: reasons.length ? 'review' : 'ok', reasons };
+}
+
 // ---------------------------------------------------------------- gpa
 // Returns a qualifying-GPA value (prefers "to qualify" over "to maintain") + flags.
 export function normalizeGpa(text: string): { value: string; flags: string[] } {
