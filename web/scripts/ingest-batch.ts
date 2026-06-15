@@ -203,30 +203,58 @@ function rowFor(rec: Record<string, unknown>, confidence: number, flags: string[
 
 async function push(): Promise<void> {
     const sheets = getSheets();
-    const staged = await readTab(sheets, STAGING_TAB);
-    const newRows = staged.filter((r) => (r['Status'] || '').trim() === 'NEW');
-    if (!newRows.length) { console.log('No Status=NEW rows in staging — nothing to push.'); return; }
+    // Read staging as raw values so we can update each row's Status by index.
+    const stResp = await sheets.spreadsheets.values.get({ spreadsheetId: SHEET_ID, range: STAGING_TAB });
+    const stVals = stResp.data.values || [];
+    if (stVals.length < 2) { console.log('Staging is empty — nothing to push.'); return; }
+    const stHdr = stVals[0].map(String);
+    const nameIdx = stHdr.indexOf('Name of Scholarship');
+    const statusIdx = stHdr.indexOf('Status');
+    const statusCol = String.fromCharCode(65 + statusIdx);
 
-    // Read the LIVE Master Database header row and write BY NAME (same as the fixed push route).
-    const headerResp = await sheets.spreadsheets.values.get({ spreadsheetId: SHEET_ID, range: `${MASTER_TAB}!1:1` });
+    // Read the LIVE Master Database header row + current names (idempotency guard).
+    const [headerResp, master] = await Promise.all([
+        sheets.spreadsheets.values.get({ spreadsheetId: SHEET_ID, range: `${MASTER_TAB}!1:1` }),
+        readTab(sheets, MASTER_TAB),
+    ]);
     const liveHeaders = (headerResp.data.values?.[0] || []).map(String);
     assertWritableHeaders(liveHeaders);
+    const masterRefs: MasterRef[] = master.map((r) => ({ name: r['Name of Scholarship'] || '', url: firstUrl(r['Application Link/Method'] || '') }));
 
-    const values = newRows.map((staging) => {
-        // Reconstruct a record keyed by the student headers from the staging row.
+    const toAppend: string[][] = [];
+    const statusUpdates: { range: string; values: string[][] }[] = [];
+    let skipped = 0;
+    for (let i = 1; i < stVals.length; i++) {
+        const row = stVals[i];
+        if ((row[statusIdx] || '').trim() !== 'NEW') continue;
+        const name = row[nameIdx] || '';
+        // Idempotency: never re-push a name already in Master Database.
+        const dup = findMasterDuplicate(name, masterRefs);
+        if (dup) {
+            statusUpdates.push({ range: `${STAGING_TAB}!${statusCol}${i + 1}`, values: [[`ALREADY IN MASTER (${dup})`]] });
+            skipped++;
+            continue;
+        }
         const rec: Record<string, string> = {};
-        for (const h of STUDENT_HEADERS) rec[h] = staging[h] || '';
-        return mapRecordToRow(rec, liveHeaders);
-    });
+        stHdr.forEach((h, c) => { if (STUDENT_HEADERS.includes(h as typeof STUDENT_HEADERS[number])) rec[h] = row[c] || ''; });
+        toAppend.push(mapRecordToRow(rec, liveHeaders));
+        masterRefs.push({ name, url: firstUrl(rec['Application Link/Method'] || '') }); // guard within-run dupes too
+        statusUpdates.push({ range: `${STAGING_TAB}!${statusCol}${i + 1}`, values: [['PUSHED']] });
+    }
+
+    if (skipped) console.log(`Skipped ${skipped} row(s) already in Master Database (idempotency guard).`);
+    if (!toAppend.length) { console.log('Nothing new to push.'); if (statusUpdates.length) await sheets.spreadsheets.values.batchUpdate({ spreadsheetId: SHEET_ID, requestBody: { valueInputOption: 'USER_ENTERED', data: statusUpdates } }); return; }
 
     const resp = await sheets.spreadsheets.values.append({
         spreadsheetId: SHEET_ID,
         range: `${MASTER_TAB}!A1`,
         valueInputOption: 'USER_ENTERED',
         insertDataOption: 'INSERT_ROWS',
-        requestBody: { values },
+        requestBody: { values: toAppend },
     });
-    console.log(`Appended ${values.length} row(s) to ${MASTER_TAB}. ${resp.data.updates?.updatedRange || ''}`);
+    // Mark pushed/skipped rows in staging so a re-run never double-pushes.
+    await sheets.spreadsheets.values.batchUpdate({ spreadsheetId: SHEET_ID, requestBody: { valueInputOption: 'USER_ENTERED', data: statusUpdates } });
+    console.log(`Appended ${toAppend.length} new row(s) to ${MASTER_TAB}. ${resp.data.updates?.updatedRange || ''}`);
 }
 
 const mode = process.argv[2] || 'stage';
