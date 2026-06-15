@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { ADMIN_COOKIE, verifyAdminToken } from '@/lib/adminAuth';
 import { GoogleGenAI, Type, Schema } from '@google/genai';
 import * as cheerio from 'cheerio';
 // @ts-ignore
@@ -109,6 +110,11 @@ const scholarshipSchema: Schema = {
 
 export async function POST(req: NextRequest) {
     try {
+        // Gate this admin-only endpoint behind the signed admin session token.
+        if (!(await verifyAdminToken(req.cookies.get(ADMIN_COOKIE)?.value))) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
         const formData = await req.formData();
         const mode = formData.get('mode') as string;
 

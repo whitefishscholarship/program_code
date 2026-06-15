@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { ADMIN_COOKIE, verifyAdminToken } from '@/lib/adminAuth';
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
     if (request.nextUrl.pathname.startsWith('/admin') && request.nextUrl.pathname !== '/admin/login') {
-        const adminToken = request.cookies.get('wfs_admin_token');
-        if (!adminToken || adminToken.value !== 'authenticated') {
+        const token = request.cookies.get(ADMIN_COOKIE)?.value;
+        if (!(await verifyAdminToken(token))) {
             return NextResponse.redirect(new URL('/admin/login', request.url));
         }
     }

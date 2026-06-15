@@ -1,8 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
+import { ADMIN_COOKIE, verifyAdminToken } from '@/lib/adminAuth';
 
 export async function POST(req: NextRequest) {
     try {
+        // Gate this admin-only endpoint behind the signed admin session token.
+        if (!(await verifyAdminToken(req.cookies.get(ADMIN_COOKIE)?.value))) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+
         const body = await req.json();
 
         if (!body || !Array.isArray(body) || body.length === 0) {
