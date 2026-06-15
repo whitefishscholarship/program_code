@@ -18,11 +18,12 @@ type LocationFilter = 'all' | 'national' | 'local';
 const SCHOOL_TYPES: SchoolType[] = ['Two year', 'Four year', 'Trade'];
 
 // Rank for "deadline soonest" sort: real upcoming dates first (by proximity),
-// then rolling, then check-site/unknown last.
+// then opens-soon, then rolling, then check-site/unknown last.
 function deadlineRank(item: BrowseItem): number {
-    const n = item.processed.normalized;
-    if (n.due_date_type === 'hard' && item.daysUntil !== null) return item.daysUntil;
-    if (n.due_date_type === 'rolling') return 100000;
+    const k = item.deadline.kind;
+    if (k === 'hard' && item.daysUntil !== null) return item.daysUntil;
+    if (k === 'opens' && item.daysUntil !== null) return 50000 + item.daysUntil;
+    if (k === 'rolling') return 100000;
     return 200000;
 }
 
@@ -79,7 +80,7 @@ export default function ScholarshipBrowser() {
 
             if (renewableOnly && !n.is_renewable) return false;
 
-            if (deadlineOnly && n.due_date_type !== 'hard') return false;
+            if (deadlineOnly && item.deadline.kind !== 'hard') return false;
 
             return true;
         });
