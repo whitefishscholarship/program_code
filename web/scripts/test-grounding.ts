@@ -74,6 +74,11 @@ check("audience: AEA members excluded", fitsWhitefishAudience("Gene Baker", "Ope
 check("audience: teachers excluded", fitsWhitefishAudience("Teacher Flight", "For current, paid, full-time teachers.").fit === false);
 check("audience: search platform excluded", fitsWhitefishAudience("Scholarship Universe", "A platform used by the University to find scholarships.").fit === false);
 check("audience: training-location not a residency restriction", fitsWhitefishAudience("Aircraft Mechanic Scholarship (New Smyrna Beach)", "For U.S. high school seniors.").fit === true);
+check("audience: Dawson CC institution-specific held", fitsWhitefishAudience("Kettner Scholarship", "For a full-time student planning to enroll at Dawson Community College.").fit === false);
+check("audience: MSU (in-state flagship) still fits", fitsWhitefishAudience("Hilleman Scholars Program", "For students starting at Montana State University in Fall 2026.").fit === true);
+check("audience: FVCC (neighboring) still fits", fitsWhitefishAudience("FVCC Eagle Scholarship", "For students attending Flathead Valley Community College.").fit === true);
+check("audience: generic 'accredited college' NOT flagged", fitsWhitefishAudience("AEA Memorial Scholarship", "May be used at an accredited college for any field of study.").fit === true);
+check("audience: non-Whitefish HS restriction held", fitsWhitefishAudience("Charles England Memorial", "For graduates of Dawson County High School.").fit === false);
 
 // trap-aware amount: donor total ignored
 const amt = normalizeAmount("Two $1,600 scholarships will be available. A donor has given over $50,000 to date.");

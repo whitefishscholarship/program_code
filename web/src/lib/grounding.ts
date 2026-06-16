@@ -159,6 +159,17 @@ const US_STATES_NON_MT = [
   'south dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west virginia',
   'wisconsin', 'wyoming', 'district of columbia',
 ];
+// Montana institutions a Whitefish senior would plausibly attend — being tied to one of
+// these is NOT a disqualifying restriction (FVCC is in neighboring Kalispell; MSU/UM are
+// the state flagships). A scholarship tied to a *different* specific college (e.g. a small
+// out-of-area community college's internal awards) is held for review.
+const FRIENDLY_INSTITUTIONS = [
+  'montana state university', 'university of montana', 'montana tech', 'montana technological university',
+  'flathead valley community college', 'carroll college', 'rocky mountain college', 'university of providence',
+  'salish kootenai college', 'montana state university billings', 'great falls college', 'helena college',
+  'university of montana western',
+];
+
 export function fitsWhitefishAudience(name: string, summary: string): { fit: boolean; reason: string } {
   const t = `${name} ${summary}`.toLowerCase();
   if (/scholarship universe|platform used by|search (tool|platform)|tool (used )?to (find|search)/.test(t)) {
@@ -180,6 +191,17 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   const resHit = new RegExp(`\\b(residents?\\s+of|who\\s+reside\\s+in|residing\\s+in|live\\s+in)\\b[^.]{0,40}\\b(${US_STATES_NON_MT.join('|')})\\b`, 'i');
   if (resHit.test(t) || /\b(alaskan|texan|californian|floridian) residents?\b|ashtabula county/.test(t)) {
     return { fit: false, reason: 'residency restricted to a non-Montana state' };
+  }
+  // restricted to graduates of a specific (non-Whitefish) high school
+  const hs = t.match(/\bgraduates?\s+of\s+(?:the\s+)?([a-z][a-z .'&-]*high school)\b/);
+  if (hs && !/whitefish/.test(hs[1])) return { fit: false, reason: `restricted to ${hs[1].trim()} graduates` };
+  // tied to a specific non-Montana-relevant institution (e.g. a single college's internal awards)
+  for (const im of t.matchAll(/\b([a-z][a-z.'&-]+(?:\s+[a-z][a-z.'&-]+){0,3}\s+(?:community college|university|college|institute))\b/g)) {
+    const inst = im[1].trim().replace(/^(a|an|the)\s+/, '');
+    if (/\b(accredited|participating|any|four[- ]?year|two[- ]?year|trade|vocational|post[- ]?secondary|public|private|local|eligible|chosen|partner|in-state|out-of-state)\b/.test(inst)) continue;
+    if (['college', 'university', 'school', 'institute', 'community college'].includes(inst)) continue;
+    if (FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) continue;
+    return { fit: false, reason: `tied to a specific institution (${inst})` };
   }
   return { fit: true, reason: '' };
 }
