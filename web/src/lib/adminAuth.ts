@@ -16,7 +16,11 @@ export const ADMIN_COOKIE_MAX_AGE_SECONDS = MAX_AGE_MS / 1000;
 const encoder = new TextEncoder();
 
 function getSecret(): string {
-    return process.env.JWT_SECRET || 'fallback_dev_secret_wfs';
+    // Fail CLOSED: never fall back to a public/known secret. A missing JWT_SECRET must
+    // break signing/verification (deny access), not silently sign forgeable tokens.
+    const s = process.env.JWT_SECRET;
+    if (!s) throw new Error('JWT_SECRET is not set — refusing to issue/verify admin tokens.');
+    return s;
 }
 
 function toBase64Url(bytes: Uint8Array): string {
@@ -62,6 +66,10 @@ export async function verifyAdminToken(token: string | undefined | null, now: nu
     if (role !== 'admin') return false;
     const expiry = parseInt(expiryStr, 10);
     if (!Number.isFinite(expiry) || now > expiry) return false;
-    const expected = await hmacSign(`${role}.${expiryStr}`);
-    return timingSafeEqual(sig, expected);
+    try {
+        const expected = await hmacSign(`${role}.${expiryStr}`);
+        return timingSafeEqual(sig, expected);
+    } catch {
+        return false; // missing secret / crypto error => deny (fail closed)
+    }
 }

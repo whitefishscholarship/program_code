@@ -143,7 +143,9 @@ export function normalizeAmount(text: string): { display: string; value: number;
 // pass value-grounding (the number IS on the page) so they must be caught by wording.
 export function isFundTotal(amount: string): boolean {
   const a = (amount || '').toLowerCase();
-  if (/\b(endow|donat|raised|budget|portfolio|net worth)\b/.test(a)) return true;
+  // stems must match the inflected words ("endowment"/"endowed"/"donation") — a trailing
+  // \b after "endow" failed to match "endowment", letting fund totals slip through.
+  if (/\b(endow\w*|donat\w*|raised|budget|portfolio|net worth)\b/.test(a)) return true;
   // "$X million/billion" is a fund/endowment total UNLESS it's clearly the per-recipient
   // award (e.g. "$1 million scholarship"). Bare "fund"/"gift" alone is too blunt and was
   // blanking legit amounts like "$2,000 from the Smith Memorial Fund", so it's dropped.
@@ -161,7 +163,9 @@ export function assessRelevance(name: string, summary: string): { level: 'ok' | 
   const text = `${name} ${summary}`.toLowerCase().replace(/undergraduate/g, 'ugrad');
   const reasons: string[] = [];
   // grad-level cue → exclude, UNLESS the award is grad-INCLUSIVE (also open to HS/undergrad)
-  const gradInclusive = /high school|graduating senior|\bugrad\b|all (?:students|levels)|any (?:level|student)|open to all/.test(text);
+  // grad-INCLUSIVE only via genuine level signals — NOT "all/any student" or "open to all",
+  // which co-occur with grad-ONLY awards ("any student in a doctoral program") and wrongly suppressed the exclude.
+  const gradInclusive = /high school|graduating senior|\bugrad\b|all levels|any level/.test(text);
   if (!gradInclusive && /\b(graduate students?|graduate scholarship|graduate degree|graduate[- ]level|graduate program|grad school|for graduates|master'?s (?:degree|student|program)|\bms\/phd\b|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
     return { level: 'exclude', reasons: ['graduate/professional-school level — not for HS seniors'] };
   }
@@ -226,11 +230,18 @@ const INST_GENERIC = new Set([
 // Requires a proper-noun name before the college/university suffix (so "any four-year college
 // or university" and "an accredited college" do NOT match), and allowlists Montana schools.
 function namedInstitution(t: string): string | null {
-  for (const m of t.matchAll(/\b([a-z][a-z.'&-]*(?:\s+[a-z][a-z.'&-]*){0,4})\s+(community college|college|university|institute)\b/g)) {
-    const words = m[1].split(/[\s-]+/).map((w) => w.replace(/\./g, '')); // split hyphens; "u.s." → us
-    while (words.length && INST_GENERIC.has(words[0])) words.shift(); // trim leading filler
-    if (!words.length || words.some((w) => INST_GENERIC.has(w))) continue; // bare or generic inside
-    const inst = `${words.join(' ')} ${m[2]}`;
+  for (const m of t.matchAll(/\b((?:[a-z][a-z.'&-]*\s+){0,5})(community college|college|university|institute)\b/g)) {
+    const pre = (m[1] || '').trim().split(/[\s-]+/).map((w) => w.replace(/\./g, '')).filter(Boolean);
+    // Walk BACKWARD from the suffix, collecting the contiguous run of proper-noun tokens
+    // (stop at the first generic word). This finds "Harvard" in "recipients attend Harvard
+    // University" — the old forward-trim left "attend" inside and went inert on real prose.
+    const name: string[] = [];
+    for (let i = pre.length - 1; i >= 0; i--) {
+      if (INST_GENERIC.has(pre[i])) break;
+      name.unshift(pre[i]);
+    }
+    if (!name.length) continue; // only generic words before the suffix → not a specific school
+    const inst = `${name.join(' ')} ${m[2]}`;
     if (FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) continue;
     return inst;
   }
@@ -251,15 +262,18 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   if (/\bfor (current,? )?(paid,? )?(full-time )?teachers?\b|\beducators? utilizing\b/.test(t)) {
     return { fit: false, reason: 'for teachers, not students' };
   }
-  // military-family-restricted (Gold Star / Folds of Honor / dependents of fallen service members)
-  if (/\b(folds of honor|gold star)\b/.test(t)
+  // military-family-restricted — "gold star" only when it denotes a military family (not
+  // the "gold star student" good-grades metaphor); Folds of Honor; dependents of fallen.
+  if (/\bfolds of honor\b/.test(t)
+      || /\bgold star (?:famil|spouse|child|children|dependent|parent|mother|father|widow|service)/.test(t)
       || /(?:dependents?|spouses?|children|families) (?:and\/or |or )?(?:dependents?|spouses?)? ?of (?:fallen|disabled|deceased)/.test(t)
       || /(?:fallen|disabled|deceased) (?:us )?(?:service members?|veterans?|military)/.test(t)) {
     return { fit: false, reason: 'military-family-restricted (fallen/disabled service members)' };
   }
-  // membership/employer-restricted — but NOT benign "members of the public/community"
+  // membership/employer-restricted — but NOT benign "members of the public/community" or
+  // "members of the senior/graduating class" (which IS the target audience).
   if ((/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)
-        && !/members? of the (public|community)/.test(t))
+        && !/members? of the (?:public|community|senior class|graduating class|class of \d{4})/.test(t))
       || /\b(must be|only) .{0,20}\bmember\b/.test(t)
       || /\b(exclusively (?:for|to)|reserved (?:for|exclusively for)|open only to)[^.]{0,25}\bmembers?\b|\bmembers?(?:[- ]only| only)\b/.test(t)) {
     return { fit: false, reason: 'membership/employer-restricted' };
@@ -276,7 +290,10 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   const resNoun = new RegExp(`\\b(residents?\\s+of|who\\s+reside\\s+in|residing\\s+in|live\\s+in)\\b[^.]{0,40}\\b(${states})\\b`, 'i');
   const resAdj = new RegExp(`\\b(${states})\\s+(residents?|students?|high schoolers?|high[- ]school (?:seniors?|students?|graduates?)|teens?)\\b`, 'i');
   const resFromHs = new RegExp(`\\b(?:from|in|at)\\s+(?:a\\s+)?(${states})\\s+high school\\b`, 'i');
-  const resDemonym = new RegExp(`\\b(${NON_MT_DEMONYMS.join('|')})s?\\b`, 'i');
+  // demonyms must be used as a residency/person reference ("for Ohioans", "Texan students")
+  // — a bare-word match fired on incidental text; require "for/to/only <demonym>" or "<demonym> <role>".
+  const dem = NON_MT_DEMONYMS.join('|');
+  const resDemonym = new RegExp(`\\b(?:for|to|only)\\s+(?:${dem})s?\\b|\\b(?:${dem})s?\\s+(?:residents?|students?|applicants?|seniors?|high schoolers?|teens?|youth)\\b`, 'i');
   if (resNoun.test(t) || resAdj.test(t) || resFromHs.test(t) || resDemonym.test(t) || /ashtabula county/.test(t)) {
     return { fit: false, reason: 'residency restricted to a non-Montana state' };
   }
@@ -336,9 +353,10 @@ export function nameTokens(name: string): Set<string> {
   return new Set(
     (name || "")
       .toLowerCase()
+      .replace(/(\d),(?=\d)/g, "$1") // normalize thousands-commas so "$25,000" == "$25000"
       .split(/[^a-z0-9]+/)
       // keep words >2 chars AND any pure-number token (so "$25,000" vs "$10,000" in a
-      // name stay distinct — their 25/10 tokens are kept, not dropped as too-short)
+      // name stay distinct — their 25000/10000 tokens are kept, not dropped as too-short)
       .filter((t) => (t.length > 2 || /^\d+$/.test(t)) && !NAME_STOP.has(t)),
   );
 }
@@ -346,6 +364,13 @@ export function nameTokens(name: string): Set<string> {
 // Name reduced to a normalized string (for full-string compare when token set is empty).
 function normName(s: string): string {
   return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+// Token set with 4-digit year tokens removed, so "X Scholarship 2025" dedupes against
+// "X Scholarship" / "X Scholarship 2026" (same award, different cohort).
+const isYearTok = (t: string) => /^(19|20)\d{2}$/.test(t);
+function coreTokens(tk: Set<string>): Set<string> {
+  return new Set([...tk].filter((t) => !isYearTok(t)));
 }
 
 // Normalize a URL for comparison (host + path, lowercased, no protocol/query/trailing slash).
@@ -366,19 +391,19 @@ export interface MasterRef {
 // URL on list pages, so URL equality must NOT collapse them (use findUrlCollision to
 // flag those for review instead).
 export function findMasterDuplicate(recName: string, master: MasterRef[]): string | null {
-  const tk = nameTokens(recName);
+  const core = coreTokens(nameTokens(recName)); // year-insensitive, comma-normalized
   const norm = normName(recName);
   for (const m of master) {
-    if (!tk.size) {
-      // name is all stop-words (e.g. "Memorial Scholarship") — compare full normalized
-      // string so it still dedupes/blocks instead of always returning null (double-push risk)
-      if (norm && normName(m.name) === norm) return m.name;
-      continue;
+    if (core.size) {
+      // EQUALITY (ignoring year tokens), not subset: "Presidential Scholarship" must NOT
+      // collapse into "Presidential Leadership Scholarship" (distinct awards), but
+      // "X Scholarship 2025" / "X Scholarship" / "$25,000" vs "$25000" DO dedupe.
+      const mcore = coreTokens(nameTokens(m.name));
+      if (mcore.size === core.size && [...core].every((t) => mcore.has(t))) return m.name;
+    } else if (norm && normName(m.name) === norm) {
+      // name reduced to only stop-words/years — full-string compare (no double-push)
+      return m.name;
     }
-    const mtk = nameTokens(m.name);
-    // EQUALITY, not subset: "Presidential Scholarship" must NOT collapse into
-    // "Presidential Leadership Scholarship" (distinct awards). Stricter = fewer false skips.
-    if (mtk.size === tk.size && [...tk].every((t) => mtk.has(t))) return m.name;
   }
   return null;
 }

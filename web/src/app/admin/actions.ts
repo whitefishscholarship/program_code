@@ -45,7 +45,8 @@ export async function initiatePasswordRecovery() {
 
     // Generate random 6-digit PIN
     const pin = Math.floor(100000 + Math.random() * 900000).toString();
-    const secret = process.env.JWT_SECRET || 'fallback_dev_secret_wfs';
+    const secret = process.env.JWT_SECRET;
+    if (!secret) throw new Error('JWT_SECRET is not set.');
 
     const hash = crypto.createHash('sha256').update(pin + secret).digest('hex');
     const expires = Date.now() + 15 * 60 * 1000; // 15 mins
@@ -96,7 +97,8 @@ export async function validateRecoveryPin(formData: FormData) {
         return { error: 'Recovery PIN has expired. Please request a new one.' };
     }
 
-    const secret = process.env.JWT_SECRET || 'fallback_dev_secret_wfs';
+    const secret = process.env.JWT_SECRET;
+    if (!secret) throw new Error('JWT_SECRET is not set.');
     const computedHash = crypto.createHash('sha256').update(pin + secret).digest('hex');
 
     if (computedHash === storedHash) {
