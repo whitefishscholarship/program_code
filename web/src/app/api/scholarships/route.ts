@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { google } from 'googleapis';
+import { STUDENT_HEADERS } from '@/lib/pushMapping';
 
 // Next.js App Router route segment config
 // Revalidate the cache every 5 minutes (300 seconds) to prevent hitting Google API quota
@@ -84,6 +85,13 @@ export async function GET() {
     const headersNode = sheetData[0].values;
     const headers = headersNode ? headersNode.map(v => v.formattedValue || '') : [];
 
+    // SECURITY: serve ONLY the known student-facing columns — never "every non-empty
+    // column". This is a hard allow-list so a PII column (POC/Notes/contact) added to the
+    // tab, or a future flip of GOOGLE_SHEET_ID to a PII-bearing sheet, can't leak publicly.
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const ALLOWED = new Set(STUDENT_HEADERS.map(norm));
+    const isAllowed = (header: string) => ALLOWED.has(norm(header));
+
     const allPayloads: Record<string, string>[] = [];
 
     // Process rows into objects with keys matching exact headers
@@ -95,7 +103,7 @@ export async function GET() {
       let hasData = false;
 
       headers.forEach((header, index) => {
-        if (!header) return; // Skip empty header columns
+        if (!header || !isAllowed(header)) return; // skip empty AND non-allow-listed columns
         const cell = row[index];
         const val = cell?.formattedValue || '';
         const link = cell?.hyperlink || '';

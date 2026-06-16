@@ -152,5 +152,32 @@ check("fund: '$2,000 from the Smith Memorial Fund' is NOT", isFundTotal("$2,000 
 // normalizeAmount keeps bare amounts
 check("amount: bare $10,000 kept", normalizeAmount("$10,000").value === 10000);
 
+// ---- REVIEW-2 FIXES (2026-06-16, post-deploy multi-agent review) --------------------
+// institution detector now catches out-of-state schools in normal prose
+check("audience: 'attend Harvard University' excluded", fitsWhitefishAudience("Crimson Award", "Recipients attend Harvard University.").fit === false);
+check("audience: 'Duke University freshmen' excluded", fitsWhitefishAudience("X", "Awarded to Duke University freshmen.").fit === false);
+check("audience: MSU prose still fits", fitsWhitefishAudience("Hilleman", "For students starting at Montana State University.").fit === true);
+check("audience: generic 'four-year college or university' still fits", fitsWhitefishAudience("X", "Open to students attending any four-year college or university.").fit === true);
+// dedupe near-dups
+check("dedupe: comma vs no-comma amount", findMasterDuplicate("Bold $25000 Scholarship", [{ name: "Bold $25,000 Scholarship", url: "" }]) === "Bold $25,000 Scholarship");
+check("dedupe: year-suffix near-dup caught", findMasterDuplicate("ABC Scholarship 2025", [{ name: "ABC Scholarship", url: "" }]) === "ABC Scholarship");
+check("dedupe: different amount NOT a dup", findMasterDuplicate("Bold $10,000 Scholarship", [{ name: "Bold $25,000 Scholarship", url: "" }]) === null);
+check("dedupe: distinct longer name still NOT a dup", findMasterDuplicate("Presidential Scholarship", [{ name: "Presidential Leadership Scholarship", url: "" }]) === null);
+// membership senior-class carve-out
+check("audience: 'members of the senior class' fits", fitsWhitefishAudience("X", "Awarded to members of the senior class.").fit === true);
+check("audience: 'members of the FFA' excluded", fitsWhitefishAudience("X", "Open to members of the FFA chapter.").fit === false);
+// gold star metaphor vs military family
+check("audience: 'gold star students' (metaphor) fits", fitsWhitefishAudience("Gold Star Student Award", "For gold star students with top grades.").fit === true);
+check("audience: 'Gold Star families' excluded", fitsWhitefishAudience("X", "For Gold Star families of fallen soldiers.").fit === false);
+// grad-inclusive tightened
+check("relevance: 'any student in a doctoral program' excluded", assessRelevance("X", "Any student in a doctoral program.").level === "exclude");
+check("relevance: 'open to all doctoral candidates' excluded", assessRelevance("X", "Open to all doctoral candidates.").level === "exclude");
+check("relevance: HS+grad inclusive still ok", assessRelevance("X", "Open to high school seniors and graduate students.").level === "ok");
+// isFundTotal endowment stem
+check("fund: '$5 million endowment funds the award' IS a fund total", isFundTotal("$5 million endowment funds the award") === true);
+// demonym tightened
+check("audience: 'remainder of funds' fits (no false demonym)", fitsWhitefishAudience("X", "The remainder of funds support arts students.").fit === true);
+check("audience: 'for Ohioans' excluded", fitsWhitefishAudience("X", "Scholarships for Ohioans pursuing college.").fit === false);
+
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);

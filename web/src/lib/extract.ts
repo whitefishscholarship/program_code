@@ -66,21 +66,28 @@ export type GroundedRecord = Record<string, unknown> & {
 };
 
 // Fetch a URL and reduce it to clean body text (same reduction the admin route uses).
+const FETCH_TIMEOUT_MS = 20000;
+
 export async function fetchUrlToText(url: string): Promise<string> {
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
     if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
     const html = await res.text();
     const $ = cheerio.load(html);
-    $('script, style, nav, footer, iframe').remove();
+    // strip only script/style/iframe — keep nav/footer/aside, since some directories list
+    // scholarships inside <nav>/<aside> and removing them silently drops those rows.
+    $('script, style, iframe').remove();
     let text = $('body').text().replace(/\s+/g, ' ').trim();
-    if (text.length > 50000) text = text.substring(0, 50000);
+    if (text.length > 50000) {
+        console.warn(`[fetchUrlToText] truncated ${url} from ${text.length} to 50000 chars — tail scholarships may be dropped`);
+        text = text.substring(0, 50000);
+    }
     return text;
 }
 
 // Enumerate on-page anchor links (absolute URLs + visible text) for a depth-1 crawl of
 // link-hub / directory pages. De-duped by resolved URL; only http(s).
 export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; text: string }>> {
-    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
     if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
     const $ = cheerio.load(await res.text());
     const out = new Map<string, string>();
@@ -99,11 +106,23 @@ export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; t
 // + name against that same source text and attach confidence + flags.
 export async function extractScholarships(rawText: string, sourceRef: string): Promise<GroundedRecord[]> {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-    const response = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: buildPrompt(rawText, sourceRef),
-        config: { responseMimeType: 'application/json', responseSchema: scholarshipSchema, temperature: 0.1 },
-    });
+    // Bounded retry on transient Gemini errors (429/5xx/network) — extraction is idempotent.
+    let response;
+    let lastErr: unknown;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+            response = await ai.models.generateContent({
+                model: 'gemini-2.5-flash',
+                contents: buildPrompt(rawText, sourceRef),
+                config: { responseMimeType: 'application/json', responseSchema: scholarshipSchema, temperature: 0.1 },
+            });
+            break;
+        } catch (e) {
+            lastErr = e;
+            if (attempt < 3) await new Promise((r) => setTimeout(r, 800 * attempt));
+        }
+    }
+    if (!response) throw new Error(`Gemini failed after retries: ${(lastErr as Error)?.message ?? lastErr}`);
     if (!response.text) throw new Error('AI returned an empty extraction.');
     const parsed = JSON.parse(response.text);
     const records: Record<string, unknown>[] = Array.isArray(parsed) ? parsed : [];
