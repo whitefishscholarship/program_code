@@ -160,7 +160,9 @@ export function assessRelevance(name: string, summary: string): { level: 'ok' | 
   // mask "undergraduate" so it doesn't trip the "graduate" check
   const text = `${name} ${summary}`.toLowerCase().replace(/undergraduate/g, 'ugrad');
   const reasons: string[] = [];
-  if (/\b(graduate students?|graduate scholarship|graduate degree|graduate[- ]level|graduate program|grad school|for graduates|master'?s (?:degree|student|program)|\bms\/phd\b|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
+  // grad-level cue → exclude, UNLESS the award is grad-INCLUSIVE (also open to HS/undergrad)
+  const gradInclusive = /high school|graduating senior|\bugrad\b|all (?:students|levels)|any (?:level|student)|open to all/.test(text);
+  if (!gradInclusive && /\b(graduate students?|graduate scholarship|graduate degree|graduate[- ]level|graduate program|grad school|for graduates|master'?s (?:degree|student|program)|\bms\/phd\b|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
     return { level: 'exclude', reasons: ['graduate/professional-school level — not for HS seniors'] };
   }
   const reviewCues: [RegExp, string][] = [
@@ -215,8 +217,9 @@ const INST_GENERIC = new Set([
   'planning', 'plan', 'graduating', 'graduate', 'seniors', 'senior', 'eligible', 'participating',
   'accredited', 'four', 'two', 'year', 'years', 'trade', 'vocational', 'post', 'secondary',
   'postsecondary', 'public', 'private', 'local', 'chosen', 'partner', 'your', 'their', 'our',
-  'this', 'that', 'named', 'us', 'u.s', 'american', 'nationally', 'online', 'full', 'time', 'good',
-  'standing', 'who', 'be', 'must', 'will', 'first', 'second', 'third', 'community',
+  'this', 'that', 'named', 'us', 'usa', 'american', 'america', 'nationally', 'national', 'nation',
+  'online', 'full', 'time', 'good', 'standing', 'who', 'be', 'must', 'will', 'first', 'second',
+  'third', 'community', 'junior', 'one', 'associate', 'technical', 'career', 'careers',
 ]);
 
 // Returns a specific, non-Montana-relevant institution this scholarship is tied to, or null.
@@ -224,7 +227,7 @@ const INST_GENERIC = new Set([
 // or university" and "an accredited college" do NOT match), and allowlists Montana schools.
 function namedInstitution(t: string): string | null {
   for (const m of t.matchAll(/\b([a-z][a-z.'&-]*(?:\s+[a-z][a-z.'&-]*){0,4})\s+(community college|college|university|institute)\b/g)) {
-    const words = m[1].split(/[\s-]+/); // split hyphens too so "four-year" → four, year (generic)
+    const words = m[1].split(/[\s-]+/).map((w) => w.replace(/\./g, '')); // split hyphens; "u.s." → us
     while (words.length && INST_GENERIC.has(words[0])) words.shift(); // trim leading filler
     if (!words.length || words.some((w) => INST_GENERIC.has(w))) continue; // bare or generic inside
     const inst = `${words.join(' ')} ${m[2]}`;
@@ -248,10 +251,17 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   if (/\bfor (current,? )?(paid,? )?(full-time )?teachers?\b|\beducators? utilizing\b/.test(t)) {
     return { fit: false, reason: 'for teachers, not students' };
   }
+  // military-family-restricted (Gold Star / Folds of Honor / dependents of fallen service members)
+  if (/\b(folds of honor|gold star)\b/.test(t)
+      || /(?:dependents?|spouses?|children|families) (?:and\/or |or )?(?:dependents?|spouses?)? ?of (?:fallen|disabled|deceased)/.test(t)
+      || /(?:fallen|disabled|deceased) (?:us )?(?:service members?|veterans?|military)/.test(t)) {
+    return { fit: false, reason: 'military-family-restricted (fallen/disabled service members)' };
+  }
   // membership/employer-restricted — but NOT benign "members of the public/community"
   if ((/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)
         && !/members? of the (public|community)/.test(t))
-      || /\b(must be|only) .{0,20}\bmember\b/.test(t)) {
+      || /\b(must be|only) .{0,20}\bmember\b/.test(t)
+      || /\b(exclusively (?:for|to)|reserved (?:for|exclusively for)|open only to)[^.]{0,25}\bmembers?\b|\bmembers?(?:[- ]only| only)\b/.test(t)) {
     return { fit: false, reason: 'membership/employer-restricted' };
   }
   if (/\bavionics (technician|manager)|already hold|currently certificated|at least \d+ hours of (logged )?flight|commercial pilot certificate (and|with)/.test(t)) {

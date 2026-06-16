@@ -127,6 +127,17 @@ check("audience: 'an accredited college' fits", fitsWhitefishAudience("X", "May 
 check("audience: 'University of Alabama' excluded", fitsWhitefishAudience("X", "Must enroll at the University of Alabama.").fit === false);
 check("audience: MSU still fits (institution)", fitsWhitefishAudience("Hilleman", "For students starting at Montana State University.").fit === true);
 check("audience: 'members of the public' NOT excluded", fitsWhitefishAudience("X", "Open to all students; members of the public may apply.").fit === true);
+check("audience: 'exclusively for active NTHS members' excluded", fitsWhitefishAudience("Jon H. Poteat Scholarship", "Reserved exclusively for active NTHS members.").fit === false);
+check("audience: Folds of Honor (military family) excluded", fitsWhitefishAudience("Folds of Honor Scholarship", "For dependents and spouses of fallen or disabled US service members.").fit === false);
+
+// audience: generic college-type phrasing NOT flagged as a specific institution
+check("audience: 'junior college/trade school' fits", fitsWhitefishAudience("Junior College/Trade School Scholarship", "For students pursuing an associate degree at community college.").fit === true);
+check("audience: 'one U.S. college or university' fits", fitsWhitefishAudience("X", "Awards $2,500 to one U.S. college, university, or trade school student.").fit === true);
+check("audience: 'a U.S. university' fits", fitsWhitefishAudience("X", "Applicants must be high school seniors planning to attend a U.S. university.").fit === true);
+check("audience: 'Ohio State University' still excluded", fitsWhitefishAudience("X", "Must enroll at Ohio State University.").fit === false);
+
+// relevance: grad-INCLUSIVE (open to HS/undergrad too) is NOT excluded
+check("relevance: grad-inclusive stays ok", assessRelevance("Conquering Cancer Scholarship", "Applicants must be enrolled in an undergraduate or graduate program, at least 17 years old.").level !== "exclude");
 
 // relevance: grad + professional CE
 check("relevance: 'graduate degree' excluded", assessRelevance("X", "For students pursuing a graduate degree.").level === "exclude");

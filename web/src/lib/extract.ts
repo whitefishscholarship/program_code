@@ -77,6 +77,24 @@ export async function fetchUrlToText(url: string): Promise<string> {
     return text;
 }
 
+// Enumerate on-page anchor links (absolute URLs + visible text) for a depth-1 crawl of
+// link-hub / directory pages. De-duped by resolved URL; only http(s).
+export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; text: string }>> {
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+    const $ = cheerio.load(await res.text());
+    const out = new Map<string, string>();
+    $('a[href]').each((_, a) => {
+        const href = String($(a).attr('href') || '');
+        const text = $(a).text().replace(/\s+/g, ' ').trim();
+        try {
+            const abs = new URL(href, url).toString().split('#')[0];
+            if (/^https?:/i.test(abs) && !out.has(abs)) out.set(abs, text);
+        } catch { /* skip malformed */ }
+    });
+    return [...out.entries()].map(([u, t]) => ({ url: u, text: t }));
+}
+
 // Run Gemini extraction over already-captured text, then GROUND every record's fields
 // + name against that same source text and attach confidence + flags.
 export async function extractScholarships(rawText: string, sourceRef: string): Promise<GroundedRecord[]> {
