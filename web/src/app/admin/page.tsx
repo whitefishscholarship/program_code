@@ -225,7 +225,8 @@ export default function AdminDashboard() {
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        {Object.keys(stagedData[0]).map(key => (
+                                        {/* hide internal metadata keys (_confidence/_flags/_relevance/etc.) */}
+                                        {Object.keys(stagedData[0]).filter(k => !k.startsWith('_')).map(key => (
                                             <th key={key} className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
                                                 {key}
                                             </th>
@@ -235,7 +236,7 @@ export default function AdminDashboard() {
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {stagedData.map((row: any, i: number) => (
                                         <tr key={i} className="hover:bg-blue-50/30 transition-colors">
-                                            {Object.keys(row).map(key => (
+                                            {Object.keys(stagedData[0]).filter(k => !k.startsWith('_')).map(key => (
                                                 <td key={key} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                     <input
                                                         type="text"

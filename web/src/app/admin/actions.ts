@@ -4,21 +4,31 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import crypto from 'crypto';
 import { Resend } from 'resend';
+import { ADMIN_COOKIE, ADMIN_COOKIE_MAX_AGE_SECONDS, createAdminToken } from '@/lib/adminAuth';
+
+async function setAdminSession() {
+    const cookieStore = await cookies();
+    cookieStore.set(ADMIN_COOKIE, await createAdminToken(), {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
+        maxAge: ADMIN_COOKIE_MAX_AGE_SECONDS, // 1 Week
+        // Widened from '/admin' to '/' so the cookie is also sent to /api/admin/* routes.
+        path: '/',
+    });
+}
 
 export async function loginToAdmin(formData: FormData) {
     const password = formData.get('password');
 
-    // Expected passphrase set by admin specification
-    if (password === 'WhitefishHS!') {
-        const cookieStore = await cookies();
-        cookieStore.set('wfs_admin_token', 'authenticated', {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: 60 * 60 * 24 * 7, // 1 Week
-            path: '/admin',
-        });
+    // Passphrase comes from the ADMIN_PASSWORD env var, never hard-coded.
+    const expected = process.env.ADMIN_PASSWORD;
+    if (!expected) {
+        return { error: 'Admin password is not configured. Set ADMIN_PASSWORD in the environment.' };
+    }
 
+    if (typeof password === 'string' && password === expected) {
+        await setAdminSession();
         // Redirect deep into the admin dashboard on success
         redirect('/admin');
     }
@@ -90,14 +100,8 @@ export async function validateRecoveryPin(formData: FormData) {
     const computedHash = crypto.createHash('sha256').update(pin + secret).digest('hex');
 
     if (computedHash === storedHash) {
-        // Success: Grant full Admin access cookie
-        cookieStore.set('wfs_admin_token', 'authenticated', {
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
-            maxAge: 60 * 60 * 24 * 7, // 1 Week
-            path: '/admin',
-        });
+        // Success: Grant full Admin access cookie (signed token, path '/').
+        await setAdminSession();
         cookieStore.delete('wfs_recovery_hash');
 
         // Wait until return to redirect to avoid Next.js error catching

@@ -2,17 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import InterviewWizard from '@/components/InterviewWizard';
+import ScholarshipBrowser from '@/components/ScholarshipBrowser';
 import { AnswerMap } from '@/types/wizard';
 import { processAndFilter } from '@/lib/processor';
 import { downloadAsExcel } from '@/lib/export';
 
-type AppState = 'START' | 'INTERVIEW' | 'PROCESSING' | 'EXPORT_SCREEN' | 'ERROR';
+type AppState = 'BROWSE' | 'START' | 'INTERVIEW' | 'PROCESSING' | 'EXPORT_SCREEN' | 'ERROR';
 
 const SESSION_KEY = 'scholarship_export_payload_v1';
 const EXPIRY_MINUTES = 15;
 
 export default function Home() {
-  const [appState, setAppState] = useState<AppState>('START');
+  const [appState, setAppState] = useState<AppState>('BROWSE');
 
   // Notice we only keep the answers during processing, they are not stored to disk
   const [, setAnswers] = useState<AnswerMap | null>(null);
@@ -98,7 +99,7 @@ export default function Home() {
     sessionStorage.removeItem(SESSION_KEY);
     setAnswers(null);
     setExcelDataUri('');
-    setAppState('START');
+    setAppState('BROWSE');
   };
 
   return (
@@ -106,13 +107,27 @@ export default function Home() {
 
       <div className="max-w-4xl mx-auto mb-8 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
-          Scholarship Match
+          Whitefish Scholarships
         </h1>
         <p className="mt-4 text-lg text-gray-500">
-          Answer a few questions to find scholarships you realistically qualify for.
-          Your data is entirely private and disappears when you leave.
+          Browse scholarships open to Whitefish High School seniors. Search, filter, and apply directly.
+          Or take a quick quiz to find the ones you realistically qualify for.
         </p>
       </div>
+
+      {appState === 'BROWSE' && (
+        <div>
+          <div className="max-w-6xl mx-auto mb-6 flex justify-center">
+            <button
+              onClick={startInterview}
+              className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-sm hover:bg-blue-700 transition-colors"
+            >
+              Get personalized matches (quiz + Excel)
+            </button>
+          </div>
+          <ScholarshipBrowser />
+        </div>
+      )}
 
       {appState === 'START' && (
         <div className="flex justify-center mt-12 text-black">
