@@ -27,9 +27,19 @@ function sourceNumbers(src: string): Set<number> {
 // Sentinels that are categorical, not literal page text — always "grounded".
 const GROUND_SENTINELS = new Set(["any", "varies", "tbd", "full tuition / waiver", "n/a", ""]);
 
-// True if `value` is provably present in `sourceText`. Numeric values match by VALUE
-// against the discrete numbers in the source: $5,000 (5000) must NOT ground against a
-// page whose only figure is $50,000 (50000); GPA 3.5 must NOT ground against $13.50.
+// Filler words carrying no grounding signal — excluded from the token-overlap check so a
+// value like "ranging from $250 to $14,000" isn't blanked over its words, while a value
+// like "Imaginary 2026 Leadership Scholarship" is still checked on its meaningful tokens.
+const GROUND_FILLER = new Set([
+  "ranging", "from", "per", "year", "each", "annually", "annual", "and", "the", "for", "one",
+  "two", "three", "varies", "semester", "total", "award", "awards", "scholarship", "scholarships",
+  "program", "fund", "value", "worth", "amount",
+]);
+
+// True if `value` is provably present in `sourceText`. Numbers match by VALUE against the
+// discrete numbers in the source (not substring): $5,000 must NOT ground against $50,000;
+// GPA 3.5 must NOT ground against $13.50. If the value also has meaningful word tokens,
+// >=60% must appear — so a fabricated name sharing only a number can't self-ground.
 export function groundValue(value: string, sourceText: string): boolean {
   const v = (value ?? "").toString().trim();
   if (!v || GROUND_SENTINELS.has(v.toLowerCase())) return true;
@@ -41,12 +51,16 @@ export function groundValue(value: string, sourceText: string): boolean {
       const n = asNumber(tok);
       if (n === null || !srcNums.has(n)) return false;
     }
-    return true;
   }
-  const toks = v.toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length > 2);
-  if (!toks.length) return true;
-  const hits = toks.filter((t) => src.includes(t)).length;
-  return hits / toks.length >= 0.6;
+  const toks = v
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((t) => t.length > 2 && !/^\d+$/.test(t) && !GROUND_FILLER.has(t));
+  if (toks.length) {
+    const hits = toks.filter((t) => src.includes(t)).length;
+    if (hits / toks.length < 0.6) return false;
+  }
+  return true;
 }
 
 // The record fields that must be grounded against source (mirrors the Python set).
@@ -84,7 +98,7 @@ export function groundRecord<T extends Record<string, unknown>>(
 
 // ---------------------------------------------------------------- trap-aware amount
 const AMOUNT_AWARD_CUES = /scholarship|award|waiver|stipend|grant|prize|each|receive|valued|value of|per year|\/\s*yr|tuition/i;
-const AMOUNT_TRAP_CUES = /donat|pledg|endow|raised|\bgift\b|in memory|to fund|over the next|to date|\bmillion\b|\bbillion\b|budget|salary|has given|contribut|net worth/i;
+const AMOUNT_TRAP_CUES = /donat|pledg|endow|raised|\bgift\b|in memory|to fund|over the next|to date|\bmillion\b|\bbillion\b|budget|salary|has given|contribut|net worth|total of .{0,25}award|awarded (?:over|more than)/i;
 
 // Returns a trap-aware award amount derived from source text (donation/endowment
 // sentences are skipped). Used to cross-check Gemini's Amount and flag disagreement.
@@ -105,6 +119,15 @@ export function normalizeAmount(text: string): { display: string; value: number;
   }
   if (!kept.length) {
     if (/\bvaries\b|varies by|amount varies|tbd/.test(low)) return { display: "Varies", value: 0, flags: ["amount varies/TBD"] };
+    // Bare "$10,000" with no award/trap context is still a valid amount — keep it neutrally
+    // rather than blanking, as long as no trap cue appears anywhere.
+    if (!AMOUNT_TRAP_CUES.test(text)) {
+      const bare = [...text.matchAll(/\$\s?([\d,]+(?:\.\d{2})?)/g)].map((m) => parseInt(m[1].replace(/,/g, "").split(".")[0], 10)).filter(Number.isFinite);
+      if (bare.length) {
+        const h = Math.max(...bare), l = Math.min(...bare);
+        return { display: l === h ? `$${h.toLocaleString("en-US")}` : `$${l.toLocaleString("en-US")} – $${h.toLocaleString("en-US")}`, value: h, flags: [] };
+      }
+    }
     return { display: "", value: 0, flags: ["no grounded award amount found"] };
   }
   const hi = Math.max(...kept);
@@ -119,7 +142,13 @@ export function normalizeAmount(text: string): { display: string; value: number;
 // award a student receives (e.g. "$7.5 million fund", "$4.2 million endowment"). These
 // pass value-grounding (the number IS on the page) so they must be caught by wording.
 export function isFundTotal(amount: string): boolean {
-  return /\b(million|billion|fund|endow|donat|raised|budget|portfolio|gift)\b/i.test(amount || '');
+  const a = (amount || '').toLowerCase();
+  if (/\b(endow|donat|raised|budget|portfolio|net worth)\b/.test(a)) return true;
+  // "$X million/billion" is a fund/endowment total UNLESS it's clearly the per-recipient
+  // award (e.g. "$1 million scholarship"). Bare "fund"/"gift" alone is too blunt and was
+  // blanking legit amounts like "$2,000 from the Smith Memorial Fund", so it's dropped.
+  if (/\b(million|billion)\b/.test(a) && !/\b(scholarship|award|prize|grant|each|per (?:student|winner|recipient|year))\b/.test(a)) return true;
+  return false;
 }
 
 // ---------------------------------------------------------------- relevance (HS senior)
@@ -131,13 +160,14 @@ export function assessRelevance(name: string, summary: string): { level: 'ok' | 
   // mask "undergraduate" so it doesn't trip the "graduate" check
   const text = `${name} ${summary}`.toLowerCase().replace(/undergraduate/g, 'ugrad');
   const reasons: string[] = [];
-  if (/\b(graduate students?|graduate scholarship|for graduates|master'?s (?:degree|student|program)|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
+  if (/\b(graduate students?|graduate scholarship|graduate degree|graduate[- ]level|graduate program|grad school|for graduates|master'?s (?:degree|student|program)|\bms\/phd\b|doctoral|doctorate|ph\.?\s?d|postgraduate|post-graduate|mba|law school|medical school)\b/.test(text)) {
     return { level: 'exclude', reasons: ['graduate/professional-school level — not for HS seniors'] };
   }
   const reviewCues: [RegExp, string][] = [
     [/\b(a&p|airframe and powerplant)\b/, 'A&P mechanic certification'],
     [/\btype rating\b/, 'pilot type rating (for existing pilots)'],
     [/\b(cfi|atp certificate|commercial pilot certificate|currently certificated|already hold)\b/, 'requires an existing pilot/professional certificate'],
+    [/\b(registered nurses?|\brn\b|nurse practitioner|medical resident|currently (?:employed|practicing|licensed)|continuing (?:their )?education|working professional)\b/, 'for working professionals (continuing education)'],
     [/\b(members? of|membership in|employees? of|dependents? of (?:members|employees))\b/, 'membership/employer-restricted eligibility'],
     [/\bcurrently enrolled (?:in|at) (?:a |an )?(?:college|university|graduate)\b/, 'for students already enrolled in college'],
   ];
@@ -169,6 +199,46 @@ const FRIENDLY_INSTITUTIONS = [
   'salish kootenai college', 'montana state university billings', 'great falls college', 'helena college',
   'university of montana western',
 ];
+// Common single-word demonyms for non-Montana states (adjective form of residency).
+const NON_MT_DEMONYMS = [
+  'alabamian', 'alaskan', 'arizonan', 'arkansan', 'californian', 'coloradan', 'connecticuter',
+  'delawarean', 'floridian', 'georgian', 'hawaiian', 'idahoan', 'illinoisan', 'indianan', 'iowan',
+  'kansan', 'kentuckian', 'louisianan', 'mainer', 'marylander', 'michigander', 'minnesotan',
+  'mississippian', 'missourian', 'nebraskan', 'nevadan', 'new yorker', 'ohioan', 'oklahoman',
+  'oregonian', 'pennsylvanian', 'tennessean', 'texan', 'utahn', 'vermonter', 'virginian',
+  'washingtonian', 'wisconsinite', 'wyomingite',
+];
+// Generic/filler words that, before "college/university", do NOT make a proper institution name.
+const INST_GENERIC = new Set([
+  'a', 'an', 'the', 'any', 'or', 'and', 'to', 'at', 'for', 'of', 'in', 'on', 'attend', 'attends',
+  'attending', 'enroll', 'enrolled', 'enrolling', 'starting', 'start', 'students', 'student',
+  'planning', 'plan', 'graduating', 'graduate', 'seniors', 'senior', 'eligible', 'participating',
+  'accredited', 'four', 'two', 'year', 'years', 'trade', 'vocational', 'post', 'secondary',
+  'postsecondary', 'public', 'private', 'local', 'chosen', 'partner', 'your', 'their', 'our',
+  'this', 'that', 'named', 'us', 'u.s', 'american', 'nationally', 'online', 'full', 'time', 'good',
+  'standing', 'who', 'be', 'must', 'will', 'first', 'second', 'third', 'community',
+]);
+
+// Returns a specific, non-Montana-relevant institution this scholarship is tied to, or null.
+// Requires a proper-noun name before the college/university suffix (so "any four-year college
+// or university" and "an accredited college" do NOT match), and allowlists Montana schools.
+function namedInstitution(t: string): string | null {
+  for (const m of t.matchAll(/\b([a-z][a-z.'&-]*(?:\s+[a-z][a-z.'&-]*){0,4})\s+(community college|college|university|institute)\b/g)) {
+    const words = m[1].split(/[\s-]+/); // split hyphens too so "four-year" → four, year (generic)
+    while (words.length && INST_GENERIC.has(words[0])) words.shift(); // trim leading filler
+    if (!words.length || words.some((w) => INST_GENERIC.has(w))) continue; // bare or generic inside
+    const inst = `${words.join(' ')} ${m[2]}`;
+    if (FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) continue;
+    return inst;
+  }
+  // "University of <Place>" form (suffix-first; not caught above)
+  const uof = t.match(/\buniversity of ([a-z][a-z]+(?:\s[a-z]+)?)\b/);
+  if (uof) {
+    const inst = `university of ${uof[1]}`;
+    if (!FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) return inst;
+  }
+  return null;
+}
 
 export function fitsWhitefishAudience(name: string, summary: string): { fit: boolean; reason: string } {
   const t = `${name} ${summary}`.toLowerCase();
@@ -178,7 +248,10 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   if (/\bfor (current,? )?(paid,? )?(full-time )?teachers?\b|\beducators? utilizing\b/.test(t)) {
     return { fit: false, reason: 'for teachers, not students' };
   }
-  if (/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)) {
+  // membership/employer-restricted — but NOT benign "members of the public/community"
+  if ((/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)
+        && !/members? of the (public|community)/.test(t))
+      || /\b(must be|only) .{0,20}\bmember\b/.test(t)) {
     return { fit: false, reason: 'membership/employer-restricted' };
   }
   if (/\bavionics (technician|manager)|already hold|currently certificated|at least \d+ hours of (logged )?flight|commercial pilot certificate (and|with)/.test(t)) {
@@ -187,22 +260,22 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   if (/charter school'?s choosing|must attend (a |the )?[a-z .]+ (charter )?school\b/.test(t)) {
     return { fit: false, reason: 'restricted to a specific school' };
   }
-  // residency restriction to a non-Montana state/locale
-  const resHit = new RegExp(`\\b(residents?\\s+of|who\\s+reside\\s+in|residing\\s+in|live\\s+in)\\b[^.]{0,40}\\b(${US_STATES_NON_MT.join('|')})\\b`, 'i');
-  if (resHit.test(t) || /\b(alaskan|texan|californian|floridian) residents?\b|ashtabula county/.test(t)) {
+  // residency restriction to a non-Montana state/locale — noun form ("residents of Ohio"),
+  // adjective form ("Ohio residents", "Texas high school seniors"), demonyms, and HS form.
+  const states = US_STATES_NON_MT.join('|');
+  const resNoun = new RegExp(`\\b(residents?\\s+of|who\\s+reside\\s+in|residing\\s+in|live\\s+in)\\b[^.]{0,40}\\b(${states})\\b`, 'i');
+  const resAdj = new RegExp(`\\b(${states})\\s+(residents?|students?|high schoolers?|high[- ]school (?:seniors?|students?|graduates?)|teens?)\\b`, 'i');
+  const resFromHs = new RegExp(`\\b(?:from|in|at)\\s+(?:a\\s+)?(${states})\\s+high school\\b`, 'i');
+  const resDemonym = new RegExp(`\\b(${NON_MT_DEMONYMS.join('|')})s?\\b`, 'i');
+  if (resNoun.test(t) || resAdj.test(t) || resFromHs.test(t) || resDemonym.test(t) || /ashtabula county/.test(t)) {
     return { fit: false, reason: 'residency restricted to a non-Montana state' };
   }
   // restricted to graduates of a specific (non-Whitefish) high school
   const hs = t.match(/\bgraduates?\s+of\s+(?:the\s+)?([a-z][a-z .'&-]*high school)\b/);
   if (hs && !/whitefish/.test(hs[1])) return { fit: false, reason: `restricted to ${hs[1].trim()} graduates` };
-  // tied to a specific non-Montana-relevant institution (e.g. a single college's internal awards)
-  for (const im of t.matchAll(/\b([a-z][a-z.'&-]+(?:\s+[a-z][a-z.'&-]+){0,3}\s+(?:community college|university|college|institute))\b/g)) {
-    const inst = im[1].trim().replace(/^(a|an|the)\s+/, '');
-    if (/\b(accredited|participating|any|four[- ]?year|two[- ]?year|trade|vocational|post[- ]?secondary|public|private|local|eligible|chosen|partner|in-state|out-of-state)\b/.test(inst)) continue;
-    if (['college', 'university', 'school', 'institute', 'community college'].includes(inst)) continue;
-    if (FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) continue;
-    return { fit: false, reason: `tied to a specific institution (${inst})` };
-  }
+  // tied to a specific non-Montana-relevant institution
+  const inst = namedInstitution(t);
+  if (inst) return { fit: false, reason: `tied to a specific institution (${inst})` };
   return { fit: true, reason: '' };
 }
 
@@ -254,8 +327,15 @@ export function nameTokens(name: string): Set<string> {
     (name || "")
       .toLowerCase()
       .split(/[^a-z0-9]+/)
-      .filter((t) => t.length > 2 && !NAME_STOP.has(t)),
+      // keep words >2 chars AND any pure-number token (so "$25,000" vs "$10,000" in a
+      // name stay distinct — their 25/10 tokens are kept, not dropped as too-short)
+      .filter((t) => (t.length > 2 || /^\d+$/.test(t)) && !NAME_STOP.has(t)),
   );
+}
+
+// Name reduced to a normalized string (for full-string compare when token set is empty).
+function normName(s: string): string {
+  return (s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
 // Normalize a URL for comparison (host + path, lowercased, no protocol/query/trailing slash).
@@ -277,10 +357,18 @@ export interface MasterRef {
 // flag those for review instead).
 export function findMasterDuplicate(recName: string, master: MasterRef[]): string | null {
   const tk = nameTokens(recName);
-  if (!tk.size) return null;
+  const norm = normName(recName);
   for (const m of master) {
+    if (!tk.size) {
+      // name is all stop-words (e.g. "Memorial Scholarship") — compare full normalized
+      // string so it still dedupes/blocks instead of always returning null (double-push risk)
+      if (norm && normName(m.name) === norm) return m.name;
+      continue;
+    }
     const mtk = nameTokens(m.name);
-    if (mtk.size && [...tk].every((t) => mtk.has(t))) return m.name; // subset covers equality
+    // EQUALITY, not subset: "Presidential Scholarship" must NOT collapse into
+    // "Presidential Leadership Scholarship" (distinct awards). Stricter = fewer false skips.
+    if (mtk.size === tk.size && [...tk].every((t) => mtk.has(t))) return m.name;
   }
   return null;
 }

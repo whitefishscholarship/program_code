@@ -101,5 +101,45 @@ check("non-duplicate returns null", findMasterDuplicate("Brand New Award", maste
 check("findUrlCollision reports shared url", findUrlCollision("https://abc.org/apply?ref=x", master) === "ABC Merit Scholarship");
 check("findUrlCollision null when unique", findUrlCollision("https://new.org", master) === null);
 
+// ---- REVIEW FIXES (2026-06-16) -------------------------------------------------------
+// digit-in-name bypass: a fabricated name sharing only a number must NOT ground
+check("ground: fabricated name w/ shared year blanked",
+  groundValue("Imaginary 2026 Leadership Scholarship", "The 2026 cycle is open. Smith Award gives $1,000.") === false);
+check("ground: legit amount w/ filler words still grounds",
+  groundValue("ranging from $250 to $14,000", "Scholarships ranging up to $14,000; minimum $250.") === true);
+check("ground: real name still grounds", groundValue("Eagle STEM Scholarship", "The Eagle STEM Scholarship awards $500.") === true);
+
+// dedupe: equality not subset
+const dmaster = [{ name: "Presidential Leadership Scholarship", url: "" }, { name: "Bold $25,000 Scholarship", url: "" }];
+check("dedupe: distinct shorter name NOT skipped", findMasterDuplicate("Presidential Scholarship", dmaster) === null);
+check("dedupe: same-base diff-amount NOT skipped", findMasterDuplicate("Bold $10,000 Scholarship", dmaster) === null);
+check("dedupe: exact still caught", findMasterDuplicate("Bold $25,000 Scholarship", dmaster) === "Bold $25,000 Scholarship");
+check("dedupe: all-stopword name uses full-string", findMasterDuplicate("Memorial Scholarship", [{ name: "Memorial Scholarship", url: "" }]) === "Memorial Scholarship");
+
+// audience: residency adjective / demonym / HS forms
+check("audience: 'Ohio residents' excluded", fitsWhitefishAudience("X", "For Ohio residents only.").fit === false);
+check("audience: 'Texas high school seniors' excluded", fitsWhitefishAudience("X", "Open to Texas high school seniors.").fit === false);
+check("audience: demonym 'Ohioans' excluded", fitsWhitefishAudience("X", "Scholarships for Ohioans pursuing college.").fit === false);
+check("audience: 'graduated from a Florida high school' excluded", fitsWhitefishAudience("X", "Applicants who graduated from a Florida high school.").fit === false);
+// audience: generic college phrasing NOT excluded
+check("audience: 'any four-year college or university' fits", fitsWhitefishAudience("X", "Open to students attending any four-year college or university.").fit === true);
+check("audience: 'an accredited college' fits", fitsWhitefishAudience("X", "May be used at an accredited college.").fit === true);
+check("audience: 'University of Alabama' excluded", fitsWhitefishAudience("X", "Must enroll at the University of Alabama.").fit === false);
+check("audience: MSU still fits (institution)", fitsWhitefishAudience("Hilleman", "For students starting at Montana State University.").fit === true);
+check("audience: 'members of the public' NOT excluded", fitsWhitefishAudience("X", "Open to all students; members of the public may apply.").fit === true);
+
+// relevance: grad + professional CE
+check("relevance: 'graduate degree' excluded", assessRelevance("X", "For students pursuing a graduate degree.").level === "exclude");
+check("relevance: 'registered nurse continuing education' review", assessRelevance("X", "For registered nurses continuing their education.").level !== "ok");
+check("relevance: 'graduating high school seniors' stays ok", assessRelevance("X", "For graduating high school seniors.").level === "ok");
+
+// isFundTotal precision
+check("fund: '$1 million scholarship' is NOT a fund total", isFundTotal("$1 million scholarship") === false);
+check("fund: '$7.5 million fund' IS a fund total", isFundTotal("$7.5 million fund") === true);
+check("fund: '$2,000 from the Smith Memorial Fund' is NOT", isFundTotal("$2,000 from the Smith Memorial Fund") === false);
+
+// normalizeAmount keeps bare amounts
+check("amount: bare $10,000 kept", normalizeAmount("$10,000").value === 10000);
+
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);
