@@ -229,25 +229,39 @@ const INST_GENERIC = new Set([
 // Returns a specific, non-Montana-relevant institution this scholarship is tied to, or null.
 // Requires a proper-noun name before the college/university suffix (so "any four-year college
 // or university" and "an accredited college" do NOT match), and allowlists Montana schools.
-function namedInstitution(t: string): string | null {
-  for (const m of t.matchAll(/\b((?:[a-z][a-z.'&-]*\s+){0,5})(community college|college|university|institute)\b/g)) {
-    const pre = (m[1] || '').trim().split(/[\s-]+/).map((w) => w.replace(/\./g, '')).filter(Boolean);
-    // Walk BACKWARD from the suffix, collecting the contiguous run of proper-noun tokens
-    // (stop at the first generic word). This finds "Harvard" in "recipients attend Harvard
-    // University" — the old forward-trim left "attend" inside and went inert on real prose.
-    const name: string[] = [];
-    for (let i = pre.length - 1; i >= 0; i--) {
-      if (INST_GENERIC.has(pre[i])) break;
-      name.unshift(pre[i]);
-    }
-    if (!name.length) continue; // only generic words before the suffix → not a specific school
-    const inst = `${name.join(' ')} ${m[2]}`;
+// A token appears as a Proper Noun (capitalized) in the original-case text — distinguishes
+// a real school name ("Harvard University") from a common-noun phrase ("certificate
+// institute", "research college") that merely ends in the same suffix word.
+function isProperInOriginal(token: string, orig: string): boolean {
+  const m = orig.match(new RegExp('\\b' + token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i'));
+  return !!m && /[A-Z]/.test(m[0][0]) && m[0][0] === m[0][0].toUpperCase();
+}
+
+const INST_SPAN = "([a-z][a-z.'&-]*(?:\\s+[a-z][a-z.'&-]*){0,3}\\s+(?:community college|college|university|institute))";
+const ENROLL_CUE = "(?:attend(?:ing)?|enroll(?:ed|ing)?|study(?:ing)?|starting|matriculat\\w*|transfer(?:ring)?|students?\\s+at|freshm[ae]n\\s+at|must\\s+be\\s+enrolled\\s+at)";
+const US_STATE_SET = new Set([...US_STATES_NON_MT, 'montana']);
+
+function namedInstitution(t: string, orig: string): string | null {
+  // Flag a school only when it's an ELIGIBILITY restriction: an enrollment cue BEFORE the
+  // institution ("attend/enroll at Harvard University"), OR "freshmen/sophomores" AFTER it
+  // ("Duke University freshmen"). Avoids firing on org names ("Whitefish Lake Institute"),
+  // title-cased noise ("...college students"), and generic "a Montana college".
+  const candidates: string[] = [];
+  for (const m of t.matchAll(new RegExp(`\\b${ENROLL_CUE}\\s+(?:at\\s+|in\\s+|to\\s+|the\\s+){0,2}${INST_SPAN}`, 'g'))) candidates.push(m[1]);
+  for (const m of t.matchAll(new RegExp(`\\b${INST_SPAN}\\s+(?:freshm[ae]n|sophomores?)\\b`, 'g'))) candidates.push(m[1]);
+  for (const raw of candidates) {
+    const words = raw.split(/[\s-]+/).map((w) => w.replace(/\./g, '')).filter(Boolean);
+    while (words.length && INST_GENERIC.has(words[0])) words.shift(); // drop leading generic
+    if (words.length < 2) continue; // need proper-name + suffix
+    if (words.length === 2 && US_STATE_SET.has(words[0])) continue; // bare "<state> college/university" is generic
+    if (!isProperInOriginal(words[0], orig)) continue; // common-noun phrase, not a real school
+    const inst = words.join(' ');
     if (FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) continue;
     return inst;
   }
-  // "University of <Place>" form (suffix-first; not caught above)
+  // "University of <Place>" form (eligibility-by-naming is near-universal for this phrasing)
   const uof = t.match(/\buniversity of ([a-z][a-z]+(?:\s[a-z]+)?)\b/);
-  if (uof) {
+  if (uof && isProperInOriginal(uof[1].split(' ')[0], orig)) {
     const inst = `university of ${uof[1]}`;
     if (!FRIENDLY_INSTITUTIONS.some((f) => inst.includes(f) || f.includes(inst))) return inst;
   }
@@ -300,8 +314,9 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   // restricted to graduates of a specific (non-Whitefish) high school
   const hs = t.match(/\bgraduates?\s+of\s+(?:the\s+)?([a-z][a-z .'&-]*high school)\b/);
   if (hs && !/whitefish/.test(hs[1])) return { fit: false, reason: `restricted to ${hs[1].trim()} graduates` };
-  // tied to a specific non-Montana-relevant institution
-  const inst = namedInstitution(t);
+  // tied to a specific non-Montana-relevant institution (original case needed for the
+  // proper-noun check that separates "Harvard University" from "certificate institute")
+  const inst = namedInstitution(t, `${name} ${summary}`);
   if (inst) return { fit: false, reason: `tied to a specific institution (${inst})` };
   return { fit: true, reason: '' };
 }

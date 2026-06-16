@@ -27,12 +27,25 @@ function getSheets() {
   const idx = (h: string) => hdr.indexOf(h);
   const ni = idx('Name of Scholarship'), si = idx('Summary'), ai = idx('Amount'), lui = idx('Last Updated'), li = idx('Application Link/Method');
 
+  // whole-DB duplicate-name check (catches dups regardless of stamp)
+  const seen = new Map<string, number>();
+  const dups: string[] = [];
+  for (let r = 1; r < rows.length; r++) {
+    const nm = (rows[r][ni] || '').trim().toLowerCase();
+    if (!nm) continue;
+    if (seen.has(nm)) dups.push(`"${rows[r][ni]}" (rows ${seen.get(nm)} & ${r + 1})`);
+    else seen.set(nm, r + 1);
+  }
+  if (dups.length) console.log(`⚠️ DUPLICATE names in Master Database: ${dups.join(' | ')}\n`);
+  else console.log('No duplicate names in Master Database.\n');
+
+  const all = STAMP === 'all';
   const flagged: string[] = [];
   let ok = 0;
-  console.log(`Auditing Master Database rows stamped Last Updated == ${STAMP}\n`);
+  console.log(`Auditing Master Database rows ${all ? '(ALL rows)' : `stamped Last Updated == ${STAMP}`}\n`);
   for (let r = 1; r < rows.length; r++) {
     const row = rows[r];
-    if ((row[lui] || '') !== STAMP) continue;
+    if (!all && (row[lui] || '') !== STAMP) continue;
     const name = row[ni] || '', summary = row[si] || '', amount = row[ai] || '', link = row[li] || '';
     const rel = assessRelevance(name, summary);
     const aud = fitsWhitefishAudience(name, summary);
@@ -42,7 +55,7 @@ function getSheets() {
     if (!aud.fit) issues.push(`audience:NOT-FIT (${aud.reason})`);
     if (amount && isFundTotal(amount)) issues.push(`amount:fund-total ("${amount}")`);
     if (!summary.trim()) issues.push('empty Summary');
-    if (link && !/^https?:/i.test(link)) issues.push(`no http link ("${link.slice(0, 30)}")`);
+    if (!link.trim()) issues.push('empty Application Link'); // paper/online methods are fine — only flag truly empty
     if (issues.length) {
       flagged.push(`[row ${r + 1}] ${name}\n     ${issues.join('  |  ')}`);
     } else { ok++; }
