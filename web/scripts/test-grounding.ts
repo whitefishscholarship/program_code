@@ -179,5 +179,29 @@ check("fund: '$5 million endowment funds the award' IS a fund total", isFundTota
 check("audience: 'remainder of funds' fits (no false demonym)", fitsWhitefishAudience("X", "The remainder of funds support arts students.").fit === true);
 check("audience: 'for Ohioans' excluded", fitsWhitefishAudience("X", "Scholarships for Ohioans pursuing college.").fit === false);
 
+// ---- REVIEW-3 FIXES (2026-06-16, directory-crawl hardening) -------------------------
+// Membership phrased without "members of": "<ORG> members", "current/active <ORG> members",
+// "members enrolled", "dual membership", plural "members" after "must be" (was \bmember\b).
+check("audience: 'current NTHS members' excluded", fitsWhitefishAudience("NTHS BPA Scholarship", "Three $1,000 scholarships to current NTHS members.").fit === false);
+check("audience: 'members enrolled in automotive' excluded", fitsWhitefishAudience("ASE Scholarship", "A $500 scholarship to members enrolled in automotive programs.").fit === false);
+check("audience: 'must be active OBAP members' excluded (plural)", fitsWhitefishAudience("OBAP Scholarship", "Applicants must be active OBAP members for at least 3 months, 17+ years old.").fit === false);
+check("audience: 'must be PAPA members' excluded", fitsWhitefishAudience("PAPA Scholarship", "Applicants must be PAPA members, at least 18 years old.").fit === false);
+check("audience: 'current WAI members' excluded", fitsWhitefishAudience("WAI2027 Scholarships", "Applicants must be current WAI members by August 30, 2026.").fit === false);
+check("audience: 'dual-membership' excluded", fitsWhitefishAudience("NTHS FBLA Scholarship", "For students holding dual-membership with FBLA.").fit === false);
+check("audience: 'AOPA members receive' excluded", fitsWhitefishAudience("AOPA Portal", "AOPA members receive exclusive access to aviation scholarship opportunities.").fit === false);
+// membership carve-outs MUST still pass (no over-exclusion / buried good rows)
+check("audience: 'members of the senior class' still fits", fitsWhitefishAudience("Senior Award", "Awarded to members of the senior class.").fit === true);
+check("audience: 'community members' (benign) still fits", fitsWhitefishAudience("Community Award", "Open to all community members pursuing higher education.").fit === true);
+check("audience: clean national 'AFSA awards' fits", fitsWhitefishAudience("AFSA No Essay Scholarship Program", "AFSA awards $1,000 scholarships to 10 students annually. Two contests.").fit === true);
+check("audience: national welding (Miller) fits", fitsWhitefishAudience("Miller Electric National Scholarship", "Supports the next generation of welders by providing financial assistance for their education.").fit === true);
+// named for-profit flight/aviation academy = institution-specific (captive tuition)
+check("audience: 'Epic Flight Academy' scholarship excluded", fitsWhitefishAudience("Epic Flight Academy $5,000 Pilot Scholarship", "This scholarship is awarded by Epic Flight Academy to high school students pursuing pilot training.").fit === false);
+check("audience: 'United Aviate Academy' excluded", fitsWhitefishAudience("United Aviate Academy Scholarship", "For applicants conditionally accepted to or currently enrolled at the United Aviate Academy.").fit === false);
+check("audience: 'must relocate to' excluded", fitsWhitefishAudience("Aviation Maintenance Scholarship", "A $25,000 scholarship. Must be able to relocate to New Smyrna Beach, FL or Cincinnati.").fit === false);
+// a national aviation scholarship NOT tied to a named academy still fits (career focus is OK)
+check("audience: national flight-training scholarship (no academy) fits", fitsWhitefishAudience("Fly High Scholarship", "For U.S. high school seniors pursuing flight training at any accredited program.").fit === true);
+// directory-listing stub excluded
+check("audience: AOPA org-list stub excluded", fitsWhitefishAudience("Experimental Aircraft Association (EAA) Scholarship", "This organization offers scholarships to help individuals achieve their aviation goals. It is listed under industry scholarships.").fit === false);
+
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);

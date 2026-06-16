@@ -273,6 +273,11 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   if (/scholarship universe|platform used by|search (tool|platform)|tool (used )?to (find|search)/.test(t)) {
     return { fit: false, reason: 'a scholarship-search platform, not a scholarship' };
   }
+  // directory-listing residue: a thin stub that merely *names* an organization that offers
+  // scholarships (e.g. AOPA's "industry scholarships" list) rather than a specific award.
+  if (/\bit is listed under (?:industry )?scholarships\b|\bthis organization offers scholarships to help\b|offers scholarships to help individuals achieve their aviation goals/.test(t)) {
+    return { fit: false, reason: 'directory listing stub, not a specific scholarship' };
+  }
   if (/\bfor (current,? )?(paid,? )?(full-time )?teachers?\b|\beducators? utilizing\b/.test(t)) {
     return { fit: false, reason: 'for teachers, not students' };
   }
@@ -284,12 +289,24 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
       || /(?:fallen|disabled|deceased) (?:us )?(?:service members?|veterans?|military)/.test(t)) {
     return { fit: false, reason: 'military-family-restricted (fallen/disabled service members)' };
   }
-  // membership/employer-restricted — but NOT benign "members of the public/community" or
-  // "members of the senior/graduating class" (which IS the target audience).
-  if ((/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)
-        && !/members? of the (?:public|community|senior class|graduating class|class of \d{4})/.test(t))
-      || /\b(must be|only) .{0,20}\bmember\b/.test(t)
-      || /\b(exclusively (?:for|to)|reserved (?:for|exclusively for)|open only to)[^.]{0,25}\bmembers?\b|\bmembers?(?:[- ]only| only)\b/.test(t)) {
+  // membership/employer-restricted. The gate is broad (member-required is phrased many ways:
+  // "current NTHS members", "must be active OBAP members", "members enrolled in...", "dual
+  // membership", "<ACRONYM> members") but suppressed for benign references — the public, the
+  // senior/graduating class, or generic community/family/board/team members (NOT a gate).
+  const benignMember = /\b(?:community|family|board|team|staff|faculty|council|club|household|crew|cabinet)\s+members?\b|\bmembers? of the (?:public|community|senior class|graduating class|class of \d{4})\b/;
+  const orig = `${name} ${summary}`;
+  const memberGate =
+       /\b(members?|employees?|dependents?) of\b/.test(t)
+    || /\bopen to all .*members\b|repair station member/.test(t)
+    || /\b(?:must be|be a|only)\b[^.]{0,20}\bmembers?\b/.test(t)
+    || /\b(?:exclusively (?:for|to)|reserved (?:for|exclusively for)|open only to)[^.]{0,25}\bmembers?\b/.test(t)
+    || /\bmembers?(?:[- ]only| only)\b/.test(t)
+    || /\b(?:dual|active|current|paid|annual|lifetime|chapter|founding|student)[- ]members?\b/.test(t)
+    || /\bdual[- ]?membership\b|\bmembership (?:in|with|required|is required)\b|\bmust (?:hold|have|maintain|obtain) (?:a |an |current |active )*membership\b/.test(t)
+    || /\bmembers?\s+(?:enrolled|receive|only|pursuing|in good standing)\b/.test(t)
+    || /\bscholarships?\s+to\s+(?:[a-z]+\s+){0,3}members?\b/.test(t)
+    || /\b[A-Z]{2,6}(?:\s+and\s+[A-Z]{2,6})?\s+members?\b/.test(orig); // "<ACRONYM> members" (orig case)
+  if (memberGate && !benignMember.test(t)) {
     return { fit: false, reason: 'membership/employer-restricted' };
   }
   if (/\bavionics (technician|manager)|already hold|currently certificated|at least \d+ hours of (logged )?flight|commercial pilot certificate (and|with)/.test(t)) {
@@ -314,6 +331,20 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   // restricted to graduates of a specific (non-Whitefish) high school
   const hs = t.match(/\bgraduates?\s+of\s+(?:the\s+)?([a-z][a-z .'&-]*high school)\b/);
   if (hs && !/whitefish/.test(hs[1])) return { fit: false, reason: `restricted to ${hs[1].trim()} graduates` };
+  // must relocate to attend a specific program — captive to one out-of-area location/school
+  if (/\bmust (?:be able to )?relocate\b|\b(?:required|need|have) to relocate\b/.test(t)) {
+    return { fit: false, reason: 'requires relocating to attend a specific program' };
+  }
+  // tied to a specific named for-profit flight/aviation training academy — the award is
+  // captive tuition at one non-Montana school (e.g. "Epic Flight Academy", "United Aviate
+  // Academy"). Requires a Proper-noun name + Flight/Aviation/Aviate + "Academy".
+  const academyM = `${name} ${summary}`.match(/\b([A-Z][A-Za-z.'&-]+(?:\s+[A-Z][A-Za-z.'&-]+){0,2}\s+(?:Flight|Aviation|Aviate)\s+Academy)\b/);
+  if (academyM) {
+    const ainst = academyM[1].toLowerCase();
+    if (!FRIENDLY_INSTITUTIONS.some((f) => ainst.includes(f) || f.includes(ainst))) {
+      return { fit: false, reason: `tied to a specific training academy (${ainst})` };
+    }
+  }
   // tied to a specific non-Montana-relevant institution (original case needed for the
   // proper-noun check that separates "Harvard University" from "certificate institute")
   const inst = namedInstitution(t, `${name} ${summary}`);
