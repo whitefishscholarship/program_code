@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 import { ADMIN_COOKIE, verifyAdminToken } from '@/lib/adminAuth';
 import { mapRecordToRow, assertWritableHeaders } from '@/lib/pushMapping';
+import { findMasterDuplicate, MasterRef } from '@/lib/grounding';
 
 export async function POST(req: NextRequest) {
     try {
@@ -52,8 +53,34 @@ export async function POST(req: NextRequest) {
         // or an expected student column missing) — fail loud rather than misalign/leak.
         assertWritableHeaders(liveHeaders);
 
+        // Idempotency: read existing Master Database names and skip any record already
+        // present by name, so re-POSTing the same payload can't duplicate rows.
+        const existingResp = await sheets.spreadsheets.values.get({
+            spreadsheetId: GOOGLE_SHEET_ID,
+            range: 'Master Database!A:O',
+        });
+        const existing = existingResp.data.values || [];
+        const exHdr = (existing[0] || []).map((h) => String(h));
+        const exNameIdx = exHdr.indexOf('Name of Scholarship');
+        const masterRefs: MasterRef[] = exNameIdx >= 0
+            ? existing.slice(1).map((r) => ({ name: String(r[exNameIdx] ?? ''), url: '' }))
+            : [];
+
+        const nameKey = (row: any) => String(row['Name of Scholarship'] ?? row['name'] ?? '');
+        const skipped: string[] = [];
+        const toWrite = body.filter((row: any) => {
+            const dup = findMasterDuplicate(nameKey(row), masterRefs);
+            if (dup) { skipped.push(nameKey(row)); return false; }
+            masterRefs.push({ name: nameKey(row), url: '' }); // guard within-payload dups too
+            return true;
+        });
+
+        if (toWrite.length === 0) {
+            return NextResponse.json({ success: true, message: `No new rows — all ${body.length} already in Master Database.`, skipped });
+        }
+
         // Each staged record -> one row aligned to the live headers; PII/internal fields dropped.
-        const values = body.map((row: any) => mapRecordToRow(row, liveHeaders));
+        const values = toWrite.map((row: any) => mapRecordToRow(row, liveHeaders));
 
         // Append after the last row; the row length matches the live header count so it
         // lands aligned (15 cols -> A:O).
@@ -69,7 +96,8 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json({
             success: true,
-            message: `Successfully inserted ${values.length} row(s) into Master Database.`,
+            message: `Inserted ${values.length} row(s) into Master Database${skipped.length ? `; skipped ${skipped.length} already present` : ''}.`,
+            skipped,
             updates: response.data.updates
         });
 
