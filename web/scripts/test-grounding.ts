@@ -11,6 +11,7 @@ import {
   findUrlCollision,
   isFundTotal,
   assessRelevance,
+  fitsWhitefishAudience,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -64,6 +65,15 @@ check("relevance: type rating -> review", assessRelevance("CAE Citation Bravo Ty
 check("relevance: membership -> review", assessRelevance("Lodge Award", "Open to members of the association.").level === "review");
 check("relevance: undergraduate NOT excluded", assessRelevance("Sharon D. Banks Memorial Undergraduate Scholarship", "For undergraduate students.").level === "ok");
 check("relevance: plain HS scholarship ok", assessRelevance("Conquering Cancer Scholarship", "For a graduating high school senior.").level === "ok");
+
+// audience fit (Whitefish, MT)
+check("audience: national HS scholarship fits", fitsWhitefishAudience("Fly for Duke Aviation Scholarship", "For U.S. high school seniors.").fit === true);
+check("audience: other-state residency excluded", fitsWhitefishAudience("Ashtabula Scholarship", "Recipients must be residents of Ashtabula County, OH.").fit === false);
+check("audience: Alaskan residents excluded", fitsWhitefishAudience("Stroecker Scholarship", "For Alaskan residents with a private pilot certificate.").fit === false);
+check("audience: AEA members excluded", fitsWhitefishAudience("Gene Baker", "Open to all AEA members, their children or dependents.").fit === false);
+check("audience: teachers excluded", fitsWhitefishAudience("Teacher Flight", "For current, paid, full-time teachers.").fit === false);
+check("audience: search platform excluded", fitsWhitefishAudience("Scholarship Universe", "A platform used by the University to find scholarships.").fit === false);
+check("audience: training-location not a residency restriction", fitsWhitefishAudience("Aircraft Mechanic Scholarship (New Smyrna Beach)", "For U.S. high school seniors.").fit === true);
 
 // trap-aware amount: donor total ignored
 const amt = normalizeAmount("Two $1,600 scholarships will be available. A donor has given over $50,000 to date.");

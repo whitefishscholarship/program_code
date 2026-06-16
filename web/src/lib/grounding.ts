@@ -145,6 +145,45 @@ export function assessRelevance(name: string, summary: string): { level: 'ok' | 
   return { level: reasons.length ? 'review' : 'ok', reasons };
 }
 
+// Whether a scholarship plausibly fits a Whitefish, MT high-school senior: i.e. it is
+// nationally open (or Montana), not restricted to another state, not membership/employer/
+// professional-only, not a search platform, not school-specific. High-precision: only
+// returns false when a clear restriction is detected. Training-LOCATION mentions (e.g.
+// "New Smyrna Beach") do not count — only residency restrictions do.
+const US_STATES_NON_MT = [
+  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado', 'connecticut', 'delaware',
+  'florida', 'georgia', 'hawaii', 'idaho', 'illinois', 'indiana', 'iowa', 'kansas', 'kentucky',
+  'louisiana', 'maine', 'maryland', 'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri',
+  'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york', 'north carolina',
+  'north dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania', 'rhode island', 'south carolina',
+  'south dakota', 'tennessee', 'texas', 'utah', 'vermont', 'virginia', 'washington', 'west virginia',
+  'wisconsin', 'wyoming', 'district of columbia',
+];
+export function fitsWhitefishAudience(name: string, summary: string): { fit: boolean; reason: string } {
+  const t = `${name} ${summary}`.toLowerCase();
+  if (/scholarship universe|platform used by|search (tool|platform)|tool (used )?to (find|search)/.test(t)) {
+    return { fit: false, reason: 'a scholarship-search platform, not a scholarship' };
+  }
+  if (/\bfor (current,? )?(paid,? )?(full-time )?teachers?\b|\beducators? utilizing\b/.test(t)) {
+    return { fit: false, reason: 'for teachers, not students' };
+  }
+  if (/\b(members?|employees?|dependents?) of\b|\bopen to all .*members\b|repair station member/.test(t)) {
+    return { fit: false, reason: 'membership/employer-restricted' };
+  }
+  if (/\bavionics (technician|manager)|already hold|currently certificated|at least \d+ hours of (logged )?flight|commercial pilot certificate (and|with)/.test(t)) {
+    return { fit: false, reason: 'requires existing professional certificate/experience' };
+  }
+  if (/charter school'?s choosing|must attend (a |the )?[a-z .]+ (charter )?school\b/.test(t)) {
+    return { fit: false, reason: 'restricted to a specific school' };
+  }
+  // residency restriction to a non-Montana state/locale
+  const resHit = new RegExp(`\\b(residents?\\s+of|who\\s+reside\\s+in|residing\\s+in|live\\s+in)\\b[^.]{0,40}\\b(${US_STATES_NON_MT.join('|')})\\b`, 'i');
+  if (resHit.test(t) || /\b(alaskan|texan|californian|floridian) residents?\b|ashtabula county/.test(t)) {
+    return { fit: false, reason: 'residency restricted to a non-Montana state' };
+  }
+  return { fit: true, reason: '' };
+}
+
 // ---------------------------------------------------------------- gpa
 // Returns a qualifying-GPA value (prefers "to qualify" over "to maintain") + flags.
 export function normalizeGpa(text: string): { value: string; flags: string[] } {

@@ -155,13 +155,14 @@ async function stage(start = 0): Promise<void> {
             const flags = [...(rec._flags || [])];
             if (capped) flags.push(`page had ${named.length} scholarships — review source for any beyond the first ${PAGE_CAP}`);
 
+            if (capped) flags.push(`from a directory page (${named.length} scholarships) — verify at source`);
             const dupMaster = findMasterDuplicate(recName, masterRefs);
             const dupBatch = findMasterDuplicate(recName, stagedRefs);
             let status: string;
             if (dupMaster) status = `DUPLICATE (master: ${dupMaster})`;
             else if (dupBatch) status = `DUPLICATE (batch: ${dupBatch})`;
-            else if (capped) status = 'HOLD (link-hub/directory — review)';
             else if (rec._relevance === 'exclude') status = 'HOLD (not HS-senior — review)';
+            else if (!rec._audienceFit) status = 'HOLD (not Whitefish/MT audience — review)';
             else if (rec._relevance === 'review') status = 'REVIEW (eligibility — check)';
             else {
                 status = 'NEW';
