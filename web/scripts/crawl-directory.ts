@@ -7,7 +7,7 @@ import { config } from 'dotenv';
 config({ path: '.env.local' });
 import { google, sheets_v4 } from 'googleapis';
 import { fetchUrlLinks, fetchUrlToText, extractScholarships } from '../src/lib/extract';
-import { assessRelevance, fitsWhitefishAudience, findMasterDuplicate, MasterRef } from '../src/lib/grounding';
+import { assessRelevance, fitsWhitefishAudience, findMasterDuplicate, normalizeUrl, MasterRef } from '../src/lib/grounding';
 import { STUDENT_HEADERS, mapRecordToRow } from '../src/lib/pushMapping';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID!;
@@ -45,34 +45,47 @@ function rowFor(rec: Record<string, unknown>, conf: number, flags: string[], url
   const sh = (st[0] || []).map(String); const sni = sh.indexOf('Name of Scholarship');
   if (sni >= 0) st.slice(1).forEach((r) => refs.push({ name: String(r[sni] ?? ''), url: '' }));
 
-  // 1) enumerate child scholarship links
-  const links = (await fetchUrlLinks(DIR_URL))
-    .filter((l) => SCH.test(l.text) || SCH.test(l.url))
-    .filter((l) => !SKIP.test(l.text) && !SKIP.test(l.url) && l.url !== DIR_URL)
-    .slice(0, MAX_CHILDREN);
-  console.log(`Directory ${DIR_URL}\n  ${links.length} candidate scholarship links (cap ${MAX_CHILDREN}).\n`);
+  // 1) enumerate child scholarship links — SKIP matched on link TEXT only (matching it on
+  // the URL path wrongly dropped e.g. "Homecoming Scholarship" at /home); dedupe by
+  // normalized URL (collapse ?ref= / trailing-slash variants) before capping.
+  const allLinks = (await fetchUrlLinks(DIR_URL))
+    .filter((l) => (SCH.test(l.text) || SCH.test(l.url)) && !SKIP.test(l.text) && l.url !== DIR_URL);
+  const seenChild = new Set<string>();
+  const distinct = allLinks.filter((l) => { const k = normalizeUrl(l.url) || l.url; if (seenChild.has(k)) return false; seenChild.add(k); return true; });
+  const links = distinct.slice(0, MAX_CHILDREN);
+  console.log(`Directory ${DIR_URL}\n  enumerated ${allLinks.length} scholarship links, ${distinct.length} distinct, processing first ${links.length} (cap ${MAX_CHILDREN})${distinct.length > MAX_CHILDREN ? ` — ⚠️ ${distinct.length - MAX_CHILDREN} NOT crawled` : ''}.\n`);
 
+  const PER_CHILD_CAP = 10;
   const today = new Date().toLocaleDateString('en-US');
   const rows: string[][] = [];
+  let droppedPerChild = 0;
   for (const [i, l] of links.entries()) {
     let recs;
     try { recs = await extractScholarships(await fetchUrlToText(l.url), l.url); }
-    catch (e) { console.log(`[${i + 1}] FAIL ${l.url.slice(0, 50)} — ${(e as Error).message.slice(0, 40)}`); continue; }
-    const named = recs.filter((r) => String(r['Name of Scholarship'] || '').trim()).sort((a, b) => (b._confidence || 0) - (a._confidence || 0));
+    catch (e) {
+      console.log(`[${i + 1}] FAIL ${l.url.slice(0, 50)} — ${(e as Error).message.slice(0, 40)}`);
+      rows.push(rowFor({ 'Name of Scholarship': l.text.slice(0, 60) || l.url }, 0, [`crawl fetch/extract failed from ${DIR_URL}`], l.url, 'FETCH-FAILED'));
+      continue;
+    }
+    let named = recs.filter((r) => String(r['Name of Scholarship'] || '').trim()).sort((a, b) => (b._confidence || 0) - (a._confidence || 0));
     if (!named.length) { console.log(`[${i + 1}] no grounded record — ${l.text.slice(0, 40)}`); continue; }
-    const rec = named[0];
-    rec['Last Updated'] = today;
-    const name = String(rec['Name of Scholarship']);
-    const flags = [...(rec._flags || []), `crawled depth-1 from ${DIR_URL}`];
-    let status = 'NEW';
-    if (findMasterDuplicate(name, refs)) status = 'DUPLICATE';
-    else if (rec._relevance === 'exclude') status = 'HOLD (not HS-senior — review)';
-    else if (!rec._audienceFit) status = 'HOLD (not Whitefish/MT audience — review)';
-    else if (rec._relevance === 'review') status = 'REVIEW (eligibility — check)';
-    else refs.push({ name, url: '' });
-    rows.push(rowFor(rec, rec._confidence || 0, flags, firstUrl(String(rec['Application Link/Method'] || '')) || l.url, status));
-    console.log(`[${i + 1}] ${status}  conf=${rec._confidence}  ${name.slice(0, 50)}`);
+    // a child link can itself be a mini-list — keep ALL its scholarships (capped), not just named[0]
+    if (named.length > PER_CHILD_CAP) { droppedPerChild += named.length - PER_CHILD_CAP; named = named.slice(0, PER_CHILD_CAP); }
+    for (const rec of named) {
+      rec['Last Updated'] = today;
+      const name = String(rec['Name of Scholarship']);
+      const flags = [...(rec._flags || []), `crawled depth-1 from ${DIR_URL}`];
+      let status = 'NEW';
+      if (findMasterDuplicate(name, refs)) status = 'DUPLICATE';
+      else if (rec._relevance === 'exclude') status = 'HOLD (not HS-senior — review)';
+      else if (!rec._audienceFit) status = 'HOLD (not Whitefish/MT audience — review)';
+      else if (rec._relevance === 'review') status = 'REVIEW (eligibility — check)';
+      else refs.push({ name, url: '' });
+      rows.push(rowFor(rec, rec._confidence || 0, flags, firstUrl(String(rec['Application Link/Method'] || '')) || l.url, status));
+      console.log(`[${i + 1}] ${status}  conf=${rec._confidence}  ${name.slice(0, 50)}`);
+    }
   }
+  if (droppedPerChild) console.log(`\n⚠️ ${droppedPerChild} scholarship(s) on mini-list child pages dropped by PER_CHILD_CAP — re-crawl those children directly if needed.`);
 
   if (!rows.length) { console.log('\nNothing recovered.'); return; }
   await sheets.spreadsheets.values.append({
