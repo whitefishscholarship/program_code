@@ -10,7 +10,7 @@ import { config } from 'dotenv';
 config({ path: '.env.local' }); // Next.js local env (GEMINI_API_KEY, sheet id, SA creds)
 import { google, sheets_v4 } from 'googleapis';
 import { fetchUrlToText, fetchPdfToText, isPdfUrl, extractScholarships, GroundedRecord } from '../src/lib/extract';
-import { findMasterDuplicate, findUrlCollision, nameTokens, MasterRef } from '../src/lib/grounding';
+import { findMasterDuplicate, findUrlCollision, nameTokens, isDynamicPortalHost, MasterRef } from '../src/lib/grounding';
 import { STUDENT_HEADERS, mapRecordToRow, assertWritableHeaders } from '../src/lib/pushMapping';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID!;
@@ -155,6 +155,9 @@ async function stage(start = 0): Promise<void> {
             const recName = String(rec['Name of Scholarship'] || '');
             const recUrl = firstUrl(String(rec['Application Link/Method'] || '')) || cand.url;
             const flags = [...(rec._flags || [])];
+            // A dynamic SaaS/login portal source means the captured apply URL may not be the real
+            // apply path (and the page can't be reliably crawled) — flag for human verification.
+            if (isDynamicPortalHost(recUrl)) flags.push('source is a dynamic SaaS/login portal — verify the real apply link');
             if (capped) flags.push(`page had ${named.length} scholarships — review source for any beyond the first ${PAGE_CAP}`);
 
             if (capped) flags.push(`from a directory page (${named.length} scholarships) — verify at source`);

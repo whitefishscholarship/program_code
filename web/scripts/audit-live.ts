@@ -7,7 +7,7 @@
 import { config } from 'dotenv';
 config({ path: '.env.local' });
 import { google } from 'googleapis';
-import { assessRelevance, fitsWhitefishAudience, isFundTotal, firstHttpUrl, classifyLinkResult, LinkState } from '../src/lib/grounding';
+import { assessRelevance, fitsWhitefishAudience, isFundTotal, firstHttpUrl, classifyLinkResult, LinkState, classifyLinkTarget, LinkTargetFlag } from '../src/lib/grounding';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID!;
 const ARGS = process.argv.slice(2);
@@ -17,16 +17,28 @@ const STAMP = ARGS.find((a) => a !== 'links' && a !== '--links') || '6/15/2026';
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
 // Fetch a URL and classify liveness. Network errors surface as status=null + an error code;
 // classifyLinkResult (pure, unit-tested) decides DEAD vs INCONCLUSIVE vs OK.
-async function checkLink(url: string): Promise<{ state: LinkState; detail: string }> {
+type LinkCheck = { state: LinkState; detail: string; targetFlags: LinkTargetFlag[]; targetDetail: string };
+async function checkLink(url: string): Promise<LinkCheck> {
   const ctrl = new AbortController();
   const to = setTimeout(() => ctrl.abort(), 20000);
   try {
     const resp = await fetch(url, { method: 'GET', redirect: 'follow', signal: ctrl.signal, headers: { 'User-Agent': UA } });
-    return classifyLinkResult(resp.status);
+    const live = classifyLinkResult(resp.status);
+    // Read a bounded body sample (HTML only) to detect dynamic shells / no-apply pages.
+    let bodyText: string | undefined;
+    const ct = resp.headers.get('content-type') || '';
+    if (resp.ok && /html/i.test(ct)) {
+      const html = (await resp.text()).slice(0, 200000);
+      bodyText = html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+    const tgt = classifyLinkTarget({ requestedUrl: url, finalUrl: resp.url, contentType: ct, bodyText });
+    return { ...live, targetFlags: tgt.flags, targetDetail: tgt.detail };
   } catch (e) {
     const err = e as { code?: string; cause?: { code?: string }; name?: string; message?: string };
     const code = err?.cause?.code || err?.code || (err?.name === 'AbortError' ? 'ETIMEDOUT' : '') || err?.message || 'ERR';
-    return classifyLinkResult(null, code);
+    return { ...classifyLinkResult(null, code), targetFlags: [], targetDetail: '' };
   } finally {
     clearTimeout(to);
   }
@@ -116,6 +128,16 @@ function getSheets() {
     if (incon.length) {
       console.log(`\nℹ️ Inconclusive (${incon.length}) — bot-block/rate-limit/server/timeout; likely fine in a browser, verify manually if needed:`);
       incon.forEach((t) => { const k = targets.indexOf(t); console.log(`  [row ${t.row}] ${t.name} — ${results[k].detail}`); });
+    }
+    // Link-TARGET audit: a live (non-dead) URL can still point to the wrong place — an off-host
+    // redirect (often a marketing page), a dynamic/login SaaS portal (can't enumerate / wrong
+    // apply path), a PDF form, or a page with no apply signal. Flag for human verification.
+    const suspect = targets.filter((_, k) => results[k].targetFlags.length);
+    if (suspect.length) {
+      console.log(`\n⚠️ Link targets to verify (${suspect.length}) — live but possibly not the real apply page:`);
+      suspect.forEach((t) => { const k = targets.indexOf(t); console.log(`• [row ${t.row}] ${t.name}\n     ${t.url}\n     [${results[k].targetFlags.join(', ')}] ${results[k].targetDetail}`); });
+    } else {
+      console.log('✅ No suspect link targets (no off-host redirects / dynamic portals / no-apply pages).');
     }
   }
 })().catch((e) => { console.error(e); process.exit(1); });
