@@ -454,6 +454,32 @@ export function findMasterDuplicate(recName: string, master: MasterRef[]): strin
   return null;
 }
 
+// ---------------------------------------------------------------- link-rot (liveness)
+// The first clickable http(s) URL in an Application Link/Method cell, trailing punctuation
+// stripped. Empty for method-text cells ("Paper Application", "Online Application") — those
+// are intentional (counselor/paper) and must NOT be treated as broken links.
+export function firstHttpUrl(s: string): string {
+  const m = (s || '').match(/https?:\/\/[^\s,)\]]+/);
+  return m ? m[0].replace(/[.,;:)\]]+$/, '') : '';
+}
+
+export type LinkState = 'OK' | 'DEAD' | 'INCONCLUSIVE';
+
+// Classify a fetched link result for the link-rot audit. PURE (no I/O) so it is unit-tested.
+// Only hard "nothing is there" signals are DEAD (flag for removal): DNS not-found, connection
+// refused, HTTP 404/410. Bot-blocks / rate-limits / server errors / TLS / timeouts are
+// INCONCLUSIVE — a real browser likely works, so we don't cry wolf and bury good rows.
+export function classifyLinkResult(status: number | null, errorCode?: string): { state: LinkState; detail: string } {
+  if (status === null) {
+    const e = (errorCode || '').toUpperCase();
+    if (/ENOTFOUND|EAI_AGAIN|ERR_NAME_NOT_RESOLVED|ECONNREFUSED/.test(e)) return { state: 'DEAD', detail: e || 'connection failed' };
+    return { state: 'INCONCLUSIVE', detail: e || 'request failed/timeout' };
+  }
+  if (status === 404 || status === 410) return { state: 'DEAD', detail: `HTTP ${status}` };
+  if (status >= 400) return { state: 'INCONCLUSIVE', detail: `HTTP ${status}` };
+  return { state: 'OK', detail: `HTTP ${status}` };
+}
+
 // Returns the name of an entry sharing this record's normalized URL (a soft signal —
 // expected and harmless on multi-scholarship list pages), else null.
 export function findUrlCollision(recUrl: string, refs: MasterRef[]): string | null {

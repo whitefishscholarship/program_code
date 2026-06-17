@@ -12,6 +12,8 @@ import {
   isFundTotal,
   assessRelevance,
   fitsWhitefishAudience,
+  firstHttpUrl,
+  classifyLinkResult,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -202,6 +204,25 @@ check("audience: 'must relocate to' excluded", fitsWhitefishAudience("Aviation M
 check("audience: national flight-training scholarship (no academy) fits", fitsWhitefishAudience("Fly High Scholarship", "For U.S. high school seniors pursuing flight training at any accredited program.").fit === true);
 // directory-listing stub excluded
 check("audience: AOPA org-list stub excluded", fitsWhitefishAudience("Experimental Aircraft Association (EAA) Scholarship", "This organization offers scholarships to help individuals achieve their aviation goals. It is listed under industry scholarships.").fit === false);
+
+// ---- LINK-ROT AUDIT (2026-06-16) ----------------------------------------------------
+// firstHttpUrl: method-text cells have no URL (intentional), real URLs are extracted clean.
+check("link: 'Paper Application' has no URL", firstHttpUrl("Paper Application") === "");
+check("link: 'Online Application' has no URL", firstHttpUrl("Online Application (via counselor)") === "");
+check("link: extracts URL + strips trailing period", firstHttpUrl("Apply at https://x.org/apply. Deadline March 1.") === "https://x.org/apply");
+check("link: bare URL kept", firstHttpUrl("https://fohscholarships.communityforce.com") === "https://fohscholarships.communityforce.com");
+// classifyLinkResult: only hard not-there signals are DEAD; bot-block/rate-limit/5xx/TLS inconclusive.
+check("link: HTTP 200 OK", classifyLinkResult(200).state === "OK");
+check("link: HTTP 301 OK", classifyLinkResult(301).state === "OK");
+check("link: HTTP 404 DEAD", classifyLinkResult(404).state === "DEAD");
+check("link: HTTP 410 DEAD", classifyLinkResult(410).state === "DEAD");
+check("link: HTTP 403 INCONCLUSIVE (bot-block)", classifyLinkResult(403).state === "INCONCLUSIVE");
+check("link: HTTP 429 INCONCLUSIVE (rate-limit)", classifyLinkResult(429).state === "INCONCLUSIVE");
+check("link: HTTP 500 INCONCLUSIVE (server)", classifyLinkResult(500).state === "INCONCLUSIVE");
+check("link: ENOTFOUND DEAD (DNS, e.g. Folds of Honor)", classifyLinkResult(null, "ENOTFOUND").state === "DEAD");
+check("link: ECONNREFUSED DEAD", classifyLinkResult(null, "ECONNREFUSED").state === "DEAD");
+check("link: ETIMEDOUT INCONCLUSIVE", classifyLinkResult(null, "ETIMEDOUT").state === "INCONCLUSIVE");
+check("link: CERT_HAS_EXPIRED INCONCLUSIVE", classifyLinkResult(null, "CERT_HAS_EXPIRED").state === "INCONCLUSIVE");
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);

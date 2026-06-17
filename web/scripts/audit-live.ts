@@ -1,14 +1,45 @@
 // Re-audit the live Master Database rows added this session (Last Updated == STAMP)
 // with the CORRECTED relevance/audience filters, to find rows that slipped through
 // before the filters existed. READ-ONLY: prints a verdict per row, changes nothing.
-//   npx tsx scripts/audit-live.ts [stamp]   (default stamp 6/15/2026)
+//   npx tsx scripts/audit-live.ts [stamp]            (default stamp 6/15/2026)
+//   npx tsx scripts/audit-live.ts all                (audit every row)
+//   npx tsx scripts/audit-live.ts all links          (+ application-link liveness check)
 import { config } from 'dotenv';
 config({ path: '.env.local' });
 import { google } from 'googleapis';
-import { assessRelevance, fitsWhitefishAudience, isFundTotal } from '../src/lib/grounding';
+import { assessRelevance, fitsWhitefishAudience, isFundTotal, firstHttpUrl, classifyLinkResult, LinkState } from '../src/lib/grounding';
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID!;
-const STAMP = process.argv[2] || '6/15/2026';
+const ARGS = process.argv.slice(2);
+const LINKS = ARGS.includes('links') || ARGS.includes('--links');
+const STAMP = ARGS.find((a) => a !== 'links' && a !== '--links') || '6/15/2026';
+
+const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36';
+// Fetch a URL and classify liveness. Network errors surface as status=null + an error code;
+// classifyLinkResult (pure, unit-tested) decides DEAD vs INCONCLUSIVE vs OK.
+async function checkLink(url: string): Promise<{ state: LinkState; detail: string }> {
+  const ctrl = new AbortController();
+  const to = setTimeout(() => ctrl.abort(), 20000);
+  try {
+    const resp = await fetch(url, { method: 'GET', redirect: 'follow', signal: ctrl.signal, headers: { 'User-Agent': UA } });
+    return classifyLinkResult(resp.status);
+  } catch (e) {
+    const err = e as { code?: string; cause?: { code?: string }; name?: string; message?: string };
+    const code = err?.cause?.code || err?.code || (err?.name === 'AbortError' ? 'ETIMEDOUT' : '') || err?.message || 'ERR';
+    return classifyLinkResult(null, code);
+  } finally {
+    clearTimeout(to);
+  }
+}
+// Run jobs with a small concurrency cap (polite — avoids self-inflicted 429s).
+async function pool<T, R>(items: T[], n: number, fn: (t: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = new Array(items.length);
+  let i = 0;
+  await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
+    while (i < items.length) { const k = i++; out[k] = await fn(items[k]); }
+  }));
+  return out;
+}
 
 function getSheets() {
   const raw = process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS!;
@@ -62,4 +93,29 @@ function getSheets() {
   }
   console.log(`FLAGGED ${flagged.length} of ${flagged.length + ok} session rows (${ok} clean):\n`);
   flagged.forEach((f) => console.log('• ' + f));
+
+  if (LINKS) {
+    // Application-link liveness: method-text cells (no URL) are intentional and skipped;
+    // only DEAD (DNS not-found / connection refused / 404 / 410) is a real problem.
+    const targets: { row: number; name: string; url: string }[] = [];
+    for (let r = 1; r < rows.length; r++) {
+      if (!all && (rows[r][lui] || '') !== STAMP) continue;
+      const url = firstHttpUrl(rows[r][li] || '');
+      if (url) targets.push({ row: r + 1, name: rows[r][ni] || '', url });
+    }
+    console.log(`\n— Link-rot check: testing ${targets.length} rows with a URL (method-text rows skipped) —`);
+    const results = await pool(targets, 6, (t) => checkLink(t.url));
+    const dead = targets.filter((_, k) => results[k].state === 'DEAD');
+    const incon = targets.filter((_, k) => results[k].state === 'INCONCLUSIVE');
+    if (dead.length) {
+      console.log(`\n🔴 DEAD links (${dead.length}) — fix or remove:`);
+      dead.forEach((t) => { const k = targets.indexOf(t); console.log(`• [row ${t.row}] ${t.name}\n     ${t.url}  (${results[k].detail})`); });
+    } else {
+      console.log('✅ No dead links.');
+    }
+    if (incon.length) {
+      console.log(`\nℹ️ Inconclusive (${incon.length}) — bot-block/rate-limit/server/timeout; likely fine in a browser, verify manually if needed:`);
+      incon.forEach((t) => { const k = targets.indexOf(t); console.log(`  [row ${t.row}] ${t.name} — ${results[k].detail}`); });
+    }
+  }
 })().catch((e) => { console.error(e); process.exit(1); });
