@@ -174,10 +174,16 @@ export function assessRelevance(name: string, summary: string): { level: 'ok' | 
     [/\btype rating\b/, 'pilot type rating (for existing pilots)'],
     [/\b(cfi|atp certificate|commercial pilot certificate|currently certificated|already hold)\b/, 'requires an existing pilot/professional certificate'],
     [/\b(registered nurses?|\brn\b|nurse practitioner|medical resident|currently (?:employed|practicing|licensed)|continuing (?:their )?education|working professional)\b/, 'for working professionals (continuing education)'],
-    [/\b(members? of|membership in|employees? of|dependents? of (?:members|employees))\b/, 'membership/employer-restricted eligibility'],
     [/\bcurrently enrolled (?:in|at) (?:a |an )?(?:college|university|graduate)\b/, 'for students already enrolled in college'],
   ];
   for (const [re, why] of reviewCues) if (re.test(text)) reasons.push(why);
+  // membership eligibility — but NOT benign "member of the community/household/class" nor a
+  // negated "do not need to be a member" (mirrors fitsWhitefishAudience's guards).
+  if (/\b(members? of|membership in|employees? of|dependents? of (?:members|employees))\b/.test(text)
+      && !/\bmembers? of (?:a |an |the |their |your |our )?(?:[a-z]+ )?(?:public|community|senior class|graduating class|class of \d{4}|household|family|team|board)\b/.test(text)
+      && !/\b(?:do(?:es)?\s+not|don'?t|need\s+not|not\s+required|no\s+need|will\s+not|won'?t)\b[^.!]{0,45}\bmembers?\b/.test(text)) {
+    reasons.push('membership/employer-restricted eligibility');
+  }
   return { level: reasons.length ? 'review' : 'ok', reasons };
 }
 
@@ -289,11 +295,18 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
       || /(?:fallen|disabled|deceased) (?:us )?(?:service members?|veterans?|military)/.test(t)) {
     return { fit: false, reason: 'military-family-restricted (fallen/disabled service members)' };
   }
-  // membership/employer-restricted. The gate is broad (member-required is phrased many ways:
-  // "current NTHS members", "must be active OBAP members", "members enrolled in...", "dual
-  // membership", "<ACRONYM> members") but suppressed for benign references — the public, the
-  // senior/graduating class, or generic community/family/board/team members (NOT a gate).
-  const benignMember = /\b(?:community|family|board|team|staff|faculty|council|club|household|crew|cabinet)\s+members?\b|\bmembers? of the (?:public|community|senior class|graduating class|class of \d{4})\b/;
+  // membership/employer-restricted. Broad (member-required has many phrasings: "current NTHS
+  // members", "must be active OBAP members", "members enrolled in...", "dual membership") but
+  // suppressed for (a) benign references — the public, the senior/graduating class, household/
+  // community/family/board members — and (b) NEGATED or ADDITIVE phrasings ("you do NOT need to
+  // be a member", "members of a household [income]", "ALSO open to ... member companies"). Bare
+  // "<ACRONYM> members" only gates WITH a restriction verb, so common student-org wording ("open
+  // to FFA members who are graduating seniors") is not buried — a genuine "members + their
+  // children/dependents" family gate is still caught.
+  const benignMember = /\b(?:community|family|board|team|staff|faculty|council|club|household|crew|cabinet)\s+members?\b|\bmembers? of (?:a |an |the |their |your |our )?(?:[a-z]+ )?(?:public|community|senior class|graduating class|class of \d{4}|household|family|team|board)\b/;
+  const memberNegated =
+       /\b(?:do(?:es)?\s+not|don'?t|need\s+not|not\s+required|no\s+need|do\s+not\s+have|will\s+not|won'?t)\b[^.!]{0,45}\bmembers?\b/.test(t)
+    || /\b(?:also open to|in addition|additionally|as well as)\b[^.!]{0,45}\bmembers?\b/.test(t);
   const orig = `${name} ${summary}`;
   const memberGate =
        /\b(members?|employees?|dependents?) of\b/.test(t)
@@ -305,15 +318,18 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
     || /\bdual[- ]?membership\b|\bmembership (?:in|with|required|is required)\b|\bmust (?:hold|have|maintain|obtain) (?:a |an |current |active )*membership\b/.test(t)
     || /\bmembers?\s+(?:enrolled|receive|only|pursuing|in good standing)\b/.test(t)
     || /\bscholarships?\s+to\s+(?:[a-z]+\s+){0,3}members?\b/.test(t)
-    || /\b[A-Z]{2,6}(?:\s+and\s+[A-Z]{2,6})?\s+members?\b/.test(orig); // "<ACRONYM> members" (orig case)
-  if (memberGate && !benignMember.test(t)) {
+    || /\bmembers?\s+(?:and|or|,)\s+(?:their\s+)?(?:children|dependents?|spouses?|families|family)\b/.test(t) // members + their children/dependents (family-of-member gate)
+    || /\b(?:must be|reserved (?:for|to)|only|open only to|exclusively (?:for|to)|available only to)\b[^.]{0,25}\b[A-Z]{2,6}(?:\s+and\s+[A-Z]{2,6})?\s+members?\b/.test(orig); // "<ACRONYM> members" only with a restriction verb
+  if (memberGate && !benignMember.test(t) && !memberNegated) {
     return { fit: false, reason: 'membership/employer-restricted' };
   }
   if (/\bavionics (technician|manager)|already hold|currently certificated|at least \d+ hours of (logged )?flight|commercial pilot certificate (and|with)/.test(t)) {
     return { fit: false, reason: 'requires existing professional certificate/experience' };
   }
-  if (/charter school'?s choosing|must attend (a |the )?[a-z .]+ (charter )?school\b/.test(t)) {
-    return { fit: false, reason: 'restricted to a specific school' };
+  // restricted to a specific CHARTER school. Must require the word "charter" — a generic
+  // "must attend a traditional public high school" (e.g. Hagan) is NOT a specific-school gate.
+  if (/charter school'?s choosing|must attend (?:a |the )?[a-z][a-z .]*charter school\b/.test(t)) {
+    return { fit: false, reason: 'restricted to a specific charter school' };
   }
   // residency restriction to a non-Montana state/locale — noun form ("residents of Ohio"),
   // adjective form ("Ohio residents", "Texas high school seniors"), demonyms, and HS form.
@@ -331,8 +347,10 @@ export function fitsWhitefishAudience(name: string, summary: string): { fit: boo
   // restricted to graduates of a specific (non-Whitefish) high school
   const hs = t.match(/\bgraduates?\s+of\s+(?:the\s+)?([a-z][a-z .'&-]*high school)\b/);
   if (hs && !/whitefish/.test(hs[1])) return { fit: false, reason: `restricted to ${hs[1].trim()} graduates` };
-  // must relocate to attend a specific program — captive to one out-of-area location/school
-  if (/\bmust (?:be able to )?relocate\b|\b(?:required|need|have) to relocate\b/.test(t)) {
+  // must relocate to attend a specific program — captive to one out-of-area location/school.
+  // Guard against negated reassurance ("you do NOT need to relocate", "won't have to relocate").
+  if ((/\bmust (?:be able to )?relocate\b|\b(?:required|need|have) to relocate\b/.test(t))
+      && !/\b(?:not|no|never|n'?t)\b[^.]{0,15}relocat/.test(t)) {
     return { fit: false, reason: 'requires relocating to attend a specific program' };
   }
   // tied to a specific named for-profit flight/aviation training academy — the award is

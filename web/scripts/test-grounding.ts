@@ -224,5 +224,27 @@ check("link: ECONNREFUSED DEAD", classifyLinkResult(null, "ECONNREFUSED").state 
 check("link: ETIMEDOUT INCONCLUSIVE", classifyLinkResult(null, "ETIMEDOUT").state === "INCONCLUSIVE");
 check("link: CERT_HAS_EXPIRED INCONCLUSIVE", classifyLinkResult(null, "CERT_HAS_EXPIRED").state === "INCONCLUSIVE");
 
+// ---- REVIEW-4 FIXES (2026-06-16, review-team negation/false-positive corrections) ----
+// Negation-blindness: rows whose text DISCLAIMS a membership requirement must still FIT.
+check("audience: Elks 'do not have to be a member' fits", fitsWhitefishAudience("Elks Most Valuable Student Scholarship", "You do not have to be a member (or the dependent of a member) of the Elks. Students judged on leadership.").fit === true);
+check("audience: 'parents do NOT need to be a member' fits", fitsWhitefishAudience("Whitefish Classified Employees Scholarship", "Your parents do not need to be a member of the Whitefish Classified Employees to apply.").fit === true);
+check("audience: 'members of a household' (income def) fits", fitsWhitefishAudience("Hagan Scholarship", "A nationwide need-based scholarship. Household income is the total received by all members of a household under one roof. Applicants must attend a traditional public high school governed by a school district.").fit === true);
+check("audience: 'a member of the community nominates' fits", fitsWhitefishAudience("Dane Hunt Kindness Scholarship", "A member of the Whitefish community must nominate them. Looking for random acts of kindness.").fit === true);
+// Additive ("also open to ... members") is an expansion, not a gate.
+check("audience: 'also open to AEA member companies' fits", fitsWhitefishAudience("AEA Foundation Avionics Scholarship", "Awarded to students pursuing a career in avionics or aircraft maintenance. It is also open to students from AEA member companies.").fit === true);
+// Bare "<ACRONYM> members" without a restriction verb must NOT bury student-org national rows.
+check("audience: 'FFA members who are graduating seniors' fits", fitsWhitefishAudience("National FFA Scholarship", "Open to FFA members who are graduating high school seniors nationwide.").fit === true);
+check("audience: 'DECA members graduating seniors' fits", fitsWhitefishAudience("DECA Scholarship", "Open to DECA members who are graduating high school seniors.").fit === true);
+check("audience: 'STEM members and the public' fits", fitsWhitefishAudience("STEM Award", "STEM members and the public are welcome to apply nationwide.").fit === true);
+// Relocate negation.
+check("audience: 'do not need to relocate' fits", fitsWhitefishAudience("Study Anywhere Scholarship", "Recipients do not need to relocate; study at any accredited program.").fit === true);
+// Generic public-HS attendance is NOT a specific-school restriction.
+check("audience: 'traditional public high school' fits", fitsWhitefishAudience("X", "Applicants must attend a traditional public high school governed by a school district.").fit === true);
+// REGRESSION GUARDS — genuine gates must STILL be excluded after the negation/additive fixes.
+check("audience: 'must be active NTHS members' STILL excluded", fitsWhitefishAudience("Jon H. Poteat Scholarship", "Reserved exclusively for active NTHS members.").fit === false);
+check("audience: 'MANRRS members and their children' STILL excluded", fitsWhitefishAudience("MANRRS Scholarship", "Open to MANRRS members and their children pursuing agriculture.").fit === false);
+check("audience: 'must attend Lincoln Charter School' STILL excluded", fitsWhitefishAudience("X", "Recipients must attend Lincoln Charter School.").fit === false);
+check("audience: 'must be able to relocate to Florida' STILL excluded", fitsWhitefishAudience("X", "A $25,000 award; recipients must be able to relocate to Florida for the program.").fit === false);
+
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);
