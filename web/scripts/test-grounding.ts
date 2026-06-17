@@ -12,6 +12,8 @@ import {
   isFundTotal,
   assessRelevance,
   fitsWhitefishAudience,
+  firstHttpUrl,
+  classifyLinkResult,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -178,6 +180,71 @@ check("fund: '$5 million endowment funds the award' IS a fund total", isFundTota
 // demonym tightened
 check("audience: 'remainder of funds' fits (no false demonym)", fitsWhitefishAudience("X", "The remainder of funds support arts students.").fit === true);
 check("audience: 'for Ohioans' excluded", fitsWhitefishAudience("X", "Scholarships for Ohioans pursuing college.").fit === false);
+
+// ---- REVIEW-3 FIXES (2026-06-16, directory-crawl hardening) -------------------------
+// Membership phrased without "members of": "<ORG> members", "current/active <ORG> members",
+// "members enrolled", "dual membership", plural "members" after "must be" (was \bmember\b).
+check("audience: 'current NTHS members' excluded", fitsWhitefishAudience("NTHS BPA Scholarship", "Three $1,000 scholarships to current NTHS members.").fit === false);
+check("audience: 'members enrolled in automotive' excluded", fitsWhitefishAudience("ASE Scholarship", "A $500 scholarship to members enrolled in automotive programs.").fit === false);
+check("audience: 'must be active OBAP members' excluded (plural)", fitsWhitefishAudience("OBAP Scholarship", "Applicants must be active OBAP members for at least 3 months, 17+ years old.").fit === false);
+check("audience: 'must be PAPA members' excluded", fitsWhitefishAudience("PAPA Scholarship", "Applicants must be PAPA members, at least 18 years old.").fit === false);
+check("audience: 'current WAI members' excluded", fitsWhitefishAudience("WAI2027 Scholarships", "Applicants must be current WAI members by August 30, 2026.").fit === false);
+check("audience: 'dual-membership' excluded", fitsWhitefishAudience("NTHS FBLA Scholarship", "For students holding dual-membership with FBLA.").fit === false);
+check("audience: 'AOPA members receive' excluded", fitsWhitefishAudience("AOPA Portal", "AOPA members receive exclusive access to aviation scholarship opportunities.").fit === false);
+// membership carve-outs MUST still pass (no over-exclusion / buried good rows)
+check("audience: 'members of the senior class' still fits", fitsWhitefishAudience("Senior Award", "Awarded to members of the senior class.").fit === true);
+check("audience: 'community members' (benign) still fits", fitsWhitefishAudience("Community Award", "Open to all community members pursuing higher education.").fit === true);
+check("audience: clean national 'AFSA awards' fits", fitsWhitefishAudience("AFSA No Essay Scholarship Program", "AFSA awards $1,000 scholarships to 10 students annually. Two contests.").fit === true);
+check("audience: national welding (Miller) fits", fitsWhitefishAudience("Miller Electric National Scholarship", "Supports the next generation of welders by providing financial assistance for their education.").fit === true);
+// named for-profit flight/aviation academy = institution-specific (captive tuition)
+check("audience: 'Epic Flight Academy' scholarship excluded", fitsWhitefishAudience("Epic Flight Academy $5,000 Pilot Scholarship", "This scholarship is awarded by Epic Flight Academy to high school students pursuing pilot training.").fit === false);
+check("audience: 'United Aviate Academy' excluded", fitsWhitefishAudience("United Aviate Academy Scholarship", "For applicants conditionally accepted to or currently enrolled at the United Aviate Academy.").fit === false);
+check("audience: 'must relocate to' excluded", fitsWhitefishAudience("Aviation Maintenance Scholarship", "A $25,000 scholarship. Must be able to relocate to New Smyrna Beach, FL or Cincinnati.").fit === false);
+// a national aviation scholarship NOT tied to a named academy still fits (career focus is OK)
+check("audience: national flight-training scholarship (no academy) fits", fitsWhitefishAudience("Fly High Scholarship", "For U.S. high school seniors pursuing flight training at any accredited program.").fit === true);
+// directory-listing stub excluded
+check("audience: AOPA org-list stub excluded", fitsWhitefishAudience("Experimental Aircraft Association (EAA) Scholarship", "This organization offers scholarships to help individuals achieve their aviation goals. It is listed under industry scholarships.").fit === false);
+
+// ---- LINK-ROT AUDIT (2026-06-16) ----------------------------------------------------
+// firstHttpUrl: method-text cells have no URL (intentional), real URLs are extracted clean.
+check("link: 'Paper Application' has no URL", firstHttpUrl("Paper Application") === "");
+check("link: 'Online Application' has no URL", firstHttpUrl("Online Application (via counselor)") === "");
+check("link: extracts URL + strips trailing period", firstHttpUrl("Apply at https://x.org/apply. Deadline March 1.") === "https://x.org/apply");
+check("link: bare URL kept", firstHttpUrl("https://fohscholarships.communityforce.com") === "https://fohscholarships.communityforce.com");
+// classifyLinkResult: only hard not-there signals are DEAD; bot-block/rate-limit/5xx/TLS inconclusive.
+check("link: HTTP 200 OK", classifyLinkResult(200).state === "OK");
+check("link: HTTP 301 OK", classifyLinkResult(301).state === "OK");
+check("link: HTTP 404 DEAD", classifyLinkResult(404).state === "DEAD");
+check("link: HTTP 410 DEAD", classifyLinkResult(410).state === "DEAD");
+check("link: HTTP 403 INCONCLUSIVE (bot-block)", classifyLinkResult(403).state === "INCONCLUSIVE");
+check("link: HTTP 429 INCONCLUSIVE (rate-limit)", classifyLinkResult(429).state === "INCONCLUSIVE");
+check("link: HTTP 500 INCONCLUSIVE (server)", classifyLinkResult(500).state === "INCONCLUSIVE");
+check("link: ENOTFOUND DEAD (DNS, e.g. Folds of Honor)", classifyLinkResult(null, "ENOTFOUND").state === "DEAD");
+check("link: ECONNREFUSED DEAD", classifyLinkResult(null, "ECONNREFUSED").state === "DEAD");
+check("link: ETIMEDOUT INCONCLUSIVE", classifyLinkResult(null, "ETIMEDOUT").state === "INCONCLUSIVE");
+check("link: CERT_HAS_EXPIRED INCONCLUSIVE", classifyLinkResult(null, "CERT_HAS_EXPIRED").state === "INCONCLUSIVE");
+
+// ---- REVIEW-4 FIXES (2026-06-16, review-team negation/false-positive corrections) ----
+// Negation-blindness: rows whose text DISCLAIMS a membership requirement must still FIT.
+check("audience: Elks 'do not have to be a member' fits", fitsWhitefishAudience("Elks Most Valuable Student Scholarship", "You do not have to be a member (or the dependent of a member) of the Elks. Students judged on leadership.").fit === true);
+check("audience: 'parents do NOT need to be a member' fits", fitsWhitefishAudience("Whitefish Classified Employees Scholarship", "Your parents do not need to be a member of the Whitefish Classified Employees to apply.").fit === true);
+check("audience: 'members of a household' (income def) fits", fitsWhitefishAudience("Hagan Scholarship", "A nationwide need-based scholarship. Household income is the total received by all members of a household under one roof. Applicants must attend a traditional public high school governed by a school district.").fit === true);
+check("audience: 'a member of the community nominates' fits", fitsWhitefishAudience("Dane Hunt Kindness Scholarship", "A member of the Whitefish community must nominate them. Looking for random acts of kindness.").fit === true);
+// Additive ("also open to ... members") is an expansion, not a gate.
+check("audience: 'also open to AEA member companies' fits", fitsWhitefishAudience("AEA Foundation Avionics Scholarship", "Awarded to students pursuing a career in avionics or aircraft maintenance. It is also open to students from AEA member companies.").fit === true);
+// Bare "<ACRONYM> members" without a restriction verb must NOT bury student-org national rows.
+check("audience: 'FFA members who are graduating seniors' fits", fitsWhitefishAudience("National FFA Scholarship", "Open to FFA members who are graduating high school seniors nationwide.").fit === true);
+check("audience: 'DECA members graduating seniors' fits", fitsWhitefishAudience("DECA Scholarship", "Open to DECA members who are graduating high school seniors.").fit === true);
+check("audience: 'STEM members and the public' fits", fitsWhitefishAudience("STEM Award", "STEM members and the public are welcome to apply nationwide.").fit === true);
+// Relocate negation.
+check("audience: 'do not need to relocate' fits", fitsWhitefishAudience("Study Anywhere Scholarship", "Recipients do not need to relocate; study at any accredited program.").fit === true);
+// Generic public-HS attendance is NOT a specific-school restriction.
+check("audience: 'traditional public high school' fits", fitsWhitefishAudience("X", "Applicants must attend a traditional public high school governed by a school district.").fit === true);
+// REGRESSION GUARDS — genuine gates must STILL be excluded after the negation/additive fixes.
+check("audience: 'must be active NTHS members' STILL excluded", fitsWhitefishAudience("Jon H. Poteat Scholarship", "Reserved exclusively for active NTHS members.").fit === false);
+check("audience: 'MANRRS members and their children' STILL excluded", fitsWhitefishAudience("MANRRS Scholarship", "Open to MANRRS members and their children pursuing agriculture.").fit === false);
+check("audience: 'must attend Lincoln Charter School' STILL excluded", fitsWhitefishAudience("X", "Recipients must attend Lincoln Charter School.").fit === false);
+check("audience: 'must be able to relocate to Florida' STILL excluded", fitsWhitefishAudience("X", "A $25,000 award; recipients must be able to relocate to Florida for the program.").fit === false);
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);
