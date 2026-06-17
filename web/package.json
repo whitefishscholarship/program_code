@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts"
+    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts"
   },
   "dependencies": {
     "@google/genai": "^1.44.0",
