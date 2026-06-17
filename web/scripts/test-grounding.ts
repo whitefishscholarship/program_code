@@ -14,6 +14,9 @@ import {
   fitsWhitefishAudience,
   firstHttpUrl,
   classifyLinkResult,
+  classifyLinkTarget,
+  isDynamicPortalHost,
+  KNOWN_DYNAMIC_HOSTS,
 } from "../src/lib/grounding";
 
 let failed = 0;
@@ -245,6 +248,28 @@ check("audience: 'must be active NTHS members' STILL excluded", fitsWhitefishAud
 check("audience: 'MANRRS members and their children' STILL excluded", fitsWhitefishAudience("MANRRS Scholarship", "Open to MANRRS members and their children pursuing agriculture.").fit === false);
 check("audience: 'must attend Lincoln Charter School' STILL excluded", fitsWhitefishAudience("X", "Recipients must attend Lincoln Charter School.").fit === false);
 check("audience: 'must be able to relocate to Florida' STILL excluded", fitsWhitefishAudience("X", "A $25,000 award; recipients must be able to relocate to Florida for the program.").fit === false);
+
+// --- Link-TARGET QA (militaryscholar-style: a live URL can still be the wrong page) ---
+// isDynamicPortalHost: known SaaS / login application portals a static fetch can't read.
+check("dynamic: mykaleidoscope.com is dynamic", isDynamicPortalHost("https://apply.mykaleidoscope.com/program/X2026") === true);
+check("dynamic: grantinterface.com is dynamic", isDynamicPortalHost("https://www.grantinterface.com/Home/Logon?urlkey=x") === true);
+check("dynamic: oche.my.site.com (Salesforce) is dynamic", isDynamicPortalHost("https://oche.my.site.com/") === true);
+check("dynamic: scholarship.aws.org is dynamic", isDynamicPortalHost("https://scholarship.aws.org") === true);
+check("dynamic: a normal org site is NOT dynamic", isDynamicPortalHost("https://www.pointfoundation.org/scholarships/flagship") === false);
+check("dynamic: non-URL method text is NOT dynamic", isDynamicPortalHost("Paper Application") === false);
+check("dynamic: KNOWN_DYNAMIC_HOSTS seeded", KNOWN_DYNAMIC_HOSTS.includes("mykaleidoscope.com") && KNOWN_DYNAMIC_HOSTS.includes("grantinterface.com"));
+
+// classifyLinkTarget: off-host redirect (militaryscholar.org -> fisherhouse.org) is the real bug we hit.
+check("target: off-host redirect flagged", classifyLinkTarget({ requestedUrl: "https://www.militaryscholar.org", finalUrl: "https://www.fisherhouse.org/scholarships" }).flags.includes("REDIRECTED_OFFHOST"));
+check("target: same-org subdomain redirect is NOT off-host", !classifyLinkTarget({ requestedUrl: "https://www.dellscholars.org/students/", finalUrl: "https://apply.dellscholars.org/Account/Login" }).flags.includes("REDIRECTED_OFFHOST"));
+check("target: dynamic SaaS host flagged", classifyLinkTarget({ requestedUrl: "https://apply.mykaleidoscope.com/program/X" }).flags.includes("DYNAMIC_PORTAL"));
+check("target: near-empty HTML flagged as dynamic shell", classifyLinkTarget({ requestedUrl: "https://x.org/apply", bodyText: "Loading..." }).flags.includes("DYNAMIC_PORTAL"));
+check("target: .pdf url flagged PDF", classifyLinkTarget({ requestedUrl: "https://x.org/form.pdf" }).flags.includes("PDF"));
+check("target: pdf content-type flagged PDF", classifyLinkTarget({ requestedUrl: "https://x.org/dl", contentType: "application/pdf" }).flags.includes("PDF"));
+const noApplyBody = ("welcome to our homepage about us news photos history board contact directions parking weather hours ").repeat(4);
+check("target: page with no apply keyword flagged LIKELY_NOT_APPLY", classifyLinkTarget({ requestedUrl: "https://x.org", finalUrl: "https://x.org", bodyText: noApplyBody }).flags.includes("LIKELY_NOT_APPLY"));
+const goodApplyBody = ("Apply now for this scholarship. Eligibility: graduating high school seniors. Deadline March 1. Submit your application online. ").repeat(2);
+check("target: a clean same-host apply page has NO flags", classifyLinkTarget({ requestedUrl: "https://x.org/apply", finalUrl: "https://x.org/apply", contentType: "text/html", bodyText: goodApplyBody }).flags.length === 0);
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);

@@ -498,6 +498,75 @@ export function classifyLinkResult(status: number | null, errorCode?: string): {
   return { state: 'OK', detail: `HTTP ${status}` };
 }
 
+// Hosts that serve scholarship APPLICATIONS through a dynamic JS / SaaS portal (login walls,
+// React/search apps, Salesforce/Foundant). A static fetch of these returns a near-empty shell,
+// so: (a) a crawler cannot enumerate scholarships from them, and (b) a row whose Application
+// Link points here needs a human to confirm the REAL apply path. Grows as we find new portals
+// — add the host here AND a test in test-grounding.ts. (Discovered via the 2026-06-17 audit.)
+export const KNOWN_DYNAMIC_HOSTS = [
+  'mykaleidoscope.com',   // Kaleidoscope scholarship SaaS (National FFA, Montana 4-H, AMVETS, ESA)
+  'grantinterface.com',   // Foundant GrantInterface (Montana Community Foundation, Reach Higher)
+  'my.site.com',          // Salesforce Experience portals (e.g. oche.my.site.com — MUS apply)
+  'force.com',            // Salesforce
+  'futures.pearson.com',  // Pearson Futures (FIRST Robotics)
+  'scholarship.aws.org',  // AWS "Orchestrate" application portal
+  'smapply.io', 'smapply.org',        // SurveyMonkey Apply
+  'awardspring.com', 'communityforce.com', 'academicworks.com', 'gotoapply.com',
+];
+
+function registrableHost(host: string): string {
+  const h = (host || '').toLowerCase().replace(/^www\./, '');
+  const parts = h.split('.').filter(Boolean);
+  return parts.length <= 2 ? h : parts.slice(-2).join('.');
+}
+
+// True if a URL's host is a known dynamic/SaaS application portal.
+export function isDynamicPortalHost(url: string): boolean {
+  let host = '';
+  try { host = new URL(url).host.toLowerCase(); } catch { return false; }
+  const reg = registrableHost(host);
+  return KNOWN_DYNAMIC_HOSTS.some((d) => host === d || host.endsWith('.' + d) || reg === registrableHost(d));
+}
+
+export type LinkTargetFlag = 'REDIRECTED_OFFHOST' | 'DYNAMIC_PORTAL' | 'LIKELY_NOT_APPLY' | 'PDF';
+
+// Classify a link's TARGET (beyond mere liveness) so the audit catches the militaryscholar-style
+// problems a 200-OK liveness check misses: an off-host redirect (often to a marketing page), a
+// dynamic/login SaaS portal (a static fetch sees a blank shell), a PDF form, or a page with no
+// "apply" signal at all. PURE (no I/O) — the caller passes the fetched metadata. Heuristic by
+// design: it FLAGS suspects for human review. The final "marketing page vs the real apply page"
+// judgment is left to a human (or an optional LLM verify step) — code only narrows the list.
+export function classifyLinkTarget(input: {
+  requestedUrl: string;
+  finalUrl?: string;     // response URL after redirects (fetch resp.url)
+  contentType?: string;
+  bodyText?: string;     // visible page text (script/style/tags stripped); omit if not fetched
+}): { flags: LinkTargetFlag[]; detail: string } {
+  const flags: LinkTargetFlag[] = [];
+  const details: string[] = [];
+  const hostOf = (u: string) => { try { return new URL(u).host.toLowerCase().replace(/^www\./, ''); } catch { return ''; } };
+  const reqHost = hostOf(input.requestedUrl);
+  const finalUrl = input.finalUrl || input.requestedUrl;
+  const finalHost = hostOf(finalUrl);
+
+  if (/pdf/i.test(input.contentType || '') || /\.pdf(?:[?#]|$)/i.test(finalUrl)) {
+    flags.push('PDF'); details.push('application is a PDF');
+  }
+  if (reqHost && finalHost && registrableHost(reqHost) !== registrableHost(finalHost)) {
+    flags.push('REDIRECTED_OFFHOST'); details.push(`redirects ${reqHost} → ${finalHost}`);
+  }
+  if (isDynamicPortalHost(finalUrl)) {
+    flags.push('DYNAMIC_PORTAL'); details.push('dynamic SaaS / login portal');
+  } else if (input.bodyText !== undefined && input.bodyText.replace(/\s+/g, ' ').trim().length < 200) {
+    flags.push('DYNAMIC_PORTAL'); details.push('near-empty HTML (likely JS-rendered app)');
+  }
+  if (input.bodyText !== undefined && input.bodyText.replace(/\s+/g, ' ').trim().length >= 200 &&
+      !/\b(apply|application|submit|deadline|eligib|scholarship|award)\b/i.test(input.bodyText)) {
+    flags.push('LIKELY_NOT_APPLY'); details.push('no apply/eligibility keywords on page');
+  }
+  return { flags, detail: details.join('; ') };
+}
+
 // Returns the name of an entry sharing this record's normalized URL (a soft signal —
 // expected and harmless on multi-scholarship list pages), else null.
 export function findUrlCollision(recUrl: string, refs: MasterRef[]): string | null {
