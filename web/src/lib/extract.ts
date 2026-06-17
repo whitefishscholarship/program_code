@@ -84,6 +84,45 @@ export async function fetchUrlToText(url: string): Promise<string> {
     return text;
 }
 
+// Parse a PDF buffer to raw text using pdf2json — the SAME parser the admin upload route
+// uses (route.ts: new PDFParser(null, true) -> getRawTextContent), kept as its own pure
+// step so it can be unit-tested offline against a fixture PDF (no network). pdf2json is a
+// Node-only lib; import it dynamically so non-Node bundles never pull it in.
+export async function parsePdfBuffer(buffer: Buffer): Promise<string> {
+    const mod = await import('pdf2json');
+    const PDFParser = ((mod as { default?: unknown }).default ?? mod) as new (a: unknown, b: boolean) => {
+        on(ev: string, cb: (d: unknown) => void): void;
+        getRawTextContent(): string;
+        parseBuffer(b: Buffer): void;
+    };
+    const parser = new PDFParser(null, true); // true = raw text-content mode
+    let text: string = await new Promise((resolve, reject) => {
+        parser.on('pdfParser_dataError', (e: unknown) => reject(new Error((e as { parserError?: string })?.parserError || 'PDF parse error')));
+        parser.on('pdfParser_dataReady', () => resolve(parser.getRawTextContent()));
+        parser.parseBuffer(buffer);
+    });
+    text = text.replace(/\s+/g, ' ').trim();
+    if (text.length > 50000) {
+        console.warn(`[parsePdfBuffer] truncated PDF text from ${text.length} to 50000 chars — tail content may be dropped`);
+        text = text.substring(0, 50000);
+    }
+    return text;
+}
+
+// Fetch a PDF URL and reduce it to clean text. fetchUrlToText is HTML-only (cheerio) and
+// produces garbage on a PDF; PDF-URL candidates (e.g. assets.noviams.com/...pdf) route here.
+export async function fetchPdfToText(url: string): Promise<string> {
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
+    if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
+    return parsePdfBuffer(Buffer.from(await res.arrayBuffer()));
+}
+
+// Is this URL a direct PDF link? (pathname ends in .pdf, ignoring query/fragment)
+export function isPdfUrl(url: string): boolean {
+    try { return new URL(url).pathname.toLowerCase().endsWith('.pdf'); }
+    catch { return /\.pdf(?:[?#]|$)/i.test(url); }
+}
+
 // Enumerate on-page anchor links (absolute URLs + visible text) for a depth-1 crawl of
 // link-hub / directory pages. De-duped by resolved URL; only http(s).
 export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; text: string }>> {

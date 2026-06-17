@@ -9,7 +9,7 @@
 import { config } from 'dotenv';
 config({ path: '.env.local' }); // Next.js local env (GEMINI_API_KEY, sheet id, SA creds)
 import { google, sheets_v4 } from 'googleapis';
-import { fetchUrlToText, extractScholarships, GroundedRecord } from '../src/lib/extract';
+import { fetchUrlToText, fetchPdfToText, isPdfUrl, extractScholarships, GroundedRecord } from '../src/lib/extract';
 import { findMasterDuplicate, findUrlCollision, nameTokens, MasterRef } from '../src/lib/grounding';
 import { STUDENT_HEADERS, mapRecordToRow, assertWritableHeaders } from '../src/lib/pushMapping';
 
@@ -121,7 +121,9 @@ async function stage(start = 0): Promise<void> {
         const label = `[${attempts}] ${cand.name.slice(0, 44)}`;
         let records: GroundedRecord[] = [];
         try {
-            const text = await fetchUrlToText(cand.url);
+            // PDF-URL candidates (e.g. assets.noviams.com/...pdf) need the PDF text path;
+            // fetchUrlToText is HTML-only and would yield garbage on a PDF.
+            const text = isPdfUrl(cand.url) ? await fetchPdfToText(cand.url) : await fetchUrlToText(cand.url);
             records = await extractScholarships(text, cand.url);
         } catch (e: unknown) {
             console.log(`${label}  -> FETCH/EXTRACT FAILED: ${(e as Error).message.slice(0, 60)}`);
