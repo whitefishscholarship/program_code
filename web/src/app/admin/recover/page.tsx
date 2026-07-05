@@ -18,7 +18,7 @@ export default function RecoverPasswordPage() {
             setError(res.error);
         } else {
             setStep('verify');
-            setSuccessMsg('A 6-digit recovery PIN has been sent to the Master Admin email address. It will expire in 15 minutes.');
+            setSuccessMsg('A one-time recovery code has been sent to the Master Admin email address. It will expire in 15 minutes.');
         }
         setIsLoading(false);
     };
@@ -52,8 +52,8 @@ export default function RecoverPasswordPage() {
                 </h2>
                 <p className="mt-2 text-center text-sm text-gray-600">
                     {step === 'request'
-                        ? 'Request a temporary PIN to bypass the master password.'
-                        : 'Enter the 6-digit PIN sent to the administrator email.'}
+                        ? 'Request a temporary code to bypass the master password.'
+                        : 'Enter the recovery code sent to the administrator email.'}
                 </p>
             </div>
 
@@ -89,18 +89,18 @@ export default function RecoverPasswordPage() {
                         <form action={handleVerifyPin} className="space-y-6">
                             <div>
                                 <label htmlFor="pin" className="block text-sm font-medium text-gray-700">
-                                    6-Digit PIN
+                                    Recovery Code
                                 </label>
                                 <div className="mt-1">
                                     <input
                                         id="pin"
                                         name="pin"
                                         type="text"
-                                        pattern="[0-9]{6}"
-                                        maxLength={6}
+                                        autoComplete="one-time-code"
+                                        maxLength={32}
                                         required
                                         className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-lg text-black font-mono tracking-widest text-center"
-                                        placeholder="123456"
+                                        placeholder="paste code from email"
                                     />
                                 </div>
                             </div>

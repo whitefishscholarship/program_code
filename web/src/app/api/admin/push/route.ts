@@ -102,7 +102,13 @@ export async function POST(req: NextRequest) {
         });
 
     } catch (error: any) {
+        // Log detail server-side; return a generic message (googleapis errors can carry sheet
+        // IDs / ranges / permission detail). The assertWritableHeaders guard message is the
+        // one useful signal, so surface just that class of error explicitly.
         console.error('Push Error:', error);
-        return NextResponse.json({ error: error.message || 'Failed to append to Google Sheets' }, { status: 500 });
+        const msg = typeof error?.message === 'string' && error.message.startsWith('Refusing to write')
+            ? error.message
+            : 'Failed to append to Google Sheets.';
+        return NextResponse.json({ error: msg }, { status: 500 });
     }
 }

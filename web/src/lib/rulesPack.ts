@@ -14,14 +14,36 @@ export const RulesPack = {
         // Identity, demographic, health, and hardship criteria are deliberately NOT here — they
         // live under boosts.identity_criteria and only affect ranking, never exclusion, so a
         // passing mention in boilerplate can never hide an otherwise-eligible scholarship.
+        // These are HARD excludes, so each pattern must denote a genuine affiliation
+        // REQUIREMENT, not a bare topic word. Earlier bare tokens (`\bdependent`,
+        // `\bemployee`, `\bveterans?`, `\blodge`) silently removed explicitly-open
+        // scholarships from ordinary applicants (e.g. Elks "Most Valuable Student" and the
+        // Live Your Dream Award both contain the word "dependent"). Patterns now require the
+        // affiliation to be phrased as an eligibility gate ("dependents of employees",
+        // "must be a veteran", "veterans and their families"). Erring toward showing a
+        // scholarship (a mild false include) beats hiding an eligible one (a real harm).
         eligibility_gates: {
-            military_veteran: [/\bveterans?\b/i, /\bmilitary\b/i, /\bair force\b/i, /\bnavy\b/i, /\bmarines\b/i, /\barmy\b/i],
-            first_responder: [/\bfirst responder/i, /\bpolice\b/i, /\bfirefighter/i, /\blaw enforcement\b/i, /\bemt\b/i],
+            military_veteran: [
+                /\b(?:child(?:ren)?|son|daughter|dependents?|spouse|grandchild(?:ren)?|family members?) of (?:a |an )?(?:us )?(?:veterans?|military|service members?|active[- ]duty|soldiers?|sailors?|airm[ae]n|marines?|national guard)\b/i,
+                /\b(?:must be|be an?|is an?|are an?|for) (?:a |an |current )?(?:veterans?|active[- ]duty|military service members?)\b/i,
+                /\bveterans?\b[^.]{0,25}\bonly\b/i,
+                /\b(?:members? of the )?(?:national guard|armed forces|us military)\b/i,
+                /\bmilitary[- ]connected\b/i,
+            ],
+            first_responder: [/\bfirst responder/i, /\bpolice officers?\b/i, /\bfirefighter/i, /\blaw enforcement\b/i, /\b(?:child|dependents?|spouse) of (?:a |an )?(?:police|firefighter|first responder|emt)\b/i],
             farmers_union: [/\bfarmers union\b/i],
             electric_coop: [/\belectric co-?op/i, /\belectric cooperative/i, /\bflathead electric\b/i],
             credit_union: [/\bcredit union\b/i, /\bwhitefish credit union\b/i],
-            elks_lodge: [/\belks\b/i, /\blodge\b/i],
-            company_employee: [/\bdependent/i, /\bemployee/i, /\bdon k\b/i, /\bwhitefish mountain resort\b/i],
+            // The Elks run BOTH member-restricted awards AND the public "Most Valuable
+            // Student" scholarship, so bare "elks" must NOT gate (it would hide the public
+            // award). Require genuine member-restriction wording.
+            elks_lodge: [/\belks\s+(?:lodge\s+)?members?\b/i, /\bmember of (?:the |an )?elks\b/i, /\b(?:child(?:ren)?|dependents?|grandchild(?:ren)?) of (?:an? )?elks\b/i],
+            company_employee: [
+                /\b(?:dependents?|child(?:ren)?|son|daughter|spouse|family members?) of (?:an? |current )?(?:employees?|members?|staff)\b/i,
+                /\bmust be (?:a current |an? )?employee\b/i,
+                /\bemployees?\s+(?:and(?: their)? (?:dependents?|families|children)|only)\b/i,
+                /\bwhitefish mountain resort\b/i, /\bdon k\b/i,
+            ],
         }
     },
 

@@ -6,6 +6,7 @@ import {
   mapRecordToRow,
   assertWritableHeaders,
   normalizeHeader,
+  sanitizeCell,
 } from "../src/lib/pushMapping";
 
 let failed = 0;
@@ -111,6 +112,46 @@ try {
   refusedDrift = true;
 }
 check("assertWritableHeaders refuses missing student column", refusedDrift);
+
+// Guard: a NON-forbidden extra column (a future PII column named outside FORBIDDEN) is refused.
+let refusedExtra = false;
+try {
+  assertWritableHeaders([...LIVE_HEADERS, "Point of Contact"]);
+} catch {
+  refusedExtra = true;
+}
+check("assertWritableHeaders refuses an unexpected extra column", refusedExtra);
+
+// Trailing empty header cells must NOT count as drift (Sheets often returns blank tail cells).
+let acceptsBlankTail = true;
+try {
+  assertWritableHeaders([...LIVE_HEADERS, "", "  "]);
+} catch {
+  acceptsBlankTail = false;
+}
+check("assertWritableHeaders tolerates trailing blank header cells", acceptsBlankTail);
+
+// --- Formula/CSV injection: scraped text starting with = + - @ must be neutralized ---
+check("sanitizeCell prefixes a leading '=' formula", sanitizeCell('=HYPERLINK("x","y")') === `'=HYPERLINK("x","y")`, sanitizeCell('=HYPERLINK("x","y")'));
+check("sanitizeCell prefixes leading +", sanitizeCell("+1+1") === "'+1+1");
+check("sanitizeCell prefixes leading @", sanitizeCell("@import") === "'@import");
+check("sanitizeCell prefixes leading -", sanitizeCell("-2+3") === "'-2+3");
+check("sanitizeCell leaves a normal amount untouched", sanitizeCell("$5,000") === "$5,000");
+check("sanitizeCell leaves a normal name untouched", sanitizeCell("ABC Merit Scholarship") === "ABC Merit Scholarship");
+check("sanitizeCell leaves empty untouched", sanitizeCell("") === "");
+
+// End-to-end: a record whose Summary is a formula lands as inert text in the mapped row.
+const inject: Record<string, unknown> = {
+  "Name of Scholarship": "=1+1",
+  "Summary": '=HYPERLINK("https://evil.example","Apply for $5000")',
+  "Amount": "$1,000",
+};
+const irow = mapRecordToRow(inject, LIVE_HEADERS);
+const iName = irow[LIVE_HEADERS.indexOf("Name of Scholarship")];
+const iSummary = irow[LIVE_HEADERS.indexOf("Summary")];
+check("mapped formula Name is neutralized", iName.startsWith("'="), iName);
+check("mapped formula Summary is neutralized", iSummary.startsWith("'="), iSummary);
+check("mapped normal Amount untouched", irow[LIVE_HEADERS.indexOf("Amount")] === "$1,000");
 
 console.log(failed === 0 ? "\nALL PASS" : `\n${failed} FAILED`);
 process.exit(failed === 0 ? 0 : 1);

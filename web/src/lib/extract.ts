@@ -68,7 +68,31 @@ export type GroundedRecord = Record<string, unknown> & {
 // Fetch a URL and reduce it to clean body text (same reduction the admin route uses).
 const FETCH_TIMEOUT_MS = 20000;
 
+// SSRF guard. The extract route and the batch/crawl scripts fetch caller/sheet-supplied
+// URLs; without this a request could make the server reach cloud-metadata (169.254.169.254),
+// localhost, or private-range hosts. Reject any non-http(s) scheme and any host that is a
+// loopback / link-local / private IP literal or an obvious internal name. This blocks the
+// literal-IP and localhost cases; it does NOT resolve DNS, so a hostname that resolves to a
+// private IP (DNS-rebinding) is not covered here — acceptable for this admin-gated tool, and
+// noted for a future resolve-then-check hardening.
+const PRIVATE_HOST_RE =
+    /^(localhost|(?:.*\.)?(?:local|internal|intranet|lan|corp|home))$|^127\.|^10\.|^0\.0\.0\.0$|^169\.254\.|^192\.168\.|^172\.(?:1[6-9]|2\d|3[01])\.|^::1$|^\[::1\]$|^\[?f[cd][0-9a-f]{2}:|^\[?fe80:/i;
+
+export function assertFetchableUrl(url: string): void {
+    let u: URL;
+    try { u = new URL(url); }
+    catch { throw new Error(`Refusing to fetch: not a valid URL`); }
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') {
+        throw new Error(`Refusing to fetch: unsupported scheme "${u.protocol}" (only http/https allowed)`);
+    }
+    const host = u.hostname.replace(/^\[|\]$/g, '').toLowerCase();
+    if (PRIVATE_HOST_RE.test(host) || PRIVATE_HOST_RE.test(u.hostname)) {
+        throw new Error(`Refusing to fetch: private/loopback/link-local host is not allowed`);
+    }
+}
+
 export async function fetchUrlToText(url: string): Promise<string> {
+    assertFetchableUrl(url);
     const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
     if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
     const html = await res.text();
@@ -112,6 +136,7 @@ export async function parsePdfBuffer(buffer: Buffer): Promise<string> {
 // Fetch a PDF URL and reduce it to clean text. fetchUrlToText is HTML-only (cheerio) and
 // produces garbage on a PDF; PDF-URL candidates (e.g. assets.noviams.com/...pdf) route here.
 export async function fetchPdfToText(url: string): Promise<string> {
+    assertFetchableUrl(url);
     const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
     if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
     return parsePdfBuffer(Buffer.from(await res.arrayBuffer()));
@@ -126,6 +151,7 @@ export function isPdfUrl(url: string): boolean {
 // Enumerate on-page anchor links (absolute URLs + visible text) for a depth-1 crawl of
 // link-hub / directory pages. De-duped by resolved URL; only http(s).
 export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; text: string }>> {
+    assertFetchableUrl(url);
     const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
     if (!res.ok) throw new Error(`HTTP Error: ${res.status}`);
     const $ = cheerio.load(await res.text());
@@ -145,26 +171,29 @@ export async function fetchUrlLinks(url: string): Promise<Array<{ url: string; t
 // + name against that same source text and attach confidence + flags.
 export async function extractScholarships(rawText: string, sourceRef: string): Promise<GroundedRecord[]> {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-    // Bounded retry on transient Gemini errors (429/5xx/network) — extraction is idempotent.
-    let response;
+    // Bounded retry — extraction is idempotent. Retry not only on thrown transient errors
+    // (429/5xx/network) but ALSO on a successful-but-empty body (safety block / truncation)
+    // and on a body that fails to JSON.parse (truncated mid-JSON): those used to fall out of
+    // the loop and fail the whole page on the first bad response, with no second chance.
+    let records: Record<string, unknown>[] | null = null;
     let lastErr: unknown;
     for (let attempt = 1; attempt <= 3; attempt++) {
         try {
-            response = await ai.models.generateContent({
+            const response = await ai.models.generateContent({
                 model: 'gemini-2.5-flash',
                 contents: buildPrompt(rawText, sourceRef),
                 config: { responseMimeType: 'application/json', responseSchema: scholarshipSchema, temperature: 0.1 },
             });
+            if (!response.text) throw new Error('AI returned an empty extraction.');
+            const parsed = JSON.parse(response.text);
+            records = Array.isArray(parsed) ? parsed : [];
             break;
         } catch (e) {
             lastErr = e;
             if (attempt < 3) await new Promise((r) => setTimeout(r, 800 * attempt));
         }
     }
-    if (!response) throw new Error(`Gemini failed after retries: ${(lastErr as Error)?.message ?? lastErr}`);
-    if (!response.text) throw new Error('AI returned an empty extraction.');
-    const parsed = JSON.parse(response.text);
-    const records: Record<string, unknown>[] = Array.isArray(parsed) ? parsed : [];
+    if (records === null) throw new Error(`Gemini extraction failed after retries: ${(lastErr as Error)?.message ?? lastErr}`);
     return records.map((rec) => {
         const { record, flags } = groundRecord(rec, rawText);
         // Reject fund/endowment/donation totals masquerading as an award amount — these
@@ -173,6 +202,20 @@ export async function extractScholarships(rawText: string, sourceRef: string): P
         if (amt && isFundTotal(amt)) {
             record['Amount'] = '';
             flags.push(`Amount "${amt.slice(0, 30)}" looks like a fund/endowment total, not an award — blanked`);
+        } else if (amt) {
+            // isFundTotal only sees the Amount string, so a bare "$50,000" whose SOURCE says
+            // "$50,000 endowment" slips through. If the amount's number appears in a source
+            // sentence with fund/endowment/donation wording, flag it (advisory — don't blank,
+            // to avoid nuking legit "$2,000 from the endowment" awards; a human decides).
+            const amtNum = (amt.match(/\d[\d,]*(?:\.\d+)?/) || [])[0];
+            if (amtNum) {
+                for (const sent of rawText.split(/(?<=[.;\n])\s+/)) {
+                    if (sent.includes(amtNum) && /\b(endow|donat|\braised\b|to fund\b|fund (?:total|balance|of)|over the next|has (?:given|raised|donated))/i.test(sent)) {
+                        flags.push(`Amount "${amt.slice(0, 20)}" appears in a fund/endowment sentence in the source — verify it is a per-student award`);
+                        break;
+                    }
+                }
+            }
         }
         const name = String(record['Name of Scholarship'] ?? '');
         const summary = String(record['Summary'] ?? '');

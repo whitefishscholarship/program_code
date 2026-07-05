@@ -62,10 +62,24 @@ const EXTRA_ALIASES: Record<string, string[]> = Object.fromEntries(
   ]),
 );
 
+// Neutralize spreadsheet formula/CSV injection. The push writes with
+// valueInputOption 'USER_ENTERED', so a scraped cell whose text begins with
+// = + - @ (or a leading tab/CR that Sheets also treats as a formula lead-in)
+// would be evaluated as a live formula in Master and then served to students.
+// Prefix such values with a single apostrophe, which forces Sheets to store
+// the literal text. Legitimate scholarship values never start with these
+// characters, and an apostrophe-prefixed value still displays as the plain text.
+export function sanitizeCell(value: string): string {
+  if (value && /^[=+\-@\t\r]/.test(value)) return "'" + value;
+  return value;
+}
+
 // Build the row to append, aligned to `headers` (the LIVE header row), pulling each
 // value from the record by header name (with alias fallbacks). Internal fields
 // (those starting with "_", e.g. _confidence/_flags) are ignored, as are any keys
 // not matching a live header — so PII never leaks even if present on the record.
+// Every emitted cell is run through sanitizeCell so scraped text can never become
+// a live formula in the sheet.
 export function mapRecordToRow(record: Record<string, unknown>, headers: string[]): string[] {
   const byNorm = new Map<string, unknown>();
   for (const [k, v] of Object.entries(record)) {
@@ -77,7 +91,7 @@ export function mapRecordToRow(record: Record<string, unknown>, headers: string[
     for (const cand of [hn, ...(EXTRA_ALIASES[hn] || [])]) {
       if (byNorm.has(cand)) {
         const v = byNorm.get(cand);
-        return v == null ? "" : String(v);
+        return v == null ? "" : sanitizeCell(String(v));
       }
     }
     return "";
@@ -103,6 +117,17 @@ export function assertWritableHeaders(headers: string[]): void {
   if (missing.length) {
     throw new Error(
       `Refusing to write: Master Database is missing expected student column(s) ${JSON.stringify(missing)}.`,
+    );
+  }
+  // Strict allowlist: reject ANY unexpected extra column, not just the known FORBIDDEN ones.
+  // The guard's contract is "the expected clean student schema"; a future sensitive column
+  // added under a name NOT in FORBIDDEN_HEADERS (e.g. "Point of Contact", "Student Email")
+  // would otherwise pass silently. Fail loud on any drift instead.
+  const allowed = new Set(STUDENT_HEADERS.map(normalizeHeader));
+  const extra = headers.filter((h) => h.trim() !== '' && !allowed.has(normalizeHeader(h)));
+  if (extra.length) {
+    throw new Error(
+      `Refusing to write: Master Database has unexpected column(s) ${JSON.stringify(extra)} — schema drift or wrong tab.`,
     );
   }
 }

@@ -225,7 +225,10 @@ export default function AdminDashboard() {
                             <table className="min-w-full divide-y divide-gray-200">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        {/* hide internal metadata keys (_confidence/_flags/_relevance/etc.) */}
+                                        {/* Review column surfaces the honesty gate's own signal (confidence + grounding/
+                                            audience/relevance flags) so a human isn't approving blind. The underlying
+                                            editable data columns still hide the raw _-prefixed keys. */}
+                                        <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">Review</th>
                                         {Object.keys(stagedData[0]).filter(k => !k.startsWith('_')).map(key => (
                                             <th key={key} className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap">
                                                 {key}
@@ -236,6 +239,34 @@ export default function AdminDashboard() {
                                 <tbody className="bg-white divide-y divide-gray-200">
                                     {stagedData.map((row: any, i: number) => (
                                         <tr key={i} className="hover:bg-blue-50/30 transition-colors">
+                                            {(() => {
+                                                const flags: string[] = Array.isArray(row._flags) ? row._flags : [];
+                                                const audienceBad = row._audienceFit === false;
+                                                const relevanceBad = row._relevance === 'exclude' || row._relevance === 'review';
+                                                const conf = typeof row._confidence === 'number' ? row._confidence : null;
+                                                const hasWarn = flags.length > 0 || audienceBad || relevanceBad;
+                                                const tone = audienceBad || row._relevance === 'exclude'
+                                                    ? 'bg-red-100 text-red-800 border-red-200'
+                                                    : hasWarn ? 'bg-amber-100 text-amber-800 border-amber-200'
+                                                    : 'bg-green-100 text-green-800 border-green-200';
+                                                const reasons = [
+                                                    audienceBad ? 'audience: not a fit' : '',
+                                                    relevanceBad ? `relevance: ${row._relevance}` : '',
+                                                    ...flags,
+                                                ].filter(Boolean);
+                                                return (
+                                                    <td className="px-4 py-4 align-top text-xs min-w-[220px] max-w-[320px]">
+                                                        <span className={`inline-block px-2 py-0.5 rounded border font-medium ${tone}`}>
+                                                            {hasWarn ? '⚠ Review' : 'OK'}{conf !== null ? ` · ${conf}%` : ''}
+                                                        </span>
+                                                        {reasons.length > 0 && (
+                                                            <ul className="mt-1 list-disc list-inside text-gray-600 space-y-0.5">
+                                                                {reasons.map((r, ri) => <li key={ri}>{r}</li>)}
+                                                            </ul>
+                                                        )}
+                                                    </td>
+                                                );
+                                            })()}
                                             {Object.keys(stagedData[0]).filter(k => !k.startsWith('_')).map(key => (
                                                 <td key={key} className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                                     <input

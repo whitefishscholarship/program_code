@@ -66,7 +66,10 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ success: true, data: grounded });
 
     } catch (error: any) {
+        // Log full detail server-side, but return a GENERIC message: error.message here can
+        // carry the upstream "HTTP Error: <status>" from a fetched URL (a small SSRF-probe
+        // oracle) or internal parser/credential detail. Matches the scholarships route.
         console.error('Extraction Error:', error);
-        return NextResponse.json({ error: error.message || 'Failed to extract data' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed to extract data from the provided source.' }, { status: 500 });
     }
 }

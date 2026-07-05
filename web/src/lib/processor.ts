@@ -1,5 +1,6 @@
 import { AnswerMap } from '@/types/wizard';
 import { RulesPack } from './rulesPack';
+import { parseDeadline } from './dateParse';
 
 type RawRow = Record<string, string>;
 
@@ -38,7 +39,7 @@ export function normalizeRow(row: RawRow): ProcessedRow {
 
     // 1. GPA
     const rawGpa = row['Stated Min. GPA'];
-    if (rawGpa) {
+    if (rawGpa != null && rawGpa !== '') {
         const gpaStr = String(rawGpa);
         if (gpaStr.toLowerCase() !== 'any') {
             const match = gpaStr.match(/\d+(\.\d+)?/);
@@ -46,26 +47,38 @@ export function normalizeRow(row: RawRow): ProcessedRow {
         }
     }
 
-    // 2. Dates
-    const dateStr = row['Due Date']?.toLowerCase() || '';
+    // 2. Dates — use the SHARED parser (dateParse.ts), the same one the browse surface
+    // uses, so the two views agree. The old naive `new Date(dateStr)` resolved bare
+    // month-name/month-day strings ("March 15", "Annual — May 31") to the year 2001 and
+    // silently dropped those live scholarships from the quiz as past-due. Anything the
+    // parser can't resolve to a date degrades to 'tbd' (kept), never a year-2001 exclude.
+    const rawDue = row['Due Date'];
+    const dateStr = (rawDue == null ? '' : String(rawDue)).toLowerCase();
     if (RulesPack.dates.expired_keywords.some(r => r.test(dateStr))) {
         norm.due_date_type = 'expired';
     } else if (RulesPack.dates.rolling_keywords.some(r => r.test(dateStr))) {
         norm.due_date_type = 'rolling';
     } else if (dateStr) {
-        const parsed = new Date(dateStr);
-        if (!isNaN(parsed.getTime())) {
+        const d = parseDeadline(String(rawDue));
+        if (d.kind === 'expired') {
+            norm.due_date_type = 'expired';
+        } else if (d.kind === 'rolling') {
+            norm.due_date_type = 'rolling';
+        } else if (d.kind === 'hard' && d.date) {
             norm.due_date_type = 'hard';
-            norm.due_date_value = parsed;
+            norm.due_date_value = d.date;
+        } else {
+            // 'opens' (informational) and 'tbd' (unresolvable) — keep the row, no hard date.
+            norm.due_date_type = 'tbd';
         }
     }
 
     // 3. Location / National
-    const location = row['In-State / National']?.toLowerCase() || '';
+    const location = String(row['In-State / National'] ?? '').toLowerCase();
     norm.is_national = location.includes('national') || location.includes('any');
 
     // 4. School Types
-    const types = row['School Type (2-or 4-Year, or Trade)']?.toLowerCase() || '';
+    const types = String(row['School Type (2-or 4-Year, or Trade)'] ?? '').toLowerCase();
     if (types.includes('any')) {
         norm.school_types = ['Two year', 'Four year', 'Trade'];
     } else {
@@ -75,19 +88,20 @@ export function normalizeRow(row: RawRow): ProcessedRow {
     }
 
     // 5. Gap Year
-    const gap = row['Accepts Gap Year Applications Upon Return']?.toLowerCase() || '';
+    const gap = String(row['Accepts Gap Year Applications Upon Return'] ?? '').toLowerCase();
     if (gap === 'no') norm.gap_year_allowed = false;
 
-    // 6. Organization Requirements (Logic migrated to Tier 1 strict exclude engine)
-    const summary = (row['Summary'] || '') + ' ' + (row['Focus'] || '');
-
-    // 7. Amount Parsing (for ranking)
-    const amountStr = row['Amount'] || '';
-    const amtMatch = amountStr.replace(/,/g, '').match(/\d+/);
-    if (amtMatch) norm.amount_max = parseInt(amtMatch[0], 10);
+    // 7. Amount Parsing (for ranking). Take the HIGHEST number in the string so a range
+    // like "$500 - $2,000" ranks/scores on its $2,000 ceiling, not the $500 floor (the
+    // field is named amount_max and is used as the high end for sort + score).
+    const amountStr = String(row['Amount'] ?? '').replace(/,/g, '');
+    const amtNums = amountStr.match(/\d+/g);
+    if (amtNums && amtNums.length) {
+        norm.amount_max = Math.max(...amtNums.map((n) => parseInt(n, 10)).filter(Number.isFinite));
+    }
 
     // 8. Renewable
-    norm.is_renewable = (row['Renewing/ Non-Renewing'] || '').toLowerCase().includes('renewing');
+    norm.is_renewable = String(row['Renewing/ Non-Renewing'] ?? '').toLowerCase().includes('renewing');
 
     return { raw: row, normalized: norm };
 }
