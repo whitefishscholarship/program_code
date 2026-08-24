@@ -73,7 +73,10 @@ INDEPENDENT REVIEW
   verification evidence, and known risks.
 - The implementation agent fixes findings; the reviewer does not edit.
 - Critical/high findings block acceptance. Recheck after remediation.
-- Add the accepted manifest and review record only in the following attestation commit.
+- Add the accepted manifest and review record only in the following direct-child
+  attestation commit; its diff must contain exactly those two paths.
+- Preserve prior-stage manifest and review blobs byte-for-byte. Disposition every
+  medium/low finding with rationale, owner, and target.
 
 AUTONOMOUS GIT DELIVERY — NO GIT QUESTIONS TO KELSEY
 - Inspect state and follow AGENTS.md.

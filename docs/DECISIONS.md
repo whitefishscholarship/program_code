@@ -119,3 +119,16 @@ but are not rewritten or deleted.
   review accepts the frozen candidate. The authority excludes spreadsheet writes,
   product behavior changes, deployment-configuration changes, form submissions, and
   provider contact.
+
+## D-011 — Attestation-only enforcement and renewed delivery boundary
+
+- Date: 2026-08-23
+- Status: accepted
+- Decision: Require the manifest/review attestation to be the candidate commit's direct
+  child with exactly those two changed paths; preserve historical attestation blobs;
+  and machine-check a disposition for every medium/low finding.
+- Reason: Independent review of `5b3082e` found that arbitrary post-candidate changes
+  could otherwise escape review and that nonblocking findings could lack ownership.
+- Consequence: The validator remediation is a new candidate change outside D-010's
+  exact delivery sequence. Keep delivery blocked until Kelsey explicitly authorizes the
+  final remediated commit and its direct-child attestation.

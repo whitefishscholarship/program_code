@@ -591,7 +591,8 @@ manifest records that immutable candidate commit, lists every added, modified, o
 deleted path between the baseline and candidate commits (excluding only that stage's
 manifest and review record), hashes blobs from the candidate Git tree, and represents
 deletions explicitly. The reviewer signs the manifest digest; a following attestation
-commit adds only the manifest and review record.
+commit is the direct child of the candidate commit and adds only the manifest and review
+record. All later stages preserve those attestation blobs byte-for-byte.
 
 CI fetches full history. `npm run plan:check` validates every historical stage against
 its own candidate commit rather than the current worktree, requires the candidate to
@@ -599,10 +600,13 @@ descend from its baseline and remain in current history, proves an undelivered
 candidate's baseline equals current `origin/main`, validates the candidate and baseline
 BUILD_STATE transition, compares manifest paths to the complete Git commit-to-commit
 change set, recomputes candidate-tree hashes, and rejects accepted-stage regression
-found in repository history. This permits P1-P9 to evolve shared governance files
+found in repository history. It also discovers each committed attestation, proves the
+direct candidate-to-attestation parent relationship and exact two-path diff, and rejects
+later rewrites of historical manifest/review blobs. This permits P1-P9 to evolve shared governance files
 without invalidating P0. The review record contains reviewer task identity,
-fresh-context and read-only declarations, outcome, severity counts, reviewed time, and
-manifest digest.
+fresh-context and read-only declarations, outcome, severity counts, reviewed time,
+manifest digest, and one machine-counted disposition for every medium/low finding with
+rationale, owner, and target.
 
 Critical or high findings prevent acceptance. Medium and low findings must be fixed or
 carried into `docs/CURRENT_HANDOFF.md` with rationale, owner, and target stage. The

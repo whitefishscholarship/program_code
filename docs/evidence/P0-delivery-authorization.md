@@ -45,3 +45,12 @@ this additional informed authorization:
 
 This later authorization covers the complete bounded P0 delivery sequence and resolves
 the amendment boundary above. It does not broaden any excluded action.
+
+## Later validator-remediation boundary
+
+Independent review of candidate `5b3082e` required an additional validator change to
+machine-enforce the direct-child attestation-only commit and medium/low dispositions.
+That code change is outside the exact sequence authorized above. It may be created and
+reviewed locally, but it may not be pushed, added to a PR, merged, or deployed until a
+new direct informed authorization covers the exact remediated commit and its
+attestation-only direct child.

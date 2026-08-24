@@ -94,6 +94,13 @@ type ReviewRecord = {
   reviewedAt: string;
   outcome: string;
   findings: { critical: number; high: number; medium: number; low: number };
+  dispositions: Array<{
+    severity: 'medium' | 'low';
+    summary: string;
+    rationale: string;
+    owner: string;
+    target: string;
+  }>;
   candidateManifestPath: string;
   candidateManifestSha256: string;
 };
@@ -382,8 +389,58 @@ if (state) {
 
   const acceptedStages = state.stages.filter((stage) => stage.status === 'accepted');
   for (const stage of acceptedStages) {
-    const manifest = readJson<CandidateManifest>(stage.manifestPath);
-    const review = readJson<ReviewRecord>(stage.reviewPath);
+    const attestationCommit = gitLines([
+      'log',
+      '-1',
+      '--diff-filter=A',
+      '--format=%H',
+      '--',
+      stage.manifestPath,
+    ])[0];
+    let manifest: CandidateManifest | null = null;
+    let review: ReviewRecord | null = null;
+    let attestationParent: string | null = null;
+    if (!attestationCommit || !isAncestor(attestationCommit, 'HEAD')) {
+      fail(`${stage.id} requires a committed manifest/review attestation in current history`);
+    } else {
+      const manifestRaw = gitText(['show', `${attestationCommit}:${stage.manifestPath}`]);
+      const reviewRaw = gitText(['show', `${attestationCommit}:${stage.reviewPath}`]);
+      if (manifestRaw === null || reviewRaw === null) {
+        fail(`${stage.id} attestation commit must contain both manifest and review record`);
+      } else {
+        try {
+          manifest = JSON.parse(manifestRaw) as CandidateManifest;
+        } catch (error) {
+          fail(`${stage.manifestPath} in attestation is invalid JSON: ${(error as Error).message}`);
+        }
+        try {
+          review = JSON.parse(reviewRaw) as ReviewRecord;
+        } catch (error) {
+          fail(`${stage.reviewPath} in attestation is invalid JSON: ${(error as Error).message}`);
+        }
+        const currentManifest = requireFile(stage.manifestPath);
+        const currentReview = requireFile(stage.reviewPath);
+        if (currentManifest && currentManifest !== manifestRaw) {
+          fail(`${stage.manifestPath} must remain byte-identical to its attestation commit`);
+        }
+        if (currentReview && currentReview !== reviewRaw) {
+          fail(`${stage.reviewPath} must remain byte-identical to its attestation commit`);
+        }
+      }
+
+      attestationParent = gitText(['rev-parse', `${attestationCommit}^`])?.trim() ?? null;
+      const attestationPaths = gitLines([
+        'diff',
+        '--name-only',
+        `${attestationCommit}^`,
+        attestationCommit,
+        '--',
+      ]).sort();
+      const requiredAttestationPaths = [stage.manifestPath, stage.reviewPath].sort();
+      if (JSON.stringify(attestationPaths) !== JSON.stringify(requiredAttestationPaths)) {
+        fail(`${stage.id} attestation commit may change only its manifest and review record`);
+      }
+    }
     if (!manifest) continue;
 
     if (manifest.schemaVersion !== 1 || manifest.stageId !== stage.id) {
@@ -395,6 +452,9 @@ if (state) {
     }
     if (!/^[0-9a-f]{40}$/.test(manifest.candidateCommit)) {
       fail(`${stage.manifestPath} candidateCommit must be a full lowercase Git SHA`);
+    }
+    if (attestationParent !== manifest.candidateCommit) {
+      fail(`${stage.id} attestation commit must be the direct child of candidateCommit`);
     }
     if (manifest.baselineCommit !== stage.baselineCommit) {
       fail(`${stage.manifestPath} baselineCommit does not match ${stage.id} BUILD_STATE baseline`);
@@ -539,6 +599,27 @@ if (state) {
     for (const severity of ['critical', 'high', 'medium', 'low'] as const) {
       if (!Number.isInteger(review.findings[severity]) || review.findings[severity] < 0) {
         fail(`${stage.reviewPath} has invalid ${severity} finding count`);
+      }
+    }
+    const expectedDispositionCount = review.findings.medium + review.findings.low;
+    if (!Array.isArray(review.dispositions) || review.dispositions.length !== expectedDispositionCount) {
+      fail(`${stage.reviewPath} must disposition every medium/low finding exactly once`);
+    } else {
+      const mediumDispositions = review.dispositions.filter((item) => item.severity === 'medium').length;
+      const lowDispositions = review.dispositions.filter((item) => item.severity === 'low').length;
+      if (mediumDispositions !== review.findings.medium || lowDispositions !== review.findings.low) {
+        fail(`${stage.reviewPath} disposition severities must match medium/low finding counts`);
+      }
+      for (const [index, disposition] of review.dispositions.entries()) {
+        if (
+          !['medium', 'low'].includes(disposition.severity) ||
+          !disposition.summary.trim() ||
+          !disposition.rationale.trim() ||
+          !disposition.owner.trim() ||
+          !disposition.target.trim()
+        ) {
+          fail(`${stage.reviewPath} disposition ${index + 1} requires severity, summary, rationale, owner, and target`);
+        }
       }
     }
     if (review.candidateManifestPath !== stage.manifestPath) {

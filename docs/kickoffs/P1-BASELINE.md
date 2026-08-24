@@ -93,7 +93,10 @@ INDEPENDENT REVIEW
 - Bind the review record to the candidate-manifest SHA-256.
 - The implementation agent repairs findings; the reviewer performs the recheck.
 - Critical/high findings block P1 acceptance.
-- Add only the accepted P1 manifest and review record in a following attestation commit.
+- Add only the accepted P1 manifest and review record in a following direct-child
+  attestation commit; its diff must contain exactly those paths. Preserve P0's manifest
+  and review blobs byte-for-byte. Disposition every medium/low finding with rationale,
+  owner, and target.
 
 EVIDENCE
 Update docs/evidence/P1.md, BUILD_STATE.json, CURRENT_HANDOFF.md, DECISIONS.md if

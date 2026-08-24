@@ -60,7 +60,10 @@ Freeze implementation and documentation in an immutable candidate commit before 
 review. The manifest hashes candidate-tree blobs and the complete Git change set from
 the verified `origin/main` baseline. Add only the manifest and review record in the
 following attestation commit. Historical manifests are never rebound to a later
-worktree.
+worktree. The attestation must be the candidate commit's direct child and change exactly
+the stage manifest and review paths. Preserve every historical attestation byte-for-byte.
+Every medium/low review finding requires a count-matched disposition with rationale,
+owner, and target.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 

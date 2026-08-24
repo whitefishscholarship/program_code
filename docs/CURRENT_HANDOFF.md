@@ -38,9 +38,11 @@ validator. Do not change product behavior or scholarship data.
 - The final reviewer outcome is authoritative only in `docs/reviews/P0.json`, bound
   to `docs/evidence/P0-manifest.json`. Its absence or a non-accepted outcome blocks
   `npm run plan:check` and P0 delivery.
-- Remaining work: commit/freeze the authorized final candidate, obtain a fresh
-  independent adversarial review, add the attestation-only commit, push, open the PR,
-  monitor checks/deployments, merge, and confirm the accepted record on `origin/main`.
+- Remaining work: commit/freeze the final validator remediation, obtain independent
+  adversarial acceptance, obtain direct informed delivery authority for that exact
+  remediated commit and its direct-child attestation, record/review the authority,
+  attest, push, open the PR, monitor checks/deployments, merge, and confirm the accepted
+  record on `origin/main`.
 
 ## Existing repository risk observed during P0
 
@@ -67,6 +69,11 @@ commit, one manifest/review attestation-only commit, PR creation/update, merge, 
 resulting Vercel deployments. No authority permits product behavior changes, spreadsheet
 writes, production-sheet configuration, deployment-configuration changes, form
 submissions, or provider contact.
+
+A fresh review of candidate `5b3082e` found that the validator did not enforce the
+attestation-only child commit or medium/low dispositions. The required later validator
+remediation is outside the exact prior delivery sequence, so BUILD_STATE again blocks
+delivery pending direct informed authority for the final remediated commit.
 
 ## Next stage
 

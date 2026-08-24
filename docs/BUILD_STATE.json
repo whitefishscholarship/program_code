@@ -21,15 +21,17 @@
     "stageMergeAuthorizations": [
       {
         "stageId": "P0",
-        "authorized": true,
-        "authorizedBy": "Kelsey Stuart",
-        "authorizedAt": "2026-08-23",
-        "evidencePath": "docs/evidence/P0-delivery-authorization.md",
-        "basis": "The user explicitly authorized the P0 branch containing 07a6e14 and 24a368d, one documentation-only authorization commit, one manifest/review attestation-only commit, Git delivery, and resulting Vercel Preview and Production deployments.",
-        "scope": "Deliver the P0 branch containing 07a6e14 and 24a368d plus the defined authorization and attestation commits by push, PR creation/update, and merge to main, including resulting Vercel Preview and Production deployments. No spreadsheet writes, product behavior changes, deployment-configuration changes, form submissions, or provider contact are authorized."
+        "authorized": false,
+        "authorizedBy": null,
+        "authorizedAt": null,
+        "evidencePath": null,
+        "basis": "The user authorized the branch through the documentation-only commit 5b3082e and an attestation-only child, but final adversarial review required a later validator remediation commit.",
+        "scope": "Do not deliver the later validator-remediated candidate until direct informed authority covers that exact commit plus its direct-child manifest/review attestation."
       }
     ],
-    "deliveryBlockers": []
+    "deliveryBlockers": [
+      "P0-final-validator-remediation-delivery-authority"
+    ]
   },
   "activeStageId": null,
   "nextPermittedStageId": "P1",
