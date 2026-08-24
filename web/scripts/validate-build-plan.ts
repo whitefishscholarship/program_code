@@ -389,14 +389,26 @@ if (state) {
 
   const acceptedStages = state.stages.filter((stage) => stage.status === 'accepted');
   for (const stage of acceptedStages) {
-    const attestationCommit = gitLines([
-      'log',
-      '-1',
-      '--diff-filter=A',
-      '--format=%H',
-      '--',
-      stage.manifestPath,
-    ])[0];
+    const currentManifestRaw = requireFile(stage.manifestPath);
+    let candidateHint: string | null = null;
+    if (currentManifestRaw) {
+      try {
+        candidateHint = (JSON.parse(currentManifestRaw) as CandidateManifest).candidateCommit;
+      } catch {
+        // The committed attestation parser below reports the authoritative JSON error.
+      }
+    }
+    const attestationCommit = candidateHint
+      ? gitLines([
+          'log',
+          '-1',
+          '--diff-filter=A',
+          '--format=%H',
+          `${candidateHint}..HEAD`,
+          '--',
+          stage.manifestPath,
+        ])[0]
+      : undefined;
     let manifest: CandidateManifest | null = null;
     let review: ReviewRecord | null = null;
     let attestationParent: string | null = null;
@@ -418,7 +430,7 @@ if (state) {
         } catch (error) {
           fail(`${stage.reviewPath} in attestation is invalid JSON: ${(error as Error).message}`);
         }
-        const currentManifest = requireFile(stage.manifestPath);
+        const currentManifest = currentManifestRaw;
         const currentReview = requireFile(stage.reviewPath);
         if (currentManifest && currentManifest !== manifestRaw) {
           fail(`${stage.manifestPath} must remain byte-identical to its attestation commit`);
