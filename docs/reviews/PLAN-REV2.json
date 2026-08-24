@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV2",
+  "reviewerTaskId": "/root/p1_delivery_path_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-08-24T19:29:23Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact replacement Plan Revision 2 candidate 3617b0fdc81b1a00f755d93df969f78de586e75e and its direct-child two-file amendment attestation only. Pending clean-clone validation may defer unavailable P1 object topology, but every accepted delivery integration requires exact preserved objects, topology, identity, authority, paths, blobs, and machine-state transition.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/PLAN-REV2-manifest.json",
+  "candidateManifestSha256": "0dff39c4dacb464105e37d55ae63c36e0df9d2b2729768e5b0a7c83bb0d8a9dd"
+}
