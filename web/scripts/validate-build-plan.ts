@@ -639,15 +639,30 @@ if (state) {
       continue;
     }
     requireFile(integration.evidencePath);
-    const attestationParent = gitText(['rev-parse', `${integration.stageAttestationCommit}^`])?.trim();
-    if (attestationParent !== integration.stageCandidateCommit) {
-      fail(`${integration.stageId} preserved attestation is not the direct child of its recorded candidate`);
-    }
     if (integration.status === 'authorized-pending') {
       if (integration.deliveryBaselineCommit !== null) {
         fail(`${integration.stageId} pending delivery integration must not pre-bind an unknown delivery baseline`);
       }
+      if (
+        gitObjectExists(integration.stageCandidateCommit) &&
+        gitObjectExists(integration.stageAttestationCommit)
+      ) {
+        const attestationParent = gitText(['rev-parse', `${integration.stageAttestationCommit}^`])?.trim();
+        if (attestationParent !== integration.stageCandidateCommit) {
+          fail(`${integration.stageId} preserved attestation is not the direct child of its recorded candidate`);
+        }
+      }
     } else {
+      if (
+        !gitObjectExists(integration.stageCandidateCommit) ||
+        !gitObjectExists(integration.stageAttestationCommit)
+      ) {
+        fail(`${integration.stageId} accepted delivery integration requires the preserved Git objects`);
+      }
+      const attestationParent = gitText(['rev-parse', `${integration.stageAttestationCommit}^`])?.trim();
+      if (attestationParent !== integration.stageCandidateCommit) {
+        fail(`${integration.stageId} preserved attestation is not the direct child of its recorded candidate`);
+      }
       if (!/^[0-9a-f]{40}$/.test(integration.deliveryBaselineCommit ?? '')) {
         fail(`${integration.stageId} accepted delivery integration requires its exact delivery baseline`);
       } else {

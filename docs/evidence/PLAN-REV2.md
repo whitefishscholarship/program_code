@@ -117,3 +117,17 @@ Prospective `npm run plan:check` rejected only the intentionally absent
 `docs/reviews/PLAN-REV2.json` and the not-yet-created exact amendment attestation. The
 candidate was frozen only after these results were written; its commit and complete
 tree hashes are bound by the regenerated manifest.
+
+GitHub PR #8 then exercised the accepted amendment attestation in a clean CI clone. CI
+correctly lacked the unrelated, not-yet-pushed P1 objects and rejected the pending record
+while trying to inspect `20476b8^`. The published attestation was left untouched. A clean
+replacement branch starts from its reviewed candidate and changes the validator so a
+pending integration validates exact SHA syntax and, when the objects are locally
+available, their topology. The later accepted integration requires both Git objects and
+rechecks the exact direct-parent relationship before any delivery can pass. This preserves
+the amendment-first delivery sequence without weakening the integration gate.
+
+Post-CI remediation verification completed through `2026-08-24T19:27:20Z`:
+typecheck, the complete existing test suite, the network-enabled production build, and
+`git diff --check` passed. Prospective plan validation rejected only the intentionally
+absent replacement manifest, review, and direct-child attestation.
