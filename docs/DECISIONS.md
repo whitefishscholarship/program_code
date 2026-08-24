@@ -132,3 +132,15 @@ but are not rewritten or deleted.
 - Consequence: The validator remediation is a new candidate change outside D-010's
   exact delivery sequence. Keep delivery blocked until Kelsey explicitly authorizes the
   final remediated commit and its direct-child attestation.
+
+## D-012 — Canonical first attestation and undelivered branch-tip lock
+
+- Date: 2026-08-23
+- Status: accepted
+- Decision: Treat the first structurally valid manifest/review addition as the immutable
+  attestation; reject later deletion/re-addition or rebinding; and require the
+  undelivered branch tip to equal its attestation commit.
+- Reason: Independent recheck of `0e4e106` found that a later arbitrary commit or a
+  replacement attestation could otherwise escape the reviewed-candidate boundary.
+- Consequence: CI receives the PR head SHA, historical attestation blobs remain fixed,
+  and delivery stays blocked until the final remediation commit is explicitly authorized.

@@ -75,6 +75,13 @@ attestation-only child commit or medium/low dispositions. The required later val
 remediation is outside the exact prior delivery sequence, so BUILD_STATE again blocks
 delivery pending direct informed authority for the final remediated commit.
 
+The recheck of technical candidate `0e4e106` found one remaining high bypass: an
+attestation could be followed by an unreviewed commit before delivery or deleted and
+rebound later. The validator now selects the first structurally valid attestation from
+immutable history, preserves its blobs, and requires an undelivered branch tip to equal
+that attestation exactly. This later remediation also remains delivery-blocked pending
+authority for its final commit.
+
 ## Next stage
 
 P1 is the next permitted stage in the accepted candidate. Its kickoff is

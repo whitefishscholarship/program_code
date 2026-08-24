@@ -593,6 +593,11 @@ manifest and review record), hashes blobs from the candidate Git tree, and repre
 deletions explicitly. The reviewer signs the manifest digest; a following attestation
 commit is the direct child of the candidate commit and adds only the manifest and review
 record. All later stages preserve those attestation blobs byte-for-byte.
+The first structurally valid attestation addition in Git history is canonical; deletion,
+re-addition, or rebinding cannot replace it. Until that attestation is delivered on
+`origin/main`, the branch tip must equal the attestation commit exactly, with no later
+commit. PR CI receives the actual head SHA so a synthetic merge checkout cannot weaken
+this rule.
 
 CI fetches full history. `npm run plan:check` validates every historical stage against
 its own candidate commit rather than the current worktree, requires the candidate to
@@ -602,7 +607,8 @@ BUILD_STATE transition, compares manifest paths to the complete Git commit-to-co
 change set, recomputes candidate-tree hashes, and rejects accepted-stage regression
 found in repository history. It also discovers each committed attestation, proves the
 direct candidate-to-attestation parent relationship and exact two-path diff, and rejects
-later rewrites of historical manifest/review blobs. This permits P1-P9 to evolve shared governance files
+later rewrites of historical manifest/review blobs or an unreviewed post-attestation
+branch commit. This permits P1-P9 to evolve shared governance files
 without invalidating P0. The review record contains reviewer task identity,
 fresh-context and read-only declarations, outcome, severity counts, reviewed time,
 manifest digest, and one machine-counted disposition for every medium/low finding with

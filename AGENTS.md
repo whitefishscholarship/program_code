@@ -64,6 +64,9 @@ worktree. The attestation must be the candidate commit's direct child and change
 the stage manifest and review paths. Preserve every historical attestation byte-for-byte.
 Every medium/low review finding requires a count-matched disposition with rationale,
 owner, and target.
+The first valid attestation in Git history is canonical. Never delete/re-add or rebind it,
+and do not append another commit after an undelivered attestation. The attestation must
+remain the branch tip until merged.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 

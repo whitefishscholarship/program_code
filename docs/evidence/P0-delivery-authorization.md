@@ -54,3 +54,8 @@ That code change is outside the exact sequence authorized above. It may be creat
 reviewed locally, but it may not be pushed, added to a PR, merged, or deployed until a
 new direct informed authorization covers the exact remediated commit and its
 attestation-only direct child.
+
+The independent recheck of `0e4e106` required one further validator change to prevent
+post-attestation commits and delete/re-add rebinding. That later local remediation is
+also outside all delivery authority above until Kelsey explicitly authorizes its exact
+final commit and direct-child attestation.

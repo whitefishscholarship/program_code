@@ -77,6 +77,8 @@ INDEPENDENT REVIEW
   attestation commit; its diff must contain exactly those two paths.
 - Preserve prior-stage manifest and review blobs byte-for-byte. Disposition every
   medium/low finding with rationale, owner, and target.
+- Treat the first valid attestation as canonical; never delete/re-add or rebind it. Do
+  not append a commit after attestation before delivery.
 
 AUTONOMOUS GIT DELIVERY — NO GIT QUESTIONS TO KELSEY
 - Inspect state and follow AGENTS.md.

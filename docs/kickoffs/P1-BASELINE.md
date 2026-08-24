@@ -97,6 +97,8 @@ INDEPENDENT REVIEW
   attestation commit; its diff must contain exactly those paths. Preserve P0's manifest
   and review blobs byte-for-byte. Disposition every medium/low finding with rationale,
   owner, and target.
+- Treat P0's first valid attestation as canonical; never delete/re-add or rebind it.
+  Keep the P1 attestation as the branch tip until delivery.
 
 EVIDENCE
 Update docs/evidence/P1.md, BUILD_STATE.json, CURRENT_HANDOFF.md, DECISIONS.md if

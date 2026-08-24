@@ -390,25 +390,41 @@ if (state) {
   const acceptedStages = state.stages.filter((stage) => stage.status === 'accepted');
   for (const stage of acceptedStages) {
     const currentManifestRaw = requireFile(stage.manifestPath);
-    let candidateHint: string | null = null;
-    if (currentManifestRaw) {
+    const requiredAttestationPaths = [stage.manifestPath, stage.reviewPath].sort();
+    let attestationCommit: string | undefined;
+    for (const additionCommit of gitLines([
+      'log',
+      '--reverse',
+      '--diff-filter=A',
+      '--format=%H',
+      '--',
+      stage.manifestPath,
+    ])) {
+      const possibleManifestRaw = gitText(['show', `${additionCommit}:${stage.manifestPath}`]);
+      const possibleReviewRaw = gitText(['show', `${additionCommit}:${stage.reviewPath}`]);
+      if (possibleManifestRaw === null || possibleReviewRaw === null) continue;
+      let possibleManifest: CandidateManifest;
       try {
-        candidateHint = (JSON.parse(currentManifestRaw) as CandidateManifest).candidateCommit;
+        possibleManifest = JSON.parse(possibleManifestRaw) as CandidateManifest;
       } catch {
-        // The committed attestation parser below reports the authoritative JSON error.
+        continue;
+      }
+      const possibleParent = gitText(['rev-parse', `${additionCommit}^`])?.trim();
+      const possiblePaths = gitLines([
+        'diff',
+        '--name-only',
+        `${additionCommit}^`,
+        additionCommit,
+        '--',
+      ]).sort();
+      if (
+        possibleParent === possibleManifest.candidateCommit &&
+        JSON.stringify(possiblePaths) === JSON.stringify(requiredAttestationPaths)
+      ) {
+        attestationCommit = additionCommit;
+        break;
       }
     }
-    const attestationCommit = candidateHint
-      ? gitLines([
-          'log',
-          '-1',
-          '--diff-filter=A',
-          '--format=%H',
-          `${candidateHint}..HEAD`,
-          '--',
-          stage.manifestPath,
-        ])[0]
-      : undefined;
     let manifest: CandidateManifest | null = null;
     let review: ReviewRecord | null = null;
     let attestationParent: string | null = null;
@@ -448,7 +464,6 @@ if (state) {
         attestationCommit,
         '--',
       ]).sort();
-      const requiredAttestationPaths = [stage.manifestPath, stage.reviewPath].sort();
       if (JSON.stringify(attestationPaths) !== JSON.stringify(requiredAttestationPaths)) {
         fail(`${stage.id} attestation commit may change only its manifest and review record`);
       }
@@ -488,6 +503,12 @@ if (state) {
         manifest.baselineCommit !== originMain
       ) {
         fail(`${stage.manifestPath} baselineCommit must equal current origin/main before delivery`);
+      }
+      if (originMain && !isAncestor(attestationCommit ?? '', originMain)) {
+        const validationTip = process.env.STAGE_BRANCH_TIP_SHA?.trim() || gitText(['rev-parse', 'HEAD'])?.trim();
+        if (validationTip !== attestationCommit) {
+          fail(`${stage.id} undelivered branch tip must equal its attestation commit exactly`);
+        }
       }
     }
 
