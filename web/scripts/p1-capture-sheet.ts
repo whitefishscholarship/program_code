@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { google } from 'googleapis';
+import { analyzeBoundedCellData, assertCaptureCompleteness, EXPECTED_HEADERS, type CaptureCell } from './p1-capture-lib';
 
 const TESTING_SPREADSHEET_ID = '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4';
 const MASTER_TAB = 'Master Database';
@@ -10,13 +11,6 @@ const BOUNDED_RANGE = `'${MASTER_TAB}'!A1:O1060`;
 const OUTPUT = path.join(process.cwd(), 'fixtures/p1/master-database-cell-data.json');
 const TRACKING = new Set(['ouid', 'usp', 'rtpof', 'sd', 'gclid', 'fbclid', 'msclkid', 'mc_cid', 'mc_eid', '_gl', 'gad_source']);
 const SENSITIVE = /^(access_?token|auth|authorization|code|credential|key|password|secret|signature|sig|token)$/i;
-
-type Cell = {
-  formattedValue?: string | null;
-  hyperlink?: string | null;
-  userEnteredValue?: { formulaValue?: string | null } | null;
-  textFormatRuns?: Array<{ format?: { link?: { uri?: string | null } | null } | null }> | null;
-};
 
 function sanitizeUrl(raw: string) {
   const url = new URL(raw);
@@ -46,7 +40,7 @@ function sanitizeUrl(raw: string) {
   };
 }
 
-function cellUrls(cell: Cell | undefined) {
+function cellUrls(cell: CaptureCell | undefined) {
   const found = new Map<string, Set<string>>();
   const add = (raw: string | null | undefined, provenance: string) => {
     if (!raw || !/^https?:\/\//i.test(raw)) return;
@@ -96,10 +90,9 @@ async function main() {
 
   const sheet = sheetResponse.data.sheets?.find((candidate) => candidate.properties?.title === MASTER_TAB);
   if (!sheet || sheet.properties?.sheetId !== 0) throw new Error('Testing Master Database tab identity changed');
-  const rows = (sheet.data?.[0]?.rowData ?? []) as Array<{ values?: Cell[] }>;
-  const headers = (rows[0]?.values ?? []).map((cell) => cell.formattedValue ?? '');
-  const expected = ['Portal/ Scholarship', 'Scholarship Location/Information', 'Name of Scholarship', 'Application Link/Method'];
-  for (const header of expected) if (!headers.includes(header)) throw new Error(`Missing expected public column: ${header}`);
+  const rows = (sheet.data?.[0]?.rowData ?? []) as Array<{ values?: CaptureCell[] }>;
+  const completeness = analyzeBoundedCellData(rows);
+  assertCaptureCompleteness(completeness);
 
   const records = rows.slice(1).flatMap((row, index) => {
     const values = row.values ?? [];
@@ -130,15 +123,45 @@ async function main() {
       cellDataFields: ['formattedValue', 'userEnteredValue', 'effectiveValue', 'hyperlink', 'textFormatRuns'],
       sourceMode: 'google-apis-read-only',
     },
+    boundedCompleteness: {
+      observedBeforeRowOrColumnFiltering: true,
+      boundedRows: 1060,
+      boundedColumns: 15,
+      returnedRowDataRows: completeness.returnedRowDataRows,
+      implicitTrailingBlankRows: completeness.implicitTrailingBlankRows,
+      headerPositions: EXPECTED_HEADERS.map((header, index) => ({ columnIndex: index + 1, header })),
+      headerMismatches: completeness.headerMismatches,
+      populatedDataRowsAnyCell: completeness.populatedDataRowsAnyCell,
+      namedDataRows: completeness.namedDataRows,
+      unnamedNonemptyRows: completeness.unnamedNonemptyRows,
+      hyperlinkRepresentations: completeness.hyperlinkCounts,
+      retainedSourceColumnBindings: {
+        informationColumn: { columnIndex: 6, metadataRepresentations: completeness.hyperlinks.filter((item) => item.columnIndex === 6).length },
+        applicationColumn: { columnIndex: 8, metadataRepresentations: completeness.hyperlinks.filter((item) => item.columnIndex === 8).length },
+      },
+      excludedColumnHyperlinkReviewItems: completeness.hyperlinks
+        .filter((item) => ![6, 8].includes(item.columnIndex))
+        .map((item) => ({
+          sheetRow: item.sheetRow,
+          columnIndex: item.columnIndex,
+          columnHeader: item.columnHeader,
+          form: item.form,
+          sanitizedUrl: sanitizeUrl(item.rawUrl).sanitizedUrl,
+          reviewState: 'manual_review',
+          reason: 'CellData hyperlink occurs outside the P1 information/application source columns; content of the excluded column is not retained.',
+        })),
+      denominatorClaim: 'All nonempty rows and all CellData hyperlink representations in A1:O1060 are counted before retained-column filtering. Retained source-column metadata representations bind to record references by row, column role, and provenance; excluded-column representations are listed individually for manual review.',
+    },
     sanitization: {
-      includedColumns: expected,
-      excludedColumns: headers.filter((header) => header && !expected.includes(header)),
+      includedColumns: [EXPECTED_HEADERS[3], EXPECTED_HEADERS[5], EXPECTED_HEADERS[6], EXPECTED_HEADERS[7]],
+      excludedColumns: EXPECTED_HEADERS.filter((_, index) => ![3, 5, 6, 7].includes(index)),
       originalUrlsStored: false,
-      hyperlinkOccurrencesPreservedOneForOne: true,
+      sourceReferencesCoalescedWithinEachCell: true,
+      rawMetadataRepresentationCountsPreservedBeforeCoalescing: true,
       displayUrlsSanitized: true,
       removedQueryParameters: ['ouid', 'usp', 'rtpof', 'sd', 'utm_*', 'gclid', 'fbclid', 'msclkid', 'mc_cid', 'mc_eid', '_gl', '_ga*', '_gcl_*', 'gad_*'],
       sensitiveQueryValues: 'replaced with REDACTED',
-      statement: 'Contains only public scholarship row identity, public source/application labels, sanitized public URLs, and completeness metadata. It excludes summaries, review columns, credentials, private service-account material, and applicant data.',
+      statement: 'Contains only public scholarship row identity, public source/application labels, sanitized public URLs (including excluded-column hyperlink review receipts), and completeness metadata. It excludes Summary text, other review-column content, credentials, private service-account material, and applicant data.',
     },
     records,
   };

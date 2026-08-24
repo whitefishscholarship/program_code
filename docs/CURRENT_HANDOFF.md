@@ -38,11 +38,14 @@ information/application URL in the pinned snapshot:
 - 74 records with multiple linked sources
 - 26 shared normalized URL groups
 - 86 information and 92 application hyperlinks visible only through CellData metadata
-- 44 records and 54 application-role sources classified explicitly as `unknown`
+- 270 raw CellData hyperlink representations before filtering: 267 bound to retained
+  information/application references and three sanitized excluded-Summary review items
+- 162 records and 121 sources classified explicitly as `unknown`; 188 records and 207
+  sources remain manual review with evidence/confidence provenance
 - 15 sources retaining a potentially identity-bearing query or fragment after known
   tracking parameters were removed
 - deterministic inventory digest:
-  `79a257419d8127d73bb23bc36082dda7bbc9572e2c9d556be62bff6f1769362d`
+  `dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2`
 
 These counts exactly reconcile the plan's 197-row and 213-distinct-URL observations.
 The report does not infer that one successful public fetch proves source completeness,
@@ -78,6 +81,10 @@ attestation commit.
   not proof of exploitability. No dependency or lockfile changed.
 - P1-focused deterministic tests and TypeScript typechecking passed after the final
   sanitizer/classification correction.
+- The first fresh-context read-only review rejected candidate `0e17291` with two high
+  findings. The implementation agent added a pre-filter CellData completeness receipt
+  and removed unsupported taxonomy promotion; only the replacement candidate's recheck
+  can accept P1.
 - The complete candidate verification matrix and exact timestamps are recorded in
   `docs/evidence/P1.md`; the final accepted reviewer outcome is authoritative only in
   `docs/reviews/P1.json`, bound to `docs/evidence/P1-manifest.json`.
@@ -111,7 +118,8 @@ PR: none. Merge: none. Remote P1 branch: none.
 - P1's public probes are representative observations, not full portal crawls or proof
   that scholarship facts are current.
 - Source architecture and application identity remain explicit `unknown` where the
-  sanitized evidence is insufficient.
+  sanitized evidence is insufficient. URL-structure inferences remain manual review,
+  and direct public observations retain their observation/review status.
 - Potential identity-bearing query/fragment semantics must be defined in P2/P3 rather
   than discarded by P1.
 - Dependency remediation remains P7 work; the P1 baseline applies no upgrades and

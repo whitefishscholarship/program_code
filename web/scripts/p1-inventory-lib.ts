@@ -20,6 +20,14 @@ export const ARCHITECTURES = [
 
 export type Architecture = (typeof ARCHITECTURES)[number];
 type Role = 'information' | 'application';
+type ReviewState = 'classified' | 'manual_review';
+type Confidence = 'direct_observation' | 'bounded_structural_inference' | 'unknown';
+type Classification = {
+  architecture: Architecture;
+  reviewState: ReviewState;
+  confidence: Confidence;
+  evidenceBasis: string[];
+};
 
 type UrlReference = {
   sourceReferenceIndex: number;
@@ -47,6 +55,26 @@ export type CapturedFixture = {
     spreadsheetRevisionId: string;
     sheetTitle: string;
     boundedRange: string;
+  };
+  boundedCompleteness: {
+    populatedDataRowsAnyCell: number;
+    namedDataRows: number;
+    unnamedNonemptyRows: unknown[];
+    headerMismatches: unknown[];
+    hyperlinkRepresentations: {
+      totalMetadataRepresentations: number;
+      byForm: { cellDataHyperlink: number; textFormatRuns: number; formula: number };
+      byStatus: { http: number; nonHttp: number; malformedOrRelative: number };
+      retainedSourceColumns: number;
+      excludedColumns: number;
+      duplicateSameCellUrlRepresentations: number;
+    };
+    retainedSourceColumnBindings: {
+      informationColumn: { columnIndex: number; metadataRepresentations: number };
+      applicationColumn: { columnIndex: number; metadataRepresentations: number };
+    };
+    excludedColumnHyperlinkReviewItems: unknown[];
+    [key: string]: unknown;
   };
   sanitization: Record<string, unknown>;
   records: CapturedRecord[];
@@ -149,70 +177,86 @@ function isLoginPortal(url: string): boolean {
     || /submittable\.com/.test(lower);
 }
 
-function sourceOverride(url: string, publicObservations: Map<string, PublicObservation>): Architecture | null {
+function sourceObservation(url: string, publicObservations: Map<string, PublicObservation>): Classification | null {
   const exact = publicObservations.get(normalizeUrl(url));
-  if (exact) return exact.architecture;
-  const lower = url.toLowerCase();
-  if (lower.includes('fvcc.academicworks.com')) return 'paginated_catalog';
-  if (lower.includes('firstinspires.org/') && lower.includes('scholarship')) return 'external_marketplace';
-  if (lower.includes('grantinterface.com') && lower.includes('urlkey=saf')) return 'matching_portal';
-  if (lower.includes('reachhighermontana.org/') && lower.includes('scholarship')) return 'matching_portal';
-  if (lower.includes('apply.mykaleidoscope.com/program/esafoundationscholarship')) return 'common_application';
-  return null;
+  if (!exact) return null;
+  return {
+    architecture: exact.architecture,
+    reviewState: exact.reviewState === 'observed' ? 'classified' : 'manual_review',
+    confidence: exact.reviewState === 'observed' ? 'direct_observation' : 'bounded_structural_inference',
+    evidenceBasis: [
+      `public_source_observation:${exact.reviewState}`,
+      exact.observed,
+    ],
+  };
 }
 
 function classifySource(
   url: string,
   occurrences: SourceOccurrence[],
   publicObservations: Map<string, PublicObservation>,
-): Architecture {
-  const override = sourceOverride(url, publicObservations);
-  if (override) return override;
+): Classification {
+  const observed = sourceObservation(url, publicObservations);
+  if (observed) return observed;
   const roles = new Set(occurrences.map((item) => item.role));
   const rows = new Set(occurrences.map((item) => item.row));
   const labels = new Set(occurrences.map((item) => item.label));
-  const lower = url.toLowerCase();
+  const structuralSignals = [
+    `roles:${sorted(roles).join(',')}`,
+    `row_count:${rows.size}`,
+    `sheet_labels:${sorted(labels).join(',')}`,
+  ];
 
-  if (isDocument(url)) return 'document_or_pdf';
-  if (/academicworks\.com/.test(lower)) return 'paginated_catalog';
-  if (/scholarshipinstitute\.org|futures\.pearson\.com/.test(lower)) return 'external_marketplace';
-  if (roles.has('application') && rows.size > 1) return 'common_application';
-  if (roles.has('information') && rows.size > 1) return 'multi_award_page';
-  if (isForm(url)) return 'form_only';
-  if (isLoginPortal(url)) return 'login_application_portal';
-  if ([...labels].includes('Portal')) return 'directory_hub';
-  if (/montana\.edu\/admissions\/scholarships|umontana\.edu\/how-to-apply\/scholarships|fvcc\.edu\/.*scholarships/.test(lower)) {
-    return 'institution_umbrella';
+  if (isDocument(url)) {
+    return { architecture: 'document_or_pdf', reviewState: 'manual_review', confidence: 'bounded_structural_inference', evidenceBasis: ['url_structure:document_or_pdf', ...structuralSignals] };
   }
-  if (roles.size === 1 && roles.has('application')) return 'unknown';
-  return 'single_award_page';
+  if (isForm(url)) {
+    return { architecture: 'form_only', reviewState: 'manual_review', confidence: 'bounded_structural_inference', evidenceBasis: ['url_structure:known_form_path', ...structuralSignals] };
+  }
+  if (isLoginPortal(url)) {
+    return { architecture: 'login_application_portal', reviewState: 'manual_review', confidence: 'bounded_structural_inference', evidenceBasis: ['url_structure:login_or_submission_path', ...structuralSignals] };
+  }
+  return {
+    architecture: 'unknown',
+    reviewState: 'manual_review',
+    confidence: 'unknown',
+    evidenceBasis: ['no_retained_evidence_for_structural_taxonomy', ...structuralSignals],
+  };
 }
 
-function recordArchitecture(
+function classifyRecord(
   record: CapturedRecord,
-  sourceArchitectureByUrl: Map<string, Architecture>,
-): Architecture {
+  sourceClassifications: Map<string, Classification>,
+): Classification {
   const urls = [...record.information.urls, ...record.application.urls].map((ref) => normalizeUrl(ref.sanitizedUrl));
-  if (urls.length === 0) return 'offline_or_automatic';
-  const architectures = new Set(urls.map((url) => sourceArchitectureByUrl.get(url) ?? 'unknown'));
-  const name = record.scholarshipName.toLowerCase();
-
-  if (name.includes('reach higher montana')) return 'matching_portal';
-  if (name.includes('fvcc institutional')) return 'paginated_catalog';
-  if (name.includes('first scholarship portal')) return 'external_marketplace';
-  if (name.includes('national farmers union')) return 'common_application';
-  if (name.includes('esa foundation')) return 'common_application';
-
-  const priority: Architecture[] = [
-    'matching_portal', 'paginated_catalog', 'external_marketplace', 'common_application',
-    'multi_award_page', 'institution_umbrella', 'directory_hub', 'login_application_portal',
-    'document_or_pdf', 'form_only', 'single_award_page', 'unknown',
-  ];
-  if (record.currentLabel === 'Portal') {
-    return priority.find((type) => architectures.has(type)) ?? 'directory_hub';
+  if (urls.length === 0) {
+    return {
+      architecture: 'offline_or_automatic',
+      reviewState: 'classified',
+      confidence: 'direct_observation',
+      evidenceBasis: ['captured_record:no_information_or_application_url', `application_method:${record.application.display}`],
+    };
   }
-  if (architectures.size === 1) return architectures.values().next().value ?? 'unknown';
-  return priority.find((type) => architectures.has(type)) ?? 'unknown';
+  const classifications = urls.map((url) => sourceClassifications.get(url) ?? {
+    architecture: 'unknown' as const,
+    reviewState: 'manual_review' as const,
+    confidence: 'unknown' as const,
+    evidenceBasis: ['missing_source_classification'],
+  });
+  const architectures = new Set(classifications.map((item) => item.architecture));
+  const anyManual = classifications.some((item) => item.reviewState === 'manual_review');
+  const singleArchitecture = architectures.size === 1 ? classifications[0].architecture : 'unknown';
+  return {
+    architecture: singleArchitecture,
+    reviewState: anyManual || architectures.size !== 1 ? 'manual_review' : 'classified',
+    confidence: anyManual || architectures.size !== 1 ? (singleArchitecture === 'unknown' ? 'unknown' : 'bounded_structural_inference') : 'direct_observation',
+    evidenceBasis: [
+      `source_reference_count:${urls.length}`,
+      `source_architectures:${sorted(architectures).join(',')}`,
+      ...(architectures.size !== 1 ? ['conflicting_source_architectures:not_promoted'] : []),
+      ...(anyManual ? ['manual_review_source:propagated'] : []),
+    ],
+  };
 }
 
 function stableRecordIdentity(record: CapturedRecord, revisionId: string): string {
@@ -242,6 +286,22 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
     throw new Error('Unsupported P1 fixture schema');
   }
   const expectedRows = fixture.records.length;
+  const completeness = fixture.boundedCompleteness;
+  if (!completeness || completeness.headerMismatches.length > 0 || completeness.unnamedNonemptyRows.length > 0) {
+    throw new Error('P1 bounded completeness receipt is missing or unresolved');
+  }
+  if (completeness.populatedDataRowsAnyCell !== expectedRows || completeness.namedDataRows !== expectedRows) {
+    throw new Error('P1 row denominator does not reconcile to captured records');
+  }
+  const hyperlinkCounts = completeness.hyperlinkRepresentations;
+  if (hyperlinkCounts.totalMetadataRepresentations !== hyperlinkCounts.byForm.cellDataHyperlink
+    + hyperlinkCounts.byForm.textFormatRuns + hyperlinkCounts.byForm.formula
+    || hyperlinkCounts.totalMetadataRepresentations !== hyperlinkCounts.byStatus.http
+    + hyperlinkCounts.byStatus.nonHttp + hyperlinkCounts.byStatus.malformedOrRelative
+    || hyperlinkCounts.retainedSourceColumns + hyperlinkCounts.excludedColumns !== hyperlinkCounts.totalMetadataRepresentations
+    || hyperlinkCounts.excludedColumns !== completeness.excludedColumnHyperlinkReviewItems.length) {
+    throw new Error('P1 CellData hyperlink denominator does not reconcile');
+  }
   const sheetRows = new Set(fixture.records.map((record) => record.sheetRow));
   if (sheetRows.size !== expectedRows) throw new Error('Duplicate sheet row in capture');
 
@@ -263,15 +323,15 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
     groupedSources.set(identity, group);
   }
   const publicObservationMap = new Map(observations.observations.map((item) => [normalizeUrl(item.url), item]));
-  const sourceArchitectureByUrl = new Map<string, Architecture>();
+  const sourceClassifications = new Map<string, Classification>();
   for (const [url, group] of groupedSources) {
-    sourceArchitectureByUrl.set(url, classifySource(url, group, publicObservationMap));
+    sourceClassifications.set(url, classifySource(url, group, publicObservationMap));
   }
 
   const recordArchitectures = new Map<string, number>();
   const records = fixture.records.map((record) => {
-    const architecture = recordArchitecture(record, sourceArchitectureByUrl);
-    addCount(recordArchitectures, architecture);
+    const classification = classifyRecord(record, sourceClassifications);
+    addCount(recordArchitectures, classification.architecture);
     const references = [
       ...record.information.urls.map((ref) => ({ role: 'information' as const, urlIdentity: normalizeUrl(ref.sanitizedUrl), provenance: ref.provenance })),
       ...record.application.urls.map((ref) => ({ role: 'application' as const, urlIdentity: normalizeUrl(ref.sanitizedUrl), provenance: ref.provenance })),
@@ -281,8 +341,10 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
       sheetRow: record.sheetRow,
       currentLabel: record.currentLabel,
       scholarshipName: record.scholarshipName,
-      architecture,
-      reviewState: architecture === 'unknown' ? 'manual_review' : 'classified',
+      architecture: classification.architecture,
+      reviewState: classification.reviewState,
+      confidence: classification.confidence,
+      evidenceBasis: classification.evidenceBasis,
       explicitApplicationMethod: references.length === 0 ? record.application.display : null,
       references,
     };
@@ -291,8 +353,13 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
   const hostCounts = new Map<string, number>();
   const sourceArchitectureCounts = new Map<string, number>();
   const sources = sorted(groupedSources.entries(), (a, b) => a[0].localeCompare(b[0])).map(([url, group]) => {
-    const architecture = sourceArchitectureByUrl.get(url) ?? 'unknown';
-    addCount(sourceArchitectureCounts, architecture);
+    const classification = sourceClassifications.get(url) ?? {
+      architecture: 'unknown' as const,
+      reviewState: 'manual_review' as const,
+      confidence: 'unknown' as const,
+      evidenceBasis: ['missing_source_classification'],
+    };
+    addCount(sourceArchitectureCounts, classification.architecture);
     addCount(hostCounts, hostOf(url));
     const rows = sorted(new Set(group.map((item) => item.row)), (a, b) => a - b);
     const roles = sorted(new Set(group.map((item) => item.role)));
@@ -304,8 +371,10 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
       roles,
       sheetRows: rows,
       occurrenceCount: group.length,
-      architecture,
-      reviewState: architecture === 'unknown' ? 'manual_review' : 'classified',
+      architecture: classification.architecture,
+      reviewState: classification.reviewState,
+      confidence: classification.confidence,
+      evidenceBasis: classification.evidenceBasis,
       identityBearingQueryParameters: queryParameters,
       fragmentPresent: group.some((item) => item.reference.fragmentPresent),
     };
@@ -411,6 +480,7 @@ export function buildInventory(fixture: CapturedFixture, observations: PublicObs
       fixtureSha256: sha256(JSON.stringify(fixture)),
       publicObservationSha256: sha256(JSON.stringify(observations)),
     },
+    boundedCompleteness: fixture.boundedCompleteness,
     sanitization: fixture.sanitization,
     counts,
     recordArchitectureCounts: mapCounts(recordArchitectures),

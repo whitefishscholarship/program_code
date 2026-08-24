@@ -20,6 +20,92 @@
     ],
     "sourceMode": "connected-google-sheets-read-only"
   },
+  "boundedCompleteness": {
+    "observedFrom": "2026-08-24T04:53:37Z",
+    "observedThrough": "2026-08-24T04:53:40Z",
+    "observedBeforeRowOrColumnFiltering": true,
+    "boundedRows": 1060,
+    "boundedColumns": 15,
+    "returnedRowDataRows": 198,
+    "implicitTrailingBlankRows": 862,
+    "headerPositions": [
+      { "columnIndex": 1, "header": "Last Updated" },
+      { "columnIndex": 2, "header": "Due Date" },
+      { "columnIndex": 3, "header": "In-State / National" },
+      { "columnIndex": 4, "header": "Portal/ Scholarship" },
+      { "columnIndex": 5, "header": "Amount" },
+      { "columnIndex": 6, "header": "Scholarship Location/Information" },
+      { "columnIndex": 7, "header": "Name of Scholarship" },
+      { "columnIndex": 8, "header": "Application Link/Method" },
+      { "columnIndex": 9, "header": "Summary" },
+      { "columnIndex": 10, "header": "Stated Min. GPA" },
+      { "columnIndex": 11, "header": "School Type (2-or 4-Year, or Trade)" },
+      { "columnIndex": 12, "header": "Renewing/ Non-Renewing" },
+      { "columnIndex": 13, "header": "Focus" },
+      { "columnIndex": 14, "header": "Acute Financial Need Prioritization" },
+      { "columnIndex": 15, "header": "Accepts Gap Year Applications Upon Return" }
+    ],
+    "headerMismatches": [],
+    "populatedDataRowsAnyCell": 197,
+    "namedDataRows": 197,
+    "unnamedNonemptyRows": [],
+    "hyperlinkRepresentations": {
+      "totalMetadataRepresentations": 270,
+      "byForm": {
+        "cellDataHyperlink": 269,
+        "textFormatRuns": 1,
+        "formula": 0
+      },
+      "byStatus": {
+        "http": 270,
+        "nonHttp": 0,
+        "malformedOrRelative": 0
+      },
+      "retainedSourceColumns": 267,
+      "excludedColumns": 3,
+      "duplicateSameCellUrlRepresentations": 1
+    },
+    "retainedSourceColumnBindings": {
+      "informationColumn": {
+        "columnIndex": 6,
+        "metadataRepresentations": 86
+      },
+      "applicationColumn": {
+        "columnIndex": 8,
+        "metadataRepresentations": 181
+      }
+    },
+    "excludedColumnHyperlinkReviewItems": [
+      {
+        "sheetRow": 12,
+        "columnIndex": 9,
+        "columnHeader": "Summary",
+        "form": "cellData.hyperlink",
+        "sanitizedUrl": "https://docs.google.com/document/d/16TFsTBifX9rHZL4YEutW78mmgpznnkB9/edit",
+        "reviewState": "manual_review",
+        "reason": "CellData hyperlink occurs outside the P1 information/application source columns; content of the excluded column is not retained."
+      },
+      {
+        "sheetRow": 60,
+        "columnIndex": 9,
+        "columnHeader": "Summary",
+        "form": "cellData.hyperlink",
+        "sanitizedUrl": "http://waterenvtech.com/diversityscholarship",
+        "reviewState": "manual_review",
+        "reason": "CellData hyperlink occurs outside the P1 information/application source columns; content of the excluded column is not retained."
+      },
+      {
+        "sheetRow": 60,
+        "columnIndex": 9,
+        "columnHeader": "Summary",
+        "form": "cellData.textFormatRuns",
+        "sanitizedUrl": "http://waterenvtech.com/diversityscholarship",
+        "reviewState": "manual_review",
+        "reason": "Duplicate rich-text representation is preserved separately; excluded Summary content is not retained."
+      }
+    ],
+    "denominatorClaim": "All nonempty rows and all CellData hyperlink representations in A1:O1060 are counted before retained-column filtering. Retained source-column metadata representations bind to record references by row, column role, and provenance; excluded-column representations are listed individually for manual review."
+  },
   "sanitization": {
     "includedColumns": [
       "Portal/ Scholarship",
@@ -41,7 +127,8 @@
       "Accepts Gap Year Applications Upon Return"
     ],
     "originalUrlsStored": false,
-    "hyperlinkOccurrencesPreservedOneForOne": true,
+    "sourceReferencesCoalescedWithinEachCell": true,
+    "rawMetadataRepresentationCountsPreservedBeforeCoalescing": true,
     "removedQueryParameters": [
       "ouid",
       "usp",
@@ -59,7 +146,7 @@
       "gad_*"
     ],
     "sensitiveQueryValues": "replaced with REDACTED",
-    "statement": "Contains only public scholarship row identity, public source/application labels, sanitized public URLs, and completeness metadata. It excludes summaries, review columns, credentials, private service-account material, and applicant data.",
+    "statement": "Contains only public scholarship row identity, public source/application labels, sanitized public URLs (including excluded-column hyperlink review receipts), and completeness metadata. It excludes Summary text, other review-column content, credentials, private service-account material, and applicant data.",
     "displayUrlsSanitized": true
   },
   "records": [
