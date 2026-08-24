@@ -48,7 +48,11 @@
         "deliveryBaselineCommit": null,
         "evidencePath": "docs/evidence/P1-delivery-authorization.md",
         "manifestPath": "docs/evidence/P1-delivery-manifest.json",
-        "reviewPath": "docs/reviews/P1-delivery.json"
+        "reviewPath": "docs/reviews/P1-delivery.json",
+        "governanceResolutionPaths": [
+          "docs/BUILD_STATE.json",
+          "docs/CURRENT_HANDOFF.md"
+        ]
       }
     ],
     "deliveryBlockers": []

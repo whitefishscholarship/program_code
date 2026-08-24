@@ -62,6 +62,7 @@ type DeliveryIntegration = {
   evidencePath: string;
   manifestPath: string;
   reviewPath: string;
+  governanceResolutionPaths: string[];
 };
 
 type BuildState = {
@@ -462,6 +463,9 @@ function validateBoundAttestation(
 
   const originMain = gitText(['rev-parse', 'refs/remotes/origin/main'])?.trim();
   if (originMain && !isAncestor(attestationCommit, originMain)) {
+    if (baselineCommit !== originMain) {
+      fail(`${subjectId} undelivered baseline must equal current origin/main`);
+    }
     const validationTip = process.env.STAGE_BRANCH_TIP_SHA?.trim() || gitText(['rev-parse', 'HEAD'])?.trim();
     if (validationTip !== attestationCommit) {
       fail(`${subjectId} undelivered branch tip must equal its attestation exactly`);
@@ -627,7 +631,8 @@ if (state) {
       !/^[0-9a-f]{40}$/.test(integration.originalBaselineCommit) ||
       !integration.evidencePath.trim() ||
       !integration.manifestPath.trim() ||
-      !integration.reviewPath.trim()
+      !integration.reviewPath.trim() ||
+      !Array.isArray(integration.governanceResolutionPaths)
     ) {
       fail('Delivery integration records require exact stage commits and evidence paths');
       continue;
@@ -653,6 +658,62 @@ if (state) {
           integration.stageAttestationCommit,
         );
         if (deliveryTip) deliveryAttestationTips.set(integration.stageId, deliveryTip);
+
+        const stage = state.stages.find((item) => item.id === integration.stageId);
+        const stageManifestRaw = stage
+          ? gitText(['show', `${integration.stageAttestationCommit}:${stage.manifestPath}`])
+          : null;
+        const deliveryManifest = readJson<CandidateManifest>(integration.manifestPath);
+        let stageManifest: CandidateManifest | null = null;
+        try {
+          stageManifest = stageManifestRaw ? (JSON.parse(stageManifestRaw) as CandidateManifest) : null;
+        } catch (error) {
+          fail(`${integration.stageId} preserved stage manifest is invalid: ${(error as Error).message}`);
+        }
+        const requiredGovernancePaths = ['docs/BUILD_STATE.json', 'docs/CURRENT_HANDOFF.md'];
+        if (
+          JSON.stringify([...integration.governanceResolutionPaths].sort()) !==
+          JSON.stringify(requiredGovernancePaths)
+        ) {
+          fail(`${integration.stageId} delivery integration has an invalid governance resolution allowlist`);
+        }
+        if (stage && stageManifest && deliveryManifest) {
+          const preservedPaths = new Set([
+            ...stageManifest.files.map((file) => file.path),
+            stage.manifestPath,
+            stage.reviewPath,
+          ]);
+          const deliveryChanges = completeChangeSet(
+            integration.deliveryBaselineCommit!,
+            deliveryManifest.candidateCommit,
+            new Set([integration.manifestPath, integration.reviewPath]),
+          );
+          for (const [changedPath, change] of deliveryChanges) {
+            if (integration.governanceResolutionPaths.includes(changedPath)) continue;
+            if (!preservedPaths.has(changedPath)) {
+              fail(`${integration.stageId} delivery integration changes unauthorized path ${changedPath}`);
+              continue;
+            }
+            const integratedBlob = gitBuffer(['show', `${deliveryManifest.candidateCommit}:${changedPath}`]);
+            const preservedBlob = gitBuffer(['show', `${integration.stageAttestationCommit}:${changedPath}`]);
+            if (
+              change === 'deleted' ||
+              integratedBlob === null ||
+              preservedBlob === null ||
+              !integratedBlob.equals(preservedBlob)
+            ) {
+              fail(`${integration.stageId} delivery integration does not preserve exact blob ${changedPath}`);
+            }
+          }
+          for (const preservedPath of preservedPaths) {
+            if (integration.governanceResolutionPaths.includes(preservedPath)) continue;
+            const baselineBlob = gitBuffer(['show', `${integration.deliveryBaselineCommit}:${preservedPath}`]);
+            const preservedBlob = gitBuffer(['show', `${integration.stageAttestationCommit}:${preservedPath}`]);
+            if (preservedBlob && (!baselineBlob || !baselineBlob.equals(preservedBlob)) && !deliveryChanges.has(preservedPath)) {
+              fail(`${integration.stageId} delivery integration omits preserved path ${preservedPath}`);
+            }
+          }
+        }
       }
     }
   }

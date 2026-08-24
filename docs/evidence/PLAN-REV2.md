@@ -39,6 +39,10 @@ machine-checkable delivery-integration path.
    attestation. Until delivered, that delivery attestation is the branch tip.
 6. The original P1 manifest, review, candidate, and attestation remain immutable and
    canonical; the delivery record does not re-review or replace P1.
+7. The validator rejects a stale first-parent baseline, every path outside the original
+   P1 change set, and every non-governance blob that differs from `20476b8`. Only
+   `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile Plan Revision 2
+   delivery state.
 
 ## Authorization and boundaries
 

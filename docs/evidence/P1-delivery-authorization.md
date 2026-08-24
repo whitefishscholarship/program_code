@@ -44,4 +44,3 @@ without either appending after the attestation or rebinding it, Kelsey stated:
 - Do not write to either scholarship spreadsheet, change product behavior, alter
   deployment configuration, submit a form, enter an application workflow, or contact a
   scholarship provider.
-

@@ -76,6 +76,8 @@ canonical plan and `BUILD_STATE`. It never permits an ordinary post-attestation 
 candidate rewrite, attestation rebinding, or unreviewed merge resolution. Material plan
 amendments are themselves frozen, manifested, independently reviewed, and attested
 before delivery.
+The integration must preserve every non-governance stage blob from the exact attestation;
+only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile delivery state.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 
