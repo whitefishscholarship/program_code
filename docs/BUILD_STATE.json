@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 1,
+  "planRevision": 2,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-23",
+  "lastUpdated": "2026-08-24",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -27,9 +27,47 @@
         "evidencePath": "docs/evidence/P0-delivery-authorization.md",
         "basis": "The user explicitly authorized the P0 branch through independently accepted technical commit 1460818684eeaef0b431c59465c5f0b9168b791b, one documentation-only authorization/acceptance commit, one direct-child two-file attestation commit, Git delivery, and resulting Vercel deployments.",
         "scope": "Deliver the P0 branch through 1460818684eeaef0b431c59465c5f0b9168b791b plus the defined documentation-only authorization/acceptance commit and direct-child manifest/review attestation by push, PR creation/update, and merge to main, including resulting Vercel Preview and Production deployments. No spreadsheet writes, product behavior changes, deployment-configuration changes, form submissions, or provider contact are authorized."
+      },
+      {
+        "stageId": "P1",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-24",
+        "evidencePath": "docs/evidence/P1-delivery-authorization.md",
+        "basis": "After being informed that the immutable accepted P1 attestation recorded an earlier no-delivery state, the user explicitly authorized Plan Revision 2 and a reviewed delivery path preserving candidate 92ee21095e959bd19ab641752308c0fd9b394b22 and attestation 20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5 byte-for-byte, plus P1 push, PR, merge, and resulting Vercel deployments.",
+        "scope": "Deliver the independently accepted P1 candidate and exact attestation through the Plan Revision 2 hash-bound integration path, including authorized Git push, pull request, merge to main, and resulting Vercel Preview and Production deployments. No spreadsheet writes, product changes, deployment-configuration changes, form submissions, or provider contact are authorized."
+      }
+    ],
+    "deliveryIntegrations": [
+      {
+        "stageId": "P1",
+        "status": "authorized-pending",
+        "stageCandidateCommit": "92ee21095e959bd19ab641752308c0fd9b394b22",
+        "stageAttestationCommit": "20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5",
+        "originalBaselineCommit": "d374247156e3ed15d19c037473da8f76ceedb6ab",
+        "deliveryBaselineCommit": null,
+        "evidencePath": "docs/evidence/P1-delivery-authorization.md",
+        "manifestPath": "docs/evidence/P1-delivery-manifest.json",
+        "reviewPath": "docs/reviews/P1-delivery.json",
+        "governanceResolutionPaths": [
+          "docs/BUILD_STATE.json",
+          "docs/CURRENT_HANDOFF.md"
+        ]
       }
     ],
     "deliveryBlockers": []
+  },
+  "governance": {
+    "planAmendments": [
+      {
+        "id": "PLAN-REV2",
+        "status": "accepted",
+        "baselineCommit": "d374247156e3ed15d19c037473da8f76ceedb6ab",
+        "evidencePath": "docs/evidence/PLAN-REV2.md",
+        "manifestPath": "docs/evidence/PLAN-REV2-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV2.json"
+      }
+    ]
   },
   "activeStageId": null,
   "nextPermittedStageId": "P1",

@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
 type StageStatus =
@@ -43,6 +44,28 @@ type MergeAuthorization = {
   scope: string;
 };
 
+type PlanAmendment = {
+  id: string;
+  status: 'accepted';
+  baselineCommit: string;
+  evidencePath: string;
+  manifestPath: string;
+  reviewPath: string;
+};
+
+type DeliveryIntegration = {
+  stageId: string;
+  status: 'authorized-pending' | 'accepted';
+  stageCandidateCommit: string;
+  stageAttestationCommit: string;
+  originalBaselineCommit: string;
+  deliveryBaselineCommit: string | null;
+  evidencePath: string;
+  manifestPath: string;
+  reviewPath: string;
+  governanceResolutionPaths: string[];
+};
+
 type BuildState = {
   schemaVersion: number;
   planRevision: number;
@@ -64,7 +87,11 @@ type BuildState = {
   deployment: {
     mainAutoDeploysProduction: boolean;
     stageMergeAuthorizations: MergeAuthorization[];
+    deliveryIntegrations?: DeliveryIntegration[];
     deliveryBlockers: string[];
+  };
+  governance?: {
+    planAmendments: PlanAmendment[];
   };
   activeStageId: string | null;
   nextPermittedStageId: string | null;
@@ -272,6 +299,182 @@ function isIsoTimestamp(value: string): boolean {
   return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3})?Z$/.test(value);
 }
 
+function validateBoundAttestation(
+  subjectId: string,
+  baselineCommit: string,
+  manifestPath: string,
+  reviewPath: string,
+  expectedMergeSecondParent?: string,
+): string | undefined {
+  const manifestRaw = requireFile(manifestPath);
+  const reviewRaw = requireFile(reviewPath);
+  const requiredPaths = [manifestPath, reviewPath].sort();
+  let attestationCommit: string | undefined;
+
+  for (const additionCommit of gitLines([
+    'log',
+    '--reverse',
+    '--diff-filter=A',
+    '--format=%H',
+    '--',
+    manifestPath,
+  ])) {
+    const historicalManifest = gitText(['show', `${additionCommit}:${manifestPath}`]);
+    const historicalReview = gitText(['show', `${additionCommit}:${reviewPath}`]);
+    if (historicalManifest === null || historicalReview === null) continue;
+    let parsed: CandidateManifest;
+    try {
+      parsed = JSON.parse(historicalManifest) as CandidateManifest;
+    } catch {
+      continue;
+    }
+    const parent = gitText(['rev-parse', `${additionCommit}^`])?.trim();
+    const paths = gitLines(['diff', '--name-only', `${additionCommit}^`, additionCommit, '--']).sort();
+    if (parent === parsed.candidateCommit && JSON.stringify(paths) === JSON.stringify(requiredPaths)) {
+      attestationCommit = additionCommit;
+      break;
+    }
+  }
+
+  if (!attestationCommit || !isAncestor(attestationCommit, 'HEAD')) {
+    fail(`${subjectId} requires a committed manifest/review attestation in current history`);
+    return undefined;
+  }
+
+  const attestedManifestRaw = gitText(['show', `${attestationCommit}:${manifestPath}`]);
+  const attestedReviewRaw = gitText(['show', `${attestationCommit}:${reviewPath}`]);
+  if (attestedManifestRaw === null || attestedReviewRaw === null) {
+    fail(`${subjectId} attestation must contain both manifest and review record`);
+    return undefined;
+  }
+  if (manifestRaw !== attestedManifestRaw || reviewRaw !== attestedReviewRaw) {
+    fail(`${subjectId} manifest and review must remain byte-identical to their attestation`);
+  }
+
+  let manifest: CandidateManifest;
+  let review: ReviewRecord;
+  try {
+    manifest = JSON.parse(attestedManifestRaw) as CandidateManifest;
+    review = JSON.parse(attestedReviewRaw) as ReviewRecord;
+  } catch (error) {
+    fail(`${subjectId} attestation JSON is invalid: ${(error as Error).message}`);
+    return attestationCommit;
+  }
+
+  if (manifest.schemaVersion !== 1 || manifest.stageId !== subjectId) {
+    fail(`${manifestPath} must identify ${subjectId} with schemaVersion 1`);
+  }
+  if (!isIsoTimestamp(manifest.createdAt)) fail(`${manifestPath} createdAt must be an ISO UTC timestamp`);
+  if (!/^[0-9a-f]{40}$/.test(manifest.candidateCommit)) {
+    fail(`${manifestPath} candidateCommit must be a full lowercase Git SHA`);
+  }
+  if (manifest.baselineCommit !== baselineCommit) fail(`${manifestPath} baselineCommit is not the authorized baseline`);
+  if (!gitObjectExists(manifest.baselineCommit) || !gitObjectExists(manifest.candidateCommit)) {
+    fail(`${manifestPath} baseline and candidate commits must exist`);
+  } else if (!isAncestor(manifest.baselineCommit, manifest.candidateCommit)) {
+    fail(`${manifestPath} candidate must descend from its baseline`);
+  }
+
+  const attestationParent = gitText(['rev-parse', `${attestationCommit}^`])?.trim();
+  if (attestationParent !== manifest.candidateCommit) {
+    fail(`${subjectId} attestation must be the direct child of its candidate`);
+  }
+
+  if (expectedMergeSecondParent) {
+    const ancestry = gitLines(['rev-list', '--parents', '-n', '1', manifest.candidateCommit]);
+    const parts = ancestry[0]?.split(' ') ?? [];
+    if (
+      parts.length !== 3 ||
+      parts[1] !== baselineCommit ||
+      parts[2] !== expectedMergeSecondParent
+    ) {
+      fail(`${subjectId} candidate must merge its delivery baseline with the exact preserved stage attestation`);
+    }
+  }
+
+  const expectedChanges = completeChangeSet(
+    manifest.baselineCommit,
+    manifest.candidateCommit,
+    new Set([manifestPath, reviewPath]),
+  );
+  const manifestPaths = new Set<string>();
+  if (!Array.isArray(manifest.files)) fail(`${manifestPath} files must be an array`);
+  for (const file of manifest.files ?? []) {
+    if (manifestPaths.has(file.path)) fail(`${manifestPath} contains duplicate path ${file.path}`);
+    manifestPaths.add(file.path);
+    const expectedChange = expectedChanges.get(file.path);
+    if (!expectedChange || expectedChange !== file.change) {
+      fail(`${manifestPath} has unexpected change entry for ${file.path}`);
+      continue;
+    }
+    const blob = gitBuffer(['show', `${manifest.candidateCommit}:${file.path}`]);
+    if (file.change === 'deleted') {
+      if (file.sha256 !== null || blob !== null) fail(`${manifestPath} deletion ${file.path} is invalid`);
+    } else if (!blob || file.sha256 !== sha256Buffer(blob)) {
+      fail(`${manifestPath} hash mismatch for ${file.path}`);
+    }
+  }
+  for (const expectedPath of expectedChanges.keys()) {
+    if (!manifestPaths.has(expectedPath)) fail(`${manifestPath} omits changed path ${expectedPath}`);
+  }
+
+  if (
+    review.schemaVersion !== 1 ||
+    review.stageId !== subjectId ||
+    !review.reviewerTaskId?.trim() ||
+    review.reviewerWasAuthorOrEditor !== false ||
+    review.reviewMode !== 'fresh-context-read-only' ||
+    review.outcome !== 'accepted'
+  ) {
+    fail(`${reviewPath} lacks a valid independent accepted review`);
+  }
+  if (!isIsoTimestamp(review.reviewedAt)) fail(`${reviewPath} reviewedAt must be an ISO UTC timestamp`);
+  for (const severity of ['critical', 'high', 'medium', 'low'] as const) {
+    if (!Number.isInteger(review.findings?.[severity]) || review.findings[severity] < 0) {
+      fail(`${reviewPath} has invalid ${severity} finding count`);
+    }
+  }
+  if (review.findings?.critical !== 0 || review.findings?.high !== 0) {
+    fail(`${reviewPath} cannot retain critical/high findings`);
+  }
+  const expectedDispositionCount = (review.findings?.medium ?? 0) + (review.findings?.low ?? 0);
+  if (!Array.isArray(review.dispositions) || review.dispositions.length !== expectedDispositionCount) {
+    fail(`${reviewPath} must disposition every medium/low finding exactly once`);
+  } else {
+    const mediumCount = review.dispositions.filter((item) => item.severity === 'medium').length;
+    const lowCount = review.dispositions.filter((item) => item.severity === 'low').length;
+    if (mediumCount !== review.findings.medium || lowCount !== review.findings.low) {
+      fail(`${reviewPath} disposition severities must match finding counts`);
+    }
+    for (const [index, disposition] of review.dispositions.entries()) {
+      if (
+        !['medium', 'low'].includes(disposition.severity) ||
+        !disposition.summary?.trim() ||
+        !disposition.rationale?.trim() ||
+        !disposition.owner?.trim() ||
+        !disposition.target?.trim()
+      ) {
+        fail(`${reviewPath} disposition ${index + 1} is incomplete`);
+      }
+    }
+  }
+  if (review.candidateManifestPath !== manifestPath || review.candidateManifestSha256 !== sha256File(manifestPath)) {
+    fail(`${reviewPath} is not bound to ${manifestPath}`);
+  }
+
+  const originMain = gitText(['rev-parse', 'refs/remotes/origin/main'])?.trim();
+  if (originMain && !isAncestor(attestationCommit, originMain)) {
+    if (baselineCommit !== originMain) {
+      fail(`${subjectId} undelivered baseline must equal current origin/main`);
+    }
+    const validationTip = process.env.STAGE_BRANCH_TIP_SHA?.trim() || gitText(['rev-parse', 'HEAD'])?.trim();
+    if (validationTip !== attestationCommit) {
+      fail(`${subjectId} undelivered branch tip must equal its attestation exactly`);
+    }
+  }
+  return attestationCommit;
+}
+
 const requiredFiles = [
   'AGENTS.md',
   'docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md',
@@ -387,6 +590,211 @@ if (state) {
     fail(`Accepted stage history cannot regress below P${maximumHistoricalAcceptedPrefix - 1}`);
   }
 
+  const planAmendments = state.governance?.planAmendments ?? [];
+  if (state.planRevision >= 2 && planAmendments.length === 0) {
+    fail('Plan revision 2+ requires a hash-bound plan amendment record');
+  }
+  if (new Set(planAmendments.map((item) => item.id)).size !== planAmendments.length) {
+    fail('Plan amendment records must have unique IDs');
+  }
+  if (state.planRevision >= 2 && !planAmendments.some((item) => item.id === `PLAN-REV${state.planRevision}`)) {
+    fail(`Plan revision ${state.planRevision} requires its matching PLAN-REV${state.planRevision} record`);
+  }
+  for (const amendment of planAmendments) {
+    if (
+      !amendment.id.trim() ||
+      amendment.status !== 'accepted' ||
+      !/^[0-9a-f]{40}$/.test(amendment.baselineCommit) ||
+      !amendment.evidencePath.trim() ||
+      !amendment.manifestPath.trim() ||
+      !amendment.reviewPath.trim()
+    ) {
+      fail('Plan amendment records require an ID, accepted status, baseline, evidence, manifest, and review paths');
+      continue;
+    }
+    requireFile(amendment.evidencePath);
+    validateBoundAttestation(
+      amendment.id,
+      amendment.baselineCommit,
+      amendment.manifestPath,
+      amendment.reviewPath,
+    );
+  }
+
+  const deliveryAttestationTips = new Map<string, string>();
+  const deliveryIntegrations = state.deployment.deliveryIntegrations ?? [];
+  for (const integration of deliveryIntegrations) {
+    if (
+      !expectedStageIds.includes(integration.stageId) ||
+      !['authorized-pending', 'accepted'].includes(integration.status) ||
+      !/^[0-9a-f]{40}$/.test(integration.stageCandidateCommit) ||
+      !/^[0-9a-f]{40}$/.test(integration.stageAttestationCommit) ||
+      !/^[0-9a-f]{40}$/.test(integration.originalBaselineCommit) ||
+      !integration.evidencePath.trim() ||
+      !integration.manifestPath.trim() ||
+      !integration.reviewPath.trim() ||
+      !Array.isArray(integration.governanceResolutionPaths)
+    ) {
+      fail('Delivery integration records require exact stage commits and evidence paths');
+      continue;
+    }
+    requireFile(integration.evidencePath);
+    if (integration.status === 'authorized-pending') {
+      if (integration.deliveryBaselineCommit !== null) {
+        fail(`${integration.stageId} pending delivery integration must not pre-bind an unknown delivery baseline`);
+      }
+      if (
+        gitObjectExists(integration.stageCandidateCommit) &&
+        gitObjectExists(integration.stageAttestationCommit)
+      ) {
+        const attestationParent = gitText(['rev-parse', `${integration.stageAttestationCommit}^`])?.trim();
+        if (attestationParent !== integration.stageCandidateCommit) {
+          fail(`${integration.stageId} preserved attestation is not the direct child of its recorded candidate`);
+        }
+      }
+    } else {
+      if (
+        !gitObjectExists(integration.stageCandidateCommit) ||
+        !gitObjectExists(integration.stageAttestationCommit)
+      ) {
+        fail(`${integration.stageId} accepted delivery integration requires the preserved Git objects`);
+      }
+      const attestationParent = gitText(['rev-parse', `${integration.stageAttestationCommit}^`])?.trim();
+      if (attestationParent !== integration.stageCandidateCommit) {
+        fail(`${integration.stageId} preserved attestation is not the direct child of its recorded candidate`);
+      }
+      if (!/^[0-9a-f]{40}$/.test(integration.deliveryBaselineCommit ?? '')) {
+        fail(`${integration.stageId} accepted delivery integration requires its exact delivery baseline`);
+      } else {
+        const baselineState = jsonAtCommit<BuildState>(
+          integration.deliveryBaselineCommit!,
+          'docs/BUILD_STATE.json',
+        );
+        const stageCandidateState = jsonAtCommit<BuildState>(
+          integration.stageCandidateCommit,
+          'docs/BUILD_STATE.json',
+        );
+        const baselineIntegration = baselineState?.deployment.deliveryIntegrations?.find(
+          (item) => item.stageId === integration.stageId,
+        );
+        if (!baselineState || !stageCandidateState || !baselineIntegration) {
+          fail(`${integration.stageId} delivery baseline lacks the authorized pending integration state`);
+        } else {
+          const immutableIntegrationFields = [
+            'stageId',
+            'stageCandidateCommit',
+            'stageAttestationCommit',
+            'originalBaselineCommit',
+            'evidencePath',
+            'manifestPath',
+            'reviewPath',
+            'governanceResolutionPaths',
+          ] as const;
+          for (const field of immutableIntegrationFields) {
+            if (!isDeepStrictEqual(integration[field], baselineIntegration[field])) {
+              fail(`${integration.stageId} delivery integration rebinds immutable field ${field}`);
+            }
+          }
+          if (baselineIntegration.status !== 'authorized-pending' || baselineIntegration.deliveryBaselineCommit !== null) {
+            fail(`${integration.stageId} delivery baseline must contain the original pending integration`);
+          }
+          const baselineAuthorization = baselineState.deployment.stageMergeAuthorizations.find(
+            (item) => item.stageId === integration.stageId,
+          );
+          const currentAuthorization = state.deployment.stageMergeAuthorizations.find(
+            (item) => item.stageId === integration.stageId,
+          );
+          if (!isDeepStrictEqual(currentAuthorization, baselineAuthorization)) {
+            fail(`${integration.stageId} delivery integration changes its informed authority record`);
+          }
+
+          const expectedState = JSON.parse(JSON.stringify(baselineState)) as BuildState;
+          expectedState.activeStageId = stageCandidateState.activeStageId;
+          expectedState.nextPermittedStageId = stageCandidateState.nextPermittedStageId;
+          expectedState.stages = stageCandidateState.stages;
+          expectedState.deployment.deliveryIntegrations =
+            baselineState.deployment.deliveryIntegrations?.map((item) =>
+              item.stageId === integration.stageId
+                ? {
+                    ...item,
+                    status: 'accepted' as const,
+                    deliveryBaselineCommit: integration.deliveryBaselineCommit,
+                  }
+                : item,
+            );
+          if (!isDeepStrictEqual(state, expectedState)) {
+            fail(`${integration.stageId} delivery BUILD_STATE contains changes outside the exact stage-state transition`);
+          }
+        }
+
+        const deliveryTip = validateBoundAttestation(
+          `${integration.stageId}-DELIVERY`,
+          integration.deliveryBaselineCommit!,
+          integration.manifestPath,
+          integration.reviewPath,
+          integration.stageAttestationCommit,
+        );
+        if (deliveryTip) deliveryAttestationTips.set(integration.stageId, deliveryTip);
+
+        const stage = state.stages.find((item) => item.id === integration.stageId);
+        const stageManifestRaw = stage
+          ? gitText(['show', `${integration.stageAttestationCommit}:${stage.manifestPath}`])
+          : null;
+        const deliveryManifest = readJson<CandidateManifest>(integration.manifestPath);
+        let stageManifest: CandidateManifest | null = null;
+        try {
+          stageManifest = stageManifestRaw ? (JSON.parse(stageManifestRaw) as CandidateManifest) : null;
+        } catch (error) {
+          fail(`${integration.stageId} preserved stage manifest is invalid: ${(error as Error).message}`);
+        }
+        const requiredGovernancePaths = ['docs/BUILD_STATE.json', 'docs/CURRENT_HANDOFF.md'];
+        if (
+          JSON.stringify([...integration.governanceResolutionPaths].sort()) !==
+          JSON.stringify(requiredGovernancePaths)
+        ) {
+          fail(`${integration.stageId} delivery integration has an invalid governance resolution allowlist`);
+        }
+        if (stage && stageManifest && deliveryManifest) {
+          const preservedPaths = new Set([
+            ...stageManifest.files.map((file) => file.path),
+            stage.manifestPath,
+            stage.reviewPath,
+          ]);
+          const deliveryChanges = completeChangeSet(
+            integration.deliveryBaselineCommit!,
+            deliveryManifest.candidateCommit,
+            new Set([integration.manifestPath, integration.reviewPath]),
+          );
+          for (const [changedPath, change] of deliveryChanges) {
+            if (integration.governanceResolutionPaths.includes(changedPath)) continue;
+            if (!preservedPaths.has(changedPath)) {
+              fail(`${integration.stageId} delivery integration changes unauthorized path ${changedPath}`);
+              continue;
+            }
+            const integratedBlob = gitBuffer(['show', `${deliveryManifest.candidateCommit}:${changedPath}`]);
+            const preservedBlob = gitBuffer(['show', `${integration.stageAttestationCommit}:${changedPath}`]);
+            if (
+              change === 'deleted' ||
+              integratedBlob === null ||
+              preservedBlob === null ||
+              !integratedBlob.equals(preservedBlob)
+            ) {
+              fail(`${integration.stageId} delivery integration does not preserve exact blob ${changedPath}`);
+            }
+          }
+          for (const preservedPath of preservedPaths) {
+            if (integration.governanceResolutionPaths.includes(preservedPath)) continue;
+            const baselineBlob = gitBuffer(['show', `${integration.deliveryBaselineCommit}:${preservedPath}`]);
+            const preservedBlob = gitBuffer(['show', `${integration.stageAttestationCommit}:${preservedPath}`]);
+            if (preservedBlob && (!baselineBlob || !baselineBlob.equals(preservedBlob)) && !deliveryChanges.has(preservedPath)) {
+              fail(`${integration.stageId} delivery integration omits preserved path ${preservedPath}`);
+            }
+          }
+        }
+      }
+    }
+  }
+
   const acceptedStages = state.stages.filter((stage) => stage.status === 'accepted');
   for (const stage of acceptedStages) {
     const currentManifestRaw = requireFile(stage.manifestPath);
@@ -495,18 +903,28 @@ if (state) {
       if (!isAncestor(manifest.candidateCommit, 'HEAD')) {
         fail(`${stage.manifestPath} candidateCommit must be an ancestor of HEAD`);
       }
+      const deliveryIntegration = deliveryIntegrations.find(
+        (item) =>
+          item.stageId === stage.id &&
+          item.status === 'accepted' &&
+          item.stageCandidateCommit === manifest.candidateCommit &&
+          item.stageAttestationCommit === attestationCommit &&
+          item.originalBaselineCommit === manifest.baselineCommit,
+      );
       const originMain = gitText(['rev-parse', 'refs/remotes/origin/main'])?.trim();
       if (
         originMain &&
         /^[0-9a-f]{40}$/.test(originMain) &&
         !isAncestor(manifest.candidateCommit, originMain) &&
-        manifest.baselineCommit !== originMain
+        manifest.baselineCommit !== originMain &&
+        !deliveryIntegration
       ) {
         fail(`${stage.manifestPath} baselineCommit must equal current origin/main before delivery`);
       }
       if (originMain && !isAncestor(attestationCommit ?? '', originMain)) {
         const validationTip = process.env.STAGE_BRANCH_TIP_SHA?.trim() || gitText(['rev-parse', 'HEAD'])?.trim();
-        if (validationTip !== attestationCommit) {
+        const deliveryTip = deliveryAttestationTips.get(stage.id);
+        if (validationTip !== attestationCommit && validationTip !== deliveryTip) {
           fail(`${stage.id} undelivered branch tip must equal its attestation commit exactly`);
         }
       }
@@ -693,6 +1111,22 @@ if (state) {
       }
     }
   }
+  const integrationStageIds = deliveryIntegrations.map((item) => item.stageId);
+  if (new Set(integrationStageIds).size !== integrationStageIds.length) {
+    fail('Delivery integrations must have unique stage IDs');
+  }
+  for (const integration of deliveryIntegrations) {
+    const authorization = state.deployment.stageMergeAuthorizations.find(
+      (item) => item.stageId === integration.stageId,
+    );
+    const stage = state.stages.find((item) => item.id === integration.stageId);
+    if (!authorization?.authorized) {
+      fail(`${integration.stageId} delivery integration requires current informed delivery authority`);
+    }
+    if (integration.status === 'accepted' && stage?.status !== 'accepted') {
+      fail(`${integration.stageId} accepted delivery integration requires the stage accepted in BUILD_STATE`);
+    }
+  }
 
   const p9 = state.stages.find((stage) => stage.id === 'P9');
   const p9MayUseProduction = p9 && (inFlightStatuses.has(p9.status) || p9.status === 'accepted');
@@ -746,6 +1180,7 @@ if (state) {
     'Production migration, deployment, and closeout',
     'candidate manifest',
     'Vercel Git',
+    'Delivery integration',
   ]) {
     if (!plan.includes(phrase)) fail(`Canonical plan is missing required section/phrase: ${phrase}`);
   }

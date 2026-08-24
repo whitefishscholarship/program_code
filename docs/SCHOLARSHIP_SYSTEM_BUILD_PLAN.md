@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 1
+Plan revision: 2
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -259,6 +259,41 @@ not trust an accepted marker that exists only on an unmerged branch. This separa
 acceptance from delivery and avoids a self-referential "merge before accepted" state.
 
 Passing tests alone establishes neither factual accuracy nor stage acceptance.
+
+### Delivery integration for authority received after attestation
+
+An accepted but undelivered stage may have been frozen while Git delivery was explicitly
+unauthorized. If direct informed delivery authority arrives only after its canonical
+attestation exists, that authority may not be appended to the stage branch and the stage
+candidate or attestation may not be amended, replaced, deleted, or rebound.
+
+Plan Revision 2 permits one narrow delivery integration when all of these conditions hold:
+
+1. `docs/BUILD_STATE.json` pins the exact original candidate, canonical attestation,
+   original baseline, direct authority evidence, and dedicated delivery manifest/review
+   paths before delivery begins.
+2. The plan amendment enabling the integration is independently reviewed, hash-bound,
+   attested, and delivered to `origin/main` first.
+3. The delivery candidate is a two-parent merge whose first parent is that verified
+   amended `origin/main` baseline and whose second parent is the exact preserved stage
+   attestation.
+4. A delivery manifest covers and hashes the complete first-parent-baseline-to-candidate
+   change set. A fresh-context read-only reviewer accepts that exact delivery candidate.
+5. A direct-child attestation adds exactly the delivery manifest and delivery review.
+   It remains the delivery branch tip until merged.
+6. The original stage candidate, attestation, manifest, and review remain byte-for-byte
+   unchanged. The integration cannot change product or data scope, waive a finding,
+   replace stage acceptance, or authorize any effect outside the recorded authority.
+7. Every non-governance changed path must be present in the original stage manifest or
+   be the original stage manifest/review itself, and its delivery-candidate blob must
+   equal the preserved attestation blob. Only `docs/BUILD_STATE.json` and
+   `docs/CURRENT_HANDOFF.md` may differ to reconcile delivery state. `BUILD_STATE` must
+   equal the delivered amendment baseline except for the exact pending-to-accepted
+   integration fields and the stage array/next pointer copied from the preserved stage
+   candidate; the authority object and every pinned identity/path remain unchanged.
+
+This mechanism is an exceptional delivery bridge, not a general post-attestation edit
+path. Each stage may have at most one delivery integration, and every commit is pinned.
 
 ## 9. Stage contracts
 
@@ -618,6 +653,11 @@ Critical or high findings prevent acceptance. Medium and low findings must be fi
 carried into `docs/CURRENT_HANDOFF.md` with rationale, owner, and target stage. The
 reviewer does not edit the implementation and cannot approve its own repair.
 
+Material plan amendments and Revision 2 delivery integrations use the same independence,
+manifest completeness, hash binding, severity, disposition, and direct-child attestation
+standard. Their records use dedicated evidence, manifest, and review paths so they cannot
+replace a stage's canonical manifest or review.
+
 ## 12. Kickoff and handoff protocol
 
 Every kickoff follows `docs/KICKOFF_PROMPT_TEMPLATE.md` and contains:
@@ -672,6 +712,15 @@ Delivery authority covers only the downstream effect stated in build state. It n
 broadens authorization for spreadsheet mutation, paid services, form submission, or
 contact with scholarship providers.
 
+### Delivery integration
+
+When `BUILD_STATE` declares an authorized Revision 2 delivery integration, Git delivery
+uses the exact two-parent candidate and its exact direct-child delivery attestation. The
+validator confirms both parents, the complete change set, immutable original stage
+attestation blobs, current informed authority, independent acceptance, and the branch-tip
+lock. A synthetic PR merge, sibling authorization commit, or ordinary post-attestation
+commit is not a substitute.
+
 ## 14. Plan amendments and decision control
 
 Acceptance criteria may not be changed inside an implementation fix. A material plan
@@ -684,6 +733,13 @@ change requires:
    and the validator when needed;
 4. `npm run plan:check` and baseline verification; and
 5. independent review of the amendment before affected implementation continues.
+
+Beginning with Plan Revision 2, the amendment candidate is frozen before review. Its
+complete baseline change set is hashed in `docs/evidence/PLAN-REV<revision>-manifest.json`,
+the fresh-context decision is recorded in `docs/reviews/PLAN-REV<revision>.json`, and a
+direct-child commit adds exactly those two files. The amendment attestation remains the
+branch tip until delivered. This requirement applies before an amendment can authorize
+or execute an exceptional stage-delivery integration.
 
 Emergency safety fixes may stop active work immediately, but they do not silently
 rewrite the plan. Record the stop and amendment before resuming product work.
