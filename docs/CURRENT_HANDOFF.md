@@ -1,6 +1,6 @@
 # Current Handoff
 
-Last updated: 2026-08-23
+Last updated: 2026-08-24
 Plan revision: 1
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -8,95 +8,126 @@ Default branch: `main`
 ## Current state
 
 - Active stage: none
-- Accepted candidate: P0 — Program contract and governance baseline
-- Durable P0 completion gate: the accepted marker, evidence, manifest, and review
+- Accepted candidate: P1 — Reproducible baseline and architecture inventory, subject
+  to the immutable candidate review and direct-child attestation described below
+- Durable P1 completion gate: the accepted marker, evidence, manifest, and review
   record must be present on `origin/main`
-- Baseline commit: `006b4b2fc11136054d64b6dd701d41b72beb71b7`
-- Working branch: `codex/p0-program-contract`
+- Verified P1 baseline: `d374247156e3ed15d19c037473da8f76ceedb6ab`
+- Working branch: `codex/p1-reproducible-baseline`
+- Candidate commit: recorded after the complete implementation is frozen
+- Reviewed commit: the same immutable candidate commit
 - Testing spreadsheet: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
+- Testing tab: `Master Database` (sheet ID 0)
+- Spreadsheet revision observed: Drive revision 222, modified
+  `2026-07-23T01:07:29.466Z`
+- Bounded CellData capture: `'Master Database'!A1:O1060` at
+  `2026-08-24T04:14:24.027Z`; only columns D, F, G, and H are retained in the
+  sanitized fixture
 - Production spreadsheet: unset; mutation unauthorized
-- External data mutations during P0: none
+- External data mutations during P1: none
 
-## P0 scope
+## P1 result
 
-Create the canonical plan, machine state, kickoff standard, decision log, evidence
-record, independent-review rule, autonomous Git policy, P1 kickoff, and plan
-validator. Do not change product behavior or scholarship data.
+The deterministic P1 inventory accounts for every populated record and every retained
+information/application URL in the pinned snapshot:
 
-## Final verification
+- 197 records: 176 `Scholarship`, 21 `Portal`
+- 278 URL-role occurrences: 86 information and 192 application
+- 213 distinct sanitized URLs across 115 hosts
+- 193 records with at least one URL and four explicit offline/campus/provider methods
+- 74 records with multiple linked sources
+- 26 shared normalized URL groups
+- 86 information and 92 application hyperlinks visible only through CellData metadata
+- 44 records and 54 application-role sources classified explicitly as `unknown`
+- 15 sources retaining a potentially identity-bearing query or fragment after known
+  tracking parameters were removed
+- deterministic inventory digest:
+  `79a257419d8127d73bb23bc36082dda7bbc9572e2c9d556be62bff6f1769362d`
 
-- Full post-remediation verification ran from 2026-08-24T00:25:45Z through
-  2026-08-24T00:26:20Z: `npm ci`, `npm run plan:check`,
-  `npm run typecheck`, `npm test`, and `npm run build` passed.
-- `git diff --check` passed at 2026-08-24T00:26:23Z.
-- The first fresh-context read-only review was independent and blocked P0 with six
-  high findings and one medium finding. The implementation agent remediated them.
-- The first recheck at 2026-08-24T00:33:22Z independently blocked P0 with three high
-  findings and one medium finding. The implementation agent then removed inferred
-  deployment authority, closed supersession/P9 bypasses, made every stage manifest
-  cover the complete baseline Git change set, and clarified the P1 branch baseline.
-- The final reviewer outcome is authoritative only in `docs/reviews/P0.json`, bound
-  to `docs/evidence/P0-manifest.json`. Its absence or a non-accepted outcome blocks
-  `npm run plan:check` and P0 delivery.
-- Remaining work: commit/freeze this documentation-only authorization/acceptance record,
-  obtain the final independent adversarial decision against its manifest, create the
-  exact direct-child two-file attestation, run all gates, push, open the PR, monitor
-  checks/deployments, merge, and confirm the accepted record on `origin/main`.
+These counts exactly reconcile the plan's 197-row and 213-distinct-URL observations.
+The report does not infer that one successful public fetch proves source completeness,
+current scholarship facts, or production behavior.
 
-## Existing repository risk observed during P0
+## Candidate artifacts
 
-The final `npm ci` completed but reported 57 dependency findings: 2 low,
-14 moderate, 40 high, and 1 critical. An earlier run reported 21, showing the
-registry audit result is time-sensitive even though P0 did not change dependency
-versions. P1 must inventory
-runtime versus development exposure, and P7 must resolve or explicitly disposition
-launch-relevant findings under the build-plan security gate. This is not evidence
-that the current application is exploitable, and it must not be hidden by green
-tests.
+- `web/fixtures/p1/master-database-cell-data.json` — sanitized bounded snapshot
+- `web/fixtures/p1/public-source-observations.json` — seven representative read-only
+  public observations with scope limitations
+- `web/scripts/p1-capture-sheet.ts` — exact-ID, exact-range, read-only capture tool
+- `web/scripts/p1-inventory-lib.ts` and `web/scripts/p1-inventory.ts` — deterministic
+  inventory implementation
+- `web/scripts/test-p1-inventory.ts` — count, completeness, sanitization, and repeat-run
+  tests
+- `docs/evidence/P1-inventory.json` — full sanitized deterministic report
+- `docs/evidence/P1-repository-map.md` — static behavior map with file/line evidence
+- `docs/evidence/P1-dependency-security.json` — time-stamped runtime/development audit
+  baseline without package changes
+- `docs/evidence/P1.md` — stage evidence and external-effects record
+- `docs/kickoffs/P2-DATA-MODEL.md` — next-stage contract only; P2 was not executed
 
-## Main-branch downstream effect
+`docs/evidence/P1-manifest.json` and `docs/reviews/P1.json` are intentionally absent
+from the implementation candidate. They are created only after that immutable candidate
+is frozen and independently accepted, and must be the only two paths in its direct-child
+attestation commit.
 
-The repository workflow documents that merging `main` auto-deploys production, and
-read-only GitHub deployment history shows Vercel has created Preview deployments for
-branch/PR revisions and Production deployments for `main` revisions. Kelsey explicitly
-authorized pushing commit `07a6e14`, creating its PR, and merging it to `main` with
-informed acknowledgement of those Vercel effects. The authority is recorded in
-`docs/evidence/P0-delivery-authorization.md`. After a later adversarial review required
-validator and authorization remediation, Kelsey explicitly extended informed authority
-to the branch containing `07a6e14` and `24a368d`, one documentation-only authorization
-commit, one manifest/review attestation-only commit, PR creation/update, merge, and the
-resulting Vercel deployments. No authority permits product behavior changes, spreadsheet
-writes, production-sheet configuration, deployment-configuration changes, form
-submissions, or provider contact.
+## Verification and review
 
-A fresh review of candidate `5b3082e` found that the validator did not enforce the
-attestation-only child commit or medium/low dispositions. The required later validator
-remediation is outside the exact prior delivery sequence, so BUILD_STATE again blocks
-delivery pending direct informed authority for the final remediated commit.
+- Development checks reproduced the inventory digest and exact counts.
+- `npm ci` completed with the locked dependency tree. The audit snapshot reported 21
+  total findings and 16 production findings; this is time-sensitive registry evidence,
+  not proof of exploitability. No dependency or lockfile changed.
+- P1-focused deterministic tests and TypeScript typechecking passed after the final
+  sanitizer/classification correction.
+- The complete candidate verification matrix and exact timestamps are recorded in
+  `docs/evidence/P1.md`; the final accepted reviewer outcome is authoritative only in
+  `docs/reviews/P1.json`, bound to `docs/evidence/P1-manifest.json`.
+- Until those two files form a valid direct-child attestation, `npm run plan:check` is
+  expected to reject the prospective accepted state.
 
-The recheck of technical candidate `0e4e106` found one remaining high bypass: an
-attestation could be followed by an unreviewed commit before delivery or deleted and
-rebound later. The validator now selects the first structurally valid attestation from
-immutable history, preserves its blobs, and requires an undelivered branch tip to equal
-that attestation exactly. This later remediation also remains delivery-blocked pending
-authority for its final commit.
+## Data and side-effect boundaries
 
-The final technical candidate `1460818684eeaef0b431c59465c5f0b9168b791b` was
-independently accepted at 2026-08-24T03:22:20Z with 0 critical, 0 high, 0 medium,
-and 0 low findings. Kelsey then explicitly authorized delivery through that commit,
-this single documentation-only authorization/acceptance commit, the exact direct-child
-manifest/review attestation, PR creation/update, merge, and resulting Vercel Preview and
-Production deployments. BUILD_STATE now records that authority and its exclusions.
+- The testing sheet was accessed read-only; no spreadsheet update, append, clear,
+  formatting, permission, or metadata mutation was performed.
+- The production sheet was not configured, read, or mutated.
+- Seven public scholarship pages were fetched read-only for representative
+  architecture observations. No login, interactive workflow, form submission, paid
+  action, or provider contact occurred.
+- Applicant PII, credentials, non-student review columns, private service-account
+  material, and original tracking-bearing URL values were not committed.
+- Product behavior, runtime dependencies, CI, and deployment configuration were not
+  changed.
+
+## Delivery state
+
+The user authorized local P1 tooling, documentation, tests, and commits, but explicitly
+prohibited push and merge. BUILD_STATE records no P1 Preview or Production deployment
+authority. Therefore the accepted attestation must remain the local branch tip until a
+separate, direct, informed delivery authorization covers every downstream effect.
+
+PR: none. Merge: none. Remote P1 branch: none.
+
+## Remaining unknowns and later-stage routing
+
+- P1's public probes are representative observations, not full portal crawls or proof
+  that scholarship facts are current.
+- Source architecture and application identity remain explicit `unknown` where the
+  sanitized evidence is insufficient.
+- Potential identity-bearing query/fragment semantics must be defined in P2/P3 rather
+  than discarded by P1.
+- Dependency remediation remains P7 work; the P1 baseline applies no upgrades and
+  makes no exploitability claim.
 
 ## Next stage
 
-P1 is the next permitted stage in the accepted candidate. Its kickoff is
-`docs/kickoffs/P1-BASELINE.md`. Do not start P1 until P0's accepted marker, evidence,
-manifest, and independent-review record are verified on `origin/main`.
+P2 is the next permitted stage in the accepted local candidate. Its kickoff is
+`docs/kickoffs/P2-DATA-MODEL.md`. Do not execute P2 until P1's accepted attestation is
+delivered and verified on `origin/main` under separate delivery authority.
 
 ## Prohibited next actions
 
-- Do not edit either scholarship spreadsheet.
-- Do not implement schema, crawler, audit, API, or UI changes.
-- Do not configure production data.
-- Do not treat planning observations as a fresh P1 baseline.
+- Do not write to either scholarship spreadsheet or configure production data.
+- Do not push, open a PR, merge, or trigger a deployment without direct P1 delivery
+  authority recorded in BUILD_STATE.
+- Do not submit forms, enter application workflows, or contact providers.
+- Do not change product behavior or begin P2/P3 work in this P1 session.
+- Do not append a commit after the P1 attestation before delivery.
