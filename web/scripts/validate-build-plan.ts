@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
+import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
 type StageStatus =
@@ -650,6 +651,67 @@ if (state) {
       if (!/^[0-9a-f]{40}$/.test(integration.deliveryBaselineCommit ?? '')) {
         fail(`${integration.stageId} accepted delivery integration requires its exact delivery baseline`);
       } else {
+        const baselineState = jsonAtCommit<BuildState>(
+          integration.deliveryBaselineCommit!,
+          'docs/BUILD_STATE.json',
+        );
+        const stageCandidateState = jsonAtCommit<BuildState>(
+          integration.stageCandidateCommit,
+          'docs/BUILD_STATE.json',
+        );
+        const baselineIntegration = baselineState?.deployment.deliveryIntegrations?.find(
+          (item) => item.stageId === integration.stageId,
+        );
+        if (!baselineState || !stageCandidateState || !baselineIntegration) {
+          fail(`${integration.stageId} delivery baseline lacks the authorized pending integration state`);
+        } else {
+          const immutableIntegrationFields = [
+            'stageId',
+            'stageCandidateCommit',
+            'stageAttestationCommit',
+            'originalBaselineCommit',
+            'evidencePath',
+            'manifestPath',
+            'reviewPath',
+            'governanceResolutionPaths',
+          ] as const;
+          for (const field of immutableIntegrationFields) {
+            if (!isDeepStrictEqual(integration[field], baselineIntegration[field])) {
+              fail(`${integration.stageId} delivery integration rebinds immutable field ${field}`);
+            }
+          }
+          if (baselineIntegration.status !== 'authorized-pending' || baselineIntegration.deliveryBaselineCommit !== null) {
+            fail(`${integration.stageId} delivery baseline must contain the original pending integration`);
+          }
+          const baselineAuthorization = baselineState.deployment.stageMergeAuthorizations.find(
+            (item) => item.stageId === integration.stageId,
+          );
+          const currentAuthorization = state.deployment.stageMergeAuthorizations.find(
+            (item) => item.stageId === integration.stageId,
+          );
+          if (!isDeepStrictEqual(currentAuthorization, baselineAuthorization)) {
+            fail(`${integration.stageId} delivery integration changes its informed authority record`);
+          }
+
+          const expectedState = JSON.parse(JSON.stringify(baselineState)) as BuildState;
+          expectedState.activeStageId = stageCandidateState.activeStageId;
+          expectedState.nextPermittedStageId = stageCandidateState.nextPermittedStageId;
+          expectedState.stages = stageCandidateState.stages;
+          expectedState.deployment.deliveryIntegrations =
+            baselineState.deployment.deliveryIntegrations?.map((item) =>
+              item.stageId === integration.stageId
+                ? {
+                    ...item,
+                    status: 'accepted' as const,
+                    deliveryBaselineCommit: integration.deliveryBaselineCommit,
+                  }
+                : item,
+            );
+          if (!isDeepStrictEqual(state, expectedState)) {
+            fail(`${integration.stageId} delivery BUILD_STATE contains changes outside the exact stage-state transition`);
+          }
+        }
+
         const deliveryTip = validateBoundAttestation(
           `${integration.stageId}-DELIVERY`,
           integration.deliveryBaselineCommit!,

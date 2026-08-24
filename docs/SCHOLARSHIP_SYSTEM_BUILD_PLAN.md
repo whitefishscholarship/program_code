@@ -287,7 +287,10 @@ Plan Revision 2 permits one narrow delivery integration when all of these condit
 7. Every non-governance changed path must be present in the original stage manifest or
    be the original stage manifest/review itself, and its delivery-candidate blob must
    equal the preserved attestation blob. Only `docs/BUILD_STATE.json` and
-   `docs/CURRENT_HANDOFF.md` may differ to reconcile delivery state.
+   `docs/CURRENT_HANDOFF.md` may differ to reconcile delivery state. `BUILD_STATE` must
+   equal the delivered amendment baseline except for the exact pending-to-accepted
+   integration fields and the stage array/next pointer copied from the preserved stage
+   candidate; the authority object and every pinned identity/path remain unchanged.
 
 This mechanism is an exceptional delivery bridge, not a general post-attestation edit
 path. Each stage may have at most one delivery integration, and every commit is pinned.

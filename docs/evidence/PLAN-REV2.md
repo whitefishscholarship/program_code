@@ -43,6 +43,10 @@ machine-checkable delivery-integration path.
    P1 change set, and every non-governance blob that differs from `20476b8`. Only
    `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile Plan Revision 2
    delivery state.
+8. The delivery candidate's `BUILD_STATE` is derived mechanically from the delivered
+   amendment baseline: the authority and every integration identity/path stay identical;
+   only integration status/baseline and the stage status array/next-stage pointer copied
+   from preserved candidate `92ee210` may change.
 
 ## Authorization and boundaries
 
@@ -90,3 +94,26 @@ Pre-candidate verification completed through `2026-08-24T19:04:31Z`:
 The final manifest binds the immutable candidate commit and complete baseline change
 set. The final review record supplies the authoritative independent outcome; this
 evidence file does not self-certify acceptance.
+
+## Independent-review remediation history
+
+- Review of initial candidate `f7c94d0287b3ade940f7f616bf571da56af38c2a`
+  rejected it with two high and one low finding: stale `origin/main` was not rejected,
+  the delivery manifest could include unauthorized non-governance paths/blobs, and one
+  evidence file had an extra blank line at EOF. All three were remediated.
+- Recheck of replacement candidate
+  `683dd5e4432b64f6bb42916ceff2f60dcd1c7e74` rejected it with one high and one medium
+  finding: the allowlisted `BUILD_STATE` could rebind the integration identity, and the
+  evidence artifact did not yet record post-remediation results. The validator now
+  derives the exact machine-state transition from the delivered baseline and preserved
+  stage candidate, including byte-for-byte authority and identity comparison. This
+  evidence section records the remediation; a later immutable candidate requires the
+  same reviewer to recheck it before acceptance.
+
+Post-second-review remediation verification completed through
+`2026-08-24T19:20:35Z`: `npm run typecheck`, the complete existing `npm test` suite,
+the network-enabled production `npm run build`, and `git diff --check` all passed.
+Prospective `npm run plan:check` rejected only the intentionally absent
+`docs/reviews/PLAN-REV2.json` and the not-yet-created exact amendment attestation. The
+candidate was frozen only after these results were written; its commit and complete
+tree hashes are bound by the regenerated manifest.
