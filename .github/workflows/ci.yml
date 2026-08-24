@@ -16,12 +16,17 @@ jobs:
         working-directory: web
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+      - run: npm run plan:check
+        env:
+          STAGE_BRANCH_TIP_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
