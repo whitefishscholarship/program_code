@@ -585,14 +585,24 @@ The acceptance reviewer must:
 - recheck the final candidate after the implementation agent performs remediation.
 
 Each accepted stage has `docs/evidence/<stage>-manifest.json` and
-`docs/reviews/<stage>.json`. Build state pins that stage's Git baseline. The manifest
-lists every added, modified, or deleted path in the complete Git change set from that
-baseline, excluding only the manifest and review record; present files are SHA-256
-hashed and deletions are explicit. CI fetches full history. `npm run plan:check`
-cross-checks the manifest baseline against build state, compares its paths to the Git
-change set for every stage, recomputes hashes, and rejects missing or mismatched review
-provenance. The review record contains reviewer task identity, fresh-context and
-read-only declarations, outcome, severity counts, reviewed time, and manifest digest.
+`docs/reviews/<stage>.json`. Build state pins that stage's Git baseline. Before final
+review, commit the complete candidate without its new manifest/review attestation. The
+manifest records that immutable candidate commit, lists every added, modified, or
+deleted path between the baseline and candidate commits (excluding only that stage's
+manifest and review record), hashes blobs from the candidate Git tree, and represents
+deletions explicitly. The reviewer signs the manifest digest; a following attestation
+commit adds only the manifest and review record.
+
+CI fetches full history. `npm run plan:check` validates every historical stage against
+its own candidate commit rather than the current worktree, requires the candidate to
+descend from its baseline and remain in current history, proves an undelivered
+candidate's baseline equals current `origin/main`, validates the candidate and baseline
+BUILD_STATE transition, compares manifest paths to the complete Git commit-to-commit
+change set, recomputes candidate-tree hashes, and rejects accepted-stage regression
+found in repository history. This permits P1-P9 to evolve shared governance files
+without invalidating P0. The review record contains reviewer task identity,
+fresh-context and read-only declarations, outcome, severity counts, reviewed time, and
+manifest digest.
 
 Critical or high findings prevent acceptance. Medium and low findings must be fixed or
 carried into `docs/CURRENT_HANDOFF.md` with rationale, owner, and target stage. The

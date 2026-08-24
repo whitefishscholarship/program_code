@@ -25,12 +25,12 @@
         "authorizedBy": null,
         "authorizedAt": null,
         "evidencePath": null,
-        "basis": "P0 execution was approved, but the approval did not explicitly acknowledge Vercel Preview and Production deployment effects from Git delivery.",
-        "scope": "No P0 push, PR, or merge that triggers a deployment is authorized until direct informed authority or verified deployment suppression is recorded."
+        "basis": "The user explicitly authorized delivery of commit 07a6e14, but the required later validator and authorization amendment is a different final candidate and is not yet covered.",
+        "scope": "Do not push, create or update a PR, or merge the amended P0 candidate until direct informed authority covers the complete documentation-and-validator amendment plus its manifest/review attestation."
       }
     ],
     "deliveryBlockers": [
-      "P0-vercel-deployment-authority-or-suppression"
+      "P0-amended-candidate-vercel-authority"
     ]
   },
   "activeStageId": null,

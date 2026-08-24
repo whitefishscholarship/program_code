@@ -85,11 +85,15 @@ ACCEPTANCE TESTS
   counts and reports no unresolved critical/high finding.
 
 INDEPENDENT REVIEW
-- Freeze a candidate manifest before review.
+- Commit the complete P1 candidate before review without the new P1 manifest/review
+  record. Freeze a manifest that records that candidate commit and the current verified
+  `origin/main` baseline, covers their complete Git change set, and hashes candidate-tree
+  blobs.
 - Use a fresh-context, read-only reviewer that did not author or edit P1.
 - Bind the review record to the candidate-manifest SHA-256.
 - The implementation agent repairs findings; the reviewer performs the recheck.
 - Critical/high findings block P1 acceptance.
+- Add only the accepted P1 manifest and review record in a following attestation commit.
 
 EVIDENCE
 Update docs/evidence/P1.md, BUILD_STATE.json, CURRENT_HANDOFF.md, DECISIONS.md if

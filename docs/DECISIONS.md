@@ -90,3 +90,17 @@ but are not rewritten or deleted.
   acknowledge those Preview/Production effects; P0 delivery remains blocked until
   direct informed authority or verified suppression is recorded. No Git delivery
   authority ever authorizes spreadsheet writes.
+
+## D-009 — Exact P0 commit delivery authority and amendment boundary
+
+- Date: 2026-08-23
+- Status: accepted
+- Decision: Preserve the user's authorization to push commit `07a6e14`, create its PR,
+  and merge it, but do not extend that authorization to later candidate changes without
+  a new direct informed instruction.
+- Reason: Kelsey explicitly authorized those Git actions after acknowledging that they
+  may trigger Vercel Preview and Production deployments.
+- Evidence: `docs/evidence/P0-delivery-authorization.md`
+- Consequence: The later validator and authorization amendment remains a delivery
+  blocker until separately authorized. No authorization permits spreadsheet writes or
+  product behavior changes.

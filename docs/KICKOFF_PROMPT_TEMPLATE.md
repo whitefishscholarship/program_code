@@ -64,11 +64,16 @@ EVIDENCE REQUIRED
 - Update docs/BUILD_STATE.json and docs/CURRENT_HANDOFF.md.
 
 INDEPENDENT REVIEW
+- Commit the complete stage candidate before final review; do not include the new
+  stage manifest or review record in that candidate commit.
+- Record the candidate commit and current verified `origin/main` baseline in the
+  manifest; hash blobs from that candidate tree and its complete change set.
 - Use a fresh-context, read-only reviewer that did not author or edit this stage.
 - Give it the original objective, stage contract, baseline, candidate diff,
   verification evidence, and known risks.
 - The implementation agent fixes findings; the reviewer does not edit.
 - Critical/high findings block acceptance. Recheck after remediation.
+- Add the accepted manifest and review record only in the following attestation commit.
 
 AUTONOMOUS GIT DELIVERY — NO GIT QUESTIONS TO KELSEY
 - Inspect state and follow AGENTS.md.

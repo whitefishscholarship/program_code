@@ -38,9 +38,11 @@ validator. Do not change product behavior or scholarship data.
 - The final reviewer outcome is authoritative only in `docs/reviews/P0.json`, bound
   to `docs/evidence/P0-manifest.json`. Its absence or a non-accepted outcome blocks
   `npm run plan:check` and P0 delivery.
-- Remaining work after an accepted review: local commit. Push, PR, and merge remain
-  blocked until direct informed Vercel deployment authority or verified suppression is
-  recorded; after delivery, confirm the accepted record on `origin/main`.
+- Remaining work: obtain direct informed authority for the complete amended candidate
+  and its attestation-only follow-up; record that authority, commit/freeze the final
+  candidate, obtain a fresh independent adversarial review, add the attestation, push,
+  open the PR, monitor checks/deployments, merge, and confirm the accepted record on
+  `origin/main`.
 
 ## Existing repository risk observed during P0
 
@@ -57,13 +59,15 @@ tests.
 
 The repository workflow documents that merging `main` auto-deploys production, and
 read-only GitHub deployment history shows Vercel has created Preview deployments for
-branch/PR revisions and Production deployments for `main` revisions. P0 execution was
-approved, but direct evidence that the user was informed of and authorized those
-deployment effects is absent. BUILD_STATE therefore records P0 delivery as unauthorized
-and blocked. A push, PR, or merge may proceed only after direct informed authority is
-recorded or deployment suppression is verified. Neither path authorizes product behavior
-changes, spreadsheet writes, production-sheet configuration, form submissions, or
-provider contact.
+branch/PR revisions and Production deployments for `main` revisions. Kelsey explicitly
+authorized pushing commit `07a6e14`, creating its PR, and merging it to `main` with
+informed acknowledgement of those Vercel effects. The authority is recorded in
+`docs/evidence/P0-delivery-authorization.md`. A later adversarial review required a
+validator and authorization amendment, so the complete final candidate is now broader
+than the exact authorized object. BUILD_STATE correctly blocks that amended delivery
+until direct informed authority covers it. No authority permits product behavior changes,
+spreadsheet writes, production-sheet configuration, form submissions, or provider
+contact.
 
 ## Next stage
 

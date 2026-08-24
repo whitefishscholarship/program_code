@@ -56,6 +56,11 @@ explicit read-only instructions. The implementation agent owns remediation; the
 reviewer must not repair its own findings. After remediation, the independent
 reviewer rechecks the final candidate. Accepted stages require a structured review
 record whose outcome and manifest digest are validated by `npm run plan:check`.
+Freeze implementation and documentation in an immutable candidate commit before final
+review. The manifest hashes candidate-tree blobs and the complete Git change set from
+the verified `origin/main` baseline. Add only the manifest and review record in the
+following attestation commit. Historical manifests are never rebound to a later
+worktree.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 

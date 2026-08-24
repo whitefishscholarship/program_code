@@ -77,6 +77,7 @@ type CandidateManifest = {
   stageId: string;
   createdAt: string;
   baselineCommit: string;
+  candidateCommit: string;
   files: Array<{
     path: string;
     change: 'present' | 'deleted';
@@ -159,6 +160,10 @@ function sha256File(relativePath: string): string {
   return createHash('sha256').update(fs.readFileSync(absolute(relativePath))).digest('hex');
 }
 
+function sha256Buffer(value: Buffer): string {
+  return createHash('sha256').update(value).digest('hex');
+}
+
 function gitLines(args: string[]): string[] {
   try {
     const output = execFileSync('git', args, {
@@ -174,8 +179,61 @@ function gitLines(args: string[]): string[] {
   }
 }
 
+function gitBuffer(args: string[]): Buffer | null {
+  try {
+    return execFileSync('git', args, {
+      cwd: repoRoot,
+      encoding: 'buffer',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+  } catch {
+    return null;
+  }
+}
+
+function gitText(args: string[]): string | null {
+  const value = gitBuffer(args);
+  return value ? value.toString('utf8') : null;
+}
+
+function gitObjectExists(commit: string): boolean {
+  try {
+    execFileSync('git', ['cat-file', '-e', `${commit}^{commit}`], {
+      cwd: repoRoot,
+      stdio: 'ignore',
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function isAncestor(ancestor: string, descendant: string): boolean {
+  try {
+    execFileSync('git', ['merge-base', '--is-ancestor', ancestor, descendant], {
+      cwd: repoRoot,
+      stdio: 'ignore',
+    });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function jsonAtCommit<T>(commit: string, relativePath: string): T | null {
+  const raw = gitText(['show', `${commit}:${relativePath}`]);
+  if (raw === null) return null;
+  try {
+    return JSON.parse(raw) as T;
+  } catch (error) {
+    fail(`${relativePath} at ${commit} is not valid JSON: ${(error as Error).message}`);
+    return null;
+  }
+}
+
 function completeChangeSet(
   baselineCommit: string,
+  candidateCommit: string,
   excludedPaths: Set<string>,
 ): Map<string, 'present' | 'deleted'> {
   const changes = new Map<string, 'present' | 'deleted'>();
@@ -185,6 +243,7 @@ function completeChangeSet(
     '--no-renames',
     '--diff-filter=ACDMT',
     baselineCommit,
+    candidateCommit,
     '--',
   ]);
   for (const line of diffLines) {
@@ -193,10 +252,13 @@ function completeChangeSet(
     if (!relativePath || excludedPaths.has(relativePath)) continue;
     changes.set(relativePath, status === 'D' ? 'deleted' : 'present');
   }
-  for (const relativePath of gitLines(['ls-files', '--others', '--exclude-standard'])) {
-    if (!excludedPaths.has(relativePath)) changes.set(relativePath, 'present');
-  }
   return changes;
+}
+
+function acceptedPrefixLength(candidateState: BuildState): number {
+  let length = 0;
+  while (candidateState.stages[length]?.status === 'accepted') length += 1;
+  return length;
 }
 
 function isIsoTimestamp(value: string): boolean {
@@ -304,6 +366,20 @@ if (state) {
     fail(`nextPermittedStageId must be ${expectedNext ?? 'null'} for the current stage history`);
   }
 
+  let maximumHistoricalAcceptedPrefix = 0;
+  for (const commit of gitLines(['log', '--format=%H', '--', 'docs/BUILD_STATE.json'])) {
+    const historicalState = jsonAtCommit<BuildState>(commit, 'docs/BUILD_STATE.json');
+    if (historicalState?.stages) {
+      maximumHistoricalAcceptedPrefix = Math.max(
+        maximumHistoricalAcceptedPrefix,
+        acceptedPrefixLength(historicalState),
+      );
+    }
+  }
+  if (acceptedPrefixLength(state) < maximumHistoricalAcceptedPrefix) {
+    fail(`Accepted stage history cannot regress below P${maximumHistoricalAcceptedPrefix - 1}`);
+  }
+
   const acceptedStages = state.stages.filter((stage) => stage.status === 'accepted');
   for (const stage of acceptedStages) {
     const manifest = readJson<CandidateManifest>(stage.manifestPath);
@@ -317,9 +393,79 @@ if (state) {
     if (!/^[0-9a-f]{40}$/.test(manifest.baselineCommit)) {
       fail(`${stage.manifestPath} baselineCommit must be a full lowercase Git SHA`);
     }
+    if (!/^[0-9a-f]{40}$/.test(manifest.candidateCommit)) {
+      fail(`${stage.manifestPath} candidateCommit must be a full lowercase Git SHA`);
+    }
     if (manifest.baselineCommit !== stage.baselineCommit) {
       fail(`${stage.manifestPath} baselineCommit does not match ${stage.id} BUILD_STATE baseline`);
     }
+    if (!gitObjectExists(manifest.baselineCommit) || !gitObjectExists(manifest.candidateCommit)) {
+      fail(`${stage.manifestPath} baselineCommit and candidateCommit must both exist locally`);
+    } else {
+      if (!isAncestor(manifest.baselineCommit, manifest.candidateCommit)) {
+        fail(`${stage.manifestPath} candidateCommit must descend from baselineCommit`);
+      }
+      if (!isAncestor(manifest.candidateCommit, 'HEAD')) {
+        fail(`${stage.manifestPath} candidateCommit must be an ancestor of HEAD`);
+      }
+      const originMain = gitText(['rev-parse', 'refs/remotes/origin/main'])?.trim();
+      if (
+        originMain &&
+        /^[0-9a-f]{40}$/.test(originMain) &&
+        !isAncestor(manifest.candidateCommit, originMain) &&
+        manifest.baselineCommit !== originMain
+      ) {
+        fail(`${stage.manifestPath} baselineCommit must equal current origin/main before delivery`);
+      }
+    }
+
+    const candidateState = jsonAtCommit<BuildState>(manifest.candidateCommit, 'docs/BUILD_STATE.json');
+    const stageIndex = expectedStageIds.indexOf(stage.id);
+    if (!candidateState?.stages || candidateState.stages[stageIndex]?.id !== stage.id) {
+      fail(`${stage.manifestPath} candidateCommit lacks a valid BUILD_STATE entry for ${stage.id}`);
+    } else {
+      const candidateStage = candidateState.stages[stageIndex];
+      if (candidateStage.status !== 'accepted') {
+        fail(`${stage.id} must be accepted in its candidateCommit BUILD_STATE`);
+      }
+      if (candidateStage.baselineCommit !== manifest.baselineCommit) {
+        fail(`${stage.manifestPath} baselineCommit does not match the candidateCommit BUILD_STATE`);
+      }
+      for (let i = 0; i < stageIndex; i += 1) {
+        if (candidateState.stages[i]?.status !== 'accepted') {
+          fail(`${stage.id} candidateCommit requires ${expectedStageIds[i]} accepted`);
+        }
+      }
+      for (let i = stageIndex + 1; i < expectedStageIds.length; i += 1) {
+        if (candidateState.stages[i]?.status !== 'planned') {
+          fail(`${stage.id} candidateCommit requires later stage ${expectedStageIds[i]} planned`);
+        }
+      }
+
+      if (stageIndex === 0) {
+        if (manifest.baselineCommit !== candidateState.repository.baselineCommit) {
+          fail('P0 manifest baseline must equal the repository bootstrap baseline');
+        }
+      } else {
+        const baselineState = jsonAtCommit<BuildState>(manifest.baselineCommit, 'docs/BUILD_STATE.json');
+        if (!baselineState?.stages) {
+          fail(`${stage.id} baselineCommit must contain the prior accepted BUILD_STATE`);
+        } else {
+          if (baselineState.nextPermittedStageId !== stage.id || baselineState.activeStageId !== null) {
+            fail(`${stage.id} baselineCommit must identify ${stage.id} as the next permitted stage`);
+          }
+          if (baselineState.stages[stageIndex]?.status !== 'planned') {
+            fail(`${stage.id} must be planned at its baselineCommit`);
+          }
+          for (let i = 0; i < stageIndex; i += 1) {
+            if (baselineState.stages[i]?.status !== 'accepted') {
+              fail(`${stage.id} baselineCommit requires ${expectedStageIds[i]} accepted`);
+            }
+          }
+        }
+      }
+    }
+
     if (!Array.isArray(manifest.files) || manifest.files.length === 0) {
       fail(`${stage.manifestPath} must list at least one candidate file`);
     } else {
@@ -332,29 +478,33 @@ if (state) {
           fail(`${stage.manifestPath} has invalid change state for ${entry.path}`);
           continue;
         }
-        let target = '';
         try {
-          target = absolute(entry.path);
+          absolute(entry.path);
         } catch (error) {
           fail((error as Error).message);
           continue;
         }
+        const candidateBlob = gitBuffer(['show', `${manifest.candidateCommit}:${entry.path}`]);
         if (entry.change === 'deleted') {
           if (entry.sha256 !== null) fail(`${stage.manifestPath} deleted entry ${entry.path} must have null sha256`);
-          if (fs.existsSync(target)) fail(`${stage.manifestPath} marks existing file ${entry.path} as deleted`);
+          if (candidateBlob !== null) fail(`${stage.manifestPath} marks candidate file ${entry.path} as deleted`);
         } else {
           if (!/^[0-9a-f]{64}$/.test(entry.sha256 ?? '')) {
             fail(`${stage.manifestPath} has an invalid SHA-256 for ${entry.path}`);
-          } else if (!fs.existsSync(target) || !fs.statSync(target).isFile()) {
-            fail(`Missing required candidate file: ${entry.path}`);
-          } else if (sha256File(entry.path) !== entry.sha256) {
+          } else if (candidateBlob === null) {
+            fail(`Missing required candidate file at ${manifest.candidateCommit}: ${entry.path}`);
+          } else if (sha256Buffer(candidateBlob) !== entry.sha256) {
             fail(`${stage.manifestPath} digest mismatch for ${entry.path}`);
           }
         }
       }
-      if (stage.baselineCommit) {
+      if (stage.baselineCommit && manifest.candidateCommit) {
         const excluded = new Set([stage.manifestPath, stage.reviewPath]);
-        const expectedChanges = completeChangeSet(stage.baselineCommit, excluded);
+        const expectedChanges = completeChangeSet(
+          stage.baselineCommit,
+          manifest.candidateCommit,
+          excluded,
+        );
         const expectedPaths = [...expectedChanges.keys()].sort();
         const actualPaths = [...manifestPaths].sort();
         if (JSON.stringify(actualPaths) !== JSON.stringify(expectedPaths)) {
