@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "planRevision": 1,
+  "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+  "lastUpdated": "2026-08-23",
+  "repository": {
+    "owner": "whitefishscholarship",
+    "name": "program_code",
+    "defaultBranch": "main",
+    "baselineCommit": "006b4b2fc11136054d64b6dd701d41b72beb71b7"
+  },
+  "dataAuthority": {
+    "testingSpreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "testingMasterTab": "Master Database",
+    "productionSpreadsheetId": null,
+    "productionMutationAuthorized": false,
+    "productionAuthorization": null
+  },
+  "deployment": {
+    "mainAutoDeploysProduction": true,
+    "stageMergeAuthorizations": [
+      {
+        "stageId": "P0",
+        "authorized": false,
+        "authorizedBy": null,
+        "authorizedAt": null,
+        "evidencePath": null,
+        "basis": "P0 execution was approved, but the approval did not explicitly acknowledge Vercel Preview and Production deployment effects from Git delivery.",
+        "scope": "No P0 push, PR, or merge that triggers a deployment is authorized until direct informed authority or verified deployment suppression is recorded."
+      }
+    ],
+    "deliveryBlockers": [
+      "P0-vercel-deployment-authority-or-suppression"
+    ]
+  },
+  "activeStageId": null,
+  "nextPermittedStageId": "P1",
+  "stages": [
+    {
+      "id": "P0",
+      "name": "Program contract and governance baseline",
+      "status": "accepted",
+      "baselineCommit": "006b4b2fc11136054d64b6dd701d41b72beb71b7",
+      "evidencePath": "docs/evidence/P0.md",
+      "manifestPath": "docs/evidence/P0-manifest.json",
+      "reviewPath": "docs/reviews/P0.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P1",
+      "name": "Reproducible baseline and architecture inventory",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P1.md",
+      "manifestPath": "docs/evidence/P1-manifest.json",
+      "reviewPath": "docs/reviews/P1.json",
+      "kickoffPath": "docs/kickoffs/P1-BASELINE.md"
+    },
+    {
+      "id": "P2",
+      "name": "Canonical data and evidence model",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P2.md",
+      "manifestPath": "docs/evidence/P2-manifest.json",
+      "reviewPath": "docs/reviews/P2.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P3",
+      "name": "Architecture-aware acquisition",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P3.md",
+      "manifestPath": "docs/evidence/P3-manifest.json",
+      "reviewPath": "docs/reviews/P3.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P4",
+      "name": "Accuracy and verification engine",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P4.md",
+      "manifestPath": "docs/evidence/P4-manifest.json",
+      "reviewPath": "docs/reviews/P4.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P5",
+      "name": "Complete testing-sheet accuracy remediation",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P5.md",
+      "manifestPath": "docs/evidence/P5-manifest.json",
+      "reviewPath": "docs/reviews/P5.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P6",
+      "name": "Eligible coverage expansion",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P6.md",
+      "manifestPath": "docs/evidence/P6-manifest.json",
+      "reviewPath": "docs/reviews/P6.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P7",
+      "name": "Student-facing product and API",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P7.md",
+      "manifestPath": "docs/evidence/P7-manifest.json",
+      "reviewPath": "docs/reviews/P7.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P8",
+      "name": "Monitoring, review operations, and recovery",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P8.md",
+      "manifestPath": "docs/evidence/P8-manifest.json",
+      "reviewPath": "docs/reviews/P8.json",
+      "kickoffPath": null
+    },
+    {
+      "id": "P9",
+      "name": "Production migration, deployment, and closeout",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P9.md",
+      "manifestPath": "docs/evidence/P9-manifest.json",
+      "reviewPath": "docs/reviews/P9.json",
+      "kickoffPath": null
+    }
+  ],
+  "invariants": [
+    "Execute one stage only.",
+    "Do not mutate the production spreadsheet before accepted P9 authority.",
+    "Do not silently truncate source pages, children, results, or awards.",
+    "Do not store applicant PII or credentials.",
+    "Require independent fresh-context review before stage acceptance.",
+    "Do not ask Kelsey routine Git questions."
+  ]
+}
