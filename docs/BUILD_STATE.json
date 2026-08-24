@@ -41,11 +41,11 @@
     "deliveryIntegrations": [
       {
         "stageId": "P1",
-        "status": "authorized-pending",
+        "status": "accepted",
         "stageCandidateCommit": "92ee21095e959bd19ab641752308c0fd9b394b22",
         "stageAttestationCommit": "20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5",
         "originalBaselineCommit": "d374247156e3ed15d19c037473da8f76ceedb6ab",
-        "deliveryBaselineCommit": null,
+        "deliveryBaselineCommit": "015128616ffac9b453f8712f96c73530fbd9d805",
         "evidencePath": "docs/evidence/P1-delivery-authorization.md",
         "manifestPath": "docs/evidence/P1-delivery-manifest.json",
         "reviewPath": "docs/reviews/P1-delivery.json",
@@ -70,7 +70,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P1",
+  "nextPermittedStageId": "P2",
   "stages": [
     {
       "id": "P0",
@@ -85,12 +85,12 @@
     {
       "id": "P1",
       "name": "Reproducible baseline and architecture inventory",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "d374247156e3ed15d19c037473da8f76ceedb6ab",
       "evidencePath": "docs/evidence/P1.md",
       "manifestPath": "docs/evidence/P1-manifest.json",
       "reviewPath": "docs/reviews/P1.json",
-      "kickoffPath": "docs/kickoffs/P1-BASELINE.md"
+      "kickoffPath": null
     },
     {
       "id": "P2",
@@ -100,7 +100,7 @@
       "evidencePath": "docs/evidence/P2.md",
       "manifestPath": "docs/evidence/P2-manifest.json",
       "reviewPath": "docs/reviews/P2.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P2-DATA-MODEL.md"
     },
     {
       "id": "P3",
