@@ -1,21 +1,36 @@
 # Current Handoff
 
-Last updated: 2026-08-23
-Plan revision: 1
+Last updated: 2026-08-24
+Plan revision: 2
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
 ## Current state
 
-- Active stage: none
-- Accepted candidate: P0 — Program contract and governance baseline
-- Durable P0 completion gate: the accepted marker, evidence, manifest, and review
-  record must be present on `origin/main`
-- Baseline commit: `006b4b2fc11136054d64b6dd701d41b72beb71b7`
-- Working branch: `codex/p0-program-contract`
+- Active stage: none; P0 remains the only stage durably delivered on `origin/main`
+- Active governance amendment: Plan Revision 2 — immutable post-attestation delivery
+  integration
+- Amendment baseline: `d374247156e3ed15d19c037473da8f76ceedb6ab`
+- Amendment branch: `codex/plan-v2-p1-delivery-path`
+- Preserved P1 candidate: `92ee21095e959bd19ab641752308c0fd9b394b22`
+- Preserved P1 attestation: `20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`
+- P1 remains planned in the amendment candidate and may not be represented as delivered
+  until the separately reviewed delivery integration reaches `origin/main`
 - Testing spreadsheet: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
 - Production spreadsheet: unset; mutation unauthorized
-- External data mutations during P0: none
+- Spreadsheet or product mutations during the amendment: none
+
+## Plan Revision 2 scope
+
+The amendment records later informed P1 delivery authority and creates a hash-bound
+two-parent integration path. It preserves the original P1 candidate, attestation,
+manifest, and review byte-for-byte. The amendment changes only governance,
+documentation, and validation.
+
+After the amendment is independently accepted and delivered, a separate P1 delivery
+candidate must merge the delivered amendment baseline as first parent and exact
+attestation `20476b8` as second parent. That complete integration is manifested,
+independently reviewed, and attested before its authorized push, PR, and merge.
 
 ## P0 scope
 
@@ -90,9 +105,11 @@ Production deployments. BUILD_STATE now records that authority and its exclusion
 
 ## Next stage
 
-P1 is the next permitted stage in the accepted candidate. Its kickoff is
-`docs/kickoffs/P1-BASELINE.md`. Do not start P1 until P0's accepted marker, evidence,
-manifest, and independent-review record are verified on `origin/main`.
+P1 remains the next stage in the amendment baseline's machine state, but its accepted
+candidate already exists and must not be reimplemented. First deliver this independently
+accepted Plan Revision 2 amendment. Then create only the exact P1 delivery integration
+defined by the plan. P2 remains prohibited until that integration is verified on
+`origin/main`.
 
 ## Prohibited next actions
 
@@ -100,3 +117,7 @@ manifest, and independent-review record are verified on `origin/main`.
 - Do not implement schema, crawler, audit, API, or UI changes.
 - Do not configure production data.
 - Do not treat planning observations as a fresh P1 baseline.
+- Do not replay, amend, replace, or rebind P1 candidate `92ee210` or attestation
+  `20476b8`.
+- Do not create the P1 delivery integration before this amendment is independently
+  accepted and delivered on `origin/main`.

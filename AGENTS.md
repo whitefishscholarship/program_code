@@ -68,6 +68,15 @@ The first valid attestation in Git history is canonical. Never delete/re-add or 
 and do not append another commit after an undelivered attestation. The attestation must
 remain the branch tip until merged.
 
+Plan Revision 2 adds one exception that preserves rather than replaces an attestation:
+an independently reviewed delivery integration may merge an exact previously attested
+stage into a separately delivered amended `origin/main`. The integration must use the
+exact parents, manifest, review, authority evidence, and branch-tip lock defined by the
+canonical plan and `BUILD_STATE`. It never permits an ordinary post-attestation commit,
+candidate rewrite, attestation rebinding, or unreviewed merge resolution. Material plan
+amendments are themselves frozen, manifested, independently reviewed, and attested
+before delivery.
+
 ## Autonomous Git policy: no Git questions to Kelsey
 
 - Inspect status, branches, worktrees, remotes, and repository conventions
@@ -88,6 +97,9 @@ remain the branch tip until merged.
   repository policy permit it.
 - Follow the repository's established PR merge convention. Prefer a new clean
   branch and replay of stage-owned commits over risky conflict resolution.
+- For a declared Plan Revision 2 delivery integration, use the exact two-parent merge
+  and dedicated delivery attestation required by the canonical plan; do not replay or
+  squash the preserved stage commits.
 - Never force-push, rewrite published history, use destructive reset/checkout
   commands, delete a worktree containing changes, or bypass required checks.
 - A verified authentication or permission outage may be recorded as an external

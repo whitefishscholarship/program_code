@@ -161,3 +161,25 @@ but are not rewritten or deleted.
   two-file attestation passes locally, Codex may push, open/update the PR, merge, and
   verify delivery. Spreadsheet writes, product behavior changes, deployment-configuration
   changes, form submissions, and provider contact remain forbidden.
+
+## D-014 — Hash-bound delivery integration for post-attestation authority
+
+- Date: 2026-08-24
+- Status: accepted candidate pending independent review and delivery
+- Decision: Amend the plan to permit one machine-checked delivery integration for exact
+  P1 candidate `92ee21095e959bd19ab641752308c0fd9b394b22` and canonical attestation
+  `20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`. Deliver this amendment first. Then merge
+  the preserved attestation as the second parent of a candidate whose first parent is
+  the verified amended `origin/main`, independently review the complete integration
+  change set, and add a direct-child two-file delivery attestation.
+- Reason: P1 was correctly frozen while delivery was prohibited. Direct informed
+  Preview/Production authority arrived afterward, but Plan Revision 1 simultaneously
+  required that authority in `BUILD_STATE` and prohibited every post-attestation commit
+  or rebinding. The narrow integration records the later authority without altering the
+  reviewed P1 candidate, attestation, manifest, or review.
+- Evidence: `docs/evidence/PLAN-REV2.md` and
+  `docs/evidence/P1-delivery-authorization.md`
+- Consequence: The exception applies only to the exact pinned P1 history and the exact
+  reviewed delivery integration. It does not create a general post-attestation edit
+  path, waive independent review, or authorize spreadsheet writes, product changes,
+  deployment-configuration changes, form submissions, or provider contact.

@@ -1,5 +1,20 @@
 # P1 Kickoff — Reproducible Baseline and Architecture Inventory
 
+## Plan Revision 2 delivery override
+
+If `docs/BUILD_STATE.json` contains the authorized-pending P1 delivery integration for
+candidate `92ee21095e959bd19ab641752308c0fd9b394b22` and attestation
+`20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`, do not execute the original P1 build
+instructions below. P1 has already been implemented and independently accepted. Follow
+the canonical Plan Revision 2 delivery-integration mechanism: verify the amended
+`origin/main`, merge the exact preserved attestation as the second parent, reconcile only
+governance/handoff state, produce the complete delivery manifest, obtain fresh-context
+read-only acceptance, and add the exact direct-child delivery attestation. Do not replay,
+amend, replace, or rebind P1.
+
+The original kickoff remains below as immutable scope evidence for the accepted P1
+candidate and for any future audit of what was authorized during implementation.
+
 Paste the following into a fresh session after P0 is accepted and merged.
 
 ```text
