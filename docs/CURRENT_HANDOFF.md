@@ -38,11 +38,10 @@ validator. Do not change product behavior or scholarship data.
 - The final reviewer outcome is authoritative only in `docs/reviews/P0.json`, bound
   to `docs/evidence/P0-manifest.json`. Its absence or a non-accepted outcome blocks
   `npm run plan:check` and P0 delivery.
-- Remaining work: commit/freeze the final validator remediation, obtain independent
-  adversarial acceptance, obtain direct informed delivery authority for that exact
-  remediated commit and its direct-child attestation, record/review the authority,
-  attest, push, open the PR, monitor checks/deployments, merge, and confirm the accepted
-  record on `origin/main`.
+- Remaining work: commit/freeze this documentation-only authorization/acceptance record,
+  obtain the final independent adversarial decision against its manifest, create the
+  exact direct-child two-file attestation, run all gates, push, open the PR, monitor
+  checks/deployments, merge, and confirm the accepted record on `origin/main`.
 
 ## Existing repository risk observed during P0
 
@@ -81,6 +80,13 @@ rebound later. The validator now selects the first structurally valid attestatio
 immutable history, preserves its blobs, and requires an undelivered branch tip to equal
 that attestation exactly. This later remediation also remains delivery-blocked pending
 authority for its final commit.
+
+The final technical candidate `1460818684eeaef0b431c59465c5f0b9168b791b` was
+independently accepted at 2026-08-24T03:22:20Z with 0 critical, 0 high, 0 medium,
+and 0 low findings. Kelsey then explicitly authorized delivery through that commit,
+this single documentation-only authorization/acceptance commit, the exact direct-child
+manifest/review attestation, PR creation/update, merge, and resulting Vercel Preview and
+Production deployments. BUILD_STATE now records that authority and its exclusions.
 
 ## Next stage
 

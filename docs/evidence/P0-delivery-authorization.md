@@ -59,3 +59,21 @@ The independent recheck of `0e4e106` required one further validator change to pr
 post-attestation commits and delete/re-add rebinding. That later local remediation is
 also outside all delivery authority above until Kelsey explicitly authorizes its exact
 final commit and direct-child attestation.
+
+## Final technical-candidate delivery authorization
+
+After independent review accepted technical candidate
+`1460818684eeaef0b431c59465c5f0b9168b791b` with zero findings, Kelsey provided:
+
+> I authorize Codex to deliver the P0 branch through commit
+> `1460818684eeaef0b431c59465c5f0b9168b791b`, plus one documentation-only commit
+> recording this authorization and technical-review acceptance, and one direct-child
+> attestation-only commit containing exactly the final manifest and independent review
+> record. I authorize pushing the branch, creating/updating its PR, merging to `main`,
+> and resulting Vercel Preview and Production deployments. This does not authorize
+> spreadsheet writes, product behavior changes, deployment-configuration changes, form
+> submissions, or provider contact.
+
+This instruction covers this documentation-only authorization/acceptance commit and the
+single exact two-file direct-child attestation. It resolves the later validator-remediation
+boundary without expanding any excluded action.

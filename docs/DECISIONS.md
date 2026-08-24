@@ -144,3 +144,20 @@ but are not rewritten or deleted.
   replacement attestation could otherwise escape the reviewed-candidate boundary.
 - Consequence: CI receives the PR head SHA, historical attestation blobs remain fixed,
   and delivery stays blocked until the final remediation commit is explicitly authorized.
+
+## D-013 — Final P0 technical acceptance and delivery authority
+
+- Date: 2026-08-23
+- Status: accepted
+- Decision: Deliver the branch through technical commit
+  `1460818684eeaef0b431c59465c5f0b9168b791b`, this one documentation-only
+  authorization/acceptance commit, and one direct-child attestation commit containing
+  exactly the P0 manifest and independent review record.
+- Reason: The independent reviewer accepted `1460818` at 2026-08-24T03:22:20Z with
+  zero findings, after which Kelsey explicitly authorized the bounded sequence, Git
+  delivery, and resulting Vercel Preview and Production deployments.
+- Evidence: `docs/evidence/P0-delivery-authorization.md`
+- Consequence: After the final candidate receives independent acceptance and the
+  two-file attestation passes locally, Codex may push, open/update the PR, merge, and
+  verify delivery. Spreadsheet writes, product behavior changes, deployment-configuration
+  changes, form submissions, and provider contact remain forbidden.
