@@ -38,11 +38,9 @@ validator. Do not change product behavior or scholarship data.
 - The final reviewer outcome is authoritative only in `docs/reviews/P0.json`, bound
   to `docs/evidence/P0-manifest.json`. Its absence or a non-accepted outcome blocks
   `npm run plan:check` and P0 delivery.
-- Remaining work: obtain direct informed authority for the complete amended candidate
-  and its attestation-only follow-up; record that authority, commit/freeze the final
-  candidate, obtain a fresh independent adversarial review, add the attestation, push,
-  open the PR, monitor checks/deployments, merge, and confirm the accepted record on
-  `origin/main`.
+- Remaining work: commit/freeze the authorized final candidate, obtain a fresh
+  independent adversarial review, add the attestation-only commit, push, open the PR,
+  monitor checks/deployments, merge, and confirm the accepted record on `origin/main`.
 
 ## Existing repository risk observed during P0
 
@@ -62,12 +60,13 @@ read-only GitHub deployment history shows Vercel has created Preview deployments
 branch/PR revisions and Production deployments for `main` revisions. Kelsey explicitly
 authorized pushing commit `07a6e14`, creating its PR, and merging it to `main` with
 informed acknowledgement of those Vercel effects. The authority is recorded in
-`docs/evidence/P0-delivery-authorization.md`. A later adversarial review required a
-validator and authorization amendment, so the complete final candidate is now broader
-than the exact authorized object. BUILD_STATE correctly blocks that amended delivery
-until direct informed authority covers it. No authority permits product behavior changes,
-spreadsheet writes, production-sheet configuration, form submissions, or provider
-contact.
+`docs/evidence/P0-delivery-authorization.md`. After a later adversarial review required
+validator and authorization remediation, Kelsey explicitly extended informed authority
+to the branch containing `07a6e14` and `24a368d`, one documentation-only authorization
+commit, one manifest/review attestation-only commit, PR creation/update, merge, and the
+resulting Vercel deployments. No authority permits product behavior changes, spreadsheet
+writes, production-sheet configuration, deployment-configuration changes, form
+submissions, or provider contact.
 
 ## Next stage
 

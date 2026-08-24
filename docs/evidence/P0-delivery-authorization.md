@@ -29,3 +29,19 @@ waive the repository's independent-review or acceptance gates.
   `07a6e14`. Those actions require a new informed instruction.
 - Not authorized: scholarship-sheet writes, production-sheet configuration, product
   behavior changes, form submissions, provider contact, or unrelated external effects.
+
+## Complete amended-candidate authorization
+
+After the validator/history remediation was committed as `24a368d`, Kelsey provided
+this additional informed authorization:
+
+> I authorize Codex to deliver the P0 branch containing commits `07a6e14` and
+> `24a368d`, plus one documentation-only commit recording this authorization and one
+> attestation-only commit containing the final manifest and independent review record.
+> I authorize pushing the branch, creating/updating its PR, merging to `main`, and
+> resulting Vercel Preview and Production deployments. This does not authorize
+> spreadsheet writes, product behavior changes, deployment-configuration changes,
+> form submissions, or provider contact.
+
+This later authorization covers the complete bounded P0 delivery sequence and resolves
+the amendment boundary above. It does not broaden any excluded action.

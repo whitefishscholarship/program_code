@@ -104,3 +104,18 @@ but are not rewritten or deleted.
 - Consequence: The later validator and authorization amendment remains a delivery
   blocker until separately authorized. No authorization permits spreadsheet writes or
   product behavior changes.
+
+## D-010 — Complete amended P0 delivery authority
+
+- Date: 2026-08-23
+- Status: accepted
+- Decision: Deliver the P0 branch containing `07a6e14` and `24a368d`, one
+  documentation-only commit recording this authorization, and one attestation-only
+  commit containing the final manifest and independent review record.
+- Reason: Kelsey explicitly authorized push, PR creation/update, merge to `main`, and
+  resulting Vercel Preview and Production deployments for that bounded final candidate.
+- Evidence: `docs/evidence/P0-delivery-authorization.md`
+- Consequence: Delivery may proceed only after the refreshed independent adversarial
+  review accepts the frozen candidate. The authority excludes spreadsheet writes,
+  product behavior changes, deployment-configuration changes, form submissions, and
+  provider contact.
