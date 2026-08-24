@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P1-DELIVERY",
+  "createdAt": "2026-08-24T19:46:24Z",
+  "baselineCommit": "015128616ffac9b453f8712f96c73530fbd9d805",
+  "candidateCommit": "464eece0c05c97e014cca0955f0ab92998c1d97c",
+  "files": [
+    {
+      "path": ".gitignore",
+      "change": "present",
+      "sha256": "7bb530ab3615f62495693b54d51b6d92c7f8955e5ee45dc1d7c87126fc2c231e"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "0fc3db03ef2b9584be02534cc5444d2c137d1ffb18791f6a1b6530539e501273"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "85f20a2f44c094cd73895a18aecab35dbb1f8a570ca9a432b748720a83a54983"
+    },
+    {
+      "path": "docs/evidence/P1-dependency-security.json",
+      "change": "present",
+      "sha256": "72c32ed6ee74cde61725599a34739696bed966502ab1ea8b9b50190562325c0b"
+    },
+    {
+      "path": "docs/evidence/P1-inventory.json",
+      "change": "present",
+      "sha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a"
+    },
+    {
+      "path": "docs/evidence/P1-manifest.json",
+      "change": "present",
+      "sha256": "0712c6ff782285ce4fdb933cebfa7797a7b5f10184a3974017896c0d3df76a60"
+    },
+    {
+      "path": "docs/evidence/P1-repository-map.md",
+      "change": "present",
+      "sha256": "bc64f9f2f78c9433004ae042a38192faca603b13fb1f620c280eae3bf9eb653f"
+    },
+    {
+      "path": "docs/evidence/P1.md",
+      "change": "present",
+      "sha256": "14b4604ee6e97ca4f404318580cfb56762abed47a739d432e9fa394133a66e66"
+    },
+    {
+      "path": "docs/kickoffs/P2-DATA-MODEL.md",
+      "change": "present",
+      "sha256": "a7bc7cd8ef329ee7a3381d46f1ce9fbc98fbe4e6efcf179e38366851d9ebbb6e"
+    },
+    {
+      "path": "docs/reviews/P1.json",
+      "change": "present",
+      "sha256": "7d2b74e07d75641eacffa082462cbe38b37fa7b94216e3956c871f6a9384bd36"
+    },
+    {
+      "path": "web/fixtures/p1/master-database-cell-data.json",
+      "change": "present",
+      "sha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
+    },
+    {
+      "path": "web/fixtures/p1/public-source-observations.json",
+      "change": "present",
+      "sha256": "b075bb5220ea342938356a245257ac5f1f4df40caa22773073074ae56bc7771d"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "4929c19652dd6ddc8ae938c43a61cfabef37daef6f50965cda01a9936185c6d7"
+    },
+    {
+      "path": "web/scripts/p1-capture-lib.ts",
+      "change": "present",
+      "sha256": "9fa6f2cfcb6fcd5ffd104bc106e9b4485ac010c632926ad43d1f95dea301e5c5"
+    },
+    {
+      "path": "web/scripts/p1-capture-sheet.ts",
+      "change": "present",
+      "sha256": "f6b8daec24cb1c2d035b4ac7da3dfb576e650c550c11c3aae89cde16cff63bc9"
+    },
+    {
+      "path": "web/scripts/p1-inventory-lib.ts",
+      "change": "present",
+      "sha256": "5781c3c601bffb4258c80b5dd34f91b580ac415e7ccb7eca54d850a375c82cb3"
+    },
+    {
+      "path": "web/scripts/p1-inventory.ts",
+      "change": "present",
+      "sha256": "270852d64f63790ec02903b1c3ee87d5612a97be8dbcd89bb823c12a124ed9c1"
+    },
+    {
+      "path": "web/scripts/test-p1-inventory.ts",
+      "change": "present",
+      "sha256": "ed400c34f112a5a934eb728763ad7ba30c50e2beae9d1b0f002fdbb85a889484"
+    }
+  ]
+}

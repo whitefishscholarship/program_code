@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-08-24T04:16:27Z",
+  "method": "Bounded read-only Firecrawl scrape of public landing pages; no interaction, authentication, form submission, or applicant data collection.",
+  "limitations": "Each observation proves only what the named public URL returned at the observation time. It is not a completeness crawl and does not establish current eligibility or deadline facts.",
+  "observations": [
+    {
+      "url": "https://nfu.org/education/scholarships/",
+      "architecture": "common_application",
+      "observed": "The current landing page presents three separately named scholarship opportunities and states that one unified application serves them.",
+      "reviewState": "observed"
+    },
+    {
+      "url": "https://horatioalger.org/scholarships/",
+      "architecture": "directory_hub",
+      "observed": "The current landing page routes visitors to undergraduate, career and technical, and graduate scholarship program sections with separate application periods.",
+      "reviewState": "observed"
+    },
+    {
+      "url": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+      "architecture": "matching_portal",
+      "observed": "The public page exposes multiple scholarship discovery sections and a Montana scholarship directory. The sheet's one-application/multiple-awards claim was not independently reproduced without entering an application workflow.",
+      "reviewState": "manual_review"
+    },
+    {
+      "url": "https://fvcc.academicworks.com/",
+      "architecture": "paginated_catalog",
+      "observed": "The public landing page returned an opportunities table with separately linked award pages and current displayed status values of Ended in the inspected result slice.",
+      "reviewState": "observed"
+    },
+    {
+      "url": "https://www.firstinspires.org/resources/library/scholarships",
+      "architecture": "external_marketplace",
+      "observed": "FIRST directs students to a Pearson scholarship portal and states that individual providers fund and administer awards with distinct terms and application processes.",
+      "reviewState": "observed"
+    },
+    {
+      "url": "https://apply.mykaleidoscope.com/program/ESAFoundationScholarship2026",
+      "architecture": "common_application",
+      "observed": "The public program page identifies two collegiate scholarships, a general application, selection of either or both funds, and program-specific follow-up questions.",
+      "reviewState": "observed"
+    },
+    {
+      "url": "https://whitefisheducationfoundation.org/scholarships/",
+      "architecture": "multi_award_page",
+      "observed": "The current page lists multiple separately named scholarships and says applications are available through the school counseling office.",
+      "reviewState": "observed"
+    }
+  ]
+}

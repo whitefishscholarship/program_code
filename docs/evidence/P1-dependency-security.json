@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P1",
+  "observedAt": "2026-08-24T04:22:30Z",
+  "nodeVersion": "v22.20.0",
+  "npmVersion": "10.9.3",
+  "packageLockSha256": "ba82583b164a60fd91f3bc5650362c572c3dae44bbac8aa355068833c5855fb3",
+  "precondition": {
+    "command": "npm ci",
+    "result": "passed; added 565 packages and audited 566 packages",
+    "packageVersionsChanged": false
+  },
+  "fullTree": {
+    "command": "npm audit --json",
+    "counts": {
+      "info": 0,
+      "low": 1,
+      "moderate": 7,
+      "high": 12,
+      "critical": 1,
+      "total": 21
+    },
+    "dependencyMetadata": {
+      "prod": 257,
+      "dev": 365,
+      "optional": 110,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 658
+    }
+  },
+  "productionTree": {
+    "command": "npm audit --omit=dev --json",
+    "counts": {
+      "info": 0,
+      "low": 0,
+      "moderate": 6,
+      "high": 9,
+      "critical": 1,
+      "total": 16
+    },
+    "affectedPackages": [
+      { "name": "@protobufjs/utf8", "severity": "moderate", "direct": false },
+      { "name": "brace-expansion", "severity": "high", "direct": false },
+      { "name": "exceljs", "severity": "moderate", "direct": true },
+      { "name": "minimatch", "severity": "high", "direct": false },
+      { "name": "nanoid", "severity": "high", "direct": false },
+      { "name": "next", "severity": "high", "direct": true },
+      { "name": "postcss", "severity": "high", "direct": false },
+      { "name": "protobufjs", "severity": "critical", "direct": false },
+      { "name": "qs", "severity": "moderate", "direct": false },
+      { "name": "resend", "severity": "moderate", "direct": true },
+      { "name": "sharp", "severity": "high", "direct": false },
+      { "name": "svix", "severity": "moderate", "direct": false },
+      { "name": "tmp", "severity": "high", "direct": false },
+      { "name": "undici", "severity": "high", "direct": false },
+      { "name": "uuid", "severity": "moderate", "direct": false },
+      { "name": "ws", "severity": "high", "direct": false }
+    ],
+    "directAffectedPackages": [
+      { "name": "exceljs", "installed": "4.4.0", "severity": "moderate" },
+      { "name": "next", "installed": "16.1.6", "severity": "high" },
+      { "name": "resend", "installed": "6.9.3", "severity": "moderate" }
+    ],
+    "criticalDependencyPath": "root -> @google/genai@1.44.0 -> protobufjs@7.5.4"
+  },
+  "developmentOnlyDelta": {
+    "derivation": "fullTree counts minus productionTree counts; package-level overlap is not reclassified by this arithmetic",
+    "counts": {
+      "info": 0,
+      "low": 1,
+      "moderate": 1,
+      "high": 3,
+      "critical": 0,
+      "total": 5
+    }
+  },
+  "cleanInstallObservation": {
+    "command": "npm ls --depth=0 --json",
+    "result": "reported five extraneous optional/WASM support packages after npm ci",
+    "packages": [
+      "@emnapi/core@1.8.1",
+      "@emnapi/runtime@1.8.1",
+      "@emnapi/wasi-threads@1.1.0",
+      "@napi-rs/wasm-runtime@0.2.12",
+      "@tybys/wasm-util@0.10.1"
+    ],
+    "reviewState": "manual_review_P7"
+  },
+  "reconciliation": {
+    "p0EarlierObservation": "21 total findings: 1 low, 7 moderate, 12 high, 1 critical",
+    "p0LaterObservation": "57 total findings: 2 low, 14 moderate, 40 high, 1 critical",
+    "p1Observation": "21 total findings: 1 low, 7 moderate, 12 high, 1 critical",
+    "explanation": "Registry advisory results are time-sensitive. P1 changed no package or lockfile and records the current response rather than treating either P0 count as timeless."
+  },
+  "interpretationBoundary": "An npm advisory match is evidence that the installed dependency range is covered by registry advisories. P1 did not test exploitability, exposure prerequisites, or remediation compatibility and does not claim the application is exploitable or safe.",
+  "remediationBoundary": "No dependency version, package manifest range, or lockfile entry was changed. Remediation and exposure disposition remain P7 work under the canonical plan."
+}

@@ -24,6 +24,9 @@ web/build/
 # Vercel Configurations
 .vercel/
 
+# Untrusted, read-only public source inspection cache
+.firecrawl/
+
 # TypeScript Cache
 web/*.tsbuildinfo
 web/next-env.d.ts

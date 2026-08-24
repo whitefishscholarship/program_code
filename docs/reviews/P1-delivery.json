@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P1-DELIVERY",
+  "reviewerTaskId": "/root/p1_delivery_path_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-08-24T19:48:19Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact replacement P1 delivery integration candidate 464eece0c05c97e014cca0955f0ab92998c1d97c and its direct-child two-file delivery attestation only, for the user's authorized Git push, pull request, merge, and resulting Vercel Preview and Production deployments. No spreadsheet write, product change, deployment-configuration change, form submission, provider contact, or P2 execution is authorized.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/P1-delivery-manifest.json",
+  "candidateManifestSha256": "33003269f4ce61f6f2668989d01849df5c23354cf634e83e6fd6a905510c7d29"
+}
