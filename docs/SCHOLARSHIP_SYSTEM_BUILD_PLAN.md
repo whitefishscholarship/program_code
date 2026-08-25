@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 2
+Plan revision: 3
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -291,6 +291,23 @@ Plan Revision 2 permits one narrow delivery integration when all of these condit
    equal the delivered amendment baseline except for the exact pending-to-accepted
    integration fields and the stage array/next pointer copied from the preserved stage
    candidate; the authority object and every pinned identity/path remain unchanged.
+
+The exact state comparison in condition 7 is historical: the validator reads
+`docs/BUILD_STATE.json` from the immutable delivery candidate named by the attested
+delivery manifest and compares that blob with the mechanically derived transition. It
+must not compare the derived transition with the current worktree state. After the
+integration is delivered, later independently governed stages and plan amendments may
+advance the current stage pointer, stage records, blockers, authorizations, and other
+machine state through their ordinary contracts. That later evolution neither changes
+nor weakens the preserved integration because its candidate, manifest, review,
+attestation, identities, authority, paths, and blobs remain hash-bound and are
+revalidated from Git history.
+
+Every integration that has ever reached `accepted` in the current Git history is
+non-regressing machine state. The validator discovers those historical records and
+requires the current state to retain each one exactly. Deletion, downgrade to pending,
+or rebinding of any identity, authority path, manifest, review, baseline, or allowlist
+is invalid and cannot be used to skip historical validation.
 
 This mechanism is an exceptional delivery bridge, not a general post-attestation edit
 path. Each stage may have at most one delivery integration, and every commit is pinned.
@@ -721,6 +738,11 @@ attestation blobs, current informed authority, independent acceptance, and the b
 lock. A synthetic PR merge, sibling authorization commit, or ordinary post-attestation
 commit is not a substitute.
 
+After that integration is on `origin/main`, validation of its exact derived state is
+bound to the delivery-manifest candidate, not to the evolving current `BUILD_STATE`.
+Every historical object and authority check remains mandatory while later stages use
+the normal state machine.
+
 ## 14. Plan amendments and decision control
 
 Acceptance criteria may not be changed inside an implementation fix. A material plan
@@ -740,6 +762,15 @@ the fresh-context decision is recorded in `docs/reviews/PLAN-REV<revision>.json`
 direct-child commit adds exactly those two files. The amendment attestation remains the
 branch tip until delivered. This requirement applies before an amendment can authorize
 or execute an exceptional stage-delivery integration.
+
+Beginning with Plan Revision 3, a new amendment is recorded as
+`attestation-gated`: the machine state does not predeclare acceptance. The validator
+derives acceptance only from the exact manifest-bound fresh-context review and
+direct-child two-file attestation. Each new amendment record also contains direct
+informed authority for that amendment's push, pull request, merge, and resulting
+deployment effects, bound to its evidence path. Amendment delivery authority never
+authorizes a stage delivery or any spreadsheet, product, provider, form, or
+deployment-configuration effect outside its recorded scope.
 
 Emergency safety fixes may stop active work immediately, but they do not silently
 rewrite the plan. Record the stop and amendment before resuming product work.

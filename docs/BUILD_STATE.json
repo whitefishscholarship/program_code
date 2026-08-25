@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 2,
+  "planRevision": 3,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-08-24",
   "repository": {
@@ -66,6 +66,22 @@
         "evidencePath": "docs/evidence/PLAN-REV2.md",
         "manifestPath": "docs/evidence/PLAN-REV2-manifest.json",
         "reviewPath": "docs/reviews/PLAN-REV2.json"
+      },
+      {
+        "id": "PLAN-REV3",
+        "status": "attestation-gated",
+        "baselineCommit": "be6644f5140c35de2075fa24782f81bf0449f0f6",
+        "evidencePath": "docs/evidence/PLAN-REV3.md",
+        "manifestPath": "docs/evidence/PLAN-REV3-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV3.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-08-24",
+          "evidencePath": "docs/evidence/PLAN-REV3.md",
+          "basis": "After the historical P1 delivery-state validation defect was explained, the user explicitly authorized Plan Revision 3, its commits, independent review, Git delivery, and the resulting Vercel Preview and Production deployments.",
+          "scope": "Deliver only the independently accepted Plan Revision 3 governance amendment by branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. Afterward, resume P2 implementation and review locally. P2 delivery, spreadsheet writes, product changes, deployment-configuration changes, form submissions, and provider contact are not authorized."
+        }
       }
     ]
   },

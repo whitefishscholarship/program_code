@@ -5,6 +5,11 @@ import path from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
+import {
+  changedAcceptedIntegration,
+  isExactHistoricalDeliveryState,
+} from './delivery-state-history';
+
 type StageStatus =
   | 'planned'
   | 'active'
@@ -46,11 +51,19 @@ type MergeAuthorization = {
 
 type PlanAmendment = {
   id: string;
-  status: 'accepted';
+  status: 'accepted' | 'attestation-gated';
   baselineCommit: string;
   evidencePath: string;
   manifestPath: string;
   reviewPath: string;
+  deliveryAuthorization?: {
+    authorized: boolean;
+    authorizedBy: string | null;
+    authorizedAt: string | null;
+    evidencePath: string | null;
+    basis: string;
+    scope: string;
+  };
 };
 
 type DeliveryIntegration = {
@@ -601,9 +614,11 @@ if (state) {
     fail(`Plan revision ${state.planRevision} requires its matching PLAN-REV${state.planRevision} record`);
   }
   for (const amendment of planAmendments) {
+    const amendmentRevision = Number(/^PLAN-REV(\d+)$/.exec(amendment.id)?.[1] ?? 0);
+    const expectedAmendmentStatus = amendmentRevision >= 3 ? 'attestation-gated' : 'accepted';
     if (
       !amendment.id.trim() ||
-      amendment.status !== 'accepted' ||
+      amendment.status !== expectedAmendmentStatus ||
       !/^[0-9a-f]{40}$/.test(amendment.baselineCommit) ||
       !amendment.evidencePath.trim() ||
       !amendment.manifestPath.trim() ||
@@ -613,6 +628,19 @@ if (state) {
       continue;
     }
     requireFile(amendment.evidencePath);
+    if (amendmentRevision >= 3) {
+      const authorization = amendment.deliveryAuthorization;
+      if (
+        authorization?.authorized !== true ||
+        !authorization.authorizedBy?.trim() ||
+        !/^\d{4}-\d{2}-\d{2}$/.test(authorization.authorizedAt ?? '') ||
+        authorization.evidencePath !== amendment.evidencePath ||
+        !authorization.basis.trim() ||
+        !authorization.scope.trim()
+      ) {
+        fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
+      }
+    }
     validateBoundAttestation(
       amendment.id,
       amendment.baselineCommit,
@@ -623,6 +651,29 @@ if (state) {
 
   const deliveryAttestationTips = new Map<string, string>();
   const deliveryIntegrations = state.deployment.deliveryIntegrations ?? [];
+  const historicallyAcceptedIntegrations = new Map<string, DeliveryIntegration>();
+  for (const commit of gitLines(['log', '--reverse', '--format=%H', '--', 'docs/BUILD_STATE.json'])) {
+    const historicalState = jsonAtCommit<BuildState>(commit, 'docs/BUILD_STATE.json');
+    for (const historicalIntegration of historicalState?.deployment.deliveryIntegrations ?? []) {
+      if (historicalIntegration.status !== 'accepted') continue;
+      const canonicalIntegration = historicallyAcceptedIntegrations.get(historicalIntegration.stageId);
+      if (!canonicalIntegration) {
+        historicallyAcceptedIntegrations.set(
+          historicalIntegration.stageId,
+          JSON.parse(JSON.stringify(historicalIntegration)) as DeliveryIntegration,
+        );
+      } else if (!isDeepStrictEqual(canonicalIntegration, historicalIntegration)) {
+        fail(`${historicalIntegration.stageId} accepted delivery integration changed in Git history`);
+      }
+    }
+  }
+  const regressedIntegration = changedAcceptedIntegration(
+    deliveryIntegrations,
+    [...historicallyAcceptedIntegrations.values()],
+  );
+  if (regressedIntegration) {
+    fail(`${regressedIntegration} accepted delivery integration cannot be removed, downgraded, or rebound`);
+  }
   for (const integration of deliveryIntegrations) {
     if (
       !expectedStageIds.includes(integration.stageId) ||
@@ -666,6 +717,7 @@ if (state) {
       if (!/^[0-9a-f]{40}$/.test(integration.deliveryBaselineCommit ?? '')) {
         fail(`${integration.stageId} accepted delivery integration requires its exact delivery baseline`);
       } else {
+        const deliveryManifest = readJson<CandidateManifest>(integration.manifestPath);
         const baselineState = jsonAtCommit<BuildState>(
           integration.deliveryBaselineCommit!,
           'docs/BUILD_STATE.json',
@@ -708,21 +760,18 @@ if (state) {
             fail(`${integration.stageId} delivery integration changes its informed authority record`);
           }
 
-          const expectedState = JSON.parse(JSON.stringify(baselineState)) as BuildState;
-          expectedState.activeStageId = stageCandidateState.activeStageId;
-          expectedState.nextPermittedStageId = stageCandidateState.nextPermittedStageId;
-          expectedState.stages = stageCandidateState.stages;
-          expectedState.deployment.deliveryIntegrations =
-            baselineState.deployment.deliveryIntegrations?.map((item) =>
-              item.stageId === integration.stageId
-                ? {
-                    ...item,
-                    status: 'accepted' as const,
-                    deliveryBaselineCommit: integration.deliveryBaselineCommit,
-                  }
-                : item,
-            );
-          if (!isDeepStrictEqual(state, expectedState)) {
+          const deliveredCandidateState = deliveryManifest
+            ? jsonAtCommit<BuildState>(deliveryManifest.candidateCommit, 'docs/BUILD_STATE.json')
+            : null;
+          if (!deliveredCandidateState) {
+            fail(`${integration.stageId} delivery manifest candidate lacks BUILD_STATE`);
+          } else if (!isExactHistoricalDeliveryState(
+            deliveredCandidateState,
+            baselineState,
+            stageCandidateState,
+            integration.stageId,
+            integration.deliveryBaselineCommit!,
+          )) {
             fail(`${integration.stageId} delivery BUILD_STATE contains changes outside the exact stage-state transition`);
           }
         }
@@ -740,7 +789,6 @@ if (state) {
         const stageManifestRaw = stage
           ? gitText(['show', `${integration.stageAttestationCommit}:${stage.manifestPath}`])
           : null;
-        const deliveryManifest = readJson<CandidateManifest>(integration.manifestPath);
         let stageManifest: CandidateManifest | null = null;
         try {
           stageManifest = stageManifestRaw ? (JSON.parse(stageManifestRaw) as CandidateManifest) : null;
@@ -1167,6 +1215,10 @@ if (state) {
   }
 
   const plan = content['docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md'];
+  const planRevisionMatch = /^Plan revision: (\d+)$/m.exec(plan);
+  if (Number(planRevisionMatch?.[1] ?? 0) !== state.planRevision) {
+    fail('Canonical plan revision does not match BUILD_STATE.json');
+  }
   for (const stage of state.stages) {
     if (!plan.includes(`### ${stage.id} — ${stage.name}`)) {
       fail(`Canonical plan is missing the exact heading for ${stage.id}: ${stage.name}`);

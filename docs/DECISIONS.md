@@ -183,3 +183,26 @@ but are not rewritten or deleted.
   reviewed delivery integration. It does not create a general post-attestation edit
   path, waive independent review, or authorize spreadsheet writes, product changes,
   deployment-configuration changes, form submissions, or provider contact.
+
+## D-015 — Bind delivery-state validation to immutable history
+
+- Date: 2026-08-24
+- Status: candidate pending independent review and delivery
+- Decision: In Plan Revision 3, validate the mechanically derived P1 delivery
+  integration state against `docs/BUILD_STATE.json` at the candidate commit named by
+  the attested P1 delivery manifest. Permit the current `BUILD_STATE` to evolve only
+  through later stage and plan-amendment contracts while continuing to revalidate every
+  preserved P1 integration object, hash, identity, path, authority record, and topology
+  from Git history. Record Revision 3 as `attestation-gated`, so its accepted outcome is
+  derived from its bound independent review and attestation instead of predeclared.
+- Evidence: `docs/evidence/PLAN-REV3.md`
+- Alternatives: Freezing the live `BUILD_STATE` forever would make every later stage
+  impossible. Removing the exact-transition check would weaken P1. Copying historical
+  integration fields into a second current-state schema would create two authorities.
+- Impact: The historical P1 integration remains byte-for-byte and mechanically checked;
+  P2 and later stages can advance machine state without a false P1 failure. A regression
+  test proves both the allowed current-state divergence and rejection of historical
+  mutation.
+- Rollback: Revert the Revision 3 amendment before any later stage is accepted. Once a
+  later stage depends on it, rollback requires another independently reviewed amendment;
+  preserved P1 commits and attestations must never be rewritten.

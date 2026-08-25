@@ -22,7 +22,7 @@ PIN STATE BEFORE EDITING
 - Fetch origin and record the current `origin/main` commit. Branch only from that
   verified commit after confirming it contains P1's accepted marker, evidence,
   manifest, independent review, and attestation.
-- Verify plan revision 1 or read every accepted amendment before proceeding.
+- Verify the current plan revision and read every accepted amendment before proceeding.
 - Testing spreadsheet ID:
   1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4
 - Spreadsheet access is read-only and bounded to the minimum data required to validate
