@@ -7,15 +7,20 @@ Default branch: `main`
 
 ## Current state
 
-- Active stage: P2 — Canonical data and evidence model
+- Active stage: none; local P2 acceptance-marker candidate awaits exact review and
+  direct-child attestation
 - Verified P2 baseline and current `origin/main`:
   `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
 - Local P2 branch: `codex/p2-data-model-rev3`
 - P2 status: predecessor candidate `658f07d` was independently rejected; replacement
-  remediation is frozen and awaits recheck by the same fresh reviewer. The exact
-  replacement SHA is post-freeze identity bound by `docs/evidence/P2-manifest.json`;
-  a commit cannot embed its own SHA without changing it. Acceptance and attestation
-  are not predeclared.
+  `9aebc85` received a clean technical ACCEPT from the same reviewer at
+  `2026-08-25T02:11:32Z` with C0/H0/M0/L0. The user then explicitly authorized the
+  local acceptance-marker transition, exact final review, and direct-child attestation.
+  The final candidate now carries the P2 acceptance marker and must receive that exact
+  recheck before attestation. Its exact SHA is post-freeze identity bound by
+  `docs/evidence/P2-manifest.json`; a commit cannot embed its own SHA without changing
+  it. P2 is not delivered, and P3 remains prohibited until P2 is delivered on
+  `origin/main` under separate authority.
 - Plan Revision 2 delivered baseline:
   `015128616ffac9b453f8712f96c73530fbd9d805`
 - Delivery branch: `codex/p1-delivery-integration`
@@ -197,8 +202,16 @@ P2 verification to date:
 - The replacement fixes all five findings. Its regenerated dataset has 572 Evidence
   records, 592 resolvable Review Items, and digest
   `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
-  The post-freeze replacement manifest binds its exact identity; recheck from the same
-  reviewer remains pending.
+  The post-freeze replacement manifest bound its exact identity.
+- The same reviewer technically accepted exact candidate `9aebc85` at
+  `2026-08-25T02:11:32Z` with C0/H0/M0/L0 and independently confirmed all five fixes,
+  denominators, deterministic digest, linked fixtures, relationship resolution,
+  12-path manifest, historical preservation, and scope boundaries. Exact reviewed
+  manifest SHA-256 was
+  `48ba326da8410118a87e86f39527ab55fdb7d9bda80dcc72fd23c0a8e60a468a`.
+- The user then explicitly authorized the local P2 acceptance-marker transition,
+  exact final review, and direct-child two-file attestation. No delivery or P3 work was
+  authorized.
 - Replacement pre-freeze verification passed through `2026-08-25T02:02:44Z`: locked
   install, model check, Revision 3-aware plan validation, typecheck, complete tests,
   production build, and diff check. Exact UTC windows and outcomes are recorded in

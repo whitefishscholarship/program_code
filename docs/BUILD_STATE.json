@@ -96,8 +96,8 @@
       }
     ]
   },
-  "activeStageId": "P2",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P3",
   "stages": [
     {
       "id": "P0",
@@ -122,7 +122,7 @@
     {
       "id": "P2",
       "name": "Canonical data and evidence model",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
       "evidencePath": "docs/evidence/P2.md",
       "manifestPath": "docs/evidence/P2-manifest.json",
