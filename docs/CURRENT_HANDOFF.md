@@ -12,8 +12,10 @@ Default branch: `main`
   `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
 - Local P2 branch: `codex/p2-data-model-rev3`
 - P2 status: predecessor candidate `658f07d` was independently rejected; replacement
-  remediation is verified locally and awaits immutable freeze and recheck by the same
-  fresh reviewer. Acceptance and attestation are not predeclared.
+  remediation is frozen and awaits recheck by the same fresh reviewer. The exact
+  replacement SHA is post-freeze identity bound by `docs/evidence/P2-manifest.json`;
+  a commit cannot embed its own SHA without changing it. Acceptance and attestation
+  are not predeclared.
 - Plan Revision 2 delivered baseline:
   `015128616ffac9b453f8712f96c73530fbd9d805`
 - Delivery branch: `codex/p1-delivery-integration`
@@ -195,7 +197,8 @@ P2 verification to date:
 - The replacement fixes all five findings. Its regenerated dataset has 572 Evidence
   records, 592 resolvable Review Items, and digest
   `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
-  A replacement manifest and recheck from the same reviewer remain pending.
+  The post-freeze replacement manifest binds its exact identity; recheck from the same
+  reviewer remains pending.
 - Replacement pre-freeze verification passed through `2026-08-25T02:02:44Z`: locked
   install, model check, Revision 3-aware plan validation, typecheck, complete tests,
   production build, and diff check. Exact UTC windows and outcomes are recorded in
@@ -292,10 +295,11 @@ it did not authorize P2 delivery or any P2 external effect.
 
 ## Dirty and remote state
 
-- The isolated P2 worktree is two commits beyond `origin/main` through rejected
-  predecessor `658f07d`; it has uncommitted P2-owned replacement remediation plus the
-  stale untracked predecessor manifest, which must be regenerated after replacement
-  freeze.
+- At replacement pre-freeze verification, the isolated P2 worktree was two commits
+  beyond `origin/main` through rejected predecessor `658f07d`, with nine tracked
+  remediation paths and the stale predecessor manifest. After freeze, the branch has
+  only the post-freeze uncommitted replacement manifest; its exact candidate identity
+  and current repository state are independently rechecked from Git and that manifest.
 - The preserved primary P1 checkout remains untouched.
 - `codex/p2-data-model-rev3` has not been pushed and no P2 pull request exists. The
   earlier dirty `/private/tmp/program_code-p2` worktree remains untouched as a local
