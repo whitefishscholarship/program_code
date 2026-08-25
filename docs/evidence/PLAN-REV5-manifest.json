@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV5",
+  "createdAt": "2026-08-25T22:18:15Z",
+  "baselineCommit": "08cb6809425036991400b539ca23a34915b3fe26",
+  "candidateCommit": "17dd49f2e2b2b96e628df802f2562479dcf435db",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "78508ddbfc8a3d9bcc79f9b9ce28b1dd92d340cf655ce17ebe39d6accbd78d68"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "556c45f203c160d08ec67921758903f57a2f9b3ac4f9fa8e9b9509e4e5ac7c48"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "5a2fba82bd4d874e11952c25c17cfefa8901aaefdadd37d8c1ea218399e89e20"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "20b73975916a7c8e5466a83bf7ac02c7c366210aefb4e8e096b7c327b86ad1a6"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "936a07893e3e1f038b959bb2d914d762d771f37ae7c41736dbd1aca6666c56af"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV5.md",
+      "change": "present",
+      "sha256": "d98f3240e31b6f908addb607d3f869daee82f3f5990c99820613cd9bea4bc35b"
+    },
+    {
+      "path": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+      "change": "present",
+      "sha256": "510663d50b3e5273c420fd0121610d2c2e2daf6d88bb20ac665270a57e5f070d"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "584630f4269d5ad9719dbc3bbb89944a444d7bc72143b951ebac66f937783779"
+    },
+    {
+      "path": "web/scripts/governance-history.ts",
+      "change": "present",
+      "sha256": "aa9320347bf5021581c9f4f30167113680759d7b59de0e55d125fce5445f6e5c"
+    },
+    {
+      "path": "web/scripts/test-delivery-state-history.ts",
+      "change": "present",
+      "sha256": "dc5185b8f6f7ede101827425775064ff5731c3e9315bc8887b2b35230b79661d"
+    },
+    {
+      "path": "web/scripts/test-governance-history.ts",
+      "change": "present",
+      "sha256": "45907ef8dbfe38a55936a80d52282553e5df931b82127ddfe4c00f8b340b16a5"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "0dd0765e7168981422be1ab89a303f8d4e98bfcfb265a56725f2964602ca7780"
+    }
+  ]
+}
