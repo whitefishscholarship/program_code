@@ -11,8 +11,8 @@ Default branch: `main`
 - Verified P2 baseline and current `origin/main`:
   `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
 - Local P2 branch: `codex/p2-data-model-rev3`
-- P2 status: implemented locally; final verification, candidate freeze, independent
-  review, and direct-child attestation remain pending
+- P2 status: verified locally; candidate freeze and independent technical/data-loss
+  review remain pending. Acceptance and attestation are not predeclared.
 - Plan Revision 2 delivered baseline:
   `015128616ffac9b453f8712f96c73530fbd9d805`
 - Delivery branch: `codex/p1-delivery-integration`
