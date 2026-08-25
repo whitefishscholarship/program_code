@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV3",
+  "createdAt": "2026-08-25T01:16:24Z",
+  "baselineCommit": "be6644f5140c35de2075fa24782f81bf0449f0f6",
+  "candidateCommit": "7e38c61dc0e08190ddb72a55bae109895831d94b",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "32d0da7813caa3a25e3af88bf1498f90af85eb90e81acb9a293d624f20a68ce6"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "87a3bb0d289258b6aca5f8b5dfc71b2cee3d2d731dcfec697adccb1f553fa2ce"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "b9450dda628dedb94929f726e3450514b07673cdbad1d354081b7f408aaa00f4"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "164d842ed339f01fa9e6035898608590bbbdd4fe8fe14f74bc3ccab6f892d960"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "a736f00b25044560eaaab5c7c9018c260e9acd61827379a7b2b0c62f26af8c6a"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV3.md",
+      "change": "present",
+      "sha256": "bf400de6858835027d2baac8efbf1a8159f990de3c52d8c3c8700a4ef8aa1e41"
+    },
+    {
+      "path": "docs/kickoffs/P2-DATA-MODEL.md",
+      "change": "present",
+      "sha256": "8338fbf16c88b970d28814454bafab7a992e207e7e296cfb7befc67316c83e9a"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "c799912f73be525039f8df3969ce4e7bb782b66008fd43ccd29d5c21a1d632a0"
+    },
+    {
+      "path": "web/scripts/delivery-state-history.ts",
+      "change": "present",
+      "sha256": "73b5f885559b61eeb927d24ce78c204b6cb7826d15f8b3a778e41c72664dfe9b"
+    },
+    {
+      "path": "web/scripts/test-delivery-state-history.ts",
+      "change": "present",
+      "sha256": "7ff734973386411e669449a619344fb42d48ad30bb1a9f64daae1ad9182c45a1"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "81907084bb417d7b4a118ad0d79573ff35a2685330316f01e714405daef66855"
+    }
+  ]
+}
