@@ -36,6 +36,15 @@
         "evidencePath": "docs/evidence/P1-delivery-authorization.md",
         "basis": "After being informed that the immutable accepted P1 attestation recorded an earlier no-delivery state, the user explicitly authorized Plan Revision 2 and a reviewed delivery path preserving candidate 92ee21095e959bd19ab641752308c0fd9b394b22 and attestation 20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5 byte-for-byte, plus P1 push, PR, merge, and resulting Vercel deployments.",
         "scope": "Deliver the independently accepted P1 candidate and exact attestation through the Plan Revision 2 hash-bound integration path, including authorized Git push, pull request, merge to main, and resulting Vercel Preview and Production deployments. No spreadsheet writes, product changes, deployment-configuration changes, form submissions, or provider contact are authorized."
+      },
+      {
+        "stageId": "P2",
+        "authorized": false,
+        "authorizedBy": null,
+        "authorizedAt": null,
+        "evidencePath": null,
+        "basis": "The P2 kickoff and Plan Revision 3 authority permit local model, compatibility, fixture, evidence, test, commit, and independent-review work but explicitly require separate informed authority before push, pull request, merge, or resulting Vercel deployment effects.",
+        "scope": "No P2 external delivery is authorized. Local P2 candidate and direct-child manifest/review attestation only; no push, pull request, merge, Preview or Production deployment, spreadsheet write, product behavior change, deployment-configuration change, form submission, or provider contact."
       }
     ],
     "deliveryIntegrations": [
@@ -55,7 +64,9 @@
         ]
       }
     ],
-    "deliveryBlockers": []
+    "deliveryBlockers": [
+      "P2-delivery-authority-missing"
+    ]
   },
   "governance": {
     "planAmendments": [
@@ -85,8 +96,8 @@
       }
     ]
   },
-  "activeStageId": null,
-  "nextPermittedStageId": "P2",
+  "activeStageId": "P2",
+  "nextPermittedStageId": null,
   "stages": [
     {
       "id": "P0",
@@ -111,8 +122,8 @@
     {
       "id": "P2",
       "name": "Canonical data and evidence model",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "implemented",
+      "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
       "evidencePath": "docs/evidence/P2.md",
       "manifestPath": "docs/evidence/P2-manifest.json",
       "reviewPath": "docs/reviews/P2.json",
@@ -126,7 +137,7 @@
       "evidencePath": "docs/evidence/P3.md",
       "manifestPath": "docs/evidence/P3-manifest.json",
       "reviewPath": "docs/reviews/P3.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P3-ACQUISITION.md"
     },
     {
       "id": "P4",

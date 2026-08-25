@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P2",
+  "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
+  "modelSchemaVersion": "2.0.0",
+  "pinnedInput": {
+    "p1InventorySha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a",
+    "p1ManifestSha256": "0712c6ff782285ce4fdb933cebfa7797a7b5f10184a3974017896c0d3df76a60",
+    "spreadsheetRevisionId": "222",
+    "capturedAt": "2026-08-24T04:14:24.027Z"
+  },
+  "canonicalDatasetSha256": "727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1",
+  "identityDeterminism": {
+    "repeatedRunSha256": "727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1",
+    "byteIdentical": true
+  },
+  "counts": {
+    "legacyRecords": 197,
+    "scholarshipBindings": 176,
+    "portalBindings": 21,
+    "p1UrlSources": 213,
+    "offlineSources": 4,
+    "canonicalSources": 217,
+    "applicationGroups": 3,
+    "cycles": 176,
+    "evidenceItems": 572,
+    "reviewItems": 591,
+    "urlRoleOccurrences": 278,
+    "sharedSourceGroups": 26,
+    "identityBearingQueryOrFragmentSources": 15,
+    "unknownRecords": 162,
+    "unknownSources": 121
+  },
+  "reconciliation": {
+    "everyP1RecordBound": true,
+    "scholarshipRowsRemainAwards": true,
+    "portalRowsNotPromotedToAwards": true,
+    "everyP1UrlSourceMapped": true,
+    "everyUrlRoleOccurrencePreserved": true,
+    "everyUnknownPreserved": true,
+    "everyManualReviewPreserved": true,
+    "everyIdentitySensitiveUrlPreserved": true,
+    "sharedSourceGroups": 26
+  },
+  "fixtureCoverage": {
+    "scenarioCount": 12,
+    "scenarioIds": [
+      "single-award",
+      "nfu-unified-children",
+      "horatio-common-application-exceptions",
+      "reach-higher-matching",
+      "fvcc-pagination",
+      "first-external-results",
+      "esa-shared-program",
+      "versioned-document",
+      "google-form",
+      "institution-umbrella",
+      "offline-automatic",
+      "unknown-identity-bearing-url"
+    ],
+    "architectures": [
+      "common_application",
+      "directory_hub",
+      "document_or_pdf",
+      "external_marketplace",
+      "form_only",
+      "institution_umbrella",
+      "login_application_portal",
+      "matching_portal",
+      "multi_award_page",
+      "offline_or_automatic",
+      "paginated_catalog",
+      "single_award_page",
+      "unknown"
+    ],
+    "coversEveryTaxonomy": true
+  },
+  "boundaries": {
+    "spreadsheetReads": 0,
+    "spreadsheetWrites": 0,
+    "publicFetches": 0,
+    "formSubmissions": 0,
+    "providerContacts": 0,
+    "productBehaviorChanges": 0
+  }
+}
