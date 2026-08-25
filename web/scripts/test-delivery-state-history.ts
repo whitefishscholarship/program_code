@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 import {
   changedAcceptedIntegration,
+  expectedDeliveryCandidateState,
   isExactHistoricalDeliveryState,
   type HistoricalDeliveryState,
 } from './delivery-state-history';
@@ -56,26 +57,103 @@ assert.equal(
   undefined,
   'exact accepted integration retention must pass',
 );
+const nonRegressionFixtureIntegrations = acceptedIntegrations.length > 1
+  ? acceptedIntegrations
+  : [
+      acceptedIntegrations[0],
+      {
+        ...acceptedIntegrations[0],
+        stageId: 'P2',
+        stageCandidateCommit: '1'.repeat(40),
+        deliveryBaselineCommit: '2'.repeat(40),
+        manifestPath: 'docs/evidence/P2-delivery-manifest.json',
+      },
+    ];
 assert.equal(
-  changedAcceptedIntegration([], acceptedIntegrations),
-  acceptedIntegrations[0].stageId,
-  'deleting an accepted integration must fail',
+  changedAcceptedIntegration(
+    nonRegressionFixtureIntegrations,
+    nonRegressionFixtureIntegrations,
+  ),
+  undefined,
+  'multiple exact accepted integration records must pass',
 );
-const downgradedIntegrations = JSON.parse(JSON.stringify(acceptedIntegrations)) as DeliveryIntegration[];
-downgradedIntegrations[0].status = 'authorized-pending';
-downgradedIntegrations[0].deliveryBaselineCommit = null;
+for (const integration of nonRegressionFixtureIntegrations) {
+  const deletedIntegrations = nonRegressionFixtureIntegrations.filter(
+    (item) => item.stageId !== integration.stageId,
+  );
+  assert.equal(
+    changedAcceptedIntegration(deletedIntegrations, nonRegressionFixtureIntegrations),
+    integration.stageId,
+    `deleting accepted ${integration.stageId} integration must fail`,
+  );
+
+  const downgradedIntegrations = JSON.parse(
+    JSON.stringify(nonRegressionFixtureIntegrations),
+  ) as DeliveryIntegration[];
+  const downgraded = downgradedIntegrations.find(
+    (item) => item.stageId === integration.stageId,
+  )!;
+  downgraded.status = 'authorized-pending';
+  downgraded.deliveryBaselineCommit = null;
+  assert.equal(
+    changedAcceptedIntegration(downgradedIntegrations, nonRegressionFixtureIntegrations),
+    integration.stageId,
+    `downgrading accepted ${integration.stageId} integration must fail`,
+  );
+
+  const reboundIntegrations = JSON.parse(
+    JSON.stringify(nonRegressionFixtureIntegrations),
+  ) as DeliveryIntegration[];
+  const rebound = reboundIntegrations.find(
+    (item) => item.stageId === integration.stageId,
+  )!;
+  rebound.stageCandidateCommit = '0'.repeat(40);
+  assert.equal(
+    changedAcceptedIntegration(reboundIntegrations, nonRegressionFixtureIntegrations),
+    integration.stageId,
+    `rebinding accepted ${integration.stageId} integration must fail`,
+  );
+}
+
+const evolvedCurrentState = JSON.parse(JSON.stringify(currentState)) as CurrentBuildState;
+evolvedCurrentState.planRevision = (currentState.planRevision ?? 0) + 1;
 assert.equal(
-  changedAcceptedIntegration(downgradedIntegrations, acceptedIntegrations),
-  acceptedIntegrations[0].stageId,
-  'downgrading an accepted integration must fail',
+  changedAcceptedIntegration(
+    evolvedCurrentState.deployment.deliveryIntegrations ?? [],
+    acceptedIntegrations,
+  ),
+  undefined,
+  'non-integration current state may evolve while accepted integrations remain exact',
 );
-const reboundIntegrations = JSON.parse(JSON.stringify(acceptedIntegrations)) as DeliveryIntegration[];
-reboundIntegrations[0].stageCandidateCommit = '0'.repeat(40);
-assert.equal(
-  changedAcceptedIntegration(reboundIntegrations, acceptedIntegrations),
-  acceptedIntegrations[0].stageId,
-  'rebinding an accepted integration must fail',
+
+const pendingIntegration = (currentState.deployment.deliveryIntegrations ?? []).find(
+  (integration) => integration.status === 'authorized-pending',
 );
+if (pendingIntegration) {
+  const prospectiveBaseline = currentState as HistoricalDeliveryState;
+  const prospectiveStageState = jsonAtCommit<HistoricalDeliveryState>(
+    pendingIntegration.stageCandidateCommit,
+    'docs/BUILD_STATE.json',
+  );
+  const prospectiveDeliveryBaseline = 'f'.repeat(40);
+  const prospectiveCurrentState = expectedDeliveryCandidateState(
+    prospectiveBaseline,
+    prospectiveStageState,
+    pendingIntegration.stageId,
+    prospectiveDeliveryBaseline,
+  );
+  assert.equal(
+    isExactHistoricalDeliveryState(
+      prospectiveCurrentState,
+      prospectiveBaseline,
+      prospectiveStageState,
+      pendingIntegration.stageId,
+      prospectiveDeliveryBaseline,
+    ),
+    true,
+    'the newest exact delivery state may also be the current BUILD_STATE',
+  );
+}
 
 const canonicalPlan = fs.readFileSync(
   path.join(repoRoot, 'docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md'),
@@ -116,18 +194,6 @@ for (const integration of acceptedIntegrations) {
     `${integration.stageId} historical delivery candidate must retain the exact derived transition`,
   );
 
-  assert.equal(
-    isExactHistoricalDeliveryState(
-      currentState,
-      baselineState,
-      stageCandidateState,
-      integration.stageId,
-      integration.deliveryBaselineCommit!,
-    ),
-    false,
-    `${integration.stageId} current BUILD_STATE must be allowed to evolve independently`,
-  );
-
   const tamperedHistoricalState = JSON.parse(
     JSON.stringify(deliveredCandidateState),
   ) as HistoricalDeliveryState;
@@ -146,5 +212,5 @@ for (const integration of acceptedIntegrations) {
 }
 
 console.log(
-  `delivery state history: PASS (${acceptedIntegrations.length} accepted integration${acceptedIntegrations.length === 1 ? '' : 's'}; deletion/downgrade/rebind rejected)`,
+  `delivery state history: PASS (${acceptedIntegrations.length} accepted integration${acceptedIntegrations.length === 1 ? '' : 's'}; every deletion/downgrade/rebind rejected; latest equality and later evolution allowed)`,
 );

@@ -1159,6 +1159,20 @@ if (state) {
       }
     }
   }
+  if (state.planRevision >= 5) {
+    const standingMandateEvidencePath = 'docs/evidence/STANDING-OPERATING-MANDATE.md';
+    for (const stageId of ['P3', 'P4', 'P5', 'P6', 'P7', 'P8']) {
+      const authorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === stageId,
+      );
+      if (
+        authorization?.authorized !== true ||
+        authorization.evidencePath !== standingMandateEvidencePath
+      ) {
+        fail(`${stageId} must retain its Plan Revision 5 standing delivery authorization`);
+      }
+    }
+  }
   const integrationStageIds = deliveryIntegrations.map((item) => item.stageId);
   if (new Set(integrationStageIds).size !== integrationStageIds.length) {
     fail('Delivery integrations must have unique stage IDs');
