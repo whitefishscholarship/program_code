@@ -11,7 +11,10 @@ Default branch: `main`
 - Verified delivered Revision 4 baseline and current `origin/main`:
   `08cb6809425036991400b539ca23a34915b3fe26`
 - Revision 5 branch: `codex/plan-rev5-standing-mandate`
-- Revision 5 candidate: pending freeze. Its exact post-freeze SHA will be bound by
+- Preliminary Revision 5 candidate `4f034bb5eaedb64c16f76665aaf6057c2565416c`
+  was independently rejected C0/H1/M0/L0 because its presence-only guard was not
+  durably bound to immutable history. It must never be attested or delivered.
+- Replacement Revision 5 candidate: pending freeze. Its exact post-freeze SHA will be bound by
   `docs/evidence/PLAN-REV5-manifest.json`; a commit cannot embed its own content-derived
   identity.
 - Revision 5 attestation: pending; it must be the candidate's direct child and add
@@ -49,9 +52,12 @@ correctly be current state; older states may differ after later evolution. The r
 test rejects deletion, downgrade, and rebinding for every accepted integration,
 revalidates every immutable historical candidate, rejects historical mutation, and
 adds a prospective latest-equality case. Production validator behavior and acceptance
-criteria do not change for delivery history; a new presence check prevents any P3-P8
-standing authorization from being removed, disabled, or rebound to another evidence
-path.
+criteria do not change for delivery history. The replacement validator independently
+discovers canonical plan amendments from their Git attestations, rejects revision
+rollback and amendment removal/change, and binds every field of the P3-P8 standing
+authorizations plus the exact mandate evidence blob to the immutable Revision 5
+candidate. Revision 5 has no revocation path; any future revocation or supersession
+requires separately informed authority and a new reviewed machine mechanism.
 
 Revision 5 also records Kelsey's approved standing operating mandate. After P2 is
 delivered, P3-P8 may proceed in order without repeated authorization for ordinary
@@ -87,9 +93,20 @@ passed again with the same
 expected pre-attestation result. Exact UTC windows and outcomes are in
 `docs/evidence/PLAN-REV5.md`.
 
+The same fresh reviewer rejected preliminary candidate `4f034bb` at
+`2026-08-25T22:09:15Z`, C0/H1/M0/L0, because the standing mandate was not yet
+historically immutable. The implementation agent remediated that finding without
+attesting or delivering the rejected candidate. Replacement typecheck, the complete
+test suite, and prospective plan validation ran from `2026-08-25T22:16:30Z` through
+`2026-08-25T22:16:54Z`: typecheck/tests passed, including every new governance-history
+case, and plan validation reported only the expected missing review/attestation. The
+network-enabled build passed from `2026-08-25T22:16:00Z` through
+`2026-08-25T22:16:26Z`; `git diff --check` passed. The replacement has twelve candidate
+paths and one uncommitted manifest path pending regeneration against the frozen SHA.
+
 Current required next actions:
 
-1. Complete Revision 5 verification, freeze its candidate, generate the complete
+1. Complete replacement Revision 5 verification, freeze its candidate, regenerate the complete
    manifest, obtain fresh-context read-only acceptance, and create the direct-child
    two-file attestation.
 2. Push, open, verify, and merge Revision 5 under the approved Git/Vercel authority.

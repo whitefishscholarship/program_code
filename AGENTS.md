@@ -82,6 +82,14 @@ canonical plan and `BUILD_STATE`. It never permits an ordinary post-attestation 
 candidate rewrite, attestation rebinding, or unreviewed merge resolution. Material plan
 amendments are themselves frozen, manifested, independently reviewed, and attested
 before delivery.
+The validator discovers historically attested plan amendments from Git history rather
+than trusting only the mutable current amendment array. The current plan revision may
+not fall below the highest attested revision, and every canonical amendment record must
+remain exact. After Revision 5 is attested, its complete P3-P8 authorization objects and
+standing-mandate evidence blob are bound to that immutable candidate. Deletion,
+downgrade, field mutation, or evidence mutation is prohibited. Revocation or
+supersession requires a separately authorized, independently reviewed, machine-recorded
+mechanism introduced by a later plan amendment; no such mechanism exists in Revision 5.
 The integration must preserve every non-governance stage blob from the exact attestation;
 only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile delivery state.
 

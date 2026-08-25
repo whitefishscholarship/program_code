@@ -261,6 +261,12 @@ but are not rewritten or deleted.
   or schedules, paid/destructive actions, secrets, forms/application interactions,
   provider contact, force-push/history rewrite, gate weakening, and scope expansion
   remain reserved.
+- Historical control: The validator discovers attested amendments independently from
+  Git history, prevents plan-revision rollback and canonical amendment removal/change,
+  and binds every P3-P8 authorization field plus the standing-mandate evidence blob to
+  the immutable Revision 5 candidate. Revision 5 has no implicit revocation path; any
+  future revocation or supersession requires separate informed authority and a new
+  independently reviewed, machine-recorded plan mechanism.
 - Rollback: Revert only through another independently reviewed amendment. Do not delete
   or alter any accepted stage, amendment, delivery candidate, manifest, review, or
   attestation. Any stage already delivered under the mandate remains historically valid.
