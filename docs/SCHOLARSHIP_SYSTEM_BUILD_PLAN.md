@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 4
+Plan revision: 5
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -307,6 +307,14 @@ machine state through their ordinary contracts. That later evolution neither cha
 nor weakens the preserved integration because its candidate, manifest, review,
 attestation, identities, authority, paths, and blobs remain hash-bound and are
 revalidated from Git history.
+
+Immediately after the newest integration, the current `BUILD_STATE` may equal that
+integration candidate's exact derived historical state; equality is correct, not a
+failure to evolve. After later stages or amendments, the current state may differ.
+Regression tests must validate both cases without ever using current-state inequality
+as a historical acceptance requirement. They must reject deletion, downgrade, or
+rebinding for every accepted integration and reject mutation of every historical
+delivery candidate.
 
 Every integration that has ever reached `accepted` in the current Git history is
 non-regressing machine state. The validator discovers those historical records and
@@ -680,6 +688,17 @@ manifest completeness, hash binding, severity, disposition, and direct-child att
 standard. Their records use dedicated evidence, manifest, and review paths so they cannot
 replace a stage's canonical manifest or review.
 
+The validator discovers canonical plan amendments from their first structurally valid
+Git attestations rather than only from the mutable current `BUILD_STATE`. The current
+plan revision cannot roll back below the highest historically attested revision, and no
+historically attested amendment record may be deleted, downgraded, or changed. Once
+Revision 5 is attested, the complete P3-P8 authorization objects and the exact
+`STANDING-OPERATING-MANDATE.md` candidate blob are immutable inputs to every later plan
+validation. Revision 5 defines no revocation or supersession mechanism. Any future
+change to those authorities must first introduce an explicit machine-recorded mechanism
+through separately informed authority and an independently reviewed plan amendment;
+ordinary state edits are rejected.
+
 ## 12. Kickoff and handoff protocol
 
 Every kickoff follows `docs/KICKOFF_PROMPT_TEMPLATE.md` and contains:
@@ -734,6 +753,36 @@ Delivery authority covers only the downstream effect stated in build state. It n
 broadens authorization for spreadsheet mutation, paid services, form submission, or
 contact with scholarship providers.
 
+### Standing operating mandate — Plan Revision 5
+
+Kelsey approved a standing operating mandate for P3 through P8. `BUILD_STATE` records a
+separate informed delivery authorization for each covered stage, all bound to
+`docs/evidence/STANDING-OPERATING-MANDATE.md`. Within one canonical stage at a time,
+Codex may autonomously:
+
+- implement the stage's explicit code, product, evidence, fixture, test, and
+  documentation deliverables;
+- use official public pages and documents read-only, excluding form/application
+  workflows, and read the pinned testing spreadsheet only when the active stage
+  requires the minimum bounded input;
+- create local commits, freeze candidates, obtain fresh-context read-only review, and
+  create exact direct-child attestations;
+- push stage and in-scope operational-governance branches, open pull requests, merge
+  after required checks, and allow the resulting Vercel Preview and Production
+  deployments; and
+- make separately manifested, independently reviewed, attested governance, validator,
+  test, evidence, or handoff amendments necessary to keep the existing plan executable,
+  without a new user authorization, when they do not weaken a gate, skip a stage,
+  rewrite history, expand scope, or cause a reserved effect.
+
+The mandate does not authorize any spreadsheet write or mutation; production
+spreadsheet identity, access, migration, or P9; deployment-configuration or schedule
+changes; paid actions; disclosure or new handling of secrets; destructive or
+unrecoverable actions; force-push or published-history rewrite; form submission or
+application interaction; provider contact; acceptance-gate weakening; or material scope
+expansion. Each reserved effect requires new direct informed authority. Platform
+sandbox, authentication, or provider permission prompts remain independent safeguards.
+
 ### Delivery integration
 
 When `BUILD_STATE` declares an authorized exceptional delivery integration, Git delivery
@@ -776,6 +825,22 @@ informed authority for that amendment's push, pull request, merge, and resulting
 deployment effects, bound to its evidence path. Amendment delivery authority never
 authorizes a stage delivery or any spreadsheet, product, provider, form, or
 deployment-configuration effect outside its recorded scope.
+
+Beginning with Plan Revision 5, narrow operational amendments that are necessary to
+keep this existing plan executable may rely on the reviewed standing mandate rather
+than a new user-authored authorization. The amendment must still be dedicated,
+attestation-gated, completely manifested, independently reviewed, delivered separately
+before affected stage work resumes, and explicitly prove that it does not weaken an
+acceptance gate, skip a stage, rewrite accepted history, expand program scope, or cause
+a reserved effect. A material program change or any reserved effect still requires new
+direct informed authority.
+
+Historically attested amendment identity is non-regressing. A later amendment may add a
+new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
+amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
+Revocation or supersession is unavailable unless a later, separately authorized plan
+revision first defines and tests an explicit mechanism without rewriting accepted
+history.
 
 Emergency safety fixes may stop active work immediately, but they do not silently
 rewrite the plan. Record the stop and amendment before resuming product work.

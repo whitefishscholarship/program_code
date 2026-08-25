@@ -231,3 +231,42 @@ but are not rewritten or deleted.
 - Rollback: Before P2 delivery, revert only through a reviewed governance amendment.
   After P2 delivery depends on Revision 4, any rollback must preserve the complete P2
   integration and attestation history byte-for-byte.
+
+## D-017 — Correct latest-delivery equality and adopt a bounded standing mandate
+
+- Date: 2026-08-25
+- Status: candidate pending independent review and delivery
+- Decision: In Plan Revision 5, remove the invalid regression-test requirement that
+  current `BUILD_STATE` differ from every historical delivery candidate. Explicitly
+  test that the newest exact delivery state may equal current state, test later
+  non-integration evolution independently, and apply deletion/downgrade/rebind cases to
+  every accepted integration. Also record Kelsey's standing P3-P8 operating mandate as
+  individual stage delivery authorizations bound to one reviewed evidence file.
+- Evidence: `docs/evidence/PLAN-REV5.md` and
+  `docs/evidence/STANDING-OPERATING-MANDATE.md`
+- Reason: Exact preliminary P2 integration `6ff2acb` passed the production plan
+  validator's mechanical state check but failed the Revision 3 regression test solely
+  because P2 was the newest integration and therefore correctly equaled current state.
+  Separately, repeated generated authorization requests left Kelsey copying technical
+  wording without a useful decision boundary; a durable plain-English mandate better
+  distinguishes routine program work from reserved consequential effects.
+- Alternatives: Requiring artificial current-state drift would violate the exact P2
+  transition. Weakening historical validation would endanger accepted integrations.
+  Continuing per-stage authorization rituals would not solve the informed-governance
+  problem. An unlimited mandate would remove necessary controls.
+- Impact: Historical candidate validation remains exact and per-integration
+  non-regression coverage becomes stronger. P3-P8 ordinary implementation, review,
+  Git delivery, and Vercel effects no longer require repeated user authorization when
+  all canonical gates pass. Spreadsheet writes, P9/production, deployment configuration
+  or schedules, paid/destructive actions, secrets, forms/application interactions,
+  provider contact, force-push/history rewrite, gate weakening, and scope expansion
+  remain reserved.
+- Historical control: The validator discovers attested amendments independently from
+  Git history, prevents plan-revision rollback and canonical amendment removal/change,
+  and binds every P3-P8 authorization field plus the standing-mandate evidence blob to
+  the immutable Revision 5 candidate. Revision 5 has no implicit revocation path; any
+  future revocation or supersession requires separate informed authority and a new
+  independently reviewed, machine-recorded plan mechanism.
+- Rollback: Revert only through another independently reviewed amendment. Do not delete
+  or alter any accepted stage, amendment, delivery candidate, manifest, review, or
+  attestation. Any stage already delivered under the mandate remains historically valid.

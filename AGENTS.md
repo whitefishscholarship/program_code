@@ -82,8 +82,42 @@ canonical plan and `BUILD_STATE`. It never permits an ordinary post-attestation 
 candidate rewrite, attestation rebinding, or unreviewed merge resolution. Material plan
 amendments are themselves frozen, manifested, independently reviewed, and attested
 before delivery.
+The validator discovers historically attested plan amendments from Git history rather
+than trusting only the mutable current amendment array. The current plan revision may
+not fall below the highest attested revision, and every canonical amendment record must
+remain exact. After Revision 5 is attested, its complete P3-P8 authorization objects and
+standing-mandate evidence blob are bound to that immutable candidate. Deletion,
+downgrade, field mutation, or evidence mutation is prohibited. Revocation or
+supersession requires a separately authorized, independently reviewed, machine-recorded
+mechanism introduced by a later plan amendment; no such mechanism exists in Revision 5.
 The integration must preserve every non-governance stage blob from the exact attestation;
 only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile delivery state.
+
+## Standing operating mandate — Plan Revision 5
+
+Kelsey has granted a reviewed standing mandate for P3 through P8. Within one canonical
+stage at a time, Codex may autonomously implement the stage contract, make local
+commits, use public sources read-only outside form/application workflows, access the
+pinned testing spreadsheet read-only when the stage requires it, obtain independent
+review, create the exact attestation, push, open and merge a pull request, and allow the
+resulting Vercel Preview and Production deployments. Product behavior changes are
+authorized only when they are express deliverables of the active stage. The individual
+P3-P8 delivery authorization records in `BUILD_STATE` bind this mandate to each stage.
+
+The mandate also covers independently reviewed governance, validator, test, evidence,
+and handoff maintenance necessary to keep the existing plan executable. It may not
+weaken acceptance criteria, skip a stage, rewrite accepted history, expand program
+scope, or authorize a reserved effect. Such maintenance remains a manifested,
+fresh-context-reviewed, attested plan amendment before delivery, but does not require a
+new user authorization when it stays inside these boundaries.
+
+The following remain reserved and require new direct informed authority: any
+spreadsheet write or mutation; production spreadsheet identity, access, migration, or
+P9; deployment-configuration or schedule changes; paid actions; secrets or credential
+handling beyond already configured secure stores; destructive or unrecoverable actions;
+force-push or published-history rewrite; form submission or application interaction;
+provider contact; acceptance-gate weakening; and material scope expansion. Platform
+sandbox or authentication approvals remain separate technical safeguards.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 
@@ -98,9 +132,10 @@ only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile deliver
   repository's Vercel Git integration has historically created Preview deployments
   for branch/PR revisions and Production deployments for `main` revisions. Perform a
   delivery action only when `docs/BUILD_STATE.json` contains direct, stage-specific,
-  informed authority with an evidence path for every deployment effect, or when a
-  verified deployment-suppression mechanism covers the action. Missing deployment
-  authority is an external-release blocker, not a Git-preference question.
+  informed authority with an evidence path for every deployment effect, including a
+  stage-specific record derived from the reviewed standing mandate, or when a verified
+  deployment-suppression mechanism covers the action. Missing deployment authority is
+  an external-release blocker, not a Git-preference question.
 - Monitor CI and merge only when acceptance, downstream-effect authority, and
   repository policy permit it.
 - Follow the repository's established PR merge convention. Prefer a new clean

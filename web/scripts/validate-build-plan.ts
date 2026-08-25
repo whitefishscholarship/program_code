@@ -9,6 +9,11 @@ import {
   changedAcceptedIntegration,
   isExactHistoricalDeliveryState,
 } from './delivery-state-history';
+import {
+  changedAttestedPlanAmendment,
+  changedStandingAuthorization,
+  maximumAttestedPlanRevision,
+} from './governance-history';
 
 type StageStatus =
   | 'planned'
@@ -488,6 +493,106 @@ function validateBoundAttestation(
   return attestationCommit;
 }
 
+type AttestedPlanAmendment = {
+  record: PlanAmendment;
+  candidateCommit: string;
+};
+
+function findCanonicalAttestation(
+  subjectId: string,
+  manifestPath: string,
+  reviewPath: string,
+): { manifest: CandidateManifest; review: ReviewRecord } | null {
+  const requiredPaths = [manifestPath, reviewPath].sort();
+  for (const additionCommit of gitLines([
+    'log',
+    '--reverse',
+    '--diff-filter=A',
+    '--format=%H',
+    '--',
+    manifestPath,
+  ])) {
+    if (!isAncestor(additionCommit, 'HEAD')) continue;
+    const manifestRaw = gitText(['show', `${additionCommit}:${manifestPath}`]);
+    const reviewRaw = gitText(['show', `${additionCommit}:${reviewPath}`]);
+    if (manifestRaw === null || reviewRaw === null) continue;
+    try {
+      const manifest = JSON.parse(manifestRaw) as CandidateManifest;
+      const review = JSON.parse(reviewRaw) as ReviewRecord;
+      const parent = gitText(['rev-parse', `${additionCommit}^`])?.trim();
+      const paths = gitLines([
+        'diff',
+        '--name-only',
+        `${additionCommit}^`,
+        additionCommit,
+        '--',
+      ]).sort();
+      if (
+        manifest.stageId === subjectId &&
+        review.stageId === subjectId &&
+        review.outcome === 'accepted' &&
+        review.reviewerWasAuthorOrEditor === false &&
+        review.reviewMode === 'fresh-context-read-only' &&
+        review.candidateManifestPath === manifestPath &&
+        review.candidateManifestSha256 === sha256Buffer(Buffer.from(manifestRaw)) &&
+        parent === manifest.candidateCommit &&
+        JSON.stringify(paths) === JSON.stringify(requiredPaths) &&
+        gitObjectExists(manifest.baselineCommit) &&
+        gitObjectExists(manifest.candidateCommit) &&
+        isAncestor(manifest.baselineCommit, manifest.candidateCommit)
+      ) {
+        return { manifest, review };
+      }
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
+function discoverHistoricallyAttestedPlanAmendments(): Map<string, AttestedPlanAmendment> {
+  const historicalRecords = new Map<string, PlanAmendment>();
+  for (const commit of gitLines(['log', '--reverse', '--format=%H', '--', 'docs/BUILD_STATE.json'])) {
+    const historicalState = jsonAtCommit<BuildState>(commit, 'docs/BUILD_STATE.json');
+    for (const amendment of historicalState?.governance?.planAmendments ?? []) {
+      if (!historicalRecords.has(amendment.id)) {
+        historicalRecords.set(
+          amendment.id,
+          JSON.parse(JSON.stringify(amendment)) as PlanAmendment,
+        );
+      }
+    }
+  }
+
+  const attested = new Map<string, AttestedPlanAmendment>();
+  for (const historicalRecord of historicalRecords.values()) {
+    const canonical = findCanonicalAttestation(
+      historicalRecord.id,
+      historicalRecord.manifestPath,
+      historicalRecord.reviewPath,
+    );
+    if (!canonical) continue;
+    const candidateState = jsonAtCommit<BuildState>(
+      canonical.manifest.candidateCommit,
+      'docs/BUILD_STATE.json',
+    );
+    const candidateRecord = candidateState?.governance?.planAmendments.find(
+      (item) => item.id === historicalRecord.id,
+    );
+    if (
+      candidateRecord &&
+      canonical.manifest.baselineCommit === candidateRecord.baselineCommit &&
+      isDeepStrictEqual(candidateRecord, historicalRecord)
+    ) {
+      attested.set(historicalRecord.id, {
+        record: JSON.parse(JSON.stringify(candidateRecord)) as PlanAmendment,
+        candidateCommit: canonical.manifest.candidateCommit,
+      });
+    }
+  }
+  return attested;
+}
+
 const requiredFiles = [
   'AGENTS.md',
   'docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md',
@@ -604,6 +709,27 @@ if (state) {
   }
 
   const planAmendments = state.governance?.planAmendments ?? [];
+  const historicallyAttestedPlanAmendments = discoverHistoricallyAttestedPlanAmendments();
+  const canonicalPlanAmendmentRecords = [...historicallyAttestedPlanAmendments.values()].map(
+    (item) => item.record,
+  );
+  const maximumHistoricalPlanRevision = maximumAttestedPlanRevision(
+    canonicalPlanAmendmentRecords,
+  );
+  if (state.planRevision < maximumHistoricalPlanRevision) {
+    fail(
+      `Plan revision cannot regress below historically attested revision ${maximumHistoricalPlanRevision}`,
+    );
+  }
+  const changedPlanAmendment = changedAttestedPlanAmendment(
+    planAmendments,
+    canonicalPlanAmendmentRecords,
+  );
+  if (changedPlanAmendment) {
+    fail(
+      `${changedPlanAmendment} historically attested amendment cannot be removed, downgraded, or changed`,
+    );
+  }
   if (state.planRevision >= 2 && planAmendments.length === 0) {
     fail('Plan revision 2+ requires a hash-bound plan amendment record');
   }
@@ -1157,6 +1283,55 @@ if (state) {
       if (!state.deployment.deliveryBlockers.some((blocker) => blocker.startsWith(`${authorization.stageId}-`))) {
         fail(`${authorization.stageId} unauthorized deployment requires an explicit delivery blocker`);
       }
+    }
+  }
+  if (state.planRevision >= 5) {
+    const standingMandateEvidencePath = 'docs/evidence/STANDING-OPERATING-MANDATE.md';
+    for (const stageId of ['P3', 'P4', 'P5', 'P6', 'P7', 'P8']) {
+      const authorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === stageId,
+      );
+      if (
+        authorization?.authorized !== true ||
+        authorization.evidencePath !== standingMandateEvidencePath
+      ) {
+        fail(`${stageId} must retain its Plan Revision 5 standing delivery authorization`);
+      }
+    }
+  }
+  const attestedRevision5 = historicallyAttestedPlanAmendments.get('PLAN-REV5');
+  if (attestedRevision5) {
+    const revision5CandidateState = jsonAtCommit<BuildState>(
+      attestedRevision5.candidateCommit,
+      'docs/BUILD_STATE.json',
+    );
+    const revision5StageIds = ['P3', 'P4', 'P5', 'P6', 'P7', 'P8'];
+    const changedStandingStage = revision5CandidateState
+      ? changedStandingAuthorization(
+          state.deployment.stageMergeAuthorizations,
+          revision5CandidateState.deployment.stageMergeAuthorizations,
+          revision5StageIds,
+        )
+      : revision5StageIds[0];
+    if (changedStandingStage) {
+      fail(
+        `${changedStandingStage} Plan Revision 5 standing authorization cannot be deleted, disabled, or changed`,
+      );
+    }
+
+    const standingMandateEvidencePath = 'docs/evidence/STANDING-OPERATING-MANDATE.md';
+    const canonicalStandingMandate = gitText([
+      'show',
+      `${attestedRevision5.candidateCommit}:${standingMandateEvidencePath}`,
+    ]);
+    const currentStandingMandate = requireFile(standingMandateEvidencePath);
+    if (
+      canonicalStandingMandate === null ||
+      currentStandingMandate !== canonicalStandingMandate
+    ) {
+      fail(
+        'Plan Revision 5 standing mandate evidence must remain byte-identical to its immutable candidate',
+      );
     }
   }
   const integrationStageIds = deliveryIntegrations.map((item) => item.stageId);
