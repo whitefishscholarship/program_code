@@ -688,6 +688,17 @@ manifest completeness, hash binding, severity, disposition, and direct-child att
 standard. Their records use dedicated evidence, manifest, and review paths so they cannot
 replace a stage's canonical manifest or review.
 
+The validator discovers canonical plan amendments from their first structurally valid
+Git attestations rather than only from the mutable current `BUILD_STATE`. The current
+plan revision cannot roll back below the highest historically attested revision, and no
+historically attested amendment record may be deleted, downgraded, or changed. Once
+Revision 5 is attested, the complete P3-P8 authorization objects and the exact
+`STANDING-OPERATING-MANDATE.md` candidate blob are immutable inputs to every later plan
+validation. Revision 5 defines no revocation or supersession mechanism. Any future
+change to those authorities must first introduce an explicit machine-recorded mechanism
+through separately informed authority and an independently reviewed plan amendment;
+ordinary state edits are rejected.
+
 ## 12. Kickoff and handoff protocol
 
 Every kickoff follows `docs/KICKOFF_PROMPT_TEMPLATE.md` and contains:
@@ -823,6 +834,13 @@ before affected stage work resumes, and explicitly prove that it does not weaken
 acceptance gate, skip a stage, rewrite accepted history, expand program scope, or cause
 a reserved effect. A material program change or any reserved effect still requires new
 direct informed authority.
+
+Historically attested amendment identity is non-regressing. A later amendment may add a
+new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
+amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
+Revocation or supersession is unavailable unless a later, separately authorized plan
+revision first defines and tests an explicit mechanism without rewriting accepted
+history.
 
 Emergency safety fixes may stop active work immediately, but they do not silently
 rewrite the plan. Record the stop and amendment before resuming product work.

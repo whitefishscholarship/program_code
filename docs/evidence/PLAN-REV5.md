@@ -62,8 +62,29 @@ The revised test:
 
 No delivery-history validation logic or acceptance criterion is relaxed. The regression
 change corrects only the invalid universal inequality and adds stronger
-multi-integration coverage. The plan validator separately requires every P3-P8 standing
-authorization to remain enabled and bound to the exact mandate evidence path.
+multi-integration coverage. The plan validator separately discovers historically
+attested plan amendments from Git history, forbids revision rollback or canonical-record
+removal/change, and binds every field of each P3-P8 standing authorization plus the
+mandate evidence blob to the immutable Revision 5 candidate after attestation.
+
+## Preliminary independent review and remediation
+
+Fresh-context reviewer `/root/plan_rev5_independent_review` rejected preliminary
+candidate `4f034bb5eaedb64c16f76665aaf6057c2565416c` at
+`2026-08-25T22:09:15Z` with counts C0/H1/M0/L0. The reviewed manifest SHA-256 was
+`3117106480d56f436d9f2a7e89284a600545f0b03cf1f55592a5a36daff52ca9`.
+The sole high finding was that a later state could roll `planRevision` back below 5,
+remove `PLAN-REV5`, delete or alter a standing authorization, or mutate the mandate
+evidence and thereby switch off the original presence-only guard.
+
+The replacement implementation adds independent historical-attestation discovery,
+exact amendment-record retention, maximum-revision non-regression, immutable binding
+of every P3-P8 authorization field and the mandate evidence blob to the attested
+Revision 5 candidate, and regression cases for revision rollback, PLAN-REV5 removal,
+deletion and mutation of every field for all six stages, P5's separate-write condition,
+P8's deployment-config/schedule exclusion, and evidence mutation. Revision 5 exposes
+no revocation path; a future revocation or supersession requires separately informed
+authority and a new reviewed machine-recorded mechanism.
 
 ## Standing mandate and boundaries
 
@@ -89,7 +110,10 @@ Production deployments.
 - `docs/evidence/STANDING-OPERATING-MANDATE.md`
 - `docs/evidence/PLAN-REV5.md`
 - `web/scripts/test-delivery-state-history.ts`
+- `web/scripts/governance-history.ts`
+- `web/scripts/test-governance-history.ts`
 - `web/scripts/validate-build-plan.ts`
+- `web/package.json`
 
 The candidate intentionally excludes `docs/evidence/PLAN-REV5-manifest.json` and
 `docs/reviews/PLAN-REV5.json`. Those two paths may be added only in the exact
@@ -130,11 +154,30 @@ candidate changes are this durable result record and the matching handoff record
   three-gate outcomes. The network-enabled production build passed again from
   `2026-08-25T21:59:29Z` through `2026-08-25T21:59:46Z`.
 
+Replacement verification after the preliminary rejection:
+
+- `npm run typecheck -- --incremental false`, the complete `npm test`, and prospective
+  `npm run plan:check` ran from `2026-08-25T22:16:30Z` through
+  `2026-08-25T22:16:54Z`. Typecheck and the full suite passed. The new suite result was
+  `governance history: PASS (revision/amendment rollback, every P3-P8 field, P5/P8
+  exclusions, and evidence mutation rejected)`. Delivery-history regression coverage
+  also remained green. Prospective plan validation reported exactly the two expected
+  post-manifest/pre-attestation errors: missing Revision 5 review and missing committed
+  Revision 5 attestation.
+- The network-enabled `npm run build` passed from `2026-08-25T22:16:00Z` through
+  `2026-08-25T22:16:26Z`, including TypeScript and every existing route. The unchanged
+  missing Google service-account and sheet environment notices remained non-fatal.
+- `git diff --check` passed at `2026-08-25T22:16:26Z`. The replacement change set has
+  exactly twelve candidate paths: the original nine plus `web/package.json`,
+  `web/scripts/governance-history.ts`, and
+  `web/scripts/test-governance-history.ts`. The only non-candidate path is the
+  uncommitted manifest, which will be regenerated against the frozen replacement SHA.
+
 Repository state observed at `2026-08-25T22:00:12Z`:
 
 - `HEAD` and `origin/main` were exact
   `08cb6809425036991400b539ca23a34915b3fe26`.
-- Exactly nine Revision 5 paths were dirty: seven tracked governance/validator/test
+- The preliminary candidate had exactly nine Revision 5 paths dirty: seven tracked governance/validator/test
   paths and two new evidence paths. No product/runtime, dependency, lockfile, CI, deployment,
   spreadsheet, P2 artifact, manifest, or review path was present in the change set.
 - No remote `origin/codex/plan-rev5-standing-mandate` branch existed.

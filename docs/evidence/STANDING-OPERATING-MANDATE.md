@@ -85,5 +85,11 @@ mechanics autonomously but may not bypass those controls.
 - Every operational amendment remains dedicated, `attestation-gated`, completely
   manifested, independently reviewed, and delivered before affected work resumes.
 - Historical candidates, manifests, reviews, and attestations remain byte-for-byte.
+- After Revision 5 attestation, the validator binds all fields of the P3-P8 authority
+  records and this exact evidence blob to the immutable Revision 5 candidate. A later
+  state cannot delete, disable, rewrite, or silently supersede them.
+- Revision 5 provides no revocation mechanism. Any future revocation or supersession
+  requires separate informed authority and a dedicated, machine-recorded, independently
+  reviewed plan amendment that preserves accepted history.
 - A fresh reviewer, not the implementation agent, decides acceptance.
 - P3 cannot begin until exact P2 is accepted and delivered on verified `origin/main`.
