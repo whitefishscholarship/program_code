@@ -60,6 +60,22 @@ Its implementation candidate must be frozen, completely manifested, independentl
 reviewed, and followed by a direct-child commit changing exactly
 `docs/evidence/PLAN-REV4-manifest.json` and `docs/reviews/PLAN-REV4.json`.
 
+## Independent review rejection and remediation
+
+Fresh-context read-only reviewer `/root/plan_rev4_independent_review` rejected exact
+predecessor candidate `13e93aea49df2e44925089ae4031dfa9b34f94ac` at
+`2026-08-25T17:13:26Z` with critical 0, high 0, medium 1, low 0. Its independently
+verified manifest SHA-256 was
+`0266ab2cfa85ec684062884ca29eb6cbf3b84c6757732a3c060666d47dce01a3`.
+
+The sole finding was that retained Revision 3 delivery and next-action sections in
+`CURRENT_HANDOFF` were not labeled historical and still read like current prohibitions
+on the newly authorized exact P2 delivery. The replacement explicitly marks those
+sections historical and superseded, describes their time-bounded accuracy, and leaves
+the Revision 4 sequence at the top as the only current next-action authority. Every
+non-delivery exclusion remains in force. No acceptance record or attestation may be
+created for the rejected predecessor; the same reviewer must recheck the replacement.
+
 ## Verification
 
 Pre-freeze verification completed through `2026-08-25T17:06:16Z`. The only subsequent

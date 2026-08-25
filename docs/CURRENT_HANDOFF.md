@@ -14,6 +14,9 @@ Default branch: `main`
 - Amendment candidate: pending freeze. Its exact post-freeze SHA is bound by
   `docs/evidence/PLAN-REV4-manifest.json` because a commit
   cannot embed its own content-derived identity.
+- Rejected predecessor: `13e93aea49df2e44925089ae4031dfa9b34f94ac` was rejected
+  with one medium handoff-consistency finding. The replacement marks obsolete Revision
+  3 action text historical and superseded; the same reviewer must recheck it.
 - Amendment attestation: pending; it must be the candidate's direct child and change
   exactly `docs/evidence/PLAN-REV4-manifest.json` and
   `docs/reviews/PLAN-REV4.json`.
@@ -268,13 +271,15 @@ Repository state observed at `2026-08-24T19:45:25Z`:
 - Product behavior, runtime dependencies, CI, and deployment configuration were not
   changed.
 
-## Delivery state
+## Historical Revision 3 delivery state (superseded by Revision 4)
 
-Kelsey supplied direct informed authority for Revision 3 commits, independent review,
-push, pull request, merge, and resulting Vercel Preview and Production deployments.
-`docs/evidence/PLAN-REV3.md` records that bounded authority. After Revision 3 delivery,
-local P2 implementation and independent review may resume. P2 delivery remains
-unauthorized.
+At the Revision 3 handoff, Kelsey had supplied direct informed authority for Revision 3
+commits, independent review, push, pull request, merge, and resulting Vercel Preview and
+Production deployments. `docs/evidence/PLAN-REV3.md` records that bounded historical
+authority. At that time, only local P2 implementation and independent review could
+resume and P2 delivery was unauthorized. Revision 4's current authority and exact
+delivery sequence at the top of this handoff supersede these old action limits without
+changing their historical accuracy.
 
 ## Remaining unknowns and later-stage routing
 
@@ -288,19 +293,18 @@ unauthorized.
 - Dependency remediation remains P7 work; the P1 baseline applies no upgrades and
   makes no exploitability claim.
 
-## Next stage
+## Historical Revision 3 next-stage direction (superseded by Revision 4)
 
-Plan Revision 3 is the only permitted work until its accepted attestation is delivered
-on verified `origin/main`. Then resume local P2 implementation and review under
-`docs/kickoffs/P2-DATA-MODEL.md`. Do not deliver P2.
+Under the Revision 3 handoff, Revision 3 was the only permitted work until its accepted
+attestation was delivered on verified `origin/main`. The then-current direction was to
+resume local P2 implementation and review under `docs/kickoffs/P2-DATA-MODEL.md` without
+delivering P2. Revision 3 and local P2 acceptance are now complete; the current Revision
+4 sequence at the top of this handoff controls.
 
-## Prohibited next actions
+## Historical Revision 3 prohibitions (superseded where Revision 4 is more specific)
 
-- Do not write to either scholarship spreadsheet or configure production data.
-- Do not submit forms, enter application workflows, or contact providers.
-- Do not change product behavior or resume P2 before Revision 3 delivery.
-- Do not replay, amend, replace, or rebind P1 candidate `92ee210` or attestation
-  `20476b8`.
-- Do not push, open a pull request for, merge, or deploy P2.
-- Do not deliver Revision 3 without exact independent acceptance and its two-file
-  direct-child attestation.
+The Revision 3 handoff prohibited spreadsheet writes, production-data configuration,
+forms, application workflows, provider contact, product changes, P2 delivery, P1
+history changes, and unreviewed Revision 3 delivery. Revision 4 supersedes only the old
+P2 Git/Vercel delivery prohibition for exact candidate `1a63762` and attestation
+`cc277b3` through the current reviewed sequence. Every other exclusion remains in force.
