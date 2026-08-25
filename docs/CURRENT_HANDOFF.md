@@ -1,27 +1,27 @@
 # Current Handoff
 
 Last updated: 2026-08-24
-Plan revision: 2
+Plan revision: 3
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
 ## Current state
 
-- Active stage: none
-- Plan Revision 2 delivered baseline:
-  `015128616ffac9b453f8712f96c73530fbd9d805`
-- Delivery branch: `codex/p1-delivery-integration`
+- Active stage: none; P2 remains paused until Revision 3 is delivered
+- Verified Revision 3 baseline and delivered P1 merge:
+  `be6644f5140c35de2075fa24782f81bf0449f0f6`
+- Amendment branch: `codex/plan-rev3-future-stage-state`
+- Amendment candidate: pre-freeze verification complete and ready to commit. Its exact
+  post-freeze SHA is bound by `docs/evidence/PLAN-REV3-manifest.json` because a commit
+  cannot embed its own content-derived identity.
+- Amendment attestation: pending; it must be the candidate's direct child and change
+  exactly `docs/evidence/PLAN-REV3-manifest.json` and
+  `docs/reviews/PLAN-REV3.json`.
 - Preserved P1 candidate: `92ee21095e959bd19ab641752308c0fd9b394b22`
 - Preserved P1 attestation: `20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`
-- P1 delivery integration: candidate pending complete-manifest review and direct-child
-  delivery attestation
-- Delivery candidate identity: this exact two-parent merge commit. A commit cannot
-  embed its own content-derived SHA without changing that SHA; after freeze, the
-  authoritative exact SHA is bound in `docs/evidence/P1-delivery-manifest.json` and
-  rechecked in `docs/reviews/P1-delivery.json`. Rejected predecessor candidate
-  `354acea210fe60ffc21d68deff94716561b5427d` is not authorized for delivery.
-- Durable P1 completion gate: the exact preserved P1 history and accepted delivery
-  integration must be present on `origin/main`
+- P1 delivery candidate: `464eece0c05c97e014cca0955f0ab92998c1d97c`
+- P1 delivery attestation: `e4541a9b845758309031f00cd1958c96b4de4a27`
+- Durable P1 completion gate: satisfied on verified `origin/main`
 - Verified P1 baseline: `d374247156e3ed15d19c037473da8f76ceedb6ab`
 - Testing spreadsheet: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
 - Testing tab: `Master Database` (sheet ID 0)
@@ -33,13 +33,54 @@ Default branch: `main`
 - Production spreadsheet: unset; mutation unauthorized
 - External data or product mutations during P1 and its delivery integration: none
 
+## Plan Revision 3 amendment
+
+The validator formerly compared P1's exact derived delivery transition to the current
+worktree `BUILD_STATE`. That made every normal P2 state change look like a historical P1
+mutation. Revision 3 reads the P1 delivery candidate named by the existing attested
+delivery manifest and compares that immutable candidate-tree state to the derived
+transition. Current stage state may then advance through the existing state machine,
+while all P1 objects, hashes, topology, authority, identities, and paths remain checked.
+
+Revision 3 is `attestation-gated`: the machine record does not predeclare acceptance.
+Only its exact manifest-bound fresh-context review and direct-child two-file attestation
+can satisfy the validator. The amendment changes governance, validation, regression
+tests, and documentation only. It does not alter product behavior, dependencies, CI,
+deployment configuration, P1 artifacts, or scholarship data.
+
+The unpublished worktree `/private/tmp/program_code-p2` remains dirty, local, paused,
+and untouched. After Revision 3 delivery, P2 must be reconciled onto the new verified
+`origin/main`, revalidated, frozen, manifested, and independently reviewed without any
+push, pull request, merge, or deployment.
+
+### Revision 3 verification
+
+Pre-freeze checks completed through `2026-08-25T01:02:20Z`; the only subsequent
+candidate changes are this durable handoff record and the matching evidence record.
+
+- `npm ci`: passed, 565 locked packages; the existing time-sensitive audit count was
+  21 (1 low, 7 moderate, 12 high, 1 critical), with no package or lockfile change.
+- `npm run typecheck`: passed.
+- `npm test`: passed, including P1 inventory digest
+  `dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2`
+  and `delivery state history: PASS (1 accepted integration)`.
+- `npm run build`: the restricted attempt failed only on existing Google Fonts network
+  access; the authorized retry passed and changed no configuration.
+- Prospective `npm run plan:check`: reported exactly the three expected absent
+  Revision 3 manifest/review/attestation errors and no other error.
+- `git diff --check`: passed.
+- Before freeze, `HEAD` and `origin/main` were exact
+  `be6644f5140c35de2075fa24782f81bf0449f0f6`; the 11 candidate paths were the only
+  dirty paths, and no Revision 3 remote branch or pull request existed.
+
+Exact UTC command windows and outcomes are in `docs/evidence/PLAN-REV3.md`.
+
 ## Plan Revision 2 delivery integration
 
-The integration preserves P1 candidate `92ee210`, attestation `20476b8`, and every
-non-governance P1 blob byte-for-byte. Its first parent is the delivered Plan Revision 2
-baseline and its second parent is exact `20476b8`. Only this handoff and
-`docs/BUILD_STATE.json` reconcile delivery state. The complete integration must be
-manifested, independently reviewed, and attested before push or merge.
+The delivered integration preserves P1 candidate `92ee210`, attestation `20476b8`, and
+every non-governance P1 blob byte-for-byte. Its candidate `464eece` has first parent the
+delivered Plan Revision 2 baseline and second parent exact `20476b8`; its direct-child
+attestation is `e4541a9`. Revision 3 changes none of these objects.
 
 ## P1 result
 
@@ -164,11 +205,11 @@ Repository state observed at `2026-08-24T19:45:25Z`:
 
 ## Delivery state
 
-Kelsey supplied direct informed authority for P1 push, pull request, merge, and the
-resulting Vercel Preview and Production deployments. Plan Revision 2 and the evidence in
-`docs/evidence/P1-delivery-authorization.md` record that bounded authority. Delivery may
-proceed only after the exact integration candidate is independently accepted and its
-two-file delivery attestation is the branch tip.
+Kelsey supplied direct informed authority for Revision 3 commits, independent review,
+push, pull request, merge, and resulting Vercel Preview and Production deployments.
+`docs/evidence/PLAN-REV3.md` records that bounded authority. After Revision 3 delivery,
+local P2 implementation and independent review may resume. P2 delivery remains
+unauthorized.
 
 ## Remaining unknowns and later-stage routing
 
@@ -184,15 +225,17 @@ two-file delivery attestation is the branch tip.
 
 ## Next stage
 
-P2 is the next permitted stage in the accepted integration candidate. Its kickoff is
-`docs/kickoffs/P2-DATA-MODEL.md`. Do not execute P2 until the P1 delivery integration,
-manifest, review, and attestation are verified on `origin/main`.
+Plan Revision 3 is the only permitted work until its accepted attestation is delivered
+on verified `origin/main`. Then resume local P2 implementation and review under
+`docs/kickoffs/P2-DATA-MODEL.md`. Do not deliver P2.
 
 ## Prohibited next actions
 
 - Do not write to either scholarship spreadsheet or configure production data.
 - Do not submit forms, enter application workflows, or contact providers.
-- Do not change product behavior or begin P2/P3 before durable P1 delivery.
+- Do not change product behavior or resume P2 before Revision 3 delivery.
 - Do not replay, amend, replace, or rebind P1 candidate `92ee210` or attestation
   `20476b8`.
-- Do not push or merge an integration that lacks exact independent delivery acceptance.
+- Do not push, open a pull request for, merge, or deploy P2.
+- Do not deliver Revision 3 without exact independent acceptance and its two-file
+  direct-child attestation.

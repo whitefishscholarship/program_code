@@ -67,6 +67,10 @@ owner, and target.
 The first valid attestation in Git history is canonical. Never delete/re-add or rebind it,
 and do not append another commit after an undelivered attestation. The attestation must
 remain the branch tip until merged.
+Validate an accepted delivery integration's exact derived `BUILD_STATE` transition
+against the immutable delivery candidate named by its attested manifest. Later stages
+may evolve the current `BUILD_STATE` only through the normal reviewed state machine;
+they must not weaken, replace, or reinterpret that historical integration proof.
 
 Plan Revision 2 adds one exception that preserves rather than replaces an attestation:
 an independently reviewed delivery integration may merge an exact previously attested
