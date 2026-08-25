@@ -1,114 +1,126 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "modelSchemaVersion": "2.0.0",
   "scenarios": [
     {
       "id": "single-award",
-      "description": "One official page supports one independently named award and one unknown legacy cycle.",
-      "architectures": ["single_award_page"],
-      "applicationMode": "direct_per_award",
-      "scholarshipCount": 1,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "One official page supports one award and one cycle.",
+      "sources": [{"key":"page","architecture":"single_award_page","parentKeys":[],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award","sourceKeys":["page"],"applicationGroupKeys":[],"cycleKeys":["cycle"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":null,"status":"active"}],
+      "evidence": [{"key":"name","subjectKind":"scholarship","subjectKey":"award","sourceKey":"page","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"scholarship","subjectKey":"award","reason":"other"}]
     },
     {
       "id": "nfu-unified-children",
-      "description": "One multi-award source exposes multiple child scholarships through one selectable common application.",
-      "architectures": ["multi_award_page", "common_application"],
-      "applicationMode": "selectable_children",
-      "scholarshipCount": 3,
-      "sharedApplication": true,
-      "supplements": "mixed"
+      "description": "A multi-award parent and common application retain three children and one selectable group.",
+      "sources": [{"key":"parent","architecture":"multi_award_page","parentKeys":[],"childKeys":["application"],"access":"public"},{"key":"application","architecture":"common_application","parentKeys":["parent"],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"child-a","sourceKeys":["parent","application"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-a"]},{"key":"child-b","sourceKeys":["parent","application"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-b"]},{"key":"child-c","sourceKeys":["parent","application"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-c"]}],
+      "applicationGroups": [{"key":"shared","mode":"selectable_children","sourceKeys":["application"],"scholarshipKeys":["child-a","child-b","child-c"],"supplements":"mixed"}],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"child-a","applicationGroupKey":"shared","status":"active"},{"key":"cycle-b","scholarshipKey":"child-b","applicationGroupKey":"shared","status":"active"},{"key":"cycle-c","scholarshipKey":"child-c","applicationGroupKey":"shared","status":"active"}],
+      "evidence": [{"key":"children","subjectKind":"application_group","subjectKey":"shared","sourceKey":"application","result":"supported"}],
+      "reviewItems": [{"key":"review","subjectKind":"application_group","subjectKey":"shared","reason":"other"}]
     },
     {
       "id": "horatio-common-application-exceptions",
-      "description": "A directory routes many awards, while authenticated application paths may contain award-specific exceptions.",
-      "architectures": ["directory_hub", "login_application_portal"],
-      "applicationMode": "shared_with_supplements",
-      "scholarshipCount": 2,
-      "sharedApplication": true,
-      "supplements": "mixed"
+      "description": "A directory and authenticated application retain two awards with supplemental behavior.",
+      "sources": [{"key":"directory","architecture":"directory_hub","parentKeys":[],"childKeys":["login"],"access":"public"},{"key":"login","architecture":"login_application_portal","parentKeys":["directory"],"childKeys":[],"access":"authenticated"}],
+      "scholarships": [{"key":"award-a","sourceKeys":["directory","login"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-a"]},{"key":"award-b","sourceKeys":["directory","login"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-b"]}],
+      "applicationGroups": [{"key":"shared","mode":"shared_with_supplements","sourceKeys":["login"],"scholarshipKeys":["award-a","award-b"],"supplements":"mixed"}],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"award-a","applicationGroupKey":"shared","status":"active"},{"key":"cycle-b","scholarshipKey":"award-b","applicationGroupKey":"shared","status":"active"}],
+      "evidence": [{"key":"mode","subjectKind":"application_group","subjectKey":"shared","sourceKey":"login","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"application_group","subjectKey":"shared","reason":"other"}]
     },
     {
       "id": "reach-higher-matching",
-      "description": "Eligibility matching and supplemental behavior are representable without claiming unseen children.",
-      "architectures": ["matching_portal"],
-      "applicationMode": "eligibility_matched",
-      "scholarshipCount": 1,
-      "sharedApplication": true,
-      "supplements": "unknown"
+      "description": "An eligibility matcher remains explicit without inventing unseen children.",
+      "sources": [{"key":"matcher","architecture":"matching_portal","parentKeys":[],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award","sourceKeys":["matcher"],"applicationGroupKeys":["matched"],"cycleKeys":["cycle"]}],
+      "applicationGroups": [{"key":"matched","mode":"eligibility_matched","sourceKeys":["matcher"],"scholarshipKeys":["award"],"supplements":"unknown"}],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":"matched","status":"unknown"}],
+      "evidence": [{"key":"matching","subjectKind":"application_group","subjectKey":"matched","sourceKey":"matcher","result":"unverified"}],
+      "reviewItems": [{"key":"review","subjectKind":"application_group","subjectKey":"matched","reason":"source_manual_review"}]
     },
     {
       "id": "fvcc-pagination",
-      "description": "A paginated catalog remains a parent source whose child count and cursor state are separate from awards.",
-      "architectures": ["paginated_catalog"],
-      "applicationMode": "direct_per_award",
-      "scholarshipCount": 2,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "A paginated parent has two explicit child pages and awards.",
+      "sources": [{"key":"catalog","architecture":"paginated_catalog","parentKeys":[],"childKeys":["page-a","page-b"],"access":"public"},{"key":"page-a","architecture":"single_award_page","parentKeys":["catalog"],"childKeys":[],"access":"public"},{"key":"page-b","architecture":"single_award_page","parentKeys":["catalog"],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award-a","sourceKeys":["page-a"],"applicationGroupKeys":[],"cycleKeys":["cycle-a"]},{"key":"award-b","sourceKeys":["page-b"],"applicationGroupKeys":[],"cycleKeys":["cycle-b"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"award-a","applicationGroupKey":null,"status":"active"},{"key":"cycle-b","scholarshipKey":"award-b","applicationGroupKey":null,"status":"active"}],
+      "evidence": [{"key":"pagination","subjectKind":"source","subjectKey":"catalog","sourceKey":"catalog","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"source","subjectKey":"catalog","reason":"other"}]
     },
     {
       "id": "first-external-results",
-      "description": "Marketplace results remain discovery sources while each provider retains factual authority.",
-      "architectures": ["external_marketplace"],
-      "applicationMode": "direct_per_award",
-      "scholarshipCount": 2,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "Marketplace discovery links to provider authority without replacing it.",
+      "sources": [{"key":"market","architecture":"external_marketplace","parentKeys":[],"childKeys":["provider"],"access":"public"},{"key":"provider","architecture":"single_award_page","parentKeys":["market"],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award-a","sourceKeys":["market","provider"],"applicationGroupKeys":[],"cycleKeys":["cycle-a"]},{"key":"award-b","sourceKeys":["market","provider"],"applicationGroupKeys":[],"cycleKeys":["cycle-b"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"award-a","applicationGroupKey":null,"status":"unknown"},{"key":"cycle-b","scholarshipKey":"award-b","applicationGroupKey":null,"status":"unknown"}],
+      "evidence": [{"key":"authority","subjectKind":"source","subjectKey":"provider","sourceKey":"provider","result":"supported"}],
+      "reviewItems": [{"key":"review","subjectKind":"source","subjectKey":"market","reason":"source_manual_review"}]
     },
     {
       "id": "esa-shared-program",
-      "description": "Two distinct scholarships share a selectable program application and may require follow-up questions.",
-      "architectures": ["common_application"],
-      "applicationMode": "shared_with_supplements",
-      "scholarshipCount": 2,
-      "sharedApplication": true,
-      "supplements": "required"
+      "description": "Two awards share one application with required supplements.",
+      "sources": [{"key":"application","architecture":"common_application","parentKeys":[],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award-a","sourceKeys":["application"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-a"]},{"key":"award-b","sourceKeys":["application"],"applicationGroupKeys":["shared"],"cycleKeys":["cycle-b"]}],
+      "applicationGroups": [{"key":"shared","mode":"shared_with_supplements","sourceKeys":["application"],"scholarshipKeys":["award-a","award-b"],"supplements":"required"}],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"award-a","applicationGroupKey":"shared","status":"active"},{"key":"cycle-b","scholarshipKey":"award-b","applicationGroupKey":"shared","status":"active"}],
+      "evidence": [{"key":"supplements","subjectKind":"application_group","subjectKey":"shared","sourceKey":"application","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"application_group","subjectKey":"shared","reason":"other"}]
     },
     {
       "id": "versioned-document",
-      "description": "A document or PDF is a versioned source and does not replace its parent source or field evidence.",
-      "architectures": ["document_or_pdf"],
-      "applicationMode": "direct_per_award",
-      "scholarshipCount": 1,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "A versioned document remains a child of its parent award page.",
+      "sources": [{"key":"page","architecture":"single_award_page","parentKeys":[],"childKeys":["document"],"access":"public"},{"key":"document","architecture":"document_or_pdf","parentKeys":["page"],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award","sourceKeys":["page","document"],"applicationGroupKeys":[],"cycleKeys":["cycle"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":null,"status":"active"}],
+      "evidence": [{"key":"revision","subjectKind":"source","subjectKey":"document","sourceKey":"document","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"source","subjectKey":"document","reason":"other"}]
     },
     {
       "id": "google-form",
-      "description": "A public form can represent application instructions without storing or submitting responses.",
-      "architectures": ["form_only"],
-      "applicationMode": "direct_per_award",
-      "scholarshipCount": 1,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "A public form is modeled without responses or submission.",
+      "sources": [{"key":"form","architecture":"form_only","parentKeys":[],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"award","sourceKeys":["form"],"applicationGroupKeys":[],"cycleKeys":["cycle"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":null,"status":"active"}],
+      "evidence": [{"key":"form-link","subjectKind":"source","subjectKey":"form","sourceKey":"form","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"source","subjectKey":"form","reason":"other"}]
     },
     {
       "id": "institution-umbrella",
-      "description": "Automatic and competitive institutional aid remain separate child awards and application modes.",
-      "architectures": ["institution_umbrella"],
-      "applicationMode": "automatic_consideration",
-      "scholarshipCount": 2,
-      "sharedApplication": true,
-      "supplements": "mixed"
+      "description": "Automatic and competitive awards stay distinct under one institution.",
+      "sources": [{"key":"institution","architecture":"institution_umbrella","parentKeys":[],"childKeys":[],"access":"public"}],
+      "scholarships": [{"key":"automatic","sourceKeys":["institution"],"applicationGroupKeys":["group"],"cycleKeys":["cycle-a"]},{"key":"competitive","sourceKeys":["institution"],"applicationGroupKeys":["group"],"cycleKeys":["cycle-b"]}],
+      "applicationGroups": [{"key":"group","mode":"automatic_consideration","sourceKeys":["institution"],"scholarshipKeys":["automatic","competitive"],"supplements":"mixed"}],
+      "cycles": [{"key":"cycle-a","scholarshipKey":"automatic","applicationGroupKey":"group","status":"active"},{"key":"cycle-b","scholarshipKey":"competitive","applicationGroupKey":"group","status":"active"}],
+      "evidence": [{"key":"mode","subjectKind":"application_group","subjectKey":"group","sourceKey":"institution","result":"supported"}],
+      "reviewItems": [{"key":"review","subjectKind":"application_group","subjectKey":"group","reason":"other"}]
     },
     {
       "id": "offline-automatic",
-      "description": "Counselor, campus, mail, and automatic methods remain sources even without a URL.",
-      "architectures": ["offline_or_automatic"],
-      "applicationMode": "offline",
-      "scholarshipCount": 1,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "An automatic method remains an offline source without a fabricated URL.",
+      "sources": [{"key":"counselor","architecture":"offline_or_automatic","parentKeys":[],"childKeys":[],"access":"offline"}],
+      "scholarships": [{"key":"award","sourceKeys":["counselor"],"applicationGroupKeys":["offline"],"cycleKeys":["cycle"]}],
+      "applicationGroups": [{"key":"offline","mode":"offline","sourceKeys":["counselor"],"scholarshipKeys":["award"],"supplements":"unknown"}],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":"offline","status":"unknown"}],
+      "evidence": [{"key":"method","subjectKind":"source","subjectKey":"counselor","sourceKey":"counselor","result":"observed"}],
+      "reviewItems": [{"key":"review","subjectKind":"cycle","subjectKey":"cycle","reason":"cycle_unknown"}]
     },
     {
       "id": "unknown-identity-bearing-url",
-      "description": "Unknown architecture and identity-bearing query or fragment components remain explicit review state.",
-      "architectures": ["unknown"],
-      "applicationMode": "unknown",
-      "scholarshipCount": 1,
-      "sharedApplication": false,
-      "supplements": "unknown"
+      "description": "Unknown architecture and URL identity remain explicit review state.",
+      "sources": [{"key":"unknown","architecture":"unknown","parentKeys":[],"childKeys":[],"access":"unknown"}],
+      "scholarships": [{"key":"award","sourceKeys":["unknown"],"applicationGroupKeys":[],"cycleKeys":["cycle"]}],
+      "applicationGroups": [],
+      "cycles": [{"key":"cycle","scholarshipKey":"award","applicationGroupKey":null,"status":"unknown"}],
+      "evidence": [{"key":"unknown","subjectKind":"source","subjectKey":"unknown","sourceKey":"unknown","result":"unverified"}],
+      "reviewItems": [{"key":"review","subjectKind":"source","subjectKey":"unknown","reason":"identity_ambiguity"}]
     }
   ]
 }

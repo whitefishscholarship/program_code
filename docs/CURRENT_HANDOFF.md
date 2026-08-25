@@ -11,8 +11,9 @@ Default branch: `main`
 - Verified P2 baseline and current `origin/main`:
   `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
 - Local P2 branch: `codex/p2-data-model-rev3`
-- P2 status: verified locally; candidate freeze and independent technical/data-loss
-  review remain pending. Acceptance and attestation are not predeclared.
+- P2 status: predecessor candidate `658f07d` was independently rejected; replacement
+  remediation is verified locally and awaits immutable freeze and recheck by the same
+  fresh reviewer. Acceptance and attestation are not predeclared.
 - Plan Revision 2 delivered baseline:
   `015128616ffac9b453f8712f96c73530fbd9d805`
 - Delivery branch: `codex/p1-delivery-integration`
@@ -90,7 +91,14 @@ The read-only P1 compatibility adapter:
   from P1 unavailable rather than fabricating values.
 
 The deterministic canonical dataset digest is
-`727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
+`dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
+
+The replacement preserves raw and normalized forms for every previously lossy
+eligibility/renewal field, binds Evidence IDs to complete observation identity, and
+uses the schema version in every stable identifier. Duplicate-name review items now
+attach to resolvable row identities. The 12 scenario fixtures contain linked Source,
+Scholarship, Application Group, Cycle, Evidence, and Review Item records rather than
+taxonomy labels alone.
 
 P2 changed only model/adapter code, sanitized fixtures, deterministic generated
 evidence, tests, package scripts, governance state/handoff, and the P3 kickoff. It does
@@ -147,8 +155,10 @@ direct-child attestation `20476b8`. The delivery integration preserves both blob
 
 - `web/src/lib/canonicalModel.ts` — versioned schemas, ID rules, compatibility adapter,
   and exact legacy round trip
-- `web/fixtures/p2/model-scenarios.json` — 12 scenarios covering all 13 taxonomy values
-- `web/fixtures/p2/legacy-field-map.json` — all 15 current student-facing fields
+- `web/fixtures/p2/model-scenarios.json` — 12 linked canonical graph fixtures covering
+  all 13 taxonomy values
+- `web/fixtures/p2/legacy-field-map.json` — all 15 current student-facing fields with
+  raw, typed, unknown, and unparseable compatibility cases
 - `web/scripts/p2-data-model.ts` — deterministic migration dry run and evidence check
 - `web/scripts/test-p2-data-model.ts` — model, identity, relationship, and loss tests
 - `docs/evidence/P2-dry-run.json` and `docs/evidence/P2-compatibility.json` —
@@ -166,16 +176,30 @@ P2 verification to date:
   findings (1 low, 7 moderate, 12 high, 1 critical).
 - Baseline `npm run plan:check` passed for all 10 stage contracts.
 - `npm run p2:model` generated deterministic evidence.
-- Final `npm run p2:model:check` passed after the explicit source-link schema addition
-  with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
-- Typecheck and the focused P2 test passed after explicit source relationships were
-  added, with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
+- Final predecessor `npm run p2:model:check` passed after the explicit source-link
+  schema addition with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
+- Typecheck and the focused predecessor P2 test passed after explicit source
+  relationships were added, with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
 - One full test run exposed an incorrect test expectation of eight Whitefish Education
   Foundation children; the pinned P1 shared group correctly contains nine. The test now
   derives its expectation from the pinned group, and the focused rerun passed.
 - The final Revision 3-aware matrix passed through `2026-08-25T01:31:32Z`: locked
   install, model check, plan validation, typecheck, complete test suite, production
   build, and diff check. Exact UTC windows are recorded in `docs/evidence/P2.md`.
+- Fresh reviewer `/root/p2_independent_review` rejected exact candidate `658f07d` at
+  `2026-08-25T01:43:19Z` with critical 0, high 3, medium 2, low 0: five fields lost
+  raw values; evidence observations could collide; scenarios were descriptors rather
+  than model graphs; several IDs were not version-bound; and one duplicate-name review
+  subject did not resolve. Manifest SHA-256 was
+  `3b9e2d06b586a7663d0d925a1c92652b013f655b9b41bc1347b691986c0c1902`.
+- The replacement fixes all five findings. Its regenerated dataset has 572 Evidence
+  records, 592 resolvable Review Items, and digest
+  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
+  A replacement manifest and recheck from the same reviewer remain pending.
+- Replacement pre-freeze verification passed through `2026-08-25T02:02:44Z`: locked
+  install, model check, Revision 3-aware plan validation, typecheck, complete tests,
+  production build, and diff check. Exact UTC windows and outcomes are recorded in
+  `docs/evidence/P2.md`.
 
 P1 historical verification and review:
 
@@ -268,8 +292,10 @@ it did not authorize P2 delivery or any P2 external effect.
 
 ## Dirty and remote state
 
-- The isolated P2 worktree has uncommitted P2-owned implementation, fixture,
-  generated-evidence, governance, and kickoff paths.
+- The isolated P2 worktree is two commits beyond `origin/main` through rejected
+  predecessor `658f07d`; it has uncommitted P2-owned replacement remediation plus the
+  stale untracked predecessor manifest, which must be regenerated after replacement
+  freeze.
 - The preserved primary P1 checkout remains untouched.
 - `codex/p2-data-model-rev3` has not been pushed and no P2 pull request exists. The
   earlier dirty `/private/tmp/program_code-p2` worktree remains untouched as a local

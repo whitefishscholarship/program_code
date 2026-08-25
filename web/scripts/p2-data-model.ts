@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {
   adaptP1Inventory,
+  canonicalRelationshipErrors,
   CanonicalDatasetSchema,
   MODEL_SCHEMA_VERSION,
   P1InventoryInput,
@@ -42,11 +43,12 @@ const scenarios = readJson<{
   scenarios: Array<{
     id: string;
     description: string;
-    architectures: string[];
-    applicationMode: string;
-    scholarshipCount: number;
-    sharedApplication: boolean;
-    supplements: string;
+    sources: Array<{ architecture: string }>;
+    scholarships: unknown[];
+    applicationGroups: unknown[];
+    cycles: unknown[];
+    evidence: unknown[];
+    reviewItems: unknown[];
   }>;
 }>(scenariosPath);
 const fieldMap = readJson<{
@@ -57,6 +59,7 @@ const fieldMap = readJson<{
     legacyField: string;
     canonicalTargets: string[];
     p1Availability: 'retained' | 'excluded_from_sanitized_input';
+    compatibilityCases: { raw: string; typed: string; unknown: null; unparseable: string };
     conversion: string;
   }>;
 }>(fieldMapPath);
@@ -87,12 +90,14 @@ const applicationGroupIds = new Set(dataset.applicationGroups.map((group) => gro
 const cycleIds = new Set(dataset.cycles.map((cycle) => cycle.id));
 const evidenceIds = new Set(dataset.evidence.map((item) => item.id));
 const reviewIds = new Set(dataset.reviewItems.map((item) => item.id));
+const relationshipErrors = canonicalRelationshipErrors(dataset);
 assert(sourceIds.size === dataset.sources.length, 'Duplicate source identifier');
 assert(scholarshipIds.size === dataset.scholarships.length, 'Duplicate scholarship identifier');
 assert(applicationGroupIds.size === dataset.applicationGroups.length, 'Duplicate application-group identifier');
 assert(cycleIds.size === dataset.cycles.length, 'Duplicate cycle identifier');
 assert(evidenceIds.size === dataset.evidence.length, 'Duplicate evidence identifier');
 assert(reviewIds.size === dataset.reviewItems.length, 'Duplicate review-item identifier');
+assert(relationshipErrors.length === 0, `Canonical relationship errors: ${relationshipErrors.join('; ')}`);
 
 for (const scholarship of dataset.scholarships) {
   assert(scholarship.sourceIds.every((id) => sourceIds.has(id)), `Scholarship ${scholarship.id} has a missing source`);
@@ -108,7 +113,7 @@ for (const cycle of dataset.cycles) {
   assert(cycle.applicationGroupId === null || applicationGroupIds.has(cycle.applicationGroupId), `Cycle ${cycle.id} has a missing application group`);
 }
 
-const fixtureTaxonomies = [...new Set(scenarios.scenarios.flatMap((scenario) => scenario.architectures))].sort();
+const fixtureTaxonomies = [...new Set(scenarios.scenarios.flatMap((scenario) => scenario.sources.map((source) => source.architecture)))].sort();
 assert(
   JSON.stringify(fixtureTaxonomies) === JSON.stringify([...SOURCE_ARCHITECTURES].sort()),
   'P2 scenarios do not cover every source architecture taxonomy',
@@ -117,6 +122,13 @@ assert(
 const fieldNames = fieldMap.mappings.map((mapping) => mapping.legacyField);
 assert(fieldNames.length === 15 && new Set(fieldNames).size === 15, 'Legacy field map must cover exactly 15 unique student fields');
 assert(fieldMap.mappings.every((mapping) => mapping.canonicalTargets.length > 0), 'Every legacy field needs a canonical target');
+assert(
+  fieldMap.mappings.every((mapping) => mapping.compatibilityCases.raw.length > 0
+    && mapping.compatibilityCases.typed.length > 0
+    && mapping.compatibilityCases.unknown === null
+    && mapping.compatibilityCases.unparseable.length > 0),
+  'Every legacy field needs raw, typed, unknown, and unparseable compatibility cases',
+);
 
 const p1UrlSources = dataset.sources.filter((source) => source.legacySourceIdentity !== null);
 const offlineSources = dataset.sources.filter((source) => source.canonicalUrl === null);
@@ -210,7 +222,15 @@ const dryRun = {
     scenarioCount: scenarios.scenarios.length,
     scenarioIds: scenarios.scenarios.map((scenario) => scenario.id),
     architectures: fixtureTaxonomies,
-    coversEveryTaxonomy: true,
+    coversEveryTaxonomy: JSON.stringify(fixtureTaxonomies) === JSON.stringify([...SOURCE_ARCHITECTURES].sort()),
+    canonicalEntityFixtureCounts: {
+      sources: scenarios.scenarios.reduce((total, scenario) => total + scenario.sources.length, 0),
+      scholarships: scenarios.scenarios.reduce((total, scenario) => total + scenario.scholarships.length, 0),
+      applicationGroups: scenarios.scenarios.reduce((total, scenario) => total + scenario.applicationGroups.length, 0),
+      cycles: scenarios.scenarios.reduce((total, scenario) => total + scenario.cycles.length, 0),
+      evidence: scenarios.scenarios.reduce((total, scenario) => total + scenario.evidence.length, 0),
+      reviewItems: scenarios.scenarios.reduce((total, scenario) => total + scenario.reviewItems.length, 0),
+    },
   },
   boundaries: {
     spreadsheetReads: 0,
@@ -246,9 +266,12 @@ const compatibility = {
     exact: originalRecordJson === roundTripJson,
   },
   relationshipChecks: {
-    sourceReferencesResolve: true,
-    scholarshipCyclesResolve: true,
-    applicationGroupMembersResolve: true,
+    allCanonicalRelationshipsResolve: relationshipErrors.length === 0,
+    evidenceSubjectsResolve: relationshipErrors.every((error) => !error.includes('evd_')),
+    reviewSubjectsResolve: relationshipErrors.every((error) => !error.includes('rev_')),
+    sourceReferencesResolve: relationshipErrors.every((error) => !error.includes('src_')),
+    scholarshipCyclesResolve: relationshipErrors.every((error) => !error.includes('cyc_')),
+    applicationGroupMembersResolve: relationshipErrors.every((error) => !error.includes('app_')),
     oneUrlMaySupportMultipleAwards: sharedGroups.some((group) => group.expectedRecordCount > 1),
     oneAwardMayHaveMultipleCycles: 'schema_allows_multiple_cycle_ids',
     portalRowsRemainNonAwardBindings: portalBindings.length,

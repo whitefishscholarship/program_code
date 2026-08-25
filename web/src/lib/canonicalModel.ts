@@ -95,6 +95,49 @@ export const SourceSchema = z.object({
   }
 });
 
+export const StudentFieldsSchema = z.object({
+  summary: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'unknown']), evidenceIds: z.array(entityId('evd')) }),
+  awardAmount: z.object({
+    raw: z.string().nullable(),
+    minimum: z.number().nonnegative().nullable(),
+    maximum: z.number().nonnegative().nullable(),
+    currency: z.string().length(3).nullable(),
+    state: z.enum(['known', 'variable', 'unknown', 'unparseable']),
+    evidenceIds: z.array(entityId('evd')),
+  }),
+  eligibility: z.object({
+    location: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'unknown', 'unparseable']) }),
+    minimumGpa: z.object({
+      raw: z.string().nullable(),
+      value: z.number().min(0).max(5).nullable(),
+      state: z.enum(['known', 'any', 'unknown', 'unparseable']),
+    }),
+    schoolTypes: z.object({
+      raw: z.string().nullable(),
+      values: z.array(z.enum(['two_year', 'four_year', 'trade', 'other'])),
+      state: z.enum(['known', 'any', 'unknown', 'unparseable']),
+    }),
+    focus: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'any', 'unknown', 'unparseable']) }),
+    gapYear: z.object({
+      raw: z.string().nullable(),
+      value: z.enum(['yes', 'no', 'conditional']).nullable(),
+      state: z.enum(['known', 'unknown', 'unparseable']),
+    }),
+  }),
+  selection: z.object({
+    financialNeedPriority: z.object({
+      raw: z.string().nullable(),
+      value: z.enum(['required', 'prioritized', 'not_prioritized']).nullable(),
+      state: z.enum(['known', 'unknown', 'unparseable']),
+    }),
+  }),
+  renewal: z.object({
+    raw: z.string().nullable(),
+    value: z.enum(['renewing', 'non_renewing', 'conditional']).nullable(),
+    state: z.enum(['known', 'unknown', 'unparseable']),
+  }),
+});
+
 export const ScholarshipSchema = z.object({
   schemaVersion,
   id: entityId('sch'),
@@ -111,26 +154,7 @@ export const ScholarshipSchema = z.object({
   cycleIds: z.array(entityId('cyc')).min(1),
   evidenceIds: z.array(entityId('evd')),
   reviewItemIds: z.array(entityId('rev')),
-  studentFields: z.object({
-    summary: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'unknown']), evidenceIds: z.array(entityId('evd')) }),
-    awardAmount: z.object({
-      raw: z.string().nullable(),
-      minimum: z.number().nonnegative().nullable(),
-      maximum: z.number().nonnegative().nullable(),
-      currency: z.string().length(3).nullable(),
-      state: z.enum(['known', 'variable', 'unknown']),
-      evidenceIds: z.array(entityId('evd')),
-    }),
-    eligibility: z.object({
-      location: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'unknown']) }),
-      minimumGpa: z.object({ value: z.number().min(0).max(5).nullable(), state: z.enum(['known', 'any', 'unknown']) }),
-      schoolTypes: z.object({ values: z.array(z.enum(['two_year', 'four_year', 'trade', 'other'])), state: z.enum(['known', 'any', 'unknown']) }),
-      focus: z.object({ raw: z.string().nullable(), state: z.enum(['known', 'any', 'unknown']) }),
-      gapYear: z.enum(['yes', 'no', 'conditional', 'unknown']),
-    }),
-    selection: z.object({ financialNeedPriority: z.enum(['required', 'prioritized', 'not_prioritized', 'unknown']) }),
-    renewal: z.enum(['renewing', 'non_renewing', 'conditional', 'unknown']),
-  }),
+  studentFields: StudentFieldsSchema,
 });
 
 export const ApplicationGroupSchema = z.object({
@@ -222,6 +246,38 @@ export const P1RecordSchema = z.object({
   references: z.array(P1ReferenceSchema),
 });
 
+export const LEGACY_STUDENT_FIELDS = [
+  'Last Updated',
+  'Due Date',
+  'In-State / National',
+  'Portal/ Scholarship',
+  'Amount',
+  'Scholarship Location/Information',
+  'Name of Scholarship',
+  'Application Link/Method',
+  'Summary',
+  'Stated Min. GPA',
+  'School Type (2-or 4-Year, or Trade)',
+  'Renewing/ Non-Renewing',
+  'Focus',
+  'Acute Financial Need Prioritization',
+  'Accepts Gap Year Applications Upon Return',
+] as const;
+export const LegacyStudentFieldNameSchema = z.enum(LEGACY_STUDENT_FIELDS);
+export const LegacyFieldCompatibilityValueSchema = z.object({
+  raw: z.string().nullable(),
+  typed: z.union([z.string(), z.number(), z.boolean(), z.array(z.string())]).nullable(),
+  state: z.enum(['known', 'unknown', 'unparseable']),
+  evidenceIds: z.array(entityId('evd')),
+});
+export const LegacyStudentFieldValuesSchema = z
+  .record(LegacyStudentFieldNameSchema, LegacyFieldCompatibilityValueSchema)
+  .superRefine((value, ctx) => {
+    for (const field of LEGACY_STUDENT_FIELDS) {
+      if (!(field in value)) ctx.addIssue({ code: 'custom', message: `Missing legacy field ${field}` });
+    }
+  });
+
 export const LegacyRecordBindingSchema = z.object({
   schemaVersion,
   id: entityId('leg'),
@@ -231,6 +287,7 @@ export const LegacyRecordBindingSchema = z.object({
   targetKind: z.enum(['scholarship', 'source_record']),
   targetIds: z.array(z.string().min(1)),
   reviewItemIds: z.array(entityId('rev')),
+  studentFieldCompatibility: LegacyStudentFieldValuesSchema,
   legacyRecord: P1RecordSchema,
 });
 
@@ -303,21 +360,60 @@ export function sha256Text(value: string): string {
 }
 
 export function stableId(prefix: 'src' | 'sch' | 'app' | 'cyc' | 'evd' | 'rev' | 'leg', parts: unknown[]): string {
-  return `${prefix}_${sha256Text(JSON.stringify(parts))}`;
+  return `${prefix}_${sha256Text(JSON.stringify([MODEL_SCHEMA_VERSION, ...parts]))}`;
 }
 
-function evidenceId(subjectKind: string, subjectId: string, fieldPath: string, claim: string): string {
-  return stableId('evd', [MODEL_SCHEMA_VERSION, subjectKind, subjectId, fieldPath, claim]);
+export interface EvidenceIdentityInput {
+  subjectKind: 'source' | 'scholarship' | 'application_group' | 'cycle';
+  subjectId: string;
+  fieldPath: string;
+  sourceId: string | null;
+  retrievedAt: string;
+  sourceRevision: string | null;
+  result: z.infer<typeof EvidenceResultSchema>;
+  claim: string;
+  contentSha256: string;
+}
+
+export function evidenceId(input: EvidenceIdentityInput): string {
+  return stableId('evd', [
+    input.subjectKind,
+    input.subjectId,
+    input.fieldPath,
+    input.sourceId,
+    input.retrievedAt,
+    input.sourceRevision,
+    input.result,
+    input.claim,
+    input.contentSha256,
+  ]);
 }
 
 function reviewId(subjectKind: string, subjectId: string, reason: string, discriminator: unknown): string {
-  return stableId('rev', [MODEL_SCHEMA_VERSION, subjectKind, subjectId, reason, discriminator]);
+  return stableId('rev', [subjectKind, subjectId, reason, discriminator]);
 }
 
 function applicationMode(architecture: SourceArchitecture): z.infer<typeof ApplicationModeSchema> {
   if (architecture === 'common_application') return 'selectable_children';
   if (architecture === 'matching_portal') return 'eligibility_matched';
   return 'unknown';
+}
+
+function legacyStudentFieldCompatibility(record: P1Record): z.infer<typeof LegacyStudentFieldValuesSchema> {
+  const unknown = () => ({ raw: null, typed: null, state: 'unknown' as const, evidenceIds: [] });
+  const values = Object.fromEntries(LEGACY_STUDENT_FIELDS.map((field) => [field, unknown()])) as unknown as z.infer<typeof LegacyStudentFieldValuesSchema>;
+  const informationUrls = record.references.filter((item) => item.role === 'information').map((item) => item.urlIdentity);
+  const applicationMethods = record.references.filter((item) => item.role === 'application').map((item) => item.urlIdentity);
+  if (record.explicitApplicationMethod) applicationMethods.push(record.explicitApplicationMethod);
+  values['Portal/ Scholarship'] = { raw: record.currentLabel, typed: record.currentLabel, state: 'known', evidenceIds: [] };
+  values['Name of Scholarship'] = { raw: record.scholarshipName, typed: record.scholarshipName, state: 'known', evidenceIds: [] };
+  if (informationUrls.length > 0) {
+    values['Scholarship Location/Information'] = { raw: informationUrls.join(' | '), typed: informationUrls, state: 'known', evidenceIds: [] };
+  }
+  if (applicationMethods.length > 0) {
+    values['Application Link/Method'] = { raw: applicationMethods.join(' | '), typed: applicationMethods, state: 'known', evidenceIds: [] };
+  }
+  return LegacyStudentFieldValuesSchema.parse(values);
 }
 
 export function adaptP1Inventory(
@@ -343,19 +439,22 @@ export function adaptP1Inventory(
     const claim = input.evidenceBasis.length > 0
       ? input.evidenceBasis.join(' | ')
       : 'No retained evidence basis beyond the P1 source identity.';
-    const evdId = evidenceId('source', id, 'architecture', claim);
-    evidence.push({
-      schemaVersion: MODEL_SCHEMA_VERSION,
-      id: evdId,
-      subjectKind: 'source',
+    const evidenceIdentity = {
+      subjectKind: 'source' as const,
       subjectId: id,
       fieldPath: 'architecture',
       sourceId: id,
       retrievedAt: pinned.capturedAt,
       sourceRevision: pinned.spreadsheetRevisionId,
-      result: input.confidence === 'direct_observation' ? 'observed' : 'unverified',
+      result: input.confidence === 'direct_observation' ? 'observed' as const : 'unverified' as const,
       claim,
       contentSha256: sha256Text(claim),
+    };
+    const evdId = evidenceId(evidenceIdentity);
+    evidence.push({
+      schemaVersion: MODEL_SCHEMA_VERSION,
+      id: evdId,
+      ...evidenceIdentity,
       reviewerState: input.reviewState,
     });
     const sourceReviewIds: string[] = [];
@@ -423,7 +522,18 @@ export function adaptP1Inventory(
     const method = record.explicitApplicationMethod ?? 'Unknown offline authority';
     const id = stableId('src', ['offline', record.rowIdentity, method]);
     const claim = `P1 captured no URL and retained application method: ${method}`;
-    const evdId = evidenceId('source', id, 'offlineAuthority', claim);
+    const evidenceIdentity = {
+      subjectKind: 'source' as const,
+      subjectId: id,
+      fieldPath: 'offlineAuthority',
+      sourceId: id,
+      retrievedAt: pinned.capturedAt,
+      sourceRevision: pinned.spreadsheetRevisionId,
+      result: 'observed' as const,
+      claim,
+      contentSha256: sha256Text(claim),
+    };
+    const evdId = evidenceId(evidenceIdentity);
     sources.push({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id,
@@ -448,15 +558,7 @@ export function adaptP1Inventory(
     evidence.push({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id: evdId,
-      subjectKind: 'source',
-      subjectId: id,
-      fieldPath: 'offlineAuthority',
-      sourceId: id,
-      retrievedAt: pinned.capturedAt,
-      sourceRevision: pinned.spreadsheetRevisionId,
-      result: 'observed',
-      claim,
-      contentSha256: sha256Text(claim),
+      ...evidenceIdentity,
       reviewerState: 'classified',
     });
   }
@@ -479,10 +581,33 @@ export function adaptP1Inventory(
     const id = stableId('sch', ['p1-row', record.rowIdentity]);
     scholarshipIdByRow.set(record.sheetRow, id);
     const nameClaim = `P1 row ${record.sheetRow} name: ${record.scholarshipName}`;
-    const nameEvidenceId = evidenceId('scholarship', id, 'name', nameClaim);
     const cycleId = stableId('cyc', [id, 'legacy-unknown']);
     const cycleClaim = 'P1 sanitized input excluded cycle fields; status, dates, timezone, precision, and recurrence remain unknown.';
-    const cycleEvidenceId = evidenceId('cycle', cycleId, 'cycle', cycleClaim);
+    const primarySourceId = sourceIdsByRow.get(record.sheetRow)?.[0] ?? null;
+    const nameEvidenceIdentity = {
+      subjectKind: 'scholarship' as const,
+      subjectId: id,
+      fieldPath: 'name',
+      sourceId: primarySourceId,
+      retrievedAt: pinned.capturedAt,
+      sourceRevision: pinned.spreadsheetRevisionId,
+      result: 'observed' as const,
+      claim: nameClaim,
+      contentSha256: sha256Text(nameClaim),
+    };
+    const cycleEvidenceIdentity = {
+      subjectKind: 'cycle' as const,
+      subjectId: cycleId,
+      fieldPath: 'cycle',
+      sourceId: primarySourceId,
+      retrievedAt: pinned.capturedAt,
+      sourceRevision: pinned.spreadsheetRevisionId,
+      result: 'unverified' as const,
+      claim: cycleClaim,
+      contentSha256: sha256Text(cycleClaim),
+    };
+    const nameEvidenceId = evidenceId(nameEvidenceIdentity);
+    const cycleEvidenceId = evidenceId(cycleEvidenceIdentity);
     const cycleReviewId = reviewId('cycle', cycleId, 'cycle_unknown', record.rowIdentity);
     const recordReviewIds: string[] = [cycleReviewId];
     if (record.reviewState === 'manual_review') {
@@ -508,29 +633,13 @@ export function adaptP1Inventory(
     evidence.push({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id: nameEvidenceId,
-      subjectKind: 'scholarship',
-      subjectId: id,
-      fieldPath: 'name',
-      sourceId: sourceIdsByRow.get(record.sheetRow)?.[0] ?? null,
-      retrievedAt: pinned.capturedAt,
-      sourceRevision: pinned.spreadsheetRevisionId,
-      result: 'observed',
-      claim: nameClaim,
-      contentSha256: sha256Text(nameClaim),
+      ...nameEvidenceIdentity,
       reviewerState: record.reviewState,
     });
     evidence.push({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id: cycleEvidenceId,
-      subjectKind: 'cycle',
-      subjectId: cycleId,
-      fieldPath: 'cycle',
-      sourceId: sourceIdsByRow.get(record.sheetRow)?.[0] ?? null,
-      retrievedAt: pinned.capturedAt,
-      sourceRevision: pinned.spreadsheetRevisionId,
-      result: 'unverified',
-      claim: cycleClaim,
-      contentSha256: sha256Text(cycleClaim),
+      ...cycleEvidenceIdentity,
       reviewerState: 'unknown',
     });
     reviewItems.push({
@@ -593,13 +702,13 @@ export function adaptP1Inventory(
         },
         eligibility: {
           location: { raw: null, state: 'unknown' },
-          minimumGpa: { value: null, state: 'unknown' },
-          schoolTypes: { values: [], state: 'unknown' },
+          minimumGpa: { raw: null, value: null, state: 'unknown' },
+          schoolTypes: { raw: null, values: [], state: 'unknown' },
           focus: { raw: null, state: 'unknown' },
-          gapYear: 'unknown',
+          gapYear: { raw: null, value: null, state: 'unknown' },
         },
-        selection: { financialNeedPriority: 'unknown' },
-        renewal: 'unknown',
+        selection: { financialNeedPriority: { raw: null, value: null, state: 'unknown' } },
+        renewal: { raw: null, value: null, state: 'unknown' },
       },
     });
   }
@@ -632,7 +741,18 @@ export function adaptP1Inventory(
       .filter((value): value is string => Boolean(value))
       .sort();
     const claim = input.evidenceBasis.join(' | ') || `P1 classified source ${input.sourceIdentity} as ${input.architecture}.`;
-    const evdId = evidenceId('application_group', id, 'mode', claim);
+    const evidenceIdentity = {
+      subjectKind: 'application_group' as const,
+      subjectId: id,
+      fieldPath: 'mode',
+      sourceId,
+      retrievedAt: pinned.capturedAt,
+      sourceRevision: pinned.spreadsheetRevisionId,
+      result: input.reviewState === 'classified' ? 'observed' as const : 'unverified' as const,
+      claim,
+      contentSha256: sha256Text(claim),
+    };
+    const evdId = evidenceId(evidenceIdentity);
     const groupReviewIds: string[] = [];
     if (input.reviewState === 'manual_review') {
       const revId = reviewId('application_group', id, 'source_manual_review', input.sourceIdentity);
@@ -653,15 +773,7 @@ export function adaptP1Inventory(
     evidence.push({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id: evdId,
-      subjectKind: 'application_group',
-      subjectId: id,
-      fieldPath: 'mode',
-      sourceId,
-      retrievedAt: pinned.capturedAt,
-      sourceRevision: pinned.spreadsheetRevisionId,
-      result: input.reviewState === 'classified' ? 'observed' : 'unverified',
-      claim,
-      contentSha256: sha256Text(claim),
+      ...evidenceIdentity,
       reviewerState: input.reviewState,
     });
     applicationGroups.push({
@@ -696,25 +808,34 @@ export function adaptP1Inventory(
       targetKind: scholarshipId ? 'scholarship' : 'source_record',
       targetIds: scholarshipId ? [scholarshipId] : (sourceIdsByRow.get(record.sheetRow) ?? []),
       reviewItemIds: recordReviewIds.sort(),
+      studentFieldCompatibility: legacyStudentFieldCompatibility(record),
       legacyRecord: record,
     });
   }
 
   for (const duplicate of rawInput.duplicateNameReviewItems) {
-    const subjectId = duplicate.sheetRows.map((row) => recordByRow.get(row)?.rowIdentity).filter(Boolean).sort().join(':');
-    const id = reviewId('legacy_record', subjectId, 'identity_ambiguity', duplicate.normalizedName);
-    reviewItems.push({
-      schemaVersion: MODEL_SCHEMA_VERSION,
-      id,
-      subjectKind: 'legacy_record',
-      subjectId,
-      reason: 'identity_ambiguity',
-      state: 'open',
-      summary: `Duplicate normalized legacy name requires identity review: ${duplicate.normalizedName}.`,
-      evidenceIds: [],
-      owner: null,
-      targetStage: 'P3',
-    });
+    const groupRowIdentities = duplicate.sheetRows
+      .map((row) => recordByRow.get(row)?.rowIdentity)
+      .filter((value): value is string => Boolean(value))
+      .sort();
+    for (const subjectId of groupRowIdentities) {
+      const id = reviewId('legacy_record', subjectId, 'identity_ambiguity', [
+        duplicate.normalizedName,
+        groupRowIdentities,
+      ]);
+      reviewItems.push({
+        schemaVersion: MODEL_SCHEMA_VERSION,
+        id,
+        subjectKind: 'legacy_record',
+        subjectId,
+        reason: 'identity_ambiguity',
+        state: 'open',
+        summary: `Legacy record is one member of duplicate normalized name group: ${duplicate.normalizedName}.`,
+        evidenceIds: [],
+        owner: null,
+        targetStage: 'P3',
+      });
+    }
   }
 
   for (const excluded of rawInput.boundedCompleteness.excludedColumnHyperlinkReviewItems) {
@@ -761,4 +882,65 @@ export function roundTripP1Records(dataset: CanonicalDataset): P1Record[] {
     .slice()
     .sort((a, b) => a.sheetRow - b.sheetRow)
     .map((binding) => P1RecordSchema.parse(binding.legacyRecord));
+}
+
+export function canonicalRelationshipErrors(dataset: CanonicalDataset): string[] {
+  const sources = new Set(dataset.sources.map((item) => item.id));
+  const scholarships = new Set(dataset.scholarships.map((item) => item.id));
+  const groups = new Set(dataset.applicationGroups.map((item) => item.id));
+  const cycles = new Set(dataset.cycles.map((item) => item.id));
+  const evidence = new Set(dataset.evidence.map((item) => item.id));
+  const reviews = new Set(dataset.reviewItems.map((item) => item.id));
+  const legacyRecords = new Set(dataset.legacyBindings.map((item) => item.rowIdentity));
+  const errors: string[] = [];
+  const requireIds = (owner: string, ids: string[], available: Set<string>, kind: string) => {
+    for (const id of ids) if (!available.has(id)) errors.push(`${owner} references missing ${kind} ${id}`);
+  };
+
+  for (const source of dataset.sources) {
+    requireIds(source.id, source.parentSourceIds, sources, 'source');
+    requireIds(source.id, source.childSourceIds, sources, 'source');
+    requireIds(source.id, source.evidenceIds, evidence, 'evidence');
+    requireIds(source.id, source.reviewItemIds, reviews, 'review');
+  }
+  for (const scholarship of dataset.scholarships) {
+    requireIds(scholarship.id, scholarship.sourceIds, sources, 'source');
+    requireIds(scholarship.id, scholarship.sourceLinks.map((item) => item.sourceId), sources, 'source');
+    requireIds(scholarship.id, scholarship.applicationGroupIds, groups, 'application group');
+    requireIds(scholarship.id, scholarship.cycleIds, cycles, 'cycle');
+    requireIds(scholarship.id, scholarship.evidenceIds, evidence, 'evidence');
+    requireIds(scholarship.id, scholarship.reviewItemIds, reviews, 'review');
+  }
+  for (const group of dataset.applicationGroups) {
+    requireIds(group.id, group.sourceIds, sources, 'source');
+    requireIds(group.id, group.scholarshipIds, scholarships, 'scholarship');
+    requireIds(group.id, group.evidenceIds, evidence, 'evidence');
+    requireIds(group.id, group.reviewItemIds, reviews, 'review');
+  }
+  for (const cycle of dataset.cycles) {
+    requireIds(cycle.id, [cycle.scholarshipId], scholarships, 'scholarship');
+    if (cycle.applicationGroupId) requireIds(cycle.id, [cycle.applicationGroupId], groups, 'application group');
+    requireIds(cycle.id, cycle.evidenceIds, evidence, 'evidence');
+    requireIds(cycle.id, cycle.reviewItemIds, reviews, 'review');
+  }
+  const subjectSets = { source: sources, scholarship: scholarships, application_group: groups, cycle: cycles };
+  for (const item of dataset.evidence) {
+    requireIds(item.id, [item.subjectId], subjectSets[item.subjectKind], item.subjectKind);
+    if (item.sourceId) requireIds(item.id, [item.sourceId], sources, 'source');
+  }
+  for (const item of dataset.reviewItems) {
+    const subjects = item.subjectKind === 'legacy_record' ? legacyRecords : subjectSets[item.subjectKind];
+    requireIds(item.id, [item.subjectId], subjects, item.subjectKind);
+    requireIds(item.id, item.evidenceIds, evidence, 'evidence');
+  }
+  for (const binding of dataset.legacyBindings) {
+    requireIds(binding.id, binding.reviewItemIds, reviews, 'review');
+    requireIds(
+      binding.id,
+      binding.targetIds,
+      binding.targetKind === 'scholarship' ? scholarships : sources,
+      binding.targetKind,
+    );
+  }
+  return errors.sort();
 }

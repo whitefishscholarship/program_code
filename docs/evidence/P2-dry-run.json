@@ -9,9 +9,9 @@
     "spreadsheetRevisionId": "222",
     "capturedAt": "2026-08-24T04:14:24.027Z"
   },
-  "canonicalDatasetSha256": "727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1",
+  "canonicalDatasetSha256": "dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295",
   "identityDeterminism": {
-    "repeatedRunSha256": "727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1",
+    "repeatedRunSha256": "dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295",
     "byteIdentical": true
   },
   "counts": {
@@ -24,7 +24,7 @@
     "applicationGroups": 3,
     "cycles": 176,
     "evidenceItems": 572,
-    "reviewItems": 591,
+    "reviewItems": 592,
     "urlRoleOccurrences": 278,
     "sharedSourceGroups": 26,
     "identityBearingQueryOrFragmentSources": 15,
@@ -73,7 +73,15 @@
       "single_award_page",
       "unknown"
     ],
-    "coversEveryTaxonomy": true
+    "coversEveryTaxonomy": true,
+    "canonicalEntityFixtureCounts": {
+      "sources": 18,
+      "scholarships": 19,
+      "applicationGroups": 6,
+      "cycles": 19,
+      "evidence": 12,
+      "reviewItems": 12
+    }
   },
   "boundaries": {
     "spreadsheetReads": 0,
