@@ -40,6 +40,11 @@ to evolve machine state through their existing reviewed contracts.
 6. Run a regression test against the actual preserved P1 history. It must accept the
    exact delivery-candidate blob, reject using the Revision 3 current state as the
    historical proof, and reject a mutated historical blob.
+7. Discover every historically accepted delivery integration from the current Git
+   history and require the current state to retain its entire record exactly. Reject
+   deletion, downgrade to pending, or rebinding before iterating current integrations.
+8. Validate the canonical plan's exact revision header against `BUILD_STATE` and test
+   that agreement directly.
 
 Revision 3 is recorded as `attestation-gated`. The record does not self-certify
 acceptance: only the exact manifest-bound fresh-context review and direct-child
@@ -117,6 +122,41 @@ Repository state observed at `2026-08-25T01:02:20Z`:
   were absent as required before freeze.
 - The separate P2 worktree remained dirty and untouched. No spreadsheet, product,
   deployment-configuration, form, or provider effect occurred.
+
+## Independent-review remediation history
+
+The fresh-context reviewer rejected predecessor candidate
+`5913beef4f6654bcc926925688992d7cc2598e8b` at `2026-08-25T01:10:58Z` with critical 0,
+high 2, medium 0, low 0. The complete manifest and all 11 hashes were correct, and all
+P1 objects and attested blobs were preserved. The two high findings were:
+
+1. A later current state could remove or downgrade the accepted P1 integration, causing
+   the validator and original regression test to iterate zero accepted records and skip
+   every historical check.
+2. The canonical plan header still said Revision 2, and the validator checked only the
+   handoff/state revision agreement.
+
+The replacement candidate discovers accepted integrations from Git history, enforces
+exact current retention, adds deletion/downgrade/rebind regression cases, updates the
+plan header to Revision 3, and validates/tests exact plan/state revision agreement. The
+same reviewer must recheck the frozen replacement candidate; this evidence does not
+self-certify the remediation.
+
+Post-review remediation verification completed through `2026-08-25T01:15:15Z`:
+
+- `npm run typecheck` and the complete `npm test` suite passed from
+  `2026-08-25T01:14:28Z` through `2026-08-25T01:14:34Z`. The focused output was
+  `delivery state history: PASS (1 accepted integration; deletion/downgrade/rebind
+  rejected)`. It also asserts exact canonical-plan/state revision agreement.
+- The network-enabled `npm run build` passed from `2026-08-25T01:14:40Z` through
+  `2026-08-25T01:14:58Z`; it produced all routes, retained only the existing non-fatal
+  missing Google credential/sheet notices, and changed no configuration.
+- Prospective `npm run plan:check` ran from `2026-08-25T01:15:09Z` through
+  `2026-08-25T01:15:15Z` and reported exactly two expected errors: the absent Revision
+  3 review and absent committed attestation. The rejected predecessor's uncommitted
+  manifest was still present for this check and will be regenerated against the frozen
+  replacement candidate. No historical-integration or plan-revision error remained.
+- `git diff --check` passed at `2026-08-25T01:15:15Z`.
 
 ## Rollback
 

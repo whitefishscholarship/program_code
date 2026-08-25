@@ -14,6 +14,22 @@ export type HistoricalDeliveryState = {
   planRevision?: number;
 };
 
+export function changedAcceptedIntegration<T extends { stageId: string; status: string }>(
+  currentIntegrations: T[],
+  historicallyAcceptedIntegrations: T[],
+): string | undefined {
+  for (const historicalIntegration of historicallyAcceptedIntegrations) {
+    if (historicalIntegration.status !== 'accepted') continue;
+    const currentIntegration = currentIntegrations.find(
+      (item) => item.stageId === historicalIntegration.stageId,
+    );
+    if (!currentIntegration || !isDeepStrictEqual(currentIntegration, historicalIntegration)) {
+      return historicalIntegration.stageId;
+    }
+  }
+  return undefined;
+}
+
 export function expectedDeliveryCandidateState(
   baselineState: HistoricalDeliveryState,
   stageCandidateState: HistoricalDeliveryState,

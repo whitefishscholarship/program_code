@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 2
+Plan revision: 3
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -302,6 +302,12 @@ machine state through their ordinary contracts. That later evolution neither cha
 nor weakens the preserved integration because its candidate, manifest, review,
 attestation, identities, authority, paths, and blobs remain hash-bound and are
 revalidated from Git history.
+
+Every integration that has ever reached `accepted` in the current Git history is
+non-regressing machine state. The validator discovers those historical records and
+requires the current state to retain each one exactly. Deletion, downgrade to pending,
+or rebinding of any identity, authority path, manifest, review, baseline, or allowlist
+is invalid and cannot be used to skip historical validation.
 
 This mechanism is an exceptional delivery bridge, not a general post-attestation edit
 path. Each stage may have at most one delivery integration, and every commit is pinned.

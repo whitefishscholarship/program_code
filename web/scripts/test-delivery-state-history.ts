@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
+  changedAcceptedIntegration,
   isExactHistoricalDeliveryState,
   type HistoricalDeliveryState,
 } from './delivery-state-history';
@@ -47,6 +48,44 @@ function jsonAtCommit<T>(commit: string, relativePath: string): T {
 const currentState = readJson<CurrentBuildState>('docs/BUILD_STATE.json');
 const acceptedIntegrations = (currentState.deployment.deliveryIntegrations ?? []).filter(
   (integration) => integration.status === 'accepted',
+);
+assert.ok(acceptedIntegrations.length > 0, 'expected at least one historically accepted integration');
+
+assert.equal(
+  changedAcceptedIntegration(acceptedIntegrations, acceptedIntegrations),
+  undefined,
+  'exact accepted integration retention must pass',
+);
+assert.equal(
+  changedAcceptedIntegration([], acceptedIntegrations),
+  acceptedIntegrations[0].stageId,
+  'deleting an accepted integration must fail',
+);
+const downgradedIntegrations = JSON.parse(JSON.stringify(acceptedIntegrations)) as DeliveryIntegration[];
+downgradedIntegrations[0].status = 'authorized-pending';
+downgradedIntegrations[0].deliveryBaselineCommit = null;
+assert.equal(
+  changedAcceptedIntegration(downgradedIntegrations, acceptedIntegrations),
+  acceptedIntegrations[0].stageId,
+  'downgrading an accepted integration must fail',
+);
+const reboundIntegrations = JSON.parse(JSON.stringify(acceptedIntegrations)) as DeliveryIntegration[];
+reboundIntegrations[0].stageCandidateCommit = '0'.repeat(40);
+assert.equal(
+  changedAcceptedIntegration(reboundIntegrations, acceptedIntegrations),
+  acceptedIntegrations[0].stageId,
+  'rebinding an accepted integration must fail',
+);
+
+const canonicalPlan = fs.readFileSync(
+  path.join(repoRoot, 'docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md'),
+  'utf8',
+);
+const canonicalPlanRevision = Number(/^Plan revision: (\d+)$/m.exec(canonicalPlan)?.[1] ?? 0);
+assert.equal(
+  canonicalPlanRevision,
+  currentState.planRevision,
+  'canonical plan revision must match BUILD_STATE',
 );
 
 for (const integration of acceptedIntegrations) {
@@ -107,5 +146,5 @@ for (const integration of acceptedIntegrations) {
 }
 
 console.log(
-  `delivery state history: PASS (${acceptedIntegrations.length} accepted integration${acceptedIntegrations.length === 1 ? '' : 's'})`,
+  `delivery state history: PASS (${acceptedIntegrations.length} accepted integration${acceptedIntegrations.length === 1 ? '' : 's'}; deletion/downgrade/rebind rejected)`,
 );

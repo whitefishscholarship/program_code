@@ -14,6 +14,9 @@ Default branch: `main`
 - Amendment candidate: pre-freeze verification complete and ready to commit. Its exact
   post-freeze SHA is bound by `docs/evidence/PLAN-REV3-manifest.json` because a commit
   cannot embed its own content-derived identity.
+- Rejected predecessor: `5913beef4f6654bcc926925688992d7cc2598e8b` was rejected
+  with two high findings and is not authorized for delivery. The frozen replacement
+  candidate must be rechecked by the same independent reviewer.
 - Amendment attestation: pending; it must be the candidate's direct child and change
   exactly `docs/evidence/PLAN-REV3-manifest.json` and
   `docs/reviews/PLAN-REV3.json`.
@@ -41,6 +44,10 @@ mutation. Revision 3 reads the P1 delivery candidate named by the existing attes
 delivery manifest and compares that immutable candidate-tree state to the derived
 transition. Current stage state may then advance through the existing state machine,
 while all P1 objects, hashes, topology, authority, identities, and paths remain checked.
+It also discovers every historically accepted integration from Git history and requires
+its complete current record to remain exact, so deletion, downgrade, or rebinding cannot
+silently disable validation. The canonical plan revision header is checked against
+`BUILD_STATE` and covered by regression testing.
 
 Revision 3 is `attestation-gated`: the machine record does not predeclare acceptance.
 Only its exact manifest-bound fresh-context review and direct-child two-file attestation
@@ -63,7 +70,8 @@ candidate changes are this durable handoff record and the matching evidence reco
 - `npm run typecheck`: passed.
 - `npm test`: passed, including P1 inventory digest
   `dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2`
-  and `delivery state history: PASS (1 accepted integration)`.
+  and, after review remediation, `delivery state history: PASS (1 accepted integration;
+  deletion/downgrade/rebind rejected)` plus canonical plan/state revision agreement.
 - `npm run build`: the restricted attempt failed only on existing Google Fonts network
   access; the authorized retry passed and changed no configuration.
 - Prospective `npm run plan:check`: reported exactly the three expected absent
@@ -74,6 +82,12 @@ candidate changes are this durable handoff record and the matching evidence reco
   dirty paths, and no Revision 3 remote branch or pull request existed.
 
 Exact UTC command windows and outcomes are in `docs/evidence/PLAN-REV3.md`.
+
+After the rejected predecessor review, typecheck, the complete test suite, the
+network-enabled production build, and `git diff --check` passed again through
+`2026-08-25T01:15:15Z`. Prospective plan validation reported only the absent review and
+attestation because the uncommitted predecessor manifest remained present pending
+regeneration against the replacement candidate.
 
 ## Plan Revision 2 delivery integration
 

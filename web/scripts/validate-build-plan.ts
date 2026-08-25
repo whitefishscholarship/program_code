@@ -5,7 +5,10 @@ import path from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { fileURLToPath } from 'node:url';
 
-import { isExactHistoricalDeliveryState } from './delivery-state-history';
+import {
+  changedAcceptedIntegration,
+  isExactHistoricalDeliveryState,
+} from './delivery-state-history';
 
 type StageStatus =
   | 'planned'
@@ -648,6 +651,29 @@ if (state) {
 
   const deliveryAttestationTips = new Map<string, string>();
   const deliveryIntegrations = state.deployment.deliveryIntegrations ?? [];
+  const historicallyAcceptedIntegrations = new Map<string, DeliveryIntegration>();
+  for (const commit of gitLines(['log', '--reverse', '--format=%H', '--', 'docs/BUILD_STATE.json'])) {
+    const historicalState = jsonAtCommit<BuildState>(commit, 'docs/BUILD_STATE.json');
+    for (const historicalIntegration of historicalState?.deployment.deliveryIntegrations ?? []) {
+      if (historicalIntegration.status !== 'accepted') continue;
+      const canonicalIntegration = historicallyAcceptedIntegrations.get(historicalIntegration.stageId);
+      if (!canonicalIntegration) {
+        historicallyAcceptedIntegrations.set(
+          historicalIntegration.stageId,
+          JSON.parse(JSON.stringify(historicalIntegration)) as DeliveryIntegration,
+        );
+      } else if (!isDeepStrictEqual(canonicalIntegration, historicalIntegration)) {
+        fail(`${historicalIntegration.stageId} accepted delivery integration changed in Git history`);
+      }
+    }
+  }
+  const regressedIntegration = changedAcceptedIntegration(
+    deliveryIntegrations,
+    [...historicallyAcceptedIntegrations.values()],
+  );
+  if (regressedIntegration) {
+    fail(`${regressedIntegration} accepted delivery integration cannot be removed, downgraded, or rebound`);
+  }
   for (const integration of deliveryIntegrations) {
     if (
       !expectedStageIds.includes(integration.stageId) ||
@@ -1189,6 +1215,10 @@ if (state) {
   }
 
   const plan = content['docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md'];
+  const planRevisionMatch = /^Plan revision: (\d+)$/m.exec(plan);
+  if (Number(planRevisionMatch?.[1] ?? 0) !== state.planRevision) {
+    fail('Canonical plan revision does not match BUILD_STATE.json');
+  }
   for (const stage of state.stages) {
     if (!plan.includes(`### ${stage.id} — ${stage.name}`)) {
       fail(`Canonical plan is missing the exact heading for ${stage.id}: ${stage.name}`);
