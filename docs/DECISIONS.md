@@ -206,3 +206,28 @@ but are not rewritten or deleted.
 - Rollback: Revert the Revision 3 amendment before any later stage is accepted. Once a
   later stage depends on it, rollback requires another independently reviewed amendment;
   preserved P1 commits and attestations must never be rewritten.
+
+## D-016 — Enable an exact P2 delivery integration
+
+- Date: 2026-08-25
+- Status: candidate pending independent review and delivery
+- Decision: In Plan Revision 4, enable the existing hash-bound integration mechanism
+  only for P2 candidate `1a6376207eb467ff0977298de16a1c0d0db1b3cd` and canonical
+  attestation `cc277b34075f6d648ff3c71022fadf6a6c632b34`. Deliver Revision 4
+  first. Then merge exact `cc277b3` as the second parent of an integration candidate
+  whose first parent is the verified delivered Revision 4 `origin/main`; independently
+  review the complete integration and add its direct-child two-file delivery
+  attestation.
+- Evidence: `docs/evidence/PLAN-REV4.md` and
+  `docs/evidence/P2-delivery-authorization.md`
+- Reason: P2 was correctly accepted and attested while external delivery was prohibited.
+  Direct informed Git and Vercel authority arrived afterward, so it cannot be appended
+  to or used to rebind the immutable P2 attestation.
+- Impact: Exact P2 may be delivered without changing any preserved candidate,
+  manifest, review, or attestation blob. Revision 4 does not create standing delivery
+  authority for P3 or later stages and does not authorize spreadsheet access or writes,
+  product or deployment-configuration changes, form submissions, application
+  interactions, or provider contact.
+- Rollback: Before P2 delivery, revert only through a reviewed governance amendment.
+  After P2 delivery depends on Revision 4, any rollback must preserve the complete P2
+  integration and attestation history byte-for-byte.

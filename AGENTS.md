@@ -72,10 +72,12 @@ against the immutable delivery candidate named by its attested manifest. Later s
 may evolve the current `BUILD_STATE` only through the normal reviewed state machine;
 they must not weaken, replace, or reinterpret that historical integration proof.
 
-Plan Revision 2 adds one exception that preserves rather than replaces an attestation:
-an independently reviewed delivery integration may merge an exact previously attested
-stage into a separately delivered amended `origin/main`. The integration must use the
-exact parents, manifest, review, authority evidence, and branch-tip lock defined by the
+Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
+attestation: an independently reviewed delivery integration may merge an exact
+previously attested stage into a separately delivered amended `origin/main`. Each use
+must be enabled by a reviewed plan amendment that pins the exact stage candidate and
+attestation plus direct informed delivery authority. The integration must use the exact
+parents, manifest, review, authority evidence, and branch-tip lock defined by the
 canonical plan and `BUILD_STATE`. It never permits an ordinary post-attestation commit,
 candidate rewrite, attestation rebinding, or unreviewed merge resolution. Material plan
 amendments are themselves frozen, manifested, independently reviewed, and attested
@@ -103,7 +105,7 @@ only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile deliver
   repository policy permit it.
 - Follow the repository's established PR merge convention. Prefer a new clean
   branch and replay of stage-owned commits over risky conflict resolution.
-- For a declared Plan Revision 2 delivery integration, use the exact two-parent merge
+- For a declared exceptional delivery integration, use the exact two-parent merge
   and dedicated delivery attestation required by the canonical plan; do not replay or
   squash the preserved stage commits.
 - Never force-push, rewrite published history, use destructive reset/checkout

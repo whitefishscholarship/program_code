@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 3
+Plan revision: 4
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -267,7 +267,12 @@ unauthorized. If direct informed delivery authority arrives only after its canon
 attestation exists, that authority may not be appended to the stage branch and the stage
 candidate or attestation may not be amended, replaced, deleted, or rebound.
 
-Plan Revision 2 permits one narrow delivery integration when all of these conditions hold:
+Plan Revision 2 introduced a narrow per-stage delivery-integration framework. A stage
+may use it only when a later independently reviewed amendment pins that exact candidate,
+attestation, authority, and evidence paths. Plan Revision 4 enables the framework only
+for P2 candidate `1a6376207eb467ff0977298de16a1c0d0db1b3cd` and attestation
+`cc277b34075f6d648ff3c71022fadf6a6c632b34`. The integration is permitted only when all
+of these conditions hold:
 
 1. `docs/BUILD_STATE.json` pins the exact original candidate, canonical attestation,
    original baseline, direct authority evidence, and dedicated delivery manifest/review
@@ -670,7 +675,7 @@ Critical or high findings prevent acceptance. Medium and low findings must be fi
 carried into `docs/CURRENT_HANDOFF.md` with rationale, owner, and target stage. The
 reviewer does not edit the implementation and cannot approve its own repair.
 
-Material plan amendments and Revision 2 delivery integrations use the same independence,
+Material plan amendments and exceptional delivery integrations use the same independence,
 manifest completeness, hash binding, severity, disposition, and direct-child attestation
 standard. Their records use dedicated evidence, manifest, and review paths so they cannot
 replace a stage's canonical manifest or review.
@@ -731,7 +736,7 @@ contact with scholarship providers.
 
 ### Delivery integration
 
-When `BUILD_STATE` declares an authorized Revision 2 delivery integration, Git delivery
+When `BUILD_STATE` declares an authorized exceptional delivery integration, Git delivery
 uses the exact two-parent candidate and its exact direct-child delivery attestation. The
 validator confirms both parents, the complete change set, immutable original stage
 attestation blobs, current informed authority, independent acceptance, and the branch-tip

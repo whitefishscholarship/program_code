@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 3,
+  "planRevision": 4,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-24",
+  "lastUpdated": "2026-08-25",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -36,6 +36,15 @@
         "evidencePath": "docs/evidence/P1-delivery-authorization.md",
         "basis": "After being informed that the immutable accepted P1 attestation recorded an earlier no-delivery state, the user explicitly authorized Plan Revision 2 and a reviewed delivery path preserving candidate 92ee21095e959bd19ab641752308c0fd9b394b22 and attestation 20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5 byte-for-byte, plus P1 push, PR, merge, and resulting Vercel deployments.",
         "scope": "Deliver the independently accepted P1 candidate and exact attestation through the Plan Revision 2 hash-bound integration path, including authorized Git push, pull request, merge to main, and resulting Vercel Preview and Production deployments. No spreadsheet writes, product changes, deployment-configuration changes, form submissions, or provider contact are authorized."
+      },
+      {
+        "stageId": "P2",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/P2-delivery-authorization.md",
+        "basis": "After being informed that the immutable accepted P2 attestation could not be appended with later delivery authority, the user explicitly authorized Plan Revision 4 and a reviewed delivery path preserving candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd and attestation cc277b34075f6d648ff3c71022fadf6a6c632b34 byte-for-byte, plus the amendment and P2 Git and Vercel delivery effects.",
+        "scope": "Deliver the independently accepted Plan Revision 4 amendment, then deliver exact P2 through its hash-bound integration path, including authorized branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. No P3 implementation, spreadsheet access or writes, product or deployment-configuration changes, form submissions, application interactions, or provider contact are authorized."
       }
     ],
     "deliveryIntegrations": [
@@ -49,6 +58,21 @@
         "evidencePath": "docs/evidence/P1-delivery-authorization.md",
         "manifestPath": "docs/evidence/P1-delivery-manifest.json",
         "reviewPath": "docs/reviews/P1-delivery.json",
+        "governanceResolutionPaths": [
+          "docs/BUILD_STATE.json",
+          "docs/CURRENT_HANDOFF.md"
+        ]
+      },
+      {
+        "stageId": "P2",
+        "status": "authorized-pending",
+        "stageCandidateCommit": "1a6376207eb467ff0977298de16a1c0d0db1b3cd",
+        "stageAttestationCommit": "cc277b34075f6d648ff3c71022fadf6a6c632b34",
+        "originalBaselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
+        "deliveryBaselineCommit": null,
+        "evidencePath": "docs/evidence/P2-delivery-authorization.md",
+        "manifestPath": "docs/evidence/P2-delivery-manifest.json",
+        "reviewPath": "docs/reviews/P2-delivery.json",
         "governanceResolutionPaths": [
           "docs/BUILD_STATE.json",
           "docs/CURRENT_HANDOFF.md"
@@ -81,6 +105,22 @@
           "evidencePath": "docs/evidence/PLAN-REV3.md",
           "basis": "After the historical P1 delivery-state validation defect was explained, the user explicitly authorized Plan Revision 3, its commits, independent review, Git delivery, and the resulting Vercel Preview and Production deployments.",
           "scope": "Deliver only the independently accepted Plan Revision 3 governance amendment by branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. Afterward, resume P2 implementation and review locally. P2 delivery, spreadsheet writes, product changes, deployment-configuration changes, form submissions, and provider contact are not authorized."
+        }
+      },
+      {
+        "id": "PLAN-REV4",
+        "status": "attestation-gated",
+        "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
+        "evidencePath": "docs/evidence/PLAN-REV4.md",
+        "manifestPath": "docs/evidence/PLAN-REV4-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV4.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-08-25",
+          "evidencePath": "docs/evidence/PLAN-REV4.md",
+          "basis": "After the immutable P2 acceptance and delivery boundary were explained, the user explicitly authorized Plan Revision 4, its commits, independent review, Git delivery, and the resulting Vercel Preview and Production deployments.",
+          "scope": "Deliver only the independently accepted Plan Revision 4 governance amendment by branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. Afterward, deliver exact P2 candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd and attestation cc277b34075f6d648ff3c71022fadf6a6c632b34 through the reviewed integration path. P3 implementation, spreadsheet access or writes, product or deployment-configuration changes, form submissions, application interactions, and provider contact are not authorized."
         }
       }
     ]
