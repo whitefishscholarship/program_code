@@ -1,31 +1,32 @@
 # Current Handoff
 
 Last updated: 2026-08-25
-Plan revision: 4
+Plan revision: 5
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
 ## Current state
 
 - Active stage: none; P3 must not start
-- Verified Revision 4 baseline and current `origin/main`:
-  `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
-- Amendment branch: `codex/plan-rev4-p2-delivery`
-- Amendment candidate: pending freeze. Its exact post-freeze SHA is bound by
-  `docs/evidence/PLAN-REV4-manifest.json` because a commit
-  cannot embed its own content-derived identity.
-- Rejected predecessor: `13e93aea49df2e44925089ae4031dfa9b34f94ac` was rejected
-  with one medium handoff-consistency finding. The replacement marks obsolete Revision
-  3 action text historical and superseded; the same reviewer must recheck it.
-- Amendment attestation: pending; it must be the candidate's direct child and change
-  exactly `docs/evidence/PLAN-REV4-manifest.json` and
-  `docs/reviews/PLAN-REV4.json`.
+- Verified delivered Revision 4 baseline and current `origin/main`:
+  `08cb6809425036991400b539ca23a34915b3fe26`
+- Revision 5 branch: `codex/plan-rev5-standing-mandate`
+- Revision 5 candidate: pending freeze. Its exact post-freeze SHA will be bound by
+  `docs/evidence/PLAN-REV5-manifest.json`; a commit cannot embed its own content-derived
+  identity.
+- Revision 5 attestation: pending; it must be the candidate's direct child and add
+  exactly `docs/evidence/PLAN-REV5-manifest.json` and
+  `docs/reviews/PLAN-REV5.json`.
+- Preliminary P2 integration `6ff2acb83c75c254f559192ebdd23bc75eb4e10e` is local,
+  unpublished, unreviewed, unattested, and invalid for delivery because the required
+  history regression test exposed a latest-state equality defect. It will be rebuilt
+  cleanly from delivered Revision 5 `origin/main`.
 - Accepted P2 candidate: `1a6376207eb467ff0977298de16a1c0d0db1b3cd`
 - Canonical P2 attestation: `cc277b34075f6d648ff3c71022fadf6a6c632b34`
 - P2 manifest SHA-256:
   `4d47d562e26efe249f6a7be0ed656f1fddc1a17233378254772019cacd49ee8a`
 - P2 delivery: directly authorized but integration pending; P2 is not yet delivered to
-  `origin/main`.
+  `origin/main`. Candidate and attestation remain byte-for-byte unchanged.
 - Preserved P1 candidate: `92ee21095e959bd19ab641752308c0fd9b394b22`
 - Preserved P1 attestation: `20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`
 - P1 delivery candidate: `464eece0c05c97e014cca0955f0ab92998c1d97c`
@@ -33,9 +34,72 @@ Default branch: `main`
 - Durable P1 completion gate: satisfied on verified `origin/main`
 - Verified P1 baseline: `d374247156e3ed15d19c037473da8f76ceedb6ab`
 - Production spreadsheet: unset; mutation unauthorized
-- External data, product, or deployment-configuration mutations during Revision 4: none
+- Revision 4 candidate: `8881085e668bd268f92c6b1dc835eb4e194e6fd2`
+- Revision 4 attestation: `fb82df5a20e0eb7ce7cb0830e40709b6ca4f81fd`
+- Revision 4 merged through PR #12 at `08cb6809425036991400b539ca23a34915b3fe26`;
+  PR/main CI passed and Vercel Production completed. Preview was attempted but blocked
+  by the existing Vercel author-access rule; no configuration changed.
+- External data, product, or deployment-configuration mutations during Revision 5: none
 
-## Plan Revision 4 amendment
+## Plan Revision 5 amendment
+
+Revision 5 fixes only the regression test's invalid assumption that current state must
+differ from every historical delivery state. The newest exact delivery candidate may
+correctly be current state; older states may differ after later evolution. The revised
+test rejects deletion, downgrade, and rebinding for every accepted integration,
+revalidates every immutable historical candidate, rejects historical mutation, and
+adds a prospective latest-equality case. Production validator behavior and acceptance
+criteria do not change for delivery history; a new presence check prevents any P3-P8
+standing authorization from being removed, disabled, or rebound to another evidence
+path.
+
+Revision 5 also records Kelsey's approved standing operating mandate. After P2 is
+delivered, P3-P8 may proceed in order without repeated authorization for ordinary
+stage-scoped implementation, fresh review, commits, push, pull request, merge, and
+resulting Vercel deployments. Public pages/documents and the pinned testing spreadsheet
+may be read only when the active stage requires bounded input. Individual P3-P8
+delivery records in `BUILD_STATE` bind the shared authority evidence.
+
+Reserved effects still require new direct authority: any spreadsheet write; P9 or
+production spreadsheet identity/access/migration; deployment-configuration or schedule
+changes; paid/destructive actions; secrets; force-push or published-history rewrite;
+forms/application interactions; provider contact; gate weakening; and material scope
+expansion. P5 cannot perform its required writes, and P8 cannot configure schedules,
+under the standing mandate alone.
+
+Revision 5 must be verified, frozen, independently accepted, attested, and delivered
+before the P2 integration is rebuilt. P3 remains prohibited until exact P2 is delivered
+on verified `origin/main`.
+
+Pre-freeze verification completed through `2026-08-25T21:59:46Z`; the only subsequent
+candidate changes are this durable handoff record and its matching evidence record.
+`npm ci`, typecheck, and the complete test suite passed. The strengthened history test
+covered a two-integration fixture, every deletion/downgrade/rebind case, prospective
+latest-state equality, later non-integration evolution, exact historical candidates,
+and historical mutation rejection. Prospective plan validation reported only the three
+expected absent Revision 5 manifest/review/attestation gates. The restricted build
+failed only on existing Google Fonts network access; the authorized retry passed and
+changed no configuration. `git diff --check` passed. `HEAD` and `origin/main` were exact
+`08cb680`; exactly nine Revision 5 paths were dirty at `2026-08-25T22:00:12Z`, and no
+remote Revision 5 branch existed. After the final mandate-presence validator guard was
+added, typecheck, the full suite, prospective plan validation, and the production build
+passed again with the same
+expected pre-attestation result. Exact UTC windows and outcomes are in
+`docs/evidence/PLAN-REV5.md`.
+
+Current required next actions:
+
+1. Complete Revision 5 verification, freeze its candidate, generate the complete
+   manifest, obtain fresh-context read-only acceptance, and create the direct-child
+   two-file attestation.
+2. Push, open, verify, and merge Revision 5 under the approved Git/Vercel authority.
+3. Create a new clean P2 integration branch from delivered Revision 5 `origin/main`;
+   use exact `cc277b3` as second parent and reconcile only `BUILD_STATE` and this
+   handoff.
+4. Run the complete P2 matrix, freeze, manifest, obtain a separate fresh review, attest,
+   push, open, verify, and merge P2. Stop before P3.
+
+## Historical Plan Revision 4 amendment (completed)
 
 Revision 4 enables the existing independently reviewed delivery-integration mechanism
 only for exact P2 candidate `1a63762` and exact attestation `cc277b3`. It preserves both
@@ -49,9 +113,9 @@ pull request, merge, and resulting Vercel deployments. The authority excludes P3
 implementation, spreadsheet access or writes, product or deployment-configuration
 changes, form submissions, application interactions, and provider contact.
 
-The request for a future preauthorization mechanism is not treated as unbounded current
-authority. A standing operating mandate must be stated in plain English, independently
-reviewed, and adopted separately after P2 delivery.
+The Revision 4 request for a future preauthorization mechanism was not treated as
+unbounded authority. Revision 5 now records the separately approved bounded mandate;
+its current terms above supersede this historical pending statement.
 
 P2's fresh-context reviewer accepted exact candidate `1a63762` against baseline
 `6a6d643` with critical 0, high 0, medium 0, low 1. The sole low finding was stale
@@ -78,7 +142,7 @@ candidate changes are this durable handoff record and its matching evidence reco
 
 Exact UTC command windows and outcomes are in `docs/evidence/PLAN-REV4.md`.
 
-Required next actions:
+Historical Revision 4 next actions (completed or superseded by Revision 5):
 
 1. Complete verification, freeze Revision 4, generate its complete manifest, obtain a
    fresh-context read-only review, and add only its manifest/review in the direct-child

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 4,
+  "planRevision": 5,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-08-25",
   "repository": {
@@ -45,6 +45,60 @@
         "evidencePath": "docs/evidence/P2-delivery-authorization.md",
         "basis": "After being informed that the immutable accepted P2 attestation could not be appended with later delivery authority, the user explicitly authorized Plan Revision 4 and a reviewed delivery path preserving candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd and attestation cc277b34075f6d648ff3c71022fadf6a6c632b34 byte-for-byte, plus the amendment and P2 Git and Vercel delivery effects.",
         "scope": "Deliver the independently accepted Plan Revision 4 amendment, then deliver exact P2 through its hash-bound integration path, including authorized branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. No P3 implementation, spreadsheet access or writes, product or deployment-configuration changes, form submissions, application interactions, or provider contact are authorized."
+      },
+      {
+        "stageId": "P3",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "After P2 is accepted and delivered, implement and deliver P3 only under its canonical contract, including bounded public read-only sources, minimum required testing-sheet read-only access, commits, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No spreadsheet write, production/P9 action, deployment-configuration change, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P4",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "After P3 is accepted and delivered, implement and deliver P4 only under its canonical contract, including bounded public read-only sources, minimum required testing-sheet read-only access, commits, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No spreadsheet write, production/P9 action, deployment-configuration change, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P5",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "Prepare and deliver P5 only after P4 is accepted and delivered and after separate direct informed authority exists for every required testing-sheet write. Standing authority covers local proposals, evidence, review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments, but it does not authorize any spreadsheet mutation, production/P9 action, deployment-configuration change, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P6",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "After P5 is accepted and delivered, implement and deliver P6 only under its canonical contract, including bounded public read-only sources, minimum required testing-sheet read-only access, commits, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No spreadsheet write, production/P9 action, deployment-configuration change, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P7",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "After P6 is accepted and delivered, implement and deliver P7's explicit product/API/UI contract, including commits, browser QA, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No spreadsheet write, production/P9 action, deployment-configuration change, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P8",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-25",
+        "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
+        "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
+        "scope": "After P7 is accepted and delivered, implement and deliver P8 only under its canonical contract, including local/read-only monitoring logic, dry runs, commits, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No deployment-configuration or schedule change, spreadsheet write, production/P9 action, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
       }
     ],
     "deliveryIntegrations": [
@@ -121,6 +175,22 @@
           "evidencePath": "docs/evidence/PLAN-REV4.md",
           "basis": "After the immutable P2 acceptance and delivery boundary were explained, the user explicitly authorized Plan Revision 4, its commits, independent review, Git delivery, and the resulting Vercel Preview and Production deployments.",
           "scope": "Deliver only the independently accepted Plan Revision 4 governance amendment by branch push, pull request, merge to main, and resulting Vercel Preview and Production deployments. Afterward, deliver exact P2 candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd and attestation cc277b34075f6d648ff3c71022fadf6a6c632b34 through the reviewed integration path. P3 implementation, spreadsheet access or writes, product or deployment-configuration changes, form submissions, application interactions, and provider contact are not authorized."
+        }
+      },
+      {
+        "id": "PLAN-REV5",
+        "status": "attestation-gated",
+        "baselineCommit": "08cb6809425036991400b539ca23a34915b3fe26",
+        "evidencePath": "docs/evidence/PLAN-REV5.md",
+        "manifestPath": "docs/evidence/PLAN-REV5-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV5.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-08-25",
+          "evidencePath": "docs/evidence/PLAN-REV5.md",
+          "basis": "After the latest-delivery equality regression and the proposed bounded autonomy policy were explained in plain English, the user approved the recommended Revision 5 standing mandate and directed Codex to resume P2 delivery.",
+          "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify Plan Revision 5 and its resulting Vercel Preview and Production deployments, then rebuild and deliver exact P2 through the reviewed integration path. Revision 5 also records bounded P3-P8 standing authority. Reserved effects remain excluded by docs/evidence/STANDING-OPERATING-MANDATE.md."
         }
       }
     ]
