@@ -46,6 +46,44 @@ function jsonAtCommit<T>(commit: string, relativePath: string): T {
   ) as T;
 }
 
+function jsonAtCommitIfAvailable<T>(commit: string, relativePath: string): T | null {
+  try {
+    return JSON.parse(
+      execFileSync('git', ['show', `${commit}:${relativePath}`], {
+        cwd: repoRoot,
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }),
+    ) as T;
+  } catch {
+    return null;
+  }
+}
+
+function portablePendingStageFixture(
+  baseline: HistoricalDeliveryState,
+  stageId: string,
+): HistoricalDeliveryState {
+  const fixture = JSON.parse(JSON.stringify(baseline)) as HistoricalDeliveryState;
+  const stageIndex = fixture.stages.findIndex(
+    (stage) => (stage as { id?: string }).id === stageId,
+  );
+  assert.ok(stageIndex >= 0, `${stageId} must exist in the portable stage fixture`);
+  fixture.stages = fixture.stages.map((stage, index) =>
+    index === stageIndex
+      ? {
+          ...(stage as Record<string, unknown>),
+          status: 'accepted',
+          baselineCommit: 'e'.repeat(40),
+        }
+      : stage,
+  );
+  fixture.activeStageId = null;
+  fixture.nextPermittedStageId =
+    (fixture.stages[stageIndex + 1] as { id?: string } | undefined)?.id ?? null;
+  return fixture;
+}
+
 const currentState = readJson<CurrentBuildState>('docs/BUILD_STATE.json');
 const acceptedIntegrations = (currentState.deployment.deliveryIntegrations ?? []).filter(
   (integration) => integration.status === 'accepted',
@@ -131,27 +169,47 @@ const pendingIntegration = (currentState.deployment.deliveryIntegrations ?? []).
 );
 if (pendingIntegration) {
   const prospectiveBaseline = currentState as HistoricalDeliveryState;
-  const prospectiveStageState = jsonAtCommit<HistoricalDeliveryState>(
+  const exactPendingStageState = jsonAtCommitIfAvailable<HistoricalDeliveryState>(
     pendingIntegration.stageCandidateCommit,
     'docs/BUILD_STATE.json',
   );
-  const prospectiveDeliveryBaseline = 'f'.repeat(40);
-  const prospectiveCurrentState = expectedDeliveryCandidateState(
+  const portableStageState = portablePendingStageFixture(
     prospectiveBaseline,
-    prospectiveStageState,
     pendingIntegration.stageId,
-    prospectiveDeliveryBaseline,
   );
-  assert.equal(
-    isExactHistoricalDeliveryState(
-      prospectiveCurrentState,
+  const prospectiveStageStates = [
+    { source: 'portable clean-clone fixture', state: portableStageState },
+    ...(exactPendingStageState
+      ? [{ source: 'exact locally reachable candidate', state: exactPendingStageState }]
+      : []),
+  ];
+  for (const prospectiveStageState of prospectiveStageStates) {
+    const prospectiveDeliveryBaseline = 'f'.repeat(40);
+    const prospectiveCurrentState = expectedDeliveryCandidateState(
       prospectiveBaseline,
-      prospectiveStageState,
+      prospectiveStageState.state,
       pendingIntegration.stageId,
       prospectiveDeliveryBaseline,
-    ),
-    true,
-    'the newest exact delivery state may also be the current BUILD_STATE',
+    );
+    assert.equal(
+      isExactHistoricalDeliveryState(
+        prospectiveCurrentState,
+        prospectiveBaseline,
+        prospectiveStageState.state,
+        pendingIntegration.stageId,
+        prospectiveDeliveryBaseline,
+      ),
+      true,
+      `the newest exact delivery state may equal current state using ${prospectiveStageState.source}`,
+    );
+  }
+  const portableStage = portableStageState.stages.find(
+    (stage) => (stage as { id?: string }).id === pendingIntegration.stageId,
+  ) as { status?: string } | undefined;
+  assert.equal(
+    portableStage?.status,
+    'accepted',
+    'the portable latest-state fixture must represent the pending stage as accepted',
   );
 }
 

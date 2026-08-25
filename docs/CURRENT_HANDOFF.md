@@ -10,11 +10,15 @@ Default branch: `main`
 - Active stage: none; P3 must not start
 - Verified delivered Revision 4 baseline and current `origin/main`:
   `08cb6809425036991400b539ca23a34915b3fe26`
-- Revision 5 branch: `codex/plan-rev5-standing-mandate`
+- Current replacement Revision 5 branch: `codex/plan-rev5-standing-mandate-ci`
 - Preliminary Revision 5 candidate `4f034bb5eaedb64c16f76665aaf6057c2565416c`
   was independently rejected C0/H1/M0/L0 because its presence-only guard was not
   durably bound to immutable history. It must never be attested or delivered.
-- Replacement Revision 5 candidate: pending freeze. Its exact post-freeze SHA will be bound by
+- First accepted replacement candidate `17dd49f2e2b2b96e628df802f2562479dcf435db`
+  and direct-child attestation `ec1737670be24e23ada3f377eb75c34b1747898c`
+  remain byte-for-byte on the first delivery branch. PR #13 was not merged because a
+  clean GitHub runner lacked the unpublished P2 object required by the new test.
+- Clean-clone replacement Revision 5 candidate: pending freeze. Its exact post-freeze SHA will be bound by
   `docs/evidence/PLAN-REV5-manifest.json`; a commit cannot embed its own content-derived
   identity.
 - Revision 5 attestation: pending; it must be the candidate's direct child and add
@@ -103,6 +107,26 @@ case, and plan validation reported only the expected missing review/attestation.
 network-enabled build passed from `2026-08-25T22:16:00Z` through
 `2026-08-25T22:16:26Z`; `git diff --check` passed. The replacement has twelve candidate
 paths and one uncommitted manifest path pending regeneration against the frozen SHA.
+
+The reviewer then accepted exact candidate `17dd49f` at
+`2026-08-25T22:21:36Z`, C0/H0/M0/L0, and exact attestation `ec17376` was pushed in PR
+#13. Vercel Preview was blocked by the existing author-access rule. GitHub Actions run
+`32905946430` failed the delivery-history test at `2026-08-25T22:24:41Z` because its
+clean clone did not contain unpublished P2 candidate `1a63762`; the PR was not merged.
+The production validator already handles an unreachable pending object and will require
+the exact object when the later two-parent integration makes it reachable. The clean
+replacement test uses exact P2 state when available and a deterministic accepted-stage
+fixture otherwise. The failed branch remains unchanged and will not be force-pushed or
+merged; no deployment configuration changed.
+
+On the clean replacement, `npm ci` installed the same 565 locked packages with the
+unchanged audit result. Typecheck, the full suite, and prospective plan validation ran
+from `2026-08-25T22:28:18Z` through `2026-08-25T22:28:39Z`: typecheck/tests passed,
+including the always-exercised portable latest-state fixture and locally reachable exact
+P2 path, while plan validation reported only the expected missing manifest, review, and
+attestation. The network-enabled build and `git diff --check` passed through
+`2026-08-25T22:29:08Z`. The complete replacement remains confined to the same twelve
+authorized governance, validator, test, evidence, and handoff paths.
 
 Current required next actions:
 

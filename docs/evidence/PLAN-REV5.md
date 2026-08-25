@@ -173,6 +173,56 @@ Replacement verification after the preliminary rejection:
   `web/scripts/test-governance-history.ts`. The only non-candidate path is the
   uncommitted manifest, which will be regenerated against the frozen replacement SHA.
 
+## First delivery attempt and clean-clone remediation
+
+The same independent reviewer accepted exact candidate
+`17dd49f2e2b2b96e628df802f2562479dcf435db` at
+`2026-08-25T22:21:36Z`, C0/H0/M0/L0, against manifest SHA-256
+`399a168828783fcd0f9cb693e89d6bc1155e9fa5e120fd8a30874287b0b279b3`.
+Its exact direct-child two-file attestation is
+`ec1737670be24e23ada3f377eb75c34b1747898c`. Both commits were pushed unchanged on
+`codex/plan-rev5-standing-mandate`, and PR #13 was opened. Vercel Preview was blocked
+by the existing author-access rule. GitHub Actions run `32905946430` then failed
+`npm test` at `2026-08-25T22:24:41Z`, so the PR was not merged.
+
+The failure exposed a clean-clone portability defect in the new test, not a validator
+or delivery-state defect. Local Git contained unpublished P2 candidate
+`1a6376207eb467ff0977298de16a1c0d0db1b3cd`, so the prospective pending-integration
+case loaded its `BUILD_STATE` directly. A clean GitHub runner correctly lacked that
+unmerged object even with `fetch-depth: 0`, causing `git show` to exit 128 before the
+assertion ran. The production validator already treats a pending, not-yet-reachable
+stage object as unavailable and performs the exact candidate check once the two-parent
+delivery integration makes it reachable.
+
+The failed delivery attestation and PR branch remain byte-for-byte and will not be
+amended, force-pushed, or merged. A clean replacement branch
+`codex/plan-rev5-standing-mandate-ci` was created from exact `origin/main` `08cb680` and
+replayed only the two pre-attestation candidate commits. The test now uses the exact
+pending-stage object when available and otherwise constructs a deterministic accepted
+stage-state fixture from current machine state. Both paths exercise the same
+`expectedDeliveryCandidateState` and `isExactHistoricalDeliveryState` logic. Exact P2
+candidate validation remains mandatory in the later two-parent integration, where the
+object is necessarily reachable. No CI/deployment configuration or accepted historical
+artifact changed.
+
+Clean-clone replacement verification:
+
+- `npm ci` installed the same 565 locked packages before the final matrix and reported
+  the unchanged 21 audit findings (1 low, 7 moderate, 12 high, 1 critical). No audit
+  fix, dependency, metadata, or lockfile change was made.
+- `npm run typecheck -- --incremental false`, the complete `npm test`, and prospective
+  `npm run plan:check` ran from `2026-08-25T22:28:18Z` through
+  `2026-08-25T22:28:39Z`. Typecheck and all tests passed. The portable clean-clone
+  latest-state fixture is always exercised; the exact locally reachable P2 candidate
+  path also passed. Plan validation reported exactly the three expected pre-manifest
+  errors: missing manifest, missing review, and missing committed attestation.
+- The network-enabled `npm run build` passed through `2026-08-25T22:29:08Z`, including
+  TypeScript and every existing route. Existing missing Google service-account and
+  sheet environment notices remained non-fatal.
+- `git diff --check` passed at `2026-08-25T22:29:08Z`. Only the test, this evidence,
+  and the handoff differed from the replayed pre-attestation candidate at that time.
+  The complete baseline-to-candidate set remains the same twelve authorized paths.
+
 Repository state observed at `2026-08-25T22:00:12Z`:
 
 - `HEAD` and `origin/main` were exact
