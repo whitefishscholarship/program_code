@@ -21,8 +21,12 @@ Default branch: `main`
   `6e28ab95a6e707167ff51436a140669369f95a3a` (C0/H2/M0/L0), with rejected
   uncommitted manifest digest
   `c1d83fa89a96dc2d991e3938e032f457318caf165382f20726f7c45e0042bbcb`.
-  Neither rejected candidate may be attested or delivered. Remediation checkpoints:
-  `e805e49` and `d4ee469`.
+  Second rejected replacement:
+  `715a4d32b9d7c292c38eb9034987d6ec6243f8fc` (C0/H2/M0/L0), with rejected
+  uncommitted manifest digest
+  `1f707dce20fca72c3589ab2e25c97456f7f7bec53fa4ba933dd16f5c91a9641c`.
+  No rejected candidate may be attested or delivered. Remediation checkpoints:
+  `e805e49`, `d4ee469`, and `03421b3`.
 - Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
@@ -48,7 +52,9 @@ Default branch: `main`
   no-submit public-form reading, explicit access review, and schema-valid unverified P2
   fixture graphs derived only from successful work results. Successful Source URLs
   preserve provider hosts, page parameters, and fragments; receipt history is loaded
-  only from the implementation-owned append-only store.
+  only from an implementation-owned append-only directory that can be reopened after
+  interruption. Nested form controls are removed before label/title extraction so
+  response text is never recorded.
 - Deterministic fixture denominator: 34 work items; 34 processed, 27 successful, seven
   explicit failure/review outcomes, zero unaccounted remaining. All seven failures have
   a canonical Source, Evidence item, and Review Item.
@@ -77,11 +83,17 @@ Default branch: `main`
   exactly the expected missing P3 manifest/review attestation and no other error. Exact
   UTC windows and outcomes are historical in `docs/evidence/P3.md`; that candidate was
   rejected and the final replacement matrix is pending.
-- The final replacement matrix passed through `2026-08-26T23:22:29Z`: exact locked
+- The second replacement matrix passed through `2026-08-26T23:22:29Z`: exact locked
   install, deterministic acquisition check at `2a826bde49be`, typecheck, complete
   tests, permitted network build, and root diff check. Prospective plan validation
   reported exactly the expected missing P3 manifest/review attestation and no other
-  error. Exact UTC windows are in `docs/evidence/P3.md`.
+  error. That candidate was rejected; exact UTC windows are historical in
+  `docs/evidence/P3.md`.
+- The fourth candidate matrix passed through `2026-08-26T23:35:06Z`: exact locked
+  install, deterministic acquisition check at `2a826bde49be`, typecheck, complete
+  tests (including nested-response and restart-resume regressions), permitted network
+  build, and root diff check. Prospective plan validation reported only the expected
+  missing P3 manifest/review attestation.
 - The immutable replacement candidate, complete manifest, reviewer recheck, and exact
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
