@@ -25,8 +25,12 @@ Default branch: `main`
   `715a4d32b9d7c292c38eb9034987d6ec6243f8fc` (C0/H2/M0/L0), with rejected
   uncommitted manifest digest
   `1f707dce20fca72c3589ab2e25c97456f7f7bec53fa4ba933dd16f5c91a9641c`.
+  Third rejected replacement:
+  `118006a8bccdbee91fcce000e56ac958ab938c04` (C0/H2/M0/L0), with rejected
+  uncommitted manifest digest
+  `0f5334a9c6b4d7c392cc2b53018f899fc21867e7862765f358d59a3b4d9fd0bc`.
   No rejected candidate may be attested or delivered. Remediation checkpoints:
-  `e805e49`, `d4ee469`, and `03421b3`.
+  `e805e49`, `d4ee469`, `03421b3`, and `5b2fda0`.
 - Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
@@ -53,8 +57,9 @@ Default branch: `main`
   fixture graphs derived only from successful work results. Successful Source URLs
   preserve provider hosts, page parameters, and fragments; receipt history is loaded
   only from an implementation-owned append-only directory that can be reopened after
-  interruption. Nested form controls are removed before label/title extraction so
-  response text is never recorded.
+  interruption and whose receipts require a runtime-held HMAC integrity key. Form
+  labels/titles use only direct structural text or explicit accessible-name attributes,
+  so descendant custom-control response text is never recorded.
 - Deterministic fixture denominator: 34 work items; 34 processed, 27 successful, seven
   explicit failure/review outcomes, zero unaccounted remaining. All seven failures have
   a canonical Source, Evidence item, and Review Item.
@@ -64,7 +69,7 @@ Default branch: `main`
 - Acquisition report SHA-256:
   `2a826bde49befb06987af6e662c242cb7e4ce3b9c6c7b72233594e042cd46987`;
   completeness report SHA-256:
-  `bebf5ce2a2fe92a684487238e2ca761babedb739b58ea4b5f5f2f7e32156957c`.
+  `d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020`.
 - Three bounded public landing pages were read with Firecrawl at
   `2026-08-26T22:38:00Z` for architecture observations only: NFU, FVCC AcademicWorks,
   and FIRST. No child crawl, form/application interaction, authentication, factual
@@ -89,11 +94,17 @@ Default branch: `main`
   reported exactly the expected missing P3 manifest/review attestation and no other
   error. That candidate was rejected; exact UTC windows are historical in
   `docs/evidence/P3.md`.
-- The fourth candidate matrix passed through `2026-08-26T23:35:06Z`: exact locked
+- The third replacement matrix passed through `2026-08-26T23:35:06Z`: exact locked
   install, deterministic acquisition check at `2a826bde49be`, typecheck, complete
   tests (including nested-response and restart-resume regressions), permitted network
   build, and root diff check. Prospective plan validation reported only the expected
-  missing P3 manifest/review attestation.
+  missing P3 manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The fifth candidate matrix passed through `2026-08-26T23:47:02Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including authenticated-rewrite and custom-control response regressions, permitted
+  network build, and root diff check. Prospective plan validation reported only the
+  expected missing P3 manifest/review attestation.
 - The immutable replacement candidate, complete manifest, reviewer recheck, and exact
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
