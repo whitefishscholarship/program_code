@@ -1,4 +1,4 @@
-import { createHash } from 'node:crypto';
+import { createHash, createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -286,9 +286,10 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
   const form = $('form').first();
   if (!form.length) throw new Error('Public-form fixture contains no form element');
   const heading = $('h1').first().length ? $('h1').first() : $('title').first();
-  const headingClone = heading.clone();
-  headingClone.find('input, select, textarea, option, button, script, style').remove();
-  const title = cleanText(headingClone.text()) || 'Public form';
+  const headingDirectText = heading.contents()
+    .filter((_, child) => child.type === 'text')
+    .map((_, child) => $(child).text()).get().join(' ');
+  const title = cleanText(String(heading.attr('aria-label') ?? headingDirectText)) || 'Public form';
   const rawAction = String(form.attr('action') ?? '').trim();
   let actionUrl: string | null = null;
   if (rawAction) actionUrl = canonicalizeAcquisitionUrl(rawAction, sourceUrl).url;
@@ -299,9 +300,11 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
     if (seenElements.has(element)) return;
     seenElements.add(element);
     const node = $(element);
-    const labelClone = node.clone();
-    labelClone.find('input, select, textarea, option, button, script, style').remove();
-    const label = cleanText(labelClone.text());
+    if (node.is('[contenteditable], output, [role="textbox"], [role="combobox"], [role="listbox"], [role="option"], [role="searchbox"], [role="slider"], [role="spinbutton"]')) return;
+    const directText = node.contents()
+      .filter((__, child) => child.type === 'text')
+      .map((__, child) => $(child).text()).get().join(' ');
+    const label = cleanText(String(node.attr('data-question-title') ?? node.attr('aria-label') ?? directText));
     if (!label) return;
     const container = node.closest('[role="listitem"], label, fieldset, [data-question]');
     let controls = (container.length ? container : node.parent()).find('input, select, textarea');
@@ -377,6 +380,7 @@ export interface CompletenessReceipt {
   nextIndex: number;
   previousReceiptSha256: string | null;
   receiptSha256: string;
+  receiptMac: string;
   succeededKeys: string[];
   failedKeys: string[];
   failures: WorkFailure[];
@@ -404,10 +408,12 @@ export interface ReceiptStore {
   read(receiptSha256: string): CompletenessReceipt | null;
 }
 
-const receiptStoreState = new WeakMap<ReceiptStore, string>();
+const receiptStoreState = new WeakMap<ReceiptStore, { directory: string; integrityKey: Buffer }>();
 
-export function createReceiptStore(directory: string): ReceiptStore {
+export function createReceiptStore(directory: string, integrityKey: Uint8Array): ReceiptStore {
+  if (integrityKey.byteLength < 32) throw new Error('Receipt integrity key must contain at least 32 bytes');
   const resolvedDirectory = path.resolve(directory);
+  const key = Buffer.from(integrityKey);
   fs.mkdirSync(resolvedDirectory, { recursive: true, mode: 0o700 });
   const store: ReceiptStore = {
     read(receiptSha256) {
@@ -416,17 +422,27 @@ export function createReceiptStore(directory: string): ReceiptStore {
       if (!fs.existsSync(receiptPath)) return null;
       const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8')) as CompletenessReceipt;
       if (receipt.receiptSha256 !== receiptSha256) throw new Error('Stored receipt filename and digest differ');
+      const suppliedMac = Buffer.from(receipt.receiptMac ?? '', 'hex');
+      const unsigned = structuredClone(receipt) as Partial<CompletenessReceipt>;
+      delete unsigned.receiptMac;
+      const expectedMac = createHmac('sha256', key).update(JSON.stringify(unsigned)).digest();
+      if (suppliedMac.length !== expectedMac.length || !timingSafeEqual(suppliedMac, expectedMac)) {
+        throw new Error('Stored receipt authentication failed');
+      }
       return receipt;
     },
   };
-  receiptStoreState.set(store, resolvedDirectory);
+  receiptStoreState.set(store, { directory: resolvedDirectory, integrityKey: key });
   return Object.freeze(store);
 }
 
 function commitReceipt(store: ReceiptStore, receipt: CompletenessReceipt): void {
-  const directory = receiptStoreState.get(store);
-  if (!directory) throw new Error('Receipt store must be created by createReceiptStore');
-  const receiptPath = path.join(directory, `${receipt.receiptSha256}.json`);
+  const state = receiptStoreState.get(store);
+  if (!state) throw new Error('Receipt store must be created by createReceiptStore');
+  const receiptPath = path.join(state.directory, `${receipt.receiptSha256}.json`);
+  const unsigned = structuredClone(receipt) as Partial<CompletenessReceipt>;
+  delete unsigned.receiptMac;
+  receipt.receiptMac = createHmac('sha256', state.integrityKey).update(JSON.stringify(unsigned)).digest('hex');
   const serialized = `${JSON.stringify(receipt, null, 2)}\n`;
   try {
     fs.writeFileSync(receiptPath, serialized, { flag: 'wx', mode: 0o600 });
@@ -436,7 +452,7 @@ function commitReceipt(store: ReceiptStore, receipt: CompletenessReceipt): void 
   }
 }
 
-function receiptDigest(receipt: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>): string {
+function receiptDigest(receipt: Omit<CompletenessReceipt, 'receiptSha256' | 'receiptMac' | 'cursor'>): string {
   return sha256Text(JSON.stringify(receipt));
 }
 
@@ -464,8 +480,9 @@ function validateReceiptLedger(items: AcquisitionWorkItem[], receipts: Completen
     const receiptSha256 = receipt.receiptSha256;
     const digestBody = structuredClone(receipt) as Partial<CompletenessReceipt>;
     delete digestBody.receiptSha256;
+    delete digestBody.receiptMac;
     delete digestBody.cursor;
-    if (receiptDigest(digestBody as Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>) !== receiptSha256) throw new Error('Receipt ledger digest mismatch');
+    if (receiptDigest(digestBody as Omit<CompletenessReceipt, 'receiptSha256' | 'receiptMac' | 'cursor'>) !== receiptSha256) throw new Error('Receipt ledger digest mismatch');
     const runKeys = [...receipt.succeededKeys, ...receipt.failedKeys];
     const expected = keys.slice(receipt.startIndex, receipt.nextIndex);
     if (new Set(runKeys).size !== runKeys.length || JSON.stringify([...runKeys].sort()) !== JSON.stringify([...expected].sort())) {
@@ -563,7 +580,7 @@ export async function runBoundedQueue(
   const remaining = items.length - nextIndex;
   const priorSuccesses = previousReceipts.reduce((count, receipt) => count + receipt.succeededThisRun, 0);
   const priorFailures = previousReceipts.reduce((count, receipt) => count + receipt.failedThisRun, 0);
-  const body: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'> = {
+  const body: Omit<CompletenessReceipt, 'receiptSha256' | 'receiptMac' | 'cursor'> = {
     schemaVersion: ACQUISITION_SCHEMA_VERSION,
     inputSha256,
     denominator: items.length,
@@ -589,6 +606,7 @@ export async function runBoundedQueue(
   const receipt: CompletenessReceipt = {
     ...body,
     receiptSha256,
+    receiptMac: '',
     cursor: remaining > 0 ? encodeCursor({ schemaVersion: ACQUISITION_SCHEMA_VERSION, inputSha256, nextIndex, previousReceiptSha256: receiptSha256 }) : null,
   };
   commitReceipt(options.receiptStore, receipt);
@@ -620,8 +638,9 @@ export interface AcquisitionFixtureScenario {
 export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Promise<CompletenessReceipt[]> {
   const receipts: CompletenessReceipt[] = [];
   const receiptDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'p3-acquisition-receipts-'));
+  const integrityKey = randomBytes(32);
   try {
-    let receiptStore = createReceiptStore(receiptDirectory);
+    let receiptStore = createReceiptStore(receiptDirectory, integrityKey);
     let cursor: string | null = null;
     do {
       const receipt = await runBoundedQueue(scenario.workItems, {
@@ -637,7 +656,7 @@ export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Pro
       });
       receipts.push(receipt);
       cursor = receipt.cursor;
-      receiptStore = createReceiptStore(receiptDirectory);
+      receiptStore = createReceiptStore(receiptDirectory, integrityKey);
     } while (cursor);
     return receipts;
   } finally {

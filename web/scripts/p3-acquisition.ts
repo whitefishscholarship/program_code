@@ -78,6 +78,12 @@ function addDigest(body: Record<string, unknown>): Record<string, unknown> {
   return { ...body, reportSha256: deterministicJsonSha256(body) };
 }
 
+function receiptEvidence(receipt: Awaited<ReturnType<typeof runFixtureQueue>>[number]): Record<string, unknown> {
+  const safeReceipt = structuredClone(receipt) as Partial<typeof receipt>;
+  delete safeReceipt.receiptMac;
+  return { ...safeReceipt, receiptMacWithheld: true };
+}
+
 function executeParserFixture(scenario: AcquisitionFixtureScenario): Record<string, unknown> | null {
   const fixture = scenario.parserFixture;
   if (!fixture) return null;
@@ -211,7 +217,7 @@ export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
       architecture: scenario.architecture,
       cap: scenario.workCap,
       maxAttempts: scenario.maxAttempts,
-      runs: receipts,
+      runs: receipts.map(receiptEvidence),
       final: {
         denominator: finalReceipt.denominator,
         processed: finalReceipt.processedTotal,

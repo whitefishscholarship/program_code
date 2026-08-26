@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash, randomBytes } from 'node:crypto';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -38,8 +39,9 @@ const fixtures = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p3/acqu
   scenarios: AcquisitionFixtureScenario[];
 };
 const receiptTestRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'p3-receipt-test-'));
+const receiptTestKey = randomBytes(32);
 let receiptStoreIndex = 0;
-const newReceiptStore = () => createReceiptStore(path.join(receiptTestRoot, `store-${receiptStoreIndex += 1}`));
+const newReceiptStore = () => createReceiptStore(path.join(receiptTestRoot, `store-${receiptStoreIndex += 1}`), receiptTestKey);
 
 assert.equal(fixtures.modelSchemaVersion, MODEL_SCHEMA_VERSION);
 assert.equal(new Set(fixtures.scenarios.map((scenario) => scenario.id)).size, fixtures.scenarios.length, 'scenario IDs must be unique');
@@ -171,8 +173,9 @@ const nestedForm = readPublicForm(`
   <h1>Nested Control Form</h1><form>
     <label>Essay<textarea>DO-NOT-COLLECT-APPLICANT-ESSAY</textarea></label>
     <label>Choice<select><option selected>DO-NOT-COLLECT-SELECTED-RESPONSE</option></select></label>
+    <label>Custom<div role="textbox" contenteditable="true">DO-NOT-COLLECT-CONTENTEDITABLE</div><output>DO-NOT-COLLECT-OUTPUT</output></label>
   </form>`, 'https://fixtures.invalid/nested-form');
-assert.deepEqual(nestedForm.fieldLabels, ['Essay', 'Choice']);
+assert.deepEqual(nestedForm.fieldLabels, ['Essay', 'Choice', 'Custom']);
 assert(!JSON.stringify(nestedForm).includes('DO-NOT-COLLECT'));
 
 const capItems = [
@@ -181,7 +184,7 @@ const capItems = [
   { key: 'three', url: 'https://fixtures.invalid/3' },
 ];
 const capDirectory = path.join(receiptTestRoot, 'cap-restart');
-const capStore = createReceiptStore(capDirectory);
+const capStore = createReceiptStore(capDirectory, receiptTestKey);
 const capFirst = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: capStore, execute: () => 'success' });
 assert.deepEqual({
   denominator: capFirst.denominator,
@@ -198,7 +201,7 @@ const capFinal = await runBoundedQueue(capItems, {
   cap: 2,
   maxAttempts: 3,
   cursor: capFirst.cursor,
-  receiptStore: createReceiptStore(capDirectory),
+  receiptStore: createReceiptStore(capDirectory, receiptTestKey),
   execute: () => 'success',
 });
 assert.equal(capFinal.processedTotal, 3);
@@ -229,6 +232,52 @@ await assert.rejects(
   /must be created by createReceiptStore/,
 );
 assert.equal(forgedStoreExecuted, false, 'untrusted receipt stores must fail before execution');
+
+const rewriteDirectory = path.join(receiptTestRoot, 'rewrite-attack');
+const rewriteStore = createReceiptStore(rewriteDirectory, receiptTestKey);
+const rewriteFirst = await runBoundedQueue([
+  { key: 'blocked', url: null },
+  { key: 'tail', url: null },
+], { cap: 1, maxAttempts: 1, receiptStore: rewriteStore, execute: () => 'bot_block' });
+const forgedReceipt = structuredClone(rewriteFirst);
+forgedReceipt.succeededThisRun = 1;
+forgedReceipt.succeededTotal = 1;
+forgedReceipt.failedThisRun = 0;
+forgedReceipt.failedTotal = 0;
+forgedReceipt.succeededKeys = ['blocked'];
+forgedReceipt.failedKeys = [];
+forgedReceipt.failures = [];
+const forgedDigestBody = structuredClone(forgedReceipt) as Partial<typeof forgedReceipt>;
+delete forgedDigestBody.receiptSha256;
+delete forgedDigestBody.receiptMac;
+delete forgedDigestBody.cursor;
+forgedReceipt.receiptSha256 = createHash('sha256').update(JSON.stringify(forgedDigestBody)).digest('hex');
+const forgedCursorState = JSON.parse(Buffer.from(rewriteFirst.cursor!, 'base64url').toString('utf8'));
+forgedCursorState.previousReceiptSha256 = forgedReceipt.receiptSha256;
+forgedReceipt.cursor = Buffer.from(JSON.stringify(forgedCursorState)).toString('base64url');
+fs.writeFileSync(
+  path.join(rewriteDirectory, `${forgedReceipt.receiptSha256}.json`),
+  `${JSON.stringify(forgedReceipt, null, 2)}\n`,
+  { flag: 'wx' },
+);
+let rewrittenLedgerExecuted = false;
+await assert.rejects(
+  runBoundedQueue([
+    { key: 'blocked', url: null },
+    { key: 'tail', url: null },
+  ], {
+    cap: 1,
+    maxAttempts: 1,
+    cursor: forgedReceipt.cursor,
+    receiptStore: createReceiptStore(rewriteDirectory, receiptTestKey),
+    execute: () => {
+      rewrittenLedgerExecuted = true;
+      return 'success';
+    },
+  }),
+  /authentication failed/,
+);
+assert.equal(rewrittenLedgerExecuted, false, 'rewritten receipt history must fail before execution');
 await assert.rejects(
   runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: 'not-a-valid-cursor', receiptStore: capStore, execute: () => 'success' }),
   /Invalid acquisition cursor/,
