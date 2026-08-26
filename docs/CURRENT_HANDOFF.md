@@ -5,20 +5,24 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P3 acceptance-candidate state
+## Current P3 replacement-candidate state
 
-- Active stage: none. The local P3 acceptance-marker candidate is pending exact
-  independent review and direct-child attestation. P4 is only next permitted and has
-  not started.
+- Active stage: none. The first local P3 acceptance candidate was rejected and the
+  remediated replacement is pending freeze, independent recheck, and direct-child
+  attestation. P4 is only next permitted and has not started.
 - Verified P3 baseline and `origin/main`:
   `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
 - P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
 - P3 implementation checkpoint:
   `21e085a259cac558fac3689bfade58b0228be27b`.
-- Exact acceptance candidate: pending freeze. Its content-derived SHA will be bound in
+- Rejected predecessor candidate:
+  `f89f61c634318d7b77b3db82ef3084af53f59c61` (C0/H4/M3/L0); it must never be
+  attested or delivered. Remediation checkpoint: `e805e49`.
+- Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
-- P3 manifest/review: intentionally absent until the candidate is frozen. They must be
+- Replacement P3 manifest/review: intentionally absent until the candidate is frozen.
+  They must be
   the only two paths added in the exact direct-child attestation.
 - Entry verification confirmed that the exact P2 merge, accepted marker, evidence,
   manifest, review, and direct-child attestation are all present in the baseline.
@@ -33,10 +37,11 @@ Default branch: `main`
   mutation occurred.
 - P3 is authorized under the stage-specific standing mandate recorded in
   `docs/evidence/STANDING-OPERATING-MANDATE.md`. Reserved effects remain excluded.
-- P3 now implements all 13 architecture routes, selective URL identity, bounded
-  retry/cursor queues, single/multi-page parsing, directory/pagination discovery,
-  document parsing, no-submit public-form reading, explicit access review, and
-  schema-valid unverified P2 fixture graphs.
+- P3 implements all 13 architecture routes, selective URL identity, bounded retries,
+  hash-linked receipt-ledger resume, thrown-error classification, occurrence-preserving
+  single/multi-page and directory parsing, pagination/document parsing, representative
+  no-submit public-form reading, explicit access review, and schema-valid unverified P2
+  fixture graphs derived only from successful work results.
 - Deterministic fixture denominator: 34 work items; 34 processed, 27 successful, seven
   explicit failure/review outcomes, zero unaccounted remaining. All seven failures have
   a canonical Source, Evidence item, and Review Item.
@@ -44,21 +49,27 @@ Default branch: `main`
   94 Evidence items, and 94 Review Items. All evidence remains unverified and every
   cycle remains unknown for P4.
 - Acquisition report SHA-256:
-  `e1b78afe4cb0125112eaad9c69ae102d45fae804cf7f8d429ec689bd241838b8`;
+  `abca542965bdf82279c9942b49fb343868ade9403021749ad1cdab489b896597`;
   completeness report SHA-256:
-  `4525344780e9539a90935b5b8537d5fc2b7a279875f20d47c7d7a55c34e3ba1c`.
+  `bebf5ce2a2fe92a684487238e2ca761babedb739b58ea4b5f5f2f7e32156957c`.
 - Three bounded public landing pages were read with Firecrawl at
   `2026-08-26T22:38:00Z` for architecture observations only: NFU, FVCC AcademicWorks,
   and FIRST. No child crawl, form/application interaction, authentication, factual
   acceptance, spreadsheet access, or provider contact occurred.
 - `docs/kickoffs/P4-VERIFICATION.md` is prepared as the next-stage contract only. P4
   has not started and may not start until P3 acceptance is delivered on `origin/main`.
-- The complete pre-freeze matrix passed through `2026-08-26T22:47:06Z`: locked install,
+- The rejected predecessor's matrix passed through `2026-08-26T22:47:06Z`: locked install,
   deterministic acquisition check, plan/history validation, typecheck, complete tests,
   permitted network build, and root diff check. The restricted build failed only on
   existing Google Fonts network access; no configuration changed. Exact UTC windows and
-  outcomes are in `docs/evidence/P3.md`.
-- The immutable candidate, complete manifest, fresh read-only review, and exact
+  outcomes are historical in `docs/evidence/P3.md` and are not replacement acceptance
+  evidence. It is not replacement acceptance evidence.
+- The complete replacement matrix passed through `2026-08-26T23:09:19Z`: exact locked
+  install, deterministic acquisition check at `abca542965bd`, typecheck, complete tests,
+  permitted network build, and root diff check. Prospective plan validation reported
+  exactly the expected missing P3 manifest/review attestation and no other error. Exact
+  UTC windows and outcomes are in `docs/evidence/P3.md`.
+- The immutable replacement candidate, complete manifest, reviewer recheck, and exact
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
 
