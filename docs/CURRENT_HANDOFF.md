@@ -29,8 +29,12 @@ Default branch: `main`
   `118006a8bccdbee91fcce000e56ac958ab938c04` (C0/H2/M0/L0), with rejected
   uncommitted manifest digest
   `0f5334a9c6b4d7c392cc2b53018f899fc21867e7862765f358d59a3b4d9fd0bc`.
+  Fourth rejected replacement:
+  `50448b0c415d72e7b6ab2f5c9de3f65ee4360f75` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `131ad1a6844bc768125f1d9a3e8a2a879e94524ac22e00a21660b88dd7605ea6`.
   No rejected candidate may be attested or delivered. Remediation checkpoints:
-  `e805e49`, `d4ee469`, `03421b3`, and `5b2fda0`.
+  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, and `dab60c1`.
 - Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
@@ -100,11 +104,17 @@ Default branch: `main`
   build, and root diff check. Prospective plan validation reported only the expected
   missing P3 manifest/review attestation. That candidate was rejected; final replacement
   verification is pending.
-- The fifth candidate matrix passed through `2026-08-26T23:47:02Z`: exact locked
+- The fourth replacement matrix passed through `2026-08-26T23:47:02Z`: exact locked
   install, deterministic acquisition/completeness checks, typecheck, complete tests
   including authenticated-rewrite and custom-control response regressions, permitted
   network build, and root diff check. Prospective plan validation reported only the
-  expected missing P3 manifest/review attestation.
+  expected missing P3 manifest/review attestation. That candidate was rejected; final
+  replacement verification is pending.
+- The sixth candidate matrix passed through `2026-08-26T23:55:55Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including the custom-control heading boundary, permitted network build, and root
+  diff check. Prospective plan validation reported only the expected missing P3
+  manifest/review attestation.
 - The immutable replacement candidate, complete manifest, reviewer recheck, and exact
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
