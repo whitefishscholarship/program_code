@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 5,
+  "planRevision": 6,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-25",
+  "lastUpdated": "2026-08-26",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -129,7 +129,8 @@
         "reviewPath": "docs/reviews/P2-delivery.json",
         "governanceResolutionPaths": [
           "docs/BUILD_STATE.json",
-          "docs/CURRENT_HANDOFF.md"
+          "docs/CURRENT_HANDOFF.md",
+          "web/package.json"
         ]
       }
     ],
@@ -191,6 +192,22 @@
           "evidencePath": "docs/evidence/PLAN-REV5.md",
           "basis": "After the latest-delivery equality regression and the proposed bounded autonomy policy were explained in plain English, the user approved the recommended Revision 5 standing mandate and directed Codex to resume P2 delivery.",
           "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify Plan Revision 5 and its resulting Vercel Preview and Production deployments, then rebuild and deliver exact P2 through the reviewed integration path. Revision 5 also records bounded P3-P8 standing authority. Reserved effects remain excluded by docs/evidence/STANDING-OPERATING-MANDATE.md."
+        }
+      },
+      {
+        "id": "PLAN-REV6",
+        "status": "attestation-gated",
+        "baselineCommit": "cc7760d51f1460728e85a9b1fc0921d30320a541",
+        "evidencePath": "docs/evidence/PLAN-REV6.md",
+        "manifestPath": "docs/evidence/PLAN-REV6-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV6.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-08-26",
+          "evidencePath": "docs/evidence/PLAN-REV6.md",
+          "basis": "After the exact P2 merge exposed a substantive package-script conflict, the user explicitly authorized Plan Revision 6 to add web/package.json as the narrowly governed third P2 integration-resolution path while preserving every Revision 5 test command and adding only P2's exact model scripts and test command.",
+          "scope": "Deliver only Plan Revision 6's deterministic P2 package-script integration rule by commit, independent review, attestation, branch push, pull request, merge, and resulting Vercel Preview and Production deployments. Then rebuild and deliver exact P2 candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd through attestation cc277b34075f6d648ff3c71022fadf6a6c632b34. Do not start P3 or perform spreadsheet writes, P9 or production-data actions, deployment-configuration changes, form or application interactions, provider contact, paid or destructive actions, or history rewriting."
         }
       }
     ]

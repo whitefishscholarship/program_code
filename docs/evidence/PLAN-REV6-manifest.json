@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV6",
+  "createdAt": "2026-08-26T15:31:49Z",
+  "baselineCommit": "cc7760d51f1460728e85a9b1fc0921d30320a541",
+  "candidateCommit": "8ec2e5793208a0d508637ebb3bac7e45e019cbec",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "0f7777798f92d04dab79d72ba279a9d3eb9d8669eae9d2fb197d9f7705bab5de"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "7acc1f408fc90f23ad1246f73cb983c47c3f8ef6c570e288f38d6e17c5a6110c"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "abc96b9ac9cf41e062dbe96d542381a936a9d43b49a7a0a981a9bb605b839641"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "9b748c76d621d6029644c53584bca34fa55fa304c710150b53643fca1e910d0e"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "1d6ebd86f16b132c5416e37eb6f3c290db43e05b021b38ce9862f47d2676d3a9"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV6.md",
+      "change": "present",
+      "sha256": "b73f90c4b8a99af44ff0bc34717ab475256b15d1ecbe6a3adf61d075e5e7616d"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "87fc3995d92bc619c77c690a8505edf20d2c1aed8e38fe724a6a85afbbb3d9f5"
+    },
+    {
+      "path": "web/scripts/delivery-package-history.ts",
+      "change": "present",
+      "sha256": "bc5604af3f8e9540f376571dc8c05033972a1544829b8f8320df0119d5266b5c"
+    },
+    {
+      "path": "web/scripts/test-delivery-package-history.ts",
+      "change": "present",
+      "sha256": "3058d0da0507ff23da10d5b9443d1998a1ae46f8edd75a8376615fa6b109e5bb"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "e4c2392c3b5c36a0d0545c7ad65abd1524cf79f3e3e3552b86f2de0cfd5302fe"
+    }
+  ]
+}

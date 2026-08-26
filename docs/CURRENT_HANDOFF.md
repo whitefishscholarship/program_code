@@ -1,11 +1,80 @@
 # Current Handoff
 
-Last updated: 2026-08-25
-Plan revision: 5
+Last updated: 2026-08-26
+Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current state
+## Current Revision 6 state
+
+- Active stage: none; P3 must not start.
+- Verified delivered Revision 5 `origin/main` and Revision 6 baseline:
+  `cc7760d51f1460728e85a9b1fc0921d30320a541`.
+- Revision 5 exact clean-clone candidate:
+  `a9b656b93cfa398a2badd1c1ef3f61f860979ac3`.
+- Revision 5 canonical delivered attestation:
+  `06d9e3ff4bcfff8b0fe0b2bc728ed8aeb9320000`.
+- Revision 5 merged through PR #14 at `2026-08-25T22:37:58Z`; PR CI and post-merge
+  main CI passed, Vercel Production completed, and Preview was blocked by the existing
+  Franscale1922 project-access rule. No deployment configuration changed.
+- Revision 6 branch: `codex/plan-rev6-p2-package-resolution`.
+- Revision 6 candidate and attestation: pending freeze, independent review, and exact
+  direct-child two-file attestation.
+- The candidate cannot embed its own content-derived SHA. After freeze, the complete
+  uncommitted manifest will bind that exact SHA for independent review; changing this
+  handoff afterward would create a replacement candidate.
+- Exact P2 candidate: `1a6376207eb467ff0977298de16a1c0d0db1b3cd`.
+- Exact P2 attestation: `cc277b34075f6d648ff3c71022fadf6a6c632b34`.
+- P2 manifest SHA-256:
+  `4d47d562e26efe249f6a7be0ed656f1fddc1a17233378254772019cacd49ee8a`.
+- A clean P2 merge from `cc7760d` was attempted without committing. It produced the
+  expected conflicts in `docs/BUILD_STATE.json` and this handoff plus a substantive
+  `web/package.json` conflict. The merge was safely aborted; no P2 integration commit,
+  review, attestation, push, PR, merge, or deployment occurred.
+- On 2026-08-26 Kelsey Stuart explicitly authorized Plan Revision 6 to add only
+  `web/package.json` as P2's third integration-resolution path, preserve every Revision
+  5 test command, and add only P2's exact model scripts and test command. The authority
+  covers Revision 6 review/attestation/Git/Vercel delivery and subsequent exact P2
+  delivery, with all recorded exclusions unchanged.
+- Production spreadsheet ID remains unset; all spreadsheet mutation remains
+  unauthorized. No product/runtime, CI, deployment-configuration, form, provider, P9,
+  production-data, paid/destructive, or P3 effect is in scope.
+- Revision 6 pre-freeze verification passed from `2026-08-26T15:24:58Z` through
+  `2026-08-26T15:26:21Z`: locked install, non-incremental typecheck, complete tests,
+  production build, and root diff check all passed. Prospective plan validation
+  reported exactly the expected missing Revision 6 manifest, review, and committed
+  attestation. Exact command outcomes and the unchanged audit denominator are recorded
+  in `docs/evidence/PLAN-REV6.md`.
+
+## Plan Revision 6 amendment
+
+The Revision 4 P2 integration allowlist permitted only `BUILD_STATE` and the handoff.
+That was sufficient before Revision 5, but frozen P2 and delivered Revision 5 now both
+change `web/package.json`: P2 adds `p2:model`, `p2:model:check`, and its model test,
+while Revision 5 adds governance-history tests. Taking either merge side would discard
+an accepted test gate.
+
+Revision 6 permits `web/package.json` only for exact P2 and validates a deterministic
+result reconstructed from both immutable parents. The result starts with the complete
+delivered baseline package, preserves every field and existing test command, copies
+only P2's exact two model scripts, and appends only P2's missing model-test command.
+Dependencies, lockfiles, metadata, other scripts, and arbitrary conflict resolution are
+forbidden. Dedicated tests reject omission of either governance or P2 tests, mutation
+of P2 commands, and unrelated package changes.
+
+Current required next actions:
+
+1. Complete Revision 6 evidence and full verification, freeze the exact candidate,
+   generate its complete manifest, obtain fresh-context read-only acceptance, and add
+   only the manifest/review direct-child attestation.
+2. Push, open, verify, and merge Revision 6; verify Preview/Production outcomes.
+3. Rebuild exact P2 with delivered Revision 6 `origin/main` as first parent and exact
+   `cc277b3` as second parent. Resolve only `BUILD_STATE`, this handoff, and the exact
+   deterministic `web/package.json` union.
+4. Run the complete P2 matrix, freeze, manifest, obtain a separate fresh review,
+   attest, push, open, verify, and merge P2. Stop before P3.
+
+## Historical Revision 5 candidate state
 
 - Active stage: none; P3 must not start
 - Verified delivered Revision 4 baseline and current `origin/main`:
@@ -48,7 +117,7 @@ Default branch: `main`
   by the existing Vercel author-access rule; no configuration changed.
 - External data, product, or deployment-configuration mutations during Revision 5: none
 
-## Plan Revision 5 amendment
+## Historical Plan Revision 5 amendment (delivered)
 
 Revision 5 fixes only the regression test's invalid assumption that current state must
 differ from every historical delivery state. The newest exact delivery candidate may
@@ -128,7 +197,7 @@ attestation. The network-enabled build and `git diff --check` passed through
 `2026-08-25T22:29:08Z`. The complete replacement remains confined to the same twelve
 authorized governance, validator, test, evidence, and handoff paths.
 
-Current required next actions:
+Historical Revision 5 next actions (completed or superseded by Revision 6):
 
 1. Complete replacement Revision 5 verification, freeze its candidate, regenerate the complete
    manifest, obtain fresh-context read-only acceptance, and create the direct-child

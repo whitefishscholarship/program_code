@@ -90,8 +90,14 @@ standing-mandate evidence blob are bound to that immutable candidate. Deletion,
 downgrade, field mutation, or evidence mutation is prohibited. Revocation or
 supersession requires a separately authorized, independently reviewed, machine-recorded
 mechanism introduced by a later plan amendment; no such mechanism exists in Revision 5.
-The integration must preserve every non-governance stage blob from the exact attestation;
-only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile delivery state.
+The integration must preserve every non-governance stage blob from the exact attestation.
+Normally only `docs/BUILD_STATE.json` and `docs/CURRENT_HANDOFF.md` may reconcile
+delivery state. Plan Revision 6 adds one P2-only exception for `web/package.json`: the
+integrated file must equal the deterministic union of the complete delivered-baseline
+package and test harness plus only the exact P2 `p2:model`, `p2:model:check`, and missing
+P2 test command. It may not change dependencies, other scripts, metadata, or either
+side's test commands. The validator checks that exact result at the immutable delivery
+candidate.
 
 ## Standing operating mandate — Plan Revision 5
 

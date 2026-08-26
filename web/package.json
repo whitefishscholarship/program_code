@@ -12,7 +12,7 @@
     "p1:inventory": "tsx scripts/p1-inventory.ts",
     "p1:inventory:check": "tsx scripts/p1-inventory.ts --check",
     "typecheck": "tsc --noEmit",
-    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts"
+    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts"
   },
   "dependencies": {
     "@google/genai": "^1.44.0",
