@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -36,6 +37,9 @@ const fixtures = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p3/acqu
   observedAt: string;
   scenarios: AcquisitionFixtureScenario[];
 };
+const receiptTestRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'p3-receipt-test-'));
+let receiptStoreIndex = 0;
+const newReceiptStore = () => createReceiptStore(path.join(receiptTestRoot, `store-${receiptStoreIndex += 1}`));
 
 assert.equal(fixtures.modelSchemaVersion, MODEL_SCHEMA_VERSION);
 assert.equal(new Set(fixtures.scenarios.map((scenario) => scenario.id)).size, fixtures.scenarios.length, 'scenario IDs must be unique');
@@ -163,13 +167,21 @@ assert.deepEqual(publicForm.questions.map((question) => question.controlTypes), 
 assert.equal(publicForm.controlCount, 3);
 assert(!JSON.stringify(publicForm).includes('applicant@example.test'));
 assert(!JSON.stringify(publicForm).includes('private response'));
+const nestedForm = readPublicForm(`
+  <h1>Nested Control Form</h1><form>
+    <label>Essay<textarea>DO-NOT-COLLECT-APPLICANT-ESSAY</textarea></label>
+    <label>Choice<select><option selected>DO-NOT-COLLECT-SELECTED-RESPONSE</option></select></label>
+  </form>`, 'https://fixtures.invalid/nested-form');
+assert.deepEqual(nestedForm.fieldLabels, ['Essay', 'Choice']);
+assert(!JSON.stringify(nestedForm).includes('DO-NOT-COLLECT'));
 
 const capItems = [
   { key: 'one', url: 'https://fixtures.invalid/1' },
   { key: 'two', url: 'https://fixtures.invalid/2' },
   { key: 'three', url: 'https://fixtures.invalid/3' },
 ];
-const capStore = createReceiptStore();
+const capDirectory = path.join(receiptTestRoot, 'cap-restart');
+const capStore = createReceiptStore(capDirectory);
 const capFirst = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: capStore, execute: () => 'success' });
 assert.deepEqual({
   denominator: capFirst.denominator,
@@ -179,21 +191,21 @@ assert.deepEqual({
 }, { denominator: 3, processed: 2, remaining: 1, queued: 1 });
 assert(capFirst.cursor, 'a partial cap requires a resumable cursor');
 await assert.rejects(
-  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, receiptStore: createReceiptStore(), execute: () => 'success' }),
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, receiptStore: newReceiptStore(), execute: () => 'success' }),
   /absent from the trusted receipt store/,
 );
 const capFinal = await runBoundedQueue(capItems, {
   cap: 2,
   maxAttempts: 3,
   cursor: capFirst.cursor,
-  receiptStore: capStore,
+  receiptStore: createReceiptStore(capDirectory),
   execute: () => 'success',
 });
 assert.equal(capFinal.processedTotal, 3);
 assert.equal(capFinal.remaining, 0);
 assert.equal(capFinal.cursor, null);
 assert.equal(capFinal.succeededTotal, 3);
-const capRepeat = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: createReceiptStore(), execute: () => 'success' });
+const capRepeat = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: newReceiptStore(), execute: () => 'success' });
 assert.deepEqual(capRepeat, capFirst, 'same input and receipt start must be idempotent');
 const tamperedState = JSON.parse(Buffer.from(capFirst.cursor!, 'base64url').toString('utf8'));
 tamperedState.previousReceiptSha256 = 'a'.repeat(64);
@@ -222,7 +234,7 @@ await assert.rejects(
   /Invalid acquisition cursor/,
 );
 await assert.rejects(
-  runBoundedQueue([{ key: 'duplicate', url: null }, { key: 'duplicate', url: null }], { cap: 1, maxAttempts: 1, receiptStore: createReceiptStore(), execute: () => 'success' }),
+  runBoundedQueue([{ key: 'duplicate', url: null }, { key: 'duplicate', url: null }], { cap: 1, maxAttempts: 1, receiptStore: newReceiptStore(), execute: () => 'success' }),
   /unique/,
 );
 
@@ -235,7 +247,7 @@ const failures = await runBoundedQueue([
 ], {
   cap: 4,
   maxAttempts: 3,
-  receiptStore: createReceiptStore(),
+  receiptStore: newReceiptStore(),
   execute: (item) => {
     const attempt = (attempts.get(item.key) ?? 0) + 1;
     attempts.set(item.key, attempt);
@@ -255,7 +267,7 @@ let thrownAttempts = 0;
 const thrown = await runBoundedQueue([{ key: 'thrown-timeout', url: null }], {
   cap: 1,
   maxAttempts: 2,
-  receiptStore: createReceiptStore(),
+  receiptStore: newReceiptStore(),
   execute: () => {
     thrownAttempts += 1;
     const error = new Error('request timed out');
@@ -322,6 +334,7 @@ const committedCompleteness = JSON.parse(fs.readFileSync(path.join(repoRoot, 'do
 assert.deepEqual(committedAcquisition, generated.acquisition, 'committed acquisition evidence must be deterministic');
 assert.deepEqual(committedCompleteness, generated.completeness, 'committed completeness evidence must be deterministic');
 
+fs.rmSync(receiptTestRoot, { recursive: true, force: true });
 console.log(`P3 ACQUISITION TEST ALL PASS ${String(generated.acquisition.reportSha256).slice(0, 12)}`);
 }
 

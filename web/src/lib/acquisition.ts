@@ -1,4 +1,7 @@
 import { createHash } from 'node:crypto';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import * as cheerio from 'cheerio';
 import { z } from 'zod';
 import {
@@ -282,7 +285,10 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
   const $ = cheerio.load(html);
   const form = $('form').first();
   if (!form.length) throw new Error('Public-form fixture contains no form element');
-  const title = cleanText($('h1').first().text() || $('title').first().text() || 'Public form');
+  const heading = $('h1').first().length ? $('h1').first() : $('title').first();
+  const headingClone = heading.clone();
+  headingClone.find('input, select, textarea, option, button, script, style').remove();
+  const title = cleanText(headingClone.text()) || 'Public form';
   const rawAction = String(form.attr('action') ?? '').trim();
   let actionUrl: string | null = null;
   if (rawAction) actionUrl = canonicalizeAcquisitionUrl(rawAction, sourceUrl).url;
@@ -293,7 +299,9 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
     if (seenElements.has(element)) return;
     seenElements.add(element);
     const node = $(element);
-    const label = cleanText(node.text());
+    const labelClone = node.clone();
+    labelClone.find('input, select, textarea, option, button, script, style').remove();
+    const label = cleanText(labelClone.text());
     if (!label) return;
     const container = node.closest('[role="listitem"], label, fieldset, [data-question]');
     let controls = (container.length ? container : node.parent()).find('input, select, textarea');
@@ -396,26 +404,36 @@ export interface ReceiptStore {
   read(receiptSha256: string): CompletenessReceipt | null;
 }
 
-const receiptStoreState = new WeakMap<ReceiptStore, Map<string, CompletenessReceipt>>();
+const receiptStoreState = new WeakMap<ReceiptStore, string>();
 
-export function createReceiptStore(): ReceiptStore {
-  const records = new Map<string, CompletenessReceipt>();
+export function createReceiptStore(directory: string): ReceiptStore {
+  const resolvedDirectory = path.resolve(directory);
+  fs.mkdirSync(resolvedDirectory, { recursive: true, mode: 0o700 });
   const store: ReceiptStore = {
     read(receiptSha256) {
-      const receipt = records.get(receiptSha256);
-      return receipt ? structuredClone(receipt) : null;
+      if (!/^[0-9a-f]{64}$/.test(receiptSha256)) throw new Error('Receipt digest is invalid');
+      const receiptPath = path.join(resolvedDirectory, `${receiptSha256}.json`);
+      if (!fs.existsSync(receiptPath)) return null;
+      const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8')) as CompletenessReceipt;
+      if (receipt.receiptSha256 !== receiptSha256) throw new Error('Stored receipt filename and digest differ');
+      return receipt;
     },
   };
-  receiptStoreState.set(store, records);
+  receiptStoreState.set(store, resolvedDirectory);
   return Object.freeze(store);
 }
 
 function commitReceipt(store: ReceiptStore, receipt: CompletenessReceipt): void {
-  const records = receiptStoreState.get(store);
-  if (!records) throw new Error('Receipt store must be created by createReceiptStore');
-  const existing = records.get(receipt.receiptSha256);
-  if (existing && JSON.stringify(existing) !== JSON.stringify(receipt)) throw new Error('Receipt store is append-only');
-  if (!existing) records.set(receipt.receiptSha256, structuredClone(receipt));
+  const directory = receiptStoreState.get(store);
+  if (!directory) throw new Error('Receipt store must be created by createReceiptStore');
+  const receiptPath = path.join(directory, `${receipt.receiptSha256}.json`);
+  const serialized = `${JSON.stringify(receipt, null, 2)}\n`;
+  try {
+    fs.writeFileSync(receiptPath, serialized, { flag: 'wx', mode: 0o600 });
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'EEXIST') throw error;
+    if (fs.readFileSync(receiptPath, 'utf8') !== serialized) throw new Error('Receipt store is append-only');
+  }
 }
 
 function receiptDigest(receipt: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>): string {
@@ -601,24 +619,30 @@ export interface AcquisitionFixtureScenario {
 
 export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Promise<CompletenessReceipt[]> {
   const receipts: CompletenessReceipt[] = [];
-  const receiptStore = createReceiptStore();
-  let cursor: string | null = null;
-  do {
-    const receipt = await runBoundedQueue(scenario.workItems, {
-      cap: scenario.workCap,
-      maxAttempts: scenario.maxAttempts,
-      cursor,
-      receiptStore,
-      execute: (item, attempt) => {
-        const fixture = scenario.workItems.find((candidate) => candidate.key === item.key);
-        if (!fixture || fixture.outcomes.length === 0) return 'malformed';
-        return fixture.outcomes[Math.min(attempt - 1, fixture.outcomes.length - 1)];
-      },
-    });
-    receipts.push(receipt);
-    cursor = receipt.cursor;
-  } while (cursor);
-  return receipts;
+  const receiptDirectory = fs.mkdtempSync(path.join(os.tmpdir(), 'p3-acquisition-receipts-'));
+  try {
+    let receiptStore = createReceiptStore(receiptDirectory);
+    let cursor: string | null = null;
+    do {
+      const receipt = await runBoundedQueue(scenario.workItems, {
+        cap: scenario.workCap,
+        maxAttempts: scenario.maxAttempts,
+        cursor,
+        receiptStore,
+        execute: (item, attempt) => {
+          const fixture = scenario.workItems.find((candidate) => candidate.key === item.key);
+          if (!fixture || fixture.outcomes.length === 0) return 'malformed';
+          return fixture.outcomes[Math.min(attempt - 1, fixture.outcomes.length - 1)];
+        },
+      });
+      receipts.push(receipt);
+      cursor = receipt.cursor;
+      receiptStore = createReceiptStore(receiptDirectory);
+    } while (cursor);
+    return receipts;
+  } finally {
+    fs.rmSync(receiptDirectory, { recursive: true, force: true });
+  }
 }
 
 function unknownStudentFields(): z.infer<typeof StudentFieldsSchema> {
