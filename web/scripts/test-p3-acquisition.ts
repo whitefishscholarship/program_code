@@ -177,6 +177,11 @@ const nestedForm = readPublicForm(`
   </form>`, 'https://fixtures.invalid/nested-form');
 assert.deepEqual(nestedForm.fieldLabels, ['Essay', 'Choice', 'Custom']);
 assert(!JSON.stringify(nestedForm).includes('DO-NOT-COLLECT'));
+const editableHeadingForm = readPublicForm(`
+  <form><h1 role="textbox" contenteditable="true">DO-NOT-COLLECT-HEADING-RESPONSE</h1>
+  <label>Question<input></label></form>`, 'https://fixtures.invalid/editable-heading');
+assert.equal(editableHeadingForm.title, 'Public form');
+assert(!JSON.stringify(editableHeadingForm).includes('DO-NOT-COLLECT'));
 
 const capItems = [
   { key: 'one', url: 'https://fixtures.invalid/1' },

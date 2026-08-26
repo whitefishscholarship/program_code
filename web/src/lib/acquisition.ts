@@ -151,6 +151,18 @@ function cleanText(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
 }
 
+const CUSTOM_RESPONSE_SELECTOR = [
+  '[contenteditable]',
+  'output',
+  '[role="textbox"]',
+  '[role="combobox"]',
+  '[role="listbox"]',
+  '[role="option"]',
+  '[role="searchbox"]',
+  '[role="slider"]',
+  '[role="spinbutton"]',
+].join(', ');
+
 export interface SinglePageObservation {
   title: string;
   text: string;
@@ -289,7 +301,9 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
   const headingDirectText = heading.contents()
     .filter((_, child) => child.type === 'text')
     .map((_, child) => $(child).text()).get().join(' ');
-  const title = cleanText(String(heading.attr('aria-label') ?? headingDirectText)) || 'Public form';
+  const title = heading.is(CUSTOM_RESPONSE_SELECTOR)
+    ? 'Public form'
+    : cleanText(String(heading.attr('aria-label') ?? headingDirectText)) || 'Public form';
   const rawAction = String(form.attr('action') ?? '').trim();
   let actionUrl: string | null = null;
   if (rawAction) actionUrl = canonicalizeAcquisitionUrl(rawAction, sourceUrl).url;
@@ -300,7 +314,7 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
     if (seenElements.has(element)) return;
     seenElements.add(element);
     const node = $(element);
-    if (node.is('[contenteditable], output, [role="textbox"], [role="combobox"], [role="listbox"], [role="option"], [role="searchbox"], [role="slider"], [role="spinbutton"]')) return;
+    if (node.is(CUSTOM_RESPONSE_SELECTOR)) return;
     const directText = node.contents()
       .filter((__, child) => child.type === 'text')
       .map((__, child) => $(child).text()).get().join(' ');
