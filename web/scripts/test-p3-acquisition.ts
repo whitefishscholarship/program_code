@@ -202,6 +202,21 @@ await assert.rejects(
   runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: tamperedCursor, receiptStore: capStore, execute: () => 'success' }),
   /absent from the trusted receipt store/,
 );
+let forgedStoreExecuted = false;
+await assert.rejects(
+  runBoundedQueue(capItems, {
+    cap: 2,
+    maxAttempts: 3,
+    cursor: capFirst.cursor,
+    receiptStore: { read: () => structuredClone(capFirst) },
+    execute: () => {
+      forgedStoreExecuted = true;
+      return 'success';
+    },
+  }),
+  /must be created by createReceiptStore/,
+);
+assert.equal(forgedStoreExecuted, false, 'untrusted receipt stores must fail before execution');
 await assert.rejects(
   runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: 'not-a-valid-cursor', receiptStore: capStore, execute: () => 'success' }),
   /Invalid acquisition cursor/,
