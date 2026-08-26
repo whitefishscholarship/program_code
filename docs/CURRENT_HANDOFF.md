@@ -5,13 +5,21 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P3 state
+## Current P3 acceptance-candidate state
 
-- Active stage: P3 — Architecture-aware acquisition. P4 has not started and remains
-  prohibited during this stage.
+- Active stage: none. The local P3 acceptance-marker candidate is pending exact
+  independent review and direct-child attestation. P4 is only next permitted and has
+  not started.
 - Verified P3 baseline and `origin/main`:
   `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
 - P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
+- P3 implementation checkpoint:
+  `21e085a259cac558fac3689bfade58b0228be27b`.
+- Exact acceptance candidate: pending freeze. Its content-derived SHA will be bound in
+  `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
+  that SHA.
+- P3 manifest/review: intentionally absent until the candidate is frozen. They must be
+  the only two paths added in the exact direct-child attestation.
 - Entry verification confirmed that the exact P2 merge, accepted marker, evidence,
   manifest, review, and direct-child attestation are all present in the baseline.
 - P2 schema version `2.0.0`, P1 inventory SHA-256
@@ -45,10 +53,14 @@ Default branch: `main`
   acceptance, spreadsheet access, or provider contact occurred.
 - `docs/kickoffs/P4-VERIFICATION.md` is prepared as the next-stage contract only. P4
   has not started and may not start until P3 acceptance is delivered on `origin/main`.
-- Implementation checks to date pass: deterministic report check, TypeScript,
-  P3-focused tests, new-file ESLint, complete repository tests, and plan validation.
-  The complete final matrix, immutable candidate, manifest, fresh review, and exact
-  direct-child attestation are still pending.
+- The complete pre-freeze matrix passed through `2026-08-26T22:47:06Z`: locked install,
+  deterministic acquisition check, plan/history validation, typecheck, complete tests,
+  permitted network build, and root diff check. The restricted build failed only on
+  existing Google Fonts network access; no configuration changed. Exact UTC windows and
+  outcomes are in `docs/evidence/P3.md`.
+- The immutable candidate, complete manifest, fresh read-only review, and exact
+  direct-child attestation are still pending. Until delivery, P3 is not durably complete
+  on `origin/main` and P4 remains prohibited in this session.
 
 ### Deferred platform and dependency issues (not P3 remediation)
 
