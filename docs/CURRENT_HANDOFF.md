@@ -5,67 +5,65 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P2 delivery integration state
+## Current P3 state
 
-- Active stage: none. P2 is accepted and this integration is delivery-only; P3 must
-  not start during this work.
-- Verified delivered Revision 6 baseline and first parent:
-  `322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f`.
-- Revision 6 candidate `8ec2e5793208a0d508637ebb3bac7e45e019cbec` and
-  direct-child attestation `da1d31fb1f62e1b5730540dea62b86604860bad1`
-  were independently accepted C0/H0/M0/L0 and merged through PR #15. PR and
-  post-merge main CI passed; Vercel Production completed. Preview was attempted but
-  blocked by the existing Franscale1922 author-access rule; no deployment
-  configuration changed.
-- Exact preserved P2 candidate:
-  `1a6376207eb467ff0977298de16a1c0d0db1b3cd`.
-- Exact preserved P2 attestation:
-  `cc277b34075f6d648ff3c71022fadf6a6c632b34`.
-- Preserved P2 manifest SHA-256:
+- Active stage: P3 — Architecture-aware acquisition. P4 has not started and remains
+  prohibited during this stage.
+- Verified P3 baseline and `origin/main`:
+  `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
+- P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
+- Entry verification confirmed that the exact P2 merge, accepted marker, evidence,
+  manifest, review, and direct-child attestation are all present in the baseline.
+- P2 schema version `2.0.0`, P1 inventory SHA-256
+  `3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a`, and P2
+  canonical dataset digest
+  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`
+  are the pinned acquisition inputs.
+- Baseline `npm ci` installed 565 locked packages and baseline `npm run plan:check`
+  passed after the restricted runner's local IPC socket was permitted. No dependency,
+  lockfile, spreadsheet, deployment-configuration, form, provider, or production-data
+  mutation occurred.
+- P3 is authorized under the stage-specific standing mandate recorded in
+  `docs/evidence/STANDING-OPERATING-MANDATE.md`. Reserved effects remain excluded.
+
+### Deferred platform and dependency issues (not P3 remediation)
+
+- **Vercel Preview:** PR #16's Preview deployment was attempted and blocked by the
+  existing `Franscale1922` project-access rule. Main CI and the Production deployment
+  completed. No identity, permission, or deployment configuration was changed. Owner:
+  repository/Vercel administrator. Target: resolve through separately authorized
+  access administration before a Preview result becomes an acceptance dependency.
+- **GitHub Actions Node runtime:** post-merge run `33018750958` passed but annotated
+  that Node.js 20 action runtimes are deprecated and `actions/checkout@v4` plus
+  `actions/setup-node@v4` were forced onto Node.js 24. Owner: repository maintainer.
+  Target: a separately reviewed operational-governance update before the warning
+  becomes a CI failure; P3 does not change CI configuration.
+- **Dependency audit:** the locked install still reports 21 time-sensitive advisories
+  (1 low, 7 moderate, 12 high, 1 critical). This is an audit denominator, not an
+  exploitability finding. Owner: P7 implementation/reviewer. Target: P7's required
+  dependency/security audit and exposure review; P3 applies no upgrade or audit fix.
+
+## Historical P2 delivery integration state (completed)
+
+- Exact P2 delivery integration completed and merged through PR #16 at
+  `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3` on 2026-08-26.
+- Its exact two-parent candidate used delivered Revision 6
+  `322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f` as first parent and immutable P2
+  attestation `cc277b34075f6d648ff3c71022fadf6a6c632b34` as second parent.
+- Preserved P2 candidate:
+  `1a6376207eb467ff0977298de16a1c0d0db1b3cd`; preserved P2 manifest SHA-256:
   `4d47d562e26efe249f6a7be0ed656f1fddc1a17233378254772019cacd49ee8a`.
-- Current integration branch: `codex/p2-delivery-integration-rev6`.
-- The integration is an exact two-parent merge with delivered Revision 6 first and
-  immutable P2 attestation second. Only `docs/BUILD_STATE.json`, this handoff, and
-  `web/package.json` are resolved.
-- The target state marks P2 accepted, clears the active stage, identifies P3 only as
-  next permitted, marks the P2 delivery integration accepted with baseline
-  `322a2b8`, and clears the obsolete delivery blocker.
-- The package resolution preserves the complete delivered Revision 6 package and all
-  its test commands, adds only exact P2 `p2:model` and `p2:model:check`, and
-  appends only `test-p2-data-model.ts`.
-- Current required actions are the complete verification matrix, immutable candidate
-  freeze, complete delivery manifest, fresh read-only review, direct-child two-file
-  attestation, authorized push/PR/merge, and CI/Vercel verification. Stop before P3.
-- Exact pre-freeze mechanical checks returned `exactState: true` and
-  `exactPackage: true` against delivered baseline `322a2b8` and exact P2
-  attestation `cc277b3`.
-- The locked install and non-incremental typecheck passed from
-  `2026-08-26T21:56:47Z` through `2026-08-26T21:57:00Z` with 565 packages and the
-  unchanged time-sensitive audit denominator of 21 findings (1 low, 7 moderate,
-  12 high, 1 critical); no fix, dependency, or lockfile change was made.
-- The ordinary `p2:model:check` wrapper encountered the restricted environment's
-  known `tsx` IPC `listen EPERM` before execution. Its socket-free equivalent
-  passed at `2026-08-26T21:55:39Z` with canonical digest
-  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
-- The pre-freeze complete `npm test` attempt ran from
-  `2026-08-26T21:55:04Z` through `2026-08-26T21:55:13Z`, passed every test through
-  the P1 inventory, and then stopped only because the content-derived
-  `docs/evidence/P2-delivery-manifest.json` cannot exist until this merge candidate
-  is frozen. Prospective plan validation likewise reported only the expected
-  pre-freeze manifest, review, attestation, candidate-path, and not-yet-committed
-  second-parent gates.
-- The restricted production build failed only while fetching existing Google Fonts;
-  the authorized network retry passed from `2026-08-26T21:56:10Z` through
-  `2026-08-26T21:56:28Z` and changed no configuration. Root and staged
-  `git diff --check` passed at `2026-08-26T21:57:10Z`.
-- The exact merge-candidate SHA necessarily exists only after this content is frozen.
-  The complete uncommitted delivery manifest will bind it, and the fresh reviewer will
-  rerun the complete tests and validation with that manifest present. Changing this
-  handoff afterward would create a different two-parent candidate and is prohibited.
-- Production spreadsheet identity remains unset and mutation remains unauthorized.
-  No spreadsheet access/write, P9 or production-data action, product/runtime change,
-  deployment-configuration change, form/application interaction, provider contact,
-  paid/destructive action, history rewrite, or P3 implementation is in scope.
+- Delivery candidate `147513a` and direct-child attestation `0655da7` were
+  independently accepted C0/H0/M0/L0. PR CI and post-merge main CI passed; Vercel
+  Production completed. The blocked Preview result is carried above.
+- The reviewed integration reconciled only `docs/BUILD_STATE.json`, this handoff, and
+  the deterministic `web/package.json` union. It preserved every Revision 6 test
+  command and added only exact P2 model scripts and its missing test command.
+- P2 is durably accepted and delivered. Its historical pre-freeze checks, constrained
+  runner behavior, and exact package/state proofs remain preserved in P2 delivery
+  evidence and review records.
+- Production spreadsheet identity remains unset and all spreadsheet mutation remains
+  unauthorized.
 
 ## Historical Revision 6 pre-delivery state (completed)
 
