@@ -119,11 +119,11 @@
       },
       {
         "stageId": "P2",
-        "status": "authorized-pending",
+        "status": "accepted",
         "stageCandidateCommit": "1a6376207eb467ff0977298de16a1c0d0db1b3cd",
         "stageAttestationCommit": "cc277b34075f6d648ff3c71022fadf6a6c632b34",
         "originalBaselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
-        "deliveryBaselineCommit": null,
+        "deliveryBaselineCommit": "322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f",
         "evidencePath": "docs/evidence/P2-delivery-authorization.md",
         "manifestPath": "docs/evidence/P2-delivery-manifest.json",
         "reviewPath": "docs/reviews/P2-delivery.json",
@@ -213,7 +213,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P2",
+  "nextPermittedStageId": "P3",
   "stages": [
     {
       "id": "P0",
@@ -238,8 +238,8 @@
     {
       "id": "P2",
       "name": "Canonical data and evidence model",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
       "evidencePath": "docs/evidence/P2.md",
       "manifestPath": "docs/evidence/P2-manifest.json",
       "reviewPath": "docs/reviews/P2.json",
@@ -253,7 +253,7 @@
       "evidencePath": "docs/evidence/P3.md",
       "manifestPath": "docs/evidence/P3-manifest.json",
       "reviewPath": "docs/reviews/P3.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P3-ACQUISITION.md"
     },
     {
       "id": "P4",

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P2",
+  "createdAt": "2026-08-25T16:06:52Z",
+  "baselineCommit": "6a6d64339d44cbede99acfd5a3966781f1f9c4f6",
+  "candidateCommit": "1a6376207eb467ff0977298de16a1c0d0db1b3cd",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "e2aa6ed2a41c8183fdc5df0c3de87e7fd4f8767e44a0dcb28ac7690cfa4244f5"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "a0939a23f12ca921d86ac91fe696f88ac8f37cc0a5b94f5ccba735283b597e84"
+    },
+    {
+      "path": "docs/evidence/P2-compatibility.json",
+      "change": "present",
+      "sha256": "6e2f0d4029a8b97ed1afedeeae25d3c01e7959d3a4e708a97cc66038189fa00b"
+    },
+    {
+      "path": "docs/evidence/P2-dry-run.json",
+      "change": "present",
+      "sha256": "7d6657b31af5f693e2ac01100f737e4fa1646fde473924e6f920b68b41f4699f"
+    },
+    {
+      "path": "docs/evidence/P2.md",
+      "change": "present",
+      "sha256": "e19a6cb7a7845e8f1cfdaa0121a9592e77bebccdd064a91b2283fb3e1f05ab6c"
+    },
+    {
+      "path": "docs/kickoffs/P3-ACQUISITION.md",
+      "change": "present",
+      "sha256": "d616308c077b9baea3c89cfbd8bcce864c9f5fb2752e6dac3276246429654fa1"
+    },
+    {
+      "path": "web/fixtures/p2/legacy-field-map.json",
+      "change": "present",
+      "sha256": "2f0a17165772db3213e30d918077145670bd455b0e39802ac6f1328b1dad3a76"
+    },
+    {
+      "path": "web/fixtures/p2/model-scenarios.json",
+      "change": "present",
+      "sha256": "76e2b43d459278da935248b5bdc0feafb96f77f9a275f48f79d9d499b95e9b12"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "4cbc762d286005b4842744738f0cb980f19e822d3491a85bcdfe49263bf398a3"
+    },
+    {
+      "path": "web/scripts/p2-data-model.ts",
+      "change": "present",
+      "sha256": "dd204bd075f79381c21b73200ec0dc720f42b50c21f75b95d4a4c27af87e7117"
+    },
+    {
+      "path": "web/scripts/test-p2-data-model.ts",
+      "change": "present",
+      "sha256": "d83738b408f9474c1d33113b539a4c73f0b596135f811788fd6ad75213ec7e9b"
+    },
+    {
+      "path": "web/src/lib/canonicalModel.ts",
+      "change": "present",
+      "sha256": "d050281c3a25288308adfb234e0a61afcfbbee879a5d01d5ed97b64856726941"
+    }
+  ]
+}
