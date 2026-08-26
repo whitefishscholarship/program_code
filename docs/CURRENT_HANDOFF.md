@@ -5,7 +5,69 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current Revision 6 state
+## Current P2 delivery integration state
+
+- Active stage: none. P2 is accepted and this integration is delivery-only; P3 must
+  not start during this work.
+- Verified delivered Revision 6 baseline and first parent:
+  `322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f`.
+- Revision 6 candidate `8ec2e5793208a0d508637ebb3bac7e45e019cbec` and
+  direct-child attestation `da1d31fb1f62e1b5730540dea62b86604860bad1`
+  were independently accepted C0/H0/M0/L0 and merged through PR #15. PR and
+  post-merge main CI passed; Vercel Production completed. Preview was attempted but
+  blocked by the existing Franscale1922 author-access rule; no deployment
+  configuration changed.
+- Exact preserved P2 candidate:
+  `1a6376207eb467ff0977298de16a1c0d0db1b3cd`.
+- Exact preserved P2 attestation:
+  `cc277b34075f6d648ff3c71022fadf6a6c632b34`.
+- Preserved P2 manifest SHA-256:
+  `4d47d562e26efe249f6a7be0ed656f1fddc1a17233378254772019cacd49ee8a`.
+- Current integration branch: `codex/p2-delivery-integration-rev6`.
+- The integration is an exact two-parent merge with delivered Revision 6 first and
+  immutable P2 attestation second. Only `docs/BUILD_STATE.json`, this handoff, and
+  `web/package.json` are resolved.
+- The target state marks P2 accepted, clears the active stage, identifies P3 only as
+  next permitted, marks the P2 delivery integration accepted with baseline
+  `322a2b8`, and clears the obsolete delivery blocker.
+- The package resolution preserves the complete delivered Revision 6 package and all
+  its test commands, adds only exact P2 `p2:model` and `p2:model:check`, and
+  appends only `test-p2-data-model.ts`.
+- Current required actions are the complete verification matrix, immutable candidate
+  freeze, complete delivery manifest, fresh read-only review, direct-child two-file
+  attestation, authorized push/PR/merge, and CI/Vercel verification. Stop before P3.
+- Exact pre-freeze mechanical checks returned `exactState: true` and
+  `exactPackage: true` against delivered baseline `322a2b8` and exact P2
+  attestation `cc277b3`.
+- The locked install and non-incremental typecheck passed from
+  `2026-08-26T21:56:47Z` through `2026-08-26T21:57:00Z` with 565 packages and the
+  unchanged time-sensitive audit denominator of 21 findings (1 low, 7 moderate,
+  12 high, 1 critical); no fix, dependency, or lockfile change was made.
+- The ordinary `p2:model:check` wrapper encountered the restricted environment's
+  known `tsx` IPC `listen EPERM` before execution. Its socket-free equivalent
+  passed at `2026-08-26T21:55:39Z` with canonical digest
+  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
+- The pre-freeze complete `npm test` attempt ran from
+  `2026-08-26T21:55:04Z` through `2026-08-26T21:55:13Z`, passed every test through
+  the P1 inventory, and then stopped only because the content-derived
+  `docs/evidence/P2-delivery-manifest.json` cannot exist until this merge candidate
+  is frozen. Prospective plan validation likewise reported only the expected
+  pre-freeze manifest, review, attestation, candidate-path, and not-yet-committed
+  second-parent gates.
+- The restricted production build failed only while fetching existing Google Fonts;
+  the authorized network retry passed from `2026-08-26T21:56:10Z` through
+  `2026-08-26T21:56:28Z` and changed no configuration. Root and staged
+  `git diff --check` passed at `2026-08-26T21:57:10Z`.
+- The exact merge-candidate SHA necessarily exists only after this content is frozen.
+  The complete uncommitted delivery manifest will bind it, and the fresh reviewer will
+  rerun the complete tests and validation with that manifest present. Changing this
+  handoff afterward would create a different two-parent candidate and is prohibited.
+- Production spreadsheet identity remains unset and mutation remains unauthorized.
+  No spreadsheet access/write, P9 or production-data action, product/runtime change,
+  deployment-configuration change, form/application interaction, provider contact,
+  paid/destructive action, history rewrite, or P3 implementation is in scope.
+
+## Historical Revision 6 pre-delivery state (completed)
 
 - Active stage: none; P3 must not start.
 - Verified delivered Revision 5 `origin/main` and Revision 6 baseline:
@@ -62,7 +124,7 @@ Dependencies, lockfiles, metadata, other scripts, and arbitrary conflict resolut
 forbidden. Dedicated tests reject omission of either governance or P2 tests, mutation
 of P2 commands, and unrelated package changes.
 
-Current required next actions:
+Historical Revision 6 next actions (completed or superseded):
 
 1. Complete Revision 6 evidence and full verification, freeze the exact candidate,
    generate its complete manifest, obtain fresh-context read-only acceptance, and add
@@ -105,9 +167,23 @@ Current required next actions:
   `origin/main`. Candidate and attestation remain byte-for-byte unchanged.
 - Preserved P1 candidate: `92ee21095e959bd19ab641752308c0fd9b394b22`
 - Preserved P1 attestation: `20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5`
-- P1 delivery candidate: `464eece0c05c97e014cca0955f0ab92998c1d97c`
-- P1 delivery attestation: `e4541a9b845758309031f00cd1958c96b4de4a27`
-- Durable P1 completion gate: satisfied on verified `origin/main`
+- P1 delivery integration candidate:
+  `464eece0c05c97e014cca0955f0ab92998c1d97c`
+- P1 delivery attestation:
+  `e4541a9b845758309031f00cd1958c96b4de4a27`
+- P1 delivery merged through PR #10 at
+  `be6644f5140c35de2075fa24782f81bf0449f0f6`
+- Plan Revision 3 candidate: `7e38c61dc0e08190ddb72a55bae109895831d94b`
+- Plan Revision 3 attestation: `3f2cbfee112b15c1ce0a690ce838080f4cffcd84`
+- Plan Revision 3 merged through PR #11 at
+  `6a6d64339d44cbede99acfd5a3966781f1f9c4f6`
+- Delivery candidate identity: this exact two-parent merge commit. A commit cannot
+  embed its own content-derived SHA without changing that SHA; after freeze, the
+  authoritative exact SHA is bound in `docs/evidence/P1-delivery-manifest.json` and
+  rechecked in `docs/reviews/P1-delivery.json`. Rejected predecessor candidate
+  `354acea210fe60ffc21d68deff94716561b5427d` is not authorized for delivery.
+- Durable P1 completion gate: satisfied; exact preserved P1 history and the accepted
+  delivery integration are present on `origin/main`
 - Verified P1 baseline: `d374247156e3ed15d19c037473da8f76ceedb6ab`
 - Production spreadsheet: unset; mutation unauthorized
 - Revision 4 candidate: `8881085e668bd268f92c6b1dc835eb4e194e6fd2`
@@ -264,65 +340,63 @@ Historical Revision 4 next actions (completed or superseded by Revision 5):
    attestation; then push, open, verify, and merge the authorized P2 delivery.
 5. Verify CI and Vercel effects. Do not start P3.
 
-## Plan Revision 3 amendment
+## Plan Revision 3 delivery
 
-The validator formerly compared P1's exact derived delivery transition to the current
-worktree `BUILD_STATE`. That made every normal P2 state change look like a historical P1
-mutation. Revision 3 reads the P1 delivery candidate named by the existing attested
-delivery manifest and compares that immutable candidate-tree state to the derived
-transition. Current stage state may then advance through the existing state machine,
-while all P1 objects, hashes, topology, authority, identities, and paths remain checked.
-It also discovers every historically accepted integration from Git history and requires
-its complete current record to remain exact, so deletion, downgrade, or rebinding cannot
-silently disable validation. The canonical plan revision header is checked against
-`BUILD_STATE` and covered by regression testing.
-
-Revision 3 is `attestation-gated`: the machine record does not predeclare acceptance.
-Only its exact manifest-bound fresh-context review and direct-child two-file attestation
-can satisfy the validator. The amendment changes governance, validation, regression
-tests, and documentation only. It does not alter product behavior, dependencies, CI,
-deployment configuration, P1 artifacts, or scholarship data.
-
-The unpublished worktree `/private/tmp/program_code-p2` remains dirty, local, paused,
-and untouched. After Revision 3 delivery, P2 must be reconciled onto the new verified
-`origin/main`, revalidated, frozen, manifested, and independently reviewed without any
-push, pull request, merge, or deployment.
-
-### Revision 3 verification
-
-Pre-freeze checks completed through `2026-08-25T01:02:20Z`; the only subsequent
-candidate changes are this durable handoff record and the matching evidence record.
-
-- `npm ci`: passed, 565 locked packages; the existing time-sensitive audit count was
-  21 (1 low, 7 moderate, 12 high, 1 critical), with no package or lockfile change.
-- `npm run typecheck`: passed.
-- `npm test`: passed, including P1 inventory digest
-  `dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2`
-  and, after review remediation, `delivery state history: PASS (1 accepted integration;
-  deletion/downgrade/rebind rejected)` plus canonical plan/state revision agreement.
-- `npm run build`: the restricted attempt failed only on existing Google Fonts network
-  access; the authorized retry passed and changed no configuration.
-- Prospective `npm run plan:check`: reported exactly the three expected absent
-  Revision 3 manifest/review/attestation errors and no other error.
-- `git diff --check`: passed.
-- Before freeze, `HEAD` and `origin/main` were exact
-  `be6644f5140c35de2075fa24782f81bf0449f0f6`; the 11 candidate paths were the only
-  dirty paths, and no Revision 3 remote branch or pull request existed.
-
-Exact UTC command windows and outcomes are in `docs/evidence/PLAN-REV3.md`.
-
-After the rejected predecessor review, typecheck, the complete test suite, the
-network-enabled production build, and `git diff --check` passed again through
-`2026-08-25T01:15:15Z`. Prospective plan validation reported only the absent review and
-attestation because the uncommitted predecessor manifest remained present pending
-regeneration against the replacement candidate.
+Revision 3 was independently accepted with zero findings, attested in exact direct-child
+commit `3f2cbfe`, and merged through PR #11. Main CI passed. The authorized Vercel Preview
+attempt was blocked by the existing author-access condition; no configuration or
+provider change was made. Vercel Production deployment `6074576943` completed
+successfully at `https://web-65cdpbnfc-whitefishscholarships-projects.vercel.app`.
+The amendment now validates P1's exact derived integration state from its immutable
+delivery candidate and prevents deletion, downgrade, or rebinding of historically
+accepted integrations.
 
 ## Plan Revision 2 delivery integration
 
 The delivered integration preserves P1 candidate `92ee210`, attestation `20476b8`, and
-every non-governance P1 blob byte-for-byte. Its candidate `464eece` has first parent the
-delivered Plan Revision 2 baseline and second parent exact `20476b8`; its direct-child
-attestation is `e4541a9`. Revision 3 changes none of these objects.
+every non-governance P1 blob byte-for-byte. Its exact two-parent candidate, independent
+review, direct-child delivery attestation, PR/main CI, and Production deployment all
+completed. The Vercel Preview attempt was blocked by the existing author-access rule;
+no configuration or provider change was made.
+
+## P2 implementation result
+
+P2 defines Zod-validated schema version `2.0.0` for Source, Scholarship, Application
+Group, Cycle, Evidence, and Review Item. Stable identifiers use deterministic SHA-256
+over versioned typed identity components.
+
+The read-only P1 compatibility adapter:
+
+- binds all 197 records without changing the pinned input;
+- maps 176 `Scholarship` rows to distinct awards and keeps 21 `Portal` rows as
+  non-award source-record bindings;
+- preserves 213 URL sources, creates four explicit offline sources, and preserves all
+  278 information/application role occurrences with provenance;
+- creates 176 explicit unknown cycles instead of inventing dates, status, time zone,
+  precision, or recurrence;
+- represents three common/matching application groups without claiming unseen children
+  or unverified supplement behavior;
+- preserves 162 unknown records, 121 unknown sources, 188 manual-review records, 207
+  manual-review sources, 26 shared-source groups, and all 15 identity-bearing
+  query/fragment source identities;
+- round-trips all retained P1 record fields and references exactly; and
+- maps all 15 student-facing fields while explicitly leaving the 11 fields excluded
+  from P1 unavailable rather than fabricating values.
+
+The deterministic canonical dataset digest is
+`dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
+
+The replacement preserves raw and normalized forms for every previously lossy
+eligibility/renewal field, binds Evidence IDs to complete observation identity, and
+uses the schema version in every stable identifier. Duplicate-name review items now
+attach to resolvable row identities. The 12 scenario fixtures contain linked Source,
+Scholarship, Application Group, Cycle, Evidence, and Review Item records rather than
+taxonomy labels alone.
+
+P2 changed only model/adapter code, sanitized fixtures, deterministic generated
+evidence, tests, package scripts, governance state/handoff, and the P3 kickoff. It does
+not change runtime routes, API/UI behavior, connectors, acquisition, dependencies,
+lockfile, CI, or deployment configuration.
 
 ## P1 result
 
@@ -370,7 +444,66 @@ current scholarship facts, or production behavior.
 from implementation candidate `92ee210`, then added as the only two paths in exact
 direct-child attestation `20476b8`. The delivery integration preserves both blobs.
 
+## P2 artifacts
+
+- `web/src/lib/canonicalModel.ts` — versioned schemas, ID rules, compatibility adapter,
+  and exact legacy round trip
+- `web/fixtures/p2/model-scenarios.json` — 12 linked canonical graph fixtures covering
+  all 13 taxonomy values
+- `web/fixtures/p2/legacy-field-map.json` — all 15 current student-facing fields with
+  raw, typed, unknown, and unparseable compatibility cases
+- `web/scripts/p2-data-model.ts` — deterministic migration dry run and evidence check
+- `web/scripts/test-p2-data-model.ts` — model, identity, relationship, and loss tests
+- `docs/evidence/P2-dry-run.json` and `docs/evidence/P2-compatibility.json` —
+  machine-readable reconciliation and compatibility evidence
+- `docs/evidence/P2.md` — stage evidence pending final verification details
+- `docs/kickoffs/P3-ACQUISITION.md` — next-stage contract only; P3 was not executed
+
 ## Verification and review
+
+P2 verification to date:
+
+- Clean replacement baseline `6a6d643` matched exact `origin/main`; P1 accepted history
+  and Plan Revision 3 manifest/review attestation were present.
+- `npm ci` passed with 565 packages and the unchanged time-sensitive audit result of 21
+  findings (1 low, 7 moderate, 12 high, 1 critical).
+- Baseline `npm run plan:check` passed for all 10 stage contracts.
+- `npm run p2:model` generated deterministic evidence.
+- Final predecessor `npm run p2:model:check` passed after the explicit source-link
+  schema addition with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
+- Typecheck and the focused predecessor P2 test passed after explicit source
+  relationships were added, with digest `727f8615f54484f2499ed12f0e95354d6a800fdd05c428b4ab225fb9a0f667d1`.
+- One full test run exposed an incorrect test expectation of eight Whitefish Education
+  Foundation children; the pinned P1 shared group correctly contains nine. The test now
+  derives its expectation from the pinned group, and the focused rerun passed.
+- The final Revision 3-aware matrix passed through `2026-08-25T01:31:32Z`: locked
+  install, model check, plan validation, typecheck, complete test suite, production
+  build, and diff check. Exact UTC windows are recorded in `docs/evidence/P2.md`.
+- Fresh reviewer `/root/p2_independent_review` rejected exact candidate `658f07d` at
+  `2026-08-25T01:43:19Z` with critical 0, high 3, medium 2, low 0: five fields lost
+  raw values; evidence observations could collide; scenarios were descriptors rather
+  than model graphs; several IDs were not version-bound; and one duplicate-name review
+  subject did not resolve. Manifest SHA-256 was
+  `3b9e2d06b586a7663d0d925a1c92652b013f655b9b41bc1347b691986c0c1902`.
+- The replacement fixes all five findings. Its regenerated dataset has 572 Evidence
+  records, 592 resolvable Review Items, and digest
+  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
+  The post-freeze replacement manifest bound its exact identity.
+- The same reviewer technically accepted exact candidate `9aebc85` at
+  `2026-08-25T02:11:32Z` with C0/H0/M0/L0 and independently confirmed all five fixes,
+  denominators, deterministic digest, linked fixtures, relationship resolution,
+  12-path manifest, historical preservation, and scope boundaries. Exact reviewed
+  manifest SHA-256 was
+  `48ba326da8410118a87e86f39527ab55fdb7d9bda80dcc72fd23c0a8e60a468a`.
+- The user then explicitly authorized the local P2 acceptance-marker transition,
+  exact final review, and direct-child two-file attestation. No delivery or P3 work was
+  authorized.
+- Replacement pre-freeze verification passed through `2026-08-25T02:02:44Z`: locked
+  install, model check, Revision 3-aware plan validation, typecheck, complete tests,
+  production build, and diff check. Exact UTC windows and outcomes are recorded in
+  `docs/evidence/P2.md`.
+
+P1 historical verification and review:
 
 - Development checks reproduced the inventory digest and exact counts.
 - `npm ci` completed with the locked dependency tree. The audit snapshot reported 21
@@ -434,6 +567,9 @@ Repository state observed at `2026-08-24T19:45:25Z`:
 
 ## Data and side-effect boundaries
 
+- P2 uses only committed sanitized P1 fixtures and evidence; it made no spreadsheet
+  read or write and no public fetch.
+
 - The testing sheet was accessed read-only; no spreadsheet update, append, clear,
   formatting, permission, or metadata mutation was performed.
 - The production sheet was not configured, read, or mutated.
@@ -456,6 +592,14 @@ delivery sequence at the top of this handoff supersede these old action limits w
 changing their historical accuracy.
 
 ## Remaining unknowns and later-stage routing
+
+- P1 excluded deadline, amount, summary, eligibility, and other student-facing values.
+  P2 proves representation and lossless handling but does not reconstruct those values.
+- Every migrated award has an explicit unknown cycle because P1 retained no cycle
+  facts; P4 owns fact verification.
+- Parent/child source links are schema-supported but remain empty where P1 supplies no
+  evidence of source hierarchy. P3 may populate them only from evidence.
+- Reach Higher application-group behavior remains manual review.
 
 - P1's public probes are representative observations, not full portal crawls or proof
   that scholarship facts are current.

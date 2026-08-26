@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "modelSchemaVersion": "2.0.0",
+  "sourceSchema": "Master Database 15-column student allow-list",
+  "mappings": [
+    {
+      "legacyField": "Last Updated",
+      "canonicalTargets": ["evidence.retrievedAt", "evidence.sourceRevision"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"08/24/2026","typed":"2026-08-24T00:00:00-06:00","unknown":null,"unparseable":"recently"},
+      "conversion": "Parse only with field-level provenance; otherwise preserve as an unknown review item."
+    },
+    {
+      "legacyField": "Due Date",
+      "canonicalTargets": ["cycle.opensAt", "cycle.closesAt", "cycle.status", "cycle.recurrence"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"First Friday in March","typed":"annual_rule","unknown":null,"unparseable":"TBD-ish"},
+      "conversion": "Retain raw text in compatibility input and parse later without false precision."
+    },
+    {
+      "legacyField": "In-State / National",
+      "canonicalTargets": ["scholarship.studentFields.eligibility.location", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"Flathead County or national","typed":"known","unknown":null,"unparseable":"local-ish"},
+      "conversion": "Preserve raw audience text until P4 evidence supports structured eligibility."
+    },
+    {
+      "legacyField": "Portal/ Scholarship",
+      "canonicalTargets": ["legacyBinding.currentLabel", "legacyBinding.targetKind"],
+      "p1Availability": "retained",
+      "compatibilityCases": {"raw":"Scholarship","typed":"Scholarship","unknown":null,"unparseable":"Award/Portal?"},
+      "conversion": "Scholarship rows map to Scholarship; Portal rows map to source_record without inflating award counts."
+    },
+    {
+      "legacyField": "Amount",
+      "canonicalTargets": ["scholarship.studentFields.awardAmount", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"$1,000-$2,500","typed":"variable","unknown":null,"unparseable":"varies a bunch"},
+      "conversion": "Preserve raw amount/range and currency until field evidence supports normalization."
+    },
+    {
+      "legacyField": "Scholarship Location/Information",
+      "canonicalTargets": ["source.canonicalUrl", "legacyBinding.legacyRecord.references"],
+      "p1Availability": "retained",
+      "compatibilityCases": {"raw":"https://example.test/info?award=1#details","typed":"url","unknown":null,"unparseable":"ask counselor"},
+      "conversion": "Preserve each information-role URL, provenance, query parameters, and fragment identity."
+    },
+    {
+      "legacyField": "Name of Scholarship",
+      "canonicalTargets": ["scholarship.name", "legacyBinding.legacyRecord.scholarshipName"],
+      "p1Availability": "retained",
+      "compatibilityCases": {"raw":"Example Memorial Scholarship","typed":"name","unknown":null,"unparseable":"?"},
+      "conversion": "Use P1 row identity for stable award identity; do not deduplicate by name alone."
+    },
+    {
+      "legacyField": "Application Link/Method",
+      "canonicalTargets": ["source.canonicalUrl", "source.offlineAuthority", "applicationGroup.sourceIds"],
+      "p1Availability": "retained",
+      "compatibilityCases": {"raw":"Mail to counselor","typed":"offline","unknown":null,"unparseable":"see above"},
+      "conversion": "Preserve every application-role URL or explicit offline method without entering a workflow."
+    },
+    {
+      "legacyField": "Summary",
+      "canonicalTargets": ["scholarship.studentFields.summary", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"Supports local graduates.","typed":"known","unknown":null,"unparseable":"[formatting only]"},
+      "conversion": "Preserve only from an authorized compatibility input; P1 excluded Summary content."
+    },
+    {
+      "legacyField": "Stated Min. GPA",
+      "canonicalTargets": ["scholarship.studentFields.eligibility.minimumGpa", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"about a B average","typed":"3.0","unknown":null,"unparseable":"good grades"},
+      "conversion": "Represent raw, numeric, any, and unknown states separately."
+    },
+    {
+      "legacyField": "School Type (2-or 4-Year, or Trade)",
+      "canonicalTargets": ["scholarship.studentFields.eligibility.schoolTypes", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"2-year, trade, or other approved","typed":"two_year,trade,other","unknown":null,"unparseable":"college-ish"},
+      "conversion": "Map allowed values without treating an omitted value as Any."
+    },
+    {
+      "legacyField": "Renewing/ Non-Renewing",
+      "canonicalTargets": ["scholarship.studentFields.renewal", "cycle.recurrence", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"May renew with satisfactory progress","typed":"conditional","unknown":null,"unparseable":"possibly again"},
+      "conversion": "Keep award renewal distinct from annual application-cycle recurrence."
+    },
+    {
+      "legacyField": "Focus",
+      "canonicalTargets": ["scholarship.studentFields.eligibility.focus", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"Forestry and conservation","typed":"known","unknown":null,"unparseable":"STEM-ish"},
+      "conversion": "Preserve raw focus terms and evidence before controlled vocabulary mapping."
+    },
+    {
+      "legacyField": "Acute Financial Need Prioritization",
+      "canonicalTargets": ["scholarship.studentFields.selection.financialNeedPriority", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"Preference for acute financial need","typed":"prioritized","unknown":null,"unparseable":"need considered somehow"},
+      "conversion": "Distinguish eligibility, priority, no, and unknown instead of coercing to boolean."
+    },
+    {
+      "legacyField": "Accepts Gap Year Applications Upon Return",
+      "canonicalTargets": ["scholarship.studentFields.eligibility.gapYear", "evidence.fieldPath"],
+      "p1Availability": "excluded_from_sanitized_input",
+      "compatibilityCases": {"raw":"Yes, after one gap year","typed":"conditional","unknown":null,"unparseable":"maybe after time off"},
+      "conversion": "Represent yes, no, conditional, and unknown explicitly."
+    }
+  ]
+}
