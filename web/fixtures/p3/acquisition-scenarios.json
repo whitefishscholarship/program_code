@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "modelSchemaVersion": "2.0.0",
+  "observedAt": "2026-08-26T23:00:00Z",
+  "limitations": "Sanitized deterministic fixtures exercise acquisition structure only. Names, URLs, states, and counts are not accepted scholarship facts.",
+  "scenarios": [
+    {
+      "id": "single-award-page",
+      "architecture": "single_award_page",
+      "sourceUrl": "https://fixtures.invalid/single-award?utm_source=test",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Single Award"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [{"key":"page","url":"https://fixtures.invalid/single-award","outcomes":["success"]}]
+    },
+    {
+      "id": "multi-award-page",
+      "architecture": "multi_award_page",
+      "sourceUrl": "https://fixtures.invalid/multi-award#awards",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized North Award", "Sanitized South Award", "Sanitized Trades Award"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"north","url":"https://fixtures.invalid/multi-award#north","outcomes":["success"]},
+        {"key":"south","url":"https://fixtures.invalid/multi-award#south","outcomes":["success"]},
+        {"key":"trades","url":"https://fixtures.invalid/multi-award#trades","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "nfu-unified-application",
+      "architecture": "common_application",
+      "sourceUrl": "https://fixtures.invalid/nfu-style?utm_campaign=fixture",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Moore Award", "Sanitized Seymour Award", "Sanitized MANRRS Award"],
+      "applicationMode": "selectable_children",
+      "workCap": 3,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"moore","url":"https://fixtures.invalid/nfu-style#moore","outcomes":["success"]},
+        {"key":"seymour","url":"https://fixtures.invalid/nfu-style#seymour","outcomes":["success"]},
+        {"key":"manrrs","url":"https://fixtures.invalid/nfu-style#manrrs","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "horatio-directory-exceptions",
+      "architecture": "directory_hub",
+      "sourceUrl": "https://fixtures.invalid/horatio-style",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Undergraduate Program", "Sanitized Career Program", "Sanitized Specialized Program"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"undergraduate","url":"https://fixtures.invalid/horatio-style/undergraduate","outcomes":["success"]},
+        {"key":"career","url":"https://fixtures.invalid/horatio-style/career","outcomes":["success"]},
+        {"key":"specialized-login","url":"https://fixtures.invalid/horatio-style/login","outcomes":["login_wall"]}
+      ]
+    },
+    {
+      "id": "reach-higher-matching-review",
+      "architecture": "matching_portal",
+      "sourceUrl": "https://fixtures.invalid/reach-higher?filters=montana#c475",
+      "offlineAuthority": null,
+      "childNames": [],
+      "applicationMode": "eligibility_matched",
+      "workCap": 1,
+      "maxAttempts": 2,
+      "workItems": [{"key":"matcher","url":"https://fixtures.invalid/reach-higher#c475","outcomes":["login_wall"]}]
+    },
+    {
+      "id": "fvcc-pagination-cap-recovery",
+      "architecture": "paginated_catalog",
+      "sourceUrl": "https://fixtures.invalid/fvcc-style?page=1&utm_medium=test",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Catalog Award 1", "Sanitized Catalog Award 2", "Sanitized Catalog Award 3", "Sanitized Catalog Award 4", "Sanitized Catalog Award 5"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"page-1-award-1","url":"https://fixtures.invalid/fvcc-style/opportunities/1?page=1","outcomes":["success"]},
+        {"key":"page-1-award-2","url":"https://fixtures.invalid/fvcc-style/opportunities/2?page=1","outcomes":["success"]},
+        {"key":"page-2-award-3","url":"https://fixtures.invalid/fvcc-style/opportunities/3?page=2","outcomes":["success"]},
+        {"key":"page-2-award-4","url":"https://fixtures.invalid/fvcc-style/opportunities/4?page=2","outcomes":["success"]},
+        {"key":"page-3-award-5","url":"https://fixtures.invalid/fvcc-style/opportunities/5?page=3","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "first-external-providers",
+      "architecture": "external_marketplace",
+      "sourceUrl": "https://fixtures.invalid/first-style?partnerName=FIRST+Partner",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized College Provider Award", "Sanitized Technical Provider Award", "Sanitized Association Award"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"college","url":"https://provider-a.invalid/award","outcomes":["success"]},
+        {"key":"technical","url":"https://provider-b.invalid/award","outcomes":["success"]},
+        {"key":"association","url":"https://provider-c.invalid/award","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "esa-shared-program",
+      "architecture": "common_application",
+      "sourceUrl": "https://fixtures.invalid/esa-style?program=2026",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized General Fund", "Sanitized Technology Fund"],
+      "applicationMode": "shared_with_supplements",
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"general","url":"https://fixtures.invalid/esa-style#general","outcomes":["success"]},
+        {"key":"technology","url":"https://fixtures.invalid/esa-style#technology","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "versioned-document",
+      "architecture": "document_or_pdf",
+      "sourceUrl": "https://fixtures.invalid/files/application-v2.pdf?version=2",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Document Award"],
+      "applicationMode": null,
+      "workCap": 1,
+      "maxAttempts": 3,
+      "workItems": [{"key":"document-v2","url":"https://fixtures.invalid/files/application-v2.pdf?version=2","outcomes":["timeout","success"]}]
+    },
+    {
+      "id": "public-form-no-submit",
+      "architecture": "form_only",
+      "sourceUrl": "https://fixtures.invalid/forms/public-scholarship?sys_id=form-1",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Public Form Award"],
+      "applicationMode": "direct_per_award",
+      "workCap": 1,
+      "maxAttempts": 2,
+      "workItems": [{"key":"form-structure","url":"https://fixtures.invalid/forms/public-scholarship?sys_id=form-1","outcomes":["success"]}]
+    },
+    {
+      "id": "institution-umbrella",
+      "architecture": "institution_umbrella",
+      "sourceUrl": "https://fixtures.invalid/institution/aid",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Automatic Aid", "Sanitized Competitive Award", "Sanitized Department Award"],
+      "applicationMode": "automatic_consideration",
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"automatic","url":"https://fixtures.invalid/institution/aid#automatic","outcomes":["success"]},
+        {"key":"competitive","url":"https://fixtures.invalid/institution/aid#competitive","outcomes":["success"]},
+        {"key":"department","url":"https://fixtures.invalid/institution/aid#department","outcomes":["success"]}
+      ]
+    },
+    {
+      "id": "login-portal-review",
+      "architecture": "login_application_portal",
+      "sourceUrl": "https://fixtures.invalid/login?urlkey=program-a",
+      "offlineAuthority": null,
+      "childNames": [],
+      "applicationMode": null,
+      "workCap": 1,
+      "maxAttempts": 2,
+      "workItems": [{"key":"login-wall","url":"https://fixtures.invalid/login?urlkey=program-a","outcomes":["login_wall"]}]
+    },
+    {
+      "id": "offline-automatic",
+      "architecture": "offline_or_automatic",
+      "sourceUrl": null,
+      "offlineAuthority": "Sanitized counselor-administered automatic award",
+      "childNames": ["Sanitized Automatic Award"],
+      "applicationMode": "offline",
+      "workCap": 1,
+      "maxAttempts": 1,
+      "workItems": [{"key":"offline-receipt","url":null,"outcomes":["success"]}]
+    },
+    {
+      "id": "unknown-identity-bearing-url",
+      "architecture": "unknown",
+      "sourceUrl": "https://fixtures.invalid/search?utm_source=ignored&page=2&urlkey=award-a&sys_id=record-a&filters=mt#details",
+      "offlineAuthority": null,
+      "childNames": [],
+      "applicationMode": null,
+      "workCap": 1,
+      "maxAttempts": 1,
+      "workItems": [{"key":"unknown-review","url":"https://fixtures.invalid/search?page=2&urlkey=award-a&sys_id=record-a&filters=mt#details","outcomes":["malformed"]}]
+    },
+    {
+      "id": "bounded-failure-recovery",
+      "architecture": "directory_hub",
+      "sourceUrl": "https://fixtures.invalid/failure-matrix",
+      "offlineAuthority": null,
+      "childNames": ["Sanitized Recovered Award"],
+      "applicationMode": null,
+      "workCap": 2,
+      "maxAttempts": 3,
+      "workItems": [
+        {"key":"timeout-then-success","url":"https://fixtures.invalid/failure-matrix/recovered","outcomes":["timeout","success"]},
+        {"key":"retry-exhausted","url":"https://fixtures.invalid/failure-matrix/timeout","outcomes":["timeout","timeout","timeout"]},
+        {"key":"bot-block","url":"https://fixtures.invalid/failure-matrix/bot","outcomes":["bot_block"]},
+        {"key":"malformed-child","url":null,"outcomes":["malformed"]},
+        {"key":"partial-run-tail","url":"https://fixtures.invalid/failure-matrix/tail","outcomes":["success"]}
+      ]
+    }
+  ]
+}

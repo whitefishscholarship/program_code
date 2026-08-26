@@ -1,0 +1,934 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P3",
+  "generatedAt": "2026-08-26T23:00:00Z",
+  "baselineCommit": "2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3",
+  "totals": {
+    "denominator": 34,
+    "processed": 34,
+    "succeeded": 27,
+    "failed": 7,
+    "remaining": 0,
+    "queued": 0,
+    "reconciled": true
+  },
+  "failurePolicy": {
+    "timeoutAndNetworkRetries": "bounded by per-scenario maxAttempts",
+    "retryExhaustion": "explicit failure and review; never closure evidence",
+    "botBlockLoginWallMalformedChild": "explicit failure and review; no access-control bypass",
+    "cap": "unprocessed denominator remains in cursor-addressed queue"
+  },
+  "scenarios": [
+    {
+      "id": "single-award-page",
+      "architecture": "single_award_page",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "4b9f3b5ada301528230327adf26d6cc0a7a1c78e6ff0e9a02c0bd87f16a9dd87",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [
+            "page"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "multi-award-page",
+      "architecture": "multi_award_page",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "d49a80f7c19fa56f64c80b436434b0fd661b50aa16bf0cba40c38182313dc0f7",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "north",
+            "south"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImQ0OWE4MGY3YzE5ZmE1NmY2NGM4MGI0MzY0MzRiMGZkNjYxYjUwYWExNmJmMGNiYTQwYzM4MTgyMzEzZGMwZjciLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsibm9ydGgiLCJzb3V0aCJdLCJmYWlsZWRLZXlzIjpbXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "d49a80f7c19fa56f64c80b436434b0fd661b50aa16bf0cba40c38182313dc0f7",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "succeededKeys": [
+            "north",
+            "south",
+            "trades"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "nfu-unified-application",
+      "architecture": "common_application",
+      "cap": 3,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "30a673e6b0ecd21c00890b58d1c8008e133051277139e63002a01ed41a29f662",
+          "denominator": 3,
+          "processedThisRun": 3,
+          "processedTotal": 3,
+          "succeededThisRun": 3,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 3,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 3,
+          "succeededKeys": [
+            "moore",
+            "seymour",
+            "manrrs"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "horatio-directory-exceptions",
+      "architecture": "directory_hub",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "cbc424c39091ccc8717aadc96450e4a33af4642a401a49ff4f8f52371ecbd16c",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "undergraduate",
+            "career"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImNiYzQyNGMzOTA5MWNjYzg3MTdhYWRjOTY0NTBlNGEzM2FmNDY0MmE0MDFhNDlmZjRmOGY1MjM3MWVjYmQxNmMiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsidW5kZXJncmFkdWF0ZSIsImNhcmVlciJdLCJmYWlsZWRLZXlzIjpbXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "cbc424c39091ccc8717aadc96450e4a33af4642a401a49ff4f8f52371ecbd16c",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 0,
+          "succeededTotal": 2,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "succeededKeys": [
+            "undergraduate",
+            "career"
+          ],
+          "failedKeys": [
+            "specialized-login"
+          ],
+          "failures": [
+            {
+              "key": "specialized-login",
+              "outcome": "login_wall",
+              "attempts": 1
+            }
+          ],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 2,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "specialized-login"
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "reach-higher-matching-review",
+      "architecture": "matching_portal",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "741ed70ef3406284e6d9893fc745430404a95e083c55de565eb330a25beb2927",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [],
+          "failedKeys": [
+            "matcher"
+          ],
+          "failures": [
+            {
+              "key": "matcher",
+              "outcome": "login_wall",
+              "attempts": 1
+            }
+          ],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "matcher"
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "fvcc-pagination-cap-recovery",
+      "architecture": "paginated_catalog",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 3,
+          "queued": 3,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "page-1-award-1",
+            "page-1-award-2"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsicGFnZS0xLWF3YXJkLTEiLCJwYWdlLTEtYXdhcmQtMiJdLCJmYWlsZWRLZXlzIjpbXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 4,
+          "succeededThisRun": 2,
+          "succeededTotal": 4,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 4,
+          "succeededKeys": [
+            "page-1-award-1",
+            "page-1-award-2",
+            "page-2-award-3",
+            "page-2-award-4"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjQsInN1Y2NlZWRlZEtleXMiOlsicGFnZS0xLWF3YXJkLTEiLCJwYWdlLTEtYXdhcmQtMiIsInBhZ2UtMi1hd2FyZC0zIiwicGFnZS0yLWF3YXJkLTQiXSwiZmFpbGVkS2V5cyI6W119",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 1,
+          "processedTotal": 5,
+          "succeededThisRun": 1,
+          "succeededTotal": 5,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 4,
+          "nextIndex": 5,
+          "succeededKeys": [
+            "page-1-award-1",
+            "page-1-award-2",
+            "page-2-award-3",
+            "page-2-award-4",
+            "page-3-award-5"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "first-external-providers",
+      "architecture": "external_marketplace",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "90d945f6ffdd16e9358b0772cef9775d92317927332a509a1055c412bd7055e2",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "college",
+            "technical"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6IjkwZDk0NWY2ZmZkZDE2ZTkzNThiMDc3MmNlZjk3NzVkOTIzMTc5MjczMzJhNTA5YTEwNTVjNDEyYmQ3MDU1ZTIiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsiY29sbGVnZSIsInRlY2huaWNhbCJdLCJmYWlsZWRLZXlzIjpbXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "90d945f6ffdd16e9358b0772cef9775d92317927332a509a1055c412bd7055e2",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "succeededKeys": [
+            "college",
+            "technical",
+            "association"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "esa-shared-program",
+      "architecture": "common_application",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "9165a7bb223bf5ff1120c15d7c16946cb65b1f69cb046d873d5bebfd4fd2e23b",
+          "denominator": 2,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "general",
+            "technology"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 2,
+        "processed": 2,
+        "succeeded": 2,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "versioned-document",
+      "architecture": "document_or_pdf",
+      "cap": 1,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "912ccc38544094f1c8b38ad17f1befd5868da817a923aabf768e3e7f588be373",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [
+            "document-v2"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "public-form-no-submit",
+      "architecture": "form_only",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "3e773ebc94431e785a13231be8be4675fb2428091a6008f2fa6a267725bcd990",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [
+            "form-structure"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "institution-umbrella",
+      "architecture": "institution_umbrella",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "be9700806dacfa14048a2f8646429729bae489d18e9c022f8451a47f47005da6",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "automatic",
+            "competitive"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImJlOTcwMDgwNmRhY2ZhMTQwNDhhMmY4NjQ2NDI5NzI5YmFlNDg5ZDE4ZTljMDIyZjg0NTFhNDdmNDcwMDVkYTYiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsiYXV0b21hdGljIiwiY29tcGV0aXRpdmUiXSwiZmFpbGVkS2V5cyI6W119",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "be9700806dacfa14048a2f8646429729bae489d18e9c022f8451a47f47005da6",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "succeededKeys": [
+            "automatic",
+            "competitive",
+            "department"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "login-portal-review",
+      "architecture": "login_application_portal",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "6b2fd7233c9d4784c7531890967f536491aa451a5f02f4b91a70bed76f64288a",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [],
+          "failedKeys": [
+            "login-wall"
+          ],
+          "failures": [
+            {
+              "key": "login-wall",
+              "outcome": "login_wall",
+              "attempts": 1
+            }
+          ],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "login-wall"
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "offline-automatic",
+      "architecture": "offline_or_automatic",
+      "cap": 1,
+      "maxAttempts": 1,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "1c979bad4ca0bfd03bb3494061810651416dedf94384c8f5524bead22e98e51c",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 1,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [
+            "offline-receipt"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "unknown-identity-bearing-url",
+      "architecture": "unknown",
+      "cap": 1,
+      "maxAttempts": 1,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "e77e339409629f75e088d0d0fb4b46bb501d777da18748680072db4e78fec92f",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 1,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "succeededKeys": [],
+          "failedKeys": [
+            "unknown-review"
+          ],
+          "failures": [
+            {
+              "key": "unknown-review",
+              "outcome": "malformed",
+              "attempts": 1
+            }
+          ],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "unknown-review"
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "bounded-failure-recovery",
+      "architecture": "directory_hub",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 3,
+          "queued": 3,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "succeededKeys": [
+            "timeout-then-success"
+          ],
+          "failedKeys": [
+            "retry-exhausted"
+          ],
+          "failures": [
+            {
+              "key": "retry-exhausted",
+              "outcome": "timeout",
+              "attempts": 3
+            }
+          ],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsidGltZW91dC10aGVuLXN1Y2Nlc3MiXSwiZmFpbGVkS2V5cyI6WyJyZXRyeS1leGhhdXN0ZWQiXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 4,
+          "succeededThisRun": 0,
+          "succeededTotal": 1,
+          "failedThisRun": 2,
+          "failedTotal": 3,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 4,
+          "succeededKeys": [
+            "timeout-then-success"
+          ],
+          "failedKeys": [
+            "retry-exhausted",
+            "bot-block",
+            "malformed-child"
+          ],
+          "failures": [
+            {
+              "key": "bot-block",
+              "outcome": "bot_block",
+              "attempts": 1
+            },
+            {
+              "key": "malformed-child",
+              "outcome": "malformed",
+              "attempts": 1
+            }
+          ],
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjQsInN1Y2NlZWRlZEtleXMiOlsidGltZW91dC10aGVuLXN1Y2Nlc3MiXSwiZmFpbGVkS2V5cyI6WyJyZXRyeS1leGhhdXN0ZWQiLCJib3QtYmxvY2siLCJtYWxmb3JtZWQtY2hpbGQiXX0",
+          "complete": false
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 1,
+          "processedTotal": 5,
+          "succeededThisRun": 1,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 3,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 4,
+          "nextIndex": 5,
+          "succeededKeys": [
+            "timeout-then-success",
+            "partial-run-tail"
+          ],
+          "failedKeys": [
+            "retry-exhausted",
+            "bot-block",
+            "malformed-child"
+          ],
+          "failures": [],
+          "cursor": null,
+          "complete": true
+        }
+      ],
+      "final": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 2,
+        "failed": 3,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "retry-exhausted",
+          "bot-block",
+          "malformed-child"
+        ],
+        "complete": true
+      }
+    }
+  ],
+  "reportSha256": "4525344780e9539a90935b5b8537d5fc2b7a279875f20d47c7d7a55c34e3ba1c"
+}

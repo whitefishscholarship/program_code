@@ -25,6 +25,30 @@ Default branch: `main`
   mutation occurred.
 - P3 is authorized under the stage-specific standing mandate recorded in
   `docs/evidence/STANDING-OPERATING-MANDATE.md`. Reserved effects remain excluded.
+- P3 now implements all 13 architecture routes, selective URL identity, bounded
+  retry/cursor queues, single/multi-page parsing, directory/pagination discovery,
+  document parsing, no-submit public-form reading, explicit access review, and
+  schema-valid unverified P2 fixture graphs.
+- Deterministic fixture denominator: 34 work items; 34 processed, 27 successful, seven
+  explicit failure/review outcomes, zero unaccounted remaining. All seven failures have
+  a canonical Source, Evidence item, and Review Item.
+- Fixture graph totals: 34 Sources, 27 Scholarships, six Application Groups, 27 Cycles,
+  94 Evidence items, and 94 Review Items. All evidence remains unverified and every
+  cycle remains unknown for P4.
+- Acquisition report SHA-256:
+  `e1b78afe4cb0125112eaad9c69ae102d45fae804cf7f8d429ec689bd241838b8`;
+  completeness report SHA-256:
+  `4525344780e9539a90935b5b8537d5fc2b7a279875f20d47c7d7a55c34e3ba1c`.
+- Three bounded public landing pages were read with Firecrawl at
+  `2026-08-26T22:38:00Z` for architecture observations only: NFU, FVCC AcademicWorks,
+  and FIRST. No child crawl, form/application interaction, authentication, factual
+  acceptance, spreadsheet access, or provider contact occurred.
+- `docs/kickoffs/P4-VERIFICATION.md` is prepared as the next-stage contract only. P4
+  has not started and may not start until P3 acceptance is delivered on `origin/main`.
+- Implementation checks to date pass: deterministic report check, TypeScript,
+  P3-focused tests, new-file ESLint, complete repository tests, and plan validation.
+  The complete final matrix, immutable candidate, manifest, fresh review, and exact
+  direct-child attestation are still pending.
 
 ### Deferred platform and dependency issues (not P3 remediation)
 
