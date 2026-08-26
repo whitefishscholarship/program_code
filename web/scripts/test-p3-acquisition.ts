@@ -114,13 +114,19 @@ assert.deepEqual(sections.map((section) => section.name), [
   'Sanitized Trades Grant',
 ]);
 assert.equal(new Set(sections.map((section) => section.contentSha256)).size, 3);
+const repeatedSections = splitMultiAwardSections(`
+  <h2 data-award-name="Repeated Award">First</h2><p>First body</p>
+  <h2 data-award-name="Repeated Award">Second</h2><p>Second body</p>`);
+assert.equal(repeatedSections.length, 2, 'same-name sections must retain distinct occurrences');
+assert.notEqual(repeatedSections[0].contentSha256, repeatedSections[1].contentSha256);
 
 const directory = enumerateDirectoryLinks(`
   <a href="/award?page=1&utm_source=one">Award one</a>
   <a href="/award?utm_source=two&page=1">Duplicate tracked link</a>
   <a href="/award?page=2#details">Award two</a>
   <a href="javascript:submit()">Unsafe action</a>`, 'https://fixtures.invalid/hub');
-assert.equal(directory.links.length, 2, 'tracking variants must dedupe without collapsing page identity');
+assert.equal(directory.links.length, 3, 'same canonical URL occurrences and their labels must be retained');
+assert.equal(directory.links.filter((link) => link.url.endsWith('?page=1')).length, 2);
 assert.equal(directory.rejected.length, 1, 'unsupported links must be explicitly receipted');
 assert(directory.links.some((link) => link.url.endsWith('?page=2#details')));
 
@@ -152,6 +158,7 @@ const publicForm = readPublicForm(`
 assert.equal(publicForm.submitted, false);
 assert.equal(publicForm.actionUrl, 'https://fixtures.invalid/submit?sys_id=form-a');
 assert.deepEqual(publicForm.fieldLabels, ['Email address', 'Essay']);
+assert.deepEqual(publicForm.questions.map((question) => question.controlTypes), [['text'], ['textarea']]);
 assert.equal(publicForm.controlCount, 3);
 assert(!JSON.stringify(publicForm).includes('applicant@example.test'));
 assert(!JSON.stringify(publicForm).includes('private response'));
@@ -169,19 +176,28 @@ assert.deepEqual({
   queued: capFirst.queued,
 }, { denominator: 3, processed: 2, remaining: 1, queued: 1 });
 assert(capFirst.cursor, 'a partial cap requires a resumable cursor');
-const capFinal = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, execute: () => 'success' });
+await assert.rejects(
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, execute: () => 'success' }),
+  /prior receipt ledger/,
+);
+const capFinal = await runBoundedQueue(capItems, {
+  cap: 2,
+  maxAttempts: 3,
+  cursor: capFirst.cursor,
+  previousReceipts: [capFirst],
+  execute: () => 'success',
+});
 assert.equal(capFinal.processedTotal, 3);
 assert.equal(capFinal.remaining, 0);
 assert.equal(capFinal.cursor, null);
 assert.equal(capFinal.succeededTotal, 3);
 const capRepeat = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, execute: () => 'success' });
 assert.deepEqual(capRepeat, capFirst, 'same input and receipt start must be idempotent');
-const tamperedState = JSON.parse(Buffer.from(capFirst.cursor!, 'base64url').toString('utf8'));
-tamperedState.succeededKeys = ['not-a-work-item'];
-const tamperedCursor = Buffer.from(JSON.stringify(tamperedState)).toString('base64url');
+const tamperedReceipt = structuredClone(capFirst);
+tamperedReceipt.succeededKeys[0] = 'not-a-work-item';
 await assert.rejects(
-  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: tamperedCursor, execute: () => 'success' }),
-  /outcome keys/,
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, previousReceipts: [tamperedReceipt], execute: () => 'success' }),
+  /digest mismatch/,
 );
 await assert.rejects(
   runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: 'not-a-valid-cursor', execute: () => 'success' }),
@@ -216,22 +232,41 @@ assert.equal(failures.failures.find((failure) => failure.key === 'timeout')?.att
 assert.equal(failures.failures.find((failure) => failure.key === 'bot')?.attempts, 1);
 assert.equal(failures.processedTotal + failures.remaining, failures.denominator);
 
+let thrownAttempts = 0;
+const thrown = await runBoundedQueue([{ key: 'thrown-timeout', url: null }], {
+  cap: 1,
+  maxAttempts: 2,
+  execute: () => {
+    thrownAttempts += 1;
+    const error = new Error('request timed out');
+    error.name = 'AbortError';
+    throw error;
+  },
+});
+assert.equal(thrownAttempts, 2);
+assert.deepEqual(thrown.failedKeys, ['thrown-timeout']);
+assert.equal(thrown.failures[0].outcome, 'timeout');
+assert.match(thrown.failures[0].detail ?? '', /AbortError/);
+
 let totalChildren = 0;
 for (const scenario of fixtures.scenarios) {
-  const firstGraph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt);
-  const secondGraph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt);
+  const receipts = await runFixtureQueue(scenario);
+  const firstGraph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt, receipts);
+  const secondGraph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt, receipts);
+  const expectedChildren = scenario.workItems
+    .filter((item) => receipts.some((receipt) => receipt.succeededKeys.includes(item.key)))
+    .flatMap((item) => item.childNames);
   assert.deepEqual(firstGraph, secondGraph, `${scenario.id} canonical output must be deterministic`);
   assert.deepEqual(canonicalRelationshipErrors(firstGraph), [], `${scenario.id} relationships must resolve`);
-  assert.equal(firstGraph.scholarships.length, scenario.childNames.length, `${scenario.id} child denominator must be exact`);
-  assert.equal(new Set(firstGraph.scholarships.map((scholarship) => scholarship.id)).size, scenario.childNames.length);
+  assert.equal(firstGraph.scholarships.length, expectedChildren.length, `${scenario.id} successful work must be the child denominator`);
+  assert.equal(new Set(firstGraph.scholarships.map((scholarship) => scholarship.id)).size, expectedChildren.length);
   assert(firstGraph.evidence.every((item) => item.result === 'unverified'), 'P3 fixture facts must remain unverified');
   assert(firstGraph.cycles.every((cycle) => cycle.status === 'unknown'), 'P3 must not make P4 cycle decisions');
   assert(firstGraph.reviewItems.every((item) => item.targetStage === 'P4'));
-  const receipts = await runFixtureQueue(scenario);
   const final = receipts.at(-1)!;
   assert.equal(final.remaining, 0, `${scenario.id} queue must reach a measured end`);
   assert.equal(final.processedTotal, final.denominator);
-  for (const failedKey of final.failedKeys) {
+  for (const failedKey of receipts.flatMap((receipt) => receipt.failedKeys)) {
     const failureSourceId = stableId('src', ['p3-fixture', scenario.id, 'failed-work', failedKey]);
     const failureSource = firstGraph.sources.find((source) => source.id === failureSourceId);
     assert(failureSource, `${scenario.id} failed work ${failedKey} requires a canonical source receipt`);
@@ -241,6 +276,13 @@ for (const scenario of fixtures.scenarios) {
   totalChildren += firstGraph.scholarships.length;
 }
 assert(totalChildren > 0);
+const horatio = fixtures.scenarios.find((scenario) => scenario.id === 'horatio-directory-exceptions')!;
+const horatioReceipts = await runFixtureQueue(horatio);
+assert.equal(buildFixtureCanonicalGraph(horatio, fixtures.observedAt, horatioReceipts).scholarships.length, 2);
+const recovery = fixtures.scenarios.find((scenario) => scenario.id === 'bounded-failure-recovery')!;
+const recoveryReceipts = await runFixtureQueue(recovery);
+assert.equal(buildFixtureCanonicalGraph(recovery, fixtures.observedAt, recoveryReceipts).scholarships.length, 2);
+assert(recoveryReceipts.flatMap((receipt) => receipt.failures).some((failure) => failure.key === 'retry-exhausted'));
 
 const generated = await generateP3Evidence();
 const committedAcquisition = JSON.parse(fs.readFileSync(path.join(repoRoot, 'docs/evidence/P3-acquisition.json'), 'utf8'));

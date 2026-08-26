@@ -11,8 +11,14 @@ import {
   canonicalizeAcquisitionUrl,
   classifyArchitecture,
   deterministicJsonSha256,
+  discoverPagination,
+  enumerateDirectoryLinks,
+  extractSinglePage,
+  parseDocumentSections,
+  readPublicForm,
   routeArchitecture,
   runFixtureQueue,
+  splitMultiAwardSections,
   type AcquisitionFixtureScenario,
 } from '../src/lib/acquisition';
 import {
@@ -36,7 +42,6 @@ const FixtureScenarioSchema = z.object({
   architecture: SourceArchitectureSchema,
   sourceUrl: z.string().url().nullable(),
   offlineAuthority: z.string().min(1).nullable(),
-  childNames: z.array(z.string().min(1)),
   applicationMode: ApplicationModeSchema.nullable(),
   workCap: z.number().int().positive(),
   maxAttempts: z.number().int().positive(),
@@ -44,7 +49,12 @@ const FixtureScenarioSchema = z.object({
     key: z.string().min(1),
     url: z.string().url().nullable(),
     outcomes: z.array(WorkOutcomeSchema).min(1),
+    childNames: z.array(z.string().min(1)),
   })),
+  parserFixture: z.object({
+    kind: z.enum(['single_html', 'multi_html', 'directory_html', 'pagination_html', 'document_text', 'public_form_html']),
+    content: z.string().min(1),
+  }).optional(),
 }).superRefine((scenario, ctx) => {
   if ((scenario.sourceUrl === null) === (scenario.offlineAuthority === null)) {
     ctx.addIssue({ code: 'custom', message: 'Fixture scenario requires exactly one source URL or offline authority' });
@@ -66,6 +76,37 @@ export interface GeneratedP3Evidence {
 
 function addDigest(body: Record<string, unknown>): Record<string, unknown> {
   return { ...body, reportSha256: deterministicJsonSha256(body) };
+}
+
+function executeParserFixture(scenario: AcquisitionFixtureScenario): Record<string, unknown> | null {
+  const fixture = scenario.parserFixture;
+  if (!fixture) return null;
+  const expectedNames = scenario.workItems.flatMap((item) => item.childNames);
+  let observation: unknown;
+  if (fixture.kind === 'single_html') {
+    observation = extractSinglePage(fixture.content);
+    assert(expectedNames.includes((observation as ReturnType<typeof extractSinglePage>).title));
+  } else if (fixture.kind === 'multi_html') {
+    observation = splitMultiAwardSections(fixture.content);
+    assert.deepEqual((observation as ReturnType<typeof splitMultiAwardSections>).map((item) => item.name), expectedNames);
+  } else if (fixture.kind === 'directory_html') {
+    observation = enumerateDirectoryLinks(fixture.content, scenario.sourceUrl!);
+    const discovered = (observation as ReturnType<typeof enumerateDirectoryLinks>).links.map((item) => item.url);
+    assert.deepEqual(discovered, scenario.workItems.map((item) => canonicalizeAcquisitionUrl(item.url!).url));
+  } else if (fixture.kind === 'pagination_html') {
+    observation = discoverPagination(fixture.content, scenario.sourceUrl!);
+    assert((observation as ReturnType<typeof discoverPagination>).pages.length > 0);
+  } else if (fixture.kind === 'document_text') {
+    observation = parseDocumentSections(fixture.content);
+    assert.deepEqual((observation as ReturnType<typeof parseDocumentSections>).map((item) => item.name), expectedNames);
+  } else {
+    observation = readPublicForm(fixture.content, scenario.sourceUrl!);
+    const form = observation as ReturnType<typeof readPublicForm>;
+    assert.equal(form.title, expectedNames[0]);
+    assert.equal(form.submitted, false);
+    assert(form.questions.length > 0);
+  }
+  return { kind: fixture.kind, resultSha256: deterministicJsonSha256(observation), observation };
 }
 
 export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
@@ -130,7 +171,7 @@ export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
     assert.equal(finalReceipt.remaining, 0, `${scenario.id} fixture queue must reach a measured end`);
     assert.equal(finalReceipt.processedTotal, finalReceipt.denominator, `${scenario.id} denominator must reconcile`);
 
-    const graph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt);
+    const graph = buildFixtureCanonicalGraph(scenario, fixtures.observedAt, receipts);
     assert.deepEqual(canonicalRelationshipErrors(graph), [], `${scenario.id} fixture graph relationships must resolve`);
     graphTotals.sources += graph.sources.length;
     graphTotals.scholarships += graph.scholarships.length;
@@ -154,6 +195,7 @@ export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
       cycleCount: graph.cycles.length,
       evidenceCount: graph.evidence.length,
       reviewItemCount: graph.reviewItems.length,
+      parserObservation: executeParserFixture(scenario),
       finalCompleteness: {
         denominator: finalReceipt.denominator,
         processed: finalReceipt.processedTotal,
@@ -177,7 +219,8 @@ export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
         failed: finalReceipt.failedTotal,
         remaining: finalReceipt.remaining,
         queued: finalReceipt.queued,
-        failedKeys: finalReceipt.failedKeys,
+        failedKeys: receipts.flatMap((receipt) => receipt.failedKeys),
+        failures: receipts.flatMap((receipt) => receipt.failures),
         complete: finalReceipt.complete,
       },
     });
@@ -211,16 +254,7 @@ export async function generateP3Evidence(): Promise<GeneratedP3Evidence> {
     scenarioCount: fixtures.scenarios.length,
     scenarioResults,
     canonicalEntityFixtureTotals: graphTotals,
-    parserCoverage: [
-      'single_page_extractor',
-      'multi_award_section_splitter',
-      'directory_queue',
-      'pagination_cursor_engine',
-      'document_parser',
-      'public_form_reader_no_submit',
-      'dynamic_login_review',
-      'offline_receipt',
-    ],
+    parserCoverage: fixtures.scenarios.flatMap((scenario) => scenario.parserFixture ? [scenario.parserFixture.kind] : []),
     identityPolicy: {
       trackingParameters: 'allow-listed removal only',
       meaningfulFragmentsPreserved: true,

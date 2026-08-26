@@ -41,13 +41,15 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "page"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "fcd909faecc0ecce8df7fd6032808359c2cfbd478e1b6ea97cc2376b717d084b",
+          "cursor": null
         }
       ],
       "final": {
@@ -58,6 +60,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -83,14 +86,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "north",
             "south"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImQ0OWE4MGY3YzE5ZmE1NmY2NGM4MGI0MzY0MzRiMGZkNjYxYjUwYWExNmJmMGNiYTQwYzM4MTgyMzEzZGMwZjciLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsibm9ydGgiLCJzb3V0aCJdLCJmYWlsZWRLZXlzIjpbXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "b2041afc7b9c7e42c7b2041f2555d2707576e7919955cebc1a6082e5a0716ea8",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImQ0OWE4MGY3YzE5ZmE1NmY2NGM4MGI0MzY0MzRiMGZkNjYxYjUwYWExNmJmMGNiYTQwYzM4MTgyMzEzZGMwZjciLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImIyMDQxYWZjN2I5YzdlNDJjN2IyMDQxZjI1NTVkMjcwNzU3NmU3OTE5OTU1Y2ViYzFhNjA4MmU1YTA3MTZlYTgifQ"
         },
         {
           "schemaVersion": 1,
@@ -108,15 +113,15 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 3,
+          "previousReceiptSha256": "b2041afc7b9c7e42c7b2041f2555d2707576e7919955cebc1a6082e5a0716ea8",
           "succeededKeys": [
-            "north",
-            "south",
             "trades"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "e8b397d128ad9610d801724be3aa7b70e5b62fa1de4793a0bb5024aea5b0f371",
+          "cursor": null
         }
       ],
       "final": {
@@ -127,6 +132,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -152,6 +158,7 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 3,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "moore",
             "seymour",
@@ -159,8 +166,9 @@
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "890c1f36feb307f4dc21311889e1b5083fa9b63ba30b0d88c02dd812fdfb6893",
+          "cursor": null
         }
       ],
       "final": {
@@ -171,6 +179,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -196,14 +205,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "undergraduate",
             "career"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImNiYzQyNGMzOTA5MWNjYzg3MTdhYWRjOTY0NTBlNGEzM2FmNDY0MmE0MDFhNDlmZjRmOGY1MjM3MWVjYmQxNmMiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsidW5kZXJncmFkdWF0ZSIsImNhcmVlciJdLCJmYWlsZWRLZXlzIjpbXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "e91e3916694b3c0232c838ba67d068c865eb03d404a2341553a0d86bf8e591d3",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImNiYzQyNGMzOTA5MWNjYzg3MTdhYWRjOTY0NTBlNGEzM2FmNDY0MmE0MDFhNDlmZjRmOGY1MjM3MWVjYmQxNmMiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImU5MWUzOTE2Njk0YjNjMDIzMmM4MzhiYTY3ZDA2OGM4NjVlYjAzZDQwNGEyMzQxNTUzYTBkODZiZjhlNTkxZDMifQ"
         },
         {
           "schemaVersion": 1,
@@ -221,10 +232,8 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 3,
-          "succeededKeys": [
-            "undergraduate",
-            "career"
-          ],
+          "previousReceiptSha256": "e91e3916694b3c0232c838ba67d068c865eb03d404a2341553a0d86bf8e591d3",
+          "succeededKeys": [],
           "failedKeys": [
             "specialized-login"
           ],
@@ -232,11 +241,13 @@
             {
               "key": "specialized-login",
               "outcome": "login_wall",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             }
           ],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "f084035f2d83a348db18f6f194760148334932b50ef27c750619e2d0f9f911fd",
+          "cursor": null
         }
       ],
       "final": {
@@ -248,6 +259,14 @@
         "queued": 0,
         "failedKeys": [
           "specialized-login"
+        ],
+        "failures": [
+          {
+            "key": "specialized-login",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
         ],
         "complete": true
       }
@@ -274,6 +293,7 @@
           "maxAttempts": 2,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [],
           "failedKeys": [
             "matcher"
@@ -282,11 +302,13 @@
             {
               "key": "matcher",
               "outcome": "login_wall",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             }
           ],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "f9c7fe4737b000cf77851a4c3f978af8d99135f6402a6bb4c4dd344fe116e278",
+          "cursor": null
         }
       ],
       "final": {
@@ -298,6 +320,14 @@
         "queued": 0,
         "failedKeys": [
           "matcher"
+        ],
+        "failures": [
+          {
+            "key": "matcher",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
         ],
         "complete": true
       }
@@ -324,14 +354,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "page-1-award-1",
             "page-1-award-2"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsicGFnZS0xLWF3YXJkLTEiLCJwYWdlLTEtYXdhcmQtMiJdLCJmYWlsZWRLZXlzIjpbXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "5743d8c4b3bbb1d0a232053266e7a3dfb79682ebdb42f3225869bd693d20007f",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjU3NDNkOGM0YjNiYmIxZDBhMjMyMDUzMjY2ZTdhM2RmYjc5NjgyZWJkYjQyZjMyMjU4NjliZDY5M2QyMDAwN2YifQ"
         },
         {
           "schemaVersion": 1,
@@ -349,16 +381,16 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 4,
+          "previousReceiptSha256": "5743d8c4b3bbb1d0a232053266e7a3dfb79682ebdb42f3225869bd693d20007f",
           "succeededKeys": [
-            "page-1-award-1",
-            "page-1-award-2",
             "page-2-award-3",
             "page-2-award-4"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjQsInN1Y2NlZWRlZEtleXMiOlsicGFnZS0xLWF3YXJkLTEiLCJwYWdlLTEtYXdhcmQtMiIsInBhZ2UtMi1hd2FyZC0zIiwicGFnZS0yLWF3YXJkLTQiXSwiZmFpbGVkS2V5cyI6W119",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "86895f7a3dee372d9fbdc200d231e3bff72271154d2ba680163900f9d07ee9d6",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjQsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6Ijg2ODk1ZjdhM2RlZTM3MmQ5ZmJkYzIwMGQyMzFlM2JmZjcyMjcxMTU0ZDJiYTY4MDE2MzkwMGY5ZDA3ZWU5ZDYifQ"
         },
         {
           "schemaVersion": 1,
@@ -376,17 +408,15 @@
           "maxAttempts": 3,
           "startIndex": 4,
           "nextIndex": 5,
+          "previousReceiptSha256": "86895f7a3dee372d9fbdc200d231e3bff72271154d2ba680163900f9d07ee9d6",
           "succeededKeys": [
-            "page-1-award-1",
-            "page-1-award-2",
-            "page-2-award-3",
-            "page-2-award-4",
             "page-3-award-5"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "c0cc6c553f0c91e46f8c1855bb8b9f820fba2b36911539e8eb47adbd35bec716",
+          "cursor": null
         }
       ],
       "final": {
@@ -397,6 +427,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -422,14 +453,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "college",
             "technical"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6IjkwZDk0NWY2ZmZkZDE2ZTkzNThiMDc3MmNlZjk3NzVkOTIzMTc5MjczMzJhNTA5YTEwNTVjNDEyYmQ3MDU1ZTIiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsiY29sbGVnZSIsInRlY2huaWNhbCJdLCJmYWlsZWRLZXlzIjpbXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "b10c7b3baf6f9b13f3696c0101c83fd2e4e4b543e96a93b1499668d9133083f4",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6IjkwZDk0NWY2ZmZkZDE2ZTkzNThiMDc3MmNlZjk3NzVkOTIzMTc5MjczMzJhNTA5YTEwNTVjNDEyYmQ3MDU1ZTIiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImIxMGM3YjNiYWY2ZjliMTNmMzY5NmMwMTAxYzgzZmQyZTRlNGI1NDNlOTZhOTNiMTQ5OTY2OGQ5MTMzMDgzZjQifQ"
         },
         {
           "schemaVersion": 1,
@@ -447,15 +480,15 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 3,
+          "previousReceiptSha256": "b10c7b3baf6f9b13f3696c0101c83fd2e4e4b543e96a93b1499668d9133083f4",
           "succeededKeys": [
-            "college",
-            "technical",
             "association"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "92d4390deb6147a77a8cb86b8ac5c8b1545e5d25e84f7b06618576ff93a21782",
+          "cursor": null
         }
       ],
       "final": {
@@ -466,6 +499,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -491,14 +525,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "general",
             "technology"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "d48d7f5e26f674310719313904e70709d4d12169c3d297452d663fbd556b37f4",
+          "cursor": null
         }
       ],
       "final": {
@@ -509,6 +545,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -534,13 +571,15 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "document-v2"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "38d75a2a3288be774b3ef3715da712be363b5264eb5584f1af3d7d3d72fbab53",
+          "cursor": null
         }
       ],
       "final": {
@@ -551,6 +590,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -576,13 +616,15 @@
           "maxAttempts": 2,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "form-structure"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "bff5afc508baea0f8f77730dc5565c0dde6d81139fb51db2d379c9a714d20091",
+          "cursor": null
         }
       ],
       "final": {
@@ -593,6 +635,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -618,14 +661,16 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "automatic",
             "competitive"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImJlOTcwMDgwNmRhY2ZhMTQwNDhhMmY4NjQ2NDI5NzI5YmFlNDg5ZDE4ZTljMDIyZjg0NTFhNDdmNDcwMDVkYTYiLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsiYXV0b21hdGljIiwiY29tcGV0aXRpdmUiXSwiZmFpbGVkS2V5cyI6W119",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "7c6488e93069501a556d81498fa0268fc35e82c8b00854bcd1f07cc40d528b43",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImJlOTcwMDgwNmRhY2ZhMTQwNDhhMmY4NjQ2NDI5NzI5YmFlNDg5ZDE4ZTljMDIyZjg0NTFhNDdmNDcwMDVkYTYiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjdjNjQ4OGU5MzA2OTUwMWE1NTZkODE0OThmYTAyNjhmYzM1ZTgyYzhiMDA4NTRiY2QxZjA3Y2M0MGQ1MjhiNDMifQ"
         },
         {
           "schemaVersion": 1,
@@ -643,15 +688,15 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 3,
+          "previousReceiptSha256": "7c6488e93069501a556d81498fa0268fc35e82c8b00854bcd1f07cc40d528b43",
           "succeededKeys": [
-            "automatic",
-            "competitive",
             "department"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "5e82b566eb06b0bb973644d7a4fa42b07384c21e67cb95605f40baff477b6473",
+          "cursor": null
         }
       ],
       "final": {
@@ -662,6 +707,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -687,6 +733,7 @@
           "maxAttempts": 2,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [],
           "failedKeys": [
             "login-wall"
@@ -695,11 +742,13 @@
             {
               "key": "login-wall",
               "outcome": "login_wall",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             }
           ],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "cb57d611a1f00dc00e3e8f1e0e8f9860cc4bb7eaebe0d3ce6b401ad858c352b6",
+          "cursor": null
         }
       ],
       "final": {
@@ -711,6 +760,14 @@
         "queued": 0,
         "failedKeys": [
           "login-wall"
+        ],
+        "failures": [
+          {
+            "key": "login-wall",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
         ],
         "complete": true
       }
@@ -737,13 +794,15 @@
           "maxAttempts": 1,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "offline-receipt"
           ],
           "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "5acfe91ad418a13e1f12df822860ac1bbda524dccc09c692593b5a6066891e37",
+          "cursor": null
         }
       ],
       "final": {
@@ -754,6 +813,7 @@
         "remaining": 0,
         "queued": 0,
         "failedKeys": [],
+        "failures": [],
         "complete": true
       }
     },
@@ -779,6 +839,7 @@
           "maxAttempts": 1,
           "startIndex": 0,
           "nextIndex": 1,
+          "previousReceiptSha256": null,
           "succeededKeys": [],
           "failedKeys": [
             "unknown-review"
@@ -787,11 +848,13 @@
             {
               "key": "unknown-review",
               "outcome": "malformed",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             }
           ],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "95d0e48d7c3e47ce3f3a2d5a91c2c7db1030a6288ba9d92e991e667110dc895d",
+          "cursor": null
         }
       ],
       "final": {
@@ -803,6 +866,14 @@
         "queued": 0,
         "failedKeys": [
           "unknown-review"
+        ],
+        "failures": [
+          {
+            "key": "unknown-review",
+            "outcome": "malformed",
+            "attempts": 1,
+            "detail": null
+          }
         ],
         "complete": true
       }
@@ -829,6 +900,7 @@
           "maxAttempts": 3,
           "startIndex": 0,
           "nextIndex": 2,
+          "previousReceiptSha256": null,
           "succeededKeys": [
             "timeout-then-success"
           ],
@@ -839,11 +911,13 @@
             {
               "key": "retry-exhausted",
               "outcome": "timeout",
-              "attempts": 3
+              "attempts": 3,
+              "detail": null
             }
           ],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjIsInN1Y2NlZWRlZEtleXMiOlsidGltZW91dC10aGVuLXN1Y2Nlc3MiXSwiZmFpbGVkS2V5cyI6WyJyZXRyeS1leGhhdXN0ZWQiXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "7eb9f1a02bf6e43e4766140279c460f604d8799f58888487d169ef2c070d2bd0",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjdlYjlmMWEwMmJmNmU0M2U0NzY2MTQwMjc5YzQ2MGY2MDRkODc5OWY1ODg4ODQ4N2QxNjllZjJjMDcwZDJiZDAifQ"
         },
         {
           "schemaVersion": 1,
@@ -861,11 +935,9 @@
           "maxAttempts": 3,
           "startIndex": 2,
           "nextIndex": 4,
-          "succeededKeys": [
-            "timeout-then-success"
-          ],
+          "previousReceiptSha256": "7eb9f1a02bf6e43e4766140279c460f604d8799f58888487d169ef2c070d2bd0",
+          "succeededKeys": [],
           "failedKeys": [
-            "retry-exhausted",
             "bot-block",
             "malformed-child"
           ],
@@ -873,16 +945,19 @@
             {
               "key": "bot-block",
               "outcome": "bot_block",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             },
             {
               "key": "malformed-child",
               "outcome": "malformed",
-              "attempts": 1
+              "attempts": 1,
+              "detail": null
             }
           ],
-          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjQsInN1Y2NlZWRlZEtleXMiOlsidGltZW91dC10aGVuLXN1Y2Nlc3MiXSwiZmFpbGVkS2V5cyI6WyJyZXRyeS1leGhhdXN0ZWQiLCJib3QtYmxvY2siLCJtYWxmb3JtZWQtY2hpbGQiXX0",
-          "complete": false
+          "complete": false,
+          "receiptSha256": "10ba8a430725760dc7a1dac59d30d3b530c6c89ec7345824603a05fd939f0437",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjQsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjEwYmE4YTQzMDcyNTc2MGRjN2ExZGFjNTlkMzBkM2I1MzBjNmM4OWVjNzM0NTgyNDYwM2EwNWZkOTM5ZjA0MzcifQ"
         },
         {
           "schemaVersion": 1,
@@ -900,18 +975,15 @@
           "maxAttempts": 3,
           "startIndex": 4,
           "nextIndex": 5,
+          "previousReceiptSha256": "10ba8a430725760dc7a1dac59d30d3b530c6c89ec7345824603a05fd939f0437",
           "succeededKeys": [
-            "timeout-then-success",
             "partial-run-tail"
           ],
-          "failedKeys": [
-            "retry-exhausted",
-            "bot-block",
-            "malformed-child"
-          ],
+          "failedKeys": [],
           "failures": [],
-          "cursor": null,
-          "complete": true
+          "complete": true,
+          "receiptSha256": "02f9ac4d5aa264090de00a9c2e86cee11cfb2d585e2f8a81e70880f64c0ad9e5",
+          "cursor": null
         }
       ],
       "final": {
@@ -926,9 +998,29 @@
           "bot-block",
           "malformed-child"
         ],
+        "failures": [
+          {
+            "key": "retry-exhausted",
+            "outcome": "timeout",
+            "attempts": 3,
+            "detail": null
+          },
+          {
+            "key": "bot-block",
+            "outcome": "bot_block",
+            "attempts": 1,
+            "detail": null
+          },
+          {
+            "key": "malformed-child",
+            "outcome": "malformed",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
         "complete": true
       }
     }
   ],
-  "reportSha256": "4525344780e9539a90935b5b8537d5fc2b7a279875f20d47c7d7a55c34e3ba1c"
+  "reportSha256": "bebf5ce2a2fe92a684487238e2ca761babedb739b58ea4b5f5f2f7e32156957c"
 }

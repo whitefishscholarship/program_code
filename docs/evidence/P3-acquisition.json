@@ -7,7 +7,7 @@
   "pinnedInput": {
     "p1InventorySha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a",
     "p2CanonicalDatasetSha256": "dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295",
-    "fixtureSha256": "7103fa9315fa1e399885a1b3b658f2944bb8fdeec4937d824f8785eac7c94bc5",
+    "fixtureSha256": "719b9488918a1a781d3c061075d3affaa1179d7e440902568ee0b89a310c9db1",
     "liveObservationSha256": "6f83fa0048f2e0df286279d37e54dbcf554abb7ca4e98bdb4655084155434867"
   },
   "limitations": "Sanitized deterministic fixtures exercise acquisition structure only. Names, URLs, states, and counts are not accepted scholarship facts.",
@@ -92,6 +92,15 @@
       "cycleCount": 1,
       "evidenceCount": 3,
       "reviewItemCount": 3,
+      "parserObservation": {
+        "kind": "single_html",
+        "resultSha256": "362c8100283d3c39a20d24d8a0eec8006a07416f71fad245f3523a2921401749",
+        "observation": {
+          "title": "Sanitized Single Award",
+          "text": "Sanitized Single Award Fixture body.",
+          "contentSha256": "787a3e7f1fc89e83d6b1d6b0403980f1629a92afcdf7e170545b25d7f9a5f8c1"
+        }
+      },
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -112,6 +121,30 @@
       "cycleCount": 3,
       "evidenceCount": 7,
       "reviewItemCount": 7,
+      "parserObservation": {
+        "kind": "multi_html",
+        "resultSha256": "41a9bc9bb5086f432769783c88a0de3eb8b460d0f5e55e21d0a51515912a9d43",
+        "observation": [
+          {
+            "occurrence": 0,
+            "name": "Sanitized North Award",
+            "text": "North body.",
+            "contentSha256": "98c3ba203be808bbe7e9cffcf79b8c3c8ee3b48fe0ee8e17214cac07107d871a"
+          },
+          {
+            "occurrence": 1,
+            "name": "Sanitized South Award",
+            "text": "South body.",
+            "contentSha256": "05e31f623b11d44b8e6b3267925101b42a0d6fc4bae4b4720bd578ca6c7046c8"
+          },
+          {
+            "occurrence": 2,
+            "name": "Sanitized Trades Award",
+            "text": "Trades body.",
+            "contentSha256": "4c3e097fefb581efbaefc1f4f2f9f16f1d4f047e9f24107e0d3ea50ac66d4ba6"
+          }
+        ]
+      },
       "finalCompleteness": {
         "denominator": 3,
         "processed": 3,
@@ -132,6 +165,7 @@
       "cycleCount": 3,
       "evidenceCount": 8,
       "reviewItemCount": 8,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 3,
         "processed": 3,
@@ -147,11 +181,35 @@
       "architecture": "directory_hub",
       "route": "directory_queue",
       "sourceIdentity": "https://fixtures.invalid/horatio-style",
-      "childCount": 3,
+      "childCount": 2,
       "applicationGroupCount": 0,
-      "cycleCount": 3,
-      "evidenceCount": 11,
-      "reviewItemCount": 11,
+      "cycleCount": 2,
+      "evidenceCount": 8,
+      "reviewItemCount": 8,
+      "parserObservation": {
+        "kind": "directory_html",
+        "resultSha256": "f3a47f476b6766f866b2baf0f151619943f9ed4d6aa6d3a13621563aa6f63995",
+        "observation": {
+          "links": [
+            {
+              "occurrence": 0,
+              "url": "https://fixtures.invalid/horatio-style/undergraduate",
+              "text": "Undergraduate"
+            },
+            {
+              "occurrence": 1,
+              "url": "https://fixtures.invalid/horatio-style/career",
+              "text": "Career"
+            },
+            {
+              "occurrence": 2,
+              "url": "https://fixtures.invalid/horatio-style/login",
+              "text": "Specialized"
+            }
+          ],
+          "rejected": []
+        }
+      },
       "finalCompleteness": {
         "denominator": 3,
         "processed": 3,
@@ -172,6 +230,7 @@
       "cycleCount": 0,
       "evidenceCount": 3,
       "reviewItemCount": 3,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -192,6 +251,26 @@
       "cycleCount": 5,
       "evidenceCount": 16,
       "reviewItemCount": 16,
+      "parserObservation": {
+        "kind": "pagination_html",
+        "resultSha256": "60915805a4aa9bc42f8e93880365641cea93c4acede7c03a39a1e1ec31de4de6",
+        "observation": {
+          "pages": [
+            {
+              "url": "https://fixtures.invalid/fvcc-style?page=2",
+              "token": "2"
+            },
+            {
+              "url": "https://fixtures.invalid/fvcc-style?page=3",
+              "token": "3"
+            }
+          ],
+          "cursors": [
+            "page-2"
+          ],
+          "rejected": []
+        }
+      },
       "finalCompleteness": {
         "denominator": 5,
         "processed": 5,
@@ -212,6 +291,7 @@
       "cycleCount": 3,
       "evidenceCount": 10,
       "reviewItemCount": 10,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 3,
         "processed": 3,
@@ -232,6 +312,7 @@
       "cycleCount": 2,
       "evidenceCount": 6,
       "reviewItemCount": 6,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 2,
         "processed": 2,
@@ -252,6 +333,18 @@
       "cycleCount": 1,
       "evidenceCount": 3,
       "reviewItemCount": 3,
+      "parserObservation": {
+        "kind": "document_text",
+        "resultSha256": "78c497c2428d355efde2dface3d1932d49d5008d59c8b3cba5935eea5b48567a",
+        "observation": [
+          {
+            "occurrence": 0,
+            "name": "Sanitized Document Award",
+            "text": "Versioned fixture body.",
+            "contentSha256": "a1a14f65d9e0f5baf1a11cd771829cacdce54eb9afbaeb5c59995e9801c1733c"
+          }
+        ]
+      },
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -272,6 +365,40 @@
       "cycleCount": 1,
       "evidenceCount": 4,
       "reviewItemCount": 4,
+      "parserObservation": {
+        "kind": "public_form_html",
+        "resultSha256": "a4708ecdb414e3839bcfad5adcdac9ebe595f28c79f1144e252fd8497630cf07",
+        "observation": {
+          "title": "Sanitized Public Form Award",
+          "actionUrl": "https://fixtures.invalid/forms/d/e/example/formResponse?sys_id=form-1",
+          "method": "post",
+          "fieldLabels": [
+            "Student email",
+            "Essay prompt"
+          ],
+          "questions": [
+            {
+              "occurrence": 0,
+              "label": "Student email",
+              "controlTypes": [
+                "email"
+              ],
+              "required": true
+            },
+            {
+              "occurrence": 1,
+              "label": "Essay prompt",
+              "controlTypes": [
+                "textarea"
+              ],
+              "required": true
+            }
+          ],
+          "controlCount": 3,
+          "submitted": false,
+          "contentSha256": "62c6f4710de5efb30e14798d1214c493a7747b95a5fe68d4af393659dea50bf1"
+        }
+      },
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -292,6 +419,7 @@
       "cycleCount": 3,
       "evidenceCount": 8,
       "reviewItemCount": 8,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 3,
         "processed": 3,
@@ -312,6 +440,7 @@
       "cycleCount": 0,
       "evidenceCount": 2,
       "reviewItemCount": 2,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -332,6 +461,7 @@
       "cycleCount": 1,
       "evidenceCount": 4,
       "reviewItemCount": 4,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -352,6 +482,7 @@
       "cycleCount": 0,
       "evidenceCount": 2,
       "reviewItemCount": 2,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 1,
         "processed": 1,
@@ -367,11 +498,12 @@
       "architecture": "directory_hub",
       "route": "directory_queue",
       "sourceIdentity": "https://fixtures.invalid/failure-matrix",
-      "childCount": 1,
+      "childCount": 2,
       "applicationGroupCount": 0,
-      "cycleCount": 1,
-      "evidenceCount": 7,
-      "reviewItemCount": 7,
+      "cycleCount": 2,
+      "evidenceCount": 10,
+      "reviewItemCount": 10,
+      "parserObservation": null,
       "finalCompleteness": {
         "denominator": 5,
         "processed": 5,
@@ -392,14 +524,12 @@
     "reviewItems": 94
   },
   "parserCoverage": [
-    "single_page_extractor",
-    "multi_award_section_splitter",
-    "directory_queue",
-    "pagination_cursor_engine",
-    "document_parser",
-    "public_form_reader_no_submit",
-    "dynamic_login_review",
-    "offline_receipt"
+    "single_html",
+    "multi_html",
+    "directory_html",
+    "pagination_html",
+    "document_text",
+    "public_form_html"
   ],
   "identityPolicy": {
     "trackingParameters": "allow-listed removal only",
@@ -450,5 +580,5 @@
     "acceptedFactTransitions": 0,
     "productBehaviorChanges": 0
   },
-  "reportSha256": "e1b78afe4cb0125112eaad9c69ae102d45fae804cf7f8d429ec689bd241838b8"
+  "reportSha256": "abca542965bdf82279c9942b49fb343868ade9403021749ad1cdab489b896597"
 }

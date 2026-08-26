@@ -169,6 +169,7 @@ export function extractSinglePage(html: string): SinglePageObservation {
 }
 
 export interface AwardSection {
+  occurrence: number;
   name: string;
   text: string;
   contentSha256: string;
@@ -187,37 +188,32 @@ export function splitMultiAwardSections(html: string): AwardSection[] {
     if (!name) return;
     if (!explicitName && !/scholarship|award|grant|bursary|fellowship/i.test(name)) return;
     const body = cleanText(heading.nextUntil(headingSelector).map((_, sibling) => $(sibling).text()).get().join(' '));
-    sections.push({ name, text: body, contentSha256: sha256Text(`${name}\n${body}`) });
+    sections.push({ occurrence: sections.length, name, text: body, contentSha256: sha256Text(`${name}\n${body}`) });
   });
-  const deduplicated = new Map<string, AwardSection>();
-  for (const section of sections) {
-    const key = section.name.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-    if (key && !deduplicated.has(key)) deduplicated.set(key, section);
-  }
-  return [...deduplicated.values()];
+  return sections;
 }
 
 export interface DirectoryEnumeration {
-  links: Array<{ url: string; text: string }>;
+  links: Array<{ occurrence: number; url: string; text: string }>;
   rejected: Array<{ href: string; reason: string }>;
 }
 
 export function enumerateDirectoryLinks(html: string, sourceUrl: string): DirectoryEnumeration {
   const $ = cheerio.load(html);
-  const links = new Map<string, string>();
+  const links: Array<{ occurrence: number; url: string; text: string }> = [];
   const rejected: Array<{ href: string; reason: string }> = [];
   $('a[href]').each((_, element) => {
     const href = String($(element).attr('href') ?? '').trim();
     const text = cleanText($(element).text());
     try {
       const canonical = canonicalizeAcquisitionUrl(href, sourceUrl).url;
-      if (!links.has(canonical)) links.set(canonical, text);
+      links.push({ occurrence: links.length, url: canonical, text });
     } catch (error) {
       rejected.push({ href, reason: error instanceof Error ? error.message : String(error) });
     }
   });
   return {
-    links: [...links.entries()].map(([url, text]) => ({ url, text })),
+    links,
     rejected,
   };
 }
@@ -260,14 +256,14 @@ export function parseDocumentSections(text: string): AwardSection[] {
   const matches = [...normalized.matchAll(marker)];
   if (matches.length === 0) {
     const body = cleanText(normalized);
-    return body ? [{ name: 'Document observation', text: body, contentSha256: sha256Text(body) }] : [];
+    return body ? [{ occurrence: 0, name: 'Document observation', text: body, contentSha256: sha256Text(body) }] : [];
   }
   return matches.map((match, index) => {
     const start = (match.index ?? 0) + match[0].length;
     const end = matches[index + 1]?.index ?? normalized.length;
     const name = cleanText(match[1]);
     const body = cleanText(normalized.slice(start, end));
-    return { name, text: body, contentSha256: sha256Text(`${name}\n${body}`) };
+    return { occurrence: index, name, text: body, contentSha256: sha256Text(`${name}\n${body}`) };
   });
 }
 
@@ -276,6 +272,7 @@ export interface PublicFormObservation {
   actionUrl: string | null;
   method: 'get' | 'post';
   fieldLabels: string[];
+  questions: Array<{ occurrence: number; label: string; controlTypes: string[]; required: boolean }>;
   controlCount: number;
   submitted: false;
   contentSha256: string;
@@ -290,10 +287,32 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
   let actionUrl: string | null = null;
   if (rawAction) actionUrl = canonicalizeAcquisitionUrl(rawAction, sourceUrl).url;
   const method = String(form.attr('method') ?? 'get').toLowerCase() === 'post' ? 'post' : 'get';
-  const fieldLabels = $('label').map((_, element) => cleanText($(element).text())).get().filter(Boolean);
+  const questions: PublicFormObservation['questions'] = [];
+  const seenElements = new Set<unknown>();
+  form.find('label, [role="listitem"] [role="heading"], [data-question-title], .M7eMe').each((_, element) => {
+    if (seenElements.has(element)) return;
+    seenElements.add(element);
+    const node = $(element);
+    const label = cleanText(node.text());
+    if (!label) return;
+    const container = node.closest('[role="listitem"], label, fieldset, [data-question]');
+    let controls = (container.length ? container : node.parent()).find('input, select, textarea');
+    const forId = String(node.attr('for') ?? '');
+    if (!controls.length && forId) {
+      controls = form.find('input, select, textarea').filter((__, control) => String($(control).attr('id') ?? '') === forId);
+    }
+    if (!controls.length && node.is('label')) controls = node.nextAll('input, select, textarea').first();
+    const controlTypes = [...new Set(controls.map((__, control) => {
+      const tag = String(control.tagName ?? '').toLowerCase();
+      return tag === 'input' ? String($(control).attr('type') ?? 'text').toLowerCase() : tag;
+    }).get())].sort();
+    const required = controls.is('[required], [aria-required="true"]') || container.is('[aria-required="true"]');
+    questions.push({ occurrence: questions.length, label, controlTypes, required });
+  });
+  const fieldLabels = questions.map((question) => question.label);
   const controlCount = form.find('input, select, textarea, button').length;
-  const digestPayload = JSON.stringify({ title, actionUrl, method, fieldLabels, controlCount, submitted: false });
-  return { title, actionUrl, method, fieldLabels, controlCount, submitted: false, contentSha256: sha256Text(digestPayload) };
+  const digestPayload = JSON.stringify({ title, actionUrl, method, fieldLabels, questions, controlCount, submitted: false });
+  return { title, actionUrl, method, fieldLabels, questions, controlCount, submitted: false, contentSha256: sha256Text(digestPayload) };
 }
 
 export const WorkOutcomeSchema = z.enum([
@@ -315,22 +334,21 @@ interface QueueCursorState {
   schemaVersion: 1;
   inputSha256: string;
   nextIndex: number;
-  succeededKeys: string[];
-  failedKeys: string[];
+  previousReceiptSha256: string;
 }
 
 const QueueCursorStateSchema = z.object({
   schemaVersion: z.literal(ACQUISITION_SCHEMA_VERSION),
   inputSha256: z.string().regex(/^[0-9a-f]{64}$/),
   nextIndex: z.number().int().nonnegative(),
-  succeededKeys: z.array(z.string().min(1)),
-  failedKeys: z.array(z.string().min(1)),
+  previousReceiptSha256: z.string().regex(/^[0-9a-f]{64}$/),
 });
 
 export interface WorkFailure {
   key: string;
   outcome: Exclude<WorkOutcome, 'success'>;
   attempts: number;
+  detail: string | null;
 }
 
 export interface CompletenessReceipt {
@@ -349,6 +367,8 @@ export interface CompletenessReceipt {
   maxAttempts: number;
   startIndex: number;
   nextIndex: number;
+  previousReceiptSha256: string | null;
+  receiptSha256: string;
   succeededKeys: string[];
   failedKeys: string[];
   failures: WorkFailure[];
@@ -372,12 +392,56 @@ function decodeCursor(cursor: string): QueueCursorState {
   }
 }
 
+function receiptDigest(receipt: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>): string {
+  return sha256Text(JSON.stringify(receipt));
+}
+
+function classifyThrownError(error: unknown): { outcome: 'timeout' | 'network_error'; detail: string } {
+  const candidate = error instanceof Error ? error : new Error(String(error));
+  const code = typeof (candidate as Error & { code?: unknown }).code === 'string'
+    ? (candidate as Error & { code: string }).code
+    : '';
+  const detail = cleanText([candidate.name, code, candidate.message].filter(Boolean).join(':')).slice(0, 240);
+  return {
+    outcome: candidate.name === 'AbortError' || /timeout|timed out|ETIMEDOUT/i.test(`${code} ${candidate.message}`)
+      ? 'timeout'
+      : 'network_error',
+    detail,
+  };
+}
+
+function validateReceiptLedger(items: AcquisitionWorkItem[], receipts: CompletenessReceipt[], inputSha256: string): void {
+  let nextIndex = 0;
+  let previousReceiptSha256: string | null = null;
+  const keys = items.map((item) => item.key);
+  for (const receipt of receipts) {
+    if (receipt.inputSha256 !== inputSha256 || receipt.denominator !== items.length) throw new Error('Receipt ledger denominator mismatch');
+    if (receipt.startIndex !== nextIndex || receipt.previousReceiptSha256 !== previousReceiptSha256) throw new Error('Receipt ledger chain is not contiguous');
+    const receiptSha256 = receipt.receiptSha256;
+    const digestBody = structuredClone(receipt) as Partial<CompletenessReceipt>;
+    delete digestBody.receiptSha256;
+    delete digestBody.cursor;
+    if (receiptDigest(digestBody as Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>) !== receiptSha256) throw new Error('Receipt ledger digest mismatch');
+    const runKeys = [...receipt.succeededKeys, ...receipt.failedKeys];
+    const expected = keys.slice(receipt.startIndex, receipt.nextIndex);
+    if (new Set(runKeys).size !== runKeys.length || JSON.stringify([...runKeys].sort()) !== JSON.stringify([...expected].sort())) {
+      throw new Error('Receipt outcomes do not reconcile with its processed segment');
+    }
+    if (receipt.failures.length !== receipt.failedKeys.length || receipt.failures.some((failure) => !receipt.failedKeys.includes(failure.key))) {
+      throw new Error('Receipt failure details do not reconcile');
+    }
+    nextIndex = receipt.nextIndex;
+    previousReceiptSha256 = receipt.receiptSha256;
+  }
+}
+
 export async function runBoundedQueue(
   items: AcquisitionWorkItem[],
   options: {
     cap: number;
     maxAttempts: number;
     cursor?: string | null;
+    previousReceipts?: CompletenessReceipt[];
     execute: (item: AcquisitionWorkItem, attempt: number) => Promise<WorkOutcome> | WorkOutcome;
   },
 ): Promise<CompletenessReceipt> {
@@ -386,89 +450,103 @@ export async function runBoundedQueue(
   const keys = items.map((item) => item.key);
   if (new Set(keys).size !== keys.length) throw new Error('Queue work-item keys must be unique');
   const inputSha256 = queueInputSha256(items);
-  const initial: QueueCursorState = {
-    schemaVersion: ACQUISITION_SCHEMA_VERSION,
-    inputSha256,
-    nextIndex: 0,
-    succeededKeys: [],
-    failedKeys: [],
+  const previousReceipts = options.previousReceipts ?? [];
+  validateReceiptLedger(items, previousReceipts, inputSha256);
+  const state: QueueCursorState = options.cursor ? decodeCursor(options.cursor) : {
+    schemaVersion: ACQUISITION_SCHEMA_VERSION, inputSha256, nextIndex: 0, previousReceiptSha256: sha256Text('genesis'),
   };
-  const state = options.cursor ? decodeCursor(options.cursor) : initial;
+  if (options.cursor && previousReceipts.length === 0) throw new Error('A resumable cursor requires its prior receipt ledger');
+  if (!options.cursor && previousReceipts.length > 0) throw new Error('A prior receipt ledger requires its resumable cursor');
   if (state.inputSha256 !== inputSha256) throw new Error('Cursor does not match the acquisition work denominator');
   if (state.nextIndex < 0 || state.nextIndex > items.length) throw new Error('Cursor index is outside the work denominator');
-  const cursorKeys = [...state.succeededKeys, ...state.failedKeys];
-  if (new Set(cursorKeys).size !== cursorKeys.length) throw new Error('Cursor outcome keys must be unique and disjoint');
-  const expectedProcessedKeys = keys.slice(0, state.nextIndex).sort();
-  if (JSON.stringify([...cursorKeys].sort()) !== JSON.stringify(expectedProcessedKeys)) {
-    throw new Error('Cursor outcome keys do not reconcile with its processed prefix');
+  if (options.cursor) {
+    const last = previousReceipts.at(-1)!;
+    if (state.nextIndex !== last.nextIndex || state.previousReceiptSha256 !== last.receiptSha256) {
+      throw new Error('Cursor does not match the prior receipt ledger tip');
+    }
   }
 
   const selected = items.slice(state.nextIndex, state.nextIndex + options.cap);
-  const succeededKeys = [...state.succeededKeys];
-  const failedKeys = [...state.failedKeys];
+  const succeededKeys: string[] = [];
+  const failedKeys: string[] = [];
   const failures: WorkFailure[] = [];
   for (const item of selected) {
     let finalOutcome: WorkOutcome = 'network_error';
     let attempts = 0;
     for (let attempt = 1; attempt <= options.maxAttempts; attempt += 1) {
       attempts = attempt;
-      finalOutcome = WorkOutcomeSchema.parse(await options.execute(item, attempt));
+      let thrownDetail: string | null = null;
+      try {
+        finalOutcome = WorkOutcomeSchema.parse(await options.execute(item, attempt));
+      } catch (error) {
+        const classified = classifyThrownError(error);
+        finalOutcome = classified.outcome;
+        thrownDetail = classified.detail;
+      }
       if (finalOutcome === 'success') break;
       if (!['timeout', 'network_error'].includes(finalOutcome)) break;
+      if (attempt === options.maxAttempts && thrownDetail) failures.push({ key: item.key, outcome: finalOutcome, attempts, detail: thrownDetail });
     }
     if (finalOutcome === 'success') succeededKeys.push(item.key);
     else {
       failedKeys.push(item.key);
-      failures.push({ key: item.key, outcome: finalOutcome, attempts });
+      if (!failures.some((failure) => failure.key === item.key)) failures.push({ key: item.key, outcome: finalOutcome, attempts, detail: null });
     }
   }
   const nextIndex = state.nextIndex + selected.length;
   const remaining = items.length - nextIndex;
-  const nextState: QueueCursorState = {
-    schemaVersion: ACQUISITION_SCHEMA_VERSION,
-    inputSha256,
-    nextIndex,
-    succeededKeys,
-    failedKeys,
-  };
-  return {
+  const priorSuccesses = previousReceipts.reduce((count, receipt) => count + receipt.succeededThisRun, 0);
+  const priorFailures = previousReceipts.reduce((count, receipt) => count + receipt.failedThisRun, 0);
+  const body: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'> = {
     schemaVersion: ACQUISITION_SCHEMA_VERSION,
     inputSha256,
     denominator: items.length,
     processedThisRun: selected.length,
     processedTotal: nextIndex,
     succeededThisRun: selected.length - failures.length,
-    succeededTotal: succeededKeys.length,
+    succeededTotal: priorSuccesses + succeededKeys.length,
     failedThisRun: failures.length,
-    failedTotal: failedKeys.length,
+    failedTotal: priorFailures + failedKeys.length,
     remaining,
     queued: remaining,
     cap: options.cap,
     maxAttempts: options.maxAttempts,
     startIndex: state.nextIndex,
     nextIndex,
+    previousReceiptSha256: previousReceipts.at(-1)?.receiptSha256 ?? null,
     succeededKeys,
     failedKeys,
     failures,
-    cursor: remaining > 0 ? encodeCursor(nextState) : null,
     complete: remaining === 0,
+  };
+  const receiptSha256 = receiptDigest(body);
+  return {
+    ...body,
+    receiptSha256,
+    cursor: remaining > 0 ? encodeCursor({ schemaVersion: ACQUISITION_SCHEMA_VERSION, inputSha256, nextIndex, previousReceiptSha256: receiptSha256 }) : null,
   };
 }
 
 export interface FixtureWorkItem extends AcquisitionWorkItem {
   outcomes: WorkOutcome[];
+  childNames: string[];
 }
+
+export type AcquisitionParserFixture = {
+  kind: 'single_html' | 'multi_html' | 'directory_html' | 'pagination_html' | 'document_text' | 'public_form_html';
+  content: string;
+};
 
 export interface AcquisitionFixtureScenario {
   id: string;
   architecture: SourceArchitecture;
   sourceUrl: string | null;
   offlineAuthority: string | null;
-  childNames: string[];
   applicationMode: z.infer<typeof ApplicationGroupSchema>['mode'] | null;
   workCap: number;
   maxAttempts: number;
   workItems: FixtureWorkItem[];
+  parserFixture?: AcquisitionParserFixture;
 }
 
 export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Promise<CompletenessReceipt[]> {
@@ -479,6 +557,7 @@ export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Pro
       cap: scenario.workCap,
       maxAttempts: scenario.maxAttempts,
       cursor,
+      previousReceipts: receipts,
       execute: (item, attempt) => {
         const fixture = scenario.workItems.find((candidate) => candidate.key === item.key);
         if (!fixture || fixture.outcomes.length === 0) return 'malformed';
@@ -510,26 +589,20 @@ function unknownStudentFields(): z.infer<typeof StudentFieldsSchema> {
 export function buildFixtureCanonicalGraph(
   scenario: AcquisitionFixtureScenario,
   observedAt: string,
+  receipts: CompletenessReceipt[],
 ): CanonicalDataset {
+  const successfulKeys = new Set(receipts.flatMap((receipt) => receipt.succeededKeys));
+  const failures = receipts.flatMap((receipt) => receipt.failures);
+  const children = scenario.workItems.flatMap((item) => successfulKeys.has(item.key)
+    ? item.childNames.map((name) => ({ name, workKey: item.key }))
+    : []);
   const sourceCanonical = scenario.sourceUrl ? canonicalizeAcquisitionUrl(scenario.sourceUrl) : null;
   const parentSourceId = stableId('src', ['p3-fixture', scenario.id, sourceCanonical?.url ?? scenario.offlineAuthority]);
   const createsChildSources = ['directory_hub', 'paginated_catalog', 'external_marketplace'].includes(scenario.architecture);
-  const childSourceIds = scenario.childNames.map((name, index) =>
+  const childSourceIds = children.map(({ name }, index) =>
     createsChildSources ? stableId('src', ['p3-fixture', scenario.id, 'child-source', index, name]) : parentSourceId);
   const distinctChildSourceIds = [...new Set(childSourceIds.filter((id) => id !== parentSourceId))];
-  const failedWorkItems = scenario.workItems.flatMap((item) => {
-    let finalOutcome: WorkOutcome = item.outcomes[0] ?? 'malformed';
-    let succeeded = false;
-    for (let attempt = 1; attempt <= scenario.maxAttempts; attempt += 1) {
-      finalOutcome = item.outcomes[Math.min(attempt - 1, item.outcomes.length - 1)] ?? 'malformed';
-      if (finalOutcome === 'success') {
-        succeeded = true;
-        break;
-      }
-      if (!['timeout', 'network_error'].includes(finalOutcome)) break;
-    }
-    return succeeded ? [] : [{ item, outcome: finalOutcome as Exclude<WorkOutcome, 'success'> }];
-  });
+  const failedWorkItems = failures.map((failure) => ({ item: scenario.workItems.find((item) => item.key === failure.key)!, outcome: failure.outcome }));
   const failedSourceIds = new Map(failedWorkItems.map(({ item }) => [
     item.key,
     stableId('src', ['p3-fixture', scenario.id, 'failed-work', item.key]),
@@ -538,7 +611,7 @@ export function buildFixtureCanonicalGraph(
     failedSourceIds.get(item.key)!,
     { key: item.key, outcome, url: item.url },
   ]));
-  const scholarshipIds = scenario.childNames.map((name, index) => stableId('sch', ['p3-fixture', scenario.id, index, name]));
+  const scholarshipIds = children.map(({ name, workKey }, index) => stableId('sch', ['p3-fixture', scenario.id, workKey, index, name]));
   const cycleIds = scholarshipIds.map((id) => stableId('cyc', ['p3-fixture', scenario.id, id, 'unknown-cycle']));
   const applicationGroupId = scenario.applicationMode
     ? stableId('app', ['p3-fixture', scenario.id, scenario.applicationMode])
@@ -596,7 +669,7 @@ export function buildFixtureCanonicalGraph(
   const reviewsBySubject = new Map(reviewItems.map((item) => [item.subjectId, [item.id]]));
 
   const childSources = distinctChildSourceIds.map((id, childIndex) => {
-    const name = scenario.childNames[childIndex] ?? `child-${childIndex + 1}`;
+    const name = children[childIndex]?.name ?? `child-${childIndex + 1}`;
     const url = `https://fixtures.invalid/${encodeURIComponent(scenario.id)}/children/${childIndex + 1}-${encodeURIComponent(name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`;
     return SourceSchema.parse({
       schemaVersion: MODEL_SCHEMA_VERSION,
@@ -631,7 +704,7 @@ export function buildFixtureCanonicalGraph(
         fragmentPreserved: canonical?.fragmentPreserved ?? false,
         trackingParametersRemoved: (canonical?.removedTrackingParameters.length ?? 0) > 0,
       },
-      accessBehavior: ['bot_block', 'login_wall'].includes(outcome) ? 'authenticated' : 'unknown',
+      accessBehavior: outcome === 'login_wall' ? 'authenticated' : 'unknown',
       authority: 'unknown',
       acquisitionState: ['bot_block', 'login_wall'].includes(outcome) ? 'blocked' : 'failed',
       parentSourceIds: [parentSourceId],
@@ -672,12 +745,12 @@ export function buildFixtureCanonicalGraph(
     reviewItemIds: reviewsBySubject.get(parentSourceId) ?? [],
     legacySourceIdentity: null,
   });
-  const scholarships = scenario.childNames.map((name, index) => ScholarshipSchema.parse({
+  const scholarships = children.map(({ name, workKey }, index) => ScholarshipSchema.parse({
     schemaVersion: MODEL_SCHEMA_VERSION,
     id: scholarshipIds[index],
     name,
     lifecycleState: 'modeled',
-    legacyRowIdentities: [sha256Text(`sanitized-p3-fixture:${scenario.id}:${index}:${name}`)],
+    legacyRowIdentities: [sha256Text(`sanitized-p3-fixture:${scenario.id}:${workKey}:${index}:${name}`)],
     sourceIds: [childSourceIds[index]],
     sourceLinks: [{
       sourceId: childSourceIds[index],
