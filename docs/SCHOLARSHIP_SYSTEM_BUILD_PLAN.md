@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 5
+Plan revision: 6
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -792,6 +792,18 @@ attestation blobs, current informed authority, independent acceptance, and the b
 lock. A synthetic PR merge, sibling authorization commit, or ordinary post-attestation
 commit is not a substitute.
 
+Plan Revision 6 adds one narrowly governed P2 resolution path because frozen P2 and
+delivered Revision 5 both changed `web/package.json`: P2 added its model scripts/test,
+while Revision 5 added governance-history tests. The P2 integration may therefore
+resolve exactly `docs/BUILD_STATE.json`, `docs/CURRENT_HANDOFF.md`, and
+`web/package.json`. Package resolution is mechanical: start with the complete delivered
+Revision 6 baseline package, preserve every existing field and test command, copy only
+the exact P2 `p2:model` and `p2:model:check` scripts, and append only P2's missing test
+command without duplication. The delivery validator reconstructs this result from the
+immutable first parent and exact P2 attestation and rejects omission, unrelated mutation,
+dependency change, or any other script change. No other stage or delivery integration
+inherits this exception.
+
 After that integration is on `origin/main`, validation of its exact derived state is
 bound to the delivery-manifest candidate, not to the evolving current `BUILD_STATE`.
 Every historical object and authority check remains mandatory while later stages use
@@ -834,6 +846,12 @@ before affected stage work resumes, and explicitly prove that it does not weaken
 acceptance gate, skip a stage, rewrite accepted history, expand program scope, or cause
 a reserved effect. A material program change or any reserved effect still requires new
 direct informed authority.
+
+Plan Revision 6 exercises that operational path with additional direct informed user
+authority. It changes no acceptance criterion and authorizes no product, data, CI, or
+deployment-configuration effect. It only makes the already-authorized exact P2
+two-parent integration executable while preserving both the Revision 5 test harness and
+P2 model commands under an independently reviewed, attested, exact-output validator.
 
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical

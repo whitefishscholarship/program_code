@@ -10,6 +10,10 @@ import {
   isExactHistoricalDeliveryState,
 } from './delivery-state-history';
 import {
+  isExactP2IntegratedPackage,
+  type PackageDocument,
+} from './delivery-package-history';
+import {
   changedAttestedPlanAmendment,
   changedStandingAuthorization,
   maximumAttestedPlanRevision,
@@ -816,6 +820,16 @@ if (state) {
       continue;
     }
     requireFile(integration.evidencePath);
+    const requiredGovernancePaths =
+      integration.stageId === 'P2' && state.planRevision >= 6
+        ? ['docs/BUILD_STATE.json', 'docs/CURRENT_HANDOFF.md', 'web/package.json']
+        : ['docs/BUILD_STATE.json', 'docs/CURRENT_HANDOFF.md'];
+    if (
+      JSON.stringify([...integration.governanceResolutionPaths].sort()) !==
+      JSON.stringify(requiredGovernancePaths.sort())
+    ) {
+      fail(`${integration.stageId} delivery integration has an invalid governance resolution allowlist`);
+    }
     if (integration.status === 'authorized-pending') {
       if (integration.deliveryBaselineCommit !== null) {
         fail(`${integration.stageId} pending delivery integration must not pre-bind an unknown delivery baseline`);
@@ -900,6 +914,34 @@ if (state) {
           )) {
             fail(`${integration.stageId} delivery BUILD_STATE contains changes outside the exact stage-state transition`);
           }
+          if (
+            integration.stageId === 'P2' &&
+            integration.governanceResolutionPaths.includes('web/package.json') &&
+            deliveryManifest
+          ) {
+            const deliveredPackage = jsonAtCommit<PackageDocument>(
+              deliveryManifest.candidateCommit,
+              'web/package.json',
+            );
+            const baselinePackage = jsonAtCommit<PackageDocument>(
+              integration.deliveryBaselineCommit!,
+              'web/package.json',
+            );
+            const p2Package = jsonAtCommit<PackageDocument>(
+              integration.stageAttestationCommit,
+              'web/package.json',
+            );
+            if (
+              !deliveredPackage ||
+              !baselinePackage ||
+              !p2Package ||
+              !isExactP2IntegratedPackage(deliveredPackage, baselinePackage, p2Package)
+            ) {
+              fail(
+                'P2 delivery package resolution must preserve the exact baseline harness and exact P2 model scripts',
+              );
+            }
+          }
         }
 
         const deliveryTip = validateBoundAttestation(
@@ -920,13 +962,6 @@ if (state) {
           stageManifest = stageManifestRaw ? (JSON.parse(stageManifestRaw) as CandidateManifest) : null;
         } catch (error) {
           fail(`${integration.stageId} preserved stage manifest is invalid: ${(error as Error).message}`);
-        }
-        const requiredGovernancePaths = ['docs/BUILD_STATE.json', 'docs/CURRENT_HANDOFF.md'];
-        if (
-          JSON.stringify([...integration.governanceResolutionPaths].sort()) !==
-          JSON.stringify(requiredGovernancePaths)
-        ) {
-          fail(`${integration.stageId} delivery integration has an invalid governance resolution allowlist`);
         }
         if (stage && stageManifest && deliveryManifest) {
           const preservedPaths = new Set([

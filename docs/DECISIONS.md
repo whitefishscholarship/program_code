@@ -270,3 +270,31 @@ but are not rewritten or deleted.
 - Rollback: Revert only through another independently reviewed amendment. Do not delete
   or alter any accepted stage, amendment, delivery candidate, manifest, review, or
   attestation. Any stage already delivered under the mandate remains historically valid.
+
+## D-018 — Resolve the exact P2 package-script collision deterministically
+
+- Date: 2026-08-26
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 6 adds `web/package.json` as the third and final resolution
+  path only for the exact P2 delivery integration. The integrated package must preserve
+  the complete delivered Revision 5/6 baseline and all its test commands, add the exact
+  P2 `p2:model` and `p2:model:check` scripts, and add only P2's missing model-test
+  command. A validator reconstructs and checks the exact result from both immutable
+  parents.
+- Evidence: `docs/evidence/PLAN-REV6.md`
+- Reason: The clean two-parent P2 merge from delivered Revision 5 main produced the two
+  expected governance conflicts plus a substantive `web/package.json` conflict. Taking
+  either side would drop either Revision 5 governance tests or P2 model tests, while the
+  Revision 4 allowlist prohibited resolving that third path.
+- Authority: Kelsey Stuart directly authorized this exact Plan Revision 6 path, its
+  commits, independent review, attestation, Git/Vercel delivery, and the subsequent
+  exact P2 delivery. All stated reserved effects remain excluded.
+- Alternatives: Taking either package side weakens accepted verification. Appending to
+  P2 rewrites frozen history. Changing CI or deployment configuration is both unnecessary
+  and unauthorized. Leaving P2 blocked fails the already-authorized delivery objective.
+- Impact: P2 can be integrated without changing its candidate or attestation and without
+  losing any delivered governance test. No dependency, lockfile, runtime/product, CI,
+  deployment configuration, spreadsheet, form, provider, or P3 path changes.
+- Rollback: Revert before P2 integration only through the reviewed amendment process.
+  After P2 relies on it, preserve the exact Revision 6 amendment and P2 delivery
+  attestation and use a later separately reviewed amendment for any change.
