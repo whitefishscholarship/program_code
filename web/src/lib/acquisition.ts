@@ -392,6 +392,32 @@ function decodeCursor(cursor: string): QueueCursorState {
   }
 }
 
+export interface ReceiptStore {
+  read(receiptSha256: string): CompletenessReceipt | null;
+}
+
+const receiptStoreState = new WeakMap<ReceiptStore, Map<string, CompletenessReceipt>>();
+
+export function createReceiptStore(): ReceiptStore {
+  const records = new Map<string, CompletenessReceipt>();
+  const store: ReceiptStore = {
+    read(receiptSha256) {
+      const receipt = records.get(receiptSha256);
+      return receipt ? structuredClone(receipt) : null;
+    },
+  };
+  receiptStoreState.set(store, records);
+  return Object.freeze(store);
+}
+
+function commitReceipt(store: ReceiptStore, receipt: CompletenessReceipt): void {
+  const records = receiptStoreState.get(store);
+  if (!records) throw new Error('Receipt store must be created by createReceiptStore');
+  const existing = records.get(receipt.receiptSha256);
+  if (existing && JSON.stringify(existing) !== JSON.stringify(receipt)) throw new Error('Receipt store is append-only');
+  if (!existing) records.set(receipt.receiptSha256, structuredClone(receipt));
+}
+
 function receiptDigest(receipt: Omit<CompletenessReceipt, 'receiptSha256' | 'cursor'>): string {
   return sha256Text(JSON.stringify(receipt));
 }
@@ -435,28 +461,50 @@ function validateReceiptLedger(items: AcquisitionWorkItem[], receipts: Completen
   }
 }
 
+function loadReceiptLedger(
+  items: AcquisitionWorkItem[],
+  store: ReceiptStore,
+  tipSha256: string,
+  inputSha256: string,
+): CompletenessReceipt[] {
+  const reversed: CompletenessReceipt[] = [];
+  const visited = new Set<string>();
+  let digest: string | null = tipSha256;
+  while (digest) {
+    if (visited.has(digest)) throw new Error('Receipt ledger contains a cycle');
+    visited.add(digest);
+    const receipt = store.read(digest);
+    if (!receipt) throw new Error('Cursor receipt tip is absent from the trusted receipt store');
+    reversed.push(receipt);
+    digest = receipt.previousReceiptSha256;
+  }
+  const receipts = reversed.reverse();
+  validateReceiptLedger(items, receipts, inputSha256);
+  return receipts;
+}
+
 export async function runBoundedQueue(
   items: AcquisitionWorkItem[],
   options: {
     cap: number;
     maxAttempts: number;
     cursor?: string | null;
-    previousReceipts?: CompletenessReceipt[];
+    receiptStore: ReceiptStore;
     execute: (item: AcquisitionWorkItem, attempt: number) => Promise<WorkOutcome> | WorkOutcome;
   },
 ): Promise<CompletenessReceipt> {
   if (!Number.isInteger(options.cap) || options.cap <= 0) throw new Error('Queue cap must be a positive integer');
   if (!Number.isInteger(options.maxAttempts) || options.maxAttempts <= 0) throw new Error('maxAttempts must be a positive integer');
+  if (!receiptStoreState.has(options.receiptStore)) throw new Error('Receipt store must be created by createReceiptStore');
   const keys = items.map((item) => item.key);
   if (new Set(keys).size !== keys.length) throw new Error('Queue work-item keys must be unique');
   const inputSha256 = queueInputSha256(items);
-  const previousReceipts = options.previousReceipts ?? [];
-  validateReceiptLedger(items, previousReceipts, inputSha256);
   const state: QueueCursorState = options.cursor ? decodeCursor(options.cursor) : {
     schemaVersion: ACQUISITION_SCHEMA_VERSION, inputSha256, nextIndex: 0, previousReceiptSha256: sha256Text('genesis'),
   };
-  if (options.cursor && previousReceipts.length === 0) throw new Error('A resumable cursor requires its prior receipt ledger');
-  if (!options.cursor && previousReceipts.length > 0) throw new Error('A prior receipt ledger requires its resumable cursor');
+  const previousReceipts = options.cursor
+    ? loadReceiptLedger(items, options.receiptStore, state.previousReceiptSha256, inputSha256)
+    : [];
   if (state.inputSha256 !== inputSha256) throw new Error('Cursor does not match the acquisition work denominator');
   if (state.nextIndex < 0 || state.nextIndex > items.length) throw new Error('Cursor index is outside the work denominator');
   if (options.cursor) {
@@ -520,11 +568,13 @@ export async function runBoundedQueue(
     complete: remaining === 0,
   };
   const receiptSha256 = receiptDigest(body);
-  return {
+  const receipt: CompletenessReceipt = {
     ...body,
     receiptSha256,
     cursor: remaining > 0 ? encodeCursor({ schemaVersion: ACQUISITION_SCHEMA_VERSION, inputSha256, nextIndex, previousReceiptSha256: receiptSha256 }) : null,
   };
+  commitReceipt(options.receiptStore, receipt);
+  return receipt;
 }
 
 export interface FixtureWorkItem extends AcquisitionWorkItem {
@@ -551,13 +601,14 @@ export interface AcquisitionFixtureScenario {
 
 export async function runFixtureQueue(scenario: AcquisitionFixtureScenario): Promise<CompletenessReceipt[]> {
   const receipts: CompletenessReceipt[] = [];
+  const receiptStore = createReceiptStore();
   let cursor: string | null = null;
   do {
     const receipt = await runBoundedQueue(scenario.workItems, {
       cap: scenario.workCap,
       maxAttempts: scenario.maxAttempts,
       cursor,
-      previousReceipts: receipts,
+      receiptStore,
       execute: (item, attempt) => {
         const fixture = scenario.workItems.find((candidate) => candidate.key === item.key);
         if (!fixture || fixture.outcomes.length === 0) return 'malformed';
@@ -594,13 +645,14 @@ export function buildFixtureCanonicalGraph(
   const successfulKeys = new Set(receipts.flatMap((receipt) => receipt.succeededKeys));
   const failures = receipts.flatMap((receipt) => receipt.failures);
   const children = scenario.workItems.flatMap((item) => successfulKeys.has(item.key)
-    ? item.childNames.map((name) => ({ name, workKey: item.key }))
+    ? item.childNames.map((name) => ({ name, workKey: item.key, canonical: item.url ? canonicalizeAcquisitionUrl(item.url) : null }))
     : []);
   const sourceCanonical = scenario.sourceUrl ? canonicalizeAcquisitionUrl(scenario.sourceUrl) : null;
   const parentSourceId = stableId('src', ['p3-fixture', scenario.id, sourceCanonical?.url ?? scenario.offlineAuthority]);
-  const createsChildSources = ['directory_hub', 'paginated_catalog', 'external_marketplace'].includes(scenario.architecture);
-  const childSourceIds = children.map(({ name }, index) =>
-    createsChildSources ? stableId('src', ['p3-fixture', scenario.id, 'child-source', index, name]) : parentSourceId);
+  const childSourceIds = children.map(({ workKey, canonical }) =>
+    canonical && canonical.url !== sourceCanonical?.url
+      ? stableId('src', ['p3-fixture', scenario.id, 'child-source', workKey, canonical.url])
+      : parentSourceId);
   const distinctChildSourceIds = [...new Set(childSourceIds.filter((id) => id !== parentSourceId))];
   const failedWorkItems = failures.map((failure) => ({ item: scenario.workItems.find((item) => item.key === failure.key)!, outcome: failure.outcome }));
   const failedSourceIds = new Map(failedWorkItems.map(({ item }) => [
@@ -668,17 +720,21 @@ export function buildFixtureCanonicalGraph(
   });
   const reviewsBySubject = new Map(reviewItems.map((item) => [item.subjectId, [item.id]]));
 
-  const childSources = distinctChildSourceIds.map((id, childIndex) => {
-    const name = children[childIndex]?.name ?? `child-${childIndex + 1}`;
-    const url = `https://fixtures.invalid/${encodeURIComponent(scenario.id)}/children/${childIndex + 1}-${encodeURIComponent(name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`;
+  const childSources = distinctChildSourceIds.map((id) => {
+    const child = children.find((_, index) => childSourceIds[index] === id)!;
+    const canonical = child.canonical!;
     return SourceSchema.parse({
       schemaVersion: MODEL_SCHEMA_VERSION,
       id,
       architecture: 'single_award_page',
-      canonicalUrl: url,
+      canonicalUrl: canonical.url,
       offlineAuthority: null,
-      host: 'fixtures.invalid',
-      identityPolicy: { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: false },
+      host: new URL(canonical.url).hostname,
+      identityPolicy: {
+        preservedQueryParameters: canonical.preservedQueryParameters,
+        fragmentPreserved: canonical.fragmentPreserved,
+        trackingParametersRemoved: canonical.removedTrackingParameters.length > 0,
+      },
       accessBehavior: 'public',
       authority: scenario.architecture === 'external_marketplace' ? 'official_provider' : 'unknown',
       acquisitionState: 'observed',
@@ -754,7 +810,7 @@ export function buildFixtureCanonicalGraph(
     sourceIds: [childSourceIds[index]],
     sourceLinks: [{
       sourceId: childSourceIds[index],
-      role: createsChildSources ? 'detail' : 'information',
+      role: childSourceIds[index] === parentSourceId ? 'information' : 'detail',
       provenance: ['sanitized-p3-fixture', `scenario:${scenario.id}`],
     }],
     applicationGroupIds: applicationGroupId ? [applicationGroupId] : [],

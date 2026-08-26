@@ -119,8 +119,8 @@
       "childCount": 3,
       "applicationGroupCount": 0,
       "cycleCount": 3,
-      "evidenceCount": 7,
-      "reviewItemCount": 7,
+      "evidenceCount": 10,
+      "reviewItemCount": 10,
       "parserObservation": {
         "kind": "multi_html",
         "resultSha256": "41a9bc9bb5086f432769783c88a0de3eb8b460d0f5e55e21d0a51515912a9d43",
@@ -163,8 +163,8 @@
       "childCount": 3,
       "applicationGroupCount": 1,
       "cycleCount": 3,
-      "evidenceCount": 8,
-      "reviewItemCount": 8,
+      "evidenceCount": 11,
+      "reviewItemCount": 11,
       "parserObservation": null,
       "finalCompleteness": {
         "denominator": 3,
@@ -310,8 +310,8 @@
       "childCount": 2,
       "applicationGroupCount": 1,
       "cycleCount": 2,
-      "evidenceCount": 6,
-      "reviewItemCount": 6,
+      "evidenceCount": 8,
+      "reviewItemCount": 8,
       "parserObservation": null,
       "finalCompleteness": {
         "denominator": 2,
@@ -417,8 +417,8 @@
       "childCount": 3,
       "applicationGroupCount": 1,
       "cycleCount": 3,
-      "evidenceCount": 8,
-      "reviewItemCount": 8,
+      "evidenceCount": 11,
+      "reviewItemCount": 11,
       "parserObservation": null,
       "finalCompleteness": {
         "denominator": 3,
@@ -516,12 +516,12 @@
     }
   ],
   "canonicalEntityFixtureTotals": {
-    "sources": 34,
+    "sources": 45,
     "scholarships": 27,
     "applicationGroups": 6,
     "cycles": 27,
-    "evidence": 94,
-    "reviewItems": 94
+    "evidence": 105,
+    "reviewItems": 105
   },
   "parserCoverage": [
     "single_html",
@@ -580,5 +580,5 @@
     "acceptedFactTransitions": 0,
     "productBehaviorChanges": 0
   },
-  "reportSha256": "abca542965bdf82279c9942b49fb343868ade9403021749ad1cdab489b896597"
+  "reportSha256": "2a826bde49befb06987af6e662c242cb7e4ce3b9c6c7b72233594e042cd46987"
 }

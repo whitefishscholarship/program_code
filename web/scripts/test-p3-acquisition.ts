@@ -7,6 +7,7 @@ import {
   buildFixtureCanonicalGraph,
   canonicalizeAcquisitionUrl,
   classifyArchitecture,
+  createReceiptStore,
   discoverPagination,
   enumerateDirectoryLinks,
   extractSinglePage,
@@ -168,7 +169,8 @@ const capItems = [
   { key: 'two', url: 'https://fixtures.invalid/2' },
   { key: 'three', url: 'https://fixtures.invalid/3' },
 ];
-const capFirst = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, execute: () => 'success' });
+const capStore = createReceiptStore();
+const capFirst = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: capStore, execute: () => 'success' });
 assert.deepEqual({
   denominator: capFirst.denominator,
   processed: capFirst.processedTotal,
@@ -177,34 +179,35 @@ assert.deepEqual({
 }, { denominator: 3, processed: 2, remaining: 1, queued: 1 });
 assert(capFirst.cursor, 'a partial cap requires a resumable cursor');
 await assert.rejects(
-  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, execute: () => 'success' }),
-  /prior receipt ledger/,
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, receiptStore: createReceiptStore(), execute: () => 'success' }),
+  /absent from the trusted receipt store/,
 );
 const capFinal = await runBoundedQueue(capItems, {
   cap: 2,
   maxAttempts: 3,
   cursor: capFirst.cursor,
-  previousReceipts: [capFirst],
+  receiptStore: capStore,
   execute: () => 'success',
 });
 assert.equal(capFinal.processedTotal, 3);
 assert.equal(capFinal.remaining, 0);
 assert.equal(capFinal.cursor, null);
 assert.equal(capFinal.succeededTotal, 3);
-const capRepeat = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, execute: () => 'success' });
+const capRepeat = await runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, receiptStore: createReceiptStore(), execute: () => 'success' });
 assert.deepEqual(capRepeat, capFirst, 'same input and receipt start must be idempotent');
-const tamperedReceipt = structuredClone(capFirst);
-tamperedReceipt.succeededKeys[0] = 'not-a-work-item';
+const tamperedState = JSON.parse(Buffer.from(capFirst.cursor!, 'base64url').toString('utf8'));
+tamperedState.previousReceiptSha256 = 'a'.repeat(64);
+const tamperedCursor = Buffer.from(JSON.stringify(tamperedState)).toString('base64url');
 await assert.rejects(
-  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: capFirst.cursor, previousReceipts: [tamperedReceipt], execute: () => 'success' }),
-  /digest mismatch/,
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: tamperedCursor, receiptStore: capStore, execute: () => 'success' }),
+  /absent from the trusted receipt store/,
 );
 await assert.rejects(
-  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: 'not-a-valid-cursor', execute: () => 'success' }),
+  runBoundedQueue(capItems, { cap: 2, maxAttempts: 3, cursor: 'not-a-valid-cursor', receiptStore: capStore, execute: () => 'success' }),
   /Invalid acquisition cursor/,
 );
 await assert.rejects(
-  runBoundedQueue([{ key: 'duplicate', url: null }, { key: 'duplicate', url: null }], { cap: 1, maxAttempts: 1, execute: () => 'success' }),
+  runBoundedQueue([{ key: 'duplicate', url: null }, { key: 'duplicate', url: null }], { cap: 1, maxAttempts: 1, receiptStore: createReceiptStore(), execute: () => 'success' }),
   /unique/,
 );
 
@@ -217,6 +220,7 @@ const failures = await runBoundedQueue([
 ], {
   cap: 4,
   maxAttempts: 3,
+  receiptStore: createReceiptStore(),
   execute: (item) => {
     const attempt = (attempts.get(item.key) ?? 0) + 1;
     attempts.set(item.key, attempt);
@@ -236,6 +240,7 @@ let thrownAttempts = 0;
 const thrown = await runBoundedQueue([{ key: 'thrown-timeout', url: null }], {
   cap: 1,
   maxAttempts: 2,
+  receiptStore: createReceiptStore(),
   execute: () => {
     thrownAttempts += 1;
     const error = new Error('request timed out');
@@ -266,6 +271,18 @@ for (const scenario of fixtures.scenarios) {
   const final = receipts.at(-1)!;
   assert.equal(final.remaining, 0, `${scenario.id} queue must reach a measured end`);
   assert.equal(final.processedTotal, final.denominator);
+  for (const item of scenario.workItems.filter((candidate) => receipts.some((receipt) => receipt.succeededKeys.includes(candidate.key)))) {
+    for (const childName of item.childNames) {
+      const scholarship = firstGraph.scholarships.find((candidate) => candidate.name === childName)!;
+      const source = firstGraph.sources.find((candidate) => candidate.id === scholarship.sourceIds[0])!;
+      const expectedUrl = item.url
+        ? canonicalizeAcquisitionUrl(item.url).url
+        : scenario.sourceUrl
+          ? canonicalizeAcquisitionUrl(scenario.sourceUrl).url
+          : null;
+      assert.equal(source.canonicalUrl, expectedUrl, `${scenario.id}/${item.key} must preserve successful work URL identity`);
+    }
+  }
   for (const failedKey of receipts.flatMap((receipt) => receipt.failedKeys)) {
     const failureSourceId = stableId('src', ['p3-fixture', scenario.id, 'failed-work', failedKey]);
     const failureSource = firstGraph.sources.find((source) => source.id === failureSourceId);
