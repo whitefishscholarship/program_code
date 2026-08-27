@@ -33,8 +33,12 @@ Default branch: `main`
   `50448b0c415d72e7b6ab2f5c9de3f65ee4360f75` (C0/H1/M0/L0), with rejected
   uncommitted manifest digest
   `131ad1a6844bc768125f1d9a3e8a2a879e94524ac22e00a21660b88dd7605ea6`.
+  Fifth rejected replacement:
+  `415914230aa6ba93258f40d3cf0380f99e76acad` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `43df6c8180ecb2f5365785191250d1675f98a25930e560652332175efa89ea4d`.
   No rejected candidate may be attested or delivered. Remediation checkpoints:
-  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, and `dab60c1`.
+  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, `dab60c1`, and `313c944`.
 - Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
@@ -71,7 +75,7 @@ Default branch: `main`
   105 Evidence items, and 105 Review Items. All evidence remains unverified and every
   cycle remains unknown for P4.
 - Acquisition report SHA-256:
-  `2a826bde49befb06987af6e662c242cb7e4ce3b9c6c7b72233594e042cd46987`;
+  `b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8`;
   completeness report SHA-256:
   `d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020`.
 - Three bounded public landing pages were read with Firecrawl at
@@ -110,9 +114,15 @@ Default branch: `main`
   network build, and root diff check. Prospective plan validation reported only the
   expected missing P3 manifest/review attestation. That candidate was rejected; final
   replacement verification is pending.
-- The sixth candidate matrix passed through `2026-08-26T23:55:55Z`: exact locked
+- The fifth replacement matrix passed through `2026-08-26T23:55:55Z`: exact locked
   install, deterministic acquisition/completeness checks, typecheck, complete tests
   including the custom-control heading boundary, permitted network build, and root
+  diff check. Prospective plan validation reported only the expected missing P3
+  manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The seventh candidate matrix passed through `2026-08-27T00:02:58Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including the document-title-only form boundary, permitted network build, and root
   diff check. Prospective plan validation reported only the expected missing P3
   manifest/review attestation.
 - The immutable replacement candidate, complete manifest, reviewer recheck, and exact
