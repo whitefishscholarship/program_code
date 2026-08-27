@@ -77,11 +77,11 @@ function readJson<T>(filePath: string): T {
 
 export function retrievalDisposition(entry: SourceAccumulator): Pick<P5SourceQueueEntry, 'retrievalDisposition' | 'reason'> {
   const parsed = new URL(entry.url);
-  const applicationOnly = entry.roles.has('application') && !entry.roles.has('information');
+  const hasApplicationRole = entry.roles.has('application');
   const isGoogleForm = parsed.hostname === 'docs.google.com' && /^\/forms\//i.test(parsed.pathname);
   const isRiskyHost = riskyHosts.some((pattern) => pattern.test(parsed.hostname));
   const isRiskyInteractivePath = riskyPath.test(parsed.pathname);
-  if (applicationOnly || isGoogleForm || isRiskyHost || isRiskyInteractivePath) {
+  if (hasApplicationRole || isGoogleForm || isRiskyHost || isRiskyInteractivePath) {
     return {
       retrievalDisposition: 'manual_review_no_fetch',
       reason: 'Application-role source, Google-hosted file with unverified visibility, form, login, application workflow, or matching portal is not fetched under the P5 privacy/no-interaction boundary.',

@@ -813,7 +813,9 @@
       "rowKey": "p5-row-0055",
       "name": "National Farmers Union Scholarships (the \"Stanley Moore\" and the \"Hubert K. and JoAnn Seymour\" Scholarships)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_e74fed4e5ae13df21658",
@@ -1048,7 +1050,9 @@
       "rowKey": "p5-row-0070",
       "name": "Montana Association of Conservation District's  2024 Natural Resources Scholarship (2 - $1,000)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_a4f508567e9c533d2ffa",
@@ -1264,7 +1268,9 @@
       "rowKey": "p5-row-0083",
       "name": "National Farmers Union Scholarship (Minorities in Agriculture, Natural Resources and Related Sciences (MANRRS))",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_e74fed4e5ae13df21658",
@@ -3050,5 +3056,5 @@
       "target": "Before promotion from manual review or any future production migration"
     }
   ],
-  "bodySha256": "f114b789ae3c99a240f6f6e91c9adfa9d3b543be7c2e26c4b0e07d4c2919a035"
+  "bodySha256": "57cdfc012672a988dc1a6533a8a449a59c24fdc38e0639a11c1a2542444f88da"
 }

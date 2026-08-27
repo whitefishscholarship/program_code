@@ -51,6 +51,12 @@ const officialInfo = {
 };
 assert.equal(retrievalDisposition(officialInfo).retrievalDisposition, 'public_read_only_scrape');
 
+const dualRoleSource = {
+  ...officialInfo,
+  roles: new Set(['information', 'application'] as const),
+};
+assert.equal(retrievalDisposition(dualRoleSource).retrievalDisposition, 'manual_review_no_fetch');
+
 for (const url of [
   'https://forms.office.com/pages/responsepage.aspx?id=example',
   'https://webportalapp.com/sp/login_saml/example',

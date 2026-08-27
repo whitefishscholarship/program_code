@@ -3,12 +3,12 @@
   "stageId": "P5",
   "sourceRevisionId": "222",
   "pinnedInputDigests": {
-    "sourceQueue": "1eda42582114a7c169bc2de16ebe92955044cefc641d83444dea127af190c547",
-    "publicProbe": "81b8c5aae5ec0c39fcfee702dfa0b9f7a838e52f3d033951672be4a5aa3ede65",
-    "firecrawl": "3e0a03a1eefd8af3d6936a4f4a5b3d3ce68e3e2657603da5261f8b04b977ea47",
+    "sourceQueue": "6aa88419493b55d38f19fd9ba4d360807757a7cd2a121268e2d41e3bb58c0ccd",
+    "publicProbe": "38aac545f0c4694dad637d6d803151d62d291374a61f034e5733ae55cad9b31d",
+    "firecrawl": "ee5d977d8fce02654f696cc19c0057ffb0a6762843ed44cc7b19e4a2dc65eec6",
     "preboundaryDeadLinks": "a1f1a7ed253f8afcf25d057a131b3ec42d307e334370be37c4f9af10cfe35353",
     "preboundaryStaticApplication": "480ef6b4f176d89a362851e3150266623a8859afa6c60c0ab298149c674974f5",
-    "replacementEvidence": "7901118229eadd7ab944b3c9b59efa7ecf9e5ecbad42b0cfc580e39c2afbb6f0",
+    "replacementEvidence": "0791157d0f5e2a37f6e23a036ac4d0016f35b561b9b014f6ba58a52eef48a32f",
     "proposals": "e449012a16c6798e6fd81eb7df1f82b7cc201951aaa0eebef8f191243a25e583"
   },
   "inputRowDenominator": 197,
@@ -990,7 +990,9 @@
         "p5src_e74fed4e5ae13df21658"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1262,7 +1264,9 @@
         "p5src_a4f508567e9c533d2ffa"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1491,7 +1495,9 @@
         "p5src_e74fed4e5ae13df21658"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3459,5 +3465,5 @@
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     }
   ],
-  "bodySha256": "31f8f9bbb1e5d58e35f0c222f6f2bdc36e7a79fd15ce3f0d518d101f2d2beff3"
+  "bodySha256": "3d0032f1014339bf9d56f92bd150661848bace025814ddaf0cad6364c1c72845"
 }

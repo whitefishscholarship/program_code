@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "stageId": "P5",
-  "capturedAt": "2026-08-27T14:36:53.187Z",
-  "denominator": 52,
+  "capturedAt": "2026-08-27T14:50:13.069Z",
+  "denominator": 50,
   "maxContentBytes": 10000000,
   "timeoutMs": 15000,
   "maxAttempts": 2,
@@ -1816,86 +1816,6 @@
       "errorCode": null
     },
     {
-      "sourceId": "p5src_a4f508567e9c533d2ffa",
-      "url": "https://macdnet.org/programs/scholarships/",
-      "roles": [
-        "application",
-        "information"
-      ],
-      "sheetRows": [
-        70
-      ],
-      "retrievedAt": "2026-08-27T13:38:03.157Z",
-      "attempts": 1,
-      "status": 200,
-      "finalUrl": "https://macdnet.org/programs/scholarships/",
-      "contentType": "text/html; charset=UTF-8",
-      "contentBytesCaptured": 147910,
-      "contentLengthHeader": null,
-      "truncated": false,
-      "rawBodySha256": "9f52a1659e81a934992c3b07334c98d6d2f46157368ca046bfaf61c156e0137b",
-      "textSha256": "9b49bc35ac861466f510ad91ef60021802b3fbcc74859a2d6ce657fcfe6c803e",
-      "textLength": 3008,
-      "title": "Scholarships – Montana Association of Conservation Districts",
-      "markers": [
-        "application_form"
-      ],
-      "failureClass": null,
-      "classifications": [
-        {
-          "id": "p5src_a4f508567e9c533d2ffa:application",
-          "role": "application",
-          "requestedUrl": "https://macdnet.org/programs/scholarships/",
-          "finalUrl": "https://macdnet.org/programs/scholarships/",
-          "status": 200,
-          "redirectKind": "none",
-          "retrievedAt": "2026-08-27T13:38:03.157Z",
-          "awardClosureSupported": false,
-          "state": "reachable",
-          "targetClass": "form",
-          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
-          "requiresReview": false,
-          "reviewSeverity": null,
-          "linkCorrectionReviewEligible": false
-        },
-        {
-          "id": "p5src_a4f508567e9c533d2ffa:information",
-          "role": "information",
-          "requestedUrl": "https://macdnet.org/programs/scholarships/",
-          "finalUrl": "https://macdnet.org/programs/scholarships/",
-          "status": 200,
-          "redirectKind": "none",
-          "retrievedAt": "2026-08-27T13:38:03.157Z",
-          "awardClosureSupported": false,
-          "state": "reachable",
-          "targetClass": "form",
-          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
-          "requiresReview": false,
-          "reviewSeverity": null,
-          "linkCorrectionReviewEligible": false
-        }
-      ],
-      "explicitFactCandidates": {
-        "deadline": [
-          "Deadline: April 17, 2026",
-          "Close this module Published quarterly, The Montana Conservationist features stories about conservation districts and our partners"
-        ],
-        "amount": [
-          "$1,000"
-        ],
-        "applicationSignal": true,
-        "eligibilitySignal": true
-      },
-      "rowNameMatches": [
-        {
-          "sheetRow": 70,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 0.857
-        }
-      ],
-      "errorCode": null
-    },
-    {
       "sourceId": "p5src_a772baf692a072905f82",
       "url": "https://waterenvtech.com/",
       "roles": [
@@ -2823,99 +2743,6 @@
       "errorCode": null
     },
     {
-      "sourceId": "p5src_e74fed4e5ae13df21658",
-      "url": "https://nfu.org/education/scholarships/",
-      "roles": [
-        "application",
-        "information"
-      ],
-      "sheetRows": [
-        55,
-        83
-      ],
-      "retrievedAt": "2026-08-27T13:38:07.542Z",
-      "attempts": 1,
-      "status": 200,
-      "finalUrl": "https://nfu.org/resources/scholarships/",
-      "contentType": "text/html; charset=UTF-8",
-      "contentBytesCaptured": 104155,
-      "contentLengthHeader": null,
-      "truncated": false,
-      "rawBodySha256": "5445700ac29c5eb21b427e95ff207740c37c1f6ba373753d02707c96822c5182",
-      "textSha256": "683c80ba5a777fcf5a895e62d034b638fa92e91bc105c863344fa158d3bc5b33",
-      "textLength": 11942,
-      "title": "Scholarships - National Farmers Union",
-      "markers": [
-        "application_form"
-      ],
-      "failureClass": null,
-      "classifications": [
-        {
-          "id": "p5src_e74fed4e5ae13df21658:application",
-          "role": "application",
-          "requestedUrl": "https://nfu.org/education/scholarships/",
-          "finalUrl": "https://nfu.org/resources/scholarships/",
-          "status": 200,
-          "redirectKind": "on_host",
-          "retrievedAt": "2026-08-27T13:38:07.542Z",
-          "awardClosureSupported": false,
-          "state": "redirected",
-          "targetClass": "form",
-          "reason": "Reachable final target observed via on-host redirect",
-          "requiresReview": false,
-          "reviewSeverity": null,
-          "linkCorrectionReviewEligible": false
-        },
-        {
-          "id": "p5src_e74fed4e5ae13df21658:information",
-          "role": "information",
-          "requestedUrl": "https://nfu.org/education/scholarships/",
-          "finalUrl": "https://nfu.org/resources/scholarships/",
-          "status": 200,
-          "redirectKind": "on_host",
-          "retrievedAt": "2026-08-27T13:38:07.542Z",
-          "awardClosureSupported": false,
-          "state": "redirected",
-          "targetClass": "form",
-          "reason": "Reachable final target observed via on-host redirect",
-          "requiresReview": false,
-          "reviewSeverity": null,
-          "linkCorrectionReviewEligible": false
-        }
-      ],
-      "explicitFactCandidates": {
-        "deadline": [
-          "due on June 1",
-          "Deadline April 1, 2026",
-          "Close Menu AboutExpand Navigation History Leadership Staff NFU Foundation Careers ResourcesExpand Navigation Local Food Safety Farm Business Tool",
-          "Close Modal Close Modal Secret Link"
-        ],
-        "amount": [
-          "Award CriteriaRecipients will be selected based on academic records, social and community activities and",
-          "Amount Three $1,500 scholarships will be awarded",
-          "Award Criteria Recipients will be selected based on academic records, social and community activities and",
-          "Amount One $2,000 scholarship will be awarded",
-          "Award CriteriaRecipients will be selected based on academic records, social and community activities, and",
-          "Amount Two $1,500 scholarships will be awarded"
-        ],
-        "applicationSignal": true,
-        "eligibilitySignal": true
-      },
-      "rowNameMatches": [
-        {
-          "sheetRow": 55,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 1
-        },
-        {
-          "sheetRow": 83,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 1
-        }
-      ],
-      "errorCode": null
-    },
-    {
       "sourceId": "p5src_e8323d13c3f28d922978",
       "url": "https://www.montanalions.org/club-profiles/whitefish-lions/",
       "roles": [
@@ -3355,5 +3182,5 @@
       "errorCode": null
     }
   ],
-  "bodySha256": "81b8c5aae5ec0c39fcfee702dfa0b9f7a838e52f3d033951672be4a5aa3ede65"
+  "bodySha256": "38aac545f0c4694dad637d6d803151d62d291374a61f034e5733ae55cad9b31d"
 }

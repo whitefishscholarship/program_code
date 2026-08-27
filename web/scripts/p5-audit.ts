@@ -99,6 +99,27 @@ const replacementReceipts = [
   { evidenceId: 'p5replace_mfbf', file: 'P5-replacement-mfbf.json', url: 'https://www.mfbf.org/scholarships', markers: ['250345411585151', '250344617133147'], rows: [172, 173] },
 ] as const;
 
+const mfbfRowBindings = [
+  {
+    sheetRow: 172,
+    scholarship: 'Bernard Greufe Memorial Honor Scholarship',
+    file: 'P5-replacement-mfbf-bernard-query.json',
+    scrapeId: '01a043b2-0b58-74ce-ae8d-df6db06caae6',
+    queryPrompt: 'On this official Montana Farm Bureau scholarship page, identify only the section titled Bernard Greufe Honor Scholarship. Return the exact section title, award amount, application due date, and exact Apply here URL. Do not include any person contact details.',
+    expectedMarkers: ['$1,500', 'April 1, 2026', 'https://form.jotform.com/250345411585151'],
+    applicationUrl: 'https://form.jotform.com/250345411585151',
+  },
+  {
+    sheetRow: 173,
+    scholarship: "Montana Farm Bureau Women's Leadership Committee Scholarships",
+    file: 'P5-replacement-mfbf-womens-query.json',
+    scrapeId: '01a043b2-058e-72e8-beaa-7b96003821fc',
+    queryPrompt: "On this official Montana Farm Bureau scholarship page, identify only the section titled MFBF Scholarship - Sponsored by the Women's Leadership Committee. Return the exact section title, number and amount of awards, application due date, and exact Apply here URL. Do not include any person contact details.",
+    expectedMarkers: ['Two $1,500.00 scholarships', 'April 1, 2026', 'https://form.jotform.com/250344617133147'],
+    applicationUrl: 'https://form.jotform.com/250344617133147',
+  },
+] as const;
+
 function readJson<T>(filePath: string): T { return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T; }
 
 function privacyClean(value: string): string {
@@ -134,7 +155,7 @@ function main() {
   const rowsByNumber = new Map(snapshot.records.map((record) => [record.sheetRow, record]));
 
   const replacementPath = path.join(repoRoot, 'docs/evidence/P5-replacement-evidence.json');
-  let replacementReport: { schemaVersion: number; stageId: string; receipts: Array<{ evidenceId: string; statusCode: number | null; piiRedacted: boolean; verifiedExcerpts: string[] }>; bodySha256: string };
+  let replacementReport: { schemaVersion: number; stageId: string; receipts: Array<{ evidenceId: string; statusCode: number | null; piiRedacted: boolean; verifiedExcerpts: string[]; rowBindings: Array<{ sheetRow: number; applicationUrl: string }> }>; bodySha256: string };
   if (check) {
     replacementReport = readJson(replacementPath);
     const { bodySha256, ...body } = replacementReport;
@@ -142,6 +163,9 @@ function main() {
     assert.equal(body.stageId, 'P5');
     assert.equal(body.receipts.length, replacementReceipts.length);
     assert.equal(body.receipts.every((receipt) => receipt.statusCode === 200 && receipt.piiRedacted && receipt.verifiedExcerpts.length > 0), true);
+    const mfbf = body.receipts.find((receipt) => receipt.evidenceId === 'p5replace_mfbf');
+    assert.deepEqual(mfbf?.rowBindings.map((binding) => binding.sheetRow), [172, 173]);
+    assert.equal(new Set(mfbf?.rowBindings.map((binding) => binding.applicationUrl)).size, 2);
     assert.equal(sha256Text(JSON.stringify(body)), bodySha256);
   } else {
     const replacementEvidence = replacementReceipts.map((receipt) => {
@@ -157,6 +181,20 @@ function main() {
         return privacyClean(rawMarkdown.slice(Math.max(0, index - 180), index + marker.length + 220))
           .replace(/\s+/g, ' ').trim();
       });
+      const rowBindings = receipt.evidenceId === 'p5replace_mfbf' ? mfbfRowBindings.map((binding) => {
+        const queryResult = privacyClean(fs.readFileSync(path.join(repoRoot, '.firecrawl', binding.file), 'utf8')).replace(/\s+/g, ' ').trim();
+        for (const marker of binding.expectedMarkers) assert.equal(queryResult.includes(marker), true, `MFBF row ${binding.sheetRow} missing ${marker}`);
+        return {
+          sheetRow: binding.sheetRow,
+          scholarship: binding.scholarship,
+          sourceUrl: receipt.url,
+          scrapeId: binding.scrapeId,
+          queryPrompt: binding.queryPrompt,
+          extractedAnswer: queryResult,
+          applicationUrl: binding.applicationUrl,
+          piiRedacted: true,
+        };
+      }) : [];
       return {
         evidenceId: receipt.evidenceId,
         sourceAuthority: 'current_direct_official',
@@ -170,6 +208,7 @@ function main() {
         supportedRows: receipt.rows,
         verifiedMarkers: receipt.markers,
         verifiedExcerpts,
+        rowBindings,
         piiRedacted: true,
       };
     });

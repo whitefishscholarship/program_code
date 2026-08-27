@@ -9,8 +9,8 @@
   "recordDenominator": 197,
   "sourceDenominator": 213,
   "retrievalCounts": {
-    "publicReadOnlyScrape": 52,
-    "manualReviewNoFetch": 161
+    "publicReadOnlyScrape": 50,
+    "manualReviewNoFetch": 163
   },
   "entries": [
     {
@@ -2204,8 +2204,8 @@
       "provenance": [
         "cellData.hyperlink"
       ],
-      "retrievalDisposition": "public_read_only_scrape",
-      "reason": "Public page or document is eligible for bounded read-only retrieval without form or application interaction."
+      "retrievalDisposition": "manual_review_no_fetch",
+      "reason": "Application-role source, Google-hosted file with unverified visibility, form, login, application workflow, or matching portal is not fetched under the P5 privacy/no-interaction boundary."
     },
     {
       "sourceId": "p5src_a772baf692a072905f82",
@@ -3193,8 +3193,8 @@
       "provenance": [
         "cellData.hyperlink"
       ],
-      "retrievalDisposition": "public_read_only_scrape",
-      "reason": "Public page or document is eligible for bounded read-only retrieval without form or application interaction."
+      "retrievalDisposition": "manual_review_no_fetch",
+      "reason": "Application-role source, Google-hosted file with unverified visibility, form, login, application workflow, or matching portal is not fetched under the P5 privacy/no-interaction boundary."
     },
     {
       "sourceId": "p5src_e76e277be72cb4ba82e7",
@@ -3544,5 +3544,5 @@
       "reason": "Application-role source, Google-hosted file with unverified visibility, form, login, application workflow, or matching portal is not fetched under the P5 privacy/no-interaction boundary."
     }
   ],
-  "bodySha256": "1eda42582114a7c169bc2de16ebe92955044cefc641d83444dea127af190c547"
+  "bodySha256": "6aa88419493b55d38f19fd9ba4d360807757a7cd2a121268e2d41e3bb58c0ccd"
 }

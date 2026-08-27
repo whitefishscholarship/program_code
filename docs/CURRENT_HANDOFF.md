@@ -23,9 +23,9 @@ Default branch: `main`
   `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
   Testing-sheet content writes remain zero.
 - The remediated pre-write audit is complete across exactly 197 rows and 213 distinct
-  CellData sources. The strict router permits 52 public information sources and sends
-  161 application-role/private/form/login/portal sources to no-fetch. Firecrawl
-  evidence covers the same 52 static public sources with 50 retrieved and two
+  CellData sources. The final strict router permits 50 public information-only sources
+  and sends 163 application-role/private/form/login/portal sources to no-fetch.
+  Firecrawl evidence covers the same 50 static public sources with 48 retrieved and two
   inconclusive.
 - Proposed dispositions are zero confirmed, 10 corrected, zero archived, zero merged,
   and 187 manual review. The 10 corrected rows contain 25 cell proposals: 15 material
@@ -35,6 +35,10 @@ Default branch: `main`
   reproducibility, unsupported confirmations, routing boundary, row 59 tier collapse,
   and row 167 unsupported opening claim have been remediated. Earlier bounded GETs are
   disclosed; no form submission or applicant collection occurred.
+- Replacement `1227321` was rejected C0/H2/M0/L0. Final remediation closes its
+  dual-role routing gap and commits row-specific official-page query bindings for both
+  Montana Farm Bureau application URLs. The next reviewer must recheck the new exact
+  replacement before any write.
 - Independent replacement review must cover all 10 corrected/known-dead rows plus the
   deterministic 38-row sample in `docs/evidence/P5-review-sample.json`. Only approved
   proposals may be applied after an immediate revision-`222` and target-CellData

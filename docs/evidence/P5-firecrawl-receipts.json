@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "stageId": "P5",
-  "capturedAt": "2026-08-27T13:48:52.381Z",
+  "capturedAt": "2026-08-27T13:44:09.134Z",
   "privacyRedactionRequested": true,
   "interactionBoundary": "static public pages and documents only; no forms, logins, portals, profile use, actions, submissions, or private Drive/Docs",
-  "denominator": 52,
+  "denominator": 50,
   "outcomeCounts": {
-    "retrieved": 50,
+    "retrieved": 48,
     "inconclusiveRetrieval": 2
   },
   "receipts": [
@@ -1031,42 +1031,6 @@
       "failureClass": null
     },
     {
-      "sourceId": "p5src_a4f508567e9c533d2ffa",
-      "url": "https://macdnet.org/programs/scholarships/",
-      "sheetRows": [
-        70
-      ],
-      "outcome": "retrieved",
-      "statusCode": 200,
-      "finalUrl": "https://macdnet.org/programs/scholarships/",
-      "contentType": "text/html; charset=UTF-8",
-      "cacheState": "miss",
-      "cachedAt": null,
-      "scrapeId": "01a0437a-bd6f-70e9-a795-7f4ae0c04de3",
-      "creditsUsed": 5,
-      "markdownSha256": "45a69b6dd291743c38d79f56b407d108eaa57e1f7aabedb796a4b8c472854817",
-      "markdownLength": 9357,
-      "title": "Scholarships – Montana Association of Conservation Districts",
-      "factCandidates": {
-        "deadline": [
-          "Deadline: April 17, 2026.** Should you have any questions, please contact <PRIVATE_PERSON> at [<PRIVATE_EMAIL>](mailto:[redacted-email]) or [redacted-phone].",
-          "Close mobile menu](about:blank#) Close this module ![](https://macdnet.org//srv/htdocs/wp-content/uploads/2023/04/[redacted-email]) ### Published quarterly"
-        ],
-        "amount": [
-          "$1,000 Scholarships are available for Montana students—high school seniors or students who are attending a"
-        ]
-      },
-      "nameMatches": [
-        {
-          "sheetRow": 70,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 0.889
-        }
-      ],
-      "failureCode": null,
-      "failureClass": null
-    },
-    {
       "sourceId": "p5src_a772baf692a072905f82",
       "url": "https://waterenvtech.com/",
       "sheetRows": [
@@ -1574,51 +1538,6 @@
       "failureClass": null
     },
     {
-      "sourceId": "p5src_e74fed4e5ae13df21658",
-      "url": "https://nfu.org/education/scholarships/",
-      "sheetRows": [
-        55,
-        83
-      ],
-      "outcome": "retrieved",
-      "statusCode": 200,
-      "finalUrl": "https://nfu.org/resources/scholarships/",
-      "contentType": "text/html; charset=UTF-8",
-      "cacheState": "hit",
-      "cachedAt": "2026-08-26T22:28:14.639Z",
-      "scrapeId": "01a0437b-08b0-73cd-afbe-fa78bdb2a265",
-      "creditsUsed": 5,
-      "markdownSha256": "2f681c2b3680d079e1ba8bb8a979d6fb227b14c182684096d2561a02d0cd1618",
-      "markdownLength": 10335,
-      "title": "Scholarships - National Farmers Union",
-      "factCandidates": {
-        "deadline": [
-          "Deadline April 1, 2026. Recipients will be selected and announced by July 31, 2026. Hubert K. and JoAnn Seymour Scholarship Hubert K. Seymour was a leader in",
-          "Deadline April 1, 2026. Recipients will be selected and announced by July 31, 2026. Minorities in Agriculture, Natural Resources, and Related Sciences (MANRRS",
-          "Deadline June 1, 2026. [Close Menu](https://nfu.org/resources/scholarships/#) [Close Modal](https://nfu.org/resources/scholarships/#) [Close Modal\\\\ ![close m",
-          "close.svg)](https://nfu.org/resources/scholarships/#) [Secret Link](https://nfu.org/b724cbbb72505bb7)"
-        ],
-        "amount": [
-          "$1,500 scholarships will be awarded. ##### Application Materials Needed - Completed application form. Appl",
-          "$2,000 scholarship will be awarded. ##### Application Material Needed - Completed application form. Applic"
-        ]
-      },
-      "nameMatches": [
-        {
-          "sheetRow": 55,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 1
-        },
-        {
-          "sheetRow": 83,
-          "exactNormalizedNamePresent": false,
-          "tokenCoverage": 1
-        }
-      ],
-      "failureCode": null,
-      "failureClass": null
-    },
-    {
       "sourceId": "p5src_e8323d13c3f28d922978",
       "url": "https://www.montanalions.org/club-profiles/whitefish-lions/",
       "sheetRows": [
@@ -1862,5 +1781,5 @@
       "failureClass": null
     }
   ],
-  "bodySha256": "3e0a03a1eefd8af3d6936a4f4a5b3d3ce68e3e2657603da5261f8b04b977ea47"
+  "bodySha256": "ee5d977d8fce02654f696cc19c0057ffb0a6762843ed44cc7b19e4a2dc65eec6"
 }
