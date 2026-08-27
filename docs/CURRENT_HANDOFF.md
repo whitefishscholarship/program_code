@@ -37,8 +37,13 @@ Default branch: `main`
   `415914230aa6ba93258f40d3cf0380f99e76acad` (C0/H1/M0/L0), with rejected
   uncommitted manifest digest
   `43df6c8180ecb2f5365785191250d1675f98a25930e560652332175efa89ea4d`.
+  Sixth rejected replacement:
+  `ac368e0f2e3c68b13d461aabbfcecd587c96f013` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `92c35ebe60d38c1dbda900d8696e5d46825d317e1da249e4202d75414e7bfb45`.
   No rejected candidate may be attested or delivered. Remediation checkpoints:
-  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, `dab60c1`, and `313c944`.
+  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, `dab60c1`, `313c944`, and
+  `0a4f2fd`.
 - Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
   `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
   that SHA.
@@ -120,11 +125,19 @@ Default branch: `main`
   diff check. Prospective plan validation reported only the expected missing P3
   manifest/review attestation. That candidate was rejected; final replacement
   verification is pending.
-- The seventh candidate matrix passed through `2026-08-27T00:02:58Z`: exact locked
+- The sixth replacement matrix passed through `2026-08-27T00:02:58Z`: exact locked
   install, deterministic acquisition/completeness checks, typecheck, complete tests
   including the document-title-only form boundary, permitted network build, and root
   diff check. Prospective plan validation reported only the expected missing P3
-  manifest/review attestation.
+  manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The seventh replacement matrix passed through `2026-08-27T00:10:09Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including nested question-candidate ancestry non-collection, permitted network
+  build, and root diff check. Prospective plan validation reported only the expected
+  missing P3 manifest/review attestation. Exact UTC windows are recorded in
+  `docs/evidence/P3.md`; only this result record remains to be frozen before manifest
+  binding and reviewer recheck.
 - The immutable replacement candidate, complete manifest, reviewer recheck, and exact
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
