@@ -102,6 +102,19 @@ type BuildState = {
   dataAuthority: {
     testingSpreadsheetId: string;
     testingMasterTab: string;
+    testingWriteAuthorization?: {
+      authorizationId: string;
+      authorized: boolean;
+      authorizedBy: string;
+      authorizedAt: string;
+      evidencePath: string;
+      spreadsheetId: string;
+      sheetName: string;
+      revisionFingerprintRequired: boolean;
+      reversibleBackupRequired: boolean;
+      basis: string;
+      scope: string;
+    };
     productionSpreadsheetId: string | null;
     productionMutationAuthorized: boolean;
     productionAuthorization: ProductionAuthorization | null;
@@ -634,6 +647,34 @@ if (state) {
   }
   if (state.dataAuthority.testingMasterTab !== 'Master Database') {
     fail('Testing master tab must be Master Database');
+  }
+  const p5 = state.stages.find((stage) => stage.id === 'P5');
+  const p5MayWriteTestingSheet = p5 && (inFlightStatuses.has(p5.status) || p5.status === 'accepted');
+  if (p5MayWriteTestingSheet) {
+    const authorization = state.dataAuthority.testingWriteAuthorization;
+    if (!authorization?.authorized) {
+      fail('P5 requires explicit structured testing-sheet write authorization');
+    } else {
+      if (!authorization.authorizationId.trim() || !authorization.authorizedBy.trim()) {
+        fail('P5 testing-sheet authorization requires an ID and authorizer');
+      }
+      if (!isIsoTimestamp(authorization.authorizedAt)) {
+        fail('P5 testing-sheet authorization requires an ISO UTC timestamp');
+      }
+      if (authorization.spreadsheetId !== state.dataAuthority.testingSpreadsheetId) {
+        fail('P5 testing-sheet authorization must bind the configured testing spreadsheet ID');
+      }
+      if (authorization.sheetName !== state.dataAuthority.testingMasterTab) {
+        fail('P5 testing-sheet authorization must bind the configured testing master tab');
+      }
+      if (!authorization.revisionFingerprintRequired || !authorization.reversibleBackupRequired) {
+        fail('P5 testing-sheet authorization must require revision fingerprinting and reversible backup');
+      }
+      if (!authorization.basis.trim() || !authorization.scope.trim()) {
+        fail('P5 testing-sheet authorization requires a nonempty basis and scope');
+      }
+      requireFile(authorization.evidencePath);
+    }
   }
   if (!state.deployment || state.deployment.mainAutoDeploysProduction !== true) {
     fail('BUILD_STATE must acknowledge that main auto-deploys production');

@@ -5,6 +5,32 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## Current P5 state
+
+- Active stage: P5 — Complete testing-sheet accuracy remediation.
+- Verified live `main` and exact P5 baseline:
+  `c8651bf9015c55965eb50cab4a96a12621f3b0fe`.
+- P5 branch: `codex/p5-testing-sheet-remediation` in isolated worktree
+  `/private/tmp/program_code-p5`.
+- Kelsey supplied direct informed authority for revision fingerprinting, complete
+  reversible backup creation, and approved idempotent writes limited to testing
+  spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, tab
+  `Master Database`. The durable record is
+  `docs/evidence/P5-write-authorization.md`.
+- No testing-sheet content read, content write, or backup copy has occurred yet. The
+  sheet must remain unchanged until its exact Drive revision fingerprint and complete
+  reversible backup are captured and verified.
+- Entry verification reproduced P4's 270 links, four offline methods, 20 cycle cases,
+  nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
+  Baseline plan/history validation passed all 10 ordered stages.
+- Production spreadsheet identity remains unset and every production access or
+  mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
+  application interaction, provider contact, deployment-configuration changes, paid
+  or destructive actions, and history rewriting remain prohibited.
+- Next actions are exact Drive metadata/revision capture, a complete verified backup,
+  then the mutation-free full-row audit and proposal ledger. No sheet write may occur
+  until all three pre-write gates remain satisfied against the same revision.
+
 ## P4 delivery (completed)
 
 - Active stage: none. P4 — Accuracy and verification engine — is accepted, attested,
