@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 6,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-26",
+  "lastUpdated": "2026-08-27",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -212,8 +212,8 @@
       }
     ]
   },
-  "activeStageId": null,
-  "nextPermittedStageId": "P4",
+  "activeStageId": "P4",
+  "nextPermittedStageId": null,
   "stages": [
     {
       "id": "P0",
@@ -258,8 +258,8 @@
     {
       "id": "P4",
       "name": "Accuracy and verification engine",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "active",
+      "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
       "evidencePath": "docs/evidence/P4.md",
       "manifestPath": "docs/evidence/P4-manifest.json",
       "reviewPath": "docs/reviews/P4.json",

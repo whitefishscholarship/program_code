@@ -1,15 +1,49 @@
 # Current Handoff
 
-Last updated: 2026-08-26
+Last updated: 2026-08-27
 Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P3 replacement-candidate state
+## Current P4 state
 
-- Active stage: none. The first local P3 acceptance candidate was rejected and the
-  remediated replacement is pending freeze, independent recheck, and direct-child
-  attestation. P4 is only next permitted and has not started.
+- Active stage: P4 — Accuracy and verification engine.
+- Verified `origin/main` and P4 baseline:
+  `268758f94922f90bf307229d8633da05b2417c4a`.
+- P4 branch: `codex/p4-accuracy-verification` in isolated worktree
+  `/private/tmp/program_code-p4`.
+- Entry validation confirmed the exact accepted P3 candidate, direct-child
+  attestation, manifest, C0/H0/M0/L0 review, PR merge, and clean current machine state.
+- P2 schema version `2.0.0`, P3 acquisition report SHA-256
+  `b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8`,
+  P3 completeness report SHA-256
+  `d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020`,
+  and the exact 34-item P3 fixture denominator are pinned P4 inputs.
+- Production spreadsheet identity remains unset. Testing and production spreadsheet
+  writes are unauthorized, and P5 has not started.
+- Baseline `npm ci` installed 565 locked packages. Baseline `npm run plan:check`
+  passed for all 10 ordered stage contracts after the restricted runner's local IPC
+  socket was permitted.
+
+## Historical P3 delivery and replacement-candidate state (completed)
+
+- P3 candidate `9e4230c3012f41f6b70cb47674fdb95dd1de333c` was accepted by
+  fresh-context read-only review at C0/H0/M0/L0 with manifest SHA-256
+  `1970e8b952dcc4696db31a3282c912fae45b6fe237d400e87794113d3ba419c6`.
+- Direct-child attestation `ff058bd727af22c145378588c2d7e54a2f9a880c`
+  added exactly `docs/evidence/P3-manifest.json` and `docs/reviews/P3.json`.
+- PR #17 merged at `2026-08-27T00:20:49Z` as
+  `268758f94922f90bf307229d8633da05b2417c4a`. PR CI run `33026405321`
+  passed; the Vercel Preview status failed under the existing author-access rule.
+- Main CI run `33026531417` passed. The Vercel status for the merge commit reported
+  a completed Production deployment. No deployment configuration, identity, or
+  permission was changed.
+- P3 is durably accepted and delivered on `origin/main`; the detailed candidate and
+  remediation chronology below is preserved as historical evidence.
+
+- Historical pre-delivery snapshot: no stage was active while the first local P3
+  acceptance candidate and successive replacements awaited remediation, freeze,
+  independent recheck, and direct-child attestation.
 - Verified P3 baseline and `origin/main`:
   `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
 - P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
@@ -142,11 +176,11 @@ Default branch: `main`
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
 
-### Deferred platform and dependency issues (not P3 remediation)
+### Deferred platform and dependency issues (carried into P4)
 
-- **Vercel Preview:** PR #16's Preview deployment was attempted and blocked by the
-  existing `Franscale1922` project-access rule. Main CI and the Production deployment
-  completed. No identity, permission, or deployment configuration was changed. Owner:
+- **Vercel Preview:** PR #17's Preview deployment was attempted and blocked by the
+  existing `Franscale1922` project-access rule. PR/main CI and the Production
+  deployment completed. No identity, permission, or deployment configuration was changed. Owner:
   repository/Vercel administrator. Target: resolve through separately authorized
   access administration before a Preview result becomes an acceptance dependency.
 - **GitHub Actions Node runtime:** post-merge run `33018750958` passed but annotated
