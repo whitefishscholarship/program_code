@@ -5,20 +5,31 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P4 state
+## P4 delivery (completed)
 
-- Active stage: none. P4 — Accuracy and verification engine — is a local accepted-state
-  candidate after corrected verified-state predecessor `530df9b` received C0/H0/M0/L0
-  and the same reviewer prospectively accepted the exact state delta C0/H0/M0/L0.
-  Final freeze, regenerated manifest, same-reviewer exact-candidate recheck, direct-child
-  attestation, and delivery remain pending. This local marker is not durable delivery.
-  P5 is next-permitted but unstarted; it cannot begin before P4 attestation reaches
-  `origin/main`, and its sheet work additionally requires direct write authority,
-  revision fingerprint, and backup.
-- Verified `origin/main` and P4 baseline:
-  `268758f94922f90bf307229d8633da05b2417c4a`.
-- P4 branch: `codex/p4-accuracy-verification` in isolated worktree
-  `/private/tmp/program_code-p4`.
+- Active stage: none. P4 — Accuracy and verification engine — is accepted, attested,
+  and delivered on `origin/main`.
+- Final P4 candidate: `4a7eaba0ec84c7d20830b9446576840e80f1e203`.
+  Direct-child two-file attestation:
+  `b6880e4dd65ab92c10d607766950a1b6c78ba6e0`. Final independent review:
+  C0/H0/M0/L0 with no dispositions. Manifest SHA-256:
+  `fd31b7d3fa82b7c98c4ed9532a574c0a59cafa0187a6838287e0282587b5c7da`.
+- PR #18 merged at `2026-08-27T04:25:50Z` as
+  `35c1a6db298c8613502b31187f162cf47d819fc4`, whose parents are exactly the P4
+  baseline `268758f94922f90bf307229d8633da05b2417c4a` and attestation `b6880e4`.
+- PR CI run `33039273103` passed. Vercel Preview was blocked by the existing
+  project-author access rule; no identity, permission, or deployment configuration was
+  changed. Main CI run `33039390240` passed, and the merge commit's Vercel status
+  reported a completed Production deployment.
+- P5 is next-permitted but unstarted. Before any P5 testing-sheet write, require direct
+  informed write authority, a verified sheet revision fingerprint, and backup. The
+  production spreadsheet remains unset and unauthorized.
+- Deferred adjacent issues remain unchanged: the GitHub Actions Node-runtime warning
+  and the locked-install denominator of 21 advisories (1 low, 7 moderate, 12 high,
+  1 critical). They are not P4 exploitability findings and remain later-stage work.
+- The remaining P4 bullets below preserve implementation and review chronology as
+  historical evidence; this completed delivery summary is authoritative for current
+  state.
 - Entry validation confirmed the exact accepted P3 candidate, direct-child
   attestation, manifest, C0/H0/M0/L0 review, PR merge, and clean current machine state.
 - P2 schema version `2.0.0`, P3 acquisition report SHA-256
@@ -155,10 +166,10 @@ Default branch: `main`
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.
-- P4 external effects to date: zero spreadsheet reads/writes, one bounded public-source
-  landing-page read, zero forms/application interactions, zero applicant values, zero provider contacts,
-  zero accepted corrections/archives/merges, and zero dependency, CI, or deployment-
-  configuration changes.
+- P4 external effects: zero spreadsheet reads/writes, one bounded public-source
+  landing-page read, zero forms/application interactions, zero applicant values, zero
+  provider contacts, zero accepted scholarship corrections/archives/writes, one
+  authorized Git merge, and zero dependency, CI, or deployment-configuration changes.
 
 ## Historical P3 delivery and replacement-candidate state (completed)
 
