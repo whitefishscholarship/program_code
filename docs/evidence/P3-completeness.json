@@ -1,0 +1,1049 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P3",
+  "generatedAt": "2026-08-26T23:00:00Z",
+  "baselineCommit": "2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3",
+  "totals": {
+    "denominator": 34,
+    "processed": 34,
+    "succeeded": 27,
+    "failed": 7,
+    "remaining": 0,
+    "queued": 0,
+    "reconciled": true
+  },
+  "failurePolicy": {
+    "timeoutAndNetworkRetries": "bounded by per-scenario maxAttempts",
+    "retryExhaustion": "explicit failure and review; never closure evidence",
+    "botBlockLoginWallMalformedChild": "explicit failure and review; no access-control bypass",
+    "cap": "unprocessed denominator remains in cursor-addressed queue"
+  },
+  "scenarios": [
+    {
+      "id": "single-award-page",
+      "architecture": "single_award_page",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "4b9f3b5ada301528230327adf26d6cc0a7a1c78e6ff0e9a02c0bd87f16a9dd87",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "page"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "fcd909faecc0ecce8df7fd6032808359c2cfbd478e1b6ea97cc2376b717d084b",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "multi-award-page",
+      "architecture": "multi_award_page",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "d49a80f7c19fa56f64c80b436434b0fd661b50aa16bf0cba40c38182313dc0f7",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "north",
+            "south"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "b2041afc7b9c7e42c7b2041f2555d2707576e7919955cebc1a6082e5a0716ea8",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImQ0OWE4MGY3YzE5ZmE1NmY2NGM4MGI0MzY0MzRiMGZkNjYxYjUwYWExNmJmMGNiYTQwYzM4MTgyMzEzZGMwZjciLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImIyMDQxYWZjN2I5YzdlNDJjN2IyMDQxZjI1NTVkMjcwNzU3NmU3OTE5OTU1Y2ViYzFhNjA4MmU1YTA3MTZlYTgifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "d49a80f7c19fa56f64c80b436434b0fd661b50aa16bf0cba40c38182313dc0f7",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "previousReceiptSha256": "b2041afc7b9c7e42c7b2041f2555d2707576e7919955cebc1a6082e5a0716ea8",
+          "succeededKeys": [
+            "trades"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "e8b397d128ad9610d801724be3aa7b70e5b62fa1de4793a0bb5024aea5b0f371",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "nfu-unified-application",
+      "architecture": "common_application",
+      "cap": 3,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "30a673e6b0ecd21c00890b58d1c8008e133051277139e63002a01ed41a29f662",
+          "denominator": 3,
+          "processedThisRun": 3,
+          "processedTotal": 3,
+          "succeededThisRun": 3,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 3,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 3,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "moore",
+            "seymour",
+            "manrrs"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "890c1f36feb307f4dc21311889e1b5083fa9b63ba30b0d88c02dd812fdfb6893",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "horatio-directory-exceptions",
+      "architecture": "directory_hub",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "cbc424c39091ccc8717aadc96450e4a33af4642a401a49ff4f8f52371ecbd16c",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "undergraduate",
+            "career"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "e91e3916694b3c0232c838ba67d068c865eb03d404a2341553a0d86bf8e591d3",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImNiYzQyNGMzOTA5MWNjYzg3MTdhYWRjOTY0NTBlNGEzM2FmNDY0MmE0MDFhNDlmZjRmOGY1MjM3MWVjYmQxNmMiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImU5MWUzOTE2Njk0YjNjMDIzMmM4MzhiYTY3ZDA2OGM4NjVlYjAzZDQwNGEyMzQxNTUzYTBkODZiZjhlNTkxZDMifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "cbc424c39091ccc8717aadc96450e4a33af4642a401a49ff4f8f52371ecbd16c",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 0,
+          "succeededTotal": 2,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "previousReceiptSha256": "e91e3916694b3c0232c838ba67d068c865eb03d404a2341553a0d86bf8e591d3",
+          "succeededKeys": [],
+          "failedKeys": [
+            "specialized-login"
+          ],
+          "failures": [
+            {
+              "key": "specialized-login",
+              "outcome": "login_wall",
+              "attempts": 1,
+              "detail": null
+            }
+          ],
+          "complete": true,
+          "receiptSha256": "f084035f2d83a348db18f6f194760148334932b50ef27c750619e2d0f9f911fd",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 2,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "specialized-login"
+        ],
+        "failures": [
+          {
+            "key": "specialized-login",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "reach-higher-matching-review",
+      "architecture": "matching_portal",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "741ed70ef3406284e6d9893fc745430404a95e083c55de565eb330a25beb2927",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [],
+          "failedKeys": [
+            "matcher"
+          ],
+          "failures": [
+            {
+              "key": "matcher",
+              "outcome": "login_wall",
+              "attempts": 1,
+              "detail": null
+            }
+          ],
+          "complete": true,
+          "receiptSha256": "f9c7fe4737b000cf77851a4c3f978af8d99135f6402a6bb4c4dd344fe116e278",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "matcher"
+        ],
+        "failures": [
+          {
+            "key": "matcher",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "fvcc-pagination-cap-recovery",
+      "architecture": "paginated_catalog",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 3,
+          "queued": 3,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "page-1-award-1",
+            "page-1-award-2"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "5743d8c4b3bbb1d0a232053266e7a3dfb79682ebdb42f3225869bd693d20007f",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjU3NDNkOGM0YjNiYmIxZDBhMjMyMDUzMjY2ZTdhM2RmYjc5NjgyZWJkYjQyZjMyMjU4NjliZDY5M2QyMDAwN2YifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 4,
+          "succeededThisRun": 2,
+          "succeededTotal": 4,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 4,
+          "previousReceiptSha256": "5743d8c4b3bbb1d0a232053266e7a3dfb79682ebdb42f3225869bd693d20007f",
+          "succeededKeys": [
+            "page-2-award-3",
+            "page-2-award-4"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "86895f7a3dee372d9fbdc200d231e3bff72271154d2ba680163900f9d07ee9d6",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijc1MmE4NWNmNTNhNjVmNzhmM2UwODRiNTZjMjNlYjk1MmVkNTMwZWMwOTFjZDRhY2YzNTEwNTM4YWUxYzAzZDkiLCJuZXh0SW5kZXgiOjQsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6Ijg2ODk1ZjdhM2RlZTM3MmQ5ZmJkYzIwMGQyMzFlM2JmZjcyMjcxMTU0ZDJiYTY4MDE2MzkwMGY5ZDA3ZWU5ZDYifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "752a85cf53a65f78f3e084b56c23eb952ed530ec091cd4acf3510538ae1c03d9",
+          "denominator": 5,
+          "processedThisRun": 1,
+          "processedTotal": 5,
+          "succeededThisRun": 1,
+          "succeededTotal": 5,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 4,
+          "nextIndex": 5,
+          "previousReceiptSha256": "86895f7a3dee372d9fbdc200d231e3bff72271154d2ba680163900f9d07ee9d6",
+          "succeededKeys": [
+            "page-3-award-5"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "c0cc6c553f0c91e46f8c1855bb8b9f820fba2b36911539e8eb47adbd35bec716",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "first-external-providers",
+      "architecture": "external_marketplace",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "90d945f6ffdd16e9358b0772cef9775d92317927332a509a1055c412bd7055e2",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "college",
+            "technical"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "b10c7b3baf6f9b13f3696c0101c83fd2e4e4b543e96a93b1499668d9133083f4",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6IjkwZDk0NWY2ZmZkZDE2ZTkzNThiMDc3MmNlZjk3NzVkOTIzMTc5MjczMzJhNTA5YTEwNTVjNDEyYmQ3MDU1ZTIiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6ImIxMGM3YjNiYWY2ZjliMTNmMzY5NmMwMTAxYzgzZmQyZTRlNGI1NDNlOTZhOTNiMTQ5OTY2OGQ5MTMzMDgzZjQifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "90d945f6ffdd16e9358b0772cef9775d92317927332a509a1055c412bd7055e2",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "previousReceiptSha256": "b10c7b3baf6f9b13f3696c0101c83fd2e4e4b543e96a93b1499668d9133083f4",
+          "succeededKeys": [
+            "association"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "92d4390deb6147a77a8cb86b8ac5c8b1545e5d25e84f7b06618576ff93a21782",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "esa-shared-program",
+      "architecture": "common_application",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "9165a7bb223bf5ff1120c15d7c16946cb65b1f69cb046d873d5bebfd4fd2e23b",
+          "denominator": 2,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "general",
+            "technology"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "d48d7f5e26f674310719313904e70709d4d12169c3d297452d663fbd556b37f4",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 2,
+        "processed": 2,
+        "succeeded": 2,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "versioned-document",
+      "architecture": "document_or_pdf",
+      "cap": 1,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "912ccc38544094f1c8b38ad17f1befd5868da817a923aabf768e3e7f588be373",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "document-v2"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "38d75a2a3288be774b3ef3715da712be363b5264eb5584f1af3d7d3d72fbab53",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "public-form-no-submit",
+      "architecture": "form_only",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "3e773ebc94431e785a13231be8be4675fb2428091a6008f2fa6a267725bcd990",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "form-structure"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "bff5afc508baea0f8f77730dc5565c0dde6d81139fb51db2d379c9a714d20091",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "institution-umbrella",
+      "architecture": "institution_umbrella",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "be9700806dacfa14048a2f8646429729bae489d18e9c022f8451a47f47005da6",
+          "denominator": 3,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 2,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "automatic",
+            "competitive"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": false,
+          "receiptSha256": "7c6488e93069501a556d81498fa0268fc35e82c8b00854bcd1f07cc40d528b43",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6ImJlOTcwMDgwNmRhY2ZhMTQwNDhhMmY4NjQ2NDI5NzI5YmFlNDg5ZDE4ZTljMDIyZjg0NTFhNDdmNDcwMDVkYTYiLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjdjNjQ4OGU5MzA2OTUwMWE1NTZkODE0OThmYTAyNjhmYzM1ZTgyYzhiMDA4NTRiY2QxZjA3Y2M0MGQ1MjhiNDMifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "be9700806dacfa14048a2f8646429729bae489d18e9c022f8451a47f47005da6",
+          "denominator": 3,
+          "processedThisRun": 1,
+          "processedTotal": 3,
+          "succeededThisRun": 1,
+          "succeededTotal": 3,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 3,
+          "previousReceiptSha256": "7c6488e93069501a556d81498fa0268fc35e82c8b00854bcd1f07cc40d528b43",
+          "succeededKeys": [
+            "department"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "5e82b566eb06b0bb973644d7a4fa42b07384c21e67cb95605f40baff477b6473",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "login-portal-review",
+      "architecture": "login_application_portal",
+      "cap": 1,
+      "maxAttempts": 2,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "6b2fd7233c9d4784c7531890967f536491aa451a5f02f4b91a70bed76f64288a",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 2,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [],
+          "failedKeys": [
+            "login-wall"
+          ],
+          "failures": [
+            {
+              "key": "login-wall",
+              "outcome": "login_wall",
+              "attempts": 1,
+              "detail": null
+            }
+          ],
+          "complete": true,
+          "receiptSha256": "cb57d611a1f00dc00e3e8f1e0e8f9860cc4bb7eaebe0d3ce6b401ad858c352b6",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "login-wall"
+        ],
+        "failures": [
+          {
+            "key": "login-wall",
+            "outcome": "login_wall",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "offline-automatic",
+      "architecture": "offline_or_automatic",
+      "cap": 1,
+      "maxAttempts": 1,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "1c979bad4ca0bfd03bb3494061810651416dedf94384c8f5524bead22e98e51c",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 0,
+          "failedTotal": 0,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 1,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "offline-receipt"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "5acfe91ad418a13e1f12df822860ac1bbda524dccc09c692593b5a6066891e37",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [],
+        "failures": [],
+        "complete": true
+      }
+    },
+    {
+      "id": "unknown-identity-bearing-url",
+      "architecture": "unknown",
+      "cap": 1,
+      "maxAttempts": 1,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "e77e339409629f75e088d0d0fb4b46bb501d777da18748680072db4e78fec92f",
+          "denominator": 1,
+          "processedThisRun": 1,
+          "processedTotal": 1,
+          "succeededThisRun": 0,
+          "succeededTotal": 0,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 1,
+          "maxAttempts": 1,
+          "startIndex": 0,
+          "nextIndex": 1,
+          "previousReceiptSha256": null,
+          "succeededKeys": [],
+          "failedKeys": [
+            "unknown-review"
+          ],
+          "failures": [
+            {
+              "key": "unknown-review",
+              "outcome": "malformed",
+              "attempts": 1,
+              "detail": null
+            }
+          ],
+          "complete": true,
+          "receiptSha256": "95d0e48d7c3e47ce3f3a2d5a91c2c7db1030a6288ba9d92e991e667110dc895d",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "unknown-review"
+        ],
+        "failures": [
+          {
+            "key": "unknown-review",
+            "outcome": "malformed",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
+        "complete": true
+      }
+    },
+    {
+      "id": "bounded-failure-recovery",
+      "architecture": "directory_hub",
+      "cap": 2,
+      "maxAttempts": 3,
+      "runs": [
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 2,
+          "succeededThisRun": 1,
+          "succeededTotal": 1,
+          "failedThisRun": 1,
+          "failedTotal": 1,
+          "remaining": 3,
+          "queued": 3,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 0,
+          "nextIndex": 2,
+          "previousReceiptSha256": null,
+          "succeededKeys": [
+            "timeout-then-success"
+          ],
+          "failedKeys": [
+            "retry-exhausted"
+          ],
+          "failures": [
+            {
+              "key": "retry-exhausted",
+              "outcome": "timeout",
+              "attempts": 3,
+              "detail": null
+            }
+          ],
+          "complete": false,
+          "receiptSha256": "7eb9f1a02bf6e43e4766140279c460f604d8799f58888487d169ef2c070d2bd0",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjIsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjdlYjlmMWEwMmJmNmU0M2U0NzY2MTQwMjc5YzQ2MGY2MDRkODc5OWY1ODg4ODQ4N2QxNjllZjJjMDcwZDJiZDAifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 2,
+          "processedTotal": 4,
+          "succeededThisRun": 0,
+          "succeededTotal": 1,
+          "failedThisRun": 2,
+          "failedTotal": 3,
+          "remaining": 1,
+          "queued": 1,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 2,
+          "nextIndex": 4,
+          "previousReceiptSha256": "7eb9f1a02bf6e43e4766140279c460f604d8799f58888487d169ef2c070d2bd0",
+          "succeededKeys": [],
+          "failedKeys": [
+            "bot-block",
+            "malformed-child"
+          ],
+          "failures": [
+            {
+              "key": "bot-block",
+              "outcome": "bot_block",
+              "attempts": 1,
+              "detail": null
+            },
+            {
+              "key": "malformed-child",
+              "outcome": "malformed",
+              "attempts": 1,
+              "detail": null
+            }
+          ],
+          "complete": false,
+          "receiptSha256": "10ba8a430725760dc7a1dac59d30d3b530c6c89ec7345824603a05fd939f0437",
+          "cursor": "eyJzY2hlbWFWZXJzaW9uIjoxLCJpbnB1dFNoYTI1NiI6Ijg4OTc1MDc5MDE2ODQxN2M3ODEwNDMxOGIzNmVjOWIwZGM4NWE2YTA0Zjc4MGZmM2M4OTEwMzUwZjM0MDBmNjciLCJuZXh0SW5kZXgiOjQsInByZXZpb3VzUmVjZWlwdFNoYTI1NiI6IjEwYmE4YTQzMDcyNTc2MGRjN2ExZGFjNTlkMzBkM2I1MzBjNmM4OWVjNzM0NTgyNDYwM2EwNWZkOTM5ZjA0MzcifQ",
+          "receiptMacWithheld": true
+        },
+        {
+          "schemaVersion": 1,
+          "inputSha256": "889750790168417c78104318b36ec9b0dc85a6a04f780ff3c8910350f3400f67",
+          "denominator": 5,
+          "processedThisRun": 1,
+          "processedTotal": 5,
+          "succeededThisRun": 1,
+          "succeededTotal": 2,
+          "failedThisRun": 0,
+          "failedTotal": 3,
+          "remaining": 0,
+          "queued": 0,
+          "cap": 2,
+          "maxAttempts": 3,
+          "startIndex": 4,
+          "nextIndex": 5,
+          "previousReceiptSha256": "10ba8a430725760dc7a1dac59d30d3b530c6c89ec7345824603a05fd939f0437",
+          "succeededKeys": [
+            "partial-run-tail"
+          ],
+          "failedKeys": [],
+          "failures": [],
+          "complete": true,
+          "receiptSha256": "02f9ac4d5aa264090de00a9c2e86cee11cfb2d585e2f8a81e70880f64c0ad9e5",
+          "cursor": null,
+          "receiptMacWithheld": true
+        }
+      ],
+      "final": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 2,
+        "failed": 3,
+        "remaining": 0,
+        "queued": 0,
+        "failedKeys": [
+          "retry-exhausted",
+          "bot-block",
+          "malformed-child"
+        ],
+        "failures": [
+          {
+            "key": "retry-exhausted",
+            "outcome": "timeout",
+            "attempts": 3,
+            "detail": null
+          },
+          {
+            "key": "bot-block",
+            "outcome": "bot_block",
+            "attempts": 1,
+            "detail": null
+          },
+          {
+            "key": "malformed-child",
+            "outcome": "malformed",
+            "attempts": 1,
+            "detail": null
+          }
+        ],
+        "complete": true
+      }
+    }
+  ],
+  "reportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020"
+}

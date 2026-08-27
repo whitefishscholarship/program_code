@@ -1,0 +1,584 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P3",
+  "generatedAt": "2026-08-26T23:00:00Z",
+  "baselineCommit": "2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3",
+  "modelSchemaVersion": "2.0.0",
+  "pinnedInput": {
+    "p1InventorySha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a",
+    "p2CanonicalDatasetSha256": "dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295",
+    "fixtureSha256": "587d1fc6ad0c6559a27dce88092dd376cf208020a05ee64b0fb6fbde14026433",
+    "liveObservationSha256": "6f83fa0048f2e0df286279d37e54dbcf554abb7ca4e98bdb4655084155434867"
+  },
+  "limitations": "Sanitized deterministic fixtures exercise acquisition structure only. Names, URLs, states, and counts are not accepted scholarship facts.",
+  "routingMatrix": [
+    {
+      "architecture": "single_award_page",
+      "route": "single_page_extractor"
+    },
+    {
+      "architecture": "multi_award_page",
+      "route": "multi_award_section_splitter"
+    },
+    {
+      "architecture": "directory_hub",
+      "route": "directory_queue"
+    },
+    {
+      "architecture": "paginated_catalog",
+      "route": "pagination_cursor_engine"
+    },
+    {
+      "architecture": "common_application",
+      "route": "common_application_reader"
+    },
+    {
+      "architecture": "matching_portal",
+      "route": "matching_portal_review"
+    },
+    {
+      "architecture": "external_marketplace",
+      "route": "external_provider_queue"
+    },
+    {
+      "architecture": "login_application_portal",
+      "route": "access_review"
+    },
+    {
+      "architecture": "document_or_pdf",
+      "route": "document_parser"
+    },
+    {
+      "architecture": "form_only",
+      "route": "public_form_reader"
+    },
+    {
+      "architecture": "institution_umbrella",
+      "route": "institution_section_splitter"
+    },
+    {
+      "architecture": "offline_or_automatic",
+      "route": "offline_method_receipt"
+    },
+    {
+      "architecture": "unknown",
+      "route": "architecture_review"
+    }
+  ],
+  "coveredArchitectures": [
+    "common_application",
+    "directory_hub",
+    "document_or_pdf",
+    "external_marketplace",
+    "form_only",
+    "institution_umbrella",
+    "login_application_portal",
+    "matching_portal",
+    "multi_award_page",
+    "offline_or_automatic",
+    "paginated_catalog",
+    "single_award_page",
+    "unknown"
+  ],
+  "scenarioCount": 15,
+  "scenarioResults": [
+    {
+      "id": "single-award-page",
+      "architecture": "single_award_page",
+      "route": "single_page_extractor",
+      "sourceIdentity": "https://fixtures.invalid/single-award",
+      "childCount": 1,
+      "applicationGroupCount": 0,
+      "cycleCount": 1,
+      "evidenceCount": 3,
+      "reviewItemCount": 3,
+      "parserObservation": {
+        "kind": "single_html",
+        "resultSha256": "362c8100283d3c39a20d24d8a0eec8006a07416f71fad245f3523a2921401749",
+        "observation": {
+          "title": "Sanitized Single Award",
+          "text": "Sanitized Single Award Fixture body.",
+          "contentSha256": "787a3e7f1fc89e83d6b1d6b0403980f1629a92afcdf7e170545b25d7f9a5f8c1"
+        }
+      },
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "multi-award-page",
+      "architecture": "multi_award_page",
+      "route": "multi_award_section_splitter",
+      "sourceIdentity": "https://fixtures.invalid/multi-award#awards",
+      "childCount": 3,
+      "applicationGroupCount": 0,
+      "cycleCount": 3,
+      "evidenceCount": 10,
+      "reviewItemCount": 10,
+      "parserObservation": {
+        "kind": "multi_html",
+        "resultSha256": "41a9bc9bb5086f432769783c88a0de3eb8b460d0f5e55e21d0a51515912a9d43",
+        "observation": [
+          {
+            "occurrence": 0,
+            "name": "Sanitized North Award",
+            "text": "North body.",
+            "contentSha256": "98c3ba203be808bbe7e9cffcf79b8c3c8ee3b48fe0ee8e17214cac07107d871a"
+          },
+          {
+            "occurrence": 1,
+            "name": "Sanitized South Award",
+            "text": "South body.",
+            "contentSha256": "05e31f623b11d44b8e6b3267925101b42a0d6fc4bae4b4720bd578ca6c7046c8"
+          },
+          {
+            "occurrence": 2,
+            "name": "Sanitized Trades Award",
+            "text": "Trades body.",
+            "contentSha256": "4c3e097fefb581efbaefc1f4f2f9f16f1d4f047e9f24107e0d3ea50ac66d4ba6"
+          }
+        ]
+      },
+      "finalCompleteness": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 2
+      }
+    },
+    {
+      "id": "nfu-unified-application",
+      "architecture": "common_application",
+      "route": "common_application_reader",
+      "sourceIdentity": "https://fixtures.invalid/nfu-style",
+      "childCount": 3,
+      "applicationGroupCount": 1,
+      "cycleCount": 3,
+      "evidenceCount": 11,
+      "reviewItemCount": 11,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "horatio-directory-exceptions",
+      "architecture": "directory_hub",
+      "route": "directory_queue",
+      "sourceIdentity": "https://fixtures.invalid/horatio-style",
+      "childCount": 2,
+      "applicationGroupCount": 0,
+      "cycleCount": 2,
+      "evidenceCount": 8,
+      "reviewItemCount": 8,
+      "parserObservation": {
+        "kind": "directory_html",
+        "resultSha256": "f3a47f476b6766f866b2baf0f151619943f9ed4d6aa6d3a13621563aa6f63995",
+        "observation": {
+          "links": [
+            {
+              "occurrence": 0,
+              "url": "https://fixtures.invalid/horatio-style/undergraduate",
+              "text": "Undergraduate"
+            },
+            {
+              "occurrence": 1,
+              "url": "https://fixtures.invalid/horatio-style/career",
+              "text": "Career"
+            },
+            {
+              "occurrence": 2,
+              "url": "https://fixtures.invalid/horatio-style/login",
+              "text": "Specialized"
+            }
+          ],
+          "rejected": []
+        }
+      },
+      "finalCompleteness": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 2,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 2
+      }
+    },
+    {
+      "id": "reach-higher-matching-review",
+      "architecture": "matching_portal",
+      "route": "matching_portal_review",
+      "sourceIdentity": "https://fixtures.invalid/reach-higher?filters=montana#c475",
+      "childCount": 0,
+      "applicationGroupCount": 1,
+      "cycleCount": 0,
+      "evidenceCount": 3,
+      "reviewItemCount": 3,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "fvcc-pagination-cap-recovery",
+      "architecture": "paginated_catalog",
+      "route": "pagination_cursor_engine",
+      "sourceIdentity": "https://fixtures.invalid/fvcc-style?page=1",
+      "childCount": 5,
+      "applicationGroupCount": 0,
+      "cycleCount": 5,
+      "evidenceCount": 16,
+      "reviewItemCount": 16,
+      "parserObservation": {
+        "kind": "pagination_html",
+        "resultSha256": "60915805a4aa9bc42f8e93880365641cea93c4acede7c03a39a1e1ec31de4de6",
+        "observation": {
+          "pages": [
+            {
+              "url": "https://fixtures.invalid/fvcc-style?page=2",
+              "token": "2"
+            },
+            {
+              "url": "https://fixtures.invalid/fvcc-style?page=3",
+              "token": "3"
+            }
+          ],
+          "cursors": [
+            "page-2"
+          ],
+          "rejected": []
+        }
+      },
+      "finalCompleteness": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 5,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 3
+      }
+    },
+    {
+      "id": "first-external-providers",
+      "architecture": "external_marketplace",
+      "route": "external_provider_queue",
+      "sourceIdentity": "https://fixtures.invalid/first-style?partnerName=FIRST+Partner",
+      "childCount": 3,
+      "applicationGroupCount": 0,
+      "cycleCount": 3,
+      "evidenceCount": 10,
+      "reviewItemCount": 10,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 2
+      }
+    },
+    {
+      "id": "esa-shared-program",
+      "architecture": "common_application",
+      "route": "common_application_reader",
+      "sourceIdentity": "https://fixtures.invalid/esa-style?program=2026",
+      "childCount": 2,
+      "applicationGroupCount": 1,
+      "cycleCount": 2,
+      "evidenceCount": 8,
+      "reviewItemCount": 8,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 2,
+        "processed": 2,
+        "succeeded": 2,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "versioned-document",
+      "architecture": "document_or_pdf",
+      "route": "document_parser",
+      "sourceIdentity": "https://fixtures.invalid/files/application-v2.pdf?version=2",
+      "childCount": 1,
+      "applicationGroupCount": 0,
+      "cycleCount": 1,
+      "evidenceCount": 3,
+      "reviewItemCount": 3,
+      "parserObservation": {
+        "kind": "document_text",
+        "resultSha256": "78c497c2428d355efde2dface3d1932d49d5008d59c8b3cba5935eea5b48567a",
+        "observation": [
+          {
+            "occurrence": 0,
+            "name": "Sanitized Document Award",
+            "text": "Versioned fixture body.",
+            "contentSha256": "a1a14f65d9e0f5baf1a11cd771829cacdce54eb9afbaeb5c59995e9801c1733c"
+          }
+        ]
+      },
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "public-form-no-submit",
+      "architecture": "form_only",
+      "route": "public_form_reader",
+      "sourceIdentity": "https://fixtures.invalid/forms/public-scholarship?sys_id=form-1",
+      "childCount": 1,
+      "applicationGroupCount": 1,
+      "cycleCount": 1,
+      "evidenceCount": 4,
+      "reviewItemCount": 4,
+      "parserObservation": {
+        "kind": "public_form_html",
+        "resultSha256": "a4708ecdb414e3839bcfad5adcdac9ebe595f28c79f1144e252fd8497630cf07",
+        "observation": {
+          "title": "Sanitized Public Form Award",
+          "actionUrl": "https://fixtures.invalid/forms/d/e/example/formResponse?sys_id=form-1",
+          "method": "post",
+          "fieldLabels": [
+            "Student email",
+            "Essay prompt"
+          ],
+          "questions": [
+            {
+              "occurrence": 0,
+              "label": "Student email",
+              "controlTypes": [
+                "email"
+              ],
+              "required": true
+            },
+            {
+              "occurrence": 1,
+              "label": "Essay prompt",
+              "controlTypes": [
+                "textarea"
+              ],
+              "required": true
+            }
+          ],
+          "controlCount": 3,
+          "submitted": false,
+          "contentSha256": "62c6f4710de5efb30e14798d1214c493a7747b95a5fe68d4af393659dea50bf1"
+        }
+      },
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "institution-umbrella",
+      "architecture": "institution_umbrella",
+      "route": "institution_section_splitter",
+      "sourceIdentity": "https://fixtures.invalid/institution/aid",
+      "childCount": 3,
+      "applicationGroupCount": 1,
+      "cycleCount": 3,
+      "evidenceCount": 11,
+      "reviewItemCount": 11,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 3,
+        "processed": 3,
+        "succeeded": 3,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 2
+      }
+    },
+    {
+      "id": "login-portal-review",
+      "architecture": "login_application_portal",
+      "route": "access_review",
+      "sourceIdentity": "https://fixtures.invalid/login?urlkey=program-a",
+      "childCount": 0,
+      "applicationGroupCount": 0,
+      "cycleCount": 0,
+      "evidenceCount": 2,
+      "reviewItemCount": 2,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "offline-automatic",
+      "architecture": "offline_or_automatic",
+      "route": "offline_method_receipt",
+      "sourceIdentity": "Sanitized counselor-administered automatic award",
+      "childCount": 1,
+      "applicationGroupCount": 1,
+      "cycleCount": 1,
+      "evidenceCount": 4,
+      "reviewItemCount": 4,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 1,
+        "failed": 0,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "unknown-identity-bearing-url",
+      "architecture": "unknown",
+      "route": "architecture_review",
+      "sourceIdentity": "https://fixtures.invalid/search?filters=mt&page=2&sys_id=record-a&urlkey=award-a#details",
+      "childCount": 0,
+      "applicationGroupCount": 0,
+      "cycleCount": 0,
+      "evidenceCount": 2,
+      "reviewItemCount": 2,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 1,
+        "processed": 1,
+        "succeeded": 0,
+        "failed": 1,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 1
+      }
+    },
+    {
+      "id": "bounded-failure-recovery",
+      "architecture": "directory_hub",
+      "route": "directory_queue",
+      "sourceIdentity": "https://fixtures.invalid/failure-matrix",
+      "childCount": 2,
+      "applicationGroupCount": 0,
+      "cycleCount": 2,
+      "evidenceCount": 10,
+      "reviewItemCount": 10,
+      "parserObservation": null,
+      "finalCompleteness": {
+        "denominator": 5,
+        "processed": 5,
+        "succeeded": 2,
+        "failed": 3,
+        "remaining": 0,
+        "queued": 0,
+        "runs": 3
+      }
+    }
+  ],
+  "canonicalEntityFixtureTotals": {
+    "sources": 45,
+    "scholarships": 27,
+    "applicationGroups": 6,
+    "cycles": 27,
+    "evidence": 105,
+    "reviewItems": 105
+  },
+  "parserCoverage": [
+    "single_html",
+    "multi_html",
+    "directory_html",
+    "pagination_html",
+    "document_text",
+    "public_form_html"
+  ],
+  "identityPolicy": {
+    "trackingParameters": "allow-listed removal only",
+    "meaningfulFragmentsPreserved": true,
+    "cases": [
+      {
+        "url": "https://fixtures.invalid/search?filters=mt&page=2&sys_id=record-a&urlkey=award-a#details",
+        "preservedQueryParameters": [
+          "filters",
+          "page",
+          "sys_id",
+          "urlkey"
+        ],
+        "removedTrackingParameters": [
+          "utm_source"
+        ],
+        "fragmentPreserved": true
+      },
+      {
+        "url": "https://fixtures.invalid/search?filters=national&page=3&sys_id=record-b&urlkey=award-b#other",
+        "preservedQueryParameters": [
+          "filters",
+          "page",
+          "sys_id",
+          "urlkey"
+        ],
+        "removedTrackingParameters": [],
+        "fragmentPreserved": true
+      }
+    ]
+  },
+  "publicObservations": {
+    "observedAt": "2026-08-26T22:38:00Z",
+    "count": 3,
+    "architectures": [
+      "common_application",
+      "external_marketplace",
+      "paginated_catalog"
+    ],
+    "limitations": "Each observation proves only what the named public URL returned in this bounded scrape. These are current acquisition-architecture observations, not completeness proofs or accepted scholarship facts."
+  },
+  "boundaries": {
+    "fixtureSpreadsheetReads": 0,
+    "publicReadOnlyFetches": 3,
+    "spreadsheetWrites": 0,
+    "formSubmissions": 0,
+    "providerContacts": 0,
+    "acceptedFactTransitions": 0,
+    "productBehaviorChanges": 0
+  },
+  "reportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8"
+}

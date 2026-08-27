@@ -213,7 +213,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P3",
+  "nextPermittedStageId": "P4",
   "stages": [
     {
       "id": "P0",
@@ -248,8 +248,8 @@
     {
       "id": "P3",
       "name": "Architecture-aware acquisition",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3",
       "evidencePath": "docs/evidence/P3.md",
       "manifestPath": "docs/evidence/P3-manifest.json",
       "reviewPath": "docs/reviews/P3.json",
@@ -263,7 +263,7 @@
       "evidencePath": "docs/evidence/P4.md",
       "manifestPath": "docs/evidence/P4-manifest.json",
       "reviewPath": "docs/reviews/P4.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P4-VERIFICATION.md"
     },
     {
       "id": "P5",

@@ -5,67 +5,181 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P2 delivery integration state
+## Current P3 replacement-candidate state
 
-- Active stage: none. P2 is accepted and this integration is delivery-only; P3 must
-  not start during this work.
-- Verified delivered Revision 6 baseline and first parent:
-  `322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f`.
-- Revision 6 candidate `8ec2e5793208a0d508637ebb3bac7e45e019cbec` and
-  direct-child attestation `da1d31fb1f62e1b5730540dea62b86604860bad1`
-  were independently accepted C0/H0/M0/L0 and merged through PR #15. PR and
-  post-merge main CI passed; Vercel Production completed. Preview was attempted but
-  blocked by the existing Franscale1922 author-access rule; no deployment
-  configuration changed.
-- Exact preserved P2 candidate:
-  `1a6376207eb467ff0977298de16a1c0d0db1b3cd`.
-- Exact preserved P2 attestation:
-  `cc277b34075f6d648ff3c71022fadf6a6c632b34`.
-- Preserved P2 manifest SHA-256:
+- Active stage: none. The first local P3 acceptance candidate was rejected and the
+  remediated replacement is pending freeze, independent recheck, and direct-child
+  attestation. P4 is only next permitted and has not started.
+- Verified P3 baseline and `origin/main`:
+  `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
+- P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
+- P3 implementation checkpoint:
+  `21e085a259cac558fac3689bfade58b0228be27b`.
+- Rejected predecessor candidate:
+  `f89f61c634318d7b77b3db82ef3084af53f59c61` (C0/H4/M3/L0); it must never be
+  attested or delivered. First rejected replacement:
+  `6e28ab95a6e707167ff51436a140669369f95a3a` (C0/H2/M0/L0), with rejected
+  uncommitted manifest digest
+  `c1d83fa89a96dc2d991e3938e032f457318caf165382f20726f7c45e0042bbcb`.
+  Second rejected replacement:
+  `715a4d32b9d7c292c38eb9034987d6ec6243f8fc` (C0/H2/M0/L0), with rejected
+  uncommitted manifest digest
+  `1f707dce20fca72c3589ab2e25c97456f7f7bec53fa4ba933dd16f5c91a9641c`.
+  Third rejected replacement:
+  `118006a8bccdbee91fcce000e56ac958ab938c04` (C0/H2/M0/L0), with rejected
+  uncommitted manifest digest
+  `0f5334a9c6b4d7c392cc2b53018f899fc21867e7862765f358d59a3b4d9fd0bc`.
+  Fourth rejected replacement:
+  `50448b0c415d72e7b6ab2f5c9de3f65ee4360f75` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `131ad1a6844bc768125f1d9a3e8a2a879e94524ac22e00a21660b88dd7605ea6`.
+  Fifth rejected replacement:
+  `415914230aa6ba93258f40d3cf0380f99e76acad` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `43df6c8180ecb2f5365785191250d1675f98a25930e560652332175efa89ea4d`.
+  Sixth rejected replacement:
+  `ac368e0f2e3c68b13d461aabbfcecd587c96f013` (C0/H1/M0/L0), with rejected
+  uncommitted manifest digest
+  `92c35ebe60d38c1dbda900d8696e5d46825d317e1da249e4202d75414e7bfb45`.
+  No rejected candidate may be attested or delivered. Remediation checkpoints:
+  `e805e49`, `d4ee469`, `03421b3`, `5b2fda0`, `dab60c1`, `313c944`, and
+  `0a4f2fd`.
+- Exact replacement candidate: pending freeze. Its content-derived SHA will be bound in
+  `docs/evidence/P3-manifest.json`; a commit cannot embed its own SHA without changing
+  that SHA.
+- Replacement P3 manifest/review: intentionally absent until the candidate is frozen.
+  They must be
+  the only two paths added in the exact direct-child attestation.
+- Entry verification confirmed that the exact P2 merge, accepted marker, evidence,
+  manifest, review, and direct-child attestation are all present in the baseline.
+- P2 schema version `2.0.0`, P1 inventory SHA-256
+  `3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a`, and P2
+  canonical dataset digest
+  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`
+  are the pinned acquisition inputs.
+- Baseline `npm ci` installed 565 locked packages and baseline `npm run plan:check`
+  passed after the restricted runner's local IPC socket was permitted. No dependency,
+  lockfile, spreadsheet, deployment-configuration, form, provider, or production-data
+  mutation occurred.
+- P3 is authorized under the stage-specific standing mandate recorded in
+  `docs/evidence/STANDING-OPERATING-MANDATE.md`. Reserved effects remain excluded.
+- P3 implements all 13 architecture routes, selective URL identity, bounded retries,
+  hash-linked receipt-ledger resume, thrown-error classification, occurrence-preserving
+  single/multi-page and directory parsing, pagination/document parsing, representative
+  no-submit public-form reading, explicit access review, and schema-valid unverified P2
+  fixture graphs derived only from successful work results. Successful Source URLs
+  preserve provider hosts, page parameters, and fragments; receipt history is loaded
+  only from an implementation-owned append-only directory that can be reopened after
+  interruption and whose receipts require a runtime-held HMAC integrity key. Form
+  labels/titles use only direct structural text or explicit accessible-name attributes,
+  so descendant custom-control response text is never recorded.
+- Deterministic fixture denominator: 34 work items; 34 processed, 27 successful, seven
+  explicit failure/review outcomes, zero unaccounted remaining. All seven failures have
+  a canonical Source, Evidence item, and Review Item.
+- Fixture graph totals: 45 Sources, 27 Scholarships, six Application Groups, 27 Cycles,
+  105 Evidence items, and 105 Review Items. All evidence remains unverified and every
+  cycle remains unknown for P4.
+- Acquisition report SHA-256:
+  `b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8`;
+  completeness report SHA-256:
+  `d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020`.
+- Three bounded public landing pages were read with Firecrawl at
+  `2026-08-26T22:38:00Z` for architecture observations only: NFU, FVCC AcademicWorks,
+  and FIRST. No child crawl, form/application interaction, authentication, factual
+  acceptance, spreadsheet access, or provider contact occurred.
+- `docs/kickoffs/P4-VERIFICATION.md` is prepared as the next-stage contract only. P4
+  has not started and may not start until P3 acceptance is delivered on `origin/main`.
+- The rejected predecessor's matrix passed through `2026-08-26T22:47:06Z`: locked install,
+  deterministic acquisition check, plan/history validation, typecheck, complete tests,
+  permitted network build, and root diff check. The restricted build failed only on
+  existing Google Fonts network access; no configuration changed. Exact UTC windows and
+  outcomes are historical in `docs/evidence/P3.md` and are not replacement acceptance
+  evidence. It is not replacement acceptance evidence.
+- The first replacement matrix passed through `2026-08-26T23:09:19Z`: exact locked
+  install, deterministic acquisition check at `abca542965bd`, typecheck, complete tests,
+  permitted network build, and root diff check. Prospective plan validation reported
+  exactly the expected missing P3 manifest/review attestation and no other error. Exact
+  UTC windows and outcomes are historical in `docs/evidence/P3.md`; that candidate was
+  rejected and the final replacement matrix is pending.
+- The second replacement matrix passed through `2026-08-26T23:22:29Z`: exact locked
+  install, deterministic acquisition check at `2a826bde49be`, typecheck, complete
+  tests, permitted network build, and root diff check. Prospective plan validation
+  reported exactly the expected missing P3 manifest/review attestation and no other
+  error. That candidate was rejected; exact UTC windows are historical in
+  `docs/evidence/P3.md`.
+- The third replacement matrix passed through `2026-08-26T23:35:06Z`: exact locked
+  install, deterministic acquisition check at `2a826bde49be`, typecheck, complete
+  tests (including nested-response and restart-resume regressions), permitted network
+  build, and root diff check. Prospective plan validation reported only the expected
+  missing P3 manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The fourth replacement matrix passed through `2026-08-26T23:47:02Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including authenticated-rewrite and custom-control response regressions, permitted
+  network build, and root diff check. Prospective plan validation reported only the
+  expected missing P3 manifest/review attestation. That candidate was rejected; final
+  replacement verification is pending.
+- The fifth replacement matrix passed through `2026-08-26T23:55:55Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including the custom-control heading boundary, permitted network build, and root
+  diff check. Prospective plan validation reported only the expected missing P3
+  manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The sixth replacement matrix passed through `2026-08-27T00:02:58Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including the document-title-only form boundary, permitted network build, and root
+  diff check. Prospective plan validation reported only the expected missing P3
+  manifest/review attestation. That candidate was rejected; final replacement
+  verification is pending.
+- The seventh replacement matrix passed through `2026-08-27T00:10:09Z`: exact locked
+  install, deterministic acquisition/completeness checks, typecheck, complete tests
+  including nested question-candidate ancestry non-collection, permitted network
+  build, and root diff check. Prospective plan validation reported only the expected
+  missing P3 manifest/review attestation. Exact UTC windows are recorded in
+  `docs/evidence/P3.md`; only this result record remains to be frozen before manifest
+  binding and reviewer recheck.
+- The immutable replacement candidate, complete manifest, reviewer recheck, and exact
+  direct-child attestation are still pending. Until delivery, P3 is not durably complete
+  on `origin/main` and P4 remains prohibited in this session.
+
+### Deferred platform and dependency issues (not P3 remediation)
+
+- **Vercel Preview:** PR #16's Preview deployment was attempted and blocked by the
+  existing `Franscale1922` project-access rule. Main CI and the Production deployment
+  completed. No identity, permission, or deployment configuration was changed. Owner:
+  repository/Vercel administrator. Target: resolve through separately authorized
+  access administration before a Preview result becomes an acceptance dependency.
+- **GitHub Actions Node runtime:** post-merge run `33018750958` passed but annotated
+  that Node.js 20 action runtimes are deprecated and `actions/checkout@v4` plus
+  `actions/setup-node@v4` were forced onto Node.js 24. Owner: repository maintainer.
+  Target: a separately reviewed operational-governance update before the warning
+  becomes a CI failure; P3 does not change CI configuration.
+- **Dependency audit:** the locked install still reports 21 time-sensitive advisories
+  (1 low, 7 moderate, 12 high, 1 critical). This is an audit denominator, not an
+  exploitability finding. Owner: P7 implementation/reviewer. Target: P7's required
+  dependency/security audit and exposure review; P3 applies no upgrade or audit fix.
+
+## Historical P2 delivery integration state (completed)
+
+- Exact P2 delivery integration completed and merged through PR #16 at
+  `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3` on 2026-08-26.
+- Its exact two-parent candidate used delivered Revision 6
+  `322a2b85ba32b6255e0f24a1482c0a6a26dd2b7f` as first parent and immutable P2
+  attestation `cc277b34075f6d648ff3c71022fadf6a6c632b34` as second parent.
+- Preserved P2 candidate:
+  `1a6376207eb467ff0977298de16a1c0d0db1b3cd`; preserved P2 manifest SHA-256:
   `4d47d562e26efe249f6a7be0ed656f1fddc1a17233378254772019cacd49ee8a`.
-- Current integration branch: `codex/p2-delivery-integration-rev6`.
-- The integration is an exact two-parent merge with delivered Revision 6 first and
-  immutable P2 attestation second. Only `docs/BUILD_STATE.json`, this handoff, and
-  `web/package.json` are resolved.
-- The target state marks P2 accepted, clears the active stage, identifies P3 only as
-  next permitted, marks the P2 delivery integration accepted with baseline
-  `322a2b8`, and clears the obsolete delivery blocker.
-- The package resolution preserves the complete delivered Revision 6 package and all
-  its test commands, adds only exact P2 `p2:model` and `p2:model:check`, and
-  appends only `test-p2-data-model.ts`.
-- Current required actions are the complete verification matrix, immutable candidate
-  freeze, complete delivery manifest, fresh read-only review, direct-child two-file
-  attestation, authorized push/PR/merge, and CI/Vercel verification. Stop before P3.
-- Exact pre-freeze mechanical checks returned `exactState: true` and
-  `exactPackage: true` against delivered baseline `322a2b8` and exact P2
-  attestation `cc277b3`.
-- The locked install and non-incremental typecheck passed from
-  `2026-08-26T21:56:47Z` through `2026-08-26T21:57:00Z` with 565 packages and the
-  unchanged time-sensitive audit denominator of 21 findings (1 low, 7 moderate,
-  12 high, 1 critical); no fix, dependency, or lockfile change was made.
-- The ordinary `p2:model:check` wrapper encountered the restricted environment's
-  known `tsx` IPC `listen EPERM` before execution. Its socket-free equivalent
-  passed at `2026-08-26T21:55:39Z` with canonical digest
-  `dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295`.
-- The pre-freeze complete `npm test` attempt ran from
-  `2026-08-26T21:55:04Z` through `2026-08-26T21:55:13Z`, passed every test through
-  the P1 inventory, and then stopped only because the content-derived
-  `docs/evidence/P2-delivery-manifest.json` cannot exist until this merge candidate
-  is frozen. Prospective plan validation likewise reported only the expected
-  pre-freeze manifest, review, attestation, candidate-path, and not-yet-committed
-  second-parent gates.
-- The restricted production build failed only while fetching existing Google Fonts;
-  the authorized network retry passed from `2026-08-26T21:56:10Z` through
-  `2026-08-26T21:56:28Z` and changed no configuration. Root and staged
-  `git diff --check` passed at `2026-08-26T21:57:10Z`.
-- The exact merge-candidate SHA necessarily exists only after this content is frozen.
-  The complete uncommitted delivery manifest will bind it, and the fresh reviewer will
-  rerun the complete tests and validation with that manifest present. Changing this
-  handoff afterward would create a different two-parent candidate and is prohibited.
-- Production spreadsheet identity remains unset and mutation remains unauthorized.
-  No spreadsheet access/write, P9 or production-data action, product/runtime change,
-  deployment-configuration change, form/application interaction, provider contact,
-  paid/destructive action, history rewrite, or P3 implementation is in scope.
+- Delivery candidate `147513a` and direct-child attestation `0655da7` were
+  independently accepted C0/H0/M0/L0. PR CI and post-merge main CI passed; Vercel
+  Production completed. The blocked Preview result is carried above.
+- The reviewed integration reconciled only `docs/BUILD_STATE.json`, this handoff, and
+  the deterministic `web/package.json` union. It preserved every Revision 6 test
+  command and added only exact P2 model scripts and its missing test command.
+- P2 is durably accepted and delivered. Its historical pre-freeze checks, constrained
+  runner behavior, and exact package/state proofs remain preserved in P2 delivery
+  evidence and review records.
+- Production spreadsheet identity remains unset and all spreadsheet mutation remains
+  unauthorized.
 
 ## Historical Revision 6 pre-delivery state (completed)
 

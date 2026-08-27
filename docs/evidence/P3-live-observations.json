@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P3",
+  "observedAt": "2026-08-26T22:38:00Z",
+  "method": "Three bounded read-only Firecrawl landing-page scrapes. No interaction, authentication, form submission, applicant-data collection, provider contact, or follow-on crawl occurred.",
+  "limitations": "Each observation proves only what the named public URL returned in this bounded scrape. These are current acquisition-architecture observations, not completeness proofs or accepted scholarship facts.",
+  "observations": [
+    {
+      "requestedUrl": "https://nfu.org/education/scholarships/",
+      "observedCanonicalUrl": "https://nfu.org/resources/scholarships/",
+      "architecture": "common_application",
+      "scrapeId": "01a04030-24a9-763f-ac10-13ebadc8d912",
+      "contentSha256": "84fe42f41a39648372428cbab4e47d16731b00385f6dc5dd56d45134bd3893c2",
+      "boundedDenominator": {
+        "landingPages": 1,
+        "separatelyNamedOpportunitiesObserved": 3,
+        "childPagesFetched": 0
+      },
+      "observed": "The returned landing page stated that it presents three primary scholarship opportunities and that one unified application form serves them.",
+      "reviewState": "observation_only"
+    },
+    {
+      "requestedUrl": "https://fvcc.academicworks.com/",
+      "observedCanonicalUrl": "https://fvcc.academicworks.com/",
+      "architecture": "paginated_catalog",
+      "scrapeId": "01a04030-938b-74fd-8d6b-7f2355d96dbe",
+      "contentSha256": "37a2113b198795ab5ae7328c5cfdff8f7ad591eeec198af72f03c7072e1498f9",
+      "boundedDenominator": {
+        "landingPages": 1,
+        "opportunityLinksInReturnedSlice": 50,
+        "pageLabelsObserved": 4,
+        "childPagesFetched": 0
+      },
+      "observed": "The returned slice exposed 50 distinct opportunity links, visible Page 1 through Page 4 labels, and a Next link carrying page=2. The remaining catalog denominator was not crawled and is unknown from this one-page probe.",
+      "reviewState": "observation_only"
+    },
+    {
+      "requestedUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "observedCanonicalUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "architecture": "external_marketplace",
+      "scrapeId": "01a04030-82f6-701a-856b-1f25eee2a790",
+      "contentSha256": "318375f74ecb6c490e43972c164b2e87d520018373f399e19328300de7211a38",
+      "boundedDenominator": {
+        "landingPages": 1,
+        "externalMarketplacePagesFetched": 0,
+        "providerAwardPagesFetched": 0
+      },
+      "observed": "The returned landing page routed discovery to Pearson Futures and stated that individual scholarship providers fund and administer awards with distinct terms and application processes.",
+      "reviewState": "observation_only"
+    }
+  ],
+  "externalEffects": {
+    "publicReadOnlyFetches": 3,
+    "spreadsheetReads": 0,
+    "spreadsheetWrites": 0,
+    "formSubmissions": 0,
+    "providerContacts": 0,
+    "authenticatedInteractions": 0
+  }
+}
