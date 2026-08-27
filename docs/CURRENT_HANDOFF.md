@@ -7,8 +7,8 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine. The first two immutable
-  candidates were independently rejected; all eleven cumulative findings are remediated in the working
+- Active stage: P4 — Accuracy and verification engine. The first three immutable
+  candidates were independently rejected; all 17 cumulative findings are remediated in the working
   replacement, whose final matrix, freeze, same-reviewer recheck, accepted-state
   recheck, and direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
@@ -41,6 +41,13 @@ Default branch: `main`
   It also must never be attested or delivered. Its findings cover later-stage P4-check
   compatibility, canonical authority/relationship provenance, DST-fallback ambiguity,
   and URL-equivalent source identity.
+- Rejected second remediated replacement:
+  `6921ac1403ab24d253d72d23187164b8f6735459` at C0/H4/M2/L0, with rejected
+  uncommitted manifest digest
+  `1b6835a33d5546499628b2a8d7b9a7ab831c8533a01abf6748ff293981dcf11d`.
+  It also must never be attested or delivered. Its findings cover fixture
+  self-certification, conflicting relationship bindings, stale provenance, canonical
+  URL identity, invalid timezones, and soft application redirects.
 - P4 reconciles all 270 historical CellData hyperlink representations, including 92
   hidden application hyperlinks, plus four explicit offline methods. No representation
   was deduplicated or skipped. The deterministic run made no spreadsheet or public-
@@ -52,12 +59,12 @@ Default branch: `main`
   unavailable, and ten unknown states. Zero unknown/invalid parse results become
   active. Mixed open/close strings, serials, annual/rolling rules, approximate/month-
   only values, explicit time zones, and year boundaries are covered.
-- Sixteen field claims yield 16 complete receipts and nine decisions: two corroborated
-  current-direct-official decisions are supported evidence, seven remain review, and
-  five conflicts remain non-accepted. No spreadsheet correction is applied.
-- Deterministic working-replacement report SHA-256 values: links `a8c778aca5b2`,
-  cycles `a9cffc39ef05`, field evidence `3b6845d396d0`, conflicts `a58a993f7f41`,
-  and reviews `018dc57564e0`.
+- Sixteen field claims yield 16 complete receipts and nine decisions: zero synthetic
+  decisions are accepted, all nine remain review, and five conflicts remain
+  non-accepted. No spreadsheet correction is applied.
+- Deterministic working-replacement report SHA-256 values: links `682fa31f447d`,
+  cycles `29753e2a3b0c`, field evidence `0b87e6c73b0f`, conflicts `68216ee79550`,
+  and reviews `b78190f49d0b`.
 - The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
   `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.
@@ -74,6 +81,10 @@ Default branch: `main`
   active stage, requires canonical classified Source authority and scholarship-link
   Evidence, rejects DST-ambiguous exact local times, and canonicalizes URL aliases
   before identity/uniqueness. Each boundary has an adversarial regression.
+- Third-review remediation removes fixture authority/direct self-certification,
+  preserves upstream P2/P3 URL identity semantics, rejects duplicate subject bindings
+  and stale provenance, fails invalid timezones to unknown, and reviews soft
+  application redirects. Synthetic fixture decisions can no longer be accepted.
 - The replacement pre-freeze matrix passed from `2026-08-27T02:29:43Z` through
   `2026-08-27T02:30:50Z`: exact locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.

@@ -1,12 +1,12 @@
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
+import { canonicalizeAcquisitionUrl } from './acquisition';
 import {
   EvidenceSchema,
   MODEL_SCHEMA_VERSION,
   SourceSchema,
   evidenceId,
   sha256Text,
-  stableId,
 } from './canonicalModel';
 
 export const VERIFICATION_SCHEMA_VERSION = 1 as const;
@@ -143,7 +143,9 @@ export function classifyLinkObservation(observation: LinkObservation): LinkClass
         : 'unknown';
   const state: LinkClassification['state'] = redirected ? 'redirected' : 'reachable';
   const unknownTarget = targetClass === 'unknown';
-  const requiresReview = (redirected && redirectKind === 'off_host') || unknownTarget;
+  const softApplicationRedirect = observation.role === 'application' && redirected && targetClass === 'html'
+    && !observation.markers.includes('application_form');
+  const requiresReview = (redirected && redirectKind === 'off_host') || unknownTarget || softApplicationRedirect;
   return {
     ...base,
     state,
@@ -509,10 +511,14 @@ export function parseTypedDate(input: TypedDateInput): TypedDateResult {
   return { raw: input.raw, parseState: 'parsed', opensAt: null, closesAt: point.value, year: point.year, precision: point.precision, timezone, recurrence, reason: 'Typed date preserved at observed precision' };
 }
 
-function localDate(asOf: string, timezone: string): string {
-  const parts = new Intl.DateTimeFormat('en-CA', { timeZone: timezone, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date(asOf));
-  const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)?.value ?? '';
-  return `${part('year')}-${part('month')}-${part('day')}`;
+function localDate(asOf: string, timezone: string): string | null {
+  try {
+    const parts = new Intl.DateTimeFormat('en-CA', { timeZone: timezone, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date(asOf));
+    const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)?.value ?? '';
+    return `${part('year')}-${part('month')}-${part('day')}`;
+  } catch {
+    return null;
+  }
 }
 
 function zonedLocalDateTimeEpoch(value: string, timezone: string): number | null {
@@ -554,6 +560,7 @@ export function deriveCycleStatus(
   if (parsed.precision === 'annual_rule' || parsed.precision === 'month_only' || parsed.precision === 'approximate') return 'unknown';
   const timezone = parsed.timezone ?? options.defaultTimezone;
   const today = localDate(asOf, timezone);
+  if (today === null) return 'unknown';
   if (parsed.opensAt && parsed.closesAt && parsed.opensAt.length === 10 && parsed.closesAt.length === 10) {
     if (today < parsed.opensAt) return 'upcoming';
     if (today > parsed.closesAt) return 'closed';
@@ -581,9 +588,7 @@ export type SourceAuthority = 'official_child' | 'official_provider' | 'official
 const SourceRelationshipSchema = z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']);
 
 export function normalizeVerificationSourceUrl(raw: string): string {
-  const url = new URL(raw);
-  url.hash = '';
-  return url.href;
+  return canonicalizeAcquisitionUrl(raw).url;
 }
 
 const VerificationSubjectBindingSchema = z.object({
@@ -600,9 +605,13 @@ export const VerificationSourceInputSchema = z.object({
   subjectBindings: z.array(VerificationSubjectBindingSchema).min(1),
 }).superRefine((input, ctx) => {
   if (input.source.canonicalUrl) {
-    const normalizedUrl = normalizeVerificationSourceUrl(input.source.canonicalUrl);
-    if (input.source.canonicalUrl !== normalizedUrl || input.source.id !== stableId('src', ['p4-verification', normalizedUrl])) {
-      ctx.addIssue({ code: 'custom', message: 'Canonical source URL and identity must use normalized P4 source identity' });
+    const canonical = canonicalizeAcquisitionUrl(input.source.canonicalUrl);
+    if (
+      input.source.canonicalUrl !== canonical.url ||
+      JSON.stringify(input.source.identityPolicy.preservedQueryParameters) !== JSON.stringify(canonical.preservedQueryParameters) ||
+      input.source.identityPolicy.fragmentPreserved !== canonical.fragmentPreserved
+    ) {
+      ctx.addIssue({ code: 'custom', message: 'Canonical source URL and identity policy must match the P2/P3 acquisition policy' });
     }
   }
   const expectedAuthorityClaim = `authority=${input.source.authority}`;
@@ -652,6 +661,9 @@ export const VerificationSourceInputSchema = z.object({
     ) {
       ctx.addIssue({ code: 'custom', message: `Subject ${binding.subjectId} requires matching classified canonical relationship Evidence` });
     }
+  }
+  if (new Set(input.subjectBindings.map((binding) => binding.subjectId)).size !== input.subjectBindings.length) {
+    ctx.addIssue({ code: 'custom', message: 'Each source/subject pair requires exactly one non-conflicting relationship binding' });
   }
 });
 
@@ -710,6 +722,9 @@ export interface FieldEvidenceReceipt {
   sourceRevision: string | null;
   retrievalAgeDays: number;
   sourceAgeDays: number | null;
+  authorityEvidenceAgeDays: number;
+  relationshipEvidenceAgeDays: number;
+  provenanceFresh: boolean;
   fresh: boolean;
   currentDirectOfficial: boolean;
   contentSha256: string;
@@ -755,6 +770,10 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
   const policy = FRESHNESS_POLICIES[claim.field];
   const retrievalAgeDays = ageDays(asOf, claim.retrievedAt);
   const sourceAgeDays = claim.sourceUpdatedAt ? ageDays(asOf, claim.sourceUpdatedAt) : null;
+  const authorityEvidenceAgeDays = ageDays(asOf, sourceInput.authorityEvidence.retrievedAt);
+  const relationshipEvidenceAgeDays = ageDays(asOf, subjectBinding.evidence.retrievedAt);
+  const provenanceFresh = authorityEvidenceAgeDays >= 0 && authorityEvidenceAgeDays <= policy.sourceMaxAgeDays
+    && relationshipEvidenceAgeDays >= 0 && relationshipEvidenceAgeDays <= policy.sourceMaxAgeDays;
   const validAges = retrievalAgeDays >= 0 && retrievalAgeDays <= policy.retrievalMaxAgeDays
     && (sourceAgeDays === null || (sourceAgeDays >= 0 && sourceAgeDays <= policy.sourceMaxAgeDays));
   const authority = SOURCE_AUTHORITY_MATRIX[derivedAuthority];
@@ -780,7 +799,7 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     sourceId: source.id,
     retrievedAt: claim.retrievedAt,
     sourceRevision: claim.sourceRevision,
-    result: validAges && authority.official && direct ? 'observed' as const : 'unverified' as const,
+    result: validAges && provenanceFresh && authority.official && direct ? 'observed' as const : 'unverified' as const,
     claim: `${claim.field}=${claim.value}`,
     contentSha256,
   };
@@ -788,7 +807,7 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     schemaVersion: MODEL_SCHEMA_VERSION,
     id: evidenceId(evidenceIdentity),
     ...evidenceIdentity,
-    reviewerState: validAges && authority.official && direct ? 'classified' : 'manual_review',
+    reviewerState: validAges && provenanceFresh && authority.official && direct ? 'classified' : 'manual_review',
   });
   return {
     id: canonicalEvidence.id,
@@ -807,8 +826,11 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     sourceRevision: claim.sourceRevision,
     retrievalAgeDays,
     sourceAgeDays,
+    authorityEvidenceAgeDays,
+    relationshipEvidenceAgeDays,
+    provenanceFresh,
     fresh: validAges,
-    currentDirectOfficial: validAges && authority.official && direct,
+    currentDirectOfficial: validAges && provenanceFresh && authority.official && direct,
     contentSha256,
     canonicalEvidence,
   };
@@ -826,6 +848,7 @@ export function evaluateFieldClaims(claimValues: FieldClaim[], asOf: string, sou
   const sourceByKey = new Map(sources.map((source) => [source.key, source]));
   const canonicalSources = sources.map((source) => source.source);
   assertUnique(canonicalSources.map((source) => source.id), 'Canonical verification source IDs');
+  assertUnique(canonicalSources.map((source) => source.canonicalUrl ? canonicalizeAcquisitionUrl(source.canonicalUrl).url : `offline:${source.offlineAuthority}`), 'Canonical verification source URL identities');
   const receipts = claims.map((claim) => {
     const source = sourceByKey.get(claim.sourceKey);
     if (!source) throw new Error(`Field claim ${claim.id} references unknown source key ${claim.sourceKey}`);

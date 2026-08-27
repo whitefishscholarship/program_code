@@ -8,7 +8,7 @@
     "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
     "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
     "p3WorkDenominator": 34,
-    "p4FixtureSha256": "daab33b963cd5f7330e99f2e6944e8bbbc34dd0d772378b49c37cca787394306",
+    "p4FixtureSha256": "e6b96771e2bb512466ec7d5c3112c29e67b49fe6c4dcd1a72fd3dacc4c8efdec",
     "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
   },
   "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
@@ -16,65 +16,65 @@
   "acceptedConflictCount": 0,
   "conflicts": [
     {
-      "id": "p4_conflict_1cf6748c6ddb7b9b56133621b1d9a7f6743180b9065b70e1c310e6b85df6d736",
+      "id": "p4_conflict_55540338ba830441009d67a7c3dc537a65440d2795d26ddc1a2ed60af29ceb1e",
       "subjectId": "sch_aggregator_provider",
       "field": "amount",
-      "preferredValue": "$2,500",
+      "preferredValue": null,
       "accepted": false,
       "evidenceIds": [
-        "evd_2129b89c3acafe0b67304012294e3cde5effa98f84876c4195c4c6d9bf0191ff",
-        "evd_db56f06798d7582c6f2d9f92181c50ba9593eef35708cc9c7dce9f48d43d7d6d"
+        "evd_085589c3696dd9237d1642b6e6cc110de56ac92f07d1a94d70f3625eeca5f6dd",
+        "evd_3f7a804964571b55888d5dfb617f58a0775d6af83125d7ba3cdc7dd0f26be75c"
       ],
       "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
     },
     {
-      "id": "p4_conflict_7884b12b002907928ed9b7f0a8358f6affc8736541f043ec8c821eec5a0f0712",
+      "id": "p4_conflict_62205ad28d9d523f71c30f3eb0f3b8f0a32ba49ddbb910be4d2bbd233b94ed8f",
       "subjectId": "sch_eligibility_conflict",
       "field": "eligibility",
-      "preferredValue": "Montana high school seniors",
+      "preferredValue": null,
       "accepted": false,
       "evidenceIds": [
-        "evd_b27edd4b2fe48a3c09ebb5d0e4dc24e702d18c1e56890d010678093ca1268c4a",
-        "evd_d0d92966a41fb2d7feb80ee8b14ca8d873b044ec719b7852d49b6ecb306b9a9c"
+        "evd_19f306e1903db9f9f0f7468d90681893336614c3b88e8fc9456b31092b133415",
+        "evd_f0cef2e508f12b0d3c5e86b1613f48747727ece88e498e070c0de1f7adfdc439"
       ],
       "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
     },
     {
-      "id": "p4_conflict_a2e8c5fad21ac7c9211b9067b9070f106a3e35131a194900feebf7fa294a39e9",
+      "id": "p4_conflict_267b404d025dabca139dfb84206b8573e957172bd7333d6b4a24e2aa51566621",
       "subjectId": "sch_method_conflict",
       "field": "application_method",
-      "preferredValue": "Online application",
+      "preferredValue": null,
       "accepted": false,
       "evidenceIds": [
-        "evd_4287f190ced4a930d2e84e9c197204a6113ccf61bb5a513c11b1acd20b64ada8",
-        "evd_e513cbff0d1c0594529edeb58723857fe5d0252e90b9f71d128ac40d264bab67"
+        "evd_77eb0cbadedee2819ebaad8ebb15d4161b392e40f8f251f0fed3eb40ebda0b6b",
+        "evd_c7501d48409bea7db0d835ad5e4575958b2f4d8057e6f892ff8dea460288735a"
       ],
       "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
     },
     {
-      "id": "p4_conflict_d09c901d06dbc41adfa91f8977a547b975e907284641b9ea8a3b77c67016f79f",
+      "id": "p4_conflict_894ca42691f501c10c0c3d51888367772a4d24f1e54faeff5bcf832b1d474555",
       "subjectId": "sch_parent_child_conflict",
       "field": "deadline",
-      "preferredValue": "2027-01-15",
+      "preferredValue": null,
       "accepted": false,
       "evidenceIds": [
-        "evd_04ef0b809a6b5e07ec038fb5edf7cb656b454dd0b6d17be69fd269269d91ed34",
-        "evd_93efbdfdcef55abc33e97b2b51273e14136b37259660f1beefaa1680d1cb2f1a"
+        "evd_5d1912c3bd56a97a4ddd544cf273ba7af51a98ae74f4f22efed4617016f00f50",
+        "evd_ca6c72fb057287e811f0d0c54cc3a5cfc8365e214845d1c2a3a163cb24894555"
       ],
       "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
     },
     {
-      "id": "p4_conflict_cd8c35230a0b7903d6e89d82c6b6072d952738c85a7d7a7e1de434c61bcb6ec1",
+      "id": "p4_conflict_bc01e97c6d06fc1cc5b6e88f60e9d0e43f5241f04e8075d9f24d9d32551eb0eb",
       "subjectId": "sch_stale_pdf",
       "field": "deadline",
-      "preferredValue": "2027-03-01",
+      "preferredValue": null,
       "accepted": false,
       "evidenceIds": [
-        "evd_7830fa1d33fe41c7cfe3b55df7d1f8571e505b3f8bdf6c93c0c350ef684dd7bc",
-        "evd_bbc187a69f652e1dfa4e18db3ec78350aa8833020dabe9a37c94e87f7e857d33"
+        "evd_4bf4a4ed3c5678208e76297135aec26deebf225822aab66275dd7b52aaa04650",
+        "evd_e56a1ea968c07b94b8c7779c0c34ce1b56494214c2082584197196e179316388"
       ],
       "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
     }
   ],
-  "reportSha256": "a58a993f7f41c56eb5e67bbdb7ca0c76f559fdeec39b69329f613ddaa086db4e"
+  "reportSha256": "68216ee795508be0270a30329524442cdc07910f2641c6c849752adb7555cb1d"
 }

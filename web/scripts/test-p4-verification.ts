@@ -75,7 +75,9 @@ function main(): void {
   const onHost = classifyLinkObservation(observation({ finalUrl: 'https://provider.invalid/new-apply' }));
   assert.equal(onHost.state, 'redirected');
   assert.equal(onHost.redirectKind, 'on_host');
-  assert.equal(onHost.requiresReview, false);
+  assert.equal(onHost.requiresReview, true, 'an unmarked on-host application redirect may be a soft homepage redirect');
+  const onHostForm = classifyLinkObservation(observation({ finalUrl: 'https://provider.invalid/new-apply', markers: ['application_form'] }));
+  assert.equal(onHostForm.requiresReview, false, 'a confirmed on-host application form need not enter redirect review');
   const offHost = classifyLinkObservation(observation({ finalUrl: 'https://vendor.invalid/form', markers: ['application_form'] }));
   assert.equal(offHost.state, 'redirected');
   assert.equal(offHost.redirectKind, 'off_host');
@@ -177,6 +179,8 @@ function main(): void {
   const unknown = parseTypedDate({ raw: 'TBD' });
   assert.equal(unknown.parseState, 'unknown');
   assert.equal(deriveCycleStatus(unknown, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
+  const invalidTimezone = parseTypedDate({ raw: '2026-09-30', timezone: 'Mars/Olympus' });
+  assert.equal(deriveCycleStatus(invalidTimezone, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown', 'an invalid timezone must fail closed without aborting verification');
   const active = parseTypedDate({ raw: '2026-08-01 - 2026-09-30', timezone: 'America/Denver' });
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'active');
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: false, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
@@ -186,20 +190,20 @@ function main(): void {
   assert.equal(field.receipts.length, p4Fixture.fieldClaims.length);
   assert.equal(new Set(field.receipts.map((item) => item.id)).size, field.receipts.length);
   const accepted = field.decisions.filter((item) => item.accepted);
-  assert(accepted.length > 0);
+  assert.equal(accepted.length, 0, 'synthetic fixture source labels must never self-certify official acceptance');
   for (const decision of accepted) {
     assert.equal(decision.conflict, false);
     assert(field.receipts.filter((item) => decision.evidenceIds.includes(item.id)).some((item) => item.currentDirectOfficial));
   }
   const parentChild = field.decisions.find((item) => item.subjectId === 'sch_parent_child_conflict')!;
   assert.equal(parentChild.conflict, true);
-  assert.equal(parentChild.preferredValue, '2027-01-15', 'child-specific current official evidence must outrank an indirect parent summary');
+  assert.equal(parentChild.preferredValue, null, 'unverified fixture provenance must not produce an official preference');
   assert.equal(parentChild.accepted, false, 'every conflict must remain reviewable even with a preferred source');
   const stalePdf = field.decisions.find((item) => item.subjectId === 'sch_stale_pdf')!;
-  assert.equal(stalePdf.preferredValue, '2027-03-01', 'current official parent must outrank a stale direct PDF');
+  assert.equal(stalePdf.preferredValue, null);
   assert.equal(stalePdf.accepted, false);
   const aggregator = field.decisions.find((item) => item.subjectId === 'sch_aggregator_provider')!;
-  assert.equal(aggregator.preferredValue, '$2,500');
+  assert.equal(aggregator.preferredValue, null);
   assert.equal(aggregator.accepted, false, 'aggregator/provider disagreement requires review');
   const aggregatorOnly = field.decisions.find((item) => item.subjectId === 'sch_aggregator_only')!;
   assert.equal(aggregatorOnly.accepted, false, 'aggregator-only evidence may not support acceptance');
@@ -207,7 +211,7 @@ function main(): void {
   assert.equal(staleOnly.accepted, false, 'stale official evidence may not support acceptance');
   const futureSource = buildP4FixtureSourceRegistry([{
     key: 'future-source', canonicalUrl: 'https://provider.invalid/future', architecture: 'single_award_page',
-    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_future'],
+    relationship: 'direct', subjectIds: ['sch_future'],
   }], p4Fixture.asOf)[0];
   const futureReceipt = buildFieldEvidenceReceipt({
     id: 'future', subjectId: 'sch_future', field: 'deadline', value: '2028-01-01',
@@ -250,14 +254,53 @@ function main(): void {
     'changing a source authority label without its canonical classified Evidence must fail closed',
   );
   const aliasRegistry = buildP4FixtureSourceRegistry([
-    { key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_alias'] },
-    { key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_alias'] },
+    { key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_alias'] },
+    { key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_alias'] },
   ], p4Fixture.asOf);
   assert.throws(
     () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'alias-claim', subjectId: 'sch_alias', sourceKey: 'alias-a' }], p4Fixture.asOf, aliasRegistry),
     /Canonical verification source IDs must be unique/,
     'semantically equivalent URL aliases must collide at canonical source identity',
   );
+  const fragmentRegistry = buildP4FixtureSourceRegistry([
+    { key: 'fragment-a', canonicalUrl: 'https://provider.invalid/award#award-a', architecture: 'multi_award_page', relationship: 'child_detail', subjectIds: ['sch_fragment_a'] },
+    { key: 'fragment-b', canonicalUrl: 'https://provider.invalid/award#award-b', architecture: 'multi_award_page', relationship: 'child_detail', subjectIds: ['sch_fragment_b'] },
+  ], p4Fixture.asOf);
+  assert.notEqual(fragmentRegistry[0].source.id, fragmentRegistry[1].source.id, 'meaningful child fragments must preserve distinct canonical source identities');
+  const trackingRegistry = buildP4FixtureSourceRegistry([
+    { key: 'tracking-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_tracking'] },
+    { key: 'tracking-b', canonicalUrl: 'https://provider.invalid/award?utm_source=test', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_tracking'] },
+  ], p4Fixture.asOf);
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'tracking-claim', subjectId: 'sch_tracking', sourceKey: 'tracking-a' }], p4Fixture.asOf, trackingRegistry),
+    /Canonical verification source IDs must be unique|URL identities must be unique/,
+    'tracking aliases must collapse to one canonical source identity',
+  );
+  const selfCertificationAttempt = buildP4FixtureSourceRegistry([{
+    key: 'self-cert', canonicalUrl: 'https://aggregator.invalid/item', architecture: 'external_marketplace',
+    relationship: 'direct', subjectIds: ['sch_self_cert'], authority: 'official_provider', direct: true,
+  } as Parameters<typeof buildP4FixtureSourceRegistry>[0][number]], p4Fixture.asOf)[0];
+  assert.equal(selfCertificationAttempt.source.authority, 'unknown', 'fixture input cannot mint official authority');
+  const selfCertifiedDecision = evaluateFieldClaims([{
+    ...p4Fixture.fieldClaims[0], id: 'self-cert-claim', subjectId: 'sch_self_cert', sourceKey: 'self-cert',
+  }], p4Fixture.asOf, [selfCertificationAttempt]).decisions[0];
+  assert.equal(selfCertifiedDecision.accepted, false);
+  const conflictingBinding = structuredClone(sourceRegistry[0]);
+  conflictingBinding.subjectBindings.push(structuredClone(conflictingBinding.subjectBindings[0]));
+  assert.throws(
+    () => evaluateFieldClaims([p4Fixture.fieldClaims[0]], p4Fixture.asOf, [conflictingBinding]),
+    /exactly one non-conflicting relationship binding/i,
+    'duplicate or conflicting canonical relationship evidence must fail closed independent of array order',
+  );
+  const staleRegistry = buildP4FixtureSourceRegistry([{
+    key: 'stale-provenance', canonicalUrl: 'https://provider.invalid/stale-provenance', architecture: 'single_award_page',
+    relationship: 'direct', subjectIds: ['sch_stale_provenance'],
+  }], p4Fixture.asOf, '2010-01-01T00:00:00Z');
+  const staleProvenanceReceipt = buildFieldEvidenceReceipt({
+    ...p4Fixture.fieldClaims[0], id: 'stale-provenance-claim', subjectId: 'sch_stale_provenance', sourceKey: 'stale-provenance',
+  }, staleRegistry[0], p4Fixture.asOf);
+  assert.equal(staleProvenanceReceipt.provenanceFresh, false, 'stale authority/relationship provenance must not support current acceptance');
+  assert.equal(staleProvenanceReceipt.currentDirectOfficial, false);
   assertP4BuildStateTopology({
     activeStageId: 'P5',
     stages: [

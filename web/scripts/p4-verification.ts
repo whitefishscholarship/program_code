@@ -14,7 +14,6 @@ import {
   deriveCycleStatus,
   deterministicVerificationSha256,
   evaluateFieldClaims,
-  normalizeVerificationSourceUrl,
   parseTypedDate,
   type CycleStatus,
   type DateParseState,
@@ -25,6 +24,7 @@ import {
   type TypedDateInput,
   type VerificationSourceInput,
 } from '../src/lib/verification';
+import { canonicalizeAcquisitionUrl } from '../src/lib/acquisition';
 import {
   EvidenceSchema,
   MODEL_SCHEMA_VERSION,
@@ -96,9 +96,7 @@ const SourceFixtureSpecSchema = z.object({
   key: z.string().min(1),
   canonicalUrl: z.string().url(),
   architecture: SourceArchitectureSchema,
-  authority: z.enum(['official_provider', 'official_application', 'institutional', 'government', 'aggregator', 'unknown']),
   relationship: z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']),
-  direct: z.boolean(),
   subjectIds: z.array(z.string().min(1)).min(1),
 });
 
@@ -125,18 +123,20 @@ const P4FixtureSchema = z.object({
   fieldClaims: z.array(FieldClaimSchema),
 });
 
-export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], asOf: string): VerificationSourceInput[] {
+export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], asOf: string, evidenceRetrievedAt = asOf): VerificationSourceInput[] {
   return z.array(SourceFixtureSpecSchema).parse(specValues).map((spec) => {
-    const canonicalUrl = normalizeVerificationSourceUrl(spec.canonicalUrl);
-    const sourceId = stableId('src', ['p4-verification', canonicalUrl]);
-    const authorityClaim = `authority=${spec.authority}`;
-    const authorityContentSha256 = sha256Text(JSON.stringify({ sourceId, canonicalUrl, authority: spec.authority }));
+    const canonical = canonicalizeAcquisitionUrl(spec.canonicalUrl);
+    const canonicalUrl = canonical.url;
+    const sourceId = stableId('src', ['url', canonicalUrl]);
+    const authority = 'unknown' as const;
+    const authorityClaim = `authority=${authority}`;
+    const authorityContentSha256 = sha256Text(JSON.stringify({ sourceId, canonicalUrl, authority }));
     const authorityIdentity = {
       subjectKind: 'source' as const,
       subjectId: sourceId,
       fieldPath: 'authority',
       sourceId,
-      retrievedAt: asOf,
+      retrievedAt: evidenceRetrievedAt,
       sourceRevision: 'p4-synthetic-registry-v1',
       result: 'supported' as const,
       claim: authorityClaim,
@@ -149,14 +149,15 @@ export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], as
       reviewerState: 'classified',
     });
     const subjectBindings = spec.subjectIds.map((subjectId) => {
+      const direct = !['parent_summary', 'discovery'].includes(spec.relationship);
       const claim = `sourceRelationship=${spec.relationship}`;
-      const contentSha256 = sha256Text(JSON.stringify({ sourceId, subjectId, relationship: spec.relationship, direct: spec.direct }));
+      const contentSha256 = sha256Text(JSON.stringify({ sourceId, subjectId, relationship: spec.relationship, direct }));
       const identity = {
         subjectKind: 'scholarship' as const,
         subjectId,
-        fieldPath: `sourceLinks.${sourceId}.${spec.relationship}.${spec.direct ? 'direct' : 'indirect'}`,
+        fieldPath: `sourceLinks.${sourceId}.${spec.relationship}.${direct ? 'direct' : 'indirect'}`,
         sourceId,
-        retrievedAt: asOf,
+        retrievedAt: evidenceRetrievedAt,
         sourceRevision: 'p4-synthetic-registry-v1',
         result: 'supported' as const,
         claim,
@@ -165,7 +166,7 @@ export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], as
       return {
         subjectId,
         relationship: spec.relationship,
-        direct: spec.direct,
+        direct,
         evidence: EvidenceSchema.parse({
           schemaVersion: MODEL_SCHEMA_VERSION,
           id: evidenceId(identity),
@@ -181,10 +182,14 @@ export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], as
       canonicalUrl,
       offlineAuthority: null,
       host: new URL(canonicalUrl).hostname.toLowerCase(),
-      identityPolicy: { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: true },
+      identityPolicy: {
+        preservedQueryParameters: canonical.preservedQueryParameters,
+        fragmentPreserved: canonical.fragmentPreserved,
+        trackingParametersRemoved: canonical.removedTrackingParameters.length > 0,
+      },
       accessBehavior: 'public',
-      authority: spec.authority,
-      acquisitionState: 'observed',
+      authority,
+      acquisitionState: 'unknown',
       parentSourceIds: [],
       childSourceIds: [],
       evidenceIds: [authorityEvidence.id, ...subjectBindings.map((binding) => binding.evidence.id)].sort(),

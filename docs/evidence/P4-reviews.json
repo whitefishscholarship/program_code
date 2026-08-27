@@ -8,20 +8,20 @@
     "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
     "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
     "p3WorkDenominator": 34,
-    "p4FixtureSha256": "daab33b963cd5f7330e99f2e6944e8bbbc34dd0d772378b49c37cca787394306",
+    "p4FixtureSha256": "e6b96771e2bb512466ec7d5c3112c29e67b49fe6c4dcd1a72fd3dacc4c8efdec",
     "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
   },
   "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
-  "reviewDenominator": 298,
+  "reviewDenominator": 300,
   "severityCounts": {
-    "high": 201,
-    "medium": 97
+    "high": 202,
+    "medium": 98
   },
   "sourceCounts": {
     "pinned_cell_data": 270,
     "date": 10,
     "synthetic_link": 11,
-    "field": 7
+    "field": 9
   },
   "correctionEligibleCount": 0,
   "reviews": [
@@ -451,6 +451,16 @@
       "subjectId": "p4_f8e6db4dc55ff60cc84514d5f5b755e32b83ed743936914e428893466aafc019",
       "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
       "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_266d5bb72a005266b32baf5d25afc0a94f4844aa1f22ee3f2d7a8f23909a1b3d",
+      "source": "field",
+      "subjectId": "sch_amount_confirmed:amount",
+      "reason": "No current direct official evidence supports acceptance",
+      "severity": "medium",
       "state": "open",
       "correctionEligible": false,
       "targetStage": "P5"
@@ -2796,6 +2806,16 @@
       "targetStage": "P5"
     },
     {
+      "id": "p4_review_f191ef50ee47e843a98ef446c1320082970860e93d990d002e9621e7d8dbf1b1",
+      "source": "field",
+      "subjectId": "sch_deadline_confirmed:deadline",
+      "reason": "No current direct official evidence supports acceptance",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
       "id": "p4_review_f33f0a592aec09d056c91133ef5f0d400592a3b230e456933e6d14e59029ac36",
       "source": "field",
       "subjectId": "sch_method_conflict:application_method",
@@ -3006,5 +3026,5 @@
       "targetStage": "P5"
     }
   ],
-  "reportSha256": "018dc57564e0dc4a6416b1051a895f5e5fc7b9c74c736233de55f02353e52b5c"
+  "reportSha256": "b78190f49d0ba7bf718af4f3d09464be0c36294006470d0cd6f38be2cb246c10"
 }
