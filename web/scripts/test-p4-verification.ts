@@ -12,10 +12,21 @@ import {
   parseTypedDate,
   type FieldClaim,
   type LinkObservation,
+  type VerificationSourceInput,
 } from '../src/lib/verification';
+import { canonicalizeAcquisitionUrl } from '../src/lib/acquisition';
+import {
+  EvidenceSchema,
+  MODEL_SCHEMA_VERSION,
+  SourceSchema,
+  evidenceId,
+  sha256Text,
+  stableId,
+  type SourceArchitecture,
+} from '../src/lib/canonicalModel';
 import {
   assertP4BuildStateTopology,
-  buildP4FixtureSourceRegistry,
+  buildUntrustedP4ScenarioRegistry,
   generateP4Evidence,
 } from './p4-verification';
 
@@ -27,9 +38,100 @@ const p4Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p4/ver
   defaultTimezone: string;
   linkObservations: LinkObservation[];
   fieldClaims: FieldClaim[];
-  sources: Parameters<typeof buildP4FixtureSourceRegistry>[0];
+  sources: Parameters<typeof buildUntrustedP4ScenarioRegistry>[0];
 };
-const sourceRegistry = buildP4FixtureSourceRegistry(p4Fixture.sources, p4Fixture.asOf);
+const sourceRegistry = buildUntrustedP4ScenarioRegistry(p4Fixture.sources, p4Fixture.asOf);
+
+type TestRelationship = 'child_detail' | 'parent_summary' | 'direct' | 'document' | 'discovery';
+
+function canonicalTestSource(options: {
+  key: string;
+  canonicalUrl?: string;
+  offlineAuthority?: string;
+  architecture: SourceArchitecture;
+  authority: 'official_provider' | 'official_application' | 'aggregator' | 'unknown';
+  relationship: TestRelationship;
+  direct: boolean;
+  subjectIds: string[];
+  retrievedAt?: string;
+}): VerificationSourceInput {
+  const canonical = options.canonicalUrl ? canonicalizeAcquisitionUrl(options.canonicalUrl) : null;
+  const canonicalUrl = canonical?.url ?? null;
+  const offlineAuthority = options.offlineAuthority ?? null;
+  const sourceId = canonicalUrl
+    ? stableId('src', ['url', canonicalUrl])
+    : stableId('src', ['offline', offlineAuthority!]);
+  const retrievedAt = options.retrievedAt ?? '2026-08-26T12:00:00Z';
+  const authorityClaim = `authority=${options.authority}`;
+  const authorityContentSha256 = sha256Text(JSON.stringify({ sourceId, canonicalUrl, authority: options.authority }));
+  const authorityIdentity = {
+    subjectKind: 'source' as const,
+    subjectId: sourceId,
+    fieldPath: 'authority',
+    sourceId,
+    retrievedAt,
+    sourceRevision: 'p4-test-only-preclassified-v1',
+    result: 'supported' as const,
+    claim: authorityClaim,
+    contentSha256: authorityContentSha256,
+  };
+  const authorityEvidence = EvidenceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: evidenceId(authorityIdentity),
+    ...authorityIdentity,
+    reviewerState: 'classified',
+  });
+  const subjectBindings = options.subjectIds.map((subjectId) => {
+    const claim = `sourceRelationship=${options.relationship}`;
+    const contentSha256 = sha256Text(JSON.stringify({
+      sourceId, subjectId, relationship: options.relationship, direct: options.direct,
+    }));
+    const identity = {
+      subjectKind: 'scholarship' as const,
+      subjectId,
+      fieldPath: `sourceLinks.${sourceId}.${options.relationship}.${options.direct ? 'direct' : 'indirect'}`,
+      sourceId,
+      retrievedAt,
+      sourceRevision: 'p4-test-only-preclassified-v1',
+      result: 'supported' as const,
+      claim,
+      contentSha256,
+    };
+    return {
+      subjectId,
+      relationship: options.relationship,
+      direct: options.direct,
+      evidence: EvidenceSchema.parse({
+        schemaVersion: MODEL_SCHEMA_VERSION,
+        id: evidenceId(identity),
+        ...identity,
+        reviewerState: 'classified',
+      }),
+    };
+  });
+  const source = SourceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: sourceId,
+    architecture: options.architecture,
+    canonicalUrl,
+    offlineAuthority,
+    host: canonicalUrl ? new URL(canonicalUrl).hostname.toLowerCase() : null,
+    identityPolicy: canonical ? {
+      preservedQueryParameters: canonical.preservedQueryParameters,
+      fragmentPreserved: canonical.fragmentPreserved,
+      trackingParametersRemoved: canonical.removedTrackingParameters.length > 0,
+    } : { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: false },
+    accessBehavior: canonicalUrl ? 'public' : 'offline',
+    authority: options.authority,
+    acquisitionState: 'observed',
+    parentSourceIds: [],
+    childSourceIds: [],
+    evidenceIds: [authorityEvidence.id, ...subjectBindings.map((item) => item.evidence.id)].sort(),
+    reviewItemIds: [],
+    legacySourceIdentity: null,
+  });
+  return { key: options.key, source, authorityEvidence, subjectBindings };
+}
 
 function observation(overrides: Partial<LinkObservation>): LinkObservation {
   return {
@@ -90,6 +192,10 @@ function main(): void {
   assert.equal(unknownApplicationTarget.state, 'reachable');
   assert.equal(unknownApplicationTarget.targetClass, 'unknown');
   assert.equal(unknownApplicationTarget.requiresReview, true, 'unknown application targets must remain reviewable');
+  const unmarkedDirectHtml = classifyLinkObservation(observation({ id: 'unmarked-direct-html' }));
+  assert.equal(unmarkedDirectHtml.state, 'reachable');
+  assert.equal(unmarkedDirectHtml.targetClass, 'html');
+  assert.equal(unmarkedDirectHtml.requiresReview, true, 'a nonredirected application HTML page without a form marker must remain reviewable');
 
   const pinned = auditPinnedCellData(p1Fixture);
   assert.deepEqual({
@@ -191,6 +297,9 @@ function main(): void {
   assert.equal(new Set(field.receipts.map((item) => item.id)).size, field.receipts.length);
   const accepted = field.decisions.filter((item) => item.accepted);
   assert.equal(accepted.length, 0, 'synthetic fixture source labels must never self-certify official acceptance');
+  assert(sourceRegistry.every((item) => item.source.authority === 'unknown'));
+  assert(sourceRegistry.every((item) => item.subjectBindings.every((binding) => !binding.direct && binding.relationship === 'discovery')),
+    'report scenario inputs cannot mint direct relationship evidence');
   for (const decision of accepted) {
     assert.equal(decision.conflict, false);
     assert(field.receipts.filter((item) => decision.evidenceIds.includes(item.id)).some((item) => item.currentDirectOfficial));
@@ -209,10 +318,71 @@ function main(): void {
   assert.equal(aggregatorOnly.accepted, false, 'aggregator-only evidence may not support acceptance');
   const staleOnly = field.decisions.find((item) => item.subjectId === 'sch_stale_only')!;
   assert.equal(staleOnly.accepted, false, 'stale official evidence may not support acceptance');
-  const futureSource = buildP4FixtureSourceRegistry([{
-    key: 'future-source', canonicalUrl: 'https://provider.invalid/future', architecture: 'single_award_page',
-    relationship: 'direct', subjectIds: ['sch_future'],
-  }], p4Fixture.asOf)[0];
+
+  const positiveRegistry = [
+    canonicalTestSource({
+      key: 'positive-child', canonicalUrl: 'https://test-provider.invalid/award/child', architecture: 'single_award_page',
+      authority: 'official_provider', relationship: 'child_detail', direct: true,
+      subjectIds: ['sch_deadline_confirmed', 'sch_parent_child_conflict', 'sch_eligibility_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-provider', canonicalUrl: 'https://test-provider.invalid/program', architecture: 'multi_award_page',
+      authority: 'official_provider', relationship: 'direct', direct: true,
+      subjectIds: ['sch_deadline_confirmed', 'sch_aggregator_provider', 'sch_amount_confirmed', 'sch_eligibility_conflict', 'sch_stale_only'],
+    }),
+    canonicalTestSource({
+      key: 'positive-parent', canonicalUrl: 'https://test-provider.invalid/overview', architecture: 'institution_umbrella',
+      authority: 'official_provider', relationship: 'parent_summary', direct: true,
+      subjectIds: ['sch_parent_child_conflict', 'sch_stale_pdf'],
+    }),
+    canonicalTestSource({
+      key: 'positive-document', canonicalUrl: 'https://test-provider.invalid/files/application.pdf', architecture: 'document_or_pdf',
+      authority: 'official_provider', relationship: 'document', direct: true,
+      subjectIds: ['sch_stale_pdf', 'sch_method_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-application', canonicalUrl: 'https://test-provider.invalid/application', architecture: 'form_only',
+      authority: 'official_application', relationship: 'direct', direct: true,
+      subjectIds: ['sch_amount_confirmed', 'sch_method_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-aggregator', canonicalUrl: 'https://test-aggregator.invalid/listing', architecture: 'external_marketplace',
+      authority: 'aggregator', relationship: 'discovery', direct: false,
+      subjectIds: ['sch_aggregator_provider', 'sch_aggregator_only'],
+    }),
+  ];
+  const positiveKeyByClaim: Record<string, string> = {
+    'deadline-child-a': 'positive-child',
+    'deadline-provider-a': 'positive-provider',
+    'child-conflict': 'positive-child',
+    'parent-conflict': 'positive-parent',
+    'stale-pdf': 'positive-document',
+    'current-parent': 'positive-parent',
+    'aggregator-amount': 'positive-aggregator',
+    'provider-amount': 'positive-provider',
+    'amount-provider': 'positive-provider',
+    'amount-application': 'positive-application',
+    'eligibility-child': 'positive-child',
+    'eligibility-provider': 'positive-provider',
+    'method-application': 'positive-application',
+    'method-provider': 'positive-document',
+    'aggregator-only': 'positive-aggregator',
+    'stale-official-only': 'positive-provider',
+  };
+  const positiveClaims = p4Fixture.fieldClaims.map((claim) => ({ ...claim, sourceKey: positiveKeyByClaim[claim.id] }));
+  const positive = evaluateFieldClaims(positiveClaims, p4Fixture.asOf, positiveRegistry);
+  assert.equal(positive.decisions.filter((item) => item.accepted).length, 2, 'test-only canonical official records must exercise positive acceptance');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_parent_child_conflict')?.preferredValue, '2027-01-15');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_stale_pdf')?.preferredValue, '2027-03-01');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_aggregator_provider')?.preferredValue, '$2,500');
+  assert(positive.decisions.filter((item) => item.conflict).every((item) => !item.accepted), 'precedence may identify a preferred source but never accept a conflict');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_aggregator_only')?.accepted, false);
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_stale_only')?.accepted, false);
+
+  const futureSource = canonicalTestSource({
+    key: 'future-source', canonicalUrl: 'https://test-provider.invalid/future', architecture: 'single_award_page',
+    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_future'],
+  });
   const futureReceipt = buildFieldEvidenceReceipt({
     id: 'future', subjectId: 'sch_future', field: 'deadline', value: '2028-01-01',
     sourceKey: 'future-source',
@@ -253,38 +423,29 @@ function main(): void {
     /authority requires matching classified canonical Evidence/i,
     'changing a source authority label without its canonical classified Evidence must fail closed',
   );
-  const aliasRegistry = buildP4FixtureSourceRegistry([
-    { key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_alias'] },
-    { key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_alias'] },
-  ], p4Fixture.asOf);
+  const aliasRegistry = [
+    canonicalTestSource({ key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_alias'] }),
+    canonicalTestSource({ key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_alias'] }),
+  ];
   assert.throws(
     () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'alias-claim', subjectId: 'sch_alias', sourceKey: 'alias-a' }], p4Fixture.asOf, aliasRegistry),
     /Canonical verification source IDs must be unique/,
     'semantically equivalent URL aliases must collide at canonical source identity',
   );
-  const fragmentRegistry = buildP4FixtureSourceRegistry([
-    { key: 'fragment-a', canonicalUrl: 'https://provider.invalid/award#award-a', architecture: 'multi_award_page', relationship: 'child_detail', subjectIds: ['sch_fragment_a'] },
-    { key: 'fragment-b', canonicalUrl: 'https://provider.invalid/award#award-b', architecture: 'multi_award_page', relationship: 'child_detail', subjectIds: ['sch_fragment_b'] },
-  ], p4Fixture.asOf);
+  const fragmentRegistry = [
+    canonicalTestSource({ key: 'fragment-a', canonicalUrl: 'https://provider.invalid/award#award-a', architecture: 'multi_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_fragment_a'] }),
+    canonicalTestSource({ key: 'fragment-b', canonicalUrl: 'https://provider.invalid/award#award-b', architecture: 'multi_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_fragment_b'] }),
+  ];
   assert.notEqual(fragmentRegistry[0].source.id, fragmentRegistry[1].source.id, 'meaningful child fragments must preserve distinct canonical source identities');
-  const trackingRegistry = buildP4FixtureSourceRegistry([
-    { key: 'tracking-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_tracking'] },
-    { key: 'tracking-b', canonicalUrl: 'https://provider.invalid/award?utm_source=test', architecture: 'single_award_page', relationship: 'direct', subjectIds: ['sch_tracking'] },
-  ], p4Fixture.asOf);
+  const trackingRegistry = [
+    canonicalTestSource({ key: 'tracking-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_tracking'] }),
+    canonicalTestSource({ key: 'tracking-b', canonicalUrl: 'https://provider.invalid/award?utm_source=test', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_tracking'] }),
+  ];
   assert.throws(
     () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'tracking-claim', subjectId: 'sch_tracking', sourceKey: 'tracking-a' }], p4Fixture.asOf, trackingRegistry),
     /Canonical verification source IDs must be unique|URL identities must be unique/,
     'tracking aliases must collapse to one canonical source identity',
   );
-  const selfCertificationAttempt = buildP4FixtureSourceRegistry([{
-    key: 'self-cert', canonicalUrl: 'https://aggregator.invalid/item', architecture: 'external_marketplace',
-    relationship: 'direct', subjectIds: ['sch_self_cert'], authority: 'official_provider', direct: true,
-  } as Parameters<typeof buildP4FixtureSourceRegistry>[0][number]], p4Fixture.asOf)[0];
-  assert.equal(selfCertificationAttempt.source.authority, 'unknown', 'fixture input cannot mint official authority');
-  const selfCertifiedDecision = evaluateFieldClaims([{
-    ...p4Fixture.fieldClaims[0], id: 'self-cert-claim', subjectId: 'sch_self_cert', sourceKey: 'self-cert',
-  }], p4Fixture.asOf, [selfCertificationAttempt]).decisions[0];
-  assert.equal(selfCertifiedDecision.accepted, false);
   const conflictingBinding = structuredClone(sourceRegistry[0]);
   conflictingBinding.subjectBindings.push(structuredClone(conflictingBinding.subjectBindings[0]));
   assert.throws(
@@ -292,15 +453,36 @@ function main(): void {
     /exactly one non-conflicting relationship binding/i,
     'duplicate or conflicting canonical relationship evidence must fail closed independent of array order',
   );
-  const staleRegistry = buildP4FixtureSourceRegistry([{
+  const staleRegistry = [canonicalTestSource({
     key: 'stale-provenance', canonicalUrl: 'https://provider.invalid/stale-provenance', architecture: 'single_award_page',
-    relationship: 'direct', subjectIds: ['sch_stale_provenance'],
-  }], p4Fixture.asOf, '2010-01-01T00:00:00Z');
+    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_stale_provenance'],
+    retrievedAt: '2010-01-01T00:00:00Z',
+  })];
   const staleProvenanceReceipt = buildFieldEvidenceReceipt({
     ...p4Fixture.fieldClaims[0], id: 'stale-provenance-claim', subjectId: 'sch_stale_provenance', sourceKey: 'stale-provenance',
   }, staleRegistry[0], p4Fixture.asOf);
   assert.equal(staleProvenanceReceipt.provenanceFresh, false, 'stale authority/relationship provenance must not support current acceptance');
   assert.equal(staleProvenanceReceipt.currentDirectOfficial, false);
+  assert.throws(
+    () => buildFieldEvidenceReceipt({
+      ...p4Fixture.fieldClaims[0], id: 'contradictory-directness', subjectId: 'sch_contradictory', sourceKey: 'contradictory',
+    }, canonicalTestSource({
+      key: 'contradictory', canonicalUrl: 'https://provider.invalid/discovery', architecture: 'external_marketplace',
+      authority: 'aggregator', relationship: 'discovery', direct: true, subjectIds: ['sch_contradictory'],
+    }), p4Fixture.asOf),
+    /contradictory directness/i,
+    'discovery evidence cannot be relabeled direct even when its Evidence identity matches the contradictory input',
+  );
+  const offlineSource = canonicalTestSource({
+    key: 'offline', offlineAuthority: 'Provider office paper application', architecture: 'offline_or_automatic',
+    authority: 'official_application', relationship: 'direct', direct: true, subjectIds: ['sch_offline'],
+  });
+  const offlineReceipt = buildFieldEvidenceReceipt({
+    id: 'offline-claim', subjectId: 'sch_offline', field: 'application_method', value: 'Paper application',
+    sourceKey: 'offline', retrievedAt: '2026-08-26T12:00:00Z', sourceUpdatedAt: null, sourceRevision: 'office-observation',
+  }, offlineSource, p4Fixture.asOf);
+  assert.equal(offlineReceipt.sourceUrl, null);
+  assert.equal(offlineReceipt.offlineAuthority, 'Provider office paper application', 'offline authority must survive into the field receipt');
   assertP4BuildStateTopology({
     activeStageId: 'P5',
     stages: [

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "observedAt": "2026-08-27T03:31:51Z",
+  "method": "One bounded read-only Firecrawl scrape of the official NFU scholarship landing page, plus one explicitly pinned accepted P3 discovery observation. No crawl, interaction, authentication, form submission, applicant-data collection, provider contact, or spreadsheet access occurred.",
+  "limitations": "The P4 observation proves only what the named public URL returned in this bounded scrape. It establishes source architecture and link relationships for deterministic verification scenarios; scenario field values remain sanitized fixtures and are not accepted scholarship corrections.",
+  "observations": [
+    {
+      "id": "p4-nfu-official-landing",
+      "requestedUrl": "https://nfu.org/resources/scholarships/",
+      "observedCanonicalUrl": "https://nfu.org/resources/scholarships/",
+      "architecture": "common_application",
+      "scrapeId": "01a04146-1909-73ba-8c83-29e081fa25c0",
+      "contentSha256": "bc2003a57bece3139be7070cf4a2b46e1a6d596489be06f35c20b280dd399c2f",
+      "boundedDenominator": {
+        "landingPages": 1,
+        "separatelyNamedOpportunitiesObserved": 3,
+        "linkedApplicationFormsObserved": 1,
+        "linkedApplicationDocumentsObserved": 1,
+        "linkedTargetsFetched": 0
+      },
+      "observed": "The returned National Farmers Union scholarship page identified three separately named scholarship opportunities, presented a unified online application link, and presented an official-site paper-application PDF link.",
+      "reviewState": "classified_source_relationship_observation"
+    },
+    {
+      "id": "p3-first-marketplace-discovery",
+      "sourceEvidencePath": "docs/evidence/P3-live-observations.json",
+      "sourceObservedAt": "2026-08-26T22:38:00Z",
+      "requestedUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "observedCanonicalUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "architecture": "external_marketplace",
+      "scrapeId": "01a04030-82f6-701a-856b-1f25eee2a790",
+      "contentSha256": "318375f74ecb6c490e43972c164b2e87d520018373f399e19328300de7211a38",
+      "observed": "The accepted P3 observation recorded a discovery page that routed to an external marketplace while distinct providers retained award administration and terms.",
+      "reviewState": "accepted_p3_observation_pinned_for_discovery_only"
+    }
+  ],
+  "externalEffects": {
+    "publicReadOnlyFetches": 1,
+    "spreadsheetReads": 0,
+    "spreadsheetWrites": 0,
+    "formSubmissions": 0,
+    "providerContacts": 0,
+    "authenticatedInteractions": 0
+  }
+}

@@ -143,9 +143,9 @@ export function classifyLinkObservation(observation: LinkObservation): LinkClass
         : 'unknown';
   const state: LinkClassification['state'] = redirected ? 'redirected' : 'reachable';
   const unknownTarget = targetClass === 'unknown';
-  const softApplicationRedirect = observation.role === 'application' && redirected && targetClass === 'html'
+  const unconfirmedApplicationHtml = observation.role === 'application' && targetClass === 'html'
     && !observation.markers.includes('application_form');
-  const requiresReview = (redirected && redirectKind === 'off_host') || unknownTarget || softApplicationRedirect;
+  const requiresReview = (redirected && redirectKind === 'off_host') || unknownTarget || unconfirmedApplicationHtml;
   return {
     ...base,
     state,
@@ -665,6 +665,16 @@ export const VerificationSourceInputSchema = z.object({
   if (new Set(input.subjectBindings.map((binding) => binding.subjectId)).size !== input.subjectBindings.length) {
     ctx.addIssue({ code: 'custom', message: 'Each source/subject pair requires exactly one non-conflicting relationship binding' });
   }
+  for (const binding of input.subjectBindings) {
+    const validDirectness = binding.relationship === 'parent_summary'
+      ? true
+      : binding.relationship === 'discovery'
+        ? !binding.direct
+        : binding.direct;
+    if (!validDirectness) {
+      ctx.addIssue({ code: 'custom', message: `Relationship ${binding.relationship} has contradictory directness` });
+    }
+  }
 });
 
 export const FieldClaimSchema = z.object({
@@ -713,7 +723,8 @@ export interface FieldEvidenceReceipt {
   value: string;
   sourceId: string;
   sourceKey: string;
-  sourceUrl: string;
+  sourceUrl: string | null;
+  offlineAuthority: string | null;
   authority: SourceAuthority;
   authorityRank: number;
   direct: boolean;
@@ -784,6 +795,7 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     value: claim.value,
     sourceId: source.id,
     sourceUrl: source.canonicalUrl,
+    offlineAuthority: source.offlineAuthority,
     sourceAuthority: source.authority,
     sourceRelationship: subjectBinding.relationship,
     sourceRelationshipEvidenceId: subjectBinding.evidence.id,
@@ -817,7 +829,8 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     value: claim.value,
     sourceId: source.id,
     sourceKey: sourceInput.key,
-    sourceUrl: source.canonicalUrl!,
+    sourceUrl: source.canonicalUrl,
+    offlineAuthority: source.offlineAuthority,
     authority: derivedAuthority,
     authorityRank: authority.rank,
     direct,

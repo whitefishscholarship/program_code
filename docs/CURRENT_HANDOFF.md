@@ -7,8 +7,8 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine. The first three immutable
-  candidates were independently rejected; all 17 cumulative findings are remediated in the working
+- Active stage: P4 — Accuracy and verification engine. The first four immutable
+  candidates were independently rejected; all 22 cumulative findings are remediated in the working
   replacement, whose final matrix, freeze, same-reviewer recheck, accepted-state
   recheck, and direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
@@ -48,6 +48,13 @@ Default branch: `main`
   It also must never be attested or delivered. Its findings cover fixture
   self-certification, conflicting relationship bindings, stale provenance, canonical
   URL identity, invalid timezones, and soft application redirects.
+- Rejected third-remediation replacement:
+  `95b8ead1deb8c293bf5bfee612695ce8f31657c2` at C0/H3/M2/L0, with rejected
+  uncommitted manifest digest
+  `a2ea71fc76332ab8a9eb69e06309ed8bf9826e5dd9a385090046ff986bb3d5ce`.
+  It must never be attested or delivered. Its findings cover residual relationship
+  self-certification, missing positive precedence coverage, contradictory directness,
+  offline receipt provenance, and unmarked nonredirected application HTML.
 - P4 reconciles all 270 historical CellData hyperlink representations, including 92
   hidden application hyperlinks, plus four explicit offline methods. No representation
   was deduplicated or skipped. The deterministic run made no spreadsheet or public-
@@ -62,9 +69,9 @@ Default branch: `main`
 - Sixteen field claims yield 16 complete receipts and nine decisions: zero synthetic
   decisions are accepted, all nine remain review, and five conflicts remain
   non-accepted. No spreadsheet correction is applied.
-- Deterministic working-replacement report SHA-256 values: links `682fa31f447d`,
-  cycles `29753e2a3b0c`, field evidence `0b87e6c73b0f`, conflicts `68216ee79550`,
-  and reviews `b78190f49d0b`.
+- Deterministic working-replacement report SHA-256 values: links `522d42a1bb62`,
+  cycles `00cf5ed3c434`, field evidence `64ef64820fb6`, conflicts `3d9d1ff8a263`,
+  and reviews `d11301f1653b`.
 - The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
   `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.
@@ -85,6 +92,12 @@ Default branch: `main`
   preserves upstream P2/P3 URL identity semantics, rejects duplicate subject bindings
   and stale provenance, fails invalid timezones to unknown, and reviews soft
   application redirects. Synthetic fixture decisions can no longer be accepted.
+- Fourth-review remediation removes report-scenario relationship input entirely and
+  fixes all report sources to unknown/indirect discovery. Private test-only canonical
+  records exercise two positive acceptances and all required official-source precedence
+  paths without entering deterministic report evidence. Contradictory directness now
+  fails schema validation, offline authority survives into field receipts, and unmarked
+  application HTML is reviewable with or without a redirect.
 - The replacement pre-freeze matrix passed from `2026-08-27T02:29:43Z` through
   `2026-08-27T02:30:50Z`: exact locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.
@@ -102,12 +115,23 @@ Default branch: `main`
   through `2026-08-27T03:19:07Z`: exact locked install, deterministic P4 check,
   plan/history validation, typecheck, complete tests, permitted network build, and
   root diff check. The restricted build failed only on existing Google Fonts access;
-  the audit denominator remains 21 and no reserved effect occurred.
+  the audit denominator remains 21 and no reserved effect occurred. This matrix belongs
+  only to rejected candidate `95b8ead` and is historical.
+- One bounded read-only NFU landing-page scrape was recorded at
+  `2026-08-27T03:31:51Z` in `docs/evidence/P4-live-observations.json`. It is
+  observation-only and digest-pinned; it does not establish any synthetic field claim.
+- The fourth-remediation replacement matrix completed through
+  `2026-08-27T03:44:56Z`: exact locked install, deterministic P4 check, plan/history
+  validation, typecheck, complete tests, permitted production build, and all cumulative
+  adversarial regressions passed. The locked audit denominator remains 21; no package,
+  lockfile, spreadsheet, form, provider, CI, or deployment configuration changed.
+  Final deterministic/plan/type/diff checks, freeze, new manifest, and same-reviewer
+  recheck remain required.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.
-- P4 external effects to date: zero spreadsheet reads/writes, zero public-source reads,
-  zero forms/application interactions, zero applicant values, zero provider contacts,
+- P4 external effects to date: zero spreadsheet reads/writes, one bounded public-source
+  landing-page read, zero forms/application interactions, zero applicant values, zero provider contacts,
   zero accepted corrections/archives/merges, and zero dependency, CI, or deployment-
   configuration changes.
 

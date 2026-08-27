@@ -96,7 +96,6 @@ const SourceFixtureSpecSchema = z.object({
   key: z.string().min(1),
   canonicalUrl: z.string().url(),
   architecture: SourceArchitectureSchema,
-  relationship: z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']),
   subjectIds: z.array(z.string().min(1)).min(1),
 });
 
@@ -123,7 +122,7 @@ const P4FixtureSchema = z.object({
   fieldClaims: z.array(FieldClaimSchema),
 });
 
-export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], asOf: string, evidenceRetrievedAt = asOf): VerificationSourceInput[] {
+export function buildUntrustedP4ScenarioRegistry(specValues: SourceFixtureSpec[], asOf: string, evidenceRetrievedAt = asOf): VerificationSourceInput[] {
   return z.array(SourceFixtureSpecSchema).parse(specValues).map((spec) => {
     const canonical = canonicalizeAcquisitionUrl(spec.canonicalUrl);
     const canonicalUrl = canonical.url;
@@ -149,13 +148,14 @@ export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], as
       reviewerState: 'classified',
     });
     const subjectBindings = spec.subjectIds.map((subjectId) => {
-      const direct = !['parent_summary', 'discovery'].includes(spec.relationship);
-      const claim = `sourceRelationship=${spec.relationship}`;
-      const contentSha256 = sha256Text(JSON.stringify({ sourceId, subjectId, relationship: spec.relationship, direct }));
+      const relationship = 'discovery' as const;
+      const direct = false;
+      const claim = `sourceRelationship=${relationship}`;
+      const contentSha256 = sha256Text(JSON.stringify({ sourceId, subjectId, relationship, direct }));
       const identity = {
         subjectKind: 'scholarship' as const,
         subjectId,
-        fieldPath: `sourceLinks.${sourceId}.${spec.relationship}.${direct ? 'direct' : 'indirect'}`,
+        fieldPath: `sourceLinks.${sourceId}.${relationship}.indirect`,
         sourceId,
         retrievedAt: evidenceRetrievedAt,
         sourceRevision: 'p4-synthetic-registry-v1',
@@ -165,7 +165,7 @@ export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], as
       };
       return {
         subjectId,
-        relationship: spec.relationship,
+        relationship,
         direct,
         evidence: EvidenceSchema.parse({
           schemaVersion: MODEL_SCHEMA_VERSION,
@@ -260,7 +260,7 @@ function reviewId(source: ReviewReceipt['source'], subjectId: string, reason: st
 export function generateP4Evidence(): GeneratedP4Evidence {
   const fixtureText = fs.readFileSync(fixturePath, 'utf8');
   const fixtures = P4FixtureSchema.parse(JSON.parse(fixtureText)) as FixtureFile;
-  const sourceRegistry = buildP4FixtureSourceRegistry(fixtures.sources, fixtures.asOf);
+  const sourceRegistry = buildUntrustedP4ScenarioRegistry(fixtures.sources, fixtures.asOf);
   assert.equal(new Set(fixtures.linkObservations.map((item) => item.id)).size, fixtures.linkObservations.length, 'Link fixture IDs must be unique');
   assert.equal(new Set(fixtures.dateScenarios.map((item) => item.id)).size, fixtures.dateScenarios.length, 'Date fixture IDs must be unique');
   assert.equal(new Set(fixtures.fieldClaims.map((item) => item.id)).size, fixtures.fieldClaims.length, 'Field claim IDs must be unique');
@@ -290,6 +290,20 @@ export function generateP4Evidence(): GeneratedP4Evidence {
   assert.deepEqual(p3Completeness.totals, { denominator: 34, processed: 34, succeeded: 27, failed: 7, remaining: 0, queued: 0, reconciled: true });
 
   const p1CellDataText = fs.readFileSync(p1CellDataPath, 'utf8');
+  const p4LiveObservationText = fs.readFileSync(path.join(repoRoot, 'docs/evidence/P4-live-observations.json'), 'utf8');
+  const p4LiveObservation = JSON.parse(p4LiveObservationText) as {
+    stageId: string;
+    externalEffects: Record<string, number>;
+  };
+  assert.equal(p4LiveObservation.stageId, 'P4');
+  assert.deepEqual(p4LiveObservation.externalEffects, {
+    publicReadOnlyFetches: 1,
+    spreadsheetReads: 0,
+    spreadsheetWrites: 0,
+    formSubmissions: 0,
+    providerContacts: 0,
+    authenticatedInteractions: 0,
+  });
   const pinnedAudit = auditPinnedCellData(JSON.parse(p1CellDataText));
   assert.equal(pinnedAudit.hyperlinkDenominator, 270);
   assert.equal(pinnedAudit.retainedHyperlinks, 267);
@@ -403,6 +417,7 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     p3CompletenessReportSha256: p3Completeness.reportSha256,
     p3WorkDenominator: p3Completeness.totals.denominator,
     p4FixtureSha256: sha256Text(fixtureText),
+    p4LiveObservationSha256: sha256Text(p4LiveObservationText),
     p1CellDataFixtureSha256: sha256Text(p1CellDataText),
   };
   const common = {
