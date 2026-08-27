@@ -1,0 +1,526 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import {
+  auditPinnedCellData,
+  buildFieldEvidenceReceipt,
+  classifyLinkObservation,
+  deriveCycleStatus,
+  deterministicVerificationSha256,
+  evaluateFieldClaims,
+  parseTypedDate,
+  type FieldClaim,
+  type LinkObservation,
+  type VerificationSourceInput,
+} from '../src/lib/verification';
+import { canonicalizeAcquisitionUrl } from '../src/lib/acquisition';
+import {
+  EvidenceSchema,
+  MODEL_SCHEMA_VERSION,
+  SourceSchema,
+  evidenceId,
+  sha256Text,
+  stableId,
+  type SourceArchitecture,
+} from '../src/lib/canonicalModel';
+import {
+  assertP4BuildStateTopology,
+  buildUntrustedP4ScenarioRegistry,
+  generateP4Evidence,
+} from './p4-verification';
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const webRoot = path.resolve(scriptDir, '..');
+const p1Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p1/master-database-cell-data.json'), 'utf8'));
+const p4Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p4/verification-scenarios.json'), 'utf8')) as {
+  asOf: string;
+  defaultTimezone: string;
+  linkObservations: LinkObservation[];
+  fieldClaims: FieldClaim[];
+  sources: Parameters<typeof buildUntrustedP4ScenarioRegistry>[0];
+};
+const sourceRegistry = buildUntrustedP4ScenarioRegistry(p4Fixture.sources, p4Fixture.asOf);
+
+type TestRelationship = 'child_detail' | 'parent_summary' | 'direct' | 'document' | 'discovery';
+
+function canonicalTestSource(options: {
+  key: string;
+  canonicalUrl?: string;
+  offlineAuthority?: string;
+  architecture: SourceArchitecture;
+  authority: 'official_provider' | 'official_application' | 'aggregator' | 'unknown';
+  relationship: TestRelationship;
+  direct: boolean;
+  subjectIds: string[];
+  retrievedAt?: string;
+}): VerificationSourceInput {
+  const canonical = options.canonicalUrl ? canonicalizeAcquisitionUrl(options.canonicalUrl) : null;
+  const canonicalUrl = canonical?.url ?? null;
+  const offlineAuthority = options.offlineAuthority ?? null;
+  const sourceId = canonicalUrl
+    ? stableId('src', ['url', canonicalUrl])
+    : stableId('src', ['offline', offlineAuthority!]);
+  const retrievedAt = options.retrievedAt ?? '2026-08-26T12:00:00Z';
+  const authorityClaim = `authority=${options.authority}`;
+  const authorityContentSha256 = sha256Text(JSON.stringify({ sourceId, canonicalUrl, authority: options.authority }));
+  const authorityIdentity = {
+    subjectKind: 'source' as const,
+    subjectId: sourceId,
+    fieldPath: 'authority',
+    sourceId,
+    retrievedAt,
+    sourceRevision: 'p4-test-only-preclassified-v1',
+    result: 'supported' as const,
+    claim: authorityClaim,
+    contentSha256: authorityContentSha256,
+  };
+  const authorityEvidence = EvidenceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: evidenceId(authorityIdentity),
+    ...authorityIdentity,
+    reviewerState: 'classified',
+  });
+  const subjectBindings = options.subjectIds.map((subjectId) => {
+    const claim = `sourceRelationship=${options.relationship}`;
+    const contentSha256 = sha256Text(JSON.stringify({
+      sourceId, subjectId, relationship: options.relationship, direct: options.direct,
+    }));
+    const identity = {
+      subjectKind: 'scholarship' as const,
+      subjectId,
+      fieldPath: `sourceLinks.${sourceId}.${options.relationship}.${options.direct ? 'direct' : 'indirect'}`,
+      sourceId,
+      retrievedAt,
+      sourceRevision: 'p4-test-only-preclassified-v1',
+      result: 'supported' as const,
+      claim,
+      contentSha256,
+    };
+    return {
+      subjectId,
+      relationship: options.relationship,
+      direct: options.direct,
+      evidence: EvidenceSchema.parse({
+        schemaVersion: MODEL_SCHEMA_VERSION,
+        id: evidenceId(identity),
+        ...identity,
+        reviewerState: 'classified',
+      }),
+    };
+  });
+  const source = SourceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: sourceId,
+    architecture: options.architecture,
+    canonicalUrl,
+    offlineAuthority,
+    host: canonicalUrl ? new URL(canonicalUrl).hostname.toLowerCase() : null,
+    identityPolicy: canonical ? {
+      preservedQueryParameters: canonical.preservedQueryParameters,
+      fragmentPreserved: canonical.fragmentPreserved,
+      trackingParametersRemoved: canonical.removedTrackingParameters.length > 0,
+    } : { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: false },
+    accessBehavior: canonicalUrl ? 'public' : 'offline',
+    authority: options.authority,
+    acquisitionState: 'observed',
+    parentSourceIds: [],
+    childSourceIds: [],
+    evidenceIds: [authorityEvidence.id, ...subjectBindings.map((item) => item.evidence.id)].sort(),
+    reviewItemIds: [],
+    legacySourceIdentity: null,
+  });
+  return { key: options.key, source, authorityEvidence, subjectBindings };
+}
+
+function observation(overrides: Partial<LinkObservation>): LinkObservation {
+  return {
+    id: 'fixture',
+    role: 'application',
+    requestedUrl: 'https://provider.invalid/apply',
+    finalUrl: 'https://provider.invalid/apply',
+    status: 200,
+    contentType: 'text/html',
+    failureClass: null,
+    markers: [],
+    retrievedAt: '2026-08-27T17:00:00Z',
+    ...overrides,
+  };
+}
+
+function main(): void {
+  const failureCases = [
+    ['timeout', { status: null, finalUrl: null, failureClass: 'timeout' }],
+    ['dns', { status: null, finalUrl: null, failureClass: 'dns' }],
+    ['tls', { status: null, finalUrl: null, failureClass: 'tls' }],
+    ['rate-limit', { status: 429 }],
+    ['server-error', { status: 503 }],
+    ['bot-block', { status: 403, markers: ['bot_block'] }],
+    ['login-wall', { status: 200, markers: ['login_wall'] }],
+    ['dynamic-shell', { status: 200, markers: ['dynamic_shell'] }],
+  ] as const;
+  for (const [id, overrides] of failureCases) {
+    const result = classifyLinkObservation(observation({ id, ...overrides } as Partial<LinkObservation>));
+    assert.equal(result.state, 'inconclusive', `${id} must not become dead or reachable`);
+    assert.equal(result.awardClosureSupported, false, `${id} must not support closure`);
+    assert.equal(result.linkCorrectionReviewEligible, false, `${id} must not support a link-correction proposal`);
+    assert.equal(result.requiresReview, true);
+    assert(result.reviewSeverity);
+  }
+  for (const status of [404, 410]) {
+    const result = classifyLinkObservation(observation({ id: `http-${status}`, status }));
+    assert.equal(result.state, 'dead');
+    assert.equal(result.linkCorrectionReviewEligible, true);
+    assert.equal(result.awardClosureSupported, false, 'a dead target is not award-closure evidence');
+    assert.equal(result.requiresReview, true);
+  }
+  const onHost = classifyLinkObservation(observation({ finalUrl: 'https://provider.invalid/new-apply' }));
+  assert.equal(onHost.state, 'redirected');
+  assert.equal(onHost.redirectKind, 'on_host');
+  assert.equal(onHost.requiresReview, true, 'an unmarked on-host application redirect may be a soft homepage redirect');
+  const onHostForm = classifyLinkObservation(observation({ finalUrl: 'https://provider.invalid/new-apply', markers: ['application_form'] }));
+  assert.equal(onHostForm.requiresReview, false, 'a confirmed on-host application form need not enter redirect review');
+  const offHost = classifyLinkObservation(observation({ finalUrl: 'https://vendor.invalid/form', markers: ['application_form'] }));
+  assert.equal(offHost.state, 'redirected');
+  assert.equal(offHost.redirectKind, 'off_host');
+  assert.equal(offHost.targetClass, 'form');
+  assert.equal(offHost.requiresReview, true);
+  const unresolvedRedirect = classifyLinkObservation(observation({ status: 302, finalUrl: null }));
+  assert.equal(unresolvedRedirect.state, 'inconclusive', 'an unresolved redirect must not be treated as reachable');
+  assert.equal(unresolvedRedirect.requiresReview, true);
+  const unknownApplicationTarget = classifyLinkObservation(observation({ contentType: 'application/octet-stream' }));
+  assert.equal(unknownApplicationTarget.state, 'reachable');
+  assert.equal(unknownApplicationTarget.targetClass, 'unknown');
+  assert.equal(unknownApplicationTarget.requiresReview, true, 'unknown application targets must remain reviewable');
+  const unmarkedDirectHtml = classifyLinkObservation(observation({ id: 'unmarked-direct-html' }));
+  assert.equal(unmarkedDirectHtml.state, 'reachable');
+  assert.equal(unmarkedDirectHtml.targetClass, 'html');
+  assert.equal(unmarkedDirectHtml.requiresReview, true, 'a nonredirected application HTML page without a form marker must remain reviewable');
+
+  const pinned = auditPinnedCellData(p1Fixture);
+  assert.deepEqual({
+    links: pinned.hyperlinkDenominator,
+    retained: pinned.retainedHyperlinks,
+    excluded: pinned.excludedHyperlinks,
+    information: pinned.informationHyperlinks,
+    application: pinned.applicationHyperlinks,
+    hiddenInformation: pinned.hiddenInformationHyperlinks,
+    hiddenApplication: pinned.hiddenApplicationHyperlinks,
+    offline: pinned.offlineMethodDenominator,
+    outcomes: pinned.outcomeDenominator,
+  }, {
+    links: 270,
+    retained: 267,
+    excluded: 3,
+    information: 86,
+    application: 181,
+    hiddenInformation: 86,
+    hiddenApplication: 92,
+    offline: 4,
+    outcomes: 274,
+  });
+  assert.equal(new Set(pinned.outcomes.map((item) => item.id)).size, 274, 'CellData representations and offline methods must not be deduplicated');
+  assert.equal(pinned.outcomes.filter((item) => item.role === 'offline' && item.state === 'offline').length, 4);
+  assert.equal(pinned.outcomes.filter((item) => item.role === 'application' && item.hiddenBehindLabel).length, 92, 'Every hidden application hyperlink must be audited');
+  assert.equal(pinned.outcomes.filter((item) => item.role === 'information' && item.hiddenBehindLabel).length, 86);
+  const missingExcluded = structuredClone(p1Fixture);
+  missingExcluded.boundedCompleteness.excludedColumnHyperlinkReviewItems.pop();
+  assert.throws(() => auditPinnedCellData(missingExcluded), /Total CellData denominator mismatch/, 'Dropping an excluded CellData representation must fail closed');
+  const missingRetained = structuredClone(p1Fixture);
+  missingRetained.records[0].application.urls = [];
+  assert.throws(() => auditPinnedCellData(missingRetained), /denominator mismatch/i, 'Dropping a retained hidden hyperlink must fail closed');
+
+  const exact = parseTypedDate({ raw: '2026-09-30T23:00:00-06:00', timezone: 'America/Denver' });
+  assert.deepEqual({ state: exact.parseState, precision: exact.precision, value: exact.closesAt, timezone: exact.timezone }, {
+    state: 'parsed', precision: 'exact_datetime', value: '2026-09-30T23:00:00-06:00', timezone: 'America/Denver',
+  });
+  const serial = parseTypedDate({ raw: 46310, timezone: 'America/Denver' });
+  assert.equal(serial.closesAt, '2026-10-15');
+  assert.equal(serial.precision, 'date_only');
+  const fractionalSerial = parseTypedDate({ raw: 46310.5, timezone: 'America/Denver' });
+  assert.equal(fractionalSerial.closesAt, '2026-10-15T12:00:00');
+  assert.equal(fractionalSerial.precision, 'exact_datetime');
+  assert.equal(parseTypedDate({ raw: 46310.5 }).parseState, 'unknown', 'a fractional serial without timezone must not lose its time');
+  const ambiguousSerial = parseTypedDate({ raw: 46327.0625, timezone: 'America/Denver' });
+  assert.equal(ambiguousSerial.closesAt, '2026-11-01T01:30:00');
+  assert.equal(deriveCycleStatus(ambiguousSerial, '2026-11-01T08:00:00Z', { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown', 'a DST-ambiguous wall time must not create a false closed state');
+  const range = parseTypedDate({ raw: '2026-12-15 - 2027-01-15', timezone: 'America/Denver' });
+  assert.equal(range.opensAt, '2026-12-15');
+  assert.equal(range.closesAt, '2027-01-15');
+  assert.equal(range.year, 2027);
+  assert.equal(deriveCycleStatus(range, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'upcoming');
+  const exactFutureRange = parseTypedDate({ raw: '2026-12-15T00:00:00-07:00 - 2027-01-15T23:59:59-07:00', timezone: 'America/Denver' });
+  assert.equal(exactFutureRange.precision, 'exact_datetime');
+  assert.equal(deriveCycleStatus(exactFutureRange, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'upcoming', 'a future exact-datetime window must not become active');
+  const annual = parseTypedDate({ raw: 'Annual — May 31', timezone: 'America/Denver' });
+  assert.equal(annual.precision, 'annual_rule');
+  assert.equal(annual.year, null);
+  assert.equal(annual.recurrence, 'annual');
+  assert.equal(deriveCycleStatus(annual, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
+  const qualifiedAnnual = parseTypedDate({ raw: 'Annual — 2026-10-01 - 2027-03-01', timezone: 'America/Denver' });
+  assert.equal(qualifiedAnnual.recurrence, 'annual', 'an explicit annual label must survive year-qualified range parsing');
+  assert.equal(parseTypedDate({ raw: 'October 2026' }).precision, 'month_only');
+  assert.equal(parseTypedDate({ raw: 'mid March 2027' }).precision, 'approximate');
+  assert.equal(parseTypedDate({ raw: 'Rolling deadline' }).recurrence, 'rolling');
+  const mixedRange = parseTypedDate({ raw: '12/1 (opens) - 3/1 (closes)', timezone: 'America/Denver' });
+  assert.deepEqual({ opensAt: mixedRange.opensAt, closesAt: mixedRange.closesAt, precision: mixedRange.precision, recurrence: mixedRange.recurrence }, {
+    opensAt: '12-01', closesAt: '03-01', precision: 'annual_rule', recurrence: 'annual',
+  });
+  const labeledRange = parseTypedDate({ raw: '(opens 03/15/26) closes 6/15/26', timezone: 'America/Denver' });
+  assert.deepEqual({ opensAt: labeledRange.opensAt, closesAt: labeledRange.closesAt, year: labeledRange.year }, {
+    opensAt: '2026-03-15', closesAt: '2026-06-15', year: 2026,
+  });
+  const openOnly = parseTypedDate({ raw: 'Opens 12/15', timezone: 'America/Denver' });
+  assert.equal(openOnly.opensAt, '12-15');
+  assert.equal(openOnly.closesAt, null, 'an open-only value must not be relabeled as a deadline');
+  const invalids = [
+    parseTypedDate({ raw: 'February 30, 2027' }),
+    parseTypedDate({ raw: '13/40/2027' }),
+    parseTypedDate({ raw: -1 }),
+  ];
+  for (const parsed of invalids) {
+    assert.equal(parsed.parseState, 'invalid');
+    assert.equal(deriveCycleStatus(parsed, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown', 'parse failure may not produce a current cycle');
+  }
+  const unknown = parseTypedDate({ raw: 'TBD' });
+  assert.equal(unknown.parseState, 'unknown');
+  assert.equal(deriveCycleStatus(unknown, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
+  const invalidTimezone = parseTypedDate({ raw: '2026-09-30', timezone: 'Mars/Olympus' });
+  assert.equal(deriveCycleStatus(invalidTimezone, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown', 'an invalid timezone must fail closed without aborting verification');
+  const active = parseTypedDate({ raw: '2026-08-01 - 2026-09-30', timezone: 'America/Denver' });
+  assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'active');
+  assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: false, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
+  assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: true, defaultTimezone: p4Fixture.defaultTimezone }), 'unavailable');
+
+  const field = evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, sourceRegistry);
+  assert.equal(field.receipts.length, p4Fixture.fieldClaims.length);
+  assert.equal(new Set(field.receipts.map((item) => item.id)).size, field.receipts.length);
+  const accepted = field.decisions.filter((item) => item.accepted);
+  assert.equal(accepted.length, 0, 'synthetic fixture source labels must never self-certify official acceptance');
+  assert(sourceRegistry.every((item) => item.source.authority === 'unknown'));
+  assert(sourceRegistry.every((item) => item.subjectBindings.every((binding) => !binding.direct && binding.relationship === 'discovery')),
+    'report scenario inputs cannot mint direct relationship evidence');
+  for (const decision of accepted) {
+    assert.equal(decision.conflict, false);
+    assert(field.receipts.filter((item) => decision.evidenceIds.includes(item.id)).some((item) => item.currentDirectOfficial));
+  }
+  const parentChild = field.decisions.find((item) => item.subjectId === 'sch_parent_child_conflict')!;
+  assert.equal(parentChild.conflict, true);
+  assert.equal(parentChild.preferredValue, null, 'unverified fixture provenance must not produce an official preference');
+  assert.equal(parentChild.accepted, false, 'every conflict must remain reviewable even with a preferred source');
+  const stalePdf = field.decisions.find((item) => item.subjectId === 'sch_stale_pdf')!;
+  assert.equal(stalePdf.preferredValue, null);
+  assert.equal(stalePdf.accepted, false);
+  const aggregator = field.decisions.find((item) => item.subjectId === 'sch_aggregator_provider')!;
+  assert.equal(aggregator.preferredValue, null);
+  assert.equal(aggregator.accepted, false, 'aggregator/provider disagreement requires review');
+  const aggregatorOnly = field.decisions.find((item) => item.subjectId === 'sch_aggregator_only')!;
+  assert.equal(aggregatorOnly.accepted, false, 'aggregator-only evidence may not support acceptance');
+  const staleOnly = field.decisions.find((item) => item.subjectId === 'sch_stale_only')!;
+  assert.equal(staleOnly.accepted, false, 'stale official evidence may not support acceptance');
+
+  const positiveRegistry = [
+    canonicalTestSource({
+      key: 'positive-child', canonicalUrl: 'https://test-provider.invalid/award/child', architecture: 'single_award_page',
+      authority: 'official_provider', relationship: 'child_detail', direct: true,
+      subjectIds: ['sch_deadline_confirmed', 'sch_parent_child_conflict', 'sch_eligibility_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-provider', canonicalUrl: 'https://test-provider.invalid/program', architecture: 'multi_award_page',
+      authority: 'official_provider', relationship: 'direct', direct: true,
+      subjectIds: ['sch_deadline_confirmed', 'sch_aggregator_provider', 'sch_amount_confirmed', 'sch_eligibility_conflict', 'sch_stale_only'],
+    }),
+    canonicalTestSource({
+      key: 'positive-parent', canonicalUrl: 'https://test-provider.invalid/overview', architecture: 'institution_umbrella',
+      authority: 'official_provider', relationship: 'parent_summary', direct: true,
+      subjectIds: ['sch_parent_child_conflict', 'sch_stale_pdf'],
+    }),
+    canonicalTestSource({
+      key: 'positive-document', canonicalUrl: 'https://test-provider.invalid/files/application.pdf', architecture: 'document_or_pdf',
+      authority: 'official_provider', relationship: 'document', direct: true,
+      subjectIds: ['sch_stale_pdf', 'sch_method_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-application', canonicalUrl: 'https://test-provider.invalid/application', architecture: 'form_only',
+      authority: 'official_application', relationship: 'direct', direct: true,
+      subjectIds: ['sch_amount_confirmed', 'sch_method_conflict'],
+    }),
+    canonicalTestSource({
+      key: 'positive-aggregator', canonicalUrl: 'https://test-aggregator.invalid/listing', architecture: 'external_marketplace',
+      authority: 'aggregator', relationship: 'discovery', direct: false,
+      subjectIds: ['sch_aggregator_provider', 'sch_aggregator_only'],
+    }),
+  ];
+  const positiveKeyByClaim: Record<string, string> = {
+    'deadline-child-a': 'positive-child',
+    'deadline-provider-a': 'positive-provider',
+    'child-conflict': 'positive-child',
+    'parent-conflict': 'positive-parent',
+    'stale-pdf': 'positive-document',
+    'current-parent': 'positive-parent',
+    'aggregator-amount': 'positive-aggregator',
+    'provider-amount': 'positive-provider',
+    'amount-provider': 'positive-provider',
+    'amount-application': 'positive-application',
+    'eligibility-child': 'positive-child',
+    'eligibility-provider': 'positive-provider',
+    'method-application': 'positive-application',
+    'method-provider': 'positive-document',
+    'aggregator-only': 'positive-aggregator',
+    'stale-official-only': 'positive-provider',
+  };
+  const positiveClaims = p4Fixture.fieldClaims.map((claim) => ({ ...claim, sourceKey: positiveKeyByClaim[claim.id] }));
+  const positive = evaluateFieldClaims(positiveClaims, p4Fixture.asOf, positiveRegistry);
+  assert.equal(positive.decisions.filter((item) => item.accepted).length, 2, 'test-only canonical official records must exercise positive acceptance');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_parent_child_conflict')?.preferredValue, '2027-01-15');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_stale_pdf')?.preferredValue, '2027-03-01');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_aggregator_provider')?.preferredValue, '$2,500');
+  assert(positive.decisions.filter((item) => item.conflict).every((item) => !item.accepted), 'precedence may identify a preferred source but never accept a conflict');
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_aggregator_only')?.accepted, false);
+  assert.equal(positive.decisions.find((item) => item.subjectId === 'sch_stale_only')?.accepted, false);
+
+  const futureSource = canonicalTestSource({
+    key: 'future-source', canonicalUrl: 'https://test-provider.invalid/future', architecture: 'single_award_page',
+    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_future'],
+  });
+  const futureReceipt = buildFieldEvidenceReceipt({
+    id: 'future', subjectId: 'sch_future', field: 'deadline', value: '2028-01-01',
+    sourceKey: 'future-source',
+    retrievedAt: '2026-09-01T00:00:00Z', sourceUpdatedAt: null, sourceRevision: null,
+  }, futureSource, p4Fixture.asOf);
+  assert.equal(futureReceipt.fresh, false, 'future-dated retrieval evidence must fail freshness');
+  assert.equal(futureReceipt.currentDirectOfficial, false);
+  assert.throws(
+    () => evaluateFieldClaims([...p4Fixture.fieldClaims, p4Fixture.fieldClaims[0]], p4Fixture.asOf, sourceRegistry),
+    /Field claim IDs must be unique/,
+    'duplicate claim IDs must fail closed',
+  );
+  assert.throws(
+    () => evaluateFieldClaims([
+      p4Fixture.fieldClaims[0],
+      { ...p4Fixture.fieldClaims[0], id: 'duplicate-observation' },
+    ], p4Fixture.asOf, sourceRegistry),
+    /Field evidence receipt IDs must be unique/,
+    'duplicate observations with different claim IDs must collide at canonical evidence identity',
+  );
+  assert.throws(
+    () => evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, [
+      ...sourceRegistry,
+      { ...sourceRegistry[0], key: 'duplicate-canonical-source' },
+    ]),
+    /Canonical verification source IDs must be unique/,
+    'two source aliases for one canonical source must fail closed',
+  );
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'empty-value', value: ' ' }], p4Fixture.asOf, sourceRegistry),
+    /too_small|Too small/i,
+    'empty field claims must fail runtime schema validation',
+  );
+  const adversarialSource = structuredClone(sourceRegistry.find((item) => item.key === 'aggregator-only')!);
+  adversarialSource.source.authority = 'official_provider';
+  assert.throws(
+    () => evaluateFieldClaims([p4Fixture.fieldClaims.find((item) => item.id === 'aggregator-only')!], p4Fixture.asOf, [adversarialSource]),
+    /authority requires matching classified canonical Evidence/i,
+    'changing a source authority label without its canonical classified Evidence must fail closed',
+  );
+  const aliasRegistry = [
+    canonicalTestSource({ key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_alias'] }),
+    canonicalTestSource({ key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_alias'] }),
+  ];
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'alias-claim', subjectId: 'sch_alias', sourceKey: 'alias-a' }], p4Fixture.asOf, aliasRegistry),
+    /Canonical verification source IDs must be unique/,
+    'semantically equivalent URL aliases must collide at canonical source identity',
+  );
+  const fragmentRegistry = [
+    canonicalTestSource({ key: 'fragment-a', canonicalUrl: 'https://provider.invalid/award#award-a', architecture: 'multi_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_fragment_a'] }),
+    canonicalTestSource({ key: 'fragment-b', canonicalUrl: 'https://provider.invalid/award#award-b', architecture: 'multi_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_fragment_b'] }),
+  ];
+  assert.notEqual(fragmentRegistry[0].source.id, fragmentRegistry[1].source.id, 'meaningful child fragments must preserve distinct canonical source identities');
+  const trackingRegistry = [
+    canonicalTestSource({ key: 'tracking-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_tracking'] }),
+    canonicalTestSource({ key: 'tracking-b', canonicalUrl: 'https://provider.invalid/award?utm_source=test', architecture: 'single_award_page', authority: 'unknown', relationship: 'discovery', direct: false, subjectIds: ['sch_tracking'] }),
+  ];
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'tracking-claim', subjectId: 'sch_tracking', sourceKey: 'tracking-a' }], p4Fixture.asOf, trackingRegistry),
+    /Canonical verification source IDs must be unique|URL identities must be unique/,
+    'tracking aliases must collapse to one canonical source identity',
+  );
+  const conflictingBinding = structuredClone(sourceRegistry[0]);
+  conflictingBinding.subjectBindings.push(structuredClone(conflictingBinding.subjectBindings[0]));
+  assert.throws(
+    () => evaluateFieldClaims([p4Fixture.fieldClaims[0]], p4Fixture.asOf, [conflictingBinding]),
+    /exactly one non-conflicting relationship binding/i,
+    'duplicate or conflicting canonical relationship evidence must fail closed independent of array order',
+  );
+  const staleRegistry = [canonicalTestSource({
+    key: 'stale-provenance', canonicalUrl: 'https://provider.invalid/stale-provenance', architecture: 'single_award_page',
+    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_stale_provenance'],
+    retrievedAt: '2010-01-01T00:00:00Z',
+  })];
+  const staleProvenanceReceipt = buildFieldEvidenceReceipt({
+    ...p4Fixture.fieldClaims[0], id: 'stale-provenance-claim', subjectId: 'sch_stale_provenance', sourceKey: 'stale-provenance',
+  }, staleRegistry[0], p4Fixture.asOf);
+  assert.equal(staleProvenanceReceipt.provenanceFresh, false, 'stale authority/relationship provenance must not support current acceptance');
+  assert.equal(staleProvenanceReceipt.currentDirectOfficial, false);
+  assert.throws(
+    () => buildFieldEvidenceReceipt({
+      ...p4Fixture.fieldClaims[0], id: 'contradictory-directness', subjectId: 'sch_contradictory', sourceKey: 'contradictory',
+    }, canonicalTestSource({
+      key: 'contradictory', canonicalUrl: 'https://provider.invalid/discovery', architecture: 'external_marketplace',
+      authority: 'aggregator', relationship: 'discovery', direct: true, subjectIds: ['sch_contradictory'],
+    }), p4Fixture.asOf),
+    /contradictory directness/i,
+    'discovery evidence cannot be relabeled direct even when its Evidence identity matches the contradictory input',
+  );
+  const offlineSource = canonicalTestSource({
+    key: 'offline', offlineAuthority: 'Provider office paper application', architecture: 'offline_or_automatic',
+    authority: 'official_application', relationship: 'direct', direct: true, subjectIds: ['sch_offline'],
+  });
+  const offlineReceipt = buildFieldEvidenceReceipt({
+    id: 'offline-claim', subjectId: 'sch_offline', field: 'application_method', value: 'Paper application',
+    sourceKey: 'offline', retrievedAt: '2026-08-26T12:00:00Z', sourceUpdatedAt: null, sourceRevision: 'office-observation',
+  }, offlineSource, p4Fixture.asOf);
+  assert.equal(offlineReceipt.sourceUrl, null);
+  assert.equal(offlineReceipt.offlineAuthority, 'Provider office paper application', 'offline authority must survive into the field receipt');
+  assertP4BuildStateTopology({
+    activeStageId: 'P5',
+    stages: [
+      { id: 'P4', baselineCommit: '268758f94922f90bf307229d8633da05b2417c4a', status: 'accepted' },
+      { id: 'P5', baselineCommit: null, status: 'active' },
+    ],
+  });
+
+  const generatedOne = generateP4Evidence();
+  const generatedTwo = generateP4Evidence();
+  assert.deepEqual(generatedOne, generatedTwo, 'P4 generation must be deterministic and idempotent');
+  const links = generatedOne.links as {
+    pinnedCellDataAudit: typeof pinned;
+    destructiveDecisionBoundary: { awardClosureSupportedCount: number; correctionReviewEligibleCount: number };
+    reportSha256: string;
+  };
+  assert.equal(links.pinnedCellDataAudit.hyperlinkDenominator, 270);
+  assert.equal(links.destructiveDecisionBoundary.awardClosureSupportedCount, 0);
+  assert.equal(links.destructiveDecisionBoundary.correctionReviewEligibleCount, 2);
+  const cycles = generatedOne.cycles as { falseCurrentBoundary: { parseFailureCurrentCount: number }; reportSha256: string };
+  assert.equal(cycles.falseCurrentBoundary.parseFailureCurrentCount, 0);
+  const conflicts = generatedOne.conflicts as { conflictDenominator: number; acceptedConflictCount: number };
+  assert(conflicts.conflictDenominator >= 4);
+  assert.equal(conflicts.acceptedConflictCount, 0);
+  const reviews = generatedOne.reviews as { reviewDenominator: number; correctionEligibleCount: number; reviews: Array<{ severity: string }> };
+  assert(reviews.reviewDenominator > 270);
+  assert.equal(reviews.correctionEligibleCount, 0);
+  assert(reviews.reviews.every((item) => ['critical', 'high', 'medium', 'low'].includes(item.severity)));
+  const serialized = JSON.stringify(generatedOne);
+  for (const forbidden of ['applicant@example', 'private response', 'GOOGLE_SERVICE_ACCOUNT_CREDENTIALS', 'BEGIN PRIVATE KEY']) {
+    assert(!serialized.includes(forbidden), `P4 deterministic evidence must exclude ${forbidden}`);
+  }
+  for (const report of Object.values(generatedOne) as Array<Record<string, unknown>>) {
+    const { reportSha256, ...body } = report;
+    assert.equal(reportSha256, deterministicVerificationSha256(body), 'Report digest must bind the complete deterministic body');
+  }
+
+  console.log(`P4 VERIFICATION TEST ALL PASS links=${pinned.hyperlinkDenominator} hiddenApp=${pinned.hiddenApplicationHyperlinks} fields=${field.decisions.length} digest=${links.reportSha256.slice(0, 12)}`);
+}
+
+main();

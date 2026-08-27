@@ -1,0 +1,3031 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "generatedAt": "2026-08-27T18:00:00Z",
+  "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
+  "pinnedInputs": {
+    "p2ModelSchemaVersion": "2.0.0",
+    "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
+    "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
+    "p3WorkDenominator": 34,
+    "p4FixtureSha256": "3607ad0d91d75c12fa847070ce10ea869f410c4d0ed4513b32aa910dbc6f6c9c",
+    "p4LiveObservationSha256": "80c328a19a9b189f1e922d6d9e0ec42fa68ed0fa5c0ef8e38b95caf95faebea2",
+    "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
+  },
+  "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
+  "reviewDenominator": 300,
+  "severityCounts": {
+    "high": 202,
+    "medium": 98
+  },
+  "sourceCounts": {
+    "pinned_cell_data": 270,
+    "date": 10,
+    "synthetic_link": 11,
+    "field": 9
+  },
+  "correctionEligibleCount": 0,
+  "reviews": [
+    {
+      "id": "p4_review_020acd99379b9993cb5dac67fa73134bbcffc24953cfd500b049077e1f9a161b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3e0f1e0a654307e937d98bb90b19bbdf505577b7a2a303aa85f39999a3ec64b9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_037679ad347bbc09ca28a963583414eb2935819611938591e560587d84030b71",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_187c5617eb0688d413aa357cb9357d3cf6dc3f9d294a324047c8b7093d5ae462",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0526469fe8c9a46500ce07afae8a3b361f265c6ef8ed6934fcafb6593c247a0d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_95346fb7e2903fa674a3e644d7e36b4e60d394bf4f1837f02e58f4ab0b4238b0",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_059d71c6ec275a7b0c048f5a777b1c0db559b6c6b601d0130ba3e6191f48c98f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bd18ffd01e636b3e5dde2ee1106066b9ee212bb73cbecaaa481050473374b085",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_05df564a4bc735d4873c19a2ccbc1bc719ad7919fa269ea08986220e07f10820",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9f9a18cc2eb9b7b4a8197970dc3a8569a4208afae53d29238280ddd5fa521b6f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_07f572a1df780a9d5821912f8f099c83e39116be8ef917b91c7e4e852e353708",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2b9c5b7416647f7546f3444e54db68c702430e335c636ffbf0677f07d1f7c501",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_08db208c131ef649c161a4a086fe5b6b5fc6ea6840fbb0dab98d91d3ef6731b6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ce95745c2c898460e546e7608bb56854ddc587179b0196a21af1b49b6cb45cf9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_08eab836c43be62feb6876f28916d4d604ff0e185f200a2ca9df4ef7851b9791",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_02c9fe7abd9823d350f2827bd1d06ddb68a613af51c014e62d93c9209c6e6e83",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_097b1c647302ef55496a700b644010cd51bf922228afa8e6f772fff64bcadae7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_237a874029bf4c40080a8dbb5381feaced5f9eccdc06fdc688028725e3305b32",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0a39aa61a5f78fda03655b0739c294f675faa5b27b53a5b554d1f77ede591813",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a5dae15179c99c926d85234c192105ccbd8056808a8a0719e95f2d3df00ff29c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0ad097b44a78bcea3029ad5bb2fdd9c1475cf94133f04af798272625fa8a3a92",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d9afc9f83f0a3ebbe3821e512ee20e8735a1b6f84383139423689395a0d6ede1",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0d399cf6d08debb8eb1e29ddbcb148b8100e666dcfa64ddcd8d2517794ba5ab1",
+      "source": "date",
+      "subjectId": "open-only-annual",
+      "reason": "Open date preserved separately; no deadline or close date was invented; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0d7140bf6b7f6dfa2889c8f64ee71d951dbb19369e564b107a1c21c4ccb67016",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bd4c3cf5b651f0bfc78ceb28b75866050ced33fb2b7d7196c29eedd53d3c43ef",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0db88933bff5d11b462d93b3d974443129924583dd02779fb1373494de5d77f9",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f8f7194f4e484e15f6fd2ddb4017abd72caf1105c348f804d7d48d64678a1a19",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0e31a47347a021c4bdde78871d23da94a3ad8adf9f0d9d2f55b52e995ec979fb",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bf2fdeb554d9d3bac32580fe75bbdf6303c7c2d226ea5d92e4bc3e5d8f66941d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0e6e754a194069027a2d8225ea5d5cc938023f436819e26ef635ac805e16ce19",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1d6bf2b3724183d6d76e92cfdcbe3fa32c1207bf9810ef51342a91e62f24828b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_0f72e51147838a2209ed2add192ac69e3887cad53ee025010053c0e04b69c8b3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_08e977a3f89bd6867798c9d5356eaffe89ff66acedeb0932dd737c1f01afcc4a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_106c3ee190b637e8358dca4bbed6efc99f459a44af8e028d1eeb1ff3adb48828",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_94cbb273d2e4e48bc575cd9fc46a0e21497a97df5de22712bb4c40829912ebe2",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_115ab170985da3c2453f11c8b41c3a9721759d297473684aa96c82b39ae1722f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b85bd15ae8d23f954584cd27faec9334617ad85d99f1575d2ba02a68df00d76d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_13173a52c1b7ae6ea6e5468710c49f85769364dd0677799069e75808b21fa106",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5afb14391add78665151f6e51fd6e54f04560b7f6e51e38eb0b92425b1c0dab1",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1325031c2fe4bf9257e872a2c3ae8a7082f9c6f636a5c48f7bd71370e97026d6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_210812279a1ebd15725ba7479d600a5f39a7d2c046ff820ebed67e5955178939",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_132a0fadb621aa612090b7a23814b215a934e6964c475db616a83ef8003db4a3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_45cbbe8312b14835d7399d4bae4e7581802c024ca6571bd08339a073b8bbd8e9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_140e37f6592cc15d00a3039ae2083dd302e496b08cfd0042d8f64442c75faf1b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c37633c8a93857c468917f7a57cbb478476c24c4af300e843458fbc8f77f672f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_14d86626223919032265ee96082eec8c3d7bf89183add6146e5a5b6fb443a81d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_91cb6cf90083169c680300428e955d91d6d7028ddf95c278a31a9f3f2fceac17",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_169d57f4923b7f2e38bafc35f0eb736c15e65c980408c34e275002d6a3a9fb6a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d00460340305dfeae758cdc51a5971acbfb97877bdafed0bd9ce7ae6c6d24139",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_187cb84d4192ad22cd81b0ebb60bb9c3ee48cdc79a9f9cb889bc90062c32b11d",
+      "source": "date",
+      "subjectId": "unconfirmed-future-date",
+      "reason": "Typed date preserved at observed precision; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_18c30065bf823cc6122cef026999f62aab29ec547b3d7e25ff2a5475cf4c1bf8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_59d77e330c456c81998a042e238642ffdcef3e2ad222deeb4b3359f774487ece",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_19a4b0719a812021c178f090eb88376b61667342790da48078ae62996a83ece1",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f81bbbfa99bd106922aa01e2823d9edfa30a2c48c004dda640062292e9331ece",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1a60a57d227ef252f6fec96c0e041895a32edff04bd72c75d75ee88545dfc81c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_213a165105e8a954e3509f6e38bf58a33a7b4764439df4192d8f83b5ce003b36",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1b24aedc05ee757b009090d81779b8992212c04175034e0353fc4cd041c2363b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_929212adfc2a3921a526761cda67c4c59c9a31f8d8e9b8a2495dd4a5a33436fb",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1c2a8d9cc32940ad645f1daf6c711a23d95fe4b6af68c9da5a8efbcf5fc7dac0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1b462d796460374f14aca6cb4e440d4ccead2d1c68bcfa33ed66d7ac879086b4",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1c57587786ade84cd079d42a0956dcde4a39bbeb6fe9429b8faf581b450fe22a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f206d4e29067477cc9ac31533018bca967b648d4a822f9b08975af09d7ee5de4",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1d05f17593d7f5fcb6a9fd3d741ef6f3aaf98af94521408ef6cbcd66d555c479",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_144d9f373aaf5d0ed0eb56cd06bedc2b4e7aef4f9fb72ffd936d3f225b38c931",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1f0de5a703dfb355623a2d4e8d4a45530910adbedada8daf4d24f8544228dfeb",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e1906c47b7b23e9893d3b13a662fc452b5971d311d3014976249fb2494e872fd",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1f9ee0b7dd1de22908a0a429d0026013fee22628b9a5dcdbde99f71b3ffe0c26",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f349cd7c47c51346079915aeef50bcbe8c7c398182e9b2bad7e2d73dcf67bdba",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_1fe201026b01048021019292cf9d73aaaff3bf463920e0c0aa7b1e6ea59e1368",
+      "source": "synthetic_link",
+      "subjectId": "removed-target-410",
+      "reason": "HTTP 410 establishes only that this target was unavailable at retrieval time",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_20a8a6ac19ab5cdf79549defe3044a7a59227408662d8a717f828be66ae3a683",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_4a1db1b571aa7daa5eac9d459494de22ce7cd8c0641b668f783adbadace06ca9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_21d0d9ae90bba160d38ca924b333c2d9ee4c4019f4b71c2a941ab0a7cb44ad2c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7ac32523baf228fa769c09d1e2a275964d0a80ee8f0ba2176838c3c4d89698d6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_21ee446f6f75299400d8056cf72553f3817b85622f1a4a13ca935d6ea290813e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_715deddc6c5117ef64c52da874c63abdd3065fdb4253a1baf0fb419ec2ecdb89",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2209610efe79a5cff0dac98ad8d4c3a3518db647acb43b3b64431c683d029ff6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e569c3e82f4069e4ba11d4bd016ebd1392c41caf7ad935f7c13195f376687d5c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_226304ba8ec02b693343cee9d84d7bd9670a73a144c14adabccfd2012c13c784",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bb891f759ab16c3cd46450e7b21eaba25b246803e7d04a0ca831873e964a0a80",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_25005b9cd8f356a226ff54487411a57ba01b7b551c3bfe315fba1e2e38792208",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e1a20b82496a81e35e4e6ec76a0175ff0d5415ae49b4c23c5a05eb2e39e7d55b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_253463e0579f34470c57ac2e08be9c6287568cf099e579bcb0569a44054b352d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f8e6db4dc55ff60cc84514d5f5b755e32b83ed743936914e428893466aafc019",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_266d5bb72a005266b32baf5d25afc0a94f4844aa1f22ee3f2d7a8f23909a1b3d",
+      "source": "field",
+      "subjectId": "sch_amount_confirmed:amount",
+      "reason": "No current direct official evidence supports acceptance",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_26bf8ab858d658ce616e266e34fec390e6bcabaac4e89893807b7ab4e51db1f1",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0782de47bc866958b6067c89122a0dc26570c8d98f859eaa76c5026769dcd4fc",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_27897487a776d6815913698977d9b40d8656082bb93a9ab0de5dfc282ae18390",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_93f7777fb6c803583c3785417ae5cce4038eb9161b3cd7f1e5c88423cbcba133",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_27f474f09cd3e1955d051d880513f6a0a086ba8e47ed4ffda9baa6c74bbf118d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6ec82690299b44ec27bc038be23e1104d2a108a647e5f743a441017ed00bdc66",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_28d77ddb7a17a88692b4b976f27cd984153858c494e7e949d600c919a249483c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bd987e378a827fc934e18857622eb6f96d93d7e85552cb5ba99fb0bd29769fa5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2a03bb233faae363c6bf7e5fb945850e5f4289a106c726fb3cc8f54e09d9ee65",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_91ce80696c51fba679e7c9eee4e75b93189ded7e4eadf1f5f3a6b5df72941b5a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2a9b9e13755d637276b81833afbbf4e38a07c699fa40adde7d82a819944ac414",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_53fff816df62126e8970fca98d3dc37f68e7a9a489dbed367f9bde70c4cb5155",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2abf3df75f07144251d39e28149bb14ca96d0e48f068269aecade708bc10dedc",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c237566265ef51b4fdbf38a5bd3426f78fc3f26af2acbca9ffd135a53700a0c4",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2ac92a8de04855d10507062654f0862e467ce86e8c940ce63f05ab10e4437094",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_752088dce66776a0420524995da0f5ebd3c02571db64f6fbf666189d4e304062",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2ad90998c5e2aa08b7d7514218ef3982dcbe804f423a5c7596dca1ba7814624c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f322f3a9e0be0f7f69860014493fc94f6e1c064d7f0825531948c918b631a29b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2b26c224b9dd592b2f06917d22839ee271d89644daa7a49eac6cdff570e55064",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_4d219513da036c3f2de67815275353de203a8e257baca5efe4a453e49d0b16f1",
+      "reason": "CellData hyperlink occurs outside the P1 information/application source columns; content of the excluded column is not retained.",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2b3f9b879d256703ef273da58046d57e528c8c79afd38831b2bfe223e1bb3c39",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8b738d8a52988b864ec1b5eead3cbd45d196f78df151abd79f7b9f73432f501b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2b52a8d353f82b8b9b514ff8511ac824db643dfab0ce8f9420c69618c5dfaf30",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_32d8ef0820a4fb9fb58c754522a09c02c0d541bdebbd12c3092d91a4491c9e25",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2bedf04761354751a129ea0b0ab9ecb20b399be867dd9678a93c814a8a398081",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_826ce69efee4b864fe05667c4c668ccd90dccdff0f9d24cb1decb4ffb483613c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2d78bd33a99aef1a25c8a31f927762b801fdabf2c76cb4d055abeab1739382d4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7646dff2b963300441f46e3069f2dc140f7abc665b73e43862d000cda36943c3",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2de7f3f5757c1c62c584b39471ce99be23e2c60ecf7764344d979586704119a5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9a37fe61ba62d1f813d37090bf6da916437580f590bc96c50d5e8940bd3db5cc",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2e5c6bdfa390027655d9582286490c529d5d17b8a6c536db6a010bcdde01ac96",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3d3ffa0e156a651804cfccf9473c7d443b27cf36a52e171d16eac138516a3f72",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2ebb3197d2fb3c24965f12ef6b381cf935e95dff93cad9751a5d35c5ce804bb2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_dddcec44152995c5ae2cc913e699db7c3470c88644dbfb9556ac54a6de9d0100",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2ec007f791c847142f485ec294ea10ba5c069a3be72ccfb20c6cf1a69b2ddd77",
+      "source": "date",
+      "subjectId": "annual-rule",
+      "reason": "Typed date preserved at observed precision; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_2f514a3cbac5af91f33f4c92ed00072c5ab0b421448bf96ddcae34ea936e0d13",
+      "source": "synthetic_link",
+      "subjectId": "tls-failure",
+      "reason": "tls does not establish removal, closure, or a valid replacement target",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3115b2c6a13a86c4056a064f6bef2cbbbb5f58bc388cb733177faccee0db56d5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b0aad94152b1d9f0f0c321f764ef4774dcce537e0babd996c4566abff0e04c5b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3150f0209ac4f0cc38d2eb6c80cc319e176eb58db0f4faea0735d27e071e92da",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_387c395ae8c3a324df81b1232f4672ec3f3bf19cf35ffac9ddf7dfe7ea59f94c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_33c00ff518c79171a561777c5fca37f07017ded67b69813c3fe17d07f76c8af2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_303b663c1c1d6d0c0908c3a177e2fcada6a163d6583add33f263a5fa3f367f52",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_34d38fea01ab8c42c1a635113122fc639aa457b825405bed0151a08bff9f919a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8ed14e7d25e3e7105a0560be90f95654471cad19a0ad9f4d8ecc38de9396baa0",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3516335c3b306b1a29d818a26ce0c946c46a71d9c69c53ec5ffe9e2d53fdc6a2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e8211c179b58358c3c54bc5e8e45d545f1c353674aa62b3eff4f7a51bd80861e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_357b5f84e9dcae9aeaa6afee1936493f4a20a03a314dc3072f3a542c6b3ff34d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f2320c774d946767d6fc8cc9bc5ac61d364dde154d4fba1b7a3f2dcdc069888e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_358153d89af0a467e49b1c35d6a87564088324bdc2b71ee192054c38686cd676",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c2465a6320de68c29df262838e2d025ac33a3718b09d76b7871ff4b1f2574e5b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3754238b8a5e17423395f5da7d73bcbb1ea4c6fd1dba09d0daf25c64c731355d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b2404ea8e888bf33494edfdad6656b015c14d66c7e94548ffc94e79c4a692a55",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3766a1f50911cca01cc2987852ae3ef399913234d2da6156330cbe6181d94dba",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3aca5505242b00c9d84075a02a8b2496c93fbafb91159eeaac1c4eee3287020c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_377233d7d43a5e43bd43abd7c2c760784ff2b93444f7b90e1810d146335c7a59",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9f37d869f93f17fdb18d39f2a19dffad35069b88650146d8a870584d56bc04f3",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_382a0e1ff910a2693dc0285afad76b87b44209892bb457b587d985befe0c643b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b0b53ac1d37da4c75e092f6b1cbb0e9b2f79ac52433a7628841bfe0d6e14a54e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_39d0ac1f275cde1d8475c6cf5b707b178d31433716b5cf38a388fded5928fefd",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_73ce4291e8206c5c477fedeab35af4f1f9d6e34e2f7b5b0201e5fd5cc303ccaf",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3a3d3abed198d185245b1d296f70f88b8d10d9b16704c71a081c7697c0aa4610",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0ccb0f9c51b460bd6a71c394248f5b10c950c608b0e8c63faf159f2e6bdcdf5d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3a75ddc793c1d2aaf70b6271d7e4120cf46937e52e6ab6c93d74d3be751238cb",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_23e3105c0039f8c7e1d6a5c9745f251a58dcd7a45f8db2527f7f4c942973a12b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3b132b126224c074432a2fb3c94a76fddbe73c3f3491906a1b8542accc26383b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2a57872ed38382ef7f19ff8be482c9032b26f2536b41e26d050efb13c29a1b8b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3b51d857abdc0bbc1133c549a047184d4188445ab9bf33e8040a8f80a4356047",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_126aaec73ec9dc0cfaf2a756cc5eca77b8777aae572d65382b1311e59f07290e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3bbdc9cef22b51a9e21c287321b047ae8e13e5ce6bfcd3729c5824c62d48158e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a6ed4deb2af196e447a32fc95504575c58091c83f2b25f2dd106ff57039d607e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3ccb423a7cd0b1ad666018d78b189e71d52cb687ff48b597b8f2cbe75f91215e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_cf880360f85ff738ece8df63b2ca3d3d05f7307a5790193ba51158eb08ae85f3",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3cf3e8572c2e3adf9ea2146cce5778910ce520c1f87a0f9bc5319b28825a4ca5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0f457c3ae12ab561609eb55d2d4ccf1fe645cc3e961320e0928fb5c2347bc567",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_3ffcc4a588800e130e2072453dbd7660fa63aaebb154b81aa66efceb78769be4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7bee9db1dc3b0a937c9d1aff42ef310ebdca367a9beb9d19297a3b1c3e1b0eff",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_41e1a09b621d62522280b1bb4013ebc2575237a7831127591e697b15da07df3e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_afbfbdadb499577347de3ebb731a8ccc7874066abb4f279ed3d77b96c8241a32",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_44a8a0b7f21a8d0527c26757b4ffd4dcc3cac2d7f8a127adf59409b5386bc1ef",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2134cbd89dd6006057d2ba7693cd752719978896cdf23004d55cd9fce9ef513c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_44cd7ee8bd9ae47584b334c0271386b9eeb22b795096a17da92bb4496ec4e33c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_94596b3d8eca87884fe0cd6719dc966991936c667ff17ab2c1a5b13543862dad",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_46bd74bddfcf3bbe69113f3d9ed5c61dd4956721c01dde107479b353304197b0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_af4f99b48275b10cfc75135eb522a4ae610ad8db323089bf350f719272126b3d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_47d2c3f513cc26cc317bad44d27829ddd4494b1dffe16f6171f7e204ed663342",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_07daba2e30a468ed2ecf12a05c0243b66de87305244e68ca73c5248a57e94ec8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_48a7b98743132f01e4936a447d7c67b3dcc589e96c4c48c5ed1fcb40ba30b87e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_49826a6ee76d9ae78bc8dea46ed944a3ce105e5fefbab196371c01c14b6cbff2",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_497d26db998344b96038c49daaa5e1b02336099e395d9a7c4259ace75ca69a31",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_047a464d726a43dcff75aefe69663f37f4d7aa36007ee9abac4bb45f1c660a95",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_49e56fc5bdd7babffa7f2dbbe0b1c5fc2a6e6310dbd07a88d26e6eb2c12d8856",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_02be1708fc2beb06a0cf4d2fb69fe19cea3b817501464ae2a0cbe14ecdc8e823",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4c1717bf1b5bbb8d44b5de9c954363d22ecad9657e2c604123d07c904cd099f4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_79406fe1b75628a2fea8c4ce8b06ca7b5268d9f015350f8207092831c38dc673",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4e81023d8ef2d7607cdc8b05e2333badb57c7c50e9f2bffba8cde9968b5ee9d8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6d8bb9a95a46f6a72bf29e84cc9713b611848abeefdc1ab803f0991cddfe6152",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4edeecd252841d26df1107d3a3c47a051b24a8c39a729c7f9478c1b0ddad5c59",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b2977a59bc78c246ddd4babcb922e269915a37597ab8800ac535748468c6d505",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4f085789e069d0f74d37549627baba94cbd22a0f5d2d190eca5a4a5ad1b42dc3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9dac0d26d51364ac0c615b0db42687c0aee0dbffef4d1565fc3963b471b9503c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4f80af0806e8d5d3063ca542ff5c948de8086aeb76b5d553a45aa8251750a629",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0adcbdec59eb2f1dd8d332d566edf7381a9a541f0d186a5e387ae2c56b027f41",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_4fbb412cc3a81d573430a42f46ca0ade8acad2629e6da13cf040edf82176fcc5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_675226966160592c78a1b5688e87baf6d4aa95a3e58bbc4802a5a75c09744c3d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5073963f373873351ce0a53f9a7cebd0e4f4afe5ae2fdd6753da117d6b86edac",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9d9bac725f4e2c6ace4e5fa3b3b0413709f4090d0b524b331537f8ab23c9d1e5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5170a57ed7216583fd36b6479794f855f2a911a4202c6658bfa101f506298c4c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d6913e6c4bf57eb11fcf78eddee07d4cb1d5701c9a9c0f6cfcbecf3fe5b35330",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_53043a2459ec476487f7f5dc1f74dfc5f4ba8333ad74b7a1c440ad2ed30a0086",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_64fc0b05ce99c463319b0ca751c897351415f67ec9e371353988a87b0a358421",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_55d17ca67bff8198f4396ad6caf2374c8548c10f5dca12aab1212d35fb1189f2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_84806c49668eda1422d0843d314492ec38bdc6b0b29e1dbf91fa74732d965708",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_573bd61cd83158e3d2c4b063537ebe850e460b02b257e3452445dd803ad1b1aa",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ac84a6e8efff4af436de32123e99ee6d56b3a3266e5a0332cfd37ac94404e2f7",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_58b29344a066cf12b7ba57dfc8f5658bdbc8c71458d37dfca6c73698c8071a06",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_378b13ae808c625c4f08dd5a9acb752e8370d7fd8d5c850277d40128976c2f5e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5a15a70b2d1c3f43cc128f00d4afd4db24dab6b03fe0292d70707cfc51d05dae",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ff97067424194f1411b9c86c40a6cc38479f62ff57c8032ccd12120748a027ab",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5b0c240fa030701678bd4c926631fea9d0ce15a3623206bc75cb88fdb28f7e50",
+      "source": "field",
+      "subjectId": "sch_stale_only:application_method",
+      "reason": "All evidence is stale under the field freshness policy",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5b15d3206328846fcac56bb65ac4c833bc4e315a06ce387cfc53336f1751ca9b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b287cdce4770047c9a54dbbc44b4e757d936100cd1db10bc9c179428dd761ce5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5b849a184d4aae75b667dd769d0ef2e291f72375f907a2e90bda6d6feb8da1e3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ecc9b918310f8b906bbf924ebb55fa69de841214dd9a28cd4ba99c7d139fc3f5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5b8de9e4411f10a901abaa4bf9dda6940053fca31c80820852630d1358d6045a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_47b241d5eae0803675e6a36eba46de5c8913396e9cf86aadee60f8fa8fd34eeb",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5b940008bb61565feeefe27d78046f117fce299775387bb53b27043d23c5f83b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_66fef767d3b9abd686995b9b6fde686add7f91712835971780447a9abb535175",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5df931a9ca4b86b9e2e23d5ed0b8ae22d41f69e5f85eafc236f3de58e5314c2d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bac77ddbe8f5141d0da785ee458c2c81f66e5c1cf5690ffe6984d777f9bcac7c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5e59f96a9423644bae582339ff717c4c12bcd4da7898d79b0643e32e9f4f66ae",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1b12011052b3bd4d80955aa96a800ed27fb71d32f0b627db86e7b3d8d1c6c331",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_5f08ead4e15c6722bd959279ccded9f4162c5f810845e60ee7bfa00a6db4d81e",
+      "source": "date",
+      "subjectId": "invalid-calendar-date",
+      "reason": "Invalid calendar date rejected; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_602d6c109118d6eefebbdf18dd4c5ba92801fc87b67b272b821e979d7c3d0786",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9ce36a73ca0a72468b1434ca52b07ddebe80b77d228eec97f314ef0f62e5bc02",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6204c6ae2b6ca9a150dd9e286d6f79cc7a509f8f8a8297acb179c5f95c837819",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_972c7f1118cf94957116f19bfeeb8784dd87720c70703b45b8907d0c71c9655a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_62c22ae2d50f91adbec78b86affaf661b442308a690c2a362e2a0cdb372e1a94",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c04b07b2b0499c08afc3b8bf1e2caacacbeae5bf73a5b909f1dc5bceecab14c9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_62f93ee4b555b953ba324ea06f9ad8312eceab2ab424bc46d7eb9e7252180a7b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6d2c936d70127d88b3ab2138b4b60a17cbbafed6506a1899e89878c68e73f57f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6318ebd6f309ddc940c8b45dd4b89fcbeb3337fb2a4b47fb2d3a859fd84bd9b7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6ccca246648cad68771d4e5350a783e375ad28ff2a76f05d786b42941c4455e5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6419de36023017fc88bbf851d0b821356ca72b7165a835c5025564bbe10679b5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7457acf91c24368ae0c0f572297812d6584ddaf25d213bcf9a3b908a388a1426",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_64c5558bbc672ace2c0ea2335535434d725ba547c6a4c6b16487c688c58b0ab1",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_fa7de4721dc96fef88065b280775ba95326871809ad1d785387592d8323a5464",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_64db2d9a5d9b603b1aa9b3e1cea8a58c4d6ab3e73a380b8313f56def113a7195",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_dbff4dab266b3864428b6c8e8af0b7d61439ef3090a11d811c31029152535e93",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6588f4b887d808230c51653f5e878fe75df476b9e0f8768da2e9595b6472bdc9",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1012e03393dea898a9e406b5c108dae1c883c440c838ea0fcb58cbc90d273b18",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_65fbbebc79c1e07e5b0d463d48d51d731747583b4bfb14e2cc361c5a8143eefb",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2f7b227946d47e05a6b70bb9839e5ec3ca74dc3d843afa77d090f57ce702572d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_67abb7620c238cb7397c46e85f57df0f8f6d427fad46294316ca14e606544b27",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_598cfe7924c668633b8ed251db731ce8ecce96677cd0b8b41648518f2840767c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_68ca567e2e3f8da2f84919764a01c77ad7fbd081b00191a1bb7838cb88b864b5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a5a4c308a98086791c97165c6435698c5cb8c997fce38143e8dbf38d3f5bb550",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6b1c75a208486404a5fe118146fe356f0c6e4b6708df9ff28d2b092b62c67814",
+      "source": "date",
+      "subjectId": "explicit-unknown",
+      "reason": "Explicit unknown date state preserved; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6c12803ce5ed69f4602387fb71a88d81b035087811befc21f04b3d047436f175",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f0b26e1d1a86eae6d761fbfa07d774afb822846a8eb7fef2dc627b30863d4d53",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6cf6f271d8c2e19cdc103d9c186fcbb878a3e9564cf3cbe81d8c344332bc8612",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3b9bcaeef5c1cd07ff301c85f23b0fdd3e7ec9fd5d50276e038962fbe4efd050",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_6f1d50a77c5d36990bc22c19783b98ee27fe1ea6e068f9975345093614c411ff",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1a916bf3edd37f6532f8c98f2b2e058d8b1501ab015327ef692662539934581a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_705989290c8487e94085f4b396d3457a529a847e2a6b073e7a6e5cedb9538dcd",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_fe692f4226ae41847e7ec31756ee9c4d3149326ea5406c1bf68912380efca9bd",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_706ca779148859f46de837e5d628c8b67a93ea2cbf48e8172f13b19253fe312c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c3843075e3d5c2cb18f673ca4bba42600efb9cdd503eb98c72d7bd5a015c4df8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_71d5078475d478eecf0f437e3c5d681443897876b7b4d559820a2dfc0098911b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0ee1b515b6cdbd9002edc965c8752c964ae97683da7ced2bfbf85a997bfe1ef4",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_71f2920f0eac0245733998a259a7d2a1995447e7c5b7b2e9171448de509043b4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_210fb5d6b6faba96e8043905a5bbaae6b0b3453fac915972b3d9498213830b76",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7565e817f2bdea8319fd9831ede6798a32e60e92e0e0df889542605791c00738",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6d2b71772be6384ce67d21090e60ec3ace7ec873f00b032271d3b17a5ac34358",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7714f63fab47d4d1753996040d5e62a702fb063b3cb24e9a646cf10c617fd748",
+      "source": "field",
+      "subjectId": "sch_aggregator_only:eligibility",
+      "reason": "No current direct official evidence supports acceptance",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_77fafc095f82e1e4bff9b487b7727344946cc52f624d9ad97a62ec74c420d729",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f37caa9771e00dc9cc01bef591c28c52612b3e144287aa91fe00b034127a4412",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_786c9f3076f13994cb881db0fd2cdfa9e509a1f29a2b4913c23fadaec32ec717",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e081a8efc91d33f26279c05742447486521e9e13af2c4a90622346f506a85427",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_788f89609791d70b1f2b27d514f952b0cf14fd78c3caf5bf6b5739b99c0507d8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a5344620d55a9d8273258c2c304e8e167bc3970a6ec7d80f4a50e2609fbe5774",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_78af117b5b21329f920b936fc7b4b7c681c7e61a2c721703bb027532acfd74e9",
+      "source": "date",
+      "subjectId": "mixed-open-close-range",
+      "reason": "Typed range preserved as separate open and close facts; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7aa4d047abfdb09249e68aa72a58dda9f156e882669f1c5db350ca0229c23e35",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d287a4c020353d07355e0646b8a6851ce8894c7ad5bad9f3c34b5ae5e4c437a7",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7b1df552274c1c5997e9982fe74770c4cfb69915aa0423a58f07d23e6d5431c6",
+      "source": "field",
+      "subjectId": "sch_aggregator_provider:amount",
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7baf3110ed30f2d4af066bdabca04c042dad86d00c03a4d3235dc852713e2533",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_437fb449433c0774c8d51faa48adf73293c6fb6ddd19e84550ca20da9b6444ba",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7c8204b68bd3904e582882ffd1c44f1ff9108927622a32306e6e5677f68d0bdc",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7af6460c76dfc1d4327e32325eb6cb8a0414e548d773f3d34f63493af44d476c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7d461f88bb895242d473b259097f861968da44ff8b8b34b266bb07b67a50ab0c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b903247ae759d4ca1717edb9728563a5218860424f2856d899134270977d949c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7e561d34c027cfe6f19155542979c9bf3c402860caf5bc2b24d38b1cf045dc5a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bd7bde2129dcf4326ddfd8ca0797131406e44d2e7ce7c29add2d90e4f885417d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_7f7e01d7f873ba20a71015851f1bb03a54106ce3b42f3a1d63ef36c12cce57e6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ddcad3fc11e16ec9223eb38704097b1be12f4b5ca97179456824a16953853700",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_803085c458bd0e3de5fbdf3fbefd0ac85d88cc03b7130e44d397e76641ad96a4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_76fc9feb866e8bfde49e522bb9382174b0f6539812b72aac96c85aa2255573c8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_80517f326775dbafa9e3f6c8d1c87b7a120aa0d80e767b3cdb408efbe52df116",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1f8e8920e18b6fc6deb1ae706f16854990cd715784b5ef817c795f33b1424c7c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_806c45eb311a5938f0ae029acf944809719c2b9cc6602c0388dfa95a1c553794",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_cd6124eea65e1428611401e2c414f68e61167823e2b3303268a110062c432449",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8250daa2128d657b5f79cbdceedd4e3e47405e609eada79d01853c940c625a56",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_992b86f7414ae235ba7bf219e665ffdd7160b6f0f575058eb47d0a271ceeb317",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8261d245bb9261b33bb1923b29ae90aa963f3bb0fc27c76460152930f11cceb8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_92af95054b3141f641d32252a32d29783f67725e846fb1abe535ab2f85e8ac85",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_82831bc3df0f63d2d01a3b76a72909f59a2e741cef71128e0da539fb920e4da4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_96ef903c92825ed3cfc80699dec54e976a25252535b223fe56382e04bae07c65",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_82e74345413d491b07b4474366c5c27b48c75bb34bc108f86694d0b767a7729a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ab17a5da430d69dc9f6076c4b6b86b236e86538329e49bda18ac0448a1eddf80",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8518235243f4dd53730366a3962ada9a14013b974df3ccef4de0c95b1f9fd5e4",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1753f5af5cd89ed7cfdef1783aca9ddfb63f3483ee134a5d9b9ab692bdbca8e3",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_859a4af5f7ec40f95d3307acb6e78a95a9c80844798a7cbefad3fc117d933f06",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_724a91190713dbb28314b8b67c637efa4dbe5c626a9f0291fb90f6a87388578d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_873522a03452b8f7954e6bec2dc20dbfab8bc5f6e2951f77c6caac2c2ba85a78",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_23d03f44141963f06669460c5045a7f773acc4eb117d8b8b4966795f038f7c59",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_879c81a7f03e6b5bbb200f0e1a45dcd0c1b78c81818a426eb234f0e37515ac6e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a325bbf6a8a92476c74f26c6630d560a47bf66ba64adaefad4831b3b6420bb91",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8b659aa8b7c214182f904d56fb924b0abbdf01f88810ffd67bbe93e445c26831",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b3c3d9d051d2048ecdeda60d98d45cd46cc46ac61061ac7569828b7c75c06888",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8d34cb2a70d281c9987f54224120e5b24acea6e59d6522d35def0ed8922b9a5b",
+      "source": "field",
+      "subjectId": "sch_stale_pdf:deadline",
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8efe28ca8a8ab0f58d43d51cf91537aa0db5cfc247964bdd459b43adff433f3e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_441b8f03777c005a1064f776bb05794fe52a84ff7b10ab3d0773eb95e47fcba6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_8fadb8c3cf5204844cad3891484a3ca45281fe73a6c0fefa40d7bc5175f90025",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ecad1ff96858052e1b94b6c13208612895e8b2ed45b9efc8f9a9d932cf41745d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9072578161292ea565d01b7167ddb9d2f38362722e46277f8cebaa83d974877b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_aa81ae56169572eb95cea86e94cac7b71e3c81ccb853c5828a382456f6b94b60",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_90bd2ca2a65bd41eb67a6304cccf43bdfd0d357ecf2050a49b2633df8f74dcc7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_901a5210bbba3b36f7e0c5f886bf594774e9bdffc6d1242aab51d33d6fe86ef2",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_90e4f0b0ce0a01e91a7435c94f5aae679850996bf78e476780ee0c20b98331d3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f0654321defc57d96b9296497a9a81c36eede9c5ccab762f2817f36f7cad4985",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_929f41f8b7a212e490b1be3c1b7808042778f9a86b9e9d8940ef0cdf93aa0785",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9a9550fd16c62b72c5c24dc71360fbf2e601de12eb76b9c769903fd6d911f500",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9335aeb526ab96fee1cdb8c1c6b85fa418588045dd68d425a7ffeb1bdb11a1b3",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8dc9c51c0561a1ad10defc19ca0ed9370f5ca9b4f5cd08e378e5ea6ad16376b9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_94ed5bbd6278cfeb444a25c44d140c348f8eae8e9d6356a66738c66f2079df10",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e012e73ddcb19478bfee0046955788a5ea896e647d73ba2930fd00ff232a9b88",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_95932a62d6c3ad1b41af4c5dee1312830dcf80d177e761c951c87e24f14cebe1",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f9e5141e51a1ae66973570f06835441fa378dea1a0246388b2366e61841cc870",
+      "reason": "CellData hyperlink occurs outside the P1 information/application source columns; content of the excluded column is not retained.",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_95d1ef111812cbaa8a3efd5ead5dd3eac7273d30be71574d2f3f76f88c1c106a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5866bb43543fb5787ce766ea17dde203ba3fe81981701ad8e35d17d99af75642",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9734bf248e4a1c37c8c3845c87d110bb9303c0149c75eac9753247b693d48e52",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ca8644931c99ea99e5fb6deb46fd9fd234332241e9436e023f25c04000bf4a96",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_983f14c189b1f374372017350c5231562e6e9abce0c8bf4a49e4e94d8f7adba5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_38bd1cf574e5597482264e5a7c447f5d8cf1f0fb69e52528a408705befde0f74",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9889f48aa1fc7f630477212e5a912a00bb912fef4c2670a53337beb66b7d9bcd",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f579cf83ea5474e216787ced483c0bdf05b512df958ee21cc91d858d852f0101",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9ba2ce5b553b23f6d4f91b01f28175c60fb724e4032f48ec428383dbe8f96289",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_02cbb46bca67954abdfe0dc42ffab1021b54e5680b5a0d2a7837abf928889d9e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9c249e048b81a0a3384c1a5ad789ec9d7c9e66011b06248db0ae3b45088ca813",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c06e8409c2c3dc19a18e2de8b500707ff295f50932cea3c735fb8d2b733ed10b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9c5c5f157dbdb9789ab5db4e42fe280485ffec76c47520f4db0c0da2ba7bc8b7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_40aaaefd4351ac3bb6db85f2b359778e15bcf81449543e13300a1ee5a32982db",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_9ca660b611dfbfdaa8c46e961e66d3d833b88db14c7a8d986e31627fb926e336",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_69e5a7be22c15bb2d0bda9b3700b5ca8ff53e7384d370329f9e033e090a48f0c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a0afa6f525498fb7fc1306cfe870ef3b14baa30ed7713e977883cc7b3b63af0b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ae1ea5a330b8dce8a021afddc5c8c64c12084e5b489bd4d96daad7d0b2474d6d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a277a96993835f29d500a993ed922f07b2f3219e1dde445e8c0e4be9304891a9",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ab60eabbb8e084a4754ceb0316275f3d891f10b6e3d9467bd6b3abe991083c5f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a4ca2c2de98e13004941cb72537bf40d7416fed0d8d0726663bfae7476bcfe28",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_36ac4ee75ca83a40f4a57c7e88ce0a806eed82f281398ac8da8bdb29696d1772",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a5ccb521a3d113ce6b3ea3f6ef026a9ec33b777e76889b89304048c868a42d8a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_90608b012b7a2f47f66d56a73569b8900d1fa4811e0bb1e547b0cfb779c4ab14",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a5ee094d077ef74cdfa27dde35f49bce3f9ad5b3e7ca6f42376f98de0e9b8a76",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5ee7fc1a4b084ecb7e106afa77fd5eddf9313631900ece534efd98f390d81497",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a855c76fc10595ccdcbbb1bedf7e3e51421746be86aea6b40f7db50d1507cec2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2d284c9b78a9a1a83b7a336337ad1d67b0a2c8faa28073a87d3bb3804dbe5afd",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a8775c7b9c44ea8311a1495a85f4889085bdd72f8a7e73070f435e001fff5530",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e61bff41cb22ec08f23b9284cb958e0348279d301dfb6b77f5077c36ad372674",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a878b5d7fddf29895a0df3e77f99a053d270f3a6d69703c96612442afb24b28e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_cbd62fc0a8d22a2f236f4b383a56a0a024e7f9ee15ee2605ccc3f7718583a81f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_a9fd8f449e77efaf828d44c492e465d50aa9db4a7845c5b565d48633b2917d64",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_119ff1e18be1952f6372869fc296012665f5460c4859073e93b4c0e28acae75d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_aa5ec4460481615619f78691f9d887cddc3ca402df2b70a92d046083eca68340",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8a10b3de22ebcdf39bafd8ba9b19bb4be3f20c39eecc15b696d6c7a2f4320ef7",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_aadac50177e3071f46cbdb4c32b1b573319556f531c4376c8008c0f5f6e48d52",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_00828082890856acfb4e737300a639c454db0b96824ac23a19cc57f08df56108",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_aae77be4f336cb057fd9a2c7004693182d33d1d2803d5ec79c055a175e8b3aa0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_35460b5e5fbd61659a104a837e640b84db8779ef56964a7fcfa41d32e1f62c25",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ab046feeb75b55bd85c9333833ef4f0def7fc90f13bfb34b8d308e84b58feb99",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_20840346a93c8b0493e94433fb4c967675ecb6f9f4e45f3d6cc70ec21b68e36d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ab5717a8769c78679d60a04704fb3fc0c8c2c8f7abb588621d1cb9e9870f4214",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d739f98d804c4fcdefc6b69fa34a00aff74fb8c0f8d94fa37d1f95efda2a47e9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ab89095db39c3881cbbee0d66a474bbf54b2ffad7e338c9c0a9cf4da30742a1c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b9fb6666fb5095be17e6ae94db8556061ac0f4e23ac93c8460aeb368a35c7170",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_acd72608de360690dbb19bfb94639b6a74d70d60a7b6472ec5b0c6669cb9ad6c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f6e0cd68b1865f7ff560f5821f916aa709f98f025037583ce8e134d5a7a10651",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ad0aeb711cb9d7e6fb4334aaf4c5a9ff1a87dfaeb41e8711142fd61b6ff282be",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6b21b42e57e6de488b21c8adf95070ef264924c59d880f050c06b76cb470ccec",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_adfa6588bc73021df30c1af8f04efdb324f9c59800178367eaa1bb387b9a8e0e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_367e0c189c8751700b5b02bae8d56d76b9cf2b76fe45648a3860005775920607",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ae5a591f6954ed98faf1d3169e78a79d24fda5b82484c843c2484b0de37269aa",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0d79301efee603af17784b3f63a0021d0c1f2c55a6c6ce42025cb4e1821e8d49",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_af2e7b25a26fe3ed47d9b83cc7d9589da17efd3fc4c4705e77da02bb79f13803",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9bee354bc1b9629d2d2c44a118d09ab9dd8460f2c36b059b4f05e077b3752c3c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b197f813132b09edc06e4c147a4d3ba056777c4ed9dbb9b57b8c1574a8f14977",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a898b971db5e0c8762efdb97bc1f47e037fe1d659a15ab7d33badf9ba7671483",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b1d9144f1ea6ba432979e78c8d2bc2f7b03d2aaf2c617ff1fd13158dd3101eea",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d5ac683d5359584e1fe832b46790c29b316a705070824451eb0f842b7b23eb1d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b1dd56cdd9ed27cc44d63a3f0f04111d8845b4091af462ec397a45b1c538d933",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7ad8ec659aca3d4b8c29b59026b3c0e18313130d7b69624753c6fe12dfcda6ce",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b22b34fe4f18db44c17ee26fde76965f9fc887c56f96b3bc54071a77472956c0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_094260c3df3dbd47cb3cc8b78f14408d7dd3df4ae20e6021795b0315e09c508f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b2ce1da1e2b754f30079fdf44b50bfbacbea6043c89f85e5f5fa112c105189d7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2a94a7f6182a21fa7377afbe7c1bd9669cf7153d2ac22dfc9bb3deba4b7831d8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b3991e51dda78189e91975cc217da11eb966dd13762de6b58849a9f2c438cf51",
+      "source": "field",
+      "subjectId": "sch_parent_child_conflict:deadline",
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b49565d647d180a1541f12fb16760f5ba03e4b5c1efb6acb853bfcd3b6565185",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_401e61e52f0535021d839c2886c89d82de5b5ea6f8d7bc8dee3a70fc80de357d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b4a9ec3eafd325b93e2855bb6faf46eea9a23a4420fa807ca08343246228282a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a36520f0752f3bc30c8352fc6c9c92541ea9a4f63ead9c714d962dcc14408e64",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b696fbbca1d433c47946079ccb6d1c4824a3b51eedd6135891841a0f5fb1c86a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0e5465d654e4170705709b5124e7a615c9150e870b908b3936e9ed92862be082",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b6e8a4047a7de6b0db3adb16994c4ea75307036d7166b7e4554e9144a6063852",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3cf7cd38ef44a7198c61c166dfd35e67aac04342924b91615f31d54c9c4c4787",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b767330ac83d3cbf59fb629695ee84193b522235af9fce55b295ff702e768f1d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_17ed123839f6a3e2befa41622bae6b242902efc05876fc1b481f60b63aaddc89",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b78e9c379907578e3c50192f5c52e838bdb1ac34d300cbc0eec0087702894e80",
+      "source": "synthetic_link",
+      "subjectId": "bot-block",
+      "reason": "bot_block does not establish removal, closure, or a valid replacement target",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b7d569b3d3fa65c790f080ea8bff244e51d8ec736adbb1194111b08edd8e494a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1e0851c363c41b4ee1647cc9ef751d57267241834c44e7e922d3f7ad4cd1c4b8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b89ac73eed0de5f43da96635c22f2fa2011dedf57ed44c9b57f2b0c217415dd2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_cc2bd799ea46a54be37e879f62d7999a63490285e407e387b2a6b23fa8ef47aa",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_b914e7017e6abf6e2ab2e4739593331fb2d3cf1318daae04ce5910658c9d2cf2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_015690a30c1d5bd4736ce52053905756045f812977520a73d72a0b3f5b17d36d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ba601ea69ed9557e6e667900b7e334c7e71fdd0311d2e360b5f9d590926490e0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5274cbde50e3e694aac05c1441e751882bb849e77fa807425b66e1db80afa50e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_bbaa0ed5f96be63d8a88e3882dc84d43c0fcb1a7c1cf1895c4070e4c81d4ff4d",
+      "source": "date",
+      "subjectId": "informational-month-only",
+      "reason": "Unrecognized date text preserved as unknown; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_be39aa87fc224f69243599789e2c99a8585218d91efc4ea0a3a39e910573086b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0c1ffe8592ba7583ecbd445fcde150d56ef445e12a5a461c52980fbf20fbfad6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_bee2ee44d25bcb423f640265f0d4fbebb843488810e8daf019bd3469855866f1",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1a42c6cb55b238736233ba24c15e72d12e2a0f678ac95c09378ce8da2e41565d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_bfa355202b96a18e0bbd5b038bea4b872638f4c8ee49fbdf7365c894dfbf5683",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2d72d78bb3d7214ed638d966e16ead0278a6fa970f0c2927045f3a45ec289d1a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c0620b7ac5dc226ff38b72029b3c1e0c0bd5a60451cb69e43cd9df0bd763ed8d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9ea922f8f8a06d6bc37c80a19658ffc4e31173d1ef7ada7274b1c077774364cc",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c1e6e6eff9b484ab3cd8f5da0fa7e3a99d67746b20048b64fea836b0e6578dbb",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_d9416c758f3b921bf68b9e74ff9dd79655b1d2ae28a42d8252a6e282e9024309",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c20855ca9fcf91231525b2a16d1e3f17356f9a3bbf7e2cf7efa1b610b35b22f8",
+      "source": "synthetic_link",
+      "subjectId": "rate-limit-429",
+      "reason": "rate_limit does not establish removal, closure, or a valid replacement target",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c20c373e41d75806e5ce23966616302e31cad66ecef0e45375ae64255df96733",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5ecda8c771080abd37776eb29c5bae58387a106c867bb90f30d1b42492097026",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c25784d4030e66dca2bead53e4bd5895c417e686d20523cbb340948d9c386264",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9efb8a244fec4669b0fe8d42dbfa935560e414ddd7f95c899333339ab958627f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c2e5f3f6253ae7d0fd960538f29e8d57cccddd60c62b14dc2c89988fbb98e813",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c1d20a909a39aaa5d4975b007affc3309f9a4306c235e80f7528fa7ed75e7117",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c39413a56dfd98055981341189dfe16fb0ee401ab2d2583ab405edf76e61863b",
+      "source": "synthetic_link",
+      "subjectId": "server-error-503",
+      "reason": "server_error does not establish removal, closure, or a valid replacement target",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c4089ed7663a1266ffb711425c49a44b95cd1ede8d659ad4f887ce0d39807d1d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_38570935599719a944f710601dc734a267d716f30e5b957cc3b11c5595fe85aa",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c417017fc7cbf51211cf6a747fd8b760091fcfd6b84e07742fffc34958be7571",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_868e672e66a0e320dad1c322231aef3d1dff19025371a78771bca367d84496df",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c471dd9e8451b8ebe4783232e1c1f0e93f54d73dafb1e837d2b840ace8073c6c",
+      "source": "synthetic_link",
+      "subjectId": "dns-failure",
+      "reason": "dns does not establish removal, closure, or a valid replacement target",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c48d1b02e6f8a8e848e9c79b465363fb37bf5df9170893eb5ef9ff79a995c16b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_03e8e25cf5c00b7f9c50a9acbbf42ec253d9c534e1f951b5014b7e95580bd4ed",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c6854c1a7731025847b86df107fdb9101678543e8aabbce8a8aecfd832a28d9b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ba9e29ae2503abaf227387973d7ba19b5897470c08b8562f96e9d5046288a2fd",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c7d1440f73416497338b3627faed83fac980f5b9a62b9bdd9fba6e1566c56e03",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8dc57f2c0c8e73b43c7e65da83183062e2a420d5ed36de78e81e19fcd62eeabb",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c8560dd27df5c351fd7a0eadad428556bd6404c422c0d7b2b914fafd46f2a756",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e9876163cf6559989f7d75560b587b96a25f1d239d84127915bde4d67b3998c2",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c86ba0897b0b68af941243b7c4341e385174531759b86b3b2d0b2bdf95d46ed7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_baf57ea95c1e99bf645d8956b069c24c8530102a018afeaef7b8ef6207a69728",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_c88a05b1613f528d8034de1629e99861169510fef8a23fe830cecd0890528d6e",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e3bc12649db4bf5157552ca23ec3acd339bc840e86d4d1b20966c21ee2160afa",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cbb1ef2daf94ea4eae3591f36d2eff1dd64fbdb3686fd4f396f1ec23c8e077aa",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0ea1b26ded72cbdd4f5c9540b0219d0e19e4f2304b15d32286c9fe09874eee4a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cc87eb7eacc13e57679cdcc2935f4251634248e3a2ff123a0f723d2048a1d09c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_22c609fb3291cf1a02822ce60c495f05e6f553ecdfc2fdfed31204f316b5a8e8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ce0324c0d58c26d9fe26b122cea172fe5ddb9b8c508bbc33c20fdf2348938068",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_099af2f2ed0ff3b7c5c911a790e2c047fce489f6ab7ee27043725cbc7a2a19ef",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ce12fff45de5941b1664c4490861b8f600e85224c27fd8ed55a690fce3c27e4b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_131faa07e93e43aef765b04a5d5a1c80ebc23bbd990469aa20eb9facec68d6bf",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ce69173d887eb06c1d8aadf2f2d97271d1963460189b020a2e33ad108584ea74",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a67c3fbcf99da3d21a598e01e9b351a51807733c07ff735f90090c3af5ed27b5",
+      "reason": "Duplicate rich-text representation is preserved separately; excluded Summary content is not retained.",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ce8b5ca41b07d816e4267ad02fee129c614643324651598f83ced154a78ea56d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8d79444d087b830d6dfc4c9231160f313bd6a5f2f5a6685910249af716026202",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cee058a2b9972617f8eda23dfeaca673f28c6343c99eb9853002dac6513d38fa",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_87148228994f1fa98a8f612178dceeeb7465f1c2bd46aa9f0c82c76f92869f6a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cef73a44403b761443967d5761820976f5c345917a0556c964593ed9fcfc7fa8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f29d5e83147b1b0e5048e8ef4948435d26fbddee08a00b59af659734cf849885",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cf1f2a59d430cd56acfd8c7ddb13944cf8a7810f42be0ab0e2ba41fd2bfb24b9",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_793bb596059572f57bb3a5c3cc2c05bf713407f9c1bff73e6f6f765f1f9aa5d0",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cf522729408e46de306b0a487b8f8a07481fc67800b524b7e27ad2372bf46661",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e0592269d970d708d49868adb047b41ce7902f8385d5894f97b9d6bafc5a9d56",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_cf55f683454f7ffe0b4caf3bfcab00df707efffdb197a424fed5c909b23fc78b",
+      "source": "synthetic_link",
+      "subjectId": "login-wall",
+      "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d00f4de207a1f431555e24ccd833f982c3eccaa304ca1a70977c76082c0f1321",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_2326e390ff3ca7dd903ee8feca47db858fe25c4364319de21d4e116585c18879",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d014754896d50766e62647e892cd147d86db61bd48718d20b31fff5c9015d51f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6cdc21fca916c9bbae6c7c6b6816958a8f097168edff5a3ebee35110c2a71823",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d125f90d5ceb7f69dfe1963f0a28877cf1b58e1784acb10a5ef3b5581e24b45c",
+      "source": "synthetic_link",
+      "subjectId": "timeout",
+      "reason": "timeout does not establish removal, closure, or a valid replacement target",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d1336953a90b9889832d6cb9ab3bed2098cc37d0dccd9d49cc657470d27d7735",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9da276f980ad6fc9dbbdadd685a50cd964eecc05f134eb9c87367170bb527d32",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d173ef2d08dc41024ae447439b069bb2bf5f28ae250eb22f1534f6f6723cb028",
+      "source": "date",
+      "subjectId": "approximate",
+      "reason": "Approximate date text preserved without day-level precision; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d18264b1db3ce36b832fc00b63fb22431f6feead36237d31cbf30fa86ae411f0",
+      "source": "synthetic_link",
+      "subjectId": "stale-direct-pdf-404",
+      "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d1baf8faba6681aec89695e580c5e251ea233db5c33749e5ce00349d852c5c49",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_263fc932c02dacff0b07bb20f9c74edd1a21c1d412bd0a6b52c15e47808df10f",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d288e0efeeb0370060fbeaa3759a472023b42a9e2ed116a859d32eaa885966c0",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c35394d0946f16ed6fffb13be22f1fd2722bff1e0960ea57a6f7c6c366d19b5b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d2b32721e29b5749ce4a833053237208e65bdca964dc7dce84b01f56dfaf1448",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_26ef6722e90fb9ebbebb98b7ad5a4d57bdc947b442c161d5f009105a10ae34ac",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d318220239ac680e82f10c74f98e11010ff64409e0d1fc19352f850940e02fff",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ca6ae3e84f50f911bb571a4f31adfe6d7d8fd77cf6f2e33bb506e2bb25990566",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d6599572c5ba22170b1d2e8fc2535e45d59b6c902a74f4887852ff98b570417d",
+      "source": "synthetic_link",
+      "subjectId": "dynamic-near-empty",
+      "reason": "dynamic_shell does not establish removal, closure, or a valid replacement target",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d869313acda9ed78e6a84ca382e0ebb0318f7a271db85ce9714e38c48d775972",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_dfbc91406d9a4ad2a4abe0b5ff5faa4125e443ca7ef57b51332165aa54bbdbed",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_d9054ff2e2828f81ef2e60baedbfa1ab342135b7af1227541d8b280f570b6727",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_befd36db0baadf1affb9c3eef1bebfee0d8b77c5198fcb521d678ce6050f7656",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_da5128e5c6a719d7c1d0be3b9e0727f1902b7ea1e879b347826e32638594a8b6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_42a3de59d71a2c1e921c9343a6e5ddc150d480011ec427cf806d2734505476c9",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_db179150dffc51d0b138603991c61e55cc12b08c72eb3bfabf5f0cf3e9ba2a12",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_971c5911232e791fb6eff83db09c0c2c2df9c5c432e364cb1d4b8c34a497317e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_dbddfbd35330ca7cea70a4ed90760c57bf466da18959eb58d4f193db8fb9c752",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e476275e4833ee2cfb136ba21ebe279d42f3001e19c5ee819bd02c0457ae8b73",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_dc7657d35edaf42c92a692d3793a3d007eaf4e037269a0f35ef29185e5d334b1",
+      "source": "date",
+      "subjectId": "month-only",
+      "reason": "Typed date preserved at observed precision; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_dfb3fcbcdd2b12981b7728ac0b261e5e9920e47ab70a52b13a562e8f39576ab5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_368670fb971ae6e09eab2bc81fbfa5150a6544b49d18fa8e32e9058b53a91aa1",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_dfcea95ee5ad2c3485a5f00ea28b8a1d535c6356bdf2b4177769c6448c891a43",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ced63b44be98d9baffb6b718f705d66b41777f706816f34797c1f1e01cc140be",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e0cdb1bd5573d1ca8bf33cfe98e0f1e2ff80c50f1a1467a42d3ee7aa1e394a65",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_bdf18abd4a0d384f53c21299f6136eb7123f8a63a57402051ff8da59584d44a5",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e22db226f7b5ad0c1b47f90710265b20c476f4c5012c1a7be8d57b34093d6177",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3300a85edfd671e8a2b81778ff1b34e47ea846aed6d67310ae42d59ba3e8e4b0",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e311ef3b46846a77aa689995fb2d1c21ce91d13015f3a3d5ef91710cc7664e2b",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6bb484f512b66320ec26becbe976533a0914228fddd109f7f17ce96126b3ca11",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e5f84a8ee5f8de3ef01f2a0bf32e73602d3d867c6644f48d2683d21db123526d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_fa3102b39588a12580bea778ca4ad8d52d3bf3a5b8524424660916f36f849cdf",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e6972a03a9c33f35d59ce9d920c89f7bea896ae587ebbbab69bd898e65644634",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_7bcc7ae7d246c757da8064a29c3239437689c165c1a6e7d98445d9c609c19b9e",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e6a1c62ed8a25027c0df2c8447e08a2f52f8494525385e09272fa6ebcee6de41",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_6f84cac58c857c0c047fb0383aab731ec96585b597fa09d10c920df03d62a310",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e6f4018f54c830bcedb9cfbd3d2cc6eae0abeaead4678b3738e24381a1d2dc8f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_df6c4e6bf578f180ab972e8f3249bb04119ade88200b30c0047d4fbdd8e96efe",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e702a528bf5ef10948cdb281f62b6ee10c1c247b765015fbcd70de794a024a4d",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_90d94d6d0a2c9c4bef19d3d4f30ea903fedd02ad190a98da1ef86a4305f1fa7a",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e899e1b99392f0e1271a9a7bd85be58ad78795dc5cf80139dae20c0a23341601",
+      "source": "field",
+      "subjectId": "sch_eligibility_conflict:eligibility",
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e97061ba8b3b488385d239bef48d5fd0b0bf2fd79556891b66e6ceae5116751f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_29604fd0dc03a155defefb46ad311a8cc538255ea2f6927568c03274748d61c2",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_e9a6bfb7b4c00c94670cb5f1b7ecbd762a00ad69ffa9c2b89bc6a13bcda0a0c5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_a6b396be408d84d092a747de383e5400d5aa4b0fda1b07d0640c3bd625d5aedb",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_eb096a3114e67d1be231533580f6141d53363ed21b6d1c5bc43a55dbc27658de",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_9751bb1fb4cbe396d0a91e72cbe3ca7192473c432f59c703b0cb666577500e3d",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ebfa74da075ea1177933c553f012f5683d0ddda6e68ec66593c285545694bed2",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_e971b0628465dec463bd87abe7ee456c355e2fd79e1717023929952ddd86208c",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_eccbebf5713e2c6811f1bc2fb268871db403751110ccbff347b3172b9f4d4d9f",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_5833a00b15a7736a90e0fda2696ee11769a715d137470897f87cf3a3d0ddfef6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ef8e0d6a74a73ce48e95b5a5d5ce602528bf0708067418d3af21bebb29977af6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c0d3a7f9e96ff00b6a919168b7cd137c3432ed7a878365cee6774e2c573893ea",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f068efa746c45695824e6ab9e63a93353bd93adbb1238c9433ac075fb8f864b7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_86f3779be80eff49ee766509d1854111d15c08aa78620a51536a8acd4edb3fbc",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f14a8ab09f617549939f4c1cdf3773d68e643799f2bcbb5f9aa88c90bbb424c5",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_b4510e3a8e72842aa8c8c5581e27745dc13b9a6b2646c1b270afa899b15f3ffe",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f191ef50ee47e843a98ef446c1320082970860e93d990d002e9621e7d8dbf1b1",
+      "source": "field",
+      "subjectId": "sch_deadline_confirmed:deadline",
+      "reason": "No current direct official evidence supports acceptance",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f33f0a592aec09d056c91133ef5f0d400592a3b230e456933e6d14e59029ac36",
+      "source": "field",
+      "subjectId": "sch_method_conflict:application_method",
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f34dbd6500b2e99270df55dbe05eff788595f160b972cb313683df76f463ff26",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3af90b6df54d8dea2e39f4a53df5ba13f4c64f20a53aafdc0e9a8ae1fc42a6e3",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f3aa3de4ef19c10ee779f943e2f52f7d57a727bc477366d8123d7890e0ac7a30",
+      "source": "date",
+      "subjectId": "invalid-serial",
+      "reason": "Spreadsheet serial is outside the supported date range; resulting cycle status is unknown",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f3f25c5c2447886a5f13ab9cf6e28845e1b9ecfda73798e9e1718106b6480600",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_65257518e96052091dfbda47a2ac6e1fb8badb1600012d80b4c98718d8c3f10b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f49fe036c6e76e5f26df3db8c95e814d65b1ebb987992a83ae863b1ed1eef475",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_01051d6d7ed009b6acb7236044bbae3f55fac838a0f1e202777b49aa472048d6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f503316f2afeec30bcc3a771e0a1826d17bee2e74c1077560231df5ac57f5f56",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0ae85c97638088d1f08c7288b3d293a94bd614d8a0201e1125de4f9f4858dfdc",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f5448c4475bd8692b9a716f2091660dae98f7db8699c16739227887843603aa7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8c5ffa7c4b1c70f7e7227038e27eac70aafd6a43103d39dfe5b96ed708c518e8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f563fc462dd51aa11290057a3ae0611ab92ef1b2f8825136911e41d1cf7a1a71",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_605685d84433b800320892102209df9cbe368557fdf5bc888bed985f147c76f8",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f56d0b4df507f1bb566e2fd99819ecac5b37ad4ea2b2af970be32313dc9adeb8",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_f810b258753f64180d4c2e913dd794193cb3a6b66e6945385b4d42f53fb00eb7",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f66a352c878f1766db7750114f142c3172a2de995ad2bfa56e830ddb23b1865c",
+      "source": "synthetic_link",
+      "subjectId": "off-host-redirect",
+      "reason": "Reachable final target observed via off-host redirect",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f689a7fca508b1f0ca9d191933d3ac9962bf5861c881dd2045909d365fe991a6",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_ba4fc11beab80a566b26cdb978b807ad760afc7d9d73d4c46067b95def818821",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f839f5d673523a0f6c28e7277dc47de29c2e3dea950622baa87378bd9ae0e873",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3792981d61affc8ffbf07d51c5e6edb0782b0b2b8d879dce6f7ad581f5cf2da6",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_f91f66f15075f739550d3c62812423cc589b3662871833c7dc24bc2c4bb1278c",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_500fbb5ac1a283cfa43cd5d2c8a843b0fa64a8f6753b5fcdb9d0995d903c91ad",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fa7061f5ae8dc140fbc45b65b6d1aa9e680ae55cfec41539b3141647ec3bf736",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_8209646872e60b76d683e3f4ec61f59b1667dd8a92661cec5bd37afff5732113",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fb512ffbc7594b894fda645d28c52b919a520a8188f47974f568abf4347aab1a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_1dba6dbf02a39f261778a6525c27bf9578cee0bd9b5f55f00d3b441834d55a8b",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fbf6ee0dbb1030bb73e21fc90975df5bcff736a0d9d49043114cd3c3657acdc7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_65d663f56201bd3156390049ae88edb632ec20121291f26cd53e0a9a97a78191",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fd065894c48055710325051c0a755a1d4b513049c833c6d2290817ca98d17325",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_3178fa549c18b1e8f03733ee6c13c247d2a44396f910e110044dfa00cac810a0",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fd5ad827a8cdf0e33e97cda9b15e25f544d27de69bc6b7961c2a143220a912ed",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_023a53419a0be20a2419e284099f37252452160e3d10bdf758b1e262ee7f6129",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_fe7cef86091535f1d5722cee7bc219d4be07a319812f2c4cb56bfe931578450a",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_c3358b4b11d07fdba35247e927011c204529be74faf88df9c85962cc9925a239",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "medium",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ff8db4b3b81711e0a51d394adb4ad18002572a68054c412d97962d849089b6a7",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_01f7c64e875385cccbb38170ed45fc66afb2e2c721d46695db1a90ade41451ce",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    },
+    {
+      "id": "p4_review_ffd747b079aa96de26a2a666b590161f48ab6efbcb9cf8204510bf19a4ca2397",
+      "source": "pinned_cell_data",
+      "subjectId": "p4_0e4d943b179b5ccee7ebc9f55d1d0cb415f04fd71eb46a0e2fe3e9efb3781ef4",
+      "reason": "Pinned historical CellData representation is accounted for but was not refetched by the deterministic fixture run",
+      "severity": "high",
+      "state": "open",
+      "correctionEligible": false,
+      "targetStage": "P5"
+    }
+  ],
+  "reportSha256": "d11301f1653bd9dad3ed2b940efb5f0a3f70328f2b5091f7253d8d87c5cf911d"
+}

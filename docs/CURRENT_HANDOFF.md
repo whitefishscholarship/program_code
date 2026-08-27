@@ -1,15 +1,184 @@
 # Current Handoff
 
-Last updated: 2026-08-26
+Last updated: 2026-08-27
 Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P3 replacement-candidate state
+## Current P4 state
 
-- Active stage: none. The first local P3 acceptance candidate was rejected and the
-  remediated replacement is pending freeze, independent recheck, and direct-child
-  attestation. P4 is only next permitted and has not started.
+- Active stage: none. P4 — Accuracy and verification engine — is a local accepted-state
+  candidate after corrected verified-state predecessor `530df9b` received C0/H0/M0/L0
+  and the same reviewer prospectively accepted the exact state delta C0/H0/M0/L0.
+  Final freeze, regenerated manifest, same-reviewer exact-candidate recheck, direct-child
+  attestation, and delivery remain pending. This local marker is not durable delivery.
+  P5 is next-permitted but unstarted; it cannot begin before P4 attestation reaches
+  `origin/main`, and its sheet work additionally requires direct write authority,
+  revision fingerprint, and backup.
+- Verified `origin/main` and P4 baseline:
+  `268758f94922f90bf307229d8633da05b2417c4a`.
+- P4 branch: `codex/p4-accuracy-verification` in isolated worktree
+  `/private/tmp/program_code-p4`.
+- Entry validation confirmed the exact accepted P3 candidate, direct-child
+  attestation, manifest, C0/H0/M0/L0 review, PR merge, and clean current machine state.
+- P2 schema version `2.0.0`, P3 acquisition report SHA-256
+  `b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8`,
+  P3 completeness report SHA-256
+  `d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020`,
+  and the exact 34-item P3 fixture denominator are pinned P4 inputs.
+- Production spreadsheet identity remains unset. Testing and production spreadsheet
+  writes are unauthorized, and P5 has not started.
+- Baseline `npm ci` installed 565 locked packages. Baseline `npm run plan:check`
+  passed for all 10 ordered stage contracts after the restricted runner's local IPC
+  socket was permitted.
+- First required P4 governance checkpoint: `18f0961`; implementation checkpoint:
+  `2fbe817`. Rejected first candidate:
+  `2a9daa87b62d60e21d14ed6d4c639f6459ed40ce` at C0/H4/M3/L0, with rejected
+  uncommitted manifest digest
+  `ee8e919b05e6cd1a5a48e6717ae2173141dc7705bc880192c061456295d77370`.
+  It must never be attested or delivered. The replacement will receive a new manifest
+  only after it is frozen.
+- Rejected first remediated replacement:
+  `c26cbb94086601136bfcd3e5dc5ce77716296365` at C0/H3/M1/L0, with rejected
+  uncommitted manifest digest
+  `e020edad1d56429e125f21a2286c58f84a8f0e0bae23d826bd6da368cfd05853`.
+  It also must never be attested or delivered. Its findings cover later-stage P4-check
+  compatibility, canonical authority/relationship provenance, DST-fallback ambiguity,
+  and URL-equivalent source identity.
+- Rejected second remediated replacement:
+  `6921ac1403ab24d253d72d23187164b8f6735459` at C0/H4/M2/L0, with rejected
+  uncommitted manifest digest
+  `1b6835a33d5546499628b2a8d7b9a7ab831c8533a01abf6748ff293981dcf11d`.
+  It also must never be attested or delivered. Its findings cover fixture
+  self-certification, conflicting relationship bindings, stale provenance, canonical
+  URL identity, invalid timezones, and soft application redirects.
+- Rejected third-remediation replacement:
+  `95b8ead1deb8c293bf5bfee612695ce8f31657c2` at C0/H3/M2/L0, with rejected
+  uncommitted manifest digest
+  `a2ea71fc76332ab8a9eb69e06309ed8bf9826e5dd9a385090046ff986bb3d5ce`.
+  It must never be attested or delivered. Its findings cover residual relationship
+  self-certification, missing positive precedence coverage, contradictory directness,
+  offline receipt provenance, and unmarked nonredirected application HTML.
+- P4 reconciles all 270 historical CellData hyperlink representations, including 92
+  hidden application hyperlinks, plus four explicit offline methods. No representation
+  was deduplicated or skipped. The deterministic run made no spreadsheet or public-
+  source read and does not claim those historical URLs are current.
+- Fifteen synthetic target cases yield three reachable, two redirected, two dead
+  targets, and eight inconclusive outcomes. Zero network outcomes support award closure
+  or archive; the two dead targets are eligible only for link-correction review.
+- Twenty date/cycle fixtures yield five active, two closed, two upcoming, one
+  unavailable, and ten unknown states. Zero unknown/invalid parse results become
+  active. Mixed open/close strings, serials, annual/rolling rules, approximate/month-
+  only values, explicit time zones, and year boundaries are covered.
+- Sixteen field claims yield 16 complete receipts and nine decisions: zero synthetic
+  decisions are accepted, all nine remain review, and five conflicts remain
+  non-accepted. No spreadsheet correction is applied.
+- Deterministic working-replacement report SHA-256 values: links `522d42a1bb62`,
+  cycles `00cf5ed3c434`, field evidence `64ef64820fb6`, conflicts `3d9d1ff8a263`,
+  and reviews `d11301f1653b`.
+- The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
+  `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
+  validation, typecheck, complete tests, permitted network build, and root diff check.
+  The restricted build failed only on existing Google Fonts access; no configuration
+  changed. This matrix belongs to the rejected first candidate and is not replacement
+  acceptance evidence.
+- The reviewer findings and completed remediation cover exact verified/accepted-state
+  generation, unresolved redirects and unknown successful targets, future exact-time
+  windows, runtime-validated canonical Source/Evidence authority binding, duplicate
+  identity rejection, fractional spreadsheet-serial times, and year-qualified Annual
+  recurrence. Each now has a focused regression; the same reviewer must recheck the
+  frozen replacement.
+- Second-review remediation additionally permits the permanent P4 check with a later
+  active stage, requires canonical classified Source authority and scholarship-link
+  Evidence, rejects DST-ambiguous exact local times, and canonicalizes URL aliases
+  before identity/uniqueness. Each boundary has an adversarial regression.
+- Third-review remediation removes fixture authority/direct self-certification,
+  preserves upstream P2/P3 URL identity semantics, rejects duplicate subject bindings
+  and stale provenance, fails invalid timezones to unknown, and reviews soft
+  application redirects. Synthetic fixture decisions can no longer be accepted.
+- Fourth-review remediation removes report-scenario relationship input entirely and
+  fixes all report sources to unknown/indirect discovery. Private test-only canonical
+  records exercise two positive acceptances and all required official-source precedence
+  paths without entering deterministic report evidence. Contradictory directness now
+  fails schema validation, offline authority survives into field receipts, and unmarked
+  application HTML is reviewable with or without a redirect.
+- The replacement pre-freeze matrix passed from `2026-08-27T02:29:43Z` through
+  `2026-08-27T02:30:50Z`: exact locked install, deterministic P4 check, plan/history
+  validation, typecheck, complete tests, permitted network build, and root diff check.
+  The restricted build failed only on existing Google Fonts access. The unchanged
+  locked audit denominator is 21; no dependency, lockfile, CI, deployment, spreadsheet,
+  or provider change was made. This matrix belongs to rejected candidate `c26cbb9`
+  and is historical, not current acceptance evidence.
+- The second-remediation replacement matrix passed from `2026-08-27T02:57:11Z`
+  through `2026-08-27T02:58:26Z`: exact locked install, deterministic P4 check,
+  plan/history validation, typecheck, complete tests, permitted network build, and
+  root diff check. The restricted build failed only on existing Google Fonts access;
+  the audit denominator remains 21 and no reserved effect occurred. This matrix belongs
+  to rejected candidate `6921ac1` and is historical.
+- The third-remediation replacement matrix passed from `2026-08-27T03:18:02Z`
+  through `2026-08-27T03:19:07Z`: exact locked install, deterministic P4 check,
+  plan/history validation, typecheck, complete tests, permitted network build, and
+  root diff check. The restricted build failed only on existing Google Fonts access;
+  the audit denominator remains 21 and no reserved effect occurred. This matrix belongs
+  only to rejected candidate `95b8ead` and is historical.
+- One bounded read-only NFU landing-page scrape was recorded at
+  `2026-08-27T03:31:51Z` in `docs/evidence/P4-live-observations.json`. It is
+  observation-only and digest-pinned; it does not establish any synthetic field claim.
+- The fourth-remediation replacement matrix completed through
+  `2026-08-27T03:44:56Z`: exact locked install, deterministic P4 check, plan/history
+  validation, typecheck, complete tests, permitted production build, and all cumulative
+  adversarial regressions passed. The locked audit denominator remains 21; no package,
+  lockfile, spreadsheet, form, provider, CI, or deployment configuration changed.
+  Final deterministic/plan/type/diff checks passed through `2026-08-27T03:45:44Z`.
+  The commit containing this record freezes the replacement; new manifest generation
+  and same-reviewer recheck remain required.
+- Preliminary-state independent review accepted exact candidate `0adbd79237aefcb489b0278d5cd4c05038eed62a`
+  for correction at C0/H0/M1/L0 against manifest digest `cf7a1fc651a1`. The one medium
+  finding identified a stale narrative fixture digest while the fixture, manifest, and
+  all five reports consistently bound `3607ad0d91d7`. Disposition: corrected the
+  narrative digest; owner P4 implementer; target corrected verified-state replacement;
+  state completed. P4 remains verified/active until the corrected exact candidate and
+  new manifest receive the same reviewer's read-only recheck.
+- Corrected verified-state candidate `530df9bf01ba660375b0d04d5ddc2d442e2b5405`
+  was independently accepted C0/H0/M0/L0 against manifest digest `dfd5ace395ec`.
+  The prior M1, all 15 paths/tree hashes, five report digests, live pin, denominators,
+  tests, and P4-only boundaries passed with no remaining disposition. That review binds
+  the predecessor only. The same reviewer prospectively accepted the exact P4-only
+  accepted-state delta C0/H0/M0/L0, and the user authorized this completion path.
+  The resulting exact candidate and regenerated manifest still require final recheck;
+  no P5 or spreadsheet effect was authorized.
+- The accepted-state candidate matrix ran from `2026-08-27T04:15:45Z` through
+  `2026-08-27T04:16:19Z`: locked install, deterministic P4 check, typecheck, complete
+  tests, permitted production build, and root diff check passed. Pre-attestation plan
+  validation reported only the expected missing P4 manifest and committed review/
+  attestation gates. Code, fixtures, reports, and external effects are unchanged.
+- `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
+  cannot start until P4 is accepted and delivered and separate direct informed testing-
+  sheet write authority plus a verified revision/backup exists.
+- P4 external effects to date: zero spreadsheet reads/writes, one bounded public-source
+  landing-page read, zero forms/application interactions, zero applicant values, zero provider contacts,
+  zero accepted corrections/archives/merges, and zero dependency, CI, or deployment-
+  configuration changes.
+
+## Historical P3 delivery and replacement-candidate state (completed)
+
+- P3 candidate `9e4230c3012f41f6b70cb47674fdb95dd1de333c` was accepted by
+  fresh-context read-only review at C0/H0/M0/L0 with manifest SHA-256
+  `1970e8b952dcc4696db31a3282c912fae45b6fe237d400e87794113d3ba419c6`.
+- Direct-child attestation `ff058bd727af22c145378588c2d7e54a2f9a880c`
+  added exactly `docs/evidence/P3-manifest.json` and `docs/reviews/P3.json`.
+- PR #17 merged at `2026-08-27T00:20:49Z` as
+  `268758f94922f90bf307229d8633da05b2417c4a`. PR CI run `33026405321`
+  passed; the Vercel Preview status failed under the existing author-access rule.
+- Main CI run `33026531417` passed. The Vercel status for the merge commit reported
+  a completed Production deployment. No deployment configuration, identity, or
+  permission was changed.
+- P3 is durably accepted and delivered on `origin/main`; the detailed candidate and
+  remediation chronology below is preserved as historical evidence.
+
+- Historical pre-delivery snapshot: no stage was active while the first local P3
+  acceptance candidate and successive replacements awaited remediation, freeze,
+  independent recheck, and direct-child attestation.
 - Verified P3 baseline and `origin/main`:
   `2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3`.
 - P3 branch: `codex/p3-architecture-aware-acquisition` in an isolated worktree.
@@ -142,11 +311,11 @@ Default branch: `main`
   direct-child attestation are still pending. Until delivery, P3 is not durably complete
   on `origin/main` and P4 remains prohibited in this session.
 
-### Deferred platform and dependency issues (not P3 remediation)
+### Deferred platform and dependency issues (carried into P4)
 
-- **Vercel Preview:** PR #16's Preview deployment was attempted and blocked by the
-  existing `Franscale1922` project-access rule. Main CI and the Production deployment
-  completed. No identity, permission, or deployment configuration was changed. Owner:
+- **Vercel Preview:** PR #17's Preview deployment was attempted and blocked by the
+  existing `Franscale1922` project-access rule. PR/main CI and the Production
+  deployment completed. No identity, permission, or deployment configuration was changed. Owner:
   repository/Vercel administrator. Target: resolve through separately authorized
   access administration before a Preview result becomes an acceptance dependency.
 - **GitHub Actions Node runtime:** post-merge run `33018750958` passed but annotated

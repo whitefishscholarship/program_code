@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "generatedAt": "2026-08-27T18:00:00Z",
+  "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
+  "pinnedInputs": {
+    "p2ModelSchemaVersion": "2.0.0",
+    "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
+    "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
+    "p3WorkDenominator": 34,
+    "p4FixtureSha256": "3607ad0d91d75c12fa847070ce10ea869f410c4d0ed4513b32aa910dbc6f6c9c",
+    "p4LiveObservationSha256": "80c328a19a9b189f1e922d6d9e0ec42fa68ed0fa5c0ef8e38b95caf95faebea2",
+    "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
+  },
+  "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
+  "conflictDenominator": 5,
+  "acceptedConflictCount": 0,
+  "conflicts": [
+    {
+      "id": "p4_conflict_91494f8955b2c4d3144ad6b95e73d34aafe6f7a20bc9766f783307d9d55a0eae",
+      "subjectId": "sch_aggregator_provider",
+      "field": "amount",
+      "preferredValue": null,
+      "accepted": false,
+      "evidenceIds": [
+        "evd_65f4f7af8cb0d36ed3e9bd8b82157831944b3f1a2b7b6526613b602049f36983",
+        "evd_b43c36dd712eedfb569fe64323d29366a9658af80df2b7e572226fb21251e32d"
+      ],
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
+    },
+    {
+      "id": "p4_conflict_302c141b721d6000e1c9fd031cd31b9d7f93fef1e0a03fd004e46246604814c6",
+      "subjectId": "sch_eligibility_conflict",
+      "field": "eligibility",
+      "preferredValue": null,
+      "accepted": false,
+      "evidenceIds": [
+        "evd_ab802398b8c072bbda5baa9c237b94b37a798526a538d4c2efd3323a30599f58",
+        "evd_ea114db8a75f3cce9957598c35536bbcb8e983d2a85c3ef279dafb30f9fb811b"
+      ],
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
+    },
+    {
+      "id": "p4_conflict_ededea8d57ddcca3f71fb0b48d245dfef0d03887f57987843c6b327389b4bec7",
+      "subjectId": "sch_method_conflict",
+      "field": "application_method",
+      "preferredValue": null,
+      "accepted": false,
+      "evidenceIds": [
+        "evd_912c7e66a2d824a495c1b2b3f132f01cf1f816768f2afd711dd1d37badc10190",
+        "evd_a9c0f41a08e333e1edfd6453957c5142e0b3ea5f856a853f6a581765431c3632"
+      ],
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
+    },
+    {
+      "id": "p4_conflict_a8118556cba18a1c7b31eeb229bf78089ff294a46d40f1fb1d8f1159a1ce2867",
+      "subjectId": "sch_parent_child_conflict",
+      "field": "deadline",
+      "preferredValue": null,
+      "accepted": false,
+      "evidenceIds": [
+        "evd_9eb0584dd7720408fae30e6036487cbcbd40ba6f284960b4ba91e34e87c55b91",
+        "evd_e42dfaab50df00dac0ea7b75e62d9f6bca93753ec8442ca9b4ae30dfc23b25ed"
+      ],
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
+    },
+    {
+      "id": "p4_conflict_5c993445a2af525b967aae514e6d3975aea432b0a67e8f33ace3f44e1477f939",
+      "subjectId": "sch_stale_pdf",
+      "field": "deadline",
+      "preferredValue": null,
+      "accepted": false,
+      "evidenceIds": [
+        "evd_a35de4c6136c60a03fc835bc47ae257ab4ec8416de5c1266e47a5915664650e9",
+        "evd_e1ff7e690a088dbafacb180d935c84706c704cb9a08fbc6df9435893ecd67614"
+      ],
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source"
+    }
+  ],
+  "reportSha256": "3d9d1ff8a2631f5cd6fefcd0b4fe8f6e84e2892e5372a89924f2bc28bc3d1d0d"
+}

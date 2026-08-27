@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "generatedAt": "2026-08-27T18:00:00Z",
+  "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
+  "pinnedInputs": {
+    "p2ModelSchemaVersion": "2.0.0",
+    "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
+    "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
+    "p3WorkDenominator": 34,
+    "p4FixtureSha256": "3607ad0d91d75c12fa847070ce10ea869f410c4d0ed4513b32aa910dbc6f6c9c",
+    "p4LiveObservationSha256": "80c328a19a9b189f1e922d6d9e0ec42fa68ed0fa5c0ef8e38b95caf95faebea2",
+    "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
+  },
+  "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
+  "defaultTimezone": "America/Denver",
+  "scenarioCount": 20,
+  "parseStateCounts": {
+    "parsed": 16,
+    "unknown": 2,
+    "invalid": 2
+  },
+  "precisionCounts": {
+    "exact_datetime": 1,
+    "date_only": 9,
+    "annual_rule": 3,
+    "rolling": 1,
+    "month_only": 1,
+    "approximate": 1,
+    "unknown": 4
+  },
+  "statusCounts": {
+    "active": 5,
+    "unknown": 10,
+    "closed": 2,
+    "upcoming": 2,
+    "unavailable": 1
+  },
+  "scenarios": [
+    {
+      "id": "exact-datetime",
+      "input": {
+        "raw": "2026-09-30T23:00:00-06:00",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-09-30T23:00:00-06:00",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-09-30T23:00:00-06:00",
+        "year": 2026,
+        "precision": "exact_datetime",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "active"
+    },
+    {
+      "id": "date-only",
+      "input": {
+        "raw": "2026-09-15",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-09-15",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-09-15",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "active"
+    },
+    {
+      "id": "spreadsheet-serial",
+      "input": {
+        "raw": 46310,
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": 46310,
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-10-15",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Parsed Google Sheets serial using the 1899-12-30 epoch"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "active"
+    },
+    {
+      "id": "active-range",
+      "input": {
+        "raw": "2026-08-01 - 2026-09-30",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-08-01 - 2026-09-30",
+        "parseState": "parsed",
+        "opensAt": "2026-08-01",
+        "closesAt": "2026-09-30",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "active"
+    },
+    {
+      "id": "mixed-open-close-range",
+      "input": {
+        "raw": "12/1 (opens) - 3/1 (closes)",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "12/1 (opens) - 3/1 (closes)",
+        "parseState": "parsed",
+        "opensAt": "12-01",
+        "closesAt": "03-01",
+        "year": null,
+        "precision": "annual_rule",
+        "timezone": "America/Denver",
+        "recurrence": "annual",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "labeled-explicit-range",
+      "input": {
+        "raw": "(opens 03/15/26) closes 6/15/26",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "(opens 03/15/26) closes 6/15/26",
+        "parseState": "parsed",
+        "opensAt": "2026-03-15",
+        "closesAt": "2026-06-15",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "closed"
+    },
+    {
+      "id": "open-only-annual",
+      "input": {
+        "raw": "Opens 12/15",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "Opens 12/15",
+        "parseState": "parsed",
+        "opensAt": "12-15",
+        "closesAt": null,
+        "year": null,
+        "precision": "annual_rule",
+        "timezone": "America/Denver",
+        "recurrence": "annual",
+        "reason": "Open date preserved separately; no deadline or close date was invented"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "closed-range",
+      "input": {
+        "raw": "2025-10-01 - 2026-03-01",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2025-10-01 - 2026-03-01",
+        "parseState": "parsed",
+        "opensAt": "2025-10-01",
+        "closesAt": "2026-03-01",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "closed"
+    },
+    {
+      "id": "upcoming-year-boundary",
+      "input": {
+        "raw": "2026-12-15 - 2027-01-15",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-12-15 - 2027-01-15",
+        "parseState": "parsed",
+        "opensAt": "2026-12-15",
+        "closesAt": "2027-01-15",
+        "year": 2027,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "upcoming"
+    },
+    {
+      "id": "rolling-confirmed",
+      "input": {
+        "raw": "Rolling deadline",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "Rolling deadline",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": null,
+        "year": null,
+        "precision": "rolling",
+        "timezone": "America/Denver",
+        "recurrence": "rolling",
+        "reason": "Rolling rule preserved without inventing a deadline"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "active"
+    },
+    {
+      "id": "annual-rule",
+      "input": {
+        "raw": "Annual — May 31",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "Annual — May 31",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "05-31",
+        "year": null,
+        "precision": "annual_rule",
+        "timezone": "America/Denver",
+        "recurrence": "annual",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "month-only",
+      "input": {
+        "raw": "October 2026",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "October 2026",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-10",
+        "year": 2026,
+        "precision": "month_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "approximate",
+      "input": {
+        "raw": "mid March 2027",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "mid March 2027",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2027",
+        "year": 2027,
+        "precision": "approximate",
+        "timezone": "America/Denver",
+        "recurrence": "unknown",
+        "reason": "Approximate date text preserved without day-level precision"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "explicit-unknown",
+      "input": {
+        "raw": "TBD",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "TBD",
+        "parseState": "unknown",
+        "opensAt": null,
+        "closesAt": null,
+        "year": null,
+        "precision": "unknown",
+        "timezone": "America/Denver",
+        "recurrence": "unknown",
+        "reason": "Explicit unknown date state preserved"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "informational-month-only",
+      "input": {
+        "raw": "Info Available in December",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "Info Available in December",
+        "parseState": "unknown",
+        "opensAt": null,
+        "closesAt": null,
+        "year": null,
+        "precision": "unknown",
+        "timezone": "America/Denver",
+        "recurrence": "unknown",
+        "reason": "Unrecognized date text preserved as unknown"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "invalid-calendar-date",
+      "input": {
+        "raw": "February 30, 2027",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "February 30, 2027",
+        "parseState": "invalid",
+        "opensAt": null,
+        "closesAt": null,
+        "year": null,
+        "precision": "unknown",
+        "timezone": "America/Denver",
+        "recurrence": "unknown",
+        "reason": "Invalid calendar date rejected"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "unavailable-cycle",
+      "input": {
+        "raw": "2026-09-30",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-09-30",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-09-30",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": false,
+      "unavailable": true,
+      "status": "unavailable"
+    },
+    {
+      "id": "unconfirmed-future-date",
+      "input": {
+        "raw": "2026-11-01",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "2026-11-01",
+        "parseState": "parsed",
+        "opensAt": null,
+        "closesAt": "2026-11-01",
+        "year": 2026,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed date preserved at observed precision"
+      },
+      "availabilityConfirmed": false,
+      "unavailable": false,
+      "status": "unknown"
+    },
+    {
+      "id": "numeric-range",
+      "input": {
+        "raw": "12/01/2026 - 03/01/2027",
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": "12/01/2026 - 03/01/2027",
+        "parseState": "parsed",
+        "opensAt": "2026-12-01",
+        "closesAt": "2027-03-01",
+        "year": 2027,
+        "precision": "date_only",
+        "timezone": "America/Denver",
+        "recurrence": "one_time",
+        "reason": "Typed range preserved as separate open and close facts"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "upcoming"
+    },
+    {
+      "id": "invalid-serial",
+      "input": {
+        "raw": -1,
+        "timezone": "America/Denver"
+      },
+      "parsed": {
+        "raw": -1,
+        "parseState": "invalid",
+        "opensAt": null,
+        "closesAt": null,
+        "year": null,
+        "precision": "unknown",
+        "timezone": "America/Denver",
+        "recurrence": "unknown",
+        "reason": "Spreadsheet serial is outside the supported date range"
+      },
+      "availabilityConfirmed": true,
+      "unavailable": false,
+      "status": "unknown"
+    }
+  ],
+  "falseCurrentBoundary": {
+    "parseFailureCurrentCount": 0,
+    "statement": "Unknown and invalid date inputs remain unknown and cannot become active solely because parsing failed."
+  },
+  "reportSha256": "00cf5ed3c4342fdcf1133c8dc067fa6b68ab7ac3c9eb6d3a2b8ff6fa2cbd15ee"
+}

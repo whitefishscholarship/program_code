@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "createdAt": "2026-08-27T04:17:32Z",
+  "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
+  "candidateCommit": "4a7eaba0ec84c7d20830b9446576840e80f1e203",
+  "files": [
+    {"path":"docs/BUILD_STATE.json","change":"present","sha256":"cfb984f849dfcd43c95e4578bcafcb90f9eaad819f4a553318ecb619a44e5d03"},
+    {"path":"docs/CURRENT_HANDOFF.md","change":"present","sha256":"84b28b291443315183ade6ac83a63f4d97ca322bc4c8af39de2debf9f51ccfee"},
+    {"path":"docs/evidence/P4-conflicts.json","change":"present","sha256":"b24764532a7ef4cea3409087e3814e01d5d5800f55bdcb844b35be9e72419760"},
+    {"path":"docs/evidence/P4-cycles.json","change":"present","sha256":"5478c11158a7ca3b0012413d8d1d5893a32ccc05df557e9a859c853f43156455"},
+    {"path":"docs/evidence/P4-field-evidence.json","change":"present","sha256":"5afb7757355faba8a35528b974e076bb32962f5c6e5c0014a487ecb29a82eda9"},
+    {"path":"docs/evidence/P4-links.json","change":"present","sha256":"3180b49c1e7cb32fa123f58ba5e9cbfad12e93ab0286215add783a3f60e81962"},
+    {"path":"docs/evidence/P4-live-observations.json","change":"present","sha256":"80c328a19a9b189f1e922d6d9e0ec42fa68ed0fa5c0ef8e38b95caf95faebea2"},
+    {"path":"docs/evidence/P4-reviews.json","change":"present","sha256":"dfd83689c4d1125f365f4d643115116cda8740c8336b0335f9c405edfa59f756"},
+    {"path":"docs/evidence/P4.md","change":"present","sha256":"64562557f2ffdef37d4ecaf2e64b786f3f98626fe692d1cda2a6dc8ebf9bc971"},
+    {"path":"docs/kickoffs/P5-REMEDIATION.md","change":"present","sha256":"3d44ff59038d51c19bf2d7a631d347b21e6ea8b16be06b55da44912dd55c236c"},
+    {"path":"web/fixtures/p4/verification-scenarios.json","change":"present","sha256":"3607ad0d91d75c12fa847070ce10ea869f410c4d0ed4513b32aa910dbc6f6c9c"},
+    {"path":"web/package.json","change":"present","sha256":"255989dad990e4f067eeb672454127cd514dc52d474ac818a448ca33fe680764"},
+    {"path":"web/scripts/p4-verification.ts","change":"present","sha256":"32cfb546be1bc37ed5e00423f812c885597e861a8ca3ded324f668491bae6c73"},
+    {"path":"web/scripts/test-p4-verification.ts","change":"present","sha256":"0074ee99a93e60ef12c9a952ce452837fce348a88f3c9624798e63a20ff994ac"},
+    {"path":"web/src/lib/verification.ts","change":"present","sha256":"d4c7bde9878a918aad7b6300308fbf568bc5487f899d506e20eabac904196ea1"}
+  ]
+}
