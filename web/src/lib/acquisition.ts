@@ -297,13 +297,11 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
   const $ = cheerio.load(html);
   const form = $('form').first();
   if (!form.length) throw new Error('Public-form fixture contains no form element');
-  const heading = $('h1').first().length ? $('h1').first() : $('title').first();
+  const heading = $('head > title').first();
   const headingDirectText = heading.contents()
     .filter((_, child) => child.type === 'text')
     .map((_, child) => $(child).text()).get().join(' ');
-  const title = heading.is(CUSTOM_RESPONSE_SELECTOR)
-    ? 'Public form'
-    : cleanText(String(heading.attr('aria-label') ?? headingDirectText)) || 'Public form';
+  const title = cleanText(headingDirectText) || 'Public form';
   const rawAction = String(form.attr('action') ?? '').trim();
   let actionUrl: string | null = null;
   if (rawAction) actionUrl = canonicalizeAcquisitionUrl(rawAction, sourceUrl).url;

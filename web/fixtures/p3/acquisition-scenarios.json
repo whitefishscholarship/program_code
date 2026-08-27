@@ -132,7 +132,7 @@
       "applicationMode": "direct_per_award",
       "workCap": 1,
       "maxAttempts": 2,
-      "parserFixture": {"kind":"public_form_html","content":"<html><body><h1>Sanitized Public Form Award</h1><form method=\"post\" action=\"/forms/d/e/example/formResponse?sys_id=form-1\"><div role=\"listitem\"><div role=\"heading\" class=\"M7eMe\">Student email</div><input type=\"email\" required></div><div role=\"listitem\"><div role=\"heading\" class=\"M7eMe\">Essay prompt</div><textarea aria-required=\"true\"></textarea></div><button>Submit</button></form></body></html>"},
+      "parserFixture": {"kind":"public_form_html","content":"<html><head><title>Sanitized Public Form Award</title></head><body><h1>Visible form heading</h1><form method=\"post\" action=\"/forms/d/e/example/formResponse?sys_id=form-1\"><div role=\"listitem\"><div role=\"heading\" class=\"M7eMe\">Student email</div><input type=\"email\" required></div><div role=\"listitem\"><div role=\"heading\" class=\"M7eMe\">Essay prompt</div><textarea aria-required=\"true\"></textarea></div><button>Submit</button></form></body></html>"},
       "workItems": [{"key":"form-structure","url":"https://fixtures.invalid/forms/public-scholarship?sys_id=form-1","outcomes":["success"],"childNames":["Sanitized Public Form Award"]}]
     },
     {

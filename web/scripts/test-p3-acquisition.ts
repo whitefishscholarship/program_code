@@ -182,6 +182,11 @@ const editableHeadingForm = readPublicForm(`
   <label>Question<input></label></form>`, 'https://fixtures.invalid/editable-heading');
 assert.equal(editableHeadingForm.title, 'Public form');
 assert(!JSON.stringify(editableHeadingForm).includes('DO-NOT-COLLECT'));
+const ancestorHeadingForm = readPublicForm(`
+  <form><div role="textbox" contenteditable="true"><h1>DO-NOT-COLLECT-ANCESTOR-RESPONSE</h1></div>
+  <label>Question<input></label></form>`, 'https://fixtures.invalid/ancestor-heading');
+assert.equal(ancestorHeadingForm.title, 'Public form');
+assert(!JSON.stringify(ancestorHeadingForm).includes('DO-NOT-COLLECT'));
 
 const capItems = [
   { key: 'one', url: 'https://fixtures.invalid/1' },
