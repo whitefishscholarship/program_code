@@ -17,9 +17,11 @@ Default branch: `main`
   spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, tab
   `Master Database`. The durable record is
   `docs/evidence/P5-write-authorization.md`.
-- No testing-sheet content read, content write, or backup copy has occurred yet. The
-  sheet must remain unchanged until its exact Drive revision fingerprint and complete
-  reversible backup are captured and verified.
+- Testing-sheet source revision `222` is pinned, and complete native backup
+  `1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ` is verified. The source and backup
+  `Master Database!A1:X1060` native-cell payloads match at SHA-256
+  `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
+  Testing-sheet content writes remain zero.
 - Entry verification reproduced P4's 270 links, four offline methods, 20 cycle cases,
   nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
   Baseline plan/history validation passed all 10 ordered stages.
@@ -27,9 +29,9 @@ Default branch: `main`
   mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
   application interaction, provider contact, deployment-configuration changes, paid
   or destructive actions, and history rewriting remain prohibited.
-- Next actions are exact Drive metadata/revision capture, a complete verified backup,
-  then the mutation-free full-row audit and proposal ledger. No sheet write may occur
-  until all three pre-write gates remain satisfied against the same revision.
+- Next actions are the mutation-free full-row audit and proposal ledger. No sheet write
+  may occur until every proposal is evidence-bound and approved and the source still
+  matches revision `222` immediately before the atomic write.
 
 ## P4 delivery (completed)
 
