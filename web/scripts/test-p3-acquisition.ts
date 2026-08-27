@@ -187,6 +187,14 @@ const ancestorHeadingForm = readPublicForm(`
   <label>Question<input></label></form>`, 'https://fixtures.invalid/ancestor-heading');
 assert.equal(ancestorHeadingForm.title, 'Public form');
 assert(!JSON.stringify(ancestorHeadingForm).includes('DO-NOT-COLLECT'));
+const ancestorQuestionForm = readPublicForm(`
+  <head><title>Safe metadata</title></head><form>
+    <div role="textbox" contenteditable="true"><label>DO-NOT-COLLECT-LABEL-RESPONSE</label></div>
+    <div role="textbox" contenteditable="true"><div role="listitem"><div role="heading">DO-NOT-COLLECT-QUESTION-RESPONSE</div></div></div>
+    <label>Safe question<input></label>
+  </form>`, 'https://fixtures.invalid/ancestor-question');
+assert.deepEqual(ancestorQuestionForm.fieldLabels, ['Safe question']);
+assert(!JSON.stringify(ancestorQuestionForm).includes('DO-NOT-COLLECT'));
 
 const capItems = [
   { key: 'one', url: 'https://fixtures.invalid/1' },

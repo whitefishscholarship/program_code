@@ -312,7 +312,7 @@ export function readPublicForm(html: string, sourceUrl: string): PublicFormObser
     if (seenElements.has(element)) return;
     seenElements.add(element);
     const node = $(element);
-    if (node.is(CUSTOM_RESPONSE_SELECTOR)) return;
+    if (node.closest(CUSTOM_RESPONSE_SELECTOR).length) return;
     const directText = node.contents()
       .filter((__, child) => child.type === 'text')
       .map((__, child) => $(child).text()).get().join(' ');
