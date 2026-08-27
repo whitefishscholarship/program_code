@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P3",
+  "createdAt": "2026-08-27T00:11:34Z",
+  "baselineCommit": "2dbacb0a7320e9e1c7a7d29c798d005e25f28ff3",
+  "candidateCommit": "9e4230c3012f41f6b70cb47674fdb95dd1de333c",
+  "files": [
+    {"path":"docs/BUILD_STATE.json","change":"present","sha256":"a98dd65014c7fb8145f679adf39081bcf53a9f52633d785b391bc21845264e3f"},
+    {"path":"docs/CURRENT_HANDOFF.md","change":"present","sha256":"ac9b49bd0e17b0a1d9ce0ceb4b9da4a4059b7c19d75154df1107b91283cf5d02"},
+    {"path":"docs/evidence/P3-acquisition.json","change":"present","sha256":"e5faf3f932672bd0a4fa29999f8b8db997d0386f7d7a5c785429e361559e555a"},
+    {"path":"docs/evidence/P3-completeness.json","change":"present","sha256":"9abae4851738d67f9f022a00306bd6e4a1b49814cc2599bd60501a85463666ec"},
+    {"path":"docs/evidence/P3-live-observations.json","change":"present","sha256":"6f83fa0048f2e0df286279d37e54dbcf554abb7ca4e98bdb4655084155434867"},
+    {"path":"docs/evidence/P3.md","change":"present","sha256":"389b96f476b23c1306ddd02d4b4a77ed9ddf598b5c6f35673522f788ef5a7243"},
+    {"path":"docs/kickoffs/P4-VERIFICATION.md","change":"present","sha256":"474ba456990f1483ce577a3b5972ed4f7894078cd2bdd9b25afcb6c0bdddb8ae"},
+    {"path":"web/fixtures/p3/acquisition-scenarios.json","change":"present","sha256":"587d1fc6ad0c6559a27dce88092dd376cf208020a05ee64b0fb6fbde14026433"},
+    {"path":"web/package.json","change":"present","sha256":"7050fe6dafead007281e734f72eaeffd71040d32eee0809f39bfffe2cebacb96"},
+    {"path":"web/scripts/p3-acquisition.ts","change":"present","sha256":"e3c365742fe7839fa0eb45ae66185c0ef69ebc3df3b9ee36a3b86a5aed83a8bc"},
+    {"path":"web/scripts/test-p3-acquisition.ts","change":"present","sha256":"0d0a71aa7c22f37b3ef9460eeff8bce96dd15f078a319b56e2284a6730ecad54"},
+    {"path":"web/src/lib/acquisition.ts","change":"present","sha256":"f4a6a320aefd0868f4acae4de720c8dd143ec73e8ed2aa7a9020bb401d38e808"}
+  ]
+}
