@@ -79,7 +79,13 @@ Default branch: `main`
   validation, typecheck, complete tests, permitted network build, and root diff check.
   The restricted build failed only on existing Google Fonts access. The unchanged
   locked audit denominator is 21; no dependency, lockfile, CI, deployment, spreadsheet,
-  or provider change was made.
+  or provider change was made. This matrix belongs to rejected candidate `c26cbb9`
+  and is historical, not current acceptance evidence.
+- The second-remediation replacement matrix passed from `2026-08-27T02:57:11Z`
+  through `2026-08-27T02:58:26Z`: exact locked install, deterministic P4 check,
+  plan/history validation, typecheck, complete tests, permitted network build, and
+  root diff check. The restricted build failed only on existing Google Fonts access;
+  the audit denominator remains 21 and no reserved effect occurred.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.
