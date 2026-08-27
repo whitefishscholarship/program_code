@@ -3,19 +3,21 @@
   "stageId": "P5",
   "sourceRevisionId": "222",
   "pinnedInputDigests": {
-    "sourceQueue": "aa4a6abfeccf847017cf2151c2fd009163bef647159380ac54f8c3025786356a",
-    "publicProbe": "6327b1d1cf9c2b16d78a407854fbd72975848608cc55854a158c2e93b7f40350",
-    "firecrawl": "83e8c635d8c7ec42877b338207d27094a71a6439e3340c4381d1f23a63e0a84a",
-    "replacementEvidence": "dd1825d01c1c4bf28ef1aefcd8d020e23f6567f364e5b0d90f4a9009dc083a08",
-    "proposals": "60717589c08a41e111ea9106fd0a39c28f90c350e4bf9f1f96f0be2bb4c1aaea"
+    "sourceQueue": "1eda42582114a7c169bc2de16ebe92955044cefc641d83444dea127af190c547",
+    "publicProbe": "81b8c5aae5ec0c39fcfee702dfa0b9f7a838e52f3d033951672be4a5aa3ede65",
+    "firecrawl": "3e0a03a1eefd8af3d6936a4f4a5b3d3ce68e3e2657603da5261f8b04b977ea47",
+    "preboundaryDeadLinks": "a1f1a7ed253f8afcf25d057a131b3ec42d307e334370be37c4f9af10cfe35353",
+    "preboundaryStaticApplication": "480ef6b4f176d89a362851e3150266623a8859afa6c60c0ab298149c674974f5",
+    "replacementEvidence": "7901118229eadd7ab944b3c9b59efa7ecf9e5ecbad42b0cfc580e39c2afbb6f0",
+    "proposals": "e449012a16c6798e6fd81eb7df1f82b7cc201951aaa0eebef8f191243a25e583"
   },
   "inputRowDenominator": 197,
   "dispositionTotals": {
-    "confirmed": 30,
-    "corrected": 11,
+    "confirmed": 0,
+    "corrected": 10,
     "archived": 0,
     "merged": 0,
-    "manualReview": 156
+    "manualReview": 187
   },
   "entries": [
     {
@@ -57,27 +59,35 @@
       "sheetRow": 4,
       "rowKey": "p5-row-0004",
       "name": "Montana Premier Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_931da39486e45635990c"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 5,
       "rowKey": "p5-row-0005",
       "name": "UM Academic Achievement Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 6,
@@ -89,7 +99,9 @@
         "p5src_2f9c75d05b792ba6191b"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -98,14 +110,18 @@
       "sheetRow": 7,
       "rowKey": "p5-row-0007",
       "name": "Blue Collar Brain Scholarship Program",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_d6f19e6856b1992c2b7c"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 8,
@@ -141,7 +157,7 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "known_dead_link"
+        "manual_no_fetch"
       ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
@@ -176,7 +192,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -282,7 +299,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -316,7 +334,9 @@
         "p5src_0ab1b78d88958e918370"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -333,7 +353,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -350,7 +371,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -385,7 +407,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -407,7 +430,7 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "known_dead_link"
+        "manual_no_fetch"
       ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
@@ -477,7 +500,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -512,7 +536,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -529,7 +554,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -545,7 +571,9 @@
         "p5src_7487f51cda30baff2e72"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -801,7 +829,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -872,7 +901,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -889,7 +919,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1011,7 +1042,9 @@
         "p5src_623c63cdd1138330a1a6"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1020,20 +1053,19 @@
       "sheetRow": 59,
       "rowKey": "p5-row-0059",
       "name": "MGGA Scholarships",
-      "proposedDisposition": "corrected",
-      "proposalIds": [
-        "p5prop_760b07d098044c06c8af",
-        "p5prop_195d61c615ef03277312"
-      ],
+      "proposedDisposition": "manual_review",
+      "proposalIds": [],
       "evidenceIds": [
         "p5src_bd719700830566fe66e8",
         "p5src_488e35cfdfdac7d7e9a6"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
-      "reason": "Current direct official evidence supports the listed review-pending corrections.",
-      "nextAction": null
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 60,
@@ -1047,7 +1079,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1255,15 +1288,18 @@
       "sheetRow": 72,
       "rowKey": "p5-row-0072",
       "name": "Student View Scholarship Program",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_6dd168927d08e9d00c71",
         "p5src_28cbe91bf88edd119b05"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 73,
@@ -1365,7 +1401,9 @@
         "p5src_bae67a8a355c4a7086a4"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1400,7 +1438,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1730,40 +1769,52 @@
       "sheetRow": 99,
       "rowKey": "p5-row-0099",
       "name": "Montana Treasure State First Generation Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_931da39486e45635990c"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 100,
       "rowKey": "p5-row-0100",
       "name": "Cat Scholarships",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_931da39486e45635990c"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 101,
       "rowKey": "p5-row-0101",
       "name": "Presidential Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_931da39486e45635990c"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 102,
@@ -1775,7 +1826,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1790,7 +1843,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1805,7 +1860,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1820,7 +1877,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1835,7 +1894,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1850,7 +1911,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1865,7 +1928,9 @@
         "p5src_45fda935d4f3c2f74988"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1874,14 +1939,18 @@
       "sheetRow": 109,
       "rowKey": "p5-row-0109",
       "name": "Fly for Duke Aviation Scholarships",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_aef1618ecc7f6a9d342a"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 110,
@@ -1910,7 +1979,9 @@
         "p5src_fa94c2b83f88056182d0"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1926,7 +1997,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1941,7 +2013,9 @@
         "p5src_fa94c2b83f88056182d0"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1956,7 +2030,9 @@
         "p5src_fa94c2b83f88056182d0"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1971,7 +2047,9 @@
         "p5src_fa94c2b83f88056182d0"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -1987,7 +2065,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2002,7 +2081,9 @@
         "p5src_26ea338967fd157439df"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2051,7 +2132,9 @@
         "p5src_be0d9e96c443a6810e21"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2066,7 +2149,9 @@
         "p5src_cf9eff4a6afbc3a5fb09"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2082,7 +2167,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2098,7 +2184,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2114,7 +2201,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2129,7 +2217,9 @@
         "p5src_cf9eff4a6afbc3a5fb09"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2138,27 +2228,35 @@
       "sheetRow": 126,
       "rowKey": "p5-row-0126",
       "name": "Captain Judy Rice Pilot Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_89ad97acfc7807dc01a4"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 127,
       "rowKey": "p5-row-0127",
       "name": "Pilot Scholarship for Flight Training",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_89ad97acfc7807dc01a4"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 128,
@@ -2170,7 +2268,9 @@
         "p5src_89ad97acfc7807dc01a4"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2185,7 +2285,9 @@
         "p5src_89ad97acfc7807dc01a4"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2200,7 +2302,9 @@
         "p5src_89ad97acfc7807dc01a4"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2226,40 +2330,52 @@
       "sheetRow": 132,
       "rowKey": "p5-row-0132",
       "name": "HPFY Make a Difference Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_37a44ecac0ed5d564ac2"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 133,
       "rowKey": "p5-row-0133",
       "name": "Fred J. Epstein Youth Achievement Award",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_75a5721a06a1a6809d79"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 134,
       "rowKey": "p5-row-0134",
       "name": "Special Recognition Award",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_75a5721a06a1a6809d79"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 135,
@@ -2271,7 +2387,9 @@
         "p5src_cd6a51011290059562f1"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2287,7 +2405,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2302,7 +2421,9 @@
         "p5src_18af8bcf9635fedaac07"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2311,14 +2432,18 @@
       "sheetRow": 138,
       "rowKey": "p5-row-0138",
       "name": "All-American Pest Control STEAM Trailblazer Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_068b268a18d9f73f4740"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 139,
@@ -2330,7 +2455,9 @@
         "p5src_fbcad73a0ddd53ec6186"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2345,7 +2472,9 @@
         "p5src_9fc0b2ccd693ad7a723e"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2360,7 +2489,9 @@
         "p5src_cf88b9cfe78824a01203"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2369,40 +2500,52 @@
       "sheetRow": 142,
       "rowKey": "p5-row-0142",
       "name": "Bold $25,000 Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_a801de1a3f649c384218"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 143,
       "rowKey": "p5-row-0143",
       "name": "National Technical Honor Society",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_d59f3e04d0a405f3fa94"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 144,
       "rowKey": "p5-row-0144",
       "name": "Associated General Contractors of America’s Workforce Development Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_d59f3e04d0a405f3fa94"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 145,
@@ -2415,7 +2558,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2430,7 +2574,9 @@
         "p5src_dc32f1b005d6df94b2e2"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2439,14 +2585,18 @@
       "sheetRow": 147,
       "rowKey": "p5-row-0147",
       "name": "2nd Chance Scholarships for College or Trade Schools",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_a43e1ba7f75c5dddbd94"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 148,
@@ -2458,7 +2608,9 @@
         "p5src_759e4588b139ee9d36b7"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2467,14 +2619,18 @@
       "sheetRow": 149,
       "rowKey": "p5-row-0149",
       "name": "Work Ethic Scholarship Program",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_1323707329dde1d64ee0"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 150,
@@ -2498,14 +2654,18 @@
       "sheetRow": 151,
       "rowKey": "p5-row-0151",
       "name": "AFSA No Essay Scholarship Program",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_a43e1ba7f75c5dddbd94"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 152,
@@ -2518,7 +2678,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2533,7 +2694,9 @@
         "p5src_3eee78ad8ccd3d0fb353"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2549,7 +2712,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2607,7 +2771,9 @@
         "p5src_96c325121305806c4d7a"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2622,7 +2788,9 @@
         "p5src_993fbf5c3a7842a58422"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2644,14 +2812,18 @@
       "sheetRow": 161,
       "rowKey": "p5-row-0161",
       "name": "Louise A. Dean All Montana Tribal Nations Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_fed94e1d158080d9634b"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 162,
@@ -2681,7 +2853,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2698,7 +2871,10 @@
       "evidenceIds": [
         "p5src_a2baa8cd20bafbcbbce7"
       ],
-      "riskFlags": [],
+      "riskFlags": [
+        "inconclusive_source",
+        "manual_no_fetch"
+      ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
     },
@@ -2745,7 +2921,8 @@
         "p5src_7443be7e1cb6f0709cf5"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "manual_no_fetch"
       ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
@@ -2761,7 +2938,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2794,7 +2972,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2809,7 +2988,9 @@
         "p5src_e010a48240e8710b9216"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2827,7 +3008,8 @@
         "p5src_233ee668c1c8f42b6152"
       ],
       "riskFlags": [
-        "known_dead_link"
+        "inconclusive_source",
+        "manual_no_fetch"
       ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
@@ -2845,7 +3027,8 @@
         "p5src_233ee668c1c8f42b6152"
       ],
       "riskFlags": [
-        "known_dead_link"
+        "inconclusive_source",
+        "manual_no_fetch"
       ],
       "reason": "Current direct official evidence supports the listed review-pending corrections.",
       "nextAction": null
@@ -2860,7 +3043,9 @@
         "p5src_5c42f1061d3d91d11e4a"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2892,7 +3077,9 @@
         "p5src_72e5a94d3f6726f2aff8"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2908,7 +3095,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2923,7 +3111,9 @@
         "p5src_882e0f210585d1c470d7"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2938,7 +3128,9 @@
         "p5src_aa1560fa93a2f5bfd138"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2953,7 +3145,9 @@
         "p5src_342285b33a6ae54f2976"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -2962,14 +3156,18 @@
       "sheetRow": 181,
       "rowKey": "p5-row-0181",
       "name": "Donald Runnicles Musical Arts Scholarship Competition (Grand Teton Music Festival)",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_8532c09c7dbb80b07cc0"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 182,
@@ -3015,7 +3213,9 @@
         "p5src_f8f2f5b04ba87c83bbb4"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3030,7 +3230,9 @@
         "p5src_318a06e814ce8b8feb30"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3063,7 +3265,8 @@
       ],
       "riskFlags": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3072,53 +3275,69 @@
       "sheetRow": 188,
       "rowKey": "p5-row-0188",
       "name": "GBCI Leadership Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_bd01be4e9d0f48de565e"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 189,
       "rowKey": "p5-row-0189",
       "name": "Dearborn Ranch Montana Game Wardens Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_10dedfdb8ad762739dea"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 190,
       "rowKey": "p5-row-0190",
       "name": "Dearborn Ranch Montana Highway Patrol Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_d68e36adc26ddd2921b3"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 191,
       "rowKey": "p5-row-0191",
       "name": "Kay McMillan Nursing Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_1b4bd7e2c888f1807519"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 192,
@@ -3130,7 +3349,9 @@
         "p5src_7f2b1095ef05110da438"
       ],
       "riskFlags": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3139,53 +3360,69 @@
       "sheetRow": 193,
       "rowKey": "p5-row-0193",
       "name": "Nep & Mary Ellen Lynch Trade School Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_3dbbf42fab6ed18ac6f5"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 194,
       "rowKey": "p5-row-0194",
       "name": "T. Eugene Young Montana's Promise Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_737afdc7e95f6657cb33"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 195,
       "rowKey": "p5-row-0195",
       "name": "Reach for the Future Scholarship for Vocational Degree Programs",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_b142ed007404aedf7d67"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 196,
       "rowKey": "p5-row-0196",
       "name": "Gary Olszewski Memorial Scholarship",
-      "proposedDisposition": "confirmed",
+      "proposedDisposition": "manual_review",
       "proposalIds": [],
       "evidenceIds": [
         "p5src_987a71a3bdeef191f0fd"
       ],
-      "riskFlags": [],
-      "reason": "All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.",
-      "nextAction": null
+      "riskFlags": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     },
     {
       "sheetRow": 197,
@@ -3197,7 +3434,9 @@
         "p5src_2b9a69050b35a081dba8"
       ],
       "riskFlags": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "reason": "The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.",
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
@@ -3220,5 +3459,5 @@
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact."
     }
   ],
-  "bodySha256": "d5087b0f9622b067b0ed102e462ed278f91c6b55fa659165267e0c6804321e53"
+  "bodySha256": "31f8f9bbb1e5d58e35f0c222f6f2bdc36e7a79fd15ce3f0d518d101f2d2beff3"
 }

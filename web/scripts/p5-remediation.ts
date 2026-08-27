@@ -62,9 +62,14 @@ const riskyHosts = [
   /(^|\.)mykaleidoscope\.com$/i,
   /(^|\.)applymontana\.mus\.edu$/i,
   /(^|\.)awardmontana\.mus\.edu$/i,
+  /(^|\.)forms\.office\.com$/i,
+  /(^|\.)webportalapp\.com$/i,
+  /(^|\.)awardspring\.com$/i,
+  /(^|\.)efmfeed\.verintefm\.com$/i,
+  /(^|\.)smr\.to$/i,
 ];
 
-const riskyPath = /(?:^|\/)(?:forms?|apply|application|login|sign-in|signin|register)(?:\/|$)/i;
+const riskyPath = /(?:^|\/)(?:forms?|ninja-forms|apply|applications?|login|sign-in|signin|register|portal|responsepage)(?:\/|$)/i;
 
 function readJson<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
@@ -75,11 +80,11 @@ export function retrievalDisposition(entry: SourceAccumulator): Pick<P5SourceQue
   const applicationOnly = entry.roles.has('application') && !entry.roles.has('information');
   const isGoogleForm = parsed.hostname === 'docs.google.com' && /^\/forms\//i.test(parsed.pathname);
   const isRiskyHost = riskyHosts.some((pattern) => pattern.test(parsed.hostname));
-  const isRiskyApplicationPath = applicationOnly && riskyPath.test(parsed.pathname);
-  if (isGoogleForm || isRiskyHost || isRiskyApplicationPath) {
+  const isRiskyInteractivePath = riskyPath.test(parsed.pathname);
+  if (applicationOnly || isGoogleForm || isRiskyHost || isRiskyInteractivePath) {
     return {
       retrievalDisposition: 'manual_review_no_fetch',
-      reason: 'Google-hosted file with unverified visibility, form, login, application-workflow, or matching-portal URL is not fetched under the P5 privacy/no-interaction boundary.',
+      reason: 'Application-role source, Google-hosted file with unverified visibility, form, login, application workflow, or matching portal is not fetched under the P5 privacy/no-interaction boundary.',
     };
   }
   return {

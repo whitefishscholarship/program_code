@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "sourceCheckpoint": "57d3540319b70adc7e3de88ce5723023c9783062",
+  "sourceArtifact": "docs/evidence/P5-firecrawl-receipts.json",
+  "sourceArtifactDigest": "83e8c635d8c7ec42877b338207d27094a71a6439e3340c4381d1f23a63e0a84a",
+  "disclosure": "These two static public scholarship-page GET observations occurred before application-role URLs were moved to no-fetch. No form, login, action, profile, or submission was used.",
+  "receipts": [
+    {
+      "sourceId": "p5src_7443be7e1cb6f0709cf5",
+      "url": "https://www.dellscholars.org/students/",
+      "sheetRows": [
+        167
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.dellscholars.org/students/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-25T16:27:34.908Z",
+      "scrapeId": "01a0437a-8fd9-7156-9bf2-5e5cc90ba332",
+      "creditsUsed": 5,
+      "markdownSha256": "153563061b53a840818e7b86698bcdc46dcdcee1108325a935c29ff67249cb33",
+      "markdownLength": 10700,
+      "title": "For Students - Dell Scholars",
+      "factCandidates": {
+        "deadline": [
+          "Deadline MARCH1 ### Finalist Announced MAY15 ### Finalist Deadline JUNE1 ### Dell Scholars Announced ## Frequently Asked Questions Find answers to often asked"
+        ],
+        "amount": [
+          "$20,000 flexible scholarship covers tuition and housing—plus a laptop, book credits, and emergency funds—so"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 167,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_a2baa8cd20bafbcbbce7",
+      "url": "https://www.adoptionstar.com/resources/scholarship/",
+      "sheetRows": [
+        164
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.adoptionstar.com/resources/scholarship/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a0437a-ba68-7422-8bca-69685c11355f",
+      "creditsUsed": 5,
+      "markdownSha256": "eaf5b89d74f890d5fba626b4df00f4fc168157aef07db75d575cb406fbcc3308",
+      "markdownLength": 8364,
+      "title": "Scholarship - Adoption Star",
+      "factCandidates": {
+        "deadline": [
+          "Deadline: Ongoing [Apply Now](https://www.adoptionstar.com/resources/scholarship/shining-star-scholarship-for-the-adoption-of-children/ \"\") [Donate Now](https",
+          "due to a medical diagnosis. Thank you to Parenthood For Me for the initial funding to make this grant possible. - [Scholarship Criteria](https://www.adop"
+        ],
+        "amount": [
+          "$1,000.00, the second for $750.00 and the third is $500.00. Interested candidates would submit an online appl"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 164,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    }
+  ],
+  "bodySha256": "480ef6b4f176d89a362851e3150266623a8859afa6c60c0ab298149c674974f5"
+}

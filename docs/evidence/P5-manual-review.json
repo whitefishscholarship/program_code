@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P5",
-  "denominator": 156,
+  "denominator": 187,
   "entries": [
     {
       "sheetRow": 2,
@@ -37,14 +37,64 @@
       "target": "Before promotion from manual review or any future production migration"
     },
     {
+      "sheetRow": 4,
+      "rowKey": "p5-row-0004",
+      "name": "Montana Premier Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_931da39486e45635990c"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 5,
+      "rowKey": "p5-row-0005",
+      "name": "UM Academic Achievement Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_45fda935d4f3c2f74988"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
       "sheetRow": 6,
       "rowKey": "p5-row-0006",
       "name": "Pell Promise for Montana Students",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_2f9c75d05b792ba6191b"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 7,
+      "rowKey": "p5-row-0007",
+      "name": "Blue Collar Brain Scholarship Program",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_d6f19e6856b1992c2b7c"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -90,7 +140,8 @@
       "name": "Black Mountain Software Scholarship (2 - $1,000)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_e3fff0a51f811ddbe0f2",
@@ -190,7 +241,8 @@
       "name": "Horatio Alger Association - Career & Technical Candidates",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_6a76a1c0215f25a48dbb",
@@ -222,7 +274,9 @@
       "rowKey": "p5-row-0019",
       "name": "Whitefish Lake Institute Ripple Effect Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_778d93ebfcb00e805a00",
@@ -238,7 +292,8 @@
       "name": "VFW Voices of Democracy - Patriotic Audio Essay “How Are You Showing Patriotism And Support For Our Country?”\n",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_f0fc6ea03c3836b282a3",
@@ -254,7 +309,8 @@
       "name": "Elks Most Valuable Student Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cc35f609920e012f187c",
@@ -287,7 +343,8 @@
       "name": "MT DOT Aviation Scholarships",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_7f2cfd944c0ff97ca526",
@@ -353,7 +410,8 @@
       "name": "Elks National Foundation Legacy Awards ",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_591262dd73cff3135700",
@@ -386,7 +444,8 @@
       "name": "Horatio Alger Association - Dennis R. Washington Montana Scholarship ($10,000 + $5,000 University match = $15,000)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_6a76a1c0215f25a48dbb",
@@ -402,7 +461,8 @@
       "name": "Horatio Alger Association - Bachelor's Degree Candidates",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_6a76a1c0215f25a48dbb",
@@ -417,7 +477,9 @@
       "rowKey": "p5-row-0032",
       "name": "Flathead Conservation District Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_ba33183b1e3b60de2338",
@@ -599,7 +661,8 @@
       "name": "Montana Tech’s Pre-Apprentice Line Program.",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_daf2e06e47d76737fafc",
@@ -666,7 +729,8 @@
       "name": "Montana University System Honor Scholarship (Tuition)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_5ea392d00f0785775385",
@@ -682,7 +746,8 @@
       "name": "The Montana State Golf Association",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_725ab6b2479d46d0bdc0",
@@ -797,11 +862,30 @@
       "rowKey": "p5-row-0058",
       "name": "Flathead County Farmers Union Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_eff158d292037b20a111",
         "p5src_623c63cdd1138330a1a6"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 59,
+      "rowKey": "p5-row-0059",
+      "name": "MGGA Scholarships",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_bd719700830566fe66e8",
+        "p5src_488e35cfdfdac7d7e9a6"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -813,7 +897,8 @@
       "name": "Water and Environmental Technologies Scholarship (2 - $1,000)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_a772baf692a072905f82",
@@ -990,6 +1075,22 @@
       "target": "Before promotion from manual review or any future production migration"
     },
     {
+      "sheetRow": 72,
+      "rowKey": "p5-row-0072",
+      "name": "Student View Scholarship Program",
+      "reasonCodes": [
+        "inconclusive_source",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_6dd168927d08e9d00c71",
+        "p5src_28cbe91bf88edd119b05"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
       "sheetRow": 73,
       "rowKey": "p5-row-0073",
       "name": "Glacier Medical Associates Scholarship Application",
@@ -1078,7 +1179,9 @@
       "rowKey": "p5-row-0078",
       "name": "John & Joe Norrish Memorial Scholarship ($500-$1500)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cee8078c599c3dbc66b5",
@@ -1111,7 +1214,8 @@
       "name": "Flathead Valley Community College Eagle Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_e58d67da78228ca7ca1f",
@@ -1425,11 +1529,61 @@
       "target": "Before promotion from manual review or any future production migration"
     },
     {
+      "sheetRow": 99,
+      "rowKey": "p5-row-0099",
+      "name": "Montana Treasure State First Generation Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_931da39486e45635990c"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 100,
+      "rowKey": "p5-row-0100",
+      "name": "Cat Scholarships",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_931da39486e45635990c"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 101,
+      "rowKey": "p5-row-0101",
+      "name": "Presidential Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_931da39486e45635990c"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
       "sheetRow": 102,
       "rowKey": "p5-row-0102",
       "name": "Western Undergraduate Exchange (WUE) Tuition Discount",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1443,7 +1597,9 @@
       "rowKey": "p5-row-0103",
       "name": "Presidential Leadership Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1457,7 +1613,9 @@
       "rowKey": "p5-row-0104",
       "name": "Provost’s Honors Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1471,7 +1629,9 @@
       "rowKey": "p5-row-0105",
       "name": "Dean’s Leadership Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1485,7 +1645,9 @@
       "rowKey": "p5-row-0106",
       "name": "Payne Family Impact Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1499,7 +1661,9 @@
       "rowKey": "p5-row-0107",
       "name": "National Merit Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
@@ -1513,10 +1677,28 @@
       "rowKey": "p5-row-0108",
       "name": "Grizzly Battalion Army ROTC Scholarship Program",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_45fda935d4f3c2f74988"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 109,
+      "rowKey": "p5-row-0109",
+      "name": "Fly for Duke Aviation Scholarships",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_aef1618ecc7f6a9d342a"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1543,7 +1725,9 @@
       "rowKey": "p5-row-0111",
       "name": "Strategic Partner Scholarships",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fa94c2b83f88056182d0"
@@ -1558,7 +1742,8 @@
       "name": "Sharon D. Banks Memorial Undergraduate Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fa94c2b83f88056182d0"
@@ -1572,7 +1757,9 @@
       "rowKey": "p5-row-0113",
       "name": "Molitoris Leadership Scholarship for Undergraduates",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fa94c2b83f88056182d0"
@@ -1586,7 +1773,9 @@
       "rowKey": "p5-row-0114",
       "name": "Junior College/Trade School Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fa94c2b83f88056182d0"
@@ -1600,7 +1789,9 @@
       "rowKey": "p5-row-0115",
       "name": "WTS Transportation YOU High School Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fa94c2b83f88056182d0"
@@ -1615,7 +1806,8 @@
       "name": "Kitchen Cabinet Kings 2026 Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_0e26d146d1ea5ad5a44f"
@@ -1629,7 +1821,9 @@
       "rowKey": "p5-row-0117",
       "name": "Nelson Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_26ea338967fd157439df"
@@ -1675,7 +1869,9 @@
       "rowKey": "p5-row-0120",
       "name": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_be0d9e96c443a6810e21"
@@ -1689,7 +1885,9 @@
       "rowKey": "p5-row-0121",
       "name": "Aircraft Lighting International Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf9eff4a6afbc3a5fb09"
@@ -1704,7 +1902,8 @@
       "name": "James Hammond Joubert Memorial Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf9eff4a6afbc3a5fb09"
@@ -1719,7 +1918,8 @@
       "name": "Pat Napolitano Memorial Scholarship for Aspiring Technicians",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf9eff4a6afbc3a5fb09"
@@ -1734,7 +1934,8 @@
       "name": "David Arver Memorial Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf9eff4a6afbc3a5fb09"
@@ -1748,10 +1949,44 @@
       "rowKey": "p5-row-0125",
       "name": "Dutch and Ginger Arver Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf9eff4a6afbc3a5fb09"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 126,
+      "rowKey": "p5-row-0126",
+      "name": "Captain Judy Rice Pilot Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_89ad97acfc7807dc01a4"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 127,
+      "rowKey": "p5-row-0127",
+      "name": "Pilot Scholarship for Flight Training",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_89ad97acfc7807dc01a4"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1762,7 +1997,9 @@
       "rowKey": "p5-row-0128",
       "name": "King Air Nation Pilot Scholarship for Flight Training",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_89ad97acfc7807dc01a4"
@@ -1776,7 +2013,9 @@
       "rowKey": "p5-row-0129",
       "name": "Aircraft Mechanic Scholarship (CVG Airport)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_89ad97acfc7807dc01a4"
@@ -1790,7 +2029,9 @@
       "rowKey": "p5-row-0130",
       "name": "Aircraft Mechanic Scholarship (New Smyrna Beach)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_89ad97acfc7807dc01a4"
@@ -1816,11 +2057,61 @@
       "target": "Before promotion from manual review or any future production migration"
     },
     {
+      "sheetRow": 132,
+      "rowKey": "p5-row-0132",
+      "name": "HPFY Make a Difference Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_37a44ecac0ed5d564ac2"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 133,
+      "rowKey": "p5-row-0133",
+      "name": "Fred J. Epstein Youth Achievement Award",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_75a5721a06a1a6809d79"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 134,
+      "rowKey": "p5-row-0134",
+      "name": "Special Recognition Award",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_75a5721a06a1a6809d79"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
       "sheetRow": 135,
       "rowKey": "p5-row-0135",
       "name": "The Neurodiversity Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cd6a51011290059562f1"
@@ -1835,7 +2126,8 @@
       "name": "The Joseph James Morelli Legacy Foundation Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cd6a51011290059562f1"
@@ -1849,10 +2141,28 @@
       "rowKey": "p5-row-0137",
       "name": "Wells Fargo Stacey Milbern Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_18af8bcf9635fedaac07"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 138,
+      "rowKey": "p5-row-0138",
+      "name": "All-American Pest Control STEAM Trailblazer Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_068b268a18d9f73f4740"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1863,7 +2173,9 @@
       "rowKey": "p5-row-0139",
       "name": "Hilleman Scholars Program",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_fbcad73a0ddd53ec6186"
@@ -1877,7 +2189,9 @@
       "rowKey": "p5-row-0140",
       "name": "Live Your Dream Award",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_9fc0b2ccd693ad7a723e"
@@ -1891,10 +2205,60 @@
       "rowKey": "p5-row-0141",
       "name": "Occupational Safety and Health / Industrial Hygiene Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cf88b9cfe78824a01203"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 142,
+      "rowKey": "p5-row-0142",
+      "name": "Bold $25,000 Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_a801de1a3f649c384218"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 143,
+      "rowKey": "p5-row-0143",
+      "name": "National Technical Honor Society",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_d59f3e04d0a405f3fa94"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 144,
+      "rowKey": "p5-row-0144",
+      "name": "Associated General Contractors of America’s Workforce Development Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_d59f3e04d0a405f3fa94"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1906,7 +2270,8 @@
       "name": "The Kim and Harold Louie Family Foundation 2026 Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_cb7a8bb5237e2f9a2131"
@@ -1920,10 +2285,28 @@
       "rowKey": "p5-row-0146",
       "name": "Workforce Development Scholarships",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_dc32f1b005d6df94b2e2"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 147,
+      "rowKey": "p5-row-0147",
+      "name": "2nd Chance Scholarships for College or Trade Schools",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_a43e1ba7f75c5dddbd94"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1934,10 +2317,28 @@
       "rowKey": "p5-row-0148",
       "name": "Welder Training Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_759e4588b139ee9d36b7"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 149,
+      "rowKey": "p5-row-0149",
+      "name": "Work Ethic Scholarship Program",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_1323707329dde1d64ee0"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -1961,12 +2362,29 @@
       "target": "Before promotion from manual review or any future production migration"
     },
     {
+      "sheetRow": 151,
+      "rowKey": "p5-row-0151",
+      "name": "AFSA No Essay Scholarship Program",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_a43e1ba7f75c5dddbd94"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
       "sheetRow": 152,
       "rowKey": "p5-row-0152",
       "name": "Pride Foundation Community Scholarships",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_9b10fc10e9e4253ff536"
@@ -1980,7 +2398,9 @@
       "rowKey": "p5-row-0153",
       "name": "Point Foundation Flagship Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_3eee78ad8ccd3d0fb353"
@@ -1995,7 +2415,8 @@
       "name": "Fisher House Scholarships for Military Children",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_af7ae416b1b8da4b5893"
@@ -2049,7 +2470,9 @@
       "rowKey": "p5-row-0158",
       "name": "The Gates Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_96c325121305806c4d7a"
@@ -2063,7 +2486,9 @@
       "rowKey": "p5-row-0159",
       "name": "CSKT Higher Education Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_993fbf5c3a7842a58422"
@@ -2080,6 +2505,22 @@
         "insufficient_direct_official_identity_evidence"
       ],
       "evidenceIds": [],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 161,
+      "rowKey": "p5-row-0161",
+      "name": "Louise A. Dean All Montana Tribal Nations Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_fed94e1d158080d9634b"
+      ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
       "target": "Before promotion from manual review or any future production migration"
@@ -2106,7 +2547,8 @@
       "name": "NFPA (National Foster Parent Association) Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_65401e2f2646f157ef7c"
@@ -2149,7 +2591,8 @@
       "name": "Heroes' Legacy Scholarship (Fisher House)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_af7ae416b1b8da4b5893"
@@ -2180,7 +2623,8 @@
       "name": "Montana FFA Foundation Leave a Legacy Scholarship",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_5c42f1061d3d91d11e4a"
@@ -2194,7 +2638,9 @@
       "rowKey": "p5-row-0171",
       "name": "Rhino Roofing 2026 Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_e010a48240e8710b9216"
@@ -2208,7 +2654,9 @@
       "rowKey": "p5-row-0174",
       "name": "MABA-MGEA Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_5c42f1061d3d91d11e4a"
@@ -2238,7 +2686,9 @@
       "rowKey": "p5-row-0176",
       "name": "EAA Ray Aviation Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_72e5a94d3f6726f2aff8"
@@ -2253,7 +2703,8 @@
       "name": "American Welding Society (AWS) Idaho/Montana Section Scholarships",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_852127261cf08f6fbe0f"
@@ -2267,7 +2718,9 @@
       "rowKey": "p5-row-0178",
       "name": "Lineman Country Scholarship (Southeast Lineman Training Center)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_882e0f210585d1c470d7"
@@ -2281,7 +2734,9 @@
       "rowKey": "p5-row-0179",
       "name": "International Lineman's Rodeo Association (ILRA) Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_aa1560fa93a2f5bfd138"
@@ -2295,10 +2750,28 @@
       "rowKey": "p5-row-0180",
       "name": "NESA Scholarships (National Eagle Scout Association)",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_342285b33a6ae54f2976"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 181,
+      "rowKey": "p5-row-0181",
+      "name": "Donald Runnicles Musical Arts Scholarship Competition (Grand Teton Music Festival)",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_8532c09c7dbb80b07cc0"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -2341,7 +2814,9 @@
       "rowKey": "p5-row-0184",
       "name": "Vegetarian Resource Group (VRG) Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_f8f2f5b04ba87c83bbb4"
@@ -2355,7 +2830,9 @@
       "rowKey": "p5-row-0185",
       "name": "Duck Brand \"Stuck at Prom\" Scholarship Contest",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_318a06e814ce8b8feb30"
@@ -2386,10 +2863,75 @@
       "name": "FIRST Scholarship Portal (Pearson Futures)",
       "reasonCodes": [
         "inconclusive_source",
-        "insufficient_direct_official_identity_evidence"
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_7780e231a2d92edd4671"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 188,
+      "rowKey": "p5-row-0188",
+      "name": "GBCI Leadership Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_bd01be4e9d0f48de565e"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 189,
+      "rowKey": "p5-row-0189",
+      "name": "Dearborn Ranch Montana Game Wardens Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_10dedfdb8ad762739dea"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 190,
+      "rowKey": "p5-row-0190",
+      "name": "Dearborn Ranch Montana Highway Patrol Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_d68e36adc26ddd2921b3"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 191,
+      "rowKey": "p5-row-0191",
+      "name": "Kay McMillan Nursing Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_1b4bd7e2c888f1807519"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -2400,10 +2942,76 @@
       "rowKey": "p5-row-0192",
       "name": "Alan & Janette Blackburn Scholarship",
       "reasonCodes": [
-        "insufficient_direct_official_identity_evidence"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_7f2b1095ef05110da438"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 193,
+      "rowKey": "p5-row-0193",
+      "name": "Nep & Mary Ellen Lynch Trade School Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_3dbbf42fab6ed18ac6f5"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 194,
+      "rowKey": "p5-row-0194",
+      "name": "T. Eugene Young Montana's Promise Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_737afdc7e95f6657cb33"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 195,
+      "rowKey": "p5-row-0195",
+      "name": "Reach for the Future Scholarship for Vocational Degree Programs",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_b142ed007404aedf7d67"
+      ],
+      "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
+      "owner": "Whitefish Scholarship data steward",
+      "target": "Before promotion from manual review or any future production migration"
+    },
+    {
+      "sheetRow": 196,
+      "rowKey": "p5-row-0196",
+      "name": "Gary Olszewski Memorial Scholarship",
+      "reasonCodes": [
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
+      ],
+      "evidenceIds": [
+        "p5src_987a71a3bdeef191f0fd"
       ],
       "nextAction": "Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.",
       "owner": "Whitefish Scholarship data steward",
@@ -2414,7 +3022,9 @@
       "rowKey": "p5-row-0197",
       "name": "Equitable Excellence Scholarship",
       "reasonCodes": [
-        "inconclusive_source"
+        "inconclusive_source",
+        "insufficient_direct_official_identity_evidence",
+        "manual_no_fetch"
       ],
       "evidenceIds": [
         "p5src_2b9a69050b35a081dba8"
@@ -2440,5 +3050,5 @@
       "target": "Before promotion from manual review or any future production migration"
     }
   ],
-  "bodySha256": "dd9293918256f5416bf526eb4968594d68a2e826387adeccab3543c78e2f3601"
+  "bodySha256": "f114b789ae3c99a240f6f6e91c9adfa9d3b543be7c2e26c4b0e07d4c2919a035"
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "stageId": "P5",
   "algorithm": "ascending SHA-256(seed:rowKey)",
-  "seed": "P5:222:aa4a6abfeccf847017cf2151c2fd009163bef647159380ac54f8c3025786356a",
+  "seed": "P5:222:1eda42582114a7c169bc2de16ebe92955044cefc641d83444dea127af190c547",
   "mandatoryCoverage": {
     "reason": "100% of proposed corrections and known-dead-link dispositions",
     "rows": [
@@ -11,7 +11,6 @@
       33,
       34,
       38,
-      59,
       67,
       164,
       167,
@@ -19,201 +18,201 @@
       173
     ]
   },
-  "remainingDenominator": 186,
+  "remainingDenominator": 187,
   "requiredRate": 0.2,
   "minimum": 25,
   "sampleSize": 38,
   "sampledRows": [
     {
-      "sheetRow": 3,
-      "rowKey": "p5-row-0003",
-      "score": "001e0a37742d4732aebc03bd05fe22ce8ddda1655078be883eaa35b0c2ae337d"
+      "sheetRow": 137,
+      "rowKey": "p5-row-0137",
+      "score": "00d5901c288f9d2b925ddc047287887af8b761f31b316b799c10f85656eb408a"
     },
     {
-      "sheetRow": 12,
-      "rowKey": "p5-row-0012",
-      "score": "012aa894bde06e0f33345dc98200e265a584be128fb9360f498f5ea8588bb839"
+      "sheetRow": 47,
+      "rowKey": "p5-row-0047",
+      "score": "031a24f8ad5bc32172a9af103b3af9daade0b715b71515577e469cad8bac9dfe"
     },
     {
-      "sheetRow": 182,
-      "rowKey": "p5-row-0182",
-      "score": "03b084588cc79583fae8778327c0b0a9c1eaf82e639bc50c2c0a7a4b875c076e"
+      "sheetRow": 129,
+      "rowKey": "p5-row-0129",
+      "score": "03f8a37ee114d969b99932fc736be837c89fa08459d99c614db58108a2e6699c"
     },
     {
-      "sheetRow": 36,
-      "rowKey": "p5-row-0036",
-      "score": "03c73b1d009d6ef920b9b451d97a6089023c064fef63fbe9ff21d4e0c341337b"
-    },
-    {
-      "sheetRow": 74,
-      "rowKey": "p5-row-0074",
-      "score": "062d2939eedc21599caf0f9fd28910bbb0116f62c49069a5c25849c486b8a511"
-    },
-    {
-      "sheetRow": 102,
-      "rowKey": "p5-row-0102",
-      "score": "08c802edc685831466a9432b4bc2371e1c6d0e4aff18073259bbf72331e0d5dd"
-    },
-    {
-      "sheetRow": 189,
-      "rowKey": "p5-row-0189",
-      "score": "08e53f4094836b4e14e4c70311f86c845c7afcbeb5c2bd0b88683279c61d23b8"
+      "sheetRow": 95,
+      "rowKey": "p5-row-0095",
+      "score": "0504569d7be11f3233c3cbbeaa9bfbda3624873599345b6f6a6531a60938ae08"
     },
     {
       "sheetRow": 193,
       "rowKey": "p5-row-0193",
-      "score": "0a676388a395221a563fcc3cd190d1d71aa681b35235b6abe4ec31728504b23c"
+      "score": "065de40c4f60ab3cee4c4a9c226b039231ee364e036f7b4e490c988192f96253"
     },
     {
-      "sheetRow": 29,
-      "rowKey": "p5-row-0029",
-      "score": "0d4e0ddbbc8087964856c32f972c9ecea718d78bfe3bb4c13079c76d56931424"
+      "sheetRow": 16,
+      "rowKey": "p5-row-0016",
+      "score": "0ace97a30d9d0ed23bcd5acd7de81f17457e4f67773d5fe4c909142faa994703"
     },
     {
-      "sheetRow": 171,
-      "rowKey": "p5-row-0171",
-      "score": "0f8cd435ecb691bbf3a043a39ffbe79eda69f9db0d14eb02b978ccde7a813d07"
+      "sheetRow": 182,
+      "rowKey": "p5-row-0182",
+      "score": "0afad0d76cf81eb449d6210cc67c264be64540081f8018e719cd5ce0c9c63fdd"
     },
     {
-      "sheetRow": 107,
-      "rowKey": "p5-row-0107",
-      "score": "0feca43719f3e6099ad87ce5b1918fb977b0cc2ad816ad16b0bfaec212793fd7"
+      "sheetRow": 138,
+      "rowKey": "p5-row-0138",
+      "score": "0c2c80014a5b1ef689c5ad7889ef9d5accbab5fcbeb15e882ef92e9aa823c6dc"
     },
     {
-      "sheetRow": 118,
-      "rowKey": "p5-row-0118",
-      "score": "115582e68655ee1260b66f82085f8f1d7446c9d66543275b654e2d3175a33690"
+      "sheetRow": 52,
+      "rowKey": "p5-row-0052",
+      "score": "0d14fdd43b414cfef6476ccf1394cf6bd4c5826b114db9fa1473b8683539b37b"
     },
     {
-      "sheetRow": 103,
-      "rowKey": "p5-row-0103",
-      "score": "1201ff212a2fffc6a3d27bc00d1e36bff9314770913501a7a95376ceb0b777ea"
+      "sheetRow": 163,
+      "rowKey": "p5-row-0163",
+      "score": "0dc6f9dfc9989d2e70ce442b5fccabd29a790edb8a3d7e0c8dfc55ff2dc15c73"
     },
     {
-      "sheetRow": 157,
-      "rowKey": "p5-row-0157",
-      "score": "1392a7a319c79038f3b8035995c39c48319de6c571ee29d1194a88d06d5682a4"
+      "sheetRow": 3,
+      "rowKey": "p5-row-0003",
+      "score": "0ef1855b0aa55d188e07fb8aa70da73232b099e398ed4df7eff646cd4b16e393"
     },
     {
-      "sheetRow": 135,
-      "rowKey": "p5-row-0135",
-      "score": "1439cfd22bdb5ddb319d01c993bb7657da034de2debe442e387a46a02ab6b812"
+      "sheetRow": 128,
+      "rowKey": "p5-row-0128",
+      "score": "0f47b3f4566f3b4ac39e5b882bdaf2fdbaf01ac6ffa007759ccf84f010c4792e"
     },
     {
-      "sheetRow": 20,
-      "rowKey": "p5-row-0020",
-      "score": "171ef652fc3433df5677081d99491fbbafb8be297a289b654fde8548f64ba835"
+      "sheetRow": 32,
+      "rowKey": "p5-row-0032",
+      "score": "12461dee56e158dc5db550b773139693aea55b8460eb4d95f4330398320e0af0"
     },
     {
-      "sheetRow": 70,
-      "rowKey": "p5-row-0070",
-      "score": "18ab2e74772632fe00e8c447333852a2da6c65c727637c0004bfd8d0d6d69157"
+      "sheetRow": 158,
+      "rowKey": "p5-row-0158",
+      "score": "1787b855798694d7a15e0b29e23818ec793b58becedb61b127af695c21c751cc"
     },
     {
-      "sheetRow": 92,
-      "rowKey": "p5-row-0092",
-      "score": "18d0e8fb921b4dadc292f726bde4a3a966e6517bee9dc7bc48d0b82d1af7bac4"
-    },
-    {
-      "sheetRow": 69,
-      "rowKey": "p5-row-0069",
-      "score": "19f9ab2fd14110b70e1e93f4cf38be4225ec4b9101855932512c5feae8bf3ab5"
-    },
-    {
-      "sheetRow": 88,
-      "rowKey": "p5-row-0088",
-      "score": "1b4ecc1896417c0e830d6577a4a6f47ab4cdb23ef3f5ed2c25a8df986fe56b68"
-    },
-    {
-      "sheetRow": 188,
-      "rowKey": "p5-row-0188",
-      "score": "1b4f00d7940d0faa1598d98e8390d8415da3b9fc9e6bd299b49ddf7c6c863d4b"
-    },
-    {
-      "sheetRow": 101,
-      "rowKey": "p5-row-0101",
-      "score": "1d73f131f4cec4d1decc9f9e64872be9cce2c8cabbf06ba4926eff28dd296b7c"
-    },
-    {
-      "sheetRow": 57,
-      "rowKey": "p5-row-0057",
-      "score": "1e00701128da00466f234234e4861a30eb87ab815b51cee56727532192837fc8"
-    },
-    {
-      "sheetRow": 49,
-      "rowKey": "p5-row-0049",
-      "score": "1f737a4de3be1c53389eb46db7f8d9c77ece7d56a0860b2b6514f8f4f05d8e28"
-    },
-    {
-      "sheetRow": 23,
-      "rowKey": "p5-row-0023",
-      "score": "2051aa780f22e3abca26de9dd9a5699ca7ac9da77db734a1e4a9eda66dd0224c"
-    },
-    {
-      "sheetRow": 148,
-      "rowKey": "p5-row-0148",
-      "score": "220c5f25f49574c684d0595bad609e75cca379983de1f2cb3954f3b7d202ef1a"
-    },
-    {
-      "sheetRow": 131,
-      "rowKey": "p5-row-0131",
-      "score": "220fb69c5537c836dd717e4d8f8a9db068d7cd90f01882f78d4149f0c4e123fc"
-    },
-    {
-      "sheetRow": 114,
-      "rowKey": "p5-row-0114",
-      "score": "22e626ed5d93e5ede3cb54d4eae1b591cf9a2efcd37619ba00b9fd1c7ac4440d"
-    },
-    {
-      "sheetRow": 153,
-      "rowKey": "p5-row-0153",
-      "score": "2322ddfe9596a983d8a93caf2f82f8b6bcd7182054a6023877bd8fd24b57ff85"
-    },
-    {
-      "sheetRow": 151,
-      "rowKey": "p5-row-0151",
-      "score": "248a6e0a48bb03e8ecc16de6541975dbf079459cbb160867a63d3195c6fd798d"
-    },
-    {
-      "sheetRow": 155,
-      "rowKey": "p5-row-0155",
-      "score": "25bb1647d5f64fadbebc426a5e10b4a28dda88cc9d52e511ec1a386f6a7adf1d"
-    },
-    {
-      "sheetRow": 37,
-      "rowKey": "p5-row-0037",
-      "score": "2c96cb73a118fc8e7a248c5dc4311c023b53bc91a89da66292b1d29c5a49a8a7"
-    },
-    {
-      "sheetRow": 195,
-      "rowKey": "p5-row-0195",
-      "score": "2e6af8491346bfe9825ad48bbed20f3e9d3307bd8d6cb826c6466ef7e7e09061"
-    },
-    {
-      "sheetRow": 54,
-      "rowKey": "p5-row-0054",
-      "score": "2ea42045afaaadf1bac896932e2396b7392d147b125fc03efbdb804dd97ffe6d"
-    },
-    {
-      "sheetRow": 71,
-      "rowKey": "p5-row-0071",
-      "score": "307c0b7368b802f6e5776164532c9d24f5a0980b8a13994dc33f24a0672e6a95"
-    },
-    {
-      "sheetRow": 21,
-      "rowKey": "p5-row-0021",
-      "score": "308a24ce983bef36daa09b3d5c638bc27cb44f6d41bb8037b8d0e3260e371dfd"
+      "sheetRow": 179,
+      "rowKey": "p5-row-0179",
+      "score": "17e6509c6a9215bc2c1c2398937ab4ff780dc4597d52bdfd884c5f59612a8fab"
     },
     {
       "sheetRow": 45,
       "rowKey": "p5-row-0045",
-      "score": "32b05492ad2e72da368616c94ab7309aeef8c24e536a12246994a8d886acc90f"
+      "score": "190203625d474a594d0cbc2ec4372e6390738cd9537487f11fb02900f2aadb8e"
     },
     {
-      "sheetRow": 68,
-      "rowKey": "p5-row-0068",
-      "score": "32fad9c1ac8e46945425f7fdca8d46a09213b9dbffdc30e5d4848ff3aaa364bd"
+      "sheetRow": 75,
+      "rowKey": "p5-row-0075",
+      "score": "19981befa5e74b2d1fce72925aea2ee6e227e7a74a8907c4c5815c578ebcac40"
+    },
+    {
+      "sheetRow": 66,
+      "rowKey": "p5-row-0066",
+      "score": "1ad094f6afa4def89895ae2733022da90163f1924836ccb568c81d9feaf6d4e9"
+    },
+    {
+      "sheetRow": 83,
+      "rowKey": "p5-row-0083",
+      "score": "1dd330b6cfeb53adeba4b05fd3384f1b44364d352bf54958d3583f914ecea1f4"
+    },
+    {
+      "sheetRow": 136,
+      "rowKey": "p5-row-0136",
+      "score": "1f18617cbfb52687e16c65be35a3ecec4dbe4f202e2862e4b7b41df71ab9e6da"
+    },
+    {
+      "sheetRow": 117,
+      "rowKey": "p5-row-0117",
+      "score": "1fd9da75c8b99b412d0f4d69ceaac4e6fd9c42723dde01090bb6597daf867e94"
+    },
+    {
+      "sheetRow": 35,
+      "rowKey": "p5-row-0035",
+      "score": "22f55cd94d894310350116a8b90c8084c408f735e514e4b950f9b03b3d1030d4"
+    },
+    {
+      "sheetRow": 106,
+      "rowKey": "p5-row-0106",
+      "score": "2330925dc3c239a1656313f15146d02b1adf079bac86a8d540de96a876996caf"
+    },
+    {
+      "sheetRow": 37,
+      "rowKey": "p5-row-0037",
+      "score": "23c1c91ed13c0244f4ed455fd7ccf80609809a7745e1136b37f4170385b0628f"
+    },
+    {
+      "sheetRow": 17,
+      "rowKey": "p5-row-0017",
+      "score": "2538d6f890b9af6229c4bacb6a3da07fa00cf67ba74733a26003418f247fde76"
+    },
+    {
+      "sheetRow": 153,
+      "rowKey": "p5-row-0153",
+      "score": "2575c499b67e84a75d768335d37086a469606de4fc7499071c06db9fdce507b5"
+    },
+    {
+      "sheetRow": 177,
+      "rowKey": "p5-row-0177",
+      "score": "266ff831cc01f8100a368c9aeee477925e4390b25e7930aea34aa3975867644f"
+    },
+    {
+      "sheetRow": 166,
+      "rowKey": "p5-row-0166",
+      "score": "2acb4d111f96e5b64cb161f413d3ffede073269f70f4404fb027c6babef1eb0a"
+    },
+    {
+      "sheetRow": 175,
+      "rowKey": "p5-row-0175",
+      "score": "2b246a06bce5202802f058de4a004094aebf8d8f6ba105578f782aad606d5488"
+    },
+    {
+      "sheetRow": 81,
+      "rowKey": "p5-row-0081",
+      "score": "2c6c952c25550203ad79a0b02d6ec7f9da7a38236f01429e221cdffe8044a72f"
+    },
+    {
+      "sheetRow": 69,
+      "rowKey": "p5-row-0069",
+      "score": "2c781cf49c30eeb89c46a566ba154a9b3183056c962630a1f0572320827cdf23"
+    },
+    {
+      "sheetRow": 49,
+      "rowKey": "p5-row-0049",
+      "score": "2d0076c87c8343c2f7c4540f09838f311716873baff9fab34f0a14bdfd399d9d"
+    },
+    {
+      "sheetRow": 165,
+      "rowKey": "p5-row-0165",
+      "score": "2dd81a3717ff62604557ade8154754ece0676c68bff5edcba27e547cf8ec5507"
+    },
+    {
+      "sheetRow": 110,
+      "rowKey": "p5-row-0110",
+      "score": "2de516c179f9700cbf41e3f2c7d4173b3a6d8c08391948247772df605c30c36a"
+    },
+    {
+      "sheetRow": 84,
+      "rowKey": "p5-row-0084",
+      "score": "2fa7083b7fd4e1261773a94d434c1d27739686813f7c51ab9948694e37827367"
+    },
+    {
+      "sheetRow": 154,
+      "rowKey": "p5-row-0154",
+      "score": "321f8cfb1602609350b2d369512c9b2a7b61347bb6b079227c505177047e4848"
+    },
+    {
+      "sheetRow": 155,
+      "rowKey": "p5-row-0155",
+      "score": "3513ea20c607de235f4a7a6e0a4a62a6abb97d18231a90cb70471a93eb5c35d2"
+    },
+    {
+      "sheetRow": 10,
+      "rowKey": "p5-row-0010",
+      "score": "36eeac88c31ed92d603eb727f7102399470dce06f6c03c5c8a059aa10cc0e0fe"
     }
   ],
-  "bodySha256": "d994d824dd4b4e78a46931eee40d767725e334a412f19017c96c519290619d33"
+  "bodySha256": "a00f08a5677ea6b94193878e4f7edc5dca953cc74c2ef4faf6ef63e2ab53e91e"
 }

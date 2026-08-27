@@ -58,6 +58,8 @@ const snapshotPath = path.join(repoRoot, 'web/fixtures/p5/prewrite-master-databa
 const queuePath = path.join(repoRoot, 'docs/evidence/P5-source-queue.json');
 const publicProbePath = path.join(repoRoot, 'docs/evidence/P5-public-probes.json');
 const firecrawlPath = path.join(repoRoot, 'docs/evidence/P5-firecrawl-receipts.json');
+const deadDisclosurePath = path.join(repoRoot, 'docs/evidence/P5-preboundary-dead-link-observations.json');
+const staticApplicationDisclosurePath = path.join(repoRoot, 'docs/evidence/P5-preboundary-static-application-observations.json');
 const proposalsPath = path.join(repoRoot, 'docs/evidence/P5-proposals.json');
 const ledgerPath = path.join(repoRoot, 'docs/evidence/P5-audit-ledger.json');
 const manualPath = path.join(repoRoot, 'docs/evidence/P5-manual-review.json');
@@ -76,14 +78,13 @@ const correctionPlans = [
   { row: 33, changes: [{ cell: 'F33', field: 'informationLink', category: 'dead_link_replacement', oldHyperlink: 'https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf', newHyperlink: 'https://whitefishcommunityfoundation.org/menu/dorothy-and-luther-campbell-scholarship', evidenceIds: ['p5replace_wcf_campbell'], rationale: 'The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.' }] },
   { row: 34, changes: [{ cell: 'F34', field: 'informationLink', category: 'dead_link_replacement', oldHyperlink: 'https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf', newHyperlink: 'https://whitefishcommunityfoundation.org/menu/jean-atkinson-driggers-scholarship', evidenceIds: ['p5replace_wcf_jean'], rationale: 'The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.' }] },
   { row: 38, changes: [{ cell: 'F38', field: 'informationLink', category: 'dead_link_replacement', oldHyperlink: 'https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf', newHyperlink: 'https://whitefishcommunityfoundation.org/menu/kiita-foundation-scholarship', evidenceIds: ['p5replace_wcf_kiita'], rationale: 'The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.' }] },
-  { row: 59, changes: [{ cell: 'E59', field: 'amount', category: 'amount_correction', newValue: '$500–$5,000', evidenceIds: ['p5src_488e35cfdfdac7d7e9a6'], rationale: 'Current direct MGGA page lists 2026 recipient tiers of $500, $1,000, and $5,000.' }] },
   { row: 67, changes: [
     { cell: 'B67', field: 'dueDate', category: 'deadline_correction', newValue: 46127, evidenceIds: ['p5replace_smile'], rationale: 'Current direct Smile Montana page states April 15.' },
     { cell: 'F67', field: 'informationLink', category: 'dead_link_replacement', oldHyperlink: 'https://www.smilemontana.com/news/scholarship', newHyperlink: 'https://www.smilemontana.com/scholarship', evidenceIds: ['p5replace_smile'], rationale: 'The old page is 404; the current direct scholarship page returned 200.' },
     { cell: 'H67', field: 'applicationLink', category: 'dead_link_replacement', oldHyperlink: 'https://docs.google.com/document/d/1v6ap2g4Bsu7EuyjJNVSaxoOV1z54S5lP/edit', newHyperlink: 'https://www.smilemontana.com/s/Smile-Montana-Scholarship-2026.docx', evidenceIds: ['p5replace_smile'], rationale: 'The current direct scholarship page links its public 2026 application document.' },
   ] },
-  { row: 164, changes: [{ cell: 'B164', field: 'dueDate', category: 'deadline_correction', newValue: 'Ongoing', evidenceIds: ['p5src_a2baa8cd20bafbcbbce7'], rationale: 'Current direct Adoption STAR scholarship page states the deadline is ongoing.' }] },
-  { row: 167, changes: [{ cell: 'B167', field: 'dueDate', category: 'deadline_correction', newValue: 'Annual — Mar 1 (opens Oct)', evidenceIds: ['p5src_7443be7e1cb6f0709cf5'], rationale: 'Current direct Dell Scholars page states a March 1 deadline and October opening.' }] },
+  { row: 164, changes: [{ cell: 'B164', field: 'dueDate', category: 'deadline_correction', newValue: 'Ongoing', evidenceIds: ['P5-preboundary-static-application-observations'], rationale: 'The disclosed current direct Adoption STAR scholarship-page receipt states the deadline is ongoing.' }] },
+  { row: 167, changes: [{ cell: 'B167', field: 'dueDate', category: 'deadline_correction', newValue: 'Annual — Mar 1', evidenceIds: ['P5-preboundary-static-application-observations'], rationale: 'The disclosed current direct Dell Scholars page receipt states a March 1 deadline.' }] },
   { row: 172, changes: [{ cell: 'H172', field: 'applicationLink', category: 'dead_link_replacement', oldHyperlink: 'https://mfbf.org/Foundation/Foundation-Scholarships', newHyperlink: 'https://form.jotform.com/250345411585151', evidenceIds: ['p5replace_mfbf'], rationale: 'The old page is 404; the current direct Montana Farm Bureau page identifies this active application link.' }] },
   { row: 173, changes: [{ cell: 'H173', field: 'applicationLink', category: 'dead_link_replacement', oldHyperlink: 'https://mfbf.org/Foundation/Foundation-Scholarships', newHyperlink: 'https://form.jotform.com/250344617133147', evidenceIds: ['p5replace_mfbf'], rationale: 'The old page is 404; the current direct Montana Farm Bureau page identifies this active application link.' }] },
 ] as const;
@@ -91,18 +92,18 @@ const correctionPlans = [
 const replacementReceipts = [
   { evidenceId: 'p5replace_responsibility', file: 'P5-replacement-responsibility.json', url: 'https://revenue.mt.gov/ResponsibilityMatters/scholarship/', markers: ['January 25, 2026', '$2,000'], rows: [9] },
   { evidenceId: 'p5replace_nhs', file: 'P5-replacement-nhs.json', url: 'https://www.nationalhonorsociety.org/the-nhs-scholarship/', markers: ['November 20, 2026', 'create-an-account'], rows: [24] },
-  { evidenceId: 'p5replace_wcf_campbell', file: 'P5-replacement-wcf-campbell.json', url: 'https://whitefishcommunityfoundation.org/menu/dorothy-and-luther-campbell-scholarship', markers: ['March 31, 2026', 'Dorothy'], rows: [33] },
-  { evidenceId: 'p5replace_wcf_jean', file: 'P5-replacement-wcf-jean.json', url: 'https://whitefishcommunityfoundation.org/menu/jean-atkinson-driggers-scholarship', markers: ['March 31, 2026', 'Jean'], rows: [34] },
-  { evidenceId: 'p5replace_wcf_kiita', file: 'P5-replacement-wcf-kiita.json', url: 'https://whitefishcommunityfoundation.org/menu/kiita-foundation-scholarship', markers: ['March 31, 2026', 'Kiita'], rows: [38] },
+  { evidenceId: 'p5replace_wcf_campbell', file: 'P5-replacement-wcf-campbell.json', url: 'https://whitefishcommunityfoundation.org/menu/dorothy-and-luther-campbell-scholarship', markers: ['March 31, 2026', '2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf'], rows: [33] },
+  { evidenceId: 'p5replace_wcf_jean', file: 'P5-replacement-wcf-jean.json', url: 'https://whitefishcommunityfoundation.org/menu/jean-atkinson-driggers-scholarship', markers: ['March 31, 2026', '2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf'], rows: [34] },
+  { evidenceId: 'p5replace_wcf_kiita', file: 'P5-replacement-wcf-kiita.json', url: 'https://whitefishcommunityfoundation.org/menu/kiita-foundation-scholarship', markers: ['March 31, 2026', '2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf'], rows: [38] },
   { evidenceId: 'p5replace_smile', file: 'P5-replacement-smile.json', url: 'https://www.smilemontana.com/scholarship', markers: ['April 15th', 'Smile-Montana-Scholarship-2026.docx'], rows: [67] },
-  { evidenceId: 'p5replace_mfbf', file: 'P5-replacement-mfbf.json', url: 'https://www.mfbf.org/scholarships', markers: ['April 1, 2026', '250345411585151', '250344617133147'], rows: [172, 173] },
+  { evidenceId: 'p5replace_mfbf', file: 'P5-replacement-mfbf.json', url: 'https://www.mfbf.org/scholarships', markers: ['250345411585151', '250344617133147'], rows: [172, 173] },
 ] as const;
 
 function readJson<T>(filePath: string): T { return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T; }
 
 function privacyClean(value: string): string {
   return value.replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, '[redacted-email]')
-    .replace(/(?:\+?1[-. (]*)?\d{3}[-. )]*\d{3}[-. ]*\d{4}/g, '[redacted-phone]');
+    .replace(/(?<!\d)(?:\+?1[-. (]*)?\d{3}[-. )]*\d{3}[-. ]*\d{4}(?!\d)/g, '[redacted-phone]');
 }
 
 function writeOrCheck(filePath: string, value: unknown, check: boolean) {
@@ -117,20 +118,30 @@ function main() {
   const queue = readJson<QueueReport>(queuePath);
   const publicProbe = readJson<PublicProbe>(publicProbePath);
   const firecrawl = readJson<FirecrawlReport>(firecrawlPath);
+  const deadDisclosure = readJson<{ bodySha256: string; receipts: Array<{ sourceId: string; status: number | null }> }>(deadDisclosurePath);
+  const { bodySha256: deadDisclosureDigest, ...deadDisclosureBody } = deadDisclosure;
+  assert.equal(deadDisclosure.receipts.length, 7);
+  assert.equal(deadDisclosure.receipts.every((receipt) => receipt.status === 404), true);
+  assert.equal(sha256Text(JSON.stringify(deadDisclosureBody)), deadDisclosureDigest);
+  const staticApplicationDisclosure = readJson<{ bodySha256: string; receipts: Array<{ sourceId: string; outcome: string; statusCode: number | null }> }>(staticApplicationDisclosurePath);
+  const { bodySha256: staticApplicationDigest, ...staticApplicationBody } = staticApplicationDisclosure;
+  assert.equal(staticApplicationDisclosure.receipts.length, 2);
+  assert.equal(staticApplicationDisclosure.receipts.every((receipt) => receipt.outcome === 'retrieved' && receipt.statusCode === 200), true);
+  assert.equal(sha256Text(JSON.stringify(staticApplicationBody)), staticApplicationDigest);
   const queueByUrl = new Map(queue.entries.map((entry) => [entry.url, entry]));
   const probeById = new Map(publicProbe.receipts.map((receipt) => [receipt.sourceId, receipt]));
   const firecrawlById = new Map(firecrawl.receipts.map((receipt) => [receipt.sourceId, receipt]));
   const rowsByNumber = new Map(snapshot.records.map((record) => [record.sheetRow, record]));
 
   const replacementPath = path.join(repoRoot, 'docs/evidence/P5-replacement-evidence.json');
-  let replacementReport: { schemaVersion: number; stageId: string; receipts: Array<{ evidenceId: string; statusCode: number | null; piiRedacted: boolean }>; bodySha256: string };
+  let replacementReport: { schemaVersion: number; stageId: string; receipts: Array<{ evidenceId: string; statusCode: number | null; piiRedacted: boolean; verifiedExcerpts: string[] }>; bodySha256: string };
   if (check) {
     replacementReport = readJson(replacementPath);
     const { bodySha256, ...body } = replacementReport;
     assert.equal(body.schemaVersion, 1);
     assert.equal(body.stageId, 'P5');
     assert.equal(body.receipts.length, replacementReceipts.length);
-    assert.equal(body.receipts.every((receipt) => receipt.statusCode === 200 && receipt.piiRedacted), true);
+    assert.equal(body.receipts.every((receipt) => receipt.statusCode === 200 && receipt.piiRedacted && receipt.verifiedExcerpts.length > 0), true);
     assert.equal(sha256Text(JSON.stringify(body)), bodySha256);
   } else {
     const replacementEvidence = replacementReceipts.map((receipt) => {
@@ -141,6 +152,11 @@ function main() {
       assert.equal(raw.metadata?.statusCode, 200, `${receipt.evidenceId} status`);
       assert.equal(raw.metadata?.url, receipt.url, `${receipt.evidenceId} final URL`);
       for (const marker of receipt.markers) assert.equal(rawMarkdown.includes(marker), true, `${receipt.evidenceId} missing marker ${marker}`);
+      const verifiedExcerpts = receipt.markers.map((marker) => {
+        const index = rawMarkdown.indexOf(marker);
+        return privacyClean(rawMarkdown.slice(Math.max(0, index - 180), index + marker.length + 220))
+          .replace(/\s+/g, ' ').trim();
+      });
       return {
         evidenceId: receipt.evidenceId,
         sourceAuthority: 'current_direct_official',
@@ -153,6 +169,7 @@ function main() {
         sanitizedMarkdownSha256: sha256Text(markdown),
         supportedRows: receipt.rows,
         verifiedMarkers: receipt.markers,
+        verifiedExcerpts,
         piiRedacted: true,
       };
     });
@@ -188,7 +205,9 @@ function main() {
         ...('oldHyperlink' in change ? { oldHyperlink: change.oldHyperlink } : {}),
         newValue: 'newValue' in change ? change.newValue : null,
         ...('newHyperlink' in change ? { newHyperlink: change.newHyperlink, preserveDisplayedValue: true } : {}),
-        evidenceIds: [...change.evidenceIds],
+        evidenceIds: change.category === 'dead_link_replacement'
+          ? [...change.evidenceIds, 'P5-preboundary-dead-link-observations']
+          : [...change.evidenceIds],
         rationale: change.rationale,
         reviewStatus: 'pending_independent_review',
       });
@@ -217,13 +236,11 @@ function main() {
     if (observations.some((item) => item.source.retrievalDisposition === 'manual_review_no_fetch')) flags.push('manual_no_fetch');
     if (observations.some((item) => item.probe?.classifications.some((value) => value.state === 'dead'))) flags.push('known_dead_link');
     if (observations.some((item) => !item.probe || item.probe.classifications.some((value) => value.state === 'inconclusive'))) flags.push('inconclusive_source');
-    const allLinksGood = observations.length > 0 && observations.every((item) => item.probe?.classifications.every((value) => value.state === 'reachable' || value.state === 'redirected'));
     const exactOfficialName = observations.some((item) => item.firecrawl?.outcome === 'retrieved'
       && item.firecrawl.statusCode === 200
       && item.firecrawl.nameMatches.some((match) => match.sheetRow === record.sheetRow && match.exactNormalizedNamePresent));
-    let proposedDisposition: 'confirmed' | 'corrected' | 'manual_review';
+    let proposedDisposition: 'corrected' | 'manual_review';
     if (proposalRows.has(record.sheetRow)) proposedDisposition = 'corrected';
-    else if (allLinksGood && exactOfficialName && !flags.includes('manual_no_fetch')) proposedDisposition = 'confirmed';
     else proposedDisposition = 'manual_review';
     if (proposedDisposition === 'manual_review' && !exactOfficialName) flags.push('insufficient_direct_official_identity_evidence');
     const proposalIds = proposals.filter((proposal) => proposal.sheetRow === record.sheetRow).map((proposal) => proposal.proposalId);
@@ -236,7 +253,6 @@ function main() {
       evidenceIds: observations.map((item) => item.source.sourceId),
       riskFlags: [...new Set(flags)].sort(),
       reason: proposedDisposition === 'corrected' ? 'Current direct official evidence supports the listed review-pending corrections.'
-        : proposedDisposition === 'confirmed' ? 'All linked sources are reachable or redirected and a current retrieved source contains the exact normalized scholarship name; no observed correction is proposed.'
         : 'The available evidence is incomplete, inaccessible, inconclusive, stale, or insufficient for a non-destructive confirmed/corrected disposition.',
       nextAction: proposedDisposition === 'manual_review' ? 'Human reviewer should verify current direct official deadline, amount, eligibility, and application method without form submission or provider contact.' : null,
     };
@@ -244,7 +260,7 @@ function main() {
   assert.equal(ledger.length, 197);
   assert.equal(new Set(ledger.map((entry) => entry.sheetRow)).size, 197);
   const dispositionTotals = {
-    confirmed: ledger.filter((entry) => entry.proposedDisposition === 'confirmed').length,
+    confirmed: 0,
     corrected: ledger.filter((entry) => entry.proposedDisposition === 'corrected').length,
     archived: 0,
     merged: 0,
@@ -253,7 +269,7 @@ function main() {
   assert.equal(Object.values(dispositionTotals).reduce((sum, value) => sum + value, 0), 197);
   const ledgerBody = {
     schemaVersion: 1, stageId: 'P5', sourceRevisionId: snapshot.spreadsheetRevisionId,
-    pinnedInputDigests: { sourceQueue: queue.bodySha256, publicProbe: publicProbe.bodySha256, firecrawl: firecrawl.bodySha256, replacementEvidence: replacementReport.bodySha256, proposals: proposalReport.bodySha256 },
+    pinnedInputDigests: { sourceQueue: queue.bodySha256, publicProbe: publicProbe.bodySha256, firecrawl: firecrawl.bodySha256, preboundaryDeadLinks: deadDisclosure.bodySha256, preboundaryStaticApplication: staticApplicationDisclosure.bodySha256, replacementEvidence: replacementReport.bodySha256, proposals: proposalReport.bodySha256 },
     inputRowDenominator: 197, dispositionTotals, entries: ledger,
   };
   const ledgerReport = { ...ledgerBody, bodySha256: sha256Text(JSON.stringify(ledgerBody)) };

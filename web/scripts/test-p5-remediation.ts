@@ -35,6 +35,13 @@ const googleDocument = {
 };
 assert.equal(retrievalDisposition(googleDocument).retrievalDisposition, 'manual_review_no_fetch');
 
+const applicationLanding = {
+  ...googleForm,
+  url: 'https://provider.example/scholarships/current',
+  host: 'provider.example',
+};
+assert.equal(retrievalDisposition(applicationLanding).retrievalDisposition, 'manual_review_no_fetch');
+
 const officialInfo = {
   url: 'https://provider.example/scholarships/current',
   host: 'provider.example',
@@ -43,6 +50,17 @@ const officialInfo = {
   provenance: new Set(['cellData.hyperlink']),
 };
 assert.equal(retrievalDisposition(officialInfo).retrievalDisposition, 'public_read_only_scrape');
+
+for (const url of [
+  'https://forms.office.com/pages/responsepage.aspx?id=example',
+  'https://webportalapp.com/sp/login_saml/example',
+  'https://fvcc.awardspring.com/',
+  'https://provider.example/applications',
+  'https://provider.example/ninja-forms/example',
+]) {
+  const parsed = new URL(url);
+  assert.equal(retrievalDisposition({ ...officialInfo, url, host: parsed.hostname }).retrievalDisposition, 'manual_review_no_fetch');
+}
 
 const serialized = JSON.stringify(report);
 assert.equal(/[?&](?:utm_[^=&]+|gclid|fbclid|ouid|rtpof|usp|sd)=/i.test(serialized), false);

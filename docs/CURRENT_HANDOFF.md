@@ -22,15 +22,20 @@ Default branch: `main`
   `Master Database!A1:X1060` native-cell payloads match at SHA-256
   `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
   Testing-sheet content writes remain zero.
-- The pre-write audit is complete across exactly 197 rows and 213 distinct CellData
-  sources. Bounded HTTP evidence covers 131 public URLs; Firecrawl evidence covers 124
-  static public sources with 122 retrieved and two inconclusive; private Drive/Docs,
-  forms, logins, portals, actions, and submissions were not accessed.
-- Proposed dispositions are 30 confirmed, 11 corrected, zero archived, zero merged,
-  and 156 manual review. The 11 corrected rows contain 27 cell proposals: 16 material
-  corrections plus 11 correction-date stamps. All remain pending independent review;
+- The remediated pre-write audit is complete across exactly 197 rows and 213 distinct
+  CellData sources. The strict router permits 52 public information sources and sends
+  161 application-role/private/form/login/portal sources to no-fetch. Firecrawl
+  evidence covers the same 52 static public sources with 50 retrieved and two
+  inconclusive.
+- Proposed dispositions are zero confirmed, 10 corrected, zero archived, zero merged,
+  and 187 manual review. The 10 corrected rows contain 25 cell proposals: 15 material
+  corrections plus 10 correction-date stamps. All remain pending replacement review;
   sheet writes remain zero.
-- Independent proposal review must cover all 11 corrected/known-dead rows plus the
+- The first proposal checkpoint `57d3540` was rejected C0/H3/M2/L0. Its evidence
+  reproducibility, unsupported confirmations, routing boundary, row 59 tier collapse,
+  and row 167 unsupported opening claim have been remediated. Earlier bounded GETs are
+  disclosed; no form submission or applicant collection occurred.
+- Independent replacement review must cover all 10 corrected/known-dead rows plus the
   deterministic 38-row sample in `docs/evidence/P5-review-sample.json`. Only approved
   proposals may be applied after an immediate revision-`222` and target-CellData
   recheck.

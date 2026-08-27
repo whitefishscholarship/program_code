@@ -3,8 +3,8 @@
   "stageId": "P5",
   "sourceRevisionId": "222",
   "approvalBoundary": "No sheet write until every proposal is independently reviewed and explicitly approved against the pinned revision and backup.",
-  "proposalRowCount": 11,
-  "proposalCellCount": 27,
+  "proposalRowCount": 10,
+  "proposalCellCount": 25,
   "proposals": [
     {
       "proposalId": "p5prop_046bdc5acd313bf0a34f",
@@ -33,7 +33,8 @@
       "newHyperlink": "https://revenue.mt.gov/ResponsibilityMatters/scholarship/",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_responsibility"
+        "p5replace_responsibility",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "Current direct Montana Department of Revenue scholarship page returned 200.",
       "reviewStatus": "pending_independent_review"
@@ -50,7 +51,8 @@
       "newHyperlink": "https://revenue.mt.gov/ResponsibilityMatters/scholarship/",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_responsibility"
+        "p5replace_responsibility",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The PDF is 404; the current direct official page provides the active submission method and January 25, 2026 deadline.",
       "reviewStatus": "pending_independent_review"
@@ -96,7 +98,8 @@
       "newHyperlink": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_nhs"
+        "p5replace_nhs",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "Current direct NHS scholarship page returned 200.",
       "reviewStatus": "pending_independent_review"
@@ -113,7 +116,8 @@
       "newHyperlink": "https://www.nationalhonorsociety.org/create-an-account/",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_nhs"
+        "p5replace_nhs",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old portal is 404; the current direct NHS page identifies its create-account route as step one.",
       "reviewStatus": "pending_independent_review"
@@ -145,7 +149,8 @@
       "newHyperlink": "https://whitefishcommunityfoundation.org/menu/dorothy-and-luther-campbell-scholarship",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_wcf_campbell"
+        "p5replace_wcf_campbell",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.",
       "reviewStatus": "pending_independent_review"
@@ -177,7 +182,8 @@
       "newHyperlink": "https://whitefishcommunityfoundation.org/menu/jean-atkinson-driggers-scholarship",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_wcf_jean"
+        "p5replace_wcf_jean",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.",
       "reviewStatus": "pending_independent_review"
@@ -209,38 +215,10 @@
       "newHyperlink": "https://whitefishcommunityfoundation.org/menu/kiita-foundation-scholarship",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_wcf_kiita"
+        "p5replace_wcf_kiita",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old PDF is 404; the current direct foundation page returned 200 and links the 2026 criteria.",
-      "reviewStatus": "pending_independent_review"
-    },
-    {
-      "proposalId": "p5prop_760b07d098044c06c8af",
-      "sheetRow": 59,
-      "cell": "A59",
-      "field": "lastUpdated",
-      "category": "audit_timestamp",
-      "oldValue": 45918,
-      "newValue": 46261,
-      "evidenceIds": [
-        "P5-write-authorization",
-        "P5-prewrite-snapshot"
-      ],
-      "rationale": "Stamp the correction date only when another approved row correction is applied.",
-      "reviewStatus": "pending_independent_review"
-    },
-    {
-      "proposalId": "p5prop_195d61c615ef03277312",
-      "sheetRow": 59,
-      "cell": "E59",
-      "field": "amount",
-      "category": "amount_correction",
-      "oldValue": "$500 - $1,000",
-      "newValue": "$500–$5,000",
-      "evidenceIds": [
-        "p5src_488e35cfdfdac7d7e9a6"
-      ],
-      "rationale": "Current direct MGGA page lists 2026 recipient tiers of $500, $1,000, and $5,000.",
       "reviewStatus": "pending_independent_review"
     },
     {
@@ -284,7 +262,8 @@
       "newHyperlink": "https://www.smilemontana.com/scholarship",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_smile"
+        "p5replace_smile",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old page is 404; the current direct scholarship page returned 200.",
       "reviewStatus": "pending_independent_review"
@@ -301,7 +280,8 @@
       "newHyperlink": "https://www.smilemontana.com/s/Smile-Montana-Scholarship-2026.docx",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_smile"
+        "p5replace_smile",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The current direct scholarship page links its public 2026 application document.",
       "reviewStatus": "pending_independent_review"
@@ -330,9 +310,9 @@
       "oldValue": "Annual — May 31",
       "newValue": "Ongoing",
       "evidenceIds": [
-        "p5src_a2baa8cd20bafbcbbce7"
+        "P5-preboundary-static-application-observations"
       ],
-      "rationale": "Current direct Adoption STAR scholarship page states the deadline is ongoing.",
+      "rationale": "The disclosed current direct Adoption STAR scholarship-page receipt states the deadline is ongoing.",
       "reviewStatus": "pending_independent_review"
     },
     {
@@ -357,11 +337,11 @@
       "field": "dueDate",
       "category": "deadline_correction",
       "oldValue": "Annual — Feb 15 (opens Oct)",
-      "newValue": "Annual — Mar 1 (opens Oct)",
+      "newValue": "Annual — Mar 1",
       "evidenceIds": [
-        "p5src_7443be7e1cb6f0709cf5"
+        "P5-preboundary-static-application-observations"
       ],
-      "rationale": "Current direct Dell Scholars page states a March 1 deadline and October opening.",
+      "rationale": "The disclosed current direct Dell Scholars page receipt states a March 1 deadline.",
       "reviewStatus": "pending_independent_review"
     },
     {
@@ -391,7 +371,8 @@
       "newHyperlink": "https://form.jotform.com/250345411585151",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_mfbf"
+        "p5replace_mfbf",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old page is 404; the current direct Montana Farm Bureau page identifies this active application link.",
       "reviewStatus": "pending_independent_review"
@@ -423,11 +404,12 @@
       "newHyperlink": "https://form.jotform.com/250344617133147",
       "preserveDisplayedValue": true,
       "evidenceIds": [
-        "p5replace_mfbf"
+        "p5replace_mfbf",
+        "P5-preboundary-dead-link-observations"
       ],
       "rationale": "The old page is 404; the current direct Montana Farm Bureau page identifies this active application link.",
       "reviewStatus": "pending_independent_review"
     }
   ],
-  "bodySha256": "60717589c08a41e111ea9106fd0a39c28f90c350e4bf9f1f96f0be2bb4c1aaea"
+  "bodySha256": "e449012a16c6798e6fd81eb7df1f82b7cc201951aaa0eebef8f191243a25e583"
 }
