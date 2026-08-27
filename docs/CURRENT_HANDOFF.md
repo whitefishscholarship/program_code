@@ -7,7 +7,9 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine.
+- Active stage: P4 — Accuracy and verification engine. Implementation is verified;
+  immutable candidate freeze, fresh-context review, accepted-state recheck, and
+  direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
   `268758f94922f90bf307229d8633da05b2417c4a`.
 - P4 branch: `codex/p4-accuracy-verification` in isolated worktree
@@ -24,6 +26,38 @@ Default branch: `main`
 - Baseline `npm ci` installed 565 locked packages. Baseline `npm run plan:check`
   passed for all 10 ordered stage contracts after the restricted runner's local IPC
   socket was permitted.
+- First required P4 governance checkpoint: `18f0961`; implementation checkpoint:
+  `2fbe817`. The exact review candidate cannot embed its own content-derived SHA and
+  will be bound by `docs/evidence/P4-manifest.json` after freeze.
+- P4 reconciles all 270 historical CellData hyperlink representations, including 92
+  hidden application hyperlinks, plus four explicit offline methods. No representation
+  was deduplicated or skipped. The deterministic run made no spreadsheet or public-
+  source read and does not claim those historical URLs are current.
+- Fifteen synthetic target cases yield three reachable, two redirected, two dead
+  targets, and eight inconclusive outcomes. Zero network outcomes support award closure
+  or archive; the two dead targets are eligible only for link-correction review.
+- Twenty date/cycle fixtures yield five active, two closed, two upcoming, one
+  unavailable, and ten unknown states. Zero unknown/invalid parse results become
+  active. Mixed open/close strings, serials, annual/rolling rules, approximate/month-
+  only values, explicit time zones, and year boundaries are covered.
+- Sixteen field claims yield 16 complete receipts and nine decisions: two corroborated
+  current-direct-official decisions are supported evidence, seven remain review, and
+  five conflicts remain non-accepted. No spreadsheet correction is applied.
+- Deterministic report SHA-256 values: links `a043e1b5d704`, cycles `50a33bf6b1e5`,
+  field evidence `51c18b3c3a1e`, conflicts `8d9ade3b4a68`, and reviews
+  `cbb17c1568e1`.
+- The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
+  `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
+  validation, typecheck, complete tests, permitted network build, and root diff check.
+  The restricted build failed only on existing Google Fonts access; no configuration
+  changed.
+- `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
+  cannot start until P4 is accepted and delivered and separate direct informed testing-
+  sheet write authority plus a verified revision/backup exists.
+- P4 external effects to date: zero spreadsheet reads/writes, zero public-source reads,
+  zero forms/application interactions, zero applicant values, zero provider contacts,
+  zero accepted corrections/archives/merges, and zero dependency, CI, or deployment-
+  configuration changes.
 
 ## Historical P3 delivery and replacement-candidate state (completed)
 

@@ -17,7 +17,6 @@ import { generateP4Evidence } from './p4-verification';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(scriptDir, '..');
-const repoRoot = path.resolve(webRoot, '..');
 const p1Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p1/master-database-cell-data.json'), 'utf8'));
 const p4Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p4/verification-scenarios.json'), 'utf8')) as {
   asOf: string;
