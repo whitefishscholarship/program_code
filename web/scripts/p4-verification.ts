@@ -2,10 +2,13 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { z } from 'zod';
 import {
+  FieldClaimSchema,
   FRESHNESS_POLICIES,
   SOURCE_AUTHORITY_MATRIX,
   VERIFICATION_SCHEMA_VERSION,
+  VerificationSourceInputSchema,
   auditPinnedCellData,
   classifyLinkObservation,
   deriveCycleStatus,
@@ -19,6 +22,7 @@ import {
   type LinkObservation,
   type ReviewSeverity,
   type TypedDateInput,
+  type VerificationSourceInput,
 } from '../src/lib/verification';
 import { MODEL_SCHEMA_VERSION, sha256Text } from '../src/lib/canonicalModel';
 
@@ -54,10 +58,51 @@ interface FixtureFile {
   asOf: string;
   defaultTimezone: string;
   limitations: string;
+  sources: VerificationSourceInput[];
   linkObservations: LinkObservation[];
   dateScenarios: DateScenario[];
   fieldClaims: FieldClaim[];
 }
+
+const LinkObservationSchema = z.object({
+  id: z.string().min(1),
+  role: z.enum(['information', 'application', 'excluded']),
+  requestedUrl: z.string().url(),
+  finalUrl: z.string().url().nullable(),
+  status: z.number().int().min(100).max(599).nullable(),
+  contentType: z.string().min(1).nullable(),
+  failureClass: z.enum(['timeout', 'dns', 'tls', 'rate_limit', 'server_error', 'bot_block', 'login_wall', 'dynamic_shell', 'other']).nullable(),
+  markers: z.array(z.enum(['bot_block', 'login_wall', 'dynamic_shell', 'application_form'])),
+  retrievedAt: z.string().datetime({ offset: true }),
+});
+
+const TypedDateInputSchema = z.object({
+  raw: z.union([z.string(), z.number(), z.null()]),
+  timezone: z.string().min(1).nullable().optional(),
+});
+
+const P4FixtureSchema = z.object({
+  schemaVersion: z.literal(VERIFICATION_SCHEMA_VERSION),
+  modelSchemaVersion: z.literal(MODEL_SCHEMA_VERSION),
+  asOf: z.string().datetime({ offset: true }),
+  defaultTimezone: z.string().min(1),
+  limitations: z.string().min(1),
+  sources: z.array(VerificationSourceInputSchema).min(1),
+  linkObservations: z.array(LinkObservationSchema),
+  dateScenarios: z.array(z.object({
+    id: z.string().min(1),
+    input: TypedDateInputSchema,
+    availabilityConfirmed: z.boolean(),
+    unavailable: z.boolean(),
+    expected: z.object({
+      parseState: z.enum(['parsed', 'unknown', 'invalid']),
+      precision: z.enum(['exact_datetime', 'date_only', 'month_only', 'annual_rule', 'rolling', 'approximate', 'unknown']),
+      closesAt: z.string().optional(),
+      status: z.enum(['active', 'closed', 'upcoming', 'unavailable', 'unknown']),
+    }),
+  })),
+  fieldClaims: z.array(FieldClaimSchema),
+});
 
 interface ReviewReceipt {
   id: string;
@@ -98,10 +143,7 @@ function reviewId(source: ReviewReceipt['source'], subjectId: string, reason: st
 
 export function generateP4Evidence(): GeneratedP4Evidence {
   const fixtureText = fs.readFileSync(fixturePath, 'utf8');
-  const fixtures = JSON.parse(fixtureText) as FixtureFile;
-  assert.equal(fixtures.schemaVersion, VERIFICATION_SCHEMA_VERSION);
-  assert.equal(fixtures.modelSchemaVersion, MODEL_SCHEMA_VERSION);
-  assert(!Number.isNaN(new Date(fixtures.asOf).getTime()), 'P4 as-of time must be valid');
+  const fixtures = P4FixtureSchema.parse(JSON.parse(fixtureText)) as FixtureFile;
   assert.equal(new Set(fixtures.linkObservations.map((item) => item.id)).size, fixtures.linkObservations.length, 'Link fixture IDs must be unique');
   assert.equal(new Set(fixtures.dateScenarios.map((item) => item.id)).size, fixtures.dateScenarios.length, 'Date fixture IDs must be unique');
   assert.equal(new Set(fixtures.fieldClaims.map((item) => item.id)).size, fixtures.fieldClaims.length, 'Field claim IDs must be unique');
@@ -112,8 +154,9 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     stages: Array<{ id: string; baselineCommit: string | null; status: string }>;
   };
   const p4 = buildState.stages.find((stage) => stage.id === 'P4');
-  assert.equal(buildState.activeStageId, 'P4');
-  assert.equal(p4?.status, 'active');
+  assert(p4 && ['active', 'verified', 'accepted'].includes(p4.status), 'P4 must be active, verified, or accepted');
+  if (p4.status === 'accepted') assert.equal(buildState.activeStageId, null, 'Accepted P4 must not remain active');
+  else assert.equal(buildState.activeStageId, 'P4', `${p4.status} P4 must remain the active stage`);
   assert.equal(p4?.baselineCommit, '268758f94922f90bf307229d8633da05b2417c4a');
   assert.equal(buildState.dataAuthority.productionSpreadsheetId, null);
   assert.equal(buildState.dataAuthority.productionMutationAuthorized, false);
@@ -169,7 +212,7 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     return { id: scenario.id, input: scenario.input, parsed, availabilityConfirmed: scenario.availabilityConfirmed, unavailable: scenario.unavailable, status };
   });
 
-  const field = evaluateFieldClaims(fixtures.fieldClaims, fixtures.asOf);
+  const field = evaluateFieldClaims(fixtures.fieldClaims, fixtures.asOf, fixtures.sources);
   const conflicts = field.decisions.filter((decision) => decision.conflict).map((decision) => ({
     id: `p4_conflict_${deterministicVerificationSha256([decision.subjectId, decision.field, decision.evidenceIds])}`,
     subjectId: decision.subjectId,

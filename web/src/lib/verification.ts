@@ -1,4 +1,14 @@
 import { createHash } from 'node:crypto';
+import { z } from 'zod';
+import {
+  EvidenceSchema,
+  MODEL_SCHEMA_VERSION,
+  SourceArchitectureSchema,
+  SourceSchema,
+  evidenceId,
+  sha256Text,
+  stableId,
+} from './canonicalModel';
 
 export const VERIFICATION_SCHEMA_VERSION = 1 as const;
 
@@ -108,13 +118,15 @@ export function classifyLinkObservation(observation: LinkObservation): LinkClass
   if (observation.status !== null && observation.status >= 500) {
     return classifyLinkObservation({ ...observation, failureClass: 'server_error' });
   }
-  if (observation.status === null || observation.status < 200 || observation.status >= 400) {
+  if (observation.status === null || observation.status < 200 || observation.status >= 300 || observation.finalUrl === null) {
     return {
       ...base,
       state: 'inconclusive',
       targetClass: 'unknown',
       reason: observation.status === null
         ? 'No HTTP response was observed'
+        : observation.finalUrl === null
+          ? `HTTP ${observation.status} lacked a verified final target`
         : `HTTP ${observation.status} without a verified final target is inconclusive`,
       requiresReview: true,
       reviewSeverity: linkSeverity(observation.role, 'inconclusive'),
@@ -131,6 +143,8 @@ export function classifyLinkObservation(observation: LinkObservation): LinkClass
         ? 'html'
         : 'unknown';
   const state: LinkClassification['state'] = redirected ? 'redirected' : 'reachable';
+  const unknownTarget = targetClass === 'unknown';
+  const requiresReview = (redirected && redirectKind === 'off_host') || unknownTarget;
   return {
     ...base,
     state,
@@ -138,8 +152,8 @@ export function classifyLinkObservation(observation: LinkObservation): LinkClass
     reason: redirected
       ? `Reachable final target observed via ${redirectKind.replace('_', '-')} redirect`
       : 'Reachable target observed; this alone does not verify any scholarship fact',
-    requiresReview: redirected && redirectKind === 'off_host',
-    reviewSeverity: redirected && redirectKind === 'off_host' ? 'medium' : null,
+    requiresReview,
+    reviewSeverity: requiresReview ? linkSeverity(observation.role, state) : null,
     linkCorrectionReviewEligible: false,
   };
 }
@@ -430,9 +444,17 @@ export function parseTypedDate(input: TypedDateInput): TypedDateResult {
       return { raw: input.raw, parseState: 'invalid', opensAt: null, closesAt: null, year: null, precision: 'unknown', timezone, recurrence: 'unknown', reason: 'Spreadsheet serial is outside the supported date range' };
     }
     const epoch = Date.UTC(1899, 11, 30);
-    const date = new Date(epoch + Math.floor(input.raw) * 86_400_000);
-    const value = isoDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
-    return { raw: input.raw, parseState: 'parsed', opensAt: null, closesAt: value, year: date.getUTCFullYear(), precision: 'date_only', timezone, recurrence: 'one_time', reason: 'Parsed Google Sheets serial using the 1899-12-30 epoch' };
+    const milliseconds = Math.round(input.raw * 86_400_000);
+    const date = new Date(epoch + milliseconds);
+    const datePart = isoDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
+    if (!Number.isInteger(input.raw)) {
+      if (!timezone) {
+        return { raw: input.raw, parseState: 'unknown', opensAt: null, closesAt: null, year: null, precision: 'unknown', timezone, recurrence: 'unknown', reason: 'Fractional spreadsheet serial requires a timezone to preserve its observed time' };
+      }
+      const timePart = `${String(date.getUTCHours()).padStart(2, '0')}:${String(date.getUTCMinutes()).padStart(2, '0')}:${String(date.getUTCSeconds()).padStart(2, '0')}`;
+      return { raw: input.raw, parseState: 'parsed', opensAt: null, closesAt: `${datePart}T${timePart}`, year: date.getUTCFullYear(), precision: 'exact_datetime', timezone, recurrence: 'one_time', reason: 'Parsed Google Sheets fractional serial and preserved its local wall time with the supplied timezone' };
+    }
+    return { raw: input.raw, parseState: 'parsed', opensAt: null, closesAt: datePart, year: date.getUTCFullYear(), precision: 'date_only', timezone, recurrence: 'one_time', reason: 'Parsed Google Sheets serial using the 1899-12-30 epoch' };
   }
 
   const raw = input.raw.trim();
@@ -447,6 +469,7 @@ export function parseTypedDate(input: TypedDateInput): TypedDateResult {
     return { raw: input.raw, parseState: 'parsed', opensAt: null, closesAt: year ?? null, year: year ? Number(year) : null, precision: 'approximate', timezone, recurrence: /annual/i.test(raw) ? 'annual' : 'unknown', reason: 'Approximate date text preserved without day-level precision' };
   }
 
+  const explicitlyAnnual = /^annual\b/i.test(raw);
   const withoutAnnualPrefix = raw.replace(/^annual\b\s*(?:[:—–-]\s*)?/i, '').trim();
   const openOnly = withoutAnnualPrefix.match(/^opens?\s*:?\s*(.+)$/i);
   if (openOnly && !/\bcloses?\b/i.test(withoutAnnualPrefix)) {
@@ -476,7 +499,7 @@ export function parseTypedDate(input: TypedDateInput): TypedDateResult {
     }
     const year = end.year ?? start.year;
     const precision: DatePrecision = start.precision === end.precision ? start.precision : 'approximate';
-    return { raw: input.raw, parseState: 'parsed', opensAt: start.value, closesAt: end.value, year, precision, timezone, recurrence: start.year === null && end.year === null ? 'annual' : 'one_time', reason: 'Typed range preserved as separate open and close facts' };
+    return { raw: input.raw, parseState: 'parsed', opensAt: start.value, closesAt: end.value, year, precision, timezone, recurrence: explicitlyAnnual || (start.year === null && end.year === null) ? 'annual' : 'one_time', reason: 'Typed range preserved as separate open and close facts' };
   }
 
   const point = parseDatePoint(withoutAnnualPrefix);
@@ -491,6 +514,38 @@ function localDate(asOf: string, timezone: string): string {
   const parts = new Intl.DateTimeFormat('en-CA', { timeZone: timezone, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date(asOf));
   const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)?.value ?? '';
   return `${part('year')}-${part('month')}-${part('day')}`;
+}
+
+function zonedLocalDateTimeEpoch(value: string, timezone: string): number | null {
+  if (/Z$|[+-]\d{2}:\d{2}$/.test(value)) {
+    const epoch = new Date(value).getTime();
+    return Number.isFinite(epoch) ? epoch : null;
+  }
+  const match = value.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/);
+  if (!match) return null;
+  const [, year, month, day, hour, minute, second] = match.map(Number);
+  const wallClockUtc = Date.UTC(year, month - 1, day, hour, minute, second);
+  try {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: timezone,
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23',
+    }).formatToParts(new Date(wallClockUtc));
+    const part = (type: Intl.DateTimeFormatPartTypes) => Number(parts.find((item) => item.type === type)?.value);
+    const representedUtc = Date.UTC(part('year'), part('month') - 1, part('day'), part('hour'), part('minute'), part('second'));
+    const firstGuess = wallClockUtc - (representedUtc - wallClockUtc);
+    const revisedParts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: timezone,
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23',
+    }).formatToParts(new Date(firstGuess));
+    const revised = (type: Intl.DateTimeFormatPartTypes) => Number(revisedParts.find((item) => item.type === type)?.value);
+    return Date.UTC(revised('year'), revised('month') - 1, revised('day'), revised('hour'), revised('minute'), revised('second')) === wallClockUtc
+      ? firstGuess
+      : null;
+  } catch {
+    return null;
+  }
 }
 
 export function deriveCycleStatus(
@@ -509,10 +564,13 @@ export function deriveCycleStatus(
     if (today > parsed.closesAt) return 'closed';
     return options.availabilityConfirmed ? 'active' : 'unknown';
   }
-  if (parsed.closesAt?.includes('T')) {
-    const close = new Date(parsed.closesAt).getTime();
-    if (!Number.isFinite(close)) return 'unknown';
-    if (new Date(asOf).getTime() > close) return 'closed';
+  if (parsed.precision === 'exact_datetime') {
+    const asOfEpoch = new Date(asOf).getTime();
+    const open = parsed.opensAt ? zonedLocalDateTimeEpoch(parsed.opensAt, timezone) : null;
+    const close = parsed.closesAt ? zonedLocalDateTimeEpoch(parsed.closesAt, timezone) : null;
+    if (!Number.isFinite(asOfEpoch) || (parsed.opensAt && open === null) || (parsed.closesAt && close === null)) return 'unknown';
+    if (open !== null && asOfEpoch < open) return 'upcoming';
+    if (close !== null && asOfEpoch > close) return 'closed';
     return options.availabilityConfirmed ? 'active' : 'unknown';
   }
   if (parsed.closesAt?.length === 10) {
@@ -525,18 +583,28 @@ export function deriveCycleStatus(
 export type VerifiedField = 'deadline' | 'amount' | 'eligibility' | 'application_method';
 export type SourceAuthority = 'official_child' | 'official_provider' | 'official_application' | 'official_parent' | 'institutional' | 'government' | 'official_document' | 'aggregator' | 'unknown';
 
-export interface FieldClaim {
-  id: string;
-  subjectId: string;
-  field: VerifiedField;
-  value: string;
-  sourceUrl: string;
-  authority: SourceAuthority;
-  direct: boolean;
-  retrievedAt: string;
-  sourceUpdatedAt: string | null;
-  sourceRevision: string | null;
-}
+export const VerificationSourceInputSchema = z.object({
+  key: z.string().min(1),
+  canonicalUrl: z.string().url(),
+  architecture: SourceArchitectureSchema,
+  authority: z.enum(['official_provider', 'official_application', 'institutional', 'government', 'aggregator', 'unknown']),
+  relationship: z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']),
+  subjectIds: z.array(z.string().min(1)).min(1),
+});
+
+export const FieldClaimSchema = z.object({
+  id: z.string().min(1),
+  subjectId: z.string().min(1),
+  field: z.enum(['deadline', 'amount', 'eligibility', 'application_method']),
+  value: z.string().trim().min(1),
+  sourceKey: z.string().min(1),
+  retrievedAt: z.string().datetime({ offset: true }),
+  sourceUpdatedAt: z.string().datetime({ offset: true }).nullable(),
+  sourceRevision: z.string().min(1).nullable(),
+});
+
+export type VerificationSourceInput = z.infer<typeof VerificationSourceInputSchema>;
+export type FieldClaim = z.infer<typeof FieldClaimSchema>;
 
 export interface FreshnessPolicy {
   retrievalMaxAgeDays: number;
@@ -568,6 +636,8 @@ export interface FieldEvidenceReceipt {
   subjectId: string;
   field: VerifiedField;
   value: string;
+  sourceId: string;
+  sourceKey: string;
   sourceUrl: string;
   authority: SourceAuthority;
   authorityRank: number;
@@ -580,6 +650,7 @@ export interface FieldEvidenceReceipt {
   fresh: boolean;
   currentDirectOfficial: boolean;
   contentSha256: string;
+  canonicalEvidence: z.infer<typeof EvidenceSchema>;
 }
 
 export interface FieldDecision {
@@ -602,49 +673,121 @@ function normalizeClaim(value: string): string {
   return value.trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
-export function buildFieldEvidenceReceipt(claim: FieldClaim, asOf: string): FieldEvidenceReceipt {
+function canonicalVerificationSource(inputValue: VerificationSourceInput): z.infer<typeof SourceSchema> {
+  const input = VerificationSourceInputSchema.parse(inputValue);
+  const url = new URL(input.canonicalUrl);
+  return SourceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: stableId('src', ['p4-verification', input.canonicalUrl]),
+    architecture: input.architecture,
+    canonicalUrl: input.canonicalUrl,
+    offlineAuthority: null,
+    host: url.hostname.toLowerCase(),
+    identityPolicy: { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: true },
+    accessBehavior: 'public',
+    authority: input.authority,
+    acquisitionState: 'observed',
+    parentSourceIds: [],
+    childSourceIds: [],
+    evidenceIds: [],
+    reviewItemIds: [],
+    legacySourceIdentity: null,
+  });
+}
+
+function verificationAuthority(sourceInput: VerificationSourceInput): SourceAuthority {
+  if (sourceInput.relationship === 'child_detail' && sourceInput.authority === 'official_provider') return 'official_child';
+  if (sourceInput.relationship === 'document' && sourceInput.authority === 'official_provider') return 'official_document';
+  if (sourceInput.relationship === 'parent_summary' && (sourceInput.authority === 'official_provider' || sourceInput.authority === 'institutional')) return 'official_parent';
+  return sourceInput.authority;
+}
+
+export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: VerificationSourceInput, asOf: string): FieldEvidenceReceipt {
+  const claim = FieldClaimSchema.parse(claimValue);
+  const sourceInput = VerificationSourceInputSchema.parse(sourceValue);
+  if (sourceInput.key !== claim.sourceKey) throw new Error(`Field claim ${claim.id} source key does not match bound source ${sourceInput.key}`);
+  const source = canonicalVerificationSource(sourceInput);
+  const derivedAuthority = verificationAuthority(sourceInput);
+  const direct = sourceInput.subjectIds.includes(claim.subjectId) && sourceInput.relationship !== 'discovery';
   const policy = FRESHNESS_POLICIES[claim.field];
   const retrievalAgeDays = ageDays(asOf, claim.retrievedAt);
   const sourceAgeDays = claim.sourceUpdatedAt ? ageDays(asOf, claim.sourceUpdatedAt) : null;
   const validAges = retrievalAgeDays >= 0 && retrievalAgeDays <= policy.retrievalMaxAgeDays
     && (sourceAgeDays === null || (sourceAgeDays >= 0 && sourceAgeDays <= policy.sourceMaxAgeDays));
-  const authority = SOURCE_AUTHORITY_MATRIX[claim.authority];
-  const contentSha256 = createHash('sha256').update(JSON.stringify({
+  const authority = SOURCE_AUTHORITY_MATRIX[derivedAuthority];
+  const contentSha256 = sha256Text(JSON.stringify({
     schemaVersion: VERIFICATION_SCHEMA_VERSION,
-    claimId: claim.id,
     subjectId: claim.subjectId,
     field: claim.field,
     value: claim.value,
-    sourceUrl: claim.sourceUrl,
-    authority: claim.authority,
-    direct: claim.direct,
+    sourceId: source.id,
+    sourceUrl: source.canonicalUrl,
+    sourceAuthority: source.authority,
+    sourceRelationship: sourceInput.relationship,
+    sourceSubjectIds: sourceInput.subjectIds.slice().sort(),
     retrievedAt: claim.retrievedAt,
     sourceUpdatedAt: claim.sourceUpdatedAt,
     sourceRevision: claim.sourceRevision,
-  })).digest('hex');
+  }));
+  const evidenceIdentity = {
+    subjectKind: 'scholarship' as const,
+    subjectId: claim.subjectId,
+    fieldPath: claim.field,
+    sourceId: source.id,
+    retrievedAt: claim.retrievedAt,
+    sourceRevision: claim.sourceRevision,
+    result: validAges && authority.official && direct ? 'observed' as const : 'unverified' as const,
+    claim: `${claim.field}=${claim.value}`,
+    contentSha256,
+  };
+  const canonicalEvidence = EvidenceSchema.parse({
+    schemaVersion: MODEL_SCHEMA_VERSION,
+    id: evidenceId(evidenceIdentity),
+    ...evidenceIdentity,
+    reviewerState: validAges && authority.official && direct ? 'classified' : 'manual_review',
+  });
   return {
-    id: receiptId(['field-evidence', claim.id, contentSha256]),
+    id: canonicalEvidence.id,
     claimId: claim.id,
     subjectId: claim.subjectId,
     field: claim.field,
     value: claim.value,
-    sourceUrl: claim.sourceUrl,
-    authority: claim.authority,
+    sourceId: source.id,
+    sourceKey: sourceInput.key,
+    sourceUrl: source.canonicalUrl!,
+    authority: derivedAuthority,
     authorityRank: authority.rank,
-    direct: claim.direct,
+    direct,
     retrievedAt: claim.retrievedAt,
     sourceUpdatedAt: claim.sourceUpdatedAt,
     sourceRevision: claim.sourceRevision,
     retrievalAgeDays,
     sourceAgeDays,
     fresh: validAges,
-    currentDirectOfficial: validAges && authority.official && claim.direct,
+    currentDirectOfficial: validAges && authority.official && direct,
     contentSha256,
+    canonicalEvidence,
   };
 }
 
-export function evaluateFieldClaims(claims: FieldClaim[], asOf: string): { receipts: FieldEvidenceReceipt[]; decisions: FieldDecision[] } {
-  const receipts = claims.map((claim) => buildFieldEvidenceReceipt(claim, asOf));
+function assertUnique(values: string[], label: string): void {
+  if (new Set(values).size !== values.length) throw new Error(`${label} must be unique`);
+}
+
+export function evaluateFieldClaims(claimValues: FieldClaim[], asOf: string, sourceValues: VerificationSourceInput[]): { receipts: FieldEvidenceReceipt[]; decisions: FieldDecision[] } {
+  const claims = z.array(FieldClaimSchema).parse(claimValues);
+  const sources = z.array(VerificationSourceInputSchema).parse(sourceValues);
+  assertUnique(claims.map((claim) => claim.id), 'Field claim IDs');
+  assertUnique(sources.map((source) => source.key), 'Verification source keys');
+  const sourceByKey = new Map(sources.map((source) => [source.key, source]));
+  const canonicalSources = sources.map(canonicalVerificationSource);
+  assertUnique(canonicalSources.map((source) => source.id), 'Canonical verification source IDs');
+  const receipts = claims.map((claim) => {
+    const source = sourceByKey.get(claim.sourceKey);
+    if (!source) throw new Error(`Field claim ${claim.id} references unknown source key ${claim.sourceKey}`);
+    return buildFieldEvidenceReceipt(claim, source, asOf);
+  });
+  assertUnique(receipts.map((receipt) => receipt.id), 'Field evidence receipt IDs');
   const groups = new Map<string, FieldEvidenceReceipt[]>();
   for (const receipt of receipts) {
     const key = `${receipt.subjectId}\u0000${receipt.field}`;

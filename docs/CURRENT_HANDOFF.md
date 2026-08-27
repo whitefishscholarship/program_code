@@ -7,9 +7,10 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine. Implementation is verified;
-  immutable candidate freeze, fresh-context review, accepted-state recheck, and
-  direct-child attestation remain pending. P5 is not permitted.
+- Active stage: P4 — Accuracy and verification engine. The first immutable candidate
+  was independently rejected; all seven findings are remediated in the working
+  replacement, whose final matrix, freeze, same-reviewer recheck, accepted-state
+  recheck, and direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
   `268758f94922f90bf307229d8633da05b2417c4a`.
 - P4 branch: `codex/p4-accuracy-verification` in isolated worktree
@@ -27,8 +28,12 @@ Default branch: `main`
   passed for all 10 ordered stage contracts after the restricted runner's local IPC
   socket was permitted.
 - First required P4 governance checkpoint: `18f0961`; implementation checkpoint:
-  `2fbe817`. The exact review candidate cannot embed its own content-derived SHA and
-  will be bound by `docs/evidence/P4-manifest.json` after freeze.
+  `2fbe817`. Rejected first candidate:
+  `2a9daa87b62d60e21d14ed6d4c639f6459ed40ce` at C0/H4/M3/L0, with rejected
+  uncommitted manifest digest
+  `ee8e919b05e6cd1a5a48e6717ae2173141dc7705bc880192c061456295d77370`.
+  It must never be attested or delivered. The replacement will receive a new manifest
+  only after it is frozen.
 - P4 reconciles all 270 historical CellData hyperlink representations, including 92
   hidden application hyperlinks, plus four explicit offline methods. No representation
   was deduplicated or skipped. The deterministic run made no spreadsheet or public-
@@ -43,14 +48,21 @@ Default branch: `main`
 - Sixteen field claims yield 16 complete receipts and nine decisions: two corroborated
   current-direct-official decisions are supported evidence, seven remain review, and
   five conflicts remain non-accepted. No spreadsheet correction is applied.
-- Deterministic report SHA-256 values: links `a043e1b5d704`, cycles `50a33bf6b1e5`,
-  field evidence `51c18b3c3a1e`, conflicts `8d9ade3b4a68`, and reviews
-  `cbb17c1568e1`.
+- Deterministic replacement report SHA-256 values: links `99a99f959174`, cycles
+  `334cf1c121a4`, field evidence `95c54b5df949`, conflicts `2a8426c3732e`, and
+  reviews `82b4e83e7574`.
 - The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
   `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.
   The restricted build failed only on existing Google Fonts access; no configuration
-  changed.
+  changed. This matrix belongs to the rejected first candidate and is not replacement
+  acceptance evidence.
+- The reviewer findings and completed remediation cover exact verified/accepted-state
+  generation, unresolved redirects and unknown successful targets, future exact-time
+  windows, runtime-validated canonical Source/Evidence authority binding, duplicate
+  identity rejection, fractional spreadsheet-serial times, and year-qualified Annual
+  recurrence. Each now has a focused regression; the same reviewer must recheck the
+  frozen replacement.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.

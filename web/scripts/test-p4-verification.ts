@@ -12,6 +12,7 @@ import {
   parseTypedDate,
   type FieldClaim,
   type LinkObservation,
+  type VerificationSourceInput,
 } from '../src/lib/verification';
 import { generateP4Evidence } from './p4-verification';
 
@@ -23,6 +24,7 @@ const p4Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p4/ver
   defaultTimezone: string;
   linkObservations: LinkObservation[];
   fieldClaims: FieldClaim[];
+  sources: VerificationSourceInput[];
 };
 
 function observation(overrides: Partial<LinkObservation>): LinkObservation {
@@ -75,6 +77,13 @@ function main(): void {
   assert.equal(offHost.redirectKind, 'off_host');
   assert.equal(offHost.targetClass, 'form');
   assert.equal(offHost.requiresReview, true);
+  const unresolvedRedirect = classifyLinkObservation(observation({ status: 302, finalUrl: null }));
+  assert.equal(unresolvedRedirect.state, 'inconclusive', 'an unresolved redirect must not be treated as reachable');
+  assert.equal(unresolvedRedirect.requiresReview, true);
+  const unknownApplicationTarget = classifyLinkObservation(observation({ contentType: 'application/octet-stream' }));
+  assert.equal(unknownApplicationTarget.state, 'reachable');
+  assert.equal(unknownApplicationTarget.targetClass, 'unknown');
+  assert.equal(unknownApplicationTarget.requiresReview, true, 'unknown application targets must remain reviewable');
 
   const pinned = auditPinnedCellData(p1Fixture);
   assert.deepEqual({
@@ -116,16 +125,25 @@ function main(): void {
   const serial = parseTypedDate({ raw: 46310, timezone: 'America/Denver' });
   assert.equal(serial.closesAt, '2026-10-15');
   assert.equal(serial.precision, 'date_only');
+  const fractionalSerial = parseTypedDate({ raw: 46310.5, timezone: 'America/Denver' });
+  assert.equal(fractionalSerial.closesAt, '2026-10-15T12:00:00');
+  assert.equal(fractionalSerial.precision, 'exact_datetime');
+  assert.equal(parseTypedDate({ raw: 46310.5 }).parseState, 'unknown', 'a fractional serial without timezone must not lose its time');
   const range = parseTypedDate({ raw: '2026-12-15 - 2027-01-15', timezone: 'America/Denver' });
   assert.equal(range.opensAt, '2026-12-15');
   assert.equal(range.closesAt, '2027-01-15');
   assert.equal(range.year, 2027);
   assert.equal(deriveCycleStatus(range, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'upcoming');
+  const exactFutureRange = parseTypedDate({ raw: '2026-12-15T00:00:00-07:00 - 2027-01-15T23:59:59-07:00', timezone: 'America/Denver' });
+  assert.equal(exactFutureRange.precision, 'exact_datetime');
+  assert.equal(deriveCycleStatus(exactFutureRange, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'upcoming', 'a future exact-datetime window must not become active');
   const annual = parseTypedDate({ raw: 'Annual — May 31', timezone: 'America/Denver' });
   assert.equal(annual.precision, 'annual_rule');
   assert.equal(annual.year, null);
   assert.equal(annual.recurrence, 'annual');
   assert.equal(deriveCycleStatus(annual, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
+  const qualifiedAnnual = parseTypedDate({ raw: 'Annual — 2026-10-01 - 2027-03-01', timezone: 'America/Denver' });
+  assert.equal(qualifiedAnnual.recurrence, 'annual', 'an explicit annual label must survive year-qualified range parsing');
   assert.equal(parseTypedDate({ raw: 'October 2026' }).precision, 'month_only');
   assert.equal(parseTypedDate({ raw: 'mid March 2027' }).precision, 'approximate');
   assert.equal(parseTypedDate({ raw: 'Rolling deadline' }).recurrence, 'rolling');
@@ -157,7 +175,7 @@ function main(): void {
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: false, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: true, defaultTimezone: p4Fixture.defaultTimezone }), 'unavailable');
 
-  const field = evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf);
+  const field = evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, p4Fixture.sources);
   assert.equal(field.receipts.length, p4Fixture.fieldClaims.length);
   assert.equal(new Set(field.receipts.map((item) => item.id)).size, field.receipts.length);
   const accepted = field.decisions.filter((item) => item.accepted);
@@ -182,11 +200,40 @@ function main(): void {
   assert.equal(staleOnly.accepted, false, 'stale official evidence may not support acceptance');
   const futureReceipt = buildFieldEvidenceReceipt({
     id: 'future', subjectId: 'sch_future', field: 'deadline', value: '2028-01-01',
-    sourceUrl: 'https://provider.invalid/future', authority: 'official_provider', direct: true,
+    sourceKey: 'future-source',
     retrievedAt: '2026-09-01T00:00:00Z', sourceUpdatedAt: null, sourceRevision: null,
+  }, {
+    key: 'future-source', canonicalUrl: 'https://provider.invalid/future', architecture: 'single_award_page',
+    authority: 'official_provider', relationship: 'direct', subjectIds: ['sch_future'],
   }, p4Fixture.asOf);
   assert.equal(futureReceipt.fresh, false, 'future-dated retrieval evidence must fail freshness');
   assert.equal(futureReceipt.currentDirectOfficial, false);
+  assert.throws(
+    () => evaluateFieldClaims([...p4Fixture.fieldClaims, p4Fixture.fieldClaims[0]], p4Fixture.asOf, p4Fixture.sources),
+    /Field claim IDs must be unique/,
+    'duplicate claim IDs must fail closed',
+  );
+  assert.throws(
+    () => evaluateFieldClaims([
+      p4Fixture.fieldClaims[0],
+      { ...p4Fixture.fieldClaims[0], id: 'duplicate-observation' },
+    ], p4Fixture.asOf, p4Fixture.sources),
+    /Field evidence receipt IDs must be unique/,
+    'duplicate observations with different claim IDs must collide at canonical evidence identity',
+  );
+  assert.throws(
+    () => evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, [
+      ...p4Fixture.sources,
+      { ...p4Fixture.sources[0], key: 'duplicate-canonical-source' },
+    ]),
+    /Canonical verification source IDs must be unique/,
+    'two source aliases for one canonical source must fail closed',
+  );
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'empty-value', value: ' ' }], p4Fixture.asOf, p4Fixture.sources),
+    /too_small|Too small/i,
+    'empty field claims must fail runtime schema validation',
+  );
 
   const generatedOne = generateP4Evidence();
   const generatedTwo = generateP4Evidence();
