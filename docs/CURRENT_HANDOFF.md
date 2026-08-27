@@ -21,7 +21,8 @@ Default branch: `main`
   `1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ` is verified. The source and backup
   `Master Database!A1:X1060` native-cell payloads match at SHA-256
   `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
-  Testing-sheet content writes remain zero.
+  The guarded write advanced the testing sheet exactly once from revision `222` to
+  `223`; the complete revision-222 backup remains the rollback source.
 - The remediated pre-write audit is complete across exactly 197 rows and 213 distinct
   CellData sources. The final strict router permits 50 public information-only sources
   and sends 163 application-role/private/form/login/portal sources to no-fetch.
@@ -29,20 +30,23 @@ Default branch: `main`
   inconclusive.
 - Proposed dispositions are zero confirmed, 10 corrected, zero archived, zero merged,
   and 187 manual review. The 10 corrected rows contain 25 cell proposals: 15 material
-  corrections plus 10 correction-date stamps. All remain pending replacement review;
-  sheet writes remain zero.
+  corrections plus 10 correction-date stamps. Exact candidate `502b612` received
+  independent C0/H0/M0/L0 approval for all 25 proposals.
 - The first proposal checkpoint `57d3540` was rejected C0/H3/M2/L0. Its evidence
   reproducibility, unsupported confirmations, routing boundary, row 59 tier collapse,
   and row 167 unsupported opening claim have been remediated. Earlier bounded GETs are
   disclosed; no form submission or applicant collection occurred.
-- Replacement `1227321` was rejected C0/H2/M0/L0. Final remediation closes its
+- Replacement `1227321` was rejected C0/H2/M0/L0. Final remediation closed its
   dual-role routing gap and commits row-specific official-page query bindings for both
-  Montana Farm Bureau application URLs. The next reviewer must recheck the new exact
-  replacement before any write.
-- Independent replacement review must cover all 10 corrected/known-dead rows plus the
-  deterministic 38-row sample in `docs/evidence/P5-review-sample.json`. Only approved
-  proposals may be applied after an immediate revision-`222` and target-CellData
-  recheck.
+  Montana Farm Bureau application URLs. The same reviewer rechecked `502b612`, all 10
+  mandatory rows, and the deterministic 38-row sample, then approved the complete set.
+- The immediate revision/CellData preconditions passed. One 25-request batch applied
+  the approved set with 25 replies and zero rejection. Immediate readback reports
+  revision `223` with previous revision `222`; all 25 targets match, all 55 untargeted
+  edited-window cells are unchanged, link display/formatting is preserved, and the
+  whole denominator remains 197 named rows with zero unnamed nonempty rows.
+- Durable machine evidence is in `P5-proposal-review.json`,
+  `P5-applied-change-receipt.json`, and `P5-postwrite-reconciliation.json`.
 - Entry verification reproduced P4's 270 links, four offline methods, 20 cycle cases,
   nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
   Baseline plan/history validation passed all 10 ordered stages.
@@ -50,9 +54,9 @@ Default branch: `main`
   mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
   application interaction, provider contact, deployment-configuration changes, paid
   or destructive actions, and history rewriting remain prohibited.
-- Next action is fresh-context read-only proposal review. No sheet write may occur until
-  every proposal is evidence-bound and approved and the source still matches revision
-  `222` immediately before the atomic write.
+- Next action is the full validation matrix, exact candidate freeze and manifest, then
+  fresh-context final acceptance review. Do not execute P6. The P6 kickoff is prepared
+  as documentation only.
 
 ## P4 delivery (completed)
 
