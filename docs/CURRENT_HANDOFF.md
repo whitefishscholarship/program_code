@@ -9,7 +9,8 @@ Default branch: `main`
 
 - Active stage: P4 — Accuracy and verification engine. The first four immutable
   candidates were independently rejected; all 22 cumulative findings are remediated in the working
-  replacement, whose final matrix, freeze, same-reviewer recheck, accepted-state
+  replacement. The commit containing this handoff freezes its immutable candidate;
+  post-commit manifest generation, same-reviewer recheck, accepted-state
   recheck, and direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
   `268758f94922f90bf307229d8633da05b2417c4a`.
@@ -125,8 +126,9 @@ Default branch: `main`
   validation, typecheck, complete tests, permitted production build, and all cumulative
   adversarial regressions passed. The locked audit denominator remains 21; no package,
   lockfile, spreadsheet, form, provider, CI, or deployment configuration changed.
-  Final deterministic/plan/type/diff checks, freeze, new manifest, and same-reviewer
-  recheck remain required.
+  Final deterministic/plan/type/diff checks passed through `2026-08-27T03:45:44Z`.
+  The commit containing this record freezes the replacement; new manifest generation
+  and same-reviewer recheck remain required.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.
