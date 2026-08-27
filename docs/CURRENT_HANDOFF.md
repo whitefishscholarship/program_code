@@ -7,8 +7,8 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine. The first immutable candidate
-  was independently rejected; all seven findings are remediated in the working
+- Active stage: P4 — Accuracy and verification engine. The first two immutable
+  candidates were independently rejected; all eleven cumulative findings are remediated in the working
   replacement, whose final matrix, freeze, same-reviewer recheck, accepted-state
   recheck, and direct-child attestation remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
@@ -34,6 +34,13 @@ Default branch: `main`
   `ee8e919b05e6cd1a5a48e6717ae2173141dc7705bc880192c061456295d77370`.
   It must never be attested or delivered. The replacement will receive a new manifest
   only after it is frozen.
+- Rejected first remediated replacement:
+  `c26cbb94086601136bfcd3e5dc5ce77716296365` at C0/H3/M1/L0, with rejected
+  uncommitted manifest digest
+  `e020edad1d56429e125f21a2286c58f84a8f0e0bae23d826bd6da368cfd05853`.
+  It also must never be attested or delivered. Its findings cover later-stage P4-check
+  compatibility, canonical authority/relationship provenance, DST-fallback ambiguity,
+  and URL-equivalent source identity.
 - P4 reconciles all 270 historical CellData hyperlink representations, including 92
   hidden application hyperlinks, plus four explicit offline methods. No representation
   was deduplicated or skipped. The deterministic run made no spreadsheet or public-
@@ -48,9 +55,9 @@ Default branch: `main`
 - Sixteen field claims yield 16 complete receipts and nine decisions: two corroborated
   current-direct-official decisions are supported evidence, seven remain review, and
   five conflicts remain non-accepted. No spreadsheet correction is applied.
-- Deterministic replacement report SHA-256 values: links `99a99f959174`, cycles
-  `334cf1c121a4`, field evidence `95c54b5df949`, conflicts `2a8426c3732e`, and
-  reviews `82b4e83e7574`.
+- Deterministic working-replacement report SHA-256 values: links `a8c778aca5b2`,
+  cycles `a9cffc39ef05`, field evidence `3b6845d396d0`, conflicts `a58a993f7f41`,
+  and reviews `018dc57564e0`.
 - The final pre-freeze matrix passed from `2026-08-27T02:00:40Z` through
   `2026-08-27T02:02:41Z`: locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.
@@ -63,6 +70,10 @@ Default branch: `main`
   identity rejection, fractional spreadsheet-serial times, and year-qualified Annual
   recurrence. Each now has a focused regression; the same reviewer must recheck the
   frozen replacement.
+- Second-review remediation additionally permits the permanent P4 check with a later
+  active stage, requires canonical classified Source authority and scholarship-link
+  Evidence, rejects DST-ambiguous exact local times, and canonicalizes URL aliases
+  before identity/uniqueness. Each boundary has an adversarial regression.
 - The replacement pre-freeze matrix passed from `2026-08-27T02:29:43Z` through
   `2026-08-27T02:30:50Z`: exact locked install, deterministic P4 check, plan/history
   validation, typecheck, complete tests, permitted network build, and root diff check.

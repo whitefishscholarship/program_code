@@ -12,9 +12,12 @@ import {
   parseTypedDate,
   type FieldClaim,
   type LinkObservation,
-  type VerificationSourceInput,
 } from '../src/lib/verification';
-import { generateP4Evidence } from './p4-verification';
+import {
+  assertP4BuildStateTopology,
+  buildP4FixtureSourceRegistry,
+  generateP4Evidence,
+} from './p4-verification';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(scriptDir, '..');
@@ -24,8 +27,9 @@ const p4Fixture = JSON.parse(fs.readFileSync(path.join(webRoot, 'fixtures/p4/ver
   defaultTimezone: string;
   linkObservations: LinkObservation[];
   fieldClaims: FieldClaim[];
-  sources: VerificationSourceInput[];
+  sources: Parameters<typeof buildP4FixtureSourceRegistry>[0];
 };
+const sourceRegistry = buildP4FixtureSourceRegistry(p4Fixture.sources, p4Fixture.asOf);
 
 function observation(overrides: Partial<LinkObservation>): LinkObservation {
   return {
@@ -129,6 +133,9 @@ function main(): void {
   assert.equal(fractionalSerial.closesAt, '2026-10-15T12:00:00');
   assert.equal(fractionalSerial.precision, 'exact_datetime');
   assert.equal(parseTypedDate({ raw: 46310.5 }).parseState, 'unknown', 'a fractional serial without timezone must not lose its time');
+  const ambiguousSerial = parseTypedDate({ raw: 46327.0625, timezone: 'America/Denver' });
+  assert.equal(ambiguousSerial.closesAt, '2026-11-01T01:30:00');
+  assert.equal(deriveCycleStatus(ambiguousSerial, '2026-11-01T08:00:00Z', { availabilityConfirmed: true, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown', 'a DST-ambiguous wall time must not create a false closed state');
   const range = parseTypedDate({ raw: '2026-12-15 - 2027-01-15', timezone: 'America/Denver' });
   assert.equal(range.opensAt, '2026-12-15');
   assert.equal(range.closesAt, '2027-01-15');
@@ -175,7 +182,7 @@ function main(): void {
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: false, unavailable: false, defaultTimezone: p4Fixture.defaultTimezone }), 'unknown');
   assert.equal(deriveCycleStatus(active, p4Fixture.asOf, { availabilityConfirmed: true, unavailable: true, defaultTimezone: p4Fixture.defaultTimezone }), 'unavailable');
 
-  const field = evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, p4Fixture.sources);
+  const field = evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, sourceRegistry);
   assert.equal(field.receipts.length, p4Fixture.fieldClaims.length);
   assert.equal(new Set(field.receipts.map((item) => item.id)).size, field.receipts.length);
   const accepted = field.decisions.filter((item) => item.accepted);
@@ -198,18 +205,19 @@ function main(): void {
   assert.equal(aggregatorOnly.accepted, false, 'aggregator-only evidence may not support acceptance');
   const staleOnly = field.decisions.find((item) => item.subjectId === 'sch_stale_only')!;
   assert.equal(staleOnly.accepted, false, 'stale official evidence may not support acceptance');
+  const futureSource = buildP4FixtureSourceRegistry([{
+    key: 'future-source', canonicalUrl: 'https://provider.invalid/future', architecture: 'single_award_page',
+    authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_future'],
+  }], p4Fixture.asOf)[0];
   const futureReceipt = buildFieldEvidenceReceipt({
     id: 'future', subjectId: 'sch_future', field: 'deadline', value: '2028-01-01',
     sourceKey: 'future-source',
     retrievedAt: '2026-09-01T00:00:00Z', sourceUpdatedAt: null, sourceRevision: null,
-  }, {
-    key: 'future-source', canonicalUrl: 'https://provider.invalid/future', architecture: 'single_award_page',
-    authority: 'official_provider', relationship: 'direct', subjectIds: ['sch_future'],
-  }, p4Fixture.asOf);
+  }, futureSource, p4Fixture.asOf);
   assert.equal(futureReceipt.fresh, false, 'future-dated retrieval evidence must fail freshness');
   assert.equal(futureReceipt.currentDirectOfficial, false);
   assert.throws(
-    () => evaluateFieldClaims([...p4Fixture.fieldClaims, p4Fixture.fieldClaims[0]], p4Fixture.asOf, p4Fixture.sources),
+    () => evaluateFieldClaims([...p4Fixture.fieldClaims, p4Fixture.fieldClaims[0]], p4Fixture.asOf, sourceRegistry),
     /Field claim IDs must be unique/,
     'duplicate claim IDs must fail closed',
   );
@@ -217,23 +225,46 @@ function main(): void {
     () => evaluateFieldClaims([
       p4Fixture.fieldClaims[0],
       { ...p4Fixture.fieldClaims[0], id: 'duplicate-observation' },
-    ], p4Fixture.asOf, p4Fixture.sources),
+    ], p4Fixture.asOf, sourceRegistry),
     /Field evidence receipt IDs must be unique/,
     'duplicate observations with different claim IDs must collide at canonical evidence identity',
   );
   assert.throws(
     () => evaluateFieldClaims(p4Fixture.fieldClaims, p4Fixture.asOf, [
-      ...p4Fixture.sources,
-      { ...p4Fixture.sources[0], key: 'duplicate-canonical-source' },
+      ...sourceRegistry,
+      { ...sourceRegistry[0], key: 'duplicate-canonical-source' },
     ]),
     /Canonical verification source IDs must be unique/,
     'two source aliases for one canonical source must fail closed',
   );
   assert.throws(
-    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'empty-value', value: ' ' }], p4Fixture.asOf, p4Fixture.sources),
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'empty-value', value: ' ' }], p4Fixture.asOf, sourceRegistry),
     /too_small|Too small/i,
     'empty field claims must fail runtime schema validation',
   );
+  const adversarialSource = structuredClone(sourceRegistry.find((item) => item.key === 'aggregator-only')!);
+  adversarialSource.source.authority = 'official_provider';
+  assert.throws(
+    () => evaluateFieldClaims([p4Fixture.fieldClaims.find((item) => item.id === 'aggregator-only')!], p4Fixture.asOf, [adversarialSource]),
+    /authority requires matching classified canonical Evidence/i,
+    'changing a source authority label without its canonical classified Evidence must fail closed',
+  );
+  const aliasRegistry = buildP4FixtureSourceRegistry([
+    { key: 'alias-a', canonicalUrl: 'https://provider.invalid/award', architecture: 'single_award_page', authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_alias'] },
+    { key: 'alias-b', canonicalUrl: 'https://PROVIDER.invalid:443/award', architecture: 'single_award_page', authority: 'official_provider', relationship: 'direct', direct: true, subjectIds: ['sch_alias'] },
+  ], p4Fixture.asOf);
+  assert.throws(
+    () => evaluateFieldClaims([{ ...p4Fixture.fieldClaims[0], id: 'alias-claim', subjectId: 'sch_alias', sourceKey: 'alias-a' }], p4Fixture.asOf, aliasRegistry),
+    /Canonical verification source IDs must be unique/,
+    'semantically equivalent URL aliases must collide at canonical source identity',
+  );
+  assertP4BuildStateTopology({
+    activeStageId: 'P5',
+    stages: [
+      { id: 'P4', baselineCommit: '268758f94922f90bf307229d8633da05b2417c4a', status: 'accepted' },
+      { id: 'P5', baselineCommit: null, status: 'active' },
+    ],
+  });
 
   const generatedOne = generateP4Evidence();
   const generatedTwo = generateP4Evidence();

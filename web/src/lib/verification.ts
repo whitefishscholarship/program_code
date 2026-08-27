@@ -3,7 +3,6 @@ import { z } from 'zod';
 import {
   EvidenceSchema,
   MODEL_SCHEMA_VERSION,
-  SourceArchitectureSchema,
   SourceSchema,
   evidenceId,
   sha256Text,
@@ -526,23 +525,19 @@ function zonedLocalDateTimeEpoch(value: string, timezone: string): number | null
   const [, year, month, day, hour, minute, second] = match.map(Number);
   const wallClockUtc = Date.UTC(year, month - 1, day, hour, minute, second);
   try {
-    const parts = new Intl.DateTimeFormat('en-CA', {
+    const formatter = new Intl.DateTimeFormat('en-CA', {
       timeZone: timezone,
       year: 'numeric', month: '2-digit', day: '2-digit',
       hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23',
-    }).formatToParts(new Date(wallClockUtc));
-    const part = (type: Intl.DateTimeFormatPartTypes) => Number(parts.find((item) => item.type === type)?.value);
-    const representedUtc = Date.UTC(part('year'), part('month') - 1, part('day'), part('hour'), part('minute'), part('second'));
-    const firstGuess = wallClockUtc - (representedUtc - wallClockUtc);
-    const revisedParts = new Intl.DateTimeFormat('en-CA', {
-      timeZone: timezone,
-      year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23',
-    }).formatToParts(new Date(firstGuess));
-    const revised = (type: Intl.DateTimeFormatPartTypes) => Number(revisedParts.find((item) => item.type === type)?.value);
-    return Date.UTC(revised('year'), revised('month') - 1, revised('day'), revised('hour'), revised('minute'), revised('second')) === wallClockUtc
-      ? firstGuess
-      : null;
+    });
+    const matches: number[] = [];
+    for (let epoch = wallClockUtc - 18 * 3_600_000; epoch <= wallClockUtc + 18 * 3_600_000; epoch += 15 * 60_000) {
+      const parts = formatter.formatToParts(new Date(epoch));
+      const part = (type: Intl.DateTimeFormatPartTypes) => Number(parts.find((item) => item.type === type)?.value);
+      const represented = Date.UTC(part('year'), part('month') - 1, part('day'), part('hour'), part('minute'), part('second'));
+      if (represented === wallClockUtc) matches.push(epoch);
+    }
+    return matches.length === 1 ? matches[0] : null;
   } catch {
     return null;
   }
@@ -583,13 +578,81 @@ export function deriveCycleStatus(
 export type VerifiedField = 'deadline' | 'amount' | 'eligibility' | 'application_method';
 export type SourceAuthority = 'official_child' | 'official_provider' | 'official_application' | 'official_parent' | 'institutional' | 'government' | 'official_document' | 'aggregator' | 'unknown';
 
+const SourceRelationshipSchema = z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']);
+
+export function normalizeVerificationSourceUrl(raw: string): string {
+  const url = new URL(raw);
+  url.hash = '';
+  return url.href;
+}
+
+const VerificationSubjectBindingSchema = z.object({
+  subjectId: z.string().min(1),
+  relationship: SourceRelationshipSchema,
+  direct: z.boolean(),
+  evidence: EvidenceSchema,
+});
+
 export const VerificationSourceInputSchema = z.object({
   key: z.string().min(1),
-  canonicalUrl: z.string().url(),
-  architecture: SourceArchitectureSchema,
-  authority: z.enum(['official_provider', 'official_application', 'institutional', 'government', 'aggregator', 'unknown']),
-  relationship: z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']),
-  subjectIds: z.array(z.string().min(1)).min(1),
+  source: SourceSchema,
+  authorityEvidence: EvidenceSchema,
+  subjectBindings: z.array(VerificationSubjectBindingSchema).min(1),
+}).superRefine((input, ctx) => {
+  if (input.source.canonicalUrl) {
+    const normalizedUrl = normalizeVerificationSourceUrl(input.source.canonicalUrl);
+    if (input.source.canonicalUrl !== normalizedUrl || input.source.id !== stableId('src', ['p4-verification', normalizedUrl])) {
+      ctx.addIssue({ code: 'custom', message: 'Canonical source URL and identity must use normalized P4 source identity' });
+    }
+  }
+  const expectedAuthorityClaim = `authority=${input.source.authority}`;
+  const authority = input.authorityEvidence;
+  const expectedAuthorityContent = sha256Text(JSON.stringify({
+    sourceId: input.source.id,
+    canonicalUrl: input.source.canonicalUrl,
+    authority: input.source.authority,
+  }));
+  const expectedAuthorityId = evidenceId({
+    subjectKind: 'source', subjectId: input.source.id, fieldPath: 'authority',
+    sourceId: input.source.id, retrievedAt: authority.retrievedAt,
+    sourceRevision: authority.sourceRevision, result: 'supported',
+    claim: expectedAuthorityClaim, contentSha256: expectedAuthorityContent,
+  });
+  if (
+    authority.subjectKind !== 'source' || authority.subjectId !== input.source.id ||
+    authority.fieldPath !== 'authority' || authority.sourceId !== input.source.id ||
+    authority.result !== 'supported' || authority.reviewerState !== 'classified' ||
+    authority.claim !== expectedAuthorityClaim || authority.contentSha256 !== expectedAuthorityContent ||
+    authority.id !== expectedAuthorityId || !input.source.evidenceIds.includes(authority.id)
+  ) {
+    ctx.addIssue({ code: 'custom', message: 'Source authority requires matching classified canonical Evidence' });
+  }
+  for (const binding of input.subjectBindings) {
+    const evidence = binding.evidence;
+    const expectedFieldPath = `sourceLinks.${input.source.id}.${binding.relationship}.${binding.direct ? 'direct' : 'indirect'}`;
+    const expectedClaim = `sourceRelationship=${binding.relationship}`;
+    const expectedContent = sha256Text(JSON.stringify({
+      sourceId: input.source.id,
+      subjectId: binding.subjectId,
+      relationship: binding.relationship,
+      direct: binding.direct,
+    }));
+    const expectedId = evidenceId({
+      subjectKind: 'scholarship', subjectId: binding.subjectId,
+      fieldPath: expectedFieldPath, sourceId: input.source.id,
+      retrievedAt: evidence.retrievedAt, sourceRevision: evidence.sourceRevision,
+      result: 'supported', claim: expectedClaim, contentSha256: expectedContent,
+    });
+    if (
+      evidence.subjectKind !== 'scholarship' || evidence.subjectId !== binding.subjectId ||
+      evidence.fieldPath !== expectedFieldPath || evidence.sourceId !== input.source.id ||
+      evidence.result !== 'supported' || evidence.reviewerState !== 'classified' ||
+      evidence.claim !== expectedClaim || evidence.contentSha256 !== expectedContent || evidence.id !== expectedId ||
+      !input.source.evidenceIds.includes(evidence.id)
+    ) {
+      ctx.addIssue({ code: 'custom', message: `Subject ${binding.subjectId} requires matching classified canonical relationship Evidence` });
+    }
+  }
 });
 
 export const FieldClaimSchema = z.object({
@@ -673,42 +736,22 @@ function normalizeClaim(value: string): string {
   return value.trim().replace(/\s+/g, ' ').toLowerCase();
 }
 
-function canonicalVerificationSource(inputValue: VerificationSourceInput): z.infer<typeof SourceSchema> {
-  const input = VerificationSourceInputSchema.parse(inputValue);
-  const url = new URL(input.canonicalUrl);
-  return SourceSchema.parse({
-    schemaVersion: MODEL_SCHEMA_VERSION,
-    id: stableId('src', ['p4-verification', input.canonicalUrl]),
-    architecture: input.architecture,
-    canonicalUrl: input.canonicalUrl,
-    offlineAuthority: null,
-    host: url.hostname.toLowerCase(),
-    identityPolicy: { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: true },
-    accessBehavior: 'public',
-    authority: input.authority,
-    acquisitionState: 'observed',
-    parentSourceIds: [],
-    childSourceIds: [],
-    evidenceIds: [],
-    reviewItemIds: [],
-    legacySourceIdentity: null,
-  });
-}
-
-function verificationAuthority(sourceInput: VerificationSourceInput): SourceAuthority {
-  if (sourceInput.relationship === 'child_detail' && sourceInput.authority === 'official_provider') return 'official_child';
-  if (sourceInput.relationship === 'document' && sourceInput.authority === 'official_provider') return 'official_document';
-  if (sourceInput.relationship === 'parent_summary' && (sourceInput.authority === 'official_provider' || sourceInput.authority === 'institutional')) return 'official_parent';
-  return sourceInput.authority;
+function verificationAuthority(sourceInput: VerificationSourceInput, relationship: z.infer<typeof SourceRelationshipSchema>): SourceAuthority {
+  if (relationship === 'child_detail' && sourceInput.source.authority === 'official_provider') return 'official_child';
+  if (relationship === 'document' && sourceInput.source.authority === 'official_provider') return 'official_document';
+  if (relationship === 'parent_summary' && (sourceInput.source.authority === 'official_provider' || sourceInput.source.authority === 'institutional')) return 'official_parent';
+  return sourceInput.source.authority;
 }
 
 export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: VerificationSourceInput, asOf: string): FieldEvidenceReceipt {
   const claim = FieldClaimSchema.parse(claimValue);
   const sourceInput = VerificationSourceInputSchema.parse(sourceValue);
   if (sourceInput.key !== claim.sourceKey) throw new Error(`Field claim ${claim.id} source key does not match bound source ${sourceInput.key}`);
-  const source = canonicalVerificationSource(sourceInput);
-  const derivedAuthority = verificationAuthority(sourceInput);
-  const direct = sourceInput.subjectIds.includes(claim.subjectId) && sourceInput.relationship !== 'discovery';
+  const source = sourceInput.source;
+  const subjectBinding = sourceInput.subjectBindings.find((binding) => binding.subjectId === claim.subjectId);
+  if (!subjectBinding) throw new Error(`Field claim ${claim.id} lacks canonical source relationship evidence for ${claim.subjectId}`);
+  const derivedAuthority = verificationAuthority(sourceInput, subjectBinding.relationship);
+  const direct = subjectBinding.direct;
   const policy = FRESHNESS_POLICIES[claim.field];
   const retrievalAgeDays = ageDays(asOf, claim.retrievedAt);
   const sourceAgeDays = claim.sourceUpdatedAt ? ageDays(asOf, claim.sourceUpdatedAt) : null;
@@ -723,8 +766,9 @@ export function buildFieldEvidenceReceipt(claimValue: FieldClaim, sourceValue: V
     sourceId: source.id,
     sourceUrl: source.canonicalUrl,
     sourceAuthority: source.authority,
-    sourceRelationship: sourceInput.relationship,
-    sourceSubjectIds: sourceInput.subjectIds.slice().sort(),
+    sourceRelationship: subjectBinding.relationship,
+    sourceRelationshipEvidenceId: subjectBinding.evidence.id,
+    sourceAuthorityEvidenceId: sourceInput.authorityEvidence.id,
     retrievedAt: claim.retrievedAt,
     sourceUpdatedAt: claim.sourceUpdatedAt,
     sourceRevision: claim.sourceRevision,
@@ -780,7 +824,7 @@ export function evaluateFieldClaims(claimValues: FieldClaim[], asOf: string, sou
   assertUnique(claims.map((claim) => claim.id), 'Field claim IDs');
   assertUnique(sources.map((source) => source.key), 'Verification source keys');
   const sourceByKey = new Map(sources.map((source) => [source.key, source]));
-  const canonicalSources = sources.map(canonicalVerificationSource);
+  const canonicalSources = sources.map((source) => source.source);
   assertUnique(canonicalSources.map((source) => source.id), 'Canonical verification source IDs');
   const receipts = claims.map((claim) => {
     const source = sourceByKey.get(claim.sourceKey);

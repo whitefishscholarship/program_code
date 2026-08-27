@@ -14,6 +14,7 @@ import {
   deriveCycleStatus,
   deterministicVerificationSha256,
   evaluateFieldClaims,
+  normalizeVerificationSourceUrl,
   parseTypedDate,
   type CycleStatus,
   type DateParseState,
@@ -24,7 +25,15 @@ import {
   type TypedDateInput,
   type VerificationSourceInput,
 } from '../src/lib/verification';
-import { MODEL_SCHEMA_VERSION, sha256Text } from '../src/lib/canonicalModel';
+import {
+  EvidenceSchema,
+  MODEL_SCHEMA_VERSION,
+  SourceArchitectureSchema,
+  SourceSchema,
+  evidenceId,
+  sha256Text,
+  stableId,
+} from '../src/lib/canonicalModel';
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(scriptDir, '..');
@@ -58,11 +67,13 @@ interface FixtureFile {
   asOf: string;
   defaultTimezone: string;
   limitations: string;
-  sources: VerificationSourceInput[];
+  sources: SourceFixtureSpec[];
   linkObservations: LinkObservation[];
   dateScenarios: DateScenario[];
   fieldClaims: FieldClaim[];
 }
+
+type SourceFixtureSpec = z.infer<typeof SourceFixtureSpecSchema>;
 
 const LinkObservationSchema = z.object({
   id: z.string().min(1),
@@ -81,13 +92,23 @@ const TypedDateInputSchema = z.object({
   timezone: z.string().min(1).nullable().optional(),
 });
 
+const SourceFixtureSpecSchema = z.object({
+  key: z.string().min(1),
+  canonicalUrl: z.string().url(),
+  architecture: SourceArchitectureSchema,
+  authority: z.enum(['official_provider', 'official_application', 'institutional', 'government', 'aggregator', 'unknown']),
+  relationship: z.enum(['child_detail', 'parent_summary', 'direct', 'document', 'discovery']),
+  direct: z.boolean(),
+  subjectIds: z.array(z.string().min(1)).min(1),
+});
+
 const P4FixtureSchema = z.object({
   schemaVersion: z.literal(VERIFICATION_SCHEMA_VERSION),
   modelSchemaVersion: z.literal(MODEL_SCHEMA_VERSION),
   asOf: z.string().datetime({ offset: true }),
   defaultTimezone: z.string().min(1),
   limitations: z.string().min(1),
-  sources: z.array(VerificationSourceInputSchema).min(1),
+  sources: z.array(SourceFixtureSpecSchema).min(1),
   linkObservations: z.array(LinkObservationSchema),
   dateScenarios: z.array(z.object({
     id: z.string().min(1),
@@ -103,6 +124,76 @@ const P4FixtureSchema = z.object({
   })),
   fieldClaims: z.array(FieldClaimSchema),
 });
+
+export function buildP4FixtureSourceRegistry(specValues: SourceFixtureSpec[], asOf: string): VerificationSourceInput[] {
+  return z.array(SourceFixtureSpecSchema).parse(specValues).map((spec) => {
+    const canonicalUrl = normalizeVerificationSourceUrl(spec.canonicalUrl);
+    const sourceId = stableId('src', ['p4-verification', canonicalUrl]);
+    const authorityClaim = `authority=${spec.authority}`;
+    const authorityContentSha256 = sha256Text(JSON.stringify({ sourceId, canonicalUrl, authority: spec.authority }));
+    const authorityIdentity = {
+      subjectKind: 'source' as const,
+      subjectId: sourceId,
+      fieldPath: 'authority',
+      sourceId,
+      retrievedAt: asOf,
+      sourceRevision: 'p4-synthetic-registry-v1',
+      result: 'supported' as const,
+      claim: authorityClaim,
+      contentSha256: authorityContentSha256,
+    };
+    const authorityEvidence = EvidenceSchema.parse({
+      schemaVersion: MODEL_SCHEMA_VERSION,
+      id: evidenceId(authorityIdentity),
+      ...authorityIdentity,
+      reviewerState: 'classified',
+    });
+    const subjectBindings = spec.subjectIds.map((subjectId) => {
+      const claim = `sourceRelationship=${spec.relationship}`;
+      const contentSha256 = sha256Text(JSON.stringify({ sourceId, subjectId, relationship: spec.relationship, direct: spec.direct }));
+      const identity = {
+        subjectKind: 'scholarship' as const,
+        subjectId,
+        fieldPath: `sourceLinks.${sourceId}.${spec.relationship}.${spec.direct ? 'direct' : 'indirect'}`,
+        sourceId,
+        retrievedAt: asOf,
+        sourceRevision: 'p4-synthetic-registry-v1',
+        result: 'supported' as const,
+        claim,
+        contentSha256,
+      };
+      return {
+        subjectId,
+        relationship: spec.relationship,
+        direct: spec.direct,
+        evidence: EvidenceSchema.parse({
+          schemaVersion: MODEL_SCHEMA_VERSION,
+          id: evidenceId(identity),
+          ...identity,
+          reviewerState: 'classified',
+        }),
+      };
+    });
+    const source = SourceSchema.parse({
+      schemaVersion: MODEL_SCHEMA_VERSION,
+      id: sourceId,
+      architecture: spec.architecture,
+      canonicalUrl,
+      offlineAuthority: null,
+      host: new URL(canonicalUrl).hostname.toLowerCase(),
+      identityPolicy: { preservedQueryParameters: [], fragmentPreserved: false, trackingParametersRemoved: true },
+      accessBehavior: 'public',
+      authority: spec.authority,
+      acquisitionState: 'observed',
+      parentSourceIds: [],
+      childSourceIds: [],
+      evidenceIds: [authorityEvidence.id, ...subjectBindings.map((binding) => binding.evidence.id)].sort(),
+      reviewItemIds: [],
+      legacySourceIdentity: null,
+    });
+    return VerificationSourceInputSchema.parse({ key: spec.key, source, authorityEvidence, subjectBindings });
+  });
+}
 
 interface ReviewReceipt {
   id: string;
@@ -121,6 +212,26 @@ export interface GeneratedP4Evidence {
   fieldEvidence: Record<string, unknown>;
   conflicts: Record<string, unknown>;
   reviews: Record<string, unknown>;
+}
+
+interface P4BuildStateTopology {
+  activeStageId: string | null;
+  stages: Array<{ id: string; baselineCommit: string | null; status: string }>;
+}
+
+export function assertP4BuildStateTopology(buildState: P4BuildStateTopology): void {
+  const p4 = buildState.stages.find((stage) => stage.id === 'P4');
+  assert(p4 && ['active', 'verified', 'accepted'].includes(p4.status), 'P4 must be active, verified, or accepted');
+  if (p4.status === 'accepted') {
+    const activeIndex = buildState.activeStageId === null
+      ? -1
+      : buildState.stages.findIndex((stage) => stage.id === buildState.activeStageId);
+    const p4Index = buildState.stages.findIndex((stage) => stage.id === 'P4');
+    assert(activeIndex === -1 || activeIndex > p4Index, 'Accepted P4 may coexist only with a later active stage');
+  } else {
+    assert.equal(buildState.activeStageId, 'P4', `${p4.status} P4 must remain the active stage`);
+  }
+  assert.equal(p4.baselineCommit, '268758f94922f90bf307229d8633da05b2417c4a');
 }
 
 function readJson(filePath: string): unknown {
@@ -144,6 +255,7 @@ function reviewId(source: ReviewReceipt['source'], subjectId: string, reason: st
 export function generateP4Evidence(): GeneratedP4Evidence {
   const fixtureText = fs.readFileSync(fixturePath, 'utf8');
   const fixtures = P4FixtureSchema.parse(JSON.parse(fixtureText)) as FixtureFile;
+  const sourceRegistry = buildP4FixtureSourceRegistry(fixtures.sources, fixtures.asOf);
   assert.equal(new Set(fixtures.linkObservations.map((item) => item.id)).size, fixtures.linkObservations.length, 'Link fixture IDs must be unique');
   assert.equal(new Set(fixtures.dateScenarios.map((item) => item.id)).size, fixtures.dateScenarios.length, 'Date fixture IDs must be unique');
   assert.equal(new Set(fixtures.fieldClaims.map((item) => item.id)).size, fixtures.fieldClaims.length, 'Field claim IDs must be unique');
@@ -154,10 +266,7 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     stages: Array<{ id: string; baselineCommit: string | null; status: string }>;
   };
   const p4 = buildState.stages.find((stage) => stage.id === 'P4');
-  assert(p4 && ['active', 'verified', 'accepted'].includes(p4.status), 'P4 must be active, verified, or accepted');
-  if (p4.status === 'accepted') assert.equal(buildState.activeStageId, null, 'Accepted P4 must not remain active');
-  else assert.equal(buildState.activeStageId, 'P4', `${p4.status} P4 must remain the active stage`);
-  assert.equal(p4?.baselineCommit, '268758f94922f90bf307229d8633da05b2417c4a');
+  assertP4BuildStateTopology(buildState);
   assert.equal(buildState.dataAuthority.productionSpreadsheetId, null);
   assert.equal(buildState.dataAuthority.productionMutationAuthorized, false);
 
@@ -212,7 +321,7 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     return { id: scenario.id, input: scenario.input, parsed, availabilityConfirmed: scenario.availabilityConfirmed, unavailable: scenario.unavailable, status };
   });
 
-  const field = evaluateFieldClaims(fixtures.fieldClaims, fixtures.asOf, fixtures.sources);
+  const field = evaluateFieldClaims(fixtures.fieldClaims, fixtures.asOf, sourceRegistry);
   const conflicts = field.decisions.filter((decision) => decision.conflict).map((decision) => ({
     id: `p4_conflict_${deterministicVerificationSha256([decision.subjectId, decision.field, decision.evidenceIds])}`,
     subjectId: decision.subjectId,
@@ -295,7 +404,7 @@ export function generateP4Evidence(): GeneratedP4Evidence {
     schemaVersion: VERIFICATION_SCHEMA_VERSION,
     stageId: 'P4',
     generatedAt: fixtures.asOf,
-    baselineCommit: p4.baselineCommit,
+    baselineCommit: p4!.baselineCommit,
     pinnedInputs,
     limitations: fixtures.limitations,
   };
