@@ -52,6 +52,8 @@ const backupReceiptPath = path.join(repoRoot, 'docs/evidence/P5-prewrite-snapsho
 const queuePath = path.join(repoRoot, 'docs/evidence/P5-source-queue.json');
 
 const riskyHosts = [
+  /(^|\.)docs\.google\.com$/i,
+  /(^|\.)drive\.google\.com$/i,
   /(^|\.)forms\.gle$/i,
   /(^|\.)surveymonkey\.com$/i,
   /(^|\.)submittable\.com$/i,
@@ -77,7 +79,7 @@ export function retrievalDisposition(entry: SourceAccumulator): Pick<P5SourceQue
   if (isGoogleForm || isRiskyHost || isRiskyApplicationPath) {
     return {
       retrievalDisposition: 'manual_review_no_fetch',
-      reason: 'Form, login, application-workflow, or matching-portal URL is not fetched under the P5 no-interaction boundary.',
+      reason: 'Google-hosted file with unverified visibility, form, login, application-workflow, or matching-portal URL is not fetched under the P5 privacy/no-interaction boundary.',
     };
   }
   return {

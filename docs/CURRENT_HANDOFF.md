@@ -22,6 +22,18 @@ Default branch: `main`
   `Master Database!A1:X1060` native-cell payloads match at SHA-256
   `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
   Testing-sheet content writes remain zero.
+- The pre-write audit is complete across exactly 197 rows and 213 distinct CellData
+  sources. Bounded HTTP evidence covers 131 public URLs; Firecrawl evidence covers 124
+  static public sources with 122 retrieved and two inconclusive; private Drive/Docs,
+  forms, logins, portals, actions, and submissions were not accessed.
+- Proposed dispositions are 30 confirmed, 11 corrected, zero archived, zero merged,
+  and 156 manual review. The 11 corrected rows contain 27 cell proposals: 16 material
+  corrections plus 11 correction-date stamps. All remain pending independent review;
+  sheet writes remain zero.
+- Independent proposal review must cover all 11 corrected/known-dead rows plus the
+  deterministic 38-row sample in `docs/evidence/P5-review-sample.json`. Only approved
+  proposals may be applied after an immediate revision-`222` and target-CellData
+  recheck.
 - Entry verification reproduced P4's 270 links, four offline methods, 20 cycle cases,
   nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
   Baseline plan/history validation passed all 10 ordered stages.
@@ -29,9 +41,9 @@ Default branch: `main`
   mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
   application interaction, provider contact, deployment-configuration changes, paid
   or destructive actions, and history rewriting remain prohibited.
-- Next actions are the mutation-free full-row audit and proposal ledger. No sheet write
-  may occur until every proposal is evidence-bound and approved and the source still
-  matches revision `222` immediately before the atomic write.
+- Next action is fresh-context read-only proposal review. No sheet write may occur until
+  every proposal is evidence-bound and approved and the source still matches revision
+  `222` immediately before the atomic write.
 
 ## P4 delivery (completed)
 

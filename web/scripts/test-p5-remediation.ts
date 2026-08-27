@@ -29,6 +29,12 @@ const googleForm = {
 };
 assert.equal(retrievalDisposition(googleForm).retrievalDisposition, 'manual_review_no_fetch');
 
+const googleDocument = {
+  ...googleForm,
+  url: 'https://docs.google.com/document/d/example/edit',
+};
+assert.equal(retrievalDisposition(googleDocument).retrievalDisposition, 'manual_review_no_fetch');
+
 const officialInfo = {
   url: 'https://provider.example/scholarships/current',
   host: 'provider.example',
