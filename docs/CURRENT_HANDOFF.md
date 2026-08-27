@@ -7,12 +7,14 @@ Default branch: `main`
 
 ## Current P4 state
 
-- Active stage: P4 — Accuracy and verification engine. The first four immutable
-  candidates were independently rejected; all 22 cumulative findings are remediated in the working
-  replacement. Preliminary candidate `0adbd79` received C0/H0/M1/L0; the sole medium
-  documentation mismatch is now dispositioned. Corrected freeze, new manifest,
-  same-reviewer recheck, accepted-state transition/recheck, and direct-child attestation
-  remain pending. P5 is not permitted.
+- Active stage: none. P4 — Accuracy and verification engine — is a local accepted-state
+  candidate after corrected verified-state predecessor `530df9b` received C0/H0/M0/L0
+  and the same reviewer prospectively accepted the exact state delta C0/H0/M0/L0.
+  Final freeze, regenerated manifest, same-reviewer exact-candidate recheck, direct-child
+  attestation, and delivery remain pending. This local marker is not durable delivery.
+  P5 is next-permitted but unstarted; it cannot begin before P4 attestation reaches
+  `origin/main`, and its sheet work additionally requires direct write authority,
+  revision fingerprint, and backup.
 - Verified `origin/main` and P4 baseline:
   `268758f94922f90bf307229d8633da05b2417c4a`.
 - P4 branch: `codex/p4-accuracy-verification` in isolated worktree
@@ -137,6 +139,19 @@ Default branch: `main`
   narrative digest; owner P4 implementer; target corrected verified-state replacement;
   state completed. P4 remains verified/active until the corrected exact candidate and
   new manifest receive the same reviewer's read-only recheck.
+- Corrected verified-state candidate `530df9bf01ba660375b0d04d5ddc2d442e2b5405`
+  was independently accepted C0/H0/M0/L0 against manifest digest `dfd5ace395ec`.
+  The prior M1, all 15 paths/tree hashes, five report digests, live pin, denominators,
+  tests, and P4-only boundaries passed with no remaining disposition. That review binds
+  the predecessor only. The same reviewer prospectively accepted the exact P4-only
+  accepted-state delta C0/H0/M0/L0, and the user authorized this completion path.
+  The resulting exact candidate and regenerated manifest still require final recheck;
+  no P5 or spreadsheet effect was authorized.
+- The accepted-state candidate matrix ran from `2026-08-27T04:15:45Z` through
+  `2026-08-27T04:16:19Z`: locked install, deterministic P4 check, typecheck, complete
+  tests, permitted production build, and root diff check passed. Pre-attestation plan
+  validation reported only the expected missing P4 manifest and committed review/
+  attestation gates. Code, fixtures, reports, and external effects are unchanged.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.

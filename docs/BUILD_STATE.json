@@ -212,8 +212,8 @@
       }
     ]
   },
-  "activeStageId": "P4",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P5",
   "stages": [
     {
       "id": "P0",
@@ -258,7 +258,7 @@
     {
       "id": "P4",
       "name": "Accuracy and verification engine",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
       "evidencePath": "docs/evidence/P4.md",
       "manifestPath": "docs/evidence/P4-manifest.json",
