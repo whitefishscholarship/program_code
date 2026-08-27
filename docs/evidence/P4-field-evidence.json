@@ -1,0 +1,518 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P4",
+  "generatedAt": "2026-08-27T18:00:00Z",
+  "baselineCommit": "268758f94922f90bf307229d8633da05b2417c4a",
+  "pinnedInputs": {
+    "p2ModelSchemaVersion": "2.0.0",
+    "p3AcquisitionReportSha256": "b577e6f2ec3b0ad48848e218863060eabd400cbb2f828a2b1aa4c2a8533b00f8",
+    "p3CompletenessReportSha256": "d967119a72f272803cfab5c9a3e22680b5bd7686b69d26a183b1a2578ee89020",
+    "p3WorkDenominator": 34,
+    "p4FixtureSha256": "ffc9efc9fa269de2adeebd22df7ede08e6652dfbecc9e450c5fe415557f8fcf7",
+    "p1CellDataFixtureSha256": "9705157b4b94f829ec1455f13bbc578d3ecf0c1061a4223e744cb79acc30b053"
+  },
+  "limitations": "Sanitized deterministic fixtures exercise verification decisions only. They are not accepted scholarship facts, testing-sheet corrections, or archive proposals.",
+  "freshnessPolicies": {
+    "deadline": {
+      "retrievalMaxAgeDays": 45,
+      "sourceMaxAgeDays": 400
+    },
+    "amount": {
+      "retrievalMaxAgeDays": 90,
+      "sourceMaxAgeDays": 400
+    },
+    "eligibility": {
+      "retrievalMaxAgeDays": 120,
+      "sourceMaxAgeDays": 400
+    },
+    "application_method": {
+      "retrievalMaxAgeDays": 60,
+      "sourceMaxAgeDays": 400
+    }
+  },
+  "sourceAuthorityMatrix": {
+    "official_child": {
+      "rank": 100,
+      "official": true,
+      "description": "Current child-specific provider detail"
+    },
+    "official_application": {
+      "rank": 95,
+      "official": true,
+      "description": "Official application instructions or workflow"
+    },
+    "government": {
+      "rank": 92,
+      "official": true,
+      "description": "Government authority for its own program"
+    },
+    "official_provider": {
+      "rank": 90,
+      "official": true,
+      "description": "Official provider page"
+    },
+    "institutional": {
+      "rank": 85,
+      "official": true,
+      "description": "Responsible institution page"
+    },
+    "official_parent": {
+      "rank": 75,
+      "official": true,
+      "description": "Official parent summary; lower than child detail"
+    },
+    "official_document": {
+      "rank": 70,
+      "official": true,
+      "description": "Official document; freshness and parent conflicts require review"
+    },
+    "aggregator": {
+      "rank": 10,
+      "official": false,
+      "description": "Discovery-only third party"
+    },
+    "unknown": {
+      "rank": 0,
+      "official": false,
+      "description": "Unclassified authority"
+    }
+  },
+  "claimDenominator": 16,
+  "evidenceReceiptDenominator": 16,
+  "decisionDenominator": 9,
+  "acceptedDecisionCount": 2,
+  "reviewDecisionCount": 7,
+  "receipts": [
+    {
+      "id": "p4_01908dba8d8c0512c84eefa85f277d793ca9af8ac628aae4387783999d45aa62",
+      "claimId": "aggregator-amount",
+      "subjectId": "sch_aggregator_provider",
+      "field": "amount",
+      "value": "$5,000",
+      "sourceUrl": "https://aggregator.invalid/award",
+      "authority": "aggregator",
+      "authorityRank": 10,
+      "direct": false,
+      "retrievedAt": "2026-08-24T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-24T12:00:00Z",
+      "sourceRevision": "listing",
+      "retrievalAgeDays": 3,
+      "sourceAgeDays": 3,
+      "fresh": true,
+      "currentDirectOfficial": false,
+      "contentSha256": "13dbcefbee1288d9dbe6a2054d61fe471895083fa6b10da139c48ea1faa8296a"
+    },
+    {
+      "id": "p4_232a496b2af5f74695cc6a0ea5f6ff406157a67c17227b8985ab8d1640b85492",
+      "claimId": "child-conflict",
+      "subjectId": "sch_parent_child_conflict",
+      "field": "deadline",
+      "value": "2027-01-15",
+      "sourceUrl": "https://provider.invalid/child",
+      "authority": "official_child",
+      "authorityRank": 100,
+      "direct": true,
+      "retrievedAt": "2026-08-22T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-10T12:00:00Z",
+      "sourceRevision": "child-v2",
+      "retrievalAgeDays": 5,
+      "sourceAgeDays": 17,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "23695ce2819638d303e36dfe3da9d4a97b1e0c7da416c734248da3e137bc81a8"
+    },
+    {
+      "id": "p4_33ae92e670a64fab071ab708be64ca4011ad88ff6f2946941d89a2e0b759e79e",
+      "claimId": "stale-official-only",
+      "subjectId": "sch_stale_only",
+      "field": "application_method",
+      "value": "Mail to provider",
+      "sourceUrl": "https://provider.invalid/old-instructions",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-01-01T12:00:00Z",
+      "sourceUpdatedAt": "2024-01-01T12:00:00Z",
+      "sourceRevision": "old",
+      "retrievalAgeDays": 238,
+      "sourceAgeDays": 969,
+      "fresh": false,
+      "currentDirectOfficial": false,
+      "contentSha256": "6c8517a16e200ee26ab618a77a13f411b38a1da2ca391aba5b8513656c99b375"
+    },
+    {
+      "id": "p4_3eed3a71637ddab2a2d009b667216ff623c610b7b39820236604bceb46f1bec1",
+      "claimId": "amount-provider",
+      "subjectId": "sch_amount_confirmed",
+      "field": "amount",
+      "value": "$2,500",
+      "sourceUrl": "https://provider.invalid/award",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-08-24T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-15T12:00:00Z",
+      "sourceRevision": "provider-v3",
+      "retrievalAgeDays": 3,
+      "sourceAgeDays": 12,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "7293464e15d60ff1819789b81bb128e3449b6b629dfd5116fbc1e0a3181ad076"
+    },
+    {
+      "id": "p4_3fecd120dd9a91187caec86bc8874e1d287e5b6ab84fadad08c1d8179ab302d0",
+      "claimId": "current-parent",
+      "subjectId": "sch_stale_pdf",
+      "field": "deadline",
+      "value": "2027-03-01",
+      "sourceUrl": "https://provider.invalid/current-cycle",
+      "authority": "official_parent",
+      "authorityRank": 75,
+      "direct": true,
+      "retrievedAt": "2026-08-20T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-01T12:00:00Z",
+      "sourceRevision": "2027-page",
+      "retrievalAgeDays": 7,
+      "sourceAgeDays": 26,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "2700260d43f1c8ed906fc22ec5120f3847d653eb3d9b2ab8b045ac41864daea5"
+    },
+    {
+      "id": "p4_5a360816e8d9cc6d3b8eb929b30a3a52a1ddec169d7ea5c596687925364bdd3e",
+      "claimId": "deadline-provider-a",
+      "subjectId": "sch_deadline_confirmed",
+      "field": "deadline",
+      "value": "2027-03-01",
+      "sourceUrl": "https://provider.invalid/deadlines",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-08-21T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-01T12:00:00Z",
+      "sourceRevision": "2027-cycle",
+      "retrievalAgeDays": 6,
+      "sourceAgeDays": 26,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "e38b3a66f64fc08b10741d8720aa464c2f065d4ca9e04dc236f0dc459d40a14f"
+    },
+    {
+      "id": "p4_5dce150258adc9f97c38791f0a4dbc0263cf1e560a06152c98c40936570a6289",
+      "claimId": "eligibility-child",
+      "subjectId": "sch_eligibility_conflict",
+      "field": "eligibility",
+      "value": "Montana high school seniors",
+      "sourceUrl": "https://provider.invalid/child",
+      "authority": "official_child",
+      "authorityRank": 100,
+      "direct": true,
+      "retrievedAt": "2026-08-24T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-01T12:00:00Z",
+      "sourceRevision": "child-v2",
+      "retrievalAgeDays": 3,
+      "sourceAgeDays": 26,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "179a2882556940cd9bdcb16db625c2cc1b173de481a846c6275d8a1138fe5146"
+    },
+    {
+      "id": "p4_74c437477b8e060fb576c6e847cfa030cdf4e49a0356db456af2db5b4632f057",
+      "claimId": "parent-conflict",
+      "subjectId": "sch_parent_child_conflict",
+      "field": "deadline",
+      "value": "2027-01-31",
+      "sourceUrl": "https://provider.invalid/parent",
+      "authority": "official_parent",
+      "authorityRank": 75,
+      "direct": false,
+      "retrievedAt": "2026-08-22T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-10T12:00:00Z",
+      "sourceRevision": "parent-v1",
+      "retrievalAgeDays": 5,
+      "sourceAgeDays": 17,
+      "fresh": true,
+      "currentDirectOfficial": false,
+      "contentSha256": "0b4242f44b16280970e74a5bad1952143b397e51ba294a2ed96e5f5d58d9a6b3"
+    },
+    {
+      "id": "p4_79d5fa3ef1b055e25c0d8e0f46fe6668d05c0b0df7ffdbcf0d1f7be9f1bff16f",
+      "claimId": "provider-amount",
+      "subjectId": "sch_aggregator_provider",
+      "field": "amount",
+      "value": "$2,500",
+      "sourceUrl": "https://provider.invalid/award",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-08-24T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-15T12:00:00Z",
+      "sourceRevision": "provider-v3",
+      "retrievalAgeDays": 3,
+      "sourceAgeDays": 12,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "f33269eb7f6e00358f8640c1cc61fa90ec91db330820faa8a38e4f8a8d091625"
+    },
+    {
+      "id": "p4_8b0afb5ab3930dd912ad2730a81dc0e3be01f0f399156fc62ba6a3784ace9767",
+      "claimId": "eligibility-provider",
+      "subjectId": "sch_eligibility_conflict",
+      "field": "eligibility",
+      "value": "All U.S. high school seniors",
+      "sourceUrl": "https://provider.invalid/program",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-08-24T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-01T12:00:00Z",
+      "sourceRevision": "program-v2",
+      "retrievalAgeDays": 3,
+      "sourceAgeDays": 26,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "5d8b3e2c45ab81fbae3f5935dfb548bf04875833457a6b95f59ec7432b4f3bd0"
+    },
+    {
+      "id": "p4_8df4d878d177410a8d2d726a4b005af9dc4f31c15ed1281a2a1fb48f425895fa",
+      "claimId": "aggregator-only",
+      "subjectId": "sch_aggregator_only",
+      "field": "eligibility",
+      "value": "Whitefish students",
+      "sourceUrl": "https://aggregator.invalid/listing",
+      "authority": "aggregator",
+      "authorityRank": 10,
+      "direct": false,
+      "retrievedAt": "2026-08-25T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-25T12:00:00Z",
+      "sourceRevision": "listing",
+      "retrievalAgeDays": 2,
+      "sourceAgeDays": 2,
+      "fresh": true,
+      "currentDirectOfficial": false,
+      "contentSha256": "3501c5ecdb8f1d3ef9b48f63f18e08c5c0bd122e42853ab3148d36e166bedb57"
+    },
+    {
+      "id": "p4_b367bc9f8e9de4e544bd9f1a69dca453b0240265346a2f80bdf22f06f5c20e6d",
+      "claimId": "method-application",
+      "subjectId": "sch_method_conflict",
+      "field": "application_method",
+      "value": "Online application",
+      "sourceUrl": "https://provider.invalid/apply",
+      "authority": "official_application",
+      "authorityRank": 95,
+      "direct": true,
+      "retrievedAt": "2026-08-25T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-20T12:00:00Z",
+      "sourceRevision": "workflow-v4",
+      "retrievalAgeDays": 2,
+      "sourceAgeDays": 7,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "a62b5a410edfca897636b60a562192b9e41a9c050a268107d9f588da032f1d81"
+    },
+    {
+      "id": "p4_d4603d0396a83728f0c10834824b55620a09c98c16dabf76a9f1c0568b1918ae",
+      "claimId": "deadline-child-a",
+      "subjectId": "sch_deadline_confirmed",
+      "field": "deadline",
+      "value": "2027-03-01",
+      "sourceUrl": "https://provider.invalid/award",
+      "authority": "official_child",
+      "authorityRank": 100,
+      "direct": true,
+      "retrievedAt": "2026-08-20T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-01T12:00:00Z",
+      "sourceRevision": "2027-cycle",
+      "retrievalAgeDays": 7,
+      "sourceAgeDays": 26,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "f8577ad1ffe13eb30d8ef8060c5ff7ef25264a1ba0205410c9f2e872a3183f80"
+    },
+    {
+      "id": "p4_dac776d7122fa31d160f93a8bb2fc26397cd318624584e953a1b4c26cd91c03b",
+      "claimId": "method-provider",
+      "subjectId": "sch_method_conflict",
+      "field": "application_method",
+      "value": "Paper application",
+      "sourceUrl": "https://provider.invalid/award",
+      "authority": "official_provider",
+      "authorityRank": 90,
+      "direct": true,
+      "retrievedAt": "2026-08-25T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-20T12:00:00Z",
+      "sourceRevision": "award-v4",
+      "retrievalAgeDays": 2,
+      "sourceAgeDays": 7,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "8697bf81af3e4356ff28bbe19c9d8f66424953211b146ac09514e5571e93f6db"
+    },
+    {
+      "id": "p4_e481820ae92cfef6e4769f1e19fb1f96eed2af5cf154c89323528f4827bdcf4a",
+      "claimId": "stale-pdf",
+      "subjectId": "sch_stale_pdf",
+      "field": "deadline",
+      "value": "2026-03-01",
+      "sourceUrl": "https://provider.invalid/files/2024-application.pdf",
+      "authority": "official_document",
+      "authorityRank": 70,
+      "direct": true,
+      "retrievedAt": "2026-08-20T12:00:00Z",
+      "sourceUpdatedAt": "2024-10-01T12:00:00Z",
+      "sourceRevision": "2024-pdf",
+      "retrievalAgeDays": 7,
+      "sourceAgeDays": 695,
+      "fresh": false,
+      "currentDirectOfficial": false,
+      "contentSha256": "d6aeb69c79b2ed6762cad64b4ad02f9f7954c4e1a9286c80e8bd22fb273cd412"
+    },
+    {
+      "id": "p4_eb2d9598c4f04d934ddf1584177aca11509182d5d72015156db701821c624de9",
+      "claimId": "amount-application",
+      "subjectId": "sch_amount_confirmed",
+      "field": "amount",
+      "value": "$2,500",
+      "sourceUrl": "https://provider.invalid/application-instructions",
+      "authority": "official_application",
+      "authorityRank": 95,
+      "direct": true,
+      "retrievedAt": "2026-08-25T12:00:00Z",
+      "sourceUpdatedAt": "2026-08-15T12:00:00Z",
+      "sourceRevision": "instructions-v2",
+      "retrievalAgeDays": 2,
+      "sourceAgeDays": 12,
+      "fresh": true,
+      "currentDirectOfficial": true,
+      "contentSha256": "d7320d66873cf372b71136ba97914f3d4c6c0edc93122492d7aa6375cf3359fa"
+    }
+  ],
+  "decisions": [
+    {
+      "subjectId": "sch_aggregator_only",
+      "field": "eligibility",
+      "accepted": false,
+      "preferredValue": null,
+      "conflict": false,
+      "reason": "No current direct official evidence supports acceptance",
+      "evidenceIds": [
+        "p4_8df4d878d177410a8d2d726a4b005af9dc4f31c15ed1281a2a1fb48f425895fa"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "medium"
+    },
+    {
+      "subjectId": "sch_aggregator_provider",
+      "field": "amount",
+      "accepted": false,
+      "preferredValue": "$2,500",
+      "conflict": true,
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "evidenceIds": [
+        "p4_01908dba8d8c0512c84eefa85f277d793ca9af8ac628aae4387783999d45aa62",
+        "p4_79d5fa3ef1b055e25c0d8e0f46fe6668d05c0b0df7ffdbcf0d1f7be9f1bff16f"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "medium"
+    },
+    {
+      "subjectId": "sch_amount_confirmed",
+      "field": "amount",
+      "accepted": true,
+      "preferredValue": "$2,500",
+      "conflict": false,
+      "reason": "Accepted only from current direct official evidence with no conflicting claim",
+      "evidenceIds": [
+        "p4_3eed3a71637ddab2a2d009b667216ff623c610b7b39820236604bceb46f1bec1",
+        "p4_eb2d9598c4f04d934ddf1584177aca11509182d5d72015156db701821c624de9"
+      ],
+      "reviewRequired": false,
+      "reviewSeverity": null
+    },
+    {
+      "subjectId": "sch_deadline_confirmed",
+      "field": "deadline",
+      "accepted": true,
+      "preferredValue": "2027-03-01",
+      "conflict": false,
+      "reason": "Accepted only from current direct official evidence with no conflicting claim",
+      "evidenceIds": [
+        "p4_5a360816e8d9cc6d3b8eb929b30a3a52a1ddec169d7ea5c596687925364bdd3e",
+        "p4_d4603d0396a83728f0c10834824b55620a09c98c16dabf76a9f1c0568b1918ae"
+      ],
+      "reviewRequired": false,
+      "reviewSeverity": null
+    },
+    {
+      "subjectId": "sch_eligibility_conflict",
+      "field": "eligibility",
+      "accepted": false,
+      "preferredValue": "Montana high school seniors",
+      "conflict": true,
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "evidenceIds": [
+        "p4_5dce150258adc9f97c38791f0a4dbc0263cf1e560a06152c98c40936570a6289",
+        "p4_8b0afb5ab3930dd912ad2730a81dc0e3be01f0f399156fc62ba6a3784ace9767"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "medium"
+    },
+    {
+      "subjectId": "sch_method_conflict",
+      "field": "application_method",
+      "accepted": false,
+      "preferredValue": "Online application",
+      "conflict": true,
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "evidenceIds": [
+        "p4_b367bc9f8e9de4e544bd9f1a69dca453b0240265346a2f80bdf22f06f5c20e6d",
+        "p4_dac776d7122fa31d160f93a8bb2fc26397cd318624584e953a1b4c26cd91c03b"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "high"
+    },
+    {
+      "subjectId": "sch_parent_child_conflict",
+      "field": "deadline",
+      "accepted": false,
+      "preferredValue": "2027-01-15",
+      "conflict": true,
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "evidenceIds": [
+        "p4_232a496b2af5f74695cc6a0ea5f6ff406157a67c17227b8985ab8d1640b85492",
+        "p4_74c437477b8e060fb576c6e847cfa030cdf4e49a0356db456af2db5b4632f057"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "high"
+    },
+    {
+      "subjectId": "sch_stale_only",
+      "field": "application_method",
+      "accepted": false,
+      "preferredValue": null,
+      "conflict": false,
+      "reason": "All evidence is stale under the field freshness policy",
+      "evidenceIds": [
+        "p4_33ae92e670a64fab071ab708be64ca4011ad88ff6f2946941d89a2e0b759e79e"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "high"
+    },
+    {
+      "subjectId": "sch_stale_pdf",
+      "field": "deadline",
+      "accepted": false,
+      "preferredValue": "2027-03-01",
+      "conflict": true,
+      "reason": "Conflicting field claims require manual review even when an authority rule identifies a preferred source",
+      "evidenceIds": [
+        "p4_3fecd120dd9a91187caec86bc8874e1d287e5b6ab84fadad08c1d8179ab302d0",
+        "p4_e481820ae92cfef6e4769f1e19fb1f96eed2af5cf154c89323528f4827bdcf4a"
+      ],
+      "reviewRequired": true,
+      "reviewSeverity": "high"
+    }
+  ],
+  "reportSha256": "51c18b3c3a1ecd3498c0ea60f15221b8056f58a956d530b15bfba73ebf933a6d"
+}
