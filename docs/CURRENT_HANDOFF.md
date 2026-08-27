@@ -9,9 +9,10 @@ Default branch: `main`
 
 - Active stage: P4 — Accuracy and verification engine. The first four immutable
   candidates were independently rejected; all 22 cumulative findings are remediated in the working
-  replacement. The commit containing this handoff freezes its immutable candidate;
-  post-commit manifest generation, same-reviewer recheck, accepted-state
-  recheck, and direct-child attestation remain pending. P5 is not permitted.
+  replacement. Preliminary candidate `0adbd79` received C0/H0/M1/L0; the sole medium
+  documentation mismatch is now dispositioned. Corrected freeze, new manifest,
+  same-reviewer recheck, accepted-state transition/recheck, and direct-child attestation
+  remain pending. P5 is not permitted.
 - Verified `origin/main` and P4 baseline:
   `268758f94922f90bf307229d8633da05b2417c4a`.
 - P4 branch: `codex/p4-accuracy-verification` in isolated worktree
@@ -129,6 +130,13 @@ Default branch: `main`
   Final deterministic/plan/type/diff checks passed through `2026-08-27T03:45:44Z`.
   The commit containing this record freezes the replacement; new manifest generation
   and same-reviewer recheck remain required.
+- Preliminary-state independent review accepted exact candidate `0adbd79237aefcb489b0278d5cd4c05038eed62a`
+  for correction at C0/H0/M1/L0 against manifest digest `cf7a1fc651a1`. The one medium
+  finding identified a stale narrative fixture digest while the fixture, manifest, and
+  all five reports consistently bound `3607ad0d91d7`. Disposition: corrected the
+  narrative digest; owner P4 implementer; target corrected verified-state replacement;
+  state completed. P4 remains verified/active until the corrected exact candidate and
+  new manifest receive the same reviewer's read-only recheck.
 - `docs/kickoffs/P5-REMEDIATION.md` is prepared as next-stage documentation only. P5
   cannot start until P4 is accepted and delivered and separate direct informed testing-
   sheet write authority plus a verified revision/backup exists.
