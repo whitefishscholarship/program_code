@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "createdAt": "2026-08-28T00:24:56.680Z",
+  "baselineCommit": "c8651bf9015c55965eb50cab4a96a12621f3b0fe",
+  "candidateCommit": "ebf21669937469e306023dc4d3ab7de6f126d9ce",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "b7bd10ec5bf7fb342d70e9d27b37056d44d960e89c3a8d577d44250cf3804b2f"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "125d531f3537bbbd24551a5be0f6efd20844492e7ff2a354a7650ecee7fb3d81"
+    },
+    {
+      "path": "docs/evidence/P5-applied-change-receipt.json",
+      "change": "present",
+      "sha256": "17da5eec7dc062bc9a2d06212cb516a4e1e252df27e97c50f0f034270bac29f9"
+    },
+    {
+      "path": "docs/evidence/P5-audit-ledger.json",
+      "change": "present",
+      "sha256": "adc5fb1e08027ae8470ec8e3b9d137c8397799c39a99d5dda89fa36c25d494c8"
+    },
+    {
+      "path": "docs/evidence/P5-firecrawl-receipts.json",
+      "change": "present",
+      "sha256": "c1b0078b139b5a39c0aec18c247a30d51ab795b27a4dde78afe6b9143f4be795"
+    },
+    {
+      "path": "docs/evidence/P5-manual-review.json",
+      "change": "present",
+      "sha256": "3613b51d41930a06178b474f33cbd18385504ca0450763fb4643dab7b11fe58c"
+    },
+    {
+      "path": "docs/evidence/P5-postwrite-reconciliation.json",
+      "change": "present",
+      "sha256": "cc55838e36b82b51edd5b75f3b0ad4960dca71413c3365f3a76c427f8b0cf1a9"
+    },
+    {
+      "path": "docs/evidence/P5-preboundary-dead-link-observations.json",
+      "change": "present",
+      "sha256": "4d32fe508cb087c9730db76d171f971d8471fd1d30b9a9f3eb7a111be6376593"
+    },
+    {
+      "path": "docs/evidence/P5-preboundary-static-application-observations.json",
+      "change": "present",
+      "sha256": "581c66d14ffd3d32826805a05b1c5c0b9a84c48fd9bd1f9b74149b596b4b173c"
+    },
+    {
+      "path": "docs/evidence/P5-prewrite-snapshot.json",
+      "change": "present",
+      "sha256": "9dd6fc895c1ef1b42349ef77d7be8af6e25d67f11055bfaa072cfefe113bffbb"
+    },
+    {
+      "path": "docs/evidence/P5-proposal-review.json",
+      "change": "present",
+      "sha256": "bf3470aeb680a147ca0ea2385606fa6a4eb9cc050520a6817f6cdf5f0a9ba98f"
+    },
+    {
+      "path": "docs/evidence/P5-proposals.json",
+      "change": "present",
+      "sha256": "2b6a04f0c9041d523331ca4e77eae89e99a742ee810c3b1e21411dfb85f673bc"
+    },
+    {
+      "path": "docs/evidence/P5-public-probes.json",
+      "change": "present",
+      "sha256": "7be67a3182b20127555f973d8eea2c778a3a3cb184b63fad5314a4dddb60da08"
+    },
+    {
+      "path": "docs/evidence/P5-replacement-evidence.json",
+      "change": "present",
+      "sha256": "8b697113d38514ec4e209f5ae9820c35da7b975cd1c5cbf66a9953eda76a1250"
+    },
+    {
+      "path": "docs/evidence/P5-review-sample.json",
+      "change": "present",
+      "sha256": "09ee91875520daecd1c87fa1b74c2db04907bb3255f2e07fbdda08289de1ea9b"
+    },
+    {
+      "path": "docs/evidence/P5-source-queue.json",
+      "change": "present",
+      "sha256": "8e05c4575b162a9e9b9c74c4dda646f717ab7eae6fc0df6ca11e0567b2317ba6"
+    },
+    {
+      "path": "docs/evidence/P5-write-authorization.md",
+      "change": "present",
+      "sha256": "a18396f931a4e849dfab877ca763b9499255acb461e05549ff9e9aa4c61eb2f9"
+    },
+    {
+      "path": "docs/evidence/P5.md",
+      "change": "present",
+      "sha256": "cabea1dad5e8e9dfd1fb3affccb7aeccd6e7b690d9a066366d5f9b5b95c16980"
+    },
+    {
+      "path": "docs/kickoffs/P6-COVERAGE-EXPANSION.md",
+      "change": "present",
+      "sha256": "c42f698b988b9941739bdaf651467177818b3541fc1eafcbb6ff75d5619751ec"
+    },
+    {
+      "path": "web/fixtures/p5/prewrite-master-database.json",
+      "change": "present",
+      "sha256": "b48ae5dd058f7c787a897222dda0463bbc67ed67624635946912b7501e4769fb"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "4f2936d7e5cd4c29fc19910f86dbefbd6188b87903168c98341e4349f4775fab"
+    },
+    {
+      "path": "web/scripts/p5-audit.ts",
+      "change": "present",
+      "sha256": "69faa1ea95c70b343d50e23ececc3494842e0a12f59c45a478de59baf6a0b82d"
+    },
+    {
+      "path": "web/scripts/p5-firecrawl-evidence.ts",
+      "change": "present",
+      "sha256": "356765ea6717dbddba78bbc03edc42630d9b484c2e5f806152c6ec2b6d8cedb6"
+    },
+    {
+      "path": "web/scripts/p5-firecrawl-scrape.ts",
+      "change": "present",
+      "sha256": "97eb1621ba7ac3bb6ba0daf8c232042a829460d8754384dbb44b32049c67a73c"
+    },
+    {
+      "path": "web/scripts/p5-postwrite.ts",
+      "change": "present",
+      "sha256": "3bb6dee9838c382f01bbc6ec8812d245b22f0b6255c37f2ad132e5436ed06597"
+    },
+    {
+      "path": "web/scripts/p5-preserve-dead-observations.ts",
+      "change": "present",
+      "sha256": "477bb2d2d7e9f58497e81294d2ce68bdbbc18ba26f94e93a3e95ee770de07f66"
+    },
+    {
+      "path": "web/scripts/p5-preserve-static-application-observations.ts",
+      "change": "present",
+      "sha256": "95425e78fa0467d2ca390c4ebf56c2dc1dff2d712b8c104d896bc3beb01d513d"
+    },
+    {
+      "path": "web/scripts/p5-public-probe.ts",
+      "change": "present",
+      "sha256": "b5cd00872e08cfc60f3c5e3b5af515ec85514393e2c096255dc1a857eef0051d"
+    },
+    {
+      "path": "web/scripts/p5-remediation.ts",
+      "change": "present",
+      "sha256": "69682d91c49a381c7a3dfda8b3645f56c810685b3732aa0380df756745bf569e"
+    },
+    {
+      "path": "web/scripts/test-p5-audit.ts",
+      "change": "present",
+      "sha256": "a6ef0d5499c33c6ca9387250338c8deebb74bf80334f26785cd6afd3377580d6"
+    },
+    {
+      "path": "web/scripts/test-p5-remediation.ts",
+      "change": "present",
+      "sha256": "f3d958fd420e1c1a1d4cd27e5d883b653dff3a2ac6c4d349e9b33d58dfce3ad3"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "3bd38a8180f0d6d872e24f9e14b480374731da2893989e6c0efbbc2473b0ab65"
+    }
+  ]
+}
