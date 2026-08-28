@@ -225,8 +225,8 @@
       }
     ]
   },
-  "activeStageId": "P5",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P6",
   "stages": [
     {
       "id": "P0",
@@ -281,7 +281,7 @@
     {
       "id": "P5",
       "name": "Complete testing-sheet accuracy remediation",
-      "status": "active",
+      "status": "accepted",
       "baselineCommit": "c8651bf9015c55965eb50cab4a96a12621f3b0fe",
       "evidencePath": "docs/evidence/P5.md",
       "manifestPath": "docs/evidence/P5-manifest.json",

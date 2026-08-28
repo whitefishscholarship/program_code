@@ -45,6 +45,42 @@ export type P5SourceQueueEntry = {
   reason: string;
 };
 
+type StageStatus = 'planned' | 'active' | 'implemented' | 'verified' | 'accepted' | 'blocked-external' | 'failed';
+export type P5LifecycleState = {
+  activeStageId: string | null;
+  nextPermittedStageId: string | null;
+  stages: Array<{ id: string; status: StageStatus }>;
+};
+
+const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9'] as const;
+const inFlightStatuses = new Set<StageStatus>(['active', 'implemented', 'verified', 'blocked-external', 'failed']);
+
+export function assertP5StageLifecycle(state: P5LifecycleState) {
+  assert.deepEqual(state.stages.map((stage) => stage.id), stageIds, 'stages must be unique and ordered P0-P9');
+  let cursor = 0;
+  while (cursor < state.stages.length && state.stages[cursor].status === 'accepted') cursor += 1;
+  const acceptedPrefixLength = cursor;
+  let inFlightStageId: string | null = null;
+  if (cursor < state.stages.length && inFlightStatuses.has(state.stages[cursor].status)) {
+    inFlightStageId = state.stages[cursor].id;
+    cursor += 1;
+  }
+  assert.equal(
+    state.stages.slice(cursor).every((stage) => stage.status === 'planned'),
+    true,
+    'stage lifecycle must be an accepted prefix, optional immediate in-flight stage, and planned suffix',
+  );
+  assert.equal(state.activeStageId, inFlightStageId, 'activeStageId must identify the sole in-flight stage');
+  const expectedNext = inFlightStageId === null && cursor < state.stages.length ? state.stages[cursor].id : null;
+  assert.equal(state.nextPermittedStageId, expectedNext, 'nextPermittedStageId must identify the first planned stage only when no stage is in flight');
+  const p5 = state.stages[5];
+  assert.equal(
+    p5.status === 'accepted' || (acceptedPrefixLength === 5 && inFlightStatuses.has(p5.status)),
+    true,
+    'P5 must be the immediate in-flight stage or belong to the accepted prefix',
+  );
+}
+
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const snapshotPath = path.join(repoRoot, 'web/fixtures/p5/prewrite-master-database.json');
 const buildStatePath = path.join(repoRoot, 'docs/BUILD_STATE.json');
@@ -150,8 +186,7 @@ export function buildQueueReport(snapshot: PrewriteSnapshot, entries: P5SourceQu
 function main() {
   const check = process.argv.includes('--check');
   const snapshot = readJson<PrewriteSnapshot>(snapshotPath);
-  const buildState = readJson<{
-    activeStageId: string | null;
+  const buildState = readJson<P5LifecycleState & {
     dataAuthority: { testingWriteAuthorization?: { authorized: boolean; spreadsheetId: string; sheetName: string } };
   }>(buildStatePath);
   const backup = readJson<{
@@ -159,7 +194,7 @@ function main() {
     verification: { completeReversibleBackupEstablished: boolean; sourceRevisionAfterCopyAndReadback: string };
   }>(backupReceiptPath);
 
-  assert.equal(buildState.activeStageId, 'P5');
+  assertP5StageLifecycle(buildState);
   assert.equal(buildState.dataAuthority.testingWriteAuthorization?.authorized, true);
   assert.equal(buildState.dataAuthority.testingWriteAuthorization?.spreadsheetId, snapshot.spreadsheetId);
   assert.equal(buildState.dataAuthority.testingWriteAuthorization?.sheetName, snapshot.sheetName);

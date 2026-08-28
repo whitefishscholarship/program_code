@@ -56,19 +56,38 @@ INVARIANTS
   produce manual-review items rather than accepted facts.
 - Same input produces the same child identities.
 
-ACCEPTANCE
+ACCEPTANCE TESTS
 - No representative architecture silently loses a child or page.
 - Independent review reproduces fixture counts and challenges pagination, caps,
   canonicalization, child splitting, and deduplication boundaries.
-- Required stage checks plus plan validation, typecheck, tests, build, and root diff
-  check pass; final acceptance uses the immutable candidate, complete manifest, and
-  direct-child review attestation required by AGENTS.md.
+- From `web/`, `npm ci`, stage-specific checks, `npm run plan:check`,
+  `npm run typecheck`, `npm test`, and `npm run build` pass. Root `git diff --check`
+  also passes.
+
+INDEPENDENT REVIEW
+- Freeze the complete immutable P6 candidate without its new manifest/review record.
+- Generate a complete candidate-tree manifest against verified `origin/main` and give
+  the original objective, stage contract, baseline/candidate, full diff, fixtures,
+  receipts, counts, and validation evidence to a fresh-context read-only reviewer that
+  did not author or edit P6.
+- Critical/high findings block acceptance. Disposition every medium/low finding.
+- Add only the accepted P6 manifest and review in the candidate's direct-child two-file
+  attestation, then append no later commit before authorized delivery.
+
+NO GIT QUESTIONS TO KELSEY
+- Follow AGENTS.md autonomous Git policy. Use a `codex/p6-...` branch and preserve
+  unrelated work without asking routine branch, commit, push, PR, merge, or cleanup
+  questions.
+- Push, PR, merge, or any resulting deployment requires existing direct downstream-
+  effect authority in BUILD_STATE or verified suppression. Git authority never
+  authorizes spreadsheet/production writes, forms, provider contact, paid or
+  destructive actions, or deployment-configuration changes.
 
 ROLLBACK
 Disable the P6 router and return to accepted P5 read-only behavior. Do not delete or
 rewrite accepted P5 data or evidence.
 
-STOP
+STOP CONDITIONS
 Stop if P5 is not accepted/delivered, source completeness cannot be measured, work
 requires a reserved external effect, or independent review retains a critical/high
 finding.

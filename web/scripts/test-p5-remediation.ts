@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildQueueReport, buildSourceQueue, retrievalDisposition } from './p5-remediation';
+import { assertP5StageLifecycle, buildQueueReport, buildSourceQueue, retrievalDisposition, type P5LifecycleState } from './p5-remediation';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const snapshot = JSON.parse(
@@ -19,6 +19,47 @@ assert.equal(entries.every((entry) => entry.sheetRows.length > 0), true);
 assert.equal(entries.every((entry) => entry.sheetRows.every((row) => snapshot.records.some((record: { sheetRow: number }) => record.sheetRow === row))), true);
 assert.equal(entries.some((entry) => entry.retrievalDisposition === 'manual_review_no_fetch'), true);
 assert.equal(entries.some((entry) => entry.retrievalDisposition === 'public_read_only_scrape'), true);
+
+const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9'];
+const lifecycle = (
+  acceptedCount: number,
+  inFlightStatus: P5LifecycleState['stages'][number]['status'] | null,
+): P5LifecycleState => ({
+  activeStageId: inFlightStatus === null ? null : stageIds[acceptedCount],
+  nextPermittedStageId: inFlightStatus === null && acceptedCount < stageIds.length ? stageIds[acceptedCount] : null,
+  stages: stageIds.map((id, index) => ({
+    id,
+    status: index < acceptedCount ? 'accepted'
+      : index === acceptedCount && inFlightStatus !== null ? inFlightStatus
+        : 'planned',
+  })),
+});
+
+for (const status of ['active', 'implemented', 'verified', 'blocked-external', 'failed'] as const) {
+  assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(5, status)));
+  assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(6, status)));
+}
+assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(6, null)));
+assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(7, null)));
+assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(9, 'verified')));
+
+const p5Planned = lifecycle(5, null);
+assert.throws(() => assertP5StageLifecycle(p5Planned));
+const acceptedGap = lifecycle(6, null);
+acceptedGap.stages[4].status = 'planned';
+assert.throws(() => assertP5StageLifecycle(acceptedGap));
+const multipleInFlight = lifecycle(5, 'active');
+multipleInFlight.stages[6].status = 'verified';
+assert.throws(() => assertP5StageLifecycle(multipleInFlight));
+const mismatchedActive = lifecycle(6, 'implemented');
+mismatchedActive.activeStageId = 'P7';
+assert.throws(() => assertP5StageLifecycle(mismatchedActive));
+const wrongNext = lifecycle(7, null);
+wrongNext.nextPermittedStageId = 'P9';
+assert.throws(() => assertP5StageLifecycle(wrongNext));
+const reordered = lifecycle(6, null);
+[reordered.stages[6], reordered.stages[7]] = [reordered.stages[7], reordered.stages[6]];
+assert.throws(() => assertP5StageLifecycle(reordered));
 
 const googleForm = {
   url: 'https://docs.google.com/forms/d/example/viewform',

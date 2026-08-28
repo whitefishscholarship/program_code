@@ -7,7 +7,10 @@ Default branch: `main`
 
 ## Current P5 state
 
-- Active stage: P5 — Complete testing-sheet accuracy remediation.
+- Active stage: none. The accepted-state candidate records P5 as accepted, sets
+  `activeStageId` to null, and makes P6 next-permitted but unstarted. This marker is
+  not durable until the new exact candidate receives manifest-bound independent
+  acceptance and its direct child adds only the P5 manifest and review.
 - Verified live `main` and exact P5 baseline:
   `c8651bf9015c55965eb50cab4a96a12621f3b0fe`.
 - P5 branch: `codex/p5-testing-sheet-remediation` in isolated worktree
@@ -54,9 +57,15 @@ Default branch: `main`
   mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
   application interaction, provider contact, deployment-configuration changes, paid
   or destructive actions, and history rewriting remain prohibited.
-- Next action is the full validation matrix, exact candidate freeze and manifest, then
-  fresh-context final acceptance review. Do not execute P6. The P6 kickoff is prepared
-  as documentation only.
+- Rejected final candidate `157daf60cacdd2f729bc422394abf0c77284b53e`
+  received C0/H1/M0/L0 against rejected manifest digest `91d17921b51a`. Its technical
+  remediation passed, but it incorrectly retained P5 as active, which the two-file
+  attestation could not repair. It must never be attested or delivered.
+- The same independent reviewer prospectively approved the exact three-file
+  accepted-state delta C0/H0/M0/L0, and Kelsey explicitly authorized it. Next action is
+  a corrected candidate freeze, new complete manifest, and same-reviewer read-only
+  recheck. Do not execute P6 until P5 is attested and delivered. The P6 kickoff is
+  documentation only.
 
 ## P4 delivery (completed)
 
