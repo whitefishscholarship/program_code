@@ -1,295 +1,307 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import { BrowseItem, buildBrowseList, UrgencyTone } from '@/lib/browse';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import { awardCsvDataUri } from '@/lib/export';
+import {
+  APPLICATION_MODES,
+  CYCLE_STATUSES,
+  StudentCatalogSchema,
+  type ApplicationMode,
+  type CycleStatus,
+  type StudentAward,
+  type StudentCatalog,
+  type StudentPortal,
+  type StudentSource,
+} from '@/lib/studentCatalog';
 
-const TONE_CLASSES: Record<UrgencyTone, string> = {
-    red: 'bg-red-100 text-red-700',
-    amber: 'bg-amber-100 text-amber-700',
-    green: 'bg-green-100 text-green-700',
-    blue: 'bg-blue-100 text-blue-700',
-    gray: 'bg-gray-100 text-gray-600',
+type View = 'awards' | 'portals' | 'sources';
+type Sort = 'status' | 'name' | 'amount';
+type SchoolType = 'all' | 'two_year' | 'four_year' | 'trade' | 'other';
+
+const statusStyles: Record<CycleStatus, string> = {
+  active: 'border-emerald-200 bg-emerald-50 text-emerald-800',
+  upcoming: 'border-sky-200 bg-sky-50 text-sky-800',
+  closed: 'border-slate-300 bg-slate-100 text-slate-700',
+  unavailable: 'border-rose-200 bg-rose-50 text-rose-800',
+  unknown: 'border-amber-200 bg-amber-50 text-amber-900',
 };
 
-type SortKey = 'deadline' | 'amount' | 'name';
-type SchoolType = 'Two year' | 'Four year' | 'Trade';
-type LocationFilter = 'all' | 'national' | 'local';
+const statusLabels: Record<CycleStatus, string> = {
+  active: 'Open now',
+  upcoming: 'Upcoming',
+  closed: 'Closed',
+  unavailable: 'Unavailable',
+  unknown: 'Availability not verified',
+};
 
-const SCHOOL_TYPES: SchoolType[] = ['Two year', 'Four year', 'Trade'];
+const applicationLabels: Record<ApplicationMode, string> = {
+  automatic_consideration: 'Automatic consideration',
+  selectable_children: 'Select awards',
+  eligibility_matched: 'Eligibility matching',
+  shared_with_supplements: 'Shared application',
+  direct_per_award: 'Direct application',
+  offline: 'Paper / offline',
+  unknown: 'Not verified',
+};
 
-// Rank for "deadline soonest" sort: real upcoming dates first (by proximity),
-// then opens-soon, then rolling, then check-site/unknown last.
-function deadlineRank(item: BrowseItem): number {
-    const k = item.deadline.kind;
-    if (k === 'hard' && item.daysUntil !== null) return item.daysUntil;
-    if (k === 'opens' && item.daysUntil !== null) return 50000 + item.daysUntil;
-    if (k === 'rolling') return 100000;
-    return 200000;
+const schoolTypeLabels: Record<Exclude<SchoolType, 'all'>, string> = {
+  two_year: 'Two-year',
+  four_year: 'Four-year',
+  trade: 'Trade',
+  other: 'Other',
+};
+
+function statusRank(status: CycleStatus): number {
+  return { active: 0, upcoming: 1, unknown: 2, unavailable: 3, closed: 4 }[status];
 }
 
 export default function ScholarshipBrowser() {
-    const [items, setItems] = useState<BrowseItem[] | null>(null);
-    const [error, setError] = useState('');
+  const [catalog, setCatalog] = useState<StudentCatalog | null>(null);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [attempt, setAttempt] = useState(0);
+  const [view, setView] = useState<View>('awards');
+  const [search, setSearch] = useState('');
+  const [status, setStatus] = useState<'all' | CycleStatus>('all');
+  const [method, setMethod] = useState<'all' | ApplicationMode>('all');
+  const [schoolType, setSchoolType] = useState<SchoolType>('all');
+  const [sort, setSort] = useState<Sort>('status');
 
-    const [search, setSearch] = useState('');
-    const [sort, setSort] = useState<SortKey>('deadline');
-    const [schoolTypes, setSchoolTypes] = useState<SchoolType[]>([]);
-    const [location, setLocation] = useState<LocationFilter>('all');
-    const [renewableOnly, setRenewableOnly] = useState(false);
-    const [deadlineOnly, setDeadlineOnly] = useState(false);
-
-    useEffect(() => {
-        let cancelled = false;
-        (async () => {
-            try {
-                const res = await fetch('/api/scholarships');
-                if (!res.ok) throw new Error('Could not load scholarships. Please try again.');
-                const json = await res.json();
-                if (json.error) throw new Error(json.error);
-                if (!cancelled) setItems(buildBrowseList(json.data || []));
-            } catch (err: unknown) {
-                if (!cancelled) setError(err instanceof Error ? err.message : String(err));
-            }
-        })();
-        return () => { cancelled = true; };
-    }, []);
-
-    const visible = useMemo(() => {
-        if (!items) return [];
-        const q = search.trim().toLowerCase();
-
-        const filtered = items.filter(item => {
-            const n = item.processed.normalized;
-            const r = item.raw;
-
-            if (q) {
-                const hay = [r['Name of Scholarship'], r['Summary'], r['Focus']]
-                    .join(' ').toLowerCase();
-                if (!hay.includes(q)) return false;
-            }
-
-            if (schoolTypes.length > 0) {
-                // Keep "Any" scholarships (empty school_types) plus those overlapping the selection.
-                const matches = n.school_types.length === 0
-                    || n.school_types.some(t => schoolTypes.includes(t as SchoolType));
-                if (!matches) return false;
-            }
-
-            if (location === 'national' && !n.is_national) return false;
-            if (location === 'local' && n.is_national) return false;
-
-            if (renewableOnly && !n.is_renewable) return false;
-
-            if (deadlineOnly && item.deadline.kind !== 'hard') return false;
-
-            return true;
-        });
-
-        const sorted = [...filtered];
-        if (sort === 'deadline') {
-            sorted.sort((a, b) => deadlineRank(a) - deadlineRank(b));
-        } else if (sort === 'amount') {
-            sorted.sort((a, b) => b.amountSort - a.amountSort);
-        } else {
-            sorted.sort((a, b) =>
-                (a.raw['Name of Scholarship'] || '').localeCompare(b.raw['Name of Scholarship'] || ''));
-        }
-        return sorted;
-    }, [items, search, sort, schoolTypes, location, renewableOnly, deadlineOnly]);
-
-    const toggleSchoolType = (t: SchoolType) => {
-        setSchoolTypes(prev => prev.includes(t) ? prev.filter(x => x !== t) : [...prev, t]);
-    };
-
-    const clearFilters = () => {
-        setSearch('');
-        setSchoolTypes([]);
-        setLocation('all');
-        setRenewableOnly(false);
-        setDeadlineOnly(false);
-    };
-
-    // ---- States: error / loading / empty / list ----
-    if (error) {
-        return (
-            <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-red-100 text-center">
-                <h2 className="text-xl font-bold text-gray-900 mb-2">Couldn&apos;t load scholarships</h2>
-                <p className="text-gray-600">{error}</p>
-            </div>
-        );
+  const load = useCallback(async () => {
+    setLoading(true);
+    setError('');
+    try {
+      if (process.env.NODE_ENV !== 'production' && new URLSearchParams(window.location.search).get('qa') === 'error') {
+        throw new Error('The scholarship catalog is temporarily unavailable.');
+      }
+      const qa = process.env.NODE_ENV !== 'production' ? new URLSearchParams(window.location.search).get('qa') : null;
+      const response = await fetch(qa === 'matrix' ? '/api/scholarships?qa=matrix' : '/api/scholarships', { headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('The scholarship catalog is temporarily unavailable.');
+      const payload = await response.json() as { catalog?: unknown };
+      setCatalog(StudentCatalogSchema.parse(payload.catalog));
+    } catch (caught) {
+      setCatalog(null);
+      setError(caught instanceof Error ? caught.message : 'The scholarship catalog is temporarily unavailable.');
+    } finally {
+      setLoading(false);
     }
+  }, [attempt]);
 
-    if (!items) {
-        return (
-            <div className="flex flex-col items-center justify-center py-20">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-                <h2 className="text-xl font-medium text-gray-800">Loading scholarships...</h2>
-            </div>
-        );
-    }
+  useEffect(() => { void load(); }, [load]);
 
+  const visibleAwards = useMemo(() => {
+    if (!catalog) return [];
+    const query = search.trim().toLocaleLowerCase();
+    const awards = catalog.awards.filter((award) => {
+      const matchesSearch = !query || [award.name, award.summary, award.amount.label, award.eligibility.focus, award.application.label]
+        .filter(Boolean).join(' ').toLocaleLowerCase().includes(query);
+      const matchesStatus = status === 'all' || award.cycle.status === status;
+      const matchesMethod = method === 'all' || award.application.mode === method;
+      const matchesSchool = schoolType === 'all' || award.eligibility.schoolTypes.includes(schoolType);
+      return matchesSearch && matchesStatus && matchesMethod && matchesSchool;
+    });
+    return awards.sort((a, b) => {
+      if (sort === 'name') return a.name.localeCompare(b.name);
+      if (sort === 'amount') return (b.amount.maximum ?? b.amount.minimum ?? -1) - (a.amount.maximum ?? a.amount.minimum ?? -1) || a.name.localeCompare(b.name);
+      return statusRank(a.cycle.status) - statusRank(b.cycle.status) || a.name.localeCompare(b.name);
+    });
+  }, [catalog, method, schoolType, search, sort, status]);
+
+  const visibleSources = useMemo(() => {
+    if (!catalog) return [];
+    const query = search.trim().toLocaleLowerCase();
+    return catalog.sources.filter((source) => !query || [source.title, source.recordType, source.architecture, source.availability]
+      .join(' ').toLocaleLowerCase().includes(query));
+  }, [catalog, search]);
+
+  const visiblePortals = useMemo(() => {
+    if (!catalog) return [];
+    const query = search.trim().toLocaleLowerCase();
+    return catalog.portals.filter((portal) => !query || [portal.title, portal.architecture]
+      .join(' ').toLocaleLowerCase().includes(query));
+  }, [catalog, search]);
+
+  const hasFilters = Boolean(search || status !== 'all' || method !== 'all' || schoolType !== 'all');
+  const clearFilters = () => {
+    setSearch('');
+    setStatus('all');
+    setMethod('all');
+    setSchoolType('all');
+  };
+
+  if (loading) {
     return (
-        <div className="max-w-6xl mx-auto">
-            {/* Controls */}
-            <div className="bg-white p-5 rounded-xl shadow-sm border border-gray-100 mb-6">
-                <div className="flex flex-col md:flex-row gap-3 md:items-center">
-                    <input
-                        type="text"
-                        value={search}
-                        onChange={e => setSearch(e.target.value)}
-                        placeholder="Search by name, focus, or keyword…"
-                        className="flex-1 text-black border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2.5"
-                    />
-                    <select
-                        value={sort}
-                        onChange={e => setSort(e.target.value as SortKey)}
-                        className="text-black border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2.5"
-                    >
-                        <option value="deadline">Sort: Deadline (soonest)</option>
-                        <option value="amount">Sort: Award amount (high → low)</option>
-                        <option value="name">Sort: Name (A → Z)</option>
-                    </select>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-2 mt-4">
-                    {SCHOOL_TYPES.map(t => {
-                        const on = schoolTypes.includes(t);
-                        return (
-                            <button
-                                key={t}
-                                type="button"
-                                onClick={() => toggleSchoolType(t)}
-                                className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${on
-                                    ? 'bg-blue-600 text-white border-blue-600'
-                                    : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
-                            >
-                                {t}
-                            </button>
-                        );
-                    })}
-
-                    <span className="mx-1 h-6 w-px bg-gray-200" aria-hidden="true" />
-
-                    {([['all', 'All locations'], ['local', 'In-State'], ['national', 'National']] as [LocationFilter, string][]).map(([val, label]) => (
-                        <button
-                            key={val}
-                            type="button"
-                            onClick={() => setLocation(val)}
-                            className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${location === val
-                                ? 'bg-blue-600 text-white border-blue-600'
-                                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
-                        >
-                            {label}
-                        </button>
-                    ))}
-
-                    <span className="mx-1 h-6 w-px bg-gray-200" aria-hidden="true" />
-
-                    <button
-                        type="button"
-                        onClick={() => setRenewableOnly(v => !v)}
-                        className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${renewableOnly
-                            ? 'bg-blue-600 text-white border-blue-600'
-                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
-                    >
-                        Renewable only
-                    </button>
-                    <button
-                        type="button"
-                        onClick={() => setDeadlineOnly(v => !v)}
-                        className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${deadlineOnly
-                            ? 'bg-blue-600 text-white border-blue-600'
-                            : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
-                    >
-                        Has a deadline
-                    </button>
-                </div>
-            </div>
-
-            {/* Result count */}
-            <div className="flex items-center justify-between mb-4 px-1">
-                <p className="text-sm text-gray-500">
-                    Showing <strong>{visible.length}</strong> of {items.length} active scholarships
-                </p>
-                {(search || schoolTypes.length > 0 || location !== 'all' || renewableOnly || deadlineOnly) && (
-                    <button onClick={clearFilters} className="text-sm text-blue-600 hover:text-blue-800 underline">
-                        Clear filters
-                    </button>
-                )}
-            </div>
-
-            {/* Cards */}
-            {visible.length === 0 ? (
-                <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
-                    <div className="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">No scholarships match these filters</h2>
-                    <p className="text-gray-600">Try clearing a filter or broadening your search.</p>
-                </div>
-            ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {visible.map((item, i) => (
-                        <ScholarshipCard key={`${item.raw['Name of Scholarship']}-${i}`} item={item} />
-                    ))}
-                </div>
-            )}
-        </div>
+      <section aria-live="polite" aria-busy="true" className="rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-sm">
+        <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-slate-200 border-t-teal-700" aria-hidden="true" />
+        <h2 className="text-xl font-bold">Loading the scholarship catalog</h2>
+        <p className="mt-2 text-slate-600">Keeping awards, portals, and cycle status separate.</p>
+      </section>
     );
+  }
+
+  if (error || !catalog) {
+    return (
+      <section role="alert" className="mx-auto max-w-2xl rounded-3xl border border-rose-200 bg-white p-8 text-center shadow-sm">
+        <p className="text-sm font-bold uppercase tracking-wider text-rose-700">Catalog unavailable</p>
+        <h2 className="mt-2 text-2xl font-black">We couldn&apos;t load scholarship information.</h2>
+        <p className="mt-3 text-slate-600">{error || 'Please try again.'}</p>
+        <button type="button" onClick={() => setAttempt((value) => value + 1)} className="mt-6 rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">
+          Try again
+        </button>
+      </section>
+    );
+  }
+
+  return (
+    <section aria-labelledby="catalog-heading">
+      <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Current catalog</p>
+          <h2 id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">See what is verified—and what is not.</h2>
+          <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{catalog.notice}</p>
+        </div>
+        {visibleAwards.length > 0 ? (
+          <a href={awardCsvDataUri(visibleAwards)} download={`whitefish-scholarships-${new Date().toISOString().slice(0, 10)}.csv`} className="rounded-xl border-2 border-teal-800 bg-white px-5 py-3 text-center font-bold text-teal-900 shadow-sm hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">
+            Export {visibleAwards.length} award{visibleAwards.length === 1 ? '' : 's'} as CSV
+          </a>
+        ) : (
+          <button type="button" disabled className="cursor-not-allowed rounded-xl border-2 border-slate-300 bg-white px-5 py-3 font-bold text-slate-400">Export 0 awards as CSV</button>
+        )}
+      </div>
+
+      <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" aria-label="Canonical catalog counts">
+        <Count label="Award records" value={catalog.counts.awards} />
+        <Count label="Open cycles" value={catalog.counts.activeCycles} emphasis={catalog.counts.activeCycles === 0 ? 'warning' : 'positive'} />
+        <Count label="Unknown cycles" value={catalog.counts.unknownCycles} emphasis="warning" />
+        <Count label="Portal records" value={catalog.counts.portals} />
+        <Count label="Source records" value={catalog.counts.sources} />
+        <Count label="Minimum award slots" value={catalog.counts.minimumObservedRecipientSlots} suffix="*" />
+      </dl>
+      <p className="mt-2 text-xs text-slate-500">* Historical or undated minimum observed across these award records; not a count of currently open slots.</p>
+
+      <div className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">
+        <strong>Availability note:</strong> all {catalog.counts.unknownCycles} modeled cycles use annual date rules without a verified year. They are listed for research, not labeled open.
+      </div>
+
+      <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
+        <div role="group" aria-label="Choose catalog record type" className="flex flex-wrap gap-2 border-b border-slate-200 pb-4">
+          <button aria-pressed={view === 'awards'} type="button" onClick={() => setView('awards')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'awards' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Awards ({catalog.counts.awards})</button>
+          <button aria-pressed={view === 'portals'} type="button" onClick={() => setView('portals')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'portals' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Portal records ({catalog.counts.portals})</button>
+          <button aria-pressed={view === 'sources'} type="button" onClick={() => setView('sources')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'sources' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Source records ({catalog.counts.sources})</button>
+        </div>
+
+        <div className="mt-5 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
+          <label className="block text-sm font-bold text-slate-800">
+            Search {view}
+            <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={view === 'awards' ? 'Name, amount, focus, or application method' : view === 'portals' ? 'Portal name or architecture' : 'Source host or architecture'} className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 font-normal text-slate-950 shadow-sm placeholder:text-slate-400 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100" />
+          </label>
+          {view === 'awards' && (
+            <label className="block text-sm font-bold text-slate-800">
+              Sort
+              <select value={sort} onChange={(event) => setSort(event.target.value as Sort)} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-normal focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100 lg:w-56">
+                <option value="status">Status, then name</option>
+                <option value="name">Name A–Z</option>
+                <option value="amount">Highest stated amount</option>
+              </select>
+            </label>
+          )}
+        </div>
+
+        {view === 'awards' && (
+          <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <FilterSelect label="Cycle status" value={status} onChange={(value) => setStatus(value as 'all' | CycleStatus)} options={[['all', 'All statuses'], ...CYCLE_STATUSES.map((value) => [value, statusLabels[value]] as [string, string])]} />
+            <FilterSelect label="Application method" value={method} onChange={(value) => setMethod(value as 'all' | ApplicationMode)} options={[['all', 'All methods'], ...APPLICATION_MODES.map((value) => [value, applicationLabels[value]] as [string, string])]} />
+            <FilterSelect label="School type" value={schoolType} onChange={(value) => setSchoolType(value as SchoolType)} options={[['all', 'All school types'], ...Object.entries(schoolTypeLabels)]} />
+          </div>
+        )}
+
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-4">
+          <p aria-live="polite" className="text-sm text-slate-600">
+            Showing <strong className="text-slate-950">{view === 'awards' ? visibleAwards.length : view === 'portals' ? visiblePortals.length : visibleSources.length}</strong> of {view === 'awards' ? catalog.counts.awards : view === 'portals' ? catalog.counts.portals : catalog.counts.sources} {view}
+          </p>
+          {hasFilters && <button type="button" onClick={clearFilters} className="rounded-lg px-3 py-2 text-sm font-bold text-teal-800 underline-offset-4 hover:underline focus:outline-none focus:ring-4 focus:ring-teal-200">Clear filters</button>}
+        </div>
+      </div>
+
+      {view === 'awards' && (visibleAwards.length ? <div className="mt-6 grid gap-5 lg:grid-cols-2">{visibleAwards.map((award) => <AwardCard key={award.publicId} award={award} />)}</div> : <EmptyState noun="awards" onClear={clearFilters} />)}
+      {view === 'portals' && (visiblePortals.length ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visiblePortals.map((portal) => <PortalCard key={portal.publicId} portal={portal} />)}</div> : <EmptyState noun="portals" onClear={clearFilters} />)}
+      {view === 'sources' && (visibleSources.length ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visibleSources.map((source) => <SourceCard key={source.publicId} source={source} />)}</div> : <EmptyState noun="sources" onClear={clearFilters} />)}
+    </section>
+  );
 }
 
-function ScholarshipCard({ item }: { item: BrowseItem }) {
-    const r = item.raw;
-    const n = item.processed.normalized;
-    const gpa = r['Stated Min. GPA'];
-    const field = (r['Focus'] || '').trim();
-    const schoolType = (r['School Type (2-or 4-Year, or Trade)'] || '').trim();
+function Count({ label, value, suffix = '', emphasis = 'neutral' }: { label: string; value: number; suffix?: string; emphasis?: 'neutral' | 'warning' | 'positive' }) {
+  const color = emphasis === 'warning' ? 'border-amber-200 bg-amber-50' : emphasis === 'positive' ? 'border-emerald-200 bg-emerald-50' : 'border-slate-200 bg-white';
+  return <div className={`rounded-2xl border p-4 shadow-sm ${color}`}><dt className="text-xs font-bold uppercase tracking-wide text-slate-600">{label}</dt><dd className="mt-2 text-3xl font-black text-slate-950">{value}{suffix}</dd></div>;
+}
 
-    return (
-        <div className="flex flex-col bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-            <div className="flex items-start justify-between gap-3 mb-2">
-                <h3 className="font-semibold text-gray-900 leading-snug">{r['Name of Scholarship']}</h3>
-                <span className={`shrink-0 px-2.5 py-1 rounded-full text-xs font-medium whitespace-nowrap ${TONE_CLASSES[item.urgency.tone]}`}>
-                    {item.urgency.label}
-                </span>
-            </div>
+function FilterSelect({ label, value, options, onChange }: { label: string; value: string; options: Array<[string, string]>; onChange: (value: string) => void }) {
+  return <label className="block text-sm font-bold text-slate-800">{label}<select value={value} onChange={(event) => onChange(event.target.value)} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-normal focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100">{options.map(([optionValue, optionLabel]) => <option key={optionValue} value={optionValue}>{optionLabel}</option>)}</select></label>;
+}
 
-            <p className="text-2xl font-bold text-gray-900 mb-3">{item.amountDisplay}</p>
+function AwardCard({ award }: { award: StudentAward }) {
+  return (
+    <article className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <h3 className="text-xl font-black leading-snug">{award.name}</h3>
+        <span className={`w-fit rounded-full border px-3 py-1 text-xs font-bold ${statusStyles[award.cycle.status]}`}><span aria-hidden="true">● </span>{award.cycle.label}</span>
+      </div>
+      <p className="mt-4 text-3xl font-black text-teal-900">{award.amount.label}</p>
+      <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-slate-700">
+        <Chip>{award.eligibility.audience}</Chip>
+        {award.eligibility.minimumGpa !== null && <Chip>Minimum GPA {award.eligibility.minimumGpa}</Chip>}
+        {award.eligibility.schoolTypes.map((type) => <Chip key={type}>{schoolTypeLabels[type]}</Chip>)}
+      </div>
+      {award.summary && <p className="mt-4 text-sm leading-6 text-slate-600">{award.summary}</p>}
+      <dl className="mt-5 grid gap-4 border-t border-slate-200 pt-5 text-sm sm:grid-cols-2">
+        <div><dt className="font-bold text-slate-950">Application method</dt><dd className="mt-1 leading-6 text-slate-600">{award.application.label}</dd></div>
+        <div><dt className="font-bold text-slate-950">Cycle details</dt><dd className="mt-1 leading-6 text-slate-600">{award.cycle.closes ? `Annual close rule: ${award.cycle.closes}` : 'No verified closing date'}</dd></div>
+      </dl>
+      <div className="mt-auto pt-6">
+        {award.application.url ? <a href={award.application.url} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Check official application source <span className="sr-only">for {award.name}</span><span aria-hidden="true"> ↗</span></a> : <p className="rounded-xl bg-slate-100 px-4 py-3 text-center text-sm font-bold text-slate-700">No verified online application link</p>}
+        {award.cycle.status !== 'active' && <p className="mt-2 text-center text-xs leading-5 text-slate-500">This link does not mean the award is currently open.</p>}
+      </div>
+    </article>
+  );
+}
 
-            <div className="flex flex-wrap gap-1.5 mb-3">
-                <Chip>{n.is_national ? 'National' : 'In-State'}</Chip>
-                {schoolType && schoolType.toLowerCase() !== 'any' && <Chip>{schoolType}</Chip>}
-                {gpa && gpa.toLowerCase() !== 'any' && <Chip>Min GPA {gpa}</Chip>}
-                {n.is_renewable && <Chip>Renewable</Chip>}
-                {field && <Chip>{field}</Chip>}
-            </div>
+function SourceCard({ source }: { source: StudentSource }) {
+  const architecture = source.architecture.replaceAll('_', ' ');
+  return (
+    <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-xs font-bold uppercase tracking-wider text-teal-800">{architecture}</p><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold capitalize text-slate-700">{source.recordType}</span></div>
+      <h3 className="mt-2 text-xl font-black break-words">{source.title}</h3>
+      <dl className="mt-5 grid grid-cols-2 gap-4 text-sm">
+        <div><dt className="font-bold">Catalog state</dt><dd className="mt-1 capitalize text-slate-600">{source.availability}</dd></div>
+        <div><dt className="font-bold">Linked awards</dt><dd className="mt-1 text-slate-600">{source.awardCount}</dd></div>
+      </dl>
+      {source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit official source <span className="sr-only">{source.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="mt-6 text-sm font-bold text-slate-600">Offline source; no verified URL</p>}
+    </article>
+  );
+}
 
-            {r['Summary'] && (
-                <p className="text-sm text-gray-600 mb-4 line-clamp-4">{r['Summary']}</p>
-            )}
-
-            <div className="mt-auto pt-2">
-                {item.applyHref ? (
-                    <a
-                        href={item.applyHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block w-full text-center bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-                    >
-                        Apply →
-                    </a>
-                ) : (
-                    <span className="block w-full text-center bg-gray-100 text-gray-500 px-6 py-2.5 rounded-lg font-medium">
-                        See your counselor
-                    </span>
-                )}
-            </div>
-        </div>
-    );
+function PortalCard({ portal }: { portal: StudentPortal }) {
+  return (
+    <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <p className="text-xs font-bold uppercase tracking-wider text-teal-800">Portal record · {portal.architecture.replaceAll('_', ' ')}</p>
+      <h3 className="mt-2 text-xl font-black break-words">{portal.title}</h3>
+      <p className="mt-4 text-sm text-slate-600">Linked to {portal.sourcePublicIds.length} canonical source{portal.sourcePublicIds.length === 1 ? '' : 's'}.</p>
+      {portal.url ? <a href={portal.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit portal source <span className="sr-only">{portal.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="mt-6 text-sm font-bold text-slate-600">No verified online portal URL</p>}
+    </article>
+  );
 }
 
 function Chip({ children }: { children: React.ReactNode }) {
-    return (
-        <span className="px-2 py-0.5 rounded-md text-xs bg-gray-100 text-gray-700">{children}</span>
-    );
+  return <span className="rounded-full bg-slate-100 px-3 py-1">{children}</span>;
+}
+
+function EmptyState({ noun, onClear }: { noun: string; onClear: () => void }) {
+  return (
+    <div role="status" className="mx-auto mt-6 max-w-2xl rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-sm">
+      <p className="text-sm font-bold uppercase tracking-wider text-amber-800">No matching {noun}</p>
+      <h3 className="mt-2 text-2xl font-black">Try a broader search.</h3>
+      <p className="mt-3 text-slate-600">The canonical catalog counts above have not changed; only this filtered view is empty.</p>
+      <button type="button" onClick={onClear} className="mt-6 rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Clear filters</button>
+    </div>
+  );
 }

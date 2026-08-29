@@ -37,20 +37,22 @@
     "p6:bind-authority-audience": "tsx scripts/p6-bind-authority-audience.ts",
     "p6:coverage": "tsx scripts/p6-coverage.ts",
     "p6:coverage:check": "tsx scripts/p6-coverage.ts --check",
+    "p7:catalog": "tsx scripts/p7-student-catalog.ts",
+    "p7:catalog:check": "tsx scripts/p7-student-catalog.ts --check",
+    "p7:test": "tsx scripts/p7-student-catalog.ts --check && tsx scripts/test-p7-student-catalog.ts",
     "typecheck": "tsc --noEmit",
-    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts"
+    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts && tsx scripts/p7-student-catalog.ts --check && tsx scripts/test-p7-student-catalog.ts"
   },
   "dependencies": {
-    "@google/genai": "^1.44.0",
+    "@google/genai": "^2.19.0",
     "cheerio": "^1.2.0",
     "dotenv": "^17.3.1",
-    "exceljs": "^4.4.0",
-    "googleapis": "^171.4.0",
-    "next": "16.1.6",
+    "googleapis": "^176.0.0",
+    "next": "16.3.3",
     "pdf2json": "^4.0.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "resend": "^6.9.3",
+    "resend": "^6.25.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {
@@ -59,7 +61,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "16.3.3",
     "tailwindcss": "^4",
     "tsx": "^4.22.4",
     "typescript": "^5"

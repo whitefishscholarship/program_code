@@ -5,7 +5,92 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P6 state
+## Current P7 accepted-state candidate
+
+- P7 — Student-facing product and API — has a prospective accepted-state marker and
+  awaits final exact-candidate recheck and attestation on branch
+  `codex/p7-student-facing` in isolated worktree `/private/tmp/program_code-p7`.
+- The exact P7 baseline is live `origin/main`
+  `28e53dbdb0959ad86ff535d781c59c5ea9a4bf54`, the merge carrying accepted P6
+  direct-child attestation `0bc02bcc9cc8856bc1e83b26130e787851dc937d`.
+  Local commit topology, GitHub API, and standard HTTPS Git all independently
+  reproduced that baseline; the original GitHub account was restored after the
+  bounded read-only check.
+- P6 is durably accepted and delivered. Candidate
+  `53150026a92e45721642e9f44b564ed8a79aa3ea` received fresh-context read-only
+  C0/H0/M0/L0 acceptance against manifest SHA-256
+  `52320c0466fee1b9e3abd1f6bee97c3956b242fd65e976cf195039d189c265e4`;
+  direct-child attestation `0bc02bcc` added only the P6 manifest and review.
+- P6 canonical coverage reproduces 6 sources, 16 child awards, 1 shared
+  application group, 16 yearless/unknown cycles, 109 field-level Evidence
+  records, 2 ReviewItems, 7 legacy bindings, 0 active additions, and at least 71
+  observed recipient slots.
+- `docs/evidence/P7-test-matrix.json` is the pre-implementation browser and
+  contract matrix. Its replacement expectations keep 217 canonical sources and 21
+  portal records distinct, and covers all 13 canonical source architectures, single and
+  shared awards, portals, paper/form routes, automatic consideration, unavailable
+  cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
+- The complete 30-cell browser matrix passed with no exclusions. Production-mode
+  screenshot evidence and machine results are in `docs/evidence/P7-browser-results.json`
+  and the three `docs/evidence/P7-browser-*.jpg` files.
+- The replacement public catalog reconciles exactly to 217 canonical sources, 21 portal
+  records, 192 awards (176 accepted legacy plus 16 P6 children), 4 application groups,
+  192 cycles, 0 active cycles, 192 unknown cycles, and at least 71 observed recipient
+  slots from P6 descriptions. API and CSV are separate
+  hard allow-lists and expose no internal evidence/review fields or applicant data.
+- Locked install, P7 checks, plan validation, typecheck, the complete P0-P7 suite,
+  production build, full and production dependency audits, and root whitespace
+  validation passed. Both final audits had zero current advisory matches.
+- Rejected exact candidate `11f3c53e34008684b8115660244c203774fc659a`
+  received C0/H2/M2/L0 against uncommitted manifest SHA-256
+  `130a77ea74d4b978440d1b121228a9fb56a5de904e43ba7e20f20356806518de`.
+  It omitted the accepted legacy baseline, broke the legacy API/smoke contract, claimed
+  incomplete ARIA tabs, and left this handoff stale. It must never be attested or delivered.
+- The replacement combines P2/P5 with P6, preserves a versioned catalog plus exact
+  197-row `{data}` compatibility adapter, passes the unchanged production smoke test,
+  and replaces ARIA tabs with ordinary grouped native buttons. Its fresh 30-cell
+  browser matrix passed with zero console errors.
+- The same reviewer rejected exact replacement
+  `8c455a8d071b3b9e6c5e5eb624cabeac034befed` C0/H1/M0/L1 against uncommitted
+  manifest SHA-256 `021227c3c09286a9f02a6dab95eaebeb07f955b288f90a3d4c39f6499bfe5ecb`.
+  All 16 P6 awards referenced a source public ID absent from the advertised source
+  array, and this handoff contained one duplicated word. That candidate and manifest
+  must never be attested or delivered.
+- The second replacement resolves P6 sources through governed P1 legacy source
+  identity when URLs differ, fails closed on an unmappable expansion source, and adds
+  runtime plus focused referential-integrity checks. All 16 P6 awards now reference the
+  existing Reach Higher Montana parent source and its computed award count is 16. The
+  duplicated word was removed as the count-matched L1 disposition.
+- The complete regression/build/audit matrix, unchanged optimized-server smoke, and
+  fresh 30-cell browser matrix now pass; the browser observed the corrected 16-award
+  source relationship at every required viewport with zero console errors. The exact
+  final command window was `2026-08-29T21:15:44Z` through
+  `2026-08-29T21:16:29Z`; both dependency audits again reported zero current matches.
+- Fresh-context reviewer `/root/p7_fresh_review` accepted exact verified candidate
+  `e3230f37f6dd1c0d55c9964a407ca3ac7d96fe98` C0/H0/M0/L0 against manifest
+  SHA-256 `414f99219cbb614bf3db79d4656e76e3f37fe958949d5f3acc8887eac8b9d7f3`
+  and explicitly cleared the accepted-state-only transition.
+- Machine state now records P7 accepted, no active stage, and P8 next-permitted. This
+  remains prospective until the commit containing this record is frozen, a new exact
+  manifest receives the same reviewer's final read-only recheck, and its direct child
+  adds exactly the P7 manifest and review. Do not authenticate or deliver before then.
+- Accepted-state plan validation required the standard autonomous-Git boundary in the
+  already prepared P8 kickoff. That documentation-only correction was added without
+  starting P8; validation now reports only the expected missing committed P7
+  manifest/review attestation.
+- `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 is next-permitted but
+  remains planned and must not begin in this session.
+- P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
+  dependencies needed for P7, browser evidence, and P7 governance artifacts.
+  Spreadsheet writes, production spreadsheet access/migration, P8 execution,
+  P9, forms/applications, applicant data, provider contact, deployment changes,
+  paid/destructive actions, history rewriting, and gate weakening remain prohibited.
+
+## Historical P6 work record (superseded)
+
+The detailed work-in-progress narrative below is retained as historical context only.
+The accepted P6 manifest, review, evidence, direct-child attestation, and live merge
+identified above are canonical and supersede its earlier pending/rejected wording.
 
 - P6 remains undelivered and must not be treated as accepted. The current disjoint
   replacement is branch `codex/p6-eligible-coverage-expansion-rev3` in isolated
