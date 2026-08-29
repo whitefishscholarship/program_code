@@ -46,6 +46,16 @@ assert(catalog.awards.every((award) => award.cycle.year === null), 'unknown annu
 assert.equal(catalog.awards.filter((award) => award.application.label.includes('Shared application')).length >= 16, true);
 assert(catalog.applicationGroups.some((group) => group.awardPublicIds.length === 16), 'P6 shared application must preserve all child relationships');
 assert(catalog.sources.every((source) => source.url === null || source.url.startsWith('https://')), 'student source links must use public HTTPS URLs');
+const sourcePublicIds = new Set(catalog.sources.map((source) => source.publicId));
+const awardPublicIds = new Set(catalog.awards.map((award) => award.publicId));
+const applicationPublicIds = new Set(catalog.applicationGroups.map((group) => group.publicId));
+assert(catalog.awards.every((award) => award.sourcePublicIds.every((id) => sourcePublicIds.has(id))), 'every award source relationship must resolve');
+assert(catalog.awards.every((award) => !award.application.groupPublicId || applicationPublicIds.has(award.application.groupPublicId)), 'every award application-group relationship must resolve');
+assert(catalog.portals.every((portal) => portal.sourcePublicIds.every((id) => sourcePublicIds.has(id))), 'every portal source relationship must resolve');
+assert(catalog.applicationGroups.every((group) => group.awardPublicIds.every((id) => awardPublicIds.has(id))), 'every application-group award relationship must resolve');
+const p6Group = catalog.applicationGroups.find((group) => group.awardPublicIds.length === 16);
+assert(p6Group, 'P6 shared application group is missing');
+assert(p6Group.awardPublicIds.every((id) => catalog.awards.find((award) => award.publicId === id)?.sourcePublicIds.includes('source-ac022918a599')), 'every P6 award must retain the accepted Reach Higher Montana parent source');
 
 for (const award of catalog.awards) {
   assert.deepEqual(Object.keys(award).sort(), [...PUBLIC_AWARD_FIELDS].sort(), `${award.name} must use the exact award allow-list`);

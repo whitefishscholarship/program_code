@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P7",
-  "executedAt": "2026-08-29T20:51:41Z",
+  "executedAt": "2026-08-29T21:14:23Z",
   "browser": "Codex in-app browser",
   "baseUrl": "http://127.0.0.1:3107",
   "result": "pass",
@@ -11,19 +11,19 @@
       "id": "mobile",
       "width": 360,
       "height": 800,
-      "screenshot": { "path": "docs/evidence/P7-browser-mobile-replacement.jpg", "sha256": "0e533f700e7529f587a8cd96af892cc0db870ac3930907957e7afb199b5a82e1" }
+      "screenshot": { "path": "docs/evidence/P7-browser-mobile-integrity.jpg", "sha256": "0e533f700e7529f587a8cd96af892cc0db870ac3930907957e7afb199b5a82e1" }
     },
     {
       "id": "tablet",
       "width": 768,
       "height": 1024,
-      "screenshot": { "path": "docs/evidence/P7-browser-tablet-replacement.jpg", "sha256": "4f0d1e0af19f33f36dc380e0c36a3829a204d24ffc55688abeb91340d234e47b" }
+      "screenshot": { "path": "docs/evidence/P7-browser-tablet-integrity.jpg", "sha256": "4f0d1e0af19f33f36dc380e0c36a3829a204d24ffc55688abeb91340d234e47b" }
     },
     {
       "id": "desktop",
       "width": 1440,
       "height": 900,
-      "screenshot": { "path": "docs/evidence/P7-browser-desktop-replacement.jpg", "sha256": "789420c8fe6cb53b8146379fec8e7c533adc01f8879f8f60f51e2da83283b5ee" }
+      "screenshot": { "path": "docs/evidence/P7-browser-desktop-integrity.jpg", "sha256": "789420c8fe6cb53b8146379fec8e7c533adc01f8879f8f60f51e2da83283b5ee" }
     }
   ],
   "commonAssertions": {
@@ -33,6 +33,9 @@
     "portalCards": 21,
     "unknownCycleFilterResults": 192,
     "sharedApplicationFilterResults": 16,
+    "p6ParentSourcePublicId": "source-ac022918a599",
+    "p6ParentSourceAwardCount": 16,
+    "danglingAwardSourceReferences": 0,
     "firstNameSortedAward": "2024-2025 ADHD Scholarship",
     "matrixFixtureAwardCards": 7,
     "matrixFixtureSourceCards": 13,
@@ -84,7 +87,8 @@
   ],
   "notes": [
     "The matrix catalog is served only by the development API when qa=matrix; production always returns the canonical catalog.",
-    "The replacement 30-run matrix passed all 30 cells with zero console errors. Its three ordinary native record-type buttons use aria-pressed inside a labeled group; the rejected candidate's incomplete tablist/tab semantics were removed.",
+    "The second-replacement 30-run matrix passed all 30 cells with zero console errors. It independently observed the corrected Reach Higher Montana source card linked to 16 awards at all three viewports. Its three ordinary native record-type buttons use aria-pressed inside a labeled group; the rejected candidate's incomplete tablist/tab semantics were removed.",
+    "Rejected candidate 8c455a8 retained the correct counts but exposed a dangling P6 source ID. The second replacement resolves every P6 award to source-ac022918a599 and the committed runtime and focused tests reject every dangling award/source, award/application-group, portal/source, or application-group/award relationship.",
     "Rejected candidate 11f3c53 retained two historical development-compile entries; the replacement ran in a fresh tab with none.",
     "Browser download events are not emitted for data-URI downloads in this browser surface. The visible anchor media type and download filename were observed in-browser, while exact UTF-8 BOM, 193-line shape, formula neutralization, and allow-list content passed the committed export contract test."
   ]

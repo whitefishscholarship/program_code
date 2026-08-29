@@ -182,10 +182,21 @@ export function buildCompleteStudentCatalog(input: CompleteCatalogInputs): { cat
   });
 
   const sourceIdByUrl = new Map(baseline.sources.filter((source) => source.canonicalUrl).map((source) => [source.canonicalUrl!, publicEntityId('source', source.id)]));
-  const expansionSourceUrlByPublicId = new Map(expansionCatalog.sources.map((source) => [source.publicId, source.url]));
+  const sourceIdByLegacyIdentity = new Map(baseline.sources
+    .filter((source) => source.legacySourceIdentity)
+    .map((source) => [source.legacySourceIdentity!, publicEntityId('source', source.id)]));
+  const expansionSourceByPublicId = new Map(input.expansion.sources.map((source) => [publicEntityId('source', source.id), source]));
+  const resolveExpansionSourcePublicId = (publicId: string): string => {
+    const expansionSource = expansionSourceByPublicId.get(publicId);
+    if (!expansionSource) throw new Error(`Expansion award references missing source ${publicId}`);
+    const resolved = (expansionSource.canonicalUrl ? sourceIdByUrl.get(expansionSource.canonicalUrl) : undefined)
+      ?? (expansionSource.legacySourceIdentity ? sourceIdByLegacyIdentity.get(expansionSource.legacySourceIdentity) : undefined);
+    if (!resolved) throw new Error(`Expansion source ${publicId} has no accepted baseline identity`);
+    return resolved;
+  };
   const expansionAwards = expansionCatalog.awards.map((award) => StudentAwardSchema.parse({
     ...award,
-    sourcePublicIds: award.sourcePublicIds.map((id) => sourceIdByUrl.get(expansionSourceUrlByPublicId.get(id) ?? '') ?? id),
+    sourcePublicIds: award.sourcePublicIds.map(resolveExpansionSourcePublicId),
   }));
   const awards = [...baselineAwards, ...expansionAwards].sort((a, b) => a.name.localeCompare(b.name));
 
@@ -254,6 +265,28 @@ export function buildCompleteStudentCatalog(input: CompleteCatalogInputs): { cat
     applicationGroups,
     notice: 'The catalog combines the accepted 176-record legacy scholarship baseline with 16 accepted P6 child awards. Cycle availability remains unverified unless a year-qualified official observation exists; no record is labeled open from a date parse alone.',
   });
+
+  const sourcePublicIds = new Set(catalog.sources.map((source) => source.publicId));
+  const awardPublicIds = new Set(catalog.awards.map((award) => award.publicId));
+  const applicationPublicIds = new Set(catalog.applicationGroups.map((group) => group.publicId));
+  for (const award of catalog.awards) {
+    for (const sourcePublicId of award.sourcePublicIds) {
+      if (!sourcePublicIds.has(sourcePublicId)) throw new Error(`Award ${award.publicId} references missing source ${sourcePublicId}`);
+    }
+    if (award.application.groupPublicId && !applicationPublicIds.has(award.application.groupPublicId)) {
+      throw new Error(`Award ${award.publicId} references missing application group ${award.application.groupPublicId}`);
+    }
+  }
+  for (const portal of catalog.portals) {
+    for (const sourcePublicId of portal.sourcePublicIds) {
+      if (!sourcePublicIds.has(sourcePublicId)) throw new Error(`Portal ${portal.publicId} references missing source ${sourcePublicId}`);
+    }
+  }
+  for (const group of catalog.applicationGroups) {
+    for (const awardPublicId of group.awardPublicIds) {
+      if (!awardPublicIds.has(awardPublicId)) throw new Error(`Application group ${group.publicId} references missing award ${awardPublicId}`);
+    }
+  }
 
   const compatibilityData = input.legacy.records.map((record) => ({
     'Last Updated': correctedText(record, input.receipt, 'lastUpdated'),

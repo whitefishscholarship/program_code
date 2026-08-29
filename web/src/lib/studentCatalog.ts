@@ -168,6 +168,7 @@ type CanonicalSource = {
   accessBehavior: 'public' | 'authenticated' | 'offline' | 'unknown';
   authority: string;
   acquisitionState: 'observed' | 'partial' | 'complete' | 'blocked' | 'failed' | 'unknown';
+  legacySourceIdentity?: string | null;
 };
 
 type CanonicalScholarship = {

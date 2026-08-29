@@ -7,8 +7,8 @@ Default branch: `main`
 
 ## Current P7 state
 
-- P7 — Student-facing product and API — is verified and awaiting fresh-context
-  independent review on branch
+- P7 — Student-facing product and API — is verified and awaiting fresh-context recheck
+  of the immutable second replacement on branch
   `codex/p7-student-facing` in isolated worktree `/private/tmp/program_code-p7`.
 - The exact P7 baseline is live `origin/main`
   `28e53dbdb0959ad86ff535d781c59c5ea9a4bf54`, the merge carrying accepted P6
@@ -27,8 +27,7 @@ Default branch: `main`
   observed recipient slots.
 - `docs/evidence/P7-test-matrix.json` is the pre-implementation browser and
   contract matrix. Its replacement expectations keep 217 canonical sources and 21
-  portal records distinct
-  distinct, and covers all 13 canonical source architectures, single and
+  portal records distinct, and covers all 13 canonical source architectures, single and
   shared awards, portals, paper/form routes, automatic consideration, unavailable
   cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
 - The complete 30-cell browser matrix passed with no exclusions. Production-mode
@@ -51,10 +50,25 @@ Default branch: `main`
   197-row `{data}` compatibility adapter, passes the unchanged production smoke test,
   and replaces ARIA tabs with ordinary grouped native buttons. Its fresh 30-cell
   browser matrix passed with zero console errors.
-- The commit containing this record is the replacement freeze. Its exact SHA is to be
-  bound in the newly generated manifest after the commit; do not create another
-  candidate merely because that self-referential SHA is not written here. Then the same
-  fresh reviewer must recheck it before accepted state, attestation, authentication, or delivery.
+- The same reviewer rejected exact replacement
+  `8c455a8d071b3b9e6c5e5eb624cabeac034befed` C0/H1/M0/L1 against uncommitted
+  manifest SHA-256 `021227c3c09286a9f02a6dab95eaebeb07f955b288f90a3d4c39f6499bfe5ecb`.
+  All 16 P6 awards referenced a source public ID absent from the advertised source
+  array, and this handoff contained one duplicated word. That candidate and manifest
+  must never be attested or delivered.
+- The second replacement resolves P6 sources through governed P1 legacy source
+  identity when URLs differ, fails closed on an unmappable expansion source, and adds
+  runtime plus focused referential-integrity checks. All 16 P6 awards now reference the
+  existing Reach Higher Montana parent source and its computed award count is 16. The
+  duplicated word was removed as the count-matched L1 disposition.
+- The complete regression/build/audit matrix, unchanged optimized-server smoke, and
+  fresh 30-cell browser matrix now pass; the browser observed the corrected 16-award
+  source relationship at every required viewport with zero console errors. The exact
+  final command window was `2026-08-29T21:15:44Z` through
+  `2026-08-29T21:16:29Z`; both dependency audits again reported zero current matches.
+- The commit containing this record is the second-replacement freeze. Generate a new
+  exact manifest and return it to the same fresh reviewer before accepted state,
+  attestation, authentication, or delivery.
 - `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 remains planned and must
   not begin in this session.
 - P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
