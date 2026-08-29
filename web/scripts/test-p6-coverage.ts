@@ -14,6 +14,7 @@ const collisions = read('P6-collisions.json');
 const metrics = read('P6-metrics.json');
 const fixture = JSON.parse(readFileSync(path.join(root, 'web', 'fixtures', 'p6', 'live-source-snapshots.json'), 'utf8'));
 const captureSource = readFileSync(path.join(root, 'web', 'scripts', 'p6-capture-live.ts'), 'utf8');
+const applicationBinderSource = readFileSync(path.join(root, 'web', 'scripts', 'p6-bind-application-evidence.ts'), 'utf8');
 
 assert.equal(queue.inputDenominator.portalLabeledRows, 21);
 assert.equal(queue.inputDenominator.selectedRows + queue.inputDenominator.notSelectedRows, 21);
@@ -107,6 +108,14 @@ const refreshedReachEvidence = children.evidence.filter((item: any) =>
 assert.equal(refreshedReachEvidence.length, 18);
 assert.ok(refreshedReachEvidence.every((item: any) => item.retrievedAt === fixture.reachHigherMontana.applicationEvidenceCapturedAt));
 assert.ok(refreshedReachEvidence.some((item: any) => item.claim.includes(fixture.reachHigherMontana.applicationRouteUrl)));
+assert.equal(fixture.reachHigherMontana.applicationEvidenceCapturedAt,
+  fixture.reachHigherMontana.applicationEvidenceReceipt.observedAt);
+assert.equal(fixture.nationalFarmersUnion.applicationEvidenceCapturedAt,
+  fixture.nationalFarmersUnion.applicationEvidenceReceipt.observedAt);
+assert.match(fixture.reachHigherMontana.applicationEvidenceReceipt.scrapeId,
+  /^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i);
+assert.match(fixture.nationalFarmersUnion.applicationEvidenceReceipt.scrapeId,
+  /^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i);
 
 assert.equal(exclusions.reachHigherMontana.length, 14);
 assert.equal(exclusions.nationalFarmersUnion.length, 3);
@@ -143,6 +152,9 @@ assert.equal(fixture.reachHigherMontana.audienceEvidence.heading, '## Scholarshi
 assert.doesNotMatch(captureSource, /const scrapeIds/);
 assert.match(captureSource, /parsed\.metadata\.scrapeId/);
 assert.match(captureSource, /const capturedAt = new Date\(\)\.toISOString\(\)/);
+assert.doesNotMatch(applicationBinderSource, /--captured-at/);
+assert.match(applicationBinderSource, /observedAt: new Date\(\)\.toISOString\(\)/);
+assert.match(applicationBinderSource, /parsed\.metadata\.scrapeId/);
 
 const serialized = JSON.stringify({ queue, completeness, children, exclusions, collisions, metrics });
 assert.doesNotMatch(serialized, /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);

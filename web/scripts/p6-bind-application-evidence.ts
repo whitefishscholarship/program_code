@@ -18,24 +18,50 @@ interface FirecrawlResult {
 
 const root = path.resolve(process.cwd(), '..');
 const fixturePath = path.join(process.cwd(), 'fixtures', 'p6', 'live-source-snapshots.json');
-const capturedAtArg = process.argv.find((arg) => arg.startsWith('--captured-at='));
-if (!capturedAtArg) throw new Error('p6:bind-application-evidence requires --captured-at=<ISO timestamp>');
-const capturedAt = capturedAtArg.slice('--captured-at='.length);
-if (Number.isNaN(Date.parse(capturedAt))) throw new Error(`Invalid capturedAt ${capturedAt}`);
+const reachRawArg = process.argv.find((arg) => arg.startsWith('--reach-raw='));
+const nfuRawArg = process.argv.find((arg) => arg.startsWith('--nfu-raw='));
+const reachRawPath = reachRawArg
+  ? path.resolve(process.cwd(), reachRawArg.slice('--reach-raw='.length))
+  : path.join(root, '.firecrawl', 'p6-reach-higher-remediation-v2.json');
+const nfuRawPath = nfuRawArg
+  ? path.resolve(process.cwd(), nfuRawArg.slice('--nfu-raw='.length))
+  : path.join(root, '.firecrawl', 'p6-nfu-remediation-v2.json');
 
 function sha256(value: string): string {
   return createHash('sha256').update(value).digest('hex');
 }
 
-function readRaw(name: string): FirecrawlResult & { rawJsonSha256: string; markdownSha256: string } {
-  const raw = readFileSync(path.join(root, '.firecrawl', name), 'utf8');
+function readRaw(rawPath: string, expectedHost: string): FirecrawlResult & {
+  rawJsonSha256: string;
+  markdownSha256: string;
+  observedAt: string;
+} {
+  const raw = readFileSync(rawPath, 'utf8');
   const parsed = JSON.parse(raw) as FirecrawlResult;
-  if (parsed.metadata.statusCode !== 200) throw new Error(`${name} status ${parsed.metadata.statusCode}`);
-  return { ...parsed, rawJsonSha256: sha256(raw), markdownSha256: sha256(parsed.markdown) };
+  if (parsed.metadata.statusCode !== 200) throw new Error(`${rawPath} status ${parsed.metadata.statusCode}`);
+  if (!/^[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i.test(parsed.metadata.scrapeId)) {
+    throw new Error(`${rawPath} lacks a provider-issued scrape ID`);
+  }
+  const sourceHost = new URL(parsed.metadata.sourceURL).hostname.replace(/^www\./, '');
+  const finalHost = new URL(parsed.metadata.url).hostname.replace(/^www\./, '');
+  if (sourceHost !== expectedHost || finalHost !== expectedHost) {
+    throw new Error(`${rawPath} escaped expected provider host ${expectedHost}`);
+  }
+  return {
+    ...parsed,
+    rawJsonSha256: sha256(raw),
+    markdownSha256: sha256(parsed.markdown),
+    observedAt: new Date().toISOString(),
+  };
 }
 
-function receipt(source: FirecrawlResult & { rawJsonSha256: string; markdownSha256: string }) {
+function receipt(source: FirecrawlResult & {
+  rawJsonSha256: string;
+  markdownSha256: string;
+  observedAt: string;
+}) {
   return {
+    observedAt: source.observedAt,
     scrapeId: source.metadata.scrapeId,
     sourceUrl: source.metadata.sourceURL,
     finalUrl: source.metadata.url,
@@ -49,8 +75,8 @@ function receipt(source: FirecrawlResult & { rawJsonSha256: string; markdownSha2
 }
 
 const fixture = JSON.parse(readFileSync(fixturePath, 'utf8')) as any;
-const reach = readRaw('p6-reach-higher-remediation.json');
-const nfu = readRaw('p6-nfu-remediation.json');
+const reach = readRaw(reachRawPath, 'reachhighermontana.org');
+const nfu = readRaw(nfuRawPath, 'nfu.org');
 
 const reachRouteUrls = reach.links.filter((url) =>
   /^https:\/\/www\.grantinterface\.com\/Home\/Logon\?urlkey=SAF$/.test(url));
@@ -71,7 +97,7 @@ if (!nfuUnifiedApplicationText || !nfuApplicationChannelText || nfuLinkedRouteUr
 }
 
 fixture.reachHigherMontana.applicationEvidenceReceipt = receipt(reach);
-fixture.reachHigherMontana.applicationEvidenceCapturedAt = capturedAt;
+fixture.reachHigherMontana.applicationEvidenceCapturedAt = reach.observedAt;
 fixture.reachHigherMontana.applicationEvidence = {
   cycleText: reachCycleText,
   architectureText: reachArchitectureText,
@@ -81,7 +107,7 @@ fixture.reachHigherMontana.applicationEvidence = {
 fixture.reachHigherMontana.applicationRouteUrl = reachRouteUrls[0];
 
 fixture.nationalFarmersUnion.applicationEvidenceReceipt = receipt(nfu);
-fixture.nationalFarmersUnion.applicationEvidenceCapturedAt = capturedAt;
+fixture.nationalFarmersUnion.applicationEvidenceCapturedAt = nfu.observedAt;
 fixture.nationalFarmersUnion.applicationEvidence = {
   unifiedApplicationText: nfuUnifiedApplicationText,
   channelText: nfuApplicationChannelText,
@@ -94,4 +120,4 @@ fixture.nationalFarmersUnion.applicationRoutes = [
 fixture.nationalFarmersUnion.applicationRouteStatus = 'described_without_current_link';
 
 writeFileSync(fixturePath, `${JSON.stringify(fixture, null, 2)}\n`);
-console.log(`P6 APPLICATION EVIDENCE BIND PASS reachRoute=1 nfuLinkedRoutes=0 capturedAt=${capturedAt}`);
+console.log(`P6 APPLICATION EVIDENCE BIND PASS reachRoute=1 nfuLinkedRoutes=0 reachObservedAt=${reach.observedAt} nfuObservedAt=${nfu.observedAt}`);

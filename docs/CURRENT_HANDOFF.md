@@ -11,9 +11,11 @@ Default branch: `main`
   replacement is branch `codex/p6-eligible-coverage-expansion-rev3` in isolated
   worktree `/private/tmp/program_code-p6-rev3`, created directly from exact baseline
   `2831ef1ff79c99a0fc4755fe7af7b855d11ebf21`. Its accepted-state machine marker is
-  prospective only. Full verification is complete; the commit containing this record
-  freezes the candidate, whose exact post-commit SHA will be bound in a new manifest.
-  Independent recheck, direct-child attestation, and delivery remain pending.
+  prospective only. The third replacement candidate `f1fbc34...` was rejected
+  C0/H0/M2/L0 and is preserved locally. Its stale current-state summaries and
+  caller-controlled application observation time are remediated in the commit
+  containing this record; that new candidate will receive a regenerated manifest,
+  independent recheck, direct-child attestation, and delivery only if all gates pass.
 - Live GitHub API verification resolved `main` to exact P6 baseline merge
   `2831ef1ff79c99a0fc4755fe7af7b855d11ebf21`, produced by PR #20 from exact P5
   attestation `d22c8dd7108338f41192b884227421a00ecf09b5`. The merge parents are exact P4
@@ -33,8 +35,9 @@ Default branch: `main`
 - `docs/evidence/P6-source-queue.json` pins the complete 21-row P5 portal denominator
   before any P6 live expansion. Five high-yield parent sources spanning seven rows are
   selected; the other 14 rows have explicit batch-selection exclusions.
-- Fourteen bounded public information reads produced a PII-free sanitized fixture and
-  one source-authority/audience refresh receipt.
+- Sixteen bounded public information reads produced a PII-free sanitized fixture,
+  one source-authority/audience refresh receipt, and two fresh application-evidence
+  receipts with internally recorded observation time.
   Three queue sources are complete and two are `blocked-external`; there are zero unaccounted
   or resumably incomplete queue items. No login, account, search form, eligibility
   questionnaire, application route, or submission was entered.
@@ -58,8 +61,9 @@ Default branch: `main`
   the current third replacement. The current deterministic result remains 16 modeled
   scholarships, one application group, 16 unknown annual cycles, seven exact P1
   portal-row bindings, zero active cycles, and at least 71 observed recipient slots
-  across undated descriptions. Current artifact digest and full-matrix evidence remain
-  pending before freeze.
+  across undated descriptions. The current child-graph digest is
+  `d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc`;
+  the final remediation matrix passed before the new candidate freeze.
 - Preliminary candidate `c1c8164a3294263217dcaf35350d7ca39b2555aa` was independently
   rejected C0/H2/M1/L0 and must never be attested or delivered. Remediation excludes
   both exact collision `MABA-MGEA Scholarship` (baseline row 174) and the independently
@@ -112,8 +116,26 @@ Default branch: `main`
   plan validation reported only the two expected missing manifest/review-attestation
   gates. The child graph SHA-256 is
   `407cfa9ac39d25e2649994d3ce7cd0d80d482ea66ae5e92b5b2e6ce6e47f2f69`.
-  The commit containing this record freezes the replacement; fresh recheck, manifest,
-  and attestation remain pending.
+  That commit froze the then-current replacement; the later fresh recheck rejected it
+  as recorded below.
+- Fresh reviewer `/root/p6_replacement_audit` rejected exact candidate `f1fbc34...`
+  at C0/H0/M2/L0 against manifest SHA-256
+  `d7d83a735a80fb906b5b7d41321ac33caff1db6d6fc95a0a07df53bd4b11799a`.
+  It confirmed the clean baseline topology and all earlier high-severity remediation,
+  but found stale current-state narrative and caller-controlled application timestamps.
+  That exact candidate must never be attested or delivered.
+- Two fresh cache-bypassed, PII-redacted reads of the Reach Higher and NFU public
+  scholarship pages returned provider scrape IDs `01a04e63-c85f-72d9-9cd5-ac252b74bbcb`
+  and `01a04e63-cb23-753f-aa63-bca8b35c331e`. The corrected binder validated both
+  official hosts, accepted only provider-issued UUIDs, and internally recorded
+  `2026-08-29T16:40:30.087Z`. The raw responses were deleted after sanitized receipt
+  and hash binding; no application or interactive route was entered.
+- The complete fourth-candidate matrix ran from `2026-08-29T16:45:25Z` through
+  `2026-08-29T16:46:31Z`: locked install, deterministic P6 check, focused provenance
+  regression, typecheck, complete tests, network-permitted production build, and root
+  whitespace validation passed. Prospective plan validation reported only the expected
+  absent committed P6 manifest/review attestation. The current child graph is
+  `d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc`.
 - A separate prior review process committed local attestation `04a06a6` for rejected
   candidate `077af07` on the original branch while the final fresh review was still in
   progress. It is contradicted by the later C0/H2 decision, is isolated from this
