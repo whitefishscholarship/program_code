@@ -32,8 +32,13 @@
     "p5:preserve-dead:check": "tsx scripts/p5-preserve-dead-observations.ts --check",
     "p5:preserve-static-app": "tsx scripts/p5-preserve-static-application-observations.ts",
     "p5:preserve-static-app:check": "tsx scripts/p5-preserve-static-application-observations.ts --check",
+    "p6:capture": "tsx scripts/p6-capture-live.ts",
+    "p6:bind-application-evidence": "tsx scripts/p6-bind-application-evidence.ts",
+    "p6:bind-authority-audience": "tsx scripts/p6-bind-authority-audience.ts",
+    "p6:coverage": "tsx scripts/p6-coverage.ts",
+    "p6:coverage:check": "tsx scripts/p6-coverage.ts --check",
     "typecheck": "tsc --noEmit",
-    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check"
+    "test": "tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts"
   },
   "dependencies": {
     "@google/genai": "^1.44.0",

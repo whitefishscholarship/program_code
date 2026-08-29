@@ -1,0 +1,4679 @@
+{
+  "schemaVersion": "2.0.0",
+  "pinnedInput": {
+    "p1InventorySha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a",
+    "p1ManifestSha256": "0712c6ff782285ce4fdb933cebfa7797a7b5f10184a3974017896c0d3df76a60",
+    "spreadsheetRevisionId": "223",
+    "capturedAt": "2026-08-29T04:55:28Z"
+  },
+  "sources": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "architecture": "external_marketplace",
+      "canonicalUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "offlineAuthority": null,
+      "host": "www.firstinspires.org",
+      "identityPolicy": {
+        "preservedQueryParameters": [],
+        "fragmentPreserved": false,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "public",
+      "authority": "official_provider",
+      "acquisitionState": "partial",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_8dd7dd17ed2d9a2d428ff65bfad47496488f63fc07e973c036a129cc3c92f0fe",
+        "evd_d1a9c0194c66b0b50fac23d4b6198ed27136c276ded538dfd8df9020e5747486"
+      ],
+      "reviewItemIds": [
+        "rev_2561ba988e818d01b7f02c37216a009e695f4673a1446219401aede6f3cfcb28"
+      ],
+      "legacySourceIdentity": "7780e231a2d92edd4671fe1cbab026c8a55810ee1453066b7dc042d9e21b91b2"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f",
+      "architecture": "multi_award_page",
+      "canonicalUrl": "https://nfu.org/resources/scholarships/",
+      "offlineAuthority": null,
+      "host": "nfu.org",
+      "identityPolicy": {
+        "preservedQueryParameters": [],
+        "fragmentPreserved": false,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "public",
+      "authority": "official_provider",
+      "acquisitionState": "complete",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_016455f93c2742807b096573d7a8a3c0de8c61a1ae356eccb5c1b70bd4277a8d",
+        "evd_58c8a17b81d70cd396a82ced5240a20d003759e6bb00b69d6ce8fa9ce5a01225"
+      ],
+      "reviewItemIds": [],
+      "legacySourceIdentity": "e74fed4e5ae13df216584e44d8606d79c4a67400c7dd376851124a3d8d20fd11"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44",
+      "architecture": "paginated_catalog",
+      "canonicalUrl": "https://fvcc.academicworks.com/",
+      "offlineAuthority": null,
+      "host": "fvcc.academicworks.com",
+      "identityPolicy": {
+        "preservedQueryParameters": [],
+        "fragmentPreserved": false,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "public",
+      "authority": "institutional",
+      "acquisitionState": "complete",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_34538d43826fdcbfa5b721b9e6b78613e133b24b05747d9db251bf538d94949d",
+        "evd_9e370593a71202a999eaf2a3bc756b437994917dba389aebab49474869533d86"
+      ],
+      "reviewItemIds": [],
+      "legacySourceIdentity": "5c89a7c7b0db86ffc9019872310f38223c54610429f76b346a34fa27c2ec3913"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "architecture": "directory_hub",
+      "canonicalUrl": "https://horatioalger.org/scholarships/",
+      "offlineAuthority": null,
+      "host": "horatioalger.org",
+      "identityPolicy": {
+        "preservedQueryParameters": [],
+        "fragmentPreserved": false,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "public",
+      "authority": "official_provider",
+      "acquisitionState": "partial",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_09841ef87501dacbd144df572aca62c77fa9c25fb479ca69765d9399942fe0d2",
+        "evd_8b5c8ef911332c4f3b210e22363d77588df491453bbdba71b54cbdf8cff9537c"
+      ],
+      "reviewItemIds": [
+        "rev_4a888d322074174f8f0c0e90d84be66b382b3de745e73bba8d8f74e3caa97ba4"
+      ],
+      "legacySourceIdentity": "6a76a1c0215f25a48dbbbef118e3fced93e290469ed8bfa188c6bae4cb7b165f"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "architecture": "matching_portal",
+      "canonicalUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "offlineAuthority": null,
+      "host": "reachhighermontana.org",
+      "identityPolicy": {
+        "preservedQueryParameters": [],
+        "fragmentPreserved": true,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "public",
+      "authority": "official_provider",
+      "acquisitionState": "complete",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_02a70c4351484e2fc802f0b4bbba893c9aa3faeaca0b1d59ebe2b533c741b422",
+        "evd_19adf8ae85763b689b6b1f3578f1a624b3c4e30831c966c60f49044fb95a6d0f",
+        "evd_3c75a72d78bc2dbed59bce0e90a4f23d6dc10b716732a2bad14c9906df90d297",
+        "evd_4256244214ffa73fe5a694104d74cd644348445faa0bc193ba2f0eaaa510f2cf",
+        "evd_45603aa07fe27248f22349c05c6cb9fd6b455c89edad932e4ac3dfa58571f06b",
+        "evd_650c4049abc7ddc7d4f4ea65473be09e679fd6af5f444ef0e981fedc86fcc446",
+        "evd_6aed5b393844fee1e80bb7e0959a87c31611f501ec4533b6b3ff37a9efc30fe4",
+        "evd_6b4e479d2a6e7778698201dfd4701bf92c5a0a6b6875894b983aab0cae5bea49",
+        "evd_8ed78a9ac8fbbc2a43aae1883a4c68125892a245b1198470155c030afbe5e07f",
+        "evd_9e104a9fdeb73d1d98f3c83df16a7f9753d98d48f043f7ba985fd4d8fb5c8fe6",
+        "evd_a3a754858aeb1573e9af45243529e38c14538d79991ebb971a098f6d888e2dc8",
+        "evd_a777292fa803085f2b7f9c4d006dcdb4a5ba21a2fcc8eb07363cf6587378639c",
+        "evd_b2e0a99ea335661d0809164b1c442243b16271d6925f6f4583b5ed0e5f009a2b",
+        "evd_da42c8564bf54a4cdabf7861a2c4bfce53cba6815618eb3d57d96809507914e2",
+        "evd_dba07238ceb365dc65cc1f2ab985207249c5363c1ee3ff38c1edd03c70a40efe",
+        "evd_e4e425f699f6b4a0daaa1ca6d5f119aa4aee32e59237b343c11e1fe6543c8dc8",
+        "evd_fbc6ae1890f67c3563bd85306832a32d2decd7892c2cb95a9b1b20b7e44e1c4c",
+        "evd_fe5ef45ff61d958e1645b9a72c4fda7bf8f8153dddec76c22ab0136b4f0cec2c"
+      ],
+      "reviewItemIds": [],
+      "legacySourceIdentity": "6dec62a8b9aa539bf8777019e7f36f9a391d9cad6ce090450263eb505cbaf4b8"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "architecture": "login_application_portal",
+      "canonicalUrl": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+      "offlineAuthority": null,
+      "host": "www.grantinterface.com",
+      "identityPolicy": {
+        "preservedQueryParameters": [
+          "urlkey"
+        ],
+        "fragmentPreserved": false,
+        "trackingParametersRemoved": false
+      },
+      "accessBehavior": "authenticated",
+      "authority": "official_application",
+      "acquisitionState": "blocked",
+      "parentSourceIds": [],
+      "childSourceIds": [],
+      "evidenceIds": [
+        "evd_002b20abe0fc5a44cbb43c4e38b504f1397ff2b5698560d1b5fb343c937f27af",
+        "evd_1bdee7d166126ae2ce200930b851fe5ca19630d7a6b972cae5b7398623cd1b02",
+        "evd_74b14db98d34d5d6c25c152986bbc54b02635bf8cbef73a9b2589c6428620efd",
+        "evd_751acae6ee3bff481992023f9d3f392fbf6a63d7bcee503089e5b4cf28f0aadd",
+        "evd_761b8ff81a2a03ebb6a8465402f8fa709d988d24ee20688aec68e21fbe64a7a2",
+        "evd_7bc5612f2961bb0af255fef73479f925039cdb11c41ae90d517015ba3150bd86",
+        "evd_83b8fdc80e2336081d3386dac4e67cb654e4158b2d6e970a7f5c9adcb6d5a4fa",
+        "evd_8c125c89e3cb213ae3aa467a1d94f3bcd750aa566214a1c7c284ab185dde6762",
+        "evd_95b9016342b01340b7ade8fc4b72f1952d510379c73c36a5e64babf9a0709aba",
+        "evd_9838f2d23f3ef46a747ea5923644986f36eb06b75a8cb5c0436b7232d5dc7fe7",
+        "evd_9bb93574132f5959ab8d37f389d79aa660a9fd14792892430edc758697143ea4",
+        "evd_b59937fe6145bf2f298a6123054ab5733bb41b375c2a14061eab538c6ed671c6",
+        "evd_c3c9c5c880eabb3639c570f662c830ae41c2c4ac15439ed2ec42691f3ee8c1e7",
+        "evd_ccd2b2acab78205cbe187dce368de1e32647a1398e936c924f78c2efaf3ed9a2",
+        "evd_d64aedad39626520d54c608c67d1d82f4ad6c7c3d86b13c18b5a1294fd0dcc5a",
+        "evd_dc6899cb6dd20ebb17af9e1eb8d96bc80ec04eac8d68de0546eef762a5e36747",
+        "evd_ddd0cadafac6543459bfa5fba59a6901d6c209fb930200dd038ac5e5c622a63b",
+        "evd_df79c253cd56fc5b558b4931a91a6518a0e13813fb486dc36509d1676f192ced"
+      ],
+      "reviewItemIds": [],
+      "legacySourceIdentity": "730c6a5451d8657bb7bb8b4678ce9464041b345e5f95e89cb940c0efb4c47446"
+    }
+  ],
+  "scholarships": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "name": "Odd Fellows and Rebekah's Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_19adf8ae85763b689b6b1f3578f1a624b3c4e30831c966c60f49044fb95a6d0f"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_dc6899cb6dd20ebb17af9e1eb8d96bc80ec04eac8d68de0546eef762a5e36747"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_9f13cd5332ce4dd8aed3f6f5cec0ecc598ff56ef748b7f8651a55ac74bb57c42"
+      ],
+      "evidenceIds": [
+        "evd_19adf8ae85763b689b6b1f3578f1a624b3c4e30831c966c60f49044fb95a6d0f",
+        "evd_6596a884da15fcd3033444f9a2d459a14e7e1e5c050423e3a4b3eb0a6642ba85",
+        "evd_6ff37cf6f390bae6fdd12428a806b5003429d64758b6ca3a251afa64ee35e747",
+        "evd_8066c7f9f2f85eea1811ab34567aa2a6017405bafb1a91fba3b4294ba47ece26",
+        "evd_dc6899cb6dd20ebb17af9e1eb8d96bc80ec04eac8d68de0546eef762a5e36747"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_8066c7f9f2f85eea1811ab34567aa2a6017405bafb1a91fba3b4294ba47ece26"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": "(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)",
+            "values": [
+              "four_year",
+              "trade"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "name": "AMTOPP Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_6aed5b393844fee1e80bb7e0959a87c31611f501ec4533b6b3ff37a9efc30fe4"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_9838f2d23f3ef46a747ea5923644986f36eb06b75a8cb5c0436b7232d5dc7fe7"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_f9cdc866f5d92b8430d6bea5109934fb2da13b0e7c1bb1db69489e2c0c41dc9c"
+      ],
+      "evidenceIds": [
+        "evd_26af24a7817c79d3aad6982f321a11853e389141f7aa26b02dfa80187c39b8ca",
+        "evd_6aed5b393844fee1e80bb7e0959a87c31611f501ec4533b6b3ff37a9efc30fe4",
+        "evd_8a29ad0a04383695f26c4357583bd46c9c6b004082745791e9e8133dcc16be5b",
+        "evd_9838f2d23f3ef46a747ea5923644986f36eb06b75a8cb5c0436b7232d5dc7fe7",
+        "evd_b7440773cd4f07b560565a2397bee15659b4f7aabb212ea68a08878bb96cdd3e"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_26af24a7817c79d3aad6982f321a11853e389141f7aa26b02dfa80187c39b8ca"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "name": "Agri Industries",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_02a70c4351484e2fc802f0b4bbba893c9aa3faeaca0b1d59ebe2b533c741b422"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_9bb93574132f5959ab8d37f389d79aa660a9fd14792892430edc758697143ea4"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_9c73da6c520d2667d15802e4453a95078e707da4bdc52fcf900d29105a23f458"
+      ],
+      "evidenceIds": [
+        "evd_02a70c4351484e2fc802f0b4bbba893c9aa3faeaca0b1d59ebe2b533c741b422",
+        "evd_4c562fb58a017f3652a7839411f87b418a255f1612ccf5492c9e97b086525692",
+        "evd_9461f7547d4df23f05cb1010d9fb30bb3e92fe57720132ad90059b32ee78574b",
+        "evd_9bb93574132f5959ab8d37f389d79aa660a9fd14792892430edc758697143ea4",
+        "evd_f447d7987832429f8c32140d95dd3832dddf9e0846956c101ec2ad32837fcd04"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "Amounts vary. High School Senior or College student interested in a career related to irrigation, electrical trades, HVAC, Water wells (pumps/drilling), underground utilities, plumbing, welding, or fabrication.",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable",
+          "evidenceIds": [
+            "evd_9461f7547d4df23f05cb1010d9fb30bb3e92fe57720132ad90059b32ee78574b"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": "Amounts vary. High School Senior or College student interested in a career related to irrigation, electrical trades, HVAC, Water wells (pumps/drilling), underground utilities, plumbing, welding, or fabrication.",
+            "values": [
+              "four_year",
+              "trade"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "name": "FFA Ag Teachers Memorial Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_9e104a9fdeb73d1d98f3c83df16a7f9753d98d48f043f7ba985fd4d8fb5c8fe6"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_1bdee7d166126ae2ce200930b851fe5ca19630d7a6b972cae5b7398623cd1b02"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_85967788f39d33c86f475047e5aaa45baf3f45c651253dd4883077e074338955"
+      ],
+      "evidenceIds": [
+        "evd_1bdee7d166126ae2ce200930b851fe5ca19630d7a6b972cae5b7398623cd1b02",
+        "evd_5792a81eddf8b5644c291d822169c8b415e5b29cce0b29bcbb329532f1c5213f",
+        "evd_9e104a9fdeb73d1d98f3c83df16a7f9753d98d48f043f7ba985fd4d8fb5c8fe6",
+        "evd_eeb9cb78519f70fe1d024ae951e17201da27f93287bef7f5b2b34cd9e3ccf7ab",
+        "evd_f59382768404c0cc59b01f3b6510a986e4130a6b2054eef5974ba4b069bba0ae"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA, planning to pursue a career as an Ag Ed teacher.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_f59382768404c0cc59b01f3b6510a986e4130a6b2054eef5974ba4b069bba0ae"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "name": "Reach Higher Montana Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_dba07238ceb365dc65cc1f2ab985207249c5363c1ee3ff38c1edd03c70a40efe"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_b59937fe6145bf2f298a6123054ab5733bb41b375c2a14061eab538c6ed671c6"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_71c9cdb9a3ab521fd3c664944f27237c4c37d0c0eea94b9f5cef2013597a3c03"
+      ],
+      "evidenceIds": [
+        "evd_1326eac9e339d197429f9c1f65535889afacc63f9a4c43eb7525225f62c17bf0",
+        "evd_59c064ab90af617f030cd31f27d0f01c3a70ff647604490d35f3c134f4bec8b8",
+        "evd_5bc467773d1141a4c464d5fcfb8c959f6819666efbb2ea8c251952cf1b880bb0",
+        "evd_b59937fe6145bf2f298a6123054ab5733bb41b375c2a14061eab538c6ed671c6",
+        "evd_dba07238ceb365dc65cc1f2ab985207249c5363c1ee3ff38c1edd03c70a40efe"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program.",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_5bc467773d1141a4c464d5fcfb8c959f6819666efbb2ea8c251952cf1b880bb0"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "name": "Kid's Chance of Montana",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_e4e425f699f6b4a0daaa1ca6d5f119aa4aee32e59237b343c11e1fe6543c8dc8"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_ddd0cadafac6543459bfa5fba59a6901d6c209fb930200dd038ac5e5c622a63b"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_f01692f685941a21486b9a88ae7ecadd47efa34c5e794e9bda3a7008f09c0f08"
+      ],
+      "evidenceIds": [
+        "evd_17e11af6580187e61dd627edd63eb56286acc3d587a43488f41009a9144607b9",
+        "evd_3749b7fa6296878c8e89d098e9aa0aa7020462b2758d22c745753bbd473fe5dd",
+        "evd_8a32e9b4943d41f40ba19bc26e74b4dff2897fe1aa4ff44bc7b69fdf8ac63e03",
+        "evd_ddd0cadafac6543459bfa5fba59a6901d6c209fb930200dd038ac5e5c622a63b",
+        "evd_e4e425f699f6b4a0daaa1ca6d5f119aa4aee32e59237b343c11e1fe6543c8dc8"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "Amounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana.",
+          "minimum": null,
+          "maximum": null,
+          "currency": "USD",
+          "state": "variable",
+          "evidenceIds": [
+            "evd_17e11af6580187e61dd627edd63eb56286acc3d587a43488f41009a9144607b9"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "name": "Dr. Van Shelhamer Memorial Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_a777292fa803085f2b7f9c4d006dcdb4a5ba21a2fcc8eb07363cf6587378639c"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_8c125c89e3cb213ae3aa467a1d94f3bcd750aa566214a1c7c284ab185dde6762"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_4ebf71f0a24da1a2d466afba69454b00c1d8b793267b93f92851aaea4c2d1440"
+      ],
+      "evidenceIds": [
+        "evd_7a1ff35bff12e6dade5d17805a25c1225afe31f5550bbb1dc3ceed26ee2b93bc",
+        "evd_7ee9209706008aaf7fd3f9ec817564df1b55be6b1bf34deb5f4a08316674c424",
+        "evd_8c125c89e3cb213ae3aa467a1d94f3bcd750aa566214a1c7c284ab185dde6762",
+        "evd_a777292fa803085f2b7f9c4d006dcdb4a5ba21a2fcc8eb07363cf6587378639c",
+        "evd_b6b8a8529f6fd39c50d2bc3d096557e33d430650e0fa0e58e87d4bb660fa1080"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $1,500 scholarship. Must be a Montana FFA State Officer attending Montana State University, 2.0 GPA or higher.",
+          "minimum": 1500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_b6b8a8529f6fd39c50d2bc3d096557e33d430650e0fa0e58e87d4bb660fa1080"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": "(1) $1,500 scholarship. Must be a Montana FFA State Officer attending Montana State University, 2.0 GPA or higher.",
+            "values": [
+              "four_year"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "name": "Stockman Bank Next Gen Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_b2e0a99ea335661d0809164b1c442243b16271d6925f6f4583b5ed0e5f009a2b"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_7bc5612f2961bb0af255fef73479f925039cdb11c41ae90d517015ba3150bd86"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_a3fbe1701bef4b49e02cda302175be218cffe899d9d0a548448119c865d7ba68"
+      ],
+      "evidenceIds": [
+        "evd_5725970ca7bb90240071fd27e35344c17c0e86fc866a79d240ec8611ed1338a8",
+        "evd_7bc5612f2961bb0af255fef73479f925039cdb11c41ae90d517015ba3150bd86",
+        "evd_8793524032fe1467cf28833d91f8b52c16bf166387ba5a22c143e12de31951ab",
+        "evd_8e1b7331ae8768e7a5a312a31cf78f92c588b27a7b99711ed00f115055ba3c8a",
+        "evd_b2e0a99ea335661d0809164b1c442243b16271d6925f6f4583b5ed0e5f009a2b"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(2) $500 scholarships.HS Senior, FFA member, 2.0 GPA or higher.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_5725970ca7bb90240071fd27e35344c17c0e86fc866a79d240ec8611ed1338a8"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "name": "Horse Creek Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_3c75a72d78bc2dbed59bce0e90a4f23d6dc10b716732a2bad14c9906df90d297"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_74b14db98d34d5d6c25c152986bbc54b02635bf8cbef73a9b2589c6428620efd"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_0331db66c1d5319ac5f07b34447a6a61d1d3e77223ecefa41c267f01a7f9042d"
+      ],
+      "evidenceIds": [
+        "evd_3c75a72d78bc2dbed59bce0e90a4f23d6dc10b716732a2bad14c9906df90d297",
+        "evd_57656eaef624dd43c318fecc1907a73a424c0fe93e0ab67276e07087ebe5249c",
+        "evd_74b14db98d34d5d6c25c152986bbc54b02635bf8cbef73a9b2589c6428620efd",
+        "evd_cfa12d1e9f246313021b2c5a24f25e8dff178163666617d07e4d18d9201ae266",
+        "evd_de9f0bc83165ace93e6006200c8b726af7e7a866d1e59bae29c4529662647cac"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(6) $1,500 scholarships. High school seniors or college students who have/will graduate from a Montana High School, have/will complete the FAFSA by April 1, attend (at least half-time) ANY accredited post-secondary institution nationwide, pursuing a certificate/degree in a business-related field or has completed at least one Business/Finance related course in high school or college. Two scholarships given preference to graduates/residents of Beaverhead and Madison Counties.",
+          "minimum": 1500,
+          "maximum": 1500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_57656eaef624dd43c318fecc1907a73a424c0fe93e0ab67276e07087ebe5249c"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": "(6) $1,500 scholarships. High school seniors or college students who have/will graduate from a Montana High School, have/will complete the FAFSA by April 1, attend (at least half-time) ANY accredited post-secondary institution nationwide, pursuing a certificate/degree in a business-related field or has completed at least one Business/Finance related course in high school or college. Two scholarships given preference to graduates/residents of Beaverhead and Madison Counties.",
+            "values": [
+              "four_year",
+              "trade"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "name": "Dr. Max L Amberson Ag Education Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_650c4049abc7ddc7d4f4ea65473be09e679fd6af5f444ef0e981fedc86fcc446"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_c3c9c5c880eabb3639c570f662c830ae41c2c4ac15439ed2ec42691f3ee8c1e7"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_e998dd6d9532920838823f225f1c63d9efa2e55aa42013d94f083c36c7633fab"
+      ],
+      "evidenceIds": [
+        "evd_0278f18d460495bcb7c70c48f8b8355658573cc4ad77313adfc9c17d7a0893fe",
+        "evd_64b69ed0659fb3c8155c2f75018a57fb6b2bb4fd07f6d05864fa6e17bc476303",
+        "evd_650c4049abc7ddc7d4f4ea65473be09e679fd6af5f444ef0e981fedc86fcc446",
+        "evd_ae146828962a83a80a0de7c0b0522123a444b5b1718230ac4e63ffe669e8935b",
+        "evd_c3c9c5c880eabb3639c570f662c830ae41c2c4ac15439ed2ec42691f3ee8c1e7"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(2) $500 scholarships. HS Senior or College Freshman, FFA member, 2.0 GPA or higher, pursuing a degree in Ag Ed.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_64b69ed0659fb3c8155c2f75018a57fb6b2bb4fd07f6d05864fa6e17bc476303"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": "(2) $500 scholarships. HS Senior or College Freshman, FFA member, 2.0 GPA or higher, pursuing a degree in Ag Ed.",
+            "values": [
+              "four_year"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "name": "Bridging the Gap Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_8ed78a9ac8fbbc2a43aae1883a4c68125892a245b1198470155c030afbe5e07f"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_751acae6ee3bff481992023f9d3f392fbf6a63d7bcee503089e5b4cf28f0aadd"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_dba54ca0fd0de63e5e4fbb9198871989f4cf74ffd239e94286483818b78899c0"
+      ],
+      "evidenceIds": [
+        "evd_3b6cfe321aa33fc8b3f6f2e7279e88703e67e33c3e36f35b6dff9deef30e583b",
+        "evd_428861ccfb99e7340353bdb8f6754aca9526849ec28eee5ba5c7432e50f65322",
+        "evd_751acae6ee3bff481992023f9d3f392fbf6a63d7bcee503089e5b4cf28f0aadd",
+        "evd_8ed78a9ac8fbbc2a43aae1883a4c68125892a245b1198470155c030afbe5e07f",
+        "evd_cf5fe1e8033f1fc73511b515e2f958cded2427cd4289a30efc7cb1cb1f3c6ae6"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "$1,000 for one or more recipients. Must complete the Reach Higher Montana Scholarship application, and will or have aged out of the Foster Care system.",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_cf5fe1e8033f1fc73511b515e2f958cded2427cd4289a30efc7cb1cb1f3c6ae6"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "name": "Carl Valvoda Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_6b4e479d2a6e7778698201dfd4701bf92c5a0a6b6875894b983aab0cae5bea49"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_ccd2b2acab78205cbe187dce368de1e32647a1398e936c924f78c2efaf3ed9a2"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_8ee081025ae62d5d9a98788f80e49e365239ee13af8cfdefb5aaca3403a48dc8"
+      ],
+      "evidenceIds": [
+        "evd_449f21a0ee2fb58ba14cabe9b0b09d69f6dc91e0ab9a587a534b70a338688742",
+        "evd_57b0381383302636f7e0083abe02ce763fc1c306c23ad27aa1663fdecc93d160",
+        "evd_6b4e479d2a6e7778698201dfd4701bf92c5a0a6b6875894b983aab0cae5bea49",
+        "evd_ccd2b2acab78205cbe187dce368de1e32647a1398e936c924f78c2efaf3ed9a2",
+        "evd_dfaefa102e0043f88139c9d5d88ec15fde808f7a562dee99799ae6a9d8785156"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $2,000 scholarship. Must complete the Reach Higher Montana Scholarship application and is serving or have served in the ROTC program or the U.S. Armed Forces.",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_57b0381383302636f7e0083abe02ce763fc1c306c23ad27aa1663fdecc93d160"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "name": "W. Ralph Peck Memorial Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_da42c8564bf54a4cdabf7861a2c4bfce53cba6815618eb3d57d96809507914e2"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_002b20abe0fc5a44cbb43c4e38b504f1397ff2b5698560d1b5fb343c937f27af"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_0f4b6699de414f1340485cc5a926e327f0d2ca6a7bacce0117fa0379f0a4dfd3"
+      ],
+      "evidenceIds": [
+        "evd_002b20abe0fc5a44cbb43c4e38b504f1397ff2b5698560d1b5fb343c937f27af",
+        "evd_3454d8761013113097284e221c78faa70f834b83ae15abe26578e4369ec2ee30",
+        "evd_9749eafb6d0e39f34c4df876fee53d36dcde97ef3a77d929287cac729206b9ed",
+        "evd_b9ad7cd42ec6df1069075ef4391a7de584de93207e72ee725f11adfd36cc3f5d",
+        "evd_da42c8564bf54a4cdabf7861a2c4bfce53cba6815618eb3d57d96809507914e2"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $1,000 scholarships. HS Senior, FFA member, 3.0 GPA or higher, planning to pursue a degree in a trades or ag science, and has demonstrated engagement in leadership, service, and innovation. Preference will be given to students who are PELL eligible.",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_3454d8761013113097284e221c78faa70f834b83ae15abe26578e4369ec2ee30"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "3.0 GPA",
+            "value": 3,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": "(1) $1,000 scholarships. HS Senior, FFA member, 3.0 GPA or higher, planning to pursue a degree in a trades or ag science, and has demonstrated engagement in leadership, service, and innovation. Preference will be given to students who are PELL eligible.",
+            "values": [
+              "trade"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "name": "John Kozlowski Memorial Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_4256244214ffa73fe5a694104d74cd644348445faa0bc193ba2f0eaaa510f2cf"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_df79c253cd56fc5b558b4931a91a6518a0e13813fb486dc36509d1676f192ced"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_2ff63134defdbb4e33623496df57e02d9ce7661ab383be7fd956255390909389"
+      ],
+      "evidenceIds": [
+        "evd_4256244214ffa73fe5a694104d74cd644348445faa0bc193ba2f0eaaa510f2cf",
+        "evd_7007c0a3224c1edd0c99bf4863db1e1deeab2964d1ba64f9f07ef32a9af56618",
+        "evd_803194e8cd55514da25ecf8544b8b642a9dbc1276aade56ce76c521d146166dc",
+        "evd_df79c253cd56fc5b558b4931a91a6518a0e13813fb486dc36509d1676f192ced",
+        "evd_e725b42ff0d1b44f5fda1f95fdefcebe4c28a6ef4d9146da50f085e3e11968c7"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member.",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_7007c0a3224c1edd0c99bf4863db1e1deeab2964d1ba64f9f07ef32a9af56618"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": "(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member.",
+            "values": [
+              "four_year"
+            ],
+            "state": "known"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "name": "Servant Leadership Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_a3a754858aeb1573e9af45243529e38c14538d79991ebb971a098f6d888e2dc8"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_95b9016342b01340b7ade8fc4b72f1952d510379c73c36a5e64babf9a0709aba"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_6877268b41bf79d4d9b0e4b41f45585accb6049ccd68ad0696cb37521d231040"
+      ],
+      "evidenceIds": [
+        "evd_0eaf89188a38657d1584ed9a138b5b61c5298bdfc0d6db529e7074ae5110d519",
+        "evd_416737ee0e8f089904e59534594ea3b0a1aea0520dd52dc9df54f33952d21be8",
+        "evd_725df4b61b1b51e20c6fe4a8df04c292c2193428eeedb013d264886257791a6f",
+        "evd_95b9016342b01340b7ade8fc4b72f1952d510379c73c36a5e64babf9a0709aba",
+        "evd_a3a754858aeb1573e9af45243529e38c14538d79991ebb971a098f6d888e2dc8"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_725df4b61b1b51e20c6fe4a8df04c292c2193428eeedb013d264886257791a6f"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "name": "Murdoch's Scholarship",
+      "lifecycleState": "modeled",
+      "legacyRowIdentities": [],
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "sourceLinks": [
+        {
+          "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+          "role": "parent",
+          "provenance": [
+            "evd_fe5ef45ff61d958e1645b9a72c4fda7bf8f8153dddec76c22ab0136b4f0cec2c"
+          ]
+        },
+        {
+          "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+          "role": "application",
+          "provenance": [
+            "evd_83b8fdc80e2336081d3386dac4e67cb654e4158b2d6e970a7f5c9adcb6d5a4fa"
+          ]
+        }
+      ],
+      "applicationGroupIds": [
+        "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88"
+      ],
+      "cycleIds": [
+        "cyc_41ae43d5111e63ffcc71136e81291ca5e6bfc8d1a07a4859485414025b9257b0"
+      ],
+      "evidenceIds": [
+        "evd_7afd19df491a7afc9ed6f1d7daca329975d8f4a3106f5c23eeab0dcff5684cc4",
+        "evd_83b8fdc80e2336081d3386dac4e67cb654e4158b2d6e970a7f5c9adcb6d5a4fa",
+        "evd_c032e0c276a05058381edd73990b84e61562152bfd28c4cc22ec7687c0488a73",
+        "evd_f7a83196fcd999af9a6a3a8436a08b1e2beceffa478ce2c9686a305c5308b51a",
+        "evd_fe5ef45ff61d958e1645b9a72c4fda7bf8f8153dddec76c22ab0136b4f0cec2c"
+      ],
+      "reviewItemIds": [],
+      "studentFields": {
+        "summary": {
+          "raw": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "awardAmount": {
+          "raw": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.",
+          "minimum": 500,
+          "maximum": 500,
+          "currency": "USD",
+          "state": "known",
+          "evidenceIds": [
+            "evd_f7a83196fcd999af9a6a3a8436a08b1e2beceffa478ce2c9686a305c5308b51a"
+          ]
+        },
+        "eligibility": {
+          "location": {
+            "raw": "## Scholarships for Montana Students; Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+            "state": "known"
+          },
+          "minimumGpa": {
+            "raw": "2.0 GPA",
+            "value": 2,
+            "state": "known"
+          },
+          "schoolTypes": {
+            "raw": null,
+            "values": [],
+            "state": "unknown"
+          },
+          "focus": {
+            "raw": null,
+            "state": "unknown"
+          },
+          "gapYear": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "selection": {
+          "financialNeedPriority": {
+            "raw": null,
+            "value": null,
+            "state": "unknown"
+          }
+        },
+        "renewal": {
+          "raw": null,
+          "value": null,
+          "state": "unknown"
+        }
+      }
+    }
+  ],
+  "applicationGroups": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "mode": "shared_with_supplements",
+      "sourceIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "scholarshipIds": [
+        "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+        "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+        "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+        "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+        "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+        "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+        "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+        "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+        "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+        "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+        "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+        "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+        "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+        "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+        "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+        "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f"
+      ],
+      "supplementalRequirements": "mixed",
+      "evidenceIds": [
+        "evd_204bcb005d603a9ba47a0fc35037e2d0052261436226b808d2e73300aafc8db0"
+      ],
+      "reviewItemIds": []
+    }
+  ],
+  "cycles": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_0331db66c1d5319ac5f07b34447a6a61d1d3e77223ecefa41c267f01a7f9042d",
+      "scholarshipId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_4630b510974a2f2c490765bb2d7d79f8c72656eb5c7a14453dcf24fcebbed8c3"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_0f4b6699de414f1340485cc5a926e327f0d2ca6a7bacce0117fa0379f0a4dfd3",
+      "scholarshipId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_040f394eb16d8dc31aee62c2d8a8260e3f07da07cbd001a079b751fe39558b67"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_2ff63134defdbb4e33623496df57e02d9ce7661ab383be7fd956255390909389",
+      "scholarshipId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_aecf21daf17b561a2e2ab499c91b821a6917306ea8c5501be763ee2af4fa7c21"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_41ae43d5111e63ffcc71136e81291ca5e6bfc8d1a07a4859485414025b9257b0",
+      "scholarshipId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_511b3e1253883211330a613e128357599918639ddf8066dbffdd95042b07a95f"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_4ebf71f0a24da1a2d466afba69454b00c1d8b793267b93f92851aaea4c2d1440",
+      "scholarshipId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_e3bc7c431b9f8f513456bfd1147ce47fd5b63ac5d8ea7dbecc2a77933dbcdc4a"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_6877268b41bf79d4d9b0e4b41f45585accb6049ccd68ad0696cb37521d231040",
+      "scholarshipId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_6a52a70f9db9019d117d9bc4d9ab1e593fde94ed651fd9c6bb77f90c3ef75555"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_71c9cdb9a3ab521fd3c664944f27237c4c37d0c0eea94b9f5cef2013597a3c03",
+      "scholarshipId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_bdea0318a19008192dd464c7150768f3b5bafb890d28e2c4a6d8b41470bd9fa9"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_85967788f39d33c86f475047e5aaa45baf3f45c651253dd4883077e074338955",
+      "scholarshipId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_c7ff63b5102c10fd4c495253526a381d22d7f615ebeb2500cd27aeae6f09a3e5"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_8ee081025ae62d5d9a98788f80e49e365239ee13af8cfdefb5aaca3403a48dc8",
+      "scholarshipId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_55513231e3602add29384f4aea3a1d95fb5e02a7a344941ce38283720d79a173"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_9c73da6c520d2667d15802e4453a95078e707da4bdc52fcf900d29105a23f458",
+      "scholarshipId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_313e1027aaeee9022ca018dd3425cc487098081a7628cd6ba4ac184c7996e851"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_9f13cd5332ce4dd8aed3f6f5cec0ecc598ff56ef748b7f8651a55ac74bb57c42",
+      "scholarshipId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_d3a17cb9568c13b20d913109c2abd7bf7139a07354df4b889563a47cde09f298"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_a3fbe1701bef4b49e02cda302175be218cffe899d9d0a548448119c865d7ba68",
+      "scholarshipId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_0a3a92e017c5ee2863eed312b322630d82f1760b67c8681dc7fcd66287c2a6c6"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_dba54ca0fd0de63e5e4fbb9198871989f4cf74ffd239e94286483818b78899c0",
+      "scholarshipId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_5436498719926e21e3abc0f5153d747624de208ea9b3d9cabeab8de6f7e26b96"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_e998dd6d9532920838823f225f1c63d9efa2e55aa42013d94f083c36c7633fab",
+      "scholarshipId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_bb93ba1dda8babbf82a4824581356ea56af88d8331083f65d55e372e15120c8a"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_f01692f685941a21486b9a88ae7ecadd47efa34c5e794e9bda3a7008f09c0f08",
+      "scholarshipId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_b1d30482fd4313d7a90650d53fe9ac85417e50d60d3f7d8cb76fe8878aef884e"
+      ],
+      "reviewItemIds": []
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "cyc_f9cdc866f5d92b8430d6bea5109934fb2da13b0e7c1bb1db69489e2c0c41dc9c",
+      "scholarshipId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "cycleKey": "annual-unknown",
+      "year": null,
+      "opensAt": {
+        "value": "01-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "closesAt": {
+        "value": "03-01",
+        "precision": "annual_rule",
+        "timezone": null
+      },
+      "status": "unknown",
+      "recurrence": "annual",
+      "applicationGroupId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "evidenceIds": [
+        "evd_218bc74b7cecfc32b49824a4eb5b5fb39be0382d3bc180d4348b035440e70a7e"
+      ],
+      "reviewItemIds": []
+    }
+  ],
+  "evidence": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_002b20abe0fc5a44cbb43c4e38b504f1397ff2b5698560d1b5fb343c937f27af",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "f4cfd603e70eb81fc94d3c7a5075da955291a0a75c05678e56b7c3f83306520c",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_016455f93c2742807b096573d7a8a3c0de8c61a1ae356eccb5c1b70bd4277a8d",
+      "subjectKind": "source",
+      "subjectId": "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f",
+      "fieldPath": "authority",
+      "sourceId": "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f",
+      "result": "supported",
+      "claim": "authority=official_provider",
+      "contentSha256": "7286ddeac4af43c89a2b9148f4499ffb8a7088afcafa1ea0910f98d2d5a3556b",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": "firecrawl:01a04bf8-d3ac-7189-ae2c-bc9a49d46a30",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_0278f18d460495bcb7c70c48f8b8355658573cc4ad77313adfc9c17d7a0893fe",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Dr. Max L Amberson Ag Education Scholarship as an individual award.",
+      "contentSha256": "e3d4461463cc4357c09f2b95ac382480b6c5e75f962f16b306a548f5090132fc",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_02a70c4351484e2fc802f0b4bbba893c9aa3faeaca0b1d59ebe2b533c741b422",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "c12cb6e0965c26072d5cdb3bb28ed491f4616bcf26ca9b85d600d74ad2341836",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_040f394eb16d8dc31aee62c2d8a8260e3f07da07cbd001a079b751fe39558b67",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_0f4b6699de414f1340485cc5a926e327f0d2ca6a7bacce0117fa0379f0a4dfd3",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_09841ef87501dacbd144df572aca62c77fa9c25fb479ca69765d9399942fe0d2",
+      "subjectKind": "source",
+      "subjectId": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "result": "inconclusive",
+      "claim": "The public pages statically exposed 15 named undergraduate/CTE programs while the provider states that it administers over 70 programs.",
+      "contentSha256": "5c7dab4c612432048ae0b4ec010a23cba86e930c1800c16346671a931a7b9fc1",
+      "reviewerState": "manual_review",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_0a3a92e017c5ee2863eed312b322630d82f1760b67c8681dc7fcd66287c2a6c6",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_a3fbe1701bef4b49e02cda302175be218cffe899d9d0a548448119c865d7ba68",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_0eaf89188a38657d1584ed9a138b5b61c5298bdfc0d6db529e7074ae5110d519",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Servant Leadership Scholarship as an individual award.",
+      "contentSha256": "516864e86538630bde2d49259890c60ccb5168b92840302452220782e4434ecb",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_1326eac9e339d197429f9c1f65535889afacc63f9a4c43eb7525225f62c17bf0",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Reach Higher Montana Scholarship as an individual award.",
+      "contentSha256": "5b40c7910696f2bee21b967da80c0936d6a94b51d98e58d8e4df23d2648430e5",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_17e11af6580187e61dd627edd63eb56286acc3d587a43488f41009a9144607b9",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Amounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana.",
+      "contentSha256": "bfdef9911ba5e72016ea6b034e998c1141fe82286db45b45c8842b5fb7b79772",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_19adf8ae85763b689b6b1f3578f1a624b3c4e30831c966c60f49044fb95a6d0f",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "f73863bd8bc7f6510458846f34e4301fa9218c8b94d3af933fdf85d93640bd72",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_1bdee7d166126ae2ce200930b851fe5ca19630d7a6b972cae5b7398623cd1b02",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "3272424cd4a374f7dd3ce86b6f6962977b7a7e63e59ef3e5c3c73eef5a32f3f7",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_204bcb005d603a9ba47a0fc35037e2d0052261436226b808d2e73300aafc8db0",
+      "subjectKind": "application_group",
+      "subjectId": "app_1fbf4b4743cf45b141e2c1e8377ca45ce2780d7fac1e4884155ad109f7960b88",
+      "fieldPath": "mode",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_218bc74b7cecfc32b49824a4eb5b5fb39be0382d3bc180d4348b035440e70a7e",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_f9cdc866f5d92b8430d6bea5109934fb2da13b0e7c1bb1db69489e2c0c41dc9c",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_26af24a7817c79d3aad6982f321a11853e389141f7aa26b02dfa80187c39b8ca",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA.",
+      "contentSha256": "95da83ad300b6f929f7aa5eb9bd2a067250dee6a3f56b8a86c30aab2faf8a96e",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_313e1027aaeee9022ca018dd3425cc487098081a7628cd6ba4ac184c7996e851",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_9c73da6c520d2667d15802e4453a95078e707da4bdc52fcf900d29105a23f458",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_34538d43826fdcbfa5b721b9e6b78613e133b24b05747d9db251bf538d94949d",
+      "subjectKind": "source",
+      "subjectId": "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44",
+      "result": "supported",
+      "claim": "Pages 1-4 expose 169 unique opportunities, all Ended; page 5 is the first empty page.",
+      "contentSha256": "3caf9d46ca579914242a21f8781e05ee9b165131bada2723e9108b14d1f36a00",
+      "reviewerState": "classified",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_3454d8761013113097284e221c78faa70f834b83ae15abe26578e4369ec2ee30",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $1,000 scholarships. HS Senior, FFA member, 3.0 GPA or higher, planning to pursue a degree in a trades or ag science, and has demonstrated engagement in leadership, service, and innovation. Preference will be given to students who are PELL eligible.",
+      "contentSha256": "30f0ff35dac382eacdad63a2e816bda54d168849d72c51a95721637c59b2c12f",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_3749b7fa6296878c8e89d098e9aa0aa7020462b2758d22c745753bbd473fe5dd",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Kid's Chance of Montana is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "8c68d9ca61afd11c0d3ca0fd1bc7f9d0e0e4cc6dd86441ae1b2005c1a71a220b",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_3b6cfe321aa33fc8b3f6f2e7279e88703e67e33c3e36f35b6dff9deef30e583b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Bridging the Gap Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "c1e4cfd1ef5320d698c93bcd9b082226da42682276827935229475bd60f72167",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_3c75a72d78bc2dbed59bce0e90a4f23d6dc10b716732a2bad14c9906df90d297",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "14c48de2b0a6a18456a14c4b200e58c736cccb73f52e0c936320a9234f725077",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_416737ee0e8f089904e59534594ea3b0a1aea0520dd52dc9df54f33952d21be8",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Servant Leadership Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "629b7242a5dee573063d8af8254e24bab0741bef498fa7fcdc4cac28c7296911",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_4256244214ffa73fe5a694104d74cd644348445faa0bc193ba2f0eaaa510f2cf",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "dba0cd10938e6776daa06bd0ed8528e03248c4ab5620192427ed66a2e1b00524",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_428861ccfb99e7340353bdb8f6754aca9526849ec28eee5ba5c7432e50f65322",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Bridging the Gap Scholarship as an individual award.",
+      "contentSha256": "c5298ab6d4395552282249c78724a0b9febbdafe5f9c90bbf5317fe17c18a788",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_449f21a0ee2fb58ba14cabe9b0b09d69f6dc91e0ab9a587a534b70a338688742",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Carl Valvoda Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "ff8004d0ddfbc69a217dc7d2c496c6cbb78ab180fe5c0d0642d71da99045be98",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_45603aa07fe27248f22349c05c6cb9fd6b455c89edad932e4ac3dfa58571f06b",
+      "subjectKind": "source",
+      "subjectId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The bounded public It’s Scholarship Time section exposes 30 individual child awards after expanding the Montana FFA umbrella.",
+      "contentSha256": "4c799f142444c38c66906f9397ba29f58937014c81a00b58240458d73ffb6aca",
+      "reviewerState": "classified",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_4630b510974a2f2c490765bb2d7d79f8c72656eb5c7a14453dcf24fcebbed8c3",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_0331db66c1d5319ac5f07b34447a6a61d1d3e77223ecefa41c267f01a7f9042d",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_4c562fb58a017f3652a7839411f87b418a255f1612ccf5492c9e97b086525692",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Agri Industries is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "9fdfefcd6f92eb1bd516df489f67bbd25d97074207d004a13a9da7b4c321f70f",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_511b3e1253883211330a613e128357599918639ddf8066dbffdd95042b07a95f",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_41ae43d5111e63ffcc71136e81291ca5e6bfc8d1a07a4859485414025b9257b0",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_5436498719926e21e3abc0f5153d747624de208ea9b3d9cabeab8de6f7e26b96",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_dba54ca0fd0de63e5e4fbb9198871989f4cf74ffd239e94286483818b78899c0",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_55513231e3602add29384f4aea3a1d95fb5e02a7a344941ce38283720d79a173",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_8ee081025ae62d5d9a98788f80e49e365239ee13af8cfdefb5aaca3403a48dc8",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_5725970ca7bb90240071fd27e35344c17c0e86fc866a79d240ec8611ed1338a8",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(2) $500 scholarships.HS Senior, FFA member, 2.0 GPA or higher.",
+      "contentSha256": "48b637466a3e0190b692566ebcc207b6334eab960eb5cbb3b8287d65e10ff1e7",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_57656eaef624dd43c318fecc1907a73a424c0fe93e0ab67276e07087ebe5249c",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(6) $1,500 scholarships. High school seniors or college students who have/will graduate from a Montana High School, have/will complete the FAFSA by April 1, attend (at least half-time) ANY accredited post-secondary institution nationwide, pursuing a certificate/degree in a business-related field or has completed at least one Business/Finance related course in high school or college. Two scholarships given preference to graduates/residents of Beaverhead and Madison Counties.",
+      "contentSha256": "da58ae5b2a53d75b166772624570c749d1907a67f3bc3f22b1f18b5bd25b610b",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_5792a81eddf8b5644c291d822169c8b415e5b29cce0b29bcbb329532f1c5213f",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "FFA Ag Teachers Memorial Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "65d01f6366146ac15f14602ceb500219ab2cc1424a6b5faba3c13ee8b64c540e",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_57b0381383302636f7e0083abe02ce763fc1c306c23ad27aa1663fdecc93d160",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $2,000 scholarship. Must complete the Reach Higher Montana Scholarship application and is serving or have served in the ROTC program or the U.S. Armed Forces.",
+      "contentSha256": "2a04eceb85ac43c2b29fdf486f2b4dc056d6e693db8b888ee6c4cc01dd2d67a6",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_58c8a17b81d70cd396a82ced5240a20d003759e6bb00b69d6ce8fa9ce5a01225",
+      "subjectKind": "source",
+      "subjectId": "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f",
+      "result": "supported",
+      "claim": "No matter which scholarship you apply for, you’ll only need to complete **one unified application form**.",
+      "contentSha256": "4d55fc7875f7f76c00e6ecc500d94c7ad4208e14c18c2b218b70284ed54c38e5",
+      "reviewerState": "classified",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_59c064ab90af617f030cd31f27d0f01c3a70ff647604490d35f3c134f4bec8b8",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Reach Higher Montana Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "26f95067c197e4582dc7630464672bd9b114538628a485f3220502ca7649460a",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_5bc467773d1141a4c464d5fcfb8c959f6819666efbb2ea8c251952cf1b880bb0",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program.",
+      "contentSha256": "5b40c7910696f2bee21b967da80c0936d6a94b51d98e58d8e4df23d2648430e5",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_64b69ed0659fb3c8155c2f75018a57fb6b2bb4fd07f6d05864fa6e17bc476303",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(2) $500 scholarships. HS Senior or College Freshman, FFA member, 2.0 GPA or higher, pursuing a degree in Ag Ed.",
+      "contentSha256": "e3d4461463cc4357c09f2b95ac382480b6c5e75f962f16b306a548f5090132fc",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_650c4049abc7ddc7d4f4ea65473be09e679fd6af5f444ef0e981fedc86fcc446",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "04a00152fb71b0b1c42f2072ee8076522910a6cb0cf68c21c18472d7eab13d6d",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_6596a884da15fcd3033444f9a2d459a14e7e1e5c050423e3a4b3eb0a6642ba85",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Odd Fellows and Rebekah's Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "0164bd9d155b83c0d5de0262b73f17d43e0bc1e83bd9620a30abe60c4f9e9a34",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_6a52a70f9db9019d117d9bc4d9ab1e593fde94ed651fd9c6bb77f90c3ef75555",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_6877268b41bf79d4d9b0e4b41f45585accb6049ccd68ad0696cb37521d231040",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_6aed5b393844fee1e80bb7e0959a87c31611f501ec4533b6b3ff37a9efc30fe4",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "b847a747c69346008d1407cf33db688d804246547d964e110140f11ec527729d",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_6b4e479d2a6e7778698201dfd4701bf92c5a0a6b6875894b983aab0cae5bea49",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "e2a5944ba8531d2158a360943fa10f6af8d0ec00de62e3aff589f8adebc947f3",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_6ff37cf6f390bae6fdd12428a806b5003429d64758b6ca3a251afa64ee35e747",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Odd Fellows and Rebekah's Scholarship as an individual award.",
+      "contentSha256": "ffcbcedcffa6f4d73e71144581c7d084114444c251e717df114beb44251d9e14",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_7007c0a3224c1edd0c99bf4863db1e1deeab2964d1ba64f9f07ef32a9af56618",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member.",
+      "contentSha256": "fdb6733e0138baf0b20ab2a07e72e9a77776e53478ebd4614ac3aa79791924d0",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_725df4b61b1b51e20c6fe4a8df04c292c2193428eeedb013d264886257791a6f",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.",
+      "contentSha256": "516864e86538630bde2d49259890c60ccb5168b92840302452220782e4434ecb",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_74b14db98d34d5d6c25c152986bbc54b02635bf8cbef73a9b2589c6428620efd",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "ee3c65efe3e89d2c6bdc29aaef8993d028b5a9733b99c2fca0f7a323eb6acff9",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_751acae6ee3bff481992023f9d3f392fbf6a63d7bcee503089e5b4cf28f0aadd",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "a3291e0444e3c9b35a1086a6207e30ed6500d7c737d88660b65ab1172beae9f0",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_761b8ff81a2a03ebb6a8465402f8fa709d988d24ee20688aec68e21fbe64a7a2",
+      "subjectKind": "source",
+      "subjectId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "fieldPath": "authority",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "authority=official_application",
+      "contentSha256": "7f5c563799ad0065ef259c5fbdec31112fe401c44d7bb00e3462f8fba34d5a98",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_7a1ff35bff12e6dade5d17805a25c1225afe31f5550bbb1dc3ceed26ee2b93bc",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Dr. Van Shelhamer Memorial Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "0bca5f96694bcd0bb463e2d86fc24702553a079de7eccd88be0d13c1636c8afe",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_7afd19df491a7afc9ed6f1d7daca329975d8f4a3106f5c23eeab0dcff5684cc4",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Murdoch's Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "f4aabf0b30cb102a804762494231bd28e3dbf104c777738aac07cae256365dc2",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_7bc5612f2961bb0af255fef73479f925039cdb11c41ae90d517015ba3150bd86",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "6fe605ec6d17e3ab2fe3ef407011d495376ec18d7aeb32070668398bce64aea2",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_7ee9209706008aaf7fd3f9ec817564df1b55be6b1bf34deb5f4a08316674c424",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Dr. Van Shelhamer Memorial Scholarship as an individual award.",
+      "contentSha256": "b2ec41ed9198b86bb08e4afd8a3f087370a3c6c880a4421c64c5cf92b5ca6620",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_803194e8cd55514da25ecf8544b8b642a9dbc1276aade56ce76c521d146166dc",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names John Kozlowski Memorial Scholarship as an individual award.",
+      "contentSha256": "fdb6733e0138baf0b20ab2a07e72e9a77776e53478ebd4614ac3aa79791924d0",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8066c7f9f2f85eea1811ab34567aa2a6017405bafb1a91fba3b4294ba47ece26",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)",
+      "contentSha256": "ffcbcedcffa6f4d73e71144581c7d084114444c251e717df114beb44251d9e14",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_83b8fdc80e2336081d3386dac4e67cb654e4158b2d6e970a7f5c9adcb6d5a4fa",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "fdd6db76809e9ccd86ff2b51fd0c6b4904802f9c2c1dbb07659636b4726b1c02",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8793524032fe1467cf28833d91f8b52c16bf166387ba5a22c143e12de31951ab",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Stockman Bank Next Gen Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "5d13d74fdde1abaaa4b43e3ad0f9f659ddb3e8a765ea470b4f53b256d67ad4fe",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8a29ad0a04383695f26c4357583bd46c9c6b004082745791e9e8133dcc16be5b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "AMTOPP Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "47e77232acbe0f556f9c3d2de776c198836999345de7793b240601f1151c2f18",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8a32e9b4943d41f40ba19bc26e74b4dff2897fe1aa4ff44bc7b69fdf8ac63e03",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Kid's Chance of Montana as an individual award.",
+      "contentSha256": "bfdef9911ba5e72016ea6b034e998c1141fe82286db45b45c8842b5fb7b79772",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8b5c8ef911332c4f3b210e22363d77588df491453bbdba71b54cbdf8cff9537c",
+      "subjectKind": "source",
+      "subjectId": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "fieldPath": "authority",
+      "sourceId": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "result": "supported",
+      "claim": "authority=official_provider",
+      "contentSha256": "72deea16dddd7b70d5f5cc1ce119681a8fbe6f1f15ad736ea328e6717955fbe0",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": "firecrawl:01a04bda-33a5-73e0-82eb-e0509b8846a5",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8c125c89e3cb213ae3aa467a1d94f3bcd750aa566214a1c7c284ab185dde6762",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "e254a672e954bf9af7c05642f689212f7f782966f71f69eb1ad076ee3bce4fa4",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8dd7dd17ed2d9a2d428ff65bfad47496488f63fc07e973c036a129cc3c92f0fe",
+      "subjectKind": "source",
+      "subjectId": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "result": "inconclusive",
+      "claim": "FIRST directs students to Pearson Futures, says new scholarships are added throughout the year, and says each provider controls its own amount, eligibility, process, and deadline.",
+      "contentSha256": "2b630e8765ae6f717f9f9c043c0deaee8687d66eb8a9bdabed796ac5591824ac",
+      "reviewerState": "manual_review",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8e1b7331ae8768e7a5a312a31cf78f92c588b27a7b99711ed00f115055ba3c8a",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Stockman Bank Next Gen Scholarship as an individual award.",
+      "contentSha256": "48b637466a3e0190b692566ebcc207b6334eab960eb5cbb3b8287d65e10ff1e7",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_8ed78a9ac8fbbc2a43aae1883a4c68125892a245b1198470155c030afbe5e07f",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "59292669909e889eb9fb9e21e32c16f7cb6e198b1c334ca9a5953996e66fd3d0",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9461f7547d4df23f05cb1010d9fb30bb3e92fe57720132ad90059b32ee78574b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Amounts vary. High School Senior or College student interested in a career related to irrigation, electrical trades, HVAC, Water wells (pumps/drilling), underground utilities, plumbing, welding, or fabrication.",
+      "contentSha256": "9f78c3e88ac4c25683bc9c4138b1d46f4aaf628b3247f48c49e83248fed935c9",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_95b9016342b01340b7ade8fc4b72f1952d510379c73c36a5e64babf9a0709aba",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "41fd5f39cab346d97b20349b32b5dc55be88e65345398a48f510aec11e7bbd1f",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9749eafb6d0e39f34c4df876fee53d36dcde97ef3a77d929287cac729206b9ed",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names W. Ralph Peck Memorial Scholarship as an individual award.",
+      "contentSha256": "30f0ff35dac382eacdad63a2e816bda54d168849d72c51a95721637c59b2c12f",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9838f2d23f3ef46a747ea5923644986f36eb06b75a8cb5c0436b7232d5dc7fe7",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "cf907d128365410b3228b34235fca7c8a10cf27732d974c6751c3c62391865b7",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9bb93574132f5959ab8d37f389d79aa660a9fd14792892430edc758697143ea4",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "7ab517744d32bc9863203a6ad46fdfa3b1d5e1c1890d098ec581dab02e742654",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9e104a9fdeb73d1d98f3c83df16a7f9753d98d48f043f7ba985fd4d8fb5c8fe6",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "e20d707541dc82d534dabbc894f3ed05fe353aebbff666c33339b2a046e27096",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_9e370593a71202a999eaf2a3bc756b437994917dba389aebab49474869533d86",
+      "subjectKind": "source",
+      "subjectId": "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44",
+      "fieldPath": "authority",
+      "sourceId": "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44",
+      "result": "supported",
+      "claim": "authority=institutional",
+      "contentSha256": "de90290ba35ca7bf2f65a9b19959dfa9a9dc6bc0936580b0d6b4278408614d1f",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": "firecrawl:01a04bda-320a-7099-8337-6c75a7dec745",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_a3a754858aeb1573e9af45243529e38c14538d79991ebb971a098f6d888e2dc8",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_ec7d28fb15f9228ce80c8744f3727aceb66c669696a316257c3b70f0c440b0c8",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "9b897df38af676521549ec89b0c06f9b4d1e75df6c5cf6bf80ffaa33ad19f0fa",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_a777292fa803085f2b7f9c4d006dcdb4a5ba21a2fcc8eb07363cf6587378639c",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "dcd7da661cc5a08b7d0d95fc5625bafcb0b6a27efd959371c993abc6f2d84579",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_ae146828962a83a80a0de7c0b0522123a444b5b1718230ac4e63ffe669e8935b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Dr. Max L Amberson Ag Education Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "da69f1d4f9ea595c334c158a73779f6443a4048646eb342b5c97419a47f127ae",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_aecf21daf17b561a2e2ab499c91b821a6917306ea8c5501be763ee2af4fa7c21",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_2ff63134defdbb4e33623496df57e02d9ce7661ab383be7fd956255390909389",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b1d30482fd4313d7a90650d53fe9ac85417e50d60d3f7d8cb76fe8878aef884e",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_f01692f685941a21486b9a88ae7ecadd47efa34c5e794e9bda3a7008f09c0f08",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b2e0a99ea335661d0809164b1c442243b16271d6925f6f4583b5ed0e5f009a2b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_8367e34203f4fd1715ca1a791f4a00954a03ed3eb7476f7cc91e75a4202d4c94",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "b1a7e5223e3da14093f817c7e4a04a01db3949c5ccad1065f07f506b6af1e571",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b59937fe6145bf2f298a6123054ab5733bb41b375c2a14061eab538c6ed671c6",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "d1f3543d92685c9fb665e557928a2b3d8cca1e606caf6c70ed00e4c58cbfd235",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b6b8a8529f6fd39c50d2bc3d096557e33d430650e0fa0e58e87d4bb660fa1080",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_6a6b073e14f61b8504e5ca128afbc5f8cb70cf29829238ffc0178838a22cceec",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $1,500 scholarship. Must be a Montana FFA State Officer attending Montana State University, 2.0 GPA or higher.",
+      "contentSha256": "b2ec41ed9198b86bb08e4afd8a3f087370a3c6c880a4421c64c5cf92b5ca6620",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b7440773cd4f07b560565a2397bee15659b4f7aabb212ea68a08878bb96cdd3e",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_15228c0154990d2ed90d9abacb88409a670ea2aa45a6e57d09f437778c51c8fa",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names AMTOPP Scholarship as an individual award.",
+      "contentSha256": "95da83ad300b6f929f7aa5eb9bd2a067250dee6a3f56b8a86c30aab2faf8a96e",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_b9ad7cd42ec6df1069075ef4391a7de584de93207e72ee725f11adfd36cc3f5d",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "W. Ralph Peck Memorial Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "dd6c61f63d67324a6de4c69cbbd6334abb8c62e75e14c3e6c43d308bc1a1ae4e",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_bb93ba1dda8babbf82a4824581356ea56af88d8331083f65d55e372e15120c8a",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_e998dd6d9532920838823f225f1c63d9efa2e55aa42013d94f083c36c7633fab",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_bdea0318a19008192dd464c7150768f3b5bafb890d28e2c4a6d8b41470bd9fa9",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_71c9cdb9a3ab521fd3c664944f27237c4c37d0c0eea94b9f5cef2013597a3c03",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_c032e0c276a05058381edd73990b84e61562152bfd28c4cc22ec7687c0488a73",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Murdoch's Scholarship as an individual award.",
+      "contentSha256": "516864e86538630bde2d49259890c60ccb5168b92840302452220782e4434ecb",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_c3c9c5c880eabb3639c570f662c830ae41c2c4ac15439ed2ec42691f3ee8c1e7",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_bb295b2828b5186d24615fb22c76f7d495f7a077c839a14909e3f899f1349515",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "a0c06e6b7a1509507d022eb779e470375d4e9cc368c591ff6b1d9902f445c76b",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_c7ff63b5102c10fd4c495253526a381d22d7f615ebeb2500cd27aeae6f09a3e5",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_85967788f39d33c86f475047e5aaa45baf3f45c651253dd4883077e074338955",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_ccd2b2acab78205cbe187dce368de1e32647a1398e936c924f78c2efaf3ed9a2",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "9731771f52b059cfe6c9cce9c3e057bd25b15a0fbba729746bef790fddb903cd",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_cf5fe1e8033f1fc73511b515e2f958cded2427cd4289a30efc7cb1cb1f3c6ae6",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_c0fca5630f4374d2637218beb906d332cb321435a181bdb74617098e2fb16a28",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "$1,000 for one or more recipients. Must complete the Reach Higher Montana Scholarship application, and will or have aged out of the Foster Care system.",
+      "contentSha256": "c5298ab6d4395552282249c78724a0b9febbdafe5f9c90bbf5317fe17c18a788",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_cfa12d1e9f246313021b2c5a24f25e8dff178163666617d07e4d18d9201ae266",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Horse Creek Scholarship as an individual award.",
+      "contentSha256": "da58ae5b2a53d75b166772624570c749d1907a67f3bc3f22b1f18b5bd25b610b",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_d1a9c0194c66b0b50fac23d4b6198ed27136c276ded538dfd8df9020e5747486",
+      "subjectKind": "source",
+      "subjectId": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "fieldPath": "authority",
+      "sourceId": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "result": "supported",
+      "claim": "authority=official_provider",
+      "contentSha256": "c6c94ffddbc94ab62a0fb47e2ed56c471659db7e22c692615ac9f8e87bdacf45",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": "firecrawl:01a04bda-3177-744b-b0b9-44ec4261ea3e",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_d3a17cb9568c13b20d913109c2abd7bf7139a07354df4b889563a47cde09f298",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_9f13cd5332ce4dd8aed3f6f5cec0ecc598ff56ef748b7f8651a55ac74bb57c42",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_d64aedad39626520d54c608c67d1d82f4ad6c7c3d86b13c18b5a1294fd0dcc5a",
+      "subjectKind": "source",
+      "subjectId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "fieldPath": "acquisitionState",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "The public provider page links https://www.grantinterface.com/Home/Logon?urlkey=SAF as the shared application route; P6 did not visit it.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "reviewerState": "classified",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_da42c8564bf54a4cdabf7861a2c4bfce53cba6815618eb3d57d96809507914e2",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_dd3cf3aeab83ed81b7ea475da1c2e7c8d934115ba718dbfcb0a8658f1a8f61a4",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "bb79832ae0e3aaabb56b2164b832f007b50ddd4fee814623465cc5aedf1c15af",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_dba07238ceb365dc65cc1f2ab985207249c5363c1ee3ff38c1edd03c70a40efe",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54af9ccbbb57228321b4bb789c67cf8e5519032842cfa619b77aff6f71aa6167",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "d94acd57643a224e90e70a421c9e161746a0b478161ed1cbeeed327bdebe8fa1",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_dc6899cb6dd20ebb17af9e1eb8d96bc80ec04eac8d68de0546eef762a5e36747",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_10b85bfc0c0cb807dd88409dae2b5e8d843e32bfee8fba26cf7389006142d48b",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "264898403d7930f16def73a038a298a665edc3866f245d6faa079b75c6309221",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_ddd0cadafac6543459bfa5fba59a6901d6c209fb930200dd038ac5e5c622a63b",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "0f3b220596a2c19eaf2793de3eb4f0af2fe1bc231082ace16e0c6f407eb42b2b",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_de9f0bc83165ace93e6006200c8b726af7e7a866d1e59bae29c4529662647cac",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_a60341b46e39d04a7df497d6a3b0a134ea05a1bc6150e06b4d546f5571221de9",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Horse Creek Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "322aae2d802ce81843989732391fb845e2bdda3756de98ecc0a39b249ee5ee06",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_df79c253cd56fc5b558b4931a91a6518a0e13813fb486dc36509d1676f192ced",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "fieldPath": "sourceLinks.src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc.direct.direct",
+      "sourceId": "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc",
+      "result": "supported",
+      "claim": "sourceRelationship=direct",
+      "contentSha256": "353e1d83e597ae790800322bb33f354dee9d72481873f81fae4c89041996bf98",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "linked-by-firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_dfaefa102e0043f88139c9d5d88ec15fde808f7a562dee99799ae6a9d8785156",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_cc062852a7f26a392a75d0b44fa42678b74ff2667dbd0223099e82d808487eb0",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Carl Valvoda Scholarship as an individual award.",
+      "contentSha256": "2a04eceb85ac43c2b29fdf486f2b4dc056d6e693db8b888ee6c4cc01dd2d67a6",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_e3bc7c431b9f8f513456bfd1147ce47fd5b63ac5d8ea7dbecc2a77933dbcdc4a",
+      "subjectKind": "cycle",
+      "subjectId": "cyc_4ebf71f0a24da1a2d466afba69454b00c1d8b793267b93f92851aaea4c2d1440",
+      "fieldPath": "status",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "Opens Jan. 1, closes Mar. 1; no year or current availability is stated, so cycle status remains unknown.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa",
+      "retrievedAt": "2026-08-29T05:25:54Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_e4e425f699f6b4a0daaa1ca6d5f119aa4aee32e59237b343c11e1fe6543c8dc8",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_66c48204573e3466821d865f7f0d28148abb7fd0f2f44eb7a6292f4f6668c824",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "85e61e4e737a6ed19924c0fa8f38b75d3a8eb68d2c29488aeae44eaf10c3d4c7",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_e725b42ff0d1b44f5fda1f95fdefcebe4c28a6ef4d9146da50f085e3e11968c7",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_df57e3f6a06796990e078d3f320f2320e366f9a5aa3783195f9ad7237902288e",
+      "fieldPath": "studentFields.eligibility.location",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "John Kozlowski Memorial Scholarship is listed in the official ## It's Scholarship Time! section on a page headed ## Scholarships for Montana Students; the page description identifies Montana scholarships.",
+      "contentSha256": "b908061af369e62fccb479a4de491d9b39b19091fcd3b21da1b86fd2d7110118",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_eeb9cb78519f70fe1d024ae951e17201da27f93287bef7f5b2b34cd9e3ccf7ab",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names FFA Ag Teachers Memorial Scholarship as an individual award.",
+      "contentSha256": "26272e333062cb7420ab4556cff6a058f6ae892a7c67d93712ce668e2dc7bc70",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_f447d7987832429f8c32140d95dd3832dddf9e0846956c101ec2ad32837fcd04",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_1b50b8ba8dc7e38fb3aedd617363a77e0987490d57f99dc55f20651a93570af4",
+      "fieldPath": "name",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "The official public parent names Agri Industries as an individual award.",
+      "contentSha256": "9f78c3e88ac4c25683bc9c4138b1d46f4aaf628b3247f48c49e83248fed935c9",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_f59382768404c0cc59b01f3b6510a986e4130a6b2054eef5974ba4b069bba0ae",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_54180c19eb74e35d993050578f87312ba421b2037c06c6caa74fdd5f597a40c3",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA, planning to pursue a career as an Ag Ed teacher.",
+      "contentSha256": "26272e333062cb7420ab4556cff6a058f6ae892a7c67d93712ce668e2dc7bc70",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_f7a83196fcd999af9a6a3a8436a08b1e2beceffa478ce2c9686a305c5308b51a",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "fieldPath": "studentFields.eligibility",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.",
+      "contentSha256": "516864e86538630bde2d49259890c60ccb5168b92840302452220782e4434ecb",
+      "retrievedAt": "2026-08-29T04:55:28Z",
+      "sourceRevision": null,
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_fbc6ae1890f67c3563bd85306832a32d2decd7892c2cb95a9b1b20b7e44e1c4c",
+      "subjectKind": "source",
+      "subjectId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "fieldPath": "authority",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "authority=official_provider",
+      "contentSha256": "d4b9038cb8c18399ffd7140c0f599ced761aeacc24df3823fa0975cd60edc56f",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "evd_fe5ef45ff61d958e1645b9a72c4fda7bf8f8153dddec76c22ab0136b4f0cec2c",
+      "subjectKind": "scholarship",
+      "subjectId": "sch_fc37c2d47f56815d302fae2c9d1be03826b0e13d56e5b36fd8dc9745a674590f",
+      "fieldPath": "sourceLinks.src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862.parent_summary.direct",
+      "sourceId": "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+      "result": "supported",
+      "claim": "sourceRelationship=parent_summary",
+      "contentSha256": "a325ed42a4590cf84d15632ec76fdee93b7df3a83ec198e2a1ea87555179f1a2",
+      "retrievedAt": "2026-08-29T16:06:27.086Z",
+      "sourceRevision": "firecrawl:01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "reviewerState": "classified"
+    }
+  ],
+  "reviewItems": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "rev_2561ba988e818d01b7f02c37216a009e695f4673a1446219401aede6f3cfcb28",
+      "subjectKind": "source",
+      "subjectId": "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289",
+      "reason": "access_blocked",
+      "state": "open",
+      "summary": "FIRST provides no exact child scholarship denominator and delegates distinct facts to provider cards in the Pearson portal. Search/portal interaction is outside P6 authority, so no child is accepted.",
+      "evidenceIds": [
+        "evd_8dd7dd17ed2d9a2d428ff65bfad47496488f63fc07e973c036a129cc3c92f0fe"
+      ],
+      "owner": "P6 review queue",
+      "targetStage": "P6"
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "rev_4a888d322074174f8f0c0e90d84be66b382b3de745e73bba8d8f74e3caa97ba4",
+      "subjectKind": "source",
+      "subjectId": "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793",
+      "reason": "access_blocked",
+      "state": "open",
+      "summary": "Exact child denominator and remaining count are unavailable from the static public pages without entering filter/application interaction outside P6 authority. No Horatio child is accepted.",
+      "evidenceIds": [
+        "evd_09841ef87501dacbd144df572aca62c77fa9c25fb479ca69765d9399942fe0d2"
+      ],
+      "owner": "P6 review queue",
+      "targetStage": "P6"
+    }
+  ],
+  "legacyBindings": [
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_000ebedd617518a367cbb119e0fe9b4346bcbdbf4bc112ed2d16fa24ae54bd67",
+      "rowIdentity": "0b0e003b2c6385824cd3a2b2429342266f3a619b61abca23b22f82f916446a1d",
+      "sheetRow": 83,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://nfu.org/education/scholarships/",
+          "typed": [
+            "https://nfu.org/education/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "National Farmers Union Scholarship (Minorities in Agriculture, Natural Resources and Related Sciences (MANRRS))",
+          "typed": "National Farmers Union Scholarship (Minorities in Agriculture, Natural Resources and Related Sciences (MANRRS))",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://nfu.org/education/scholarships/",
+          "typed": [
+            "https://nfu.org/education/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "0b0e003b2c6385824cd3a2b2429342266f3a619b61abca23b22f82f916446a1d",
+        "sheetRow": 83,
+        "currentLabel": "Portal",
+        "scholarshipName": "National Farmers Union Scholarship (Minorities in Agriculture, Natural Resources and Related Sciences (MANRRS))",
+        "architecture": "common_application",
+        "reviewState": "classified",
+        "confidence": "direct_observation",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:common_application"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://nfu.org/education/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://nfu.org/education/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_319060c109a7eaa153e6b8e702daafd5ae460a404a83488ced0debeabfe76036",
+      "rowIdentity": "f71acb1ed9053034746e5f3ca458022032a946463c4c996a553641ae5350194a",
+      "sheetRow": 31,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://horatioalger.org/scholarships/",
+          "typed": [
+            "https://horatioalger.org/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "Horatio Alger Association - Bachelor's Degree Candidates",
+          "typed": "Horatio Alger Association - Bachelor's Degree Candidates",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+          "typed": [
+            "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "f71acb1ed9053034746e5f3ca458022032a946463c4c996a553641ae5350194a",
+        "sheetRow": 31,
+        "currentLabel": "Portal",
+        "scholarshipName": "Horatio Alger Association - Bachelor's Degree Candidates",
+        "architecture": "unknown",
+        "reviewState": "manual_review",
+        "confidence": "unknown",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:directory_hub,unknown",
+          "conflicting_source_architectures:not_promoted",
+          "manual_review_source:propagated"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://horatioalger.org/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_565ecb87afeaa1e5d7d5816180676470e8cf7278148c6b3dcb855745e6a6bb32",
+      "rowIdentity": "fdfcb1441ef54fa4e7f6b0d4a6eeacf15de93dc3678aef97ed711b26e3d59ce9",
+      "sheetRow": 17,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_71dc906f04ccedf06a99d99ed3aeb5e4e8d585e73c0ca7e4ddba5a3ad4c50793"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://horatioalger.org/scholarships/",
+          "typed": [
+            "https://horatioalger.org/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "Horatio Alger Association - Career & Technical Candidates",
+          "typed": "Horatio Alger Association - Career & Technical Candidates",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://horatioalger.org/career-technical-education-scholarships/",
+          "typed": [
+            "https://horatioalger.org/career-technical-education-scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "fdfcb1441ef54fa4e7f6b0d4a6eeacf15de93dc3678aef97ed711b26e3d59ce9",
+        "sheetRow": 17,
+        "currentLabel": "Portal",
+        "scholarshipName": "Horatio Alger Association - Career & Technical Candidates",
+        "architecture": "unknown",
+        "reviewState": "manual_review",
+        "confidence": "unknown",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:directory_hub,unknown",
+          "conflicting_source_architectures:not_promoted",
+          "manual_review_source:propagated"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://horatioalger.org/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://horatioalger.org/career-technical-education-scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_7c587517269b3e4b140184077fb4e95c2111ec2ba8a35a7fbdf86321ca73af75",
+      "rowIdentity": "7985a0c99260f58f1f71618926cbb93455c813af3c0c71c116f7c2297c43c87e",
+      "sheetRow": 45,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_6b918438bf286ee96b56932d888ab11715ae11e209e5770305b129ac5588ee44"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://fvcc.academicworks.com/",
+          "typed": [
+            "https://fvcc.academicworks.com/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "FVCC Institutional Scholarships (Over 850 scholarships)",
+          "typed": "FVCC Institutional Scholarships (Over 850 scholarships)",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://fvcc.academicworks.com/users/sign_in",
+          "typed": [
+            "https://fvcc.academicworks.com/users/sign_in"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "7985a0c99260f58f1f71618926cbb93455c813af3c0c71c116f7c2297c43c87e",
+        "sheetRow": 45,
+        "currentLabel": "Portal",
+        "scholarshipName": "FVCC Institutional Scholarships (Over 850 scholarships)",
+        "architecture": "unknown",
+        "reviewState": "manual_review",
+        "confidence": "unknown",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:login_application_portal,paginated_catalog",
+          "conflicting_source_architectures:not_promoted",
+          "manual_review_source:propagated"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://fvcc.academicworks.com/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://fvcc.academicworks.com/users/sign_in",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_9720c3c0448922d73a4771bf374e06653037055274da403f732554f8db9cb246",
+      "rowIdentity": "2ce55008334ee41701c1a115aa4668d44c66055f2fbb5e97d74f5ae67284b13a",
+      "sheetRow": 79,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_c2b6262213c2a42be94f2bcc08cd37289fb1c3403e79c83103c9793079bb9862",
+        "src_e574a3f3ad7d1f8d9bd82208662ae8233beaa67bd6c93f8b390f930911b3fbcc"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+          "typed": [
+            "https://www.reachhighermontana.org/plan-your-future/scholarships#c475"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "Reach Higher Montana Scholarship (1 application, MULTIPLE scholarships!)",
+          "typed": "Reach Higher Montana Scholarship (1 application, MULTIPLE scholarships!)",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+          "typed": [
+            "https://www.grantinterface.com/Home/Logon?urlkey=SAF"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "2ce55008334ee41701c1a115aa4668d44c66055f2fbb5e97d74f5ae67284b13a",
+        "sheetRow": 79,
+        "currentLabel": "Portal",
+        "scholarshipName": "Reach Higher Montana Scholarship (1 application, MULTIPLE scholarships!)",
+        "architecture": "unknown",
+        "reviewState": "manual_review",
+        "confidence": "unknown",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:login_application_portal,matching_portal",
+          "conflicting_source_architectures:not_promoted",
+          "manual_review_source:propagated"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_c33316d7b0929a904fc3a7aa952467175ba5d712d0649e6996e67ea5a4211f69",
+      "rowIdentity": "7145d218eb8bdd841db795e874055429587b85df1235662921aacfcf1051ffb1",
+      "sheetRow": 55,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_43a099f4ea563e841456da34556175f556d0f60f3c447e1f611528fe1a23dd1f"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": "https://nfu.org/education/scholarships/",
+          "typed": [
+            "https://nfu.org/education/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "National Farmers Union Scholarships (the \"Stanley Moore\" and the \"Hubert K. and JoAnn Seymour\" Scholarships)",
+          "typed": "National Farmers Union Scholarships (the \"Stanley Moore\" and the \"Hubert K. and JoAnn Seymour\" Scholarships)",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://nfu.org/education/scholarships/",
+          "typed": [
+            "https://nfu.org/education/scholarships/"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "7145d218eb8bdd841db795e874055429587b85df1235662921aacfcf1051ffb1",
+        "sheetRow": 55,
+        "currentLabel": "Portal",
+        "scholarshipName": "National Farmers Union Scholarships (the \"Stanley Moore\" and the \"Hubert K. and JoAnn Seymour\" Scholarships)",
+        "architecture": "common_application",
+        "reviewState": "classified",
+        "confidence": "direct_observation",
+        "evidenceBasis": [
+          "source_reference_count:2",
+          "source_architectures:common_application"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "information",
+            "urlIdentity": "https://nfu.org/education/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          },
+          {
+            "role": "application",
+            "urlIdentity": "https://nfu.org/education/scholarships/",
+            "provenance": [
+              "cellData.hyperlink"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "schemaVersion": "2.0.0",
+      "id": "leg_cf2a6b48f19c04ba3e7e0aec3014624f8fb54b85d0216f7d04fc80938ab4be3a",
+      "rowIdentity": "dc8fc30d112eeaec7de5b2aa67e8e448240cc4b388a22c6185747b944008179e",
+      "sheetRow": 187,
+      "currentLabel": "Portal",
+      "targetKind": "source_record",
+      "targetIds": [
+        "src_21d9e8f9b4b76e934b009c095a36b7eed5b4dbb70ac7642162da10c302f22289"
+      ],
+      "reviewItemIds": [],
+      "studentFieldCompatibility": {
+        "Last Updated": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Due Date": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "In-State / National": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Portal/ Scholarship": {
+          "raw": "Portal",
+          "typed": "Portal",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Amount": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Scholarship Location/Information": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Name of Scholarship": {
+          "raw": "FIRST Scholarship Portal (Pearson Futures)",
+          "typed": "FIRST Scholarship Portal (Pearson Futures)",
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Application Link/Method": {
+          "raw": "https://www.firstinspires.org/resources/library/scholarships",
+          "typed": [
+            "https://www.firstinspires.org/resources/library/scholarships"
+          ],
+          "state": "known",
+          "evidenceIds": []
+        },
+        "Summary": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Stated Min. GPA": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "School Type (2-or 4-Year, or Trade)": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Renewing/ Non-Renewing": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Focus": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Acute Financial Need Prioritization": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        },
+        "Accepts Gap Year Applications Upon Return": {
+          "raw": null,
+          "typed": null,
+          "state": "unknown",
+          "evidenceIds": []
+        }
+      },
+      "legacyRecord": {
+        "rowIdentity": "dc8fc30d112eeaec7de5b2aa67e8e448240cc4b388a22c6185747b944008179e",
+        "sheetRow": 187,
+        "currentLabel": "Portal",
+        "scholarshipName": "FIRST Scholarship Portal (Pearson Futures)",
+        "architecture": "external_marketplace",
+        "reviewState": "classified",
+        "confidence": "direct_observation",
+        "evidenceBasis": [
+          "source_reference_count:1",
+          "source_architectures:external_marketplace"
+        ],
+        "explicitApplicationMethod": null,
+        "references": [
+          {
+            "role": "application",
+            "urlIdentity": "https://www.firstinspires.org/resources/library/scholarships",
+            "provenance": [
+              "cellData.hyperlink",
+              "formattedValue"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

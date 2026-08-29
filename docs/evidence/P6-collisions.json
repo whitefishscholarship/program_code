@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "baseline": {
+    "revisionId": "223",
+    "populatedRows": 197,
+    "scholarshipRows": 176,
+    "portalRows": 21
+  },
+  "exactNameCollisions": [
+    {
+      "source": "reach-higher",
+      "discoveredName": "MABA-MGEA Scholarship",
+      "sheetRow": 174,
+      "rowKey": "p5-row-0174",
+      "recordType": "Scholarship",
+      "name": "MABA-MGEA Scholarship",
+      "normalizedName": "maba mgea scholarship"
+    }
+  ],
+  "nearNameCollisionCandidates": [
+    {
+      "source": "fvcc",
+      "discoveredName": "Flathead Electric Coop. Early Childhood Education Scholarship",
+      "baselineSheetRow": 44,
+      "baselineName": "Flathead Electric Coop. Early Childhood Education Scholarship @ FVCC",
+      "baselineRecordType": "Scholarship",
+      "tokenJaccard": 0.8571428571428571
+    },
+    {
+      "source": "reach-higher",
+      "discoveredName": "Montana FFA Leave a Legacy Scholarship",
+      "baselineSheetRow": 170,
+      "baselineName": "Montana FFA Foundation Leave a Legacy Scholarship",
+      "baselineRecordType": "Scholarship",
+      "tokenJaccard": 0.8
+    }
+  ],
+  "reviewedIdentityCollisions": [
+    {
+      "source": "fvcc",
+      "discoveredName": "Flathead Electric Coop. Early Childhood Education Scholarship",
+      "baselineSheetRow": 44,
+      "baselineName": "Flathead Electric Coop. Early Childhood Education Scholarship @ FVCC",
+      "baselineRecordType": "Scholarship",
+      "tokenJaccard": 0.8571428571428571,
+      "disposition": "same_award_excluded_currently_ended",
+      "basis": [
+        "same distinctive provider and award name",
+        "baseline name adds only the @ FVCC location suffix",
+        "current FVCC catalog marks the discovered opportunity Ended"
+      ]
+    },
+    {
+      "source": "reach-higher",
+      "discoveredName": "Montana FFA Leave a Legacy Scholarship",
+      "baselineSheetRow": 170,
+      "baselineName": "Montana FFA Foundation Leave a Legacy Scholarship",
+      "baselineRecordType": "Scholarship",
+      "tokenJaccard": 0.8,
+      "disposition": "same_award_excluded",
+      "basis": [
+        "same official Reach Higher parent/application route",
+        "same annual Jan. 1-Mar. 1 window",
+        "same $500 amount",
+        "names differ only by the provider word Foundation"
+      ]
+    }
+  ],
+  "parentChildBindings": [
+    {
+      "baselineRows": [
+        79
+      ],
+      "parentLegacySourceIdentities": [
+        "6dec62a8b9aa539bf8777019e7f36f9a391d9cad6ce090450263eb505cbaf4b8",
+        "730c6a5451d8657bb7bb8b4678ce9464041b345e5f95e89cb940c0efb4c47446"
+      ],
+      "parentName": "Reach Higher Montana Scholarship (1 application, MULTIPLE scholarships!)",
+      "childCount": 16,
+      "treatment": "preserve exact P1 information/application source identities and the row-79 source-record binding; new children have no legacy row identity"
+    },
+    {
+      "baselineRows": [
+        55,
+        83
+      ],
+      "parentLegacySourceIdentities": [
+        "e74fed4e5ae13df216584e44d8606d79c4a67400c7dd376851124a3d8d20fd11"
+      ],
+      "parentName": "National Farmers Union portal rows",
+      "childNames": [
+        "Stanley Moore Scholarships",
+        "Hubert K. and JoAnn Seymour Scholarship",
+        "Minorities in Agriculture, Natural Resources, and Related Sciences (MANRRS) Scholarship"
+      ],
+      "treatment": "preserve the exact P1 NFU source identity and both source-record bindings; accept no child because no current linked application route is exposed"
+    }
+  ],
+  "acceptedChildCount": 16,
+  "acceptedChildExactBaselineScholarshipCollisions": 0,
+  "dedupeRule": "An exact normalized-name collision with a baseline Scholarship row blocks acceptance. Every token-Jaccard near-name candidate at or above 0.8 requires an explicit evidence-backed disposition; unreviewed candidates fail deterministic generation. Portal identities remain on parent sources and are never assigned to new children."
+}
