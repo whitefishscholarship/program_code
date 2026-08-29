@@ -1,0 +1,703 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogRevision": "d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc",
+  "counts": {
+    "sources": 6,
+    "portals": 5,
+    "awards": 16,
+    "applicationGroups": 1,
+    "cycles": 16,
+    "activeCycles": 0,
+    "upcomingCycles": 0,
+    "closedCycles": 0,
+    "unavailableCycles": 0,
+    "unknownCycles": 16,
+    "minimumObservedRecipientSlots": 71
+  },
+  "awards": [
+    {
+      "publicId": "award-1b50b8ba8dc7",
+      "name": "Agri Industries",
+      "summary": null,
+      "amount": {
+        "label": "Amount varies",
+        "minimum": null,
+        "maximum": null,
+        "currency": "USD",
+        "state": "variable"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year",
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-15228c015499",
+      "name": "AMTOPP Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-c0fca5630f43",
+      "name": "Bridging the Gap Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-cc062852a7f2",
+      "name": "Carl Valvoda Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$2,000",
+        "minimum": 2000,
+        "maximum": 2000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-bb295b2828b5",
+      "name": "Dr. Max L Amberson Ag Education Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-6a6b073e14f6",
+      "name": "Dr. Van Shelhamer Memorial Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$1,500",
+        "minimum": 1500,
+        "maximum": 1500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-54180c19eb74",
+      "name": "FFA Ag Teachers Memorial Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-a60341b46e39",
+      "name": "Horse Creek Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$1,500",
+        "minimum": 1500,
+        "maximum": 1500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year",
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-df57e3f6a067",
+      "name": "John Kozlowski Memorial Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$2,000",
+        "minimum": 2000,
+        "maximum": 2000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-66c48204573e",
+      "name": "Kid's Chance of Montana",
+      "summary": null,
+      "amount": {
+        "label": "Amount varies",
+        "minimum": null,
+        "maximum": null,
+        "currency": "USD",
+        "state": "variable"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-fc37c2d47f56",
+      "name": "Murdoch's Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-10b85bfc0c0c",
+      "name": "Odd Fellows and Rebekah's Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year",
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-54af9ccbbb57",
+      "name": "Reach Higher Montana Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$2,000",
+        "minimum": 2000,
+        "maximum": 2000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-ec7d28fb15f9",
+      "name": "Servant Leadership Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-8367e34203f4",
+      "name": "Stockman Bank Next Gen Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$500",
+        "minimum": 500,
+        "maximum": 500,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 2,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    },
+    {
+      "publicId": "award-dd3cf3aeab83",
+      "name": "W. Ralph Peck Memorial Scholarship",
+      "summary": null,
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Montana students",
+        "minimumGpa": 3,
+        "schoolTypes": [
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": "01-01 each year (year not verified)",
+        "closes": "03-01 each year (year not verified)",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+        "groupPublicId": "application-1fbf4b4743cf",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-c2b6262213c2",
+        "source-e574a3f3ad7d"
+      ]
+    }
+  ],
+  "portals": [
+    {
+      "publicId": "portal-6b918438bf28",
+      "title": "fvcc.academicworks.com",
+      "architecture": "paginated_catalog",
+      "url": "https://fvcc.academicworks.com/",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "portal-71dc906f04cc",
+      "title": "horatioalger.org",
+      "architecture": "directory_hub",
+      "url": "https://horatioalger.org/scholarships/",
+      "access": "public",
+      "availability": "partial",
+      "awardCount": 0
+    },
+    {
+      "publicId": "portal-c2b6262213c2",
+      "title": "reachhighermontana.org",
+      "architecture": "matching_portal",
+      "url": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 16
+    },
+    {
+      "publicId": "portal-21d9e8f9b4b7",
+      "title": "www.firstinspires.org",
+      "architecture": "external_marketplace",
+      "url": "https://www.firstinspires.org/resources/library/scholarships",
+      "access": "public",
+      "availability": "partial",
+      "awardCount": 0
+    },
+    {
+      "publicId": "portal-e574a3f3ad7d",
+      "title": "www.grantinterface.com",
+      "architecture": "login_application_portal",
+      "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+      "access": "authenticated",
+      "availability": "blocked",
+      "awardCount": 16
+    }
+  ],
+  "applicationGroups": [
+    {
+      "publicId": "application-1fbf4b4743cf",
+      "mode": "shared_with_supplements",
+      "label": "Shared application; some awards add supplements",
+      "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+      "awardPublicIds": [
+        "award-10b85bfc0c0c",
+        "award-15228c015499",
+        "award-1b50b8ba8dc7",
+        "award-54180c19eb74",
+        "award-54af9ccbbb57",
+        "award-66c48204573e",
+        "award-6a6b073e14f6",
+        "award-8367e34203f4",
+        "award-a60341b46e39",
+        "award-bb295b2828b5",
+        "award-c0fca5630f43",
+        "award-cc062852a7f2",
+        "award-dd3cf3aeab83",
+        "award-df57e3f6a067",
+        "award-ec7d28fb15f9",
+        "award-fc37c2d47f56"
+      ],
+      "supplements": "mixed"
+    }
+  ],
+  "notice": "Cycle availability is shown only when verified for a specific cycle. Yearless annual dates remain unavailable until confirmed on an official source."
+}
