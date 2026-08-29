@@ -84,6 +84,15 @@ INDEPENDENT REVIEW AND DELIVERY
   disclosed Vercel effects. It does not authorize a live schedule, deployment-
   configuration change, spreadsheet write, or any other reserved action.
 
+AUTONOMOUS GIT DELIVERY — NO GIT QUESTIONS TO KELSEY
+- Follow AGENTS.md, preserve unrelated work in an isolated codex/p8-... branch, and
+  commit only P8-owned changes.
+- Inspect downstream effects. BUILD_STATE's P8 standing authority covers the disclosed
+  branch/PR/main Vercel effects but no live schedule, deployment-configuration change,
+  spreadsheet write, production/P9 action, or other reserved effect.
+- Push, open/update the PR, monitor checks, and merge only after acceptance and policy
+  gates pass. Never force-push, rewrite history, discard user work, or bypass checks.
+
 STOP CONDITIONS
 - P7 is not exactly accepted and delivered.
 - Work requires a live schedule/configuration change, spreadsheet write, production/P9

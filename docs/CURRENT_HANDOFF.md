@@ -5,10 +5,10 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P7 state
+## Current P7 accepted-state candidate
 
-- P7 — Student-facing product and API — is verified and awaiting fresh-context recheck
-  of the immutable second replacement on branch
+- P7 — Student-facing product and API — has a prospective accepted-state marker and
+  awaits final exact-candidate recheck and attestation on branch
   `codex/p7-student-facing` in isolated worktree `/private/tmp/program_code-p7`.
 - The exact P7 baseline is live `origin/main`
   `28e53dbdb0959ad86ff535d781c59c5ea9a4bf54`, the merge carrying accepted P6
@@ -66,11 +66,20 @@ Default branch: `main`
   source relationship at every required viewport with zero console errors. The exact
   final command window was `2026-08-29T21:15:44Z` through
   `2026-08-29T21:16:29Z`; both dependency audits again reported zero current matches.
-- The commit containing this record is the second-replacement freeze. Generate a new
-  exact manifest and return it to the same fresh reviewer before accepted state,
-  attestation, authentication, or delivery.
-- `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 remains planned and must
-  not begin in this session.
+- Fresh-context reviewer `/root/p7_fresh_review` accepted exact verified candidate
+  `e3230f37f6dd1c0d55c9964a407ca3ac7d96fe98` C0/H0/M0/L0 against manifest
+  SHA-256 `414f99219cbb614bf3db79d4656e76e3f37fe958949d5f3acc8887eac8b9d7f3`
+  and explicitly cleared the accepted-state-only transition.
+- Machine state now records P7 accepted, no active stage, and P8 next-permitted. This
+  remains prospective until the commit containing this record is frozen, a new exact
+  manifest receives the same reviewer's final read-only recheck, and its direct child
+  adds exactly the P7 manifest and review. Do not authenticate or deliver before then.
+- Accepted-state plan validation required the standard autonomous-Git boundary in the
+  already prepared P8 kickoff. That documentation-only correction was added without
+  starting P8; validation now reports only the expected missing committed P7
+  manifest/review attestation.
+- `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 is next-permitted but
+  remains planned and must not begin in this session.
 - P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
   dependencies needed for P7, browser evidence, and P7 governance artifacts.
   Spreadsheet writes, production spreadsheet access/migration, P8 execution,

@@ -225,8 +225,8 @@
       }
     ]
   },
-  "activeStageId": "P7",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P8",
   "stages": [
     {
       "id": "P0",
@@ -301,7 +301,7 @@
     {
       "id": "P7",
       "name": "Student-facing product and API",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "28e53dbdb0959ad86ff535d781c59c5ea9a4bf54",
       "evidencePath": "docs/evidence/P7.md",
       "manifestPath": "docs/evidence/P7-manifest.json",
