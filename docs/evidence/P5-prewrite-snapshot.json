@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "capturedAt": "2026-08-27T11:31:05Z",
+  "source": {
+    "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "title": "Whitefish HS Scholarship Database",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "modifiedTime": "2026-07-23T01:07:29.466Z",
+    "revisionId": "222",
+    "previousRevisionId": "169",
+    "sheetName": "Master Database",
+    "sheetId": 0,
+    "grid": {
+      "rowCount": 1060,
+      "columnCount": 24,
+      "frozenRowCount": 1
+    },
+    "auditedRange": "'Master Database'!A1:X1060"
+  },
+  "backup": {
+    "spreadsheetId": "1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ",
+    "title": "Whitefish HS Scholarship Database — P5 pre-write backup — rev 222 — 2026-08-27T054104Z",
+    "url": "https://docs.google.com/spreadsheets/d/1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ/edit?usp=drivesdk",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "createdTime": "2026-08-27T11:31:05.610Z",
+    "modifiedTime": "2026-08-27T11:31:05.610Z",
+    "revisionId": "1",
+    "sheetCount": 14,
+    "sheetStructureMatchesSource": true,
+    "distinctFromSource": true
+  },
+  "verification": {
+    "sourceRevisionBeforeCopy": "222",
+    "sourceRevisionAfterCopyAndReadback": "222",
+    "nativeCellFields": [
+      "userEnteredValue",
+      "userEnteredFormat",
+      "dataValidation",
+      "note",
+      "hyperlink",
+      "textFormatRuns"
+    ],
+    "nativeCellPayloadSha256": "fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9",
+    "sourceAndBackupNativeCellPayloadEqual": true,
+    "nativeCellPayloadBytes": 3852195,
+    "sha256SelfTest": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+    "completeReversibleBackupEstablished": true
+  },
+  "boundaries": {
+    "testingSheetContentWrites": 0,
+    "productionSpreadsheetAccesses": 0,
+    "applicantValuesCollected": 0,
+    "formsOrApplicationInteractions": 0,
+    "providerContacts": 0
+  }
+}

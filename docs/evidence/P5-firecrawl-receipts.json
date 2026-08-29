@@ -1,0 +1,1785 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "capturedAt": "2026-08-27T13:44:09.134Z",
+  "privacyRedactionRequested": true,
+  "interactionBoundary": "static public pages and documents only; no forms, logins, portals, profile use, actions, submissions, or private Drive/Docs",
+  "denominator": 50,
+  "outcomeCounts": {
+    "retrieved": 48,
+    "inconclusiveRetrieval": 2
+  },
+  "receipts": [
+    {
+      "sourceId": "p5src_0107904c280e5278867e",
+      "url": "https://www.mspoa.org/scholarships",
+      "sheetRows": [
+        68,
+        94
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.mspoa.org/scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-27T13:28:08.137Z",
+      "scrapeId": "01a04373-51ad-774b-ba1e-c49f7ceb3567",
+      "creditsUsed": 9,
+      "markdownSha256": "2efb875d01fe3fec6d06c1f249d5dde59f99952d4e0aa3498d75c6b19cf32500",
+      "markdownLength": 218,
+      "title": "Montana Sheriffs and Peace Officers Association",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 68,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 94,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_0783f818afedb3fd59f2",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "sheetRows": [
+        33
+      ],
+      "outcome": "retrieved",
+      "statusCode": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-27T13:28:14.452Z",
+      "scrapeId": "01a04373-5176-70ec-8004-5e8ba930cba4",
+      "creditsUsed": 9,
+      "markdownSha256": "aebaa9802c1dada22e39b472819fcf12e20c637eb455a4f4884fdf3471711afa",
+      "markdownLength": 7759,
+      "title": "Whitefish Community Foundation | Giving Together for the Flathead…",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 33,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.167
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_170cdc9f829b28a9f805",
+      "url": "https://mtelks.org/",
+      "sheetRows": [
+        29,
+        98
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://mtelks.org/",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-27T13:26:54.042Z",
+      "scrapeId": "01a04373-5108-77b9-9b30-312ce006646d",
+      "creditsUsed": 9,
+      "markdownSha256": "5a952c70457bd8a24fc8781d184a006204f586867a983aac18b4a148290546d3",
+      "markdownLength": 7826,
+      "title": "Montana State Elks Association",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 29,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        },
+        {
+          "sheetRow": 98,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.429
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_1d7a94968ff31e1a440c",
+      "url": "https://www.peointernational.org/about-peo",
+      "sheetRows": [
+        69,
+        97
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.peointernational.org/about-peo/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-27T13:27:17.947Z",
+      "scrapeId": "01a04373-5177-733d-9bbc-be71f11fdb93",
+      "creditsUsed": 9,
+      "markdownSha256": "8a60216bef2d536b2864a84a881562598892178815984b48e00cf996f562af20",
+      "markdownLength": 4023,
+      "title": "About P.E.O. - P.E.O. International",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$490 million\\*** in educational assistance, making a difference in women's lives through six philanthrop"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 69,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.333
+        },
+        {
+          "sheetRow": 97,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.313
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_24d3588113f5c34f8b3d",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "sheetRows": [
+        34
+      ],
+      "outcome": "retrieved",
+      "statusCode": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-dae5-70a3-9ac0-82f07bacb8bc",
+      "creditsUsed": 5,
+      "markdownSha256": "aebaa9802c1dada22e39b472819fcf12e20c637eb455a4f4884fdf3471711afa",
+      "markdownLength": 7759,
+      "title": "Whitefish Community Foundation | Giving Together for the Flathead…",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 34,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.2
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_5050d60e7c02d88c5336",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/GRG-RISE-Scholarship-Application-Criteria-2026.pdf",
+      "sheetRows": [
+        36
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-db56-773b-ae62-91b6828102ae",
+      "creditsUsed": 5,
+      "markdownSha256": "e0efd482d62d3a52faebb1b19505b8dcc4ae721d4ca6b47fb3e63a7050cf8bd4",
+      "markdownLength": 9433,
+      "title": "Whitefish Community Foundation | Glacier Restaurant Group R.I.S.E.…",
+      "factCandidates": {
+        "deadline": [
+          "closes March 31, 2026 at 11:59. MST. Awards will be announced in May. **Eligible employees work at one of the following restaurants:** [**2026 GRG RESTAURAN"
+        ],
+        "amount": [
+          "$2,500 each will be awarded to current, eligible employees, or to children or legal dependents of current"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 36,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.8
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_591262dd73cff3135700",
+      "url": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+      "sheetRows": [
+        28
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.elks.org/scholars/scholarships/Legacy.cfm#ytp-id-1",
+      "contentType": "text/html;charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-21T22:17:59.262Z",
+      "scrapeId": "01a04373-55ed-765d-9861-9062ab41149c",
+      "creditsUsed": 9,
+      "markdownSha256": "12ac91c2544b0c7448af6320049014d4234748f09fba0139f0c933248de0f613",
+      "markdownLength": 7127,
+      "title": "Legacy Awards",
+      "factCandidates": {
+        "deadline": [
+          "deadline is February 1, 2027, 11:59 a.m. Pacific Time. NOTE: This is NOON, mid-day, Pacific time.** 4. If the applicant's parent and grandparent are both Elk",
+          "deadline is February 1, 2027 at 11:59 a.m. Pacific Time. 3. The Elk sponsor’s membership will be verified through the BPOE Grand Lodge headquarters. 4. When a"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 28,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_5ea392d00f0785775385",
+      "url": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+      "sheetRows": [
+        50
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-07-18T03:42:41.972Z",
+      "scrapeId": "01a04373-563f-713c-a955-0c8abcf90da4",
+      "creditsUsed": 9,
+      "markdownSha256": "e4a1d70cfa302f7f81eeac3c0b7d84fc64d3a572df9b520ec1620c179c344620",
+      "markdownLength": 8044,
+      "title": "MUS Honor Scholarship | Montana University System",
+      "factCandidates": {
+        "deadline": [
+          "DUE MARCH 15, 2027** [Apply Now, or Manage an Existing Award](https://oche.my.site.com/) ### [2026 MUS Honor Scholarship Recipients](https://mus.edu/Prep",
+          "deadline for their application to be considered complete; 1\\. Take the ACT or SAT test by February 2027\\*\\* 2\\. Apply to and be accepted by one of the eligibl"
+        ],
+        "amount": [
+          "$5,000 a year or $20,000 for four years. The scholarship does not cover mandatory or class fees. Students"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 50,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_5f46cc404915071e6da2",
+      "url": "https://bigskygames.org/character-counts-scholarship/",
+      "sheetRows": [
+        43
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://bigskygames.org/character-counts-scholarship/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-db39-746c-a415-8ce52f0384d8",
+      "creditsUsed": 5,
+      "markdownSha256": "99b13f48769288de558473a6172790d9b177627ad77e6891bc269a4f44284a1c",
+      "markdownLength": 9335,
+      "title": "Character Counts! Scholarship - Big Sky State Games",
+      "factCandidates": {
+        "deadline": [
+          "Deadline: Friday, May 1 The Big Sky State Games has teamed up with the CHARACTER COUNTS! Coalition and Pye-Barker Fire & Safety to recognize the importance of",
+          "Close GDPR Cookie Settings ![Big Sky State Games](https://bigskygames.org/wp-content/plugins/gdpr-cookie-compliance/dist/images/gdpr-logo.png) - Privacy Ov"
+        ],
+        "amount": [
+          "$500 scholarship winners were recognized at the 41st Annual Big Sky State Games Opening Ceremonies event"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 43,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6069b15492266e3d6ec0",
+      "url": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+      "sheetRows": [
+        77
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+      "contentType": "text/html",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-da8b-77d4-a424-4d86b29aecc4",
+      "creditsUsed": 5,
+      "markdownSha256": "7757fc1fe6313ff8bfa6e288af5c25f7706e584321ddd92a7a89ffe0eba4a76b",
+      "markdownLength": 16984,
+      "title": "\n            Youth Serve Montana Scholarships\n        ",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 77,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_619288dac5c590bb65ab",
+      "url": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+      "sheetRows": [
+        49
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-07-17T19:35:28.220Z",
+      "scrapeId": "01a04373-66b8-72fe-8499-6a19fa8cc261",
+      "creditsUsed": 9,
+      "markdownSha256": "47db2438de04e772c07691f3113773cfd3890983c7ce023616686005610cdcc3",
+      "markdownLength": 3059,
+      "title": "Clerk & Recorder Scholarship :: Flathead County",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 49,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.8
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_629b8b3a4e7f6f6855ad",
+      "url": "https://haganscholarships.org/",
+      "sheetRows": [
+        25
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://haganscholarships.org/#",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-21T20:52:41.974Z",
+      "scrapeId": "01a04373-6d54-7474-9762-2333774a6aa5",
+      "creditsUsed": 9,
+      "markdownSha256": "29067070e07c2c0a24a0cbd501fd604410de1cccb63efb4e70043cb8c2200ce8",
+      "markdownLength": 3763,
+      "title": "Hagan Scholarship Foundation – \"Helping students with financial need graduate colletge debt-free\"",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$125,000. The scholarship provides $1,000 to help purchase essential items for college and up to $7,500 each",
+          "$7,500 each semester to attend graduate school or the first two years of a professional program. The Hagan"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 25,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6668a49b5b1206c3c6b8",
+      "url": "https://www.logan.org/",
+      "sheetRows": [
+        56
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.logan.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-26T10:33:34.872Z",
+      "scrapeId": "01a04373-7189-74fb-bf86-786629986186",
+      "creditsUsed": 9,
+      "markdownSha256": "0ed6c31e3de986fb8dad9a8e012239e83dbf240d06125fe0b17e17f94b13251a",
+      "markdownLength": 11839,
+      "title": "Home - Logan Health",
+      "factCandidates": {
+        "deadline": [
+          "Close [Powered by (opens in a new window)](https://wpconsent.com/powered-by/?utm_source=liteplugin&utm_medium=poweredby&utm_campaign) Blackbaud Your suppor"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 56,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.4
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6a76a1c0215f25a48dbb",
+      "url": "https://horatioalger.org/scholarships/",
+      "sheetRows": [
+        17,
+        30,
+        31
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://horatioalger.org/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-26T16:00:42.350Z",
+      "scrapeId": "01a04373-7620-735c-ad28-4e51a245f694",
+      "creditsUsed": 9,
+      "markdownSha256": "b50449795bb1b459b59c9cfb80fd45c3ff36565e5047534944a2812bee6ef72e",
+      "markdownLength": 3254,
+      "title": "Scholarships | Horatio Alger",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 17,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.833
+        },
+        {
+          "sheetRow": 30,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.417
+        },
+        {
+          "sheetRow": 31,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.833
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6c41ca9126289625eb8e",
+      "url": "https://responsibilitymatters.mtrevenue.gov/scholarship/",
+      "sheetRows": [
+        9
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://revenue.mt.gov/ResponsibilityMatters/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-23T23:22:24.216Z",
+      "scrapeId": "01a04373-7a60-7024-b1f9-105fd722c96c",
+      "creditsUsed": 9,
+      "markdownSha256": "765bcfdb7983be437b5f2d028edd2ca299267d3b504e1a4e67efabc3b1493def",
+      "markdownLength": 2031,
+      "title": "\n\t\t\tResponsibility Matters\n\t\t",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 9,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6dd168927d08e9d00c71",
+      "url": "http://www.student-view.com/ScholarshipWmap.html",
+      "sheetRows": [
+        72
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "http://www.student-view.com/ScholarshipWmap.html",
+      "contentType": "text/html",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-dac7-769a-b9b5-3566cba44259",
+      "creditsUsed": 5,
+      "markdownSha256": "459de82683d52476d9c5600bee420678ee6f15a271ac1ad9fd7662e6c9ebd654",
+      "markdownLength": 9913,
+      "title": "OFFICIAL Student -View 2020 Scholarships for High School Seniors",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$10,000 | <PRIVATE_PERSON> | <PRIVATE_PERSON> | <PRIVATE_PERSON> HighSchool | CA | | $1,000 | <PRIVATE_PERS",
+          "$1,000 | <PRIVATE_PERSON> | <PRIVATE_PERSON> | Lebanon High School | OH | | $500 | <PRIVATE_PERSON> | <PRI",
+          "$500 | <PRIVATE_PERSON> | <PRIVATE_PERSON> | Coon Rapids High School | MN | | $500 | <PRIVATE_PERSON> |",
+          "$500 | <PRIVATE_PERSON> | <PRIVATE_PERSON> | Allen Park High School | MI | | $500 | <PRIVATE_PERSON> | C",
+          "$500 | <PRIVATE_PERSON> | A. | KIPP Nashville Collegiate High School | TN | | $500 | <PRIVATE_PERSON> |"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 72,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6dec62a8b9aa539bf877",
+      "url": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+      "sheetRows": [
+        79
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-e3f6-774c-a050-2ee5d05a2e2f",
+      "creditsUsed": 5,
+      "markdownSha256": "42fac5c44133f9a34842f9c643daae84d884c356aebc020666d2c409060dae25",
+      "markdownLength": 61467,
+      "title": "Scholarships - Earn money to pay for school",
+      "factCandidates": {
+        "deadline": [
+          "closes March 31.** Design our next sticker – and have your design inspire Montana high school students to find their path after high school! - **The top two",
+          "closes Mar. 1 **One Application, Mutiple Scholarships.** Includes: - **$2,000 Reach Higher Montana Scholarship**(50)(Seniors) - **$2,000 Carl Valvoda Schola",
+          "deadline? - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the appl",
+          "Deadline: September 15, Spring Deadline: February 15.** [Apply Today!](https://awardmontana.mus.edu/#Gianforte) [**Read more**](https://reachhighermontana.org",
+          "closes Nov. 30.** **To enter, students need to:** - **Grab a sticker from the sticker sheet.** Check with your counselor. - **Put it on something.** (water"
+        ],
+        "amount": [
+          "$1,500 Scholarship\\\\ \\\\ <PRIVATE_PERSON> - Glacier](https://reachhighermontana.org/application/files/9017/",
+          "$1,500 Scholarship\\\\ \\\\ <PRIVATE_PERSON>- CM Russell](https://reachhighermontana.org/application/files/971",
+          "$1,000 Scholarship\\\\ \\\\ <PRIVATE_PERSON> - Helena](https://reachhighermontana.org/application/files/2517/7",
+          "$1,000 Scholarship\\\\ \\\\ <PRIVATE_PERSON> - <PRIVATE_PERSON>](https://reachhighermontana.org/application/fi",
+          "$500 Scholarship\\\\ \\\\ <PRIVATE_PERSON> - Shelby](https://reachhighermontana.org/application/files/6117/7"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 79,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6ec6e2f4657c7c11d959",
+      "url": "https://soroptimistwhitefish.org/about/",
+      "sheetRows": [
+        65
+      ],
+      "outcome": "inconclusive_retrieval",
+      "statusCode": null,
+      "finalUrl": null,
+      "contentType": null,
+      "cacheState": null,
+      "cachedAt": null,
+      "scrapeId": null,
+      "creditsUsed": null,
+      "markdownSha256": null,
+      "markdownLength": 0,
+      "title": null,
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [],
+      "failureCode": "1",
+      "failureClass": "authentication_or_login"
+    },
+    {
+      "sourceId": "p5src_6f6db7a9cf95646a2398",
+      "url": "https://whitefisheducationfoundation.org/scholarships/",
+      "sheetRows": [
+        2,
+        14,
+        62,
+        85,
+        88,
+        89,
+        91,
+        92,
+        93
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://whitefisheducationfoundation.org/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-e8e3-7005-bd41-6c358d2412ff",
+      "creditsUsed": 5,
+      "markdownSha256": "7ab83d74311ec42abbc86426fa66918d5bcfd5ecbe0c165ac50efe455c325c62",
+      "markdownLength": 5335,
+      "title": "Scholarships - Whitefish Education Foundation",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1,000 and can be positioned as funds awarded the same year or set up as longer-range, recurring awards. O",
+          "$5,000) <PRIVATE_PERSON> was born in Whitefish and graduated from WHS in <PRIVATE_DATE>. He was an outstan",
+          "$2,000) Since its inception in 2009, the <PRIVATE_PERSON> Scholarship Fund has been awarded to students wi",
+          "$500) The Alumni Scholarship was established at the conclusion of the Class of 1965's 50th reunion to as",
+          "$1,000) The <PRIVATE_PERSON>/DKG Lambda Scholarship is awarded to a female student who is planning to majo"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 2,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        },
+        {
+          "sheetRow": 14,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        },
+        {
+          "sheetRow": 62,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        },
+        {
+          "sheetRow": 85,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.4
+        },
+        {
+          "sheetRow": 88,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 89,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        },
+        {
+          "sheetRow": 91,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.333
+        },
+        {
+          "sheetRow": 92,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.667
+        },
+        {
+          "sheetRow": 93,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.333
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_6ff451e61ff01da87f80",
+      "url": "https://www.usjcisenate.org/index.php/scholarship-program",
+      "sheetRows": [
+        26,
+        27
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.usjcisenate.org/index.php/scholarship-program",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-eab8-741f-a531-8ff89533da9c",
+      "creditsUsed": 5,
+      "markdownSha256": "c4fdbbf29d2b038b98599c0fbc489775242ea8a41d2a44d2f9732ab235e919d0",
+      "markdownLength": 8192,
+      "title": "Scholarship",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1500 or $2000 scholarship grants to graduating high school seniors who will continue their education at",
+          "$1000 will be awarded to graduating high school seniors who will attend an accredited vocational, technic"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 26,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        },
+        {
+          "sheetRow": 27,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_725ab6b2479d46d0bdc0",
+      "url": "https://www.msgagolf.org/msga-scholarship/",
+      "sheetRows": [
+        51
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.msgagolf.org/juniors/scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-f220-710f-9294-94d4b8b598d0",
+      "creditsUsed": 5,
+      "markdownSha256": "93b1a713c4a4a84c4601a93dd3771595f2fd0a78835976a15c67a45704f71f46",
+      "markdownLength": 884,
+      "title": "Scholarships - Montana State Golf Association",
+      "factCandidates": {
+        "deadline": [
+          "deadline for 2026 was March 15th.** **Selected recipients will be notified soon. Please check again in the fall for 2027's application!**"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 51,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.4
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_778d93ebfcb00e805a00",
+      "url": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+      "sheetRows": [
+        19
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-f3bb-7257-972e-3072ceeec6a9",
+      "creditsUsed": 5,
+      "markdownSha256": "257a1ab1f005e27af1791f5283f01c8b1780e2a8aa5611195182484c3238d54f",
+      "markdownLength": 5000,
+      "title": "Internship and Scholarship Opportunities - Whitefish Lake Institute",
+      "factCandidates": {
+        "deadline": [
+          "Close Search](https://whitefishlake.org/internship-and-scholarship-opportunities/#) # InternshipandScholarshipOpportunities One important aspect of our edu",
+          "Due March 15th [Internship Application](https://whitefishlake.org/wp-content/uploads/2026/04/InternshipApplicationProcessForm-_2026.pdf) ## High School S",
+          "Due April 15th [Scholarship Application](https://whitefishlake.org/wp-content/uploads/2026/04/ScholarshipApplicationProcessForm_2026.pdf) ## Graduate The",
+          "Close Menu](https://whitefishlake.org/internship-and-scholarship-opportunities/#) Notifications StripeM-Inner"
+        ],
+        "amount": [
+          "$3000 scholarship to the intern’s college or university for tuition, or the scholarship can be applied to",
+          "$3000 Application: Cover Letter, WLI Application or University Specific Intern Application, Professor Ref",
+          "$500 Application: WLI Application, Two Teacher References, Transcripts, Essay – Due April 15th [Scholars"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 19,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_7be90f6c3daa16ec9182",
+      "url": "https://www.nhs.us/students/the-nhs-scholarship/",
+      "sheetRows": [
+        24
+      ],
+      "outcome": "retrieved",
+      "statusCode": 595,
+      "finalUrl": "http://www.nationalhonorsociety.org/advisers/the-nhs-scholarship/",
+      "contentType": "text/plain; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-f609-71ec-b58f-03ad03f75dd5",
+      "creditsUsed": 5,
+      "markdownSha256": "37e1ee2d9bc32a897ccaa914ff3f0fc2aafe23bcf88885ba302c89070b388793",
+      "markdownLength": 234,
+      "title": null,
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 24,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_7cf8b5514aeacbdbe8fa",
+      "url": "https://whitefishcommunityfoundation.org/glacier-restaurant-group-r-i-s-e-scholarship-program/",
+      "sheetRows": [
+        37
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-fbee-74f1-a817-a31b9a10ea60",
+      "creditsUsed": 5,
+      "markdownSha256": "e0efd482d62d3a52faebb1b19505b8dcc4ae721d4ca6b47fb3e63a7050cf8bd4",
+      "markdownLength": 9433,
+      "title": "Whitefish Community Foundation | Glacier Restaurant Group R.I.S.E.…",
+      "factCandidates": {
+        "deadline": [
+          "closes March 31, 2026 at 11:59. MST. Awards will be announced in May. **Eligible employees work at one of the following restaurants:** [**2026 GRG RESTAURAN"
+        ],
+        "amount": [
+          "$2,500 each will be awarded to current, eligible employees, or to children or legal dependents of current"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 37,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_7f2cfd944c0ff97ca526",
+      "url": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+      "sheetRows": [
+        23
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04373-fcab-71ef-8ebd-2306cb5e6f43",
+      "creditsUsed": 5,
+      "markdownSha256": "9680c7c50acfdd6a4725bf49f48a9856f5c5d9116e6576295f46dbbb2d5792d1",
+      "markdownLength": 9739,
+      "title": "Aviation Scholarships | Montana Department of Transportation (MDT)",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$2,000 scholarship is available to help defray the costs of flight instruction in pursuit of a pilot ratin",
+          "$2,000 scholarship is available to help defray the costs of aircraft mechanic certifications. Preference w",
+          "$2,000 scholarship to financially assist a student pilot in obtaining their FAA certificates.Aviation Orga",
+          "$2,000 scholarship to financially assist a student aircraft mechanic in obtaining their FAA certificates.B",
+          "$2,500 scholarships will be awarded in memory of pilot <PRIVATE_PERSON>. The awards will be given to those"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 23,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_8391445e177e8d70a388",
+      "url": "https://bspinternational.org/home.php",
+      "sheetRows": [
+        42
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://bspinternational.org/cgi-sys/suspendedpage.cgi",
+      "contentType": "text/html",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-032b-72c6-af0a-780128c9767f",
+      "creditsUsed": 5,
+      "markdownSha256": "0d1263c45c33568bca0b32a30d4dd43a06476b4fa628bcd04a73c0357566e983",
+      "markdownLength": 290,
+      "title": null,
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 42,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_84a2cda542c62e03e0dd",
+      "url": "https://portal.clubrunner.ca/1873",
+      "sheetRows": [
+        39
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://portal.clubrunner.ca/1873",
+      "contentType": "text/html",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-047e-76ad-bb9e-2431acb16a4e",
+      "creditsUsed": 5,
+      "markdownSha256": "66d272465aa0492c9a9e529fa6de83948ccc5e30c0695835de2760ed0ffe9721",
+      "markdownLength": 9808,
+      "title": "\n    Home Page | Rotary Club of Whitefish\n",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 39,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_8521e931d21514b7f2c0",
+      "url": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+      "sheetRows": [
+        64
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-0400-7698-a98c-6cc19a93c543",
+      "creditsUsed": 5,
+      "markdownSha256": "532e61561953f22a3c4dfdcadf9f8bfdef8e5c06bd770fd2c6b2eb66ebec07b8",
+      "markdownLength": 4884,
+      "title": "Annual Scholarships - Flathead Democratic Women - Democrats",
+      "factCandidates": {
+        "deadline": [
+          "due date is April 3, 2026. Return completed applications to: FCDW c/o <PRIVATE_PERSON> 1409 Firemans Island Rd Bigfork, MT 59911 ‍ [Apply now](https://cd"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 64,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.667
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_a772baf692a072905f82",
+      "url": "https://waterenvtech.com/",
+      "sheetRows": [
+        60
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://waterenvtech.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-27T06:06:43.366Z",
+      "scrapeId": "01a04374-09d9-7189-8f4f-26111c88707e",
+      "creditsUsed": 5,
+      "markdownSha256": "30b806050bd50385d9bceafac40a447c034a60293af2186328c75fafee8f233b",
+      "markdownLength": 18387,
+      "title": "Certified Environmental & Engineering Consultants in Montana | Water and Environmental Technologies",
+      "factCandidates": {
+        "deadline": [
+          "due diligence, air quality, and restoration. [Planning Services](https://waterenvtech.com/planning-services/) [Planning Services Projects](https://watere",
+          "Due to security reasons we are not able to show or modify cookies from other domains. You can check these in your browser security settings. Check to ena"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 60,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.833
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_b11d21b4848e31b6c40c",
+      "url": "https://cityofwhitefish.org/252/Police",
+      "sheetRows": [
+        66
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.cityofwhitefish.gov/252/Police",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-0d79-74fe-8296-b769cb37c018",
+      "creditsUsed": 5,
+      "markdownSha256": "3445237ce75f8cf15b47eece588aa49aa9aed1c3dc729cee87f06d2f3a979a75",
+      "markdownLength": 1279,
+      "title": "Police | Whitefish, MT",
+      "factCandidates": {
+        "deadline": [
+          "Close **×**"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 66,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.4
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_ba33183b1e3b60de2338",
+      "url": "https://flatheadcd.org/",
+      "sheetRows": [
+        32
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://flatheadcd.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-0cec-7469-9c52-fdf17fa14074",
+      "creditsUsed": 5,
+      "markdownSha256": "a0d9eac00fcf2a7bcafba6c374af21d716ccd2a2f6d715be3ec845c780c7f090",
+      "markdownLength": 2540,
+      "title": "Flathead Conservation District – Working to conserve soil, water, and other natural resources of the state of Montana.",
+      "factCandidates": {
+        "deadline": [
+          "Close mobile menu](about:blank#)"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 32,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_bd719700830566fe66e8",
+      "url": "https://www.mgga.org/",
+      "sheetRows": [
+        59
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://mgga.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-0f90-701b-a8e6-c32a99b91e45",
+      "creditsUsed": 5,
+      "markdownSha256": "6ece1826dd79e5d2a1ab135711ed80c7c4ce7858f367c498e91ff556f80b2405",
+      "markdownLength": 1822,
+      "title": "Montana Grain Growers Association – Representing the Worlds Finest Grain",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 59,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_cc35f609920e012f187c",
+      "url": "https://www.elks.org/scholars/about.cfm",
+      "sheetRows": [
+        21
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.elks.org/scholars/about.cfm",
+      "contentType": "text/html;charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-1c91-759d-b564-4ddf70e31740",
+      "creditsUsed": 5,
+      "markdownSha256": "f99d0e0fd4302e0920fd6b0ff4b6a4e41ea02984bd2520b3552898d377894778",
+      "markdownLength": 2250,
+      "title": "About",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$4 million in college scholarships to at least 850 outstanding, service-minded high school seniors. On"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 21,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_cd0e9b51d2167e41d833",
+      "url": "https://www.glaciermedicalassociates.com/",
+      "sheetRows": [
+        73
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.glaciermedicalassociates.com/",
+      "contentType": "text/html;charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-2523-75cf-914d-bf890aa54b19",
+      "creditsUsed": 5,
+      "markdownSha256": "1c168122717479a7a51f872023b84f49a7db7ac811ef808e2c60f87fc75136dd",
+      "markdownLength": 11401,
+      "title": "Glacier Medical Associates – Whitefish, Columbia Falls, Evergreen",
+      "factCandidates": {
+        "deadline": [
+          "due! Share your favorite self](https://images.squarespace-cdn.com/content/v1/65cb9d2f761e16307cc20ffd/[redacted-phone]04-11KQZNM9V52897349MC8/image-asset"
+        ],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 73,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_ce3fae47f417e73c0d35",
+      "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+      "sheetRows": [
+        150
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-29b5-759e-a08a-988a886d2d74",
+      "creditsUsed": 5,
+      "markdownSha256": "40fbcb8a60b2b8bd0ccd2683c5fd69d2e2483fe7978f05562915b9412bd996ce",
+      "markdownLength": 12545,
+      "title": "Scholarships - Flathead Electric Cooperative",
+      "factCandidates": {
+        "deadline": [
+          "due February 22, 2026.** **Applications are now closed. Please check back next year.** ### Lineworker Scholarships Flathead Electric Cooperative funds sc",
+          "due January 11, 2026.** ## BEPC Scholarship Basin Electric Power Cooperative (BEPC) Scholarship Program will award one $2,500 scholarship each year to a"
+        ],
+        "amount": [
+          "$120,000 in scholarships each year. ## FEC Scholarship Individual scholarships range from $1,500 to $6,000.",
+          "$5,000 scholarships are available annually for local students who want to attend Montana Tech’s Pre-Appren",
+          "$2,500 scholarship each year to a Flathead Electric Cooperative member’s child graduating from high school",
+          "$500 scholarship to a regional electric cooperative member’s child graduating from high school or curren"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 150,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_cee8078c599c3dbc66b5",
+      "url": "https://www.buildingflathead.com/",
+      "sheetRows": [
+        78
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.buildingflathead.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-2c71-727c-b283-dba94c950470",
+      "creditsUsed": 5,
+      "markdownSha256": "9981fab4e685f598c631413c0d5591ead8f8348f68995f80acf28cb4103e6125",
+      "markdownLength": 9862,
+      "title": "Flathead Building Association | Flathead Valley, Montana",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 78,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_d225a041cc2c7ad6733f",
+      "url": "https://www.parksidefcu.com/community/#scholarship",
+      "sheetRows": [
+        47
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.parksidefcu.com/community/#scholarship",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-303d-767a-a0ac-3589cde029eb",
+      "creditsUsed": 5,
+      "markdownSha256": "8dba350c538de4f60fe27cbf3832466f8cfc4f52bbc574c62bb71a3e03ddec94",
+      "markdownLength": 37720,
+      "title": "Community Involvement & Partnerships - Park Side Credit Union",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1.00 per month to the Park Side Charitable Foundation, together we can support our communities with **$3",
+          "$300 gift cards to Quinn’s Hot Springs**. All proceeds benefit the Park Side Charitable Foundation, help",
+          "$5,000](https://glaciersymphony.org/)** ![](https://www.parksidefcu.com/wp-content/uploads/2025/11/thumbna",
+          "$10,000** ![](https://www.parksidefcu.com/wp-content/uploads/2025/11/DiamondRaffle_ARTSMissoula-1.png)**[AR",
+          "$2,000](https://artsmissoula.org/)** ![](https://www.parksidefcu.com/wp-content/uploads/2025/12/20251121_["
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 47,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_d6404e336f856e909b13",
+      "url": "https://orthorehab.com/",
+      "sheetRows": [
+        18
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://orthorehab.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-26T22:36:56.345Z",
+      "scrapeId": "01a04374-363f-751a-9dd9-4b723d3cd268",
+      "creditsUsed": 5,
+      "markdownSha256": "3cb2d771267285f276111d81c54dac87fed4ddc9c711031aa9e10c116f197024",
+      "markdownLength": 15742,
+      "title": "Home - OrthoRehab Physical Therapy",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 18,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_daf2e06e47d76737fafc",
+      "url": "https://www.flatheadelectric.com/",
+      "sheetRows": [
+        44,
+        46
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.flatheadelectric.com/",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-26T16:20:39.013Z",
+      "scrapeId": "01a04374-3b09-70ae-a37f-5f7c60b45709",
+      "creditsUsed": 5,
+      "markdownSha256": "b212fd2759d0cbdf5fc49c090461d1cce913f3c29714dee029736aa37f593212",
+      "markdownLength": 45497,
+      "title": "Home - Flathead Electric Cooperative",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 44,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        },
+        {
+          "sheetRow": 46,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_dc1b902b9bea38023b70",
+      "url": "https://soroptimistwhitefish.org/scholarships/",
+      "sheetRows": [
+        81
+      ],
+      "outcome": "inconclusive_retrieval",
+      "statusCode": null,
+      "finalUrl": null,
+      "contentType": null,
+      "cacheState": null,
+      "cachedAt": null,
+      "scrapeId": null,
+      "creditsUsed": null,
+      "markdownSha256": null,
+      "markdownLength": 0,
+      "title": null,
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [],
+      "failureCode": "1",
+      "failureClass": "authentication_or_login"
+    },
+    {
+      "sourceId": "p5src_e34bfb2120c94b762cda",
+      "url": "https://www.donkchevy.com/community-involvement.htm",
+      "sheetRows": [
+        8
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.donkchevy.com/community-involvement.htm",
+      "contentType": "text/html;charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-41a9-761a-a615-54fd1e89c8c8",
+      "creditsUsed": 5,
+      "markdownSha256": "19e62da92d6f6292ca5d945fe61b06aa3b66bee6b1ed46049a849c4ba2a51591",
+      "markdownLength": 11218,
+      "title": "Community Involvement | Don K Chevrolet",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$30K](https://www.donkchevy.com/affordable-suvs.htm) #### Top Search - [Low Mileage Used Vehicles](http",
+          "$30k](https://www.donkchevy.com/bargain-inventory/index.htm) - [Fuel Efficient Vehicles](https://www.do"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 8,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_e3fff0a51f811ddbe0f2",
+      "url": "https://support.blackmountainsoftware.com/scholarship.html",
+      "sheetRows": [
+        11
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://support.blackmountainsoftware.com/scholarship.html",
+      "contentType": "text/html",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-546e-7391-93c5-bd46f1b280ff",
+      "creditsUsed": 5,
+      "markdownSha256": "2b0049ff57f9e1cec5ce91a4d564bdf6946ade1a78919ea24c17d2f94e987cd4",
+      "markdownLength": 1135,
+      "title": "Black Mountain Software | Accounting and Billing Software",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1,000.00 each. Scholarship payment will be made directly to the school that the applicant will be attending."
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 11,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_e58d67da78228ca7ca1f",
+      "url": "https://www.fvcc.edu/student-admissions/financial-aid/types-of-financial-aid/scholarships/",
+      "sheetRows": [
+        80
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.fvcc.edu/admissions-financial-aid/financial-aid-scholarships/scholarships",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-554f-7159-8c63-f29b11b52fb3",
+      "creditsUsed": 5,
+      "markdownSha256": "3477d5c688e963287425eab1029ec70d1cfcb715868d712350407b0b37bfa720",
+      "markdownLength": 19625,
+      "title": "Scholarships and Waivers - Flathead Valley Community College",
+      "factCandidates": {
+        "deadline": [
+          "Deadline:** Applications are now open for Summer 2026 and Spring 2027 scholarships. The deadline for the Summer 2026 scholarship is April 30th, 2026. The dead",
+          "Deadline:** Students must submit this application to the Financial Aid Office no later than the last day of the term in which they wish to use this award (e.g",
+          "deadline to avoid late fees. Submitting a waiver application after the payment deadline—or being awarded a waiver after charges are posted—does not remove or",
+          "Deadline:** Applications open December 15th each year and are collected until all awarding funds have been exhausted. Students not selected for an initial awa",
+          "Deadline: Applications for FVCC’s STEM Experience cohort are reviewed on a rolling basis dependent upon availability in the program.** [Apply Now](https://www"
+        ],
+        "amount": [
+          "$250 - $10,000 Apply for over 850 institutional scholarships through a single application! Full Requirem",
+          "$500 - $1,000 Scholarships for new incoming, degree-seeking students based on academic merit. Full Requi",
+          "$10,000/yr Need-based scholarships for students exploring STEM career paths. Full Requirements and Details▼",
+          "$2,500 Support for FVCC graduates transferring to either Montana State University or University of Montana",
+          "$1,000 - $2,000 Support for FVCC graduates transferring to a four-year institution with demonstrated finan"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 80,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_e8323d13c3f28d922978",
+      "url": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+      "sheetRows": [
+        53
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-5f48-70ce-9d03-3edc9f7452e2",
+      "creditsUsed": 5,
+      "markdownSha256": "13ba309b4e92639b5b6874ff5407c0fa7365aa40afb9a731ce06cf42d5e51382",
+      "markdownLength": 8057,
+      "title": "Whitefish Lions - Montana Lions Club | District 37",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 53,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_eb3ea84df8818b7bb0fe",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "sheetRows": [
+        38
+      ],
+      "outcome": "retrieved",
+      "statusCode": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-6487-775a-b972-355db57e4904",
+      "creditsUsed": 5,
+      "markdownSha256": "aebaa9802c1dada22e39b472819fcf12e20c637eb455a4f4884fdf3471711afa",
+      "markdownLength": 7759,
+      "title": "Whitefish Community Foundation | Giving Together for the Flathead…",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 38,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.333
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_eff158d292037b20a111",
+      "url": "https://montanafarmersunion.com/education/scholarships-grants/",
+      "sheetRows": [
+        58
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://montanafarmersunion.com/education/scholarships-grants/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-68fe-762e-853b-3c31c846d792",
+      "creditsUsed": 5,
+      "markdownSha256": "f2e224cf34e0981e9c73fd86253ceb1962e397c79844161536c9b69b44e08bee",
+      "markdownLength": 7893,
+      "title": "Montana Farmers Union | Scholarships & Grants",
+      "factCandidates": {
+        "deadline": [
+          "Deadline: May 4 • Applications Closed Scholarships ### MFU Foundation Scholarships MFU Foundation Scholarships support students pursuing education connected t",
+          "Deadline: April 3 • Applications Closed Youth Opportunity ## $100 4-H Sentence Grants Montana Farmers Union knows 4-H does a fantastic job educating youth abo"
+        ],
+        "amount": [
+          "$100 4-H Sentence Grants Montana Farmers Union knows 4-H does a fantastic job educating youth about farm",
+          "$10,000 available** to support Montana 4-H clubs through the Sentence Grant program. ### How It Works - Dis",
+          "$100 grant for. - Have a club officer and club leader sign the application. - Submit the completed appli",
+          "$100 4-H Sentence Grant 2026 – CLUB NAME** in the email subject line. [Find Your MFU Staff Ambassador](h",
+          "$1,500 MFU $1,000 <PRIVATE_PERSON> Memorial Scholarship ### Lance Rutledge Big Sandy $1,500 MFU $1,000 <PR"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 58,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_f0fc6ea03c3836b282a3",
+      "url": "https://vfw.org/community/youth-and-education/youth-scholarships",
+      "sheetRows": [
+        20
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.vfw.org/community/youth-and-education/youth-scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-25T17:34:08.076Z",
+      "scrapeId": "01a04374-6fe0-71fe-be4a-1e78eb0c9936",
+      "creditsUsed": 5,
+      "markdownSha256": "36b6c8288515e8b006ba3b1f6b1e633a73b7f917b9d8936e87ba8664574ed615",
+      "markdownLength": 10337,
+      "title": "\n\tYouth Scholarships - VFW\n",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$35,000 college scholarship or a patriotic middle school student interested in winning $5,000, these schola",
+          "$1.6 million in educational scholarships and incentives awarded through the program. The national firs",
+          "$35,000 scholarship paid directly to the recipient’s American university, college or vocational/technical s",
+          "$21,000, with the first place winner from each VFW Department (state) winning a scholarship of at least $1,0",
+          "$35,000 college scholarship. Sponsored by VFW Post 7738 in Bath, [watch as she delivered her winning essay]"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 20,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.938
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_f1836195dbd4bfe4a7a3",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Montana-Coffee-Traders-Scholarship-Application-Criteria.pdf",
+      "sheetRows": [
+        35
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-7143-7739-a4a7-a85885d38580",
+      "creditsUsed": 5,
+      "markdownSha256": "b39b60188cfe9a696d78e61d0722325a0f517c6cc1ccd8cfb00f3221cb2d7902",
+      "markdownLength": 9328,
+      "title": "Whitefish Community Foundation | Montana Coffee Traders Scholarship",
+      "factCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1,000 scholarship will be awarded to an eligible MCT employee or to a child or legal dependent of a curre",
+          "$1,000 scholarship will be awarded to an eligible Flathead Valley resident. The Montana Coffee Traders Sch"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 35,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_f3a6baa416a6e7eb8cc7",
+      "url": "https://www.smilemontana.com/news/scholarship",
+      "sheetRows": [
+        67
+      ],
+      "outcome": "retrieved",
+      "statusCode": 404,
+      "finalUrl": "https://www.smilemontana.com/news/scholarship",
+      "contentType": "text/html;charset=utf-8",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "scrapeId": "01a04374-73ba-7712-9d64-929147f68da7",
+      "creditsUsed": 5,
+      "markdownSha256": "44421b3b488c5c8c0b39fbad42b510c6bc12d9b67d86064a803f782b948081df",
+      "markdownLength": 465,
+      "title": "Smile Montana Dental Center",
+      "factCandidates": {
+        "deadline": [],
+        "amount": []
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 67,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    },
+    {
+      "sourceId": "p5src_f71e0e21a121e9282890",
+      "url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+      "sheetRows": [
+        22
+      ],
+      "outcome": "retrieved",
+      "statusCode": 200,
+      "finalUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+      "contentType": "text/html; charset=UTF-8",
+      "cacheState": "hit",
+      "cachedAt": "2026-08-25T16:29:13.335Z",
+      "scrapeId": "01a04374-7eb8-7212-8516-c13d3dc8813a",
+      "creditsUsed": 5,
+      "markdownSha256": "abb9a90479a7fb3352eaffc9e875c1a2c41a9c4d7bfbfc4b3b2f05f8215776a3",
+      "markdownLength": 16483,
+      "title": "How to Apply - Jack Kent Cooke Foundation",
+      "factCandidates": {
+        "deadline": [
+          "deadline. **January 2027** Semifinalists are announced. All applicants will be notified of their status via email. **March 2027** Scholarship recipients are a",
+          "close on November 11, 2026. If you have questions about your application or the program, please do not call the Foundation. Please direct them to [[redacte"
+        ],
+        "amount": [
+          "$55,000 per year to pursue a bachelor’s degree at any accredited undergraduate institution - Ability to pur",
+          "$95,000. During the selection process, the Foundation will conduct a full financial review which will take",
+          "$95,000. Last year’s cohort of new College Scholarship recipients had an average family income of approxima",
+          "$42,000. During the selection process, the Foundation will conduct a full financial review which will take"
+        ]
+      },
+      "nameMatches": [
+        {
+          "sheetRow": 22,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "failureCode": null,
+      "failureClass": null
+    }
+  ],
+  "bodySha256": "ee5d977d8fce02654f696cc19c0057ffb0a6762843ed44cc7b19e4a2dc65eec6"
+}

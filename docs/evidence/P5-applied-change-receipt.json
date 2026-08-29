@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "sheetName": "Master Database",
+  "sheetId": 0,
+  "authorityEvidence": "docs/evidence/P5-write-authorization.md",
+  "proposalReviewBodySha256": "4ef5abed1c789c204ec9714469e0849077bcadc81df9943cd64310505bdfdd5b",
+  "proposalBodySha256": "e449012a16c6798e6fd81eb7df1f82b7cc201951aaa0eebef8f191243a25e583",
+  "backup": {
+    "spreadsheetId": "1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ",
+    "revisionId": "1",
+    "nativeCellPayloadSha256": "fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9"
+  },
+  "prewriteRevisionId": "222",
+  "postwriteRevisionId": "223",
+  "previousRevisionIdAfterWrite": "222",
+  "appliedAt": "2026-08-27T15:04:43Z",
+  "requestCount": 25,
+  "replyCount": 25,
+  "rejectedCount": 0,
+  "operations": [
+    {
+      "proposalId": "p5prop_046bdc5acd313bf0a34f",
+      "sheetRow": 9,
+      "cell": "A9",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 46002,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_e78ec41b4335226f8759",
+      "sheetRow": 9,
+      "cell": "F9",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://responsibilitymatters.mtrevenue.gov/scholarship/",
+      "observedOldHyperlinkSanitized": "https://responsibilitymatters.mtrevenue.gov/scholarship/",
+      "liveTrackingQueryVariantExcludedFromReceipt": true,
+      "newHyperlink": "https://revenue.mt.gov/ResponsibilityMatters/scholarship/",
+      "displayedValueBeforeAndAfter": "ABCD Scholarship Overview",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_73ddf248e2017a3160fd",
+      "sheetRow": 9,
+      "cell": "H9",
+      "field": "applicationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+      "observedOldHyperlinkSanitized": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://revenue.mt.gov/ResponsibilityMatters/scholarship/",
+      "displayedValueBeforeAndAfter": "Application",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_3a036f3a5d9d56bd3fcc",
+      "sheetRow": 24,
+      "cell": "A24",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 45953,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_73d10aaba96b5e82f048",
+      "sheetRow": 24,
+      "cell": "B24",
+      "field": "dueDate",
+      "category": "deadline_correction",
+      "oldValue": 45985,
+      "newValue": 46346,
+      "postFormattedValue": "11/20/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_dd20de76836fd49682e5",
+      "sheetRow": 24,
+      "cell": "F24",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://www.nhs.us/students/the-nhs-scholarship/",
+      "observedOldHyperlinkSanitized": "https://www.nhs.us/students/the-nhs-scholarship/",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+      "displayedValueBeforeAndAfter": "NHS Scholarship Homepage",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_84d02f7ee70208189622",
+      "sheetRow": 24,
+      "cell": "H24",
+      "field": "applicationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://webportalapp.com/sp/login_saml/nhs2026",
+      "observedOldHyperlinkSanitized": "https://webportalapp.com/sp/login_saml/nhs2026",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://www.nationalhonorsociety.org/create-an-account/",
+      "displayedValueBeforeAndAfter": "Online Application",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_cc7181b478476d607f86",
+      "sheetRow": 33,
+      "cell": "A33",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 45932,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_48793a275193d5c1a8ff",
+      "sheetRow": 33,
+      "cell": "F33",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "observedOldHyperlinkSanitized": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://whitefishcommunityfoundation.org/menu/dorothy-and-luther-campbell-scholarship",
+      "displayedValueBeforeAndAfter": "Luther Campbell Scholarship - Whitefish Community Foundation",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_22ee7cd6adf0d0fe592a",
+      "sheetRow": 34,
+      "cell": "A34",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 45932,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_f54fc43784f7ef2550b4",
+      "sheetRow": 34,
+      "cell": "F34",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "observedOldHyperlinkSanitized": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://whitefishcommunityfoundation.org/menu/jean-atkinson-driggers-scholarship",
+      "displayedValueBeforeAndAfter": "Jean Atkinson Driggers Scholarship - Whitefish Community Foundation",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_63063dbbb215d027c0d2",
+      "sheetRow": 38,
+      "cell": "A38",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 45932,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_403f2d15ac0039dd22f0",
+      "sheetRow": 38,
+      "cell": "F38",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "observedOldHyperlinkSanitized": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://whitefishcommunityfoundation.org/menu/kiita-foundation-scholarship",
+      "displayedValueBeforeAndAfter": "KIITA Foundation Scholarship",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_eacddbaeb5180f8218d1",
+      "sheetRow": 67,
+      "cell": "A67",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 45918,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_656d6df81b68dea4001b",
+      "sheetRow": 67,
+      "cell": "B67",
+      "field": "dueDate",
+      "category": "deadline_correction",
+      "oldValue": 46113,
+      "newValue": 46127,
+      "postFormattedValue": "4/15/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_22e3837b593902c2bf5e",
+      "sheetRow": 67,
+      "cell": "F67",
+      "field": "informationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://www.smilemontana.com/news/scholarship",
+      "observedOldHyperlinkSanitized": "https://www.smilemontana.com/news/scholarship",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://www.smilemontana.com/scholarship",
+      "displayedValueBeforeAndAfter": "Smile Montana Scholarship Overview",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_51320d062891b922de16",
+      "sheetRow": 67,
+      "cell": "H67",
+      "field": "applicationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://docs.google.com/document/d/1v6ap2g4Bsu7EuyjJNVSaxoOV1z54S5lP/edit",
+      "observedOldHyperlinkSanitized": "https://docs.google.com/document/d/1v6ap2g4Bsu7EuyjJNVSaxoOV1z54S5lP/edit",
+      "liveTrackingQueryVariantExcludedFromReceipt": true,
+      "newHyperlink": "https://www.smilemontana.com/s/Smile-Montana-Scholarship-2026.docx",
+      "displayedValueBeforeAndAfter": "Paper Application",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_d0bdd38065a2b166a830",
+      "sheetRow": 164,
+      "cell": "A164",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 46190,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_c791403c49dde4cd5af4",
+      "sheetRow": 164,
+      "cell": "B164",
+      "field": "dueDate",
+      "category": "deadline_correction",
+      "oldValue": "Annual — May 31",
+      "newValue": "Ongoing",
+      "postFormattedValue": "Ongoing",
+      "numberFormat": null,
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_cf6ae87b922010d7464b",
+      "sheetRow": 167,
+      "cell": "A167",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": 46190,
+      "newValue": 46261,
+      "postFormattedValue": "8/27/2026",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "m/d/yyyy"
+      },
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_20d1c5ed9003dd38ea78",
+      "sheetRow": 167,
+      "cell": "B167",
+      "field": "dueDate",
+      "category": "deadline_correction",
+      "oldValue": "Annual — Feb 15 (opens Oct)",
+      "newValue": "Annual — Mar 1",
+      "postFormattedValue": "Annual — Mar 1",
+      "numberFormat": null,
+      "updateFieldMask": "userEnteredValue",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_29141bad2fda6d1326a5",
+      "sheetRow": 172,
+      "cell": "A172",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": "2026-07-05",
+      "newValue": 46261,
+      "postFormattedValue": "2026-08-27",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "yyyy-mm-dd"
+      },
+      "updateFieldMask": "userEnteredValue,userEnteredFormat.numberFormat",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_98356e78fa3957fcb8e3",
+      "sheetRow": 172,
+      "cell": "H172",
+      "field": "applicationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "observedOldHyperlinkSanitized": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://form.jotform.com/250345411585151",
+      "displayedValueBeforeAndAfter": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_1b2d59bcefc1190673c4",
+      "sheetRow": 173,
+      "cell": "A173",
+      "field": "lastUpdated",
+      "category": "audit_timestamp",
+      "oldValue": "2026-07-05",
+      "newValue": 46261,
+      "postFormattedValue": "2026-08-27",
+      "numberFormat": {
+        "type": "DATE",
+        "pattern": "yyyy-mm-dd"
+      },
+      "updateFieldMask": "userEnteredValue,userEnteredFormat.numberFormat",
+      "postwriteVerified": true
+    },
+    {
+      "proposalId": "p5prop_fbe5798b98df4a179d8d",
+      "sheetRow": 173,
+      "cell": "H173",
+      "field": "applicationLink",
+      "category": "dead_link_replacement",
+      "oldValue": null,
+      "oldHyperlink": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "observedOldHyperlinkSanitized": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "liveTrackingQueryVariantExcludedFromReceipt": false,
+      "newHyperlink": "https://form.jotform.com/250344617133147",
+      "displayedValueBeforeAndAfter": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "updateFieldMask": "userEnteredFormat.textFormat.link",
+      "postwriteVerified": true
+    }
+  ],
+  "precondition": {
+    "revisionMatched": true,
+    "targetCellDataMatched": true,
+    "trackingQueryVariantsMatchedSanitizedBackupBaseUrl": [
+      "F9",
+      "H67"
+    ]
+  },
+  "verification": {
+    "targetCellsReRead": 25,
+    "targetCellsMatched": 25,
+    "untargetedCellsComparedInEditedRowWindows": 55,
+    "untargetedCellsChanged": 0,
+    "formattingAndDisplayedLinkTextPreserved": true
+  },
+  "idempotency": {
+    "desiredStateDifferenceCountAfterWrite": 0,
+    "secondWriteNotPerformed": true,
+    "rationale": "The exact post-write CellData already equals the approved desired state; repeating the batch would create an unnecessary external revision."
+  },
+  "rollback": {
+    "primary": "Restore the complete native backup spreadsheet identified above.",
+    "alternative": "Apply the inverse of these 25 operations after a fresh revision and CellData precondition check."
+  },
+  "externalEffects": [
+    "Testing spreadsheet Master Database revision advanced from 222 to 223.",
+    "No production spreadsheet, form, application, provider, deployment, or applicant-data effect occurred."
+  ],
+  "bodySha256": "0edbbbab3df47c1cc6e2ce8708a618c00f372b17fedc41dfb3925879e8bb28eb"
+}

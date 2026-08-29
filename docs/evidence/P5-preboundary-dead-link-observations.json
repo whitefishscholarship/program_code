@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "sourceCheckpoint": "57d3540319b70adc7e3de88ce5723023c9783062",
+  "sourceArtifact": "docs/evidence/P5-public-probes.json",
+  "sourceArtifactDigest": "6327b1d1cf9c2b16d78a407854fbd72975848608cc55854a158c2e93b7f40350",
+  "disclosure": "These bounded read-only GET observations occurred before the no-application-fetch router was corrected. No form was submitted and no applicant data was collected.",
+  "awardClosureSupported": false,
+  "receipts": [
+    {
+      "sourceId": "p5src_0783f818afedb3fd59f2",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        33
+      ],
+      "retrievedAt": "2026-08-27T13:37:55.242Z",
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_0783f818afedb3fd59f2:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:55.242Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_233ee668c1c8f42b6152",
+      "url": "https://mfbf.org/Foundation/Foundation-Scholarships",
+      "roles": [
+        "application"
+      ],
+      "sheetRows": [
+        172,
+        173
+      ],
+      "retrievedAt": "2026-08-27T13:37:56.446Z",
+      "status": 404,
+      "finalUrl": "https://www.mfbf.org/Foundation/Foundation-Scholarships",
+      "contentType": "text/html; charset=UTF-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_233ee668c1c8f42b6152:application",
+          "role": "application",
+          "requestedUrl": "https://mfbf.org/Foundation/Foundation-Scholarships",
+          "finalUrl": "https://www.mfbf.org/Foundation/Foundation-Scholarships",
+          "status": 404,
+          "redirectKind": "off_host",
+          "retrievedAt": "2026-08-27T13:37:56.446Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "high",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_24d3588113f5c34f8b3d",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        34
+      ],
+      "retrievedAt": "2026-08-27T13:37:56.584Z",
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_24d3588113f5c34f8b3d:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:56.584Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_3cff0382801db26316c3",
+      "url": "https://webportalapp.com/sp/login_saml/nhs2026",
+      "roles": [
+        "application"
+      ],
+      "sheetRows": [
+        24
+      ],
+      "retrievedAt": "2026-08-27T13:37:57.781Z",
+      "status": 404,
+      "finalUrl": "https://webportalapp.com/sp/login_saml/nhs2026",
+      "contentType": "text/html; charset=UTF-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_3cff0382801db26316c3:application",
+          "role": "application",
+          "requestedUrl": "https://webportalapp.com/sp/login_saml/nhs2026",
+          "finalUrl": "https://webportalapp.com/sp/login_saml/nhs2026",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:57.781Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "high",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_eb3ea84df8818b7bb0fe",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        38
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.752Z",
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_eb3ea84df8818b7bb0fe:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.752Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_f3a6baa416a6e7eb8cc7",
+      "url": "https://www.smilemontana.com/news/scholarship",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        67
+      ],
+      "retrievedAt": "2026-08-27T13:38:08.325Z",
+      "status": 404,
+      "finalUrl": "https://www.smilemontana.com/news/scholarship",
+      "contentType": "text/html;charset=utf-8",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_f3a6baa416a6e7eb8cc7:information",
+          "role": "information",
+          "requestedUrl": "https://www.smilemontana.com/news/scholarship",
+          "finalUrl": "https://www.smilemontana.com/news/scholarship",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:08.325Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    },
+    {
+      "sourceId": "p5src_f6e9c6d483d45b2a8cd4",
+      "url": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+      "roles": [
+        "application"
+      ],
+      "sheetRows": [
+        9
+      ],
+      "retrievedAt": "2026-08-27T13:38:08.498Z",
+      "status": 404,
+      "finalUrl": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+      "contentType": "text/html",
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_f6e9c6d483d45b2a8cd4:application",
+          "role": "application",
+          "requestedUrl": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+          "finalUrl": "https://revenuefiles.mt.gov/files/Responsibility-Matters/Scholarship/Scholarship-Application-2026.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:08.498Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "high",
+          "linkCorrectionReviewEligible": true
+        }
+      ]
+    }
+  ],
+  "bodySha256": "a1f1a7ed253f8afcf25d057a131b3ec42d307e334370be37c4f9af10cfe35353"
+}

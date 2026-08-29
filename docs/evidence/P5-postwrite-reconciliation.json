@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "sheetName": "Master Database",
+  "prewriteRevisionId": "222",
+  "postwriteRevisionId": "223",
+  "appliedChangeReceiptBodySha256": "0edbbbab3df47c1cc6e2ce8708a618c00f372b17fedc41dfb3925879e8bb28eb",
+  "prewriteInputRows": 197,
+  "postwritePopulatedRows": 197,
+  "postwriteNamedRows": 197,
+  "postwriteUnnamedNonemptyRows": [],
+  "lastReturnedRow": 198,
+  "dispositionTotals": {
+    "confirmed": 0,
+    "corrected": 10,
+    "archived": 0,
+    "merged": 0,
+    "manualReview": 187
+  },
+  "dispositionTotal": 197,
+  "rowEquation": "197 pre-write rows + 0 additions - 0 archives - 0 merges = 197 post-write rows",
+  "proposalRows": 10,
+  "appliedCells": 25,
+  "exactTargetVerificationFailures": [],
+  "untargetedEditedWindowVerificationFailures": [],
+  "activeRowsWithKnownDeadApplicationLinkAfterApprovedReplacement": 0,
+  "reconciliationPassed": true,
+  "limitations": "This receipt proves the bounded testing-sheet write and reconciliation at revision 223. It does not confirm the 187 manual-review scholarship records or authorize P6/P9/production work.",
+  "bodySha256": "fdd445a1f9a3e1e616e106168be080df26561aa6686192c1ad4339911e66bac5"
+}

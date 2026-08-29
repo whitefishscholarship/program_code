@@ -12,6 +12,19 @@
   "dataAuthority": {
     "testingSpreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
     "testingMasterTab": "Master Database",
+    "testingWriteAuthorization": {
+      "authorizationId": "P5-testing-sheet-write-2026-08-27",
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "authorizedAt": "2026-08-27T05:41:04Z",
+      "evidencePath": "docs/evidence/P5-write-authorization.md",
+      "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+      "sheetName": "Master Database",
+      "revisionFingerprintRequired": true,
+      "reversibleBackupRequired": true,
+      "basis": "The user directly granted the permissions previously listed for P5 after being told that P5 required explicit authority for revision fingerprint capture, reversible backup creation, and approved idempotent writes limited to the named testing sheet Master Database tab.",
+      "scope": "Capture the testing spreadsheet revision fingerprint, create and verify a complete reversible backup, and apply only evidence-bound, approved, idempotent P5 changes to the testing spreadsheet Master Database tab after all pre-write gates pass. Production spreadsheet access or mutation, P6, coverage expansion, form or application interaction, provider contact, deployment-configuration changes, paid actions, destructive actions, and history rewriting remain unauthorized."
+    },
     "productionSpreadsheetId": null,
     "productionMutationAuthorized": false,
     "productionAuthorization": null
@@ -213,7 +226,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P5",
+  "nextPermittedStageId": "P6",
   "stages": [
     {
       "id": "P0",
@@ -268,8 +281,8 @@
     {
       "id": "P5",
       "name": "Complete testing-sheet accuracy remediation",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "c8651bf9015c55965eb50cab4a96a12621f3b0fe",
       "evidencePath": "docs/evidence/P5.md",
       "manifestPath": "docs/evidence/P5-manifest.json",
       "reviewPath": "docs/reviews/P5.json",
@@ -283,7 +296,7 @@
       "evidencePath": "docs/evidence/P6.md",
       "manifestPath": "docs/evidence/P6-manifest.json",
       "reviewPath": "docs/reviews/P6.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P6-COVERAGE-EXPANSION.md"
     },
     {
       "id": "P7",

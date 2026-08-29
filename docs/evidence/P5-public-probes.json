@@ -1,0 +1,3186 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P5",
+  "capturedAt": "2026-08-27T14:50:13.069Z",
+  "denominator": 50,
+  "maxContentBytes": 10000000,
+  "timeoutMs": 15000,
+  "maxAttempts": 2,
+  "concurrency": 8,
+  "receipts": [
+    {
+      "sourceId": "p5src_0107904c280e5278867e",
+      "url": "https://www.mspoa.org/scholarships",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        68,
+        94
+      ],
+      "retrievedAt": "2026-08-27T13:37:55.228Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.mspoa.org/scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 83522,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "16cda9141c0c85e1bb578801a8bc9b7613e2c98d9c8fac17efc4aaf4118c2aa7",
+      "textSha256": "2a1961842ebac03b4cb53e4e1ab2d7b44c4ccdfd969165d53505ef53cd382eb9",
+      "textLength": 692,
+      "title": "Montana Sheriffs and Peace Officers Association",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_0107904c280e5278867e:information",
+          "role": "information",
+          "requestedUrl": "https://www.mspoa.org/scholarships",
+          "finalUrl": "https://www.mspoa.org/scholarships",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:55.228Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 68,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.833
+        },
+        {
+          "sheetRow": 94,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.833
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_0783f818afedb3fd59f2",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        33
+      ],
+      "retrievedAt": "2026-08-27T13:37:55.242Z",
+      "attempts": 1,
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 157218,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "50f3e67f039f407c6a3642218cc156283ce19c636bdddd3ce6f43bfcb41b39a2",
+      "textSha256": null,
+      "textLength": 0,
+      "title": null,
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_0783f818afedb3fd59f2:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:55.242Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 33,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_170cdc9f829b28a9f805",
+      "url": "https://mtelks.org/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        29,
+        98
+      ],
+      "retrievedAt": "2026-08-27T13:37:55.875Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://mtelks.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 118725,
+      "contentLengthHeader": 24969,
+      "truncated": false,
+      "rawBodySha256": "2503c16d2ccc5f76ea4ac327580f138bfcddffb7ec9e2391be5765eef893a925",
+      "textSha256": "2257ab70c5b3956bf8735ce6caa46dae821d3a0ab48b022c0bba230305ffeccb",
+      "textLength": 6081,
+      "title": "Montana State Elks Association",
+      "markers": [
+        "login_wall"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_170cdc9f829b28a9f805:information",
+          "role": "information",
+          "requestedUrl": "https://mtelks.org/",
+          "finalUrl": "https://mtelks.org/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:55.875Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 29,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.333
+        },
+        {
+          "sheetRow": 98,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_1d7a94968ff31e1a440c",
+      "url": "https://www.peointernational.org/about-peo",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        69,
+        97
+      ],
+      "retrievedAt": "2026-08-27T13:37:56.291Z",
+      "attempts": 1,
+      "status": 403,
+      "finalUrl": "https://www.peointernational.org/about-peo",
+      "contentType": "text/html",
+      "contentBytesCaptured": 103,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "f261423d1da97890ff6bfccd31ff4ee0b74f69351cf75095fbe791cb16cbf5bd",
+      "textSha256": "58404bdf6dc25c24fedd979469e69bfb8dc9ebca64a469929a858a12b12b9c30",
+      "textLength": 13,
+      "title": "Error 403 Forbidden",
+      "markers": [],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_1d7a94968ff31e1a440c:information",
+          "role": "information",
+          "requestedUrl": "https://www.peointernational.org/about-peo",
+          "finalUrl": "https://www.peointernational.org/about-peo",
+          "status": 403,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:56.291Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 69,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 97,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_24d3588113f5c34f8b3d",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        34
+      ],
+      "retrievedAt": "2026-08-27T13:37:56.584Z",
+      "attempts": 1,
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 157218,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "50f3e67f039f407c6a3642218cc156283ce19c636bdddd3ce6f43bfcb41b39a2",
+      "textSha256": null,
+      "textLength": 0,
+      "title": null,
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_24d3588113f5c34f8b3d:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Jean-Atkinson-Driggers-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:56.584Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 34,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_5050d60e7c02d88c5336",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/GRG-RISE-Scholarship-Application-Criteria-2026.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        36
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.270Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 161356,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "704cb6f5888e2501feca816d86119be851e44d5854a400dbc1bab64e07ed7927",
+      "textSha256": "e37cf849e62c1229e65049ddd9dda0041240f935bacac80c49947fed3a6b0434",
+      "textLength": 5241,
+      "title": "Whitefish Community Foundation | Glacier Restaurant Group R.I.S.E.…",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_5050d60e7c02d88c5336:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/GRG-RISE-Scholarship-Application-Criteria-2026.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:37:58.270Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Go Login Fund Advisors Login Grantee Login Board of Directors Grants Committee Login Scholarship Portal Give Now Contact Us Your Giving Fea",
+          "closes March 31, 2026 at 11:59"
+        ],
+        "amount": [
+          "$21",
+          "$2,500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 36,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.667
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_591262dd73cff3135700",
+      "url": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        28
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.382Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+      "contentType": "text/html;charset=UTF-8",
+      "contentBytesCaptured": 40460,
+      "contentLengthHeader": 40460,
+      "truncated": false,
+      "rawBodySha256": "e0568599377fcf6f2e0bdacc9ecd4d48baa797096032c113e033f85f3531210f",
+      "textSha256": "83c14a18430b1458b42fc079ffae552f2926b2b33a90cb7edff431a8b8da3843",
+      "textLength": 7391,
+      "title": "Legacy Awards",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_591262dd73cff3135700:information",
+          "role": "information",
+          "requestedUrl": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+          "finalUrl": "https://www.elks.org/scholars/scholarships/Legacy.cfm",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:58.382Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "deadline is February 1, 2027, 11:59 a",
+          "deadline is February 1, 2027 at 11:59 a"
+        ],
+        "amount": [
+          "award both scholarships",
+          "Award could go to the child or grandchild of a lapsed member",
+          "Award Offers Per State and Area The following reflects the number of possible awards allocated to each st"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 28,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_5ea392d00f0785775385",
+      "url": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        50
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.511Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 36801,
+      "contentLengthHeader": 7880,
+      "truncated": false,
+      "rawBodySha256": "99c756780e3848f1033fc3f8dcb0fa8d60118c6d0a0bcc214d416ae0a490007a",
+      "textSha256": "125452f6591734a2e0e18f873b70a5a7a1a5df3b0815952429cfef617cee706f",
+      "textLength": 7616,
+      "title": "MUS Honor Scholarship | Montana University System",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_5ea392d00f0785775385:information",
+          "role": "information",
+          "requestedUrl": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+          "finalUrl": "https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:58.511Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "DUE MARCH 15, 2027 Apply Now, or Manage an Existing Award 2026 MUS Honor Scholarship Recipients Student Eligibility Requirements To apply stude",
+          "deadline for their application to be considered complete; 1"
+        ],
+        "amount": [
+          "$5,000",
+          "$20,000",
+          "Award 2026 MUS Honor Scholarship Recipients Student Eligibility Requirements To apply students must: Must",
+          "Award Process Once awards are announced (early- to mid-April) High School Counselors/Designees will be no",
+          "Award Montana Portal to fill in the Campus Change form on the top tab Request a Campus Change Contact Awa"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 50,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_5f46cc404915071e6da2",
+      "url": "https://bigskygames.org/character-counts-scholarship/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        43
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.634Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://bigskygames.org/character-counts-scholarship/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 276433,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "ff4cf414acb977ac513218de7cb9dabe13592795392ca48b61616259b6b6c9c2",
+      "textSha256": "48f91b3d36cabdae8d6c1f8ef0e743e84dd50f81258128ad0de0f932426a7cf2",
+      "textLength": 9452,
+      "title": "Character Counts! Scholarship - Big Sky State Games",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_5f46cc404915071e6da2:information",
+          "role": "information",
+          "requestedUrl": "https://bigskygames.org/character-counts-scholarship/",
+          "finalUrl": "https://bigskygames.org/character-counts-scholarship/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:58.634Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Deadline: Friday, May 1 The Big Sky State Games has teamed up with the CHARACTER COUNTS",
+          "Close GDPR Cookie Settings Privacy Overview Strictly Necessary Cookies 3rd Party Cookies Powered by GDPR Cookie Compliance Privacy Overview This"
+        ],
+        "amount": [
+          "$500",
+          "award in 2024"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 43,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6069b15492266e3d6ec0",
+      "url": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        77
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.707Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+      "contentType": "text/html",
+      "contentBytesCaptured": 85515,
+      "contentLengthHeader": 17547,
+      "truncated": false,
+      "rawBodySha256": "48dbb422d51ab547773a355185a6beadad9ea5d209f2d4be97411d1218aab16d",
+      "textSha256": "8cbd8e1d374d1a7d35105ea9cd98ebd91044971075b0b4482cb4977a7ef73343",
+      "textLength": 16020,
+      "title": "\n            Youth Serve Montana Scholarships\n        ",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_6069b15492266e3d6ec0:information",
+          "role": "information",
+          "requestedUrl": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+          "finalUrl": "https://serve.mt.gov/commission-initiatives/Youth-Serve-Montana-Scholarships",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:58.707Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "Award Youth Serve Montana Scholarships Days of Service ServeMontana Awards Organ, Eye, and Tissue Donatio",
+          "award letter",
+          "amount of the awarded scholarship"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 77,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_619288dac5c590bb65ab",
+      "url": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        49
+      ],
+      "retrievedAt": "2026-08-27T13:37:58.821Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 58923,
+      "contentLengthHeader": 58923,
+      "truncated": false,
+      "rawBodySha256": "221116eefe6add5d2d3bb614e5c6b000aa3e82e9637a9b5136d397cbfb99e050",
+      "textSha256": "eda00c38b1b451fdc91a35349021c470b11e08f4a2b4724446fc000b214f855a",
+      "textLength": 4477,
+      "title": "Clerk & Recorder Scholarship :: Flathead County",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_619288dac5c590bb65ab:information",
+          "role": "information",
+          "requestedUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+          "finalUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:58.821Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "deadline for the 2026 scholarship was March 13, 2026"
+        ],
+        "amount": [],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 49,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_629b8b3a4e7f6f6855ad",
+      "url": "https://haganscholarships.org/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        25
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.004Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://haganscholarships.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 69765,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "7775504e511fbccaaace8e5f581e676f73c898df77f1ce5656e4286b0bcad787",
+      "textSha256": "44b57361aefc1a36152cf66fbef3260538cd1cf6c5f9fe51b3009290287b2dff",
+      "textLength": 1967,
+      "title": "Hagan Scholarship Foundation – \"Helping students with financial need graduate colletge debt-free\"",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_629b8b3a4e7f6f6855ad:information",
+          "role": "information",
+          "requestedUrl": "https://haganscholarships.org/",
+          "finalUrl": "https://haganscholarships.org/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.004Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "$125,000",
+          "$1,000",
+          "$7,500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 25,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6668a49b5b1206c3c6b8",
+      "url": "https://www.logan.org/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        56
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.466Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.logan.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 113798,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "18a3edfc59eb3b852e8c721e7ee0eaf131d563f14078285a3cdb8f3f336c58fe",
+      "textSha256": "c619af0e280dc0783969a4be82d489d39db3f0e39f1653e9670f863f87245fbb",
+      "textLength": 8965,
+      "title": "Home - Logan Health",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_6668a49b5b1206c3c6b8:information",
+          "role": "information",
+          "requestedUrl": "https://www.logan.org/",
+          "finalUrl": "https://www.logan.org/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.466Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 56,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6a76a1c0215f25a48dbb",
+      "url": "https://horatioalger.org/scholarships/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        17,
+        30,
+        31
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.498Z",
+      "attempts": 1,
+      "status": 403,
+      "finalUrl": "https://horatioalger.org/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 5702,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "e27321e9d72213702315151f2325d88cc744d19a81375fead5198aef9b4b3d6f",
+      "textSha256": null,
+      "textLength": 0,
+      "title": "Just a moment...",
+      "markers": [],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_6a76a1c0215f25a48dbb:information",
+          "role": "information",
+          "requestedUrl": "https://horatioalger.org/scholarships/",
+          "finalUrl": "https://horatioalger.org/scholarships/",
+          "status": 403,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.498Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 17,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 30,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 31,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6c41ca9126289625eb8e",
+      "url": "https://responsibilitymatters.mtrevenue.gov/scholarship/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        9
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.529Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://revenue.mt.gov/ResponsibilityMatters/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 24100,
+      "contentLengthHeader": 6272,
+      "truncated": false,
+      "rawBodySha256": "bbd9636564e1d26454192015da5f0c6fc2c18e2f984a6b3e14e248e8d58dc489",
+      "textSha256": "c328a3728278ae0214efbf3a624b5c8f747817b58feaafe03675abfafe0aedcc",
+      "textLength": 1854,
+      "title": "\n\t\t\tResponsibility Matters\n\t\t",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_6c41ca9126289625eb8e:information",
+          "role": "information",
+          "requestedUrl": "https://responsibilitymatters.mtrevenue.gov/scholarship/",
+          "finalUrl": "https://revenue.mt.gov/ResponsibilityMatters/",
+          "status": 200,
+          "redirectKind": "off_host",
+          "retrievedAt": "2026-08-27T13:37:59.529Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 9,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6dd168927d08e9d00c71",
+      "url": "http://www.student-view.com/ScholarshipWmap.html",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        72
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.715Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "http://www.student-view.com/ScholarshipWmap.html",
+      "contentType": "text/html",
+      "contentBytesCaptured": 29160,
+      "contentLengthHeader": 29160,
+      "truncated": false,
+      "rawBodySha256": "7624c9ce638eeecfd211fb6b150f79fd1049ff1982d74527cf5b71c58c5d8bf8",
+      "textSha256": "c7c690e6cb84415036984990899dd9fdb63e9070f74c26cc8a57991ad6db87b3",
+      "textLength": 7849,
+      "title": "OFFICIAL Student -View 2020 Scholarships for High School Seniors",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_6dd168927d08e9d00c71:information",
+          "role": "information",
+          "requestedUrl": "http://www.student-view.com/ScholarshipWmap.html",
+          "finalUrl": "http://www.student-view.com/ScholarshipWmap.html",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.715Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "award",
+          "$10,000",
+          "$1,000",
+          "$500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 72,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6dec62a8b9aa539bf877",
+      "url": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        79
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.762Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 145703,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "ca6437df12bb8673b969507e9c812e503b9cfa1c567d9a86c480c647bc8fcd9e",
+      "textSha256": "75573f2c6be4493306f2d793c4d806eefd5c691aa4614d8b580307931a4b0668",
+      "textLength": 38949,
+      "title": "Scholarships - Earn money to pay for school",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_6dec62a8b9aa539bf877:information",
+          "role": "information",
+          "requestedUrl": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+          "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+          "status": 200,
+          "redirectKind": "off_host",
+          "retrievedAt": "2026-08-27T13:37:59.762Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "closes March 31",
+          "closes Mar",
+          "deadline",
+          "deadline of March 1st at 11:59 PM MST",
+          "Deadline: September 15, Spring Deadline: February 15",
+          "closes Nov",
+          "closes on Mar",
+          "close to home",
+          "due date"
+        ],
+        "amount": [
+          "amount",
+          "$1,500",
+          "$1,000",
+          "$500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 79,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6ec6e2f4657c7c11d959",
+      "url": "https://soroptimistwhitefish.org/about/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        65
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.774Z",
+      "attempts": 1,
+      "status": 403,
+      "finalUrl": "https://soroptimistwhitefish.org/about/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 5582,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "dfae1d797bc776cc383729d617644d31918955b389c53bb16fddaae266e7c6d7",
+      "textSha256": null,
+      "textLength": 0,
+      "title": "Just a moment...",
+      "markers": [],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_6ec6e2f4657c7c11d959:information",
+          "role": "information",
+          "requestedUrl": "https://soroptimistwhitefish.org/about/",
+          "finalUrl": "https://soroptimistwhitefish.org/about/",
+          "status": 403,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.774Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 65,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6f6db7a9cf95646a2398",
+      "url": "https://whitefisheducationfoundation.org/scholarships/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        2,
+        14,
+        62,
+        85,
+        88,
+        89,
+        91,
+        92,
+        93
+      ],
+      "retrievedAt": "2026-08-27T13:37:59.865Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://whitefisheducationfoundation.org/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 172747,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "44aeec86a8d817689e0652b670fdfe33221bc54b276393dc1145ca55d39fc091",
+      "textSha256": "a0ed2812811d1fb7a0038605e37ead2c87300169fb9d981e6e4f823625732bfb",
+      "textLength": 4759,
+      "title": "Scholarships - Whitefish Education Foundation",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_6f6db7a9cf95646a2398:information",
+          "role": "information",
+          "requestedUrl": "https://whitefisheducationfoundation.org/scholarships/",
+          "finalUrl": "https://whitefisheducationfoundation.org/scholarships/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:37:59.865Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1,000",
+          "$5,000",
+          "$2,000",
+          "$500",
+          "award goes to a student intent on majoring in Education"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 2,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 14,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        },
+        {
+          "sheetRow": 62,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 85,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        },
+        {
+          "sheetRow": 88,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 89,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        },
+        {
+          "sheetRow": 91,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 92,
+          "exactNormalizedNamePresent": true,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 93,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_6ff451e61ff01da87f80",
+      "url": "https://www.usjcisenate.org/index.php/scholarship-program",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        26,
+        27
+      ],
+      "retrievedAt": "2026-08-27T13:38:00.007Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.usjcisenate.org/index.php/scholarship-program",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 38935,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "086802f6acb1cfa1c7db0cb136ef9d6ad8287ca4a0f7532db3bdfe4725f2d742",
+      "textSha256": "94c6274e6f2a470ad39df1b4cf18258706bb5cfbc20216ab617f21a3c937c850",
+      "textLength": 8237,
+      "title": "Scholarship",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_6ff451e61ff01da87f80:information",
+          "role": "information",
+          "requestedUrl": "https://www.usjcisenate.org/index.php/scholarship-program",
+          "finalUrl": "https://www.usjcisenate.org/index.php/scholarship-program",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:00.007Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "award $1500 or $2000 scholarship grants to graduating high school seniors who will continue their educati",
+          "$1000",
+          "Award AL Aniyah Baker Lincoln College of Technology - Marietta, GA / Y Electrical and Electronics Systems",
+          "Award IL Ella Acton Danville Area Community College - Danville, IL / N Speech and Language Pathology Doug",
+          "Award IA Azucena Cinto Iowa Western Community College - Council Bluff, IA / Y Dental Hygiene LA Indya Car",
+          "Award MN Addison Anderson Atelier Academy of Beauty - Hopkins, MN / Y Cosmetology MS Will Parker Mississi",
+          "Award MT Kendall Clausen Montana State University at Billings - Billings, MT / Y Radiological Technician",
+          "Award NE Laurel Moore Nebraska College of Technical Agriculture - Curtis, NE / Y Animal Science Hal Kreko",
+          "Award ND Alexandra Ketterer The Salon Professional Academy - Fargo / Y Cosmetology Pat Robinson Memorial",
+          "Award OR Alana Hatch Universal Technical Institute - Orlando, FL / Y Auto/Diesel & EV Mechanics Gary Pitt",
+          "Award SD Abigail Axtell Stewart School - Sioux Falls, SD / N Cosmetology TX Reagan Vicars Hillsdale Colle",
+          "Award VA Caleb Cassell Guilford Technical Community College - Jamestown, NC / Y Automotive Technology WV"
+        ],
+        "applicationSignal": false,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 26,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        },
+        {
+          "sheetRow": 27,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_725ab6b2479d46d0bdc0",
+      "url": "https://www.msgagolf.org/msga-scholarship/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        51
+      ],
+      "retrievedAt": "2026-08-27T13:38:00.056Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.msgagolf.org/juniors/scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 45601,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "bea09fac0515c836f62f259da891266f196521ddb978c8a6edff184b3e7a692d",
+      "textSha256": "ebaff117b276f46095ee873e288f84e595663ad34ae2737f256cb94acc5c45c4",
+      "textLength": 1785,
+      "title": "Scholarships - Montana State Golf Association",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_725ab6b2479d46d0bdc0:information",
+          "role": "information",
+          "requestedUrl": "https://www.msgagolf.org/msga-scholarship/",
+          "finalUrl": "https://www.msgagolf.org/juniors/scholarships",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:00.056Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Menu Members Join or renew Member Benefits GHIN Login Play Courses Tournaments GHIN Challenges Juniors Rules & More News 406Golf Magazine L",
+          "deadline for 2026 was March 15th"
+        ],
+        "amount": [],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 51,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_778d93ebfcb00e805a00",
+      "url": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        19
+      ],
+      "retrievedAt": "2026-08-27T13:38:00.996Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 157594,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "326c59f7ec1bdb823a48d849b816955c91f573752ec746b9fef70ec74e9cf64f",
+      "textSha256": "e47c6647fb4730cdef957511cae3d846d2e89405e8ad802285776e207b4e9841",
+      "textLength": 5674,
+      "title": "Internship and Scholarship Opportunities - Whitefish Lake Institute",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_778d93ebfcb00e805a00:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+          "finalUrl": "https://whitefishlake.org/internship-and-scholarship-opportunities/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:00.996Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "close Search Close Search 0 Menu About About Whitefish Lake About Whitefish Lake Institute Staff Board of Directors Science Advisory Committee Pr",
+          "Due March 15thInternship Application High School Student Entering a Two or Four-Year Curriculum Majoring in an Environmental Sciences Field Thi",
+          "Due April 15thScholarship Application Graduate Thesis or Dissertation Students with thesis proposals specific to Whitefish area water resources",
+          "Close Menu About About Whitefish Lake About Whitefish Lake Institute Staff Board of Directors Science Advisory Committee Programs Science Whitefi"
+        ],
+        "amount": [
+          "$3000",
+          "Amount: $3000 Application: Cover Letter, WLI Application or University Specific Intern Application, Profes",
+          "Amount: $500Application: WLI Application, Two Teacher References, Transcripts, Essay – Due April 15thSchol",
+          "Amount: TBDApplication: Contact WLI for consideration of thesis or dissertation support"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 19,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_7be90f6c3daa16ec9182",
+      "url": "https://www.nhs.us/students/the-nhs-scholarship/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        24
+      ],
+      "retrievedAt": "2026-08-27T13:38:01.014Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 122421,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "191abf8d45657a93420c0f1f1d6edecb330eb852bd6764d25bc53b59e8f9e6a3",
+      "textSha256": "8f1cf7d802e35af22caa8976797e3da866bc24b63073f807fc43fe2388534892",
+      "textLength": 5830,
+      "title": "  The NHS Scholarship | NHS",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_7be90f6c3daa16ec9182:information",
+          "role": "information",
+          "requestedUrl": "https://www.nhs.us/students/the-nhs-scholarship/",
+          "finalUrl": "https://www.nationalhonorsociety.org/the-nhs-scholarship/",
+          "status": 200,
+          "redirectKind": "off_host",
+          "retrievedAt": "2026-08-27T13:38:01.014Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "deadline Mid-January 2027: Applicants receive notifications Late February 2027: All-expense paid trip to DC for top 25 scholarship finalists and the"
+        ],
+        "amount": [
+          "$30",
+          "$2"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 24,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_7cf8b5514aeacbdbe8fa",
+      "url": "https://whitefishcommunityfoundation.org/glacier-restaurant-group-r-i-s-e-scholarship-program/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        37
+      ],
+      "retrievedAt": "2026-08-27T13:38:01.241Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 161356,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "704cb6f5888e2501feca816d86119be851e44d5854a400dbc1bab64e07ed7927",
+      "textSha256": "e37cf849e62c1229e65049ddd9dda0041240f935bacac80c49947fed3a6b0434",
+      "textLength": 5241,
+      "title": "Whitefish Community Foundation | Glacier Restaurant Group R.I.S.E.…",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_7cf8b5514aeacbdbe8fa:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/glacier-restaurant-group-r-i-s-e-scholarship-program/",
+          "finalUrl": "https://whitefishcommunityfoundation.org/menu/glacier-restaurant-group",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:01.241Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Go Login Fund Advisors Login Grantee Login Board of Directors Grants Committee Login Scholarship Portal Give Now Contact Us Your Giving Fea",
+          "closes March 31, 2026 at 11:59"
+        ],
+        "amount": [
+          "$21",
+          "$2,500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 37,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.667
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_7f2cfd944c0ff97ca526",
+      "url": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        23
+      ],
+      "retrievedAt": "2026-08-27T13:38:01.266Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 26194,
+      "contentLengthHeader": 26194,
+      "truncated": false,
+      "rawBodySha256": "0b4861c54878a28d7a3567a37d718b41d942328282c59447b141689b1a05da2a",
+      "textSha256": "40098e335d97cac8f6d30c212d49e45d3b3813f1dc8e375f56db223b56c19e95",
+      "textLength": 8254,
+      "title": "Aviation Scholarships | Montana Department of Transportation (MDT)",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_7f2cfd944c0ff97ca526:information",
+          "role": "information",
+          "requestedUrl": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+          "finalUrl": "https://www.mdt.mt.gov/aviation/scholarships.aspx",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:01.266Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "amount you were awarded within 12 months",
+          "$2,000",
+          "$2,500",
+          "$4,000",
+          "$500",
+          "amount of this scholarship must be used within 12 months of date awarded"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 23,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_8391445e177e8d70a388",
+      "url": "https://bspinternational.org/home.php",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        42
+      ],
+      "retrievedAt": "2026-08-27T13:38:01.778Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://bspinternational.org/cgi-sys/suspendedpage.cgi",
+      "contentType": "text/html",
+      "contentBytesCaptured": 899,
+      "contentLengthHeader": 504,
+      "truncated": false,
+      "rawBodySha256": "441a33aa4ccf9909613b627fe504fb613e6aec176b818c488fafa77b64d79948",
+      "textSha256": "bf523f38f0f8a5eec97c3dc50bfdb1d5b7aec3446190024fae847e94dd5f938d",
+      "textLength": 178,
+      "title": null,
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_8391445e177e8d70a388:information",
+          "role": "information",
+          "requestedUrl": "https://bspinternational.org/home.php",
+          "finalUrl": "https://bspinternational.org/cgi-sys/suspendedpage.cgi",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:01.778Z",
+          "awardClosureSupported": false,
+          "state": "redirected",
+          "targetClass": "html",
+          "reason": "Reachable final target observed via on-host redirect",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 42,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_84a2cda542c62e03e0dd",
+      "url": "https://portal.clubrunner.ca/1873",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        39
+      ],
+      "retrievedAt": "2026-08-27T13:38:01.784Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://portal.clubrunner.ca/1873",
+      "contentType": "text/html",
+      "contentBytesCaptured": 80346,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "d5169e42bea9577dc30cf5ad2d2b11a0db0c23d0e7fd867eb605a3971f2e41e7",
+      "textSha256": "f22ed58c71a1d9f69bc6da9c1dc817003f89ef39d77e04a913549517ade79a22",
+      "textLength": 2889,
+      "title": "\n    Home Page | Rotary Club of Whitefish\n",
+      "markers": [
+        "login_wall"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_84a2cda542c62e03e0dd:information",
+          "role": "information",
+          "requestedUrl": "https://portal.clubrunner.ca/1873",
+          "finalUrl": "https://portal.clubrunner.ca/1873",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:01.784Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 39,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_8521e931d21514b7f2c0",
+      "url": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        64
+      ],
+      "retrievedAt": "2026-08-27T13:38:02.087Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 14922,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "a009697f62aa1945df42704b22e91a317da9494b4271d125e9fb640c5a3fb408",
+      "textSha256": "1ad1b44611ea2cf9d198641c46dac790c346de3c53235038249b3943c2944bcb",
+      "textLength": 1827,
+      "title": "Annual Scholarships - Flathead Democratic Women - Democrats",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_8521e931d21514b7f2c0:information",
+          "role": "information",
+          "requestedUrl": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+          "finalUrl": "https://www.flatheaddemocraticwomen.com/annual-scholarships",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:02.087Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "due date is April 3, 2026"
+        ],
+        "amount": [
+          "award scholarships yearly to encourage Flathead Valley students to reach their academic goals through hig",
+          "award ceremonies"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 64,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.8
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_a772baf692a072905f82",
+      "url": "https://waterenvtech.com/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        60
+      ],
+      "retrievedAt": "2026-08-27T13:38:03.350Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://waterenvtech.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 163883,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "23332783451960d874d7c1e830a5a8dd2ac0d72b20436a87175b668fbbc9269e",
+      "textSha256": "f84e6db2416151bc2779067473b3142d57d015cc3c473a1ec6493bd1587c187c",
+      "textLength": 14686,
+      "title": "Certified Environmental & Engineering Consultants in Montana | Water and Environmental Technologies",
+      "markers": [
+        "bot_block"
+      ],
+      "failureClass": "bot_block",
+      "classifications": [
+        {
+          "id": "p5src_a772baf692a072905f82:information",
+          "role": "information",
+          "requestedUrl": "https://waterenvtech.com/",
+          "finalUrl": "https://waterenvtech.com/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:03.350Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "unknown",
+          "reason": "bot_block does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "due diligence, air quality, and restoration",
+          "Due Diligence, News, Projects, Restoration, Site Investigation & Monitoring A Day in the Life of Marcus HollandRead more August 4, 2026 https:/",
+          "Due to security reasons we are not able to show or modify cookies from other domains"
+        ],
+        "amount": [
+          "Award Schedule [MAS])",
+          "Award-Winning Environmental Stewardship in Action—Butte, MontanaRead more July 23, 2026 https://waterenvt"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 60,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_b11d21b4848e31b6c40c",
+      "url": "https://cityofwhitefish.org/252/Police",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        66
+      ],
+      "retrievedAt": "2026-08-27T13:38:03.860Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.cityofwhitefish.gov/252/Police",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 120589,
+      "contentLengthHeader": 33974,
+      "truncated": false,
+      "rawBodySha256": "c635e8148081244f128fbe4004a3b346019a7981070e8daa124ababa9f60d2e2",
+      "textSha256": "320f6f5c99311e7855ca288e8d1e4e4de00e80e0360bc2381b7ba7eb7c0cc961",
+      "textLength": 2487,
+      "title": "Police | Whitefish, MT",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_b11d21b4848e31b6c40c:information",
+          "role": "information",
+          "requestedUrl": "https://cityofwhitefish.org/252/Police",
+          "finalUrl": "https://www.cityofwhitefish.gov/252/Police",
+          "status": 200,
+          "redirectKind": "off_host",
+          "retrievedAt": "2026-08-27T13:38:03.860Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Arrow Left Arrow Right [] Slideshow Left Arrow Slideshow Right Arrow"
+        ],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 66,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.5
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_ba33183b1e3b60de2338",
+      "url": "https://flatheadcd.org/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        32
+      ],
+      "retrievedAt": "2026-08-27T13:38:04.054Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://flatheadcd.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 105874,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "e7d25bdcee13ed84f58d97642335945dd5166bbbe1c98f045bd3ae292efd6a55",
+      "textSha256": "d7b2874ca32aa1d0bb821d6c80f2eec1273b7194e727effc8851d926817de130",
+      "textLength": 2490,
+      "title": "Flathead Conservation District – Working to conserve soil, water, and other natural resources of the state of Montana.",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_ba33183b1e3b60de2338:information",
+          "role": "information",
+          "requestedUrl": "https://flatheadcd.org/",
+          "finalUrl": "https://flatheadcd.org/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:04.054Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 32,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_bd719700830566fe66e8",
+      "url": "https://www.mgga.org/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        59
+      ],
+      "retrievedAt": "2026-08-27T13:38:04.522Z",
+      "attempts": 1,
+      "status": 403,
+      "finalUrl": "https://www.mgga.org/",
+      "contentType": "text/html",
+      "contentBytesCaptured": 75193,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "ac4f780358ba4326a07c3a9bb83dff5a70cbb95a22be0f4c9385efe182cd722f",
+      "textSha256": "32c041d72450e210eee7aff310d541c7e5813b6b60dbf9f3eda5d49233cd339f",
+      "textLength": 89,
+      "title": "403 - Forbidden",
+      "markers": [],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_bd719700830566fe66e8:information",
+          "role": "information",
+          "requestedUrl": "https://www.mgga.org/",
+          "finalUrl": "https://www.mgga.org/",
+          "status": 403,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:04.522Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 59,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_cc35f609920e012f187c",
+      "url": "https://www.elks.org/scholars/about.cfm",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        21
+      ],
+      "retrievedAt": "2026-08-27T13:38:05.328Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.elks.org/scholars/about.cfm",
+      "contentType": "text/html;charset=UTF-8",
+      "contentBytesCaptured": 37864,
+      "contentLengthHeader": 37864,
+      "truncated": false,
+      "rawBodySha256": "9e7a94f9f71bbd52d5ccdb711cae58d3149593caf46e385334cd4e7c3066670a",
+      "textSha256": "38e8d3ffb980f7177770f5075e8def8e5eb08130bb696a1fc940a056bf334abc",
+      "textLength": 4073,
+      "title": "About",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_cc35f609920e012f187c:information",
+          "role": "information",
+          "requestedUrl": "https://www.elks.org/scholars/about.cfm",
+          "finalUrl": "https://www.elks.org/scholars/about.cfm",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:05.328Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "award nearly $4 million in college scholarships to at least 850 outstanding, service-minded high school s"
+        ],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 21,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_cd0e9b51d2167e41d833",
+      "url": "https://www.glaciermedicalassociates.com/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        73
+      ],
+      "retrievedAt": "2026-08-27T13:38:05.451Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.glaciermedicalassociates.com/",
+      "contentType": "text/html;charset=utf-8",
+      "contentBytesCaptured": 376019,
+      "contentLengthHeader": 50410,
+      "truncated": false,
+      "rawBodySha256": "eed88de4a856a0f847c7bd1707682f497a0a0bda566d5a9fc56fc4a48c8de9b1",
+      "textSha256": "543807b420d2fdbeaf4aa8e40a41ce04376ba88c845b0acfa4c4eb1a0fd10562",
+      "textLength": 5662,
+      "title": "Glacier Medical Associates – Whitefish, Columbia Falls, Evergreen",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_cd0e9b51d2167e41d833:information",
+          "role": "information",
+          "requestedUrl": "https://www.glaciermedicalassociates.com/",
+          "finalUrl": "https://www.glaciermedicalassociates.com/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:05.451Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Menu About Glacier Medical Associates Providers Careers Glacier Med Spa Services All Services Urgent Care Primary Care Newborn & Pediatric",
+          "Close Menu Folder: About Back Glacier Medical Associates Providers Careers Glacier Med Spa Folder: Services Back All Services Urgent Care Primary"
+        ],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 73,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.75
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_ce3fae47f417e73c0d35",
+      "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        150
+      ],
+      "retrievedAt": "2026-08-27T13:38:05.551Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 130759,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "f4f5293134be23e34dd05fdd9030d1ce1a598891ad5e872132ab4babb0d64cc2",
+      "textSha256": "21cd802a9a89d0999c680f557b5a9a4edb7b5efd2aacdc9c965b059e01a92a5f",
+      "textLength": 8423,
+      "title": "Scholarships - Flathead Electric Cooperative",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_ce3fae47f417e73c0d35:information",
+          "role": "information",
+          "requestedUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+          "finalUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:05.551Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "due February 22, 2026",
+          "due January 11, 2026"
+        ],
+        "amount": [
+          "$120,000",
+          "$1,500",
+          "$6,000",
+          "$5,000",
+          "award one $2,500 scholarship each year to a Flathead Electric Cooperative member’s child graduating from",
+          "award one $500 scholarship to a regional electric cooperative member’s child graduating from high school"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 150,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_cee8078c599c3dbc66b5",
+      "url": "https://www.buildingflathead.com/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        78
+      ],
+      "retrievedAt": "2026-08-27T13:38:05.820Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.buildingflathead.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 348114,
+      "contentLengthHeader": 58768,
+      "truncated": false,
+      "rawBodySha256": "2486979fba1fb3a2dd8e44b17adc0a4d290ce96345fdeebd3861c67550fe53bb",
+      "textSha256": "01648537a1145b4d7f919bc326dffdf0a0440f3a732bc1fb735b0680eea26739",
+      "textLength": 3063,
+      "title": "Flathead Building Association | Flathead Valley, Montana",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_cee8078c599c3dbc66b5:information",
+          "role": "information",
+          "requestedUrl": "https://www.buildingflathead.com/",
+          "finalUrl": "https://www.buildingflathead.com/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:05.820Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 78,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.667
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_d225a041cc2c7ad6733f",
+      "url": "https://www.parksidefcu.com/community/#scholarship",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        47
+      ],
+      "retrievedAt": "2026-08-27T13:38:06.358Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.parksidefcu.com/community/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 244840,
+      "contentLengthHeader": 33263,
+      "truncated": false,
+      "rawBodySha256": "e797017f32968805e760e24ae775f6d8493cc64bfde8e4bc968e41a82112fe1d",
+      "textSha256": "e0f73102c4a35f80d0889f061eadb639beee49a4296dc4d6cc9f9919b8ae0dcc",
+      "textLength": 13621,
+      "title": "Community Involvement & Partnerships - Park Side Credit Union",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_d225a041cc2c7ad6733f:information",
+          "role": "information",
+          "requestedUrl": "https://www.parksidefcu.com/community/#scholarship",
+          "finalUrl": "https://www.parksidefcu.com/community/",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:06.358Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "$1.00",
+          "$360,000",
+          "$300",
+          "$5,000",
+          "$10,000",
+          "$2,000",
+          "$2,500",
+          "$5",
+          "$1,000"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 47,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.714
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_d6404e336f856e909b13",
+      "url": "https://orthorehab.com/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        18
+      ],
+      "retrievedAt": "2026-08-27T13:38:06.424Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://orthorehab.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 279828,
+      "contentLengthHeader": 44494,
+      "truncated": false,
+      "rawBodySha256": "d211fec378502a97497d4822a95f1c0537175e4b609d4320399620a4d8497ba5",
+      "textSha256": "4f8265ba3ea950ce4e49d657b24cce8d2198740503f9829b8a9a84d94cc08d83",
+      "textLength": 11980,
+      "title": "Home - OrthoRehab Physical Therapy",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_d6404e336f856e909b13:information",
+          "role": "information",
+          "requestedUrl": "https://orthorehab.com/",
+          "finalUrl": "https://orthorehab.com/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:06.424Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 18,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_daf2e06e47d76737fafc",
+      "url": "https://www.flatheadelectric.com/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        44,
+        46
+      ],
+      "retrievedAt": "2026-08-27T13:38:06.696Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.flatheadelectric.com/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 134625,
+      "contentLengthHeader": 24941,
+      "truncated": false,
+      "rawBodySha256": "fccc5af2ad9468de7c4da4446532c47f329f95bdb945939c47819453581b74b3",
+      "textSha256": "57e91c1d127967892cf6ad87cee45f3047ef7348787443b940a96b88f456eb26",
+      "textLength": 7283,
+      "title": "Home - Flathead Electric Cooperative",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_daf2e06e47d76737fafc:information",
+          "role": "information",
+          "requestedUrl": "https://www.flatheadelectric.com/",
+          "finalUrl": "https://www.flatheadelectric.com/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:06.696Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 44,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.571
+        },
+        {
+          "sheetRow": 46,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.6
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_dc1b902b9bea38023b70",
+      "url": "https://soroptimistwhitefish.org/scholarships/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        81
+      ],
+      "retrievedAt": "2026-08-27T13:38:06.883Z",
+      "attempts": 1,
+      "status": 403,
+      "finalUrl": "https://soroptimistwhitefish.org/scholarships/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 5603,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "b8090a0e35cd0fa26a9c0816af962f761a6101dafa6973c45ae243779fcbd7e1",
+      "textSha256": null,
+      "textLength": 0,
+      "title": "Just a moment...",
+      "markers": [],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_dc1b902b9bea38023b70:information",
+          "role": "information",
+          "requestedUrl": "https://soroptimistwhitefish.org/scholarships/",
+          "finalUrl": "https://soroptimistwhitefish.org/scholarships/",
+          "status": 403,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:06.883Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 81,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_e34bfb2120c94b762cda",
+      "url": "https://www.donkchevy.com/community-involvement.htm",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        8
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.057Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.donkchevy.com/community-involvement.htm",
+      "contentType": "text/html;charset=utf-8",
+      "contentBytesCaptured": 379364,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "18ef4e49bbf4d9b443aee2d84e822560741475ddf3d3a97be548f2b3264d0b75",
+      "textSha256": "7f0230d4f0c02a3002114c89971d6f4d66ccf7853d3f2839a16dcc64f4a3549a",
+      "textLength": 4692,
+      "title": "Community Involvement | Don K Chevrolet",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_e34bfb2120c94b762cda:information",
+          "role": "information",
+          "requestedUrl": "https://www.donkchevy.com/community-involvement.htm",
+          "finalUrl": "https://www.donkchevy.com/community-involvement.htm",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.057Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "$30"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 8,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.2
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_e3fff0a51f811ddbe0f2",
+      "url": "https://support.blackmountainsoftware.com/scholarship.html",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        11
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.110Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://support.blackmountainsoftware.com/scholarship.html",
+      "contentType": "text/html",
+      "contentBytesCaptured": 7754,
+      "contentLengthHeader": 7754,
+      "truncated": false,
+      "rawBodySha256": "7eece4551abfcfb58d8fee7a0b04ac73b8c42f416f32994d4c6a55e75d412c59",
+      "textSha256": "a4b1c12254c596c3c3cd2a063359cb733750a56a7be49e35eb21d4bb2ad7b109",
+      "textLength": 968,
+      "title": "Black Mountain Software | Accounting and Billing Software",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_e3fff0a51f811ddbe0f2:information",
+          "role": "information",
+          "requestedUrl": "https://support.blackmountainsoftware.com/scholarship.html",
+          "finalUrl": "https://support.blackmountainsoftware.com/scholarship.html",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.110Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "amount of $1,000"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 11,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_e58d67da78228ca7ca1f",
+      "url": "https://www.fvcc.edu/student-admissions/financial-aid/types-of-financial-aid/scholarships/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        80
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.265Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.fvcc.edu/admissions-financial-aid/financial-aid-scholarships/scholarships",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 179081,
+      "contentLengthHeader": 27724,
+      "truncated": false,
+      "rawBodySha256": "8c9b5a2f0683281b4d2645e08ff4cbbaa6505c24ed4623de38be49f95bc9cf73",
+      "textSha256": "a8d762720678d6fc79ec081cf1dabd887162b4f139271bcc45fbddfb26a616b7",
+      "textLength": 15246,
+      "title": "Scholarships and Waivers - Flathead Valley Community College",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_e58d67da78228ca7ca1f:information",
+          "role": "information",
+          "requestedUrl": "https://www.fvcc.edu/student-admissions/financial-aid/types-of-financial-aid/scholarships/",
+          "finalUrl": "https://www.fvcc.edu/admissions-financial-aid/financial-aid-scholarships/scholarships",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:07.265Z",
+          "awardClosureSupported": false,
+          "state": "redirected",
+          "targetClass": "form",
+          "reason": "Reachable final target observed via on-host redirect",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Search Submit Admissions & Financial Aid Financial Aid & Scholarships Scholarships and Waivers Scholarships and Waivers FVCC is proud to of",
+          "Deadline: Applications are now open for Summer 2026 and Spring 2027 scholarships",
+          "deadline for the Summer 2026 scholarship is April 30th, 2026",
+          "deadline for Spring 2027 scholarships is November 1, 2026",
+          "Deadline: Students must submit this application to the Financial Aid Office no later than the last day of the term in which they wish to use this aw",
+          "deadline to avoid late fees",
+          "deadline—or being awarded a waiver after charges are posted—does not remove or waive any late fees that may have already been assessed",
+          "Deadline: Applications open December 15th each year and are collected until all awarding funds have been exhausted",
+          "Deadline: Applications for FVCC’s STEM Experience cohort are reviewed on a rolling basis dependent upon availability in the program",
+          "Deadline: June 30 of your graduating academic year",
+          "Deadline: July 31 of your graduating academic year"
+        ],
+        "amount": [
+          "award (e",
+          "award may be placed on a waitlist to be considered if additional funds become available",
+          "award",
+          "award granted per year",
+          "award applicable towards tuition costs for Montana National Guard members",
+          "award is a four-year renewable scholarship that waives tuition when used at an eligible campus",
+          "$20,000"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 80,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_e8323d13c3f28d922978",
+      "url": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        53
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.641Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 146766,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "9edd9bdd6bbff6a7e61d5cea7bf1f0004104d4a4a6dbe54fa6d9d752230341c5",
+      "textSha256": "4fb4292fd34c1a332ef4c0bcdece315bb3ad5ded61ca40ffe230301d12ebc7a2",
+      "textLength": 1383,
+      "title": "Whitefish Lions - Montana Lions Club | District 37",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_e8323d13c3f28d922978:information",
+          "role": "information",
+          "requestedUrl": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+          "finalUrl": "https://www.montanalions.org/club-profiles/whitefish-lions/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.641Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 53,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_eb3ea84df8818b7bb0fe",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        38
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.752Z",
+      "attempts": 1,
+      "status": 404,
+      "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 157218,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "50f3e67f039f407c6a3642218cc156283ce19c636bdddd3ce6f43bfcb41b39a2",
+      "textSha256": null,
+      "textLength": 0,
+      "title": null,
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_eb3ea84df8818b7bb0fe:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Kiita-Foundation-Scholarship-Application-Criteria.pdf",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.752Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 38,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_eff158d292037b20a111",
+      "url": "https://montanafarmersunion.com/education/scholarships-grants/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        58
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.841Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://montanafarmersunion.com/education/scholarships-grants/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 109284,
+      "contentLengthHeader": 20662,
+      "truncated": false,
+      "rawBodySha256": "fbb3f890f250290d35c9fddce191f9b1341146f6dc83d3eb2380bc7e71743005",
+      "textSha256": "6e04dd35ce9c74a384b6a274a4803120662baf8b494a4d05710890990e6dd3b6",
+      "textLength": 8553,
+      "title": "Montana Farmers Union | Scholarships & Grants",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_eff158d292037b20a111:information",
+          "role": "information",
+          "requestedUrl": "https://montanafarmersunion.com/education/scholarships-grants/",
+          "finalUrl": "https://montanafarmersunion.com/education/scholarships-grants/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.841Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "html",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Deadline: May 4 • Applications Closed Scholarships MFU Foundation Scholarships MFU Foundation Scholarships support students pursuing education conne",
+          "Deadline: April 3 • Applications Closed Youth Opportunity $100 4-H Sentence Grants Montana Farmers Union knows 4-H does a fantastic job educating yo"
+        ],
+        "amount": [
+          "$100",
+          "$10,000",
+          "$1,500",
+          "$1,000",
+          "$2,000",
+          "$500"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 58,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_f0fc6ea03c3836b282a3",
+      "url": "https://vfw.org/community/youth-and-education/youth-scholarships",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        20
+      ],
+      "retrievedAt": "2026-08-27T13:38:07.934Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://vfw.org/community/youth-and-education/youth-scholarships",
+      "contentType": "text/html; charset=utf-8",
+      "contentBytesCaptured": 83106,
+      "contentLengthHeader": 29088,
+      "truncated": false,
+      "rawBodySha256": "a58e8b2655b8e9801e6d55c01423831f51551556f6fecf4b773443e8e4dbea95",
+      "textSha256": "315060fe4b25182c073f0094aeb20b44192f5f88c68401e4c4226127e7ec91f1",
+      "textLength": 6744,
+      "title": "\n\tYouth Scholarships - VFW\n",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_f0fc6ea03c3836b282a3:information",
+          "role": "information",
+          "requestedUrl": "https://vfw.org/community/youth-and-education/youth-scholarships",
+          "finalUrl": "https://vfw.org/community/youth-and-education/youth-scholarships",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:07.934Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [],
+        "amount": [
+          "$35,000",
+          "$5,000,",
+          "$1",
+          "$21,000,",
+          "$1,000",
+          "$500",
+          "$5,000",
+          "award"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 20,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 0.889
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_f1836195dbd4bfe4a7a3",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Montana-Coffee-Traders-Scholarship-Application-Criteria.pdf",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        35
+      ],
+      "retrievedAt": "2026-08-27T13:38:08.216Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 161631,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "f3fdd5f4fecc716b16cca4a5bba397259c3587ce42fdf619fd6af49e15a47e78",
+      "textSha256": "d3352d33eba2f14482d8917c39b7159be6a95f5b58cdbdd645b8f2ce0a0a6850",
+      "textLength": 5217,
+      "title": "Whitefish Community Foundation | Montana Coffee Traders Scholarship",
+      "markers": [
+        "login_wall",
+        "application_form"
+      ],
+      "failureClass": "login_wall",
+      "classifications": [
+        {
+          "id": "p5src_f1836195dbd4bfe4a7a3:information",
+          "role": "information",
+          "requestedUrl": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Montana-Coffee-Traders-Scholarship-Application-Criteria.pdf",
+          "finalUrl": "https://whitefishcommunityfoundation.org/menu/montana-coffee-traders-scholarship",
+          "status": 200,
+          "redirectKind": "on_host",
+          "retrievedAt": "2026-08-27T13:38:08.216Z",
+          "awardClosureSupported": false,
+          "state": "inconclusive",
+          "targetClass": "login",
+          "reason": "login_wall does not establish removal, closure, or a valid replacement target",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Go Login Fund Advisors Login Grantee Login Board of Directors Grants Committee Login Scholarship Portal Give Now Contact Us Your Giving Fea"
+        ],
+        "amount": [
+          "$21",
+          "$1,000",
+          "award ceremony"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 35,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_f3a6baa416a6e7eb8cc7",
+      "url": "https://www.smilemontana.com/news/scholarship",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        67
+      ],
+      "retrievedAt": "2026-08-27T13:38:08.325Z",
+      "attempts": 1,
+      "status": 404,
+      "finalUrl": "https://www.smilemontana.com/news/scholarship",
+      "contentType": "text/html;charset=utf-8",
+      "contentBytesCaptured": 171686,
+      "contentLengthHeader": 26999,
+      "truncated": false,
+      "rawBodySha256": "751eaae67860a6668169fbd18fa9a59702ac0b0d31a3e989b808797a09174e8d",
+      "textSha256": "9b94dc7b7a39f17c0f6a72e8377b2dcb5395fb61a3fdcf900b77adbc00195bfc",
+      "textLength": 1003,
+      "title": "Smile Montana Dental Center",
+      "markers": [],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_f3a6baa416a6e7eb8cc7:information",
+          "role": "information",
+          "requestedUrl": "https://www.smilemontana.com/news/scholarship",
+          "finalUrl": "https://www.smilemontana.com/news/scholarship",
+          "status": 404,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:08.325Z",
+          "awardClosureSupported": false,
+          "state": "dead",
+          "targetClass": "unknown",
+          "reason": "HTTP 404 establishes only that this target was unavailable at retrieval time",
+          "requiresReview": true,
+          "reviewSeverity": "medium",
+          "linkCorrectionReviewEligible": true
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "Close Menu Home Locations Services Patients Payment Options Referrals Reviews Gear Providers News Open Menu Close Menu Home Locations Services Fo"
+        ],
+        "amount": [],
+        "applicationSignal": false,
+        "eligibilitySignal": false
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 67,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    },
+    {
+      "sourceId": "p5src_f71e0e21a121e9282890",
+      "url": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+      "roles": [
+        "information"
+      ],
+      "sheetRows": [
+        22
+      ],
+      "retrievedAt": "2026-08-27T13:38:08.586Z",
+      "attempts": 1,
+      "status": 200,
+      "finalUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+      "contentType": "text/html; charset=UTF-8",
+      "contentBytesCaptured": 175405,
+      "contentLengthHeader": null,
+      "truncated": false,
+      "rawBodySha256": "90e8f2ca0dc080b70066b357e3f8fe177a85b438a3401515954f1ede962ff5c5",
+      "textSha256": "aad5ee2656a5c727f09eb8c3be13a59f54c73abc65289e374d15ffd996fc704b",
+      "textLength": 16119,
+      "title": "How to Apply - Jack Kent Cooke Foundation",
+      "markers": [
+        "application_form"
+      ],
+      "failureClass": null,
+      "classifications": [
+        {
+          "id": "p5src_f71e0e21a121e9282890:information",
+          "role": "information",
+          "requestedUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+          "finalUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/how-to-apply/",
+          "status": 200,
+          "redirectKind": "none",
+          "retrievedAt": "2026-08-27T13:38:08.586Z",
+          "awardClosureSupported": false,
+          "state": "reachable",
+          "targetClass": "form",
+          "reason": "Reachable target observed; this alone does not verify any scholarship fact",
+          "requiresReview": false,
+          "reviewSeverity": null,
+          "linkCorrectionReviewEligible": false
+        }
+      ],
+      "explicitFactCandidates": {
+        "deadline": [
+          "deadline",
+          "close on November 11, 2026"
+        ],
+        "amount": [
+          "Award College Access and Excellence Local Support News and Stories News and Stories Compass Research Abou",
+          "award, Cooke Scholars receive comprehensive educational advising, significant cohort-based programming, a",
+          "award is intended to cover a significant share of the student’s educational expenses – including tuition,",
+          "award, which is last dollar funding after all institutional aid, can provide as much as $55,000 per year",
+          "$95,000",
+          "$42,000"
+        ],
+        "applicationSignal": true,
+        "eligibilitySignal": true
+      },
+      "rowNameMatches": [
+        {
+          "sheetRow": 22,
+          "exactNormalizedNamePresent": false,
+          "tokenCoverage": 1
+        }
+      ],
+      "errorCode": null
+    }
+  ],
+  "bodySha256": "38aac545f0c4694dad637d6d803151d62d291374a61f034e5733ae55cad9b31d"
+}

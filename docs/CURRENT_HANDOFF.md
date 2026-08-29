@@ -5,6 +5,68 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## Current P5 state
+
+- Active stage: none. The accepted-state candidate records P5 as accepted, sets
+  `activeStageId` to null, and makes P6 next-permitted but unstarted. This marker is
+  not durable until the new exact candidate receives manifest-bound independent
+  acceptance and its direct child adds only the P5 manifest and review.
+- Verified live `main` and exact P5 baseline:
+  `c8651bf9015c55965eb50cab4a96a12621f3b0fe`.
+- P5 branch: `codex/p5-testing-sheet-remediation` in isolated worktree
+  `/private/tmp/program_code-p5`.
+- Kelsey supplied direct informed authority for revision fingerprinting, complete
+  reversible backup creation, and approved idempotent writes limited to testing
+  spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, tab
+  `Master Database`. The durable record is
+  `docs/evidence/P5-write-authorization.md`.
+- Testing-sheet source revision `222` is pinned, and complete native backup
+  `1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ` is verified. The source and backup
+  `Master Database!A1:X1060` native-cell payloads match at SHA-256
+  `fc3d3b13052a64972291decae146e354883a4801b0e1575d555e1fabb17f05b9`.
+  The guarded write advanced the testing sheet exactly once from revision `222` to
+  `223`; the complete revision-222 backup remains the rollback source.
+- The remediated pre-write audit is complete across exactly 197 rows and 213 distinct
+  CellData sources. The final strict router permits 50 public information-only sources
+  and sends 163 application-role/private/form/login/portal sources to no-fetch.
+  Firecrawl evidence covers the same 50 static public sources with 48 retrieved and two
+  inconclusive.
+- Proposed dispositions are zero confirmed, 10 corrected, zero archived, zero merged,
+  and 187 manual review. The 10 corrected rows contain 25 cell proposals: 15 material
+  corrections plus 10 correction-date stamps. Exact candidate `502b612` received
+  independent C0/H0/M0/L0 approval for all 25 proposals.
+- The first proposal checkpoint `57d3540` was rejected C0/H3/M2/L0. Its evidence
+  reproducibility, unsupported confirmations, routing boundary, row 59 tier collapse,
+  and row 167 unsupported opening claim have been remediated. Earlier bounded GETs are
+  disclosed; no form submission or applicant collection occurred.
+- Replacement `1227321` was rejected C0/H2/M0/L0. Final remediation closed its
+  dual-role routing gap and commits row-specific official-page query bindings for both
+  Montana Farm Bureau application URLs. The same reviewer rechecked `502b612`, all 10
+  mandatory rows, and the deterministic 38-row sample, then approved the complete set.
+- The immediate revision/CellData preconditions passed. One 25-request batch applied
+  the approved set with 25 replies and zero rejection. Immediate readback reports
+  revision `223` with previous revision `222`; all 25 targets match, all 55 untargeted
+  edited-window cells are unchanged, link display/formatting is preserved, and the
+  whole denominator remains 197 named rows with zero unnamed nonempty rows.
+- Durable machine evidence is in `P5-proposal-review.json`,
+  `P5-applied-change-receipt.json`, and `P5-postwrite-reconciliation.json`.
+- Entry verification reproduced P4's 270 links, four offline methods, 20 cycle cases,
+  nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
+  Baseline plan/history validation passed all 10 ordered stages.
+- Production spreadsheet identity remains unset and every production access or
+  mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
+  application interaction, provider contact, deployment-configuration changes, paid
+  or destructive actions, and history rewriting remain prohibited.
+- Rejected final candidate `157daf60cacdd2f729bc422394abf0c77284b53e`
+  received C0/H1/M0/L0 against rejected manifest digest `91d17921b51a`. Its technical
+  remediation passed, but it incorrectly retained P5 as active, which the two-file
+  attestation could not repair. It must never be attested or delivered.
+- The same independent reviewer prospectively approved the exact three-file
+  accepted-state delta C0/H0/M0/L0, and Kelsey explicitly authorized it. Next action is
+  a corrected candidate freeze, new complete manifest, and same-reviewer read-only
+  recheck. Do not execute P6 until P5 is attested and delivered. The P6 kickoff is
+  documentation only.
+
 ## P4 delivery (completed)
 
 - Active stage: none. P4 — Accuracy and verification engine — is accepted, attested,
