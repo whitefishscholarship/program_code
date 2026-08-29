@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P7",
+  "baselineCommit": "28e53dbdb0959ad86ff535d781c59c5ea9a4bf54",
+  "declaredBeforeImplementation": true,
+  "status": "predeclared",
+  "viewports": [
+    { "id": "mobile", "width": 360, "height": 800 },
+    { "id": "tablet", "width": 768, "height": 1024 },
+    { "id": "desktop", "width": 1440, "height": 900 }
+  ],
+  "canonicalCounts": {
+    "sources": 6,
+    "portals": 6,
+    "awards": 16,
+    "applicationGroups": 1,
+    "cycles": 16,
+    "activeCycles": 0,
+    "unknownCycles": 16,
+    "minimumObservedRecipientSlots": 71
+  },
+  "architectureCoverage": [
+    { "architecture": "single_award_page", "scenarioIds": ["single-award", "fvcc-pagination", "first-external-results", "versioned-document"] },
+    { "architecture": "multi_award_page", "scenarioIds": ["nfu-unified-children"] },
+    { "architecture": "common_application", "scenarioIds": ["nfu-unified-children", "esa-shared-program"] },
+    { "architecture": "directory_hub", "scenarioIds": ["horatio-common-application-exceptions"] },
+    { "architecture": "login_application_portal", "scenarioIds": ["horatio-common-application-exceptions"] },
+    { "architecture": "matching_portal", "scenarioIds": ["reach-higher-matching"] },
+    { "architecture": "paginated_catalog", "scenarioIds": ["fvcc-pagination"] },
+    { "architecture": "external_marketplace", "scenarioIds": ["first-external-results"] },
+    { "architecture": "document_or_pdf", "scenarioIds": ["versioned-document"] },
+    { "architecture": "form_only", "scenarioIds": ["google-form"] },
+    { "architecture": "institution_umbrella", "scenarioIds": ["institution-umbrella"] },
+    { "architecture": "offline_or_automatic", "scenarioIds": ["offline-automatic"] },
+    { "architecture": "unknown", "scenarioIds": ["unknown-identity-bearing-url"] }
+  ],
+  "journeys": [
+    {
+      "id": "overview-counts-status",
+      "kind": "visual",
+      "fixtures": ["p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["separate source, portal, award, cycle, and recipient-slot counts", "zero active awards", "sixteen availability-unknown awards", "unknown never styled or labeled active"]
+    },
+    {
+      "id": "single-award-filter-sort",
+      "kind": "visual",
+      "fixtures": ["single-award", "fvcc-pagination", "versioned-document"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["single award presented as award", "cycle status and application method visible", "search and status filters deterministic", "status-first sorting"]
+    },
+    {
+      "id": "shared-application",
+      "kind": "visual",
+      "fixtures": ["nfu-unified-children", "horatio-common-application-exceptions", "esa-shared-program", "p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["shared application represented once", "linked child awards remain separately countable", "supplements and selectable children are not flattened"]
+    },
+    {
+      "id": "portal-versus-award",
+      "kind": "visual",
+      "fixtures": ["reach-higher-matching", "fvcc-pagination", "first-external-results", "horatio-common-application-exceptions", "p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["portal/source cards are distinct from award cards", "portal count never inflates award count", "blocked or partial acquisition remains explicit"]
+    },
+    {
+      "id": "paper-form-offline",
+      "kind": "visual",
+      "fixtures": ["versioned-document", "google-form", "offline-automatic"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["document or paper application is labeled", "form-only route is labeled without interaction", "offline route has no fabricated URL"]
+    },
+    {
+      "id": "automatic-and-matched",
+      "kind": "visual",
+      "fixtures": ["institution-umbrella", "reach-higher-matching"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["automatic consideration is not presented as an application link", "eligibility-matched route is distinct from a direct award application"]
+    },
+    {
+      "id": "unavailable-and-unknown-cycles",
+      "kind": "visual",
+      "fixtures": ["reach-higher-matching", "first-external-results", "offline-automatic", "unknown-identity-bearing-url", "p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["unknown and unavailable cycles are never active", "yearless annual rule does not fabricate a year", "official-site verification guidance remains explicit"]
+    },
+    {
+      "id": "empty-filter-state",
+      "kind": "visual",
+      "fixtures": ["p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["zero-result state is announced", "clear-filters control is keyboard reachable", "counts continue to describe canonical data"]
+    },
+    {
+      "id": "recoverable-error-state",
+      "kind": "visual",
+      "fixtures": ["api-error"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["error is announced accessibly", "retry action is keyboard reachable", "no stale success count is shown"]
+    },
+    {
+      "id": "keyboard-and-accessibility",
+      "kind": "visual",
+      "fixtures": ["p6-canonical"],
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": ["skip link reaches main content", "filter and tab order is logical", "focus remains visible", "headings and landmarks are coherent", "status is not color-only"]
+    },
+    {
+      "id": "api-contract-privacy",
+      "kind": "nonvisual",
+      "fixtures": ["all-p2-scenarios", "p6-canonical"],
+      "viewports": [],
+      "viewportExclusion": "JSON schema and allow-list assertions are transport-level and do not render a viewport.",
+      "requirements": ["response matches versioned contract", "only hard-allowlisted student fields appear", "internal evidence, review, credential, and applicant fields are rejected", "counts reconcile"]
+    },
+    {
+      "id": "export-contract-privacy",
+      "kind": "nonvisual",
+      "fixtures": ["all-p2-scenarios", "p6-canonical"],
+      "viewports": [],
+      "viewportExclusion": "Serialized export schema assertions are file-level and do not render a viewport.",
+      "requirements": ["export uses an independent hard allow-list", "award and portal rows remain typed", "internal and applicant fields cannot escape", "export counts reconcile"]
+    }
+  ],
+  "acceptedExclusions": [],
+  "results": []
+}

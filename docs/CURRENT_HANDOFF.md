@@ -5,6 +5,35 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## Current P7 state
+
+- P7 — Student-facing product and API — is active on branch
+  `codex/p7-student-facing` in isolated worktree `/private/tmp/program_code-p7`.
+- The exact P7 baseline is live `origin/main`
+  `28e53dbdb0959ad86ff535d781c59c5ea9a4bf54`, the merge carrying accepted P6
+  direct-child attestation `0bc02bcc9cc8856bc1e83b26130e787851dc937d`.
+  Local commit topology, GitHub API, and standard HTTPS Git all independently
+  reproduced that baseline; the original GitHub account was restored after the
+  bounded read-only check.
+- P6 is durably accepted and delivered. Candidate
+  `53150026a92e45721642e9f44b564ed8a79aa3ea` received fresh-context read-only
+  C0/H0/M0/L0 acceptance against manifest SHA-256
+  `52320c0466fee1b9e3abd1f6bee97c3956b242fd65e976cf195039d189c265e4`;
+  direct-child attestation `0bc02bcc` added only the P6 manifest and review.
+- P6 canonical coverage reproduces 6 sources, 16 child awards, 1 shared
+  application group, 16 yearless/unknown cycles, 109 field-level Evidence
+  records, 2 ReviewItems, 7 legacy bindings, 0 active additions, and at least 71
+  observed recipient slots.
+- `docs/evidence/P7-test-matrix.json` is the pre-implementation browser and
+  contract matrix. It covers all 13 canonical source architectures, single and
+  shared awards, portals, paper/form routes, automatic consideration, unavailable
+  cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
+- P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
+  dependencies needed for P7, browser evidence, and P7 governance artifacts.
+  Spreadsheet writes, production spreadsheet access/migration, P8 execution,
+  P9, forms/applications, applicant data, provider contact, deployment changes,
+  paid/destructive actions, history rewriting, and gate weakening remain prohibited.
+
 ## Current P6 state
 
 - P6 remains undelivered and must not be treated as accepted. The current disjoint
