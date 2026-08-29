@@ -25,7 +25,8 @@ Default branch: `main`
   records, 2 ReviewItems, 7 legacy bindings, 0 active additions, and at least 71
   observed recipient slots.
 - `docs/evidence/P7-test-matrix.json` is the pre-implementation browser and
-  contract matrix. It covers all 13 canonical source architectures, single and
+  contract matrix. It keeps six source records and five portal-like sources
+  distinct, and covers all 13 canonical source architectures, single and
   shared awards, portals, paper/form routes, automatic consideration, unavailable
   cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
 - P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
