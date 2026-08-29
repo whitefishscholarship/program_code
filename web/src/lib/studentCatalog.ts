@@ -35,6 +35,14 @@ export const PUBLIC_SOURCE_FIELDS = [
   'awardCount',
 ] as const;
 
+export const PUBLIC_PORTAL_FIELDS = [
+  'publicId',
+  'title',
+  'architecture',
+  'url',
+  'sourcePublicIds',
+] as const;
+
 export const FORBIDDEN_PUBLIC_KEYS = [
   'evidenceIds',
   'reviewItemIds',
@@ -105,6 +113,14 @@ export const StudentSourceSchema = z.object({
   awardCount: z.number().int().nonnegative(),
 }).strict();
 
+export const StudentPortalSchema = z.object({
+  publicId,
+  title: z.string().min(1),
+  architecture: StudentSourceSchema.shape.architecture,
+  url: z.string().url().nullable(),
+  sourcePublicIds: z.array(publicId).min(1),
+}).strict();
+
 export const StudentApplicationGroupSchema = z.object({
   publicId: publicId,
   mode: z.enum(APPLICATION_MODES),
@@ -132,12 +148,14 @@ export const StudentCatalogSchema = z.object({
   }).strict(),
   awards: z.array(StudentAwardSchema),
   sources: z.array(StudentSourceSchema),
+  portals: z.array(StudentPortalSchema),
   applicationGroups: z.array(StudentApplicationGroupSchema),
   notice: z.string().min(1),
 }).strict();
 
 export type StudentAward = z.infer<typeof StudentAwardSchema>;
 export type StudentSource = z.infer<typeof StudentSourceSchema>;
+export type StudentPortal = z.infer<typeof StudentPortalSchema>;
 export type StudentCatalog = z.infer<typeof StudentCatalogSchema>;
 export type CycleStatus = StudentAward['cycle']['status'];
 export type ApplicationMode = StudentAward['application']['mode'];
@@ -209,7 +227,7 @@ const PORTAL_ARCHITECTURES = new Set([
   'login_application_portal',
 ]);
 
-function publicEntityId(kind: 'award' | 'source' | 'portal' | 'application', canonicalId: string): string {
+export function publicEntityId(kind: 'award' | 'source' | 'portal' | 'application', canonicalId: string): string {
   const digest = canonicalId.split('_')[1];
   if (!digest || !/^[a-f0-9]{64}$/.test(digest)) throw new Error(`Invalid canonical ${kind} identity`);
   return `${kind}-${digest.slice(0, 12)}`;
@@ -359,13 +377,21 @@ export function buildStudentCatalog(input: CanonicalCatalogInput, metrics: Cover
     });
   }).sort((a, b) => a.title.localeCompare(b.title));
 
+  const portals = sources.filter((source) => source.recordType === 'portal').map((source) => StudentPortalSchema.parse({
+    publicId: source.publicId.replace('source-', 'portal-'),
+    title: source.title,
+    architecture: source.architecture,
+    url: source.url,
+    sourcePublicIds: [source.publicId],
+  }));
+
   const countStatus = (status: CycleStatus) => input.cycles.filter((cycle) => cycle.status === status).length;
   return StudentCatalogSchema.parse({
     schemaVersion: STUDENT_CATALOG_SCHEMA_VERSION,
     catalogRevision: metrics.childRecordDatasetSha256,
     counts: {
       sources: input.sources.length,
-      portals: sources.filter((source) => source.recordType === 'portal').length,
+      portals: portals.length,
       awards: awards.length,
       applicationGroups: applicationGroups.length,
       cycles: input.cycles.length,
@@ -378,6 +404,7 @@ export function buildStudentCatalog(input: CanonicalCatalogInput, metrics: Cover
     },
     awards,
     sources,
+    portals,
     applicationGroups,
     notice: 'Cycle availability is shown only when verified for a specific cycle. Yearless annual dates remain unavailable until confirmed on an official source.',
   });

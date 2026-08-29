@@ -414,6 +414,53 @@
       "awardCount": 1
     }
   ],
+  "portals": [
+    {
+      "publicId": "portal-000000000003",
+      "title": "directory hub portal fixture",
+      "architecture": "directory_hub",
+      "url": "https://example.test/directory-hub",
+      "sourcePublicIds": [
+        "source-000000000003"
+      ]
+    },
+    {
+      "publicId": "portal-000000000004",
+      "title": "paginated catalog portal fixture",
+      "architecture": "paginated_catalog",
+      "url": "https://example.test/paginated-catalog",
+      "sourcePublicIds": [
+        "source-000000000004"
+      ]
+    },
+    {
+      "publicId": "portal-000000000006",
+      "title": "matching portal portal fixture",
+      "architecture": "matching_portal",
+      "url": "https://example.test/matching-portal",
+      "sourcePublicIds": [
+        "source-000000000006"
+      ]
+    },
+    {
+      "publicId": "portal-000000000007",
+      "title": "external marketplace portal fixture",
+      "architecture": "external_marketplace",
+      "url": "https://example.test/external-marketplace",
+      "sourcePublicIds": [
+        "source-000000000007"
+      ]
+    },
+    {
+      "publicId": "portal-000000000008",
+      "title": "login application portal portal fixture",
+      "architecture": "login_application_portal",
+      "url": "https://example.test/login-application-portal",
+      "sourcePublicIds": [
+        "source-000000000008"
+      ]
+    }
+  ],
   "applicationGroups": [
     {
       "publicId": "application-000000000001",

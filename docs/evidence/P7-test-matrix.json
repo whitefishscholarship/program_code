@@ -4,19 +4,24 @@
   "baselineCommit": "28e53dbdb0959ad86ff535d781c59c5ea9a4bf54",
   "declaredBeforeImplementation": true,
   "status": "completed",
+  "reviewRemediation": {
+    "rejectedCandidate": "11f3c53e34008684b8115660244c203774fc659a",
+    "reason": "Fresh review found that P6 expansion-only counts omitted the accepted P2/P5 baseline. Journey identities and viewport coverage remain unchanged; expected canonical counts were corrected for the replacement candidate.",
+    "originalDeclarationCommit": "1cf39ff"
+  },
   "viewports": [
     { "id": "mobile", "width": 360, "height": 800 },
     { "id": "tablet", "width": 768, "height": 1024 },
     { "id": "desktop", "width": 1440, "height": 900 }
   ],
   "canonicalCounts": {
-    "sources": 6,
-    "portals": 5,
-    "awards": 16,
-    "applicationGroups": 1,
-    "cycles": 16,
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4,
+    "cycles": 192,
     "activeCycles": 0,
-    "unknownCycles": 16,
+    "unknownCycles": 192,
     "minimumObservedRecipientSlots": 71
   },
   "architectureCoverage": [
@@ -38,9 +43,9 @@
     {
       "id": "overview-counts-status",
       "kind": "visual",
-      "fixtures": ["p6-canonical"],
+      "fixtures": ["accepted-p2-p5-plus-p6"],
       "viewports": ["mobile", "tablet", "desktop"],
-      "requirements": ["separate source, portal, award, cycle, and recipient-slot counts", "zero active awards", "sixteen availability-unknown awards", "unknown never styled or labeled active"]
+      "requirements": ["separate source, portal, award, cycle, and recipient-slot counts", "zero active awards", "192 availability-unknown awards", "unknown never styled or labeled active"]
     },
     {
       "id": "single-award-filter-sort",

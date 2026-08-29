@@ -11,23 +11,41 @@ import {
   type CycleStatus,
   type StudentAward,
 } from '../src/lib/studentCatalog';
-import { SOURCE_ARCHITECTURES } from '../src/lib/canonicalModel';
+import { SOURCE_ARCHITECTURES, sha256Text, type P1InventoryInput } from '../src/lib/canonicalModel';
+import { buildCompleteStudentCatalog, type AppliedReceipt, type LegacySnapshot } from '../src/lib/studentCatalogLegacy';
 
 const webRoot = process.cwd();
 const repoRoot = path.resolve(webRoot, '..');
 const graphPath = path.join(repoRoot, 'docs/evidence/P6-child-records.json');
 const metricsPath = path.join(repoRoot, 'docs/evidence/P6-metrics.json');
+const p1InventoryPath = path.join(repoRoot, 'docs/evidence/P1-inventory.json');
+const p1ManifestPath = path.join(repoRoot, 'docs/evidence/P1-manifest.json');
+const legacyPath = path.join(webRoot, 'fixtures/p5/prewrite-master-database.json');
+const receiptPath = path.join(repoRoot, 'docs/evidence/P5-applied-change-receipt.json');
 const outputPath = path.join(webRoot, 'fixtures/p7/student-catalog.json');
+const compatibilityOutputPath = path.join(webRoot, 'fixtures/p7/legacy-api-data.json');
 const matrixOutputPath = path.join(webRoot, 'fixtures/p7/matrix-catalog.json');
 const check = process.argv.includes('--check');
 
 const graph = JSON.parse(fs.readFileSync(graphPath, 'utf8')) as CanonicalCatalogInput;
 const metrics = JSON.parse(fs.readFileSync(metricsPath, 'utf8')) as CoverageMetricsInput;
-const catalog = buildStudentCatalog(graph, metrics);
+const inventory = JSON.parse(fs.readFileSync(p1InventoryPath, 'utf8')) as P1InventoryInput;
+const legacy = JSON.parse(fs.readFileSync(legacyPath, 'utf8')) as LegacySnapshot;
+const receipt = JSON.parse(fs.readFileSync(receiptPath, 'utf8')) as AppliedReceipt;
+const { catalog, compatibilityData } = buildCompleteStudentCatalog({
+  inventory,
+  p1InventorySha256: sha256Text(fs.readFileSync(p1InventoryPath, 'utf8')),
+  p1ManifestSha256: sha256Text(fs.readFileSync(p1ManifestPath, 'utf8')),
+  legacy,
+  receipt,
+  expansion: graph,
+  metrics,
+});
 const serialized = `${JSON.stringify(catalog, null, 2)}\n`;
+const compatibilitySerialized = `${JSON.stringify(compatibilityData, null, 2)}\n`;
 
 const portalArchitectures = new Set(['directory_hub', 'paginated_catalog', 'matching_portal', 'external_marketplace', 'login_application_portal']);
-const entityId = (kind: 'award' | 'source' | 'application', index: number) => `${kind}-${index.toString(16).padStart(12, '0')}`;
+const entityId = (kind: 'award' | 'source' | 'portal' | 'application', index: number) => `${kind}-${index.toString(16).padStart(12, '0')}`;
 const matrixCases: Array<{ name: string; mode: ApplicationMode; status: CycleStatus; sourceIndex: number; url: string | null }> = [
   { name: 'Single Award Page Scholarship', mode: 'direct_per_award', status: 'active', sourceIndex: 0, url: 'https://example.test/single-award' },
   { name: 'Shared Application Scholarship', mode: 'shared_with_supplements', status: 'active', sourceIndex: 4, url: 'https://example.test/shared-application' },
@@ -62,6 +80,15 @@ const matrixCatalog = StudentCatalogSchema.parse({
     availability: architecture === 'login_application_portal' ? 'blocked' : 'complete',
     awardCount: matrixCases.filter((item) => item.sourceIndex === index).length,
   })),
+  portals: SOURCE_ARCHITECTURES.map((architecture, index) => ({ architecture, index }))
+    .filter(({ architecture }) => portalArchitectures.has(architecture))
+    .map(({ architecture, index }) => ({
+      publicId: entityId('portal', index + 1),
+      title: `${architecture.replaceAll('_', ' ')} portal fixture`,
+      architecture,
+      url: `https://example.test/${architecture.replaceAll('_', '-')}`,
+      sourcePublicIds: [entityId('source', index + 1)],
+    })),
   applicationGroups: [{ publicId: entityId('application', 1), mode: 'shared_with_supplements', label: applicationModeLabel('shared_with_supplements'), url: 'https://example.test/shared-application', awardPublicIds: [matrixAwards[1].publicId], supplements: 'mixed' }],
   notice: 'Development-only P7 matrix fixture. These are not scholarship facts.',
 });
@@ -72,10 +99,13 @@ if (check) {
   if (fs.readFileSync(outputPath, 'utf8') !== serialized) throw new Error('P7 student catalog fixture is stale');
   if (!fs.existsSync(matrixOutputPath)) throw new Error('P7 matrix catalog fixture is missing');
   if (fs.readFileSync(matrixOutputPath, 'utf8') !== matrixSerialized) throw new Error('P7 matrix catalog fixture is stale');
+  if (!fs.existsSync(compatibilityOutputPath)) throw new Error('P7 legacy API fixture is missing');
+  if (fs.readFileSync(compatibilityOutputPath, 'utf8') !== compatibilitySerialized) throw new Error('P7 legacy API fixture is stale');
   console.log(`P7 student catalog check passed: ${catalog.counts.awards} awards, ${catalog.counts.sources} sources (${catalog.counts.portals} portals), ${catalog.counts.activeCycles} active, ${catalog.counts.unknownCycles} unknown.`);
 } else {
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, serialized);
   fs.writeFileSync(matrixOutputPath, matrixSerialized);
-  console.log(`Wrote ${path.relative(repoRoot, outputPath)} and ${path.relative(repoRoot, matrixOutputPath)}`);
+  fs.writeFileSync(compatibilityOutputPath, compatibilitySerialized);
+  console.log(`Wrote ${path.relative(repoRoot, outputPath)}, ${path.relative(repoRoot, matrixOutputPath)}, and ${path.relative(repoRoot, compatibilityOutputPath)}`);
 }

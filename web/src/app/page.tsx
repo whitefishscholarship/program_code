@@ -10,7 +10,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-teal-200">Whitefish Scholarship Fund</p>
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Scholarship opportunities, clearly explained.</h1>
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Browse scholarships, clearly explained.</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
               Explore verified award records, understand how shared applications work, and see when cycle availability still needs confirmation.
             </p>

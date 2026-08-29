@@ -26,23 +26,35 @@ Default branch: `main`
   records, 2 ReviewItems, 7 legacy bindings, 0 active additions, and at least 71
   observed recipient slots.
 - `docs/evidence/P7-test-matrix.json` is the pre-implementation browser and
-  contract matrix. It keeps six source records and five portal-like sources
+  contract matrix. Its replacement expectations keep 217 canonical sources and 21
+  portal records distinct
   distinct, and covers all 13 canonical source architectures, single and
   shared awards, portals, paper/form routes, automatic consideration, unavailable
   cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
 - The complete 30-cell browser matrix passed with no exclusions. Production-mode
   screenshot evidence and machine results are in `docs/evidence/P7-browser-results.json`
   and the three `docs/evidence/P7-browser-*.jpg` files.
-- The public API/UI/export catalog reconciles exactly to 6 sources, 5 portal-like
-  sources, 16 awards, 1 shared application group, 16 cycles, 0 active cycles, 16
-  unknown cycles, and at least 71 observed recipient slots. API and CSV are separate
+- The replacement public catalog reconciles exactly to 217 canonical sources, 21 portal
+  records, 192 awards (176 accepted legacy plus 16 P6 children), 4 application groups,
+  192 cycles, 0 active cycles, 192 unknown cycles, and at least 71 observed recipient
+  slots from P6 descriptions. API and CSV are separate
   hard allow-lists and expose no internal evidence/review fields or applicant data.
 - Locked install, P7 checks, plan validation, typecheck, the complete P0-P7 suite,
   production build, full and production dependency audits, and root whitespace
   validation passed. Both final audits had zero current advisory matches.
-- The next gates are candidate freeze, complete baseline manifest, fresh read-only
-  review, any required remediation/recheck, accepted-state transition, direct-child
-  two-file attestation, authentication, and authorized delivery.
+- Rejected exact candidate `11f3c53e34008684b8115660244c203774fc659a`
+  received C0/H2/M2/L0 against uncommitted manifest SHA-256
+  `130a77ea74d4b978440d1b121228a9fb56a5de904e43ba7e20f20356806518de`.
+  It omitted the accepted legacy baseline, broke the legacy API/smoke contract, claimed
+  incomplete ARIA tabs, and left this handoff stale. It must never be attested or delivered.
+- The replacement combines P2/P5 with P6, preserves a versioned catalog plus exact
+  197-row `{data}` compatibility adapter, passes the unchanged production smoke test,
+  and replaces ARIA tabs with ordinary grouped native buttons. Its fresh 30-cell
+  browser matrix passed with zero console errors.
+- The commit containing this record is the replacement freeze. Its exact SHA is to be
+  bound in the newly generated manifest after the commit; do not create another
+  candidate merely because that self-referential SHA is not written here. Then the same
+  fresh reviewer must recheck it before accepted state, attestation, authentication, or delivery.
 - `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 remains planned and must
   not begin in this session.
 - P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
