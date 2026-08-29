@@ -3,7 +3,7 @@
   "stageId": "P7",
   "baselineCommit": "28e53dbdb0959ad86ff535d781c59c5ea9a4bf54",
   "declaredBeforeImplementation": true,
-  "status": "predeclared",
+  "status": "completed",
   "viewports": [
     { "id": "mobile", "width": 360, "height": 800 },
     { "id": "tablet", "width": 768, "height": 1024 },
@@ -123,5 +123,18 @@
     }
   ],
   "acceptedExclusions": [],
-  "results": []
+  "results": [
+    { "journeyId": "overview-counts-status", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "single-award-filter-sort", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "shared-application", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "portal-versus-award", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "paper-form-offline", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "automatic-and-matched", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "unavailable-and-unknown-cycles", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "empty-filter-state", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "recoverable-error-state", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "keyboard-and-accessibility", "result": "pass", "viewports": ["mobile", "tablet", "desktop"], "evidencePath": "docs/evidence/P7-browser-results.json" },
+    { "journeyId": "api-contract-privacy", "result": "pass", "viewports": [], "evidencePath": "web/scripts/test-p7-student-catalog.ts" },
+    { "journeyId": "export-contract-privacy", "result": "pass", "viewports": [], "evidencePath": "web/scripts/test-p7-student-catalog.ts" }
+  ]
 }

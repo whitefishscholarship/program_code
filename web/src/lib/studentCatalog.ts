@@ -24,9 +24,10 @@ export const PUBLIC_AWARD_FIELDS = [
   'sourcePublicIds',
 ] as const;
 
-export const PUBLIC_PORTAL_FIELDS = [
+export const PUBLIC_SOURCE_FIELDS = [
   'publicId',
   'title',
+  'recordType',
   'architecture',
   'url',
   'access',
@@ -88,18 +89,18 @@ export const StudentAwardSchema = z.object({
   sourcePublicIds: z.array(publicId).min(1),
 }).strict();
 
-export const StudentPortalSchema = z.object({
+export const StudentSourceSchema = z.object({
   publicId: publicId,
   title: z.string().min(1),
+  recordType: z.enum(['portal', 'source']),
   architecture: z.enum([
-    'directory_hub',
-    'paginated_catalog',
-    'matching_portal',
-    'external_marketplace',
-    'login_application_portal',
+    'single_award_page', 'multi_award_page', 'directory_hub', 'paginated_catalog',
+    'common_application', 'matching_portal', 'external_marketplace',
+    'login_application_portal', 'document_or_pdf', 'form_only',
+    'institution_umbrella', 'offline_or_automatic', 'unknown',
   ]),
-  url: z.string().url(),
-  access: z.enum(['public', 'authenticated', 'unknown']),
+  url: z.string().url().nullable(),
+  access: z.enum(['public', 'authenticated', 'offline', 'unknown']),
   availability: z.enum(['complete', 'partial', 'blocked', 'unknown']),
   awardCount: z.number().int().nonnegative(),
 }).strict();
@@ -130,13 +131,13 @@ export const StudentCatalogSchema = z.object({
     minimumObservedRecipientSlots: z.number().int().nonnegative(),
   }).strict(),
   awards: z.array(StudentAwardSchema),
-  portals: z.array(StudentPortalSchema),
+  sources: z.array(StudentSourceSchema),
   applicationGroups: z.array(StudentApplicationGroupSchema),
   notice: z.string().min(1),
 }).strict();
 
 export type StudentAward = z.infer<typeof StudentAwardSchema>;
-export type StudentPortal = z.infer<typeof StudentPortalSchema>;
+export type StudentSource = z.infer<typeof StudentSourceSchema>;
 export type StudentCatalog = z.infer<typeof StudentCatalogSchema>;
 export type CycleStatus = StudentAward['cycle']['status'];
 export type ApplicationMode = StudentAward['application']['mode'];
@@ -278,7 +279,7 @@ function applicationUrl(
   return null;
 }
 
-function availability(state: CanonicalSource['acquisitionState']): StudentPortal['availability'] {
+function availability(state: CanonicalSource['acquisitionState']): StudentSource['availability'] {
   if (state === 'complete') return 'complete';
   if (state === 'partial' || state === 'observed') return 'partial';
   if (state === 'blocked' || state === 'failed') return 'blocked';
@@ -344,16 +345,15 @@ export function buildStudentCatalog(input: CanonicalCatalogInput, metrics: Cover
     supplements: group.supplementalRequirements,
   }));
 
-  const portalSources = input.sources.filter((source) => PORTAL_ARCHITECTURES.has(source.architecture));
-  const portals = portalSources.map((source) => {
+  const sources = input.sources.map((source) => {
     const url = publicUrl(source.canonicalUrl);
-    if (!url) throw new Error(`Portal ${source.id} has no public URL`);
-    return StudentPortalSchema.parse({
-      publicId: publicEntityId('portal', source.id),
-      title: source.host ?? new URL(url).hostname,
+    return StudentSourceSchema.parse({
+      publicId: publicEntityId('source', source.id),
+      title: source.host ?? (url ? new URL(url).hostname : 'Offline source'),
+      recordType: PORTAL_ARCHITECTURES.has(source.architecture) ? 'portal' : 'source',
       architecture: source.architecture,
       url,
-      access: source.accessBehavior === 'offline' ? 'unknown' : source.accessBehavior,
+      access: source.accessBehavior,
       availability: availability(source.acquisitionState),
       awardCount: input.scholarships.filter((award) => award.sourceIds.includes(source.id)).length,
     });
@@ -365,7 +365,7 @@ export function buildStudentCatalog(input: CanonicalCatalogInput, metrics: Cover
     catalogRevision: metrics.childRecordDatasetSha256,
     counts: {
       sources: input.sources.length,
-      portals: portals.length,
+      portals: sources.filter((source) => source.recordType === 'portal').length,
       awards: awards.length,
       applicationGroups: applicationGroups.length,
       cycles: input.cycles.length,
@@ -377,7 +377,7 @@ export function buildStudentCatalog(input: CanonicalCatalogInput, metrics: Cover
       minimumObservedRecipientSlots: metrics.recipientSlots.observedMinimumAcrossAcceptedChildrenWithUnknownCycles,
     },
     awards,
-    portals,
+    sources,
     applicationGroups,
     notice: 'Cycle availability is shown only when verified for a specific cycle. Yearless annual dates remain unavailable until confirmed on an official source.',
   });

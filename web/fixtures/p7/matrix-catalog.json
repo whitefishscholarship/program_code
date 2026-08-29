@@ -1,0 +1,430 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogRevision": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "counts": {
+    "sources": 13,
+    "portals": 5,
+    "awards": 7,
+    "applicationGroups": 1,
+    "cycles": 7,
+    "activeCycles": 3,
+    "upcomingCycles": 1,
+    "closedCycles": 0,
+    "unavailableCycles": 1,
+    "unknownCycles": 2,
+    "minimumObservedRecipientSlots": 7
+  },
+  "awards": [
+    {
+      "publicId": "award-000000000001",
+      "name": "Single Award Page Scholarship",
+      "summary": "P7 matrix fixture for direct per award.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "active",
+        "label": "Open now",
+        "year": 2026,
+        "opens": "2026-01-01",
+        "closes": "2026-12-31",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "direct_per_award",
+        "label": "Separate application for this award",
+        "url": "https://example.test/single-award",
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-000000000001"
+      ]
+    },
+    {
+      "publicId": "award-000000000002",
+      "name": "Shared Application Scholarship",
+      "summary": "P7 matrix fixture for shared with supplements.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": 3,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "active",
+        "label": "Open now",
+        "year": 2026,
+        "opens": "2026-01-01",
+        "closes": "2026-12-31",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "shared_with_supplements",
+        "label": "Shared application; some awards add supplements",
+        "url": "https://example.test/shared-application",
+        "groupPublicId": "application-000000000001",
+        "supplements": "mixed"
+      },
+      "sourcePublicIds": [
+        "source-000000000005"
+      ]
+    },
+    {
+      "publicId": "award-000000000003",
+      "name": "Paper Application Scholarship",
+      "summary": "P7 matrix fixture for offline.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "offline",
+        "label": "Paper or counselor-provided application",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-000000000009"
+      ]
+    },
+    {
+      "publicId": "award-000000000004",
+      "name": "Automatic Consideration Scholarship",
+      "summary": "P7 matrix fixture for automatic consideration.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": 3,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "active",
+        "label": "Open now",
+        "year": 2026,
+        "opens": "2026-01-01",
+        "closes": "2026-12-31",
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "automatic_consideration",
+        "label": "Automatic consideration",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-00000000000b"
+      ]
+    },
+    {
+      "publicId": "award-000000000005",
+      "name": "Eligibility Matched Scholarship",
+      "summary": "P7 matrix fixture for eligibility matched.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "eligibility_matched",
+        "label": "Portal matches eligible awards",
+        "url": "https://example.test/matching",
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-000000000006"
+      ]
+    },
+    {
+      "publicId": "award-000000000006",
+      "name": "Unavailable Cycle Scholarship",
+      "summary": "P7 matrix fixture for direct per award.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": 3,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unavailable",
+        "label": "Currently unavailable",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "direct_per_award",
+        "label": "Separate application for this award",
+        "url": "https://example.test/unavailable",
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-00000000000d"
+      ]
+    },
+    {
+      "publicId": "award-000000000007",
+      "name": "Selectable Children Scholarship",
+      "summary": "P7 matrix fixture for selectable children.",
+      "amount": {
+        "label": "$1,000",
+        "minimum": 1000,
+        "maximum": 1000,
+        "currency": "USD",
+        "state": "known"
+      },
+      "eligibility": {
+        "audience": "Matrix fixture audience",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade"
+        ],
+        "focus": null
+      },
+      "cycle": {
+        "status": "upcoming",
+        "label": "Upcoming",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "annual"
+      },
+      "application": {
+        "mode": "selectable_children",
+        "label": "One application; select awards",
+        "url": "https://example.test/select-awards",
+        "groupPublicId": null,
+        "supplements": "not_required"
+      },
+      "sourcePublicIds": [
+        "source-000000000002"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publicId": "source-000000000001",
+      "title": "single award page fixture",
+      "recordType": "source",
+      "architecture": "single_award_page",
+      "url": "https://example.test/single-award-page",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-000000000002",
+      "title": "multi award page fixture",
+      "recordType": "source",
+      "architecture": "multi_award_page",
+      "url": "https://example.test/multi-award-page",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-000000000003",
+      "title": "directory hub fixture",
+      "recordType": "portal",
+      "architecture": "directory_hub",
+      "url": "https://example.test/directory-hub",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-000000000004",
+      "title": "paginated catalog fixture",
+      "recordType": "portal",
+      "architecture": "paginated_catalog",
+      "url": "https://example.test/paginated-catalog",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-000000000005",
+      "title": "common application fixture",
+      "recordType": "source",
+      "architecture": "common_application",
+      "url": "https://example.test/common-application",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-000000000006",
+      "title": "matching portal fixture",
+      "recordType": "portal",
+      "architecture": "matching_portal",
+      "url": "https://example.test/matching-portal",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-000000000007",
+      "title": "external marketplace fixture",
+      "recordType": "portal",
+      "architecture": "external_marketplace",
+      "url": "https://example.test/external-marketplace",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-000000000008",
+      "title": "login application portal fixture",
+      "recordType": "portal",
+      "architecture": "login_application_portal",
+      "url": "https://example.test/login-application-portal",
+      "access": "authenticated",
+      "availability": "blocked",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-000000000009",
+      "title": "document or pdf fixture",
+      "recordType": "source",
+      "architecture": "document_or_pdf",
+      "url": "https://example.test/document-or-pdf",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-00000000000a",
+      "title": "form only fixture",
+      "recordType": "source",
+      "architecture": "form_only",
+      "url": "https://example.test/form-only",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-00000000000b",
+      "title": "institution umbrella fixture",
+      "recordType": "source",
+      "architecture": "institution_umbrella",
+      "url": "https://example.test/institution-umbrella",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    },
+    {
+      "publicId": "source-00000000000c",
+      "title": "offline or automatic fixture",
+      "recordType": "source",
+      "architecture": "offline_or_automatic",
+      "url": null,
+      "access": "offline",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-00000000000d",
+      "title": "unknown fixture",
+      "recordType": "source",
+      "architecture": "unknown",
+      "url": "https://example.test/unknown",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 1
+    }
+  ],
+  "applicationGroups": [
+    {
+      "publicId": "application-000000000001",
+      "mode": "shared_with_supplements",
+      "label": "Shared application; some awards add supplements",
+      "url": "https://example.test/shared-application",
+      "awardPublicIds": [
+        "award-000000000002"
+      ],
+      "supplements": "mixed"
+    }
+  ],
+  "notice": "Development-only P7 matrix fixture. These are not scholarship facts."
+}

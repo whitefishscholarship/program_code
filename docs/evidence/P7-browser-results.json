@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P7",
+  "executedAt": "2026-08-29T20:25:36Z",
+  "browser": "Codex in-app browser",
+  "baseUrl": "http://127.0.0.1:3107",
+  "result": "pass",
+  "acceptedExclusions": [],
+  "viewports": [
+    {
+      "id": "mobile",
+      "width": 360,
+      "height": 800,
+      "screenshot": { "path": "docs/evidence/P7-browser-mobile.jpg", "sha256": "2ca63be45e0a9d6af66e655a93d432ba707b54de705e9999b63964f81e09e917" }
+    },
+    {
+      "id": "tablet",
+      "width": 768,
+      "height": 1024,
+      "screenshot": { "path": "docs/evidence/P7-browser-tablet.jpg", "sha256": "784810fd5630363a1581f049d1d9f942372504f680b473f9d58cbef079183a05" }
+    },
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "screenshot": { "path": "docs/evidence/P7-browser-desktop.jpg", "sha256": "5462568b42e46902b95e7e8d358e0c2e66e193219660ae71c285100744b0b193" }
+    }
+  ],
+  "commonAssertions": {
+    "canonicalCounts": { "sources": 6, "portals": 5, "awards": 16, "activeCycles": 0, "unknownCycles": 16, "minimumObservedRecipientSlots": 71 },
+    "awardCards": 16,
+    "sourceCards": 6,
+    "portalBadges": 5,
+    "unknownCycleFilterResults": 16,
+    "sharedApplicationFilterResults": 16,
+    "firstNameSortedAward": "Agri Industries",
+    "matrixFixtureAwardCards": 7,
+    "matrixFixtureSourceCards": 13,
+    "matrixFixtureCoversAllArchitectures": true,
+    "matrixFixtureCoversRequiredApplicationModes": true,
+    "matrixFixtureCoversUnavailableAndUnknownCycles": true,
+    "awardEmptyState": true,
+    "sourceEmptyState": true,
+    "recoverableErrorState": true,
+    "noHorizontalOverflow": true,
+    "consoleErrorsDuringMatrix": 0,
+    "finalFreshTabConsoleErrors": 0,
+    "sharedLogBufferHistoricalErrors": 2,
+    "csvLink": { "mediaType": "text/csv;charset=utf-8", "downloadAttribute": "whitefish-scholarships-2026-08-29.csv", "exactRowsVerifiedBy": "web/scripts/test-p7-student-catalog.ts" },
+    "keyboard": { "skipLinkFirstInDomOrder": true, "skipLinkFocusable": true, "skipLinkVisibleOnFocus": true, "visibleFocusRingPixels": 4, "searchFocusable": true, "sortFocusable": true, "exportFocusable": true },
+    "statusNotColorOnly": true
+  },
+  "runs": [
+    { "journeyId": "overview-counts-status", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "overview-counts-status", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "overview-counts-status", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "single-award-filter-sort", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "single-award-filter-sort", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "single-award-filter-sort", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "shared-application", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "shared-application", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "shared-application", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "portal-versus-award", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "portal-versus-award", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "portal-versus-award", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "paper-form-offline", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "paper-form-offline", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "paper-form-offline", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "automatic-and-matched", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "automatic-and-matched", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "automatic-and-matched", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "unavailable-and-unknown-cycles", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "unavailable-and-unknown-cycles", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "unavailable-and-unknown-cycles", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "empty-filter-state", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "empty-filter-state", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "empty-filter-state", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "recoverable-error-state", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "recoverable-error-state", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "recoverable-error-state", "viewportId": "desktop", "result": "pass" },
+    { "journeyId": "keyboard-and-accessibility", "viewportId": "mobile", "result": "pass" },
+    { "journeyId": "keyboard-and-accessibility", "viewportId": "tablet", "result": "pass" },
+    { "journeyId": "keyboard-and-accessibility", "viewportId": "desktop", "result": "pass" }
+  ],
+  "notes": [
+    "The matrix catalog is served only by the development API when qa=matrix; production always returns the canonical catalog.",
+    "After the locked install completed, the complete 30-run matrix was repeated in a fresh tab and all 30 cells passed with zero console errors. The earlier browser tab's shared development log buffer retained two identical 2026-08-29T20:10:00.147Z compile entries from port 3107 for the already-remediated removal of downloadAwardCsv; those historical entries remain disclosed rather than counted as final-page errors.",
+    "Browser download events are not emitted for data-URI downloads in this browser surface. The visible anchor media type and download filename were observed in-browser, while exact UTF-8 BOM, 17-line shape, formula neutralization, and allow-list content passed the committed export contract test."
+  ]
+}

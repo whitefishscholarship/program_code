@@ -625,10 +625,11 @@
       ]
     }
   ],
-  "portals": [
+  "sources": [
     {
-      "publicId": "portal-6b918438bf28",
+      "publicId": "source-6b918438bf28",
       "title": "fvcc.academicworks.com",
+      "recordType": "portal",
       "architecture": "paginated_catalog",
       "url": "https://fvcc.academicworks.com/",
       "access": "public",
@@ -636,8 +637,9 @@
       "awardCount": 0
     },
     {
-      "publicId": "portal-71dc906f04cc",
+      "publicId": "source-71dc906f04cc",
       "title": "horatioalger.org",
+      "recordType": "portal",
       "architecture": "directory_hub",
       "url": "https://horatioalger.org/scholarships/",
       "access": "public",
@@ -645,8 +647,19 @@
       "awardCount": 0
     },
     {
-      "publicId": "portal-c2b6262213c2",
+      "publicId": "source-43a099f4ea56",
+      "title": "nfu.org",
+      "recordType": "source",
+      "architecture": "multi_award_page",
+      "url": "https://nfu.org/resources/scholarships/",
+      "access": "public",
+      "availability": "complete",
+      "awardCount": 0
+    },
+    {
+      "publicId": "source-c2b6262213c2",
       "title": "reachhighermontana.org",
+      "recordType": "portal",
       "architecture": "matching_portal",
       "url": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
       "access": "public",
@@ -654,8 +667,9 @@
       "awardCount": 16
     },
     {
-      "publicId": "portal-21d9e8f9b4b7",
+      "publicId": "source-21d9e8f9b4b7",
       "title": "www.firstinspires.org",
+      "recordType": "portal",
       "architecture": "external_marketplace",
       "url": "https://www.firstinspires.org/resources/library/scholarships",
       "access": "public",
@@ -663,8 +677,9 @@
       "awardCount": 0
     },
     {
-      "publicId": "portal-e574a3f3ad7d",
+      "publicId": "source-e574a3f3ad7d",
       "title": "www.grantinterface.com",
+      "recordType": "portal",
       "architecture": "login_application_portal",
       "url": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
       "access": "authenticated",

@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { downloadAwardCsv } from '@/lib/export';
+import { awardCsvDataUri } from '@/lib/export';
 import {
   APPLICATION_MODES,
   CYCLE_STATUSES,
@@ -10,7 +10,7 @@ import {
   type CycleStatus,
   type StudentAward,
   type StudentCatalog,
-  type StudentPortal,
+  type StudentSource,
 } from '@/lib/studentCatalog';
 
 type View = 'awards' | 'portals';
@@ -73,7 +73,8 @@ export default function ScholarshipBrowser() {
       if (process.env.NODE_ENV !== 'production' && new URLSearchParams(window.location.search).get('qa') === 'error') {
         throw new Error('The scholarship catalog is temporarily unavailable.');
       }
-      const response = await fetch('/api/scholarships', { headers: { Accept: 'application/json' } });
+      const qa = process.env.NODE_ENV !== 'production' ? new URLSearchParams(window.location.search).get('qa') : null;
+      const response = await fetch(qa === 'matrix' ? '/api/scholarships?qa=matrix' : '/api/scholarships', { headers: { Accept: 'application/json' } });
       if (!response.ok) throw new Error('The scholarship catalog is temporarily unavailable.');
       setCatalog(StudentCatalogSchema.parse(await response.json()));
     } catch (caught) {
@@ -104,10 +105,10 @@ export default function ScholarshipBrowser() {
     });
   }, [catalog, method, schoolType, search, sort, status]);
 
-  const visiblePortals = useMemo(() => {
+  const visibleSources = useMemo(() => {
     if (!catalog) return [];
     const query = search.trim().toLocaleLowerCase();
-    return catalog.portals.filter((portal) => !query || [portal.title, portal.architecture, portal.availability]
+    return catalog.sources.filter((source) => !query || [source.title, source.recordType, source.architecture, source.availability]
       .join(' ').toLocaleLowerCase().includes(query));
   }, [catalog, search]);
 
@@ -150,9 +151,13 @@ export default function ScholarshipBrowser() {
           <h2 id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">See what is verified—and what is not.</h2>
           <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{catalog.notice}</p>
         </div>
-        <button type="button" onClick={() => downloadAwardCsv(visibleAwards)} disabled={visibleAwards.length === 0} className="rounded-xl border-2 border-teal-800 bg-white px-5 py-3 font-bold text-teal-900 shadow-sm hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200 disabled:cursor-not-allowed disabled:border-slate-300 disabled:text-slate-400">
-          Export {visibleAwards.length} award{visibleAwards.length === 1 ? '' : 's'} as CSV
-        </button>
+        {visibleAwards.length > 0 ? (
+          <a href={awardCsvDataUri(visibleAwards)} download={`whitefish-scholarships-${new Date().toISOString().slice(0, 10)}.csv`} className="rounded-xl border-2 border-teal-800 bg-white px-5 py-3 text-center font-bold text-teal-900 shadow-sm hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">
+            Export {visibleAwards.length} award{visibleAwards.length === 1 ? '' : 's'} as CSV
+          </a>
+        ) : (
+          <button type="button" disabled className="cursor-not-allowed rounded-xl border-2 border-slate-300 bg-white px-5 py-3 font-bold text-slate-400">Export 0 awards as CSV</button>
+        )}
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" aria-label="Canonical catalog counts">
@@ -172,13 +177,13 @@ export default function ScholarshipBrowser() {
       <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
         <div role="tablist" aria-label="Catalog record type" className="flex gap-2 border-b border-slate-200 pb-4">
           <button role="tab" aria-selected={view === 'awards'} type="button" onClick={() => setView('awards')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'awards' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Awards ({catalog.counts.awards})</button>
-          <button role="tab" aria-selected={view === 'portals'} type="button" onClick={() => setView('portals')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'portals' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Portals ({catalog.counts.portals})</button>
+          <button role="tab" aria-selected={view === 'portals'} type="button" onClick={() => setView('portals')} className={`rounded-xl px-4 py-2.5 text-sm font-bold focus:outline-none focus:ring-4 focus:ring-teal-200 ${view === 'portals' ? 'bg-teal-800 text-white' : 'text-slate-700 hover:bg-slate-100'}`}>Sources &amp; portals ({catalog.counts.sources})</button>
         </div>
 
         <div className="mt-5 grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto]">
           <label className="block text-sm font-bold text-slate-800">
-            Search {view}
-            <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={view === 'awards' ? 'Name, amount, focus, or application method' : 'Portal name or type'} className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 font-normal text-slate-950 shadow-sm placeholder:text-slate-400 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100" />
+            Search {view === 'awards' ? 'awards' : 'sources'}
+            <input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder={view === 'awards' ? 'Name, amount, focus, or application method' : 'Source name or architecture'} className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 font-normal text-slate-950 shadow-sm placeholder:text-slate-400 focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100" />
           </label>
           {view === 'awards' && (
             <label className="block text-sm font-bold text-slate-800">
@@ -202,7 +207,7 @@ export default function ScholarshipBrowser() {
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 pt-4">
           <p aria-live="polite" className="text-sm text-slate-600">
-            Showing <strong className="text-slate-950">{view === 'awards' ? visibleAwards.length : visiblePortals.length}</strong> of {view === 'awards' ? catalog.counts.awards : catalog.counts.portals} {view}
+            Showing <strong className="text-slate-950">{view === 'awards' ? visibleAwards.length : visibleSources.length}</strong> of {view === 'awards' ? catalog.counts.awards : catalog.counts.sources} {view === 'awards' ? 'awards' : 'sources'}
           </p>
           {hasFilters && <button type="button" onClick={clearFilters} className="rounded-lg px-3 py-2 text-sm font-bold text-teal-800 underline-offset-4 hover:underline focus:outline-none focus:ring-4 focus:ring-teal-200">Clear filters</button>}
         </div>
@@ -211,7 +216,7 @@ export default function ScholarshipBrowser() {
       {view === 'awards' ? (
         visibleAwards.length ? <div className="mt-6 grid gap-5 lg:grid-cols-2">{visibleAwards.map((award) => <AwardCard key={award.publicId} award={award} />)}</div> : <EmptyState noun="awards" onClear={clearFilters} />
       ) : (
-        visiblePortals.length ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visiblePortals.map((portal) => <PortalCard key={portal.publicId} portal={portal} />)}</div> : <EmptyState noun="portals" onClear={clearFilters} />
+        visibleSources.length ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visibleSources.map((source) => <SourceCard key={source.publicId} source={source} />)}</div> : <EmptyState noun="sources" onClear={clearFilters} />
       )}
     </section>
   );
@@ -252,17 +257,17 @@ function AwardCard({ award }: { award: StudentAward }) {
   );
 }
 
-function PortalCard({ portal }: { portal: StudentPortal }) {
-  const architecture = portal.architecture.replaceAll('_', ' ');
+function SourceCard({ source }: { source: StudentSource }) {
+  const architecture = source.architecture.replaceAll('_', ' ');
   return (
     <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-      <p className="text-xs font-bold uppercase tracking-wider text-teal-800">{architecture}</p>
-      <h3 className="mt-2 text-xl font-black break-words">{portal.title}</h3>
+      <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-xs font-bold uppercase tracking-wider text-teal-800">{architecture}</p><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold capitalize text-slate-700">{source.recordType}</span></div>
+      <h3 className="mt-2 text-xl font-black break-words">{source.title}</h3>
       <dl className="mt-5 grid grid-cols-2 gap-4 text-sm">
-        <div><dt className="font-bold">Catalog state</dt><dd className="mt-1 capitalize text-slate-600">{portal.availability}</dd></div>
-        <div><dt className="font-bold">Linked awards</dt><dd className="mt-1 text-slate-600">{portal.awardCount}</dd></div>
+        <div><dt className="font-bold">Catalog state</dt><dd className="mt-1 capitalize text-slate-600">{source.availability}</dd></div>
+        <div><dt className="font-bold">Linked awards</dt><dd className="mt-1 text-slate-600">{source.awardCount}</dd></div>
       </dl>
-      <a href={portal.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit official source <span className="sr-only">{portal.title}</span><span aria-hidden="true"> ↗</span></a>
+      {source.url ? <a href={source.url} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex font-bold text-teal-800 underline decoration-2 underline-offset-4 hover:text-teal-950 focus:outline-none focus:ring-4 focus:ring-teal-200">Visit official source <span className="sr-only">{source.title}</span><span aria-hidden="true"> ↗</span></a> : <p className="mt-6 text-sm font-bold text-slate-600">Offline source; no verified URL</p>}
     </article>
   );
 }

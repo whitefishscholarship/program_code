@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Whitefish High School Scholarships",
-  description: "A self-service scholarship resource for graduating Whitefish, Montana high-school seniors — browse, filter, and find scholarships you can apply for.",
+  description: "Explore Whitefish scholarship award records, application methods, and clearly labeled cycle availability.",
 };
 
 export default function RootLayout({

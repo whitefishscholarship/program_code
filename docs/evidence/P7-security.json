@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P7",
+  "observedAt": "2026-08-29T20:10:56Z",
+  "entryObservation": {
+    "fullTree": {
+      "command": "npm audit --json",
+      "counts": { "info": 0, "low": 1, "moderate": 7, "high": 12, "critical": 1, "total": 21 }
+    },
+    "productionTree": {
+      "command": "npm audit --omit=dev --json",
+      "counts": { "info": 0, "low": 0, "moderate": 6, "high": 9, "critical": 1, "total": 16 },
+      "directAffectedPackages": [
+        { "name": "exceljs", "installed": "4.4.0", "severity": "moderate", "exposure": "client export dependency; removed in favor of bounded CSV serialization" },
+        { "name": "next", "installed": "16.1.6", "severity": "high", "exposure": "application runtime framework; reachable and upgraded" },
+        { "name": "resend", "installed": "6.9.3", "severity": "moderate", "exposure": "server dependency; not used by the P7 public route but upgraded because it remained in the production tree" }
+      ],
+      "criticalPath": "root -> @google/genai@1.44.0 -> protobufjs@7.5.4",
+      "classification": "The audit matched installed ranges to registry advisories. Reachability was not assumed from severity alone. P7 removed the exposed Excel export package and upgraded all affected direct dependency paths while preserving behavior with the complete regression matrix."
+    }
+  },
+  "remediation": {
+    "removed": ["exceljs@4.4.0"],
+    "upgradedDirect": [
+      { "name": "next", "from": "16.1.6", "to": "16.3.3" },
+      { "name": "eslint-config-next", "from": "16.1.6", "to": "16.3.3" },
+      { "name": "@google/genai", "from": "1.44.0", "to": "2.19.0" },
+      { "name": "googleapis", "from": "171.4.0", "to": "176.0.0" },
+      { "name": "resend", "from": "6.9.3", "to": "6.25.0" }
+    ],
+    "boundedReplacement": "CSV is serialized from an independent fixed allow-list, begins with a UTF-8 BOM, neutralizes spreadsheet formulas, and is exposed through a text/csv data URI."
+  },
+  "finalObservation": {
+    "fullTree": {
+      "command": "npm audit --json",
+      "counts": { "info": 0, "low": 0, "moderate": 0, "high": 0, "critical": 0, "total": 0 }
+    },
+    "productionTree": {
+      "command": "npm audit --omit=dev --json",
+      "counts": { "info": 0, "low": 0, "moderate": 0, "high": 0, "critical": 0, "total": 0 }
+    },
+    "interpretationBoundary": "Zero current npm advisory matches does not prove the application is vulnerability-free. It proves the final locked dependency graph had no registry advisory matches at the recorded verification time."
+  },
+  "nonBlockingObservation": {
+    "command": "npm run build",
+    "result": "passed",
+    "warning": "Next.js reports that the middleware file convention is deprecated in favor of proxy; the existing middleware still compiled and this warning is not a P7 correctness, privacy, security, or accessibility failure."
+  }
+}

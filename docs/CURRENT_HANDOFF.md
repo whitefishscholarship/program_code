@@ -7,7 +7,8 @@ Default branch: `main`
 
 ## Current P7 state
 
-- P7 — Student-facing product and API — is active on branch
+- P7 — Student-facing product and API — is verified and awaiting fresh-context
+  independent review on branch
   `codex/p7-student-facing` in isolated worktree `/private/tmp/program_code-p7`.
 - The exact P7 baseline is live `origin/main`
   `28e53dbdb0959ad86ff535d781c59c5ea9a4bf54`, the merge carrying accepted P6
@@ -29,13 +30,32 @@ Default branch: `main`
   distinct, and covers all 13 canonical source architectures, single and
   shared awards, portals, paper/form routes, automatic consideration, unavailable
   cycles, all privacy/export states, and 360x800, 768x1024, and 1440x900.
+- The complete 30-cell browser matrix passed with no exclusions. Production-mode
+  screenshot evidence and machine results are in `docs/evidence/P7-browser-results.json`
+  and the three `docs/evidence/P7-browser-*.jpg` files.
+- The public API/UI/export catalog reconciles exactly to 6 sources, 5 portal-like
+  sources, 16 awards, 1 shared application group, 16 cycles, 0 active cycles, 16
+  unknown cycles, and at least 71 observed recipient slots. API and CSV are separate
+  hard allow-lists and expose no internal evidence/review fields or applicant data.
+- Locked install, P7 checks, plan validation, typecheck, the complete P0-P7 suite,
+  production build, full and production dependency audits, and root whitespace
+  validation passed. Both final audits had zero current advisory matches.
+- The next gates are candidate freeze, complete baseline manifest, fresh read-only
+  review, any required remediation/recheck, accepted-state transition, direct-child
+  two-file attestation, authentication, and authorized delivery.
+- `docs/kickoffs/P8-MONITORING.md` is documentation only. P8 remains planned and must
+  not begin in this session.
 - P7 may change only the student API/UI/export surfaces, bounded fixtures/tests,
   dependencies needed for P7, browser evidence, and P7 governance artifacts.
   Spreadsheet writes, production spreadsheet access/migration, P8 execution,
   P9, forms/applications, applicant data, provider contact, deployment changes,
   paid/destructive actions, history rewriting, and gate weakening remain prohibited.
 
-## Current P6 state
+## Historical P6 work record (superseded)
+
+The detailed work-in-progress narrative below is retained as historical context only.
+The accepted P6 manifest, review, evidence, direct-child attestation, and live merge
+identified above are canonical and supersede its earlier pending/rejected wording.
 
 - P6 remains undelivered and must not be treated as accepted. The current disjoint
   replacement is branch `codex/p6-eligible-coverage-expansion-rev3` in isolated

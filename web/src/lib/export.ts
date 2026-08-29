@@ -47,15 +47,7 @@ export function serializeAwardCsv(awards: StudentAward[]): string {
   return `\uFEFF${lines.join('\r\n')}\r\n`;
 }
 
-export function downloadAwardCsv(awards: StudentAward[]): void {
+export function awardCsvDataUri(awards: StudentAward[]): string {
   if (awards.length === 0) throw new Error('No awards to export.');
-  const blob = new Blob([serializeAwardCsv(awards)], { type: 'text/csv;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const anchor = document.createElement('a');
-  anchor.href = url;
-  anchor.download = `whitefish-scholarships-${new Date().toISOString().slice(0, 10)}.csv`;
-  document.body.append(anchor);
-  anchor.click();
-  anchor.remove();
-  URL.revokeObjectURL(url);
+  return `data:text/csv;charset=utf-8,${encodeURIComponent(serializeAwardCsv(awards))}`;
 }
