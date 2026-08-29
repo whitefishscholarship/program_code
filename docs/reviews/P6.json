@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "reviewerTaskId": "/root/p6_replacement_audit",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-08-29T16:52:33Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact immutable P6 replacement candidate 53150026a92e45721642e9f44b564ed8a79aa3ea against verified baseline 2831ef1ff79c99a0fc4755fe7af7b855d11ebf21, bound by docs/evidence/P6-manifest.json SHA-256 52320c0466fee1b9e3abd1f6bee97c3956b242fd65e976cf195039d189c265e4, and its prospective direct-child commit adding exactly docs/evidence/P6-manifest.json and docs/reviews/P6.json. Acceptance covers only governed P6 eligible-coverage expansion, its bounded public-information evidence, canonical child/application/source graph, exclusions, collision review, completeness and metrics artifacts, accepted-state transition, P7 kickoff documentation, and the local two-file attestation. It does not authorize P7 execution, testing or production spreadsheet writes, production access or migration, forms or applications, applicant data, provider contact, deployment-configuration changes, paid or destructive actions, or history rewriting.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/P6-manifest.json",
+  "candidateManifestSha256": "52320c0466fee1b9e3abd1f6bee97c3956b242fd65e976cf195039d189c265e4"
+}

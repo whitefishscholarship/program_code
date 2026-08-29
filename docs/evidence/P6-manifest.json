@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "createdAt": "2026-08-29T16:48:38.111Z",
+  "baselineCommit": "2831ef1ff79c99a0fc4755fe7af7b855d11ebf21",
+  "candidateCommit": "53150026a92e45721642e9f44b564ed8a79aa3ea",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "967b607ef64ce04c33cb00804ea20ed16cc7fa3751dfa2dfff52e89a1379d70e"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "2099d5057d05bf92f3904ab06cbd5d7b81f303c3c4a9d96d65abb0a2021d8cf6"
+    },
+    {
+      "path": "docs/evidence/P6-child-records.json",
+      "change": "present",
+      "sha256": "d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc"
+    },
+    {
+      "path": "docs/evidence/P6-collisions.json",
+      "change": "present",
+      "sha256": "aa215b5c8c9b0bd8f64892258f32e6945453bca51de908c9d0c6c7444d03f270"
+    },
+    {
+      "path": "docs/evidence/P6-exclusions.json",
+      "change": "present",
+      "sha256": "fe4ead498e4cbbd906dae437282ee71b365044cf7c42a70b48b3f787f5b637bc"
+    },
+    {
+      "path": "docs/evidence/P6-metrics.json",
+      "change": "present",
+      "sha256": "43be7480bca1427700a6268154b021b4db7f9dd9ff017358d2adf5ce49973d82"
+    },
+    {
+      "path": "docs/evidence/P6-portal-completeness.json",
+      "change": "present",
+      "sha256": "0893e798dc438c011a5a6db052ef4ed2789031a3a7058934644321666f66b6b2"
+    },
+    {
+      "path": "docs/evidence/P6-source-queue.json",
+      "change": "present",
+      "sha256": "2029b0c168a287476a350d3c670a4e35970e4fe6f98b6fb54071c1d9d70ae2c4"
+    },
+    {
+      "path": "docs/evidence/P6.md",
+      "change": "present",
+      "sha256": "9a127d952ed1c7244c3ab9b1a3b87dc5832129c07769d612a2ec56520291127a"
+    },
+    {
+      "path": "docs/kickoffs/P7-STUDENT-FACING.md",
+      "change": "present",
+      "sha256": "3ab601b3e81679bbbe695f7ebae7c3a2ca6f0b402b8f3ee24faa4ca303afeafa"
+    },
+    {
+      "path": "web/fixtures/p6/live-source-snapshots.json",
+      "change": "present",
+      "sha256": "22db13c60cae4de3bb5b87c5c502f2654a727686a90a79b198f6987286784773"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "118f998c50a7f690046e3f4733aecaae13cf69011687e7256dc6a2b6732d78da"
+    },
+    {
+      "path": "web/scripts/p6-bind-application-evidence.ts",
+      "change": "present",
+      "sha256": "3c020de91ae972768f7aca043e1ac2b06faa98301198b1843d7bf9bd125ad455"
+    },
+    {
+      "path": "web/scripts/p6-bind-authority-audience.ts",
+      "change": "present",
+      "sha256": "dd7efcc26b7b89c18ba10d84f633f6cab77165fa65063115cb4cbb6e0bd0124b"
+    },
+    {
+      "path": "web/scripts/p6-capture-live.ts",
+      "change": "present",
+      "sha256": "178b9743718d20ee93451c1acc652f2bba94ddda5dd0cb0aba843757880a5a09"
+    },
+    {
+      "path": "web/scripts/p6-coverage.ts",
+      "change": "present",
+      "sha256": "ffb885ad386fd261701fffff103c47b2983eda38dc5a420aaa496ffd0b71ca27"
+    },
+    {
+      "path": "web/scripts/test-p6-coverage.ts",
+      "change": "present",
+      "sha256": "3847e8aafcae8a44fe032cc71bddcea233f02f87d4406fe8362bf6e38068f9c3"
+    },
+    {
+      "path": "web/src/lib/canonicalModel.ts",
+      "change": "present",
+      "sha256": "34c92596dd65d0ab29dffc5f72e399e7f55e5dd62d83ab7345dd12e56f08374a"
+    }
+  ]
+}
