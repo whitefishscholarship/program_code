@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 6,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-27",
+  "lastUpdated": "2026-08-29",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -226,7 +226,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P6",
+  "nextPermittedStageId": "P7",
   "stages": [
     {
       "id": "P0",
@@ -291,8 +291,8 @@
     {
       "id": "P6",
       "name": "Eligible coverage expansion",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "2831ef1ff79c99a0fc4755fe7af7b855d11ebf21",
       "evidencePath": "docs/evidence/P6.md",
       "manifestPath": "docs/evidence/P6-manifest.json",
       "reviewPath": "docs/reviews/P6.json",
@@ -306,7 +306,7 @@
       "evidencePath": "docs/evidence/P7.md",
       "manifestPath": "docs/evidence/P7-manifest.json",
       "reviewPath": "docs/reviews/P7.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P7-STUDENT-FACING.md"
     },
     {
       "id": "P8",

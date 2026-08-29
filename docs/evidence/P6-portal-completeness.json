@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "queuePath": "docs/evidence/P6-source-queue.json",
+  "queueSha256": "2029b0c168a287476a350d3c670a4e35970e4fe6f98b6fb54071c1d9d70ae2c4",
+  "capturedAt": "2026-08-29T04:55:28Z",
+  "outcomes": [
+    {
+      "queueId": "p6-reach-higher-montana",
+      "outcome": "completed",
+      "discoveredIndividualAwards": 30,
+      "acceptedChildren": 16,
+      "excludedChildren": 14,
+      "remainingCount": 0,
+      "cursor": null,
+      "applicationRouteVisited": false
+    },
+    {
+      "queueId": "p6-fvcc-academicworks",
+      "outcome": "completed",
+      "historicalObservedAwards": 179,
+      "currentDiscoveredAwards": 169,
+      "acceptedChildren": 0,
+      "excludedChildren": 169,
+      "remainingCount": 0,
+      "cursor": {
+        "pagesProcessed": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "firstEmptyPage": 5,
+        "firstEmptyPageCount": 0
+      },
+      "applicationRouteVisited": false
+    },
+    {
+      "queueId": "p6-national-farmers-union",
+      "outcome": "completed",
+      "discoveredIndividualAwards": 3,
+      "acceptedChildren": 0,
+      "excludedChildren": 3,
+      "remainingCount": 0,
+      "cursor": null,
+      "applicationRouteVisited": false,
+      "limitation": "The current public page describes application channels but exposes no linked application URL, so all three children are excluded from accepted coverage."
+    },
+    {
+      "queueId": "p6-horatio-alger",
+      "outcome": "blocked-external",
+      "staticallyVisibleChildren": 15,
+      "statedDenominator": "over 70 programs",
+      "acceptedChildren": 0,
+      "exactRemainingCount": null,
+      "blockingBoundary": "Exact enumeration requires filter/application interaction outside P6 authority.",
+      "applicationRouteVisited": false
+    },
+    {
+      "queueId": "p6-first-scholarships",
+      "outcome": "blocked-external",
+      "staticallyVisibleChildren": 0,
+      "statedProviderOrganizations": "more than 150",
+      "acceptedChildren": 0,
+      "exactScholarshipDenominator": null,
+      "blockingBoundary": "Exact enumeration requires Pearson portal/search interaction and provider-page verification outside P6 authority.",
+      "applicationRouteVisited": false
+    }
+  ],
+  "reconciliation": {
+    "queueItems": 5,
+    "completed": 3,
+    "excludedWithEvidence": 0,
+    "blockedExternal": 2,
+    "resumablyIncomplete": 0,
+    "unaccounted": 0
+  },
+  "limitations": [
+    "The accepted plan records a historical 179-item observation, but it does not retain those 179 identities. The current public catalog exposes 169 unique opportunities on pages 1-4 and zero on the first empty page 5. This proves the current measured traversal, not which ten historical items changed or why.",
+    "A successful public fetch proves only the returned page at the recorded time; it does not prove future cycles or unexposed portal contents.",
+    "Blocked sources contribute no accepted child and no inflated denominator."
+  ]
+}

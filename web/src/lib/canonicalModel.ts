@@ -143,7 +143,7 @@ export const ScholarshipSchema = z.object({
   id: entityId('sch'),
   name: z.string().min(1),
   lifecycleState: z.enum(['legacy_imported', 'modeled', 'archived', 'unknown']),
-  legacyRowIdentities: z.array(sha256).min(1),
+  legacyRowIdentities: z.array(sha256),
   sourceIds: z.array(entityId('src')),
   sourceLinks: z.array(z.object({
     sourceId: entityId('src'),
@@ -155,6 +155,14 @@ export const ScholarshipSchema = z.object({
   evidenceIds: z.array(entityId('evd')),
   reviewItemIds: z.array(entityId('rev')),
   studentFields: StudentFieldsSchema,
+}).superRefine((scholarship, ctx) => {
+  if (scholarship.lifecycleState === 'legacy_imported' && scholarship.legacyRowIdentities.length === 0) {
+    ctx.addIssue({
+      code: 'custom',
+      path: ['legacyRowIdentities'],
+      message: 'A legacy-imported scholarship requires at least one legacy row identity',
+    });
+  }
 });
 
 export const ApplicationGroupSchema = z.object({

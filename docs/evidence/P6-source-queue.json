@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "status": "pinned-before-expansion",
+  "pinnedAt": "2026-08-29T04:47:48Z",
+  "baselineCommit": "2831ef1ff79c99a0fc4755fe7af7b855d11ebf21",
+  "testingBaseline": {
+    "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "sheetName": "Master Database",
+    "revisionId": "223",
+    "previousRevisionId": "222",
+    "verifiedRevision222BackupId": "1C2sc2TkqcskFfL_tYqq5yQynUgUHRXd7JpfpCdOt8lQ",
+    "populatedRecords": 197,
+    "sourceEvidence": [
+      "docs/evidence/P5-applied-change-receipt.json",
+      "docs/evidence/P5-postwrite-reconciliation.json"
+    ],
+    "writeAuthorized": false
+  },
+  "inputDenominator": {
+    "sourceFixture": "web/fixtures/p5/prewrite-master-database.json",
+    "portalLabeledRows": 21,
+    "selectedRows": 7,
+    "notSelectedRows": 14,
+    "selectedUniqueParentSources": 5,
+    "equation": "21 portal-labeled rows = 7 selected rows + 14 not-selected rows"
+  },
+  "selectionCriteria": [
+    "The source is already represented by at least one P5 portal-labeled row.",
+    "Accepted P1-P5 evidence identifies a one-to-many, directory, matching, common-application, paginated-catalog, or external-marketplace expansion opportunity.",
+    "A public information landing page can be read without entering a form, application, login, or paid workflow.",
+    "The source has plausible Whitefish-audience relevance that can be tested at child level; selection is not acceptance.",
+    "The batch spans distinct high-yield architectures while remaining bounded to five parent sources."
+  ],
+  "queue": [
+    {
+      "queueId": "p6-reach-higher-montana",
+      "priority": 1,
+      "parentUrl": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+      "architecture": "matching_portal",
+      "baselineRows": [79],
+      "baselineRowKeys": ["p5-row-0079"],
+      "selectionRationale": "Montana-wide audience and an accepted historical observation that one public page names multiple scholarships behind a shared eligibility/application workflow.",
+      "plannedBoundary": "Read only the public information page and public child information pages. Do not open the GrantInterface login or application workflow."
+    },
+    {
+      "queueId": "p6-fvcc-academicworks",
+      "priority": 2,
+      "parentUrl": "https://fvcc.academicworks.com/",
+      "architecture": "paginated_catalog",
+      "baselineRows": [45],
+      "baselineRowKeys": ["p5-row-0045"],
+      "selectionRationale": "Highest local postsecondary relevance and an accepted historical observation of a large public catalog whose page and award denominator must be measured rather than assumed current.",
+      "plannedBoundary": "Read only public catalog and opportunity pages. Do not open sign-in, account, or application routes."
+    },
+    {
+      "queueId": "p6-national-farmers-union",
+      "priority": 3,
+      "parentUrl": "https://nfu.org/education/scholarships/",
+      "architecture": "multi_award_page",
+      "baselineRows": [55, 83],
+      "baselineRowKeys": ["p5-row-0055", "p5-row-0083"],
+      "selectionRationale": "The official public page historically names three distinct awards with shared application routes, while two testing-sheet portal rows may collide with those children.",
+      "plannedBoundary": "Read only the official public information page and linked public scholarship documents. Do not enter or submit an application."
+    },
+    {
+      "queueId": "p6-horatio-alger",
+      "priority": 4,
+      "parentUrl": "https://horatioalger.org/scholarships/",
+      "architecture": "directory_hub",
+      "baselineRows": [17, 31],
+      "baselineRowKeys": ["p5-row-0017", "p5-row-0031"],
+      "selectionRationale": "Two existing portal rows point to a national multi-program source that includes degree-path and state-specific opportunities; child-level collision and cycle checks are required.",
+      "plannedBoundary": "Read only public scholarship information pages. Do not open account, login, eligibility questionnaire, or application workflows."
+    },
+    {
+      "queueId": "p6-first-scholarships",
+      "priority": 5,
+      "parentUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "architecture": "external_marketplace",
+      "baselineRows": [187],
+      "baselineRowKeys": ["p5-row-0187"],
+      "selectionRationale": "The existing portal row represents a potentially large STEM marketplace where provider awards, search results, and scholarships must not be conflated.",
+      "plannedBoundary": "Read only the FIRST public information page and public provider information pages when statically linked. Do not use search forms, account flows, or applications."
+    }
+  ],
+  "notSelected": [
+    {"sheetRow": 23, "rowKey": "p5-row-0023", "name": "MT DOT Aviation Scholarships", "reason": "One funding-opportunity record with an application-role ServiceNow route; not a confirmed multi-child parent for this bounded batch."},
+    {"sheetRow": 58, "rowKey": "p5-row-0058", "name": "Flathead County Farmers Union Scholarship", "reason": "Single named award and application-form route; child expansion is not established."},
+    {"sheetRow": 59, "rowKey": "p5-row-0059", "name": "MGGA Scholarships", "reason": "Possible multi-award source deferred to a later governed batch after the five higher-priority architectures."},
+    {"sheetRow": 100, "rowKey": "p5-row-0100", "name": "Cat Scholarships", "reason": "Institutional umbrella deferred after the more locally bounded FVCC catalog."},
+    {"sheetRow": 152, "rowKey": "p5-row-0152", "name": "Pride Foundation Community Scholarships", "reason": "Common-program source deferred after the five selected higher-priority parents."},
+    {"sheetRow": 156, "rowKey": "p5-row-0156", "name": "Montana National Guard Tuition Waiver", "reason": "Tuition waiver/offline program, not a child-award expansion parent."},
+    {"sheetRow": 157, "rowKey": "p5-row-0157", "name": "War Orphans Tuition Waiver (MUS)", "reason": "Tuition waiver/offline program, not a child-award expansion parent."},
+    {"sheetRow": 162, "rowKey": "p5-row-0162", "name": "Montana American Indian Tuition Waiver", "reason": "Single tuition-waiver program, not a child-award expansion parent."},
+    {"sheetRow": 165, "rowKey": "p5-row-0165", "name": "Montana Foster Youth Higher Education Assistance Program", "reason": "Single assistance program with no selected public expansion parent."},
+    {"sheetRow": 175, "rowKey": "p5-row-0175", "name": "National FFA Scholarship Program", "reason": "Existing child/program row uses an application-role Kaleidoscope route and is not entered for form-safe expansion."},
+    {"sheetRow": 177, "rowKey": "p5-row-0177", "name": "American Welding Society (AWS) Idaho/Montana Section Scholarships", "reason": "Portal deferred after the five selected sources; no omission claim is made."},
+    {"sheetRow": 182, "rowKey": "p5-row-0182", "name": "ESA Foundation Computer & Video Game Arts Scholarship", "reason": "Existing named child shares an application-role program URL; not a parent-source expansion row."},
+    {"sheetRow": 183, "rowKey": "p5-row-0183", "name": "ESA Foundation Esports Scholarship", "reason": "Existing named child shares an application-role program URL; not a parent-source expansion row."},
+    {"sheetRow": 186, "rowKey": "p5-row-0186", "name": "2026 Montana 4-H Scholarship", "reason": "Existing named program row uses an application-role Kaleidoscope URL and is not entered for form-safe expansion."}
+  ],
+  "outcomeEnum": [
+    "completed",
+    "excluded-with-evidence",
+    "blocked-external",
+    "resumably-incomplete"
+  ],
+  "limitations": [
+    "Queue selection does not establish that a source or child award is current, eligible, active, complete, or unique.",
+    "Historical P1-P5 portal counts and observations are prioritization inputs only and are not represented as current live facts.",
+    "No testing-sheet write, production access, form/application interaction, login, provider contact, paid action, or deployment-configuration change is authorized."
+  ]
+}

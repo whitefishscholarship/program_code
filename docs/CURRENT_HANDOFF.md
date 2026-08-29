@@ -1,20 +1,161 @@
 # Current Handoff
 
-Last updated: 2026-08-27
+Last updated: 2026-08-29
 Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P5 state
+## Current P6 state
 
-- Active stage: none. The accepted-state candidate records P5 as accepted, sets
-  `activeStageId` to null, and makes P6 next-permitted but unstarted. This marker is
-  not durable until the new exact candidate receives manifest-bound independent
-  acceptance and its direct child adds only the P5 manifest and review.
-- Verified live `main` and exact P5 baseline:
-  `c8651bf9015c55965eb50cab4a96a12621f3b0fe`.
-- P5 branch: `codex/p5-testing-sheet-remediation` in isolated worktree
-  `/private/tmp/program_code-p5`.
+- P6 remains undelivered and must not be treated as accepted. The current disjoint
+  replacement is branch `codex/p6-eligible-coverage-expansion-rev3` in isolated
+  worktree `/private/tmp/program_code-p6-rev3`, created directly from exact baseline
+  `2831ef1ff79c99a0fc4755fe7af7b855d11ebf21`. Its accepted-state machine marker is
+  prospective only. The third replacement candidate `f1fbc34...` was rejected
+  C0/H0/M2/L0 and is preserved locally. Its stale current-state summaries and
+  caller-controlled application observation time are remediated in the commit
+  containing this record; that new candidate will receive a regenerated manifest,
+  independent recheck, direct-child attestation, and delivery only if all gates pass.
+- Live GitHub API verification resolved `main` to exact P6 baseline merge
+  `2831ef1ff79c99a0fc4755fe7af7b855d11ebf21`, produced by PR #20 from exact P5
+  attestation `d22c8dd7108338f41192b884227421a00ecf09b5`. The merge parents are exact P4
+  delivery `c8651bf9015c55965eb50cab4a96a12621f3b0fe` and the P5 attestation. Standard
+  SSH and HTTPS Git fetches both returned `Repository not found`; the signed remote
+  merge payload was retrieved read-only through the configured repository account,
+  reproduced byte-for-byte at the expected SHA, and used to advance the local
+  `origin/main` tracking ref. The original active GitHub account was restored.
+- P5 is durably accepted and delivered. Candidate
+  `ebf21669937469e306023dc4d3ab7de6f126d9ce` received fresh-context read-only
+  C0/H0/M0/L0 acceptance against manifest SHA-256
+  `094aebc0ae186a8e516f12c5cbf812260d4c0e9d72300cd9bf4f8325580a793c`;
+  direct-child attestation `d22c8dd` added only the P5 manifest and review.
+- P6 entry reproduction passed: plan/history validation, the 213-source P5 queue,
+  the 197-row audit, and post-write reconciliation. The restricted runner first
+  denied the `tsx` local IPC pipe; the exact permitted retries passed.
+- `docs/evidence/P6-source-queue.json` pins the complete 21-row P5 portal denominator
+  before any P6 live expansion. Five high-yield parent sources spanning seven rows are
+  selected; the other 14 rows have explicit batch-selection exclusions.
+- Sixteen bounded public information reads produced a PII-free sanitized fixture,
+  one source-authority/audience refresh receipt, and two fresh application-evidence
+  receipts with internally recorded observation time.
+  Three queue sources are complete and two are `blocked-external`; there are zero unaccounted
+  or resumably incomplete queue items. No login, account, search form, eligibility
+  questionnaire, application route, or submission was entered.
+- Reach Higher's selected application-group section exposes 30 individual awards after
+  expanding its Montana FFA umbrella: 16 become child records and 14 are excluded for
+  non-Whitefish audience, non-postsecondary use, or baseline identity collision. NFU
+  exposes three named children under one unified application description, but its
+  current official page exposes no linked application route, so all three are excluded.
+  Reach Higher states only an annual Jan. 1-Mar. 1 window without a year-qualified
+  current cycle. All 16 child cycles therefore remain `unknown`, so the exact P6 net
+  change in active eligible awards is zero.
+- FVCC's current catalog exposes 169 unique opportunities across pages 1-4, all marked
+  `Ended`; page 5 is the first empty page. The accepted historical 179 observation is
+  preserved as a ten-item drift unknown because the prior evidence did not retain all
+  179 identities. No current item is accepted as active.
+- Horatio states `over 70` programs but exposes only 15 named undergraduate/CTE
+  programs statically. FIRST states `more than 150` provider organizations but no exact
+  scholarship denominator. Both sources contribute zero accepted children because
+  complete enumeration would require prohibited filter/portal interaction.
+- Earlier candidates passed their recorded matrices, but those results do not accept
+  the current third replacement. The current deterministic result remains 16 modeled
+  scholarships, one application group, 16 unknown annual cycles, seven exact P1
+  portal-row bindings, zero active cycles, and at least 71 observed recipient slots
+  across undated descriptions. The current child-graph digest is
+  `d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc`;
+  the final remediation matrix passed before the new candidate freeze.
+- Preliminary candidate `c1c8164a3294263217dcaf35350d7ca39b2555aa` was independently
+  rejected C0/H2/M1/L0 and must never be attested or delivered. Remediation excludes
+  both exact collision `MABA-MGEA Scholarship` (baseline row 174) and the independently
+  identified Leave a Legacy alias (baseline row 170), derives application/workflow
+  claims from privacy-safe source excerpts and excludes NFU children without a linked
+  route. Its attempted synthetic legacy identities were later rejected and are not
+  retained by the current replacement.
+- The same reviewer rejected immutable replacement
+  `075f3117f0d4d26c804aafe936890b3f692c5593` at C0/H0/M1/L0 after confirming all
+  original findings closed. Its new provenance finding is remediated by assigning all
+  18 refreshed Reach application Evidence records the exact `05:25:54Z` observation
+  time and binding the linked route into their source-excerpt digest. The replacement
+  must not be attested or delivered; another freeze and recheck are required.
+- The provenance-corrected second-replacement matrix passed completely at
+  `2026-08-29T05:40:47Z`; a new immutable replacement freeze and independent recheck
+  are next.
+- The accepted-state matrix ran from `2026-08-29T06:10:05Z` through
+  `2026-08-29T06:12:02Z`: locked install, deterministic P6 check, typecheck, complete
+  tests, production build, and root whitespace validation passed. Prospective plan
+  validation reported only the two expected absent P6 manifest/review-attestation
+  gates after the existing P7 kickoff path was bound in machine state.
+- Fresh-context final reviewer `/root/p6_final_review` rejected exact accepted-state
+  candidate `077af076908429d22f61af1befd4d83b2eec69c8` against manifest SHA-256
+  `679c511caa3193c7c35dd2702f8354f78394b36b124da3429455a7899ed389ab`
+  at C0/H2/M0/L0. That candidate and manifest must never be attested or delivered.
+  It fabricated closed 2026 states from an annual-only rule and confused portal-row
+  hashes with source identities while omitting canonical legacy bindings.
+- Second replacement candidate `82e546226bdae3771aedec32419742494a9a56e8`
+  and direct-child attestation `e322d0aa09f2a2b04c4a80edc75a1c6907e9ccfa`
+  were independently rejected C0/H4/M2/L0 by `/root/p6_replacement_audit`. Although
+  their manifest/topology checks passed, the candidate still descended from rejected
+  `077af07`; audience and official-source relationships were insufficiently bound;
+  verification histories conflicted; capture provenance was self-asserted; and
+  near-name dedupe was not systematic. Neither commit may be delivered.
+- Current `rev3` remediation is directly rooted at `2831ef1`, preserves all cycles as
+  unknown/yearless, binds the six exact P1 source identities and seven portal rows,
+  and adds canonical field Evidence for each source authority and every accepted
+  parent/application relationship. Each accepted child now has explicit page-level
+  Montana-audience Evidence rather than an inferred geography.
+- A single bounded official-page refresh returned provider scrape ID
+  `01a04e42-b0fa-74e9-95c0-8e0615315641` and the exact heading `Scholarships for
+  Montana Students`. The raw response was deleted after sanitized receipt/hash binding.
+  Capture tooling now derives scrape IDs from provider metadata and records observation
+  time internally. Systematic near-name review detects and dispositions both the
+  row-170 Leave a Legacy alias and the ended FVCC row-44 suffix alias.
+- The complete third-replacement matrix passed from `2026-08-29T16:16:38Z` through
+  `2026-08-29T16:18:11Z`: locked install, deterministic P6 check, focused audience/
+  authority/relationship/identity/cycle/privacy test, typecheck, complete tests,
+  network-permitted production build, and root whitespace validation. Prospective
+  plan validation reported only the two expected missing manifest/review-attestation
+  gates. The child graph SHA-256 is
+  `407cfa9ac39d25e2649994d3ce7cd0d80d482ea66ae5e92b5b2e6ce6e47f2f69`.
+  That commit froze the then-current replacement; the later fresh recheck rejected it
+  as recorded below.
+- Fresh reviewer `/root/p6_replacement_audit` rejected exact candidate `f1fbc34...`
+  at C0/H0/M2/L0 against manifest SHA-256
+  `d7d83a735a80fb906b5b7d41321ac33caff1db6d6fc95a0a07df53bd4b11799a`.
+  It confirmed the clean baseline topology and all earlier high-severity remediation,
+  but found stale current-state narrative and caller-controlled application timestamps.
+  That exact candidate must never be attested or delivered.
+- Two fresh cache-bypassed, PII-redacted reads of the Reach Higher and NFU public
+  scholarship pages returned provider scrape IDs `01a04e63-c85f-72d9-9cd5-ac252b74bbcb`
+  and `01a04e63-cb23-753f-aa63-bca8b35c331e`. The corrected binder validated both
+  official hosts, accepted only provider-issued UUIDs, and internally recorded
+  `2026-08-29T16:40:30.087Z`. The raw responses were deleted after sanitized receipt
+  and hash binding; no application or interactive route was entered.
+- The complete fourth-candidate matrix ran from `2026-08-29T16:45:25Z` through
+  `2026-08-29T16:46:31Z`: locked install, deterministic P6 check, focused provenance
+  regression, typecheck, complete tests, network-permitted production build, and root
+  whitespace validation passed. Prospective plan validation reported only the expected
+  absent committed P6 manifest/review attestation. The current child graph is
+  `d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc`.
+- A separate prior review process committed local attestation `04a06a6` for rejected
+  candidate `077af07` on the original branch while the final fresh review was still in
+  progress. It is contradicted by the later C0/H2 decision, is isolated from this
+  replacement branch, and must never be pushed, merged, or delivered. No history was
+  rewritten and no commit was appended to that attested branch.
+- `docs/kickoffs/P7-STUDENT-FACING.md` is prepared as next-stage documentation only.
+  P7 is next-permitted in this prospective accepted state but remains strictly
+  prohibited in this P6 session and must not start until the P6 attestation is merged
+  and verified on live `origin/main`.
+- P6 may use bounded public information pages and the minimum required testing-sheet
+  read-only input. Spreadsheet writes, production access, forms/application
+  interaction, applicant data, provider contact, deployment-configuration changes,
+  paid/destructive actions, history rewriting, acceptance-gate weakening, P7, and P9
+  remain prohibited.
+
+## P5 delivery (completed)
+
+- PR #20 merged exact P5 attestation `d22c8dd7108338f41192b884227421a00ecf09b5`
+  to `main` as `2831ef1ff79c99a0fc4755fe7af7b855d11ebf21` at
+  `2026-08-29T04:08:21Z`.
 - Kelsey supplied direct informed authority for revision fingerprinting, complete
   reversible backup creation, and approved idempotent writes limited to testing
   spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, tab
@@ -54,18 +195,16 @@ Default branch: `main`
   nine field decisions, five conflicts, 300 reviews, and `522d42a1bb62` link digest.
   Baseline plan/history validation passed all 10 ordered stages.
 - Production spreadsheet identity remains unset and every production access or
-  mutation remains unauthorized. P6, coverage expansion, API/UI work, forms,
-  application interaction, provider contact, deployment-configuration changes, paid
-  or destructive actions, and history rewriting remain prohibited.
+  mutation remains unauthorized. API/UI work, forms, application interaction,
+  provider contact, deployment-configuration changes, paid or destructive actions,
+  and history rewriting remain prohibited.
 - Rejected final candidate `157daf60cacdd2f729bc422394abf0c77284b53e`
   received C0/H1/M0/L0 against rejected manifest digest `91d17921b51a`. Its technical
   remediation passed, but it incorrectly retained P5 as active, which the two-file
   attestation could not repair. It must never be attested or delivered.
-- The same independent reviewer prospectively approved the exact three-file
-  accepted-state delta C0/H0/M0/L0, and Kelsey explicitly authorized it. Next action is
-  a corrected candidate freeze, new complete manifest, and same-reviewer read-only
-  recheck. Do not execute P6 until P5 is attested and delivered. The P6 kickoff is
-  documentation only.
+- The same independent reviewer accepted the corrected exact candidate and its
+  direct-child attestation; the earlier prospective-only wording is historical and no
+  longer controls current state.
 
 ## P4 delivery (completed)
 

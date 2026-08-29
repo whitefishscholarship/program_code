@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "capturedAt": "2026-08-29T04:55:28Z",
+  "sources": {
+    "queuedParents": 5,
+    "completed": 3,
+    "blockedExternal": 2
+  },
+  "portals": {
+    "baselinePortalRows": 21,
+    "selectedParentSources": 5,
+    "applicationGroupsCreated": 1
+  },
+  "awards": {
+    "exactlyDiscoveredOnCompletedSources": 202,
+    "staticallyVisibleOnBlockedSourcesNotAccepted": 15,
+    "acceptedChildRecords": 16,
+    "excludedChildRecords": 186
+  },
+  "cycles": {
+    "acceptedActive": 0,
+    "acceptedClosed": 0,
+    "acceptedUpcoming": 0,
+    "acceptedUnknown": 16
+  },
+  "recipientSlots": {
+    "observedMinimumAcrossAcceptedChildrenWithUnknownCycles": 71,
+    "awardsWithUnknownSlotCount": 2,
+    "activeRecipientSlots": 0
+  },
+  "exactNetChangeInActiveEligibleAwards": 0,
+  "explanation": "P6 created 16 evidence-bound child records, but the official page states only an annual Jan. 1-Mar. 1 rule with no year-qualified current availability. All 16 cycle states remain unknown, so the exact active eligible net change is zero. The observed minimum 71 recipient slots is historical/undated award-structure evidence, not an active or closed-cycle count. Existing MABA-MGEA and Leave a Legacy rows, NFU children without a current linked application route, blocked sources, and ended FVCC rows are not counted as additions.",
+  "childRecordDatasetSha256": "d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc"
+}

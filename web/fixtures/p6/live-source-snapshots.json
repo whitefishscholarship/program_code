@@ -1,0 +1,1589 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P6",
+  "capturedAt": "2026-08-29T04:55:28Z",
+  "accessBoundary": "Public information pages only; no form, application, login, account, search, questionnaire, or submission interaction.",
+  "reachHigherMontana": {
+    "receipt": {
+      "scrapeId": "01a04bda-3576-708b-b4b3-b19c690364db",
+      "sourceUrl": "https://www.reachhighermontana.org/plan-your-future/scholarships#c475",
+      "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "statusCode": 200,
+      "title": "Scholarships - Earn money to pay for school",
+      "rawJsonSha256": "4f759ed156d999be4d7fe1496fb2225d422561a7002c2b403b79fe41a21e66e6",
+      "markdownSha256": "b8617f4d1650a887f3a780590f7779d6c99efd474e8561f8da3f9abf965a4ed9"
+    },
+    "safeSectionSha256": "4c799f142444c38c66906f9397ba29f58937014c81a00b58240458d73ffb6aca",
+    "cycleObservation": "The page labels 2026 recipients and says the shared application opens Jan. 1 and closes Mar. 1 annually.",
+    "applicationObservation": "One application serves multiple scholarships; eligibility matching and award-specific supplemental questions are described on the public page.",
+    "applicationRouteUrl": "https://www.grantinterface.com/Home/Logon?urlkey=SAF",
+    "applicationRouteVisited": false,
+    "discoveredChildren": [
+      {
+        "name": "Reach Higher Montana Scholarship",
+        "fact": "(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+      },
+      {
+        "name": "Carl Valvoda Scholarship",
+        "fact": "(1) $2,000 scholarship. Must complete the Reach Higher Montana Scholarship application and is serving or have served in the ROTC program or the U.S. Armed Forces."
+      },
+      {
+        "name": "Bridging the Gap Scholarship",
+        "fact": "$1,000 for one or more recipients. Must complete the Reach Higher Montana Scholarship application, and will or have aged out of the Foster Care system."
+      },
+      {
+        "name": "Kelly Kuntz Scholarship",
+        "fact": "$2,000 scholarship. Montana high school graduate in their 2nd, 3rd, or 4th year of post-secondary education, working towards a business-related degree."
+      },
+      {
+        "name": "Horse Creek Scholarship",
+        "fact": "(6) $1,500 scholarships. High school seniors or college students who have/will graduate from a Montana High School, have/will complete the FAFSA by April 1, attend (at least half-time) ANY accredited post-secondary institution nationwide, pursuing a certificate/degree in a business-related field or has completed at least one Business/Finance related course in high school or college. Two scholarships given preference to graduates/residents of Beaverhead and Madison Counties."
+      },
+      {
+        "name": "Gilman Family Scholarship",
+        "fact": "(2) $1,250 scholarships. Post-secondary students in their 2nd or later years of schooling, attending full-time, and pursuing a major or degree in the Trades, Agriculture, or Natural Resources related program of study. Applicants must have attended Sheridan or Twin Bridges High Schools."
+      },
+      {
+        "name": "Rotary of Helena Scholarship",
+        "fact": "(1+) $1,500 scholarships. High School Seniors graduating from Helena area high schools (Capital HS, Helena HS, East Helena HS, & Project for Alternative Learning)."
+      },
+      {
+        "name": "The Angel Fund Scholarship",
+        "fact": "(1+) $1,000 - $3,000 scholarships. High School Seniors graduating from Helena area high schools (Capital HS, Helena HS, East Helena HS, & Project for Alternative Learning)."
+      },
+      {
+        "name": "Kid's Chance of Montana",
+        "fact": "Amounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana."
+      },
+      {
+        "name": "Agri Industries",
+        "fact": "Amounts vary. High School Senior or College student interested in a career related to irrigation, electrical trades, HVAC, Water wells (pumps/drilling), underground utilities, plumbing, welding, or fabrication."
+      },
+      {
+        "name": "Odd Fellows and Rebekah's Scholarship",
+        "fact": "(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)"
+      },
+      {
+        "name": "FFA Ag Teachers Memorial Scholarship",
+        "fact": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA, planning to pursue a career as an Ag Ed teacher."
+      },
+      {
+        "name": "AMTOPP Scholarship",
+        "fact": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA."
+      },
+      {
+        "name": "Big Muddy Legacy Scholarship",
+        "fact": "(1) $500 scholarship. HS Senior, 2.0 GPA or higher, member of FFA within the Big Muddy FFA District."
+      },
+      {
+        "name": "Doris Robinson Memorial Scholarship",
+        "fact": "(2) $100 scholarships. HS Senior from Carbon or Stillwater County, member of FFA, with a 2.0 GPA or higher."
+      },
+      {
+        "name": "Dr. Max L Amberson Ag Education Scholarship",
+        "fact": "(2) $500 scholarships. HS Senior or College Freshman, FFA member, 2.0 GPA or higher, pursuing a degree in Ag Ed."
+      },
+      {
+        "name": "Dr. Van Shelhamer Memorial Scholarship",
+        "fact": "(1) $1,500 scholarship. Must be a Montana FFA State Officer attending Montana State University, 2.0 GPA or higher."
+      },
+      {
+        "name": "Holt Family, John Bishop Scholarship",
+        "fact": "(1) $200 scholarship. HS senior, FFA member, planning to attend the FFA National Conference."
+      },
+      {
+        "name": "Irene Andres Memorial Award",
+        "fact": "(1) $200 scholarship. HS senior, FFA member, 2.0 GPA or higher, planning to attend the FFA National Conference."
+      },
+      {
+        "name": "John Kozlowski Memorial Scholarship",
+        "fact": "(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+      },
+      {
+        "name": "MABA-MGEA Scholarship",
+        "fact": "(2) $500 scholarships. HS senior, FFA member, 2.0 GPA or higher."
+      },
+      {
+        "name": "Montana FFA Alumni Leadership Camp Scholarship",
+        "fact": "(5) $100 scholarships. HS Senior, FFA member, 2.0 GPA or higher, wanting to attend the Alumni Leadership Camp (ALC)."
+      },
+      {
+        "name": "Montana FFA Leave a Legacy Scholarship",
+        "fact": "(1+) $500-$1,000 scholarships. HS Senior, FFA member, 2.0 GPA or higher."
+      },
+      {
+        "name": "Murdoch's Scholarship",
+        "fact": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+      },
+      {
+        "name": "Sam Cornthwaite Memorial Scholarship for WLC",
+        "fact": "(1) $250 scholarship. HS Senior, FFA member, 2.0 GPA or higher, wanting to attend the Washington Leadership Conference (WLC)."
+      },
+      {
+        "name": "Sam Cornthwaite Memorial Scholarship for ALC",
+        "fact": "(1) $100 scholarship. HS Senior, FFA member, 20 GPA or higher, wanting to attend the Alumni Leadership Camp (ALC) for the first time."
+      },
+      {
+        "name": "Servant Leadership Scholarship",
+        "fact": "(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+      },
+      {
+        "name": "Stockman Bank Next Gen Scholarship",
+        "fact": "(2) $500 scholarships.HS Senior, FFA member, 2.0 GPA or higher."
+      },
+      {
+        "name": "Washington Leadership Conference Scholarship WLC",
+        "fact": "(7) $500 scholarships. HS Senior, FFA member, 2.0 GPA or higher, wanting to attend the Washington Leadership Conference (WLC)."
+      },
+      {
+        "name": "W. Ralph Peck Memorial Scholarship",
+        "fact": "(1) $1,000 scholarships. HS Senior, FFA member, 3.0 GPA or higher, planning to pursue a degree in a trades or ag science, and has demonstrated engagement in leadership, service, and innovation. Preference will be given to students who are PELL eligible."
+      }
+    ],
+    "applicationEvidenceReceipt": {
+      "observedAt": "2026-08-29T16:40:30.087Z",
+      "scrapeId": "01a04e63-c85f-72d9-9cd5-ac252b74bbcb",
+      "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "statusCode": 200,
+      "title": "Scholarships - Earn money to pay for school",
+      "cacheState": null,
+      "cachedAt": null,
+      "rawJsonSha256": "45fd2f454933218353cbaf7334ca3d93166c6b2255f1e07326297d115d067cf7",
+      "markdownSha256": "31e7726655181167804481157e8d17a3594d2e83d357084e7059e76d86e2c8f7"
+    },
+    "applicationEvidenceCapturedAt": "2026-08-29T16:40:30.087Z",
+    "applicationEvidence": {
+      "cycleText": "Opens Jan. 1, closes Mar. 1",
+      "architectureText": "**One Application, Mutiple Scholarships.**",
+      "supplementalText": "Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.",
+      "contentSha256": "a8dfa7b16c2c7dfb706510347d5c899b27dcebd2a19b94b2dd494d3ed4766afa"
+    },
+    "authorityEvidenceReceipt": {
+      "observedAt": "2026-08-29T16:06:27.086Z",
+      "scrapeId": "01a04e42-b0fa-74e9-95c0-8e0615315641",
+      "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "finalUrl": "https://reachhighermontana.org/pay-for-school/scholarships#c475",
+      "statusCode": 200,
+      "title": "Scholarships - Earn money to pay for school",
+      "siteName": "Reach Higher Montana",
+      "description": "Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+      "cacheState": "miss",
+      "cachedAt": null,
+      "rawJsonSha256": "cc38fe319ab27d70c1f1f2716a26460e3ecafde0e7240c99b8dc9ad9dfd63d75",
+      "markdownSha256": "31e7726655181167804481157e8d17a3594d2e83d357084e7059e76d86e2c8f7"
+    },
+    "audienceEvidence": {
+      "heading": "## Scholarships for Montana Students",
+      "description": "Check out our list of Montana scholarships plus helpful resources, tools, and tips for getting scholarship money to help pay for school.",
+      "childSectionHeading": "## It's Scholarship Time!",
+      "contentSha256": "5843ddc225e3df8c39b23d51518eb1d9adf5b3246ba0a363691b048f474963c4"
+    }
+  },
+  "fvccAcademicWorks": {
+    "pageCount": 4,
+    "historicalObservedCount": 179,
+    "currentOpportunityCount": 169,
+    "historicalDifference": -10,
+    "endedCount": 169,
+    "pages": [
+      {
+        "page": 1,
+        "receipt": {
+          "scrapeId": "01a04bda-320a-7099-8337-6c75a7dec745",
+          "sourceUrl": "https://fvcc.academicworks.com/",
+          "finalUrl": "https://fvcc.academicworks.com/",
+          "statusCode": 200,
+          "title": "All Opportunities - Flathead Valley Community College Scholarships",
+          "rawJsonSha256": "e5689d3e1b719043a5e78e9db89c0ab1e37950f8adf46cd2f6893f908958d6fd",
+          "markdownSha256": "29e707984ce661cb94bc3915b3d9ceeb73a4cc490264e04ba212a66c7017af01"
+        },
+        "opportunities": [
+          {
+            "amount": "Varies",
+            "name": "FVCC Foundation Summer Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4033",
+            "opportunityId": "4033",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Alton Pearce Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4119",
+            "opportunityId": "4119",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "American Association of University Women Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4069",
+            "opportunityId": "4069",
+            "status": "Ended"
+          },
+          {
+            "amount": "$550.00",
+            "name": "Amy Gordley Piunti Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/3993",
+            "opportunityId": "3993",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000.00",
+            "name": "Andrew Crawford Accelerator Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4150",
+            "opportunityId": "4150",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Ardi Aiken Memorial/Bigfork Center for the Performing Arts Foundation Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4154",
+            "opportunityId": "4154",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Barbara and Eugene E. Graf Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4114",
+            "opportunityId": "4114",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "Barce Family Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4213",
+            "opportunityId": "4213",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Beyer Family Foundation Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4177",
+            "opportunityId": "4177",
+            "status": "Ended"
+          },
+          {
+            "amount": "Up to $1,000",
+            "name": "Bigfork Fire District - Ralph Barton Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4138",
+            "opportunityId": "4138",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Bill and Lois McClaren Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4031",
+            "opportunityId": "4031",
+            "status": "Ended"
+          },
+          {
+            "amount": "$3,000.00",
+            "name": "Bob Nystuen Glacier Bank Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4241",
+            "opportunityId": "4241",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Bob Reha Theatre Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4058",
+            "opportunityId": "4058",
+            "status": "Ended"
+          },
+          {
+            "amount": "$7,000.00",
+            "name": "Bonnet-Robbins Endowed Nursing Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4287",
+            "opportunityId": "4287",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Breonna Taylor Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4254",
+            "opportunityId": "4254",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000",
+            "name": "C. K. Logue Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4168",
+            "opportunityId": "4168",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Cal Tassinari Memorial Endowed/Flathead Land Trust Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4182",
+            "opportunityId": "4182",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Cawdrey Family Fine Arts Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4019",
+            "opportunityId": "4019",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Central Christian Church - Doris Johnston Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4309",
+            "opportunityId": "4309",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Charlotte Kempf Johnson Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4293",
+            "opportunityId": "4293",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Christopher Savage Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4135",
+            "opportunityId": "4135",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Cindy Viano Memorial Scholarship Fund for Venice Students",
+            "url": "https://fvcc.academicworks.com/opportunities/3982",
+            "opportunityId": "3982",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Class of '61, Inc.",
+            "url": "https://fvcc.academicworks.com/opportunities/4288",
+            "opportunityId": "4288",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Cobb Foundation Nursing Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4094",
+            "opportunityId": "4094",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Cobb Foundation Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4260",
+            "opportunityId": "4260",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,500.00",
+            "name": "Colleen Sweeney Unterreiner Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4273",
+            "opportunityId": "4273",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Community Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4093",
+            "opportunityId": "4093",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "Community Service Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4096",
+            "opportunityId": "4096",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Create It Forward",
+            "url": "https://fvcc.academicworks.com/opportunities/3991",
+            "opportunityId": "3991",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Curtis and Evelyn Mitchell Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4054",
+            "opportunityId": "4054",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,750",
+            "name": "David Haymond and Barbara Jefts Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4174",
+            "opportunityId": "4174",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Debbie and Jim Peterson Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4108",
+            "opportunityId": "4108",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,250",
+            "name": "Dennis & Phyllis Washington Foundation Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4193",
+            "opportunityId": "4193",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Dick Uhde Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4274",
+            "opportunityId": "4274",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Diogenes Award Endowment Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4229",
+            "opportunityId": "4229",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Doug and Patsi Morton Endowment Fund for Students with Disabilities",
+            "url": "https://fvcc.academicworks.com/opportunities/3989",
+            "opportunityId": "3989",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Doug and Patsi Morton Endowment Fund Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3992",
+            "opportunityId": "3992",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Dr. Charles E. and Lottie (Hartsoch) Stewart Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4194",
+            "opportunityId": "4194",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Dustin Petersen Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4261",
+            "opportunityId": "4261",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Edward L. and Mabel Engene Bogut Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4025",
+            "opportunityId": "4025",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ella Hanley and Jacobson Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4188",
+            "opportunityId": "4188",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ellen and John MacMillan Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4102",
+            "opportunityId": "4102",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,500.00",
+            "name": "Ellen H. Laidlaw Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/3985",
+            "opportunityId": "3985",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Ervin and Marie Bauer Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4226",
+            "opportunityId": "4226",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Express Employment Professionals",
+            "url": "https://fvcc.academicworks.com/opportunities/4055",
+            "opportunityId": "4055",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Flathead Chapter of Montana Society of CPAs",
+            "url": "https://fvcc.academicworks.com/opportunities/4062",
+            "opportunityId": "4062",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Flathead County Tavern Association Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4037",
+            "opportunityId": "4037",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "Flathead Electric Co-Op Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4225",
+            "opportunityId": "4225",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Flathead Electric Coop. Early Childhood Education Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3986",
+            "opportunityId": "3986",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "Flathead Farm Mutual Insurance Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4376",
+            "opportunityId": "4376",
+            "status": "Ended"
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "receipt": {
+          "scrapeId": "01a04bdb-aac1-77ee-b6b3-cefa092c8042",
+          "sourceUrl": "https://fvcc.academicworks.com/?page=2",
+          "finalUrl": "https://fvcc.academicworks.com/?page=2",
+          "statusCode": 200,
+          "title": "All Opportunities - Flathead Valley Community College Scholarships",
+          "rawJsonSha256": "5ae315bd1c79d2778a15926469d878c816723c409577679bde2fcf6f5613ffdb",
+          "markdownSha256": "e8315638c5f2b2789cb08a9b57c1f5a37c84300a16c444a16fd2d248a5055808"
+        },
+        "opportunities": [
+          {
+            "amount": "Varies",
+            "name": "Flathead Valley Community Theatre Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4192",
+            "opportunityId": "4192",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Founding President Dr. Larry J. Blake Sr. Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4104",
+            "opportunityId": "4104",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Friendship House Assisted Living Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4201",
+            "opportunityId": "4201",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "FVCC Alumni Legacy Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4164",
+            "opportunityId": "4164",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Business and Technology Division Waiver",
+            "url": "https://fvcc.academicworks.com/opportunities/4129",
+            "opportunityId": "4129",
+            "status": "Ended"
+          },
+          {
+            "amount": "$5,000",
+            "name": "FVCC Foundation Achievement Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4159",
+            "opportunityId": "4159",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "FVCC Foundation Fine Arts Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4248",
+            "opportunityId": "4248",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "FVCC Foundation Inspiration Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4098",
+            "opportunityId": "4098",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "FVCC Foundation Merit Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4075",
+            "opportunityId": "4075",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000",
+            "name": "FVCC Foundation Occupational Trades Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3997",
+            "opportunityId": "3997",
+            "status": "Ended"
+          },
+          {
+            "amount": "Up to $10,000",
+            "name": "FVCC Foundation Transformation Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4023",
+            "opportunityId": "4023",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Health Sciences Division Waiver",
+            "url": "https://fvcc.academicworks.com/opportunities/4112",
+            "opportunityId": "4112",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Humanities Division Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4105",
+            "opportunityId": "4105",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Math and Science Division Waiver",
+            "url": "https://fvcc.academicworks.com/opportunities/4279",
+            "opportunityId": "4279",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "FVCC Merit Award",
+            "url": "https://fvcc.academicworks.com/opportunities/4124",
+            "opportunityId": "4124",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Nursing Division Waiver",
+            "url": "https://fvcc.academicworks.com/opportunities/4133",
+            "opportunityId": "4133",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000.00",
+            "name": "FVCC Occupational Trades Division Waiver",
+            "url": "https://fvcc.academicworks.com/opportunities/4236",
+            "opportunityId": "4236",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "FVCC Social Science Division Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4156",
+            "opportunityId": "4156",
+            "status": "Ended"
+          },
+          {
+            "amount": "$5,000",
+            "name": "Garrett Mulholand Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4152",
+            "opportunityId": "4152",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Gary Morris Musical Theatre Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4143",
+            "opportunityId": "4143",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Glacier Bank Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4281",
+            "opportunityId": "4281",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Glacier Restaurant Group R.I.S.E. Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4263",
+            "opportunityId": "4263",
+            "status": "Ended"
+          },
+          {
+            "amount": "$300",
+            "name": "Iliff and Schauer Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4027",
+            "opportunityId": "4027",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "James and Doris Monk Daley Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4132",
+            "opportunityId": "4132",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "James Andrew Vale Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4107",
+            "opportunityId": "4107",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Jean Houseworth Memorial Art Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3988",
+            "opportunityId": "3988",
+            "status": "Ended"
+          },
+          {
+            "amount": "Up to $1,000",
+            "name": "Jerome and Rebecca Broussard Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4044",
+            "opportunityId": "4044",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Jerry Meerkatz Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4249",
+            "opportunityId": "4249",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Jim Gordley Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4264",
+            "opportunityId": "4264",
+            "status": "Ended"
+          },
+          {
+            "amount": "$5,000.00",
+            "name": "Joanne E. Eaves Memorial Scholarship for Culinary Arts",
+            "url": "https://fvcc.academicworks.com/opportunities/4079",
+            "opportunityId": "4079",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,400.00",
+            "name": "Joe and Ellie Stimpson Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4237",
+            "opportunityId": "4237",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000.00",
+            "name": "John and Elaine Cowan Trust",
+            "url": "https://fvcc.academicworks.com/opportunities/4206",
+            "opportunityId": "4206",
+            "status": "Ended"
+          },
+          {
+            "amount": "$550.00",
+            "name": "John J. and Mary Hansen Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4004",
+            "opportunityId": "4004",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,500.00",
+            "name": "Joyce and Gilbert Lynch Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4294",
+            "opportunityId": "4294",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Kalispell Daybreak Rotary Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4063",
+            "opportunityId": "4063",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Karen and Fred Longhart Mathematics Education Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4137",
+            "opportunityId": "4137",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Kathy and Marvin Hansen Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4246",
+            "opportunityId": "4246",
+            "status": "Ended"
+          },
+          {
+            "amount": "$3,500.00",
+            "name": "Kennen David Marksbury Memorial Nursing Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4180",
+            "opportunityId": "4180",
+            "status": "Ended"
+          },
+          {
+            "amount": "7 @ $3000",
+            "name": "La Serenissima Scholarships",
+            "url": "https://fvcc.academicworks.com/opportunities/4059",
+            "opportunityId": "4059",
+            "status": "Ended"
+          },
+          {
+            "amount": "$700.00",
+            "name": "Lawrence A. Goroski Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4064",
+            "opportunityId": "4064",
+            "status": "Ended"
+          },
+          {
+            "amount": "$100.00",
+            "name": "Linda M. Hammerberg Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4197",
+            "opportunityId": "4197",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Linnea Ghilardi and Steve Armstrong Scholarship for Medical Professions",
+            "url": "https://fvcc.academicworks.com/opportunities/4244",
+            "opportunityId": "4244",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,500.00",
+            "name": "M. E. K. Johnson Endowment for Surgical Technology",
+            "url": "https://fvcc.academicworks.com/opportunities/4283",
+            "opportunityId": "4283",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Marian F. and Ivan L. O'Neil Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4082",
+            "opportunityId": "4082",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Marjory & Alvin Jacobson Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4165",
+            "opportunityId": "4165",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Mark Hodgson & Dorothy Jaquette Hodgson Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4181",
+            "opportunityId": "4181",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Mary Ann Lund Nursing Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4085",
+            "opportunityId": "4085",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Mary Fetter Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4195",
+            "opportunityId": "4195",
+            "status": "Ended"
+          },
+          {
+            "amount": "Up to $2,000",
+            "name": "Mary Grace Houlberg Certainty Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4003",
+            "opportunityId": "4003",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Melody Hawkey Johnson Culinary Program Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3987",
+            "opportunityId": "3987",
+            "status": "Ended"
+          }
+        ]
+      },
+      {
+        "page": 3,
+        "receipt": {
+          "scrapeId": "01a04bdb-b560-71d8-8c76-06d5505980c2",
+          "sourceUrl": "https://fvcc.academicworks.com/?page=3",
+          "finalUrl": "https://fvcc.academicworks.com/?page=3",
+          "statusCode": 200,
+          "title": "All Opportunities - Flathead Valley Community College Scholarships",
+          "rawJsonSha256": "db915dc9e324e2f6fcbe210610b299fd4a32e5811c56a8604a9be2c4437ce843",
+          "markdownSha256": "e14c4db914f5ac96d797b295850cdaceecb283eb1662eb1798cbfa4e7328824b"
+        },
+        "opportunities": [
+          {
+            "amount": "Varies",
+            "name": "Milton Mercord Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4045",
+            "opportunityId": "4045",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "Mitchell Lester Anderson Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4065",
+            "opportunityId": "4065",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Montana Access Grant Match",
+            "url": "https://fvcc.academicworks.com/opportunities/4256",
+            "opportunityId": "4256",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Montana American Indian Scholar Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4043",
+            "opportunityId": "4043",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Montana Legends Memorial Run for the Vets",
+            "url": "https://fvcc.academicworks.com/opportunities/4134",
+            "opportunityId": "4134",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Montana's Future Manufacturing Workforce",
+            "url": "https://fvcc.academicworks.com/opportunities/4032",
+            "opportunityId": "4032",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Nan and Dave Klehm Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4217",
+            "opportunityId": "4217",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ned Sohl Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4140",
+            "opportunityId": "4140",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000.00",
+            "name": "Nikki and Everit Sliter Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4257",
+            "opportunityId": "4257",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "North Star Fund Nursing Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4128",
+            "opportunityId": "4128",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ora and Stanley Halvorson Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4208",
+            "opportunityId": "4208",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Owen Sowerwine Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4240",
+            "opportunityId": "4240",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Patricia D. McMillan White Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4028",
+            "opportunityId": "4028",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Patyk Foundation Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4024",
+            "opportunityId": "4024",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Paul Boe Mosby Memorial Endowed Scholarship for Occupational Trades",
+            "url": "https://fvcc.academicworks.com/opportunities/3995",
+            "opportunityId": "3995",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Paul Boe Mosby Memorial Endowed Scholarship for Theatre Students",
+            "url": "https://fvcc.academicworks.com/opportunities/4171",
+            "opportunityId": "4171",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Paul D. Wachholz Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4233",
+            "opportunityId": "4233",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Paul T. Williams Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4290",
+            "opportunityId": "4290",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Peggy Casey Theatre Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4092",
+            "opportunityId": "4092",
+            "status": "Ended"
+          },
+          {
+            "amount": "$800",
+            "name": "PEO Chapter AB",
+            "url": "https://fvcc.academicworks.com/opportunities/4080",
+            "opportunityId": "4080",
+            "status": "Ended"
+          },
+          {
+            "amount": "$300.00",
+            "name": "PEO Chapter BM Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4036",
+            "opportunityId": "4036",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "PEO Chapter BR",
+            "url": "https://fvcc.academicworks.com/opportunities/3994",
+            "opportunityId": "3994",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "PEO Chapter C Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4072",
+            "opportunityId": "4072",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Perry and Luella Melton and Stephen F. Hagel Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4021",
+            "opportunityId": "4021",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Philip J. Rygg Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4030",
+            "opportunityId": "4030",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ralene Sliter Student Success Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4029",
+            "opportunityId": "4029",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Red Lion Hotels Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4070",
+            "opportunityId": "4070",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,350.00",
+            "name": "Rhoades Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4228",
+            "opportunityId": "4228",
+            "status": "Ended"
+          },
+          {
+            "amount": "$300.00",
+            "name": "Rich Baars Trades Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4103",
+            "opportunityId": "4103",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Richard Thompson Memorial Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4312",
+            "opportunityId": "4312",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Rita Johnson Endowed Scholarship Fund for Nursing Students",
+            "url": "https://fvcc.academicworks.com/opportunities/4173",
+            "opportunityId": "4173",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Robbie Sullivan Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4095",
+            "opportunityId": "4095",
+            "status": "Ended"
+          },
+          {
+            "amount": "$300.00",
+            "name": "Robert Lopp Family Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/3984",
+            "opportunityId": "3984",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Robert Peccia & Associates Endowed Scholarship Fund for Civil Engineering or Land Surveying Students",
+            "url": "https://fvcc.academicworks.com/opportunities/4239",
+            "opportunityId": "4239",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Ruder Educational Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4144",
+            "opportunityId": "4144",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Sally Porcarelli Soroptimist Education Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4002",
+            "opportunityId": "4002",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "Sandy Slater Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4277",
+            "opportunityId": "4277",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Scott Vallely Soldiers Memorial Fund Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4056",
+            "opportunityId": "4056",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Selma Dodge Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3996",
+            "opportunityId": "3996",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500.00",
+            "name": "Serving Those Who Served- FVCC Veterans' Association Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4267",
+            "opportunityId": "4267",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Sliters Lumber and Building Supply Endowed Scholarship Fund for the Industrial Arts",
+            "url": "https://fvcc.academicworks.com/opportunities/4126",
+            "opportunityId": "4126",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,500",
+            "name": "Sons of Norway Kalispell, Montana Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4020",
+            "opportunityId": "4020",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,500",
+            "name": "Sons of Norway Transfer Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4210",
+            "opportunityId": "4210",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "Soroptimist International of Whitefish Culinary Arts",
+            "url": "https://fvcc.academicworks.com/opportunities/4326",
+            "opportunityId": "4326",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Soroptimist International of Whitefish Early Childhood Education Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4145",
+            "opportunityId": "4145",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,500.00",
+            "name": "Soroptimist International of Whitefish Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4323",
+            "opportunityId": "4323",
+            "status": "Ended"
+          },
+          {
+            "amount": "$200",
+            "name": "Steve and Sue Cummings Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4204",
+            "opportunityId": "4204",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,500.00",
+            "name": "Stockman Bank Advancement Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4183",
+            "opportunityId": "4183",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Sullivan Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3983",
+            "opportunityId": "3983",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Sylvia Brassett Murphy Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4220",
+            "opportunityId": "4220",
+            "status": "Ended"
+          }
+        ]
+      },
+      {
+        "page": 4,
+        "receipt": {
+          "scrapeId": "01a04bdb-a67a-7544-bece-aa69b990786e",
+          "sourceUrl": "https://fvcc.academicworks.com/?page=4",
+          "finalUrl": "https://fvcc.academicworks.com/?page=4",
+          "statusCode": 200,
+          "title": "All Opportunities - Flathead Valley Community College Scholarships",
+          "rawJsonSha256": "d770472ae6ddb4a5b66082fc0924315fe9e5bb20d2b9b22992933bc667681705",
+          "markdownSha256": "19315ba08e83bc7ecc34dfd08a66acaaa471b218f054ddb4a1dcea19973e4b92"
+        },
+        "opportunities": [
+          {
+            "amount": "$1,000",
+            "name": "T & D Lindsey Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4207",
+            "opportunityId": "4207",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Terri Parsons Memorial Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4136",
+            "opportunityId": "4136",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "The Doris C. Forkin Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/3990",
+            "opportunityId": "3990",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "The Holly Jean Larson and Bernard Walz Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4178",
+            "opportunityId": "4178",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "The Ila B. Dousman Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4172",
+            "opportunityId": "4172",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,785.71",
+            "name": "The Kartsonis Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4424",
+            "opportunityId": "4424",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "The Konsberg Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4275",
+            "opportunityId": "4275",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "The Leonard M. Greene Memorial Endowed Scholarship Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4078",
+            "opportunityId": "4078",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "The Mercord Family Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4088",
+            "opportunityId": "4088",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000",
+            "name": "The Nyeste-Regling-Whitehouse Family Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4223",
+            "opportunityId": "4223",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1000",
+            "name": "Thomas C. Perry Endowment Fund",
+            "url": "https://fvcc.academicworks.com/opportunities/4278",
+            "opportunityId": "4278",
+            "status": "Ended"
+          },
+          {
+            "amount": "$6,000.00",
+            "name": "Tracy Foundation Scholarship Honoring Mike Mansfield",
+            "url": "https://fvcc.academicworks.com/opportunities/4061",
+            "opportunityId": "4061",
+            "status": "Ended"
+          },
+          {
+            "amount": "$0.00",
+            "name": "Vivian Beardslee Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4214",
+            "opportunityId": "4214",
+            "status": "Ended"
+          },
+          {
+            "amount": "$500",
+            "name": "Wallace E. McCulloch Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4139",
+            "opportunityId": "4139",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Walt and Mary Louise Mauritson Memorial Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4252",
+            "opportunityId": "4252",
+            "status": "Ended"
+          },
+          {
+            "amount": "$5,000",
+            "name": "Walter Kuhn Sr. Memorial Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4216",
+            "opportunityId": "4216",
+            "status": "Ended"
+          },
+          {
+            "amount": "$1,000.00",
+            "name": "Whitefish Credit Union Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4158",
+            "opportunityId": "4158",
+            "status": "Ended"
+          },
+          {
+            "amount": "Varies",
+            "name": "Whitefish Mountain Resort Endowed Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4026",
+            "opportunityId": "4026",
+            "status": "Ended"
+          },
+          {
+            "amount": "$2,000",
+            "name": "Wilke-Brooner Elementary Education Scholarship",
+            "url": "https://fvcc.academicworks.com/opportunities/4041",
+            "opportunityId": "4041",
+            "status": "Ended"
+          }
+        ]
+      }
+    ],
+    "terminalProbe": {
+      "page": 5,
+      "opportunityCount": 0,
+      "receipt": {
+        "scrapeId": "01a04be0-e74a-7125-9e84-2011fde92b85",
+        "sourceUrl": "https://fvcc.academicworks.com/?page=5",
+        "finalUrl": "https://fvcc.academicworks.com/?page=5",
+        "statusCode": 200,
+        "title": "All Opportunities - Flathead Valley Community College Scholarships",
+        "rawJsonSha256": "2e0726eb2d063a61913e07c093fda37c042ef21a95aefb856693a818b9dfc9c3",
+        "markdownSha256": "fc928f2c86a91f4f3d6d6020afb6470fca82c2c94e1913a7df98725a931965ca"
+      }
+    },
+    "driftLimitation": "The accepted plan records a historical 179-item observation, but it does not retain those 179 identities. The current public catalog exposes 169 unique opportunities on pages 1-4 and zero on the first empty page 5. This proves the current measured traversal, not which ten historical items changed or why."
+  },
+  "nationalFarmersUnion": {
+    "receipt": {
+      "scrapeId": "01a04bda-3211-7141-8dc3-2d44cdf93c0e",
+      "sourceUrl": "https://nfu.org/education/scholarships/",
+      "finalUrl": "https://nfu.org/resources/scholarships/",
+      "statusCode": 200,
+      "title": "Scholarships - National Farmers Union",
+      "rawJsonSha256": "402c6c296f4d753f947299856a0ec76cd6df7c37afb6c452c0cf3c43ab194d8b",
+      "markdownSha256": "bc2003a57bece3139be7070cf4a2b46e1a6d596489be06f35c20b280dd399c2f"
+    },
+    "sharedApplicationObservation": "The official page says three primary scholarship opportunities use one unified application form.",
+    "applicationRoutes": [
+      {
+        "type": "public_information_page",
+        "url": "https://nfu.org/resources/scholarships/",
+        "visited": true
+      }
+    ],
+    "discoveredChildren": [
+      {
+        "name": "Stanley Moore Scholarships",
+        "eligibility": "High school seniors, college students or nontraditional students seeking funding to attend a two or four-year accredited college or university or technical school for any area of study. Must be a Farmers Union member.",
+        "amount": "Three $1,500 scholarships will be awarded.",
+        "deadline": "April 1, 2026. Recipients will be selected and announced by July 31, 2026."
+      },
+      {
+        "name": "Hubert K. and JoAnn Seymour Scholarship",
+        "eligibility": "Open to all graduating high school seniors who are continuing their education in either a two-year or four-year accredited college or university or technical school for any area of study. Must be a Farmers Union member.",
+        "amount": "One $2,000 scholarship will be awarded.",
+        "deadline": "April 1, 2026. Recipients will be selected and announced by July 31, 2026."
+      },
+      {
+        "name": "Minorities in Agriculture, Natural Resources, and Related Sciences (MANRRS) Scholarship",
+        "eligibility": "Open to MANRRS members and their children. High school seniors, college students or nontraditional students seeking funding to attend a two or four-year accredited college or university or technical school for any area of study may apply.",
+        "amount": "Two $1,500 scholarships will be awarded.",
+        "deadline": "June 1, 2026."
+      }
+    ],
+    "applicationEvidenceReceipt": {
+      "observedAt": "2026-08-29T16:40:30.087Z",
+      "scrapeId": "01a04e63-cb23-753f-aa63-bca8b35c331e",
+      "sourceUrl": "https://nfu.org/resources/scholarships/",
+      "finalUrl": "https://nfu.org/resources/scholarships/",
+      "statusCode": 200,
+      "title": "Scholarships - National Farmers Union",
+      "cacheState": null,
+      "cachedAt": null,
+      "rawJsonSha256": "6a5f79465b56850f554f5590821699ead4ce74d7b46ae00e9fc7946d7d31db9f",
+      "markdownSha256": "2f681c2b3680d079e1ba8bb8a979d6fb227b14c182684096d2561a02d0cd1618"
+    },
+    "applicationEvidenceCapturedAt": "2026-08-29T16:40:30.087Z",
+    "applicationEvidence": {
+      "unifiedApplicationText": "No matter which scholarship you apply for, you’ll only need to complete **one unified application form**.",
+      "channelText": "Completed application form. Applications may be completed electronically through Google forms or by printing out and mailing the PDF form. Please do not submit both an electronic and paper copy.",
+      "linkedRouteUrls": [],
+      "contentSha256": "4d55fc7875f7f76c00e6ecc500d94c7ad4208e14c18c2b218b70284ed54c38e5"
+    },
+    "applicationRouteStatus": "described_without_current_link"
+  },
+  "horatioAlger": {
+    "receipts": [
+      {
+        "scrapeId": "01a04bda-33a5-73e0-82eb-e0509b8846a5",
+        "sourceUrl": "https://horatioalger.org/scholarships/",
+        "finalUrl": "https://horatioalger.org/scholarships/",
+        "statusCode": 200,
+        "title": "Scholarships | Horatio Alger",
+        "rawJsonSha256": "1f0a714c0b1c15665f58cda9531159374a9e0fce0ec0f020db79c27e4b69ef1c",
+        "markdownSha256": "eadd6f97a4dbcc23eb2630e6d252b03c6ebff9dd4842510f36b3568ce8173a56"
+      },
+      {
+        "scrapeId": "01a04bdb-a3e5-709e-889b-e396d070c3cd",
+        "sourceUrl": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+        "finalUrl": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+        "statusCode": 200,
+        "title": "Undergraduate Scholarships | Horatio Alger",
+        "rawJsonSha256": "a9a7f0692c5614e3fb37c886801c41b64fc02592af711b0b780d87c07235c885",
+        "markdownSha256": "161f042a04887f2403a62f2d4d56ae5fb141e5bfafd8c1941a87f82e26d3464b"
+      },
+      {
+        "scrapeId": "01a04bdb-a7e6-77f4-a53e-c9c0b83e0935",
+        "sourceUrl": "https://horatioalger.org/career-technical-education-scholarships/",
+        "finalUrl": "https://horatioalger.org/career-technical-education-scholarships/",
+        "statusCode": 200,
+        "title": "Career & Technical  Education Scholarships | Horatio Alger",
+        "rawJsonSha256": "fa000cc8c987c29e409051f3c65b4273103e2f471cd81ca86712cee9e77afddc",
+        "markdownSha256": "f11dcee64be4a7e8c4da7da2ab9e8bc503c134311ad7b7b68b4eca480244e47c"
+      }
+    ],
+    "parentProgramFamilies": [
+      {
+        "name": "Undergraduate Scholarships",
+        "period": "Junior: December 1-March 1; Senior: December 1-February 15"
+      },
+      {
+        "name": "Career & Technical Scholarships",
+        "period": "March 15-June 15"
+      },
+      {
+        "name": "Graduate Scholarships",
+        "period": "July 1-August 31"
+      }
+    ],
+    "statedProgramDenominator": "over 70 scholarship programs",
+    "staticallyVisibleUndergraduateChildren": [
+      "National Scholarship",
+      "Belle Plaine Community Schools Scholarship",
+      "Bergeron Everglades Environmental Steward Scholarship",
+      "Dennis & Phyllis Washington Foundation Undergraduate Scholarship",
+      "Denny Sanford Arizona State University Scholarship",
+      "Denny Sanford Augustana University Scholarship",
+      "Denny Sanford Black Hills State University Scholarship",
+      "Denny Sanford Dakota State University Scholarship",
+      "Denny Sanford Long Island University Scholarship",
+      "Denny Sanford National University Scholarship – San Diego, California"
+    ],
+    "staticallyVisibleCteChildren": [
+      "National Career & Technical Scholarship",
+      "John Hardin Hudiburg Career & Technical Scholarship",
+      "John Rollins Career & Technical Scholarship",
+      "Valencia College Career & Technical Scholarship",
+      "Warren Webster Technical Scholarship"
+    ],
+    "cteCycleObservation": "The public page says the CTE application is closed and asks visitors to return for 2027 information.",
+    "applicationRouteVisited": false
+  },
+  "firstScholarships": {
+    "receipt": {
+      "scrapeId": "01a04bda-3177-744b-b0b9-44ec4261ea3e",
+      "sourceUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "finalUrl": "https://www.firstinspires.org/resources/library/scholarships",
+      "statusCode": 200,
+      "title": "FIRST Scholarship Program | FIRST & Pearson Futures Portal",
+      "rawJsonSha256": "3c86ce222ab40cff06188657ba9ec2a80edc3151395d60c59231b83d72e3c06d",
+      "markdownSha256": "2b630e8765ae6f717f9f9c043c0deaee8687d66eb8a9bdabed796ac5591824ac"
+    },
+    "parentObservation": "FIRST directs students to Pearson Futures, says new scholarships are added throughout the year, and says each provider controls its own amount, eligibility, process, and deadline.",
+    "providerDenominatorObservation": "The partnership includes more than 150 postsecondary institutions and businesses; this is not an exact scholarship denominator.",
+    "portalUrls": [
+      "https://futures.pearson.com/scholarships",
+      "https://www.pearson.com/futures/scholarships?partnerName=FIRST+Partner"
+    ],
+    "portalVisited": false
+  }
+}
