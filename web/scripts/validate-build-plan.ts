@@ -18,6 +18,23 @@ import {
   changedStandingAuthorization,
   maximumAttestedPlanRevision,
 } from './governance-history';
+import {
+  P9_DEPLOYMENT_EVIDENCE_PATH,
+  P9_ENTRY_EVIDENCE_PATH,
+  P9_POST_CUTOVER_EVIDENCE_PATH,
+  P9_RUNTIME_EQUIVALENCE_PATHS,
+  type P9DeploymentRecord,
+  type P9EntryReceipt,
+  type P9PostCutoverReceipt,
+  type P9ProductionAuthorization,
+  type P9TestingWriteAuthorization,
+  p9ReadOnlyAuthorityChanged,
+  validateP9DeploymentGitBinding,
+  validateP9DeploymentRecord,
+  validateP9EntryReceipt,
+  validateP9PostCutoverReceipt,
+  validateP9ReadOnlyAuthority,
+} from './production-authority';
 
 type StageStatus =
   | 'planned'
@@ -38,14 +55,6 @@ type Stage = {
   manifestPath: string;
   reviewPath: string;
   kickoffPath: string | null;
-};
-
-type ProductionAuthorization = {
-  authorizationId: string;
-  authorizedBy: string;
-  authorizedAt: string;
-  evidencePath: string;
-  scope: string;
 };
 
 type MergeAuthorization = {
@@ -115,9 +124,10 @@ type BuildState = {
       basis: string;
       scope: string;
     };
+    p9TestingWriteAuthorization?: P9TestingWriteAuthorization;
     productionSpreadsheetId: string | null;
     productionMutationAuthorized: boolean;
-    productionAuthorization: ProductionAuthorization | null;
+    productionAuthorization: P9ProductionAuthorization | null;
   };
   deployment: {
     mainAutoDeploysProduction: boolean;
@@ -1436,7 +1446,158 @@ if (state) {
       }
     }
   }
-  if (!p9MayUseProduction) {
+  if (state.planRevision >= 7) {
+    const expectedEntryProofState = Boolean(p9MayUseProduction);
+    const expectedPostCutoverProofState =
+      p9?.status === 'verified' || p9?.status === 'accepted';
+    for (const error of validateP9ReadOnlyAuthority(state.dataAuthority, {
+      expectedEntryProofState,
+      expectedPostCutoverProofState,
+    })) {
+      fail(error);
+    }
+    if (state.dataAuthority.productionAuthorization) {
+      let entryReceiptForBinding: P9EntryReceipt | null = null;
+      requireFile(state.dataAuthority.productionAuthorization.evidencePath);
+      if (expectedEntryProofState) {
+        const entryReceipt = readJson<P9EntryReceipt>(P9_ENTRY_EVIDENCE_PATH);
+        if (!entryReceipt) {
+          fail('P9 active state requires a valid structured entry receipt');
+        } else {
+          for (const error of validateP9EntryReceipt(entryReceipt)) fail(error);
+          entryReceiptForBinding = entryReceipt;
+        }
+      }
+      if (expectedPostCutoverProofState) {
+        const postCutoverReceipt = readJson<P9PostCutoverReceipt>(
+          P9_POST_CUTOVER_EVIDENCE_PATH,
+        );
+        const deploymentRecord = readJson<P9DeploymentRecord>(
+          P9_DEPLOYMENT_EVIDENCE_PATH,
+        );
+        if (!postCutoverReceipt) {
+          fail('P9 verified/accepted state requires a valid structured post-cutover receipt');
+        } else {
+          for (const error of validateP9PostCutoverReceipt(postCutoverReceipt)) {
+            fail(error);
+          }
+          if (!deploymentRecord || !entryReceiptForBinding) {
+            fail('P9 verified/accepted state requires a valid structured deployment record');
+          } else {
+            for (const error of validateP9DeploymentRecord(
+              deploymentRecord,
+              postCutoverReceipt,
+              entryReceiptForBinding,
+            )) {
+              fail(error);
+            }
+          }
+
+          const candidateCommit = gitText(['rev-parse', 'HEAD'])?.trim() ?? '';
+          const rollbackBaseline = p9?.baselineCommit ?? '';
+          for (const error of validateP9DeploymentGitBinding(
+            postCutoverReceipt,
+            rollbackBaseline,
+            candidateCommit,
+            {
+              objectExists: gitObjectExists,
+              isAncestor,
+              changedRuntimePaths: (deployedCommit, finalCandidateCommit) =>
+                gitLines([
+                  'diff',
+                  '--name-only',
+                  deployedCommit,
+                  finalCandidateCommit,
+                  '--',
+                  ...P9_RUNTIME_EQUIVALENCE_PATHS,
+                ]),
+            },
+          )) {
+            fail(error);
+          }
+        }
+      }
+    }
+    if (state.dataAuthority.p9TestingWriteAuthorization) {
+      requireFile(state.dataAuthority.p9TestingWriteAuthorization.evidencePath);
+    }
+    const p9DeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+      (item) => item.stageId === 'P9',
+    );
+    if (
+      p9DeliveryAuthorization?.authorized !== true ||
+      p9DeliveryAuthorization.evidencePath !== state.dataAuthority.productionAuthorization?.evidencePath
+    ) {
+      fail('Plan Revision 7 requires P9 delivery authority bound to the production authority evidence');
+    }
+
+    const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
+    if (attestedRevision7) {
+      const revision7CandidateState = jsonAtCommit<BuildState>(
+        attestedRevision7.candidateCommit,
+        'docs/BUILD_STATE.json',
+      );
+      if (
+        !revision7CandidateState ||
+        p9ReadOnlyAuthorityChanged(
+          state.dataAuthority,
+          revision7CandidateState.dataAuthority,
+        )
+      ) {
+        fail(
+          'Plan Revision 7 production/testing authority cannot change except for its predeclared proof-state flags',
+        );
+      }
+      const changedP9Delivery = revision7CandidateState
+        ? changedStandingAuthorization(
+            state.deployment.stageMergeAuthorizations,
+            revision7CandidateState.deployment.stageMergeAuthorizations,
+            ['P9'],
+          )
+        : 'P9';
+      if (changedP9Delivery) {
+        fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
+      }
+
+      const revision7EvidencePath = 'docs/evidence/PLAN-REV7.md';
+      const canonicalRevision7Evidence = gitText([
+        'show',
+        `${attestedRevision7.candidateCommit}:${revision7EvidencePath}`,
+      ]);
+      if (
+        canonicalRevision7Evidence === null ||
+        requireFile(revision7EvidencePath) !== canonicalRevision7Evidence
+      ) {
+        fail('Plan Revision 7 authority evidence must remain byte-identical to its immutable candidate');
+      }
+    }
+
+    if (p9?.status === 'accepted') {
+      const canonicalP9 = findCanonicalAttestation(
+        'P9',
+        p9.manifestPath,
+        p9.reviewPath,
+      );
+      if (!canonicalP9) {
+        fail('Accepted P9 requires its canonical direct-child attestation');
+      } else {
+        for (const receiptPath of [
+          P9_ENTRY_EVIDENCE_PATH,
+          P9_POST_CUTOVER_EVIDENCE_PATH,
+          P9_DEPLOYMENT_EVIDENCE_PATH,
+        ]) {
+          const canonicalReceipt = gitText([
+            'show',
+            `${canonicalP9.manifest.candidateCommit}:${receiptPath}`,
+          ]);
+          const currentReceipt = requireFile(receiptPath);
+          if (canonicalReceipt === null || currentReceipt !== canonicalReceipt) {
+            fail(`${receiptPath} must remain byte-identical to the accepted P9 candidate`);
+          }
+        }
+      }
+    }
+  } else if (!p9MayUseProduction) {
     if (state.dataAuthority.productionSpreadsheetId !== null) {
       fail('Production spreadsheet ID must remain null before P9');
     }

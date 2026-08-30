@@ -1,9 +1,60 @@
 # Current Handoff
 
 Last updated: 2026-08-30
-Plan revision: 6
+Plan revision: 7
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Current Plan Revision 7 candidate — P9 remains unstarted
+
+- Live `origin/main` and Revision 7 baseline are exact
+  `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`. Accepted P8 attestation
+  `20eeb53c80fce4e79a689128918a12361233aa7b` is present in its history as the direct
+  child of candidate `cc69d276c85f931499a23a5abde623bda321e0c0` and adds only the
+  P8 manifest/review paths.
+- Kelsey directly identified production spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`, prohibited every write to that ID,
+  authorized spreadsheet writes only on testing spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, authorized the P9 source/configuration
+  cutover and governed Git/Preview/Production delivery, and named Kelsey Stuart as
+  deployment and rollback owner.
+- Revision 6 cannot start P9 under that boundary: its validator requires production
+  mutation authority and its contract requires post-write reconciliation and restoring
+  a production backup. Revision 7 replaces only those mechanics with a read-only
+  production source/configuration cutover, complete post-cutover reconciliation, and
+  application revision/configuration rollback.
+- Static inspection found that current `GOOGLE_SHEET_ID` feeds the authenticated admin
+  append route while the public scholarship API serves the accepted P7 fixture. P9 must
+  not simply replace that variable. It must introduce a separate read-only production
+  configuration and prove the production ID cannot reach a write call; write-capable
+  paths remain testing-only or disabled.
+- Production source revision `9857` remains unchanged. Two private native sheet-only
+  backups cover the exact authorized scholarship tabs: main backup
+  `1_UARat1DIg9ZW2ciViVFK5gH51vk8VAr1CvNo4lLcZI` matches native CellData SHA-256
+  `e67b548d3835eb0e37c78f685cbced8932771314c530682dfe781a95a9ec6551`; Unique Finds
+  backup `1RIxFui5dAX7ieC_iqWdJ1IuxImWC7S_rs3N2fgUX9yw` matches
+  `019e08e246d8180cdd62a75ec1ee79936b02ee5a5032e897bd2f00a947e9d2ed`.
+  Backups are evidence only and may not be restored into production under current
+  authority.
+- Exact deployed-runtime read permission remains unverified and machine state records
+  it as false. Exact entry source revalidation and post-cutover zero-mutation proof are
+  also false. After Revision 7 delivery, P9 may not become active until the deployed
+  runtime read-only identity, revision `9857`, exact tab/grid bounds, source/backup
+  hashes, unchanged sharing/revision, and zero writes pass the structured
+  `docs/evidence/P9-entry.json` validator. P9 may not become verified until deployment
+  smoke and rollback preserve those facts in `docs/evidence/P9-post-cutover.json` and
+  `docs/evidence/P9-deployment.json` binds real baseline/deployed Git objects, ancestry,
+  distinct authenticated Vercel API observations, exact health commit identities,
+  canonical cutover/rollback configuration fingerprints, and runtime equivalence. After
+  merge, actual Production deployment authentication and smoke remain mandatory delivery
+  gates.
+- This execution is Plan Revision 7 only. P9 remains planned; no application runtime,
+  environment/deployment configuration, schedule, spreadsheet, form, provider, or
+  applicant-data mutation is in scope. The P8 monitoring schedule remains disabled.
+- Revision 7 must complete full verification, freeze, complete manifest, fresh-context
+  read-only acceptance, exact direct-child two-file attestation, governed PR delivery,
+  and Preview/Production verification. Stop after Revision 7 is delivered; begin P9
+  only in a later fresh execution from that delivered baseline.
 
 ## Current P8 accepted state (delivered)
 

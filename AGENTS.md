@@ -37,8 +37,31 @@ it is convenient or adjacent.
 
 - The testing spreadsheet is
   `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`.
-- The production Whitefish Scholarship spreadsheet must not be configured,
-  mutated, or migrated before P9 and explicit production-migration authority.
+- The production Whitefish Scholarship spreadsheet is
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`. Plan Revision 7 authorizes only
+  bounded read access and an application-configuration cutover in P9. Never write,
+  append, clear, format, share, rename, restore, or otherwise mutate that spreadsheet.
+- P9 may read only the two scholarship tabs and bounds pinned in `BUILD_STATE`. Do not
+  access unrelated tabs or applicant data. The deployed runtime identity's read access
+  must be verified before P9 becomes active. Reverify source revision `9857`, the exact
+  tab identities/grid bounds, both source/backup hashes, and unchanged post-read revision
+  at P9 entry. Any mismatch blocks P9 pending a newly authorized amendment and current
+  backup receipt; do not expand a range silently.
+- Bind the deployed-runtime/revision/source-backup entry proof to structured
+  `docs/evidence/P9-entry.json`. Bind the post-deployment and rollback zero-mutation
+  proof to `docs/evidence/P9-post-cutover.json`. Both paths are immutable; P9's accepted
+  manifest must hash both receipts, and the validator must reject missing, malformed,
+  stale, expanded-scope, or later-rebound receipts.
+- Bind the rollback probe to `docs/evidence/P9-deployment.json`. Its deployed and
+  rollback commits must exist, the rollback commit must equal P9's exact baseline, the
+  deployed commit must descend from it and precede the final candidate, and every
+  tracked `web/` and deployment-control path must be byte-equivalent between the
+  deployed commit and final candidate. This includes catalog fixtures consumed by the
+  API. Deployment and rollback IDs must be distinct and observed through the
+  authenticated Vercel API; health must return each exact commit. Compute separate
+  cutover/rollback fingerprints from the validator's canonical non-secret configuration
+  descriptors. A syntactically plausible SHA or self-repeated arbitrary digest is not
+  deployment proof.
 - Never collect, reproduce, or commit applicant responses, credentials, dates of
   birth, addresses, phone numbers, transcripts, recommendation letters, or
   other applicant PII.
@@ -124,6 +147,24 @@ handling beyond already configured secure stores; destructive or unrecoverable a
 force-push or published-history rewrite; form submission or application interaction;
 provider contact; acceptance-gate weakening; and material scope expansion. Platform
 sandbox or authentication approvals remain separate technical safeguards.
+
+## P9 read-only production mandate — Plan Revision 7
+
+Kelsey directly authorized P9 production source migration, application-configuration
+switching, governed Git/PR delivery, Vercel Preview and Production deployment,
+verification, reconciliation, and rollback, with Kelsey as deployment and rollback
+owner. Kelsey expressly prohibited every write to the production spreadsheet and
+authorized spreadsheet writes only on the testing spreadsheet.
+
+Do not implement P9 by changing the existing write-capable `GOOGLE_SHEET_ID` to the
+production ID. P9 must use a distinct production configuration and a read-only Sheets
+client; every write-capable route must stay pinned to the testing spreadsheet or be
+disabled. Production rollback means application revision/configuration rollback only.
+The production backups are evidence and must not be restored under this authority.
+Testing-sheet writes remain gated by exact targets, a current revision fingerprint,
+reversible backup, reviewed dry-run, bounded idempotent write, readback, and
+reconciliation. Plan Revision 7 must be accepted, attested, and delivered before P9
+starts.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 

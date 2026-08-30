@@ -1,11 +1,12 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 6
+Plan revision: 7
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 Testing spreadsheet: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
-Production spreadsheet: intentionally unset until P9
+Production spreadsheet: `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`
+Production access mode: P9 read-only; mutation prohibited
 
 ## 1. Authority and purpose
 
@@ -126,7 +127,7 @@ stage may quote these counts as a current fact without a new snapshot.
 - Treating commercial scholarship aggregators as final factual authority.
 - Guaranteeing that a student will qualify for or receive an award.
 - Automatically converting an ambiguous page change into a destructive archive.
-- Mutating the production Whitefish spreadsheet before P9.
+- Mutating the production Whitefish spreadsheet at any stage, including P9.
 
 ## 5. Canonical concepts
 
@@ -585,36 +586,73 @@ sheet has been modified.
 
 ### P9 — Production migration, deployment, and closeout
 
-**Objective:** Move the accepted system from the testing sheet to the actual Whitefish
-Scholarship sheet with verified rollback and durable operational handoff.
+**Objective:** Move the accepted application from its testing/static source boundary to
+the actual Whitefish Scholarship spreadsheet as a strictly read-only source, with
+verified configuration rollback and durable operational handoff.
 
 **Entry prerequisites:** P0-P8 accepted; production spreadsheet identity explicitly
-provided and production migration explicitly authorized; current production backup and
-permissions verified; deploy/rollback owner identified.
+provided and read-only production migration explicitly authorized; current backups of
+the exact authorized scholarship tabs verified; the deployed runtime identity's minimum
+read permission verified without exposing credentials; deploy/rollback owner identified;
+the exact revision `9857`, tab IDs/titles/grid bounds, source hashes, backup hashes, and
+unchanged post-read revision reverified at P9 entry; and Plan Revision 7 independently
+accepted, attested, and delivered. Any mismatch blocks P9 pending a new directly
+authorized, independently reviewed amendment and current backup receipt; never extend a
+range or treat an older backup as current silently.
 
-**Deliverables:** Production backup, mapping and dry-run diff, migration receipt,
-post-write reconciliation, deployment record, health/API/browser smoke evidence,
+**Deliverables:** Authorized-tab production backups; a structured, validator-checked
+`docs/evidence/P9-entry.json` receipt; mapping and dry-run diff; configuration-cutover
+receipt; structured `docs/evidence/P9-post-cutover.json` zero-mutation receipt;
+an authenticated `docs/evidence/P9-deployment.json` Vercel rollback-probe record;
+post-cutover read-only source-to-model/API/UI
+reconciliation, deployment record, health/API/browser smoke evidence, configuration
 rollback test, operator runbook, final architecture/data documentation, and closeout
 handoff.
 
-**Out of scope:** Unrelated production data, applicant data, and silent schema changes.
+**Out of scope:** Every production spreadsheet write or metadata/permission mutation;
+unrelated production tabs or data; applicant data; silent schema changes; and changing
+the existing write-capable `GOOGLE_SHEET_ID` path to the production ID.
 
-**Verification:** Dry-run diff is reviewed before writes. Post-write structural counts
-reconcile completely. Record verification covers 100% of archives, merges, application-
-link/deadline changes, and other high-risk mutations plus a deterministic SHA-256-selected
+**Verification:** The mapping/dry-run diff is reviewed before the configuration cutover.
+Production CellData is read only from the two exact bounded scholarship tabs and the
+complete authorized-tab structural counts reconcile to the mapped canonical graph.
+Record verification covers 100% of mapped archives, merges, application-link/deadline
+differences, and other high-risk transformations plus a deterministic SHA-256-selected
 10% of remaining active records (minimum 25, maximum 100, or all when fewer than 25).
-Deployed health identifies the expected commit. Student journeys and exports pass against
-production. Rollback is demonstrated without loss.
+Tests prove the production ID cannot reach any write-capable code path, the production
+client requests only read-only OAuth scope, and any admin/write path remains pinned to
+the testing ID or is disabled. Deployed health identifies the expected commit. Student
+journeys and exports pass against the production read model. Rollback is demonstrated
+without writing the production spreadsheet. After deployment smoke and again after the
+rollback proof, re-read only the authorized bounds and prove revision `9857`, tab/grid
+identities, native CellData hashes, and sharing state are unchanged. The structured
+receipts must record zero production write calls and be immutable in the accepted P9
+candidate. The deployment record's commits must exist: rollback equals the exact P9
+baseline, deployed descends from it and is an ancestor of the final candidate, and the
+validator proves no runtime-affecting path changed after the deployed rollback-probe
+commit. “Runtime-affecting” covers the entire tracked `web/` tree, including P7 catalog
+fixtures imported by the API, plus tracked deployment-control paths. Distinct
+deployment/rollback IDs must come from an authenticated Vercel API
+observation, health must report each exact commit, and separate cutover/rollback
+fingerprints must be recomputed from canonical non-secret configuration descriptors
+rather than accepted as arbitrary digests. Any mismatch blocks acceptance and rollback
+remains application-only. After
+merge, authenticate the resulting Vercel Production deployment, prove the deployed main
+commit, repeat health/API/browser and read-only source-fingerprint smoke, and publish the
+provider/run identifiers in the governed PR delivery record.
 
 **Acceptance:** P0-P8 are accepted and delivered on `origin/main`. Independent
 fresh-context review has no unresolved critical/high issue;
-production evidence, deployed commit, backup, migration receipt, and rollback location
-are recorded; final count semantics and remaining manual items are published honestly.
+production evidence, deployed commit, backups, cutover receipt, and rollback location
+are recorded; zero production mutations are proved; final count semantics and remaining
+manual items are published honestly.
 The overall program becomes complete only when P9's accepted marker and review evidence
-are then present on `origin/main`.
+are present on `origin/main` and the authenticated Production deployment/smoke delivery
+record is complete.
 
-**Rollback:** Restore the verified production backup and deploy the last accepted
-application revision.
+**Rollback:** Restore the last accepted application revision and its prior configuration.
+The production spreadsheet is never restored or mutated; its verified backups are
+evidence and emergency operator references only.
 
 ## 10. Verification matrix
 
@@ -853,6 +891,21 @@ deployment-configuration effect. It only makes the already-authorized exact P2
 two-parent integration executable while preserving both the Revision 5 test harness and
 P2 model commands under an independently reviewed, attested, exact-output validator.
 
+Plan Revision 7 records the user's direct P9 authority and stricter production no-write
+boundary. The former P9 contract and validator required production mutation authority,
+post-write reconciliation, and production-backup restoration; those requirements would
+contradict the user's instruction and could route the production ID into an existing
+write-capable admin endpoint. Revision 7 replaces only those P9 mechanics with a
+read-only source/configuration cutover, exact authorized-tab backups, post-cutover
+read-only reconciliation, write-path isolation, and application-configuration rollback.
+It records, rather than conceals or retroactively authorizes, the bounded connector
+reads and private backup creations that occurred before every original P9 entry gate was
+present. Those actions left source revision `9857` unchanged; their prospective use is
+conditional on validator-checked entry and post-cutover receipts.
+It preserves P9's full mapping, sampling, smoke, privacy, unknown/manual-review,
+independent-review, manifest, attestation, and delivery gates. Revision 7 must be
+independently accepted, attested, and delivered before P9 starts.
+
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
 amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
@@ -880,7 +933,9 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | New session drifts from plan | Required read order, machine state, one-stage kickoff, validator, and handoff. |
 | Implementer reviews own work | Fresh-context read-only independent reviewer and remediation separation. |
 | Dirty checkout loses user work | Isolated worktree and stage-owned staging. |
-| Production is changed early | Production ID unset and mutation forbidden until P9 authority. |
+| Production is changed outside exact authority | Production identity is pinned only under attested Revision 7; all source mutation remains prohibited and P9 is a read-only cutover. |
+| A production ID is substituted into the existing write-capable environment variable | Use a separate read-only production configuration, prove the ID cannot reach a write call, and keep the write path pinned to testing or disabled. |
+| Read-only P9 rollback mutates production while restoring a backup | Roll back only application revision/configuration; production backups are evidence and are never restored under current authority. |
 | Git delivery triggers an undeclared Preview or Production deploy | Pre-delivery downstream-effect inspection and direct stage-specific deployment authority with evidence, or verified suppression. |
 | Public API leaks sensitive columns | Hard allow-list and privacy tests. |
 | Dependency vulnerabilities remain hidden by green tests | P1 inventory, P7 remediation/exposure review, and no unresolved critical/high exploitable finding at launch. |
