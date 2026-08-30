@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "createdAt": "2026-08-30T15:09:11Z",
+  "baselineCommit": "5be74c3ccb45ee57671fd7e4616358d2d0e2b32f",
+  "candidateCommit": "cc69d276c85f931499a23a5abde623bda321e0c0",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "2d2c69effe83ac9ef8448ce8c3c8f396b4e12dbe55b76c95536d674e8c830b03"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "8552bdeee18b517cae3bd0dd6026afecc502c4102eb4d0d6160095f5998837af"
+    },
+    {
+      "path": "docs/P8-OPERATIONS.md",
+      "change": "present",
+      "sha256": "bda5c92699229ef2280d7491e04e1daa35a39d8e6f9273bc855fef82e51559b3"
+    },
+    {
+      "path": "docs/evidence/P8-dry-run-1.json",
+      "change": "present",
+      "sha256": "554241d1b5deeb1ba19cccd48710d9bb97b27e69c0d5e3ea8452a088bf474715"
+    },
+    {
+      "path": "docs/evidence/P8-dry-run-2.json",
+      "change": "present",
+      "sha256": "c7cd198065f07666b1d7fea01856251ff1bc68ce0a0997d2194ee07f59353a30"
+    },
+    {
+      "path": "docs/evidence/P8-privacy.json",
+      "change": "present",
+      "sha256": "ef0f64bfcba771e4521a43746b32a025a171ac1a8eeeae63990ab6cd4b378808"
+    },
+    {
+      "path": "docs/evidence/P8-recovery.json",
+      "change": "present",
+      "sha256": "4624d1ce4e6d827cf4f313832abca90e71bd513c82914879c92c524662d6d2cd"
+    },
+    {
+      "path": "docs/evidence/P8-report.json",
+      "change": "present",
+      "sha256": "2c754f359ab6da40fd86dfe28d2745852d1a336e708807ae208e5d1c424b3c34"
+    },
+    {
+      "path": "docs/evidence/P8-schedule-plan.json",
+      "change": "present",
+      "sha256": "1beca49fa46e165ea455c7ce119a2040979fa76121f9694ff7827fca17dce208"
+    },
+    {
+      "path": "docs/evidence/P8-simulations.json",
+      "change": "present",
+      "sha256": "b2c2dff1236b2bc41192844df367412198153f6e1ddc45646f4aabbaeacc91c1"
+    },
+    {
+      "path": "docs/evidence/P8.md",
+      "change": "present",
+      "sha256": "ff39b9dedd673e15fd4225e7359d7638f95042d225611a2e073a57728cf6de05"
+    },
+    {
+      "path": "docs/kickoffs/P9-PRODUCTION-MIGRATION.md",
+      "change": "present",
+      "sha256": "89374f63f0c4ea559f84cba7b93375c559b43a3a0c5abde89b431852c902a423"
+    },
+    {
+      "path": "web/fixtures/p8/monitoring-scenarios.json",
+      "change": "present",
+      "sha256": "604dc92e46d86414ca4decaa360e4cdf1dfe446baf4b366f65b564ca722f06b4"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "796d2605790b0b5d1fc41e0ad04be681f1c64010218993962a1a724a4aa5c0f0"
+    },
+    {
+      "path": "web/scripts/p8-live-monitor.ts",
+      "change": "present",
+      "sha256": "669e39cc8d1ddc9bd3edd205e066e1fd77c43dfdd71697f70f4574a7a195d9e6"
+    },
+    {
+      "path": "web/scripts/p8-monitoring.ts",
+      "change": "present",
+      "sha256": "9548e495ad9640c9c243a73ccb677395a087360e3d88990c10c9c4521a0b4b90"
+    },
+    {
+      "path": "web/scripts/test-p8-monitoring.ts",
+      "change": "present",
+      "sha256": "115d1ee05f84dcad704640cacda77be0b811536f29bea025286841b727488470"
+    },
+    {
+      "path": "web/src/lib/monitoring.ts",
+      "change": "present",
+      "sha256": "6c21aed671c86bed3389516c1635c9bec19226f0dbb7bc0498a29686bcc2b1f1"
+    }
+  ]
+}

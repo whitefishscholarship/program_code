@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "acceptedObservedAt": "2026-08-29T21:25:30.000Z",
+  "testingSheet": {
+    "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "sheetName": "Master Database",
+    "acceptedRevisionId": "223",
+    "liveReadPerformed": false
+  },
+  "dryRuns": [
+    { "runId": "p8-dry-run-1", "observedAt": "2026-08-30T00:00:00.000Z" },
+    { "runId": "p8-dry-run-2", "observedAt": "2026-08-30T00:05:00.000Z" }
+  ],
+  "failureObservedAt": "2026-08-30T00:10:00.000Z",
+  "partialRecovery": {
+    "runId": "p8-recovery-apply",
+    "observedAt": "2026-08-30T00:20:00.000Z",
+    "stopAfter": 250
+  },
+  "limitations": "All observations are accepted-revision or synthetic fixtures. They prove control execution and reconciliation, not that any public scholarship fact is current. No live source, spreadsheet, form, applicant, notification, schedule, or production system was accessed."
+}

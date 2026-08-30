@@ -1,9 +1,99 @@
 # Current Handoff
 
-Last updated: 2026-08-29
+Last updated: 2026-08-30
 Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Current P8 accepted-state candidate
+
+- P8 has a prospective accepted-state marker on isolated branch
+  `codex/p8-monitoring-recovery` from exact live baseline
+  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. P9 is next-permitted only after P8 is
+  attested, merged, and verified; no P9 production authority exists.
+- Standard authenticated Git reproduced the baseline merge and exact accepted P7
+  direct-child attestation `fa23a761fdf7d09156ae3d683476457c665e7092`.
+- Preliminary frozen candidate `b3347e75c76e490e41fe200f9245185605e385d2`
+  was independently rejected C0/H5/M1/L1 and must never be attested or delivered. It
+  collapsed the denominator to 197 rows, modeled rather than executed critical
+  controls, duplicated logical review work across runs, allowed recovered suffix
+  publication to lose prefix work, lacked an exact build pass, used unkeyed receipts,
+  and contained two whitespace defects.
+- Replacement `30cdbfe4ee8f026015b917ce9abf781b69cbd94f` was independently
+  rejected C0/H2/M1/L0 and must also never be attested or delivered. Its live driver
+  falsely refreshed 978 unchanged snapshots, queue publication accepted a forged
+  complete object, and same-tip replay was not idempotent.
+- Replacement `9e5264e212a6224a9fd058e1d61524283cde0149` was independently
+  rejected C0/H1/M0/L0 and must never be attested or delivered. A custom non-HMAC
+  structural store could bypass the segment bound, mint a branded finalization, and
+  publish a queue. The current remediation requires the private registered store for
+  both execution and finalization, rechecks the segment maximum during replay, and adds
+  direct negative tests.
+- Replacement `7d87c589a699423513b0fbbcd1489a01da0e2c52` was independently
+  rejected C0/H1/M0/L0 and must never be attested or delivered. Both a mutated genuine
+  plan and a fabricated structural plan could execute and publish. The current
+  remediation exact-binds accepted semantic and file digests, deeply freezes and
+  privately registers the plan, and rejects unregistered or changed plans before probe
+  execution or receipt reads.
+- The current replacement keeps 1,028 distinct targets: 217 P7 sources, 213 P5
+  source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
+  review items, and two P6 review items. Only the 50 accepted public read-only routes
+  are probe-eligible; 163 manual routes and every application URL remain no-fetch.
+- Two replacement dry runs each execute all 1,028 targets in five authenticated
+  segments with zero duplicates/loss, matching semantic results, 50 executed spacing
+  delays, 1,028 freshness evaluations, and no accepted-fact mutation or publication.
+- Six required failure simulations enter review. Bounded retries/backoff execute, stale
+  and future observations fail freshness, and missing observations cannot silently
+  default unchanged.
+- Each receipt is append-only, HMAC-authenticated, and linked to the prior segment. The
+  recovery simulation retains a first-segment review item, rejects incomplete
+  publication, reconciles all 1,028 targets, rejects forged/mutated finalizations and
+  out-of-plan targets, keeps same-tip replay at one occurrence, and uses stable
+  cross-run review upsert. Non-public live-driver checks retain accepted observation
+  time, so absent snapshots age into review rather than refreshing themselves.
+- The schedule plan remains disabled and activation unauthorized. The guarded driver
+  accepts only explicit dry-run mode and was not invoked. No live source, spreadsheet,
+  form, provider, notification, deployment configuration, production system, or P9
+  action occurred.
+- `docs/evidence/P8.md`, `docs/evidence/P8-report.json`, and
+  `docs/P8-OPERATIONS.md` are the replacement evidence and runbook. Locked install,
+  focused P8 checks, plan validation, typecheck, the full P0-P8 suite, exact normal-
+  worker Turbopack production build, full/production audits, and both working/range
+  whitespace checks passed by `2026-08-30T06:02:21Z`. Replacement freeze,
+  same-reviewer recheck, accepted-state transition, final recheck, manifest,
+  attestation, and governed delivery remain pending.
+- After the `30cdbfe4` rejection, deterministic evidence, strengthened freshness/
+  publication/replay tests, plan validation, typecheck, the full P0-P8 suite, exact
+  Turbopack build, both zero-match audits, and both whitespace checks passed again by
+  `2026-08-30T06:15:42Z`. The next action is a new immutable technical freeze and the
+  same reviewer's read-only recheck.
+- After the `9e5264e2` rejection, the trusted-store and segment-bound focused checks,
+  plan validation, typecheck, full P0-P8 suite, exact Turbopack build, both zero-match
+  audits, and both whitespace checks passed by `2026-08-30T06:22:56Z`. The next action
+  remains a new immutable freeze and same-reviewer recheck.
+- After the `7d87c589` rejection, the exact-input and structural-plan negatives,
+  deterministic P8 evidence, plan validation, typecheck, full P0-P8 suite, exact
+  Turbopack build, both zero-match audits, and both whitespace checks passed by
+  `2026-08-30T06:34:36Z`.
+- Fresh-context reviewer `/root/p8_fresh_review` accepted exact technical candidate
+  `3ffd53e873c0718d160ca353e4f01375bc4cf56c` C0/H0/M0/L0 against provisional manifest
+  SHA-256 `2d8a158e92d15bc67679da2918e146e6bf9960045943af52d817bd2b1f506274`.
+  No medium or low dispositions are required.
+- Kelsey Stuart explicitly authorized the prospective acceptance-state transition on
+  2026-08-30. Machine state now records P8 accepted, no active stage, and P9
+  next-permitted with the P9 kickoff bound. Freeze this documentation-only transition,
+  regenerate the exact manifest, obtain the same reviewer's final read-only recheck,
+  then add only the manifest and review in its direct child. Authentication and
+  delivery remain prohibited before that attestation.
+- Prospective accepted-state `p8:test`, typecheck, and working-tree whitespace
+  validation passed by `2026-08-30T15:08:35Z`. Plan validation reported only the two
+  expected pre-attestation errors: missing P8 manifest and missing committed P8
+  manifest/review attestation.
+- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` is bound preparatory documentation only.
+  It grants no production authority, does not start P9, and must not be used in this
+  P8 session. The monitoring schedule remains disabled and unauthorized.
+
+## Historical P7 accepted-state candidate (delivered)
 
 ## Current P7 accepted-state candidate
 

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "enabled": false,
+  "activationAuthorized": false,
+  "executionMode": "read_only_dry_run",
+  "proposedCadence": "P1D",
+  "timezone": "America/Denver",
+  "command": "npm run p8:monitor:live-dry-run",
+  "targetDenominator": 1028,
+  "targetLimitPerSegment": 250,
+  "publicReadOnlyProbeRoutes": 50,
+  "noFetchRoutes": 978,
+  "rateLimit": {
+    "minimumRequestSpacingMs": 100,
+    "maximumAttemptsPerTarget": 3,
+    "retryDelaysMs": [
+      250,
+      500
+    ]
+  },
+  "freshnessDays": {
+    "publicSource": 7,
+    "snapshotReview": 7,
+    "manualOrOffline": 30
+  },
+  "notificationMode": "artifact_only",
+  "externalNotificationConfigured": false,
+  "reason": "P8 implements a guarded read-only driver but has no authority to create, enable, or change a live schedule or deployment configuration."
+}

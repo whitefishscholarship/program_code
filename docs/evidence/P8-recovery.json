@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "runId": "p8-recovery-apply",
+  "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "authenticatedReceiptChain": [
+    {
+      "receiptSha256": "552e555165c5a080c131e7f38bcf3b0c591ab15d16ba36020ba7d17838df1010",
+      "receiptMac": "f4d3e077414357da0083c93a5c6bab43c1c4abdca1b85270060bd0cbb7b37a95",
+      "segmentIndex": 0,
+      "startCursor": 0,
+      "nextCursor": 250,
+      "processedCount": 250,
+      "remainingCount": 778,
+      "previousReceiptSha256": null,
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "a23ad7328985d780af7555592d08a09359c573b64e7cfc016a3af15b69dc9d76",
+      "receiptMac": "822666e29a9afece8b42b01c495935e6a9759e8b0e3bae45b43611e4c5c7df0b",
+      "segmentIndex": 1,
+      "startCursor": 250,
+      "nextCursor": 500,
+      "processedCount": 250,
+      "remainingCount": 528,
+      "previousReceiptSha256": "552e555165c5a080c131e7f38bcf3b0c591ab15d16ba36020ba7d17838df1010",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "8f4012ff5b76a5086e75eb8a75a2cff84261de4e9943afa55a5c6c8bd9805d7a",
+      "receiptMac": "8a45abdb3d908380d31f06d9ee06bcb037bba5346a80909470ed063ec71f9378",
+      "segmentIndex": 2,
+      "startCursor": 500,
+      "nextCursor": 750,
+      "processedCount": 250,
+      "remainingCount": 278,
+      "previousReceiptSha256": "a23ad7328985d780af7555592d08a09359c573b64e7cfc016a3af15b69dc9d76",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "44b8db4d9f9b8c5cb7006f94eb3c0448702fedc922ff331cc19cb6913b6ad79e",
+      "receiptMac": "6311606be73a78d17afa39d2174067eec1e6ad00ac2e56934fddff4b12b912af",
+      "segmentIndex": 3,
+      "startCursor": 750,
+      "nextCursor": 1000,
+      "processedCount": 250,
+      "remainingCount": 28,
+      "previousReceiptSha256": "8f4012ff5b76a5086e75eb8a75a2cff84261de4e9943afa55a5c6c8bd9805d7a",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "998b54c9db5244265b1c462d2193b448f33b1f4b133155384019bcdef590c3a9",
+      "receiptMac": "37c5f5c154bae96dca74e016443891c56d6e05deb2a444b11c987ea0e006f1d4",
+      "segmentIndex": 4,
+      "startCursor": 1000,
+      "nextCursor": 1028,
+      "processedCount": 28,
+      "remainingCount": 0,
+      "previousReceiptSha256": "44b8db4d9f9b8c5cb7006f94eb3c0448702fedc922ff331cc19cb6913b6ad79e",
+      "reachedPlanEnd": true
+    }
+  ],
+  "interrupted": {
+    "nextCursor": 250,
+    "processedCount": 250,
+    "retainedReviewIds": [
+      "p8-review-2cbe2521a0805682d5232db0"
+    ],
+    "acceptedStatePublished": false,
+    "reviewQueuePublished": false
+  },
+  "incompletePublicationRejected": true,
+  "finalized": {
+    "receiptTipSha256": "998b54c9db5244265b1c462d2193b448f33b1f4b133155384019bcdef590c3a9",
+    "processedCount": 1028,
+    "uniqueProcessedCount": 1028,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "reviewIds": [
+      "p8-review-2cbe2521a0805682d5232db0"
+    ],
+    "complete": true
+  },
+  "repeatedApply": {
+    "firstQueueCount": 1,
+    "sameTipReplayQueueCount": 1,
+    "sameTipReplayOccurrenceCount": 1,
+    "distinctRunQueueCount": 1,
+    "stableReviewId": true,
+    "distinctRunOccurrenceCount": 2
+  },
+  "acceptedStateReceiptBefore": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "acceptedStateReceiptAfter": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "acceptedFactsChanged": false
+}

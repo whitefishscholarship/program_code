@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "runId": "p8-dry-run-2",
+  "mode": "dry_run",
+  "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "receiptTipSha256": "765e1ea334b097e9114a5210107b54992e22493d345a155cc42700365d0d78dc",
+  "receiptCount": 5,
+  "receipts": [
+    {
+      "receiptSha256": "a3f075ca298e236d1209945fd352cef5844ceccaa2e5bb79c59e2279ffd6afbb",
+      "receiptMac": "49056c67a4d7fc2f6cf8103a37ab3bbd4559cf48f456098a53cb8f184fcb9f6e",
+      "segmentIndex": 0,
+      "startCursor": 0,
+      "nextCursor": 250,
+      "processedCount": 250,
+      "remainingCount": 778,
+      "previousReceiptSha256": null,
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "12040a0348396dbc0626c136fdaa6f8673e6d822393cace0b241e0fbc7e802c0",
+      "receiptMac": "7f93242108c6973da33671e5cbf748f7e97fd186b0ba2ff7b7239205f3733eaf",
+      "segmentIndex": 1,
+      "startCursor": 250,
+      "nextCursor": 500,
+      "processedCount": 250,
+      "remainingCount": 528,
+      "previousReceiptSha256": "a3f075ca298e236d1209945fd352cef5844ceccaa2e5bb79c59e2279ffd6afbb",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "d3930e543d3d59d4a0312bf4086866959350dd189e27d35e7bbcd3a93d065835",
+      "receiptMac": "a429afb1a2cab9a915d3805ef8e5b90b84225ebbf7940562a8b07f49b31c4887",
+      "segmentIndex": 2,
+      "startCursor": 500,
+      "nextCursor": 750,
+      "processedCount": 250,
+      "remainingCount": 278,
+      "previousReceiptSha256": "12040a0348396dbc0626c136fdaa6f8673e6d822393cace0b241e0fbc7e802c0",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "7e3b3cb23ef7118a8c5ecb9a2ee5b1784b1c203a966e4e0cc073e4ef79bb20f8",
+      "receiptMac": "09f58aa348e0fb14253dd56f3f4d6f5c0b7284a4d32fa9c1abe3cf9812b7eb8e",
+      "segmentIndex": 3,
+      "startCursor": 750,
+      "nextCursor": 1000,
+      "processedCount": 250,
+      "remainingCount": 28,
+      "previousReceiptSha256": "d3930e543d3d59d4a0312bf4086866959350dd189e27d35e7bbcd3a93d065835",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "765e1ea334b097e9114a5210107b54992e22493d345a155cc42700365d0d78dc",
+      "receiptMac": "6d86d98cfba1e8299906548dd0467b0155f2768f343d9a040962a3853769f4e1",
+      "segmentIndex": 4,
+      "startCursor": 1000,
+      "nextCursor": 1028,
+      "processedCount": 28,
+      "remainingCount": 0,
+      "previousReceiptSha256": "7e3b3cb23ef7118a8c5ecb9a2ee5b1784b1c203a966e4e0cc073e4ef79bb20f8",
+      "reachedPlanEnd": true
+    }
+  ],
+  "targetDenominator": 1028,
+  "processedCount": 1028,
+  "uniqueProcessedCount": 1028,
+  "duplicateCount": 0,
+  "lostCount": 0,
+  "reviewCount": 0,
+  "resultDigest": "1cd37249e96d78c6e0e2069b4e4a27d3ead4d79dad5cb38054657cd91e8d50ec",
+  "executedControls": {
+    "publicProbeCalls": 50,
+    "noFetchCalls": 978,
+    "spacingSleeps": 50,
+    "retrySleeps": 0,
+    "freshnessEvaluations": 1028
+  },
+  "complete": true,
+  "acceptedFactsChanged": false,
+  "acceptedStatePublished": false,
+  "reviewQueuePublished": false
+}

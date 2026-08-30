@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "sourceMode": "synthetic_failure_fixture",
+  "livePublicSourceObservations": 0,
+  "run": {
+    "schemaVersion": 2,
+    "stageId": "P8",
+    "runId": "p8-failure-simulations",
+    "mode": "dry_run",
+    "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+    "receiptTipSha256": "f67080857408048bdfe244e2e6785506f07acf9d9e01054a5a0ad8d47e13de22",
+    "receiptCount": 5,
+    "receipts": [
+      {
+        "receiptSha256": "6d0d5ef58d03ff5b74607a89d3693ac601a0d710ccdf0c51c26558cc41f468f7",
+        "receiptMac": "845a36bd7d9b373ea2b858c5b07a2825f8f4b5db5d81488e0d946fe720685cd2",
+        "segmentIndex": 0,
+        "startCursor": 0,
+        "nextCursor": 250,
+        "processedCount": 250,
+        "remainingCount": 778,
+        "previousReceiptSha256": null,
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "1744201e1ac7e36695a3d418975fd14ac74c8b3124e4e133430dcba4aa853e36",
+        "receiptMac": "1f2e5b7228ef2b4ceb09d3ce567159fd22c3556a0fb617180bccadea3d467fc6",
+        "segmentIndex": 1,
+        "startCursor": 250,
+        "nextCursor": 500,
+        "processedCount": 250,
+        "remainingCount": 528,
+        "previousReceiptSha256": "6d0d5ef58d03ff5b74607a89d3693ac601a0d710ccdf0c51c26558cc41f468f7",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "746056c7354064d694721805766634f0cf56051acff76f8cf2d022a3d491ef41",
+        "receiptMac": "52ad475166a97dee35d4d7026494fac5a377c00f0db92eee25eacd9aa518efc2",
+        "segmentIndex": 2,
+        "startCursor": 500,
+        "nextCursor": 750,
+        "processedCount": 250,
+        "remainingCount": 278,
+        "previousReceiptSha256": "1744201e1ac7e36695a3d418975fd14ac74c8b3124e4e133430dcba4aa853e36",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "d69f279f000867bc9dfdf89e6bed54cfdf6683eb8b8e80851e854672a291eaff",
+        "receiptMac": "90e895de3bb416818266e0b123ed0d1512baa26a8e9d81f39ee0cba0d1292594",
+        "segmentIndex": 3,
+        "startCursor": 750,
+        "nextCursor": 1000,
+        "processedCount": 250,
+        "remainingCount": 28,
+        "previousReceiptSha256": "746056c7354064d694721805766634f0cf56051acff76f8cf2d022a3d491ef41",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "f67080857408048bdfe244e2e6785506f07acf9d9e01054a5a0ad8d47e13de22",
+        "receiptMac": "38d85c36af0d1eb6b755333f277ab931691a44289f5f6e1b06bd04d06189cac4",
+        "segmentIndex": 4,
+        "startCursor": 1000,
+        "nextCursor": 1028,
+        "processedCount": 28,
+        "remainingCount": 0,
+        "previousReceiptSha256": "d69f279f000867bc9dfdf89e6bed54cfdf6683eb8b8e80851e854672a291eaff",
+        "reachedPlanEnd": true
+      }
+    ],
+    "targetDenominator": 1028,
+    "processedCount": 1028,
+    "uniqueProcessedCount": 1028,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "reviewCount": 6,
+    "resultDigest": "3684da4c36beefce66d9478a50dac3550237bb069189478296b97e229e518fc4",
+    "executedControls": {
+      "publicProbeCalls": 52,
+      "noFetchCalls": 978,
+      "spacingSleeps": 50,
+      "retrySleeps": 2,
+      "freshnessEvaluations": 1028
+    },
+    "complete": true,
+    "acceptedFactsChanged": false,
+    "acceptedStatePublished": false,
+    "reviewQueuePublished": false
+  },
+  "scenarios": [
+    {
+      "targetId": "p8-source_route-3f7ce53d493039b889be8be5",
+      "kind": "source_route",
+      "disposition": "review_dead_link",
+      "severity": "high",
+      "requiresReview": true,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
+    },
+    {
+      "targetId": "p8-source_route-0700ce5c154f8df864ec0dd4",
+      "kind": "source_route",
+      "disposition": "review_inconclusive",
+      "severity": "high",
+      "requiresReview": true,
+      "attempts": 3,
+      "retryDelaysMs": [
+        250,
+        500
+      ],
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
+    },
+    {
+      "targetId": "p8-source_route-44efabd566851dcf6f030803",
+      "kind": "source_route",
+      "disposition": "review_inconclusive",
+      "severity": "high",
+      "requiresReview": true,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
+    },
+    {
+      "targetId": "p8-source_route-eb7a48f553875f5072ccf232",
+      "kind": "source_route",
+      "disposition": "review_redirect",
+      "severity": "medium",
+      "requiresReview": true,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
+    },
+    {
+      "targetId": "p8-award_cycle-488959cd9e480640279817af",
+      "kind": "award_cycle",
+      "disposition": "review_date_conflict",
+      "severity": "high",
+      "requiresReview": true,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 0,
+      "fresh": true,
+      "acceptedFactMutation": false
+    },
+    {
+      "targetId": "p8-portal-40e0c71f8d411476f44ad470",
+      "kind": "portal",
+      "disposition": "review_portal_change",
+      "severity": "medium",
+      "requiresReview": true,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 0,
+      "fresh": true,
+      "acceptedFactMutation": false
+    }
+  ],
+  "counts": {
+    "simulated": 6,
+    "reviewRequired": 6,
+    "acceptedFactMutations": 0
+  },
+  "limitations": "Synthetic outcomes exercise the executed control path only and are not public-source observations."
+}

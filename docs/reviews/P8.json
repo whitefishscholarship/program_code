@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "reviewerTaskId": "/root/p8_fresh_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-08-30T15:12:32Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact immutable prospective accepted-state P8 candidate cc69d276c85f931499a23a5abde623bda321e0c0 against verified live baseline 5be74c3ccb45ee57671fd7e4616358d2d0e2b32f, bound by docs/evidence/P8-manifest.json SHA-256 02f17a53022465d1772df421f0b495056386fe4104fb8414c25da4216867d68c, and its prospective direct-child commit adding exactly docs/evidence/P8-manifest.json and docs/reviews/P8.json. Acceptance covers only governed P8 full-denominator monitoring, deterministic dry runs and failure simulations, authenticated segmented recovery and review publication, privacy-safe operations, disabled schedule, accepted-state transition, and P9 kickoff documentation. It does not start or authorize P9, enable a live schedule, identify or mutate a production spreadsheet, write any spreadsheet, submit a form or application, contact a provider, change deployment configuration, perform a paid or destructive action, rewrite history, weaken a gate, or expand scope.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/P8-manifest.json",
+  "candidateManifestSha256": "02f17a53022465d1772df421f0b495056386fe4104fb8414c25da4216867d68c"
+}

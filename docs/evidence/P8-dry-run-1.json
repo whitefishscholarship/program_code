@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 2,
+  "stageId": "P8",
+  "runId": "p8-dry-run-1",
+  "mode": "dry_run",
+  "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "receiptTipSha256": "c397a0141eb7c3f6b0bfcbacffb36776b892e5ddf398fa3b1371d8a7b837332d",
+  "receiptCount": 5,
+  "receipts": [
+    {
+      "receiptSha256": "d2bb31aad6f670683bd11dada5c53c988d04f96a1094b4d53340a9433ea55d29",
+      "receiptMac": "83234f2249da7cdc39ff8b98db863f64e4c103db07bd24058df143ee67d354ac",
+      "segmentIndex": 0,
+      "startCursor": 0,
+      "nextCursor": 250,
+      "processedCount": 250,
+      "remainingCount": 778,
+      "previousReceiptSha256": null,
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "5e3070f9b3508347f873fc72a9bd460794f18ee836b1c836ffba30f9814c003a",
+      "receiptMac": "1cbfaf67a4230f4e5d66584326b624cd44138c848627e92ca4c731a97f54f4a3",
+      "segmentIndex": 1,
+      "startCursor": 250,
+      "nextCursor": 500,
+      "processedCount": 250,
+      "remainingCount": 528,
+      "previousReceiptSha256": "d2bb31aad6f670683bd11dada5c53c988d04f96a1094b4d53340a9433ea55d29",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "67878291d85e0ce7bac890fa74ae421712cb15d2161e4608d51e5a10f3185085",
+      "receiptMac": "a2904a5a751c9c9787e7069bbaf8ddaf76879676fe0bd200fe9091431a1cd0ca",
+      "segmentIndex": 2,
+      "startCursor": 500,
+      "nextCursor": 750,
+      "processedCount": 250,
+      "remainingCount": 278,
+      "previousReceiptSha256": "5e3070f9b3508347f873fc72a9bd460794f18ee836b1c836ffba30f9814c003a",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "59e6a198edb0572e9011447c965f8a95f8d7e34e9c582331dcb8ef3463099216",
+      "receiptMac": "5c83c247fb37b2d84e39ddabc5116d88fdd401dee07fa3e02e22806874edd71b",
+      "segmentIndex": 3,
+      "startCursor": 750,
+      "nextCursor": 1000,
+      "processedCount": 250,
+      "remainingCount": 28,
+      "previousReceiptSha256": "67878291d85e0ce7bac890fa74ae421712cb15d2161e4608d51e5a10f3185085",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "c397a0141eb7c3f6b0bfcbacffb36776b892e5ddf398fa3b1371d8a7b837332d",
+      "receiptMac": "7dccdfcb2b2fe066cc42e2f0e622341122bdafe240746c1bf80c19c18099dbc5",
+      "segmentIndex": 4,
+      "startCursor": 1000,
+      "nextCursor": 1028,
+      "processedCount": 28,
+      "remainingCount": 0,
+      "previousReceiptSha256": "59e6a198edb0572e9011447c965f8a95f8d7e34e9c582331dcb8ef3463099216",
+      "reachedPlanEnd": true
+    }
+  ],
+  "targetDenominator": 1028,
+  "processedCount": 1028,
+  "uniqueProcessedCount": 1028,
+  "duplicateCount": 0,
+  "lostCount": 0,
+  "reviewCount": 0,
+  "resultDigest": "1cd37249e96d78c6e0e2069b4e4a27d3ead4d79dad5cb38054657cd91e8d50ec",
+  "executedControls": {
+    "publicProbeCalls": 50,
+    "noFetchCalls": 978,
+    "spacingSleeps": 50,
+    "retrySleeps": 0,
+    "freshnessEvaluations": 1028
+  },
+  "complete": true,
+  "acceptedFactsChanged": false,
+  "acceptedStatePublished": false,
+  "reviewQueuePublished": false
+}
