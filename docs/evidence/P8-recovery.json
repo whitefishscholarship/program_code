@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "interruptedReceiptSha256": "b4ff57ada34fb1cfac0608c51397430ed1738a38ec60dc64d4d59d525ad67226",
+  "resumedReceiptSha256": "053a10526db98b2ea4f15551ff7d07b95fb4ac8d899362a4d316791642aabb26",
+  "targetDenominator": 197,
+  "processedCount": 197,
+  "uniqueProcessedCount": 197,
+  "duplicateCount": 0,
+  "lostCount": 0,
+  "recoveryCompleted": true,
+  "acceptedStateReceiptBefore": "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
+  "acceptedStateReceiptAfter": "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
+  "acceptedFactsChanged": false,
+  "generatedAt": "2026-08-30T00:21:00.000Z",
+  "interrupted": {
+    "runId": "p8-partial-run",
+    "status": "failed",
+    "processedCount": 73,
+    "remainingCount": 124,
+    "nextCursor": 73,
+    "acceptedStatePublished": false,
+    "reviewQueuePublished": false
+  },
+  "resumed": {
+    "runId": "p8-partial-run-resume",
+    "status": "completed",
+    "startCursor": 73,
+    "processedCount": 124,
+    "remainingCount": 0,
+    "acceptedStatePublished": false
+  }
+}

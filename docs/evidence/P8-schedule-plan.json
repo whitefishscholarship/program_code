@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "enabled": false,
+  "activationAuthorized": false,
+  "executionMode": "read_only_dry_run",
+  "proposedCadence": "P1D",
+  "timezone": "America/Denver",
+  "command": "npm run p8:monitor:check",
+  "targetLimit": 250,
+  "rateLimit": {
+    "minimumRequestSpacingMs": 100,
+    "maximumAttemptsPerTarget": 3,
+    "maximumBackoffMs": 1000
+  },
+  "freshnessPolicy": {
+    "activeCycleDays": 1,
+    "upcomingCycleDays": 3,
+    "unknownCycleDays": 7,
+    "portalDays": 7,
+    "inactiveCycleDays": 30,
+    "futureDatedEvidenceIsFresh": false
+  },
+  "notificationMode": "artifact_only",
+  "externalNotificationConfigured": false,
+  "reason": "P8 defines and tests schedule-safe logic but has no authority to create, enable, or change a live schedule or deployment configuration."
+}

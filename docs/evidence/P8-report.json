@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "generatedAt": "2026-08-30T00:23:00.000Z",
+  "testingSheet": {
+    "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "sheetName": "Master Database",
+    "acceptedRevisionId": "223",
+    "sourceFixture": "web/fixtures/p7/legacy-api-data.json",
+    "expectedRows": 197,
+    "liveReadPerformed": false
+  },
+  "targetDenominator": 197,
+  "inputDigest": "4607c366283213781490a15a84fac3da64ab75dfea78ddb0e599fea511055ef9",
+  "consecutiveDryRuns": {
+    "receipts": [
+      "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
+      "19f1470aff8559f3b15b13b0ec7577e3426d649578d5cec054061e772bb2b679"
+    ],
+    "completed": 2,
+    "eachProcessed": 197,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "resultDigestMatch": true,
+    "acceptedFactMutations": 0
+  },
+  "failureSimulations": {
+    "simulated": 6,
+    "reviewRequired": 6,
+    "acceptedFactMutations": 0
+  },
+  "recovery": {
+    "recoveryCompleted": true,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "acceptedFactsChanged": false
+  },
+  "scheduleEnabled": false,
+  "externalNotificationsSent": 0,
+  "limitations": "These are deterministic, offline dry runs against the accepted testing-sheet revision-223 compatibility fixture. They prove bounded monitoring behavior and idempotence, not current live sheet or public-source state.",
+  "reportSha256": "ea00b978a49ccd46e286119b9e7acab90674b77710792016dc984e34029cc0f2"
+}

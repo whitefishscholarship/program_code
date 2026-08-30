@@ -5,6 +5,56 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## Current P8 verified technical candidate
+
+- P8 — Monitoring, review operations, and recovery — is implemented in isolated branch
+  `codex/p8-monitoring-recovery` from exact live baseline
+  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. It remains active/verified pending
+  complete verification and fresh independent read-only review. P9 is unavailable.
+- Live standard Git reproduced baseline `5be74c3`, whose second parent is exact P7
+  attestation `fa23a761fdf7d09156ae3d683476457c665e7092`; P7 is durably accepted and
+  delivered.
+- The monitoring denominator is the exact 197-row testing-sheet compatibility fixture
+  derived from accepted, reconciled testing-sheet revision `223`. No Google service
+  credential was present, so the two dry runs are honestly labeled pinned revision-223
+  fixture runs rather than fresh live sheet reads.
+- Both dry runs process 197/197 unique targets with zero duplicates, zero lost work,
+  matching input/result digests, zero accepted-fact mutations, zero publication, and
+  zero external notifications.
+- Six synthetic scenarios cover 404, timeout, bot block, redirect, date conflict, and
+  portal change. All six default to review and none changes accepted facts. Retry,
+  request-spacing, and freshness policies are deterministic and bounded.
+- Partial-run recovery stops after 73 targets, resumes exactly at cursor 73, and
+  reconciles all 197 targets once with the last accepted receipt unchanged. Failed runs
+  cannot publish accepted state or a review queue; successful local apply mode can
+  publish only a complete review queue and never accepted facts.
+- `docs/evidence/P8-schedule-plan.json` is disabled with activation unauthorized. No
+  live schedule, webhook, email, deployment configuration, spreadsheet write,
+  production access, public-source read, form/application interaction, provider
+  contact, paid/destructive action, history rewrite, or P9 action occurred.
+- `docs/P8-OPERATIONS.md` records the dry-run, review, freshness, bounded retry/rate,
+  recovery, and future-authorization procedure. Machine evidence is rooted at
+  `docs/evidence/P8-report.json`.
+- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` is unbound preparatory documentation only;
+  it grants no production authority. `BUILD_STATE` must not point to P9 unless a later
+  exact accepted-state candidate passes independent recheck.
+- The verified-state matrix passed from `2026-08-30T05:18:21Z` through
+  `2026-08-30T05:21:50Z`: locked install, deterministic P8 checks, plan/history
+  validation, typecheck, complete P0-P8 tests, root whitespace validation, supported
+  webpack production build fallback, and full/production dependency audits. The exact
+  Turbopack command remains runner-blocked by local-port policy after the restricted
+  Google Fonts failure; no source or configuration changed. Both audits reported zero
+  current matches.
+- Technical candidate identity, independent review, accepted-state replacement, exact
+  manifest digest, final recheck, attestation, delivery, CI, and Vercel outcomes remain
+  pending.
+- After the verification narrative was recorded, P8 checks, plan validation, typecheck,
+  the complete P0-P8 suite, and root whitespace validation passed again from
+  `2026-08-30T05:22:24Z` through `2026-08-30T05:22:48Z`. Final plan and whitespace
+  validation remain the pre-freeze guard after this documentation-only line.
+
+## Historical P7 accepted-state candidate (delivered)
+
 ## Current P7 accepted-state candidate
 
 - P7 — Student-facing product and API — has a prospective accepted-state marker and

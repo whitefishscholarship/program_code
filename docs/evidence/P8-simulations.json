@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8",
+  "generatedAt": "2026-08-30T00:20:00.000Z",
+  "sourceMode": "synthetic_failure_fixture",
+  "livePublicSourceObservations": 0,
+  "retryPolicy": {
+    "maxTargetsPerRun": 250,
+    "maxAttemptsPerTarget": 3,
+    "baseBackoffMs": 250,
+    "maximumBackoffMs": 1000,
+    "minimumRequestSpacingMs": 100,
+    "deterministicRetryDelaysMs": [
+      250,
+      500
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "simulated-404",
+      "observationKind": "not_found",
+      "targetId": "p8-target-e11979e669b5fa7b5e47",
+      "disposition": "review_dead_link",
+      "severity": "high",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "receiptSha256": "6f82c1769a8465635ad26fefda436983b77d4494174fe402ad7fe8e50a2ef896"
+    },
+    {
+      "id": "simulated-timeout",
+      "observationKind": "timeout",
+      "targetId": "p8-target-2256c9b6f1e2f9ee352e",
+      "disposition": "review_inconclusive",
+      "severity": "high",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 3,
+      "retryDelaysMs": [
+        250,
+        500
+      ],
+      "receiptSha256": "56e46def46fdf5d6395e644e4a01843eea114e178b41566bcbeadd9216386045"
+    },
+    {
+      "id": "simulated-bot-block",
+      "observationKind": "bot_block",
+      "targetId": "p8-target-6a937b4964524ebdac78",
+      "disposition": "review_inconclusive",
+      "severity": "high",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 3,
+      "retryDelaysMs": [
+        250,
+        500
+      ],
+      "receiptSha256": "9f0e7021ecc8963a9285c1b29190af92f9df2224b7f21964d95219c362368345"
+    },
+    {
+      "id": "simulated-redirect",
+      "observationKind": "redirect",
+      "targetId": "p8-target-6047f8b390b6893b7c76",
+      "disposition": "review_redirect",
+      "severity": "medium",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "receiptSha256": "4cdb3717d036a79b4d8bf06602748a3cb60bfad6c65fac1ac31158a8cb6eb91f"
+    },
+    {
+      "id": "simulated-date-conflict",
+      "observationKind": "date_conflict",
+      "targetId": "p8-target-0fc6c7b24985115e4da1",
+      "disposition": "review_date_conflict",
+      "severity": "high",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "receiptSha256": "594779d587db7d7959f3b3353f2c8fcaf9b323074d262dfe6c07d7a60e19bd77"
+    },
+    {
+      "id": "simulated-portal-change",
+      "observationKind": "portal_change",
+      "targetId": "p8-target-b2f3c56d82477379c4c7",
+      "disposition": "review_portal_change",
+      "severity": "medium",
+      "requiresReview": true,
+      "acceptedFactMutation": false,
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "receiptSha256": "f89f3f52952c72ac8d82bcaf8d5d61cdf79e13ef62b86e2c148bb35aad3d8661"
+    }
+  ],
+  "counts": {
+    "simulated": 6,
+    "reviewRequired": 6,
+    "acceptedFactMutations": 0
+  },
+  "limitations": "Synthetic outcomes exercise control behavior only and are not evidence about any public scholarship source."
+}
