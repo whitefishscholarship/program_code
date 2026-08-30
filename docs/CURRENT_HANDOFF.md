@@ -8,6 +8,9 @@ Default branch: `main`
 ## Claude transfer checkpoint — not accepted, not attested, P9 not started
 
 - Transfer branch: `codex/plan-rev7-readonly-p9`.
+- Local isolated worktree holding that branch:
+  `/private/tmp/program_code-plan-rev7-readonly-p9`. Preserve this worktree until the
+  branch is successfully pushed or otherwise backed up.
 - Exact live baseline used for this work: `origin/main`
   `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`.
 - Accepted P8 attestation in that baseline: direct-child attestation
