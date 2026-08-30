@@ -45,8 +45,11 @@ The driver accepts only explicit dry-run mode, fetches only the 50 accepted publ
 read-only source routes, follows at most five validated public redirects, limits each
 response to 2 MB, times out after 20 seconds, and writes only authenticated local run
 receipts. The integrity key is required at runtime and is never printed or committed.
-The other 978 targets use pinned snapshot or no-fetch observations. Completion reports
-review items but publishes no queue or accepted state.
+The other 978 targets retain their accepted fingerprint and accepted observation time;
+the driver never stamps them with the current clock. Once their policy window expires,
+they become stale review items unless a separately trusted current snapshot is supplied
+by future governed work. Completion reports review items but publishes no queue or
+accepted state.
 
 No live invocation was performed for P8 acceptance. A live invocation would establish
 only time-bounded URL observations, not automatically accepted scholarship changes.
@@ -81,15 +84,19 @@ run ID, mode, exact cursor range, complete result set, review items, and prior r
 4. Authenticate and reconcile the full chain from cursor zero through target 1,028.
 5. Require 1,028 unique results, zero duplicates, zero lost targets, and an end receipt.
 6. Finalize the whole ledger before review-queue publication is possible.
-7. Upsert review work by stable target/disposition/observation identity. Repeated logical
-   work increments its occurrence count instead of creating a duplicate.
+7. Upsert review work by stable target/disposition/observation identity and authenticated
+   run ID. Replaying the same receipt tip is a no-op; a distinct run observing the same
+   logical change increments its occurrence count without creating a duplicate.
 
 The committed recovery evidence interrupts after the first 250 targets with a review
 item in the prefix. The suffix cannot publish alone. Whole-ledger finalization retains
-that prefix item, and a repeated full apply keeps one stable review ID.
+that prefix item, same-tip replay remains at one occurrence, and a distinct repeated run
+keeps one stable review ID while recording a second occurrence.
 
-`apply_review_queue` may publish only a complete authenticated local review queue. It
-cannot publish or mutate accepted scholarship facts and cannot write a spreadsheet.
+`apply_review_queue` may publish only the exact, unmodified in-process result of
+authenticated full-ledger finalization. Structural lookalikes, mutated results, and
+targets outside the authenticated plan are rejected. It cannot publish or mutate
+accepted scholarship facts and cannot write a spreadsheet.
 
 ## Further authority
 

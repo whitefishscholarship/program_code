@@ -64,10 +64,11 @@
     "lostCount": 0,
     "prefixReviewRetained": true,
     "incompletePublicationRejected": true,
-    "repeatedApplyIdempotent": true
+    "sameTipReplayIdempotent": true,
+    "distinctRunUpserted": true
   },
   "scheduleEnabled": false,
   "externalNotificationsSent": 0,
   "limitations": "All observations are accepted-revision or synthetic fixtures. They prove control execution and reconciliation, not that any public scholarship fact is current. No live source, spreadsheet, form, applicant, notification, schedule, or production system was accessed.",
-  "reportSha256": "68fd3f74f29125b92cabd8523ab505efa98d19a0f16b95cdb3b806f38adf416d"
+  "reportSha256": "9e669fe3780345f07f608879701892daadf599ed46999b9468931172b0b7727d"
 }

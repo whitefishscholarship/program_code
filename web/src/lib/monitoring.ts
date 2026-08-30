@@ -102,12 +102,14 @@ export interface ReviewQueueItem {
   reviewId: string;
   targetId: string;
   disposition: Exclude<Disposition, 'unchanged'>;
+  observationFingerprint: string;
   severity: 'high' | 'medium';
   reason: string;
   state: 'open';
   firstSeenAt: string;
   lastSeenAt: string;
   occurrenceCount: number;
+  occurrenceRunIds: string[];
   acceptedFactMutation: false;
 }
 
@@ -156,6 +158,7 @@ export interface MonitoringReceiptStore {
 }
 
 const storeState = new WeakMap<MonitoringReceiptStore, { directory: string; key: Buffer }>();
+const authenticatedFinalizations = new WeakMap<FinalizedRun, { digest: string; targetIds: Set<string> }>();
 
 export function sha256(value: string | Buffer): string {
   return createHash('sha256').update(value).digest('hex');
@@ -231,16 +234,30 @@ export function evaluateFreshness(observedAt: string, now: string, maximumAgeDay
   return current - observed <= maximumAgeDays * 86_400_000;
 }
 
-function stableReview(result: MonitoringResult): ReviewQueueItem {
+export function acceptedNonPublicObservation(target: MonitoringTarget): RawProbeObservation {
+  if (target.route === 'public_read_only_probe') throw new Error('Public probe targets require a new executed observation');
+  if (target.route === 'snapshot_compare') return { kind: 'snapshot', observedFingerprint: target.acceptedFingerprint, observedAt: target.acceptedObservedAt };
+  return { kind: 'no_fetch', observedFingerprint: target.acceptedFingerprint, observedAt: target.acceptedObservedAt };
+}
+
+function stableReview(result: MonitoringResult, runId: string): ReviewQueueItem {
   const reviewId = `p8-review-${sha256(canonicalJson([result.targetId, result.disposition, result.observationFingerprint])).slice(0, 24)}`;
-  return { reviewId, targetId: result.targetId, disposition: result.disposition as Exclude<Disposition, 'unchanged'>, severity: result.severity!, reason: result.reason, state: 'open', firstSeenAt: result.observedAt, lastSeenAt: result.observedAt, occurrenceCount: 1, acceptedFactMutation: false };
+  return { reviewId, targetId: result.targetId, disposition: result.disposition as Exclude<Disposition, 'unchanged'>, observationFingerprint: result.observationFingerprint, severity: result.severity!, reason: result.reason, state: 'open', firstSeenAt: result.observedAt, lastSeenAt: result.observedAt, occurrenceCount: 1, occurrenceRunIds: [runId], acceptedFactMutation: false };
 }
 
 export function mergeReviewQueue(existing: ReviewQueueItem[], incoming: ReviewQueueItem[]): ReviewQueueItem[] {
+  for (const item of [...existing, ...incoming]) {
+    const expectedReviewId = `p8-review-${sha256(canonicalJson([item.targetId, item.disposition, item.observationFingerprint])).slice(0, 24)}`;
+    if (item.reviewId !== expectedReviewId || item.state !== 'open' || item.acceptedFactMutation !== false) throw new Error('Review queue item identity is invalid');
+    if (item.occurrenceRunIds.length === 0 || new Set(item.occurrenceRunIds).size !== item.occurrenceRunIds.length || item.occurrenceCount !== item.occurrenceRunIds.length) throw new Error('Review queue occurrence provenance is invalid');
+    if (!Number.isFinite(Date.parse(item.firstSeenAt)) || !Number.isFinite(Date.parse(item.lastSeenAt)) || Date.parse(item.firstSeenAt) > Date.parse(item.lastSeenAt)) throw new Error('Review queue observation time is invalid');
+  }
   const merged = new Map(existing.map((item) => [item.reviewId, { ...item }]));
   for (const item of incoming) {
     const prior = merged.get(item.reviewId);
-    merged.set(item.reviewId, prior ? { ...prior, lastSeenAt: item.lastSeenAt, occurrenceCount: prior.occurrenceCount + 1 } : { ...item });
+    if (!prior) { merged.set(item.reviewId, { ...item, occurrenceRunIds: [...item.occurrenceRunIds] }); continue; }
+    const occurrenceRunIds = [...new Set([...prior.occurrenceRunIds, ...item.occurrenceRunIds])].sort();
+    merged.set(item.reviewId, { ...prior, firstSeenAt: Date.parse(prior.firstSeenAt) <= Date.parse(item.firstSeenAt) ? prior.firstSeenAt : item.firstSeenAt, lastSeenAt: Date.parse(prior.lastSeenAt) >= Date.parse(item.lastSeenAt) ? prior.lastSeenAt : item.lastSeenAt, occurrenceCount: occurrenceRunIds.length, occurrenceRunIds });
   }
   return [...merged.values()].sort((a, b) => a.reviewId.localeCompare(b.reviewId));
 }
@@ -352,7 +369,7 @@ function validateLedger(plan: MonitoringPlan, ledger: SegmentReceipt[]): void {
     const expectedIds = plan.targets.slice(receipt.startCursor, receipt.nextCursor).map((item) => item.targetId).sort();
     const actualIds = receipt.results.map((item) => item.targetId).sort();
     if (new Set(actualIds).size !== actualIds.length || canonicalJson(actualIds) !== canonicalJson(expectedIds)) throw new Error('Monitoring segment contains duplicate or lost work');
-    const expectedReviewIds = receipt.results.filter((item) => item.requiresReview).map(stableReview).map((item) => item.reviewId).sort();
+    const expectedReviewIds = receipt.results.filter((item) => item.requiresReview).map((item) => stableReview(item, receipt.runId)).map((item) => item.reviewId).sort();
     const actualReviewIds = receipt.reviewQueue.map((item) => item.reviewId).sort();
     if (new Set(actualReviewIds).size !== actualReviewIds.length || canonicalJson(actualReviewIds) !== canonicalJson(expectedReviewIds)) throw new Error('Monitoring segment review queue is incomplete or duplicated');
     cursor = receipt.nextCursor;
@@ -373,11 +390,12 @@ export async function executeMonitoringSegment(input: { plan: MonitoringPlan; st
     if (prior.nextCursor !== input.startCursor || prior.runId !== input.runId || prior.mode !== input.mode) throw new Error('Resume cursor, run, or mode changed');
     segmentIndex = ledger.length;
   }
+  if (input.limit !== undefined && (!Number.isInteger(input.limit) || input.limit <= 0)) throw new Error('Monitoring segment limit is invalid');
   const limit = Math.min(input.limit ?? MAX_TARGETS_PER_SEGMENT, MAX_TARGETS_PER_SEGMENT);
   const nextCursor = Math.min(plan.targets.length, input.startCursor + limit);
   const results: MonitoringResult[] = [];
   for (const target of plan.targets.slice(input.startCursor, nextCursor)) results.push(await executeTarget(target, input.adapter, input.environment));
-  const reviewQueue = results.filter((item) => item.requiresReview).map(stableReview);
+  const reviewQueue = results.filter((item) => item.requiresReview).map((item) => stableReview(item, input.runId));
   return commitReceipt(input.store, { schemaVersion: MONITORING_SCHEMA_VERSION, stageId: 'P8', runId: input.runId, mode: input.mode, planDigest: plan.planDigest, spreadsheetId: plan.spreadsheetId, spreadsheetRevisionId: plan.spreadsheetRevisionId, segmentIndex, startCursor: input.startCursor, nextCursor, targetDenominator: plan.targets.length, processedCount: results.length, remainingCount: plan.targets.length - nextCursor, previousReceiptSha256: input.previousReceiptSha256, reachedPlanEnd: nextCursor === plan.targets.length, results, reviewQueue });
 }
 
@@ -389,11 +407,16 @@ export function finalizeMonitoringRun(plan: MonitoringPlan, store: MonitoringRec
   const unique = new Set(results.map((item) => item.targetId));
   if (results.length !== plan.targets.length || unique.size !== plan.targets.length) throw new Error('Final monitoring run contains duplicate or lost work');
   const reviewQueue = mergeReviewQueue([], ledger.flatMap((receipt) => receipt.reviewQueue));
-  return { schemaVersion: MONITORING_SCHEMA_VERSION, stageId: 'P8', runId: ledger[0].runId, mode: ledger[0].mode, planDigest: plan.planDigest, receiptTipSha256: tip, receiptCount: ledger.length, targetDenominator: plan.targets.length, processedCount: results.length, uniqueProcessedCount: unique.size, duplicateCount: results.length - unique.size, lostCount: plan.targets.length - unique.size, complete: true, results, reviewQueue, resultDigest: fingerprint(results.map(({ targetId, disposition, observationFingerprint }) => ({ targetId, disposition, observationFingerprint }))) };
+  const finalized: FinalizedRun = { schemaVersion: MONITORING_SCHEMA_VERSION, stageId: 'P8', runId: ledger[0].runId, mode: ledger[0].mode, planDigest: plan.planDigest, receiptTipSha256: tip, receiptCount: ledger.length, targetDenominator: plan.targets.length, processedCount: results.length, uniqueProcessedCount: unique.size, duplicateCount: results.length - unique.size, lostCount: plan.targets.length - unique.size, complete: true, results, reviewQueue, resultDigest: fingerprint(results.map(({ targetId, disposition, observationFingerprint }) => ({ targetId, disposition, observationFingerprint }))) };
+  authenticatedFinalizations.set(finalized, { digest: fingerprint(finalized), targetIds: new Set(plan.targets.map((item) => item.targetId)) });
+  return finalized;
 }
 
 export function applyReviewQueue(finalized: FinalizedRun, existing: ReviewQueueItem[]) {
   if (!finalized.complete || finalized.mode !== 'apply_review_queue') throw new Error('Only a complete authenticated apply run may publish a review queue');
+  const authentication = authenticatedFinalizations.get(finalized);
+  if (!authentication || authentication.digest !== fingerprint(finalized)) throw new Error('Review publication requires an unmodified runtime-authenticated finalization');
+  if ([...existing, ...finalized.reviewQueue].some((item) => !authentication.targetIds.has(item.targetId))) throw new Error('Review publication contains a target outside the authenticated plan');
   const reviewQueue = mergeReviewQueue(existing, finalized.reviewQueue);
   return { reviewQueue, reviewQueuePublished: true, acceptedStatePublished: false as const, acceptedFactsChanged: false as const, acceptedStateReceiptBefore: finalized.planDigest, acceptedStateReceiptAfter: finalized.planDigest };
 }

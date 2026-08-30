@@ -193,9 +193,10 @@ while (recoveryCursor < plan.targets.length) {
 }
 const recovered = finalizeMonitoringRun(plan, recoveryStore, recoveryTip);
 const firstPublication = applyReviewQueue(recovered, []);
+const sameTipReplay = applyReviewQueue(recovered, firstPublication.reviewQueue);
 const repeated = await runComplete({ plan, runId: 'p8-recovery-apply-repeat', mode: 'apply_review_queue', observedAt: scenarios.partialRecovery.observedAt, overrides: recoveryOverride });
-const repeatedPublication = applyReviewQueue(repeated.finalized, firstPublication.reviewQueue);
-if (recovered.reviewQueue.length !== 1 || repeatedPublication.reviewQueue.length !== 1 || repeatedPublication.reviewQueue[0].occurrenceCount !== 2) throw new Error('Recovered review publication is not cross-run idempotent');
+const repeatedPublication = applyReviewQueue(repeated.finalized, sameTipReplay.reviewQueue);
+if (recovered.reviewQueue.length !== 1 || sameTipReplay.reviewQueue[0].occurrenceCount !== 1 || repeatedPublication.reviewQueue.length !== 1 || repeatedPublication.reviewQueue[0].occurrenceCount !== 2) throw new Error('Recovered review publication is not replay-safe or cross-run idempotent');
 const recovery = {
   schemaVersion: 2,
   stageId: 'P8',
@@ -205,7 +206,7 @@ const recovery = {
   interrupted: { nextCursor: prefix.nextCursor, processedCount: prefix.processedCount, retainedReviewIds: prefix.reviewQueue.map((item) => item.reviewId), acceptedStatePublished: false, reviewQueuePublished: false },
   incompletePublicationRejected,
   finalized: { receiptTipSha256: recovered.receiptTipSha256, processedCount: recovered.processedCount, uniqueProcessedCount: recovered.uniqueProcessedCount, duplicateCount: recovered.duplicateCount, lostCount: recovered.lostCount, reviewIds: recovered.reviewQueue.map((item) => item.reviewId), complete: recovered.complete },
-  repeatedApply: { firstQueueCount: firstPublication.reviewQueue.length, secondQueueCount: repeatedPublication.reviewQueue.length, stableReviewId: firstPublication.reviewQueue[0].reviewId === repeatedPublication.reviewQueue[0].reviewId, occurrenceCount: repeatedPublication.reviewQueue[0].occurrenceCount },
+  repeatedApply: { firstQueueCount: firstPublication.reviewQueue.length, sameTipReplayQueueCount: sameTipReplay.reviewQueue.length, sameTipReplayOccurrenceCount: sameTipReplay.reviewQueue[0].occurrenceCount, distinctRunQueueCount: repeatedPublication.reviewQueue.length, stableReviewId: firstPublication.reviewQueue[0].reviewId === repeatedPublication.reviewQueue[0].reviewId, distinctRunOccurrenceCount: repeatedPublication.reviewQueue[0].occurrenceCount },
   acceptedStateReceiptBefore: plan.planDigest,
   acceptedStateReceiptAfter: plan.planDigest,
   acceptedFactsChanged: false,
@@ -250,7 +251,7 @@ const reportBody = {
   plan: { planDigest: plan.planDigest, catalogRevision: plan.catalogRevision, counts: plan.counts, pinnedSurfaces: plan.pinnedSurfaces },
   consecutiveDryRuns: { completed: 2, eachProcessed: plan.targets.length, receiptTips: [first.finalized.receiptTipSha256, second.finalized.receiptTipSha256], resultDigestMatch: first.finalized.resultDigest === second.finalized.resultDigest, duplicateCount: first.finalized.duplicateCount + second.finalized.duplicateCount, lostCount: first.finalized.lostCount + second.finalized.lostCount, acceptedFactMutations: 0 },
   failureSimulations: simulations.counts,
-  recovery: { complete: recovered.complete, duplicateCount: recovered.duplicateCount, lostCount: recovered.lostCount, prefixReviewRetained: recovered.reviewQueue.some((item) => item.reviewId === prefix.reviewQueue[0].reviewId), incompletePublicationRejected, repeatedApplyIdempotent: repeatedPublication.reviewQueue.length === 1 },
+  recovery: { complete: recovered.complete, duplicateCount: recovered.duplicateCount, lostCount: recovered.lostCount, prefixReviewRetained: recovered.reviewQueue.some((item) => item.reviewId === prefix.reviewQueue[0].reviewId), incompletePublicationRejected, sameTipReplayIdempotent: sameTipReplay.reviewQueue.length === 1 && sameTipReplay.reviewQueue[0].occurrenceCount === 1, distinctRunUpserted: repeatedPublication.reviewQueue.length === 1 && repeatedPublication.reviewQueue[0].occurrenceCount === 2 },
   scheduleEnabled: false,
   externalNotificationsSent: 0,
   limitations: scenarios.limitations,

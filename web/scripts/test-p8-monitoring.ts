@@ -19,6 +19,7 @@ import {
   MINIMUM_REQUEST_SPACING_MS,
   RETRY_DELAYS_MS,
   applyReviewQueue,
+  acceptedNonPublicObservation,
   assertPrivacySafeArtifact,
   buildMonitoringPlan,
   createMonitoringReceiptStore,
@@ -53,6 +54,10 @@ assert.equal(Object.keys(plan.pinnedSurfaces).length, 12, 'P3-P7 trust surfaces 
 assert.equal(evaluateFreshness('2026-08-30T00:00:00Z', '2026-08-30T00:00:00Z', 1), true);
 assert.equal(evaluateFreshness('2026-08-31T00:00:00Z', '2026-08-30T00:00:00Z', 1), false, 'future evidence cannot be fresh');
 assert.equal(evaluateFreshness('2026-08-20T00:00:00Z', '2026-08-30T00:00:00Z', 1), false, 'stale evidence cannot be fresh');
+for (const target of [plan.targets.find((item) => item.route === 'snapshot_compare')!, plan.targets.find((item) => item.route === 'manual_review_no_fetch')!]) {
+  assert.equal(acceptedNonPublicObservation(target).observedAt, target.acceptedObservedAt, 'non-public live-driver observations must preserve accepted time');
+}
+assert.throws(() => acceptedNonPublicObservation(plan.targets.find((item) => item.route === 'public_read_only_probe')!), /require a new executed observation/);
 
 type Override = (target: MonitoringTarget, attempt: number) => Promise<RawProbeObservation>;
 function adapter(observedAt: string, overrides = new Map<string, Override>(), calls: MonitoringTarget[] = []): ProbeAdapter {
@@ -109,6 +114,11 @@ assert.equal(timeoutResult.disposition, 'review_inconclusive');
 
 const stale = await complete({ runId: 'test-stale', mode: 'dry_run', observedAt: '2026-08-30T00:00:00.000Z', overrides: new Map([[timeoutTarget.targetId, async (target) => ({ kind: 'http', status: 200, finalUrl: target.url, observedFingerprint: target.acceptedFingerprint, observedAt: '2026-08-20T00:00:00.000Z', markers: [] })]]) });
 assert.equal(stale.finalized.results.find((item) => item.targetId === timeoutTarget.targetId)!.disposition, 'review_inconclusive', 'stale executed observations must enter review');
+const acceptedSnapshotTarget = plan.targets.find((item) => item.route === 'snapshot_compare')!;
+const liveDriverShaped = await complete({ runId: 'test-live-driver-stale', mode: 'dry_run', observedAt: '2026-10-15T00:00:00.000Z', overrides: new Map([[acceptedSnapshotTarget.targetId, async (target) => acceptedNonPublicObservation(target)]]) });
+const liveDriverResult = liveDriverShaped.finalized.results.find((item) => item.targetId === acceptedSnapshotTarget.targetId)!;
+assert.equal(liveDriverResult.fresh, false, 'no new live-driver snapshot must retain accepted observation time');
+assert.equal(liveDriverResult.disposition, 'review_inconclusive', 'stale accepted snapshot must enter review instead of refreshing itself');
 
 const recoveryTarget = plan.targets[0];
 const recoveryOverride = new Map<string, Override>([[recoveryTarget.targetId, async () => ({ kind: 'snapshot', observedFingerprint: sha256('changed'), observedAt: '2026-08-30T00:00:00.000Z', changeKind: 'generic_change' })]]);
@@ -130,11 +140,22 @@ const published = applyReviewQueue(recovered, []);
 assert.equal(published.reviewQueue.length, 1);
 assert.equal(published.reviewQueue[0].reviewId, prefix.reviewQueue[0].reviewId, 'prefix review must survive authenticated recovery');
 assert.equal(published.acceptedFactsChanged, false);
+const replayedSameTip = applyReviewQueue(recovered, published.reviewQueue);
+assert.equal(replayedSameTip.reviewQueue[0].occurrenceCount, 1, 'replaying the same authenticated tip must be idempotent');
+const refinalizedSameTip = finalizeMonitoringRun(plan, interruptedStore.receiptStore, tip);
+assert.equal(applyReviewQueue(refinalizedSameTip, replayedSameTip.reviewQueue).reviewQueue[0].occurrenceCount, 1, 'refinalizing and replaying the same authenticated tip must remain idempotent');
+const forgedFinalization = JSON.parse(JSON.stringify(recovered));
+forgedFinalization.reviewQueue[0].targetId = 'not-in-plan';
+assert.throws(() => applyReviewQueue(forgedFinalization, []), /runtime-authenticated finalization/, 'structurally forged complete objects must not publish');
+const forgedExisting = { ...published.reviewQueue[0], targetId: 'not-in-plan' };
+assert.throws(() => applyReviewQueue(recovered, [forgedExisting]), /outside the authenticated plan/, 'existing queue targets outside the authenticated plan must not publish');
 const repeat = await complete({ runId: 'test-recovery-repeat', mode: 'apply_review_queue', observedAt: '2026-08-30T00:00:00.000Z', overrides: recoveryOverride });
-const republished = applyReviewQueue(repeat.finalized, published.reviewQueue);
+const republished = applyReviewQueue(repeat.finalized, replayedSameTip.reviewQueue);
 assert.equal(republished.reviewQueue.length, 1, 'same logical review must upsert across runs');
 assert.equal(republished.reviewQueue[0].reviewId, published.reviewQueue[0].reviewId);
 assert.equal(republished.reviewQueue[0].occurrenceCount, 2);
+recovered.results[0].reason = 'post-finalization mutation';
+assert.throws(() => applyReviewQueue(recovered, published.reviewQueue), /unmodified runtime-authenticated finalization/, 'post-finalization mutation must invalidate publication');
 
 const firstReceiptPath = path.join(executed.directory, `${executed.finalized.receiptTipSha256}.json`);
 const tampered = JSON.parse(fs.readFileSync(firstReceiptPath, 'utf8')) as Record<string, unknown>;
@@ -158,12 +179,14 @@ assert.equal(dryOne.resultDigest, dryTwo.resultDigest);
 assert.equal((simulationsJson as { counts: { simulated: number; reviewRequired: number; acceptedFactMutations: number } }).counts.simulated, 6);
 assert.equal((simulationsJson as { counts: { reviewRequired: number } }).counts.reviewRequired, 6);
 assert.equal((simulationsJson as { counts: { acceptedFactMutations: number } }).counts.acceptedFactMutations, 0);
-const recoveryEvidence = recoveryJson as unknown as { incompletePublicationRejected: boolean; finalized: { processedCount: number; duplicateCount: number; lostCount: number }; repeatedApply: { stableReviewId: boolean; secondQueueCount: number; occurrenceCount: number } };
+const recoveryEvidence = recoveryJson as unknown as { incompletePublicationRejected: boolean; finalized: { processedCount: number; duplicateCount: number; lostCount: number }; repeatedApply: { stableReviewId: boolean; sameTipReplayOccurrenceCount: number; distinctRunOccurrenceCount: number } };
 assert.equal(recoveryEvidence.incompletePublicationRejected, true);
 assert.equal(recoveryEvidence.finalized.processedCount, 1028);
 assert.equal(recoveryEvidence.finalized.duplicateCount, 0);
 assert.equal(recoveryEvidence.finalized.lostCount, 0);
 assert.equal(recoveryEvidence.repeatedApply.stableReviewId, true);
+assert.equal(recoveryEvidence.repeatedApply.sameTipReplayOccurrenceCount, 1);
+assert.equal(recoveryEvidence.repeatedApply.distinctRunOccurrenceCount, 2);
 assert.equal(scheduleJson.enabled, false);
 assert.equal(scheduleJson.activationAuthorized, false);
 assert.equal(scheduleJson.externalNotificationConfigured, false);

@@ -7,6 +7,7 @@ import sourceQueueJson from '../../docs/evidence/P5-source-queue.json';
 import p6ChildrenJson from '../../docs/evidence/P6-child-records.json';
 import { assertFetchableUrl } from '../src/lib/extract';
 import {
+  acceptedNonPublicObservation,
   buildMonitoringPlan,
   createMonitoringReceiptStore,
   executeMonitoringSegment,
@@ -57,7 +58,7 @@ async function main() {
   if (process.argv.slice(2).join(' ') !== '--dry-run') throw new Error('P8 live monitoring is restricted to the explicit --dry-run mode');
   const receiptDirectory = process.env.P8_RECEIPT_DIRECTORY;
   const encodedKey = process.env.P8_RECEIPT_INTEGRITY_KEY;
-  if (!receiptDirectory || !encodedKey || !/^[0-9a-fA-F]{64,}$/.test(encodedKey)) throw new Error('P8_RECEIPT_DIRECTORY and a 32-byte-or-longer hex P8_RECEIPT_INTEGRITY_KEY are required');
+  if (!receiptDirectory || !encodedKey || !/^(?:[0-9a-fA-F]{2}){32,}$/.test(encodedKey)) throw new Error('P8_RECEIPT_DIRECTORY and a 32-byte-or-longer hex P8_RECEIPT_INTEGRITY_KEY are required');
   const repoRoot = path.resolve(process.cwd(), '..');
   const pinnedPaths = ['docs/evidence/P3-acquisition.json', 'docs/evidence/P3-completeness.json', 'docs/evidence/P4-field-evidence.json', 'docs/evidence/P4-reviews.json', 'docs/evidence/P5-applied-change-receipt.json', 'docs/evidence/P5-postwrite-reconciliation.json', 'docs/evidence/P5-source-queue.json', 'docs/evidence/P5-public-probes.json', 'docs/evidence/P5-manual-review.json', 'docs/evidence/P6-child-records.json', 'web/fixtures/p7/student-catalog.json', 'docs/evidence/P7-manifest.json'];
   const plan = buildMonitoringPlan({
@@ -73,8 +74,7 @@ async function main() {
   const store = createMonitoringReceiptStore(receiptDirectory, Buffer.from(encodedKey, 'hex'));
   const adapter: ProbeAdapter = { probe: async (target) => {
     if (target.route === 'public_read_only_probe') return fetchPublicSource(target.url!);
-    const observedAt = new Date().toISOString();
-    return target.route === 'snapshot_compare' ? { kind: 'snapshot', observedFingerprint: target.acceptedFingerprint, observedAt } : { kind: 'no_fetch', observedFingerprint: target.acceptedFingerprint, observedAt };
+    return acceptedNonPublicObservation(target);
   } };
   const environment = { now: () => new Date().toISOString(), sleep: (milliseconds: number) => new Promise<void>((resolve) => setTimeout(resolve, milliseconds)) };
   const runId = `p8-live-dry-run-${new Date().toISOString().replace(/[^0-9]/g, '')}`;

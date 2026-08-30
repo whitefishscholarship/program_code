@@ -17,6 +17,10 @@ Default branch: `main`
   controls, duplicated logical review work across runs, allowed recovered suffix
   publication to lose prefix work, lacked an exact build pass, used unkeyed receipts,
   and contained two whitespace defects.
+- Replacement `30cdbfe4ee8f026015b917ce9abf781b69cbd94f` was independently
+  rejected C0/H2/M1/L0 and must also never be attested or delivered. Its live driver
+  falsely refreshed 978 unchanged snapshots, queue publication accepted a forged
+  complete object, and same-tip replay was not idempotent.
 - The uncommitted replacement now keeps 1,028 distinct targets: 217 P7 sources, 213 P5
   source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
   review items, and two P6 review items. Only the 50 accepted public read-only routes
@@ -29,7 +33,10 @@ Default branch: `main`
   default unchanged.
 - Each receipt is append-only, HMAC-authenticated, and linked to the prior segment. The
   recovery simulation retains a first-segment review item, rejects incomplete
-  publication, reconciles all 1,028 targets, and uses stable cross-run review upsert.
+  publication, reconciles all 1,028 targets, rejects forged/mutated finalizations and
+  out-of-plan targets, keeps same-tip replay at one occurrence, and uses stable
+  cross-run review upsert. Non-public live-driver checks retain accepted observation
+  time, so absent snapshots age into review rather than refreshing themselves.
 - The schedule plan remains disabled and activation unauthorized. The guarded driver
   accepts only explicit dry-run mode and was not invoked. No live source, spreadsheet,
   form, provider, notification, deployment configuration, production system, or P9
@@ -41,6 +48,11 @@ Default branch: `main`
   whitespace checks passed by `2026-08-30T06:02:21Z`. Replacement freeze,
   same-reviewer recheck, accepted-state transition, final recheck, manifest,
   attestation, and governed delivery remain pending.
+- After the `30cdbfe4` rejection, deterministic evidence, strengthened freshness/
+  publication/replay tests, plan validation, typecheck, the full P0-P8 suite, exact
+  Turbopack build, both zero-match audits, and both whitespace checks passed again by
+  `2026-08-30T06:15:42Z`. The next action is a new immutable technical freeze and the
+  same reviewer's read-only recheck.
 - `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` remains unbound preparatory documentation.
   It grants no production authority and must not be used in this P8 session.
 
