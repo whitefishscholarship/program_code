@@ -331,11 +331,39 @@ but are not rewritten or deleted.
   preserve revision `9857`, exact grids/source-backup hashes, read-only OAuth scope,
   unchanged sharing, and zero production writes across deployment smoke and rollback.
   The Vercel rollback-probe record must bind real Git objects, exact baseline ancestry,
-  provider status/configuration fingerprint, and a runtime-equivalent deployed commit;
-  fabricated SHA-shaped values fail validation.
+  provider status/configuration, and one rollback-safe runtime commit deployed three
+  times under cutover/static-rollback/restored-cutover configuration; the legacy
+  baseline is not a safe runtime rollback while a production source setting exists.
+  Exact schema-v2 receipts require hosted GitHub OIDC attestations from a dormant
+  protected default-branch workflow with predecessor-verified entry, cutover, rollback,
+  restored-cutover, and finalize phases. The validator derives observation,
+  configuration, and AST writer-inventory digests and binds a secrets-free executed
+  negative-test report; fabricated SHA-shaped values or asserted booleans fail.
+  Cutover/restored health must provide a nonce-bound application-read observation whose
+  digests cover the exact normalized bounded GridData plus the fresh runner nonce and
+  match the trusted runner's independent computation without exposing cell values.
+  Each phase also statically binds both deployed routes and direct result dataflow to one
+  shared loader at the exact runtime commit; rollback must provide none. A control-plane
+  credential read or unused read plus echoed constant is not application-path proof.
+  P9 also remains blocked until the runtime principal has a direct unexpired production
+  Viewer permission, the authorized verifier can read both private backups,
+  and exact Vercel project/team fingerprints and canonical Production hostname are
+  independently authority-pinned through the predeclared, fixed-path,
+  fresh-review/direct-child-attested `P9-IDENTITY-PINS` record. Revision 7 records these
+  facts as false/null and does not change sharing, provider configuration, or hosted
+  environment state.
+  Because the earlier backup-equality hash serialization was not recorded, those two
+  digests remain historical provenance. Operative proof uses the explicitly versioned
+  canonical bounded-GridData algorithm and requires fresh source/existing-backup
+  equality plus cross-phase identity.
   Revision 7 also records the contained pre-entry connector-access deviation without
   retroactive authorization. Revision 7 itself changes only governance, validator/tests,
   evidence, and handoff; P9 remains unstarted.
+- Review history: first frozen candidate `1c23d4fef71635c75702e638f268501318f403ec`
+  was rejected C0/H2/M0/L0 because its receipts could accept stale/unknown fields and
+  self-asserted provider/configuration evidence. Its manifest is rejected and is not
+  rebound. The same reviewer must recheck the replacement candidate after strict-schema,
+  chronology, OIDC, runtime-descriptor, and executed writer-proof remediation.
 - Authority: Kelsey Stuart directly supplied the exact production and testing
   spreadsheet boundaries, authorized the P9 configuration/Git/Preview/Production and
   rollback effects, and named Kelsey Stuart as deployment and rollback owner.

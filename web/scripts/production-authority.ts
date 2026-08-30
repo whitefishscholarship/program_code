@@ -10,6 +10,13 @@ export const P9_ENTRY_EVIDENCE_PATH = 'docs/evidence/P9-entry.json';
 export const P9_POST_CUTOVER_EVIDENCE_PATH =
   'docs/evidence/P9-post-cutover.json';
 export const P9_DEPLOYMENT_EVIDENCE_PATH = 'docs/evidence/P9-deployment.json';
+export const P9_IDENTITY_PIN_STAGE_ID = 'P9-IDENTITY-PINS';
+export const P9_IDENTITY_PIN_EVIDENCE_PATH =
+  'docs/evidence/P9-identity-pins.md';
+export const P9_IDENTITY_PIN_MANIFEST_PATH =
+  'docs/evidence/P9-identity-pins-manifest.json';
+export const P9_IDENTITY_PIN_REVIEW_PATH =
+  'docs/reviews/P9-identity-pins.json';
 export const P9_READ_ONLY_OAUTH_SCOPE =
   'https://www.googleapis.com/auth/spreadsheets.readonly';
 export const P9_RUNTIME_EQUIVALENCE_PATHS = [
@@ -70,13 +77,51 @@ export type P9ProductionAuthorization = {
   runtimeReadPermissionVerificationRequired: boolean;
   runtimeReadPermissionVerified: boolean;
   runtimeReadPermissionEvidencePath: string;
+  runtimePrincipalDirectReaderVerificationRequired: boolean;
+  runtimePrincipalDirectReaderVerified: boolean;
+  runtimePrincipalFingerprintSha256: string | null;
+  runtimePrincipalDirectReaderEvidencePath: string;
+  backupRuntimeReadPermissionVerificationRequired: boolean;
+  backupRuntimeReadPermissionVerified: boolean;
+  backupRuntimePrincipalFingerprintSha256: string | null;
+  backupRuntimeReadPermissionEvidencePath: string;
+  providerTargetIdentityPinningRequired: boolean;
+  providerTargetIdentityPinned: boolean;
+  providerProjectFingerprintSha256: string | null;
+  providerTeamFingerprintSha256: string | null;
+  providerCanonicalProductionHostnameSha256: string | null;
+  providerTargetIdentityEvidencePath: string;
+  hostedVerificationEnvironmentVerificationRequired: boolean;
+  hostedVerificationEnvironmentVerified: boolean;
+  hostedVerificationEnvironmentFingerprintSha256: string | null;
+  hostedVerificationEnvironmentEvidencePath: string;
+  runtimeCredentialProvenanceVerificationRequired: boolean;
+  runtimeCredentialProvenanceVerified: boolean;
+  runtimeCredentialProvenanceFingerprintSha256: string | null;
+  runtimeCredentialProvenanceEvidencePath: string;
+  identityPinAttestationRequired: true;
+  identityPinStageId: 'P9-IDENTITY-PINS';
+  identityPinEvidencePath: 'docs/evidence/P9-identity-pins.md';
+  identityPinManifestPath: 'docs/evidence/P9-identity-pins-manifest.json';
+  identityPinReviewPath: 'docs/reviews/P9-identity-pins.json';
   entrySourceReverificationRequired: boolean;
   entrySourceReverificationVerified: boolean;
   entrySourceReverificationEvidencePath: string;
+  deployedApplicationReadPathVerificationRequired: boolean;
+  deployedApplicationReadPathVerified: boolean;
+  deployedApplicationReadPathEvidencePath: string;
   postCutoverNonMutationVerificationRequired: boolean;
   postCutoverNonMutationVerified: boolean;
   postCutoverNonMutationEvidencePath: string;
   deploymentRecordEvidencePath: string;
+  evidenceSchemaVersion: 2;
+  trustedWorkflowPath: '.github/workflows/p9-evidence.yml';
+  trustedProofScriptPath: 'web/scripts/p9-trusted-proof.ts';
+  trustedWorkflowMode: 'manual-protected-default-branch-only';
+  trustedEvidencePhases: ['entry', 'cutover', 'rollback', 'restored-cutover', 'finalize'];
+  runtimeDeploymentStrategy: 'same-rollback-safe-commit-three-deployments';
+  legacyReceiptSchemasAccepted: false;
+  writeIsolationProofRequired: true;
   deploymentOwner: string;
   rollbackOwner: string;
   authorizedTabs: Array<{
@@ -124,6 +169,16 @@ export type P9DataAuthority = {
   productionSpreadsheetId: string | null;
   productionMutationAuthorized: boolean;
   productionAuthorization: P9ProductionAuthorization | null;
+};
+
+export type P9IdentityPins = {
+  runtimePrincipalFingerprintSha256: string;
+  backupRuntimePrincipalFingerprintSha256: string;
+  providerProjectFingerprintSha256: string;
+  providerTeamFingerprintSha256: string;
+  providerCanonicalProductionHostnameSha256: string;
+  hostedVerificationEnvironmentFingerprintSha256: string;
+  runtimeCredentialProvenanceFingerprintSha256: string;
 };
 
 type P9TabFingerprint = {
@@ -248,16 +303,31 @@ export function p9ReadOnlyAuthorityChanged(
   const normalizedCurrent = structuredClone(current);
   const normalizedCanonical = structuredClone(canonical);
 
-  // P9 may flip only the three predeclared proof states after this amendment is
-  // attested. Their evidence locations and every authority fact remain immutable.
+  // P9 may flip only predeclared proof-state booleans after Revision 7. The
+  // seven identity fingerprints may transition once through the separately
+  // validated P9-IDENTITY-PINS direct-child attestation. Its fixed paths and
+  // every other authority fact remain immutable in this comparison.
   for (const authority of [
     normalizedCurrent.productionAuthorization,
     normalizedCanonical.productionAuthorization,
   ]) {
     if (authority) {
       authority.runtimeReadPermissionVerified = false;
+      authority.runtimePrincipalDirectReaderVerified = false;
+      authority.backupRuntimeReadPermissionVerified = false;
+      authority.providerTargetIdentityPinned = false;
+      authority.hostedVerificationEnvironmentVerified = false;
+      authority.runtimeCredentialProvenanceVerified = false;
       authority.entrySourceReverificationVerified = false;
+      authority.deployedApplicationReadPathVerified = false;
       authority.postCutoverNonMutationVerified = false;
+      authority.runtimePrincipalFingerprintSha256 = null;
+      authority.backupRuntimePrincipalFingerprintSha256 = null;
+      authority.providerProjectFingerprintSha256 = null;
+      authority.providerTeamFingerprintSha256 = null;
+      authority.providerCanonicalProductionHostnameSha256 = null;
+      authority.hostedVerificationEnvironmentFingerprintSha256 = null;
+      authority.runtimeCredentialProvenanceFingerprintSha256 = null;
     }
   }
 
@@ -276,6 +346,138 @@ function isSha256(value: string): boolean {
   return /^[0-9a-f]{64}$/.test(value);
 }
 
+function isNullOrSha256(value: string | null): boolean {
+  return value === null || isSha256(value);
+}
+
+export function getCompleteP9IdentityPins(
+  authorization: P9ProductionAuthorization,
+): P9IdentityPins | null {
+  const runtimePrincipalFingerprintSha256 =
+    authorization.runtimePrincipalFingerprintSha256;
+  const backupRuntimePrincipalFingerprintSha256 =
+    authorization.backupRuntimePrincipalFingerprintSha256;
+  const providerProjectFingerprintSha256 =
+    authorization.providerProjectFingerprintSha256;
+  const providerTeamFingerprintSha256 =
+    authorization.providerTeamFingerprintSha256;
+  const providerCanonicalProductionHostnameSha256 =
+    authorization.providerCanonicalProductionHostnameSha256;
+  const hostedVerificationEnvironmentFingerprintSha256 =
+    authorization.hostedVerificationEnvironmentFingerprintSha256;
+  const runtimeCredentialProvenanceFingerprintSha256 =
+    authorization.runtimeCredentialProvenanceFingerprintSha256;
+  if (
+    runtimePrincipalFingerprintSha256 === null ||
+    backupRuntimePrincipalFingerprintSha256 === null ||
+    providerProjectFingerprintSha256 === null ||
+    providerTeamFingerprintSha256 === null ||
+    providerCanonicalProductionHostnameSha256 === null ||
+    hostedVerificationEnvironmentFingerprintSha256 === null ||
+    runtimeCredentialProvenanceFingerprintSha256 === null ||
+    !isSha256(runtimePrincipalFingerprintSha256) ||
+    !isSha256(backupRuntimePrincipalFingerprintSha256) ||
+    !isSha256(providerProjectFingerprintSha256) ||
+    !isSha256(providerTeamFingerprintSha256) ||
+    !isSha256(providerCanonicalProductionHostnameSha256) ||
+    !isSha256(hostedVerificationEnvironmentFingerprintSha256) ||
+    !isSha256(runtimeCredentialProvenanceFingerprintSha256) ||
+    runtimePrincipalFingerprintSha256 !==
+      backupRuntimePrincipalFingerprintSha256
+  ) {
+    return null;
+  }
+  return {
+    runtimePrincipalFingerprintSha256,
+    backupRuntimePrincipalFingerprintSha256,
+    providerProjectFingerprintSha256,
+    providerTeamFingerprintSha256,
+    providerCanonicalProductionHostnameSha256,
+    hostedVerificationEnvironmentFingerprintSha256,
+    runtimeCredentialProvenanceFingerprintSha256,
+  };
+}
+
+export function hasAnyP9IdentityPin(
+  authorization: P9ProductionAuthorization,
+): boolean {
+  return [
+    authorization.runtimePrincipalFingerprintSha256,
+    authorization.backupRuntimePrincipalFingerprintSha256,
+    authorization.providerProjectFingerprintSha256,
+    authorization.providerTeamFingerprintSha256,
+    authorization.providerCanonicalProductionHostnameSha256,
+    authorization.hostedVerificationEnvironmentFingerprintSha256,
+    authorization.runtimeCredentialProvenanceFingerprintSha256,
+  ].some((value) => value !== null);
+}
+
+export function p9IdentityPinsChanged(
+  current: P9ProductionAuthorization,
+  canonical: P9ProductionAuthorization,
+): boolean {
+  const values = (authorization: P9ProductionAuthorization) => ({
+    runtimePrincipalFingerprintSha256:
+      authorization.runtimePrincipalFingerprintSha256,
+    backupRuntimePrincipalFingerprintSha256:
+      authorization.backupRuntimePrincipalFingerprintSha256,
+    providerProjectFingerprintSha256:
+      authorization.providerProjectFingerprintSha256,
+    providerTeamFingerprintSha256:
+      authorization.providerTeamFingerprintSha256,
+    providerCanonicalProductionHostnameSha256:
+      authorization.providerCanonicalProductionHostnameSha256,
+    hostedVerificationEnvironmentFingerprintSha256:
+      authorization.hostedVerificationEnvironmentFingerprintSha256,
+    runtimeCredentialProvenanceFingerprintSha256:
+      authorization.runtimeCredentialProvenanceFingerprintSha256,
+  });
+  return !sameJson(values(current), values(canonical));
+}
+
+export type P9IdentityPinAttestationPresence = {
+  anyCurrentPin: boolean;
+  currentArtifactCount: number;
+  historicalAttemptCount: number;
+  canonicalAttestationPresent: boolean;
+};
+
+export function validateP9IdentityPinAttestationPresence(
+  presence: P9IdentityPinAttestationPresence,
+): string[] {
+  const errors: string[] = [];
+  if (
+    !Number.isInteger(presence.currentArtifactCount) ||
+    presence.currentArtifactCount < 0 ||
+    !Number.isInteger(presence.historicalAttemptCount) ||
+    presence.historicalAttemptCount < 0
+  ) {
+    return ['P9 identity-pin attestation presence counts are invalid'];
+  }
+  if (!presence.canonicalAttestationPresent) {
+    if (
+      presence.anyCurrentPin ||
+      presence.currentArtifactCount > 0 ||
+      presence.historicalAttemptCount > 0
+    ) {
+      errors.push(
+        'P9 identity pins and their files are forbidden without a canonical independently accepted direct-child P9-IDENTITY-PINS attestation',
+      );
+    }
+    return errors;
+  }
+  if (
+    !presence.anyCurrentPin ||
+    presence.currentArtifactCount !== 3 ||
+    presence.historicalAttemptCount !== 1
+  ) {
+    errors.push(
+      'Canonical P9-IDENTITY-PINS history requires the complete current pin set and all three immutable artifacts',
+    );
+  }
+  return errors;
+}
+
 function expectedTabFingerprint(
   tab: (typeof P9_AUTHORIZED_PRODUCTION_TABS)[number],
 ): P9TabFingerprint {
@@ -289,6 +491,11 @@ function expectedTabFingerprint(
 }
 
 export function validateP9EntryReceipt(receipt: P9EntryReceipt): string[] {
+  // Schema v1 is permanently fail-closed. P9 acceptance must use the strict,
+  // OIDC-attested v2 chain in p9-evidence-v2.ts.
+  if (receipt.schemaVersion === 1) {
+    return ['P9 schema-v1 entry receipts are unauthenticated and forbidden'];
+  }
   const errors: string[] = [];
   const expectedTabs = P9_AUTHORIZED_PRODUCTION_TABS.map((tab) => {
     const fingerprint = expectedTabFingerprint(tab);
@@ -338,6 +545,9 @@ export function validateP9EntryReceipt(receipt: P9EntryReceipt): string[] {
 export function validateP9PostCutoverReceipt(
   receipt: P9PostCutoverReceipt,
 ): string[] {
+  if (receipt.schemaVersion === 1) {
+    return ['P9 schema-v1 post-cutover receipts are unauthenticated and forbidden'];
+  }
   const errors: string[] = [];
   const expectedTabs = P9_AUTHORIZED_PRODUCTION_TABS.map(expectedTabFingerprint);
   if (
@@ -386,6 +596,13 @@ export function validateP9DeploymentRecord(
   receipt: P9PostCutoverReceipt,
   entryReceipt: P9EntryReceipt,
 ): string[] {
+  if (
+    record.schemaVersion === 1 ||
+    receipt.schemaVersion === 1 ||
+    entryReceipt.schemaVersion === 1
+  ) {
+    return ['P9 schema-v1 deployment evidence is self-asserted and forbidden'];
+  }
   const errors: string[] = [];
   const expectedCutoverConfiguration: P9CutoverConfiguration = {
     schemaVersion: 1,
@@ -460,6 +677,9 @@ export function validateP9DeploymentGitBinding(
   candidateCommit: string,
   probe: P9GitBindingProbe,
 ): string[] {
+  if (receipt.schemaVersion === 1) {
+    return ['P9 schema-v1 Git binding cannot authenticate deployment evidence'];
+  }
   const errors: string[] = [];
   if (
     !probe.objectExists(receipt.deployedCommit) ||
@@ -588,11 +808,88 @@ export function validateP9ReadOnlyAuthority(
   }
   if (
     authorization.runtimeReadPermissionEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.runtimePrincipalDirectReaderEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.backupRuntimeReadPermissionEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.providerTargetIdentityEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.hostedVerificationEnvironmentEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.runtimeCredentialProvenanceEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
     authorization.entrySourceReverificationEvidencePath !== P9_ENTRY_EVIDENCE_PATH ||
+    authorization.deployedApplicationReadPathEvidencePath !==
+      P9_POST_CUTOVER_EVIDENCE_PATH ||
     authorization.postCutoverNonMutationEvidencePath !== P9_POST_CUTOVER_EVIDENCE_PATH ||
     authorization.deploymentRecordEvidencePath !== P9_DEPLOYMENT_EVIDENCE_PATH
   ) {
     errors.push('P9 entry and post-cutover proofs must remain bound to their exact receipt paths');
+  }
+  if (
+    authorization.runtimePrincipalDirectReaderVerificationRequired !== true ||
+    authorization.backupRuntimeReadPermissionVerificationRequired !== true ||
+    authorization.providerTargetIdentityPinningRequired !== true ||
+    authorization.hostedVerificationEnvironmentVerificationRequired !== true ||
+    authorization.runtimeCredentialProvenanceVerificationRequired !== true ||
+    authorization.deployedApplicationReadPathVerificationRequired !== true
+  ) {
+    errors.push(
+      'P9 must retain direct-reader, backup-read, provider-target, hosted-environment, credential-provenance, and deployed-read-path gates',
+    );
+  }
+  if (
+    authorization.identityPinAttestationRequired !== true ||
+    authorization.identityPinStageId !== P9_IDENTITY_PIN_STAGE_ID ||
+    authorization.identityPinEvidencePath !== P9_IDENTITY_PIN_EVIDENCE_PATH ||
+    authorization.identityPinManifestPath !== P9_IDENTITY_PIN_MANIFEST_PATH ||
+    authorization.identityPinReviewPath !== P9_IDENTITY_PIN_REVIEW_PATH
+  ) {
+    errors.push(
+      'P9 identity pins must remain bound to the predeclared independently attested P9-IDENTITY-PINS record',
+    );
+  }
+  const entryIdentityFingerprints = [
+    authorization.runtimePrincipalFingerprintSha256,
+    authorization.backupRuntimePrincipalFingerprintSha256,
+    authorization.providerProjectFingerprintSha256,
+    authorization.providerTeamFingerprintSha256,
+    authorization.providerCanonicalProductionHostnameSha256,
+    authorization.hostedVerificationEnvironmentFingerprintSha256,
+    authorization.runtimeCredentialProvenanceFingerprintSha256,
+  ];
+  if (!entryIdentityFingerprints.every(isNullOrSha256)) {
+    errors.push('P9 immutable operational identity fingerprints must be null or SHA-256');
+  }
+  if (
+    hasAnyP9IdentityPin(authorization) &&
+    getCompleteP9IdentityPins(authorization) === null
+  ) {
+    errors.push(
+      'P9 operational identity pins must be populated together as one complete same-principal set',
+    );
+  }
+  if (
+    authorization.runtimePrincipalFingerprintSha256 !== null &&
+    authorization.backupRuntimePrincipalFingerprintSha256 !== null &&
+    authorization.runtimePrincipalFingerprintSha256 !==
+      authorization.backupRuntimePrincipalFingerprintSha256
+  ) {
+    errors.push('P9 source and backup reads must be pinned to the same runtime principal');
+  }
+  if (
+    authorization.evidenceSchemaVersion !== 2 ||
+    authorization.trustedWorkflowPath !== '.github/workflows/p9-evidence.yml' ||
+    authorization.trustedProofScriptPath !== 'web/scripts/p9-trusted-proof.ts' ||
+    authorization.trustedWorkflowMode !== 'manual-protected-default-branch-only' ||
+    !sameJson(authorization.trustedEvidencePhases, [
+      'entry',
+      'cutover',
+      'rollback',
+      'restored-cutover',
+      'finalize',
+    ]) ||
+    authorization.runtimeDeploymentStrategy !==
+      'same-rollback-safe-commit-three-deployments' ||
+    authorization.legacyReceiptSchemasAccepted !== false ||
+    authorization.writeIsolationProofRequired !== true
+  ) {
+    errors.push('P9 trusted evidence workflow or schema-v2 deployment contract changed');
   }
   if (
     authorization.entrySourceReverificationRequired !== true ||
@@ -602,15 +899,38 @@ export function validateP9ReadOnlyAuthority(
   }
   if (
     authorization.runtimeReadPermissionVerified !== options.expectedEntryProofState ||
+    authorization.runtimePrincipalDirectReaderVerified !==
+      options.expectedEntryProofState ||
+    authorization.backupRuntimeReadPermissionVerified !==
+      options.expectedEntryProofState ||
+    authorization.providerTargetIdentityPinned !== options.expectedEntryProofState ||
+    authorization.hostedVerificationEnvironmentVerified !==
+      options.expectedEntryProofState ||
+    authorization.runtimeCredentialProvenanceVerified !==
+      options.expectedEntryProofState ||
     authorization.entrySourceReverificationVerified !== options.expectedEntryProofState
   ) {
-    errors.push('P9 runtime and exact-source entry proof state does not match its stage state');
+    errors.push(
+      'P9 operational activation-gate proof state does not match its stage state',
+    );
   }
   if (
-    authorization.postCutoverNonMutationVerified !==
-    options.expectedPostCutoverProofState
+    options.expectedEntryProofState &&
+    getCompleteP9IdentityPins(authorization) === null
   ) {
-    errors.push('P9 post-cutover zero-mutation proof state does not match its stage state');
+    errors.push(
+      'P9 cannot activate until exact immutable runtime, backup, provider, host, environment, and credential-provenance identities are pinned',
+    );
+  }
+  if (
+    authorization.deployedApplicationReadPathVerified !==
+      options.expectedPostCutoverProofState ||
+    authorization.postCutoverNonMutationVerified !==
+      options.expectedPostCutoverProofState
+  ) {
+    errors.push(
+      'P9 deployed application read-path and post-cutover zero-mutation proof state does not match its stage state',
+    );
   }
 
   return errors;

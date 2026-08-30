@@ -1,0 +1,500 @@
+name: P9 trusted production evidence
+
+run-name: P9 ${{ inputs.mode }} evidence from baseline ${{ inputs.p9_baseline_commit }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Observation-only evidence phase
+        required: true
+        type: choice
+        options:
+          - entry
+          - cutover
+          - rollback
+          - restored-cutover
+          - finalize
+      p9_baseline_commit:
+        description: Exact delivered P9 baseline commit containing this workflow
+        required: true
+        type: string
+      revision7_attestation_commit:
+        description: Exact accepted Revision 7 direct-child attestation commit
+        required: true
+        type: string
+      runtime_commit:
+        description: One immutable rollback-safe runtime commit used for all three deployments
+        required: false
+        type: string
+      deployment_id:
+        description: Exact Vercel deployment ID for entry or the selected deployment phase
+        required: false
+        type: string
+      predecessors_json:
+        description: Strict predecessor descriptor array; use [] only for entry
+        required: true
+        default: '[]'
+        type: string
+      final_health_url:
+        description: Canonical non-secret production health URL for restored-cutover
+        required: false
+        type: string
+
+permissions:
+  actions: read
+  attestations: write
+  contents: read
+  deployments: read
+  id-token: write
+
+concurrency:
+  group: p9-production-verification
+  cancel-in-progress: false
+
+jobs:
+  trust-boundary:
+    name: Verify delivered baseline workflow origin
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require workflow_dispatch on the exact default-branch baseline
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$DEFAULT_BRANCH" = "main"
+          test "$GITHUB_EVENT_NAME" = "workflow_dispatch"
+          test "$GITHUB_REF_TYPE" = "branch"
+          test "$GITHUB_REF_NAME" = "$DEFAULT_BRANCH"
+          test "$GITHUB_SHA" = "$P9_BASELINE_COMMIT"
+          test "$GITHUB_WORKFLOW_REF" = "$GITHUB_REPOSITORY/.github/workflows/p9-evidence.yml@refs/heads/$DEFAULT_BRANCH"
+
+  entry:
+    if: inputs.mode == 'entry'
+    needs: trust-boundary
+    runs-on: ubuntu-latest
+    environment: p9-production-verification
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Checkout exact delivered baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up trusted Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install only delivered lockfile dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Capture baseline provider and bounded Google read-only entry evidence
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=entry
+      - name: Upload exact P9 entry receipt
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-entry-${{ github.run_id }}-${{ github.run_attempt }}
+          path: docs/evidence/P9-entry.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Attest exact P9 entry receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: docs/evidence/P9-entry.json
+      - name: Publish exact successor descriptor
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_DESCRIPTOR_PHASE: entry
+          P9_ARTIFACT_ID: ${{ steps.upload.outputs.artifact-id }}
+          P9_SUBJECT_PATH: ${{ github.workspace }}/docs/evidence/P9-entry.json
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=emit-descriptor
+
+  cutover-proof:
+    if: inputs.mode == 'cutover'
+    needs: trust-boundary
+    runs-on: ubuntu-latest
+    environment: p9-production-verification
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Checkout exact delivered baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout exact cutover runtime without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.runtime_commit }}
+          path: .p9-runtime
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up trusted Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install only delivered lockfile dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Download and verify exact entry predecessor and OIDC attestation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=fetch-predecessors
+      - name: Capture authenticated cutover and bounded Google read-only evidence
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_RUNTIME_REPOSITORY_ROOT: ${{ github.workspace }}/.p9-runtime
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PHASE_RECEIPT_PATH: ${{ github.workspace }}/p9-phase.json
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_RUNTIME_COMMIT: ${{ inputs.runtime_commit }}
+          P9_DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          P9_HEALTH_BYPASS_SECRET: ${{ secrets.P9_HEALTH_BYPASS_SECRET }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=cutover
+      - name: Upload exact cutover phase receipt
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-cutover-phase-${{ github.run_id }}-${{ github.run_attempt }}
+          path: p9-phase.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Attest exact cutover phase receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: p9-phase.json
+      - name: Publish exact successor descriptor
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_DESCRIPTOR_PHASE: cutover
+          P9_ARTIFACT_ID: ${{ steps.upload.outputs.artifact-id }}
+          P9_SUBJECT_PATH: ${{ github.workspace }}/p9-phase.json
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=emit-descriptor
+
+  rollback-proof:
+    if: inputs.mode == 'rollback'
+    needs: trust-boundary
+    runs-on: ubuntu-latest
+    environment: p9-production-verification
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Checkout exact delivered baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout exact rollback runtime without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.runtime_commit }}
+          path: .p9-runtime
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up trusted Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install only delivered lockfile dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Download and verify exact cutover predecessor and OIDC attestation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=fetch-predecessors
+      - name: Capture authenticated rollback and bounded Google read-only evidence
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_RUNTIME_REPOSITORY_ROOT: ${{ github.workspace }}/.p9-runtime
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PHASE_RECEIPT_PATH: ${{ github.workspace }}/p9-phase.json
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_RUNTIME_COMMIT: ${{ inputs.runtime_commit }}
+          P9_DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          P9_HEALTH_BYPASS_SECRET: ${{ secrets.P9_HEALTH_BYPASS_SECRET }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=rollback
+      - name: Upload exact rollback phase receipt
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-rollback-phase-${{ github.run_id }}-${{ github.run_attempt }}
+          path: p9-phase.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Attest exact rollback phase receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: p9-phase.json
+      - name: Publish exact successor descriptor
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_DESCRIPTOR_PHASE: rollback
+          P9_ARTIFACT_ID: ${{ steps.upload.outputs.artifact-id }}
+          P9_SUBJECT_PATH: ${{ github.workspace }}/p9-phase.json
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=emit-descriptor
+
+  restored-cutover-proof:
+    if: inputs.mode == 'restored-cutover'
+    needs: trust-boundary
+    runs-on: ubuntu-latest
+    environment: p9-production-verification
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - name: Checkout exact delivered baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout exact restored-cutover runtime without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.runtime_commit }}
+          path: .p9-runtime
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up trusted Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install only delivered lockfile dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Download and verify exact rollback predecessor and OIDC attestation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=fetch-predecessors
+      - name: Capture authenticated restored cutover and bounded Google read-only evidence
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_RUNTIME_REPOSITORY_ROOT: ${{ github.workspace }}/.p9-runtime
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PHASE_RECEIPT_PATH: ${{ github.workspace }}/p9-phase.json
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_RUNTIME_COMMIT: ${{ inputs.runtime_commit }}
+          P9_DEPLOYMENT_ID: ${{ inputs.deployment_id }}
+          P9_FINAL_HEALTH_URL: ${{ inputs.final_health_url }}
+          VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TEAM_ID: ${{ secrets.VERCEL_TEAM_ID }}
+          P9_HEALTH_BYPASS_SECRET: ${{ secrets.P9_HEALTH_BYPASS_SECRET }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=restored-cutover
+      - name: Upload exact restored-cutover phase receipt
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-restored-phase-${{ github.run_id }}-${{ github.run_attempt }}
+          path: p9-phase.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Attest exact restored-cutover phase receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: p9-phase.json
+      - name: Publish exact successor descriptor
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_DESCRIPTOR_PHASE: restored-cutover
+          P9_ARTIFACT_ID: ${{ steps.upload.outputs.artifact-id }}
+          P9_SUBJECT_PATH: ${{ github.workspace }}/p9-phase.json
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=emit-descriptor
+
+  write-isolation:
+    if: inputs.mode == 'finalize'
+    needs: trust-boundary
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact delivered baseline verifier
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout exact runtime commit without persisted credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.runtime_commit }}
+          path: .p9-runtime
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Set up isolated Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+      - name: Install delivered verifier dependencies without lifecycle scripts
+        working-directory: web
+        run: npm ci --ignore-scripts
+      - name: Install candidate runtime dependencies without lifecycle scripts
+        working-directory: .p9-runtime/web
+        run: npm ci --ignore-scripts
+      - name: Execute runtime write-isolation proof with no deployment or OIDC credentials
+        working-directory: web
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_RUNTIME_REPOSITORY_ROOT: ${{ github.workspace }}/.p9-runtime
+          P9_WRITE_ISOLATION_RECEIPT_PATH: ${{ github.workspace }}/p9-write-isolation.json
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_RUNTIME_COMMIT: ${{ inputs.runtime_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=write-isolation
+      - name: Upload same-run write-isolation proof
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-write-isolation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: p9-write-isolation.json
+          if-no-files-found: error
+          retention-days: 1
+
+  finalize:
+    if: inputs.mode == 'finalize'
+    needs:
+      - trust-boundary
+      - write-isolation
+    runs-on: ubuntu-latest
+    environment: p9-production-verification
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact delivered baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ inputs.p9_baseline_commit }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up trusted Node runtime
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install delivered baseline dependencies without lifecycle scripts
+        working-directory: web
+        run: npm ci --ignore-scripts
+      - name: Download and verify all predecessor artifacts and OIDC attestations
+        working-directory: web
+        env:
+          GH_TOKEN: ${{ github.token }}
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=fetch-predecessors
+      - name: Download exact same-run write-isolation proof
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: p9-write-isolation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/p9-write-isolation
+      - name: Execute isolated runtime proof and finalize exact v2 receipts
+        working-directory: web
+        env:
+          P9_EVIDENCE_ENVIRONMENT: p9-production-verification
+          P9_REPOSITORY_ROOT: ${{ github.workspace }}
+          P9_WRITE_ISOLATION_RECEIPT_PATH: ${{ runner.temp }}/p9-write-isolation/p9-write-isolation.json
+          P9_PREDECESSOR_DIR: ${{ runner.temp }}/p9-predecessors
+          P9_PREDECESSORS_JSON: ${{ inputs.predecessors_json }}
+          P9_BASELINE_COMMIT: ${{ inputs.p9_baseline_commit }}
+          P9_REVISION7_ATTESTATION_COMMIT: ${{ inputs.revision7_attestation_commit }}
+          P9_RUNTIME_COMMIT: ${{ inputs.runtime_commit }}
+        run: node --import tsx scripts/p9-trusted-proof.ts --mode=finalize
+      - name: Upload exact final P9 receipt set
+        id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: p9-final-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            docs/evidence/P9-entry.json
+            docs/evidence/P9-deployment.json
+            docs/evidence/P9-post-cutover.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Attest exact P9 entry receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: docs/evidence/P9-entry.json
+      - name: Attest exact P9 deployment receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: docs/evidence/P9-deployment.json
+      - name: Attest exact P9 post-cutover receipt with GitHub OIDC
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: docs/evidence/P9-post-cutover.json

@@ -592,18 +592,26 @@ verified configuration rollback and durable operational handoff.
 
 **Entry prerequisites:** P0-P8 accepted; production spreadsheet identity explicitly
 provided and read-only production migration explicitly authorized; current backups of
-the exact authorized scholarship tabs verified; the deployed runtime identity's minimum
-read permission verified without exposing credentials; deploy/rollback owner identified;
-the exact revision `9857`, tab IDs/titles/grid bounds, source hashes, backup hashes, and
-unchanged post-read revision reverified at P9 entry; and Plan Revision 7 independently
-accepted, attested, and delivered. Any mismatch blocks P9 pending a new directly
-authorized, independently reviewed amendment and current backup receipt; never extend a
-range or treat an older backup as current silently.
+the exact authorized scholarship tabs verified; the exact deployed runtime principal
+identified without exposing credentials and proved to hold one direct, unexpired
+`reader` production permission rather than `writer`; that principal proved able to read
+both exact private backup spreadsheet IDs, or a separately authorized backup verifier
+recorded; deploy/rollback owner identified; exact non-secret Vercel project/team
+fingerprints and canonical student-facing Production hostname authority-pinned; the
+protected verification environment and environment-scoped secret provenance
+authenticated; the exact revision `9857`, tab IDs/titles/grid bounds, source hashes,
+backup hashes, and unchanged post-read revision reverified at P9 entry; and Plan
+Revision 7 independently accepted, attested, and delivered. The connected user's Drive
+account, a stored credential, or a CI-runner Google read is not deployed application-
+path proof. Any mismatch or missing pin blocks P9 pending a new directly authorized,
+independently reviewed amendment and current backup receipt; never extend a range or
+treat an older backup as current silently.
 
 **Deliverables:** Authorized-tab production backups; a structured, validator-checked
 `docs/evidence/P9-entry.json` receipt; mapping and dry-run diff; configuration-cutover
 receipt; structured `docs/evidence/P9-post-cutover.json` zero-mutation receipt;
 an authenticated `docs/evidence/P9-deployment.json` Vercel rollback-probe record;
+the exact dormant default-branch trusted-proof workflow delivered by Revision 7;
 post-cutover read-only source-to-model/API/UI
 reconciliation, deployment record, health/API/browser smoke evidence, configuration
 rollback test, operator runbook, final architecture/data documentation, and closeout
@@ -616,6 +624,12 @@ the existing write-capable `GOOGLE_SHEET_ID` path to the production ID.
 **Verification:** The mapping/dry-run diff is reviewed before the configuration cutover.
 Production CellData is read only from the two exact bounded scholarship tabs and the
 complete authorized-tab structural counts reconcile to the mapped canonical graph.
+The two earlier SHA-256 values remain historical provenance because their original
+serialization was not recorded. Operative entry and phase proof freshly read each exact
+source bound and its existing private backup, hash the canonical JSON of the returned
+`sheets[].data` GridData payload under
+`google-sheets-v4-griddata-canonical-json-v1`, require source/backup equality, and
+require the same canonical source digest in every phase.
 Record verification covers 100% of mapped archives, merges, application-link/deadline
 differences, and other high-risk transformations plus a deterministic SHA-256-selected
 10% of remaining active records (minimum 25, maximum 100, or all when fewer than 25).
@@ -625,18 +639,73 @@ the testing ID or is disabled. Deployed health identifies the expected commit. S
 journeys and exports pass against the production read model. Rollback is demonstrated
 without writing the production spreadsheet. After deployment smoke and again after the
 rollback proof, re-read only the authorized bounds and prove revision `9857`, tab/grid
-identities, native CellData hashes, and sharing state are unchanged. The structured
+identities, canonical bounded-GridData source/backup equality and cross-phase hashes,
+and sharing state are unchanged. The structured
 receipts must record zero production write calls and be immutable in the accepted P9
-candidate. The deployment record's commits must exist: rollback equals the exact P9
-baseline, deployed descends from it and is an ancestor of the final candidate, and the
-validator proves no runtime-affecting path changed after the deployed rollback-probe
-commit. “Runtime-affecting” covers the entire tracked `web/` tree, including P7 catalog
-fixtures imported by the API, plus tracked deployment-control paths. Distinct
-deployment/rollback IDs must come from an authenticated Vercel API
-observation, health must report each exact commit, and separate cutover/rollback
-fingerprints must be recomputed from canonical non-secret configuration descriptors
-rather than accepted as arbitrary digests. Any mismatch blocks acceptance and rollback
-remains application-only. After
+candidate. Schema-v1 receipts, self-asserted provider JSON, SHA-shaped claims, and
+unexecuted writer-test assertions are forbidden. Each exact canonical receipt must pass
+GitHub OIDC artifact-attestation verification for the delivered default-branch
+`.github/workflows/p9-evidence.yml`, exact repository, exact P9 baseline source digest,
+and hosted runner.
+
+Cutover and restored-cutover health must return a fresh nonce-bound application-read
+observation containing the exact production ID, sole read-only Sheets scope, and both
+exact tab IDs/titles/bounds/dimensions. For each tab, the proof digest is computed over
+an exact domain-separated envelope containing the unpredictable runner nonce and the
+complete normalized bounded GridData payload—not over a stored source digest. The
+trusted runner independently computes the same digest from its own bounded read; an old
+full-sheet hash or `hash(nonce, oldHash)` cannot satisfy the contract. The response
+contains no cell values. Static rollback health must return no production-read
+observation. The trusted phase also hashes and structurally verifies the exact deployed
+health route, public scholarship route, and their one shared loader at the provider-
+reported runtime commit, including direct result dataflow and the sole read-only Google
+call. This proves the deployed application path rather than only the control-plane
+credential or an unused Google read. The source permission fingerprint must bind the
+runtime principal to a direct, unexpired `reader` permission, and both backup reads must
+bind to that same authorized principal.
+
+All operational identity fingerprints must be non-null in the exact delivered P9
+baseline before the trusted runner makes any network call. Hash exact provider project
+and team IDs as UTF-8 text, the canonical lowercased hostname as UTF-8 text, the exact
+verification-environment name as UTF-8 text, and the strict non-secret runtime-identity
+descriptor as canonical JSON. The environment-name hash binds identity only; hosted
+approval rules and environment-scoped secret provenance still require authenticated
+operational evidence and may not be inferred from the workflow file.
+
+Revision 7 predeclares the only identity-population mechanism as stage
+`P9-IDENTITY-PINS`, with fixed evidence, manifest, and review paths. Its candidate may
+change only `docs/BUILD_STATE.json` plus the new pin evidence, must populate all seven
+fingerprints together from a null-pin Revision 7 baseline, must keep P9 planned and all
+operational proof flags false, and requires a fresh independent accepted review plus a
+direct-child manifest/review attestation. The first valid attestation is canonical;
+later pin or artifact change, deletion, re-addition, or rebind is rejected.
+
+P9 first creates one rollback-safe runtime commit that separates production reads from
+testing-only writes, blocks the production ID before write-client construction, and
+serves its actual shared-loader runtime descriptor from authenticated health with a
+fresh nonce. Deploy that same immutable runtime commit three times, with distinct
+authenticated provider IDs and configurations: production-read cutover, accepted-P7
+static-catalog rollback, and restored production-read cutover. The observation-only
+trusted workflow runs from the delivered P9 baseline in separate entry, cutover,
+rollback, restored-cutover, and finalize phases. Each phase must authenticate its
+predecessor artifact and attestation; deployment creation precedes phase observation;
+health and bounded source reconciliation finish before the next deployment is created.
+The finalizer reproduces those relationships and emits the exact three canonical
+receipts.
+
+The deployment record's Git objects must exist: the runtime commit descends from the
+exact P9 baseline and is an ancestor of the final candidate, and the validator proves no
+runtime-affecting path changed after the runtime proof. “Runtime-affecting” covers the
+entire tracked `web/` tree, including P7 catalog fixtures imported by the API, plus
+tracked deployment-control paths. The authenticated Vercel observation must bind the
+independently authority-pinned exact project/team fingerprints and canonical Production
+hostname, production target, READY state, provider Git SHA, deployment hostname, fresh
+health nonce, deployment ID, and the actual runtime descriptor. Mutable workflow inputs
+or secrets cannot establish the authorized target by self-consistency. The
+validator recomputes every observation/configuration/inventory digest, requires the
+exact unique TypeScript-AST writer inventory, and requires a secrets-free trusted job to
+execute the production-ID negative tests with zero client constructions and zero write
+calls. Any mismatch blocks acceptance and rollback remains application-only. After
 merge, authenticate the resulting Vercel Production deployment, prove the deployed main
 commit, repeat health/API/browser and read-only source-fingerprint smoke, and publish the
 provider/run identifiers in the governed PR delivery record.
@@ -905,6 +974,11 @@ conditional on validator-checked entry and post-cutover receipts.
 It preserves P9's full mapping, sampling, smoke, privacy, unknown/manual-review,
 independent-review, manifest, attestation, and delivery gates. Revision 7 must be
 independently accepted, attested, and delivered before P9 starts.
+Revision 7 also delivers a dormant, manual, protected-environment evidence workflow and
+strict schema-v2 validators. The workflow is not a schedule, performs no action during
+Revision 7, and may later make only authenticated allowlisted reads in P9. Its separate
+entry/cutover/rollback/restored/finalize runs prevent a future deployment ID or a single
+after-the-fact observation from being presented as chronological rollback proof.
 
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical

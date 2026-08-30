@@ -43,25 +43,48 @@ it is convenient or adjacent.
   append, clear, format, share, rename, restore, or otherwise mutate that spreadsheet.
 - P9 may read only the two scholarship tabs and bounds pinned in `BUILD_STATE`. Do not
   access unrelated tabs or applicant data. The deployed runtime identity's read access
-  must be verified before P9 becomes active. Reverify source revision `9857`, the exact
-  tab identities/grid bounds, both source/backup hashes, and unchanged post-read revision
-  at P9 entry. Any mismatch blocks P9 pending a newly authorized amendment and current
+  must be verified before P9 becomes active: require the exact principal to have one
+  direct, unexpired Viewer permission on production and require that same authorized
+  verifier to read both exact private backups. A connected user account, stored secret,
+  or CI-runner read is not deployed application-path proof. Exact Vercel project/team
+  fingerprints and the canonical student-facing Production hostname must be separately
+  authority-pinned, and the protected environment/credential provenance must be
+  authenticated. All corresponding false/null `BUILD_STATE` gates are stop conditions;
+  Revision 7 does not change permissions or provider configuration. Reverify source
+  revision `9857`, the exact
+  tab identities/grid bounds, both source/backup fingerprints, and unchanged post-read
+  revision at P9 entry. Preserve the two historical opaque hashes as provenance, but
+  make the operative comparison a fresh source-versus-existing-backup equality under
+  `google-sheets-v4-griddata-canonical-json-v1` over the exact bounded GridData payload.
+  Any mismatch blocks P9 pending a newly authorized amendment and current
   backup receipt; do not expand a range silently.
 - Bind the deployed-runtime/revision/source-backup entry proof to structured
   `docs/evidence/P9-entry.json`. Bind the post-deployment and rollback zero-mutation
   proof to `docs/evidence/P9-post-cutover.json`. Both paths are immutable; P9's accepted
-  manifest must hash both receipts, and the validator must reject missing, malformed,
-  stale, expanded-scope, or later-rebound receipts.
+  manifest must hash both receipts. Every P9 receipt must use the strict schema-v2
+  contract and pass exact GitHub OIDC artifact-attestation verification from the
+  delivered default-branch `.github/workflows/p9-evidence.yml`; schema-v1 or
+  self-asserted provider JSON is forbidden. The validator must reject missing,
+  malformed, stale, expanded-scope, unauthenticated, or later-rebound receipts.
 - Bind the rollback probe to `docs/evidence/P9-deployment.json`. Its deployed and
-  rollback commits must exist, the rollback commit must equal P9's exact baseline, the
-  deployed commit must descend from it and precede the final candidate, and every
-  tracked `web/` and deployment-control path must be byte-equivalent between the
-  deployed commit and final candidate. This includes catalog fixtures consumed by the
-  API. Deployment and rollback IDs must be distinct and observed through the
-  authenticated Vercel API; health must return each exact commit. Compute separate
-  cutover/rollback fingerprints from the validator's canonical non-secret configuration
-  descriptors. A syntactically plausible SHA or self-repeated arbitrary digest is not
-  deployment proof.
+  runtime commit must exist, descend from P9's exact baseline, precede the final
+  candidate, and remain byte-equivalent to the final candidate across every tracked
+  `web/` and deployment-control path. This includes catalog fixtures consumed by the
+  API. Deploy that same rollback-safe runtime commit three times with distinct provider
+  IDs: production-read cutover configuration, accepted-P7 static rollback
+  configuration, then restored production-read configuration. Each observation-only
+  phase proof must finish before the next deployment is created. The trusted workflow
+  must query the authenticated Vercel API, require health to return the exact provider
+  commit, fresh nonce, deployment ID, and actual shared-loader runtime descriptor, and
+  recompute its canonical digest. Cutover/restored health must return a nonce-bound
+  application-read observation whose digests cover the complete normalized bounded
+  GridData with the fresh nonce and match the trusted runner's independent computation;
+  it must not echo stored source hashes or cell values. The phase proof must also bind
+  both deployed routes to one statically verified shared loader and direct result
+  dataflow at the exact runtime commit; rollback must return none. Provider/runtime
+  observations must match the immutable authority pins, not merely each other.
+  SHA-shaped values, claimed booleans,
+  and unexecuted writer-test results are not evidence.
 - Never collect, reproduce, or commit applicant responses, credentials, dates of
   birth, addresses, phone numbers, transcripts, recommendation letters, or
   other applicant PII.

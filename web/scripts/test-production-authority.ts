@@ -4,12 +4,19 @@ import {
   P9_AUTHORIZED_PRODUCTION_TABS,
   P9_DEPLOYMENT_EVIDENCE_PATH,
   P9_ENTRY_EVIDENCE_PATH,
+  P9_IDENTITY_PIN_EVIDENCE_PATH,
+  P9_IDENTITY_PIN_MANIFEST_PATH,
+  P9_IDENTITY_PIN_REVIEW_PATH,
+  P9_IDENTITY_PIN_STAGE_ID,
   P9_POST_CUTOVER_EVIDENCE_PATH,
   P9_PRODUCTION_SPREADSHEET_ID,
   P9_READ_ONLY_OAUTH_SCOPE,
   P9_RUNTIME_EQUIVALENCE_PATHS,
   P9_TESTING_SPREADSHEET_ID,
   P9_VERIFIED_BACKUPS,
+  getCompleteP9IdentityPins,
+  hasAnyP9IdentityPin,
+  p9IdentityPinsChanged,
   p9ReadOnlyAuthorityChanged,
   fingerprintP9Configuration,
   type P9CutoverConfiguration,
@@ -21,6 +28,7 @@ import {
   validateP9DeploymentGitBinding,
   validateP9DeploymentRecord,
   validateP9EntryReceipt,
+  validateP9IdentityPinAttestationPresence,
   validateP9PostCutoverReceipt,
   validateP9ReadOnlyAuthority,
 } from './production-authority';
@@ -63,13 +71,57 @@ const authority: P9DataAuthority = {
     runtimeReadPermissionVerificationRequired: true,
     runtimeReadPermissionVerified: false,
     runtimeReadPermissionEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    runtimePrincipalDirectReaderVerificationRequired: true,
+    runtimePrincipalDirectReaderVerified: false,
+    runtimePrincipalFingerprintSha256: null,
+    runtimePrincipalDirectReaderEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    backupRuntimeReadPermissionVerificationRequired: true,
+    backupRuntimeReadPermissionVerified: false,
+    backupRuntimePrincipalFingerprintSha256: null,
+    backupRuntimeReadPermissionEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    providerTargetIdentityPinningRequired: true,
+    providerTargetIdentityPinned: false,
+    providerProjectFingerprintSha256: null,
+    providerTeamFingerprintSha256: null,
+    providerCanonicalProductionHostnameSha256: null,
+    providerTargetIdentityEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    hostedVerificationEnvironmentVerificationRequired: true,
+    hostedVerificationEnvironmentVerified: false,
+    hostedVerificationEnvironmentFingerprintSha256: null,
+    hostedVerificationEnvironmentEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    runtimeCredentialProvenanceVerificationRequired: true,
+    runtimeCredentialProvenanceVerified: false,
+    runtimeCredentialProvenanceFingerprintSha256: null,
+    runtimeCredentialProvenanceEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    identityPinAttestationRequired: true,
+    identityPinStageId: P9_IDENTITY_PIN_STAGE_ID,
+    identityPinEvidencePath: P9_IDENTITY_PIN_EVIDENCE_PATH,
+    identityPinManifestPath: P9_IDENTITY_PIN_MANIFEST_PATH,
+    identityPinReviewPath: P9_IDENTITY_PIN_REVIEW_PATH,
     entrySourceReverificationRequired: true,
     entrySourceReverificationVerified: false,
     entrySourceReverificationEvidencePath: P9_ENTRY_EVIDENCE_PATH,
+    deployedApplicationReadPathVerificationRequired: true,
+    deployedApplicationReadPathVerified: false,
+    deployedApplicationReadPathEvidencePath: P9_POST_CUTOVER_EVIDENCE_PATH,
     postCutoverNonMutationVerificationRequired: true,
     postCutoverNonMutationVerified: false,
     postCutoverNonMutationEvidencePath: P9_POST_CUTOVER_EVIDENCE_PATH,
     deploymentRecordEvidencePath: P9_DEPLOYMENT_EVIDENCE_PATH,
+    evidenceSchemaVersion: 2,
+    trustedWorkflowPath: '.github/workflows/p9-evidence.yml',
+    trustedProofScriptPath: 'web/scripts/p9-trusted-proof.ts',
+    trustedWorkflowMode: 'manual-protected-default-branch-only',
+    trustedEvidencePhases: [
+      'entry',
+      'cutover',
+      'rollback',
+      'restored-cutover',
+      'finalize',
+    ],
+    runtimeDeploymentStrategy: 'same-rollback-safe-commit-three-deployments',
+    legacyReceiptSchemasAccepted: false,
+    writeIsolationProofRequired: true,
     deploymentOwner: 'Kelsey Stuart',
     rollbackOwner: 'Kelsey Stuart',
     authorizedTabs: P9_AUTHORIZED_PRODUCTION_TABS.map((tab) => ({ ...tab })),
@@ -94,9 +146,80 @@ assert.deepEqual(
   [],
 );
 assert.equal(p9ReadOnlyAuthorityChanged(authority, authority), false);
+assert.equal(getCompleteP9IdentityPins(authority.productionAuthorization!), null);
+assert.equal(hasAnyP9IdentityPin(authority.productionAuthorization!), false);
+assert.deepEqual(
+  validateP9IdentityPinAttestationPresence({
+    anyCurrentPin: false,
+    currentArtifactCount: 0,
+    historicalAttemptCount: 0,
+    canonicalAttestationPresent: false,
+  }),
+  [],
+  'the predeclared future record may remain absent while every pin is null',
+);
+assert.notDeepEqual(
+  validateP9IdentityPinAttestationPresence({
+    anyCurrentPin: false,
+    currentArtifactCount: 0,
+    historicalAttemptCount: 1,
+    canonicalAttestationPresent: false,
+  }),
+  [],
+  'a malformed or rejected historical attestation attempt must fail closed',
+);
+assert.deepEqual(
+  validateP9IdentityPinAttestationPresence({
+    anyCurrentPin: true,
+    currentArtifactCount: 3,
+    historicalAttemptCount: 1,
+    canonicalAttestationPresent: true,
+  }),
+  [],
+  'a canonical historical attestation may proceed to full manifest, candidate, and byte-binding validation',
+);
+assert.notDeepEqual(
+  validateP9IdentityPinAttestationPresence({
+    anyCurrentPin: true,
+    currentArtifactCount: 2,
+    historicalAttemptCount: 1,
+    canonicalAttestationPresent: true,
+  }),
+  [],
+  'deleting any canonical identity-pin artifact must fail closed',
+);
+assert.notDeepEqual(
+  validateP9IdentityPinAttestationPresence({
+    anyCurrentPin: true,
+    currentArtifactCount: 3,
+    historicalAttemptCount: 2,
+    canonicalAttestationPresent: true,
+  }),
+  [],
+  'deleting and re-adding the manifest must not create a second canonical attempt',
+);
 
 const activeAuthority = structuredClone(authority);
+activeAuthority.productionAuthorization!.runtimePrincipalFingerprintSha256 =
+  '1'.repeat(64);
+activeAuthority.productionAuthorization!.backupRuntimePrincipalFingerprintSha256 =
+  '1'.repeat(64);
+activeAuthority.productionAuthorization!.providerProjectFingerprintSha256 =
+  '2'.repeat(64);
+activeAuthority.productionAuthorization!.providerTeamFingerprintSha256 =
+  '3'.repeat(64);
+activeAuthority.productionAuthorization!.providerCanonicalProductionHostnameSha256 =
+  '4'.repeat(64);
+activeAuthority.productionAuthorization!.hostedVerificationEnvironmentFingerprintSha256 =
+  '5'.repeat(64);
+activeAuthority.productionAuthorization!.runtimeCredentialProvenanceFingerprintSha256 =
+  '6'.repeat(64);
 activeAuthority.productionAuthorization!.runtimeReadPermissionVerified = true;
+activeAuthority.productionAuthorization!.runtimePrincipalDirectReaderVerified = true;
+activeAuthority.productionAuthorization!.backupRuntimeReadPermissionVerified = true;
+activeAuthority.productionAuthorization!.providerTargetIdentityPinned = true;
+activeAuthority.productionAuthorization!.hostedVerificationEnvironmentVerified = true;
+activeAuthority.productionAuthorization!.runtimeCredentialProvenanceVerified = true;
 activeAuthority.productionAuthorization!.entrySourceReverificationVerified = true;
 assert.deepEqual(
   validateP9ReadOnlyAuthority(activeAuthority, {
@@ -108,7 +231,66 @@ assert.deepEqual(
 assert.equal(
   p9ReadOnlyAuthorityChanged(activeAuthority, authority),
   false,
-  'only predeclared proof-state flags may transition after Revision 7 attestation',
+  'only the seven predeclared identity-pin values and proof states are normalized; Git-history validation must require their canonical attestation',
+);
+
+const pinnedInactiveAuthority = structuredClone(activeAuthority);
+pinnedInactiveAuthority.productionAuthorization!.runtimeReadPermissionVerified = false;
+pinnedInactiveAuthority.productionAuthorization!.runtimePrincipalDirectReaderVerified = false;
+pinnedInactiveAuthority.productionAuthorization!.backupRuntimeReadPermissionVerified = false;
+pinnedInactiveAuthority.productionAuthorization!.providerTargetIdentityPinned = false;
+pinnedInactiveAuthority.productionAuthorization!.hostedVerificationEnvironmentVerified = false;
+pinnedInactiveAuthority.productionAuthorization!.runtimeCredentialProvenanceVerified = false;
+pinnedInactiveAuthority.productionAuthorization!.entrySourceReverificationVerified = false;
+assert.deepEqual(
+  validateP9ReadOnlyAuthority(pinnedInactiveAuthority, {
+    expectedEntryProofState: false,
+    expectedPostCutoverProofState: false,
+  }),
+  [],
+  'a separately governed amendment may pin immutable identities before entry proof runs',
+);
+assert.ok(
+  getCompleteP9IdentityPins(pinnedInactiveAuthority.productionAuthorization!),
+  'the future pin candidate must populate one complete same-principal identity set',
+);
+assert.equal(
+  hasAnyP9IdentityPin(pinnedInactiveAuthority.productionAuthorization!),
+  true,
+);
+assert.equal(
+  p9IdentityPinsChanged(
+    pinnedInactiveAuthority.productionAuthorization!,
+    authority.productionAuthorization!,
+  ),
+  true,
+  'the governed pin comparison must detect population even though the narrow Revision 7 authority comparison normalizes it',
+);
+assert.equal(
+  p9ReadOnlyAuthorityChanged(pinnedInactiveAuthority, authority),
+  false,
+  'predeclared pin population is structurally permitted only so Git-history attestation validation can govern it',
+);
+assert.equal(
+  p9ReadOnlyAuthorityChanged(activeAuthority, pinnedInactiveAuthority),
+  false,
+  'only proof-state booleans may transition after exact identities are pinned',
+);
+
+const acceptedAuthority = structuredClone(activeAuthority);
+acceptedAuthority.productionAuthorization!.deployedApplicationReadPathVerified = true;
+acceptedAuthority.productionAuthorization!.postCutoverNonMutationVerified = true;
+assert.deepEqual(
+  validateP9ReadOnlyAuthority(acceptedAuthority, {
+    expectedEntryProofState: true,
+    expectedPostCutoverProofState: true,
+  }),
+  [],
+);
+assert.equal(
+  p9ReadOnlyAuthorityChanged(acceptedAuthority, pinnedInactiveAuthority),
+  false,
+  'cutover proof-state booleans may transition without rebinding immutable identities',
 );
 
 for (const mutate of [
@@ -122,6 +304,19 @@ for (const mutate of [
   (copy: P9DataAuthority) => { copy.productionAuthorization!.backupReceipt.backups[0].nativeCellPayloadSha256 = '0'.repeat(64); },
   (copy: P9DataAuthority) => { copy.productionAuthorization!.entrySourceReverificationRequired = false; },
   (copy: P9DataAuthority) => { copy.productionAuthorization!.entrySourceReverificationEvidencePath = 'docs/evidence/other.md'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.runtimePrincipalDirectReaderVerificationRequired = false; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.backupRuntimeReadPermissionEvidencePath = 'docs/evidence/other.md'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.providerTargetIdentityPinningRequired = false; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.hostedVerificationEnvironmentVerificationRequired = false; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.runtimeCredentialProvenanceVerificationRequired = false; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.deployedApplicationReadPathVerificationRequired = false; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.identityPinAttestationRequired = false as true; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.identityPinStageId = 'P9' as 'P9-IDENTITY-PINS'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.identityPinEvidencePath = 'docs/evidence/rebound.md' as 'docs/evidence/P9-identity-pins.md'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.identityPinManifestPath = 'docs/evidence/rebound.json' as 'docs/evidence/P9-identity-pins-manifest.json'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.identityPinReviewPath = 'docs/reviews/rebound.json' as 'docs/reviews/P9-identity-pins.json'; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.trustedEvidencePhases = ['entry'] as unknown as ['entry', 'cutover', 'rollback', 'restored-cutover', 'finalize']; },
+  (copy: P9DataAuthority) => { copy.productionAuthorization!.legacyReceiptSchemasAccepted = true as false; },
   (copy: P9DataAuthority) => { copy.p9TestingWriteAuthorization!.reversibleBackupRequired = false; },
 ]) {
   const copy = structuredClone(authority);
@@ -141,6 +336,85 @@ for (const mutate of [
   );
 }
 
+const partialIdentityPins = structuredClone(authority);
+partialIdentityPins.productionAuthorization!.runtimePrincipalFingerprintSha256 =
+  '1'.repeat(64);
+assert.equal(hasAnyP9IdentityPin(partialIdentityPins.productionAuthorization!), true);
+assert.equal(
+  getCompleteP9IdentityPins(partialIdentityPins.productionAuthorization!),
+  null,
+);
+assert.match(
+  validateP9ReadOnlyAuthority(partialIdentityPins, {
+    expectedEntryProofState: false,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /populated together/i,
+  'a partial unreviewed identity-pin population must fail closed',
+);
+
+const malformedIdentityPins = structuredClone(pinnedInactiveAuthority);
+malformedIdentityPins.productionAuthorization!.providerTeamFingerprintSha256 =
+  'A'.repeat(64);
+assert.equal(
+  getCompleteP9IdentityPins(malformedIdentityPins.productionAuthorization!),
+  null,
+);
+assert.match(
+  validateP9ReadOnlyAuthority(malformedIdentityPins, {
+    expectedEntryProofState: false,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /null or SHA-256|populated together/i,
+  'malformed pin values must not qualify for the future attestation gate',
+);
+
+const reboundIdentityPins = structuredClone(pinnedInactiveAuthority);
+reboundIdentityPins.productionAuthorization!.providerProjectFingerprintSha256 =
+  '7'.repeat(64);
+assert.equal(
+  p9IdentityPinsChanged(
+    reboundIdentityPins.productionAuthorization!,
+    pinnedInactiveAuthority.productionAuthorization!,
+  ),
+  true,
+  'a later complete-set rebind must differ from the canonical pin candidate',
+);
+assert.equal(
+  p9IdentityPinsChanged(
+    authority.productionAuthorization!,
+    pinnedInactiveAuthority.productionAuthorization!,
+  ),
+  true,
+  'deleting every canonical pin must differ from the immutable candidate',
+);
+const partiallyDeletedIdentityPins = structuredClone(pinnedInactiveAuthority);
+partiallyDeletedIdentityPins.productionAuthorization!.providerTeamFingerprintSha256 =
+  null;
+assert.equal(
+  p9IdentityPinsChanged(
+    partiallyDeletedIdentityPins.productionAuthorization!,
+    pinnedInactiveAuthority.productionAuthorization!,
+  ),
+  true,
+);
+assert.match(
+  validateP9ReadOnlyAuthority(partiallyDeletedIdentityPins, {
+    expectedEntryProofState: false,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /populated together/i,
+  'partial deletion of an attested pin set must fail closed',
+);
+assert.match(
+  validateP9ReadOnlyAuthority(activeAuthority, {
+    expectedEntryProofState: false,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /activation-gate proof state/i,
+  'the P9-IDENTITY-PINS candidate must keep every operational proof state false',
+);
+
 const changedOwner = structuredClone(authority);
 changedOwner.productionAuthorization!.deploymentOwner = 'Different owner';
 assert.equal(p9ReadOnlyAuthorityChanged(changedOwner, authority), true);
@@ -159,7 +433,37 @@ assert.match(
     expectedEntryProofState: true,
     expectedPostCutoverProofState: false,
   }).join('\n'),
-  /entry proof state/i,
+  /activation-gate proof state/i,
+);
+
+assert.match(
+  validateP9ReadOnlyAuthority(authority, {
+    expectedEntryProofState: true,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /exact immutable runtime, backup, provider, host, environment, and credential-provenance identities/i,
+  'P9 activation must fail while immutable operational identities remain null',
+);
+
+const mismatchedBackupPrincipal = structuredClone(activeAuthority);
+mismatchedBackupPrincipal.productionAuthorization!.backupRuntimePrincipalFingerprintSha256 =
+  '7'.repeat(64);
+assert.match(
+  validateP9ReadOnlyAuthority(mismatchedBackupPrincipal, {
+    expectedEntryProofState: true,
+    expectedPostCutoverProofState: false,
+  }).join('\n'),
+  /same runtime principal/i,
+  'the exact runtime principal must also be the principal verified against both backups',
+);
+
+assert.match(
+  validateP9ReadOnlyAuthority(activeAuthority, {
+    expectedEntryProofState: true,
+    expectedPostCutoverProofState: true,
+  }).join('\n'),
+  /deployed application read-path/i,
+  'P9 verification and acceptance must fail before the deployed app-path probe passes',
 );
 
 const entryReceipt: P9EntryReceipt = {
@@ -188,7 +492,11 @@ const entryReceipt: P9EntryReceipt = {
     };
   }),
 };
-assert.deepEqual(validateP9EntryReceipt(entryReceipt), []);
+assert.notDeepEqual(
+  validateP9EntryReceipt(entryReceipt),
+  [],
+  'legacy schema-v1 entry evidence must fail closed',
+);
 const staleEntryReceipt = structuredClone(entryReceipt);
 staleEntryReceipt.sourceRevisionAfter = '9858';
 assert.notDeepEqual(validateP9EntryReceipt(staleEntryReceipt), []);
@@ -237,7 +545,11 @@ const postCutoverReceipt: P9PostCutoverReceipt = {
     return { ...tab, sourceNativeCellPayloadSha256: backup.nativeCellPayloadSha256 };
   }),
 };
-assert.deepEqual(validateP9PostCutoverReceipt(postCutoverReceipt), []);
+assert.notDeepEqual(
+  validateP9PostCutoverReceipt(postCutoverReceipt),
+  [],
+  'legacy schema-v1 post-cutover evidence must fail closed',
+);
 const deploymentRecord: P9DeploymentRecord = {
   schemaVersion: 1,
   stageId: 'P9',
@@ -269,9 +581,10 @@ const deploymentRecord: P9DeploymentRecord = {
     postCutoverReceipt.rollbackConfigurationFingerprintSha256,
   runtimeEquivalentToCandidate: true,
 };
-assert.deepEqual(
+assert.notDeepEqual(
   validateP9DeploymentRecord(deploymentRecord, postCutoverReceipt, entryReceipt),
   [],
+  'legacy schema-v1 deployment evidence must fail closed',
 );
 const unauthenticatedDeploymentRecord = structuredClone(deploymentRecord);
 unauthenticatedDeploymentRecord.providerAuthenticationVerified = false;
@@ -283,7 +596,7 @@ assert.notDeepEqual(
   ),
   [],
 );
-assert.deepEqual(
+assert.notDeepEqual(
   validateP9DeploymentGitBinding(
     postCutoverReceipt,
     postCutoverReceipt.rollbackCommit,
@@ -297,6 +610,7 @@ assert.deepEqual(
     },
   ),
   [],
+  'legacy schema-v1 Git binding must fail closed',
 );
 assert.notDeepEqual(
   validateP9DeploymentGitBinding(
@@ -323,8 +637,8 @@ assert.match(
       changedRuntimePaths: () => ['web/fixtures/p7/student-catalog.json'],
     },
   ).join('\n'),
-  /web\/fixtures\/p7\/student-catalog\.json/,
-  'a catalog fixture change after the deployed rollback probe must fail',
+  /schema-v1/,
+  'legacy evidence must fail before any claimed runtime-path proof is considered',
 );
 const mutatedPostCutoverReceipt = structuredClone(postCutoverReceipt);
 mutatedPostCutoverReceipt.productionWriteCallsObserved = 1;

@@ -31,15 +31,41 @@ STATE TO PIN BEFORE EDITING
 - Pin exact production spreadsheet
   `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`, the two authorized scholarship
   tabs/bounds, revision-9857 backups, and the exact read-only authority from build state.
-- Verify the deployed runtime identity can read the exact production spreadsheet with
-  minimum permissions, without logging credentials or changing sharing. Do not start P9
-  until that evidence path is recorded in build state.
+- Verify the exact deployed runtime principal without logging credentials. Require one
+  direct, unexpired `reader` permission—not `writer`—on the production spreadsheet and
+  prove that the authorized verifier can read both exact private backup spreadsheet
+  IDs. If the backup verifier is a different identity, stop for a separately authorized,
+  independently reviewed amendment that records that relationship. Do not change
+  sharing in this execution or start P9 while either permission gate is false.
+- Require the accepted `P9-IDENTITY-PINS` evidence, manifest, fresh independent review,
+  and direct-child attestation to populate the exact runtime/backup principal, Vercel
+  project/team, canonical student-facing Production-host, hosted-environment, and
+  credential-provenance fingerprints together. Authenticate
+  the protected `p9-production-verification` environment, approval policy,
+  environment-scoped secret provenance, and required read-only provider/API
+  capabilities. Mutable workflow inputs or secrets cannot select or prove these targets.
+  Use the Revision 7 canonical derivations: exact provider IDs as UTF-8 text, lowercase
+  hostname as UTF-8 text, exact environment name as UTF-8 text, and the complete strict
+  non-secret runtime-identity descriptor as canonical JSON, all SHA-256. The environment
+  name hash is identity binding, not protection-rule evidence.
 - Before P9 becomes active, reverify metadata-only that source revision remains `9857`
   and the two tab IDs, titles, and grid dimensions remain exact. If they do, re-read only
   the authorized bounds, rehash source and backups, and prove the source revision remains
   `9857` after those reads. Bind the runtime identity fingerprint, exact read-only OAuth
   scope, source/backup fingerprints, unchanged sharing, and zero observed writes to the
   validator-checked `docs/evidence/P9-entry.json` receipt before P9 becomes active.
+- Treat the two stored SHA-256 values as historical provenance only because their
+  original serialization was not recorded. Freshly hash canonical JSON of each exact
+  source and existing-backup `sheets[].data` payload using
+  `google-sheets-v4-griddata-canonical-json-v1`; source and backup must match and the
+  canonical source hash must remain identical through every phase.
+- Produce the entry receipt only through the dormant protected-environment
+  `.github/workflows/p9-evidence.yml` on delivered `main`. The exact receipt bytes must
+  pass GitHub OIDC artifact-attestation verification for the repository, workflow,
+  P9-baseline source digest, event, environment, and hosted-runner restriction. A
+  connected user Drive account, screenshot, syntactically valid JSON, stored secret, or
+  a successful Google read made directly by the CI runner is not deployed-application-
+  path evidence.
 - Any revision, dimension, title, ID, source-hash, backup-hash, or post-read revision
   mismatch is a stop condition. Do not widen a range or treat the existing backup as
   current; require a new directly authorized, independently reviewed amendment and
@@ -85,14 +111,34 @@ INVARIANTS
   validator-checked `docs/evidence/P9-post-cutover.json` receipt. Both structured
   receipts must be present in and hash-bound by P9's accepted candidate manifest.
 - Bind the Vercel rollback probe to `docs/evidence/P9-deployment.json`. Use an existing
-  deployed runtime commit that descends from P9's exact baseline. The final candidate
-  may add evidence/governance after that commit but may not change any runtime-affecting
-  path. The validator must prove both commit objects, exact rollback-baseline equality,
-  ancestry, and runtime equivalence. Capture distinct deployment/rollback IDs through
-  the authenticated Vercel API, require health to report the corresponding exact commit,
-  and compute distinct cutover/rollback hashes from the validator's canonical
-  non-secret configuration descriptors. Arbitrary repeated digests are invalid.
-- After the rollback-probe deployment commit, change no tracked `web/` file—including
+  rollback-safe runtime commit that descends from P9's exact baseline. Deploy that same
+  commit three times with distinct provider IDs: production-read cutover, accepted-P7
+  static-catalog rollback, and restored production-read cutover. The final candidate
+  may add evidence/governance after that runtime commit but may not change any
+  runtime-affecting path. Never roll back to the legacy P9 baseline while production
+  source configuration exists; that baseline retains write-capable surfaces.
+- Invoke the trusted workflow in five observation-only modes: entry, cutover, rollback,
+  restored-cutover, and finalize. Every run uses delivered default-branch proof code.
+  Each successor verifies the exact predecessor artifact and GitHub OIDC attestation.
+  The owner creates or switches each deployment before its corresponding phase proof;
+  the phase proof must finish health/source reconciliation before the next deployment
+  is created. Finalize only after all four phase proofs pass, and attest the exact
+  `P9-entry.json`, `P9-deployment.json`, and `P9-post-cutover.json` bytes.
+- Require the authenticated Vercel API and health to bind exact project/team
+  fingerprints already pinned by accepted authority, the canonical Production hostname,
+  target, READY state, provider Git SHA, deployment ID/host, fresh nonce, and the actual
+  shared-loader runtime descriptor. Recompute observation and config digests. Do not
+  accept arbitrary hashes, asserted booleans, or same-repository self-consistency as
+  target identity.
+- Cutover and restored-cutover health must return a nonce-bound application-read
+  observation with the exact production ID, sole read-only Sheets scope, and exact two
+  tabs/bounds/dimensions. Each digest must cover a domain-separated envelope containing
+  the fresh runner nonce and complete normalized bounded GridData—not a stored source
+  hash—and must match the trusted runner's independent computation. Return no cell
+  values. Independently hash and AST-verify the exact deployed health/public routes and
+  their one shared loader, including direct result dataflow, at the provider-reported
+  runtime commit. Static rollback must return a null application-read observation.
+- After the rollback-safe runtime commit, change no tracked `web/` file—including
   any catalog fixture imported by the API—and no tracked deployment-control path. Only
   the exact P9 evidence/governance closeout may differ before the final candidate.
 - Preserve applicant privacy and every unknown/manual-review state.
@@ -104,7 +150,9 @@ ACCEPTANCE TESTS
   reconciliation, required deterministic record sample, and rollback demonstration.
 - Prove with negative tests that the production ID cannot reach any Sheets write call,
   the production client requests read-only scope, and testing-only/admin writes cannot
-  target production.
+  target production. Discover Google mutators with the required TypeScript-AST
+  inventory and run every exact production-ID negative through the trusted secrets-free
+  proof job; require zero client constructions and zero write calls.
 - Independent fresh-context review retains no critical/high finding.
 
 INDEPENDENT REVIEW
@@ -125,11 +173,18 @@ STOP CONDITIONS
 - P8 is not exactly accepted and delivered on live origin/main.
 - Plan Revision 7 is not exactly accepted and delivered on live origin/main.
 - Exact read-only production authority, authorized-tab backups, deployed-runtime read
-  permission, reconciliation, deploy owner, or configuration-rollback prerequisites are
-  incomplete.
+  permission, direct Viewer ACL, backup readability, deployed application-read proof,
+  reconciliation, deploy owner, or configuration-rollback prerequisites are incomplete.
+- Exact Vercel project/team fingerprints and canonical Production hostname are not
+  accepted and authority-pinned, or the protected environment/secret provenance cannot
+  be authenticated.
 - Any code, credential, environment variable, route, script, or operator step could
   mutate the production spreadsheet.
-- The exact entry revision, tab/grid bounds, source/backup hashes, or unchanged
+- Any required phase artifact/attestation is missing, a phase did not complete before
+  the next deployment was created, or the trusted workflow differs from accepted
+  Revision 7.
+- The exact entry revision, tab/grid bounds, fresh canonical source/backup equality,
+  cross-phase source hash, or unchanged
   post-read revision cannot be reverified.
 - Work would expose applicant data, weaken a gate, or expand beyond exact authority.
 

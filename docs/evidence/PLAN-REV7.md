@@ -1,6 +1,6 @@
 # Plan Revision 7 Evidence — Read-Only P9 Production Cutover
 
-Status: candidate pending freeze, manifest-bound independent review, and attestation
+Status: replacement candidate pending freeze after first-candidate rejection
 Date: 2026-08-30
 Baseline commit: `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`
 Branch: `codex/plan-rev7-readonly-p9`
@@ -130,31 +130,108 @@ The source remained at revision `9857` after both copies and equality reads. Cop
 the authorized tabs created new private Drive files; it did not write or otherwise
 mutate the production source. The backups are evidence and emergency operator
 references only. Current authority does not permit restoring them into production.
+The original hash serialization was not recorded, so those two digests remain immutable
+historical provenance rather than an opaque executable algorithm. Schema-v2 proof uses
+the explicit `google-sheets-v4-griddata-canonical-json-v1` algorithm: SHA-256 of
+canonical JSON for the exact bounded `sheets[].data` GridData payload. Every trusted
+phase freshly hashes source and the existing corresponding backup, requires equality,
+and requires the canonical source hash to remain identical across phases.
 
 The deployed runtime identity has not yet been independently proved to read the exact
-production ID through the application path. `BUILD_STATE` therefore records runtime
-permission, entry source reverification, and post-cutover zero-mutation proof as false.
-P9 may not become active until `docs/evidence/P9-entry.json` passes its validator with a
-non-secret runtime-identity fingerprint, the exact read-only OAuth scope, revision
-`9857` before and after reads, exact tab/grid identities, exact source/backup native
-CellData hashes, unchanged sharing, authorized-tabs-only scope, and zero observed
-production writes. P9 may not become verified until
+production ID through the application path. The two existing backups are private and
+unshared, so the intended deployed identity also has not been proved able to perform the
+required fresh backup equality reads. The production sharing screenshot shows service
+accounts with Editor access; it does not prove that the eventual deployed identity has
+the required direct Viewer permission. Revision 7 does not change any permission or
+sharing state. `BUILD_STATE` therefore records direct-reader permission, backup-reader
+permission, application-path proof, entry source reverification, and post-cutover
+zero-mutation proof as false. P9 may not become active until those explicit stop gates
+are satisfied and `docs/evidence/P9-entry.json` passes its validator with a non-secret
+runtime-identity fingerprint, the exact read-only OAuth scope, revision `9857` before
+and after reads, exact tab/grid identities, fresh canonical source/backup CellData
+equality, unchanged sharing, authorized-tabs-only scope, and zero observed production
+writes. A connected user Drive account or a CI runner that can decrypt and use a stored
+credential is not proof that the deployed application read path works. P9 may not
+become verified until
 `docs/evidence/P9-post-cutover.json` proves the same revision/dimensions/hashes after
 deployment smoke and again after application rollback, zero production write calls,
-write-isolation tests, and exact deployed/rollback commits. Both receipt paths are
+write-isolation tests, and exact runtime/deployment binding. All receipt paths are
 immutable and the accepted P9 manifest must hash them. A third structured record,
-`docs/evidence/P9-deployment.json`, binds Vercel provider status and configuration
-fingerprint to those commits. The validator requires both Git objects to exist, rollback
-to equal P9's exact baseline, deployed to descend from rollback and precede the final
-candidate, and every runtime-affecting path to remain unchanged after the deployed
-rollback-probe commit. The guarded path set is the entire tracked `web/` tree—including
-the P7 catalog fixtures imported by the scholarship API—plus tracked deployment-control
-paths. It also requires distinct deployment/rollback IDs observed
-through the authenticated Vercel API, health observations returning the corresponding
-exact commits, and separate fingerprints recomputed from canonical non-secret cutover
-and rollback descriptors; arbitrary repeated digests fail. After merge, the governed PR delivery record must authenticate
+`docs/evidence/P9-deployment.json`, binds exact Vercel observations and actual runtime
+descriptors to one rollback-safe runtime commit deployed three times under cutover,
+static rollback, and restored-cutover configurations. That runtime commit must descend
+from P9's exact baseline, precede the final candidate, and remain byte-identical to it
+across the entire tracked `web/` tree—including P7 catalog fixtures—plus tracked
+deployment-control paths.
+
+Schema-v1 receipts and self-asserted provider JSON are permanently fail-closed. Exact
+schema-v2 receipts must pass GitHub OIDC artifact-attestation verification from the
+delivered default-branch trusted workflow. That workflow uses separate entry, cutover,
+rollback, restored-cutover, and finalize runs. Each successor verifies its predecessor;
+each deployment is observed only after creation, and each health/source phase must
+finish before the next deployment is created. Provider IDs, health identity/nonces,
+source observations, runtime configuration, TypeScript-AST writer inventory, and
+secrets-free executed negative-test results are derived and relationship-checked rather
+than accepted as hashes or booleans. Cutover and restored-cutover health must also
+return a nonce-bound application-read observation for the exact production ID,
+read-only scope, and authorized tabs/bounds. Each tab digest is computed from a domain-
+separated envelope containing the fresh runner nonce and the complete normalized
+bounded GridData payload—not from the stored source digest—and the trusted runner
+independently computes the same digest from its own read. The response exposes no cell
+values. The trusted phase additionally binds the exact deployed health route and public
+scholarship route to one statically verified shared loader at the provider-reported
+runtime commit and rejects unused-read or constant-return dataflow. Static rollback
+must return no production-read observation. After merge, the governed PR delivery record must authenticate
 the resulting Production deployment/main commit and repeat health/API/browser and
 read-only source-fingerprint smoke before program completion.
+
+The authenticated Vercel target is not yet authority-pinned. Exact project and team
+fingerprints and the canonical student-facing Production hostname remain unknown in
+Revision 7; protected-environment existence/protection and environment-scoped secret
+provenance are also operationally unverified. No mutable workflow input or secret may
+select a substitute same-repository project or deployment hostname. These facts remain
+false/null machine gates. Revision 7 predeclares the sole population path as
+`P9-IDENTITY-PINS`, using fixed evidence, manifest, and review paths. That future
+candidate must populate all seven fingerprints together from the null-pin Revision 7
+baseline, change no state except those pins, keep P9 planned and every operational proof
+flag false, and receive fresh independent acceptance plus a direct-child attestation.
+Any later pin/artifact change, deletion, re-addition, or rebind fails closed. Revision 7
+does not contact Vercel or configure a GitHub environment.
+
+The future pin derivations are explicit: project and team fingerprints are SHA-256 of
+the exact provider IDs; the canonical-host fingerprint is SHA-256 of the lowercase
+hostname; the hosted-environment fingerprint is SHA-256 of the exact
+`p9-production-verification` name; the runtime principal is canonical-JSON SHA-256 of
+the lowercased service-account email and Google project ID; and credential provenance is
+canonical-JSON SHA-256 of the complete strict non-secret runtime-identity descriptor.
+The trusted runner reads these non-null values from the exact delivered P9-baseline
+`BUILD_STATE` blob before any network call and compares every provider/runtime
+observation to them. Environment-name binding does not by itself prove approval rules or
+secret provenance; those operational properties remain separately unverified and must
+receive authenticated evidence before their proof-state flags can become true.
+
+## Current P9 entry blockers
+
+P9 remains `planned` and must return `BLOCKED` until all of the following are proved:
+
+1. the exact deployed Google service-account principal is identified without exposing
+   credentials and has one direct, unexpired `reader` permission—not `writer`—on the
+   production spreadsheet;
+2. that same authorized verifier can read both exact private backup spreadsheet IDs, or
+   a separately authorized backup-verification identity and relationship is introduced;
+3. exact non-secret runtime, backup, Vercel project/team, canonical Production-host,
+   hosted-environment, and credential-provenance fingerprints are populated together
+   in the accepted, direct-child-attested `P9-IDENTITY-PINS` record;
+4. the protected `p9-production-verification` GitHub environment, approval policy,
+   environment-scoped secret provenance, and required read-only API capabilities are
+   authenticated by the delivered workflow; and
+5. cutover/restored health proves the deployed shared-loader path read the exact source
+   bytes by matching fresh nonce-bound full-GridData digests independently computed by
+   the trusted runner, while rollback proves that path is inactive.
+
+Satisfying these gates may require Kelsey to change sharing on the source or backups or
+to supply exact provider identity facts. This Revision 7 execution is not authorized to
+make those changes, and it does not treat their absence as evidence of access.
 
 ## Revision 6 conflict and safety consequence
 
@@ -197,14 +274,66 @@ in Revision 7.
 - Deterministic record sampling, 100% review of high-risk transformations, privacy,
   unknown/manual-review preservation, health/API/browser/export smoke, independent
   review, manifest, attestation, and closeout gates remain required.
-- Rollback redeploys the prior accepted application revision/configuration and performs
-  no production spreadsheet mutation. The post-cutover structured receipt repeats the
-  exact source fingerprint after both deployment smoke and rollback proof.
+- P9 first creates one rollback-safe runtime commit with separate read-only production
+  and testing-only write configuration. Rollback deploys that same code with the
+  accepted-P7 static source configuration; it never deploys the legacy baseline while a
+  production source setting exists. The restored-cutover deployment uses the same code
+  again with the read-only production source. The post-cutover receipt repeats the exact
+  source fingerprint during all three phases and performs no production mutation.
+- Revision 7 delivers the dormant manual trusted-proof workflow, strict schema-v2
+  parser/validator, and negative tests. It does not invoke the workflow, configure its
+  protected environment, change a deployment, or start P9.
+
+## First frozen candidate rejection and remediation
+
+The first immutable candidate was
+`1c23d4fef71635c75702e638f268501318f403ec`. Its manifest SHA-256 was
+`655c9086b73d804410bed9087a4aa3d58bf395c4ea88d2107fd49ac9c751bd3`.
+Fresh-context reviewer `/root/rev7_final_review` rejected it C0/H2/M0/L0:
+
+1. receipt validators accepted 1970 timestamps and unknown fields and lacked exact
+   chronology, freshness, and baseline binding;
+2. fabricated Vercel IDs, SHA-shaped values, asserted booleans, and configuration claims
+   could pass without live/authenticated provider proof or executed writer-test
+   provenance.
+
+The rejected candidate and its manifest are not rebound or accepted. Remediation uses
+strict Zod objects at every receipt level; canonical calendar timestamps; derived
+observation/config/inventory digests; exact baseline, runtime, provider, source, and
+candidate relationships; hosted GitHub OIDC artifact attestations; and a dormant
+protected-environment workflow whose chronological phase chain queries providers
+read-only. The same reviewer must recheck the replacement frozen candidate.
+
+A later read-only preflight reported `C0/H7/M3/L0`. Revision 7 remediates the code-level
+findings by expanding fail-closed TypeScript-symbol writer discovery across the runtime
+tree, executing each exact writer probe under instrumented Google clients, binding the
+accepted P7 catalog and all trusted proof bytes from Revision 7 through the runtime and
+final candidate, enforcing cross-phase freshness, strengthening sharing fingerprints,
+and adding the nonce-bound deployed application-read observation described above.
+Operational findings are deliberately not fabricated away: direct Viewer permission,
+private-backup readability, exact provider target pinning, and hosted environment/secret
+provenance remain explicit P9 stop gates. The same preflight reviewer must recheck the
+final replacement tree before candidate freeze.
+
+The same preflight reviewer then rejected the remediated working tree `C0/H4/M1/L0`:
+the null identity pins had no immutable future population mechanism; the application
+probe could echo prior source hashes without proving shared-loader dataflow; Drive
+permission detail did not yet prove directness; composed raw REST writers could escape
+inventory; and trusted credential parsing did not match both strict runtime encodings.
+The replacement now predeclares the fixed-path, independently reviewed and direct-child-
+attested `P9-IDENTITY-PINS` slot; uses fresh full-GridData nonce challenges plus exact
+runtime file/AST/dataflow binding in every phase; requires one explicit non-inherited
+`user`/`reader` permission detail; fails closed on generic/composed network writers; and
+accepts only bounded canonical raw JSON or canonical padded standard-base64 credential
+objects. This history is not an acceptance claim. A fresh recheck of the final bytes is
+still required before freeze.
 
 ## Candidate scope
 
 Expected candidate paths before freeze:
 
+- `.github/workflows/ci.yml`
+- `.github/workflows/p9-evidence.yml`
 - `AGENTS.md`
 - `docs/BUILD_STATE.json`
 - `docs/CURRENT_HANDOFF.md`
@@ -214,7 +343,10 @@ Expected candidate paths before freeze:
 - `docs/kickoffs/P9-PRODUCTION-MIGRATION.md`
 - `web/package.json`
 - `web/scripts/p4-verification.ts`
+- `web/scripts/p9-evidence-v2.ts`
+- `web/scripts/p9-trusted-proof.ts`
 - `web/scripts/production-authority.ts`
+- `web/scripts/test-p9-evidence-v2.ts`
 - `web/scripts/test-production-authority.ts`
 - `web/scripts/validate-build-plan.ts`
 
@@ -224,52 +356,16 @@ paths after exact-candidate acceptance.
 
 ## Verification
 
-The final pre-freeze verification window was `2026-08-30T19:48:37Z` through
-`2026-08-30T19:55:06Z`:
-
-- `npm ci` completed from the locked dependency graph: 462 packages added, 463 audited,
-  and zero vulnerabilities reported.
-- `node --import tsx scripts/test-production-authority.ts` passed the exact IDs, tabs,
-  backups, immutable receipt paths, no-production-write rule, entry/post-cutover proof
-  states, and named-owner checks.
-- `node --import tsx scripts/validate-build-plan.ts` produced exactly the three expected
-  pre-attestation errors: absent `docs/evidence/PLAN-REV7-manifest.json`, absent
-  `docs/reviews/PLAN-REV7.json`, and no committed direct-child Revision 7 attestation.
-  It produced no other error.
-- `npm run typecheck` passed.
-- `npm test` passed the complete P0-P8 regression suite plus the new P9 production-
-  authority tests. P8 monitoring validation again confirmed that its schedule is
-  disabled.
-- `CI=1 NEXT_TELEMETRY_DISABLED=1 npm run build` passed in an ordinary unsandboxed
-  terminal against this exact tracked runtime tree. Next.js 16.3.3 Turbopack compiled,
-  completed TypeScript, and generated all ten routes. The build changed no tracked
-  path. The retained log is
-  `/private/tmp/plan-rev7-build-terminal-20260830T195431Z.log`, SHA-256
-  `0d5c3bc15299f17517083f927cb2eff7cd7bd6e74cb55d7418b86e54710f3829`.
-  A direct Codex-sandbox build had previously reached a local-port `EPERM` while
-  starting the Next/PostCSS worker; the normal-worker pass distinguishes that local
-  sandbox restriction from a product build failure.
-- `npm audit --audit-level=low` and
-  `npm audit --omit=dev --audit-level=low` both completed against the registry with
-  zero vulnerabilities.
-- Root `git diff --check` passed. The candidate scope was exactly the 12 paths listed
-  above, with no spreadsheet, deployment, schedule, runtime, secret, or applicant-data
-  artifact.
-- A final authenticated scoped-HTTPS fetch reproduced live `origin/main` at
-  `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`; local ancestry and diff-tree checks again
-  proved accepted P8 attestation `20eeb53c80fce4e79a689128918a12361233aa7b`
-  is the direct child of `cc69d276c85f931499a23a5abde623bda321e0c0` and adds only
-  the P8 manifest and review paths.
-
-Before this final window, fresh-context read-only preflight review found and the
-implementation resolved three high-risk contract defects: non-binding runtime proof,
-stale backup/post-cutover proof, and authority/delivery chronology. Its recheck then
-found and the implementation resolved forged deployment-commit/provenance and arbitrary
-configuration-fingerprint gaps, including coverage of the runtime-imported P7 catalog.
-The final preflight recheck reported no remaining concrete defect. This preflight is
-not the final acceptance review: after the candidate commit and manifest are frozen, a
-different fresh-context agent that did not author or edit Revision 7 must review the
-exact candidate read-only.
+Replacement-candidate verification is pending. The earlier `2026-08-30T19:48:37Z`
+through `2026-08-30T19:55:06Z` run applied only to rejected candidate `1c23d4f` and is
+not acceptance evidence for the replacement. Before freeze, record a fresh complete
+window for dependency installation, focused authority/evidence/trusted-proof tests,
+plan validation, typecheck, full tests, production build, both dependency audits, YAML
+parsing, root whitespace validation, production-write/P8-schedule static scans, and a
+fresh authenticated baseline/P8 topology check. The pre-attestation plan validator may
+report only the three expected absent-manifest, absent-review, and absent-direct-child-
+attestation errors. Then record the exact committed path set and log digests here before
+generating the replacement manifest or requesting acceptance review.
 
 ## External effects and rollback
 

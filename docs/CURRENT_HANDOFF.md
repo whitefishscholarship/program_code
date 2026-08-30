@@ -28,26 +28,69 @@ Default branch: `main`
   not simply replace that variable. It must introduce a separate read-only production
   configuration and prove the production ID cannot reach a write call; write-capable
   paths remain testing-only or disabled.
-- Production source revision `9857` remains unchanged. Two private native sheet-only
-  backups cover the exact authorized scholarship tabs: main backup
+- Production source revision `9857` was last observed unchanged during the bounded
+  pre-authority read/copy sequence; Revision 7 performs no fresh Google access, so its
+  current revision is unknown until an authorized entry check. Two private native
+  sheet-only backups were created for the exact authorized scholarship tabs: main backup
   `1_UARat1DIg9ZW2ciViVFK5gH51vk8VAr1CvNo4lLcZI` matches native CellData SHA-256
   `e67b548d3835eb0e37c78f685cbced8932771314c530682dfe781a95a9ec6551`; Unique Finds
   backup `1RIxFui5dAX7ieC_iqWdJ1IuxImWC7S_rs3N2fgUX9yw` matches
   `019e08e246d8180cdd62a75ec1ee79936b02ee5a5032e897bd2f00a947e9d2ed`.
   Backups are evidence only and may not be restored into production under current
-  authority.
-- Exact deployed-runtime read permission remains unverified and machine state records
-  it as false. Exact entry source revalidation and post-cutover zero-mutation proof are
-  also false. After Revision 7 delivery, P9 may not become active until the deployed
-  runtime read-only identity, revision `9857`, exact tab/grid bounds, source/backup
-  hashes, unchanged sharing/revision, and zero writes pass the structured
+  authority. The original hash serialization was not recorded, so those values remain
+  historical provenance. Operative schema-v2 proof freshly hashes canonical JSON of
+  each exact bounded `sheets[].data` GridData payload under
+  `google-sheets-v4-griddata-canonical-json-v1`, requires source/existing-backup
+  equality, and requires the same canonical source hash throughout every phase.
+- Exact deployed-runtime direct-reader permission remains unverified. The two private
+  backup files are unshared, so same-principal backup readability is also unverified;
+  Revision 7 does not change those permissions. Exact Vercel project/team fingerprints
+  and the canonical student-facing Production hostname are not yet authority-pinned,
+  and the protected environment/secret provenance is operationally unverified. Machine
+  state records all of these gates as false/null. Exact entry source revalidation,
+  deployed application-path proof, and post-cutover zero-mutation proof are also false.
+  The only future population path is the predeclared `P9-IDENTITY-PINS` record at its
+  fixed evidence/manifest/review paths. It must populate all seven fingerprints together
+  from this null-pin baseline, keep P9 planned and every proof flag false, and receive a
+  fresh independent accepted review plus direct-child attestation before P9 entry.
+  A connected user Drive account, stored credential, or CI-runner Google read does not
+  satisfy the application-path gate. After Revision 7 delivery, P9 may not become active
+  until the exact runtime principal has one direct, unexpired Viewer permission rather
+  than Editor, the authorized verifier can read both backups, exact provider target
+  identities are accepted and pinned, and revision `9857`, exact tab/grid bounds,
+  source/backup hashes, unchanged sharing/revision, and zero writes pass the structured
   `docs/evidence/P9-entry.json` validator. P9 may not become verified until deployment
   smoke and rollback preserve those facts in `docs/evidence/P9-post-cutover.json` and
-  `docs/evidence/P9-deployment.json` binds real baseline/deployed Git objects, ancestry,
-  distinct authenticated Vercel API observations, exact health commit identities,
-  canonical cutover/rollback configuration fingerprints, and runtime equivalence. After
+  `docs/evidence/P9-deployment.json` binds real baseline/runtime Git objects, ancestry,
+  three distinct authenticated Vercel observations of the same rollback-safe runtime
+  commit, exact health identities/nonces, actual shared-loader configuration descriptors,
+  and runtime equivalence. Exact schema-v2 receipt bytes require hosted GitHub OIDC
+  artifact attestations from the delivered default-branch trusted workflow. Its
+  observation-only entry, cutover, rollback, restored-cutover, and finalize phases form
+  a predecessor-verified chain, with each health/source proof complete before the next
+  deployment is created. Schema-v1/self-asserted evidence cannot pass. After
   merge, actual Production deployment authentication and smoke remain mandatory delivery
   gates.
+- Cutover and restored-cutover health must emit a fresh nonce-bound application-read
+  observation for the exact production ID, sole read-only Sheets scope, and exact
+  authorized tabs/bounds. Its digests cover the full normalized bounded GridData plus
+  the fresh nonce—not stored source hashes—and the trusted runner independently computes
+  and requires exact equality without exposing cell values. Each phase also binds the
+  deployed health and public routes to one shared loader with direct dataflow at the
+  exact runtime commit; static rollback must emit no application-read observation.
+  This is the deployed application proof that entry's control-plane credential check
+  cannot supply.
+- First frozen Revision 7 candidate
+  `1c23d4fef71635c75702e638f268501318f403ec` was independently rejected by
+  `/root/rev7_final_review` C0/H2/M0/L0. Its receipt validators accepted stale/unknown
+  fields without adequate chronology/baseline binding, and fabricated provider/config
+  claims could pass without authenticated proof or executed writer-test provenance. Its
+  manifest digest
+  `655c9086b73d804410bed9087a4aa3d58bf395c4ea88d2107fd49ac9c751bd3`
+  is rejected and must not be rebound. The replacement remediation adds strict nested
+  schemas, derived digests, exact chronology, default-branch OIDC provenance, actual
+  runtime descriptors, TypeScript-AST writer inventory, and secrets-free executed
+  production-ID negative-test proof. The same reviewer must recheck the new candidate.
 - This execution is Plan Revision 7 only. P9 remains planned; no application runtime,
   environment/deployment configuration, schedule, spreadsheet, form, provider, or
   applicant-data mutation is in scope. The P8 monitoring schedule remains disabled.
@@ -55,6 +98,22 @@ Default branch: `main`
   read-only acceptance, exact direct-child two-file attestation, governed PR delivery,
   and Preview/Production verification. Stop after Revision 7 is delivered; begin P9
   only in a later fresh execution from that delivered baseline.
+
+## P9 blockers requiring later owner action or authority
+
+- Identify the one service-account principal intended for the deployed app, reduce or
+  confirm its source permission as direct unexpired Viewer, and make both private backup
+  files readable to that same principal. If a different backup verifier is required,
+  record separate direct authority and review first. Codex has not changed sharing.
+- Supply and independently attest the exact non-secret Vercel project fingerprint, team
+  fingerprint, and canonical student-facing Production hostname. Revision 7 leaves
+  these null instead of trusting mutable secrets or an operator-selected deployment.
+- Authenticate that GitHub's `p9-production-verification` environment exists with the
+  required approval policy, environment-scoped secrets, and read-only API permissions.
+  Static repository review cannot prove hosted configuration.
+- Keep P9 `planned` and return `BLOCKED` until every machine gate is true. Do not run the
+  dormant workflow, query production/backups, change provider configuration, or start a
+  deployment merely to discover whether a prerequisite might pass.
 
 ## Current P8 accepted state (delivered)
 
