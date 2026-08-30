@@ -1,33 +1,93 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "stageId": "P8",
-  "interruptedReceiptSha256": "b4ff57ada34fb1cfac0608c51397430ed1738a38ec60dc64d4d59d525ad67226",
-  "resumedReceiptSha256": "053a10526db98b2ea4f15551ff7d07b95fb4ac8d899362a4d316791642aabb26",
-  "targetDenominator": 197,
-  "processedCount": 197,
-  "uniqueProcessedCount": 197,
-  "duplicateCount": 0,
-  "lostCount": 0,
-  "recoveryCompleted": true,
-  "acceptedStateReceiptBefore": "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
-  "acceptedStateReceiptAfter": "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
-  "acceptedFactsChanged": false,
-  "generatedAt": "2026-08-30T00:21:00.000Z",
+  "runId": "p8-recovery-apply",
+  "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "authenticatedReceiptChain": [
+    {
+      "receiptSha256": "7f7e97a1c58d9864ac4d453f3a8413880cebfea8f0bff4756c57fbc46ded926e",
+      "receiptMac": "9f58401b2c63b9b5b3319ed7d1eca9c425cc8d0b4cddc10f0b1f8f156eba9956",
+      "segmentIndex": 0,
+      "startCursor": 0,
+      "nextCursor": 250,
+      "processedCount": 250,
+      "remainingCount": 778,
+      "previousReceiptSha256": null,
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "220d2fed3020aa9c8bd05dadbf9610a34c746259d8c21948fa0e1d19eb6eb14c",
+      "receiptMac": "2b020d934019c81e78ee0d261f26ad3991754f8edd2b8c95b51a3db26339a3f3",
+      "segmentIndex": 1,
+      "startCursor": 250,
+      "nextCursor": 500,
+      "processedCount": 250,
+      "remainingCount": 528,
+      "previousReceiptSha256": "7f7e97a1c58d9864ac4d453f3a8413880cebfea8f0bff4756c57fbc46ded926e",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "8f5307eacd1e9d9afd01b3c6e48c38db80522e67842878c2597eea416afc2f2e",
+      "receiptMac": "0cae9aa8ddb0e8af1ec4355dd577a3205f1b68c1f03a5865971020c168cb0b5a",
+      "segmentIndex": 2,
+      "startCursor": 500,
+      "nextCursor": 750,
+      "processedCount": 250,
+      "remainingCount": 278,
+      "previousReceiptSha256": "220d2fed3020aa9c8bd05dadbf9610a34c746259d8c21948fa0e1d19eb6eb14c",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "41c08539fef1c3ccca64e65c13334526f0983a6fe2e671904f5f94b6236b815a",
+      "receiptMac": "fe17a9ab5306a496ec5a8d97b11b1eca0513408aa6f2ccea67e0840457298a6c",
+      "segmentIndex": 3,
+      "startCursor": 750,
+      "nextCursor": 1000,
+      "processedCount": 250,
+      "remainingCount": 28,
+      "previousReceiptSha256": "8f5307eacd1e9d9afd01b3c6e48c38db80522e67842878c2597eea416afc2f2e",
+      "reachedPlanEnd": false
+    },
+    {
+      "receiptSha256": "d7985705db8a258deeb85e0d0428c9f29dcd87468eb5e9fe2f73fad9b7ff20f7",
+      "receiptMac": "1e918825662dc0d7a47ead92ea5fe263bc8af79ea0f34de8183b2773c069ab66",
+      "segmentIndex": 4,
+      "startCursor": 1000,
+      "nextCursor": 1028,
+      "processedCount": 28,
+      "remainingCount": 0,
+      "previousReceiptSha256": "41c08539fef1c3ccca64e65c13334526f0983a6fe2e671904f5f94b6236b815a",
+      "reachedPlanEnd": true
+    }
+  ],
   "interrupted": {
-    "runId": "p8-partial-run",
-    "status": "failed",
-    "processedCount": 73,
-    "remainingCount": 124,
-    "nextCursor": 73,
+    "nextCursor": 250,
+    "processedCount": 250,
+    "retainedReviewIds": [
+      "p8-review-2cbe2521a0805682d5232db0"
+    ],
     "acceptedStatePublished": false,
     "reviewQueuePublished": false
   },
-  "resumed": {
-    "runId": "p8-partial-run-resume",
-    "status": "completed",
-    "startCursor": 73,
-    "processedCount": 124,
-    "remainingCount": 0,
-    "acceptedStatePublished": false
-  }
+  "incompletePublicationRejected": true,
+  "finalized": {
+    "receiptTipSha256": "d7985705db8a258deeb85e0d0428c9f29dcd87468eb5e9fe2f73fad9b7ff20f7",
+    "processedCount": 1028,
+    "uniqueProcessedCount": 1028,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "reviewIds": [
+      "p8-review-2cbe2521a0805682d5232db0"
+    ],
+    "complete": true
+  },
+  "repeatedApply": {
+    "firstQueueCount": 1,
+    "secondQueueCount": 1,
+    "stableReviewId": true,
+    "occurrenceCount": 2
+  },
+  "acceptedStateReceiptBefore": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "acceptedStateReceiptAfter": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+  "acceptedFactsChanged": false
 }

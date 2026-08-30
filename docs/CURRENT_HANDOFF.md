@@ -5,53 +5,44 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P8 verified technical candidate
+## Current P8 replacement technical candidate
 
-- P8 — Monitoring, review operations, and recovery — is implemented in isolated branch
-  `codex/p8-monitoring-recovery` from exact live baseline
-  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. It remains active/verified pending
-  complete verification and fresh independent read-only review. P9 is unavailable.
-- Live standard Git reproduced baseline `5be74c3`, whose second parent is exact P7
-  attestation `fa23a761fdf7d09156ae3d683476457c665e7092`; P7 is durably accepted and
-  delivered.
-- The monitoring denominator is the exact 197-row testing-sheet compatibility fixture
-  derived from accepted, reconciled testing-sheet revision `223`. No Google service
-  credential was present, so the two dry runs are honestly labeled pinned revision-223
-  fixture runs rather than fresh live sheet reads.
-- Both dry runs process 197/197 unique targets with zero duplicates, zero lost work,
-  matching input/result digests, zero accepted-fact mutations, zero publication, and
-  zero external notifications.
-- Six synthetic scenarios cover 404, timeout, bot block, redirect, date conflict, and
-  portal change. All six default to review and none changes accepted facts. Retry,
-  request-spacing, and freshness policies are deterministic and bounded.
-- Partial-run recovery stops after 73 targets, resumes exactly at cursor 73, and
-  reconciles all 197 targets once with the last accepted receipt unchanged. Failed runs
-  cannot publish accepted state or a review queue; successful local apply mode can
-  publish only a complete review queue and never accepted facts.
-- `docs/evidence/P8-schedule-plan.json` is disabled with activation unauthorized. No
-  live schedule, webhook, email, deployment configuration, spreadsheet write,
-  production access, public-source read, form/application interaction, provider
-  contact, paid/destructive action, history rewrite, or P9 action occurred.
-- `docs/P8-OPERATIONS.md` records the dry-run, review, freshness, bounded retry/rate,
-  recovery, and future-authorization procedure. Machine evidence is rooted at
-  `docs/evidence/P8-report.json`.
-- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` is unbound preparatory documentation only;
-  it grants no production authority. `BUILD_STATE` must not point to P9 unless a later
-  exact accepted-state candidate passes independent recheck.
-- The verified-state matrix passed from `2026-08-30T05:18:21Z` through
-  `2026-08-30T05:21:50Z`: locked install, deterministic P8 checks, plan/history
-  validation, typecheck, complete P0-P8 tests, root whitespace validation, supported
-  webpack production build fallback, and full/production dependency audits. The exact
-  Turbopack command remains runner-blocked by local-port policy after the restricted
-  Google Fonts failure; no source or configuration changed. Both audits reported zero
-  current matches.
-- Technical candidate identity, independent review, accepted-state replacement, exact
-  manifest digest, final recheck, attestation, delivery, CI, and Vercel outcomes remain
-  pending.
-- After the verification narrative was recorded, P8 checks, plan validation, typecheck,
-  the complete P0-P8 suite, and root whitespace validation passed again from
-  `2026-08-30T05:22:24Z` through `2026-08-30T05:22:48Z`. Final plan and whitespace
-  validation remain the pre-freeze guard after this documentation-only line.
+- P8 is active/verified on isolated branch `codex/p8-monitoring-recovery` from exact
+  live baseline `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. P9 is unavailable.
+- Standard authenticated Git reproduced the baseline merge and exact accepted P7
+  direct-child attestation `fa23a761fdf7d09156ae3d683476457c665e7092`.
+- Preliminary frozen candidate `b3347e75c76e490e41fe200f9245185605e385d2`
+  was independently rejected C0/H5/M1/L1 and must never be attested or delivered. It
+  collapsed the denominator to 197 rows, modeled rather than executed critical
+  controls, duplicated logical review work across runs, allowed recovered suffix
+  publication to lose prefix work, lacked an exact build pass, used unkeyed receipts,
+  and contained two whitespace defects.
+- The uncommitted replacement now keeps 1,028 distinct targets: 217 P7 sources, 213 P5
+  source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
+  review items, and two P6 review items. Only the 50 accepted public read-only routes
+  are probe-eligible; 163 manual routes and every application URL remain no-fetch.
+- Two replacement dry runs each execute all 1,028 targets in five authenticated
+  segments with zero duplicates/loss, matching semantic results, 50 executed spacing
+  delays, 1,028 freshness evaluations, and no accepted-fact mutation or publication.
+- Six required failure simulations enter review. Bounded retries/backoff execute, stale
+  and future observations fail freshness, and missing observations cannot silently
+  default unchanged.
+- Each receipt is append-only, HMAC-authenticated, and linked to the prior segment. The
+  recovery simulation retains a first-segment review item, rejects incomplete
+  publication, reconciles all 1,028 targets, and uses stable cross-run review upsert.
+- The schedule plan remains disabled and activation unauthorized. The guarded driver
+  accepts only explicit dry-run mode and was not invoked. No live source, spreadsheet,
+  form, provider, notification, deployment configuration, production system, or P9
+  action occurred.
+- `docs/evidence/P8.md`, `docs/evidence/P8-report.json`, and
+  `docs/P8-OPERATIONS.md` are the replacement evidence and runbook. Locked install,
+  focused P8 checks, plan validation, typecheck, the full P0-P8 suite, exact normal-
+  worker Turbopack production build, full/production audits, and both working/range
+  whitespace checks passed by `2026-08-30T06:02:21Z`. Replacement freeze,
+  same-reviewer recheck, accepted-state transition, final recheck, manifest,
+  attestation, and governed delivery remain pending.
+- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` remains unbound preparatory documentation.
+  It grants no production authority and must not be used in this P8 session.
 
 ## Historical P7 accepted-state candidate (delivered)
 

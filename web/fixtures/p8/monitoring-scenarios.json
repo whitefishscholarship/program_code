@@ -1,39 +1,22 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "stageId": "P8",
+  "acceptedObservedAt": "2026-08-29T21:25:30.000Z",
   "testingSheet": {
     "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
     "sheetName": "Master Database",
     "acceptedRevisionId": "223",
-    "sourceFixture": "web/fixtures/p7/legacy-api-data.json",
-    "expectedRows": 197,
     "liveReadPerformed": false
   },
-  "policy": {
-    "maxTargetsPerRun": 250,
-    "maxAttemptsPerTarget": 3,
-    "baseBackoffMs": 250,
-    "maximumBackoffMs": 1000,
-    "minimumRequestSpacingMs": 100
-  },
   "dryRuns": [
-    { "runId": "p8-testing-sheet-dry-run-001", "observedAt": "2026-08-30T00:00:00.000Z" },
-    { "runId": "p8-testing-sheet-dry-run-002", "observedAt": "2026-08-30T00:01:00.000Z" }
+    { "runId": "p8-dry-run-1", "observedAt": "2026-08-30T00:00:00.000Z" },
+    { "runId": "p8-dry-run-2", "observedAt": "2026-08-30T00:05:00.000Z" }
   ],
-  "failureScenarios": [
-    { "id": "simulated-404", "targetIndex": 0, "kind": "not_found", "expectedDisposition": "review_dead_link" },
-    { "id": "simulated-timeout", "targetIndex": 1, "kind": "timeout", "expectedDisposition": "review_inconclusive" },
-    { "id": "simulated-bot-block", "targetIndex": 2, "kind": "bot_block", "expectedDisposition": "review_inconclusive" },
-    { "id": "simulated-redirect", "targetIndex": 3, "kind": "redirect", "expectedDisposition": "review_redirect" },
-    { "id": "simulated-date-conflict", "targetIndex": 4, "kind": "date_conflict", "expectedDisposition": "review_date_conflict" },
-    { "id": "simulated-portal-change", "targetIndex": 5, "kind": "portal_change", "expectedDisposition": "review_portal_change" }
-  ],
+  "failureObservedAt": "2026-08-30T00:10:00.000Z",
   "partialRecovery": {
-    "runId": "p8-partial-run",
-    "resumeRunId": "p8-partial-run-resume",
-    "observedAt": "2026-08-30T00:02:00.000Z",
-    "resumeObservedAt": "2026-08-30T00:03:00.000Z",
-    "stopAfter": 73
+    "runId": "p8-recovery-apply",
+    "observedAt": "2026-08-30T00:20:00.000Z",
+    "stopAfter": 250
   },
-  "limitations": "These are deterministic, offline dry runs against the accepted testing-sheet revision-223 compatibility fixture. They prove bounded monitoring behavior and idempotence, not current live sheet or public-source state."
+  "limitations": "All observations are accepted-revision or synthetic fixtures. They prove control execution and reconciliation, not that any public scholarship fact is current. No live source, spreadsheet, form, applicant, notification, schedule, or production system was accessed."
 }

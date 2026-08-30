@@ -1,98 +1,167 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "stageId": "P8",
-  "generatedAt": "2026-08-30T00:20:00.000Z",
   "sourceMode": "synthetic_failure_fixture",
   "livePublicSourceObservations": 0,
-  "retryPolicy": {
-    "maxTargetsPerRun": 250,
-    "maxAttemptsPerTarget": 3,
-    "baseBackoffMs": 250,
-    "maximumBackoffMs": 1000,
-    "minimumRequestSpacingMs": 100,
-    "deterministicRetryDelaysMs": [
-      250,
-      500
-    ]
+  "run": {
+    "schemaVersion": 2,
+    "stageId": "P8",
+    "runId": "p8-failure-simulations",
+    "mode": "dry_run",
+    "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+    "receiptTipSha256": "a185fad07fdd05f418aa06e65035a77c926f556e1c1cf88b779836cf62c89d4d",
+    "receiptCount": 5,
+    "receipts": [
+      {
+        "receiptSha256": "da852e7da98211994da925519ad0b94a4870dcc8caf051288d1724348439a6d8",
+        "receiptMac": "3686217b25a26054389dc1730fbb52e2a4fe517a05c61c3757d176c89fdd71d4",
+        "segmentIndex": 0,
+        "startCursor": 0,
+        "nextCursor": 250,
+        "processedCount": 250,
+        "remainingCount": 778,
+        "previousReceiptSha256": null,
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "ff1c97b1e0db6ddbe671e4d4ab92db0b68e6f57ea582e44f6dc8af90a87c73c3",
+        "receiptMac": "13103b1b285cf5b29d8b650db593fb7fc2108cc868f685c4242118416b3ab6ad",
+        "segmentIndex": 1,
+        "startCursor": 250,
+        "nextCursor": 500,
+        "processedCount": 250,
+        "remainingCount": 528,
+        "previousReceiptSha256": "da852e7da98211994da925519ad0b94a4870dcc8caf051288d1724348439a6d8",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "1a7d67ecd7ba2f11463ac386dd1b0124c8947289fa76b23d66f30d0a4d91b9bb",
+        "receiptMac": "18d6b5fe9a58fc7650c2315f2b19f2beef7996095b7074bb8b8eddbf818e903a",
+        "segmentIndex": 2,
+        "startCursor": 500,
+        "nextCursor": 750,
+        "processedCount": 250,
+        "remainingCount": 278,
+        "previousReceiptSha256": "ff1c97b1e0db6ddbe671e4d4ab92db0b68e6f57ea582e44f6dc8af90a87c73c3",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "2d3d75c54184452e84c07037e65939c146b57e2899f43ecede056e45cd9e853d",
+        "receiptMac": "542f1ba53661c40530f37e8045fd12e1e92203f51986577b9106f573a479b83c",
+        "segmentIndex": 3,
+        "startCursor": 750,
+        "nextCursor": 1000,
+        "processedCount": 250,
+        "remainingCount": 28,
+        "previousReceiptSha256": "1a7d67ecd7ba2f11463ac386dd1b0124c8947289fa76b23d66f30d0a4d91b9bb",
+        "reachedPlanEnd": false
+      },
+      {
+        "receiptSha256": "a185fad07fdd05f418aa06e65035a77c926f556e1c1cf88b779836cf62c89d4d",
+        "receiptMac": "6e18b92c0b93304a9862d0a993b6f31be428188a0e580c42279b173693b3bafe",
+        "segmentIndex": 4,
+        "startCursor": 1000,
+        "nextCursor": 1028,
+        "processedCount": 28,
+        "remainingCount": 0,
+        "previousReceiptSha256": "2d3d75c54184452e84c07037e65939c146b57e2899f43ecede056e45cd9e853d",
+        "reachedPlanEnd": true
+      }
+    ],
+    "targetDenominator": 1028,
+    "processedCount": 1028,
+    "uniqueProcessedCount": 1028,
+    "duplicateCount": 0,
+    "lostCount": 0,
+    "reviewCount": 6,
+    "resultDigest": "3684da4c36beefce66d9478a50dac3550237bb069189478296b97e229e518fc4",
+    "executedControls": {
+      "publicProbeCalls": 52,
+      "noFetchCalls": 978,
+      "spacingSleeps": 50,
+      "retrySleeps": 2,
+      "freshnessEvaluations": 1028
+    },
+    "complete": true,
+    "acceptedFactsChanged": false,
+    "acceptedStatePublished": false,
+    "reviewQueuePublished": false
   },
   "scenarios": [
     {
-      "id": "simulated-404",
-      "observationKind": "not_found",
-      "targetId": "p8-target-e11979e669b5fa7b5e47",
+      "targetId": "p8-source_route-3f7ce53d493039b889be8be5",
+      "kind": "source_route",
       "disposition": "review_dead_link",
       "severity": "high",
       "requiresReview": true,
-      "acceptedFactMutation": false,
       "attempts": 1,
       "retryDelaysMs": [],
-      "receiptSha256": "6f82c1769a8465635ad26fefda436983b77d4494174fe402ad7fe8e50a2ef896"
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
     },
     {
-      "id": "simulated-timeout",
-      "observationKind": "timeout",
-      "targetId": "p8-target-2256c9b6f1e2f9ee352e",
+      "targetId": "p8-source_route-0700ce5c154f8df864ec0dd4",
+      "kind": "source_route",
       "disposition": "review_inconclusive",
       "severity": "high",
       "requiresReview": true,
-      "acceptedFactMutation": false,
       "attempts": 3,
       "retryDelaysMs": [
         250,
         500
       ],
-      "receiptSha256": "56e46def46fdf5d6395e644e4a01843eea114e178b41566bcbeadd9216386045"
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
     },
     {
-      "id": "simulated-bot-block",
-      "observationKind": "bot_block",
-      "targetId": "p8-target-6a937b4964524ebdac78",
+      "targetId": "p8-source_route-44efabd566851dcf6f030803",
+      "kind": "source_route",
       "disposition": "review_inconclusive",
       "severity": "high",
       "requiresReview": true,
-      "acceptedFactMutation": false,
-      "attempts": 3,
-      "retryDelaysMs": [
-        250,
-        500
-      ],
-      "receiptSha256": "9f0e7021ecc8963a9285c1b29190af92f9df2224b7f21964d95219c362368345"
+      "attempts": 1,
+      "retryDelaysMs": [],
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
     },
     {
-      "id": "simulated-redirect",
-      "observationKind": "redirect",
-      "targetId": "p8-target-6047f8b390b6893b7c76",
+      "targetId": "p8-source_route-eb7a48f553875f5072ccf232",
+      "kind": "source_route",
       "disposition": "review_redirect",
       "severity": "medium",
       "requiresReview": true,
-      "acceptedFactMutation": false,
       "attempts": 1,
       "retryDelaysMs": [],
-      "receiptSha256": "4cdb3717d036a79b4d8bf06602748a3cb60bfad6c65fac1ac31158a8cb6eb91f"
+      "requestSpacingMs": 100,
+      "fresh": true,
+      "acceptedFactMutation": false
     },
     {
-      "id": "simulated-date-conflict",
-      "observationKind": "date_conflict",
-      "targetId": "p8-target-0fc6c7b24985115e4da1",
+      "targetId": "p8-award_cycle-488959cd9e480640279817af",
+      "kind": "award_cycle",
       "disposition": "review_date_conflict",
       "severity": "high",
       "requiresReview": true,
-      "acceptedFactMutation": false,
       "attempts": 1,
       "retryDelaysMs": [],
-      "receiptSha256": "594779d587db7d7959f3b3353f2c8fcaf9b323074d262dfe6c07d7a60e19bd77"
+      "requestSpacingMs": 0,
+      "fresh": true,
+      "acceptedFactMutation": false
     },
     {
-      "id": "simulated-portal-change",
-      "observationKind": "portal_change",
-      "targetId": "p8-target-b2f3c56d82477379c4c7",
+      "targetId": "p8-portal-40e0c71f8d411476f44ad470",
+      "kind": "portal",
       "disposition": "review_portal_change",
       "severity": "medium",
       "requiresReview": true,
-      "acceptedFactMutation": false,
       "attempts": 1,
       "retryDelaysMs": [],
-      "receiptSha256": "f89f3f52952c72ac8d82bcaf8d5d61cdf79e13ef62b86e2c148bb35aad3d8661"
+      "requestSpacingMs": 0,
+      "fresh": true,
+      "acceptedFactMutation": false
     }
   ],
   "counts": {
@@ -100,5 +169,5 @@
     "reviewRequired": 6,
     "acceptedFactMutations": 0
   },
-  "limitations": "Synthetic outcomes exercise control behavior only and are not evidence about any public scholarship source."
+  "limitations": "Synthetic outcomes exercise the executed control path only and are not public-source observations."
 }

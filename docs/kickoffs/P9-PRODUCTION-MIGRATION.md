@@ -78,4 +78,3 @@ END-OF-STAGE OUTPUT
 - One PASS/BLOCKED/FAIL status, exact migration/deployment/rollback evidence, review,
   PR/merge commit, remaining unknowns, and program closeout state.
 ```
-

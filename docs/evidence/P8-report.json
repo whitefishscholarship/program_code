@@ -1,27 +1,56 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "stageId": "P8",
-  "generatedAt": "2026-08-30T00:23:00.000Z",
-  "testingSheet": {
+  "generatedAt": "2026-08-30T00:31:00.000Z",
+  "source": {
     "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
     "sheetName": "Master Database",
     "acceptedRevisionId": "223",
-    "sourceFixture": "web/fixtures/p7/legacy-api-data.json",
-    "expectedRows": 197,
-    "liveReadPerformed": false
+    "liveReadPerformed": false,
+    "mode": "accepted_revision_fixture"
   },
-  "targetDenominator": 197,
-  "inputDigest": "4607c366283213781490a15a84fac3da64ab75dfea78ddb0e599fea511055ef9",
+  "plan": {
+    "planDigest": "2a8a467ec26ea0e387cc59d965ecfbfee34ebf0ec1bcc6f17ff98132ca96da15",
+    "catalogRevision": "018ffaa745e2e923f5dff0a677eea036c4a73fe8e13300c95b3c23b6a54627df",
+    "counts": {
+      "sources": 217,
+      "sourceRoutes": 213,
+      "publicReadOnlySources": 50,
+      "manualNoFetchSources": 163,
+      "offlineSources": 7,
+      "awards": 192,
+      "cycles": 192,
+      "portals": 21,
+      "applicationGroups": 4,
+      "p5ReviewItems": 187,
+      "p6ReviewItems": 2,
+      "targetDenominator": 1028
+    },
+    "pinnedSurfaces": {
+      "docs/evidence/P3-acquisition.json": "e5faf3f932672bd0a4fa29999f8b8db997d0386f7d7a5c785429e361559e555a",
+      "docs/evidence/P3-completeness.json": "9abae4851738d67f9f022a00306bd6e4a1b49814cc2599bd60501a85463666ec",
+      "docs/evidence/P4-field-evidence.json": "5afb7757355faba8a35528b974e076bb32962f5c6e5c0014a487ecb29a82eda9",
+      "docs/evidence/P4-reviews.json": "dfd83689c4d1125f365f4d643115116cda8740c8336b0335f9c405edfa59f756",
+      "docs/evidence/P5-applied-change-receipt.json": "17da5eec7dc062bc9a2d06212cb516a4e1e252df27e97c50f0f034270bac29f9",
+      "docs/evidence/P5-postwrite-reconciliation.json": "cc55838e36b82b51edd5b75f3b0ad4960dca71413c3365f3a76c427f8b0cf1a9",
+      "docs/evidence/P5-source-queue.json": "8e05c4575b162a9e9b9c74c4dda646f717ab7eae6fc0df6ca11e0567b2317ba6",
+      "docs/evidence/P5-public-probes.json": "7be67a3182b20127555f973d8eea2c778a3a3cb184b63fad5314a4dddb60da08",
+      "docs/evidence/P5-manual-review.json": "3613b51d41930a06178b474f33cbd18385504ca0450763fb4643dab7b11fe58c",
+      "docs/evidence/P6-child-records.json": "d7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc",
+      "web/fixtures/p7/student-catalog.json": "35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841",
+      "docs/evidence/P7-manifest.json": "e384db7fda28dfbb651d78f0d56c3bf377f7af677c67fdd3cae06fef46975df3"
+    }
+  },
   "consecutiveDryRuns": {
-    "receipts": [
-      "db1628798d07605fd8d30dc92b5558035fe63ab9d64ad64739239e43cd4f8d12",
-      "19f1470aff8559f3b15b13b0ec7577e3426d649578d5cec054061e772bb2b679"
-    ],
     "completed": 2,
-    "eachProcessed": 197,
+    "eachProcessed": 1028,
+    "receiptTips": [
+      "c397a0141eb7c3f6b0bfcbacffb36776b892e5ddf398fa3b1371d8a7b837332d",
+      "765e1ea334b097e9114a5210107b54992e22493d345a155cc42700365d0d78dc"
+    ],
+    "resultDigestMatch": true,
     "duplicateCount": 0,
     "lostCount": 0,
-    "resultDigestMatch": true,
     "acceptedFactMutations": 0
   },
   "failureSimulations": {
@@ -30,13 +59,15 @@
     "acceptedFactMutations": 0
   },
   "recovery": {
-    "recoveryCompleted": true,
+    "complete": true,
     "duplicateCount": 0,
     "lostCount": 0,
-    "acceptedFactsChanged": false
+    "prefixReviewRetained": true,
+    "incompletePublicationRejected": true,
+    "repeatedApplyIdempotent": true
   },
   "scheduleEnabled": false,
   "externalNotificationsSent": 0,
-  "limitations": "These are deterministic, offline dry runs against the accepted testing-sheet revision-223 compatibility fixture. They prove bounded monitoring behavior and idempotence, not current live sheet or public-source state.",
-  "reportSha256": "ea00b978a49ccd46e286119b9e7acab90674b77710792016dc984e34029cc0f2"
+  "limitations": "All observations are accepted-revision or synthetic fixtures. They prove control execution and reconciliation, not that any public scholarship fact is current. No live source, spreadsheet, form, applicant, notification, schedule, or production system was accessed.",
+  "reportSha256": "68fd3f74f29125b92cabd8523ab505efa98d19a0f16b95cdb3b806f38adf416d"
 }
