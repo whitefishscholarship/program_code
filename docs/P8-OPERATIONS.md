@@ -70,6 +70,12 @@ A 404/410 is a dead-link review observation, not proof an award closed. Timeouts
 blocks, redirects, date conflicts, portal changes, and generic fingerprint changes all
 remain explicit review work.
 
+Plan construction is bound to exact accepted P3-P7 semantic input digests, testing-
+sheet identity/revisions, observation time, and pinned file digests. The returned plan,
+target array, targets, counts, and pins are deeply frozen and privately registered.
+Execution and finalization reject structural lookalikes, altered accepted inputs, and
+post-build mutation before any probe or receipt read.
+
 ## Receipt and recovery procedure
 
 Each segment is stored append-only and bound with both a SHA-256 content identity and

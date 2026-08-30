@@ -51,6 +51,11 @@ assert.equal(new Set(plan.targets.map((item) => item.targetId)).size, 1028);
 assert.equal(plan.targets.filter((item) => item.url !== null && item.route !== 'public_read_only_probe').length, 163, 'manual/application-like URLs must remain no-fetch');
 assert.equal(plan.targets.filter((item) => item.route === 'public_read_only_probe').every((item) => item.kind === 'source_route'), true);
 assert.equal(Object.keys(plan.pinnedSurfaces).length, 12, 'P3-P7 trust surfaces must be pinned');
+assert(Object.isFrozen(plan) && Object.isFrozen(plan.targets) && Object.isFrozen(plan.targets[0]) && Object.isFrozen(plan.counts) && Object.isFrozen(plan.pinnedSurfaces), 'canonical monitoring plan must be deeply immutable');
+assert.throws(() => { (plan.targets as MonitoringTarget[])[0] = { ...plan.targets[0], targetId: 'forged-out-of-contract-target' }; }, TypeError, 'post-build mutation of a canonical plan must fail');
+const alteredCatalog = structuredClone(catalogJson);
+alteredCatalog.sources[0].title = 'forged source';
+assert.throws(() => buildMonitoringPlan({ catalog: alteredCatalog as Parameters<typeof buildMonitoringPlan>[0]['catalog'], sourceQueue: sourceQueueJson as Parameters<typeof buildMonitoringPlan>[0]['sourceQueue'], publicProbes: publicProbesJson, p5Review: p5ReviewJson as Parameters<typeof buildMonitoringPlan>[0]['p5Review'], p6ReviewItems: p6ChildrenJson.reviewItems, acceptedSpreadsheetRevisionId: '223', acceptedObservedAt: '2026-08-29T21:25:30.000Z', pinnedSurfaces: plan.pinnedSurfaces }), /Accepted P3-P7 monitoring inputs changed/, 'plan registration must reject altered accepted inputs');
 assert.equal(evaluateFreshness('2026-08-30T00:00:00Z', '2026-08-30T00:00:00Z', 1), true);
 assert.equal(evaluateFreshness('2026-08-31T00:00:00Z', '2026-08-30T00:00:00Z', 1), false, 'future evidence cannot be fresh');
 assert.equal(evaluateFreshness('2026-08-20T00:00:00Z', '2026-08-30T00:00:00Z', 1), false, 'stale evidence cannot be fresh');
@@ -106,6 +111,14 @@ assert.equal(executed.env.sleeps.filter((item) => item === MINIMUM_REQUEST_SPACI
 const fakeStore = { read: () => null };
 assert.throws(() => finalizeMonitoringRun(plan, fakeStore, '0'.repeat(64)), /registered authenticated receipt store/, 'custom structural stores must not mint finalizations');
 await assert.rejects(() => executeMonitoringSegment({ plan, store: fakeStore, runId: 'fake-store', mode: 'dry_run', startCursor: 0, previousReceiptSha256: null, adapter: adapter('2026-08-30T00:00:00.000Z'), environment: environment('2026-08-30T00:00:00.000Z') }), /registered authenticated receipt store/, 'custom structural stores must not execute probes or commit receipts');
+const structuralPlan = structuredClone(plan) as MonitoringPlan;
+structuralPlan.targets[0] = { ...structuralPlan.targets[0], targetId: 'forged-out-of-contract-target' };
+const structuralPlanStore = store();
+let structuralPlanProbes = 0;
+const structuralPlanAdapter: ProbeAdapter = { probe: async (target) => { structuralPlanProbes += 1; return acceptedNonPublicObservation(target); } };
+await assert.rejects(() => executeMonitoringSegment({ plan: structuralPlan, store: structuralPlanStore.receiptStore, runId: 'forged-plan', mode: 'apply_review_queue', startCursor: 0, previousReceiptSha256: null, adapter: structuralPlanAdapter, environment: environment('2026-08-30T00:00:00.000Z') }), /immutable registered canonical plan/, 'structural plans must not execute through a registered store');
+assert.equal(structuralPlanProbes, 0, 'forged plan rejection must happen before probes');
+assert.throws(() => finalizeMonitoringRun(structuralPlan, structuralPlanStore.receiptStore, '0'.repeat(64)), /immutable registered canonical plan/, 'structural plans must not mint publication-authorized finalizations');
 
 const timeoutTarget = plan.targets.find((item) => item.route === 'public_read_only_probe')!;
 const timeout = await complete({ runId: 'test-retry', mode: 'dry_run', observedAt: '2026-08-30T00:00:00.000Z', overrides: new Map([[timeoutTarget.targetId, async () => { throw new Error('ETIMEDOUT'); }]]) });

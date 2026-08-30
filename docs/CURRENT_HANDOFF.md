@@ -27,7 +27,13 @@ Default branch: `main`
   publish a queue. The current remediation requires the private registered store for
   both execution and finalization, rechecks the segment maximum during replay, and adds
   direct negative tests.
-- The uncommitted replacement now keeps 1,028 distinct targets: 217 P7 sources, 213 P5
+- Replacement `7d87c589a699423513b0fbbcd1489a01da0e2c52` was independently
+  rejected C0/H1/M0/L0 and must never be attested or delivered. Both a mutated genuine
+  plan and a fabricated structural plan could execute and publish. The current
+  remediation exact-binds accepted semantic and file digests, deeply freezes and
+  privately registers the plan, and rejects unregistered or changed plans before probe
+  execution or receipt reads.
+- The current replacement keeps 1,028 distinct targets: 217 P7 sources, 213 P5
   source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
   review items, and two P6 review items. Only the 50 accepted public read-only routes
   are probe-eligible; 163 manual routes and every application URL remain no-fetch.
@@ -63,6 +69,11 @@ Default branch: `main`
   plan validation, typecheck, full P0-P8 suite, exact Turbopack build, both zero-match
   audits, and both whitespace checks passed by `2026-08-30T06:22:56Z`. The next action
   remains a new immutable freeze and same-reviewer recheck.
+- After the `7d87c589` rejection, the exact-input and structural-plan negatives,
+  deterministic P8 evidence, plan validation, typecheck, full P0-P8 suite, exact
+  Turbopack build, both zero-match audits, and both whitespace checks passed by
+  `2026-08-30T06:34:36Z`. The next action remains a new immutable freeze and
+  same-reviewer recheck.
 - `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` remains unbound preparatory documentation.
   It grants no production authority and must not be used in this P8 session.
 

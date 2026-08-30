@@ -159,6 +159,22 @@ export interface MonitoringReceiptStore {
 
 const storeState = new WeakMap<MonitoringReceiptStore, { directory: string; key: Buffer }>();
 const authenticatedFinalizations = new WeakMap<FinalizedRun, { digest: string; targetIds: Set<string> }>();
+const registeredPlans = new WeakMap<MonitoringPlan, string>();
+
+const ACCEPTED_PINNED_SURFACES = {
+  'docs/evidence/P3-acquisition.json': 'e5faf3f932672bd0a4fa29999f8b8db997d0386f7d7a5c785429e361559e555a',
+  'docs/evidence/P3-completeness.json': '9abae4851738d67f9f022a00306bd6e4a1b49814cc2599bd60501a85463666ec',
+  'docs/evidence/P4-field-evidence.json': '5afb7757355faba8a35528b974e076bb32962f5c6e5c0014a487ecb29a82eda9',
+  'docs/evidence/P4-reviews.json': 'dfd83689c4d1125f365f4d643115116cda8740c8336b0335f9c405edfa59f756',
+  'docs/evidence/P5-applied-change-receipt.json': '17da5eec7dc062bc9a2d06212cb516a4e1e252df27e97c50f0f034270bac29f9',
+  'docs/evidence/P5-postwrite-reconciliation.json': 'cc55838e36b82b51edd5b75f3b0ad4960dca71413c3365f3a76c427f8b0cf1a9',
+  'docs/evidence/P5-source-queue.json': '8e05c4575b162a9e9b9c74c4dda646f717ab7eae6fc0df6ca11e0567b2317ba6',
+  'docs/evidence/P5-public-probes.json': '7be67a3182b20127555f973d8eea2c778a3a3cb184b63fad5314a4dddb60da08',
+  'docs/evidence/P5-manual-review.json': '3613b51d41930a06178b474f33cbd18385504ca0450763fb4643dab7b11fe58c',
+  'docs/evidence/P6-child-records.json': 'd7ae32194b75e27ba796365b7d8b6140b562f34cecbd60adcbf375e7f3cf13cc',
+  'web/fixtures/p7/student-catalog.json': '35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841',
+  'docs/evidence/P7-manifest.json': 'e384db7fda28dfbb651d78f0d56c3bf377f7af677c67fdd3cae06fef46975df3',
+} as const;
 
 export function sha256(value: string | Buffer): string {
   return createHash('sha256').update(value).digest('hex');
@@ -177,6 +193,20 @@ function fingerprint(value: unknown): string {
   return sha256(canonicalJson(value));
 }
 
+function deepFreeze<T>(value: T): T {
+  if (value && typeof value === 'object' && !Object.isFrozen(value)) {
+    for (const child of Object.values(value as Record<string, unknown>)) deepFreeze(child);
+    Object.freeze(value);
+  }
+  return value;
+}
+
+function assertRegisteredPlan(plan: MonitoringPlan): void {
+  const registeredDigest = registeredPlans.get(plan);
+  const { planDigest, ...body } = plan;
+  if (!registeredDigest || planDigest !== fingerprint(body) || registeredDigest !== fingerprint(plan)) throw new Error('Monitoring requires an immutable registered canonical plan');
+}
+
 function makeTargetId(kind: TargetKind, subjectId: string): string {
   return `p8-${kind}-${sha256(`${kind}:${subjectId}`).slice(0, 24)}`;
 }
@@ -191,7 +221,11 @@ export function buildMonitoringPlan(input: {
   acceptedObservedAt: string;
   pinnedSurfaces: Record<string, string>;
 }): MonitoringPlan {
-  if (Number.isNaN(Date.parse(input.acceptedObservedAt))) throw new Error('Accepted observation time is invalid');
+  if (input.acceptedObservedAt !== '2026-08-29T21:25:30.000Z') throw new Error('Accepted observation time changed');
+  if (input.acceptedSpreadsheetRevisionId !== '223' || input.sourceQueue.sourceSpreadsheetId !== '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4' || input.sourceQueue.sourceRevisionId !== '222' || input.sourceQueue.sheetName !== 'Master Database') throw new Error('Accepted testing-sheet identity changed');
+  const acceptedInputDigests = { catalog: '4140ce6493dbd94d59dfc0457edf15fb126d045d925b8ea8f8600152e2df60c1', sourceQueue: 'c35b702c3b6dfed8f42358339c45500eaa66d57b4dadc182be9a3c7c4b5c791f', publicProbes: '59776faa0c7668b3ac6ab478ef3e3e4b8dbd0796752ba85c9f157f8fedac619b', p5Review: '3f040adc068e5df0327f5c847471c0510f469b0183d83e5e30ff36bc951bb315', p6ReviewItems: '6acc7dad283437ca4e2c8be71ebf259fc2d013a44614222df320480ed47b6ef1' };
+  const suppliedInputDigests = { catalog: fingerprint(input.catalog), sourceQueue: fingerprint(input.sourceQueue), publicProbes: fingerprint(input.publicProbes), p5Review: fingerprint(input.p5Review), p6ReviewItems: fingerprint(input.p6ReviewItems) };
+  if (canonicalJson(suppliedInputDigests) !== canonicalJson(acceptedInputDigests) || canonicalJson(input.pinnedSurfaces) !== canonicalJson(ACCEPTED_PINNED_SURFACES)) throw new Error('Accepted P3-P7 monitoring inputs changed');
   if (input.catalog.sources.length !== 217 || input.catalog.awards.length !== 192 || input.catalog.portals.length !== 21 || input.catalog.applicationGroups.length !== 4) throw new Error('Accepted P7 catalog denominator changed');
   if (input.sourceQueue.entries.length !== 213) throw new Error('Accepted P5 source denominator changed');
   if (input.publicProbes.receipts.length !== 50) throw new Error('Accepted P5 public-probe denominator changed');
@@ -224,7 +258,9 @@ export function buildMonitoringPlan(input: {
   if (counts.publicReadOnlySources !== 50 || counts.manualNoFetchSources !== 163 || counts.offlineSources !== 7 || counts.targetDenominator !== 1028) throw new Error(`Monitoring route or target denominator changed: ${canonicalJson(counts)}`);
   if (!/^\d+$/.test(input.acceptedSpreadsheetRevisionId)) throw new Error('Accepted spreadsheet revision identity is invalid');
   const body = { schemaVersion: MONITORING_SCHEMA_VERSION, stageId: 'P8' as const, spreadsheetId: input.sourceQueue.sourceSpreadsheetId, sheetName: input.sourceQueue.sheetName, spreadsheetRevisionId: input.acceptedSpreadsheetRevisionId, catalogRevision: input.catalog.catalogRevision, counts, pinnedSurfaces: input.pinnedSurfaces, targets };
-  return { ...body, planDigest: fingerprint(body) };
+  const plan = deepFreeze({ ...body, planDigest: fingerprint(body) });
+  registeredPlans.set(plan, fingerprint(plan));
+  return plan;
 }
 
 export function evaluateFreshness(observedAt: string, now: string, maximumAgeDays: number): boolean {
@@ -379,6 +415,7 @@ function validateLedger(plan: MonitoringPlan, ledger: SegmentReceipt[]): void {
 
 export async function executeMonitoringSegment(input: { plan: MonitoringPlan; store: MonitoringReceiptStore; runId: string; mode: SegmentReceiptBody['mode']; startCursor: number; previousReceiptSha256: string | null; adapter: ProbeAdapter; environment: ExecutionEnvironment; limit?: number }): Promise<SegmentReceipt> {
   const { plan } = input;
+  assertRegisteredPlan(plan);
   if (!storeState.has(input.store)) throw new Error('Monitoring execution requires a registered authenticated receipt store');
   if (!Number.isInteger(input.startCursor) || input.startCursor < 0 || input.startCursor >= plan.targets.length) throw new Error('Monitoring cursor is invalid');
   let segmentIndex = 0;
@@ -401,6 +438,7 @@ export async function executeMonitoringSegment(input: { plan: MonitoringPlan; st
 }
 
 export function finalizeMonitoringRun(plan: MonitoringPlan, store: MonitoringReceiptStore, tip: string): FinalizedRun {
+  assertRegisteredPlan(plan);
   if (!storeState.has(store)) throw new Error('Monitoring finalization requires a registered authenticated receipt store');
   const ledger = loadLedger(store, tip);
   validateLedger(plan, ledger);
