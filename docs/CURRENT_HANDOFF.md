@@ -5,7 +5,142 @@ Plan revision: 7
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current Plan Revision 7 candidate — P9 remains unstarted
+## Claude transfer checkpoint — not accepted, not attested, P9 not started
+
+- Transfer branch: `codex/plan-rev7-readonly-p9`.
+- Exact live baseline used for this work: `origin/main`
+  `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`.
+- Accepted P8 attestation in that baseline: direct-child attestation
+  `20eeb53c80fce4e79a689128918a12361233aa7b` over candidate
+  `cc69d276c85f931499a23a5abde623bda321e0c0`.
+- Rejected first Revision 7 candidate:
+  `1c23d4fef71635c75702e638f268501318f403ec`. Never attest, rebind, amend, or
+  present that commit or its rejected manifest as accepted.
+- Explicitly non-accepted remediation checkpoint:
+  `9819d2c8f0f7abdffb6febec0f511216938e370d`. This is a WIP preservation commit,
+  not a frozen candidate. No Revision 7 manifest, review record, direct-child
+  attestation, PR delivery, merge, or deployment has been completed for it.
+- The Codex execution was stopped at Kelsey's request before final preflight review and
+  full replacement-candidate verification. No Google/Drive/Vercel/GitHub-environment
+  discovery, spreadsheet access, spreadsheet write, configuration switch, workflow
+  dispatch, deployment, rollback, or P9 runtime implementation occurred during
+  Revision 7. The P8 monitoring schedule remains disabled.
+
+### Non-negotiable authority boundary
+
+- Production spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is read-only. There is no
+  authority to mutate its cells, metadata, permissions, sharing, tabs, forms, or
+  backups, including during rollback.
+- Spreadsheet writes are authorized only on testing spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` and only when the active stage
+  requires them. Revision 7 itself requires no spreadsheet write.
+- A connected Kelsey Drive account is not the deployed application's identity and is
+  not proof of runtime or backup readability.
+- Do not begin P9 or run the dormant `.github/workflows/p9-evidence.yml` workflow.
+  First deliver Revision 7, then complete the separately attested
+  `P9-IDENTITY-PINS` transition, and keep P9 `BLOCKED` until every entry gate in this
+  handoff, the canonical plan, build state, and P9 kickoff is directly proved.
+
+### What the WIP remediation contains
+
+- Strict schema-v2 entry, deployment, and post-cutover receipts with derived IDs,
+  chronology, baseline/Git ancestry, OIDC artifact provenance, provider bindings,
+  runtime configuration bindings, writer inventory, and executed write-isolation
+  evidence.
+- A dormant hosted-runner workflow with predecessor-attested entry, cutover, rollback,
+  restored-cutover, and finalize phases. Its presence is not permission to dispatch it.
+- Fail-closed production-write discovery for Google mutators and generic network
+  clients, including aliased/composed request methods and URLs.
+- Exact direct Viewer permission-detail proof, bounded raw/canonical-padded-base64
+  service-account credential parsing, and the predeclared `P9-IDENTITY-PINS` mechanism.
+- A full-GridData, fresh-nonce application-read challenge and exact runtime binding for
+  the health route, public route, and one shared production loader at the provider-
+  reported runtime commit. Rollback carries the binding but no application-read probe.
+
+### Verification actually completed on the WIP bytes
+
+At `2026-08-30T23:27:19Z`, before the WIP checkpoint commit:
+
+- `npx tsc --noEmit` — PASS.
+- `node --import tsx scripts/test-p9-evidence-v2.ts` — PASS.
+- `node --import tsx scripts/p9-trusted-proof.ts --mode=self-test` — PASS.
+- `node --import tsx scripts/test-production-authority.ts` — PASS.
+- `node --import tsx scripts/validate-build-plan.ts` — expected pre-attestation failure
+  with exactly three errors: absent `PLAN-REV7` manifest, absent `PLAN-REV7` review,
+  and absent committed direct-child manifest/review attestation.
+- `git diff --check` — PASS.
+
+The `npm run ...` wrappers can fail in the restricted Codex sandbox because the `tsx`
+CLI cannot create its IPC socket (`listen EPERM`); the identical modules above were run
+with Node's `--import tsx` path. This is an environment limitation, not a recorded pass
+for the wrappers. Locked install, the complete test suite, production build, dependency
+audits, final static scans, fresh live-origin verification, final manifest validation,
+and independent final review have **not** been rerun after the last remediation and
+remain mandatory.
+
+### Required continuation sequence
+
+1. Fetch live `origin/main` and stop if it is no longer exact
+   `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd` or no longer contains accepted P8
+   attestation `20eeb53c80fce4e79a689128918a12361233aa7b` with the required direct-child
+   topology. Do not silently rebase this governed work onto a different baseline.
+2. Check out `codex/plan-rev7-readonly-p9` at this handoff tip and read the repository
+   contract, plan, build state, this handoff, P8 evidence/manifest/review, P9 kickoff,
+   and `docs/evidence/PLAN-REV7.md` in their required order.
+3. Treat `9819d2c8f0f7abdffb6febec0f511216938e370d` as WIP only. Review the complete
+   baseline-to-tip change set and reproduce every earlier rejected finding and its
+   remediation. Do not generate a manifest yet.
+4. Resolve this open high-risk audit question before freeze: the current runtime-source
+   analyzer proves that `mapP9Scholarships(response.data.sheets ?? [])` is called, but
+   must be adversarially checked to ensure it truly rejects a mapper that ignores its
+   argument or returns a constant. The plan/evidence claim that constant-return and
+   unused-read paths fail closed. Add a direct negative test and strengthen the AST/data-
+   flow proof if that claim is not already mechanically true. Also adversarially inspect
+   every exact-loader/route/binding and clean-checkout assertion; do not rely only on
+   the happy-path fixtures.
+5. Obtain a fresh-context, read-only prefreeze review of the final working-tree bytes.
+   It must receive the original objective, baseline, rejected candidate and findings,
+   complete diff, tests, and explicit no-edit instructions. Remediation stays with the
+   implementation agent. Require C0/H0 before freezing.
+6. Run and record a fresh locked full verification window exactly as required by
+   `docs/evidence/PLAN-REV7.md`: dependency install, focused P9 tests, plan check with
+   only the three expected pre-attestation errors, typecheck, full tests, production
+   build, dependency audits, YAML parse, whitespace checks, production-write and P8-
+   schedule scans, and authenticated live-origin/P8 topology verification.
+7. Update evidence with exact commands, timestamps, outputs/digests, and the complete
+   baseline-to-candidate path set. Commit a **new** immutable replacement candidate;
+   never amend or reuse the rejected `1c23d4f` candidate.
+8. Generate the complete candidate manifest from the exact baseline, then give a
+   genuinely independent fresh-context reviewer the immutable candidate, manifest,
+   original objective, plan, rejected findings/remediation, diff, and verification
+   evidence. The reviewer must not edit. Any finding returns to implementation and a
+   new candidate/recheck cycle.
+9. Only after C0/H0 acceptance, add exactly
+   `docs/evidence/PLAN-REV7-manifest.json` and `docs/reviews/PLAN-REV7.json` in the
+   candidate's direct-child attestation commit. Re-run locked validation at that exact
+   tip, then perform only the governed Revision 7 PR/CI/Preview/Production delivery and
+   smoke authorized in build state.
+10. Stop after Revision 7 delivery. Do not begin P9. The next transition is
+    `P9-IDENTITY-PINS`; operational discovery or permission/configuration changes are
+    not authorized merely because its mechanism now exists.
+
+### Suggested Claude opening instruction
+
+> Continue the unfinished, non-accepted Plan Revision 7 remediation from branch
+> `codex/plan-rev7-readonly-p9`. Follow `AGENTS.md` and the required read order exactly.
+> Treat commit `9819d2c8f0f7abdffb6febec0f511216938e370d` as a WIP checkpoint, never as a
+> candidate or acceptance. Do not begin P9; do not access or mutate Google Drive,
+> Sheets, Vercel, deployment configuration, or the P8 schedule. Production spreadsheet
+> `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is strictly read-only, and only the
+> testing spreadsheet may ever be written when an active stage requires it. First
+> adversarially audit and finish the Revision 7 runtime-binding/dataflow remediation,
+> including a direct constant-return mapper negative, then complete fresh prefreeze
+> review, full verification, a new immutable candidate, independent final review,
+> manifest, direct-child attestation, and governed Revision 7 delivery. Stop again
+> before P9 and report any unmet entry gate as `BLOCKED`.
+
+## Plan Revision 7 work state — P9 remains unstarted
 
 - Live `origin/main` and Revision 7 baseline are exact
   `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`. Accepted P8 attestation
