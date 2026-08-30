@@ -21,6 +21,12 @@ Default branch: `main`
   rejected C0/H2/M1/L0 and must also never be attested or delivered. Its live driver
   falsely refreshed 978 unchanged snapshots, queue publication accepted a forged
   complete object, and same-tip replay was not idempotent.
+- Replacement `9e5264e212a6224a9fd058e1d61524283cde0149` was independently
+  rejected C0/H1/M0/L0 and must never be attested or delivered. A custom non-HMAC
+  structural store could bypass the segment bound, mint a branded finalization, and
+  publish a queue. The current remediation requires the private registered store for
+  both execution and finalization, rechecks the segment maximum during replay, and adds
+  direct negative tests.
 - The uncommitted replacement now keeps 1,028 distinct targets: 217 P7 sources, 213 P5
   source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
   review items, and two P6 review items. Only the 50 accepted public read-only routes
@@ -53,6 +59,10 @@ Default branch: `main`
   Turbopack build, both zero-match audits, and both whitespace checks passed again by
   `2026-08-30T06:15:42Z`. The next action is a new immutable technical freeze and the
   same reviewer's read-only recheck.
+- After the `9e5264e2` rejection, the trusted-store and segment-bound focused checks,
+  plan validation, typecheck, full P0-P8 suite, exact Turbopack build, both zero-match
+  audits, and both whitespace checks passed by `2026-08-30T06:22:56Z`. The next action
+  remains a new immutable freeze and same-reviewer recheck.
 - `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` remains unbound preparatory documentation.
   It grants no production authority and must not be used in this P8 session.
 

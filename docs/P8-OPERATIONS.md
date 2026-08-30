@@ -73,8 +73,10 @@ remain explicit review work.
 ## Receipt and recovery procedure
 
 Each segment is stored append-only and bound with both a SHA-256 content identity and
-an HMAC-SHA-256 authentication tag. Each receipt binds the plan, testing-sheet revision,
-run ID, mode, exact cursor range, complete result set, review items, and prior receipt.
+an HMAC-SHA-256 authentication tag. Execution and finalization reject any structural
+store not registered by the receipt-store factory, and ledger replay re-enforces the
+250-target segment maximum. Each receipt binds the plan, testing-sheet revision, run ID,
+mode, exact cursor range, complete result set, review items, and prior receipt.
 
 1. Stop publication after any interruption, authentication failure, cursor mismatch,
    plan mismatch, or source-revision mismatch.

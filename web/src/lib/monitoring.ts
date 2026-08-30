@@ -365,7 +365,7 @@ function validateLedger(plan: MonitoringPlan, ledger: SegmentReceipt[]): void {
   for (const [index, receipt] of ledger.entries()) {
     if (receipt.schemaVersion !== MONITORING_SCHEMA_VERSION || receipt.stageId !== 'P8' || receipt.runId !== runId || receipt.mode !== mode || receipt.planDigest !== plan.planDigest || receipt.targetDenominator !== plan.targets.length || receipt.spreadsheetId !== plan.spreadsheetId || receipt.spreadsheetRevisionId !== plan.spreadsheetRevisionId) throw new Error('Monitoring ledger identity changed');
     if (receipt.segmentIndex !== index || receipt.startCursor !== cursor || receipt.previousReceiptSha256 !== previous) throw new Error('Monitoring ledger is not contiguous');
-    if (receipt.nextCursor <= receipt.startCursor || receipt.nextCursor > plan.targets.length || receipt.processedCount !== receipt.nextCursor - receipt.startCursor || receipt.remainingCount !== plan.targets.length - receipt.nextCursor || receipt.reachedPlanEnd !== (receipt.nextCursor === plan.targets.length)) throw new Error('Monitoring ledger counters are inconsistent');
+    if (receipt.nextCursor <= receipt.startCursor || receipt.nextCursor > plan.targets.length || receipt.processedCount <= 0 || receipt.processedCount > MAX_TARGETS_PER_SEGMENT || receipt.processedCount !== receipt.nextCursor - receipt.startCursor || receipt.remainingCount !== plan.targets.length - receipt.nextCursor || receipt.reachedPlanEnd !== (receipt.nextCursor === plan.targets.length)) throw new Error('Monitoring ledger counters are inconsistent or exceed the segment bound');
     const expectedIds = plan.targets.slice(receipt.startCursor, receipt.nextCursor).map((item) => item.targetId).sort();
     const actualIds = receipt.results.map((item) => item.targetId).sort();
     if (new Set(actualIds).size !== actualIds.length || canonicalJson(actualIds) !== canonicalJson(expectedIds)) throw new Error('Monitoring segment contains duplicate or lost work');
@@ -379,6 +379,7 @@ function validateLedger(plan: MonitoringPlan, ledger: SegmentReceipt[]): void {
 
 export async function executeMonitoringSegment(input: { plan: MonitoringPlan; store: MonitoringReceiptStore; runId: string; mode: SegmentReceiptBody['mode']; startCursor: number; previousReceiptSha256: string | null; adapter: ProbeAdapter; environment: ExecutionEnvironment; limit?: number }): Promise<SegmentReceipt> {
   const { plan } = input;
+  if (!storeState.has(input.store)) throw new Error('Monitoring execution requires a registered authenticated receipt store');
   if (!Number.isInteger(input.startCursor) || input.startCursor < 0 || input.startCursor >= plan.targets.length) throw new Error('Monitoring cursor is invalid');
   let segmentIndex = 0;
   if (input.startCursor === 0) { if (input.previousReceiptSha256 !== null) throw new Error('Initial segment cannot have a prior receipt'); }
@@ -400,6 +401,7 @@ export async function executeMonitoringSegment(input: { plan: MonitoringPlan; st
 }
 
 export function finalizeMonitoringRun(plan: MonitoringPlan, store: MonitoringReceiptStore, tip: string): FinalizedRun {
+  if (!storeState.has(store)) throw new Error('Monitoring finalization requires a registered authenticated receipt store');
   const ledger = loadLedger(store, tip);
   validateLedger(plan, ledger);
   if (ledger.length === 0 || ledger[0].startCursor !== 0 || ledger.at(-1)!.nextCursor !== plan.targets.length || !ledger.at(-1)!.reachedPlanEnd) throw new Error('Monitoring run cannot finalize before the complete denominator is authenticated');

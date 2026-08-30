@@ -103,6 +103,9 @@ assert.equal(executed.finalized.lostCount, 0);
 assert.equal(executed.calls.filter((item) => item.route === 'public_read_only_probe').length, 50);
 assert.equal(executed.calls.filter((item) => item.route !== 'public_read_only_probe' && item.url !== null).every((item) => item.route === 'manual_review_no_fetch'), true);
 assert.equal(executed.env.sleeps.filter((item) => item === MINIMUM_REQUEST_SPACING_MS).length, 50, 'request spacing must execute for every public probe');
+const fakeStore = { read: () => null };
+assert.throws(() => finalizeMonitoringRun(plan, fakeStore, '0'.repeat(64)), /registered authenticated receipt store/, 'custom structural stores must not mint finalizations');
+await assert.rejects(() => executeMonitoringSegment({ plan, store: fakeStore, runId: 'fake-store', mode: 'dry_run', startCursor: 0, previousReceiptSha256: null, adapter: adapter('2026-08-30T00:00:00.000Z'), environment: environment('2026-08-30T00:00:00.000Z') }), /registered authenticated receipt store/, 'custom structural stores must not execute probes or commit receipts');
 
 const timeoutTarget = plan.targets.find((item) => item.route === 'public_read_only_probe')!;
 const timeout = await complete({ runId: 'test-retry', mode: 'dry_run', observedAt: '2026-08-30T00:00:00.000Z', overrides: new Map([[timeoutTarget.targetId, async () => { throw new Error('ETIMEDOUT'); }]]) });
