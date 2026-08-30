@@ -5,12 +5,12 @@ Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P8 accepted-state candidate
+## Current P8 accepted state (delivered)
 
-- P8 has a prospective accepted-state marker on isolated branch
-  `codex/p8-monitoring-recovery` from exact live baseline
-  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. P9 is next-permitted only after P8 is
-  attested, merged, and verified; no P9 production authority exists.
+- P8 is accepted and delivered on live `origin/main` merge
+  `302b6d05e72e917ae26f74ccbf79a7cc4316ab24`. The signed merge has exact parents
+  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f` and accepted P8 direct-child attestation
+  `20eeb53c80fce4e79a689128918a12361233aa7b`.
 - Standard authenticated Git reproduced the baseline merge and exact accepted P7
   direct-child attestation `fa23a761fdf7d09156ae3d683476457c665e7092`.
 - Preliminary frozen candidate `b3347e75c76e490e41fe200f9245185605e385d2`
@@ -35,7 +35,7 @@ Default branch: `main`
   remediation exact-binds accepted semantic and file digests, deeply freezes and
   privately registers the plan, and rejects unregistered or changed plans before probe
   execution or receipt reads.
-- The current replacement keeps 1,028 distinct targets: 217 P7 sources, 213 P5
+- The accepted P8 implementation keeps 1,028 distinct targets: 217 P7 sources, 213 P5
   source routes, 192 awards, 192 cycles, 21 portals, four application groups, 187 P5
   review items, and two P6 review items. Only the 50 accepted public read-only routes
   are probe-eligible; 163 manual routes and every application URL remain no-fetch.
@@ -53,15 +53,14 @@ Default branch: `main`
   time, so absent snapshots age into review rather than refreshing themselves.
 - The schedule plan remains disabled and activation unauthorized. The guarded driver
   accepts only explicit dry-run mode and was not invoked. No live source, spreadsheet,
-  form, provider, notification, deployment configuration, production system, or P9
-  action occurred.
+  form, provider, notification, deployment-configuration, or P9 action occurred. The
+  only production effect was the authorized Vercel deployment resulting from the P8
+  merge; it did not enable monitoring or alter deployment configuration.
 - `docs/evidence/P8.md`, `docs/evidence/P8-report.json`, and
-  `docs/P8-OPERATIONS.md` are the replacement evidence and runbook. Locked install,
+  `docs/P8-OPERATIONS.md` are the accepted evidence and runbook. Locked install,
   focused P8 checks, plan validation, typecheck, the full P0-P8 suite, exact normal-
   worker Turbopack production build, full/production audits, and both working/range
-  whitespace checks passed by `2026-08-30T06:02:21Z`. Replacement freeze,
-  same-reviewer recheck, accepted-state transition, final recheck, manifest,
-  attestation, and governed delivery remain pending.
+  whitespace checks passed before acceptance and again on the locked attestation tip.
 - After the `30cdbfe4` rejection, deterministic evidence, strengthened freshness/
   publication/replay tests, plan validation, typecheck, the full P0-P8 suite, exact
   Turbopack build, both zero-match audits, and both whitespace checks passed again by
@@ -75,20 +74,23 @@ Default branch: `main`
   deterministic P8 evidence, plan validation, typecheck, full P0-P8 suite, exact
   Turbopack build, both zero-match audits, and both whitespace checks passed by
   `2026-08-30T06:34:36Z`.
-- Fresh-context reviewer `/root/p8_fresh_review` accepted exact technical candidate
-  `3ffd53e873c0718d160ca353e4f01375bc4cf56c` C0/H0/M0/L0 against provisional manifest
-  SHA-256 `2d8a158e92d15bc67679da2918e146e6bf9960045943af52d817bd2b1f506274`.
-  No medium or low dispositions are required.
-- Kelsey Stuart explicitly authorized the prospective acceptance-state transition on
-  2026-08-30. Machine state now records P8 accepted, no active stage, and P9
-  next-permitted with the P9 kickoff bound. Freeze this documentation-only transition,
-  regenerate the exact manifest, obtain the same reviewer's final read-only recheck,
-  then add only the manifest and review in its direct child. Authentication and
-  delivery remain prohibited before that attestation.
-- Prospective accepted-state `p8:test`, typecheck, and working-tree whitespace
-  validation passed by `2026-08-30T15:08:35Z`. Plan validation reported only the two
-  expected pre-attestation errors: missing P8 manifest and missing committed P8
-  manifest/review attestation.
+- Fresh-context reviewer `/root/p8_fresh_review` accepted exact accepted-state candidate
+  `cc69d276c85f931499a23a5abde623bda321e0c0` C0/H0/M0/L0. Canonical manifest SHA-256
+  is `02f17a53022465d1772df421f0b495056386fe4104fb8414c25da4216867d68c`; no medium
+  or low dispositions were required. Direct-child attestation `20eeb53c` added exactly
+  `docs/evidence/P8-manifest.json` and `docs/reviews/P8.json`.
+- PR #23 merged exact attestation head `20eeb53c` as signed merge `302b6d05` on
+  2026-08-30. PR CI and post-merge main CI both passed plan validation, typecheck, the
+  complete P0-P8 suite, and production build. Vercel Production deployment
+  `6168125104` reported success for the exact merge.
+- Vercel Preview returned the same `Deployment was blocked` result as the preceding P7
+  PR, while the comment integration passed. The exact Production deployment URL is
+  access-protected: an unauthenticated `/api/health` request reached Vercel's login gate,
+  so an application-level production health response was not independently verified.
+  No identity, access, or deployment configuration was changed. The original
+  `Franscale1922` GitHub CLI account was restored after delivery.
+- Adjacent non-blocking warnings remain for the deprecated Next.js `middleware` file
+  convention and GitHub Actions that declare Node.js 20 while runners force Node.js 24.
 - `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` is bound preparatory documentation only.
   It grants no production authority, does not start P9, and must not be used in this
   P8 session. The monitoring schedule remains disabled and unauthorized.
