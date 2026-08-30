@@ -20,6 +20,16 @@ Default branch: `main`
   `9819d2c8f0f7abdffb6febec0f511216938e370d`. This is a WIP preservation commit,
   not a frozen candidate. No Revision 7 manifest, review record, direct-child
   attestation, PR delivery, merge, or deployment has been completed for it.
+- Local documentation handoff commit:
+  `8756d093f77f751380f301d4fc7ef98b0b6a4d23`. The final local transfer tip is the
+  later commit containing this authentication note; resolve it with `git rev-parse
+  codex/plan-rev7-readonly-p9`.
+- GitHub transfer is not yet complete. A bounded `git fetch origin` attempt after the
+  handoff commit failed with `Repository not found`; `gh auth status` reported invalid
+  stored authentication for both locally known accounts. No token was requested,
+  displayed, changed, or stored, and no remote branch or pull request was created.
+  After restoring approved GitHub authentication, push this existing local branch with
+  `git push -u origin codex/plan-rev7-readonly-p9`; do not force-push or rewrite it.
 - The Codex execution was stopped at Kelsey's request before final preflight review and
   full replacement-candidate verification. No Google/Drive/Vercel/GitHub-environment
   discovery, spreadsheet access, spreadsheet write, configuration switch, workflow
