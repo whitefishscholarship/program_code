@@ -1,14 +1,16 @@
 # Current Handoff
 
-Last updated: 2026-08-29
+Last updated: 2026-08-30
 Plan revision: 6
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Current P8 replacement technical candidate
+## Current P8 accepted-state candidate
 
-- P8 is active/verified on isolated branch `codex/p8-monitoring-recovery` from exact
-  live baseline `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. P9 is unavailable.
+- P8 has a prospective accepted-state marker on isolated branch
+  `codex/p8-monitoring-recovery` from exact live baseline
+  `5be74c3ccb45ee57671fd7e4616358d2d0e2b32f`. P9 is next-permitted only after P8 is
+  attested, merged, and verified; no P9 production authority exists.
 - Standard authenticated Git reproduced the baseline merge and exact accepted P7
   direct-child attestation `fa23a761fdf7d09156ae3d683476457c665e7092`.
 - Preliminary frozen candidate `b3347e75c76e490e41fe200f9245185605e385d2`
@@ -72,10 +74,24 @@ Default branch: `main`
 - After the `7d87c589` rejection, the exact-input and structural-plan negatives,
   deterministic P8 evidence, plan validation, typecheck, full P0-P8 suite, exact
   Turbopack build, both zero-match audits, and both whitespace checks passed by
-  `2026-08-30T06:34:36Z`. The next action remains a new immutable freeze and
-  same-reviewer recheck.
-- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` remains unbound preparatory documentation.
-  It grants no production authority and must not be used in this P8 session.
+  `2026-08-30T06:34:36Z`.
+- Fresh-context reviewer `/root/p8_fresh_review` accepted exact technical candidate
+  `3ffd53e873c0718d160ca353e4f01375bc4cf56c` C0/H0/M0/L0 against provisional manifest
+  SHA-256 `2d8a158e92d15bc67679da2918e146e6bf9960045943af52d817bd2b1f506274`.
+  No medium or low dispositions are required.
+- Kelsey Stuart explicitly authorized the prospective acceptance-state transition on
+  2026-08-30. Machine state now records P8 accepted, no active stage, and P9
+  next-permitted with the P9 kickoff bound. Freeze this documentation-only transition,
+  regenerate the exact manifest, obtain the same reviewer's final read-only recheck,
+  then add only the manifest and review in its direct child. Authentication and
+  delivery remain prohibited before that attestation.
+- Prospective accepted-state `p8:test`, typecheck, and working-tree whitespace
+  validation passed by `2026-08-30T15:08:35Z`. Plan validation reported only the two
+  expected pre-attestation errors: missing P8 manifest and missing committed P8
+  manifest/review attestation.
+- `docs/kickoffs/P9-PRODUCTION-MIGRATION.md` is bound preparatory documentation only.
+  It grants no production authority, does not start P9, and must not be used in this
+  P8 session. The monitoring schedule remains disabled and unauthorized.
 
 ## Historical P7 accepted-state candidate (delivered)
 

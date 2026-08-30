@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 6,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-08-29",
+  "lastUpdated": "2026-08-30",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -225,8 +225,8 @@
       }
     ]
   },
-  "activeStageId": "P8",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P9",
   "stages": [
     {
       "id": "P0",
@@ -311,7 +311,7 @@
     {
       "id": "P8",
       "name": "Monitoring, review operations, and recovery",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "5be74c3ccb45ee57671fd7e4616358d2d0e2b32f",
       "evidencePath": "docs/evidence/P8.md",
       "manifestPath": "docs/evidence/P8-manifest.json",
@@ -326,7 +326,7 @@
       "evidencePath": "docs/evidence/P9.md",
       "manifestPath": "docs/evidence/P9-manifest.json",
       "reviewPath": "docs/reviews/P9.json",
-      "kickoffPath": null
+      "kickoffPath": "docs/kickoffs/P9-PRODUCTION-MIGRATION.md"
     }
   ],
   "invariants": [
