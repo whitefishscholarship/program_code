@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV7",
+  "createdAt": "2026-08-31T22:02:05Z",
+  "baselineCommit": "5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd",
+  "candidateCommit": "7ea8b16b5e861c0b3593c3afbb482bdb71541036",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "change": "present",
+      "sha256": "08a7fc08150ec83bd8428f26e893b096a2a304db6c7e53ff8e284ca57fb6f554"
+    },
+    {
+      "path": ".github/workflows/p9-evidence.yml",
+      "change": "present",
+      "sha256": "0644c3db9df14f262cf02b61e4493d7fb323a0caae0a4b77e7c096e723a8b6f1"
+    },
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "851b523c6c4ee742c474d7a82988a2477f8b759faf2f1aed11576d33821c0c64"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "c2424a61acb4f85064c6e9dd0dae0918783b330fd8e53c66ad3489141291798c"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "31a028d9fafd7527a88fc779adf8e2b760aab0280421ce796cbb2ac4ffb29927"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "cbf95719245e662070a99b34e9424d263ed152b95c94859e7f4604912b7c2789"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "5c8310198da825b703765c194a937a9eca7eecc7c6276e8602f996a98c4f7cfc"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV7.md",
+      "change": "present",
+      "sha256": "ebe0e62a7e3fea3f8d8eecd51c28c07280aefb60f5dbc1a94d4655e203df4e0d"
+    },
+    {
+      "path": "docs/kickoffs/P9-PRODUCTION-MIGRATION.md",
+      "change": "present",
+      "sha256": "702f01b4718e859a77c50336e5d5ab2af0a1e42cb2148a11f32c762660565457"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "c3fe16646e86dcf22d465eeb1a222ccf3453bd27cb6cc6469437e6d903291f05"
+    },
+    {
+      "path": "web/scripts/p4-verification.ts",
+      "change": "present",
+      "sha256": "02b07de576fcf2e730a11d0c5c99c5d494d3e24966a8dc326c264b90867a04f0"
+    },
+    {
+      "path": "web/scripts/p9-evidence-v2.ts",
+      "change": "present",
+      "sha256": "f78fefb05a29b9762ecdd2cb07a73cdc04381db2bfe51102bec5abcbc8faba8e"
+    },
+    {
+      "path": "web/scripts/p9-trusted-proof.ts",
+      "change": "present",
+      "sha256": "45bc22c787a0b32293b589466ea734dccb527e23460b5410fd1cc1521af536c4"
+    },
+    {
+      "path": "web/scripts/production-authority.ts",
+      "change": "present",
+      "sha256": "2a38831676d3de19aeddb87f7e89fa90f465b1d90b398ab3856cd3357fea47ee"
+    },
+    {
+      "path": "web/scripts/test-p9-evidence-v2.ts",
+      "change": "present",
+      "sha256": "1b8cdc7a627f7665dba17db857d71170e509f2c515887163f2c039d39ff4b380"
+    },
+    {
+      "path": "web/scripts/test-production-authority.ts",
+      "change": "present",
+      "sha256": "a6c4a25f515eac107ed6b51036fd0a908c08b7535c72b89a34f4e7abbc93326c"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "bb6efc1eefcd0e9bcdbd28c2cfa73d73529e3b7f9f2bda4162f5789198c568c7"
+    }
+  ]
+}
