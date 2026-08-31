@@ -1,11 +1,46 @@
 # Current Handoff
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 Plan revision: 7
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Codex resumption checkpoint — Revision 7 only; P9 not started
+## Revision 7 delivery closure — PASS; P9 not started
+
+- Immutable replacement candidate
+  `7ea8b16b5e861c0b3593c3afbb482bdb71541036` was independently accepted
+  `C0/H0/M0/L0` against manifest SHA-256
+  `04eab56008feebf3b4f5692b616a656c05409f0c6187757d24b5ea6192583651`.
+  Direct-child attestation `711b8836db27e21e211b4528c9f5699d90c5f28e` added exactly
+  `docs/evidence/PLAN-REV7-manifest.json` and `docs/reviews/PLAN-REV7.json`.
+- PR #25 preserved exact base `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`
+  and exact head `711b8836db27e21e211b4528c9f5699d90c5f28e`. Required PR CI run
+  `33445688320` passed in 2m25s. Vercel Preview was blocked by the existing access
+  condition; the Preview comment check passed. The blocked Preview is not an
+  application-health result.
+- PR #25 merged by the repository's merge-commit convention at
+  `3299e9bba5deca00fc2754552f6a7a47f9534336` on 2026-08-31. Its parents are exact
+  baseline `5c6040e...` and exact attestation `711b883...`.
+- Post-merge main CI run `33445936413` passed in 2m28s: locked install, plan check,
+  typecheck, the complete P0-P8/Revision 7 suite, and exact production build. GitHub's
+  status for the exact merge reports Vercel `success` with description `Deployment has
+  completed` at `2026-08-31T22:23:29Z`. No direct Vercel access or protected
+  application-health smoke was performed, so only GitHub-reported deployment completion
+  is verified.
+- Secure GitHub account context was restored to active `whitefishscholarship` after the
+  CLI switched accounts during delivery. The original attestation branch remains exact
+  remote tip `711b883...`; it was not amended or appended.
+- Revision 7 changed governance, validator/tests, dormant trusted-proof workflow,
+  evidence, and handoff only. No Google, Drive, Sheets, Vercel-direct, workflow-dispatch,
+  runtime/configuration, schedule, form, applicant-data, or provider operation occurred.
+  P8 remains disabled. P9 is next-permitted state only and remains planned and unstarted;
+  do not begin it from this closure record.
+
+## Historical Codex resumption checkpoint — Revision 7 only; P9 not started
+
+The checkpoint below records the pre-candidate remediation history and is superseded by
+the delivery closure above where it describes candidate, attestation, or delivery as
+pending.
 
 - Kelsey resumed this exact local branch on 2026-08-30 and selected `xhigh` reasoning.
   The saved WIP and historical transfer commits remain ordinary checkpoints, not a
