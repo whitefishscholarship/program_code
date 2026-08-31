@@ -298,3 +298,76 @@ but are not rewritten or deleted.
 - Rollback: Revert before P2 integration only through the reviewed amendment process.
   After P2 relies on it, preserve the exact Revision 6 amendment and P2 delivery
   attestation and use a later separately reviewed amendment for any change.
+
+## D-019 — Make P9 a production-read-only source and configuration cutover
+
+- Date: 2026-08-30
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 7 records exact production spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` and permits P9 to read only the two
+  exact scholarship tabs pinned in `BUILD_STATE`. P9 must use a separate read-only
+  production configuration. Every write-capable path remains pinned to testing
+  spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` or is disabled.
+  Production rollback changes only the deployed application revision/configuration;
+  production backups are evidence and are never restored under current authority.
+- Evidence: `docs/evidence/PLAN-REV7.md`
+- Reason: Kelsey directly prohibited every production spreadsheet write while
+  authorizing P9 source migration, application configuration switching, governed Git
+  and pull-request delivery, Preview and Production deployment, verification,
+  reconciliation, and rollback. Revision 6 instead required production mutation
+  authority, post-write reconciliation, and restoring a production backup. The current
+  application also uses `GOOGLE_SHEET_ID` in an admin endpoint that can append rows, so
+  simply replacing the testing ID with production would violate the explicit boundary.
+- Alternatives: Retain Revision 6 and request production write authority, which Kelsey
+  explicitly denied; stop P9 permanently; or treat a configuration switch as implicit
+  write safety without machine checks. Each conflicts with the requested outcome or
+  leaves a direct production-mutation path.
+- Impact: P9 retains complete mapping, deterministic sampling, privacy,
+  unknown/manual-review preservation, deployment smoke, independent review, manifest,
+  attestation, and closeout gates. Post-write reconciliation becomes complete
+  post-cutover read-only reconciliation. The validator pins the exact IDs, tabs,
+  backups, owners, production no-write rule, testing-write controls, and outstanding
+  deployed-runtime permission gate. Structured entry and post-cutover receipts must
+  preserve revision `9857`, exact grids/source-backup hashes, read-only OAuth scope,
+  unchanged sharing, and zero production writes across deployment smoke and rollback.
+  The Vercel rollback-probe record must bind real Git objects, exact baseline ancestry,
+  provider status/configuration, and one rollback-safe runtime commit deployed three
+  times under cutover/static-rollback/restored-cutover configuration; the legacy
+  baseline is not a safe runtime rollback while a production source setting exists.
+  Exact schema-v2 receipts require hosted GitHub OIDC attestations from a dormant
+  protected default-branch workflow with predecessor-verified entry, cutover, rollback,
+  restored-cutover, and finalize phases. The validator derives observation,
+  configuration, and AST writer-inventory digests and binds a secrets-free executed
+  negative-test report; fabricated SHA-shaped values or asserted booleans fail.
+  Cutover/restored health must provide a nonce-bound application-read observation whose
+  digests cover the exact normalized bounded GridData plus the fresh runner nonce and
+  match the trusted runner's independent computation without exposing cell values.
+  Each phase also statically binds both deployed routes and direct result dataflow to one
+  shared loader at the exact runtime commit; rollback must provide none. A control-plane
+  credential read or unused read plus echoed constant is not application-path proof.
+  P9 also remains blocked until the runtime principal has a direct unexpired production
+  Viewer permission, the authorized verifier can read both private backups,
+  and exact Vercel project/team fingerprints and canonical Production hostname are
+  independently authority-pinned through the predeclared, fixed-path,
+  fresh-review/direct-child-attested `P9-IDENTITY-PINS` record. Revision 7 records these
+  facts as false/null and does not change sharing, provider configuration, or hosted
+  environment state.
+  Because the earlier backup-equality hash serialization was not recorded, those two
+  digests remain historical provenance. Operative proof uses the explicitly versioned
+  canonical bounded-GridData algorithm and requires fresh source/existing-backup
+  equality plus cross-phase identity.
+  Revision 7 also records the contained pre-entry connector-access deviation without
+  retroactive authorization. Revision 7 itself changes only governance, validator/tests,
+  evidence, and handoff; P9 remains unstarted.
+- Review history: first frozen candidate `1c23d4fef71635c75702e638f268501318f403ec`
+  was rejected C0/H2/M0/L0 because its receipts could accept stale/unknown fields and
+  self-asserted provider/configuration evidence. Its manifest is rejected and is not
+  rebound. The same reviewer must recheck the replacement candidate after strict-schema,
+  chronology, OIDC, runtime-descriptor, and executed writer-proof remediation.
+- Authority: Kelsey Stuart directly supplied the exact production and testing
+  spreadsheet boundaries, authorized the P9 configuration/Git/Preview/Production and
+  rollback effects, and named Kelsey Stuart as deployment and rollback owner.
+- Rollback: Before P9 starts, supersede Revision 7 only through another directly
+  authorized, independently reviewed amendment. After P9 depends on it, preserve the
+  Revision 7 candidate, manifest, review, attestation, and P9 history byte-for-byte.
+  Never use rollback to mutate the production spreadsheet.

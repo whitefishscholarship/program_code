@@ -1,9 +1,654 @@
 # Current Handoff
 
 Last updated: 2026-08-30
-Plan revision: 6
+Plan revision: 7
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Codex resumption checkpoint — Revision 7 only; P9 not started
+
+- Kelsey resumed this exact local branch on 2026-08-30 and selected `xhigh` reasoning.
+  The saved WIP and historical transfer commits remain ordinary checkpoints, not a
+  candidate, review, attestation, or delivery claim.
+- Secure browser authentication was temporarily restored as the authorized
+  `whitefishscholarship` GitHub account without requesting or exposing a token. A fresh
+  authenticated normal-Git fetch at `2026-08-31T00:51Z` resolved live `origin/main` to
+  exact Revision 7 baseline `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`.
+  Accepted P8 attestation `20eeb53c80fce4e79a689128918a12361233aa7b`
+  remains the direct child of `cc69d276c85f931499a23a5abde623bda321e0c0`
+  and adds exactly the P8 manifest and review. Kelsey completed a fresh browser/device
+  flow, and `gh auth status` at `2026-08-31T02:18:50Z` verified the active
+  `whitefishscholarship` account with repository/workflow scopes. Treat delivery
+  authentication as provisional until the required final authenticated normal-Git
+  fetch and push probes pass. The already observed baseline/P8 topology remains
+  historical evidence, not a substitute for the required final live recheck.
+- The WIP runtime-source analyzer now rejects a mapper that ignores the awaited Sheets
+  response, a callback that only performs a superficial/dead input read before
+  returning a constant, and a source-dependent condition whose result branches are
+  both constant. After a fresh read-only reviewer showed that a derived receiver could
+  still hide `filter(() => false)`, the analyzer was tightened to accept only directly
+  proved `map`/`flatMap` callback result flow. Runtime writer discovery now rejects any
+  symbolic link in the scanned source tree and resolves or fails closed on indirect
+  network invocation including `Reflect.apply` and `Function.prototype.apply`.
+- Fresh-context reviewer `/root/rev7_prefreeze_recheck` rejected the preceding working
+  tree `C0/H3/M0/L0`: constant-output derived-receiver transforms could pass mapping
+  provenance, symlinked TypeScript writers disappeared from inventory, and a raw
+  Sheets REST write through `Reflect.apply(fetch, ...)` was omitted. Direct regression
+  fixtures now reproduce all three findings and pass after implementation remediation.
+  This is not acceptance; the same reviewer must recheck the remediated bytes at C0/H0
+  before candidate freeze.
+- The same reviewer rejected the first remediation recheck `C0/H2/M0/L0`: generic
+  binary-expression provenance accepted algebraically constant `value * 0` and
+  `value - value` results, while detached `(0, fetch)` calls escaped both direct and
+  reflected network discovery. The next remediation rejects all mapper binary and
+  conditional result operators except explicit `&&`, `??`, and `||` flow rules needed
+  by the bounded loader contract, and resolves comma-expression call targets from their
+  effective right operand. Exact direct and reflected detached-fetch regressions now
+  accompany the two algebraic-constant tests. Same-reviewer C0/H0 recheck remains
+  mandatory.
+- The same reviewer rejected the second remediation recheck `C0/H2/M0/L0`: derived
+  callback locals could be mutated or conditionally emptied before return, cardinality-
+  only projections passed without carrying complete GridData values, and conditional or
+  logical callable expressions could still hide raw network writers. The permissive
+  mapper provenance heuristic is now removed. The verifier structurally pins the exact
+  `sheets.flatMap((sheet) => sheet.data ?? [])` collection flow. Conditional/logical
+  network chains resolve identically when possible and otherwise become an explicit
+  unknown indirect-network capability; any unfamiliar call carrying a statically
+  resolved Sheets URL also enters inventory fail-closed. Exact mutation, cardinality,
+  conditional/logical/reflected/aliased network regressions are included. Another
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the third remediation recheck `C0/H2/M0/L0`: an inserted
+  receiver or `Array.prototype.flatMap` monkeypatch could prevent the exact callback
+  from executing, and object/array/Map request containers could hide a co-located fetch,
+  Sheets endpoint, and write method. The loader verifier now pins the complete top-level
+  closure, exact ordered loader statement sequence, single-return early branches, and
+  direct GoogleAuth initializer, excluding extra executable statements and hidden
+  mapping-side effects. Writer discovery additionally fails closed when one runtime
+  source file contains a statically resolved generic-network capability, Sheets target,
+  and write method even if an aggregate container prevents direct call resolution.
+  Exact monkeypatch and object/array/Map regressions are included. Another same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the fourth remediation recheck `C0/H2/M0/L0`: async or
+  generator mapper semantics and an async callback passed the pinned expression while
+  returning promises/iterators, and aggregate fallback missed a computed `fetch`
+  property or `POST` built with array `join`. Mapper and callback modifiers are now
+  explicitly non-async and the mapper non-generator. Computed property names and
+  statically joined string arrays resolve, while a statically resolved Sheets mutation
+  endpoint is independently sufficient to enter writer inventory fail-closed. Exact
+  async/generator/callback and computed-capability/method regressions are included.
+  Another same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the fifth remediation recheck `C0/H2/M0/L0`: the imported
+  local runtime-binding module remained outside the bound source closure, and aggregate
+  writers could use `String.fromCharCode`/`concat` forms not enumerated by string
+  evaluation. The application runtime binding now includes that module path; trusted
+  checkout binding verifies its committed bytes, and its source must be exactly one
+  side-effect-free direct JSON-literal export. Dynamic computed access on global runtime
+  objects is independently inventoried as an unknown writer, method properties fail
+  closed unless proven GET/HEAD, and static evaluation additionally covers
+  `String.fromCharCode` and string `concat`. Exact imported-module side-effect and both
+  computed raw-writer regressions are included. Another same-reviewer C0/H0 recheck
+  remains mandatory.
+- The same reviewer rejected the sixth remediation recheck `C0/H2/M0/L0`: the expected
+  module path was bound but the loader's `@/` alias could be redirected by later runtime
+  configuration, while `Reflect.get` or property-descriptor reads of `globalThis.fetch`
+  could hide a values-update writer. The loader now requires a sibling-relative
+  `./p9-application-runtime-binding` import, eliminating path-alias redirection. Any
+  `Reflect.get`, `Reflect.getOwnPropertyDescriptor`,
+  `Object.getOwnPropertyDescriptor`, or `Object.getOwnPropertyDescriptors` read from a
+  global runtime object is inventoried as an unknown network capability. Exact
+  reflective-global values-update regressions are included. Another same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the seventh remediation recheck `C0/H2/M0/L0`: nested
+  `Reflect.apply`/`.bind` retrieval could still hide a global network capability, and
+  runtime-capable `web/instrumentation.ts` remained outside the four-source application
+  binding. Reflection normalization now unwraps direct, applied, and bound standard
+  global-property reads before classification. The application binding also hashes the
+  sorted complete runtime source path/blob closure (excluding only the separately
+  constrained literal binding module), includes its file count/digest, requires a clean
+  checkout including untracked-file absence, and rejects built-in prototype mutations
+  in any closure file. Exact nested-reflection and instrumentation regressions are
+  included. Another same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the eighth remediation recheck `C0/H4/M0/L0`: `.call`,
+  `.apply`, and partially bound reflective getter forms remained unclassified;
+  built-in prototype aliases could hide direct and `Reflect.set` mutations; a network
+  capability, Sheets target, and write method split across imported modules disappeared
+  from the file-local fallback; and runtime source discovery excluded tracked source
+  beneath `build`/`dist`/`out` directory names. The ninth remediation classifies every
+  expression chain rooted at a standard reflective getter, resolves stable const
+  aliases when checking built-in prototype mutations, fails closed on an unresolved
+  call carrying a non-GET/HEAD method option, and enumerates all tracked `web/`
+  TypeScript/JavaScript sources with no build-like exclusion (with the non-Git fallback
+  matching that rule). Exact regressions cover all four findings.
+- The same reviewer rejected the ninth remediation recheck `C0/H4/M0/L0`: a
+  computed `Reflect[member]` getter could evade inventory; imported request options
+  could complete a cross-module writer without a local method literal; prototype
+  aliases using stable `let`, destructuring, or an aliased mutation function remained
+  unresolved; and `eval`/`Function` could dynamically hide both prototype mutation and
+  a decoded Sheets writer. The tenth remediation fails closed on dynamic Reflect/Object
+  element access, propagates capability/target/write-option facts through local module
+  exports and imports, resolves stable let/destructured/general call aliases for the
+  prototype check, and rejects eval/Function-family execution in both writer inventory
+  and runtime-closure validation. Exact regressions cover every cited form.
+- The same reviewer rejected the tenth remediation recheck `C0/H3/M0/L0`: local
+  aliases and barrel/namespace forms could erase imported writer facts; dynamic code
+  could run through function-object constructors, reflected `Function`, or `node:vm`;
+  and prototype objects or mutation APIs could be derived through `getPrototypeOf`,
+  `__proto__`, or `Reflect.apply`. The eleventh remediation recursively resolves stable
+  local import aliases, propagates named/star barrel exports to a fixed point, resolves
+  namespace-member facts, and independently inventories any raw exported network
+  capability. It also rejects standard dynamic-code identifiers/modules and constructor
+  access regardless of outer call shape, and treats prototype-derivation members plus
+  applied calls carrying a built-in prototype as mutation risks. Exact regressions
+  cover the three findings and their cited variants.
+- The same reviewer rejected the eleventh remediation recheck `C0/H3/M0/L0`: an
+  exported function or object container could conceal a fetch capability; a data-URL
+  dynamic import or child-process shell call could execute encoded code; and a prototype
+  alias exported from one module and mutated in another escaped the file-local closure
+  check. The twelfth remediation derives nested container capabilities and explicit
+  capability-returning exported functions, carries those facts through calls/member
+  access, rejects unsafe dynamic-import schemes and bound `exec`/`execSync` process
+  execution, and derives named/default/barrel/namespace prototype import aliases before
+  validating each runtime source. Exact cited regressions are included.
+- The same reviewer rejected the twelfth remediation recheck `C0/H3/M0/L0`: a
+  local callable wrapper or exported class method could return a network capability;
+  process execution through `spawn`/related APIs exceeded the `exec`-only rule; and
+  exported prototype containers/functions still escaped cross-module provenance. The
+  thirteenth remediation resolves return facts through local callables and exported
+  class methods while preserving proven GET calls, models all standard child-process
+  launch methods with a narrow fixed-command exception for existing Git/NPM evidence
+  tooling, and rejects any exported value/container/function that exposes a built-in
+  prototype before consumer analysis. Exact reviewer variants are covered.
+- The same reviewer rejected the thirteenth remediation recheck `C0/H3/M0/L0`:
+  capability propagation still depended on declaration order and omitted local function
+  wrappers/class fields; literal `git`/`npx` exemptions and reflected process calls were
+  too broad; and named local/class-field prototype exports remained open. The fourteenth
+  remediation derives all local variable/function/class capability facts to a fixed
+  point before resolving exports, including class fields. Process rules now reject every
+  `spawn`/`spawnSync`/`fork` and reflected process invocation, with only direct
+  `execFile`/`execFileSync` of literal `git` retained for existing evidence reads.
+  Named local and class-field prototype exports are rejected at the exporter boundary.
+  Exact reviewer variants are included.
+- The same reviewer rejected the fourteenth remediation recheck `C0/H3/M0/L0`:
+  exported class accessors/default classes were absent from capability facts; applied,
+  bound, re-exported, or loosely exempted process launchers remained open; and named
+  prototype containers or call-returned prototypes escaped exporter checks. The
+  fifteenth remediation covers class getters/setters/default exports, normalizes
+  process `.apply`/`.call`/`.bind`, inventories external process re-exports, rejects all
+  spawn/fork forms, and restricts direct Git `execFile` exceptions to literal audited
+  history subcommands. A separate fixed point now tracks local prototype-valued
+  variables/functions/classes through containers and calls before every export check.
+  Exact reviewer variants are included.
+- The same reviewer rejected the fifteenth remediation recheck `C0/H3/M0/L0`:
+  capability and prototype facts ignored property assignments after initialization and
+  class static blocks; aliased/star child-process re-exports remained open; and the Git
+  exception still permitted external-diff execution. The sixteenth remediation adds
+  mutation-aware fixed-point facts for assignment roots and class static blocks, rejects
+  both aliased and star child-process re-exports at their exporter boundary, and removes
+  `git diff` from the permitted read-only plumbing commands. Exact reviewer variants are
+  included.
+- Focused exact-tree checks after the sixteenth remediation passed: non-incremental TypeScript,
+  P9 evidence-v2 adversarial tests, trusted-proof self-test, and production-authority
+  tests. Whitespace and expected pre-attestation validation remain to be rerun after
+  the documentation update.
+- The same reviewer rejected the sixteenth remediation recheck `C0/H3/M0/L0`.
+  Capability and prototype fixed points still ignore mutation-helper calls such as
+  `Object.assign(target, source)` and `Reflect.set(target, key, value)`. Process
+  launchers nested in exported containers or returned by exported functions also
+  escape the exporter check, and the Git `show` exception still permits external code
+  through options such as `--ext-diff`. The seventeenth remediation now uses one
+  conservative mutation-call projection for `Object.assign`, `Reflect.set`, and the
+  equivalent property-definition helpers, and feeds those values into both the
+  capability and built-in-prototype fixed points. Export facts now carry process
+  capability through nested containers and function/class returns. The Git exception
+  now accepts only statically resolved, command-specific read-only argument shapes;
+  unresolved arguments and external-execution options fail closed. Exact regressions
+  cover both mutation helpers for capability and prototype exports, nested/returned
+  `spawn`, and `git show --ext-diff HEAD`.
+- Focused checks on the seventeenth-remediation working tree passed: `npx tsc --noEmit`,
+  `node --import tsx scripts/test-p9-evidence-v2.ts`,
+  `node --import tsx scripts/p9-trusted-proof.ts --mode=self-test`,
+  `node --import tsx scripts/test-production-authority.ts`, and `git diff --check`.
+  A fresh read-only independent C0/H0 prefreeze review is still required before any
+  candidate freeze.
+- Fresh-context reviewer `/root/rev7_prefreeze_17` rejected the seventeenth remediation
+  `C0/H3/M0/L0`: mutation-helper facts were discarded when the target was returned by a
+  local function, anonymous-default and namespace child-process exports escaped process
+  facts, and otherwise read-only Git `execFile` calls could opt into shell execution.
+  The eighteenth remediation resolves stable local call-selected mutation targets into
+  every returned root, binds anonymous default-function and namespace process exports,
+  and permits Git exec-file reads only with statically resolved command-specific
+  arguments plus a narrow shell-free options object. Exact regressions cover both
+  mutation helpers through `selectedBox()`, both omitted process export forms, and
+  `{ shell: true }` with metacharacter-bearing Git arguments.
+- Focused checks after the eighteenth remediation passed: non-incremental TypeScript,
+  P9 evidence-v2 adversarial tests, trusted-proof self-test, production-authority tests,
+  and root whitespace validation. The same reviewer must recheck these exact bytes at
+  C0/H0 before candidate freeze.
+- The same reviewer rejected the eighteenth-remediation recheck `C0/H3/M0/L0`. Stable
+  aliases of mutation-target selector functions still erased call-selected facts; a
+  locally returned process launcher could be invoked without entering the process-call
+  classifier; and CommonJS `module.exports` process containers were outside ESM-only
+  export propagation. The nineteenth remediation resolves const callable aliases to
+  their returned mutation roots, adds local process-return wrappers to the process
+  binding fixed point, and rejects CommonJS process exports at their exporter boundary
+  while also deriving their default/named module facts. Exact alias, local-wrapper, and
+  `.cjs` exporter/consumer regressions are included. Same-reviewer C0/H0 recheck remains
+  mandatory before freeze.
+- The same reviewer rejected the nineteenth-remediation recheck `C0/H3/M0/L0`. CommonJS
+  member and mutation exports were still unbound, parenthesized/conditional/nested/object
+  process-return wrappers escaped direct process resolution, and mutation-helper values
+  containing a local capability call lost that callable's fixed-point fact. The
+  twentieth remediation covers `module.exports.*` plus `Object.assign`/`Reflect.set`
+  CommonJS exports, recursively normalizes process-return expression forms and nested
+  declarations, and merges every nested local callable fact in a mutation value. Exact
+  multi-module and immediate-execution regressions accompany each finding. The same
+  reviewer must return C0/H0 before freeze.
+- The same reviewer rejected the twentieth-remediation recheck `C0/H2/M0/L0`. Named
+  object/class/array/destructured process-capability containers remained outside the
+  direct binding graph, and stable aliases of `module.exports`/`exports` erased CommonJS
+  exporter facts. The twenty-first remediation conservatively propagates contained
+  process methods into every bound local/class name and treats any member of such a
+  container as process-capable. A fixed-point CommonJS export-alias map now feeds both
+  direct assignment and shared mutation-helper export analysis. Exact named-container,
+  destructuring, class, array, and aliased CommonJS regressions pass; same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-first-remediation recheck `C0/H2/M0/L0`.
+  Computed/nested access into named process containers still required a direct static
+  member, and CommonJS alias discovery still excluded let/var, transparent wrappers,
+  destructuring, and nested scopes. The twenty-second remediation propagates a bound
+  container's process fact through every member-access depth even when the member is
+  computed, and derives CommonJS aliases from all variable declarations/scopes with
+  transparent-expression and `{ exports: alias }` handling. New top-level tests avoid
+  relying on exported-function facts. Same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-second-remediation recheck `C0/H2/M0/L0`.
+  Process launchers could still escape as call arguments or through containers mutated
+  after initialization, and CommonJS export aliases created by assignment,
+  conditional/logical selection, local function return, or a containing object were
+  omitted. The twenty-third remediation treats calls receiving process capabilities as
+  writer boundaries, propagates process facts through assignment roots, and computes
+  CommonJS export aliases to a fixed point across those expression and container forms.
+  Exact top-level and CommonJS regressions cover every reported variant. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-third-remediation recheck `C0/H2/M0/L0`.
+  Constructor arguments, tagged-template substitutions, and generator yields escaped
+  process classification, while CommonJS export roots passed through installer calls,
+  arrays/destructuring, or call-built containers escaped exporter facts. The
+  twenty-fourth remediation extends process classification to new/tagged-template
+  syntax and return/yield facts. CommonJS analysis recursively observes call/container
+  expressions, maps call/new arguments to local parameters, and conservatively rejects
+  any `module.exports` boundary that shares a module with child-process capability.
+  Exact regressions cover every reported form. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-fourth-remediation recheck `C0/H2/M0/L0`.
+  Computed or alternate `child_process` loaders escaped literal-only acquisition facts,
+  and `node:worker_threads` could execute a data-URL module outside dynamic-execution
+  inventory. The twenty-fifth remediation normalizes concatenated/template/joined
+  specifiers, recognizes `require`, `module.require`, and
+  `process.getBuiltinModule`, carries unresolved loader forms conservatively, and models
+  direct/namespace/returned/exported Worker capability in both writer inventory and
+  runtime closure. Exact regressions cover all reported variants. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-fifth-remediation recheck `C0/H2/M0/L0`.
+  Loader aliases/returns/binds/reflection/comma selection/`createRequire` and separately
+  computed names escaped, as did executable `cluster`, internal process binding, Node
+  module compilation, and inspector evaluation. The twenty-sixth remediation replaces
+  that enumerated edge with a fail-closed Node-execution boundary shared by inventory
+  and runtime closure: transferred or dynamic loaders, execution-capable Node module
+  boundaries, `process.binding`, `process.dlopen`, and `_compile` are rejected. Exact
+  regressions cover every reported probe. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-sixth-remediation recheck `C0/H3/M0/L0`.
+  Dynamic/rest/computed process/Worker members, aliased Node primitive names and
+  `inspector/promises`, and native `.node` addons remained outside closure. The
+  twenty-seventh remediation fails closed on unresolved namespace members and computed
+  destructures, recognizes dangerous member names across property/binding/composed
+  forms and execution-capable module subpaths, and rejects both direct loads and any
+  tracked/discovered native addon excluded from JS/TS inspection. Exact regressions
+  cover every reported probe. Focused non-incremental typecheck, evidence-v2,
+  trusted-proof, production-authority, and root whitespace checks pass; same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-seventh-remediation recheck `C0/H4/M0/L0`.
+  Assignment-form destructuring still erased process/Worker and unsafe primitive facts;
+  extensionless/nonstandard CommonJS representations and imports outside the web source
+  set remained executable but unresolved. The twenty-eighth remediation derives roots
+  through assignment patterns, binds destructured process modules conservatively, and
+  recognizes assignment/dynamic-process primitive forms. A shared module-boundary
+  validator now permits only enumerated local JS/TS, safe data assets, Node built-ins,
+  and declared locked packages; every unresolved representation, outside/absolute/URL
+  path, or undeclared package fails closed in both inventory and runtime closure. Exact
+  regressions cover every reported probe. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-eighth-remediation recheck `C0/H3/M0/L0`.
+  TypeScript import-equals, loader-capable or local declared packages, and CommonJS
+  execution of apparent asset/data suffixes remained outside the shared boundary. The
+  twenty-ninth remediation models ImportEquals in both boundary and process facts,
+  requires non-local SHA-512-locked package provenance while rejecting known loader
+  package roots, and limits asset/data exemptions to ES module semantics. Every
+  CommonJS local load must resolve to enumerated JS/TS, closing CSS, case-variant JSON,
+  symlink, and package-main representation variants. Exact regressions cover every
+  reported probe. Focused non-incremental typecheck, evidence-v2, trusted-proof,
+  production-authority, and root whitespace checks pass; same-reviewer C0/H0 recheck
+  remains mandatory.
+- Fresh-context reviewer `/root/rev7_prefreeze_safe` statically reviewed the
+  twenty-ninth-remediation tree after the prior reviewer became unavailable and
+  rejected it `C0/H4/M0/L0`. Export-equals/import-equals facts were not propagated;
+  computed assignment patterns could extract opaque Node primitives; integrity-bearing
+  `npm:` aliases hid loader packages; and ESM assets were trusted lexically before
+  resolution or symlink checks. The thirtieth remediation propagates writer/prototype
+  facts through export/import-equals, fails closed on computed assignment destructuring,
+  excludes registry aliases from the integrity-backed package allowlist, and requires
+  ESM assets to resolve to existing contained regular non-symlink files with exact
+  lowercase data extensions and valid JSON where applicable. Exact regressions cover
+  every reported family. Focused non-incremental typecheck, evidence-v2, trusted-proof,
+  production-authority, and root whitespace checks pass; fresh C0/H0 prefreeze recheck
+  remains mandatory.
+- The same reviewer rejected the thirtieth-remediation recheck `C0/H1/M1/L0`.
+  Computed declaration/parameter destructuring remained a high escape, and direct tests
+  were missing for prototype import-equals propagation, local integrity-bearing
+  dependencies, and ESM asset symlinks. The thirty-first remediation rejects computed
+  property names in every binding element and adds exact declaration/parameter tests.
+  The suite also now directly covers export/import-equals prototype propagation, a
+  `file:` dependency carrying a lock integrity field, and a JSON asset symlink. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; fresh C0/H0 prefreeze recheck remains mandatory.
+- The same reviewer rejected the thirty-first-remediation recheck `C0/H1/M0/L0` solely
+  because computed destructuring in a `for...of`/`for...in` assignment target is neither
+  a binding element nor a binary-assignment left side. The thirty-second remediation
+  rejects computed properties beneath either loop form and adds an exact `for...of`
+  regression alongside the assignment/declaration/parameter controls. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; fresh C0/H0 prefreeze recheck remains mandatory.
+- Fresh-context read-only reviewer `/root/rev7_prefreeze_safe` rechecked the stable
+  thirty-second-remediation tree and returned `PASS C0/H0/M0/L0`. It confirmed both
+  loop forms are closed, the exact `for...of` regression passes, and the complete
+  baseline diff contains no remaining finding. The prefreeze C0/H0 gate is satisfied;
+  there are no medium/low dispositions to carry.
+  This is not full replacement-candidate verification. Fresh prefreeze review, locked
+  full verification, final evidence update, a new immutable replacement candidate,
+  manifest, independent final acceptance, direct-child attestation, and governed
+  delivery remain mandatory.
+- P9 remains planned and unstarted. No Google/Drive/Vercel/environment discovery,
+  spreadsheet access or write, workflow dispatch, deployment/configuration change,
+  rollback, schedule activation, form interaction, or applicant-data access is part of
+  this resumed Revision 7 work.
+
+## Historical Claude transfer checkpoint — not accepted, not attested, P9 not started
+
+- Transfer branch: `codex/plan-rev7-readonly-p9`.
+- Local isolated worktree holding that branch:
+  `/private/tmp/program_code-plan-rev7-readonly-p9`. Preserve this worktree until the
+  branch is successfully pushed or otherwise backed up.
+- Exact live baseline used for this work: `origin/main`
+  `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`.
+- Accepted P8 attestation in that baseline: direct-child attestation
+  `20eeb53c80fce4e79a689128918a12361233aa7b` over candidate
+  `cc69d276c85f931499a23a5abde623bda321e0c0`.
+- Rejected first Revision 7 candidate:
+  `1c23d4fef71635c75702e638f268501318f403ec`. Never attest, rebind, amend, or
+  present that commit or its rejected manifest as accepted.
+- Explicitly non-accepted remediation checkpoint:
+  `9819d2c8f0f7abdffb6febec0f511216938e370d`. This is a WIP preservation commit,
+  not a frozen candidate. No Revision 7 manifest, review record, direct-child
+  attestation, PR delivery, merge, or deployment has been completed for it.
+- Local documentation handoff commit:
+  `8756d093f77f751380f301d4fc7ef98b0b6a4d23`. The final local transfer tip is the
+  later commit containing this authentication note; resolve it with `git rev-parse
+  codex/plan-rev7-readonly-p9`.
+- GitHub transfer is not yet complete. A bounded `git fetch origin` attempt after the
+  handoff commit failed with `Repository not found`; `gh auth status` reported invalid
+  stored authentication for both locally known accounts. No token was requested,
+  displayed, changed, or stored, and no remote branch or pull request was created.
+  After restoring approved GitHub authentication, push this existing local branch with
+  `git push -u origin codex/plan-rev7-readonly-p9`; do not force-push or rewrite it.
+- The Codex execution was stopped at Kelsey's request before final preflight review and
+  full replacement-candidate verification. No Google/Drive/Vercel/GitHub-environment
+  discovery, spreadsheet access, spreadsheet write, configuration switch, workflow
+  dispatch, deployment, rollback, or P9 runtime implementation occurred during
+  Revision 7. The P8 monitoring schedule remains disabled.
+
+### Non-negotiable authority boundary
+
+- Production spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is read-only. There is no
+  authority to mutate its cells, metadata, permissions, sharing, tabs, forms, or
+  backups, including during rollback.
+- Spreadsheet writes are authorized only on testing spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` and only when the active stage
+  requires them. Revision 7 itself requires no spreadsheet write.
+- A connected Kelsey Drive account is not the deployed application's identity and is
+  not proof of runtime or backup readability.
+- Do not begin P9 or run the dormant `.github/workflows/p9-evidence.yml` workflow.
+  First deliver Revision 7, then complete the separately attested
+  `P9-IDENTITY-PINS` transition, and keep P9 `BLOCKED` until every entry gate in this
+  handoff, the canonical plan, build state, and P9 kickoff is directly proved.
+
+### What the WIP remediation contains
+
+- Strict schema-v2 entry, deployment, and post-cutover receipts with derived IDs,
+  chronology, baseline/Git ancestry, OIDC artifact provenance, provider bindings,
+  runtime configuration bindings, writer inventory, and executed write-isolation
+  evidence.
+- A dormant hosted-runner workflow with predecessor-attested entry, cutover, rollback,
+  restored-cutover, and finalize phases. Its presence is not permission to dispatch it.
+- Fail-closed production-write discovery for Google mutators and generic network
+  clients, including aliased/composed request methods and URLs.
+- Exact direct Viewer permission-detail proof, bounded raw/canonical-padded-base64
+  service-account credential parsing, and the predeclared `P9-IDENTITY-PINS` mechanism.
+- A full-GridData, fresh-nonce application-read challenge and exact runtime binding for
+  the health route, public route, and one shared production loader at the provider-
+  reported runtime commit. Rollback carries the binding but no application-read probe.
+
+### Verification actually completed on the WIP bytes
+
+At `2026-08-30T23:27:19Z`, before the WIP checkpoint commit:
+
+- `npx tsc --noEmit` — PASS.
+- `node --import tsx scripts/test-p9-evidence-v2.ts` — PASS.
+- `node --import tsx scripts/p9-trusted-proof.ts --mode=self-test` — PASS.
+- `node --import tsx scripts/test-production-authority.ts` — PASS.
+- `node --import tsx scripts/validate-build-plan.ts` — expected pre-attestation failure
+  with exactly three errors: absent `PLAN-REV7` manifest, absent `PLAN-REV7` review,
+  and absent committed direct-child manifest/review attestation.
+- `git diff --check` — PASS.
+
+The `npm run ...` wrappers can fail in the restricted Codex sandbox because the `tsx`
+CLI cannot create its IPC socket (`listen EPERM`); the identical modules above were run
+with Node's `--import tsx` path. This is an environment limitation, not a recorded pass
+for the wrappers. Locked install, the complete test suite, production build, dependency
+audits, final static scans, fresh live-origin verification, final manifest validation,
+and independent final review have **not** been rerun after the last remediation and
+remain mandatory.
+
+The stable thirty-second-remediation tree then received a fresh read-only prefreeze
+`PASS C0/H0/M0/L0`. Kelsey supplied an exact ordinary-terminal Turbopack build pass,
+after which the final locked agent-captured window passed install, focused controls,
+the expected three-gate pre-attestation validation, typecheck, full P0-P8 tests, both
+zero-vulnerability audits, YAML parsing, both whitespace checks, exact 17-path
+enumeration, and production-write/P8-schedule static scans. Secure browser/keyring
+authentication now identifies active `whitefishscholarship`; live `main` is exact
+baseline `5c6040e`, and P8's candidate/direct-child two-file attestation topology is
+unchanged. Exact outputs, provenance, timestamps, and log digests are recorded in
+`docs/evidence/PLAN-REV7.md`. No replacement candidate, manifest, final review,
+attestation, push, PR, merge, deployment, or P9 action has yet been created. The final
+post-documentation reviewer recheck returned `PASS C0/H0/M0/L0` and explicitly permits
+immutable replacement-candidate freeze. Freeze a new candidate and continue the
+governed manifest/review/attestation sequence.
+
+### Required continuation sequence
+
+1. Fetch live `origin/main` and stop if it is no longer exact
+   `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd` or no longer contains accepted P8
+   attestation `20eeb53c80fce4e79a689128918a12361233aa7b` with the required direct-child
+   topology. Do not silently rebase this governed work onto a different baseline.
+2. Check out `codex/plan-rev7-readonly-p9` at this handoff tip and read the repository
+   contract, plan, build state, this handoff, P8 evidence/manifest/review, P9 kickoff,
+   and `docs/evidence/PLAN-REV7.md` in their required order.
+3. Treat `9819d2c8f0f7abdffb6febec0f511216938e370d` as WIP only. Review the complete
+   baseline-to-tip change set and reproduce every earlier rejected finding and its
+   remediation. Do not generate a manifest yet.
+4. Resolve this open high-risk audit question before freeze: the current runtime-source
+   analyzer proves that `mapP9Scholarships(response.data.sheets ?? [])` is called, but
+   must be adversarially checked to ensure it truly rejects a mapper that ignores its
+   argument or returns a constant. The plan/evidence claim that constant-return and
+   unused-read paths fail closed. Add a direct negative test and strengthen the AST/data-
+   flow proof if that claim is not already mechanically true. Also adversarially inspect
+   every exact-loader/route/binding and clean-checkout assertion; do not rely only on
+   the happy-path fixtures.
+5. Obtain a fresh-context, read-only prefreeze review of the final working-tree bytes.
+   It must receive the original objective, baseline, rejected candidate and findings,
+   complete diff, tests, and explicit no-edit instructions. Remediation stays with the
+   implementation agent. Require C0/H0 before freezing.
+6. Run and record a fresh locked full verification window exactly as required by
+   `docs/evidence/PLAN-REV7.md`: dependency install, focused P9 tests, plan check with
+   only the three expected pre-attestation errors, typecheck, full tests, production
+   build, dependency audits, YAML parse, whitespace checks, production-write and P8-
+   schedule scans, and authenticated live-origin/P8 topology verification.
+7. Update evidence with exact commands, timestamps, outputs/digests, and the complete
+   baseline-to-candidate path set. Commit a **new** immutable replacement candidate;
+   never amend or reuse the rejected `1c23d4f` candidate.
+8. Generate the complete candidate manifest from the exact baseline, then give a
+   genuinely independent fresh-context reviewer the immutable candidate, manifest,
+   original objective, plan, rejected findings/remediation, diff, and verification
+   evidence. The reviewer must not edit. Any finding returns to implementation and a
+   new candidate/recheck cycle.
+9. Only after C0/H0 acceptance, add exactly
+   `docs/evidence/PLAN-REV7-manifest.json` and `docs/reviews/PLAN-REV7.json` in the
+   candidate's direct-child attestation commit. Re-run locked validation at that exact
+   tip, then perform only the governed Revision 7 PR/CI/Preview/Production delivery and
+   smoke authorized in build state.
+10. Stop after Revision 7 delivery. Do not begin P9. The next transition is
+    `P9-IDENTITY-PINS`; operational discovery or permission/configuration changes are
+    not authorized merely because its mechanism now exists.
+
+### Suggested Claude opening instruction
+
+> Continue the unfinished, non-accepted Plan Revision 7 remediation from branch
+> `codex/plan-rev7-readonly-p9`. Follow `AGENTS.md` and the required read order exactly.
+> Treat commit `9819d2c8f0f7abdffb6febec0f511216938e370d` as a WIP checkpoint, never as a
+> candidate or acceptance. Do not begin P9; do not access or mutate Google Drive,
+> Sheets, Vercel, deployment configuration, or the P8 schedule. Production spreadsheet
+> `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is strictly read-only, and only the
+> testing spreadsheet may ever be written when an active stage requires it. First
+> adversarially audit and finish the Revision 7 runtime-binding/dataflow remediation,
+> including a direct constant-return mapper negative, then complete fresh prefreeze
+> review, full verification, a new immutable candidate, independent final review,
+> manifest, direct-child attestation, and governed Revision 7 delivery. Stop again
+> before P9 and report any unmet entry gate as `BLOCKED`.
+
+## Plan Revision 7 work state — P9 remains unstarted
+
+- Live `origin/main` and Revision 7 baseline are exact
+  `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`. Accepted P8 attestation
+  `20eeb53c80fce4e79a689128918a12361233aa7b` is present in its history as the direct
+  child of candidate `cc69d276c85f931499a23a5abde623bda321e0c0` and adds only the
+  P8 manifest/review paths.
+- Kelsey directly identified production spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`, prohibited every write to that ID,
+  authorized spreadsheet writes only on testing spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, authorized the P9 source/configuration
+  cutover and governed Git/Preview/Production delivery, and named Kelsey Stuart as
+  deployment and rollback owner.
+- Revision 6 cannot start P9 under that boundary: its validator requires production
+  mutation authority and its contract requires post-write reconciliation and restoring
+  a production backup. Revision 7 replaces only those mechanics with a read-only
+  production source/configuration cutover, complete post-cutover reconciliation, and
+  application revision/configuration rollback.
+- Static inspection found that current `GOOGLE_SHEET_ID` feeds the authenticated admin
+  append route while the public scholarship API serves the accepted P7 fixture. P9 must
+  not simply replace that variable. It must introduce a separate read-only production
+  configuration and prove the production ID cannot reach a write call; write-capable
+  paths remain testing-only or disabled.
+- Production source revision `9857` was last observed unchanged during the bounded
+  pre-authority read/copy sequence; Revision 7 performs no fresh Google access, so its
+  current revision is unknown until an authorized entry check. Two private native
+  sheet-only backups were created for the exact authorized scholarship tabs: main backup
+  `1_UARat1DIg9ZW2ciViVFK5gH51vk8VAr1CvNo4lLcZI` matches native CellData SHA-256
+  `e67b548d3835eb0e37c78f685cbced8932771314c530682dfe781a95a9ec6551`; Unique Finds
+  backup `1RIxFui5dAX7ieC_iqWdJ1IuxImWC7S_rs3N2fgUX9yw` matches
+  `019e08e246d8180cdd62a75ec1ee79936b02ee5a5032e897bd2f00a947e9d2ed`.
+  Backups are evidence only and may not be restored into production under current
+  authority. The original hash serialization was not recorded, so those values remain
+  historical provenance. Operative schema-v2 proof freshly hashes canonical JSON of
+  each exact bounded `sheets[].data` GridData payload under
+  `google-sheets-v4-griddata-canonical-json-v1`, requires source/existing-backup
+  equality, and requires the same canonical source hash throughout every phase.
+- Exact deployed-runtime direct-reader permission remains unverified. The two private
+  backup files are unshared, so same-principal backup readability is also unverified;
+  Revision 7 does not change those permissions. Exact Vercel project/team fingerprints
+  and the canonical student-facing Production hostname are not yet authority-pinned,
+  and the protected environment/secret provenance is operationally unverified. Machine
+  state records all of these gates as false/null. Exact entry source revalidation,
+  deployed application-path proof, and post-cutover zero-mutation proof are also false.
+  The only future population path is the predeclared `P9-IDENTITY-PINS` record at its
+  fixed evidence/manifest/review paths. It must populate all seven fingerprints together
+  from this null-pin baseline, keep P9 planned and every proof flag false, and receive a
+  fresh independent accepted review plus direct-child attestation before P9 entry.
+  A connected user Drive account, stored credential, or CI-runner Google read does not
+  satisfy the application-path gate. After Revision 7 delivery, P9 may not become active
+  until the exact runtime principal has one direct, unexpired Viewer permission rather
+  than Editor, the authorized verifier can read both backups, exact provider target
+  identities are accepted and pinned, and revision `9857`, exact tab/grid bounds,
+  source/backup hashes, unchanged sharing/revision, and zero writes pass the structured
+  `docs/evidence/P9-entry.json` validator. P9 may not become verified until deployment
+  smoke and rollback preserve those facts in `docs/evidence/P9-post-cutover.json` and
+  `docs/evidence/P9-deployment.json` binds real baseline/runtime Git objects, ancestry,
+  three distinct authenticated Vercel observations of the same rollback-safe runtime
+  commit, exact health identities/nonces, actual shared-loader configuration descriptors,
+  and runtime equivalence. Exact schema-v2 receipt bytes require hosted GitHub OIDC
+  artifact attestations from the delivered default-branch trusted workflow. Its
+  observation-only entry, cutover, rollback, restored-cutover, and finalize phases form
+  a predecessor-verified chain, with each health/source proof complete before the next
+  deployment is created. Schema-v1/self-asserted evidence cannot pass. After
+  merge, actual Production deployment authentication and smoke remain mandatory delivery
+  gates.
+- Cutover and restored-cutover health must emit a fresh nonce-bound application-read
+  observation for the exact production ID, sole read-only Sheets scope, and exact
+  authorized tabs/bounds. Its digests cover the full normalized bounded GridData plus
+  the fresh nonce—not stored source hashes—and the trusted runner independently computes
+  and requires exact equality without exposing cell values. Each phase also binds the
+  deployed health and public routes to one shared loader with direct dataflow at the
+  exact runtime commit; static rollback must emit no application-read observation.
+  This is the deployed application proof that entry's control-plane credential check
+  cannot supply.
+- First frozen Revision 7 candidate
+  `1c23d4fef71635c75702e638f268501318f403ec` was independently rejected by
+  `/root/rev7_final_review` C0/H2/M0/L0. Its receipt validators accepted stale/unknown
+  fields without adequate chronology/baseline binding, and fabricated provider/config
+  claims could pass without authenticated proof or executed writer-test provenance. Its
+  manifest digest
+  `655c9086b73d804410bed9087a4aa3d58bf395c4ea88d2107fd49ac9c751bd3`
+  is rejected and must not be rebound. The replacement remediation adds strict nested
+  schemas, derived digests, exact chronology, default-branch OIDC provenance, actual
+  runtime descriptors, TypeScript-AST writer inventory, and secrets-free executed
+  production-ID negative-test proof. The same reviewer must recheck the new candidate.
+- This execution is Plan Revision 7 only. P9 remains planned; no application runtime,
+  environment/deployment configuration, schedule, spreadsheet, form, provider, or
+  applicant-data mutation is in scope. The P8 monitoring schedule remains disabled.
+- Revision 7 must complete full verification, freeze, complete manifest, fresh-context
+  read-only acceptance, exact direct-child two-file attestation, governed PR delivery,
+  and Preview/Production verification. Stop after Revision 7 is delivered; begin P9
+  only in a later fresh execution from that delivered baseline.
+
+## P9 blockers requiring later owner action or authority
+
+- Identify the one service-account principal intended for the deployed app, reduce or
+  confirm its source permission as direct unexpired Viewer, and make both private backup
+  files readable to that same principal. If a different backup verifier is required,
+  record separate direct authority and review first. Codex has not changed sharing.
+- Supply and independently attest the exact non-secret Vercel project fingerprint, team
+  fingerprint, and canonical student-facing Production hostname. Revision 7 leaves
+  these null instead of trusting mutable secrets or an operator-selected deployment.
+- Authenticate that GitHub's `p9-production-verification` environment exists with the
+  required approval policy, environment-scoped secrets, and read-only API permissions.
+  Static repository review cannot prove hosted configuration.
+- Keep P9 `planned` and return `BLOCKED` until every machine gate is true. Do not run the
+  dormant workflow, query production/backups, change provider configuration, or start a
+  deployment merely to discover whether a prerequisite might pass.
 
 ## Current P8 accepted state (delivered)
 

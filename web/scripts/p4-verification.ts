@@ -24,6 +24,7 @@ import {
   type TypedDateInput,
   type VerificationSourceInput,
 } from '../src/lib/verification';
+import { P9_PRODUCTION_SPREADSHEET_ID } from './production-authority';
 import { canonicalizeAcquisitionUrl } from '../src/lib/acquisition';
 import {
   EvidenceSchema,
@@ -266,14 +267,20 @@ export function generateP4Evidence(): GeneratedP4Evidence {
   assert.equal(new Set(fixtures.fieldClaims.map((item) => item.id)).size, fixtures.fieldClaims.length, 'Field claim IDs must be unique');
 
   const buildState = readJson(path.join(repoRoot, 'docs/BUILD_STATE.json')) as {
+    planRevision: number;
     activeStageId: string | null;
     dataAuthority: { productionSpreadsheetId: string | null; productionMutationAuthorized: boolean };
     stages: Array<{ id: string; baselineCommit: string | null; status: string }>;
   };
   const p4 = buildState.stages.find((stage) => stage.id === 'P4');
   assertP4BuildStateTopology(buildState);
-  assert.equal(buildState.dataAuthority.productionSpreadsheetId, null);
   assert.equal(buildState.dataAuthority.productionMutationAuthorized, false);
+  if (buildState.planRevision >= 7) {
+    assert.equal(buildState.dataAuthority.productionSpreadsheetId, P9_PRODUCTION_SPREADSHEET_ID);
+    assert.equal(buildState.stages.find((stage) => stage.id === 'P9')?.status, 'planned');
+  } else {
+    assert.equal(buildState.dataAuthority.productionSpreadsheetId, null);
+  }
 
   const p3Acquisition = readJson(path.join(repoRoot, 'docs/evidence/P3-acquisition.json')) as {
     reportSha256: string;

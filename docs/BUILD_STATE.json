@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 6,
+  "planRevision": 7,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-08-30",
   "repository": {
@@ -25,9 +25,133 @@
       "basis": "The user directly granted the permissions previously listed for P5 after being told that P5 required explicit authority for revision fingerprint capture, reversible backup creation, and approved idempotent writes limited to the named testing sheet Master Database tab.",
       "scope": "Capture the testing spreadsheet revision fingerprint, create and verify a complete reversible backup, and apply only evidence-bound, approved, idempotent P5 changes to the testing spreadsheet Master Database tab after all pre-write gates pass. Production spreadsheet access or mutation, P6, coverage expansion, form or application interaction, provider contact, deployment-configuration changes, paid actions, destructive actions, and history rewriting remain unauthorized."
     },
-    "productionSpreadsheetId": null,
+    "p9TestingWriteAuthorization": {
+      "authorizationId": "P9-testing-sheet-write-2026-08-30",
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "authorizedAt": "2026-08-30T18:51:00Z",
+      "evidencePath": "docs/evidence/PLAN-REV7.md",
+      "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+      "exactTargetSelectionRequired": true,
+      "revisionFingerprintRequired": true,
+      "reversibleBackupRequired": true,
+      "reviewedDryRunRequired": true,
+      "readbackReconciliationRequired": true,
+      "basis": "The user directly stated that spreadsheet writes are authorized only on the named testing spreadsheet and expressly prohibited every write to the production spreadsheet.",
+      "scope": "P9 may write only the testing spreadsheet after an exact non-applicant target set, current revision fingerprint, complete reversible backup, reviewed dry-run, bounded idempotent operation, immediate readback, and reconciliation are recorded. This authority does not require a testing write and does not authorize any production spreadsheet mutation, applicant data, form or application interaction, provider contact, paid action, destructive action, or history rewrite."
+    },
+    "productionSpreadsheetId": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
     "productionMutationAuthorized": false,
-    "productionAuthorization": null
+    "productionAuthorization": {
+      "authorizationId": "P9-read-only-production-migration-2026-08-30",
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "authorizedAt": "2026-08-30T18:51:00Z",
+      "evidencePath": "docs/evidence/PLAN-REV7.md",
+      "spreadsheetId": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
+      "spreadsheetTitle": "Whitefish High School Senior Scholarships",
+      "accessMode": "read-only",
+      "sourceReadAuthorized": true,
+      "applicationConfigurationSwitchAuthorized": true,
+      "productionMutationAuthorized": false,
+      "preEntryControlDeviationRecorded": true,
+      "preEntryControlDeviationEvidencePath": "docs/evidence/PLAN-REV7.md",
+      "currentBackupRequired": true,
+      "backupVerified": true,
+      "runtimeReadPermissionVerificationRequired": true,
+      "runtimeReadPermissionVerified": false,
+      "runtimeReadPermissionEvidencePath": "docs/evidence/P9-entry.json",
+      "runtimePrincipalDirectReaderVerificationRequired": true,
+      "runtimePrincipalDirectReaderVerified": false,
+      "runtimePrincipalFingerprintSha256": null,
+      "runtimePrincipalDirectReaderEvidencePath": "docs/evidence/P9-entry.json",
+      "backupRuntimeReadPermissionVerificationRequired": true,
+      "backupRuntimeReadPermissionVerified": false,
+      "backupRuntimePrincipalFingerprintSha256": null,
+      "backupRuntimeReadPermissionEvidencePath": "docs/evidence/P9-entry.json",
+      "providerTargetIdentityPinningRequired": true,
+      "providerTargetIdentityPinned": false,
+      "providerProjectFingerprintSha256": null,
+      "providerTeamFingerprintSha256": null,
+      "providerCanonicalProductionHostnameSha256": null,
+      "providerTargetIdentityEvidencePath": "docs/evidence/P9-entry.json",
+      "hostedVerificationEnvironmentVerificationRequired": true,
+      "hostedVerificationEnvironmentVerified": false,
+      "hostedVerificationEnvironmentFingerprintSha256": null,
+      "hostedVerificationEnvironmentEvidencePath": "docs/evidence/P9-entry.json",
+      "runtimeCredentialProvenanceVerificationRequired": true,
+      "runtimeCredentialProvenanceVerified": false,
+      "runtimeCredentialProvenanceFingerprintSha256": null,
+      "runtimeCredentialProvenanceEvidencePath": "docs/evidence/P9-entry.json",
+      "identityPinAttestationRequired": true,
+      "identityPinStageId": "P9-IDENTITY-PINS",
+      "identityPinEvidencePath": "docs/evidence/P9-identity-pins.md",
+      "identityPinManifestPath": "docs/evidence/P9-identity-pins-manifest.json",
+      "identityPinReviewPath": "docs/reviews/P9-identity-pins.json",
+      "entrySourceReverificationRequired": true,
+      "entrySourceReverificationVerified": false,
+      "entrySourceReverificationEvidencePath": "docs/evidence/P9-entry.json",
+      "deployedApplicationReadPathVerificationRequired": true,
+      "deployedApplicationReadPathVerified": false,
+      "deployedApplicationReadPathEvidencePath": "docs/evidence/P9-post-cutover.json",
+      "postCutoverNonMutationVerificationRequired": true,
+      "postCutoverNonMutationVerified": false,
+      "postCutoverNonMutationEvidencePath": "docs/evidence/P9-post-cutover.json",
+      "deploymentRecordEvidencePath": "docs/evidence/P9-deployment.json",
+      "evidenceSchemaVersion": 2,
+      "trustedWorkflowPath": ".github/workflows/p9-evidence.yml",
+      "trustedProofScriptPath": "web/scripts/p9-trusted-proof.ts",
+      "trustedWorkflowMode": "manual-protected-default-branch-only",
+      "trustedEvidencePhases": [
+        "entry",
+        "cutover",
+        "rollback",
+        "restored-cutover",
+        "finalize"
+      ],
+      "runtimeDeploymentStrategy": "same-rollback-safe-commit-three-deployments",
+      "legacyReceiptSchemasAccepted": false,
+      "writeIsolationProofRequired": true,
+      "deploymentOwner": "Kelsey Stuart",
+      "rollbackOwner": "Kelsey Stuart",
+      "authorizedTabs": [
+        {
+          "sheetId": 405588227,
+          "title": "Resource: WHS Senior Scholarships_Updated 2_3_26",
+          "rowCount": 807,
+          "columnCount": 27,
+          "boundedRange": "'Resource: WHS Senior Scholarships_Updated 2_3_26'!A1:AA807"
+        },
+        {
+          "sheetId": 1998253810,
+          "title": "Resource: \"Unique\" Finds_Updated 10_2_25",
+          "rowCount": 973,
+          "columnCount": 29,
+          "boundedRange": "'Resource: \"Unique\" Finds_Updated 10_2_25'!A1:AC973"
+        }
+      ],
+      "backupReceipt": {
+        "sourceRevisionId": "9857",
+        "sourceRevisionAfterCopyAndReadback": "9857",
+        "sourceModifiedTime": "2026-05-19T20:01:00.674Z",
+        "capturedAt": "2026-08-30T18:36:18.588Z",
+        "scope": "authorized-scholarship-tabs-only",
+        "backups": [
+          {
+            "sourceSheetId": 405588227,
+            "backupSpreadsheetId": "1_UARat1DIg9ZW2ciViVFK5gH51vk8VAr1CvNo4lLcZI",
+            "nativeCellPayloadSha256": "e67b548d3835eb0e37c78f685cbced8932771314c530682dfe781a95a9ec6551"
+          },
+          {
+            "sourceSheetId": 1998253810,
+            "backupSpreadsheetId": "1RIxFui5dAX7ieC_iqWdJ1IuxImWC7S_rs3N2fgUX9yw",
+            "nativeCellPayloadSha256": "019e08e246d8180cdd62a75ec1ee79936b02ee5a5032e897bd2f00a947e9d2ed"
+          }
+        ]
+      },
+      "basis": "The user identified the exact production spreadsheet and two scholarship tabs, then directly clarified that neither Codex nor the application is authorized to write that production ID. The user authorized P9 production source migration, application configuration switching, governed Git and pull-request delivery, Preview and Production deployment, verification, reconciliation, and rollback, and named Kelsey Stuart as both deployment and rollback owner.",
+      "scope": "Use only the two exact scholarship tabs as read-only P9 source input; implement a separately configured read-only production data path; keep every write-capable spreadsheet path pinned to the testing ID or disable it; verify mapping, reconciliation, deployment smoke, and configuration rollback. Never write, append, clear, format, share, rename, restore, or otherwise mutate the production spreadsheet. Do not access unrelated tabs or applicant data."
+    }
   },
   "deployment": {
     "mainAutoDeploysProduction": true,
@@ -112,6 +236,15 @@
         "evidencePath": "docs/evidence/STANDING-OPERATING-MANDATE.md",
         "basis": "The user approved the recommended Plan Revision 5 standing mandate after receiving a plain-English description of its autonomous P3-P8 implementation, review, Git delivery, and Vercel effects plus its reserved-action boundaries.",
         "scope": "After P7 is accepted and delivered, implement and deliver P8 only under its canonical contract, including local/read-only monitoring logic, dry runs, commits, independent review, attestation, push, pull request, merge, and resulting Vercel Preview and Production deployments. No deployment-configuration or schedule change, spreadsheet write, production/P9 action, paid or destructive action, form/application interaction, provider contact, gate weakening, history rewrite, or scope expansion."
+      },
+      {
+        "stageId": "P9",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-08-30",
+        "evidencePath": "docs/evidence/PLAN-REV7.md",
+        "basis": "The user directly authorized P9 production source migration, application configuration switching, governed Git and pull-request delivery, Vercel Preview and Production deployment, verification, reconciliation, and rollback, while expressly prohibiting every production spreadsheet write and naming Kelsey Stuart as deployment and rollback owner.",
+        "scope": "After Plan Revision 7 is independently accepted, attested, delivered, and its runtime-read permission gate passes, implement and deliver P9 only as a read-only production-source and application-configuration cutover. Authority includes stage commits, independent review, attestation, branch push, pull request, merge, resulting Vercel Preview and Production deployments, smoke, reconciliation, and configuration rollback. It excludes every production spreadsheet mutation, unrelated production tabs or data, applicant data, schedule activation, forms/application interactions, provider contact, paid or destructive actions, gate weakening, history rewrite, and scope expansion."
       }
     ],
     "deliveryIntegrations": [
@@ -222,6 +355,22 @@
           "basis": "After the exact P2 merge exposed a substantive package-script conflict, the user explicitly authorized Plan Revision 6 to add web/package.json as the narrowly governed third P2 integration-resolution path while preserving every Revision 5 test command and adding only P2's exact model scripts and test command.",
           "scope": "Deliver only Plan Revision 6's deterministic P2 package-script integration rule by commit, independent review, attestation, branch push, pull request, merge, and resulting Vercel Preview and Production deployments. Then rebuild and deliver exact P2 candidate 1a6376207eb467ff0977298de16a1c0d0db1b3cd through attestation cc277b34075f6d648ff3c71022fadf6a6c632b34. Do not start P3 or perform spreadsheet writes, P9 or production-data actions, deployment-configuration changes, form or application interactions, provider contact, paid or destructive actions, or history rewriting."
         }
+      },
+      {
+        "id": "PLAN-REV7",
+        "status": "attestation-gated",
+        "baselineCommit": "5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd",
+        "evidencePath": "docs/evidence/PLAN-REV7.md",
+        "manifestPath": "docs/evidence/PLAN-REV7-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV7.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-08-30",
+          "evidencePath": "docs/evidence/PLAN-REV7.md",
+          "basis": "In the same direct statement that prohibited production writes, the user explicitly authorized governed Git and pull-request delivery plus Preview and Production deployment. Revision 7 is the dedicated governance-only prerequisite that records and machine-enforces that exact boundary before the separately authorized P9 runtime/configuration delivery can begin.",
+          "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify only Plan Revision 7 and its resulting Vercel Preview and Production deployments. Revision 7 records the exact production identity, read-only P9 authority, testing-only write boundary, backups, owners, and machine-enforced no-write cutover contract. It does not start P9, change application runtime behavior or deployment configuration, write either spreadsheet, activate monitoring, access unrelated tabs, handle applicant data, submit forms, contact providers, perform paid/destructive actions, weaken gates, or rewrite history."
+        }
       }
     ]
   },
@@ -331,7 +480,7 @@
   ],
   "invariants": [
     "Execute one stage only.",
-    "Do not mutate the production spreadsheet before accepted P9 authority.",
+    "Never mutate the production spreadsheet under the Plan Revision 7 read-only P9 authority.",
     "Do not silently truncate source pages, children, results, or awards.",
     "Do not store applicant PII or credentials.",
     "Require independent fresh-context review before stage acceptance.",

@@ -37,8 +37,54 @@ it is convenient or adjacent.
 
 - The testing spreadsheet is
   `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`.
-- The production Whitefish Scholarship spreadsheet must not be configured,
-  mutated, or migrated before P9 and explicit production-migration authority.
+- The production Whitefish Scholarship spreadsheet is
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`. Plan Revision 7 authorizes only
+  bounded read access and an application-configuration cutover in P9. Never write,
+  append, clear, format, share, rename, restore, or otherwise mutate that spreadsheet.
+- P9 may read only the two scholarship tabs and bounds pinned in `BUILD_STATE`. Do not
+  access unrelated tabs or applicant data. The deployed runtime identity's read access
+  must be verified before P9 becomes active: require the exact principal to have one
+  direct, unexpired Viewer permission on production and require that same authorized
+  verifier to read both exact private backups. A connected user account, stored secret,
+  or CI-runner read is not deployed application-path proof. Exact Vercel project/team
+  fingerprints and the canonical student-facing Production hostname must be separately
+  authority-pinned, and the protected environment/credential provenance must be
+  authenticated. All corresponding false/null `BUILD_STATE` gates are stop conditions;
+  Revision 7 does not change permissions or provider configuration. Reverify source
+  revision `9857`, the exact
+  tab identities/grid bounds, both source/backup fingerprints, and unchanged post-read
+  revision at P9 entry. Preserve the two historical opaque hashes as provenance, but
+  make the operative comparison a fresh source-versus-existing-backup equality under
+  `google-sheets-v4-griddata-canonical-json-v1` over the exact bounded GridData payload.
+  Any mismatch blocks P9 pending a newly authorized amendment and current
+  backup receipt; do not expand a range silently.
+- Bind the deployed-runtime/revision/source-backup entry proof to structured
+  `docs/evidence/P9-entry.json`. Bind the post-deployment and rollback zero-mutation
+  proof to `docs/evidence/P9-post-cutover.json`. Both paths are immutable; P9's accepted
+  manifest must hash both receipts. Every P9 receipt must use the strict schema-v2
+  contract and pass exact GitHub OIDC artifact-attestation verification from the
+  delivered default-branch `.github/workflows/p9-evidence.yml`; schema-v1 or
+  self-asserted provider JSON is forbidden. The validator must reject missing,
+  malformed, stale, expanded-scope, unauthenticated, or later-rebound receipts.
+- Bind the rollback probe to `docs/evidence/P9-deployment.json`. Its deployed and
+  runtime commit must exist, descend from P9's exact baseline, precede the final
+  candidate, and remain byte-equivalent to the final candidate across every tracked
+  `web/` and deployment-control path. This includes catalog fixtures consumed by the
+  API. Deploy that same rollback-safe runtime commit three times with distinct provider
+  IDs: production-read cutover configuration, accepted-P7 static rollback
+  configuration, then restored production-read configuration. Each observation-only
+  phase proof must finish before the next deployment is created. The trusted workflow
+  must query the authenticated Vercel API, require health to return the exact provider
+  commit, fresh nonce, deployment ID, and actual shared-loader runtime descriptor, and
+  recompute its canonical digest. Cutover/restored health must return a nonce-bound
+  application-read observation whose digests cover the complete normalized bounded
+  GridData with the fresh nonce and match the trusted runner's independent computation;
+  it must not echo stored source hashes or cell values. The phase proof must also bind
+  both deployed routes to one statically verified shared loader and direct result
+  dataflow at the exact runtime commit; rollback must return none. Provider/runtime
+  observations must match the immutable authority pins, not merely each other.
+  SHA-shaped values, claimed booleans,
+  and unexecuted writer-test results are not evidence.
 - Never collect, reproduce, or commit applicant responses, credentials, dates of
   birth, addresses, phone numbers, transcripts, recommendation letters, or
   other applicant PII.
@@ -124,6 +170,24 @@ handling beyond already configured secure stores; destructive or unrecoverable a
 force-push or published-history rewrite; form submission or application interaction;
 provider contact; acceptance-gate weakening; and material scope expansion. Platform
 sandbox or authentication approvals remain separate technical safeguards.
+
+## P9 read-only production mandate — Plan Revision 7
+
+Kelsey directly authorized P9 production source migration, application-configuration
+switching, governed Git/PR delivery, Vercel Preview and Production deployment,
+verification, reconciliation, and rollback, with Kelsey as deployment and rollback
+owner. Kelsey expressly prohibited every write to the production spreadsheet and
+authorized spreadsheet writes only on the testing spreadsheet.
+
+Do not implement P9 by changing the existing write-capable `GOOGLE_SHEET_ID` to the
+production ID. P9 must use a distinct production configuration and a read-only Sheets
+client; every write-capable route must stay pinned to the testing spreadsheet or be
+disabled. Production rollback means application revision/configuration rollback only.
+The production backups are evidence and must not be restored under this authority.
+Testing-sheet writes remain gated by exact targets, a current revision fingerprint,
+reversible backup, reviewed dry-run, bounded idempotent write, readback, and
+reconciliation. Plan Revision 7 must be accepted, attested, and delivered before P9
+starts.
 
 ## Autonomous Git policy: no Git questions to Kelsey
 

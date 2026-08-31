@@ -18,6 +18,40 @@ import {
   changedStandingAuthorization,
   maximumAttestedPlanRevision,
 } from './governance-history';
+import {
+  P9_IDENTITY_PIN_EVIDENCE_PATH,
+  P9_IDENTITY_PIN_MANIFEST_PATH,
+  P9_IDENTITY_PIN_REVIEW_PATH,
+  P9_IDENTITY_PIN_STAGE_ID,
+  getCompleteP9IdentityPins,
+  hasAnyP9IdentityPin,
+  p9IdentityPinsChanged,
+  validateP9IdentityPinAttestationPresence,
+  type P9ProductionAuthorization,
+  type P9TestingWriteAuthorization,
+  p9ReadOnlyAuthorityChanged,
+  validateP9ReadOnlyAuthority,
+} from './production-authority';
+import {
+  P9_DEPLOYMENT_EVIDENCE_PATH,
+  P9_ENTRY_EVIDENCE_PATH,
+  P9_POST_CUTOVER_EVIDENCE_PATH,
+  P9_RUNTIME_EQUIVALENCE_PATHS,
+  P9_TRUSTED_PROOF_PATHS,
+  P9_EVIDENCE_REPOSITORY,
+  P9_SIGNER_WORKFLOW,
+  type P9AttestationVerification,
+  type P9EntryReceipt,
+  type P9EvidenceContext,
+  deriveP9WriteSurfaceInventory,
+  parseP9DeploymentRecord,
+  parseP9EntryReceipt,
+  parseP9PostCutoverReceipt,
+  validateP9DeploymentGitBindingV2,
+  validateP9DeploymentRecordV2,
+  validateP9EntryReceiptV2,
+  validateP9PostCutoverReceiptV2,
+} from './p9-evidence-v2';
 
 type StageStatus =
   | 'planned'
@@ -38,14 +72,6 @@ type Stage = {
   manifestPath: string;
   reviewPath: string;
   kickoffPath: string | null;
-};
-
-type ProductionAuthorization = {
-  authorizationId: string;
-  authorizedBy: string;
-  authorizedAt: string;
-  evidencePath: string;
-  scope: string;
 };
 
 type MergeAuthorization = {
@@ -115,9 +141,10 @@ type BuildState = {
       basis: string;
       scope: string;
     };
+    p9TestingWriteAuthorization?: P9TestingWriteAuthorization;
     productionSpreadsheetId: string | null;
     productionMutationAuthorized: boolean;
-    productionAuthorization: ProductionAuthorization | null;
+    productionAuthorization: P9ProductionAuthorization | null;
   };
   deployment: {
     mainAutoDeploysProduction: boolean;
@@ -229,8 +256,48 @@ function sha256File(relativePath: string): string {
   return createHash('sha256').update(fs.readFileSync(absolute(relativePath))).digest('hex');
 }
 
+function sha256FileIfPresent(relativePath: string): string | null {
+  try {
+    const target = absolute(relativePath);
+    if (!fs.existsSync(target) || !fs.statSync(target).isFile()) return null;
+    return createHash('sha256').update(fs.readFileSync(target)).digest('hex');
+  } catch {
+    return null;
+  }
+}
+
 function sha256Buffer(value: Buffer): string {
   return createHash('sha256').update(value).digest('hex');
+}
+
+type P9OperationalEvidenceIdentityContext = Pick<
+  P9EvidenceContext,
+  | 'runtimePrincipalFingerprintSha256'
+  | 'providerProjectFingerprintSha256'
+  | 'providerTeamFingerprintSha256'
+  | 'providerCanonicalProductionHostnameSha256'
+  | 'hostedVerificationEnvironmentFingerprintSha256'
+  | 'runtimeCredentialProvenanceFingerprintSha256'
+>;
+
+function p9OperationalEvidenceIdentityContext(
+  authorization: P9ProductionAuthorization,
+): P9OperationalEvidenceIdentityContext | null {
+  const pins = getCompleteP9IdentityPins(authorization);
+  if (!pins) return null;
+  return {
+    runtimePrincipalFingerprintSha256:
+      pins.runtimePrincipalFingerprintSha256,
+    providerProjectFingerprintSha256:
+      pins.providerProjectFingerprintSha256,
+    providerTeamFingerprintSha256: pins.providerTeamFingerprintSha256,
+    providerCanonicalProductionHostnameSha256:
+      pins.providerCanonicalProductionHostnameSha256,
+    hostedVerificationEnvironmentFingerprintSha256:
+      pins.hostedVerificationEnvironmentFingerprintSha256,
+    runtimeCredentialProvenanceFingerprintSha256:
+      pins.runtimeCredentialProvenanceFingerprintSha256,
+  };
 }
 
 function gitLines(args: string[]): string[] {
@@ -286,6 +353,54 @@ function isAncestor(ancestor: string, descendant: string): boolean {
     return true;
   } catch {
     return false;
+  }
+}
+
+function gitCommitTimestamp(commit: string): string | null {
+  return gitText(['show', '-s', '--format=%cI', commit])?.trim() ?? null;
+}
+
+function gitBlobSha256(commit: string, relativePath: string): string | null {
+  const value = gitBuffer(['show', `${commit}:${relativePath}`]);
+  return value ? sha256Buffer(value) : null;
+}
+
+function verifyP9ArtifactAttestation(
+  receiptPath: string,
+  workflowCommit: string,
+): P9AttestationVerification | null {
+  try {
+    execFileSync(
+      'gh',
+      [
+        'attestation',
+        'verify',
+        absolute(receiptPath),
+        '--repo',
+        P9_EVIDENCE_REPOSITORY,
+        '--signer-workflow',
+        P9_SIGNER_WORKFLOW,
+        '--source-digest',
+        workflowCommit,
+        '--deny-self-hosted-runners',
+      ],
+      {
+        cwd: repoRoot,
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'pipe'],
+      },
+    );
+    return {
+      verified: true,
+      subjectPath: receiptPath,
+      subjectSha256: sha256File(receiptPath),
+      repository: P9_EVIDENCE_REPOSITORY,
+      signerWorkflow: P9_SIGNER_WORKFLOW,
+      sourceDigest: workflowCommit,
+      denySelfHostedRunners: true,
+    };
+  } catch {
+    return null;
   }
 }
 
@@ -513,13 +628,18 @@ function validateBoundAttestation(
 type AttestedPlanAmendment = {
   record: PlanAmendment;
   candidateCommit: string;
+  attestationCommit: string;
 };
 
 function findCanonicalAttestation(
   subjectId: string,
   manifestPath: string,
   reviewPath: string,
-): { manifest: CandidateManifest; review: ReviewRecord } | null {
+): {
+  manifest: CandidateManifest;
+  review: ReviewRecord;
+  attestationCommit: string;
+} | null {
   const requiredPaths = [manifestPath, reviewPath].sort();
   for (const additionCommit of gitLines([
     'log',
@@ -558,13 +678,263 @@ function findCanonicalAttestation(
         gitObjectExists(manifest.candidateCommit) &&
         isAncestor(manifest.baselineCommit, manifest.candidateCommit)
       ) {
-        return { manifest, review };
+        return { manifest, review, attestationCommit: additionCommit };
       }
     } catch {
       continue;
     }
   }
   return null;
+}
+
+const P9_IDENTITY_PIN_PROOF_FLAGS = [
+  'runtimeReadPermissionVerified',
+  'runtimePrincipalDirectReaderVerified',
+  'backupRuntimeReadPermissionVerified',
+  'providerTargetIdentityPinned',
+  'hostedVerificationEnvironmentVerified',
+  'runtimeCredentialProvenanceVerified',
+  'entrySourceReverificationVerified',
+  'deployedApplicationReadPathVerified',
+  'postCutoverNonMutationVerified',
+] as const satisfies ReadonlyArray<keyof P9ProductionAuthorization>;
+
+function p9IdentityPinProofFlagsAreFalse(
+  authorization: P9ProductionAuthorization,
+): boolean {
+  return P9_IDENTITY_PIN_PROOF_FLAGS.every(
+    (field) => authorization[field] === false,
+  );
+}
+
+function withoutP9IdentityPins(value: BuildState): BuildState {
+  const normalized = structuredClone(value);
+  const authorization = normalized.dataAuthority.productionAuthorization;
+  if (authorization) {
+    authorization.runtimePrincipalFingerprintSha256 = null;
+    authorization.backupRuntimePrincipalFingerprintSha256 = null;
+    authorization.providerProjectFingerprintSha256 = null;
+    authorization.providerTeamFingerprintSha256 = null;
+    authorization.providerCanonicalProductionHostnameSha256 = null;
+    authorization.hostedVerificationEnvironmentFingerprintSha256 = null;
+    authorization.runtimeCredentialProvenanceFingerprintSha256 = null;
+  }
+  return normalized;
+}
+
+function validateP9IdentityPinGovernance(state: BuildState): void {
+  const authorization = state.dataAuthority.productionAuthorization;
+  if (!authorization) return;
+
+  const pinPaths = [
+    P9_IDENTITY_PIN_EVIDENCE_PATH,
+    P9_IDENTITY_PIN_MANIFEST_PATH,
+    P9_IDENTITY_PIN_REVIEW_PATH,
+  ];
+  const currentPins = getCompleteP9IdentityPins(authorization);
+  const anyCurrentPin = hasAnyP9IdentityPin(authorization);
+  const currentPinFiles = pinPaths.filter((relativePath) =>
+    fs.existsSync(absolute(relativePath)),
+  );
+  const historicalAttempts = gitLines([
+    'log',
+    '--reverse',
+    '--diff-filter=A',
+    '--format=%H',
+    '--',
+    P9_IDENTITY_PIN_MANIFEST_PATH,
+  ]);
+  const canonical = findCanonicalAttestation(
+    P9_IDENTITY_PIN_STAGE_ID,
+    P9_IDENTITY_PIN_MANIFEST_PATH,
+    P9_IDENTITY_PIN_REVIEW_PATH,
+  );
+  for (const error of validateP9IdentityPinAttestationPresence({
+    anyCurrentPin,
+    currentArtifactCount: currentPinFiles.length,
+    historicalAttemptCount: historicalAttempts.length,
+    canonicalAttestationPresent: canonical !== null,
+  })) {
+    fail(error);
+  }
+  if (!canonical) return;
+
+  const validatedAttestation = validateBoundAttestation(
+    P9_IDENTITY_PIN_STAGE_ID,
+    canonical.manifest.baselineCommit,
+    P9_IDENTITY_PIN_MANIFEST_PATH,
+    P9_IDENTITY_PIN_REVIEW_PATH,
+  );
+  if (validatedAttestation !== canonical.attestationCommit) {
+    fail(
+      'P9-IDENTITY-PINS must retain its first canonical independently accepted direct-child attestation',
+    );
+  }
+
+  const expectedCandidatePaths = [
+    'docs/BUILD_STATE.json',
+    P9_IDENTITY_PIN_EVIDENCE_PATH,
+  ].sort();
+  const candidatePaths = (canonical.manifest.files ?? [])
+    .map((entry) => entry.path)
+    .sort();
+  if (!isDeepStrictEqual(candidatePaths, expectedCandidatePaths)) {
+    fail(
+      'P9-IDENTITY-PINS candidate may change only BUILD_STATE and its fixed identity-pin evidence file',
+    );
+  }
+
+  const baselineState = jsonAtCommit<BuildState>(
+    canonical.manifest.baselineCommit,
+    'docs/BUILD_STATE.json',
+  );
+  const candidateState = jsonAtCommit<BuildState>(
+    canonical.manifest.candidateCommit,
+    'docs/BUILD_STATE.json',
+  );
+  const candidateAuthorization =
+    candidateState?.dataAuthority.productionAuthorization ?? null;
+  const baselineAuthorization =
+    baselineState?.dataAuthority.productionAuthorization ?? null;
+  const candidatePins = candidateAuthorization
+    ? getCompleteP9IdentityPins(candidateAuthorization)
+    : null;
+  const candidateP9 = candidateState?.stages.find((stage) => stage.id === 'P9');
+
+  if (
+    !baselineState ||
+    !candidateState ||
+    candidateState.planRevision !== 7 ||
+    candidateState.activeStageId !== null ||
+    candidateState.nextPermittedStageId !== 'P9' ||
+    candidateP9?.status !== 'planned' ||
+    candidateP9.baselineCommit !== null ||
+    !baselineAuthorization ||
+    hasAnyP9IdentityPin(baselineAuthorization) ||
+    !candidateAuthorization ||
+    !candidatePins ||
+    !p9IdentityPinProofFlagsAreFalse(candidateAuthorization)
+  ) {
+    fail(
+      'P9-IDENTITY-PINS candidate must keep Plan Revision 7 and P9 planned while pinning one complete identity set with every proof state false',
+    );
+  } else {
+    for (const error of validateP9ReadOnlyAuthority(
+      candidateState.dataAuthority,
+      {
+        expectedEntryProofState: false,
+        expectedPostCutoverProofState: false,
+      },
+    )) {
+      fail(`P9-IDENTITY-PINS candidate authority is invalid: ${error}`);
+    }
+    if (
+      !isDeepStrictEqual(
+        withoutP9IdentityPins(candidateState),
+        withoutP9IdentityPins(baselineState),
+      )
+    ) {
+      fail(
+        'P9-IDENTITY-PINS candidate BUILD_STATE may populate only the seven predeclared identity fingerprints',
+      );
+    }
+  }
+
+  const baselineEvidence = gitBuffer([
+    'show',
+    `${canonical.manifest.baselineCommit}:${P9_IDENTITY_PIN_EVIDENCE_PATH}`,
+  ]);
+  const candidateEvidence = gitText([
+    'show',
+    `${canonical.manifest.candidateCommit}:${P9_IDENTITY_PIN_EVIDENCE_PATH}`,
+  ]);
+  if (baselineEvidence !== null || !candidateEvidence?.trim()) {
+    fail(
+      'P9-IDENTITY-PINS evidence must be newly added and nonempty in the immutable pin candidate',
+    );
+  }
+  const currentEvidence = requireFile(P9_IDENTITY_PIN_EVIDENCE_PATH);
+  if (candidateEvidence === null || currentEvidence !== candidateEvidence) {
+    fail(
+      'P9 identity-pin evidence must remain byte-identical to its immutable candidate',
+    );
+  }
+  if (
+    !currentPins ||
+    !candidatePins ||
+    !candidateAuthorization ||
+    p9IdentityPinsChanged(authorization, candidateAuthorization)
+  ) {
+    fail(
+      'P9 identity pins cannot be deleted, partially cleared, changed, or rebound after their canonical attestation',
+    );
+  }
+
+  const immutableArtifactBytes = [
+    {
+      path: P9_IDENTITY_PIN_EVIDENCE_PATH,
+      expected: candidateEvidence,
+    },
+    {
+      path: P9_IDENTITY_PIN_MANIFEST_PATH,
+      expected: gitText([
+        'show',
+        `${canonical.attestationCommit}:${P9_IDENTITY_PIN_MANIFEST_PATH}`,
+      ]),
+    },
+    {
+      path: P9_IDENTITY_PIN_REVIEW_PATH,
+      expected: gitText([
+        'show',
+        `${canonical.attestationCommit}:${P9_IDENTITY_PIN_REVIEW_PATH}`,
+      ]),
+    },
+  ];
+  for (const artifact of immutableArtifactBytes) {
+    for (const commit of gitLines([
+      'log',
+      '--full-history',
+      '--reverse',
+      '--format=%H',
+      `${canonical.attestationCommit}..HEAD`,
+      '--',
+      artifact.path,
+    ])) {
+      const historicalBytes = gitText(['show', `${commit}:${artifact.path}`]);
+      if (artifact.expected === null || historicalBytes !== artifact.expected) {
+        fail(
+          `P9-IDENTITY-PINS immutable artifact changed or was deleted after attestation: ${artifact.path}`,
+        );
+        break;
+      }
+    }
+  }
+
+  if (candidateAuthorization) {
+    for (const commit of gitLines([
+      'log',
+      '--full-history',
+      '--reverse',
+      '--format=%H',
+      `${canonical.manifest.candidateCommit}..HEAD`,
+      '--',
+      'docs/BUILD_STATE.json',
+    ])) {
+      const historicalAuthorization = jsonAtCommit<BuildState>(
+        commit,
+        'docs/BUILD_STATE.json',
+      )?.dataAuthority.productionAuthorization;
+      if (
+        !historicalAuthorization ||
+        p9IdentityPinsChanged(historicalAuthorization, candidateAuthorization)
+      ) {
+        fail(
+          `P9 identity pins changed, were deleted, or were rebound after their canonical candidate at ${commit}`,
+        );
+        break;
+      }
+    }
+  }
 }
 
 function discoverHistoricallyAttestedPlanAmendments(): Map<string, AttestedPlanAmendment> {
@@ -604,6 +974,7 @@ function discoverHistoricallyAttestedPlanAmendments(): Map<string, AttestedPlanA
       attested.set(historicalRecord.id, {
         record: JSON.parse(JSON.stringify(candidateRecord)) as PlanAmendment,
         candidateCommit: canonical.manifest.candidateCommit,
+        attestationCommit: canonical.attestationCommit,
       });
     }
   }
@@ -1436,7 +1807,254 @@ if (state) {
       }
     }
   }
-  if (!p9MayUseProduction) {
+  if (state.planRevision >= 7) {
+    const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
+    const expectedEntryProofState = Boolean(p9MayUseProduction);
+    const expectedPostCutoverProofState =
+      p9?.status === 'verified' || p9?.status === 'accepted';
+    for (const error of validateP9ReadOnlyAuthority(state.dataAuthority, {
+      expectedEntryProofState,
+      expectedPostCutoverProofState,
+    })) {
+      fail(error);
+    }
+    validateP9IdentityPinGovernance(state);
+    if (state.dataAuthority.productionAuthorization) {
+      let entryReceiptForBinding: P9EntryReceipt | null = null;
+      let evidenceContext: P9EvidenceContext | null = null;
+      requireFile(state.dataAuthority.productionAuthorization.evidencePath);
+      if (expectedEntryProofState) {
+        const p7Stage = state.stages.find((stage) => stage.id === 'P7');
+        const acceptedP7 = p7Stage
+          ? findCanonicalAttestation('P7', p7Stage.manifestPath, p7Stage.reviewPath)
+          : null;
+        const acceptedP7CatalogBlob = acceptedP7
+          ? gitBuffer([
+              'show',
+              `${acceptedP7.manifest.candidateCommit}:web/fixtures/p7/student-catalog.json`,
+            ])
+          : null;
+        const candidateCommit = gitText(['rev-parse', 'HEAD'])?.trim() ?? '';
+        const p9BaselineCommit = p9?.baselineCommit ?? '';
+        const p9BaselineCommittedAt = gitCommitTimestamp(p9BaselineCommit);
+        const revision7AttestationCommittedAt = attestedRevision7
+          ? gitCommitTimestamp(attestedRevision7.attestationCommit)
+          : null;
+        const candidateCommittedAt = gitCommitTimestamp(candidateCommit);
+        const operationalIdentityContext =
+          p9OperationalEvidenceIdentityContext(
+            state.dataAuthority.productionAuthorization,
+          );
+        if (!operationalIdentityContext) {
+          fail(
+            'P9 active state requires non-null immutable SHA-256 pins for the runtime principal, provider project/team/canonical host, hosted verification environment, and runtime credential provenance',
+          );
+        }
+        if (
+          !attestedRevision7 ||
+          !acceptedP7 ||
+          !acceptedP7CatalogBlob ||
+          !/^[0-9a-f]{40}$/.test(p9BaselineCommit) ||
+          !p9BaselineCommittedAt ||
+          !revision7AttestationCommittedAt ||
+          !candidateCommittedAt
+        ) {
+          fail('P9 active state requires immutable accepted P7, delivered Revision 7, and exact Git chronology');
+        } else if (operationalIdentityContext) {
+          try {
+            evidenceContext = {
+              p9BaselineCommit,
+              p9BaselineCommittedAt,
+              revision7AttestationCommit: attestedRevision7.attestationCommit,
+              revision7AttestationCommittedAt,
+              revision7CandidateCommit: attestedRevision7.candidateCommit,
+              candidateCommit,
+              candidateCommittedAt,
+              ...operationalIdentityContext,
+              expectedStaticCatalogSha256: sha256Buffer(acceptedP7CatalogBlob),
+              expectedWriteSurfaceInventory: deriveP9WriteSurfaceInventory(repoRoot),
+            };
+          } catch (error) {
+            fail(`P9 write-surface inventory derivation failed: ${(error as Error).message}`);
+          }
+          const entryValue = readJson<unknown>(P9_ENTRY_EVIDENCE_PATH);
+          const parsedEntry = parseP9EntryReceipt(entryValue);
+          const entryAttestation = parsedEntry
+            ? verifyP9ArtifactAttestation(
+                P9_ENTRY_EVIDENCE_PATH,
+                parsedEntry.capture.workflowCommit,
+              )
+            : null;
+          const entryReceiptSha256 = sha256FileIfPresent(P9_ENTRY_EVIDENCE_PATH);
+          if (evidenceContext && entryReceiptSha256) {
+            for (const error of validateP9EntryReceiptV2(
+              entryValue,
+              evidenceContext,
+              entryReceiptSha256,
+              entryAttestation,
+            )) {
+              fail(error);
+            }
+          }
+          entryReceiptForBinding = parsedEntry;
+        }
+      }
+      if (expectedPostCutoverProofState) {
+        const postValue = readJson<unknown>(P9_POST_CUTOVER_EVIDENCE_PATH);
+        const deploymentValue = readJson<unknown>(P9_DEPLOYMENT_EVIDENCE_PATH);
+        const postCutoverReceipt = parseP9PostCutoverReceipt(postValue);
+        const deploymentRecord = parseP9DeploymentRecord(deploymentValue);
+        if (
+          !postCutoverReceipt ||
+          !deploymentRecord ||
+          !entryReceiptForBinding ||
+          !evidenceContext
+        ) {
+          fail('P9 verified/accepted state requires strict v2 entry, deployment, and post-cutover receipts');
+        } else {
+          const deploymentAttestation = verifyP9ArtifactAttestation(
+            P9_DEPLOYMENT_EVIDENCE_PATH,
+            deploymentRecord.capture.workflowCommit,
+          );
+          const postAttestation = verifyP9ArtifactAttestation(
+            P9_POST_CUTOVER_EVIDENCE_PATH,
+            postCutoverReceipt.capture.workflowCommit,
+          );
+          for (const error of validateP9DeploymentRecordV2(
+            deploymentValue,
+            entryReceiptForBinding,
+            evidenceContext,
+            sha256File(P9_DEPLOYMENT_EVIDENCE_PATH),
+            deploymentAttestation,
+          )) {
+            fail(error);
+          }
+          for (const error of validateP9PostCutoverReceiptV2(
+            postValue,
+            entryReceiptForBinding,
+            deploymentRecord,
+            evidenceContext,
+            sha256File(P9_POST_CUTOVER_EVIDENCE_PATH),
+            postAttestation,
+          )) {
+            fail(error);
+          }
+          const candidateCommit = gitText(['rev-parse', 'HEAD'])?.trim() ?? '';
+          for (const error of validateP9DeploymentGitBindingV2(
+            deploymentRecord,
+            evidenceContext,
+            candidateCommit,
+            {
+              objectExists: gitObjectExists,
+              isAncestor,
+              blobSha256: gitBlobSha256,
+              changedRuntimePaths: (runtimeCommit, finalCandidateCommit) =>
+                gitLines([
+                  'diff',
+                  '--name-only',
+                  runtimeCommit,
+                  finalCandidateCommit,
+                  '--',
+                  ...P9_RUNTIME_EQUIVALENCE_PATHS,
+                ]),
+              changedTrustedProofPaths: (
+                revision7CandidateCommit,
+                workflowCommit,
+              ) =>
+                gitLines([
+                  'diff',
+                  '--name-only',
+                  revision7CandidateCommit,
+                  workflowCommit,
+                  '--',
+                  ...P9_TRUSTED_PROOF_PATHS,
+                ]),
+            },
+          )) {
+            fail(error);
+          }
+        }
+      }
+    }
+    if (state.dataAuthority.p9TestingWriteAuthorization) {
+      requireFile(state.dataAuthority.p9TestingWriteAuthorization.evidencePath);
+    }
+    const p9DeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+      (item) => item.stageId === 'P9',
+    );
+    if (
+      p9DeliveryAuthorization?.authorized !== true ||
+      p9DeliveryAuthorization.evidencePath !== state.dataAuthority.productionAuthorization?.evidencePath
+    ) {
+      fail('Plan Revision 7 requires P9 delivery authority bound to the production authority evidence');
+    }
+
+    if (attestedRevision7) {
+      const revision7CandidateState = jsonAtCommit<BuildState>(
+        attestedRevision7.candidateCommit,
+        'docs/BUILD_STATE.json',
+      );
+      if (
+        !revision7CandidateState ||
+        p9ReadOnlyAuthorityChanged(
+          state.dataAuthority,
+          revision7CandidateState.dataAuthority,
+        )
+      ) {
+        fail(
+          'Plan Revision 7 production/testing authority cannot change except for its predeclared proof-state flags',
+        );
+      }
+      const changedP9Delivery = revision7CandidateState
+        ? changedStandingAuthorization(
+            state.deployment.stageMergeAuthorizations,
+            revision7CandidateState.deployment.stageMergeAuthorizations,
+            ['P9'],
+          )
+        : 'P9';
+      if (changedP9Delivery) {
+        fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
+      }
+
+      const revision7EvidencePath = 'docs/evidence/PLAN-REV7.md';
+      const canonicalRevision7Evidence = gitText([
+        'show',
+        `${attestedRevision7.candidateCommit}:${revision7EvidencePath}`,
+      ]);
+      if (
+        canonicalRevision7Evidence === null ||
+        requireFile(revision7EvidencePath) !== canonicalRevision7Evidence
+      ) {
+        fail('Plan Revision 7 authority evidence must remain byte-identical to its immutable candidate');
+      }
+    }
+
+    if (p9?.status === 'accepted') {
+      const canonicalP9 = findCanonicalAttestation(
+        'P9',
+        p9.manifestPath,
+        p9.reviewPath,
+      );
+      if (!canonicalP9) {
+        fail('Accepted P9 requires its canonical direct-child attestation');
+      } else {
+        for (const receiptPath of [
+          P9_ENTRY_EVIDENCE_PATH,
+          P9_POST_CUTOVER_EVIDENCE_PATH,
+          P9_DEPLOYMENT_EVIDENCE_PATH,
+        ]) {
+          const canonicalReceipt = gitText([
+            'show',
+            `${canonicalP9.manifest.candidateCommit}:${receiptPath}`,
+          ]);
+          const currentReceipt = requireFile(receiptPath);
+          if (canonicalReceipt === null || currentReceipt !== canonicalReceipt) {
+            fail(`${receiptPath} must remain byte-identical to the accepted P9 candidate`);
+          }
+        }
+      }
+    }
+  } else if (!p9MayUseProduction) {
     if (state.dataAuthority.productionSpreadsheetId !== null) {
       fail('Production spreadsheet ID must remain null before P9');
     }
