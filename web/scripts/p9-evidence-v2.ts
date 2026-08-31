@@ -1,5 +1,7 @@
 import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import fs from 'node:fs';
+import { builtinModules } from 'node:module';
 import path from 'node:path';
 
 import ts from 'typescript';
@@ -61,6 +63,10 @@ export const P9_PRODUCTION_SOURCE_LOADER_PATH =
   'web/src/lib/p9-production-source.ts';
 export const P9_PRODUCTION_SOURCE_LOADER_EXPORT =
   'loadP9ScholarshipSource';
+export const P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH =
+  'web/src/lib/p9-application-runtime-binding.ts';
+export const P9_APPLICATION_RUNTIME_BINDING_IMPORT =
+  './p9-application-runtime-binding';
 export const P9_HEALTH_ROUTE_PATH = 'web/src/app/api/health/route.ts';
 export const P9_PUBLIC_ROUTE_PATH = 'web/src/app/api/scholarships/route.ts';
 export const P9_APPLICATION_READ_BOUNDED_FIELDS =
@@ -121,6 +127,80 @@ const GENERIC_NETWORK_METHOD_MEMBERS = new Map<string, string>([
   ['options', 'OPTIONS'],
 ]);
 
+const INDIRECT_NETWORK_CHAIN_ROOT = 'p9-indirect-network';
+
+function staticComputedPropertyName(expression: ts.Expression): string | null {
+  if (
+    ts.isStringLiteral(expression) ||
+    ts.isNoSubstitutionTemplateLiteral(expression)
+  ) {
+    return expression.text;
+  }
+  if (
+    ts.isBinaryExpression(expression) &&
+    expression.operatorToken.kind === ts.SyntaxKind.PlusToken
+  ) {
+    const left = staticComputedPropertyName(expression.left);
+    const right = staticComputedPropertyName(expression.right);
+    return left !== null && right !== null ? `${left}${right}` : null;
+  }
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isPropertyAccessExpression(expression.expression) &&
+    ts.isIdentifier(expression.expression.expression) &&
+    expression.expression.expression.text === 'String' &&
+    expression.expression.name.text === 'fromCharCode' &&
+    expression.arguments.length > 0 &&
+    expression.arguments.every(
+      (argument) =>
+        ts.isNumericLiteral(argument) &&
+        Number.isInteger(Number(argument.text)) &&
+        Number(argument.text) >= 0 &&
+        Number(argument.text) <= 65535,
+    )
+  ) {
+    return String.fromCharCode(
+      ...expression.arguments.map((argument) =>
+        Number((argument as ts.NumericLiteral).text),
+      ),
+    );
+  }
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isPropertyAccessExpression(expression.expression) &&
+    expression.expression.name.text === 'concat' &&
+    expression.arguments.length > 0
+  ) {
+    const receiver = staticComputedPropertyName(
+      expression.expression.expression,
+    );
+    const suffixes = expression.arguments.map(staticComputedPropertyName);
+    return receiver !== null && suffixes.every((item) => item !== null)
+      ? `${receiver}${(suffixes as string[]).join('')}`
+      : null;
+  }
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isPropertyAccessExpression(expression.expression) &&
+    expression.expression.name.text === 'join' &&
+    ts.isArrayLiteralExpression(expression.expression.expression) &&
+    expression.arguments.length <= 1
+  ) {
+    const separator = expression.arguments[0]
+      ? staticComputedPropertyName(expression.arguments[0])
+      : ',';
+    const items = expression.expression.expression.elements.map((item) =>
+      ts.isSpreadElement(item) || ts.isOmittedExpression(item)
+        ? null
+        : staticComputedPropertyName(item),
+    );
+    return separator !== null && items.every((item) => item !== null)
+      ? (items as string[]).join(separator)
+      : null;
+  }
+  return null;
+}
+
 function googleSheetsMutator(chain: string | null): string | null {
   if (!chain) return null;
   return (
@@ -167,22 +247,67 @@ function isGeneratedPath(relativePath: string): boolean {
       '.next',
       '.turbo',
       '.git',
-      'build',
-      'dist',
       'coverage',
-      'out',
     ].includes(part),
   );
 }
 
 function runtimeSourceFiles(repositoryRoot: string): string[] {
+  const tracked = spawnSync(
+    'git',
+    ['-C', repositoryRoot, 'ls-files', '-z', '--', 'web'],
+    { encoding: 'utf8' },
+  );
+  if (tracked.status === 0) {
+    const trackedPaths = tracked.stdout.split('\0').filter(Boolean);
+    const nativeAddons = trackedPaths.filter((relativePath) =>
+      relativePath.endsWith('.node'),
+    );
+    if (nativeAddons.length > 0) {
+      bindingReject(
+        `P9 writer inventory rejected tracked native executable: ${nativeAddons.sort().join(', ')}`,
+      );
+    }
+    const files = trackedPaths
+      .filter(
+        (relativePath) =>
+          /\.[cm]?[jt]sx?$/.test(relativePath) &&
+          !(P9_TRUSTED_PROOF_PATHS as readonly string[]).includes(relativePath),
+      );
+    for (const relativePath of files) {
+      const absolutePath = path.join(repositoryRoot, relativePath);
+      if (!fs.existsSync(absolutePath)) {
+        throw new Error(`P9 writer inventory missing tracked source: ${relativePath}`);
+      }
+      if (fs.lstatSync(absolutePath).isSymbolicLink()) {
+        throw new Error(
+          `P9 writer inventory rejected symbolic link: ${relativePath}`,
+        );
+      }
+    }
+    return files.sort();
+  }
   const files: string[] = [];
   const visit = (directory: string): void => {
     if (!fs.existsSync(directory)) return;
+    if (fs.lstatSync(directory).isSymbolicLink()) {
+      const relativeDirectory = path
+        .relative(repositoryRoot, directory)
+        .split(path.sep)
+        .join('/');
+      throw new Error(
+        `P9 writer inventory rejected symbolic link: ${relativeDirectory}`,
+      );
+    }
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
       const absolutePath = path.join(directory, entry.name);
       const relativePath = path.relative(repositoryRoot, absolutePath).split(path.sep).join('/');
       if (isGeneratedPath(relativePath)) continue;
+      if (entry.isSymbolicLink() || fs.lstatSync(absolutePath).isSymbolicLink()) {
+        throw new Error(
+          `P9 writer inventory rejected symbolic link: ${relativePath}`,
+        );
+      }
       if (
         (P9_TRUSTED_PROOF_PATHS as readonly string[]).includes(relativePath) &&
         /\.[cm]?[jt]sx?$/.test(relativePath)
@@ -190,6 +315,11 @@ function runtimeSourceFiles(repositoryRoot: string): string[] {
         continue;
       }
       if (entry.isDirectory()) visit(absolutePath);
+      else if (entry.isFile() && entry.name.endsWith('.node')) {
+        bindingReject(
+          `P9 writer inventory rejected native executable: ${relativePath}`,
+        );
+      }
       else if (entry.isFile() && /\.(?:[cm]?[jt]sx?)$/.test(entry.name)) files.push(relativePath);
     }
   };
@@ -413,12 +543,49 @@ function expressionChain(
   }
   if (
     ts.isElementAccessExpression(expression) &&
-    expression.argumentExpression &&
-    (ts.isStringLiteral(expression.argumentExpression) ||
-      ts.isNoSubstitutionTemplateLiteral(expression.argumentExpression))
+    expression.argumentExpression
   ) {
+    const segment = staticComputedPropertyName(expression.argumentExpression);
+    if (segment === null) return null;
     const parent = expressionChain(expression.expression, checker, aliases, seen);
-    return parent ? [...parent, expression.argumentExpression.text] : null;
+    return parent ? [...parent, segment] : null;
+  }
+  if (
+    ts.isBinaryExpression(expression) &&
+    expression.operatorToken.kind === ts.SyntaxKind.CommaToken
+  ) {
+    return expressionChain(expression.right, checker, aliases, seen);
+  }
+  if (ts.isConditionalExpression(expression)) {
+    const whenTrue = expressionChain(expression.whenTrue, checker, aliases, seen);
+    const whenFalse = expressionChain(expression.whenFalse, checker, aliases, seen);
+    if (
+      whenTrue &&
+      whenFalse &&
+      whenTrue.join('\u0000') === whenFalse.join('\u0000')
+    ) {
+      return whenTrue;
+    }
+    return genericNetworkChain(whenTrue) || genericNetworkChain(whenFalse)
+      ? [INDIRECT_NETWORK_CHAIN_ROOT]
+      : null;
+  }
+  if (
+    ts.isBinaryExpression(expression) &&
+    [
+      ts.SyntaxKind.AmpersandAmpersandToken,
+      ts.SyntaxKind.QuestionQuestionToken,
+      ts.SyntaxKind.BarBarToken,
+    ].includes(expression.operatorToken.kind)
+  ) {
+    const left = expressionChain(expression.left, checker, aliases, seen);
+    const right = expressionChain(expression.right, checker, aliases, seen);
+    if (left && right && left.join('\u0000') === right.join('\u0000')) {
+      return left;
+    }
+    return genericNetworkChain(left) || genericNetworkChain(right)
+      ? [INDIRECT_NETWORK_CHAIN_ROOT]
+      : null;
   }
   if (ts.isCallExpression(expression)) {
     if (
@@ -635,6 +802,8 @@ function staticStringPattern(
     reassignedSymbols,
     seen,
   );
+  const computed = staticComputedPropertyName(expression);
+  if (computed !== null) return { text: computed, complete: true };
   if (
     ts.isStringLiteral(expression) ||
     ts.isNoSubstitutionTemplateLiteral(expression)
@@ -703,6 +872,31 @@ function staticStringPattern(
       reassignedSymbols,
       seen,
     );
+  }
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isPropertyAccessExpression(expression.expression) &&
+    expression.expression.name.text === 'join' &&
+    ts.isArrayLiteralExpression(expression.expression.expression) &&
+    expression.arguments.length <= 1
+  ) {
+    const separator = expression.arguments[0]
+      ? staticStringPattern(
+          expression.arguments[0],
+          checker,
+          reassignedSymbols,
+          seen,
+        )
+      : { text: ',', complete: true };
+    const items = expression.expression.expression.elements.map((item) =>
+      ts.isSpreadElement(item) || ts.isOmittedExpression(item)
+        ? { text: '*', complete: false }
+        : staticStringPattern(item, checker, reassignedSymbols, seen),
+    );
+    return {
+      text: items.map((item) => item.text).join(separator.text),
+      complete: separator.complete && items.every((item) => item.complete),
+    };
   }
   if (
     ts.isPropertyAccessExpression(expression) &&
@@ -789,27 +983,1463 @@ type GenericNetworkCall = {
   method: string | null;
 };
 
+function genericNetworkChain(chain: string[] | null): boolean {
+  if (!chain || chain.length === 0) return false;
+  const normalized = chain.map((part) => part.toLowerCase());
+  const root = normalized[0];
+  return (
+    root === INDIRECT_NETWORK_CHAIN_ROOT ||
+    normalized.includes('fetch') ||
+    ['axios', 'got', 'ky', 'undici', 'http', 'https'].includes(root)
+  );
+}
+
+function dynamicExecutionChain(chain: readonly string[] | null): boolean {
+  if (!chain || chain.length === 0) return false;
+  const dynamicMembers = new Set([
+    'eval',
+    'function',
+    'asyncfunction',
+    'generatorfunction',
+    'asyncgeneratorfunction',
+    'constructor',
+  ]);
+  return chain.some((member) => dynamicMembers.has(member.toLowerCase()));
+}
+
+type DynamicProcessModule = 'child_process' | 'worker_threads' | 'unknown';
+
+function staticDynamicModuleSpecifier(
+  expression: ts.Expression | undefined,
+): string | null {
+  if (!expression) return null;
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (
+    ts.isStringLiteral(current) ||
+    ts.isNoSubstitutionTemplateLiteral(current)
+  ) {
+    return current.text;
+  }
+  if (
+    ts.isBinaryExpression(current) &&
+    current.operatorToken.kind === ts.SyntaxKind.PlusToken
+  ) {
+    const left = staticDynamicModuleSpecifier(current.left);
+    const right = staticDynamicModuleSpecifier(current.right);
+    return left !== null && right !== null ? `${left}${right}` : null;
+  }
+  if (ts.isTemplateExpression(current)) {
+    let value = current.head.text;
+    for (const span of current.templateSpans) {
+      const substitution = staticDynamicModuleSpecifier(span.expression);
+      if (substitution === null) return null;
+      value += substitution + span.literal.text;
+    }
+    return value;
+  }
+  if (
+    ts.isCallExpression(current) &&
+    ts.isPropertyAccessExpression(current.expression) &&
+    current.expression.name.text === 'join' &&
+    ts.isArrayLiteralExpression(current.expression.expression) &&
+    current.arguments.length <= 1
+  ) {
+    const separator = current.arguments[0]
+      ? staticDynamicModuleSpecifier(current.arguments[0])
+      : ',';
+    if (separator === null) return null;
+    const parts: string[] = [];
+    for (const element of current.expression.expression.elements) {
+      if (ts.isSpreadElement(element)) return null;
+      const part = staticDynamicModuleSpecifier(element);
+      if (part === null) return null;
+      parts.push(part);
+    }
+    return parts.join(separator);
+  }
+  return null;
+}
+
+function dynamicProcessLoader(
+  expression: ts.Expression,
+): DynamicProcessModule | null {
+  if (!ts.isCallExpression(expression)) return null;
+  const loader = propertyAccessChain(expression.expression);
+  if (
+    loader !== 'require' &&
+    loader !== 'module.require' &&
+    loader !== 'process.getBuiltinModule'
+  ) {
+    return null;
+  }
+  const specifier = staticDynamicModuleSpecifier(expression.arguments[0]);
+  if (specifier === 'child_process' || specifier === 'node:child_process') {
+    return 'child_process';
+  }
+  if (specifier === 'worker_threads' || specifier === 'node:worker_threads') {
+    return 'worker_threads';
+  }
+  return specifier === null ? 'unknown' : null;
+}
+
+function containedDynamicProcessModule(node: ts.Node): DynamicProcessModule | null {
+  let moduleKind: DynamicProcessModule | null = null;
+  bindingWalk(node, (child) => {
+    if (moduleKind || !ts.isExpression(child)) return;
+    moduleKind = dynamicProcessLoader(child);
+    if (moduleKind) return;
+    const specifier = staticDynamicModuleSpecifier(child);
+    if (specifier === 'child_process' || specifier === 'node:child_process') {
+      moduleKind = 'child_process';
+    } else if (
+      specifier === 'worker_threads' ||
+      specifier === 'node:worker_threads'
+    ) {
+      moduleKind = 'worker_threads';
+    }
+  });
+  return moduleKind;
+}
+
+const UNSAFE_NODE_EXECUTION_MODULES = new Set([
+  'cluster',
+  'node:cluster',
+  'inspector',
+  'node:inspector',
+  'module',
+  'node:module',
+  'repl',
+  'node:repl',
+  'vm',
+  'node:vm',
+]);
+
+const UNSAFE_NODE_EXECUTION_MEMBERS = new Set([
+  'Runtime.evaluate',
+  '_compile',
+  'binding',
+  'dlopen',
+  'spawn_sync',
+]);
+
+function unsafeNodeExecutionModule(specifier: string): boolean {
+  if (UNSAFE_NODE_EXECUTION_MODULES.has(specifier)) return true;
+  const normalized = specifier.startsWith('node:')
+    ? specifier.slice('node:'.length)
+    : specifier;
+  return [...UNSAFE_NODE_EXECUTION_MODULES].some((candidate) => {
+    const normalizedCandidate = candidate.startsWith('node:')
+      ? candidate.slice('node:'.length)
+      : candidate;
+    return normalized.startsWith(`${normalizedCandidate}/`);
+  });
+}
+
+function unsafeNodeExecutionNode(node: ts.Node): boolean {
+  if (
+    ts.isComputedPropertyName(node) &&
+    ts.isBindingElement(node.parent)
+  ) {
+    return true;
+  }
+  if (ts.isComputedPropertyName(node)) {
+    let ancestor: ts.Node | undefined = node.parent;
+    while (ancestor && !ts.isSourceFile(ancestor)) {
+      if (ts.isForOfStatement(ancestor) || ts.isForInStatement(ancestor)) {
+        return true;
+      }
+      ancestor = ancestor.parent;
+    }
+  }
+  if (
+    ts.isBinaryExpression(node) &&
+    node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+    node.operatorToken.kind <= ts.SyntaxKind.LastAssignment
+  ) {
+    let target = node.left;
+    while (ts.isParenthesizedExpression(target)) target = target.expression;
+    if (ts.isObjectLiteralExpression(target)) {
+      let computed = false;
+      bindingWalk(target, (child) => {
+        if (ts.isComputedPropertyName(child)) computed = true;
+      });
+      if (computed) return true;
+    }
+  }
+  if (ts.isIdentifier(node) && node.text === 'createRequire') return true;
+  if (ts.isIdentifier(node) && node.text === 'require') {
+    if (ts.isCallExpression(node.parent) && node.parent.expression === node) {
+      const specifier = staticDynamicModuleSpecifier(node.parent.arguments[0]);
+      return (
+        specifier === null ||
+        unsafeNodeExecutionModule(specifier) ||
+        specifier.endsWith('.node')
+      );
+    }
+    return true;
+  }
+  if (ts.isPropertyAccessExpression(node) || ts.isElementAccessExpression(node)) {
+    const chain = propertyAccessChain(node);
+    const member = ts.isPropertyAccessExpression(node)
+      ? node.name.text
+      : node.argumentExpression
+        ? staticComputedPropertyName(node.argumentExpression)
+        : null;
+    if (
+      chain === 'process.binding' ||
+      chain === 'process.dlopen' ||
+      (member !== null && UNSAFE_NODE_EXECUTION_MEMBERS.has(member))
+    ) return true;
+    if (
+      ts.isElementAccessExpression(node) &&
+      member === null &&
+      propertyAccessChain(node.expression) === 'process'
+    ) return true;
+    if (chain === 'module.require' || chain === 'process.getBuiltinModule') {
+      if (ts.isCallExpression(node.parent) && node.parent.expression === node) {
+        const specifier = staticDynamicModuleSpecifier(node.parent.arguments[0]);
+        return (
+          specifier === null ||
+          unsafeNodeExecutionModule(specifier) ||
+          specifier.endsWith('.node')
+        );
+      }
+      return true;
+    }
+  }
+  if (
+    (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) &&
+    (unsafeNodeExecutionModule(node.text) || node.text.endsWith('.node'))
+  ) {
+    return (
+      (ts.isImportDeclaration(node.parent) &&
+        node.parent.moduleSpecifier === node) ||
+      (ts.isExportDeclaration(node.parent) &&
+        node.parent.moduleSpecifier === node) ||
+      (ts.isCallExpression(node.parent) &&
+        node.parent.arguments.includes(node))
+    );
+  }
+  if (ts.isIdentifier(node) && UNSAFE_NODE_EXECUTION_MEMBERS.has(node.text)) {
+    return (
+      ts.isBindingElement(node.parent) ||
+      ts.isShorthandPropertyAssignment(node.parent) ||
+      (ts.isPropertyAssignment(node.parent) && node.parent.name === node)
+    );
+  }
+  if (ts.isExpression(node)) {
+    const value = staticDynamicModuleSpecifier(node);
+    if (value !== null && UNSAFE_NODE_EXECUTION_MEMBERS.has(value)) return true;
+  }
+  return false;
+}
+
+type DynamicProcessBindings = {
+  direct: ReadonlyMap<string, string>;
+  namespaces: ReadonlySet<string>;
+};
+
+function dynamicProcessBindings(file: ts.SourceFile): DynamicProcessBindings {
+  const direct = new Map<string, string>();
+  const namespaces = new Set<string>();
+  const childProcessMethods = new Set([
+    'exec',
+    'execSync',
+    'execFile',
+    'execFileSync',
+    'spawn',
+    'spawnSync',
+    'fork',
+  ]);
+  const workerMethods = new Set(['Worker']);
+  const processMethods = new Set([
+    ...childProcessMethods,
+    ...workerMethods,
+  ]);
+  const methodsForModule = (
+    moduleKind: DynamicProcessModule,
+  ): ReadonlySet<string> => {
+    if (moduleKind === 'child_process') return childProcessMethods;
+    if (moduleKind === 'worker_threads') return workerMethods;
+    return processMethods;
+  };
+  const bindNames = (name: ts.BindingName, method: string): boolean => {
+    let changed = false;
+    if (ts.isIdentifier(name)) {
+      if (!direct.has(name.text)) {
+        direct.set(name.text, method);
+        changed = true;
+      }
+      return changed;
+    }
+    for (const element of name.elements) {
+      if (!ts.isOmittedExpression(element)) {
+        changed = bindNames(element.name, method) || changed;
+      }
+    }
+    return changed;
+  };
+  for (const statement of file.statements) {
+    if (
+      ts.isImportEqualsDeclaration(statement) &&
+      ts.isExternalModuleReference(statement.moduleReference) &&
+      statement.moduleReference.expression &&
+      ts.isStringLiteral(statement.moduleReference.expression) &&
+      [
+        'child_process',
+        'node:child_process',
+        'worker_threads',
+        'node:worker_threads',
+      ].includes(statement.moduleReference.expression.text)
+    ) {
+      namespaces.add(statement.name.text);
+    }
+    if (
+      ts.isImportDeclaration(statement) &&
+      ts.isStringLiteral(statement.moduleSpecifier) &&
+      [
+        'child_process',
+        'node:child_process',
+        'worker_threads',
+        'node:worker_threads',
+      ].includes(
+        statement.moduleSpecifier.text,
+      )
+    ) {
+      const moduleMethods = statement.moduleSpecifier.text.includes('worker_threads')
+        ? workerMethods
+        : childProcessMethods;
+      const bindings = statement.importClause?.namedBindings;
+      if (bindings && ts.isNamedImports(bindings)) {
+        for (const element of bindings.elements) {
+          const importedName = element.propertyName?.text ?? element.name.text;
+          if (moduleMethods.has(importedName)) {
+            direct.set(element.name.text, importedName);
+          }
+        }
+      } else if (bindings && ts.isNamespaceImport(bindings)) {
+        namespaces.add(bindings.name.text);
+      }
+      if (statement.importClause?.name) {
+        if (moduleMethods === workerMethods) {
+          direct.set(statement.importClause.name.text, 'Worker');
+        } else {
+          namespaces.add(statement.importClause.name.text);
+        }
+      }
+    }
+    if (
+      ts.isExportDeclaration(statement) &&
+      statement.moduleSpecifier &&
+      ts.isStringLiteral(statement.moduleSpecifier) &&
+      [
+        'child_process',
+        'node:child_process',
+        'worker_threads',
+        'node:worker_threads',
+      ].includes(
+        statement.moduleSpecifier.text,
+      ) &&
+      statement.exportClause &&
+      ts.isNamedExports(statement.exportClause)
+    ) {
+      const moduleMethods = statement.moduleSpecifier.text.includes('worker_threads')
+        ? workerMethods
+        : childProcessMethods;
+      for (const element of statement.exportClause.elements) {
+        const importedName = element.propertyName?.text ?? element.name.text;
+        if (moduleMethods.has(importedName)) {
+          direct.set(element.name.text, importedName);
+        }
+      }
+    }
+  }
+  let changed = true;
+  while (changed) {
+    changed = false;
+    bindingWalk(file, (node) => {
+      if (
+        !ts.isVariableDeclaration(node) ||
+        !node.initializer
+      ) {
+        return;
+      }
+      const containedMethod = containedDynamicProcessMethod(
+        node.initializer,
+        { direct, namespaces },
+      );
+      if (containedMethod && bindNames(node.name, containedMethod)) {
+        changed = true;
+      }
+      const loadedModule = containedDynamicProcessModule(node.initializer);
+      if (loadedModule) {
+        const moduleMethods = methodsForModule(loadedModule);
+        if (ts.isIdentifier(node.name) && !namespaces.has(node.name.text)) {
+          namespaces.add(node.name.text);
+          changed = true;
+        } else if (ts.isObjectBindingPattern(node.name)) {
+          for (const element of node.name.elements) {
+            if (!ts.isIdentifier(element.name)) continue;
+            if (element.dotDotDotToken) {
+              if (!namespaces.has(element.name.text)) {
+                namespaces.add(element.name.text);
+                changed = true;
+              }
+              continue;
+            }
+            const importedName =
+              element.propertyName && ts.isIdentifier(element.propertyName)
+                ? element.propertyName.text
+                : element.name.text;
+            if (!direct.has(element.name.text)) {
+              direct.set(
+                element.name.text,
+                moduleMethods.has(importedName) ? importedName : 'unknown',
+              );
+              changed = true;
+            }
+          }
+        }
+      }
+      if (!ts.isIdentifier(node.name)) return;
+      if (
+        (ts.isArrowFunction(node.initializer) || ts.isFunctionExpression(node.initializer))
+      ) {
+        let returnedMethod: string | null = null;
+        const body = node.initializer.body;
+        if (ts.isExpression(body)) {
+          returnedMethod = containedDynamicProcessMethod(
+            body,
+            { direct, namespaces },
+          );
+        } else {
+          bindingWalk(body, (child) => {
+            if (
+              (ts.isReturnStatement(child) || ts.isYieldExpression(child)) &&
+              child.expression
+            ) {
+              returnedMethod ??= containedDynamicProcessMethod(
+                child.expression,
+                { direct, namespaces },
+              );
+            }
+          });
+        }
+        if (returnedMethod && !direct.has(node.name.text)) {
+          direct.set(node.name.text, returnedMethod);
+          changed = true;
+        }
+      }
+      if (
+        ts.isIdentifier(node.initializer) &&
+        direct.has(node.initializer.text) &&
+        !direct.has(node.name.text)
+      ) {
+        direct.set(node.name.text, direct.get(node.initializer.text)!);
+        changed = true;
+      }
+      if (
+        (ts.isPropertyAccessExpression(node.initializer) ||
+          ts.isElementAccessExpression(node.initializer)) &&
+        ts.isIdentifier(node.initializer.expression) &&
+        namespaces.has(node.initializer.expression.text)
+      ) {
+        const member = ts.isPropertyAccessExpression(node.initializer)
+          ? node.initializer.name.text
+          : node.initializer.argumentExpression
+            ? staticComputedPropertyName(node.initializer.argumentExpression)
+            : null;
+        if (
+          member &&
+          processMethods.has(member) &&
+          !direct.has(node.name.text)
+        ) {
+          direct.set(node.name.text, member);
+          changed = true;
+        }
+      }
+    });
+    bindingWalk(file, (statement) => {
+      if (!ts.isFunctionDeclaration(statement) || !statement.name || !statement.body) {
+        return;
+      }
+      let returnedMethod: string | null = null;
+      bindingWalk(statement.body, (node) => {
+        if (
+          (ts.isReturnStatement(node) || ts.isYieldExpression(node)) &&
+          node.expression
+        ) {
+          returnedMethod ??= containedDynamicProcessMethod(
+            node.expression,
+            { direct, namespaces },
+          );
+        }
+      });
+      if (returnedMethod && !direct.has(statement.name.text)) {
+        direct.set(statement.name.text, returnedMethod);
+        changed = true;
+      }
+    });
+    bindingWalk(file, (node) => {
+      if (
+        !ts.isBinaryExpression(node) ||
+        node.operatorToken.kind < ts.SyntaxKind.FirstAssignment ||
+        node.operatorToken.kind > ts.SyntaxKind.LastAssignment
+      ) {
+        return;
+      }
+      const method = containedDynamicProcessMethod(
+        node.right,
+        { direct, namespaces },
+      );
+      const loadedModule = containedDynamicProcessModule(node.right);
+      if (loadedModule) {
+        let assignmentTarget = node.left;
+        while (
+          ts.isParenthesizedExpression(assignmentTarget) ||
+          ts.isAsExpression(assignmentTarget) ||
+          ts.isTypeAssertionExpression(assignmentTarget) ||
+          ts.isNonNullExpression(assignmentTarget)
+        ) {
+          assignmentTarget = assignmentTarget.expression;
+        }
+        const destructuringAssignment =
+          ts.isObjectLiteralExpression(assignmentTarget) ||
+          ts.isArrayLiteralExpression(assignmentTarget);
+        for (const root of assignedRootIdentifiers(node.left)) {
+          if (destructuringAssignment && !direct.has(root)) {
+            direct.set(root, 'unknown');
+            changed = true;
+          } else if (!destructuringAssignment && !namespaces.has(root)) {
+            namespaces.add(root);
+            changed = true;
+          }
+        }
+      }
+      if (!method) return;
+      for (const root of assignedRootIdentifiers(node.left)) {
+        if (!direct.has(root)) {
+          direct.set(root, method);
+          changed = true;
+        }
+      }
+    });
+    bindingWalk(file, (statement) => {
+      if (!ts.isClassDeclaration(statement) || !statement.name) return;
+      const method = containedDynamicProcessMethod(
+        statement,
+        { direct, namespaces },
+      );
+      if (method && !direct.has(statement.name.text)) {
+        direct.set(statement.name.text, method);
+        changed = true;
+      }
+    });
+  }
+  return { direct, namespaces };
+}
+
+function dynamicProcessMethod(
+  expression: ts.Expression | undefined,
+  bindings: DynamicProcessBindings,
+): string | null {
+  if (!expression) return null;
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current) ||
+    ts.isAwaitExpression(current)
+  ) {
+    current = current.expression;
+  }
+  expression = current;
+  if (ts.isIdentifier(expression)) {
+    return bindings.direct.get(expression.text) ?? null;
+  } else if (ts.isConditionalExpression(expression)) {
+    return (
+      dynamicProcessMethod(expression.whenTrue, bindings) ??
+      dynamicProcessMethod(expression.whenFalse, bindings)
+    );
+  } else if (
+    ts.isBinaryExpression(expression) &&
+    [
+      ts.SyntaxKind.AmpersandAmpersandToken,
+      ts.SyntaxKind.BarBarToken,
+      ts.SyntaxKind.QuestionQuestionToken,
+      ts.SyntaxKind.CommaToken,
+    ].includes(expression.operatorToken.kind)
+  ) {
+    return (
+      dynamicProcessMethod(expression.right, bindings) ??
+      dynamicProcessMethod(expression.left, bindings)
+    );
+  } else if (ts.isArrowFunction(expression) || ts.isFunctionExpression(expression)) {
+    if (ts.isExpression(expression.body)) {
+      return containedDynamicProcessMethod(expression.body, bindings);
+    }
+    let returned: string | null = null;
+    bindingWalk(expression.body, (node) => {
+      if (
+        (ts.isReturnStatement(node) || ts.isYieldExpression(node)) &&
+        node.expression
+      ) {
+        returned ??= containedDynamicProcessMethod(node.expression, bindings);
+      }
+    });
+    return returned;
+  } else if (
+    ts.isPropertyAccessExpression(expression) ||
+    ts.isElementAccessExpression(expression)
+  ) {
+    const member = ts.isPropertyAccessExpression(expression)
+      ? expression.name.text
+      : expression.argumentExpression
+        ? staticComputedPropertyName(expression.argumentExpression)
+        : null;
+    const loadedModule = containedDynamicProcessModule(expression.expression);
+    if (loadedModule && !member) return 'unknown';
+    if (loadedModule && member) {
+      const allowed = loadedModule === 'worker_threads'
+        ? new Set(['Worker'])
+        : loadedModule === 'child_process'
+          ? new Set([
+              'exec',
+              'execSync',
+              'execFile',
+              'execFileSync',
+              'spawn',
+              'spawnSync',
+              'fork',
+            ])
+          : new Set([
+              'Worker',
+              'exec',
+              'execSync',
+              'execFile',
+              'execFileSync',
+              'spawn',
+              'spawnSync',
+              'fork',
+            ]);
+      if (allowed.has(member)) return member;
+    }
+    if (
+      ts.isIdentifier(expression.expression) &&
+      bindings.namespaces.has(expression.expression.text)
+    ) {
+      return member ?? 'unknown';
+    }
+    if (
+      member &&
+      ['apply', 'call', 'bind'].includes(member) &&
+      ts.isIdentifier(expression.expression) &&
+      bindings.direct.has(expression.expression.text)
+    ) {
+      return bindings.direct.get(expression.expression.text) ?? null;
+    }
+    if (
+      ts.isIdentifier(expression.expression) &&
+      bindings.direct.has(expression.expression.text)
+    ) {
+      return bindings.direct.get(expression.expression.text) ?? null;
+    }
+    if (member && ts.isObjectLiteralExpression(expression.expression)) {
+      for (const property of expression.expression.properties) {
+        const propertyName = ts.isPropertyAssignment(property) ||
+          ts.isMethodDeclaration(property)
+          ? ts.isIdentifier(property.name) || ts.isStringLiteral(property.name)
+            ? property.name.text
+            : ts.isComputedPropertyName(property.name)
+              ? staticComputedPropertyName(property.name.expression)
+              : null
+          : null;
+        if (propertyName !== member) continue;
+        if (ts.isPropertyAssignment(property)) {
+          return dynamicProcessMethod(property.initializer, bindings);
+        }
+        if (ts.isMethodDeclaration(property) && property.body) {
+          let returned: string | null = null;
+          bindingWalk(property.body, (node) => {
+            if (
+              (ts.isReturnStatement(node) || ts.isYieldExpression(node)) &&
+              node.expression
+            ) {
+              returned ??= containedDynamicProcessMethod(
+                node.expression,
+                bindings,
+              );
+            }
+          });
+          return returned;
+        }
+      }
+    }
+    return dynamicProcessMethod(expression.expression, bindings);
+  } else if (ts.isCallExpression(expression)) {
+    return dynamicProcessMethod(expression.expression, bindings);
+  }
+  return null;
+}
+
+function containedDynamicProcessMethod(
+  node: ts.Node,
+  bindings: DynamicProcessBindings,
+): string | null {
+  let method: string | null = null;
+  bindingWalk(node, (child) => {
+    if (method || !ts.isExpression(child)) return;
+    method = dynamicProcessMethod(child, bindings);
+  });
+  return method;
+}
+
+function commonJsExportAliases(file: ts.SourceFile): ReadonlySet<string> {
+  const aliases = new Set<string>();
+  const callableParameters = new Map<
+    string,
+    readonly ts.ParameterDeclaration[]
+  >();
+  bindingWalk(file, (node) => {
+    if (ts.isFunctionDeclaration(node) && node.name) {
+      callableParameters.set(node.name.text, node.parameters);
+      return;
+    }
+    if (ts.isMethodDeclaration(node)) {
+      const methodName = ts.isIdentifier(node.name) || ts.isStringLiteral(node.name)
+        ? node.name.text
+        : ts.isComputedPropertyName(node.name)
+          ? staticComputedPropertyName(node.name.expression)
+          : null;
+      if (methodName) callableParameters.set(methodName, node.parameters);
+      return;
+    }
+    if (ts.isClassDeclaration(node) && node.name) {
+      const constructor = node.members.find(ts.isConstructorDeclaration);
+      if (constructor) {
+        callableParameters.set(node.name.text, constructor.parameters);
+      }
+      return;
+    }
+    if (
+      ts.isVariableDeclaration(node) &&
+      ts.isIdentifier(node.name) &&
+      node.initializer &&
+      (ts.isArrowFunction(node.initializer) ||
+        ts.isFunctionExpression(node.initializer))
+    ) {
+      callableParameters.set(node.name.text, node.initializer.parameters);
+    }
+  });
+  const bindNames = (name: ts.BindingName): boolean => {
+    let changed = false;
+    if (ts.isIdentifier(name)) {
+      if (!aliases.has(name.text)) {
+        aliases.add(name.text);
+        changed = true;
+      }
+      return changed;
+    }
+    for (const element of name.elements) {
+      if (!ts.isOmittedExpression(element)) {
+        changed = bindNames(element.name) || changed;
+      }
+    }
+    return changed;
+  };
+  let changed = true;
+  while (changed) {
+    changed = false;
+    bindingWalk(file, (node) => {
+      if (ts.isCallExpression(node) || ts.isNewExpression(node)) {
+        const callableName = ts.isIdentifier(node.expression)
+          ? node.expression.text
+          : ts.isPropertyAccessExpression(node.expression)
+            ? node.expression.name.text
+            : ts.isElementAccessExpression(node.expression) &&
+                node.expression.argumentExpression
+              ? staticComputedPropertyName(node.expression.argumentExpression)
+              : null;
+        const directParameters =
+          ts.isCallExpression(node) &&
+          (ts.isArrowFunction(node.expression) ||
+            ts.isFunctionExpression(node.expression))
+            ? node.expression.parameters
+            : null;
+        const parameters = directParameters ??
+          (callableName ? callableParameters.get(callableName) : undefined);
+        if (parameters) {
+          for (let index = 0; index < (node.arguments?.length ?? 0); index += 1) {
+            const parameter = parameters[index];
+            const argument = node.arguments?.[index];
+            if (
+              parameter &&
+              argument &&
+              commonJsAliasExpression(argument, aliases) &&
+              bindNames(parameter.name)
+            ) {
+              changed = true;
+            }
+          }
+        }
+      }
+      if (!ts.isVariableDeclaration(node) || !node.initializer) return;
+      const chain = commonJsPropertyChain(node.initializer);
+      if (
+        commonJsAliasExpression(node.initializer, aliases) &&
+        bindNames(node.name)
+      ) {
+        changed = true;
+      }
+      if (
+        ts.isObjectBindingPattern(node.name) &&
+        chain === 'module'
+      ) {
+        for (const element of node.name.elements) {
+          if (!ts.isIdentifier(element.name)) continue;
+          const importedName = element.propertyName && ts.isIdentifier(element.propertyName)
+            ? element.propertyName.text
+            : element.name.text;
+          if (importedName === 'exports' && !aliases.has(element.name.text)) {
+            aliases.add(element.name.text);
+            changed = true;
+          }
+        }
+      }
+    });
+    bindingWalk(file, (node) => {
+      if (
+        ts.isBinaryExpression(node) &&
+        node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+        node.operatorToken.kind <= ts.SyntaxKind.LastAssignment &&
+        commonJsAliasExpression(node.right, aliases)
+      ) {
+        for (const root of assignedRootIdentifiers(node.left)) {
+          if (!aliases.has(root)) {
+            aliases.add(root);
+            changed = true;
+          }
+        }
+      }
+      if (
+        (ts.isFunctionDeclaration(node) || ts.isClassDeclaration(node)) &&
+        node.name &&
+        commonJsAliasExpression(node, aliases) &&
+        !aliases.has(node.name.text)
+      ) {
+        aliases.add(node.name.text);
+        changed = true;
+      }
+    });
+  }
+  return aliases;
+}
+
+function commonJsAliasExpression(
+  node: ts.Node,
+  aliases: ReadonlySet<string>,
+): boolean {
+  let found = false;
+  bindingWalk(node, (child) => {
+    if (found || !ts.isExpression(child)) return;
+    const chain = commonJsPropertyChain(child);
+    if (
+      chain === 'module.exports' ||
+      chain === 'exports' ||
+      (chain && aliases.has(chain.split('.')[0]!))
+    ) {
+      found = true;
+    }
+  });
+  return found;
+}
+
+function commonJsPropertyChain(expression: ts.Expression): string | null {
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (ts.isIdentifier(current)) return current.text;
+  if (ts.isPropertyAccessExpression(current)) {
+    const base = commonJsPropertyChain(current.expression);
+    return base ? `${base}.${current.name.text}` : null;
+  }
+  if (ts.isElementAccessExpression(current) && current.argumentExpression) {
+    const member = staticComputedPropertyName(current.argumentExpression);
+    const base = commonJsPropertyChain(current.expression);
+    return base && member ? `${base}.${member}` : null;
+  }
+  return null;
+}
+
+function commonJsExportName(
+  expression: ts.Expression,
+  aliases: ReadonlySet<string>,
+): string | null {
+  const chain = commonJsPropertyChain(expression);
+  if (!chain) {
+    return commonJsAliasExpression(expression, aliases) ? 'default' : null;
+  }
+  if (chain === 'module.exports' || chain === 'exports') return 'default';
+  if (chain.startsWith('module.exports.')) {
+    return chain.slice('module.exports.'.length);
+  }
+  if (chain.startsWith('exports.')) return chain.slice('exports.'.length);
+  const [root, ...rest] = chain.split('.');
+  if (root && aliases.has(root)) return rest.join('.') || 'default';
+  return commonJsAliasExpression(expression, aliases) ? 'default' : null;
+}
+
+function exportsDynamicProcessBinding(
+  file: ts.SourceFile,
+  bindings: DynamicProcessBindings,
+): boolean {
+  const commonJsAliases = commonJsExportAliases(file);
+  let commonJsBoundary = false;
+  bindingWalk(file, (node) => {
+    if (!ts.isExpression(node)) return;
+    const chain = commonJsPropertyChain(node);
+    if (chain === 'module.exports' || chain?.startsWith('module.exports.')) {
+      commonJsBoundary = true;
+    }
+  });
+  if (
+    commonJsBoundary &&
+    (bindings.direct.size > 0 || bindings.namespaces.size > 0)
+  ) {
+    return true;
+  }
+  let commonJsProcessExport = false;
+  bindingWalk(file, (node) => {
+    if (
+      !ts.isBinaryExpression(node) ||
+      node.operatorToken.kind !== ts.SyntaxKind.EqualsToken
+    ) {
+      return;
+    }
+    if (commonJsExportName(node.left, commonJsAliases) === null) return;
+    bindingWalk(node.right, (value) => {
+      if (
+        ts.isExpression(value) &&
+        (dynamicProcessMethod(value, bindings) ||
+          (ts.isStringLiteral(value) &&
+            [
+              'child_process',
+              'node:child_process',
+              'worker_threads',
+              'node:worker_threads',
+            ].includes(value.text)))
+      ) {
+        commonJsProcessExport = true;
+      }
+    });
+  });
+  bindingWalk(file, (node) => {
+    if (!ts.isCallExpression(node)) return;
+    const projection = mutationCallProjection(node, propertyAccessChain(node.expression));
+    if (
+      !projection ||
+      commonJsExportName(projection.target, commonJsAliases) === null
+    ) return;
+    for (const value of projection.values) {
+      bindingWalk(value, (child) => {
+        if (ts.isExpression(child) && dynamicProcessMethod(child, bindings)) {
+          commonJsProcessExport = true;
+        }
+      });
+    }
+  });
+  if (commonJsProcessExport) return true;
+  for (const statement of file.statements) {
+    if (
+      ts.isExportDeclaration(statement) &&
+      statement.exportClause &&
+      ts.isNamespaceExport(statement.exportClause) &&
+      statement.moduleSpecifier &&
+      ts.isStringLiteral(statement.moduleSpecifier) &&
+      [
+        'child_process',
+        'node:child_process',
+        'worker_threads',
+        'node:worker_threads',
+      ].includes(
+        statement.moduleSpecifier.text,
+      )
+    ) {
+      return true;
+    }
+    if (
+      ts.isExportDeclaration(statement) &&
+      !statement.exportClause &&
+      statement.moduleSpecifier &&
+      ts.isStringLiteral(statement.moduleSpecifier) &&
+      [
+        'child_process',
+        'node:child_process',
+        'worker_threads',
+        'node:worker_threads',
+      ].includes(
+        statement.moduleSpecifier.text,
+      )
+    ) {
+      return true;
+    }
+    if (
+      ts.isVariableStatement(statement) &&
+      statement.modifiers?.some(
+        (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+      ) &&
+      statement.declarationList.declarations.some(
+        (declaration) =>
+          ts.isIdentifier(declaration.name) &&
+          bindings.direct.has(declaration.name.text),
+      )
+    ) {
+      return true;
+    }
+    if (
+      ts.isExportDeclaration(statement) &&
+      statement.exportClause &&
+      ts.isNamedExports(statement.exportClause) &&
+      statement.exportClause.elements.some((element) => {
+        const localName = element.propertyName?.text ?? element.name.text;
+        return (
+          bindings.direct.has(localName) ||
+          bindings.direct.has(element.name.text) ||
+          bindings.namespaces.has(localName) ||
+          bindings.namespaces.has(element.name.text)
+        );
+      })
+    ) {
+      return true;
+    }
+    if (
+      ts.isExportAssignment(statement) &&
+      dynamicProcessMethod(statement.expression, bindings)
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function staticProcessString(
+  expression: ts.Expression,
+  seen: ReadonlySet<string> = new Set(),
+): string | null {
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (ts.isStringLiteral(current) || ts.isNoSubstitutionTemplateLiteral(current)) {
+    return current.text;
+  }
+  if (ts.isTemplateExpression(current)) {
+    let value = current.head.text;
+    for (const span of current.templateSpans) {
+      const resolved = staticProcessString(span.expression, seen);
+      if (resolved === null) return null;
+      value += resolved + span.literal.text;
+    }
+    return value;
+  }
+  if (
+    ts.isBinaryExpression(current) &&
+    current.operatorToken.kind === ts.SyntaxKind.PlusToken
+  ) {
+    const left = staticProcessString(current.left, seen);
+    const right = staticProcessString(current.right, seen);
+    return left === null || right === null ? null : left + right;
+  }
+  if (ts.isIdentifier(current) && !seen.has(current.text)) {
+    let initializer: ts.Expression | null = null;
+    for (const statement of current.getSourceFile().statements) {
+      if (!ts.isVariableStatement(statement)) continue;
+      if ((statement.declarationList.flags & ts.NodeFlags.Const) === 0) continue;
+      for (const declaration of statement.declarationList.declarations) {
+        if (
+          ts.isIdentifier(declaration.name) &&
+          declaration.name.text === current.text &&
+          declaration.initializer
+        ) {
+          if (initializer) return null;
+          initializer = declaration.initializer;
+        }
+      }
+    }
+    return initializer
+      ? staticProcessString(initializer, new Set([...seen, current.text]))
+      : null;
+  }
+  return null;
+}
+
+function safeGitValue(value: string): boolean {
+  return (
+    value.length > 0 &&
+    !value.startsWith('-') &&
+    !/[\u0000\r\n;&|`$<>]/.test(value)
+  );
+}
+
+function isSafeExecFileOptions(expression: ts.Expression | undefined): boolean {
+  if (!expression) return true;
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (!ts.isObjectLiteralExpression(current)) return false;
+  const allowedKeys = new Set(['cwd', 'encoding', 'stdio']);
+  for (const property of current.properties) {
+    if (!ts.isPropertyAssignment(property) && !ts.isShorthandPropertyAssignment(property)) {
+      return false;
+    }
+    const name = ts.isIdentifier(property.name) || ts.isStringLiteral(property.name)
+      ? property.name.text
+      : ts.isComputedPropertyName(property.name)
+        ? staticComputedPropertyName(property.name.expression)
+        : null;
+    if (!name || !allowedKeys.has(name)) return false;
+  }
+  return true;
+}
+
+function isStrictReadOnlyGitArguments(expression: ts.Expression): boolean {
+  if (!ts.isArrayLiteralExpression(expression)) return false;
+  const args: string[] = [];
+  for (const element of expression.elements) {
+    if (ts.isSpreadElement(element) || ts.isOmittedExpression(element)) return false;
+    const value = staticProcessString(element);
+    if (value === null) return false;
+    args.push(value);
+  }
+  const [command, ...rest] = args;
+  if (command === 'show') {
+    return rest.length === 1 && safeGitValue(rest[0]!) && rest[0]!.includes(':');
+  }
+  if (command === 'cat-file') {
+    return rest.length === 2 && rest[0] === '-e' && safeGitValue(rest[1]!);
+  }
+  if (command === 'merge-base') {
+    return (
+      rest.length === 3 &&
+      rest[0] === '--is-ancestor' &&
+      safeGitValue(rest[1]!) &&
+      safeGitValue(rest[2]!)
+    );
+  }
+  if (command === 'rev-parse') {
+    return (
+      rest.length === 1 &&
+      (rest[0] === '--show-toplevel' || safeGitValue(rest[0]!))
+    );
+  }
+  if (command === 'ls-tree') {
+    return rest.length >= 1 && rest.every(safeGitValue);
+  }
+  return false;
+}
+
+function isDynamicProcessCall(
+  call: ts.CallExpression,
+  bindings: DynamicProcessBindings,
+): boolean {
+  if (
+    call.arguments.some((argument) =>
+      Boolean(containedDynamicProcessMethod(argument, bindings)),
+    )
+  ) {
+    return true;
+  }
+  const callChain = propertyAccessChain(call.expression)?.toLowerCase();
+  if (
+    ['reflect.apply', 'reflect.construct'].includes(callChain ?? '') &&
+    dynamicProcessMethod(call.arguments[0], bindings)
+  ) {
+    return true;
+  }
+  const method = dynamicProcessMethod(call.expression, bindings);
+  if (!method) return false;
+  if (method === 'unknown') return true;
+  if (
+    ['Worker', 'exec', 'execSync', 'fork', 'spawn', 'spawnSync'].includes(
+      method,
+    )
+  ) {
+    return true;
+  }
+  if (!['execFile', 'execFileSync'].includes(method)) {
+    return false;
+  }
+  if (call.arguments.length > 3 || !isSafeExecFileOptions(call.arguments[2])) {
+    return true;
+  }
+  const executable = call.arguments[0];
+  if (
+    !executable ||
+    !(
+      ts.isStringLiteral(executable) ||
+      ts.isNoSubstitutionTemplateLiteral(executable)
+    ) ||
+    executable.text !== 'git'
+  ) {
+    return true;
+  }
+  const argumentsList = call.arguments[1];
+  return !argumentsList || !isStrictReadOnlyGitArguments(argumentsList);
+}
+
+function isDynamicProcessNewExpression(
+  expression: ts.NewExpression,
+  bindings: DynamicProcessBindings,
+): boolean {
+  return (
+    Boolean(dynamicProcessMethod(expression.expression, bindings)) ||
+    Boolean(
+      expression.arguments?.some((argument) =>
+        Boolean(containedDynamicProcessMethod(argument, bindings)),
+      ),
+    )
+  );
+}
+
+function isDynamicProcessTaggedTemplate(
+  expression: ts.TaggedTemplateExpression,
+  bindings: DynamicProcessBindings,
+): boolean {
+  if (dynamicProcessMethod(expression.tag, bindings)) return true;
+  if (!ts.isTemplateExpression(expression.template)) return false;
+  return expression.template.templateSpans.some((span) =>
+    Boolean(containedDynamicProcessMethod(span.expression, bindings)),
+  );
+}
+
+function isUnsafeDynamicImport(call: ts.CallExpression): boolean {
+  if (call.expression.kind !== ts.SyntaxKind.ImportKeyword) return false;
+  const specifier = call.arguments[0];
+  if (
+    !specifier ||
+    !(
+      ts.isStringLiteral(specifier) ||
+      ts.isNoSubstitutionTemplateLiteral(specifier)
+    )
+  ) {
+    return true;
+  }
+  return /^(?:data|https?|file|node):/i.test(specifier.text);
+}
+
+function nestedSheetsTarget(
+  expressions: readonly ts.Expression[],
+  checker: ts.TypeChecker,
+  reassignedSymbols: ReadonlySet<ts.Symbol>,
+): ts.Expression | null {
+  let match: ts.Expression | null = null;
+  const visit = (node: ts.Node): void => {
+    if (match) return;
+    if (
+      ts.isExpression(node) &&
+      genericNetworkTargetRisk(node, checker, reassignedSymbols) === 'sheets'
+    ) {
+      match = node;
+      return;
+    }
+    ts.forEachChild(node, visit);
+  };
+  for (const expression of expressions) {
+    visit(expression);
+    if (match) return match;
+  }
+  return null;
+}
+
+function nestedWriteMethod(
+  expressions: readonly ts.Expression[],
+  checker: ts.TypeChecker,
+  reassignedSymbols: ReadonlySet<ts.Symbol>,
+): boolean {
+  let writeCapable = false;
+  const visit = (node: ts.Node): void => {
+    if (writeCapable) return;
+    if (ts.isPropertyAssignment(node)) {
+      const propertyName =
+        !ts.isComputedPropertyName(node.name) &&
+        (ts.isIdentifier(node.name) || ts.isStringLiteral(node.name))
+          ? node.name.text
+          : null;
+      if (propertyName?.toLowerCase() === 'method') {
+        const method = staticStringPattern(
+          node.initializer,
+          checker,
+          reassignedSymbols,
+        );
+        if (
+          !method.complete ||
+          !['GET', 'HEAD'].includes(method.text.toUpperCase())
+        ) {
+          writeCapable = true;
+          return;
+        }
+      }
+    }
+    ts.forEachChild(node, visit);
+  };
+  for (const expression of expressions) {
+    visit(expression);
+    if (writeCapable) return true;
+  }
+  return false;
+}
+
+function stableArgumentArray(
+  expression: ts.Expression | undefined,
+  checker: ts.TypeChecker,
+  reassignedSymbols: ReadonlySet<ts.Symbol>,
+): ts.Expression[] | null {
+  if (!expression) return null;
+  const resolved = unwrapStableExpression(
+    expression,
+    checker,
+    reassignedSymbols,
+  );
+  if (!ts.isArrayLiteralExpression(resolved)) return null;
+  const arguments_: ts.Expression[] = [];
+  for (const element of resolved.elements) {
+    if (ts.isSpreadElement(element) || ts.isOmittedExpression(element)) {
+      return null;
+    }
+    arguments_.push(element);
+  }
+  return arguments_;
+}
+
 function genericNetworkCall(
   call: ts.CallExpression,
   chain: string[] | null,
   checker: ts.TypeChecker,
   reassignedSymbols: ReadonlySet<ts.Symbol>,
+  aliases: AliasChains,
 ): GenericNetworkCall | null {
-  if (!chain || chain.length === 0) return null;
-  const normalized = chain.map((part) => part.toLowerCase());
-  const root = normalized[0];
+  const embeddedSheetsTarget = nestedSheetsTarget(
+    call.arguments,
+    checker,
+    reassignedSymbols,
+  );
+  const embeddedWriteMethod = nestedWriteMethod(
+    call.arguments,
+    checker,
+    reassignedSymbols,
+  );
+  if (!chain || chain.length === 0) {
+    return embeddedSheetsTarget || embeddedWriteMethod
+      ? { target: embeddedSheetsTarget, method: null }
+      : null;
+  }
+  let effectiveChain = chain;
+  let effectiveArguments = [...call.arguments];
+  let normalized = effectiveChain.map((part) => part.toLowerCase());
   const terminal = normalized[normalized.length - 1];
-  const isFetch = terminal === 'fetch' || normalized.includes('fetch');
+  const isReflectIndirection =
+    normalized.length === 2 &&
+    normalized[0] === 'reflect' &&
+    (terminal === 'apply' || terminal === 'construct');
+  if (isReflectIndirection) {
+    const targetChain = call.arguments[0]
+      ? expressionChain(call.arguments[0], checker, aliases)
+      : null;
+    const arguments_ = stableArgumentArray(
+      call.arguments[terminal === 'apply' ? 2 : 1],
+      checker,
+      reassignedSymbols,
+    );
+    if (!genericNetworkChain(targetChain)) {
+      const containsKnownNetworkTarget = call.arguments.some((argument) =>
+        genericNetworkChain(expressionChain(argument, checker, aliases)),
+      );
+      if (!containsKnownNetworkTarget) {
+        return embeddedSheetsTarget || embeddedWriteMethod
+          ? { target: embeddedSheetsTarget, method: null }
+          : null;
+      }
+    }
+    if (!targetChain || !arguments_) return { target: null, method: null };
+    effectiveChain = targetChain;
+    effectiveArguments = arguments_;
+    normalized = effectiveChain.map((part) => part.toLowerCase());
+  } else if (['call', 'apply', 'bind'].includes(terminal)) {
+    const targetChain = effectiveChain.slice(0, -1);
+    if (!genericNetworkChain(targetChain)) {
+      const containsKnownNetworkTarget = call.arguments.some((argument) =>
+        genericNetworkChain(expressionChain(argument, checker, aliases)),
+      );
+      if (!containsKnownNetworkTarget) {
+        return embeddedSheetsTarget || embeddedWriteMethod
+          ? { target: embeddedSheetsTarget, method: null }
+          : null;
+      }
+      return { target: null, method: null };
+    }
+    if (terminal === 'bind') return { target: null, method: null };
+    const arguments_ =
+      terminal === 'call'
+        ? effectiveArguments.slice(1)
+        : stableArgumentArray(
+            effectiveArguments[1],
+            checker,
+            reassignedSymbols,
+          );
+    if (!arguments_) return { target: null, method: null };
+    effectiveChain = targetChain;
+    effectiveArguments = arguments_;
+    normalized = effectiveChain.map((part) => part.toLowerCase());
+  }
+  const root = normalized[0];
+  const effectiveTerminal = normalized[normalized.length - 1];
+  if (root === INDIRECT_NETWORK_CHAIN_ROOT) {
+    return {
+      target: embeddedSheetsTarget ?? effectiveArguments[0] ?? null,
+      method: null,
+    };
+  }
+  const isFetch = effectiveTerminal === 'fetch' || normalized.includes('fetch');
   const isKnownClient =
     isFetch ||
     ['axios', 'got', 'ky', 'undici', 'http', 'https'].includes(root);
-  if (!isKnownClient) return null;
+  if (!isKnownClient) {
+    return embeddedSheetsTarget || embeddedWriteMethod
+      ? { target: embeddedSheetsTarget, method: null }
+      : null;
+  }
 
-  const memberMethod = GENERIC_NETWORK_METHOD_MEMBERS.get(terminal);
-  let target: ts.Expression | null = call.arguments[0] ?? null;
-  let options = call.arguments[1];
+  const memberMethod = GENERIC_NETWORK_METHOD_MEMBERS.get(effectiveTerminal);
+  let target: ts.Expression | null = effectiveArguments[0] ?? null;
+  let options = effectiveArguments[1];
   const firstObject = stableObjectLiteral(
-    call.arguments[0],
+    effectiveArguments[0],
     checker,
     reassignedSymbols,
   );
@@ -965,6 +2595,979 @@ function surfaceId(relativePath: string): string {
   );
 }
 
+type RuntimeModuleFact = {
+  networkCapability: boolean;
+  processCapability: boolean;
+  sheetsTarget: boolean;
+  writeOptions: boolean;
+};
+
+function mergeRuntimeModuleFacts(
+  ...facts: readonly (RuntimeModuleFact | null | undefined)[]
+): RuntimeModuleFact {
+  return {
+    networkCapability: facts.some((fact) => fact?.networkCapability),
+    processCapability: facts.some((fact) => fact?.processCapability),
+    sheetsTarget: facts.some((fact) => fact?.sheetsTarget),
+    writeOptions: facts.some((fact) => fact?.writeOptions),
+  };
+}
+
+type MutationCallProjection = {
+  target: ts.Expression;
+  values: readonly ts.Expression[];
+};
+
+function mutationCallProjection(
+  call: ts.CallExpression,
+  resolvedCall: string | null,
+): MutationCallProjection | null {
+  if (!resolvedCall) return null;
+  if (resolvedCall === 'Object.assign' && call.arguments[0]) {
+    return { target: call.arguments[0], values: call.arguments.slice(1) };
+  }
+  if (resolvedCall === 'Reflect.set' && call.arguments[0] && call.arguments[2]) {
+    return { target: call.arguments[0], values: [call.arguments[2]] };
+  }
+  if (
+    ['Object.defineProperty', 'Reflect.defineProperty'].includes(resolvedCall) &&
+    call.arguments[0] &&
+    call.arguments[2]
+  ) {
+    return { target: call.arguments[0], values: [call.arguments[2]] };
+  }
+  if (resolvedCall === 'Object.defineProperties' && call.arguments[0] && call.arguments[1]) {
+    return { target: call.arguments[0], values: [call.arguments[1]] };
+  }
+  return null;
+}
+
+function assignedRootIdentifier(expression: ts.Expression): string | null {
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current) ||
+    ts.isPropertyAccessExpression(current) ||
+    ts.isElementAccessExpression(current)
+  ) {
+    current = current.expression;
+  }
+  return ts.isIdentifier(current) ? current.text : null;
+}
+
+function assignedRootIdentifiers(
+  expression: ts.Expression,
+  seen: ReadonlySet<string> = new Set(),
+): ReadonlySet<string> {
+  const direct = assignedRootIdentifier(expression);
+  if (direct) return new Set([direct]);
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (ts.isObjectLiteralExpression(current)) {
+    const roots = new Set<string>();
+    for (const property of current.properties) {
+      if (ts.isPropertyAssignment(property)) {
+        for (const root of assignedRootIdentifiers(property.initializer, seen)) {
+          roots.add(root);
+        }
+      } else if (ts.isShorthandPropertyAssignment(property)) {
+        roots.add(property.name.text);
+      } else if (ts.isSpreadAssignment(property)) {
+        for (const root of assignedRootIdentifiers(property.expression, seen)) {
+          roots.add(root);
+        }
+      }
+    }
+    return roots;
+  }
+  if (ts.isArrayLiteralExpression(current)) {
+    const roots = new Set<string>();
+    for (const element of current.elements) {
+      if (ts.isOmittedExpression(element)) continue;
+      for (const root of assignedRootIdentifiers(
+        ts.isSpreadElement(element) ? element.expression : element,
+        seen,
+      )) {
+        roots.add(root);
+      }
+    }
+    return roots;
+  }
+  if (ts.isConditionalExpression(current)) {
+    return new Set([
+      ...assignedRootIdentifiers(current.whenTrue, seen),
+      ...assignedRootIdentifiers(current.whenFalse, seen),
+    ]);
+  }
+  if (
+    ts.isBinaryExpression(current) &&
+    [
+      ts.SyntaxKind.AmpersandAmpersandToken,
+      ts.SyntaxKind.BarBarToken,
+      ts.SyntaxKind.QuestionQuestionToken,
+      ts.SyntaxKind.CommaToken,
+    ].includes(current.operatorToken.kind)
+  ) {
+    return new Set([
+      ...assignedRootIdentifiers(current.left, seen),
+      ...assignedRootIdentifiers(current.right, seen),
+    ]);
+  }
+  if (!ts.isCallExpression(current) || !ts.isIdentifier(current.expression)) {
+    return new Set();
+  }
+  const callableName = current.expression.text;
+  return returnedRootIdentifiersForCallable(
+    current.getSourceFile(),
+    callableName,
+    seen,
+  );
+}
+
+function returnedRootIdentifiersForCallable(
+  sourceFile: ts.SourceFile,
+  callableName: string,
+  seen: ReadonlySet<string>,
+): ReadonlySet<string> {
+  if (seen.has(callableName)) return new Set();
+  const roots = new Set<string>();
+  const nextSeen = new Set([...seen, callableName]);
+  for (const statement of sourceFile.statements) {
+    if (
+      ts.isFunctionDeclaration(statement) &&
+      statement.name?.text === callableName &&
+      statement.body
+    ) {
+      bindingWalk(statement.body, (node) => {
+        if (ts.isReturnStatement(node) && node.expression) {
+          for (const root of assignedRootIdentifiers(node.expression, nextSeen)) {
+            roots.add(root);
+          }
+        }
+      });
+    }
+    if (!ts.isVariableStatement(statement)) continue;
+    if ((statement.declarationList.flags & ts.NodeFlags.Const) === 0) continue;
+    for (const declaration of statement.declarationList.declarations) {
+      if (
+        !ts.isIdentifier(declaration.name) ||
+        declaration.name.text !== callableName ||
+        !declaration.initializer
+      ) {
+        continue;
+      }
+      if (ts.isIdentifier(declaration.initializer)) {
+        for (const root of returnedRootIdentifiersForCallable(
+          sourceFile,
+          declaration.initializer.text,
+          nextSeen,
+        )) {
+          roots.add(root);
+        }
+        continue;
+      }
+      if (
+        !ts.isArrowFunction(declaration.initializer) &&
+        !ts.isFunctionExpression(declaration.initializer)
+      ) {
+        continue;
+      }
+      const body = declaration.initializer.body;
+      if (ts.isExpression(body)) {
+        for (const root of assignedRootIdentifiers(body, nextSeen)) roots.add(root);
+      } else {
+        bindingWalk(body, (node) => {
+          if (ts.isReturnStatement(node) && node.expression) {
+            for (const root of assignedRootIdentifiers(node.expression, nextSeen)) {
+              roots.add(root);
+            }
+          }
+        });
+      }
+    }
+  }
+  return roots;
+}
+
+function runtimeModuleFactForExpression(
+  expression: ts.Expression,
+  checker: ts.TypeChecker,
+  aliases: AliasChains,
+  reassignedSymbols: ReadonlySet<ts.Symbol>,
+  processBindings: DynamicProcessBindings,
+): RuntimeModuleFact {
+  let networkCapability = false;
+  let processCapability = false;
+  let sheetsTarget = false;
+  const visit = (node: ts.Node): void => {
+    if (ts.isExpression(node)) {
+      networkCapability ||= genericNetworkChain(
+        expressionChain(node, checker, aliases),
+      );
+      processCapability ||= Boolean(dynamicProcessMethod(node, processBindings));
+      sheetsTarget ||=
+        genericNetworkTargetRisk(node, checker, reassignedSymbols) ===
+        'sheets';
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(expression);
+  return {
+    networkCapability,
+    processCapability,
+    sheetsTarget,
+    writeOptions: nestedWriteMethod([expression], checker, reassignedSymbols),
+  };
+}
+
+function resolveRuntimeModulePath(
+  importingPath: string,
+  specifier: string,
+  runtimePaths: ReadonlySet<string>,
+): string | null {
+  let unresolved: string;
+  if (specifier.startsWith('@/')) {
+    unresolved = `web/src/${specifier.slice(2)}`;
+  } else if (specifier.startsWith('.')) {
+    unresolved = path.posix.normalize(
+      path.posix.join(path.posix.dirname(importingPath), specifier),
+    );
+  } else {
+    return null;
+  }
+  const withoutRuntimeExtension = unresolved.replace(
+    /\.(?:[cm]?[jt]sx?)$/,
+    '',
+  );
+  const extensions = [
+    '.ts',
+    '.tsx',
+    '.mts',
+    '.cts',
+    '.js',
+    '.jsx',
+    '.mjs',
+    '.cjs',
+  ];
+  const candidates = [
+    unresolved,
+    ...extensions.map((extension) => `${withoutRuntimeExtension}${extension}`),
+    ...extensions.map(
+      (extension) => `${withoutRuntimeExtension}/index${extension}`,
+    ),
+  ];
+  return candidates.find((candidate) => runtimePaths.has(candidate)) ?? null;
+}
+
+const NODE_BUILTIN_MODULES = new Set(
+  builtinModules.flatMap((specifier) => {
+    const bare = specifier.startsWith('node:')
+      ? specifier.slice('node:'.length)
+      : specifier;
+    return [bare, `node:${bare}`];
+  }),
+);
+
+function runtimePackageAllowlist(repositoryRoot: string): ReadonlySet<string> {
+  const packagePath = path.join(repositoryRoot, 'web/package.json');
+  const lockPath = path.join(repositoryRoot, 'web/package-lock.json');
+  if (!fs.existsSync(packagePath) || !fs.existsSync(lockPath)) return new Set();
+  const parsed = JSON.parse(fs.readFileSync(packagePath, 'utf8')) as {
+    dependencies?: Record<string, string>;
+    devDependencies?: Record<string, string>;
+    optionalDependencies?: Record<string, string>;
+  };
+  const lock = JSON.parse(fs.readFileSync(lockPath, 'utf8')) as {
+    packages?: Record<string, { integrity?: string }>;
+  };
+  const declared = {
+    ...parsed.dependencies,
+    ...parsed.devDependencies,
+    ...parsed.optionalDependencies,
+  };
+  return new Set(
+    Object.entries(declared)
+      .filter(([name, declaration]) => {
+        if (
+          /^(?:file|git|https?|link|npm|workspace):/i.test(declaration) ||
+          !/^(?:[~^]?\d|[<>=*])/.test(declaration)
+        ) return false;
+        const locked = lock.packages?.[`node_modules/${name}`];
+        return Boolean(locked?.integrity?.startsWith('sha512-'));
+      })
+      .map(([name]) => name),
+  );
+}
+
+function runtimePackageName(specifier: string): string {
+  if (!specifier.startsWith('@')) return specifier.split('/')[0] ?? specifier;
+  return specifier.split('/').slice(0, 2).join('/');
+}
+
+function safeEsmAssetBoundary(
+  repositoryRoot: string,
+  importingPath: string,
+  specifier: string,
+): boolean {
+  if (/[?#%]/.test(specifier)) return false;
+  const relativePath = specifier.startsWith('@/')
+    ? `web/src/${specifier.slice(2)}`
+    : path.posix.normalize(
+        path.posix.join(path.posix.dirname(importingPath), specifier),
+      );
+  const extension = path.posix.extname(relativePath);
+  if (
+    ![
+      '.css',
+      '.gif',
+      '.ico',
+      '.jpeg',
+      '.jpg',
+      '.json',
+      '.less',
+      '.png',
+      '.sass',
+      '.scss',
+      '.svg',
+      '.webp',
+    ].includes(extension)
+  ) return false;
+  const root = path.resolve(repositoryRoot);
+  const absolute = path.resolve(root, relativePath);
+  if (!absolute.startsWith(`${root}${path.sep}`) || !fs.existsSync(absolute)) {
+    return false;
+  }
+  const state = fs.lstatSync(absolute);
+  if (!state.isFile() || state.isSymbolicLink()) return false;
+  if (fs.realpathSync(absolute) !== absolute) return false;
+  if (extension === '.json') {
+    try {
+      JSON.parse(fs.readFileSync(absolute, 'utf8'));
+    } catch {
+      return false;
+    }
+  }
+  return true;
+}
+
+function runtimeModuleBoundaryUnsafe(
+  node: ts.Node,
+  repositoryRoot: string,
+  importingPath: string,
+  runtimePaths: ReadonlySet<string>,
+  allowedPackages: ReadonlySet<string>,
+): boolean {
+  let specifier: string | null = null;
+  let commonJsLoader = false;
+  if (
+    (ts.isImportDeclaration(node) || ts.isExportDeclaration(node)) &&
+    node.moduleSpecifier &&
+    ts.isStringLiteral(node.moduleSpecifier)
+  ) {
+    specifier = node.moduleSpecifier.text;
+  } else if (
+    ts.isImportEqualsDeclaration(node) &&
+    ts.isExternalModuleReference(node.moduleReference) &&
+    node.moduleReference.expression &&
+    ts.isStringLiteral(node.moduleReference.expression)
+  ) {
+    specifier = node.moduleReference.expression.text;
+    commonJsLoader = true;
+  } else if (ts.isCallExpression(node)) {
+    const chain = propertyAccessChain(node.expression);
+    const directLoader =
+      node.expression.kind === ts.SyntaxKind.ImportKeyword ||
+      chain === 'require' ||
+      chain === 'module.require' ||
+      chain === 'process.getBuiltinModule';
+    if (!directLoader) return false;
+    commonJsLoader = node.expression.kind !== ts.SyntaxKind.ImportKeyword;
+    specifier = staticDynamicModuleSpecifier(node.arguments[0]);
+    if (specifier === null) return true;
+  } else {
+    return false;
+  }
+  if (NODE_BUILTIN_MODULES.has(specifier)) {
+    return unsafeNodeExecutionModule(specifier);
+  }
+  if (
+    /^(?:data|file|https?):/i.test(specifier) ||
+    path.posix.isAbsolute(specifier)
+  ) {
+    return true;
+  }
+  if (specifier.startsWith('.') || specifier.startsWith('@/')) {
+    if (
+      !commonJsLoader &&
+      safeEsmAssetBoundary(repositoryRoot, importingPath, specifier)
+    ) {
+      return false;
+    }
+    return resolveRuntimeModulePath(importingPath, specifier, runtimePaths) === null;
+  }
+  const packageName = runtimePackageName(specifier);
+  if (
+    [
+      '@babel/register',
+      '@swc/core',
+      'esbuild',
+      'jiti',
+      'pirates',
+      'ts-node',
+      'tsx',
+      'vite',
+      'webpack',
+    ].includes(packageName)
+  ) {
+    return true;
+  }
+  return !allowedPackages.has(packageName);
+}
+
+function buildRuntimeModuleExports(
+  repositoryRoot: string,
+  relativeFiles: readonly string[],
+  program: ts.Program,
+  checker: ts.TypeChecker,
+): Map<string, Map<string, RuntimeModuleFact>> {
+  const exportsByPath = new Map<string, Map<string, RuntimeModuleFact>>();
+  const runtimePaths = new Set(relativeFiles);
+  for (const relativePath of relativeFiles) {
+    const sourceFile = program.getSourceFile(
+      path.join(repositoryRoot, relativePath),
+    );
+    if (!sourceFile) continue;
+    const aliases = buildAliasChains(sourceFile, checker);
+    const commonJsAliases = commonJsExportAliases(sourceFile);
+    const reassignedSymbols = collectAssignedSymbols(sourceFile, checker);
+    const processBindings = dynamicProcessBindings(sourceFile);
+    const localFacts = new Map<string, RuntimeModuleFact>();
+    const exportedFacts = new Map<string, RuntimeModuleFact>();
+    const returnedExpressionFact = (
+      expression: ts.Expression,
+    ): RuntimeModuleFact => {
+      let localFact: RuntimeModuleFact | null = null;
+      const callable = ts.isCallExpression(expression)
+        ? expression.expression
+        : expression;
+      if (ts.isIdentifier(callable)) {
+        localFact = localFacts.get(callable.text) ?? null;
+      } else if (
+        (ts.isPropertyAccessExpression(callable) ||
+          ts.isElementAccessExpression(callable)) &&
+        ts.isIdentifier(callable.expression)
+      ) {
+          localFact = localFacts.get(callable.expression.text) ?? null;
+      }
+      let nestedLocalFact = mergeRuntimeModuleFacts();
+      bindingWalk(expression, (node) => {
+        if (ts.isIdentifier(node)) {
+          nestedLocalFact = mergeRuntimeModuleFacts(
+            nestedLocalFact,
+            localFacts.get(node.text),
+          );
+        }
+      });
+      const directFact = runtimeModuleFactForExpression(
+        expression,
+        checker,
+        aliases,
+        reassignedSymbols,
+        processBindings,
+      );
+      if (
+        ts.isCallExpression(expression) &&
+        genericNetworkChain(
+          expressionChain(expression.expression, checker, aliases),
+        )
+      ) {
+        directFact.networkCapability = false;
+      }
+      if (ts.isCallExpression(expression)) {
+        const invokedProcess = dynamicProcessMethod(
+          expression.expression,
+          processBindings,
+        );
+        const invokedChain = propertyAccessChain(expression.expression)?.toLowerCase();
+        if (invokedProcess && !invokedChain?.endsWith('.bind')) {
+          directFact.processCapability = false;
+        }
+      }
+      return mergeRuntimeModuleFacts(
+        directFact,
+        localFact,
+        nestedLocalFact,
+      );
+    };
+    for (let pass = 0; pass < sourceFile.statements.length + 1; pass += 1) {
+      let changed = false;
+      const setLocalFact = (name: string, fact: RuntimeModuleFact): void => {
+        const merged = mergeRuntimeModuleFacts(localFacts.get(name), fact);
+        if (canonicalP9Json(localFacts.get(name)) !== canonicalP9Json(merged)) {
+          localFacts.set(name, merged);
+          changed = true;
+        }
+      };
+      for (const statement of sourceFile.statements) {
+        if (ts.isVariableStatement(statement)) {
+          for (const declaration of statement.declarationList.declarations) {
+            if (ts.isIdentifier(declaration.name) && declaration.initializer) {
+              setLocalFact(
+                declaration.name.text,
+                returnedExpressionFact(declaration.initializer),
+              );
+            }
+          }
+        }
+        if (
+          ts.isFunctionDeclaration(statement) &&
+          statement.name &&
+          statement.body
+        ) {
+          let fact = mergeRuntimeModuleFacts();
+          bindingWalk(statement.body, (node) => {
+            if (ts.isReturnStatement(node) && node.expression) {
+              fact = mergeRuntimeModuleFacts(
+                fact,
+                returnedExpressionFact(node.expression),
+              );
+            }
+          });
+          setLocalFact(statement.name.text, fact);
+        }
+        if (ts.isClassDeclaration(statement) && statement.name) {
+          let fact = mergeRuntimeModuleFacts();
+          for (const member of statement.members) {
+            if (ts.isPropertyDeclaration(member) && member.initializer) {
+              fact = mergeRuntimeModuleFacts(
+                fact,
+                returnedExpressionFact(member.initializer),
+              );
+            }
+            if (
+              (ts.isMethodDeclaration(member) ||
+                ts.isGetAccessorDeclaration(member) ||
+                ts.isSetAccessorDeclaration(member)) &&
+              member.body
+            ) {
+              bindingWalk(member.body, (node) => {
+                if (ts.isReturnStatement(node) && node.expression) {
+                  fact = mergeRuntimeModuleFacts(
+                    fact,
+                    returnedExpressionFact(node.expression),
+                  );
+                }
+              });
+            }
+            if (ts.isClassStaticBlockDeclaration(member)) {
+              bindingWalk(member.body, (node) => {
+                if (
+                  ts.isBinaryExpression(node) &&
+                  node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+                  node.operatorToken.kind <= ts.SyntaxKind.LastAssignment
+                ) {
+                  fact = mergeRuntimeModuleFacts(
+                    fact,
+                    returnedExpressionFact(node.right),
+                  );
+                }
+              });
+            }
+          }
+          setLocalFact(statement.name.text, fact);
+        }
+      }
+      bindingWalk(sourceFile, (node) => {
+        if (ts.isCallExpression(node)) {
+          const projection = mutationCallProjection(
+            node,
+            expressionChain(node.expression, checker, aliases)?.join('.') ?? null,
+          );
+          if (projection) {
+            const fact = mergeRuntimeModuleFacts(
+              ...projection.values.map(returnedExpressionFact),
+            );
+            for (const root of assignedRootIdentifiers(projection.target)) {
+              setLocalFact(root, fact);
+            }
+          }
+          return;
+        }
+        if (
+          ts.isBinaryExpression(node) &&
+          node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+          node.operatorToken.kind <= ts.SyntaxKind.LastAssignment
+        ) {
+          const root = assignedRootIdentifier(node.left);
+          if (root) setLocalFact(root, returnedExpressionFact(node.right));
+        }
+      });
+      if (!changed) break;
+    }
+    for (const statement of sourceFile.statements) {
+      if (ts.isVariableStatement(statement)) {
+        const exported = statement.modifiers?.some(
+          (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+        );
+        for (const declaration of statement.declarationList.declarations) {
+          if (!ts.isIdentifier(declaration.name) || !declaration.initializer) {
+            continue;
+          }
+          const fact = localFacts.get(declaration.name.text) ??
+            runtimeModuleFactForExpression(
+              declaration.initializer,
+              checker,
+              aliases,
+              reassignedSymbols,
+              processBindings,
+            );
+          if (exported) exportedFacts.set(declaration.name.text, fact);
+        }
+      }
+      if (
+        ts.isFunctionDeclaration(statement) &&
+        statement.body &&
+        statement.modifiers?.some(
+          (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+        )
+      ) {
+        let returnedFact = mergeRuntimeModuleFacts();
+        const visitReturn = (node: ts.Node): void => {
+          if (ts.isReturnStatement(node) && node.expression) {
+            returnedFact = mergeRuntimeModuleFacts(
+              returnedFact,
+              returnedExpressionFact(node.expression),
+            );
+          }
+          ts.forEachChild(node, visitReturn);
+        };
+        visitReturn(statement.body);
+        if (statement.name) exportedFacts.set(statement.name.text, returnedFact);
+        if (
+          statement.modifiers?.some(
+            (modifier) => modifier.kind === ts.SyntaxKind.DefaultKeyword,
+          )
+        ) {
+          exportedFacts.set('default', returnedFact);
+        }
+      }
+      if (
+        ts.isClassDeclaration(statement) &&
+        statement.modifiers?.some(
+          (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+        )
+      ) {
+        let classFact = mergeRuntimeModuleFacts();
+        for (const member of statement.members) {
+          if (ts.isPropertyDeclaration(member) && member.initializer) {
+            classFact = mergeRuntimeModuleFacts(
+              classFact,
+              returnedExpressionFact(member.initializer),
+            );
+          }
+          if (
+            (ts.isMethodDeclaration(member) ||
+              ts.isGetAccessorDeclaration(member) ||
+              ts.isSetAccessorDeclaration(member)) &&
+            member.body
+          ) {
+            const visitReturn = (node: ts.Node): void => {
+              if (ts.isReturnStatement(node) && node.expression) {
+                classFact = mergeRuntimeModuleFacts(
+                  classFact,
+                  returnedExpressionFact(node.expression),
+                );
+              }
+              ts.forEachChild(node, visitReturn);
+            };
+            visitReturn(member.body);
+          }
+          if (ts.isClassStaticBlockDeclaration(member)) {
+            bindingWalk(member.body, (node) => {
+              if (
+                ts.isBinaryExpression(node) &&
+                node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+                node.operatorToken.kind <= ts.SyntaxKind.LastAssignment
+              ) {
+                classFact = mergeRuntimeModuleFacts(
+                  classFact,
+                  returnedExpressionFact(node.right),
+                );
+              }
+            });
+          }
+        }
+        if (statement.name) exportedFacts.set(statement.name.text, classFact);
+        if (
+          statement.modifiers?.some(
+            (modifier) => modifier.kind === ts.SyntaxKind.DefaultKeyword,
+          )
+        ) {
+          exportedFacts.set('default', classFact);
+        }
+      }
+      if (
+        ts.isExportDeclaration(statement) &&
+        !statement.moduleSpecifier &&
+        statement.exportClause &&
+        ts.isNamedExports(statement.exportClause)
+      ) {
+        for (const element of statement.exportClause.elements) {
+          const localName = element.propertyName?.text ?? element.name.text;
+          const fact = localFacts.get(localName);
+          if (fact) exportedFacts.set(element.name.text, fact);
+        }
+      }
+      if (ts.isExportAssignment(statement)) {
+        exportedFacts.set(
+          'default',
+          returnedExpressionFact(statement.expression),
+        );
+      }
+    }
+    bindingWalk(sourceFile, (node) => {
+      if (
+        !ts.isBinaryExpression(node) ||
+        node.operatorToken.kind !== ts.SyntaxKind.EqualsToken
+      ) {
+        return;
+      }
+      const exportName = commonJsExportName(node.left, commonJsAliases);
+      if (exportName === 'default') {
+        exportedFacts.set('default', returnedExpressionFact(node.right));
+      } else if (exportName) {
+        exportedFacts.set(
+          exportName,
+          returnedExpressionFact(node.right),
+        );
+      }
+    });
+    bindingWalk(sourceFile, (node) => {
+      if (!ts.isCallExpression(node)) return;
+      const projection = mutationCallProjection(
+        node,
+        expressionChain(node.expression, checker, aliases)?.join('.') ?? null,
+      );
+      if (
+        !projection ||
+        commonJsExportName(projection.target, commonJsAliases) === null
+      ) return;
+      exportedFacts.set(
+        'default',
+        mergeRuntimeModuleFacts(
+          ...projection.values.map(returnedExpressionFact),
+        ),
+      );
+    });
+    exportsByPath.set(relativePath, exportedFacts);
+  }
+  for (let pass = 0; pass < relativeFiles.length; pass += 1) {
+    let changed = false;
+    for (const relativePath of relativeFiles) {
+      const sourceFile = program.getSourceFile(
+        path.join(repositoryRoot, relativePath),
+      );
+      const targetFacts = exportsByPath.get(relativePath);
+      if (!sourceFile || !targetFacts) continue;
+      for (const statement of sourceFile.statements) {
+        if (
+          !ts.isExportDeclaration(statement) ||
+          !statement.moduleSpecifier ||
+          !ts.isStringLiteral(statement.moduleSpecifier)
+        ) {
+          continue;
+        }
+        const sourcePath = resolveRuntimeModulePath(
+          relativePath,
+          statement.moduleSpecifier.text,
+          runtimePaths,
+        );
+        const sourceFacts = sourcePath ? exportsByPath.get(sourcePath) : null;
+        if (!sourceFacts) continue;
+        if (!statement.exportClause) {
+          for (const [name, fact] of sourceFacts) {
+            if (!targetFacts.has(name) && name !== 'default') {
+              targetFacts.set(name, fact);
+              changed = true;
+            }
+          }
+        } else if (ts.isNamedExports(statement.exportClause)) {
+          for (const element of statement.exportClause.elements) {
+            const importedName = element.propertyName?.text ?? element.name.text;
+            const fact = sourceFacts.get(importedName);
+            if (fact && !targetFacts.has(element.name.text)) {
+              targetFacts.set(element.name.text, fact);
+              changed = true;
+            }
+          }
+        }
+      }
+    }
+    if (!changed) break;
+  }
+  return exportsByPath;
+}
+
+type ImportedRuntimeModuleFacts = {
+  direct: ReadonlyMap<ts.Symbol, RuntimeModuleFact>;
+  namespaces: ReadonlyMap<
+    ts.Symbol,
+    ReadonlyMap<string, RuntimeModuleFact>
+  >;
+};
+
+function importedRuntimeModuleFacts(
+  sourceFile: ts.SourceFile,
+  relativePath: string,
+  checker: ts.TypeChecker,
+  runtimePaths: ReadonlySet<string>,
+  exportsByPath: ReadonlyMap<string, ReadonlyMap<string, RuntimeModuleFact>>,
+): ImportedRuntimeModuleFacts {
+  const direct = new Map<ts.Symbol, RuntimeModuleFact>();
+  const namespaces = new Map<
+    ts.Symbol,
+    ReadonlyMap<string, RuntimeModuleFact>
+  >();
+  for (const statement of sourceFile.statements) {
+    if (
+      ts.isImportEqualsDeclaration(statement) &&
+      ts.isExternalModuleReference(statement.moduleReference) &&
+      statement.moduleReference.expression &&
+      ts.isStringLiteral(statement.moduleReference.expression)
+    ) {
+      const importedPath = resolveRuntimeModulePath(
+        relativePath,
+        statement.moduleReference.expression.text,
+        runtimePaths,
+      );
+      const moduleFacts = importedPath ? exportsByPath.get(importedPath) : null;
+      const symbol = symbolAt(checker, statement.name);
+      if (symbol && moduleFacts) {
+        const fact = moduleFacts.get('default');
+        if (fact) direct.set(symbol, fact);
+        namespaces.set(symbol, moduleFacts);
+      }
+      continue;
+    }
+    if (
+      !ts.isImportDeclaration(statement) ||
+      !ts.isStringLiteral(statement.moduleSpecifier) ||
+      !statement.importClause
+    ) {
+      continue;
+    }
+    const importedPath = resolveRuntimeModulePath(
+      relativePath,
+      statement.moduleSpecifier.text,
+      runtimePaths,
+    );
+    const moduleFacts = importedPath ? exportsByPath.get(importedPath) : null;
+    if (!moduleFacts) continue;
+    if (statement.importClause.name) {
+      const symbol = symbolAt(checker, statement.importClause.name);
+      const fact = moduleFacts.get('default');
+      if (symbol && fact) direct.set(symbol, fact);
+    }
+    const namedBindings = statement.importClause.namedBindings;
+    if (namedBindings && ts.isNamedImports(namedBindings)) {
+      for (const element of namedBindings.elements) {
+        const symbol = symbolAt(checker, element.name);
+        const importedName = element.propertyName?.text ?? element.name.text;
+        const fact = moduleFacts.get(importedName);
+        if (symbol && fact) direct.set(symbol, fact);
+      }
+    } else if (namedBindings && ts.isNamespaceImport(namedBindings)) {
+      const symbol = symbolAt(checker, namedBindings.name);
+      if (symbol) namespaces.set(symbol, moduleFacts);
+    }
+  }
+  return { direct, namespaces };
+}
+
+function importedRuntimeFact(
+  expression: ts.Expression | undefined,
+  checker: ts.TypeChecker,
+  importedFacts: ImportedRuntimeModuleFacts,
+  reassignedSymbols: ReadonlySet<ts.Symbol>,
+  seen: ReadonlySet<ts.Symbol> = new Set(),
+): RuntimeModuleFact | null {
+  if (!expression) return null;
+  let current = expression;
+  while (
+    ts.isParenthesizedExpression(current) ||
+    ts.isAsExpression(current) ||
+    ts.isTypeAssertionExpression(current) ||
+    ts.isNonNullExpression(current) ||
+    ts.isAwaitExpression(current)
+  ) {
+    current = current.expression;
+  }
+  if (ts.isIdentifier(current)) {
+    const symbol = symbolAt(checker, current);
+    if (!symbol || seen.has(symbol)) return null;
+    const direct = importedFacts.direct.get(symbol);
+    if (direct) return direct;
+    const declaration = symbol.valueDeclaration;
+    if (
+      declaration &&
+      !reassignedSymbols.has(symbol) &&
+      ts.isVariableDeclaration(declaration) &&
+      declaration.initializer
+    ) {
+      return importedRuntimeFact(
+        declaration.initializer,
+        checker,
+        importedFacts,
+        reassignedSymbols,
+        new Set([...seen, symbol]),
+      );
+    }
+    return null;
+  }
+  if (ts.isCallExpression(current)) {
+    return importedRuntimeFact(
+      current.expression,
+      checker,
+      importedFacts,
+      reassignedSymbols,
+      seen,
+    );
+  }
+  if (
+    ts.isPropertyAccessExpression(current) ||
+    (ts.isElementAccessExpression(current) && current.argumentExpression)
+  ) {
+    const base = current.expression;
+    const propertyName = ts.isPropertyAccessExpression(current)
+      ? current.name.text
+      : staticComputedPropertyName(current.argumentExpression!);
+    if (ts.isIdentifier(base)) {
+      const symbol = symbolAt(checker, base);
+      const moduleFacts = symbol ? importedFacts.namespaces.get(symbol) : null;
+      if (moduleFacts && propertyName) {
+        return moduleFacts.get(propertyName) ?? null;
+      }
+    }
+    return importedRuntimeFact(
+      base,
+      checker,
+      importedFacts,
+      reassignedSymbols,
+      seen,
+    );
+  }
+  return null;
+}
+
 /**
  * Independently derives every runtime file with a Google Sheets mutator or a
  * write-capable Sheets/Drive OAuth scope. The structural guard result is
@@ -987,6 +3590,14 @@ export function deriveP9WriteSurfaceInventory(
     target: ts.ScriptTarget.Latest,
   });
   const checker = program.getTypeChecker();
+  const runtimePaths = new Set(relativeFiles);
+  const allowedPackages = runtimePackageAllowlist(repositoryRoot);
+  const exportsByPath = buildRuntimeModuleExports(
+    repositoryRoot,
+    relativeFiles,
+    program,
+    checker,
+  );
   const inventory: P9WriteSurfaceInventory = [];
   for (const relativePath of relativeFiles) {
     const absolutePath = path.join(repositoryRoot, relativePath);
@@ -995,6 +3606,14 @@ export function deriveP9WriteSurfaceInventory(
     const mutators = new Set<string>();
     const aliases = buildAliasChains(sourceFile, checker);
     const reassignedSymbols = collectAssignedSymbols(sourceFile, checker);
+    const processBindings = dynamicProcessBindings(sourceFile);
+    const importedFacts = importedRuntimeModuleFacts(
+      sourceFile,
+      relativePath,
+      checker,
+      runtimePaths,
+      exportsByPath,
+    );
     const probe = exportedIsolationProbe(sourceFile);
     const probeParameter = probe && ts.isIdentifier(probe.parameters[0].name)
       ? probe.parameters[0].name
@@ -1013,6 +3632,12 @@ export function deriveP9WriteSurfaceInventory(
     let capabilityOccurrences = 0;
     let allCapabilitiesInsideProbe = true;
     let allCapabilitiesUseExactGuard = true;
+    let fileNetworkCapability: ts.Node | null = null;
+    let fileSheetsTarget: ts.Expression | null = null;
+    let fileSheetsMutationTarget: ts.Expression | null = null;
+    let fileWriteMethod: ts.Expression | null = null;
+    let reflectiveCapabilityRecorded = false;
+    let dynamicCapabilityRecorded = false;
     const guardTargetKeys: Array<string | null> = [];
     const mutatorTargetKeys: Array<string | null> = [];
     const guardImportSymbols: ts.Symbol[] = [];
@@ -1082,7 +3707,130 @@ export function deriveP9WriteSurfaceInventory(
       return guardTarget;
     };
 
+    if (
+      [...(exportsByPath.get(relativePath)?.values() ?? [])].some(
+        (fact) => fact.networkCapability || fact.processCapability,
+      )
+    ) {
+      mutators.add('generic-network-write-unknown-target');
+      mutatorCalls += 1;
+      mutatorTargetKeys.push(null);
+      recordGuard(sourceFile);
+      allCapabilitiesUseExactGuard = false;
+    }
+    if (exportsDynamicProcessBinding(sourceFile, processBindings)) {
+      mutators.add('generic-network-write-unknown-target');
+      mutatorCalls += 1;
+      mutatorTargetKeys.push(null);
+      recordGuard(sourceFile);
+      allCapabilitiesUseExactGuard = false;
+    }
+
     const visit = (node: ts.Node): void => {
+      if (
+        !dynamicCapabilityRecorded &&
+        (unsafeNodeExecutionNode(node) ||
+          runtimeModuleBoundaryUnsafe(
+            node,
+            repositoryRoot,
+            relativePath,
+            runtimePaths,
+            allowedPackages,
+          ) ||
+          (ts.isIdentifier(node) &&
+          [
+            'eval',
+            'Function',
+            'AsyncFunction',
+            'GeneratorFunction',
+            'AsyncGeneratorFunction',
+          ].includes(node.text)) ||
+          ((ts.isStringLiteral(node) ||
+            ts.isNoSubstitutionTemplateLiteral(node)) &&
+            ['vm', 'node:vm'].includes(node.text)) ||
+          ((ts.isPropertyAccessExpression(node) ||
+            ts.isElementAccessExpression(node)) &&
+            (() => {
+              const member = ts.isPropertyAccessExpression(node)
+                ? node.name.text
+                : node.argumentExpression
+                  ? staticComputedPropertyName(node.argumentExpression)
+                  : null;
+              return ['constructor', '__proto__', 'getPrototypeOf'].includes(
+                member ?? '',
+              );
+            })()))
+      ) {
+        mutators.add('generic-network-write-unknown-target');
+        mutatorCalls += 1;
+        mutatorTargetKeys.push(null);
+        recordGuard(node);
+        allCapabilitiesUseExactGuard = false;
+        dynamicCapabilityRecorded = true;
+      }
+      if (ts.isExpression(node)) {
+        if (!reflectiveCapabilityRecorded) {
+          const reflectiveChain = expressionChain(node, checker, aliases)
+            ?.map((part) => part.toLowerCase())
+            .join('.');
+          if (
+            reflectiveChain &&
+            [
+              'reflect.get',
+              'reflect.getownpropertydescriptor',
+              'object.getownpropertydescriptor',
+              'object.getownpropertydescriptors',
+            ].some(
+              (getter) =>
+                reflectiveChain === getter ||
+                reflectiveChain.startsWith(`${getter}.`),
+            )
+          ) {
+            mutators.add('generic-network-write-unknown-target');
+            mutatorCalls += 1;
+            mutatorTargetKeys.push(null);
+            recordGuard(node);
+            allCapabilitiesUseExactGuard = false;
+            reflectiveCapabilityRecorded = true;
+          }
+        }
+        if (
+          !fileNetworkCapability &&
+          genericNetworkChain(expressionChain(node, checker, aliases))
+        ) {
+          fileNetworkCapability = node;
+        }
+        if (
+          !fileSheetsTarget &&
+          genericNetworkTargetRisk(node, checker, reassignedSymbols) === 'sheets'
+        ) {
+          fileSheetsTarget = node;
+        }
+        if (!fileWriteMethod) {
+          const method = staticStringPattern(node, checker, reassignedSymbols);
+          if (
+            method.complete &&
+            ['POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'].includes(
+              method.text.toUpperCase(),
+            )
+          ) {
+            fileWriteMethod = node;
+          }
+        }
+        if (!fileSheetsMutationTarget) {
+          const target = staticStringPattern(node, checker, reassignedSymbols);
+          const lowerTarget = target.text.toLowerCase();
+          if (
+            (lowerTarget.includes('sheets.googleapis.com') ||
+              lowerTarget.includes('content-sheets.googleapis.com')) &&
+            /:(?:append|batchclear|batchclearbydatafilter|batchupdate|batchupdatebydatafilter|clear|copyto|update)(?:\b|$)/i.test(
+              target.text,
+            )
+          ) {
+            fileSheetsMutationTarget = node;
+          }
+        }
+      }
       if (
         (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) &&
         WRITE_CAPABLE_GOOGLE_SCOPES.has(node.text)
@@ -1093,11 +3841,108 @@ export function deriveP9WriteSurfaceInventory(
       if (ts.isCallExpression(node)) {
         const resolvedChain = expressionChain(node.expression, checker, aliases);
         const chain = resolvedChain?.join('.') ?? propertyAccessChain(node.expression);
+        if (
+          dynamicExecutionChain(
+            resolvedChain ?? (chain ? chain.split('.') : null),
+          ) ||
+          isUnsafeDynamicImport(node) ||
+          isDynamicProcessCall(node, processBindings)
+        ) {
+          mutators.add('generic-network-write-unknown-target');
+          mutatorCalls += 1;
+          mutatorTargetKeys.push(null);
+          recordGuard(node);
+          allCapabilitiesUseExactGuard = false;
+        }
+        const importedCapability = importedRuntimeFact(
+          node.expression,
+          checker,
+          importedFacts,
+          reassignedSymbols,
+        );
+        const importedTarget = importedRuntimeFact(
+          node.arguments[0],
+          checker,
+          importedFacts,
+          reassignedSymbols,
+        );
+        const importedOptions = importedRuntimeFact(
+          node.arguments[1],
+          checker,
+          importedFacts,
+          reassignedSymbols,
+        );
+        if (
+          importedCapability?.networkCapability &&
+          importedOptions?.writeOptions
+        ) {
+          mutators.add(
+            importedTarget?.sheetsTarget
+              ? 'raw-rest-google-sheets-write'
+              : 'generic-network-write-unknown-target',
+          );
+          mutatorCalls += 1;
+          mutatorTargetKeys.push(null);
+          recordGuard(node);
+          allCapabilitiesUseExactGuard = false;
+        }
+        const normalizedCallChain = resolvedChain?.map((part) =>
+          part.toLowerCase(),
+        );
+        const reflectiveGetterChains = new Set([
+          'reflect.get',
+          'reflect.getownpropertydescriptor',
+          'object.getownpropertydescriptor',
+          'object.getownpropertydescriptors',
+        ]);
+        let reflectiveGetterChain = normalizedCallChain?.join('.') ?? null;
+        let reflectiveArguments = [...node.arguments];
+        if (
+          reflectiveGetterChain === 'reflect.apply' &&
+          node.arguments[0]
+        ) {
+          const targetChain = expressionChain(
+            node.arguments[0],
+            checker,
+            aliases,
+          );
+          const appliedArguments = stableArgumentArray(
+            node.arguments[2],
+            checker,
+            reassignedSymbols,
+          );
+          reflectiveGetterChain = targetChain
+            ?.map((part) => part.toLowerCase())
+            .join('.') ?? null;
+          reflectiveArguments = appliedArguments ?? [];
+        } else if (
+          normalizedCallChain?.[normalizedCallChain.length - 1] === 'bind'
+        ) {
+          reflectiveGetterChain = normalizedCallChain.slice(0, -1).join('.');
+        }
+        const globalArgumentChain = reflectiveArguments[0]
+          ? expressionChain(reflectiveArguments[0], checker, aliases)
+          : null;
+        if (
+          reflectiveGetterChain &&
+          reflectiveGetterChains.has(reflectiveGetterChain) &&
+          globalArgumentChain &&
+          ['globalthis', 'window', 'self'].includes(
+            globalArgumentChain[globalArgumentChain.length - 1]?.toLowerCase(),
+          )
+        ) {
+          mutators.add('generic-network-write-unknown-target');
+          mutatorCalls += 1;
+          mutatorTargetKeys.push(null);
+          recordGuard(node);
+          allCapabilitiesUseExactGuard = false;
+        }
         const networkCall = genericNetworkCall(
           node,
           resolvedChain ?? (chain ? chain.split('.') : null),
           checker,
           reassignedSymbols,
+          aliases,
         );
         if (
           networkCall &&
@@ -1150,6 +3995,27 @@ export function deriveP9WriteSurfaceInventory(
           }
         }
       }
+      if (
+        ts.isNewExpression(node) &&
+        (dynamicExecutionChain(expressionChain(node.expression, checker, aliases)) ||
+          isDynamicProcessNewExpression(node, processBindings))
+      ) {
+        mutators.add('generic-network-write-unknown-target');
+        mutatorCalls += 1;
+        mutatorTargetKeys.push(null);
+        recordGuard(node);
+        allCapabilitiesUseExactGuard = false;
+      }
+      if (
+        ts.isTaggedTemplateExpression(node) &&
+        isDynamicProcessTaggedTemplate(node, processBindings)
+      ) {
+        mutators.add('generic-network-write-unknown-target');
+        mutatorCalls += 1;
+        mutatorTargetKeys.push(null);
+        recordGuard(node);
+        allCapabilitiesUseExactGuard = false;
+      }
       if (ts.isPropertyAccessExpression(node) || ts.isElementAccessExpression(node)) {
         const isNestedAccess =
           (ts.isPropertyAccessExpression(node.parent) ||
@@ -1182,10 +4048,75 @@ export function deriveP9WriteSurfaceInventory(
             allCapabilitiesUseExactGuard = false;
           }
         }
+        if (
+          ts.isElementAccessExpression(node) &&
+          node.argumentExpression &&
+          !(
+            ts.isStringLiteral(node.argumentExpression) ||
+            ts.isNoSubstitutionTemplateLiteral(node.argumentExpression)
+          )
+        ) {
+          const base = expressionChain(node.expression, checker, aliases);
+          if (
+            base &&
+            ['globalthis', 'window', 'self'].includes(
+              base[base.length - 1]?.toLowerCase(),
+            )
+          ) {
+            mutators.add('generic-network-write-unknown-target');
+            mutatorCalls += 1;
+            mutatorTargetKeys.push(null);
+            recordGuard(node);
+            allCapabilitiesUseExactGuard = false;
+          }
+          if (
+            base &&
+            ['reflect', 'object'].includes(
+              base[base.length - 1]?.toLowerCase(),
+            )
+          ) {
+            mutators.add('generic-network-write-unknown-target');
+            mutatorCalls += 1;
+            mutatorTargetKeys.push(null);
+            recordGuard(node);
+            allCapabilitiesUseExactGuard = false;
+          }
+        }
+      }
+      if (ts.isPropertyAssignment(node)) {
+        const propertyName =
+          !ts.isComputedPropertyName(node.name) &&
+          (ts.isIdentifier(node.name) || ts.isStringLiteral(node.name))
+            ? node.name.text
+            : null;
+        if (propertyName?.toLowerCase() === 'method') {
+          const method = staticStringPattern(
+            node.initializer,
+            checker,
+            reassignedSymbols,
+          );
+          if (
+            !method.complete ||
+            !['GET', 'HEAD'].includes(method.text.toUpperCase())
+          ) {
+            fileWriteMethod = node.initializer;
+          }
+        }
       }
       ts.forEachChild(node, visit);
     };
     visit(sourceFile);
+    if (
+      (fileSheetsMutationTarget ||
+        (fileNetworkCapability && fileSheetsTarget && fileWriteMethod)) &&
+      !mutators.has('raw-rest-google-sheets-write')
+    ) {
+      mutators.add('raw-rest-google-sheets-write');
+      mutatorCalls += 1;
+      mutatorTargetKeys.push(null);
+      recordGuard(fileNetworkCapability ?? fileSheetsMutationTarget!);
+      allCapabilitiesUseExactGuard = false;
+    }
     if (mutators.size === 0) continue;
     const distinctGuardTargets = new Set(guardTargetKeys.filter((item) => item !== null));
     const distinctMutatorTargets = new Set(
@@ -1452,6 +4383,20 @@ const runtimeConfigSchema = z.strictObject({
 const applicationReadRuntimeBindingSchema = z.strictObject({
   schemaVersion: z.literal(1),
   runtimeCommit: sha40,
+  runtimeBindingModule: z.strictObject({
+    path: z.literal(P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH),
+    directLiteralExport: z.literal(true),
+    sideEffectFree: z.literal(true),
+  }),
+  runtimeSourceClosure: z.strictObject({
+    method: z.literal('sha256-sorted-runtime-path-and-blob-v1'),
+    excludedLiteralBindingModulePath: z.literal(
+      P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+    ),
+    fileCount: z.number().int().positive(),
+    sha256,
+    builtInPrototypeMutationFree: z.literal(true),
+  }),
   loader: z.strictObject({
     path: z.literal(P9_PRODUCTION_SOURCE_LOADER_PATH),
     exportName: z.literal(P9_PRODUCTION_SOURCE_LOADER_EXPORT),
@@ -1741,6 +4686,7 @@ export function p9ApplicationReadChallengeSha256(
 }
 
 export type P9ApplicationReadRuntimeSourceBytes = {
+  runtimeBindingModule: string;
   loader: string;
   healthRoute: string;
   publicRoute: string;
@@ -1753,6 +4699,823 @@ export type P9ApplicationReadRuntimeBindingInput =
       repositoryRoot?: never;
       sourceBytes: P9ApplicationReadRuntimeSourceBytes;
     };
+
+type RuntimeExpressionAliases = ReadonlyMap<string, readonly string[]>;
+
+function runtimeExpressionChain(
+  expression: ts.Expression,
+  aliases: RuntimeExpressionAliases,
+  seen: ReadonlySet<string> = new Set(),
+): string[] | null {
+  if (
+    ts.isParenthesizedExpression(expression) ||
+    ts.isAsExpression(expression) ||
+    ts.isTypeAssertionExpression(expression) ||
+    ts.isNonNullExpression(expression) ||
+    ts.isSatisfiesExpression(expression)
+  ) {
+    return runtimeExpressionChain(expression.expression, aliases, seen);
+  }
+  if (ts.isIdentifier(expression)) {
+    if (seen.has(expression.text)) return null;
+    const alias = aliases.get(expression.text);
+    return alias ? [...alias] : [expression.text];
+  }
+  if (ts.isPropertyAccessExpression(expression)) {
+    const parent = runtimeExpressionChain(expression.expression, aliases, seen);
+    return parent ? [...parent, expression.name.text] : null;
+  }
+  if (ts.isElementAccessExpression(expression) && expression.argumentExpression) {
+    const parent = runtimeExpressionChain(expression.expression, aliases, seen);
+    const propertyName = staticComputedPropertyName(expression.argumentExpression);
+    return parent && propertyName ? [...parent, propertyName] : null;
+  }
+  return null;
+}
+
+function runtimeAssignedIdentifiers(file: ts.SourceFile): ReadonlySet<string> {
+  const assigned = new Set<string>();
+  const record = (node: ts.Node): void => {
+    if (ts.isIdentifier(node)) assigned.add(node.text);
+  };
+  bindingWalk(file, (node) => {
+    if (
+      ts.isBinaryExpression(node) &&
+      node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+      node.operatorToken.kind <= ts.SyntaxKind.LastAssignment
+    ) {
+      record(node.left);
+    }
+    if (
+      (ts.isPrefixUnaryExpression(node) || ts.isPostfixUnaryExpression(node)) &&
+      (node.operator === ts.SyntaxKind.PlusPlusToken ||
+        node.operator === ts.SyntaxKind.MinusMinusToken)
+    ) {
+      record(node.operand);
+    }
+    if (
+      (ts.isForInStatement(node) || ts.isForOfStatement(node)) &&
+      !ts.isVariableDeclarationList(node.initializer)
+    ) {
+      record(node.initializer);
+    }
+  });
+  return assigned;
+}
+
+function bindRuntimeAliasPattern(
+  name: ts.BindingName,
+  base: readonly string[],
+  aliases: Map<string, readonly string[]>,
+  assigned: ReadonlySet<string>,
+): boolean {
+  let changed = false;
+  if (ts.isIdentifier(name)) {
+    if (!assigned.has(name.text) && !aliases.has(name.text)) {
+      aliases.set(name.text, [...base]);
+      return true;
+    }
+    return false;
+  }
+  if (ts.isObjectBindingPattern(name)) {
+    for (const element of name.elements) {
+      if (element.dotDotDotToken) continue;
+      const propertyName = element.propertyName ?? element.name;
+      const segment =
+        ts.isIdentifier(propertyName) || ts.isStringLiteral(propertyName)
+          ? propertyName.text
+          : null;
+      if (
+        segment &&
+        bindRuntimeAliasPattern(
+          element.name,
+          [...base, segment],
+          aliases,
+          assigned,
+        )
+      ) {
+        changed = true;
+      }
+    }
+  }
+  return changed;
+}
+
+function runtimeExpressionAliases(
+  file: ts.SourceFile,
+  initialAliases: RuntimeExpressionAliases = new Map(),
+): ReadonlyMap<string, readonly string[]> {
+  const aliases = new Map<string, readonly string[]>(initialAliases);
+  const assigned = runtimeAssignedIdentifiers(file);
+  let changed = true;
+  while (changed) {
+    changed = false;
+    bindingWalk(file, (node) => {
+      if (
+        !ts.isVariableDeclaration(node) ||
+        !node.initializer ||
+        !ts.isVariableDeclarationList(node.parent) ||
+        ((node.parent.flags & ts.NodeFlags.Const) === 0 &&
+          (ts.isIdentifier(node.name)
+            ? assigned.has(node.name.text)
+            : true))
+      ) {
+        return;
+      }
+      const chain = runtimeExpressionChain(node.initializer, aliases);
+      if (
+        chain &&
+        bindRuntimeAliasPattern(node.name, chain, aliases, assigned)
+      ) {
+        changed = true;
+      }
+    });
+  }
+  return aliases;
+}
+
+function runtimePrototypeTarget(chain: readonly string[] | null): boolean {
+  if (!chain) return false;
+  const joined = chain.join('.');
+  return /(?:^|\.)(?:Array|Object|Function|Promise|String|Number|Boolean|RegExp|Date)\.prototype(?:\.|$)/.test(
+    joined,
+  );
+}
+
+function runtimePrototypeValueExpression(
+  expression: ts.Expression,
+  aliases: RuntimeExpressionAliases,
+): boolean {
+  if (runtimePrototypeTarget(runtimeExpressionChain(expression, aliases))) {
+    return true;
+  }
+  if (ts.isObjectLiteralExpression(expression)) {
+    return expression.properties.some((property) => {
+      if (ts.isPropertyAssignment(property)) {
+        return runtimePrototypeValueExpression(property.initializer, aliases);
+      }
+      if (ts.isShorthandPropertyAssignment(property)) {
+        return runtimePrototypeTarget(
+          runtimeExpressionChain(property.name, aliases),
+        );
+      }
+      if (ts.isSpreadAssignment(property)) {
+        return runtimePrototypeValueExpression(property.expression, aliases);
+      }
+      return false;
+    });
+  }
+  if (ts.isArrayLiteralExpression(expression)) {
+    return expression.elements.some(
+      (element) =>
+        !ts.isOmittedExpression(element) &&
+        runtimePrototypeValueExpression(
+          ts.isSpreadElement(element) ? element.expression : element,
+          aliases,
+        ),
+    );
+  }
+  if (ts.isConditionalExpression(expression)) {
+    return (
+      runtimePrototypeValueExpression(expression.whenTrue, aliases) ||
+      runtimePrototypeValueExpression(expression.whenFalse, aliases)
+    );
+  }
+  if (
+    ts.isBinaryExpression(expression) &&
+    [
+      ts.SyntaxKind.AmpersandAmpersandToken,
+      ts.SyntaxKind.BarBarToken,
+      ts.SyntaxKind.QuestionQuestionToken,
+      ts.SyntaxKind.CommaToken,
+    ].includes(expression.operatorToken.kind)
+  ) {
+    return (
+      runtimePrototypeValueExpression(expression.left, aliases) ||
+      runtimePrototypeValueExpression(expression.right, aliases)
+    );
+  }
+  if (ts.isArrowFunction(expression) || ts.isFunctionExpression(expression)) {
+    if (ts.isExpression(expression.body)) {
+      return runtimePrototypeValueExpression(expression.body, aliases);
+    }
+    let returnedPrototype = false;
+    bindingWalk(expression.body, (node) => {
+      if (
+        ts.isReturnStatement(node) &&
+        node.expression &&
+        runtimePrototypeValueExpression(node.expression, aliases)
+      ) {
+        returnedPrototype = true;
+      }
+    });
+    return returnedPrototype;
+  }
+  return false;
+}
+
+function runtimeLocalPrototypeExpression(
+  expression: ts.Expression,
+  aliases: RuntimeExpressionAliases,
+  localValues: ReadonlySet<string>,
+): boolean {
+  if (runtimePrototypeValueExpression(expression, aliases)) return true;
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isIdentifier(expression.expression) &&
+    localValues.has(expression.expression.text)
+  ) {
+    return true;
+  }
+  if (ts.isObjectLiteralExpression(expression)) {
+    return expression.properties.some((property) => {
+      if (ts.isPropertyAssignment(property)) {
+        return runtimeLocalPrototypeExpression(
+          property.initializer,
+          aliases,
+          localValues,
+        );
+      }
+      if (ts.isShorthandPropertyAssignment(property)) {
+        return localValues.has(property.name.text);
+      }
+      return (
+        ts.isSpreadAssignment(property) &&
+        runtimeLocalPrototypeExpression(
+          property.expression,
+          aliases,
+          localValues,
+        )
+      );
+    });
+  }
+  if (ts.isArrayLiteralExpression(expression)) {
+    return expression.elements.some(
+      (element) =>
+        !ts.isOmittedExpression(element) &&
+        runtimeLocalPrototypeExpression(
+          ts.isSpreadElement(element) ? element.expression : element,
+          aliases,
+          localValues,
+        ),
+    );
+  }
+  return false;
+}
+
+function runtimeLocalPrototypeValues(
+  file: ts.SourceFile,
+  aliases: RuntimeExpressionAliases,
+): ReadonlySet<string> {
+  const localValues = new Set<string>();
+  for (let pass = 0; pass < file.statements.length + 1; pass += 1) {
+    let changed = false;
+    const add = (name: string): void => {
+      if (!localValues.has(name)) {
+        localValues.add(name);
+        changed = true;
+      }
+    };
+    for (const statement of file.statements) {
+      if (ts.isVariableStatement(statement)) {
+        for (const declaration of statement.declarationList.declarations) {
+          if (
+            ts.isIdentifier(declaration.name) &&
+            declaration.initializer &&
+            runtimeLocalPrototypeExpression(
+              declaration.initializer,
+              aliases,
+              localValues,
+            )
+          ) {
+            add(declaration.name.text);
+          }
+        }
+      }
+      if (
+        (ts.isFunctionDeclaration(statement) ||
+          ts.isClassDeclaration(statement)) &&
+        statement.name
+      ) {
+        let returnsPrototype = false;
+        bindingWalk(statement, (node) => {
+          if (
+            ts.isReturnStatement(node) &&
+            node.expression &&
+            runtimeLocalPrototypeExpression(
+              node.expression,
+              aliases,
+              localValues,
+            )
+          ) {
+            returnsPrototype = true;
+          }
+          if (
+            ts.isPropertyDeclaration(node) &&
+            node.initializer &&
+            runtimeLocalPrototypeExpression(
+              node.initializer,
+              aliases,
+              localValues,
+            )
+          ) {
+            returnsPrototype = true;
+          }
+        });
+        if (ts.isClassDeclaration(statement)) {
+          for (const member of statement.members) {
+            if (!ts.isClassStaticBlockDeclaration(member)) continue;
+            bindingWalk(member.body, (node) => {
+              if (ts.isCallExpression(node)) {
+                const projection = mutationCallProjection(
+                  node,
+                  runtimeExpressionChain(node.expression, aliases)?.join('.') ?? null,
+                );
+                if (
+                  projection?.values.some((value) =>
+                    runtimeLocalPrototypeExpression(value, aliases, localValues),
+                  )
+                ) {
+                  returnsPrototype = true;
+                }
+                return;
+              }
+              if (
+                ts.isBinaryExpression(node) &&
+                node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+                node.operatorToken.kind <= ts.SyntaxKind.LastAssignment &&
+                runtimeLocalPrototypeExpression(
+                  node.right,
+                  aliases,
+                  localValues,
+                )
+              ) {
+                returnsPrototype = true;
+              }
+            });
+          }
+        }
+        if (returnsPrototype) add(statement.name.text);
+      }
+    }
+    bindingWalk(file, (node) => {
+      if (ts.isCallExpression(node)) {
+        const projection = mutationCallProjection(
+          node,
+          runtimeExpressionChain(node.expression, aliases)?.join('.') ?? null,
+        );
+        if (
+          projection?.values.some((value) =>
+            runtimeLocalPrototypeExpression(value, aliases, localValues),
+          )
+        ) {
+          for (const root of assignedRootIdentifiers(projection.target)) add(root);
+        }
+        return;
+      }
+      if (
+        !ts.isBinaryExpression(node) ||
+        node.operatorToken.kind < ts.SyntaxKind.FirstAssignment ||
+        node.operatorToken.kind > ts.SyntaxKind.LastAssignment ||
+        !runtimeLocalPrototypeExpression(node.right, aliases, localValues)
+      ) {
+        return;
+      }
+      const root = assignedRootIdentifier(node.left);
+      if (root) add(root);
+    });
+    if (!changed) break;
+  }
+  return localValues;
+}
+
+function runtimePrototypeImportAliases(
+  sources: ReadonlyMap<string, string>,
+): ReadonlyMap<string, RuntimeExpressionAliases> {
+  const runtimePaths = new Set(sources.keys());
+  const files = new Map<string, ts.SourceFile>();
+  const exportsByPath = new Map<
+    string,
+    Map<string, readonly string[]>
+  >();
+  for (const [relativePath, source] of sources) {
+    const file = bindingSourceFile(relativePath, source);
+    files.set(relativePath, file);
+    const aliases = runtimeExpressionAliases(file);
+    const exported = new Map<string, readonly string[]>();
+    for (const statement of file.statements) {
+      if (ts.isVariableStatement(statement)) {
+        const isExported = statement.modifiers?.some(
+          (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+        );
+        if (!isExported) continue;
+        for (const declaration of statement.declarationList.declarations) {
+          if (!ts.isIdentifier(declaration.name) || !declaration.initializer) {
+            continue;
+          }
+          const chain = runtimeExpressionChain(declaration.initializer, aliases);
+          if (chain && runtimePrototypeTarget(chain)) {
+            exported.set(declaration.name.text, chain);
+          }
+        }
+      }
+      if (ts.isExportAssignment(statement)) {
+        const chain = runtimeExpressionChain(statement.expression, aliases);
+        if (chain && runtimePrototypeTarget(chain)) {
+          exported.set('default', chain);
+        }
+      }
+    }
+    exportsByPath.set(relativePath, exported);
+  }
+  for (let pass = 0; pass < sources.size; pass += 1) {
+    let changed = false;
+    for (const [relativePath, file] of files) {
+      const target = exportsByPath.get(relativePath)!;
+      for (const statement of file.statements) {
+        if (
+          !ts.isExportDeclaration(statement) ||
+          !statement.moduleSpecifier ||
+          !ts.isStringLiteral(statement.moduleSpecifier)
+        ) {
+          continue;
+        }
+        const sourcePath = resolveRuntimeModulePath(
+          relativePath,
+          statement.moduleSpecifier.text,
+          runtimePaths,
+        );
+        const sourceExports = sourcePath
+          ? exportsByPath.get(sourcePath)
+          : null;
+        if (!sourceExports) continue;
+        if (!statement.exportClause) {
+          for (const [name, chain] of sourceExports) {
+            if (name !== 'default' && !target.has(name)) {
+              target.set(name, chain);
+              changed = true;
+            }
+          }
+        } else if (ts.isNamedExports(statement.exportClause)) {
+          for (const element of statement.exportClause.elements) {
+            const importedName = element.propertyName?.text ?? element.name.text;
+            const chain = sourceExports.get(importedName);
+            if (chain && !target.has(element.name.text)) {
+              target.set(element.name.text, chain);
+              changed = true;
+            }
+          }
+        }
+      }
+    }
+    if (!changed) break;
+  }
+  const aliasesByPath = new Map<string, RuntimeExpressionAliases>();
+  for (const [relativePath, file] of files) {
+    const importedAliases = new Map<string, readonly string[]>();
+    for (const statement of file.statements) {
+      if (
+        ts.isImportEqualsDeclaration(statement) &&
+        ts.isExternalModuleReference(statement.moduleReference) &&
+        statement.moduleReference.expression &&
+        ts.isStringLiteral(statement.moduleReference.expression)
+      ) {
+        const sourcePath = resolveRuntimeModulePath(
+          relativePath,
+          statement.moduleReference.expression.text,
+          runtimePaths,
+        );
+        const sourceExports = sourcePath ? exportsByPath.get(sourcePath) : null;
+        const chain = sourceExports?.get('default') ??
+          (sourceExports ? [...sourceExports.values()][0] : null);
+        if (chain) importedAliases.set(statement.name.text, chain);
+        continue;
+      }
+      if (
+        !ts.isImportDeclaration(statement) ||
+        !ts.isStringLiteral(statement.moduleSpecifier) ||
+        !statement.importClause
+      ) {
+        continue;
+      }
+      const sourcePath = resolveRuntimeModulePath(
+        relativePath,
+        statement.moduleSpecifier.text,
+        runtimePaths,
+      );
+      const sourceExports = sourcePath ? exportsByPath.get(sourcePath) : null;
+      if (!sourceExports) continue;
+      if (statement.importClause.name) {
+        const chain = sourceExports.get('default');
+        if (chain) importedAliases.set(statement.importClause.name.text, chain);
+      }
+      const bindings = statement.importClause.namedBindings;
+      if (bindings && ts.isNamedImports(bindings)) {
+        for (const element of bindings.elements) {
+          const importedName = element.propertyName?.text ?? element.name.text;
+          const chain = sourceExports.get(importedName);
+          if (chain) importedAliases.set(element.name.text, chain);
+        }
+      } else if (bindings && ts.isNamespaceImport(bindings)) {
+        const firstPrototype = [...sourceExports.values()][0];
+        if (firstPrototype) importedAliases.set(bindings.name.text, firstPrototype);
+      }
+    }
+    aliasesByPath.set(relativePath, importedAliases);
+  }
+  return aliasesByPath;
+}
+
+function validateP9RuntimeSourceMutationFree(
+  relativePath: string,
+  source: string,
+  importedAliases: RuntimeExpressionAliases = new Map(),
+  runtimePaths?: ReadonlySet<string>,
+  allowedPackages?: ReadonlySet<string>,
+  repositoryRoot?: string,
+): void {
+  const file = bindingSourceFile(relativePath, source);
+  const aliases = runtimeExpressionAliases(file, importedAliases);
+  const localPrototypeValues = runtimeLocalPrototypeValues(file, aliases);
+  const processBindings = dynamicProcessBindings(file);
+  let mutation = false;
+  let dynamicExecution = exportsDynamicProcessBinding(file, processBindings);
+  for (const statement of file.statements) {
+    if (
+      ts.isVariableStatement(statement) &&
+      statement.modifiers?.some(
+        (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+      )
+    ) {
+      for (const declaration of statement.declarationList.declarations) {
+        if (
+          ((ts.isIdentifier(declaration.name) &&
+            localPrototypeValues.has(declaration.name.text)) ||
+            (declaration.initializer &&
+              runtimePrototypeValueExpression(declaration.initializer, aliases)))
+        ) {
+          mutation = true;
+        }
+      }
+    }
+    if (
+      (ts.isFunctionDeclaration(statement) ||
+        ts.isClassDeclaration(statement)) &&
+      statement.modifiers?.some(
+        (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+      )
+    ) {
+      if (statement.name && localPrototypeValues.has(statement.name.text)) {
+        mutation = true;
+      }
+      bindingWalk(statement, (node) => {
+        if (
+          ts.isPropertyDeclaration(node) &&
+          node.initializer &&
+          runtimePrototypeValueExpression(node.initializer, aliases)
+        ) {
+          mutation = true;
+        }
+        if (
+          ts.isReturnStatement(node) &&
+          node.expression &&
+          runtimePrototypeValueExpression(node.expression, aliases)
+        ) {
+          mutation = true;
+        }
+      });
+    }
+    if (
+      ts.isExportDeclaration(statement) &&
+      !statement.moduleSpecifier &&
+      statement.exportClause &&
+      ts.isNamedExports(statement.exportClause)
+    ) {
+      for (const element of statement.exportClause.elements) {
+        const localName = element.propertyName?.text ?? element.name.text;
+        if (
+          runtimePrototypeTarget(aliases.get(localName) ?? null) ||
+          localPrototypeValues.has(localName)
+        ) {
+          mutation = true;
+        }
+      }
+    }
+    if (
+      ts.isExportAssignment(statement) &&
+      (runtimePrototypeValueExpression(statement.expression, aliases) ||
+        (ts.isIdentifier(statement.expression) &&
+          localPrototypeValues.has(statement.expression.text)))
+    ) {
+      mutation = true;
+    }
+  }
+  bindingWalk(file, (node) => {
+    if (
+      runtimePaths &&
+      allowedPackages &&
+      repositoryRoot &&
+      runtimeModuleBoundaryUnsafe(
+        node,
+        repositoryRoot,
+        relativePath,
+        runtimePaths,
+        allowedPackages,
+      )
+    ) {
+      dynamicExecution = true;
+    }
+    if (
+      unsafeNodeExecutionNode(node) ||
+      (ts.isIdentifier(node) &&
+        [
+          'eval',
+          'Function',
+          'AsyncFunction',
+          'GeneratorFunction',
+          'AsyncGeneratorFunction',
+        ].includes(node.text)) ||
+      ((ts.isStringLiteral(node) ||
+        ts.isNoSubstitutionTemplateLiteral(node)) &&
+        ['vm', 'node:vm'].includes(node.text))
+    ) {
+      dynamicExecution = true;
+    }
+    if (ts.isPropertyAccessExpression(node) || ts.isElementAccessExpression(node)) {
+      const member = ts.isPropertyAccessExpression(node)
+        ? node.name.text
+        : node.argumentExpression
+          ? staticComputedPropertyName(node.argumentExpression)
+          : null;
+      if (member === 'constructor') dynamicExecution = true;
+      if (member === '__proto__' || member === 'getPrototypeOf') mutation = true;
+    }
+    if (
+      ts.isBinaryExpression(node) &&
+      node.operatorToken.kind >= ts.SyntaxKind.FirstAssignment &&
+      node.operatorToken.kind <= ts.SyntaxKind.LastAssignment &&
+      runtimePrototypeTarget(runtimeExpressionChain(node.left, aliases))
+    ) {
+      mutation = true;
+    }
+    if (
+      (ts.isPrefixUnaryExpression(node) || ts.isPostfixUnaryExpression(node)) &&
+      runtimePrototypeTarget(runtimeExpressionChain(node.operand, aliases))
+    ) {
+      mutation = true;
+    }
+    if (
+      ts.isDeleteExpression(node) &&
+      runtimePrototypeTarget(runtimeExpressionChain(node.expression, aliases))
+    ) {
+      mutation = true;
+    }
+    if (ts.isCallExpression(node)) {
+      const callChain = runtimeExpressionChain(node.expression, aliases);
+      const call = callChain?.join('.') ?? '';
+      if (
+        dynamicExecutionChain(callChain) ||
+        isUnsafeDynamicImport(node) ||
+        isDynamicProcessCall(node, processBindings)
+      ) {
+        dynamicExecution = true;
+      }
+      if (
+        callChain &&
+        callChain.length > 1 &&
+        runtimePrototypeTarget(callChain.slice(0, -1)) &&
+        call !== 'Object.prototype.hasOwnProperty.call'
+      ) {
+        mutation = true;
+      }
+      if (
+        callChain &&
+        ['apply', 'call', 'construct'].includes(
+          callChain[callChain.length - 1]?.toLowerCase(),
+        ) &&
+        call !== 'Object.prototype.hasOwnProperty.call'
+      ) {
+        let containsPrototypeTarget = false;
+        bindingWalk(node, (child) => {
+          if (
+            ts.isExpression(child) &&
+            runtimePrototypeTarget(runtimeExpressionChain(child, aliases))
+          ) {
+            containsPrototypeTarget = true;
+          }
+        });
+        if (containsPrototypeTarget) mutation = true;
+      }
+      if (
+        [
+          'Object.assign',
+          'Object.defineProperty',
+          'Object.defineProperties',
+          'Object.setPrototypeOf',
+          'Reflect.defineProperty',
+          'Reflect.set',
+          'Reflect.setPrototypeOf',
+        ].includes(call) &&
+        node.arguments[0] &&
+        runtimePrototypeTarget(runtimeExpressionChain(node.arguments[0], aliases))
+      ) {
+        mutation = true;
+      }
+    }
+    if (
+      ts.isNewExpression(node) &&
+      (dynamicExecutionChain(runtimeExpressionChain(node.expression, aliases)) ||
+        isDynamicProcessNewExpression(node, processBindings))
+    ) {
+      dynamicExecution = true;
+    }
+    if (
+      ts.isTaggedTemplateExpression(node) &&
+      isDynamicProcessTaggedTemplate(node, processBindings)
+    ) {
+      dynamicExecution = true;
+    }
+    if (
+      ts.isElementAccessExpression(node) &&
+      node.argumentExpression &&
+      !(
+        ts.isStringLiteral(node.argumentExpression) ||
+        ts.isNoSubstitutionTemplateLiteral(node.argumentExpression)
+      )
+    ) {
+      const base = runtimeExpressionChain(node.expression, aliases);
+      if (
+        base &&
+        ['globalthis', 'window', 'self', 'reflect', 'object'].includes(
+          base[base.length - 1]?.toLowerCase(),
+        )
+      ) {
+        dynamicExecution = true;
+      }
+    }
+  });
+  if (dynamicExecution) {
+    bindingReject(`runtime source contains dynamic execution: ${relativePath}`);
+  }
+  if (mutation) {
+    bindingReject(`runtime source mutates a built-in prototype: ${relativePath}`);
+  }
+}
+
+function deriveP9RuntimeSourceClosure(
+  input: P9ApplicationReadRuntimeBindingInput,
+  sourceBytes: P9ApplicationReadRuntimeSourceBytes,
+): {
+  method: 'sha256-sorted-runtime-path-and-blob-v1';
+  excludedLiteralBindingModulePath: typeof P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH;
+  fileCount: number;
+  sha256: string;
+  builtInPrototypeMutationFree: true;
+} {
+  const entries: Array<{ path: string; sha256: string }> = [];
+  if ('repositoryRoot' in input && input.repositoryRoot) {
+    const sources = new Map<string, string>();
+    for (const relativePath of runtimeSourceFiles(input.repositoryRoot)) {
+      if (relativePath === P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH) continue;
+      sources.set(
+        relativePath,
+        fs.readFileSync(path.join(input.repositoryRoot, relativePath), 'utf8'),
+      );
+    }
+    const importedPrototypeAliases = runtimePrototypeImportAliases(sources);
+    const runtimePaths = new Set(sources.keys());
+    const allowedPackages = runtimePackageAllowlist(input.repositoryRoot);
+    for (const [relativePath, source] of sources) {
+      validateP9RuntimeSourceMutationFree(
+        relativePath,
+        source,
+        importedPrototypeAliases.get(relativePath),
+        runtimePaths,
+        allowedPackages,
+        input.repositoryRoot,
+      );
+      entries.push({ path: relativePath, sha256: sha256P9Text(source) });
+    }
+  } else {
+    for (const [relativePath, source] of [
+      [P9_PRODUCTION_SOURCE_LOADER_PATH, sourceBytes.loader],
+      [P9_HEALTH_ROUTE_PATH, sourceBytes.healthRoute],
+      [P9_PUBLIC_ROUTE_PATH, sourceBytes.publicRoute],
+    ] as const) {
+      validateP9RuntimeSourceMutationFree(relativePath, source);
+      entries.push({ path: relativePath, sha256: sha256P9Text(source) });
+    }
+  }
+  entries.sort((left, right) => left.path.localeCompare(right.path));
+  if (entries.length === 0) bindingReject('runtime source closure is empty');
+  return {
+    method: 'sha256-sorted-runtime-path-and-blob-v1',
+    excludedLiteralBindingModulePath: P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+    fileCount: entries.length,
+    sha256: sha256P9Value(entries),
+    builtInPrototypeMutationFree: true,
+  };
+}
 
 export function deriveP9ApplicationReadRuntimeBinding(
   input: P9ApplicationReadRuntimeBindingInput,
@@ -1781,22 +5544,34 @@ export function deriveP9ApplicationReadRuntimeBinding(
     'sourceBytes' in input && input.sourceBytes
       ? input.sourceBytes
       : {
+          runtimeBindingModule: readRuntimeFile(
+            P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+          ),
           loader: readRuntimeFile(P9_PRODUCTION_SOURCE_LOADER_PATH),
           healthRoute: readRuntimeFile(P9_HEALTH_ROUTE_PATH),
           publicRoute: readRuntimeFile(P9_PUBLIC_ROUTE_PATH),
         };
   if (
     Object.keys(sourceBytes).sort().join(',') !==
-    'healthRoute,loader,publicRoute'
+    'healthRoute,loader,publicRoute,runtimeBindingModule'
   ) {
     throw new Error('P9 application runtime binding rejected: source byte set differs');
   }
+  validateP9RuntimeBindingModuleSource(sourceBytes.runtimeBindingModule);
   validateP9ProductionLoaderSource(sourceBytes.loader);
   validateP9ApplicationRouteSource(sourceBytes.healthRoute, 'health');
   validateP9ApplicationRouteSource(sourceBytes.publicRoute, 'public');
+  const runtimeSourceClosure = deriveP9RuntimeSourceClosure(input, sourceBytes);
   const content = {
     schemaVersion: 1 as const,
     runtimeCommit: input.runtimeCommit,
+    runtimeBindingModule: {
+      path:
+        P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH as typeof P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+      directLiteralExport: true as const,
+      sideEffectFree: true as const,
+    },
+    runtimeSourceClosure,
     loader: {
       path: P9_PRODUCTION_SOURCE_LOADER_PATH as typeof P9_PRODUCTION_SOURCE_LOADER_PATH,
       exportName:
@@ -1861,6 +5636,80 @@ function bindingSourceFile(name: string, source: string): ts.SourceFile {
 function bindingWalk(node: ts.Node, visit: (node: ts.Node) => void): void {
   visit(node);
   ts.forEachChild(node, (child) => bindingWalk(child, visit));
+}
+
+function bindingJsonLiteralExpression(expression: ts.Expression): boolean {
+  if (
+    ts.isParenthesizedExpression(expression) ||
+    ts.isAsExpression(expression) ||
+    ts.isTypeAssertionExpression(expression) ||
+    ts.isSatisfiesExpression(expression)
+  ) {
+    return bindingJsonLiteralExpression(expression.expression);
+  }
+  if (
+    ts.isStringLiteral(expression) ||
+    ts.isNumericLiteral(expression) ||
+    expression.kind === ts.SyntaxKind.TrueKeyword ||
+    expression.kind === ts.SyntaxKind.FalseKeyword ||
+    expression.kind === ts.SyntaxKind.NullKeyword
+  ) {
+    return true;
+  }
+  if (ts.isArrayLiteralExpression(expression)) {
+    return expression.elements.every(
+      (element) =>
+        !ts.isSpreadElement(element) &&
+        !ts.isOmittedExpression(element) &&
+        bindingJsonLiteralExpression(element),
+    );
+  }
+  if (ts.isObjectLiteralExpression(expression)) {
+    return expression.properties.every((property) => {
+      if (
+        !ts.isPropertyAssignment(property) ||
+        ts.isComputedPropertyName(property.name) ||
+        (!ts.isIdentifier(property.name) &&
+          !ts.isStringLiteral(property.name) &&
+          !ts.isNumericLiteral(property.name))
+      ) {
+        return false;
+      }
+      const name = property.name.text;
+      return (
+        !['__proto__', 'constructor', 'prototype'].includes(name) &&
+        bindingJsonLiteralExpression(property.initializer)
+      );
+    });
+  }
+  return false;
+}
+
+function validateP9RuntimeBindingModuleSource(source: string): void {
+  const file = bindingSourceFile(
+    P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+    source,
+  );
+  if (
+    file.statements.length !== 1 ||
+    !ts.isVariableStatement(file.statements[0]) ||
+    !file.statements[0].modifiers?.some(
+      (modifier) => modifier.kind === ts.SyntaxKind.ExportKeyword,
+    ) ||
+    (file.statements[0].declarationList.flags & ts.NodeFlags.Const) === 0 ||
+    file.statements[0].declarationList.declarations.length !== 1
+  ) {
+    bindingReject('runtime binding module is not one direct const export');
+  }
+  const declaration = file.statements[0].declarationList.declarations[0];
+  if (
+    !ts.isIdentifier(declaration.name) ||
+    declaration.name.text !== 'applicationRuntimeBinding' ||
+    !declaration.initializer ||
+    !bindingJsonLiteralExpression(declaration.initializer)
+  ) {
+    bindingReject('runtime binding module export is not a side-effect-free JSON literal');
+  }
 }
 
 function bindingDirectExport(
@@ -1975,6 +5824,30 @@ function bindingDirectConst(
     bindingReject(`${name} is not one immutable direct handler/loader binding`);
   }
   return declaration;
+}
+
+function bindingExactSheetGridDataFlow(callback: ts.ArrowFunction): boolean {
+  const parameter = callback.parameters[0];
+  if (
+    callback.parameters.length !== 1 ||
+    !parameter ||
+    !ts.isIdentifier(parameter.name) ||
+    parameter.dotDotDotToken ||
+    parameter.questionToken ||
+    parameter.initializer ||
+    ts.isBlock(callback.body) ||
+    !ts.isBinaryExpression(callback.body) ||
+    callback.body.operatorToken.kind !== ts.SyntaxKind.QuestionQuestionToken ||
+    !ts.isPropertyAccessExpression(callback.body.left) ||
+    !ts.isIdentifier(callback.body.left.expression) ||
+    callback.body.left.expression.text !== parameter.name.text ||
+    callback.body.left.name.text !== 'data' ||
+    !ts.isArrayLiteralExpression(callback.body.right) ||
+    callback.body.right.elements.length !== 0
+  ) {
+    return false;
+  }
+  return true;
 }
 
 function bindingPrinted(node: ts.Node, file: ts.SourceFile): string {
@@ -2266,6 +6139,59 @@ function bindingExactCredentialParser(file: ts.SourceFile): void {
 function validateP9ProductionLoaderSource(source: string): void {
   const file = bindingSourceFile(P9_PRODUCTION_SOURCE_LOADER_PATH, source);
   const loader = bindingDirectExport(file, P9_PRODUCTION_SOURCE_LOADER_EXPORT);
+  const exactTopLevelFunctionNames = new Set([
+    'jsonObjectOrNull',
+    'canonicalBase64JsonObjectOrNull',
+    'parseServiceAccountCredentials',
+    'canonicalize',
+    'canonicalJson',
+    'p9ApplicationReadChallengeSha256',
+    'mapP9Scholarships',
+    P9_PRODUCTION_SOURCE_LOADER_EXPORT,
+  ]);
+  const actualTopLevelFunctionNames: string[] = [];
+  const actualImportModules: string[] = [];
+  let payloadLimitDeclarations = 0;
+  for (const statement of file.statements) {
+    if (ts.isImportDeclaration(statement) && ts.isStringLiteral(statement.moduleSpecifier)) {
+      actualImportModules.push(statement.moduleSpecifier.text);
+      continue;
+    }
+    if (ts.isFunctionDeclaration(statement) && statement.name) {
+      if (!exactTopLevelFunctionNames.has(statement.name.text)) {
+        bindingReject('loader contains an unapproved top-level function');
+      }
+      actualTopLevelFunctionNames.push(statement.name.text);
+      continue;
+    }
+    if (
+      ts.isVariableStatement(statement) &&
+      statement.declarationList.declarations.length === 1 &&
+      ts.isIdentifier(statement.declarationList.declarations[0].name) &&
+      statement.declarationList.declarations[0].name.text ===
+        'MAX_CREDENTIAL_PAYLOAD_BYTES'
+    ) {
+      payloadLimitDeclarations += 1;
+      continue;
+    }
+    bindingReject('loader contains an unapproved top-level statement');
+  }
+  if (
+      actualImportModules.sort().join('\u0000') !==
+      [
+        P9_APPLICATION_RUNTIME_BINDING_IMPORT,
+        'googleapis',
+        'node:crypto',
+      ].sort().join('\u0000') ||
+    actualTopLevelFunctionNames.length !== exactTopLevelFunctionNames.size ||
+    new Set(actualTopLevelFunctionNames).size !== exactTopLevelFunctionNames.size ||
+    actualTopLevelFunctionNames.some(
+      (name) => !exactTopLevelFunctionNames.has(name),
+    ) ||
+    payloadLimitDeclarations !== 1
+  ) {
+    bindingReject('loader top-level import/function/constant closure differs');
+  }
   if (
     loader.parameters.length !== 1 ||
     !ts.isIdentifier(loader.parameters[0].name)
@@ -2273,6 +6199,42 @@ function validateP9ProductionLoaderSource(source: string): void {
     bindingReject('loader must have one direct nonce-or-null parameter');
   }
   const nonceName = loader.parameters[0].name.text;
+  const expectedLoaderStatementShape = [
+    'const:sourceMode',
+    'if',
+    'const:credentials',
+    'const:auth',
+    'const:sheets',
+    'const:response',
+    'const:scholarships',
+    'if',
+    ...P9_AUTHORIZED_PRODUCTION_TABS.flatMap((tab) => [
+      `const:sheet${tab.sheetId}`,
+      `const:gridData${tab.sheetId}`,
+      `const:challenge${tab.sheetId}`,
+    ]),
+    'return',
+  ];
+  const actualLoaderStatementShape = loader.body!.statements.map((statement) => {
+    if (ts.isIfStatement(statement)) return 'if';
+    if (ts.isReturnStatement(statement)) return 'return';
+    if (
+      ts.isVariableStatement(statement) &&
+      (statement.declarationList.flags & ts.NodeFlags.Const) !== 0 &&
+      statement.declarationList.declarations.length === 1 &&
+      ts.isIdentifier(statement.declarationList.declarations[0].name) &&
+      statement.declarationList.declarations[0].initializer
+    ) {
+      return `const:${statement.declarationList.declarations[0].name.text}`;
+    }
+    return 'unapproved';
+  });
+  if (
+    actualLoaderStatementShape.join('\u0000') !==
+    expectedLoaderStatementShape.join('\u0000')
+  ) {
+    bindingReject('loader statement sequence differs from the side-effect-free closure');
+  }
   const sourceModeVariable = bindingVariable(loader.body!, 'sourceMode');
   const sourceMode = sourceModeVariable.initializer!;
   if (
@@ -2328,7 +6290,7 @@ function validateP9ProductionLoaderSource(source: string): void {
       ts.isImportDeclaration(statement) &&
       ts.isStringLiteral(statement.moduleSpecifier) &&
       statement.moduleSpecifier.text ===
-        '@/lib/p9-application-runtime-binding',
+        P9_APPLICATION_RUNTIME_BINDING_IMPORT,
   );
   const bindingImportsNamed = bindingImports[0]?.importClause?.namedBindings;
   if (
@@ -2354,6 +6316,14 @@ function validateP9ProductionLoaderSource(source: string): void {
     );
   });
   if (!rollback) bindingReject('loader rollback early return is missing');
+  if (
+    rollback !== loader.body!.statements[1] ||
+    !ts.isBlock(rollback.thenStatement) ||
+    rollback.thenStatement.statements.length !== 1 ||
+    !ts.isReturnStatement(rollback.thenStatement.statements[0])
+  ) {
+    bindingReject('loader rollback branch contains alternate statements');
+  }
   let rollbackNullProbe = false;
   let rollbackBindingFlow = false;
   let rollbackGoogle = false;
@@ -2402,6 +6372,10 @@ function validateP9ProductionLoaderSource(source: string): void {
   );
   if (!authNode || !ts.isNewExpression(authNode) || !sheetsNode) {
     bindingReject('loader GoogleAuth/Sheets construction is not direct');
+  }
+  const auth = bindingVariable(loader.body!, 'auth');
+  if (auth.initializer !== authNode) {
+    bindingReject('auth variable is not the direct GoogleAuth construction');
   }
   bindingExactCredentialParser(file);
   const credentials = bindingVariable(loader.body!, 'credentials').initializer!;
@@ -2514,9 +6488,13 @@ function validateP9ProductionLoaderSource(source: string): void {
     mappingReturn && ts.isReturnStatement(mappingReturn)
       ? mappingReturn.expression
       : undefined;
-  let callbackUsesInput = false;
+  let callbackCarriesExactGridData = false;
   if (
     mappingFunctions.length === 1 &&
+    !mappingFunction.asteriskToken &&
+    !mappingFunction.modifiers?.some(
+      (modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword,
+    ) &&
     mappingFunction.parameters.length === 1 &&
     mappingFunction.body!.statements.length === 1 &&
     mappingParameter &&
@@ -2526,18 +6504,18 @@ function validateP9ProductionLoaderSource(source: string): void {
     ts.isPropertyAccessExpression(mappingExpression.expression) &&
     ts.isIdentifier(mappingExpression.expression.expression) &&
     mappingExpression.expression.expression.text === mappingParameter.text &&
-    ['map', 'flatMap'].includes(mappingExpression.expression.name.text) &&
+    mappingExpression.expression.name.text === 'flatMap' &&
     mappingExpression.arguments.length === 1 &&
     ts.isArrowFunction(mappingExpression.arguments[0]) &&
+    !mappingExpression.arguments[0].modifiers?.some(
+      (modifier) => modifier.kind === ts.SyntaxKind.AsyncKeyword,
+    ) &&
     mappingExpression.arguments[0].parameters.length === 1 &&
     ts.isIdentifier(mappingExpression.arguments[0].parameters[0].name)
   ) {
-    const callbackParameter = mappingExpression.arguments[0].parameters[0].name.text;
-    bindingWalk(mappingExpression.arguments[0].body, (node) => {
-      if (ts.isIdentifier(node) && node.text === callbackParameter) {
-        callbackUsesInput = true;
-      }
-    });
+    callbackCarriesExactGridData = bindingExactSheetGridDataFlow(
+      mappingExpression.arguments[0],
+    );
   }
   const scholarships = bindingVariable(loader.body!, 'scholarships').initializer!;
   if (
@@ -2552,7 +6530,7 @@ function validateP9ProductionLoaderSource(source: string): void {
       'response.data.sheets' ||
     !ts.isArrayLiteralExpression(scholarships.arguments[0].right) ||
     scholarships.arguments[0].right.elements.length !== 0 ||
-    !callbackUsesInput
+    !callbackCarriesExactGridData
   ) {
     bindingReject('scholarships do not directly map the exact awaited response sheets');
   }
@@ -2712,6 +6690,15 @@ function validateP9ProductionLoaderSource(source: string): void {
       statement.getStart() > response.getEnd(),
   );
   let publicNullFlow = false;
+  if (
+    !publicReadBranch ||
+    publicReadBranch !== loader.body!.statements[7] ||
+    !ts.isBlock(publicReadBranch.thenStatement) ||
+    publicReadBranch.thenStatement.statements.length !== 1 ||
+    !ts.isReturnStatement(publicReadBranch.thenStatement.statements[0])
+  ) {
+    bindingReject('public null-nonce branch contains alternate statements');
+  }
   if (publicReadBranch) {
     bindingWalk(publicReadBranch.thenStatement, (node) => {
       if (

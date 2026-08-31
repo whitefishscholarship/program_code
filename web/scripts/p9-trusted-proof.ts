@@ -9,6 +9,7 @@ import {
   P9_APPLICATION_READ_CHALLENGE_DOMAIN,
   P9_APPLICATION_READ_CHALLENGE_HASH_ALGORITHM,
   P9_APPLICATION_READ_BOUNDED_FIELDS,
+  P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
   P9_HEALTH_ROUTE_PATH,
   P9_PRODUCTION_SOURCE_LOADER_EXPORT,
   P9_PRODUCTION_SOURCE_LOADER_PATH,
@@ -1403,8 +1404,41 @@ function validateApplicationReadRuntimeBinding(
   const binding = asRecord(value, `${label} runtime binding`);
   exactKeys(
     binding,
-    ['schemaVersion', 'runtimeCommit', 'loader', 'healthRoute', 'publicRoute', 'bindingSha256'],
+    [
+      'schemaVersion',
+      'runtimeCommit',
+      'runtimeBindingModule',
+      'runtimeSourceClosure',
+      'loader',
+      'healthRoute',
+      'publicRoute',
+      'bindingSha256',
+    ],
     `${label} runtime binding`,
+  );
+  const runtimeBindingModule = asRecord(
+    binding.runtimeBindingModule,
+    `${label} runtime binding module`,
+  );
+  exactKeys(
+    runtimeBindingModule,
+    ['path', 'directLiteralExport', 'sideEffectFree'],
+    `${label} runtime binding module`,
+  );
+  const runtimeSourceClosure = asRecord(
+    binding.runtimeSourceClosure,
+    `${label} runtime source closure`,
+  );
+  exactKeys(
+    runtimeSourceClosure,
+    [
+      'method',
+      'excludedLiteralBindingModulePath',
+      'fileCount',
+      'sha256',
+      'builtInPrototypeMutationFree',
+    ],
+    `${label} runtime source closure`,
   );
   const loader = asRecord(binding.loader, `${label} runtime loader binding`);
   exactKeys(
@@ -1467,6 +1501,16 @@ function validateApplicationReadRuntimeBinding(
     binding.schemaVersion !== 1 ||
     binding.runtimeCommit !== runtimeCommit ||
     bindingSha256 !== sha256Value(base) ||
+    runtimeBindingModule.path !== P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH ||
+    runtimeBindingModule.directLiteralExport !== true ||
+    runtimeBindingModule.sideEffectFree !== true ||
+    runtimeSourceClosure.method !==
+      'sha256-sorted-runtime-path-and-blob-v1' ||
+    runtimeSourceClosure.excludedLiteralBindingModulePath !==
+      P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH ||
+    !Number.isInteger(runtimeSourceClosure.fileCount) ||
+    Number(runtimeSourceClosure.fileCount) < 1 ||
+    runtimeSourceClosure.builtInPrototypeMutationFree !== true ||
     loader.path !== P9_PRODUCTION_SOURCE_LOADER_PATH ||
     loader.exportName !== P9_PRODUCTION_SOURCE_LOADER_EXPORT ||
     loader.directNamedExport !== true ||
@@ -1498,6 +1542,7 @@ function validateApplicationReadRuntimeBinding(
   }
   for (const [digest, digestLabel] of [
     [bindingSha256, 'binding'],
+    [runtimeSourceClosure.sha256, 'runtime source closure'],
     [loader.fileSha256, 'loader'],
     [healthRoute.fileSha256, 'health route'],
     [publicRoute.fileSha256, 'public route'],
@@ -1535,7 +1580,7 @@ function independentlyDeriveRuntimeBinding(
   }
   const trackedStatus = spawnSync(
     'git',
-    ['status', '--porcelain=v1', '--untracked-files=no'],
+    ['status', '--porcelain=v1', '--untracked-files=all'],
     {
       cwd: runtimeRoot,
       encoding: 'utf8',
@@ -1546,6 +1591,7 @@ function independentlyDeriveRuntimeBinding(
     fail(`${label} checkout contains tracked index or worktree changes`);
   }
   for (const relativePath of [
+    P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
     P9_PRODUCTION_SOURCE_LOADER_PATH,
     P9_HEALTH_ROUTE_PATH,
     P9_PUBLIC_ROUTE_PATH,
@@ -3441,6 +3487,19 @@ async function selfTest(): Promise<void> {
   const runtimeBindingBase = {
     schemaVersion: 1,
     runtimeCommit: runtime,
+    runtimeBindingModule: {
+      path: P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+      directLiteralExport: true,
+      sideEffectFree: true,
+    },
+    runtimeSourceClosure: {
+      method: 'sha256-sorted-runtime-path-and-blob-v1',
+      excludedLiteralBindingModulePath:
+        P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
+      fileCount: 3,
+      sha256: '4'.repeat(64),
+      builtInPrototypeMutationFree: true,
+    },
     loader: {
       path: P9_PRODUCTION_SOURCE_LOADER_PATH,
       exportName: P9_PRODUCTION_SOURCE_LOADER_EXPORT,

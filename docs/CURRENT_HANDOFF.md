@@ -5,7 +5,379 @@ Plan revision: 7
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Claude transfer checkpoint — not accepted, not attested, P9 not started
+## Codex resumption checkpoint — Revision 7 only; P9 not started
+
+- Kelsey resumed this exact local branch on 2026-08-30 and selected `xhigh` reasoning.
+  The saved WIP and historical transfer commits remain ordinary checkpoints, not a
+  candidate, review, attestation, or delivery claim.
+- Secure browser authentication was temporarily restored as the authorized
+  `whitefishscholarship` GitHub account without requesting or exposing a token. A fresh
+  authenticated normal-Git fetch at `2026-08-31T00:51Z` resolved live `origin/main` to
+  exact Revision 7 baseline `5c6040e332127ef2cdfe04bbb1cc9bdff4f5eecd`.
+  Accepted P8 attestation `20eeb53c80fce4e79a689128918a12361233aa7b`
+  remains the direct child of `cc69d276c85f931499a23a5abde623bda321e0c0`
+  and adds exactly the P8 manifest and review. Kelsey completed a fresh browser/device
+  flow, and `gh auth status` at `2026-08-31T02:18:50Z` verified the active
+  `whitefishscholarship` account with repository/workflow scopes. Treat delivery
+  authentication as provisional until the required final authenticated normal-Git
+  fetch and push probes pass. The already observed baseline/P8 topology remains
+  historical evidence, not a substitute for the required final live recheck.
+- The WIP runtime-source analyzer now rejects a mapper that ignores the awaited Sheets
+  response, a callback that only performs a superficial/dead input read before
+  returning a constant, and a source-dependent condition whose result branches are
+  both constant. After a fresh read-only reviewer showed that a derived receiver could
+  still hide `filter(() => false)`, the analyzer was tightened to accept only directly
+  proved `map`/`flatMap` callback result flow. Runtime writer discovery now rejects any
+  symbolic link in the scanned source tree and resolves or fails closed on indirect
+  network invocation including `Reflect.apply` and `Function.prototype.apply`.
+- Fresh-context reviewer `/root/rev7_prefreeze_recheck` rejected the preceding working
+  tree `C0/H3/M0/L0`: constant-output derived-receiver transforms could pass mapping
+  provenance, symlinked TypeScript writers disappeared from inventory, and a raw
+  Sheets REST write through `Reflect.apply(fetch, ...)` was omitted. Direct regression
+  fixtures now reproduce all three findings and pass after implementation remediation.
+  This is not acceptance; the same reviewer must recheck the remediated bytes at C0/H0
+  before candidate freeze.
+- The same reviewer rejected the first remediation recheck `C0/H2/M0/L0`: generic
+  binary-expression provenance accepted algebraically constant `value * 0` and
+  `value - value` results, while detached `(0, fetch)` calls escaped both direct and
+  reflected network discovery. The next remediation rejects all mapper binary and
+  conditional result operators except explicit `&&`, `??`, and `||` flow rules needed
+  by the bounded loader contract, and resolves comma-expression call targets from their
+  effective right operand. Exact direct and reflected detached-fetch regressions now
+  accompany the two algebraic-constant tests. Same-reviewer C0/H0 recheck remains
+  mandatory.
+- The same reviewer rejected the second remediation recheck `C0/H2/M0/L0`: derived
+  callback locals could be mutated or conditionally emptied before return, cardinality-
+  only projections passed without carrying complete GridData values, and conditional or
+  logical callable expressions could still hide raw network writers. The permissive
+  mapper provenance heuristic is now removed. The verifier structurally pins the exact
+  `sheets.flatMap((sheet) => sheet.data ?? [])` collection flow. Conditional/logical
+  network chains resolve identically when possible and otherwise become an explicit
+  unknown indirect-network capability; any unfamiliar call carrying a statically
+  resolved Sheets URL also enters inventory fail-closed. Exact mutation, cardinality,
+  conditional/logical/reflected/aliased network regressions are included. Another
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the third remediation recheck `C0/H2/M0/L0`: an inserted
+  receiver or `Array.prototype.flatMap` monkeypatch could prevent the exact callback
+  from executing, and object/array/Map request containers could hide a co-located fetch,
+  Sheets endpoint, and write method. The loader verifier now pins the complete top-level
+  closure, exact ordered loader statement sequence, single-return early branches, and
+  direct GoogleAuth initializer, excluding extra executable statements and hidden
+  mapping-side effects. Writer discovery additionally fails closed when one runtime
+  source file contains a statically resolved generic-network capability, Sheets target,
+  and write method even if an aggregate container prevents direct call resolution.
+  Exact monkeypatch and object/array/Map regressions are included. Another same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the fourth remediation recheck `C0/H2/M0/L0`: async or
+  generator mapper semantics and an async callback passed the pinned expression while
+  returning promises/iterators, and aggregate fallback missed a computed `fetch`
+  property or `POST` built with array `join`. Mapper and callback modifiers are now
+  explicitly non-async and the mapper non-generator. Computed property names and
+  statically joined string arrays resolve, while a statically resolved Sheets mutation
+  endpoint is independently sufficient to enter writer inventory fail-closed. Exact
+  async/generator/callback and computed-capability/method regressions are included.
+  Another same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the fifth remediation recheck `C0/H2/M0/L0`: the imported
+  local runtime-binding module remained outside the bound source closure, and aggregate
+  writers could use `String.fromCharCode`/`concat` forms not enumerated by string
+  evaluation. The application runtime binding now includes that module path; trusted
+  checkout binding verifies its committed bytes, and its source must be exactly one
+  side-effect-free direct JSON-literal export. Dynamic computed access on global runtime
+  objects is independently inventoried as an unknown writer, method properties fail
+  closed unless proven GET/HEAD, and static evaluation additionally covers
+  `String.fromCharCode` and string `concat`. Exact imported-module side-effect and both
+  computed raw-writer regressions are included. Another same-reviewer C0/H0 recheck
+  remains mandatory.
+- The same reviewer rejected the sixth remediation recheck `C0/H2/M0/L0`: the expected
+  module path was bound but the loader's `@/` alias could be redirected by later runtime
+  configuration, while `Reflect.get` or property-descriptor reads of `globalThis.fetch`
+  could hide a values-update writer. The loader now requires a sibling-relative
+  `./p9-application-runtime-binding` import, eliminating path-alias redirection. Any
+  `Reflect.get`, `Reflect.getOwnPropertyDescriptor`,
+  `Object.getOwnPropertyDescriptor`, or `Object.getOwnPropertyDescriptors` read from a
+  global runtime object is inventoried as an unknown network capability. Exact
+  reflective-global values-update regressions are included. Another same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the seventh remediation recheck `C0/H2/M0/L0`: nested
+  `Reflect.apply`/`.bind` retrieval could still hide a global network capability, and
+  runtime-capable `web/instrumentation.ts` remained outside the four-source application
+  binding. Reflection normalization now unwraps direct, applied, and bound standard
+  global-property reads before classification. The application binding also hashes the
+  sorted complete runtime source path/blob closure (excluding only the separately
+  constrained literal binding module), includes its file count/digest, requires a clean
+  checkout including untracked-file absence, and rejects built-in prototype mutations
+  in any closure file. Exact nested-reflection and instrumentation regressions are
+  included. Another same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the eighth remediation recheck `C0/H4/M0/L0`: `.call`,
+  `.apply`, and partially bound reflective getter forms remained unclassified;
+  built-in prototype aliases could hide direct and `Reflect.set` mutations; a network
+  capability, Sheets target, and write method split across imported modules disappeared
+  from the file-local fallback; and runtime source discovery excluded tracked source
+  beneath `build`/`dist`/`out` directory names. The ninth remediation classifies every
+  expression chain rooted at a standard reflective getter, resolves stable const
+  aliases when checking built-in prototype mutations, fails closed on an unresolved
+  call carrying a non-GET/HEAD method option, and enumerates all tracked `web/`
+  TypeScript/JavaScript sources with no build-like exclusion (with the non-Git fallback
+  matching that rule). Exact regressions cover all four findings.
+- The same reviewer rejected the ninth remediation recheck `C0/H4/M0/L0`: a
+  computed `Reflect[member]` getter could evade inventory; imported request options
+  could complete a cross-module writer without a local method literal; prototype
+  aliases using stable `let`, destructuring, or an aliased mutation function remained
+  unresolved; and `eval`/`Function` could dynamically hide both prototype mutation and
+  a decoded Sheets writer. The tenth remediation fails closed on dynamic Reflect/Object
+  element access, propagates capability/target/write-option facts through local module
+  exports and imports, resolves stable let/destructured/general call aliases for the
+  prototype check, and rejects eval/Function-family execution in both writer inventory
+  and runtime-closure validation. Exact regressions cover every cited form.
+- The same reviewer rejected the tenth remediation recheck `C0/H3/M0/L0`: local
+  aliases and barrel/namespace forms could erase imported writer facts; dynamic code
+  could run through function-object constructors, reflected `Function`, or `node:vm`;
+  and prototype objects or mutation APIs could be derived through `getPrototypeOf`,
+  `__proto__`, or `Reflect.apply`. The eleventh remediation recursively resolves stable
+  local import aliases, propagates named/star barrel exports to a fixed point, resolves
+  namespace-member facts, and independently inventories any raw exported network
+  capability. It also rejects standard dynamic-code identifiers/modules and constructor
+  access regardless of outer call shape, and treats prototype-derivation members plus
+  applied calls carrying a built-in prototype as mutation risks. Exact regressions
+  cover the three findings and their cited variants.
+- The same reviewer rejected the eleventh remediation recheck `C0/H3/M0/L0`: an
+  exported function or object container could conceal a fetch capability; a data-URL
+  dynamic import or child-process shell call could execute encoded code; and a prototype
+  alias exported from one module and mutated in another escaped the file-local closure
+  check. The twelfth remediation derives nested container capabilities and explicit
+  capability-returning exported functions, carries those facts through calls/member
+  access, rejects unsafe dynamic-import schemes and bound `exec`/`execSync` process
+  execution, and derives named/default/barrel/namespace prototype import aliases before
+  validating each runtime source. Exact cited regressions are included.
+- The same reviewer rejected the twelfth remediation recheck `C0/H3/M0/L0`: a
+  local callable wrapper or exported class method could return a network capability;
+  process execution through `spawn`/related APIs exceeded the `exec`-only rule; and
+  exported prototype containers/functions still escaped cross-module provenance. The
+  thirteenth remediation resolves return facts through local callables and exported
+  class methods while preserving proven GET calls, models all standard child-process
+  launch methods with a narrow fixed-command exception for existing Git/NPM evidence
+  tooling, and rejects any exported value/container/function that exposes a built-in
+  prototype before consumer analysis. Exact reviewer variants are covered.
+- The same reviewer rejected the thirteenth remediation recheck `C0/H3/M0/L0`:
+  capability propagation still depended on declaration order and omitted local function
+  wrappers/class fields; literal `git`/`npx` exemptions and reflected process calls were
+  too broad; and named local/class-field prototype exports remained open. The fourteenth
+  remediation derives all local variable/function/class capability facts to a fixed
+  point before resolving exports, including class fields. Process rules now reject every
+  `spawn`/`spawnSync`/`fork` and reflected process invocation, with only direct
+  `execFile`/`execFileSync` of literal `git` retained for existing evidence reads.
+  Named local and class-field prototype exports are rejected at the exporter boundary.
+  Exact reviewer variants are included.
+- The same reviewer rejected the fourteenth remediation recheck `C0/H3/M0/L0`:
+  exported class accessors/default classes were absent from capability facts; applied,
+  bound, re-exported, or loosely exempted process launchers remained open; and named
+  prototype containers or call-returned prototypes escaped exporter checks. The
+  fifteenth remediation covers class getters/setters/default exports, normalizes
+  process `.apply`/`.call`/`.bind`, inventories external process re-exports, rejects all
+  spawn/fork forms, and restricts direct Git `execFile` exceptions to literal audited
+  history subcommands. A separate fixed point now tracks local prototype-valued
+  variables/functions/classes through containers and calls before every export check.
+  Exact reviewer variants are included.
+- The same reviewer rejected the fifteenth remediation recheck `C0/H3/M0/L0`:
+  capability and prototype facts ignored property assignments after initialization and
+  class static blocks; aliased/star child-process re-exports remained open; and the Git
+  exception still permitted external-diff execution. The sixteenth remediation adds
+  mutation-aware fixed-point facts for assignment roots and class static blocks, rejects
+  both aliased and star child-process re-exports at their exporter boundary, and removes
+  `git diff` from the permitted read-only plumbing commands. Exact reviewer variants are
+  included.
+- Focused exact-tree checks after the sixteenth remediation passed: non-incremental TypeScript,
+  P9 evidence-v2 adversarial tests, trusted-proof self-test, and production-authority
+  tests. Whitespace and expected pre-attestation validation remain to be rerun after
+  the documentation update.
+- The same reviewer rejected the sixteenth remediation recheck `C0/H3/M0/L0`.
+  Capability and prototype fixed points still ignore mutation-helper calls such as
+  `Object.assign(target, source)` and `Reflect.set(target, key, value)`. Process
+  launchers nested in exported containers or returned by exported functions also
+  escape the exporter check, and the Git `show` exception still permits external code
+  through options such as `--ext-diff`. The seventeenth remediation now uses one
+  conservative mutation-call projection for `Object.assign`, `Reflect.set`, and the
+  equivalent property-definition helpers, and feeds those values into both the
+  capability and built-in-prototype fixed points. Export facts now carry process
+  capability through nested containers and function/class returns. The Git exception
+  now accepts only statically resolved, command-specific read-only argument shapes;
+  unresolved arguments and external-execution options fail closed. Exact regressions
+  cover both mutation helpers for capability and prototype exports, nested/returned
+  `spawn`, and `git show --ext-diff HEAD`.
+- Focused checks on the seventeenth-remediation working tree passed: `npx tsc --noEmit`,
+  `node --import tsx scripts/test-p9-evidence-v2.ts`,
+  `node --import tsx scripts/p9-trusted-proof.ts --mode=self-test`,
+  `node --import tsx scripts/test-production-authority.ts`, and `git diff --check`.
+  A fresh read-only independent C0/H0 prefreeze review is still required before any
+  candidate freeze.
+- Fresh-context reviewer `/root/rev7_prefreeze_17` rejected the seventeenth remediation
+  `C0/H3/M0/L0`: mutation-helper facts were discarded when the target was returned by a
+  local function, anonymous-default and namespace child-process exports escaped process
+  facts, and otherwise read-only Git `execFile` calls could opt into shell execution.
+  The eighteenth remediation resolves stable local call-selected mutation targets into
+  every returned root, binds anonymous default-function and namespace process exports,
+  and permits Git exec-file reads only with statically resolved command-specific
+  arguments plus a narrow shell-free options object. Exact regressions cover both
+  mutation helpers through `selectedBox()`, both omitted process export forms, and
+  `{ shell: true }` with metacharacter-bearing Git arguments.
+- Focused checks after the eighteenth remediation passed: non-incremental TypeScript,
+  P9 evidence-v2 adversarial tests, trusted-proof self-test, production-authority tests,
+  and root whitespace validation. The same reviewer must recheck these exact bytes at
+  C0/H0 before candidate freeze.
+- The same reviewer rejected the eighteenth-remediation recheck `C0/H3/M0/L0`. Stable
+  aliases of mutation-target selector functions still erased call-selected facts; a
+  locally returned process launcher could be invoked without entering the process-call
+  classifier; and CommonJS `module.exports` process containers were outside ESM-only
+  export propagation. The nineteenth remediation resolves const callable aliases to
+  their returned mutation roots, adds local process-return wrappers to the process
+  binding fixed point, and rejects CommonJS process exports at their exporter boundary
+  while also deriving their default/named module facts. Exact alias, local-wrapper, and
+  `.cjs` exporter/consumer regressions are included. Same-reviewer C0/H0 recheck remains
+  mandatory before freeze.
+- The same reviewer rejected the nineteenth-remediation recheck `C0/H3/M0/L0`. CommonJS
+  member and mutation exports were still unbound, parenthesized/conditional/nested/object
+  process-return wrappers escaped direct process resolution, and mutation-helper values
+  containing a local capability call lost that callable's fixed-point fact. The
+  twentieth remediation covers `module.exports.*` plus `Object.assign`/`Reflect.set`
+  CommonJS exports, recursively normalizes process-return expression forms and nested
+  declarations, and merges every nested local callable fact in a mutation value. Exact
+  multi-module and immediate-execution regressions accompany each finding. The same
+  reviewer must return C0/H0 before freeze.
+- The same reviewer rejected the twentieth-remediation recheck `C0/H2/M0/L0`. Named
+  object/class/array/destructured process-capability containers remained outside the
+  direct binding graph, and stable aliases of `module.exports`/`exports` erased CommonJS
+  exporter facts. The twenty-first remediation conservatively propagates contained
+  process methods into every bound local/class name and treats any member of such a
+  container as process-capable. A fixed-point CommonJS export-alias map now feeds both
+  direct assignment and shared mutation-helper export analysis. Exact named-container,
+  destructuring, class, array, and aliased CommonJS regressions pass; same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-first-remediation recheck `C0/H2/M0/L0`.
+  Computed/nested access into named process containers still required a direct static
+  member, and CommonJS alias discovery still excluded let/var, transparent wrappers,
+  destructuring, and nested scopes. The twenty-second remediation propagates a bound
+  container's process fact through every member-access depth even when the member is
+  computed, and derives CommonJS aliases from all variable declarations/scopes with
+  transparent-expression and `{ exports: alias }` handling. New top-level tests avoid
+  relying on exported-function facts. Same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-second-remediation recheck `C0/H2/M0/L0`.
+  Process launchers could still escape as call arguments or through containers mutated
+  after initialization, and CommonJS export aliases created by assignment,
+  conditional/logical selection, local function return, or a containing object were
+  omitted. The twenty-third remediation treats calls receiving process capabilities as
+  writer boundaries, propagates process facts through assignment roots, and computes
+  CommonJS export aliases to a fixed point across those expression and container forms.
+  Exact top-level and CommonJS regressions cover every reported variant. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-third-remediation recheck `C0/H2/M0/L0`.
+  Constructor arguments, tagged-template substitutions, and generator yields escaped
+  process classification, while CommonJS export roots passed through installer calls,
+  arrays/destructuring, or call-built containers escaped exporter facts. The
+  twenty-fourth remediation extends process classification to new/tagged-template
+  syntax and return/yield facts. CommonJS analysis recursively observes call/container
+  expressions, maps call/new arguments to local parameters, and conservatively rejects
+  any `module.exports` boundary that shares a module with child-process capability.
+  Exact regressions cover every reported form. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-fourth-remediation recheck `C0/H2/M0/L0`.
+  Computed or alternate `child_process` loaders escaped literal-only acquisition facts,
+  and `node:worker_threads` could execute a data-URL module outside dynamic-execution
+  inventory. The twenty-fifth remediation normalizes concatenated/template/joined
+  specifiers, recognizes `require`, `module.require`, and
+  `process.getBuiltinModule`, carries unresolved loader forms conservatively, and models
+  direct/namespace/returned/exported Worker capability in both writer inventory and
+  runtime closure. Exact regressions cover all reported variants. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-fifth-remediation recheck `C0/H2/M0/L0`.
+  Loader aliases/returns/binds/reflection/comma selection/`createRequire` and separately
+  computed names escaped, as did executable `cluster`, internal process binding, Node
+  module compilation, and inspector evaluation. The twenty-sixth remediation replaces
+  that enumerated edge with a fail-closed Node-execution boundary shared by inventory
+  and runtime closure: transferred or dynamic loaders, execution-capable Node module
+  boundaries, `process.binding`, `process.dlopen`, and `_compile` are rejected. Exact
+  regressions cover every reported probe. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-sixth-remediation recheck `C0/H3/M0/L0`.
+  Dynamic/rest/computed process/Worker members, aliased Node primitive names and
+  `inspector/promises`, and native `.node` addons remained outside closure. The
+  twenty-seventh remediation fails closed on unresolved namespace members and computed
+  destructures, recognizes dangerous member names across property/binding/composed
+  forms and execution-capable module subpaths, and rejects both direct loads and any
+  tracked/discovered native addon excluded from JS/TS inspection. Exact regressions
+  cover every reported probe. Focused non-incremental typecheck, evidence-v2,
+  trusted-proof, production-authority, and root whitespace checks pass; same-reviewer
+  C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-seventh-remediation recheck `C0/H4/M0/L0`.
+  Assignment-form destructuring still erased process/Worker and unsafe primitive facts;
+  extensionless/nonstandard CommonJS representations and imports outside the web source
+  set remained executable but unresolved. The twenty-eighth remediation derives roots
+  through assignment patterns, binds destructured process modules conservatively, and
+  recognizes assignment/dynamic-process primitive forms. A shared module-boundary
+  validator now permits only enumerated local JS/TS, safe data assets, Node built-ins,
+  and declared locked packages; every unresolved representation, outside/absolute/URL
+  path, or undeclared package fails closed in both inventory and runtime closure. Exact
+  regressions cover every reported probe. Focused non-incremental typecheck,
+  evidence-v2, trusted-proof, production-authority, and root whitespace checks pass;
+  same-reviewer C0/H0 recheck remains mandatory.
+- The same reviewer rejected the twenty-eighth-remediation recheck `C0/H3/M0/L0`.
+  TypeScript import-equals, loader-capable or local declared packages, and CommonJS
+  execution of apparent asset/data suffixes remained outside the shared boundary. The
+  twenty-ninth remediation models ImportEquals in both boundary and process facts,
+  requires non-local SHA-512-locked package provenance while rejecting known loader
+  package roots, and limits asset/data exemptions to ES module semantics. Every
+  CommonJS local load must resolve to enumerated JS/TS, closing CSS, case-variant JSON,
+  symlink, and package-main representation variants. Exact regressions cover every
+  reported probe. Focused non-incremental typecheck, evidence-v2, trusted-proof,
+  production-authority, and root whitespace checks pass; same-reviewer C0/H0 recheck
+  remains mandatory.
+- Fresh-context reviewer `/root/rev7_prefreeze_safe` statically reviewed the
+  twenty-ninth-remediation tree after the prior reviewer became unavailable and
+  rejected it `C0/H4/M0/L0`. Export-equals/import-equals facts were not propagated;
+  computed assignment patterns could extract opaque Node primitives; integrity-bearing
+  `npm:` aliases hid loader packages; and ESM assets were trusted lexically before
+  resolution or symlink checks. The thirtieth remediation propagates writer/prototype
+  facts through export/import-equals, fails closed on computed assignment destructuring,
+  excludes registry aliases from the integrity-backed package allowlist, and requires
+  ESM assets to resolve to existing contained regular non-symlink files with exact
+  lowercase data extensions and valid JSON where applicable. Exact regressions cover
+  every reported family. Focused non-incremental typecheck, evidence-v2, trusted-proof,
+  production-authority, and root whitespace checks pass; fresh C0/H0 prefreeze recheck
+  remains mandatory.
+- The same reviewer rejected the thirtieth-remediation recheck `C0/H1/M1/L0`.
+  Computed declaration/parameter destructuring remained a high escape, and direct tests
+  were missing for prototype import-equals propagation, local integrity-bearing
+  dependencies, and ESM asset symlinks. The thirty-first remediation rejects computed
+  property names in every binding element and adds exact declaration/parameter tests.
+  The suite also now directly covers export/import-equals prototype propagation, a
+  `file:` dependency carrying a lock integrity field, and a JSON asset symlink. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; fresh C0/H0 prefreeze recheck remains mandatory.
+- The same reviewer rejected the thirty-first-remediation recheck `C0/H1/M0/L0` solely
+  because computed destructuring in a `for...of`/`for...in` assignment target is neither
+  a binding element nor a binary-assignment left side. The thirty-second remediation
+  rejects computed properties beneath either loop form and adds an exact `for...of`
+  regression alongside the assignment/declaration/parameter controls. Focused
+  non-incremental typecheck, evidence-v2, trusted-proof, production-authority, and root
+  whitespace checks pass; fresh C0/H0 prefreeze recheck remains mandatory.
+- Fresh-context read-only reviewer `/root/rev7_prefreeze_safe` rechecked the stable
+  thirty-second-remediation tree and returned `PASS C0/H0/M0/L0`. It confirmed both
+  loop forms are closed, the exact `for...of` regression passes, and the complete
+  baseline diff contains no remaining finding. The prefreeze C0/H0 gate is satisfied;
+  there are no medium/low dispositions to carry.
+  This is not full replacement-candidate verification. Fresh prefreeze review, locked
+  full verification, final evidence update, a new immutable replacement candidate,
+  manifest, independent final acceptance, direct-child attestation, and governed
+  delivery remain mandatory.
+- P9 remains planned and unstarted. No Google/Drive/Vercel/environment discovery,
+  spreadsheet access or write, workflow dispatch, deployment/configuration change,
+  rollback, schedule activation, form interaction, or applicant-data access is part of
+  this resumed Revision 7 work.
+
+## Historical Claude transfer checkpoint — not accepted, not attested, P9 not started
 
 - Transfer branch: `codex/plan-rev7-readonly-p9`.
 - Local isolated worktree holding that branch:
@@ -91,6 +463,21 @@ for the wrappers. Locked install, the complete test suite, production build, dep
 audits, final static scans, fresh live-origin verification, final manifest validation,
 and independent final review have **not** been rerun after the last remediation and
 remain mandatory.
+
+The stable thirty-second-remediation tree then received a fresh read-only prefreeze
+`PASS C0/H0/M0/L0`. Kelsey supplied an exact ordinary-terminal Turbopack build pass,
+after which the final locked agent-captured window passed install, focused controls,
+the expected three-gate pre-attestation validation, typecheck, full P0-P8 tests, both
+zero-vulnerability audits, YAML parsing, both whitespace checks, exact 17-path
+enumeration, and production-write/P8-schedule static scans. Secure browser/keyring
+authentication now identifies active `whitefishscholarship`; live `main` is exact
+baseline `5c6040e`, and P8's candidate/direct-child two-file attestation topology is
+unchanged. Exact outputs, provenance, timestamps, and log digests are recorded in
+`docs/evidence/PLAN-REV7.md`. No replacement candidate, manifest, final review,
+attestation, push, PR, merge, deployment, or P9 action has yet been created. The final
+post-documentation reviewer recheck returned `PASS C0/H0/M0/L0` and explicitly permits
+immutable replacement-candidate freeze. Freeze a new candidate and continue the
+governed manifest/review/attestation sequence.
 
 ### Required continuation sequence
 

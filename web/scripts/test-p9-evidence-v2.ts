@@ -12,11 +12,15 @@ import {
 } from './production-authority';
 import {
   P9_APPLICATION_READ_BOUNDED_FIELDS,
+  P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH,
   P9_APPLICATION_READ_CHALLENGE_DOMAIN,
   P9_APPLICATION_READ_CHALLENGE_HASH_ALGORITHM,
   P9_DRIVE_METADATA_SCOPE,
   P9_EVIDENCE_ENVIRONMENT,
   P9_EVIDENCE_REPOSITORY,
+  P9_HEALTH_ROUTE_PATH,
+  P9_PRODUCTION_SOURCE_LOADER_PATH,
+  P9_PUBLIC_ROUTE_PATH,
   P9_REQUIRED_WRITE_SURFACES,
   P9_SIGNER_WORKFLOW,
   P9_TRUSTED_PROOF_PATHS,
@@ -135,7 +139,7 @@ const tabLiteral = (tab: (typeof P9_AUTHORIZED_PRODUCTION_TABS)[number]) =>
 const validLoaderSource = [
   "import { createHash } from 'node:crypto';",
   "import { google } from 'googleapis';",
-  "import { applicationRuntimeBinding } from '@/lib/p9-application-runtime-binding';",
+  "import { applicationRuntimeBinding } from './p9-application-runtime-binding';",
   credentialParserSource,
   canonicalizerSource,
   'function p9ApplicationReadChallengeSha256(nonce: string, tab: unknown, gridData: unknown): string {',
@@ -224,14 +228,413 @@ const validPublicRouteSource = [
   '  return Response.json({ data: result.scholarships });',
   '}',
 ].join('\n');
+const validRuntimeBindingModuleSource =
+  'export const applicationRuntimeBinding = {} as const;';
+function assertLoaderMappingRejected(loader: string, label: string): void {
+  assert.throws(
+    () =>
+      deriveP9ApplicationReadRuntimeBinding({
+        runtimeCommit,
+        sourceBytes: {
+          runtimeBindingModule: validRuntimeBindingModuleSource,
+          loader,
+          healthRoute: validHealthRouteSource,
+          publicRoute: validPublicRouteSource,
+        },
+      }),
+    /scholarships do not directly map the exact awaited response sheets/,
+    label,
+  );
+}
+
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return [];',
+  ),
+  'a mapper that ignores the awaited Sheets response and returns a constant is rejected',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap((sheet) => { void sheet; return []; });',
+  ),
+  'a superficial callback read cannot disguise a constant mapper result',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap((sheet) => sheet ? [] : []);',
+  ),
+  'a source-dependent condition with constant branches is not direct result dataflow',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap((sheet) => sheet.data.filter(() => false));',
+  ),
+  'a derived receiver cannot disguise a filter that always returns an empty result',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap((sheet) => sheet.data.length * 0);',
+  ),
+  'algebraically constant multiplication is not direct result dataflow',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap((sheet) => sheet.data.length - sheet.data.length);',
+  ),
+  'algebraically constant subtraction is not direct result dataflow',
+);
+for (const [replacement, label] of [
+  [
+    'return sheets.flatMap((sheet) => { const result = sheet.data; result.length = 0; return result; });',
+    'callback-local length mutation cannot erase GridData',
+  ],
+  [
+    'return sheets.flatMap((sheet) => { const result = sheet.data; result.splice(0); return result; });',
+    'callback-local mutator calls cannot erase GridData',
+  ],
+  [
+    'return sheets.flatMap((sheet) => { const result = sheet.data; if (true) result.length = 0; return result; });',
+    'callback control flow cannot erase GridData',
+  ],
+  [
+    'return sheets.flatMap((sheet) => sheet.data.length);',
+    'GridData cardinality is not complete GridData value flow',
+  ],
+  [
+    'return sheets.flatMap((sheet) => [sheet.data.length]);',
+    'wrapped GridData cardinality is not complete GridData value flow',
+  ],
+  [
+    'return sheets.flatMap((sheet) => ({ count: sheet.data.length }));',
+    'object-wrapped GridData cardinality is not complete GridData value flow',
+  ],
+  [
+    'return sheets.flatMap((sheet) => `${sheet.data.length}`);',
+    'rendered GridData cardinality is not complete GridData value flow',
+  ],
+] as const) {
+  assertLoaderMappingRejected(
+    validLoaderSource.replace(
+      'return sheets.flatMap((sheet) => sheet.data ?? []);',
+      replacement,
+    ),
+    label,
+  );
+}
+for (const [mutation, label] of [
+  [
+    '(response.data.sheets as any).flatMap = () => [];',
+    'response-array flatMap monkeypatching cannot bypass the pinned callback',
+  ],
+  [
+    '(Array.prototype as any).flatMap = () => [];',
+    'Array.prototype flatMap monkeypatching cannot bypass the pinned callback',
+  ],
+] as const) {
+  assert.throws(
+    () =>
+      deriveP9ApplicationReadRuntimeBinding({
+        runtimeCommit,
+        sourceBytes: {
+          runtimeBindingModule: validRuntimeBindingModuleSource,
+          loader: validLoaderSource.replace(
+            '  const scholarships = mapP9Scholarships(response.data.sheets ?? []);',
+            `  ${mutation}\n  const scholarships = mapP9Scholarships(response.data.sheets ?? []);`,
+          ),
+          healthRoute: validHealthRouteSource,
+          publicRoute: validPublicRouteSource,
+        },
+      }),
+    /loader statement sequence differs from the side-effect-free closure/,
+    label,
+  );
+}
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'function mapP9Scholarships(sheets: any[]): unknown[] {',
+    'async function mapP9Scholarships(sheets: any[]): Promise<unknown[]> {',
+  ),
+  'an async mapper cannot substitute an unawaited Promise for GridData',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'function mapP9Scholarships(sheets: any[]): unknown[] {',
+    'function* mapP9Scholarships(sheets: any[]): Generator<unknown[]> {',
+  ),
+  'a generator mapper cannot substitute an iterator for GridData',
+);
+assertLoaderMappingRejected(
+  validLoaderSource.replace(
+    'return sheets.flatMap((sheet) => sheet.data ?? []);',
+    'return sheets.flatMap(async (sheet) => sheet.data ?? []);',
+  ),
+  'an async flatMap callback cannot substitute promises for GridData',
+);
 const applicationRuntimeBinding = deriveP9ApplicationReadRuntimeBinding({
   runtimeCommit,
   sourceBytes: {
+    runtimeBindingModule: validRuntimeBindingModuleSource,
     loader: validLoaderSource,
     healthRoute: validHealthRouteSource,
     publicRoute: validPublicRouteSource,
   },
 });
+assert.throws(
+  () =>
+    deriveP9ApplicationReadRuntimeBinding({
+      runtimeCommit,
+      sourceBytes: {
+        runtimeBindingModule: [
+          '(Array.prototype as any).flatMap = () => [];',
+          'export const applicationRuntimeBinding = {} as const;',
+        ].join('\n'),
+        loader: validLoaderSource,
+        healthRoute: validHealthRouteSource,
+        publicRoute: validPublicRouteSource,
+      },
+    }),
+  /runtime binding module is not one direct const export/,
+  'the imported runtime binding module cannot execute a mapper monkeypatch',
+);
+const runtimeClosureFixtureRoot = fs.mkdtempSync(
+  path.join(os.tmpdir(), 'p9-runtime-closure-'),
+);
+try {
+  for (const [relativePath, source] of [
+    [P9_APPLICATION_RUNTIME_BINDING_MODULE_PATH, validRuntimeBindingModuleSource],
+    [P9_PRODUCTION_SOURCE_LOADER_PATH, validLoaderSource],
+    [P9_HEALTH_ROUTE_PATH, validHealthRouteSource],
+    [P9_PUBLIC_ROUTE_PATH, validPublicRouteSource],
+  ] as const) {
+    const absolutePath = path.join(runtimeClosureFixtureRoot, relativePath);
+    fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+    fs.writeFileSync(absolutePath, source);
+  }
+  for (const [source, label] of [
+    [
+      '(Array.prototype as any).flatMap = () => [];',
+      'a direct built-in prototype write',
+    ],
+    [
+      'const prototypeAlias = Array.prototype; prototypeAlias.flatMap = () => [];',
+      'a built-in prototype alias write',
+    ],
+    [
+      "const prototypeAlias = Array.prototype; Reflect.set(prototypeAlias, 'flatMap', () => []);",
+      'a reflective built-in prototype alias write',
+    ],
+    [
+      'let prototypeAlias = Array.prototype; prototypeAlias.flatMap = () => [];',
+      'a stable let built-in prototype alias write',
+    ],
+    [
+      'const { prototype: prototypeAlias } = Array; prototypeAlias.flatMap = () => [];',
+      'a destructured built-in prototype alias write',
+    ],
+    [
+      'const assign = Object.assign; assign(Array.prototype, { flatMap: () => [] });',
+      'an aliased prototype mutation function',
+    ],
+    [
+      'const prototypeAlias = Object.getPrototypeOf([]); prototypeAlias.flatMap = () => [];',
+      'a call-derived built-in prototype alias write',
+    ],
+    [
+      'const prototypeAlias = ([] as any).__proto__; prototypeAlias.flatMap = () => [];',
+      'a __proto__-derived built-in prototype alias write',
+    ],
+    [
+      'Reflect.apply(Object.assign, Object, [Array.prototype, { flatMap: () => [] }]);',
+      'an applied built-in prototype mutation function',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(runtimeClosureFixtureRoot, 'web/instrumentation.ts'),
+      source,
+    );
+    assert.throws(
+      () =>
+        deriveP9ApplicationReadRuntimeBinding({
+          runtimeCommit,
+          repositoryRoot: runtimeClosureFixtureRoot,
+        }),
+      /runtime source mutates a built-in prototype: web\/instrumentation\.ts/,
+      `${label} cannot alter mapper intrinsics`,
+    );
+  }
+  for (const [source, label] of [
+    [
+      "eval('Array.prototype.flatMap = () => []')",
+      'eval-based prototype mutation',
+    ],
+    [
+      "Function('Array.prototype.flatMap = () => []')()",
+      'Function-constructor prototype mutation',
+    ],
+    [
+      "const Maker = (() => {}).constructor; Maker('Array.prototype.flatMap = () => []')();",
+      'function-object constructor prototype mutation',
+    ],
+    [
+      "Reflect.apply(Function, null, ['Array.prototype.flatMap = () => []'])();",
+      'reflectively applied Function constructor mutation',
+    ],
+    [
+      "import vm from 'node:vm'; vm.runInThisContext('Array.prototype.flatMap = () => []');",
+      'node vm prototype mutation',
+    ],
+    [
+      "import('data:text/javascript;base64,QXJyYXkucHJvdG90eXBlLmZsYX...')",
+      'data URL dynamic import mutation',
+    ],
+    [
+      "import * as childProcess from 'node:child_process'; childProcess.exec('node -e \\\"Array.prototype.flatMap = () => []\\\"');",
+      'child-process execution mutation',
+    ],
+    [
+      "import * as childProcess from 'node:child_process'; const command = 'node'; childProcess.spawn(command, ['-e', 'Array.prototype.flatMap = () => []']);",
+      'child-process dynamic spawn mutation',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; Reflect.apply(spawn, null, ['node']);",
+      'reflectively applied child-process spawn mutation',
+    ],
+    [
+      "export { spawn } from 'node:child_process';",
+      're-exported child-process spawn mutation capability',
+    ],
+    [
+      "export { spawn as run } from 'node:child_process';",
+      'aliased re-exported child-process spawn mutation capability',
+    ],
+    [
+      "export * from 'node:child_process';",
+      'star re-exported child-process mutation capability',
+    ],
+    [
+      "import { execFile } from 'node:child_process'; execFile('git', ['diff', '--ext-diff', 'HEAD^', 'HEAD']);",
+      'git external-diff execution mutation capability',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(runtimeClosureFixtureRoot, 'web/instrumentation.ts'),
+      source,
+    );
+    assert.throws(
+      () =>
+        deriveP9ApplicationReadRuntimeBinding({
+          runtimeCommit,
+          repositoryRoot: runtimeClosureFixtureRoot,
+        }),
+      /runtime source contains dynamic execution: web\/instrumentation\.ts/,
+      `${label} is rejected from the runtime closure`,
+    );
+  }
+  const prototypeExportPath = path.join(
+    runtimeClosureFixtureRoot,
+    'web/prototype-source.ts',
+  );
+  for (const [exportSource, consumerSource, label] of [
+    [
+      'export const prototypeAlias = Array.prototype;',
+      "import { prototypeAlias } from './prototype-source'; prototypeAlias.flatMap = () => [];",
+      'a direct exported prototype alias',
+    ],
+    [
+      'export const prototypeBox = { value: Array.prototype };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'an exported prototype container',
+    ],
+    [
+      'export function getPrototype() { return Array.prototype; }',
+      "import { getPrototype } from './prototype-source'; getPrototype().flatMap = () => [];",
+      'an exported prototype-returning function',
+    ],
+    [
+      'const prototypeAlias = Array.prototype; export { prototypeAlias };',
+      "import { prototypeAlias } from './prototype-source'; prototypeAlias.flatMap = () => [];",
+      'a named local prototype export',
+    ],
+    [
+      'export class PrototypeBox { static value = Array.prototype; }',
+      "import { PrototypeBox } from './prototype-source'; PrototypeBox.value.flatMap = () => [];",
+      'an exported class prototype field',
+    ],
+    [
+      'const prototypeBox = { value: Array.prototype }; export { prototypeBox };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'a named exported prototype container',
+    ],
+    [
+      'const prototypeBox: any = {}; prototypeBox.value = Array.prototype; export { prototypeBox };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'a post-initialization exported prototype container',
+    ],
+    [
+      'const prototypeBox: any = {}; Object.assign(prototypeBox, { value: Array.prototype }); export { prototypeBox };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'an Object.assign-mutated exported prototype container',
+    ],
+    [
+      "const prototypeBox: any = {}; Reflect.set(prototypeBox, 'value', Array.prototype); export { prototypeBox };",
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'a Reflect.set-mutated exported prototype container',
+    ],
+    [
+      'const prototypeBox: any = {}; function selectedBox() { return prototypeBox; } Object.assign(selectedBox(), { value: Array.prototype }); export { prototypeBox };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'an Object.assign-mutated call-selected prototype container',
+    ],
+    [
+      "const prototypeBox: any = {}; function selectedBox() { return prototypeBox; } Reflect.set(selectedBox(), 'value', Array.prototype); export { prototypeBox };",
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'a Reflect.set-mutated call-selected prototype container',
+    ],
+    [
+      'const prototypeBox: any = {}; function selectedBox() { return prototypeBox; } const pick = selectedBox; Object.assign(pick(), { value: Array.prototype }); export { prototypeBox };',
+      "import { prototypeBox } from './prototype-source'; prototypeBox.value.flatMap = () => [];",
+      'an aliased call-selected prototype container',
+    ],
+    [
+      'export class PrototypeBox { static value: any; static { this.value = Array.prototype; } }',
+      "import { PrototypeBox } from './prototype-source'; PrototypeBox.value.flatMap = () => [];",
+      'an exported class static-block prototype container',
+    ],
+    [
+      'const getPrototype = () => Array.prototype; export function exportedPrototype() { return getPrototype(); }',
+      "import { exportedPrototype } from './prototype-source'; exportedPrototype().flatMap = () => [];",
+      'a wrapped prototype-returning export',
+    ],
+    [
+      'const prototypeAlias = Array.prototype; export = prototypeAlias;',
+      "import prototypeAlias = require('./prototype-source'); prototypeAlias.flatMap = () => [];",
+      'an export-equals/import-equals prototype alias',
+    ],
+  ] as const) {
+    fs.writeFileSync(prototypeExportPath, `${exportSource}\n`);
+    fs.writeFileSync(
+      path.join(runtimeClosureFixtureRoot, 'web/instrumentation.ts'),
+      consumerSource,
+    );
+    assert.throws(
+      () =>
+        deriveP9ApplicationReadRuntimeBinding({
+          runtimeCommit,
+          repositoryRoot: runtimeClosureFixtureRoot,
+        }),
+      /runtime source mutates a built-in prototype: web\/(?:instrumentation|prototype-source)\.ts/,
+      `${label} cannot mutate mapper intrinsics across modules`,
+    );
+  }
+} finally {
+  fs.rmSync(runtimeClosureFixtureRoot, { recursive: true, force: true });
+}
 const expectedWriteSurfaceInventory: P9WriteSurfaceInventory =
   P9_REQUIRED_WRITE_SURFACES.map((surface) => ({
     ...surface,
@@ -1711,6 +2114,20 @@ try {
     'runtime-capable test names and web-root files are never filename-excluded',
   );
 
+  const symlinkTarget = path.join(inventoryFixtureRoot, 'symlink-writer-target.ts');
+  const symlinkPath = path.join(
+    inventoryFixtureRoot,
+    'web/src/symlinked-writer.ts',
+  );
+  fs.writeFileSync(symlinkTarget, validSurfaceSource());
+  fs.symlinkSync(symlinkTarget, symlinkPath);
+  assert.throws(
+    () => deriveP9WriteSurfaceInventory(inventoryFixtureRoot),
+    /P9 writer inventory rejected symbolic link: web\/src\/symlinked-writer\.ts/,
+    'a symlinked runtime writer fails closed instead of disappearing from inventory',
+  );
+  fs.unlinkSync(symlinkPath);
+
   fs.writeFileSync(
     path.join(inventoryFixtureRoot, fifthSurface.path),
     [
@@ -1944,6 +2361,1333 @@ try {
   fs.writeFileSync(
     path.join(inventoryFixtureRoot, fifthSurface.path),
     [
+      'export async function reflectApplyFetchBypass(id: string) {',
+      '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+      "  return Reflect.apply(fetch, null, [endpoint, { method: 'POST' }]);",
+      '}',
+    ].join('\n'),
+  );
+  const reflectApplyFetchBypass = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    reflectApplyFetchBypass?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'Reflect.apply cannot hide a raw Sheets REST writer',
+  );
+  assert.equal(
+    reflectApplyFetchBypass?.guardedBeforeClientConstruction,
+    false,
+    'indirect raw REST writers remain forbidden',
+  );
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      'export async function detachedFetchBypass(id: string) {',
+      '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+      "  return (0, fetch)(endpoint, { method: 'POST' });",
+      '}',
+    ].join('\n'),
+  );
+  const detachedFetchBypass = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    detachedFetchBypass?.mutators.includes('raw-rest-google-sheets-write'),
+    'a detached comma-expression fetch remains visible to writer discovery',
+  );
+  assert.equal(detachedFetchBypass?.guardedBeforeClientConstruction, false);
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      'export async function reflectedDetachedFetchBypass(id: string) {',
+      '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+      "  return Reflect.apply((0, fetch), null, [endpoint, { method: 'POST' }]);",
+      '}',
+    ].join('\n'),
+  );
+  const reflectedDetachedFetchBypass = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    reflectedDetachedFetchBypass?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'Reflect.apply cannot hide a detached comma-expression fetch',
+  );
+  assert.equal(
+    reflectedDetachedFetchBypass?.guardedBeforeClientConstruction,
+    false,
+  );
+
+  for (const [callExpression, label] of [
+    [
+      "(true ? fetch : fetch)(endpoint, { method: 'POST' })",
+      'conditional fetch',
+    ],
+    [
+      "(globalThis.fetch || fetch)(endpoint, { method: 'POST' })",
+      'logical fetch',
+    ],
+    [
+      "Reflect.apply(true ? fetch : fetch, null, [endpoint, { method: 'POST' }])",
+      'reflected conditional fetch',
+    ],
+    [
+      "[fetch][0](endpoint, { method: 'POST' })",
+      'unfamiliar callable syntax with an exact Sheets target',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        `export async function conditionalWriter(id: string) {`,
+        '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+        `  return ${callExpression};`,
+        '}',
+      ].join('\n'),
+    );
+    const conditionalWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      conditionalWriter?.mutators.includes('raw-rest-google-sheets-write'),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(conditionalWriter?.guardedBeforeClientConstruction, false);
+  }
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      'const transport = true ? fetch : fetch;',
+      'export async function aliasedConditionalWriter(id: string) {',
+      '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+      "  return transport(endpoint, { method: 'POST' });",
+      '}',
+    ].join('\n'),
+  );
+  const aliasedConditionalWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    aliasedConditionalWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'a conditional network alias remains visible to writer discovery',
+  );
+  assert.equal(aliasedConditionalWriter?.guardedBeforeClientConstruction, false);
+
+  for (const [containerSource, label] of [
+    [
+      [
+        "const request = { transport: fetch, url: endpoint, options: { method: 'POST' } };",
+        'return request.transport(request.url, request.options);',
+      ],
+      'object request container',
+    ],
+    [
+      [
+        "const request = [fetch, endpoint, { method: 'POST' }] as const;",
+        'return request[0](request[1], request[2]);',
+      ],
+      'array request container',
+    ],
+    [
+      [
+        "const request = new Map<string, unknown>([['transport', fetch], ['url', endpoint], ['options', { method: 'POST' }]]);",
+        "return (request.get('transport') as typeof fetch)(request.get('url') as string, request.get('options') as RequestInit);",
+      ],
+      'Map request container',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export async function aggregateWriter(id: string) {',
+        '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+        ...containerSource.map((line) => `  ${line}`),
+        '}',
+      ].join('\n'),
+    );
+    const aggregateWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      aggregateWriter?.mutators.includes('raw-rest-google-sheets-write'),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(aggregateWriter?.guardedBeforeClientConstruction, false);
+  }
+
+  for (const [containerSource, label] of [
+    [
+      "const request = { transport: (globalThis as any)['f' + 'etch'], url: endpoint, options: { method: 'POST' } };",
+      'computed fetch capability',
+    ],
+    [
+      "const request = { transport: fetch, url: endpoint, options: { method: ['P', 'OST'].join('') } };",
+      'computed write method',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export async function computedAggregateWriter(id: string) {',
+        '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+        `  ${containerSource}`,
+        '  return request.transport(request.url, request.options);',
+        '}',
+      ].join('\n'),
+    );
+    const computedAggregateWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      computedAggregateWriter?.mutators.includes(
+        'raw-rest-google-sheets-write',
+      ),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(computedAggregateWriter?.guardedBeforeClientConstruction, false);
+  }
+
+  for (const [endpointSource, methodSource, label] of [
+    [
+      '`https://sheets.googleapis.com/v4/spreadsheets/${id}/values/A1`',
+      "'P'.concat('UT')",
+      'computed values-update writer',
+    ],
+    [
+      "`https://sheets.googleapis.com/v4/spreadsheets/${id}` + String.fromCharCode(58, 98, 97, 116, 99, 104, 85, 112, 100, 97, 116, 101)",
+      "'P'.concat('OST')",
+      'computed batch-update writer',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export async function computedCharacterWriter(id: string) {',
+        `  const endpoint = ${endpointSource};`,
+        '  const request = {',
+        '    transport: (globalThis as any)[String.fromCharCode(102, 101, 116, 99, 104)],',
+        '    url: endpoint,',
+        `    options: { method: ${methodSource} },`,
+        '  };',
+        '  return request.transport(request.url, request.options);',
+        '}',
+      ].join('\n'),
+    );
+    const computedCharacterWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      computedCharacterWriter?.mutators.some((mutator) =>
+        [
+          'raw-rest-google-sheets-write',
+          'generic-network-write-unknown-target',
+        ].includes(mutator),
+      ),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(
+      computedCharacterWriter?.guardedBeforeClientConstruction,
+      false,
+    );
+  }
+
+  for (const [transportSource, label] of [
+    ["Reflect.get(globalThis, 'fetch')", 'Reflect.get global fetch'],
+    [
+      "Object.getOwnPropertyDescriptor(globalThis, 'fetch')!.value",
+      'global fetch property descriptor',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export async function reflectiveGlobalWriter(id: string) {',
+        '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/A1`;',
+        `  const request = { transport: ${transportSource}, url: endpoint, options: { method: 'PUT' } };`,
+        '  return request.transport(request.url, request.options);',
+        '}',
+      ].join('\n'),
+    );
+    const reflectiveGlobalWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      reflectiveGlobalWriter?.mutators.includes(
+        'generic-network-write-unknown-target',
+      ),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(reflectiveGlobalWriter?.guardedBeforeClientConstruction, false);
+  }
+
+  for (const [transportSource, label] of [
+    [
+      "Reflect.apply(Reflect.get, Reflect, [globalThis, 'fetch'])",
+      'nested reflective global retrieval',
+    ],
+    [
+      "Reflect.get.bind(Reflect)(globalThis, 'fetch')",
+      'bound reflective global retrieval',
+    ],
+    [
+      "Reflect.get.call(Reflect, globalThis, 'fetch')",
+      'call-applied reflective global retrieval',
+    ],
+    [
+      "Reflect.get.apply(Reflect, [globalThis, 'fetch'])",
+      'apply-applied reflective global retrieval',
+    ],
+    [
+      "Reflect.get.bind(Reflect, globalThis)('fetch')",
+      'partially bound reflective global retrieval',
+    ],
+    [
+      "(() => { const member = 'get'; return Reflect[member](globalThis, 'fetch'); })()",
+      'computed reflective getter alias',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export async function nestedReflectiveWriter(id: string) {',
+        '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}/values/A1`;',
+        `  const request = { transport: ${transportSource}, url: endpoint, options: { method: 'PUT' } };`,
+        '  return request.transport(request.url, request.options);',
+        '}',
+      ].join('\n'),
+    );
+    const nestedReflectiveWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      nestedReflectiveWriter?.mutators.includes(
+        'generic-network-write-unknown-target',
+      ),
+      `${label} remains visible to writer discovery`,
+    );
+    assert.equal(nestedReflectiveWriter?.guardedBeforeClientConstruction, false);
+  }
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      'export async function functionApplyFetchBypass(id: string) {',
+      '  const endpoint = `https://sheets.googleapis.com/v4/spreadsheets/${id}:batchUpdate`;',
+      "  return fetch.apply(null, [endpoint, { method: 'POST' }]);",
+      '}',
+    ].join('\n'),
+  );
+  const functionApplyFetchBypass = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    functionApplyFetchBypass?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'Function.prototype.apply cannot hide a raw Sheets REST writer',
+  );
+  assert.equal(functionApplyFetchBypass?.guardedBeforeClientConstruction, false);
+
+  const capabilityModulePath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'cross-module-capability.ts',
+  );
+  const targetModulePath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'cross-module-target.ts',
+  );
+  const optionsModulePath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'cross-module-options.ts',
+  );
+  fs.writeFileSync(capabilityModulePath, 'export const transport = fetch;\n');
+  fs.writeFileSync(
+    targetModulePath,
+    "export const endpoint = 'https://sheets.googleapis.com/v4/spreadsheets/example/values/A1';\n",
+  );
+  fs.writeFileSync(
+    optionsModulePath,
+    "export const options = { method: 'PUT' };\n",
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { transport } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function crossModuleWriter() {',
+      '  return transport(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const crossModuleWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    crossModuleWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'a capability, Sheets target, and write method split across modules fail closed at the call site',
+  );
+  assert.equal(crossModuleWriter?.guardedBeforeClientConstruction, false);
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { transport } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'const send = transport;',
+      'export async function aliasedCrossModuleWriter() {',
+      '  return send(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const aliasedCrossModuleWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    aliasedCrossModuleWriter?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'a local alias cannot erase an imported network capability',
+  );
+  const barrelModulePath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'cross-module-barrel.ts',
+  );
+  fs.writeFileSync(
+    barrelModulePath,
+    [
+      "export { transport } from './cross-module-capability';",
+      "export { endpoint } from './cross-module-target';",
+      "export { options } from './cross-module-options';",
+    ].join('\n'),
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import * as requestParts from './cross-module-barrel';",
+      'export async function barrelCrossModuleWriter() {',
+      '  return requestParts.transport(requestParts.endpoint, requestParts.options);',
+      '}',
+    ].join('\n'),
+  );
+  const barrelCrossModuleWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    barrelCrossModuleWriter?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'barrel re-exports and namespace imports cannot erase a composed writer',
+  );
+  fs.writeFileSync(
+    capabilityModulePath,
+    'export function getTransport() { return fetch; }\n',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { getTransport } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function callableExportWriter() {',
+      '  return getTransport()(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const callableExportWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    callableExportWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'a function-returned exported capability remains visible at its consumer',
+  );
+  fs.writeFileSync(
+    capabilityModulePath,
+    'export const box = { transport: fetch };\n',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { box } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function containerExportWriter() {',
+      '  return box.transport(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const containerExportWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    containerExportWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'a capability nested in an exported container remains visible at its consumer',
+  );
+  fs.writeFileSync(
+    capabilityModulePath,
+    'const local = () => fetch; export function getTransport() { return local(); }\n',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { getTransport } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function wrappedCallableExportWriter() {',
+      '  return getTransport()(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const wrappedCallableExportWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    wrappedCallableExportWriter?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'a local callable wrapper cannot erase an exported network capability',
+  );
+  fs.writeFileSync(
+    capabilityModulePath,
+    'export class TransportBox { static transport() { return fetch; } }\n',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { TransportBox } from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function classExportWriter() {',
+      '  return TransportBox.transport()(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const classExportWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    classExportWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'an exported class method cannot erase a returned network capability',
+  );
+  for (const [capabilitySource, importName, invocation, label] of [
+    [
+      'export function getTransport() { return local(); } const local = () => fetch;',
+      'getTransport',
+      'getTransport()(endpoint, options)',
+      'a later-declared local wrapper',
+    ],
+    [
+      'function local() { return fetch; } export function getTransport() { return local(); }',
+      'getTransport',
+      'getTransport()(endpoint, options)',
+      'a local function wrapper',
+    ],
+    [
+      'export class TransportBox { static transport = fetch; }',
+      'TransportBox',
+      'TransportBox.transport(endpoint, options)',
+      'an exported class capability field',
+    ],
+    [
+      'export class TransportBox { static get transport() { return fetch; } }',
+      'TransportBox',
+      'TransportBox.transport(endpoint, options)',
+      'an exported class capability getter',
+    ],
+    [
+      'const box: any = {}; box.transport = fetch; export { box };',
+      'box',
+      'box.transport(endpoint, options)',
+      'a post-initialization exported capability container',
+    ],
+    [
+      'const box: any = {}; Object.assign(box, { transport: fetch }); export { box };',
+      'box',
+      'box.transport(endpoint, options)',
+      'an Object.assign-mutated exported capability container',
+    ],
+    [
+      "const box: any = {}; Reflect.set(box, 'transport', fetch); export { box };",
+      'box',
+      'box.transport(endpoint, options)',
+      'a Reflect.set-mutated exported capability container',
+    ],
+    [
+      'const box: any = {}; function selectedBox() { return box; } Object.assign(selectedBox(), { transport: fetch }); export { box };',
+      'box',
+      'box.transport(endpoint, options)',
+      'an Object.assign-mutated call-selected capability container',
+    ],
+    [
+      "const box: any = {}; function selectedBox() { return box; } Reflect.set(selectedBox(), 'transport', fetch); export { box };",
+      'box',
+      'box.transport(endpoint, options)',
+      'a Reflect.set-mutated call-selected capability container',
+    ],
+    [
+      'const box: any = {}; function selectedBox() { return box; } const pick = selectedBox; Object.assign(pick(), { transport: fetch }); export { box };',
+      'box',
+      'box.transport(endpoint, options)',
+      'an aliased call-selected capability container',
+    ],
+    [
+      'const box: any = {}; const getTransport = () => fetch; Object.assign(box, { transport: getTransport() }); export { box };',
+      'box',
+      'box.transport(endpoint, options)',
+      'a mutation value returned by a local capability wrapper',
+    ],
+    [
+      'export class TransportBox { static transport: typeof fetch; static { this.transport = fetch; } }',
+      'TransportBox',
+      'TransportBox.transport(endpoint, options)',
+      'an exported class static-block capability',
+    ],
+  ] as const) {
+    fs.writeFileSync(capabilityModulePath, `${capabilitySource}\n`);
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        `import { ${importName} } from './cross-module-capability';`,
+        "import { endpoint } from './cross-module-target';",
+        "import { options } from './cross-module-options';",
+        'export async function extendedExportWriter() {',
+        `  return ${invocation};`,
+        '}',
+      ].join('\n'),
+    );
+    const extendedExportWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      extendedExportWriter?.mutators.includes(
+        'raw-rest-google-sheets-write',
+      ),
+      `${label} remains visible at its consumer`,
+    );
+  }
+  fs.writeFileSync(
+    capabilityModulePath,
+    'export default class { static get transport() { return fetch; } }\n',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import TransportBox from './cross-module-capability';",
+      "import { endpoint } from './cross-module-target';",
+      "import { options } from './cross-module-options';",
+      'export async function defaultClassAccessorWriter() {',
+      '  return TransportBox.transport(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const defaultClassAccessorWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    defaultClassAccessorWriter?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'a default exported class getter remains visible at its consumer',
+  );
+  fs.writeFileSync(
+    capabilityModulePath,
+    'const transport = fetch; export = transport;\n',
+  );
+  fs.writeFileSync(
+    targetModulePath,
+    "const endpoint = 'https://sheets.googleapis.com/v4/spreadsheets/example/values/A1'; export = endpoint;\n",
+  );
+  fs.writeFileSync(
+    optionsModulePath,
+    "const options = { method: 'PUT' }; export = options;\n",
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import transport = require('./cross-module-capability');",
+      "import endpoint = require('./cross-module-target');",
+      "import options = require('./cross-module-options');",
+      'export async function importEqualsCrossModuleWriter() {',
+      '  return transport(endpoint, options);',
+      '}',
+    ].join('\n'),
+  );
+  const importEqualsCrossModuleWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    importEqualsCrossModuleWriter?.mutators.includes(
+      'raw-rest-google-sheets-write',
+    ),
+    'export-equals and import-equals cannot erase split writer facts',
+  );
+  fs.unlinkSync(capabilityModulePath);
+  fs.unlinkSync(targetModulePath);
+  fs.unlinkSync(optionsModulePath);
+  fs.unlinkSync(barrelModulePath);
+
+  const hiddenBuildWriterPath = path.join(
+    inventoryFixtureRoot,
+    'web/src/build/hidden.ts',
+  );
+  fs.mkdirSync(path.dirname(hiddenBuildWriterPath), { recursive: true });
+  fs.writeFileSync(
+    hiddenBuildWriterPath,
+    [
+      'export async function hiddenBuildWriter() {',
+      "  return fetch('https://sheets.googleapis.com/v4/spreadsheets/example/values/A1', { method: 'PUT' });",
+      '}',
+    ].join('\n'),
+  );
+  const hiddenBuildWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === 'web/src/build/hidden.ts');
+  assert.ok(
+    hiddenBuildWriter?.mutators.includes('raw-rest-google-sheets-write'),
+    'a runtime writer under a build-named source directory remains in inventory',
+  );
+  assert.equal(hiddenBuildWriter?.guardedBeforeClientConstruction, false);
+  fs.unlinkSync(hiddenBuildWriterPath);
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      'export function dynamicallyDecodedWriter() {',
+      "  const source = Buffer.from('ZmV0Y2goJ2h0dHBzOi8vc2hlZXRzLmdvb2dsZWFwaXMuY29tL3Y0L3NwcmVhZHNoZWV0cy9leGFtcGxlL3ZhbHVlcy9BMScsIHsgbWV0aG9kOiAnUFVUJyB9KQ==', 'base64').toString();",
+      '  return eval(source);',
+      '}',
+    ].join('\n'),
+  );
+  const dynamicallyDecodedWriter = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    dynamicallyDecodedWriter?.mutators.includes(
+      'generic-network-write-unknown-target',
+    ),
+    'dynamic execution is a fail-closed writer capability even when source text is encoded',
+  );
+  assert.equal(
+    dynamicallyDecodedWriter?.guardedBeforeClientConstruction,
+    false,
+  );
+
+  for (const [executionSource, label] of [
+    [
+      "const Maker = (() => {}).constructor; return Maker(source)();",
+      'function-object constructor',
+    ],
+    [
+      'return Reflect.apply(Function, null, [source])();',
+      'reflectively applied Function constructor',
+    ],
+    [
+      "const vm = require('node:vm'); return vm.runInThisContext(source);",
+      'node vm execution',
+    ],
+    [
+      "return import('data:text/javascript;base64,ZmV0Y2goJ2h0dHBzOi8vc2hlZXRzLmdvb2dsZWFwaXMuY29tJyk=');",
+      'data URL dynamic import',
+    ],
+    [
+      "const childProcess = require('node:child_process'); return childProcess.exec(source);",
+      'child-process shell execution',
+    ],
+    [
+      "const childProcess = require('node:child_process'); return childProcess.spawn(source);",
+      'child-process dynamic spawn execution',
+    ],
+    [
+      "const childProcess = require('node:child_process'); return childProcess.spawn('npx', ['tsx', '-e', source]);",
+      'child-process npx spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); return Reflect.apply(spawn, null, [source]);",
+      'reflectively applied child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); return spawn.apply(null, [source]);",
+      'applied child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); return spawn.bind(null)(source);",
+      'bound child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); function getRun() { return spawn; } return getRun()(source);",
+      'locally returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); function getRun() { return (spawn); } return getRun()(source);",
+      'parenthesized locally returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); function getRun() { return true ? spawn : spawn; } return getRun()(source);",
+      'conditional locally returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); return (() => { function getRun() { return spawn; } return getRun(); })()(source);",
+      'nested-IIFE locally returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); return ({ getRun() { return spawn; } }).getRun()(source);",
+      'object-method returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = { run: spawn }; return box.run(source);",
+      'named object-contained child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = { getRun() { return spawn; } }; return box.getRun()(source);",
+      'named object-method returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); class Box { static run = spawn; } return Box.run(source);",
+      'class-field-contained child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); class Box { static getRun() { return spawn; } } return Box.getRun()(source);",
+      'class-method returned child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = [spawn]; return box[0](source);",
+      'array-contained child-process spawn execution',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = { run: spawn }; const { run } = box; return run(source);",
+      'destructured child-process spawn execution',
+    ],
+    [
+      "const { execFile } = require('node:child_process'); return execFile('git', ['-c', source, 'x']);",
+      'unrestricted git execFile execution',
+    ],
+    [
+      "const { execFile } = require('node:child_process'); return execFile('git', ['diff', '--ext-diff', 'HEAD^', 'HEAD']);",
+      'git external-diff execFile execution',
+    ],
+    [
+      "const { execFile } = require('node:child_process'); return execFile('git', ['show', '--ext-diff', 'HEAD']);",
+      'git show external-diff execFile execution',
+    ],
+    [
+      "const { execFile } = require('node:child_process'); return execFile('git', ['show', 'HEAD:file;node -e process.exit(0)'], { shell: true });",
+      'git execFile shell-option execution',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      [
+        'export function alternateDynamicWriter() {',
+        "  const source = Buffer.from('ZmV0Y2goJ2h0dHBzOi8vc2hlZXRzLmdvb2dsZWFwaXMuY29tL3Y0L3NwcmVhZHNoZWV0cy9leGFtcGxlL3ZhbHVlcy9BMScsIHsgbWV0aG9kOiAnUFVUJyB9KQ==', 'base64').toString();",
+        `  ${executionSource}`,
+        '}',
+      ].join('\n'),
+    );
+    const alternateDynamicWriter = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      alternateDynamicWriter?.mutators.includes(
+        'generic-network-write-unknown-target',
+      ),
+      `${label} is inventoried as an unknown writer capability`,
+    );
+    assert.equal(
+      alternateDynamicWriter?.guardedBeforeClientConstruction,
+      false,
+    );
+  }
+
+  for (const [topLevelSource, label] of [
+    [
+      "import { spawn } from 'node:child_process'; const box = [spawn]; box[0]('node'); export const loaded = true;",
+      'top-level numeric array process access',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const key = 'run'; const box = { run: spawn }; box[key]('node'); export const loaded = true;",
+      'top-level computed process-container access',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box = { api: { run: spawn } }; box.api.run('node'); export const loaded = true;",
+      'top-level nested process-container access',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box = [[spawn]]; box[0][0]('node'); export const loaded = true;",
+      'top-level nested-array process access',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; function invoke(run: typeof spawn) { return run('node'); } invoke(spawn); export const loaded = true;",
+      'top-level process launcher passed through a call argument',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; function identity(run: typeof spawn) { return run; } identity(spawn)('node'); export const loaded = true;",
+      'top-level process launcher returned through a call argument',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box: { run?: typeof spawn } = {}; box.run = spawn; box.run('node'); export const loaded = true;",
+      'top-level post-initialization process property assignment',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box: Record<string, unknown> = {}; Object.assign(box, { run: spawn }); export const loaded = true;",
+      'top-level Object.assign process capability escape',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box: Record<string, unknown> = {}; Reflect.set(box, 'run', spawn); export const loaded = true;",
+      'top-level Reflect.set process capability escape',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; const box: unknown[] = []; box.push(spawn); export const loaded = true;",
+      'top-level array process capability escape',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; class Invoke { constructor(run: typeof spawn) { run('node'); } } new Invoke(spawn); export const loaded = true;",
+      'top-level constructor process capability escape',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; function invoke(_strings: TemplateStringsArray, run: typeof spawn) { return run('node'); } invoke`${spawn}`; export const loaded = true;",
+      'top-level tagged-template process capability escape',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; function* getRuns() { yield spawn; } getRuns().next().value('node'); export const loaded = true;",
+      'top-level generator-yielded process capability execution',
+    ],
+    [
+      "import { Worker } from 'node:worker_threads'; const payload = 'data:text/javascript,fetch(\"https://sheets.googleapis.com/v4/spreadsheets/x/values/A1\",{method:\"PUT\"})'; new Worker(new URL(payload)); export const loaded = true;",
+      'top-level worker-thread data-URL execution',
+    ],
+    [
+      "import cluster from 'node:cluster'; if (cluster.isPrimary) cluster.fork(); export const loaded = true;",
+      'top-level cluster process execution',
+    ],
+    [
+      "process.binding('spawn_sync').spawn({}); export const loaded = true;",
+      'top-level internal process binding execution',
+    ],
+    [
+      "import Module from 'node:module'; new Module('x')._compile('fetch(\"https://sheets.googleapis.com\",{method:\"PUT\"})', 'x.cjs'); export const loaded = true;",
+      'top-level Node module compilation',
+    ],
+    [
+      "import inspector from 'node:inspector'; const session = new inspector.Session(); session.connect(); session.post('Runtime.evaluate', { expression: 'fetch(\"https://sheets.googleapis.com\",{method:\"PUT\"})' }); export const loaded = true;",
+      'top-level inspector runtime evaluation',
+    ],
+    [
+      "import * as cp from 'node:child_process'; cp[process.env.P9_METHOD!]('node'); export const loaded = true;",
+      'top-level dynamic child-process namespace member',
+    ],
+    [
+      "import * as cp from 'node:child_process'; const method = 'sp' + 'awn'; cp[method]('node'); export const loaded = true;",
+      'top-level computed child-process namespace member',
+    ],
+    [
+      "import * as wt from 'node:worker_threads'; new wt[process.env.P9_METHOD!]('data:text/javascript,0'); export const loaded = true;",
+      'top-level dynamic worker namespace member',
+    ],
+    [
+      "const { binding } = process; binding('spawn_sync').spawn({}); export const loaded = true;",
+      'top-level destructured process binding execution',
+    ],
+    [
+      "const proc = process; proc.binding('spawn_sync').spawn({}); export const loaded = true;",
+      'top-level aliased process binding execution',
+    ],
+    [
+      "const key = 'binding'; process[key]('spawn_sync').spawn({}); export const loaded = true;",
+      'top-level computed process binding execution',
+    ],
+    [
+      "const { _compile: compile } = module; compile('fetch(\"https://sheets.googleapis.com\",{method:\"PUT\"})', 'x.cjs'); export const loaded = true;",
+      'top-level destructured Node module compilation',
+    ],
+    [
+      "import { Session } from 'node:inspector/promises'; const session = new Session(); session.connect(); session.post('Runtime.evaluate', { expression: 'fetch(\"https://sheets.googleapis.com\",{method:\"PUT\"})' }); export const loaded = true;",
+      'top-level inspector promises runtime evaluation',
+    ],
+    [
+      "const addon = require('./writer.node'); addon.run(); export const loaded = true;",
+      'top-level native addon execution',
+    ],
+    [
+      "let run: (...args: unknown[]) => unknown; ({ [process.env.P9_METHOD!]: run } = require('node:child_process')); run('node'); export const loaded = true;",
+      'top-level assignment-destructured dynamic child-process member',
+    ],
+    [
+      "let Worker: new (source: string) => unknown; ({ [process.env.P9_METHOD!]: Worker } = require('node:worker_threads')); new Worker('data:text/javascript,0'); export const loaded = true;",
+      'top-level assignment-destructured dynamic Worker member',
+    ],
+    [
+      "process[process.env.P9_MEMBER!](process.env.P9_BINDING).spawn({}); export const loaded = true;",
+      'top-level dynamic process primitive selector',
+    ],
+    [
+      "let binding: (...args: unknown[]) => any; ({ binding } = process); binding('spawn_sync').spawn({}); export const loaded = true;",
+      'top-level assignment-destructured process binding',
+    ],
+    [
+      "let dlopen: (...args: unknown[]) => unknown; ({ dlopen } = process); dlopen(module, process.env.P9_ADDON); export const loaded = true;",
+      'top-level assignment-destructured process dlopen',
+    ],
+    [
+      "let compile: (...args: unknown[]) => unknown; ({ _compile: compile } = module); compile('fetch(\"https://sheets.googleapis.com\",{method:\"PUT\"})', 'x.cjs'); export const loaded = true;",
+      'top-level assignment-destructured Node module compiler',
+    ],
+    [
+      "const writer = require('./writer'); writer.run(); export const loaded = true;",
+      'top-level unresolved extensionless CommonJS execution boundary',
+    ],
+    [
+      "const writer = require('./writer.payload'); writer.run(); export const loaded = true;",
+      'top-level nonstandard-extension CommonJS execution boundary',
+    ],
+    [
+      "const writer = require('../../../scripts/writer.js'); writer.run(); export const loaded = true;",
+      'top-level outside-web CommonJS execution boundary',
+    ],
+    [
+      "const writer = require('/tmp/external-writer.js'); writer.run(); export const loaded = true;",
+      'top-level absolute CommonJS execution boundary',
+    ],
+    [
+      "const writer = require('opaque-writer'); writer.run(); export const loaded = true;",
+      'top-level undeclared-package CommonJS execution boundary',
+    ],
+    [
+      "import cp = require('node:child_process'); cp.spawn('node'); export const loaded = true;",
+      'top-level import-equals child-process execution',
+    ],
+    [
+      "import wt = require('node:worker_threads'); new wt.Worker('data:text/javascript,0'); export const loaded = true;",
+      'top-level import-equals Worker execution',
+    ],
+    [
+      "import writer = require('../../../scripts/writer'); writer(); export const loaded = true;",
+      'top-level import-equals outside-web execution boundary',
+    ],
+    [
+      "const api = require('tsx/esm/api'); api.tsImport('../../../scripts/writer.ts', __filename); export const loaded = true;",
+      'top-level declared loader-package execution boundary',
+    ],
+    [
+      "const writer = require('./writer.css'); writer.run(); export const loaded = true;",
+      'top-level CommonJS CSS execution boundary',
+    ],
+    [
+      "const writer = require('./writer.JSON'); writer.run(); export const loaded = true;",
+      'top-level uppercase CommonJS JSON execution boundary',
+    ],
+    [
+      "let primitive: (...args: unknown[]) => any; ({ [process.env.P9_MEMBER!]: primitive } = process); primitive(process.env.P9_BINDING).spawn({}); export const loaded = true;",
+      'top-level computed assignment-destructured Node primitive',
+    ],
+    [
+      "import writer from './writer.js?view=.json'; writer(); export const loaded = true;",
+      'top-level query-disguised ES module execution boundary',
+    ],
+    [
+      "const { [process.env.P9_MEMBER!]: primitive } = process; primitive(process.env.P9_BINDING).spawn({}); export const loaded = true;",
+      'top-level computed declaration-destructured Node primitive',
+    ],
+    [
+      "function invoke({ [process.env.P9_MEMBER!]: primitive }: any) { return primitive(process.env.P9_BINDING).spawn({}); } invoke(process); export const loaded = true;",
+      'top-level computed parameter-destructured Node primitive',
+    ],
+    [
+      "let primitive: (...args: unknown[]) => any; for ({ [process.env.P9_MEMBER!]: primitive } of [process]) { primitive(process.env.P9_BINDING); } export const loaded = true;",
+      'top-level for-of computed assignment-destructured Node primitive',
+    ],
+  ] as const) {
+    fs.writeFileSync(
+      path.join(inventoryFixtureRoot, fifthSurface.path),
+      `${topLevelSource}\n`,
+    );
+    const topLevelInventory = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    ).find((surface) => surface.path === fifthSurface.path);
+    assert.ok(
+      topLevelInventory?.mutators.includes(
+        'generic-network-write-unknown-target',
+      ),
+      `${label} is inventoried without relying on export facts`,
+    );
+  }
+
+  const processExportPath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'process-export.ts',
+  );
+  fs.writeFileSync(
+    processExportPath,
+    "export { spawn } from 'node:child_process';\n",
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
+      "import { spawn } from './process-export';",
+      'export function reexportedProcessWriter(source: string) {',
+      '  return spawn(source);',
+      '}',
+    ].join('\n'),
+  );
+  const reexportedProcessInventory = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  );
+  assert.ok(
+    reexportedProcessInventory.some(
+      (surface) =>
+        surface.path === path.posix.join(
+          path.posix.dirname(fifthSurface.path),
+          'process-export.ts',
+        ) &&
+        surface.mutators.includes('generic-network-write-unknown-target'),
+    ),
+    'a locally re-exported process launcher is inventoried at its export boundary',
+  );
+  for (const [processExportSource, label] of [
+    [
+      "export { spawn as run } from 'node:child_process';\n",
+      'an aliased process launcher re-export',
+    ],
+    [
+      "export * from 'node:child_process';\n",
+      'a star process launcher re-export',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; export const box = { run: spawn };\n",
+      'a process launcher nested in an exported container',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; export function getRun() { return spawn; }\n",
+      'a process launcher returned by an exported function',
+    ],
+    [
+      "import { spawn } from 'node:child_process'; export default function () { return spawn; }\n",
+      'a process launcher returned by an anonymous default function',
+    ],
+    [
+      "export * as processApi from 'node:child_process';\n",
+      'a namespace process launcher re-export',
+    ],
+  ] as const) {
+    fs.writeFileSync(processExportPath, processExportSource);
+    const processExportInventory = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    );
+    assert.ok(
+      processExportInventory.some(
+        (surface) =>
+          surface.path === path.posix.join(
+            path.posix.dirname(fifthSurface.path),
+            'process-export.ts',
+          ) &&
+          surface.mutators.includes('generic-network-write-unknown-target'),
+      ),
+      `${label} is inventoried at its export boundary`,
+    );
+  }
+  fs.unlinkSync(processExportPath);
+
+  const commonJsProcessExportPath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'process-capability.cjs',
+  );
+  const commonJsProcessConsumerPath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'process-consumer.cjs',
+  );
+  fs.writeFileSync(
+    commonJsProcessConsumerPath,
+    "const processApi = require('./process-capability.cjs'); processApi.run('node', ['-e', 'process.exit(0)']);\n",
+  );
+  for (const [commonJsSource, label] of [
+    [
+      "const { spawn } = require('node:child_process'); module.exports = { run: spawn };\n",
+      'a CommonJS process container export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); module.exports.run = spawn;\n",
+      'a CommonJS process member export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); Object.assign(module.exports, { run: spawn });\n",
+      'an Object.assign-mutated CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); Reflect.set(module.exports, 'run', spawn);\n",
+      'a Reflect.set-mutated CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = module.exports; out.run = spawn;\n",
+      'an aliased CommonJS member process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = exports; out.run = spawn;\n",
+      'an aliased exports member process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = module.exports; Object.assign(out, { run: spawn });\n",
+      'an Object.assign-mutated aliased CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = module.exports; Reflect.set(out, 'run', spawn);\n",
+      'a Reflect.set-mutated aliased CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); let out = module.exports; out.run = spawn;\n",
+      'a let-aliased CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); var out = module.exports; out.run = spawn;\n",
+      'a var-aliased CommonJS process export',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = (module.exports); out.run = spawn;\n",
+      'a parenthesized CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const { exports: out } = module; out.run = spawn;\n",
+      'a destructured CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); (() => { const out = module.exports; out.run = spawn; })();\n",
+      'a scoped CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); let out; out = module.exports; out.run = spawn;\n",
+      'an assignment-created CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = Math.random() > 0.5 ? module.exports : {}; out.run = spawn;\n",
+      'a conditional CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const out = module.exports || {}; out.run = spawn;\n",
+      'a logical CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); function getOut() { return module.exports; } const out = getOut(); out.run = spawn;\n",
+      'a function-returned CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = { out: module.exports }; box.out.run = spawn;\n",
+      'a container-held CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); let out; out = module.exports; Object.assign(out, { run: spawn });\n",
+      'an Object.assign-mutated assignment-created CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); function install(out) { out.run = spawn; } install(module.exports);\n",
+      'a call-argument CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = [module.exports]; box[0].run = spawn;\n",
+      'an array-contained CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const [out] = [module.exports]; out.run = spawn;\n",
+      'an array-destructured CommonJS export alias',
+    ],
+    [
+      "const { spawn } = require('node:child_process'); const box = Object.assign({}, { out: module.exports }); box.out.run = spawn;\n",
+      'a call-built CommonJS export container',
+    ],
+    [
+      "const { spawn } = require('node:' + 'child_process'); module.exports = { run: spawn };\n",
+      'a concatenated-specifier CommonJS process export',
+    ],
+    [
+      "const { spawn } = require(['node', 'child_process'].join(':')); module.exports = { run: spawn };\n",
+      'a joined-specifier CommonJS process export',
+    ],
+    [
+      "const { spawn } = module.require('node:child_process'); module.exports = { run: spawn };\n",
+      'a module.require CommonJS process export',
+    ],
+    [
+      "const { spawn } = process.getBuiltinModule('node:child_process'); module.exports = { run: spawn };\n",
+      'a process.getBuiltinModule CommonJS process export',
+    ],
+    [
+      "const load = require; const api = load(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'an unresolved aliased-loader CommonJS process export',
+    ],
+    [
+      "function loader() { return require; } const api = loader()(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'a returned-loader CommonJS process export',
+    ],
+    [
+      "const load = module.require.bind(module); const api = load(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'a bound-loader CommonJS process export',
+    ],
+    [
+      "const api = Reflect.apply(require, null, [process.env.P9_MODULE]); module.exports = { run: api.spawn };\n",
+      'a reflected-loader CommonJS process export',
+    ],
+    [
+      "const load = process.getBuiltinModule; const api = load(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'an aliased getBuiltinModule CommonJS process export',
+    ],
+    [
+      "const api = (0, require)(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'a comma-selected loader CommonJS process export',
+    ],
+    [
+      "const { createRequire } = require('node:module'); const api = createRequire(__filename)(process.env.P9_MODULE); module.exports = { run: api.spawn };\n",
+      'a createRequire-built CommonJS process export',
+    ],
+    [
+      "const load = require; const name = 'node:' + 'child_process'; const api = load(name); api.spawn('node');\n",
+      'a separately computed aliased child-process loader',
+    ],
+    [
+      "const load = require; const name = 'node:' + 'worker_threads'; const api = load(name); new api.Worker('data:text/javascript,0');\n",
+      'a separately computed aliased worker loader',
+    ],
+    [
+      "const { ...cp } = require('node:child_process'); cp.spawn('node');\n",
+      'a rest-destructured child-process namespace',
+    ],
+    [
+      "const key = 'spawn'; const { [key]: run } = require('node:child_process'); run('node');\n",
+      'a computed-destructured child-process member',
+    ],
+    [
+      "const { ...wt } = require('node:worker_threads'); new wt.Worker('data:text/javascript,0');\n",
+      'a rest-destructured worker namespace',
+    ],
+  ] as const) {
+    fs.writeFileSync(commonJsProcessExportPath, commonJsSource);
+    const commonJsProcessInventory = deriveP9WriteSurfaceInventory(
+      inventoryFixtureRoot,
+    );
+    assert.ok(
+      commonJsProcessInventory.some(
+        (surface) =>
+          surface.path.endsWith('/process-capability.cjs') &&
+          surface.mutators.includes('generic-network-write-unknown-target'),
+      ),
+      `${label} is inventoried at its export boundary`,
+    );
+  }
+  fs.unlinkSync(commonJsProcessExportPath);
+  fs.unlinkSync(commonJsProcessConsumerPath);
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    [
       'export async function urlConstructorBypass(id: string) {',
       "  const host = 'https://sheets.googleapis.com';",
       '  const op = `/v4/spreadsheets/${id}:batchUpdate`;',
@@ -2005,6 +3749,83 @@ try {
     'a renamed axios import and method alias cannot hide a composed Sheets write',
   );
   assert.equal(axiosAliasBypass?.guardedBeforeClientConstruction, false);
+
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, 'web/package.json'),
+    JSON.stringify({ dependencies: { 'safe-alias': 'npm:tsx@4.22.4' } }),
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, 'web/package-lock.json'),
+    JSON.stringify({
+      lockfileVersion: 3,
+      packages: {
+        'node_modules/safe-alias': { integrity: `sha512-${'a'.repeat(32)}` },
+      },
+    }),
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    "const loader = require('safe-alias'); loader.run(); export const loaded = true;\n",
+  );
+  const aliasedLoaderPackage = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    aliasedLoaderPackage?.mutators.includes(
+      'generic-network-write-unknown-target',
+    ),
+    'an integrity-bearing npm alias cannot disguise a loader package',
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, 'web/package.json'),
+    JSON.stringify({ dependencies: { 'safe-local': 'file:../outside-package' } }),
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, 'web/package-lock.json'),
+    JSON.stringify({
+      lockfileVersion: 3,
+      packages: {
+        'node_modules/safe-local': { integrity: `sha512-${'b'.repeat(32)}` },
+      },
+    }),
+  );
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    "const loader = require('safe-local'); loader.run(); export const loaded = true;\n",
+  );
+  const localLoaderPackage = deriveP9WriteSurfaceInventory(
+    inventoryFixtureRoot,
+  ).find((surface) => surface.path === fifthSurface.path);
+  assert.ok(
+    localLoaderPackage?.mutators.includes(
+      'generic-network-write-unknown-target',
+    ),
+    'an integrity-bearing local dependency cannot escape the runtime closure',
+  );
+
+  const assetTargetPath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'asset-target.txt',
+  );
+  const assetLinkPath = path.join(
+    inventoryFixtureRoot,
+    path.posix.dirname(fifthSurface.path),
+    'asset-link.json',
+  );
+  fs.writeFileSync(assetTargetPath, '{"safe":true}\n');
+  fs.symlinkSync(path.basename(assetTargetPath), assetLinkPath);
+  fs.writeFileSync(
+    path.join(inventoryFixtureRoot, fifthSurface.path),
+    "import data from './asset-link.json'; export const loaded = data;\n",
+  );
+  assert.throws(
+    () => deriveP9WriteSurfaceInventory(inventoryFixtureRoot),
+    /rejected symbolic link: web\/.+\/asset-link\.json/,
+    'an apparent ESM data asset cannot cross a symlink outside exact source identity',
+  );
+  fs.unlinkSync(assetLinkPath);
+  fs.unlinkSync(assetTargetPath);
 
   fs.writeFileSync(
     path.join(inventoryFixtureRoot, fifthSurface.path),
