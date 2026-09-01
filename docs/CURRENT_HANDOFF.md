@@ -44,9 +44,11 @@ Default branch: `main`
 - Adjacent non-blocking items observed during Revision 8 remain for later scoped work:
   Next reports the existing middleware-file deprecation and an Edge `process.cwd`
   warning; local `tsx` CLI commands cannot open their IPC socket in this sandbox and use
-  `node --import tsx` as the verified fallback. Neither issue blocked CI or the production
-  build. Do not absorb either into P8R unless it directly blocks the P8R contract; route
-  any necessary change through the decision log or a separately reviewed amendment.
+  `node --import tsx` as the verified fallback; and GitHub Actions reports that the
+  pinned checkout/setup actions target deprecated Node 20 and are currently forced onto
+  Node 24. None blocked CI or the production build. Do not absorb these items into P8R
+  unless one directly blocks the P8R contract; route any necessary change through the
+  decision log or a separately reviewed amendment.
 
 ## Historical Plan Revision 8 candidate checkpoint
 
