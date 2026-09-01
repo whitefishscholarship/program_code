@@ -56,6 +56,8 @@ import {
 const baselineCommit = 'b'.repeat(40);
 const revision7AttestationCommit = '7'.repeat(40);
 const revision7CandidateCommit = '6'.repeat(40);
+const trustedProofCandidateCommit = 'a'.repeat(40);
+const trustedProofAttestationCommit = 'b'.repeat(40);
 const workflowCommit = baselineCommit;
 const runtimeCommit = 'e'.repeat(40);
 const candidateCommit = 'f'.repeat(40);
@@ -696,6 +698,8 @@ const context: P9EvidenceContext = {
   revision7AttestationCommit,
   revision7AttestationCommittedAt: '2026-08-30T20:00:00Z',
   revision7CandidateCommit,
+  trustedProofCandidateCommit,
+  trustedProofAttestationCommit,
   candidateCommit,
   candidateCommittedAt: '2026-08-30T21:00:00Z',
   runtimePrincipalFingerprintSha256: runtimeIdentityFingerprint,
@@ -3890,6 +3894,26 @@ assert.match(
     },
   ).join('\n'),
   /trusted proof code differs/,
+);
+
+assert.match(
+  validateP9DeploymentGitBindingV2(
+    deploymentRecord,
+    context,
+    candidateCommit,
+    {
+      objectExists: () => true,
+      isAncestor: () => true,
+      blobSha256: () => staticCatalogSha256,
+      changedRuntimePaths: () => [],
+      changedTrustedProofPaths: (from, to) =>
+        from === trustedProofCandidateCommit && to === baselineCommit
+          ? ['web/scripts/p9-trusted-proof.ts']
+          : [],
+    },
+  ).join('\n'),
+  /accepted trusted-proof amendment/,
+  'the latest accepted governance amendment, not the older Revision 7 candidate, anchors trusted proof code',
 );
 
 assert.match(

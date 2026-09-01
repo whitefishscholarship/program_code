@@ -1,9 +1,30 @@
 # Current Handoff
 
-Last updated: 2026-08-31
-Plan revision: 7
+Last updated: 2026-09-01
+Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Plan Revision 8 candidate — interview restoration governance only
+
+- Kelsey directed Codex to restore the student interview safely. After being told that
+  Plan Revision 8 and the later restoration stage would each use governed Git delivery
+  and trigger Vercel Preview and Production deployments, Kelsey explicitly authorized
+  both delivery effects on 2026-09-01.
+- Revision 8 inserts planned `P8R` between accepted P8 and planned P9. P8R restores an
+  interview-first, on-page matching flow against the accepted canonical public catalog;
+  answers remain only in volatile browser memory, and only typed accepted public facts
+  may hard-exclude an award. Unknown facts remain possible matches with visible reasons.
+- This execution is Plan Revision 8 only. No product runtime, spreadsheet, P9,
+  production source/configuration, monitoring schedule, form, applicant-data,
+  interview-answer, analytics, or provider operation is authorized or performed.
+- Verified live `origin/main` baseline is
+  `781b62bf5fe2e6d8b9524e77d03a1ca4841a8b92`; work is isolated on
+  `codex/plan-rev8-interview-restoration` at
+  `/private/tmp/program_code-plan-rev8-interview`.
+- Revision 8 remains candidate work until full verification, immutable freeze, fresh
+  independent `C0/H0` review, direct-child manifest/review attestation, and authorized
+  delivery complete. P8R must not begin before that closure.
 
 ## Revision 7 delivery closure — PASS; P9 not started
 

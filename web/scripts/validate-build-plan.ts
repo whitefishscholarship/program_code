@@ -196,7 +196,7 @@ type ReviewRecord = {
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..', '..');
-const expectedStageIds = Array.from({ length: 10 }, (_, i) => `P${i}`);
+const expectedStageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P9'];
 const closedStatuses = new Set<StageStatus>(['accepted']);
 const inFlightStatuses = new Set<StageStatus>([
   'active',
@@ -804,7 +804,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
   if (
     !baselineState ||
     !candidateState ||
-    candidateState.planRevision !== 7 ||
+    candidateState.planRevision !== 8 ||
     candidateState.activeStageId !== null ||
     candidateState.nextPermittedStageId !== 'P9' ||
     candidateP9?.status !== 'planned' ||
@@ -816,7 +816,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
     !p9IdentityPinProofFlagsAreFalse(candidateAuthorization)
   ) {
     fail(
-      'P9-IDENTITY-PINS candidate must keep Plan Revision 7 and P9 planned while pinning one complete identity set with every proof state false',
+      'P9-IDENTITY-PINS candidate must keep Plan Revision 8 and P9 planned while pinning one complete identity set with every proof state false',
     );
   } else {
     for (const error of validateP9ReadOnlyAuthority(
@@ -1552,7 +1552,8 @@ if (state) {
     }
 
     const candidateState = jsonAtCommit<BuildState>(manifest.candidateCommit, 'docs/BUILD_STATE.json');
-    const stageIndex = expectedStageIds.indexOf(stage.id);
+    const candidateStageIds = candidateState?.stages?.map((item) => item.id) ?? [];
+    const stageIndex = candidateStageIds.indexOf(stage.id);
     if (!candidateState?.stages || candidateState.stages[stageIndex]?.id !== stage.id) {
       fail(`${stage.manifestPath} candidateCommit lacks a valid BUILD_STATE entry for ${stage.id}`);
     } else {
@@ -1565,12 +1566,12 @@ if (state) {
       }
       for (let i = 0; i < stageIndex; i += 1) {
         if (candidateState.stages[i]?.status !== 'accepted') {
-          fail(`${stage.id} candidateCommit requires ${expectedStageIds[i]} accepted`);
+          fail(`${stage.id} candidateCommit requires ${candidateStageIds[i]} accepted`);
         }
       }
-      for (let i = stageIndex + 1; i < expectedStageIds.length; i += 1) {
+      for (let i = stageIndex + 1; i < candidateStageIds.length; i += 1) {
         if (candidateState.stages[i]?.status !== 'planned') {
-          fail(`${stage.id} candidateCommit requires later stage ${expectedStageIds[i]} planned`);
+          fail(`${stage.id} candidateCommit requires later stage ${candidateStageIds[i]} planned`);
         }
       }
 
@@ -1801,7 +1802,8 @@ if (state) {
   const p9 = state.stages.find((stage) => stage.id === 'P9');
   const p9MayUseProduction = p9 && (inFlightStatuses.has(p9.status) || p9.status === 'accepted');
   if (p9MayUseProduction) {
-    for (const prerequisite of state.stages.slice(0, 9)) {
+    const p9Index = state.stages.findIndex((stage) => stage.id === 'P9');
+    for (const prerequisite of state.stages.slice(0, p9Index)) {
       if (prerequisite.status !== 'accepted') {
         fail(`P9 requires ${prerequisite.id} to be accepted, not ${prerequisite.status}`);
       }
@@ -1809,6 +1811,7 @@ if (state) {
   }
   if (state.planRevision >= 7) {
     const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
+    const attestedRevision8 = historicallyAttestedPlanAmendments.get('PLAN-REV8');
     const expectedEntryProofState = Boolean(p9MayUseProduction);
     const expectedPostCutoverProofState =
       p9?.status === 'verified' || p9?.status === 'accepted';
@@ -1852,6 +1855,7 @@ if (state) {
         }
         if (
           !attestedRevision7 ||
+          (state.planRevision >= 8 && !attestedRevision8) ||
           !acceptedP7 ||
           !acceptedP7CatalogBlob ||
           !/^[0-9a-f]{40}$/.test(p9BaselineCommit) ||
@@ -1859,7 +1863,7 @@ if (state) {
           !revision7AttestationCommittedAt ||
           !candidateCommittedAt
         ) {
-          fail('P9 active state requires immutable accepted P7, delivered Revision 7, and exact Git chronology');
+          fail('P9 active state requires immutable accepted P7, delivered Revisions 7 and 8, and exact Git chronology');
         } else if (operationalIdentityContext) {
           try {
             evidenceContext = {
@@ -1868,6 +1872,10 @@ if (state) {
               revision7AttestationCommit: attestedRevision7.attestationCommit,
               revision7AttestationCommittedAt,
               revision7CandidateCommit: attestedRevision7.candidateCommit,
+              trustedProofCandidateCommit:
+                attestedRevision8?.candidateCommit ?? attestedRevision7.candidateCommit,
+              trustedProofAttestationCommit:
+                attestedRevision8?.attestationCommit ?? attestedRevision7.attestationCommit,
               candidateCommit,
               candidateCommittedAt,
               ...operationalIdentityContext,
@@ -2029,6 +2037,45 @@ if (state) {
       }
     }
 
+    if (state.planRevision >= 8) {
+      const p8rDeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P8R',
+      );
+      if (
+        p8rDeliveryAuthorization?.authorized !== true ||
+        p8rDeliveryAuthorization.evidencePath !== 'docs/evidence/PLAN-REV8.md'
+      ) {
+        fail('Plan Revision 8 requires P8R delivery authority bound to PLAN-REV8 evidence');
+      }
+      if (attestedRevision8) {
+        const revision8CandidateState = jsonAtCommit<BuildState>(
+          attestedRevision8.candidateCommit,
+          'docs/BUILD_STATE.json',
+        );
+        const changedP8RDelivery = revision8CandidateState
+          ? changedStandingAuthorization(
+              state.deployment.stageMergeAuthorizations,
+              revision8CandidateState.deployment.stageMergeAuthorizations,
+              ['P8R'],
+            )
+          : 'P8R';
+        if (changedP8RDelivery) {
+          fail('P8R Plan Revision 8 delivery authorization cannot be deleted, disabled, or changed');
+        }
+        const revision8EvidencePath = 'docs/evidence/PLAN-REV8.md';
+        const canonicalRevision8Evidence = gitText([
+          'show',
+          `${attestedRevision8.candidateCommit}:${revision8EvidencePath}`,
+        ]);
+        if (
+          canonicalRevision8Evidence === null ||
+          requireFile(revision8EvidencePath) !== canonicalRevision8Evidence
+        ) {
+          fail('Plan Revision 8 authority evidence must remain byte-identical to its immutable candidate');
+        }
+      }
+    }
+
     if (p9?.status === 'accepted') {
       const canonicalP9 = findCanonicalAttestation(
         'P9',
@@ -2105,6 +2152,26 @@ if (state) {
   ]) {
     if (!plan.includes(phrase)) fail(`Canonical plan is missing required section/phrase: ${phrase}`);
   }
+  if (state.planRevision >= 8) {
+    for (const phrase of [
+      'volatile browser memory',
+      'typed, accepted public eligibility fact',
+      'unmodeled eligibility remains a possible match',
+      'The existing legacy `{data}` API compatibility payload',
+      'Any scholarship spreadsheet read or write',
+    ]) {
+      if (!plan.includes(phrase)) {
+        fail(`Plan Revision 8 is missing interview-restoration safety text: ${phrase}`);
+      }
+    }
+    if (
+      !state.invariants.includes(
+        'Never transmit or persist student interview answers; process them only in volatile browser memory.',
+      )
+    ) {
+      fail('Plan Revision 8 requires the exact interview-answer privacy invariant');
+    }
+  }
 
   const agents = content['AGENTS.md'];
   for (const phrase of [
@@ -2115,6 +2182,15 @@ if (state) {
     'Vercel Git integration',
   ]) {
     if (!agents.includes(phrase)) fail(`AGENTS.md is missing required invariant: ${phrase}`);
+  }
+  if (state.planRevision >= 8) {
+    for (const phrase of [
+      'Plan Revision 8 and P8R boundary',
+      'volatile browser',
+      'typed accepted',
+    ]) {
+      if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 8 invariant: ${phrase}`);
+    }
   }
 
   const decisions = content['docs/DECISIONS.md'];

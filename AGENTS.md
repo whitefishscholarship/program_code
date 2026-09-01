@@ -118,6 +118,21 @@ against the immutable delivery candidate named by its attested manifest. Later s
 may evolve the current `BUILD_STATE` only through the normal reviewed state machine;
 they must not weaken, replace, or reinterpret that historical integration proof.
 
+## Plan Revision 8 and P8R boundary
+
+Plan Revision 8 inserts `P8R` between accepted P8 and planned P9. Revision 8 itself is
+governance-only: do not change student-facing runtime behavior while preparing or
+delivering the amendment. After Revision 8 is independently accepted, attested, and
+delivered, P8R may restore the interview-first flow under its canonical contract and
+recorded delivery authority. Interview answers must remain only in volatile browser
+memory and must never be placed in storage, cookies, URLs, requests, logs, analytics,
+fixtures, evidence, or Git. A matcher may hard-exclude only from a typed accepted public
+fact; unknown or free-text-only eligibility stays visible as a possible match.
+
+Neither Revision 8 nor P8R authorizes spreadsheet access or writes, P9, production
+source/configuration work, monitoring activation, form submission, applicant-data
+collection, provider contact, deployment-configuration changes, or scope expansion.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use

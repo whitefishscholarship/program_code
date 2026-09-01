@@ -4590,6 +4590,8 @@ export type P9EvidenceContext = {
   revision7AttestationCommit: string;
   revision7AttestationCommittedAt: string;
   revision7CandidateCommit: string;
+  trustedProofCandidateCommit?: string;
+  trustedProofAttestationCommit?: string;
   candidateCommit?: string;
   candidateCommittedAt?: string;
   runtimePrincipalFingerprintSha256: string;
@@ -8136,6 +8138,10 @@ export function validateP9DeploymentGitBindingV2(
   probe: P9GitBindingProbe,
 ): string[] {
   const errors: string[] = [];
+  const trustedProofCandidateCommit =
+    context.trustedProofCandidateCommit ?? context.revision7CandidateCommit;
+  const trustedProofAttestationCommit =
+    context.trustedProofAttestationCommit ?? context.revision7AttestationCommit;
   if (context.candidateCommit && candidateCommit !== context.candidateCommit) {
     errors.push('P9 Git binding candidate differs from the validation context');
   }
@@ -8143,6 +8149,8 @@ export function validateP9DeploymentGitBindingV2(
     context.p9BaselineCommit,
     context.revision7AttestationCommit,
     context.revision7CandidateCommit,
+    trustedProofCandidateCommit,
+    trustedProofAttestationCommit,
     record.runtimeCommit,
     candidateCommit,
   ]) {
@@ -8156,6 +8164,12 @@ export function validateP9DeploymentGitBindingV2(
   }
   if (!probe.isAncestor(context.revision7CandidateCommit, context.revision7AttestationCommit)) {
     errors.push('P9 Revision 7 candidate does not precede its attestation');
+  }
+  if (!probe.isAncestor(trustedProofCandidateCommit, trustedProofAttestationCommit)) {
+    errors.push('P9 trusted-proof amendment candidate does not precede its attestation');
+  }
+  if (!probe.isAncestor(trustedProofAttestationCommit, context.p9BaselineCommit)) {
+    errors.push('P9 baseline does not contain the accepted trusted-proof amendment attestation');
   }
   if (
     record.capture.workflowCommit !== context.p9BaselineCommit ||
@@ -8182,12 +8196,12 @@ export function validateP9DeploymentGitBindingV2(
     );
   }
   const revision7DeliveryChanges = probe.changedTrustedProofPaths(
-    context.revision7CandidateCommit,
+    trustedProofCandidateCommit,
     context.p9BaselineCommit,
   );
   if (revision7DeliveryChanges.length > 0) {
     errors.push(
-      `P9 delivered trusted proof code differs from accepted Revision 7: ${revision7DeliveryChanges.join(', ')}`,
+      `P9 delivered trusted proof code differs from the accepted trusted-proof amendment: ${revision7DeliveryChanges.join(', ')}`,
     );
   }
   const runtimeTrustedChanges = probe.changedTrustedProofPaths(
