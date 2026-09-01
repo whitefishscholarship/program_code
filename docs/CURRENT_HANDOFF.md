@@ -5,26 +5,55 @@ Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Plan Revision 8 candidate — interview restoration governance only
+## Plan Revision 8 delivery closure — PASS; P8R not started
 
-- Kelsey directed Codex to restore the student interview safely. After being told that
-  Plan Revision 8 and the later restoration stage would each use governed Git delivery
-  and trigger Vercel Preview and Production deployments, Kelsey explicitly authorized
-  both delivery effects on 2026-09-01.
-- Revision 8 inserts planned `P8R` between accepted P8 and planned P9. P8R restores an
-  interview-first, on-page matching flow against the accepted canonical public catalog;
-  answers remain only in volatile browser memory, and only typed accepted public facts
-  may hard-exclude an award. Unknown facts remain possible matches with visible reasons.
-- This execution is Plan Revision 8 only. No product runtime, spreadsheet, P9,
-  production source/configuration, monitoring schedule, form, applicant-data,
-  interview-answer, analytics, or provider operation is authorized or performed.
-- Verified live `origin/main` baseline is
-  `781b62bf5fe2e6d8b9524e77d03a1ca4841a8b92`; work is isolated on
-  `codex/plan-rev8-interview-restoration` at
-  `/private/tmp/program_code-plan-rev8-interview`.
-- Revision 8 remains candidate work until full verification, immutable freeze, fresh
-  independent `C0/H0` review, direct-child manifest/review attestation, and authorized
-  delivery complete. P8R must not begin before that closure.
+- Immutable candidate `0a48fe710b7513c551745967eeed73c355de2433` was independently
+  accepted `C0/H0/M0/L0` against manifest SHA-256
+  `fa8fb8e029e1083a1c8f64cd2136630774129bef5366c00d0a3268e64a66062e`.
+  Direct-child attestation `5a6aeb24da8f845fb9f6176390a8d0630fa57ed4` added exactly
+  `docs/evidence/PLAN-REV8-manifest.json` and `docs/reviews/PLAN-REV8.json`.
+- PR #27 preserved exact base `781b62bf5fe2e6d8b9524e77d03a1ca4841a8b92` and exact head
+  `5a6aeb24da8f845fb9f6176390a8d0630fa57ed4`. Required PR CI run
+  `33552695069` passed in 2m36s. Vercel Preview was blocked by the existing access
+  condition; the Preview-comment check passed. The blocked Preview is not an
+  application-health result.
+- PR #27 merged by the repository's merge-commit convention at
+  `1394c556c5d4829f5618513cf63a56b0626bfec7` on 2026-09-01. Its parents are exact
+  baseline `781b62b...` and exact attestation `5a6aeb2...`.
+- Post-merge main CI run `33552999621` passed in 2m52s: locked install, plan check,
+  typecheck, the complete test suite, and exact production build. GitHub's commit status
+  for the exact merge reports Vercel `success` with description `Deployment has
+  completed` at `2026-09-01T20:03:25Z`. No direct Vercel access or protected
+  application-health smoke was performed, so only GitHub-reported deployment completion
+  is verified.
+- The original attestation branch remains exact remote tip `5a6aeb2...`; it was not
+  amended or appended. Revision 8 changed governance, evidence/kickoffs, validator, and
+  deterministic validator tests only. No student-facing runtime, dependency, lockfile,
+  workflow, deployment configuration, scholarship data, Google/Drive/Sheets,
+  Vercel-direct, schedule, form, applicant-data, interview-answer, analytics, or provider
+  operation occurred.
+- P8 remains accepted with its schedule disabled. `P8R` is the sole next-permitted
+  planned stage; P9 remains planned and unstarted. The interview has not yet been
+  restored or browser-tested. Start P8R only in a fresh session using
+  `docs/kickoffs/P8R-INTERVIEW-RESTORATION.md` and its authoritative read order.
+- P8R must preserve the accepted canonical P7 catalog/cards/filter/sort/export, keep
+  answers only in volatile browser memory, and hard-exclude only from typed accepted
+  public facts. Unknown or free-text-only eligibility remains a possible match with a
+  visible reason. Do not reconnect the legacy heuristic processor as matching truth or
+  revert the accepted P7 page wholesale.
+- Adjacent non-blocking items observed during Revision 8 remain for later scoped work:
+  Next reports the existing middleware-file deprecation and an Edge `process.cwd`
+  warning; local `tsx` CLI commands cannot open their IPC socket in this sandbox and use
+  `node --import tsx` as the verified fallback. Neither issue blocked CI or the production
+  build. Do not absorb either into P8R unless it directly blocks the P8R contract; route
+  any necessary change through the decision log or a separately reviewed amendment.
+
+## Historical Plan Revision 8 candidate checkpoint
+
+The completed closure above supersedes the pre-delivery checkpoint. The authoritative
+objective, authority, exclusions, safety rules, verification record, manifest, and
+review remain in `docs/evidence/PLAN-REV8.md`,
+`docs/evidence/PLAN-REV8-manifest.json`, and `docs/reviews/PLAN-REV8.json`.
 
 ## Revision 7 delivery closure — PASS; P9 not started
 
