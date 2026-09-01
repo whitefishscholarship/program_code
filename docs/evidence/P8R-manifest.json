@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "createdAt": "2026-09-01T22:03:26Z",
+  "baselineCommit": "208a94b43a571109a1dac217b584e0e200ccd681",
+  "candidateCommit": "a3ed84d116a32f67034902a1ce55e7b5c12bf4bf",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "685a36f7989f7a61df3106e7213a99a3e8d196d2c5ab7816db1d83da77b59ce9"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "b0ca3f83eec16cc0126c25311b74a45d4c6dac3da2554634cf5ccdebe8ac2026"
+    },
+    {
+      "path": "docs/evidence/P8R-browser.json",
+      "change": "present",
+      "sha256": "3b4a7184dcc5afb966967e804da3f20a1d2582352b8c0bded0161e39cb018850"
+    },
+    {
+      "path": "docs/evidence/P8R-matching.json",
+      "change": "present",
+      "sha256": "6e84b282df4aee4e45603932f02cc9b1cde3f6d6803a27ad548646a27f36fd66"
+    },
+    {
+      "path": "docs/evidence/P8R-privacy.json",
+      "change": "present",
+      "sha256": "33f4d6e2ec06ab277241cfda8f27b1e914879adf2295a40b13276507d0edb2ec"
+    },
+    {
+      "path": "docs/evidence/P8R-test-matrix.json",
+      "change": "present",
+      "sha256": "8b03cce4ff8f371665f30d2274eb8955374fdcdec6b26d38281a757eeb93cb57"
+    },
+    {
+      "path": "docs/evidence/P8R.md",
+      "change": "present",
+      "sha256": "daa3790cfb50472d1b4f2b3371d140ceb81e644ee2b2ebb7e3bb621fd83c5635"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "45e0d98fc7114921f6c11131e63d2fbc5cad2a22982d1cda087573eafb3afe41"
+    },
+    {
+      "path": "web/scripts/test-p8r-interview.ts",
+      "change": "present",
+      "sha256": "567864c0e8796cad31425d891921f8def2c9fba08553a5bee2c866369c13a609"
+    },
+    {
+      "path": "web/src/app/page.tsx",
+      "change": "present",
+      "sha256": "c52cab877e9e07d5be33df2284c311d089b8a308c27d0cc41e5030dd5e333989"
+    },
+    {
+      "path": "web/src/components/InterviewWizard.tsx",
+      "change": "present",
+      "sha256": "fdbf9d2173d69a65651d311dcc016eb903e6704f548d685ee1a0424e3d9b9f07"
+    },
+    {
+      "path": "web/src/components/ScholarshipBrowser.tsx",
+      "change": "present",
+      "sha256": "39daa028fdcf1b01163cd1fe70940a1429c18c343483a0be624cc8313365f2ad"
+    },
+    {
+      "path": "web/src/lib/interviewMatcher.ts",
+      "change": "present",
+      "sha256": "30594a90807017576f2aba157e874cceb0a9cba2b41441246d162b0c92e25e0e"
+    },
+    {
+      "path": "web/src/lib/studentCatalogClient.ts",
+      "change": "present",
+      "sha256": "a808faf73948b83ffb7cd41264bcc00125630e02928126d51d6e5d42d0a146fa"
+    }
+  ]
+}

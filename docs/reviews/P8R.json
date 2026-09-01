@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "reviewerTaskId": "/root/p8r_fresh_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-01T22:08:39Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact immutable replacement P8R candidate a3ed84d116a32f67034902a1ce55e7b5c12bf4bf against verified origin/main baseline 208a94b43a571109a1dac217b584e0e200ccd681, bound by docs/evidence/P8R-manifest.json SHA-256 bd286858f7e557ea710112cb9166df9e6c371ed1ffd6244925471b8f1462f719, plus its prospective direct-child commit adding exactly docs/evidence/P8R-manifest.json and docs/reviews/P8R.json. Acceptance covers only P8R interview restoration, conservative typed matching, volatile-answer privacy, retained P7 student/API/admin/export behavior, P8 disabled-schedule preservation, evidence, and prospective accepted-state transition. It excludes rejected candidate c9e8d20155fb5cbd3d87f422ae104a14b264c930, P9 or P9-IDENTITY-PINS work, spreadsheet access or mutation, production-source or deployment-configuration changes, monitoring activation, applicant data, forms, analytics, provider contact, paid/destructive actions, gate weakening, and history rewrite.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/P8R-manifest.json",
+  "candidateManifestSha256": "bd286858f7e557ea710112cb9166df9e6c371ed1ffd6244925471b8f1462f719"
+}
