@@ -20,7 +20,7 @@ assert.equal(entries.every((entry) => entry.sheetRows.every((row) => snapshot.re
 assert.equal(entries.some((entry) => entry.retrievalDisposition === 'manual_review_no_fetch'), true);
 assert.equal(entries.some((entry) => entry.retrievalDisposition === 'public_read_only_scrape'), true);
 
-const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9'];
+const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P9'];
 const lifecycle = (
   acceptedCount: number,
   inFlightStatus: P5LifecycleState['stages'][number]['status'] | null,
@@ -42,6 +42,7 @@ for (const status of ['active', 'implemented', 'verified', 'blocked-external', '
 assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(6, null)));
 assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(7, null)));
 assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(9, 'verified')));
+assert.doesNotThrow(() => assertP5StageLifecycle(lifecycle(10, 'verified')));
 
 const p5Planned = lifecycle(5, null);
 assert.throws(() => assertP5StageLifecycle(p5Planned));

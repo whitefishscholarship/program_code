@@ -371,3 +371,32 @@ but are not rewritten or deleted.
   authorized, independently reviewed amendment. After P9 depends on it, preserve the
   Revision 7 candidate, manifest, review, attestation, and P9 history byte-for-byte.
   Never use rollback to mutate the production spreadsheet.
+
+## D-020 — Restore interview-first matching as a separate privacy-bounded stage
+
+- Date: 2026-09-01
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 8 inserts P8R between accepted P8 and planned P9. P8R restores
+  the guided interview as the primary student path and presents matches on the current
+  website using the accepted canonical public award model. Answers exist only in
+  volatile browser memory. A hard exclusion requires a typed accepted public fact that
+  proves a conflict; missing, ambiguous, or free-text-only eligibility remains a
+  possible match with a visible verification reason.
+- Evidence: `docs/evidence/PLAN-REV8.md`
+- Reason: The current build replaced the interview-driven homepage with the accepted
+  P7 browse-all catalog, while legacy interview components and a heuristic processor
+  remained disconnected. Reconnecting that processor or reverting the P7 page would
+  risk false exclusions, stale answer reuse, and catalog/API regressions.
+- Alternatives: Revert the homepage wholesale; reconnect the legacy heuristic matcher;
+  or leave browse-only behavior. The first two weaken accepted product/data guarantees,
+  while the third does not satisfy the student-filtering objective.
+- Impact: Revision 8 itself changes governance and trusted-proof compatibility only.
+  P8R must precommit its test matrix, preserve browse-all and P7 counts/relationships,
+  add deterministic decision reasons, prove no answer persistence or transmission, and
+  pass mobile/tablet/desktop browser journeys plus fresh independent review.
+- Authority: After explicit disclosure of the Git and Vercel Preview/Production effects
+  for both Revision 8 and later P8R, Kelsey Stuart answered yes, authorized. Spreadsheet
+  access/writes, P9, production configuration, schedule activation, forms, applicant
+  data, answer telemetry, and provider contact remain excluded.
+- Rollback: Revert to the last accepted P8 application revision; do not change accepted
+  scholarship facts, spreadsheet state, P8 schedule, production configuration, or P9.

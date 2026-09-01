@@ -312,8 +312,8 @@ function parsePredecessors(): Predecessor[] {
 
 function operationalIdentityPinsFromBuildState(value: unknown): OperationalIdentityPins {
   const state = asRecord(value, 'Delivered BUILD_STATE');
-  if (state.schemaVersion !== 2 || state.planRevision !== 7) {
-    fail('Delivered BUILD_STATE is not the exact Plan Revision 7 schema');
+  if (state.schemaVersion !== 2 || state.planRevision !== 8) {
+    fail('Delivered BUILD_STATE is not the exact Plan Revision 8 schema');
   }
   const dataAuthority = asRecord(state.dataAuthority, 'Delivered P9 data authority');
   const authorization = asRecord(
@@ -3578,7 +3578,7 @@ async function selfTest(): Promise<void> {
   };
   const pinnedBuildState = {
     schemaVersion: 2,
-    planRevision: 7,
+    planRevision: 8,
     dataAuthority: {
       productionSpreadsheetId: PRODUCTION_ID,
       productionMutationAuthorized: false,

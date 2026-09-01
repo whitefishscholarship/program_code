@@ -1,9 +1,10 @@
 # P9 Kickoff — Production Migration, Deployment, and Closeout
 
-Use this kickoff only in a fresh session after Plan Revision 7 is independently
+Use this kickoff only in a fresh session after Plan Revision 8 and P8R are independently
 accepted, attested, merged, and verified on live `origin/main`. This document prepares
-P9; the authority and strict no-production-write boundary are recorded in
-`docs/evidence/PLAN-REV7.md` and `docs/BUILD_STATE.json`.
+P9; the production authority and strict no-production-write boundary remain recorded in
+`docs/evidence/PLAN-REV7.md`, while the ordering and trusted-proof compatibility anchor
+are recorded in `docs/evidence/PLAN-REV8.md` and `docs/BUILD_STATE.json`.
 
 ```text
 Execute P9 — Production migration, deployment, and closeout — only for
@@ -15,19 +16,20 @@ AUTHORITATIVE READ ORDER
 2. docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md
 3. docs/BUILD_STATE.json
 4. docs/CURRENT_HANDOFF.md
-5. docs/evidence/P8.md
-6. docs/evidence/P8-manifest.json
-7. docs/reviews/P8.json
-8. docs/kickoffs/P9-PRODUCTION-MIGRATION.md
-9. docs/evidence/PLAN-REV7.md
-10. docs/evidence/PLAN-REV7-manifest.json
-11. docs/reviews/PLAN-REV7.json
-12. Accepted P5 backup/write receipts and P7/P8 public, monitoring, and rollback surfaces
+5. docs/evidence/P8R.md
+6. docs/evidence/P8R-manifest.json
+7. docs/reviews/P8R.json
+8. docs/evidence/PLAN-REV8.md
+9. docs/evidence/PLAN-REV8-manifest.json
+10. docs/reviews/PLAN-REV8.json
+11. docs/kickoffs/P9-PRODUCTION-MIGRATION.md
+12. docs/evidence/PLAN-REV7.md and its accepted manifest/review
+13. Accepted P5 backup/write receipts and P7/P8/P8R product, monitoring, and rollback surfaces
 
 STATE TO PIN BEFORE EDITING
-- Fetch live origin/main without changing user work and prove the exact accepted P8
-  direct-child attestation and accepted Plan Revision 7 attestation are present.
-- Verify P0-P8 are accepted and delivered, with no unresolved critical/high finding.
+- Fetch live origin/main without changing user work and prove the exact accepted P8R
+  direct-child attestation and accepted Plan Revisions 7 and 8 attestations are present.
+- Verify P0-P8 and P8R are accepted and delivered, with no unresolved critical/high finding.
 - Pin exact production spreadsheet
   `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`, the two authorized scholarship
   tabs/bounds, revision-9857 backups, and the exact read-only authority from build state.
@@ -170,8 +172,8 @@ AUTONOMOUS GIT DELIVERY — NO GIT QUESTIONS TO KELSEY
   complete.
 
 STOP CONDITIONS
-- P8 is not exactly accepted and delivered on live origin/main.
-- Plan Revision 7 is not exactly accepted and delivered on live origin/main.
+- P8R is not exactly accepted and delivered on live origin/main.
+- Plan Revisions 7 and 8 are not exactly accepted and delivered on live origin/main.
 - Exact read-only production authority, authorized-tab backups, deployed-runtime read
   permission, direct Viewer ACL, backup readability, deployed application-read proof,
   reconciliation, deploy owner, or configuration-rollback prerequisites are incomplete.
@@ -182,7 +184,7 @@ STOP CONDITIONS
   mutate the production spreadsheet.
 - Any required phase artifact/attestation is missing, a phase did not complete before
   the next deployment was created, or the trusted workflow differs from accepted
-  Revision 7.
+  the accepted Revision 8 trusted-proof anchor.
 - The exact entry revision, tab/grid bounds, fresh canonical source/backup equality,
   cross-phase source hash, or unchanged
   post-read revision cannot be reverified.

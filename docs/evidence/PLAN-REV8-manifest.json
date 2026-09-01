@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV8",
+  "createdAt": "2026-09-01T19:51:06Z",
+  "baselineCommit": "781b62bf5fe2e6d8b9524e77d03a1ca4841a8b92",
+  "candidateCommit": "0a48fe710b7513c551745967eeed73c355de2433",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "4dd21747f87fd32a1012fe66f36d26c5dcd15285129b7d65078929262ffbdf10"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "2f8399ea0c8015779760180a6589268a2b81c527c95d2922a64bb65c1f533e29"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "8e18852329fd29727083fd1133d5ae289f5fd8edb6413f8c6f46f1bd51e8fa39"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "7a1236505823e70f345eda49cf865006cdc6a7d8e984519cfd644b78afb1b979"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "bab9a95dbb69acfb9d7a7739a693fbaaad16f44b9eaec15160f88d39f229e53a"
+    },
+    {
+      "path": "docs/evidence/P8R.md",
+      "change": "present",
+      "sha256": "a381c0618502e8c0f17a2726c83211fbe0e0ae950f88c78882d3aaabb4c2a00c"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV8.md",
+      "change": "present",
+      "sha256": "11f1960f0e6c39aae643a30f0bb126f912806dc37fe439df31e85776a6e5315b"
+    },
+    {
+      "path": "docs/kickoffs/P8R-INTERVIEW-RESTORATION.md",
+      "change": "present",
+      "sha256": "73ff1525fbb960e22d08b33e6d1fb33b9f4aa4b6fac48866504f642527f14b90"
+    },
+    {
+      "path": "docs/kickoffs/P9-PRODUCTION-MIGRATION.md",
+      "change": "present",
+      "sha256": "b2a2a217bc795bb6cb9d62fdd93996c3366aad112e28ea49189de58c8747acd4"
+    },
+    {
+      "path": "web/scripts/p5-remediation.ts",
+      "change": "present",
+      "sha256": "a6cf7560758c9a1a4568bb0ba8993d14f02b566c250910ef5935affbbeb5573c"
+    },
+    {
+      "path": "web/scripts/p9-evidence-v2.ts",
+      "change": "present",
+      "sha256": "615246ae3e31f5572b8715036d3c97efd759e8056bd674f4dfb930795edb6693"
+    },
+    {
+      "path": "web/scripts/p9-trusted-proof.ts",
+      "change": "present",
+      "sha256": "78ce8670d5e44003a182b8d67a535736505150e89735d8de787bbd9ebdcbe11a"
+    },
+    {
+      "path": "web/scripts/test-p5-remediation.ts",
+      "change": "present",
+      "sha256": "09f268e9e2dfebc4ce95c73592a6e35e2533c8b183f28fd9413908e072c8ebc1"
+    },
+    {
+      "path": "web/scripts/test-p9-evidence-v2.ts",
+      "change": "present",
+      "sha256": "b034536a4a4c766a93b44e1242c43cd1a4725bff75356a3d652856d5f8bb3db7"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "ad1e9ac546f6b8efddd7bc3d495468bc32467ac314c4a0cd4ef8d0d7c1b3d049"
+    }
+  ]
+}

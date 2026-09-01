@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 7
+Plan revision: 8
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -52,6 +52,10 @@ The program is successful only when all of the following are true:
   intended Whitefish audience. A larger raw row count is not a success metric.
 - Student-facing API, export, and UI surfaces expose only allow-listed fields and
   no applicant PII, internal review notes, or credentials.
+- Students can complete a privacy-preserving guided interview and receive transparent,
+  evidence-bounded scholarship matches without the browser storing or transmitting
+  their answers. Unknown eligibility remains visible as unknown rather than becoming a
+  false exclusion.
 - Monitoring produces a bounded review queue and never overwrites authoritative
   facts merely because a page changed or a fetch failed.
 - Production has no unresolved critical/high exploitable dependency or application
@@ -122,7 +126,8 @@ stage may quote these counts as a current fact without a new snapshot.
 ### Out of scope unless a later plan revision explicitly adds it
 
 - Applying for scholarships or submitting any form.
-- Collecting or storing applicant responses or applicant PII.
+- Collecting, transmitting, persisting, or committing student interview answers or
+  applicant PII. P8R may process voluntary answers only in volatile browser memory.
 - Bypassing logins, CAPTCHAs, access controls, robots restrictions, or rate limits.
 - Treating commercial scholarship aggregators as final factual authority.
 - Guaranteeing that a student will qualify for or receive an award.
@@ -216,6 +221,9 @@ These requirements apply to every stage:
 11. **Secrets.** Credentials remain in approved secret stores or environment
     variables and never appear in Git, prompts, logs, evidence, or fixtures.
 12. **Independent acceptance review.** The reviewer did not author or edit the stage.
+13. **Conservative matching.** Student answers may hard-exclude an award only when a
+    typed, accepted public eligibility fact proves a conflict. Missing, ambiguous, or
+    free-text-only facts remain possible matches with a visible verification note.
 
 ## 8. Stage state machine and universal completion gate
 
@@ -236,7 +244,7 @@ by at most one in-flight stage, followed by planned stages. A later stage may no
 become active until every prior stage is accepted. `superseded` is reserved and is
 invalid under plan revision 1; enabling it requires an independently reviewed plan
 amendment, explicit supersession evidence, and a validator revision. P9 always requires
-P0-P8 specifically `accepted` and cannot use supersession to bypass them.
+P0-P8 and P8R specifically `accepted` and cannot use supersession to bypass them.
 
 A stage may move to `accepted` only when:
 
@@ -584,13 +592,75 @@ for ambiguity; independent review finds no critical/high destructive or privacy 
 **Rollback:** Disable schedules and restore the last accepted receipt; no production
 sheet has been modified.
 
+### P8R — Student interview and matching restoration
+
+**Objective:** Restore the guided student interview as the primary path to an
+on-page, privacy-preserving set of scholarship matches while preserving the accepted
+P7 catalog, API compatibility, count semantics, accessibility, exports, and P8
+monitoring boundaries.
+
+**Entry prerequisites:** P8 accepted and delivered; Plan Revision 8 accepted, attested,
+and delivered; live `origin/main` verified; P9 remains planned and unstarted; the P8R
+test matrix is committed before product implementation.
+
+**Deliverables:** An accessible interview-first flow with an explicit browse-all
+alternative; validated typed answers held only in volatile browser memory; a typed,
+deterministic matcher over the current canonical public award model; evidence-bounded
+match, possible-match, and known-conflict decisions with student-readable reasons;
+matched-result cards that retain current filters, sorting, application methods, cycle
+status, official links, and CSV export; edit/reset/error/empty states; a privacy and
+public-field allow-list; deterministic matching fixtures; and complete mobile, tablet,
+and desktop browser evidence.
+
+The matcher may use a student answer as a hard gate only when an accepted structured
+public fact proves the conflict. It may rank an award using accepted structured facts
+and clearly labeled non-eligibility preferences. It must not infer a hard residence,
+identity, health, hardship, affiliation, renewal, deadline, or application requirement
+from substring matching, a default Montana assumption, or missing data. Unknown or
+unmodeled eligibility remains a possible match with an explicit verification reason.
+The existing legacy `{data}` API compatibility payload may remain available to existing
+consumers, but P8R matching must not depend on the legacy heuristic processor as its
+source of truth.
+
+**Out of scope:** Any scholarship spreadsheet read or write; production source access
+or configuration; P9 or `P9-IDENTITY-PINS`; live monitoring or schedule activation;
+scholarship fact mutation; form/application interaction; applicant-data collection;
+analytics or answer telemetry; provider contact; dependency changes not strictly
+required for P8R; and deployment-configuration changes.
+
+**Verification:** Before implementation, commit a P8R matrix covering interview start,
+required and optional answers, back/edit/reset, all supported hard gates, unknown-fact
+preservation, known conflicts, deterministic ranking, zero-result and error recovery,
+browse-all fallback, result filtering/sorting, official links, and matched CSV export.
+Run every applicable journey at 360x800, 768x1024, and 1440x900. Unit and adversarial
+tests must reject legacy `Non-Renewing` substring classification, year-2001 deadline
+fallback, default-Montana exclusion, identity/health free-text hard gates, stale answer
+reuse, and any answer write to `sessionStorage`, `localStorage`, cookies, IndexedDB,
+request bodies, URLs, logs, or analytics. API/schema, privacy allow-list, canonical count
+reconciliation, keyboard/focus, screen-reader status, current browse-all journeys,
+admin-route compatibility, export safety, typecheck, full tests, production build,
+dependency audits, and whitespace checks must pass.
+
+**Acceptance:** The interview is the primary student flow and presents the resulting
+matches on the website. Every displayed decision has deterministic reasons; no unknown
+fact becomes a false eligibility claim or silent exclusion; current P7 catalog counts
+and record relationships reconcile exactly; no student answer is transmitted or
+persisted; all predeclared browser cells pass without unexplained exclusion; and a
+fresh-context independent reviewer reports no critical/high correctness, privacy,
+security, accessibility, or regression finding.
+
+**Rollback:** Deploy the last accepted P8 application revision, which retains the
+canonical browse-all catalog. No spreadsheet, accepted scholarship fact, P8 schedule,
+production configuration, or P9 state changes during rollback.
+
 ### P9 — Production migration, deployment, and closeout
 
 **Objective:** Move the accepted application from its testing/static source boundary to
 the actual Whitefish Scholarship spreadsheet as a strictly read-only source, with
 verified configuration rollback and durable operational handoff.
 
-**Entry prerequisites:** P0-P8 accepted; production spreadsheet identity explicitly
+**Entry prerequisites:** P0-P8 and P8R accepted and delivered; Plan Revision 8 accepted,
+attested, and delivered; production spreadsheet identity explicitly
 provided and read-only production migration explicitly authorized; current backups of
 the exact authorized scholarship tabs verified; the exact deployed runtime principal
 identified without exposing credentials and proved to hold one direct, unexpired
@@ -710,7 +780,7 @@ merge, authenticate the resulting Vercel Production deployment, prove the deploy
 commit, repeat health/API/browser and read-only source-fingerprint smoke, and publish the
 provider/run identifiers in the governed PR delivery record.
 
-**Acceptance:** P0-P8 are accepted and delivered on `origin/main`. Independent
+**Acceptance:** P0-P8 and P8R are accepted and delivered on `origin/main`. Independent
 fresh-context review has no unresolved critical/high issue;
 production evidence, deployed commit, backups, cutover receipt, and rollback location
 are recorded; zero production mutations are proved; final count semantics and remaining
@@ -980,6 +1050,17 @@ Revision 7, and may later make only authenticated allowlisted reads in P9. Its s
 entry/cutover/rollback/restored/finalize runs prevent a future deployment ID or a single
 after-the-fact observation from being presented as chronological rollback proof.
 
+Plan Revision 8 records the user's direct instruction to restore the interview safely
+and their separately confirmed authority for the amendment and later P8R Git delivery,
+including resulting Vercel Preview and Production deployments. It inserts P8R between
+accepted P8 and planned P9, leaves P9 unstarted, and changes no scholarship data,
+runtime behavior, spreadsheet, provider configuration, or schedule itself. Revision 8
+also moves the immutable P9 trusted-proof code anchor forward only for the exact
+Revision 8 governance compatibility change that recognizes the new plan revision; all
+Revision 7 production identities, no-write rules, evidence schemas, and operational
+proof gates remain unchanged. Revision 8 must be independently accepted, attested, and
+delivered before P8R begins.
+
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
 amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
@@ -1012,6 +1093,9 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | Read-only P9 rollback mutates production while restoring a backup | Roll back only application revision/configuration; production backups are evidence and are never restored under current authority. |
 | Git delivery triggers an undeclared Preview or Production deploy | Pre-delivery downstream-effect inspection and direct stage-specific deployment authority with evidence, or verified suppression. |
 | Public API leaks sensitive columns | Hard allow-list and privacy tests. |
+| Interview answers leak or persist | Volatile browser-memory processing only; prohibit answer-bearing storage, requests, URLs, logs, cookies, IndexedDB, and analytics, with adversarial tests. |
+| Matching heuristics hide viable awards | Hard gates require typed accepted facts; unknown/free-text facts remain visible as possible matches with reasons. |
+| Restoring the old page regresses the accepted catalog | Integrate P8R with the canonical P7 model and existing cards/filters/export; never revert the P7 commit wholesale. |
 | Dependency vulnerabilities remain hidden by green tests | P1 inventory, P7 remediation/exposure review, and no unresolved critical/high exploitable finding at launch. |
 
 ## 16. Completion reporting
