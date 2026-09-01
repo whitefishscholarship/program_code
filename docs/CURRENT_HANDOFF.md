@@ -5,55 +5,57 @@ Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8R replacement remediation — first candidate rejected
+## P8R delivery closure — PASS; P9 not started
 
-- P8R is the only stage executed in this worktree. Its exact live baseline is
-  `208a94b43a571109a1dac217b584e0e200ccd681`, the Revision 8 delivery-closure merge.
-  The isolated branch is `codex/p8r-interview-restoration` in
-  `/private/tmp/program_code-p8r`; the original checkout remains untouched.
-- The complete browser/test matrix was committed before product implementation as
-  `b580778`. Technical implementation is anchored at `61bfc98`: an interview-first
-  entry, volatile-memory validated answers, an answer-independent GET-only catalog
-  client, a pure typed matcher, visible match/possible/conflict reasons, retained P7
-  cards/filters/sort/links/export, and edit/reset/empty/error recovery.
-- Fresh-context reviewer `/root/p8r_fresh_review` rejected exact first candidate
-  `c9e8d20155fb5cbd3d87f422ae104a14b264c930` at `2026-09-01T21:42:33Z` with
-  `C0/H2/M1/L0`. It found hard exclusions from unaccepted legacy/manual-review fields,
-  unmodeled eligibility promoted to match, and unsupported amount ranking. That
-  candidate is permanently rejected and must never be attested or delivered.
-- The replacement hard-excludes only when an award-bound field-specific accepted-
-  public-evidence record exactly supports minimum GPA, school type, or closed/
-  unavailable cycle state. Missing, ambiguous, manual-review, provenance-free, and
-  unmodeled facts remain possible. Application-method preference ranks only with the
-  same field-specific authority; legacy amount no longer ranks. P8R does not import the
-  legacy heuristic processor as matching truth.
-- The accepted 192-award catalog reconciles with 217 sources, 21 portals, four
-  application groups, 192 cycles, zero active cycles, 192 unknown cycles, and a minimum
-  71 observed recipient slots. P8R tests retain every award with no duplicate or loss.
-- The complete replacement rerun passed all 30 declared browser cells at 360x800,
-  768x1024, and 1440x900, superseding the rejected candidate's browser result. The browser
-  record covers required/optional answers, back/edit/reset/reload, typed conflicts,
-  unknown preservation, reasons/ranking, zero/error recovery, matched filters/sort/
-  official links/export, browse-all regression, focus/live-status, and overflow.
-- Replacement locked install, focused P8R tests, typecheck, complete P0-P8/P8R suite,
-  exact Turbopack production build, full and production-only audits, whitespace, and the
-  30-cell browser matrix pass. Both audits reported zero vulnerabilities. The expected
-  pre-attestation plan check reported only the absent P8R manifest and committed review
-  pair. Initial exact-build attempts hit an environment-only local-worker port error;
-  the unchanged exact command passed after moving generated `.next` cache aside.
-- No interview answer is present in evidence or a screenshot. Runtime answers remain
-  only in React component memory; reset and reload clear them. Static tests reject
-  storage, cookie, IndexedDB, request-body, URL/history, logging, analytics, legacy-
-  processor, and answer-bearing export paths.
-- The P8R state transition is prospective until an immutable candidate is manifest-
-  bound, a fresh-context read-only reviewer reports C0/H0 with every medium/low finding
-  dispositioned, and its direct child adds exactly `docs/evidence/P8R-manifest.json`
-  and `docs/reviews/P8R.json`. Do not push, open a PR, merge, or begin P9 before those
-  gates. After P8R delivery, P9 remains planned and separately blocked on its complete
-  P9 entry prerequisites, including the governed `P9-IDENTITY-PINS` path.
-- No spreadsheet was accessed or mutated. No scholarship fact, P8 schedule, production
-  source/configuration, deployment configuration, form/application, applicant data,
-  analytics, provider, paid/destructive action, or P9/P9-IDENTITY-PINS work occurred.
+- Immutable replacement candidate `a3ed84d116a32f67034902a1ce55e7b5c12bf4bf`
+  was independently accepted `C0/H0/M0/L0` against manifest SHA-256
+  `bd286858f7e557ea710112cb9166df9e6c371ed1ffd6244925471b8f1462f719`.
+  Direct-child attestation `af3b4dd63c505b458ff6f5a29ca201b8be9bf60a` added exactly
+  `docs/evidence/P8R-manifest.json` and `docs/reviews/P8R.json`. The rejected first
+  candidate `c9e8d20155fb5cbd3d87f422ae104a14b264c930` remains historical only and was
+  never attested or delivered.
+- PR #29 preserved exact base `208a94b43a571109a1dac217b584e0e200ccd681` and exact
+  head `af3b4dd63c505b458ff6f5a29ca201b8be9bf60a`. PR CI run `33565054106`
+  passed in 2m56s. Vercel Preview was blocked by the existing author-access condition;
+  the Preview-comment check passed. The blocked Preview is not an application-health
+  result.
+- PR #29 merged by the repository's merge-commit convention at
+  `38574eb22e12f6289ca5be8eef85cdb9be9feb03` on 2026-09-01. Its parents are exact
+  baseline `208a94b...` and exact attestation `af3b4dd...`.
+- Post-merge main CI run `33565348757` passed in 2m09s: locked install, plan check,
+  typecheck, the complete P0-P8/P8R suite, and exact production build. GitHub's commit
+  status for the exact merge reports Vercel `success` with description `Deployment has
+  completed` at `2026-09-01T22:15:55Z`. No direct Vercel access or protected
+  application-health smoke was available, so only GitHub-reported Production deployment
+  completion is verified.
+- The original attestation branch remains exact remote tip `af3b4dd...`; it was not
+  amended or appended. The accepted 192-award catalog reconciles with 217 sources, 21
+  portals, four application groups, 192 cycles, zero active cycles, 192 unknown cycles,
+  and a minimum 71 observed recipient slots. All accepted-catalog awards remain possible
+  where no award-bound field-specific accepted authority exists; explicit synthetic
+  authority tests reconcile two matches, four possible matches, and one conflict.
+- All 30 replacement browser cells passed at 360x800, 768x1024, and 1440x900. Answers
+  remain only in volatile React component memory; reset and reload clear them. Static and
+  runtime tests reject answer storage, cookies, IndexedDB, request bodies, URLs/history,
+  logs, analytics, evidence/screenshots, decision exports, and legacy-processor matching.
+- No spreadsheet was accessed, configured, or mutated. No scholarship fact, P8 schedule,
+  production source/configuration, deployment configuration, form/application, applicant
+  data, analytics, provider, paid/destructive action, or P9/P9-IDENTITY-PINS work occurred.
+  P8 remains accepted with its schedule disabled. P9 is next-permitted state only and
+  remains planned and unstarted; do not begin it without satisfying its complete entry
+  prerequisites and separate kickoff.
+- Live scholarship freshness and protected application-health smoke remain unverified.
+  Adjacent non-blocking environment warnings remain: Next's middleware-file deprecation,
+  local `tsx` IPC restrictions, one generated `.next` cache port issue cleared by a clean
+  rebuild, and GitHub Actions forcing Node-20-targeted actions onto Node 24. None blocked
+  local verification, PR CI, main CI, or GitHub-reported deployment completion.
+
+## Historical P8R candidate checkpoint
+
+The delivery closure above supersedes the pre-delivery checkpoint. The authoritative
+objective, rejected-candidate history, verification, browser and privacy evidence,
+manifest, and review remain in `docs/evidence/P8R.md`,
+`docs/evidence/P8R-manifest.json`, and `docs/reviews/P8R.json`.
 
 ## Plan Revision 8 delivery closure — PASS; P8R not started
 
