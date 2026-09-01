@@ -5,6 +5,47 @@ Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## P8R prospective acceptance — review and attestation pending
+
+- P8R is the only stage executed in this worktree. Its exact live baseline is
+  `208a94b43a571109a1dac217b584e0e200ccd681`, the Revision 8 delivery-closure merge.
+  The isolated branch is `codex/p8r-interview-restoration` in
+  `/private/tmp/program_code-p8r`; the original checkout remains untouched.
+- The complete browser/test matrix was committed before product implementation as
+  `b580778`. Technical implementation is anchored at `61bfc98`: an interview-first
+  entry, volatile-memory validated answers, an answer-independent GET-only catalog
+  client, a pure typed matcher, visible match/possible/conflict reasons, retained P7
+  cards/filters/sort/links/export, and edit/reset/empty/error recovery.
+- Hard exclusion is limited to typed structured minimum-GPA or school-type conflicts
+  and accepted closed/unavailable public cycle states. Missing facts remain possible;
+  application-method preference changes ordering only. P8R does not import the legacy
+  heuristic processor as matching truth.
+- The accepted 192-award catalog reconciles with 217 sources, 21 portals, four
+  application groups, 192 cycles, zero active cycles, 192 unknown cycles, and a minimum
+  71 observed recipient slots. P8R tests retain every award with no duplicate or loss.
+- All 30 declared browser cells passed at 360x800, 768x1024, and 1440x900. The browser
+  record covers required/optional answers, back/edit/reset/reload, typed conflicts,
+  unknown preservation, reasons/ranking, zero/error recovery, matched filters/sort/
+  official links/export, browse-all regression, focus/live-status, and overflow.
+- Locked install, focused P8R tests, plan validation before the prospective state
+  transition, typecheck, the complete P0-P8/P8R suite, exact Turbopack production build,
+  full and production-only audits, and whitespace validation passed. Both audits
+  reported zero current advisory matches. Exact final candidate verification and the
+  expected pre-attestation plan result will be recorded in `docs/evidence/P8R.md`.
+- No interview answer is present in evidence or a screenshot. Runtime answers remain
+  only in React component memory; reset and reload clear them. Static tests reject
+  storage, cookie, IndexedDB, request-body, URL/history, logging, analytics, legacy-
+  processor, and answer-bearing export paths.
+- The P8R state transition is prospective until an immutable candidate is manifest-
+  bound, a fresh-context read-only reviewer reports C0/H0 with every medium/low finding
+  dispositioned, and its direct child adds exactly `docs/evidence/P8R-manifest.json`
+  and `docs/reviews/P8R.json`. Do not push, open a PR, merge, or begin P9 before those
+  gates. After P8R delivery, P9 remains planned and separately blocked on its complete
+  P9 entry prerequisites, including the governed `P9-IDENTITY-PINS` path.
+- No spreadsheet was accessed or mutated. No scholarship fact, P8 schedule, production
+  source/configuration, deployment configuration, form/application, applicant data,
+  analytics, provider, paid/destructive action, or P9/P9-IDENTITY-PINS work occurred.
+
 ## Plan Revision 8 delivery closure — PASS; P8R not started
 
 - Immutable candidate `0a48fe710b7513c551745967eeed73c355de2433` was independently

@@ -3,7 +3,7 @@
   "stageId": "P8R",
   "baselineCommit": "208a94b43a571109a1dac217b584e0e200ccd681",
   "declaredBeforeImplementation": true,
-  "status": "declared",
+  "status": "verified",
   "viewports": [
     { "id": "mobile", "width": 360, "height": 800 },
     { "id": "tablet", "width": 768, "height": 1024 },
@@ -219,5 +219,25 @@
     }
   ],
   "acceptedExclusions": [],
-  "results": []
+  "verifiedAt": "2026-09-01T21:27:06Z",
+  "results": [
+    {
+      "kind": "browser",
+      "status": "pass",
+      "declaredCells": 30,
+      "passedCells": 30,
+      "failedCells": 0,
+      "evidencePath": "docs/evidence/P8R-browser.json"
+    },
+    {
+      "kind": "matcher-and-privacy",
+      "status": "pass",
+      "command": "npm run p8r:test",
+      "catalogAwards": 192,
+      "evidencePaths": [
+        "docs/evidence/P8R-matching.json",
+        "docs/evidence/P8R-privacy.json"
+      ]
+    }
+  ]
 }

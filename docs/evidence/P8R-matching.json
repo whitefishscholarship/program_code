@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "verifiedAt": "2026-09-01T21:27:06Z",
+  "command": "npm run p8r:test",
+  "status": "pass",
+  "studentAnswersRecorded": false,
+  "acceptedCatalog": {
+    "awards": 192,
+    "sources": 217,
+    "portals": 21,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "activeCycles": 0,
+    "unknownCycles": 192,
+    "minimumObservedRecipientSlots": 71
+  },
+  "deterministicTestOutcome": {
+    "total": 192,
+    "match": 20,
+    "possibleMatch": 144,
+    "knownConflict": 28,
+    "lostAwards": 0,
+    "duplicateAwards": 0
+  },
+  "hardExclusionAllowlist": [
+    "structured minimum GPA conflict",
+    "structured school-type conflict",
+    "accepted closed cycle state",
+    "accepted unavailable cycle state"
+  ],
+  "rankOnlyPreferences": [
+    "typed application mode"
+  ],
+  "regressionsRejected": [
+    "Non-Renewing substring classification",
+    "year-2001 deadline fallback",
+    "default-Montana exclusion",
+    "free-text identity hard gate",
+    "free-text health hard gate",
+    "missing structured fact exclusion",
+    "legacy heuristic processor import"
+  ],
+  "publicResponseFields": [
+    "counts",
+    "results"
+  ],
+  "publicResultFields": [
+    "award",
+    "decision",
+    "reasons"
+  ],
+  "publicReasonFields": [
+    "code",
+    "kind",
+    "message"
+  ]
+}
