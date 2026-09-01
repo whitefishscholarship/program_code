@@ -22,12 +22,14 @@
   "supportedAnswerHardGates": [
     {
       "id": "minimum_gpa",
-      "acceptedFact": "eligibility.minimumGpa",
+      "acceptedFact": "field-specific accepted public minimum-GPA evidence bound to this award",
+      "authorityRequired": true,
       "unknownBehavior": "possible_match"
     },
     {
       "id": "school_type",
-      "acceptedFact": "eligibility.schoolTypes",
+      "acceptedFact": "field-specific accepted public school-type evidence bound to this award",
+      "authorityRequired": true,
       "unknownBehavior": "possible_match"
     }
   ],
@@ -36,7 +38,11 @@
     "unavailable_cycle"
   ],
   "rankOnlyPreferences": [
-    "application_mode"
+    {
+      "id": "application_mode",
+      "authorityRequired": true,
+      "unknownBehavior": "no_preference_rank"
+    }
   ],
   "prohibitedAnswerChannels": [
     "sessionStorage",
@@ -88,8 +94,8 @@
       "kind": "visual",
       "viewports": ["mobile", "tablet", "desktop"],
       "requirements": [
-        "typed GPA and school-type conflicts are visible known conflicts",
-        "missing GPA or school-type facts remain possible matches",
+        "typed GPA and school-type conflicts are visible known conflicts only when exact field-specific accepted authority exists",
+        "missing, ambiguous, manual-review, unmodeled, or provenance-free GPA and school-type facts remain possible matches",
         "unknown cycle state is not labeled open",
         "no residence, identity, health, hardship, affiliation, renewal, deadline, or application-text substring becomes an answer hard gate"
       ]
@@ -101,7 +107,7 @@
       "requirements": [
         "match, possible-match, and known-conflict counts are separate",
         "every displayed decision has student-readable reasons",
-        "rank-only application preference is identified as preference rather than eligibility",
+        "rank-only application preference is identified as preference rather than eligibility and applies only where field-specific accepted authority exists",
         "same answers and catalog produce the same order"
       ]
     },
@@ -167,7 +173,9 @@
         "reject year-2001 deadline fallback",
         "reject default-Montana exclusion",
         "reject identity and health free-text hard gates",
-        "exercise every supported hard gate, unknown preservation, public-state conflicts, deterministic ordering, and rank-only preferences"
+        "exercise every supported hard gate, field-specific authority requirement, unknown preservation, public-state conflicts, deterministic ordering, and rank-only preferences",
+        "reject hard exclusions from manual-review or provenance-free legacy structured fields",
+        "keep unmodeled audience, focus, residence, identity, health, hardship, affiliation, renewal, deadline, and application text possible"
       ]
     },
     {
@@ -219,7 +227,7 @@
     }
   ],
   "acceptedExclusions": [],
-  "verifiedAt": "2026-09-01T21:27:06Z",
+  "verifiedAt": "2026-09-01T21:57:41Z",
   "results": [
     {
       "kind": "browser",

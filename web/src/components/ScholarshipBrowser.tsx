@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import InterviewWizard from '@/components/InterviewWizard';
 import { awardCsvDataUri } from '@/lib/export';
 import {
+  buildSyntheticMatrixMatchFacts,
   matchStudentAwards,
   type AwardMatchResult,
   type InterviewAnswers,
@@ -119,7 +120,11 @@ export default function ScholarshipBrowser() {
 
   const matching = useMemo(() => {
     if (!catalog || !answers) return null;
-    return matchStudentAwards(catalog.awards, answers);
+    const acceptedFacts = process.env.NODE_ENV !== 'production'
+      && catalog.catalogRevision === 'f'.repeat(64)
+      ? buildSyntheticMatrixMatchFacts(catalog.awards)
+      : {};
+    return matchStudentAwards(catalog.awards, answers, acceptedFacts);
   }, [answers, catalog]);
 
   const matchByAwardId = useMemo(() => new Map(
@@ -226,7 +231,7 @@ export default function ScholarshipBrowser() {
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Private scholarship interview</p>
           <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer two short steps. We&apos;ll compare only typed public facts, show why each award appears, and keep uncertain eligibility visible for you to verify.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer two short steps. We&apos;ll use only field-specific accepted facts, show why each award appears, and keep uncertain eligibility visible for you to verify.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the private interview</button>
             <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
@@ -234,7 +239,7 @@ export default function ScholarshipBrowser() {
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <PromiseCard title="Temporary by design">Answers live only in this page&apos;s memory and disappear on reload.</PromiseCard>
-          <PromiseCard title="Conservative matching">Missing or free-text facts never become a silent exclusion.</PromiseCard>
+          <PromiseCard title="Conservative matching">Unaccepted, missing, unmodeled, or free-text facts never become a silent exclusion.</PromiseCard>
           <PromiseCard title="Transparent results">Every decision includes reasons and a link back to the official source when available.</PromiseCard>
         </div>
       </section>
@@ -271,7 +276,7 @@ export default function ScholarshipBrowser() {
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Your private results</p>
               <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">Scholarship matches with reasons.</h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">A possible match means a required public fact is missing—not that you are ineligible. Always confirm details on the official source.</p>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">A possible match means accepted field evidence is incomplete or another requirement may be unmodeled—not that you are ineligible. Always confirm details on the official source.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               <button type="button" onClick={() => beginInterview(true)} className="rounded-xl border border-teal-800 bg-white px-4 py-3 font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Edit answers</button>

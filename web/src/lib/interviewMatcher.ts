@@ -21,7 +21,13 @@ export const INTERVIEW_APPLICATION_MODES = [
   'offline',
 ] as const;
 
+const MATCH_FACT_AUTHORITIES = [
+  'accepted_public_evidence',
+  'synthetic_matrix_fixture',
+] as const;
+
 const uniqueValues = (values: readonly string[]) => new Set(values).size === values.length;
+const factAuthority = z.enum(MATCH_FACT_AUTHORITIES);
 
 export const InterviewAnswersSchema = z.strictObject({
   gpa: z.number().finite().min(0).max(4),
@@ -36,7 +42,30 @@ export const InterviewAnswersSchema = z.strictObject({
     .refine(uniqueValues, 'Application preferences must not repeat.'),
 });
 
+export const AcceptedAwardMatchFactsSchema = z.strictObject({
+  awardPublicId: z.string().regex(/^award-[a-f0-9]{12}$/),
+  minimumGpa: z.strictObject({ value: z.number().finite().min(0).max(4), authority: factAuthority }).nullable(),
+  schoolTypes: z.strictObject({
+    values: z.array(z.enum(INTERVIEW_SCHOOL_TYPES)).min(1).max(INTERVIEW_SCHOOL_TYPES.length).refine(uniqueValues),
+    authority: factAuthority,
+  }).nullable(),
+  cycleStatus: z.strictObject({
+    value: z.enum(['active', 'upcoming', 'closed', 'unavailable']),
+    authority: factAuthority,
+  }).nullable(),
+  applicationMode: z.strictObject({
+    value: z.enum(INTERVIEW_APPLICATION_MODES),
+    authority: factAuthority,
+  }).nullable(),
+  eligibilityDimensionsComplete: z.strictObject({
+    value: z.literal(true),
+    authority: factAuthority,
+  }).nullable(),
+});
+
 export type InterviewAnswers = z.infer<typeof InterviewAnswersSchema>;
+export type AcceptedAwardMatchFacts = z.infer<typeof AcceptedAwardMatchFactsSchema>;
+export type AcceptedMatchFactsByAwardId = Readonly<Record<string, AcceptedAwardMatchFacts>>;
 export type MatchDecision = 'match' | 'possible_match' | 'known_conflict';
 
 export const PUBLIC_MATCH_REASON_FIELDS = ['code', 'kind', 'message'] as const;
@@ -47,16 +76,19 @@ export type MatchReason = {
   code:
     | 'gpa_meets_minimum'
     | 'gpa_below_minimum'
-    | 'gpa_not_published'
+    | 'gpa_not_accepted'
     | 'school_type_matches'
     | 'school_type_conflict'
-    | 'school_type_not_published'
+    | 'school_type_not_accepted'
     | 'cycle_active'
     | 'cycle_upcoming'
     | 'cycle_closed'
     | 'cycle_unavailable'
     | 'cycle_not_verified'
-    | 'preferred_application_mode';
+    | 'eligibility_dimensions_accepted'
+    | 'eligibility_not_fully_modeled'
+    | 'preferred_application_mode'
+    | 'application_mode_not_accepted';
   kind: 'confirmed_match' | 'known_conflict' | 'verification_needed' | 'preference';
   message: string;
 };
@@ -81,90 +113,123 @@ type RankedResult = AwardMatchResult & {
   decisionRank: number;
   preferenceRank: number;
   confirmedRank: number;
-  amountRank: number;
 };
 
-function evaluateAward(awardValue: StudentAward, answersValue: InterviewAnswers): RankedResult {
+function sorted(values: readonly string[]): string[] {
+  return [...values].sort((left, right) => left.localeCompare(right));
+}
+
+function validatedFacts(
+  award: StudentAward,
+  factsValue: AcceptedAwardMatchFacts | undefined,
+): AcceptedAwardMatchFacts | null {
+  if (!factsValue) return null;
+  const facts = AcceptedAwardMatchFactsSchema.parse(factsValue);
+  if (facts.awardPublicId !== award.publicId) throw new Error('Accepted match facts target the wrong award.');
+  if (facts.minimumGpa && facts.minimumGpa.value !== award.eligibility.minimumGpa) {
+    throw new Error('Accepted minimum-GPA fact does not match the public award.');
+  }
+  if (facts.schoolTypes && JSON.stringify(sorted(facts.schoolTypes.values)) !== JSON.stringify(sorted(award.eligibility.schoolTypes))) {
+    throw new Error('Accepted school-type facts do not match the public award.');
+  }
+  if (facts.cycleStatus && facts.cycleStatus.value !== award.cycle.status) {
+    throw new Error('Accepted cycle-status fact does not match the public award.');
+  }
+  if (facts.applicationMode && facts.applicationMode.value !== award.application.mode) {
+    throw new Error('Accepted application-mode fact does not match the public award.');
+  }
+  return facts;
+}
+
+function evaluateAward(
+  awardValue: StudentAward,
+  answersValue: InterviewAnswers,
+  factsValue: AcceptedAwardMatchFacts | undefined,
+): RankedResult {
   const award = StudentAwardSchema.parse(awardValue);
   const answers = InterviewAnswersSchema.parse(answersValue);
+  const facts = validatedFacts(award, factsValue);
   const reasons: MatchReason[] = [];
   let conflicts = 0;
   let unknownEligibilityFacts = 0;
   let confirmedEligibilityFacts = 0;
 
-  if (award.eligibility.minimumGpa === null) {
+  if (!facts?.minimumGpa) {
     unknownEligibilityFacts += 1;
     reasons.push({
-      code: 'gpa_not_published',
+      code: 'gpa_not_accepted',
       kind: 'verification_needed',
-      message: 'This award does not publish a structured minimum GPA in the catalog. Verify the official source.',
+      message: 'P8R has no accepted field-specific GPA evidence it can use for matching this award. Verify the official source.',
     });
-  } else if (answers.gpa < award.eligibility.minimumGpa) {
+  } else if (answers.gpa < facts.minimumGpa.value) {
     conflicts += 1;
     reasons.push({
       code: 'gpa_below_minimum',
       kind: 'known_conflict',
-      message: 'Your GPA is below the structured minimum GPA published for this award.',
+      message: 'Your GPA is below the accepted structured minimum GPA for this award.',
     });
   } else {
     confirmedEligibilityFacts += 1;
     reasons.push({
       code: 'gpa_meets_minimum',
       kind: 'confirmed_match',
-      message: 'Your GPA meets the structured minimum GPA published for this award.',
+      message: 'Your GPA meets the accepted structured minimum GPA for this award.',
     });
   }
 
-  if (award.eligibility.schoolTypes.length === 0) {
+  if (!facts?.schoolTypes) {
     unknownEligibilityFacts += 1;
     reasons.push({
-      code: 'school_type_not_published',
+      code: 'school_type_not_accepted',
       kind: 'verification_needed',
-      message: 'This award does not publish a structured school-type rule in the catalog. Verify the official source.',
+      message: 'P8R has no accepted field-specific school-type evidence it can use for matching this award. Verify the official source.',
     });
-  } else if (!award.eligibility.schoolTypes.some((schoolType) => answers.schoolTypes.includes(schoolType))) {
+  } else if (!facts.schoolTypes.values.some((schoolType) => answers.schoolTypes.includes(schoolType))) {
     conflicts += 1;
     reasons.push({
       code: 'school_type_conflict',
       kind: 'known_conflict',
-      message: 'Your selected school type does not overlap the structured school types published for this award.',
+      message: 'Your selected school type does not overlap the accepted structured school types for this award.',
     });
   } else {
     confirmedEligibilityFacts += 1;
     reasons.push({
       code: 'school_type_matches',
       kind: 'confirmed_match',
-      message: 'Your selected school type overlaps a structured school type published for this award.',
+      message: 'Your selected school type overlaps an accepted structured school type for this award.',
     });
   }
 
-  if (award.cycle.status === 'closed') {
+  const acceptedCycle = facts?.cycleStatus?.value;
+  if (acceptedCycle === 'closed') {
     conflicts += 1;
     reasons.push({
       code: 'cycle_closed',
       kind: 'known_conflict',
       message: 'The accepted public cycle state is closed. Check the official source for a future cycle.',
     });
-  } else if (award.cycle.status === 'unavailable') {
+  } else if (acceptedCycle === 'unavailable') {
     conflicts += 1;
     reasons.push({
       code: 'cycle_unavailable',
       kind: 'known_conflict',
       message: 'The accepted public cycle state is unavailable. Check the official source before applying.',
     });
-  } else if (award.cycle.status === 'active') {
+  } else if (acceptedCycle === 'active') {
     reasons.push({
       code: 'cycle_active',
       kind: 'confirmed_match',
       message: 'The accepted public cycle state is open now.',
     });
-  } else if (award.cycle.status === 'upcoming') {
+  } else if (acceptedCycle === 'upcoming') {
+    unknownEligibilityFacts += 1;
     reasons.push({
       code: 'cycle_upcoming',
       kind: 'verification_needed',
       message: 'The accepted public cycle state is upcoming. Confirm its opening date on the official source.',
     });
   } else {
+    unknownEligibilityFacts += 1;
     reasons.push({
       code: 'cycle_not_verified',
       kind: 'verification_needed',
@@ -172,14 +237,36 @@ function evaluateAward(awardValue: StudentAward, answersValue: InterviewAnswers)
     });
   }
 
-  const preferred = answers.preferredApplicationModes.includes(
-    award.application.mode as Exclude<ApplicationMode, 'unknown'>,
-  );
+  if (facts?.eligibilityDimensionsComplete) {
+    confirmedEligibilityFacts += 1;
+    reasons.push({
+      code: 'eligibility_dimensions_accepted',
+      kind: 'confirmed_match',
+      message: 'The accepted evidence marks the modeled eligibility dimensions complete for this synthetic or reviewed fact set.',
+    });
+  } else {
+    unknownEligibilityFacts += 1;
+    reasons.push({
+      code: 'eligibility_not_fully_modeled',
+      kind: 'verification_needed',
+      message: 'Other eligibility requirements may not be fully modeled. Verify audience, focus, residence, identity, health, hardship, affiliation, and other requirements on the official source.',
+    });
+  }
+
+  const acceptedApplicationMode = facts?.applicationMode?.value;
+  const preferred = acceptedApplicationMode !== undefined
+    && answers.preferredApplicationModes.includes(acceptedApplicationMode as Exclude<ApplicationMode, 'unknown'>);
   if (preferred) {
     reasons.push({
       code: 'preferred_application_mode',
       kind: 'preference',
-      message: 'This application format matches an optional preference. Preferences affect order, not eligibility.',
+      message: 'This accepted application format matches an optional preference. Preferences affect order, not eligibility.',
+    });
+  } else if (answers.preferredApplicationModes.length > 0 && !acceptedApplicationMode) {
+    reasons.push({
+      code: 'application_mode_not_accepted',
+      kind: 'verification_needed',
+      message: 'This application format is not backed by accepted field-specific evidence, so your optional preference did not affect its rank.',
     });
   }
 
@@ -196,25 +283,41 @@ function evaluateAward(awardValue: StudentAward, answersValue: InterviewAnswers)
     decisionRank: { match: 0, possible_match: 1, known_conflict: 2 }[decision],
     preferenceRank: preferred ? 0 : 1,
     confirmedRank: -confirmedEligibilityFacts,
-    amountRank: -(award.amount.maximum ?? award.amount.minimum ?? -1),
   };
+}
+
+export function buildSyntheticMatrixMatchFacts(
+  awards: readonly StudentAward[],
+): AcceptedMatchFactsByAwardId {
+  return Object.fromEntries(awards.map((awardValue) => {
+    const award = StudentAwardSchema.parse(awardValue);
+    const authority = 'synthetic_matrix_fixture' as const;
+    return [award.publicId, AcceptedAwardMatchFactsSchema.parse({
+      awardPublicId: award.publicId,
+      minimumGpa: award.eligibility.minimumGpa === null ? null : { value: award.eligibility.minimumGpa, authority },
+      schoolTypes: award.eligibility.schoolTypes.length === 0 ? null : { values: award.eligibility.schoolTypes, authority },
+      cycleStatus: award.cycle.status === 'unknown' ? null : { value: award.cycle.status, authority },
+      applicationMode: award.application.mode === 'unknown' ? null : { value: award.application.mode, authority },
+      eligibilityDimensionsComplete: { value: true, authority },
+    })];
+  }));
 }
 
 export function matchStudentAwards(
   awardsValue: readonly StudentAward[],
   answersValue: InterviewAnswers,
+  acceptedFactsByAwardId: AcceptedMatchFactsByAwardId = {},
 ): MatchResponse {
   const answers = InterviewAnswersSchema.parse(answersValue);
   const results = awardsValue
-    .map((award) => evaluateAward(award, answers))
+    .map((award) => evaluateAward(award, answers, acceptedFactsByAwardId[award.publicId]))
     .sort((left, right) =>
       left.decisionRank - right.decisionRank
       || left.preferenceRank - right.preferenceRank
       || left.confirmedRank - right.confirmedRank
-      || left.amountRank - right.amountRank
       || left.award.name.localeCompare(right.award.name)
       || left.award.publicId.localeCompare(right.award.publicId))
-    .map(({ decisionRank: _decisionRank, preferenceRank: _preferenceRank, confirmedRank: _confirmedRank, amountRank: _amountRank, ...result }) => result);
+    .map(({ decisionRank: _decisionRank, preferenceRank: _preferenceRank, confirmedRank: _confirmedRank, ...result }) => result);
 
   return {
     counts: {

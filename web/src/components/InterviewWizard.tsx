@@ -106,7 +106,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
         <div className="mt-7 space-y-8">
           <label htmlFor="student-gpa" className="block text-base font-bold text-slate-900">
             Unweighted GPA <span className="text-rose-700">(required)</span>
-            <span className="mt-1 block text-sm font-normal leading-6 text-slate-600">A structured published minimum can create a known conflict. Missing scholarship GPA facts never exclude an award.</span>
+            <span className="mt-1 block text-sm font-normal leading-6 text-slate-600">Only a field-specific accepted minimum can create a known conflict. Unaccepted or missing GPA facts never exclude an award.</span>
             <input
               id="student-gpa"
               name="student-gpa"
@@ -126,7 +126,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
 
           <fieldset aria-describedby={error ? 'interview-error' : undefined}>
             <legend className="text-base font-bold text-slate-900">School types you are considering <span className="text-rose-700">(choose at least one)</span></legend>
-            <p className="mt-1 text-sm leading-6 text-slate-600">Only structured school-type facts can create a known conflict.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">Only field-specific accepted school-type facts can create a known conflict.</p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
               {INTERVIEW_SCHOOL_TYPES.map((value) => (
                 <label key={value} className={`flex cursor-pointer items-center rounded-xl border p-4 font-semibold transition-colors ${schoolTypes.includes(value) ? 'border-teal-700 bg-teal-50 text-teal-950' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}>
@@ -140,7 +140,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
       ) : (
         <fieldset className="mt-7">
           <legend className="text-base font-bold text-slate-900">Application formats you prefer <span className="font-normal text-slate-500">(optional)</span></legend>
-          <p className="mt-1 text-sm leading-6 text-slate-600">These choices change ranking only. They never decide whether you qualify.</p>
+            <p className="mt-1 text-sm leading-6 text-slate-600">These choices change ranking only when the award&apos;s application format has accepted field evidence. They never decide whether you qualify.</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {INTERVIEW_APPLICATION_MODES.map((value) => (
               <label key={value} className={`flex cursor-pointer items-start rounded-xl border p-4 font-semibold transition-colors ${preferredApplicationModes.includes(value) ? 'border-teal-700 bg-teal-50 text-teal-950' : 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50'}`}>

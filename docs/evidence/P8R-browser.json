@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P8R",
-  "executedAt": "2026-09-01T21:27:06Z",
+  "executedAt": "2026-09-01T21:57:41Z",
   "browserSurface": "Codex in-app browser",
   "target": "local Next.js development server",
   "studentAnswersRecorded": false,
@@ -81,11 +81,12 @@
   ],
   "observations": [
     "The interview is the primary call to action and browse-all remains explicit.",
-    "Required validation, optional rank-only preferences, back, edit, reset, reload, empty, and error recovery passed.",
+    "Separate required GPA and school-type validation, optional rank-only preferences, back, edit, reset, reload, empty, and error recovery passed.",
     "The matrix rendered two structured matches, four possible matches, and one known conflict without dropping a record.",
     "A zero-recommended case retained all seven records in the known-conflict view.",
     "Search, status and application filters, sorting, safe official links, and visible-result CSV export passed.",
     "The accepted catalog retry exposed 192 awards after the deterministic error state.",
-    "Skip navigation, named controls, heading focus transitions, live result status, and horizontal-overflow checks passed at every viewport."
+    "Skip navigation, named controls, heading focus transitions, live result status, and horizontal-overflow checks passed at every viewport.",
+    "This complete replacement run supersedes the rejected first candidate's browser result."
   ]
 }

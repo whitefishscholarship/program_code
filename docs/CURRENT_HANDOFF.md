@@ -5,7 +5,7 @@ Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8R prospective acceptance — review and attestation pending
+## P8R replacement remediation — first candidate rejected
 
 - P8R is the only stage executed in this worktree. Its exact live baseline is
   `208a94b43a571109a1dac217b584e0e200ccd681`, the Revision 8 delivery-closure merge.
@@ -16,22 +16,31 @@ Default branch: `main`
   entry, volatile-memory validated answers, an answer-independent GET-only catalog
   client, a pure typed matcher, visible match/possible/conflict reasons, retained P7
   cards/filters/sort/links/export, and edit/reset/empty/error recovery.
-- Hard exclusion is limited to typed structured minimum-GPA or school-type conflicts
-  and accepted closed/unavailable public cycle states. Missing facts remain possible;
-  application-method preference changes ordering only. P8R does not import the legacy
-  heuristic processor as matching truth.
+- Fresh-context reviewer `/root/p8r_fresh_review` rejected exact first candidate
+  `c9e8d20155fb5cbd3d87f422ae104a14b264c930` at `2026-09-01T21:42:33Z` with
+  `C0/H2/M1/L0`. It found hard exclusions from unaccepted legacy/manual-review fields,
+  unmodeled eligibility promoted to match, and unsupported amount ranking. That
+  candidate is permanently rejected and must never be attested or delivered.
+- The replacement hard-excludes only when an award-bound field-specific accepted-
+  public-evidence record exactly supports minimum GPA, school type, or closed/
+  unavailable cycle state. Missing, ambiguous, manual-review, provenance-free, and
+  unmodeled facts remain possible. Application-method preference ranks only with the
+  same field-specific authority; legacy amount no longer ranks. P8R does not import the
+  legacy heuristic processor as matching truth.
 - The accepted 192-award catalog reconciles with 217 sources, 21 portals, four
   application groups, 192 cycles, zero active cycles, 192 unknown cycles, and a minimum
   71 observed recipient slots. P8R tests retain every award with no duplicate or loss.
-- All 30 declared browser cells passed at 360x800, 768x1024, and 1440x900. The browser
+- The complete replacement rerun passed all 30 declared browser cells at 360x800,
+  768x1024, and 1440x900, superseding the rejected candidate's browser result. The browser
   record covers required/optional answers, back/edit/reset/reload, typed conflicts,
   unknown preservation, reasons/ranking, zero/error recovery, matched filters/sort/
   official links/export, browse-all regression, focus/live-status, and overflow.
-- Locked install, focused P8R tests, plan validation before the prospective state
-  transition, typecheck, the complete P0-P8/P8R suite, exact Turbopack production build,
-  full and production-only audits, and whitespace validation passed. Both audits
-  reported zero current advisory matches. Exact final candidate verification and the
-  expected pre-attestation plan result will be recorded in `docs/evidence/P8R.md`.
+- Replacement locked install, focused P8R tests, typecheck, complete P0-P8/P8R suite,
+  exact Turbopack production build, full and production-only audits, whitespace, and the
+  30-cell browser matrix pass. Both audits reported zero vulnerabilities. The expected
+  pre-attestation plan check reported only the absent P8R manifest and committed review
+  pair. Initial exact-build attempts hit an environment-only local-worker port error;
+  the unchanged exact command passed after moving generated `.next` cache aside.
 - No interview answer is present in evidence or a screenshot. Runtime answers remain
   only in React component memory; reset and reload clear them. Static tests reject
   storage, cookie, IndexedDB, request-body, URL/history, logging, analytics, legacy-

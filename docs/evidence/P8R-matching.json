@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P8R",
-  "verifiedAt": "2026-09-01T21:27:06Z",
+  "verifiedAt": "2026-09-01T21:57:41Z",
   "command": "npm run p8r:test",
   "status": "pass",
   "studentAnswersRecorded": false,
@@ -17,20 +17,20 @@
   },
   "deterministicTestOutcome": {
     "total": 192,
-    "match": 20,
-    "possibleMatch": 144,
-    "knownConflict": 28,
+    "match": 0,
+    "possibleMatch": 192,
+    "knownConflict": 0,
     "lostAwards": 0,
     "duplicateAwards": 0
   },
   "hardExclusionAllowlist": [
-    "structured minimum GPA conflict",
-    "structured school-type conflict",
-    "accepted closed cycle state",
-    "accepted unavailable cycle state"
+    "minimum GPA conflict backed by field-specific accepted public evidence",
+    "school-type conflict backed by field-specific accepted public evidence",
+    "closed cycle state backed by field-specific accepted public evidence",
+    "unavailable cycle state backed by field-specific accepted public evidence"
   ],
   "rankOnlyPreferences": [
-    "typed application mode"
+    "typed application mode backed by field-specific accepted public evidence"
   ],
   "regressionsRejected": [
     "Non-Renewing substring classification",
@@ -39,6 +39,9 @@
     "free-text identity hard gate",
     "free-text health hard gate",
     "missing structured fact exclusion",
+    "manual-review or provenance-free structured fact exclusion",
+    "unsupported legacy award amount ranking",
+    "unmodeled eligibility promoted to match",
     "legacy heuristic processor import"
   ],
   "publicResponseFields": [

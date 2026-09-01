@@ -1,16 +1,16 @@
 # P8R Evidence — Student Interview and Matching Restoration
 
-Status: prospective accepted-state candidate pending immutable freeze, fresh-context
-review, and direct-child attestation
+Status: replacement remediation after rejected first candidate; complete re-verification,
+same-reviewer recheck, immutable freeze, and direct-child attestation pending
 
 ## Scope and baseline
 
 - Stage: P8R only. P9 and `P9-IDENTITY-PINS` were not started.
 - Baseline: `208a94b43a571109a1dac217b584e0e200ccd681`, the live GitHub `main`
   Revision 8 delivery-closure merge observed on 2026-09-01.
-- Local `origin/main` matched that exact live GitHub API identity. Direct authenticated
-  Git transport remained unavailable during the initial check and must be restored and
-  reverified before any push; no credential or token was requested, exposed, or stored.
+- Local `origin/main` matched that exact live GitHub identity. An authenticated normal
+  Git fetch using the repository's scoped HTTPS transport also resolved that baseline;
+  no credential or token was requested, exposed, or stored.
 - Accepted P8 candidate `cc69d276c85f931499a23a5abde623bda321e0c0` and
   direct-child attestation `20eeb53c80fce4e79a689128918a12361233aa7b` remain in
   baseline history. Accepted Revision 8 candidate
@@ -30,10 +30,12 @@ component state. Back and edit preserve the current in-memory values; reset and 
 clear them.
 
 `web/src/lib/interviewMatcher.ts` is a pure typed matcher over the accepted P7
-`StudentAward` model. A typed structured minimum-GPA or school-type conflict, or an
-accepted `closed`/`unavailable` cycle state, can create a known conflict. Missing GPA or
-school-type facts remain possible matches with explicit verification reasons. Optional
-application-method choices rank only; they do not change eligibility. Free-text
+`StudentAward` model. A minimum-GPA, school-type, `closed`, or `unavailable` conflict can
+create a known conflict only when an award-bound field-specific accepted-public-evidence
+record exists and exactly matches the public award. Structured fields without that
+authority remain possible matches with explicit verification reasons. Optional
+application-method choices rank only where the same field-specific authority exists;
+they never change eligibility. Free-text
 residence, identity, health, hardship, affiliation, renewal, deadline, and application
 language never become hard gates, and the P8R path does not import the legacy heuristic
 processor.
@@ -52,13 +54,19 @@ compatibility. The accepted P7 API and `{data}` compatibility payload are unchan
 - zero active and 192 unknown cycles;
 - minimum 71 historically observed recipient slots;
 - all 192 awards returned once with zero duplicate or lost identities; and
-- deterministic test outcome of 20 structured matches, 144 possible matches, and 28
-  known conflicts without recording the synthetic test inputs in evidence.
+- deterministic accepted-catalog outcome of zero matches, 192 possible matches, and zero
+  known conflicts because the accepted P7 catalog has no field-specific accepted
+  matching-authority records; and
+- explicit synthetic-matrix outcome of two matches, four possible matches, and one known
+  conflict using award-bound test-only authority, without recording answer values in
+  evidence.
 
 Focused adversarial tests reject the legacy `Non-Renewing` substring classification,
 year-2001 deadline fallback, default-Montana exclusion, identity/health free-text hard
-gates, missing-fact exclusion, response-field expansion, catalog mutation, unstable
-ordering, answer-bearing exports, and legacy-processor coupling.
+gates, missing/manual-review/provenance-free exclusion, unmodeled eligibility promoted
+to match, unsupported legacy amount ranking, mismatched authority, response-field
+expansion, catalog mutation, unstable ordering, answer-bearing exports, and legacy-
+processor coupling.
 
 These are deterministic repository tests. They do not prove that any scholarship fact
 or current availability state is live or accurate.
@@ -77,7 +85,8 @@ required sizes, but no screenshot is retained in repository evidence.
 
 ## Browser evidence
 
-`docs/evidence/P8R-browser.json` records 30/30 passing declared visual cells:
+`docs/evidence/P8R-browser.json` records a complete replacement run with 30/30 passing
+declared visual cells. This supersedes the rejected first candidate's browser result:
 
 - 360x800: 10/10;
 - 768x1024: 10/10; and
@@ -93,7 +102,8 @@ five portals, and 13 sources; the error retry restored the accepted 192-award ca
 
 ## Verification record
 
-The matrix completed on 2026-09-01 through `2026-09-01T21:27:06Z`:
+The first candidate completed the matrix on 2026-09-01 through
+`2026-09-01T21:27:06Z`:
 
 - `npm ci` installed the locked 462-package tree and reported zero vulnerabilities;
 - `npm run p8r:test` passed 192-award matching, adversarial safety, privacy, matrix, and
@@ -109,15 +119,42 @@ The matrix completed on 2026-09-01 through `2026-09-01T21:27:06Z`:
 - `git diff --check` passed; and
 - the declared browser matrix passed 30/30 cells.
 
-The sandboxed `tsx` CLI attempt could not create its local IPC socket; the unchanged
-command passed when run outside that sandbox restriction. The build repeated the
-existing Next.js middleware-file deprecation warning; no middleware, dependency,
-lockfile, or deployment configuration was changed.
+Fresh-context reviewer `/root/p8r_fresh_review` rejected exact first candidate
+`c9e8d20155fb5cbd3d87f422ae104a14b264c930` at `2026-09-01T21:42:33Z` with
+`C0/H2/M1/L0`: legacy manual-review fields created hard exclusions, unmodeled
+eligibility could become a match, and unsupported legacy amount values influenced
+ranking. That candidate is permanently rejected and must never be attested or delivered.
+The replacement requires exact award-bound field-specific accepted authority for every
+hard exclusion and application-mode preference, leaves all unmodeled eligibility
+possible, and removes amount ranking. Focused replacement tests, typecheck, and the
+complete 30-cell replacement browser matrix pass.
 
-After the prospective accepted-state, handoff, and evidence tree is complete, the exact
-focused/full/build/audit/whitespace matrix must be rerun. `npm run plan:check` is expected
-to report only the missing P8R manifest/review direct-child attestation until those two
-accepted artifacts are added. Any other failure blocks freeze.
+Replacement re-verification completed through `2026-09-01T22:02:16Z`:
+
+- `npm ci` reinstalled the locked 462-package tree and reported zero vulnerabilities;
+- `npm run p8r:test` passed with all 192 accepted-catalog awards retained as possible,
+  plus the explicit two-match/four-possible/one-conflict synthetic authority matrix;
+- pre-attestation `npm run plan:check` reported exactly the two expected missing-
+  attestation conditions: absent `docs/evidence/P8R-manifest.json` and no committed
+  P8R manifest/review pair;
+- `npm run typecheck` and the complete `npm test` suite passed;
+- exact `npm run build` passed Next.js 16.3.3 Turbopack compilation, TypeScript, page
+  generation, and every student/admin/API route;
+- both full and production-only low-severity audits reported zero vulnerabilities;
+- `git diff --check` passed; and
+- the complete replacement browser matrix passed 30/30 cells, including separate
+  missing-GPA and missing-school-type validation at every viewport.
+
+The sandboxed `tsx` CLI attempt could not create its local IPC socket; the unchanged
+command passed when run outside that sandbox restriction. Initial exact-build attempts
+hit Turbopack's environment-only local worker port error. Moving the generated `.next`
+cache out of the worktree and rerunning the same exact command outside the sandbox passed.
+The build repeated the existing Next.js middleware-file deprecation warning; no
+middleware, dependency, lockfile, or deployment configuration was changed.
+
+The exact replacement focused/full/build/audit/whitespace matrix is complete.
+`npm run plan:check` must pass after the accepted manifest and review are added by the
+candidate's direct child. Any other failure blocks delivery.
 
 ## Boundaries and unresolved items
 
