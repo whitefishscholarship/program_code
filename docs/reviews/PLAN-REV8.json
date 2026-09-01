@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV8",
+  "reviewerTaskId": "/root/rev8_final_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-01T19:58:22Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact immutable Plan Revision 8 candidate 0a48fe710b7513c551745967eeed73c355de2433 against verified live origin/main baseline 781b62bf5fe2e6d8b9524e77d03a1ca4841a8b92, bound by docs/evidence/PLAN-REV8-manifest.json SHA-256 fa8fb8e029e1083a1c8f64cd2136630774129bef5366c00d0a3268e64a66062e, plus its prospective direct-child commit adding exactly docs/evidence/PLAN-REV8-manifest.json and docs/reviews/PLAN-REV8.json. Acceptance covers only Revision 8 governance, evidence and kickoffs, stage-lifecycle and trusted-proof compatibility validation, deterministic tests, interview-answer privacy boundaries, conservative matching rules, P8R delivery authority, and preservation of accepted P7/P8 and Revision 7/P9 controls. It does not implement P8R runtime behavior, start P9, access or mutate any spreadsheet, change deployment configuration, activate monitoring, interact with forms or applicant data, persist or transmit interview answers, contact providers, perform paid/destructive actions, weaken gates, or rewrite history.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/PLAN-REV8-manifest.json",
+  "candidateManifestSha256": "fa8fb8e029e1083a1c8f64cd2136630774129bef5366c00d0a3268e64a66062e"
+}
