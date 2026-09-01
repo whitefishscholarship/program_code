@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "baselineCommit": "208a94b43a571109a1dac217b584e0e200ccd681",
+  "declaredBeforeImplementation": true,
+  "status": "verified",
+  "viewports": [
+    { "id": "mobile", "width": 360, "height": 800 },
+    { "id": "tablet", "width": 768, "height": 1024 },
+    { "id": "desktop", "width": 1440, "height": 900 }
+  ],
+  "canonicalCounts": {
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "activeCycles": 0,
+    "unknownCycles": 192,
+    "minimumObservedRecipientSlots": 71
+  },
+  "supportedAnswerHardGates": [
+    {
+      "id": "minimum_gpa",
+      "acceptedFact": "field-specific accepted public minimum-GPA evidence bound to this award",
+      "authorityRequired": true,
+      "unknownBehavior": "possible_match"
+    },
+    {
+      "id": "school_type",
+      "acceptedFact": "field-specific accepted public school-type evidence bound to this award",
+      "authorityRequired": true,
+      "unknownBehavior": "possible_match"
+    }
+  ],
+  "supportedPublicStateConflicts": [
+    "closed_cycle",
+    "unavailable_cycle"
+  ],
+  "rankOnlyPreferences": [
+    {
+      "id": "application_mode",
+      "authorityRequired": true,
+      "unknownBehavior": "no_preference_rank"
+    }
+  ],
+  "prohibitedAnswerChannels": [
+    "sessionStorage",
+    "localStorage",
+    "cookies",
+    "IndexedDB",
+    "request bodies",
+    "URLs",
+    "logs",
+    "analytics",
+    "fixtures containing real student data",
+    "screenshots showing answer values",
+    "Git"
+  ],
+  "journeys": [
+    {
+      "id": "interview-primary-and-browse-all",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "interview is the primary student call to action",
+        "privacy boundary is visible before answering",
+        "browse-all alternative is explicit and preserves the complete canonical catalog"
+      ]
+    },
+    {
+      "id": "required-and-optional-answers",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "invalid or missing required GPA and school type are announced",
+        "valid typed required answers advance",
+        "application-mode preference is optional and labeled rank-only"
+      ]
+    },
+    {
+      "id": "back-edit-reset-and-stale-answer",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "back preserves only current in-memory answers",
+        "edit returns to the interview without transmission",
+        "reset clears answers and returns to the primary entry",
+        "reload starts with no reusable answer state"
+      ]
+    },
+    {
+      "id": "hard-gates-and-unknown-preservation",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "typed GPA and school-type conflicts are visible known conflicts only when exact field-specific accepted authority exists",
+        "missing, ambiguous, manual-review, unmodeled, or provenance-free GPA and school-type facts remain possible matches",
+        "unknown cycle state is not labeled open",
+        "no residence, identity, health, hardship, affiliation, renewal, deadline, or application-text substring becomes an answer hard gate"
+      ]
+    },
+    {
+      "id": "decision-reasons-and-deterministic-ranking",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "match, possible-match, and known-conflict counts are separate",
+        "every displayed decision has student-readable reasons",
+        "rank-only application preference is identified as preference rather than eligibility and applies only where field-specific accepted authority exists",
+        "same answers and catalog produce the same order"
+      ]
+    },
+    {
+      "id": "zero-result-and-conflict-recovery",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "zero recommended results are announced without hiding the known-conflict review path",
+        "edit-answer and browse-all recovery actions remain keyboard reachable",
+        "canonical counts remain unchanged"
+      ]
+    },
+    {
+      "id": "matched-filter-sort-links-export",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "matched and possible results retain search, status, application-method, school-type filters, and deterministic sorting",
+        "official application links keep safe external-link attributes",
+        "CSV export contains only the currently visible matched-result awards",
+        "empty filtered state can be cleared"
+      ]
+    },
+    {
+      "id": "browse-all-catalog-regression",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "award, portal, and source views remain distinct",
+        "192 awards, 21 portals, 217 sources, 4 application groups, and 192 unknown cycles reconcile",
+        "current cards, filters, sorting, official links, and full-catalog export remain available"
+      ]
+    },
+    {
+      "id": "recoverable-catalog-error",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "catalog error is announced",
+        "retry remains keyboard reachable",
+        "no stale interview result or success count is shown"
+      ]
+    },
+    {
+      "id": "keyboard-focus-and-screen-reader-status",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "skip link, interview controls, result scopes, filters, and links follow logical keyboard order",
+        "focus moves to each interview step and result heading",
+        "validation and result counts use named live status regions",
+        "decision state is not communicated by color alone"
+      ]
+    },
+    {
+      "id": "matcher-adversarial-contract",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Pure typed matcher assertions do not render a viewport.",
+      "requirements": [
+        "reject Non-Renewing substring classification",
+        "reject year-2001 deadline fallback",
+        "reject default-Montana exclusion",
+        "reject identity and health free-text hard gates",
+        "exercise every supported hard gate, field-specific authority requirement, unknown preservation, public-state conflicts, deterministic ordering, and rank-only preferences",
+        "reject hard exclusions from manual-review or provenance-free legacy structured fields",
+        "keep unmodeled audience, focus, residence, identity, health, hardship, affiliation, renewal, deadline, and application text possible"
+      ]
+    },
+    {
+      "id": "answer-channel-privacy-contract",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Storage, request, URL, logging, analytics, source-boundary, and reload-reset assertions are code and runtime contracts.",
+      "requirements": [
+        "no answer reaches storage, cookies, IndexedDB, requests, URLs, logs, analytics, fixtures with real student data, screenshots, or Git",
+        "matcher is pure and imports no legacy processor",
+        "catalog loading is answer-independent",
+        "reload and reset cannot reuse stale answers"
+      ]
+    },
+    {
+      "id": "api-schema-count-relationship-privacy",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "API/schema/allow-list and graph reconciliation assertions are transport-level.",
+      "requirements": [
+        "legacy data payload and accepted catalog schema remain compatible",
+        "public allow-lists remain exact",
+        "all award/source/portal/application-group relationships resolve",
+        "canonical counts reconcile without applicant or internal review data"
+      ]
+    },
+    {
+      "id": "admin-route-compatibility",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Admin compatibility is verified through route/build and unchanged authenticated write-path tests; the student interview never enters admin state.",
+      "requirements": [
+        "admin routes build and existing tests pass",
+        "student answers cannot reach admin actions",
+        "production spreadsheet and P9 paths remain untouched"
+      ]
+    },
+    {
+      "id": "matched-export-privacy",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Serialized CSV allow-list and formula-neutralization assertions are file-level.",
+      "requirements": [
+        "matched export uses the accepted independent P7 allow-list",
+        "export includes no decision internals or interview answers",
+        "formula-like values remain neutralized",
+        "export row count equals the visible selected result set"
+      ]
+    }
+  ],
+  "acceptedExclusions": [],
+  "verifiedAt": "2026-09-01T21:57:41Z",
+  "results": [
+    {
+      "kind": "browser",
+      "status": "pass",
+      "declaredCells": 30,
+      "passedCells": 30,
+      "failedCells": 0,
+      "evidencePath": "docs/evidence/P8R-browser.json"
+    },
+    {
+      "kind": "matcher-and-privacy",
+      "status": "pass",
+      "command": "npm run p8r:test",
+      "catalogAwards": 192,
+      "evidencePaths": [
+        "docs/evidence/P8R-matching.json",
+        "docs/evidence/P8R-privacy.json"
+      ]
+    }
+  ]
+}

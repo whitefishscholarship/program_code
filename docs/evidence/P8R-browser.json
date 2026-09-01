@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "executedAt": "2026-09-01T21:57:41Z",
+  "browserSurface": "Codex in-app browser",
+  "target": "local Next.js development server",
+  "studentAnswersRecorded": false,
+  "screenshotsRecorded": false,
+  "catalogCases": {
+    "deterministicMatrix": {
+      "awards": 7,
+      "portals": 5,
+      "sources": 13
+    },
+    "acceptedCatalogAfterErrorRetry": {
+      "awards": 192
+    }
+  },
+  "summary": {
+    "declaredVisualJourneys": 10,
+    "declaredViewports": 3,
+    "declaredCells": 30,
+    "passedCells": 30,
+    "failedCells": 0
+  },
+  "viewports": [
+    {
+      "id": "mobile",
+      "width": 360,
+      "height": 800,
+      "status": "pass",
+      "journeys": [
+        "interview-primary-and-browse-all",
+        "required-and-optional-answers",
+        "back-edit-reset-and-stale-answer",
+        "hard-gates-and-unknown-preservation",
+        "decision-reasons-and-deterministic-ranking",
+        "zero-result-and-conflict-recovery",
+        "matched-filter-sort-links-export",
+        "browse-all-catalog-regression",
+        "recoverable-catalog-error",
+        "keyboard-focus-and-screen-reader-status"
+      ]
+    },
+    {
+      "id": "tablet",
+      "width": 768,
+      "height": 1024,
+      "status": "pass",
+      "journeys": [
+        "interview-primary-and-browse-all",
+        "required-and-optional-answers",
+        "back-edit-reset-and-stale-answer",
+        "hard-gates-and-unknown-preservation",
+        "decision-reasons-and-deterministic-ranking",
+        "zero-result-and-conflict-recovery",
+        "matched-filter-sort-links-export",
+        "browse-all-catalog-regression",
+        "recoverable-catalog-error",
+        "keyboard-focus-and-screen-reader-status"
+      ]
+    },
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900,
+      "status": "pass",
+      "journeys": [
+        "interview-primary-and-browse-all",
+        "required-and-optional-answers",
+        "back-edit-reset-and-stale-answer",
+        "hard-gates-and-unknown-preservation",
+        "decision-reasons-and-deterministic-ranking",
+        "zero-result-and-conflict-recovery",
+        "matched-filter-sort-links-export",
+        "browse-all-catalog-regression",
+        "recoverable-catalog-error",
+        "keyboard-focus-and-screen-reader-status"
+      ]
+    }
+  ],
+  "observations": [
+    "The interview is the primary call to action and browse-all remains explicit.",
+    "Separate required GPA and school-type validation, optional rank-only preferences, back, edit, reset, reload, empty, and error recovery passed.",
+    "The matrix rendered two structured matches, four possible matches, and one known conflict without dropping a record.",
+    "A zero-recommended case retained all seven records in the known-conflict view.",
+    "Search, status and application filters, sorting, safe official links, and visible-result CSV export passed.",
+    "The accepted catalog retry exposed 192 awards after the deterministic error state.",
+    "Skip navigation, named controls, heading focus transitions, live result status, and horizontal-overflow checks passed at every viewport.",
+    "This complete replacement run supersedes the rejected first candidate's browser result."
+  ]
+}

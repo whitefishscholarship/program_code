@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "verifiedAt": "2026-09-01T21:57:41Z",
+  "status": "pass",
+  "studentAnswersRecorded": false,
+  "runtimeBoundary": {
+    "answerOwner": "volatile React component state",
+    "matcher": "synchronous pure typed function",
+    "acceptedFactAuthority": "internal award-bound field-specific input never returned in the public result",
+    "catalogRequestDependsOnAnswers": false,
+    "resetClearsAnswers": true,
+    "reloadClearsAnswers": true
+  },
+  "prohibitedChannels": [
+    {
+      "channel": "sessionStorage",
+      "observed": false,
+      "proof": "static source assertion"
+    },
+    {
+      "channel": "localStorage",
+      "observed": false,
+      "proof": "static source assertion"
+    },
+    {
+      "channel": "cookies",
+      "observed": false,
+      "proof": "static source assertion"
+    },
+    {
+      "channel": "IndexedDB",
+      "observed": false,
+      "proof": "static source assertion"
+    },
+    {
+      "channel": "request body",
+      "observed": false,
+      "proof": "answer-independent GET-only catalog client assertion"
+    },
+    {
+      "channel": "URL",
+      "observed": false,
+      "proof": "no history or URL mutation and browser reset/reload checks"
+    },
+    {
+      "channel": "logs",
+      "observed": false,
+      "proof": "static source assertion"
+    },
+    {
+      "channel": "analytics",
+      "observed": false,
+      "proof": "no analytics capability in interview, matcher, student browser, or catalog client"
+    },
+    {
+      "channel": "matched CSV",
+      "observed": false,
+      "proof": "accepted P7 award-field serializer plus decision and answer negative assertions"
+    },
+    {
+      "channel": "evidence or screenshots",
+      "observed": false,
+      "proof": "browser evidence stores only pass/fail journey metadata; visual checks were captured only on answer-free entry pages"
+    }
+  ]
+}

@@ -4,15 +4,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f6f7f3] text-slate-950">
       <a href="#main-content" className="sr-only z-50 rounded-md bg-white px-4 py-3 font-semibold text-slate-950 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:ring-4 focus:ring-teal-300">
-        Skip to scholarship explorer
+        Skip to scholarship interview
       </a>
       <header className="border-b border-slate-200 bg-[#123c3a] text-white">
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-teal-200">Whitefish Scholarship Fund</p>
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Browse scholarships, clearly explained.</h1>
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Find scholarships without giving up your privacy.</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
-              Explore verified award records, understand how shared applications work, and see when cycle availability still needs confirmation.
+              Use a short private interview to see transparent matches, or browse the complete catalog whenever you prefer.
             </p>
           </div>
         </div>

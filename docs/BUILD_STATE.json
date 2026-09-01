@@ -400,7 +400,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P8R",
+  "nextPermittedStageId": "P9",
   "stages": [
     {
       "id": "P0",
@@ -495,8 +495,8 @@
     {
       "id": "P8R",
       "name": "Student interview and matching restoration",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "208a94b43a571109a1dac217b584e0e200ccd681",
       "evidencePath": "docs/evidence/P8R.md",
       "manifestPath": "docs/evidence/P8R-manifest.json",
       "reviewPath": "docs/reviews/P8R.json",

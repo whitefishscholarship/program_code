@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8R",
+  "verifiedAt": "2026-09-01T21:57:41Z",
+  "command": "npm run p8r:test",
+  "status": "pass",
+  "studentAnswersRecorded": false,
+  "acceptedCatalog": {
+    "awards": 192,
+    "sources": 217,
+    "portals": 21,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "activeCycles": 0,
+    "unknownCycles": 192,
+    "minimumObservedRecipientSlots": 71
+  },
+  "deterministicTestOutcome": {
+    "total": 192,
+    "match": 0,
+    "possibleMatch": 192,
+    "knownConflict": 0,
+    "lostAwards": 0,
+    "duplicateAwards": 0
+  },
+  "hardExclusionAllowlist": [
+    "minimum GPA conflict backed by field-specific accepted public evidence",
+    "school-type conflict backed by field-specific accepted public evidence",
+    "closed cycle state backed by field-specific accepted public evidence",
+    "unavailable cycle state backed by field-specific accepted public evidence"
+  ],
+  "rankOnlyPreferences": [
+    "typed application mode backed by field-specific accepted public evidence"
+  ],
+  "regressionsRejected": [
+    "Non-Renewing substring classification",
+    "year-2001 deadline fallback",
+    "default-Montana exclusion",
+    "free-text identity hard gate",
+    "free-text health hard gate",
+    "missing structured fact exclusion",
+    "manual-review or provenance-free structured fact exclusion",
+    "unsupported legacy award amount ranking",
+    "unmodeled eligibility promoted to match",
+    "legacy heuristic processor import"
+  ],
+  "publicResponseFields": [
+    "counts",
+    "results"
+  ],
+  "publicResultFields": [
+    "award",
+    "decision",
+    "reasons"
+  ],
+  "publicReasonFields": [
+    "code",
+    "kind",
+    "message"
+  ]
+}
