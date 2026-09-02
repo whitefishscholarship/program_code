@@ -340,8 +340,8 @@
         "authorizedBy": null,
         "authorizedAt": null,
         "evidencePath": null,
-        "basis": "Plan Revision 10 defines P8M but the current instruction expressly stops before enrichment. Organizer team edit access is capability, not direct authority for sheet/source reads, Claude row processing, accepted-fact decisions, writes, Git delivery, or deployment effects.",
-        "scope": "No P8M action is authorized. A later direct informed instruction must name the exact bounded denominator, master tabs/ranges, permitted source reads, Claude proposal processing, human review role, write exclusion or exact write gate, Git delivery, and resulting Vercel effects before P8M may start."
+        "basis": "After Plan Revision 11 delivery authority was recorded, the user directly authorized P8M/enrichment in principle. That removes the permission-only blocker but does not supply the kickoff's still-unknown exact organizer-master tab IDs/titles/ranges, bounded row/award/cycle denominator and source revision, official-source allowlist, named human fact reviewer, or no-write/exact-write backup and acceptance gate. Under the frozen contract, executable authorization remains false until those non-permission entry facts are machine-pinned without accessing a spreadsheet, Drive metadata, public source, or Claude.",
+        "scope": "P8M is the sole next-permitted planned stage and has direct in-principle user permission, but no access or processing may begin while its exact entry facts remain unknown. A later governed source-identity and denominator pinning record must name every required field before content/metadata reads, source acquisition, Claude proposal processing, human decisions, writes, Git delivery, or Vercel effects can execute."
       },
       {
         "stageId": "P8F",
@@ -396,8 +396,7 @@
       }
     ],
     "deliveryBlockers": [
-      "PLAN-REV11-authorized-delivery-pending-ci-preview-production-verification",
-      "P8M-awaits-direct-stage-specific-source-processing-review-and-delivery-authority",
+      "P8M-entry-facts-unpinned-master-tabs-ranges-denominator-revision-source-allowlist-human-review-write-gate",
       "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
     ]
   },
