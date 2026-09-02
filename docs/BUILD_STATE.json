@@ -161,6 +161,7 @@
         "accessAuthorized": false,
         "automatedWriteAuthorized": false,
         "automatedWriteAuthorizationEvidencePath": null,
+        "automatedWriteAcceptanceEvidencePath": null,
         "verificationEvidencePath": "docs/evidence/P8M.md"
       },
       "formerProduction": {
@@ -182,8 +183,7 @@
         "sourceMasterRevision": null,
         "acceptedFactSha256": null,
         "generatorSha256": null,
-        "p8mCandidateCommit": null,
-        "p8mAttestationCommit": null,
+        "p8mAcceptanceBindingMode": "derived_from_canonical_manifest_and_direct_child_attestation",
         "runtimeCommit": null,
         "providerProjectFingerprintSha256": null,
         "providerTeamFingerprintSha256": null,
@@ -201,8 +201,8 @@
           "source_master_revision",
           "accepted_fact_sha256",
           "generator_sha256",
-          "p8m_candidate",
-          "p8m_attestation",
+          "p8m_manifest_candidate_commit",
+          "p8m_direct_child_attestation_commit",
           "runtime_commit",
           "provider_project",
           "provider_team",
@@ -218,8 +218,8 @@
             "source_master_revision",
             "accepted_fact_sha256",
             "generator_sha256",
-            "p8m_candidate",
-            "p8m_attestation"
+            "p8m_manifest_candidate_commit",
+            "p8m_direct_child_attestation_commit"
           ],
           "P9": [
             "runtime_commit",

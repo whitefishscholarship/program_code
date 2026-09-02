@@ -35,9 +35,17 @@ it is convenient or adjacent.
 
 ## Scholarship data boundaries
 
-- The testing spreadsheet is
-  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`.
-- The production Whitefish Scholarship spreadsheet is
+- Under Plan Revision 10, spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is only the user-reported,
+  independently unverified organizer authoring master. Revision 10 grants no access
+  or automated-write authority. It is not an operative testing source.
+- Spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is legacy comparison-only under
+  Plan Revision 10, with no access authority. The following Revision 7 source and P9
+  rules are preserved solely as historical context and are non-operative after the
+  Revision 10 transition; they grant no spreadsheet access or replacement-P9 authority.
+- **Historical, non-operative Revision 7 record:** The former production Whitefish
+  Scholarship spreadsheet was
   `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`. Plan Revision 7 authorizes only
   bounded read access and an application-configuration cutover in P9. Never write,
   append, clear, format, share, rename, restore, or otherwise mutate that spreadsheet.
@@ -245,7 +253,14 @@ force-push or published-history rewrite; form submission or application interact
 provider contact; acceptance-gate weakening; and material scope expansion. Platform
 sandbox or authentication approvals remain separate technical safeguards.
 
-## P9 read-only production mandate — Plan Revision 7
+## Historical P9 read-only production mandate — Plan Revision 7 (non-operative)
+
+This section records the superseded Revision 7 operating mandate for provenance only.
+Plan Revision 10 makes it non-operative: it grants no access to either spreadsheet and
+no replacement-P9, Google Sheets client, configuration, Git, or deployment authority.
+The current Plan Revision 10 and P8M boundary above controls. Every imperative in the
+legacy text below describes the historical Revision 7 constraint; none is a current
+instruction or authority source.
 
 Kelsey directly authorized P9 production source migration, application-configuration
 switching, governed Git/PR delivery, Vercel Preview and Production deployment,

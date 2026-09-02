@@ -119,6 +119,11 @@ DELIVERABLES
   access evidence, optional separately evidenced write authority, candidate then
   accepted immutable publication status, and all P8M-owned publication pins. Leave all
   P9-owned runtime/provider pins and runtime-read authority unset.
+- If P8M becomes `blocked-external` or `failed`, retain its governed evidence and at
+  most a complete pinned candidate publication; do not label the publication accepted.
+  Acceptance must derive and validate the exact P8M candidate SHA from the canonical
+  manifest and exact attestation SHA from its first valid direct-child two-file
+  attestation; never attempt a self-referential commit field in the candidate tree.
 
 ACCEPTANCE TESTS
 - Test every criterion/operator/value/scope, alias, status transition, authority rank,

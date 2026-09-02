@@ -210,8 +210,25 @@ Remediation now provides explicit P8M planned/in-flight/accepted publication sta
 separates P8M publication pins from P9 runtime/provider pins; applies the old Google P9
 validators only before Revision 10; makes replacement P9 unauthorized pending new
 direct target evidence; preserves historical Revision 7-9 evidence; and adds a strict
-executable fact validator with semantic adversarial tests. The same independent
-reviewer must recheck the replacement candidate before any attestation.
+executable fact validator with semantic adversarial tests.
+
+The second frozen candidate `324791cee8ffc8406d45bf1a651c777efb250912` and manifest
+digest `12dc4d2c43de88e048ad47ab00464b4be8ff0dd37230454d7188f9610e5534a6`
+were rejected by the same fresh-context read-only reviewer with C0/H2/M2/L0. No review
+record or attestation was created. The high findings were missing exact P8M candidate/
+attestation binding and an operative contradiction in current `AGENTS.md` from the old
+Revision 7 Google-sheet P9 mandate. The medium findings were unsupported governed
+`blocked-external`/`failed` P8M states and omission of `acceptance_evidence` from the
+machine-readable future-write authority fields.
+
+Second-review remediation derives and validates the exact P8M candidate SHA from its
+canonical manifest and the exact attestation SHA from its first valid direct-child
+two-file attestation, avoiding impossible self-reference in the candidate tree. It adds
+negative missing/malformed-binding tests; explicitly supports and tests safe stopped
+P8M states; requires separate direct write-authority and acceptance-evidence paths; and
+marks the Revision 7 sheet mandate in the current operating contract historical and
+non-operative under Revision 10. The same reviewer must accept the next exact candidate
+before any attestation.
 
 ## Verification record
 
@@ -247,12 +264,39 @@ The remediated replacement-candidate pre-freeze ledger is:
 | `2026-09-02T05:32:41Z` | `git diff --name-status 390b270c5d3127ff2705ffb114212a518a1d5953` plus `git ls-files --others --exclude-standard` | PASS; exactly 19 replacement paths including the two new dormant strict-validator/lifecycle modules, with no product, data, workflow, lockfile, or deployment-configuration path. |
 | `2026-09-02T05:32:41Z` | `git diff --check 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; no output. |
 
-The restricted `npm test` attempt immediately before the passing run hit the known
+The second-review remediation pre-freeze ledger for the next candidate is:
+
+| UTC interval | Exact command | Exact result |
+| --- | --- | --- |
+| `2026-09-02T05:53:14Z`–`05:53:23Z` | `npm ci` | PASS; 462 packages installed; lockfile unchanged. |
+| `2026-09-02T05:52:17Z`–`05:53:08Z` | `npm test` | PASS outside the restricted IPC sandbox; every P0-P8R suite passed. Revision 10 semantic tests now also reject missing/malformed canonical P8M candidate/attestation bindings, accept governed `blocked-external` and `failed` stopped states, and reject write authority without separate acceptance evidence. |
+| `2026-09-02T05:53:34Z`–`05:53:39Z` | `npm run typecheck` | PASS. |
+| `2026-09-02T05:54:51Z`–`05:59:25Z` | `npm run plan:check` | Expected pre-attestation nonzero result with exactly three gates: missing replacement manifest, missing review, and missing committed attestation; no other error. |
+| `2026-09-02T05:54:04Z`–`05:54:07Z` | `npm run build` | Environment-blocked in the default Turbopack PostCSS worker while creating a process/binding a local port: `Operation not permitted`; not a pass. |
+| `2026-09-02T05:54:13Z`–`05:54:32Z` | `npm run build -- --webpack` | PASS; supported Next production build compiled, typechecked, generated 10/10 static pages, and emitted only the existing middleware-deprecation warning. |
+| `2026-09-02T05:53:55Z` | `npm audit --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS outside the network-restricted sandbox; 0 vulnerabilities. |
+| `2026-09-02T05:53:58Z` | `npm audit --omit=dev --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS outside the network-restricted sandbox; 0 vulnerabilities. |
+| `2026-09-02T05:59:42Z` | `ruby -e 'require "psych"; Dir[".github/workflows/*.{yml,yaml}"].sort.each { |f| Psych.parse_file(f); puts "YAML PASS #{f}" }'` | PASS for both workflows; neither changed. |
+| `2026-09-02T05:59:42Z` | `git diff --name-status 390b270c5d3127ff2705ffb114212a518a1d5953` plus `git ls-files --others --exclude-standard` | PASS; exactly the same 19 governed paths as the second candidate, with no product, data, workflow, lockfile, or deployment-configuration path. |
+| `2026-09-02T05:59:42Z` | `git diff --check 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; no output. |
+| `2026-09-02T06:01:48Z`–`06:02:32Z` | `npm test` after the final evidence-file existence hardening | PASS outside the restricted IPC sandbox; every P0-P8R suite and all Revision 10 semantic cases passed. |
+| `2026-09-02T06:01:45Z`–`06:01:51Z` | `npm run typecheck` after the final hardening | PASS. |
+| `2026-09-02T06:17:05Z`–`06:21:28Z` | Final exact pre-freeze `npm run plan:check` | Expected nonzero result with exactly the missing Revision 10 manifest, review, and committed-attestation gates; no other error. |
+
+The restricted `npm test` attempts immediately before the passing runs hit the known
 `tsx` local-IPC `listen EPERM`; no test executed in that attempt. The exact required
-test command then passed outside that restriction. The default Turbopack build path
+test command then passed outside that restriction. Both restricted audit attempts also
+hit the expected network-denied `ENOTFOUND`; the exact audit commands passed outside
+that restriction. The default Turbopack build path
 remains environment-unverified, while the supported Webpack production build passed.
-The rejected 17-path candidate and remediated 19-path replacement contain no student-facing `web/src`, dependency, lockfile,
-workflow, data, product-runtime, or deployment-configuration change.
+One intervening validator run at `2026-09-02T06:09:58Z`–`06:15:31Z` additionally
+reported two Revision 5 historical-blob mismatches. Immediate direct candidate-blob
+rehashing proved both blobs exactly matched their immutable manifest; the clean exact
+retry above then returned only the expected three gates. The transient subprocess-read
+result is not treated as a pass or repository mutation.
+The rejected 17-path candidate and both 19-path replacements contain no student-facing
+`web/src`, dependency, lockfile, workflow, data, product-runtime, or deployment-
+configuration change.
 
 Candidate SHA, manifest digest, and exact fresh-context review outcome will be bound by
 the immutable manifest and review in the prospective direct-child attestation. The

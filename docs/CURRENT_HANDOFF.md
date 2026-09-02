@@ -36,18 +36,25 @@ Default branch: `main`
   is unauthorized and separately blocked on new publication/runtime/provider/Git/
   Vercel authority and pins.
 - First candidate `68b38e9acec3d71aec8885ad9430660adfd5e9a4` was rejected by
-  fresh-context review at C0/H4/M0/L0 and was not attested. Remediation fixes the P8M
-  lifecycle, legacy P9 validator/authority conflict, and strict executable value/alias
-  schema. A replacement candidate, manifest, and reviewer recheck are required.
+  fresh-context review at C0/H4/M0/L0 and was not attested. Second candidate
+  `324791cee8ffc8406d45bf1a651c777efb250912` with manifest digest
+  `12dc4d2c43de88e048ad47ab00464b4be8ff0dd37230454d7188f9610e5534a6`
+  was rejected by the same fresh read-only reviewer at C0/H2/M2/L0 and was also not
+  attested. The next remediation binds accepted P8M to the exact canonical manifest
+  candidate and direct-child attestation SHAs, supports safe blocked/failed lifecycle
+  states, adds future-write acceptance evidence, and makes the old Revision 7 sheet
+  mandate explicitly historical/non-operative. A new candidate, manifest, and reviewer
+  recheck are required.
 - Current Plan Revision 10 authority covers local governance, validation, independent
   review, and direct-child local attestation. It does not separately authorize branch
   push, PR, merge, Preview, or Production effects. The exact blocker is
   `PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority`.
-- Replacement pre-freeze verification is complete: clean install, full tests,
-  typecheck, both audits, workflow parse, 19-path scope/whitespace checks, and the
-  supported Webpack production build pass. The default Turbopack build remains
-  environment-blocked on local-port binding. Plan validation reports exactly the three
-  expected pre-attestation gates. Exact replacement candidate SHA, manifest digest,
+- Next-candidate pre-freeze verification is complete after second-review remediation:
+  clean install, full tests, typecheck, both audits, workflow parse, 19-path scope/
+  whitespace checks, and the supported Webpack production build pass. The default
+  Turbopack build remains environment-blocked on local-port binding. Plan validation
+  reports exactly the three expected pre-attestation gates. Exact next candidate SHA,
+  manifest digest,
   independent review, and attestation SHA will be bound by the immutable manifest/
   review and branch tip; until that direct-child attestation exists, Revision 10 is not
   accepted.

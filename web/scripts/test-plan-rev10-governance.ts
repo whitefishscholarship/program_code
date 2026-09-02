@@ -60,6 +60,8 @@ type BuildState = {
         verificationStatus: string;
         accessAuthorized: boolean;
         automatedWriteAuthorized: boolean;
+        automatedWriteAuthorizationEvidencePath: string | null;
+        automatedWriteAcceptanceEvidencePath: string | null;
       };
       formerProduction: {
         spreadsheetId: string;
@@ -71,6 +73,7 @@ type BuildState = {
         publicationStatus: string;
         mutableMasterDirectReadAuthorized: boolean;
         publicationEvidencePath: string;
+        p8mAcceptanceBindingMode: string;
         requiredPublicationPins: string[];
         pinOwnership: { P8M: string[]; P9: string[] };
       };
@@ -202,6 +205,8 @@ assert.equal(transition.organizerMaster.designationEvidence, 'user-reported');
 assert.equal(transition.organizerMaster.verificationStatus, 'unverified');
 assert.equal(transition.organizerMaster.accessAuthorized, false);
 assert.equal(transition.organizerMaster.automatedWriteAuthorized, false);
+assert.equal(transition.organizerMaster.automatedWriteAuthorizationEvidencePath, null);
+assert.equal(transition.organizerMaster.automatedWriteAcceptanceEvidencePath, null);
 assert.equal(
   transition.formerProduction.spreadsheetId,
   '1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE',
@@ -212,9 +217,13 @@ assert.equal(transition.applicationRuntime.sourceMode, 'validated_immutable_vers
 assert.equal(transition.applicationRuntime.publicationStatus, 'not_created');
 assert.equal(transition.applicationRuntime.mutableMasterDirectReadAuthorized, false);
 assert.equal(transition.applicationRuntime.publicationEvidencePath, 'docs/evidence/P8M.md');
+assert.equal(
+  transition.applicationRuntime.p8mAcceptanceBindingMode,
+  'derived_from_canonical_manifest_and_direct_child_attestation',
+);
 assert.deepEqual(transition.applicationRuntime.pinOwnership.P8M.slice(-2), [
-  'p8m_candidate',
-  'p8m_attestation',
+  'p8m_manifest_candidate_commit',
+  'p8m_direct_child_attestation_commit',
 ]);
 assert.deepEqual(transition.applicationRuntime.pinOwnership.P9, [
   'runtime_commit',
@@ -249,7 +258,59 @@ acceptedLifecycle.applicationRuntime.publicationSchemaVersion = '1';
 acceptedLifecycle.applicationRuntime.sourceMasterRevision = 'master-revision:123';
 acceptedLifecycle.applicationRuntime.acceptedFactSha256 = 'b'.repeat(64);
 acceptedLifecycle.applicationRuntime.generatorSha256 = 'c'.repeat(64);
-assert.deepEqual(validatePlanRev10Lifecycle(acceptedLifecycle, 'accepted', 'planned'), []);
+const p8mAcceptanceBinding = {
+  candidateCommit: 'd'.repeat(40),
+  attestationCommit: 'e'.repeat(40),
+  manifestPath: 'docs/evidence/P8M-manifest.json',
+  reviewPath: 'docs/reviews/P8M.json',
+};
+assert(
+  validatePlanRev10Lifecycle(acceptedLifecycle, 'accepted', 'planned').some((error) =>
+    error.includes('exact canonical candidate/attestation binding'),
+  ),
+  'P8M acceptance must reject a missing canonical candidate/attestation binding',
+);
+assert(
+  validatePlanRev10Lifecycle(acceptedLifecycle, 'accepted', 'planned', {
+    ...p8mAcceptanceBinding,
+    candidateCommit: 'not-a-commit',
+  }).some((error) => error.includes('exact canonical candidate/attestation binding')),
+  'P8M acceptance must reject malformed canonical candidate/attestation SHAs',
+);
+assert.deepEqual(
+  validatePlanRev10Lifecycle(
+    acceptedLifecycle,
+    'accepted',
+    'planned',
+    p8mAcceptanceBinding,
+  ),
+  [],
+);
+for (const terminalStatus of ['blocked-external', 'failed']) {
+  const stoppedLifecycle = structuredClone(plannedLifecycle);
+  assert.deepEqual(
+    validatePlanRev10Lifecycle(stoppedLifecycle, terminalStatus, 'planned'),
+    [],
+    `P8M ${terminalStatus} must be a valid governed stopped state`,
+  );
+}
+const writeAuthorizedLifecycle = structuredClone(plannedLifecycle);
+writeAuthorizedLifecycle.organizerMaster.accessAuthorized = true;
+writeAuthorizedLifecycle.organizerMaster.automatedWriteAuthorized = true;
+writeAuthorizedLifecycle.organizerMaster.automatedWriteAuthorizationEvidencePath =
+  'docs/evidence/P8M-write-authority.md';
+assert(
+  validatePlanRev10Lifecycle(writeAuthorizedLifecycle, 'active', 'planned').some((error) =>
+    error.includes('authority and acceptance evidence paths'),
+  ),
+  'automated write authority must reject missing acceptance evidence',
+);
+writeAuthorizedLifecycle.organizerMaster.automatedWriteAcceptanceEvidencePath =
+  'docs/evidence/P8M-write-acceptance.md';
+assert.deepEqual(
+  validatePlanRev10Lifecycle(writeAuthorizedLifecycle, 'active', 'planned'),
+  [],
+);
 const p9Lifecycle = structuredClone(acceptedLifecycle);
 p9Lifecycle.applicationRuntime.runtimeReadAuthorityStatus =
   'authorized_for_digest_pinned_publication';
@@ -261,7 +322,10 @@ p9Lifecycle.applicationRuntime.verificationEnvironmentFingerprintSha256 = '2'.re
 p9Lifecycle.applicationRuntime.runtimeReadAuthorityEvidencePath = 'docs/evidence/P9.md';
 p9Lifecycle.applicationRuntime.deploymentOwner = 'Kelsey Stuart';
 p9Lifecycle.applicationRuntime.rollbackOwner = 'Kelsey Stuart';
-assert.deepEqual(validatePlanRev10Lifecycle(p9Lifecycle, 'accepted', 'active'), []);
+assert.deepEqual(
+  validatePlanRev10Lifecycle(p9Lifecycle, 'accepted', 'active', p8mAcceptanceBinding),
+  [],
+);
 
 const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P8M',
@@ -521,7 +585,7 @@ for (const responsibility of [
   assert(contract.codexBoundary.responsibilities.includes(responsibility));
 }
 assert.equal(contract.futureWriteGate.editAccessIsAuthority, false);
-for (const field of [
+assert.deepEqual(contract.futureWriteGate.requiredAuthorityFields, [
   'spreadsheet_id',
   'tab',
   'columns_ranges_cells',
@@ -529,9 +593,8 @@ for (const field of [
   'source_revision',
   'backup_owner',
   'rollback_owner',
-]) {
-  assert(contract.futureWriteGate.requiredAuthorityFields.includes(field));
-}
+  'acceptance_evidence',
+]);
 for (const control of [
   'verified_backup',
   'deterministic_dry_run',

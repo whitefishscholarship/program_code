@@ -155,6 +155,7 @@ type BuildState = {
         accessAuthorized: boolean;
         automatedWriteAuthorized: boolean;
         automatedWriteAuthorizationEvidencePath: string | null;
+        automatedWriteAcceptanceEvidencePath: string | null;
         verificationEvidencePath: string;
       };
       formerProduction: {
@@ -176,8 +177,7 @@ type BuildState = {
         sourceMasterRevision: string | null;
         acceptedFactSha256: string | null;
         generatorSha256: string | null;
-        p8mCandidateCommit: string | null;
-        p8mAttestationCommit: string | null;
+        p8mAcceptanceBindingMode: string;
         runtimeCommit: string | null;
         providerProjectFingerprintSha256: string | null;
         providerTeamFingerprintSha256: string | null;
@@ -1112,8 +1112,8 @@ if (state) {
       'source_master_revision',
       'accepted_fact_sha256',
       'generator_sha256',
-      'p8m_candidate',
-      'p8m_attestation',
+      'p8m_manifest_candidate_commit',
+      'p8m_direct_child_attestation_commit',
     ];
     const expectedP9Pins = [
       'runtime_commit',
@@ -1140,6 +1140,8 @@ if (state) {
         transition.applicationRuntime.historicalP9IdentityPinStatus ===
           'retired_unstarted_by_PLAN_REV10' &&
         transition.applicationRuntime.publicationEvidencePath === 'docs/evidence/P8M.md' &&
+        transition.applicationRuntime.p8mAcceptanceBindingMode ===
+          'derived_from_canonical_manifest_and_direct_child_attestation' &&
         JSON.stringify(transition.applicationRuntime.requiredPublicationPins) ===
           JSON.stringify(expectedAllPins) &&
         JSON.stringify(transition.applicationRuntime.pinOwnership) ===
@@ -1174,10 +1176,30 @@ if (state) {
         fail('Plan Revision 10 matching-fact contract identity or frozen status is invalid');
       }
       requireFile('web/scripts/matching-fact-contract.ts');
+      if (transition.organizerMaster.automatedWriteAuthorized) {
+        if (transition.organizerMaster.automatedWriteAuthorizationEvidencePath) {
+          requireFile(transition.organizerMaster.automatedWriteAuthorizationEvidencePath);
+        }
+        if (transition.organizerMaster.automatedWriteAcceptanceEvidencePath) {
+          requireFile(transition.organizerMaster.automatedWriteAcceptanceEvidencePath);
+        }
+      }
+      const canonicalP8m =
+        p8mStage?.status === 'accepted'
+          ? findCanonicalAttestation('P8M', p8mStage.manifestPath, p8mStage.reviewPath)
+          : null;
       for (const error of validatePlanRev10Lifecycle(
         transition,
         p8mStage?.status,
         p9Stage?.status,
+        canonicalP8m
+          ? {
+              candidateCommit: canonicalP8m.manifest.candidateCommit,
+              attestationCommit: canonicalP8m.attestationCommit,
+              manifestPath: 'docs/evidence/P8M-manifest.json',
+              reviewPath: 'docs/reviews/P8M.json',
+            }
+          : null,
       )) {
         fail(error);
       }

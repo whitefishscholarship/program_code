@@ -1386,6 +1386,10 @@ The Revision 10 state validator permits the governed lifecycle instead of freezi
 initial unknowns forever: planned P8M is unverified/inaccessible with no publication;
 authorized in-flight P8M may verify the master and create a candidate immutable
 publication; accepted P8M requires verified identity and complete publication pins;
+`blocked-external` and `failed` preserve a no-publication or fully pinned candidate
+publication without implying acceptance; accepted P8M derives and validates its exact
+candidate SHA from the canonical manifest and its exact attestation SHA from the first
+valid direct-child two-file attestation;
 and only separately authorized replacement P9 may add runtime/provider pins and runtime
 read authority. Self-referential P8M candidate/attestation identity is derived from its
 canonical direct-child manifest rather than guessed in the candidate tree.
