@@ -3,7 +3,7 @@
 Date: 2026-09-01
 Stage: `PLAN-REV10`
 Baseline: `390b270c5d3127ff2705ffb114212a518a1d5953`
-Status: governance candidate in progress; verification, immutable review, and local attestation pending
+Status: candidate evidence complete; immutable review and local attestation pending
 
 ## Objective and exact authority
 
@@ -185,10 +185,36 @@ configuration, spreadsheet fixture/fact, P8 schedule, or external state is in sc
 
 ## Verification record
 
-The final exact command ledger, UTC timestamps, results, path counts, candidate SHA,
-manifest digest, independent review, and unchanged external-effect receipt will be
-recorded here before immutable freeze. Green tests will not be represented as scholarship
-freshness, protected application-health, spreadsheet access, or remote-delivery proof.
+The stabilized pre-freeze command ledger is:
+
+| UTC interval | Exact command | Exact result |
+| --- | --- | --- |
+| `2026-09-02T04:34:15Z`–`04:34:24Z` | `npm ci` | PASS; 462 packages installed, 463 audited, 0 vulnerabilities; lockfile unchanged. |
+| `2026-09-02T04:34:36Z`–`04:35:10Z` | `npm test` | PASS outside the restricted sandbox; every P0-P8R suite and the new Revision 10 governance test passed. The Revision 10 test reported `criteria=82 aliases=50 operators=10`. |
+| `2026-09-02T04:33:41Z`–`04:33:47Z` | `npm run typecheck` | PASS. |
+| `2026-09-02T04:36:24Z`–`04:36:37Z` | `npm run plan:check` | Expected pre-attestation nonzero result with exactly three gates: missing Revision 10 manifest, missing Revision 10 review, and missing committed attestation; no other error. |
+| `2026-09-02T04:35:19Z`–`04:35:21Z` | `npm run build` | Environment-blocked in the default Turbopack PostCSS worker while creating a process/binding a local port: `Operation not permitted`; not a pass. |
+| `2026-09-02T04:35:31Z`–`04:35:49Z` | `npm run build -- --webpack` | PASS; supported Next production build compiled, typechecked, generated 10/10 static pages, and emitted only the existing middleware-deprecation warning. |
+| `2026-09-02T04:33:55Z`–`04:33:56Z` | `npm audit --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS; 0 vulnerabilities. |
+| `2026-09-02T04:34:05Z` | `npm audit --omit=dev --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS; 0 vulnerabilities. |
+| `2026-09-02T04:36:15Z` | `ruby -e 'require "psych"; Dir[".github/workflows/*.{yml,yaml}"].sort.each { |f| Psych.parse_file(f); puts "YAML PASS #{f}" }'` | PASS for `.github/workflows/ci.yml` and `.github/workflows/p9-evidence.yml`; neither file changed. |
+| `2026-09-02T04:36:15Z` | `git diff --name-status 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; exactly 17 paths, limited to governance, evidence/handoff/kickoffs, package-script wiring, validator/authority compatibility, and tests. |
+| `2026-09-02T04:36:15Z` | `git diff --check 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; no output. |
+
+The restricted `npm test` attempt immediately before the passing run hit the known
+`tsx` local-IPC `listen EPERM`; no test executed in that attempt. The exact required
+test command then passed outside that restriction. The default Turbopack build path
+remains environment-unverified, while the supported Webpack production build passed.
+The 17-path candidate contains no student-facing `web/src`, dependency, lockfile,
+workflow, data, product-runtime, or deployment-configuration change.
+
+Candidate SHA, manifest digest, and exact fresh-context review outcome will be bound by
+the immutable manifest and review in the prospective direct-child attestation. The
+final post-attestation `npm run plan:check` and ancestry/two-path checks will be
+performed without changing the attested tip.
+
+Green tests are not scholarship freshness, protected application-health, spreadsheet
+access, or remote-delivery proof.
 
 ## Stop boundary and unresolved triggers
 

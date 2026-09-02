@@ -52,11 +52,11 @@ export type P5LifecycleState = {
   stages: Array<{ id: string; status: StageStatus }>;
 };
 
-const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P8F', 'P9'] as const;
+const stageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P8M', 'P8F', 'P9'] as const;
 const inFlightStatuses = new Set<StageStatus>(['active', 'implemented', 'verified', 'blocked-external', 'failed']);
 
 export function assertP5StageLifecycle(state: P5LifecycleState) {
-  assert.deepEqual(state.stages.map((stage) => stage.id), stageIds, 'stages must be unique and ordered P0-P8, P8R, P8F, P9');
+  assert.deepEqual(state.stages.map((stage) => stage.id), stageIds, 'stages must be unique and ordered P0-P8, P8R, P8M, P8F, P9');
   let cursor = 0;
   while (cursor < state.stages.length && state.stages[cursor].status === 'accepted') cursor += 1;
   const acceptedPrefixLength = cursor;

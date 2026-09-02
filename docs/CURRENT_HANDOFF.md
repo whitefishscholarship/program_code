@@ -37,9 +37,13 @@ Default branch: `main`
   review, and direct-child local attestation. It does not separately authorize branch
   push, PR, merge, Preview, or Production effects. The exact blocker is
   `PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority`.
-- Verification, candidate SHA, manifest digest, independent review, and attestation SHA
-  will be added to this section before freeze/attestation. Until then the candidate is
-  not accepted.
+- Pre-freeze verification is complete: `npm ci`, `npm test`, typecheck, both dependency
+  audits, workflow YAML parse, path-scope check, and the supported Webpack production
+  build passed. The default Turbopack build remains environment-blocked on local-port
+  binding. The pre-attestation plan validator reports exactly its three expected
+  manifest/review/attestation gates. Exact candidate SHA, manifest digest, independent
+  review, and attestation SHA will be bound by the immutable manifest/review and branch
+  tip; until that direct-child attestation exists, the candidate is not accepted.
 - External-effect receipt: zero spreadsheet/Drive/source/Claude/Vercel/workflow/form/
   provider/applicant-data operations; zero product/runtime/deployment-configuration or
   monitoring changes. The only external action was authenticated read-only Git/GitHub
