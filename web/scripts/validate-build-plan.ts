@@ -58,6 +58,11 @@ import {
   validatePlanRev11LateDelivery,
   type PlanRev11LateDeliveryContinuation,
 } from './plan-rev11-late-delivery';
+import {
+  PLAN_REV12_AMENDMENT_PATHS,
+  validatePlanRev12RowSource,
+  type PlanRev12RowSourceCorrection,
+} from './plan-rev12-row-source';
 
 type StageStatus =
   | 'planned'
@@ -106,6 +111,7 @@ type PlanAmendment = {
     scope: string;
   };
   lateDeliveryContinuation?: PlanRev11LateDeliveryContinuation;
+  rowSourceCorrection?: PlanRev12RowSourceCorrection;
 };
 
 type DeliveryIntegration = {
@@ -164,6 +170,7 @@ type BuildState = {
         automatedWriteAcceptanceEvidencePath: string | null;
         verificationEvidencePath: string;
       };
+      p8mRowSource?: PlanRev12RowSourceCorrection;
       formerProduction: {
         spreadsheetId: string;
         role: string;
@@ -1138,7 +1145,10 @@ if (state) {
         transition.organizerMaster.spreadsheetId ===
           '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4' &&
         transition.organizerMaster.role === 'organizer_authoring_master' &&
-        transition.organizerMaster.designationEvidence === 'user-reported' &&
+        (state.planRevision >= 12
+          ? transition.organizerMaster.designationEvidence ===
+            'user-confirmed-and-read-only-verified'
+          : transition.organizerMaster.designationEvidence === 'user-reported') &&
         transition.formerProduction.spreadsheetId ===
           '1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE' &&
         transition.formerProduction.role === 'legacy_comparison_only' &&
@@ -1325,6 +1335,7 @@ if (state) {
   }
   const revision10 = planAmendments.find((item) => item.id === 'PLAN-REV10');
   const revision11 = planAmendments.find((item) => item.id === 'PLAN-REV11');
+  const revision12 = planAmendments.find((item) => item.id === 'PLAN-REV12');
   const canonicalRevision10 = revision10
     ? findCanonicalAttestation(
         revision10.id,
@@ -1384,6 +1395,54 @@ if (state) {
           JSON.stringify([...PLAN_REV11_CONTINUATION_PATHS].sort())
         ) {
           fail('Plan Revision 11 candidate changed paths outside its exact late-delivery continuation allowlist');
+        }
+      }
+    }
+  }
+  if (state.planRevision >= 12) {
+    requireFile('web/scripts/plan-rev12-row-source.ts');
+    requireFile('docs/kickoffs/PLAN-REV12-ROW-SOURCE-CORRECTION.md');
+    if (!revision12 || !state.dataAuthority.sourceTransition) {
+      fail('Plan Revision 12 requires its row-source correction and source-transition state');
+    } else {
+      const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P8M',
+      );
+      const rowSourceErrors = validatePlanRev12RowSource({
+        planRevision: state.planRevision,
+        amendmentBaselineCommit: revision12.baselineCommit,
+        amendmentDeliveryAuthorized:
+          revision12.deliveryAuthorization?.authorized === true,
+        amendmentEvidencePath: revision12.evidencePath,
+        rowSource: state.dataAuthority.sourceTransition.p8mRowSource,
+        amendmentRowSource: revision12.rowSourceCorrection,
+        organizerMaster: state.dataAuthority.sourceTransition.organizerMaster,
+        p8mAuthorization,
+        p8mStatus: state.stages.find((item) => item.id === 'P8M')?.status,
+        activeStageId: state.activeStageId,
+        nextPermittedStageId: state.nextPermittedStageId,
+        deliveryBlockers: state.deployment.deliveryBlockers,
+      });
+      for (const error of rowSourceErrors) fail(error);
+
+      const canonicalRevision12 = findCanonicalAttestation(
+        revision12.id,
+        revision12.manifestPath,
+        revision12.reviewPath,
+      );
+      if (canonicalRevision12) {
+        const amendmentChanges = [
+          ...completeChangeSet(
+            revision12.baselineCommit,
+            canonicalRevision12.manifest.candidateCommit,
+            new Set<string>(),
+          ).keys(),
+        ].sort();
+        if (
+          JSON.stringify(amendmentChanges) !==
+          JSON.stringify([...PLAN_REV12_AMENDMENT_PATHS].sort())
+        ) {
+          fail('Plan Revision 12 candidate changed paths outside its exact governance allowlist');
         }
       }
     }
@@ -2422,8 +2481,19 @@ if (state) {
       const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
         (item) => item.stageId === 'P8M',
       );
-      if (p8m?.status === 'planned' && p8mAuthorization?.authorized !== false) {
+      if (
+        p8m?.status === 'planned' &&
+        state.planRevision < 12 &&
+        p8mAuthorization?.authorized !== false
+      ) {
         fail('Plan Revision 10 requires planned P8M to remain unauthorized');
+      }
+      if (
+        p8m?.status === 'planned' &&
+        state.planRevision >= 12 &&
+        p8mAuthorization?.authorized !== true
+      ) {
+        fail('Plan Revision 12 requires the exact bounded no-write P8M authorization');
       }
       if (
         p8m?.status === 'planned' &&
@@ -2592,6 +2662,20 @@ if (state) {
     requireFile('docs/evidence/PLAN-REV11.md');
     requireFile('docs/kickoffs/PLAN-REV11-REV10-LATE-DELIVERY.md');
   }
+  if (state.planRevision >= 12) {
+    for (const phrase of [
+      'Row-source correction and incomplete-fact progress',
+      '197 populated rows',
+      'not source denominators',
+      'blank source cells remain unknown',
+    ]) {
+      if (!plan.includes(phrase)) {
+        fail(`Plan Revision 12 is missing row-source correction text: ${phrase}`);
+      }
+    }
+    requireFile('docs/evidence/PLAN-REV12.md');
+    requireFile('docs/kickoffs/PLAN-REV12-ROW-SOURCE-CORRECTION.md');
+  }
 
   const agents = content['AGENTS.md'];
   for (const phrase of [
@@ -2627,6 +2711,12 @@ if (state) {
   ) {
     fail('AGENTS.md is missing the Plan Revision 11 late-delivery boundary');
   }
+  if (
+    state.planRevision >= 12 &&
+    !agents.includes('Plan Revision 12 row-source correction boundary')
+  ) {
+    fail('AGENTS.md is missing the Plan Revision 12 row-source correction boundary');
+  }
   if (state.planRevision >= 10) {
     for (const phrase of [
       'Plan Revision 10 and P8M boundary',
@@ -2647,6 +2737,9 @@ if (state) {
   }
   if (state.planRevision >= 10 && !decisions.includes('## D-022 —')) {
     fail('Decision log is missing D-022');
+  }
+  if (state.planRevision >= 12 && !decisions.includes('## D-024 —')) {
+    fail('Decision log is missing D-024');
   }
 
   const handoff = content['docs/CURRENT_HANDOFF.md'];

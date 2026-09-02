@@ -35,7 +35,7 @@ const target = {
   baselineCommit: '390b270c5d3127ff2705ffb114212a518a1d5953',
 };
 
-assert.equal(state.planRevision, 11);
+assert(state.planRevision >= 11);
 assert.equal(state.activeStageId, null);
 assert.equal(state.nextPermittedStageId, 'P8M');
 const revision11 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV11');

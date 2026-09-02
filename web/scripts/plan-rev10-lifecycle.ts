@@ -68,9 +68,16 @@ export function validatePlanRev10Lifecycle(
     Boolean(runtime.rollbackOwner?.trim());
 
   if (p8mStatus === 'planned') {
+    const legacyUnverifiedMaster =
+      master.verificationStatus === 'unverified' &&
+      master.accessAuthorized === false &&
+      master.verificationEvidencePath === 'docs/evidence/P8M.md';
+    const pinnedReadOnlyMaster =
+      master.verificationStatus === 'verified' &&
+      master.accessAuthorized === true &&
+      master.verificationEvidencePath === 'docs/evidence/PLAN-REV12.md';
     if (
-      master.verificationStatus !== 'unverified' ||
-      master.accessAuthorized !== false ||
+      (!legacyUnverifiedMaster && !pinnedReadOnlyMaster) ||
       master.automatedWriteAuthorized !== false ||
       master.automatedWriteAuthorizationEvidencePath !== null ||
       master.automatedWriteAcceptanceEvidencePath !== null ||
@@ -83,7 +90,7 @@ export function validatePlanRev10Lifecycle(
       runtime.acceptedFactSha256 !== null ||
       runtime.generatorSha256 !== null
     ) {
-      errors.push('Planned P8M requires the exact unverified, inaccessible, no-write, no-publication state');
+      errors.push('Planned P8M requires either the legacy unverified master or the exact Revision 12 read-only pin, with no write and no publication');
     }
   } else if (p8mInFlight || p8mAccepted || p8mStopped) {
     if (
@@ -91,7 +98,9 @@ export function validatePlanRev10Lifecycle(
       (p8mStopped
         ? typeof master.accessAuthorized !== 'boolean'
         : master.accessAuthorized !== true) ||
-      master.verificationEvidencePath !== 'docs/evidence/P8M.md'
+      !['docs/evidence/P8M.md', 'docs/evidence/PLAN-REV12.md'].includes(
+        master.verificationEvidencePath,
+      )
     ) {
       errors.push('P8M lifecycle state requires valid master access state and P8M verification evidence');
     }

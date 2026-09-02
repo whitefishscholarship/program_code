@@ -547,3 +547,41 @@ but are not rewritten or deleted.
   Revision 10 locally accepted. After merge, revert the governance delivery through a
   separately reviewed amendment; never rewrite either attestation or roll back data,
   because this continuation performs no data operation.
+
+## D-024 — Use Master Database rows as the P8M source denominator
+
+- Date: 2026-09-02
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 12 pins `Master Database`, gid `0`, used range
+  `'Master Database'!A1:O198`, Drive revision `225`, and exactly 197 populated rows as
+  the P8M source denominator. The 176 `Scholarship` rows and 21 `Portal` rows are typed
+  subsets. Application-group and cycle/cycle-ID counts are not source denominators
+  because the original source contains no such fields.
+- Evidence: `docs/evidence/PLAN-REV12.md`.
+- Reason: Kelsey directly corrected the prior GPT-derived assumption and explained
+  that blanks normally mean information was unavailable to the earlier Claude scrape.
+  Requiring invented fields or perfect population would block accurate restoration and
+  encourage false facts. Row-complete outcomes preserve measurable coverage while
+  permitting honest unknowns.
+- Identity and completeness: Every one of the 197 source rows receives one outcome.
+  The 176 Scholarship-labeled rows contain 175 unique nonblank names and one exact-name
+  duplicate group, so name alone is never a stable award key. A normalized cycle ID or
+  application grouping may exist only when later evidence explicitly supports it; it
+  is never required to account for a source row.
+- Missing-data rule: Blank, unavailable, blocked, unsupported, ambiguous, or
+  unobserved values remain `unknown` or manual review. They do not become false,
+  rejected, ineligible, or batch-stopping, and other valid work may continue. Every
+  skip/fetch failure remains a visible row outcome.
+- Authority: The read-only pin was limited to spreadsheet metadata and Master Database
+  and made no writes. External URL reads and Claude proposal processing still await an
+  exact URL-column/allowlist instruction; final fact and P8M acceptance await a named
+  human fact reviewer. Claude remains proposal-only. Governed Git delivery and
+  resulting Vercel Preview/Production verification are authorized for Revision 12 and
+  eventual accepted P8M; no spreadsheet write, P8F, or P9 action is authorized.
+- Alternatives: Require cycles/application groups, which fabricates a source schema;
+  treat blanks as negative facts, which makes unsupported eligibility decisions; or
+  block the entire batch on any unavailable value, which destroys safe incremental
+  progress. All are rejected.
+- Rollback: Before merge, abandon only the Revision 12 branch. After delivery,
+  supersede it only through another independently reviewed amendment. Never rewrite
+  its attestation or roll back spreadsheet data because Revision 12 performs no write.
