@@ -447,3 +447,59 @@ but are not rewritten or deleted.
   Revision 9 candidate, manifest, review, attestation, and P8F history byte-for-byte.
   Runtime rollback uses accepted P8R and does not change any spreadsheet, accepted fact,
   P8 schedule, production configuration, or P9 state.
+
+## D-022 — Govern the organizer master through P8M and an immutable runtime publication
+
+- Date: 2026-09-01
+- Status: candidate pending independent review and local attestation; remote delivery blocked
+- Decision: Plan Revision 10 treats spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` as the organizer-designated
+  authoring master on a user-reported, independently unverified basis. It classifies
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` as legacy comparison-only with
+  no access authority; separates human editor, proposal processor, fact reviewer, and
+  read-only application runtime identities; inserts P8M before P8F; freezes
+  `matching-facts-v1`/taxonomy `1.0.0`; and selects a validated immutable versioned
+  publication as the only future runtime fact source.
+- Evidence: `docs/evidence/PLAN-REV10.md` and
+  `docs/evidence/PLAN-REV10-matching-fact-contract.json`.
+- Reason: The organizer's source decision materially conflicts with Revision 9's
+  testing/production roles, P8F ordering, and former P9 Google-sheet runtime. Team edit
+  capability is not authority for Codex, Claude, or the application to read or mutate
+  the workbook. P8F also cannot safely use the restored detailed questions until
+  award-bound, cycle-aware, field-specific accepted facts exist.
+- Alternatives: Read the mutable master directly at runtime, which couples student
+  results to unreviewed editor changes; enrich inside P8F, which collapses governance,
+  data acceptance, and product work; treat free-form AI tags as truth, which loses typed
+  operators, evidence, scope, and review; or continue the old production-sheet P9,
+  which conflicts with the organizer's new source decision. Each alternative weakens
+  evidence, stage, identity, or rollback controls.
+- Evidence ladder: Cycle-specific official child-award evidence outranks parent or
+  yearless evidence. Organizer-reviewed master facts may be accepted directly only for
+  fields where the organizer is the authoritative owner of that local award. Material
+  eligibility, deadline, cycle, and application facts otherwise require current
+  official provider evidence. Secondary sources and Claude output remain proposals.
+  Equal-authority disagreement becomes `conflict` and cannot affect matching.
+- AI and review boundary: Claude is proposal-only after later exact processing
+  authority and may emit only bounded schema-valid JSON/JSONL with provenance,
+  confidence/ambiguity, fingerprints, checkpoints, resume cursors, and completeness
+  receipts. It cannot accept facts or write the master. Codex owns stable-ID validation,
+  duplicate/conflict/coverage checks, evidence-policy enforcement, reconciliation,
+  review packaging, and any separately authorized write/readback path.
+- Write authority: Edit access is capability, not operation authority. A later write
+  requires the exact spreadsheet, tab, columns/ranges/cells, operation count, source
+  revision, backup/rollback owners, dry run, human and independent acceptance,
+  idempotent bounded batch, immediate readback, untargeted-cell proof, and complete
+  reconciliation.
+- P9 replacement: Future P9 deploys the exact P8M immutable publication and proves the
+  runtime has no Google credential, Drive/Sheets scope, spreadsheet client, or mutator.
+  The former `P9-IDENTITY-PINS` Google-runtime path is retired unstarted. Historical
+  Revision 7-9 evidence remains unchanged.
+- Authority: The current instruction authorizes Plan Revision 10 governance, local
+  commits, independent review, and direct-child local attestation only. It expressly
+  stops before P8M, P8F, and P9. It does not separately authorize branch push, pull
+  request, merge, Vercel Preview, or Vercel Production effects; those remain blocked.
+- Rollback: Before P8M begins, replace Revision 10 only through a separately authorized,
+  independently reviewed plan amendment. After later stages depend on it, preserve the
+  Revision 10 candidate, contract, manifest, review, and attestation byte-for-byte.
+  Runtime rollback uses accepted P8R until P8F/P9 are separately accepted and never
+  accesses or mutates either spreadsheet.

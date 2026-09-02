@@ -1,9 +1,55 @@
 # Current Handoff
 
 Last updated: 2026-09-01
-Plan revision: 9
+Plan revision: 10
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Plan Revision 10 — local governance candidate; remote delivery blocked
+
+- Scope is Plan Revision 10 only. No matching-fact enrichment, Claude row processing,
+  P8F, P9, `P9-IDENTITY-PINS`, spreadsheet/public-source access, product/runtime work,
+  monitoring, or deployment-configuration change occurred.
+- Verified live baseline is `origin/main`
+  `390b270c5d3127ff2705ffb114212a518a1d5953`, the exact PR #32 merge. The user-pinned
+  routing checkpoint `83e61e80f07d17dadff43bbb635aa98c0472dc39` is preserved, and
+  Plan Revision 10 work is isolated on `codex/plan-rev10-master-matching-facts`.
+- Revision 10 records the exact new ID as the organizer authoring master only on a
+  user-reported, independently unverified basis. It grants no read or write. The former
+  production ID is legacy comparison-only with no access authority.
+- Human editor, proposal processor, fact reviewer, and read-only application runtime
+  are separate identities. Runtime must eventually consume a validated immutable
+  versioned publication and may not read the mutable master.
+- The frozen `matching-facts-v1`/taxonomy `1.0.0` contract contains 82 criteria, 50
+  aliases, 10 typed operators, and 31 sensitive criteria. It binds stable award/cycle
+  identity, evidence/status/reviewer fields, authority precedence, conflicts,
+  freshness, unknown handling, Claude proposal-only behavior, and the future exact
+  write gate.
+- P8M — Matching-fact enrichment and acceptance — is inserted before P8F and becomes
+  the sole next-permitted planned stage. P8M is not authorized to start. Its exact
+  blocker is direct stage-specific master/source/Claude/human-review/write/delivery
+  authority. P8F remains planned until P8M is accepted and delivered.
+- P9 is replaced prospectively with deployment of the accepted immutable publication.
+  The former Google-runtime `P9-IDENTITY-PINS` path is retired unstarted; historical
+  Revision 7-9 evidence remains unchanged. P9 remains planned and separately blocked
+  on exact publication/runtime/provider/deployment authority and pins.
+- Current Plan Revision 10 authority covers local governance, validation, independent
+  review, and direct-child local attestation. It does not separately authorize branch
+  push, PR, merge, Preview, or Production effects. The exact blocker is
+  `PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority`.
+- Verification, candidate SHA, manifest digest, independent review, and attestation SHA
+  will be added to this section before freeze/attestation. Until then the candidate is
+  not accepted.
+- External-effect receipt: zero spreadsheet/Drive/source/Claude/Vercel/workflow/form/
+  provider/applicant-data operations; zero product/runtime/deployment-configuration or
+  monitoring changes. The only external action was authenticated read-only Git/GitHub
+  baseline and PR-history verification.
+- Unresolved evidence remains live scholarship freshness, protected application-health
+  smoke, blocked Preview access, the GitHub Actions Node runtime warning, and disabled
+  monitoring. Green local checks or a deployment-complete status close none of them.
+- Next kickoff after accepted/delivered Revision 10 is
+  `docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md`, but delivery and P8M start each require
+  their own direct authority. Stop before enrichment.
 
 ## Master-source and matching-fact follow-up — locally durable; Plan Revision 10 required
 

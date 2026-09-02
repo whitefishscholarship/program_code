@@ -303,6 +303,14 @@ export function p9ReadOnlyAuthorityChanged(
   const normalizedCurrent = structuredClone(current);
   const normalizedCanonical = structuredClone(canonical);
 
+  // Plan Revision 10 adds a separately governed source-transition object while
+  // preserving every Revision 7 production/testing authority byte. It is not part
+  // of the historical P9 authority comparison.
+  delete (normalizedCurrent as P9DataAuthority & { sourceTransition?: unknown })
+    .sourceTransition;
+  delete (normalizedCanonical as P9DataAuthority & { sourceTransition?: unknown })
+    .sourceTransition;
+
   // P9 may flip only predeclared proof-state booleans after Revision 7. The
   // seven identity fingerprints may transition once through the separately
   // validated P9-IDENTITY-PINS direct-child attestation. Its fixed paths and

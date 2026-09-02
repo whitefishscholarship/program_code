@@ -145,6 +145,53 @@ type BuildState = {
     productionSpreadsheetId: string | null;
     productionMutationAuthorized: boolean;
     productionAuthorization: P9ProductionAuthorization | null;
+    sourceTransition?: {
+      organizerMaster: {
+        spreadsheetId: string;
+        role: string;
+        designationEvidence: string;
+        verificationStatus: string;
+        accessAuthorized: boolean;
+        automatedWriteAuthorized: boolean;
+        verificationEvidencePath: string;
+      };
+      formerProduction: {
+        spreadsheetId: string;
+        role: string;
+        accessAuthorized: boolean;
+        comparisonReadAuthorized: boolean;
+        dispositionEvidencePath: string;
+      };
+      applicationRuntime: {
+        sourceMode: string;
+        publicationStatus: string;
+        mutableMasterDirectReadAuthorized: boolean;
+        runtimeReadAuthorityStatus: string;
+        publicationEvidencePath: string;
+        publicationPath: string | null;
+        publicationSha256: string | null;
+        publicationSchemaVersion: string | null;
+        sourceMasterRevision: string | null;
+        acceptedFactSha256: string | null;
+        generatorSha256: string | null;
+        p8mCandidateCommit: string | null;
+        p8mAttestationCommit: string | null;
+        runtimeCommit: string | null;
+        providerProjectFingerprintSha256: string | null;
+        providerTeamFingerprintSha256: string | null;
+        canonicalProductionHostnameSha256: string | null;
+        verificationEnvironmentFingerprintSha256: string | null;
+        runtimeReadAuthorityEvidencePath: string | null;
+        deploymentOwner: string | null;
+        rollbackOwner: string | null;
+        historicalP9IdentityPinStatus: string;
+        requiredPublicationPins: string[];
+      };
+      identities: string[];
+      matchingFactContractPath: string;
+      matchingFactContractId: string;
+      taxonomyVersion: string;
+    };
   };
   deployment: {
     mainAutoDeploysProduction: boolean;
@@ -196,7 +243,7 @@ type ReviewRecord = {
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..', '..');
-const expectedStageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P8F', 'P9'];
+const expectedStageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P8M', 'P8F', 'P9'];
 const closedStatuses = new Set<StageStatus>(['accepted']);
 const inFlightStatuses = new Set<StageStatus>([
   'active',
@@ -804,7 +851,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
   if (
     !baselineState ||
     !candidateState ||
-    candidateState.planRevision !== 9 ||
+    candidateState.planRevision !== 10 ||
     candidateState.activeStageId !== null ||
     candidateState.nextPermittedStageId !== 'P9' ||
     candidateP9?.status !== 'planned' ||
@@ -816,7 +863,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
     !p9IdentityPinProofFlagsAreFalse(candidateAuthorization)
   ) {
     fail(
-      'P9-IDENTITY-PINS candidate must keep Plan Revision 9 and P9 planned while pinning one complete identity set with every proof state false',
+      'P9-IDENTITY-PINS candidate must keep Plan Revision 10 and P9 planned while pinning one complete identity set with every proof state false',
     );
   } else {
     for (const error of validateP9ReadOnlyAuthority(
@@ -1047,6 +1094,75 @@ if (state) {
       requireFile(authorization.evidencePath);
     }
   }
+  if (state.planRevision >= 10) {
+    const transition = state.dataAuthority.sourceTransition;
+    if (
+      !transition ||
+      transition.organizerMaster.spreadsheetId !==
+        '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4' ||
+      transition.organizerMaster.role !== 'organizer_authoring_master' ||
+      transition.organizerMaster.designationEvidence !== 'user-reported' ||
+      transition.organizerMaster.verificationStatus !== 'unverified' ||
+      transition.organizerMaster.accessAuthorized !== false ||
+      transition.organizerMaster.automatedWriteAuthorized !== false ||
+      transition.formerProduction.spreadsheetId !==
+        '1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE' ||
+      transition.formerProduction.role !== 'legacy_comparison_only' ||
+      transition.formerProduction.accessAuthorized !== false ||
+      transition.formerProduction.comparisonReadAuthorized !== false ||
+      transition.applicationRuntime.sourceMode !==
+        'validated_immutable_versioned_publication' ||
+      transition.applicationRuntime.publicationStatus !== 'not_created' ||
+      transition.applicationRuntime.mutableMasterDirectReadAuthorized !== false ||
+      transition.applicationRuntime.runtimeReadAuthorityStatus !== 'not_authorized' ||
+      transition.applicationRuntime.historicalP9IdentityPinStatus !==
+        'retired_unstarted_by_PLAN_REV10' ||
+      JSON.stringify(transition.applicationRuntime.requiredPublicationPins) !==
+        JSON.stringify([
+          'publication_path',
+          'publication_sha256',
+          'schema_version',
+          'taxonomy_version',
+          'source_master_revision',
+          'accepted_fact_sha256',
+          'generator_sha256',
+          'p8m_candidate',
+          'p8m_attestation',
+          'runtime_commit',
+          'provider_project',
+          'provider_team',
+          'canonical_production_hostname',
+          'verification_environment',
+        ]) ||
+      JSON.stringify(transition.identities) !==
+        JSON.stringify([
+          'human_editor',
+          'proposal_processor',
+          'fact_reviewer',
+          'read_only_application_runtime',
+        ]) ||
+      transition.matchingFactContractPath !==
+        'docs/evidence/PLAN-REV10-matching-fact-contract.json' ||
+      transition.matchingFactContractId !== 'matching-facts-v1' ||
+      transition.taxonomyVersion !== '1.0.0'
+    ) {
+      fail(
+        'Plan Revision 10 requires the exact unverified master, legacy comparison-only source, separated identities, and immutable publication boundary',
+      );
+    } else {
+      requireFile(transition.formerProduction.dispositionEvidencePath);
+      const matchingContract = readJson<Record<string, unknown>>(
+        transition.matchingFactContractPath,
+      );
+      if (
+        matchingContract?.contractId !== transition.matchingFactContractId ||
+        matchingContract?.taxonomyVersion !== transition.taxonomyVersion ||
+        matchingContract?.status !== 'governance-frozen-no-processing-authority'
+      ) {
+        fail('Plan Revision 10 matching-fact contract identity or frozen status is invalid');
+      }
+    }
+  }
   if (!state.deployment || state.deployment.mainAutoDeploysProduction !== true) {
     fail('BUILD_STATE must acknowledge that main auto-deploys production');
   }
@@ -1172,15 +1288,27 @@ if (state) {
     requireFile(amendment.evidencePath);
     if (amendmentRevision >= 3) {
       const authorization = amendment.deliveryAuthorization;
-      if (
-        authorization?.authorized !== true ||
-        !authorization.authorizedBy?.trim() ||
-        !/^\d{4}-\d{2}-\d{2}$/.test(authorization.authorizedAt ?? '') ||
-        authorization.evidencePath !== amendment.evidencePath ||
+      if (authorization?.authorized === true) {
+        if (
+          !authorization.authorizedBy?.trim() ||
+          !/^\d{4}-\d{2}-\d{2}$/.test(authorization.authorizedAt ?? '') ||
+          authorization.evidencePath !== amendment.evidencePath ||
+          !authorization.basis.trim() ||
+          !authorization.scope.trim()
+        ) {
+          fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
+        }
+      } else if (
+        amendment.id !== 'PLAN-REV10' ||
+        authorization?.authorized !== false ||
+        authorization.authorizedBy !== null ||
+        authorization.authorizedAt !== null ||
+        authorization.evidencePath !== null ||
         !authorization.basis.trim() ||
-        !authorization.scope.trim()
+        !authorization.scope.trim() ||
+        !state.deployment.deliveryBlockers.some((item) => item.startsWith('PLAN-REV10-'))
       ) {
-        fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
+        fail(`${amendment.id} requires direct informed delivery authority or the exact Revision 10 local-only blocker`);
       }
     }
     validateBoundAttestation(
@@ -1813,6 +1941,7 @@ if (state) {
     const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
     const attestedRevision8 = historicallyAttestedPlanAmendments.get('PLAN-REV8');
     const attestedRevision9 = historicallyAttestedPlanAmendments.get('PLAN-REV9');
+    const attestedRevision10 = historicallyAttestedPlanAmendments.get('PLAN-REV10');
     const expectedEntryProofState = Boolean(p9MayUseProduction);
     const expectedPostCutoverProofState =
       p9?.status === 'verified' || p9?.status === 'accepted';
@@ -1858,6 +1987,7 @@ if (state) {
           !attestedRevision7 ||
           (state.planRevision >= 8 && !attestedRevision8) ||
           (state.planRevision >= 9 && !attestedRevision9) ||
+          (state.planRevision >= 10 && !attestedRevision10) ||
           !acceptedP7 ||
           !acceptedP7CatalogBlob ||
           !/^[0-9a-f]{40}$/.test(p9BaselineCommit) ||
@@ -1865,7 +1995,7 @@ if (state) {
           !revision7AttestationCommittedAt ||
           !candidateCommittedAt
         ) {
-          fail('P9 active state requires immutable accepted P7, delivered Revisions 7, 8, and 9, and exact Git chronology');
+          fail('P9 active state requires immutable accepted P7, delivered Revisions 7 through 10, and exact Git chronology');
         } else if (operationalIdentityContext) {
           try {
             evidenceContext = {
@@ -1875,10 +2005,12 @@ if (state) {
               revision7AttestationCommittedAt,
               revision7CandidateCommit: attestedRevision7.candidateCommit,
               trustedProofCandidateCommit:
+                attestedRevision10?.candidateCommit ??
                 attestedRevision9?.candidateCommit ??
                 attestedRevision8?.candidateCommit ??
                 attestedRevision7.candidateCommit,
               trustedProofAttestationCommit:
+                attestedRevision10?.attestationCommit ??
                 attestedRevision9?.attestationCommit ??
                 attestedRevision8?.attestationCommit ??
                 attestedRevision7.attestationCommit,
@@ -2121,6 +2253,36 @@ if (state) {
       }
     }
 
+    if (state.planRevision >= 10) {
+      const p8m = state.stages.find((item) => item.id === 'P8M');
+      const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P8M',
+      );
+      if (p8m?.status === 'planned' && p8mAuthorization?.authorized !== false) {
+        fail('Plan Revision 10 requires planned P8M to remain unauthorized');
+      }
+      if (
+        p8m?.status === 'planned' &&
+        !state.deployment.deliveryBlockers.some((item) => item.startsWith('P8M-'))
+      ) {
+        fail('Plan Revision 10 requires the direct-authority P8M delivery blocker');
+      }
+      if (attestedRevision10) {
+        const revision10ContractPath =
+          'docs/evidence/PLAN-REV10-matching-fact-contract.json';
+        const canonicalContract = gitText([
+          'show',
+          `${attestedRevision10.candidateCommit}:${revision10ContractPath}`,
+        ]);
+        if (
+          canonicalContract === null ||
+          requireFile(revision10ContractPath) !== canonicalContract
+        ) {
+          fail('Plan Revision 10 matching-fact contract must remain byte-identical');
+        }
+      }
+    }
+
     if (p9?.status === 'accepted') {
       const canonicalP9 = findCanonicalAttestation(
         'P9',
@@ -2238,6 +2400,21 @@ if (state) {
     }
     requireFile('docs/evidence/PLAN-REV9-interview-inventory.md');
   }
+  if (state.planRevision >= 10) {
+    for (const phrase of [
+      'Matching-fact enrichment and acceptance',
+      'validated immutable versioned publication',
+      'legacy comparison-only',
+      'Edit access is capability, not operation authority',
+      'P8M accepted and delivered',
+    ]) {
+      if (!plan.includes(phrase)) {
+        fail(`Plan Revision 10 is missing master/matching governance text: ${phrase}`);
+      }
+    }
+    requireFile('docs/evidence/PLAN-REV10-matching-fact-contract.json');
+    requireFile('docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md');
+  }
 
   const agents = content['AGENTS.md'];
   for (const phrase of [
@@ -2267,6 +2444,15 @@ if (state) {
       if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 9 invariant: ${phrase}`);
     }
   }
+  if (state.planRevision >= 10) {
+    for (const phrase of [
+      'Plan Revision 10 and P8M boundary',
+      'proposal-only',
+      'Edit access is not automated-write authority',
+    ]) {
+      if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 10 invariant: ${phrase}`);
+    }
+  }
 
   const decisions = content['docs/DECISIONS.md'];
   for (let i = 1; i <= 8; i++) {
@@ -2275,6 +2461,9 @@ if (state) {
   }
   if (state.planRevision >= 9 && !decisions.includes('## D-021 —')) {
     fail('Decision log is missing D-021');
+  }
+  if (state.planRevision >= 10 && !decisions.includes('## D-022 —')) {
+    fail('Decision log is missing D-022');
   }
 
   const handoff = content['docs/CURRENT_HANDOFF.md'];

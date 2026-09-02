@@ -1,7 +1,8 @@
 # P8F Kickoff — Former Interview Detail and Routing Restoration
 
-Use this kickoff only in a fresh session after Plan Revision 9 is independently
-accepted, direct-child attested, merged, and verified on live `origin/main`.
+Use this kickoff only in a fresh session after Plan Revisions 9 and 10 and P8M are
+independently accepted, direct-child attested, merged, and verified on live
+`origin/main`.
 
 ```text
 Execute P8F — Former interview detail and routing restoration — only for
@@ -19,12 +20,22 @@ AUTHORITATIVE READ ORDER
 9. docs/evidence/PLAN-REV9-manifest.json
 10. docs/reviews/PLAN-REV9.json
 11. docs/evidence/PLAN-REV9-interview-inventory.md
-12. docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md
+12. docs/evidence/PLAN-REV10.md
+13. docs/evidence/PLAN-REV10-manifest.json
+14. docs/reviews/PLAN-REV10.json
+15. docs/evidence/PLAN-REV10-matching-fact-contract.json
+16. docs/evidence/P8M.md
+17. docs/evidence/P8M-manifest.json
+18. docs/reviews/P8M.json
+19. docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md
 
 STATE TO PIN BEFORE EDITING
-- Fetch live origin/main and prove exact accepted P8R and Revision 9 direct-child
-  attestations are present.
+- Fetch live origin/main and prove exact accepted P8R, Revision 9, Revision 10, and P8M
+  direct-child attestations are present.
 - Verify P8F is the sole next-permitted planned stage and P9 remains planned/unstarted.
+- Pin the exact P8M accepted matching facts, immutable publication digest, taxonomy
+  version, complete denominator, and reconciliation. Stop if any accepted question rule
+  lacks an award/cycle-bound field-specific fact or the publication differs.
 - Reverify historical commit 4c20637a351d272788e24ac9d02e541494644832 and every
   pinned blob in the Revision 9 inventory. Repeat the complete-history anchor searches;
   stop on unexplained drift.
@@ -36,7 +47,8 @@ STATE TO PIN BEFORE EDITING
 OBJECTIVE
 Restore the complete former displayed interview detail and its intended search process
 inside the accepted P7/P8R product, using only conservative award-bound accepted facts
-for eligibility decisions and keeping every answer in volatile browser memory.
+from the exact P8M immutable publication for eligibility decisions and keeping every
+answer in volatile browser memory.
 
 IN SCOPE
 - The six former Academic Background questions; four activity/responsibility answers;
@@ -88,6 +100,8 @@ must clear them.
 OUT OF SCOPE
 - Any scholarship spreadsheet read or write, fact mutation, public-source acquisition,
   production source/configuration work, P9, or P9 identity pins.
+- Any P8M enrichment, proposal review, taxonomy change, publication mutation, or
+  fallback to mutable-master/free-text facts.
 - Monitoring activation or schedule/deployment-configuration changes.
 - Forms/applications, applicant-data collection, answer telemetry, provider contact,
   paid/destructive actions, dependency changes not strictly required for P8F, history

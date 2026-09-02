@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 9,
+  "planRevision": 10,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-01",
   "repository": {
@@ -151,6 +151,73 @@
       },
       "basis": "The user identified the exact production spreadsheet and two scholarship tabs, then directly clarified that neither Codex nor the application is authorized to write that production ID. The user authorized P9 production source migration, application configuration switching, governed Git and pull-request delivery, Preview and Production deployment, verification, reconciliation, and rollback, and named Kelsey Stuart as both deployment and rollback owner.",
       "scope": "Use only the two exact scholarship tabs as read-only P9 source input; implement a separately configured read-only production data path; keep every write-capable spreadsheet path pinned to the testing ID or disable it; verify mapping, reconciliation, deployment smoke, and configuration rollback. Never write, append, clear, format, share, rename, restore, or otherwise mutate the production spreadsheet. Do not access unrelated tabs or applicant data."
+    },
+    "sourceTransition": {
+      "organizerMaster": {
+        "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+        "role": "organizer_authoring_master",
+        "designationEvidence": "user-reported",
+        "verificationStatus": "unverified",
+        "accessAuthorized": false,
+        "automatedWriteAuthorized": false,
+        "verificationEvidencePath": "docs/evidence/P8M.md"
+      },
+      "formerProduction": {
+        "spreadsheetId": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
+        "role": "legacy_comparison_only",
+        "accessAuthorized": false,
+        "comparisonReadAuthorized": false,
+        "dispositionEvidencePath": "docs/evidence/PLAN-REV10.md"
+      },
+      "applicationRuntime": {
+        "sourceMode": "validated_immutable_versioned_publication",
+        "publicationStatus": "not_created",
+        "mutableMasterDirectReadAuthorized": false,
+        "runtimeReadAuthorityStatus": "not_authorized",
+        "publicationEvidencePath": "docs/evidence/P9.md",
+        "publicationPath": null,
+        "publicationSha256": null,
+        "publicationSchemaVersion": null,
+        "sourceMasterRevision": null,
+        "acceptedFactSha256": null,
+        "generatorSha256": null,
+        "p8mCandidateCommit": null,
+        "p8mAttestationCommit": null,
+        "runtimeCommit": null,
+        "providerProjectFingerprintSha256": null,
+        "providerTeamFingerprintSha256": null,
+        "canonicalProductionHostnameSha256": null,
+        "verificationEnvironmentFingerprintSha256": null,
+        "runtimeReadAuthorityEvidencePath": null,
+        "deploymentOwner": null,
+        "rollbackOwner": null,
+        "historicalP9IdentityPinStatus": "retired_unstarted_by_PLAN_REV10",
+        "requiredPublicationPins": [
+          "publication_path",
+          "publication_sha256",
+          "schema_version",
+          "taxonomy_version",
+          "source_master_revision",
+          "accepted_fact_sha256",
+          "generator_sha256",
+          "p8m_candidate",
+          "p8m_attestation",
+          "runtime_commit",
+          "provider_project",
+          "provider_team",
+          "canonical_production_hostname",
+          "verification_environment"
+        ]
+      },
+      "identities": [
+        "human_editor",
+        "proposal_processor",
+        "fact_reviewer",
+        "read_only_application_runtime"
+      ],
+      "matchingFactContractPath": "docs/evidence/PLAN-REV10-matching-fact-contract.json",
+      "matchingFactContractId": "matching-facts-v1",
+      "taxonomyVersion": "1.0.0"
     }
   },
   "deployment": {
@@ -247,6 +314,15 @@
         "scope": "After accepted Plan Revision 8 is delivered, implement, independently review, attest, push, open a pull request for, merge, and verify only P8R and its resulting Vercel Preview and Production deployments. P8R restores the interview-first student flow using the accepted public catalog, volatile browser-memory answers, conservative typed matching, on-page results, browser QA, and rollback to accepted P8. It excludes all spreadsheet access or writes, P9, production-source or deployment-configuration changes, monitoring activation, forms or applications, applicant-data collection, answer persistence or transmission, analytics, provider contact, paid or destructive actions, gate weakening, history rewrite, and scope expansion."
       },
       {
+        "stageId": "P8M",
+        "authorized": false,
+        "authorizedBy": null,
+        "authorizedAt": null,
+        "evidencePath": null,
+        "basis": "Plan Revision 10 defines P8M but the current instruction expressly stops before enrichment. Organizer team edit access is capability, not direct authority for sheet/source reads, Claude row processing, accepted-fact decisions, writes, Git delivery, or deployment effects.",
+        "scope": "No P8M action is authorized. A later direct informed instruction must name the exact bounded denominator, master tabs/ranges, permitted source reads, Claude proposal processing, human review role, write exclusion or exact write gate, Git delivery, and resulting Vercel effects before P8M may start."
+      },
+      {
         "stageId": "P8F",
         "authorized": true,
         "authorizedBy": "Kelsey Stuart",
@@ -298,7 +374,11 @@
         ]
       }
     ],
-    "deliveryBlockers": []
+    "deliveryBlockers": [
+      "PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority",
+      "P8M-awaits-direct-stage-specific-source-processing-review-and-delivery-authority",
+      "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
+    ]
   },
   "governance": {
     "planAmendments": [
@@ -421,11 +501,27 @@
           "basis": "The user supplied the repository delivery contract and directly instructed Codex to govern and deliver the plan amendment/new stage required for the former-interview detail restoration while keeping P9 unstarted.",
           "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify only Plan Revision 9 and its resulting Vercel Preview and Production deployments. Revision 9 is governance-only: it inserts and authorizes P8F, binds the exact former-interview inventory and rule dispositions, preserves accepted P7/P8/P8R behavior and privacy, keeps P9 planned and unstarted, and advances only the immutable P9 trusted-proof compatibility anchor required to recognize Revision 9. It does not change product runtime behavior, access or write any spreadsheet or public source, mutate scholarship facts, start P8F or P9, change deployment configuration, activate monitoring, interact with forms/applications or applicant data, persist/transmit answers or decisions, contact providers, perform paid/destructive actions, weaken gates, or rewrite history."
         }
+      },
+      {
+        "id": "PLAN-REV10",
+        "status": "attestation-gated",
+        "baselineCommit": "390b270c5d3127ff2705ffb114212a518a1d5953",
+        "evidencePath": "docs/evidence/PLAN-REV10.md",
+        "manifestPath": "docs/evidence/PLAN-REV10-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV10.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "The current instruction authorizes governance-only local work and requires stopping before enrichment. It does not separately state informed authority for Plan Revision 10 branch push, pull request, merge, or resulting Vercel Preview and Production deployments. Team edit access is unrelated capability and is not used as delivery authority.",
+          "scope": "Freeze, independently review, and direct-child attest Plan Revision 10 locally only. Do not push, open or merge a pull request, or trigger Preview or Production deployment until separate direct informed authority names those effects."
+        }
       }
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P8F",
+  "nextPermittedStageId": "P8M",
   "stages": [
     {
       "id": "P0",
@@ -526,6 +622,16 @@
       "manifestPath": "docs/evidence/P8R-manifest.json",
       "reviewPath": "docs/reviews/P8R.json",
       "kickoffPath": "docs/kickoffs/P8R-INTERVIEW-RESTORATION.md"
+    },
+    {
+      "id": "P8M",
+      "name": "Matching-fact enrichment and acceptance",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P8M.md",
+      "manifestPath": "docs/evidence/P8M-manifest.json",
+      "reviewPath": "docs/reviews/P8M.json",
+      "kickoffPath": "docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md"
     },
     {
       "id": "P8F",

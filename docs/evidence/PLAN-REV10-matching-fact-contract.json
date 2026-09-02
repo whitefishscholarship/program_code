@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "contractId": "matching-facts-v1",
+  "taxonomyVersion": "1.0.0",
+  "status": "governance-frozen-no-processing-authority",
+  "subjectIdentity": {
+    "required": [
+      "award_id"
+    ],
+    "optional": [
+      "cycle_id"
+    ],
+    "distinctEntities": [
+      "parent_source",
+      "child_award",
+      "application_group",
+      "annual_cycle"
+    ],
+    "rules": [
+      "award_id must resolve to one accepted canonical award identity and may never be a scholarship name alone",
+      "cycle_id is required for a cycle-specific fact and must resolve to a cycle belonging to award_id",
+      "parent sources, child awards, shared applications, and cycles never collapse into one identifier",
+      "a fact attached to a parent or application group cannot silently become a child-award eligibility fact"
+    ]
+  },
+  "factSchema": {
+    "requiredFields": [
+      "award_id",
+      "cycle_id",
+      "criterion_id",
+      "effect",
+      "operator",
+      "value",
+      "evidence_status",
+      "source_url",
+      "source_revision",
+      "observed_at",
+      "evidence_excerpt",
+      "reviewer_id",
+      "reviewed_at",
+      "review_rationale",
+      "taxonomy_version"
+    ],
+    "effects": [
+      "required",
+      "preferred",
+      "informational"
+    ],
+    "evidenceStatuses": [
+      "proposed",
+      "accepted",
+      "rejected",
+      "conflict",
+      "stale",
+      "unknown"
+    ],
+    "valueTypes": [
+      "boolean",
+      "number",
+      "integer",
+      "string",
+      "date",
+      "enum",
+      "enum_set",
+      "identifier",
+      "identifier_set"
+    ],
+    "operators": [
+      {
+        "id": "eq",
+        "valueTypes": [
+          "boolean",
+          "number",
+          "integer",
+          "string",
+          "date",
+          "enum",
+          "identifier"
+        ]
+      },
+      {
+        "id": "neq",
+        "valueTypes": [
+          "boolean",
+          "number",
+          "integer",
+          "string",
+          "date",
+          "enum",
+          "identifier"
+        ]
+      },
+      {
+        "id": "in",
+        "valueTypes": [
+          "enum_set",
+          "identifier_set"
+        ]
+      },
+      {
+        "id": "not_in",
+        "valueTypes": [
+          "enum_set",
+          "identifier_set"
+        ]
+      },
+      {
+        "id": "gte",
+        "valueTypes": [
+          "number",
+          "integer",
+          "date"
+        ]
+      },
+      {
+        "id": "lte",
+        "valueTypes": [
+          "number",
+          "integer",
+          "date"
+        ]
+      },
+      {
+        "id": "between",
+        "valueTypes": [
+          "number",
+          "integer",
+          "date"
+        ]
+      },
+      {
+        "id": "contains_any",
+        "valueTypes": [
+          "enum_set",
+          "identifier_set"
+        ]
+      },
+      {
+        "id": "contains_all",
+        "valueTypes": [
+          "enum_set",
+          "identifier_set"
+        ]
+      },
+      {
+        "id": "exists",
+        "valueTypes": [
+          "boolean",
+          "number",
+          "integer",
+          "string",
+          "date",
+          "enum",
+          "enum_set",
+          "identifier",
+          "identifier_set"
+        ]
+      }
+    ],
+    "nullRules": [
+      "null, empty, omitted, ambiguous, and unparseable are unknown rather than false",
+      "unknown values cannot use neq, not_in, or any negative interpretation",
+      "a proposed, rejected, conflict, stale, or unknown fact is unavailable to matching",
+      "effect describes provider language and does not override evidence status"
+    ]
+  },
+  "criteria": [
+    { "criterion_id": "academic.gpa_unweighted", "category": "academics", "value_type": "number", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "academic.gpa_weighted", "category": "academics", "value_type": "number", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "academic.class_rank_percentile", "category": "academics", "value_type": "number", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "academic.sat_total", "category": "academics", "value_type": "integer", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "academic.act_composite", "category": "academics", "value_type": "integer", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "academic.merit", "category": "academics", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "academic.course_or_credit_requirement", "category": "academics", "value_type": "string", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+
+    { "criterion_id": "education.current_status", "category": "education", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "education.grade_level", "category": "education", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "education.school_type", "category": "education", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "education.target_institution_id", "category": "education", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "education.target_institution_type", "category": "education", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "education.college_accepted", "category": "education", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "education.gap_year", "category": "education", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "education.first_generation", "category": "education", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "education.fafsa_complete", "category": "education", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
+
+    { "criterion_id": "geography.residence_state", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.residence_county", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.residence_city", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.high_school_id", "category": "geography", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.citizenship_status", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.rural_status", "category": "geography", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award"] },
+
+    { "criterion_id": "responsibility.leadership", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "responsibility.work_experience", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "responsibility.caregiving", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "service.community_service", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "service.volunteer_hours", "category": "responsibility_service", "value_type": "integer", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "service.service_type", "category": "responsibility_service", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+
+    { "criterion_id": "financial.need", "category": "financial_need", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
+    { "criterion_id": "financial.pell_eligible", "category": "financial_need", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
+    { "criterion_id": "financial.income_band", "category": "financial_need", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
+
+    { "criterion_id": "learning.dyslexia", "category": "learning_neurodiversity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "learning.adhd", "category": "learning_neurodiversity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "learning.autism", "category": "learning_neurodiversity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "learning.disability_other", "category": "learning_neurodiversity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "health.mental_health", "category": "health_hardship", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "health.chronic_condition", "category": "health_hardship", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "hardship.foster_care", "category": "health_hardship", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "hardship.loss_of_parent", "category": "health_hardship", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "hardship.overcoming_adversity", "category": "health_hardship", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "identity.race_ethnicity", "category": "heritage_demographics_identity", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "identity.tribal_affiliation", "category": "heritage_demographics_identity", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "identity.gender", "category": "heritage_demographics_identity", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "identity.lgbtqia", "category": "heritage_demographics_identity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "identity.single_parent_household", "category": "heritage_demographics_identity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "identity.mensa_member", "category": "heritage_demographics_identity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "career.field_of_study", "category": "career_field", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.aviation_pilot", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.aviation_maintenance", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.aviation_management", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.stem", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.nursing", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.healthcare", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.trades", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.business_finance", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.public_service", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.law", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.arts_humanities", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.agriculture_conservation", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+
+    { "criterion_id": "athletics.participation", "category": "athletics", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "athletics.sport", "category": "athletics", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+
+    { "criterion_id": "affiliation.military_veteran", "category": "military_first_responder", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.first_responder", "category": "military_first_responder", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "affiliation.farmers_union", "category": "organization_affiliation", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.electric_coop", "category": "organization_affiliation", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.credit_union", "category": "organization_affiliation", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.elks_lodge", "category": "organization_affiliation", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.organization_id", "category": "organization_affiliation", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "affiliation.company_employee", "category": "employer_affiliation", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
+    { "criterion_id": "affiliation.employer_id", "category": "employer_affiliation", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": true, "scopes": ["award"] },
+
+    { "criterion_id": "application.mode", "category": "application", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "application.group_id", "category": "application", "value_type": "identifier", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "application.supplement_required", "category": "application", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "application.essay_required", "category": "application", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "application.automatic_consideration", "category": "application", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+
+    { "criterion_id": "cycle.status", "category": "cycle", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["cycle"] },
+    { "criterion_id": "cycle.year", "category": "cycle", "value_type": "integer", "allowed_operators": ["eq", "gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["cycle"] },
+    { "criterion_id": "cycle.opens_on", "category": "cycle", "value_type": "date", "allowed_operators": ["eq", "gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["cycle"] },
+    { "criterion_id": "cycle.closes_on", "category": "cycle", "value_type": "date", "allowed_operators": ["eq", "gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["cycle"] },
+    { "criterion_id": "cycle.recurrence", "category": "cycle", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["cycle"] },
+    { "criterion_id": "cycle.renewable", "category": "cycle", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "cycle.award_amount", "category": "cycle", "value_type": "number", "allowed_operators": ["eq", "gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["cycle"] }
+  ],
+  "aliases": [
+    { "alias": "gpa", "criterion_id": "academic.gpa_unweighted" },
+    { "alias": "educational_status", "criterion_id": "education.current_status" },
+    { "alias": "target_school_types", "criterion_id": "education.target_institution_type" },
+    { "alias": "college_accepted", "criterion_id": "education.college_accepted" },
+    { "alias": "gap_year", "criterion_id": "education.gap_year" },
+    { "alias": "leadership", "criterion_id": "responsibility.leadership" },
+    { "alias": "work_experience", "criterion_id": "responsibility.work_experience" },
+    { "alias": "caregiving", "criterion_id": "responsibility.caregiving" },
+    { "alias": "service", "criterion_id": "service.community_service" },
+    { "alias": "volunteer_hours_bucket", "criterion_id": "service.volunteer_hours" },
+    { "alias": "financial_need", "criterion_id": "financial.need" },
+    { "alias": "dyslexia", "criterion_id": "learning.dyslexia" },
+    { "alias": "adhd", "criterion_id": "learning.adhd" },
+    { "alias": "autism", "criterion_id": "learning.autism" },
+    { "alias": "learning_other", "criterion_id": "learning.disability_other" },
+    { "alias": "mental_health", "criterion_id": "health.mental_health" },
+    { "alias": "chronic_health", "criterion_id": "health.chronic_condition" },
+    { "alias": "foster_care", "criterion_id": "hardship.foster_care" },
+    { "alias": "loss_of_parent", "criterion_id": "hardship.loss_of_parent" },
+    { "alias": "overcoming_adversity", "criterion_id": "hardship.overcoming_adversity" },
+    { "alias": "first_generation", "criterion_id": "education.first_generation" },
+    { "alias": "black_african_american", "criterion_id": "identity.race_ethnicity" },
+    { "alias": "hispanic_latino", "criterion_id": "identity.race_ethnicity" },
+    { "alias": "native_american", "criterion_id": "identity.race_ethnicity" },
+    { "alias": "asian_pacific_islander", "criterion_id": "identity.race_ethnicity" },
+    { "alias": "lgbtqia", "criterion_id": "identity.lgbtqia" },
+    { "alias": "female", "criterion_id": "identity.gender" },
+    { "alias": "nonbinary", "criterion_id": "identity.gender" },
+    { "alias": "single_parent", "criterion_id": "identity.single_parent_household" },
+    { "alias": "mensa", "criterion_id": "identity.mensa_member" },
+    { "alias": "aviation_pilot", "criterion_id": "career.aviation_pilot" },
+    { "alias": "aviation_maintenance", "criterion_id": "career.aviation_maintenance" },
+    { "alias": "aviation_management", "criterion_id": "career.aviation_management" },
+    { "alias": "stem", "criterion_id": "career.stem" },
+    { "alias": "healthcare", "criterion_id": "career.healthcare" },
+    { "alias": "nursing", "criterion_id": "career.nursing" },
+    { "alias": "trades", "criterion_id": "career.trades" },
+    { "alias": "business_finance", "criterion_id": "career.business_finance" },
+    { "alias": "public_service", "criterion_id": "career.public_service" },
+    { "alias": "law", "criterion_id": "career.law" },
+    { "alias": "arts_humanities", "criterion_id": "career.arts_humanities" },
+    { "alias": "agriculture_conservation", "criterion_id": "career.agriculture_conservation" },
+    { "alias": "athletics_sports", "criterion_id": "athletics.participation" },
+    { "alias": "military_veteran", "criterion_id": "affiliation.military_veteran" },
+    { "alias": "first_responder", "criterion_id": "affiliation.first_responder" },
+    { "alias": "farmers_union", "criterion_id": "affiliation.farmers_union" },
+    { "alias": "electric_coop", "criterion_id": "affiliation.electric_coop" },
+    { "alias": "credit_union", "criterion_id": "affiliation.credit_union" },
+    { "alias": "elks_lodge", "criterion_id": "affiliation.elks_lodge" },
+    { "alias": "company_employee", "criterion_id": "affiliation.company_employee" }
+  ],
+  "evidenceAuthority": {
+    "precedence": [
+      "official_award_cycle_specific",
+      "official_parent_program_field_specific",
+      "organizer_owned_local_award_record",
+      "organizer_reviewed_master",
+      "accepted_repository_evidence",
+      "secondary_source_discovery_only",
+      "ai_proposal_only"
+    ],
+    "hardConflictMinimum": "accepted_field_specific_authority",
+    "conflictPolicy": "conflict_blocks_acceptance_and_matching_use",
+    "rules": [
+      "cycle-specific child-award evidence outranks parent or yearless evidence for the same field",
+      "an organizer-reviewed master fact may be accepted directly only when the organizer is the authoritative owner for that local award field",
+      "material eligibility, deadline, cycle, and application facts otherwise require current official provider evidence",
+      "secondary sources and AI output may discover or propose but can never establish accepted truth",
+      "equal-authority disagreement becomes conflict until a human reviewer records a source-specific resolution"
+    ]
+  },
+  "sensitivePolicy": {
+    "nonselectionMeaning": "unknown_not_negative",
+    "unansweredMeaning": "unknown_not_negative",
+    "acceptedUse": "positive_signal_only_unless_explicit_contradiction",
+    "rules": [
+      "health, disability, heritage, identity, hardship, affiliation, employer, financial, citizenship, and caregiving inputs remain optional",
+      "prefer-not-to-answer is equivalent to unanswered for matching",
+      "only an explicit contradictory typed answer plus an accepted required fact may create a known conflict",
+      "a positive selection may rank or match only when exact accepted authority exists"
+    ]
+  },
+  "freshness": {
+    "cycleSpecific": "stale_at_cycle_close_or_when_source_declares_replacement",
+    "annualRollover": "yearless_or_prior_cycle_fact_stale_on_next_calendar_year_until_reverified",
+    "nonCycleReviewDays": 365,
+    "rules": [
+      "closed, ended, replaced, or superseded cycle evidence is stale for future-cycle matching",
+      "annual language without a verified year remains unknown and cannot establish current availability",
+      "a retrieval success does not reset freshness unless the material field is re-observed",
+      "stale facts remain visible to review but unavailable to matching"
+    ]
+  },
+  "claudeBoundary": {
+    "role": "proposal_only",
+    "outputStatus": "proposed",
+    "directWriteAllowed": false,
+    "selfAcceptanceAllowed": false,
+    "requiredReceipts": [
+      "input_fingerprint",
+      "prompt_version",
+      "batch_identity",
+      "checkpoint",
+      "resume_cursor",
+      "completeness",
+      "output_fingerprint",
+      "ambiguity_counts"
+    ],
+    "rules": [
+      "run only after a later accepted kickoff grants exact source and processing authority",
+      "consume revision-pinned bounded inputs and only separately authorized official sources",
+      "emit schema-valid JSON or JSONL with provenance, confidence, and ambiguity",
+      "never process applicant PII, enter an application, contact a provider, silently truncate work, or write a spreadsheet"
+    ]
+  },
+  "codexBoundary": {
+    "role": "governance_validation_reconciliation_owner",
+    "responsibilities": [
+      "stable_id_binding",
+      "duplicate_conflict_coverage_checks",
+      "no_truncation_reconciliation",
+      "source_evidence_policy",
+      "proposal_review",
+      "independent_review_packaging",
+      "separately_authorized_write_control"
+    ]
+  },
+  "futureWriteGate": {
+    "editAccessIsAuthority": false,
+    "requiredAuthorityFields": [
+      "spreadsheet_id",
+      "tab",
+      "columns_ranges_cells",
+      "operation_count",
+      "source_revision",
+      "backup_owner",
+      "rollback_owner"
+    ],
+    "requiredControls": [
+      "verified_backup",
+      "deterministic_dry_run",
+      "human_acceptance",
+      "independent_review",
+      "idempotent_bounded_batch",
+      "immediate_readback",
+      "untargeted_cell_proof",
+      "complete_reconciliation"
+    ]
+  }
+}

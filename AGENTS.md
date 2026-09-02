@@ -162,6 +162,36 @@ activation, form/application interaction, applicant-data collection, answer/deci
 persistence or transmission, analytics, provider contact, deployment-configuration
 changes, or scope expansion.
 
+## Plan Revision 10 and P8M boundary
+
+Plan Revision 10 inserts `P8M` between accepted P8R and planned P8F. P8M is the sole
+next-permitted stage, but it remains planned and unauthorized until a later direct,
+stage-specific instruction names the exact bounded denominator, master tabs/ranges,
+permitted source reads, proposal processing, human review, write exclusion or exact
+write gate, Git delivery, and resulting deployment effects. Do not begin P8M merely
+because it is next-permitted.
+
+Spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is the
+organizer-designated authoring master only as a user-reported, independently unverified
+fact. Edit access is not automated-write authority. Revision 10 grants no sheet,
+source, permission, metadata, or revision access and no Claude row processing. The
+former production spreadsheet is legacy comparison-only with no access authority.
+Application runtime must eventually consume a validated immutable versioned publication,
+not the mutable master, under separately accepted P9 governance.
+
+Claude is proposal-only: it may never accept its own facts or write a spreadsheet.
+Codex owns stable-ID validation, evidence policy, duplicate/conflict/coverage checks,
+complete-denominator reconciliation, proposal-review packaging, and any separately
+authorized exact write/readback workflow. Missing, unaccepted, ambiguous, stale,
+conflicting, free-text-only, unanswered, or nonselected information remains unknown and
+cannot hard-exclude an award.
+
+P8F may start only after P8M is accepted, attested, delivered, and reverified on live
+`origin/main`. P9 and `P9-IDENTITY-PINS` remain planned and unstarted. Revision 10 does
+not activate monitoring, change product/runtime or deployment configuration, or grant
+remote Plan Revision 10 delivery authority. A local attestation must remain branch tip
+until separately authorized delivery.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use
