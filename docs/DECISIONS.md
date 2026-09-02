@@ -447,3 +447,103 @@ but are not rewritten or deleted.
   Revision 9 candidate, manifest, review, attestation, and P8F history byte-for-byte.
   Runtime rollback uses accepted P8R and does not change any spreadsheet, accepted fact,
   P8 schedule, production configuration, or P9 state.
+
+## D-022 — Govern the organizer master through P8M and an immutable runtime publication
+
+- Date: 2026-09-01
+- Status: candidate pending independent review and local attestation; remote delivery blocked
+- Decision: Plan Revision 10 treats spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` as the organizer-designated
+  authoring master on a user-reported, independently unverified basis. It classifies
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` as legacy comparison-only with
+  no access authority; separates human editor, proposal processor, fact reviewer, and
+  read-only application runtime identities; inserts P8M before P8F; freezes
+  `matching-facts-v1`/taxonomy `1.0.0`; and selects a validated immutable versioned
+  publication as the only future runtime fact source.
+- Evidence: `docs/evidence/PLAN-REV10.md` and
+  `docs/evidence/PLAN-REV10-matching-fact-contract.json`.
+- Reason: The organizer's source decision materially conflicts with Revision 9's
+  testing/production roles, P8F ordering, and former P9 Google-sheet runtime. Team edit
+  capability is not authority for Codex, Claude, or the application to read or mutate
+  the workbook. P8F also cannot safely use the restored detailed questions until
+  award-bound, cycle-aware, field-specific accepted facts exist.
+- Alternatives: Read the mutable master directly at runtime, which couples student
+  results to unreviewed editor changes; enrich inside P8F, which collapses governance,
+  data acceptance, and product work; treat free-form AI tags as truth, which loses typed
+  operators, evidence, scope, and review; or continue the old production-sheet P9,
+  which conflicts with the organizer's new source decision. Each alternative weakens
+  evidence, stage, identity, or rollback controls.
+- Evidence ladder: Cycle-specific official child-award evidence outranks parent or
+  yearless evidence. Organizer-reviewed master facts may be accepted directly only for
+  fields where the organizer is the authoritative owner of that local award. Material
+  eligibility, deadline, cycle, and application facts otherwise require current
+  official provider evidence. Secondary sources and Claude output remain proposals.
+  Equal-authority disagreement becomes `conflict` and cannot affect matching.
+- AI and review boundary: Claude is proposal-only after later exact processing
+  authority and may emit only bounded schema-valid JSON/JSONL with provenance,
+  confidence/ambiguity, fingerprints, checkpoints, resume cursors, and completeness
+  receipts. It cannot accept facts or write the master. Codex owns stable-ID validation,
+  duplicate/conflict/coverage checks, evidence-policy enforcement, reconciliation,
+  review packaging, and any separately authorized write/readback path.
+- Write authority: Edit access is capability, not operation authority. A later write
+  requires the exact spreadsheet, tab, columns/ranges/cells, operation count, source
+  revision, backup/rollback owners, dry run, human and independent acceptance,
+  idempotent bounded batch, immediate readback, untargeted-cell proof, and complete
+  reconciliation.
+- P9 replacement: Future P9 deploys the exact P8M immutable publication and proves the
+  runtime has no Google credential, Drive/Sheets scope, spreadsheet client, or mutator.
+  The former `P9-IDENTITY-PINS` Google-runtime path is retired unstarted. Historical
+  Revision 7-9 evidence remains unchanged. After the first immutable-candidate review
+  exposed the conflict, the user explicitly authorized Revision 10 to prospectively
+  supersede the old operational P9 authority and validator path while preserving that
+  history. `stageMergeAuthorizations[P9]` is therefore unauthorized for the replacement
+  stage, and any later active P9 requires new target-specific authority evidence.
+- Executable contract: The frozen contract binds strict scalar/set/date/identifier
+  encodings, exact numeric bounds and units, closed enum domains, one object shape for
+  `between`, evidence-status null/reviewer rules, unknown-field rejection, and lossless
+  aggregate aliases. `web/scripts/matching-fact-contract.ts` deterministically rejects
+  unknown enum members, malformed values, incomplete review groups, and unsupported
+  fields before any future proposal can be reviewed or matched.
+- Lifecycle: While P8M is planned, the master stays unverified and inaccessible and no
+  publication exists. An authorized in-flight P8M may verify the master and create a
+  candidate publication; accepted P8M requires complete publication pins. Replacement
+  P9 separately owns runtime/provider pins and cannot activate on Revision 7 authority.
+- Authority: The current and follow-up instructions authorize Plan Revision 10
+  governance, the prospective P9 supersession above, local commits, independent review,
+  remediation, and direct-child local attestation only. They expressly
+  stops before P8M, P8F, and P9. It does not separately authorize branch push, pull
+  request, merge, Vercel Preview, or Vercel Production effects; those remain blocked.
+- Rollback: Before P8M begins, replace Revision 10 only through a separately authorized,
+  independently reviewed plan amendment. After later stages depend on it, preserve the
+  Revision 10 candidate, contract, manifest, review, and attestation byte-for-byte.
+  Runtime rollback uses accepted P8R until P8F/P9 are separately accepted and never
+  accesses or mutates either spreadsheet.
+
+## D023 — Carry late delivery authority through one reviewed Revision 10 continuation
+
+- Date: 2026-09-02
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 11 creates one governance-only continuation from the exact
+  accepted Revision 10 attestation. It records the user's later direct authority for
+  push, pull request, Vercel Preview, merge, Vercel Production, CI, and deployment
+  verification without editing or rebinding Revision 10.
+- Evidence: `docs/evidence/PLAN-REV11.md`.
+- Reason: Revision 10 correctly froze and attested while remote delivery was expressly
+  unauthorized. Repository law forbids appending authority to that immutable branch.
+  The user subsequently granted full authority and directed removal of permission
+  blockers. A new independently reviewed amendment is therefore required to preserve
+  the old decision while making the new authority executable.
+- Alternatives: Push the Revision 10 branch while `BUILD_STATE` still forbids delivery,
+  which violates the operating contract; amend or append to the accepted attestation,
+  which destroys its topology; or leave the new authority unused. All three are
+  rejected.
+- Impact: The continuation manifest covers the complete original-baseline-to-candidate
+  tree, the exact Revision 10 attestation remains in ancestry, and only twelve pinned
+  governance/evidence/test/validator paths may change after it. No product, data,
+  runtime, workflow, source, spreadsheet, monitoring, or deployment configuration may
+  change. The user also authorized P8M/enrichment in principle, but unknown exact entry
+  bounds remain facts to pin, not permission blockers to waive.
+- Rollback: Before merge, abandon only the Revision 11 continuation branch and retain
+  Revision 10 locally accepted. After merge, revert the governance delivery through a
+  separately reviewed amendment; never rewrite either attestation or roll back data,
+  because this continuation performs no data operation.

@@ -1,9 +1,309 @@
 # Current Handoff
 
-Last updated: 2026-09-01
-Plan revision: 9
+Last updated: 2026-09-02
+Plan revision: 11
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Plan Revision 11 — Revision 10 late-delivery bridge
+
+- Live `origin/main` remains exact Revision 9 delivery baseline
+  `390b270c5d3127ff2705ffb114212a518a1d5953`. The canonical Revision 10 candidate is
+  `519f8b0cc3cb1da7d1cb75651940358b5722f9e9`; its accepted C0/H0/M0/L0 review binds
+  manifest SHA-256 `17a3bf273d86f6e57898564703797dc212821781eb20612c7d895d5a7546b4fc`;
+  and direct-child attestation is
+  `4a22711bbb352d763298c6200768dc181662f80f`.
+- After that attestation, Kelsey directly authorized Codex to proceed, clarified full
+  authority and removal of all permission blockers, and authorized P8M/enrichment as
+  well. The repository-owner GitHub account is authenticated with admin/push access.
+- Revision 10 cannot be edited or appended. Revision 11 therefore uses isolated branch
+  `codex/plan-rev11-rev10-delivery`, descended from the exact Revision 10 attestation,
+  to record and govern branch push, PR, resulting Preview, merge, resulting Production
+  deployment, CI, and verification. The former Revision 10 delivery-permission blocker
+  is removed prospectively; the immutable Revision 10 authorization record remains
+  unchanged historical truth.
+- Revision 11 changes only its exact twelve-path governance/evidence/test/validator
+  allowlist. It performs no spreadsheet, source, Claude, enrichment, product, data,
+  runtime, workflow, monitoring, or deployment-configuration operation. Stop before
+  P8M access during this delivery.
+- P8M is authorized in principle after delivery, but its master tab IDs/titles/ranges,
+  complete row/award/cycle denominator, current revision, official-source allowlist,
+  named human fact reviewer, and exact no-write or write target/backup/acceptance gate
+  are not yet known or machine-pinned. These are non-permission entry facts; no sheet or
+  source access may begin until the kickoff's exact-boundary rule is satisfied.
+- Pre-freeze verification is complete: clean install, full tests, typecheck, both
+  audits, workflow parse, exact scope/whitespace checks, and the supported webpack
+  production build pass. The default Turbopack build remains environment-blocked on
+  local process/port creation. Plan validation reports exactly the four expected
+  pre-attestation gates and no contract/content/history error.
+- Next: freeze the Revision 11 candidate and complete live-baseline manifest, obtain a
+  new fresh-context read-only review, create the direct-child attestation, deliver the
+  authorized PR, verify CI/Preview/Production, then reassess P8M entry without
+  inferring missing bounds.
+
+## Plan Revision 10 — local governance candidate; remote delivery blocked
+
+- Scope is Plan Revision 10 only. No matching-fact enrichment, Claude row processing,
+  P8F, P9, `P9-IDENTITY-PINS`, spreadsheet/public-source access, product/runtime work,
+  monitoring, or deployment-configuration change occurred.
+- Verified live baseline is `origin/main`
+  `390b270c5d3127ff2705ffb114212a518a1d5953`, the exact PR #32 merge. The user-pinned
+  routing checkpoint `83e61e80f07d17dadff43bbb635aa98c0472dc39` is preserved, and
+  Plan Revision 10 work is isolated on `codex/plan-rev10-master-matching-facts`.
+- Revision 10 records the exact new ID as the organizer authoring master only on a
+  user-reported, independently unverified basis. It grants no read or write. The former
+  production ID is legacy comparison-only with no access authority.
+- Human editor, proposal processor, fact reviewer, and read-only application runtime
+  are separate identities. Runtime must eventually consume a validated immutable
+  versioned publication and may not read the mutable master.
+- The frozen `matching-facts-v1`/taxonomy `1.0.0` contract contains 82 criteria, 50
+  aliases, 10 typed operators, and 31 sensitive criteria. It binds stable award/cycle
+  identity, evidence/status/reviewer fields, authority precedence, conflicts,
+  freshness, unknown handling, Claude proposal-only behavior, and the future exact
+  write gate.
+- P8M — Matching-fact enrichment and acceptance — is inserted before P8F and becomes
+  the sole next-permitted planned stage. P8M is not authorized to start. Its exact
+  blocker is direct stage-specific master/source/Claude/human-review/write/delivery
+  authority. P8F remains planned until P8M is accepted and delivered.
+- P9 is replaced prospectively with deployment of the accepted immutable publication.
+  The former Google-runtime `P9-IDENTITY-PINS` path is retired unstarted; historical
+  Revision 7-9 evidence remains unchanged. The user explicitly authorized Revision 10
+  to prospectively supersede the old P9 operational authority/validator; replacement P9
+  is unauthorized and separately blocked on new publication/runtime/provider/Git/
+  Vercel authority and pins.
+- First candidate `68b38e9acec3d71aec8885ad9430660adfd5e9a4` was rejected by
+  fresh-context review at C0/H4/M0/L0 and was not attested. Second candidate
+  `324791cee8ffc8406d45bf1a651c777efb250912` with manifest digest
+  `12dc4d2c43de88e048ad47ab00464b4be8ff0dd37230454d7188f9610e5534a6`
+  was rejected by the same fresh read-only reviewer at C0/H2/M2/L0 and was also not
+  attested. The next remediation binds accepted P8M to the exact canonical manifest
+  candidate and direct-child attestation SHAs, supports safe blocked/failed lifecycle
+  states, adds future-write acceptance evidence, and makes the old Revision 7 sheet
+  mandate explicitly historical/non-operative. A new candidate, manifest, and reviewer
+  recheck are required.
+- Current Plan Revision 10 authority covers local governance, validation, independent
+  review, and direct-child local attestation. It does not separately authorize branch
+  push, PR, merge, Preview, or Production effects. The exact blocker is
+  `PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority`.
+- Next-candidate pre-freeze verification is complete after second-review remediation:
+  clean install, full tests, typecheck, both audits, workflow parse, 19-path scope/
+  whitespace checks, and the supported Webpack production build pass. The default
+  Turbopack build remains environment-blocked on local-port binding. Plan validation
+  reports exactly the three expected pre-attestation gates. Exact next candidate SHA,
+  manifest digest,
+  independent review, and attestation SHA will be bound by the immutable manifest/
+  review and branch tip; until that direct-child attestation exists, Revision 10 is not
+  accepted.
+- External-effect receipt: zero spreadsheet/Drive/source/Claude/Vercel/workflow/form/
+  provider/applicant-data operations; zero product/runtime/deployment-configuration or
+  monitoring changes. The only external action was authenticated read-only Git/GitHub
+  baseline and PR-history verification.
+- Unresolved evidence remains live scholarship freshness, protected application-health
+  smoke, blocked Preview access, the GitHub Actions Node runtime warning, and disabled
+  monitoring. Green local checks or a deployment-complete status close none of them.
+- Next kickoff after accepted/delivered Revision 10 is
+  `docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md`, but delivery and P8M start each require
+  their own direct authority. Stop before enrichment.
+
+## Master-source and matching-fact follow-up — locally durable; Plan Revision 10 required
+
+This section is a routing checkpoint, not a canonical-plan amendment or authority to
+start later work. The canonical plan and `docs/BUILD_STATE.json` still control until a
+separately governed amendment is accepted and delivered.
+
+### New user-reported source decision and current conflict
+
+- On 2026-09-01, Kelsey reported that the Whitefish scholarship-program organizer
+  designated spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` as the
+  master document and granted the team edit access. This is a user-reported authority
+  and access change. It was not independently verified in this follow-up, and no Drive
+  or Sheets read, write, permission, metadata, or revision operation was performed.
+- Edit access is capability, not a blanket instruction for Codex, Claude, the
+  application, or any other automation to mutate the sheet. No target tab, range,
+  column set, operation count, backup, rollback, reviewer, or exact automated-write
+  authority was supplied in this follow-up.
+- The delivered Revision 9 state still classifies that ID as the testing spreadsheet,
+  treats `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` as the read-only P9
+  production source, makes P8F the sole next-permitted stage, and expressly excludes
+  every spreadsheet/source read or write from P8F. The new organizer decision is
+  therefore a material source-authority and stage-order change; it must not be absorbed
+  into P8F or P9 without Plan Revision 10.
+- The former production spreadsheet's future status is unknown. Until Revision 10
+  dispositions it as legacy, archive, retired, comparison-only, or another exact role,
+  do not access, configure, mutate, migrate from, or infer current authority from it.
+- Recommended architecture, pending the amendment's explicit decision: use the new
+  master as the human authoring source, but keep application runtime identity read-only
+  and consume a validated, immutable, versioned publication or snapshot rather than
+  trusting a mutable editing surface directly. Human editor access and application
+  runtime access must remain separate identities and permissions.
+
+### Matching facts, not ungoverned free-form tags
+
+AI-assisted scholarship classification is high-value only as an evidence-backed
+proposal workflow. The durable target is a normalized matching-fact table keyed to
+stable award and cycle identities, not comma-separated labels and not AI-authored
+eligibility truth. Each proposed or accepted fact must preserve at least:
+
+| Field | Required meaning |
+| --- | --- |
+| `award_id` | Stable canonical award identity; never scholarship name alone. |
+| `cycle_id` | Optional exact cycle identity when the rule is cycle-specific. |
+| `criterion_id` | Versioned controlled-taxonomy identifier. |
+| `effect` | Exactly `required`, `preferred`, or `informational`. |
+| `operator` | Versioned typed comparison operator valid for that criterion. |
+| `value` | Schema-validated typed value, not an uncontrolled prose tag. |
+| `evidence_status` | At least proposed, accepted, rejected, conflict, stale, or unknown. |
+| `source_url` | Exact evidence source where permitted; never an application response. |
+| `source_revision` | Source revision/retrieval identity and observation time. |
+| `evidence_excerpt` | Short, non-PII rationale sufficient for review, within source-use limits. |
+| reviewer fields | Reviewer identity, review time, and acceptance/rejection rationale. |
+| `taxonomy_version` | Exact schema/taxonomy version used for validation and matching. |
+
+Revision 10 must decide the exact tab/representation, enumerations, operator/value
+schemas, null/unknown rules, evidence-authority precedence, award/parent/child/cycle
+scope, conflicts, freshness/staleness, sensitive-criterion treatment, and versioning.
+It must preserve the P8R/P8F rule that missing, ambiguous, free-text-only,
+manual-review, provenance-free, unanswered, nonselected, or unaccepted evidence cannot
+hard-exclude a scholarship. Optional health, disability, heritage, identity, hardship,
+affiliation, and employer answers may become positive signals only through exact
+accepted authority; nonselection is never a negative fact.
+
+### Claude and Codex division of responsibility
+
+- Claude Code was observed locally at `/usr/local/bin/claude`, version `2.1.248`.
+  Its availability does not authorize a sheet read, public-source acquisition, or
+  write.
+- After Revision 10 freezes the taxonomy, schema, source authority, exact denominator,
+  and permitted inputs, Claude may run in a separate isolated workspace against a
+  revision-pinned snapshot and permitted official sources. It may emit only
+  schema-valid proposal JSON/JSONL plus provenance, confidence, ambiguity, and
+  checkpoint/resume receipts. It must not write to the master, mark its own facts
+  accepted, treat missing text as false, collect applicant data, enter applications,
+  contact providers, or silently skip/truncate rows, child awards, sources, or cycles.
+- Codex owns governance, validators, exact row/award reconciliation, duplicate and
+  conflict detection, coverage accounting, source/evidence-policy enforcement,
+  proposal review, independent-review packaging, and any later approved write
+  workflow. AI output remains proposed until accepted under the governed evidence
+  ladder and human/independent review.
+- If an exact write is later authorized, the write stage must first pin the source
+  revision and complete denominator, create and verify a reversible backup, validate a
+  deterministic dry run, limit the exact tab/ranges/cells and operation count, apply an
+  idempotent bounded batch, immediately read back every target, prove untargeted cells
+  unchanged, and reconcile accepted, rejected, conflict, unknown, stale, and remaining
+  rows. A successful API reply alone is not acceptance.
+
+### Required stage sequence and explicit authority triggers
+
+1. **Plan Revision 10 — governance only.** Start from verified live `origin/main` and
+   use `docs/kickoffs/PLAN-REV10-MASTER-MATCHING-FACTS.md`. Amend source authority,
+   stage order, the P8F/P9 boundaries, runtime identity separation, matching-fact
+   model, Claude proposal boundary, write gates, rollback, validator/tests, evidence,
+   and exact future kickoffs. Do not read/write either sheet or start enrichment,
+   P8F, or P9 in that revision.
+2. **Matching-fact enrichment stage — identifier to be frozen by Revision 10.** Insert
+   this stage before P8F. It may start only after Revision 10 is accepted, attested,
+   delivered, and reverified on live `origin/main`; the taxonomy/schema and exact
+   source-read authority are frozen; the complete bounded scholarship/award/cycle
+   denominator is pinned; and the accepted matching-stage kickoff contains direct,
+   stage-specific authority for the exact proposed processing. These prerequisites
+   make Claude proposal generation eligible for separate authorization; they do not
+   start it automatically.
+3. **Accepted write substage or gate.** Sheet mutation is triggered only by separate,
+   direct, informed authority naming the exact master ID, tab, columns/ranges,
+   operations, backup/rollback owner, and acceptance evidence. Edit access by itself
+   does not satisfy this trigger.
+4. **P8F.** Begin former-interview detail implementation only after the governed
+   matching-fact stage is accepted and delivered and `BUILD_STATE` again names P8F as
+   the sole next-permitted stage. Preserve every Revision 9 inventory/disposition and
+   all accepted P7/P8/P8R behavior; do not reconnect the historical heuristic
+   processor.
+5. **P9 replacement/revision.** Reassess P9 only after Revision 10 resolves the new
+   master, old production-source disposition, read-only runtime publication path,
+   identities, permissions, backups, deployment/rollback, and evidence pins. P9 and
+   `P9-IDENTITY-PINS` remain unstarted now.
+6. **Freshness/monitoring.** Keep the accepted P8 schedule disabled. Activate no
+   schedule or monitoring until separately governed authority names the source,
+   cadence, identity, notification behavior, cost, and rollback.
+
+### Open items that must not be dropped
+
+- Independently verify the organizer's master-source designation, spreadsheet title,
+  exact scholarship tab(s), stable row/award identifiers, current schema, revision,
+  team editor identity, and intended application-runtime relationship without exposing
+  credentials or reading unrelated/applicant tabs. Record user-reported facts,
+  observed facts, inferences, and unknowns separately.
+- Decide and govern the old production spreadsheet's exact disposition and whether any
+  comparison read is necessary and authorized. No access is allowed by this routing
+  record.
+- Define the source/evidence authority ladder, including whether organizer-reviewed
+  master facts can be accepted directly, when an official provider page is required,
+  how conflicts resolve, and how stale/ended/annual facts age out.
+- Freeze the complete criterion taxonomy and aliases before bulk processing. It must
+  cover the broad historical sections—including academics, education status, target
+  institution, responsibilities/service, financial need, learning/neurodiversity,
+  health/hardship, heritage/demographics/identity, fields such as aviation and nursing,
+  athletics, military/first responder, organizations, and employers—without limiting
+  the model to Dyslexia, ADHD, First-Generation, Native American, African American,
+  aviation, or nursing examples.
+- Define parent-source, child-award, shared-application, and annual-cycle granularity;
+  stable identifiers; exact operator/value types; multiple values; negative/exception
+  clauses; preferred versus required language; and deterministic conflict handling.
+- Define Claude prompt/version, batch size, input/output fingerprints, isolated path,
+  retry/checkpoint/resume method, completeness ledger, unsupported/ambiguous behavior,
+  and no-direct-write controls. Define Codex validators, reconciliation, sampling,
+  full-review thresholds, independent review, and human acceptance roles.
+- Define the exact new master tab/columns and approved row mapping only in the future
+  governed stage. Preserve existing organizer content and formatting; do not overwrite
+  free-text source material with derived facts.
+- Carry forward all Revision 9 legacy-rule dispositions, live scholarship freshness,
+  protected application-health smoke, blocked Preview access, the GitHub Actions Node
+  runtime warning, and disabled monitoring as unresolved until their named triggers are
+  satisfied. Green tests or a deployment-complete status do not close these unknowns.
+- Keep all applicant responses and PII out of Sheets processing, AI prompts/outputs,
+  evidence, fixtures, logs, exports, URLs, and Git.
+
+### Exact local checkpoint and stop boundary
+
+- This routing work started from clean `origin/main`
+  `390b270c5d3127ff2705ffb114212a518a1d5953`, the Plan Revision 9 delivery-closure
+  merge. It is isolated on branch `codex/master-matching-facts-handoff` at
+  `/private/tmp/program_code-master-matching-handoff`; the user's primary checkout was
+  left untouched.
+- This checkpoint changes documentation only. It does not amend the canonical plan,
+  `BUILD_STATE`, or `DECISIONS`; change the next-permitted stage; start Plan Revision
+  10, enrichment, P8F, or P9; run Claude processing; access a spreadsheet or public
+  source; mutate a scholarship fact; or change product/deployment/runtime state.
+- No push, pull request, merge, Preview, or Production deployment is authorized by
+  this routing checkpoint. Preserve the local commit and let the next session first
+  govern exact Plan Revision 10 delivery authority and downstream effects.
+
+### Routing-checkpoint verification
+
+Verification completed through `2026-09-02T03:56:45Z` against the documentation-only
+working tree:
+
+- `npm ci`: passed with 462 packages installed, 463 audited, and zero vulnerabilities;
+  no dependency or lockfile changed.
+- Exact `npm run plan:check`: the `tsx` wrapper hit the documented local IPC
+  `listen EPERM`; repository-supported
+  `node --import tsx scripts/validate-build-plan.ts` passed all 12 ordered stage
+  contracts and the current machine-state transition.
+- `npm run typecheck`: passed.
+- Complete `npm test`: passed through P8R, including the Revision 9 pinned-history
+  inventory test (`pinnedBlobs=7`, `criteria=38`, `earlierAffiliations=6`,
+  `typeOnly=8`).
+- Exact `npm run build`: the restricted attempt first failed to fetch existing Google
+  Fonts; the network-permitted retry then hit the documented Turbopack local-port
+  `Operation not permitted` restriction. The supported
+  `npm run build -- --webpack` production build passed TypeScript, 10/10 page
+  generation, and all student/admin/API routes, with only the existing middleware and
+  Edge `process.cwd` warnings. The exact default Turbopack path remains
+  environment-unverified by this local checkpoint.
+- `git diff --check`: passed.
+- Independent read-only handoff-quality recheck by the existing non-author Revision 9
+  reviewer returned `PASS C0/H0/M0/L0` after the P5/P7/P8/Revision 7/P9 read-order and
+  explicit-Claude-authority remediations. This is an omission/boundary check, not a
+  governed-stage acceptance review.
 
 ## Plan Revision 9 delivery closure — PASS; P8F next, P9 not started
 

@@ -1,12 +1,12 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 9
+Plan revision: 11
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
-Testing spreadsheet: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
-Production spreadsheet: `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`
-Production access mode: P9 read-only; mutation prohibited
+Organizer authoring master (user-reported, unverified): `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
+Legacy comparison-only spreadsheet (access unauthorized): `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`
+Application runtime source: validated immutable versioned publication; not yet created or authorized
 
 ## 1. Authority and purpose
 
@@ -63,7 +63,7 @@ The program is successful only when all of the following are true:
   target removal stage.
 - The production migration is backed up, reconciled, reversible, deployed from a
   recorded commit, and independently reviewed.
-- P0 through P9, including P8R and P8F, are accepted, delivered through reviewed Git
+- P0 through P9, including P8R, P8M, and P8F, are accepted, delivered through reviewed Git
   history, and have durable evidence and handoffs.
 
 ## 3. Current verified baseline
@@ -200,8 +200,9 @@ These requirements apply to every stage:
 
 1. **One stage per execution.** A session may close one stage or make a bounded
    checkpoint within it. It may prepare but not execute the next stage.
-2. **Testing-sheet boundary.** P0-P8F may not configure or mutate the production
-   Whitefish spreadsheet.
+2. **Spreadsheet boundary.** P0-P8F, including P8M, may not configure or mutate the
+   legacy comparison-only Whitefish spreadsheet. P8M may access or mutate the organizer
+   master only under its later exact stage-specific read/write authority.
 3. **Official-source priority.** Sponsor/provider pages outrank aggregators. Child
    detail pages outrank parent summaries for child-specific facts. Current parent
    pages outrank orphaned direct documents when they conflict.
@@ -245,7 +246,7 @@ by at most one in-flight stage, followed by planned stages. A later stage may no
 become active until every prior stage is accepted. `superseded` is reserved and is
 invalid under plan revision 1; enabling it requires an independently reviewed plan
 amendment, explicit supersession evidence, and a validator revision. P9 always requires
-P0-P8, P8R, and P8F specifically `accepted` and cannot use supersession to bypass them.
+P0-P8, P8R, P8M, and P8F specifically `accepted` and cannot use supersession to bypass them.
 
 A stage may move to `accepted` only when:
 
@@ -334,6 +335,40 @@ is invalid and cannot be used to skip historical validation.
 
 This mechanism is an exceptional delivery bridge, not a general post-attestation edit
 path. Each stage may have at most one delivery integration, and every commit is pinned.
+
+### Late authority for an undelivered plan amendment
+
+Plan Revision 11 adds one narrower continuation for the canonical, accepted, but
+undelivered Plan Revision 10 attestation. This is not an ordinary post-attestation
+commit and does not amend or rebind Revision 10. It is valid only when all of the
+following are true:
+
+1. The target is exactly Plan Revision 10 candidate
+   `519f8b0cc3cb1da7d1cb75651940358b5722f9e9`, direct-child attestation
+   `4a22711bbb352d763298c6200768dc181662f80f`, and original live baseline
+   `390b270c5d3127ff2705ffb114212a518a1d5953`.
+2. The continuation uses only branch `codex/plan-rev11-rev10-delivery`, descends from
+   the exact Revision 10 attestation, and changes exactly the machine-recorded
+   governance, evidence, test, and validator allowlist. Product, data, runtime,
+   workflow, spreadsheet, source, and deployment-configuration changes are forbidden.
+3. Plan Revision 11 records direct informed authority for its branch push, pull
+   request, resulting Vercel Preview, merge, resulting Vercel Production deployment,
+   CI, and deployment verification. The satisfied Revision 10 permission blocker is
+   removed without changing Revision 10's immutable historical authorization record.
+4. The Plan Revision 11 manifest uses the unchanged live `origin/main` baseline and
+   covers the complete baseline-to-continuation candidate, including the exact Revision
+   10 candidate, manifest, review, and attestation ancestry. A new non-author,
+   fresh-context reviewer accepts that complete tree.
+5. A direct-child Plan Revision 11 attestation adds only its manifest and review. Until
+   delivered, that attestation is the only permitted continuation tip. Once merged,
+   both Revision 10 and Revision 11 attestations must be ancestors of live
+   `origin/main` and remain byte-identical.
+
+The bridge binds the exact Revision 10 candidate and attestation. Stop before P8M access.
+This continuation carries authorization to deliver governance only. The user's later
+P8M intent does not manufacture still-unknown tab/range,
+denominator, revision, source, reviewer, or write-gate facts; P8M begins only after its
+exact entry contract is machine-pinned without inference.
 
 ## 9. Stage contracts
 
@@ -654,6 +689,123 @@ security, accessibility, or regression finding.
 canonical browse-all catalog. No spreadsheet, accepted scholarship fact, P8 schedule,
 production configuration, or P9 state changes during rollback.
 
+### P8M — Matching-fact enrichment and acceptance
+
+**Objective:** Produce a complete, evidence-backed, independently reviewed set of
+normalized matching facts for the accepted award/cycle denominator without allowing AI
+proposals, free text, missing evidence, or edit capability to become accepted truth or
+write authority.
+
+**Entry prerequisites:** Plan Revision 10 accepted, direct-child attested, delivered,
+and reverified on live `origin/main`; P8M is the sole next-permitted stage; exact direct
+stage-specific authority names the organizer master tabs/ranges and bounded read
+denominator, permitted official-source reads, Claude proposal processing, human review
+role, Git/Vercel delivery effects, and either a complete write prohibition or a separate
+exact write authorization. The organizer's designation and edit access remain
+user-reported until the exact authorized verification executes. P8F, P9, and
+`P9-IDENTITY-PINS` remain planned and unstarted.
+
+**Source and identity boundary:** Spreadsheet
+`1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is the prospective
+organizer authoring master. Revision 10 does not verify or access it. Spreadsheet
+`1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is legacy comparison-only;
+no comparison read is authorized. Human editor, proposal processor, fact reviewer, and
+read-only application runtime are distinct identities. The application may eventually
+consume only a validated immutable versioned publication; mutable-master direct runtime
+reads are prohibited. Edit access is capability, not operation authority.
+
+**Matching-fact contract:** The exact machine-readable contract is
+`docs/evidence/PLAN-REV10-matching-fact-contract.json`, contract
+`matching-facts-v1`, taxonomy `1.0.0`. Each row is keyed by stable `award_id` and an
+optional exact `cycle_id`; carries a controlled `criterion_id`; effect
+`required|preferred|informational`; typed operator/value; status
+`proposed|accepted|rejected|conflict|stale|unknown`; exact source/revision/observation;
+short non-PII evidence; reviewer/time/rationale; and taxonomy version. Parent source,
+child award, shared application, and annual cycle identities remain distinct.
+
+The contract's executable validator is `web/scripts/matching-fact-contract.ts`.
+Unknown fields and enum members fail closed. It binds exact scalar/set/date/identifier
+shapes, per-criterion numeric bounds and units, closed enum domains, one four-field
+inclusive-bound object for `between`, evidence-status-specific null/source/reviewer
+rules, and lossless fixed-value expansion for aggregate historical aliases. Open-ended
+places, schools, organizations, employers, fields, service types, and sports use
+normalized identifiers rather than unbounded enum strings.
+
+The frozen taxonomy covers academics; education and institution; geography; service,
+work, leadership, and caregiving; financial need; learning/neurodiversity; health and
+hardship; heritage/demographics/identity; career and field interests including aviation
+and nursing; athletics; military/first responder; organizations; employers;
+application modes/groups/supplements; and cycles. Unknown criteria stop for taxonomy
+review; examples never define the complete scope. One `learning.adhd` criterion maps
+the historical ADHD control; ADD is not a separate recovered question or alias.
+
+**Evidence policy:** Cycle-specific official child-award evidence outranks parent or
+yearless evidence. Organizer-reviewed master facts may be accepted directly only where
+the organizer is the authoritative owner for that local award field; material
+eligibility, deadline, cycle, and application facts otherwise require current official
+provider evidence. Secondary sources and AI output are proposal/discovery only. Equal-
+authority disagreement becomes `conflict`; it blocks acceptance and matching use.
+Cycle facts stale at cycle close or declared replacement; yearless/prior-cycle facts
+stale at the next calendar year until reverified; non-cycle accepted facts require
+review after 365 days. A successful fetch does not refresh an unobserved field.
+
+**Claude/Codex boundary:** Claude is proposal-only after the later authority and exact
+taxonomy/input freeze. It receives revision-pinned bounded inputs, emits schema-valid
+JSON/JSONL plus provenance, confidence/ambiguity, prompt version, input/output
+fingerprints, checkpoint/resume cursors, and complete-denominator receipts. It never
+writes the master, accepts its own facts, treats absence as false, processes applicant
+PII, enters applications, contacts providers, or silently truncates rows, awards,
+sources, or cycles. Codex owns stable-ID binding, validators, duplicate/conflict/
+coverage checks, source-policy enforcement, complete reconciliation, review packaging,
+and any separately authorized exact write/readback workflow.
+
+**Future write gate:** Edit access is capability, not operation authority. A write
+requires a separate direct informed instruction naming the exact spreadsheet, tab,
+columns/ranges/cells, operation count, source revision, backup owner, rollback owner,
+and acceptance evidence. Before mutation, create and verify a reversible backup and a
+deterministic dry run accepted by the human fact reviewer and independent reviewer.
+Apply one bounded idempotent batch, immediately read back every target, prove every
+untargeted cell unchanged, and reconcile all accepted, rejected, conflict, stale,
+unknown, and remaining rows. A successful API reply alone is not acceptance.
+
+**Deliverables:** Verified source-role/identity receipt; exact bounded award/cycle
+denominator; validated proposal and completeness ledgers; normalized fact set; conflict,
+stale, unknown, rejected, and remaining-work queues; reviewer decisions; optional exact
+write/readback evidence only if separately authorized; immutable publication candidate
+for later runtime use; reconciliation; rollback; independent review; manifest; and
+direct-child attestation.
+
+**Out of scope:** Any action not named by the later P8M authority; applicant data;
+application/form interaction; provider contact; self-accepted AI output; silent
+truncation; mutable-master runtime reads; P8F product work; P9 or identity pins;
+monitoring activation; deployment-configuration changes; and every unapproved write.
+
+**Verification:** Validate every input and output fingerprint, taxonomy ID/operator/
+value, stable award/cycle binding, source/evidence precedence, freshness transition,
+conflict, sensitive-state rule, duplicate, and completeness total. Reconcile the exact
+denominator with no missing or duplicate row, award, cycle, source, or proposal. Review
+100% of required-effect, sensitive, conflict, stale, rejection, unknown, parent/child,
+shared-application, and write-bound records plus a deterministic sample of all
+remaining proposals. Prove proposal-only isolation, no PII, no direct write, no self-
+acceptance, no form/provider action, checkpoint/resume idempotency, and fail-closed
+truncation. Run the repository matrix and obtain fresh-context C0/H0 review.
+
+**Acceptance:** Every denominator member has one reconciled outcome; every accepted
+fact is schema-valid, current under its freshness rule, bound to exact award/cycle and
+field-specific authority, and independently reviewable. Proposed/unaccepted evidence
+cannot affect matching. Missing, ambiguous, free-text-only, provenance-free,
+unanswered, nonselected, or sensitive nonselection remains unknown and non-excluding.
+Any authorized write reconciles exactly with zero untargeted change. P8M is delivered
+before P8F becomes next-permitted.
+
+P8M accepted and delivered is an absolute P8F entry gate; a local acceptance marker,
+prepared kickoff, or next-permitted pointer is not a substitute for live delivery.
+
+**Rollback:** Remove the P8M publication/proposal batch by its exact receipt and retain
+the last accepted P8R product. If a separately authorized sheet write occurred, use its
+verified backup or inverse receipt only under the recorded rollback authority. Do not
+activate P8F, P9, monitoring, or runtime source changes during rollback.
+
 ### P8F — Former interview detail and routing restoration
 
 **Objective:** Restore the complete last-active former interview question detail and
@@ -661,8 +813,10 @@ its intended search workflow inside the accepted P7/P8R product, without reconne
 legacy heuristics, persisting answers, or turning missing/unaccepted evidence into an
 eligibility decision.
 
-**Entry prerequisites:** P8R and Plan Revision 9 accepted, direct-child attested, and
-delivered; live `origin/main` verified; P8F is the sole next-permitted stage; P9 remains
+**Entry prerequisites:** P8R, Plan Revisions 9 and 10, and P8M accepted,
+direct-child attested, and delivered; live `origin/main` verified; P8F is the sole
+next-permitted stage; exact accepted matching facts and their immutable publication are
+pinned; P9 remains
 planned and unstarted; the pinned `4c20637a351d272788e24ac9d02e541494644832`
 history and every blob in `docs/evidence/PLAN-REV9-interview-inventory.md` are
 reverified; and the complete P8F test matrix plus old-ID-to-new-control/rule map are
@@ -748,13 +902,90 @@ rollback.
 
 ### P9 — Production migration, deployment, and closeout
 
+**Objective:** Deploy the accepted P8F application against the exact validated,
+immutable, versioned matching-fact publication accepted in P8M; prove the runtime has no
+spreadsheet capability; demonstrate deployment/configuration rollback; and close the
+program without reading or mutating either spreadsheet.
+
+**Entry prerequisites:** P0-P8, P8R, P8M, and P8F accepted and delivered; Plan
+Revisions 7 through 10 accepted, attested, and delivered; exact P8M publication path,
+schema/taxonomy version, source-master revision receipt, accepted-fact digest, generator
+digest, candidate, manifest, review, and attestation pinned; P8F reconciled to that
+publication; the read-only application runtime identity separated from every human,
+proposal, reviewer, Google, and write-capable identity; deployment and rollback owners;
+exact non-secret Vercel project/team/canonical-host pins; protected verification
+environment and secret provenance; and current direct P9 Git/deployment authority.
+
+The organizer master is not a runtime data surface. The application runtime must read
+only the accepted publication bytes bundled with or fetched by exact content digest
+from an immutable read-only artifact. It must hold no Google credential or Sheets/Drive
+scope. Spreadsheet `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` remains
+legacy comparison-only and inaccessible unless a later independently reviewed plan
+amendment grants an exact comparison read. The former `P9-IDENTITY-PINS` path is retired
+unstarted by Revision 10 because it pinned a Google-sheet runtime that is no longer the
+chosen architecture; its absent artifacts remain absent and no historical Revision 7
+evidence is rewritten.
+
+Plan Revision 10 prospectively supersedes the old P9 operational validator and current
+stage-delivery authorization while preserving the Revision 7 candidate, evidence,
+review, attestation, and authority text as immutable history. Replacement P9 is
+unauthorized until new direct target-specific authority is recorded; Revision 7
+authority cannot satisfy that additional gate. The validator applies the old Google-
+sheet receipt and identity-pin law only to pre-Revision-10 state and applies the
+immutable-publication/runtime/provider pin lifecycle to Revision 10 and later.
+
+**Deliverables:** Publication identity/pin receipt; static/runtime proof that no
+spreadsheet ID, credential, scope, client, or mutator is reachable from the application
+runtime; exact deployment target and commit; publication-to-model/API/UI count and hash
+reconciliation; health/API/browser/export smoke; rollback to the accepted P8F static
+publication configuration; restored deployment proof; operator runbook; final
+architecture/data documentation; closeout handoff; independent review; manifest; and
+direct-child attestation.
+
+**Out of scope:** Every spreadsheet or public-source read/write; master or legacy-sheet
+runtime access; production spreadsheet configuration; applicant data; form/application
+interaction; provider contact; monitoring activation; mutable publication aliases;
+unreviewed fact refresh; and any deployment/configuration target not directly authorized
+and identity-pinned.
+
+**Verification:** Recompute every publication and accepted-fact digest from the exact
+P8M candidate; prove P8F and the deployed runtime use those bytes; reject mutable paths,
+network fallback, environment-selected alternate publications, Google credentials,
+Drive/Sheets scopes, and all spreadsheet client construction or write calls. Bind
+project/team/host, provider Git SHA, deployment IDs, health nonce, publication digest,
+runtime descriptor, and rollback/restored observations. Reconcile complete award,
+cycle, matching-fact, source, application-group, and result denominators. Run the full
+repository matrix, audits, health/API/browser/export smoke, rollback demonstration, and
+fresh-context C0/H0 review.
+
+**Acceptance:** The exact accepted publication is the sole deployed fact source; the
+runtime has zero spreadsheet capability; counts and hashes reconcile; deployment and
+rollback are authenticated; no critical/high finding remains; and all unresolved
+manual/stale/unknown facts are published honestly. The program is complete only after
+P9's accepted attestation is delivered and the authenticated Production smoke/rollback
+record is complete.
+
+**Rollback:** Deploy the accepted P8F application and its same pinned publication under
+the last accepted static configuration. Do not access or change either spreadsheet,
+publication contents, accepted facts, P8 schedule, or provider permissions.
+
+### Historical pre-Revision-10 P9 contract — non-operative
+
+The text below is preserved as historical Revision 7-9 evidence. Plan Revision 10
+supersedes its Google-sheet runtime, backup-read, `P9-IDENTITY-PINS`, and three-deployment
+trusted-workflow mechanics. None may execute unless a later independently reviewed plan
+amendment expressly restores them. Their no-production-write, privacy, independent-
+review, manifest, attestation, and exact-target safety principles remain mandatory.
+
 **Objective:** Move the accepted application from its testing/static source boundary to
 the actual Whitefish Scholarship spreadsheet as a strictly read-only source, with
 verified configuration rollback and durable operational handoff.
 
-**Entry prerequisites:** P0-P8, P8R, and P8F accepted and delivered; Plan Revisions 8
-and 9 accepted, attested, and delivered; production spreadsheet identity explicitly
-provided and read-only production migration explicitly authorized; current backups of
+**Entry prerequisites:** P0-P8, P8R, P8M, and P8F accepted and delivered; Plan
+Revisions 8, 9, and 10 accepted, attested, and delivered; the organizer master has been
+verified under exact authority; the immutable versioned publication and read-only
+runtime identity are explicit; the legacy comparison-only source has no operative role
+unless a later amendment grants an exact comparison read; current backups of
 the exact authorized scholarship tabs verified; the exact deployed runtime principal
 identified without exposing credentials and proved to hold one direct, unexpired
 `reader` production permission rather than `writer`; that principal proved able to read
@@ -1166,6 +1397,54 @@ Revision 7/8 production identity, no-write rule, receipt schema, and operational
 gate remains unchanged. Revision 9 must be independently accepted, attested, and
 delivered before P8F begins.
 
+Plan Revision 10 records the user-reported organizer decision that spreadsheet
+`1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is now the authoring master and
+that the team has edit access. The designation remains unverified because Revision 10
+performs no spreadsheet, Drive, permission, metadata, revision, or public-source access.
+Edit access is capability, not operation authority. Revision 10 classifies spreadsheet
+`1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` as legacy comparison-only
+with no access authority; separates human editor, proposal processor, fact reviewer,
+and read-only application runtime identities; and selects a validated immutable
+versioned publication rather than mutable-master runtime access.
+
+Revision 10 inserts P8M before P8F, freezes `matching-facts-v1` taxonomy `1.0.0`,
+defines the evidence ladder and freshness/conflict/sensitive-state rules, makes Claude
+proposal-only, and requires exact separately informed authority for any future read,
+processing, write, Git delivery, or deployment effect. P8M, P8F, P9, and
+`P9-IDENTITY-PINS` remain unstarted during the amendment. P8F may begin only after P8M
+is accepted and delivered. P9 is replaced with an immutable-publication deployment;
+the former Google-sheet runtime identity-pin path is retired unstarted while all
+historical Revision 7-9 evidence remains byte-identical.
+
+The Revision 10 state validator permits the governed lifecycle instead of freezing the
+initial unknowns forever: planned P8M is unverified/inaccessible with no publication;
+authorized in-flight P8M may verify the master and create a candidate immutable
+publication; accepted P8M requires verified identity and complete publication pins;
+`blocked-external` and `failed` preserve a no-publication or fully pinned candidate
+publication without implying acceptance; accepted P8M derives and validates its exact
+candidate SHA from the canonical manifest and its exact attestation SHA from the first
+valid direct-child two-file attestation;
+and only separately authorized replacement P9 may add runtime/provider pins and runtime
+read authority. Self-referential P8M candidate/attestation identity is derived from its
+canonical direct-child manifest rather than guessed in the candidate tree.
+
+Revision 10 itself is governance-only. It changes no product/runtime or deployment
+configuration, reads or writes no spreadsheet/public source, performs no Claude row
+processing, mutates no scholarship fact, starts no later stage, and activates no
+monitoring. Its local candidate, independent review, and direct-child attestation are
+authorized by the current instruction. Remote push, PR, merge, Preview, and Production
+effects remain blocked pending separate direct informed authority.
+
+Plan Revision 11 records the direct delivery authority received after the immutable
+Revision 10 attestation and provides the single exact continuation above. It removes
+only the satisfied Revision 10 delivery-permission blocker, preserves the exact
+Revision 10 candidate and attestation, and authorizes the combined governance branch,
+PR, Preview, merge, Production deployment, CI, and verification. It changes no stage
+order, product, data, runtime, workflow, source, spreadsheet, monitoring, or deployment
+configuration. The same user later authorized P8M/enrichment in principle; Revision 11
+records that intent but does not claim the still-unknown exact P8M source bounds or
+start P8M.
+
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
 amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
@@ -1193,7 +1472,7 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | New session drifts from plan | Required read order, machine state, one-stage kickoff, validator, and handoff. |
 | Implementer reviews own work | Fresh-context read-only independent reviewer and remediation separation. |
 | Dirty checkout loses user work | Isolated worktree and stage-owned staging. |
-| Production is changed outside exact authority | Production identity is pinned only under attested Revision 7; all source mutation remains prohibited and P9 is a read-only cutover. |
+| Production is changed outside exact authority | Historical Revision 7 authority remains evidence only; replacement P9 stays unauthorized until new immutable-publication runtime/provider/Git/Vercel authority and pins are directly recorded. |
 | A production ID is substituted into the existing write-capable environment variable | Use a separate read-only production configuration, prove the ID cannot reach a write call, and keep the write path pinned to testing or disabled. |
 | Read-only P9 rollback mutates production while restoring a backup | Roll back only application revision/configuration; production backups are evidence and are never restored under current authority. |
 | Git delivery triggers an undeclared Preview or Production deploy | Pre-delivery downstream-effect inspection and direct stage-specific deployment authority with evidence, or verified suppression. |
@@ -1203,6 +1482,11 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | Restoring the old page regresses the accepted catalog | Integrate P8R with the canonical P7 model and existing cards/filters/export; never revert the P7 commit wholesale. |
 | Former detailed questions silently reactivate unsafe rules | P8F binds every displayed ID and every legacy filter/score/export route to an explicit retained, safely replaced, or retired disposition with tests. |
 | Sensitive nonselection is treated as a contradiction | Sensitive P8F controls are optional; only an explicit contradictory typed answer plus award-bound accepted authority may hard-conflict. |
+| Edit capability is treated as read/write authority | P8M requires separate exact source, processing, write, and delivery authority; edit access alone authorizes nothing. |
+| AI proposals become eligibility truth | Claude is proposal-only; only schema-valid, field-specific, human-reviewed accepted facts may reach matching. |
+| Parent, child, application, or cycle facts collapse | Matching facts bind stable award and optional cycle IDs and prohibit inherited parent/group facts without explicit child authority. |
+| Mutable master changes deployed results silently | Runtime consumes only a digest-pinned immutable versioned publication with complete reconciliation and rollback. |
+| Legacy P9 source is accessed after source authority changes | The old production sheet is legacy comparison-only with no access authority; historical identity-pin/workflow mechanics are non-operative. |
 | Dependency vulnerabilities remain hidden by green tests | P1 inventory, P7 remediation/exposure review, and no unresolved critical/high exploitable finding at launch. |
 
 ## 16. Completion reporting

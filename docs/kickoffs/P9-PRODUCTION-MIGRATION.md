@@ -1,11 +1,129 @@
 # P9 Kickoff — Production Migration, Deployment, and Closeout
 
-Use this kickoff only in a fresh session after Plan Revision 9 and P8F are independently
-accepted, attested, merged, and verified on live `origin/main`. This document prepares
-P9; the production authority and strict no-production-write boundary remain recorded in
-`docs/evidence/PLAN-REV7.md`, while the ordering and trusted-proof compatibility anchor
-are recorded in `docs/evidence/PLAN-REV8.md`, `docs/evidence/PLAN-REV9.md`, and
-`docs/BUILD_STATE.json`.
+Use the operative Revision 10 block below only in a fresh session after P8M and P8F are
+independently accepted, attested, merged, and verified on live `origin/main`. The older
+Revision 7–9 block is retained afterward as historical non-operative evidence; it must
+not be executed unless a later independently reviewed amendment expressly restores it.
+
+```text
+Execute P9 — Production migration, deployment, and closeout — only for
+whitefishscholarship/program_code, using the exact validated immutable versioned
+publication accepted in P8M. The mutable organizer master and legacy comparison-only
+spreadsheet are not runtime sources.
+
+AUTHORITATIVE READ ORDER
+1. AGENTS.md
+2. docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md
+3. docs/BUILD_STATE.json
+4. docs/CURRENT_HANDOFF.md
+5. docs/evidence/PLAN-REV10.md and its accepted manifest/review
+6. docs/evidence/PLAN-REV10-matching-fact-contract.json
+7. docs/evidence/P8M.md and its accepted manifest/review/publication receipt
+8. docs/evidence/P8F.md and its accepted manifest/review
+9. docs/evidence/P8R.md, docs/evidence/P7.md, and their accepted manifest/reviews
+10. docs/evidence/P8.md and its disabled-monitoring evidence
+11. docs/evidence/PLAN-REV7.md, PLAN-REV8.md, and PLAN-REV9.md as immutable history
+12. docs/kickoffs/P9-PRODUCTION-MIGRATION.md
+
+STATE TO PIN BEFORE EDITING
+- Fetch live origin/main and prove exact accepted/delivered Revision 10, P8M, and P8F
+  direct-child attestations and complete accepted P0-P8/P8R history.
+- Pin the exact P8M immutable publication path, schema/taxonomy version, source-master
+  revision receipt, complete award/cycle/fact denominator, accepted-fact digest,
+  generator digest, candidate, manifest, review, and attestation.
+- Prove P8F used the same publication bytes and contains no mutable-master, free-text,
+  unaccepted-fact, or legacy-processor fallback.
+- Pin the read-only application runtime identity separately from human editor, proposal
+  processor, fact reviewer, Google, and write-capable identities. The runtime must hold
+  no Google credential and no Drive/Sheets scope.
+- Require exact directly authorized Vercel project/team/canonical Production hostname,
+  protected verification environment, secret provenance, deployment owner, rollback
+  owner, and P9 Git/Preview/Production effects. Do not infer them from prior P9 authority.
+- Confirm the replacement P9 stage authorization is initially false. Before any P9
+  action, record new direct target-specific authority whose evidence path also binds the
+  runtime-read gate. Revision 7 authority cannot satisfy this additional gate.
+- The former P9-IDENTITY-PINS path is retired unstarted by Plan Revision 10. Do not
+  create, populate, or dispatch its historical Google-runtime artifacts/workflow.
+
+OBJECTIVE
+Deploy the accepted P8F application with the exact digest-pinned P8M publication as its
+sole fact source, prove the runtime has zero spreadsheet capability, demonstrate
+deployment/configuration rollback, and close the program.
+
+IN SCOPE
+- Bind the publication, application runtime commit, provider target, health nonce,
+  deployment IDs, and public API/UI/export observations.
+- Reconcile every published award, cycle, matching fact, source relationship,
+  application group, result tier, and unknown/manual/stale state to the accepted P8M
+  and P8F evidence.
+- Deploy the exact accepted runtime configuration, prove health/API/browser/export
+  behavior, roll back to the accepted P8F static-publication configuration, and prove a
+  restored deployment only under the exact governed sequence.
+- Complete the operator runbook, architecture/data documentation, evidence, independent
+  review, manifest, direct-child attestation, delivery record, and closeout handoff.
+
+INVARIANTS
+- The validated immutable versioned publication is the sole runtime fact source. Reject
+  mutable paths, latest aliases, environment-selected alternate files, network fallback,
+  or bytes whose digest differs from the accepted P8M publication.
+- The application runtime cannot contain or reach either spreadsheet ID, Google
+  credential, Drive/Sheets scope, Google client construction, or spreadsheet mutator.
+- The organizer authoring master is human/editor workflow only. The former production
+  sheet is legacy comparison-only and inaccessible.
+- Preserve P8F volatile-answer privacy, accepted-fact matching, cards/counts/
+  relationships/filter/sort/export/API/admin behavior, and P8 disabled monitoring.
+- Any unavailable, stale, conflicting, or unknown fact remains visibly non-current and
+  cannot be silently promoted by deployment.
+
+OUT OF SCOPE
+- Every spreadsheet, Drive, permission, metadata, revision, or public-source read/write;
+  applicant data; form/application interaction; provider contact; monitoring activation;
+  fact refresh or mutation; publication regeneration; deployment-configuration target
+  outside direct authority; P9-IDENTITY-PINS; paid/destructive action; gate weakening;
+  and history rewrite.
+
+ACCEPTANCE TESTS
+- Recompute the publication and accepted-fact digests from the exact P8M candidate and
+  prove P8F and runtime imports resolve to those bytes.
+- Static and executed negative tests reject both spreadsheet IDs, Google credentials,
+  Drive/Sheets scopes, Google client construction, network/mutable publication fallback,
+  alternate environment paths, and every writer.
+- Authenticate project/team/host, provider Git SHA, deployment IDs, health nonce,
+  runtime descriptor, publication digest, rollback, and restored observations.
+- Reconcile complete award/cycle/fact/source/application/result denominators; preserve
+  privacy and unknown/manual/stale states; run health/API/browser/export smoke.
+- Run npm ci, plan check, typecheck, complete tests, exact production build, both audits,
+  and root whitespace checks. Obtain fresh-context non-author C0/H0 review and
+  disposition every medium/low finding.
+
+INDEPENDENT REVIEW AND DELIVERY
+- Freeze the exact candidate, generate the complete baseline manifest, obtain read-only
+  fresh-context review, and add only manifest/review in the direct-child attestation.
+- Follow exact P9 Git/Preview/Production authority. Never force-push, rewrite history,
+  bypass checks, change provider targets, or append after an undelivered attestation.
+- After merge, authenticate exact Production main/deployment/publication identity and
+  repeat health/API/browser/export smoke before program closeout.
+
+STOP CONDITIONS
+- Any prerequisite, publication/pin/digest, provider target, authority, owner, rollback,
+  or accepted history is missing or mismatched.
+- Runtime can reach a spreadsheet, Google credential/scope/client, mutable publication,
+  unaccepted fact, legacy processor, or alternate source.
+- Work would read/write a spreadsheet/source, process applicant data, activate
+  monitoring, regenerate facts, submit a form, contact a provider, or exceed authority.
+
+END-OF-STAGE OUTPUT
+One PASS/BLOCKED/FAIL status; exact publication/runtime/deployment/rollback evidence;
+complete reconciliation; independent review; candidate/manifest/attestation; PR/merge/
+Production identity; remaining unknowns; and program closeout state.
+```
+
+## Historical Revision 7–9 P9 kickoff — non-operative
+
+The block below is retained byte-for-byte except for this surrounding label. Its strict
+no-production-write, privacy, exact-target, review, manifest, and attestation principles
+remain useful evidence. Its Google-sheet runtime, backup-read, identity-pin, and trusted-
+workflow operations are superseded by Plan Revision 10 and must not run.
 
 ```text
 Execute P9 — Production migration, deployment, and closeout — only for

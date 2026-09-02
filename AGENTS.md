@@ -35,9 +35,17 @@ it is convenient or adjacent.
 
 ## Scholarship data boundaries
 
-- The testing spreadsheet is
-  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`.
-- The production Whitefish Scholarship spreadsheet is
+- Under Plan Revision 10, spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is only the user-reported,
+  independently unverified organizer authoring master. Revision 10 grants no access
+  or automated-write authority. It is not an operative testing source.
+- Spreadsheet
+  `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is legacy comparison-only under
+  Plan Revision 10, with no access authority. The following Revision 7 source and P9
+  rules are preserved solely as historical context and are non-operative after the
+  Revision 10 transition; they grant no spreadsheet access or replacement-P9 authority.
+- **Historical, non-operative Revision 7 record:** The former production Whitefish
+  Scholarship spreadsheet was
   `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`. Plan Revision 7 authorizes only
   bounded read access and an application-configuration cutover in P9. Never write,
   append, clear, format, share, rename, restore, or otherwise mutate that spreadsheet.
@@ -162,6 +170,53 @@ activation, form/application interaction, applicant-data collection, answer/deci
 persistence or transmission, analytics, provider contact, deployment-configuration
 changes, or scope expansion.
 
+## Plan Revision 10 and P8M boundary
+
+Plan Revision 10 inserts `P8M` between accepted P8R and planned P8F. P8M is the sole
+next-permitted stage, but it remains planned and unauthorized until a later direct,
+stage-specific instruction names the exact bounded denominator, master tabs/ranges,
+permitted source reads, proposal processing, human review, write exclusion or exact
+write gate, Git delivery, and resulting deployment effects. Do not begin P8M merely
+because it is next-permitted.
+
+Spreadsheet `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is the
+organizer-designated authoring master only as a user-reported, independently unverified
+fact. Edit access is not automated-write authority. Revision 10 grants no sheet,
+source, permission, metadata, or revision access and no Claude row processing. The
+former production spreadsheet is legacy comparison-only with no access authority.
+Application runtime must eventually consume a validated immutable versioned publication,
+not the mutable master, under separately accepted P9 governance.
+
+Claude is proposal-only: it may never accept its own facts or write a spreadsheet.
+Codex owns stable-ID validation, evidence policy, duplicate/conflict/coverage checks,
+complete-denominator reconciliation, proposal-review packaging, and any separately
+authorized exact write/readback workflow. Missing, unaccepted, ambiguous, stale,
+conflicting, free-text-only, unanswered, or nonselected information remains unknown and
+cannot hard-exclude an award.
+
+P8F may start only after P8M is accepted, attested, delivered, and reverified on live
+`origin/main`. P9 and `P9-IDENTITY-PINS` remain planned and unstarted. Revision 10 does
+not activate monitoring, change product/runtime or deployment configuration, or grant
+remote Plan Revision 10 delivery authority. A local attestation must remain branch tip
+until separately authorized delivery.
+
+## Plan Revision 11 late-delivery boundary
+
+Plan Revision 11 is the sole exact continuation for delivery authority received after
+the immutable Plan Revision 10 attestation. It must preserve Revision 10 candidate
+`519f8b0cc3cb1da7d1cb75651940358b5722f9e9` and direct-child attestation
+`4a22711bbb352d763298c6200768dc181662f80f` byte-for-byte, use only the pinned
+continuation branch and allowlisted governance paths, receive fresh-context review,
+and add only its own manifest/review in its direct-child attestation.
+
+The continuation authorizes its exact branch push, pull request, Vercel Preview, merge,
+Vercel Production deployment, CI, and verification. It authorizes no product, data,
+runtime, workflow, spreadsheet, source, monitoring, or deployment-configuration change.
+The user separately authorized P8M/enrichment in principle, but P8M cannot access the
+master or sources until the exact tab/range, denominator, revision, source, reviewer,
+and write-gate fields required by its kickoff are known and machine-recorded. Stop
+before P8M access during Revision 11 delivery.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use
@@ -215,7 +270,14 @@ force-push or published-history rewrite; form submission or application interact
 provider contact; acceptance-gate weakening; and material scope expansion. Platform
 sandbox or authentication approvals remain separate technical safeguards.
 
-## P9 read-only production mandate — Plan Revision 7
+## Historical P9 read-only production mandate — Plan Revision 7 (non-operative)
+
+This section records the superseded Revision 7 operating mandate for provenance only.
+Plan Revision 10 makes it non-operative: it grants no access to either spreadsheet and
+no replacement-P9, Google Sheets client, configuration, Git, or deployment authority.
+The current Plan Revision 10 and P8M boundary above controls. Every imperative in the
+legacy text below describes the historical Revision 7 constraint; none is a current
+instruction or authority source.
 
 Kelsey directly authorized P9 production source migration, application-configuration
 switching, governed Git/PR delivery, Vercel Preview and Production deployment,
