@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 8
+Plan revision: 9
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -63,8 +63,8 @@ The program is successful only when all of the following are true:
   target removal stage.
 - The production migration is backed up, reconciled, reversible, deployed from a
   recorded commit, and independently reviewed.
-- P0 through P9 are accepted, delivered through reviewed Git history, and have
-  durable evidence and handoffs.
+- P0 through P9, including P8R and P8F, are accepted, delivered through reviewed Git
+  history, and have durable evidence and handoffs.
 
 ## 3. Current verified baseline
 
@@ -127,7 +127,8 @@ stage may quote these counts as a current fact without a new snapshot.
 
 - Applying for scholarships or submitting any form.
 - Collecting, transmitting, persisting, or committing student interview answers or
-  applicant PII. P8R may process voluntary answers only in volatile browser memory.
+  applicant PII. P8R and P8F may process voluntary answers only in volatile browser
+  memory.
 - Bypassing logins, CAPTCHAs, access controls, robots restrictions, or rate limits.
 - Treating commercial scholarship aggregators as final factual authority.
 - Guaranteeing that a student will qualify for or receive an award.
@@ -199,7 +200,7 @@ These requirements apply to every stage:
 
 1. **One stage per execution.** A session may close one stage or make a bounded
    checkpoint within it. It may prepare but not execute the next stage.
-2. **Testing-sheet boundary.** P0-P8 may not configure or mutate the production
+2. **Testing-sheet boundary.** P0-P8F may not configure or mutate the production
    Whitefish spreadsheet.
 3. **Official-source priority.** Sponsor/provider pages outrank aggregators. Child
    detail pages outrank parent summaries for child-specific facts. Current parent
@@ -244,7 +245,7 @@ by at most one in-flight stage, followed by planned stages. A later stage may no
 become active until every prior stage is accepted. `superseded` is reserved and is
 invalid under plan revision 1; enabling it requires an independently reviewed plan
 amendment, explicit supersession evidence, and a validator revision. P9 always requires
-P0-P8 and P8R specifically `accepted` and cannot use supersession to bypass them.
+P0-P8, P8R, and P8F specifically `accepted` and cannot use supersession to bypass them.
 
 A stage may move to `accepted` only when:
 
@@ -653,14 +654,106 @@ security, accessibility, or regression finding.
 canonical browse-all catalog. No spreadsheet, accepted scholarship fact, P8 schedule,
 production configuration, or P9 state changes during rollback.
 
+### P8F — Former interview detail and routing restoration
+
+**Objective:** Restore the complete last-active former interview question detail and
+its intended search workflow inside the accepted P7/P8R product, without reconnecting
+legacy heuristics, persisting answers, or turning missing/unaccepted evidence into an
+eligibility decision.
+
+**Entry prerequisites:** P8R and Plan Revision 9 accepted, direct-child attested, and
+delivered; live `origin/main` verified; P8F is the sole next-permitted stage; P9 remains
+planned and unstarted; the pinned `4c20637a351d272788e24ac9d02e541494644832`
+history and every blob in `docs/evidence/PLAN-REV9-interview-inventory.md` are
+reverified; and the complete P8F test matrix plus old-ID-to-new-control/rule map are
+committed before product implementation.
+
+**Deliverables:** An accessible detailed interview covering the six former academic
+prompts, four activity/responsibility checkboxes, conditional volunteer-hours prompt,
+financial-need prompt, and all 38 final former special-criteria IDs; an exact migration
+map for the earlier six-option `organization_affiliations` control without rendering a
+duplicate affiliation question; an exact disposition for
+every former filter, score, sort, and result/export route; optional/prefer-not-to-answer
+handling for sensitive traits; typed award-bound match/possible/conflict rules with
+visible reasons; an explicit no-current-effect state for any answer lacking accepted
+rule authority; on-page matched results that preserve current P7/P8R cards, counts,
+relationships, filters, sorting, application methods, cycle state, official links,
+browse-all, admin/API compatibility, and visible-result CSV export; edit/back/reset/
+reload/empty/error/accessibility states; strict privacy/public-field allow-lists; and
+complete deterministic and three-viewport evidence.
+
+The reachable history supports one `adhd` control labeled `ADHD`, whose tooltip expands
+Attention-Deficit/Hyperactivity Disorder. It contains no distinct ADD question. P8F may
+not invent a second ADD control. SAT, ACT, FAFSA completion, skills, creative skills,
+background, constraints, and career interests existed only in TypeScript types at the
+pinned snapshot and may not be represented as recovered former questions.
+
+Complete history also includes an earlier active standalone
+`passiveSignals.organization_affiliations` question with six values: `Military`,
+`First Responder`, `Farmers Union`, `Electric Co-op`, `Credit Union`, and `Elks Lodge`.
+The final configuration migrated those concepts respectively to `military_veteran`,
+`first_responder`, `farmers_union`, `electric_coop`, `credit_union`, and `elks_lodge`.
+P8F must preserve the mapping but render only the final controls. The earlier
+`New for 2026!`/`is_new` +5 rule is explicitly retired as an unsupported legacy boost.
+
+Every hard conflict requires both an explicit contradictory typed student answer and an
+award-bound field-specific accepted public fact. Missing, ambiguous, free-text-only,
+manual-review, provenance-free, unanswered, nonselected, and prefer-not-to-answer states
+remain non-excluding. Positive sensitive identity, health, hardship, demographic,
+affiliation, and employer answers may influence results only through exact accepted
+authority; nonselection is never a negative fact. A question with no accepted rule must
+say that it did not narrow results.
+
+P8F must implement the Revision 9 retained/safely-replaced/retired disposition table.
+It may not import, reconnect, copy, or disguise historical `processor.ts` or
+`rulesPack.ts` behavior as matching truth; restore default-Montana, date/substr, text-
+affiliation, amount/portal/criterion-point, or essay-penalty heuristics; consume legacy
+`{data}` rows as matcher truth; store matched rows for retry; or return to an Excel-only
+result screen. Ordering is deterministic by accepted decision tier, explicit mapped
+preference, the current selected P7 sort, and stable award ID tie-break.
+
+**Out of scope:** Any spreadsheet or public-source read/write; accepted scholarship fact
+mutation; production source/configuration work; P9 or identity pins; live monitoring or
+schedule activation; form/application interaction; applicant data; answer/decision
+telemetry or persistence; provider contact; paid/destructive actions; deployment-
+configuration change; dependency change not strictly required for P8F; history rewrite;
+gate weakening; and broader product/data scope.
+
+**Verification:** Before implementation, commit a matrix that accounts for every
+historical displayed ID, label, option, conditional, configuration migration,
+type-only exclusion, rule
+disposition, and result/export route. Unit and adversarial tests must prove the exact
+question counts; one ADHD/no separate ADD control; required validation; every accepted-
+fact gate and sensitive optional/non-answer state; unknown preservation; deterministic
+ordering; current filters/sort/links/export; reset/reload; and complete API/catalog/admin
+compatibility. They must reject default-Montana exclusion, `Non-Renewing` substring
+classification, year-2001 deadline fallback, free-text identity/health/affiliation
+gates, arbitrary legacy scoring, legacy processor/rules imports, legacy `{data}` matcher
+coupling, matched-row storage, stale answers, and every persistence/transmission channel.
+Reconcile the exact accepted catalog graph/counts and run every applicable journey at
+360x800, 768x1024, and 1440x900 plus the full repository matrix, both dependency audits,
+privacy/export allow-lists, keyboard/focus/screen-reader checks, and whitespace checks.
+
+**Acceptance:** Every historical display/rule route has one count-matched disposition;
+the detailed interview works without false exclusion or unsupported promotion; every
+displayed result has deterministic reasons; no answer, decision, or matched-row payload
+is transmitted or persisted; the accepted P7/P8R catalog and product surfaces reconcile
+exactly; every declared browser cell passes without unexplained exclusion; and a fresh-
+context independent reviewer reports no critical/high correctness, privacy, security,
+accessibility, evidence, or regression finding.
+
+**Rollback:** Deploy the accepted P8R application revision. No spreadsheet, accepted
+scholarship fact, P8 schedule, production configuration, or P9 state changes during
+rollback.
+
 ### P9 — Production migration, deployment, and closeout
 
 **Objective:** Move the accepted application from its testing/static source boundary to
 the actual Whitefish Scholarship spreadsheet as a strictly read-only source, with
 verified configuration rollback and durable operational handoff.
 
-**Entry prerequisites:** P0-P8 and P8R accepted and delivered; Plan Revision 8 accepted,
-attested, and delivered; production spreadsheet identity explicitly
+**Entry prerequisites:** P0-P8, P8R, and P8F accepted and delivered; Plan Revisions 8
+and 9 accepted, attested, and delivered; production spreadsheet identity explicitly
 provided and read-only production migration explicitly authorized; current backups of
 the exact authorized scholarship tabs verified; the exact deployed runtime principal
 identified without exposing credentials and proved to hold one direct, unexpired
@@ -780,8 +873,8 @@ merge, authenticate the resulting Vercel Production deployment, prove the deploy
 commit, repeat health/API/browser and read-only source-fingerprint smoke, and publish the
 provider/run identifiers in the governed PR delivery record.
 
-**Acceptance:** P0-P8 and P8R are accepted and delivered on `origin/main`. Independent
-fresh-context review has no unresolved critical/high issue;
+**Acceptance:** P0-P8, P8R, and P8F are accepted and delivered on `origin/main`.
+Independent fresh-context review has no unresolved critical/high issue;
 production evidence, deployed commit, backups, cutover receipt, and rollback location
 are recorded; zero production mutations are proved; final count semantics and remaining
 manual items are published honestly.
@@ -1061,6 +1154,18 @@ Revision 7 production identities, no-write rules, evidence schemas, and operatio
 proof gates remain unchanged. Revision 8 must be independently accepted, attested, and
 delivered before P8R begins.
 
+Plan Revision 9 records the user's direct follow-up instruction to recover the complete
+former displayed interview detail and intended routing after accepted P8R restored only
+GPA, school type, and application-mode questions. It inserts P8F between accepted P8R
+and planned P9, binds the exact historical inventory and retained/replaced/retired rule
+dispositions, and leaves P9 unstarted. Revision 9 itself changes no student-facing
+runtime behavior, scholarship fact, spreadsheet, provider configuration, or schedule.
+It advances the immutable P9 trusted-proof code anchor only for the exact Revision 9
+governance compatibility change that recognizes the additional prerequisite; every
+Revision 7/8 production identity, no-write rule, receipt schema, and operational proof
+gate remains unchanged. Revision 9 must be independently accepted, attested, and
+delivered before P8F begins.
+
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical
 amendment record, or alter Revision 5's exact P3-P8 authority fields or mandate evidence.
@@ -1096,6 +1201,8 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | Interview answers leak or persist | Volatile browser-memory processing only; prohibit answer-bearing storage, requests, URLs, logs, cookies, IndexedDB, and analytics, with adversarial tests. |
 | Matching heuristics hide viable awards | Hard gates require typed accepted facts; unknown/free-text facts remain visible as possible matches with reasons. |
 | Restoring the old page regresses the accepted catalog | Integrate P8R with the canonical P7 model and existing cards/filters/export; never revert the P7 commit wholesale. |
+| Former detailed questions silently reactivate unsafe rules | P8F binds every displayed ID and every legacy filter/score/export route to an explicit retained, safely replaced, or retired disposition with tests. |
+| Sensitive nonselection is treated as a contradiction | Sensitive P8F controls are optional; only an explicit contradictory typed answer plus award-bound accepted authority may hard-conflict. |
 | Dependency vulnerabilities remain hidden by green tests | P1 inventory, P7 remediation/exposure review, and no unresolved critical/high exploitable finding at launch. |
 
 ## 16. Completion reporting

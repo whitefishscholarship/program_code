@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV9",
+  "createdAt": "2026-09-02T01:15:05Z",
+  "baselineCommit": "f118b85dc0e10cc3841d172d2d4091f618454970",
+  "candidateCommit": "bcde44a5979b2be5a631f914a3e249bca2943c40",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "3a2ebf804e391fbe9f73a1ad1e95f9e96def2617cc4301c3118a416cb1b9d2f4"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "1050bf5be5898028a1f73caee5b220095da1da97372faf54437a177637d4d926"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "57b5546c6f8a10996ed115680caff66e0b502187ac74c8b4656c7549e6c03dd9"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "fd6bec3842a3a949f2b1b9994d3fcae4f11152ee9c68acbe7c36c031d7c0dce4"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "3967a5afa6c6331ca5a13c9c3a60500fe10e18a32d89bc650bdbbd390ecec0a9"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV9-interview-inventory.md",
+      "change": "present",
+      "sha256": "3e294fd30fca21a84c9bfc30f650b3f38c6d3f0dc2916b9317fa1d3f2d5b9ee6"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV9.md",
+      "change": "present",
+      "sha256": "bf48803743c4eebda83d26c2b3f0c01fabc239379c1d1ce20ed8bf1952b6d38e"
+    },
+    {
+      "path": "docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md",
+      "change": "present",
+      "sha256": "e476b9026356d0063c4f289e7bb5ef5b5ea3cf60c4d52f819ef8acde2a5c026c"
+    },
+    {
+      "path": "docs/kickoffs/P9-PRODUCTION-MIGRATION.md",
+      "change": "present",
+      "sha256": "e389bb1f730feaa7754dc357fe495cad114c4080e2230746054c9fa6862a32b3"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "8edfed56904013faf3bf8e9941d7b1e6732ba183e34cda1e5c161385da26fb08"
+    },
+    {
+      "path": "web/scripts/p5-remediation.ts",
+      "change": "present",
+      "sha256": "c5e704d741c4b9ac4fbdc28e2aa4f4a077dd25d75b8b226cad06f2a596f961b9"
+    },
+    {
+      "path": "web/scripts/p9-trusted-proof.ts",
+      "change": "present",
+      "sha256": "cc3cab94526cc9eb1eaf581f3df52c23f1f20e38e21aced16f61c6302a4ae851"
+    },
+    {
+      "path": "web/scripts/test-p5-remediation.ts",
+      "change": "present",
+      "sha256": "5c731bb178b46ef47599e521016b247551ca14936baa2741bc342a9da44acf89"
+    },
+    {
+      "path": "web/scripts/test-plan-rev9-interview-inventory.ts",
+      "change": "present",
+      "sha256": "535c8f5ed9375dce5eb96e096c0e2fd51add1b0a76440a9889d935d224b6c857"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "f6744c713c7322d2a8c1fd67adad4b04dbfbef48e6ac64dc7c0ba3ece2da668f"
+    }
+  ]
+}

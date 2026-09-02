@@ -196,7 +196,7 @@ type ReviewRecord = {
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(scriptDir, '..', '..');
-const expectedStageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P9'];
+const expectedStageIds = ['P0', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P8R', 'P8F', 'P9'];
 const closedStatuses = new Set<StageStatus>(['accepted']);
 const inFlightStatuses = new Set<StageStatus>([
   'active',
@@ -804,7 +804,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
   if (
     !baselineState ||
     !candidateState ||
-    candidateState.planRevision !== 8 ||
+    candidateState.planRevision !== 9 ||
     candidateState.activeStageId !== null ||
     candidateState.nextPermittedStageId !== 'P9' ||
     candidateP9?.status !== 'planned' ||
@@ -816,7 +816,7 @@ function validateP9IdentityPinGovernance(state: BuildState): void {
     !p9IdentityPinProofFlagsAreFalse(candidateAuthorization)
   ) {
     fail(
-      'P9-IDENTITY-PINS candidate must keep Plan Revision 8 and P9 planned while pinning one complete identity set with every proof state false',
+      'P9-IDENTITY-PINS candidate must keep Plan Revision 9 and P9 planned while pinning one complete identity set with every proof state false',
     );
   } else {
     for (const error of validateP9ReadOnlyAuthority(
@@ -1812,6 +1812,7 @@ if (state) {
   if (state.planRevision >= 7) {
     const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
     const attestedRevision8 = historicallyAttestedPlanAmendments.get('PLAN-REV8');
+    const attestedRevision9 = historicallyAttestedPlanAmendments.get('PLAN-REV9');
     const expectedEntryProofState = Boolean(p9MayUseProduction);
     const expectedPostCutoverProofState =
       p9?.status === 'verified' || p9?.status === 'accepted';
@@ -1856,6 +1857,7 @@ if (state) {
         if (
           !attestedRevision7 ||
           (state.planRevision >= 8 && !attestedRevision8) ||
+          (state.planRevision >= 9 && !attestedRevision9) ||
           !acceptedP7 ||
           !acceptedP7CatalogBlob ||
           !/^[0-9a-f]{40}$/.test(p9BaselineCommit) ||
@@ -1863,7 +1865,7 @@ if (state) {
           !revision7AttestationCommittedAt ||
           !candidateCommittedAt
         ) {
-          fail('P9 active state requires immutable accepted P7, delivered Revisions 7 and 8, and exact Git chronology');
+          fail('P9 active state requires immutable accepted P7, delivered Revisions 7, 8, and 9, and exact Git chronology');
         } else if (operationalIdentityContext) {
           try {
             evidenceContext = {
@@ -1873,9 +1875,13 @@ if (state) {
               revision7AttestationCommittedAt,
               revision7CandidateCommit: attestedRevision7.candidateCommit,
               trustedProofCandidateCommit:
-                attestedRevision8?.candidateCommit ?? attestedRevision7.candidateCommit,
+                attestedRevision9?.candidateCommit ??
+                attestedRevision8?.candidateCommit ??
+                attestedRevision7.candidateCommit,
               trustedProofAttestationCommit:
-                attestedRevision8?.attestationCommit ?? attestedRevision7.attestationCommit,
+                attestedRevision9?.attestationCommit ??
+                attestedRevision8?.attestationCommit ??
+                attestedRevision7.attestationCommit,
               candidateCommit,
               candidateCommittedAt,
               ...operationalIdentityContext,
@@ -2076,6 +2082,45 @@ if (state) {
       }
     }
 
+    if (state.planRevision >= 9) {
+      const p8fDeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P8F',
+      );
+      if (
+        p8fDeliveryAuthorization?.authorized !== true ||
+        p8fDeliveryAuthorization.evidencePath !== 'docs/evidence/PLAN-REV9.md'
+      ) {
+        fail('Plan Revision 9 requires P8F delivery authority bound to PLAN-REV9 evidence');
+      }
+      if (attestedRevision9) {
+        const revision9CandidateState = jsonAtCommit<BuildState>(
+          attestedRevision9.candidateCommit,
+          'docs/BUILD_STATE.json',
+        );
+        const changedP8FDelivery = revision9CandidateState
+          ? changedStandingAuthorization(
+              state.deployment.stageMergeAuthorizations,
+              revision9CandidateState.deployment.stageMergeAuthorizations,
+              ['P8F'],
+            )
+          : 'P8F';
+        if (changedP8FDelivery) {
+          fail('P8F Plan Revision 9 delivery authorization cannot be deleted, disabled, or changed');
+        }
+        const revision9EvidencePath = 'docs/evidence/PLAN-REV9.md';
+        const canonicalRevision9Evidence = gitText([
+          'show',
+          `${attestedRevision9.candidateCommit}:${revision9EvidencePath}`,
+        ]);
+        if (
+          canonicalRevision9Evidence === null ||
+          requireFile(revision9EvidencePath) !== canonicalRevision9Evidence
+        ) {
+          fail('Plan Revision 9 authority evidence must remain byte-identical to its immutable candidate');
+        }
+      }
+    }
+
     if (p9?.status === 'accepted') {
       const canonicalP9 = findCanonicalAttestation(
         'P9',
@@ -2172,6 +2217,27 @@ if (state) {
       fail('Plan Revision 8 requires the exact interview-answer privacy invariant');
     }
   }
+  if (state.planRevision >= 9) {
+    for (const phrase of [
+      'Former interview detail and routing restoration',
+      'no distinct ADD question',
+      'explicit contradictory typed answer',
+      'retained/safely-replaced/retired',
+      'matched-row payload',
+    ]) {
+      if (!plan.includes(phrase)) {
+        fail(`Plan Revision 9 is missing former-interview safety text: ${phrase}`);
+      }
+    }
+    if (
+      !state.invariants.includes(
+        'Never treat a sensitive nonselection, unanswered field, or prefer-not-to-answer state as an eligibility contradiction.',
+      )
+    ) {
+      fail('Plan Revision 9 requires the exact sensitive-nonanswer invariant');
+    }
+    requireFile('docs/evidence/PLAN-REV9-interview-inventory.md');
+  }
 
   const agents = content['AGENTS.md'];
   for (const phrase of [
@@ -2192,11 +2258,23 @@ if (state) {
       if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 8 invariant: ${phrase}`);
     }
   }
+  if (state.planRevision >= 9) {
+    for (const phrase of [
+      'Plan Revision 9 and P8F boundary',
+      'ADD was not',
+      'sensitive nonselection',
+    ]) {
+      if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 9 invariant: ${phrase}`);
+    }
+  }
 
   const decisions = content['docs/DECISIONS.md'];
   for (let i = 1; i <= 8; i++) {
     const id = `D-${String(i).padStart(3, '0')}`;
     if (!decisions.includes(`## ${id} —`)) fail(`Decision log is missing ${id}`);
+  }
+  if (state.planRevision >= 9 && !decisions.includes('## D-021 —')) {
+    fail('Decision log is missing D-021');
   }
 
   const handoff = content['docs/CURRENT_HANDOFF.md'];
