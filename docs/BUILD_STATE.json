@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 8,
+  "planRevision": 9,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-01",
   "repository": {
@@ -247,6 +247,15 @@
         "scope": "After accepted Plan Revision 8 is delivered, implement, independently review, attest, push, open a pull request for, merge, and verify only P8R and its resulting Vercel Preview and Production deployments. P8R restores the interview-first student flow using the accepted public catalog, volatile browser-memory answers, conservative typed matching, on-page results, browser QA, and rollback to accepted P8. It excludes all spreadsheet access or writes, P9, production-source or deployment-configuration changes, monitoring activation, forms or applications, applicant-data collection, answer persistence or transmission, analytics, provider contact, paid or destructive actions, gate weakening, history rewrite, and scope expansion."
       },
       {
+        "stageId": "P8F",
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-09-01",
+        "evidencePath": "docs/evidence/PLAN-REV9.md",
+        "basis": "The user directly instructed Codex to govern the required new stage and eventually restore the complete former interview detail and intended search process, while supplying the repository contract that identifies the resulting governed Git, Vercel Preview, and Vercel Production effects and explicitly forbidding P9.",
+        "scope": "After accepted Plan Revision 9 is delivered, implement, independently review, attest, push, open a pull request for, merge, and verify only P8F and its resulting Vercel Preview and Production deployments. P8F restores the exact former displayed question detail within the accepted P7/P8R catalog and privacy boundaries, uses only award-bound field-specific accepted facts for conflicts or rank effects, presents on-page results, and preserves current cards, filters, sort, links, counts, relationships, admin/API compatibility, and visible-result CSV export. It excludes every spreadsheet/source read or write, scholarship fact mutation, P9, production-source or deployment-configuration change, monitoring activation, forms/applications, applicant data, answer/decision/matched-row persistence or transmission, analytics, provider contact, paid/destructive actions, gate weakening, history rewrite, and scope expansion."
+      },
+      {
         "stageId": "P9",
         "authorized": true,
         "authorizedBy": "Kelsey Stuart",
@@ -396,11 +405,27 @@
           "basis": "After a plain-English disclosure that Revision 8 and the later P8R delivery would each include branch push, pull request, merge, and resulting Vercel Preview and Production deployments, the user explicitly answered yes, authorized.",
           "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify only Plan Revision 8 and its resulting Vercel Preview and Production deployments. Revision 8 is governance-only: it inserts and authorizes P8R, preserves accepted P8 and the disabled schedule, keeps P9 planned and unstarted, and advances only the immutable P9 trusted-proof compatibility anchor required to recognize Revision 8. It does not change product runtime behavior, access or write any spreadsheet, start P8R or P9, change deployment configuration, activate monitoring, submit forms, collect or persist applicant data or interview answers, contact providers, perform paid/destructive actions, weaken gates, or rewrite history."
         }
+      },
+      {
+        "id": "PLAN-REV9",
+        "status": "attestation-gated",
+        "baselineCommit": "f118b85dc0e10cc3841d172d2d4091f618454970",
+        "evidencePath": "docs/evidence/PLAN-REV9.md",
+        "manifestPath": "docs/evidence/PLAN-REV9-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV9.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-01",
+          "evidencePath": "docs/evidence/PLAN-REV9.md",
+          "basis": "The user supplied the repository delivery contract and directly instructed Codex to govern and deliver the plan amendment/new stage required for the former-interview detail restoration while keeping P9 unstarted.",
+          "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify only Plan Revision 9 and its resulting Vercel Preview and Production deployments. Revision 9 is governance-only: it inserts and authorizes P8F, binds the exact former-interview inventory and rule dispositions, preserves accepted P7/P8/P8R behavior and privacy, keeps P9 planned and unstarted, and advances only the immutable P9 trusted-proof compatibility anchor required to recognize Revision 9. It does not change product runtime behavior, access or write any spreadsheet or public source, mutate scholarship facts, start P8F or P9, change deployment configuration, activate monitoring, interact with forms/applications or applicant data, persist/transmit answers or decisions, contact providers, perform paid/destructive actions, weaken gates, or rewrite history."
+        }
       }
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P9",
+  "nextPermittedStageId": "P8F",
   "stages": [
     {
       "id": "P0",
@@ -503,6 +528,16 @@
       "kickoffPath": "docs/kickoffs/P8R-INTERVIEW-RESTORATION.md"
     },
     {
+      "id": "P8F",
+      "name": "Former interview detail and routing restoration",
+      "status": "planned",
+      "baselineCommit": null,
+      "evidencePath": "docs/evidence/P8F.md",
+      "manifestPath": "docs/evidence/P8F-manifest.json",
+      "reviewPath": "docs/reviews/P8F.json",
+      "kickoffPath": "docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md"
+    },
+    {
       "id": "P9",
       "name": "Production migration, deployment, and closeout",
       "status": "planned",
@@ -517,6 +552,7 @@
     "Execute one stage only.",
     "Never mutate the production spreadsheet under the Plan Revision 7 read-only P9 authority.",
     "Never transmit or persist student interview answers; process them only in volatile browser memory.",
+    "Never treat a sensitive nonselection, unanswered field, or prefer-not-to-answer state as an eligibility contradiction.",
     "Do not silently truncate source pages, children, results, or awards.",
     "Do not store applicant PII or credentials.",
     "Require independent fresh-context review before stage acceptance.",

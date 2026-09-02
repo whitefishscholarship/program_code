@@ -400,3 +400,50 @@ but are not rewritten or deleted.
   data, answer telemetry, and provider contact remain excluded.
 - Rollback: Revert to the last accepted P8 application revision; do not change accepted
   scholarship facts, spreadsheet state, P8 schedule, production configuration, or P9.
+
+## D-021 — Restore the complete former interview detail through a separate accepted-fact stage
+
+- Date: 2026-09-01
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 9 inserts P8F after accepted P8R and before planned P9. P8F
+  restores the complete last-active former displayed interview detail and its intended
+  search process inside the accepted P7/P8R product. Revision 9 binds the exact history
+  inventory and requires every former question, filter, scoring rule, sort, and
+  result/export route to be retained, safely replaced, or retired with rationale and
+  tests before implementation.
+- Evidence: `docs/evidence/PLAN-REV9.md` and
+  `docs/evidence/PLAN-REV9-interview-inventory.md`
+- Reason: Accepted P8R intentionally restored only GPA, school type, and application-
+  mode questions. The user identified Dyslexia, ADHD/possibly ADD, and First-Generation
+  College as anchors for the former detailed experience and requested the complete
+  question/routing restoration. Complete reachable history proves one ADHD question
+  with an expanded tooltip and no distinct ADD control, six academic prompts, four
+  activity prompts, one conditional volunteer question, one financial-need prompt, 38
+  final special criteria, an earlier active standalone six-option organization-
+  affiliations question later migrated into those final criteria, and eight type-only
+  fields that were never displayed. The earlier `New for 2026!`/`is_new` +5 boost is
+  also inventoried and retired.
+- Alternatives: Reconnect the former processor, which would restore unsafe defaults,
+  regex gates, arbitrary points, and session-stored legacy rows; add questions directly
+  to accepted P8R without a stage, which would violate the one-stage and review gates;
+  or leave the detailed interview absent, which would not satisfy the requested
+  restoration. Each alternative either weakens accepted controls or misses the stated
+  outcome.
+- Impact: Revision 9 itself is governance-only. P8F must preserve the accepted catalog,
+  cards, filters, sort, export, counts, relationships, admin/API behavior, disabled P8
+  schedule, and volatile-answer privacy. A hard conflict requires an explicit
+  contradictory typed answer plus award-bound field-specific accepted authority.
+  Missing, ambiguous, free-text-only, manual-review, provenance-free, unanswered,
+  nonselected, and prefer-not-to-answer states remain non-excluding. Sensitive
+  selections are optional positive signals only where accepted authority exists. P9
+  remains planned and unstarted.
+- Authority: The user supplied the repository contract identifying governed Git and
+  Vercel Preview/Production effects and directly ordered Codex to govern and deliver the
+  required amendment/new stage, preserve the complete inventory, leave the exact
+  kickoff, and eventually restore the former detail without beginning P9. All reserved
+  effects outside that exact scope remain excluded.
+- Rollback: Before P8F begins, supersede Revision 9 only through another directly
+  authorized, independently reviewed amendment. After P8F depends on it, preserve the
+  Revision 9 candidate, manifest, review, attestation, and P8F history byte-for-byte.
+  Runtime rollback uses accepted P8R and does not change any spreadsheet, accepted fact,
+  P8 schedule, production configuration, or P9 state.

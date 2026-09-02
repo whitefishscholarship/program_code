@@ -133,6 +133,35 @@ Neither Revision 8 nor P8R authorizes spreadsheet access or writes, P9, producti
 source/configuration work, monitoring activation, form submission, applicant-data
 collection, provider contact, deployment-configuration changes, or scope expansion.
 
+## Plan Revision 9 and P8F boundary
+
+Plan Revision 9 inserts `P8F` between accepted P8R and planned P9. Revision 9 is
+governance-only: do not change student-facing runtime behavior while preparing or
+delivering it. The former-interview inventory pinned by Revision 9 distinguishes all
+historically displayed controls from TypeScript-only fields and proves that ADD was not
+a separate displayed question from ADHD. It also maps the earlier active six-option
+`organization_affiliations` control into the final affiliation criteria without
+authorizing a duplicate question and retires its associated free-text gate plus the
+legacy `New for 2026!` boost. After Revision 9 is independently accepted,
+attested, and delivered, P8F may restore only the governed former displayed detail
+inside the accepted P7/P8R product.
+
+P8F must preserve volatile-browser-memory privacy, current catalog/cards/filter/sort/
+export/count/relationship behavior, and conservative field-specific accepted-fact
+rules. A hard conflict requires an explicit contradictory typed answer plus an award-
+bound accepted public fact. Missing, ambiguous, free-text-only, manual-review,
+provenance-free, unanswered, nonselected, and prefer-not-to-answer states remain non-
+excluding. A sensitive nonselection is never a contradiction. Never reconnect, copy,
+or disguise the historical processor/rules pack as
+matching truth, restore legacy points/defaults, store matched rows, or replace on-page
+canonical results with the former Excel-only route.
+
+Neither Revision 9 nor P8F authorizes scholarship spreadsheet or public-source access,
+writes or fact mutation, P9, production source/configuration work, monitoring
+activation, form/application interaction, applicant-data collection, answer/decision
+persistence or transmission, analytics, provider contact, deployment-configuration
+changes, or scope expansion.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use
