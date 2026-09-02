@@ -5,6 +5,73 @@ Plan revision: 8
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## User-directed follow-up — restore former interview detail and routing; no implementation started
+
+- On 2026-09-01, after accepting the P8R delivery, Kelsey reported that the restored
+  interview's application-format questions are not the questions that were present when
+  the scholarship-site review began. Kelsey requested recovery of the complete former
+  question set and its search-result routing, while retaining the restored interview and
+  making the full process work correctly. Kelsey explicitly required that no restoration
+  implementation occur in that session. This section is the durable routing record for a
+  fresh session; no product code, plan, build state, data, configuration, or deployment
+  was changed for this follow-up.
+- The exact last locally available revision where the former interview was visibly wired
+  to `processAndFilter` is commit
+  `4c20637a351d272788e24ac9d02e541494644832`, immediately before
+  `a2567d6` replaced the home page with the P7 browse-only catalog. Pin the historical
+  implementation by commit and blob, not by a mutable branch:
+  - `web/src/app/page.tsx` — blob `61343c9f4f785580bf4a1321a2163ec7c8f35436`
+  - `web/src/components/InterviewWizard.tsx` — blob
+    `a183940afeeabecda9b443835c6c1e1b98e0e1d5`
+  - `web/src/components/steps/ActiveFactsStep.tsx` — blob
+    `4442b1bc1c7b26bbebcca9fea1d2c9e5594c2241`
+  - `web/src/components/steps/PassiveSignalsStep.tsx` — blob
+    `b34a63d8847401a7943349d64167cbeabd37c7fa`
+  - `web/src/types/wizard.ts` — blob `a90906ae295108811a5e4d8e35119cb6892be196`
+  - `web/src/lib/processor.ts` — blob `436c84e31de39892b9ab5bcb1d518f749e127a89`
+  - `web/src/lib/rulesPack.ts` — blob `f43df3539281637881106bdfd856efa5bd11004e`
+- Observed historical UI: two steps titled **Academic Background** and **Experience &
+  Activities**. Displayed inputs were unweighted GPA; state of residence; educational
+  status; target school types; college acceptance; gap-year plan; leadership, work,
+  caregiving, and service responsibilities; volunteer-hours bucket; financial need; and
+  grouped special circumstances for neurodiversity/learning, health/hardships,
+  demographics/identity, career interests, athletics, military/first-responder and
+  organization/employer affiliations. The complete labels and option values are
+  authoritative in the pinned step blobs above. `wizard.ts` also modeled SAT, ACT,
+  FAFSA, skills, creative skills, background, constraints, and career interests, but
+  those fields were not visibly rendered by the pinned two step components; do not claim
+  they were former displayed questions unless deeper history proves it.
+- Observed historical routing: `processor.ts` normalized and filtered dates, GPA, school
+  type, state, gap-year eligibility, and text-inferred affiliation gates, then ranked by
+  amount, renewability, portal text, financial need, selected special criteria, and an
+  essay penalty using `rulesPack.ts`. This is historical intent evidence, not approved
+  matching truth. The first P8R candidate was rejected in `docs/evidence/P8R.md` for
+  unsafe legacy-style exclusions and unsupported match promotion. Never reconnect the
+  historical processor wholesale, treat free-text regexes as accepted facts, or restore
+  a rule that contradicts the accepted P8R evidence, manifest, review, privacy boundary,
+  or conservative field-specific authority rules.
+- **Mandatory trigger before any restoration edit:** the fresh session must complete the
+  repository read order, independently verify the pinned history, and govern a plan
+  amendment/new stage that makes this follow-up executable. `docs/BUILD_STATE.json`
+  currently names P9 as next-permitted state and contains no restoration-stage authority;
+  therefore product edits, candidate delivery, and deployment effects are blocked until
+  the canonical plan/build state/kickoff and required authority are valid. Do not start
+  P9 as part of this follow-up. Preserve the accepted P7 catalog/cards/filter/sort/export,
+  P8R volatile-memory privacy, conservative possible/match/conflict semantics, complete
+  verification matrix, independent review, candidate manifest, and direct-child
+  attestation sequence.
+- Open items owned by that new stage: prove whether any still-earlier active revision had
+  additional displayed questions; map every retained answer to typed, award-bound,
+  accepted canonical facts and an explicit routing outcome; specify unknown-answer and
+  contradictory-evidence behavior; test reset/reload/privacy and the full browser matrix;
+  preserve counts/provenance/export behavior; and disposition every legacy heuristic as
+  retained, replaced, or retired with rationale. Live scholarship freshness and a
+  protected application-health smoke remain separately unverified. A fresh remote fetch
+  attempted during this closure returned `Repository not found`, so the history pin is
+  grounded in the locally verified `origin/main` snapshot
+  `f118b85dc0e10cc3841d172d2d4091f618454970` and must be refreshed before a future
+  candidate is frozen or delivered.
+
 ## P8R delivery closure — PASS; P9 not started
 
 - Immutable replacement candidate `a3ed84d116a32f67034902a1ce55e7b5c12bf4bf`
