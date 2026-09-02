@@ -26,6 +26,13 @@ push, pull request, merge, or the resulting Vercel Preview and Production effect
 `PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority`. No remote
 Revision 10 delivery action may occur until a later instruction names those effects.
 
+After the first immutable-candidate review, the user explicitly authorized every listed
+remediation: prospectively supersede the old operational Google-sheet P9 authority and
+validator without rewriting its history, fix the P8M state lifecycle, make the fact
+schema executable and lossless, freeze a replacement candidate, obtain recheck, and
+create the local attestation. That follow-up did not authorize remote delivery or any
+later-stage/source operation.
+
 ## Authoritative grounding and live baseline
 
 The complete read order in `AGENTS.md` and the 30-file Revision 10 kickoff chain was
@@ -102,7 +109,9 @@ unknowns:
 5. Future P9 proves the runtime has no Google credential, Drive/Sheets scope,
    spreadsheet client, or mutator. The former Google-runtime `P9-IDENTITY-PINS` path is
    retired unstarted; its absent artifacts stay absent and all historical Revision 7-9
-   evidence remains immutable.
+   evidence remains immutable. Revision 7 P9 authority and validators remain historical
+   evidence but are prospectively non-operative; replacement P9 starts unauthorized and
+   requires new immutable-publication/runtime/provider/Git/Vercel authority.
 
 ## Stage order and authority triggers
 
@@ -134,6 +143,10 @@ Machine artifact: `docs/evidence/PLAN-REV10-matching-fact-contract.json`.
   `learning.adhd`; no separate `add` alias or recovered question exists.
 - 10 typed operators across nine value types.
 - 31 sensitive criteria with unknown-not-negative nonselection/unanswered behavior.
+- The frozen executable validator at `web/scripts/matching-fact-contract.ts` rejects
+  unknown fields and enum members; enforces scalar/set/date/identifier shapes, numeric
+  bounds and units, the exact `between` object, and status-specific null/source/reviewer
+  rules; and expands aggregate aliases without losing their value.
 - Facts require stable award and optional exact cycle identity, controlled criterion,
   effect, typed operator/value, evidence status, source/revision/time, short non-PII
   evidence, reviewer/time/rationale, and taxonomy version.
@@ -183,9 +196,26 @@ minimum dormant trusted-proof plan-revision compatibility update.
 No student-facing `web/src` file, dependency, lockfile, workflow, deployment
 configuration, spreadsheet fixture/fact, P8 schedule, or external state is in scope.
 
+## Independent-review finding and remediation record
+
+The first frozen candidate `68b38e9acec3d71aec8885ad9430660adfd5e9a4` and manifest
+digest `dd26eba6ae58d8a3c030b92ed9d85d647182c262c044ccec061ac4300434a88e`
+were rejected by fresh-context reviewer `/root/rev10_final_review` with C0/H4/M0/L0.
+No review record or attestation was created for that candidate. The four high findings
+were: a validator that froze P8M at its initial state; live legacy P9 validator law;
+live Revision 7 P9 delivery authority for the replacement stage; and a non-executable,
+value-losing fact schema.
+
+Remediation now provides explicit P8M planned/in-flight/accepted publication states;
+separates P8M publication pins from P9 runtime/provider pins; applies the old Google P9
+validators only before Revision 10; makes replacement P9 unauthorized pending new
+direct target evidence; preserves historical Revision 7-9 evidence; and adds a strict
+executable fact validator with semantic adversarial tests. The same independent
+reviewer must recheck the replacement candidate before any attestation.
+
 ## Verification record
 
-The stabilized pre-freeze command ledger is:
+The first-candidate pre-freeze command ledger was:
 
 | UTC interval | Exact command | Exact result |
 | --- | --- | --- |
@@ -201,11 +231,27 @@ The stabilized pre-freeze command ledger is:
 | `2026-09-02T04:36:15Z` | `git diff --name-status 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; exactly 17 paths, limited to governance, evidence/handoff/kickoffs, package-script wiring, validator/authority compatibility, and tests. |
 | `2026-09-02T04:36:15Z` | `git diff --check 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; no output. |
 
+The remediated replacement-candidate pre-freeze ledger is:
+
+| UTC interval | Exact command | Exact result |
+| --- | --- | --- |
+| `2026-09-02T05:26:33Z`–`05:26:43Z` | `npm ci` | PASS; 462 packages installed, 463 audited, 0 vulnerabilities; lockfile unchanged. |
+| `2026-09-02T05:26:52Z`–`05:27:36Z` | `npm test` | PASS outside the restricted sandbox; every P0-P8R suite passed. Revision 10 semantic tests prove planned and accepted P8M plus active replacement-P9 lifecycle states; reject unpinned P8M acceptance, arbitrary enum values, invalid units/bounds, malformed `between`, incomplete review groups, and lossy/unknown aliases. |
+| `2026-09-02T05:27:41Z`–`05:27:46Z` | `npm run typecheck` | PASS. |
+| `2026-09-02T05:28:59Z`–`05:32:21Z` | `npm run plan:check` | Expected pre-attestation nonzero result with exactly three gates: missing replacement manifest, missing review, and missing committed attestation; no other error. |
+| `2026-09-02T05:28:11Z`–`05:28:13Z` | `npm run build` | Environment-blocked in the default Turbopack PostCSS worker while creating a process/binding a local port: `Operation not permitted`; not a pass. |
+| `2026-09-02T05:28:27Z`–`05:28:49Z` | `npm run build -- --webpack` | PASS; supported Next production build compiled, typechecked, generated 10/10 static pages, and emitted only the existing middleware-deprecation warning. |
+| `2026-09-02T05:27:57Z`–`05:27:58Z` | `npm audit --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS; 0 vulnerabilities. |
+| `2026-09-02T05:27:58Z` | `npm audit --omit=dev --audit-level=low --cache /private/tmp/plan-rev10-npm-cache` | PASS; 0 vulnerabilities. |
+| `2026-09-02T05:32:29Z` | `ruby -e 'require "psych"; Dir[".github/workflows/*.{yml,yaml}"].sort.each { |f| Psych.parse_file(f); puts "YAML PASS #{f}" }'` | PASS for both workflows; neither changed. |
+| `2026-09-02T05:32:41Z` | `git diff --name-status 390b270c5d3127ff2705ffb114212a518a1d5953` plus `git ls-files --others --exclude-standard` | PASS; exactly 19 replacement paths including the two new dormant strict-validator/lifecycle modules, with no product, data, workflow, lockfile, or deployment-configuration path. |
+| `2026-09-02T05:32:41Z` | `git diff --check 390b270c5d3127ff2705ffb114212a518a1d5953` | PASS; no output. |
+
 The restricted `npm test` attempt immediately before the passing run hit the known
 `tsx` local-IPC `listen EPERM`; no test executed in that attempt. The exact required
 test command then passed outside that restriction. The default Turbopack build path
 remains environment-unverified, while the supported Webpack production build passed.
-The 17-path candidate contains no student-facing `web/src`, dependency, lockfile,
+The rejected 17-path candidate and remediated 19-path replacement contain no student-facing `web/src`, dependency, lockfile,
 workflow, data, product-runtime, or deployment-configuration change.
 
 Candidate SHA, manifest digest, and exact fresh-context review outcome will be bound by

@@ -493,9 +493,24 @@ but are not rewritten or deleted.
 - P9 replacement: Future P9 deploys the exact P8M immutable publication and proves the
   runtime has no Google credential, Drive/Sheets scope, spreadsheet client, or mutator.
   The former `P9-IDENTITY-PINS` Google-runtime path is retired unstarted. Historical
-  Revision 7-9 evidence remains unchanged.
-- Authority: The current instruction authorizes Plan Revision 10 governance, local
-  commits, independent review, and direct-child local attestation only. It expressly
+  Revision 7-9 evidence remains unchanged. After the first immutable-candidate review
+  exposed the conflict, the user explicitly authorized Revision 10 to prospectively
+  supersede the old operational P9 authority and validator path while preserving that
+  history. `stageMergeAuthorizations[P9]` is therefore unauthorized for the replacement
+  stage, and any later active P9 requires new target-specific authority evidence.
+- Executable contract: The frozen contract binds strict scalar/set/date/identifier
+  encodings, exact numeric bounds and units, closed enum domains, one object shape for
+  `between`, evidence-status null/reviewer rules, unknown-field rejection, and lossless
+  aggregate aliases. `web/scripts/matching-fact-contract.ts` deterministically rejects
+  unknown enum members, malformed values, incomplete review groups, and unsupported
+  fields before any future proposal can be reviewed or matched.
+- Lifecycle: While P8M is planned, the master stays unverified and inaccessible and no
+  publication exists. An authorized in-flight P8M may verify the master and create a
+  candidate publication; accepted P8M requires complete publication pins. Replacement
+  P9 separately owns runtime/provider pins and cannot activate on Revision 7 authority.
+- Authority: The current and follow-up instructions authorize Plan Revision 10
+  governance, the prospective P9 supersession above, local commits, independent review,
+  remediation, and direct-child local attestation only. They expressly
   stops before P8M, P8F, and P9. It does not separately authorize branch push, pull
   request, merge, Vercel Preview, or Vercel Production effects; those remain blocked.
 - Rollback: Before P8M begins, replace Revision 10 only through a separately authorized,

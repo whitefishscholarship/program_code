@@ -51,6 +51,9 @@ allowing proposals, missing evidence, free text, or AI output to become accepted
 PINNED CONTRACT
 - Use only contract matching-facts-v1, taxonomy 1.0.0, at
   docs/evidence/PLAN-REV10-matching-fact-contract.json.
+- Use `web/scripts/matching-fact-contract.ts` as the frozen strict validator. Unknown
+  fields, enum members, value shapes, units, status transitions, and lossless-alias
+  failures stop for manual/taxonomy review; do not weaken or fork it during processing.
 - Bind every fact to stable award_id and, when cycle-specific, exact cycle_id. Never use
   scholarship name alone or collapse parent source, child award, application group, or
   annual cycle identities.
@@ -112,6 +115,10 @@ DELIVERABLES
   separately authorized write/readback receipt; reconciliation; rollback; evidence;
   manifest; and fresh-context review.
 - Preserve exact evidence, rollback, handoff, manifest, and review paths from BUILD_STATE.
+- Advance BUILD_STATE through its permitted P8M lifecycle: verified master identity and
+  access evidence, optional separately evidenced write authority, candidate then
+  accepted immutable publication status, and all P8M-owned publication pins. Leave all
+  P9-owned runtime/provider pins and runtime-read authority unset.
 
 ACCEPTANCE TESTS
 - Test every criterion/operator/value/scope, alias, status transition, authority rank,

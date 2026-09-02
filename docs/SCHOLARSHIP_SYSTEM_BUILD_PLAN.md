@@ -689,6 +689,14 @@ optional exact `cycle_id`; carries a controlled `criterion_id`; effect
 short non-PII evidence; reviewer/time/rationale; and taxonomy version. Parent source,
 child award, shared application, and annual cycle identities remain distinct.
 
+The contract's executable validator is `web/scripts/matching-fact-contract.ts`.
+Unknown fields and enum members fail closed. It binds exact scalar/set/date/identifier
+shapes, per-criterion numeric bounds and units, closed enum domains, one four-field
+inclusive-bound object for `between`, evidence-status-specific null/source/reviewer
+rules, and lossless fixed-value expansion for aggregate historical aliases. Open-ended
+places, schools, organizations, employers, fields, service types, and sports use
+normalized identifiers rather than unbounded enum strings.
+
 The frozen taxonomy covers academics; education and institution; geography; service,
 work, leadership, and caregiving; financial need; learning/neurodiversity; health and
 hardship; heritage/demographics/identity; career and field interests including aviation
@@ -883,6 +891,14 @@ amendment grants an exact comparison read. The former `P9-IDENTITY-PINS` path is
 unstarted by Revision 10 because it pinned a Google-sheet runtime that is no longer the
 chosen architecture; its absent artifacts remain absent and no historical Revision 7
 evidence is rewritten.
+
+Plan Revision 10 prospectively supersedes the old P9 operational validator and current
+stage-delivery authorization while preserving the Revision 7 candidate, evidence,
+review, attestation, and authority text as immutable history. Replacement P9 is
+unauthorized until new direct target-specific authority is recorded; Revision 7
+authority cannot satisfy that additional gate. The validator applies the old Google-
+sheet receipt and identity-pin law only to pre-Revision-10 state and applies the
+immutable-publication/runtime/provider pin lifecycle to Revision 10 and later.
 
 **Deliverables:** Publication identity/pin receipt; static/runtime proof that no
 spreadsheet ID, credential, scope, client, or mutator is reachable from the application
@@ -1366,6 +1382,14 @@ is accepted and delivered. P9 is replaced with an immutable-publication deployme
 the former Google-sheet runtime identity-pin path is retired unstarted while all
 historical Revision 7-9 evidence remains byte-identical.
 
+The Revision 10 state validator permits the governed lifecycle instead of freezing the
+initial unknowns forever: planned P8M is unverified/inaccessible with no publication;
+authorized in-flight P8M may verify the master and create a candidate immutable
+publication; accepted P8M requires verified identity and complete publication pins;
+and only separately authorized replacement P9 may add runtime/provider pins and runtime
+read authority. Self-referential P8M candidate/attestation identity is derived from its
+canonical direct-child manifest rather than guessed in the candidate tree.
+
 Revision 10 itself is governance-only. It changes no product/runtime or deployment
 configuration, reads or writes no spreadsheet/public source, performs no Claude row
 processing, mutates no scholarship fact, starts no later stage, and activates no
@@ -1400,7 +1424,7 @@ rewrite the plan. Record the stop and amendment before resuming product work.
 | New session drifts from plan | Required read order, machine state, one-stage kickoff, validator, and handoff. |
 | Implementer reviews own work | Fresh-context read-only independent reviewer and remediation separation. |
 | Dirty checkout loses user work | Isolated worktree and stage-owned staging. |
-| Production is changed outside exact authority | Production identity is pinned only under attested Revision 7; all source mutation remains prohibited and P9 is a read-only cutover. |
+| Production is changed outside exact authority | Historical Revision 7 authority remains evidence only; replacement P9 stays unauthorized until new immutable-publication runtime/provider/Git/Vercel authority and pins are directly recorded. |
 | A production ID is substituted into the existing write-capable environment variable | Use a separate read-only production configuration, prove the ID cannot reach a write call, and keep the write path pinned to testing or disabled. |
 | Read-only P9 rollback mutates production while restoring a backup | Roll back only application revision/configuration; production backups are evidence and are never restored under current authority. |
 | Git delivery triggers an undeclared Preview or Production deploy | Pre-delivery downstream-effect inspection and direct stage-specific deployment authority with evidence, or verified suppression. |

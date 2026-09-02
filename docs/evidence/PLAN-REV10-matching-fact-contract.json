@@ -3,6 +3,7 @@
   "contractId": "matching-facts-v1",
   "taxonomyVersion": "1.0.0",
   "status": "governance-frozen-no-processing-authority",
+  "validatorModulePath": "web/scripts/matching-fact-contract.ts",
   "subjectIdentity": {
     "required": [
       "award_id"
@@ -145,18 +146,101 @@
       {
         "id": "exists",
         "valueTypes": [
-          "boolean",
-          "number",
-          "integer",
-          "string",
-          "date",
-          "enum",
-          "enum_set",
-          "identifier",
-          "identifier_set"
+          "boolean"
         ]
       }
     ],
+    "validationAlgorithm": "matching-facts-v1-strict",
+    "unknownFields": "reject",
+    "fieldSchemas": {
+      "award_id": { "jsonType": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{0,127}$" },
+      "cycle_id": { "jsonType": ["string", "null"], "patternWhenString": "^[a-z0-9][a-z0-9._:-]{0,127}$" },
+      "criterion_id": { "jsonType": "string", "closedDomain": "criteria[].criterion_id" },
+      "effect": { "jsonType": "string", "closedDomain": "factSchema.effects" },
+      "operator": { "jsonType": "string", "closedDomain": "criterion.allowed_operators" },
+      "evidence_status": { "jsonType": "string", "closedDomain": "factSchema.evidenceStatuses" },
+      "source_url": { "jsonType": ["string", "null"], "protocols": ["https", "http"], "maxLength": 2048 },
+      "source_revision": { "jsonType": ["string", "null"], "minLength": 1, "maxLength": 256 },
+      "observed_at": { "jsonType": ["string", "null"], "format": "date-time-utc" },
+      "evidence_excerpt": { "jsonType": ["string", "null"], "minLength": 1, "maxLength": 500, "pii": "prohibited" },
+      "reviewer_id": { "jsonType": ["string", "null"], "patternWhenString": "^[a-z0-9][a-z0-9._:-]{0,127}$" },
+      "reviewed_at": { "jsonType": ["string", "null"], "format": "date-time-utc" },
+      "review_rationale": { "jsonType": ["string", "null"], "minLength": 1, "maxLength": 500 },
+      "taxonomy_version": { "const": "1.0.0" }
+    },
+    "scalarSchemas": {
+      "boolean": { "jsonType": "boolean" },
+      "number": { "jsonType": "number", "finite": true },
+      "integer": { "jsonType": "integer" },
+      "string": { "jsonType": "string", "minLength": 1, "maxLength": 500 },
+      "date": { "jsonType": "string", "format": "full-date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+      "enum": { "jsonType": "string", "domainRequiredByCriterion": true },
+      "identifier": { "jsonType": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{0,127}$" },
+      "enum_set": { "jsonType": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "domainRequiredByCriterion": true },
+      "identifier_set": { "jsonType": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "itemPattern": "^[a-z0-9][a-z0-9._:-]{0,127}$" }
+    },
+    "operatorValueEncoding": {
+      "eq": "criterion_scalar",
+      "neq": "criterion_scalar",
+      "gte": "criterion_scalar",
+      "lte": "criterion_scalar",
+      "in": "criterion_set",
+      "not_in": "criterion_set",
+      "contains_any": "criterion_set",
+      "contains_all": "criterion_set",
+      "exists": { "jsonType": "boolean", "meaning": "criterion value is explicitly present when true and explicitly absent only when false is supported by accepted evidence" },
+      "between": {
+        "jsonType": "object",
+        "required": ["lower", "upper", "lower_inclusive", "upper_inclusive"],
+        "additionalProperties": false,
+        "boundsUseCriterionScalarType": true,
+        "ordering": "lower_lte_upper",
+        "inclusiveFlagsType": "boolean"
+      }
+    },
+    "numericConstraints": {
+      "academic.gpa_unweighted": { "minimum": 0, "maximum": 4, "unit": "grade_points_unweighted" },
+      "academic.gpa_weighted": { "minimum": 0, "maximum": 6, "unit": "grade_points_weighted" },
+      "academic.class_rank_percentile": { "minimum": 0, "maximum": 100, "unit": "percentile" },
+      "academic.sat_total": { "minimum": 400, "maximum": 1600, "unit": "sat_points" },
+      "academic.act_composite": { "minimum": 1, "maximum": 36, "unit": "act_points" },
+      "service.volunteer_hours": { "minimum": 0, "maximum": 100000, "unit": "hours" },
+      "cycle.year": { "minimum": 2000, "maximum": 2100, "unit": "calendar_year" },
+      "cycle.award_amount": { "minimum": 0, "maximum": 1000000000, "unit": "usd" }
+    },
+    "enumDomains": {
+      "education.current_status": ["high_school_student", "high_school_senior", "gap_year", "undergraduate", "graduate", "vocational_trade", "other"],
+      "education.grade_level": ["grade_9", "grade_10", "grade_11", "grade_12", "postsecondary_year_1", "postsecondary_year_2", "postsecondary_year_3", "postsecondary_year_4_plus"],
+      "education.school_type": ["two_year", "four_year", "trade_vocational", "certificate", "other_accredited"],
+      "education.target_institution_type": ["two_year", "four_year", "trade_vocational", "certificate", "other_accredited"],
+      "geography.residence_state": ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY", "AS", "GU", "MP", "PR", "VI"],
+      "geography.citizenship_status": ["us_citizen", "us_national", "permanent_resident", "eligible_noncitizen", "daca", "international", "other"],
+      "financial.income_band": ["under_30000", "30000_49999", "50000_74999", "75000_99999", "100000_149999", "150000_plus"],
+      "identity.race_ethnicity": ["american_indian_alaska_native", "asian", "black_african_american", "hispanic_latino", "middle_eastern_north_african", "native_hawaiian_pacific_islander", "white", "multiracial", "other"],
+      "identity.gender": ["woman", "man", "nonbinary", "another_identity"],
+      "affiliation.military_veteran": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.first_responder": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.farmers_union": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.electric_coop": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.credit_union": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.elks_lodge": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "affiliation.company_employee": ["self", "parent", "spouse", "child", "grandparent", "household_member", "eligible_relationship_unspecified"],
+      "application.mode": ["organizer_common", "provider_portal", "provider_form", "paper", "email", "automatic_consideration", "other"],
+      "cycle.status": ["not_open", "open", "closed", "rolling", "suspended", "unknown"],
+      "cycle.recurrence": ["annual", "one_time", "rolling", "irregular", "unknown"]
+    },
+    "statusRules": {
+      "proposed": { "value": "typed_non_null", "sourceFields": "required_non_null", "reviewerFields": "all_null", "matchingAvailable": false },
+      "accepted": { "value": "typed_non_null", "sourceFields": "required_non_null", "reviewerFields": "required_non_null", "matchingAvailable": true },
+      "rejected": { "value": "typed_non_null", "sourceFields": "required_non_null", "reviewerFields": "required_non_null", "matchingAvailable": false },
+      "conflict": { "value": "null", "sourceFields": "required_non_null", "reviewerFields": "required_non_null", "matchingAvailable": false },
+      "stale": { "value": "typed_non_null", "sourceFields": "required_non_null", "reviewerFields": "required_non_null", "matchingAvailable": false },
+      "unknown": { "value": "null", "sourceFields": "nullable_as_group", "reviewerFields": "nullable_as_group", "matchingAvailable": false }
+    },
+    "statusFieldGroups": {
+      "sourceFields": ["source_url", "source_revision", "observed_at", "evidence_excerpt"],
+      "reviewerFields": ["reviewer_id", "reviewed_at", "review_rationale"]
+    },
     "nullRules": [
       "null, empty, omitted, ambiguous, and unparseable are unknown rather than false",
       "unknown values cannot use neq, not_in, or any negative interpretation",
@@ -184,8 +268,8 @@
     { "criterion_id": "education.fafsa_complete", "category": "education", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
 
     { "criterion_id": "geography.residence_state", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
-    { "criterion_id": "geography.residence_county", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
-    { "criterion_id": "geography.residence_city", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.residence_county", "category": "geography", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
+    { "criterion_id": "geography.residence_city", "category": "geography", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
     { "criterion_id": "geography.high_school_id", "category": "geography", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
     { "criterion_id": "geography.citizenship_status", "category": "geography", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
     { "criterion_id": "geography.rural_status", "category": "geography", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award"] },
@@ -195,7 +279,7 @@
     { "criterion_id": "responsibility.caregiving", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
     { "criterion_id": "service.community_service", "category": "responsibility_service", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
     { "criterion_id": "service.volunteer_hours", "category": "responsibility_service", "value_type": "integer", "allowed_operators": ["gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
-    { "criterion_id": "service.service_type", "category": "responsibility_service", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "service.service_type", "category": "responsibility_service", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
 
     { "criterion_id": "financial.need", "category": "financial_need", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
     { "criterion_id": "financial.pell_eligible", "category": "financial_need", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award", "cycle"] },
@@ -219,7 +303,7 @@
     { "criterion_id": "identity.single_parent_household", "category": "heritage_demographics_identity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
     { "criterion_id": "identity.mensa_member", "category": "heritage_demographics_identity", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": true, "scopes": ["award"] },
 
-    { "criterion_id": "career.field_of_study", "category": "career_field", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "career.field_of_study", "category": "career_field", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
     { "criterion_id": "career.aviation_pilot", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
     { "criterion_id": "career.aviation_maintenance", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
     { "criterion_id": "career.aviation_management", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
@@ -234,7 +318,7 @@
     { "criterion_id": "career.agriculture_conservation", "category": "career_field", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
 
     { "criterion_id": "athletics.participation", "category": "athletics", "value_type": "boolean", "allowed_operators": ["eq", "exists"], "sensitive": false, "scopes": ["award"] },
-    { "criterion_id": "athletics.sport", "category": "athletics", "value_type": "enum_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
+    { "criterion_id": "athletics.sport", "category": "athletics", "value_type": "identifier_set", "allowed_operators": ["contains_any", "contains_all", "not_in", "exists"], "sensitive": false, "scopes": ["award"] },
 
     { "criterion_id": "affiliation.military_veteran", "category": "military_first_responder", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
     { "criterion_id": "affiliation.first_responder", "category": "military_first_responder", "value_type": "enum", "allowed_operators": ["eq", "neq", "exists"], "sensitive": true, "scopes": ["award"] },
@@ -262,6 +346,25 @@
     { "criterion_id": "cycle.renewable", "category": "cycle", "value_type": "boolean", "allowed_operators": ["eq", "neq", "exists"], "sensitive": false, "scopes": ["award", "cycle"] },
     { "criterion_id": "cycle.award_amount", "category": "cycle", "value_type": "number", "allowed_operators": ["eq", "gte", "lte", "between", "exists"], "sensitive": false, "scopes": ["cycle"] }
   ],
+  "aliasPolicy": {
+    "defaultMapping": "preserve_source_value_without_coercion",
+    "fixedValueFields": ["fixed_operator", "fixed_value"],
+    "fixedValueActivation": "source_true_only",
+    "transforms": {
+      "volunteer_hours_bucket_v1": {
+        "0": { "operator": "eq", "value": 0 },
+        "1 to 19": { "operator": "between", "value": { "lower": 1, "upper": 19, "lower_inclusive": true, "upper_inclusive": true } },
+        "20 to 49": { "operator": "between", "value": { "lower": 20, "upper": 49, "lower_inclusive": true, "upper_inclusive": true } },
+        "50 to 99": { "operator": "between", "value": { "lower": 50, "upper": 99, "lower_inclusive": true, "upper_inclusive": true } },
+        "100 plus": { "operator": "gte", "value": 100 }
+      }
+    },
+    "rules": [
+      "an alias without fixed_operator and fixed_value renames only the criterion field and must preserve the separately validated source value",
+      "an alias that represents one member of an aggregate criterion must carry an exact fixed operator and value",
+      "alias expansion runs before strict criterion/operator/value validation and cannot introduce an unknown enum member"
+    ]
+  },
   "aliases": [
     { "alias": "gpa", "criterion_id": "academic.gpa_unweighted" },
     { "alias": "educational_status", "criterion_id": "education.current_status" },
@@ -272,7 +375,7 @@
     { "alias": "work_experience", "criterion_id": "responsibility.work_experience" },
     { "alias": "caregiving", "criterion_id": "responsibility.caregiving" },
     { "alias": "service", "criterion_id": "service.community_service" },
-    { "alias": "volunteer_hours_bucket", "criterion_id": "service.volunteer_hours" },
+    { "alias": "volunteer_hours_bucket", "criterion_id": "service.volunteer_hours", "transform": "volunteer_hours_bucket_v1" },
     { "alias": "financial_need", "criterion_id": "financial.need" },
     { "alias": "dyslexia", "criterion_id": "learning.dyslexia" },
     { "alias": "adhd", "criterion_id": "learning.adhd" },
@@ -284,13 +387,13 @@
     { "alias": "loss_of_parent", "criterion_id": "hardship.loss_of_parent" },
     { "alias": "overcoming_adversity", "criterion_id": "hardship.overcoming_adversity" },
     { "alias": "first_generation", "criterion_id": "education.first_generation" },
-    { "alias": "black_african_american", "criterion_id": "identity.race_ethnicity" },
-    { "alias": "hispanic_latino", "criterion_id": "identity.race_ethnicity" },
-    { "alias": "native_american", "criterion_id": "identity.race_ethnicity" },
-    { "alias": "asian_pacific_islander", "criterion_id": "identity.race_ethnicity" },
+    { "alias": "black_african_american", "criterion_id": "identity.race_ethnicity", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["black_african_american"] },
+    { "alias": "hispanic_latino", "criterion_id": "identity.race_ethnicity", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["hispanic_latino"] },
+    { "alias": "native_american", "criterion_id": "identity.race_ethnicity", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["american_indian_alaska_native"] },
+    { "alias": "asian_pacific_islander", "criterion_id": "identity.race_ethnicity", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["asian", "native_hawaiian_pacific_islander"] },
     { "alias": "lgbtqia", "criterion_id": "identity.lgbtqia" },
-    { "alias": "female", "criterion_id": "identity.gender" },
-    { "alias": "nonbinary", "criterion_id": "identity.gender" },
+    { "alias": "female", "criterion_id": "identity.gender", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["woman"] },
+    { "alias": "nonbinary", "criterion_id": "identity.gender", "fixed_when": "source_true", "fixed_operator": "contains_any", "fixed_value": ["nonbinary"] },
     { "alias": "single_parent", "criterion_id": "identity.single_parent_household" },
     { "alias": "mensa", "criterion_id": "identity.mensa_member" },
     { "alias": "aviation_pilot", "criterion_id": "career.aviation_pilot" },
@@ -305,14 +408,14 @@
     { "alias": "law", "criterion_id": "career.law" },
     { "alias": "arts_humanities", "criterion_id": "career.arts_humanities" },
     { "alias": "agriculture_conservation", "criterion_id": "career.agriculture_conservation" },
-    { "alias": "athletics_sports", "criterion_id": "athletics.participation" },
-    { "alias": "military_veteran", "criterion_id": "affiliation.military_veteran" },
-    { "alias": "first_responder", "criterion_id": "affiliation.first_responder" },
-    { "alias": "farmers_union", "criterion_id": "affiliation.farmers_union" },
-    { "alias": "electric_coop", "criterion_id": "affiliation.electric_coop" },
-    { "alias": "credit_union", "criterion_id": "affiliation.credit_union" },
-    { "alias": "elks_lodge", "criterion_id": "affiliation.elks_lodge" },
-    { "alias": "company_employee", "criterion_id": "affiliation.company_employee" }
+    { "alias": "athletics_sports", "criterion_id": "athletics.participation", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": true },
+    { "alias": "military_veteran", "criterion_id": "affiliation.military_veteran", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "first_responder", "criterion_id": "affiliation.first_responder", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "farmers_union", "criterion_id": "affiliation.farmers_union", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "electric_coop", "criterion_id": "affiliation.electric_coop", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "credit_union", "criterion_id": "affiliation.credit_union", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "elks_lodge", "criterion_id": "affiliation.elks_lodge", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" },
+    { "alias": "company_employee", "criterion_id": "affiliation.company_employee", "fixed_when": "source_true", "fixed_operator": "eq", "fixed_value": "eligible_relationship_unspecified" }
   ],
   "evidenceAuthority": {
     "precedence": [

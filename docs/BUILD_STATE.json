@@ -160,6 +160,7 @@
         "verificationStatus": "unverified",
         "accessAuthorized": false,
         "automatedWriteAuthorized": false,
+        "automatedWriteAuthorizationEvidencePath": null,
         "verificationEvidencePath": "docs/evidence/P8M.md"
       },
       "formerProduction": {
@@ -174,7 +175,7 @@
         "publicationStatus": "not_created",
         "mutableMasterDirectReadAuthorized": false,
         "runtimeReadAuthorityStatus": "not_authorized",
-        "publicationEvidencePath": "docs/evidence/P9.md",
+        "publicationEvidencePath": "docs/evidence/P8M.md",
         "publicationPath": null,
         "publicationSha256": null,
         "publicationSchemaVersion": null,
@@ -207,7 +208,27 @@
           "provider_team",
           "canonical_production_hostname",
           "verification_environment"
-        ]
+        ],
+        "pinOwnership": {
+          "P8M": [
+            "publication_path",
+            "publication_sha256",
+            "schema_version",
+            "taxonomy_version",
+            "source_master_revision",
+            "accepted_fact_sha256",
+            "generator_sha256",
+            "p8m_candidate",
+            "p8m_attestation"
+          ],
+          "P9": [
+            "runtime_commit",
+            "provider_project",
+            "provider_team",
+            "canonical_production_hostname",
+            "verification_environment"
+          ]
+        }
       },
       "identities": [
         "human_editor",
@@ -333,12 +354,12 @@
       },
       {
         "stageId": "P9",
-        "authorized": true,
-        "authorizedBy": "Kelsey Stuart",
-        "authorizedAt": "2026-08-30",
-        "evidencePath": "docs/evidence/PLAN-REV7.md",
-        "basis": "The user directly authorized P9 production source migration, application configuration switching, governed Git and pull-request delivery, Vercel Preview and Production deployment, verification, reconciliation, and rollback, while expressly prohibiting every production spreadsheet write and naming Kelsey Stuart as deployment and rollback owner.",
-        "scope": "After Plan Revision 7 is independently accepted, attested, delivered, and its runtime-read permission gate passes, implement and deliver P9 only as a read-only production-source and application-configuration cutover. Authority includes stage commits, independent review, attestation, branch push, pull request, merge, resulting Vercel Preview and Production deployments, smoke, reconciliation, and configuration rollback. It excludes every production spreadsheet mutation, unrelated production tabs or data, applicant data, schedule activation, forms/application interactions, provider contact, paid or destructive actions, gate weakening, history rewrite, and scope expansion."
+        "authorized": false,
+        "authorizedBy": null,
+        "authorizedAt": null,
+        "evidencePath": null,
+        "basis": "On 2026-09-01 the user explicitly authorized Plan Revision 10 to prospectively supersede, without deleting or rewriting historical evidence, the former Google-spreadsheet P9 operational authority and validator path. The Revision 7 authority remains immutable history but is non-operative for replacement P9.",
+        "scope": "No replacement P9 action is authorized. A later direct informed instruction must name the exact accepted publication, runtime commit and zero-spreadsheet capability, provider project/team/hostname/environment, deployment and rollback owners, Git delivery, and resulting Vercel effects."
       }
     ],
     "deliveryIntegrations": [

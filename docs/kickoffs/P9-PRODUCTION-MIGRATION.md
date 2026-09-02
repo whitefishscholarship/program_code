@@ -39,6 +39,9 @@ STATE TO PIN BEFORE EDITING
 - Require exact directly authorized Vercel project/team/canonical Production hostname,
   protected verification environment, secret provenance, deployment owner, rollback
   owner, and P9 Git/Preview/Production effects. Do not infer them from prior P9 authority.
+- Confirm the replacement P9 stage authorization is initially false. Before any P9
+  action, record new direct target-specific authority whose evidence path also binds the
+  runtime-read gate. Revision 7 authority cannot satisfy this additional gate.
 - The former P9-IDENTITY-PINS path is retired unstarted by Plan Revision 10. Do not
   create, populate, or dispatch its historical Google-runtime artifacts/workflow.
 

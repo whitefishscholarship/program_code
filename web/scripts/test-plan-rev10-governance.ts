@@ -3,6 +3,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import {
+  expandAlias,
+  validateMatchingFact,
+  type MatchingFactContract,
+} from './matching-fact-contract';
+import {
+  validatePlanRev10Lifecycle,
+  type PlanRev10LifecycleState,
+} from './plan-rev10-lifecycle';
+
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
 function read(relativePath: string): string {
@@ -60,6 +70,9 @@ type BuildState = {
         sourceMode: string;
         publicationStatus: string;
         mutableMasterDirectReadAuthorized: boolean;
+        publicationEvidencePath: string;
+        requiredPublicationPins: string[];
+        pinOwnership: { P8M: string[]; P9: string[] };
       };
       identities: string[];
     };
@@ -93,6 +106,7 @@ type MatchingContract = {
   contractId: string;
   taxonomyVersion: string;
   status: string;
+  validatorModulePath: string;
   subjectIdentity: {
     required: string[];
     distinctEntities: string[];
@@ -103,9 +117,26 @@ type MatchingContract = {
     evidenceStatuses: string[];
     valueTypes: string[];
     operators: Array<{ id: string; valueTypes: string[] }>;
+    validationAlgorithm: string;
+    unknownFields: string;
+    scalarSchemas: Record<string, Record<string, unknown>>;
+    numericConstraints: Record<string, { minimum: number; maximum: number; unit: string }>;
+    enumDomains: Record<string, string[]>;
+    statusRules: Record<string, Record<string, unknown>>;
+    statusFieldGroups: { sourceFields: string[]; reviewerFields: string[] };
   };
   criteria: Criterion[];
-  aliases: Array<{ alias: string; criterion_id: string }>;
+  aliases: Array<{
+    alias: string;
+    criterion_id: string;
+    fixed_operator?: string;
+    fixed_value?: unknown;
+    fixed_when?: string;
+    transform?: string;
+  }>;
+  aliasPolicy: {
+    transforms: Record<string, Record<string, { operator: string; value: unknown }>>;
+  };
   evidenceAuthority: {
     precedence: string[];
     hardConflictMinimum: string;
@@ -180,12 +211,57 @@ assert.equal(transition.formerProduction.accessAuthorized, false);
 assert.equal(transition.applicationRuntime.sourceMode, 'validated_immutable_versioned_publication');
 assert.equal(transition.applicationRuntime.publicationStatus, 'not_created');
 assert.equal(transition.applicationRuntime.mutableMasterDirectReadAuthorized, false);
+assert.equal(transition.applicationRuntime.publicationEvidencePath, 'docs/evidence/P8M.md');
+assert.deepEqual(transition.applicationRuntime.pinOwnership.P8M.slice(-2), [
+  'p8m_candidate',
+  'p8m_attestation',
+]);
+assert.deepEqual(transition.applicationRuntime.pinOwnership.P9, [
+  'runtime_commit',
+  'provider_project',
+  'provider_team',
+  'canonical_production_hostname',
+  'verification_environment',
+]);
 assert.deepEqual(transition.identities, [
   'human_editor',
   'proposal_processor',
   'fact_reviewer',
   'read_only_application_runtime',
 ]);
+
+const plannedLifecycle = structuredClone(transition) as unknown as PlanRev10LifecycleState;
+assert.deepEqual(validatePlanRev10Lifecycle(plannedLifecycle, 'planned', 'planned'), []);
+assert(
+  validatePlanRev10Lifecycle(plannedLifecycle, 'accepted', 'planned').some((error) =>
+    error.includes('Accepted P8M'),
+  ),
+  'P8M cannot be accepted without verified publication pins',
+);
+const acceptedLifecycle = structuredClone(plannedLifecycle);
+acceptedLifecycle.organizerMaster.verificationStatus = 'verified';
+acceptedLifecycle.organizerMaster.accessAuthorized = true;
+acceptedLifecycle.applicationRuntime.publicationStatus =
+  'accepted_immutable_versioned_publication';
+acceptedLifecycle.applicationRuntime.publicationPath = 'web/fixtures/p8m/matching-facts-v1.json';
+acceptedLifecycle.applicationRuntime.publicationSha256 = 'a'.repeat(64);
+acceptedLifecycle.applicationRuntime.publicationSchemaVersion = '1';
+acceptedLifecycle.applicationRuntime.sourceMasterRevision = 'master-revision:123';
+acceptedLifecycle.applicationRuntime.acceptedFactSha256 = 'b'.repeat(64);
+acceptedLifecycle.applicationRuntime.generatorSha256 = 'c'.repeat(64);
+assert.deepEqual(validatePlanRev10Lifecycle(acceptedLifecycle, 'accepted', 'planned'), []);
+const p9Lifecycle = structuredClone(acceptedLifecycle);
+p9Lifecycle.applicationRuntime.runtimeReadAuthorityStatus =
+  'authorized_for_digest_pinned_publication';
+p9Lifecycle.applicationRuntime.runtimeCommit = 'd'.repeat(40);
+p9Lifecycle.applicationRuntime.providerProjectFingerprintSha256 = 'e'.repeat(64);
+p9Lifecycle.applicationRuntime.providerTeamFingerprintSha256 = 'f'.repeat(64);
+p9Lifecycle.applicationRuntime.canonicalProductionHostnameSha256 = '1'.repeat(64);
+p9Lifecycle.applicationRuntime.verificationEnvironmentFingerprintSha256 = '2'.repeat(64);
+p9Lifecycle.applicationRuntime.runtimeReadAuthorityEvidencePath = 'docs/evidence/P9.md';
+p9Lifecycle.applicationRuntime.deploymentOwner = 'Kelsey Stuart';
+p9Lifecycle.applicationRuntime.rollbackOwner = 'Kelsey Stuart';
+assert.deepEqual(validatePlanRev10Lifecycle(p9Lifecycle, 'accepted', 'active'), []);
 
 const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P8M',
@@ -199,6 +275,12 @@ assert(
   state.deployment.deliveryBlockers.some((item) => item.startsWith('P8M-')),
   'P8M must remain blocked pending direct stage-specific authority',
 );
+const p9Authorization = state.deployment.stageMergeAuthorizations.find(
+  ({ stageId }) => stageId === 'P9',
+);
+assert.equal(p9Authorization?.authorized, false);
+assert.equal(p9Authorization?.evidencePath, null);
+assert(p9Authorization?.basis.includes('prospectively supersede'));
 
 const rev10 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV10');
 assert(rev10, 'PLAN-REV10 amendment record missing');
@@ -214,6 +296,7 @@ assert.equal(contract.schemaVersion, 1);
 assert.equal(contract.contractId, 'matching-facts-v1');
 assert.equal(contract.taxonomyVersion, '1.0.0');
 assert.equal(contract.status, 'governance-frozen-no-processing-authority');
+assert.equal(contract.validatorModulePath, 'web/scripts/matching-fact-contract.ts');
 assert.deepEqual(contract.subjectIdentity.required, ['award_id']);
 assert(contract.subjectIdentity.distinctEntities.includes('parent_source'));
 assert(contract.subjectIdentity.distinctEntities.includes('child_award'));
@@ -247,6 +330,8 @@ assert.deepEqual(contract.factSchema.evidenceStatuses, [
   'stale',
   'unknown',
 ]);
+assert.equal(contract.factSchema.validationAlgorithm, 'matching-facts-v1-strict');
+assert.equal(contract.factSchema.unknownFields, 'reject');
 
 const operatorIds = new Set(contract.factSchema.operators.map(({ id }) => id));
 for (const operator of [
@@ -298,6 +383,18 @@ for (const criterion of contract.criteria) {
     assert(operatorIds.has(operator), `${criterion.criterion_id} uses unknown operator ${operator}`);
   }
   assert(criterion.scopes.includes('award') || criterion.scopes.includes('cycle'));
+  if (criterion.value_type === 'enum' || criterion.value_type === 'enum_set') {
+    assert(
+      (contract.factSchema.enumDomains[criterion.criterion_id]?.length ?? 0) > 0,
+      `${criterion.criterion_id} requires an exact enum domain`,
+    );
+  }
+  if (criterion.value_type === 'number' || criterion.value_type === 'integer') {
+    assert(
+      contract.factSchema.numericConstraints[criterion.criterion_id],
+      `${criterion.criterion_id} requires exact bounds and units`,
+    );
+  }
 }
 
 const aliases = new Map(contract.aliases.map(({ alias, criterion_id }) => [alias, criterion_id]));
@@ -318,6 +415,87 @@ for (const alias of [
   assert(aliases.has(alias), `missing governed alias ${alias}`);
 }
 assert(!aliases.has('add'), 'ADD must not become a separate taxonomy alias or question');
+
+const strictContract = contract as unknown as MatchingFactContract;
+assert.deepEqual(expandAlias(strictContract, 'female', true), {
+  criterion_id: 'identity.gender',
+  operator: 'contains_any',
+  value: ['woman'],
+});
+assert.deepEqual(expandAlias(strictContract, 'native_american', true), {
+  criterion_id: 'identity.race_ethnicity',
+  operator: 'contains_any',
+  value: ['american_indian_alaska_native'],
+});
+assert.deepEqual(expandAlias(strictContract, 'gpa', 3.75), {
+  criterion_id: 'academic.gpa_unweighted',
+  value: 3.75,
+});
+assert.equal(expandAlias(strictContract, 'female', false), null);
+assert.deepEqual(expandAlias(strictContract, 'volunteer_hours_bucket', '20 to 49'), {
+  criterion_id: 'service.volunteer_hours',
+  operator: 'between',
+  value: { lower: 20, upper: 49, lower_inclusive: true, upper_inclusive: true },
+});
+assert.equal(expandAlias(strictContract, 'volunteer_hours_bucket', 'unknown bucket'), null);
+
+const acceptedFact = {
+  award_id: 'award:example',
+  cycle_id: 'cycle:2027',
+  criterion_id: 'cycle.year',
+  effect: 'required',
+  operator: 'gte',
+  value: 2027,
+  evidence_status: 'accepted',
+  source_url: 'https://example.org/award',
+  source_revision: 'sha256:example',
+  observed_at: '2026-09-02T04:00:00Z',
+  evidence_excerpt: 'Published for the 2027 cycle.',
+  reviewer_id: 'reviewer:example',
+  reviewed_at: '2026-09-02T04:01:00Z',
+  review_rationale: 'Exact official cycle evidence.',
+  taxonomy_version: '1.0.0',
+};
+assert.deepEqual(validateMatchingFact(strictContract, acceptedFact), []);
+assert(
+  validateMatchingFact(strictContract, {
+    ...acceptedFact,
+    criterion_id: 'education.current_status',
+    operator: 'eq',
+    value: 'arbitrary_value',
+  }).some((error) => error.includes('enum domain')),
+  'arbitrary enum values must fail closed',
+);
+assert(
+  validateMatchingFact(strictContract, {
+    ...acceptedFact,
+    criterion_id: 'academic.gpa_unweighted',
+    value: 4.5,
+  }).some((error) => error.includes('0..4')),
+  'out-of-range numeric values must fail closed',
+);
+assert(
+  validateMatchingFact(strictContract, {
+    ...acceptedFact,
+    criterion_id: 'cycle.year',
+    operator: 'between',
+    value: { lower: 2030, upper: 2027, lower_inclusive: true, upper_inclusive: true },
+  }).some((error) => error.includes('lower must not exceed upper')),
+  'reversed between bounds must fail closed',
+);
+assert(
+  validateMatchingFact(strictContract, { ...acceptedFact, reviewer_id: null }).some(
+    (error) => error.includes('reviewer fields'),
+  ),
+  'accepted facts require a complete reviewer group',
+);
+assert(
+  validateMatchingFact(strictContract, {
+    ...acceptedFact,
+    evidence_status: 'proposed',
+  }).some((error) => error.includes('reviewer fields must all be null')),
+  'proposal facts cannot carry accepted-review fields',
+);
 
 assert.equal(contract.sensitivePolicy.nonselectionMeaning, 'unknown_not_negative');
 assert.equal(contract.sensitivePolicy.unansweredMeaning, 'unknown_not_negative');

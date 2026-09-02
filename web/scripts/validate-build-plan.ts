@@ -52,6 +52,7 @@ import {
   validateP9EntryReceiptV2,
   validateP9PostCutoverReceiptV2,
 } from './p9-evidence-v2';
+import { validatePlanRev10Lifecycle } from './plan-rev10-lifecycle';
 
 type StageStatus =
   | 'planned'
@@ -153,6 +154,7 @@ type BuildState = {
         verificationStatus: string;
         accessAuthorized: boolean;
         automatedWriteAuthorized: boolean;
+        automatedWriteAuthorizationEvidencePath: string | null;
         verificationEvidencePath: string;
       };
       formerProduction: {
@@ -186,6 +188,10 @@ type BuildState = {
         rollbackOwner: string | null;
         historicalP9IdentityPinStatus: string;
         requiredPublicationPins: string[];
+        pinOwnership: {
+          P8M: string[];
+          P9: string[];
+        };
       };
       identities: string[];
       matchingFactContractPath: string;
@@ -1096,59 +1102,62 @@ if (state) {
   }
   if (state.planRevision >= 10) {
     const transition = state.dataAuthority.sourceTransition;
-    if (
-      !transition ||
-      transition.organizerMaster.spreadsheetId !==
-        '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4' ||
-      transition.organizerMaster.role !== 'organizer_authoring_master' ||
-      transition.organizerMaster.designationEvidence !== 'user-reported' ||
-      transition.organizerMaster.verificationStatus !== 'unverified' ||
-      transition.organizerMaster.accessAuthorized !== false ||
-      transition.organizerMaster.automatedWriteAuthorized !== false ||
-      transition.formerProduction.spreadsheetId !==
-        '1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE' ||
-      transition.formerProduction.role !== 'legacy_comparison_only' ||
-      transition.formerProduction.accessAuthorized !== false ||
-      transition.formerProduction.comparisonReadAuthorized !== false ||
-      transition.applicationRuntime.sourceMode !==
-        'validated_immutable_versioned_publication' ||
-      transition.applicationRuntime.publicationStatus !== 'not_created' ||
-      transition.applicationRuntime.mutableMasterDirectReadAuthorized !== false ||
-      transition.applicationRuntime.runtimeReadAuthorityStatus !== 'not_authorized' ||
-      transition.applicationRuntime.historicalP9IdentityPinStatus !==
-        'retired_unstarted_by_PLAN_REV10' ||
-      JSON.stringify(transition.applicationRuntime.requiredPublicationPins) !==
-        JSON.stringify([
-          'publication_path',
-          'publication_sha256',
-          'schema_version',
-          'taxonomy_version',
-          'source_master_revision',
-          'accepted_fact_sha256',
-          'generator_sha256',
-          'p8m_candidate',
-          'p8m_attestation',
-          'runtime_commit',
-          'provider_project',
-          'provider_team',
-          'canonical_production_hostname',
-          'verification_environment',
-        ]) ||
-      JSON.stringify(transition.identities) !==
-        JSON.stringify([
-          'human_editor',
-          'proposal_processor',
-          'fact_reviewer',
-          'read_only_application_runtime',
-        ]) ||
-      transition.matchingFactContractPath !==
-        'docs/evidence/PLAN-REV10-matching-fact-contract.json' ||
-      transition.matchingFactContractId !== 'matching-facts-v1' ||
-      transition.taxonomyVersion !== '1.0.0'
-    ) {
-      fail(
-        'Plan Revision 10 requires the exact unverified master, legacy comparison-only source, separated identities, and immutable publication boundary',
-      );
+    const p8mStage = state.stages.find((stage) => stage.id === 'P8M');
+    const p9Stage = state.stages.find((stage) => stage.id === 'P9');
+    const expectedP8mPins = [
+      'publication_path',
+      'publication_sha256',
+      'schema_version',
+      'taxonomy_version',
+      'source_master_revision',
+      'accepted_fact_sha256',
+      'generator_sha256',
+      'p8m_candidate',
+      'p8m_attestation',
+    ];
+    const expectedP9Pins = [
+      'runtime_commit',
+      'provider_project',
+      'provider_team',
+      'canonical_production_hostname',
+      'verification_environment',
+    ];
+    const expectedAllPins = [...expectedP8mPins, ...expectedP9Pins];
+    const commonBoundaryValid = Boolean(
+      transition &&
+        transition.organizerMaster.spreadsheetId ===
+          '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4' &&
+        transition.organizerMaster.role === 'organizer_authoring_master' &&
+        transition.organizerMaster.designationEvidence === 'user-reported' &&
+        transition.formerProduction.spreadsheetId ===
+          '1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE' &&
+        transition.formerProduction.role === 'legacy_comparison_only' &&
+        transition.formerProduction.accessAuthorized === false &&
+        transition.formerProduction.comparisonReadAuthorized === false &&
+        transition.applicationRuntime.sourceMode ===
+          'validated_immutable_versioned_publication' &&
+        transition.applicationRuntime.mutableMasterDirectReadAuthorized === false &&
+        transition.applicationRuntime.historicalP9IdentityPinStatus ===
+          'retired_unstarted_by_PLAN_REV10' &&
+        transition.applicationRuntime.publicationEvidencePath === 'docs/evidence/P8M.md' &&
+        JSON.stringify(transition.applicationRuntime.requiredPublicationPins) ===
+          JSON.stringify(expectedAllPins) &&
+        JSON.stringify(transition.applicationRuntime.pinOwnership) ===
+          JSON.stringify({ P8M: expectedP8mPins, P9: expectedP9Pins }) &&
+        JSON.stringify(transition.identities) ===
+          JSON.stringify([
+            'human_editor',
+            'proposal_processor',
+            'fact_reviewer',
+            'read_only_application_runtime',
+          ]) &&
+        transition.matchingFactContractPath ===
+          'docs/evidence/PLAN-REV10-matching-fact-contract.json' &&
+        transition.matchingFactContractId === 'matching-facts-v1' &&
+        transition.taxonomyVersion === '1.0.0',
+    );
+    if (!commonBoundaryValid || !transition) {
+      fail('Plan Revision 10 source transition identity or immutable-publication boundary is invalid');
     } else {
       requireFile(transition.formerProduction.dispositionEvidencePath);
       const matchingContract = readJson<Record<string, unknown>>(
@@ -1157,9 +1166,20 @@ if (state) {
       if (
         matchingContract?.contractId !== transition.matchingFactContractId ||
         matchingContract?.taxonomyVersion !== transition.taxonomyVersion ||
-        matchingContract?.status !== 'governance-frozen-no-processing-authority'
+        matchingContract?.status !== 'governance-frozen-no-processing-authority' ||
+        matchingContract?.validatorModulePath !== 'web/scripts/matching-fact-contract.ts' ||
+        (matchingContract?.factSchema as Record<string, unknown> | undefined)
+          ?.validationAlgorithm !== 'matching-facts-v1-strict'
       ) {
         fail('Plan Revision 10 matching-fact contract identity or frozen status is invalid');
+      }
+      requireFile('web/scripts/matching-fact-contract.ts');
+      for (const error of validatePlanRev10Lifecycle(
+        transition,
+        p8mStage?.status,
+        p9Stage?.status,
+      )) {
+        fail(error);
       }
     }
   }
@@ -1937,6 +1957,28 @@ if (state) {
       }
     }
   }
+  if (state.planRevision >= 10) {
+    const replacementP9Authorization = state.deployment.stageMergeAuthorizations.find(
+      (item) => item.stageId === 'P9',
+    );
+    if (p9MayUseProduction) {
+      if (
+        replacementP9Authorization?.authorized !== true ||
+        !replacementP9Authorization.evidencePath ||
+        replacementP9Authorization.evidencePath === 'docs/evidence/PLAN-REV7.md' ||
+        replacementP9Authorization.evidencePath !==
+          state.dataAuthority.sourceTransition?.applicationRuntime
+            .runtimeReadAuthorityEvidencePath
+      ) {
+        fail('Active replacement P9 requires new direct target-specific authority evidence distinct from Revision 7');
+      }
+    } else if (
+      p9?.status === 'planned' &&
+      replacementP9Authorization?.authorized !== false
+    ) {
+      fail('Planned replacement P9 must remain unauthorized');
+    }
+  }
   if (state.planRevision >= 7) {
     const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
     const attestedRevision8 = historicallyAttestedPlanAmendments.get('PLAN-REV8');
@@ -1945,14 +1987,15 @@ if (state) {
     const expectedEntryProofState = Boolean(p9MayUseProduction);
     const expectedPostCutoverProofState =
       p9?.status === 'verified' || p9?.status === 'accepted';
-    for (const error of validateP9ReadOnlyAuthority(state.dataAuthority, {
-      expectedEntryProofState,
-      expectedPostCutoverProofState,
-    })) {
-      fail(error);
-    }
-    validateP9IdentityPinGovernance(state);
-    if (state.dataAuthority.productionAuthorization) {
+    if (state.planRevision < 10) {
+      for (const error of validateP9ReadOnlyAuthority(state.dataAuthority, {
+        expectedEntryProofState,
+        expectedPostCutoverProofState,
+      })) {
+        fail(error);
+      }
+      validateP9IdentityPinGovernance(state);
+      if (state.dataAuthority.productionAuthorization) {
       let entryReceiptForBinding: P9EntryReceipt | null = null;
       let evidenceContext: P9EvidenceContext | null = null;
       requireFile(state.dataAuthority.productionAuthorization.evidencePath);
@@ -2121,18 +2164,19 @@ if (state) {
           }
         }
       }
-    }
-    if (state.dataAuthority.p9TestingWriteAuthorization) {
-      requireFile(state.dataAuthority.p9TestingWriteAuthorization.evidencePath);
-    }
-    const p9DeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
-      (item) => item.stageId === 'P9',
-    );
-    if (
-      p9DeliveryAuthorization?.authorized !== true ||
-      p9DeliveryAuthorization.evidencePath !== state.dataAuthority.productionAuthorization?.evidencePath
-    ) {
-      fail('Plan Revision 7 requires P9 delivery authority bound to the production authority evidence');
+      }
+      if (state.dataAuthority.p9TestingWriteAuthorization) {
+        requireFile(state.dataAuthority.p9TestingWriteAuthorization.evidencePath);
+      }
+      const p9DeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P9',
+      );
+      if (
+        p9DeliveryAuthorization?.authorized !== true ||
+        p9DeliveryAuthorization.evidencePath !== state.dataAuthority.productionAuthorization?.evidencePath
+      ) {
+        fail('Plan Revision 7 requires P9 delivery authority bound to the production authority evidence');
+      }
     }
 
     if (attestedRevision7) {
@@ -2151,15 +2195,28 @@ if (state) {
           'Plan Revision 7 production/testing authority cannot change except for its predeclared proof-state flags',
         );
       }
-      const changedP9Delivery = revision7CandidateState
-        ? changedStandingAuthorization(
-            state.deployment.stageMergeAuthorizations,
-            revision7CandidateState.deployment.stageMergeAuthorizations,
-            ['P9'],
-          )
-        : 'P9';
-      if (changedP9Delivery) {
-        fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
+      const p9DeliveryAuthorization = state.deployment.stageMergeAuthorizations.find(
+        (item) => item.stageId === 'P9',
+      );
+      if (state.planRevision < 10) {
+        const changedP9Delivery = revision7CandidateState
+          ? changedStandingAuthorization(
+              state.deployment.stageMergeAuthorizations,
+              revision7CandidateState.deployment.stageMergeAuthorizations,
+              ['P9'],
+            )
+          : 'P9';
+        if (changedP9Delivery) {
+          fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
+        }
+      } else if (
+        p9DeliveryAuthorization?.authorized !== false ||
+        p9DeliveryAuthorization.authorizedBy !== null ||
+        p9DeliveryAuthorization.authorizedAt !== null ||
+        p9DeliveryAuthorization.evidencePath !== null ||
+        !p9DeliveryAuthorization.basis.includes('prospectively supersede')
+      ) {
+        fail('Plan Revision 10 requires the former P9 delivery authority to remain historical and replacement P9 to be unauthorized');
       }
 
       const revision7EvidencePath = 'docs/evidence/PLAN-REV7.md';
@@ -2283,7 +2340,7 @@ if (state) {
       }
     }
 
-    if (p9?.status === 'accepted') {
+    if (state.planRevision < 10 && p9?.status === 'accepted') {
       const canonicalP9 = findCanonicalAttestation(
         'P9',
         p9.manifestPath,
