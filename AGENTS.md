@@ -200,6 +200,23 @@ not activate monitoring, change product/runtime or deployment configuration, or 
 remote Plan Revision 10 delivery authority. A local attestation must remain branch tip
 until separately authorized delivery.
 
+## Plan Revision 11 late-delivery boundary
+
+Plan Revision 11 is the sole exact continuation for delivery authority received after
+the immutable Plan Revision 10 attestation. It must preserve Revision 10 candidate
+`519f8b0cc3cb1da7d1cb75651940358b5722f9e9` and direct-child attestation
+`4a22711bbb352d763298c6200768dc181662f80f` byte-for-byte, use only the pinned
+continuation branch and allowlisted governance paths, receive fresh-context review,
+and add only its own manifest/review in its direct-child attestation.
+
+The continuation authorizes its exact branch push, pull request, Vercel Preview, merge,
+Vercel Production deployment, CI, and verification. It authorizes no product, data,
+runtime, workflow, spreadsheet, source, monitoring, or deployment-configuration change.
+The user separately authorized P8M/enrichment in principle, but P8M cannot access the
+master or sources until the exact tab/range, denominator, revision, source, reviewer,
+and write-gate fields required by its kickoff are known and machine-recorded. Stop
+before P8M access during Revision 11 delivery.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use

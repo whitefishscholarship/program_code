@@ -1,9 +1,45 @@
 # Current Handoff
 
-Last updated: 2026-09-01
-Plan revision: 10
+Last updated: 2026-09-02
+Plan revision: 11
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Plan Revision 11 — Revision 10 late-delivery bridge
+
+- Live `origin/main` remains exact Revision 9 delivery baseline
+  `390b270c5d3127ff2705ffb114212a518a1d5953`. The canonical Revision 10 candidate is
+  `519f8b0cc3cb1da7d1cb75651940358b5722f9e9`; its accepted C0/H0/M0/L0 review binds
+  manifest SHA-256 `17a3bf273d86f6e57898564703797dc212821781eb20612c7d895d5a7546b4fc`;
+  and direct-child attestation is
+  `4a22711bbb352d763298c6200768dc181662f80f`.
+- After that attestation, Kelsey directly authorized Codex to proceed, clarified full
+  authority and removal of all permission blockers, and authorized P8M/enrichment as
+  well. The repository-owner GitHub account is authenticated with admin/push access.
+- Revision 10 cannot be edited or appended. Revision 11 therefore uses isolated branch
+  `codex/plan-rev11-rev10-delivery`, descended from the exact Revision 10 attestation,
+  to record and govern branch push, PR, resulting Preview, merge, resulting Production
+  deployment, CI, and verification. The former Revision 10 delivery-permission blocker
+  is removed prospectively; the immutable Revision 10 authorization record remains
+  unchanged historical truth.
+- Revision 11 changes only its exact twelve-path governance/evidence/test/validator
+  allowlist. It performs no spreadsheet, source, Claude, enrichment, product, data,
+  runtime, workflow, monitoring, or deployment-configuration operation. Stop before
+  P8M access during this delivery.
+- P8M is authorized in principle after delivery, but its master tab IDs/titles/ranges,
+  complete row/award/cycle denominator, current revision, official-source allowlist,
+  named human fact reviewer, and exact no-write or write target/backup/acceptance gate
+  are not yet known or machine-pinned. These are non-permission entry facts; no sheet or
+  source access may begin until the kickoff's exact-boundary rule is satisfied.
+- Pre-freeze verification is complete: clean install, full tests, typecheck, both
+  audits, workflow parse, exact scope/whitespace checks, and the supported webpack
+  production build pass. The default Turbopack build remains environment-blocked on
+  local process/port creation. Plan validation reports exactly the four expected
+  pre-attestation gates and no contract/content/history error.
+- Next: freeze the Revision 11 candidate and complete live-baseline manifest, obtain a
+  new fresh-context read-only review, create the direct-child attestation, deliver the
+  authorized PR, verify CI/Preview/Production, then reassess P8M entry without
+  inferring missing bounds.
 
 ## Plan Revision 10 — local governance candidate; remote delivery blocked
 

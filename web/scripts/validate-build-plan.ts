@@ -53,6 +53,11 @@ import {
   validateP9PostCutoverReceiptV2,
 } from './p9-evidence-v2';
 import { validatePlanRev10Lifecycle } from './plan-rev10-lifecycle';
+import {
+  PLAN_REV11_CONTINUATION_PATHS,
+  validatePlanRev11LateDelivery,
+  type PlanRev11LateDeliveryContinuation,
+} from './plan-rev11-late-delivery';
 
 type StageStatus =
   | 'planned'
@@ -100,6 +105,7 @@ type PlanAmendment = {
     basis: string;
     scope: string;
   };
+  lateDeliveryContinuation?: PlanRev11LateDeliveryContinuation;
 };
 
 type DeliveryIntegration = {
@@ -508,6 +514,7 @@ function validateBoundAttestation(
   manifestPath: string,
   reviewPath: string,
   expectedMergeSecondParent?: string,
+  allowedUndeliveredTip?: string,
 ): string | undefined {
   const manifestRaw = requireFile(manifestPath);
   const reviewRaw = requireFile(reviewPath);
@@ -671,7 +678,10 @@ function validateBoundAttestation(
       fail(`${subjectId} undelivered baseline must equal current origin/main`);
     }
     const validationTip = process.env.STAGE_BRANCH_TIP_SHA?.trim() || gitText(['rev-parse', 'HEAD'])?.trim();
-    if (validationTip !== attestationCommit) {
+    if (
+      validationTip !== attestationCommit &&
+      validationTip !== allowedUndeliveredTip
+    ) {
       fail(`${subjectId} undelivered branch tip must equal its attestation exactly`);
     }
   }
@@ -1313,6 +1323,71 @@ if (state) {
   if (state.planRevision >= 2 && !planAmendments.some((item) => item.id === `PLAN-REV${state.planRevision}`)) {
     fail(`Plan revision ${state.planRevision} requires its matching PLAN-REV${state.planRevision} record`);
   }
+  const revision10 = planAmendments.find((item) => item.id === 'PLAN-REV10');
+  const revision11 = planAmendments.find((item) => item.id === 'PLAN-REV11');
+  const canonicalRevision10 = revision10
+    ? findCanonicalAttestation(
+        revision10.id,
+        revision10.manifestPath,
+        revision10.reviewPath,
+      )
+    : null;
+  let canonicalRevision11: ReturnType<typeof findCanonicalAttestation> = null;
+  let revision11ContinuationValid = false;
+  if (state.planRevision >= 11) {
+    requireFile('web/scripts/plan-rev11-late-delivery.ts');
+    requireFile('docs/kickoffs/PLAN-REV11-REV10-LATE-DELIVERY.md');
+    if (!revision11 || !revision11.lateDeliveryContinuation || !canonicalRevision10) {
+      fail('Plan Revision 11 requires its late-delivery record and canonical Revision 10 attestation');
+    } else {
+      const continuationErrors = validatePlanRev11LateDelivery(
+        revision11.lateDeliveryContinuation,
+        {
+          amendmentId: revision10!.id,
+          candidateCommit: canonicalRevision10.manifest.candidateCommit,
+          attestationCommit: canonicalRevision10.attestationCommit,
+          baselineCommit: canonicalRevision10.manifest.baselineCommit,
+        },
+      );
+      for (const error of continuationErrors) fail(error);
+      revision11ContinuationValid = continuationErrors.length === 0;
+      if (
+        state.deployment.deliveryBlockers.includes(
+          'PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority',
+        )
+      ) {
+        fail('Plan Revision 11 must remove the satisfied Revision 10 delivery-permission blocker');
+      }
+      canonicalRevision11 = findCanonicalAttestation(
+        revision11.id,
+        revision11.manifestPath,
+        revision11.reviewPath,
+      );
+      if (canonicalRevision11) {
+        if (
+          !isAncestor(
+            canonicalRevision10.attestationCommit,
+            canonicalRevision11.manifest.candidateCommit,
+          )
+        ) {
+          fail('Plan Revision 11 candidate must descend from the exact Revision 10 attestation');
+        }
+        const continuationChanges = [
+          ...completeChangeSet(
+            canonicalRevision10.attestationCommit,
+            canonicalRevision11.manifest.candidateCommit,
+            new Set<string>(),
+          ).keys(),
+        ].sort();
+        if (
+          JSON.stringify(continuationChanges) !==
+          JSON.stringify([...PLAN_REV11_CONTINUATION_PATHS].sort())
+        ) {
+          fail('Plan Revision 11 candidate changed paths outside its exact late-delivery continuation allowlist');
+        }
+      }
+    }
+  }
   for (const amendment of planAmendments) {
     const amendmentRevision = Number(/^PLAN-REV(\d+)$/.exec(amendment.id)?.[1] ?? 0);
     const expectedAmendmentStatus = amendmentRevision >= 3 ? 'attestation-gated' : 'accepted';
@@ -1348,7 +1423,11 @@ if (state) {
         authorization.evidencePath !== null ||
         !authorization.basis.trim() ||
         !authorization.scope.trim() ||
-        !state.deployment.deliveryBlockers.some((item) => item.startsWith('PLAN-REV10-'))
+        !(
+          state.deployment.deliveryBlockers.some((item) =>
+            item.startsWith('PLAN-REV10-'),
+          ) || revision11ContinuationValid
+        )
       ) {
         fail(`${amendment.id} requires direct informed delivery authority or the exact Revision 10 local-only blocker`);
       }
@@ -1358,6 +1437,12 @@ if (state) {
       amendment.baselineCommit,
       amendment.manifestPath,
       amendment.reviewPath,
+      undefined,
+      amendment.id === 'PLAN-REV10' &&
+        revision11ContinuationValid &&
+        canonicalRevision11
+        ? canonicalRevision11.attestationCommit
+        : undefined,
     );
   }
 
@@ -2494,6 +2579,19 @@ if (state) {
     requireFile('docs/evidence/PLAN-REV10-matching-fact-contract.json');
     requireFile('docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md');
   }
+  if (state.planRevision >= 11) {
+    for (const phrase of [
+      'Late authority for an undelivered plan amendment',
+      'exact Revision 10 candidate and attestation',
+      'Stop before P8M access',
+    ]) {
+      if (!plan.includes(phrase)) {
+        fail(`Plan Revision 11 is missing late-delivery safety text: ${phrase}`);
+      }
+    }
+    requireFile('docs/evidence/PLAN-REV11.md');
+    requireFile('docs/kickoffs/PLAN-REV11-REV10-LATE-DELIVERY.md');
+  }
 
   const agents = content['AGENTS.md'];
   for (const phrase of [
@@ -2522,6 +2620,12 @@ if (state) {
     ]) {
       if (!agents.includes(phrase)) fail(`AGENTS.md is missing Revision 9 invariant: ${phrase}`);
     }
+  }
+  if (
+    state.planRevision >= 11 &&
+    !agents.includes('Plan Revision 11 late-delivery boundary')
+  ) {
+    fail('AGENTS.md is missing the Plan Revision 11 late-delivery boundary');
   }
   if (state.planRevision >= 10) {
     for (const phrase of [

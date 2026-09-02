@@ -174,7 +174,7 @@ type MatchingContract = {
 };
 
 const state = readJson<BuildState>('docs/BUILD_STATE.json');
-assert.equal(state.planRevision, 10);
+assert(state.planRevision >= 10);
 assert.equal(state.activeStageId, null);
 assert.equal(state.nextPermittedStageId, 'P8M');
 
@@ -619,7 +619,7 @@ const p9Kickoff = read('docs/kickoffs/P9-PRODUCTION-MIGRATION.md');
 containsAll(
   plan,
   [
-    'Plan revision: 10',
+    `Plan revision: ${state.planRevision}`,
     '### P8M — Matching-fact enrichment and acceptance',
     'validated immutable versioned publication',
     'legacy comparison-only',

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 10,
+  "planRevision": 11,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-01",
+  "lastUpdated": "2026-09-02",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -396,7 +396,7 @@
       }
     ],
     "deliveryBlockers": [
-      "PLAN-REV10-awaits-direct-push-pr-merge-preview-production-authority",
+      "PLAN-REV11-authorized-delivery-pending-ci-preview-production-verification",
       "P8M-awaits-direct-stage-specific-source-processing-review-and-delivery-authority",
       "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
     ]
@@ -537,6 +537,55 @@
           "evidencePath": null,
           "basis": "The current instruction authorizes governance-only local work and requires stopping before enrichment. It does not separately state informed authority for Plan Revision 10 branch push, pull request, merge, or resulting Vercel Preview and Production deployments. Team edit access is unrelated capability and is not used as delivery authority.",
           "scope": "Freeze, independently review, and direct-child attest Plan Revision 10 locally only. Do not push, open or merge a pull request, or trigger Preview or Production deployment until separate direct informed authority names those effects."
+        }
+      },
+      {
+        "id": "PLAN-REV11",
+        "status": "attestation-gated",
+        "baselineCommit": "390b270c5d3127ff2705ffb114212a518a1d5953",
+        "evidencePath": "docs/evidence/PLAN-REV11.md",
+        "manifestPath": "docs/evidence/PLAN-REV11-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV11.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-02",
+          "evidencePath": "docs/evidence/PLAN-REV11.md",
+          "basis": "After Plan Revision 10 was independently accepted and locally attested, the user directly stated that Codex had authority to proceed, then clarified that Codex had full authority and that all permission blockers were to be removed.",
+          "scope": "Create, independently review, attest, push, open and merge the exact Plan Revision 11 continuation carrying the canonical Plan Revision 10 candidate and attestation; allow the resulting Vercel Preview and Production deployments; and verify CI and deployment results. Do not alter or rebind Revision 10, change product/data/runtime/deployment configuration, access a spreadsheet or public source, process Claude rows, activate monitoring, or start P8M inside this continuation."
+        },
+        "lateDeliveryContinuation": {
+          "targetAmendmentId": "PLAN-REV10",
+          "targetCandidateCommit": "519f8b0cc3cb1da7d1cb75651940358b5722f9e9",
+          "targetAttestationCommit": "4a22711bbb352d763298c6200768dc181662f80f",
+          "targetBaselineCommit": "390b270c5d3127ff2705ffb114212a518a1d5953",
+          "authorityReceivedAt": "2026-09-02T07:11:48Z",
+          "authorityEvidencePath": "docs/evidence/PLAN-REV11.md",
+          "continuationBranch": "codex/plan-rev11-rev10-delivery",
+          "authorizedEffects": [
+            "branch_push",
+            "pull_request",
+            "vercel_preview",
+            "merge",
+            "vercel_production",
+            "ci_and_deployment_verification"
+          ],
+          "allowedContinuationPaths": [
+            "AGENTS.md",
+            "docs/BUILD_STATE.json",
+            "docs/CURRENT_HANDOFF.md",
+            "docs/DECISIONS.md",
+            "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+            "docs/evidence/PLAN-REV11.md",
+            "docs/kickoffs/PLAN-REV11-REV10-LATE-DELIVERY.md",
+            "web/package.json",
+            "web/scripts/plan-rev11-late-delivery.ts",
+            "web/scripts/test-plan-rev10-governance.ts",
+            "web/scripts/test-plan-rev11-late-delivery.ts",
+            "web/scripts/validate-build-plan.ts"
+          ],
+          "productOrDataChangeAuthorized": false,
+          "p8mExecutionAuthorizedByThisContinuation": false
         }
       }
     ]

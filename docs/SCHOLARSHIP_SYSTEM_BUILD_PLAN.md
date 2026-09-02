@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 10
+Plan revision: 11
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -335,6 +335,40 @@ is invalid and cannot be used to skip historical validation.
 
 This mechanism is an exceptional delivery bridge, not a general post-attestation edit
 path. Each stage may have at most one delivery integration, and every commit is pinned.
+
+### Late authority for an undelivered plan amendment
+
+Plan Revision 11 adds one narrower continuation for the canonical, accepted, but
+undelivered Plan Revision 10 attestation. This is not an ordinary post-attestation
+commit and does not amend or rebind Revision 10. It is valid only when all of the
+following are true:
+
+1. The target is exactly Plan Revision 10 candidate
+   `519f8b0cc3cb1da7d1cb75651940358b5722f9e9`, direct-child attestation
+   `4a22711bbb352d763298c6200768dc181662f80f`, and original live baseline
+   `390b270c5d3127ff2705ffb114212a518a1d5953`.
+2. The continuation uses only branch `codex/plan-rev11-rev10-delivery`, descends from
+   the exact Revision 10 attestation, and changes exactly the machine-recorded
+   governance, evidence, test, and validator allowlist. Product, data, runtime,
+   workflow, spreadsheet, source, and deployment-configuration changes are forbidden.
+3. Plan Revision 11 records direct informed authority for its branch push, pull
+   request, resulting Vercel Preview, merge, resulting Vercel Production deployment,
+   CI, and deployment verification. The satisfied Revision 10 permission blocker is
+   removed without changing Revision 10's immutable historical authorization record.
+4. The Plan Revision 11 manifest uses the unchanged live `origin/main` baseline and
+   covers the complete baseline-to-continuation candidate, including the exact Revision
+   10 candidate, manifest, review, and attestation ancestry. A new non-author,
+   fresh-context reviewer accepts that complete tree.
+5. A direct-child Plan Revision 11 attestation adds only its manifest and review. Until
+   delivered, that attestation is the only permitted continuation tip. Once merged,
+   both Revision 10 and Revision 11 attestations must be ancestors of live
+   `origin/main` and remain byte-identical.
+
+The bridge binds the exact Revision 10 candidate and attestation. Stop before P8M access.
+This continuation carries authorization to deliver governance only. The user's later
+P8M intent does not manufacture still-unknown tab/range,
+denominator, revision, source, reviewer, or write-gate facts; P8M begins only after its
+exact entry contract is machine-pinned without inference.
 
 ## 9. Stage contracts
 
@@ -1400,6 +1434,16 @@ processing, mutates no scholarship fact, starts no later stage, and activates no
 monitoring. Its local candidate, independent review, and direct-child attestation are
 authorized by the current instruction. Remote push, PR, merge, Preview, and Production
 effects remain blocked pending separate direct informed authority.
+
+Plan Revision 11 records the direct delivery authority received after the immutable
+Revision 10 attestation and provides the single exact continuation above. It removes
+only the satisfied Revision 10 delivery-permission blocker, preserves the exact
+Revision 10 candidate and attestation, and authorizes the combined governance branch,
+PR, Preview, merge, Production deployment, CI, and verification. It changes no stage
+order, product, data, runtime, workflow, source, spreadsheet, monitoring, or deployment
+configuration. The same user later authorized P8M/enrichment in principle; Revision 11
+records that intent but does not claim the still-unknown exact P8M source bounds or
+start P8M.
 
 Historically attested amendment identity is non-regressing. A later amendment may add a
 new revision but cannot lower `planRevision`, remove or mutate an earlier canonical

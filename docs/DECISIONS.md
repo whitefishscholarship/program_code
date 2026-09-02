@@ -518,3 +518,32 @@ but are not rewritten or deleted.
   Revision 10 candidate, contract, manifest, review, and attestation byte-for-byte.
   Runtime rollback uses accepted P8R until P8F/P9 are separately accepted and never
   accesses or mutates either spreadsheet.
+
+## D023 — Carry late delivery authority through one reviewed Revision 10 continuation
+
+- Date: 2026-09-02
+- Status: candidate pending independent review and delivery
+- Decision: Plan Revision 11 creates one governance-only continuation from the exact
+  accepted Revision 10 attestation. It records the user's later direct authority for
+  push, pull request, Vercel Preview, merge, Vercel Production, CI, and deployment
+  verification without editing or rebinding Revision 10.
+- Evidence: `docs/evidence/PLAN-REV11.md`.
+- Reason: Revision 10 correctly froze and attested while remote delivery was expressly
+  unauthorized. Repository law forbids appending authority to that immutable branch.
+  The user subsequently granted full authority and directed removal of permission
+  blockers. A new independently reviewed amendment is therefore required to preserve
+  the old decision while making the new authority executable.
+- Alternatives: Push the Revision 10 branch while `BUILD_STATE` still forbids delivery,
+  which violates the operating contract; amend or append to the accepted attestation,
+  which destroys its topology; or leave the new authority unused. All three are
+  rejected.
+- Impact: The continuation manifest covers the complete original-baseline-to-candidate
+  tree, the exact Revision 10 attestation remains in ancestry, and only twelve pinned
+  governance/evidence/test/validator paths may change after it. No product, data,
+  runtime, workflow, source, spreadsheet, monitoring, or deployment configuration may
+  change. The user also authorized P8M/enrichment in principle, but unknown exact entry
+  bounds remain facts to pin, not permission blockers to waive.
+- Rollback: Before merge, abandon only the Revision 11 continuation branch and retain
+  Revision 10 locally accepted. After merge, revert the governance delivery through a
+  separately reviewed amendment; never rewrite either attestation or roll back data,
+  because this continuation performs no data operation.
