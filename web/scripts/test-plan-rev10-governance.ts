@@ -201,9 +201,15 @@ assert.equal(
   '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4',
 );
 assert.equal(transition.organizerMaster.role, 'organizer_authoring_master');
-assert.equal(transition.organizerMaster.designationEvidence, 'user-reported');
-assert.equal(transition.organizerMaster.verificationStatus, 'unverified');
-assert.equal(transition.organizerMaster.accessAuthorized, false);
+assert.equal(
+  transition.organizerMaster.designationEvidence,
+  state.planRevision >= 12 ? 'user-confirmed-and-read-only-verified' : 'user-reported',
+);
+assert.equal(
+  transition.organizerMaster.verificationStatus,
+  state.planRevision >= 12 ? 'verified' : 'unverified',
+);
+assert.equal(transition.organizerMaster.accessAuthorized, state.planRevision >= 12);
 assert.equal(transition.organizerMaster.automatedWriteAuthorized, false);
 assert.equal(transition.organizerMaster.automatedWriteAuthorizationEvidencePath, null);
 assert.equal(transition.organizerMaster.automatedWriteAcceptanceEvidencePath, null);
@@ -331,13 +337,19 @@ const p8mAuthorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P8M',
 );
 assert(p8mAuthorization, 'P8M requires an explicit authorization record');
-assert.equal(p8mAuthorization.authorized, false);
-assert.equal(p8mAuthorization.authorizedBy, null);
-assert.equal(p8mAuthorization.authorizedAt, null);
-assert.equal(p8mAuthorization.evidencePath, null);
+assert.equal(p8mAuthorization.authorized, state.planRevision >= 12);
+assert.equal(
+  p8mAuthorization.authorizedBy,
+  state.planRevision >= 12 ? 'Kelsey Stuart' : null,
+);
+assert.equal(p8mAuthorization.authorizedAt, state.planRevision >= 12 ? '2026-09-02' : null);
+assert.equal(
+  p8mAuthorization.evidencePath,
+  state.planRevision >= 12 ? 'docs/evidence/PLAN-REV12.md' : null,
+);
 assert(
   state.deployment.deliveryBlockers.some((item) => item.startsWith('P8M-')),
-  'P8M must remain blocked pending direct stage-specific authority',
+  'P8M must retain any unsatisfied phased gate',
 );
 const p9Authorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P9',
@@ -657,8 +669,8 @@ containsAll(
   [
     'Execute P8M',
     'proposal-only',
-    'Do not access either spreadsheet',
-    'direct, stage-specific authority',
+    'No spreadsheet write is authorized',
+    'application-group and cycle counts are not source denominators',
     'Stop before P8F and P9',
   ],
   'P8M kickoff',

@@ -217,6 +217,30 @@ master or sources until the exact tab/range, denominator, revision, source, revi
 and write-gate fields required by its kickoff are known and machine-recorded. Stop
 before P8M access during Revision 11 delivery.
 
+## Plan Revision 12 row-source correction boundary
+
+Plan Revision 12 records the completed read-only pin of the organizer master before
+P8M execution. The only source tab is `Master Database`, gid `0`, used range
+`'Master Database'!A1:O198`, Drive revision `225`: one header and exactly 197
+populated rows, comprising 176 rows labeled `Scholarship` and 21 labeled `Portal`.
+The source has no application-group field and no cycle/cycle-ID field. Those concepts
+are not required source identities or source denominators and must never be fabricated
+to make a row complete.
+
+P8M completeness is row-based: each of the 197 rows must have exactly one reconciled
+row outcome. A row does not need every possible fact. Blank, unavailable, blocked,
+unsupported, or otherwise unobserved information remains explicit `unknown` or manual
+review and may not become false, ineligible, or silently omitted. Valid processing may
+continue for other facts and rows. The frozen `matching-facts-v1` contract remains
+unchanged; optional cycle-specific normalized facts may be used only when evidence
+actually establishes them.
+
+Revision 12 authorizes only its own governed Git delivery and resulting Vercel
+Preview/Production verification. It does not start P8M execution. Before external URL
+reads or Claude processing, pin the exact URL-bearing columns, official-source
+allowlist, and Claude instruction. Before fact or stage acceptance, pin the named human
+fact reviewer. No spreadsheet write is authorized. Stop before P8F and P9.
+
 Plan Revision 2 introduced a per-stage exception that preserves rather than replaces an
 attestation: an independently reviewed delivery integration may merge an exact
 previously attested stage into a separately delivered amended `origin/main`. Each use

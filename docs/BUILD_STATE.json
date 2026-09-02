@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 11,
+  "planRevision": 12,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-02",
   "repository": {
@@ -156,13 +156,45 @@
       "organizerMaster": {
         "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
         "role": "organizer_authoring_master",
-        "designationEvidence": "user-reported",
-        "verificationStatus": "unverified",
-        "accessAuthorized": false,
+        "designationEvidence": "user-confirmed-and-read-only-verified",
+        "verificationStatus": "verified",
+        "accessAuthorized": true,
         "automatedWriteAuthorized": false,
         "automatedWriteAuthorizationEvidencePath": null,
         "automatedWriteAcceptanceEvidencePath": null,
-        "verificationEvidencePath": "docs/evidence/P8M.md"
+        "verificationEvidencePath": "docs/evidence/PLAN-REV12.md"
+      },
+      "p8mRowSource": {
+        "contractId": "p8m-row-source-v1",
+        "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+        "spreadsheetTitle": "Whitefish HS Scholarship Database",
+        "sheetId": 0,
+        "sheetTitle": "Master Database",
+        "sourceRevision": "225",
+        "revisionModifiedTime": "2026-09-02T03:41:28.432Z",
+        "fileModifiedTime": "2026-09-02T03:41:28.518Z",
+        "gridRange": "'Master Database'!A1:X1060",
+        "usedRange": "'Master Database'!A1:O198",
+        "headerRows": 1,
+        "populatedRows": 197,
+        "scholarshipRows": 176,
+        "portalRows": 21,
+        "uniqueScholarshipNames": 175,
+        "duplicateExactScholarshipNameGroups": 1,
+        "sourceDenominator": "all_197_populated_rows",
+        "awardDenominator": "176_rows_explicitly_labeled_scholarship",
+        "cycleDenominator": "not_a_source_field_not_required",
+        "applicationGroupDenominator": "not_a_source_field_not_required",
+        "blankCellDisposition": "unknown_not_observed",
+        "rowOutcomeRequired": true,
+        "incompleteFactsMayProceed": true,
+        "cycleIdRequiredForSourceRow": false,
+        "applicationGroupRequiredForSourceRow": false,
+        "spreadsheetWriteAuthorized": false,
+        "externalSourceReadsAuthorized": false,
+        "claudeProcessingAuthorized": false,
+        "humanFactReviewer": null,
+        "pinningEvidencePath": "docs/evidence/PLAN-REV12.md"
       },
       "formerProduction": {
         "spreadsheetId": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
@@ -336,12 +368,12 @@
       },
       {
         "stageId": "P8M",
-        "authorized": false,
-        "authorizedBy": null,
-        "authorizedAt": null,
-        "evidencePath": null,
-        "basis": "After Plan Revision 11 delivery authority was recorded, the user directly authorized P8M/enrichment in principle. That removes the permission-only blocker but does not supply the kickoff's still-unknown exact organizer-master tab IDs/titles/ranges, bounded row/award/cycle denominator and source revision, official-source allowlist, named human fact reviewer, or no-write/exact-write backup and acceptance gate. Under the frozen contract, executable authorization remains false until those non-permission entry facts are machine-pinned without accessing a spreadsheet, Drive metadata, public source, or Claude.",
-        "scope": "P8M is the sole next-permitted planned stage and has direct in-principle user permission, but no access or processing may begin while its exact entry facts remain unknown. A later governed source-identity and denominator pinning record must name every required field before content/metadata reads, source acquisition, Claude proposal processing, human decisions, writes, Git delivery, or Vercel effects can execute."
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-09-02",
+        "evidencePath": "docs/evidence/PLAN-REV12.md",
+        "basis": "Kelsey explicitly authorized P8M against the named testing spreadsheet with Claude proposal-only, prohibited spreadsheet writes, permitted governed Git delivery and resulting Preview/Production verification, then authorized a read-only source-pinning pass limited to spreadsheet metadata and Master Database. Kelsey corrected the source model: the original has no application-group field and no cycle/cycle-ID field, and blanks mean unavailable or unobserved information rather than a batch-stopping defect.",
+        "scope": "Prepare and deliver P8M only after its remaining phased prerequisites are satisfied. The pinned source denominator is all 197 populated Master Database rows: 176 Scholarship rows and 21 Portal rows. Every row must receive a reconciled outcome, but incomplete fields may remain unknown and do not stop otherwise valid progress. External URL reads and Claude processing await their exact bounded instruction; final acceptance awaits the named human fact reviewer. No spreadsheet write is authorized. P8F and P9 remain prohibited. Governed Git delivery and resulting Vercel Preview/Production verification are authorized for the eventual independently accepted P8M candidate."
       },
       {
         "stageId": "P8F",
@@ -396,7 +428,8 @@
       }
     ],
     "deliveryBlockers": [
-      "P8M-entry-facts-unpinned-master-tabs-ranges-denominator-revision-source-allowlist-human-review-write-gate",
+      "P8M-external-reverification-awaits-exact-url-column-allowlist-and-Claude-processing-instruction",
+      "P8M-acceptance-awaits-named-human-fact-reviewer",
       "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
     ]
   },
@@ -585,6 +618,54 @@
           ],
           "productOrDataChangeAuthorized": false,
           "p8mExecutionAuthorizedByThisContinuation": false
+        }
+      },
+      {
+        "id": "PLAN-REV12",
+        "status": "attestation-gated",
+        "baselineCommit": "57bb062d64f725fa6ce72709f81fe987dde3e2af",
+        "evidencePath": "docs/evidence/PLAN-REV12.md",
+        "manifestPath": "docs/evidence/PLAN-REV12-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV12.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-02",
+          "evidencePath": "docs/evidence/PLAN-REV12.md",
+          "basis": "Kelsey explicitly authorized governed Git delivery and resulting Preview/Production verification for P8M, then directly corrected the governing source model after the read-only pinning pass. Revision 12 records that correction before P8M execution so the later stage does not require invented application-group or cycle source fields and does not stop merely because a source fact is unavailable.",
+          "scope": "Implement, independently review, attest, push, open a pull request for, merge, and verify only the Plan Revision 12 governance amendment and its resulting Vercel Preview and Production deployments. Preserve all accepted history and the frozen matching-facts-v1 contract. Do not start P8M execution, read external URLs, invoke Claude, write any spreadsheet, change product/data/runtime/workflow/deployment configuration, activate monitoring, handle applicant data, contact providers, start P8F or P9, or perform paid, destructive, or history-rewriting actions."
+        },
+        "rowSourceCorrection": {
+          "contractId": "p8m-row-source-v1",
+          "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+          "spreadsheetTitle": "Whitefish HS Scholarship Database",
+          "sheetId": 0,
+          "sheetTitle": "Master Database",
+          "sourceRevision": "225",
+          "revisionModifiedTime": "2026-09-02T03:41:28.432Z",
+          "fileModifiedTime": "2026-09-02T03:41:28.518Z",
+          "gridRange": "'Master Database'!A1:X1060",
+          "usedRange": "'Master Database'!A1:O198",
+          "headerRows": 1,
+          "populatedRows": 197,
+          "scholarshipRows": 176,
+          "portalRows": 21,
+          "uniqueScholarshipNames": 175,
+          "duplicateExactScholarshipNameGroups": 1,
+          "sourceDenominator": "all_197_populated_rows",
+          "awardDenominator": "176_rows_explicitly_labeled_scholarship",
+          "cycleDenominator": "not_a_source_field_not_required",
+          "applicationGroupDenominator": "not_a_source_field_not_required",
+          "blankCellDisposition": "unknown_not_observed",
+          "rowOutcomeRequired": true,
+          "incompleteFactsMayProceed": true,
+          "cycleIdRequiredForSourceRow": false,
+          "applicationGroupRequiredForSourceRow": false,
+          "spreadsheetWriteAuthorized": false,
+          "externalSourceReadsAuthorized": false,
+          "claudeProcessingAuthorized": false,
+          "humanFactReviewer": null,
+          "pinningEvidencePath": "docs/evidence/PLAN-REV12.md"
         }
       }
     ]

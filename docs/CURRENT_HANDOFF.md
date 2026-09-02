@@ -1,9 +1,47 @@
 # Current Handoff
 
 Last updated: 2026-09-02
-Plan revision: 11
+Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Plan Revision 12 — row-source correction — candidate in progress; P8M unstarted
+
+- Kelsey corrected the P8M source model: the original `Master Database` never had an
+  application-group field or cycle/cycle-ID field. Blank cells normally mean the
+  earlier Claude scrape did not find the information. Do not fabricate those fields or
+  stop the full batch merely because a fact is unavailable.
+- The authorized read-only pin verified spreadsheet
+  `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, title
+  `Whitefish HS Scholarship Database`, `Master Database` gid `0`, grid
+  `'Master Database'!A1:X1060`, used range `'Master Database'!A1:O198`, and Drive
+  revision `225`. The revision remained `225`; no write occurred. Spreadsheet metadata
+  may enumerate tab properties, but no cells from another tab were read.
+- The exact source denominator is 197 populated rows: 176 labeled `Scholarship` and 21
+  labeled `Portal`. There are 175 unique nonblank Scholarship names and one exact-name
+  duplicate group, so name alone is not a stable identity.
+- Every source row must receive one row-ledger outcome. Missing, inaccessible,
+  unsupported, ambiguous, or unobserved facts remain explicit unknown/manual outcomes
+  and cannot affect matching. Complete means no row is silently lost; it does not mean
+  every field is populated.
+- Revision 12 is governance-only on verified live baseline
+  `57bb062d64f725fa6ce72709f81fe987dde3e2af`. It preserves the immutable Revision 10
+  matching contract and every accepted artifact. No product/data/runtime/workflow or
+  deployment-configuration change is in scope.
+- P8M remains planned and sole next-permitted. Before external URL reads or Claude
+  processing, the exact URL-bearing source columns, official-source allowlist, and
+  bounded Claude instruction must be pinned. Before fact or stage acceptance, the
+  human fact reviewer must be named. Claude is proposal-only. No spreadsheet write is
+  authorized.
+- Governed Git delivery and resulting Vercel Preview/Production verification are
+  directly authorized for this amendment. Freeze, independently review, attest, and
+  deliver Revision 12 only. Do not start P8M execution, P8F, or P9 in this amendment.
+- Pre-freeze focused tests, typecheck, the complete test suite, the exact default
+  production build, and whitespace checks pass. Plan validation reports only the three
+  expected pre-attestation gates. Dependency audit remains explicit: two moderate
+  advisories overall and one moderate production advisory (`qs` through `googleapis`),
+  with no critical/high; dependency mutation is out of scope for this amendment and is
+  queued for separately scoped maintenance.
 
 ## Plan Revision 11 — Revision 10 late-delivery bridge — delivery closure PASS; P8M entry facts blocked
 

@@ -1,10 +1,10 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 11
+Plan revision: 12
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
-Organizer authoring master (user-reported, unverified): `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
+Organizer authoring master (user-confirmed, read-only verified): `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`
 Legacy comparison-only spreadsheet (access unauthorized): `1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE`
 Application runtime source: validated immutable versioned publication; not yet created or authorized
 
@@ -33,7 +33,8 @@ a recorded plan amendment under section 14.
 The program is successful only when all of the following are true:
 
 - Every student-visible active scholarship is supported by a current official
-  source, an application method, a cycle status, and a verification timestamp.
+  source and verification outcome. Application-method and cycle details are retained
+  when observed; their absence remains unknown and does not fabricate a negative fact.
 - Every current testing-sheet row has been confirmed, corrected, archived,
   merged, or assigned to a visible manual-review queue.
 - Active rows have no known-dead application link. Inconclusive or login-gated
@@ -370,6 +371,38 @@ P8M intent does not manufacture still-unknown tab/range,
 denominator, revision, source, reviewer, or write-gate facts; P8M begins only after its
 exact entry contract is machine-pinned without inference.
 
+### Row-source correction and incomplete-fact progress
+
+Plan Revision 12 corrects the P8M source contract before P8M execution. The original
+`Master Database` has neither an application-group field nor a cycle/cycle-ID field.
+Those concepts may remain in the frozen normalized matching contract for facts that are
+later explicitly observed, but they are not source columns, required source identities,
+or source denominators. No future processor may invent them to make a row look complete.
+
+The read-only pin is spreadsheet
+`1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, sheet title `Master Database`,
+gid `0`, used range `'Master Database'!A1:O198`, Drive revision `225`: one header and
+197 populated rows, comprising 176 rows explicitly labeled `Scholarship` and 21 labeled
+`Portal`. The 197 populated rows are the complete source denominator. The 176
+Scholarship rows are a typed row subset, not proof of 176 distinct stable awards; 175
+names are unique and one exact-name duplicate group requires identity reconciliation.
+Application-group and cycle counts are not source denominators.
+
+Every source row must receive one deterministic row outcome, so completeness remains
+measurable. Completeness means no row is silently lost; it does not mean every field is
+known; blank source cells remain unknown. An unavailable fact, inaccessible page,
+incomplete scrape, or unsupported criterion may enter an explicit unknown/manual-review
+outcome while other valid facts and rows continue. Unknown and proposal-only values
+cannot affect matching until accepted through the governed evidence and human-review
+path. This flexibility never permits a false value, inferred negative, silent skip,
+self-accepted AI output, or weakened provenance rule.
+
+Revision 12 records the completed metadata-and-`Master Database` pin only. It authorizes
+no spreadsheet write. External URL reads and Claude processing still require the exact
+bounded URL-column/allowlist instruction, and P8M acceptance still requires a named
+human fact reviewer. Revision 12 itself is governance-only and stops before P8M
+execution, P8F, and P9.
+
 ## 9. Stage contracts
 
 ### P0 — Program contract and governance baseline
@@ -691,37 +724,44 @@ production configuration, or P9 state changes during rollback.
 
 ### P8M — Matching-fact enrichment and acceptance
 
-**Objective:** Produce a complete, evidence-backed, independently reviewed set of
-normalized matching facts for the accepted award/cycle denominator without allowing AI
-proposals, free text, missing evidence, or edit capability to become accepted truth or
-write authority.
+**Objective:** Produce evidence-backed, independently reviewed normalized matching facts
+for every one of the 197 pinned source rows, without requiring unavailable fields or
+allowing AI proposals, free text, missing evidence, or edit capability to become
+accepted truth or write authority.
 
-**Entry prerequisites:** Plan Revision 10 accepted, direct-child attested, delivered,
-and reverified on live `origin/main`; P8M is the sole next-permitted stage; exact direct
-stage-specific authority names the organizer master tabs/ranges and bounded read
-denominator, permitted official-source reads, Claude proposal processing, human review
-role, Git/Vercel delivery effects, and either a complete write prohibition or a separate
-exact write authorization. The organizer's designation and edit access remain
-user-reported until the exact authorized verification executes. P8F, P9, and
+**Entry prerequisites:** Plan Revisions 10 through 12 are accepted, direct-child
+attested, delivered, and reverified on live `origin/main`; P8M is the sole
+next-permitted stage. The exact row-source pin and no-write boundary are already
+recorded. Before external acquisition or Claude processing, direct authority must name
+the exact URL-bearing input columns, official-source allowlist, and Claude processing
+instruction. Before acceptance, it must name the human fact reviewer. Git/Vercel
+delivery authority is recorded; spreadsheet writes remain prohibited. P8F, P9, and
 `P9-IDENTITY-PINS` remain planned and unstarted.
 
-**Source and identity boundary:** Spreadsheet
-`1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4` is the prospective
-organizer authoring master. Revision 10 does not verify or access it. Spreadsheet
-`1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE` is legacy comparison-only;
-no comparison read is authorized. Human editor, proposal processor, fact reviewer, and
-read-only application runtime are distinct identities. The application may eventually
-consume only a validated immutable versioned publication; mutable-master direct runtime
-reads are prohibited. Edit access is capability, not operation authority.
+**Source and identity boundary:** The organizer authoring master is the exact
+Revision 12 pin: spreadsheet
+`1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`, `Master Database`, gid `0`, used
+range `'Master Database'!A1:O198`, revision `225`, one header plus 197 populated rows.
+Only those cells and spreadsheet metadata were read during source pinning; the revision
+remained unchanged. The former production spreadsheet is legacy comparison-only and
+unread. Human editor, proposal processor, fact reviewer, and read-only application
+runtime are distinct identities. Application runtime may eventually consume only a
+validated immutable versioned publication. Edit access is capability, not operation
+authority, and no sheet write is authorized.
 
 **Matching-fact contract:** The exact machine-readable contract is
 `docs/evidence/PLAN-REV10-matching-fact-contract.json`, contract
-`matching-facts-v1`, taxonomy `1.0.0`. Each row is keyed by stable `award_id` and an
-optional exact `cycle_id`; carries a controlled `criterion_id`; effect
+`matching-facts-v1`, taxonomy `1.0.0`. Each accepted fact is keyed by stable `award_id`
+and, only when a fact is explicitly cycle-specific, an optional exact `cycle_id`; it
+carries a controlled `criterion_id`; effect
 `required|preferred|informational`; typed operator/value; status
 `proposed|accepted|rejected|conflict|stale|unknown`; exact source/revision/observation;
-short non-PII evidence; reviewer/time/rationale; and taxonomy version. Parent source,
-child award, shared application, and annual cycle identities remain distinct.
+short non-PII evidence; reviewer/time/rationale; and taxonomy version. The source row
+ledger is separate from the normalized fact ledger. Every row must reconcile to a
+stable award/portal outcome without using scholarship name alone; the exact-name
+duplicate is resolved explicitly. A source row does not require a cycle ID or
+application-group identity. Parent, child, application, and cycle concepts remain
+distinct whenever evidence actually establishes them.
 
 The contract's executable validator is `web/scripts/matching-fact-contract.ts`.
 Unknown fields and enum members fail closed. It binds exact scalar/set/date/identifier
@@ -735,27 +775,30 @@ The frozen taxonomy covers academics; education and institution; geography; serv
 work, leadership, and caregiving; financial need; learning/neurodiversity; health and
 hardship; heritage/demographics/identity; career and field interests including aviation
 and nursing; athletics; military/first responder; organizations; employers;
-application modes/groups/supplements; and cycles. Unknown criteria stop for taxonomy
-review; examples never define the complete scope. One `learning.adhd` criterion maps
+application modes/groups/supplements; and cycles. Their presence in the taxonomy does
+not assert matching source fields or require one fact per category. Unknown criteria
+stop for taxonomy review; examples never define the complete scope. One `learning.adhd` criterion maps
 the historical ADHD control; ADD is not a separate recovered question or alias.
 
-**Evidence policy:** Cycle-specific official child-award evidence outranks parent or
-yearless evidence. Organizer-reviewed master facts may be accepted directly only where
+**Evidence policy:** When cycle-specific official child-award evidence exists, it
+outranks parent or yearless evidence. Organizer-reviewed master facts may be accepted directly only where
 the organizer is the authoritative owner for that local award field; material
 eligibility, deadline, cycle, and application facts otherwise require current official
 provider evidence. Secondary sources and AI output are proposal/discovery only. Equal-
 authority disagreement becomes `conflict`; it blocks acceptance and matching use.
-Cycle facts stale at cycle close or declared replacement; yearless/prior-cycle facts
+Observed cycle facts stale at cycle close or declared replacement; yearless/prior-cycle facts
 stale at the next calendar year until reverified; non-cycle accepted facts require
 review after 365 days. A successful fetch does not refresh an unobserved field.
 
-**Claude/Codex boundary:** Claude is proposal-only after the later authority and exact
-taxonomy/input freeze. It receives revision-pinned bounded inputs, emits schema-valid
+**Claude/Codex boundary:** Claude is proposal-only after the remaining exact authority
+and taxonomy/input freeze. It receives the revision-pinned 197-row input plus only the
+separately allowlisted official URLs and emits schema-valid
 JSON/JSONL plus provenance, confidence/ambiguity, prompt version, input/output
-fingerprints, checkpoint/resume cursors, and complete-denominator receipts. It never
+fingerprints, checkpoint/resume cursors, and complete-row receipts. A row may validly
+finish with known facts plus explicit unknown outcomes. Claude never
 writes the master, accepts its own facts, treats absence as false, processes applicant
-PII, enters applications, contacts providers, or silently truncates rows, awards,
-sources, or cycles. Codex owns stable-ID binding, validators, duplicate/conflict/
+PII, enters applications, contacts providers, or silently truncates rows or sources.
+Codex owns stable-ID binding, validators, duplicate/conflict/
 coverage checks, source-policy enforcement, complete reconciliation, review packaging,
 and any separately authorized exact write/readback workflow.
 
@@ -768,8 +811,9 @@ Apply one bounded idempotent batch, immediately read back every target, prove ev
 untargeted cell unchanged, and reconcile all accepted, rejected, conflict, stale,
 unknown, and remaining rows. A successful API reply alone is not acceptance.
 
-**Deliverables:** Verified source-role/identity receipt; exact bounded award/cycle
-denominator; validated proposal and completeness ledgers; normalized fact set; conflict,
+**Deliverables:** Verified source-role/identity receipt; exact 197-row denominator and
+row-to-award/portal reconciliation; validated proposal and completeness ledgers;
+normalized fact set; conflict,
 stale, unknown, rejected, and remaining-work queues; reviewer decisions; optional exact
 write/readback evidence only if separately authorized; immutable publication candidate
 for later runtime use; reconciliation; rollback; independent review; manifest; and
@@ -781,19 +825,23 @@ truncation; mutable-master runtime reads; P8F product work; P9 or identity pins;
 monitoring activation; deployment-configuration changes; and every unapproved write.
 
 **Verification:** Validate every input and output fingerprint, taxonomy ID/operator/
-value, stable award/cycle binding, source/evidence precedence, freshness transition,
-conflict, sensitive-state rule, duplicate, and completeness total. Reconcile the exact
-denominator with no missing or duplicate row, award, cycle, source, or proposal. Review
+value, stable identity binding, source/evidence precedence, freshness transition,
+conflict, sensitive-state rule, duplicate, and completeness total. Reconcile all 197
+source rows exactly once with no missing or duplicate row outcome. Fact, source, cycle,
+or application-group counts may be zero or incomplete where evidence is unavailable;
+that is recorded as unknown/manual review rather than treated as a failed batch. Review
 100% of required-effect, sensitive, conflict, stale, rejection, unknown, parent/child,
 shared-application, and write-bound records plus a deterministic sample of all
 remaining proposals. Prove proposal-only isolation, no PII, no direct write, no self-
 acceptance, no form/provider action, checkpoint/resume idempotency, and fail-closed
 truncation. Run the repository matrix and obtain fresh-context C0/H0 review.
 
-**Acceptance:** Every denominator member has one reconciled outcome; every accepted
-fact is schema-valid, current under its freshness rule, bound to exact award/cycle and
+**Acceptance:** Every one of the 197 source rows has one reconciled outcome; every
+accepted fact is schema-valid, current under its freshness rule, bound to the exact
+stable award and any explicitly observed cycle, and
 field-specific authority, and independently reviewable. Proposed/unaccepted evidence
-cannot affect matching. Missing, ambiguous, free-text-only, provenance-free,
+cannot affect matching. A row need not have every possible fact. Missing, ambiguous,
+unavailable, free-text-only, provenance-free,
 unanswered, nonselected, or sensitive nonselection remains unknown and non-excluding.
 Any authorized write reconciles exactly with zero untargeted change. P8M is delivered
 before P8F becomes next-permitted.
