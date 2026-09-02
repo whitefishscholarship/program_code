@@ -5,66 +5,68 @@ Plan revision: 9
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Plan Revision 9 current stage — former-interview inventory and P8F governance; no product implementation
+## Plan Revision 9 delivery closure — PASS; P8F next, P9 not started
 
-- Exact starting branch/commit supplied by Kelsey:
-  `codex/p8r-detail-restoration-handoff` at
-  `128c3e5136daae6b6ca40349db18324567bb19ee`. Governance work continues on
-  `codex/plan-rev9-former-interview-detail` in the same isolated worktree
-  `/private/tmp/program_code-p8r-detail-handoff` without modifying the primary checkout.
-- Revision 9 baseline is exact locally tracked and GitHub-API-verified `main`
-  `f118b85dc0e10cc3841d172d2d4091f618454970`. Initial SSH transport returned
-  `Repository not found`. Secure browser authentication as `whitefishscholarship` plus
-  a keyring-backed, command-scoped HTTPS override restored normal Git fetch without
-  changing the saved remote or exposing a token; fetched `origin/main` remains exact
-  `f118b85...`.
-- The complete authoritative read order was followed through accepted P8R evidence,
-  manifest, review, both the P8R and next-permitted P9 kickoffs, and every supporting
-  P8R matching/privacy/browser/matrix artifact. P9 and `P9-IDENTITY-PINS` remain
-  unstarted and prohibited in this execution.
-- `docs/evidence/PLAN-REV9-interview-inventory.md` is the durable complete-history
-  inventory. It pins all seven requested blobs at `4c20637...`, identifies
-  `f63e550...` as the last detailed-question configuration change, and proves direct
-  child `a2567d6...` removed the active route.
-- Complete reachable history contains one displayed `adhd` criterion labeled `ADHD`,
-  with tooltip `Diagnosed with Attention-Deficit/Hyperactivity Disorder.` It contains no
-  separate rendered ADD label, answer identifier, or Attention-Deficit Disorder
-  question. Dyslexia and `first_generation`/`First-Generation College` were distinct
-  displayed criteria.
-- The pinned last-active UI displayed 6 academic questions, 4 activity/responsibility
-  checkboxes, 1 conditional volunteer-hours question, 1 financial-need checkbox, and 38
-  special criteria. SAT, ACT, FAFSA completion, skills, creative skills, background,
-  constraints, and career interests were type-only fields and were not displayed.
-- Earlier active history also displayed a standalone
-  `passiveSignals.organization_affiliations` question with `Military`, `First
-  Responder`, `Farmers Union`, `Electric Co-op`, `Credit Union`, and `Elks Lodge`.
-  `f63e550...` migrated those values respectively to `military_veteran`,
-  `first_responder`, `farmers_union`, `electric_coop`, `credit_union`, and
-  `elks_lodge`. P8F must preserve this map without rendering duplicate questions.
-- Every historical filter, score, sort, and result/export path now has a required P8F
-  disposition. Default Montana, free-text/date/affiliation hard gates, legacy points,
-  the earlier `New for 2026!`/`is_new` +5 boost, `Non-Renewing` substring
-  classification, the export-only result screen, matched-row
-  `sessionStorage`, and legacy `{data}` matcher coupling are retired. Safe replacements
-  require explicit contradictory typed answers plus award-bound field-specific accepted
-  facts; unknown/non-answer/sensitive nonselection remains non-excluding.
-- Plan Revision 9 inserts `P8F — Former interview detail and routing restoration`
-  between accepted P8R and planned P9. Revision 9 is governance-only. P8F is the sole
-  next-permitted planned stage after Revision 9 delivery and has the exact kickoff at
-  `docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md`.
-- Locked install, focused controls, full tests, typecheck, Webpack production build,
-  both audits, YAML parse, whitespace, path enumeration, authenticated remote recheck,
-  and a source/history/governance pre-freeze review `PASS C0/H0/M0/L0` are complete.
-  A later evidence-byte review's two medium recordkeeping findings were remediated with
-  the exact timestamped command ledger; that exact byte set requires the final no-edit
-  recheck before freeze. The default Turbopack build remains environment-unverified
-  after local-port `EPERM`; the supported Webpack production build passed. Immutable
-  candidate freeze, final review, manifest,
-  direct-child attestation, push, PR, merge, CI/deployment observations, and closure
-  remain pending. No student-facing product file, dependency,
-  lockfile, workflow, deployment configuration, spreadsheet, source, scholarship fact,
-  schedule, form/application, applicant data, answer/decision, analytics, or provider
-  state has changed.
+- Immutable governance candidate `bcde44a5979b2be5a631f914a3e249bca2943c40`
+  was independently accepted `C0/H0/M0/L0` against manifest SHA-256
+  `5695e3c53bc120221f084698e1744183fdfdfa084b4a76bcfa7ff69ecdc72c68`.
+  Direct-child attestation `ee09197fbbae63fa52dc40b9c5d1806878f0552d` added
+  exactly `docs/evidence/PLAN-REV9-manifest.json` and
+  `docs/reviews/PLAN-REV9.json`.
+- PR #31 preserved exact base `f118b85dc0e10cc3841d172d2d4091f618454970` and
+  exact head `ee09197fbbae63fa52dc40b9c5d1806878f0552d`. PR CI run
+  `33579103388` passed in 3m04s, including the exact default production build.
+  Vercel Preview was blocked by the existing author-access condition at
+  `https://vercel.com/whitefishscholarships-projects/web/EEGSWcmt9LyEqVaV8YLntps5tZTp`;
+  that blocked Preview is not an application-health result.
+- PR #31 merged by the repository's merge-commit convention at
+  `3359bdc1ed1a447be41b512a8bd79445460169f1` on
+  `2026-09-02T01:25:59Z`. Its parents are exact baseline `f118b85...` and exact
+  attestation `ee09197...`.
+- Post-merge main CI run `33579362363` passed in 3m02s: locked install, plan
+  validation, typecheck, the complete test suite, and exact default production build.
+  GitHub's Vercel Production status reported `Deployment has completed` at
+  `2026-09-02T01:26:38Z` for
+  `https://vercel.com/whitefishscholarships-projects/web/GJVXK7wghXNRgM1SRUeKKpKsf7YD`.
+  A deployment-complete status is not a protected application-health smoke test.
+- The durable complete-history inventory is
+  `docs/evidence/PLAN-REV9-interview-inventory.md`. It pins the seven requested
+  last-active blobs at `4c20637...`, identifies `f63e550...` as the last detailed
+  question configuration, and proves direct child `a2567d6...` removed the active
+  route. Reachable history contains one displayed `adhd` criterion labeled `ADHD`,
+  and no distinct rendered ADD question, label, or identifier. Dyslexia and
+  `first_generation`/`First-Generation College` were distinct displayed criteria.
+- The pinned last-active UI displayed 6 academic questions, 4
+  activity/responsibility checkboxes, 1 conditional volunteer-hours question, 1
+  financial-need checkbox, and 38 special criteria. SAT, ACT, FAFSA completion,
+  skills, creative skills, background, constraints, and career interests were
+  TypeScript-only fields, not displayed questions. Earlier active history's six
+  organization-affiliation options were mapped to their later final identifiers
+  without authorizing duplicate questions.
+- Every historical question, answer, identifier, filter, boost, exclusion, sorting
+  rule, and result/export route has a P8F disposition as retained, safely replaced,
+  or retired with rationale and required tests. Free-text inference, missing or
+  ambiguous evidence, non-answers, sensitive nonselection, and unaccepted facts may
+  not hard-exclude an award. P8F must use explicit typed answers and award-bound,
+  field-specific accepted facts; the historical heuristic processor must not be
+  reconnected wholesale.
+- Plan Revision 9 is accepted and delivered. `P8F — Former interview detail and
+  routing restoration` is the sole next-permitted stage, with exact kickoff
+  `docs/kickoffs/P8F-FORMER-INTERVIEW-DETAIL.md`. P9 and `P9-IDENTITY-PINS` remain
+  planned and unstarted; this closure does not authorize either P8F implementation or
+  P9 work.
+- No student-facing product file, dependency, lockfile, workflow, deployment
+  configuration, spreadsheet, source, scholarship fact, schedule, form/application,
+  applicant data, answer/decision, analytics, or provider state changed in Revision 9.
+  P8 remains accepted with its schedule disabled, and the accepted P7 catalog,
+  cards, filter, sort, and export plus P8R volatile-memory privacy and conservative
+  accepted-fact rules remain mandatory P8F boundaries.
+- Live scholarship freshness and a protected application-health smoke remain
+  unverified. The PR Preview remained blocked; local default Turbopack build remained
+  environment-unverified after local-port `EPERM`, while both PR and post-merge main CI
+  proved the exact default build. GitHub Actions also warned that Node-20-targeted
+  actions were forced onto Node 24. None of those observations is a scholarship-
+  freshness or application-health claim.
 
 ## Historical user-directed follow-up — restore former interview detail and routing
 
