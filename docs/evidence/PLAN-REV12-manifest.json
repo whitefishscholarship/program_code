@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV12",
+  "createdAt": "2026-09-02T22:18:47Z",
+  "baselineCommit": "57bb062d64f725fa6ce72709f81fe987dde3e2af",
+  "candidateCommit": "24c6b91bfb8366b4d20c9c153f5f447438ac387f",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "b07d825b6139bfe9ae4eafd0bd2edf27c08cd354db313fc65e370e2d215342e9"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "ab9cda53c634733fb510108cec9ef659a7ace9abe6f58c6812a8b326a378b7b0"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "e1be2b5f897cb90ef8496acdd08f87010c25af51469a387f11cccf5b519cdef0"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "889ae75349be37077e176b9c5cf4cbe7377711c24156ea43413320ed558a3904"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "475b2a0db7d48f53548d8731b024cc46545d00c3b93e3ea2c78bf3b45291e59c"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV12.md",
+      "change": "present",
+      "sha256": "b6f0131e94ddc67868eb692d5a11a03b848ff2303caa4a22c4f84724a7bad69a"
+    },
+    {
+      "path": "docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md",
+      "change": "present",
+      "sha256": "053d618856749536ae16a92d9c6a6eccdbfd26a047a10d41ad4fb7af213f156d"
+    },
+    {
+      "path": "docs/kickoffs/PLAN-REV12-ROW-SOURCE-CORRECTION.md",
+      "change": "present",
+      "sha256": "34854f06d2695a837bbc3efd022f420f5856c5fed722a3e42d0900c01226dc64"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "29900a2d6251403722f3a5196338377ad3e30269cea12ea6a9a354a7e2908409"
+    },
+    {
+      "path": "web/scripts/plan-rev10-lifecycle.ts",
+      "change": "present",
+      "sha256": "cdd8c95e904dd7e2341a71e192b37c74aadb8f671167e847d3ee8ede7711d514"
+    },
+    {
+      "path": "web/scripts/plan-rev12-row-source.ts",
+      "change": "present",
+      "sha256": "05e25f339930d8138b32650a2eec8ce01c1324d7817d26b06b28e5db4a02a480"
+    },
+    {
+      "path": "web/scripts/test-plan-rev10-governance.ts",
+      "change": "present",
+      "sha256": "82afa301eec0649fa2a4059e860fcf675f301c667e3fec246f1b3963ca5499c2"
+    },
+    {
+      "path": "web/scripts/test-plan-rev11-late-delivery.ts",
+      "change": "present",
+      "sha256": "b438239ec3d4df30fd80ade44a4575d74a3d69929e5d83ede3d6b0a26aa32bc2"
+    },
+    {
+      "path": "web/scripts/test-plan-rev12-row-source.ts",
+      "change": "present",
+      "sha256": "301201e245f0beba540a8531b099242393afc68f641bb44fa718d62d47b606db"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "b36186e4a955b3c6fcfa4c529f1504bd479b24845003f6735da8a8b26b92ec1d"
+    }
+  ]
+}

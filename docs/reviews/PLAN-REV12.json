@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV12",
+  "reviewerTaskId": "/root/rev12_fresh_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-02T22:32:16Z",
+  "outcome": "accepted",
+  "decisionScope": "Exact immutable Plan Revision 12 candidate 24c6b91bfb8366b4d20c9c153f5f447438ac387f against verified origin/main baseline 57bb062d64f725fa6ce72709f81fe987dde3e2af, bound by docs/evidence/PLAN-REV12-manifest.json SHA-256 b4c3da3d3fc073e1433731a30d382e38ba4a4aa3691fc24fb1b39da74d218c8b, plus its prospective direct-child attestation adding exactly docs/evidence/PLAN-REV12-manifest.json and docs/reviews/PLAN-REV12.json. Acceptance covers only the governance correction that all 197 populated Master Database rows are the source denominator; the 176 Scholarship and 21 Portal counts are typed row subsets; application-group and cycle/cycle-ID fields are not source requirements; and blank or unavailable facts remain unknown while row-complete progress continues. Claude remains proposal-only, no spreadsheet write is authorized, and P8M remains planned and unstarted. External URL reads and Claude processing await exact URL-column/allowlist instructions; fact and P8M acceptance await a named human reviewer. P8F and P9 remain prohibited. The dependency declarations and lockfile are unchanged; two moderate advisories overall and one moderate production advisory remain explicitly open for separately scoped maintenance. This acceptance does not reverify Google Sheet contents, live scholarship facts, external URLs, Claude processing, deployment, application health, or production security completion.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/PLAN-REV12-manifest.json",
+  "candidateManifestSha256": "b4c3da3d3fc073e1433731a30d382e38ba4a4aa3691fc24fb1b39da74d218c8b"
+}
