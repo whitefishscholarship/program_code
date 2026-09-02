@@ -5,41 +5,51 @@ Plan revision: 11
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Plan Revision 11 — Revision 10 late-delivery bridge
+## Plan Revision 11 — Revision 10 late-delivery bridge — delivery closure PASS; P8M entry facts blocked
 
-- Live `origin/main` remains exact Revision 9 delivery baseline
-  `390b270c5d3127ff2705ffb114212a518a1d5953`. The canonical Revision 10 candidate is
-  `519f8b0cc3cb1da7d1cb75651940358b5722f9e9`; its accepted C0/H0/M0/L0 review binds
-  manifest SHA-256 `17a3bf273d86f6e57898564703797dc212821781eb20612c7d895d5a7546b4fc`;
-  and direct-child attestation is
-  `4a22711bbb352d763298c6200768dc181662f80f`.
-- After that attestation, Kelsey directly authorized Codex to proceed, clarified full
-  authority and removal of all permission blockers, and authorized P8M/enrichment as
-  well. The repository-owner GitHub account is authenticated with admin/push access.
-- Revision 10 cannot be edited or appended. Revision 11 therefore uses isolated branch
-  `codex/plan-rev11-rev10-delivery`, descended from the exact Revision 10 attestation,
-  to record and govern branch push, PR, resulting Preview, merge, resulting Production
-  deployment, CI, and verification. The former Revision 10 delivery-permission blocker
-  is removed prospectively; the immutable Revision 10 authorization record remains
-  unchanged historical truth.
-- Revision 11 changes only its exact twelve-path governance/evidence/test/validator
-  allowlist. It performs no spreadsheet, source, Claude, enrichment, product, data,
-  runtime, workflow, monitoring, or deployment-configuration operation. Stop before
-  P8M access during this delivery.
-- P8M is authorized in principle after delivery, but its master tab IDs/titles/ranges,
-  complete row/award/cycle denominator, current revision, official-source allowlist,
-  named human fact reviewer, and exact no-write or write target/backup/acceptance gate
-  are not yet known or machine-pinned. These are non-permission entry facts; no sheet or
-  source access may begin until the kickoff's exact-boundary rule is satisfied.
-- Pre-freeze verification is complete: clean install, full tests, typecheck, both
-  audits, workflow parse, exact scope/whitespace checks, and the supported webpack
-  production build pass. The default Turbopack build remains environment-blocked on
-  local process/port creation. Plan validation reports exactly the four expected
-  pre-attestation gates and no contract/content/history error.
-- Next: freeze the Revision 11 candidate and complete live-baseline manifest, obtain a
-  new fresh-context read-only review, create the direct-child attestation, deliver the
-  authorized PR, verify CI/Preview/Production, then reassess P8M entry without
-  inferring missing bounds.
+- Canonical Revision 10 candidate
+  `519f8b0cc3cb1da7d1cb75651940358b5722f9e9` and direct-child attestation
+  `4a22711bbb352d763298c6200768dc181662f80f` remain byte-for-byte intact. Revision 11
+  candidate `264c0a8a0a01c20cc798b70a90c915d6dd854af2` was independently accepted
+  C0/H0/M0/L0 against complete 25-path manifest SHA-256
+  `b40d9940f92e6e5f296ea57dd6f8de3e25856c9a8ec2fe29cdf601905ac285a3`.
+  Direct-child attestation `2adf10cdb4404e062d81846a1d29ff869348b1c7` adds exactly the
+  Revision 11 manifest and review.
+- [PR #33](https://github.com/whitefishscholarship/program_code/pull/33) preserved
+  exact base `390b270c5d3127ff2705ffb114212a518a1d5953` and exact head
+  `2adf10cdb4404e062d81846a1d29ff869348b1c7`. PR CI run `33608175787`
+  passed in 2m56s, including locked install, plan validation, typecheck, complete tests,
+  and exact default production build. Vercel Preview was attempted and blocked by the
+  existing author-access condition; Preview comments passed. That blocked Preview is
+  not an application-health result.
+- PR #33 merged by the repository's merge-commit convention at
+  `de33a202bfac0b3df740331bc43fbf4e0e28b117` on
+  `2026-09-02T08:23:41Z`. Its parents are exact baseline `390b270...` and exact
+  attestation `2adf10c...`. Both Revision 10 and Revision 11 candidate/attestation
+  chains are ancestors of live `origin/main`.
+- Post-merge main CI run `33608470567` passed in 3m06s. GitHub's Vercel Production
+  status reported `Deployment has completed` at `2026-09-02T08:24:18Z` for
+  `https://web-90ew561ip-whitefishscholarships-projects.vercel.app`. Deployment
+  completion is not a protected application-health smoke and does not establish
+  scholarship freshness. The GitHub Actions Node-20-to-24 runtime warning remains open.
+- Revision 10/11 delivery performed zero spreadsheet, Drive, public-source, Claude,
+  enrichment, scholarship-fact, product, runtime, workflow, monitoring,
+  deployment-configuration, form, provider, or applicant-data operations. The accepted
+  attestation branch remains unchanged at its exact tip.
+- The separate delivery-closure branch passed clean install, full plan validation,
+  typecheck, the complete test suite, the exact default production build, both
+  dependency audits at 0 vulnerabilities, workflow YAML parsing, and whitespace
+  checks before its own delivery.
+- Kelsey directly authorized P8M/enrichment in principle. The permission-only blocker
+  is removed. P8M still cannot begin because the exact organizer-master tab IDs/titles/
+  ranges, bounded row/award/cycle denominator and current revision, official-source
+  allowlist, named human fact reviewer, and no-write or exact-write/backup/acceptance
+  gate are unknown and not machine-pinned. These are factual entry prerequisites, not
+  permissions that can be inferred from edit access or a broad grant.
+- Next: establish those exact P8M entry facts through a separately governed pinning
+  record without reading spreadsheet/Drive content or metadata, public sources, or
+  Claude first. If they cannot be supplied without prohibited discovery access, stop
+  BLOCKED and request the exact values. Do not begin P8F or P9.
 
 ## Plan Revision 10 — local governance candidate; remote delivery blocked
 
