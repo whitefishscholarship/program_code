@@ -17,11 +17,12 @@ owns validation, full-denominator reconciliation, review packaging, and governed
 delivery after acceptance. No spreadsheet write is authorized. P8F and P9 remain out
 of scope.
 
-The supplied human-review identity is the literal placeholder `[NAME]`. It is not a
-named reviewer identity and cannot satisfy the fact-acceptance gate. This does not
-block proposal generation or construction of the human-review package; it blocks all
-fact acceptance, P8M acceptance, attestation, and delivery until a real reviewer is
-identified and records decisions.
+The initial instruction supplied the literal placeholder `[NAME]`. At
+`2026-09-03T02:48:16Z`, Kelsey clarified directly that she is the human reviewer. The
+human fact reviewer is therefore machine-pinned as `Kelsey Stuart`. Naming the reviewer
+does not itself record or imply a decision. All fact acceptance, P8M acceptance,
+attestation, and delivery remain blocked until Kelsey records complete decisions and
+rationale for all 197 rows.
 
 ## Live resolution before processing
 
@@ -67,6 +68,6 @@ Kelsey later clarified that the pasted Claude narrative described the pre-review
 figures, while the attached receipt and the nine files in
 `/private/tmp/p8m-claude-output` are the post-review result. Codex therefore uses the
 post-review written files and their recomputed hashes as the proposal-package authority;
-the earlier narrative totals are retained only as chronology. This clarification does
-not name the human fact reviewer and does not substitute for P8M's final independent
-repository acceptance review.
+the earlier narrative totals are retained only as chronology. This artifact chronology
+clarification does not substitute for Kelsey's later reviewer-identity clarification or
+for P8M's final independent repository acceptance review.

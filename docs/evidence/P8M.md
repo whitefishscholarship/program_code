@@ -2,7 +2,7 @@
 
 Status: `BLOCKED` before fact acceptance, P8M acceptance, attestation, or delivery
 
-Observed through: `2026-09-03T01:48:20Z`
+Observed through: `2026-09-03T02:48:16Z`
 
 Baseline: `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`
 
@@ -16,10 +16,11 @@ external-source queue was zero. Claude was proposal-only. No spreadsheet write, 
 acceptance, application/form entry, provider contact, other-tab cell read, P8F, or P9
 operation was authorized or performed.
 
-The literal value `[NAME]` is a placeholder, not a named human fact reviewer. It does
-not block source pinning, proposal generation, Codex validation, or review-package
-preparation. It does block every human decision, accepted fact, P8M acceptance,
-candidate freeze, independent acceptance review, attestation, and Git/Vercel delivery.
+Kelsey clarified at `2026-09-03T02:48:16Z` that she is the human reviewer. The human
+fact reviewer is now machine-pinned as `Kelsey Stuart`. This establishes reviewer
+identity only; it records no row decision or accepted fact. All 197 decisions remain
+pending before P8M acceptance, candidate freeze, independent acceptance review,
+attestation, or Git/Vercel delivery.
 
 The exact instruction and its resolved read boundary are recorded in
 `docs/evidence/P8M-processing-authority.md`. The proposal instruction is
@@ -102,7 +103,7 @@ The zero official-source queue means every row still requires human judgment.
 
 The authoritative machine record is
 `docs/evidence/P8M-proposal-reconciliation.json`, SHA-256
-`4d85c233a37b4de846e9a29d4ed6199780de4e3ca6549b670d85b9200bbf6150`.
+`9ad8cb77ffec8d2666dfafb0302ec7be3f5352e7efe4c27193f2957ea7e3e5b9`.
 
 | Measure | Recomputed result |
 | --- | ---: |
@@ -147,14 +148,14 @@ silently counted as additional source rows and no application-group field was cr
 ## Human-review package
 
 The complete package is `docs/evidence/P8M-human-review.csv`, SHA-256
-`ac376ad3dd3cca6ab0729fc7e0f607573cf867892838114c55cf7f0fc4f54596`.
+`21c12af03be1ed75c820847b10c49731e9296c41c4c18a2629de2e7831a0bf26`.
 It contains a header plus exactly 197 source-row records. Each record includes the
 source fields needed to judge the proposal, stable award/portal mapping, controlled
 tags, correction JSON, review reasons, ambiguity note, Claude confidence, and blank
-human-decision fields.
+review timestamp, decision, and rationale fields. The reviewer identity is prefilled.
 
-The named reviewer must complete all 197 rows. `reviewer_name` and `reviewed_at` must
-be nonblank and consistent. `tag_decision` must be one of `approve`, `reject`,
+Kelsey Stuart must complete all 197 rows. `reviewer_name` is prefilled consistently;
+`reviewed_at` must be nonblank. `tag_decision` must be one of `approve`, `reject`,
 `revise`, or `needs_more_evidence`. `correction_decision` must use the same values, or
 `not_applicable` only when the row has no correction candidate. `human_rationale` must
 explain the decision, including rows 26/27, row 79's child-award queue, every conflict,
@@ -194,10 +195,10 @@ reviewer requirements.
 P8M is preserved as `blocked-external` on baseline
 `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` with the validated row package intact.
 The only P8M acceptance blocker is
-`P8M-acceptance-awaits-named-human-fact-reviewer`.
+`P8M-acceptance-awaits-complete-human-fact-decisions`.
 
-After a real reviewer is named and returns complete decisions, Codex must validate the
-decision file, reconcile every decision, create any schema-valid accepted publication,
+After Kelsey returns complete decisions, Codex must validate the decision file,
+reconcile every decision, create any schema-valid accepted publication,
 run the full required matrix, freeze a candidate, and obtain the separate fresh-context
 read-only C0/H0 repository review. Only then may manifest/attestation and the already
 authorized Git/Vercel delivery occur. No spreadsheet write is part of that path.

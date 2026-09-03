@@ -23,6 +23,9 @@ export const PLAN_REV12_P8M_BLOCKERS = [
   'P8M-acceptance-awaits-named-human-fact-reviewer',
 ] as const;
 
+export const P8M_HUMAN_DECISIONS_BLOCKER =
+  'P8M-acceptance-awaits-complete-human-fact-decisions';
+
 export type PlanRev12RowSourceCorrection = {
   contractId: string;
   spreadsheetId: string;
@@ -206,6 +209,10 @@ export function validatePlanRev12RowSource(
     const reviewerNamed = Boolean(context.rowSource?.humanFactReviewer?.trim());
     if (reviewerNamed === context.deliveryBlockers.includes(reviewerBlocker)) {
       errors.push('P8M human-reviewer blocker must exactly reflect whether a reviewer is named');
+    }
+    const decisionsBlocked = context.deliveryBlockers.includes(P8M_HUMAN_DECISIONS_BLOCKER);
+    if ((!accepted && reviewerNamed) !== decisionsBlocked) {
+      errors.push('P8M human-decision blocker must remain until the named reviewer completes review');
     }
     if (accepted && !reviewerNamed) {
       errors.push('Accepted P8M requires a named human fact reviewer');

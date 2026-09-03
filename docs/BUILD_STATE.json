@@ -193,7 +193,7 @@
         "spreadsheetWriteAuthorized": false,
         "externalSourceReadsAuthorized": true,
         "claudeProcessingAuthorized": true,
-        "humanFactReviewer": null,
+        "humanFactReviewer": "Kelsey Stuart",
         "pinningEvidencePath": "docs/evidence/PLAN-REV12.md"
       },
       "p8mProcessing": {
@@ -214,11 +214,15 @@
         "rowOutcomeCount": 197,
         "matchingFactsProduced": 0,
         "acceptedFacts": 0,
-        "humanFactReviewer": null,
+        "humanFactReviewer": "Kelsey Stuart",
+        "humanFactReviewerEvidencePath": "docs/evidence/P8M-processing-authority.md",
+        "humanFactReviewerNamedAt": "2026-09-03T02:48:16Z",
+        "humanReviewDecisionCount": 0,
+        "humanReviewDecisionStatus": "pending_all_197",
         "humanReviewPackagePath": "docs/evidence/P8M-human-review.csv",
-        "humanReviewPackageSha256": "ac376ad3dd3cca6ab0729fc7e0f607573cf867892838114c55cf7f0fc4f54596",
+        "humanReviewPackageSha256": "21c12af03be1ed75c820847b10c49731e9296c41c4c18a2629de2e7831a0bf26",
         "reconciliationPath": "docs/evidence/P8M-proposal-reconciliation.json",
-        "reconciliationSha256": "4d85c233a37b4de846e9a29d4ed6199780de4e3ca6549b670d85b9200bbf6150",
+        "reconciliationSha256": "9ad8cb77ffec8d2666dfafb0302ec7be3f5352e7efe4c27193f2957ea7e3e5b9",
         "spreadsheetWrites": 0,
         "finalFreshContextReviewStatus": "not_started"
       },
@@ -454,7 +458,7 @@
       }
     ],
     "deliveryBlockers": [
-      "P8M-acceptance-awaits-named-human-fact-reviewer",
+      "P8M-acceptance-awaits-complete-human-fact-decisions",
       "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
     ]
   },

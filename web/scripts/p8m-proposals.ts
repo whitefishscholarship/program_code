@@ -11,6 +11,7 @@ export const P8M_RECEIPT_PATH = `${P8M_OUTPUT_DIRECTORY}/claude-run-receipt.json
 export const P8M_RECONCILIATION_PATH = 'docs/evidence/P8M-proposal-reconciliation.json';
 export const P8M_HUMAN_REVIEW_PATH = 'docs/evidence/P8M-human-review.csv';
 export const P8M_CATALOG_PATH = 'web/fixtures/p7/student-catalog.json';
+export const P8M_HUMAN_FACT_REVIEWER = 'Kelsey Stuart';
 
 const SOURCE_REVISION = '225';
 const SOURCE_SNAPSHOT_SHA256 =
@@ -676,7 +677,7 @@ export function validateP8mPackage(data: P8mPackageData): P8mValidationResult {
       name: award.name,
       source_public_ids: [...award.sourcePublicIds].sort(),
       disposition: 'existing_catalog_child_award_without_a_separate_pinned_source_row',
-      human_review_status: 'pending_named_human_reviewer',
+      human_review_status: 'pending_human_fact_decision',
     }))
     .sort((left, right) => left.award_public_id.localeCompare(right.award_public_id));
   if (catalogOnlyAwards.length !== 16) {
@@ -877,7 +878,7 @@ export function validateP8mPackage(data: P8mPackageData): P8mValidationResult {
       })?.batch_id,
       codex_validation: 'schema_identity_hash_excerpt_and_stable_target_mapping_pass',
       fact_status: 'no_matching_fact_produced',
-      human_review_status: 'pending_named_human_reviewer',
+      human_review_status: 'pending_human_fact_decision',
     };
   });
   const reconciliation = {
@@ -892,7 +893,7 @@ export function validateP8mPackage(data: P8mPackageData): P8mValidationResult {
     status: errors.length === 0 ? 'validated_proposal_only_human_review_pending' : 'invalid',
     codex_validation_scope:
       'All 197 rows: exact identity, closed schema, input/output hashes, row coverage, correction excerpt grounding, prohibited fields, contact-string exclusion, proposal-only counters, recomputed totals, and stable mapping to 176 award plus 21 portal public IDs. This does not accept scholarship truth or semantic tag correctness.',
-    human_fact_reviewer: null,
+    human_fact_reviewer: P8M_HUMAN_FACT_REVIEWER,
     matching_facts_produced: 0,
     accepted_facts: 0,
     reviewer_decisions: 0,
@@ -978,7 +979,7 @@ export function validateP8mPackage(data: P8mPackageData): P8mValidationResult {
       row.ambiguity_note ?? '',
       row.confidence,
       'schema_identity_hash_and_excerpt_pass; proposal_only; not_fact_accepted',
-      '',
+      P8M_HUMAN_FACT_REVIEWER,
       '',
       '',
       '',

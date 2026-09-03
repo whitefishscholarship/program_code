@@ -5,7 +5,7 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8M — post-review proposal package validated; human review blocked
+## P8M — post-review proposal package validated; human decisions pending
 
 - P8M started from delivered live baseline
   `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. The revision check remained `225`, so
@@ -32,10 +32,11 @@ Default branch: `main`
   `docs/evidence/P8M-proposal-reconciliation.json`. Human package:
   `docs/evidence/P8M-human-review.csv`. Complete narrative and exact hashes:
   `docs/evidence/P8M.md`.
-- P8M is `blocked-external` because `[NAME]` remains an unresolved placeholder. A real
-  named human fact reviewer must complete all 197 decisions before fact/P8M acceptance,
-  immutable publication, candidate freeze, final fresh-context repository review,
-  attestation, or delivery. Claude and Codex have accepted zero facts.
+- Kelsey clarified at `2026-09-03T02:48:16Z` that she is the human reviewer. The human
+  fact reviewer is machine-pinned as `Kelsey Stuart`, and the review CSV now prefills
+  that identity. All 197 decisions and rationales remain pending before fact/P8M
+  acceptance, immutable publication, candidate freeze, final fresh-context repository
+  review, attestation, or delivery. Claude and Codex have accepted zero facts.
 - No spreadsheet write, other-tab cell read, external URL read, form/application
   interaction, provider contact, product/runtime/deployment-configuration change,
   P8F, or P9 operation occurred. Stop before P8F and P9.

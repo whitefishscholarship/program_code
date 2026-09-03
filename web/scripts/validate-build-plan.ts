@@ -153,6 +153,10 @@ type P8mProcessingState = {
   matchingFactsProduced: number;
   acceptedFacts: number;
   humanFactReviewer: string | null;
+  humanFactReviewerEvidencePath: string | null;
+  humanFactReviewerNamedAt: string | null;
+  humanReviewDecisionCount: number;
+  humanReviewDecisionStatus: string;
   humanReviewPackagePath: string;
   humanReviewPackageSha256: string;
   reconciliationPath: string;
@@ -1502,7 +1506,12 @@ if (state) {
           processing.rowOutcomeCount !== packageTotals.total_returned_rows ||
           processing.matchingFactsProduced !== 0 ||
           processing.acceptedFacts !== 0 ||
-          processing.humanFactReviewer !== null ||
+          processing.humanFactReviewer !== 'Kelsey Stuart' ||
+          processing.humanFactReviewerEvidencePath !==
+            'docs/evidence/P8M-processing-authority.md' ||
+          processing.humanFactReviewerNamedAt !== '2026-09-03T02:48:16Z' ||
+          processing.humanReviewDecisionCount !== 0 ||
+          processing.humanReviewDecisionStatus !== 'pending_all_197' ||
           processing.humanReviewPackagePath !== P8M_HUMAN_REVIEW_PATH ||
           processing.humanReviewPackageSha256 !== sha256File(P8M_HUMAN_REVIEW_PATH) ||
           processing.reconciliationPath !== P8M_RECONCILIATION_PATH ||

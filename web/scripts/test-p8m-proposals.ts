@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import {
   csvCell,
   loadP8mPackage,
+  P8M_HUMAN_FACT_REVIEWER,
   validateP8mPackage,
   type P8mPackageData,
   type P8mProposalRow,
@@ -38,7 +39,13 @@ function firstRow(data: P8mPackageData): P8mProposalRow {
 }
 
 const baseline = loadP8mPackage(repoRoot);
-assert.deepEqual(validateP8mPackage(baseline).errors, []);
+const baselineResult = validateP8mPackage(baseline);
+assert.deepEqual(baselineResult.errors, []);
+assert.equal(
+  (baselineResult.humanReviewCsv.match(new RegExp(`"${P8M_HUMAN_FACT_REVIEWER}"`, 'g')) ?? [])
+    .length,
+  197,
+);
 assert.equal(csvCell('=1+1'), '"\'=1+1"');
 assert.equal(csvCell(' @SUM(A1:A2)'), '"\' @SUM(A1:A2)"');
 assert.equal(csvCell('ordinary text'), '"ordinary text"');
