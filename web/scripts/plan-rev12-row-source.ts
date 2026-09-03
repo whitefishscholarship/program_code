@@ -130,6 +130,14 @@ export function validatePlanRev12RowSource(
   context: PlanRev12ValidationContext,
 ): string[] {
   const errors: string[] = [];
+  const operationalRowSource = context.rowSource
+    ? {
+        ...context.rowSource,
+        externalSourceReadsAuthorized: false,
+        claudeProcessingAuthorized: false,
+        humanFactReviewer: null,
+      }
+    : undefined;
   if (context.planRevision !== 12) errors.push('Plan Revision 12 must set planRevision to 12');
   if (context.amendmentBaselineCommit !== '57bb062d64f725fa6ce72709f81fe987dde3e2af') {
     errors.push('Plan Revision 12 must bind the verified Revision 11 delivery-closure baseline');
@@ -137,8 +145,8 @@ export function validatePlanRev12RowSource(
   if (!context.amendmentDeliveryAuthorized || context.amendmentEvidencePath !== 'docs/evidence/PLAN-REV12.md') {
     errors.push('Plan Revision 12 delivery requires direct authority bound to its evidence');
   }
-  if (!isDeepStrictEqual(context.rowSource, EXPECTED_PLAN_REV12_ROW_SOURCE)) {
-    errors.push('Plan Revision 12 row-source pin differs from the exact read-only receipt');
+  if (!isDeepStrictEqual(operationalRowSource, EXPECTED_PLAN_REV12_ROW_SOURCE)) {
+    errors.push('Plan Revision 12 row-source identity differs from the exact read-only receipt');
   }
   if (!isDeepStrictEqual(context.amendmentRowSource, EXPECTED_PLAN_REV12_ROW_SOURCE)) {
     errors.push('Plan Revision 12 amendment must bind the exact row-source correction');
@@ -166,16 +174,41 @@ export function validatePlanRev12RowSource(
   ) {
     errors.push('Plan Revision 12 must retain exact P8M delivery authority and no-write scope');
   }
-  if (
-    context.p8mStatus !== 'planned' ||
-    context.activeStageId !== null ||
-    context.nextPermittedStageId !== 'P8M'
-  ) {
-    errors.push('Plan Revision 12 must leave P8M planned and next-permitted without starting it');
-  }
-  for (const blocker of PLAN_REV12_P8M_BLOCKERS) {
-    if (!context.deliveryBlockers.includes(blocker)) {
-      errors.push(`Plan Revision 12 is missing remaining phased blocker ${blocker}`);
+  const externalBlocker = PLAN_REV12_P8M_BLOCKERS[0];
+  const reviewerBlocker = PLAN_REV12_P8M_BLOCKERS[1];
+  if (context.p8mStatus === 'planned') {
+    if (
+      context.rowSource?.externalSourceReadsAuthorized !== false ||
+      context.rowSource?.claudeProcessingAuthorized !== false ||
+      context.rowSource?.humanFactReviewer !== null ||
+      context.activeStageId !== null ||
+      context.nextPermittedStageId !== 'P8M' ||
+      !context.deliveryBlockers.includes(externalBlocker) ||
+      !context.deliveryBlockers.includes(reviewerBlocker)
+    ) {
+      errors.push('Planned P8M must retain both phased blockers and no processing authority');
+    }
+  } else {
+    if (
+      context.rowSource?.externalSourceReadsAuthorized !== true ||
+      context.rowSource?.claudeProcessingAuthorized !== true ||
+      context.deliveryBlockers.includes(externalBlocker)
+    ) {
+      errors.push('Started P8M requires the exact external-source and Claude instruction gate to be satisfied');
+    }
+    const accepted = context.p8mStatus === 'accepted';
+    if (
+      (accepted && (context.activeStageId !== null || context.nextPermittedStageId !== 'P8F')) ||
+      (!accepted && (context.activeStageId !== 'P8M' || context.nextPermittedStageId !== null))
+    ) {
+      errors.push('P8M active/next-stage state is inconsistent with its lifecycle status');
+    }
+    const reviewerNamed = Boolean(context.rowSource?.humanFactReviewer?.trim());
+    if (reviewerNamed === context.deliveryBlockers.includes(reviewerBlocker)) {
+      errors.push('P8M human-reviewer blocker must exactly reflect whether a reviewer is named');
+    }
+    if (accepted && !reviewerNamed) {
+      errors.push('Accepted P8M requires a named human fact reviewer');
     }
   }
   if (

@@ -1,0 +1,742 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-2-26",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-2-26.json",
+ "input_sha256": "b6960d7c6c37e7b9d6b2091fcb1c551ceba3392f21bb7e00cfc9bf54debad9f3",
+ "first_row_number": 2,
+ "last_row_number": 26,
+ "expected_row_count": 25,
+ "returned_row_count": 25,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 2,
+   "source_row_id": "master-database-row-0002",
+   "row_kind": "Scholarship",
+   "source_name": "Ann Marie Guenther Memorial Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads 'Any' while the row limits eligibility to two named high schools; 'Any' asserts no scope rather than a contrary one, so the conflict is flagged and no correction is proposed. State follows the named schools.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 3,
+   "source_row_id": "master-database-row-0003",
+   "row_kind": "Scholarship",
+   "source_name": "The LeRoy W. Homer Jr. Foundation Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 4,
+   "source_row_id": "master-database-row-0004",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Premier Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "automatic_consideration",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states applicants are considered automatically on submitting the admission application, with no separate scholarship application.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 5,
+   "source_row_id": "master-database-row-0005",
+   "row_kind": "Scholarship",
+   "source_name": "UM Academic Achievement Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "automatic_consideration",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state; renewal left unknown.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 6,
+   "source_row_id": "master-database-row-0006",
+   "row_kind": "Scholarship",
+   "source_name": "Pell Promise for Montana Students",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Focus cell lists institutional program categories (liberal arts / professional / pre-professional) rather than a restricted field of study; no closed-domain topic proposed for it.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 7,
+   "source_row_id": "master-database-row-0007",
+   "row_kind": "Scholarship",
+   "source_name": "Blue Collar Brain Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "School-type cell reads 'Trade'; the row text also admits a 2-year college, so both types are proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 8,
+   "source_row_id": "master-database-row-0008",
+   "row_kind": "Scholarship",
+   "source_name": "Don K Chevrolet- Subaru- Chrysler – Dodge – Jeep - Ram Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "community_service",
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "awarded to one qualifying student from each of the following High Schools: Whitefish, Eureka, Bigfork, Columbia Falls, Glacier High and Flathead High",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while the row restricts eligibility to six named local high schools.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 9,
+   "source_row_id": "master-database-row-0009",
+   "row_kind": "Scholarship",
+   "source_name": "Alcohol Responsibility Matters Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "other",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states applications may be submitted either online or by mail; no single closed-domain route covers both.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 10,
+   "source_row_id": "master-database-row-0010",
+   "row_kind": "Scholarship",
+   "source_name": "Glacier Bank Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 11,
+   "source_row_id": "master-database-row-0011",
+   "row_kind": "Scholarship",
+   "source_name": "Black Mountain Software Scholarship (2 - $1,000)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Any Montana high school senior graduating in 2026 may apply if he or she will be attending an accredited institution of higher education.",
+     "confidence": "high"
+    },
+    {
+     "field": "Due Date",
+     "proposed_value": "2/26/2026",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "All submissions must be received before midnight on or before February 26th, 2026.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National though eligibility is stated as Montana-only; due-date cell year (2025) disagrees with the year stated in the row (2026).",
+   "confidence": "high"
+  },
+  {
+   "row_number": 12,
+   "source_row_id": "master-database-row-0012",
+   "row_kind": "Scholarship",
+   "source_name": "Hawkins Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row text is a one-line checklist reference; award amount and provider detail are not stated.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 13,
+   "source_row_id": "master-database-row-0013",
+   "row_kind": "Scholarship",
+   "source_name": "Clearwater Credit Union Scholarship (8 - $2,500)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "credit_union"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Due Date",
+     "proposed_value": "3/31/2026",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Complete an online scholarship application by March 31, 2026, at 11:59pm.",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell records an opening date while the row states a submission deadline.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 14,
+   "source_row_id": "master-database-row-0014",
+   "row_kind": "Scholarship",
+   "source_name": "The Luedke Family Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "paper",
+    "topic_tags": [
+     "financial_need",
+     "overcoming_adversity"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Row names disability and discrimination as qualifying hardships; the controlled topic list has no general disability or discrimination value. Geography cell reads 'Any' while the row limits eligibility to two named high schools; 'Any' asserts no scope rather than a contrary one, so the conflict is flagged and no correction is proposed. State follows the named schools.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 15,
+   "source_row_id": "master-database-row-0015",
+   "row_kind": "Scholarship",
+   "source_name": "John Michaels Memorial Scholarship ($2,000)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell is blank.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 16,
+   "source_row_id": "master-database-row-0016",
+   "row_kind": "Scholarship",
+   "source_name": "Herriges Family Memorial Scholarship (3) $3000",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "community_service",
+     "financial_need",
+     "merit",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 17,
+   "source_row_id": "master-database-row-0017",
+   "row_kind": "Portal",
+   "source_name": "Horatio Alger Association - Career & Technical Candidates",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "overcoming_adversity",
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell is blank. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 18,
+   "source_row_id": "master-database-row-0018",
+   "row_kind": "Scholarship",
+   "source_name": "Ortho Rehab \"Reach Your Peak\"",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 19,
+   "source_row_id": "master-database-row-0019",
+   "row_kind": "Scholarship",
+   "source_name": "Whitefish Lake Institute Ripple Effect Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "agriculture_conservation",
+     "stem"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "This scholarship is available to any Whitefish High School senior who is entering a four year university with plans to major in an environmental science field.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to seniors of one named high school.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 20,
+   "source_row_id": "master-database-row-0020",
+   "row_kind": "Scholarship",
+   "source_name": "VFW Voices of Democracy - Patriotic Audio Essay “How Are You Showing Patriotism And Support For Our Country?”\n",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Application Link/Method",
+     "proposed_value": "Paper Application",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "you can mail or drop off in person",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell reads Online Application while the row describes physical submission of the recording and entry form to a local post.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 21,
+   "source_row_id": "master-database-row-0021",
+   "row_kind": "Scholarship",
+   "source_name": "Elks Most Valuable Student Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "two_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Sponsored by a fraternal lodge, but the row states membership is expressly not required, so no affiliation topic is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 22,
+   "source_row_id": "master-database-row-0022",
+   "row_kind": "Scholarship",
+   "source_name": "Jack Kent Cooke Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states the application is submitted through a third-party common application platform.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 23,
+   "source_row_id": "master-database-row-0023",
+   "row_kind": "Portal",
+   "source_name": "MT DOT Aviation Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "unknown",
+    "application_route": "paper",
+    "topic_tags": [
+     "aviation_maintenance",
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row names a state transportation program while the geography cell reads National; no eligibility scope is stated in the row. School-type and renewal cells are blank.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 24,
+   "source_row_id": "master-database-row-0024",
+   "row_kind": "Scholarship",
+   "source_name": "National Honor Society Member Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "community_service",
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "School-type cell is blank. Row requires membership in a national honor society; the controlled topic list has no value for that affiliation.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 25,
+   "source_row_id": "master-database-row-0025",
+   "row_kind": "Scholarship",
+   "source_name": "Hagan Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need",
+     "merit",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 26,
+   "source_row_id": "master-database-row-0026",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Jaycee Foundation Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "duplicate_name",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount cell and row text state different award figures; due-date cell and row text state different days, and the row's day reference names no month. School-type cell reads 'Any' while the row text names colleges and universities and refers separately to a vocational form; the twin row narrows to trade and certificate types.",
+   "confidence": "medium"
+  }
+ ],
+ "output_body_sha256": "c8a4709aa44e8f1ecf691e3441a4a825e1e8c69e298be1a2d7c73b49d640c262"
+}

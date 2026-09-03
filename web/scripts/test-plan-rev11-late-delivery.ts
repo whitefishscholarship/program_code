@@ -36,8 +36,8 @@ const target = {
 };
 
 assert(state.planRevision >= 11);
-assert.equal(state.activeStageId, null);
-assert.equal(state.nextPermittedStageId, 'P8M');
+assert.equal(state.activeStageId, 'P8M');
+assert.equal(state.nextPermittedStageId, null);
 const revision11 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV11');
 assert(revision11, 'PLAN-REV11 amendment record is required');
 assert.equal(revision11.baselineCommit, target.baselineCommit);

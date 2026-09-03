@@ -5,7 +5,52 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Plan Revision 12 — row-source correction — candidate in progress; P8M unstarted
+## P8M — post-review proposal package validated; human review blocked
+
+- P8M started from delivered live baseline
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. The revision check remained `225`, so
+  no re-pin was required. The authorized column-A URL queue was zero; no external URL
+  was read.
+- Kelsey authorized the exact 197-row read-only proposal pass and later clarified that
+  the pasted Claude narrative was pre-review while the attached receipt and nine
+  `/private/tmp/p8m-claude-output` files were the post-review result. The preserved
+  receipt SHA-256 is
+  `1437a4db1c345d91b40466eeb2773db576245982834ff9b656cdc6a80500cb60`; the recomputed
+  combined proposal digest is
+  `75eebc9abd6d84d2e6e266b9c44255289c9c7cdb669c73caf85ed5cefe91024f`.
+- Codex independently validates all 197 written rows: 176 Scholarship and 21 Portal,
+  rows 2–198 exactly once, 197 unique source-row IDs, closed controlled values, every
+  correction excerpt verbatim in its cited source cell, zero proposal-row contacts or
+  prohibited identity fields, zero matching/accepted facts, and all hashes/totals
+  recomputed. The guard rejects 18 adversarial mutations.
+- Stable target reconciliation maps the rows to 176 unique accepted P7 award public
+  IDs and 21 unique portal public IDs. Duplicate-name rows 26 and 27 are disambiguated
+  by amount, GPA, and school type. Sixteen catalog-only child awards are explicitly
+  related to row 79's portal and retained in the child-award review queue; they are not
+  additional source rows and no application-group field was created.
+- Authoritative reconciliation:
+  `docs/evidence/P8M-proposal-reconciliation.json`. Human package:
+  `docs/evidence/P8M-human-review.csv`. Complete narrative and exact hashes:
+  `docs/evidence/P8M.md`.
+- P8M is `blocked-external` because `[NAME]` remains an unresolved placeholder. A real
+  named human fact reviewer must complete all 197 decisions before fact/P8M acceptance,
+  immutable publication, candidate freeze, final fresh-context repository review,
+  attestation, or delivery. Claude and Codex have accepted zero facts.
+- No spreadsheet write, other-tab cell read, external URL read, form/application
+  interaction, provider contact, product/runtime/deployment-configuration change,
+  P8F, or P9 operation occurred. Stop before P8F and P9.
+- P8M proposal validation, its 18-case adversarial guard, all 13 plan contracts,
+  typecheck, the complete test suite, the current-tree supported Webpack production
+  build, and root whitespace validation pass. The final exact default build rerun is
+  environment-blocked on Turbopack local-port `EPERM`; an earlier exact default run
+  passed before the review-export hardening. Existing middleware-deprecation and
+  Edge-runtime warnings remain explicitly non-P8M.
+
+## Plan Revision 12 — row-source correction — delivered baseline
+
+- Candidate `24c6b91bfb8366b4d20c9c153f5f447438ac387f` and direct-child attestation
+  `22b09618e66adbe132e7004b23987e21b0460ea8` were delivered in PR #35. Merge commit
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` is the P8M baseline.
 
 - Kelsey corrected the P8M source model: the original `Master Database` never had an
   application-group field or cycle/cycle-ID field. Blank cells normally mean the
@@ -28,14 +73,14 @@ Default branch: `main`
   `57bb062d64f725fa6ce72709f81fe987dde3e2af`. It preserves the immutable Revision 10
   matching contract and every accepted artifact. No product/data/runtime/workflow or
   deployment-configuration change is in scope.
-- P8M remains planned and sole next-permitted. Before external URL reads or Claude
-  processing, the exact URL-bearing source columns, official-source allowlist, and
-  bounded Claude instruction must be pinned. Before fact or stage acceptance, the
-  human fact reviewer must be named. Claude is proposal-only. No spreadsheet write is
+- At Revision 12 closure, P8M remained planned and sole next-permitted. Its later
+  processing instruction satisfied the URL-column/allowlist/Claude gate without
+  producing an authorized URL. The named human fact reviewer is still required before
+  fact or stage acceptance. Claude remains proposal-only and no spreadsheet write is
   authorized.
-- Governed Git delivery and resulting Vercel Preview/Production verification are
-  directly authorized for this amendment. Freeze, independently review, attest, and
-  deliver Revision 12 only. Do not start P8M execution, P8F, or P9 in this amendment.
+- Governed Git delivery and resulting Vercel Preview/Production verification for the
+  amendment completed before P8M began. Revision 12 itself performed no P8M execution,
+  P8F, or P9 work.
 - Pre-freeze focused tests, typecheck, the complete test suite, the exact default
   production build, and whitespace checks pass. Plan validation reports only the three
   expected pre-attestation gates. Dependency audit remains explicit: two moderate

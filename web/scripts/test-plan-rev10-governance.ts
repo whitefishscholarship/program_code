@@ -175,8 +175,8 @@ type MatchingContract = {
 
 const state = readJson<BuildState>('docs/BUILD_STATE.json');
 assert(state.planRevision >= 10);
-assert.equal(state.activeStageId, null);
-assert.equal(state.nextPermittedStageId, 'P8M');
+assert.equal(state.activeStageId, 'P8M');
+assert.equal(state.nextPermittedStageId, null);
 
 const stageIds = state.stages.map(({ id }) => id);
 assert.deepEqual(stageIds.slice(-3), ['P8M', 'P8F', 'P9']);
@@ -184,8 +184,8 @@ const p8m = state.stages.find(({ id }) => id === 'P8M');
 assert.deepEqual(p8m, {
   id: 'P8M',
   name: 'Matching-fact enrichment and acceptance',
-  status: 'planned',
-  baselineCommit: null,
+  status: 'blocked-external',
+  baselineCommit: '55245dc42a726d57ef3bdbeeab7aa27fcce31d17',
   evidencePath: 'docs/evidence/P8M.md',
   manifestPath: 'docs/evidence/P8M-manifest.json',
   reviewPath: 'docs/reviews/P8M.json',
