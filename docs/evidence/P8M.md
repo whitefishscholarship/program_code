@@ -1,8 +1,8 @@
 # P8M — human-reviewed reconciliation and immutable publication candidate
 
-Status: `VERIFIED CANDIDATE`; fresh-context review is complete, direct-child
-attestation remains required before canonical acceptance, and remote delivery remains
-required before P8F
+Status: `PROSPECTIVE ACCEPTED-STATE CANDIDATE`; sequencing approval is recorded, while
+fresh accepted-state review, direct-child attestation, and remote delivery remain
+required before P8F may begin
 
 Observed through: `2026-09-06`
 
@@ -23,6 +23,14 @@ completed all 197 row decisions. The result is reconciled below. It accepts zero
 matching facts because official verification remained unavailable; reviewed controlled
 tags are isolated to sorting, filtering, and grouping. Independent repository review,
 attestation, and Git/Vercel delivery remain separate gates.
+
+At `2026-09-07T04:45:20Z`, after the documented sequencing risk was disclosed,
+Kelsey Stuart explicitly approved changing the P8M candidate to prospective
+`accepted` state and setting P8F as next-permitted before the P8M manifest/review
+attestation exists. The approval expressly does not authorize starting P8F. The
+prospective state is necessary because the validator requires the candidate named by
+the manifest to contain the accepted P8M transition; it does not make the stage
+canonically accepted before fresh review and the direct-child attestation.
 
 The exact instruction and its resolved read boundary are recorded in
 `docs/evidence/P8M-processing-authority.md`. The proposal instruction is
@@ -206,25 +214,34 @@ no cycle, cycle-ID, or application-group field.
 
 ## Verification and acceptance gate
 
-Pre-freeze verification on the isolated acceptance worktree:
+Accepted-state pre-freeze verification completed on the isolated acceptance worktree
+through `2026-09-07T04:51:15Z`:
 
 - `npm ci`: PASS; 462 packages installed from the lockfile.
 - `npm run p8m:proposal:check` and `npm run p8m:proposal:test`: PASS; 197 rows and
   19 fail-closed proposal mutations.
 - `npm run p8m:acceptance:check` and `npm run p8m:acceptance:test`: PASS; exact human
   package/publication reconstruction plus seven fail-closed acceptance mutations.
-- `npm run plan:check`: PASS for all 13 ordered stage contracts.
+- Exact `npm run plan:check`: the restricted wrapper could not create its local IPC
+  socket (`listen EPERM`). The supported direct invocation,
+  `node --import tsx scripts/validate-build-plan.ts`, reached the validator and reported
+  exactly the three expected pre-attestation conditions: the accepted P8M identity is
+  not yet bound to a canonical attestation, `docs/evidence/P8M-manifest.json` is absent,
+  and the committed manifest/review attestation is absent. No other plan error was
+  reported.
 - `npm run typecheck`: PASS.
 - `npm test`: PASS, including the complete P0–P8R matrix and both P8M suites.
 - `npm run build`: dependency fetching succeeded, but the exact Turbopack build then
   failed because its CSS worker attempted a prohibited local port bind (`EPERM`).
 - `npm run build -- --webpack`: PASS on the same candidate; only the existing
   middleware-deprecation and Edge-runtime compatibility warnings remained.
-- `npm audit --omit=dev --json`: one moderate production advisory in transitive `qs`,
-  with zero critical/high. A fix is available but dependency mutation is outside P8M;
-  route it to separately authorized maintenance.
-- `git diff --check`: PASS after declaring the governed CRLF review CSV as
-  `cr-at-eol`; the review file's accepted SHA-256 remains unchanged.
+- `npm audit --audit-level=low --json`: two moderate transitive advisories overall,
+  `@humanfs/node` and `qs`, with zero critical/high.
+- `npm audit --omit=dev --audit-level=low --json`: one moderate production advisory in
+  transitive `qs`, with zero critical/high. Fixes are available, but dependency
+  mutation is outside P8M; route them to separately authorized maintenance.
+- `git diff --check`: PASS; the governed CRLF review file remains covered by the
+  repository's `cr-at-eol` rule and its accepted SHA-256 is unchanged.
 
 The first fresh-context review of candidate `c2213f3` returned C0/H0/M2/L1. Its three
 findings were remediated before the next freeze: every Claude input `fields` object is
@@ -239,28 +256,26 @@ finding. The direct-child review record must retain C0/H0/M2/L2 and four count-m
 resolved dispositions; this final documentation update also requires the same
 reviewer's byte-level recheck before attestation.
 
-The candidate is not canonically accepted merely because `BUILD_STATE.json` describes
-a verified publication candidate. Canonical acceptance requires the exact candidate
-manifest and a fresh-context C0/H0 review in the direct-child attestation.
+The candidate is not canonically accepted merely because `BUILD_STATE.json`
+prospectively describes P8M as accepted and P8F as next-permitted. Canonical acceptance
+still requires the exact candidate manifest and a fresh-context C0/H0 review in the
+direct-child attestation; P8F remains prohibited until that attestation is delivered
+and verified on live `origin/main`.
 
-At the start of closeout, Git remote refresh and repository lookup were unavailable:
-SSH reported `Repository not found`, and both locally configured GitHub identities
-reported invalid authentication. No credential was requested, copied, or stored. The
-last locally verified `origin/main` remains
-`55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. Before attestation or remote delivery, a
-fresh session must reauthenticate securely through the browser/keychain, verify the
-remote baseline is still exact, and rerun the final review if any candidate byte or
-baseline changes. Do not create an undeliverable attestation commit.
+Secure GitHub browser/keyring authentication was restored as active account
+`whitefishscholarship` without requesting, copying, or exposing a credential. An
+authenticated normal-Git HTTPS fetch at `2026-09-07T04:45:20Z`, followed by the final
+pre-freeze authenticated fetch at `2026-09-07T04:53:14Z`, confirmed live
+`origin/main` remains exact baseline
+`55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. The Revision 12 direct-child
+attestation remains in its ancestry and no existing P8M pull request was found.
 
-There is also an unresolved acceptance-sequencing gate. Repository validation binds
-accepted P8M state from the candidate commit and permits only the manifest and review
-record in its direct child. During closeout, the active safety gate refused a candidate
-edit that would mark P8M accepted or expose P8F before the attestation exists, and
-required fresh informed user approval after disclosure or a materially safer governed
-plan correction. No workaround was attempted. The current candidate therefore remains
-`verified`, with P8M active and `nextPermittedStageId` null. Do not attest it as an
-accepted stage. Resolve this sequencing gate, then refreeze, regenerate the manifest,
-and have the same fresh-context reviewer recheck all changed bytes.
+The acceptance-sequencing gate is resolved by Kelsey's explicit approval recorded
+above. The predecessor candidate `a63423daf0c448bfca089b3b7c59ec1c7c52fc74`
+remains a documented verified-state checkpoint, not the final accepted candidate. The
+accepted-state bytes must now pass the complete matrix, be frozen in a new commit,
+receive a regenerated manifest and genuinely fresh read-only review, and only then be
+followed by the exact two-file direct-child attestation.
 
 Stop before P8F and P9. P8F may begin only after the P8M direct-child attestation is
 merged and the exact live `origin/main` delivery is verified.

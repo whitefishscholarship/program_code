@@ -17,6 +17,7 @@ const state = JSON.parse(read('docs/BUILD_STATE.json')) as {
   planRevision: number;
   activeStageId: string | null;
   nextPermittedStageId: string | null;
+  stages: Array<{ id: string; status: string }>;
   governance: {
     planAmendments: Array<{
       id: string;
@@ -36,8 +37,9 @@ const target = {
 };
 
 assert(state.planRevision >= 11);
-assert.equal(state.activeStageId, 'P8M');
-assert.equal(state.nextPermittedStageId, null);
+assert.equal(state.stages.find(({ id }) => id === 'P8M')?.status, 'accepted');
+assert.equal(state.activeStageId, null);
+assert.equal(state.nextPermittedStageId, 'P8F');
 const revision11 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV11');
 assert(revision11, 'PLAN-REV11 amendment record is required');
 assert.equal(revision11.baselineCommit, target.baselineCommit);

@@ -176,8 +176,6 @@ type MatchingContract = {
 
 const state = readJson<BuildState>('docs/BUILD_STATE.json');
 assert(state.planRevision >= 10);
-assert.equal(state.activeStageId, 'P8M');
-assert.equal(state.nextPermittedStageId, null);
 
 const stageIds = state.stages.map(({ id }) => id);
 assert.deepEqual(stageIds.slice(-3), ['P8M', 'P8F', 'P9']);
@@ -185,13 +183,15 @@ const p8m = state.stages.find(({ id }) => id === 'P8M');
 assert.deepEqual(p8m, {
   id: 'P8M',
   name: 'Matching-fact enrichment and acceptance',
-  status: 'verified',
+  status: 'accepted',
   baselineCommit: '55245dc42a726d57ef3bdbeeab7aa27fcce31d17',
   evidencePath: 'docs/evidence/P8M.md',
   manifestPath: 'docs/evidence/P8M-manifest.json',
   reviewPath: 'docs/reviews/P8M.json',
   kickoffPath: 'docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md',
 });
+assert.equal(state.activeStageId, null);
+assert.equal(state.nextPermittedStageId, 'P8F');
 assert.equal(state.stages.find(({ id }) => id === 'P8F')?.status, 'planned');
 assert.equal(state.stages.find(({ id }) => id === 'P9')?.status, 'planned');
 
@@ -223,7 +223,7 @@ assert.equal(transition.formerProduction.accessAuthorized, false);
 assert.equal(transition.applicationRuntime.sourceMode, 'validated_immutable_versioned_publication');
 assert.equal(
   transition.applicationRuntime.publicationStatus,
-  'candidate_immutable_versioned_publication',
+  'accepted_immutable_versioned_publication',
 );
 assert.equal(
   transition.applicationRuntime.publicationPath,

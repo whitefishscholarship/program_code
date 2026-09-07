@@ -232,7 +232,7 @@
         "publicationPath": "web/fixtures/p8m/matching-facts-v1.json",
         "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
         "spreadsheetWrites": 0,
-        "finalFreshContextReviewStatus": "pending_fresh_context_review"
+        "finalFreshContextReviewStatus": "bound_by_canonical_direct_child_attestation"
       },
       "formerProduction": {
         "spreadsheetId": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
@@ -243,7 +243,7 @@
       },
       "applicationRuntime": {
         "sourceMode": "validated_immutable_versioned_publication",
-        "publicationStatus": "candidate_immutable_versioned_publication",
+        "publicationStatus": "accepted_immutable_versioned_publication",
         "mutableMasterDirectReadAuthorized": false,
         "runtimeReadAuthorityStatus": "not_authorized",
         "publicationEvidencePath": "docs/evidence/P8M.md",
@@ -706,8 +706,8 @@
       }
     ]
   },
-  "activeStageId": "P8M",
-  "nextPermittedStageId": null,
+  "activeStageId": null,
+  "nextPermittedStageId": "P8F",
   "stages": [
     {
       "id": "P0",
@@ -812,7 +812,7 @@
     {
       "id": "P8M",
       "name": "Matching-fact enrichment and acceptance",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "55245dc42a726d57ef3bdbeeab7aa27fcce31d17",
       "evidencePath": "docs/evidence/P8M.md",
       "manifestPath": "docs/evidence/P8M-manifest.json",

@@ -5,7 +5,7 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8M — review-cleared verified candidate awaiting attestation and delivery
+## P8M — prospective accepted-state candidate awaiting fresh review, attestation, and delivery
 
 - Work continues from baseline
   `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` on isolated branch
@@ -29,33 +29,35 @@ Default branch: `main`
   authorized column-A boundary.
 - No spreadsheet read/write occurred in this continuation. No other tab, external URL,
   form, login, application, provider, applicant data, P8F, or P9 was accessed.
-- The fresh-context reviewer returned C0/H0. Two medium and two low findings were
-  remediated and rechecked with no open finding: source input fields are now bound
-  exactly to the snapshot, stale review-state text and blocker state are corrected,
-  and acceptance is distinguished from remote delivery. P8M remains `verified`, not
-  accepted, until the exact manifest and review record are committed together as the
-  candidate's direct child. Remote delivery and live verification remain absolute
-  gates before P8F.
-- At closeout, remote authentication is unavailable: SSH reports `Repository not
-  found`, and both locally configured GitHub identities report invalid authentication.
-  No credential was requested or stored. Do not create an undeliverable attestation.
-  Resume from `docs/kickoffs/P8M-ACCEPTANCE-DELIVERY-RESUME.md`; securely reauthenticate,
-  verify the remote baseline, then complete review/attestation/delivery without changing
-  candidate bytes unless the review or baseline requires a new freeze.
-- A second acceptance-sequencing blocker is explicit. The repository validator expects
-  accepted P8M state to be present in the candidate that the two-file direct-child
-  attests, but the active safety gate refused changing `BUILD_STATE.json` to accepted
-  or exposing P8F before that attestation exists. The refusal expressly requires fresh
-  informed user approval after this risk disclosure, or a materially safer governed
-  plan correction. Do not bypass the refusal and do not attest the current `verified`
-  candidate as though it were accepted. The next session must resolve this gate before
-  regenerating the final accepted-state candidate, manifest, and review record.
-- Pre-freeze P8M proposal/acceptance guards, plan validation, typecheck, and the full
-  test suite pass. The exact Turbopack build reaches compilation but is blocked by its
-  local-port `EPERM`; the supported Webpack production build passes on the same tree.
-  A read-only production audit reports one moderate transitive `qs` advisory and zero
-  critical/high. Do not change dependencies inside P8M; trigger separately authorized
-  maintenance after this stage is delivered.
+- The earlier fresh-context review returned C0/H0 after two medium and two low findings
+  were remediated. That review is historical evidence for the predecessor bytes only.
+  The accepted-state transition below changes the candidate and therefore requires a
+  new manifest and genuinely fresh read-only review before attestation.
+- At `2026-09-07T04:45:20Z`, after the documented sequencing risk was disclosed,
+  Kelsey Stuart explicitly approved changing the P8M candidate to prospective
+  `accepted` state and setting P8F as next-permitted before the manifest/review
+  attestation exists. The approval expressly does not authorize starting P8F.
+  `docs/BUILD_STATE.json` now records P8M `accepted`, no active stage, P8F
+  next-permitted, the accepted immutable publication state, and final review binding by
+  the canonical direct-child attestation. These are prospective candidate assertions,
+  not canonical acceptance or permission to execute P8F.
+- Secure GitHub browser/keyring authentication was restored as the active
+  `whitefishscholarship` account without requesting or exposing a credential. An
+  authenticated normal-Git HTTPS fetch, repeated immediately before freeze at
+  `2026-09-07T04:53:14Z`, confirmed live `origin/main` remains exact baseline
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`, and the Revision 12
+  candidate/direct-child two-file attestation topology remains intact. No P8M pull
+  request existed at that check.
+- The accepted-state P8M proposal and acceptance checks, locked install, typecheck,
+  complete test suite, supported Webpack production build, both dependency audits, and
+  root whitespace check passed or produced their expected bounded result through
+  `2026-09-07T04:51:15Z`. Exact `npm run build` reached compilation but its Turbopack
+  worker was blocked by the restricted runner's local-port `EPERM`; the Webpack build
+  passed. Exact `npm run plan:check` hit the same runner's IPC restriction, while its
+  direct validator invocation reported only the three expected missing-attestation
+  conditions. Audits reported two moderate transitive advisories overall and one in
+  production (`qs`), with zero critical/high. Do not change dependencies inside P8M;
+  trigger separately authorized maintenance after this stage is delivered.
 
 ## Plan Revision 12 — row-source correction — delivered baseline
 
