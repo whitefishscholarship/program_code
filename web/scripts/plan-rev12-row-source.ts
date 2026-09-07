@@ -211,8 +211,10 @@ export function validatePlanRev12RowSource(
       errors.push('P8M human-reviewer blocker must exactly reflect whether a reviewer is named');
     }
     const decisionsBlocked = context.deliveryBlockers.includes(P8M_HUMAN_DECISIONS_BLOCKER);
-    if ((!accepted && reviewerNamed) !== decisionsBlocked) {
-      errors.push('P8M human-decision blocker must remain until the named reviewer completes review');
+    const decisionsShouldBeBlocked =
+      reviewerNamed && !['verified', 'accepted'].includes(context.p8mStatus ?? '');
+    if (decisionsShouldBeBlocked !== decisionsBlocked) {
+      errors.push('P8M human-decision blocker must exactly reflect review completion state');
     }
     if (accepted && !reviewerNamed) {
       errors.push('Accepted P8M requires a named human fact reviewer');

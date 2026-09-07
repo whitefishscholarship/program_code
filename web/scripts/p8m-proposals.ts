@@ -587,6 +587,13 @@ export function validateP8mPackage(data: P8mPackageData): P8mValidationResult {
       ) {
         errors.push(`${label} does not match the pinned source snapshot`);
       }
+      if (
+        !inputRow ||
+        !sourceRow ||
+        stableJson(inputRow.fields) !== stableJson(sourceRow.cells)
+      ) {
+        errors.push(`${label} input fields differ from the pinned source snapshot cells`);
+      }
 
       requireEnum(errors, row.processing_outcome, PROCESSING_OUTCOMES, `${label}.processing_outcome`);
       requireEnum(errors, row.tags.geography_scope, GEOGRAPHY_VALUES, `${label}.geography_scope`);

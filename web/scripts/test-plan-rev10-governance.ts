@@ -362,9 +362,10 @@ assert.equal(
   p8mAuthorization.evidencePath,
   state.planRevision >= 12 ? 'docs/evidence/PLAN-REV12.md' : null,
 );
-assert(
+assert.equal(
   state.deployment.deliveryBlockers.some((item) => item.startsWith('P8M-')),
-  'P8M must retain any unsatisfied phased gate',
+  !['verified', 'accepted'].includes(p8m!.status),
+  'P8M blockers must exactly reflect whether its pre-review phase gates remain unsatisfied',
 );
 const p9Authorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P9',

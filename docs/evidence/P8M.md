@@ -1,8 +1,9 @@
-# P8M — proposal reconciliation and human-review handoff
+# P8M — human-reviewed reconciliation and immutable publication candidate
 
-Status: `BLOCKED` before fact acceptance, P8M acceptance, attestation, or delivery
+Status: `VERIFIED CANDIDATE`; fresh-context review, direct-child attestation, and
+remote delivery remain required before canonical acceptance
 
-Observed through: `2026-09-03T02:48:16Z`
+Observed through: `2026-09-06`
 
 Baseline: `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`
 
@@ -16,11 +17,11 @@ external-source queue was zero. Claude was proposal-only. No spreadsheet write, 
 acceptance, application/form entry, provider contact, other-tab cell read, P8F, or P9
 operation was authorized or performed.
 
-Kelsey clarified at `2026-09-03T02:48:16Z` that she is the human reviewer. The human
-fact reviewer is now machine-pinned as `Kelsey Stuart`. This establishes reviewer
-identity only; it records no row decision or accepted fact. All 197 decisions remain
-pending before P8M acceptance, candidate freeze, independent acceptance review,
-attestation, or Git/Vercel delivery.
+Kelsey clarified at `2026-09-03T02:48:16Z` that she is the human reviewer and has now
+completed all 197 row decisions. The result is reconciled below. It accepts zero
+matching facts because official verification remained unavailable; reviewed controlled
+tags are isolated to sorting, filtering, and grouping. Independent repository review,
+attestation, and Git/Vercel delivery remain separate gates.
 
 The exact instruction and its resolved read boundary are recorded in
 `docs/evidence/P8M-processing-authority.md`. The proposal instruction is
@@ -208,7 +209,7 @@ Pre-freeze verification on the isolated acceptance worktree:
 
 - `npm ci`: PASS; 462 packages installed from the lockfile.
 - `npm run p8m:proposal:check` and `npm run p8m:proposal:test`: PASS; 197 rows and
-  the original 18 fail-closed proposal mutations.
+  19 fail-closed proposal mutations.
 - `npm run p8m:acceptance:check` and `npm run p8m:acceptance:test`: PASS; exact human
   package/publication reconstruction plus seven fail-closed acceptance mutations.
 - `npm run plan:check`: PASS for all 13 ordered stage contracts.
@@ -223,6 +224,15 @@ Pre-freeze verification on the isolated acceptance worktree:
   route it to separately authorized maintenance.
 - `git diff --check`: PASS after declaring the governed CRLF review CSV as
   `cr-at-eol`; the review file's accepted SHA-256 remains unchanged.
+
+The first fresh-context review of candidate `c2213f3` returned C0/H0/M2/L1. All three
+findings were remediated before the final freeze: every Claude input `fields` object is
+now deep-compared with its pinned snapshot row and covered by an adversarial mutation;
+the stale pending-review introduction in this evidence was replaced with the current
+verified-candidate state; and the completed-human-decisions blocker was removed while
+the stage remains gated by verified status and the required review/attestation. The
+final review record must retain three count-matched dispositions and the same reviewer
+must recheck every changed byte before attestation.
 
 The candidate is not canonically accepted merely because `BUILD_STATE.json` describes
 a verified publication candidate. Canonical acceptance requires the exact candidate

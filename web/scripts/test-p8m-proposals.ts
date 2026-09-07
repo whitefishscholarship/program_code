@@ -124,6 +124,10 @@ const mutations: Array<(data: P8mPackageData) => void> = [
     )!;
     duplicate.publicId = 'award-invalid';
   },
+  (data) => {
+    const input = data.inputs.values().next().value!;
+    input.rows[0].fields.Summary = 'tampered input field';
+  },
 ];
 
 for (const [index, mutate] of mutations.entries()) {
