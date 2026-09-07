@@ -1,7 +1,7 @@
 # P8M — human-reviewed reconciliation and immutable publication candidate
 
-Status: `VERIFIED CANDIDATE`; fresh-context review, direct-child attestation, and
-remote delivery remain required before canonical acceptance
+Status: `VERIFIED CANDIDATE`; fresh-context review and direct-child attestation remain
+required before canonical acceptance; remote delivery remains required before P8F
 
 Observed through: `2026-09-06`
 
