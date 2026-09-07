@@ -1,0 +1,697 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-102-126",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-102-126.json",
+ "input_sha256": "777cb4c7c5fcb2280e72156f876f0cac7930a18cd40f623b3b1e559412c4ee90",
+ "first_row_number": 102,
+ "last_row_number": 126,
+ "expected_row_count": 25,
+ "returned_row_count": 25,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 102,
+   "source_row_id": "master-database-row-0102",
+   "row_kind": "Scholarship",
+   "source_name": "Western Undergraduate Exchange (WUE) Tuition Discount",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "automatic_consideration",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while the row limits eligibility to a named subset of participating states; the row does not name those states, so no corrected value is proposed.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 103,
+   "source_row_id": "master-database-row-0103",
+   "row_kind": "Scholarship",
+   "source_name": "Presidential Leadership Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount and due-date cells are unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 104,
+   "source_row_id": "master-database-row-0104",
+   "row_kind": "Scholarship",
+   "source_name": "Provost’s Honors Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount and due-date cells are unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 105,
+   "source_row_id": "master-database-row-0105",
+   "row_kind": "Scholarship",
+   "source_name": "Dean’s Leadership Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount and due-date cells are unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 106,
+   "source_row_id": "master-database-row-0106",
+   "row_kind": "Scholarship",
+   "source_name": "Payne Family Impact Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount and due-date cells are unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 107,
+   "source_row_id": "master-database-row-0107",
+   "row_kind": "Scholarship",
+   "source_name": "National Merit Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 108,
+   "source_row_id": "master-database-row-0108",
+   "row_kind": "Scholarship",
+   "source_name": "Grizzly Battalion Army ROTC Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Row states applications are obtained through high school guidance offices or the sponsoring department. A reserve officer training program is a service commitment rather than veteran status, and no closer controlled topic value exists. Amount and due-date cells are unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 109,
+   "source_row_id": "master-database-row-0109",
+   "row_kind": "Scholarship",
+   "source_name": "Fly for Duke Aviation Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Amount cell is unspecified and the due-date cell defers to a future application round.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 110,
+   "source_row_id": "master-database-row-0110",
+   "row_kind": "Scholarship",
+   "source_name": "NATA Richard L. Taylor Flight Training Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Provider and amount cells are blank or unspecified. Route is a third-party form platform.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 111,
+   "source_row_id": "master-database-row-0111",
+   "row_kind": "Scholarship",
+   "source_name": "Strategic Partner Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "unknown"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. A transportation-industry field of study has no controlled topic value. Due-date cell is unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 112,
+   "source_row_id": "master-database-row-0112",
+   "row_kind": "Scholarship",
+   "source_name": "Sharon D. Banks Memorial Undergraduate Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "female"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. A transportation field of study has no controlled topic value. Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 113,
+   "source_row_id": "master-database-row-0113",
+   "row_kind": "Scholarship",
+   "source_name": "Molitoris Leadership Scholarship for Undergraduates",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "female",
+     "leadership"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. A transportation field of study has no controlled topic value. Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 114,
+   "source_row_id": "master-database-row-0114",
+   "row_kind": "Scholarship",
+   "source_name": "Junior College/Trade School Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "female"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "School-type cell names only a two-year type while the row also admits trade colleges, so both are proposed. Renewal cell reads 'Any'. A transportation field of study has no controlled topic value. Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 115,
+   "source_row_id": "master-database-row-0115",
+   "row_kind": "Scholarship",
+   "source_name": "WTS Transportation YOU High School Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "female",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 116,
+   "source_row_id": "master-database-row-0116",
+   "row_kind": "Scholarship",
+   "source_name": "Kitchen Cabinet Kings 2026 Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "business_finance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 117,
+   "source_row_id": "master-database-row-0117",
+   "row_kind": "Scholarship",
+   "source_name": "Nelson Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "arts_humanities",
+     "business_finance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Interior design and architecture have no exact controlled topic value and are proposed as arts and humanities.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 118,
+   "source_row_id": "master-database-row-0118",
+   "row_kind": "Scholarship",
+   "source_name": "Anne Ford Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "learning_other"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row encourages applicants with attention-deficit conditions only where a documented learning disability is also present, so no separate attention-deficit topic is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 119,
+   "source_row_id": "master-database-row-0119",
+   "row_kind": "Scholarship",
+   "source_name": "Allegra Ford Thomas Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "learning_other"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "School-type cell reads 'Any' while the row lists only two-year, vocational and specialized programs; the proposed types follow the row text, and 'Any' may mean any of those listed, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 120,
+   "source_row_id": "master-database-row-0120",
+   "row_kind": "Scholarship",
+   "source_name": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 121,
+   "source_row_id": "master-database-row-0121",
+   "row_kind": "Scholarship",
+   "source_name": "Aircraft Lighting International Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell refers to a later application round than the pinned source revision.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 122,
+   "source_row_id": "master-database-row-0122",
+   "row_kind": "Scholarship",
+   "source_name": "James Hammond Joubert Memorial Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell refers to a later application round than the pinned source revision.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 123,
+   "source_row_id": "master-database-row-0123",
+   "row_kind": "Scholarship",
+   "source_name": "Pat Napolitano Memorial Scholarship for Aspiring Technicians",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell refers to a later application round than the pinned source revision.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 124,
+   "source_row_id": "master-database-row-0124",
+   "row_kind": "Scholarship",
+   "source_name": "David Arver Memorial Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell refers to a later application round than the pinned source revision.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 125,
+   "source_row_id": "master-database-row-0125",
+   "row_kind": "Scholarship",
+   "source_name": "Dutch and Ginger Arver Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell refers to a later application round than the pinned source revision.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 126,
+   "source_row_id": "master-database-row-0126",
+   "row_kind": "Scholarship",
+   "source_name": "Captain Judy Rice Pilot Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  }
+ ],
+ "output_body_sha256": "53fe145a73d7274054a82d50f57e9985941fd7da6f21c4124bf2a55acdfdbbd8"
+}

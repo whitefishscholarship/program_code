@@ -1,0 +1,711 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-127-151",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-127-151.json",
+ "input_sha256": "dec8723417b8ebaa083a38c33dd0b4dcacab913b654f6aee07532e8126d8bf6c",
+ "first_row_number": 127,
+ "last_row_number": 151,
+ "expected_row_count": 25,
+ "returned_row_count": 25,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 127,
+   "source_row_id": "master-database-row-0127",
+   "row_kind": "Scholarship",
+   "source_name": "Pilot Scholarship for Flight Training",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 128,
+   "source_row_id": "master-database-row-0128",
+   "row_kind": "Scholarship",
+   "source_name": "King Air Nation Pilot Scholarship for Flight Training",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 129,
+   "source_row_id": "master-database-row-0129",
+   "row_kind": "Scholarship",
+   "source_name": "Aircraft Mechanic Scholarship (CVG Airport)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 130,
+   "source_row_id": "master-database-row-0130",
+   "row_kind": "Scholarship",
+   "source_name": "Aircraft Mechanic Scholarship (New Smyrna Beach)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "aviation_maintenance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 131,
+   "source_row_id": "master-database-row-0131",
+   "row_kind": "Scholarship",
+   "source_name": "2024-2025 ADHD Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "adhd"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. Provider, amount and due-date cells are blank or unspecified. Award name carries an earlier award year than the pinned source revision.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 132,
+   "source_row_id": "master-database-row-0132",
+   "row_kind": "Scholarship",
+   "source_name": "HPFY Make a Difference Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 133,
+   "source_row_id": "master-database-row-0133",
+   "row_kind": "Scholarship",
+   "source_name": "Fred J. Epstein Youth Achievement Award",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "adhd",
+     "learning_other"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row names learning disabilities and attention-deficit conditions together without stating whether both are required, so both topics are proposed. Due-date cell holds a bare number rather than a date.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 134,
+   "source_row_id": "master-database-row-0134",
+   "row_kind": "Scholarship",
+   "source_name": "Special Recognition Award",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "adhd",
+     "learning_other"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row names learning disabilities and attention-deficit conditions together without stating whether both are required, so both topics are proposed. Due-date cell holds a bare number rather than a date.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 135,
+   "source_row_id": "master-database-row-0135",
+   "row_kind": "Scholarship",
+   "source_name": "The Neurodiversity Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "adhd",
+     "autism",
+     "dyslexia",
+     "financial_need",
+     "learning_other"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 136,
+   "source_row_id": "master-database-row-0136",
+   "row_kind": "Scholarship",
+   "source_name": "The Joseph James Morelli Legacy Foundation Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "dyslexia",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell points to a different organization than the provider named elsewhere in the row; this is noted for review rather than corrected, because a link target alone is not treated as evidence. Amount and due-date cells are unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 137,
+   "source_row_id": "master-database-row-0137",
+   "row_kind": "Scholarship",
+   "source_name": "Wells Fargo Stacey Milbern Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "chronic_health",
+     "merit"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Renewing/ Non-Renewing",
+     "proposed_value": "Renewing",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "A renewable scholarship ($2,500 full-time / $1,250 half-time) for students with a disability",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any' while the row states the award is renewable. Disability is defined broadly as a long-term condition affecting a major life activity, which has no exact controlled topic value. Due-date cell is blank.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 138,
+   "source_row_id": "master-database-row-0138",
+   "row_kind": "Scholarship",
+   "source_name": "All-American Pest Control STEAM Trailblazer Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "female",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Focus names an arts component alongside science and mathematics; only the science topic is proposed. Due-date cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 139,
+   "source_row_id": "master-database-row-0139",
+   "row_kind": "Scholarship",
+   "source_name": "Hilleman Scholars Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "leadership"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row requires enrolment at one named university but states no residency restriction, so the geography cell is not treated as contradicted. Amount and due-date cells are unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 140,
+   "source_row_id": "master-database-row-0140",
+   "row_kind": "Scholarship",
+   "source_name": "Live Your Dream Award",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "caregiving",
+     "female",
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 141,
+   "source_row_id": "master-database-row-0141",
+   "row_kind": "Scholarship",
+   "source_name": "Occupational Safety and Health / Industrial Hygiene Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Occupational safety and industrial hygiene have no exact controlled topic value. Due-date cell holds a bare number rather than a date, and the amount cell is unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 142,
+   "source_row_id": "master-database-row-0142",
+   "row_kind": "Scholarship",
+   "source_name": "Bold $25,000 Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states a general purpose of easing education costs but no need requirement, so no financial-need topic is proposed. Due-date cell is unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 143,
+   "source_row_id": "master-database-row-0143",
+   "row_kind": "Scholarship",
+   "source_name": "National Technical Honor Society",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. Eligibility requires membership in a technical honor society, which has no controlled topic value. Due-date cell holds a bare number rather than a date.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 144,
+   "source_row_id": "master-database-row-0144",
+   "row_kind": "Scholarship",
+   "source_name": "Associated General Contractors of America’s Workforce Development Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 145,
+   "source_row_id": "master-database-row-0145",
+   "row_kind": "Scholarship",
+   "source_name": "The Kim and Harold Louie Family Foundation 2026 Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states no eligibility criteria or focus. Amount and due-date cells are blank or unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 146,
+   "source_row_id": "master-database-row-0146",
+   "row_kind": "Scholarship",
+   "source_name": "Workforce Development Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row text is a single sentence and the due-date cell is unspecified. Route is a third-party application platform.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 147,
+   "source_row_id": "master-database-row-0147",
+   "row_kind": "Scholarship",
+   "source_name": "2nd Chance Scholarships for College or Trade Schools",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell holds a bare number rather than a date and the row states no submission deadline, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 148,
+   "source_row_id": "master-database-row-0148",
+   "row_kind": "Scholarship",
+   "source_name": "Welder Training Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "certificate",
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Certificate type is taken from the row's description of a certificate program under two years. Amount cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 149,
+   "source_row_id": "master-database-row-0149",
+   "row_kind": "Scholarship",
+   "source_name": "Work Ethic Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Two-year type is taken from the row's description of a two-year or shorter trade program. Amount cell is unspecified.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 150,
+   "source_row_id": "master-database-row-0150",
+   "row_kind": "Scholarship",
+   "source_name": "FEC Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "electric_coop"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "School-type and renewal cells are blank; renewal is taken from the row's description of awards that renew for more than one year, and a blank cell is not treated as contradicted so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 151,
+   "source_row_id": "master-database-row-0151",
+   "row_kind": "Scholarship",
+   "source_name": "AFSA No Essay Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "any_or_unspecified",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell points to a differently named award programme than this row; this is noted for review rather than corrected, because a link target alone is not treated as evidence. Due-date cell names one deadline while the row names two.",
+   "confidence": "medium"
+  }
+ ],
+ "output_body_sha256": "f8eb7aa5e1c623ba4b0e6b291c2379083632fd760b651024e796f08ec423c65f"
+}

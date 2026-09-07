@@ -1,11 +1,73 @@
 # Current Handoff
 
-Last updated: 2026-09-02
+Last updated: 2026-09-06
 Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Plan Revision 12 — row-source correction — candidate in progress; P8M unstarted
+## P8M — prospective accepted-state candidate awaiting fresh review, attestation, and delivery
+
+- Work continues from baseline
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` on isolated branch
+  `codex/p8m-acceptance`. The pinned source remains revision `225`, range
+  `'Master Database'!A1:O198`, with 197 rows: 176 Scholarship and 21 Portal.
+- Kelsey Stuart completed all 197 human decisions. The exact governed review package,
+  companion source fields, digest, and validation receipt are pinned in
+  `docs/BUILD_STATE.json` and explained in `docs/evidence/P8M.md`. Only the four human
+  decision columns differ from the generated review baseline.
+- Final tag decisions are 176 approve, 14 revise, and 7 completed
+  `needs_more_evidence`. Correction decisions are 38 approve, one reject, and 158
+  `not_applicable`, covering 40 candidates. Approved corrections remain unapplied.
+- `web/fixtures/p8m/matching-facts-v1.json` contains all 197 human-reviewed controlled
+  tag outcomes for sorting, filtering, and grouping only. It contains zero accepted
+  matching facts, and every row is explicitly non-matching pending official
+  verification. Missing or unavailable facts remain unknown and non-excluding.
+- The source package contains 100 literal application-method URLs and 97 rows without
+  one. It exposes no hidden native hyperlink target and none of the 187 populated
+  location fields contains a literal URL. All 197 rows therefore retain
+  `official_verification_required`; no URL was invented or discovered outside the
+  authorized column-A boundary.
+- No spreadsheet read/write occurred in this continuation. No other tab, external URL,
+  form, login, application, provider, applicant data, P8F, or P9 was accessed.
+- The earlier fresh-context review returned C0/H0 after two medium and two low findings
+  were remediated. Fresh accepted-state reviewer `/root/p8m_fresh_acceptance_review`
+  then rejected candidate `bc7a237efd4f7241a21c10415b5bc704e55a4e4d` at
+  C0/H0/M2/L3 for one new low-only evidence inconsistency: an earlier paragraph said
+  the proposal suite had 18 mutations while the suite and final verification correctly
+  reported 19. This replacement corrects that stale count; the same reviewer must
+  recheck its exact bytes and regenerated manifest before attestation.
+- At `2026-09-07T04:45:20Z`, after the documented sequencing risk was disclosed,
+  Kelsey Stuart explicitly approved changing the P8M candidate to prospective
+  `accepted` state and setting P8F as next-permitted before the manifest/review
+  attestation exists. The approval expressly does not authorize starting P8F.
+  `docs/BUILD_STATE.json` now records P8M `accepted`, no active stage, P8F
+  next-permitted, the accepted immutable publication state, and final review binding by
+  the canonical direct-child attestation. These are prospective candidate assertions,
+  not canonical acceptance or permission to execute P8F.
+- Secure GitHub browser/keyring authentication was restored as the active
+  `whitefishscholarship` account without requesting or exposing a credential. An
+  authenticated normal-Git HTTPS fetch, repeated before the original freeze at
+  `2026-09-07T04:53:14Z` and before the post-review replacement freeze at
+  `2026-09-07T05:08:04Z`, confirmed live `origin/main` remains exact baseline
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`, and the Revision 12
+  candidate/direct-child two-file attestation topology remains intact. No P8M pull
+  request existed at that check.
+- The accepted-state P8M proposal and acceptance checks, locked install, typecheck,
+  complete test suite, supported Webpack production build, both dependency audits, and
+  root whitespace check passed or produced their expected bounded result through
+  `2026-09-07T04:51:15Z`. Exact `npm run build` reached compilation but its Turbopack
+  worker was blocked by the restricted runner's local-port `EPERM`; the Webpack build
+  passed. Exact `npm run plan:check` hit the same runner's IPC restriction, while its
+  direct validator invocation reported only the three expected missing-attestation
+  conditions. Audits reported two moderate transitive advisories overall and one in
+  production (`qs`), with zero critical/high. Do not change dependencies inside P8M;
+  trigger separately authorized maintenance after this stage is delivered.
+
+## Plan Revision 12 — row-source correction — delivered baseline
+
+- Candidate `24c6b91bfb8366b4d20c9c153f5f447438ac387f` and direct-child attestation
+  `22b09618e66adbe132e7004b23987e21b0460ea8` were delivered in PR #35. Merge commit
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` is the P8M baseline.
 
 - Kelsey corrected the P8M source model: the original `Master Database` never had an
   application-group field or cycle/cycle-ID field. Blank cells normally mean the
@@ -28,14 +90,14 @@ Default branch: `main`
   `57bb062d64f725fa6ce72709f81fe987dde3e2af`. It preserves the immutable Revision 10
   matching contract and every accepted artifact. No product/data/runtime/workflow or
   deployment-configuration change is in scope.
-- P8M remains planned and sole next-permitted. Before external URL reads or Claude
-  processing, the exact URL-bearing source columns, official-source allowlist, and
-  bounded Claude instruction must be pinned. Before fact or stage acceptance, the
-  human fact reviewer must be named. Claude is proposal-only. No spreadsheet write is
+- At Revision 12 closure, P8M remained planned and sole next-permitted. Its later
+  processing instruction satisfied the URL-column/allowlist/Claude gate without
+  producing an authorized URL. The named human fact reviewer is still required before
+  fact or stage acceptance. Claude remains proposal-only and no spreadsheet write is
   authorized.
-- Governed Git delivery and resulting Vercel Preview/Production verification are
-  directly authorized for this amendment. Freeze, independently review, attest, and
-  deliver Revision 12 only. Do not start P8M execution, P8F, or P9 in this amendment.
+- Governed Git delivery and resulting Vercel Preview/Production verification for the
+  amendment completed before P8M began. Revision 12 itself performed no P8M execution,
+  P8F, or P9 work.
 - Pre-freeze focused tests, typecheck, the complete test suite, the exact default
   production build, and whitespace checks pass. Plan validation reports only the three
   expected pre-attestation gates. Dependency audit remains explicit: two moderate

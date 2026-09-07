@@ -1,0 +1,712 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-152-176",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-152-176.json",
+ "input_sha256": "8707e80f376f8648be792c613a3adc8d3587bb94dee4a241aa58a4a57597f4a3",
+ "first_row_number": 152,
+ "last_row_number": 176,
+ "expected_row_count": 25,
+ "returned_row_count": 25,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 152,
+   "source_row_id": "master-database-row-0152",
+   "row_kind": "Portal",
+   "source_name": "Pride Foundation Community Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "lgbtqia"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Eligibility spans five named states, which no controlled geography value represents, so geography is left unknown. Renewal cell reads 'Any', which is not a renewal state. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 153,
+   "source_row_id": "master-database-row-0153",
+   "row_kind": "Scholarship",
+   "source_name": "Point Foundation Flagship Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need",
+     "lgbtqia",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 154,
+   "source_row_id": "master-database-row-0154",
+   "row_kind": "Scholarship",
+   "source_name": "Fisher House Scholarships for Military Children",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "two_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell names a separate application portal operated for military-affiliated awards.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 155,
+   "source_row_id": "master-database-row-0155",
+   "row_kind": "Scholarship",
+   "source_name": "AMVETS Children/Grandchildren Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 156,
+   "source_row_id": "master-database-row-0156",
+   "row_kind": "Portal",
+   "source_name": "Montana National Guard Tuition Waiver",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states the student must personally be a serving member, so this is not a dependant benefit.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 157,
+   "source_row_id": "master-database-row-0157",
+   "row_kind": "Portal",
+   "source_name": "War Orphans Tuition Waiver (MUS)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "loss_of_parent",
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 158,
+   "source_row_id": "master-database-row-0158",
+   "row_kind": "Scholarship",
+   "source_name": "The Gates Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "asian_pacific_islander",
+     "black_african_american",
+     "financial_need",
+     "hispanic_latino",
+     "merit",
+     "native_american"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 159,
+   "source_row_id": "master-database-row-0159",
+   "row_kind": "Scholarship",
+   "source_name": "CSKT Higher Education Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "native_american"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 160,
+   "source_row_id": "master-database-row-0160",
+   "row_kind": "Scholarship",
+   "source_name": "Blackfeet Nation Higher Education Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "native_american"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell gives direct contact details for the administering department rather than an application method, so the route is proposed as an offline enquiry. Amount cell asks the reader to verify the figure with the provider.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 161,
+   "source_row_id": "master-database-row-0161",
+   "row_kind": "Scholarship",
+   "source_name": "Louise A. Dean All Montana Tribal Nations Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need",
+     "native_american"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 162,
+   "source_row_id": "master-database-row-0162",
+   "row_kind": "Portal",
+   "source_name": "Montana American Indian Tuition Waiver",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "financial_need",
+     "native_american"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Route cell holds an information page while the row states that application is made through campus financial aid, so the offline route is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 163,
+   "source_row_id": "master-database-row-0163",
+   "row_kind": "Scholarship",
+   "source_name": "NFPA (National Foster Parent Association) Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "foster_care"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Eligibility additionally requires that a supporting adult hold membership of the sponsoring association, which has no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 164,
+   "source_row_id": "master-database-row-0164",
+   "row_kind": "Scholarship",
+   "source_name": "Adoption STAR Academic Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "foster_care",
+     "overcoming_adversity"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Due Date",
+     "proposed_value": "May 31",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Due May 31.",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell reads Ongoing while the row states a specific deadline.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 165,
+   "source_row_id": "master-database-row-0165",
+   "row_kind": "Portal",
+   "source_name": "Montana Foster Youth Higher Education Assistance Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "financial_need",
+     "foster_care"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 166,
+   "source_row_id": "master-database-row-0166",
+   "row_kind": "Scholarship",
+   "source_name": "Coca-Cola Scholars Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "leadership",
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 167,
+   "source_row_id": "master-database-row-0167",
+   "row_kind": "Scholarship",
+   "source_name": "Dell Scholars Program",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need",
+     "overcoming_adversity"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Due Date",
+     "proposed_value": "February 15",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Due February 15.",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Due-date cell and row text state different deadlines. Eligibility additionally requires prior participation in an approved college-readiness programme, which has no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 168,
+   "source_row_id": "master-database-row-0168",
+   "row_kind": "Scholarship",
+   "source_name": "Heroes' Legacy Scholarship (Fisher House)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "two_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "loss_of_parent",
+     "military_veteran"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 169,
+   "source_row_id": "master-database-row-0169",
+   "row_kind": "Scholarship",
+   "source_name": "Montana STEM/Healthcare Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "healthcare",
+     "merit",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 170,
+   "source_row_id": "master-database-row-0170",
+   "row_kind": "Scholarship",
+   "source_name": "Montana FFA Foundation Leave a Legacy Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "agriculture_conservation"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Membership of the agricultural youth organisation is the gating criterion and is proposed as an agricultural topic. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 171,
+   "source_row_id": "master-database-row-0171",
+   "row_kind": "Scholarship",
+   "source_name": "Rhino Roofing 2026 Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "email",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Seven $1,000 scholarships for 2026 graduating high school seniors from Flathead, Lake, Missoula, or Ravalli Counties in Montana",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads Regional while eligibility is limited to four named counties within one state. Route cell holds an application page while the row states the application is submitted by email; the route follows the row text and no route correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 172,
+   "source_row_id": "master-database-row-0172",
+   "row_kind": "Scholarship",
+   "source_name": "Bernard Greufe Memorial Honor Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "agriculture_conservation"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Gating criterion is membership of a farm bureau, which is a different organisation from the farmers union in the controlled topic list, so no affiliation topic is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 173,
+   "source_row_id": "master-database-row-0173",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Farm Bureau Women's Leadership Committee Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "agriculture_conservation"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Sponsoring committee is a women's committee but the row states the award is open to both boys and girls, so no sex-based topic is proposed. Farm bureau membership has no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 174,
+   "source_row_id": "master-database-row-0174",
+   "row_kind": "Scholarship",
+   "source_name": "MABA-MGEA Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "agriculture_conservation",
+     "business_finance"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 175,
+   "source_row_id": "master-database-row-0175",
+   "row_kind": "Portal",
+   "source_name": "National FFA Scholarship Program",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "agriculture_conservation"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 176,
+   "source_row_id": "master-database-row-0176",
+   "row_kind": "Scholarship",
+   "source_name": "EAA Ray Aviation Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "other",
+    "topic_tags": [
+     "aviation_pilot"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Selection is made by a participating local chapter rather than through a direct application, so no listed route applies. Row states there is no single national deadline.",
+   "confidence": "high"
+  }
+ ],
+ "output_body_sha256": "0431ceef52dcbf269137bc433e60bae4cae3232800cae984e6a41d8623df832a"
+}

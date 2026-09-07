@@ -1,0 +1,270 @@
+{
+ "schema_version": 1,
+ "receipt_id": "p8m-claude-run-receipt-v1",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "status": "proposal_only_complete",
+ "source": {
+  "spreadsheet_revision": "225",
+  "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+  "authorized_tab": "Master Database",
+  "authorized_gid": 0,
+  "used_range": "'Master Database'!A1:O198",
+  "repository_baseline": "55245dc42a726d57ef3bdbeeab7aa27fcce31d17"
+ },
+ "versions": {
+  "claude_code_version": "2.1.74",
+  "claude_code_version_source": "observed via `claude --version` on PATH; not independently proven to be the harness build",
+  "model_identifier": "claude-opus-5",
+  "model_identifier_source": "session-reported exact model id"
+ },
+ "batches": [
+  {
+   "batch_id": "p8m-rev225-rows-2-26",
+   "input_filename": "rows-2-26.json",
+   "input_sha256": "b6960d7c6c37e7b9d6b2091fcb1c551ceba3392f21bb7e00cfc9bf54debad9f3",
+   "output_filename": "rows-2-26.proposals.json",
+   "output_body_sha256": "c8a4709aa44e8f1ecf691e3441a4a825e1e8c69e298be1a2d7c73b49d640c262",
+   "output_sha256": "57f935a4ea3da4d5d0a24fd978a225bf3ce1ba32d9294384be2bc443871363b6",
+   "first_row_number": 2,
+   "last_row_number": 26,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-27-51",
+   "input_filename": "rows-27-51.json",
+   "input_sha256": "4cc7c6cffac6b082f7a00a03526bbeefbda7361a71eebe15304c5dc1bd8d2056",
+   "output_filename": "rows-27-51.proposals.json",
+   "output_body_sha256": "5330b08e3a772a866369714caa6abc6e06420a45532868638121fb240c18028a",
+   "output_sha256": "436836f4613c5f1ebda58cbfc0bdb0b74575037976fd32e7137a66365bb7abe2",
+   "first_row_number": 27,
+   "last_row_number": 51,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-52-76",
+   "input_filename": "rows-52-76.json",
+   "input_sha256": "c110bbadb8b8529bbe8b20112088181cdee4f6d2cccc2ef5ba687c2e4130cf45",
+   "output_filename": "rows-52-76.proposals.json",
+   "output_body_sha256": "69ed26300fbd496c1d0748f19db5e4b986939cced3ae7882d7c632f651b3761f",
+   "output_sha256": "1bcde3bba128db415b0da72a4032a91231779facedce36ef4fb5060522805023",
+   "first_row_number": 52,
+   "last_row_number": 76,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-77-101",
+   "input_filename": "rows-77-101.json",
+   "input_sha256": "05213a818c24b92edac41590c2bc1f7622de5168e30fb69f50f09bb1eb87979a",
+   "output_filename": "rows-77-101.proposals.json",
+   "output_body_sha256": "ca056883b77bf1edafd31586e81956ede7f8ffca43152681d918bba08161c6cb",
+   "output_sha256": "c167afad914f4da9188eadbd588cd1358ffe4838e2e3ce5099780de16003e56e",
+   "first_row_number": 77,
+   "last_row_number": 101,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-102-126",
+   "input_filename": "rows-102-126.json",
+   "input_sha256": "777cb4c7c5fcb2280e72156f876f0cac7930a18cd40f623b3b1e559412c4ee90",
+   "output_filename": "rows-102-126.proposals.json",
+   "output_body_sha256": "53fe145a73d7274054a82d50f57e9985941fd7da6f21c4124bf2a55acdfdbbd8",
+   "output_sha256": "40cb5447184b631bb720f0509c6e1e85fc9085c1e450a0f1b4c480c905c04654",
+   "first_row_number": 102,
+   "last_row_number": 126,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-127-151",
+   "input_filename": "rows-127-151.json",
+   "input_sha256": "dec8723417b8ebaa083a38c33dd0b4dcacab913b654f6aee07532e8126d8bf6c",
+   "output_filename": "rows-127-151.proposals.json",
+   "output_body_sha256": "f8eb7aa5e1c623ba4b0e6b291c2379083632fd760b651024e796f08ec423c65f",
+   "output_sha256": "598fc186001565f47c4264d9e408edd5a08f3d8a855ece158fdbf3bf562e42c0",
+   "first_row_number": 127,
+   "last_row_number": 151,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-152-176",
+   "input_filename": "rows-152-176.json",
+   "input_sha256": "8707e80f376f8648be792c613a3adc8d3587bb94dee4a241aa58a4a57597f4a3",
+   "output_filename": "rows-152-176.proposals.json",
+   "output_body_sha256": "0431ceef52dcbf269137bc433e60bae4cae3232800cae984e6a41d8623df832a",
+   "output_sha256": "5b71095c7f825fd1f9a9489dcfd8b2f097cbfffe9fccacec4b504f9b2dd2f73a",
+   "first_row_number": 152,
+   "last_row_number": 176,
+   "expected_row_count": 25,
+   "returned_row_count": 25,
+   "status": "complete"
+  },
+  {
+   "batch_id": "p8m-rev225-rows-177-198",
+   "input_filename": "rows-177-198.json",
+   "input_sha256": "c09cf702542af09de69c8fa905ac992cf1c7b0187546342aaaf50276545f9047",
+   "output_filename": "rows-177-198.proposals.json",
+   "output_body_sha256": "56a6929e4497bd3f11641ea83c3755d668f692d0cde472fbcce8dc8272919d8e",
+   "output_sha256": "4b8fd30255425acd4ae00d78e47e12492f871d7393f5f7b4238b89e0c98aad0f",
+   "first_row_number": 177,
+   "last_row_number": 198,
+   "expected_row_count": 22,
+   "returned_row_count": 22,
+   "status": "complete"
+  }
+ ],
+ "totals": {
+  "total_expected_rows": 197,
+  "total_returned_rows": 197,
+  "unique_source_row_ids": 197,
+  "unique_row_numbers": 197,
+  "scholarship_rows": 176,
+  "portal_rows": 21,
+  "duplicate_name_rows": [
+   26,
+   27
+  ],
+  "processing_outcomes": {
+   "proposed_tags_and_corrections": 39,
+   "proposed_tags_only": 158
+  },
+  "row_confidence": {
+   "high": 138,
+   "low": 1,
+   "medium": 58
+  },
+  "correction_candidate_count": 40,
+  "correction_candidates_by_field": {
+   "Application Link/Method": 1,
+   "Due Date": 10,
+   "In-State / National": 28,
+   "Renewing/ Non-Renewing": 1
+  },
+  "correction_candidates_by_confidence": {
+   "high": 28,
+   "medium": 12
+  },
+  "manual_review_reason_counts": {
+   "ambiguous_value": 77,
+   "duplicate_name": 2,
+   "internal_conflict": 60,
+   "missing_information": 52,
+   "official_verification_required": 197,
+   "source_queue_empty_by_column_a_boundary": 197,
+   "unsupported_taxonomy": 38
+  },
+  "ambiguity_note_count": 165,
+  "geography_scope_counts": {
+   "any_or_unspecified": 22,
+   "montana": 79,
+   "national": 88,
+   "unknown": 8
+  },
+  "application_route_counts": {
+   "automatic_consideration": 3,
+   "email": 3,
+   "offline_or_counselor": 8,
+   "other": 2,
+   "paper": 46,
+   "provider_form": 99,
+   "provider_portal": 32,
+   "unknown": 4
+  },
+  "renewal_counts": {
+   "non_renewing": 135,
+   "renewable": 37,
+   "unknown": 25
+  },
+  "school_type_tag_counts": {
+   "any": 115,
+   "certificate": 5,
+   "four_year": 43,
+   "trade_vocational": 27,
+   "two_year": 18,
+   "unknown": 12
+  },
+  "topic_tag_counts": {
+   "adhd": 4,
+   "agriculture_conservation": 9,
+   "arts_humanities": 8,
+   "asian_pacific_islander": 1,
+   "athletics_sports": 4,
+   "autism": 1,
+   "aviation_maintenance": 8,
+   "aviation_pilot": 9,
+   "black_african_american": 1,
+   "business_finance": 4,
+   "caregiving": 1,
+   "chronic_health": 2,
+   "community_service": 26,
+   "company_employee": 3,
+   "credit_union": 2,
+   "dyslexia": 2,
+   "electric_coop": 4,
+   "elks_lodge": 1,
+   "farmers_union": 3,
+   "female": 12,
+   "financial_need": 46,
+   "first_generation": 1,
+   "first_responder": 4,
+   "foster_care": 3,
+   "general": 22,
+   "healthcare": 5,
+   "hispanic_latino": 1,
+   "homelessness": 2,
+   "law": 1,
+   "leadership": 10,
+   "learning_other": 6,
+   "lgbtqia": 2,
+   "loss_of_parent": 2,
+   "mental_health": 1,
+   "merit": 34,
+   "military_veteran": 6,
+   "native_american": 5,
+   "nursing": 1,
+   "overcoming_adversity": 10,
+   "public_service": 1,
+   "stem": 13,
+   "trades": 21,
+   "unknown": 4,
+   "work_experience": 9
+  }
+ },
+ "side_effects": {
+  "external_url_reads": 0,
+  "redirects_followed": 0,
+  "spreadsheet_reads": 0,
+  "spreadsheet_writes": 0,
+  "forms_or_applications_entered": 0,
+  "provider_contacts": 0,
+  "applicant_data_operations": 0,
+  "matching_facts_produced": 0,
+  "accepted_facts": 0,
+  "reviewer_decisions": 0,
+  "prohibited_concept_fields_created": 0,
+  "repository_files_modified": 0,
+  "git_state_changes": 0,
+  "p8f_or_p9_operations": 0
+ },
+ "boundaries": {
+  "role": "proposal_only",
+  "reviewer_identity": "[NAME] is an unresolved placeholder and cannot satisfy any acceptance gate",
+  "matching_facts_suppressed_because": "matching-facts-v1 factSchema.requiredFields mandates source_url, observed_at, reviewer_id, reviewed_at, review_rationale and cycle_id; a zero-URL pass with an unresolved reviewer cannot establish them and cycle_id may not be fabricated",
+  "authorized_external_url_queue": 0,
+  "geography_inference_rule": "geography_scope follows the row's own text. 'In-State' or 'Any' cells resolve to montana only where the row names a Montana locality or institution (for example a named Montana county, university, or the source high school); where the row names no such anchor the value stays unknown. Rows naming a locality but whose geography cell makes a contrary positive claim that the row does not resolve to a state are left unknown and flagged internal_conflict. Multi-state scopes have no controlled value and are left unknown with unsupported_taxonomy.",
+  "shared_application_note": "The pinned row schema has no shared-application field. Rows whose text states that one application serves other awards record that in ambiguity_note for the human shared-application review queue; no new field was created.",
+  "column_a_header": "Last Updated"
+ },
+ "combined_output_sha256": "75eebc9abd6d84d2e6e266b9c44255289c9c7cdb669c73caf85ed5cefe91024f",
+ "combined_output_sha256_formula": "sha256(utf8('\\n'.join('<batch_id>:<output_body_sha256>' for the eight batches in row order))); output_body_sha256 = sha256(utf8(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',',':'))))"
+}

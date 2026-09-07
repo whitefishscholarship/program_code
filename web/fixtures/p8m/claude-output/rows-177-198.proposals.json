@@ -1,0 +1,616 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-177-198",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-177-198.json",
+ "input_sha256": "c09cf702542af09de69c8fa905ac992cf1c7b0187546342aaaf50276545f9047",
+ "first_row_number": 177,
+ "last_row_number": 198,
+ "expected_row_count": 22,
+ "returned_row_count": 22,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 177,
+   "source_row_id": "master-database-row-0177",
+   "row_kind": "Portal",
+   "source_name": "American Welding Society (AWS) Idaho/Montana Section Scholarships",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Geography cell reads Regional and the row limits eligibility to two named states; no controlled geography value represents that, so geography is left unknown and the cell is not treated as contradicted. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 178,
+   "source_row_id": "master-database-row-0178",
+   "row_kind": "Scholarship",
+   "source_name": "Lineman Country Scholarship (Southeast Lineman Training Center)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 179,
+   "source_row_id": "master-database-row-0179",
+   "row_kind": "Scholarship",
+   "source_name": "International Lineman's Rodeo Association (ILRA) Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need",
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Eligibility is gated on being the child of, or recommended by, a qualified tradesperson, which has no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 180,
+   "source_row_id": "master-database-row-0180",
+   "row_kind": "Scholarship",
+   "source_name": "NESA Scholarships (National Eagle Scout Association)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "unknown"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Renewal cell reads 'Any', which is not a renewal state. Eligibility is gated on scouting rank and association membership, which have no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 181,
+   "source_row_id": "master-database-row-0181",
+   "row_kind": "Scholarship",
+   "source_name": "Donald Runnicles Musical Arts Scholarship Competition (Grand Teton Music Festival)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "arts_humanities"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Geography cell reads Regional and the row limits eligibility to three named states; no controlled geography value represents that, so geography is left unknown and the cell is not treated as contradicted.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 182,
+   "source_row_id": "master-database-row-0182",
+   "row_kind": "Portal",
+   "source_name": "ESA Foundation Computer & Video Game Arts Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "arts_humanities",
+     "financial_need",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row states a priority for applicants of particular sexes or gender identities; that priority is not a requirement, so no sex or gender topic is proposed. The financial-need topic comes from the row's own acute-financial-need cell, not from that priority statement.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 183,
+   "source_row_id": "master-database-row-0183",
+   "row_kind": "Portal",
+   "source_name": "ESA Foundation Esports Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Competitive collegiate gaming has no controlled topic value, so no field topic is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 184,
+   "source_row_id": "master-database-row-0184",
+   "row_kind": "Scholarship",
+   "source_name": "Vegetarian Resource Group (VRG) Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Dietary advocacy has no controlled topic value; the proposed topic reflects the row's requirement of promotion within schools and communities.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 185,
+   "source_row_id": "master-database-row-0185",
+   "row_kind": "Scholarship",
+   "source_name": "Duck Brand \"Stuck at Prom\" Scholarship Contest",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "arts_humanities"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Row describes a photo and design contest rather than a conventional application, and names several states where entry is excluded; neither has a controlled value.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 186,
+   "source_row_id": "master-database-row-0186",
+   "row_kind": "Portal",
+   "source_name": "2026 Montana 4-H Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Membership of a youth organisation is the gating criterion and has no controlled topic value. Row states the due date is not shown on the live portal page. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 187,
+   "source_row_id": "master-database-row-0187",
+   "row_kind": "Portal",
+   "source_name": "FIRST Scholarship Portal (Pearson Futures)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Row describes an aggregating portal rather than a single award, with amounts, eligibility and deadlines varying by partner scholarship. Renewal cell reads 'Any'. Participation in a robotics programme is the gating criterion and has no controlled topic value. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 188,
+   "source_row_id": "master-database-row-0188",
+   "row_kind": "Scholarship",
+   "source_name": "GBCI Leadership Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "company_employee"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Scholarship Location/Information",
+     "evidence_excerpt": "Montana (Glacier Bancorp employees/families)",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while the location cell names a single state; the employer may operate across states, so the correction is proposed at reduced confidence. Minimum GPA cell is blank.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 189,
+   "source_row_id": "master-database-row-0189",
+   "row_kind": "Scholarship",
+   "source_name": "Dearborn Ranch Montana Game Wardens Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "first_responder"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Eligibility is limited to children of serving officers, so this is a family-affiliation award.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 190,
+   "source_row_id": "master-database-row-0190",
+   "row_kind": "Scholarship",
+   "source_name": "Dearborn Ranch Montana Highway Patrol Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "first_responder"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Eligibility is limited to children of serving officers, so this is a family-affiliation award.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 191,
+   "source_row_id": "master-database-row-0191",
+   "row_kind": "Scholarship",
+   "source_name": "Kay McMillan Nursing Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "healthcare",
+     "nursing"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 192,
+   "source_row_id": "master-database-row-0192",
+   "row_kind": "Scholarship",
+   "source_name": "Alan & Janette Blackburn Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 193,
+   "source_row_id": "master-database-row-0193",
+   "row_kind": "Scholarship",
+   "source_name": "Nep & Mary Ellen Lynch Trade School Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row excludes two named categories of trade school from eligibility.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 194,
+   "source_row_id": "master-database-row-0194",
+   "row_kind": "Scholarship",
+   "source_name": "T. Eugene Young Montana's Promise Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "healthcare",
+     "stem"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 195,
+   "source_row_id": "master-database-row-0195",
+   "row_kind": "Scholarship",
+   "source_name": "Reach for the Future Scholarship for Vocational Degree Programs",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Minimum GPA cell is blank; the grade point named in the row is a condition of renewal rather than an application minimum, and a blank cell is not treated as contradicted, so no correction is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 196,
+   "source_row_id": "master-database-row-0196",
+   "row_kind": "Scholarship",
+   "source_name": "Gary Olszewski Memorial Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Two-year type is taken from the row's description of a two-year technical programme. Minimum GPA cell is blank. Row states a county-level preference within the statewide award.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 197,
+   "source_row_id": "master-database-row-0197",
+   "row_kind": "Scholarship",
+   "source_name": "Equitable Excellence Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "two_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 198,
+   "source_row_id": "master-database-row-0198",
+   "row_kind": "Scholarship",
+   "source_name": "NAEHCY Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "homelessness"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Minimum GPA cell is blank. Route is a generic third-party form rather than a dedicated application portal.",
+   "confidence": "high"
+  }
+ ],
+ "output_body_sha256": "56a6929e4497bd3f11641ea83c3755d668f692d0cde472fbcce8dc8272919d8e"
+}

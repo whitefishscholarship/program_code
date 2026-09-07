@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 import {
   EXPECTED_PLAN_REV12_ROW_SOURCE,
+  P8M_HUMAN_DECISIONS_BLOCKER,
   PLAN_REV12_AMENDMENT_PATHS,
   PLAN_REV12_P8M_BLOCKERS,
   validatePlanRev12RowSource,
@@ -61,12 +62,22 @@ const context: PlanRev12ValidationContext = {
 };
 
 assert.deepEqual(validatePlanRev12RowSource(context), []);
-assert.deepEqual(context.rowSource, EXPECTED_PLAN_REV12_ROW_SOURCE);
-assert.equal(PLAN_REV12_AMENDMENT_PATHS.includes('web/src/app/page.tsx' as never), false);
 assert.deepEqual(
-  PLAN_REV12_P8M_BLOCKERS.every((blocker) => context.deliveryBlockers.includes(blocker)),
-  true,
+  {
+    ...context.rowSource,
+    externalSourceReadsAuthorized: false,
+    claudeProcessingAuthorized: false,
+    humanFactReviewer: null,
+  },
+  EXPECTED_PLAN_REV12_ROW_SOURCE,
 );
+assert.equal(context.rowSource?.externalSourceReadsAuthorized, true);
+assert.equal(context.rowSource?.claudeProcessingAuthorized, true);
+assert.equal(context.rowSource?.humanFactReviewer, 'Kelsey Stuart');
+assert.equal(PLAN_REV12_AMENDMENT_PATHS.includes('web/src/app/page.tsx' as never), false);
+assert.equal(context.deliveryBlockers.includes(PLAN_REV12_P8M_BLOCKERS[0]), false);
+assert.equal(context.deliveryBlockers.includes(PLAN_REV12_P8M_BLOCKERS[1]), false);
+assert.equal(context.deliveryBlockers.includes(P8M_HUMAN_DECISIONS_BLOCKER), false);
 
 const mutations: Array<(copy: PlanRev12ValidationContext) => void> = [
   (copy) => { copy.rowSource!.populatedRows = 198; },
@@ -77,6 +88,11 @@ const mutations: Array<(copy: PlanRev12ValidationContext) => void> = [
   (copy) => { copy.rowSource!.spreadsheetWriteAuthorized = true; },
   (copy) => { copy.organizerMaster.automatedWriteAuthorized = true; },
   (copy) => { copy.p8mAuthorization!.authorized = false; },
+  (copy) => { copy.rowSource!.claudeProcessingAuthorized = false; },
+  (copy) => { copy.deliveryBlockers.push(PLAN_REV12_P8M_BLOCKERS[0]); },
+  (copy) => {
+    copy.deliveryBlockers.push(P8M_HUMAN_DECISIONS_BLOCKER);
+  },
   (copy) => { copy.deliveryBlockers.push('P8M-cycle-denominator-missing'); },
 ];
 for (const mutate of mutations) {

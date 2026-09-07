@@ -1,0 +1,779 @@
+{
+ "schema_version": 1,
+ "batch_id": "p8m-rev225-rows-27-51",
+ "prompt_version": "p8m-claude-prompt-v1",
+ "source_revision": "225",
+ "source_snapshot_sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+ "authorized_tab": "Master Database",
+ "authorized_gid": 0,
+ "used_range": "'Master Database'!A1:O198",
+ "claude_code_version": "2.1.74",
+ "claude_code_version_source": "observed via `claude --version` on PATH",
+ "model_identifier": "claude-opus-5",
+ "model_identifier_source": "session-reported exact model id",
+ "input_filename": "rows-27-51.json",
+ "input_sha256": "4cc7c6cffac6b082f7a00a03526bbeefbda7361a71eebe15304c5dc1bd8d2056",
+ "first_row_number": 27,
+ "last_row_number": 51,
+ "expected_row_count": 25,
+ "returned_row_count": 25,
+ "external_url_reads": 0,
+ "spreadsheet_reads": 0,
+ "spreadsheet_writes": 0,
+ "matching_facts_produced": 0,
+ "accepted_facts": 0,
+ "reviewer_decisions": 0,
+ "rows": [
+  {
+   "row_number": 27,
+   "source_row_id": "master-database-row-0027",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Jaycee Foundation Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "certificate",
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "duplicate_name",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell and row text state different days, and the row's day reference names no month.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 28,
+   "source_row_id": "master-database-row-0028",
+   "row_kind": "Scholarship",
+   "source_name": "Elks National Foundation Legacy Awards ",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "elks_lodge"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Eligibility is stated as descent from a member of the sponsoring fraternal order.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 29,
+   "source_row_id": "master-database-row-0029",
+   "row_kind": "Scholarship",
+   "source_name": "Elk's State Level Vocational Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "certificate",
+     "trade_vocational",
+     "two_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "paper",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row names a state-level lodge program while the geography cell reads National, and no eligibility scope or affiliation requirement is stated. Row text is a single phrase.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 30,
+   "source_row_id": "master-database-row-0030",
+   "row_kind": "Scholarship",
+   "source_name": "Horatio Alger Association - Dennis R. Washington Montana Scholarship ($10,000 + $5,000 University match = $15,000)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need",
+     "overcoming_adversity"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "Due Date",
+     "proposed_value": "February 15",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Apply by February 15 (applications open December 1).",
+     "confidence": "medium"
+    }
+   ],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Due-date cell closing date disagrees with the deadline stated in the row. Renewal cell reads Non-Renewing while the row describes an award paid over four years.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 31,
+   "source_row_id": "master-database-row-0031",
+   "row_kind": "Portal",
+   "source_name": "Horatio Alger Association - Bachelor's Degree Candidates",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "four_year",
+     "two_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_portal",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row text is truncated at an unfinished requirements heading; renewal and amount cells are blank.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 32,
+   "source_row_id": "master-database-row-0032",
+   "row_kind": "Scholarship",
+   "source_name": "Flathead Conservation District Scholarship",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "agriculture_conservation",
+     "stem"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "A scholarship of $500 will be offered to each local high school in Flathead County and home school students, if applicable.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to high schools in one named county.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 33,
+   "source_row_id": "master-database-row-0033",
+   "row_kind": "Scholarship",
+   "source_name": "Dorothy and Luther Campbell Scholarship ($2,500)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Applicant must be a graduating senior in Flathead County or Lincoln County, Montana",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to two named Montana counties.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 34,
+   "source_row_id": "master-database-row-0034",
+   "row_kind": "Scholarship",
+   "source_name": "Jean Atkinson Driggers Scholarship ($2,500)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Applicant must be a graduating senior in Flathead County, Montana, or have previously graduated from a high school in Flathead County, Montana.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to one named Montana county. Renewal cell is blank. Row also requires prior attendance at one named elementary school, which has no controlled topic value.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 35,
+   "source_row_id": "master-database-row-0035",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Coffee Traders Scholarship (2 - $1,000)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "company_employee",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row describes two awards: one tied to employment with the sponsor and one restricted to a local resident, while the geography cell reads National.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 36,
+   "source_row_id": "master-database-row-0036",
+   "row_kind": "Scholarship",
+   "source_name": "Glacier Restaurant Groups R.I.S.E. Scholarship (2 - $2,500)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "national",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "company_employee"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 37,
+   "source_row_id": "master-database-row-0037",
+   "row_kind": "Scholarship",
+   "source_name": "Glacier Restaurant Groups R.I.S.E. Scholarship (3 - $1,000)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "offline_or_counselor",
+    "topic_tags": [
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "School-type cell holds a field of study rather than a school type, so no school type is proposed; culinary training has no exact controlled topic value and is proposed as trades.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 38,
+   "source_row_id": "master-database-row-0038",
+   "row_kind": "Scholarship",
+   "source_name": "KIITA Foundation ($10,000 - Renewable for up to 4 Years!)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "four_year"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "community_service",
+     "financial_need",
+     "overcoming_adversity"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 39,
+   "source_row_id": "master-database-row-0039",
+   "row_kind": "Scholarship",
+   "source_name": "Whitefish Rotary Scholarship ($1,000)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "general"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "The Whitefish Rotary Club will award scholarships to graduating seniors from Whitefish High School.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to seniors of one named high school.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 40,
+   "source_row_id": "master-database-row-0040",
+   "row_kind": "Scholarship",
+   "source_name": "Whitefish Bulldog Booster Club Scholarships",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "community_service",
+     "leadership"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "Scholarships are offered to the most qualified students who have participated in listed extracurricular activities while enrolled at WHS.",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to students of the source high school.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 41,
+   "source_row_id": "master-database-row-0041",
+   "row_kind": "Scholarship",
+   "source_name": "EA Hinderman",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads In-State but no cell in this row names a state. Due-date cell and row text state different days and different years, and neither is established as current, so no correction is proposed. Provider and amount cells are blank or unspecified.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 42,
+   "source_row_id": "master-database-row-0042",
+   "row_kind": "Scholarship",
+   "source_name": "Beta Sigma Phi ($1,000)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "State is taken from the row's use of the source high school's initials rather than a stated state name. Sponsor is a women's organization but the row states the award is not restricted by sex, so no sex-based topic is proposed. Due-date cell and row text disagree and the row's date is from an earlier year.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 43,
+   "source_row_id": "master-database-row-0043",
+   "row_kind": "Scholarship",
+   "source_name": "Big Sky State Games Scholarship ($500)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "athletics_sports"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "the Big Sky State Games has awarded the Character Counts! Scholarship to outstanding Montana female and male student-citizen-athletes involved in the Big Sky State Games",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while the row limits the award to Montana student athletes. Renewal cell is blank. Row also states only juniors in the stated school year are eligible, which a reviewer should weigh against a senior-facing list.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 44,
+   "source_row_id": "master-database-row-0044",
+   "row_kind": "Scholarship",
+   "source_name": "Flathead Electric Coop. Early Childhood Education Scholarship @ FVCC",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "unknown"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "School-type cell holds a field of study rather than a school type. Early childhood education has no controlled topic value. Consideration is automatic only after a separate general application is completed, so the route is proposed as a provider form. Due-date cell is blank.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 45,
+   "source_row_id": "master-database-row-0045",
+   "row_kind": "Portal",
+   "source_name": "FVCC Institutional Scholarships (Over 850 scholarships)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "two_year"
+    ],
+    "renewal": "unknown",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "financial_need"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Row text states a Summer 2026 deadline while the due-date cell is blank; a blank cell is not treated as contradicted, so no correction is proposed. School type is taken from the community college named in the row text. Renewal cell is blank. Row states one application also serves other awards, which the schema has no field for; recorded here for the shared-application review queue.",
+   "confidence": "medium"
+  },
+  {
+   "row_number": 46,
+   "source_row_id": "master-database-row-0046",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Tech’s Pre-Apprentice Line Program.",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "trade_vocational"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "electric_coop",
+     "financial_need",
+     "trades"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 47,
+   "source_row_id": "master-database-row-0047",
+   "row_kind": "Scholarship",
+   "source_name": "Park Side Credit Union Annual Scholarship (Multiple $1000)",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "credit_union"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "awards several $1,000 scholarships each year to graduating high-school seniors within its field of membership — eleven western Montana counties including Flathead",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility is limited to a named group of Montana counties.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 48,
+   "source_row_id": "master-database-row-0048",
+   "row_kind": "Scholarship",
+   "source_name": "Oratory Scholarship",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "unknown",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "unknown",
+    "application_route": "unknown",
+    "topic_tags": [
+     "electric_coop"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "ambiguous_value",
+    "internal_conflict",
+    "missing_information",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while eligibility requires membership in a local electric cooperative and a primary residence served by it; the row names no state, so no corrected value is proposed. School-type, renewal and focus cells are blank and the route cell is a bare label.",
+   "confidence": "low"
+  },
+  {
+   "row_number": 49,
+   "source_row_id": "master-database-row-0049",
+   "row_kind": "Scholarship",
+   "source_name": "Montana Clerk & Recorder's Scholarship (2) $1,000",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "paper",
+    "topic_tags": [
+     "community_service",
+     "overcoming_adversity",
+     "work_experience"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": null,
+   "confidence": "high"
+  },
+  {
+   "row_number": 50,
+   "source_row_id": "master-database-row-0050",
+   "row_kind": "Scholarship",
+   "source_name": "Montana University System Honor Scholarship (Tuition)",
+   "processing_outcome": "proposed_tags_only",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "unknown"
+    ],
+    "renewal": "renewable",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "merit"
+    ]
+   },
+   "correction_candidates": [],
+   "manual_review_reasons": [
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary",
+    "unsupported_taxonomy"
+   ],
+   "ambiguity_note": "School-type cell refers to a qualified institution list rather than naming school types, so no school type is proposed.",
+   "confidence": "high"
+  },
+  {
+   "row_number": 51,
+   "source_row_id": "master-database-row-0051",
+   "row_kind": "Scholarship",
+   "source_name": "The Montana State Golf Association",
+   "processing_outcome": "proposed_tags_and_corrections",
+   "tags": {
+    "geography_scope": "montana",
+    "school_types": [
+     "any"
+    ],
+    "renewal": "non_renewing",
+    "application_route": "provider_form",
+    "topic_tags": [
+     "athletics_sports"
+    ]
+   },
+   "correction_candidates": [
+    {
+     "field": "In-State / National",
+     "proposed_value": "In-State",
+     "evidence_field": "Summary",
+     "evidence_excerpt": "A one-time (non-renewable) scholarship for Montana residents entering their first year of college who hold an active MSGA membership with a GHIN handicap",
+     "confidence": "high"
+    }
+   ],
+   "manual_review_reasons": [
+    "internal_conflict",
+    "official_verification_required",
+    "source_queue_empty_by_column_a_boundary"
+   ],
+   "ambiguity_note": "Geography cell reads National while the row limits eligibility to Montana residents.",
+   "confidence": "high"
+  }
+ ],
+ "output_body_sha256": "5330b08e3a772a866369714caa6abc6e06420a45532868638121fb240c18028a"
+}

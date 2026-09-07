@@ -71,6 +71,7 @@ type BuildState = {
       applicationRuntime: {
         sourceMode: string;
         publicationStatus: string;
+        publicationPath: string | null;
         mutableMasterDirectReadAuthorized: boolean;
         publicationEvidencePath: string;
         p8mAcceptanceBindingMode: string;
@@ -175,8 +176,6 @@ type MatchingContract = {
 
 const state = readJson<BuildState>('docs/BUILD_STATE.json');
 assert(state.planRevision >= 10);
-assert.equal(state.activeStageId, null);
-assert.equal(state.nextPermittedStageId, 'P8M');
 
 const stageIds = state.stages.map(({ id }) => id);
 assert.deepEqual(stageIds.slice(-3), ['P8M', 'P8F', 'P9']);
@@ -184,13 +183,15 @@ const p8m = state.stages.find(({ id }) => id === 'P8M');
 assert.deepEqual(p8m, {
   id: 'P8M',
   name: 'Matching-fact enrichment and acceptance',
-  status: 'planned',
-  baselineCommit: null,
+  status: 'accepted',
+  baselineCommit: '55245dc42a726d57ef3bdbeeab7aa27fcce31d17',
   evidencePath: 'docs/evidence/P8M.md',
   manifestPath: 'docs/evidence/P8M-manifest.json',
   reviewPath: 'docs/reviews/P8M.json',
   kickoffPath: 'docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md',
 });
+assert.equal(state.activeStageId, null);
+assert.equal(state.nextPermittedStageId, 'P8F');
 assert.equal(state.stages.find(({ id }) => id === 'P8F')?.status, 'planned');
 assert.equal(state.stages.find(({ id }) => id === 'P9')?.status, 'planned');
 
@@ -220,7 +221,14 @@ assert.equal(
 assert.equal(transition.formerProduction.role, 'legacy_comparison_only');
 assert.equal(transition.formerProduction.accessAuthorized, false);
 assert.equal(transition.applicationRuntime.sourceMode, 'validated_immutable_versioned_publication');
-assert.equal(transition.applicationRuntime.publicationStatus, 'not_created');
+assert.equal(
+  transition.applicationRuntime.publicationStatus,
+  'accepted_immutable_versioned_publication',
+);
+assert.equal(
+  transition.applicationRuntime.publicationPath,
+  'web/fixtures/p8m/matching-facts-v1.json',
+);
 assert.equal(transition.applicationRuntime.mutableMasterDirectReadAuthorized, false);
 assert.equal(transition.applicationRuntime.publicationEvidencePath, 'docs/evidence/P8M.md');
 assert.equal(
@@ -246,6 +254,13 @@ assert.deepEqual(transition.identities, [
 ]);
 
 const plannedLifecycle = structuredClone(transition) as unknown as PlanRev10LifecycleState;
+plannedLifecycle.applicationRuntime.publicationStatus = 'not_created';
+plannedLifecycle.applicationRuntime.publicationPath = null;
+plannedLifecycle.applicationRuntime.publicationSha256 = null;
+plannedLifecycle.applicationRuntime.publicationSchemaVersion = null;
+plannedLifecycle.applicationRuntime.sourceMasterRevision = null;
+plannedLifecycle.applicationRuntime.acceptedFactSha256 = null;
+plannedLifecycle.applicationRuntime.generatorSha256 = null;
 assert.deepEqual(validatePlanRev10Lifecycle(plannedLifecycle, 'planned', 'planned'), []);
 assert(
   validatePlanRev10Lifecycle(plannedLifecycle, 'accepted', 'planned').some((error) =>
@@ -347,9 +362,10 @@ assert.equal(
   p8mAuthorization.evidencePath,
   state.planRevision >= 12 ? 'docs/evidence/PLAN-REV12.md' : null,
 );
-assert(
+assert.equal(
   state.deployment.deliveryBlockers.some((item) => item.startsWith('P8M-')),
-  'P8M must retain any unsatisfied phased gate',
+  !['verified', 'accepted'].includes(p8m!.status),
+  'P8M blockers must exactly reflect whether its pre-review phase gates remain unsatisfied',
 );
 const p9Authorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P9',
