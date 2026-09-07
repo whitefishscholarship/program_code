@@ -1,7 +1,8 @@
 # P8M — human-reviewed reconciliation and immutable publication candidate
 
-Status: `VERIFIED CANDIDATE`; fresh-context review and direct-child attestation remain
-required before canonical acceptance; remote delivery remains required before P8F
+Status: `VERIFIED CANDIDATE`; fresh-context review is complete, direct-child
+attestation remains required before canonical acceptance, and remote delivery remains
+required before P8F
 
 Observed through: `2026-09-06`
 
@@ -225,14 +226,18 @@ Pre-freeze verification on the isolated acceptance worktree:
 - `git diff --check`: PASS after declaring the governed CRLF review CSV as
   `cr-at-eol`; the review file's accepted SHA-256 remains unchanged.
 
-The first fresh-context review of candidate `c2213f3` returned C0/H0/M2/L1. All three
-findings were remediated before the final freeze: every Claude input `fields` object is
+The first fresh-context review of candidate `c2213f3` returned C0/H0/M2/L1. Its three
+findings were remediated before the next freeze: every Claude input `fields` object is
 now deep-compared with its pinned snapshot row and covered by an adversarial mutation;
 the stale pending-review introduction in this evidence was replaced with the current
 verified-candidate state; and the completed-human-decisions blocker was removed while
 the stage remains gated by verified status and the required review/attestation. The
-final review record must retain three count-matched dispositions and the same reviewer
-must recheck every changed byte before attestation.
+same reviewer rechecked candidate `c6cc813` and found those remediations complete, then
+identified one low wording issue distinguishing canonical acceptance from remote
+delivery. Candidate `0388fb0` fixed that wording and received PASS with no new or open
+finding. The direct-child review record must retain C0/H0/M2/L2 and four count-matched
+resolved dispositions; this final documentation update also requires the same
+reviewer's byte-level recheck before attestation.
 
 The candidate is not canonically accepted merely because `BUILD_STATE.json` describes
 a verified publication candidate. Canonical acceptance requires the exact candidate

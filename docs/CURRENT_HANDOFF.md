@@ -5,7 +5,7 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8M — complete human reconciliation; acceptance candidate awaiting fresh review and delivery
+## P8M — review-cleared verified candidate awaiting attestation and delivery
 
 - Work continues from baseline
   `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` on isolated branch
@@ -29,9 +29,13 @@ Default branch: `main`
   authorized column-A boundary.
 - No spreadsheet read/write occurred in this continuation. No other tab, external URL,
   form, login, application, provider, applicant data, P8F, or P9 was accessed.
-- The candidate is not accepted merely because local state and publication files
-  exist. It must be frozen, reviewed by a fresh-context non-author at C0/H0, and bound
-  by the exact manifest/review direct-child attestation before any delivery or P8F.
+- The fresh-context reviewer returned C0/H0. Two medium and two low findings were
+  remediated and rechecked with no open finding: source input fields are now bound
+  exactly to the snapshot, stale review-state text and blocker state are corrected,
+  and acceptance is distinguished from remote delivery. P8M remains `verified`, not
+  accepted, until the exact manifest and review record are committed together as the
+  candidate's direct child. Remote delivery and live verification remain absolute
+  gates before P8F.
 - At closeout, remote authentication is unavailable: SSH reports `Repository not
   found`, and both locally configured GitHub identities report invalid authentication.
   No credential was requested or stored. Do not create an undeliverable attestation.
