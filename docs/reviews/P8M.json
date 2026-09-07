@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8M",
+  "reviewerTaskId": "/root/p8m_fresh_acceptance_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-07T05:11:36Z",
+  "outcome": "accepted",
+  "decisionScope": "Fresh-context read-only P8M acceptance review of baseline 55245dc42a726d57ef3bdbeeab7aa27fcce31d17 through immutable candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5 against docs/evidence/P8M-manifest.json SHA-256 1c4d971b36be2a72a7410ffe86557ec20a70a5a2f87c4b3c3ac33ed38262bb81, covering exactly all 41 baseline-to-candidate paths and candidate-tree hashes; excludes attestation creation, Git or Vercel delivery, and all P8F or P9 execution.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 3
+  },
+  "dispositions": [
+    {
+      "severity": "medium",
+      "summary": "Claude input fields were not fully deep-bound to the pinned revision-225 snapshot.",
+      "rationale": "Resolved by exact stable deep comparison of every input fields object against its snapshot cells and a fail-closed tampering mutation; independently reverified across all 197 rows and unchanged in the replacement.",
+      "owner": "P8M implementation",
+      "target": "Resolved and retained in candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5"
+    },
+    {
+      "severity": "medium",
+      "summary": "P8M evidence retained stale pending-review wording after all human decisions were complete.",
+      "rationale": "Resolved by aligning the evidence with the complete 197-decision publication candidate and its pinned reconciliation; replacement review found no regression.",
+      "owner": "P8M implementation",
+      "target": "Resolved and retained in candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5"
+    },
+    {
+      "severity": "low",
+      "summary": "The completed-human-decisions blocker remained stale.",
+      "rationale": "Resolved by removing the stale blocker while preserving the fresh-review, direct-child attestation, delivery, and P8F sequencing gates.",
+      "owner": "P8M implementation",
+      "target": "Resolved and retained in candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5"
+    },
+    {
+      "severity": "low",
+      "summary": "Evidence wording blurred canonical acceptance and remote delivery.",
+      "rationale": "Resolved by distinguishing prospective accepted state, canonical direct-child acceptance, and live delivery before P8F; replacement wording remains explicit.",
+      "owner": "P8M implementation",
+      "target": "Resolved and retained in candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5"
+    },
+    {
+      "severity": "low",
+      "summary": "P8M evidence reported 18 proposal mutations although the frozen suite contained and reported 19.",
+      "rationale": "Resolved by correcting the stale evidence count to 19, preserving the rejection history, and regenerating the complete manifest; byte-level recheck found no new contradiction.",
+      "owner": "P8M implementation",
+      "target": "Resolved in candidate f44b1d1c3caccbd414cf83b4e35d332e0f10e3b5"
+    }
+  ],
+  "candidateManifestPath": "docs/evidence/P8M-manifest.json",
+  "candidateManifestSha256": "1c4d971b36be2a72a7410ffe86557ec20a70a5a2f87c4b3c3ac33ed38262bb81"
+}
