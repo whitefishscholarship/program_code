@@ -10,13 +10,21 @@ the browser or keychain; never request, paste, echo, or store a token. Fetch and
 that `origin/main` still equals the recorded baseline. If it differs, stop and perform
 a governed baseline reconciliation before re-freezing the candidate.
 
+Resolve the recorded acceptance-sequencing gate before creating an attestation. The
+current candidate is intentionally `verified`, not accepted. The active safety gate
+refused a prospective accepted-state edit before attestation and requires fresh,
+informed user approval after the risk disclosure in `docs/CURRENT_HANDOFF.md`, or a
+materially safer governed plan correction. Do not bypass that refusal and do not attest
+the verified candidate as accepted.
+
 Run the P8M acceptance checks and full repository matrix. Freeze the complete candidate,
 generate the exact baseline-to-candidate manifest, and obtain a fresh-context read-only
 review from a non-author. Remediate any critical/high finding; disposition every
 medium/low finding; re-freeze and have the same reviewer recheck changed bytes. Only a
-C0/H0 result may be recorded. Then set the prospective accepted state, regenerate the
-final manifest, recheck it, and create the direct-child commit that changes exactly
-`docs/evidence/P8M-manifest.json` and `docs/reviews/P8M.json`.
+C0/H0 result may be recorded. After the acceptance-sequencing gate is validly resolved,
+regenerate the accepted-state candidate and final manifest, recheck both, and create
+the direct-child commit that changes exactly `docs/evidence/P8M-manifest.json` and
+`docs/reviews/P8M.json`.
 
 Push the exact attestation tip, open the authorized P8M pull request, monitor required
 checks and Preview, merge using repository convention, verify the resulting Production

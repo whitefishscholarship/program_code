@@ -42,6 +42,14 @@ Default branch: `main`
   Resume from `docs/kickoffs/P8M-ACCEPTANCE-DELIVERY-RESUME.md`; securely reauthenticate,
   verify the remote baseline, then complete review/attestation/delivery without changing
   candidate bytes unless the review or baseline requires a new freeze.
+- A second acceptance-sequencing blocker is explicit. The repository validator expects
+  accepted P8M state to be present in the candidate that the two-file direct-child
+  attests, but the active safety gate refused changing `BUILD_STATE.json` to accepted
+  or exposing P8F before that attestation exists. The refusal expressly requires fresh
+  informed user approval after this risk disclosure, or a materially safer governed
+  plan correction. Do not bypass the refusal and do not attest the current `verified`
+  candidate as though it were accepted. The next session must resolve this gate before
+  regenerating the final accepted-state candidate, manifest, and review record.
 - Pre-freeze P8M proposal/acceptance guards, plan validation, typecheck, and the full
   test suite pass. The exact Turbopack build reaches compilation but is blocked by its
   local-port `EPERM`; the supported Webpack production build passes on the same tree.

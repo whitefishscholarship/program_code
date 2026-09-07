@@ -252,5 +252,15 @@ fresh session must reauthenticate securely through the browser/keychain, verify 
 remote baseline is still exact, and rerun the final review if any candidate byte or
 baseline changes. Do not create an undeliverable attestation commit.
 
+There is also an unresolved acceptance-sequencing gate. Repository validation binds
+accepted P8M state from the candidate commit and permits only the manifest and review
+record in its direct child. During closeout, the active safety gate refused a candidate
+edit that would mark P8M accepted or expose P8F before the attestation exists, and
+required fresh informed user approval after disclosure or a materially safer governed
+plan correction. No workaround was attempted. The current candidate therefore remains
+`verified`, with P8M active and `nextPermittedStageId` null. Do not attest it as an
+accepted stage. Resolve this sequencing gate, then refreeze, regenerate the manifest,
+and have the same fresh-context reviewer recheck all changed bytes.
+
 Stop before P8F and P9. P8F may begin only after the P8M direct-child attestation is
 merged and the exact live `origin/main` delivery is verified.
