@@ -30,9 +30,12 @@ Default branch: `main`
 - No spreadsheet read/write occurred in this continuation. No other tab, external URL,
   form, login, application, provider, applicant data, P8F, or P9 was accessed.
 - The earlier fresh-context review returned C0/H0 after two medium and two low findings
-  were remediated. That review is historical evidence for the predecessor bytes only.
-  The accepted-state transition below changes the candidate and therefore requires a
-  new manifest and genuinely fresh read-only review before attestation.
+  were remediated. Fresh accepted-state reviewer `/root/p8m_fresh_acceptance_review`
+  then rejected candidate `bc7a237efd4f7241a21c10415b5bc704e55a4e4d` at
+  C0/H0/M2/L3 for one new low-only evidence inconsistency: an earlier paragraph said
+  the proposal suite had 18 mutations while the suite and final verification correctly
+  reported 19. This replacement corrects that stale count; the same reviewer must
+  recheck its exact bytes and regenerated manifest before attestation.
 - At `2026-09-07T04:45:20Z`, after the documented sequencing risk was disclosed,
   Kelsey Stuart explicitly approved changing the P8M candidate to prospective
   `accepted` state and setting P8F as next-permitted before the manifest/review
@@ -43,8 +46,9 @@ Default branch: `main`
   not canonical acceptance or permission to execute P8F.
 - Secure GitHub browser/keyring authentication was restored as the active
   `whitefishscholarship` account without requesting or exposing a credential. An
-  authenticated normal-Git HTTPS fetch, repeated immediately before freeze at
-  `2026-09-07T04:53:14Z`, confirmed live `origin/main` remains exact baseline
+  authenticated normal-Git HTTPS fetch, repeated before the original freeze at
+  `2026-09-07T04:53:14Z` and before the post-review replacement freeze at
+  `2026-09-07T05:08:04Z`, confirmed live `origin/main` remains exact baseline
   `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`, and the Revision 12
   candidate/direct-child two-file attestation topology remains intact. No P8M pull
   request existed at that check.

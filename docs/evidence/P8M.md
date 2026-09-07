@@ -98,7 +98,7 @@ review required after a complete immutable P8M candidate exists.
   facts, and reviewer decisions; and
 - every receipt total recomputed from the written proposal rows.
 
-`npm run p8m:proposal:test` accepts the pinned package and fails closed on 18
+`npm run p8m:proposal:test` accepts the pinned package and fails closed on 19
 adversarial mutations, including truncation, duplication, identity changes, unknown
 keys, invalid enums, unsorted tags, missing review reasons, fabricated correction
 quotes, URLs, prohibited identity fields, hash changes, nonzero writes/acceptance, and
@@ -252,9 +252,14 @@ the stage remains gated by verified status and the required review/attestation. 
 same reviewer rechecked candidate `c6cc813` and found those remediations complete, then
 identified one low wording issue distinguishing canonical acceptance from remote
 delivery. Candidate `0388fb0` fixed that wording and received PASS with no new or open
-finding. The direct-child review record must retain C0/H0/M2/L2 and four count-matched
-resolved dispositions; this final documentation update also requires the same
-reviewer's byte-level recheck before attestation.
+finding. Fresh accepted-state reviewer `/root/p8m_fresh_acceptance_review` then audited
+candidate `bc7a237efd4f7241a21c10415b5bc704e55a4e4d` and its exact 41-path manifest,
+confirmed the substantive controls and all manifest hashes, but rejected it at
+C0/H0/M2/L3 because the earlier proposal section still said 18 mutations while the
+suite and verification record correctly said 19. This replacement corrects that sole
+new low finding. The same fresh reviewer must recheck the replacement candidate and
+regenerated manifest before attestation. The final review record must retain C0/H0/M2/L3
+and five count-matched resolved dispositions.
 
 The candidate is not canonically accepted merely because `BUILD_STATE.json`
 prospectively describes P8M as accepted and P8F as next-permitted. Canonical acceptance
@@ -265,7 +270,8 @@ and verified on live `origin/main`.
 Secure GitHub browser/keyring authentication was restored as active account
 `whitefishscholarship` without requesting, copying, or exposing a credential. An
 authenticated normal-Git HTTPS fetch at `2026-09-07T04:45:20Z`, followed by the final
-pre-freeze authenticated fetch at `2026-09-07T04:53:14Z`, confirmed live
+pre-freeze authenticated fetch at `2026-09-07T04:53:14Z` and the post-review
+replacement-candidate fetch at `2026-09-07T05:08:04Z`, confirmed live
 `origin/main` remains exact baseline
 `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. The Revision 12 direct-child
 attestation remains in its ancestry and no existing P8M pull request was found.
