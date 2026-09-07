@@ -70,6 +70,13 @@ import {
   P8M_SOURCE_SNAPSHOT_PATH,
   validateP8mPackageAt,
 } from './p8m-proposals';
+import {
+  P8M_PUBLICATION_PATH,
+  P8M_REVIEW_DIGEST_PATH,
+  P8M_REVIEW_VALIDATION_PATH,
+  P8M_SOURCE_FIELDS_PATH,
+  validateP8mAcceptanceAt,
+} from './p8m-acceptance';
 
 type StageStatus =
   | 'planned'
@@ -159,8 +166,16 @@ type P8mProcessingState = {
   humanReviewDecisionStatus: string;
   humanReviewPackagePath: string;
   humanReviewPackageSha256: string;
+  humanReviewSourceFieldsPath?: string;
+  humanReviewSourceFieldsSha256?: string;
+  humanReviewDigestPath?: string;
+  humanReviewDigestSha256?: string;
+  humanReviewValidationPath?: string;
+  humanReviewValidationSha256?: string;
   reconciliationPath: string;
   reconciliationSha256: string;
+  publicationPath?: string;
+  publicationSha256?: string;
   spreadsheetWrites: number;
   finalFreshContextReviewStatus: string;
 };
@@ -1488,9 +1503,26 @@ if (state) {
         for (const error of packageResult.errors) fail(`P8M proposal package: ${error}`);
         const packageSummary = packageResult.summary as Record<string, unknown>;
         const packageTotals = packageSummary.totals as Record<string, unknown>;
+        const acceptanceResult = validateP8mAcceptanceAt(repoRoot);
+        for (const error of acceptanceResult.errors) fail(`P8M acceptance package: ${error}`);
+        const acceptanceSummary = acceptanceResult.summary;
+        for (const requiredPath of [
+          processing.humanReviewSourceFieldsPath,
+          processing.humanReviewDigestPath,
+          processing.humanReviewValidationPath,
+          processing.publicationPath,
+          'web/scripts/p8m-acceptance.ts',
+          'web/scripts/test-p8m-acceptance.ts',
+        ]) {
+          if (requiredPath) requireFile(requiredPath);
+        }
+        const expectedFinalReviewStatus =
+          p8mStatus === 'accepted'
+            ? 'bound_by_canonical_direct_child_attestation'
+            : 'pending_fresh_context_review';
         if (
           processing.contractId !== 'p8m-proposal-pass-v1' ||
-          processing.status !== 'validated_proposal_only_human_review_pending' ||
+          processing.status !== 'human_review_reconciled_publication_candidate' ||
           processing.authorizationEvidencePath !== 'docs/evidence/P8M-processing-authority.md' ||
           processing.sourceRevision !== '225' ||
           processing.sourceSnapshotPath !== P8M_SOURCE_SNAPSHOT_PATH ||
@@ -1510,16 +1542,36 @@ if (state) {
           processing.humanFactReviewerEvidencePath !==
             'docs/evidence/P8M-processing-authority.md' ||
           processing.humanFactReviewerNamedAt !== '2026-09-03T02:48:16Z' ||
-          processing.humanReviewDecisionCount !== 0 ||
-          processing.humanReviewDecisionStatus !== 'pending_all_197' ||
+          processing.humanReviewDecisionCount !== 197 ||
+          processing.humanReviewDecisionStatus !== 'complete_all_197' ||
           processing.humanReviewPackagePath !== P8M_HUMAN_REVIEW_PATH ||
           processing.humanReviewPackageSha256 !== sha256File(P8M_HUMAN_REVIEW_PATH) ||
+          processing.humanReviewSourceFieldsPath !== P8M_SOURCE_FIELDS_PATH ||
+          processing.humanReviewSourceFieldsSha256 !== sha256File(P8M_SOURCE_FIELDS_PATH) ||
+          processing.humanReviewDigestPath !== P8M_REVIEW_DIGEST_PATH ||
+          processing.humanReviewDigestSha256 !== sha256File(P8M_REVIEW_DIGEST_PATH) ||
+          processing.humanReviewValidationPath !== P8M_REVIEW_VALIDATION_PATH ||
+          processing.humanReviewValidationSha256 !== sha256File(P8M_REVIEW_VALIDATION_PATH) ||
           processing.reconciliationPath !== P8M_RECONCILIATION_PATH ||
           processing.reconciliationSha256 !== sha256File(P8M_RECONCILIATION_PATH) ||
+          processing.publicationPath !== P8M_PUBLICATION_PATH ||
+          processing.publicationSha256 !== acceptanceSummary.publication_sha256 ||
+          processing.publicationSha256 !== sha256File(P8M_PUBLICATION_PATH) ||
           processing.spreadsheetWrites !== 0 ||
-          processing.finalFreshContextReviewStatus !== 'not_started'
+          processing.finalFreshContextReviewStatus !== expectedFinalReviewStatus
         ) {
-          fail('P8M proposal-processing state differs from the validated no-write package');
+          fail('P8M processing state differs from the validated human-review and no-write publication package');
+        }
+        const runtimePublication = state.dataAuthority.sourceTransition.applicationRuntime;
+        if (
+          runtimePublication.publicationPath !== P8M_PUBLICATION_PATH ||
+          runtimePublication.publicationSha256 !== acceptanceSummary.publication_sha256 ||
+          runtimePublication.publicationSchemaVersion !== '1' ||
+          runtimePublication.sourceMasterRevision !== '225' ||
+          runtimePublication.acceptedFactSha256 !== acceptanceSummary.accepted_fact_sha256 ||
+          runtimePublication.generatorSha256 !== acceptanceSummary.generator_sha256
+        ) {
+          fail('P8M runtime publication pins differ from the deterministic acceptance output');
         }
       }
 

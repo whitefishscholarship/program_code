@@ -71,6 +71,7 @@ type BuildState = {
       applicationRuntime: {
         sourceMode: string;
         publicationStatus: string;
+        publicationPath: string | null;
         mutableMasterDirectReadAuthorized: boolean;
         publicationEvidencePath: string;
         p8mAcceptanceBindingMode: string;
@@ -184,7 +185,7 @@ const p8m = state.stages.find(({ id }) => id === 'P8M');
 assert.deepEqual(p8m, {
   id: 'P8M',
   name: 'Matching-fact enrichment and acceptance',
-  status: 'blocked-external',
+  status: 'verified',
   baselineCommit: '55245dc42a726d57ef3bdbeeab7aa27fcce31d17',
   evidencePath: 'docs/evidence/P8M.md',
   manifestPath: 'docs/evidence/P8M-manifest.json',
@@ -220,7 +221,14 @@ assert.equal(
 assert.equal(transition.formerProduction.role, 'legacy_comparison_only');
 assert.equal(transition.formerProduction.accessAuthorized, false);
 assert.equal(transition.applicationRuntime.sourceMode, 'validated_immutable_versioned_publication');
-assert.equal(transition.applicationRuntime.publicationStatus, 'not_created');
+assert.equal(
+  transition.applicationRuntime.publicationStatus,
+  'candidate_immutable_versioned_publication',
+);
+assert.equal(
+  transition.applicationRuntime.publicationPath,
+  'web/fixtures/p8m/matching-facts-v1.json',
+);
 assert.equal(transition.applicationRuntime.mutableMasterDirectReadAuthorized, false);
 assert.equal(transition.applicationRuntime.publicationEvidencePath, 'docs/evidence/P8M.md');
 assert.equal(
@@ -246,6 +254,13 @@ assert.deepEqual(transition.identities, [
 ]);
 
 const plannedLifecycle = structuredClone(transition) as unknown as PlanRev10LifecycleState;
+plannedLifecycle.applicationRuntime.publicationStatus = 'not_created';
+plannedLifecycle.applicationRuntime.publicationPath = null;
+plannedLifecycle.applicationRuntime.publicationSha256 = null;
+plannedLifecycle.applicationRuntime.publicationSchemaVersion = null;
+plannedLifecycle.applicationRuntime.sourceMasterRevision = null;
+plannedLifecycle.applicationRuntime.acceptedFactSha256 = null;
+plannedLifecycle.applicationRuntime.generatorSha256 = null;
 assert.deepEqual(validatePlanRev10Lifecycle(plannedLifecycle, 'planned', 'planned'), []);
 assert(
   validatePlanRev10Lifecycle(plannedLifecycle, 'accepted', 'planned').some((error) =>

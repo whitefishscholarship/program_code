@@ -7,12 +7,12 @@
   "accepted_p7_catalog_sha256": "35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841",
   "claude_receipt_sha256": "1437a4db1c345d91b40466eeb2773db576245982834ff9b656cdc6a80500cb60",
   "combined_output_sha256": "75eebc9abd6d84d2e6e266b9c44255289c9c7cdb669c73caf85ed5cefe91024f",
-  "status": "validated_proposal_only_human_review_pending",
+  "status": "human_review_reconciled_publication_candidate",
   "codex_validation_scope": "All 197 rows: exact identity, closed schema, input/output hashes, row coverage, correction excerpt grounding, prohibited fields, contact-string exclusion, proposal-only counters, recomputed totals, and stable mapping to 176 award plus 21 portal public IDs. This does not accept scholarship truth or semantic tag correctness.",
   "human_fact_reviewer": "Kelsey Stuart",
   "matching_facts_produced": 0,
-  "accepted_facts": 0,
-  "reviewer_decisions": 0,
+  "accepted_facts": [],
+  "reviewer_decisions": 197,
   "stable_target_counts": {
     "award": 176,
     "portal": 21,
@@ -316,7 +316,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 3,
@@ -336,7 +351,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 4,
@@ -357,7 +386,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "automatic_consideration",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 5,
@@ -376,7 +419,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "automatic_consideration",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 6,
@@ -397,7 +454,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 7,
@@ -418,7 +489,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 8,
@@ -437,7 +523,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 9,
@@ -456,7 +557,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 10,
@@ -475,7 +590,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 11,
@@ -494,7 +623,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 12,
@@ -514,7 +657,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 13,
@@ -533,7 +690,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "credit_union"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 14,
@@ -553,7 +724,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 15,
@@ -572,7 +758,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 16,
@@ -591,7 +791,24 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "merit",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 17,
@@ -608,7 +825,23 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "overcoming_adversity",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 18,
@@ -627,7 +860,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 19,
@@ -647,7 +894,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "agriculture_conservation",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 20,
@@ -666,7 +928,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 21,
@@ -685,7 +961,24 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 22,
@@ -705,7 +998,23 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 23,
@@ -722,7 +1031,22 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "unknown",
+        "application_route": "paper",
+        "topic_tags": [
+          "aviation_maintenance",
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 24,
@@ -741,7 +1065,23 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "community_service",
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 25,
@@ -761,7 +1101,23 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "merit",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 26,
@@ -781,7 +1137,21 @@
       "proposal_batch_id": "p8m-rev225-rows-2-26",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 27,
@@ -801,7 +1171,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "certificate",
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 28,
@@ -820,7 +1205,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "elks_lodge"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 29,
@@ -839,7 +1238,23 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "certificate",
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "paper",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 30,
@@ -859,7 +1274,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 31,
@@ -876,7 +1306,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 32,
@@ -896,7 +1341,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "agriculture_conservation",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 33,
@@ -916,7 +1376,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 34,
@@ -935,7 +1409,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 35,
@@ -955,7 +1443,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "company_employee"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 36,
@@ -975,7 +1478,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "company_employee"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 37,
@@ -994,7 +1512,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 38,
@@ -1014,7 +1546,23 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 39,
@@ -1033,7 +1581,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 40,
@@ -1053,7 +1615,22 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "leadership"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 41,
@@ -1072,7 +1649,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 42,
@@ -1092,7 +1683,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 43,
@@ -1111,7 +1716,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "athletics_sports"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 44,
@@ -1130,7 +1749,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 45,
@@ -1147,7 +1780,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "two_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 46,
@@ -1166,7 +1813,23 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "electric_coop",
+          "financial_need",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 47,
@@ -1185,7 +1848,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "credit_union"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 48,
@@ -1203,7 +1880,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "unknown",
+        "application_route": "unknown",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 49,
@@ -1222,7 +1913,23 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "overcoming_adversity",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 50,
@@ -1241,7 +1948,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 51,
@@ -1259,7 +1980,21 @@
       "proposal_batch_id": "p8m-rev225-rows-27-51",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "athletics_sports"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 52,
@@ -1279,7 +2014,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "email",
+        "topic_tags": [
+          "female",
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 53,
@@ -1298,7 +2048,23 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year",
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 54,
@@ -1316,7 +2082,23 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 55,
@@ -1333,7 +2115,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "reject",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "farmers_union"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 56,
@@ -1353,7 +2149,24 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "healthcare",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 57,
@@ -1372,7 +2185,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "athletics_sports"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 58,
@@ -1389,7 +2216,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "farmers_union"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 59,
@@ -1406,7 +2247,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 60,
@@ -1425,7 +2281,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 61,
@@ -1444,7 +2314,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 62,
@@ -1463,7 +2347,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 63,
@@ -1483,7 +2381,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "arts_humanities",
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 64,
@@ -1502,7 +2415,23 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 65,
@@ -1521,7 +2450,23 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "female",
+          "financial_need",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 66,
@@ -1541,7 +2486,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 67,
@@ -1560,7 +2520,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 68,
@@ -1579,7 +2553,25 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "unknown",
+        "topic_tags": [
+          "financial_need",
+          "first_responder",
+          "law",
+          "merit",
+          "public_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 69,
@@ -1599,7 +2591,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 70,
@@ -1619,7 +2625,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "agriculture_conservation",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 71,
@@ -1639,7 +2660,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "athletics_sports"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 72,
@@ -1658,7 +2693,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 73,
@@ -1677,7 +2726,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "healthcare"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 74,
@@ -1696,7 +2759,21 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "arts_humanities"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 75,
@@ -1715,7 +2792,22 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 76,
@@ -1734,7 +2826,24 @@
       "proposal_batch_id": "p8m-rev225-rows-52-76",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "electric_coop",
+          "merit",
+          "work_experience"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 77,
@@ -1753,7 +2862,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 78,
@@ -1772,7 +2895,23 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "business_finance",
+          "stem",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 79,
@@ -1806,7 +2945,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 80,
@@ -1825,7 +2978,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 81,
@@ -1844,7 +3011,23 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "certificate",
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "female",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 82,
@@ -1863,7 +3046,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "unknown",
+        "topic_tags": [
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 83,
@@ -1880,7 +3077,24 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "agriculture_conservation",
+          "community_service",
+          "farmers_union",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 84,
@@ -1900,7 +3114,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "arts_humanities"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 85,
@@ -1920,7 +3148,22 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 86,
@@ -1939,7 +3182,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 87,
@@ -1958,7 +3215,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 88,
@@ -1977,7 +3248,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 89,
@@ -1997,7 +3282,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 90,
@@ -2016,7 +3315,22 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "learning_other",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 91,
@@ -2036,7 +3350,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 92,
@@ -2055,7 +3383,22 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "female",
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 93,
@@ -2075,7 +3418,23 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 94,
@@ -2093,7 +3452,23 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "unknown",
+        "application_route": "unknown",
+        "topic_tags": [
+          "financial_need",
+          "first_responder",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 95,
@@ -2112,7 +3487,22 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "financial_need",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 96,
@@ -2131,7 +3521,26 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "arts_humanities",
+          "chronic_health",
+          "financial_need",
+          "homelessness",
+          "mental_health",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 97,
@@ -2151,7 +3560,24 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "email",
+        "topic_tags": [
+          "community_service",
+          "female",
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 98,
@@ -2171,7 +3597,23 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "paper",
+        "topic_tags": [
+          "community_service",
+          "financial_need",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 99,
@@ -2191,7 +3633,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "first_generation"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 100,
@@ -2208,7 +3664,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 101,
@@ -2228,7 +3698,21 @@
       "proposal_batch_id": "p8m-rev225-rows-77-101",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 102,
@@ -2247,7 +3731,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "automatic_consideration",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 103,
@@ -2266,7 +3764,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 104,
@@ -2285,7 +3798,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 105,
@@ -2304,7 +3831,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 106,
@@ -2323,7 +3865,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 107,
@@ -2342,7 +3898,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 108,
@@ -2361,7 +3931,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 109,
@@ -2381,7 +3965,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 110,
@@ -2401,7 +3999,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 111,
@@ -2421,7 +4033,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 112,
@@ -2441,7 +4067,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "female"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 113,
@@ -2461,7 +4101,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "female",
+          "leadership"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 114,
@@ -2481,7 +4136,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 115,
@@ -2501,7 +4171,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "female",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 116,
@@ -2521,7 +4206,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "business_finance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 117,
@@ -2541,7 +4240,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "arts_humanities",
+          "business_finance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 118,
@@ -2561,7 +4275,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "learning_other"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 119,
@@ -2581,7 +4309,22 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "learning_other"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 120,
@@ -2602,7 +4345,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 121,
@@ -2622,7 +4379,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 122,
@@ -2642,7 +4413,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 123,
@@ -2662,7 +4447,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 124,
@@ -2682,7 +4481,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 125,
@@ -2702,7 +4515,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 126,
@@ -2722,7 +4549,21 @@
       "proposal_batch_id": "p8m-rev225-rows-102-126",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 127,
@@ -2742,7 +4583,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 128,
@@ -2762,7 +4617,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 129,
@@ -2782,7 +4651,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 130,
@@ -2802,7 +4685,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "aviation_maintenance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 131,
@@ -2822,7 +4719,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "adhd"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 132,
@@ -2843,7 +4754,24 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 133,
@@ -2863,7 +4791,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "adhd",
+          "learning_other"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 134,
@@ -2883,7 +4826,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "adhd",
+          "learning_other"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 135,
@@ -2903,7 +4861,25 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "adhd",
+          "autism",
+          "dyslexia",
+          "financial_need",
+          "learning_other"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 136,
@@ -2923,7 +4899,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "unknown",
+        "topic_tags": [
+          "dyslexia",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 137,
@@ -2943,7 +4934,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "chronic_health",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 138,
@@ -2964,7 +4970,23 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "arts_humanities",
+          "female",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 139,
@@ -2984,7 +5006,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "leadership"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 140,
@@ -3003,7 +5039,23 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "caregiving",
+          "female",
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 141,
@@ -3023,7 +5075,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 142,
@@ -3042,7 +5108,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 143,
@@ -3062,7 +5142,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 144,
@@ -3082,7 +5176,23 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "revise",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "certificate",
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 145,
@@ -3102,7 +5212,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 146,
@@ -3122,7 +5246,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 147,
@@ -3142,7 +5280,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 148,
@@ -3162,7 +5314,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "certificate",
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 149,
@@ -3182,7 +5349,22 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 150,
@@ -3201,7 +5383,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "unknown"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "electric_coop"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 151,
@@ -3221,7 +5417,21 @@
       "proposal_batch_id": "p8m-rev225-rows-127-151",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "needs_more_evidence",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "any_or_unspecified",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "unknown",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 152,
@@ -3238,7 +5448,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "lgbtqia"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 153,
@@ -3259,7 +5483,23 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "lgbtqia",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 154,
@@ -3279,7 +5519,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 155,
@@ -3299,7 +5554,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 156,
@@ -3316,7 +5586,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 157,
@@ -3333,7 +5617,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "loss_of_parent",
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 158,
@@ -3354,7 +5653,26 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "asian_pacific_islander",
+          "black_african_american",
+          "financial_need",
+          "hispanic_latino",
+          "merit",
+          "native_american"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 159,
@@ -3374,7 +5692,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "native_american"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 160,
@@ -3393,7 +5725,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "native_american"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 161,
@@ -3414,7 +5760,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "native_american"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 162,
@@ -3431,7 +5792,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "financial_need",
+          "native_american"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 163,
@@ -3451,7 +5827,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "foster_care"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 164,
@@ -3471,7 +5861,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "foster_care",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 165,
@@ -3488,7 +5893,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "offline_or_counselor",
+        "topic_tags": [
+          "financial_need",
+          "foster_care"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 166,
@@ -3509,7 +5929,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "leadership",
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 167,
@@ -3530,7 +5965,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "overcoming_adversity"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 168,
@@ -3549,7 +5999,23 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "loss_of_parent",
+          "military_veteran"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 169,
@@ -3570,7 +6036,23 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "healthcare",
+          "merit",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 170,
@@ -3590,7 +6072,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "agriculture_conservation"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 171,
@@ -3611,7 +6107,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "email",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 172,
@@ -3630,7 +6140,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "agriculture_conservation"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 173,
@@ -3649,7 +6173,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "agriculture_conservation"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 174,
@@ -3670,7 +6208,22 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "agriculture_conservation",
+          "business_finance"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 175,
@@ -3687,7 +6240,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "agriculture_conservation"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 176,
@@ -3707,7 +6274,21 @@
       "proposal_batch_id": "p8m-rev225-rows-152-176",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "other",
+        "topic_tags": [
+          "aviation_pilot"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 177,
@@ -3724,7 +6305,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 178,
@@ -3744,7 +6339,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 179,
@@ -3764,7 +6373,22 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "financial_need",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 180,
@@ -3784,7 +6408,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "unknown"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 181,
@@ -3804,7 +6442,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "unknown",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "arts_humanities"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 182,
@@ -3821,7 +6473,23 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "arts_humanities",
+          "financial_need",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 183,
@@ -3838,7 +6506,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 184,
@@ -3858,7 +6540,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "community_service"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 185,
@@ -3878,7 +6574,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "arts_humanities"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 186,
@@ -3895,7 +6605,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "general"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 187,
@@ -3912,7 +6636,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "unknown",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 188,
@@ -3931,7 +6669,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "approve",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "company_employee"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 189,
@@ -3951,7 +6703,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "first_responder"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 190,
@@ -3971,7 +6737,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "first_responder"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 191,
@@ -3991,7 +6771,23 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "healthcare",
+          "nursing"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 192,
@@ -4011,7 +6807,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 193,
@@ -4030,7 +6840,21 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 194,
@@ -4050,7 +6874,22 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "four_year"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "healthcare",
+          "stem"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 195,
@@ -4069,7 +6908,22 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "trade_vocational"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "financial_need",
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 196,
@@ -4088,7 +6942,22 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "montana",
+        "school_types": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_portal",
+        "topic_tags": [
+          "trades"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 197,
@@ -4109,7 +6978,22 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "four_year",
+          "two_year"
+        ],
+        "renewal": "renewable",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "merit"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     },
     {
       "row_number": 198,
@@ -4129,7 +7013,37 @@
       "proposal_batch_id": "p8m-rev225-rows-177-198",
       "codex_validation": "schema_identity_hash_excerpt_and_stable_target_mapping_pass",
       "fact_status": "no_matching_fact_produced",
-      "human_review_status": "pending_human_fact_decision"
+      "human_review_status": "complete",
+      "tag_decision": "approve",
+      "correction_decision": "not_applicable",
+      "reviewed_tags": {
+        "geography_scope": "national",
+        "school_types": [
+          "any"
+        ],
+        "renewal": "non_renewing",
+        "application_route": "provider_form",
+        "topic_tags": [
+          "homelessness"
+        ]
+      },
+      "matching_fact_status": "none_official_verification_unavailable"
     }
-  ]
+  ],
+  "human_review_sha256": "2f30b7c565abbf67f9ee4bcb2012c596c2cc445aae542b65aec58defaf433b7a",
+  "human_rationale_sha256": "fe199aae24968dd96efbe81a97efcab4ad042aae594310a6e8db96b8c5d697c4",
+  "decision_totals": {
+    "tags": {
+      "revise": 14,
+      "approve": 176,
+      "needs_more_evidence": 7
+    },
+    "corrections": {
+      "not_applicable": 158,
+      "approve": 38,
+      "reject": 1
+    }
+  },
+  "publication_path": "web/fixtures/p8m/matching-facts-v1.json",
+  "accepted_fact_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
 }

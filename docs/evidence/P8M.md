@@ -145,62 +145,97 @@ already related by accepted P7 source identities to source row 79's stable porta
 `portal-9720c3c04489`. They remain a named child-award human-review queue; they are not
 silently counted as additional source rows and no application-group field was created.
 
-## Human-review package
+## Human review and final reconciliation candidate
 
-The complete package is `docs/evidence/P8M-human-review.csv`, SHA-256
-`21c12af03be1ed75c820847b10c49731e9296c41c4c18a2629de2e7831a0bf26`.
-It contains a header plus exactly 197 source-row records. Each record includes the
-source fields needed to judge the proposal, stable award/portal mapping, controlled
-tags, correction JSON, review reasons, ambiguity note, Claude confidence, and blank
-review timestamp, decision, and rationale fields. The reviewer identity is prefilled.
+Kelsey Stuart completed all 197 decisions at
+`2026-09-06T17:05:35-06:00`. The governed review CSV is
+`docs/evidence/P8M-human-review.csv`, SHA-256
+`2f30b7c565abbf67f9ee4bcb2012c596c2cc445aae542b65aec58defaf433b7a`.
+Its first 27 columns are cell-for-cell identical to the generated proposal package;
+only `reviewed_at`, `tag_decision`, `correction_decision`, and `human_rationale` are
+populated. Decisions reconcile to 176 tag approvals, 14 revisions, and 7 completed
+`needs_more_evidence` outcomes. Correction decisions are 38 approvals, one rejection,
+and 158 `not_applicable`; the 38 approved rows contain 39 correction recommendations.
 
-Kelsey Stuart must complete all 197 rows. `reviewer_name` is prefilled consistently;
-`reviewed_at` must be nonblank. `tag_decision` must be one of `approve`, `reject`,
-`revise`, or `needs_more_evidence`. `correction_decision` must use the same values, or
-`not_applicable` only when the row has no correction candidate. `human_rationale` must
-explain the decision, including rows 26/27, row 79's child-award queue, every conflict,
-unknown, unsupported taxonomy item, correction, and sensitive tag.
+The companion source-field extract is
+`docs/evidence/P8M-omitted-source-fields.csv`, SHA-256
+`76433a0571bbcc3475707ef22a9df0a08f8b92858cdc84a298126340c275317f`.
+It matches every mapped revision-225 snapshot value for rows 2–198. JSON `null` maps
+to an empty CSV field in 407 cells; no other representational difference exists. The
+review digest and independent validation receipt are preserved at
+`docs/evidence/P8M-review-digest.md` and
+`docs/evidence/P8M-human-review-validation.md`, with SHA-256 values
+`85960fd18068fdf7aed2aca7f7255189b8cd9e8f20b4c2df08c89ed212fbf4d8`
+and `831bfa0cc3cd91091b7aa6d6a0cacb02d5f9ff2c54f8cb0b527be41cd7173ddc`.
 
-CSV cells whose first effective character could be interpreted as a spreadsheet
-formula are prefixed with an apostrophe during export. This protects the review package
-without changing the pinned source snapshot or Claude proposal artifacts.
+The deterministic final reconciliation is
+`docs/evidence/P8M-proposal-reconciliation.json`, SHA-256
+`6df332b900df4791441bdcd36c8ec6e665758e2354e9c7b70f3ca516da70d48b`.
+The immutable publication candidate is
+`web/fixtures/p8m/matching-facts-v1.json`, SHA-256
+`16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07`.
+It contains 197 human-reviewed controlled-tag outcomes for sorting, filtering, and
+grouping only. It contains zero accepted matching facts (canonical empty-array digest
+`4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945`).
+No reviewed tag can exclude a student or affect matching. Approved corrections remain
+unapplied recommendations. Missing or unavailable information remains unknown and
+non-excluding.
 
-An approved correction remains a reviewed proposal only. This stage has no authority
-to write it to the spreadsheet. An approved tag is not a matching fact and cannot hard
-exclude a student. Any later normalized matching fact must separately satisfy
-`matching-facts-v1`, official/organizer field authority, provenance, freshness, and
-reviewer requirements.
+The snapshot and companion expose 100 literal URLs in `Application Link/Method`; 97
+rows have no literal application URL. None of the 187 populated
+`Scholarship Location/Information` cells contains a literal URL, and the formatted-
+value snapshot contains no native hyperlink targets. Those targets remain unavailable,
+not blank facts. Because authorized column A contained zero URLs, P8M made zero
+external URL reads and all 197 rows retain `official_verification_required`.
 
-## Verification
+## Side effects and boundary receipt
 
-- `npm run p8m:proposal:write`: PASS; regenerated the reconciliation and review
-  package from the preserved source and post-review artifacts.
-- `npm run p8m:proposal:check`: PASS; all 197 outcomes and all recorded hashes and
-  totals independently recomputed.
-- `npm run p8m:proposal:test`: PASS; baseline plus 18 fail-closed adversarial
-  mutations.
-- `npm run plan:check`: PASS; 13 ordered stage contracts and the current transition.
+- Spreadsheet reads during this acceptance continuation: 0.
+- Spreadsheet writes: 0.
+- External URL reads or redirects: 0.
+- Forms, applications, logins, provider contacts, and applicant data: 0.
+- P8F and P9 work: 0.
+- Claude accepted facts or spreadsheet mutations: 0.
+
+The publication generator refuses to overwrite a completed human review package,
+checks all proposal-owned columns, exact hashes, row identities, decision vocabulary,
+source-companion cells, disagreement-row coverage, and zero-fact isolation. It creates
+no cycle, cycle-ID, or application-group field.
+
+## Verification and acceptance gate
+
+Pre-freeze verification on the isolated acceptance worktree:
+
+- `npm ci`: PASS; 462 packages installed from the lockfile.
+- `npm run p8m:proposal:check` and `npm run p8m:proposal:test`: PASS; 197 rows and
+  the original 18 fail-closed proposal mutations.
+- `npm run p8m:acceptance:check` and `npm run p8m:acceptance:test`: PASS; exact human
+  package/publication reconstruction plus seven fail-closed acceptance mutations.
+- `npm run plan:check`: PASS for all 13 ordered stage contracts.
 - `npm run typecheck`: PASS.
-- `npm test`: PASS.
-- `npm run build`: an earlier exact run passed before the final review-export
-  hardening. The current-tree rerun reached Next.js 16.3.3 and then hit the execution
-  environment's Turbopack local-port `EPERM`, both restricted and permitted.
-- `npm run build -- --webpack`: PASS on the current tree in the permitted context.
-  Existing middleware-deprecation and Edge-runtime compatibility warnings remain; they
-  are not P8M data-integrity failures.
-- `git diff --check`: PASS.
+- `npm test`: PASS, including the complete P0–P8R matrix and both P8M suites.
+- `npm run build`: dependency fetching succeeded, but the exact Turbopack build then
+  failed because its CSS worker attempted a prohibited local port bind (`EPERM`).
+- `npm run build -- --webpack`: PASS on the same candidate; only the existing
+  middleware-deprecation and Edge-runtime compatibility warnings remained.
+- `npm audit --omit=dev --json`: one moderate production advisory in transitive `qs`,
+  with zero critical/high. A fix is available but dependency mutation is outside P8M;
+  route it to separately authorized maintenance.
+- `git diff --check`: PASS after declaring the governed CRLF review CSV as
+  `cr-at-eol`; the review file's accepted SHA-256 remains unchanged.
 
-## Stop state and remaining gates
+The candidate is not canonically accepted merely because `BUILD_STATE.json` describes
+a verified publication candidate. Canonical acceptance requires the exact candidate
+manifest and a fresh-context C0/H0 review in the direct-child attestation.
 
-P8M is preserved as `blocked-external` on baseline
-`55245dc42a726d57ef3bdbeeab7aa27fcce31d17` with the validated row package intact.
-The only P8M acceptance blocker is
-`P8M-acceptance-awaits-complete-human-fact-decisions`.
+At the start of closeout, Git remote refresh and repository lookup were unavailable:
+SSH reported `Repository not found`, and both locally configured GitHub identities
+reported invalid authentication. No credential was requested, copied, or stored. The
+last locally verified `origin/main` remains
+`55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. Before attestation or remote delivery, a
+fresh session must reauthenticate securely through the browser/keychain, verify the
+remote baseline is still exact, and rerun the final review if any candidate byte or
+baseline changes. Do not create an undeliverable attestation commit.
 
-After Kelsey returns complete decisions, Codex must validate the decision file,
-reconcile every decision, create any schema-valid accepted publication,
-run the full required matrix, freeze a candidate, and obtain the separate fresh-context
-read-only C0/H0 repository review. Only then may manifest/attestation and the already
-authorized Git/Vercel delivery occur. No spreadsheet write is part of that path.
-
-Stop before P8F and P9.
+Stop before P8F and P9. P8F may begin only after the P8M direct-child attestation is
+merged and the exact live `origin/main` delivery is verified.

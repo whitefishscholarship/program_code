@@ -1,51 +1,49 @@
 # Current Handoff
 
-Last updated: 2026-09-02
+Last updated: 2026-09-06
 Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8M — post-review proposal package validated; human decisions pending
+## P8M — complete human reconciliation; acceptance candidate awaiting fresh review and delivery
 
-- P8M started from delivered live baseline
-  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17`. The revision check remained `225`, so
-  no re-pin was required. The authorized column-A URL queue was zero; no external URL
-  was read.
-- Kelsey authorized the exact 197-row read-only proposal pass and later clarified that
-  the pasted Claude narrative was pre-review while the attached receipt and nine
-  `/private/tmp/p8m-claude-output` files were the post-review result. The preserved
-  receipt SHA-256 is
-  `1437a4db1c345d91b40466eeb2773db576245982834ff9b656cdc6a80500cb60`; the recomputed
-  combined proposal digest is
-  `75eebc9abd6d84d2e6e266b9c44255289c9c7cdb669c73caf85ed5cefe91024f`.
-- Codex independently validates all 197 written rows: 176 Scholarship and 21 Portal,
-  rows 2–198 exactly once, 197 unique source-row IDs, closed controlled values, every
-  correction excerpt verbatim in its cited source cell, zero proposal-row contacts or
-  prohibited identity fields, zero matching/accepted facts, and all hashes/totals
-  recomputed. The guard rejects 18 adversarial mutations.
-- Stable target reconciliation maps the rows to 176 unique accepted P7 award public
-  IDs and 21 unique portal public IDs. Duplicate-name rows 26 and 27 are disambiguated
-  by amount, GPA, and school type. Sixteen catalog-only child awards are explicitly
-  related to row 79's portal and retained in the child-award review queue; they are not
-  additional source rows and no application-group field was created.
-- Authoritative reconciliation:
-  `docs/evidence/P8M-proposal-reconciliation.json`. Human package:
-  `docs/evidence/P8M-human-review.csv`. Complete narrative and exact hashes:
-  `docs/evidence/P8M.md`.
-- Kelsey clarified at `2026-09-03T02:48:16Z` that she is the human reviewer. The human
-  fact reviewer is machine-pinned as `Kelsey Stuart`, and the review CSV now prefills
-  that identity. All 197 decisions and rationales remain pending before fact/P8M
-  acceptance, immutable publication, candidate freeze, final fresh-context repository
-  review, attestation, or delivery. Claude and Codex have accepted zero facts.
-- No spreadsheet write, other-tab cell read, external URL read, form/application
-  interaction, provider contact, product/runtime/deployment-configuration change,
-  P8F, or P9 operation occurred. Stop before P8F and P9.
-- P8M proposal validation, its 18-case adversarial guard, all 13 plan contracts,
-  typecheck, the complete test suite, the current-tree supported Webpack production
-  build, and root whitespace validation pass. The final exact default build rerun is
-  environment-blocked on Turbopack local-port `EPERM`; an earlier exact default run
-  passed before the review-export hardening. Existing middleware-deprecation and
-  Edge-runtime warnings remain explicitly non-P8M.
+- Work continues from baseline
+  `55245dc42a726d57ef3bdbeeab7aa27fcce31d17` on isolated branch
+  `codex/p8m-acceptance`. The pinned source remains revision `225`, range
+  `'Master Database'!A1:O198`, with 197 rows: 176 Scholarship and 21 Portal.
+- Kelsey Stuart completed all 197 human decisions. The exact governed review package,
+  companion source fields, digest, and validation receipt are pinned in
+  `docs/BUILD_STATE.json` and explained in `docs/evidence/P8M.md`. Only the four human
+  decision columns differ from the generated review baseline.
+- Final tag decisions are 176 approve, 14 revise, and 7 completed
+  `needs_more_evidence`. Correction decisions are 38 approve, one reject, and 158
+  `not_applicable`, covering 40 candidates. Approved corrections remain unapplied.
+- `web/fixtures/p8m/matching-facts-v1.json` contains all 197 human-reviewed controlled
+  tag outcomes for sorting, filtering, and grouping only. It contains zero accepted
+  matching facts, and every row is explicitly non-matching pending official
+  verification. Missing or unavailable facts remain unknown and non-excluding.
+- The source package contains 100 literal application-method URLs and 97 rows without
+  one. It exposes no hidden native hyperlink target and none of the 187 populated
+  location fields contains a literal URL. All 197 rows therefore retain
+  `official_verification_required`; no URL was invented or discovered outside the
+  authorized column-A boundary.
+- No spreadsheet read/write occurred in this continuation. No other tab, external URL,
+  form, login, application, provider, applicant data, P8F, or P9 was accessed.
+- The candidate is not accepted merely because local state and publication files
+  exist. It must be frozen, reviewed by a fresh-context non-author at C0/H0, and bound
+  by the exact manifest/review direct-child attestation before any delivery or P8F.
+- At closeout, remote authentication is unavailable: SSH reports `Repository not
+  found`, and both locally configured GitHub identities report invalid authentication.
+  No credential was requested or stored. Do not create an undeliverable attestation.
+  Resume from `docs/kickoffs/P8M-ACCEPTANCE-DELIVERY-RESUME.md`; securely reauthenticate,
+  verify the remote baseline, then complete review/attestation/delivery without changing
+  candidate bytes unless the review or baseline requires a new freeze.
+- Pre-freeze P8M proposal/acceptance guards, plan validation, typecheck, and the full
+  test suite pass. The exact Turbopack build reaches compilation but is blocked by its
+  local-port `EPERM`; the supported Webpack production build passes on the same tree.
+  A read-only production audit reports one moderate transitive `qs` advisory and zero
+  critical/high. Do not change dependencies inside P8M; trigger separately authorized
+  maintenance after this stage is delivered.
 
 ## Plan Revision 12 — row-source correction — delivered baseline
 

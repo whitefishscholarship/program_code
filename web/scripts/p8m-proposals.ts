@@ -305,6 +305,55 @@ export function csvCell(value: unknown): string {
   return `"${spreadsheetSafeText.replaceAll('"', '""')}"`;
 }
 
+function parseCsvRecords(text: string): string[][] {
+  const records: string[][] = [];
+  let record: string[] = [];
+  let field = '';
+  let quoted = false;
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
+    if (quoted) {
+      if (character === '"' && text[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else if (character === '"') {
+        quoted = false;
+      } else {
+        field += character;
+      }
+    } else if (character === '"') {
+      quoted = true;
+    } else if (character === ',') {
+      record.push(field);
+      field = '';
+    } else if (character === '\n') {
+      record.push(field.replace(/\r$/, ''));
+      records.push(record);
+      record = [];
+      field = '';
+    } else {
+      field += character;
+    }
+  }
+  if (quoted) throw new Error('CSV ends inside a quoted field');
+  if (field.length > 0 || record.length > 0) records.push([...record, field]);
+  return records.filter((values) => values.some((value) => value.length > 0));
+}
+
+function reviewSourceColumnsMatch(actualText: string, pendingText: string): boolean {
+  const actual = parseCsvRecords(actualText);
+  const pending = parseCsvRecords(pendingText);
+  if (actual.length !== pending.length || actual.length !== 198) return false;
+  return actual.every((record, rowIndex) => {
+    const expected = pending[rowIndex];
+    if (record.length !== 31 || expected.length !== 31) return false;
+    const governedColumns = rowIndex === 0 ? 31 : 27;
+    return record
+      .slice(0, governedColumns)
+      .every((value, columnIndex) => value === expected[columnIndex]);
+  });
+}
+
 function requireEnum(
   errors: string[],
   value: unknown,
@@ -1019,6 +1068,15 @@ function main(): void {
   }
 
   if (process.argv.includes('--write-review-package')) {
+    const reviewPath = path.join(repoRoot, P8M_HUMAN_REVIEW_PATH);
+    if (fs.existsSync(reviewPath)) {
+      const currentReview = fs.readFileSync(reviewPath, 'utf8');
+      if (currentReview !== result.humanReviewCsv && reviewSourceColumnsMatch(currentReview, result.humanReviewCsv)) {
+        console.error(`${P8M_HUMAN_REVIEW_PATH} contains completed decisions and will not be overwritten`);
+        process.exitCode = 1;
+        return;
+      }
+    }
     fs.writeFileSync(
       path.join(repoRoot, P8M_RECONCILIATION_PATH),
       `${JSON.stringify(result.reconciliation, null, 2)}\n`,
@@ -1033,13 +1091,16 @@ function main(): void {
       'utf8',
     );
     const actualReview = fs.readFileSync(path.join(repoRoot, P8M_HUMAN_REVIEW_PATH), 'utf8');
-    if (actualReconciliation !== expectedReconciliation) {
+    const parsedReconciliation = JSON.parse(actualReconciliation) as JsonRecord;
+    const finalReconciliation =
+      parsedReconciliation.status === 'human_review_reconciled_publication_candidate';
+    if (!finalReconciliation && actualReconciliation !== expectedReconciliation) {
       console.error(`${P8M_RECONCILIATION_PATH} is stale`);
       process.exitCode = 1;
       return;
     }
-    if (actualReview !== result.humanReviewCsv) {
-      console.error(`${P8M_HUMAN_REVIEW_PATH} is stale`);
+    if (!reviewSourceColumnsMatch(actualReview, result.humanReviewCsv)) {
+      console.error(`${P8M_HUMAN_REVIEW_PATH} changed proposal-owned columns or row structure`);
       process.exitCode = 1;
       return;
     }
