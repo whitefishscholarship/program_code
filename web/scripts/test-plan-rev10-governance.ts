@@ -190,9 +190,11 @@ assert.deepEqual(p8m, {
   reviewPath: 'docs/reviews/P8M.json',
   kickoffPath: 'docs/kickoffs/P8M-MATCHING-FACT-ENRICHMENT.md',
 });
-assert.equal(state.activeStageId, null);
-assert.equal(state.nextPermittedStageId, 'P8F');
-assert.equal(state.stages.find(({ id }) => id === 'P8F')?.status, 'planned');
+const p8fStatus = state.stages.find(({ id }) => id === 'P8F')?.status;
+assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p8fStatus ?? ''));
+if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
+else if (p8fStatus === 'accepted') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P9']);
+else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
 assert.equal(state.stages.find(({ id }) => id === 'P9')?.status, 'planned');
 
 const transition = state.dataAuthority.sourceTransition;

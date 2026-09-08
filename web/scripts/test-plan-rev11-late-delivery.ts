@@ -38,8 +38,10 @@ const target = {
 
 assert(state.planRevision >= 11);
 assert.equal(state.stages.find(({ id }) => id === 'P8M')?.status, 'accepted');
-assert.equal(state.activeStageId, null);
-assert.equal(state.nextPermittedStageId, 'P8F');
+const p8fStatus = state.stages.find(({ id }) => id === 'P8F')?.status;
+if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
+else if (p8fStatus === 'accepted') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P9']);
+else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
 const revision11 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV11');
 assert(revision11, 'PLAN-REV11 amendment record is required');
 assert.equal(revision11.baselineCommit, target.baselineCommit);

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "executedAt": "2026-09-08T23:33:55Z",
+  "browserSurface": "Codex in-app browser",
+  "target": "local Next.js development server",
+  "studentAnswersRecorded": false,
+  "screenshotsRecorded": false,
+  "summary": {
+    "declaredVisualJourneys": 10,
+    "declaredViewports": 3,
+    "declaredCells": 30,
+    "passedCells": 30,
+    "failedCells": 0
+  },
+  "sharedObservations": {
+    "productionCounts": { "match": 0, "possibleMatch": 192, "knownConflict": 0 },
+    "syntheticCounts": { "match": 2, "possibleMatch": 4, "knownConflict": 1 },
+    "activityControls": 4,
+    "conditionalVolunteerPrompt": 1,
+    "specialCriteriaControls": 38,
+    "adhdControls": 1,
+    "addControls": 0,
+    "finalAffiliationAndEmployerControls": 7,
+    "applicationPreferenceControls": 6,
+    "portalCards": 21,
+    "sourceCards": 217,
+    "visibleCsvExport": true,
+    "errorRecovery": true,
+    "reloadClearedState": true,
+    "consoleErrors": 0
+  },
+  "viewports": [
+    { "id": "mobile", "width": 360, "height": 800, "status": "pass", "horizontalOverflow": false, "journeysPassed": 10 },
+    { "id": "tablet", "width": 768, "height": 1024, "status": "pass", "horizontalOverflow": false, "journeysPassed": 10 },
+    { "id": "desktop", "width": 1440, "height": 900, "status": "pass", "horizontalOverflow": false, "journeysPassed": 10 }
+  ],
+  "accessibility": {
+    "missingRequiredAnswerAnnounced": true,
+    "stepHeadingFocusedAfterEveryTransition": true,
+    "resultsHeadingFocused": true,
+    "progressRange": { "minimum": 1, "maximum": 4 },
+    "sensitiveSkipClearedAndDisabledSelections": true,
+    "editPreservedVolatileAnswers": true,
+    "decisionAndCurrentEffectNotColorOnly": true
+  },
+  "notes": [
+    "The first mobile pass exposed source-card horizontal overflow; implementation was corrected and the complete 360x800 route was repeated successfully.",
+    "No answer value or detailed decision payload was retained in screenshots or repository evidence.",
+    "The development-only matrix route was visibly labeled as synthetic and did not show the production no-current-effect message."
+  ]
+}

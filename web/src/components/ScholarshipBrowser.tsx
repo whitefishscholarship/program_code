@@ -9,6 +9,7 @@ import {
   type AwardMatchResult,
   type InterviewAnswers,
 } from '@/lib/interviewMatcher';
+import { CURRENT_ACCEPTED_MATCH_FACTS, CURRENT_ACCEPTED_MATCHING_FACT_COUNT } from '@/lib/p8mMatchingFacts';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
 import {
   APPLICATION_MODES,
@@ -118,14 +119,15 @@ export default function ScholarshipBrowser() {
     if (!loading && catalog && experience !== 'interview') experienceHeadingRef.current?.focus();
   }, [catalog, experience, loading]);
 
+  const isSyntheticMatrix = process.env.NODE_ENV !== 'production' && catalog?.catalogRevision === 'f'.repeat(64);
+
   const matching = useMemo(() => {
     if (!catalog || !answers) return null;
-    const acceptedFacts = process.env.NODE_ENV !== 'production'
-      && catalog.catalogRevision === 'f'.repeat(64)
+    const acceptedFacts = isSyntheticMatrix
       ? buildSyntheticMatrixMatchFacts(catalog.awards)
-      : {};
+      : CURRENT_ACCEPTED_MATCH_FACTS;
     return matchStudentAwards(catalog.awards, answers, acceptedFacts);
-  }, [answers, catalog]);
+  }, [answers, catalog, isSyntheticMatrix]);
 
   const matchByAwardId = useMemo(() => new Map(
     (matching?.results ?? []).map((result) => [result.award.publicId, result]),
@@ -154,9 +156,9 @@ export default function ScholarshipBrowser() {
       return matchesSearch && matchesStatus && matchesMethod && matchesSchool;
     }).sort((left, right) => {
       if (sort === 'match') return (order.get(left.publicId) ?? 0) - (order.get(right.publicId) ?? 0);
-      if (sort === 'name') return left.name.localeCompare(right.name);
-      if (sort === 'amount') return (right.amount.maximum ?? right.amount.minimum ?? -1) - (left.amount.maximum ?? left.amount.minimum ?? -1) || left.name.localeCompare(right.name);
-      return statusRank(left.cycle.status) - statusRank(right.cycle.status) || left.name.localeCompare(right.name);
+      if (sort === 'name') return left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
+      if (sort === 'amount') return (right.amount.maximum ?? right.amount.minimum ?? -1) - (left.amount.maximum ?? left.amount.minimum ?? -1) || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
+      return statusRank(left.cycle.status) - statusRank(right.cycle.status) || left.name.localeCompare(right.name) || left.publicId.localeCompare(right.publicId);
     });
   }, [baseAwards, method, schoolType, search, sort, status]);
 
@@ -231,7 +233,7 @@ export default function ScholarshipBrowser() {
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Private scholarship interview</p>
           <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer two short steps. We&apos;ll use only field-specific accepted facts, show why each award appears, and keep uncertain eligibility visible for you to verify.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer the complete four-part interview. We use only exact award-bound accepted facts, show why each award appears, and keep uncertain eligibility visible for you to verify.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the private interview</button>
             <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
@@ -250,6 +252,7 @@ export default function ScholarshipBrowser() {
     return (
       <InterviewWizard
         initialAnswers={answers}
+        syntheticQa={isSyntheticMatrix}
         onCancel={() => setExperience(answers ? 'results' : 'start')}
         onComplete={(nextAnswers) => {
           setAnswers(nextAnswers);
@@ -284,6 +287,7 @@ export default function ScholarshipBrowser() {
               <button type="button" onClick={resetInterview} className="rounded-xl bg-slate-800 px-4 py-3 font-bold text-white hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300">Reset interview</button>
             </div>
           </div>
+          {CURRENT_ACCEPTED_MATCHING_FACT_COUNT === 0 && !isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950"><strong>Your answers had no current effect.</strong> The accepted P8M publication contains zero award-bound matching facts, so no answer excluded, promoted, or reordered an award. All {catalog.counts.awards} awards remain possible matches, subject to your visible filters and selected sort.</div>}
           <dl className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Interview result counts">
             <Count label="Structured matches" value={matching.counts.match} emphasis="positive" />
             <Count label="Possible matches" value={matching.counts.possibleMatch} emphasis="warning" />
@@ -369,13 +373,13 @@ export default function ScholarshipBrowser() {
           </div>
 
           {view === 'awards' && (visibleAwards.length
-            ? <div className="mt-6 grid gap-5 lg:grid-cols-2">{visibleAwards.map((award) => <AwardCard key={award.publicId} award={award} result={isResults ? matchByAwardId.get(award.publicId) : undefined} />)}</div>
+            ? <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-2">{visibleAwards.map((award) => <AwardCard key={award.publicId} award={award} result={isResults ? matchByAwardId.get(award.publicId) : undefined} />)}</div>
             : <EmptyState noun="awards" onClear={clearFilters} />)}
           {view === 'portals' && (visiblePortals.length
-            ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visiblePortals.map((portal) => <PortalCard key={portal.publicId} portal={portal} />)}</div>
+            ? <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">{visiblePortals.map((portal) => <PortalCard key={portal.publicId} portal={portal} />)}</div>
             : <EmptyState noun="portals" onClear={clearFilters} />)}
           {view === 'sources' && (visibleSources.length
-            ? <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{visibleSources.map((source) => <SourceCard key={source.publicId} source={source} />)}</div>
+            ? <div className="mt-6 grid grid-cols-[minmax(0,1fr)] gap-5 md:grid-cols-2 xl:grid-cols-3">{visibleSources.map((source) => <SourceCard key={source.publicId} source={source} />)}</div>
             : <EmptyState noun="sources" onClear={clearFilters} />)}
         </>
       )}
@@ -402,7 +406,7 @@ function FilterSelect({ label, value, options, onChange }: { label: string; valu
 
 function AwardCard({ award, result }: { award: StudentAward; result?: AwardMatchResult }) {
   return (
-    <article className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <article className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       {result && <p className={`mb-4 w-fit rounded-full border px-3 py-1 text-xs font-black uppercase tracking-wide ${decisionStyles[result.decision]}`}>{decisionLabels[result.decision]}</p>}
       <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-start sm:justify-between">
         <h3 className="text-xl font-black leading-snug">{award.name}</h3>
@@ -418,7 +422,7 @@ function AwardCard({ award, result }: { award: StudentAward; result?: AwardMatch
         <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
           <h4 className="font-black text-slate-950">Why this decision</h4>
           <ul className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
-            {result.reasons.map((reason) => <li key={reason.code} className="flex gap-2"><span aria-hidden="true">{reason.kind === 'known_conflict' ? '×' : reason.kind === 'verification_needed' ? '?' : reason.kind === 'preference' ? '◇' : '✓'}</span><span>{reason.message}</span></li>)}
+            {result.reasons.map((reason, index) => <li key={`${reason.code}-${index}`} className="flex gap-2"><span aria-hidden="true">{reason.kind === 'known_conflict' ? '×' : reason.kind === 'verification_needed' ? '?' : reason.kind === 'preference' ? '◇' : '✓'}</span><span>{reason.message}</span></li>)}
           </ul>
         </div>
       )}
@@ -437,7 +441,7 @@ function AwardCard({ award, result }: { award: StudentAward; result?: AwardMatch
 
 function SourceCard({ source }: { source: StudentSource }) {
   return (
-    <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <article className="min-w-0 max-w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-xs font-bold uppercase tracking-wider text-teal-800">{source.architecture.replaceAll('_', ' ')}</p><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold capitalize text-slate-700">{source.recordType}</span></div>
       <h3 className="mt-2 break-words text-xl font-black">{source.title}</h3>
       <dl className="mt-5 grid grid-cols-2 gap-4 text-sm"><div><dt className="font-bold">Catalog state</dt><dd className="mt-1 capitalize text-slate-600">{source.availability}</dd></div><div><dt className="font-bold">Linked awards</dt><dd className="mt-1 text-slate-600">{source.awardCount}</dd></div></dl>
@@ -448,7 +452,7 @@ function SourceCard({ source }: { source: StudentSource }) {
 
 function PortalCard({ portal }: { portal: StudentPortal }) {
   return (
-    <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <article className="min-w-0 max-w-full overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       <p className="text-xs font-bold uppercase tracking-wider text-teal-800">Portal record · {portal.architecture.replaceAll('_', ' ')}</p>
       <h3 className="mt-2 break-words text-xl font-black">{portal.title}</h3>
       <p className="mt-4 text-sm text-slate-600">Linked to {portal.sourcePublicIds.length} canonical source{portal.sourcePublicIds.length === 1 ? '' : 's'}.</p>
