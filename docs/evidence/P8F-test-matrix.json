@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "baselineCommit": "d2e282a3004d79d7b597c58f84ed2b9c8e8eb797",
+  "declaredBeforeImplementation": true,
+  "status": "declared",
+  "questionRuleMapPath": "docs/evidence/P8F-question-rule-map.json",
+  "viewports": [
+    { "id": "mobile", "width": 360, "height": 800 },
+    { "id": "tablet", "width": 768, "height": 1024 },
+    { "id": "desktop", "width": 1440, "height": 900 }
+  ],
+  "canonicalCounts": {
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "activeCycles": 0,
+    "unknownCycles": 192,
+    "minimumObservedRecipientSlots": 71
+  },
+  "questionCounts": {
+    "academicPrompts": 6,
+    "activityCheckboxes": 4,
+    "conditionalVolunteerPrompts": 1,
+    "financialNeedCheckboxes": 1,
+    "specialCriteria": 38,
+    "oneAdhdNoAdd": true,
+    "earlierAffiliationValuesMigrated": 6,
+    "typeOnlyFieldsExcluded": 8
+  },
+  "acceptedFactPolicy": {
+    "publicationPath": "web/fixtures/p8m/matching-facts-v1.json",
+    "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "taxonomyVersion": "1.0.0",
+    "acceptedFacts": 0,
+    "currentProductionOutcome": "all_unsupported_answers_have_no_current_effect_and_all_192_awards_remain_possible"
+  },
+  "prohibitedAnswerChannels": [
+    "sessionStorage",
+    "localStorage",
+    "cookies",
+    "IndexedDB",
+    "request bodies",
+    "URLs and history",
+    "logs",
+    "analytics",
+    "screenshots showing answer values",
+    "exports",
+    "fixtures containing real student data",
+    "Git"
+  ],
+  "journeys": [
+    {
+      "id": "complete-former-question-inventory",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "render exactly six academic prompts, four activity checkboxes, one conditional volunteer prompt, one financial-need checkbox, and 38 special criteria",
+        "render one ADHD control with the historical tooltip and no distinct ADD control",
+        "preserve every historical displayed ID, label, answer option, and conditional through the exact migration map",
+        "do not render any of the eight TypeScript-only fields as recovered former questions"
+      ]
+    },
+    {
+      "id": "required-validation-navigation-and-focus",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "missing or invalid required GPA, residence, educational status, and target school type block progression and are announced",
+        "previous and edit preserve only current volatile answers",
+        "step headings receive focus and progress is announced",
+        "keyboard order and named controls remain logical"
+      ]
+    },
+    {
+      "id": "optional-sensitive-and-prefer-not-to-answer",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "sensitive sections explain that answers are optional and state their current effect",
+        "prefer-not-to-answer clears sensitive selections and is matching-equivalent to unanswered",
+        "nonselection never creates a contradiction",
+        "positive selections affect results only through exact accepted authority"
+      ]
+    },
+    {
+      "id": "conditional-volunteer-hours-and-boundaries",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "volunteer hours render only after service is selected",
+        "clearing service clears the hidden bucket",
+        "all four displayed buckets map to exact typed inclusive boundaries",
+        "the type-only zero bucket is not displayed"
+      ]
+    },
+    {
+      "id": "affiliation-migration-without-duplication",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "the earlier six affiliation values each map to one final special-criteria control",
+        "the standalone organization_affiliations question does not render",
+        "the seven final affiliation and employer controls render exactly once"
+      ]
+    },
+    {
+      "id": "zero-accepted-fact-results",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "production publication with zero accepted facts yields zero structured matches, 192 possible matches, and zero known conflicts",
+        "the page explicitly says the submitted answers did not narrow or reorder results because no accepted matching facts support an effect",
+        "all awards stay visible as possible matches with deterministic reasons",
+        "answer changes do not alter production decision tiers or match order"
+      ]
+    },
+    {
+      "id": "synthetic-accepted-fact-gates-and-rank",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "every eligibility-mapped control is exercised against award-bound accepted required facts",
+        "every positive/rank-mapped criterion is exercised against award-bound accepted preferred facts",
+        "an explicit contradictory typed answer is required for known conflict",
+        "accepted preference changes order without changing eligibility"
+      ]
+    },
+    {
+      "id": "on-page-results-and-browse-all",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "accepted cards, reasons, counts, relationships, filters, selected sorting, application methods, cycle status, and official links remain on page",
+        "browse-all awards, portals, and sources remain available",
+        "empty result and filtered states have accessible recovery actions",
+        "known conflicts remain reviewable and nothing is silently discarded"
+      ]
+    },
+    {
+      "id": "visible-result-csv-and-safe-links",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "CSV export contains exactly the currently visible award cards",
+        "CSV uses the accepted public allow-list and formula neutralization",
+        "CSV contains no answers, decisions, reasons, or internal review fields",
+        "official links retain safe external-link attributes"
+      ]
+    },
+    {
+      "id": "reset-reload-error-and-screen-reader-states",
+      "kind": "visual",
+      "viewports": ["mobile", "tablet", "desktop"],
+      "requirements": [
+        "reset and reload clear every answer and detailed decision",
+        "catalog errors are announced and retry does not reuse stale answers or results",
+        "result counts and validation use live regions",
+        "decision state and current-effect disclosure are not color-only"
+      ]
+    },
+    {
+      "id": "question-map-and-history-contract",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Pinned Git blobs, history anchors, and exact JSON map reconciliation do not render a viewport.",
+      "requirements": [
+        "reverify commit 4c20637 and all seven pinned blobs",
+        "repeat dyslexia, ADHD, ADD, first_generation, First-Generation, and Attention-Deficit history anchors",
+        "validate all labels, options, conditions, aliases, migrations, type-only exclusions, and rule dispositions",
+        "bind the map to the exact P8M publication, accepted-fact digest, taxonomy, and baseline"
+      ]
+    },
+    {
+      "id": "matching-rule-adversarial-contract",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Pure deterministic matcher and schema mutations are nonvisual.",
+      "requirements": [
+        "reject default Montana, Non-Renewing substring, year-2001 deadline, and free-text identity, health, hardship, affiliation, employer, GPA, school, and location gates",
+        "reject amount, portal, criterion, is_new, renewing-substring, essay, and other legacy points",
+        "reject unaccepted, stale, conflict, proposed, rejected, unknown, parent-only, wrong-award, and wrong-cycle facts",
+        "preserve missing, unanswered, nonselected, prefer-not-to-answer, and undecided states as possible",
+        "use decision tier, accepted preference, selected P7 sort, and award ID as deterministic tie-breakers"
+      ]
+    },
+    {
+      "id": "answer-and-decision-privacy-contract",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Storage, network, URL, logging, analytics, export, reload, and source-boundary assertions are code/runtime contracts.",
+      "requirements": [
+        "answers and detailed decisions remain only in volatile React/browser memory",
+        "no answer, decision, or matched-row payload reaches storage, cookies, IndexedDB, requests, URLs/history, logs, analytics, screenshots, exports, fixtures, or Git",
+        "matcher is synchronous and imports neither the legacy processor nor rules pack",
+        "catalog loading is answer-independent and GET-only"
+      ]
+    },
+    {
+      "id": "catalog-api-admin-export-regression",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Catalog graph, API allow-list, admin build, and CSV serializer checks are transport/file-level.",
+      "requirements": [
+        "reconcile 192 awards, 217 sources, 21 portals, four application groups, and 192 cycles without loss or duplication",
+        "preserve the legacy data payload and canonical API/public allow-lists",
+        "preserve administrator routes and keep student answers out of admin actions",
+        "preserve visible-result CSV safety and exact row count"
+      ]
+    },
+    {
+      "id": "one-stage-and-side-effect-boundary",
+      "kind": "nonvisual",
+      "viewports": [],
+      "viewportExclusion": "Git/state/scope and external-side-effect assertions are repository-level.",
+      "requirements": [
+        "change P8F only and keep P9 planned/unstarted/unauthorized",
+        "perform zero spreadsheet/source reads or writes, fact mutations, monitoring activation, deployment-configuration changes, form interactions, applicant-data actions, or provider contact",
+        "preserve accepted P8 schedule and P8M publication bytes",
+        "carry all separately owned maintenance and evidence unknowns forward"
+      ]
+    }
+  ],
+  "acceptedExclusions": [],
+  "results": []
+}
