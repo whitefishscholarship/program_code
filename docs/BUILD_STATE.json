@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 12,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-06",
+  "lastUpdated": "2026-09-08",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -706,8 +706,8 @@
       }
     ]
   },
-  "activeStageId": null,
-  "nextPermittedStageId": "P8F",
+  "activeStageId": "P8F",
+  "nextPermittedStageId": null,
   "stages": [
     {
       "id": "P0",
@@ -822,8 +822,8 @@
     {
       "id": "P8F",
       "name": "Former interview detail and routing restoration",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "verified",
+      "baselineCommit": "d2e282a3004d79d7b597c58f84ed2b9c8e8eb797",
       "evidencePath": "docs/evidence/P8F.md",
       "manifestPath": "docs/evidence/P8F-manifest.json",
       "reviewPath": "docs/reviews/P8F.json",

@@ -29,15 +29,24 @@ const matrixCatalog = StudentCatalogSchema.parse(matrixCatalogJson);
 
 const syntheticAnswers: InterviewAnswers = {
   gpa: 3.5,
-  schoolTypes: ['four_year'],
+  residenceState: 'MT',
+  educationalStatus: 'high_school_senior',
+  targetSchoolTypes: ['four_year'],
+  collegeAccepted: null,
+  gapYear: null,
+  activities: [],
+  volunteerHours: null,
+  financialNeed: false,
+  selectedCriteria: [],
+  sensitiveCriteriaSkipped: false,
   preferredApplicationModes: [],
 };
 
 assert.equal(InterviewAnswersSchema.safeParse(syntheticAnswers).success, true);
 assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, gpa: 4.01 }).success, false, 'GPA above 4.0 must fail validation');
-assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, schoolTypes: [] }).success, false, 'At least one school type is required');
+assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, targetSchoolTypes: [] }).success, false, 'At least one school type is required');
 assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, residence: 'Colorado' }).success, false, 'Unstructured residence answers must not enter the matcher');
-assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, schoolTypes: ['four_year', 'four_year'] }).success, false, 'Repeated school types must fail validation');
+assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, targetSchoolTypes: ['four_year', 'four_year'] }).success, false, 'Repeated school types must fail validation');
 
 const baseAward = matrixCatalog.awards[0];
 const cloneAward = (overrides: Partial<StudentAward> & { publicId: string; name: string }): StudentAward => StudentAwardSchema.parse({
@@ -93,7 +102,7 @@ assert(gpaConflict.reasons.some((reason) => reason.code === 'gpa_below_minimum')
 
 const schoolConflict = matchStudentAwards(
   [knownAward],
-  { ...syntheticAnswers, schoolTypes: ['trade'] },
+  { ...syntheticAnswers, targetSchoolTypes: ['trade_vocational'] },
   factsMap(knownFacts),
 ).results[0];
 assert.equal(schoolConflict.decision, 'known_conflict');
@@ -225,7 +234,7 @@ assert.equal(resultAwardIds.size, catalog.counts.awards, 'matching must neither 
 const matrixFacts = buildSyntheticMatrixMatchFacts(matrixCatalog.awards);
 const matrixResult = matchStudentAwards(matrixCatalog.awards, {
   ...syntheticAnswers,
-  schoolTypes: ['four_year', 'trade'],
+  targetSchoolTypes: ['four_year', 'trade_vocational'],
 }, matrixFacts);
 assert.deepEqual(matrixResult.counts, { match: 2, possibleMatch: 4, knownConflict: 1, total: 7 });
 
@@ -250,7 +259,7 @@ for (const forbidden of ['processAndFilter', 'RulesPack', 'fetch(', 'XMLHttpRequ
 }
 assert(browserSource.includes('loadStudentCatalog(qaMode)'), 'catalog load must use the answer-independent client');
 assert(browserSource.includes("process.env.NODE_ENV !== 'production'"), 'synthetic matrix authority must be disabled in production');
-assert(browserSource.includes("catalog.catalogRevision === 'f'.repeat(64)"), 'synthetic authority must bind the exact matrix catalog');
+assert(browserSource.includes("catalog?.catalogRevision === 'f'.repeat(64)"), 'synthetic authority must bind the exact matrix catalog');
 assert(browserSource.includes('setAnswers(null)'), 'reset and new-interview paths must clear in-memory answers');
 const clientSource = fs.readFileSync(path.join(webRoot, 'src/lib/studentCatalogClient.ts'), 'utf8');
 assert(!/InterviewAnswers|answers|request\s*body|body\s*:/.test(clientSource), 'catalog client must be answer-independent and body-free');

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "verifiedAt": "2026-09-08T23:33:55Z",
+  "command": "npm run p8f:test",
+  "status": "pass",
+  "studentAnswersRecorded": false,
+  "publication": {
+    "path": "web/fixtures/p8m/matching-facts-v1.json",
+    "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "taxonomyVersion": "1.0.0",
+    "sourceRevision": "225",
+    "sourceRows": 197,
+    "acceptedFacts": 0
+  },
+  "acceptedCatalog": {
+    "awards": 192,
+    "sources": 217,
+    "portals": 21,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "activeCycles": 0,
+    "unknownCycles": 192,
+    "minimumObservedRecipientSlots": 71
+  },
+  "productionOutcome": {
+    "total": 192,
+    "match": 0,
+    "possibleMatch": 192,
+    "knownConflict": 0,
+    "lostAwards": 0,
+    "duplicateAwards": 0,
+    "answerChangesAlteredDecisionOrOrder": false
+  },
+  "syntheticAcceptedFactCoverage": {
+    "awardBindingRequired": true,
+    "criterionBindingRequired": true,
+    "eligibilityAndPositiveRuleGates": 51,
+    "explicitContradictionRequired": true,
+    "unansweredOrNonselectedExcluded": false,
+    "rankOnlyPreferenceChangedEligibility": false
+  },
+  "regressionsRejected": [
+    "default Montana exclusion",
+    "Non-Renewing substring classification",
+    "year-2001 deadline fallback",
+    "free-text identity, health, hardship, affiliation, employer, GPA, school, or location gates",
+    "amount, portal, criterion, is_new, renewal-substring, or essay points",
+    "legacy processor or rules-pack imports",
+    "legacy data payload matcher coupling",
+    "matched-row storage",
+    "unaccepted authority",
+    "wrong award or criterion binding"
+  ]
+}
