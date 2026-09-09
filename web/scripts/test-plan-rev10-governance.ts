@@ -75,6 +75,7 @@ type BuildState = {
         mutableMasterDirectReadAuthorized: boolean;
         publicationEvidencePath: string;
         p8mAcceptanceBindingMode: string;
+        runtimeReadAuthorityEvidencePath: string | null;
         requiredPublicationPins: string[];
         pinOwnership: { P8M: string[]; P9: string[] };
       };
@@ -400,7 +401,7 @@ if (p9Stage?.status === 'planned') {
   assert.equal(p9Authorization?.authorizedAt, '2026-09-09');
   assert.equal(p9Authorization?.evidencePath, 'docs/evidence/P9.md');
   assert.equal(
-    state.dataAuthority.sourceTransition.applicationRuntime.runtimeReadAuthorityEvidencePath,
+    transition.applicationRuntime.runtimeReadAuthorityEvidencePath,
     'docs/evidence/P9.md',
   );
 }

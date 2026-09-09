@@ -277,7 +277,12 @@ export function generateP4Evidence(): GeneratedP4Evidence {
   assert.equal(buildState.dataAuthority.productionMutationAuthorized, false);
   if (buildState.planRevision >= 7) {
     assert.equal(buildState.dataAuthority.productionSpreadsheetId, P9_PRODUCTION_SPREADSHEET_ID);
-    assert.equal(buildState.stages.find((stage) => stage.id === 'P9')?.status, 'planned');
+    assert.ok(
+      ['planned', 'active', 'verified', 'accepted'].includes(
+        buildState.stages.find((stage) => stage.id === 'P9')?.status ?? '',
+      ),
+      'P9 must remain in a valid lifecycle state',
+    );
   } else {
     assert.equal(buildState.dataAuthority.productionSpreadsheetId, null);
   }

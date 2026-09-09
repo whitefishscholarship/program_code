@@ -261,8 +261,14 @@ assert.equal(state.stages.find((stage) => stage.id === 'P8M')?.status, 'accepted
 const p8fStatus = state.stages.find((stage) => stage.id === 'P8F')?.status;
 assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p8fStatus ?? ''), 'P8F lifecycle state is invalid');
 if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
-else if (p8fStatus === 'accepted') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P9']);
+else if (p8fStatus === 'accepted') {
+  const p9Status = state.stages.find((stage) => stage.id === 'P9')?.status;
+  assert(['planned', 'active'].includes(p9Status ?? ''));
+  assert.deepEqual(
+    [state.activeStageId, state.nextPermittedStageId],
+    p9Status === 'planned' ? [null, 'P9'] : ['P9', null],
+  );
+}
 else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
-assert.equal(state.stages.find((stage) => stage.id === 'P9')?.status, 'planned');
 
 console.log(`P8F PREIMPLEMENTATION TEST PASS academic=${map.academicPrompts.length} activities=${map.activityCheckboxes.length} volunteer=1 financial=1 criteria=${map.specialCriteria.length} affiliations=${map.earlierAffiliationMigration.length} typeOnly=${map.typeOnlyExcluded.length} dispositions=${map.ruleDispositions.length} visualCells=${visualJourneys.length * matrix.viewports.length} acceptedFacts=${publication.accepted_facts.length}`);
