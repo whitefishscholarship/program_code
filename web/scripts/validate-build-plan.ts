@@ -2526,11 +2526,14 @@ if (state) {
           fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
         }
       } else if (
-        p9DeliveryAuthorization?.authorized !== false ||
-        p9DeliveryAuthorization.authorizedBy !== null ||
-        p9DeliveryAuthorization.authorizedAt !== null ||
-        p9DeliveryAuthorization.evidencePath !== null ||
-        !p9DeliveryAuthorization.basis.includes('prospectively supersede')
+        !p9MayUseProduction &&
+        (
+          p9DeliveryAuthorization?.authorized !== false ||
+          p9DeliveryAuthorization.authorizedBy !== null ||
+          p9DeliveryAuthorization.authorizedAt !== null ||
+          p9DeliveryAuthorization.evidencePath !== null ||
+          !p9DeliveryAuthorization.basis.includes('prospectively supersede')
+        )
       ) {
         fail('Plan Revision 10 requires the former P9 delivery authority to remain historical and replacement P9 to be unauthorized');
       }

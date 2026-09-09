@@ -202,7 +202,7 @@ export function validatePlanRev12RowSource(
     const accepted = context.p8mStatus === 'accepted';
     const acceptedP8mStagePositionIsValid =
       (context.activeStageId === null && ['P8F', 'P9'].includes(context.nextPermittedStageId ?? '')) ||
-      (context.activeStageId === 'P8F' && context.nextPermittedStageId === null);
+      (['P8F', 'P9'].includes(context.activeStageId ?? '') && context.nextPermittedStageId === null);
     if (
       (accepted && !acceptedP8mStagePositionIsValid) ||
       (!accepted && (context.activeStageId !== 'P8M' || context.nextPermittedStageId !== null))
