@@ -218,7 +218,19 @@ assert.equal(matrix.acceptedFactPolicy.publicationSha256, map.matchingPublicatio
 assert.equal(matrix.acceptedFactPolicy.taxonomyVersion, map.taxonomyVersion);
 assert.equal(matrix.acceptedFactPolicy.acceptedFacts, 0);
 assert.equal(matrix.acceptedExclusions.length, 0);
-assert.equal(matrix.results.length, 0);
+assert.equal(matrix.results.length, matrix.viewports.length, 'executed matrix must contain one result per viewport');
+for (const result of matrix.results as Array<{ viewport?: string; status?: string; passedJourneyIds?: string[]; evidencePath?: string }>) {
+  assert(matrix.viewports.some((viewport) => viewport.id === result.viewport));
+  assert.equal(result.status, 'pass');
+  assert.equal(result.passedJourneyIds?.length, 10);
+  assert.equal(result.evidencePath, 'docs/evidence/P8F-browser.json');
+}
+const declaredMatrix = JSON.parse(execFileSync('git', [
+  'show',
+  '84ef59209ea5cc61738a7651d8016d6a34d56e1e:docs/evidence/P8F-test-matrix.json',
+], { cwd: repoRoot, encoding: 'utf8' })) as Matrix;
+assert.equal(declaredMatrix.results.length, 0, 'preimplementation commit must preserve the unexecuted declaration');
+assert.equal(declaredMatrix.declaredBeforeImplementation, true);
 const visualJourneys = matrix.journeys.filter((journey) => journey.kind === 'visual');
 assert.equal(visualJourneys.length, 10);
 for (const journey of matrix.journeys) {

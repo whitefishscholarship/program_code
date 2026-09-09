@@ -45,11 +45,17 @@ zero structured matches, 192 possible matches, and zero known conflicts. The pag
 the answers had no current effect and that all 192 awards remain possible. Divergent
 answer sets produce the same decision counts and match order.
 
-Synthetic test-only authority exercises 51 exact question/rule gates. A hard conflict
-requires an explicit contradictory typed answer plus an accepted rule bound to the
-exact award and criterion. Positive sensitive nonselection stays possible. Career,
-athletic, and application-format preferences can alter order without changing
-eligibility. Invalid authority, award identity, and criterion bindings fail closed.
+Synthetic test-only authority exercises 51 exact question/rule gates through the frozen
+`matching-facts-v1` schema. The runtime copy at
+`web/fixtures/p8m/matching-fact-contract-v1.json` is byte-identical to the canonical
+Revision 10 contract; tests reject drift. Every usable fact carries exact award and
+optional cycle identity, criterion/operator/value typing, accepted evidence status,
+source provenance, reviewer provenance, and taxonomy version. A hard conflict requires
+an explicit contradictory typed answer. Cycle status alone is informational and never
+hard-excludes. Volunteer buckets use the contract's exact inclusive numeric transforms;
+sensitive aggregate and affiliation answers use the frozen aliases and fixed values.
+Positive nonselection stays possible. Invalid status, provenance, taxonomy, award,
+cycle, criterion, operator, or value fails closed.
 
 ## Preserved product routes
 
@@ -76,7 +82,8 @@ screenshots, fixtures, or Git.
 
 ## Browser evidence
 
-`docs/evidence/P8F-browser.json` records 30/30 passing declared cells:
+`docs/evidence/P8F-browser.json` records 30/30 passing declared cells and one inspectable
+observation record for every viewport/journey pair:
 
 - 360x800: 10/10;
 - 768x1024: 10/10; and
@@ -87,7 +94,16 @@ volunteering, sensitive skip/clear, affiliation migration without duplication, z
 production results, synthetic accepted-fact decisions, filters/sorts/links/export,
 browse-all counts, error retry, reset/reload, edit preservation, focus transitions,
 progress semantics, console errors, and horizontal overflow. The first mobile pass found
-a source-card overflow; it was corrected and the complete 360x800 route then passed.
+a source-card overflow; it was corrected and the complete 30-cell matrix was rerun on
+the final remediated bytes. The final browser run reported zero console errors.
+
+The first frozen candidate `b3e4cce0ac43129ed023cff48fecc0d27a6d729b` was rejected
+by fresh read-only reviewer `/root/p8f_fresh_review` at C0/H2/M2/L0. The implementation
+owner remediated all four findings: the weaker parallel matcher schema was replaced by
+the exact frozen contract, answerless cycle exclusions were removed, runtime labels and
+tooltips were reconciled exactly to the historical map, and the full browser matrix now
+has per-cell evidence. That rejected candidate is not eligible for attestation or
+delivery; the reviewer must recheck the replacement candidate.
 
 ## Verification record
 

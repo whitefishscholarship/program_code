@@ -224,5 +224,24 @@
     }
   ],
   "acceptedExclusions": [],
-  "results": []
+  "results": [
+    {
+      "viewport": "mobile",
+      "status": "pass",
+      "passedJourneyIds": ["complete-former-question-inventory", "required-validation-navigation-and-focus", "optional-sensitive-and-prefer-not-to-answer", "conditional-volunteer-hours-and-boundaries", "affiliation-migration-without-duplication", "zero-accepted-fact-results", "synthetic-accepted-fact-gates-and-rank", "on-page-results-and-browse-all", "visible-result-csv-and-safe-links", "reset-reload-error-and-screen-reader-states"],
+      "evidencePath": "docs/evidence/P8F-browser.json"
+    },
+    {
+      "viewport": "tablet",
+      "status": "pass",
+      "passedJourneyIds": ["complete-former-question-inventory", "required-validation-navigation-and-focus", "optional-sensitive-and-prefer-not-to-answer", "conditional-volunteer-hours-and-boundaries", "affiliation-migration-without-duplication", "zero-accepted-fact-results", "synthetic-accepted-fact-gates-and-rank", "on-page-results-and-browse-all", "visible-result-csv-and-safe-links", "reset-reload-error-and-screen-reader-states"],
+      "evidencePath": "docs/evidence/P8F-browser.json"
+    },
+    {
+      "viewport": "desktop",
+      "status": "pass",
+      "passedJourneyIds": ["complete-former-question-inventory", "required-validation-navigation-and-focus", "optional-sensitive-and-prefer-not-to-answer", "conditional-volunteer-hours-and-boundaries", "affiliation-migration-without-duplication", "zero-accepted-fact-results", "synthetic-accepted-fact-gates-and-rank", "on-page-results-and-browse-all", "visible-result-csv-and-safe-links", "reset-reload-error-and-screen-reader-states"],
+      "evidencePath": "docs/evidence/P8F-browser.json"
+    }
+  ]
 }

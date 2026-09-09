@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P8F",
-  "verifiedAt": "2026-09-08T23:33:55Z",
+  "verifiedAt": "2026-09-09T00:34:24Z",
   "command": "npm run p8f:test",
   "status": "pass",
   "studentAnswersRecorded": false,
@@ -33,12 +33,21 @@
     "answerChangesAlteredDecisionOrOrder": false
   },
   "syntheticAcceptedFactCoverage": {
+    "contractId": "matching-facts-v1",
+    "runtimeContractPath": "web/fixtures/p8m/matching-fact-contract-v1.json",
+    "runtimeContractByteIdenticalToFrozenContract": true,
     "awardBindingRequired": true,
+    "cycleBindingRequiredForCycleFacts": true,
     "criterionBindingRequired": true,
+    "fullProvenanceAndReviewerFieldsRequired": true,
+    "acceptedEvidenceStatusRequired": true,
+    "taxonomyVersionRequired": "1.0.0",
     "eligibilityAndPositiveRuleGates": 51,
     "explicitContradictionRequired": true,
     "unansweredOrNonselectedExcluded": false,
-    "rankOnlyPreferenceChangedEligibility": false
+    "rankOnlyPreferenceChangedEligibility": false,
+    "closedOrUnavailableCycleWithoutAnswerExcluded": false,
+    "volunteerBucketTransforms": "exact inclusive matching-facts-v1 ranges"
   },
   "regressionsRejected": [
     "default Montana exclusion",
@@ -50,6 +59,11 @@
     "legacy data payload matcher coupling",
     "matched-row storage",
     "unaccepted authority",
-    "wrong award or criterion binding"
+    "wrong award or criterion binding",
+    "wrong or unbound cycle identity",
+    "criterion/operator/value mismatch",
+    "proposed, rejected, conflict, stale, or unknown evidence status",
+    "missing source or reviewer provenance",
+    "taxonomy-version mismatch"
   ]
 }
