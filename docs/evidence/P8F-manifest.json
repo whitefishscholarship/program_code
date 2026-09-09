@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "createdAt": "2026-09-09T02:32:31Z",
+  "baselineCommit": "d2e282a3004d79d7b597c58f84ed2b9c8e8eb797",
+  "candidateCommit": "f18a0ac64b40c7df852f987e8f365cba113769d3",
+  "files": [
+    { "path": "docs/BUILD_STATE.json", "change": "present", "sha256": "7913568cc383993deb71aceb435701d8782132df7ea085dca6c103d6bfafff9d" },
+    { "path": "docs/CURRENT_HANDOFF.md", "change": "present", "sha256": "bcce73acd7b05e585cf7fcfe9f998fac006508a8cf724e08a71bc4a86f9c62fc" },
+    { "path": "docs/evidence/P8F-browser.json", "change": "present", "sha256": "6f0b7696f1a3bc48b804d8dbb05ee2928f13e9fefe929ee446cc8e7774567f3b" },
+    { "path": "docs/evidence/P8F-matching.json", "change": "present", "sha256": "83de5f61c8d72a9695523ea300967c427d54537b59052eb697d034d585868eb1" },
+    { "path": "docs/evidence/P8F-privacy.json", "change": "present", "sha256": "fe7df82cc7cdbcb972f961d9a4ece85b73384dc3f0350cede21e499d7f744226" },
+    { "path": "docs/evidence/P8F-question-rule-map.json", "change": "present", "sha256": "7ba6b13ee7b08f615c4328d09d4171c8efb99918a0d0ebf93de603a4f2237f6d" },
+    { "path": "docs/evidence/P8F-test-matrix.json", "change": "present", "sha256": "1006b4090ae93196744f0ab7caa04740a2a0307574babddd267793228533c236" },
+    { "path": "docs/evidence/P8F.md", "change": "present", "sha256": "efd25bc9a609459a0e72d3e7bd2979fed810ff2d468180c345c0e80d09892d4d" },
+    { "path": "web/fixtures/p8m/matching-fact-contract-v1.json", "change": "present", "sha256": "73422b0e2ce4e01c66ae826d0edbd89299133eba67616beddf08c5839bc5feaa" },
+    { "path": "web/package.json", "change": "present", "sha256": "de765cafc9232325d65b1f61a219ffe1084ce1ccd6de9d9e93435a13be77d875" },
+    { "path": "web/scripts/plan-rev12-row-source.ts", "change": "present", "sha256": "97da96ad961299b2931b97eefcc2f611d4cf8332b0f35b6dcdc8ae46961206c9" },
+    { "path": "web/scripts/test-p8f-interview.ts", "change": "present", "sha256": "2361a6263a99342d3761bca6f59ebee7d501027ee193062ef57a20d7c290c87c" },
+    { "path": "web/scripts/test-p8f-preimplementation.ts", "change": "present", "sha256": "8bd97f8cdb6518731204c6f2d3ebe5c8e751a87a67d851acadbc0badbcdbe4a8" },
+    { "path": "web/scripts/test-p8r-interview.ts", "change": "present", "sha256": "81962a4c101fe7a64674809a882f7886c01fb19c942a63afdfb92e7050f8440b" },
+    { "path": "web/scripts/test-plan-rev10-governance.ts", "change": "present", "sha256": "d5f25e1dec251ca17c3621da524d7742d484151f6bb9eb202f9608177d48d1fb" },
+    { "path": "web/scripts/test-plan-rev11-late-delivery.ts", "change": "present", "sha256": "7a8b8477b9c7d2aa3d84fc94d5bd0515c0145e0be51dfdde497b7bb38be6ac27" },
+    { "path": "web/scripts/test-plan-rev12-row-source.ts", "change": "present", "sha256": "d0628008ec33209adc7fd612228ce0f8df74c01e923d2f0bbe925787ba00d2ca" },
+    { "path": "web/src/components/InterviewWizard.tsx", "change": "present", "sha256": "4fa2555a6781bb746925cafa35d16e39cc4b9353c122e0ae4d7c1a2dc8f54576" },
+    { "path": "web/src/components/ScholarshipBrowser.tsx", "change": "present", "sha256": "799b09f9db020bc4af0a8a7ad6a56b27af964806380ebe7e2912c5180891d2ff" },
+    { "path": "web/src/lib/interviewMatcher.ts", "change": "present", "sha256": "6993f537127cb77c2e51563d70d3de2d0077a3b5f4a382e1fe978c3c45c79fe5" },
+    { "path": "web/src/lib/interviewQuestions.ts", "change": "present", "sha256": "2bc0cec68cccc6fa8be3b78ea5a0293d04ecb37ed375528b2689a01d809646a9" },
+    { "path": "web/src/lib/matchingFactRuntime.ts", "change": "present", "sha256": "a5b5724b29db23f732579869352c39ba5162477327461106431252870e74606b" },
+    { "path": "web/src/lib/p8mMatchingFacts.ts", "change": "present", "sha256": "376e8594b6231dcd1555a584b54e6edecb76e0efc2c845c53be7b046082c9af7" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "reviewerTaskId": "/root/p8f_fresh_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-09T02:33:44Z",
+  "outcome": "accepted",
+  "decisionScope": "Fresh-context read-only P8F acceptance review from baseline d2e282a3004d79d7b597c58f84ed2b9c8e8eb797 through exact final candidate f18a0ac64b40c7df852f987e8f365cba113769d3, bound by docs/evidence/P8F-manifest.json SHA-256 ff9babf49c1627242be6e30f4f611e0d918bdb72b527ee727d1d8dbdb91d1ed2 and all 23 baseline-to-candidate paths. Acceptance covers only the complete former displayed interview, volatile-answer privacy, exact accepted-fact contract and conservative decision policy, retained catalog/card/filter/sort/link/count/relationship/browse/export/API/admin behavior, evidence, and accepted-state transition. It excludes rejected candidates b3e4cce0ac43129ed023cff48fecc0d27a6d729b and b8c4ce4cb031bd3c6a451c3c92e093f666fef447, P9 work, spreadsheet or public-source access, scholarship-fact mutation, deployment-configuration change, monitoring activation, forms or applicant data, analytics, provider contact, paid or destructive actions, gate weakening, and history rewrite.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/P8F-manifest.json",
+  "candidateManifestSha256": "ff9babf49c1627242be6e30f4f611e0d918bdb72b527ee727d1d8dbdb91d1ed2"
+}
