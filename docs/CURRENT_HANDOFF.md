@@ -1,9 +1,74 @@
 # Current Handoff
 
-Last updated: 2026-09-07
+Last updated: 2026-09-08
 Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## P8F — accepted implementation candidate; direct-child attestation pending
+
+- Live `origin/main` was fetched and pinned as exact P8F baseline
+  `d2e282a3004d79d7b597c58f84ed2b9c8e8eb797`. It contains P8M merge
+  `5dab929d215e8a4b956946698d066998552c96af` and direct-child attestation
+  `d55ae325cd1783aee175120eea0577e7dcff4d2c` in its ancestry.
+- The question/rule map and test matrix were committed before product implementation
+  at `84ef59209ea5cc61738a7651d8016d6a34d56e1e`. P8F restores six academic
+  prompts, four activity checkboxes, one conditional volunteer-hours prompt, one
+  financial-need checkbox, and all 38 final special criteria. It renders one ADHD
+  control, no ADD control, and no duplicate standalone affiliation question.
+- Answers and detailed decisions remain in volatile React memory. Sensitive
+  nonselection and prefer-not-to-answer remain unknown and non-excluding. Reset and
+  reload clear state; no answer-bearing storage, request, URL, log, analytics, export,
+  screenshot, fixture, or Git artifact is permitted.
+- P8M publication `matching-facts-v1` at SHA-256
+  `16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07`
+  contains zero accepted matching facts. Production behavior is therefore 0 structured
+  matches, 192 possible matches, and 0 known conflicts, with a visible no-current-effect
+  explanation. All accepted cards, reasons, filters, sorts, links, relationships,
+  browse-all views, admin/API compatibility, and visible-result CSV export remain.
+- The matcher validates the byte-identical frozen Revision 10 fact contract and rejects
+  invalid provenance, review status, taxonomy, operator/value, award, and cycle binding.
+  Positive-only controls preserve disclosure per individual value: a selected race or
+  gender identity never makes an unchecked sibling identity negative. Application,
+  career, and athletics rank-only controls consume only accepted `preferred` facts and
+  cannot create eligibility confirmation or conflict.
+- Focused rule/privacy/export tests, typecheck, the complete repository matrix, Webpack
+  production build, both audits, whitespace, and all 30 browser cells pass. The exact
+  local Turbopack build remains runner-limited by its internal port; exact PR/main CI is
+  required. Browser checks pass at 360x800, 768x1024, and 1440x900 with no overflow.
+- Fresh reviewer `/root/p8f_fresh_review` accepted exact remediated implementation
+  `3b4fecd04cfa801eb4b80b46685f51953510c58e` at C0/H0/M0/L0. P8F is now `accepted`,
+  no stage is active, and planned P9 is next-permitted but remains unauthorized and
+  unstarted. Freeze and recheck the exact final candidate bytes, then add only
+  `docs/evidence/P8F-manifest.json` and `docs/reviews/P8F.json` in the direct-child
+  attestation. Deliver only under the existing P8F authority. Do not start P9.
+- Fresh reviewer `/root/p8f_fresh_review` rejected `b3e4cce...` at C0/H2/M2/L0;
+  its four findings were remediated. The same reviewer rejected replacement
+  `b8c4ce4...` at C0/H2/M0/L0 for partial-sensitive-disclosure and rank-only effect
+  edge cases. Both are now covered by fail-closed adversarial tests. Neither rejected
+  candidate is eligible for attestation or delivery; only the final accepted candidate
+  may be attested after exact read-only recheck.
+- Published PR #38 preserved attestation `648e452...` but CI run `34303943348` failed
+  only when the final P8F test attempted to read GitHub Actions' valid `.git` directory
+  as a worktree pointer file. The attestation was not changed or extended. Replacement
+  branch `codex/p8f-former-interview-detail-ci` replays candidate commits from the exact
+  baseline without that attestation and accepts both valid Git layouts. It requires a
+  new exact review, direct-child attestation, complete PR CI, and governed delivery.
+
+### P8F remaining triggered items
+
+- Local `codex/p8m-session-closeout` at `4cfd43d...` remains unpublished and must not be
+  published without separate explicit downstream-effect authority.
+- Approved data corrections and every `official_verification_required` outcome remain
+  proposals only, pending separate exact official-source-read or bounded sheet-write
+  authority.
+- Vercel Preview author access and unauthenticated Production SSO remain unresolved.
+  Deployment completion is not application health. Do not change Vercel configuration.
+- Two moderate overall dependency advisories, one moderate production advisory, the
+  GitHub Actions Node-runtime warning, and prunable historical worktrees remain separate
+  maintenance triggers.
+- P9 remains planned, unstarted, and blocked by
+  `P9-awaits-direct-immutable-publication-runtime-target-deployment-authority`.
 
 ## P8M — delivery closure PASS; P8F next-permitted, not started
 

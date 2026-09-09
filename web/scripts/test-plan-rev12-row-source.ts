@@ -62,6 +62,16 @@ const context: PlanRev12ValidationContext = {
 };
 
 assert.deepEqual(validatePlanRev12RowSource(context), []);
+assert.deepEqual(validatePlanRev12RowSource({
+  ...context,
+  activeStageId: null,
+  nextPermittedStageId: 'P8F',
+}), [], 'accepted P8M must permit P8F as the next planned stage');
+assert.deepEqual(validatePlanRev12RowSource({
+  ...context,
+  activeStageId: null,
+  nextPermittedStageId: 'P9',
+}), [], 'accepted P8M must permit accepted P8F to advance the pointer to P9');
 assert.deepEqual(
   {
     ...context.rowSource,

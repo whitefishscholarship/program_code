@@ -5,17 +5,17 @@ import catalogJson from '../fixtures/p7/student-catalog.json';
 import matrixCatalogJson from '../fixtures/p7/matrix-catalog.json';
 import { serializeAwardCsv } from '../src/lib/export';
 import {
-  AcceptedAwardMatchFactsSchema,
   InterviewAnswersSchema,
   PUBLIC_MATCH_REASON_FIELDS,
   PUBLIC_MATCH_RESPONSE_FIELDS,
   PUBLIC_MATCH_RESULT_FIELDS,
   buildSyntheticMatrixMatchFacts,
+  createSyntheticAcceptedFact,
   matchStudentAwards,
-  type AcceptedAwardMatchFacts,
-  type AcceptedMatchFactsByAwardId,
+  type AcceptedMatchFactBundle,
   type InterviewAnswers,
 } from '../src/lib/interviewMatcher';
+import type { AcceptedMatchingFact } from '../src/lib/matchingFactRuntime';
 import {
   StudentAwardSchema,
   StudentCatalogSchema,
@@ -29,15 +29,24 @@ const matrixCatalog = StudentCatalogSchema.parse(matrixCatalogJson);
 
 const syntheticAnswers: InterviewAnswers = {
   gpa: 3.5,
-  schoolTypes: ['four_year'],
+  residenceState: 'MT',
+  educationalStatus: 'high_school_senior',
+  targetSchoolTypes: ['four_year'],
+  collegeAccepted: null,
+  gapYear: null,
+  activities: [],
+  volunteerHours: null,
+  financialNeed: false,
+  selectedCriteria: [],
+  sensitiveCriteriaSkipped: false,
   preferredApplicationModes: [],
 };
 
 assert.equal(InterviewAnswersSchema.safeParse(syntheticAnswers).success, true);
 assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, gpa: 4.01 }).success, false, 'GPA above 4.0 must fail validation');
-assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, schoolTypes: [] }).success, false, 'At least one school type is required');
+assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, targetSchoolTypes: [] }).success, false, 'At least one school type is required');
 assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, residence: 'Colorado' }).success, false, 'Unstructured residence answers must not enter the matcher');
-assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, schoolTypes: ['four_year', 'four_year'] }).success, false, 'Repeated school types must fail validation');
+assert.equal(InterviewAnswersSchema.safeParse({ ...syntheticAnswers, targetSchoolTypes: ['four_year', 'four_year'] }).success, false, 'Repeated school types must fail validation');
 
 const baseAward = matrixCatalog.awards[0];
 const cloneAward = (overrides: Partial<StudentAward> & { publicId: string; name: string }): StudentAward => StudentAwardSchema.parse({
@@ -49,22 +58,21 @@ const cloneAward = (overrides: Partial<StudentAward> & { publicId: string; name:
   application: { ...baseAward.application, ...overrides.application },
 });
 
-const authority = 'synthetic_matrix_fixture' as const;
 const factsFor = (
   award: StudentAward,
-  overrides: Partial<AcceptedAwardMatchFacts> = {},
-): AcceptedAwardMatchFacts => AcceptedAwardMatchFactsSchema.parse({
-  awardPublicId: award.publicId,
-  minimumGpa: award.eligibility.minimumGpa === null ? null : { value: award.eligibility.minimumGpa, authority },
-  schoolTypes: award.eligibility.schoolTypes.length === 0 ? null : { values: award.eligibility.schoolTypes, authority },
-  cycleStatus: award.cycle.status === 'unknown' ? null : { value: award.cycle.status, authority },
-  applicationMode: award.application.mode === 'unknown' ? null : { value: award.application.mode, authority },
-  eligibilityDimensionsComplete: { value: true, authority },
-  ...overrides,
+): AcceptedMatchingFact[] => {
+  const facts: AcceptedMatchingFact[] = [];
+  if (award.eligibility.minimumGpa !== null) facts.push(createSyntheticAcceptedFact(award, 'academic.gpa_unweighted', 'required', 'gte', award.eligibility.minimumGpa));
+  if (award.eligibility.schoolTypes.length > 0) {
+    const schoolTypes = award.eligibility.schoolTypes.map((value) => value === 'trade' ? 'trade_vocational' : value === 'other' ? 'other_accredited' : value);
+    facts.push(createSyntheticAcceptedFact(award, 'education.target_institution_type', 'required', 'contains_any', schoolTypes));
+  }
+  return facts;
+};
+const factsMap = (...entries: Array<[StudentAward, AcceptedMatchingFact[]]>): AcceptedMatchFactBundle => ({
+  byAwardId: Object.fromEntries(entries.map(([award, facts]) => [award.publicId, facts])),
+  cycleIdsByAwardId: {},
 });
-const factsMap = (...facts: AcceptedAwardMatchFacts[]): AcceptedMatchFactsByAwardId => Object.fromEntries(
-  facts.map((item) => [item.awardPublicId, item]),
-);
 
 const knownAward = cloneAward({
   publicId: 'award-100000000001',
@@ -73,9 +81,9 @@ const knownAward = cloneAward({
   cycle: { ...baseAward.cycle, status: 'active', label: 'Open now' },
 });
 const knownFacts = factsFor(knownAward);
-assert.equal(matchStudentAwards([knownAward], syntheticAnswers, factsMap(knownFacts)).results[0].decision, 'match');
-assert(matchStudentAwards([knownAward], syntheticAnswers, factsMap(knownFacts)).results[0].reasons.some((reason) => reason.code === 'gpa_meets_minimum'));
-assert(matchStudentAwards([knownAward], syntheticAnswers, factsMap(knownFacts)).results[0].reasons.some((reason) => reason.code === 'school_type_matches'));
+assert.equal(matchStudentAwards([knownAward], syntheticAnswers, factsMap([knownAward, knownFacts])).results[0].decision, 'possible_match');
+assert(matchStudentAwards([knownAward], syntheticAnswers, factsMap([knownAward, knownFacts])).results[0].reasons.some((reason) => reason.code === 'gpa_meets_minimum'));
+assert(matchStudentAwards([knownAward], syntheticAnswers, factsMap([knownAward, knownFacts])).results[0].reasons.some((reason) => reason.code === 'school_type_matches'));
 
 const noAuthorityResult = matchStudentAwards([knownAward], syntheticAnswers).results[0];
 assert.equal(noAuthorityResult.decision, 'possible_match', 'provenance-free structured fields must remain possible');
@@ -86,15 +94,15 @@ assert(noAuthorityResult.reasons.some((reason) => reason.code === 'eligibility_n
 const gpaConflict = matchStudentAwards(
   [knownAward],
   { ...syntheticAnswers, gpa: 2.5 },
-  factsMap(knownFacts),
+  factsMap([knownAward, knownFacts]),
 ).results[0];
 assert.equal(gpaConflict.decision, 'known_conflict');
 assert(gpaConflict.reasons.some((reason) => reason.code === 'gpa_below_minimum'));
 
 const schoolConflict = matchStudentAwards(
   [knownAward],
-  { ...syntheticAnswers, schoolTypes: ['trade'] },
-  factsMap(knownFacts),
+  { ...syntheticAnswers, targetSchoolTypes: ['trade_vocational'] },
+  factsMap([knownAward, knownFacts]),
 ).results[0];
 assert.equal(schoolConflict.decision, 'known_conflict');
 assert(schoolConflict.reasons.some((reason) => reason.code === 'school_type_conflict'));
@@ -136,7 +144,14 @@ const closedAward = cloneAward({
   eligibility: { ...baseAward.eligibility, minimumGpa: 3, schoolTypes: ['four_year'] },
   cycle: { ...baseAward.cycle, status: 'closed', label: 'Closed' },
 });
-assert(matchStudentAwards([closedAward], syntheticAnswers, factsMap(factsFor(closedAward))).results[0].reasons.some((reason) => reason.code === 'cycle_closed'));
+const closedCycleId = 'cycle:award-100000000004:2026';
+const closedCycleFact = createSyntheticAcceptedFact(closedAward, 'cycle.status', 'informational', 'eq', 'closed', closedCycleId);
+const closedCycleResult = matchStudentAwards([closedAward], syntheticAnswers, {
+  byAwardId: { [closedAward.publicId]: [closedCycleFact] },
+  cycleIdsByAwardId: { [closedAward.publicId]: [closedCycleId] },
+}).results[0];
+assert(closedCycleResult.reasons.some((reason) => reason.code === 'cycle_closed'));
+assert.notEqual(closedCycleResult.decision, 'known_conflict', 'cycle state without an explicit student answer must not hard-exclude');
 
 const unavailableAward = cloneAward({
   publicId: 'award-100000000005',
@@ -144,7 +159,14 @@ const unavailableAward = cloneAward({
   eligibility: { ...baseAward.eligibility, minimumGpa: 3, schoolTypes: ['four_year'] },
   cycle: { ...baseAward.cycle, status: 'unavailable', label: 'Unavailable' },
 });
-assert(matchStudentAwards([unavailableAward], syntheticAnswers, factsMap(factsFor(unavailableAward))).results[0].reasons.some((reason) => reason.code === 'cycle_unavailable'));
+const unavailableCycleId = 'cycle:award-100000000005:2026';
+const unavailableCycleFact = createSyntheticAcceptedFact(unavailableAward, 'cycle.status', 'informational', 'eq', 'suspended', unavailableCycleId);
+const unavailableCycleResult = matchStudentAwards([unavailableAward], syntheticAnswers, {
+  byAwardId: { [unavailableAward.publicId]: [unavailableCycleFact] },
+  cycleIdsByAwardId: { [unavailableAward.publicId]: [unavailableCycleId] },
+}).results[0];
+assert(unavailableCycleResult.reasons.some((reason) => reason.code === 'cycle_unavailable'));
+assert.notEqual(unavailableCycleResult.decision, 'known_conflict');
 
 for (const [publicId, name, summary, focus] of [
   ['award-100000000006', 'Synthetic Non-Renewing text award', 'Non-Renewing award description.', null],
@@ -158,16 +180,17 @@ for (const [publicId, name, summary, focus] of [
     eligibility: { ...baseAward.eligibility, audience: 'Montana students', minimumGpa: 3, schoolTypes: ['four_year'], focus },
     cycle: { ...baseAward.cycle, status: 'active', label: 'Open now' },
   });
-  const incompleteFacts = factsFor(textOnlyAward, { eligibilityDimensionsComplete: null });
-  const result = matchStudentAwards([textOnlyAward], syntheticAnswers, factsMap(incompleteFacts)).results[0];
+  const incompleteFacts = factsFor(textOnlyAward);
+  const result = matchStudentAwards([textOnlyAward], syntheticAnswers, factsMap([textOnlyAward, incompleteFacts])).results[0];
   assert.equal(result.decision, 'possible_match', `${name} must remain possible because free-text eligibility is unassessed`);
   assert(!result.reasons.some((reason) => reason.kind === 'known_conflict'));
   assert(result.reasons.some((reason) => reason.code === 'eligibility_not_fully_modeled'));
 }
 
-assert.throws(() => matchStudentAwards([knownAward], syntheticAnswers, factsMap(factsFor(knownAward, {
-  schoolTypes: { values: ['trade'], authority },
-}))), /do(?:es)? not match the public award/, 'mismatched accepted facts must fail closed');
+const wrongAwardFact = createSyntheticAcceptedFact(unknownAward, 'academic.gpa_unweighted', 'required', 'gte', 3);
+assert.throws(() => matchStudentAwards([knownAward, unknownAward], syntheticAnswers, {
+  byAwardId: { [knownAward.publicId]: [wrongAwardFact] }, cycleIdsByAwardId: {},
+}), /index does not match/, 'mismatched accepted facts must fail closed');
 
 const directAward = cloneAward({
   publicId: 'award-100000000009',
@@ -185,7 +208,9 @@ const offlineAward = cloneAward({
   cycle: { ...baseAward.cycle, status: 'active', label: 'Open now' },
   application: { ...baseAward.application, mode: 'offline', label: 'Paper / offline', url: null },
 });
-const rankedFacts = factsMap(factsFor(directAward), factsFor(offlineAward));
+const directFacts = [...factsFor(directAward), createSyntheticAcceptedFact(directAward, 'application.mode', 'preferred', 'eq', 'provider_form')];
+const offlineFacts = [...factsFor(offlineAward), createSyntheticAcceptedFact(offlineAward, 'application.mode', 'preferred', 'eq', 'paper')];
+const rankedFacts = factsMap([directAward, directFacts], [offlineAward, offlineFacts]);
 const noPreference = matchStudentAwards([directAward, offlineAward], syntheticAnswers, rankedFacts);
 assert.equal(noPreference.results[0].award.publicId, offlineAward.publicId, 'unsupported amount must not rank results');
 const preferred = matchStudentAwards([directAward, offlineAward], {
@@ -193,11 +218,14 @@ const preferred = matchStudentAwards([directAward, offlineAward], {
   preferredApplicationModes: ['direct_per_award'],
 }, rankedFacts);
 assert.equal(preferred.results[0].award.publicId, directAward.publicId, 'accepted rank-only application preference must sort first');
-assert.equal(preferred.results[0].decision, 'match', 'preference must not change eligibility decision');
-assert(preferred.results[0].reasons.some((reason) => reason.code === 'preferred_application_mode' && reason.kind === 'preference'));
+assert.equal(preferred.results[0].decision, 'possible_match', 'preference must not change eligibility decision');
+assert(preferred.results[0].reasons.some((reason) => reason.code === 'preferred_rule_application.mode' && reason.kind === 'preference'));
 
 const immutableInput = [knownAward, unknownAward, closedAward, unavailableAward, directAward, offlineAward];
-const immutableFacts = factsMap(knownFacts, factsFor(closedAward), factsFor(unavailableAward), factsFor(directAward), factsFor(offlineAward));
+const immutableFacts = factsMap(
+  [knownAward, knownFacts], [unknownAward, []], [closedAward, []], [unavailableAward, []],
+  [directAward, directFacts], [offlineAward, offlineFacts],
+);
 const before = JSON.stringify(immutableInput);
 const first = matchStudentAwards(immutableInput, syntheticAnswers, immutableFacts);
 const second = matchStudentAwards(immutableInput, syntheticAnswers, immutableFacts);
@@ -225,7 +253,7 @@ assert.equal(resultAwardIds.size, catalog.counts.awards, 'matching must neither 
 const matrixFacts = buildSyntheticMatrixMatchFacts(matrixCatalog.awards);
 const matrixResult = matchStudentAwards(matrixCatalog.awards, {
   ...syntheticAnswers,
-  schoolTypes: ['four_year', 'trade'],
+  targetSchoolTypes: ['four_year', 'trade_vocational'],
 }, matrixFacts);
 assert.deepEqual(matrixResult.counts, { match: 2, possibleMatch: 4, knownConflict: 1, total: 7 });
 
@@ -250,7 +278,7 @@ for (const forbidden of ['processAndFilter', 'RulesPack', 'fetch(', 'XMLHttpRequ
 }
 assert(browserSource.includes('loadStudentCatalog(qaMode)'), 'catalog load must use the answer-independent client');
 assert(browserSource.includes("process.env.NODE_ENV !== 'production'"), 'synthetic matrix authority must be disabled in production');
-assert(browserSource.includes("catalog.catalogRevision === 'f'.repeat(64)"), 'synthetic authority must bind the exact matrix catalog');
+assert(browserSource.includes("catalog?.catalogRevision === 'f'.repeat(64)"), 'synthetic authority must bind the exact matrix catalog');
 assert(browserSource.includes('setAnswers(null)'), 'reset and new-interview paths must clear in-memory answers');
 const clientSource = fs.readFileSync(path.join(webRoot, 'src/lib/studentCatalogClient.ts'), 'utf8');
 assert(!/InterviewAnswers|answers|request\s*body|body\s*:/.test(clientSource), 'catalog client must be answer-independent and body-free');

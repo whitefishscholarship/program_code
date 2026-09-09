@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P8F",
+  "verifiedAt": "2026-09-08T23:33:55Z",
+  "status": "pass",
+  "studentAnswersRecorded": false,
+  "runtimeBoundary": {
+    "answerOwner": "volatile React component state",
+    "matcher": "synchronous pure typed function",
+    "catalogRequestDependsOnAnswers": false,
+    "catalogRequestMethod": "GET",
+    "resetClearsAnswers": true,
+    "reloadClearsAnswers": true,
+    "editPreservesOnlyCurrentVolatileAnswers": true
+  },
+  "prohibitedChannels": [
+    { "channel": "sessionStorage", "observed": false, "proof": "static source assertion" },
+    { "channel": "localStorage", "observed": false, "proof": "static source assertion" },
+    { "channel": "cookies", "observed": false, "proof": "static source assertion" },
+    { "channel": "IndexedDB", "observed": false, "proof": "static source assertion" },
+    { "channel": "request body", "observed": false, "proof": "answer-independent GET-only catalog client" },
+    { "channel": "URL or history", "observed": false, "proof": "no answer-derived URL/history mutation" },
+    { "channel": "logs", "observed": false, "proof": "static assertions and zero browser console errors" },
+    { "channel": "analytics", "observed": false, "proof": "no analytics capability in the P8F path" },
+    { "channel": "visible-result CSV", "observed": false, "proof": "accepted public award fields only" },
+    { "channel": "screenshots or evidence", "observed": false, "proof": "no screenshots retained and no answer values recorded" }
+  ]
+}

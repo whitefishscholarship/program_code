@@ -200,8 +200,11 @@ export function validatePlanRev12RowSource(
       errors.push('Started P8M requires the exact external-source and Claude instruction gate to be satisfied');
     }
     const accepted = context.p8mStatus === 'accepted';
+    const acceptedP8mStagePositionIsValid =
+      (context.activeStageId === null && ['P8F', 'P9'].includes(context.nextPermittedStageId ?? '')) ||
+      (context.activeStageId === 'P8F' && context.nextPermittedStageId === null);
     if (
-      (accepted && (context.activeStageId !== null || context.nextPermittedStageId !== 'P8F')) ||
+      (accepted && !acceptedP8mStagePositionIsValid) ||
       (!accepted && (context.activeStageId !== 'P8M' || context.nextPermittedStageId !== null))
     ) {
       errors.push('P8M active/next-stage state is inconsistent with its lifecycle status');
