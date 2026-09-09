@@ -73,13 +73,18 @@ export type MatchResponse = {
 };
 type RankedResult = AwardMatchResult & { decisionRank: number; preferenceRank: number; confirmedRank: number };
 type NumericInterval = { lower: number; upper: number | null };
-type Observation = boolean | number | string | string[] | NumericInterval | undefined;
+type PositiveDisclosure = { kind: 'positive_disclosure'; values: Array<boolean | number | string> };
+type Observation = boolean | number | string | string[] | NumericInterval | PositiveDisclosure | undefined;
 const CORE_REQUIRED_CRITERIA = [
   'academic.gpa_unweighted',
   'geography.residence_state',
   'education.current_status',
   'education.target_institution_type',
 ] as const;
+const RANK_ONLY_CRITERIA = new Set<string>([
+  'application.mode',
+  ...SPECIAL_CRITERIA.filter((item) => item.rankOnly).map((item) => item.criterionId),
+]);
 
 const applicationPreferenceToContract: Record<Exclude<ApplicationMode, 'unknown'>, string> = {
   automatic_consideration: 'automatic_consideration',
@@ -95,9 +100,9 @@ function selectedAliasObservation(answers: InterviewAnswers, criterionId: string
   const expanded = aliases.map((alias) => expandAlias(P8F_MATCHING_FACT_CONTRACT, alias, true))
     .filter((item): item is NonNullable<typeof item> => item?.criterion_id === criterionId);
   if (expanded.length === 0) return undefined;
-  const values = expanded.flatMap((item) => Array.isArray(item.value) ? item.value : [item.value]);
-  if (values.every((value) => typeof value === 'string')) return [...new Set(values as string[])];
-  return values[0] as boolean | number | string;
+  const values = expanded.flatMap((item) => Array.isArray(item.value) ? item.value : [item.value])
+    .filter((value): value is boolean | number | string => ['boolean', 'number', 'string'].includes(typeof value));
+  return { kind: 'positive_disclosure', values: [...new Set(values)] };
 }
 
 function observationForCriterion(answers: InterviewAnswers, criterionId: string): Observation {
@@ -162,7 +167,22 @@ function compareNumericInterval(observation: NumericInterval, operator: Accepted
 }
 
 function satisfiesFact(observation: Exclude<Observation, undefined>, operator: AcceptedMatchingFact['operator'], expected: MatchingFactValue): boolean | undefined {
-  if (typeof observation === 'object' && !Array.isArray(observation)) return compareNumericInterval(observation, operator, expected);
+  if (typeof observation === 'object' && !Array.isArray(observation)) {
+    if ('kind' in observation && observation.kind === 'positive_disclosure') {
+      const observedValues = observation.values.map(String);
+      const expectedValues = (Array.isArray(expected) ? expected : [expected]).map(String);
+      if (operator === 'contains_any' || operator === 'in' || operator === 'eq') {
+        return observedValues.some((value) => expectedValues.includes(value)) ? true : undefined;
+      }
+      if (operator === 'contains_all') {
+        return expectedValues.every((value) => observedValues.includes(value)) ? true : undefined;
+      }
+      if (operator === 'exists') return expected === true ? true : undefined;
+      return undefined;
+    }
+    if ('lower' in observation) return compareNumericInterval(observation, operator, expected);
+    return undefined;
+  }
   const observedValues = Array.isArray(observation) ? observation.map(String) : [String(observation)];
   const expectedValues = Array.isArray(expected) ? expected.map(String) : [String(expected)];
   if (operator === 'contains_any' || operator === 'in') return observedValues.some((value) => expectedValues.includes(value));
@@ -222,6 +242,10 @@ function evaluateAward(awardValue: StudentAward, answersValue: InterviewAnswers,
   for (const fact of facts) {
     const acceptedCycleReason = cycleReason(fact);
     if (acceptedCycleReason) { reasons.push(acceptedCycleReason); continue; }
+    if (RANK_ONLY_CRITERIA.has(fact.criterion_id) && fact.effect !== 'preferred') {
+      reasons.push({ code: `rank_only_rule_${fact.criterion_id}`, kind: 'verification_needed', message: 'This interview preference accepts only preferred facts for ordering; this fact has no eligibility or conflict effect.' });
+      continue;
+    }
     if (fact.effect === 'informational') {
       reasons.push({ code: `informational_fact_${fact.criterion_id}`, kind: 'verification_needed', message: 'An accepted informational fact is available, but it does not affect eligibility or order.' });
       continue;

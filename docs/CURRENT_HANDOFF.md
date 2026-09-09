@@ -26,6 +26,12 @@ Default branch: `main`
   matches, 192 possible matches, and 0 known conflicts, with a visible no-current-effect
   explanation. All accepted cards, reasons, filters, sorts, links, relationships,
   browse-all views, admin/API compatibility, and visible-result CSV export remain.
+- The matcher validates the byte-identical frozen Revision 10 fact contract and rejects
+  invalid provenance, review status, taxonomy, operator/value, award, and cycle binding.
+  Positive-only controls preserve disclosure per individual value: a selected race or
+  gender identity never makes an unchecked sibling identity negative. Application,
+  career, and athletics rank-only controls consume only accepted `preferred` facts and
+  cannot create eligibility confirmation or conflict.
 - Focused rule/privacy/export tests, typecheck, the complete repository matrix, Webpack
   production build, both audits, whitespace, and all 30 browser cells pass. The exact
   local Turbopack build remains runner-limited by its internal port; exact PR/main CI is
@@ -34,6 +40,12 @@ Default branch: `main`
   required fresh-context read-only C0/H0 review, recheck any final candidate bytes, then
   add only `docs/evidence/P8F-manifest.json` and `docs/reviews/P8F.json` in the direct-child
   attestation. Deliver only under the existing P8F authority. Do not start P9.
+- Fresh reviewer `/root/p8f_fresh_review` rejected `b3e4cce...` at C0/H2/M2/L0;
+  its four findings were remediated. The same reviewer rejected replacement
+  `b8c4ce4...` at C0/H2/M0/L0 for partial-sensitive-disclosure and rank-only effect
+  edge cases. Both are now covered by fail-closed adversarial tests. Neither rejected
+  candidate is eligible for attestation or delivery; the final replacement still needs
+  exact read-only recheck.
 
 ### P8F remaining triggered items
 

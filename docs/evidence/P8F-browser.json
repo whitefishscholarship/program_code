@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P8F",
-  "executedAt": "2026-09-09T00:34:24Z",
+  "executedAt": "2026-09-09T02:23:59Z",
   "browserSurface": "Codex in-app browser",
   "target": "local Next.js development server",
   "studentAnswersRecorded": false,
@@ -38,7 +38,7 @@
   "cellObservations": [
     { "cellId": "mobile/complete-former-question-inventory", "status": "pass", "observations": ["6 academic; 4 activity; 1 conditional volunteer; 1 financial; 38 special", "1 ADHD; 0 ADD"] },
     { "cellId": "mobile/required-validation-navigation-and-focus", "status": "pass", "observations": ["empty submit announced GPA error", "Activities and responsibilities heading focused"] },
-    { "cellId": "mobile/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked caregiving and financial answers", "sensitive controls disabled"] },
+    { "cellId": "mobile/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked Black identity while retaining non-sensitive STEM", "sensitive controls disabled"] },
     { "cellId": "mobile/conditional-volunteer-hours-and-boundaries", "status": "pass", "observations": ["prompt appeared after service selection", "4 buckets", "clearing service hid and cleared bucket"] },
     { "cellId": "mobile/affiliation-migration-without-duplication", "status": "pass", "observations": ["7 final affiliation/employer controls", "0 standalone organization_affiliations"] },
     { "cellId": "mobile/zero-accepted-fact-results", "status": "pass", "observations": ["0 match; 192 possible; 0 conflict", "192 cards", "no-current-effect disclosure"] },
@@ -48,7 +48,7 @@
     { "cellId": "mobile/reset-reload-error-and-screen-reader-states", "status": "pass", "observations": ["edit preserved volatile GPA", "reload cleared state", "error announced and retry recovered"] },
     { "cellId": "tablet/complete-former-question-inventory", "status": "pass", "observations": ["6 academic; 4 activity; 1 conditional volunteer; 1 financial; 38 special", "1 ADHD; 0 ADD"] },
     { "cellId": "tablet/required-validation-navigation-and-focus", "status": "pass", "observations": ["empty submit announced GPA error", "Activities and responsibilities heading focused"] },
-    { "cellId": "tablet/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked caregiving and financial answers", "sensitive controls disabled"] },
+    { "cellId": "tablet/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked Black identity while retaining non-sensitive STEM", "sensitive controls disabled"] },
     { "cellId": "tablet/conditional-volunteer-hours-and-boundaries", "status": "pass", "observations": ["prompt appeared after service selection", "4 buckets", "clearing service hid and cleared bucket"] },
     { "cellId": "tablet/affiliation-migration-without-duplication", "status": "pass", "observations": ["7 final affiliation/employer controls", "0 standalone organization_affiliations"] },
     { "cellId": "tablet/zero-accepted-fact-results", "status": "pass", "observations": ["0 match; 192 possible; 0 conflict", "192 cards", "no-current-effect disclosure"] },
@@ -58,7 +58,7 @@
     { "cellId": "tablet/reset-reload-error-and-screen-reader-states", "status": "pass", "observations": ["edit preserved volatile GPA", "reload cleared state", "error announced and retry recovered"] },
     { "cellId": "desktop/complete-former-question-inventory", "status": "pass", "observations": ["6 academic; 4 activity; 1 conditional volunteer; 1 financial; 38 special", "1 ADHD; 0 ADD"] },
     { "cellId": "desktop/required-validation-navigation-and-focus", "status": "pass", "observations": ["empty submit announced GPA error", "Activities and responsibilities heading focused"] },
-    { "cellId": "desktop/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked caregiving and financial answers", "sensitive controls disabled"] },
+    { "cellId": "desktop/optional-sensitive-and-prefer-not-to-answer", "status": "pass", "observations": ["skip cleared checked Black identity while retaining non-sensitive STEM", "sensitive controls disabled"] },
     { "cellId": "desktop/conditional-volunteer-hours-and-boundaries", "status": "pass", "observations": ["prompt appeared after service selection", "4 buckets", "clearing service hid and cleared bucket"] },
     { "cellId": "desktop/affiliation-migration-without-duplication", "status": "pass", "observations": ["7 final affiliation/employer controls", "0 standalone organization_affiliations"] },
     { "cellId": "desktop/zero-accepted-fact-results", "status": "pass", "observations": ["0 match; 192 possible; 0 conflict", "192 cards", "no-current-effect disclosure"] },
@@ -80,6 +80,6 @@
     "The first mobile pass exposed source-card horizontal overflow; implementation was corrected and the complete 360x800 route was repeated successfully.",
     "No answer value or detailed decision payload was retained in screenshots or repository evidence.",
     "The development-only matrix route was visibly labeled as synthetic and did not show the production no-current-effect message.",
-    "All 30 declared cells were rerun successfully after strict matching-facts-v1 remediation using named controls in the Codex in-app browser. The final run reported zero console errors."
+    "All 30 declared cells were rerun successfully after the strict matching-facts-v1, positive-disclosure, and rank-only effect-policy remediations using named controls in the Codex in-app browser. The final run reported zero console errors."
   ]
 }
