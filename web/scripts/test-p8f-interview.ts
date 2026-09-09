@@ -130,6 +130,35 @@ for (const alias of positiveAliases) {
 const preferredAppFact = createSyntheticAcceptedFact(award, 'application.mode', 'preferred', 'eq', 'provider_form');
 assert(runFact(preferredAppFact).reasons.some((reason) => reason.kind === 'preference'));
 
+const partialRaceAnswers = InterviewAnswersSchema.parse({ ...oppositeAnswers, selectedCriteria: ['black_african_american'], sensitiveCriteriaSkipped: false });
+const hispanicFact = createSyntheticAcceptedFact(award, 'identity.race_ethnicity', 'required', 'contains_any', ['hispanic_latino']);
+assert.notEqual(runFact(hispanicFact, partialRaceAnswers).decision, 'known_conflict', 'an unchecked sibling race identity remains unknown');
+assert(runFact(hispanicFact, partialRaceAnswers).reasons.some((reason) => reason.kind === 'verification_needed'));
+const blackFact = createSyntheticAcceptedFact(award, 'identity.race_ethnicity', 'required', 'contains_any', ['black_african_american']);
+assert(runFact(blackFact, partialRaceAnswers).reasons.some((reason) => reason.kind === 'confirmed_match'), 'an explicitly selected race identity may positively match exact accepted authority');
+
+const partialGenderAnswers = InterviewAnswersSchema.parse({ ...oppositeAnswers, selectedCriteria: ['female'], sensitiveCriteriaSkipped: false });
+const nonbinaryFact = createSyntheticAcceptedFact(award, 'identity.gender', 'required', 'contains_any', ['nonbinary']);
+assert.notEqual(runFact(nonbinaryFact, partialGenderAnswers).decision, 'known_conflict', 'an unchecked sibling gender identity remains unknown');
+const womanFact = createSyntheticAcceptedFact(award, 'identity.gender', 'required', 'contains_any', ['woman']);
+assert(runFact(womanFact, partialGenderAnswers).reasons.some((reason) => reason.kind === 'confirmed_match'), 'an explicitly selected gender identity may positively match exact accepted authority');
+
+const requiredAppFact = createSyntheticAcceptedFact(award, 'application.mode', 'required', 'eq', 'provider_portal');
+const informationalAppFact = createSyntheticAcceptedFact(award, 'application.mode', 'informational', 'eq', 'provider_portal');
+for (const fact of [requiredAppFact, informationalAppFact]) {
+  const result = runFact(fact);
+  assert.notEqual(result.decision, 'known_conflict', 'application preferences can never create an eligibility conflict');
+  assert(!result.reasons.some((reason) => reason.kind === 'preference' || reason.kind === 'confirmed_match'));
+}
+const requiredStemFact = createSyntheticAcceptedFact(award, 'career.stem', 'required', 'eq', false);
+const informationalStemFact = createSyntheticAcceptedFact(award, 'career.stem', 'informational', 'eq', true);
+const stemAnswers = InterviewAnswersSchema.parse({ ...oppositeAnswers, selectedCriteria: ['stem'] });
+for (const fact of [requiredStemFact, informationalStemFact]) {
+  const result = runFact(fact, stemAnswers);
+  assert.notEqual(result.decision, 'known_conflict', 'rank-only controls can never create an eligibility conflict');
+  assert(!result.reasons.some((reason) => reason.kind === 'preference' || reason.kind === 'confirmed_match'));
+}
+
 for (const [bucket, expected] of questionMap.conditionalVolunteerPrompt.options.map((item) => [item.value, item.typedRange] as const)) {
   const expanded = expandAlias(P8F_MATCHING_FACT_CONTRACT, 'volunteer_hours_bucket', bucket);
   assert(expanded, `missing volunteer transform ${bucket}`);

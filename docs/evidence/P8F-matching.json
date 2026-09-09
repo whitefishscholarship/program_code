@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "stageId": "P8F",
-  "verifiedAt": "2026-09-09T00:34:24Z",
+  "verifiedAt": "2026-09-09T01:19:49Z",
   "command": "npm run p8f:test",
   "status": "pass",
   "studentAnswersRecorded": false,
@@ -45,7 +45,9 @@
     "eligibilityAndPositiveRuleGates": 51,
     "explicitContradictionRequired": true,
     "unansweredOrNonselectedExcluded": false,
+    "partialSensitiveDisclosureTreatsSiblingNonselectionAsUnknown": true,
     "rankOnlyPreferenceChangedEligibility": false,
+    "rankOnlyRequiredOrInformationalFactChangedEligibility": false,
     "closedOrUnavailableCycleWithoutAnswerExcluded": false,
     "volunteerBucketTransforms": "exact inclusive matching-facts-v1 ranges"
   },
@@ -64,6 +66,8 @@
     "criterion/operator/value mismatch",
     "proposed, rejected, conflict, stale, or unknown evidence status",
     "missing source or reviewer provenance",
-    "taxonomy-version mismatch"
+    "taxonomy-version mismatch",
+    "partial race or gender disclosure as sibling denial",
+    "required or informational facts affecting rank-only controls"
   ]
 }

@@ -57,6 +57,14 @@ sensitive aggregate and affiliation answers use the frozen aliases and fixed val
 Positive nonselection stays possible. Invalid status, provenance, taxonomy, award,
 cycle, criterion, operator, or value fails closed.
 
+Controls whose declared route is `positive_accepted_fact_only` retain disclosure state
+at the individual control/value level. Selecting one race or gender identity can
+positively match exact accepted authority, but it never converts an unchecked sibling
+identity into a negative answer. Application-mode preferences and every
+`accepted_fact_rank_only` career/athletics control consume only accepted `preferred`
+facts for ordering. Required or informational facts on those controls cannot confirm
+eligibility or create a conflict.
+
 ## Preserved product routes
 
 Accepted award cards, decision reasons, counts, source/application relationships,
@@ -104,6 +112,16 @@ the exact frozen contract, answerless cycle exclusions were removed, runtime lab
 tooltips were reconciled exactly to the historical map, and the full browser matrix now
 has per-cell evidence. That rejected candidate is not eligible for attestation or
 delivery; the reviewer must recheck the replacement candidate.
+
+The replacement candidate `b8c4ce4cb031bd3c6a451c3c92e093f666fef447` was also
+rejected at C0/H2/M0/L0 after the reviewer found two synthetic edge cases: partial
+sensitive disclosure could contradict an unchecked sibling identity, and a schema-valid
+required application-mode fact could turn a rank-only preference into a conflict. The
+matcher now preserves per-control positive disclosure and enforces the declared
+rank-only effect policy independently of fact-schema validity. Partial race, partial
+gender, required/informational application-mode, and required/informational career
+effect-mismatch probes are permanent adversarial tests. `b8c4ce4...` is not eligible
+for attestation or delivery; the final replacement requires another exact recheck.
 
 ## Verification record
 
