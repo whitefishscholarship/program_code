@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import {
   P8M_MATCHING_PUBLICATION,
   P8M_PUBLICATION_SHA256,
@@ -12,8 +12,11 @@ import {
 // Public + never cached, so it always reflects the current deployment. No secrets exposed.
 export const dynamic = 'force-dynamic';
 
-export function GET() {
+export function GET(request: NextRequest) {
   const sha = process.env.VERCEL_GIT_COMMIT_SHA ?? 'local-dev';
+  const requestedNonce = request.nextUrl.searchParams.get('nonce');
+  const observationNonce =
+    requestedNonce && /^[0-9a-f]{32,128}$/.test(requestedNonce) ? requestedNonce : null;
   return NextResponse.json({
     ok: true,
     commit: sha,
@@ -43,6 +46,9 @@ export function GET() {
       productionIngestion: 'disabled',
       productionMutation: 'disabled',
     },
+    observationNonce,
     now: new Date().toISOString(),
+  }, {
+    headers: { 'Cache-Control': 'no-store' },
   });
 }

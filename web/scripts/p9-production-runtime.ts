@@ -98,6 +98,7 @@ export type P9RuntimeReceipt = {
   runtimeClosureSha256: string;
   disabledProductionAdminRoutes: string[];
   runtimeGoogleCapability: 'none';
+  nonceBoundHealth: true;
 };
 
 export function validateP9ProductionRuntime(): P9RuntimeReceipt {
@@ -159,6 +160,15 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
     }
   }
 
+  const healthSource = fs.readFileSync(path.join(webRoot, 'src/app/api/health/route.ts'), 'utf8');
+  if (
+    !healthSource.includes("searchParams.get('nonce')") ||
+    !healthSource.includes('observationNonce') ||
+    !healthSource.includes("'Cache-Control': 'no-store'")
+  ) {
+    throw new Error('Health route must return a caller-bound nonce without caching');
+  }
+
   const runtimeDigestPayload = closure.map((file) => ({
     path: path.relative(webRoot, file),
     sha256: sha256(fs.readFileSync(file)),
@@ -174,6 +184,7 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
     runtimeClosureSha256: sha256(JSON.stringify(runtimeDigestPayload)),
     disabledProductionAdminRoutes,
     runtimeGoogleCapability: 'none',
+    nonceBoundHealth: true,
   };
 }
 

@@ -13,6 +13,7 @@ assert.deepEqual(
   [197, 176, 21, 0],
 );
 assert.equal(receipt.runtimeGoogleCapability, 'none');
+assert.equal(receipt.nonceBoundHealth, true);
 assert(receipt.runtimeFiles > 0);
 assert(/^[0-9a-f]{64}$/.test(receipt.runtimeClosureSha256));
 assert(runtimeClosure().some((file) => file.endsWith('/fixtures/p8m/matching-facts-v1.json')));
