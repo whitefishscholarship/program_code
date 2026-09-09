@@ -48,6 +48,12 @@ Default branch: `main`
   edge cases. Both are now covered by fail-closed adversarial tests. Neither rejected
   candidate is eligible for attestation or delivery; only the final accepted candidate
   may be attested after exact read-only recheck.
+- Published PR #38 preserved attestation `648e452...` but CI run `34303943348` failed
+  only when the final P8F test attempted to read GitHub Actions' valid `.git` directory
+  as a worktree pointer file. The attestation was not changed or extended. Replacement
+  branch `codex/p8f-former-interview-detail-ci` replays candidate commits from the exact
+  baseline without that attestation and accepts both valid Git layouts. It requires a
+  new exact review, direct-child attestation, complete PR CI, and governed delivery.
 
 ### P8F remaining triggered items
 

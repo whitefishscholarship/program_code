@@ -129,6 +129,16 @@ required application/career rank-only facts cannot conflict, and preferred match
 career facts can affect order only. The accepted-state transition is frozen in the
 final candidate and requires one exact final-byte recheck before attestation.
 
+The first delivery attempt preserved direct-child attestation
+`648e452525c1c3b58fef1d7fa7d7fd333f5df8fa` on the published branch, but PR #38 CI
+run `34303943348` exposed a test-harness portability defect: the final P8F test read
+`.git` as a worktree pointer file, while GitHub Actions correctly supplies a `.git`
+directory. Product checks, plan validation, and typecheck passed before that final test
+failed with `EISDIR`; the exact build did not run. The published attestation was not
+amended or rewritten. A fresh replacement branch from the same baseline replays only
+candidate commits, accepts both valid Git metadata layouts, and must receive exact
+review, attestation, and complete CI before delivery.
+
 ## Verification record
 
 Verification on 2026-09-08 included:
