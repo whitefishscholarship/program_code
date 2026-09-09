@@ -5,7 +5,7 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P8F — verified implementation candidate; independent review pending
+## P8F — accepted implementation candidate; direct-child attestation pending
 
 - Live `origin/main` was fetched and pinned as exact P8F baseline
   `d2e282a3004d79d7b597c58f84ed2b9c8e8eb797`. It contains P8M merge
@@ -36,16 +36,18 @@ Default branch: `main`
   production build, both audits, whitespace, and all 30 browser cells pass. The exact
   local Turbopack build remains runner-limited by its internal port; exact PR/main CI is
   required. Browser checks pass at 360x800, 768x1024, and 1440x900 with no overflow.
-- P8F is `verified`, active, and not yet accepted. Freeze this candidate, obtain the
-  required fresh-context read-only C0/H0 review, recheck any final candidate bytes, then
-  add only `docs/evidence/P8F-manifest.json` and `docs/reviews/P8F.json` in the direct-child
+- Fresh reviewer `/root/p8f_fresh_review` accepted exact remediated implementation
+  `3b4fecd04cfa801eb4b80b46685f51953510c58e` at C0/H0/M0/L0. P8F is now `accepted`,
+  no stage is active, and planned P9 is next-permitted but remains unauthorized and
+  unstarted. Freeze and recheck the exact final candidate bytes, then add only
+  `docs/evidence/P8F-manifest.json` and `docs/reviews/P8F.json` in the direct-child
   attestation. Deliver only under the existing P8F authority. Do not start P9.
 - Fresh reviewer `/root/p8f_fresh_review` rejected `b3e4cce...` at C0/H2/M2/L0;
   its four findings were remediated. The same reviewer rejected replacement
   `b8c4ce4...` at C0/H2/M0/L0 for partial-sensitive-disclosure and rank-only effect
   edge cases. Both are now covered by fail-closed adversarial tests. Neither rejected
-  candidate is eligible for attestation or delivery; the final replacement still needs
-  exact read-only recheck.
+  candidate is eligible for attestation or delivery; only the final accepted candidate
+  may be attested after exact read-only recheck.
 
 ### P8F remaining triggered items
 

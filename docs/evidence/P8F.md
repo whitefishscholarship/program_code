@@ -1,7 +1,6 @@
 # P8F Evidence — Former Interview Detail and Routing Restoration
 
-Status: verified implementation candidate; fresh independent review and direct-child
-attestation pending
+Status: accepted implementation candidate; direct-child attestation pending
 
 ## Scope and baseline
 
@@ -123,6 +122,13 @@ gender, required/informational application-mode, and required/informational care
 effect-mismatch probes are permanent adversarial tests. `b8c4ce4...` is not eligible
 for attestation or delivery; the final replacement requires another exact recheck.
 
+Fresh reviewer `/root/p8f_fresh_review` accepted the exact remediated implementation
+candidate `3b4fecd04cfa801eb4b80b46685f51953510c58e` at C0/H0/M0/L0 after independent
+adversarial probes confirmed partial race/gender sibling values remain unknown,
+required application/career rank-only facts cannot conflict, and preferred matching
+career facts can affect order only. The accepted-state transition is frozen in the
+final candidate and requires one exact final-byte recheck before attestation.
+
 ## Verification record
 
 Verification on 2026-09-08 included:
@@ -171,8 +177,9 @@ scholarship facts or application health behind protected Vercel routing.
 
 ## Acceptance boundary
 
-This implementation is verified but not yet accepted. Freeze the exact candidate,
-obtain fresh-context read-only C0/H0 review, incorporate any remediation only in a new
-candidate followed by reviewer recheck, then add exactly `docs/evidence/P8F-manifest.json`
-and `docs/reviews/P8F.json` in the candidate's direct child. The attestation must remain
-the branch tip until delivery under the existing P8F authority.
+This implementation has C0/H0 independent acceptance and its canonical state now marks
+P8F accepted, leaves no active stage, and points to planned P9 without starting or
+authorizing it. Freeze and recheck the exact final candidate bytes, then add exactly
+`docs/evidence/P8F-manifest.json` and `docs/reviews/P8F.json` in the candidate's direct
+child. The attestation must remain the branch tip until delivery under the existing P8F
+authority.
