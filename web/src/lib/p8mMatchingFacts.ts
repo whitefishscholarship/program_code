@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import publicationJson from '../../fixtures/p8m/matching-facts-v1.json';
-import type { AcceptedMatchFactsByAwardId } from './interviewMatcher';
+import type { AcceptedMatchFactBundle } from './interviewMatcher';
+import { indexAcceptedMatchingFacts } from './matchingFactRuntime';
 
 export const P8M_PUBLICATION_SHA256 = '16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07';
 
@@ -24,7 +25,7 @@ const CurrentPublicationSchema = z.strictObject({
     portal_rows: z.literal(21),
     accepted_matching_facts: z.literal(0),
   }).passthrough(),
-  accepted_facts: z.tuple([]),
+  accepted_facts: z.array(z.unknown()).length(0),
   reviewed_rows: z.array(z.unknown()).length(197),
 });
 
@@ -32,5 +33,8 @@ export const P8M_MATCHING_PUBLICATION = CurrentPublicationSchema.parse(publicati
 
 // P8F intentionally fails closed if the pinned publication later gains facts.
 // A future publication needs its own typed evaluator and review before any answer can affect a result.
-export const CURRENT_ACCEPTED_MATCH_FACTS: AcceptedMatchFactsByAwardId = Object.freeze({});
+export const CURRENT_ACCEPTED_MATCH_FACTS: AcceptedMatchFactBundle = Object.freeze({
+  byAwardId: indexAcceptedMatchingFacts(P8M_MATCHING_PUBLICATION.accepted_facts),
+  cycleIdsByAwardId: Object.freeze({}),
+});
 export const CURRENT_ACCEPTED_MATCHING_FACT_COUNT = P8M_MATCHING_PUBLICATION.counts.accepted_matching_facts;

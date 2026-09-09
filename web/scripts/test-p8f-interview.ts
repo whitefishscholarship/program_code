@@ -6,12 +6,15 @@ import catalogJson from '../fixtures/p7/student-catalog.json';
 import questionMapJson from '../../docs/evidence/P8F-question-rule-map.json';
 import { serializeAwardCsv } from '../src/lib/export';
 import {
-  AcceptedAwardMatchFactsSchema,
+  EMPTY_ACCEPTED_MATCH_FACT_BUNDLE,
   InterviewAnswersSchema,
+  createSyntheticAcceptedFact,
   matchStudentAwards,
-  type AcceptedAwardMatchFacts,
+  type AcceptedMatchFactBundle,
   type InterviewAnswers,
 } from '../src/lib/interviewMatcher';
+import { P8F_MATCHING_FACT_CONTRACT, parseAcceptedMatchingFact, type AcceptedMatchingFact } from '../src/lib/matchingFactRuntime';
+import { expandAlias, validateMatchingFact } from './matching-fact-contract';
 import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, TARGET_SCHOOL_TYPES, VOLUNTEER_HOURS } from '../src/lib/interviewQuestions';
 import { CURRENT_ACCEPTED_MATCH_FACTS, CURRENT_ACCEPTED_MATCHING_FACT_COUNT, P8M_MATCHING_PUBLICATION, P8M_PUBLICATION_SHA256 } from '../src/lib/p8mMatchingFacts';
 import { StudentAwardSchema, StudentCatalogSchema } from '../src/lib/studentCatalog';
@@ -21,10 +24,13 @@ const repoRoot = path.resolve(webRoot, '..');
 const catalog = StudentCatalogSchema.parse(catalogJson);
 const questionMap = questionMapJson;
 const publicationBytes = fs.readFileSync(path.join(webRoot, 'fixtures/p8m/matching-facts-v1.json'));
+const frozenContractBytes = fs.readFileSync(path.join(repoRoot, 'docs/evidence/PLAN-REV10-matching-fact-contract.json'));
+const runtimeContractBytes = fs.readFileSync(path.join(webRoot, 'fixtures/p8m/matching-fact-contract-v1.json'));
+assert.equal(crypto.createHash('sha256').update(runtimeContractBytes).digest('hex'), crypto.createHash('sha256').update(frozenContractBytes).digest('hex'), 'runtime must use a byte-identical copy of the frozen matching-facts-v1 contract');
 assert.equal(crypto.createHash('sha256').update(publicationBytes).digest('hex'), P8M_PUBLICATION_SHA256);
 assert.equal(P8M_MATCHING_PUBLICATION.taxonomy_version, '1.0.0');
 assert.equal(CURRENT_ACCEPTED_MATCHING_FACT_COUNT, 0);
-assert.deepEqual(CURRENT_ACCEPTED_MATCH_FACTS, {});
+assert.deepEqual(CURRENT_ACCEPTED_MATCH_FACTS, EMPTY_ACCEPTED_MATCH_FACT_BUNDLE);
 
 assert.equal(questionMap.questionCounts.academicPrompts, 6);
 assert.equal(ACTIVITY_QUESTIONS.length, 4);
@@ -35,8 +41,13 @@ assert.equal(SPECIAL_CRITERIA.some((item) => String(item.id) === 'add'), false);
 assert.deepEqual(RESIDENCE_STATES.map(([value]) => value), questionMap.academicPrompts[1].options?.map((item) => item.value));
 assert.deepEqual(EDUCATIONAL_STATUSES.map(([value]) => value), questionMap.academicPrompts[2].options?.map((item) => item.value));
 assert.deepEqual(TARGET_SCHOOL_TYPES.map(([value]) => value), questionMap.academicPrompts[3].options?.map((item) => item.value));
+assert.deepEqual(TARGET_SCHOOL_TYPES.map(([value, label]) => ({ value, label })), questionMap.academicPrompts[3].options);
 assert.deepEqual(ACTIVITY_QUESTIONS.map((item) => item.id), questionMap.activityCheckboxes.map((item) => item.oldId.split('.').at(-1)));
+assert.deepEqual(ACTIVITY_QUESTIONS.map((item) => ({ oldId: `passiveSignals.${item.id}`, newControlId: item.controlId, label: item.label, criterionId: item.criterionId })), questionMap.activityCheckboxes.map(({ currentEffect: _currentEffect, ruleMode: _ruleMode, sensitive: _sensitive, ...item }) => item));
 assert.deepEqual(SPECIAL_CRITERIA.map((item) => item.id), questionMap.specialCriteria.map((item) => item.oldId));
+assert.deepEqual(SPECIAL_CRITERIA.map((item) => ({ category: item.category, oldId: item.id, newControlId: item.controlId, label: item.label, tooltip: item.detail, criterionId: item.criterionId })), questionMap.specialCriteria.map(({ fixedValue: _fixedValue, sensitive: _sensitive, ruleMode: _ruleMode, ...item }) => item));
+assert.deepEqual(VOLUNTEER_HOURS.map(([value, label]) => ({ value, label })), questionMap.conditionalVolunteerPrompt.options.map(({ typedRange: _typedRange, ...item }) => item));
+assert.equal(questionMap.conditionalVolunteerPrompt.condition, 'passiveSignals.service === true');
 assert.deepEqual(questionMap.earlierAffiliationMigration.map((item) => item.finalSpecialCriterionId), ['military_veteran', 'first_responder', 'farmers_union', 'electric_coop', 'credit_union', 'elks_lodge']);
 
 const answers: InterviewAnswers = InterviewAnswersSchema.parse({
@@ -80,49 +91,70 @@ assert(currentA.results.every((item) => item.reasons.length > 0 && item.reasons.
 
 const baseAward = catalog.awards[0];
 const award = StudentAwardSchema.parse({ ...baseAward, publicId: 'award-200000000001', name: 'P8F synthetic accepted-fact award', eligibility: { ...baseAward.eligibility, minimumGpa: 3, schoolTypes: ['four_year'] }, cycle: { ...baseAward.cycle, status: 'active', label: 'Open now' }, application: { ...baseAward.application, mode: 'direct_per_award', label: 'Direct application' } });
-const authority = 'synthetic_matrix_fixture' as const;
-const baseFacts = (interviewRules: AcceptedAwardMatchFacts['interviewRules']): AcceptedAwardMatchFacts => AcceptedAwardMatchFactsSchema.parse({
-  awardPublicId: award.publicId,
-  minimumGpa: null,
-  schoolTypes: null,
-  cycleStatus: { value: 'active', authority },
-  applicationMode: { value: 'direct_per_award', authority },
-  eligibilityDimensionsComplete: { value: true, authority },
-  interviewRules,
+const bundle = (facts: readonly AcceptedMatchingFact[], cycleIds: readonly string[] = []): AcceptedMatchFactBundle => ({
+  byAwardId: { [award.publicId]: facts },
+  cycleIdsByAwardId: cycleIds.length > 0 ? { [award.publicId]: cycleIds } : {},
 });
-const runRule = (rule: AcceptedAwardMatchFacts['interviewRules'][number], answerSet = answers) => matchStudentAwards([award], answerSet, { [award.publicId]: baseFacts([rule]) }).results[0];
+const runFact = (fact: AcceptedMatchingFact, answerSet = answers, cycleIds: readonly string[] = []) => matchStudentAwards([award], answerSet, bundle([fact], cycleIds)).results[0];
 
-const eligibilityRules: AcceptedAwardMatchFacts['interviewRules'] = [
-  { answerKey: 'gpa', criterionId: 'academic.gpa_unweighted', effect: 'required', operator: 'gte', value: 3, authority },
-  { answerKey: 'residenceState', criterionId: 'geography.residence_state', effect: 'required', operator: 'equals', value: 'MT', authority },
-  { answerKey: 'educationalStatus', criterionId: 'education.current_status', effect: 'required', operator: 'equals', value: 'high_school_senior', authority },
-  { answerKey: 'targetSchoolTypes', criterionId: 'education.target_institution_type', effect: 'required', operator: 'one_of', value: ['four_year'], authority },
-  { answerKey: 'collegeAccepted', criterionId: 'education.college_accepted', effect: 'required', operator: 'equals', value: true, authority },
-  { answerKey: 'gapYear', criterionId: 'education.gap_year', effect: 'required', operator: 'equals', value: false, authority },
-  { answerKey: 'volunteerHours', criterionId: 'service.volunteer_hours', effect: 'required', operator: 'one_of', value: ['50 to 99'], authority },
+const eligibilityFacts = [
+  createSyntheticAcceptedFact(award, 'academic.gpa_unweighted', 'required', 'gte', 3),
+  createSyntheticAcceptedFact(award, 'geography.residence_state', 'required', 'contains_any', ['MT']),
+  createSyntheticAcceptedFact(award, 'education.current_status', 'required', 'eq', 'high_school_senior'),
+  createSyntheticAcceptedFact(award, 'education.target_institution_type', 'required', 'contains_any', ['four_year']),
+  createSyntheticAcceptedFact(award, 'education.college_accepted', 'required', 'eq', true),
+  createSyntheticAcceptedFact(award, 'education.gap_year', 'required', 'eq', false),
+  createSyntheticAcceptedFact(award, 'service.volunteer_hours', 'required', 'gte', 50),
 ];
-for (const rule of eligibilityRules) assert(runRule(rule).reasons.some((reason) => reason.code === `accepted_rule_${rule.answerKey}` && reason.kind === 'confirmed_match'), `missing accepted gate for ${rule.answerKey}`);
-
-const positiveRules: AcceptedAwardMatchFacts['interviewRules'] = [
-  ...ACTIVITY_QUESTIONS.map((item) => ({ answerKey: item.id, criterionId: item.criterionId, effect: 'required' as const, operator: 'equals' as const, value: true, authority })),
-  { answerKey: 'financialNeed', criterionId: 'financial.need', effect: 'required', operator: 'equals', value: true, authority },
-  ...SPECIAL_CRITERIA.map((item) => ({ answerKey: item.id, criterionId: item.criterionId, effect: (item.rankOnly ? 'preferred' : 'required') as 'preferred' | 'required', operator: 'equals' as const, value: true, authority })),
-];
-for (const rule of positiveRules) {
-  const result = runRule(rule);
-  const expectedKind = rule.effect === 'preferred' ? 'preference' : 'confirmed_match';
-  assert(result.reasons.some((reason) => reason.kind === expectedKind), `missing positive accepted gate for ${rule.answerKey}`);
-  const withoutSelection = runRule(rule, oppositeAnswers);
-  assert.notEqual(withoutSelection.decision, 'known_conflict', `nonselection must remain non-excluding for ${rule.answerKey}`);
+for (const fact of eligibilityFacts) {
+  assert(runFact(fact).reasons.some((reason) => reason.kind === 'confirmed_match'), `missing accepted gate for ${fact.criterion_id}`);
 }
-const preferredApp = runRule({ answerKey: 'preferredApplicationModes', criterionId: 'application.application_mode', effect: 'preferred', operator: 'one_of', value: ['direct_per_award'], authority });
-assert(preferredApp.reasons.some((reason) => reason.kind === 'preference'));
 
-const contradiction = runRule({ answerKey: 'residenceState', criterionId: 'geography.residence_state', effect: 'required', operator: 'equals', value: 'CO', authority });
-assert.equal(contradiction.decision, 'known_conflict');
-assert.throws(() => runRule({ answerKey: 'residenceState', criterionId: 'education.current_status', effect: 'required', operator: 'equals', value: 'MT', authority }), /invalid criterion binding/);
-assert.equal(AcceptedAwardMatchFactsSchema.safeParse({ ...baseFacts([]), awardPublicId: 'wrong' }).success, false);
-assert.equal(AcceptedAwardMatchFactsSchema.safeParse({ ...baseFacts([]), interviewRules: [{ ...eligibilityRules[0], authority: 'proposed' }] }).success, false);
+const positiveAliases = [...ACTIVITY_QUESTIONS.map((item) => item.id), 'financial_need', ...SPECIAL_CRITERIA.map((item) => item.id)];
+for (const alias of positiveAliases) {
+  const expanded = expandAlias(P8F_MATCHING_FACT_CONTRACT, alias, true);
+  assert(expanded, `missing frozen alias ${alias}`);
+  const item = SPECIAL_CRITERIA.find((criterion) => criterion.id === alias);
+  const effect = item?.rankOnly ? 'preferred' : 'required';
+  const fact = createSyntheticAcceptedFact(
+    award,
+    expanded.criterion_id,
+    effect,
+    (expanded.operator ?? 'eq') as AcceptedMatchingFact['operator'],
+    expanded.value as AcceptedMatchingFact['value'],
+  );
+  const expectedKind = effect === 'preferred' ? 'preference' : 'confirmed_match';
+  assert(runFact(fact).reasons.some((reason) => reason.kind === expectedKind), `missing positive accepted gate for ${alias}`);
+  assert.notEqual(runFact(fact, oppositeAnswers).decision, 'known_conflict', `nonselection must remain non-excluding for ${alias}`);
+}
+const preferredAppFact = createSyntheticAcceptedFact(award, 'application.mode', 'preferred', 'eq', 'provider_form');
+assert(runFact(preferredAppFact).reasons.some((reason) => reason.kind === 'preference'));
+
+for (const [bucket, expected] of questionMap.conditionalVolunteerPrompt.options.map((item) => [item.value, item.typedRange] as const)) {
+  const expanded = expandAlias(P8F_MATCHING_FACT_CONTRACT, 'volunteer_hours_bucket', bucket);
+  assert(expanded, `missing volunteer transform ${bucket}`);
+  if (expected.upper === null) assert.deepEqual({ operator: expanded.operator, value: expanded.value }, { operator: 'gte', value: expected.lower });
+  else assert.deepEqual({ operator: expanded.operator, value: expanded.value }, { operator: 'between', value: { lower: expected.lower, upper: expected.upper, lower_inclusive: true, upper_inclusive: true } });
+}
+
+const contradictionFact = createSyntheticAcceptedFact(award, 'geography.residence_state', 'required', 'contains_any', ['CO']);
+assert.equal(runFact(contradictionFact).decision, 'known_conflict');
+const undecided = runFact(createSyntheticAcceptedFact(award, 'education.target_institution_type', 'required', 'contains_any', ['four_year']), { ...answers, targetSchoolTypes: ['undecided'] });
+assert.notEqual(undecided.decision, 'known_conflict');
+
+const cycleId = 'cycle:award-200000000001:2026';
+const closedCycleFact = createSyntheticAcceptedFact(award, 'cycle.status', 'informational', 'eq', 'closed', cycleId);
+const closedCycleResult = runFact(closedCycleFact, answers, [cycleId]);
+assert.notEqual(closedCycleResult.decision, 'known_conflict', 'cycle state cannot hard-exclude without an interview answer');
+assert(closedCycleResult.reasons.some((reason) => reason.code === 'cycle_closed' && reason.kind === 'verification_needed'));
+assert.throws(() => runFact(closedCycleFact, answers, ['cycle:award-200000000001:2025']), /wrong cycle/);
+
+const validFact = eligibilityFacts[0];
+assert.deepEqual(validateMatchingFact(P8F_MATCHING_FACT_CONTRACT, validFact), []);
+assert.throws(() => parseAcceptedMatchingFact({ ...validFact, operator: 'eq' }), /invalid operator/);
+assert.throws(() => parseAcceptedMatchingFact({ ...validFact, evidence_status: 'proposed', reviewer_id: null, reviewed_at: null, review_rationale: null }), /Only accepted/);
+assert.throws(() => parseAcceptedMatchingFact({ ...validFact, taxonomy_version: '2.0.0' }), /taxonomy version/);
+assert.throws(() => matchStudentAwards([award], answers, { byAwardId: { [award.publicId]: [{ ...validFact, award_id: 'award-200000000002' }] }, cycleIdsByAwardId: {} }), /index does not match/);
 
 const wizardSource = fs.readFileSync(path.join(webRoot, 'src/components/InterviewWizard.tsx'), 'utf8');
 const browserSource = fs.readFileSync(path.join(webRoot, 'src/components/ScholarshipBrowser.tsx'), 'utf8');
@@ -151,4 +183,4 @@ for (const forbidden of ['residenceState', 'selectedCriteria', 'possible_match',
 const changedPaths = fs.readFileSync(path.join(repoRoot, '.git'), 'utf8');
 assert(changedPaths.startsWith('gitdir:'), 'P8F must run in an isolated Git worktree');
 
-console.log(`P8F INTERVIEW TEST PASS awards=${catalog.counts.awards} academic=6 activities=${ACTIVITY_QUESTIONS.length} volunteer=1 financial=1 criteria=${SPECIAL_CRITERIA.length} acceptedFacts=${CURRENT_ACCEPTED_MATCHING_FACT_COUNT} ruleGates=${eligibilityRules.length + positiveRules.length + 1}`);
+console.log(`P8F INTERVIEW TEST PASS awards=${catalog.counts.awards} academic=6 activities=${ACTIVITY_QUESTIONS.length} volunteer=1 financial=1 criteria=${SPECIAL_CRITERIA.length} acceptedFacts=${CURRENT_ACCEPTED_MATCHING_FACT_COUNT} ruleGates=${eligibilityFacts.length + positiveAliases.length + 1}`);
