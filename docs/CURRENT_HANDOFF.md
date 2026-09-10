@@ -5,7 +5,7 @@ Plan revision: 14
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — local policy checkpoint
+## Interview relevance — mapping committed before implementation
 
 - Execution worktree: `/private/tmp/program_code-interview-relevance`; branch
   `codex/interview-relevance`, baseline `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
@@ -14,8 +14,11 @@ Default branch: `main`
   on this branch (resolve with Git); product changes have not started.
 - Canonical revision14 adopts `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md` and its kickoff.
   Evidence: `docs/evidence/PLAN-REV14.md`. P9 and PR42 remain complete.
-- Next action: independently review this policy, then commit complete mapping ledger
-  and expected examples before product edits. Continue through tested local candidate.
+- Policy commit `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh review C0/H0/M0/L0.
+- Mapping ledger and expected examples: `docs/evidence/PLAN-REV14-mapping.json` and
+  `docs/evidence/PLAN-REV14-matrix.json`; commit `docs: map supported interview relevance`.
+- Next action: independently check mappings, implement only recorded connections, then
+  execute the predeclared tests/browser matrix and final candidate review.
 - Publication authority false; exact release blocker in BUILD_STATE. No push/PR/Preview/
   merge/Production/hosted verification/rollback. Settle authority before attestation.
 - No source or spreadsheet access, new exclusions/questions/services or unrelated work.
