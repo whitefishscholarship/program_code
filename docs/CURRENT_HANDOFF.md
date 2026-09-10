@@ -1,9 +1,24 @@
 # Current Handoff
 
 Last updated: 2026-09-10
-Plan revision: 12
+Plan revision: 13
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Active maintenance — spreadsheet shortlist (local preparation)
+
+P9 and the program closeout are complete. The only authorized new work is Plan
+Revision 13: make the existing interview produce a useful spreadsheet-based shortlist
+and export exactly the visible awards. See canonical plan section 17 and
+`docs/evidence/PLAN-REV13.md`. Baseline is live `b8ea0982709b1984674e43e39f7ecbf7e42fe7d4`,
+which merged the one-file closeout through PR #41. All program stages remain accepted;
+active/next program-stage pointers remain null. This maintenance uses only committed
+revision-225 source/review inputs. No current-sheet freshness claim is made.
+
+Branch `codex/shortlist-spreadsheet-matching` is local. Exact Git/Vercel publication
+authority remains absent; no suppression is verified. Do not publish, attest a final
+release prematurely, or reopen P9. The old P9 delivery-blocker label remains historical
+bookkeeping and is not the selected maintenance item.
 
 ## P9 and program closeout — PASS
 

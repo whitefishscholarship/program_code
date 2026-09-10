@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 12,
+  "planRevision": 13,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-10",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -466,7 +466,8 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending"
+      "P9-attestation-and-delivery-pending",
+      "PLAN-REV13-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
     ]
   },
   "governance": {
@@ -702,6 +703,22 @@
           "claudeProcessingAuthorized": false,
           "humanFactReviewer": null,
           "pinningEvidencePath": "docs/evidence/PLAN-REV12.md"
+        }
+      },
+      {
+        "id": "PLAN-REV13",
+        "status": "attestation-gated",
+        "baselineCommit": "b8ea0982709b1984674e43e39f7ecbf7e42fe7d4",
+        "evidencePath": "docs/evidence/PLAN-REV13.md",
+        "manifestPath": "docs/evidence/PLAN-REV13-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV13.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "The user selected a bounded spreadsheet matching release and instructed continue. The prior instruction expressly retains a separate exact Git/Vercel effect authorization or verified deployment suppression requirement before publication.",
+          "scope": "Local policy amendment, implementation, verification, and independent review only. No branch push, pull request, merge, Vercel Preview or Production deployment, or deployment-configuration mutation."
         }
       }
     ]

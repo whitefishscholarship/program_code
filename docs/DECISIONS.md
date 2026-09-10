@@ -585,3 +585,20 @@ but are not rewritten or deleted.
 - Rollback: Before merge, abandon only the Revision 12 branch. After delivery,
   supersede it only through another independently reviewed amendment. Never rewrite
   its attestation or roll back spreadsheet data because Revision 12 performs no write.
+
+
+## D-025 — Useful spreadsheet shortlist after completed P9
+
+Kelsey asked to prioritize interview-driven spreadsheet filtering and downloads,
+avoid drift and excessive governance, accepted the recommended bounded release,
+and instructed "continue". The saved source has 197 rows and a completed human
+review, but the official matching publication deliberately contains zero facts.
+Requiring official verification for every shortlist comparison prevents the basic
+product from using clear organizer-recorded criteria.
+
+Choose a separately labeled, immutable spreadsheet shortlist with reversible
+recorded-mismatch filtering and honest unknowns. Preserve official accepted-fact
+semantics and P9 history. Reject a live credential-bearing spreadsheet integration,
+blanket keyword eligibility, assumed current cycles, and a new full-source crawl.
+Scope, evidence, source limits, verification, and rollback are in plan section 17.
+Publication effects require separate exact authority or verified suppression.
