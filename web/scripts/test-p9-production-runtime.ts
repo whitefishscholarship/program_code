@@ -59,10 +59,12 @@ assert.deepEqual(validateP9ReplacementEvidence(deploymentEvidence, evidenceConte
 for (const mutate of [
   (copy: any) => { copy.runtimeCommit = '0'.repeat(40); },
   (copy: any) => { copy.target.projectId = 'prj_wrong'; },
-  (copy: any) => { copy.environment.productionVariableNames.push('GCP_CREDENTIALS'); },
+  (copy: any) => { copy.delivery.githubActionsConclusion = 'failure'; },
+  (copy: any) => { copy.environment.inspections[0].productionVariableNames.push('GCP_CREDENTIALS'); },
   (copy: any) => { copy.observations[2].nonce = copy.observations[1].nonce; },
   (copy: any) => { copy.observations[3].deploymentId = copy.deployments.cleanA.id; },
   (copy: any) => { copy.aliasOperations.reverse(); },
+  (copy: any) => { copy.runtimeProof.builtServerTrace = 'unknown'; },
   (copy: any) => { copy.finalSmoke.awards = 191; },
 ]) {
   const copy = structuredClone(deploymentEvidence);

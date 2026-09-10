@@ -40,3 +40,4 @@ jobs:
           # accidental build-time env read fails loudly rather than using a real value.
           GOOGLE_SHEET_ID: ci-placeholder
           GEMINI_API_KEY: ci-placeholder
+      - run: node --import tsx scripts/p9-production-runtime.ts --require-build-trace

@@ -183,9 +183,11 @@ export type P9RuntimeReceipt = {
   productionDependencyGooglePackages: string[];
   developmentOnlyGooglePackages: string[];
   deploymentConfigFilesChecked: string[];
+  builtServerTraceInspected: boolean;
+  builtServerTraceSha256: string | null;
 };
 
-export function validateP9ProductionRuntime(): P9RuntimeReceipt {
+export function validateP9ProductionRuntime(requireBuildTrace = false): P9RuntimeReceipt {
   const publicationBytes = fs.readFileSync(publicationPath);
   const publicationSha256 = sha256(publicationBytes);
   if (publicationSha256 !== expectedPublicationSha256) {
@@ -242,12 +244,22 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
   }
 
   const builtServerRoot = path.join(webRoot, '.next', 'server');
+  let builtServerTraceSha256: string | null = null;
   if (fs.existsSync(builtServerRoot)) {
-    const builtViolations = walk(builtServerRoot)
+    const builtFiles = walk(builtServerRoot)
       .filter((file) => /\.(?:js|mjs|cjs|json)$/.test(file))
+      .sort();
+    const builtViolations = builtFiles
       .flatMap((file) => forbiddenBuiltRuntimePatterns.filter((pattern) => pattern.test(fs.readFileSync(file, 'utf8'))).map((pattern) => `${path.relative(webRoot, file)}:${pattern.source}`));
     if (builtViolations.length > 0) throw new Error(`Forbidden capability in traced production bundle: ${builtViolations.join(', ')}`);
+    if (builtFiles.length > 0) {
+      builtServerTraceSha256 = sha256(JSON.stringify(builtFiles.map((file) => ({
+        path: path.relative(builtServerRoot, file),
+        sha256: sha256(fs.readFileSync(file)),
+      }))));
+    }
   }
+  if (requireBuildTrace && !builtServerTraceSha256) throw new Error('A current built server trace is required');
 
   const disabledProductionAdminRoutes = [
     'src/app/api/admin/extract/route.ts',
@@ -288,9 +300,11 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
     productionDependencyGooglePackages,
     developmentOnlyGooglePackages,
     deploymentConfigFilesChecked,
+    builtServerTraceInspected: builtServerTraceSha256 !== null,
+    builtServerTraceSha256,
   };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  console.log(JSON.stringify(validateP9ProductionRuntime(), null, 2));
+  console.log(JSON.stringify(validateP9ProductionRuntime(process.argv.includes('--require-build-trace')), null, 2));
 }

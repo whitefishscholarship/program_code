@@ -59,25 +59,30 @@ export function validateP9ReplacementEvidence(value: unknown, context: Context):
       errors.push(`P9 provider target ${key} mismatch`);
     }
   }
+  if (isObject(target) && (target.projectName !== 'web' || target.teamName !== "whitefishscholarship's projects")) errors.push('P9 provider target names mismatch');
 
   const environment = value.environment;
-  if (!isObject(environment) || !Array.isArray(environment.productionVariableNames) || typeof environment.verifiedAbsentAt !== 'string') {
+  if (!isObject(environment) || !Array.isArray(environment.inspections) || environment.inspections.length !== 2) {
     errors.push('P9 Production environment inventory is incomplete');
   } else {
-    const names = environment.productionVariableNames;
-    if (names.some((name: unknown) => typeof name !== 'string' || /(google|gcp|drive|sheets?|spreadsheet|service_account)/i.test(name))) {
-      errors.push('P9 Production environment inventory contains a forbidden Google/Drive/Sheets variable');
-    }
-    if (new Set(names).size !== names.length) errors.push('P9 Production environment inventory contains duplicates');
-    for (const removed of ['GOOGLE_SERVICE_ACCOUNT_CREDENTIALS', 'GOOGLE_SHEET_ID']) {
-      if (!Array.isArray(environment.verifiedRemovedNames) || !environment.verifiedRemovedNames.includes(removed)) {
-        errors.push(`P9 environment evidence must verify removal of ${removed}`);
+    for (const [index, inspection] of environment.inspections.entries()) {
+      if (!isObject(inspection) || !Array.isArray(inspection.productionVariableNames) || typeof inspection.observedAt !== 'string' || Number.isNaN(Date.parse(inspection.observedAt))) {
+        errors.push(`P9 Production environment inspection ${index} is incomplete`);
+        continue;
+      }
+      const names = inspection.productionVariableNames;
+      if (names.some((name: unknown) => typeof name !== 'string' || /(google|gcp|drive|sheets?|spreadsheet|service_account)/i.test(name))) errors.push(`P9 Production environment inspection ${index} contains a forbidden variable`);
+      if (new Set(names).size !== names.length || inspection.fingerprintSha256 !== sha256(JSON.stringify([...names].sort()))) errors.push(`P9 Production environment inspection ${index} fingerprint mismatch`);
+      if (JSON.stringify([...names].sort()) !== JSON.stringify(['ADMIN_EMAIL', 'ADMIN_PASSWORD', 'JWT_SECRET', 'RESEND_API_KEY'])) errors.push(`P9 Production environment inspection ${index} inventory mismatch`);
+      for (const removed of ['GOOGLE_SERVICE_ACCOUNT_CREDENTIALS', 'GOOGLE_SHEET_ID']) {
+        if (!Array.isArray(inspection.verifiedRemovedNames) || !inspection.verifiedRemovedNames.includes(removed)) errors.push(`P9 environment inspection ${index} must verify removal of ${removed}`);
       }
     }
+    if (environment.valuesInspected !== false) errors.push('P9 environment values must not be inspected or recorded');
   }
 
   const runtimeProof = value.runtimeProof;
-  if (!isObject(runtimeProof) || runtimeProof.sourceAst !== 'pass' || runtimeProof.deploymentConfig !== 'pass' || runtimeProof.productionDependencies !== 'pass' || runtimeProof.builtServerTrace !== 'pass') {
+  if (!isObject(runtimeProof) || runtimeProof.sourceAst !== 'pass' || runtimeProof.deploymentConfig !== 'pass' || runtimeProof.productionDependencies !== 'pass' || runtimeProof.builtServerTrace !== 'pass' || !/^[0-9a-f]{64}$/.test(runtimeProof.builtServerTraceSha256)) {
     errors.push('P9 zero-capability runtime proof is incomplete');
   }
 
@@ -109,7 +114,11 @@ export function validateP9ReplacementEvidence(value: unknown, context: Context):
     });
     for (const key of ['cleanA', 'cleanB']) {
       const deployment = deployments[key];
-      if (deployment.ready !== true || deployment.runtimeCommit !== context.runtimeCommit || !/^dpl_[A-Za-z0-9]+$/.test(deployment.id) || !/^web-[a-z0-9]+-whitefishscholarships-projects\.vercel\.app$/.test(deployment.url)) errors.push(`P9 ${key} deployment identity mismatch`);
+      if (deployment.ready !== true || deployment.environment !== 'production' || deployment.runtimeCommit !== context.runtimeCommit || !/^dpl_[A-Za-z0-9]+$/.test(deployment.id) || !/^web-[a-z0-9]+-whitefishscholarships-projects\.vercel\.app$/.test(deployment.url) || typeof deployment.requestedAt !== 'string' || typeof deployment.readyAt !== 'string' || Number.isNaN(Date.parse(deployment.requestedAt)) || Number.isNaN(Date.parse(deployment.readyAt)) || Date.parse(deployment.requestedAt) >= Date.parse(deployment.readyAt)) errors.push(`P9 ${key} deployment identity mismatch`);
+    }
+    if (isObject(environment) && Array.isArray(environment.inspections)) {
+      const a = environment.inspections[0]; const b = environment.inspections[1];
+      if (!isObject(a) || !isObject(b) || Date.parse(a.observedAt) >= Date.parse(deployments.cleanA.requestedAt) || Date.parse(b.observedAt) >= Date.parse(deployments.cleanB.requestedAt) || deployments.cleanA.environmentFingerprintSha256 !== a.fingerprintSha256 || deployments.cleanB.environmentFingerprintSha256 !== b.fingerprintSha256) errors.push('P9 clean deployments are not bound to pre-creation environment inspections');
     }
     if (!Array.isArray(aliasOperations) || aliasOperations.length !== 2 ||
       aliasOperations[0]?.action !== 'instant_rollback' || aliasOperations[0]?.fromDeploymentId !== deployments.cleanB.id || aliasOperations[0]?.toDeploymentId !== deployments.cleanA.id ||
@@ -118,6 +127,17 @@ export function validateP9ReplacementEvidence(value: unknown, context: Context):
       errors.push('P9 alias rollback/restoration operation sequence is incomplete');
     }
   }
+
+  const controlPlane = value.authenticatedControlPlane;
+  const expectedControlActions = ['redeploy_promote', 'redeploy_promote', 'instant_rollback', 'promote_restore'];
+  if (!isObject(controlPlane) || controlPlane.interface !== 'authenticated_vercel_dashboard' || controlPlane.actor !== 'whitefishscholarship' || controlPlane.projectId !== 'prj_LbefE2deji6nPND6iBiuofe7IABv' || controlPlane.teamId !== 'team_6CAjRq58n0WvAH49otKSQbA7' || !Array.isArray(controlPlane.operations) || controlPlane.operations.length !== 4 || controlPlane.operations.some((operation: unknown, index: number) => !isObject(operation) || operation.action !== expectedControlActions[index] || typeof operation.confirmedAt !== 'string' || Number.isNaN(Date.parse(operation.confirmedAt)))) errors.push('P9 authenticated provider operation evidence is incomplete');
+  else if (isObject(deployments) && Array.isArray(phases)) {
+    const [deployA, deployB, rollback, restore] = controlPlane.operations;
+    if (deployA.toDeploymentId !== deployments.cleanA.id || deployA.confirmedAt !== deployments.cleanA.requestedAt || deployB.fromDeploymentId !== deployments.cleanA.id || deployB.toDeploymentId !== deployments.cleanB.id || deployB.confirmedAt !== deployments.cleanB.requestedAt || rollback.fromDeploymentId !== deployments.cleanB.id || rollback.toDeploymentId !== deployments.cleanA.id || restore.fromDeploymentId !== deployments.cleanA.id || restore.toDeploymentId !== deployments.cleanB.id || Date.parse(rollback.confirmedAt) <= Date.parse(phases[1].observedAt) || Date.parse(rollback.confirmedAt) >= Date.parse(phases[2].observedAt) || Date.parse(restore.confirmedAt) <= Date.parse(phases[2].observedAt) || Date.parse(restore.confirmedAt) >= Date.parse(phases[3].observedAt)) errors.push('P9 authenticated provider operations do not bind the clean deployment sequence');
+  }
+
+  const delivery = value.delivery;
+  if (!isObject(delivery) || delivery.pullRequest !== 40 || delivery.previewDeploymentId !== 'dpl_ByUWkSgdsYWrUr81RnhZpCHSzeuV' || delivery.previewRuntimeCommit !== context.runtimeCommit || delivery.githubActionsRun !== 34419079116 || delivery.githubActionsJob !== 102690356105 || delivery.githubActionsConclusion !== 'success') errors.push('P9 Git/Preview/CI binding is incomplete');
 
   const smoke = value.finalSmoke;
   if (!isObject(smoke) || smoke.status !== 200 || smoke.sources !== 217 || smoke.portals !== 21 || smoke.awards !== 192 || smoke.applicationGroups !== 4 || smoke.cycles !== 192 || smoke.unknownCycles !== 192 || smoke.openCycles !== 0 || smoke.acceptedMatchingFacts !== 0 || smoke.root !== true || smoke.browseAll192 !== true || smoke.csvExport192 !== true || smoke.privateInterview !== true) {

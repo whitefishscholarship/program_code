@@ -21,8 +21,8 @@ Default branch: `main`
 - Production environment names were inspected without revealing values. Both
   `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` and `GOOGLE_SHEET_ID` are absent. The final
   controlled rollback moved the canonical hostname from clean deployment
-  `dpl_2CBihvWaNS8FuseytnBqJkjpsUke` to clean deployment
-  `dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6`, then restored `dpl_2CBi...`; all four ordered
+  `dpl_DbA8ip16ZykyRRWDySj4D344QihV` to clean deployment
+  `dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV`, then restored `dpl_DbA8...`; all four ordered
   observations returned HTTP 200 with unique nonces and exact runtime/publication pins.
 - Finish only the required gates: final matrix, fresh-context read-only review,
   accepted-state recheck, complete manifest, direct-child two-file attestation, PR
