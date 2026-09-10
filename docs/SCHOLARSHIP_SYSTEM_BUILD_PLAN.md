@@ -1641,11 +1641,13 @@ maintenance is authorized. Sensitive skip/nonselection remains unknown; only pub
 reviewed rules are bundled. Answers and reasons remain volatile; CSV has only public
 fields for exactly the visible awards in visible order.
 
-Publication authority is false. Before final attestation, settle new exact branch push,
-PR, Vercel Preview, merge, Production deployment and verification authority or verified
-applicable suppression. Then record any authority delta, refreeze and independently
-recheck the final candidate before direct-child two-file attestation. The previous
-release grant is exhausted. Local review may finish with manifest proposal and reviewer
-receipt; do not create final attestation while this boundary remains unsettled.
+Publication authority was settled on September 10, 2026 by Kelsey's direct “yes” to
+this release's exact branch push, PR, Vercel Preview, merge, Production deployment and
+verification question; see `docs/evidence/PLAN-REV14.md`. The grant covers the existing
+web project, team and canonical hostname recorded in Revision14 state. Refreeze and
+independently recheck the authority-bearing candidate before direct-child two-file
+attestation. Verify exact Preview before merge and exact Production afterward. The
+previous release grant is exhausted and is not relied on. No configuration changes
+or additional external effects are included.
 Rollback reference is deployed PR42 merge 2f517755118bc72570a2aa8b5109a2660e0d9b12;
 any actual rollback additionally requires explicit authority.

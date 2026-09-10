@@ -5,7 +5,7 @@ Plan revision: 14
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — PASS local candidate; publication authority pending
+## Interview relevance — PASS local candidate; exact publication authorized
 
 - Execution worktree `/private/tmp/program_code-interview-relevance`, branch
   `codex/interview-relevance`. Original checkout and planning branch remain untouched.
@@ -41,17 +41,21 @@ Default branch: `main`
   visible IDs/order, including search, sort and outside/all scopes. Privacy, sensitive
   skip, keyboard, edit/reset/reload and no-overflow checks pass. All profiles are synthetic.
 - Plan validation reports exactly three expected omissions: canonical final manifest,
-  review and committed attestation. They are intentionally absent until the publication
-  boundary is settled; no other validation failure remains. Do not report canonical
+  review and committed attestation. They remain intentionally absent until the authorized candidate is refrozen
+  and independently rechecked; no other validation failure remains. Do not report canonical
   acceptance, hosted build/health or current scholarship freshness for this local release.
-- **Next executable action:** obtain new exact authority for this release’s branch push,
-  PR, Vercel Preview, merge, Production deployment and verification, or verify applicable
-  deployment suppression. Record the new grant in Revision14 state/evidence, refreeze
-  and independently recheck the exact authorized candidate, then add only canonical
-  `docs/evidence/PLAN-REV14-manifest.json` and `docs/reviews/PLAN-REV14.json` as its
-  direct-child attestation. Do not append after that attestation. Prior release authority
-  does not apply; no push, PR or deployment has occurred. Do not repeat completed policy,
-  mapping or product work; rerun checks only as required by changes/final release gates.
+- **Exact publication authority received:** Kelsey answered “yes” on September 10 to
+  this release's branch push, PR, Vercel Preview, merge, Production deployment and
+  verification on the existing web project. Recorded in Revision14 state and evidence.
+- **Next executable action:** freeze this documentation-only authority update, independently
+  recheck the exact candidate, then add only `docs/evidence/PLAN-REV14-manifest.json` and
+  `docs/reviews/PLAN-REV14.json` as its direct-child attestation. Resolve the exact authorized
+  candidate using the release branch tip before attestation, or the manifest afterward.
+  Do not append after attestation. Push and open the PR; require passing hosted CI and
+  exact Preview health/identity/digest and synthetic interview/export checks before merge.
+  Then verify main CI and Production. No hosted outcome is claimed yet. Preserve delivery
+  receipts in the PR and a separate local closeout after merge; never append the release tip.
+  Do not repeat completed policy, mapping, product or unchanged local test work.
 - Proposed existing target: Vercel project `web` (`prj_LbefE2deji6nPND6iBiuofe7IABv`),
   team `team_6CAjRq58n0WvAH49otKSQbA7`, canonical `web-two-gules-45.vercel.app`.
   Verify exact Preview commit/health/digests and synthetic journeys before merge; honor

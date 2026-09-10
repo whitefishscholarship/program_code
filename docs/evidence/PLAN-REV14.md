@@ -135,3 +135,28 @@ delta receives the same reviewer's recheck before return. This avoids creating a
 undelivered canonical attestation before the user’s publication boundary is settled.
 Remote main was rechecked unchanged at the exact original baseline. Original checkout
 and planning branch remain clean and untouched. No external state changed.
+
+## Exact release authorization — 2026-09-10T23:27:18Z
+
+After the tested local candidate and independent review were presented, the assistant
+asked: “Per your release boundary, do you authorize this release’s branch push, PR,
+Vercel Preview, merge, Vercel Production deployment and verification on the existing
+web project?” Kelsey answered: “yes”. This records new direct informed authority
+for INTERVIEW-RELEVANCE-1 / PLAN-REV14 only. The prior release grant is not reused.
+
+Target: project web `prj_LbefE2deji6nPND6iBiuofe7IABv`, team
+`team_6CAjRq58n0WvAH49otKSQbA7`, canonical `web-two-gules-45.vercel.app`.
+The existing Git integration creates Preview from branch/PR and Production from main.
+Record authority, refreeze, independently recheck, and create direct-child two-file
+attestation before publication. Exact hosted CI, Preview identity/nonce health/digests
+and synthetic interview/export smoke precede merge; equivalent Production checks follow.
+These hosted outcomes remain pending, not implied by local acceptance. Rollback and
+provider configuration/permissions, spreadsheet/source access, applicant data and
+unrelated effects remain excluded.
+
+Authenticated normal Git fetch reverified origin/main as
+`2f517755118bc72570a2aa8b5109a2660e0d9b12` immediately before this authority update.
+Local closeout `f50c0d88e9e9dfbffdd2bfca350b82e89b163e66` independently passed
+C0/H0/M0/L0; its 31-path manifest digest was
+`fa1dcb0c71528ae08ea31ba7596cdf3e54ae6818d107a68c0edca7c1b90dfc70`.
+No product bytes change in this authority checkpoint.
