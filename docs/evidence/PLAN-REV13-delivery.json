@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "maintenanceId": "PLAN-REV13",
+  "observedAt": "2026-09-10T18:56:02Z",
+  "status": "PASS",
+  "scope": "Delivered spreadsheet shortlist maintenance; P9 and program closeout remain complete. Synthetic profiles only.",
+  "git": {
+    "pr": 42,
+    "url": "https://github.com/whitefishscholarship/program_code/pull/42",
+    "baseline": "b8ea0982709b1984674e43e39f7ecbf7e42fe7d4",
+    "candidate": "07c6c8df825b17cee64037f81a94ac05ba2ce464",
+    "manifestSha256": "893a451d14dee4a0dea9553730d97ecdc4fd307ef1d9cfdb5bafc9253f46f3d1",
+    "attestation": "c4c5e5ecf6749b7673086fbde3841232d2c56cd6",
+    "branch": "codex/shortlist-release",
+    "merge": "2f517755118bc72570a2aa8b5109a2660e0d9b12",
+    "mergedAt": "2026-09-10T18:48:29Z",
+    "mergedTreeEqualsAttestation": true,
+    "historicalP9AndP8mBytesUnchanged": true,
+    "unpublishedInvalidTimestampAttestationPreserved": "1db313f4a0565ad46e4198a50d6b377b5afff917 on codex/shortlist-spreadsheet-matching"
+  },
+  "ci": {
+    "prRun": 34515977401,
+    "mainRun": 34516595438,
+    "both": "success",
+    "commands": [
+      "npm run plan:check",
+      "npm run typecheck",
+      "npm test",
+      "npm run build",
+      "node --import tsx scripts/p9-production-runtime.ts --require-build-trace"
+    ],
+    "branchProtectionInspection": "GitHub returned403: current plan does not expose branch-protection feature. No settings changed; all CI checks were enforced by delivery procedure."
+  },
+  "vercel": {
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "previewDeployment": "dpl_6McooL5t6rpr5ZxF7Tqxk6DCRKWQ",
+    "previewReady": true,
+    "productionDeployment": "dpl_7ifKdYFrisnRN2ZUWfu8NGBVhoXL",
+    "productionReadyCurrent": true,
+    "canonicalHost": "https://web-two-gules-45.vercel.app/"
+  },
+  "health": {
+    "method": "Authenticated same-origin GET through existing browser session; no protection changes",
+    "preview": {
+      "status": 200,
+      "observedAt": "2026-09-10T18:45:35.999Z",
+      "nonce": "82c550443e0091a83c605f9e53a64430",
+      "commit": "c4c5e5ecf6749b7673086fbde3841232d2c56cd6",
+      "deploymentId": "dpl_6McooL5t6rpr5ZxF7Tqxk6DCRKWQ",
+      "env": "preview"
+    },
+    "production": {
+      "status": 200,
+      "observedAt": "2026-09-10T18:53:43.109Z",
+      "nonce": "8313acff4408e3c9841e95cc10d2ce9d",
+      "commit": "2f517755118bc72570a2aa8b5109a2660e0d9b12",
+      "deploymentId": "dpl_7ifKdYFrisnRN2ZUWfu8NGBVhoXL",
+      "env": "production"
+    },
+    "sharedVerifiedValues": {
+      "shortlistId": "spreadsheet-shortlist-v1-rev225",
+      "shortlistSha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified",
+      "p8mPublicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+      "sourceRows": 197,
+      "scholarshipRows": 176,
+      "portalRows": 21,
+      "acceptedMatchingFacts": 0,
+      "capabilities": {
+        "google": "none",
+        "drive": "none",
+        "sheets": "none",
+        "productionIngestion": "disabled",
+        "productionMutation": "disabled"
+      }
+    }
+  },
+  "productionCatalogApi": {
+    "status": 200,
+    "schemaVersion": "2.0.0",
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4
+  },
+  "browser": {
+    "target": "existing authenticated Preview and canonical Production",
+    "directInterviewEntry": true,
+    "syntheticProfilesOnly": true,
+    "previewHighGpaFourYear": {
+      "shortlist": 166,
+      "fit": 69,
+      "needsChecking": 97,
+      "outside": 26,
+      "csvExactVisibleNamesAndOrder": true
+    },
+    "productionProfiles": [
+      {
+        "profile": "synthetic3.5GPA-four-year",
+        "shortlist": 166,
+        "fit": 69,
+        "needsChecking": 97,
+        "outside": 26
+      },
+      {
+        "profile": "synthetic2.0GPA-four-year",
+        "shortlist": 125,
+        "fit": 28,
+        "needsChecking": 97,
+        "outside": 67
+      },
+      {
+        "profile": "synthetic3.5GPA-trade",
+        "shortlist": 152
+      },
+      {
+        "profile": "synthetic3.5GPA-undecided",
+        "shortlist": 190
+      }
+    ],
+    "everyProductionProfileCsvExactVisibleNamesAndOrder": true,
+    "outside26CsvExact": true,
+    "all192Recovery": true,
+    "editRetainsAnswers": true,
+    "resetClearsAnswers": true,
+    "reloadClearsAnswers": true,
+    "browserDownloadInterfaceCompleted": true,
+    "osSaveAssertion": false,
+    "downloadObservationLimit": "Generic in-app download-event observer timed out on Preview; the supported browser downloadMedia interface completed on Preview and Production, and exact CSV link bytes matched visible names/order. Local browser matrix independently verified real saved downloads."
+  },
+  "limits": [
+    "Saved September2 snapshot; no live-sheet or current eligibility verification.",
+    "Only supported recorded GPA and school criteria filter; reviewed application-route preferences affect ranking. Other interview answers have no effect in this version.",
+    "Unauthenticated Preview health HTTP302 and blocked direct browser API navigation were not treated as health proof; authenticated same-origin200 responses supplied proof.",
+    "Historical stale P9 blocker and other unrelated maintenance remain outside this release.",
+    "This delivery receipt and updated handoff are local closeout only, not a new published commit or deployment. The PR carries durable hosted delivery evidence."
+  ]
+}

@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 13
+Plan revision: 14
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1609,3 +1609,43 @@ recomputing the frozen deployed runtime closure from Git blobs rather than compa
 that old deployment with a changed maintenance checkout. Current runtime capability
 checks still run. Revision 12 source validation must continue through later plan
 revisions while preserving its exact historical amendment and source pins.
+
+
+## 18. Plan Revision 14 — Interview relevance maintenance
+
+Kelsey directly authorized execution of INTERVIEW-RELEVANCE-1 on September 10, 2026:
+local preparation, this prospective policy/state amendment, implementation, testing,
+and fresh-context independent review. The complete fixed scope and acceptance matrix
+in `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md` sections 2–7 are adopted for this one
+maintenance release. P9 and Revision 13 remain complete; no program stage is reopened.
+
+Prospectively allow only positive relevance and qualified explanations from individually
+reviewed award-specific saved revision225 information. Existing GPA/school decisions
+remain unchanged. Relevance is binary, OR across positive choices, never an accumulating
+score. Sort mismatch group last, then relevance, recorded fit, existing application
+preference, name, stable ID. Explicit user sorts override this order. Keep every existing
+question and disposition every choice, all197 source rows and all192 awards. Preserve
+all historical data, publications and attestations byte-for-byte. Use a separate versioned
+organizer-recorded relevance artifact; no new official matching facts are accepted.
+
+Commit and independently review this policy before product changes. Commit the complete
+mapping ledger and expected-example matrix before implementation. All verification and
+fresh-context final review gates remain. This policy checkpoint is local preparation,
+not final release acceptance. An exact Revision14 local-preparation validator exception
+may accept false publication authority only off hosted CI and with its exact blocker;
+it never grants publication or exempts any historical validation.
+
+No new questions, exclusion rules, services, dependencies, source research, spreadsheet
+access, telemetry, applicant data, provider configuration, monitoring or unrelated
+maintenance is authorized. Sensitive skip/nonselection remains unknown; only public
+reviewed rules are bundled. Answers and reasons remain volatile; CSV has only public
+fields for exactly the visible awards in visible order.
+
+Publication authority is false. Before final attestation, settle new exact branch push,
+PR, Vercel Preview, merge, Production deployment and verification authority or verified
+applicable suppression. Then record any authority delta, refreeze and independently
+recheck the final candidate before direct-child two-file attestation. The previous
+release grant is exhausted. Local review may finish with manifest proposal and reviewer
+receipt; do not create final attestation while this boundary remains unsettled.
+Rollback reference is deployed PR42 merge 2f517755118bc72570a2aa8b5109a2660e0d9b12;
+any actual rollback additionally requires explicit authority.

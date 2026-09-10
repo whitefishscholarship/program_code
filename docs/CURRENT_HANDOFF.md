@@ -1,46 +1,66 @@
 # Current Handoff
 
 Last updated: 2026-09-10
-Plan revision: 13
+Plan revision: 14
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Active maintenance — spreadsheet shortlist (authorized delivery pending)
+## Interview relevance — local policy checkpoint
 
-P9 and the program closeout remain complete. The only new work is Plan Revision 13:
-interview-first entry, useful recorded-criteria shortlisting, and exact visible-award
-CSV downloads. Canonical plan section 17 and `docs/evidence/PLAN-REV13.md` govern it.
-Baseline is live `b8ea0982709b1984674e43e39f7ecbf7e42fe7d4` (PR #41 closeout merge).
-All program stages remain accepted with active/next stage pointers null.
+- Execution worktree: `/private/tmp/program_code-interview-relevance`; branch
+  `codex/interview-relevance`, baseline `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
+- Prepared plan retained from `506bafc9a505df2c099ee9f0ba90fbee69901061`.
+  Policy commit is the dedicated `docs: adopt local interview relevance policy` commit
+  on this branch (resolve with Git); product changes have not started.
+- Canonical revision14 adopts `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md` and its kickoff.
+  Evidence: `docs/evidence/PLAN-REV14.md`. P9 and PR42 remain complete.
+- Next action: independently review this policy, then commit complete mapping ledger
+  and expected examples before product edits. Continue through tested local candidate.
+- Publication authority false; exact release blocker in BUILD_STATE. No push/PR/Preview/
+  merge/Production/hosted verification/rollback. Settle authority before attestation.
+- No source or spreadsheet access, new exclusions/questions/services or unrelated work.
 
-- Worktree: `/private/tmp/program_code-shortlist`; local branch
-  `codex/shortlist-spreadsheet-matching`. The original checkout and completed branches
-  are untouched. Final candidate identity is recorded in the new Revision13 manifest.
-- Saved revision-225 source/review inputs produce a separate immutable shortlist:
-  197 source rows, 176 source awards, 21 portals, 16 additional catalog-only awards,
-  49 usable recorded GPA comparisons, and 64 reviewed school comparisons. P8M official
-  facts remain zero and its historical bytes, P9 evidence, candidate, and attestation
-  remain unchanged. Source freshness has not been rechecked.
-- Full tests, typecheck, supported Webpack build, zero-Google source/build-trace tests,
-  generated-artifact checks, and three-viewport browser/download/privacy matrix pass.
-  Exact outcomes: `docs/evidence/PLAN-REV13-verification.json` and
-  `docs/evidence/PLAN-REV13-browser-results.json`. Default Turbopack remains runner-limited.
-- Independent policy and preliminary implementation reviews found C0/H0/M0/L0.
-  `docs/reviews/PLAN-REV13.json`, when present, binds the final candidate review.
-  The new manifest/review/attestation are finalization gates, not missing product work.
-- **Next required action:** finalize and recheck the exact authorized candidate, add
-  only its manifest/review in the direct-child attestation, then push, create the PR,
-  verify CI and Preview, merge, and verify Production health/shortlist digest and
-  student/export journeys. Kelsey directly authorized every named Git/Vercel effect
-  on September 10 for the existing web project; state and Revision 13 evidence bind
-  that grant. Hosted results remain pending and must be recorded in the PR delivery
-  record and subsequent local handoff without claiming success from deployment alone.
-- No sheet/source access, sheet writes, provider settings, monitoring, credentials,
-  external publication, or real applicant answers occurred. Future refresh procedure:
-  `docs/SPREADSHEET-SHORTLIST.md`. Other interview answers currently have no shortlist
-  effect; sensitive nonselection and missing information remain non-excluding.
-- The old P9 delivery-blocker label is stale bookkeeping, not an active blocker and
-  not part of this task. Other old maintenance items remain registered below.
+## Spreadsheet shortlist maintenance — delivered PASS
+
+P9 and the program closeout remain complete. The bounded Plan Revision 13 release is
+merged and verified on [Production](https://web-two-gules-45.vercel.app/). It opens on
+the interview, filters using supported saved spreadsheet criteria, and provides CSV
+results matching the displayed awards. No further release action is pending.
+
+- [PR #42](https://github.com/whitefishscholarship/program_code/pull/42) merged at
+  `2026-09-10T18:48:29Z` as `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
+  Independent review found C0/H0/M0/L0 on candidate `07c6c8df825b17cee64037f81a94ac05ba2ce464`.
+  Valid direct-child attestation `c4c5e5ecf6749b7673086fbde3841232d2c56cd6` remains the
+  `codex/shortlist-release` tip. Merged and attested trees match exactly.
+- PR CI `34515977401` and main CI `34516595438` passed all required commands, including
+  the exact default build and current zero-Google built-trace checks. The earlier local
+  Turbopack limitation does not apply to these successful hosted runs.
+- Preview `dpl_6McooL5t6rpr5ZxF7Tqxk6DCRKWQ` is Ready; Production
+  `dpl_7ifKdYFrisnRN2ZUWfu8NGBVhoXL` is Ready/Current on the canonical hostname.
+  Authenticated nonce-bound HTTP200 health identifies the exact branch/merge commits,
+  deployments, original P8M publication, new shortlist digest, and no Google/Drive/Sheets
+  capability. Production API reconciles 217 sources, 21 portals, 192 awards, four groups.
+- Live synthetic Production profiles produced 166 (higher GPA/four-year), 125 (lower
+  GPA/four-year), 152 (trade), and 190 (undecided) shortlisted awards. Every tested CSV
+  matched visible names/order. Outside/all recovery, edit, reset, and reload passed.
+  The browser download interface completed; the in-app generic download-event observer
+  timed out, so no hosted OS-save assertion is claimed. Local three-viewport tests
+  independently verified actual saved downloads.
+- Full hosted evidence is recorded in the PR delivery record. This local closeout also
+  includes `docs/evidence/PLAN-REV13-delivery.json`. Worktree:
+  `/private/tmp/program_code-shortlist`, branch `codex/shortlist-local-closeout`.
+  This separate closeout is local only: do not push it under the already-completed
+  release effects. The original checkout and historical branches remain untouched.
+  Initial unpublished timestamp-format-invalid attestation `1db313f...` is preserved
+  on `codex/shortlist-spreadsheet-matching`; it was never delivered.
+- Data remains the saved September2 revision225 snapshot: 197 source rows, 176 source
+  awards, 21 portals, 16 catalog-only awards, 49 GPA comparisons, 64 school comparisons.
+  Current eligibility/freshness remain unverified. Other interview answers have no
+  shortlist effect; sensitive nonselection and missing information remain non-excluding.
+  Future refresh procedure: `docs/SPREADSHEET-SHORTLIST.md`, only when separately selected.
+- Historical P9/P8M artifacts remain byte-identical. The stale P9 blocker and unrelated
+  maintenance below remain outside this completed release. All program stages remain
+  accepted; active/next stage pointers remain null in canonical build state.
 
 ## P9 and program closeout — PASS
 

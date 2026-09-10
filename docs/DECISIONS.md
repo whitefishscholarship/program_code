@@ -602,3 +602,17 @@ semantics and P9 history. Reject a live credential-bearing spreadsheet integrati
 blanket keyword eligibility, assumed current cycles, and a new full-source crawl.
 Scope, evidence, source limits, verification, and rollback are in plan section 17.
 Publication effects require separate exact authority or verified suppression.
+
+
+## PLAN-REV14 — positive interview relevance (2026-09-10)
+
+Direct user execution authority adopts INTERVIEW-RELEVANCE-1 locally. Saved reviewed
+records can support useful positive connections without official qualification claims.
+Retaining no effects would leave supported answers unused; new exclusion rules or live
+research would exceed scope. Enable only independently reviewed award-specific positive
+connections, preserve GPA/school decisions and every award, use one binary boost, and
+keep sensitive answers/reasons in temporary browser memory. The full mapping and matrix
+precede product edits. Independent policy review precedes implementation; final review
+binds the complete frozen candidate. No historical evidence is rebound. Delivery remains
+blocked pending new exact Git/Vercel authority or verified suppression, before attestation.
+Rollback reference is unchanged PR42; performing rollback needs separate authority.
