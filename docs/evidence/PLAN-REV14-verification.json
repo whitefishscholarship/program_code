@@ -1,13 +1,13 @@
 {
-  "startedAt": "2026-09-10T22:27:59.063Z",
+  "startedAt": "2026-09-10T22:36:16.031Z",
   "syntheticOnly": true,
   "environment": "local macOS; execution worktree, clean offline lockfile dependency install; worker/IPC permissions enabled",
   "commands": [
     {
       "command": "npm run plan:check",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:27:59.063Z",
-      "finishedAt": "2026-09-10T22:28:22.925Z",
+      "startedAt": "2026-09-10T22:36:16.031Z",
+      "finishedAt": "2026-09-10T22:36:35.463Z",
       "exitCode": 1,
       "status": "PREPARATION_ONLY_EXPECTED_MISSING_ATTESTATION",
       "outputSha256": "f54988e9b574f6226f9631004d70e14e48c9ce0a2612f65811937a1001ea10ad",
@@ -16,8 +16,8 @@
     {
       "command": "npm run typecheck",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:28:22.925Z",
-      "finishedAt": "2026-09-10T22:28:27.804Z",
+      "startedAt": "2026-09-10T22:36:35.463Z",
+      "finishedAt": "2026-09-10T22:36:39.946Z",
       "exitCode": 0,
       "status": "PASS",
       "outputSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
@@ -26,28 +26,28 @@
     {
       "command": "npm test",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:28:27.805Z",
-      "finishedAt": "2026-09-10T22:29:05.450Z",
+      "startedAt": "2026-09-10T22:36:39.946Z",
+      "finishedAt": "2026-09-10T22:37:14.724Z",
       "exitCode": 0,
       "status": "PASS",
-      "outputSha256": "c312f805c4186bb690ee4b43c50b349f08d2406d707fa4e151146e8373a3bdf1",
-      "outputTail": "CTION RUNTIME TEST PASS files=35 publication=16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07 closure=02b283a2340397d3458ae74fd1b4c23f11c4eedc6d4562a56d3aae2771dc7d4a\nP9 trusted proof self-test: PASS (host, provider, predecessor, chronology, strict v2, and semantic negatives)\nP2 DATA MODEL TEST ALL PASS dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295\nP3 ACQUISITION CHECK PASS b577e6f2ec3b\nP3 ACQUISITION TEST ALL PASS b577e6f2ec3b\nP4 VERIFICATION CHECK PASS links=270 offline=4 cycles=20 fields=9 conflicts=5 reviews=300 digest=522d42a1bb62\nP4 VERIFICATION TEST ALL PASS links=270 hiddenApp=92 fields=9 digest=522d42a1bb62\nP5 SOURCE QUEUE CHECK PASS records=197 sources=213 fetch=50 manual=163 digest=6aa88419493b\nP5 REMEDIATION TEST PASS records=197 sources=213 form/login boundary enforced\nP5 PREBOUNDARY DEAD-LINK CHECK PASS receipts=7 digest=a1f1a7ed253f\nP5 PREBOUNDARY STATIC-APPLICATION CHECK PASS receipts=2 digest=480ef6b4f176\nP5 PUBLIC PROBE CHECK PASS sources=50 digest=38aac545f0c4\nP5 FIRECRAWL EVIDENCE CHECK PASS sources=50 retrieved=48 inconclusive=2 digest=ee5d977d8fce\nP5 AUDIT CHECK PASS rows=197 confirmed=0 corrected=10 manual=187 proposals=25 mandatoryReview=10 sample=38\nP5 AUDIT TEST PASS rows=197 proposals=25 mandatory=10 sample=38 privacy-safe\nP5 POSTWRITE CHECK PASS proposals=25 revision=222->223 rows=197 targets=25 failures=0\nP6 COVERAGE CHECK PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 fvcc=169 terminal=0 slotsObservedMin=71 legacyBindings=7 digest=d7ae32194b75\nP6 COVERAGE TEST PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 exclusions=186 slotsObservedMin=71 legacyBindings=7 authority=6 nearNameReviews=2\nP7 student catalog check passed: 192 awards, 217 sources (21 portals), 0 active, 192 unknown.\nP7 API, count, cycle, architecture-matrix, privacy, and export tests passed.\nP8 monitoring check passed: targets=1028 dryRuns=2 simulations=6 recovery=complete schedule=disabled.\nP8 full-denominator monitoring, executed retry/rate/freshness, HMAC recovery, idempotency, schedule-boundary, and privacy tests passed.\nP8R INTERVIEW TEST PASS awards=192 match=0 possible=192 conflicts=0 matrixVisualCells=30\nP8F PREIMPLEMENTATION TEST PASS academic=6 activities=4 volunteer=1 financial=1 criteria=38 affiliations=6 typeOnly=8 dispositions=30 visualCells=30 acceptedFacts=0\nP8F INTERVIEW TEST PASS awards=192 academic=6 activities=4 volunteer=1 financial=1 criteria=38 acceptedFacts=0 ruleGates=51\nSHORTLIST PASS [{\"match\":69,\"possibleMatch\":97,\"knownConflict\":26,\"total\":192},{\"match\":28,\"possibleMatch\":97,\"knownConflict\":67,\"total\":192},{\"match\":55,\"possibleMatch\":97,\"knownConflict\":40,\"total\":192},{\"match\":47,\"possibleMatch\":143,\"knownConflict\":2,\"total\":192}]\nRelevance local preparation boundary PASS; no hosted authority.\nRELEVANCE PASS {\"pairedConnections\":206,\"enabledControls\":38,\"sourceRows\":197,\"awards\":192,\"academicRegression\":[166,125,152,190]}\n"
+      "outputSha256": "24a923c6ed2f16c4dcf52f60458055b25a1495de5237afec5e4aa8c0ad575592",
+      "outputTail": "CTION RUNTIME TEST PASS files=35 publication=16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07 closure=c146a4780eb749cbd83e6da55852e794e9fffb9f3edacb34252cc03532ac682c\nP9 trusted proof self-test: PASS (host, provider, predecessor, chronology, strict v2, and semantic negatives)\nP2 DATA MODEL TEST ALL PASS dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295\nP3 ACQUISITION CHECK PASS b577e6f2ec3b\nP3 ACQUISITION TEST ALL PASS b577e6f2ec3b\nP4 VERIFICATION CHECK PASS links=270 offline=4 cycles=20 fields=9 conflicts=5 reviews=300 digest=522d42a1bb62\nP4 VERIFICATION TEST ALL PASS links=270 hiddenApp=92 fields=9 digest=522d42a1bb62\nP5 SOURCE QUEUE CHECK PASS records=197 sources=213 fetch=50 manual=163 digest=6aa88419493b\nP5 REMEDIATION TEST PASS records=197 sources=213 form/login boundary enforced\nP5 PREBOUNDARY DEAD-LINK CHECK PASS receipts=7 digest=a1f1a7ed253f\nP5 PREBOUNDARY STATIC-APPLICATION CHECK PASS receipts=2 digest=480ef6b4f176\nP5 PUBLIC PROBE CHECK PASS sources=50 digest=38aac545f0c4\nP5 FIRECRAWL EVIDENCE CHECK PASS sources=50 retrieved=48 inconclusive=2 digest=ee5d977d8fce\nP5 AUDIT CHECK PASS rows=197 confirmed=0 corrected=10 manual=187 proposals=25 mandatoryReview=10 sample=38\nP5 AUDIT TEST PASS rows=197 proposals=25 mandatory=10 sample=38 privacy-safe\nP5 POSTWRITE CHECK PASS proposals=25 revision=222->223 rows=197 targets=25 failures=0\nP6 COVERAGE CHECK PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 fvcc=169 terminal=0 slotsObservedMin=71 legacyBindings=7 digest=d7ae32194b75\nP6 COVERAGE TEST PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 exclusions=186 slotsObservedMin=71 legacyBindings=7 authority=6 nearNameReviews=2\nP7 student catalog check passed: 192 awards, 217 sources (21 portals), 0 active, 192 unknown.\nP7 API, count, cycle, architecture-matrix, privacy, and export tests passed.\nP8 monitoring check passed: targets=1028 dryRuns=2 simulations=6 recovery=complete schedule=disabled.\nP8 full-denominator monitoring, executed retry/rate/freshness, HMAC recovery, idempotency, schedule-boundary, and privacy tests passed.\nP8R INTERVIEW TEST PASS awards=192 match=0 possible=192 conflicts=0 matrixVisualCells=30\nP8F PREIMPLEMENTATION TEST PASS academic=6 activities=4 volunteer=1 financial=1 criteria=38 affiliations=6 typeOnly=8 dispositions=30 visualCells=30 acceptedFacts=0\nP8F INTERVIEW TEST PASS awards=192 academic=6 activities=4 volunteer=1 financial=1 criteria=38 acceptedFacts=0 ruleGates=51\nSHORTLIST PASS [{\"match\":69,\"possibleMatch\":97,\"knownConflict\":26,\"total\":192},{\"match\":28,\"possibleMatch\":97,\"knownConflict\":67,\"total\":192},{\"match\":55,\"possibleMatch\":97,\"knownConflict\":40,\"total\":192},{\"match\":47,\"possibleMatch\":143,\"knownConflict\":2,\"total\":192}]\nRelevance local preparation boundary PASS; no hosted authority.\nRELEVANCE PASS {\"pairedConnections\":206,\"enabledControls\":38,\"sourceRows\":197,\"awards\":192,\"academicRegression\":[166,125,152,190]}\n"
     },
     {
       "command": "npm run build",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:05.451Z",
-      "finishedAt": "2026-09-10T22:29:12.357Z",
+      "startedAt": "2026-09-10T22:37:14.725Z",
+      "finishedAt": "2026-09-10T22:37:21.179Z",
       "exitCode": 0,
       "status": "PASS",
-      "outputSha256": "8306771e0fd6580c372b48c827e3ea20732844787642d41352ed7c0267838107",
-      "outputTail": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 14ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 513ms\n  Running TypeScript ...\n  Finished TypeScript in 4.8s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/10) ...\n  Generating static pages using 11 workers (2/10) \n  Generating static pages using 11 workers (4/10) \n  Generating static pages using 11 workers (7/10) \n\u2713 Generating static pages using 11 workers (10/10) in 156ms\n  Finalizing page optimization ...\n\nRoute (app)\n\u250c \u25cb /\n\u251c \u25cb /_not-found\n\u251c \u25cb /admin\n\u251c \u25cb /admin/login\n\u251c \u25cb /admin/recover\n\u251c \u0192 /api/admin/extract\n\u251c \u0192 /api/admin/push\n\u251c \u0192 /api/health\n\u251c \u0192 /api/revalidate\n\u2514 \u0192 /api/scholarships\n\n\n\u0192 Proxy (Middleware)\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\n"
+      "outputSha256": "83f67e4b43722bb8e8da197ed7996cf07cbdba764adcacd4a9d1473a781a3d76",
+      "outputTail": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 13ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 447ms\n  Running TypeScript ...\n  Finished TypeScript in 4.6s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/10) ...\n  Generating static pages using 11 workers (2/10) \n  Generating static pages using 11 workers (4/10) \n  Generating static pages using 11 workers (7/10) \n\u2713 Generating static pages using 11 workers (10/10) in 148ms\n  Finalizing page optimization ...\n\nRoute (app)\n\u250c \u25cb /\n\u251c \u25cb /_not-found\n\u251c \u25cb /admin\n\u251c \u25cb /admin/login\n\u251c \u25cb /admin/recover\n\u251c \u0192 /api/admin/extract\n\u251c \u0192 /api/admin/push\n\u251c \u0192 /api/health\n\u251c \u0192 /api/revalidate\n\u2514 \u0192 /api/scholarships\n\n\n\u0192 Proxy (Middleware)\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\n"
     },
     {
       "command": "npm run shortlist:check",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:12.357Z",
-      "finishedAt": "2026-09-10T22:29:12.565Z",
+      "startedAt": "2026-09-10T22:37:21.179Z",
+      "finishedAt": "2026-09-10T22:37:21.396Z",
       "exitCode": 0,
       "status": "PASS",
       "outputSha256": "b18f251c0f525469074ccada94e0c81cabf2b56745965cd04d0d88a5d50a999d",
@@ -56,8 +56,8 @@
     {
       "command": "npm run shortlist:test",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:12.566Z",
-      "finishedAt": "2026-09-10T22:29:14.037Z",
+      "startedAt": "2026-09-10T22:37:21.396Z",
+      "finishedAt": "2026-09-10T22:37:22.709Z",
       "exitCode": 0,
       "status": "PASS",
       "outputSha256": "6dabbceef4424d83dd5c5c2e58de8639c51d72386499b39e06258ab89e17bc5c",
@@ -66,18 +66,18 @@
     {
       "command": "npm run relevance:check",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:14.037Z",
-      "finishedAt": "2026-09-10T22:29:14.231Z",
+      "startedAt": "2026-09-10T22:37:22.709Z",
+      "finishedAt": "2026-09-10T22:37:22.886Z",
       "exitCode": 0,
       "status": "PASS",
-      "outputSha256": "5c0a9d3a4de886cf4c56c961ce2b6f177fe0d4c8aaadeab2c00b8f19af03822d",
-      "outputTail": "\n> web@0.1.0 relevance:check\n> node --import tsx scripts/build-interview-relevance.ts\n\nRelevance publication PASS {\"connections\":206,\"awards\":129,\"sha256\":\"69b39b6e3349a37468fdf160d95a203e6deee4b7a3990abc4dff2e0c647a87ba\"}\n"
+      "outputSha256": "175b58da02d2a15890cd332bbc3c899f798cd49d7f914d4a0fe8aaf9c2d7e4d6",
+      "outputTail": "\n> web@0.1.0 relevance:check\n> node --import tsx scripts/build-interview-relevance.ts\n\nRelevance publication PASS {\"connections\":206,\"awards\":129,\"sha256\":\"fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0\"}\n"
     },
     {
       "command": "npm run relevance:test",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:14.231Z",
-      "finishedAt": "2026-09-10T22:29:14.801Z",
+      "startedAt": "2026-09-10T22:37:22.886Z",
+      "finishedAt": "2026-09-10T22:37:23.419Z",
       "exitCode": 0,
       "status": "PASS",
       "outputSha256": "e81005935a2bb3eb84bbb53f782158efca71fe9ac849bed73c4bbf4bfb45a884",
@@ -86,25 +86,25 @@
     {
       "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
       "cwd": "web",
-      "startedAt": "2026-09-10T22:29:14.801Z",
-      "finishedAt": "2026-09-10T22:29:15.195Z",
+      "startedAt": "2026-09-10T22:37:23.419Z",
+      "finishedAt": "2026-09-10T22:37:23.790Z",
       "exitCode": 0,
       "status": "PASS",
-      "outputSha256": "a5a859de565d547294b56ba076061b6bef9e5a51e4109ee12fa8bf1d97619f19",
-      "outputTail": "{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 35,\n  \"runtimeClosureSha256\": \"02b283a2340397d3458ae74fd1b4c23f11c4eedc6d4562a56d3aae2771dc7d4a\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"f4a1557b05dac69d0dad885ca971b734803a99a330cdeb4b157999679e3a68f0\"\n}\n"
+      "outputSha256": "9ab898d3d2d328d2376b197f3f6805943cb0a779c808430e4589475361266f97",
+      "outputTail": "{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 35,\n  \"runtimeClosureSha256\": \"c146a4780eb749cbd83e6da55852e794e9fffb9f3edacb34252cc03532ac682c\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"0799254a42ae6590637b6915e61d213647cf0846f61cab28abc0367ddb684e85\"\n}\n"
     },
     {
       "command": "git diff --check",
       "cwd": "repository root",
-      "startedAt": "2026-09-10T22:29:15.195Z",
-      "finishedAt": "2026-09-10T22:29:15.214Z",
+      "startedAt": "2026-09-10T22:37:23.791Z",
+      "finishedAt": "2026-09-10T22:37:23.812Z",
       "exitCode": 0,
       "status": "PASS",
       "outputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "outputTail": ""
     }
   ],
-  "finishedAt": "2026-09-10T22:29:15.215Z",
+  "finishedAt": "2026-09-10T22:37:23.812Z",
   "historicalInputPreservation": [
     {
       "path": "web/fixtures/p8m/master-database-rev225.json",

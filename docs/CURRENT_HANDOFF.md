@@ -25,9 +25,13 @@ Default branch: `main`
 - Final full tests, typecheck, default production build, generated-data checks, zero-Google
   built traces and all three browser viewports passed with actual saved CSV downloads.
   Plan validation reports only expected missing final manifest/review/attestation.
-- Next executable action: generate the frozen candidate manifest and obtain fresh final
-  review. Do not repeat completed mapping, policy or verification work unless changes
-  require it. Record the local review receipt and exact reviewed commit before return.
+- Initial frozen candidate `60a97747a8af2fd24f8de994b4a9bf872feb21c6` received final
+  fresh review C0/H0/M0/L1. The one LOW public-copy issue is fixed in 16 explanations;
+  connections and decisions are unchanged. Durable receipt/manifest:
+  `docs/evidence/PLAN-REV14-local-review.json`. This is local readiness, not attestation.
+- Revised full verification and all three browser viewports passed. Next executable action:
+  obtain the independent reviewer’s recheck of the refrozen candidate, then update this handoff and
+  local receipt; do not repeat completed policy, mapping or unaffected checks.
 - Publication remains unauthorized. Exact Revision14 blocker is in BUILD_STATE.
   Before final attestation, obtain this release's branch push, PR, Preview, merge,
   Production and verification authority or verify applicable suppression. Record any

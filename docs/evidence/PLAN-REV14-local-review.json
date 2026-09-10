@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Durable local review checkpoints only; not canonical acceptance, final attestation or publication authority.",
+  "originalObjective": "INTERVIEW-RELEVANCE-1: supported positive relevance only; preserve academic decisions, all awards, privacy and exact visible CSV; saved inputs only.",
+  "reviews": [
+    {
+      "reviewerTaskId": "/root/relevance_final_review",
+      "reviewerWasAuthorOrEditor": false,
+      "reviewMode": "fresh-context-read-only",
+      "candidateCommit": "60a97747a8af2fd24f8de994b4a9bf872feb21c6",
+      "candidateManifest": {
+        "schemaVersion": 1,
+        "stageId": "PLAN-REV14",
+        "createdAt": "2026-09-10T22:31:34.704Z",
+        "baselineCommit": "2f517755118bc72570a2aa8b5109a2660e0d9b12",
+        "candidateCommit": "60a97747a8af2fd24f8de994b4a9bf872feb21c6",
+        "files": [
+          {
+            "path": "docs/BUILD_STATE.json",
+            "change": "present",
+            "sha256": "f4e3f63295117c7d71c9f990bcbd3c9cf4c7cfec43d0e05a2d7e13940a6c22ea"
+          },
+          {
+            "path": "docs/CURRENT_HANDOFF.md",
+            "change": "present",
+            "sha256": "5cf9c233fccf052bb621b9aacb2f09bcff245993aca1e6b5bf1b4c89f74570ff"
+          },
+          {
+            "path": "docs/DECISIONS.md",
+            "change": "present",
+            "sha256": "73b759b649448c839f415274e3f61776fb4c9223d0d59eaaaccf5d31ceddf08d"
+          },
+          {
+            "path": "docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md",
+            "change": "present",
+            "sha256": "6fb33053a4f429dc94479946aa361888e2b6db5950c76683f9909fd1ad9b9f99"
+          },
+          {
+            "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+            "change": "present",
+            "sha256": "ba9400cc3916168f7d86759960e7380858c345fe41fa4b3600fcc6878c2d9e5c"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV13-delivery.json",
+            "change": "present",
+            "sha256": "b66d8853dfc9e4757ca009eec7f3ae4f84fa2253437f886b1db701395d479d3b"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-browser-results.json",
+            "change": "present",
+            "sha256": "2ec360192ac03c9e79aabefaeb99f06f1c723cc49d5008452609626d738c93d0"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-mapping.json",
+            "change": "present",
+            "sha256": "f6cfda17f46bc88c11a78c9b3d5ff030129414d9568e08c4306b365cad37738a"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-matrix.json",
+            "change": "present",
+            "sha256": "89e0ed5f2da82203fc0840b0889af52b6a273e9ee1bcbbae3d60722554d0006d"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-synthetic-1440.png",
+            "change": "present",
+            "sha256": "2ac1032dcb15f3183e10b21e38092cdda25d24e46ab8d82d0946e7083928191f"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-synthetic-360.png",
+            "change": "present",
+            "sha256": "dc86c263e399ae615ff67b68181f91d439d3bc81b028d6dd5bfc6db78c8987f8"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14-verification.json",
+            "change": "present",
+            "sha256": "022e510b3684dc788ded5e66bb03fcf4362a589163effeb2f22ab821fb466b0d"
+          },
+          {
+            "path": "docs/evidence/PLAN-REV14.md",
+            "change": "present",
+            "sha256": "07ed6652efd9daf1e10732afc84a034149b03f3242a16d318e2404ce7a9d3c83"
+          },
+          {
+            "path": "docs/kickoffs/INTERVIEW-RELEVANCE.md",
+            "change": "present",
+            "sha256": "ec275c7fe7fa2970284c485dc4edbb4aa8dec35fe5c14f17c94d2805a09734fd"
+          },
+          {
+            "path": "web/fixtures/relevance/interview-relevance-v1.json",
+            "change": "present",
+            "sha256": "69b39b6e3349a37468fdf160d95a203e6deee4b7a3990abc4dff2e0c647a87ba"
+          },
+          {
+            "path": "web/fixtures/relevance/pin.json",
+            "change": "present",
+            "sha256": "a92f99819a5095d7df3b6ca47a70c025a4e80643a874f6c2720ba1238f96c80e"
+          },
+          {
+            "path": "web/package.json",
+            "change": "present",
+            "sha256": "ac62750102ec270d209c80d4afa271e8f262615ee1fffffbb9d6985b5e701bac"
+          },
+          {
+            "path": "web/scripts/build-interview-relevance.ts",
+            "change": "present",
+            "sha256": "f94da728b0b533ae63dc581a14c7fae5a5dc8de413524f966096ecd5b0a4eb80"
+          },
+          {
+            "path": "web/scripts/interview-relevance-governance.ts",
+            "change": "present",
+            "sha256": "658b9578da760047027372573654b7ce493c1a9af10b35483a34c3c746f91ae7"
+          },
+          {
+            "path": "web/scripts/qa-interview-relevance.cjs",
+            "change": "present",
+            "sha256": "e158444e6492b31446c4a5bca2961b9714ea7e13a0fce2fafb03261d1bac4007"
+          },
+          {
+            "path": "web/scripts/test-interview-relevance-governance.ts",
+            "change": "present",
+            "sha256": "87cf283b0b5ec2370f8cd4c7bbb37f77714917047a291dc4e129caacae3c8f19"
+          },
+          {
+            "path": "web/scripts/test-interview-relevance.ts",
+            "change": "present",
+            "sha256": "698798929a4f9ebfd46fec16d84eb94778df45a16a9dad729c869be033e3d670"
+          },
+          {
+            "path": "web/scripts/test-p8f-interview.ts",
+            "change": "present",
+            "sha256": "3c5433d733561c65e6f731386ca771ec17cbcfdb2b5fabefa75d19065a095054"
+          },
+          {
+            "path": "web/scripts/test-spreadsheet-shortlist.ts",
+            "change": "present",
+            "sha256": "5c71781caa792541f69be2f5d76127afcddfeeb851cf9d0535bbb4bbf4d0d589"
+          },
+          {
+            "path": "web/scripts/validate-build-plan.ts",
+            "change": "present",
+            "sha256": "796934c7f0190006b71c2280eea83c7d982dfe3d8a2665c63a80ff09e33f5ee5"
+          },
+          {
+            "path": "web/src/app/api/health/route.ts",
+            "change": "present",
+            "sha256": "05dddefccb6f6611cc0be5dfca4c0a733584490a9b028db068c5409390f8c9bf"
+          },
+          {
+            "path": "web/src/components/InterviewWizard.tsx",
+            "change": "present",
+            "sha256": "2e6c628aeb6ba8c97c1cb3c329457d94244f68f2ee025e409b541095dc2bf1a6"
+          },
+          {
+            "path": "web/src/components/ScholarshipBrowser.tsx",
+            "change": "present",
+            "sha256": "a4563e53a79d05a07034c2f1fb3d581f1bf78673e53c8d793148dffc974fd836"
+          },
+          {
+            "path": "web/src/lib/interviewRelevance.ts",
+            "change": "present",
+            "sha256": "d7f413c4931c135365e3b8dc5c6c0bf27af40100bf5cbc117e55283bfbf8d9b8"
+          },
+          {
+            "path": "web/src/lib/spreadsheetShortlist.ts",
+            "change": "present",
+            "sha256": "4ce0f834901ff1086b4092d79f8312e573ca6f2cd1212d8b8e62b837433bda20"
+          }
+        ]
+      },
+      "candidateManifestSha256": "263df2e4b387fdb20b5d6c28fe8921a10e5f68009cb5aafcb123ba9603ea6a2d",
+      "outcome": "PASS_WITH_LOW_FINDING",
+      "findings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "finding": "Internal mapping mechanics in 16 public explanations.",
+      "dispositions": [
+        {
+          "severity": "low",
+          "status": "fixed_pending_final_recheck",
+          "rationale": "Replaced public cell/disputed-summary commentary with supported student-facing connections and remaining checks; source evidence and prior context retained in ledger; identical connection identities and effects.",
+          "owner": "implementation agent",
+          "target": "refrozen local candidate before final review completion"
+        }
+      ],
+      "independentlyReproduced": [
+        "complete 30-path manifest and candidate-tree hashes",
+        "206 paired connection assertions and academic regressions",
+        "generation/pin checks",
+        "local-authority negatives",
+        "shortlist tests",
+        "zero-Google built runtime traces",
+        "exact three expected plan-attestation omissions",
+        "whitespace",
+        "synthetic compound browser selection and keyboard progression"
+      ]
+    }
+  ],
+  "publicationAuthority": false,
+  "canonicalFinalAttestationCreated": false
+}

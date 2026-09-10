@@ -18,6 +18,7 @@ const before=run(base);
 const ids=(r:ShortlistResult[])=>r.map(x=>x.award.publicId);
 const decisions=(r:ShortlistResult[])=>Object.fromEntries(r.map(x=>[x.award.publicId,x.decision]).sort(([a],[b])=>a.localeCompare(b)));
 function choose(id:string):InterviewAnswers{return InterviewAnswersSchema.parse({...base,...(id==='financial_need'?{financialNeed:true}:ACTIVITY_QUESTIONS.some(x=>x.id===id)?{activities:[id]}:{selectedCriteria:[id]})});}
+for(const c of RELEVANCE_PUBLICATION.connections) assert(!/\bcell\b|disputed summary|reviewer/i.test(c.message), 'student explanations must not expose mapping or review mechanics');
 const known=new Map(RELEVANCE_PUBLICATION.connections.map(c=>[c.id,c]));
 for(const ex of matrix.pairedExamples){
  const result=run(choose(ex.answerId));const target=result.results.find(x=>x.award.publicId===ex.awardId)!;

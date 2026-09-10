@@ -99,3 +99,19 @@ review. Any finding is remediated by the implementation agent and rechecked. Rec
 local review receipt durably; canonical attestation remains deliberately deferred until
 new exact authority or applicable suppression settles publication. If authority changes,
 record it, refreeze and recheck before the two-file direct-child attestation.
+
+## Final-review remediation
+
+Fresh final reviewer `/root/relevance_final_review` independently reviewed frozen
+candidate `60a97747a8af2fd24f8de994b4a9bf872feb21c6` against full 30-path manifest
+SHA256 `263df2e4b387fdb20b5d6c28fe8921a10e5f68009cb5aafcb123ba9603ea6a2d`.
+Findings C0/H0/M0/L1: one systemic LOW wording issue, internal saved-cell/disputed-summary
+mechanics in 16 public explanations. Owner: implementation agent. Target: refrozen
+local candidate. Fixed by using plain student-facing connections/requirements, retaining
+all source evidence and moving the former context into ledger interpretation.
+No connection identity, answer mapping, award mapping, filtering, ordering or question
+changed. Updated the 16 expected reasons, regenerated the public artifact/pin, and added
+a regression check rejecting internal review mechanics in public reasons.
+New artifact SHA256 `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`.
+All required verification and the full real browser matrix passed again before refreeze.
+The original frozen candidate remains in history; no attestation is created or rebound.
