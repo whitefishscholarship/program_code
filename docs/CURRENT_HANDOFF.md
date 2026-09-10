@@ -5,40 +5,63 @@ Plan revision: 14
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — tested local implementation; final review checkpoint
+## Interview relevance — PASS local candidate; publication authority pending
 
-- Worktree `/private/tmp/program_code-interview-relevance`, branch
-  `codex/interview-relevance`. Verified main baseline
-  `2f517755118bc72570a2aa8b5109a2660e0d9b12`; P9 and PR42 remain complete.
-  Original checkout, planning branch and historical attestations remain untouched.
-- Policy `2581c5c851a258c7e0ead8260f915d1da3db6078`: fresh review PASS C0/H0/M0/L0.
-  Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085`: all 206 connections independently
-  checked; one LOW evidence-pointer issue fixed and rechecked, zero unresolved findings.
-- Implementation `4dc2a652f8fe46209ce79067c3b3c72d70e77f3a`: 206 positive connections,
-  38 controls (33/38 special criteria), 129 awards. GPA/school decisions unchanged;
-  all 192 awards available; five unsupported choices explained; sensitive skip clears effects.
-- Scope/acceptance: `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md`, kickoff
-  `docs/kickoffs/INTERVIEW-RELEVANCE.md`. Evidence `docs/evidence/PLAN-REV14.md`;
-  mapping and predeclared matrix `PLAN-REV14-mapping.json` / `PLAN-REV14-matrix.json`.
-  Timestamped verification and actual saved-download browser outcomes are
-  `PLAN-REV14-verification.json` / `PLAN-REV14-browser-results.json` in that directory.
-- Final full tests, typecheck, default production build, generated-data checks, zero-Google
-  built traces and all three browser viewports passed with actual saved CSV downloads.
-  Plan validation reports only expected missing final manifest/review/attestation.
-- Initial frozen candidate `60a97747a8af2fd24f8de994b4a9bf872feb21c6` received final
-  fresh review C0/H0/M0/L1. The one LOW public-copy issue is fixed in 16 explanations;
-  connections and decisions are unchanged. Durable receipt/manifest:
-  `docs/evidence/PLAN-REV14-local-review.json`. This is local readiness, not attestation.
-- Revised full verification and all three browser viewports passed. Next executable action:
-  obtain the independent reviewer’s recheck of the refrozen candidate, then update this handoff and
-  local receipt; do not repeat completed policy, mapping or unaffected checks.
-- Publication remains unauthorized. Exact Revision14 blocker is in BUILD_STATE.
-  Before final attestation, obtain this release's branch push, PR, Preview, merge,
-  Production and verification authority or verify applicable suppression. Record any
-  authority delta, refreeze/recheck, then attest exactly two files. Prior grant is exhausted.
-- No new exclusions/questions/services, source research, spreadsheet access, provider
-  changes, monitoring or unrelated maintenance. Current scholarship freshness remains
-  unknown. Rollback reference is PR42; actual rollback requires separate authority.
+- Execution worktree `/private/tmp/program_code-interview-relevance`, branch
+  `codex/interview-relevance`. Original checkout and planning branch remain untouched.
+  Recover this branch through the shared repository if the temporary worktree is lost;
+  do not restart from the older planning branch or reset the original checkout.
+- Exact tested, independently reviewed product candidate:
+  `d288fd0732974997d8f83fe9d066d4f2aeb4dcbf`. Baseline/live main reverified as
+  `2f517755118bc72570a2aa8b5109a2660e0d9b12`. The branch tip is its local documentation
+  closeout (`docs: preserve reviewed interview relevance handoff`); resolve with
+  `git rev-parse codex/interview-relevance`. No product changes follow the reviewed candidate.
+- Policy `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh independent review
+  before product edits. Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085` preceded
+  implementation; all 206 connections received independent saved-evidence review.
+  One LOW mapping pointer issue and one LOW final public-copy issue are fixed/rechecked.
+  Final reviewer `/root/relevance_final_review`: PASS, C0/H0/M0/L0 unresolved.
+- Delivered locally: 38 existing answer choices (33/38 special criteria plus four
+  activities and financial need), 206 positive connections across 129 awards. No scores
+  or new exclusions. Existing GPA/school decisions and counts 166/125/152/190 remain;
+  all 192 awards stay accessible. Sensitive skip clears effects; five unsupported special
+  choices have honest explanations. P9, PR42 and all historical attestations remain complete.
+- Exact manifest and structured review receipts:
+  `docs/evidence/PLAN-REV14-local-review.json`; reviewed 31-path manifest SHA256
+  `3141e9ac150bff9c979dcd6b9afb266b7db092c3ff4c43984569ad03ac2e1fe4`.
+  Current public relevance artifact SHA256:
+  `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`.
+  The local receipt is deliberately not a canonical attestation; do not rename/reuse
+  an older manifest against a new authority-bearing candidate.
+- Evidence in `docs/evidence/`: `PLAN-REV14.md`, `PLAN-REV14-mapping.json`,
+  `PLAN-REV14-matrix.json`, `PLAN-REV14-verification.json`, `PLAN-REV14-browser-results.json`.
+  Full tests, typecheck, exact default Turbopack build, generated-data checks, zero-Google
+  built traces and root whitespace pass. All 38 enabled choices run through real UI at
+  360x800, 768x1024 and 1440x900; actual saved CSV bytes equal all public fields for
+  visible IDs/order, including search, sort and outside/all scopes. Privacy, sensitive
+  skip, keyboard, edit/reset/reload and no-overflow checks pass. All profiles are synthetic.
+- Plan validation reports exactly three expected omissions: canonical final manifest,
+  review and committed attestation. They are intentionally absent until the publication
+  boundary is settled; no other validation failure remains. Do not report canonical
+  acceptance, hosted build/health or current scholarship freshness for this local release.
+- **Next executable action:** obtain new exact authority for this release’s branch push,
+  PR, Vercel Preview, merge, Production deployment and verification, or verify applicable
+  deployment suppression. Record the new grant in Revision14 state/evidence, refreeze
+  and independently recheck the exact authorized candidate, then add only canonical
+  `docs/evidence/PLAN-REV14-manifest.json` and `docs/reviews/PLAN-REV14.json` as its
+  direct-child attestation. Do not append after that attestation. Prior release authority
+  does not apply; no push, PR or deployment has occurred. Do not repeat completed policy,
+  mapping or product work; rerun checks only as required by changes/final release gates.
+- Proposed existing target: Vercel project `web` (`prj_LbefE2deji6nPND6iBiuofe7IABv`),
+  team `team_6CAjRq58n0WvAH49otKSQbA7`, canonical `web-two-gules-45.vercel.app`.
+  Verify exact Preview commit/health/digests and synthetic journeys before merge; honor
+  any user-reserved Preview review. Then verify main CI, Production identity, nonce
+  health and interview/export flow. Rollback reference is PR42; actual rollback requires
+  separate explicit authority. No provider configuration changes are included.
+- Saved September 2 revision225 evidence only: 197 rows, 176 award rows and 21 portals;
+  16 catalog-only awards inherit nothing. No sources or spreadsheets accessed, new
+  questions/services/dependencies/exclusions, monitoring, applicant data or unrelated work.
+  Unsupported/current-freshness items remain explicit and do not block supported work.
 
 ## Spreadsheet shortlist maintenance — delivered PASS
 
