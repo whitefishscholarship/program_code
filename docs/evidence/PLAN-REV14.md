@@ -2,11 +2,11 @@
 
 Date: 2026-09-10
 Baseline: `2f517755118bc72570a2aa8b5109a2660e0d9b12`
-Status: PASS — tested and independently reviewed local candidate; publication blocked by reserved authority
+Status: PASS — tested and independently reviewed local candidate; publication authorized; final attestation and hosted gates pending
 
 Kelsey directly instructed execution of the prepared plan and authorized local preparation,
 prospective canonical amendment, implementation, testing and independent review. New
-exact publication authority is reserved; no prior release authority is reused.
+exact publication authority was subsequently granted below; no prior release authority is reused.
 
 Live GitHub main was read via authenticated `gh api repos/whitefishscholarship/program_code/commits/main --jq .sha`;
 normal Git fetch through existing secure gh credential helper verified the same PR42 baseline.

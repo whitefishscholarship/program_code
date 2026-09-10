@@ -13,9 +13,10 @@ Default branch: `main`
   do not restart from the older planning branch or reset the original checkout.
 - Exact tested, independently reviewed product candidate:
   `d288fd0732974997d8f83fe9d066d4f2aeb4dcbf`. Baseline/live main reverified as
-  `2f517755118bc72570a2aa8b5109a2660e0d9b12`. The branch tip is its local documentation
-  closeout (`docs: preserve reviewed interview relevance handoff`); resolve with
-  `git rev-parse codex/interview-relevance`. No product changes follow the reviewed candidate.
+  `2f517755118bc72570a2aa8b5109a2660e0d9b12`. The branch tip contains the documentation-only
+  authority checkpoint; resolve with `git rev-parse codex/interview-relevance`, and use
+  the canonical manifest candidateCommit after attestation. No product changes follow
+  the reviewed product candidate.
 - Policy `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh independent review
   before product edits. Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085` preceded
   implementation; all 206 connections received independent saved-evidence review.
