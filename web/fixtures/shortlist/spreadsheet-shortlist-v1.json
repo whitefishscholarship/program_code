@@ -1,0 +1,1754 @@
+{
+  "schemaVersion": 1,
+  "id": "spreadsheet-shortlist-v1-rev225",
+  "basis": "organizer_recorded_not_officially_verified",
+  "snapshotDate": "2026-09-02",
+  "sourceRevision": "225",
+  "sourceSha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+  "reviewSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+  "counts": {
+    "sourceRows": 197,
+    "awardRows": 176,
+    "portalRows": 21,
+    "catalogAwards": 192,
+    "catalogOnlyAwards": 16,
+    "gpaRules": 49,
+    "schoolRules": 64
+  },
+  "rows": [
+    {
+      "sourceRow": 2,
+      "targetKind": "award",
+      "targetId": "award-a1106312a9de",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 3,
+      "targetKind": "award",
+      "targetId": "award-5d6c289f9cf6",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 4,
+      "targetKind": "award",
+      "targetId": "award-251c136369e5",
+      "minimumGpa": 2.7,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "automatic_consideration"
+    },
+    {
+      "sourceRow": 5,
+      "targetKind": "award",
+      "targetId": "award-859f900d3625",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "automatic_consideration"
+    },
+    {
+      "sourceRow": 6,
+      "targetKind": "award",
+      "targetId": "award-2179b44d009d",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 7,
+      "targetKind": "award",
+      "targetId": "award-d2f262e03fe2",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 8,
+      "targetKind": "award",
+      "targetId": "award-47d3b833050c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 9,
+      "targetKind": "award",
+      "targetId": "award-69a595e31c6a",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 10,
+      "targetKind": "award",
+      "targetId": "award-88ecf11c683e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 11,
+      "targetKind": "award",
+      "targetId": "award-4f14964df035",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 12,
+      "targetKind": "award",
+      "targetId": "award-084548999d06",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 13,
+      "targetKind": "award",
+      "targetId": "award-a6594e658462",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 14,
+      "targetKind": "award",
+      "targetId": "award-84882a48ae6c",
+      "minimumGpa": 2,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 15,
+      "targetKind": "award",
+      "targetId": "award-ffe029a85b2a",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 16,
+      "targetKind": "award",
+      "targetId": "award-f3e3f2d8bec0",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 17,
+      "targetKind": "portal",
+      "targetId": "portal-565ecb87afea",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 18,
+      "targetKind": "award",
+      "targetId": "award-47478b1163e1",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 19,
+      "targetKind": "award",
+      "targetId": "award-5fec013fe00c",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 20,
+      "targetKind": "award",
+      "targetId": "award-607fe66710d6",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 21,
+      "targetKind": "award",
+      "targetId": "award-2c06399c35e5",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 22,
+      "targetKind": "award",
+      "targetId": "award-4aa2be1b2660",
+      "minimumGpa": 3.75,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 23,
+      "targetKind": "portal",
+      "targetId": "portal-deb078566ebb",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 24,
+      "targetKind": "award",
+      "targetId": "award-3ea4f475bc9f",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 25,
+      "targetKind": "award",
+      "targetId": "award-7fa6002a8718",
+      "minimumGpa": 3.5,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 26,
+      "targetKind": "award",
+      "targetId": "award-e05338ef963f",
+      "minimumGpa": 3.75,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 27,
+      "targetKind": "award",
+      "targetId": "award-67de97a4f446",
+      "minimumGpa": 3.25,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 28,
+      "targetKind": "award",
+      "targetId": "award-20025cb56901",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 29,
+      "targetKind": "award",
+      "targetId": "award-39bc01d95ee8",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 30,
+      "targetKind": "award",
+      "targetId": "award-b42417e9530c",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 31,
+      "targetKind": "portal",
+      "targetId": "portal-319060c109a7",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 32,
+      "targetKind": "award",
+      "targetId": "award-04b4c1f204d1",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 33,
+      "targetKind": "award",
+      "targetId": "award-97aa9bb0adf8",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 34,
+      "targetKind": "award",
+      "targetId": "award-1c71b2ea40bd",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 35,
+      "targetKind": "award",
+      "targetId": "award-bb8ca59a7f0f",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 36,
+      "targetKind": "award",
+      "targetId": "award-63f87645e19d",
+      "minimumGpa": 3.5,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 37,
+      "targetKind": "award",
+      "targetId": "award-f8748579eb81",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 38,
+      "targetKind": "award",
+      "targetId": "award-077975690fea",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 39,
+      "targetKind": "award",
+      "targetId": "award-838198d95997",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 40,
+      "targetKind": "award",
+      "targetId": "award-5dc2aab768d2",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 41,
+      "targetKind": "award",
+      "targetId": "award-f6107529bd46",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 42,
+      "targetKind": "award",
+      "targetId": "award-6307b228e380",
+      "minimumGpa": 2,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 43,
+      "targetKind": "award",
+      "targetId": "award-aee0c1547953",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 44,
+      "targetKind": "award",
+      "targetId": "award-36ff5fe7d091",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 45,
+      "targetKind": "portal",
+      "targetId": "portal-7c587517269b",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 46,
+      "targetKind": "award",
+      "targetId": "award-d26867d69108",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 47,
+      "targetKind": "award",
+      "targetId": "award-86f5be697eda",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 48,
+      "targetKind": "award",
+      "targetId": "award-8ec14d114e2f",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 49,
+      "targetKind": "award",
+      "targetId": "award-26c4b3c65985",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 50,
+      "targetKind": "award",
+      "targetId": "award-9635e0eb7f5e",
+      "minimumGpa": 3.4,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 51,
+      "targetKind": "award",
+      "targetId": "award-fa0711891ae7",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 52,
+      "targetKind": "award",
+      "targetId": "award-da7f4a7038ef",
+      "minimumGpa": 3.2,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 53,
+      "targetKind": "award",
+      "targetId": "award-5230a4d409fd",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year",
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 54,
+      "targetKind": "award",
+      "targetId": "award-e58fc41d18c6",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 55,
+      "targetKind": "portal",
+      "targetId": "portal-c33316d7b092",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 56,
+      "targetKind": "award",
+      "targetId": "award-2126bc5d2f6b",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 57,
+      "targetKind": "award",
+      "targetId": "award-577dacb8c225",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 58,
+      "targetKind": "portal",
+      "targetId": "portal-6c67f6d2cc4e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 59,
+      "targetKind": "portal",
+      "targetId": "portal-49f1e43823e9",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 60,
+      "targetKind": "award",
+      "targetId": "award-1a3f42f9e6a9",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 61,
+      "targetKind": "award",
+      "targetId": "award-467dbfa796e2",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 62,
+      "targetKind": "award",
+      "targetId": "award-853f29f07462",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 63,
+      "targetKind": "award",
+      "targetId": "award-2541f267aecb",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 64,
+      "targetKind": "award",
+      "targetId": "award-eb52009c1f31",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 65,
+      "targetKind": "award",
+      "targetId": "award-5dd4c3d3988a",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 66,
+      "targetKind": "award",
+      "targetId": "award-d90198f6225f",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 67,
+      "targetKind": "award",
+      "targetId": "award-c7fa5bcb0cda",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 68,
+      "targetKind": "award",
+      "targetId": "award-6c3df1c9b693",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 69,
+      "targetKind": "award",
+      "targetId": "award-901370e1548e",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 70,
+      "targetKind": "award",
+      "targetId": "award-140b97cfb628",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 71,
+      "targetKind": "award",
+      "targetId": "award-88d2adae4d6d",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 72,
+      "targetKind": "award",
+      "targetId": "award-aba97e610d99",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 73,
+      "targetKind": "award",
+      "targetId": "award-b1419d834350",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 74,
+      "targetKind": "award",
+      "targetId": "award-116fe9ce5784",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 75,
+      "targetKind": "award",
+      "targetId": "award-07059d5bb542",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 76,
+      "targetKind": "award",
+      "targetId": "award-1e5f468f541c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 77,
+      "targetKind": "award",
+      "targetId": "award-4324fe0c431f",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 78,
+      "targetKind": "award",
+      "targetId": "award-86fa99382474",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 79,
+      "targetKind": "portal",
+      "targetId": "portal-9720c3c04489",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 80,
+      "targetKind": "award",
+      "targetId": "award-b0e6889263b0",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 81,
+      "targetKind": "award",
+      "targetId": "award-ffbd0f0b989f",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 82,
+      "targetKind": "award",
+      "targetId": "award-0651dcec4d07",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 83,
+      "targetKind": "portal",
+      "targetId": "portal-000ebedd6175",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 84,
+      "targetKind": "award",
+      "targetId": "award-5be8186316cf",
+      "minimumGpa": 3.3,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 85,
+      "targetKind": "award",
+      "targetId": "award-203ab9685eb1",
+      "minimumGpa": 3.5,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 86,
+      "targetKind": "award",
+      "targetId": "award-f8f731aa27df",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 87,
+      "targetKind": "award",
+      "targetId": "award-f7fc6a093ae3",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 88,
+      "targetKind": "award",
+      "targetId": "award-29c97f527be9",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 89,
+      "targetKind": "award",
+      "targetId": "award-34904382b098",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 90,
+      "targetKind": "award",
+      "targetId": "award-8bce77306c27",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 91,
+      "targetKind": "award",
+      "targetId": "award-d81c0b25b5de",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 92,
+      "targetKind": "award",
+      "targetId": "award-3ec37786eaf6",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 93,
+      "targetKind": "award",
+      "targetId": "award-a02e4b043558",
+      "minimumGpa": 2.5,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 94,
+      "targetKind": "award",
+      "targetId": "award-16f035949c5e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 95,
+      "targetKind": "award",
+      "targetId": "award-e17a43d5029c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 96,
+      "targetKind": "award",
+      "targetId": "award-0f841a2f9a61",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 97,
+      "targetKind": "award",
+      "targetId": "award-0a8edc3902fa",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 98,
+      "targetKind": "award",
+      "targetId": "award-9c85eb732e7a",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 99,
+      "targetKind": "award",
+      "targetId": "award-40db1e8dee39",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 100,
+      "targetKind": "portal",
+      "targetId": "portal-2879c59253c5",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 101,
+      "targetKind": "award",
+      "targetId": "award-7e11abb8d4fc",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 102,
+      "targetKind": "award",
+      "targetId": "award-2e991f852dca",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "automatic_consideration"
+    },
+    {
+      "sourceRow": 103,
+      "targetKind": "award",
+      "targetId": "award-8096a5f7b187",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 104,
+      "targetKind": "award",
+      "targetId": "award-013610e8fa5a",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 105,
+      "targetKind": "award",
+      "targetId": "award-3dbe39e6a748",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 106,
+      "targetKind": "award",
+      "targetId": "award-1330369782b8",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 107,
+      "targetKind": "award",
+      "targetId": "award-aa0957679b02",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 108,
+      "targetKind": "award",
+      "targetId": "award-dee227e56cd8",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 109,
+      "targetKind": "award",
+      "targetId": "award-c8846f19dca4",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 110,
+      "targetKind": "award",
+      "targetId": "award-7e66bc43f068",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 111,
+      "targetKind": "award",
+      "targetId": "award-a2fca0938b4e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 112,
+      "targetKind": "award",
+      "targetId": "award-8dc9700421f7",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 113,
+      "targetKind": "award",
+      "targetId": "award-ba8d9f252645",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 114,
+      "targetKind": "award",
+      "targetId": "award-a4ca14a7716d",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 115,
+      "targetKind": "award",
+      "targetId": "award-12a7ca904d6a",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 116,
+      "targetKind": "award",
+      "targetId": "award-3703c9eee32b",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 117,
+      "targetKind": "award",
+      "targetId": "award-4f96382a8925",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 118,
+      "targetKind": "award",
+      "targetId": "award-a9c6e0fcc5af",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 119,
+      "targetKind": "award",
+      "targetId": "award-00c8fd2e3b19",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 120,
+      "targetKind": "award",
+      "targetId": "award-d8ff6ef257b3",
+      "minimumGpa": 2.7,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 121,
+      "targetKind": "award",
+      "targetId": "award-025b82622063",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 122,
+      "targetKind": "award",
+      "targetId": "award-4ea4015b19b3",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 123,
+      "targetKind": "award",
+      "targetId": "award-ef357d97de32",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 124,
+      "targetKind": "award",
+      "targetId": "award-ff63c599405f",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 125,
+      "targetKind": "award",
+      "targetId": "award-c3710c715ac5",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 126,
+      "targetKind": "award",
+      "targetId": "award-347a9a678c08",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 127,
+      "targetKind": "award",
+      "targetId": "award-9c7b61be754a",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 128,
+      "targetKind": "award",
+      "targetId": "award-26777f7302e7",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 129,
+      "targetKind": "award",
+      "targetId": "award-555518400a06",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 130,
+      "targetKind": "award",
+      "targetId": "award-d0abc8910545",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 131,
+      "targetKind": "award",
+      "targetId": "award-318b34958cc0",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 132,
+      "targetKind": "award",
+      "targetId": "award-440219a21c52",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year",
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 133,
+      "targetKind": "award",
+      "targetId": "award-5a371acc5f8b",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 134,
+      "targetKind": "award",
+      "targetId": "award-f41c36b42ac9",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 135,
+      "targetKind": "award",
+      "targetId": "award-97dfaadd1d31",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 136,
+      "targetKind": "award",
+      "targetId": "award-72b47d9371a6",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 137,
+      "targetKind": "award",
+      "targetId": "award-ceec2cef2d5b",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 138,
+      "targetKind": "award",
+      "targetId": "award-4cdd1ce9e18c",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 139,
+      "targetKind": "award",
+      "targetId": "award-9bb9b1051d9e",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 140,
+      "targetKind": "award",
+      "targetId": "award-52b096183d9d",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 141,
+      "targetKind": "award",
+      "targetId": "award-f910f9badd6e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 142,
+      "targetKind": "award",
+      "targetId": "award-098d6a3e2296",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 143,
+      "targetKind": "award",
+      "targetId": "award-ead4360dadca",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 144,
+      "targetKind": "award",
+      "targetId": "award-9185ae8439e3",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 145,
+      "targetKind": "award",
+      "targetId": "award-03e0f76e1886",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 146,
+      "targetKind": "award",
+      "targetId": "award-d2b44a62c0a7",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 147,
+      "targetKind": "award",
+      "targetId": "award-810497f483c1",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 148,
+      "targetKind": "award",
+      "targetId": "award-cadb7a3c4afa",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 149,
+      "targetKind": "award",
+      "targetId": "award-a4379bfbc7bd",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 150,
+      "targetKind": "award",
+      "targetId": "award-fa027b498c44",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 151,
+      "targetKind": "award",
+      "targetId": "award-d21bc9824cca",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 152,
+      "targetKind": "portal",
+      "targetId": "portal-1f6239b6b3a7",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 153,
+      "targetKind": "award",
+      "targetId": "award-938db8ede16a",
+      "minimumGpa": 3.3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 154,
+      "targetKind": "award",
+      "targetId": "award-368605f80ab9",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 155,
+      "targetKind": "award",
+      "targetId": "award-22920b157d01",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 156,
+      "targetKind": "portal",
+      "targetId": "portal-31c674475a72",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 157,
+      "targetKind": "portal",
+      "targetId": "portal-24b38bc4bf0e",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 158,
+      "targetKind": "award",
+      "targetId": "award-7d262385f5d5",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 159,
+      "targetKind": "award",
+      "targetId": "award-c32eca2c949c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 160,
+      "targetKind": "award",
+      "targetId": "award-9ef3717601cd",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 161,
+      "targetKind": "award",
+      "targetId": "award-78528c7a2312",
+      "minimumGpa": 2.25,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 162,
+      "targetKind": "portal",
+      "targetId": "portal-a3deda16b676",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 163,
+      "targetKind": "award",
+      "targetId": "award-5b5b0db70dd0",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 164,
+      "targetKind": "award",
+      "targetId": "award-2a22470d390c",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 165,
+      "targetKind": "portal",
+      "targetId": "portal-71391c7c4147",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "offline"
+    },
+    {
+      "sourceRow": 166,
+      "targetKind": "award",
+      "targetId": "award-baac2dac6d2e",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 167,
+      "targetKind": "award",
+      "targetId": "award-ecede06f700f",
+      "minimumGpa": 2.4,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 168,
+      "targetKind": "award",
+      "targetId": "award-8034b093b983",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 169,
+      "targetKind": "award",
+      "targetId": "award-1f64dfaa7bf7",
+      "minimumGpa": 3.25,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 170,
+      "targetKind": "award",
+      "targetId": "award-b86982e726be",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 171,
+      "targetKind": "award",
+      "targetId": "award-fa030a261f40",
+      "minimumGpa": 3,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 172,
+      "targetKind": "award",
+      "targetId": "award-f52f9786a495",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 173,
+      "targetKind": "award",
+      "targetId": "award-a0f5a36b98a2",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 174,
+      "targetKind": "award",
+      "targetId": "award-6b4f548adb79",
+      "minimumGpa": 2,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 175,
+      "targetKind": "portal",
+      "targetId": "portal-ad9e5b3f0257",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 176,
+      "targetKind": "award",
+      "targetId": "award-bbe935853482",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 177,
+      "targetKind": "portal",
+      "targetId": "portal-8a686777f54c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 178,
+      "targetKind": "award",
+      "targetId": "award-3c66c7edc5d3",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 179,
+      "targetKind": "award",
+      "targetId": "award-be12d7769d06",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 180,
+      "targetKind": "award",
+      "targetId": "award-8809a8f1adc4",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 181,
+      "targetKind": "award",
+      "targetId": "award-b1a03b264f02",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 182,
+      "targetKind": "portal",
+      "targetId": "portal-91496cdfc2a3",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 183,
+      "targetKind": "portal",
+      "targetId": "portal-0b9900c07449",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 184,
+      "targetKind": "award",
+      "targetId": "award-43f86bc61115",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 185,
+      "targetKind": "award",
+      "targetId": "award-d22749dcd4bf",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 186,
+      "targetKind": "portal",
+      "targetId": "portal-f3498d7072d5",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 187,
+      "targetKind": "portal",
+      "targetId": "portal-cf2a6b48f19c",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 188,
+      "targetKind": "award",
+      "targetId": "award-8ea19bf3c906",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 189,
+      "targetKind": "award",
+      "targetId": "award-474d85f3af23",
+      "minimumGpa": 2.75,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 190,
+      "targetKind": "award",
+      "targetId": "award-29814362e16a",
+      "minimumGpa": 2.75,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 191,
+      "targetKind": "award",
+      "targetId": "award-11631fa03190",
+      "minimumGpa": 2,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 192,
+      "targetKind": "award",
+      "targetId": "award-57c071d7e024",
+      "minimumGpa": 3.5,
+      "schoolTypes": [],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 193,
+      "targetKind": "award",
+      "targetId": "award-512cf202b205",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 194,
+      "targetKind": "award",
+      "targetId": "award-e34d317f0f51",
+      "minimumGpa": 3,
+      "schoolTypes": [
+        "four_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 195,
+      "targetKind": "award",
+      "targetId": "award-40f544a79f9d",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 196,
+      "targetKind": "award",
+      "targetId": "award-3de0c3240164",
+      "minimumGpa": null,
+      "schoolTypes": [
+        "trade_vocational",
+        "two_year"
+      ],
+      "applicationPreference": null
+    },
+    {
+      "sourceRow": 197,
+      "targetKind": "award",
+      "targetId": "award-07c449a12ffd",
+      "minimumGpa": 2.5,
+      "schoolTypes": [
+        "four_year",
+        "two_year"
+      ],
+      "applicationPreference": "direct_per_award"
+    },
+    {
+      "sourceRow": 198,
+      "targetKind": "award",
+      "targetId": "award-5dd6fcbcc0f8",
+      "minimumGpa": null,
+      "schoolTypes": [],
+      "applicationPreference": "direct_per_award"
+    }
+  ]
+}

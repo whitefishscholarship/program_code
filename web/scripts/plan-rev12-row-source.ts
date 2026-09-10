@@ -142,7 +142,7 @@ export function validatePlanRev12RowSource(
         humanFactReviewer: null,
       }
     : undefined;
-  if (context.planRevision !== 12) errors.push('Plan Revision 12 must set planRevision to 12');
+  if (context.planRevision < 12) errors.push('Plan Revision 12 requires planRevision at least 12');
   if (context.amendmentBaselineCommit !== '57bb062d64f725fa6ce72709f81fe987dde3e2af') {
     errors.push('Plan Revision 12 must bind the verified Revision 11 delivery-closure baseline');
   }

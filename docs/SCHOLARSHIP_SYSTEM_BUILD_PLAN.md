@@ -1599,3 +1599,9 @@ full repository verification and independent review. Publish a clear snapshot da
 an operator refresh procedure requiring a new bounded snapshot and review. No live
 scheduler, spreadsheet write, new dependency, provider permission, applicant data,
 or credential access is included. Rollback is the unchanged deployed P9 revision.
+
+Historical validation continues to authenticate P9 against its canonical candidate,
+recomputing the frozen deployed runtime closure from Git blobs rather than comparing
+that old deployment with a changed maintenance checkout. Current runtime capability
+checks still run. Revision 12 source validation must continue through later plan
+revisions while preserving its exact historical amendment and source pins.

@@ -9,7 +9,8 @@ import {
   type AwardMatchResult,
   type InterviewAnswers,
 } from '@/lib/interviewMatcher';
-import { CURRENT_ACCEPTED_MATCH_FACTS, CURRENT_ACCEPTED_MATCHING_FACT_COUNT } from '@/lib/p8mMatchingFacts';
+import { CURRENT_ACCEPTED_MATCH_FACTS } from '@/lib/p8mMatchingFacts';
+import { shortlistAwards, SHORTLIST_NOTICE, type DisplayResult } from '@/lib/spreadsheetShortlist';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
 import {
   APPLICATION_MODES,
@@ -61,13 +62,19 @@ const schoolTypeLabels: Record<Exclude<SchoolType, 'all'>, string> = {
   other: 'Other',
 };
 
-const decisionLabels: Record<AwardMatchResult['decision'], string> = {
+const decisionLabels: Record<DisplayResult['decision'], string> = {
+  recorded_fit: 'Fits recorded criteria',
+  needs_checking: 'Needs checking',
+  recorded_mismatch: 'Outside shortlist',
   match: 'Structured match',
   possible_match: 'Possible match',
   known_conflict: 'Known conflict',
 };
 
-const decisionStyles: Record<AwardMatchResult['decision'], string> = {
+const decisionStyles: Record<DisplayResult['decision'], string> = {
+  recorded_fit: 'border-emerald-200 bg-emerald-50 text-emerald-900',
+  needs_checking: 'border-amber-200 bg-amber-50 text-amber-950',
+  recorded_mismatch: 'border-slate-300 bg-slate-100 text-slate-800',
   match: 'border-emerald-200 bg-emerald-50 text-emerald-900',
   possible_match: 'border-amber-200 bg-amber-50 text-amber-950',
   known_conflict: 'border-rose-200 bg-rose-50 text-rose-900',
@@ -82,7 +89,7 @@ export default function ScholarshipBrowser() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [attempt, setAttempt] = useState(0);
-  const [experience, setExperience] = useState<Experience>('start');
+  const [experience, setExperience] = useState<Experience>('interview');
   const [answers, setAnswers] = useState<InterviewAnswers | null>(null);
   const [resultScope, setResultScope] = useState<ResultScope>('recommended');
   const [view, setView] = useState<View>('awards');
@@ -126,7 +133,7 @@ export default function ScholarshipBrowser() {
     const acceptedFacts = isSyntheticMatrix
       ? buildSyntheticMatrixMatchFacts(catalog.awards)
       : CURRENT_ACCEPTED_MATCH_FACTS;
-    return matchStudentAwards(catalog.awards, answers, acceptedFacts);
+    return isSyntheticMatrix ? matchStudentAwards(catalog.awards, answers, acceptedFacts) : shortlistAwards(catalog.awards, answers);
   }, [answers, catalog, isSyntheticMatrix]);
 
   const matchByAwardId = useMemo(() => new Map(
@@ -135,8 +142,8 @@ export default function ScholarshipBrowser() {
 
   const selectedResults = useMemo(() => {
     if (!matching) return [];
-    if (resultScope === 'recommended') return matching.results.filter((result) => result.decision !== 'known_conflict');
-    if (resultScope === 'conflicts') return matching.results.filter((result) => result.decision === 'known_conflict');
+    if (resultScope === 'recommended') return matching.results.filter((result) => result.decision !== 'known_conflict' && result.decision !== 'recorded_mismatch');
+    if (resultScope === 'conflicts') return matching.results.filter((result) => (result.decision === 'known_conflict' || result.decision === 'recorded_mismatch'));
     return matching.results;
   }, [matching, resultScope]);
 
@@ -201,7 +208,7 @@ export default function ScholarshipBrowser() {
     setAnswers(null);
     setResultScope('recommended');
     setSort('status');
-    setExperience('start');
+    setExperience('interview');
   };
 
   if (loading) {
@@ -233,7 +240,7 @@ export default function ScholarshipBrowser() {
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Private scholarship interview</p>
           <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Answer the complete four-part interview. We use only exact award-bound accepted facts, show why each award appears, and keep uncertain eligibility visible for you to verify.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Start with your GPA and education plans. We compare your answers with the saved scholarship spreadsheet, explain the shortlist, and keep uncertain opportunities available to check.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the private interview</button>
             <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
@@ -241,7 +248,7 @@ export default function ScholarshipBrowser() {
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <PromiseCard title="Temporary by design">Answers live only in this page&apos;s memory and disappear on reload.</PromiseCard>
-          <PromiseCard title="Conservative matching">Unaccepted, missing, unmodeled, or free-text facts never become a silent exclusion.</PromiseCard>
+          <PromiseCard title="Useful, explained results">See which recorded requirements fit and which details still need checking.</PromiseCard>
           <PromiseCard title="Transparent results">Every decision includes reasons and a link back to the official source when available.</PromiseCard>
         </div>
       </section>
@@ -253,7 +260,7 @@ export default function ScholarshipBrowser() {
       <InterviewWizard
         initialAnswers={answers}
         syntheticQa={isSyntheticMatrix}
-        onCancel={() => setExperience(answers ? 'results' : 'start')}
+        onCancel={() => answers ? setExperience('results') : showBrowseAll()}
         onComplete={(nextAnswers) => {
           setAnswers(nextAnswers);
           setResultScope('recommended');
@@ -278,8 +285,8 @@ export default function ScholarshipBrowser() {
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Your private results</p>
-              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">Scholarship matches with reasons.</h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">A possible match means accepted field evidence is incomplete or another requirement may be unmodeled—not that you are ineligible. Always confirm details on the official source.</p>
+              <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">Your scholarship shortlist.</h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">Fits recorded criteria means the requirements we compared fit your answers. It does not confirm full eligibility. Needs checking keeps incomplete records in consideration; outside shortlist remains available to review.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               <button type="button" onClick={() => beginInterview(true)} className="rounded-xl border border-teal-800 bg-white px-4 py-3 font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Edit answers</button>
@@ -287,17 +294,17 @@ export default function ScholarshipBrowser() {
               <button type="button" onClick={resetInterview} className="rounded-xl bg-slate-800 px-4 py-3 font-bold text-white hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300">Reset interview</button>
             </div>
           </div>
-          {CURRENT_ACCEPTED_MATCHING_FACT_COUNT === 0 && !isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950"><strong>Your answers had no current effect.</strong> The accepted P8M publication contains zero award-bound matching facts, so no answer excluded, promoted, or reordered an award. All {catalog.counts.awards} awards remain possible matches, subject to your visible filters and selected sort.</div>}
+          {!isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">{SHORTLIST_NOTICE}</div>}
           <dl className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Interview result counts">
-            <Count label="Structured matches" value={matching.counts.match} emphasis="positive" />
-            <Count label="Possible matches" value={matching.counts.possibleMatch} emphasis="warning" />
-            <Count label="Known conflicts" value={matching.counts.knownConflict} emphasis={matching.counts.knownConflict ? 'negative' : 'neutral'} />
+            <Count label={isSyntheticMatrix ? "Structured matches" : "Fits recorded criteria"} value={matching.counts.match} emphasis="positive" />
+            <Count label={isSyntheticMatrix ? "Possible matches" : "Needs checking"} value={matching.counts.possibleMatch} emphasis="warning" />
+            <Count label={isSyntheticMatrix ? "Known conflicts" : "Outside shortlist"} value={matching.counts.knownConflict} emphasis={matching.counts.knownConflict ? 'negative' : 'neutral'} />
           </dl>
-          <p className="sr-only" role="status" aria-live="polite">{matching.counts.match} structured matches, {matching.counts.possibleMatch} possible matches, and {matching.counts.knownConflict} known conflicts.</p>
+          <p className="sr-only" role="status" aria-live="polite">{matching.counts.match} fit recorded criteria, {matching.counts.possibleMatch} need checking, and {matching.counts.knownConflict} are outside the shortlist.</p>
           <div role="group" aria-label="Choose interview result set" className="mt-6 flex flex-wrap gap-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
-            <ScopeButton active={resultScope === 'recommended'} onClick={() => { clearFilters(); setResultScope('recommended'); }}>Matches and possible ({matching.counts.match + matching.counts.possibleMatch})</ScopeButton>
-            <ScopeButton active={resultScope === 'conflicts'} onClick={() => { clearFilters(); setResultScope('conflicts'); }}>Known conflicts ({matching.counts.knownConflict})</ScopeButton>
-            <ScopeButton active={resultScope === 'all'} onClick={() => { clearFilters(); setResultScope('all'); }}>All decisions ({matching.counts.total})</ScopeButton>
+            <ScopeButton active={resultScope === 'recommended'} onClick={() => { clearFilters(); setResultScope('recommended'); }}>Shortlist ({matching.counts.match + matching.counts.possibleMatch})</ScopeButton>
+            <ScopeButton active={resultScope === 'conflicts'} onClick={() => { clearFilters(); setResultScope('conflicts'); }}>Outside shortlist ({matching.counts.knownConflict})</ScopeButton>
+            <ScopeButton active={resultScope === 'all'} onClick={() => { clearFilters(); setResultScope('all'); }}>All awards ({matching.counts.total})</ScopeButton>
           </div>
         </div>
       ) : (
@@ -404,7 +411,7 @@ function FilterSelect({ label, value, options, onChange }: { label: string; valu
   return <label className="block text-sm font-bold text-slate-800">{label}<select value={value} onChange={(event) => onChange(event.target.value)} className="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-normal focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-100">{options.map(([optionValue, optionLabel]) => <option key={optionValue} value={optionValue}>{optionLabel}</option>)}</select></label>;
 }
 
-function AwardCard({ award, result }: { award: StudentAward; result?: AwardMatchResult }) {
+function AwardCard({ award, result }: { award: StudentAward; result?: DisplayResult }) {
   return (
     <article className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       {result && <p className={`mb-4 w-fit rounded-full border px-3 py-1 text-xs font-black uppercase tracking-wide ${decisionStyles[result.decision]}`}>{decisionLabels[result.decision]}</p>}
