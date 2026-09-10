@@ -5,23 +5,36 @@ Plan revision: 14
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — mapping committed before implementation
+## Interview relevance — tested local implementation; final review checkpoint
 
-- Execution worktree: `/private/tmp/program_code-interview-relevance`; branch
-  `codex/interview-relevance`, baseline `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
-- Prepared plan retained from `506bafc9a505df2c099ee9f0ba90fbee69901061`.
-  Policy commit is the dedicated `docs: adopt local interview relevance policy` commit
-  on this branch (resolve with Git); product changes have not started.
-- Canonical revision14 adopts `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md` and its kickoff.
-  Evidence: `docs/evidence/PLAN-REV14.md`. P9 and PR42 remain complete.
-- Policy commit `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh review C0/H0/M0/L0.
-- Mapping ledger and expected examples: `docs/evidence/PLAN-REV14-mapping.json` and
-  `docs/evidence/PLAN-REV14-matrix.json`; commit `docs: map supported interview relevance`.
-- Next action: independently check mappings, implement only recorded connections, then
-  execute the predeclared tests/browser matrix and final candidate review.
-- Publication authority false; exact release blocker in BUILD_STATE. No push/PR/Preview/
-  merge/Production/hosted verification/rollback. Settle authority before attestation.
-- No source or spreadsheet access, new exclusions/questions/services or unrelated work.
+- Worktree `/private/tmp/program_code-interview-relevance`, branch
+  `codex/interview-relevance`. Verified main baseline
+  `2f517755118bc72570a2aa8b5109a2660e0d9b12`; P9 and PR42 remain complete.
+  Original checkout, planning branch and historical attestations remain untouched.
+- Policy `2581c5c851a258c7e0ead8260f915d1da3db6078`: fresh review PASS C0/H0/M0/L0.
+  Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085`: all 206 connections independently
+  checked; one LOW evidence-pointer issue fixed and rechecked, zero unresolved findings.
+- Implementation `4dc2a652f8fe46209ce79067c3b3c72d70e77f3a`: 206 positive connections,
+  38 controls (33/38 special criteria), 129 awards. GPA/school decisions unchanged;
+  all 192 awards available; five unsupported choices explained; sensitive skip clears effects.
+- Scope/acceptance: `docs/INTERVIEW_RELEVANCE_BUILD_PLAN.md`, kickoff
+  `docs/kickoffs/INTERVIEW-RELEVANCE.md`. Evidence `docs/evidence/PLAN-REV14.md`;
+  mapping and predeclared matrix `PLAN-REV14-mapping.json` / `PLAN-REV14-matrix.json`.
+  Timestamped verification and actual saved-download browser outcomes are
+  `PLAN-REV14-verification.json` / `PLAN-REV14-browser-results.json` in that directory.
+- Final full tests, typecheck, default production build, generated-data checks, zero-Google
+  built traces and all three browser viewports passed with actual saved CSV downloads.
+  Plan validation reports only expected missing final manifest/review/attestation.
+- Next executable action: generate the frozen candidate manifest and obtain fresh final
+  review. Do not repeat completed mapping, policy or verification work unless changes
+  require it. Record the local review receipt and exact reviewed commit before return.
+- Publication remains unauthorized. Exact Revision14 blocker is in BUILD_STATE.
+  Before final attestation, obtain this release's branch push, PR, Preview, merge,
+  Production and verification authority or verify applicable suppression. Record any
+  authority delta, refreeze/recheck, then attest exactly two files. Prior grant is exhausted.
+- No new exclusions/questions/services, source research, spreadsheet access, provider
+  changes, monitoring or unrelated maintenance. Current scholarship freshness remains
+  unknown. Rollback reference is PR42; actual rollback requires separate authority.
 
 ## Spreadsheet shortlist maintenance — delivered PASS
 

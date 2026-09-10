@@ -1,0 +1,1017 @@
+{
+  "observedAt": "2026-09-10T22:30:47.661Z",
+  "status": "PASS",
+  "target": "local production build; hosted release unverified",
+  "syntheticOnly": true,
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "status": "PASS",
+      "syntheticOnly": true,
+      "pairedControlExamples": [
+        {
+          "answerId": "aviation_pilot",
+          "connectionId": "relevance-3-aviation_pilot",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "aviation_maintenance",
+          "connectionId": "relevance-121-aviation_maintenance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "trades",
+          "connectionId": "relevance-7-trades",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "stem",
+          "connectionId": "relevance-19-stem",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "healthcare",
+          "connectionId": "relevance-56-healthcare",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "business_finance",
+          "connectionId": "relevance-78-business_finance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "public_service",
+          "connectionId": "relevance-44-public_service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "law",
+          "connectionId": "relevance-68-law",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "arts_humanities",
+          "connectionId": "relevance-63-arts_humanities",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "agriculture_conservation",
+          "connectionId": "relevance-19-agriculture_conservation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "service",
+          "connectionId": "relevance-8-service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "leadership",
+          "connectionId": "relevance-21-leadership",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "work_experience",
+          "connectionId": "relevance-16-work_experience",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "caregiving",
+          "connectionId": "relevance-140-caregiving",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "financial_need",
+          "connectionId": "relevance-6-financial_need",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "dyslexia",
+          "connectionId": "relevance-135-dyslexia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "adhd",
+          "connectionId": "relevance-131-adhd",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "autism",
+          "connectionId": "relevance-135-autism",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "learning_other",
+          "connectionId": "relevance-90-learning_other",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "mental_health",
+          "connectionId": "relevance-96-mental_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "chronic_health",
+          "connectionId": "relevance-96-chronic_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "foster_care",
+          "connectionId": "relevance-163-foster_care",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "loss_of_parent",
+          "connectionId": "relevance-168-loss_of_parent",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "overcoming_adversity",
+          "connectionId": "relevance-14-overcoming_adversity",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_generation",
+          "connectionId": "relevance-99-first_generation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "black_african_american",
+          "connectionId": "relevance-158-black_african_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "hispanic_latino",
+          "connectionId": "relevance-158-hispanic_latino",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "native_american",
+          "connectionId": "relevance-158-native_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "asian_pacific_islander",
+          "connectionId": "relevance-158-asian_pacific_islander",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "lgbtqia",
+          "connectionId": "relevance-153-lgbtqia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "female",
+          "connectionId": "relevance-52-female",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "athletics_sports",
+          "connectionId": "relevance-43-athletics_sports",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "military_veteran",
+          "connectionId": "relevance-154-military_veteran",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_responder",
+          "connectionId": "relevance-68-first_responder",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "electric_coop",
+          "connectionId": "relevance-76-electric_coop",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "credit_union",
+          "connectionId": "relevance-13-credit_union",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "elks_lodge",
+          "connectionId": "relevance-28-elks_lodge",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "company_employee",
+          "connectionId": "relevance-35-company_employee",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        }
+      ],
+      "unsupportedChoices": 5,
+      "compoundOr": true,
+      "sensitiveSkipClearsEffects": true,
+      "counts": [
+        166,
+        125,
+        152,
+        190
+      ],
+      "exactSavedCsvVisibleIdsNamesFieldsOrder": true,
+      "scopeSearchExplicitSort": true,
+      "editResetReload": true,
+      "keyboard": true,
+      "overflow": false,
+      "answerRequestsStorageLogs": 0
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS",
+      "syntheticOnly": true,
+      "pairedControlExamples": [
+        {
+          "answerId": "aviation_pilot",
+          "connectionId": "relevance-3-aviation_pilot",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "aviation_maintenance",
+          "connectionId": "relevance-121-aviation_maintenance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "trades",
+          "connectionId": "relevance-7-trades",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "stem",
+          "connectionId": "relevance-19-stem",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "healthcare",
+          "connectionId": "relevance-56-healthcare",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "business_finance",
+          "connectionId": "relevance-78-business_finance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "public_service",
+          "connectionId": "relevance-44-public_service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "law",
+          "connectionId": "relevance-68-law",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "arts_humanities",
+          "connectionId": "relevance-63-arts_humanities",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "agriculture_conservation",
+          "connectionId": "relevance-19-agriculture_conservation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "service",
+          "connectionId": "relevance-8-service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "leadership",
+          "connectionId": "relevance-21-leadership",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "work_experience",
+          "connectionId": "relevance-16-work_experience",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "caregiving",
+          "connectionId": "relevance-140-caregiving",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "financial_need",
+          "connectionId": "relevance-6-financial_need",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "dyslexia",
+          "connectionId": "relevance-135-dyslexia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "adhd",
+          "connectionId": "relevance-131-adhd",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "autism",
+          "connectionId": "relevance-135-autism",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "learning_other",
+          "connectionId": "relevance-90-learning_other",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "mental_health",
+          "connectionId": "relevance-96-mental_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "chronic_health",
+          "connectionId": "relevance-96-chronic_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "foster_care",
+          "connectionId": "relevance-163-foster_care",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "loss_of_parent",
+          "connectionId": "relevance-168-loss_of_parent",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "overcoming_adversity",
+          "connectionId": "relevance-14-overcoming_adversity",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_generation",
+          "connectionId": "relevance-99-first_generation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "black_african_american",
+          "connectionId": "relevance-158-black_african_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "hispanic_latino",
+          "connectionId": "relevance-158-hispanic_latino",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "native_american",
+          "connectionId": "relevance-158-native_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "asian_pacific_islander",
+          "connectionId": "relevance-158-asian_pacific_islander",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "lgbtqia",
+          "connectionId": "relevance-153-lgbtqia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "female",
+          "connectionId": "relevance-52-female",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "athletics_sports",
+          "connectionId": "relevance-43-athletics_sports",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "military_veteran",
+          "connectionId": "relevance-154-military_veteran",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_responder",
+          "connectionId": "relevance-68-first_responder",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "electric_coop",
+          "connectionId": "relevance-76-electric_coop",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "credit_union",
+          "connectionId": "relevance-13-credit_union",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "elks_lodge",
+          "connectionId": "relevance-28-elks_lodge",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "company_employee",
+          "connectionId": "relevance-35-company_employee",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        }
+      ],
+      "unsupportedChoices": 5,
+      "compoundOr": true,
+      "sensitiveSkipClearsEffects": true,
+      "counts": [
+        166,
+        125,
+        152,
+        190
+      ],
+      "exactSavedCsvVisibleIdsNamesFieldsOrder": true,
+      "scopeSearchExplicitSort": true,
+      "editResetReload": true,
+      "keyboard": true,
+      "overflow": false,
+      "answerRequestsStorageLogs": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": "PASS",
+      "syntheticOnly": true,
+      "pairedControlExamples": [
+        {
+          "answerId": "aviation_pilot",
+          "connectionId": "relevance-3-aviation_pilot",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "aviation_maintenance",
+          "connectionId": "relevance-121-aviation_maintenance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "trades",
+          "connectionId": "relevance-7-trades",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "stem",
+          "connectionId": "relevance-19-stem",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "healthcare",
+          "connectionId": "relevance-56-healthcare",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "business_finance",
+          "connectionId": "relevance-78-business_finance",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "public_service",
+          "connectionId": "relevance-44-public_service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "law",
+          "connectionId": "relevance-68-law",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "arts_humanities",
+          "connectionId": "relevance-63-arts_humanities",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "agriculture_conservation",
+          "connectionId": "relevance-19-agriculture_conservation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "service",
+          "connectionId": "relevance-8-service",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "leadership",
+          "connectionId": "relevance-21-leadership",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "work_experience",
+          "connectionId": "relevance-16-work_experience",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "caregiving",
+          "connectionId": "relevance-140-caregiving",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "financial_need",
+          "connectionId": "relevance-6-financial_need",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "dyslexia",
+          "connectionId": "relevance-135-dyslexia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "adhd",
+          "connectionId": "relevance-131-adhd",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "autism",
+          "connectionId": "relevance-135-autism",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "learning_other",
+          "connectionId": "relevance-90-learning_other",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "mental_health",
+          "connectionId": "relevance-96-mental_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "chronic_health",
+          "connectionId": "relevance-96-chronic_health",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "foster_care",
+          "connectionId": "relevance-163-foster_care",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "loss_of_parent",
+          "connectionId": "relevance-168-loss_of_parent",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "overcoming_adversity",
+          "connectionId": "relevance-14-overcoming_adversity",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_generation",
+          "connectionId": "relevance-99-first_generation",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "black_african_american",
+          "connectionId": "relevance-158-black_african_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "hispanic_latino",
+          "connectionId": "relevance-158-hispanic_latino",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "native_american",
+          "connectionId": "relevance-158-native_american",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "asian_pacific_islander",
+          "connectionId": "relevance-158-asian_pacific_islander",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "lgbtqia",
+          "connectionId": "relevance-153-lgbtqia",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "female",
+          "connectionId": "relevance-52-female",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "athletics_sports",
+          "connectionId": "relevance-43-athletics_sports",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "military_veteran",
+          "connectionId": "relevance-154-military_veteran",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "first_responder",
+          "connectionId": "relevance-68-first_responder",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "electric_coop",
+          "connectionId": "relevance-76-electric_coop",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "credit_union",
+          "connectionId": "relevance-13-credit_union",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "elks_lodge",
+          "connectionId": "relevance-28-elks_lodge",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        },
+        {
+          "answerId": "company_employee",
+          "connectionId": "relevance-35-company_employee",
+          "realUi": true,
+          "exactReason": true,
+          "countsUnchanged": true,
+          "exactAllOrder": true
+        }
+      ],
+      "unsupportedChoices": 5,
+      "compoundOr": true,
+      "sensitiveSkipClearsEffects": true,
+      "counts": [
+        166,
+        125,
+        152,
+        190
+      ],
+      "exactSavedCsvVisibleIdsNamesFieldsOrder": true,
+      "scopeSearchExplicitSort": true,
+      "editResetReload": true,
+      "keyboard": true,
+      "overflow": false,
+      "answerRequestsStorageLogs": 0
+    }
+  ],
+  "health": {
+    "status": 200,
+    "relevance": {
+      "id": "interview-relevance-v1-rev225",
+      "sha256": "69b39b6e3349a37468fdf160d95a203e6deee4b7a3990abc4dff2e0c647a87ba",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified"
+    },
+    "shortlist": {
+      "id": "spreadsheet-shortlist-v1-rev225",
+      "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified"
+    },
+    "capabilities": {
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    }
+  }
+}
