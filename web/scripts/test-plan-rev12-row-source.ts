@@ -56,6 +56,7 @@ const context: PlanRev12ValidationContext = {
   organizerMaster: state.dataAuthority.sourceTransition.organizerMaster,
   p8mAuthorization,
   p8mStatus: state.stages.find(({ id }) => id === 'P8M')?.status,
+  p9Status: state.stages.find(({ id }) => id === 'P9')?.status,
   activeStageId: state.activeStageId,
   nextPermittedStageId: state.nextPermittedStageId,
   deliveryBlockers: state.deployment.deliveryBlockers,
@@ -72,6 +73,18 @@ assert.deepEqual(validatePlanRev12RowSource({
   activeStageId: null,
   nextPermittedStageId: 'P9',
 }), [], 'accepted P8M must permit accepted P8F to advance the pointer to P9');
+assert.deepEqual(validatePlanRev12RowSource({
+  ...context,
+  p9Status: 'accepted',
+  activeStageId: null,
+  nextPermittedStageId: null,
+}), [], 'accepted P8M must permit the terminal state after accepted P9');
+assert(validatePlanRev12RowSource({
+  ...context,
+  p9Status: 'verified',
+  activeStageId: null,
+  nextPermittedStageId: null,
+}).some((error) => error.includes('active/next-stage')), 'terminal state must reject non-accepted P9');
 assert.deepEqual(
   {
     ...context.rowSource,

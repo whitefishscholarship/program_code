@@ -1475,6 +1475,7 @@ if (state) {
         organizerMaster: state.dataAuthority.sourceTransition.organizerMaster,
         p8mAuthorization,
         p8mStatus: state.stages.find((item) => item.id === 'P8M')?.status,
+        p9Status: state.stages.find((item) => item.id === 'P9')?.status,
         activeStageId: state.activeStageId,
         nextPermittedStageId: state.nextPermittedStageId,
         deliveryBlockers: state.deployment.deliveryBlockers,
