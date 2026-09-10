@@ -1,41 +1,92 @@
 # Current Handoff
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P9 — accepted; attestation and final delivery pending
+## P9 and program closeout — PASS
 
-- Live `origin/main` remains exact baseline
-  `6648652c2d42a663c61de7cc525928c7581a112c`. P9 branch
-  `codex/p9-production-closeout` is draft PR `#40`.
-- Frozen runtime `729d39b02b3462e6365648d19317bfc1ef249982` uses only
+- P9 started from exact baseline
+  `6648652c2d42a663c61de7cc525928c7581a112c`. Frozen runtime
+  `729d39b02b3462e6365648d19317bfc1ef249982` consumes only
   `web/fixtures/p8m/matching-facts-v1.json` at SHA-256
   `16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07`.
-  `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` was removed from Vercel Production, and the
-  runtime has no Google, Drive, or Sheets capability.
-- GitHub CI and Vercel build pass. Nonce-bound Production health, API, browser,
-  192-award browse, CSV export, and private-interview smoke pass on
-  `web-two-gules-45.vercel.app`.
-- Production environment names were inspected without revealing values. Both
-  `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` and `GOOGLE_SHEET_ID` are absent. The final
-  controlled rollback moved the canonical hostname from clean deployment
-  `dpl_DbA8ip16ZykyRRWDySj4D344QihV` to clean deployment
-  `dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV`, then restored `dpl_DbA8...`; all four ordered
-  observations returned HTTP 200 with unique nonces and exact runtime/publication pins.
-- Fresh reviewer `/root/p9_fresh_review` accepted exact verified candidate
-  `9d42d49344321b0a81964d21bea6f3f34aeafea4` at C0/H0/M0/L0. Finish only the
-  required gates: exact accepted-state recheck, complete manifest, direct-child
-  two-file attestation, PR merge, and final main Production smoke recorded in the PR
-  delivery record.
-- The unrelated local one-file closeout at `7d92f018...` remains unpublished and must
-  not be included.
+- Fresh reviewer `/root/p9_fresh_review` accepted exact candidate
+  `1ba8eaf013606bf260b2791cd514a8c6a2392b37` at C0/H0/M0/L0. Complete 24-path
+  manifest SHA-256 is
+  `c828e4868140ce861379c01aa6358e9f1970d668c3be5891911282933855a20d`.
+  Direct-child attestation `221d938facdb924fa0c3da0943ea50ad3ec8c457` adds only the
+  P9 manifest and review.
+- PR `#40` merged the exact attestation into `main` as
+  `7c3cc309bcb4093c150fe5976b631c0351b7e12c` at
+  `2026-09-10T03:18:52Z`. PR CI `34432621721` and main CI `34432850379`
+  passed the complete required matrix, including the production build and post-build
+  zero-capability trace check.
+- Vercel Production deployment `dpl_AE2BDae2W5mwMvn27L9wi1vX3QLq` is Ready and
+  Current on `web-two-gules-45.vercel.app`, sourced from exact merge `7c3cc309...`.
+  Final non-cacheable health returned HTTP 200 at `2026-09-10T03:22:39.022Z` with
+  nonce `c2f5790a8d644becb3456a789df012ab`, exact deployment/merge/publication pins,
+  and `google`/`drive`/`sheets: none`.
+- Final API and browser checks passed: 217 sources, 21 portals, 192 awards, four
+  application groups, 192 unknown cycles, zero open cycles, zero accepted matching
+  facts, all-192 browse, 192-row CSV export, and the private interview. The ordered
+  deployment rollback and restoration proof remains in `docs/evidence/P9-deployment.json`.
+- P9 accessed no spreadsheet or public source, performed no spreadsheet mutation,
+  processed no applicant data, activated no monitoring, and made no provider-permission
+  or unrelated configuration change. Production has neither
+  `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` nor `GOOGLE_SHEET_ID`.
+- `docs/BUILD_STATE.json` correctly records every stage through P9 as `accepted`, with
+  no active or next-permitted stage. The program is complete. Do not invent or begin a
+  later stage without a new directly authorized plan change.
+
+### Open items and exact future triggers
+
+- **Stale delivery-blocker label:** `docs/BUILD_STATE.json` still contains
+  `P9-attestation-and-delivery-pending` even though the same file marks P9 accepted and
+  the attestation, merge, CI, deployment, and smoke are complete. This label is stale
+  bookkeeping, not an operative blocker and not authority to reopen P9. Remove it only
+  in a separately scoped, validated governance-maintenance change with direct authority
+  for that branch push, PR, Preview, merge, and Production deployment, or with verified
+  deployment suppression. Never amend or rebind the accepted P9 candidate/attestation.
+- **Scholarship freshness and matching facts:** the immutable publication honestly has
+  zero accepted matching facts and all 192 cycles remain unknown. Revisit only after a
+  new instruction explicitly authorizes the exact official-source reads and human fact
+  review; any spreadsheet write additionally requires exact cells/ranges, backup,
+  rollback, readback, and reconciliation authority. Until then, preserve the current
+  possible-match and verification-needed behavior.
+- **Monitoring:** the accepted P8 schedule remains disabled. Activate it only after a
+  new instruction names the exact source, cadence, identity, notifications, cost, and
+  rollback.
+- **Retired credential at its issuer:** the Google credential was removed from Vercel,
+  but disabling or revoking it at its original issuer was outside P9 authority and was
+  not verified. Act only after direct authority identifies the exact issuer-side
+  credential and permits revocation without revealing its value.
+- **Maintenance warnings:** GitHub Actions currently forces Node-20-targeted actions
+  onto Node 24, Next warns that its middleware convention is deprecated, and local
+  Turbopack builds can fail on the restricted runner's internal port while exact
+  CI/Vercel builds pass. The protected verification environment uses protected-branch
+  enforcement because the current GitHub plan rejected a required-reviewer rule.
+  Address these only in a separate maintenance task when platform support changes, a
+  warning becomes a failure, or a framework/toolchain update is intentionally scheduled.
+- **Local historical branches:** unpublished closeouts `7d92f018...` and `4cfd43d...`
+  and old prunable worktree registrations are not part of P9 and must not be published
+  or deleted automatically. Clean them only in an explicit repository-hygiene task
+  after proving no required unique work would be lost.
+- **This one-file handoff:** branch `codex/p9-session-closeout` starts from live merge
+  `7c3cc309...` and changes only this file. A later push/PR/merge would create additional
+  Vercel Preview/Production effects; keep it local until those exact post-P9 effects are
+  directly authorized or verified deployment suppression exists.
+
+There is no next-stage kickoff. A future session should first read `AGENTS.md`, the
+canonical plan, `docs/BUILD_STATE.json`, this handoff, and P9 evidence; verify live
+`origin/main` still descends from merge `7c3cc309...` and attestation `221d938...`; then
+perform only the specifically authorized maintenance or new plan work.
 
 ## Historical context below — non-operative
 
 Everything below this heading is retained only as earlier-stage history. It does not
-override the current P9 continuation above.
+override the current P9 closeout above.
 
 ## P8F — accepted implementation candidate; direct-child attestation pending
 
