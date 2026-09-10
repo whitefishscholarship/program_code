@@ -189,7 +189,7 @@ const wizardSource = fs.readFileSync(path.join(webRoot, 'src/components/Intervie
 const browserSource = fs.readFileSync(path.join(webRoot, 'src/components/ScholarshipBrowser.tsx'), 'utf8');
 const matcherSource = fs.readFileSync(path.join(webRoot, 'src/lib/interviewMatcher.ts'), 'utf8');
 const clientSource = fs.readFileSync(path.join(webRoot, 'src/lib/studentCatalogClient.ts'), 'utf8');
-assert(wizardSource.includes('All 38 former special-criteria choices are restored'));
+assert(wizardSource.includes('SPECIAL_CRITERIA.filter((item) => item.category === category).map'), 'every preserved criterion is rendered from the verified question inventory');
 assert(wizardSource.includes('Prefer not to answer sensitive questions'));
 assert(!wizardSource.includes('organization_affiliations'));
 for (const excluded of questionMap.typeOnlyExcluded.map((item) => item.split('.').at(-1))) assert(!new RegExp(`\\b${String(excluded)}\\b`).test(wizardSource), `type-only field rendered: ${excluded}`);
