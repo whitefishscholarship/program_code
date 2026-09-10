@@ -5,7 +5,7 @@ Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## P9 — verified; independent review, attestation, and final delivery pending
+## P9 — accepted; attestation and final delivery pending
 
 - Live `origin/main` remains exact baseline
   `6648652c2d42a663c61de7cc525928c7581a112c`. P9 branch
@@ -24,9 +24,11 @@ Default branch: `main`
   `dpl_DbA8ip16ZykyRRWDySj4D344QihV` to clean deployment
   `dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV`, then restored `dpl_DbA8...`; all four ordered
   observations returned HTTP 200 with unique nonces and exact runtime/publication pins.
-- Finish only the required gates: final matrix, fresh-context read-only review,
-  accepted-state recheck, complete manifest, direct-child two-file attestation, PR
-  merge, and final main Production smoke recorded in the PR delivery record.
+- Fresh reviewer `/root/p9_fresh_review` accepted exact verified candidate
+  `9d42d49344321b0a81964d21bea6f3f34aeafea4` at C0/H0/M0/L0. Finish only the
+  required gates: exact accepted-state recheck, complete manifest, direct-child
+  two-file attestation, PR merge, and final main Production smoke recorded in the PR
+  delivery record.
 - The unrelated local one-file closeout at `7d92f018...` remains unpublished and must
   not be included.
 

@@ -466,7 +466,7 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-independent-review-attestation-and-delivery-pending"
+      "P9-attestation-and-delivery-pending"
     ]
   },
   "governance": {
@@ -706,7 +706,7 @@
       }
     ]
   },
-  "activeStageId": "P9",
+  "activeStageId": null,
   "nextPermittedStageId": null,
   "stages": [
     {
@@ -832,7 +832,7 @@
     {
       "id": "P9",
       "name": "Production migration, deployment, and closeout",
-      "status": "verified",
+      "status": "accepted",
       "baselineCommit": "6648652c2d42a663c61de7cc525928c7581a112c",
       "evidencePath": "docs/evidence/P9.md",
       "manifestPath": "docs/evidence/P9-manifest.json",
