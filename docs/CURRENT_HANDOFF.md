@@ -1,9 +1,33 @@
 # Current Handoff
 
-Last updated: 2026-09-08
+Last updated: 2026-09-09
 Plan revision: 12
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## P9 — verified; independent review, attestation, and final delivery pending
+
+- Live `origin/main` remains exact baseline
+  `6648652c2d42a663c61de7cc525928c7581a112c`. P9 branch
+  `codex/p9-production-closeout` is draft PR `#40`.
+- Frozen runtime `729d39b02b3462e6365648d19317bfc1ef249982` uses only
+  `web/fixtures/p8m/matching-facts-v1.json` at SHA-256
+  `16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07`.
+  `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` was removed from Vercel Production, and the
+  runtime has no Google, Drive, or Sheets capability.
+- GitHub CI and Vercel build pass. Nonce-bound Production health, API, browser,
+  192-award browse, CSV export, and private-interview smoke pass on
+  `web-two-gules-45.vercel.app`.
+- The controlled rollback from `dpl_BoJHUfGBDNKWJ2f4EFYYNoQ3d5Xg` to prior
+  zero-capability deployment `dpl_AvNeh4SMz5MCcsnVC13tjPbawLEJ`, followed by
+  restoration to `dpl_BoJH...`, passed with exact nonce, runtime, publication, and
+  capability bindings. The legacy baseline was not restored because it could revive
+  forbidden Google capability.
+- Finish only the required gates: final matrix, fresh-context read-only review,
+  accepted-state recheck, complete manifest, direct-child two-file attestation, PR
+  merge, and final main Production smoke recorded in the PR delivery record.
+- The unrelated local one-file closeout at `7d92f018...` remains unpublished and must
+  not be included.
 
 ## P8F — accepted implementation candidate; direct-child attestation pending
 

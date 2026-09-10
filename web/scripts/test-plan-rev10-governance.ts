@@ -196,10 +196,10 @@ assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p8f
 if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
 else if (p8fStatus === 'accepted') {
   const p9Status = state.stages.find(({ id }) => id === 'P9')?.status;
-  assert(['planned', 'active'].includes(p9Status ?? ''));
+  assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p9Status ?? ''));
   assert.deepEqual(
     [state.activeStageId, state.nextPermittedStageId],
-    p9Status === 'planned' ? [null, 'P9'] : ['P9', null],
+    p9Status === 'planned' ? [null, 'P9'] : p9Status === 'accepted' ? [null, null] : ['P9', null],
   );
 }
 else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
@@ -389,12 +389,13 @@ const p9Authorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P9',
 );
 const p9Stage = state.stages.find(({ id }) => id === 'P9');
+assert(p9Stage, 'P9 stage record missing');
 if (p9Stage?.status === 'planned') {
   assert.equal(p9Authorization?.authorized, false);
   assert.equal(p9Authorization?.evidencePath, null);
   assert(p9Authorization?.basis.includes('prospectively supersede'));
 } else {
-  assert.equal(p9Stage?.status, 'active');
+  assert(['active', 'implemented', 'verified', 'accepted'].includes(p9Stage?.status ?? ''));
   assert.equal(p9Stage.baselineCommit, '6648652c2d42a663c61de7cc525928c7581a112c');
   assert.equal(p9Authorization?.authorized, true);
   assert.equal(p9Authorization?.authorizedBy, 'Kelsey Stuart');
