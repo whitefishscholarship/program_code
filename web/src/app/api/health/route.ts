@@ -1,3 +1,4 @@
+import { SHORTLIST_PUBLICATION, SHORTLIST_SHA256 } from '@/lib/spreadsheetShortlist';
 import { NextRequest, NextResponse } from 'next/server';
 import {
   P8M_MATCHING_PUBLICATION,
@@ -39,6 +40,7 @@ export function GET(request: NextRequest) {
       portalRows: P8M_MATCHING_PUBLICATION.counts.portal_rows,
       acceptedMatchingFacts: P8M_MATCHING_PUBLICATION.counts.accepted_matching_facts,
     },
+    shortlist: { id: SHORTLIST_PUBLICATION.id, sha256: SHORTLIST_SHA256, snapshotDate: SHORTLIST_PUBLICATION.snapshotDate, basis: SHORTLIST_PUBLICATION.basis },
     capabilities: {
       google: 'none',
       drive: 'none',

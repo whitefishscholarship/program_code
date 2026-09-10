@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { INTERVIEW_APPLICATION_MODES, InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
+import { SHORTLIST_NOTICE } from '@/lib/spreadsheetShortlist';
 import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES, VOLUNTEER_HOURS } from '@/lib/interviewQuestions';
 
 const TOTAL_STEPS = 4;
@@ -72,7 +73,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel, 
         <div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-200" role="progressbar" aria-label="Interview progress" aria-valuemin={1} aria-valuemax={TOTAL_STEPS} aria-valuenow={step + 1}><div className="h-full rounded-full bg-teal-700 transition-[width]" style={{ width: `${((step + 1) / TOTAL_STEPS) * 100}%` }} /></div>
       </div>
       <p className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-4 text-sm leading-6 text-teal-950">Your answers stay only in this page&apos;s temporary memory. They are not saved, sent, logged, added to the address bar, or included in exports.</p>
-      <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{syntheticQa ? <><strong>Test fixture:</strong> synthetic accepted facts are enabled only for this development QA route.</> : <><strong>Current effect:</strong> none of these answers narrow or rank results today because the accepted matching-fact publication contains zero award-bound facts. Every award stays visible as a possible match.</>}</p>
+      <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{syntheticQa ? <><strong>Test fixture:</strong> synthetic accepted facts are enabled only for this development QA route.</> : <>{SHORTLIST_NOTICE}</>}</p>
       {error && <p id="interview-error" role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 font-bold text-rose-900">{error}</p>}
 
       {step === 0 && <div className="mt-7 space-y-8">
@@ -98,10 +99,10 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel, 
         {SPECIAL_CRITERIA_CATEGORIES.map((category) => <CheckboxGroup key={category} legend={category}>{SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => <Choice key={item.id} id={item.controlId} label={item.label} detail={item.detail ?? undefined} checked={selectedCriteria.includes(item.id)} disabled={item.sensitive && sensitiveCriteriaSkipped} onChange={() => { if (item.sensitive) setSensitiveCriteriaSkipped(false); toggle(item.id, selectedCriteria, setSelectedCriteria); }} />)}</CheckboxGroup>)}
       </div>}
 
-      {step === 3 && <CheckboxGroup legend="Application formats you prefer" detail="Preferences can affect order only when accepted field evidence supports the application format. They never decide whether you qualify.">{INTERVIEW_APPLICATION_MODES.map((value) => <Choice key={value} id={`application-mode-${value}`} label={applicationModeLabels[value]} checked={preferredApplicationModes.includes(value)} onChange={() => toggle(value, preferredApplicationModes, setPreferredApplicationModes)} />)}</CheckboxGroup>}
+      {step === 3 && <CheckboxGroup legend="Application formats you prefer" detail="Preferences affect order when the reviewed spreadsheet records a matching application format. They never decide whether you qualify.">{INTERVIEW_APPLICATION_MODES.map((value) => <Choice key={value} id={`application-mode-${value}`} label={applicationModeLabels[value]} checked={preferredApplicationModes.includes(value)} onChange={() => toggle(value, preferredApplicationModes, setPreferredApplicationModes)} />)}</CheckboxGroup>}
 
       <div className="mt-9 flex flex-col-reverse gap-3 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
-        <button type="button" onClick={step === 0 ? onCancel : () => { setError(''); setStep((current) => current - 1); }} className="rounded-xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200">{step === 0 ? 'Back to start' : 'Previous'}</button>
+        <button type="button" onClick={step === 0 ? onCancel : () => { setError(''); setStep((current) => current - 1); }} className="rounded-xl border border-slate-300 bg-white px-5 py-3 font-bold text-slate-800 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-teal-200">{step === 0 ? (initialAnswers ? 'Back to results' : 'Browse all scholarships') : 'Previous'}</button>
         <button type="button" onClick={step === TOTAL_STEPS - 1 ? submit : continueStep} className="rounded-xl bg-teal-800 px-6 py-3 font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">{step === TOTAL_STEPS - 1 ? 'Show my results' : 'Continue'}</button>
       </div>
     </section>

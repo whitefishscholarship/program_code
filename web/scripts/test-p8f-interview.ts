@@ -196,7 +196,7 @@ for (const excluded of questionMap.typeOnlyExcluded.map((item) => item.split('.'
 for (const forbidden of ['sessionStorage', 'localStorage', 'indexedDB', 'document.cookie', 'sendBeacon', 'fetch(', 'XMLHttpRequest', 'history.pushState', 'history.replaceState', 'console.']) assert(!wizardSource.includes(forbidden), `wizard contains forbidden channel ${forbidden}`);
 for (const forbidden of ['processAndFilter', './processor', 'rulesPack', 'studentCatalogLegacy', 'amountRank', 'is_new']) assert(!matcherSource.includes(forbidden), `matcher contains retired behavior ${forbidden}`);
 assert(browserSource.includes('CURRENT_ACCEPTED_MATCH_FACTS'));
-assert(browserSource.includes('Your answers had no current effect.'));
+assert(browserSource.includes('SHORTLIST_NOTICE'), 'current shortlist must disclose its snapshot and effect limits');
 assert(browserSource.includes('Browse all'));
 assert(browserSource.includes('awardCsvDataUri(visibleAwards)'));
 assert(browserSource.includes('rel="noopener noreferrer"'));

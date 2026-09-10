@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-09-10T18:10:47.048Z",
+  "target": "local production Webpack build, not deployed Production",
+  "status": "PASS",
+  "journeys": [
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "syntheticProfilesOnly": true,
+      "highGpaFourYear": 166,
+      "lowerGpaFourYear": 125,
+      "trade": 152,
+      "undecided": 190,
+      "filteredCsvRows": 21,
+      "allAwards": 192,
+      "outsideRecovery": true,
+      "csvExactVisibleNamesAndOrder": true,
+      "editResetReload": true,
+      "noAnswerRequestsOrStorage": true,
+      "noHorizontalOverflow": true,
+      "pageErrors": 0
+    },
+    {
+      "viewport": [
+        768,
+        1024
+      ],
+      "syntheticProfilesOnly": true,
+      "highGpaFourYear": 166,
+      "lowerGpaFourYear": 125,
+      "trade": 152,
+      "undecided": 190,
+      "filteredCsvRows": 21,
+      "allAwards": 192,
+      "outsideRecovery": true,
+      "csvExactVisibleNamesAndOrder": true,
+      "editResetReload": true,
+      "noAnswerRequestsOrStorage": true,
+      "noHorizontalOverflow": true,
+      "pageErrors": 0
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "syntheticProfilesOnly": true,
+      "highGpaFourYear": 166,
+      "lowerGpaFourYear": 125,
+      "trade": 152,
+      "undecided": 190,
+      "filteredCsvRows": 21,
+      "allAwards": 192,
+      "outsideRecovery": true,
+      "csvExactVisibleNamesAndOrder": true,
+      "editResetReload": true,
+      "noAnswerRequestsOrStorage": true,
+      "noHorizontalOverflow": true,
+      "pageErrors": 0
+    }
+  ],
+  "health": {
+    "status": 200,
+    "shortlist": {
+      "id": "spreadsheet-shortlist-v1-rev225",
+      "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified"
+    },
+    "capabilities": {
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    }
+  }
+}

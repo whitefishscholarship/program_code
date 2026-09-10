@@ -53,6 +53,7 @@ import {
   validateP9PostCutoverReceiptV2,
 } from './p9-evidence-v2';
 import { validatePlanRev10Lifecycle } from './plan-rev10-lifecycle';
+import { historicalRuntimeClosureSha256, permitsLocalShortlistPreparation } from './shortlist-governance';
 import { validateP9ProductionRuntime } from './p9-production-runtime';
 import { validateP9ReplacementEvidenceAtRepo } from './p9-replacement-closeout';
 import {
@@ -1628,7 +1629,7 @@ if (state) {
           fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
         }
       } else if (
-        amendment.id !== 'PLAN-REV10' ||
+        (amendment.id !== 'PLAN-REV10' && !permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true')) ||
         authorization?.authorized !== false ||
         authorization.authorizedBy !== null ||
         authorization.authorizedAt !== null ||
@@ -1638,10 +1639,10 @@ if (state) {
         !(
           state.deployment.deliveryBlockers.some((item) =>
             item.startsWith('PLAN-REV10-'),
-          ) || revision11ContinuationValid
+          ) || revision11ContinuationValid || permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true')
         )
       ) {
-        fail(`${amendment.id} requires direct informed delivery authority or the exact Revision 10 local-only blocker`);
+        fail(`${amendment.id} requires direct informed delivery authority or an exact authorized local-only preparation blocker`);
       }
     }
     validateBoundAttestation(
@@ -2310,6 +2311,8 @@ if (state) {
       ) {
         fail('Verified replacement P9 requires complete baseline, runtime, publication, and provider pins');
       } else {
+        const historicalP9 = state.planRevision >= 13 ? findCanonicalAttestation('P9', p9.manifestPath, p9.reviewPath) : null;
+        if (state.planRevision >= 13 && !historicalP9) fail('Post-P9 maintenance requires the canonical P9 attestation');
         let runtimeReceipt;
         try {
           runtimeReceipt = validateP9ProductionRuntime();
@@ -2321,12 +2324,12 @@ if (state) {
             baselineCommit: p9.baselineCommit,
             runtimeCommit: runtime.runtimeCommit,
             publicationSha256: runtime.publicationSha256,
-            runtimeClosureSha256: runtimeReceipt.runtimeClosureSha256,
+            runtimeClosureSha256: historicalP9 ? historicalRuntimeClosureSha256(repoRoot, runtime.runtimeCommit) : runtimeReceipt.runtimeClosureSha256,
             projectFingerprintSha256: runtime.providerProjectFingerprintSha256,
             teamFingerprintSha256: runtime.providerTeamFingerprintSha256,
             hostnameFingerprintSha256: runtime.canonicalProductionHostnameSha256,
             verificationEnvironmentFingerprintSha256: runtime.verificationEnvironmentFingerprintSha256,
-          })) fail(error);
+          }, historicalP9?.manifest.candidateCommit)) fail(error);
         }
       }
     }

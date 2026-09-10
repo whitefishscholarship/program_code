@@ -146,7 +146,7 @@ export function validateP9ReplacementEvidence(value: unknown, context: Context):
   return errors;
 }
 
-export function validateP9ReplacementEvidenceAtRepo(repoRoot: string, context: Context): string[] {
+export function validateP9ReplacementEvidenceAtRepo(repoRoot: string, context: Context, historicalCandidateCommit?: string): string[] {
   const evidencePath = path.join(repoRoot, P9_REPLACEMENT_EVIDENCE_PATH);
   if (!fs.existsSync(evidencePath)) return [`Missing ${P9_REPLACEMENT_EVIDENCE_PATH}`];
   const errors = validateP9ReplacementEvidence(JSON.parse(fs.readFileSync(evidencePath, 'utf8')), context);
@@ -157,7 +157,8 @@ export function validateP9ReplacementEvidenceAtRepo(repoRoot: string, context: C
     errors.push('P9 runtime commit must descend from the exact live baseline');
   }
   try {
-    const head = runGit(['rev-parse', 'HEAD']);
+    const head = historicalCandidateCommit ?? runGit(['rev-parse', 'HEAD']);
+    if (historicalCandidateCommit) runGit(['merge-base', '--is-ancestor', head, 'HEAD']);
     runGit(['merge-base', '--is-ancestor', context.runtimeCommit, head]);
     const changed = runGit(['diff', '--name-only', context.runtimeCommit, head, '--', ...P9_REPLACEMENT_RUNTIME_PATHS]);
     if (changed) errors.push(`P9 accepted candidate changes frozen runtime paths: ${changed.replace(/\n/g, ', ')}`);

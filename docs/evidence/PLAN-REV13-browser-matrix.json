@@ -1,0 +1,29 @@
+{
+  "scope": "Local production build with synthetic test answers only; no applicant data",
+  "viewports": [
+    [
+      360,
+      800
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      1440,
+      900
+    ]
+  ],
+  "journeys": [
+    "interview-first entry and keyboard focus",
+    "lower versus higher GPA shortlist change",
+    "four-year versus trade school shortlist change",
+    "undecided keeps uncertain school eligibility visible",
+    "all awards and outside-shortlist recovery",
+    "search/sort and exact displayed-row CSV equality",
+    "edit retains answers only in page memory",
+    "reset and reload clear answers",
+    "no answer-bearing request, URL, storage, or cookie",
+    "no horizontal overflow"
+  ]
+}

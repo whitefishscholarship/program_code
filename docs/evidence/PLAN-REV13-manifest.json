@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV13",
+  "createdAt": "2026-09-10T18:36:31.363Z",
+  "baselineCommit": "b8ea0982709b1984674e43e39f7ecbf7e42fe7d4",
+  "candidateCommit": "07c6c8df825b17cee64037f81a94ac05ba2ce464",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "3e38a7b3a92eac028270a8db8f434cc17a7c9253716b69490f95a2990a2866b0"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "a44a5182cfe3b214c79e9e5236c51763ddbe73893e63c45f6520bcc405c82f28"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "78593394bc86dc40275d562f9a8e6721c12943a7e6b29d6c308d0f48fcf53bd6"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "db13e0d2c6a5bf0f660b311d80b58aee9aa0e566bdacd859a8b55891a79e525f"
+    },
+    {
+      "path": "docs/SPREADSHEET-SHORTLIST.md",
+      "change": "present",
+      "sha256": "de1b5cf616510b5efffcb9e8622a2ad88c9e5987c9bce0a617468389ff35f737"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-browser-matrix.json",
+      "change": "present",
+      "sha256": "bc95584a434a3aa24b49a9c5f12cb8ed821ce8bb358b5267b2da7a16730c0d56"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-browser-results.json",
+      "change": "present",
+      "sha256": "e0fcf079fdc0084ae501d2aed8bacf4fc1c3b13eee43b6442df8fd395b850fd6"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-row-reconciliation.json",
+      "change": "present",
+      "sha256": "0af5ba355bebb393a726001716a95b1e8176c992ffd8e62de1ab1b2b97a3188d"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-synthetic-desktop.png",
+      "change": "present",
+      "sha256": "c8b14c8fc92b3a051b8b244391d0e764ad90fdf393d3fb6cd45eb91ae71db7d6"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-synthetic-mobile.png",
+      "change": "present",
+      "sha256": "ef057b4a3067135675124a8fc50bdfa122fcc3598996ddb20d77992d7eed4dde"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13-verification.json",
+      "change": "present",
+      "sha256": "b44972a7fb6ca240706285589bd60071d7a5d9e8cb50b711f70d36288d1f614f"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV13.md",
+      "change": "present",
+      "sha256": "fba99aed22246148949f9761dfaaea7361ff7a3b2e6b7fe0b7372caf0740fb82"
+    },
+    {
+      "path": "web/fixtures/shortlist/pin.json",
+      "change": "present",
+      "sha256": "c22d7e7f7c0ba6d682732ebd0ac32074f2ccc6e394c61079fa6f03c1e7875734"
+    },
+    {
+      "path": "web/fixtures/shortlist/spreadsheet-shortlist-v1.json",
+      "change": "present",
+      "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "bf0d20156a236a038add3700514a41fc79ef13904e0859355b555d600a92626a"
+    },
+    {
+      "path": "web/scripts/build-spreadsheet-shortlist.ts",
+      "change": "present",
+      "sha256": "b765d99ec908165084f4a0a5b1d0c1c4f7ab9eb22b4f875d72ee8cdf693bd157"
+    },
+    {
+      "path": "web/scripts/p9-replacement-closeout.ts",
+      "change": "present",
+      "sha256": "3f5f98b422eac697ae39fda612aa70e8751e9ea20aebeffa1a49d8e1ed0bc95c"
+    },
+    {
+      "path": "web/scripts/plan-rev12-row-source.ts",
+      "change": "present",
+      "sha256": "647e617b1c169f84d8326f2c09a9afeabe0d3ddefa81ea818783d223b2f61515"
+    },
+    {
+      "path": "web/scripts/qa-spreadsheet-shortlist.cjs",
+      "change": "present",
+      "sha256": "389923ec2c841e64bfe0066f520ed29fb2151037681057fd1cbcfcbc752a7059"
+    },
+    {
+      "path": "web/scripts/shortlist-governance.ts",
+      "change": "present",
+      "sha256": "db7dbcff0852688896de65a792e0b8f438931fe3d42deab79ac92783c6c13af0"
+    },
+    {
+      "path": "web/scripts/test-p8f-interview.ts",
+      "change": "present",
+      "sha256": "b502eb68c84f42537c47f0c666902a721d54a59bd9d9d361173ce2db32058ea3"
+    },
+    {
+      "path": "web/scripts/test-spreadsheet-shortlist.ts",
+      "change": "present",
+      "sha256": "1eb3cf789dda75103d9c296a80b1d75be0bfbc813ef534e90d08bfd1bdce7b86"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "9289a588fc47e0321d6c8dc22f1b531f9bad0b48940c4b45eb9075570381747a"
+    },
+    {
+      "path": "web/src/app/api/health/route.ts",
+      "change": "present",
+      "sha256": "03af71a855f04bc1d70aa828ef28fe261638c93c34af10c5bbbb6902efa4498f"
+    },
+    {
+      "path": "web/src/components/InterviewWizard.tsx",
+      "change": "present",
+      "sha256": "16fd3af4e5925415a3911d6a6ab11c7186d0079a6335c0f3f9f78598ba7abafa"
+    },
+    {
+      "path": "web/src/components/ScholarshipBrowser.tsx",
+      "change": "present",
+      "sha256": "8f2592ba498144a90e7e4e11a74b00a7b38c7b571095937d8c95a0b5c35d3870"
+    },
+    {
+      "path": "web/src/lib/spreadsheetShortlist.ts",
+      "change": "present",
+      "sha256": "6d403bfdde12846fd8c837f02ecd6f70cff37fe2ba0e3cb08bee8eecec622987"
+    }
+  ]
+}

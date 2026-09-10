@@ -1,0 +1,93 @@
+{
+  "observedAt": "2026-09-10T18:12:24.757377+00:00",
+  "scope": "Local preparation only; not hosted CI or Production verification",
+  "commands": [
+    {
+      "command": "npm ci --offline --no-audit",
+      "result": "PASS",
+      "detail": "438 packages; unchanged lockfile"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "PASS"
+    },
+    {
+      "command": "npm test",
+      "result": "PASS",
+      "completedAt": "2026-09-10T18:09:41Z",
+      "detail": "Full repository suite; IPC permission retry required"
+    },
+    {
+      "command": "npm run build",
+      "result": "ENVIRONMENT_BLOCKED",
+      "detail": "Turbopack worker port Operation not permitted, same existing restricted-runner limitation"
+    },
+    {
+      "command": "npm run build -- --webpack",
+      "result": "PASS",
+      "completedAt": "2026-09-10T18:07:36Z"
+    },
+    {
+      "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+      "result": "PASS"
+    },
+    {
+      "command": "node --import tsx scripts/test-spreadsheet-shortlist.ts",
+      "result": "PASS",
+      "detail": "Includes additional preference-only ordering and input-order determinism checks after full-suite run"
+    },
+    {
+      "command": "PLAYWRIGHT_MODULE=<installed Playwright module> node web/scripts/qa-spreadsheet-shortlist.cjs",
+      "workingDirectory": "repository root",
+      "result": "PASS",
+      "detail": "Local production build on 127.0.0.1:3213; initial sort-label test locator corrected, no product defect"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "npm run plan:check",
+      "result": "PENDING_ATTESTATION",
+      "detail": "Only new Revision13 manifest/review/direct-child attestation absent before final candidate freeze; current lifecycle, all prior attestations and P9 checks validate."
+    }
+  ],
+  "runtime": {
+    "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "publicationId": "p8m-matching-facts-v1-rev225",
+    "sourceRows": 197,
+    "scholarshipRows": 176,
+    "portalRows": 21,
+    "acceptedMatchingFacts": 0,
+    "runtimeFiles": 32,
+    "runtimeClosureSha256": "3f95a0d04c8b8c5a1b060f218672846b2459457079c311ea5846616f08a64df3",
+    "disabledProductionAdminRoutes": [
+      "src/app/api/admin/extract/route.ts",
+      "src/app/api/admin/push/route.ts"
+    ],
+    "runtimeGoogleCapability": "none",
+    "nonceBoundHealth": true,
+    "productionDependencyGooglePackages": [],
+    "developmentOnlyGooglePackages": [
+      "@google/genai",
+      "googleapis"
+    ],
+    "deploymentConfigFilesChecked": [
+      "next.config.ts",
+      "package.json",
+      "package-lock.json"
+    ],
+    "builtServerTraceInspected": true,
+    "builtServerTraceSha256": "0f3db82897d0619e104442d95ec7f2d53a328605d9adb96680e852fc3dba955c"
+  },
+  "externalEffects": {
+    "spreadsheetReads": 0,
+    "spreadsheetWrites": 0,
+    "officialSourceReads": 0,
+    "publishedCommits": 0,
+    "pullRequests": 0,
+    "deployments": 0,
+    "monitoringActivated": false
+  },
+  "historicalArtifacts": "P9 evidence/manifest/review and complete web/fixtures/p8m tree equal baseline b8ea098 byte-for-byte"
+}

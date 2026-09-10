@@ -1,9 +1,46 @@
 # Current Handoff
 
 Last updated: 2026-09-10
-Plan revision: 12
+Plan revision: 13
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
+
+## Active maintenance — spreadsheet shortlist (authorized delivery pending)
+
+P9 and the program closeout remain complete. The only new work is Plan Revision 13:
+interview-first entry, useful recorded-criteria shortlisting, and exact visible-award
+CSV downloads. Canonical plan section 17 and `docs/evidence/PLAN-REV13.md` govern it.
+Baseline is live `b8ea0982709b1984674e43e39f7ecbf7e42fe7d4` (PR #41 closeout merge).
+All program stages remain accepted with active/next stage pointers null.
+
+- Worktree: `/private/tmp/program_code-shortlist`; local branch
+  `codex/shortlist-spreadsheet-matching`. The original checkout and completed branches
+  are untouched. Final candidate identity is recorded in the new Revision13 manifest.
+- Saved revision-225 source/review inputs produce a separate immutable shortlist:
+  197 source rows, 176 source awards, 21 portals, 16 additional catalog-only awards,
+  49 usable recorded GPA comparisons, and 64 reviewed school comparisons. P8M official
+  facts remain zero and its historical bytes, P9 evidence, candidate, and attestation
+  remain unchanged. Source freshness has not been rechecked.
+- Full tests, typecheck, supported Webpack build, zero-Google source/build-trace tests,
+  generated-artifact checks, and three-viewport browser/download/privacy matrix pass.
+  Exact outcomes: `docs/evidence/PLAN-REV13-verification.json` and
+  `docs/evidence/PLAN-REV13-browser-results.json`. Default Turbopack remains runner-limited.
+- Independent policy and preliminary implementation reviews found C0/H0/M0/L0.
+  `docs/reviews/PLAN-REV13.json`, when present, binds the final candidate review.
+  The new manifest/review/attestation are finalization gates, not missing product work.
+- **Next required action:** finalize and recheck the exact authorized candidate, add
+  only its manifest/review in the direct-child attestation, then push, create the PR,
+  verify CI and Preview, merge, and verify Production health/shortlist digest and
+  student/export journeys. Kelsey directly authorized every named Git/Vercel effect
+  on September 10 for the existing web project; state and Revision 13 evidence bind
+  that grant. Hosted results remain pending and must be recorded in the PR delivery
+  record and subsequent local handoff without claiming success from deployment alone.
+- No sheet/source access, sheet writes, provider settings, monitoring, credentials,
+  external publication, or real applicant answers occurred. Future refresh procedure:
+  `docs/SPREADSHEET-SHORTLIST.md`. Other interview answers currently have no shortlist
+  effect; sensitive nonselection and missing information remain non-excluding.
+- The old P9 delivery-blocker label is stale bookkeeping, not an active blocker and
+  not part of this task. Other old maintenance items remain registered below.
 
 ## P9 and program closeout — PASS
 

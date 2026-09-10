@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 12
+Plan revision: 13
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1551,3 +1551,61 @@ Stage completion reports lead with the outcome and include:
 - exact blockers or unknowns without inflating them into completed work.
 
 Do not claim the overall program complete until P9 is accepted.
+
+
+## 17. Plan Revision 13 — Spreadsheet shortlist maintenance
+
+P9 and the program closeout remain complete. Kelsey's direction to prioritize a
+workable interview, spreadsheet filtering, and downloadable results, followed by
+"continue", authorizes this one local maintenance release and the necessary
+prospective matching-policy adjustment. On September 10, Kelsey separately authorized
+this release's branch push, PR, Vercel Preview, merge, Vercel Production deployment,
+and verification on the existing web project; exact target pins and scope are recorded
+in build state and `docs/evidence/PLAN-REV13.md`.
+
+The bounded input is the already committed Master Database revision 225 snapshot
+(all 197 rows) and its completed P8M human review. No fresh spreadsheet or external
+source access is included. This is a saved spreadsheet snapshot, not a current-sheet
+or official-provider verification claim. Keep every historical publication, candidate,
+manifest, review, attestation, source snapshot, and P9 evidence byte-identical.
+
+A separate immutable `spreadsheet-shortlist-v1` artifact may use explicit numeric
+minimum-GPA cells and resolved human-reviewed school-type tags as recorded criteria.
+Conflicting, ambiguous, absent, unreviewed, or unsupported fields remain unknown.
+Reviewed application-route preferences may affect ordering without excluding awards.
+Do not infer sensitive eligibility from names, keywords, or nonselection. The existing
+38 criteria and other unanswered/unsupported controls remain non-excluding and must
+have an honest no-effect explanation. No new interview fields are required.
+
+This prospectively permits useful spreadsheet-based shortlisting without promoting
+organizer records to officially accepted `matching-facts-v1` facts. A recorded
+mismatch may move an award outside the default shortlist only with a visible reason
+and an always-available outside-shortlist/all-awards view. A recorded fit means only
+that the evaluated recorded criteria fit; it is never a guarantee of eligibility.
+Unknown fields do not cancel other supported comparisons. Catalog-only children
+inherit no parent-row criteria. Preserve all 192 awards and the separate 197-row
+source denominator. Do not invent cycle years, current deadlines, or open status.
+
+Implement this adjustment as one bounded amendment/release. Commit and independently
+review this policy before affected product implementation; freeze and independently
+review the complete final candidate using the existing manifest and direct-child
+attestation process. Local preparation is permitted with false delivery authority and
+an explicit Revision 13 release blocker. That blocker is now satisfied by the direct
+September 10 delivery grant. Final attestation binds the authorized candidate before
+Git/PR publication, Preview, merge, Production deployment, and verification on the
+existing web project. Deployment configuration changes remain outside this release.
+
+Required evidence: complete row/award/unknown reconciliation; source and review hashes;
+field provenance and conflict dispositions; representative lower/higher GPA, different
+school types, undecided school, and missing-data comparisons; exact visible-result CSV
+agreement; edit/reset/reload/privacy checks; keyboard/mobile/desktop browser checks;
+full repository verification and independent review. Publish a clear snapshot date and
+an operator refresh procedure requiring a new bounded snapshot and review. No live
+scheduler, spreadsheet write, new dependency, provider permission, applicant data,
+or credential access is included. Rollback is the unchanged deployed P9 revision.
+
+Historical validation continues to authenticate P9 against its canonical candidate,
+recomputing the frozen deployed runtime closure from Git blobs rather than comparing
+that old deployment with a changed maintenance checkout. Current runtime capability
+checks still run. Revision 12 source validation must continue through later plan
+revisions while preserving its exact historical amendment and source pins.
