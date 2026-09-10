@@ -1,5 +1,6 @@
 'use client';
 
+import { UNSUPPORTED_NOTICE, UNSUPPORTED_SPECIAL_CHOICES } from '@/lib/interviewRelevance';
 import { useEffect, useRef, useState } from 'react';
 import { INTERVIEW_APPLICATION_MODES, InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
 import { SHORTLIST_NOTICE } from '@/lib/spreadsheetShortlist';
@@ -74,6 +75,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel, 
       </div>
       <p className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-4 text-sm leading-6 text-teal-950">Your answers stay only in this page&apos;s temporary memory. They are not saved, sent, logged, added to the address bar, or included in exports.</p>
       <p className="mt-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{syntheticQa ? <><strong>Test fixture:</strong> synthetic accepted facts are enabled only for this development QA route.</> : <>{SHORTLIST_NOTICE}</>}</p>
+      {!syntheticQa && <p className="mt-3 text-sm leading-6 text-slate-600">{UNSUPPORTED_NOTICE}</p>}
       {error && <p id="interview-error" role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 font-bold text-rose-900">{error}</p>}
 
       {step === 0 && <div className="mt-7 space-y-8">
@@ -94,9 +96,9 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel, 
       </div>}
 
       {step === 2 && <div className="mt-7 space-y-8">
-        <p className="text-sm leading-6 text-slate-600">All 38 former special-criteria choices are restored below. Select only what you want to disclose. An unchecked item is unknown, not “no.” Career and athletic choices may only rank results when an accepted award-bound fact exists.</p>
+        <p className="text-sm leading-6 text-slate-600">Select only what you want to disclose. An unchecked item is unknown, not “no.” Supported connections bring relevant awards forward and explain what still needs checking. Additional selections add reasons, not points.</p>
         <SensitiveSkip checked={sensitiveCriteriaSkipped} onChange={setSkipSensitive} />
-        {SPECIAL_CRITERIA_CATEGORIES.map((category) => <CheckboxGroup key={category} legend={category}>{SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => <Choice key={item.id} id={item.controlId} label={item.label} detail={item.detail ?? undefined} checked={selectedCriteria.includes(item.id)} disabled={item.sensitive && sensitiveCriteriaSkipped} onChange={() => { if (item.sensitive) setSensitiveCriteriaSkipped(false); toggle(item.id, selectedCriteria, setSelectedCriteria); }} />)}</CheckboxGroup>)}
+        {SPECIAL_CRITERIA_CATEGORIES.map((category) => <CheckboxGroup key={category} legend={category}>{SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => <Choice key={item.id} id={item.controlId} label={item.label} detail={[item.detail, !syntheticQa && UNSUPPORTED_SPECIAL_CHOICES.some(choice => choice.id === item.id) ? 'No current saved-record connection; this choice has no effect.' : null].filter(Boolean).join(' ') || undefined} checked={selectedCriteria.includes(item.id)} disabled={item.sensitive && sensitiveCriteriaSkipped} onChange={() => { if (item.sensitive) setSensitiveCriteriaSkipped(false); toggle(item.id, selectedCriteria, setSelectedCriteria); }} />)}</CheckboxGroup>)}
       </div>}
 
       {step === 3 && <CheckboxGroup legend="Application formats you prefer" detail="Preferences affect order when the reviewed spreadsheet records a matching application format. They never decide whether you qualify.">{INTERVIEW_APPLICATION_MODES.map((value) => <Choice key={value} id={`application-mode-${value}`} label={applicationModeLabels[value]} checked={preferredApplicationModes.includes(value)} onChange={() => toggle(value, preferredApplicationModes, setPreferredApplicationModes)} />)}</CheckboxGroup>}

@@ -25,7 +25,7 @@ for (const result of results) {
 }
 assert(results[1].counts.knownConflict > results[0].counts.knownConflict,'lower GPA must change the actual shortlist');
 assert.notDeepEqual(results[2].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),results[0].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),'school choice must change results');
-assert.deepEqual(shortlistAwards(catalog.awards,{...base,financialNeed:true,selectedCriteria:['adhd'],sensitiveCriteriaSkipped:false}),results[0],'unsupported sensitive answers cannot alter results');
+assert.deepEqual(shortlistAwards(catalog.awards,{...base,financialNeed:true,selectedCriteria:['adhd'],sensitiveCriteriaSkipped:false}).counts,results[0].counts,'new positive relevance never changes academic decisions/counts');
 assert.deepEqual(shortlistAwards(catalog.awards,{...base,selectedCriteria:[],sensitiveCriteriaSkipped:true}),results[0]);
 const row: ShortlistRow = { sourceRow:2,targetKind:'award',targetId:catalog.awards[0].publicId,minimumGpa:3,schoolTypes:['four_year'],applicationPreference:'offline' };
 const one = (gpa:number,schoolTypes=base.targetSchoolTypes,rows=[row])=>shortlistAwards([catalog.awards[0]],{...base,gpa,targetSchoolTypes:schoolTypes},rows).results[0];

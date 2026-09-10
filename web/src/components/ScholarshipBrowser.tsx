@@ -10,6 +10,7 @@ import {
   type InterviewAnswers,
 } from '@/lib/interviewMatcher';
 import { CURRENT_ACCEPTED_MATCH_FACTS } from '@/lib/p8mMatchingFacts';
+import { UNSUPPORTED_NOTICE } from '@/lib/interviewRelevance';
 import { shortlistAwards, SHORTLIST_NOTICE, type DisplayResult } from '@/lib/spreadsheetShortlist';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
 import {
@@ -294,7 +295,7 @@ export default function ScholarshipBrowser() {
               <button type="button" onClick={resetInterview} className="rounded-xl bg-slate-800 px-4 py-3 font-bold text-white hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300">Reset interview</button>
             </div>
           </div>
-          {!isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">{SHORTLIST_NOTICE}</div>}
+          {!isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">{SHORTLIST_NOTICE}<p className="mt-2">{UNSUPPORTED_NOTICE}</p></div>}
           <dl className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Interview result counts">
             <Count label={isSyntheticMatrix ? "Structured matches" : "Fits recorded criteria"} value={matching.counts.match} emphasis="positive" />
             <Count label={isSyntheticMatrix ? "Possible matches" : "Needs checking"} value={matching.counts.possibleMatch} emphasis="warning" />
@@ -413,7 +414,7 @@ function FilterSelect({ label, value, options, onChange }: { label: string; valu
 
 function AwardCard({ award, result }: { award: StudentAward; result?: DisplayResult }) {
   return (
-    <article className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+    <article data-award-id={award.publicId} className="flex h-full min-w-0 max-w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
       {result && <p className={`mb-4 w-fit rounded-full border px-3 py-1 text-xs font-black uppercase tracking-wide ${decisionStyles[result.decision]}`}>{decisionLabels[result.decision]}</p>}
       <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-start sm:justify-between">
         <h3 className="text-xl font-black leading-snug">{award.name}</h3>
@@ -428,6 +429,7 @@ function AwardCard({ award, result }: { award: StudentAward; result?: DisplayRes
       {result && (
         <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
           <h4 className="font-black text-slate-950">Why this decision</h4>
+          {'relevant' in result && result.relevant && <p className="mt-2 font-bold text-teal-900">Connected to your answers — check the details below</p>}
           <ul className="mt-2 space-y-2 text-sm leading-6 text-slate-700">
             {result.reasons.map((reason, index) => <li key={`${reason.code}-${index}`} className="flex gap-2"><span aria-hidden="true">{reason.kind === 'known_conflict' ? '×' : reason.kind === 'verification_needed' ? '?' : reason.kind === 'preference' ? '◇' : '✓'}</span><span>{reason.message}</span></li>)}
           </ul>

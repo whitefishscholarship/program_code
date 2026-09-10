@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 13,
+  "planRevision": 14,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-10",
   "repository": {
@@ -718,6 +718,22 @@
           "evidencePath": "docs/evidence/PLAN-REV13.md",
           "basis": "After reviewing the bounded spreadsheet shortlist release and its local verification, Kelsey directly stated: I authorize the branch push, PR, Vercel Preview, merge, Vercel Production deployment, and verification on the existing web project.",
           "scope": "Finalize, independently review, attest, push, create the PR, merge, and verify only Plan Revision 13 spreadsheet shortlist maintenance and its resulting Vercel Preview and Production deployments on existing project web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical Production web-two-gules-45.vercel.app. No source-sheet access or mutation, provider configuration or credential changes, monitoring, applicant data, unrelated maintenance, or historical attestation changes."
+        }
+      },
+      {
+        "id": "PLAN-REV14",
+        "status": "attestation-gated",
+        "baselineCommit": "2f517755118bc72570a2aa8b5109a2660e0d9b12",
+        "evidencePath": "docs/evidence/PLAN-REV14.md",
+        "manifestPath": "docs/evidence/PLAN-REV14-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV14.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-10",
+          "evidencePath": "docs/evidence/PLAN-REV14.md",
+          "basis": "Kelsey replied yes on September 10, 2026 to the exact publication question after the tested independently reviewed local candidate was presented. This is new direct release authority.",
+          "scope": "Deliver INTERVIEW-RELEVANCE-1 / PLAN-REV14 only: branch push, PR creation/update, resulting Vercel Preview, merge, resulting Vercel Production deployment and verification on existing project web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Refreeze, independent recheck and direct-child attestation precede publication. Verify Preview before merge and Production afterward. No rollback, source/spreadsheet access or mutation, configuration/permission changes, monitoring, applicant data or unrelated effects."
         }
       }
     ]
