@@ -263,10 +263,10 @@ assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p8f
 if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
 else if (p8fStatus === 'accepted') {
   const p9Status = state.stages.find((stage) => stage.id === 'P9')?.status;
-  assert(['planned', 'active'].includes(p9Status ?? ''));
+  assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p9Status ?? ''));
   assert.deepEqual(
     [state.activeStageId, state.nextPermittedStageId],
-    p9Status === 'planned' ? [null, 'P9'] : ['P9', null],
+    p9Status === 'planned' ? [null, 'P9'] : p9Status === 'accepted' ? [null, null] : ['P9', null],
   );
 }
 else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
