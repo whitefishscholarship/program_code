@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P9",
+  "baselineCommit": "6648652c2d42a663c61de7cc525928c7581a112c",
+  "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+  "publication": {
+    "path": "web/fixtures/p8m/matching-facts-v1.json",
+    "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "runtimeClosureSha256": "4a0bb4bda4077e4eda2c8df7f86edd3dc66592a292cbf8cc9dee636e89cfe373"
+  },
+  "target": {
+    "projectName": "web",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamName": "whitefishscholarship's projects",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "hostname": "web-two-gules-45.vercel.app",
+    "verificationEnvironment": "p9-production-verification"
+  },
+  "environment": {
+    "inspections": [
+      {"observedAt":"2026-09-10T00:59:00.229Z","productionVariableNames":["JWT_SECRET","ADMIN_PASSWORD","RESEND_API_KEY","ADMIN_EMAIL"],"verifiedRemovedNames":["GOOGLE_SERVICE_ACCOUNT_CREDENTIALS","GOOGLE_SHEET_ID"],"fingerprintSha256":"802f4722d2e6172c495e410c5f57a76f21165d98a215284994a11ca9e9684cd8"},
+      {"observedAt":"2026-09-10T01:01:08.224Z","productionVariableNames":["JWT_SECRET","ADMIN_PASSWORD","RESEND_API_KEY","ADMIN_EMAIL"],"verifiedRemovedNames":["GOOGLE_SERVICE_ACCOUNT_CREDENTIALS","GOOGLE_SHEET_ID"],"fingerprintSha256":"802f4722d2e6172c495e410c5f57a76f21165d98a215284994a11ca9e9684cd8"}
+    ],
+    "valuesInspected": false
+  },
+  "runtimeProof": {
+    "sourceAst": "pass",
+    "deploymentConfig": "pass",
+    "productionDependencies": "pass",
+    "builtServerTrace": "pass",
+    "builtServerTraceSha256": "2f081b30b2f179aab05f209074af72d6f1c28189e211f90b15c4450b43b14d0d"
+  },
+  "delivery": {
+    "pullRequest": 40,
+    "previewDeploymentId": "dpl_ByUWkSgdsYWrUr81RnhZpCHSzeuV",
+    "previewRuntimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+    "githubActionsRun": 34419079116,
+    "githubActionsJob": 102690356105,
+    "githubActionsConclusion": "success"
+  },
+  "deployments": {
+    "cleanA": {
+      "id": "dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV",
+      "url": "web-apfjijj84-whitefishscholarships-projects.vercel.app",
+      "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+      "requestedAt": "2026-09-10T00:59:11.659Z",
+      "readyAt": "2026-09-10T01:00:08.000Z",
+      "environmentFingerprintSha256": "802f4722d2e6172c495e410c5f57a76f21165d98a215284994a11ca9e9684cd8",
+      "environment": "production",
+      "ready": true
+    },
+    "cleanB": {
+      "id": "dpl_DbA8ip16ZykyRRWDySj4D344QihV",
+      "url": "web-a5ktnk6f5-whitefishscholarships-projects.vercel.app",
+      "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+      "requestedAt": "2026-09-10T01:01:23.079Z",
+      "readyAt": "2026-09-10T01:02:18.000Z",
+      "environmentFingerprintSha256": "802f4722d2e6172c495e410c5f57a76f21165d98a215284994a11ca9e9684cd8",
+      "environment": "production",
+      "ready": true
+    }
+  },
+  "authenticatedControlPlane": {
+    "interface": "authenticated_vercel_dashboard",
+    "actor": "whitefishscholarship",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "operations": [
+      {"action":"redeploy_promote","fromDeploymentId":"dpl_2CBihvWaNS8FuseytnBqJkjpsUke","toDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","confirmedAt":"2026-09-10T00:59:11.659Z"},
+      {"action":"redeploy_promote","fromDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","toDeploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","confirmedAt":"2026-09-10T01:01:23.079Z"},
+      {"action":"instant_rollback","fromDeploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","toDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","confirmedAt":"2026-09-10T01:03:09.080Z"},
+      {"action":"promote_restore","fromDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","toDeploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","confirmedAt":"2026-09-10T01:03:39.198Z"}
+    ]
+  },
+  "aliasOperations": [
+    {"action":"instant_rollback","fromDeploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","toDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","confirmedBefore":"2026-09-10T01:03:22.460Z"},
+    {"action":"promote_restore","fromDeploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","toDeploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","confirmedBefore":"2026-09-10T01:03:57.090Z"}
+  ],
+  "observations": [
+    {"phase":"cutover","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=8eb135c64f2047dae90123d456ef789a","deploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","nonce":"8eb135c64f2047dae90123d456ef789a","observedAt":"2026-09-10T01:00:56.471Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"pre_rollback","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=9fc246d75a3148ebfa0123e456bc789d","deploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","nonce":"9fc246d75a3148ebfa0123e456bc789d","observedAt":"2026-09-10T01:02:52.801Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"rollback","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=a0d357e86b4249fca1234e567bd890ef","deploymentId":"dpl_Aie7zt6XJKiJj5UcJx6F5h2SZhyV","nonce":"a0d357e86b4249fca1234e567bd890ef","observedAt":"2026-09-10T01:03:22.460Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"restored","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=b1e468f97c534adba2345f678ce901fa","deploymentId":"dpl_DbA8ip16ZykyRRWDySj4D344QihV","nonce":"b1e468f97c534adba2345f678ce901fa","observedAt":"2026-09-10T01:03:57.090Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}}
+  ],
+  "finalSmoke": {
+    "observedAt": "2026-09-10T01:04:30.800Z",
+    "status": 200,
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "unknownCycles": 192,
+    "openCycles": 0,
+    "acceptedMatchingFacts": 0,
+    "root": true,
+    "browseAll192": true,
+    "csvExport192": true,
+    "privateInterview": true
+  }
+}

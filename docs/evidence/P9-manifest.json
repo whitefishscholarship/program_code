@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P9",
+  "createdAt": "2026-09-10T03:10:32Z",
+  "baselineCommit": "6648652c2d42a663c61de7cc525928c7581a112c",
+  "candidateCommit": "1ba8eaf013606bf260b2791cd514a8c6a2392b37",
+  "files": [
+    { "path": ".github/workflows/ci.yml", "change": "present", "sha256": "9a4c539ff494e2d20795429635848fdaf742efb299167284f3b27593325a40a8" },
+    { "path": "docs/BUILD_STATE.json", "change": "present", "sha256": "2956b82a3e7dd3bceca7f404c913f98c7a7c8818f320470fd3d8184a592a2e8f" },
+    { "path": "docs/CURRENT_HANDOFF.md", "change": "present", "sha256": "f4ec08f7bf26a91790a30338753040c66a06ae889f04b103dbf0e81bb63687d2" },
+    { "path": "docs/P9-OPERATIONS.md", "change": "present", "sha256": "edd3043bcd485fed2cf9204dd9ce8a606775d8c0d39c884f14fcf768ac02561c" },
+    { "path": "docs/evidence/P9-deployment.json", "change": "present", "sha256": "57a52413f6a7703ac45b7abee5c0d677810120abc27410130eb5c0c91811a22d" },
+    { "path": "docs/evidence/P9.md", "change": "present", "sha256": "f1ea494ccdec912dd6349dda5e7335beaebce5ca65b8e1c887a4017e26184693" },
+    { "path": "web/package-lock.json", "change": "present", "sha256": "ad7a92a99c1019a5d3ce3bdb84bed519fd1a834ed4fd31a900df4aa0ffcd0765" },
+    { "path": "web/package.json", "change": "present", "sha256": "5f9c3d483306de47b3a7d590e2fdd9b6b29c8cdd36f97053b28a951ad0b9337e" },
+    { "path": "web/scripts/p4-verification.ts", "change": "present", "sha256": "497482f94df81b59478d61edcf65b157da5c3791f63559febc02f6a85495c919" },
+    { "path": "web/scripts/p9-production-runtime.ts", "change": "present", "sha256": "758850b53d7089ee5878581b7c68082065e53939a324fe08f07f60eb1b1cbbd1" },
+    { "path": "web/scripts/p9-replacement-closeout.ts", "change": "present", "sha256": "c746c124836d49f2c710db53f4aab9e7b5bdd4415943e810af8cc1a672597a41" },
+    { "path": "web/scripts/plan-rev12-row-source.ts", "change": "present", "sha256": "edc9b0e7e7e4a9ace4f9613625017c6c34e40c61c7bf277eba6c03b3db96a257" },
+    { "path": "web/scripts/test-p8f-preimplementation.ts", "change": "present", "sha256": "e9d4ac6cc699d9ad039009dea708be2761f2712373313220e09a575a71a2d1e5" },
+    { "path": "web/scripts/test-p9-production-runtime.ts", "change": "present", "sha256": "9557a8742c01306b31c4e0e6eac27a1f5fb3eb02b8a5b33c01cebdf2d4d309f5" },
+    { "path": "web/scripts/test-plan-rev10-governance.ts", "change": "present", "sha256": "373be63758bdeb03d66f3a27e9a53866afa95d757d86e70b7618b2b519ae876d" },
+    { "path": "web/scripts/test-plan-rev11-late-delivery.ts", "change": "present", "sha256": "0189f58615dcc8235b460a128a62aa779e23eebcfc77f63bd782cb5edf8e7c1a" },
+    { "path": "web/scripts/test-plan-rev12-row-source.ts", "change": "present", "sha256": "97ce8ebf568f5446a0cbcaccb9ce91d0b9f539694a1cbbf26ce0ac6a7792cb65" },
+    { "path": "web/scripts/validate-build-plan.ts", "change": "present", "sha256": "96268e970188eac521841d0cbd4576041ddc755700bce3c90a5cb9f8fbf4fc5e" },
+    { "path": "web/src/app/admin/page.tsx", "change": "present", "sha256": "209e133d2d292e46faddea3c67bd445e470d9af1eecd39785c3d091c2bd214be" },
+    { "path": "web/src/app/api/admin/extract/route.ts", "change": "present", "sha256": "cf9a2c6ff2c186bdd867400902a899605df6e8d4082b8c9eb3108db43dfb7d07" },
+    { "path": "web/src/app/api/admin/push/route.ts", "change": "present", "sha256": "7b8690dc386c9ec38f96a1b912f567ea74e1bb6d36e8219f57d1c07acb06b43f" },
+    { "path": "web/src/app/api/health/route.ts", "change": "present", "sha256": "ad36df24d622d9823a89c343f805b9e0cc81a3e32ca3d247435344584ffea986" },
+    { "path": "web/src/app/globals.css", "change": "present", "sha256": "fe41e0e9b84dce25936e7b142a6252915f48da9698039e7328f89cdbcc9ac03e" },
+    { "path": "web/src/app/layout.tsx", "change": "present", "sha256": "2fa0f07078cbf7d885e6bf52734650e3e8e44b05c96e2e58288ae1ddc1d25451" }
+  ]
+}

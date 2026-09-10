@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 12,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-08",
+  "lastUpdated": "2026-09-09",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -245,7 +245,7 @@
         "sourceMode": "validated_immutable_versioned_publication",
         "publicationStatus": "accepted_immutable_versioned_publication",
         "mutableMasterDirectReadAuthorized": false,
-        "runtimeReadAuthorityStatus": "not_authorized",
+        "runtimeReadAuthorityStatus": "authorized_for_digest_pinned_publication",
         "publicationEvidencePath": "docs/evidence/P8M.md",
         "publicationPath": "web/fixtures/p8m/matching-facts-v1.json",
         "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
@@ -254,14 +254,14 @@
         "acceptedFactSha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
         "generatorSha256": "0d59da1df6f55cb62a99b02d964cc22e067a776f7d28516a97a252b3c6286cb0",
         "p8mAcceptanceBindingMode": "derived_from_canonical_manifest_and_direct_child_attestation",
-        "runtimeCommit": null,
-        "providerProjectFingerprintSha256": null,
-        "providerTeamFingerprintSha256": null,
-        "canonicalProductionHostnameSha256": null,
-        "verificationEnvironmentFingerprintSha256": null,
-        "runtimeReadAuthorityEvidencePath": null,
-        "deploymentOwner": null,
-        "rollbackOwner": null,
+        "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+        "providerProjectFingerprintSha256": "ca64aa6ca87036c311b2fa3e412a7794fb848fd88dc82b8c6054d5ca0905cfe4",
+        "providerTeamFingerprintSha256": "f4317b9fab487e672aa1939c939c44a8a0c654f0c785112b3ab40106bed3f9e3",
+        "canonicalProductionHostnameSha256": "b1eb88bf68716ce612a9a4f559614a90027ad5d2373d6a803b5d1a21246de075",
+        "verificationEnvironmentFingerprintSha256": "c5b24e83bbfdfa64d9734aa853cce72ad4ebdadcf2278c5f11e314e6fd886800",
+        "runtimeReadAuthorityEvidencePath": "docs/evidence/P9.md",
+        "deploymentOwner": "Kelsey Stuart",
+        "rollbackOwner": "Kelsey Stuart",
         "historicalP9IdentityPinStatus": "retired_unstarted_by_PLAN_REV10",
         "requiredPublicationPins": [
           "publication_path",
@@ -424,12 +424,12 @@
       },
       {
         "stageId": "P9",
-        "authorized": false,
-        "authorizedBy": null,
-        "authorizedAt": null,
-        "evidencePath": null,
-        "basis": "On 2026-09-01 the user explicitly authorized Plan Revision 10 to prospectively supersede, without deleting or rewriting historical evidence, the former Google-spreadsheet P9 operational authority and validator path. The Revision 7 authority remains immutable history but is non-operative for replacement P9.",
-        "scope": "No replacement P9 action is authorized. A later direct informed instruction must name the exact accepted publication, runtime commit and zero-spreadsheet capability, provider project/team/hostname/environment, deployment and rollback owners, Git delivery, and resulting Vercel effects."
+        "authorized": true,
+        "authorizedBy": "Kelsey Stuart",
+        "authorizedAt": "2026-09-09",
+        "evidencePath": "docs/evidence/P9.md",
+        "basis": "On 2026-09-09 the user directly authorized replacement P9 from exact baseline 6648652c2d42a663c61de7cc525928c7581a112c, bound the accepted immutable P8M publication and exact Vercel project, team, canonical Production hostname, protected verification environment, and owners, and required zero Google, Drive, or Sheets runtime credentials or capability.",
+        "scope": "Implement and verify P9 only; create and protect p9-production-verification; establish narrowly scoped verification credentials only if required; remove GOOGLE_SERVICE_ACCOUNT_CREDENTIALS from Vercel Production; push the governed branch and create a pull request with resulting Preview effects; merge to main with resulting Production deployment; perform smoke, configuration rollback, restored deployment, and program closeout. No spreadsheet or public-source access, spreadsheet mutation, provider-permission change, unrelated configuration change, monitoring activation, or applicant-data access is authorized."
       }
     ],
     "deliveryIntegrations": [
@@ -466,7 +466,7 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-awaits-direct-immutable-publication-runtime-target-deployment-authority"
+      "P9-attestation-and-delivery-pending"
     ]
   },
   "governance": {
@@ -707,7 +707,7 @@
     ]
   },
   "activeStageId": null,
-  "nextPermittedStageId": "P9",
+  "nextPermittedStageId": null,
   "stages": [
     {
       "id": "P0",
@@ -832,8 +832,8 @@
     {
       "id": "P9",
       "name": "Production migration, deployment, and closeout",
-      "status": "planned",
-      "baselineCommit": null,
+      "status": "accepted",
+      "baselineCommit": "6648652c2d42a663c61de7cc525928c7581a112c",
       "evidencePath": "docs/evidence/P9.md",
       "manifestPath": "docs/evidence/P9-manifest.json",
       "reviewPath": "docs/reviews/P9.json",

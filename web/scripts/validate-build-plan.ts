@@ -53,6 +53,8 @@ import {
   validateP9PostCutoverReceiptV2,
 } from './p9-evidence-v2';
 import { validatePlanRev10Lifecycle } from './plan-rev10-lifecycle';
+import { validateP9ProductionRuntime } from './p9-production-runtime';
+import { validateP9ReplacementEvidenceAtRepo } from './p9-replacement-closeout';
 import {
   PLAN_REV11_CONTINUATION_PATHS,
   validatePlanRev11LateDelivery,
@@ -1473,6 +1475,7 @@ if (state) {
         organizerMaster: state.dataAuthority.sourceTransition.organizerMaster,
         p8mAuthorization,
         p8mStatus: state.stages.find((item) => item.id === 'P8M')?.status,
+        p9Status: state.stages.find((item) => item.id === 'P9')?.status,
         activeStageId: state.activeStageId,
         nextPermittedStageId: state.nextPermittedStageId,
         deliveryBlockers: state.deployment.deliveryBlockers,
@@ -2294,6 +2297,39 @@ if (state) {
     ) {
       fail('Planned replacement P9 must remain unauthorized');
     }
+    if (p9?.status === 'verified' || p9?.status === 'accepted') {
+      const runtime = state.dataAuthority.sourceTransition?.applicationRuntime;
+      if (
+        !p9.baselineCommit ||
+        !runtime?.runtimeCommit ||
+        !runtime.publicationSha256 ||
+        !runtime.providerProjectFingerprintSha256 ||
+        !runtime.providerTeamFingerprintSha256 ||
+        !runtime.canonicalProductionHostnameSha256 ||
+        !runtime.verificationEnvironmentFingerprintSha256
+      ) {
+        fail('Verified replacement P9 requires complete baseline, runtime, publication, and provider pins');
+      } else {
+        let runtimeReceipt;
+        try {
+          runtimeReceipt = validateP9ProductionRuntime();
+        } catch (error) {
+          fail(`P9 production runtime validation failed: ${(error as Error).message}`);
+        }
+        if (runtimeReceipt) {
+          for (const error of validateP9ReplacementEvidenceAtRepo(repoRoot, {
+            baselineCommit: p9.baselineCommit,
+            runtimeCommit: runtime.runtimeCommit,
+            publicationSha256: runtime.publicationSha256,
+            runtimeClosureSha256: runtimeReceipt.runtimeClosureSha256,
+            projectFingerprintSha256: runtime.providerProjectFingerprintSha256,
+            teamFingerprintSha256: runtime.providerTeamFingerprintSha256,
+            hostnameFingerprintSha256: runtime.canonicalProductionHostnameSha256,
+            verificationEnvironmentFingerprintSha256: runtime.verificationEnvironmentFingerprintSha256,
+          })) fail(error);
+        }
+      }
+    }
   }
   if (state.planRevision >= 7) {
     const attestedRevision7 = historicallyAttestedPlanAmendments.get('PLAN-REV7');
@@ -2526,11 +2562,14 @@ if (state) {
           fail('P9 Plan Revision 7 delivery authorization cannot be deleted, disabled, or changed');
         }
       } else if (
-        p9DeliveryAuthorization?.authorized !== false ||
-        p9DeliveryAuthorization.authorizedBy !== null ||
-        p9DeliveryAuthorization.authorizedAt !== null ||
-        p9DeliveryAuthorization.evidencePath !== null ||
-        !p9DeliveryAuthorization.basis.includes('prospectively supersede')
+        !p9MayUseProduction &&
+        (
+          p9DeliveryAuthorization?.authorized !== false ||
+          p9DeliveryAuthorization.authorizedBy !== null ||
+          p9DeliveryAuthorization.authorizedAt !== null ||
+          p9DeliveryAuthorization.evidencePath !== null ||
+          !p9DeliveryAuthorization.basis.includes('prospectively supersede')
+        )
       ) {
         fail('Plan Revision 10 requires the former P9 delivery authority to remain historical and replacement P9 to be unauthorized');
       }

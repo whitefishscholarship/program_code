@@ -124,6 +124,7 @@ export type PlanRev12ValidationContext = {
   organizerMaster: OrganizerMaster;
   p8mAuthorization: P8mAuthorization | undefined;
   p8mStatus: string | undefined;
+  p9Status: string | undefined;
   activeStageId: string | null;
   nextPermittedStageId: string | null;
   deliveryBlockers: string[];
@@ -202,7 +203,8 @@ export function validatePlanRev12RowSource(
     const accepted = context.p8mStatus === 'accepted';
     const acceptedP8mStagePositionIsValid =
       (context.activeStageId === null && ['P8F', 'P9'].includes(context.nextPermittedStageId ?? '')) ||
-      (context.activeStageId === 'P8F' && context.nextPermittedStageId === null);
+      (['P8F', 'P9'].includes(context.activeStageId ?? '') && context.nextPermittedStageId === null) ||
+      (context.p9Status === 'accepted' && context.activeStageId === null && context.nextPermittedStageId === null);
     if (
       (accepted && !acceptedP8mStagePositionIsValid) ||
       (!accepted && (context.activeStageId !== 'P8M' || context.nextPermittedStageId !== null))

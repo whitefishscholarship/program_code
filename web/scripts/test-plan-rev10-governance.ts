@@ -75,6 +75,7 @@ type BuildState = {
         mutableMasterDirectReadAuthorized: boolean;
         publicationEvidencePath: string;
         p8mAcceptanceBindingMode: string;
+        runtimeReadAuthorityEvidencePath: string | null;
         requiredPublicationPins: string[];
         pinOwnership: { P8M: string[]; P9: string[] };
       };
@@ -193,9 +194,15 @@ assert.deepEqual(p8m, {
 const p8fStatus = state.stages.find(({ id }) => id === 'P8F')?.status;
 assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p8fStatus ?? ''));
 if (p8fStatus === 'planned') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P8F']);
-else if (p8fStatus === 'accepted') assert.deepEqual([state.activeStageId, state.nextPermittedStageId], [null, 'P9']);
+else if (p8fStatus === 'accepted') {
+  const p9Status = state.stages.find(({ id }) => id === 'P9')?.status;
+  assert(['planned', 'active', 'implemented', 'verified', 'accepted'].includes(p9Status ?? ''));
+  assert.deepEqual(
+    [state.activeStageId, state.nextPermittedStageId],
+    p9Status === 'planned' ? [null, 'P9'] : p9Status === 'accepted' ? [null, null] : ['P9', null],
+  );
+}
 else assert.deepEqual([state.activeStageId, state.nextPermittedStageId], ['P8F', null]);
-assert.equal(state.stages.find(({ id }) => id === 'P9')?.status, 'planned');
 
 const transition = state.dataAuthority.sourceTransition;
 assert(transition, 'BUILD_STATE must define the Revision 10 source transition');
@@ -263,6 +270,15 @@ plannedLifecycle.applicationRuntime.publicationSchemaVersion = null;
 plannedLifecycle.applicationRuntime.sourceMasterRevision = null;
 plannedLifecycle.applicationRuntime.acceptedFactSha256 = null;
 plannedLifecycle.applicationRuntime.generatorSha256 = null;
+plannedLifecycle.applicationRuntime.runtimeReadAuthorityStatus = 'not_authorized';
+plannedLifecycle.applicationRuntime.runtimeCommit = null;
+plannedLifecycle.applicationRuntime.providerProjectFingerprintSha256 = null;
+plannedLifecycle.applicationRuntime.providerTeamFingerprintSha256 = null;
+plannedLifecycle.applicationRuntime.canonicalProductionHostnameSha256 = null;
+plannedLifecycle.applicationRuntime.verificationEnvironmentFingerprintSha256 = null;
+plannedLifecycle.applicationRuntime.runtimeReadAuthorityEvidencePath = null;
+plannedLifecycle.applicationRuntime.deploymentOwner = null;
+plannedLifecycle.applicationRuntime.rollbackOwner = null;
 assert.deepEqual(validatePlanRev10Lifecycle(plannedLifecycle, 'planned', 'planned'), []);
 assert(
   validatePlanRev10Lifecycle(plannedLifecycle, 'accepted', 'planned').some((error) =>
@@ -372,9 +388,24 @@ assert.equal(
 const p9Authorization = state.deployment.stageMergeAuthorizations.find(
   ({ stageId }) => stageId === 'P9',
 );
-assert.equal(p9Authorization?.authorized, false);
-assert.equal(p9Authorization?.evidencePath, null);
-assert(p9Authorization?.basis.includes('prospectively supersede'));
+const p9Stage = state.stages.find(({ id }) => id === 'P9');
+assert(p9Stage, 'P9 stage record missing');
+if (p9Stage?.status === 'planned') {
+  assert.equal(p9Authorization?.authorized, false);
+  assert.equal(p9Authorization?.evidencePath, null);
+  assert(p9Authorization?.basis.includes('prospectively supersede'));
+} else {
+  assert(['active', 'implemented', 'verified', 'accepted'].includes(p9Stage?.status ?? ''));
+  assert.equal(p9Stage.baselineCommit, '6648652c2d42a663c61de7cc525928c7581a112c');
+  assert.equal(p9Authorization?.authorized, true);
+  assert.equal(p9Authorization?.authorizedBy, 'Kelsey Stuart');
+  assert.equal(p9Authorization?.authorizedAt, '2026-09-09');
+  assert.equal(p9Authorization?.evidencePath, 'docs/evidence/P9.md');
+  assert.equal(
+    transition.applicationRuntime.runtimeReadAuthorityEvidencePath,
+    'docs/evidence/P9.md',
+  );
+}
 
 const rev10 = state.governance.planAmendments.find(({ id }) => id === 'PLAN-REV10');
 assert(rev10, 'PLAN-REV10 amendment record missing');
