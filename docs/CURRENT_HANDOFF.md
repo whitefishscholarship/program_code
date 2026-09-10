@@ -18,16 +18,22 @@ Default branch: `main`
 - GitHub CI and Vercel build pass. Nonce-bound Production health, API, browser,
   192-award browse, CSV export, and private-interview smoke pass on
   `web-two-gules-45.vercel.app`.
-- The controlled rollback from `dpl_BoJHUfGBDNKWJ2f4EFYYNoQ3d5Xg` to prior
-  zero-capability deployment `dpl_AvNeh4SMz5MCcsnVC13tjPbawLEJ`, followed by
-  restoration to `dpl_BoJH...`, passed with exact nonce, runtime, publication, and
-  capability bindings. The legacy baseline was not restored because it could revive
-  forbidden Google capability.
+- Production environment names were inspected without revealing values. Both
+  `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` and `GOOGLE_SHEET_ID` are absent. The final
+  controlled rollback moved the canonical hostname from clean deployment
+  `dpl_2CBihvWaNS8FuseytnBqJkjpsUke` to clean deployment
+  `dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6`, then restored `dpl_2CBi...`; all four ordered
+  observations returned HTTP 200 with unique nonces and exact runtime/publication pins.
 - Finish only the required gates: final matrix, fresh-context read-only review,
   accepted-state recheck, complete manifest, direct-child two-file attestation, PR
   merge, and final main Production smoke recorded in the PR delivery record.
 - The unrelated local one-file closeout at `7d92f018...` remains unpublished and must
   not be included.
+
+## Historical context below — non-operative
+
+Everything below this heading is retained only as earlier-stage history. It does not
+override the current P9 continuation above.
 
 ## P8F — accepted implementation candidate; direct-child attestation pending
 

@@ -23,6 +23,15 @@ const forbiddenRuntimePatterns = [
   /\/auth\/spreadsheets/,
   /\.spreadsheets\.values\./,
 ] as const;
+const forbiddenBuiltRuntimePatterns = [
+  ...forbiddenRuntimePatterns,
+  /googleapis/,
+  /google-auth-library/,
+  /@google-cloud\//,
+] as const;
+
+const forbiddenPackageRoots = ['googleapis', 'google-auth-library', '@google/genai', '@google-cloud/'] as const;
+const forbiddenEnvironmentName = /(google|gcp|drive|sheets?|spreadsheet|service_account)/i;
 
 const sourceExtensions = ['.ts', '.tsx', '.js', '.jsx', '.json', '.css'] as const;
 
@@ -81,10 +90,82 @@ export function runtimeClosure(): string[] {
   return [...visited].sort();
 }
 
-export function forbiddenRuntimeCapabilities(source: string): string[] {
-  return forbiddenRuntimePatterns
+function forbiddenModuleSpecifier(specifier: string): boolean {
+  return forbiddenPackageRoots.some((root) =>
+    root.endsWith('/') ? specifier.startsWith(root) : specifier === root || specifier.startsWith(`${root}/`),
+  );
+}
+
+export function forbiddenRuntimeCapabilities(source: string, fileName = 'probe.ts'): string[] {
+  const violations = forbiddenRuntimePatterns
     .filter((pattern) => pattern.test(source))
     .map((pattern) => pattern.source);
+  const sourceFile = ts.createSourceFile(fileName, source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+  const localNetworkTargets = new Set<string>();
+  const moduleSpecifier = (node: ts.Expression | undefined): string | null =>
+    node && (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) ? node.text : null;
+  const onlyLocalNetworkValues = (node: ts.Expression): boolean => {
+    const literal = moduleSpecifier(node);
+    if (literal !== null) return literal.startsWith('/');
+    return ts.isConditionalExpression(node) && onlyLocalNetworkValues(node.whenTrue) && onlyLocalNetworkValues(node.whenFalse);
+  };
+  const collectLocalNetworkTargets = (node: ts.Node): void => {
+    if (ts.isVariableStatement(node) && (node.declarationList.flags & ts.NodeFlags.Const)) {
+      for (const declaration of node.declarationList.declarations) {
+        if (ts.isIdentifier(declaration.name) && declaration.initializer && onlyLocalNetworkValues(declaration.initializer)) {
+          localNetworkTargets.add(declaration.name.text);
+        }
+      }
+    }
+    ts.forEachChild(node, collectLocalNetworkTargets);
+  };
+  collectLocalNetworkTargets(sourceFile);
+  const visit = (node: ts.Node): void => {
+    if ((ts.isImportDeclaration(node) || ts.isExportDeclaration(node)) && node.moduleSpecifier) {
+      const specifier = moduleSpecifier(node.moduleSpecifier);
+      if (specifier && forbiddenModuleSpecifier(specifier)) violations.push(`forbidden-module:${specifier}`);
+    }
+    if (ts.isImportEqualsDeclaration(node) && ts.isExternalModuleReference(node.moduleReference)) {
+      const specifier = moduleSpecifier(node.moduleReference.expression);
+      if (specifier && forbiddenModuleSpecifier(specifier)) violations.push(`forbidden-module:${specifier}`);
+    }
+    if (ts.isCallExpression(node)) {
+      const isDynamicImport = node.expression.kind === ts.SyntaxKind.ImportKeyword;
+      const isRequire = ts.isIdentifier(node.expression) && node.expression.text === 'require';
+      if (isDynamicImport || isRequire) {
+        const specifier = moduleSpecifier(node.arguments[0]);
+        if (specifier === null) violations.push('computed-module-specifier');
+        else if (forbiddenModuleSpecifier(specifier)) violations.push(`forbidden-module:${specifier}`);
+      }
+      if (ts.isIdentifier(node.expression) && node.expression.text === 'fetch') {
+        const target = moduleSpecifier(node.arguments[0]);
+        if (target === null && !(node.arguments[0] && ts.isIdentifier(node.arguments[0]) && localNetworkTargets.has(node.arguments[0].text))) violations.push('computed-network-target');
+        else if (target !== null && /^https?:\/\//i.test(target)) violations.push(`external-network-target:${target}`);
+      }
+    }
+    if (
+      ts.isPropertyAccessExpression(node) &&
+      ts.isPropertyAccessExpression(node.expression) &&
+      ts.isIdentifier(node.expression.expression) &&
+      node.expression.expression.text === 'process' &&
+      node.expression.name.text === 'env' &&
+      forbiddenEnvironmentName.test(node.name.text)
+    ) violations.push(`forbidden-environment:${node.name.text}`);
+    if (
+      ts.isElementAccessExpression(node) &&
+      ts.isPropertyAccessExpression(node.expression) &&
+      ts.isIdentifier(node.expression.expression) &&
+      node.expression.expression.text === 'process' &&
+      node.expression.name.text === 'env'
+    ) {
+      const name = moduleSpecifier(node.argumentExpression);
+      if (name === null) violations.push('computed-environment-name');
+      else if (forbiddenEnvironmentName.test(name)) violations.push(`forbidden-environment:${name}`);
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sourceFile);
+  return [...new Set(violations)];
 }
 
 export type P9RuntimeReceipt = {
@@ -99,6 +180,9 @@ export type P9RuntimeReceipt = {
   disabledProductionAdminRoutes: string[];
   runtimeGoogleCapability: 'none';
   nonceBoundHealth: true;
+  productionDependencyGooglePackages: string[];
+  developmentOnlyGooglePackages: string[];
+  deploymentConfigFilesChecked: string[];
 };
 
 export function validateP9ProductionRuntime(): P9RuntimeReceipt {
@@ -128,17 +212,18 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
 
   const packageJson = JSON.parse(fs.readFileSync(path.join(webRoot, 'package.json'), 'utf8')) as {
     dependencies?: Record<string, string>;
+    devDependencies?: Record<string, string>;
   };
-  for (const dependency of ['googleapis', '@google/genai']) {
-    if (packageJson.dependencies?.[dependency]) {
-      throw new Error(`${dependency} must not be a production runtime dependency`);
-    }
+  const productionDependencyGooglePackages = Object.keys(packageJson.dependencies ?? {}).filter(forbiddenModuleSpecifier);
+  if (productionDependencyGooglePackages.length > 0) {
+    throw new Error(`${productionDependencyGooglePackages.join(', ')} must not be production runtime dependencies`);
   }
+  const developmentOnlyGooglePackages = Object.keys(packageJson.devDependencies ?? {}).filter(forbiddenModuleSpecifier).sort();
 
   const closure = runtimeClosure();
   const violations = closure.flatMap((file) => {
     if (!/\.(?:ts|tsx|js|jsx)$/.test(file)) return [];
-    return forbiddenRuntimeCapabilities(fs.readFileSync(file, 'utf8')).map(
+    return forbiddenRuntimeCapabilities(fs.readFileSync(file, 'utf8'), file).map(
       (pattern) => `${path.relative(webRoot, file)}:${pattern}`,
     );
   });
@@ -147,6 +232,21 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
   }
   if (!closure.includes(publicationPath)) {
     throw new Error('The exact P8M publication is not in the deployed runtime closure');
+  }
+
+  const deploymentConfigFilesChecked = ['next.config.ts', 'package.json', 'package-lock.json']
+    .filter((relative) => fs.existsSync(path.join(webRoot, relative)));
+  for (const relative of deploymentConfigFilesChecked) {
+    const configViolations = forbiddenRuntimePatterns.filter((pattern) => pattern.test(fs.readFileSync(path.join(webRoot, relative), 'utf8')));
+    if (configViolations.length > 0) throw new Error(`Forbidden deployment configuration capability in ${relative}`);
+  }
+
+  const builtServerRoot = path.join(webRoot, '.next', 'server');
+  if (fs.existsSync(builtServerRoot)) {
+    const builtViolations = walk(builtServerRoot)
+      .filter((file) => /\.(?:js|mjs|cjs|json)$/.test(file))
+      .flatMap((file) => forbiddenBuiltRuntimePatterns.filter((pattern) => pattern.test(fs.readFileSync(file, 'utf8'))).map((pattern) => `${path.relative(webRoot, file)}:${pattern.source}`));
+    if (builtViolations.length > 0) throw new Error(`Forbidden capability in traced production bundle: ${builtViolations.join(', ')}`);
   }
 
   const disabledProductionAdminRoutes = [
@@ -185,6 +285,9 @@ export function validateP9ProductionRuntime(): P9RuntimeReceipt {
     disabledProductionAdminRoutes,
     runtimeGoogleCapability: 'none',
     nonceBoundHealth: true,
+    productionDependencyGooglePackages,
+    developmentOnlyGooglePackages,
+    deploymentConfigFilesChecked,
   };
 }
 

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stageId": "P9",
+  "baselineCommit": "6648652c2d42a663c61de7cc525928c7581a112c",
+  "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+  "publication": {
+    "path": "web/fixtures/p8m/matching-facts-v1.json",
+    "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "runtimeClosureSha256": "4a0bb4bda4077e4eda2c8df7f86edd3dc66592a292cbf8cc9dee636e89cfe373"
+  },
+  "target": {
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "hostname": "web-two-gules-45.vercel.app",
+    "verificationEnvironment": "p9-production-verification"
+  },
+  "environment": {
+    "productionVariableNames": ["JWT_SECRET", "ADMIN_PASSWORD", "RESEND_API_KEY", "ADMIN_EMAIL"],
+    "verifiedRemovedNames": ["GOOGLE_SERVICE_ACCOUNT_CREDENTIALS", "GOOGLE_SHEET_ID"],
+    "verifiedAbsentAt": "2026-09-10T00:36:30Z",
+    "valuesInspected": false
+  },
+  "runtimeProof": {
+    "sourceAst": "pass",
+    "deploymentConfig": "pass",
+    "productionDependencies": "pass",
+    "builtServerTrace": "pass"
+  },
+  "deployments": {
+    "cleanA": {
+      "id": "dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6",
+      "url": "web-oh7ymxqt3-whitefishscholarships-projects.vercel.app",
+      "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+      "ready": true
+    },
+    "cleanB": {
+      "id": "dpl_2CBihvWaNS8FuseytnBqJkjpsUke",
+      "url": "web-882fdo0py-whitefishscholarships-projects.vercel.app",
+      "runtimeCommit": "729d39b02b3462e6365648d19317bfc1ef249982",
+      "ready": true
+    }
+  },
+  "aliasOperations": [
+    {"action":"instant_rollback","fromDeploymentId":"dpl_2CBihvWaNS8FuseytnBqJkjpsUke","toDeploymentId":"dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6","confirmedBefore":"2026-09-10T00:35:09.997Z"},
+    {"action":"promote_restore","fromDeploymentId":"dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6","toDeploymentId":"dpl_2CBihvWaNS8FuseytnBqJkjpsUke","confirmedBefore":"2026-09-10T00:35:51.024Z"}
+  ],
+  "observations": [
+    {"phase":"cutover","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=4a7c91e20b8d43f6a1c5e7d902ab3456","deploymentId":"dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6","nonce":"4a7c91e20b8d43f6a1c5e7d902ab3456","observedAt":"2026-09-10T00:31:46.304Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"pre_rollback","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=5b8d02f31c9e44a7b6d8f0a123bc4567","deploymentId":"dpl_2CBihvWaNS8FuseytnBqJkjpsUke","nonce":"5b8d02f31c9e44a7b6d8f0a123bc4567","observedAt":"2026-09-10T00:34:08.210Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"rollback","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=6c9e13a42d0f45b8c7e901b234cd5678","deploymentId":"dpl_HG4oeKg4fjyq3URBAurC9eSnhSV6","nonce":"6c9e13a42d0f45b8c7e901b234cd5678","observedAt":"2026-09-10T00:35:09.997Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}},
+    {"phase":"restored","requestMethod":"GET","requestUrl":"https://web-two-gules-45.vercel.app/api/health?nonce=7da024b53e1f46c9d8f012c345de6789","deploymentId":"dpl_2CBihvWaNS8FuseytnBqJkjpsUke","nonce":"7da024b53e1f46c9d8f012c345de6789","observedAt":"2026-09-10T00:35:51.024Z","status":200,"ok":true,"env":"production","runtimeCommit":"729d39b02b3462e6365648d19317bfc1ef249982","publicationSha256":"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07","capabilities":{"google":"none","drive":"none","sheets":"none"}}
+  ],
+  "finalSmoke": {
+    "observedAt": "2026-09-10T00:37:23.460Z",
+    "status": 200,
+    "sources": 217,
+    "portals": 21,
+    "awards": 192,
+    "applicationGroups": 4,
+    "cycles": 192,
+    "unknownCycles": 192,
+    "openCycles": 0,
+    "acceptedMatchingFacts": 0,
+    "root": true,
+    "browseAll192": true,
+    "csvExport192": true,
+    "privateInterview": true
+  }
+}
