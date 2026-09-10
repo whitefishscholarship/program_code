@@ -57,7 +57,9 @@ merge `b8ea0982709b1984674e43e39f7ecbf7e42fe7d4`. Restoring a deployment is an e
 effect requiring its exact authorization. Local development and browser results do
 not prove Production health.
 
-Revision 13 is prepared locally. Before publication, record direct authority for
-branch push, PR, resulting Vercel Preview, merge, resulting Vercel Production, and
-verification, or verify suppression covering every effect. Then freeze and recheck
-the authorized candidate and add the exact two-file direct-child attestation.
+Kelsey directly authorized Revision 13 branch push, PR, resulting Vercel Preview,
+merge, resulting Vercel Production, and verification on September 10 for the existing
+web project. Build state and Revision 13 evidence pin the target and scope. Freeze
+and independently recheck the authorized candidate, add the exact two-file
+direct-child attestation, then deliver and verify the real deployed flow. Hosted
+results belong in the PR delivery record and subsequent local handoff.

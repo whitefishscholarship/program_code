@@ -2,7 +2,7 @@
 
 Date: 2026-09-10
 Baseline: `b8ea0982709b1984674e43e39f7ecbf7e42fe7d4`
-Status: local implementation verified; final candidate review and release authority pending
+Status: local implementation verified; exact delivery authority recorded; final authorized candidate review and hosted delivery pending
 
 ## Authority
 
@@ -26,8 +26,8 @@ No original accepted artifact is to be modified.
 Policy review precedes implementation. Final evidence will record complete input
 hashes and row/award reconciliation, conflict handling, sample-profile result counts,
 exact CSV equality, privacy/edit/reset/reload, mobile and desktop browser results,
-full repository commands, and independent final-candidate review. No scholarship
-source or sheet access, writes, provider changes, publication, or monitoring occurs.
+full repository commands, and independent final-candidate review. Local preparation included no scholarship
+source or sheet access, writes, provider changes, publication, or monitoring.
 
 ## Policy review and data scope
 
@@ -79,8 +79,8 @@ Production smoke have not run for this local release.
 Fresh-context reviewer `/root/shortlist_implementation_review` performed an independent
 implementation review at C0/H0/M0/L0 and reproduced the focused tests. Final review
 will bind the immutable candidate through the new manifest and review paths; those
-records, when present, carry the exact outcome. Final attestation/publication remain
-blocked on exact Git/Vercel authority or verified suppression.
+records, when present, carry the exact outcome. The subsequent direct delivery grant
+below resolves the publication-authority boundary before final attestation.
 
 ## Remaining limits and next action
 
@@ -89,8 +89,20 @@ current eligibility and open-cycle status remain unverified. Other interview con
 have no current shortlist effect. All 16 catalog-only awards remain available without
 inherited rules. The refresh process is `docs/SPREADSHEET-SHORTLIST.md`.
 
-The only pending decision for release is authority for branch push, PR, Vercel Preview,
-merge, Vercel Production, and verification on the existing P9 project/team/domain, or
-verified suppression. Do not infer it from this local implementation. Record that
-boundary before the final authorized candidate recheck and two-file attestation.
+On September 10, after local implementation and independent review, Kelsey stated:
+
+> I authorize the branch push, PR, Vercel Preview, merge, Vercel Production deployment, and verification on the existing web project.
+
+This direct grant covers only this bounded Revision 13 release on Vercel project
+`web` (`prj_LbefE2deji6nPND6iBiuofe7IABv`), team
+`team_6CAjRq58n0WvAH49otKSQbA7`, canonical Production
+`web-two-gules-45.vercel.app`. Existing Git integration can create Preview deployments
+for branch/PR revisions and Production for main revisions; both effects are explicitly
+authorized. No deployment suppression is claimed. No provider configuration, source
+access or mutation, monitoring, credentials, applicant data, or unrelated maintenance
+is included. Baseline main was reverified unchanged as `b8ea098...` before recording
+this authority. Freeze and independently recheck the exact authorized candidate, add
+its direct-child two-file attestation, then deliver under CI and verify provider Git
+identity, nonce-bound health and shortlist digest, and synthetic browser/CSV flow.
+Hosted evidence will be recorded in the release PR and subsequent local handoff.
 The historical P9 stale blocker and unrelated maintenance remain unchanged.

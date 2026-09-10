@@ -5,7 +5,7 @@ Plan revision: 13
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Active maintenance — spreadsheet shortlist (local verified candidate)
+## Active maintenance — spreadsheet shortlist (authorized delivery pending)
 
 P9 and the program closeout remain complete. The only new work is Plan Revision 13:
 interview-first entry, useful recorded-criteria shortlisting, and exact visible-award
@@ -28,12 +28,13 @@ All program stages remain accepted with active/next stage pointers null.
 - Independent policy and preliminary implementation reviews found C0/H0/M0/L0.
   `docs/reviews/PLAN-REV13.json`, when present, binds the final candidate review.
   The new manifest/review/attestation are finalization gates, not missing product work.
-- **Next required action:** obtain exact authority for this branch push, PR, Vercel
-  Preview, merge, Vercel Production, and verification on the existing P9 target, or
-  verify deployment suppression. None is currently authorized or verified. Record
-  authority in state/evidence, refreeze/recheck that exact authorized candidate, add
-  only its manifest/review in the direct-child attestation, then deliver and verify
-  exact CI plus deployed health/shortlist digest and student/export journeys.
+- **Next required action:** finalize and recheck the exact authorized candidate, add
+  only its manifest/review in the direct-child attestation, then push, create the PR,
+  verify CI and Preview, merge, and verify Production health/shortlist digest and
+  student/export journeys. Kelsey directly authorized every named Git/Vercel effect
+  on September 10 for the existing web project; state and Revision 13 evidence bind
+  that grant. Hosted results remain pending and must be recorded in the PR delivery
+  record and subsequent local handoff without claiming success from deployment alone.
 - No sheet/source access, sheet writes, provider settings, monitoring, credentials,
   external publication, or real applicant answers occurred. Future refresh procedure:
   `docs/SPREADSHEET-SHORTLIST.md`. Other interview answers currently have no shortlist

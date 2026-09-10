@@ -1558,7 +1558,10 @@ Do not claim the overall program complete until P9 is accepted.
 P9 and the program closeout remain complete. Kelsey's direction to prioritize a
 workable interview, spreadsheet filtering, and downloadable results, followed by
 "continue", authorizes this one local maintenance release and the necessary
-prospective matching-policy adjustment. It does not authorize publication effects.
+prospective matching-policy adjustment. On September 10, Kelsey separately authorized
+this release's branch push, PR, Vercel Preview, merge, Vercel Production deployment,
+and verification on the existing web project; exact target pins and scope are recorded
+in build state and `docs/evidence/PLAN-REV13.md`.
 
 The bounded input is the already committed Master Database revision 225 snapshot
 (all 197 rows) and its completed P8M human review. No fresh spreadsheet or external
@@ -1587,9 +1590,10 @@ Implement this adjustment as one bounded amendment/release. Commit and independe
 review this policy before affected product implementation; freeze and independently
 review the complete final candidate using the existing manifest and direct-child
 attestation process. Local preparation is permitted with false delivery authority and
-an explicit Revision 13 release blocker. Final attestation waits until the release
-boundary is resolved; no push, PR, merge, Preview, Production deployment, or deployment
-configuration change is authorized by this amendment's current instruction.
+an explicit Revision 13 release blocker. That blocker is now satisfied by the direct
+September 10 delivery grant. Final attestation binds the authorized candidate before
+Git/PR publication, Preview, merge, Production deployment, and verification on the
+existing web project. Deployment configuration changes remain outside this release.
 
 Required evidence: complete row/award/unknown reconciliation; source and review hashes;
 field provenance and conflict dispositions; representative lower/higher GPA, different
