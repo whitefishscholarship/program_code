@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-ngpa-2026",
+      "url": "https://www.ngpa.org/2026_scholarships",
+      "finalUrl": "https://www.ngpa.org/2026_scholarships",
+      "observedAt": "2026-09-11T03:05:25.877Z",
+      "statusCode": 200,
+      "contentSha256": "ac14907bad38f7a1a96eff34cf3c0319a1f64a96609e8fd6bf6d4a291b154e37",
+      "scrapeId": "01a08e6d-514f-73d9-a4aa-a69fac48b124",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/ngpa-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-ngpa-faq",
+      "url": "https://www.ngpa.org/about_scholarships",
+      "finalUrl": "https://www.ngpa.org/about_scholarships",
+      "observedAt": "2026-09-11T03:13:34.473Z",
+      "statusCode": 200,
+      "contentSha256": "8a803c9c8fb12e8fcbdd30782beba9fd4c9d000e267a66c5b39364f99b25f497",
+      "scrapeId": "01a08e74-c883-762e-9629-ea50778586d1",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/ngpa-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-ngpa-login",
+      "url": "https://www.ngpa.org/applynow",
+      "finalUrl": "https://login.nationbuilder.com/u/login?state=hqFo2SBKaXpYQ0R3U2VQREtMa0VrRlpCejFvVlVNQURYWk14ZaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBLajVhMGg0dDhtWFJKcGpPNHh4MllxOFpYQVUtY1R5o2NpZNkgME9PUE9Fem1YSFZjS2swV1phb0Z2bEI1cmM5M1BidHGlb3JnaWS0b3JnX3liOWJmZEhudmIzM0ZVaEOnb3JnbmFtZahuZ3BhLW9yZw&ui_locales=en",
+      "observedAt": "2026-09-11T03:13:39.556Z",
+      "statusCode": 200,
+      "contentSha256": "3e95929d753079af86d406a1f4f66311b3373704cb4a15fe83741a851ce637c2",
+      "scrapeId": "01a08e74-da2b-77de-bd1b-0613fcae844c",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/ngpa-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "tableRows": 20,
+  "uniqueNamedFunds": 16,
+  "commonFacts": {
+    "cycle": "2026closed; startbyJuly31,completeAugust7,23:59Pacific",
+    "membership": "activeNGPA,age18+",
+    "flightTraining": "currentthirdclassorhighermedical,atleaststudentpilotcertificate; nonflightmedicalnotrequired",
+    "advocacy": "allies welcome withdocumentedLGBTQadvocacy; committee names notgendereligibility",
+    "application": "ReviewrthroughNGPAscholarshiptab; publicloginobserved, noaccountentry",
+    "limitation": "FAQcontainsolder2024/2025references; useonlyexplicit2026timing/current2026universalcorroboratedrules, nofuturecycleinference"
+  },
+  "awards": [
+    {
+      "entityId": "intake-entity-d410f650e9eccb38",
+      "tableTitle": "NGPA General Aviation Scholarship",
+      "amount": "$5000,$10000 or$15000",
+      "conditions": "NGPA member pursuing general-aviation interests; funds paid to the flight school. Three amount tiers and six recipient slots are one named fund.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-de530b0f6c18485f",
+      "tableTitle": "NGPA Transgender & Non-binary Committee Scholarship",
+      "amount": "$5000",
+      "conditions": "Outstanding transgender or gender-diverse advocate studying or training for aviation work. The wording concerns advocacy; do not infer that every applicant must personally identify as transgender/nonbinary.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c884df046a8a0d08",
+      "tableTitle": "NGPA Women\u2019s Committee Scholarship",
+      "amount": "$5000",
+      "conditions": "Outstanding LGBTQ+ advocate studying or training for aviation work. Do not infer a women-only restriction from the committee name.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c557800bdd3a054b",
+      "tableTitle": "GoJet Airlines Flight Training Scholarship",
+      "amount": "$1500",
+      "conditions": "Aviation flight training; funds paid to flight school.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-3357724fa3082ca3",
+      "tableTitle": "United Airlines/Aviate Scholarships",
+      "amount": null,
+      "conditions": "Currently in or working toward United Aviate Academy program; full or partial award restricted to that Academy. This is the NGPA partnership, distinct from LPA/PAPA awards.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b53ef024195b447b",
+      "tableTitle": "PSA Airlines Aircraft Mechanic Scholarship",
+      "amount": "$4500",
+      "conditions": "Working toward an A&P license and an aircraft-maintenance career.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2f37656441b89d21",
+      "tableTitle": "PSA Airlines Flight Scholarship",
+      "amount": "$4500",
+      "conditions": "Pursuing a CFI rating.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-95be3d9dee450c02",
+      "tableTitle": "Travelpro Scholarships",
+      "amount": null,
+      "conditions": "2026page lists amount and information as still to be announced; no applicant-specific criteria are supplied.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-b9f0c2e3c21f7db2",
+      "tableTitle": "Endeavor Air Flight Training Scholarship",
+      "amount": "$2000,$2400 or$4000",
+      "conditions": "Flight student or CFI at a Propel Affiliate School; three named allocations share the same program and conditions.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-db35851c20ece530",
+      "tableTitle": "Elevated Access Flight Training Scholarship",
+      "amount": "$10000",
+      "conditions": "Training beyond a private pilot certificate; includes travel to2027PalmSprings NGPA events.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-379333eb5d1654af",
+      "tableTitle": "LogTen Pro CFII Training Scholarship",
+      "amount": "$3000",
+      "conditions": "Pursuing CFII training.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-64c8ccae921d974d",
+      "tableTitle": "FedEx Flight Training Scholarship",
+      "amount": "$6000",
+      "conditions": "Pursuing aviation flight training.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b67a0fb2f0d169c8",
+      "tableTitle": "Republic Airways Flight Training Scholarship",
+      "amount": "$5000",
+      "conditions": "Pursuing aviation flight training.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d704117a6cbfc949",
+      "tableTitle": "Republic Airways LIFT Academy Pilot Scholarship",
+      "amount": "$5000",
+      "conditions": "Current or incoming LIFT student pursuing aviation flight training.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5209eca98902b352",
+      "tableTitle": "Republic Airways Maintenance Scholarship",
+      "amount": "$5000",
+      "conditions": "Current or incoming student in a Part147program pursuing an A&P technician career.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-adf29ed0c1981c75",
+      "tableTitle": "Republic Airways Aviation Management Scholarship",
+      "amount": "$5000",
+      "conditions": "Current aviation-management or related-program student, including dispatcher certification.",
+      "disposition": "propose_add"
+    }
+  ]
+}

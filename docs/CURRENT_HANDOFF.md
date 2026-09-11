@@ -8,7 +8,7 @@ Default branch: `main`
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
 - Execution branch `codex/scholarship-intake`; worktree `/private/tmp/program_code-scholarship-intake`.
-  Previous exact checkpoint `421eed38705b7210e3ddc689d437d7a12642342b`; this checkpoint is the next local commit.
+  Previous exact checkpoint `43e3fc64af437872218ff9e80e7d48f1b8e3b9d4`; this checkpoint is the next local commit.
   Resolve current exact checkpoint with `git rev-parse codex/scholarship-intake`.
 - Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning closeout
   `0ffa90b12502b2a031a6012e16014301def07205`; original/planning work preserved.
@@ -20,8 +20,8 @@ Default branch: `main`
   1632scholarship-bearing plus34headers/context; Staging373, Scraped438 including9nameless.
   ScrapedR:Tdata excluded; StartHereoutreachcontact redacted with originalhash.
 - Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
-  `bcc8631bfc8c4145b6fd2430b90b45eb4621518f962f0dfe66d58b7ff91971f2`.
-  Counts: `{"rows": 1666, "entities": 771, "decidedRows": 966, "pendingEntities": 450, "proposedAdds": 67, "reviewedRows": 853}`. Entity count includes aliases and discoveries;
+  `5222733eba580c1c0631091796a8053c13db39355b6c986bb1304fdc941e7f9c`.
+  Counts: `{"rows": 1666, "entities": 850, "decidedRows": 997, "pendingEntities": 435, "proposedAdds": 116, "reviewedRows": 961}`. Entity count includes aliases and discoveries;
   it is not a count of distinct approved awards. All proposed operations remain unapproved.
 - AEA/NTHS checkpoint independently PASS after3targeted fixes:42entityrecords,
   118rows,30draft additions,450fielddecisions. Receipt `SCHOLARSHIP-INTAKE-batch-review-aea-nths.json`.
@@ -30,17 +30,19 @@ Default branch: `main`
   Jaycee college/vocational names split; Folds dated geography and acute-need ambiguity corrected.
   **223related-fieldtriage rows /139entities /683fielddifferences remain pending** and
   must be resolved before final acceptance.35identity rows also remain deferred.
-- AOPA32currentpage past-examplefunds and LPA12spring2026awards authored, pending independentreview.
+- AOPA/LPA independently PASS:50entities,83rows,34adds/510fields. TwoPAPArows split into separate pendingentity. Receipt `SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json`.
+- Dawson independently PASS:77entities,31rows,34adds/510fields;65foundationheadings plus61formchoices/60labels;8unsupported drafts withdrawn,6form-onlychildren accounted. Receipt `SCHOLARSHIP-INTAKE-batch-review-dawson.json`.
+- NGPA authored:20tableallocations reconciled to16funds,15adds/1hold, pendingindependentreview.
   AOPA December30/31officialdeadlineconflict explicit; no futuredeadline invented.
   Mensa54names held:currentchildcatalog behindregistration; not falsely treated as removed.
-- Next executable work: Epic primary/partner reconciliation, Dawson65headings, WAI10-page
+- Next executable work: Epic primary/partner reconciliation, WAI10-page
   2027PDF, remaining source groups/nameless records and related-fieldtriage. Keep oneledger.
   Reuse alreadyfetched `.firecrawl/` evidence; scripts in `/private/tmp/intake_*.py` are
   author utilities, **do not rerun completed batch scripts** (they append ledger entries).
   Every completed batch and its sourceIDs is listed in ledger.batches; no repeatresearch.
 - Durable sourcefield evidence in `docs/evidence/scholarship-intake/`; local excluded
   `.firecrawl/` also has Epic parent/forms,6partnerpages, LPA/Dawsonroutes and complete
-  Dawson/WAI observedcontent needed for nextwork. No sourcecompleteness claim until reconciled.
+  WAI observedcontent needed for nextwork. No sourcecompleteness claim until reconciled.
 - Checks: cleanofflineinstall, typecheck, intakepartialcheck, policy/history/whitespace pass.
   Fullsuite/build/finalcompleteledgercheck/frozenindependentreview stillpending.
   Plancheck has3expected missing finalattestationartifacts; hosted adds missingreleaseauthority.
