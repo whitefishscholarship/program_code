@@ -5,12 +5,12 @@
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `bbe221054cc173b3638f1a3f8f57fd9c074f6029`; this local checkpoint
+  Prior exact checkpoint `b126ce9e033c5b115798966cc82ca5efbf6ee0de`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `fea1f7cac7804fd78e7da2d249df4423bbb213ad619739bc5a47263d6309602d`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `15ad4fdd46d1d0939ed59e56372c3f3a21c03cde22d65bfaa30070da5cd0de39`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 925, "decidedRows": 1415, "pendingEntities": 171, "proposedAdds": 186, "proposedUpdates": 32}`. All proposals unapplied.
+  Current counts `{"rows": 1666, "entities": 925, "decidedRows": 1456, "pendingEntities": 133, "proposedAdds": 190, "proposedUpdates": 32}`. All proposals unapplied.
 - Independent PASS receipts saved through015 and related016–019. Related review covers
   238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
   All review findings corrected: exact richlinks, missing aliasfields, material official
@@ -26,11 +26,17 @@
   programsections (6student+4graduate+4state),8outside resource links. Prior16claim corrected.
   UM/DHC/MSU aliases preserve separate programs. Exact current sources and conflicts in
   `docs/evidence/scholarship-intake/university-evidence.json`.
-- Trades/disability022 authored:22entities/51source rows,3unappliedadds(BBT,DEWALT,HPFYBeyondDisability). Eightneweducator/institutionalchildrenexcluded; NASCLA/ACE/AWScatalog/Pelltypeandidentityholds explicit. Evidence `docs/evidence/scholarship-intake/trades-disability-evidence.json`; safe sources `.firecrawl/resume-trades22-*.json`.
-- Next executable action: independent review022; then171pending
-  entities, starting remaining officialproviders/aggregators and HoratioMontanaalias.
-  University scripts already ran; do not rerun `/private/tmp/intake_resume_universities.py`
-  or prior author scripts, including022 and receipt scripts. Safe selected public source files `.firecrawl/resume-university-*.json`.
+- Trades/disability022 independently PASS, receipt saved:22entities/51source rows,3unappliedadds(BBT,DEWALT,HPFYBeyondDisability). Eightneweducator/institutionalchildrenexcluded; NASCLA/ACE/AWScatalog/Pelltypeandidentityholds explicit. Evidence `docs/evidence/scholarship-intake/trades-disability-evidence.json`; safe sources `.firecrawl/resume-trades22-*.json`.
+- Bold named-award batch023 authored: 38 entities / 41 source rows; four additions
+  (Adam Montes, Ethel Hayes, Lawther and STEAM), 21 audience exclusions and 13 specific
+  route/identity holds. Rules and exact application controls checked; closed-cycle
+  generic signup links do not prove an award-specific application route.
+  Evidence: docs/evidence/scholarship-intake/bold-named-evidence.json.
+  Safe retained source fields: .firecrawl/resume-bold23-*.json.
+- Next executable action: independent review023; continue the133remaining entities,
+  including related aliases, ScholarshipInstitute and Scholarships.com named leads,
+  remaining official providers and HoratioMontana. Preserve completed reviews.
+  Do not rerun completed author/receipt scripts, including intake_resume_bold23.py.
 - Partial ledger validation and diff whitespace pass after correcting disposition vocabulary.
   Full suite/build, strengthened validation, exact dryrun/report/gapcoverage, fresh workbook
   fingerprints and final independent review unfinished. Do not claim final acceptance.
