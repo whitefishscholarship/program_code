@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e",
+  "reviewer": {
+    "task": "/root/intake_supplement_review",
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "coverage": {
+    "proposedAdditions": 183,
+    "uniqueOperations": 183,
+    "masterRows": 197,
+    "additionAliases": 192,
+    "masterAliases": 199,
+    "additionToMasterPairs": 36051,
+    "additionToAdditionPairs": 16653
+  },
+  "hashes": {
+    "reviewedLedgerSha256": "33e6d485c16640e0acab04d4d8b8c985c38036f447faa3a0349b00e989b37d92",
+    "proposedAdditionsSha256": "e739b0cfb7b82677a0ccc9f7f6d9355b03ef188a3521606df0fdf88a046124fe",
+    "masterRowsSha256": "15d6ad85d934f7d97a5ec93ae25c830826827c503e5a6811c7b02f25dd3a2907",
+    "masterEntitiesSha256": "2bbc793ed0491a184907ef786405ba1253e59be8994d5ff6baa443a05d9cc82f",
+    "fullComparisonSubsetSha256": "afded914ab2cf8ca93ac105d3b15576de5c55b6b02292b225692c740c45556cd"
+  },
+  "hashMethod": "UTF8 Python json.dumps(value,sort_keys=True,separators=(comma,colon),ensure_ascii=False); arrays retaincheckpointledgerorder; fullsubsetkeysproposedAdditions/masterRows/masterEntities.",
+  "conclusions": [
+    "Noexactname/aliasoroperation/source-rowcollision.",
+    "NTHSFFAisdual-membershipchildofexistingFFAportal.",
+    "Epic10kmechanictierisdistinctfromMaster129/130;twocampusslotsoneaward.",
+    "Association-specificWAI/LPA/NGPA/PAPAprogramsandroutesretaindistinctidentities.",
+    "HistoricalRepublicrenameheld,avoidingduplicate.",
+    "Dawsonnamedfund/music/writingprogramsdistinct."
+  ],
+  "limits": "Crossbatchidentityonly. No renewedfreshness,finalcandidateacceptance,sourcewritesorpublication."
+}

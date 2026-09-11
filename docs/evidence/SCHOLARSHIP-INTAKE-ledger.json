@@ -98607,13 +98607,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "No unsupported tags or thresholds inferred. Alumni six-month delay and platform conditions, where applicable, remain explicit; no question required for promotion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
-        "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -98637,7 +98641,12 @@
         "agriculture conservation",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-8af8e6bebae880ce",
@@ -103781,12 +103790,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Demonstrated financial need required for first/secondyearfulltimeDCCstudents. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -103818,6 +103832,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -106097,14 +106116,50 @@
           "existingControlId": "criterion-military-veteran",
           "existingCriterionId": "affiliation.military_veteran",
           "qualifiedExplanation": "Public award relevance only; certificate, membership, enrollment and narrower conditions are not proved by an interest or broad family-connection answer."
+        },
+        {
+          "key": "review_aviation_pilot",
+          "label": "Aviation - Pilot Training",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "aviation_pilot",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "qualifiedExplanation": "Pilot training is one aviation/aerospace pathway in the Spring2026 military-affiliated award; broad affiliation does not prove the exact military documentation or training conditions.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Aviation technician training is one alternative pathway; do not require all listed pathways together.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Aerospace engineering is one alternative pathway; genericSTEM or military affiliation alone does not establish qualification.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
         {
-          "dimension": "academic or training program",
+          "dimension": "military affiliation",
           "decision": "existing_question_partial",
           "choiceId": "military_veteran",
-          "rationale": "Active-duty military, reservists, veterans and military-affiliated applicants pursuing aviation or aerospace training. The page requests military identification; exact family-affiliation limits are not stated."
+          "rationale": "Active-duty military, reservists, veterans and military-affiliated applicants pursuing aviation or aerospace training. The page requests military identification; exact family-affiliation limits are not stated. This dimension concerns affiliation; three separate pathway decisions below assess pilot, technician and aerospace-engineering training."
         },
         {
           "dimension": "LPA membership and age",
@@ -106117,12 +106172,29 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No GPA, renewal, financial-need preference, ethnicity, gender or gap-year tag is supported by this page. Existing broad career choice does not change eligibility rules."
+        },
+        {
+          "dimension": "alternative pathway: aviation_pilot",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_pilot",
+          "rationale": "Pilot training is one aviation/aerospace pathway in the Spring2026 military-affiliated award; broad affiliation does not prove the exact military documentation or training conditions. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Aviation technician training is one alternative pathway; do not require all listed pathways together. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Aerospace engineering is one alternative pathway; genericSTEM or military affiliation alone does not establish qualification. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -106152,7 +106224,12 @@
         "Next cycle unknown",
         "No submission or account access tested"
       ],
-      "routeStatus": "Indirect member-hub method supported by officialinstructions; linked public page is membership enrollment, not scholarshipapplication."
+      "routeStatus": "Indirect member-hub method supported by officialinstructions; linked public page is membership enrollment, not scholarshipapplication.",
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-00b4a3293b739302",
@@ -107006,6 +107083,42 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Public award relevance only; certificate, membership, enrollment and narrower conditions are not proved by an interest or broad family-connection answer."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Aerospace engineering or technology degree study is one Spring2026 alternative; flight training expressly excluded.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_business_finance",
+          "label": "Business & Finance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "business_finance",
+          "existingControlId": "criterion-business-finance",
+          "existingCriterionId": "career.business_finance",
+          "qualifiedExplanation": "Aerospace-related business degree is one Spring2026 alternative, not unrestricted business study; flight training excluded.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-lpa-2026",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Aerospace-related maintenance degree is one Spring2026 alternative; standalone flight training excluded.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -107026,12 +107139,29 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No GPA, renewal, financial-need preference, ethnicity, gender or gap-year tag is supported by this page. Existing broad career choice does not change eligibility rules."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Aerospace engineering or technology degree study is one Spring2026 alternative; flight training expressly excluded. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: business_finance",
+          "decision": "existing_question_partial",
+          "choiceId": "business_finance",
+          "rationale": "Aerospace-related business degree is one Spring2026 alternative, not unrestricted business study; flight training excluded. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Aerospace-related maintenance degree is one Spring2026 alternative; standalone flight training excluded. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -107061,7 +107191,12 @@
         "Next cycle unknown",
         "No submission or account access tested"
       ],
-      "routeStatus": "Indirect member-hub method supported by officialinstructions; linked public page is membership enrollment, not scholarshipapplication."
+      "routeStatus": "Indirect member-hub method supported by officialinstructions; linked public page is membership enrollment, not scholarshipapplication.",
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-37dbc807be45a144",
@@ -111639,6 +111774,42 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Training/career relevance only; does not establish license,school enrollment,membership orfull eligibility."
+        },
+        {
+          "key": "review_aviation_pilot",
+          "label": "Aviation - Pilot Training",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "aviation_pilot",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "qualifiedExplanation": "Pilot is one historical aviation-career alternative, alongside maintenance, dispatch/management or engineering; currentUSFBOemployment is a separate historical condition and nextofferingunknown.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Mechanic study is a historical alternative; currentFBOemployment and currentfundavailability not inferred.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Engineering is one historical aviation-career alternative; currentofferingunknown.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -111659,12 +111830,35 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "Keep pastaward-specificGPA/preferences in datedsummary; do not promote pastGPAtofutureeligibilityfilter."
+        },
+        {
+          "dimension": "alternative pathway: aviation_pilot",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_pilot",
+          "rationale": "Pilot is one historical aviation-career alternative, alongside maintenance, dispatch/management or engineering; currentUSFBOemployment is a separate historical condition and nextofferingunknown. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Mechanic study is a historical alternative; currentFBOemployment and currentfundavailability not inferred. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_management",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_management",
+          "rationale": "Dispatch/airport/FBOmanagement is one historical alternative; not an additional requirement for pilots/mechanics. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Engineering is one historical aviation-career alternative; currentofferingunknown. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -111694,7 +111888,12 @@
         "Exactnextofferingandamountunconfirmed",
         "December30/31officialdeadlineconflict",
         "Publicprogramrouteverified; liveapplication sign-in notentered"
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-dc3db618583c7b4c",
@@ -112807,6 +113006,42 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Training/career relevance only; does not establish license,school enrollment,membership orfull eligibility."
+        },
+        {
+          "key": "review_aviation_pilot",
+          "label": "Aviation - Pilot Training",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "aviation_pilot",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "qualifiedExplanation": "Pilot/instruction is one historical aviation-career alternative; futurechildfundavailabilityunknown.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Maintenance is one historical alternative; no additional pilot requirement.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-aopa-program",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Aerospaceengineering is one historical alternative; broadSTEMisnotanaviationcareerproof.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -112827,12 +113062,35 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "Keep pastaward-specificGPA/preferences in datedsummary; do not promote pastGPAtofutureeligibilityfilter."
+        },
+        {
+          "dimension": "alternative pathway: aviation_pilot",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_pilot",
+          "rationale": "Pilot/instruction is one historical aviation-career alternative; futurechildfundavailabilityunknown. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Maintenance is one historical alternative; no additional pilot requirement. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_management",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_management",
+          "rationale": "Airportmanagement is one historical alternative; no combinedpathwayrequirement. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Aerospaceengineering is one historical alternative; broadSTEMisnotanaviationcareerproof. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -112862,7 +113120,12 @@
         "Exactnextofferingandamountunconfirmed",
         "December30/31officialdeadlineconflict",
         "Publicprogramrouteverified; liveapplication sign-in notentered"
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-cfa1251ec2df69e5",
@@ -114342,7 +114605,7 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-305:5c2ed42452d9"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -114533,12 +114796,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community service is considered with teamwork, academics and leadership; no service minimum is supplied. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -114562,7 +114836,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-7117adfa8e9ef226",
@@ -114689,7 +114968,7 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-306:a578d5a7dd10"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -114880,12 +115159,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Requires STEM/aviation/WAI volunteering; exact subject/organization and application essay remain card conditions. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Essay addresses financial need; no monetary or acute-need threshold is supplied. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -114909,7 +115199,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-72b6b5ec5fa9ac7b",
@@ -114922,7 +115217,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-129:d717140879f0"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -115113,12 +115408,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Requires STEM/aviation/WAI volunteering in the prior year; general volunteering alone does not prove the narrow requirement. Keep exact selection language on the award card; no runtime exclusion."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -115142,7 +115442,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-4a26d02697f44d21",
@@ -115376,7 +115681,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-131:4e4c30632756"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -115567,12 +115872,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -115596,7 +115906,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-73e26279455d2bbe",
@@ -115609,7 +115924,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-132:065cabf8c6fc"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -115800,12 +116115,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community service is considered with teamwork, academics and leadership; no service minimum is supplied. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -115829,7 +116155,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-0e2bad9e28a0967f",
@@ -116138,7 +116469,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-136:633fb8fa6f75"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -116317,12 +116648,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No current availability, acute need, renewal, school type or gap-year eligibility inferred."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Service is a selection consideration alongside academics and leadership, not an unstated minimum requirement. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -116346,7 +116688,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-69122939fdb40543",
@@ -117023,7 +117370,7 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-195:0a6fd529cee1"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -117194,6 +117541,30 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Broad training or career relevance only; exact award-specific qualifications stay on the award card."
+        },
+        {
+          "key": "review_aviation_pilot",
+          "label": "Aviation - Pilot Training",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2027",
+          "existingChoiceId": "aviation_pilot",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "qualifiedExplanation": "Flight training at any phase is one alternative alongside management/dispatch or maintenance/avionics. Interest is not training enrollment.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2027",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Maintenance or avionics is one alternative; a management/pilot answer is not also required.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -117214,12 +117585,35 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "alternative pathway: aviation_pilot",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_pilot",
+          "rationale": "Flight training at any phase is one alternative alongside management/dispatch or maintenance/avionics. Interest is not training enrollment. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Maintenance or avionics is one alternative; a management/pilot answer is not also required. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community involvement is considered for ElishaHall; existing service question is only a partial connection and does not imply formal volunteering is required. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Need is considered among several selection factors; no acute hardship requirement. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -117243,7 +117637,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-cef5f6be14bd636a",
@@ -117295,7 +117694,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-146:42ae06c595c3"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -117466,6 +117865,42 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Broad training or career relevance only; exact award-specific qualifications stay on the award card."
+        },
+        {
+          "key": "review_aviation_pilot",
+          "label": "Aviation - Pilot Training",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2027",
+          "existingChoiceId": "aviation_pilot",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "qualifiedExplanation": "Pilot career path is one alternative, with private pilot certificate already required for that route.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2027",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Mechanics or avionics is one alternative among the listed aviation careers.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2027",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Engineering and meteorology are alternatives among listed careers; a generic STEM interest does not establish an aviation career program.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -117486,12 +117921,29 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "alternative pathway: aviation_pilot",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_pilot",
+          "rationale": "Pilot career path is one alternative, with private pilot certificate already required for that route. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Mechanics or avionics is one alternative among the listed aviation careers. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Engineering and meteorology are alternatives among listed careers; a generic STEM interest does not establish an aviation career program. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -117515,7 +117967,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-8324f17255f66de4",
@@ -117528,7 +117985,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-147:fbf1b696ac3a"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -117687,6 +118144,30 @@
           "existingControlId": "criterion-aviation-management",
           "existingCriterionId": "career.aviation_management",
           "qualifiedExplanation": "Historical training relevance, subject to explicit closed-cycle and exact award conditions."
+        },
+        {
+          "key": "review_aviation_maintenance",
+          "label": "Aviation - Maintenance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2025",
+          "existingChoiceId": "aviation_maintenance",
+          "existingControlId": "criterion-aviation-maintenance",
+          "existingCriterionId": "career.aviation_maintenance",
+          "qualifiedExplanation": "Maintenance certification/degree is one alternative in the dated WAI2025 terms. The award was absent from2027guide; availability remains unknown.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
+        },
+        {
+          "key": "review_stem",
+          "label": "STEM",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-wai-2025",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Engineering is one alternative in dated2025 aviation-career terms; no current offering inferred.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -117707,12 +118188,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No current availability, acute need, renewal, school type or gap-year eligibility inferred."
+        },
+        {
+          "dimension": "alternative pathway: aviation_maintenance",
+          "decision": "existing_question_partial",
+          "choiceId": "aviation_maintenance",
+          "rationale": "Maintenance certification/degree is one alternative in the dated WAI2025 terms. The award was absent from2027guide; availability remains unknown. All such connections are OR alternatives; no matching rule is implemented."
+        },
+        {
+          "dimension": "alternative pathway: stem",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Engineering is one alternative in dated2025 aviation-career terms; no current offering inferred. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -117736,7 +118228,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-3b644d62378da11e",
@@ -120745,7 +121242,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-179:e671e8e067f0"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -120936,12 +121433,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Girls in Aviation Day volunteers receive special consideration. General service checkbox does not establish this event participation. Keep exact selection language on the award card; no runtime exclusion."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -120965,7 +121467,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-4a6fee6eb201ba13",
@@ -121229,7 +121736,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-182:c8e656d30e29"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -121420,12 +121927,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community service is a selection factor; essay must describe dates/hours. It is not proof of eligibility or an unstated minimum-hour threshold. Keep exact selection language on the award card; no runtime exclusion."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -121449,7 +121961,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-36c17d520acf1aef",
@@ -121462,7 +121979,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-183:26a8eb4f261a"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -121641,12 +122158,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No current availability, acute need, renewal, school type or gap-year eligibility inferred."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community service is a selection factor with aviation goals and dedication, not a mandatory service threshold. Keep exact selection language on the award card; no runtime exclusion."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -121670,7 +122192,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-03a0e016cbdd58fb",
@@ -131857,7 +132384,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1969210817:row-51:727ebf1ad481"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -132033,13 +132560,23 @@
           "decision": "existing_question_partial",
           "choiceId": null,
           "rationale": "Existing GPA/school questions describe general criteria; no new rule is activated and enrollment/credit details remain on card."
+        },
+        {
+          "dimension": "activities and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "School/community/church activities are selection factors. Existing service and activity answers are partial context; no formal leadership position, churchmembership or volunteer minimum inferred."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Ordinary financial need is one selection factor alongside activities/goals/motivation, not acute hardship. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_supplement_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
-        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -132078,7 +132615,12 @@
           "evidencePath": "docs/evidence/scholarship-intake/mcf-evidence.json",
           "observedBy": "/root/intake_supplement_review"
         }
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-2f40277de41b5c41",
@@ -132151,7 +132693,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1969210817:row-54:1c1bcd1b8864"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -132327,13 +132869,23 @@
           "decision": "existing_question_partial",
           "choiceId": null,
           "rationale": "Existing GPA/school questions describe general criteria; no new rule is activated and enrollment/credit details remain on card."
+        },
+        {
+          "dimension": "activities and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community activities are selection factors. Existing service answer offers partial context; employment service tenure is a separate condition, not community volunteering."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Ordinary financial need is considered with goals/community activities; employee tenure remains separate. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_supplement_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
-        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -132362,6 +132914,11 @@
         "source": "Curated Review 2026-07-11",
         "reason": "Conditional affiliation or absent wizard criterion was used as audience hold; official senior eligibility is now supported. No prior explicit owner prohibition recorded in this row.",
         "applied": false
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -132375,7 +132932,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1969210817:row-55:0d296821586d"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -132551,13 +133108,17 @@
           "decision": "existing_question_partial",
           "choiceId": null,
           "rationale": "Existing GPA/school questions describe general criteria; no new rule is activated and enrollment/credit details remain on card."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Ordinary financial need is considered; exact Helena church member/employee/child affiliation remains independent. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_supplement_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
-        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -132586,6 +133147,11 @@
         "source": "Curated Review 2026-07-11",
         "reason": "Conditional affiliation or absent wizard criterion was used as audience hold; official senior eligibility is now supported. No prior explicit owner prohibition recorded in this row.",
         "applied": false
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -136879,12 +137445,23 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "DCCcoaches nominate returning athletes based partly on community service; general service does not prove nomination or returningathlete status. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-foundation",
       "destination": {
@@ -136917,6 +137494,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -140157,15 +140739,14 @@
         },
         {
           "dimension": "new categories",
-          "decision": "award_card_only",
+          "decision": "recommendation_only",
           "choiceId": null,
-          "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+          "rationale": "Supports shared gap-education-teaching recommendation for optional Education/Teaching career interest, alongside GaryNelson andM.L.Graves. No globalquestions for DCCcoursework/committeeconditions; no runtime changes."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-foundation",
       "destination": {
@@ -140198,6 +140779,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -140404,12 +140990,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "DCCbusinessstudent financial need is an award condition; no acute or income threshold stated. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-foundation",
       "destination": {
@@ -140442,6 +141033,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -142724,12 +143320,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Linkedform requires demonstrated financial need, more specific than foundation language that need is considered. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-foundation",
       "destination": {
@@ -142762,6 +143363,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -142968,12 +143574,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "DCC-specific committee/coursework conditions do not justify new global questions. Existing interests offer broad discovery, without a new eligibility rule."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Financial need is considered but explicitly not decisive. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-foundation",
       "destination": {
@@ -143006,6 +143617,11 @@
         "geography": "Only supported award-specific geography; unresolved contradictory audience held",
         "affiliation": "No sponsor membership inferred",
         "unsupported": "No single numeric GPA, unstated renewal or gapyear inference; recommendations only, runtime unchanged"
+      },
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
       }
     },
     {
@@ -144069,6 +144685,18 @@
           "existingCategoryLabel": "Education",
           "qualifiedExplanation": "Education major OR baseball/softball athlete. Education applicants must have completed EDU200 or approved EDU course and submit a philosophy-of-education essay. Returning sophomores preferred.",
           "storage": "local award metadata only; no new interview choice or rule"
+        },
+        {
+          "key": "review_athletics_sports",
+          "label": "Student Athlete / Sports Background",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-dawson-form-names",
+          "existingChoiceId": "athletics_sports",
+          "existingControlId": "criterion-athletics-sports",
+          "existingCriterionId": "athletics.participation",
+          "qualifiedExplanation": "Baseball or softball participation is an alternative to the education-major route, not an additional requirement. Education coursework/essay applies only to that route; sports interest alone does not prove participation.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -144089,12 +144717,17 @@
           "decision": "recommendation_only",
           "choiceId": null,
           "rationale": "Education/Teaching interview coverage gap is a recommendation only."
+        },
+        {
+          "dimension": "alternative pathway: athletics_sports",
+          "decision": "existing_question_partial",
+          "choiceId": "athletics_sports",
+          "rationale": "Baseball or softball participation is an alternative to the education-major route, not an additional requirement. Education coursework/essay applies only to that route; sports interest alone does not prove participation. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-form-names",
       "destination": {
@@ -144119,7 +144752,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-057b994b6be37c8e",
@@ -144295,6 +144933,18 @@
           "existingControlId": "criterion-stem",
           "existingCriterionId": "career.stem",
           "qualifiedExplanation": "Engineering, business or computer-science major; returning sophomores preferred. Two recipient slots are one named award."
+        },
+        {
+          "key": "review_business_finance",
+          "label": "Business & Finance",
+          "meaning": "One supported alternative discovery connection; not eligibility proof.",
+          "effect": "topic",
+          "sourceId": "official-dawson-form-names",
+          "existingChoiceId": "business_finance",
+          "existingControlId": "criterion-business-finance",
+          "existingCriterionId": "career.business_finance",
+          "qualifiedExplanation": "Business is an alternative to engineering or computer science; use broad business discovery without requiring STEM as well.",
+          "storage": "Local recommendation only; no runtime or sheet tag write."
         }
       ],
       "interviewCoverage": [
@@ -144315,12 +144965,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "Existing broad interests do not prove eligibility; no runtime rules added."
+        },
+        {
+          "dimension": "alternative pathway: business_finance",
+          "decision": "existing_question_partial",
+          "choiceId": "business_finance",
+          "rationale": "Business is an alternative to engineering or computer science; use broad business discovery without requiring STEM as well. All such connections are OR alternatives; no matching rule is implemented."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-form-names",
       "destination": {
@@ -144345,7 +145000,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-7397e6dc13bba6c8",
@@ -149865,7 +150525,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -150056,12 +150716,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Community service is considered along with financial need; no minimum volunteer hours or organization inferred. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Need is considered alongside community service; no acute emergency requirement. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -150086,7 +150757,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-53584cdeae3dbbe8",
@@ -150097,7 +150773,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -150288,12 +150964,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -150318,7 +150999,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-1cfa0d5e6bc5674e",
@@ -151689,7 +152375,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -151880,12 +152566,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Service is considered for business-aviation management advancement; do not turn preference into required held position. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -151910,7 +152607,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-5ccf39595d852b6f",
@@ -152185,7 +152887,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -152376,12 +153078,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -152406,7 +153113,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-ef86872399bc978a",
@@ -152459,7 +153171,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -152650,12 +153362,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -152680,7 +153397,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-c261bbf49c4e4de0",
@@ -152691,7 +153413,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -152882,12 +153604,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -152912,7 +153639,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-b1c0bb608a8985bb",
@@ -154083,7 +154815,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -154274,12 +155006,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Requires STEM/aviation/WAI volunteering in the prior year; the existing service answer does not establish organization, topic or timing. Keep exact selection language on the award card; no runtime exclusion."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -154304,7 +155041,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-dffcf3d9dc7c5ef4",
@@ -154357,7 +155099,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -154515,27 +155257,13 @@
           "observedAt": "2026-09-11T02:29:33.196Z"
         }
       ],
-      "tags": [
-        {
-          "key": "wai_stem",
-          "existingChoiceId": "stem",
-          "rationale": "Broad training or career relevance only; exact award-specific qualifications stay on the award card.",
-          "sourceId": "official-wai-2027",
-          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules",
-          "label": "STEM",
-          "meaning": "Public award discovery connection; exact eligibility is stated separately.",
-          "effect": "topic",
-          "existingControlId": "criterion-stem",
-          "existingCriterionId": "career.stem",
-          "qualifiedExplanation": "Broad training or career relevance only; exact award-specific qualifications stay on the award card."
-        }
-      ],
+      "tags": [],
       "interviewCoverage": [
         {
-          "dimension": "training and career",
-          "decision": "existing_question_partial",
-          "choiceId": "stem",
-          "rationale": "Academic scholarship for community-college students. Aviation/STEM volunteering preferred; no residency restriction inferred from donor location."
+          "dimension": "academic program",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Academic scholarship for community-college students. No STEM-major/training/career requirement is supported; STEM appears only in the volunteering preference."
         },
         {
           "dimension": "membership, certification, geography, gender and application prerequisites",
@@ -154548,12 +155276,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "volunteering preference",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Aviation/STEM volunteering is preferred. A broad service answer is only partial context; neither STEM interest nor absence of volunteering proves eligibility/ineligibility. No career-STEM tag retained."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -154578,7 +155311,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-76bfb79ea4f573ba",
@@ -154589,7 +155327,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -154780,12 +155518,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -154810,7 +155553,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-dc05b8b4a9f951b5",
@@ -155749,7 +156497,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -155940,12 +156688,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -155970,7 +156723,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-f0178a0d086bfbc3",
@@ -155981,7 +156739,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -156172,12 +156930,23 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "service and community involvement",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Service is emphasized with determination, resilience and leadership; no minimum service commitment established. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "leadership or community impact",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "The supported award prose recognizes leadership, leadership interest or community impact. The existing leadership question asks whether the student holds a position, which is narrower. Preserve the exact selection/interest wording; do not infer a required office or tag membership from it."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -156202,7 +156971,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-d7370cf07a07d2ec",
@@ -156213,7 +156987,7 @@
       ],
       "sourceRowIds": [],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -156404,12 +157178,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Essay must address financial need; no threshold or mandatory military service inferred. The existing acute-financial-need question is narrower and is not reused as proof or a negative filter. Keep sourced wording on the card; any future ordinary-need question is recommendation-only."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-wai-2027",
       "destination": {
@@ -156434,7 +157213,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-a56ece558afd7b55",
@@ -162649,6 +163433,56 @@
       "review": {
         "status": "pending"
       }
+    },
+    {
+      "id": "batch-cross-coverage-021",
+      "status": "authored-awaiting-independent-review",
+      "entityIds": [
+        "intake-entity-057b994b6be37c8e",
+        "intake-entity-0c2fcde6113979a1",
+        "intake-entity-0e8f75f725cdeb6e",
+        "intake-entity-1490316e712669d0",
+        "intake-entity-19060852883d7493",
+        "intake-entity-2d9b2284d3981078",
+        "intake-entity-36c17d520acf1aef",
+        "intake-entity-38165a377cf092e4",
+        "intake-entity-4938a5e717492009",
+        "intake-entity-4f5899292c1fcaf1",
+        "intake-entity-53584cdeae3dbbe8",
+        "intake-entity-5e40b7ee15dc6501",
+        "intake-entity-614effa8ef61322e",
+        "intake-entity-68fc44b937accb33",
+        "intake-entity-6bc8bb9e105b2570",
+        "intake-entity-72b6b5ec5fa9ac7b",
+        "intake-entity-73e26279455d2bbe",
+        "intake-entity-75fac50bf6a613e3",
+        "intake-entity-7665bcfa836a9f07",
+        "intake-entity-76bfb79ea4f573ba",
+        "intake-entity-790eaf14cebe384e",
+        "intake-entity-7f36ae178c79607e",
+        "intake-entity-8324f17255f66de4",
+        "intake-entity-873f91c3edce15b4",
+        "intake-entity-89bbbfc6ebeff686",
+        "intake-entity-8cf918502ce54020",
+        "intake-entity-8f29d09965003d3a",
+        "intake-entity-902c1a03644ccf68",
+        "intake-entity-966fc5d2c8b176a1",
+        "intake-entity-9a676530f724da59",
+        "intake-entity-9d44a7f3b689c6a8",
+        "intake-entity-a379909cc979b93e",
+        "intake-entity-a8bdb6ccc613720b",
+        "intake-entity-c261bbf49c4e4de0",
+        "intake-entity-c9f1d5ecf13fe4c6",
+        "intake-entity-d00e748c026573df",
+        "intake-entity-d7370cf07a07d2ec",
+        "intake-entity-e929213876563013",
+        "intake-entity-f0178a0d086bfbc3",
+        "intake-entity-fc95f644590e845d"
+      ],
+      "scope": "Cross-batch tagandcoverageonly corrections; noawardfieldsoridentitychange.",
+      "review": {
+        "status": "pending"
+      }
     }
   ],
   "holds": [
@@ -164361,7 +165195,8 @@
       "existingQuestionCoverage": "No generic Education/Teaching choice; arts_humanities specifically names music education and creative arts, not general education.",
       "supportingEntityIds": [
         "intake-entity-558f7a096b45ee61",
-        "intake-entity-614effa8ef61322e"
+        "intake-entity-614effa8ef61322e",
+        "intake-entity-19060852883d7493"
       ],
       "recommendation": "Consider Education / Teaching as an optional career-interest choice in a future release; preserve OR-athletics eligibility for M.L.Graves.",
       "privacyTradeoff": "No added sensitive personal information needed; additional choice increases form length. No new rule or question in this project."
