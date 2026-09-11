@@ -1,0 +1,35 @@
+# Scholarship intake — next-session kickoff
+
+Start in `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
+If missing, recover this existing branch through
+`/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code` into an isolated
+worktree. Preserve all work; never reset or overwrite the original checkout.
+
+Verify branch status and ancestry from completed checkpoint
+`706d60431c150257fd780810757dfd4f61e6fe3b` and reviewed candidate
+`8211003dab98de3035b7a94608b6bdb7ef16fdde`. Resolve the latest local handoff commit;
+reverify the Git baseline and exact review hashes before any newly selected action.
+
+Follow AGENTS.md's required read order. Then read:
+
+- `docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md`
+- `docs/evidence/SCHOLARSHIP-INTAKE-continuation.md`
+- `docs/evidence/SCHOLARSHIP-INTAKE-local-review.json` and its referenced manifest
+- `docs/evidence/SCHOLARSHIP-INTAKE-report.md`
+- `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`
+- `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+
+The original local objective is complete and independently reviewed. Do not repeat its
+batches. CURRENT_HANDOFF.md's operative status and open-item routing table identify the
+next action, owners, exact triggers and verification limits. The frozen ledger's older
+review-pending label is superseded by the separate final receipt, not a reason to restart.
+
+This kickoff grants no new authority. Obtain new exact authority before backup/recovery
+copies or workbook writes, and satisfy every intake-plan recovery/freshness/readback gate.
+Publication requires its own exact authority or verified applicable suppression. A changed
+source or batch requires reconciliation and appropriate review; preserve every prior
+receipt rather than rebinding it. No applicant data, legacy workbook, provider contact,
+form submission, new services, automation or unrelated maintenance. Preserve P9 and all
+completed releases, GPA/school filtering, all-award access, privacy and exact visible CSV.
+
+Recommended effort: High.

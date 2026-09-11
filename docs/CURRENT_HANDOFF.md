@@ -92,6 +92,57 @@ provider contact, forms, new services, automation or unrelated maintenance. P9 a
 releases remain intact; runtime, GPA/school filtering, all-award access, privacy and exact
 visible-result CSV downloads are unchanged.
 
+## Session closeout — PASS against the authorized local objective
+
+The completed checkpoint before this final handoff-only update is
+`706d60431c150257fd780810757dfd4f61e6fe3b`. The reviewed implementation candidate remains
+`8211003dab98de3035b7a94608b6bdb7ef16fdde`; this update changes neither that candidate nor
+its ledger, report, exact batch, source evidence or review receipts. Resolve the final
+handoff tip with `git rev-parse codex/scholarship-intake`.
+
+All review agents and their partitions are complete; their findings and rechecks are
+saved in the local review receipts. No agent result, running verification or unsaved
+implementation remains pending. No reminder, background monitor, new task or automation
+was created. Original-scope local preparation, evaluation, implementation, testing and
+independent review are complete. External application and release remain unauthorized.
+
+Closeout verification rechecked the four exact review bindings (manifest, ledger, batch
+file and report), both validation-log inventories, all 310 active hold records and the
+absence of pending evaluations. Full tests/build remain the recorded successful checks
+of the unchanged implementation; they were not repeated for this handoff-only edit.
+Source currency after the saved observation, complete native backup/recovery, future-write
+freshness and hosted application health were not newly verified. The three canonical
+attestation gates remain outstanding; session PASS does not claim those gates passed.
+
+Closeout checks recorded 2026-09-11T08:51:13.282097+00:00: from `web/`,
+`node --import tsx scripts/intake-promotion.ts --complete --check` passed with the
+unchanged reviewed digest, 257 operations and 3,367 cells. `npm run plan:check` exited 1
+with exactly the same three reserved missing PLAN-REV15 manifest/review/attestation
+errors and no additional errors. Root `git diff --check` passed; the complete staged
+baseline comparison is checked before this local commit. No source or hosted checks ran.
+
+### Open-item routing — no item is implicitly activated
+
+Kelsey owns scope and authority decisions; the next execution agent owns implementation
+only after the relevant trigger is met. The existing ledger remains the sole item ledger.
+
+| Item | Trigger for future work | Authoritative record / next action |
+| --- | --- | --- |
+| Apply the supported batch | New exact authority names the unchanged batch and private backup/recovery destinations | `SCHOLARSHIP-INTAKE-proposed-writes.json` and intake plan section 7. First verify all backup, recovery, freshness, newer-edit and readback gates; stop on any unmet gate. |
+| 310 held entities | Each entity's recorded official-information or owner-selection trigger occurs | Ledger `entities[].hold` and report. Reopen only the triggered item; retain its history, evidence and exclusions. |
+| I65 formatting | A formatting-preserving replacement is independently reviewed and included in a newly authorized batch | Exact batch `deferredCells`; I65 stays excluded until then. |
+| Hagan I25 income wording | Current award-specific income definition and tax year support exact replacement wording | Ledger `relatedSourceFindings[id=related-hagan-income]`; preserve the other summary conditions. |
+| Five interview recommendations | Kelsey selects a future interview/publication scope | Ledger `interviewGaps`: student organizations, education/teaching, ordinary financial need, first-generation definition and specialized membership/training. Keep optional privacy and OR/preference distinctions; implement no rule from a recommendation alone. |
+| Unknown or unexpanded catalogs | Relevant access or official evidence changes, or Kelsey selects a bounded expansion | Ledger `discoveries` and entity `catalogCoverage`; preserve enumerated denominators and unknown wider totals. |
+| Full Master current-fact audit | Explicit selection of a separate full-Master audit | Intake plan section 9; the existing intake is not a full Master freshness audit. |
+| Scheduled refresh | Separate bounded monitoring scope and exact side-effect authority | Intake plan section 9; define field confidence, exceptions and any write grant first. No schedule or service is active. |
+| Canonical acceptance and publication | Candidate and all exact downstream authority are settled, or applicable suppression is verified | Canonical plan/state: preserve history, satisfy the three reserved PLAN-REV15 gates and required fresh-context/direct-child contract. Separate authority covers push, PR, Preview, merge, Production and verification. |
+| Middleware deprecation warning | A future framework migration is selected, or the warning becomes an actual build failure | Saved build logs; no runtime migration belongs to this completed intake. |
+
+Resume using `docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md`. Preserve the original checkout,
+all local branches/worktrees and exact historical attestations. Do not publish this
+handoff under any earlier release grant. Recommended next-session effort: High.
+
 ## Historical checkpoints below — superseded by the operative status above
 
 # Scholarship intake — complete local candidate, final review pending
