@@ -211,5 +211,14 @@
       "fieldSpecificSummary": "Linkedofficialcriteria:HSseniororotherfull/parttime,USC/permanentresident,constructioncareer/programintent,approvedaccreditedprogram inclregisteredapprenticeship. Conditionalrenewalwithcontinuingenrollmentandgoodstanding2.5GPA/equivalent. SameAGC/NCCERfundalreadyMaster144and146; noaddition."
     }
   ],
-  "limits": "Bounded material-field confirmation, not fullMasterfreshness. Sourceswithstaledates/conflictsqualified. Noapplicantdata,formactions,providercontactorwrites."
+  "limits": "Bounded material-field confirmation, not fullMasterfreshness. Sourceswithstaledates/conflictsqualified. Noapplicantdata,formactions,providercontactorwrites.",
+  "sourceFidelityRemediation": {
+    "reviewedCandidate": "b958ecfa577f73055d6d58910ce50b1a365aa3ad",
+    "finding": "C0/H1/M0/L0: three summary prerequisites",
+    "changes": [
+      "I3 requires written exam passed or authorization to take it before May15,2026; ground school alone is insufficient.",
+      "I144/I146 explicitly direct four-year bachelor degree students to the separate AGC Undergraduate Scholarship."
+    ],
+    "status": "awaiting reviewer recheck"
+  }
 }
