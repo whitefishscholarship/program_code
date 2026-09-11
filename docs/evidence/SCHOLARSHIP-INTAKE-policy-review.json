@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "recordType": "independent_policy_checkpoint_not_final_attestation",
+  "reviewedCandidateCommit": "fa7b4a67e16b482feddfc912597948a630111a91",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "planningCommit": "0ffa90b12502b2a031a6012e16014301def07205",
+  "reviewer": {
+    "task": "/root/intake_policy_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "outcome": "PASS",
+  "reviewedAt": "2026-09-11T02:13:34.331317+00:00",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "binaryDiffSha256": "ef54e363394d275e3fc90cc744b2bccaef954b0a9ebbf21c9e820d1a13761925",
+  "verification": [
+    "intake-governance PASS",
+    "governance-history PASS",
+    "delivery-state-history PASS",
+    "full diff whitespace PASS",
+    "historical/copied blob preservation PASS",
+    "local plan validator: only 3 expected missing final attestation diagnostics",
+    "hosted simulation: 3 expected missing attestation diagnostics plus missing publication authority rejected"
+  ],
+  "scope": "Complete 15-path prospective policy diff. Authorizes audit continuation only; final acceptance pending."
+}

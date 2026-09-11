@@ -26,3 +26,9 @@ planning and released worktrees preserved. No intake execution checkpoint preexi
 The dedicated prospective amendment adds only its exact non-hosted local preparation
 exception. Final canonical manifest/review/attestation remain required and deliberately
 absent during preparation; their missing-artifact diagnostics are not acceptance.
+
+Policy checkpoint PASS on `fa7b4a67e16b482feddfc912597948a630111a91`, reviewer
+`/root/intake_policy_review`, C0/H0/M0/L0; receipt SCHOLARSHIP-INTAKE-policy-review.json.
+Full audit may proceed. Clean offline install and typecheck passed. Exact local plan check
+reports only three absent final attestation artifacts; hosted simulation additionally
+rejects absent publication authority. All historical validation checks remain mandatory.

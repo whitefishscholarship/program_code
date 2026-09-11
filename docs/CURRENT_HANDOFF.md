@@ -5,19 +5,34 @@ Plan revision: 15
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Scholarship intake execution — policy checkpoint in progress
+## Scholarship intake execution — snapshot complete, evaluation in progress
 
 - Branch `codex/scholarship-intake`, worktree `/private/tmp/program_code-scholarship-intake`.
+  Latest committed policy: `fa7b4a67e16b482feddfc912597948a630111a91`.
   Resolve latest exact checkpoint with `git rev-parse codex/scholarship-intake`.
 - Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning source
-  `0ffa90b12502b2a031a6012e16014301def07205`. Original and planning work preserved.
-- Revision15 adopts the complete invoked plan prospectively; policy review pending.
-  Source snapshot/ledger not yet captured; rows/entities/reviews completed: 0.
-- Backup/recovery copies: not authorized, not created, not verified. Sheet writes:0.
-  Publication: not authorized, not performed. No runtime changes or applicant data.
-- Next executable action: independently review the dedicated policy commit, then capture
-  allowed scholarship fields with complete tab/row accounting and source fingerprints.
-  Read `PLAN-REV15.md`, intake plan/kickoff and policy-review receipt on resume.
+  `0ffa90b12502b2a031a6012e16014301def07205`; existing work preserved.
+- Independent policy PASS C0/H0/M0/L0 in `SCHOLARSHIP-INTAKE-policy-review.json`.
+  Canonical Revision15, P9/releases preserved. Full final audit review still pending.
+- Snapshot `intake-rev226-74df373b3e30738e`; digest
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`. Source226 and modifiedTime unchanged across
+  bounded reads; all14 tabs,1666 populated rows,1632 scholarship-bearing rows plus34
+  headers/context/section markers;753 name-comparison groups, not proven distinct awards.
+  Staging373; Scraped438 including9 nameless; Master197; other rows fully captured.
+  Scraped R:T data excluded; Start Here outreach contact redacted with original hash.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
+  `6cd729a6746245bd4a42c5d81db1bb4bc2037a5009bd5ee775be24359f49b9be`. Completed entity decisions:0; row reviews:0.
+  Local excluded `.firecrawl/` contains initial AEA/Epic/BYF/Dawson evidence for the next batch.
+  Dawson now enumerates65 entries; these must all be reconciled, not capped at historical26.
+- Checks: clean offline install,typecheck,policy/history/whitespace PASS. Full execution
+  suite/build pending. Plan validation has only three deliberately absent final
+  attestation artifacts; hosted simulation additionally rejects missing release authority.
+- Backup/recovery copies:not authorized/not created/not verified; no affected-cell backup.
+  Sheet writes:0; publication:false. No runtime changes or applicant data.
+- Next executable action: evaluate AEA shared-source group, including aliases and all
+  discovered children; commit useful batches, continue staging then other tabs. Read
+  intake plan/kickoff, PLAN-REV15, source-start/end and sole ledger before resuming.
+  New exact backup/write/publication grants remain required; do not prematurely attest.
 
 ## Preserved intake planning closeout
 
