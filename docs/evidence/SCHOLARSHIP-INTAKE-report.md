@@ -222,6 +222,10 @@ Proposed append range: 'Master Database'!A199:O405. No new rows/columns/tabs, st
 | 404 | Ardean A.Anvik Endowed Scholarship | Unknown | 2026-03-01 priority (general; late applications allowed; award-specific dates may differ) | https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application |
 | 405 | ISA+21 Francesca Norris Memorial Scholarship 2027 | $5,000 each; two recipients | 2026-09-01 23:59 ET (WAI2027; closed) | WAI online scholarship portal via https://www.wai.org/scholarship-listings ; linked OAuth/member route observed. Closed cycle; authenticated application not entered. |
 
+## Deferred cells
+
+- I65, Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School: Known native text styling cannot be preserved by clearing or reusing old offsets after the text changes. This cell is excluded from the executable proposal. Proposed text: For 2026, senior girls attending Whitefish, Columbia Falls, Bigfork, Flathead or Glacier public high schools. Priority is given to financial need and academic success; Montana colleges and universities are preferred, not required. Awards range from $1,000 to $3,000. The deadline was April 17, 2026; the linked form is closed and says it will accept applications in spring 2027, without a published 2027 deadline. An older 2024 application excluded children of club members; the full 2026 family restriction is unavailable in the closed form and remains unconfirmed. Next: Derive and independently review an exact formatting-preserving mapping; regenerate the affected operation and obtain exact authority for the changed batch.
+
 ## Exact related corrections
 
 | Target | Award | Before | Proposed |
