@@ -3,7 +3,7 @@
   "planId": "SCHOLARSHIP-INTAKE-1",
   "status": "UNAPPLIED_LOCAL_PROPOSAL",
   "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
-  "ledgerSha256": "8efe022ac1b1003b996d06349447d4f21da7eab378b9d18bbef9d00993427be9",
+  "ledgerSha256": "0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b",
   "snapshotId": "intake-rev226-74df373b3e30738e",
   "snapshotSha256": "74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524",
   "masterNativeSnapshotSha256": "f079469c0199a0c7b945a0160eb230f0ad13d9279948b5f34425c3aec623a2e2",
@@ -7882,10 +7882,12 @@
         }
       ],
       "checkpointReview": {
-        "status": "pending",
-        "reviewer": null
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-community.json",
+        "reviewedCandidateCommit": "b94f421bd3b64fb7ebfd6ca5972ab08c48008b22"
       },
-      "operationSha256": "9a125db6ab7b99e4d960e2dc621ed418908c55acdc196cd0e8814523d0e3ed51"
+      "operationSha256": "334c5d012231af5b6ee1a67506e029ff7f650d34a85e1a3c846d7e53541e079c"
     },
     {
       "id": "add-intake-entity-17f598d8931c3985",
@@ -10563,15 +10565,106 @@
             "observedAt": "2026-09-11T04:35:49.886Z",
             "decision": "proposed_supported"
           }
+        },
+        {
+          "a1": "E110",
+          "column": "E",
+          "before": {
+            "userEnteredValue": {
+              "stringValue": "TBD"
+            },
+            "effectiveValue": {
+              "stringValue": "TBD"
+            },
+            "formattedValue": "TBD"
+          },
+          "beforeSha256": "b35165bc4f35816437ab869c02c8596009521694f491133de37576c311c0fdb5",
+          "after": {
+            "userEnteredValue": {
+              "stringValue": "$1,500 for one year"
+            },
+            "textFormatRuns": []
+          },
+          "displayValue": "$1,500 for one year",
+          "expectedLink": null,
+          "fieldEvidence": {
+            "column": "E",
+            "oldValue": "TBD",
+            "newValue": "$1,500 for one year",
+            "sourceId": "official-related-nataofficial",
+            "locator": "Official Richard L. Taylor amount, requirements and incoming-freshman application instructions; retained source independently reconfirmed during 028 review.",
+            "observedAt": "2026-09-11T04:35:49.886Z",
+            "decision": "proposed_supported"
+          }
+        },
+        {
+          "a1": "I110",
+          "column": "I",
+          "before": {
+            "userEnteredValue": {
+              "stringValue": "This scholarship honors Richard L. Taylor, Professor Emeritus at The Ohio State University, who significantly expanded flight education. It aims to support aviation students in furthering their careers as professional pilots."
+            },
+            "effectiveValue": {
+              "stringValue": "This scholarship honors Richard L. Taylor, Professor Emeritus at The Ohio State University, who significantly expanded flight education. It aims to support aviation students in furthering their careers as professional pilots."
+            },
+            "formattedValue": "This scholarship honors Richard L. Taylor, Professor Emeritus at The Ohio State University, who significantly expanded flight education. It aims to support aviation students in furthering their careers as professional pilots."
+          },
+          "beforeSha256": "8c2ca951a08c8858fed05b75bc8d0ba9f89421090f550bed938b5547fc2391ee",
+          "after": {
+            "userEnteredValue": {
+              "stringValue": "The Richard L. Taylor Flight Training Scholarship provides $1,500 for one year of full-time undergraduate study in a college or university flight program, with the goal of becoming a professional pilot. Applicants must hold a private pilot license and have a GPA of at least 3.0. The official page describes college enrollment and also permits high-school seniors/incoming freshmen: incoming freshmen provide a high-school transcript and acceptance letter; enrolled students provide a college transcript showing at least 3.0. Submit the required materials no later than the last Friday in March; no cycle year or current opening is established. A four-year-only degree restriction is not established."
+            },
+            "textFormatRuns": []
+          },
+          "displayValue": "The Richard L. Taylor Flight Training Scholarship provides $1,500 for one year of full-time undergraduate study in a college or university flight program, with the goal of becoming a professional pilot. Applicants must hold a private pilot license and have a GPA of at least 3.0. The official page describes college enrollment and also permits high-school seniors/incoming freshmen: incoming freshmen provide a high-school transcript and acceptance letter; enrolled students provide a college transcript showing at least 3.0. Submit the required materials no later than the last Friday in March; no cycle year or current opening is established. A four-year-only degree restriction is not established.",
+          "expectedLink": null,
+          "fieldEvidence": {
+            "column": "I",
+            "oldValue": "This scholarship honors Richard L. Taylor, Professor Emeritus at The Ohio State University, who significantly expanded flight education. It aims to support aviation students in furthering their careers as professional pilots.",
+            "newValue": "The Richard L. Taylor Flight Training Scholarship provides $1,500 for one year of full-time undergraduate study in a college or university flight program, with the goal of becoming a professional pilot. Applicants must hold a private pilot license and have a GPA of at least 3.0. The official page describes college enrollment and also permits high-school seniors/incoming freshmen: incoming freshmen provide a high-school transcript and acceptance letter; enrolled students provide a college transcript showing at least 3.0. Submit the required materials no later than the last Friday in March; no cycle year or current opening is established. A four-year-only degree restriction is not established.",
+            "sourceId": "official-related-nataofficial",
+            "locator": "Official Richard L. Taylor amount, requirements and incoming-freshman application instructions; retained source independently reconfirmed during 028 review.",
+            "observedAt": "2026-09-11T04:35:49.886Z",
+            "decision": "proposed_supported"
+          }
+        },
+        {
+          "a1": "J110",
+          "column": "J",
+          "before": {
+            "userEnteredValue": {
+              "stringValue": "Any"
+            },
+            "effectiveValue": {
+              "stringValue": "Any"
+            },
+            "formattedValue": "Any"
+          },
+          "beforeSha256": "bdf0ce0237b6a438d8689eb6b9569498f734ca8f82fa3b1f576ed89ba4abfb0a",
+          "after": {
+            "userEnteredValue": {
+              "stringValue": "3.0"
+            },
+            "textFormatRuns": []
+          },
+          "displayValue": "3.0",
+          "expectedLink": null,
+          "fieldEvidence": {
+            "column": "J",
+            "oldValue": "Any",
+            "newValue": "3.0",
+            "sourceId": "official-related-nataofficial",
+            "locator": "Official Richard L. Taylor amount, requirements and incoming-freshman application instructions; retained source independently reconfirmed during 028 review.",
+            "observedAt": "2026-09-11T04:35:49.886Z",
+            "decision": "proposed_supported"
+          }
         }
       ],
       "checkpointReview": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_triage_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
-        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+        "status": "pending",
+        "reviewer": null
       },
-      "operationSha256": "0ab897a0d2e6fe087b689d13843c2b8df69ded15a53805bb6be39309a14ca8e1"
+      "operationSha256": "cb3dd6ea92314ae413c8644f269c58b1d6acf8c0a86d52e7a253fd9229612805"
     },
     {
       "id": "update-intake-entity-1fa085568e4ca62f",
@@ -43775,10 +43868,12 @@
         }
       ],
       "checkpointReview": {
-        "status": "pending",
-        "reviewer": null
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-community.json",
+        "reviewedCandidateCommit": "b94f421bd3b64fb7ebfd6ca5972ab08c48008b22"
       },
-      "operationSha256": "90fe48f2192f98547f403baafe48d81c88dcec840533a6116fe2c039cb5e5b90"
+      "operationSha256": "30c1b0b8888832a5042018624c8e465efee97836f00b618c6d74efff7d9f3a2a"
     },
     {
       "id": "update-intake-entity-85402e85ef5349f9",
@@ -85122,7 +85217,7 @@
       "trigger": "Derive and independently review an exact formatting-preserving mapping; regenerate the affected operation and obtain exact authority for the changed batch."
     }
   ],
-  "batchDigest": "dd15e354bc17b5d489176a827d9a7c72e5faf38461aaee9169f3cec6fa1a1d9b",
+  "batchDigest": "4adfa2f169df014ac2447e40ac3956d1f316706d38c065f4a4cff1c71b254f4b",
   "authority": {
     "backupCopies": false,
     "recoveryTestCopy": false,

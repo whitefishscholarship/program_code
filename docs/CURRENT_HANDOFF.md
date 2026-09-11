@@ -1,3 +1,7 @@
+## Local intake checkpoint — final batch remediation
+
+Prior exact tip `b94f421bd3b64fb7ebfd6ca5972ab08c48008b22`; resolve current execution tip with `git rev-parse codex/scholarship-intake`. Sole ledger SHA256 `0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b`. All 1,666 rows decided; 219 additions and 38 updates, 83 field recommendations (82 executable; I65 deferred). Exact dry run: 257 operations / 3,367 cells, unapplied. Community029 PASS receipt saved. Aviation028 two medium findings remediated: Taylor E/I/J and two loss-of-parent coverage assessments; bounded recheck pending. Closure audit verified20 stale identity lists/25 rows, now cleared; NASCLA inheritance and all five Looney routes recorded, recheck pending. Next: finish gap/report metadata, full required checks, then immutable fresh-context final local review. No backup/copies, source writes or publication authorized/performed. Frozen source and baseline remain as below.
+
 # Current Handoff
 
 Last updated: 2026-09-10
