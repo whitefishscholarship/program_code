@@ -43135,14 +43135,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-50:1893d512c9a6",
       "entityId": "intake-entity-5230c33decf5e26d",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Louie directory alias has same foundation name but materially different March15/2000/four-year/need/gap-year and family-preference fields. Repeated bounded official retrieval yielded no usable rules; directory identity/fields cannot be promoted on name alone. Direct official-route alias separately links Master145. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-louie-rules"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-5230c33decf5e26d"
     },
     {
       "sheetId": 1468843784,
@@ -43178,14 +43181,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-51:578f51831656",
       "entityId": "intake-entity-6bde02413985885a",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-6bde02413985885a",
+        "entityId": "intake-entity-6bde02413985885a"
+      },
+      "evidenceIds": [
+        "official-national27-web-csu"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-6bde02413985885a"
     },
     {
       "sheetId": 1468843784,
@@ -43220,14 +43230,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-52:daa829303f2d",
       "entityId": "intake-entity-707c44c8b80635da",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Editor World page combines Spring2027/$500/900-word/Sept1–Dec15,2026 rules with Spring2025 sweepstakes/18+/600-word rules. First-generation definition concerns parents not attending or completing four-year college. Current age, essay, cycle/type and complete actual entry route remain contradictory; no promotion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-editor-rules"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-707c44c8b80635da"
     },
     {
       "sheetId": 1468843784,
@@ -45047,14 +45060,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-90:4a65664943de",
       "entityId": "intake-entity-94e7280adc108c46",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "George M. Pullman requires Cook County, Illinois residency for high-school seniors entering a first full-time bachelor degree;3.0 and financial need. Montana resident entry is not supported. 2027 window Nov1,2026–Feb1,2027; exclusion is residency, not Illinois college attendance. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-pullman"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-94e7280adc108c46"
     },
     {
       "sheetId": 1468843784,
@@ -45090,14 +45106,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-91:8149d7215a52",
       "entityId": "intake-entity-a5a75dd0bc921034",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-a5a75dd0bc921034",
+        "entityId": "intake-entity-a5a75dd0bc921034"
+      },
+      "evidenceIds": [
+        "official-national27-kpmg-rules"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-a5a75dd0bc921034"
     },
     {
       "sheetId": 1468843784,
@@ -52470,14 +52493,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-243:056655aa36f3",
       "entityId": "intake-entity-0fc623eca2dbb296",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "non_record",
+      "rationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-pgsf"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-0fc623eca2dbb296"
     },
     {
       "sheetId": 1468843784,
@@ -52716,14 +52742,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-248:a517180feb16",
       "entityId": "intake-entity-2ebf3038c0faaaa5",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-2ebf3038c0faaaa5",
+        "entityId": "intake-entity-2ebf3038c0faaaa5"
+      },
+      "evidenceIds": [
+        "official-national27-web-rollins"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-2ebf3038c0faaaa5"
     },
     {
       "sheetId": 1468843784,
@@ -52807,14 +52840,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-250:18092d0bdadf",
       "entityId": "intake-entity-47d18c1ab4ad305b",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Voyager requires current college sophomore status in spring2026 and rising junior/eligible two-year transfer to junior in2026–27. This is later-college entry, not direct high-school entry. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-voyager"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-47d18c1ab4ad305b"
     },
     {
       "sheetId": 1468843784,
@@ -52849,14 +52885,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-251:5d699fb4058f",
       "entityId": "intake-entity-617ffbb333e5e094",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "4-H Youth in Action:2027 applications closed,2028 opens Jan2027. Four5000 awards with a year of development and public spokesperson/media/travel activities. Repeated bounded public extraction did not verify full age/membership eligibility or next actual application. Do not infer college-only eligibility from a structured extraction. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-4h-apply"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-617ffbb333e5e094"
     },
     {
       "sheetId": 1468843784,
@@ -52892,14 +52931,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-252:4e3c6c398d45",
       "entityId": "intake-entity-f4cbf1a40504e59a",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-f4cbf1a40504e59a",
+        "entityId": "intake-entity-f4cbf1a40504e59a"
+      },
+      "evidenceIds": [
+        "official-national27-web-davis"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-f4cbf1a40504e59a"
     },
     {
       "sheetId": 1468843784,
@@ -52934,14 +52980,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-253:573fc6861a76",
       "entityId": "intake-entity-d43d5e6ecfd644c2",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "NEXT for AUTISM Fellows supports partner-college health/human-services study and substantial paid direct-support work, not applicants who necessarily have autism. Structured public extraction indicates graduation2028or later/two-year commitment/800hours yearly and2027Jan11–Mar14 cycle, but complete partner exceptions and an actual application control were not independently established. No promotion or autism-identity tag. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-nextautism-program"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-d43d5e6ecfd644c2"
     },
     {
       "sheetId": 1468843784,
@@ -52977,14 +53026,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-254:de94d3448852",
       "entityId": "intake-entity-ce57e2931f955d00",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "IMEG requires full-time engineering sophomore, junior or senior status in fall2027. Direct high-school-to-first-year entry is not eligible. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-imeg"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-ce57e2931f955d00"
     },
     {
       "sheetId": 1468843784,
@@ -53019,14 +53071,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-255:790b33e2a47d",
       "entityId": "intake-entity-d5f17eb3f5294de9",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Next Swell supports marine-related master or PhD students with3.5GPA. Graduate-only program is outside direct high-school entry. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-nextswell"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-d5f17eb3f5294de9"
     },
     {
       "sheetId": 1468843784,
@@ -53061,14 +53116,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-256:9b8293ff1d75",
       "entityId": "intake-entity-33f4a1d981777f02",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "non_record",
+      "rationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-catching"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-33f4a1d981777f02"
     },
     {
       "sheetId": 1468843784,
@@ -53103,14 +53161,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-257:f00e52525585",
       "entityId": "intake-entity-0426cd3c4043cfbb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "non_record",
+      "rationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-rma"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-0426cd3c4043cfbb"
     },
     {
       "sheetId": 1468843784,
@@ -53145,14 +53206,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-258:99976f947d0b",
       "entityId": "intake-entity-3a3f3dbc494b53e5",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-3a3f3dbc494b53e5",
+        "entityId": "intake-entity-3a3f3dbc494b53e5"
+      },
+      "evidenceIds": [
+        "official-national27-web-hitec"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-3a3f3dbc494b53e5"
     },
     {
       "sheetId": 1468843784,
@@ -53752,14 +53820,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-271:05c7c1770074",
       "entityId": "intake-entity-a358303c0b661af8",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "SEMA student scholarship is distinct from employee loan forgiveness. Public retrieval describes HSsenior or18+,incoming/current postsecondary,US/Canadian citizenship,automotive career interest;1000–5000,2026Apr3past,nextJan1,2027. Named actual student application control was not returned; program information alone does not establish it. Full next-cycle rules remain unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-sema-route"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-a358303c0b661af8"
     },
     {
       "sheetId": 1468843784,
@@ -53794,14 +53865,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-272:a74f7e3c2ac4",
       "entityId": "intake-entity-606c3d94576f708b",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Science Ambassador2027: five one-time20000 tuition awards; women/nonbinary HSseniors or undergraduates planning/enrolled STEM at US/territory college, no citizenship restriction. Public YouTube science mini-lecture up3minutes, not Shorts. Page says Sept2026 opening but returned only notification signup; actual application not established. Do not inherit old full-tuition or extra1000 terms. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-science"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-606c3d94576f708b"
     },
     {
       "sheetId": 1468843784,
@@ -53836,14 +53910,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-273:c342343e9abd",
       "entityId": "intake-entity-12339f0f0a7ffaeb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Amtrak Academic Scholarship public structured extraction suggests2.8,full-time undergrad/grad and railway career interest, and explicitly permits high-school transcript plus college acceptance. Do not exclude as advanced-only. Current amount, exact cycle and actual application control were not established, and named award-track completeness is unknown. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-amtrak"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-12339f0f0a7ffaeb"
     },
     {
       "sheetId": 1468843784,
@@ -58922,14 +58999,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-379:bf02be577d46",
       "entityId": "intake-entity-97522ffd7a2d8563",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Same Science Ambassador sponsor, official route and video-program purpose as the other saved alias; both remain held because actual2027 application control is unavailable. No second award proposal or loss of source identity. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-national27-web-science"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-97522ffd7a2d8563"
     },
     {
       "sheetId": 1468843784,
@@ -61056,10 +61136,18 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-423:ad9cba64e666",
       "entityId": "intake-entity-a990eb434076e78a",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "link_existing",
+      "rationale": "Same exact official Louie Foundation program URL, provider and2026program description as native Master145. No current public rules were retrieved; identity only, no freshness or new field claim.",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 145,
+        "entityId": "intake-entity-b1375ef774da76cf"
+      },
+      "evidenceIds": [
+        "official-national27-louie",
+        "official-national27-louie-rules"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
@@ -69379,10 +69467,18 @@
       "originalStatus": "DUPLICATE (master: The Kim and Harold Louie Family Foundation 2026 Scholarship)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-132:cb567f1af596",
       "entityId": "intake-entity-a990eb434076e78a",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "link_existing",
+      "rationale": "Same exact official Louie Foundation program URL, provider and2026program description as native Master145. No current public rules were retrieved; identity only, no freshness or new field claim.",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 145,
+        "entityId": "intake-entity-b1375ef774da76cf"
+      },
+      "evidenceIds": [
+        "official-national27-louie",
+        "official-national27-louie-rules"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
@@ -114119,19 +114215,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-50:1893d512c9a6"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-louie-rules"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Louie directory alias has same foundation name but materially different March15/2000/four-year/need/gap-year and family-preference fields. Repeated bounded official retrieval yielded no usable rules; directory identity/fields cannot be promoted on name alone. Direct official-route alias separately links Master145.",
+      "hold": {
+        "entityId": "intake-entity-5230c33decf5e26d",
+        "reason": "Official rules establish directory-to-program identity and resolve each material field before changing Master145.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Louie directory alias has same foundation name but materially different March15/2000/four-year/need/gap-year and family-preference fields. Repeated bounded official retrieval yielded no usable rules; directory identity/fields cannot be promoted on name alone. Direct official-route alias separately links Master145.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-louie-rules"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-6bde02413985885a",
@@ -114143,19 +114254,316 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-51:578f51831656"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
-      "tags": [],
-      "interviewCoverage": [],
+      "officialEvidenceIds": [
+        "official-national27-web-csu",
+        "official-national27-csu-native"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-national27-web-csu",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "First-year February 1; transfer June 1 (annual; year unstated)",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "$5,000 per year, up to five years",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://c4e.colostate.edu/first-generation-award/",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "Colorado State University First Generation Award",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://ramweb.colostate.edu/",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "CSU First Generation Award requires parents/guardians without a bachelor degree, new first-year/transfer admission to Fort Collins by April1, summer/fall start,12+on-campus credits and no prior bachelor. Current CSU, Online/Global and spring entrants are excluded. Need must be documented through FAFSA/CASFA. Applicants must be Colorado residents, qualify for in-state tuition, OR qualify for the Native American Legacy Award; that last path can include Montana residents. Base support is5000 annually for up to five years while full-time. A separate C4E Partnership component can add3000 annually, with only one Partnership award. Apply through RamWeb, CSUSA general application, then FGA and essays. First-year deadline is February1, transfer June1, year unstated. Aid deadlines conflict between one month before FGA and FAFSA February1/CASFA March1; confirm timing. Foreign parent degrees need eligibility confirmation. No numeric GPA cutoff is established.",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-csu",
+          "locator": "award heading: Colorado State University First Generation Award",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.264Z",
+          "supportingSourceIds": [
+            "official-national27-web-csu",
+            "official-national27-csu-native"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "key": "first_generation",
+          "label": "First-Generation College",
+          "meaning": "Parents/guardians have not completed bachelor.",
+          "effect": "requirement",
+          "sourceId": "official-national27-web-csu",
+          "existingChoiceId": "first_generation",
+          "existingControlId": "criterion-first-generation",
+          "existingCriterionId": "education.first_generation",
+          "qualifiedExplanation": "Existing immediate-family attendance question differs from provider parent-degree rule.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        },
+        {
+          "key": "native_american",
+          "label": "Native American or Indigenous",
+          "meaning": "One alternative geography/tuition pathway.",
+          "effect": "topic",
+          "sourceId": "official-national27-web-csu",
+          "existingChoiceId": "native_american",
+          "existingControlId": "criterion-native-american",
+          "existingCriterionId": "identity.race_ethnicity",
+          "qualifiedExplanation": "Not required for Colorado/in-state applicants; exact Legacy ancestry/enrollment conditions apply.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "first generation",
+          "decision": "existing_question_partial",
+          "choiceId": "first_generation",
+          "rationale": "Parent degree completion differs from immediate-family attendance."
+        },
+        {
+          "dimension": "geography",
+          "decision": "existing_question_partial",
+          "choiceId": "native_american",
+          "rationale": "Native Legacy is one OR pathway, not universal identity requirement."
+        },
+        {
+          "dimension": "school",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Fort Collins first-year/transfer summer/fall12on-campuscredits; excluded entry routes explicit."
+        },
+        {
+          "dimension": "need",
+          "decision": "gap_candidate",
+          "choiceId": null,
+          "rationale": "Ordinary documented need, not necessarily acute crisis."
+        },
+        {
+          "dimension": "GPA/service/leadership",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "Academic potential but no numeric cutoff or formal service/leadership minimum."
+        },
+        {
+          "dimension": "application/cycle/renewal",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "RamWeb CSUSA then FGA; annual renewal up5years; conflicting aid timing qualified."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "identityRationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified.",
+      "pendingIdentityRowIds": [],
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-6bde02413985885a",
+        "entityId": "intake-entity-6bde02413985885a"
+      },
+      "proposedValues": [
+        "2026-09-11",
+        "First-year February 1; transfer June 1 (annual; year unstated)",
+        "",
+        "Scholarship",
+        "$5,000 per year, up to five years",
+        "https://c4e.colostate.edu/first-generation-award/",
+        "Colorado State University First Generation Award",
+        "https://ramweb.colostate.edu/",
+        "CSU First Generation Award requires parents/guardians without a bachelor degree, new first-year/transfer admission to Fort Collins by April1, summer/fall start,12+on-campus credits and no prior bachelor. Current CSU, Online/Global and spring entrants are excluded. Need must be documented through FAFSA/CASFA. Applicants must be Colorado residents, qualify for in-state tuition, OR qualify for the Native American Legacy Award; that last path can include Montana residents. Base support is5000 annually for up to five years while full-time. A separate C4E Partnership component can add3000 annually, with only one Partnership award. Apply through RamWeb, CSUSA general application, then FGA and essays. First-year deadline is February1, transfer June1, year unstated. Aid deadlines conflict between one month before FGA and FAFSA February1/CASFA March1; confirm timing. Foreign parent degrees need eligibility confirmation. No numeric GPA cutoff is established.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "applicationRouteEvidence": {
+        "url": "https://ramweb.colostate.edu/",
+        "sourceIds": [
+          "official-national27-web-csu"
+        ],
+        "control": "Named official application or exact provider-linked Apply Now control",
+        "verified": true,
+        "privateApplicationAccessed": false
+      },
+      "childEntityIds": [
+        "intake-entity-d4cbec62bb75668e"
+      ]
     },
     {
       "id": "intake-entity-707c44c8b80635da",
@@ -114167,19 +114575,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-52:daa829303f2d"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-editor-rules"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Editor World page combines Spring2027/$500/900-word/Sept1–Dec15,2026 rules with Spring2025 sweepstakes/18+/600-word rules. First-generation definition concerns parents not attending or completing four-year college. Current age, essay, cycle/type and complete actual entry route remain contradictory; no promotion.",
+      "hold": {
+        "entityId": "intake-entity-707c44c8b80635da",
+        "reason": "Provider publishes one consistent cycle, rules and application control.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Editor World page combines Spring2027/$500/900-word/Sept1–Dec15,2026 rules with Spring2025 sweepstakes/18+/600-word rules. First-generation definition concerns parents not attending or completing four-year college. Current age, essay, cycle/type and complete actual entry route remain contradictory; no promotion.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-editor-rules"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-84933f928ba15030",
@@ -116293,19 +116716,24 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-90:4a65664943de"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-pullman"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "George M. Pullman requires Cook County, Illinois residency for high-school seniors entering a first full-time bachelor degree;3.0 and financial need. Montana resident entry is not supported. 2027 window Nov1,2026–Feb1,2027; exclusion is residency, not Illinois college attendance.",
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-a5a75dd0bc921034",
@@ -116317,18 +116745,330 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-91:8149d7215a52"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
-      "tags": [],
-      "interviewCoverage": [],
+      "officialEvidenceIds": [
+        "official-national27-kpmg-rules",
+        "official-national27-kpmg-current"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "2025 cycle closed; next deadline unverified",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "$10,000 annually for four years",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "KPMG Future Leaders Program",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "KPMG Future Leaders2025 supported female high-school seniors, including homeschooled students, graduating2024–25 and entering a four-year undergraduate program by fall2025. Business or STEM study,3.5GPA and a financial-need essay with household income no more than75000 were required. Students with tuition fully paid by an agency, employer, government program or full athletic scholarship were ineligible. Benefits included10000 annually for four years, a virtual July2025 retreat and ongoing leadership, college-transition and career support. The named official Kaleidoscope application is closed; future eligibility, dates and continuation conditions are unverified. Do not assume current availability.",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "3.5",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "4 Year",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-kpmg-rules",
+          "locator": "award heading: KPMG Future Leaders Program",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:32:46.224Z",
+          "supportingSourceIds": [
+            "official-national27-kpmg-rules",
+            "official-national27-kpmg-current"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "key": "female",
+          "label": "Female",
+          "meaning": "Female high-school senior requirement in2025rules.",
+          "effect": "requirement",
+          "sourceId": "official-national27-kpmg-rules",
+          "existingChoiceId": "female",
+          "existingControlId": "criterion-female",
+          "existingCriterionId": "identity.gender",
+          "qualifiedExplanation": "Historical closed cycle; future rules unknown.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        },
+        {
+          "key": "business_finance",
+          "label": "Business & Finance",
+          "meaning": "Business track is one alternative.",
+          "effect": "topic",
+          "sourceId": "official-national27-kpmg-rules",
+          "existingChoiceId": "business_finance",
+          "existingControlId": "criterion-business-finance",
+          "existingCriterionId": "career.business_finance",
+          "qualifiedExplanation": "Business OR STEM, not both.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        },
+        {
+          "key": "stem",
+          "label": "STEM",
+          "meaning": "STEM track is one alternative.",
+          "effect": "topic",
+          "sourceId": "official-national27-kpmg-rules",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "STEM OR business, not both.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "gender",
+          "decision": "existing_question_partial",
+          "choiceId": "female",
+          "rationale": "Provider female HSsenior condition, historical cycle."
+        },
+        {
+          "dimension": "career",
+          "decision": "existing_question_partial",
+          "choiceId": "business_finance",
+          "rationale": "Business OR STEM."
+        },
+        {
+          "dimension": "career STEM",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Alternative degree track."
+        },
+        {
+          "dimension": "need",
+          "decision": "gap_candidate",
+          "choiceId": null,
+          "rationale": "Household income75000 maximum and no fully paid tuition; ordinary need question insufficient for exact proof."
+        },
+        {
+          "dimension": "school/GPA",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "2024–25senior/fall2025four-year and3.5."
+        },
+        {
+          "dimension": "leadership/service",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Retreat/development benefit, not proof of a held leadership role; no service minimum verified."
+        },
+        {
+          "dimension": "cycle/renewal",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Closed2025;four-year amount but future continuation rules unverified."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "identityRationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified.",
+      "pendingIdentityRowIds": [],
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-a5a75dd0bc921034",
+        "entityId": "intake-entity-a5a75dd0bc921034"
+      },
+      "proposedValues": [
+        "2026-09-11",
+        "2025 cycle closed; next deadline unverified",
+        "",
+        "Scholarship",
+        "$10,000 annually for four years",
+        "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+        "KPMG Future Leaders Program",
+        "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+        "KPMG Future Leaders2025 supported female high-school seniors, including homeschooled students, graduating2024–25 and entering a four-year undergraduate program by fall2025. Business or STEM study,3.5GPA and a financial-need essay with household income no more than75000 were required. Students with tuition fully paid by an agency, employer, government program or full athletic scholarship were ineligible. Benefits included10000 annually for four years, a virtual July2025 retreat and ongoing leadership, college-transition and career support. The named official Kaleidoscope application is closed; future eligibility, dates and continuation conditions are unverified. Do not assume current availability.",
+        "3.5",
+        "4 Year",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "applicationRouteEvidence": {
+        "url": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+        "sourceIds": [
+          "official-national27-kpmg-rules"
+        ],
+        "control": "Named official application or exact provider-linked Apply Now control",
+        "verified": true,
+        "privateApplicationAccessed": false
       }
     },
     {
@@ -130429,19 +131169,29 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-243:056655aa36f3"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "non_record",
+      "type": "aggregate",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-pgsf"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim.",
+      "pendingIdentityRowIds": [],
+      "childEntityIds": [
+        "intake-entity-f23e4c4073343bbb",
+        "intake-entity-410629f1161ac126",
+        "intake-entity-e6c48727698e8607"
+      ]
     },
     {
       "id": "intake-entity-5b7c233b6854700d",
@@ -130492,18 +131242,271 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-248:a517180feb16"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rollins"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "May 15, 2026 at 11:59 p.m. EST (past cycle)",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "$10,000 first award; $5,000 runner-up",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://www.rollinsscholarship.org/scholarship-application",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "Ted & Holly Rollins Scholarship",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://tally.so/r/rjPRGR",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "David L. Rollins Memorial Scholarship2026 invited high-school seniors to submit an essay of at least500 words about their life story, intended study/career and intended impact on the world. First award10000 and runner-up5000 were awarded for summer2026; deadline was May15,2026 at11:59p.m.EST. The provider links an Apply Now Tally form; public form contents did not return, and no application was submitted. The page directs readers to check back in early fall2026 for new information; no future-cycle terms are verified. A numeric GPA, restricted major, need threshold, formal volunteer minimum and guaranteed renewal are not established.",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-rollins",
+          "locator": "award heading: Ted & Holly Rollins Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-rollins"
+          ]
+        }
+      ],
       "tags": [],
-      "interviewCoverage": [],
+      "interviewCoverage": [
+        {
+          "dimension": "school",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "HSsenior; no four-year-only condition established."
+        },
+        {
+          "dimension": "career",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Intended-study essay does not restrict major."
+        },
+        {
+          "dimension": "need/GPA",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "No numeric thresholds established."
+        },
+        {
+          "dimension": "service/leadership",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "Impact essay does not establish formal service hours or leadership position."
+        },
+        {
+          "dimension": "application/cycle",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Specific linked Tally application;2026past;next unknown."
+        },
+        {
+          "dimension": "renewal",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "No guarantee."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "identityRationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified.",
+      "pendingIdentityRowIds": [],
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-2ebf3038c0faaaa5",
+        "entityId": "intake-entity-2ebf3038c0faaaa5"
+      },
+      "proposedValues": [
+        "2026-09-11",
+        "May 15, 2026 at 11:59 p.m. EST (past cycle)",
+        "",
+        "Scholarship",
+        "$10,000 first award; $5,000 runner-up",
+        "https://www.rollinsscholarship.org/scholarship-application",
+        "Ted & Holly Rollins Scholarship",
+        "https://tally.so/r/rjPRGR",
+        "David L. Rollins Memorial Scholarship2026 invited high-school seniors to submit an essay of at least500 words about their life story, intended study/career and intended impact on the world. First award10000 and runner-up5000 were awarded for summer2026; deadline was May15,2026 at11:59p.m.EST. The provider links an Apply Now Tally form; public form contents did not return, and no application was submitted. The page directs readers to check back in early fall2026 for new information; no future-cycle terms are verified. A numeric GPA, restricted major, need threshold, formal volunteer minimum and guaranteed renewal are not established.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "applicationRouteEvidence": {
+        "url": "https://tally.so/r/rjPRGR",
+        "sourceIds": [
+          "official-national27-web-rollins"
+        ],
+        "control": "Named official application or exact provider-linked Apply Now control",
+        "verified": true,
+        "privateApplicationAccessed": false
       }
     },
     {
@@ -130560,19 +131563,24 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-250:18092d0bdadf"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-voyager"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Voyager requires current college sophomore status in spring2026 and rising junior/eligible two-year transfer to junior in2026–27. This is later-college entry, not direct high-school entry.",
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-617ffbb333e5e094",
@@ -130584,19 +131592,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-251:5d699fb4058f"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-4h-apply"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "4-H Youth in Action:2027 applications closed,2028 opens Jan2027. Four5000 awards with a year of development and public spokesperson/media/travel activities. Repeated bounded public extraction did not verify full age/membership eligibility or next actual application. Do not infer college-only eligibility from a structured extraction.",
+      "hold": {
+        "entityId": "intake-entity-617ffbb333e5e094",
+        "reason": "Complete official age/membership eligibility and named2028 application become available.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "4-H Youth in Action:2027 applications closed,2028 opens Jan2027. Four5000 awards with a year of development and public spokesperson/media/travel activities. Repeated bounded public extraction did not verify full age/membership eligibility or next actual application. Do not infer college-only eligibility from a structured extraction.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-4h-apply"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-f4cbf1a40504e59a",
@@ -130608,18 +131631,284 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-252:4e3c6c398d45"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
-      "tags": [],
-      "interviewCoverage": [],
+      "officialEvidenceIds": [
+        "official-national27-web-davis"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-national27-web-davis",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "April 1, 2026 at midnight EST (past cycle)",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "Up to $15,000 for the 2026–27 academic year",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://www.davisputter.org/apply",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "Davis-Putter Scholarship",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://apply.mykaleidoscope.com/program/Davis-PutterScholarship2026",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "Davis-Putter supports active or emerging organizers in progressive movements for liberation, self-determination and social/economic justice. Applicants need financial support and must have applied to or be enrolled in a postsecondary degree/certificate, including trade or technical study. Priority goes to those with limited access to family wealth. This requires specific movement-organizing work, beyond general volunteering or interest. For fall2026–June30,2027 the maximum grant is15000, disbursed by academic term and not deferrable. The2026 application deadline was April1 at midnightEST; future terms are unverified. Apply through the linked named Kaleidoscope program with personal statement/short essays, two recommendations, latest transcripts (unofficial accepted) and SAR/state equivalent/FAFSA worksheet. Recipients must reapply each year. No political affiliation response is collected or inferred by this system.",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-davis",
+          "locator": "award heading: Davis-Putter Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:52:11.004406+00:00",
+          "supportingSourceIds": [
+            "official-national27-web-davis"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "key": "public_service",
+          "label": "Public Service & Social Impact",
+          "meaning": "Specific progressive movement organizing.",
+          "effect": "topic",
+          "sourceId": "official-national27-web-davis",
+          "existingChoiceId": "public_service",
+          "existingControlId": "criterion-public-service",
+          "existingCriterionId": "career.public_service",
+          "qualifiedExplanation": "General community-service interest does not establish this award’s organizing requirement.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "service/career",
+          "decision": "existing_question_partial",
+          "choiceId": "public_service",
+          "rationale": "Specific movement work exceeds ordinary community improvement."
+        },
+        {
+          "dimension": "school",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Applied to/enrolled degree or certificate including trade."
+        },
+        {
+          "dimension": "need",
+          "decision": "gap_candidate",
+          "choiceId": null,
+          "rationale": "Need and limited family wealth; not necessarily acute financial crisis."
+        },
+        {
+          "dimension": "leadership",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Emerging organizers do not need a named leadership position."
+        },
+        {
+          "dimension": "GPA",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "No numeric cutoff established."
+        },
+        {
+          "dimension": "application/renewal",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Named2026Kaleidoscope;annual reapplication; funds cannot defer."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "identityRationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified.",
+      "pendingIdentityRowIds": [],
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-f4cbf1a40504e59a",
+        "entityId": "intake-entity-f4cbf1a40504e59a"
+      },
+      "proposedValues": [
+        "2026-09-11",
+        "April 1, 2026 at midnight EST (past cycle)",
+        "",
+        "Scholarship",
+        "Up to $15,000 for the 2026–27 academic year",
+        "https://www.davisputter.org/apply",
+        "Davis-Putter Scholarship",
+        "https://apply.mykaleidoscope.com/program/Davis-PutterScholarship2026",
+        "Davis-Putter supports active or emerging organizers in progressive movements for liberation, self-determination and social/economic justice. Applicants need financial support and must have applied to or be enrolled in a postsecondary degree/certificate, including trade or technical study. Priority goes to those with limited access to family wealth. This requires specific movement-organizing work, beyond general volunteering or interest. For fall2026–June30,2027 the maximum grant is15000, disbursed by academic term and not deferrable. The2026 application deadline was April1 at midnightEST; future terms are unverified. Apply through the linked named Kaleidoscope program with personal statement/short essays, two recommendations, latest transcripts (unofficial accepted) and SAR/state equivalent/FAFSA worksheet. Recipients must reapply each year. No political affiliation response is collected or inferred by this system.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "applicationRouteEvidence": {
+        "url": "https://apply.mykaleidoscope.com/program/Davis-PutterScholarship2026",
+        "sourceIds": [
+          "official-national27-web-davis"
+        ],
+        "control": "Named official application or exact provider-linked Apply Now control",
+        "verified": true,
+        "privateApplicationAccessed": false
       }
     },
     {
@@ -130632,19 +131921,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-253:573fc6861a76"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-nextautism-program"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "NEXT for AUTISM Fellows supports partner-college health/human-services study and substantial paid direct-support work, not applicants who necessarily have autism. Structured public extraction indicates graduation2028or later/two-year commitment/800hours yearly and2027Jan11–Mar14 cycle, but complete partner exceptions and an actual application control were not independently established. No promotion or autism-identity tag.",
+      "hold": {
+        "entityId": "intake-entity-d43d5e6ecfd644c2",
+        "reason": "Official complete partner/entry/paid-work terms and award-specific application route are available.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "NEXT for AUTISM Fellows supports partner-college health/human-services study and substantial paid direct-support work, not applicants who necessarily have autism. Structured public extraction indicates graduation2028or later/two-year commitment/800hours yearly and2027Jan11–Mar14 cycle, but complete partner exceptions and an actual application control were not independently established. No promotion or autism-identity tag.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-nextautism-program"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-ce57e2931f955d00",
@@ -130656,19 +131960,24 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-254:de94d3448852"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-imeg"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "IMEG requires full-time engineering sophomore, junior or senior status in fall2027. Direct high-school-to-first-year entry is not eligible.",
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-d5f17eb3f5294de9",
@@ -130680,19 +131989,24 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-255:790b33e2a47d"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-nextswell"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Next Swell supports marine-related master or PhD students with3.5GPA. Graduate-only program is outside direct high-school entry.",
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-33f4a1d981777f02",
@@ -130704,19 +132018,29 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-256:9b8293ff1d75"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "non_record",
+      "type": "aggregate",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-catching"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim.",
+      "pendingIdentityRowIds": [],
+      "childEntityIds": [
+        "intake-entity-4584b8492df03fd2",
+        "intake-entity-ffd0e4f229790d5c",
+        "intake-entity-311d1bb8e7a94c10"
+      ]
     },
     {
       "id": "intake-entity-0426cd3c4043cfbb",
@@ -130728,19 +132052,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-257:f00e52525585"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "non_record",
+      "type": "aggregate",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Parent/shared application or program family. Named tracks are individually accounted below; parent is not an extra scholarship. Only selected public program headings reviewed; no full endowment or historical recipient-catalog claim.",
+      "pendingIdentityRowIds": [],
+      "childEntityIds": [
+        "intake-entity-45dea9af34fb7caa",
+        "intake-entity-3604e8110e1320d6",
+        "intake-entity-10a95f8b06e528b8",
+        "intake-entity-be9e9be03521ec57",
+        "intake-entity-1a0a91800fd21e22",
+        "intake-entity-17598494c2d20627"
+      ]
     },
     {
       "id": "intake-entity-3a3f3dbc494b53e5",
@@ -130752,18 +132089,284 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-258:99976f947d0b"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
-      "tags": [],
-      "interviewCoverage": [],
+      "officialEvidenceIds": [
+        "official-national27-web-hitec"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "March 16, 2026; recommendation March 24, 2026 (past cycle)",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "Up to $5,000",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://hitecglobal.org/foundation",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "HITEC Foundation Scholarship",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://aim.applyists.net/HITEC",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "HITEC Foundation Scholarship2026 accepted high-school seniors, undergraduates and graduate students pursuing technology or an approved related major, with3.0GPA and US citizenship, permanent legal residency or DACA status. The eligible-major list is explicitly nonexhaustive. Awards are up to5000; the2026 application ran January16–March16, with recommendations due March24. The program is closed and the next cycle is unverified. The provider links its named HITEC application managed by ISTS. The award’s eligibility list does not impose Hispanic identity or a financial-need threshold. A separate Illinois Tech partnership benefit of up to14000 is not part of this scholarship and is not combined with it. Guaranteed renewal is not established.",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "3.0",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-national27-web-hitec",
+          "locator": "award heading: HITEC Foundation Scholarship",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T06:44:45.265Z",
+          "supportingSourceIds": [
+            "official-national27-web-hitec"
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "key": "stem",
+          "label": "STEM",
+          "meaning": "Technology and approved related majors.",
+          "effect": "topic",
+          "sourceId": "official-national27-web-hitec",
+          "existingChoiceId": "stem",
+          "existingControlId": "criterion-stem",
+          "existingCriterionId": "career.stem",
+          "qualifiedExplanation": "Not every STEM major automatically qualifies; approved major list is nonexhaustive.",
+          "storage": "Local award metadata recommendation only; no runtime or workbook tag write"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "career",
+          "decision": "existing_question_partial",
+          "choiceId": "stem",
+          "rationale": "Technology-related subset of STEM."
+        },
+        {
+          "dimension": "school/GPA",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "HSsenior/undergrad/grad;3.0."
+        },
+        {
+          "dimension": "citizenship",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "USC/permanentlegalresident/DACA."
+        },
+        {
+          "dimension": "identity/need",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "No ethnic or need requirement in scholarship list; do not inherit sponsor mission."
+        },
+        {
+          "dimension": "service/leadership",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "No formal service/leadership minimum established."
+        },
+        {
+          "dimension": "application/cycle/renewal",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "ISTS HITEC;2026past;next and guaranteed renewal unknown."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "identityRationale": "Distinct official provider/program and named actual application route; identity compared against197Master records and202prior additions, not name alone. Exact cycle and unsupported optional fields remain qualified.",
+      "pendingIdentityRowIds": [],
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-3a3f3dbc494b53e5",
+        "entityId": "intake-entity-3a3f3dbc494b53e5"
+      },
+      "proposedValues": [
+        "2026-09-11",
+        "March 16, 2026; recommendation March 24, 2026 (past cycle)",
+        "",
+        "Scholarship",
+        "Up to $5,000",
+        "https://hitecglobal.org/foundation",
+        "HITEC Foundation Scholarship",
+        "https://aim.applyists.net/HITEC",
+        "HITEC Foundation Scholarship2026 accepted high-school seniors, undergraduates and graduate students pursuing technology or an approved related major, with3.0GPA and US citizenship, permanent legal residency or DACA status. The eligible-major list is explicitly nonexhaustive. Awards are up to5000; the2026 application ran January16–March16, with recommendations due March24. The program is closed and the next cycle is unverified. The provider links its named HITEC application managed by ISTS. The award’s eligibility list does not impose Hispanic identity or a financial-need threshold. A separate Illinois Tech partnership benefit of up to14000 is not part of this scholarship and is not combined with it. Guaranteed renewal is not established.",
+        "3.0",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "applicationRouteEvidence": {
+        "url": "https://aim.applyists.net/HITEC",
+        "sourceIds": [
+          "official-national27-web-hitec"
+        ],
+        "control": "Named official application or exact provider-linked Apply Now control",
+        "verified": true,
+        "privateApplicationAccessed": false
       }
     },
     {
@@ -131383,19 +132986,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-271:05c7c1770074"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-sema-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "SEMA student scholarship is distinct from employee loan forgiveness. Public retrieval describes HSsenior or18+,incoming/current postsecondary,US/Canadian citizenship,automotive career interest;1000–5000,2026Apr3past,nextJan1,2027. Named actual student application control was not returned; program information alone does not establish it. Full next-cycle rules remain unverified.",
+      "hold": {
+        "entityId": "intake-entity-a358303c0b661af8",
+        "reason": "Official next-cycle student application control and complete rules appear.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "SEMA student scholarship is distinct from employee loan forgiveness. Public retrieval describes HSsenior or18+,incoming/current postsecondary,US/Canadian citizenship,automotive career interest;1000–5000,2026Apr3past,nextJan1,2027. Named actual student application control was not returned; program information alone does not establish it. Full next-cycle rules remain unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-sema-route"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-606c3d94576f708b",
@@ -131407,19 +133025,37 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-272:a74f7e3c2ac4"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-science"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Science Ambassador2027: five one-time20000 tuition awards; women/nonbinary HSseniors or undergraduates planning/enrolled STEM at US/territory college, no citizenship restriction. Public YouTube science mini-lecture up3minutes, not Shorts. Page says Sept2026 opening but returned only notification signup; actual application not established. Do not inherit old full-tuition or extra1000 terms.",
+      "hold": {
+        "entityId": "intake-entity-606c3d94576f708b",
+        "reason": "Actual2027 application control becomes available; confirm complete cycle terms.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Science Ambassador2027: five one-time20000 tuition awards; women/nonbinary HSseniors or undergraduates planning/enrolled STEM at US/territory college, no citizenship restriction. Public YouTube science mini-lecture up3minutes, not Shorts. Page says Sept2026 opening but returned only notification signup; actual application not established. Do not inherit old full-tuition or extra1000 terms.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-science"
+        ]
+      },
+      "pendingIdentityRowIds": [],
+      "relatedEntityIds": [
+        "intake-entity-97522ffd7a2d8563"
+      ]
     },
     {
       "id": "intake-entity-12339f0f0a7ffaeb",
@@ -131431,19 +133067,34 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-273:c342343e9abd"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-amtrak"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Amtrak Academic Scholarship public structured extraction suggests2.8,full-time undergrad/grad and railway career interest, and explicitly permits high-school transcript plus college acceptance. Do not exclude as advanced-only. Current amount, exact cycle and actual application control were not established, and named award-track completeness is unknown.",
+      "hold": {
+        "entityId": "intake-entity-12339f0f0a7ffaeb",
+        "reason": "Complete official public track list, entry rules and award-specific application route are available.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Amtrak Academic Scholarship public structured extraction suggests2.8,full-time undergrad/grad and railway career interest, and explicitly permits high-school transcript plus college acceptance. Do not exclude as advanced-only. Current amount, exact cycle and actual application control were not established, and named award-track completeness is unknown.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-amtrak"
+        ]
+      },
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-361737f5583bb300",
@@ -134756,19 +136407,37 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-379:bf02be577d46"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-web-science"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Same Science Ambassador sponsor, official route and video-program purpose as the other saved alias; both remain held because actual2027 application control is unavailable. No second award proposal or loss of source identity.",
+      "hold": {
+        "entityId": "intake-entity-97522ffd7a2d8563",
+        "reason": "Actual2027 application control becomes available; reconcile both aliases to one supported proposal.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Same Science Ambassador sponsor, official route and video-program purpose as the other saved alias; both remain held because actual2027 application control is unavailable. No second award proposal or loss of source identity.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-science"
+        ]
+      },
+      "pendingIdentityRowIds": [],
+      "relatedEntityIds": [
+        "intake-entity-606c3d94576f708b"
+      ]
     },
     {
       "id": "intake-entity-485a096e2db8fd83",
@@ -138148,19 +139817,31 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-423:ad9cba64e666",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-132:cb567f1af596"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "duplicate_of",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-national27-louie",
+        "official-national27-louie-rules"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 145,
+        "entityId": "intake-entity-b1375ef774da76cf"
+      },
+      "survivingEntityId": "intake-entity-b1375ef774da76cf",
+      "identityRationale": "Same exact official Louie Foundation program URL, provider and2026program description as native Master145. No current public rules were retrieved; identity only, no freshness or new field claim.",
+      "pendingIdentityRowIds": []
     },
     {
       "id": "intake-entity-77f3c85baafba34e",
@@ -167305,6 +168986,493 @@
           "official-institute25-extra-bulk-provider"
         ]
       }
+    },
+    {
+      "id": "intake-entity-f23e4c4073343bbb",
+      "comparisonName": "fgce full-time student scholarships",
+      "name": "FGCE Full-Time Student Scholarships",
+      "aliases": [
+        "FGCE Full-Time Student Scholarships"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-pgsf"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-pgsf",
+      "parentEntityId": "intake-entity-0fc623eca2dbb296",
+      "destination": null,
+      "identityRationale": "Official PGSF route redirects to Foundation for Graphic Communication Education. Full-time track permits HSseniors entering printing/graphic communication/packaging programs;3.0 and12credits, no part-time/online, two recommendations/transcripts.1500–10000,May1,2026past;ApplyNow points to same page, not actual award application.",
+      "hold": {
+        "entityId": "intake-entity-f23e4c4073343bbb",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official PGSF route redirects to Foundation for Graphic Communication Education. Full-time track permits HSseniors entering printing/graphic communication/packaging programs;3.0 and12credits, no part-time/online, two recommendations/transcripts.1500–10000,May1,2026past;ApplyNow points to same page, not actual award application.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-pgsf"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-410629f1161ac126",
+      "comparisonName": "fgce working professionals scholarships",
+      "name": "FGCE Working Professionals Scholarships",
+      "aliases": [
+        "FGCE Working Professionals Scholarships"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-pgsf"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-pgsf",
+      "parentEntityId": "intake-entity-0fc623eca2dbb296",
+      "destination": null,
+      "identityRationale": "Working-professional track requires printing/graphics industry employment; part-time/online allowed; no initial GPA/transcript requirement in rendered rules. Employer confirmation May2 and course/cost plan.3.0 is renewal, not initial cutoff. Actual application control unavailable.",
+      "hold": {
+        "entityId": "intake-entity-410629f1161ac126",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Working-professional track requires printing/graphics industry employment; part-time/online allowed; no initial GPA/transcript requirement in rendered rules. Employer confirmation May2 and course/cost plan.3.0 is renewal, not initial cutoff. Actual application control unavailable.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-pgsf"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-e6c48727698e8607",
+      "comparisonName": "fgce graduate fellowships",
+      "name": "FGCE Graduate Fellowships",
+      "aliases": [
+        "FGCE Graduate Fellowships"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-pgsf"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-pgsf",
+      "parentEntityId": "intake-entity-0fc623eca2dbb296",
+      "destination": null,
+      "identityRationale": "Named graduate fellowship is graduate-only, outside direct high-school entry.",
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-4584b8492df03fd2",
+      "comparisonName": "catching the dream mesbec",
+      "name": "Catching the Dream MESBEC",
+      "aliases": [
+        "Catching the Dream MESBEC"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-catching"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-catching",
+      "parentEntityId": "intake-entity-33f4a1d981777f02",
+      "destination": null,
+      "identityRationale": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "hold": {
+        "entityId": "intake-entity-4584b8492df03fd2",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-catching"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-ffd0e4f229790d5c",
+      "comparisonName": "catching the dream nale",
+      "name": "Catching the Dream NALE",
+      "aliases": [
+        "Catching the Dream NALE"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-catching"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-catching",
+      "parentEntityId": "intake-entity-33f4a1d981777f02",
+      "destination": null,
+      "identityRationale": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "hold": {
+        "entityId": "intake-entity-ffd0e4f229790d5c",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-catching"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-311d1bb8e7a94c10",
+      "comparisonName": "catching the dream tbm",
+      "name": "Catching the Dream TBM",
+      "aliases": [
+        "Catching the Dream TBM"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-catching"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-catching",
+      "parentEntityId": "intake-entity-33f4a1d981777f02",
+      "destination": null,
+      "identityRationale": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "hold": {
+        "entityId": "intake-entity-311d1bb8e7a94c10",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-catching"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-45dea9af34fb7caa",
+      "comparisonName": "rma foundation platinum award",
+      "name": "RMA Foundation Platinum Award",
+      "aliases": [
+        "RMA Foundation Platinum Award"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-45dea9af34fb7caa",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-3604e8110e1320d6",
+      "comparisonName": "rma william f. githens scholarship",
+      "name": "RMA William F. Githens Scholarship",
+      "aliases": [
+        "RMA William F. Githens Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-3604e8110e1320d6",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-10a95f8b06e528b8",
+      "comparisonName": "rma nancy j. foster scholarship",
+      "name": "RMA Nancy J. Foster Scholarship",
+      "aliases": [
+        "RMA Nancy J. Foster Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-10a95f8b06e528b8",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-be9e9be03521ec57",
+      "comparisonName": "rma ed schreiber memorial scholarship",
+      "name": "RMA Ed Schreiber Memorial Scholarship",
+      "aliases": [
+        "RMA Ed Schreiber Memorial Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-be9e9be03521ec57",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-1a0a91800fd21e22",
+      "comparisonName": "rma william bonnell scholarship",
+      "name": "RMA William Bonnell Scholarship",
+      "aliases": [
+        "RMA William Bonnell Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-1a0a91800fd21e22",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-17598494c2d20627",
+      "comparisonName": "rma michael g. nassy scholarship",
+      "name": "RMA Michael G. Nassy Scholarship",
+      "aliases": [
+        "RMA Michael G. Nassy Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": null,
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-rma"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-rma",
+      "parentEntityId": "intake-entity-0426cd3c4043cfbb",
+      "destination": null,
+      "identityRationale": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "hold": {
+        "entityId": "intake-entity-17598494c2d20627",
+        "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-national27-web-rma"
+        ]
+      },
+      "pendingIdentityRowIds": []
+    },
+    {
+      "id": "intake-entity-d4cbec62bb75668e",
+      "comparisonName": "csu c4e partnership component of first generation award",
+      "name": "CSU C4E Partnership component of First Generation Award",
+      "aliases": [
+        "CSU C4E Partnership component of First Generation Award"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "non_record",
+      "type": "aggregate",
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-national27-web-csu"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": "official-national27-web-csu",
+      "parentEntityId": "intake-entity-6bde02413985885a",
+      "destination": null,
+      "identityRationale": "Additional3000annual up5years component attached to qualifying FGA; only one Partnership award. Base may remain with another partnership. Not a separate independently eligible scholarship row.",
+      "pendingIdentityRowIds": []
     }
   ],
   "officialSources": [
@@ -170636,6 +172804,294 @@
       "authority": "official provider/program or provider-linked document",
       "evidencePath": "docs/evidence/scholarship-intake/providers-evidence.json",
       "retrievalMode": "Live maxAge0 selected direct public program quotation; transcript timing remains ambiguous."
+    },
+    {
+      "id": "official-national27-web-csu",
+      "url": "https://c4e.colostate.edu/first-generation-award/",
+      "finalUrl": "https://c4e.colostate.edu/first-generation-award/",
+      "observedAt": "2026-09-11T06:44:45.264Z",
+      "statusCode": 200,
+      "contentSha256": "1f538c4bdfbd72b57a616ba432ced9e2d537743918a91850a4bba570dfb2429a",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-csu-native",
+      "url": "https://admissions.colostate.edu/nativeamerican/",
+      "finalUrl": "https://admissions.colostate.edu/cost-financial-aid/financial-aid-scholarships/native-american-legacy-award/",
+      "observedAt": "2026-09-11T06:34:13.825Z",
+      "statusCode": 200,
+      "contentSha256": "4826c532dcb3deb524f336b614d5c7fc8c97747a807f03da04448bd11f4a78e4",
+      "scrapeId": "01a08f2c-6855-711b-b1c6-a9baa70e43d9",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-kpmg-rules",
+      "url": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+      "finalUrl": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+      "observedAt": "2026-09-11T06:32:46.224Z",
+      "statusCode": 200,
+      "contentSha256": "38f4e2d0b8475f3858b681e1d1b94cb6b6f1b7b7b51369a6250c2b7333b52e98",
+      "scrapeId": "01a08f2b-1b21-765d-baf7-104c467f818b",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-kpmg-current",
+      "url": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+      "finalUrl": "https://apply.mykaleidoscope.com/scholarships/KPMGFutureLeaders2025",
+      "observedAt": "2026-09-11T06:34:26.864Z",
+      "statusCode": 200,
+      "contentSha256": "4639c7f2b7fa2688ce9a6c2f20532bcee09354962d54ac7a3401f4978055dffe",
+      "scrapeId": "01a08f2c-ac96-710c-93e7-608238d1b195",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-rollins",
+      "url": "https://www.rollinsscholarship.org/scholarship-application",
+      "finalUrl": "https://www.rollinsscholarship.org/scholarship-application",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "02605afbcc990163e04f86f2890a784eff06ff5859a2a78553fe7f0c16e6cb54",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-davis",
+      "url": "https://www.davisputter.org/apply",
+      "finalUrl": "https://www.davisputter.org/apply",
+      "observedAt": "2026-09-11T06:52:11.004406+00:00",
+      "statusCode": 200,
+      "contentSha256": "46c58a979904b3d74a9ad78c47b137ee52fbcccbe554ab628ee00ac8a12edc96",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-hitec",
+      "url": "https://hitecglobal.org/foundation",
+      "finalUrl": "https://hitecglobal.org/foundation",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "5c9142d38683cfec9fdf8a58e25d1c0c7941c01cd8d794d8db2618c7693bb642",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-editor-rules",
+      "url": "https://www.editorworld.com/scholarship",
+      "finalUrl": "https://www.editorworld.com/scholarship",
+      "observedAt": "2026-09-11T06:32:40.176Z",
+      "statusCode": 200,
+      "contentSha256": "050e5a38463159d830339e8230e3db5a9197037f60c3667fe04fc24fd7acf97a",
+      "scrapeId": "01a08f2b-0d56-747e-8a50-a2aebac32101",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-pullman",
+      "url": "https://www.pullmanfoundation.org/apply/",
+      "finalUrl": "https://www.pullmanfoundation.org/apply/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "5ab9c09c128368456de38a6fd097c889f79039589fdf2d238c95e65c85176a88",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-voyager",
+      "url": "https://www.obama.org/programs/voyager-scholarship/faq/",
+      "finalUrl": "https://www.obama.org/programs/voyager-scholarship/faq/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "0ecddef5b3eb60a4e70e4cc866a2a537f1bc1c05b535e8fd136f579733dd81bc",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-imeg",
+      "url": "https://imegcorp.com/careers/imeg-engineering-scholarship-program/",
+      "finalUrl": "https://imegcorp.com/careers/imeg-engineering-scholarship-program/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "e37b3a52586f62ce8f501636122a07310b126388229e39f323823c78719c46c8",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-nextswell",
+      "url": "https://www.thenextswell.org/scholarship",
+      "finalUrl": "https://www.thenextswell.org/scholarship",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "22c9eb4169442d0be1c6036f3b5706321e2c18eee81ef2f0cce11b2e3c7d967f",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-science",
+      "url": "https://www.scienceambassadorscholarship.org/",
+      "finalUrl": "https://www.scienceambassadorscholarship.org/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "ea8d60e47a4b85f0ae99388644e191bf55865b3aceeb9b283f8c9cff8196b589",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-pgsf",
+      "url": "https://www.thefgce.org/students/scholarships/",
+      "finalUrl": "https://www.thefgce.org/students/scholarships/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "a9cf6f275379de85d631d46526df0192e28d0c959d7622a24b3d7af9adfe861e",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-catching",
+      "url": "https://catchingthedream.org/wp-content/uploads/2022/05/11CTD_Application_FillablePDF_with_consent_form-2.pdf",
+      "finalUrl": "https://catchingthedream.org/wp-content/uploads/2022/05/11CTD_Application_FillablePDF_with_consent_form-2.pdf",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "c3187b4b8a4f8c3d33308f34a10d91f6bf150e7c0abd75cd2422d82389ea6af8",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-catching-rules",
+      "url": "https://catchingthedream.org/",
+      "finalUrl": "https://catchingthedream.org/",
+      "observedAt": "2026-09-11T06:35:53.455Z",
+      "statusCode": 200,
+      "contentSha256": "cbcdf39a4d801ab8d6a3d2c946947a74c8cb06246a2d82953687172993068505",
+      "scrapeId": "01a08f2e-003c-733c-ac03-67bfffc0991e",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-web-rma",
+      "url": "https://www.rmahq.org/studentresources/scholarships/",
+      "finalUrl": "https://www.rmahq.org/studentresources/scholarships/",
+      "observedAt": "2026-09-11T06:44:45.265Z",
+      "statusCode": 200,
+      "contentSha256": "a8cd3fd81c4b7117bfafca2214beb1e95305e579a13c67f5c7ceb0345f6220d0",
+      "scrapeId": null,
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-louie",
+      "url": "https://www.louiefamilyfoundation.org/scholarship-application",
+      "finalUrl": "https://www.louiefamilyfoundation.org/scholarship-application",
+      "observedAt": "2026-09-11T06:25:06.050Z",
+      "statusCode": 200,
+      "contentSha256": "71804a6e56b258c45c0623d5a3e6325023a2045a6bbc4ebbb5be9a1672121a40",
+      "scrapeId": "01a08f23-f66f-7380-ba13-06e9b80ac0e0",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-louie-rules",
+      "url": "https://www.louiefamilyfoundation.org/scholarship-application",
+      "finalUrl": "https://www.louiefamilyfoundation.org/scholarship-application",
+      "observedAt": "2026-09-11T06:35:50.863Z",
+      "statusCode": 200,
+      "contentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scrapeId": "01a08f2d-ee12-72c9-a731-aa46065aef03",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-4h-rules",
+      "url": "https://4-h.org/programs/4-h-youth-in-action-program/",
+      "finalUrl": "https://4-h.org/programs/4-h-youth-in-action-program/",
+      "observedAt": "2026-09-11T06:32:54.931Z",
+      "statusCode": 200,
+      "contentSha256": "09ea1ee012516fc427307ed1763f53f5abea6d2a304d4cb5159b785309794bf0",
+      "scrapeId": "01a08f2b-3e5e-7449-93b5-2d53540a1270",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-4h-apply",
+      "url": "https://4-h.org/programs/4-h-youth-in-action-program/application/",
+      "finalUrl": "https://4-h.org/programs/4-h-youth-in-action-program/application/",
+      "observedAt": "2026-09-11T06:28:03.412Z",
+      "statusCode": 200,
+      "contentSha256": "a721bd008e953fbcd547f13073b679c6f56f812931c9d7118d8098dadda620fc",
+      "scrapeId": "01a08f26-7fbe-736b-ade2-86b2d754daf8",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-nextautism-program",
+      "url": "https://nextforautism.org/fellows-scholarship/",
+      "finalUrl": "https://nextforautism.org/our-work/fellows-scholarship/",
+      "observedAt": "2026-09-11T06:34:23.979Z",
+      "statusCode": 200,
+      "contentSha256": "9e104e912cae84c5a6421bd5738fc8006b167a0c6aaf6efeeaaff25c4c0ed83a",
+      "scrapeId": "01a08f2c-8473-71b5-8654-5ece7a1b6e94",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-sema-route",
+      "url": "https://sites.sema.org/scholarships/",
+      "finalUrl": "https://sites.sema.org/scholarships/",
+      "observedAt": "2026-09-11T06:33:02.253Z",
+      "statusCode": 200,
+      "contentSha256": "de2d87979b9720f1293e075a0763f2b18c2e190b721d7cb5ea9e81ea31249984",
+      "scrapeId": "01a08f2b-63c6-75ef-9cff-0bdf928caca5",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
+    },
+    {
+      "id": "official-national27-amtrak",
+      "url": "https://careers.amtrak.com/content/Academic-Scholarship-Program/?locale=en_US",
+      "finalUrl": "https://careers.amtrak.com/content/Academic-Scholarship-Program/?locale=en_US",
+      "observedAt": "2026-09-11T06:29:45.058Z",
+      "statusCode": 200,
+      "contentSha256": "2da043ce960b39efeb6a95e8a910308644db374fee12a7b03b5fa3b581744c7c",
+      "scrapeId": "01a08f28-2e59-777c-b217-1c3a88261601",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/national-evidence.json",
+      "retrievalMode": "Selected public program rules. Rendered-rule paraphrases and direct quotations take precedence over structured extraction; empty retrieval proves no rules. See scope in receipt."
     }
   ],
   "discoveries": [
@@ -171801,6 +174257,55 @@
         "intake-entity-2d3e02370c891bd9"
       ],
       "completeness": "Three named2026–27programs inselectedcurrentprogramsection; historicalrecipienttableexcluded, nohistoricalfundcatalogclaim."
+    },
+    {
+      "sourceId": "official-national27-web-pgsf",
+      "enumeratedCount": 3,
+      "reviewedByImplementer": 3,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-f23e4c4073343bbb",
+        "intake-entity-410629f1161ac126",
+        "intake-entity-e6c48727698e8607"
+      ],
+      "completeness": "Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."
+    },
+    {
+      "sourceId": "official-national27-web-catching",
+      "enumeratedCount": 3,
+      "reviewedByImplementer": 3,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-4584b8492df03fd2",
+        "intake-entity-ffd0e4f229790d5c",
+        "intake-entity-311d1bb8e7a94c10"
+      ],
+      "completeness": "Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."
+    },
+    {
+      "sourceId": "official-national27-web-rma",
+      "enumeratedCount": 6,
+      "reviewedByImplementer": 6,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-45dea9af34fb7caa",
+        "intake-entity-3604e8110e1320d6",
+        "intake-entity-10a95f8b06e528b8",
+        "intake-entity-be9e9be03521ec57",
+        "intake-entity-1a0a91800fd21e22",
+        "intake-entity-17598494c2d20627"
+      ],
+      "completeness": "Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."
+    },
+    {
+      "sourceId": "official-national27-web-csu",
+      "enumeratedCount": 1,
+      "reviewedByImplementer": 1,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-d4cbec62bb75668e"
+      ],
+      "completeness": "One explicitly described additional award component; no full CSU scholarship catalog claim."
     }
   ],
   "batches": [
@@ -174986,6 +177491,103 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-providers.json",
         "reviewedCandidateCommit": "e7b0975ffea63a8244c465c07bb1bbf7db76d715"
       }
+    },
+    {
+      "id": "batch-national-027",
+      "status": "authored-awaiting-independent-review",
+      "entityIds": [
+        "intake-entity-94e7280adc108c46",
+        "intake-entity-47d18c1ab4ad305b",
+        "intake-entity-ce57e2931f955d00",
+        "intake-entity-d5f17eb3f5294de9",
+        "intake-entity-707c44c8b80635da",
+        "intake-entity-617ffbb333e5e094",
+        "intake-entity-d43d5e6ecfd644c2",
+        "intake-entity-a358303c0b661af8",
+        "intake-entity-12339f0f0a7ffaeb",
+        "intake-entity-606c3d94576f708b",
+        "intake-entity-97522ffd7a2d8563",
+        "intake-entity-0fc623eca2dbb296",
+        "intake-entity-f23e4c4073343bbb",
+        "intake-entity-410629f1161ac126",
+        "intake-entity-e6c48727698e8607",
+        "intake-entity-33f4a1d981777f02",
+        "intake-entity-4584b8492df03fd2",
+        "intake-entity-ffd0e4f229790d5c",
+        "intake-entity-311d1bb8e7a94c10",
+        "intake-entity-0426cd3c4043cfbb",
+        "intake-entity-45dea9af34fb7caa",
+        "intake-entity-3604e8110e1320d6",
+        "intake-entity-10a95f8b06e528b8",
+        "intake-entity-be9e9be03521ec57",
+        "intake-entity-1a0a91800fd21e22",
+        "intake-entity-17598494c2d20627",
+        "intake-entity-a990eb434076e78a",
+        "intake-entity-5230c33decf5e26d",
+        "intake-entity-6bde02413985885a",
+        "intake-entity-a5a75dd0bc921034",
+        "intake-entity-2ebf3038c0faaaa5",
+        "intake-entity-f4cbf1a40504e59a",
+        "intake-entity-3a3f3dbc494b53e5",
+        "intake-entity-d4cbec62bb75668e"
+      ],
+      "rowIds": [
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-90:4a65664943de",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-250:18092d0bdadf",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-254:de94d3448852",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-255:790b33e2a47d",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-52:daa829303f2d",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-251:5d699fb4058f",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-253:573fc6861a76",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-271:05c7c1770074",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-273:c342343e9abd",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-272:a74f7e3c2ac4",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-379:bf02be577d46",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-243:056655aa36f3",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-256:9b8293ff1d75",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-257:f00e52525585",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-423:ad9cba64e666",
+        "intake-rev226-74df373b3e30738e:sheet-2106717984:row-132:cb567f1af596",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-50:1893d512c9a6",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-51:578f51831656",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-91:8149d7215a52",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-248:a517180feb16",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-252:4e3c6c398d45",
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-258:99976f947d0b"
+      ],
+      "sourceIds": [
+        "official-national27-web-csu",
+        "official-national27-csu-native",
+        "official-national27-kpmg-rules",
+        "official-national27-kpmg-current",
+        "official-national27-web-rollins",
+        "official-national27-web-davis",
+        "official-national27-web-hitec",
+        "official-national27-editor-rules",
+        "official-national27-web-pullman",
+        "official-national27-web-voyager",
+        "official-national27-web-imeg",
+        "official-national27-web-nextswell",
+        "official-national27-web-science",
+        "official-national27-web-pgsf",
+        "official-national27-web-catching",
+        "official-national27-catching-rules",
+        "official-national27-web-rma",
+        "official-national27-louie",
+        "official-national27-louie-rules",
+        "official-national27-4h-rules",
+        "official-national27-4h-apply",
+        "official-national27-nextautism-program",
+        "official-national27-sema-route",
+        "official-national27-amtrak"
+      ],
+      "triageIds": [
+        "related-ef1d419f43465c01",
+        "related-aea234b5fb36fc70"
+      ],
+      "review": {
+        "status": "pending"
+      }
     }
   ],
   "holds": [
@@ -177145,6 +179747,196 @@
         "official-providers26-extra-lanford",
         "official-providers26-extra-lanford-exact"
       ]
+    },
+    {
+      "entityId": "intake-entity-707c44c8b80635da",
+      "reason": "Provider publishes one consistent cycle, rules and application control.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Editor World page combines Spring2027/$500/900-word/Sept1–Dec15,2026 rules with Spring2025 sweepstakes/18+/600-word rules. First-generation definition concerns parents not attending or completing four-year college. Current age, essay, cycle/type and complete actual entry route remain contradictory; no promotion.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-editor-rules"
+      ]
+    },
+    {
+      "entityId": "intake-entity-617ffbb333e5e094",
+      "reason": "Complete official age/membership eligibility and named2028 application become available.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "4-H Youth in Action:2027 applications closed,2028 opens Jan2027. Four5000 awards with a year of development and public spokesperson/media/travel activities. Repeated bounded public extraction did not verify full age/membership eligibility or next actual application. Do not infer college-only eligibility from a structured extraction.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-4h-apply"
+      ]
+    },
+    {
+      "entityId": "intake-entity-d43d5e6ecfd644c2",
+      "reason": "Official complete partner/entry/paid-work terms and award-specific application route are available.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "NEXT for AUTISM Fellows supports partner-college health/human-services study and substantial paid direct-support work, not applicants who necessarily have autism. Structured public extraction indicates graduation2028or later/two-year commitment/800hours yearly and2027Jan11–Mar14 cycle, but complete partner exceptions and an actual application control were not independently established. No promotion or autism-identity tag.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-nextautism-program"
+      ]
+    },
+    {
+      "entityId": "intake-entity-a358303c0b661af8",
+      "reason": "Official next-cycle student application control and complete rules appear.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "SEMA student scholarship is distinct from employee loan forgiveness. Public retrieval describes HSsenior or18+,incoming/current postsecondary,US/Canadian citizenship,automotive career interest;1000–5000,2026Apr3past,nextJan1,2027. Named actual student application control was not returned; program information alone does not establish it. Full next-cycle rules remain unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-sema-route"
+      ]
+    },
+    {
+      "entityId": "intake-entity-12339f0f0a7ffaeb",
+      "reason": "Complete official public track list, entry rules and award-specific application route are available.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Amtrak Academic Scholarship public structured extraction suggests2.8,full-time undergrad/grad and railway career interest, and explicitly permits high-school transcript plus college acceptance. Do not exclude as advanced-only. Current amount, exact cycle and actual application control were not established, and named award-track completeness is unknown.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-amtrak"
+      ]
+    },
+    {
+      "entityId": "intake-entity-606c3d94576f708b",
+      "reason": "Actual2027 application control becomes available; confirm complete cycle terms.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Science Ambassador2027: five one-time20000 tuition awards; women/nonbinary HSseniors or undergraduates planning/enrolled STEM at US/territory college, no citizenship restriction. Public YouTube science mini-lecture up3minutes, not Shorts. Page says Sept2026 opening but returned only notification signup; actual application not established. Do not inherit old full-tuition or extra1000 terms.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-science"
+      ]
+    },
+    {
+      "entityId": "intake-entity-97522ffd7a2d8563",
+      "reason": "Actual2027 application control becomes available; reconcile both aliases to one supported proposal.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Same Science Ambassador sponsor, official route and video-program purpose as the other saved alias; both remain held because actual2027 application control is unavailable. No second award proposal or loss of source identity.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-science"
+      ]
+    },
+    {
+      "entityId": "intake-entity-f23e4c4073343bbb",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official PGSF route redirects to Foundation for Graphic Communication Education. Full-time track permits HSseniors entering printing/graphic communication/packaging programs;3.0 and12credits, no part-time/online, two recommendations/transcripts.1500–10000,May1,2026past;ApplyNow points to same page, not actual award application.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-pgsf"
+      ]
+    },
+    {
+      "entityId": "intake-entity-410629f1161ac126",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Working-professional track requires printing/graphics industry employment; part-time/online allowed; no initial GPA/transcript requirement in rendered rules. Employer confirmation May2 and course/cost plan.3.0 is renewal, not initial cutoff. Actual application control unavailable.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-pgsf"
+      ]
+    },
+    {
+      "entityId": "intake-entity-4584b8492df03fd2",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-catching"
+      ]
+    },
+    {
+      "entityId": "intake-entity-ffd0e4f229790d5c",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-catching"
+      ]
+    },
+    {
+      "entityId": "intake-entity-311d1bb8e7a94c10",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Shared CTD PDF names this track, but complete track-specific eligibility not established. Shared rules require at least one-quarter ancestry from one eligible US tribe plus tribal enrollment, full-time bachelor-or-higher and10other scholarship applications. Excludes vocational/technical/online/distance; PDF degree choices conflict with bachelor minimum. Mail-only directions conflict with mandatory email essay. Yearless March15/April30/September15 are term cycles, not separate awards.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-catching"
+      ]
+    },
+    {
+      "entityId": "intake-entity-45dea9af34fb7caa",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-3604e8110e1320d6",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-10a95f8b06e528b8",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-be9e9be03521ec57",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-1a0a91800fd21e22",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-17598494c2d20627",
+      "reason": "Complete official child-specific rules and actual application route resolve the stated conflicts.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Named historical RMA Foundation award heading; current common undergraduate banking/finance scholarship description does not establish this child’s current independent route or complete eligibility.1000–5000 common merit criteria, need not considered, reapply up to two additional years with membership. Platinum is a best-candidate distinction; do not add on top of a base award without child rules. Closed page has no actual application control; recipient lists omitted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-web-rma"
+      ]
+    },
+    {
+      "entityId": "intake-entity-5230c33decf5e26d",
+      "reason": "Official rules establish directory-to-program identity and resolve each material field before changing Master145.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Louie directory alias has same foundation name but materially different March15/2000/four-year/need/gap-year and family-preference fields. Repeated bounded official retrieval yielded no usable rules; directory identity/fields cannot be promoted on name alone. Direct official-route alias separately links Master145.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-national27-louie-rules"
+      ]
     }
   ],
   "interviewGaps": [
@@ -177223,9 +180015,8 @@
     "entityCountReviewed": 0
   },
   "cursor": {
-    "next": "National leads batch027 research retained .firecrawl/resume-national27-*.json; finish71pendingentities; final field/operation/review work pending.",
-    "completedEntityGroups": 855,
-    "remainingEntityGroups": 71
+    "nextAction": "Independently review national027; evaluate remaining50pendingentities; complete exact local batch, testing and final review.",
+    "sourceWrites": 0
   },
   "relatedFieldTriage": [
     {
@@ -211180,6 +213971,166 @@
         "reviewedCandidateCommit": "e7b0975ffea63a8244c465c07bb1bbf7db76d715"
       },
       "discoveredByBatch": "batch-providers-026"
+    },
+    {
+      "id": "related-ef1d419f43465c01",
+      "entityId": "intake-entity-b1375ef774da76cf",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-423:ad9cba64e666",
+      "masterRowId": "intake-rev226-74df373b3e30738e:sheet-0:row-145:ff5ce3feec0a",
+      "masterRowNumber": 145,
+      "sourceSnapshotId": "intake-rev226-74df373b3e30738e",
+      "fields": [
+        {
+          "column": "G",
+          "sourceColumn": "I",
+          "candidateValue": "Kim and Harold Louie Family Foundation Scholarship",
+          "masterValue": "The Kim and Harold Louie Family Foundation 2026 Scholarship",
+          "status": "identity_alias",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "ad9cba64e666743b47df35aad1ecf17f557193455245df4d0e488884f1544944",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        },
+        {
+          "column": "I",
+          "sourceColumn": "K",
+          "candidateValue": "The Kim and Harold Louie Family Foundation offers a scholarship for 2026. Applicants are encouraged to submit their application online using the provided form. Supplemental materials, including transcripts, standardized test scores, and tax forms, are required, with official copies requested upon scholarship award.",
+          "masterValue": "The Kim and Harold Louie Family Foundation offers a scholarship for 2026. Applicants are encouraged to submit applications online, with supplemental materials like transcripts, test scores, and tax forms scanned and submitted digitally. Official copies will be requested if awarded.",
+          "status": "hold_unverified_related_field",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "ad9cba64e666743b47df35aad1ecf17f557193455245df4d0e488884f1544944",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        }
+      ],
+      "status": "triaged-awaiting-independent-review",
+      "owner": "Kelsey Stuart",
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredByBatch": "batch-national-027"
+    },
+    {
+      "id": "related-aea234b5fb36fc70",
+      "entityId": "intake-entity-b1375ef774da76cf",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-132:cb567f1af596",
+      "masterRowId": "intake-rev226-74df373b3e30738e:sheet-0:row-145:ff5ce3feec0a",
+      "masterRowNumber": 145,
+      "sourceSnapshotId": "intake-rev226-74df373b3e30738e",
+      "fields": [
+        {
+          "column": "B",
+          "sourceColumn": "B",
+          "candidateValue": "TBD",
+          "masterValue": "",
+          "status": "source_omission_no_update",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "cb567f1af5962eea6180409438befea02abb0735fe15a17ecdf322edcf159fb6",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        },
+        {
+          "column": "G",
+          "sourceColumn": "G",
+          "candidateValue": "Kim and Harold Louie Family Foundation Scholarship",
+          "masterValue": "The Kim and Harold Louie Family Foundation 2026 Scholarship",
+          "status": "identity_alias",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "cb567f1af5962eea6180409438befea02abb0735fe15a17ecdf322edcf159fb6",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        },
+        {
+          "column": "I",
+          "sourceColumn": "I",
+          "candidateValue": "This scholarship from the Kim and Harold Louie Family Foundation is for the 2026 academic year. Applicants are encouraged to submit their application using the online form, with supplemental materials like transcripts, test scores, and tax forms scanned and submitted digitally. Official copies of transcripts and test scores will be requested if an applicant is awarded the scholarship.",
+          "masterValue": "The Kim and Harold Louie Family Foundation offers a scholarship for 2026. Applicants are encouraged to submit applications online, with supplemental materials like transcripts, test scores, and tax forms scanned and submitted digitally. Official copies will be requested if awarded.",
+          "status": "hold_unverified_related_field",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "cb567f1af5962eea6180409438befea02abb0735fe15a17ecdf322edcf159fb6",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        },
+        {
+          "column": "L",
+          "sourceColumn": "L",
+          "candidateValue": "Any",
+          "masterValue": "Non-Renewing",
+          "status": "source_omission_no_update",
+          "review": {
+            "status": "pending",
+            "reviewer": null
+          },
+          "evidence": {
+            "snapshotId": "intake-rev226-74df373b3e30738e",
+            "sourceRowHash": "cb567f1af5962eea6180409438befea02abb0735fe15a17ecdf322edcf159fb6",
+            "masterRowHash": "ff5ce3feec0a8f564d3c800e312a82e2aa17b9b805c1d457c65acce897b44bcb",
+            "officialSourceIds": [
+              "official-national27-louie",
+              "official-national27-louie-rules"
+            ]
+          },
+          "rationale": "Louie identity links by exact official route/provider/program; official rules were not retrieved. Preserve Master145 and original cells; material candidate differences remain unapplied, awaiting accessible official rules."
+        }
+      ],
+      "status": "triaged-awaiting-independent-review",
+      "owner": "Kelsey Stuart",
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredByBatch": "batch-national-027"
     }
   ]
 }

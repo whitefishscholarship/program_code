@@ -10,12 +10,12 @@ Default branch: `main`
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `e7b0975ffea63a8244c465c07bb1bbf7db76d715`; this local checkpoint
+  Prior exact checkpoint `938398166a258055b2db12012cb4106b94c65058`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `b33dc46e36a823049ccd4d59e737d21074cee46202c6428b458850180e69f96b`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `be3f144ff137a0954a45f53384c5537c8689eb88b1d138856d3e1e2a98bc7b35`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 926, "decidedRows": 1559, "pendingEntities": 71, "proposedAdds": 202, "proposedUpdates": 38}`. All proposals unapplied.
+  Current counts `{"rows": 1666, "entities": 939, "decidedRows": 1581, "pendingEntities": 50, "proposedAdds": 207, "proposedUpdates": 38}`. All proposals unapplied.
 - Independent PASS receipts saved through015 and related016–019. Related review covers
   238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
   All review findings corrected: exact richlinks, missing aliasfields, material official
@@ -61,8 +61,9 @@ Default branch: `main`
   newrelatedupdates109/141; Kitchen116alias resolveswithoutduplicate/preservesI.
   OuttoInnovateparent accounted with3advanced-collegechildren;8specificheldentities.
   Evidence docs/evidence/scholarship-intake/providers-evidence.json.
-- Next executable action: review validator/timestamp checkpoint, then national027; continue71pendingentities.
-  National027 research for20providerleads retained in .firecrawl/resume-national27-*.json; includes newer direct-source fallback checks yet to be added. Structured extraction can misstate rules; direct rendered rules control.
+- Validator/timestamp checkpoint9383981 independently PASS;93 timestamp alignments and two guard findings resolved; receipt saved.
+- National027 authored, review pending:34entities/22rows/2triages6fields; five additions (CSU FGA, KPMG, Rollins, Davis-Putter, HITEC),13 named child/components accounted. Evidence national-evidence.json.
+- Next executable action: independent national027 review and remaining50pendingentities; then complete exact unapplied batch/report/gap coverage, full testing and final independent review. Structured extraction can misstate rules; direct rendered rules control.
   Generate pending list from ledger; /private/tmp/intake-pending-live.json predates026.
   Do not rerun completed authors including intake_resume_providers26.py.
   Source registry now permits original HTTP observation URLs as well as HTTPS;

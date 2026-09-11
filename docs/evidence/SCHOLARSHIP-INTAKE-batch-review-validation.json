@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "reviewedCandidateCommit": "938398166a258055b2db12012cb4106b94c65058",
+  "originalReviewedCandidateCommit": "5666a10d26d9259f0fbd8dd562e1f700f3802c6b",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "recordedAt": "2026-09-11T06:56:20.985814+00:00",
+  "reviewer": {
+    "task": "/root/intake_triage_review",
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "freshContext": false
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "GUARD-M1",
+      "severity": "medium",
+      "status": "resolved",
+      "rationale": "Exact Master kind and sheet0 validated with negative fixtures.",
+      "owner": "/root",
+      "target": "9383981"
+    },
+    {
+      "id": "GUARD-M2",
+      "severity": "medium",
+      "status": "resolved",
+      "rationale": "43 explicit exact historical local tag aliases permitted; otherwise controlled key and label exact. Negative and permitted-alias fixtures pass.",
+      "owner": "/root",
+      "target": "9383981"
+    }
+  ],
+  "coverage": {
+    "timestampAlignments": 93,
+    "entities": 51,
+    "unchangedSources": 5,
+    "preservedHistoricalReviews": 19,
+    "permittedTagAliases": 43
+  },
+  "bindings": {
+    "ledgerSha256": "b33dc46e36a823049ccd4d59e737d21074cee46202c6428b458850180e69f96b",
+    "timestampReceiptSha256": "ab38f4573cbf7fee5b15497b0c46c88a9811c4b2430ab635dccd50caf5ea690b",
+    "validatorSha256": "eb511fb32882add43a2c5ae17dabd45061c28c8b777bddacb8c5766522a3484a",
+    "testsSha256": "54cd86299cb21896b29ce22d17f697f3b2a2a66bcfdf183c45203404854c95d6",
+    "aliasRegistrySha256": "296c913179c568e34811149ba5a4175e4123a81801fa0ed54fff015e5d76fba7"
+  },
+  "validation": {
+    "partialLedger": "PASS",
+    "syntheticTests": "PASS",
+    "typecheck": "PASS",
+    "diffCheck": "PASS",
+    "fullSuiteBuildFinalAcceptance": "pending"
+  },
+  "scope": "No external effects; source timestamps aligned to cited immutable receipts, no field values/destinations/tags changed."
+}
