@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-11T09:09:35.803Z",
+  "scope": "Only 3367 user-authorized Master cells; no unrelated tabs or columns",
+  "cells": 3367,
+  "nonblankValues": 78,
+  "emptyExistingValues": 4,
+  "emptyAppendValues": 3285,
+  "independentReviewer": "/root/intake_application_review",
+  "reviewedValues": "All 78 nonblank preimages individually inspected: public scholarship names, criteria, descriptions, URLs, amounts, cycle/deadline/status data. No observed applicant PII.",
+  "nativeMetadataKeys": [
+    "formattedValue",
+    "userEnteredValue",
+    "effectiveValue",
+    "userEnteredFormat",
+    "effectiveFormat",
+    "hyperlink",
+    "textFormatRuns"
+  ],
+  "absentSensitiveExtraMetadata": [
+    "notes",
+    "chipRuns"
+  ],
+  "liveProjectionEqualsReviewedProposal": true,
+  "losslessNativeDecodeVerified": true,
+  "dictionaryEntries": 70,
+  "privateArtifactBytes": 135828,
+  "privateArtifactSha256": "9723a9c986359f38f1fbb04fae37d99987b44dea593a0668e7cee4ae113ee894",
+  "destination": "Private folder 1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix owned only by Kelsey; local restricted staging used solely to upload exact affected-cell backup",
+  "priorRejections": "Initial 2.3MB dump rejected for potential applicant PII/local scope; full extra native-copy alternative rejected as overbroad. Subsequent field-by-field evidence establishes exact-only scholarship payload, no applicant information, and lossless narrow scope."
+}

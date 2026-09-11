@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/intake_application_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS_BOUNDED_READBACK_VERIFIER_NOT_WRITE_READY",
+  "reviewedScript": "web/scripts/intake-native-readback.ts",
+  "reviewedScriptSha256": "05ab5737af1eac1eb3c3c3c554754bcd8d71548c363f7faecc3af7136ded33e2",
+  "payloadSha256": "18e8e1efffdae87f8b5ccb9e93bb9be0ed0a8eb3fbfadd42827f5838689d466d",
+  "findings": [],
+  "independentChecks": [
+    "Frozen proposal and manifest hashes verified; payload exactly covers 219 additions and 82 isolated existing cells in 301 requests.",
+    "Nine synthetic rejection cases independently rerun; F65, F199, H217 saved native examples passed.",
+    "Exact values, link spans, rendered and nontext formatting, unexpected metadata and all untargeted cells guarded."
+  ],
+  "limits": [
+    "Reviewer inspected full verification receipt, but full in-memory live dataset was not available for independent replay.",
+    "Bounded application-preflight review, not canonical stage acceptance or attestation.",
+    "Original writes remain blocked pending original-workbook feature preservation verification and final freshness checks."
+  ]
+}

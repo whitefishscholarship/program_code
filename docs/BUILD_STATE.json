@@ -901,7 +901,7 @@
   ],
   "scholarshipIntake": {
     "planId": "SCHOLARSHIP-INTAKE-1",
-    "status": "local-review-complete-awaiting-exact-batch-authority",
+    "status": "exact-batch-authorized-blocked-feature-inspection",
     "authorityEvidencePath": "docs/evidence/PLAN-REV15.md",
     "planningCommit": "0ffa90b12502b2a031a6012e16014301def07205",
     "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
@@ -909,9 +909,9 @@
     "localPreparationAuthorized": true,
     "readOnlyScholarshipEvaluationAuthorized": true,
     "boundedOfficialSourceVerificationAuthorized": true,
-    "backupCopyAuthorized": false,
-    "recoveryCopyAuthorized": false,
-    "spreadsheetWriteAuthorized": false,
+    "backupCopyAuthorized": true,
+    "recoveryCopyAuthorized": true,
+    "spreadsheetWriteAuthorized": true,
     "publicationAuthorized": false,
     "runtimeChangesAuthorized": false,
     "policyReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-policy-review.json",
@@ -920,6 +920,10 @@
     "backupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json",
     "localReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-local-review.json",
     "localCandidateCommit": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
-    "localBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f"
+    "localBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+    "applicationAuthorityEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md",
+    "authorizedBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+    "quietWindow": "Kelsey confirmed no other editors during this uninterrupted session; freshness and single-writer checks remain required",
+    "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json"
   }
 }

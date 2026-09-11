@@ -1,0 +1,572 @@
+{
+  "recordedAt": "2026-09-11T09:11:44.975Z",
+  "disposableId": "1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0",
+  "originalWrites": 0,
+  "requestCount": 301,
+  "exactRawComparison": "FAIL due to native link normalization; not waived",
+  "normalizationCells": 342,
+  "formatChangedCells": 328,
+  "examples": [
+    {
+      "a1": "F65",
+      "before": {
+        "formattedValue": "Soroptimist Whitefish",
+        "userEnteredValue": {
+          "stringValue": "Soroptimist Whitefish"
+        },
+        "effectiveValue": {
+          "stringValue": "Soroptimist Whitefish"
+        },
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "borders": {
+            "top": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "bottom": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "left": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "right": {
+              "style": "SOLID",
+              "width": 1
+            }
+          },
+          "wrapStrategy": "WRAP",
+          "textFormat": {
+            "foregroundColor": {
+              "red": 0.06666667,
+              "green": 0.33333334,
+              "blue": 0.8
+            },
+            "fontFamily": "Arial",
+            "underline": true,
+            "foregroundColorStyle": {
+              "rgbColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              }
+            },
+            "link": {
+              "uri": "https://soroptimistwhitefish.org/about/"
+            }
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "borders": {
+            "top": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "bottom": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "left": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "right": {
+              "style": "SOLID",
+              "width": 1
+            }
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "horizontalAlignment": "LEFT",
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "WRAP",
+          "textFormat": {
+            "foregroundColor": {
+              "red": 0.06666667,
+              "green": 0.33333334,
+              "blue": 0.8
+            },
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": true,
+            "foregroundColorStyle": {
+              "rgbColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              }
+            },
+            "link": {
+              "uri": "https://soroptimistwhitefish.org/about/"
+            }
+          },
+          "hyperlinkDisplayType": "LINKED",
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "hyperlink": "https://soroptimistwhitefish.org/about/"
+      },
+      "after": {
+        "formattedValue": "https://soroptimistwhitefish.org/scholarships/",
+        "userEnteredValue": {
+          "stringValue": "https://soroptimistwhitefish.org/scholarships/"
+        },
+        "effectiveValue": {
+          "stringValue": "https://soroptimistwhitefish.org/scholarships/"
+        },
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "borders": {
+            "top": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "bottom": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "left": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "right": {
+              "style": "SOLID",
+              "width": 1
+            }
+          },
+          "wrapStrategy": "WRAP",
+          "textFormat": {
+            "fontFamily": "Arial",
+            "link": {
+              "uri": "https://soroptimistwhitefish.org/scholarships/"
+            }
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "borders": {
+            "top": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "bottom": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "left": {
+              "style": "SOLID",
+              "width": 1
+            },
+            "right": {
+              "style": "SOLID",
+              "width": 1
+            }
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "horizontalAlignment": "LEFT",
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "WRAP",
+          "textFormat": {
+            "foregroundColor": {
+              "red": 0.06666667,
+              "green": 0.33333334,
+              "blue": 0.8
+            },
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": true,
+            "foregroundColorStyle": {
+              "rgbColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              }
+            },
+            "link": {
+              "uri": "https://soroptimistwhitefish.org/scholarships/"
+            }
+          },
+          "hyperlinkDisplayType": "LINKED",
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "hyperlink": "https://soroptimistwhitefish.org/scholarships/"
+      },
+      "planned": {
+        "userEnteredValue": {
+          "stringValue": "https://soroptimistwhitefish.org/scholarships/"
+        },
+        "textFormatRuns": [
+          {
+            "startIndex": 0,
+            "format": {
+              "link": {
+                "uri": "https://soroptimistwhitefish.org/scholarships/"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "a1": "F199",
+      "before": {
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "verticalAlignment": "BOTTOM",
+          "textFormat": {
+            "fontFamily": "Arial"
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "OVERFLOW_CELL",
+          "textFormat": {
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        }
+      },
+      "after": {
+        "formattedValue": "https://www.lpa-aero.org/scholarships",
+        "userEnteredValue": {
+          "stringValue": "https://www.lpa-aero.org/scholarships"
+        },
+        "effectiveValue": {
+          "stringValue": "https://www.lpa-aero.org/scholarships"
+        },
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "verticalAlignment": "BOTTOM",
+          "textFormat": {
+            "fontFamily": "Arial",
+            "link": {
+              "uri": "https://www.lpa-aero.org/scholarships"
+            }
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "horizontalAlignment": "LEFT",
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "OVERFLOW_CELL",
+          "textFormat": {
+            "foregroundColor": {
+              "red": 0.06666667,
+              "green": 0.33333334,
+              "blue": 0.8
+            },
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": true,
+            "foregroundColorStyle": {
+              "rgbColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              }
+            },
+            "link": {
+              "uri": "https://www.lpa-aero.org/scholarships"
+            }
+          },
+          "hyperlinkDisplayType": "LINKED",
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "hyperlink": "https://www.lpa-aero.org/scholarships"
+      },
+      "planned": {
+        "userEnteredValue": {
+          "stringValue": "https://www.lpa-aero.org/scholarships"
+        },
+        "textFormatRuns": [
+          {
+            "startIndex": 0,
+            "format": {
+              "link": {
+                "uri": "https://www.lpa-aero.org/scholarships"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "a1": "H217",
+      "before": {
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "verticalAlignment": "BOTTOM",
+          "textFormat": {
+            "fontFamily": "Arial"
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "OVERFLOW_CELL",
+          "textFormat": {
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        }
+      },
+      "after": {
+        "formattedValue": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)",
+        "userEnteredValue": {
+          "stringValue": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)"
+        },
+        "effectiveValue": {
+          "stringValue": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)"
+        },
+        "userEnteredFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "verticalAlignment": "BOTTOM",
+          "textFormat": {
+            "fontFamily": "Arial"
+          },
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "effectiveFormat": {
+          "backgroundColor": {
+            "red": 1,
+            "green": 1,
+            "blue": 1
+          },
+          "padding": {
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "left": 3
+          },
+          "horizontalAlignment": "LEFT",
+          "verticalAlignment": "BOTTOM",
+          "wrapStrategy": "OVERFLOW_CELL",
+          "textFormat": {
+            "fontFamily": "Arial",
+            "fontSize": 10,
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false
+          },
+          "hyperlinkDisplayType": "PLAIN_TEXT",
+          "backgroundColorStyle": {
+            "rgbColor": {
+              "red": 1,
+              "green": 1,
+              "blue": 1
+            }
+          }
+        },
+        "textFormatRuns": [
+          {
+            "format": {
+              "foregroundColor": {
+                "red": 0.06666667,
+                "green": 0.33333334,
+                "blue": 0.8
+              },
+              "underline": true,
+              "foregroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.06666667,
+                  "green": 0.33333334,
+                  "blue": 0.8
+                }
+              },
+              "link": {
+                "uri": "https://fblapbl.wufoo.com/forms/pxjne981nreatq"
+              }
+            }
+          },
+          {
+            "startIndex": 46
+          }
+        ]
+      },
+      "planned": {
+        "userEnteredValue": {
+          "stringValue": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)"
+        },
+        "textFormatRuns": [
+          {
+            "startIndex": 0,
+            "format": {
+              "link": {
+                "uri": "https://fblapbl.wufoo.com/forms/pxjne981nreatq"
+              }
+            }
+          },
+          {
+            "startIndex": 46,
+            "format": {}
+          }
+        ]
+      }
+    }
+  ]
+}

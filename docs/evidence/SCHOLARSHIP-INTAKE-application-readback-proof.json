@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "semanticReadback": {
+    "verifiedTargetCells": 3367,
+    "verifiedUntargetedCells": 12533,
+    "observedAt": "2026-09-11T09:24:56.949Z",
+    "result": "PASS",
+    "method": "Exact TypeScript verifier transpiled by local TypeScript and evaluated against complete connector CellData in tool memory; assertions use recursive canonical equality. Full raw data kept out of repository.",
+    "originalWorkbookWrites": 0
+  },
+  "affectedCellBackupReadback": {
+    "verifiedAt": "2026-09-11T09:25:15.025Z",
+    "fileId": "1PpCqhvd85M0ZQ0D0QMwVd2P8JEYQuEXw",
+    "bytes": 135853,
+    "sha256": "ab5cd7159871fa26426f926b87a5fd7918900cdb5d37cfe6b2a1bfd6913cc270",
+    "exactUploadedBytesEqual": true,
+    "cellCount": 3367
+  },
+  "finalRecovery": {
+    "fullNativeEquality": true,
+    "preSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+    "postSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+    "scope": "Master A1:O1060 all CellData; 15900 cells",
+    "observedAt": "2026-09-11T09:17:17.028Z",
+    "inverse": "301 selected value/format/run restorations followed by five precise cell-format link restorations; disposable only."
+  },
+  "originalWorkbookWrites": 0,
+  "remainingGate": "Signed-in read-only original native feature inventory and preservation comparison; final freshness recheck before any write."
+}

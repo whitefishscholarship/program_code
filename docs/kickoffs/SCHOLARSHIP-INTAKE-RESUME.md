@@ -17,15 +17,20 @@ Follow AGENTS.md's required read order. Then read:
 - `docs/evidence/SCHOLARSHIP-INTAKE-local-review.json` and its referenced manifest
 - `docs/evidence/SCHOLARSHIP-INTAKE-report.md`
 - `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`
-- `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+- `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json` (historical)
+- `docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md`
+- `docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json` and its referenced proofs
+- `docs/evidence/SCHOLARSHIP-INTAKE-application-preflight-review.json`
 
 The original local objective is complete and independently reviewed. Do not repeat its
 batches. CURRENT_HANDOFF.md's operative status and open-item routing table identify the
 next action, owners, exact triggers and verification limits. The frozen ledger's older
 review-pending label is superseded by the separate final receipt, not a reason to restart.
 
-This kickoff grants no new authority. Obtain new exact authority before backup/recovery
-copies or workbook writes, and satisfy every intake-plan recovery/freshness/readback gate.
+This kickoff grants no new authority. The separate application-authority receipt now
+records Kelsey's exact unchanged-batch/copy grant; do not ask for it again. Complete
+the remaining feature-preservation, recovery/freshness/readback gates before any original
+write. The operative handoff records the sign-in blocker and all created recovery objects.
 Publication requires its own exact authority or verified applicable suppression. A changed
 source or batch requires reconciliation and appropriate review; preserve every prior
 receipt rather than rebinding it. No applicant data, legacy workbook, provider contact,

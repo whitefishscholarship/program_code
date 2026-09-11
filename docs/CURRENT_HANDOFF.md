@@ -1,3 +1,71 @@
+# Scholarship intake — authorized batch; blocked on feature inspection
+
+Operative application status: **BLOCKED; original workbook writes = 0**. The unchanged
+219-addition / 38-update batch is authorized by Kelsey's exact grant in
+`docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md`. The prior local closeout
+below is historical for authority and backup status; its reviewed scope and holds persist.
+Publication and original-workbook restoration remain unauthorized.
+
+## Completed safeguards in this continuation
+
+- Created private My Drive `Scholarship Intake Recovery` folder
+  `1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix`; Kelsey is sole owner of all new objects.
+- Complete native backup: `11OuqHa6JcTlJwhzcxOR5i6ZZoQQ8cLgAcglQQfMSGMY`.
+  All 14 tabs copied; approved scholarship-field ranges match. Backup never mutated.
+- Private affected-cell backup: `1PpCqhvd85M0ZQ0D0QMwVd2P8JEYQuEXw`.
+  Exact 3,367-cell native preimages, lossless dictionary JSON, 135,853 bytes;
+  downloaded readback SHA256 `ab5cd7159871fa26426f926b87a5fd7918900cdb5d37cfe6b2a1bfd6913cc270`.
+- Disposable test copy: `1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0`.
+  Exact 301 requests applied only there; 3,367 targets and 12,533 untargeted cells
+  verified. Fully restored Master A1:O1060 equals baseline including original links.
+- Google normalized rich links into native cell formatting. Exact proposed payload
+  remains unchanged. Reviewed read-only verifier checks values, link intervals,
+  rendered styles and untouched cells; nine negative cases and saved examples pass.
+- Fresh local typecheck, full tests and exact default build pass. Plan check still
+  exits 1 with exactly the three reserved PLAN-REV15 attestation errors; no waiver.
+  Detailed application check receipt is separate from historical candidate validation.
+
+## Exact next action and remaining gates
+
+Kelsey must complete Google Sheets sign-in in the in-app browser (tab currently at
+Google's Verify it's you page). Connector authentication works, but its source metadata
+omits protections and other native features. Do not infer absence from omitted fields.
+Read-only original/backup comparison must finish the material-feature inventory and
+preservation proof: protections, named ranges, filters, conditional formatting, validation,
+merges, hidden dimensions/tabs, bound scripts/triggers/connections and other material
+features. Disposable metadata is not proof of the original's feature coverage.
+
+Then recheck private backup access, exact affected-cell preimages, all required source
+fingerprints and unchanged batch immediately before any original write. Latest source
+metadata remains revision 226 / modified 2026-09-11T01:10:22.367Z; this is not final
+content freshness. Use one writer during the confirmed quiet session; if resuming after
+an interruption, verify quiet-window coverage. Stop on conflicting newer edits or any
+material batch change. Do not repeat the completed intake, create another backup blindly,
+or restore the original. Keep all 310 holds and excluded I65/Hagan I25 unchanged.
+
+## Operative application receipts and recovery
+
+Read `docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json`,
+`SCHOLARSHIP-INTAKE-backup-content-check.json`, `SCHOLARSHIP-INTAKE-application-readback-proof.json`,
+`SCHOLARSHIP-INTAKE-disposable-recovery.json`, and `SCHOLARSHIP-INTAKE-application-preflight-review.json`
+(all under `docs/evidence/`). Historical `SCHOLARSHIP-INTAKE-backup-verification.json`
+remains frozen and is superseded prospectively only for completed steps.
+
+Exact original payload: `docs/evidence/SCHOLARSHIP-INTAKE-application-payload.json`;
+301 updateCells requests, only `userEnteredValue,textFormatRuns`, 219 rows A199:O417
+and 82 isolated existing cells. No structural or intervening-cell writes. On any uncertain
+write result, read back first and reconcile; never blindly retry.
+
+Recovery artifact decode is specified inside the private JSON (native-cell dictionary
+plus A1/index pairs). Disposable recovery used the same 301 targets with exact preimage
+values, formats and runs, then five precise format restorations for H6/H54/F65/H81/H142
+after readback showed their old links absent. Full 15,900-cell equality passed after that
+completion; see receipt. This is evidence of disposable recovery, not original-restore authority.
+
+Original reviewed candidate `8211003dab98de3035b7a94608b6bdb7ef16fdde` and 119-path
+manifest remain immutable. This application checkpoint follows `d7e04b77d7e79ea35d1faaaa2e1e7b350b6541c5`
+on `codex/scholarship-intake`; resolve its tip locally. No push, PR, merge or deployment.
+
 # Scholarship intake — local review-complete, unapplied
 
 Updated September 11, 2026 UTC. Plan revision 15; SCHOLARSHIP-INTAKE-1.
