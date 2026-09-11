@@ -10,12 +10,12 @@ Default branch: `main`
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `4f8a3ca94142229ca9e84bc7ab94527632e15c3c`; this local checkpoint
+  Prior exact checkpoint `303eeec1fc606d8a7a3b63c7bcc00cc9d964419f`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `3fbbf8ee732e901216164738e827aa1240166858308b26bf19428f219ee3febb`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `8efe022ac1b1003b996d06349447d4f21da7eab378b9d18bbef9d00993427be9`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 957, "decidedRows": 1607, "pendingEntities": 26, "proposedAdds": 209, "proposedUpdates": 38}`. All proposals unapplied.
+  Current counts `{"rows": 1666, "entities": 1024, "decidedRows": 1666, "pendingEntities": 0, "proposedAdds": 219, "proposedUpdates": 38}`. All proposals unapplied.
 - Independent PASS receipts saved through015 and related016–019. Related review covers
   238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
   All review findings corrected: exact richlinks, missing aliasfields, material official
@@ -66,7 +66,10 @@ Default branch: `main`
 - Pure local planner independently PASS at4f8a3ca; receipt saved. Exact JSON/report generated; I65 only operationally deferred for native bold-format preservation.
 - Community029 authored42entities/26rows; two additions(CardRates,SaferRoadways), Haganincome-relatedhold; review pending.
 - Source metadata recheck07:10UTC matches revision226/14tabs/modificationtime. Additional local Mastercopy rejected by automatic approval review; not saved, no workaround or native-content recheck claim. No source writes/copies.
-- Next executable action: review029 and remaining26pendingentities in028; then complete exact unapplied batch/report/gap coverage, full testing and final independent review. Structured extraction can misstate rules; direct rendered rules control.
+- Aviation028 authored93entities/59source rows,10additions including7AFA;67newchildren/components;20AFA/NBAA child checks complete. All1666originalrowsdecided.
+- Community029 decisions passed but sourceprovenanceM1corrected, recheckpending.
+- Clean npmci offline PASS438packages; partialledger/typecheck/dryrunPASS. Fullsuite/buildandfinalreviewpending.
+- Next executable action: recheck029 and independent028 review; then complete exact unapplied batch/report/gap coverage, full testing and final independent review. Structured extraction can misstate rules; direct rendered rules control.
   Generate pending list from ledger; /private/tmp/intake-pending-live.json predates026.
   Do not rerun completed authors including intake_resume_providers26.py.
   Source registry now permits original HTTP observation URLs as well as HTTPS;
