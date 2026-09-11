@@ -11411,21 +11411,21 @@
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-11:e2a41e68aa4e",
       "entityId": "intake-entity-10fdd5d4c2991973",
       "disposition": "duplicate_of",
-      "rationale": "Official NTHS exact program heading, controlled membership conditions and listed application route establish this distinct award. Full Master comparison found no NTHS-specific surviving award; distinguish National Honor Society from National Technical Honor Society. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "rationale": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed.",
       "destination": {
-        "kind": "proposed_operation",
-        "operationId": "add-intake-entity-10fdd5d4c2991973",
-        "entityId": "intake-entity-10fdd5d4c2991973"
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 143,
+        "entityId": "intake-entity-2b04ced9c8073619"
       },
       "evidenceIds": [
         "official-nths-20260911"
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+        "status": "pending",
+        "reviewer": null
       },
-      "survivingEntityId": "intake-entity-10fdd5d4c2991973"
+      "survivingEntityId": "intake-entity-2b04ced9c8073619"
     },
     {
       "sheetId": 189878200,
@@ -11962,14 +11962,17 @@
       "originalStatus": "REVIEW (national construction — verify HS-senior eligibility + detail before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-21:3ecb0cc0cfd8",
       "entityId": "intake-entity-da07ab4850b224d3",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official 2027-28 undergraduate criteria explicitly exclude high school seniors and require rising college sophomore/junior or qualifying later students. Graduate program is also beyond entry scope. Aggregate is not two eligible additions. Existing workforce scholarship is distinct and is preserved. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-agc-undergrad-criteria"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-da07ab4850b224d3"
     },
     {
       "sheetId": 189878200,
@@ -12560,14 +12563,17 @@
       "originalStatus": "REVIEW (national welding — thin grounding; source page lacks per-award detail)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-32:a5cb55cfbb37",
       "entityId": "intake-entity-0d9ef7188fb617cc",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-0d9ef7188fb617cc"
     },
     {
       "sheetId": 189878200,
@@ -12606,14 +12612,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-33:4d62dc0f6226",
       "entityId": "intake-entity-2407276a4d51c058",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-2407276a4d51c058"
     },
     {
       "sheetId": 189878200,
@@ -12652,14 +12661,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-34:6a4a70126c49",
       "entityId": "intake-entity-1903de0e205d43c4",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-1903de0e205d43c4"
     },
     {
       "sheetId": 189878200,
@@ -12698,14 +12710,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-35:784bd58fc469",
       "entityId": "intake-entity-556215db9b232e37",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-556215db9b232e37"
     },
     {
       "sheetId": 189878200,
@@ -12744,14 +12759,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-36:b5c4b4c34753",
       "entityId": "intake-entity-781a2a811edc3292",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-781a2a811edc3292"
     },
     {
       "sheetId": 189878200,
@@ -12928,14 +12946,17 @@
       "originalStatus": "DUPLICATE",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-40:8ff871229bea",
       "entityId": "intake-entity-91adce75cf698fcd",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Saved ABC Trimmer route now redirects to generic ABC homepage. One targeted official search found historical 2015/news references, no current applicant route. This ABC program is distinct from the already proposed NTHS BYF award and existing AGC workforce award. Recheck an official ABC student application before promotion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-abc-old-route"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-91adce75cf698fcd"
     },
     {
       "sheetId": 189878200,
@@ -17904,14 +17925,17 @@
       "originalStatus": "HOLD (not HS-senior — review)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-131:bed875336369",
       "entityId": "intake-entity-879625f83f64dcdb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-879625f83f64dcdb"
     },
     {
       "sheetId": 189878200,
@@ -17950,14 +17974,17 @@
       "originalStatus": "HOLD (not HS-senior — review)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-132:954ae47ffafa",
       "entityId": "intake-entity-cb5a1664f9774e8e",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-cb5a1664f9774e8e"
     },
     {
       "sheetId": 189878200,
@@ -20056,14 +20083,17 @@
       "originalStatus": "HOLD (thin stub — needs depth-1 crawl)",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-170:cc48899fdd5b",
       "entityId": "intake-entity-695d05088402795c",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-695d05088402795c"
     },
     {
       "sheetId": 189878200,
@@ -21378,14 +21408,17 @@
       "originalStatus": "EMPTY",
       "id": "intake-rev226-74df373b3e30738e:sheet-189878200:row-197:22de563ac0fb",
       "entityId": "intake-entity-edb5eab088427ab1",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-edb5eab088427ab1"
     },
     {
       "sheetId": 189878200,
@@ -50931,14 +50964,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-238:6493f19da6b1",
       "entityId": "intake-entity-879625f83f64dcdb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-879625f83f64dcdb"
     },
     {
       "sheetId": 1468843784,
@@ -51031,14 +51067,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-240:19468b4a34b5",
       "entityId": "intake-entity-cb5a1664f9774e8e",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-cb5a1664f9774e8e"
     },
     {
       "sheetId": 1468843784,
@@ -51921,14 +51960,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-260:80fc21bdc1c3",
       "entityId": "intake-entity-bd065bf6b702013c",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-bd065bf6b702013c"
     },
     {
       "sheetId": 1468843784,
@@ -51963,14 +52005,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-261:855dab2d2f96",
       "entityId": "intake-entity-2b9467887d744518",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-2b9467887d744518"
     },
     {
       "sheetId": 1468843784,
@@ -52005,14 +52050,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-262:58602f606d88",
       "entityId": "intake-entity-4958fffaf0facad9",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-4958fffaf0facad9"
     },
     {
       "sheetId": 1468843784,
@@ -52047,14 +52095,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-263:968f46ab1e6e",
       "entityId": "intake-entity-3ce2ee96bbaaa9f1",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-3ce2ee96bbaaa9f1"
     },
     {
       "sheetId": 1468843784,
@@ -52090,14 +52141,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-264:05c64ebaabf8",
       "entityId": "intake-entity-18a1fc8f3a7982f2",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Historical named student fund is absent from the observed current six student funds. Current HELP is an institutional grant, not proven to be the same award. Preserve original identity until official student-fund continuity is established. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-18a1fc8f3a7982f2"
     },
     {
       "sheetId": 1468843784,
@@ -52132,14 +52186,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-265:467faf6390e5",
       "entityId": "intake-entity-98e8761de4c7c7bc",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific rules explicitly exclude high school seniors. Full-time housing-related students require at least one academic year remaining; applicant path is outside this high-school-to-postsecondary intake. Preserve record; no Master deletion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-pwb"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-98e8761de4c7c7bc"
     },
     {
       "sheetId": 1468843784,
@@ -52174,14 +52231,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-266:0df3a11d10a4",
       "entityId": "intake-entity-dd6ab05e26bfc4f2",
-      "disposition": null,
-      "rationale": null,
-      "destination": null,
-      "evidenceIds": [],
+      "disposition": "propose_add",
+      "rationale": "Distinct named NHE student award absent Master. Official rules allow full-time or part-time enrollment at the start of fall and do not impose current-college-only status; plausible graduating-senior path. Official NAHB page links NHE public application portal, observed closed for 2026. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-dd6ab05e26bfc4f2",
+        "entityId": "intake-entity-dd6ab05e26bfc4f2"
+      },
+      "evidenceIds": [
+        "official-nhe-pwb"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-dd6ab05e26bfc4f2"
     },
     {
       "sheetId": 1468843784,
@@ -52216,14 +52280,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-267:d0e12a1d81cb",
       "entityId": "intake-entity-9ca111aabb6621aa",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-pwb"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-9ca111aabb6621aa"
     },
     {
       "sheetId": 1468843784,
@@ -52258,14 +52325,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-268:aafeb47466f8",
       "entityId": "intake-entity-5b24c1053bd04c96",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-5b24c1053bd04c96"
     },
     {
       "sheetId": 1468843784,
@@ -52300,14 +52370,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-269:b594d275f16c",
       "entityId": "intake-entity-49d43d4d3ffe455d",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-nhe-portal"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-49d43d4d3ffe455d"
     },
     {
       "sheetId": 1468843784,
@@ -57083,14 +57156,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-372:61fd7f0b086b",
       "entityId": "intake-entity-edb5eab088427ab1",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-edb5eab088427ab1"
     },
     {
       "sheetId": 1468843784,
@@ -57126,14 +57202,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-373:8b3ee52bb9dc",
       "entityId": "intake-entity-eacbf78055ea2d76",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-eacbf78055ea2d76"
     },
     {
       "sheetId": 1468843784,
@@ -57169,14 +57248,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-374:ef5ab115b6e2",
       "entityId": "intake-entity-1063991aca375d72",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "CIBA requires prior receipt of the one-year SEED scholarship and application in the second half of freshman college year for sophomore funding. It is a distinct continuation award, not a direct graduating-senior entry award; no current Master deletion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-1063991aca375d72"
     },
     {
       "sheetId": 1468843784,
@@ -57212,14 +57294,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-375:8a53f0ae234c",
       "entityId": "intake-entity-98b86f06132a79ab",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-98b86f06132a79ab"
     },
     {
       "sheetId": 1468843784,
@@ -58728,11 +58813,12 @@
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-411:30aa014963b0",
       "entityId": "intake-entity-617b0c7fcf81867e",
       "disposition": "duplicate_of",
-      "rationale": "BYF-directory source row describes the NTHS construction-discipline program for senior/postsecondary members, matching official NTHS Build Your Future award. Historic five $2,000 quantities do not establish a different fund; current official proposal survives. Original values and HOLD history preserved in immutable snapshot.",
+      "rationale": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed.",
       "destination": {
-        "kind": "proposed_operation",
-        "operationId": "add-intake-entity-10fdd5d4c2991973",
-        "entityId": "intake-entity-10fdd5d4c2991973"
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 143,
+        "entityId": "intake-entity-2b04ced9c8073619"
       },
       "evidenceIds": [
         "official-nths-20260911"
@@ -58741,7 +58827,7 @@
         "status": "pending",
         "reviewer": null
       },
-      "survivingEntityId": "intake-entity-10fdd5d4c2991973"
+      "survivingEntityId": "intake-entity-2b04ced9c8073619"
     },
     {
       "sheetId": 1468843784,
@@ -59086,14 +59172,17 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-419:5a22eda074e5",
       "entityId": "intake-entity-695d05088402795c",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-695d05088402795c"
     },
     {
       "sheetId": 1468843784,
@@ -60540,14 +60629,17 @@
       "originalStatus": "DUPLICATE",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-12:8ff871229bea",
       "entityId": "intake-entity-91adce75cf698fcd",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Saved ABC Trimmer route now redirects to generic ABC homepage. One targeted official search found historical 2015/news references, no current applicant route. This ABC program is distinct from the already proposed NTHS BYF award and existing AGC workforce award. Recheck an official ABC student application before promotion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-abc-old-route"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-91adce75cf698fcd"
     },
     {
       "sheetId": 2106717984,
@@ -61975,14 +62067,17 @@
       "originalStatus": "DUPLICATE (batch: Bridgette Beato Leadership Legacy Scholarship for Graduates)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-40:7f70207028af",
       "entityId": "intake-entity-cb5a1664f9774e8e",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-cb5a1664f9774e8e"
     },
     {
       "sheetId": 2106717984,
@@ -62775,14 +62870,17 @@
       "originalStatus": "DUPLICATE (batch: Helene M. Overly Memorial Graduate Scholarship)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-56:7ad0b3e79949",
       "entityId": "intake-entity-879625f83f64dcdb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-879625f83f64dcdb"
     },
     {
       "sheetId": 2106717984,
@@ -63071,14 +63169,17 @@
       "originalStatus": "DUPLICATE (batch: Miller Electric Scholarships)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-62:317f7b39e889",
       "entityId": "intake-entity-695d05088402795c",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-695d05088402795c"
     },
     {
       "sheetId": 2106717984,
@@ -68398,14 +68499,17 @@
       "originalStatus": "EMPTY",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-153:22de563ac0fb",
       "entityId": "intake-entity-edb5eab088427ab1",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-edb5eab088427ab1"
     },
     {
       "sheetId": 2106717984,
@@ -68628,14 +68732,17 @@
       "originalStatus": "EMPTY",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-158:22de563ac0fb",
       "entityId": "intake-entity-edb5eab088427ab1",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-acs-seed"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-edb5eab088427ab1"
     },
     {
       "sheetId": 2106717984,
@@ -73549,22 +73656,22 @@
       "originalStatus": "HOLD (membership/employer-restricted)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-256:e2a41e68aa4e",
       "entityId": "intake-entity-10fdd5d4c2991973",
-      "disposition": "propose_add",
-      "rationale": "Official NTHS exact program heading, controlled membership conditions and listed application route establish this distinct award. Full Master comparison found no NTHS-specific surviving award; distinguish National Honor Society from National Technical Honor Society. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "disposition": "duplicate_of",
+      "rationale": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed.",
       "destination": {
-        "kind": "proposed_operation",
-        "operationId": "add-intake-entity-10fdd5d4c2991973",
-        "entityId": "intake-entity-10fdd5d4c2991973"
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 143,
+        "entityId": "intake-entity-2b04ced9c8073619"
       },
       "evidenceIds": [
         "official-nths-20260911"
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+        "status": "pending",
+        "reviewer": null
       },
-      "survivingEntityId": "intake-entity-10fdd5d4c2991973"
+      "survivingEntityId": "intake-entity-2b04ced9c8073619"
     },
     {
       "sheetId": 2106717984,
@@ -74416,14 +74523,17 @@
       "originalStatus": "HOLD (not HS-senior — review)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-273:bed875336369",
       "entityId": "intake-entity-879625f83f64dcdb",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-879625f83f64dcdb"
     },
     {
       "sheetId": 2106717984,
@@ -74462,14 +74572,17 @@
       "originalStatus": "HOLD (not HS-senior — review)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-274:954ae47ffafa",
       "entityId": "intake-entity-cb5a1664f9774e8e",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-wts-foundation"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-cb5a1664f9774e8e"
     },
     {
       "sheetId": 2106717984,
@@ -75518,14 +75631,17 @@
       "originalStatus": "HOLD (thin stub — needs depth-1 crawl)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-296:cc48899fdd5b",
       "entityId": "intake-entity-695d05088402795c",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-695d05088402795c"
     },
     {
       "sheetId": 2106717984,
@@ -79616,14 +79732,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-367:4d62dc0f6226",
       "entityId": "intake-entity-2407276a4d51c058",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-2407276a4d51c058"
     },
     {
       "sheetId": 2106717984,
@@ -79662,14 +79781,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-368:6a4a70126c49",
       "entityId": "intake-entity-1903de0e205d43c4",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-1903de0e205d43c4"
     },
     {
       "sheetId": 2106717984,
@@ -79708,14 +79830,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; likely regional sponsor, verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-369:784bd58fc469",
       "entityId": "intake-entity-556215db9b232e37",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-556215db9b232e37"
     },
     {
       "sheetId": 2106717984,
@@ -79754,14 +79879,17 @@
       "originalStatus": "REVIEW (Miller welding — thin; verify before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-370:b5c4b4c34753",
       "entityId": "intake-entity-781a2a811edc3292",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-781a2a811edc3292"
     },
     {
       "sheetId": 2106717984,
@@ -79800,14 +79928,17 @@
       "originalStatus": "REVIEW (national construction — verify HS-senior eligibility + detail before push)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-371:3ecb0cc0cfd8",
       "entityId": "intake-entity-da07ab4850b224d3",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "out_of_scope",
+      "rationale": "Official 2027-28 undergraduate criteria explicitly exclude high school seniors and require rising college sophomore/junior or qualifying later students. Graduate program is also beyond entry scope. Aggregate is not two eligible additions. Existing workforce scholarship is distinct and is preserved. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-agc-undergrad-criteria"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-da07ab4850b224d3"
     },
     {
       "sheetId": 2106717984,
@@ -79892,14 +80023,17 @@
       "originalStatus": "REVIEW (national welding — thin grounding; source page lacks per-award detail)",
       "id": "intake-rev226-74df373b3e30738e:sheet-2106717984:row-373:a5cb55cfbb37",
       "entityId": "intake-entity-0d9ef7188fb617cc",
-      "disposition": null,
-      "rationale": null,
+      "disposition": "hold",
+      "rationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-miller-funds"
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "survivingEntityId": "intake-entity-0d9ef7188fb617cc"
     },
     {
       "sheetId": 2106717984,
@@ -93586,12 +93720,14 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-40:8ff871229bea",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-12:8ff871229bea"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-abc-old-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
@@ -93599,7 +93735,19 @@
         "status": "pending",
         "reviewer": null
       },
-      "identityCollisionNote": "Same display name also used by NTHS/NCCER; those2 rows split into intake-entity-10fdd5d4c2991973. This group remains pending ABC/Trimmer verification."
+      "identityCollisionNote": "Same display name also used by NTHS/NCCER; those2 rows split into intake-entity-10fdd5d4c2991973. This group remains pending ABC/Trimmer verification.",
+      "destination": null,
+      "identityRationale": "Saved ABC Trimmer route now redirects to generic ABC homepage. One targeted official search found historical 2015/news references, no current applicant route. This ABC program is distinct from the already proposed NTHS BYF award and existing AGC workforce award. Recheck an official ABC student application before promotion.",
+      "hold": {
+        "entityId": "intake-entity-91adce75cf698fcd",
+        "reason": "Stale official route; current identity/eligibility and application unavailable after bounded search.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Saved ABC Trimmer route now redirects to generic ABC homepage. One targeted official search found historical 2015/news references, no current applicant route. This ABC program is distinct from the already proposed NTHS BYF award and existing AGC workforce award. Recheck an official ABC student application before promotion.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-abc-old-route"
+        ]
+      }
     },
     {
       "id": "intake-entity-ec55ef80953de81d",
@@ -95345,19 +95493,24 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-21:3ecb0cc0cfd8",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-371:3ecb0cc0cfd8"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "program_aggregate",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-agc-undergrad-criteria",
+        "official-agc-program"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official 2027-28 undergraduate criteria explicitly exclude high school seniors and require rising college sophomore/junior or qualifying later students. Graduate program is also beyond entry scope. Aggregate is not two eligible additions. Existing workforce scholarship is distinct and is preserved."
     },
     {
       "id": "intake-entity-ef1e596ae51863ab",
@@ -95474,18 +95627,33 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-32:a5cb55cfbb37",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-373:a5cb55cfbb37"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds",
+        "official-aws-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "hold": {
+        "entityId": "intake-entity-0d9ef7188fb617cc",
+        "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -95499,18 +95667,33 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-33:4d62dc0f6226",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-367:4d62dc0f6226"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds",
+        "official-aws-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "hold": {
+        "entityId": "intake-entity-2407276a4d51c058",
+        "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -95524,18 +95707,33 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-34:6a4a70126c49",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-368:6a4a70126c49"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds",
+        "official-aws-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "hold": {
+        "entityId": "intake-entity-1903de0e205d43c4",
+        "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -95549,18 +95747,33 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-35:784bd58fc469",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-369:784bd58fc469"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds",
+        "official-aws-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "hold": {
+        "entityId": "intake-entity-556215db9b232e37",
+        "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -95574,18 +95787,33 @@
         "intake-rev226-74df373b3e30738e:sheet-189878200:row-36:b5c4b4c34753",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-370:b5c4b4c34753"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds",
+        "official-aws-route"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "hold": {
+        "entityId": "intake-entity-781a2a811edc3292",
+        "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -99470,19 +99698,23 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-56:7ad0b3e79949",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-273:bed875336369"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-wts-foundation"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application."
     },
     {
       "id": "intake-entity-cb5a1664f9774e8e",
@@ -99497,19 +99729,23 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-40:7f70207028af",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-274:954ae47ffafa"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-wts-foundation"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official award-specific WTS description requires graduate study in transportation-related fields. Outside high-school-to-postsecondary entry scope; chapter nomination remains distinct from a national direct application."
     },
     {
       "id": "intake-entity-6a17c7e2618900cd",
@@ -100542,18 +100778,32 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-62:317f7b39e889",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-296:cc48899fdd5b"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": "parent_portal",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-miller-funds"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy.",
+      "hold": {
+        "entityId": "intake-entity-695d05088402795c",
+        "reason": "Shared discovery parent, individual catalog access limited.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-miller-funds"
+        ]
       }
     },
     {
@@ -101391,18 +101641,32 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-153:22de563ac0fb",
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-158:22de563ac0fb"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-acs-seed"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "hold": {
+        "entityId": "intake-entity-edb5eab088427ab1",
+        "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-acs-seed"
+        ]
       }
     },
     {
@@ -101915,7 +102179,8 @@
       },
       "relatedAwardEntityIds": [
         "intake-entity-297aca2c3edfbb57",
-        "intake-entity-85402e85ef5349f9"
+        "intake-entity-85402e85ef5349f9",
+        "intake-entity-d6b224dee68c5096"
       ]
     },
     {
@@ -119620,18 +119885,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-260:80fc21bdc1c3"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "hold": {
+        "entityId": "intake-entity-bd065bf6b702013c",
+        "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-nhe-portal"
+        ]
       }
     },
     {
@@ -119644,18 +119923,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-261:855dab2d2f96"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "hold": {
+        "entityId": "intake-entity-2b9467887d744518",
+        "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-nhe-portal"
+        ]
       }
     },
     {
@@ -119668,18 +119961,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-262:58602f606d88"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "hold": {
+        "entityId": "intake-entity-4958fffaf0facad9",
+        "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-nhe-portal"
+        ]
       }
     },
     {
@@ -119692,18 +119999,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-263:968f46ab1e6e"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "hold": {
+        "entityId": "intake-entity-3ce2ee96bbaaa9f1",
+        "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-nhe-portal"
+        ]
       }
     },
     {
@@ -119716,18 +120037,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-264:05c64ebaabf8"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Historical named student fund is absent from the observed current six student funds. Current HELP is an institutional grant, not proven to be the same award. Preserve original identity until official student-fund continuity is established.",
+      "hold": {
+        "entityId": "intake-entity-18a1fc8f3a7982f2",
+        "reason": "Historical identity unresolved; absence from public listing is not proof of removal.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Historical named student fund is absent from the observed current six student funds. Current HELP is an institutional grant, not proven to be the same award. Preserve original identity until official student-fund continuity is established.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-nhe-portal"
+        ]
       }
     },
     {
@@ -119740,19 +120075,23 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-265:467faf6390e5"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-pwb"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official award-specific rules explicitly exclude high school seniors. Full-time housing-related students require at least one academic year remaining; applicant path is outside this high-school-to-postsecondary intake. Preserve record; no Master deletion."
     },
     {
       "id": "intake-entity-dd6ab05e26bfc4f2",
@@ -119764,19 +120103,204 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-266:0df3a11d10a4"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
-      "fields": [],
-      "tags": [],
-      "interviewCoverage": [],
+      "officialEvidenceIds": [
+        "official-nhe-pwb"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-nhe-pwb",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "March 6, 2026 (closed)",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "Building Hope Scholarship",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://apply.nationalhousingendowment.org/",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "Building Hope supports building-related education or vocational/trade training. Must be enrolled full-time or part-time at the start of fall, with at least one course or trade program remaining after receipt. Pays tuition and program fees directly to the institution; enrollment verification may be required. Complete application and recommendation letters required. March 6, 2026 deadline is closed; the portal says to check back in late January 2027, not that a new cycle is open. Amount, minimum GPA, renewal and need rule unknown.",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "College, university or trade school; full-time or part-time",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "Building-related study or vocational/trade program",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-nhe-pwb",
+          "locator": "Building Hope Scholarship requirements; deadline; Learn more and apply",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:38:03.133Z"
+        }
+      ],
+      "tags": [
+        {
+          "key": "building_trades",
+          "label": "Building and construction study",
+          "meaning": "Required course/program subject, not proof of eligibility",
+          "effect": "requirement",
+          "existingChoiceId": null,
+          "qualifiedExplanation": "Relevant to building-related education; exact enrollment and remaining-course requirements must also be met.",
+          "sourceId": "official-nhe-pwb",
+          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "building-related study",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Preserve exact subject condition on award card; no new construction question or rule authorized."
+        },
+        {
+          "dimension": "fall enrollment and remaining coursework",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Part-time allowed; existing school plans only partially describe this condition. Do not add hard exclusions."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-dd6ab05e26bfc4f2",
+        "entityId": "intake-entity-dd6ab05e26bfc4f2"
+      },
+      "identityRationale": "Distinct named NHE student award absent Master. Official rules allow full-time or part-time enrollment at the start of fall and do not impose current-college-only status; plausible graduating-senior path. Official NAHB page links NHE public application portal, observed closed for 2026.",
+      "proposedValues": [
+        "2026-09-11",
+        "March 6, 2026 (closed)",
+        "",
+        "Scholarship",
+        "",
+        "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+        "Building Hope Scholarship",
+        "https://apply.nationalhousingendowment.org/",
+        "Building Hope supports building-related education or vocational/trade training. Must be enrolled full-time or part-time at the start of fall, with at least one course or trade program remaining after receipt. Pays tuition and program fees directly to the institution; enrollment verification may be required. Complete application and recommendation letters required. March 6, 2026 deadline is closed; the portal says to check back in late January 2027, not that a new cycle is open. Amount, minimum GPA, renewal and need rule unknown.",
+        "",
+        "College, university or trade school; full-time or part-time",
+        "",
+        "Building-related study or vocational/trade program",
+        "",
+        ""
+      ]
     },
     {
       "id": "intake-entity-9ca111aabb6621aa",
@@ -119788,19 +120312,23 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-267:d0e12a1d81cb"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "professional_grant",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-pwb"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred."
     },
     {
       "id": "intake-entity-5b24c1053bd04c96",
@@ -119812,19 +120340,23 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-268:aafeb47466f8"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "professional_grant",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred."
     },
     {
       "id": "intake-entity-49d43d4d3ffe455d",
@@ -119836,19 +120368,23 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-269:b594d275f16c"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
-      "type": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "professional_grant",
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "Official named program funds professional member development, leadership meeting travel or association participation. It is not an individual high-school-to-postsecondary tuition scholarship. No new grant-type policy is inferred."
     },
     {
       "id": "intake-entity-27180f935fac4d16",
@@ -122680,18 +123216,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-373:8b3ee52bb9dc"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-acs-seed"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "hold": {
+        "entityId": "intake-entity-eacbf78055ea2d76",
+        "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-acs-seed"
+        ]
       }
     },
     {
@@ -122704,19 +123254,23 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-374:ef5ab115b6e2"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-acs-seed"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
-      }
+      },
+      "destination": null,
+      "identityRationale": "CIBA requires prior receipt of the one-year SEED scholarship and application in the second half of freshman college year for sophomore funding. It is a distinct continuation award, not a direct graduating-senior entry award; no current Master deletion."
     },
     {
       "id": "intake-entity-98b86f06132a79ab",
@@ -122728,18 +123282,32 @@
       "sourceRowIds": [
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-375:8a53f0ae234c"
       ],
-      "comparisonOnlyNotIdentityProof": true,
-      "status": "pending-evaluation",
-      "disposition": null,
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
-      "officialEvidenceIds": [],
+      "officialEvidenceIds": [
+        "official-acs-seed"
+      ],
       "fields": [],
       "tags": [],
       "interviewCoverage": [],
       "review": {
         "status": "pending",
         "reviewer": null
+      },
+      "destination": null,
+      "identityRationale": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "hold": {
+        "entityId": "intake-entity-98b86f06132a79ab",
+        "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-acs-seed"
+        ]
       }
     },
     {
@@ -123489,12 +124057,13 @@
         "reviewer": null
       },
       "destination": {
-        "kind": "proposed_operation",
-        "operationId": "add-intake-entity-10fdd5d4c2991973",
-        "entityId": "intake-entity-10fdd5d4c2991973"
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 143,
+        "entityId": "intake-entity-2b04ced9c8073619"
       },
-      "survivingEntityId": "intake-entity-10fdd5d4c2991973",
-      "identityRationale": "BYF-directory source row describes the NTHS construction-discipline program for senior/postsecondary members, matching official NTHS Build Your Future award. Historic five $2,000 quantities do not establish a different fund; current official proposal survives."
+      "survivingEntityId": "intake-entity-2b04ced9c8073619",
+      "identityRationale": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed."
     },
     {
       "id": "intake-entity-993f4c94897e1fea",
@@ -126538,212 +127107,229 @@
       ],
       "comparisonOnlyNotIdentityProof": false,
       "status": "evaluated-awaiting-independent-review",
-      "disposition": "propose_add",
+      "disposition": "duplicate_of",
       "type": "scholarship",
       "existingMasterRows": [],
       "officialEvidenceIds": [
         "official-nths-20260911"
       ],
-      "fields": [
-        {
-          "column": "A",
-          "oldValue": null,
-          "newValue": "2026-09-11",
-          "sourceId": "official-nths-20260911",
-          "locator": "retrieval receipt",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "B",
-          "oldValue": null,
-          "newValue": "October 1–April 1 (annual; cycle year/status unknown)",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "C",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "D",
-          "oldValue": null,
-          "newValue": "Scholarship",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "E",
-          "oldValue": null,
-          "newValue": "$2,000",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "F",
-          "oldValue": null,
-          "newValue": "https://nths.org/scholarships-2/",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "G",
-          "oldValue": null,
-          "newValue": "NTHS Build Your Future Scholarship",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "H",
-          "oldValue": null,
-          "newValue": "https://nths.org/byf-scholarship/ (officially listed; verify current cycle before applying)",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "I",
-          "oldValue": null,
-          "newValue": "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "J",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "K",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "L",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "M",
-          "oldValue": null,
-          "newValue": "trades",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "proposed_supported",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "N",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        },
-        {
-          "column": "O",
-          "oldValue": null,
-          "newValue": "",
-          "sourceId": "official-nths-20260911",
-          "locator": "heading: Build Your Future Scholarship",
-          "decision": "unknown_leave_blank",
-          "observedAt": "2026-09-11T02:25:58.323Z"
-        }
-      ],
-      "tags": [
-        {
-          "key": "trades",
-          "label": "Trades",
-          "meaning": "Program/career connection; not proof of enrollment or membership",
-          "effect": "topic",
-          "existingChoiceId": "trades",
-          "qualifiedExplanation": "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline.",
-          "sourceId": "official-nths-20260911",
-          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
-        }
-      ],
-      "interviewCoverage": [
-        {
-          "dimension": "student-organization membership",
-          "decision": "propose_new_category",
-          "choiceId": null,
-          "rationale": "Existing corporate/Elks/etc. choices do not represent NTHS or dual student memberships. Optional student-organization multiselect could support discovery; exact membership remains on card."
-        },
-        {
-          "dimension": "career focus",
-          "decision": "reuse_existing_choice",
-          "choiceId": "trades",
-          "rationale": "Broad interest is a discovery connection only, not the exact coursework/endorsement requirement."
-        },
-        {
-          "dimension": "GPA/school/geography/need and other conditions",
-          "decision": "award_card_only",
-          "choiceId": null,
-          "rationale": "No unsupported tags or thresholds inferred. Alumni six-month delay and platform conditions, where applicable, remain explicit; no question required for promotion."
-        }
-      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
-        "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-nths-20260911",
       "sourceDisplayName": "Build Your Future Scholarship",
       "destination": {
-        "kind": "proposed_operation",
-        "operationId": "add-intake-entity-10fdd5d4c2991973",
-        "entityId": "intake-entity-10fdd5d4c2991973"
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 143,
+        "entityId": "intake-entity-2b04ced9c8073619"
       },
-      "identityRationale": "Official NTHS exact program heading, controlled membership conditions and listed application route establish this distinct award. Full Master comparison found no NTHS-specific surviving award; distinguish National Honor Society from National Technical Honor Society.",
-      "proposedValues": [
-        "2026-09-11",
-        "October 1–April 1 (annual; cycle year/status unknown)",
-        "",
-        "Scholarship",
-        "$2,000",
-        "https://nths.org/scholarships-2/",
-        "NTHS Build Your Future Scholarship",
-        "https://nths.org/byf-scholarship/ (officially listed; verify current cycle before applying)",
-        "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
-        "",
-        "",
-        "",
-        "trades",
-        "",
-        ""
-      ]
+      "identityRationale": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed.",
+      "withdrawnProposal": {
+        "fields": [
+          {
+            "column": "A",
+            "oldValue": null,
+            "newValue": "2026-09-11",
+            "sourceId": "official-nths-20260911",
+            "locator": "retrieval receipt",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "B",
+            "oldValue": null,
+            "newValue": "October 1–April 1 (annual; cycle year/status unknown)",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "C",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "D",
+            "oldValue": null,
+            "newValue": "Scholarship",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "E",
+            "oldValue": null,
+            "newValue": "$2,000",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "F",
+            "oldValue": null,
+            "newValue": "https://nths.org/scholarships-2/",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "G",
+            "oldValue": null,
+            "newValue": "NTHS Build Your Future Scholarship",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "H",
+            "oldValue": null,
+            "newValue": "https://nths.org/byf-scholarship/ (officially listed; verify current cycle before applying)",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "I",
+            "oldValue": null,
+            "newValue": "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "J",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "K",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "L",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "M",
+            "oldValue": null,
+            "newValue": "trades",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "proposed_supported",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "N",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          },
+          {
+            "column": "O",
+            "oldValue": null,
+            "newValue": "",
+            "sourceId": "official-nths-20260911",
+            "locator": "heading: Build Your Future Scholarship",
+            "decision": "unknown_leave_blank",
+            "observedAt": "2026-09-11T02:25:58.323Z"
+          }
+        ],
+        "proposedValues": [
+          "2026-09-11",
+          "October 1–April 1 (annual; cycle year/status unknown)",
+          "",
+          "Scholarship",
+          "$2,000",
+          "https://nths.org/scholarships-2/",
+          "NTHS Build Your Future Scholarship",
+          "https://nths.org/byf-scholarship/ (officially listed; verify current cycle before applying)",
+          "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline. NTHS lists the application route shown here. Dates are annual/yearless; a current open cycle is not established. GPA, location restrictions and renewal terms remain unknown.",
+          "",
+          "",
+          "",
+          "trades",
+          "",
+          ""
+        ],
+        "tags": [
+          {
+            "key": "trades",
+            "label": "Trades",
+            "meaning": "Program/career connection; not proof of enrollment or membership",
+            "effect": "topic",
+            "existingChoiceId": "trades",
+            "qualifiedExplanation": "Current NTHS member; high-school senior or postsecondary student studying a construction-related discipline.",
+            "sourceId": "official-nths-20260911",
+            "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
+          }
+        ],
+        "interviewCoverage": [
+          {
+            "dimension": "student-organization membership",
+            "decision": "propose_new_category",
+            "choiceId": null,
+            "rationale": "Existing corporate/Elks/etc. choices do not represent NTHS or dual student memberships. Optional student-organization multiselect could support discovery; exact membership remains on card."
+          },
+          {
+            "dimension": "career focus",
+            "decision": "reuse_existing_choice",
+            "choiceId": "trades",
+            "rationale": "Broad interest is a discovery connection only, not the exact coursework/endorsement requirement."
+          },
+          {
+            "dimension": "GPA/school/geography/need and other conditions",
+            "decision": "award_card_only",
+            "choiceId": null,
+            "rationale": "No unsupported tags or thresholds inferred. Alumni six-month delay and platform conditions, where applicable, remain explicit; no question required for promotion."
+          }
+        ],
+        "review": {
+          "status": "reviewed",
+          "reviewer": "/root/intake_batch_review",
+          "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
+          "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
+        },
+        "identityRationale": "Official NTHS exact program heading, controlled membership conditions and listed application route establish this distinct award. Full Master comparison found no NTHS-specific surviving award; distinguish National Honor Society from National Technical Honor Society.",
+        "destination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-10fdd5d4c2991973",
+          "entityId": "intake-entity-10fdd5d4c2991973"
+        }
+      },
+      "survivingEntityId": "intake-entity-2b04ced9c8073619"
     },
     {
       "id": "intake-entity-8ecca308f791f5a6",
@@ -137394,7 +137980,7 @@
         "status": "pending",
         "reviewer": null
       },
-      "discoveredFromSource": "official-asianpilots-identity",
+      "discoveredFromSource": "official-epic-partner-5",
       "identityRationale": "Official PAPA2026 public award list and exact membership-route instructions identify a distinct PAPA-administered award, absent from Master. Sponsor names do not merge other associations’ awards.",
       "destination": {
         "kind": "proposed_operation",
@@ -150484,6 +151070,305 @@
           "official-epic-2026"
         ]
       }
+    },
+    {
+      "id": "intake-entity-ea16c869744e54eb",
+      "comparisonName": "nhe homebuilding education leadership program (help) grant",
+      "name": "NHE Homebuilding Education Leadership Program (HELP) Grant",
+      "aliases": [
+        "NHE Homebuilding Education Leadership Program (HELP) Grant"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "institutional_grant",
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": null,
+      "destination": null,
+      "identityRationale": "Official portal identifies an institution/association grant, not a student award. Accounted as a discovered child; no additional student recipient count."
+    },
+    {
+      "id": "intake-entity-831d7db3158a1797",
+      "comparisonName": "nhe challenge/build/grow grant",
+      "name": "NHE Challenge/Build/Grow Grant",
+      "aliases": [
+        "NHE Challenge/Build/Grow Grant"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "out_of_scope",
+      "type": "institutional_grant",
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-nhe-portal"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": null,
+      "destination": null,
+      "identityRationale": "Official portal identifies an institution/association grant, not a student award. Accounted as a discovered child; no additional student recipient count."
+    },
+    {
+      "id": "intake-entity-f1b8e22effde7239",
+      "comparisonName": "wts strategic partner scholarships",
+      "name": "WTS Strategic Partner Scholarships",
+      "aliases": [
+        "WTS Strategic Partner Scholarships"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "hold",
+      "type": "award_pool",
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-wts-foundation"
+      ],
+      "fields": [],
+      "tags": [],
+      "interviewCoverage": [],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": null,
+      "destination": null,
+      "identityRationale": "Official WTS parent lists a corporate scholarship pool separately from six named Foundation awards. Seven 2026 allocations are not seven independently established award identities; no public award-specific entry rules or direct application route established. Recheck published pool rules before any individual addition.",
+      "hold": {
+        "entityId": "intake-entity-f1b8e22effde7239",
+        "reason": "Unresolved pool identities and applicant path; no inferred seven-award expansion.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official WTS parent lists a corporate scholarship pool separately from six named Foundation awards. Seven 2026 allocations are not seven independently established award identities; no public award-specific entry rules or direct application route established. Recheck published pool rules before any individual addition.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-wts-foundation"
+        ]
+      }
+    },
+    {
+      "id": "intake-entity-a36799ac458ef6de",
+      "comparisonName": "aws welder training scholarship",
+      "name": "AWS Welder Training Scholarship",
+      "aliases": [
+        "AWS Welder Training Scholarship"
+      ],
+      "sourceRowIds": [],
+      "comparisonOnlyNotIdentityProof": false,
+      "status": "evaluated-awaiting-independent-review",
+      "disposition": "propose_add",
+      "type": "scholarship",
+      "existingMasterRows": [],
+      "officialEvidenceIds": [
+        "official-aws-training"
+      ],
+      "fields": [
+        {
+          "column": "A",
+          "oldValue": null,
+          "newValue": "2026-09-11",
+          "sourceId": "official-aws-training",
+          "locator": "retrieval receipt",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "B",
+          "oldValue": null,
+          "newValue": "November 30, 2026 (rolling selection while funds remain)",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "C",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "D",
+          "oldValue": null,
+          "newValue": "Scholarship",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "E",
+          "oldValue": null,
+          "newValue": "$1,000",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "F",
+          "oldValue": null,
+          "newValue": "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "G",
+          "oldValue": null,
+          "newValue": "AWS Welder Training Scholarship",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "H",
+          "oldValue": null,
+          "newValue": "https://scholarship.aws.org/applications/",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "I",
+          "oldValue": null,
+          "newValue": "AWS Welder Training supports a welding certificate program shorter than two years at a trade school, community college or other training facility; associate and bachelor degree programs are excluded. Applicants must reside within an AWS District and plan training in the next year. Section officers, selection committee members and their families cannot receive awards. Rolling selection subject to remaining funds, apply by November 30, 2026. Funds go directly to the institution for tuition, fees, books, supplies and required equipment; redeem within one year. Public route requires an AWS profile; individual submission was not tested. Minimum GPA, renewal and need rule unknown.",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "J",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "K",
+          "oldValue": null,
+          "newValue": "Trade school, community college or other welder-training facility; certificate under two years",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "L",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "M",
+          "oldValue": null,
+          "newValue": "Welding certificate training; not associate or bachelor degree",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "proposed_supported",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "N",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        },
+        {
+          "column": "O",
+          "oldValue": null,
+          "newValue": "",
+          "sourceId": "official-aws-training",
+          "locator": "Welder Training Scholarship; Eligibility Overview; Selection Process; Awards",
+          "decision": "unknown_leave_blank",
+          "observedAt": "2026-09-11T03:59:05.113Z"
+        }
+      ],
+      "tags": [
+        {
+          "key": "welding_certificate",
+          "label": "Welding certificate",
+          "meaning": "Required training subject and program type",
+          "effect": "requirement",
+          "existingChoiceId": null,
+          "qualifiedExplanation": "Relevant only to certificate training shorter than two years, subject to district and conflict-of-interest restrictions.",
+          "sourceId": "official-aws-training",
+          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
+        }
+      ],
+      "interviewCoverage": [
+        {
+          "dimension": "welding certificate and duration",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Existing general school plans cannot prove certificate length or subject; retain exact conditions on card."
+        },
+        {
+          "dimension": "AWS District and officer/family conflicts",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Narrow provider-specific conditions do not justify collecting family details in a permanent question."
+        }
+      ],
+      "review": {
+        "status": "pending",
+        "reviewer": null
+      },
+      "discoveredFromSource": null,
+      "destination": {
+        "kind": "proposed_operation",
+        "operationId": "add-intake-entity-a36799ac458ef6de",
+        "entityId": "intake-entity-a36799ac458ef6de"
+      },
+      "identityRationale": "Directly discovered public AWS portal award and exact official rules support certificate training shorter than two years; no current-college-only restriction. Absent Master named awards. Public apply route inspected without login; do not equate up to 800 recipients with awards.",
+      "proposedValues": [
+        "2026-09-11",
+        "November 30, 2026 (rolling selection while funds remain)",
+        "",
+        "Scholarship",
+        "$1,000",
+        "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+        "AWS Welder Training Scholarship",
+        "https://scholarship.aws.org/applications/",
+        "AWS Welder Training supports a welding certificate program shorter than two years at a trade school, community college or other training facility; associate and bachelor degree programs are excluded. Applicants must reside within an AWS District and plan training in the next year. Section officers, selection committee members and their families cannot receive awards. Rolling selection subject to remaining funds, apply by November 30, 2026. Funds go directly to the institution for tuition, fees, books, supplies and required equipment; redeem within one year. Public route requires an AWS profile; individual submission was not tested. Minimum GPA, renewal and need rule unknown.",
+        "",
+        "Trade school, community college or other welder-training facility; certificate under two years",
+        "",
+        "Welding certificate training; not associate or bachelor degree",
+        "",
+        ""
+      ]
     }
   ],
   "officialSources": [
@@ -151018,6 +151903,126 @@
       "scrapeId": "01a08e74-d06c-738c-a277-108fc76f6f66",
       "authority": "official provider/program or provider-linked document",
       "evidencePath": "docs/evidence/scholarship-intake/association-supplement-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-nhe-portal",
+      "url": "https://apply.nationalhousingendowment.org/",
+      "finalUrl": "https://apply.nationalhousingendowment.org/",
+      "observedAt": "2026-09-11T03:35:47.194Z",
+      "statusCode": 200,
+      "contentSha256": "96ad5e5c5390edbfb564b64d6b0e6a0b12739bec4d17b1cf73092ab889b512b6",
+      "scrapeId": "01a08e88-f374-773d-83c2-4b4d492a8626",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-nhe-pwb",
+      "url": "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+      "finalUrl": "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+      "observedAt": "2026-09-11T03:38:03.133Z",
+      "statusCode": 200,
+      "contentSha256": "9c16692bad20bc128cd64dce8b0f89d51d3603360ecb3686df78c2dd0ff6a8b6",
+      "scrapeId": "01a08e8b-0b34-711c-ac8f-a3000b8b69e6",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-acs-seed",
+      "url": "https://www.acs.org/education/students/highschool/seed/scholarship.html",
+      "finalUrl": "https://www.acs.org/education/students/highschool/seed/scholarship.html",
+      "observedAt": "2026-09-11T03:36:04.372Z",
+      "statusCode": 200,
+      "contentSha256": "9ab86fe3c922df95107ace6f1e0cf4a44d247aa30d316300b2b2ec3ffbd85286",
+      "scrapeId": "01a08e89-5fff-719e-89ed-f6b23def1c89",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wts-foundation",
+      "url": "https://www.wtsinternational.org/wts-foundation/scholarships",
+      "finalUrl": "https://www.wtsinternational.org/wts-foundation/scholarships",
+      "observedAt": "2026-09-11T03:36:06.360Z",
+      "statusCode": 200,
+      "contentSha256": "c08acbde33cb1c3d1e2410924e7f95bed53c35e0801de1f10a9348ebd09d9ec9",
+      "scrapeId": "01a08e89-6944-74cb-9b11-74792c031ae5",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-agc-program",
+      "url": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
+      "finalUrl": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
+      "observedAt": "2026-09-11T03:12:20.482Z",
+      "statusCode": 200,
+      "contentSha256": "559c6d3c80dfcdc21b7f433abc1362a393a7497201980d79d322f559e0d12ae7",
+      "scrapeId": "01a08e73-9741-75aa-82ee-8c9257536abd",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-agc-undergrad-criteria",
+      "url": "https://www.agc.org/sites/default/files/users/user3413/2027-2028%20Undergraduate%20Applicant%20Criteria.pdf",
+      "finalUrl": "https://www.agc.org/sites/default/files/users/user3413/2027-2028%20Undergraduate%20Applicant%20Criteria.pdf",
+      "observedAt": "2026-09-11T03:42:31.847Z",
+      "statusCode": 200,
+      "contentSha256": "08a1d3b8461c9b09cbbaf08cd14d9fa59459d7ed334c1d1a9ed54c9ab9dc9f0e",
+      "scrapeId": "01a08e8f-44b7-7389-98f2-ceee803b6916",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-miller-funds",
+      "url": "https://www.millerwelds.com/about/grants-and-scholarships",
+      "finalUrl": "https://www.millerwelds.com/en-us/about/grants-and-scholarships",
+      "observedAt": "2026-09-11T03:41:28.518Z",
+      "statusCode": 200,
+      "contentSha256": "55f9ffe6a8e01366c67ff43f07e92229f00a5917b6657ec5bb43f2c289bbfc7e",
+      "scrapeId": "01a08e8e-42df-70db-b7d3-48600b656118",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-aws-route",
+      "url": "https://scholarship.aws.org/applications/",
+      "finalUrl": "https://scholarship.aws.org/applications/",
+      "observedAt": "2026-09-11T03:42:28.121Z",
+      "statusCode": 200,
+      "contentSha256": "cd77fece2ad66654b9580e6a9af1b58c5c401fc80af601705434de5c1b1e561f",
+      "scrapeId": "01a08e8f-3b1b-77ec-9086-bad5b566df0d",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-aws-training",
+      "url": "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+      "finalUrl": "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+      "observedAt": "2026-09-11T03:59:05.113Z",
+      "statusCode": 200,
+      "contentSha256": "37ddf8c5daad60550d88eb921a23865c6958c2a2eafc7439bd90770aa5c36ad5",
+      "scrapeId": "01a08e9e-3045-7529-a959-a118e86b5b32",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-abc-old-route",
+      "url": "https://www.abc.org/Education-Training/Trimmer-Construction-Education-Fund/Build-Your-Future-Scholarship",
+      "finalUrl": "https://www.abc.org/",
+      "observedAt": "2026-09-11T03:12:23.304Z",
+      "statusCode": 200,
+      "contentSha256": "0bdd9d355a922f310abc8fc20d433e024d8629ef5438bb50885bf7252d5b7077",
+      "scrapeId": "01a08e73-aefa-7313-84a7-6001a5b19f85",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
       "retrievalMode": "live maxAge0 basic proxy; observation only"
     }
   ],
@@ -151875,6 +152880,53 @@
         "intake-entity-ab505220e961d412"
       ],
       "completeness": "Additional distinct historical2025 King Air mechanic identity from award-name column; recipient identity/location columns excluded. Other table names match current primary tiers."
+    },
+    {
+      "sourceId": "official-nhe-portal",
+      "enumeratedCount": 11,
+      "reviewedByImplementer": 11,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-bd065bf6b702013c",
+        "intake-entity-2b9467887d744518",
+        "intake-entity-4958fffaf0facad9",
+        "intake-entity-3ce2ee96bbaaa9f1",
+        "intake-entity-98e8761de4c7c7bc",
+        "intake-entity-dd6ab05e26bfc4f2",
+        "intake-entity-9ca111aabb6621aa",
+        "intake-entity-5b24c1053bd04c96",
+        "intake-entity-49d43d4d3ffe455d",
+        "intake-entity-ea16c869744e54eb",
+        "intake-entity-831d7db3158a1797"
+      ],
+      "completeness": "Six current student funds and five grants, plus separately held historical Roger Glunt identity; closed application details inaccessible."
+    },
+    {
+      "sourceId": "official-acs-seed",
+      "enumeratedCount": 4,
+      "reviewedByImplementer": 4,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-edb5eab088427ab1",
+        "intake-entity-eacbf78055ea2d76",
+        "intake-entity-98b86f06132a79ab",
+        "intake-entity-1063991aca375d72"
+      ],
+      "completeness": "All four named funds; Foundant route unavailable; no internship substitute."
+    },
+    {
+      "sourceId": "official-miller-funds",
+      "enumeratedCount": 5,
+      "reviewedByImplementer": 5,
+      "remainingCount": 0,
+      "entityIds": [
+        "intake-entity-0d9ef7188fb617cc",
+        "intake-entity-2407276a4d51c058",
+        "intake-entity-1903de0e205d43c4",
+        "intake-entity-556215db9b232e37",
+        "intake-entity-781a2a811edc3292"
+      ],
+      "completeness": "Five observed listed labels, one donor name redacted; matching-only further catalog inaccessible."
     }
   ],
   "batches": [
@@ -153412,6 +154464,72 @@
       ],
       "review": {
         "status": "pending"
+      },
+      "remediationEntityIds": [
+        "intake-entity-10fdd5d4c2991973"
+      ],
+      "reviewCorrections": [
+        {
+          "finding": "Cross-batch NTHS duplicate",
+          "resolution": "Corrected cross-batch identity collision: Master143 National Technical Honor Society has the exact NTHS BYF URL, $2,000 construction-related description and matching named-provider conditions. It is the existing survivor; proposed duplicate addition withdrawn. Historical reviewed proposal and receipts remain preserved; no source write or independent acceptance claimed."
+        },
+        {
+          "finding": "PAPA missing discovery source reference",
+          "resolution": "Bind to existing official-epic-partner-5 PAPA program source."
+        },
+        {
+          "finding": "Epic shared mechanic relation omitted Master130",
+          "resolution": "Added exact existing Master130 entity relation; no historical proposal or source mutation."
+        }
+      ]
+    },
+    {
+      "id": "batch-housing-seed-trades-012",
+      "status": "authored-awaiting-independent-review",
+      "entityIds": [
+        "intake-entity-bd065bf6b702013c",
+        "intake-entity-2b9467887d744518",
+        "intake-entity-4958fffaf0facad9",
+        "intake-entity-3ce2ee96bbaaa9f1",
+        "intake-entity-18a1fc8f3a7982f2",
+        "intake-entity-98e8761de4c7c7bc",
+        "intake-entity-dd6ab05e26bfc4f2",
+        "intake-entity-9ca111aabb6621aa",
+        "intake-entity-5b24c1053bd04c96",
+        "intake-entity-49d43d4d3ffe455d",
+        "intake-entity-ea16c869744e54eb",
+        "intake-entity-831d7db3158a1797",
+        "intake-entity-edb5eab088427ab1",
+        "intake-entity-eacbf78055ea2d76",
+        "intake-entity-98b86f06132a79ab",
+        "intake-entity-1063991aca375d72",
+        "intake-entity-879625f83f64dcdb",
+        "intake-entity-cb5a1664f9774e8e",
+        "intake-entity-f1b8e22effde7239",
+        "intake-entity-da07ab4850b224d3",
+        "intake-entity-0d9ef7188fb617cc",
+        "intake-entity-2407276a4d51c058",
+        "intake-entity-1903de0e205d43c4",
+        "intake-entity-556215db9b232e37",
+        "intake-entity-781a2a811edc3292",
+        "intake-entity-695d05088402795c",
+        "intake-entity-a36799ac458ef6de",
+        "intake-entity-91adce75cf698fcd"
+      ],
+      "sourceIds": [
+        "official-nhe-portal",
+        "official-nhe-pwb",
+        "official-acs-seed",
+        "official-wts-foundation",
+        "official-agc-program",
+        "official-agc-undergrad-criteria",
+        "official-miller-funds",
+        "official-aws-route",
+        "official-aws-training",
+        "official-abc-old-route"
+      ],
+      "review": {
+        "status": "pending"
       }
     }
   ],
@@ -154756,6 +155874,166 @@
       "trigger": "New official information or owner selection resolves this condition",
       "sourceIds": [
         "official-wai-2027"
+      ]
+    },
+    {
+      "entityId": "intake-entity-bd065bf6b702013c",
+      "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-nhe-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-2b9467887d744518",
+      "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-nhe-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-4958fffaf0facad9",
+      "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-nhe-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-3ce2ee96bbaaa9f1",
+      "reason": "Named award and route supported; award-specific high-school-to-postsecondary entry conditions remain unverified behind closed application.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official 2026 closed portal names this individual student fund and public application route, but complete award-specific entrant requirements are not exposed. Texas preference for Herman is not exclusion; EOC requires executive-officer parent. Recheck this named fund when public rules return in late January 2027; do not infer senior eligibility from student wording.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-nhe-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-18a1fc8f3a7982f2",
+      "reason": "Historical identity unresolved; absence from public listing is not proof of removal.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Historical named student fund is absent from the observed current six student funds. Current HELP is an institutional grant, not proven to be the same award. Preserve original identity until official student-fund continuity is established.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-nhe-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-edb5eab088427ab1",
+      "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-acs-seed"
+      ]
+    },
+    {
+      "entityId": "intake-entity-eacbf78055ea2d76",
+      "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-acs-seed"
+      ]
+    },
+    {
+      "entityId": "intake-entity-98b86f06132a79ab",
+      "reason": "Plausible audience and named award supported; actual college-scholarship Foundant destination unavailable.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official ACS page supports this named chemical-science scholarship for former full-summer SEED participants transitioning to college. Deadline December 30, 2025 is closed. Foundant is named without a usable scholarship link; targeted official search found only ACS references back to the same page. Loconti is selected from the nonrenewable pool with no extra application; Bader supports entering and second-year study. Retain until ACS publishes a verified scholarship application route; the SEED internship Apply link is not substituted.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-acs-seed"
+      ]
+    },
+    {
+      "entityId": "intake-entity-f1b8e22effde7239",
+      "reason": "Unresolved pool identities and applicant path; no inferred seven-award expansion.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official WTS parent lists a corporate scholarship pool separately from six named Foundation awards. Seven 2026 allocations are not seven independently established award identities; no public award-specific entry rules or direct application route established. Recheck published pool rules before any individual addition.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-wts-foundation"
+      ]
+    },
+    {
+      "entityId": "intake-entity-0d9ef7188fb617cc",
+      "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-2407276a4d51c058",
+      "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-1903de0e205d43c4",
+      "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-556215db9b232e37",
+      "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-781a2a811edc3292",
+      "reason": "Named-program eligibility unobserved behind AWS matching portal; no login or applicant information collected.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Miller public scholarship list routes to AWS, whose public portal requires an academic profile/login before displaying individual eligibility matches. No named-fund entrant requirements were exposed; do not transfer Welder Training rules to this separate fund. Obtain public award-specific rules before proposing an addition. The Krupnicki donor name is masked in the saved source and remains identity-unverified.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-695d05088402795c",
+      "reason": "Shared discovery parent, individual catalog access limited.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Parent lists five named funds evaluated separately. The AWS matching portal may contain other awards that were not viewed; parent is not a sixth individual scholarship. Revisit only public catalog completeness or selected parent policy.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-miller-funds"
+      ]
+    },
+    {
+      "entityId": "intake-entity-91adce75cf698fcd",
+      "reason": "Stale official route; current identity/eligibility and application unavailable after bounded search.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Saved ABC Trimmer route now redirects to generic ABC homepage. One targeted official search found historical 2015/news references, no current applicant route. This ABC program is distinct from the already proposed NTHS BYF award and existing AGC workforce award. Recheck an official ABC student application before promotion.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-abc-old-route"
       ]
     }
   ],

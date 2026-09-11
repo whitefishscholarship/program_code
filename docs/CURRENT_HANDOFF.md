@@ -5,6 +5,28 @@ Plan revision: 15
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
+## Active resumption checkpoint — September 11 UTC
+
+- Resumed clean execution branch from exact `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`.
+  Secure read-only fetch confirms current `origin/main` remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
+  The unchanged snapshot and initial ledger hash matched the saved continuation.
+- Batch012 housing/SEED/trades: 28 entity decisions authored, 2 proposed additions
+  (Building Hope and AWS Welder Training), explicit holds and out-of-scope dispositions;
+  independent review pending. New safe evidence: `scholarship-intake/housing-seed-trades-evidence.json`.
+- Supplemental011 independent review found a real NTHS duplicate of existing Master143.
+  Duplicate addition withdrawn; its two source rows and supplemental alias now point to
+  existing Master143. Prior reviewed proposal retained in `withdrawnProposal`, historical
+  receipts unchanged. PAPA discovery-source and Epic Master130 relation corrected.
+  Independent recheck pending; no false final acceptance.
+- Current ledger SHA256: `9578b4fa99bf94712b0ad1e7fad901daf9d674a744998c6f76a4cab6021b1b87`.
+  Counts: 1187 decided rows, 318 pending entities, 179 proposed additions, 2 proposed
+  updates. Related-field triage remains 223 rows / 683 differences, unfinished.
+- Next action: independent recheck supplemental011 and batch012; continue saved MCF and
+  Pearl/Avfuel evidence, then remaining candidates/triage, validation and exact promotion batch.
+- No backup/recovery copy or workbook write; all backup gates remain unsatisfied and
+  unauthorized. No publishing or hosted verification. Full tests/build/final review unfinished.
+- Resolve exact current local checkpoint with `git rev-parse codex/scholarship-intake`.
+
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
 - Execution branch `codex/scholarship-intake`; worktree `/private/tmp/program_code-scholarship-intake`.

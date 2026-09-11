@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-nhe-portal",
+      "url": "https://apply.nationalhousingendowment.org/",
+      "finalUrl": "https://apply.nationalhousingendowment.org/",
+      "observedAt": "2026-09-11T03:35:47.194Z",
+      "statusCode": 200,
+      "contentSha256": "96ad5e5c5390edbfb564b64d6b0e6a0b12739bec4d17b1cf73092ab889b512b6",
+      "scrapeId": "01a08e88-f374-773d-83c2-4b4d492a8626",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-nhe-pwb",
+      "url": "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+      "finalUrl": "https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships",
+      "observedAt": "2026-09-11T03:38:03.133Z",
+      "statusCode": 200,
+      "contentSha256": "9c16692bad20bc128cd64dce8b0f89d51d3603360ecb3686df78c2dd0ff6a8b6",
+      "scrapeId": "01a08e8b-0b34-711c-ac8f-a3000b8b69e6",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-acs-seed",
+      "url": "https://www.acs.org/education/students/highschool/seed/scholarship.html",
+      "finalUrl": "https://www.acs.org/education/students/highschool/seed/scholarship.html",
+      "observedAt": "2026-09-11T03:36:04.372Z",
+      "statusCode": 200,
+      "contentSha256": "9ab86fe3c922df95107ace6f1e0cf4a44d247aa30d316300b2b2ec3ffbd85286",
+      "scrapeId": "01a08e89-5fff-719e-89ed-f6b23def1c89",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wts-foundation",
+      "url": "https://www.wtsinternational.org/wts-foundation/scholarships",
+      "finalUrl": "https://www.wtsinternational.org/wts-foundation/scholarships",
+      "observedAt": "2026-09-11T03:36:06.360Z",
+      "statusCode": 200,
+      "contentSha256": "c08acbde33cb1c3d1e2410924e7f95bed53c35e0801de1f10a9348ebd09d9ec9",
+      "scrapeId": "01a08e89-6944-74cb-9b11-74792c031ae5",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-agc-program",
+      "url": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
+      "finalUrl": "https://www.agc.org/learn/education-and-research-foundation/scholarship-program",
+      "observedAt": "2026-09-11T03:12:20.482Z",
+      "statusCode": 200,
+      "contentSha256": "559c6d3c80dfcdc21b7f433abc1362a393a7497201980d79d322f559e0d12ae7",
+      "scrapeId": "01a08e73-9741-75aa-82ee-8c9257536abd",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-agc-undergrad-criteria",
+      "url": "https://www.agc.org/sites/default/files/users/user3413/2027-2028%20Undergraduate%20Applicant%20Criteria.pdf",
+      "finalUrl": "https://www.agc.org/sites/default/files/users/user3413/2027-2028%20Undergraduate%20Applicant%20Criteria.pdf",
+      "observedAt": "2026-09-11T03:42:31.847Z",
+      "statusCode": 200,
+      "contentSha256": "08a1d3b8461c9b09cbbaf08cd14d9fa59459d7ed334c1d1a9ed54c9ab9dc9f0e",
+      "scrapeId": "01a08e8f-44b7-7389-98f2-ceee803b6916",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-miller-funds",
+      "url": "https://www.millerwelds.com/about/grants-and-scholarships",
+      "finalUrl": "https://www.millerwelds.com/en-us/about/grants-and-scholarships",
+      "observedAt": "2026-09-11T03:41:28.518Z",
+      "statusCode": 200,
+      "contentSha256": "55f9ffe6a8e01366c67ff43f07e92229f00a5917b6657ec5bb43f2c289bbfc7e",
+      "scrapeId": "01a08e8e-42df-70db-b7d3-48600b656118",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-aws-route",
+      "url": "https://scholarship.aws.org/applications/",
+      "finalUrl": "https://scholarship.aws.org/applications/",
+      "observedAt": "2026-09-11T03:42:28.121Z",
+      "statusCode": 200,
+      "contentSha256": "cd77fece2ad66654b9580e6a9af1b58c5c401fc80af601705434de5c1b1e561f",
+      "scrapeId": "01a08e8f-3b1b-77ec-9086-bad5b566df0d",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-aws-training",
+      "url": "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+      "finalUrl": "https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/",
+      "observedAt": "2026-09-11T03:59:05.113Z",
+      "statusCode": 200,
+      "contentSha256": "37ddf8c5daad60550d88eb921a23865c6958c2a2eafc7439bd90770aa5c36ad5",
+      "scrapeId": "01a08e9e-3045-7529-a959-a118e86b5b32",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-abc-old-route",
+      "url": "https://www.abc.org/Education-Training/Trimmer-Construction-Education-Fund/Build-Your-Future-Scholarship",
+      "finalUrl": "https://www.abc.org/",
+      "observedAt": "2026-09-11T03:12:23.304Z",
+      "statusCode": 200,
+      "contentSha256": "0bdd9d355a922f310abc8fc20d433e024d8629ef5438bb50885bf7252d5b7077",
+      "scrapeId": "01a08e73-aefa-7313-84a7-6001a5b19f85",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/housing-seed-trades-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "evidence": [
+    {
+      "sourceId": "official-nhe-portal",
+      "rulesAndRoutes": "![NHE Scholarships & Awards logo](https://apply.nationalhousingendowment.org/images/nhe/nhe_banner_main.png)\n\n- [Log in](https://apply.nationalhousingendowment.org/#test-link)\n\n- Welcome\n- Apply Here\n\n# Scholarships and Grants\n\nBuilding homes for the nation is too important a priority to neglect the education, training and research that will be needed to support the residential construction industry. The National Housing Endowment is answering the call by continuing to find avenues to educate students on the many opportunities a career in construction offers.\n\n**All scholarship and grant offerings are closed for 2026.  Please check back in late January 2027 for the next cycle of awards.**\n\n**Student Scholarships:**\n\n## Herman J. Smith/National Housing Endowment Scholarship\n\nThis scholarship was created to honor Herman J. Smith and his lifelong commitment to the housing industry and the education of future generations of home builders. This scholarship has a preference for students in the state of Texas.\n\n## Lee S. Evans/National Housing Endowment Scholarship\n\nMr. Evans, an educator and consultant, has taught thousands of builders how to better manage their businesses. The Evans' endowed gift, along with the generous contributions of many of Mr. Evans' friends, colleagues and former students, created the scholarship fund to assist in addressing the pressing need for educating and training construction managers in the residential building industry.\n\n## Professional Women in Building/National Housing Endowment Scholarships\n\nThe scholarship fund encourages individuals to further their education and training in housing industry related programs. Two PWB/NHE scholarships are currently available to qualified applicants. **[See the full list of eligibility requirements.](https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships)**\n\n- Strategies for Success Scholarship\n- Building Hope Scholarship\n\n## Granger MacDonald/Doug Wistner Scholarship\n\nThe Granger MacDonald/Doug Wistner Scholarship Fund was established in honor and loving memory of NAHB 2017 Chairman Granger MacDonald and Doug Wistner, husband and son of Kathy MacDonald respectively. This award will go to support students pursuing education opportunities in residential construction trades and management.\n\n## National Housing Endowment/EOC Student Scholarship\n\nThe National Housing Endowment/EOC Student Scholarship (formerly the Bill Carr Scholarship) is awarded to children of Executive Officers in pursuit of a college degree. Funding is through Executive Officer contributions and interest accrued by the Endowment. The scholarship program is managed by the National Housing Endowment/EOC Student Scholarship Subcommittee. To date, more than 290 students have received funds totaling more than $400,000.\n\n**Grants:**\n\n## Homebuilding Education Leadership Program (HELP) Grant\n\nFor more than a decade, the HELP initiative has awarded annual grants to leading colleges and universities to help them create, expand or enhance residential construction management programs. Through a competitive application process, recipient institutions can receive a grant of up to $100,000 over a three-to-five year time period.\n\n## Challenge/Build/Grow Grant\n\nThe National Housing Endowment has created the Challenge/Build/Grow Grant Initiative for NAHB state and local associations. The Endowment is offering eligible applicants up to $5,000 in matching challenge grant funds for programs and projects addressing NAHB’s highest priority areas, including education and worker training — with a focus on building innovations and growing the future workforce. The National Housing Endowment wants to challenge the building industry to help build and grow new state and local partnerships and opportunities.\n\n## NHE NAHB Remodelers Leadership Program Grant\n\nThe National Association of Home Builders Remodeler Leadership Grant aims to provide exposure to NAHB leadership meetings to foster future leaders to represent the needs of the residential remodeling industry. Whether you are a current or past local leader, if you have an interest in serving at the national leadership level, the NAHBR Leadership Grant fund can help you make the connections you need to make an impact.\n\nGrant recipients will receive financial support to help defray costs associated with member travel expenses to NAHB’s Spring Leadership Meetings in Washington, D.C. Additionally, they will receive access to numerous networking events with leadership development opportunities for remodelers.\n\n**[See the full list of eligibility requirements.](https://www.nahb.org/nahb-community/councils/remodelers/pages/resources/nahb-remodelers-leadership-grant)**\n\n## Associates Leadership Grant\n\nThe Associates Leadership Grant develops active Associate leaders through mentoring, participation at national meetings and education about NAHB’s programs and services to help Associates get the most out of their membership while cultivating future leaders. The grant provides financial assistance to a few Associate members each year to help defray the cost of attending NAHB’s board meetings.\n\n## Professional Women in Building/National Housing Endowment Leadership Grant\n\nThis grant encourages individuals to further their professional develpoment in the housing industry. **[See the full list of eligibility requirements.](https://www.nahb.org/nahb-community/councils/professional-women-in-building-council/pwb-nhe-scholarships)**\n\n"
+    },
+    {
+      "sourceId": "official-nhe-pwb",
+      "rulesAndRoutes": "The scholarship and grants funds encourage individuals to further their education and training in housing industry related programs. Three PWB/NHE scholarships and grants are currently available to qualified applicants.\n\n## Strategies for Success Scholarship\n\nThe Strategies for Success Scholarship provides financial support to qualified students interested in advancing their education in housing industry related programs. NAHB PWB’s past national president Deborah Ferland and Austin Ferland initiated the scholarship in 2001.\n\nRequirements:\n\n- Applicants must be enrolled as full-time students, at the start of the Fall semester with at least one full academic year of coursework remaining after the scholarship is received.\n- Applicants must be pursuing an education in a housing-related course of study (e.g., construction management, construction technology, civil engineering, architecture, design, trade specialties) at a two-year or four-year college or university/vocational program.\n- High school seniors are not eligible to apply.\n- Applicants must submit a complete application with two letters of recommendation by the application deadline.\n- Preference will be given to applicants unable to afford a college education without financial assistance.\n- Preference will be given to applicants who are members of a Student Chapter of NAHB.\n- Scholarship recipients must maintain a minimum GPA of 2.5 (on a 4-point GPA scale) for all courses and a GPA of 3.0 (on a 4-point GPA scale) for core curriculum courses. If a scholarship recipient’s GPA falls below the minimum GPA requirement, NAHB PWB’s Strategies for Success Scholarship Selection Working Group reserves the right to cease further funding of the scholarship.\n\n## Building Hope Scholarship\n\nThe Building Hope Scholarship provides financial support to qualified students interested in advancing their education and training in building industry related fields. In 1955, Hope S. Bettilyon, former President of the NAHB Women’s Auxiliary, now known as the NAHB Professional Women in Building Council, initiated the scholarship. Local NAHB PWB councils are encouraged to promote the Building Hope Scholarship to students in their communities.\n\nRequirements:\n\n- Applicants must be enrolled as full-time or part-time students at the start of the Fall semester at a college, university or trade school with at least one course or trade related program remaining after the scholarship is received.\n- Applicants must be pursuing an education in a building related course of study or vocational/trade program.\n- Awards are given for tuition, school/program fees only and will be paid directly to the academic/program institution by the National Housing Endowment.\n- Scholarship recipients may be required to provide verification of enrollment prior to disbursement of award.\n- Applicants must submit a complete application with letters of recommendation by the application deadline.\n\n## Leadership Grant\n\nThe Professional Women in Building Leadership Grant provides financial support to qualified applicants to help defray cost associated with professional development opportunities including housing and building related certifications, designations and licensing fees, travel expenses to NAHB’s Spring Leadership Meeting in Washington, D.C., June 9-13, expenses related to career development and other building related programs.\n\nRequirements:\n\n- Applicants must be PWB members in good standing.\n- Preference may be given to PWB members who have served in PWB leadership roles at the local and/or national levels (i.e. local council chair/vice chair, NAHB PWB subcommittee chair/vice chair, etc.).\n- If applicable, proof of course/program registration and/or attendance at NAHB’s Spring Leadership Meeting may be required before award disbursement.\n\n**[Learn more and apply](https://apply.nationalhousingendowment.org/Default.asp \"Opens a page in a new window\")**\n\n_Deadline for all applications is March, 6, 2026._\n\n"
+    },
+    {
+      "sourceId": "official-acs-seed",
+      "rulesAndRoutes": "There are several Project SEED scholarships available, including renewable and nonrenewable awards. Selection is based on achievement in school, success in the Project SEED program, financial need, and intended chemical-related field of scientific study. The scholarships are intended to assist former SEED participants as they transition from high school to college.\n\n- **One-Year, Non-renewable Scholarships:** These award up to $5,000 for your freshman year in college. Each year, approximately 30 awardees are selected.\n\n- **Renewable Scholarship - Joseph D. Loconti:** This awards $5,000 for four years in college. One awardee is selected each year from the pool of one-year, non-renewable scholarship applicants. No additional paperwork or applications necessary to apply.\n\n- **Renewable Scholarship - CIBA Specialty Chemicals:** This awards 2-5 sophomores that were previously selected as a one-year scholarship recipient.  Students can apply during the second half of their freshman year for $5,000 per academic year for 3 additional years. Eligible students will be contacted directly with information to apply.\n- **Renewable Scholarship - Alfred R Bader:** This award provides $5,000 scholarships to 20 economically disadvantaged students entering college to study chemistry or chemistry-related disciplines, and continue support with second-year scholarships for all Bader Scholars.\n\n## Eligibility Criteria\n\nTo be eligible for a Project SEED college scholarship, you:\n\n- Must be a Project SEED alum (participated for at least one full summer in the [Project SEED program](https://www.acs.org/education/students/highschool/seed.html))\n\n- Must currently be a high school senior OR a college freshman\n- Must plan to enroll full-time into an accredited college or university for the start of the _next_ academic school year\n\n- Must plan to major in a chemical-related science\n\n\n  - Eligible chemical-related science majors include Chemistry, Biochemistry, Chemical Engineering, Environmental Engineering, Forensic Chemistry, Materials Science, Pharmaceutical Chemistry, and more.\n\n## Selection Criteria\n\nThe selection committee will review all application materials and select students based on the following:\n\n- Academic achievement\n- A strong and clear ability to share your Project SEED experience and future education and career goals\n\n- Strong letters of recommendation that confirm your interest in chemistry, and your strength as a potential future scientist\n- A chemistry-related major\n\n## How to Apply\n\nEligible students should submit the following by **December 30, 2025**:\n\n- **Scholarship Application on Foundant website**\n- **Unofficial High School Transcript**\n- **Two Letters of Recommendation**\n  - **Project SEED Recommendation:**This letter must come from someone that worked closely with you during your time at Project SEED.  It should be one of the following:\n    - A Project SEED mentor, coordinator, or another individual such as a technician or graduate student that you worked closely with in the lab\n    - This letter of recommendation should include a description of the progress made on the research project, the applicant’s attitude toward research (for in-person research programs), your aptitude and enthusiasm toward chemistry, and your potential as a future scientist/professional in a chemical-related field.\n  - **High School Teacher Recommendation.** The high school teacher recommendation would ideally come from a STEM teacher (math or science).  The letter should include a description of your enthusiasm and commitment toward a chemistry-related career, as well as your academic success. If you are a college freshman, your recommendation could also come from a professor if applicable.\n\n  - Your letter writers should submit their letter by or before December 30, 2025\n\n"
+    },
+    {
+      "sourceId": "official-wts-foundation",
+      "rulesAndRoutes": "### WTS Foundation Scholarships\n\nThe scholarships named below are awarded first at the [WTS Chapter](https://www.wtsinternational.org/chapters) level.  Winners at the Chapter level are submitted to the WTS Foundation on an annual basis for consideration, with winners announced in May of the following year at the [WTS International Annual Conference](https://www.wtsinternational.org/wts-foundation/www.wtsannualconference.org).\n\n- [Considerations for Scholarship Distribution to Encourage Diverse Applicants](https://higherlogicdownload.s3.amazonaws.com/WTSINTERNATIONAL/2cadead5-b2b4-4748-b018-b2a00f0ba19e/UploadedImages/Considerations_for_Scholarship_Distribution_to_Encourage_Diverse_Applicants.pdf)\n- [Scholarship Evaluation Guidelines](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fhigherlogicdownload.s3.amazonaws.com%2FWTSINTERNATIONAL%2F2cadead5-b2b4-4748-b018-b2a00f0ba19e%2FUploadedImages%2FEvaluation_Guidelines.docx&wdOrigin=BROWSELINK)\n- [Scholarship Application Coversheet](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fhigherlogicdownload.s3.amazonaws.com%2FWTSINTERNATIONAL%2F2cadead5-b2b4-4748-b018-b2a00f0ba19e%2FUploadedImages%2FCoversheet_Scholarship_Applications_2022.docx&wdOrigin=BROWSELINK)\n\nLocal Chapters may have additional requirements (such as personal interviews or higher GPA). [Please contact your local Chapter](https://www.wtsinternational.org/chapters) for more information regarding any additional requirements. All applications are submitted through a chapter, and chapters submit their nominations for consideration to a Selection Committee composed of Foundation Board members.\n\n#### Sharon D. Banks Memorial Undergraduate Scholarship\n\nThis scholarship in the amount of $5,000 is awarded to women pursuing undergraduate studies in transportation or a related field and honors Sharon D. Banks, general manager of Alameda-Contra Costa Transit District in Oakland, CA, during most of the 1990s. She led the agency in a pioneering effort to introduce cultural and organizational changes aimed at motivating the public transit workforce. She was a member of the WTS Advisory Board and received the WTS San Francisco Chapter Woman and Employer of the Year Awards.\n\n#### Helene M. Overly Memorial Graduate Scholarship\n\nThe Helene M. Overly Scholarship was established in 1981 to honor the first Executive Secretary of WTS for her dedicated service to the organization in public service, organizational abilities and a spirit of determination that helped WTS nearly double its membership in two years. To be eligible for this $10,000 scholarship, applicants must meet the above criteria and be enrolled in a graduate degree program in a transportation-related field such as engineering, planning, finance, or logistics.\n\n#### Molitoris Leadership Scholarship for Undergraduates\n\nThe purpose of the Molitoris Leadership Scholarship is to motivate and reward women who demonstrate leadership in the transportation industry, ensuring that the essential leadership skills and perspectives of women are included in planning the transportation systems of the future. Leadership does not just happen. Leaders personally invest and risk much. They take on struggles that many would avoid and persevere to reach successful outcomes. These qualities receive special attention in the selection of the winner of this $5,000 award.\n\n#### Bridgette Beato Leadership Legacy Scholarship for Graduates\n\nThe Bridgette Beato Leadership Legacy Fund honors the past, present, and future leaders of WTS by awarding an annual scholarship to female graduate students pursuing a career in transportation. Each year, the Leadership Legacy Scholarship will provide a $5,000 award to a young woman pursuing a career in transportation. Eligible candidates are pursuing graduate degrees in transportation or a related field and demonstrate leadership skills and an active commitment to community service. The award focuses on women who demonstrate leadership in bringing ideas, innovation, and innovative approaches to transportation challenges in the US and beyond.  It includes candidates who have a specific interest in addressing the impact of transportation on sustainability, land use, environmental impact, security, and quality of life issues affecting communities around the globe.\n\n#### Junior College/Trade School Scholarship\n\nWTS fosters the development of women in the transportation field by encouraging bright new professionals to undertake careers in transportation. One way we achieve this is by awarding community, technical, or trade college scholarships to women pursuing transportation-related study at community and trade colleges. This scholarship, intended for students pursuing an Associate or technical degree, is in the amount of $2,500.\n\n#### WTS Transportation YOU High School Scholarship\n\nWTS awards the Transportation YOU Scholarship to girls pursuing high school studies in science, technology, engineering, and math to foster the development of women and girls in the transportation field by encouraging bright new professionals and students to undertake careers in transportation. The Transportation YOU High School Scholarship is in the amount of $2,500.\n\n"
+    },
+    {
+      "sourceId": "official-agc-program",
+      "rulesAndRoutes": "## _Undergraduate and Graduate Scholarships_\n\nThe AGC Education and Research Foundation offers undergraduate and graduate level scholarships to students enrolled in [ABET](http://main.abet.org/aps/Accreditedprogramsearch.aspx), [ACCE](http://acce-hq.org/accreditation) and some ATMAE-accredited construction management or construction related engineering programs. Over $11 million in scholarships have been awarded to more than 4,500 students attending colleges and universities across the country.\n\n|     |\n| --- |\n| **The 2027-2028 application portal is now open! [APPLY NOW](https://app.smarterselect.com/programs/110534)**<br>- **Undergraduate students**: Scholarships of **$2,500 per year** for up to **three years**<br>- **Graduate students**: Scholarships of **$3,750 per year** for up to **two years** |\n\n[Congratulations to the 2026-2027 AGC Education and Research Foundation Scholarship recipients!](https://www.agc.org/sites/default/files/users/user3413/ERF_2026-2027%20Scholarship%20Winners.pdf)\n\n## _Workforce Development Scholarships_\n\nIn 2015, the National Center for Construction Education and Research (NCCER) and its Build Your Future initiative made a generous contribution to help fund the first Workforce Development scholarships for students pursuing craft and technical programs, allowing 19 applicants to receive the inaugural scholarships.  Scholarships are $1,000 per year, renewable for up to two years. The 2027-2028 Workforce Development Scholarship program will open March 1, 2027.\n\n"
+    },
+    {
+      "sourceId": "official-agc-undergrad-criteria",
+      "rulesAndRoutes": "# AGC EDUCATION & RESEARCH FOUNDATION\n\n**Undergraduate Criteria**\n\n**Application must be submitted online.**\n\n## A. ELIGIBILITY\n\n1. High school seniors are not eligible. Applicant **MUST** be a rising college sophomore, \njunior in a four-year program or rising senior in a five-year program at the time the \n**scholarship is awarded in the fall of 2027**. Junior and senior level applicants MUST \nhave one full academic year of coursework remaining at the time of application deadline \nin the fall of 2027 term (i.e. **earliest graduation date of December 2027**). Second-year \nstudents at a two-year school who are planning to transfer to a four-year program for the \nFall 2027 term are also eligible to apply.\n\n2. Applicant **MUST** desire a career in the construction industry.\n\n3. Applicant **MUST** be a full-time student.\n\n4. Applicant **MUST** be enrolled or intend to enroll in either an <u>ABET</u> or  <u>ACCE</u> accredited \nprograms.\n\n5. Applicant **MUST** pursue a B.S. degree in construction management or constructionrelated engineering. A dual degree with construction management or construction-related \nengineering as one part is acceptable.\n\n6. Applicant **MUST** be a U. S. citizen or documented permanent resident of the United \nStates (i.e. must possess a \"permanent resident\" card).\n\n## B. REQUIREMENTS\n\n1. Applicant is responsible for ensuring that all of the following items are submitted by \nmidnight EST November 1, 2026.\n\n1. Completed application.\n\n2. Evaluation form completed (online) by college faculty member.\n\n3. Evaluation form completed (online) by an employment supervisor.\n\n4. Official or unofficial transcript of college grades. Unofficial transcripts are \naccepted if they clearly indicate the academic institution and the student's name. \nText versions cut and pasted from the school's website ARE NOT acceptable.\n\n2. Spelling and grammar are important and will be considered in the review/rating process.\n\n3. Incomplete application packages will NOT be considered.\n\n---\n\n# AGC EDUCATION & RESEARCH FOUNDATION\n\n## C. AWARDS\n\n1. Scholarships are for a maximum of $2,500 per student per year and may be renewable for \nup to three years of undergraduate study in construction-related engineering, construction\nmanagement, or a dual degree with construction management or construction-related \nengineering as one part. Applications will be reviewed, and winners selected by the AGC \nEducation and Research Foundation Board of Directors.\n\n2. All applicants selected as finalists will be invited to a personal interview with a \nrepresentative of the AGC Education and Research Foundation. Finalists will be notified \nin January/February 2027.\n\n3. Scholarship winners will be notified in March, 2027 and award(s) will be announced at \nthe AGC Annual Convention.\n\n4. Checks will be sent directly to recipients in late summer preceding the school year. \nChecks will NOT be sent to the recipients' college or university.\n\n5. To be considered for renewal annual award installments, the scholarship recipient is \nrequired to provide indications of continued enrollment and good standing (min. 2.0 \nGPA). Grade transcripts and upcoming class schedules MUST be forwarded at the \nconclusion of each academic period. Recipients will not be reminded to provide this \ninformation; failure to do so will result in non-renewal of scholarship award installments. \nRecipients are encouraged to seek summer employment in construction during \nundergraduate enrollment.\n\n"
+    },
+    {
+      "sourceId": "official-miller-funds",
+      "rulesAndRoutes": "# Scholarships\n\nScholarships are an important source of financial assistance, but many prospective welders don’t know they exist. Bringing a greater awareness to what’s available will help students jump-start their careers.\n\n**American Welding Society**\n\nThe American Welding Society (AWS) has been supporting the welding profession for over 100 years. It’s their mission to provide tools to help their members succeed, while also inspiring future welding professionals.\n\n**Available Miller Sponsored Scholarships**\n\nMiller Electric Mfg. Co. National Scholarship\n\n<PRIVATE_PERSON> / Miller Electric Scholarship\n\nMobile WESCO & Miller Electric Scholarship\n\nNorco & Miller Electric UBTech Scholarship\n\nDalton Nolan Van Memorial Scholarship\n\n[Apply at AWS  (Opens in a new tab)](https://scholarship.aws.org/applications/)\n\n"
+    },
+    {
+      "sourceId": "official-aws-route",
+      "rulesAndRoutes": "# [![American Welding Society Online Scholarship Applications](https://scholarship.aws.org/i/logo-short.png)](https://scholarship.aws.org/applications/)\n\n## Apply for American Welding Society Scholarships!\n\n#### **2026-2027 Scholarship Programs currently open:**\n\n##### **Welder Training Scholarship -** for students seeking welder training in a certificate program less than two years in length, deadline is November 30th\n\n* * *\n\nPlease login or register for an account to get started on your applications.\n\nThere are four steps to the application process:\n\n**Step 1:** Register for a Profile. Use an email address you will still be able to access in 18 months.\n\n**Step 2:** Create an Academic Profile, which includes your personal statement and career objectives.\n\n**Step 3:** Find out which scholarships you are eligible for based on your academic profile and geographic location, and click to apply.\n\n**Step 4:** Provide references and any required documentation to complete your applications.\n\n* * *\n\n_Scholarships for Welding Educators are submitted on a different website.  Visit_ **[https://www.aws.org/Career-Resources/Students/Scholarships/Educator-Scholarships/](https://www.aws.org/Career-Resources/Students/Scholarships/Educator-Scholarships/)** _to learn more._\n\n"
+    },
+    {
+      "sourceId": "official-aws-training",
+      "rulesAndRoutes": "# WELDER TRAINING SCHOLARSHIP\n\n#### Jump to:\n\n- [Applications](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#applications)\n- [Important Dates & Eligibility Overview](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#date)\n- [You Might Also Like](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#youmight)\n\nJump to:\n\n\n- [Applications](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#applications)\n- [Important Dates & Eligibility Overview](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#date)\n- [You Might Also Like](https://www.aws.org/career-resources/students/scholarships/welder-training-scholarship/#youmight)\n\n## Welder Training Scholarship\n\n## Welder Training Scholarship\n\nThe AWS Welder Training Scholarship is for students seeking welder training in a certificate program less than two years in length through a trade school, community college, or other facility providing welder training. The scholarship cannot be used toward an associate or bachelor's degree program.\n\nUp to 800 - $1,000 Welder Training Scholarships will be awarded annually.\n\nApplications for Welder Training Scholarships\n\n\n## are open\n\nApply by November 30, 2026\n\n\n[APPLY NOW](https://scholarship.aws.org/applications/ \"APPLY NOW\")\n\n* * *\n\n|     |     |\n| --- | --- |\n| Important Dates |\n| December 1st - November 30th | Applications accepted for the Welder Training Scholarships<br> Apply online at [scholarship.aws.org](https://weld.ng/applynow) |\n| January 15th - December 15th | Selections made on a rolling basis |\n\n### Eligibility Overview\n\nThe current application cycle is open to students attending school or training in the next year.\n\n1. Applicants must reside within the boundaries of an AWS District. View the AWS District and Section Map [here](https://www.aws.org/Community-and-Events/Sections-and-Student-Chapters).\n2. Applicant must be planning to attend a trade school, community college, or other facility providing welder training.\n3. Awards will not be made to Section officers, or their families.\n4. Awards will not be made to Section Selection Committee members, or their families.\n\n### Selection Process\n\nApplications may be submitted December-November and will be selected on a rolling basis until the District awards the designated funds for the year. Applications received prior to November 30th will be eligible for any funds remaining in that calendar year.\n\n### Awards\n\nDistrict Scholarships are a minimum of $1,000. No awards will be paid to the recipient. AWS Scholarships can be used for tuition, fees, books, supplies, and equipment required for the course of instruction. Scholarship funds will be made payable and sent directly to the educational institution.\n\nScholarships may be redeemed for one year from the date awarded.\n\n"
+    },
+    {
+      "sourceId": "official-abc-old-route",
+      "rulesAndRoutes": "Member-driven. Member-strong.\n\nYou build communities and shape the industry. We make sure your voice is heard.\n\nAssociated Builders and Contractors is a national construction industry trade association representing more than 24,000 members.\n\n\nFounded on the merit shop philosophy, ABC helps members offer a robust employee value proposition, develop people, win work and deliver that work safely, ethically and profitably for the betterment of the communities in which ABC and its members work.\n\n\n"
+    },
+    {
+      "sourceId": "official-wts-foundation",
+      "locator": "Strategic Partner Scholarships",
+      "rulesAndRoutes": "### Strategic Partner Scholarships\n\nThese scholarships are sponsored by WTS International [**Pinnacle and Strategic Level Corporate Partners**](https://www.wtsinternational.org/resources/corporate-partners) and support the Foundation's development of students in the transportation field by encouraging bright new professionals and students to undertake careers in transportation. In 2026, seven $5,000 corporate Strategic Partner Scholarships were available thanks to the generosity of [HNTB](https://www.hntb.com/), [HDR](https://www.hdrinc.com/), [AECOM](https://www.aecom.com/), [Jacobs](https://www.jacobs.com/), and [WSP](https://www.wsp.com/en-us).\n\nImage\n\n![WTS Philadelphia - HNTB_Logo](https://www.wtsinternational.org/sites/default/files/styles/partner_logo/public/2023-02/WTS%20Philadelphia%20-%20HNTB_Logo.png?itok=aa1UvVCA)\n\nImage\n\n![HDR](https://www.wtsinternational.org/sites/default/files/styles/extra_small/public/2021-09/HDR%20Logo.jpg?itok=tjolJNr3)\n\nImage\n\n![2023_AECOM](https://www.wtsinternational.org/sites/default/files/styles/small/public/2023-04/aecom_bw_300.jpg?itok=LgwpKcae)\n\nImage\n\n![Jacobs logo](https://www.wtsinternational.org/sites/default/files/styles/partner_logo/public/2023-02/Jacobs_logo_rgb_black.jpg?itok=aTj9Nx4R)\n\nImage\n\n![WSP](https://www.wtsinternational.org/sites/default/files/styles/extra_small/public/2023-02/WSP%20logo.png?itok=IhK4zlPZ)\n\n* * *\n\n"
+    },
+    {
+      "search": "site:abc.org Build Your Future scholarship 2026 Trimmer",
+      "observedAt": "2026-09-11T03:36:57.972Z",
+      "results": [
+        {
+          "url": "https://www.abc.org/News-Media/Newsline/BlogPage/122",
+          "title": "Newsline | Page 122 - Associated Builders and Contractors",
+          "description": "During its third annual Build Your Future Scholarship program, NCCER awarded scholarships of $2,000 each to 10 students who are pursuing craft professional ...",
+          "position": 1
+        },
+        {
+          "url": "https://abc.org/News-Media/News-Releases/year/2015/month/9",
+          "title": "News Releases | September 2015 - Associated Builders and Contractors",
+          "description": "Associated Builders and Contractors (ABC) announced the first 10 winners of the Build Your Future Scholarship through ABC's Trimmer Construction Education ...",
+          "position": 2
+        },
+        {
+          "url": "https://www.abc.org/News-Media/Newsline/BlogPage/12?Category=workforce-development",
+          "title": "Newsline | Workforce Development | Page 12",
+          "description": "Build Your Future Scholarship program, NCCER awarded scholarships of $2,000 each to 10 students who are pursuing craft professional education ...",
+          "position": 3
+        }
+      ],
+      "limit": "Targeted lead-only search; no scholarship fact inferred from snippets"
+    },
+    {
+      "search": "site:acs.org Project SEED scholarship Foundant application",
+      "observedAt": "2026-09-11T03:50:37.991Z",
+      "results": [
+        {
+          "url": "https://www.acs.org/education/students/highschool/seed/scholarship.html",
+          "title": "Project SEED Scholarships - American Chemical Society",
+          "description": "# Project SEED Scholarships\n- [Menu](https://www.acs.org/education/students/highschool/seed/scholarship.html#)\n  - [Apply](https://www.acs.org/education/students/highschool/seed/apply.html)\n\n## How to Apply\nEligible students should submit the following by **December 30, 2025**:\n\n- **Scholarship Application on Foundant website**\n- **Unofficial High School Transcript**\n\n**Email**\n\n[seedscholarships@acs.org](mailto:seedscholarships@acs.org)",
+          "position": 1
+        },
+        {
+          "url": "https://www.acs.org/funding/scholarships-fellowships/seed-scholarships.html",
+          "title": "Project SEED Scholarships - American Chemical Society",
+          "description": "# Project SEED Scholarships\n## Scholarship at a Glance\n[Apply](https://www.acs.org/education/students/highschool/seed.html)\n\n## How to Apply\nDetailed information is available on the [Project Seed Scholarships](https://www.acs.org/education/students/highschool/seed/scholarship.html) page.",
+          "position": 2
+        },
+        {
+          "url": "https://www.acs.org/funding/scholarships-fellowships.html",
+          "title": "Scholarships & Fellowships - American Chemical Society",
+          "description": "Project SEED Scholarship. A one-year, non-renewable scholarship for past participants of the Project SEED Summer experience.",
+          "position": 3
+        }
+      ],
+      "limit": "Targeted lead-only search; no scholarship fact inferred from snippets"
+    }
+  ],
+  "scope": "Public program rules and routes only; no applicant records, submission, contact or source writes."
+}
