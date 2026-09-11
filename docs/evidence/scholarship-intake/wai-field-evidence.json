@@ -1,0 +1,897 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-wai-2027",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "finalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "observedAt": "2026-09-11T02:29:33.196Z",
+      "statusCode": 200,
+      "contentSha256": "0d8bf2c68970f774d3bed6019d56a1b023260a3eac55fdf48986b597c5aefca4",
+      "scrapeId": "01a08e4b-f5d8-704a-a8d6-225b2f04274e",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wai-parent",
+      "url": "https://www.wai.org/scholarships",
+      "finalUrl": "https://www.wai.org/scholarships",
+      "observedAt": "2026-09-11T02:26:19.262Z",
+      "statusCode": 200,
+      "contentSha256": "3ec50c8b2a650a322f46ec16a02c0cb7028892909d4f27d89fba08646485fa60",
+      "scrapeId": "01a08e49-7f2e-773e-8cb5-768a8dd5eeb8",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wai-apply",
+      "url": "https://www.wai.org/how-to-apply",
+      "finalUrl": "https://www.wai.org/how-to-apply",
+      "observedAt": "2026-09-11T03:27:48.734Z",
+      "statusCode": 200,
+      "contentSha256": "0330a6978cea9e674ada8c09bd3715c023917334f4b383a2711e50a378b9756d",
+      "scrapeId": "01a08e81-cb9b-70c4-89f6-4e2a0337fecf",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wai-faq",
+      "url": "https://www.wai.org/faqs",
+      "finalUrl": "https://www.wai.org/faqs",
+      "observedAt": "2026-09-11T03:27:45.183Z",
+      "statusCode": 200,
+      "contentSha256": "98d0c9e605c9d0426db5c6dc0e86ecb41da285475d404b9c5094886eeff5273d",
+      "scrapeId": "01a08e81-bdd0-7722-ab54-571b93d32848",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wai-portal",
+      "url": "https://www.wai.org/scholarship-listings",
+      "finalUrl": "https://www.wai.org/scholarship-listings",
+      "observedAt": "2026-09-11T03:29:20.346Z",
+      "statusCode": 200,
+      "contentSha256": "2f696f2b171ecaf3b6e066822ad934fe04a90aa1204f40dd2afe40f163d72808",
+      "scrapeId": "01a08e83-30ed-7398-baad-1491ee279d00",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-wai-2025",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2025_Scholarships/2025_Scholarships_10_9_24_V6.pdf",
+      "finalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2025_Scholarships/2025_Scholarships_10_9_24_V6.pdf",
+      "observedAt": "2026-09-11T03:29:16.673Z",
+      "statusCode": 200,
+      "contentSha256": "d576340d23a48a78fb74603590ab95f66c1e3245cb6dbf4a32bc78203a6c932b",
+      "scrapeId": "01a08e83-28a0-76c7-bb7d-0941c19ce631",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "currentNamedAwards": 63,
+  "selectedSourceEntities": 66,
+  "commonFacts": {
+    "cycle": "WAI2027 closed 2026-09-01 23:59 ET",
+    "membership": "by 2026-08-30, active through 2027-03-30",
+    "application": "WAI public portal links OAuth; no account entered",
+    "sourceConflicts": "How-to-apply first paragraph says no later than March30 but final paragraph, FAQ and guide agree active March30 or later; use corroborated latter. PDF says EST whereas live cycle page says ET; preserve live ET. Blanket membership nondiscrimination is qualified by FAQ award-specific requirements.",
+    "privacy": "Only public program facts extracted; no applicant materials entered or collected."
+  },
+  "awards": [
+    {
+      "entityId": "intake-entity-b628798c0095a916",
+      "name": "AeroStar ATP CTP Certification Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,900 training value",
+      "conditions": "ATP CTP course, 7–9 days, for the ATP multi-engine knowledge-test prerequisite. Training must begin within one year. Lodging and transportation excluded; nontransferable and no cash conversion.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-16915cd3bbcb3c53",
+      "name": "Airlines on Autopilot MEI Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "U.S. applicants holding CFI and commercial pilot certificates with multi-engine ratings; passion for teaching and intent to instruct through airline minimum hours. Paid to flight school; complete within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-38a8137b16b13125",
+      "name": "Anne Bridge Baddour Aviation Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Guide describes a female pilot advancing toward instrument, multi-engine or ATP training.",
+      "aliases": [
+        "intake-entity-ea4824015bd6a1bd"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c654010fab8c5990",
+      "name": "Dare to Dream Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$4,000 each; three recipients",
+      "conditions": "Private pilot certificate; working toward instrument, multi-engine, commercial or CFI. FAA class 1–3 medical or BasicMed required. One recommendation must be from a pilot who has flown with applicant. Merit, goals, dedication and community contributions considered; paid to school, complete within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5554912740323820",
+      "name": "Diane Ballweg Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$500",
+      "conditions": "Woman over age 30 pursuing initial or advanced flight training; outside the graduating-high-school audience.",
+      "aliases": [],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-86eca90a6715ff12",
+      "name": "ISA+21 Financial Scholarship 2027",
+      "cycle": "WAI2027",
+      "amount": "$5,000 each; at least two recipients",
+      "conditions": "Women pursuing CFI, CFII or MEI; paid to an accredited aviation college/university, technical school or government-approved flight school. Complete within one year.",
+      "aliases": [
+        "intake-entity-6dc61ac81184bfdb"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-ba74ad0c9001d760",
+      "name": "Keep Flying International Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "2027 guide expressly says international applicants only; private certificate, 100 flight hours and all required written exams. Outside the intended U.S. Whitefish audience; do not reuse broader 2025 worldwide wording.",
+      "aliases": [
+        "intake-entity-e3573d60b992ab3c"
+      ],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-a9207590820839bc",
+      "name": "Kylie Murray Memorial Women in Aviation International Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,000",
+      "conditions": "Commercial multi-engine land or MEI training at ATP Flight School, 5-day/10-hour or 7-day/15-hour program. Flight training fees only; travel, lodging and examiner fees excluded. Provider says recipient must meet program requirements, without restating the older 2025 certification/athletics conditions; do not carry those forward.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-04d7bc9c9593e216",
+      "name": "Juliana Turchetti Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$4,000 each; two recipients",
+      "conditions": "Women pursuing a seaplane rating. Paid to flight school or recognized insured training provider; use within 12 months.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5e40b7ee15dc6501",
+      "name": "The Stephanie Goetz and Endre Holen Multi-Engine Commercial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Private pilot certificate and instrument rating; FAA class 1–3 medical. Multi-engine commercial rating toward a professional pilot career; need and community service considered. One-page essay of no more than 500 words covering experience, goals, passion and giving back; recommendations are described as a plus but common WAI requirements still apply.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-a3dc0f64c5976a75",
+      "name": "WASP Elaine D. Harmon Tailwheel Scholarship",
+      "cycle": "WAI2027",
+      "amount": "Up to $2,000",
+      "conditions": "Tailwheel endorsement for further warbird, vintage-aircraft or backcountry flying. International applicants welcome but training must be in the U.S.; applicant must check provider certification prerequisites. Paid to provider and used within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-902c1a03644ccf68",
+      "name": "The White Family Legacy Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000 each; two recipients",
+      "conditions": "Private pilot certificate, 100 flight hours and current written-test results for sought instrument/multi-engine rating or commercial/CFI certificate. One recommendation from a pilot who has flown with applicant. Merit, goals, dedication and community service considered; essay covers plans and volunteer dates/hours; paid to school and completed within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-e929213876563013",
+      "name": "American Airlines Engineering Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,500 each; two recipients",
+      "conditions": "Enrolled in an accredited U.S. college/university engineering program; U.S. citizen or permanent resident; GPA at least 3.0. Aviation career interest, academics, accomplishments, teamwork, leadership and community service considered.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-68fc44b937accb33",
+      "name": "The NKL Aerospace Engineering Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,000",
+      "conditions": "Enrolled or accepted in an accredited two- or four-year college, technical institution or certificate program with declared aerospace engineering major; GPA at least 3.0; U.S. citizen or eligible noncitizen; STEM/aviation/WAI volunteer. Acceptance letter and 500–1,000 word essay on financial need, inspiration, career and service; paid to institution.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-53584cdeae3dbbe8",
+      "name": "PSA Airlines Engineering Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "Pursuing aerospace engineering or a related aviation engineering career, with interest in leadership, innovation, safety and the future of flight.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-790eaf14cebe384e",
+      "name": "Amazon Maintenance Technician Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Guide supports a woman enrolled in an A&P program or an aspiring maintenance technician. Academic excellence, leadership and aviation-community impact considered; 500-word essay and two recommendations.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-73e26279455d2bbe",
+      "name": "American Airlines Aircraft Maintenance Technician Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,500 each; two recipients",
+      "conditions": "Currently enrolled in an A&P program or aviation-maintenance-technology degree at an accredited U.S. maintenance program; U.S. citizen or permanent resident; GPA at least 3.0. Academics, accomplishments, teamwork, leadership and community service considered.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-1cfa0d5e6bc5674e",
+      "name": "Boeing Maintenance Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,500",
+      "conditions": "Guide describes a female student currently enrolled in an accredited maintenance program or college/university, who should have GPA 3.0 or better; no mandatory minimum established. Aviation passion, career commitment and ability to complete training considered; two character references. Paid to school; complete within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c16de50d56f5e7b2",
+      "name": "Epic Flight Academy Aviation Maintenance Technician Scholarship (WAI)",
+      "cycle": "WAI2027",
+      "amount": "$25,000 each; two recipients",
+      "conditions": "Entry-level applicants seeking FAA A&P certification through Epic’s Part 147 program. Choose New Smyrna Beach, Florida, or Erlanger, Kentucky/CVG. Two campus options are not separate funds. This is the WAI-administered award, distinct from Epic’s direct high-school and other association awards.",
+      "aliases": [
+        "intake-entity-e813dc7f1b5be912",
+        "intake-entity-c209cc6e112bcd84"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-909eb4d59c570018",
+      "name": "Evelyn Lockwood Greene Memorial A&P Maintenance Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,000",
+      "conditions": "Woman pursuing aviation maintenance/fabrication with passion for vintage-aircraft restoration, maintenance and flying; funds A&P certification.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-55bf53e75aafb61b",
+      "name": "Evelyn Lockwood Greene Memorial Inspector Authority Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,000",
+      "conditions": "Woman pursuing aviation maintenance/fabrication and vintage-aircraft work; funds an Inspector Authority certification preparation course. Experienced certification pathway, not entry-level A&P funding.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-99f68e3c501ef7fe",
+      "name": "GlennCo Advanced Avionics Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,750 training value each; two recipients",
+      "conditions": "Three-day advanced electrical/avionic troubleshooting course targeted to line and base maintenance technicians; no supported entry-level student route established.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-022c7941d466608f",
+      "name": "GlennCo Electrical Repair Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500 training value each; two recipients",
+      "conditions": "Three-day level-one aircraft electrical repair/troubleshooting class for entry-level technicians, including standard wiring practices and hands-on tools/materials.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2aa2c6997231393d",
+      "name": "PSA Airlines Maintenance Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "Working toward an A&P mechanic career in commercial aviation; driven, reliable, caring and passionate about aviation.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-6fb96cf792e65700",
+      "name": "Vertical Aviation / WAI Maintenance Technician Certificate Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Already enrolled in an FAA-approved Part 147 maintenance-technician certificate program or international equivalent; applicants expecting certification before January 1, 2027 are ineligible.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d447929b0ca805bf",
+      "name": "The Astronaut Al Worden Endeavour Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000 stated value; three offered",
+      "conditions": "Ten-day summer 2027 Space Camp experience for STEAM students and teachers; not postsecondary tuition or vocational certification. Program-type policy hold; 3-minute video and finalist interview described.",
+      "aliases": [
+        "intake-entity-4dbe473a1a3f00fb"
+      ],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-a4b2ad7c58e5f6b9",
+      "name": "Capt. Sandy Anderson Memorial Scholarship for Professional Development",
+      "cycle": "WAI2027",
+      "amount": "$500",
+      "conditions": "Currently working in aviation/aerospace and seeking a certificate/degree to advance into management; must prove program qualifications and career advancement. Outside direct high-school-to-postsecondary intake.",
+      "aliases": [],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-bfc39f1dbf029391",
+      "name": "Carol M. SaNogueira WAI Connecticut Chapter Aviation Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,000",
+      "conditions": "Text requires residence, work or school in Connecticut for engineering, A&P or pilot training, then says Connecticut preference and all applicants considered. Material geographic contradiction unresolved; do not convert to nationwide eligibility.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-c9f1d5ecf13fe4c6",
+      "name": "Elisha Hall Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,000",
+      "conditions": "Woman advancing in flight training at any phase, scheduling/dispatch, aviation management, maintenance or avionics. Cincinnati/Tri-State candidates preferred, all considered on character, need, community involvement and accomplishments. Limited conference assistance is award-specific, not a general entitlement.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-966fc5d2c8b176a1",
+      "name": "Janet Clark Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,500",
+      "conditions": "Aviation career advancement across ATC, management, avionics, dispatch, engineering, flight attendant, mechanics, meteorology, navigation or pilot. Pilot applicants must already hold a private pilot certificate. Washington chapter sponsorship alone does not establish a residency restriction.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-3b644d62378da11e",
+      "name": "Mary Ann Eiff Memorial Outreach Award",
+      "cycle": "WAI2027",
+      "amount": "$1,500 stated value",
+      "conditions": "Recognizes aviation outreach: individual receives lifetime WAI membership, or chapter receives outreach contribution. Not individual education funding; type-policy hold. Current member/chapter in good standing, essay and two recommendations.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-9c30b06e77857230",
+      "name": "MzeroA Gold Lifetime Membership Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,995 stated training value",
+      "conditions": "Lifetime online ground-school membership for sport, private, instrument, commercial, CFI, fundamentals of instruction and remote-pilot preparation. In-kind training benefit; inclusion-type policy unresolved, no cash scholarship inferred.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-72b6b5ec5fa9ac7b",
+      "name": "Yukiko Howell Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$1,500",
+      "conditions": "Pursuing higher education or continuing STEM classes at an accredited institution, including two-/four-year, technical or certificate programs; STEM/aviation/WAI volunteering in prior year. Career examples include engineering, ATC, avionics, dispatch, mechanics, meteorology and STEM education.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-1490316e712669d0",
+      "name": "Jerry Holland Legacy Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Women pursuing business aviation management/leadership, including FBO operations, marketing, airport administration, customer experience and aviation business development. Leadership, integrity, service and aviation commitment considered.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5ccf39595d852b6f",
+      "name": "Republic Airways Aviation Management Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female applicant pursuing a degree in aviation management, dispatch or similar fields.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b9cc264d3b461834",
+      "name": "Alaska Airlines, Hawaiian Airlines, and Horizon Air Pilot Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Full-time college junior or senior, female pilot pursuing airline career with Alaska Air Group, enrolled in or interested in Pilot Development Program. Outside immediate high-school-to-postsecondary entry; service, teamwork, leadership and airmanship considered.",
+      "aliases": [
+        "intake-entity-ad638ddd8371e0a5"
+      ],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-a8bdb6ccc613720b",
+      "name": "Amazon Professional Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Woman enrolled in flight training; academic excellence, leadership and aviation-community impact considered, with essay and two recommendations.",
+      "aliases": [
+        "intake-entity-286b9f32acdc5976"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-487682fcaea22232",
+      "name": "American Airlines Flight Educational Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,500 each; up to four recipients",
+      "conditions": "Flight training for private, instrument, multi-engine, commercial, instructor or ATP; excludes sport/recreational certificates. Explain career benefit, why applying and WAI involvement. Older 2025 age/diploma/ground-school restrictions are not restated in the current guide and are not carried forward.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-6cade135ec4182d7",
+      "name": "FedEx Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female pilot pursuing instrument, multi-engine, commercial or CFI training. Paid to flight school; completed within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-6d7c8bf070d4db07",
+      "name": "Frontier Airlines Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female full-time college junior, senior or graduate student in accredited aviation/aeronautical science; GPA 3.0 and instrument rating required, commercial/multi-engine preferred. Outside entry-level high-school-to-postsecondary audience.",
+      "aliases": [],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-ef86872399bc978a",
+      "name": "ISA+21 Airline Type Rating Scholarship 2027",
+      "cycle": "WAI2027",
+      "amount": "$10,000 training value",
+      "conditions": "B737 or A320 type rating with Flight Training International, eight days in Miami or Denver, within 18 months. Finalists interviewed at WAI2027 conference. Entry-level eligibility not established for this advanced airline qualification.",
+      "aliases": [
+        "intake-entity-c659f7c388a624e8"
+      ],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-7f36ae178c79607e",
+      "name": "LIFT Academy Pilot Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female pilot pursuing professional career; current or incoming LIFT Academy student. Academic standing, accomplishments, teamwork, leadership and airmanship considered.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d934113c4ff5571b",
+      "name": "PSA Airlines Flight Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "Commercial pilot license and working toward CFI; professional airline career goal, driven/reliable/caring qualities. This WAI fund is distinct from the NGPA PSA award.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c261bbf49c4e4de0",
+      "name": "Republic Airways Flight Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female commercial pilot pursuing a professional career and already an RJet Cadet; academic standing, accomplishments, teamwork, leadership and airmanship considered. Additional cadet application route through careers.rjet.com; cadet status is not established by career interest.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b1c0bb608a8985bb",
+      "name": "Sun Country and Allegiant Air “Fly in a New Direction” Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Female applicant pursuing professional pilot career, private pilot certificate already held, pursuing advanced certificate/rating. Paid to school and used within one year.",
+      "aliases": [
+        "intake-entity-f90a4d36cb74f66e"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-bab8726c8c2b8645",
+      "name": "WAI / United Aviate Academy Full Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": null,
+      "conditions": "Admitted to United Aviate Academy; current students eligible before graduation. Full tuition/fees award; current amount TBD. Distinct from partial WAI scholarship and other organizations’ academy partnerships.",
+      "aliases": [
+        "intake-entity-d16f5e82b4a66620"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c8eeddfee6d17ded",
+      "name": "WAI / United Aviate Academy Partial Scholarship",
+      "cycle": "WAI2027",
+      "amount": null,
+      "conditions": "Admitted to United Aviate Academy; current students eligible before graduation. Partial tuition/fees award; current amount TBD. Distinct from full WAI scholarship and other organizations’ academy partnerships.",
+      "aliases": [
+        "intake-entity-68254eaa307c5a63"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-ff6a125270bb4090",
+      "name": "ISA+21 Francesca Norris Memorial Scholarship 2027",
+      "cycle": "WAI2027",
+      "amount": "$5,000 each; two recipients",
+      "conditions": "Women pursuing CFI, CFII or MEI; paid to accredited aviation college/university, aviation technical school or government-approved flight school; complete within one year. The 2025 single-school restriction is not repeated for 2027.",
+      "aliases": [
+        "intake-entity-fd15263a354ce345"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2f76d5731c4a6ae2",
+      "name": "The Martha King Scholarship for Female Flight Instructors",
+      "cycle": "WAI2027",
+      "amount": "$20,000 stated package value",
+      "conditions": "Female pilot pursuing initial CFI or instructor add-on; $5,000 for flight training plus lifetime King Schools online courses and flight-instructor refresher courses. Package combines cash training support and in-kind courses, not $20,000 cash.",
+      "aliases": [
+        "intake-entity-5391f5513467bc19"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-8f29d09965003d3a",
+      "name": "Bonita Jean Olson Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "Enrolled or committed to attend an accredited two-/four-year college, technical institute or certificate program for STEM with aviation/aerospace career plans; STEM/aviation/WAI volunteer in prior year. Seattle/Washington preference, all considered; essay covers career and service. Current guide spells Olson; older guide spells Olsen.",
+      "aliases": [
+        "intake-entity-428d11a67592158a"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-dffcf3d9dc7c5ef4",
+      "name": "FLI Scholarship (USU Female Leadership & Impact)",
+      "cycle": "WAI2027",
+      "amount": "$10,000",
+      "conditions": "Listing describes a donor’s Utah State flight-program background and female leadership mission without complete applicant-specific institution or training eligibility. Do not infer eligibility from the donor biography.",
+      "aliases": [],
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-9d44a7f3b689c6a8",
+      "name": "Harold Earl Paige Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,342",
+      "conditions": "Academic scholarship for community-college students. Aviation/STEM volunteering preferred; no residency restriction inferred from donor location.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-3ebd09c08b5d437f",
+      "name": "Russ Cotney and Lauren Cotney Professional Airline Pilot Career Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Female U.S. citizen, college junior/senior/graduate student in accredited aviation, engineering or aeronautical science; GPA 3.0. Military/veteran or daughter preference, two recommendations and essay. Outside entry-level high-school-to-postsecondary scope.",
+      "aliases": [],
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-76bfb79ea4f573ba",
+      "name": "Amazon Unmanned Aircraft System (UAS) Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Woman enrolled in UAS training; academic excellence, leadership and community impact considered, with essay and two recommendations.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-dc05b8b4a9f951b5",
+      "name": "Vertical Aviation / WAI Commercial Helicopter Pilot Rating Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$2,500",
+      "conditions": "Private pilot license and enrollment in a commercial helicopter program at FAA Part 141 school or international equivalent; expected commercial rating after January 1, 2027.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c0aa1917b26be500",
+      "name": "AOPA Student Pilot Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000",
+      "conditions": "U.S. citizen pursuing private, recreational or sport certificate; student pilot certificate by application deadline. GPA 3.0 applies if a full-time high-school, flight-program or college/university student, not universally. Additional 300-word general-aviation involvement essay. Paid to recipient and used within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5e5721dbecd25c3b",
+      "name": "Boeing Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$7,500",
+      "conditions": "Female pursuing private, recreational, sport certificate or instrument rating. Full-time high-school, accredited flight-program or college/university students should have GPA 3.0; not a universal scalar minimum. Passion, completion commitment and two character references; paid to school, complete within one year.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-0d53195844c36938",
+      "name": "Esther Noffke Flight Training Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$5,000",
+      "conditions": "Flight training scholarship. Current guide supplies no specific age, GPA, need or institution criteria beyond common WAI requirements; older 2025 restrictions are historical, not silently carried forward.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-a379909cc979b93e",
+      "name": "Sporty’s Foundation Flight Training Scholarship for WAI Chapter Member",
+      "cycle": "WAI2027",
+      "amount": "$5,000 plus course",
+      "conditions": "WAI chapter member working with youth, pursuing recreational, sport or private certificate. Girls in Aviation Day volunteers receive special consideration. Flight costs only, used within one year, paid to school; includes Learn to Fly course.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b3ed4a3921e45f18",
+      "name": "Ted Mallory Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$250",
+      "conditions": "WAI member pursuing private pilot certificate or instrument rating.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-8cf918502ce54020",
+      "name": "2027 Wings for Val Foundation Lt. Cmdr. Lyndsay Evans Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$10,000",
+      "conditions": "Pilot training support for a woman demonstrating preparation, accountability, aviation commitment and leadership. No specific military-family requirement inferred from honoree.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-f0178a0d086bfbc3",
+      "name": "2027 Wings for Val Foundation Lt. Valerie Cappelaere Delaney Memorial Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$10,000",
+      "conditions": "Pilot-in-training support, with determination, resilience, leadership and service emphasized. No military-family eligibility inferred from honoree; current guide does not repeat the older age 18 or medical-specific award terms.",
+      "aliases": [
+        "intake-entity-03a0e016cbdd58fb"
+      ],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d7370cf07a07d2ec",
+      "name": "Women Military Aviators Dream of Flight Scholarship",
+      "cycle": "WAI2027",
+      "amount": "$3,000 each; two recipients",
+      "conditions": "Woman pursuing flight ratings at an accredited institution or FAA Part 141/61 flight school in the U.S. Demonstrate persistence and ability to finish within one year; identify school and ratings, address military-aviation interest/participation and financial need. Military service is not stated as a prerequisite.",
+      "aliases": [],
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-4a26d02697f44d21",
+      "name": "Alaska Airlines/Horizon Air Maintenance Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$5,000",
+      "conditions": "Female mechanic pursuing A&P with Alaska Air Group career goal; enrolled in accredited aviation maintenance or Alaska Maintenance Technician Development program, in good academic standing.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-eb39c3441f0fc7d5",
+      "name": "Delta Air Lines Aircraft Maintenance Technology Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$5,000 plus 2025 conference travel",
+      "conditions": "Full-time A&P/aviation maintenance technology student, GPA at least 3.0, U.S. citizen or eligible noncitizen.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-9a676530f724da59",
+      "name": "Flexjet Aircraft Maintenance Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$2,000 plus maintenance-facility visit",
+      "conditions": "Currently enrolled in accredited U.S. A&P/aviation maintenance technology program; GPA at least 3.0; U.S. citizen or permanent resident. Academics, accomplishments, teamwork, leadership and service considered.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-6d3e714ff257541f",
+      "name": "Business Aviation Collective Scheduler Course",
+      "cycle": "WAI2025",
+      "amount": "$695 training value",
+      "conditions": "Part 91 scheduler course within one year; in-kind professional course benefit with unresolved inclusion policy.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-cef5f6be14bd636a",
+      "name": "General Chuck Yeager’s Legacy Foundation Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$1,000",
+      "conditions": "WAI member demonstrating tenacity and dedication by overcoming obstacles to aviation goals. Award-specific additional essay questions were at the historical portal and are not available in the closed public catalog.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-8324f17255f66de4",
+      "name": "Level Up Aviation General Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$1,000",
+      "conditions": "Enrolled in aviation-related certification or degree program for maintenance, ATC, scheduling, engineering or other career advancement; paid to training provider. Provider mission supports economically disadvantaged/underrepresented groups but does not supply a hard individual eligibility threshold.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-fdd6a94b8a9c0cba",
+      "name": "Delta Air Lines Propel Pilot Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$5,000 plus 2025 conference travel",
+      "conditions": "WAI member in Delta Propel collegiate, company or community partner path; intended for women advancing toward professional airline pilot career.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-97065071af6d2f28",
+      "name": "ADF/North American Flight Control Dispatch Certificate Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$4,600 training value",
+      "conditions": "Aircraft dispatcher FAA 121 certificate tuition, books, training and examiner fees; recipient responsible for travel, lodging and meals. Required training completed before December 31, 2025, so no remaining usable training window is verified.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-127544a895fda259",
+      "name": "Southwest Airlines Dispatch Certification Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$1,000",
+      "conditions": "Age at least 21, English proficiency, high-school diploma/GED, aspiring dispatcher, no previous aviation experience required. Outside direct graduating-high-school audience.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-b2002c4406caac43",
+      "name": "Universal Weather & Aviation FAA-Certified Dispatcher Training Course Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$4,995 training value",
+      "conditions": "Hybrid dispatcher course, 4–8 months online then knowledge test and eight days in Houston. Applicant age/certification prerequisites and current usable award route are not established; no entry eligibility invented.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-3c93bda66221cf16",
+      "name": "Bunny M. Connors Memorial Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$979.82",
+      "conditions": "WAI member pursuing private pilot certificate or instrument rating; finish flight training within one year of award.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2f755a0a470f05e0",
+      "name": "Delta Air Lines Pilot Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$5,000 plus 2025 conference travel",
+      "conditions": "WAI member working toward primary, instrument, commercial, CFI, CFII or MEI certification; intended for women advancing toward professional airline pilot career. Paid to school, complete within one year.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-8a5dcd88d2b7b083",
+      "name": "Christine Reed Memorial Flight Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$2,500",
+      "conditions": "Women ages 16–30 who soloed in the six months before application and pursue recreational, sport or private pilot certification; advanced certificates may be considered. Solo endorsement and additional 1–2 page Why I Love to Fly essay; New Jersey/Illinois/Arizona preference, all considered. Paid to flight school.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-4a6fee6eb201ba13",
+      "name": "The Dorothy Thompson/Tampa Bay Aviation Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$1,500 training credit",
+      "conditions": "WAI member pursuing fixed-wing or rotorcraft private/commercial certificate or instrument rating at Tampa Bay Aviation. Training-account credit only, excludes examination and non-rental/instruction fees; cannot use solely for aircraft rental.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-36c17d520acf1aef",
+      "name": "WAI Atlanta “Wheels Down South” Chapter Scholarship",
+      "cycle": "WAI2025",
+      "amount": "$1,000",
+      "conditions": "Aviation education/training goals, merit, aspirations, dedication and community service; Atlanta chapter preference, all considered. Essay specifies training goal, use and timing; paid to training organization and used within one year.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-56bdd9f8cf433cb1",
+      "name": "CAE 2025 Citation Bravo Type Rating Scholarship",
+      "conditions": "2025 program requires 500 hours PIC plus 100 multi-engine and 100 instrument hours; advanced type rating outside entry-level audience.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-bbe8bab730403e93",
+      "name": "WAI2027 Scholarships",
+      "conditions": "Shared WAI parent program, not an additional individual fund. Current and historical catalog awards separately accounted for; parent inclusion policy remains separate.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-c98e1a4766f74f2e",
+      "name": "Harvard Emerging Leader 2027 Scholarships",
+      "conditions": "Official application requirements specify at least seven years of career experience; outside graduating-high-school audience.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-7117adfa8e9ef226",
+      "name": "Delta Air Lines Engineering Scholarship",
+      "conditions": "2025 full-time college junior/senior engineering program and GPA 3.0; outside direct high-school-to-postsecondary entry. Not listed in 2027 guide.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-1aef6b0f6a9bb915",
+      "name": "The Carol M. SaNogueira Memorial Scholarship (Engineering)",
+      "conditions": "2025 engineering variant $1,000, while 2027 combines career fields. Both guides contradict Connecticut residence/work/school requirement with all-applicants-considered wording. Do not merge distinct historical variants into a new unqualified national award.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-0e2bad9e28a0967f",
+      "name": "CAE 2025 Bombardier Learjet Maintenance Initial Scholarship",
+      "conditions": "2025 program requires ICAO-license-equivalent maintenance knowledge/experience; no entry-level student pathway established. Not present in 2027 guide.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-69122939fdb40543",
+      "name": "Pratt & Whitney Engine Maintenance Training Scholarship",
+      "conditions": "2025 requires near-completed AMT/A&P training or recent A&P graduate, excludes prior recipients and P&W employees; advanced course audience, not verified entry route. Not listed in 2027 guide.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-fe99048a08f5954b",
+      "name": "The Carol M. SaNogueira Memorial Scholarship (A&P)",
+      "conditions": "2025 A&P variant $500, while 2027 combines career fields. Connecticut requirement/preference contradiction unresolved; retain variant and historical status.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-f10f783cffdd95c2",
+      "name": "Southwest Airlines Maintenance Scholarship",
+      "conditions": "2025 listing states two $2,000 awards with conference travel/toolbox but lacks award-specific applicant requirements; not listed in 2027 guide.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-9e3299f4c7c9f701",
+      "name": "Level Up Aviation Helo Scholarship",
+      "conditions": "2025 guide extraction contains only name/$1,000 heading and no eligibility body; not listed in 2027. Coverage limitation retained.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-99dcbb871069df5c",
+      "name": "Kelsey A. Meyer Memorial Scholarship",
+      "conditions": "2025 guide extraction contains only name/$2,500 heading and no eligibility body; not listed in 2027. Coverage limitation retained.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-fc55a169e1d04823",
+      "name": "The Carol M. SaNogueira Memorial Scholarship (Pilot)",
+      "conditions": "2025 pilot variant $500, while 2027 combines career fields. Connecticut requirement/preference contradiction unresolved; retain variant and historical status.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-2a1797ba7a464e67",
+      "name": "Wings Over 35 Scholarship",
+      "conditions": "Source row name is not present in the complete extracted 2025 or 2027 guides; 2025 extraction has an unattached $500 value. Identity and conditions unconfirmed, no amount inferred.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-a56ece558afd7b55",
+      "name": "Republic Airways Opportunity Elevated Scholarship (WAI2025)",
+      "disposition": "hold",
+      "conditions": "2025 guide names Opportunity Elevated with RJet Cadet/commercial-pilot criteria; 2027 lists Republic Airways Flight with similar criteria but does not confirm rename. Retain as historical identity hold, avoiding a possible duplicate addition."
+    },
+    {
+      "entityId": "intake-entity-ce4b5019b55ca4ad",
+      "name": "Republic Airways Opportunity Elevated Scholarship",
+      "disposition": "hold",
+      "conditions": "Same WAI2025 award name, female commercial-pilot/RJet Cadet conditions and linked cadet route as historical Opportunity Elevated. All four source rows remain held with the unresolved potential rename to WAI Republic Airways Flight; no second addition.",
+      "historicalHoldEntityId": "intake-entity-a56ece558afd7b55"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "status": "recipient-content-minimized",
+  "files": [
+    {
+      "path": ".firecrawl/initial-1.json",
+      "originalContentSha256": "29e4e3913e34fbfa208a93a5d085eda5bede100a3e2885aeaaee6e2a73bdbce1",
+      "retainedContentSha256": "a9a066ac9188eab5430c068f6f8590ccff44688ee24d7c04a4cc3a030851429e",
+      "reason": "Incidental recipient names/photos/testimonials removed; only award names, program rules and route evidence retained."
+    },
+    {
+      "path": ".firecrawl/follow-2.json",
+      "originalContentSha256": "0d8bf2c68970f774d3bed6019d56a1b023260a3eac55fdf48986b597c5aefca4",
+      "retainedContentSha256": "b3e5c22ec3d55c06defdd506707668558d00df5ac49bb86f8c219da6ff30095a",
+      "reason": "Incidental recipient names/photos/testimonials removed; only award names, program rules and route evidence retained."
+    },
+    {
+      "path": ".firecrawl/trades-wai-1.json",
+      "originalContentSha256": "ba95b0e6b4ba0a5ac8111fda86dad2787754282dbc0d72a1646177950a2b27e2",
+      "retainedContentSha256": "559c6d3c80dfcdc21b7f433abc1362a393a7497201980d79d322f559e0d12ae7",
+      "reason": "Incidental recipient names/photos/testimonials removed; only award names, program rules and route evidence retained."
+    }
+  ],
+  "rejectedSaves": [
+    "Miller unfiltered recipient section",
+    "AGC unrestricted session metadata"
+  ],
+  "safeAlternatives": "Miller scholarship list only and AGC scholarship rules with allowlisted retrieval metadata saved successfully; no names, photos, testimonials or tokens retained from those sections.",
+  "noApplicantRecords": "No applicant form filled or private application records accessed."
+}

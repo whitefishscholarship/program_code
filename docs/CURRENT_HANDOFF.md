@@ -8,7 +8,7 @@ Default branch: `main`
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
 - Execution branch `codex/scholarship-intake`; worktree `/private/tmp/program_code-scholarship-intake`.
-  Previous exact checkpoint `43e3fc64af437872218ff9e80e7d48f1b8e3b9d4`; this checkpoint is the next local commit.
+  Previous exact checkpoint `e3c3a2fc251c5e748a97037293d6c2a2508f239c`; this checkpoint is the next local commit.
   Resolve current exact checkpoint with `git rev-parse codex/scholarship-intake`.
 - Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning closeout
   `0ffa90b12502b2a031a6012e16014301def07205`; original/planning work preserved.
@@ -20,8 +20,8 @@ Default branch: `main`
   1632scholarship-bearing plus34headers/context; Staging373, Scraped438 including9nameless.
   ScrapedR:Tdata excluded; StartHereoutreachcontact redacted with originalhash.
 - Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
-  `5222733eba580c1c0631091796a8053c13db39355b6c986bb1304fdc941e7f9c`.
-  Counts: `{"rows": 1666, "entities": 850, "decidedRows": 997, "pendingEntities": 435, "proposedAdds": 116, "reviewedRows": 961}`. Entity count includes aliases and discoveries;
+  `0aaf46df043282ddb48e50579e3b2768d60301a1cec0e82220db1889ccd59400`.
+  Counts: `{"rows": 1666, "entities": 903, "decidedRows": 1144, "pendingEntities": 342, "proposedAdds": 178, "proposedUpdates": 2, "reviewedRows": 961}`. Entity count includes aliases and discoveries;
   it is not a count of distinct approved awards. All proposed operations remain unapproved.
 - AEA/NTHS checkpoint independently PASS after3targeted fixes:42entityrecords,
   118rows,30draft additions,450fielddecisions. Receipt `SCHOLARSHIP-INTAKE-batch-review-aea-nths.json`.
@@ -32,11 +32,14 @@ Default branch: `main`
   must be resolved before final acceptance.35identity rows also remain deferred.
 - AOPA/LPA independently PASS:50entities,83rows,34adds/510fields. TwoPAPArows split into separate pendingentity. Receipt `SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json`.
 - Dawson independently PASS:77entities,31rows,34adds/510fields;65foundationheadings plus61formchoices/60labels;8unsupported drafts withdrawn,6form-onlychildren accounted. Receipt `SCHOLARSHIP-INTAKE-batch-review-dawson.json`.
-- NGPA authored:20tableallocations reconciled to16funds,15adds/1hold, pendingindependentreview.
+- NGPA independently PASS:17entities,2rows,15adds/225fields;20allocations→16funds. Receipt `SCHOLARSHIP-INTAKE-batch-review-ngpa.json`. Supplemental two-parent-alias rows separately pending.
+- Epic/WAI authored:63current WAI2027 awards plus historical-only identities/aliases, Epic10k new tier and exact I129/I130 FEAMcondition updates. Independent review in progress; identified GPA wording, missing historical award/alias and field-source bindings corrected.
+- Association supplemental batch authored:2PAPAadds plus existing-program aliases/holds.
+- Privacy: unfiltered Miller/AGC evidence saves rejected by automatic review; rule-only content and safe metadata saved successfully. Incidental recipient content removed from local Epic/WAI/AGC research. See `scholarship-intake/privacy-minimization.json`.
   AOPA December30/31officialdeadlineconflict explicit; no futuredeadline invented.
   Mensa54names held:currentchildcatalog behindregistration; not falsely treated as removed.
-- Next executable work: Epic primary/partner reconciliation, WAI10-page
-  2027PDF, remaining source groups/nameless records and related-fieldtriage. Keep oneledger.
+- Next executable work: finish bounded Epic/WAI review, then NHE/ACS/Avfuel/AGC/BYF/MTcf and remaining source groups, nameless records and related-fieldtriage. Both WAI10-page guides already read; do not repeat. Keep oneledger.
+  Newly captured `.firecrawl/batch11-*` sources await author decisions; AGC criterion excludes HSseniors; Miller rules-only list routes AWS; Pearl closed routes unavailable after bounded official search.
   Reuse alreadyfetched `.firecrawl/` evidence; scripts in `/private/tmp/intake_*.py` are
   author utilities, **do not rerun completed batch scripts** (they append ledger entries).
   Every completed batch and its sourceIDs is listed in ledger.batches; no repeatresearch.

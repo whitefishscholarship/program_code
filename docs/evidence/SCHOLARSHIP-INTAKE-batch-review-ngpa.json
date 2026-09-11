@@ -1,0 +1,38 @@
+{
+  "reviewer": "/root/intake_batch_review",
+  "reviewedAt": "2026-09-11T03:20:36.333805+00:00",
+  "scope": [
+    "batch-ngpa-008"
+  ],
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "candidateCommit": "e3c3a2fc251c5e748a97037293d6c2a2508f239c",
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "reviewedSubsetSha256": "1f30f32a5606e9947da9aabd40911a39482304676516581089b7854a28013e90",
+  "digestDefinition": "Same canonical subset construction as AOPA/LPA receipt, scoped to batch-ngpa-008.",
+  "coverage": {
+    "entityRecords": 17,
+    "inputRows": 2,
+    "tableAllocations": 20,
+    "namedFunds": 16,
+    "proposedAdditions": 15,
+    "heldFunds": 1,
+    "heldParents": 1,
+    "proposedFieldDecisions": 225,
+    "tags": 13,
+    "interviewCoverageDecisions": 45
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "evidenceSha256": {
+    "ngpa-field-evidence.json": "59bf4b23df74056159a7dbc30b7f79481a03f799789d6e92b6c29b84eada56ff"
+  },
+  "reviewerEdits": 0,
+  "externalActions": 0,
+  "finalAuditAcceptance": false,
+  "scopeLimitation": "Two additional NGPA Scholarship parent-alias rows outside this immutable subset remain for separate reconciliation."
+}

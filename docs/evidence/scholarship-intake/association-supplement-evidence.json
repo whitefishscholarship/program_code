@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-papa-member-route",
+      "url": "https://www.asianpilots.org/member-scholarships",
+      "finalUrl": "https://www.asianpilots.org/member-scholarships",
+      "observedAt": "2026-09-11T03:13:36.999Z",
+      "statusCode": 401,
+      "contentSha256": "622befdc1257bd1dcf9adb62a15b3dd81d734bb4a2f8183c2f5a35257b8742ff",
+      "scrapeId": "01a08e74-d06c-738c-a277-108fc76f6f66",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/association-supplement-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "awards": [
+    {
+      "entityId": "intake-entity-0e2ec1187dc244a7",
+      "conditions": "Acceptance letter to United Aviate Academy and not graduated by application close. Current students need conditional acceptance and active enrollment at close. Full or partial support; $150,000 is listed funding pool, not an individual amount.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-b3683beb4b39e19d",
+      "conditions": "Student at a Part 147 school pursuing an airline maintenance technician career; one recipient.",
+      "disposition": "propose_add"
+    }
+  ],
+  "otherDecisions": "New alias/parent rows use already captured field evidence; do not change previously reviewed canonical proposals.",
+  "scope": "No website, sheet, login, new rules or questions."
+}
