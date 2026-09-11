@@ -34906,20 +34906,21 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-0:row-100:b68e290b5d70",
       "entityId": "intake-entity-a3ae3812ae4dec9a",
-      "disposition": "link_existing",
-      "rationale": "Identity-only reconciliation: exact Master source row. Retain current Master destination unchanged; historic cycle/amount/deadline/summary differences are preserved, not imported or represented as current verification.",
+      "disposition": "propose_update",
+      "rationale": "Related correction locally proposed and unapplied. ResidentpagelistsdepartmentalapplicantsbyFeb1,2026;departmentalpagespecifiesFAFSAbyFeb1forneedbasedawards. Auniformawardapplicationdeadlineisnotsettled;preservebothstatementsanddirectstudenttodepartment.",
       "destination": {
         "kind": "existing_master",
         "sheetId": 0,
         "rowNumber": 100,
         "entityId": "intake-entity-a3ae3812ae4dec9a"
       },
-      "evidenceIds": [],
+      "evidenceIds": [
+        "official-university-msu-departmental",
+        "official-related-msu-resident"
+      ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-reference.json",
-        "scope": "identity or disposition only; related-fieldtriage remainspending"
+        "status": "pending",
+        "reviewer": null
       },
       "identityEvidence": {
         "snapshotId": "intake-rev226-74df373b3e30738e",
@@ -41537,8 +41538,8 @@
       "originalStatus": null,
       "id": "intake-rev226-74df373b3e30738e:sheet-1468843784:row-23:546e3bb543eb",
       "entityId": "intake-entity-8adad6d75c1ecae0",
-      "disposition": "out_of_scope",
-      "rationale": "FVCCAcademicawardrequires30FVCCcreditsand3.5duringthatsemester,usedwithin2years. Current-collegecontinuationaward,notdirectWhitefishseniorentry. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "disposition": "hold",
+      "rationale": "FVCCrequiresdegree-seekingstatus,3.5GPAinthesemesterofthe30thFVCCcreditandusewithin2years. PublicrulesdonotexplainwhetherRunningStartcreditsqualify,norexcludeHSseniorswith30credits. Actualapplicationformnotlinked. Holdcrediteligibility/currentform; donotassertcollege-onlyexclusion. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
       "evidenceIds": [
         "official-university-fvcc"
@@ -91917,17 +91918,63 @@
       ],
       "comparisonOnlyNotIdentityProof": false,
       "status": "evaluated-awaiting-independent-review",
-      "disposition": "link_existing",
-      "type": "existing_master_reference",
+      "disposition": "propose_update",
+      "type": "scholarship",
       "existingMasterRows": [
         100
       ],
       "officialEvidenceIds": [
-        "official-university-msu-departmental"
+        "official-university-msu-departmental",
+        "official-related-msu-resident"
       ],
-      "fields": [],
+      "fields": [
+        {
+          "column": "I",
+          "oldValue": "These are departmental scholarships available for qualifying students at Montana State University. Students should apply by February 1st, 2026, and explore the Cat Scholarships page for more information.",
+          "newValue": "CatScholarships is MSU's shared application portal for departmental awards. New undergraduate applicants first apply to MSU, receive admission and establish their NetID. The resident scholarship page lists February 1, 2026 for departmental scholarship applicants; the departmental page assigns February 1, 2026 specifically to FAFSA for need-based awards and notes that not all departments offer freshman scholarships. These sources do not establish one uniform application deadline for every award. Verify the individual department's current deadline and eligibility through CatScholarships; no next-cycle date is inferred.",
+          "sourceId": "official-university-msu-departmental",
+          "supportingSourceIds": [
+            "official-university-msu-departmental",
+            "official-related-msu-resident"
+          ],
+          "locator": "ResidentpagelistsdepartmentalapplicantsbyFeb1,2026;departmentalpagespecifiesFAFSAbyFeb1forneedbasedawards. Auniformawardapplicationdeadlineisnotsettled;preservebothstatementsanddirectstudenttodepartment.",
+          "observedAt": "2026-09-11T04:45:54.828Z",
+          "decision": "proposed_supported"
+        }
+      ],
       "tags": [],
-      "interviewCoverage": [],
+      "interviewCoverage": [
+        {
+          "dimension": "department and school eligibility",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "MSUundergraduateadmission/NetID;notalldepartmentsfreshmanawards."
+        },
+        {
+          "dimension": "application timing",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Feb1,2026meaningconflictsacrosstwoofficialpages;B100historicaldateunchanged,notuniformcurrentdeadlineproof."
+        },
+        {
+          "dimension": "financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "FAFSArequiredforneedbasedawards,notuniversalneedrequirement;acutequestionnotproxy."
+        },
+        {
+          "dimension": "GPA and renewal",
+          "decision": "unknown",
+          "choiceId": null,
+          "rationale": "Variesbyaward;noglobalGPAorrenewalconditioninferred."
+        },
+        {
+          "dimension": "career and other conditions",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Sharedportalspansdepartments;nocareeroridentityfilterappliedtoentirepool."
+        }
+      ],
       "review": {
         "status": "pending",
         "reviewer": null
@@ -94375,7 +94422,7 @@
         {
           "column": "I",
           "oldValue": "The Hilleman Scholars Program is for students starting at Montana State University in Fall 2026. Scholarship selection is based on a student's potential to lead and their desire to earn a college degree, as assessed by a dedicated selection committee.",
-          "newValue": "MSU Hilleman Scholars is a program for recent Montana high-school graduates with academic, leadership and career potential. The official application is labeled Fall 2026 without an exact deadline; the details page describes selection by invitation and still contains a 2025 orientation date. The program offers $4,000 per year for four years, conditional on academic progress and 10–15 hours each week of mentoring, learning, internship and community development activities. Completion of the Summer Success Academy is required to retain the offer, with a separate $2,000 academy stipend. The stated group study-abroad support is conditional. Hilleman cannot be stacked with Horatio Alger funding. Neither Pell eligibility nor first-generation status is established as a mandatory requirement by the checked public rules.",
+          "newValue": "MSU Hilleman Scholars is a program for Montana residents who are recent Montana high-school graduates with academic, leadership and career potential. The official application is labeled Fall 2026 without an exact deadline; the details page describes selection by invitation and still contains a 2025 orientation date. The program offers $4,000 per year for four years, conditional on academic progress and 10–15 hours each week of mentoring, learning, internship and community development activities. Completion of the Summer Success Academy is required to retain the offer, with a separate $2,000 academy stipend. The stated group study-abroad support is conditional. Hilleman cannot be stacked with Horatio Alger funding. Neither Pell eligibility nor first-generation status is established as a mandatory requirement by the checked public rules.",
           "sourceId": "official-university-hilleman-details",
           "supportingSourceIds": [
             "official-university-hilleman-details",
@@ -109164,7 +109211,7 @@
       ],
       "comparisonOnlyNotIdentityProof": false,
       "status": "evaluated-awaiting-independent-review",
-      "disposition": "out_of_scope",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
       "officialEvidenceIds": [
@@ -109178,7 +109225,17 @@
         "reviewer": null
       },
       "destination": null,
-      "identityRationale": "FVCCAcademicawardrequires30FVCCcreditsand3.5duringthatsemester,usedwithin2years. Current-collegecontinuationaward,notdirectWhitefishseniorentry."
+      "identityRationale": "FVCCrequiresdegree-seekingstatus,3.5GPAinthesemesterofthe30thFVCCcreditandusewithin2years. PublicrulesdonotexplainwhetherRunningStartcreditsqualify,norexcludeHSseniorswith30credits. Actualapplicationformnotlinked. Holdcrediteligibility/currentform; donotassertcollege-onlyexclusion.",
+      "hold": {
+        "entityId": "intake-entity-8adad6d75c1ecae0",
+        "reason": "30-credit rule may include dual enrollment; no supported high-school exclusion. Verify Running Start credit eligibility and current application route.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "FVCCrequiresdegree-seekingstatus,3.5GPAinthesemesterofthe30thFVCCcreditandusewithin2years. PublicrulesdonotexplainwhetherRunningStartcreditsqualify,norexcludeHSseniorswith30credits. Actualapplicationformnotlinked. Holdcrediteligibility/currentform; donotassertcollege-onlyexclusion.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-university-fvcc"
+        ]
+      }
     },
     {
       "id": "intake-entity-2c74e0bcbf8406ef",
@@ -114330,7 +114387,7 @@
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-122:0d7bd87666b4"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_add",
       "type": "scholarship",
       "existingMasterRows": [],
@@ -114521,12 +114578,17 @@
           "decision": "unknown_no_supported_tag",
           "choiceId": null,
           "rationale": "No missing GPA, school type, renewal, gap-year or acute-financial-need value inferred. Donor biography is not applicant eligibility."
+        },
+        {
+          "dimension": "community contribution selection",
+          "decision": "existing_question_partial",
+          "choiceId": "service",
+          "rationale": "Contributions to the community are a selection factor. Existing service answer is partial context, not proof of mandatory formal volunteering, an hour threshold or a held leadership position."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_batch_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-epic-wai.json"
+        "status": "pending",
+        "reviewer": null
       },
       "destination": {
         "kind": "proposed_operation",
@@ -114550,7 +114612,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-c659f7c388a624e8",
@@ -145187,12 +145254,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "Existing broad interests do not prove eligibility; no runtime rules added."
+        },
+        {
+          "dimension": "co-curricular and community involvement",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Award requires co-curricular and community involvement. Existing activity and service answers offer partial context but do not establish the entire combination; keep exact involvement requirement on the card and infer no formal-volunteer minimum."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_reference_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+        "status": "pending",
+        "reviewer": null
       },
       "discoveredFromSource": "official-dawson-form-names",
       "destination": {
@@ -145217,7 +145289,12 @@
         "",
         "",
         ""
-      ]
+      ],
+      "coverageReview": {
+        "status": "pending",
+        "batchId": "batch-cross-coverage-021",
+        "previousIdentityReviewPreserved": true
+      }
     },
     {
       "id": "intake-entity-08eceb8155bd1bfb",
@@ -155012,6 +155089,12 @@
           "decision": "existing_question_partial",
           "choiceId": "service",
           "rationale": "Requires STEM/aviation/WAI volunteering in the prior year; the existing service answer does not establish organization, topic or timing. Keep exact selection language on the award card; no runtime exclusion."
+        },
+        {
+          "dimension": "ordinary financial need",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Ordinary need is a selection factor in the official BonitaJeanOlson description, alongside other criteria. The acute-financial-need question is narrower and cannot prove or exclude this need consideration. Keep this on the award card; no acute tag or rule."
         }
       ],
       "review": {
@@ -163379,7 +163462,8 @@
         "intake-rev226-74df373b3e30738e:sheet-0:row-103:d3d1f0da6dba",
         "intake-rev226-74df373b3e30738e:sheet-0:row-104:199dc2a1a620",
         "intake-rev226-74df373b3e30738e:sheet-0:row-105:18bfa8a2753a",
-        "intake-rev226-74df373b3e30738e:sheet-0:row-139:da4708f504e7"
+        "intake-rev226-74df373b3e30738e:sheet-0:row-139:da4708f504e7",
+        "intake-rev226-74df373b3e30738e:sheet-0:row-100:b68e290b5d70"
       ],
       "sourceIds": [
         "official-university-fvcc",
@@ -163429,9 +163513,23 @@
         "related-28f4a1c358c27ae5",
         "related-6112d255463728dd"
       ],
-      "scope": "Universityaliases,14FVCCsections,3DHCawards,anchoredMSUPresidential/Provost,currentwaiverrules; noaddedaward;relatedupdates9entities.",
+      "scope": "Universityaliases,14FVCCsections,3DHCawards,anchoredMSUPresidential/Provost,currentwaiverrules; noaddedaward;relatedupdates10entities.",
       "review": {
         "status": "pending"
+      },
+      "reviewRemediation": {
+        "findings": {
+          "critical": 0,
+          "high": 2,
+          "medium": 1,
+          "low": 0
+        },
+        "status": "awaiting-recheck",
+        "changes": [
+          "FVCCAcademicoutofscopewithdrawntoqualifiedcredit/formhold.",
+          "I100preservestwoofficialdeadlinepurposeclaims;relatedB/Itriagesqualified.",
+          "I139explicitMTresidenceadded."
+        ]
       }
     },
     {
@@ -163454,6 +163552,7 @@
         "intake-entity-68fc44b937accb33",
         "intake-entity-6bc8bb9e105b2570",
         "intake-entity-72b6b5ec5fa9ac7b",
+        "intake-entity-7397e6dc13bba6c8",
         "intake-entity-73e26279455d2bbe",
         "intake-entity-75fac50bf6a613e3",
         "intake-entity-7665bcfa836a9f07",
@@ -163472,6 +163571,7 @@
         "intake-entity-a379909cc979b93e",
         "intake-entity-a8bdb6ccc613720b",
         "intake-entity-c261bbf49c4e4de0",
+        "intake-entity-c654010fab8c5990",
         "intake-entity-c9f1d5ecf13fe4c6",
         "intake-entity-d00e748c026573df",
         "intake-entity-d7370cf07a07d2ec",
@@ -165146,6 +165246,16 @@
       "trigger": "New official information or owner selection resolves this condition",
       "sourceIds": [
         "official-university-msu-additional"
+      ]
+    },
+    {
+      "entityId": "intake-entity-8adad6d75c1ecae0",
+      "reason": "30-credit rule may include dual enrollment; no supported high-school exclusion. Verify Running Start credit eligibility and current application route.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "FVCCrequiresdegree-seekingstatus,3.5GPAinthesemesterofthe30thFVCCcreditandusewithin2years. PublicrulesdonotexplainwhetherRunningStartcreditsqualify,norexcludeHSseniorswith30credits. Actualapplicationformnotlinked. Holdcrediteligibility/currentform; donotassertcollege-onlyexclusion.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-university-fvcc"
       ]
     }
   ],
@@ -192369,7 +192479,7 @@
           "sourceColumn": "D",
           "candidateValue": "",
           "masterValue": "February 1st, 2026",
-          "status": "source_omission_no_update",
+          "status": "official_deadline_purpose_conflict_qualified",
           "review": {
             "status": "pending",
             "reviewer": null
@@ -192379,10 +192489,15 @@
             "sourceRowHash": "0fa124fe9cb33e8bddc40d4e2638f1eeb0ce7b7d320dbecffd625a59ec53f841",
             "masterRowHash": "b68e290b5d70c7dfb07f47999a87787001528195ed9ad7029771060231878a60",
             "officialSourceIds": [
-              "official-university-msu-departmental"
+              "official-university-msu-departmental",
+              "official-related-msu-resident"
             ]
           },
-          "rationale": "MSUcontrolledCATAcademicWorksportal,departmentalscholarshipsandadmittedNetIDrouteestablishMaster100sharedpoolidentity. No oneawardpercollegecategory. Candidateblank/defaultaddsnoverifiedrestrictionorfieldvalue."
+          "rationale": "ResidentpagelistsdepartmentalapplicantsbyFeb1,2026;departmentalpagespecifiesFAFSAbyFeb1forneedbasedawards. Auniformawardapplicationdeadlineisnotsettled;preservebothstatementsanddirectstudenttodepartment.",
+          "proposedFieldRef": {
+            "entityId": "intake-entity-a3ae3812ae4dec9a",
+            "column": "I"
+          }
         },
         {
           "column": "C",
@@ -192469,7 +192584,7 @@
           "sourceColumn": "K",
           "candidateValue": "This entry refers to various departmental scholarships available through the Montana AcademicWorks portal. Students are encouraged to explore the portal for specific scholarship opportunities.",
           "masterValue": "These are departmental scholarships available for qualifying students at Montana State University. Students should apply by February 1st, 2026, and explore the Cat Scholarships page for more information.",
-          "status": "reviewed_historical_semantic_no_change",
+          "status": "official_deadline_purpose_conflict_qualified",
           "review": {
             "status": "pending",
             "reviewer": null
@@ -192479,10 +192594,15 @@
             "sourceRowHash": "0fa124fe9cb33e8bddc40d4e2638f1eeb0ce7b7d320dbecffd625a59ec53f841",
             "masterRowHash": "b68e290b5d70c7dfb07f47999a87787001528195ed9ad7029771060231878a60",
             "officialSourceIds": [
-              "official-university-msu-departmental"
+              "official-university-msu-departmental",
+              "official-related-msu-resident"
             ]
           },
-          "rationale": "MSUcontrolledCATAcademicWorksportal,departmentalscholarshipsandadmittedNetIDrouteestablishMaster100sharedpoolidentity. No oneawardpercollegecategory. Checkedofficialrulesandsourcequalificationareinuniversity-evidence;noadditionalcandidate-onlyrestrictionornegativeaccepted. GPArenewalvsentry,programschooltype,needandfuturecyclelimitsremainexplicit."
+          "rationale": "ResidentpagelistsdepartmentalapplicantsbyFeb1,2026;departmentalpagespecifiesFAFSAbyFeb1forneedbasedawards. Auniformawardapplicationdeadlineisnotsettled;preservebothstatementsanddirectstudenttodepartment.",
+          "proposedFieldRef": {
+            "entityId": "intake-entity-a3ae3812ae4dec9a",
+            "column": "I"
+          }
         },
         {
           "column": "L",
@@ -192546,7 +192666,7 @@
           "sourceColumn": "I",
           "candidateValue": "A variety of departmental and college-specific scholarships are available for qualifying students. Applications must be submitted by February 1st, 2026. Students are encouraged to visit the Cat Scholarships page for more details.",
           "masterValue": "These are departmental scholarships available for qualifying students at Montana State University. Students should apply by February 1st, 2026, and explore the Cat Scholarships page for more information.",
-          "status": "reviewed_historical_semantic_no_change",
+          "status": "official_deadline_purpose_conflict_qualified",
           "review": {
             "status": "pending",
             "reviewer": null
@@ -192556,10 +192676,15 @@
             "sourceRowHash": "3761a311bd235f0b91a4360e3cc7216784e2432c00991cd397f2bce35794eefe",
             "masterRowHash": "b68e290b5d70c7dfb07f47999a87787001528195ed9ad7029771060231878a60",
             "officialSourceIds": [
-              "official-university-msu-departmental"
+              "official-university-msu-departmental",
+              "official-related-msu-resident"
             ]
           },
-          "rationale": "MSUcontrolledCATAcademicWorksportal,departmentalscholarshipsandadmittedNetIDrouteestablishMaster100sharedpoolidentity. No oneawardpercollegecategory. Checkedofficialrulesandsourcequalificationareinuniversity-evidence;noadditionalcandidate-onlyrestrictionornegativeaccepted. GPArenewalvsentry,programschooltype,needandfuturecyclelimitsremainexplicit."
+          "rationale": "ResidentpagelistsdepartmentalapplicantsbyFeb1,2026;departmentalpagespecifiesFAFSAbyFeb1forneedbasedawards. Auniformawardapplicationdeadlineisnotsettled;preservebothstatementsanddirectstudenttodepartment.",
+          "proposedFieldRef": {
+            "entityId": "intake-entity-a3ae3812ae4dec9a",
+            "column": "I"
+          }
         }
       ],
       "status": "triaged-awaiting-independent-review",
