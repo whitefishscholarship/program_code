@@ -7,33 +7,46 @@ Default branch: `main`
 
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
-- Branch `codex/scholarship-intake`, worktree `/private/tmp/program_code-scholarship-intake`.
-  Previous completed checkpoint: `7761cdb` (AEA/tooling); NTHS checkpoint is the next local commit.
-  Resolve latest exact checkpoint with `git rev-parse codex/scholarship-intake`.
-- Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning source
-  `0ffa90b12502b2a031a6012e16014301def07205`; existing work preserved.
-- Independent policy PASS C0/H0/M0/L0 in `SCHOLARSHIP-INTAKE-policy-review.json`.
-  Canonical Revision15, P9/releases preserved. Full final audit review still pending.
-- Snapshot `intake-rev226-74df373b3e30738e`; digest
-  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`. Source226 and modifiedTime unchanged across
-  bounded reads; all14 tabs,1666 populated rows,1632 scholarship-bearing rows plus34
-  headers/context/section markers;753 name-comparison groups, not proven distinct awards.
-  Staging373; Scraped438 including9 nameless; Master197; other rows fully captured.
-  Scraped R:T data excluded; Start Here outreach contact redacted with original hash.
+- Execution branch `codex/scholarship-intake`; worktree `/private/tmp/program_code-scholarship-intake`.
+  Previous exact checkpoint `421eed38705b7210e3ddc689d437d7a12642342b`; this checkpoint is the next local commit.
+  Resolve current exact checkpoint with `git rev-parse codex/scholarship-intake`.
+- Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning closeout
+  `0ffa90b12502b2a031a6012e16014301def07205`; original/planning work preserved.
+- Policy checkpoint independently PASS C0/H0/M0/L0. Canonical Revision15 changes
+  local intake authority only; P9, completed releases and runtime bytes preserved.
+- Complete allowed-field snapshot `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
+  Revision226 / modifiedTime stable across all14tab reads;1666populated rows:
+  1632scholarship-bearing plus34headers/context; Staging373, Scraped438 including9nameless.
+  ScrapedR:Tdata excluded; StartHereoutreachcontact redacted with originalhash.
 - Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
-  `42fb52617bc010a061fc6b9c59daa7c11cbf70e384cc587bba45b347e11f45f5`. AEA batch:27 comparison groups/96 rows reconciled to21 awards:15 proposed additions,
-  5 existing destinations,1 policy hold. NTHS:15 proposed awards, including4 newly discovered children and a split of the NTHS/ABC name collision. Total758 entities,152 decided rows,716 pending entities,30 draft additions. AEA/NTHS independent batch review is underway; final candidate review remains pending.
-  Local excluded `.firecrawl/` contains initial AEA/Epic/BYF/Dawson evidence for the next batch.
-  Dawson now enumerates65 entries; these must all be reconciled, not capped at historical26.
-- Checks: clean offline install,typecheck,policy/history/whitespace PASS. Full execution
-  suite/build pending. Plan validation has only three deliberately absent final
-  attestation artifacts; hosted simulation additionally rejects missing release authority.
-- Backup/recovery copies:not authorized/not created/not verified; no affected-cell backup.
-  Sheet writes:0; publication:false. No runtime changes or applicant data.
-- Next executable action: complete the reference-to-Master identity pass, then Mensa, Looney/Folds, BYF, Epic, Dawson and remaining groups.
-  AEA/NTHS authored batches complete; remediate specific independent findings, without repeating unchanged research. Read
-  intake plan/kickoff, PLAN-REV15, source-start/end and sole ledger before resuming.
-  New exact backup/write/publication grants remain required; do not prematurely attest.
+  `bcc8631bfc8c4145b6fd2430b90b45eb4621518f962f0dfe66d58b7ff91971f2`.
+  Counts: `{"rows": 1666, "entities": 771, "decidedRows": 966, "pendingEntities": 450, "proposedAdds": 67, "reviewedRows": 853}`. Entity count includes aliases and discoveries;
+  it is not a count of distinct approved awards. All proposed operations remain unapproved.
+- AEA/NTHS checkpoint independently PASS after3targeted fixes:42entityrecords,
+  118rows,30draft additions,450fielddecisions. Receipt `SCHOLARSHIP-INTAKE-batch-review-aea-nths.json`.
+- Reference/Mensa/military checkpoint independently PASS after5targeted fixes:
+  660identity rows and75Mensa/militaryrows; receipt `SCHOLARSHIP-INTAKE-batch-review-reference.json`.
+  Jaycee college/vocational names split; Folds dated geography and acute-need ambiguity corrected.
+  **223related-fieldtriage rows /139entities /683fielddifferences remain pending** and
+  must be resolved before final acceptance.35identity rows also remain deferred.
+- AOPA32currentpage past-examplefunds and LPA12spring2026awards authored, pending independentreview.
+  AOPA December30/31officialdeadlineconflict explicit; no futuredeadline invented.
+  Mensa54names held:currentchildcatalog behindregistration; not falsely treated as removed.
+- Next executable work: Epic primary/partner reconciliation, Dawson65headings, WAI10-page
+  2027PDF, remaining source groups/nameless records and related-fieldtriage. Keep oneledger.
+  Reuse alreadyfetched `.firecrawl/` evidence; scripts in `/private/tmp/intake_*.py` are
+  author utilities, **do not rerun completed batch scripts** (they append ledger entries).
+  Every completed batch and its sourceIDs is listed in ledger.batches; no repeatresearch.
+- Durable sourcefield evidence in `docs/evidence/scholarship-intake/`; local excluded
+  `.firecrawl/` also has Epic parent/forms,6partnerpages, LPA/Dawsonroutes and complete
+  Dawson/WAI observedcontent needed for nextwork. No sourcecompleteness claim until reconciled.
+- Checks: cleanofflineinstall, typecheck, intakepartialcheck, policy/history/whitespace pass.
+  Fullsuite/build/finalcompleteledgercheck/frozenindependentreview stillpending.
+  Plancheck has3expected missing finalattestationartifacts; hosted adds missingreleaseauthority.
+- Backup/recoverycopies notauthorized/notcreated/notverified; affectedcellbackup absent.
+  Sourcewrites0; publicationfalse; no applicantdata, login, providercontact or runtimechange.
+  Newexactbackup/write/releaseauthority required. Finalcandidate/promotionbatch notyetcomplete.
 
 ## Preserved intake planning closeout
 

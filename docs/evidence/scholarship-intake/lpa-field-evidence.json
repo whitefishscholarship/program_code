@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-lpa-2026",
+      "url": "https://www.lpa-aero.org/scholarships",
+      "finalUrl": "https://www.lpa-aero.org/scholarships",
+      "observedAt": "2026-09-11T02:47:24.425Z",
+      "statusCode": 200,
+      "contentSha256": "7848bd5bfbab62f0569848382d6dd6e922d8c89c24f64e7766a47f4b9377e0f2",
+      "scrapeId": "01a08e5c-c855-76c4-87db-4ffa7a03848f",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/lpa-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "commonFacts": {
+    "cycle": "Spring2026;March15\u2013May10,23:59PT",
+    "membership": "ActiveStudent,StandardorLifetimeLPA",
+    "age": "17minimum,18Epic/UAA",
+    "education": "Accepted/enrolled US/territory accredited institution; evidenceuponaward",
+    "route": "Officially linked member hub; no account access/submission",
+    "unknowns": [
+      "GPA",
+      "renewal",
+      "financial-need preference",
+      "next cycle"
+    ]
+  },
+  "awards": [
+    {
+      "entityId": "intake-entity-6bc8bb9e105b2570",
+      "heading": "LPA VOLAR Military Scholarship",
+      "amount": null,
+      "conditions": "Active-duty military, reservists, veterans and military-affiliated applicants pursuing aviation or aerospace training. The page requests military identification; exact family-affiliation limits are not stated.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-00b4a3293b739302",
+      "heading": "LPA Private Pilot Scholarship",
+      "amount": null,
+      "conditions": "Private pilot training, current third-class medical and student pilot certificate; enrolled or planning to enroll in a Part61 or Part141 flight school.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-41b6101781faa441",
+      "heading": "LPA Advanced Rating Scholarship",
+      "amount": null,
+      "conditions": "Commercial, multi-engine, instructor, ATP/CTP or selected type ratings. A current private pilot certificate is required for commercial training; a commercial certificate is required for the other listed advanced ratings.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-edfb732bb22a33f5",
+      "heading": "LPA Professional Flight Degree Scholarship",
+      "amount": null,
+      "conditions": "Enrollment in an accredited professional flight degree program; supports associated tuition, flight fees and training.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-fd380b9d00f329f7",
+      "heading": "LPA Aviation Maintenance Technician Scholarship",
+      "amount": null,
+      "conditions": "Airframe and Powerplant or Inspection Authorization training; enrolled or planning to enroll in an FAA-recognized A&P program.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-7859a591d4d5a7ed",
+      "heading": "EPIC Flight Academy Aviation Maintenance Technician Scholarship",
+      "amount": null,
+      "conditions": "Age18 or older, US citizen or permanent resident, high-school diploma or equivalent, and ability to relocate to New Smyrna Beach, Florida or Cincinnati/Northern Kentucky for the19-month mechanic program. LPA lists$25000 for spring2026; Epic\u2019s later general sponsor page lists$35000 without the same cycle. Amount is left blank pending reconciliation.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-89bbbfc6ebeff686",
+      "heading": "LPA Aerospace Degree Advancement Scholarship",
+      "amount": null,
+      "conditions": "Aerospace-related degree study, including engineering, business, maintenance, air traffic control, dispatch or technology. Flight training is expressly excluded.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-37dbc807be45a144",
+      "heading": "United Aviate Academy Scholarship",
+      "amount": null,
+      "conditions": "Age18 or older; conditional acceptance to or current enrollment at United Aviate Academy. Funds go directly to the Academy and cannot be transferred. This is the LPA-sponsored program, not another organization\u2019s UAA award.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-ef191ec54c2542f1",
+      "heading": "1STEP Prep ATP/CTP Scholarship",
+      "amount": "$3900",
+      "conditions": "Applicants in the Miami, Florida area; commercial pilot certificate with instrument rating; ATP-CTP preparation with1STEP. Travel and lodging excluded.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-cd5022d9621e4bfc",
+      "heading": "LPA Los Angeles Region Community Scholarship",
+      "amount": "$2500",
+      "conditions": "Applicants in the greater Los Angeles area with aviation/aerospace and community involvement.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-5a004865d6dd1893",
+      "heading": "American Airlines Dispatcher Certification Scholarship",
+      "amount": "$6000",
+      "conditions": "FAA Aircraft Dispatcher Certification training through the American Airlines partnership. Other certification prerequisites are not detailed on this scholarship page.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-fa25a489d91e654f",
+      "heading": "Elevated Access Advanced Rating Scholarship",
+      "amount": "$10000",
+      "conditions": "Fixed-wing pilot with private pilot certificate pursuing instrument, commercial or instructor certification; commitment to Elevated Access\u2019s mission and an additional essay. Rotorcraft training is excluded.",
+      "disposition": "propose_add"
+    }
+  ]
+}
