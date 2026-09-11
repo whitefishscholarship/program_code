@@ -10,9 +10,9 @@ Default branch: `main`
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `1339d250e10b14734d2f86a8c299f847e9e3393d`; this local checkpoint
+  Prior exact checkpoint `e7b0975ffea63a8244c465c07bb1bbf7db76d715`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `20115b0f828ef44945a585b8e2edf5689e376427c9e3de1069085ee02cea04a0`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `b33dc46e36a823049ccd4d59e737d21074cee46202c6428b458850180e69f96b`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
   Current counts `{"rows": 1666, "entities": 926, "decidedRows": 1559, "pendingEntities": 71, "proposedAdds": 202, "proposedUpdates": 38}`. All proposals unapplied.
@@ -56,13 +56,13 @@ Default branch: `main`
   Safe source quotations .firecrawl/resume-institute25-*.json; all25named leads researched.
 - Batch025 M1 resolved: Student Referee requires an accredited state-endorsed class;
   essay length is retained2026 only, not a verified2027 prompt.
-- Provider batch026 authored:22entities/52rows (50newlydecided),4triages/16fields;
+- Provider batch026 independently PASS, receipt saved:22entities/52rows (50newlydecided),4triages/16fields;
   fouradds (Navigate Your Future, Surety Bond Authority, Pizzini Nurse, BigSun),
   newrelatedupdates109/141; Kitchen116alias resolveswithoutduplicate/preservesI.
   OuttoInnovateparent accounted with3advanced-collegechildren;8specificheldentities.
   Evidence docs/evidence/scholarship-intake/providers-evidence.json.
-- Next executable action: independent review026; continue71pendingentities.
-  Targeted discovery for eight next leads stored in tools and current research files.
+- Next executable action: review validator/timestamp checkpoint, then national027; continue71pendingentities.
+  National027 research for20providerleads retained in .firecrawl/resume-national27-*.json; includes newer direct-source fallback checks yet to be added. Structured extraction can misstate rules; direct rendered rules control.
   Generate pending list from ledger; /private/tmp/intake-pending-live.json predates026.
   Do not rerun completed authors including intake_resume_providers26.py.
   Source registry now permits original HTTP observation URLs as well as HTTPS;

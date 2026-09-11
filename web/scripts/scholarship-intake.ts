@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import { ACTIVITY_QUESTIONS, SPECIAL_CRITERIA } from '../src/lib/interviewQuestions';
 
 export const INTAKE_WORKBOOK = '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4';
 export const sha256 = (x: string | Buffer) => crypto.createHash('sha256').update(x).digest('hex');
@@ -25,15 +26,18 @@ export function canApplyIntake(g: WriteGate): boolean {
     g.independentReviewComplete && g.unresolvedHighOrCritical === 0 &&
     !g.uncertainPriorWrite && !g.alreadyApplied;
 }
-type Row = { id: string; sheetId: number; tab: string; rowNumber: number; rowContentSha256: string;
+export type Row = { id: string; sheetId: number; tab: string; rowNumber: number; rowContentSha256: string;
+  values: string[];
   sourcePath: string; entityId: string | null; disposition: string | null; rationale: string | null;
   destination: {kind: string; rowNumber?: number; entityId?: string; operationId?: string} | null;
   evidenceIds: string[]; review: {status: string; reviewer: string | null}; };
-type Entity = {id: string; sourceRowIds: string[]; disposition: string | null; status: string;
-  fields: {column: string;newValue: unknown;sourceId: string;decision: string}[];
-  officialEvidenceIds: string[]; tags: {key: string;sourceId: string;existingChoiceId: string|null}[];
-  interviewCoverage: unknown[]; proposedValues?: string[]; review: {status:string;reviewer:string|null};};
-type Ledger = {schemaVersion:number;planId:string;inputs:{workbookId:string;snapshotId:string;snapshotSha256:string;
+export type Entity = {id: string; name?: string; sourceRowIds: string[]; disposition: string | null; status: string;
+  destination?: Row['destination'];
+  fields: {column: string;oldValue: unknown;newValue: unknown;sourceId: string;decision: string;locator: string;observedAt: string;supportingSourceIds?: string[]}[];
+  officialEvidenceIds: string[]; tags: {key: string;sourceId: string;existingChoiceId: string|null;existingControlId?: string;existingCriterionId?: string;label: string;meaning: string;effect: string;qualifiedExplanation: string}[];
+  interviewCoverage: {dimension?: string;decision: string;choiceId?: string|null;rationale?: string}[];
+  proposedValues?: string[]; review: {status:string;reviewer:string|null};};
+export type Ledger = {schemaVersion:number;planId:string;inputs:{workbookId:string;snapshotId:string;snapshotSha256:string;
   snapshotFiles:{path:string;sha256:string}[];tabs:{sheetId:number;populatedRows:number}[]};
   rows:Row[];entities:Entity[];officialSources:{id:string;evidencePath:string;url:string;observedAt:string;contentSha256:string}[];
   discoveries:{enumeratedCount:number;reviewedByImplementer:number;remainingCount:number}[];};
@@ -67,7 +71,11 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
     if(r.disposition!==null)assert(r.rationale?.trim(),'Disposition without rationale');
     if(['duplicate_of','link_existing','propose_add','propose_update'].includes(r.disposition??'')) {
       assert(r.destination,'Missing surviving destination');assert(entities.has(r.destination.entityId!),'Unknown surviving entity');
-      if(r.destination.kind==='existing_master')assert(l.rows.some(x=>x.sheetId===0&&x.rowNumber===r.destination!.rowNumber),'Missing Master destination');
+      if(r.destination.kind==='existing_master') {
+        const master=l.rows.find(x=>x.sheetId===0&&x.rowNumber===r.destination!.rowNumber);
+        assert(master,'Missing Master destination');
+        assert.equal(master.entityId,r.destination.entityId,'Master destination points to a different entity');
+      }
       else {assert.equal(r.destination.kind,'proposed_operation');assert(r.destination.operationId);assert.equal(entities.get(r.destination.entityId!)?.disposition,'propose_add','Survivor is not a proposed add');}
     }
     for(const source of r.evidenceIds) assert(sources.has(source),'Unknown row evidence');
@@ -85,7 +93,60 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
     if(complete){assert.notEqual(e.status,'pending-evaluation');assert.equal(e.review.status,'reviewed');assert(e.review.reviewer);}
   }
   for(const d of l.discoveries)assert.equal(d.enumeratedCount,d.reviewedByImplementer+d.remainingCount,'Lost discovered children');
+  validateProposalRecords(l);
   return {rows:l.rows.length,entities:l.entities.length,decidedRows:l.rows.filter(r=>r.disposition!==null).length,pendingEntities:l.entities.filter(e=>e.status==='pending-evaluation').length,proposedAdds:l.entities.filter(e=>e.disposition==='propose_add').length};
+}
+
+// Checks the promotion semantics independently of source-file I/O. Native-cell and
+// full-workbook recovery checks remain separate preconditions for any future write.
+export function validateProposalRecords(l: Pick<Ledger,'rows'|'entities'|'officialSources'>) {
+  const sources=new Map(l.officialSources.map(s=>[s.id,s]));
+  const choices=new Map<string,{id:string;controlId:string;criterionId:string;label:string}>(
+    [...ACTIVITY_QUESTIONS,...SPECIAL_CRITERIA].map(c=>[c.id,c]));
+  const targets=new Set<string>();
+  for(const e of l.entities) {
+    if(!['propose_add','propose_update'].includes(e.disposition??''))continue;
+    assert.equal(new Set(e.fields.map(f=>f.column)).size,e.fields.length,'Duplicate proposed column');
+    const master=e.disposition==='propose_update' ? l.rows.find(r=>r.sheetId===0&&r.entityId===e.id) : undefined;
+    if(e.disposition==='propose_update') {
+      assert(master,'Update has no exact Master identity');
+      assert.equal(e.destination?.rowNumber,master.rowNumber,'Update destination row mismatch');
+      assert.equal(e.destination?.entityId,e.id,'Update destination entity mismatch');
+    } else {
+      assert.equal(e.fields.length,15,'Addition must decide every A:O field');
+      assert.equal(e.proposedValues?.length,15,'Addition must supply A:O values');
+      assert(e.proposedValues?.[6]?.trim(),'Nameless addition');
+      assert(e.proposedValues?.[7]?.trim(),'Addition missing application route');
+    }
+    for(const f of e.fields) {
+      const source=sources.get(f.sourceId);assert(source,'Unknown field source');
+      assert(f.locator.trim(),'Field has no source locator');
+      assert.equal(f.observedAt,source.observedAt,'Field timestamp differs from its source');
+      for(const id of f.supportingSourceIds??[])assert(sources.has(id),'Unknown supporting source');
+      if(master) {
+        assert.equal(f.oldValue,master.values[f.column.charCodeAt(0)-65]??'','Stale old field value');
+        const target=`${master.rowNumber}:${f.column}`;
+        assert(!targets.has(target),'Two operations target the same cell');targets.add(target);
+      } else {
+        assert.equal(f.oldValue,null,'Addition overwrites an existing value');
+        assert.equal(f.newValue,e.proposedValues?.[f.column.charCodeAt(0)-65],'Field and proposed row disagree');
+      }
+    }
+    assert.equal(new Set(e.tags.map(t=>t.key)).size,e.tags.length,'Duplicate tag keys');
+    for(const t of e.tags) {
+      assert(t.label?.trim()&&t.meaning?.trim()&&t.qualifiedExplanation?.trim(),'Unqualified tag');
+      assert(['requirement','preference','topic'].includes(t.effect),'Invalid tag effect');
+      if(t.existingChoiceId) {
+        const c=choices.get(t.existingChoiceId);assert(c,'Unknown interview choice');
+        if(t.existingControlId)assert.equal(t.existingControlId,c.controlId,'Wrong interview control');
+        if(t.existingCriterionId)assert.equal(t.existingCriterionId,c.criterionId,'Wrong interview criterion');
+      }
+    }
+    for(const c of e.interviewCoverage) {
+      assert(c.decision?.trim(),'Missing coverage decision');
+      if(c.choiceId)assert(choices.has(c.choiceId),'Unknown coverage choice');
+    }
+  }
 }
 if(path.basename(process.argv[1]??'') === 'scholarship-intake.ts'){
   const root=path.resolve(import.meta.dirname,'../..');
