@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "batchId": "batch-cross-coverage-021",
+  "reviewedCandidateCommit": "bbe221054cc173b3638f1a3f8f57fd9c074f6029",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "recordedAt": "2026-09-11T05:19:26.713919+00:00",
+  "reviewer": {
+    "task": "/root/intake_housing_review",
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "freshContext": true
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 1
+  },
+  "dispositions": [
+    {
+      "severity": "medium",
+      "id": "COVERAGE-M1",
+      "status": "resolved",
+      "rationale": "NinealternativepathwaysmappedwithORandhistoricalqualification.",
+      "owner": "/root",
+      "target": "bbe221054cc173b3638f1a3f8f57fd9c074f6029"
+    },
+    {
+      "severity": "medium",
+      "id": "COVERAGE-M2",
+      "status": "resolved",
+      "rationale": "Knownservice/activities/ordinaryneed/broadleadershipseparatelyassessedincludingfinalthreeinstances.",
+      "owner": "/root",
+      "target": "bbe221054cc173b3638f1a3f8f57fd9c074f6029"
+    },
+    {
+      "severity": "medium",
+      "id": "COVERAGE-M3",
+      "status": "resolved",
+      "rationale": "PaigeunsupportedSTEMcareertagremoved;volunteeringpreferenceassessed.",
+      "owner": "/root",
+      "target": "bbe221054cc173b3638f1a3f8f57fd9c074f6029"
+    },
+    {
+      "severity": "low",
+      "id": "COVERAGE-L1",
+      "status": "resolved",
+      "rationale": "Schultzincludedinsharededucationgap.",
+      "owner": "/root",
+      "target": "bbe221054cc173b3638f1a3f8f57fd9c074f6029"
+    }
+  ],
+  "coverage": {
+    "proposedAdditionsReviewed": 183,
+    "changedEntities": 42,
+    "tags": 188,
+    "interviewCoverageDecisions": 608,
+    "fieldValuesChanged": 0,
+    "runtimeFilesChanged": 0
+  },
+  "entityIds": [
+    "intake-entity-057b994b6be37c8e",
+    "intake-entity-0c2fcde6113979a1",
+    "intake-entity-0e8f75f725cdeb6e",
+    "intake-entity-1490316e712669d0",
+    "intake-entity-19060852883d7493",
+    "intake-entity-2d9b2284d3981078",
+    "intake-entity-36c17d520acf1aef",
+    "intake-entity-38165a377cf092e4",
+    "intake-entity-4938a5e717492009",
+    "intake-entity-4f5899292c1fcaf1",
+    "intake-entity-53584cdeae3dbbe8",
+    "intake-entity-5e40b7ee15dc6501",
+    "intake-entity-614effa8ef61322e",
+    "intake-entity-68fc44b937accb33",
+    "intake-entity-6bc8bb9e105b2570",
+    "intake-entity-72b6b5ec5fa9ac7b",
+    "intake-entity-7397e6dc13bba6c8",
+    "intake-entity-73e26279455d2bbe",
+    "intake-entity-75fac50bf6a613e3",
+    "intake-entity-7665bcfa836a9f07",
+    "intake-entity-76bfb79ea4f573ba",
+    "intake-entity-790eaf14cebe384e",
+    "intake-entity-7f36ae178c79607e",
+    "intake-entity-8324f17255f66de4",
+    "intake-entity-873f91c3edce15b4",
+    "intake-entity-89bbbfc6ebeff686",
+    "intake-entity-8cf918502ce54020",
+    "intake-entity-8f29d09965003d3a",
+    "intake-entity-902c1a03644ccf68",
+    "intake-entity-966fc5d2c8b176a1",
+    "intake-entity-9a676530f724da59",
+    "intake-entity-9d44a7f3b689c6a8",
+    "intake-entity-a379909cc979b93e",
+    "intake-entity-a8bdb6ccc613720b",
+    "intake-entity-c261bbf49c4e4de0",
+    "intake-entity-c654010fab8c5990",
+    "intake-entity-c9f1d5ecf13fe4c6",
+    "intake-entity-d00e748c026573df",
+    "intake-entity-d7370cf07a07d2ec",
+    "intake-entity-e929213876563013",
+    "intake-entity-f0178a0d086bfbc3",
+    "intake-entity-fc95f644590e845d"
+  ],
+  "rowIds": [],
+  "reviewedLedgerSha256": "35ed6efa1eebb47ec827774b06be1270a9477717a096bd81933fa640688f7966",
+  "hashes": {
+    "allAdditionContentSha256": "9967e9d18be90940316a3074bc3d5fdd774658ff6eccf8c382248289e66a9de4",
+    "changedEntityScopeSha256": "e7b44f02d69800fe94a9a1d29235bb02870417205f396fdc6ce387d189b130ba"
+  },
+  "limits": "Boundedlocalcheckpointonly; nofinalacceptance,sourcewriteorpublication."
+}

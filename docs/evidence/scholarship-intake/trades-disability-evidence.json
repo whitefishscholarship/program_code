@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "batchId": "batch-trades-disability-022",
+  "sources": [
+    {
+      "sourceId": "official-trades22-byf",
+      "summary": "BYFdirectlysponsorsNTHSconstructionandAGCworkforce;otherlistedlinksareresources/programparents. Nativeinputaliasesretained. Do not infer oneawardperresourceURL orfullprovidercatalog completeness.",
+      "rawFile": ".firecrawl/resume-trades22-byf.json",
+      "contentSha256": "ccb5628374c572f95b7fe5479324f6feffa6b4480a4e4a5f876f65c1c0df0fe9"
+    },
+    {
+      "sourceId": "official-trades22-bring-trades",
+      "summary": "Monthly1500scholarshipsduringacademiccalendarforUSpostsecondaryskilled-tradesstudents;essayorshortvideo;actualapplicationpageprovided.",
+      "rawFile": ".firecrawl/resume-trades22-bring-trades.json",
+      "contentSha256": "f03c9d785b4d0b8356c2ac74add35b2135916e9061e1be9de88407431e70f154"
+    },
+    {
+      "sourceId": "official-trades22-bring-form",
+      "summary": "Monthlystudent1500requiresdebtowedtoschoolandpaysschool;directGoogleFormlinked. Twootherprogramsaretoolgrantsforpublicschools/nonprofits,oneBostontextilepilot,notstudentawards.",
+      "rawFile": ".firecrawl/resume-trades22-bring-form.json",
+      "contentSha256": "f3766a0e125d0db73fe881ec0d654f5dd1c23a0de98ebdb659d27e857d66e6b0"
+    },
+    {
+      "sourceId": "official-trades22-bring-application",
+      "summary": "ActuallinkedGoogleFormredirectstorequiredGooglesignin;blankloginonly, noaccount orapplicationdataaccessed. Publicprogramrulesremainavailable.",
+      "rawFile": ".firecrawl/resume-trades22-bring-application.json",
+      "contentSha256": "699954e326dc430a5393c5b939c9d49b72e1b21aacb4628aee9bb18c6a1461f2"
+    },
+    {
+      "sourceId": "official-trades22-nascla",
+      "summary": "May26,2026deadline,up5000threeawards;constructioncredential,accreditedacceptance/enrollment,part/fulltime,USC/PR,continentalUS,18byconferenceorHSgraduatedunder18;employeefamilyexcluded. FAQrequiresacceptancebutconditionssayapplied/intend;conferenceone(2)daysconflict. Noactualcurrentapplicationlinkafterdirectpageandtargetedsearch;hold.",
+      "rawFile": ".firecrawl/resume-trades22-nascla.json",
+      "contentSha256": "6feea8289de2812938e8b536a697de7506938b91eac5f63d5f5b2bbe0eb8cb1a"
+    },
+    {
+      "sourceId": "official-trades22-dewalt",
+      "summary": "2026closedFeb28;5000USorCanadaenrolled/acceptedpostsecondaryhighdemandtrade. Construction,industrial,motor/power,mechanicsincludingaviation,technologyinclengineering/fire-science. StanleyBlackDecker/DEWALTemployees/spouse/dependentsineligible. US/Canadaseparateapplicationroutes,oneprogram. NoGPA/renewal/needminimumestablished.",
+      "rawFile": ".firecrawl/resume-trades22-dewalt.json",
+      "contentSha256": "84139e83d6526b0bbfd1514a876ed617b3725b44a61f32287a9b189c0718d514"
+    },
+    {
+      "sourceId": "official-trades22-hpfy",
+      "summary": "Twofunds:BeyondDisability1000documenteddisability,HSsenior/college,US2/4yeartechnicalfallfollowinggraduation,full/parttime,noGPAselectionminimum;MakeDifferencealreadyMaster132fulltime3.0,100documentedservicehourswithin2years. PublicapplicationemailrouteandAug15yearlessFAQ;noapplicationdataentered.",
+      "rawFile": ".firecrawl/resume-trades22-hpfy.json",
+      "contentSha256": "13a6e79fc74dda0177cd09007d2eaef72826945d4d9ba4023d367e476922774d"
+    },
+    {
+      "sourceId": "official-trades22-skillpointe",
+      "summary": "Financial-resourcespageisaneducationfundingguideincludingFAFSAandlinkedarticles,notanindividualaward. NoAIchatinteraction; no complete linkedcatalogclaim.",
+      "rawFile": ".firecrawl/resume-trades22-skillpointe.json",
+      "contentSha256": "e0e0376ff5b68382446100e707a74c2e1089c1dfff6906eb2222756c15a66e46"
+    },
+    {
+      "sourceId": "official-trades22-ace-montana",
+      "summary": "OfficialNorthWestMontanaaffiliateexistsforHSarchitecture/construction/engineeringmentoring. Mentoringandfutureopportunitydescriptionsdonotestablishspecificaward/application;noabsenceofMTprograminferred.",
+      "rawFile": ".firecrawl/resume-trades22-ace-montana.json",
+      "contentSha256": "8b5a8a7e9ea1ac6369fe42b37dde06b669d094225d5ead7893c52c0fde61c1a1"
+    },
+    {
+      "sourceId": "official-trades22-aws-educators",
+      "summary": "Currentfull/parttimeweldingeducatorsatprimarilyeducation/trainingemployer;notcorporateinstructors. Closed,checkFeb2027. Fivenameddonornationalawardsanddistrictpoolshareeducatorrequirement;excludedfromHSstudentawardintake.",
+      "rawFile": ".firecrawl/resume-trades22-aws-educators.json",
+      "contentSha256": "3e1e27f7c459e01edd2a9c8e2a9eb74d21cf1418e4e73282f4aeedc7246f5efd"
+    },
+    {
+      "sourceId": "official-trades22-pell",
+      "summary": "FederalPellusualfirstdegreeundergradexceptionalneed,FAFSAannual,2026–27max7395subjectSAI/cost/enrollment/program/remaininglifetime. Grantnotautomaticscholarship; no740minimumacceptedfromaggregator.",
+      "rawFile": ".firecrawl/resume-trades22-pell.json",
+      "contentSha256": "2ce3b4700a8e068207acd0fcb8c279476b8f50c1ec38cb2c715f998d2f396dee"
+    },
+    {
+      "sourceId": "official-trades22-workforce-facts",
+      "summary": "May2026finalrulefacts:eligible8weeksbutlessthan15,150–599clockhours,accreditedapprovedinstitution,Governor+Secretaryapproval. Bachelorgraduatesmayqualify;graduatecredential/enrollmentnoteligible;usualPelllimits,nomultipleconcurrentprogramgrants. Aggregator24weekminimumnotaccepted.",
+      "rawFile": ".firecrawl/resume-trades22-workforce-facts.json",
+      "contentSha256": "94a8c991ae2499768f0d46d461bb2e93357c7187c914b74c1beb00bf07979408"
+    },
+    {
+      "sourceId": "official-trades22-aws-baton",
+      "summary": "TargetedofficialBatonRougefundqueryreturnednameonly,noper-awardeligibility,deadlineorrouteconditions. SavedpublicAWSportalonlylistscurrentweldertrainingandrequiresprofileforotherawards. GeographyandJune15dateunverified;holdnotLAexclusioninferred.",
+      "rawFile": ".firecrawl/resume-trades22-aws-baton.json",
+      "contentSha256": "b9e366591b8e267622f51428a10c94588df739561bb67addeeae8fa6d38f1525"
+    }
+  ],
+  "proposedAdds": [
+    "intake-entity-bcb7f457f2ce908a",
+    "intake-entity-1dd914ce4a0510dd",
+    "intake-entity-f93c280427f75548"
+  ],
+  "sourceRowIds": [
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-6:7fbfa922371b",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-29:dd26aa3700e9",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-167:12aa6a1b09f4",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-171:ff3db110235f",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-413:00ad6e74b108",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-2:7fbfa922371b",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-7:dd26aa3700e9",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-41:ff3db110235f",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-42:641cb85666a9",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-43:1434c11ee2f2",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-293:12aa6a1b09f4",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-30:8b7114374a4f",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-168:dabf3033ba1a",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-414:0f1bad9b9ae4",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-8:8b7114374a4f",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-49:c3209e1f97b4",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-294:dabf3033ba1a",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-140:2e3f3dd5b878",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-57:a70da93ea472",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-374:2e3f3dd5b878",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-282:5906f9247b21",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-8:bdcb227489c4",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-37:43f520f3ef8f",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-10:43f520f3ef8f",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-289:bdcb227489c4",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-420:fe22ea170828",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-64:f7151d194192",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-164:34d2551e0b03",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-200:fbb5db52d250",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-415:811f1ae2cb1e",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-27:10bfa2f2cf68",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-174:fbb5db52d250",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-291:34d2551e0b03",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-421:371f9b86234e",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-219:e34f5445caa0",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-39:ca321a736328",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-214:ca321a736328",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-9:23145b3070b9",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-38:272bf99656aa",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-11:272bf99656aa",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-314:23145b3070b9",
+    "intake-rev226-74df373b3e30738e:sheet-1110204944:row-8:967781c89c22",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-28:19d5c22efc84",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-217:19d5c22efc84",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-26:e41eac4d4309",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-276:e41eac4d4309",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-27:99b9c1422d90",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-288:99b9c1422d90",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-166:06bde7328039",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-31:2ae5d38dfaa4",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-292:06bde7328039"
+  ],
+  "scope": "Threepubliclyroutableawardswithqualifiedconditions;NASCLA/ACE/AWScatalogheld,Pellgranttypesheld;institutional/educatorprogramsexcluded. GenericBYFresourceURLsnotoneawardperlink; allsuppliedBYFrowscontinueintheledger. No source copies/writes/publication.",
+  "verificationLimits": "TargetedAWSfundqueryreturnsnameonly;authformcontentsunknown. No closedyearlessdeadlineinvented. BBTacceptancewithoutattendanceunknown;requiresattendanceanddebt."
+}

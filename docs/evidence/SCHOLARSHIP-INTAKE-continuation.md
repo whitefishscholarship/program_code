@@ -5,12 +5,12 @@
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `bf62416f6859490a83d1d0f968b0978bf3cbdf41`; this local checkpoint
+  Prior exact checkpoint `bbe221054cc173b3638f1a3f8f57fd9c074f6029`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `33e35c134170c36e66a62c43d8d60dc75ffc929bba95900b87755c95c57bea21`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `fea1f7cac7804fd78e7da2d249df4423bbb213ad619739bc5a47263d6309602d`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 917, "decidedRows": 1364, "pendingEntities": 185, "proposedAdds": 183, "proposedUpdates": 31}`. All proposals unapplied.
+  Current counts `{"rows": 1666, "entities": 925, "decidedRows": 1415, "pendingEntities": 171, "proposedAdds": 186, "proposedUpdates": 32}`. All proposals unapplied.
 - Independent PASS receipts saved through015 and related016–019. Related review covers
   238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
   All review findings corrected: exact richlinks, missing aliasfields, material official
@@ -19,17 +19,18 @@
   and each other, no duplicate/collision. Cross-collisions receipt saved. Separate coverage review
   found3medium/1low: alternative study-path mappings, service/ordinary-need decisions,
   HaroldPaige STEM volunteering basis, JamesSchultz educationgap membership. Implementer
-  authored021 remediation for40additionentities: alternativechoices withORsemantics, explicitservice/ordinaryneed/leadershipdecisions, PaigeSTEMtagremoved, Schultzgapincluded. Awaitrecheck; no new runtime questions/rules.
-- University020 authored, awaiting independent review:47entities including existingMaster
+  completed021 remediation for42additionentities: alternativechoices withORsemantics, explicitservice/ordinaryneed/leadershipdecisions, PaigeSTEMtagremoved, Schultzgapincluded. IndependentPASSreceipt saved; no new runtime questions/rules.
+- University020 independentlyPASSafter3fixes:47entities including existingMaster
   destinations and one discovered held MSUProvost child;46newlydecidedsource rows,
- 9additionalMasterupdates;23newrelatedtriage records/159fields. FVCC correctly14named
+ 10additionalMasterupdates;23newrelatedtriage records/159fields. FVCC correctly14named
   programsections (6student+4graduate+4state),8outside resource links. Prior16claim corrected.
   UM/DHC/MSU aliases preserve separate programs. Exact current sources and conflicts in
   `docs/evidence/scholarship-intake/university-evidence.json`.
-- Next executable action: independent review020 and021; then185pending
+- Trades/disability022 authored:22entities/51source rows,3unappliedadds(BBT,DEWALT,HPFYBeyondDisability). Eightneweducator/institutionalchildrenexcluded; NASCLA/ACE/AWScatalog/Pelltypeandidentityholds explicit. Evidence `docs/evidence/scholarship-intake/trades-disability-evidence.json`; safe sources `.firecrawl/resume-trades22-*.json`.
+- Next executable action: independent review022; then171pending
   entities, starting remaining officialproviders/aggregators and HoratioMontanaalias.
   University scripts already ran; do not rerun `/private/tmp/intake_resume_universities.py`
-  or prior author scripts. Safe selected public source files `.firecrawl/resume-university-*.json`.
+  or prior author scripts, including022 and receipt scripts. Safe selected public source files `.firecrawl/resume-university-*.json`.
 - Partial ledger validation and diff whitespace pass after correcting disposition vocabulary.
   Full suite/build, strengthened validation, exact dryrun/report/gapcoverage, fresh workbook
   fingerprints and final independent review unfinished. Do not claim final acceptance.
