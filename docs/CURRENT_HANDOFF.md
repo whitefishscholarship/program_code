@@ -1,3 +1,26 @@
+# Verification stopped — accidental Student View header change
+
+Operative update, September 11, 2026 at 10:29 UTC. A browser shortcut intended to open
+the selected filter menu instead filled `Student View!F1` from E1, changing **Status**
+to **Deadline Note**. This is an unintended original-workbook cell write outside the
+authorized scholarship batch. Kelsey has been told and asked for explicit authority to
+correct only F1's entered value to Status; no correction approval or action yet.
+
+Fresh native comparisons of all 16,215 cells in Student View A1:O21 and Master Database
+A1:O1060 against the pre-incident native backup found exactly one differing cell, F1,
+and only its entered/effective/displayed value changed. All Master cells and F1 formatting
+are unchanged. Source modified time is now `2026-09-11T10:27:58.178Z`.
+Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json`.
+
+**BLOCKED on narrow correction authority.** Existing authority excludes original restore
+and unrelated changes. Do not rerun the shortcut, blindly undo, or apply the scholarship
+batch. Once authorized, fresh-check F1 against the observed erroneous value and all other
+cell fields against backup; use one exact API update of `userEnteredValue` only and verify
+full Student View and Master against backup. Then complete remaining feature checks and
+refresh the native backup before the still-authorized unchanged batch. Earlier empty
+Apps Script cleanup remains complete. All backups remain intact; batch writes remain zero.
+The prior entries below are historical and their zero-source-change claims are superseded.
+
 # Cleanup complete — fresh backup checked; remaining preservation gaps
 
 Operative update, September 11, 2026 UTC. Kelsey explicitly approved permanent deletion

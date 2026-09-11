@@ -22,6 +22,11 @@ Follow AGENTS.md's required read order. Then read:
 - `docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json` and its referenced proofs
 - `docs/evidence/SCHOLARSHIP-INTAKE-application-preflight-review.json`
 
+Read `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json` before browser
+actions. Accidental Student View!F1 correction authority is pending; the operative
+handoff has the exact precondition, correction and verification scope. Do not repeat
+the shortcut or blindly undo. The scholarship batch remains unapplied.
+
 The original local objective is complete and independently reviewed. Do not repeat its
 batches. CURRENT_HANDOFF.md's operative status and open-item routing table identify the
 next action, owners, exact triggers and verification limits. The frozen ledger's older

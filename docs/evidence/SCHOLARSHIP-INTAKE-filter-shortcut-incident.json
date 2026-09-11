@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "localValidation": {
+    "git diff --check": "PASS",
+    "npm run plan:check": "Blocked by sandbox tsx IPC listen EPERM; equivalent validator run below completed.",
+    "node --import tsx scripts/validate-build-plan.ts": "Exit 1: only the three pre-existing reserved PLAN-REV15 missing manifest, missing review, missing committed attestation errors.",
+    "scope": "Only incident documentation and status changed; prior code validation remains applicable. No new stage acceptance asserted."
+  },
+  "status": "BLOCKED_SINGLE_CELL_CORRECTION_AUTHORITY",
+  "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "observedAt": "2026-09-11T10:29:06.478Z",
+  "incident": {
+    "action": "Browser pressKey ctrl+cmd+r, intended to inspect the selected filter dropdown",
+    "observedResult": "Google Sheets filled Student View!F1 from E1; Status became Deadline Note.",
+    "cause": "Browser shortcut did not produce the intended read-only command.",
+    "sourceModifiedTime": "2026-09-11T10:27:58.178Z",
+    "unintendedSourceCellWrites": 1
+  },
+  "verification": {
+    "observedAt": "2026-09-11T10:29:06.478Z",
+    "comparedRanges": [
+      "'Student View'!A1:O21",
+      "'Master Database'!A1:O1060"
+    ],
+    "comparedCells": 16215,
+    "differences": [
+      {
+        "sheet": "Student View",
+        "a1": "F1",
+        "source": {
+          "stringValue": "Deadline Note"
+        },
+        "backup": {
+          "stringValue": "Status"
+        },
+        "changedFields": [
+          "formattedValue",
+          "userEnteredValue",
+          "effectiveValue"
+        ]
+      }
+    ],
+    "masterUnchanged": true
+  },
+  "proposedCorrection": {
+    "sheetId": 1472248756,
+    "range": "'Student View'!F1",
+    "expectedCurrentValue": "Deadline Note",
+    "replacementValue": "Status",
+    "fieldMask": "userEnteredValue",
+    "preserveAllOtherFields": true,
+    "method": "Use one exact API update only after explicit narrow correction authority and fresh precondition comparison. Read back full Student View and Master Database; never blind retry."
+  },
+  "authority": "Pending. Existing grant explicitly excludes original workbook restore and unrelated changes; asked Kelsey for this one-cell correction.",
+  "scholarshipBatchWrites": 0,
+  "backupFileId": "1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo",
+  "remaining": "After correction verification, finish preservation gates and create/verify fresh full native backup before any exact-batch application.",
+  "independentReview": {
+    "reviewer": "/root/intake_application_review",
+    "mode": "Read-only; no implementation or workbook actions",
+    "outcome": "PASS proposed correction pending explicit authority",
+    "requiredRequest": {
+      "updateCells": {
+        "range": {
+          "sheetId": 1472248756,
+          "startRowIndex": 0,
+          "endRowIndex": 1,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {
+                "userEnteredValue": {
+                  "stringValue": "Status"
+                }
+              }
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    "requirements": [
+      "Fresh F1 erroneous-value and other-field comparison; stop on conflict.",
+      "Full Student View A1:O21 and Master A1:O1060 comparison after correction.",
+      "No blind retry; no correction or mutation-capable workbook actions while authority pending."
+    ]
+  }
+}

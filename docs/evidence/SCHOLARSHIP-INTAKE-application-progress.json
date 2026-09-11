@@ -1,5 +1,5 @@
 {
-  "status": "BLOCKED_REMAINING_MATERIAL_FEATURE_VERIFICATION",
+  "status": "BLOCKED_SINGLE_CELL_CORRECTION_AUTHORITY",
   "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
   "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
   "folderId": "1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix",
@@ -32,9 +32,12 @@
     "modifiedTime": "2026-09-11T01:10:22.367Z",
     "limitation": "Metadata-only checkpoint; not final content freshness or an atomic check."
   },
-  "nextAction": "Finish current source/backup filter criteria and target merges/hidden dimension preservation checks through a reliable read-only interface. Refresh backup/source/quiet-window checks as required after any pause. Exact batch remains authorized and unapplied; cleanup needs no further approval.",
+  "nextAction": "Await explicit narrow correction authority for accidental Student View!F1 header change. Then fresh-check and correct only userEnteredValue to Status, verify both full Student View and Master Database against pre-incident backup, and resume remaining feature preservation and fresh-backup gates. Do not repeat the browser shortcut or blindly undo.",
   "restartEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-verification-restart.json",
-  "sourceWritesDefinition": "Scholarship cell-write requests; an unexpected bound-script creation changed workbook metadata during UI inspection.",
+  "sourceWritesDefinition": "Authorized scholarship batch write requests only. One accidental Student View!F1 value write occurred during filter inspection; the earlier bound-script metadata incident was separately resolved.",
+  "unexpectedSourceCellWrites": 1,
+  "unexpectedSourceCellWriteCorrectionComplete": false,
+  "filterShortcutIncidentPath": "docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json",
   "unexpectedAttachedProjectCreations": 1,
   "emptyProjectCleanupPath": "docs/evidence/SCHOLARSHIP-INTAKE-empty-project-cleanup.json",
   "emptyProjectCleanupComplete": true,
