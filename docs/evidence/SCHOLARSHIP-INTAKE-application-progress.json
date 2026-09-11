@@ -1,9 +1,9 @@
 {
-  "status": "BLOCKED_PENDING_EMPTY_PROJECT_CLEANUP_CONFIRMATION",
+  "status": "BLOCKED_REMAINING_MATERIAL_FEATURE_VERIFICATION",
   "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
   "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
   "folderId": "1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix",
-  "backupFileId": "11OuqHa6JcTlJwhzcxOR5i6ZZoQQ8cLgAcglQQfMSGMY",
+  "backupFileId": "1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo",
   "recoveryTestFileId": "1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0",
   "privateAccessVerified": true,
   "owner": "Kelsey Stuart",
@@ -23,17 +23,21 @@
   "backupContentEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-backup-content-check.json",
   "readbackEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-application-readback-proof.json",
   "remainingGates": [
-    "User signs in as Kelsey to Google Sheets in in-app browser; inspect original and backup read-only for protections, named ranges, filters, conditional formatting, validations, merges, hidden dimensions/tabs, scripts/triggers/connections and other material features.",
-    "Recheck private access, all exact preimages and source fingerprints immediately before writing; stop on conflicting newer edits or material batch change.",
-    "Use one writer during confirmed quiet session; reconfirm quiet-window coverage after an interrupted session. Existing exact batch authority persists."
+    "Current filter/view criteria and any merges/hidden dimensions affecting Master targets remain incompletely reconciled; UI menu actions did not reliably expose required panels. No absent-feature claims from omitted API fields.",
+    "Finish material-feature preservation coverage, including charts/connections if present and relevant; reuse verified full content, empty source protection/named-range/validation panels and script cleanup evidence.",
+    "Final exact preimage/fingerprint, private-access and quiet-window checks. After pause/source change, refresh full backup as required by intake-plan section 7."
   ],
   "lastMetadataObservation": {
     "revision": "226",
     "modifiedTime": "2026-09-11T01:10:22.367Z",
     "limitation": "Metadata-only checkpoint; not final content freshness or an atomic check."
   },
-  "nextAction": "Await exact empty-project deletion confirmation; then finish preservation and final freshness checks. Scholarship batch remains unapplied.",
+  "nextAction": "Finish current source/backup filter criteria and target merges/hidden dimension preservation checks through a reliable read-only interface. Refresh backup/source/quiet-window checks as required after any pause. Exact batch remains authorized and unapplied; cleanup needs no further approval.",
   "restartEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-verification-restart.json",
   "sourceWritesDefinition": "Scholarship cell-write requests; an unexpected bound-script creation changed workbook metadata during UI inspection.",
-  "unexpectedAttachedProjectCreations": 1
+  "unexpectedAttachedProjectCreations": 1,
+  "emptyProjectCleanupPath": "docs/evidence/SCHOLARSHIP-INTAKE-empty-project-cleanup.json",
+  "emptyProjectCleanupComplete": true,
+  "priorBackupFileId": "11OuqHa6JcTlJwhzcxOR5i6ZZoQQ8cLgAcglQQfMSGMY",
+  "freshBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-fresh-backup-verification.json"
 }

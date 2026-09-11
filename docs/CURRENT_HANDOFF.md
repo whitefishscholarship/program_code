@@ -1,3 +1,38 @@
+# Cleanup complete — fresh backup checked; remaining preservation gaps
+
+Operative update, September 11, 2026 UTC. Kelsey explicitly approved permanent deletion
+of the exact empty project. Google confirmed **Project permanently deleted** and returned
+to the prior 45-project list. No script code was edited, executed or deployed. Cleanup
+is complete and needs no further approval. Evidence:
+`docs/evidence/SCHOLARSHIP-INTAKE-empty-project-cleanup.json`.
+
+A fresh private native workbook backup was created under the existing grant after cleanup,
+as section 7 requires following a pause/source change. ID:
+`1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo`, created `2026-09-11T10:10:43.401Z`,
+in the approved recovery folder with Kelsey as sole owner. Earlier backups remain intact.
+All 14 approved native scholarship-content ranges match source to fresh backup; tab
+metadata and conditional formatting match. Browser access to the backup is verified.
+All five Student View filter names exist in both source and fresh backup. Current Master
+A1:O1060 still equals the exact successful disposable-recovery baseline, hash
+`0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e`.
+Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-fresh-backup-verification.json`.
+
+**BLOCKED; scholarship cell-write requests remain zero.** Complete current filter/view
+criteria and relevant target-area merges/hidden-dimension recovery coverage have not been
+reconciled. Some browser menu actions failed to expose intended panels reliably, even
+though menu-search reads and content comparisons worked. Do not convert missing metadata
+into absent-feature assertions. Resolve those exact checks using a reliable read-only
+interface; avoid creating any more Apps Script projects. Then finish material-feature
+preservation and immediate pre-write freshness/access/quiet-window checks. After another
+pause/source change, create and verify a fresh full backup under the existing authority.
+Do not repeat the scholarship research or ask for exact batch/cleanup authority again.
+
+The original file's metadata changed during the now-resolved script incident; scholarship
+cells stayed unchanged in full native comparisons. Original restore and website publication
+remain unauthorized. The earlier entries below are history; their pending-cleanup and
+sign-in descriptions are superseded by this entry. Current checkpoint follows
+`0c6ca1b3bc1d064383dccbd52ab6257679152d6b`; resolve branch tip locally.
+
 # Verification restart — sign-in complete; empty-project cleanup pending
 
 Operative update, September 11, 2026 UTC: owner sign-in succeeded. Private recovery
