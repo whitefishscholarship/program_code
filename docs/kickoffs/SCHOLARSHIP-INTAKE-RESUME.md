@@ -23,8 +23,8 @@ Follow AGENTS.md's required read order. Then read:
 - `docs/evidence/SCHOLARSHIP-INTAKE-application-preflight-review.json`
 
 Read `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json` before browser
-actions. Accidental Student View!F1 correction authority is pending; the operative
-handoff has the exact precondition, correction and verification scope. Do not repeat
+actions. Student View!F1 correction is approved and verified; the operative
+handoff has final backup checks and application state. Do not repeat
 the shortcut or blindly undo. The scholarship batch remains unapplied.
 
 The original local objective is complete and independently reviewed. Do not repeat its

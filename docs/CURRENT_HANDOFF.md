@@ -1,3 +1,22 @@
+# Header corrected — final backup and safeguards verified
+
+Operative September 11, 2026. Kelsey approved the exact F1 correction and continuation.
+The one-cell connector correction passed full 16,215-cell readback. No repeat approval
+is needed. See SCHOLARSHIP-INTAKE-header-correction.json.
+
+Fresh backup `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM` is private to Kelsey,
+opened read-only and reconciled across all 14 approved ranges, all raw sheet metadata,
+filters, rules and full Master row/column metadata. Current Master equals the successful
+disposable recovery baseline. See final-backup-verification.json and
+final-feature-preservation.json in docs/evidence. Bounded zero-match metadata inspection
+left source revision 228 and modified time unchanged.
+
+Exact batch remains unapplied. Finish final independent safeguard check and immediate
+pre-write source/preimage/access comparison, then apply only the unchanged authorized
+301 requests (219 additions, 38 updates, 3367 cells). Read back every target and all
+untargeted Master cells; no blind retry or original rollback. Prior blocked entries below
+are superseded by this update. No publication or delivery authority added.
+
 # Verification stopped — accidental Student View header change
 
 Operative update, September 11, 2026 at 10:29 UTC. A browser shortcut intended to open
