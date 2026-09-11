@@ -1,7 +1,7 @@
 # Scholarship intake local proposal
 
 UNAPPLIED. 1666/1666 source rows decided; 0 entities pending. 219 proposed additions and 38 related corrections (82 cells).
-Batch digest: `bb19b1ea5c29c3a56264b1917964f8133b97512e6f7c43e2a19d82dadc73285e`. Sole ledger SHA256: `a2fcc4eb7002be2d9cbad0f15a83e5f77f36f24a514e9dca2e0191efa5cf26d7`.
+Batch digest: `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`. Sole ledger SHA256: `460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed`.
 Source: `intake-rev226-74df373b3e30738e`; 14 tabs. These are source/evaluation counts, not accepted or published awards.
 
 ## Authority and recovery

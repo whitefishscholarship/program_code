@@ -2,7 +2,7 @@
 
 Updated September 11, 2026 UTC. Canonical plan revision15; intake plan SCHOLARSHIP-INTAKE-1.
 Execution: `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
-Prior checkpoint `65f58fd048cc6ef677588b941aa181c7b13265b3`; this freeze follows it.
+Prior reviewed candidate `06f9c821995557438919331dde191348cd32bbf7`; this remediation freeze follows it.
 Resolve exact tip with `git rev-parse codex/scholarship-intake`. User checkpoint
 `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` remains an ancestor. Original checkout untouched.
 Normal read-only fetch reverified `origin/main` at `5fa08541b6b49484dedc8fc06012e47c658ce8fb`;
@@ -10,7 +10,7 @@ see `docs/evidence/scholarship-intake/final-baseline.json`.
 
 ## Source, scope and reviewed work
 
-- Sole ledger: `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `a2fcc4eb7002be2d9cbad0f15a83e5f77f36f24a514e9dca2e0191efa5cf26d7`.
+- Sole ledger: `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed`.
 - Workbook `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`; frozen source
   `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
@@ -31,7 +31,7 @@ see `docs/evidence/scholarship-intake/final-baseline.json`.
 
 - Human report: `docs/evidence/SCHOLARSHIP-INTAKE-report.md`.
 - Exact batch: `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`.
-  Digest `bb19b1ea5c29c3a56264b1917964f8133b97512e6f7c43e2a19d82dadc73285e`;257operations/3,367cells:
+  Digest `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`;257operations/3,367cells:
   219fixed appendedA:Orecords atA199:O417 and82changed existingcells on38Masterrows.
 - I65 is the single excluded field recommendation: preserve known native bold runs
   through an independently reviewed mapping before any changed batch is authorized.
@@ -70,6 +70,17 @@ New exact authority is required before privatebackup/recoverycopies or workbookw
 new separate exact push/PR/Preview/merge/Production/verificationauthority or verified
 applicable suppression is required for publication. FullMasterrefresh and selected
 interview/publication changes remain future work, not part of this intake.
+
+## Fresh-context review remediation
+
+Original candidate06f9c82 independently reviewed: no critical/high/medium findings;
+three low findings corrected by root: native row-value projection guard + tamper test,
+whitespace-normalized evidence logs retaining raw hashes, and two academic coverage
+choice references corrected to card-only without changing valid disability/gender tags.
+Full verification recheck records in final-validation-recheck/results.json.
+Final independent recheck remains pending; no source facts, operation targets or values
+changed. Reach baccalaureate exclusion separately reconfirmed against exact official
+junior/senior current-college wording; details retained in final review receipt.
 
 ## Historical checkpoints below — superseded by the operative status above
 

@@ -42,6 +42,18 @@ export type Ledger = {schemaVersion:number;planId:string;inputs:{workbookId:stri
   snapshotFiles:{path:string;sha256:string}[];tabs:{sheetId:number;populatedRows:number}[]};
   rows:Row[];entities:Entity[];officialSources:{id:string;evidencePath:string;url:string;observedAt:string;contentSha256:string}[];
   discoveries:{enumeratedCount:number;reviewedByImplementer:number;remainingCount:number}[];};
+type SourceValue={stringValue?:string;numberValue?:number;boolValue?:boolean;formulaValue?:string};
+export function projectNativeRow(cells:{formattedValue?:string;effectiveValue?:SourceValue;userEnteredValue?:SourceValue}[]):string[] {
+  return cells.map(c=>{
+    if(c.formattedValue!==undefined)return c.formattedValue;
+    for(const v of [c.effectiveValue,c.userEnteredValue]){
+      if(v?.stringValue!==undefined)return v.stringValue;
+      if(v?.numberValue!==undefined)return String(v.numberValue);
+      if(v?.boolValue!==undefined)return v.boolValue?'TRUE':'FALSE';
+    }
+    return '';
+  });
+}
 const dispositions = new Set(['propose_add','propose_update','link_existing','duplicate_of','hold','out_of_scope','non_record']);
 export function validateIntakeLedger(l: Ledger, root: string, complete = false) {
   assert.equal(l.schemaVersion,1); assert.equal(l.planId,'SCHOLARSHIP-INTAKE-1');
@@ -51,12 +63,13 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
   const sources=new Map(l.officialSources.map(s=>[s.id,s])); assert.equal(sources.size,l.officialSources.length);
   for(const f of l.inputs.snapshotFiles) assert.equal(sha256(fs.readFileSync(path.join(root,f.path))),f.sha256,`Changed snapshot ${f.path}`);
   const snapshotRows = new Map<string,string>();
+  const snapshotValues = new Map<string,string[]>();
   const canonical = (value: unknown): unknown => Array.isArray(value) ? value.map(canonical) : value && typeof value === 'object' ? Object.fromEntries(Object.entries(value as Record<string,unknown>).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>[k,canonical(v)])) : value;
   for(const f of l.inputs.snapshotFiles){
     const doc=JSON.parse(fs.readFileSync(path.join(root,f.path),'utf8')) as {response:{sheets:{properties:{sheetId:number};data:{startRow?:number;rowData?:{values?:Record<string,unknown>[]}[]}[]}[]}};
     for(const sheet of doc.response.sheets)for(const block of sheet.data)for(const [i,r] of (block.rowData??[]).entries()){
       const cells=r.values??[];
-      if(cells.some(c=>c.userEnteredValue||c.effectiveValue||c.formattedValue))snapshotRows.set(`${sheet.properties.sheetId}:${(block.startRow??0)+i+1}`,sha256(JSON.stringify(canonical(cells))));
+      if(cells.some(c=>c.userEnteredValue||c.effectiveValue||c.formattedValue)){const key=`${sheet.properties.sheetId}:${(block.startRow??0)+i+1}`;snapshotRows.set(key,sha256(JSON.stringify(canonical(cells))));snapshotValues.set(key,projectNativeRow(cells));}
     }
   }
   assert.equal(snapshotRows.size,l.rows.length,'Selected populated source row lost');
@@ -65,6 +78,7 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
   for(const tab of l.inputs.tabs) assert.equal(l.rows.filter(r=>r.sheetId===tab.sheetId).length,tab.populatedRows,'Tab denominator mismatch');
   for(const r of l.rows) {
     assert.equal(snapshotRows.get(`${r.sheetId}:${r.rowNumber}`),r.rowContentSha256,'Source row hash mismatch');
+    assert.deepEqual(r.values,snapshotValues.get(`${r.sheetId}:${r.rowNumber}`),'Source row value projection mismatch');
     assert(r.id.startsWith(`${l.inputs.snapshotId}:sheet-${r.sheetId}:row-${r.rowNumber}:`));
     assert(r.id.endsWith(r.rowContentSha256.slice(0,12)));assert(/^[a-f0-9]{64}$/.test(r.rowContentSha256));
     assert(r.disposition===null||dispositions.has(r.disposition),'Invalid disposition');

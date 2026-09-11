@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "originalCandidate": "06f9c821995557438919331dde191348cd32bbf7",
+  "status": "root_remediated_awaiting_independent_recheck",
+  "findings": [
+    {
+      "id": "FINAL-LOCAL-L1",
+      "severity": "low",
+      "owner": "root",
+      "target": "final local candidate recheck",
+      "rationale": "Validate duplicated row.values against exact native display projection, not only rowContentSha. All1666originalprojections already matched; meaningful mutation regression now rejects a changed projection and tests numeric/bool/empty/text fallbacks.",
+      "status": "remediated_pending_recheck"
+    },
+    {
+      "id": "FINAL-LOCAL-L2",
+      "severity": "low",
+      "owner": "root",
+      "target": "fullbaseline diff whitespace and final local candidate recheck",
+      "rationale": "Normalize terminal log whitespace only, retain rawSHA and immutableoriginalcommit reference, updatepresentationhashes. Rerun fullbaseline whitespace after newevidence is tracked.",
+      "status": "remediated_pending_recheck"
+    },
+    {
+      "id": "FINAL-LOCAL-L3",
+      "reviewPartitionAlias": "FIELDS-L1",
+      "severity": "low",
+      "owner": "root",
+      "target": "final local candidate recheck",
+      "rationale": "AnneFord01217260b07da0c9 andLiveYourDreamd7458d47b1808d27 academiccoverage entries nowcardonly/null. Separate valid disability/gender tags unchanged.",
+      "status": "remediated_pending_recheck"
+    }
+  ],
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "ledgerSha256": "460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed",
+  "operationCount": 257,
+  "cellCount": 3367,
+  "sourceWrites": 0
+}

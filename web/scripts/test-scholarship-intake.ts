@@ -1,5 +1,7 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import assert from 'node:assert/strict';
-import {canApplyIntake,INTAKE_WORKBOOK,validateProposalRecords,validateClosureRecords,type WriteGate,type Ledger,type Entity} from './scholarship-intake';
+import {canApplyIntake,INTAKE_WORKBOOK,validateProposalRecords,validateClosureRecords,projectNativeRow,validateIntakeLedger,type WriteGate,type Ledger,type Entity} from './scholarship-intake';
 const valid:WriteGate={workbookId:INTAKE_WORKBOOK,batchDigest:'a'.repeat(64),authorizedBatchDigest:'a'.repeat(64),exactWriteAuthority:true,completeNativeBackup:true,allTabsIncludingHidden:true,privateAccessVerified:true,materialFeaturesRecoverable:true,disposableRecoveryProof:true,affectedCellBackup:true,backupUnchanged:true,freshForThisBatch:true,snapshotFingerprint:'b'.repeat(64),liveFingerprint:'b'.repeat(64),quietWindowOrAtomicPrecondition:true,independentReviewComplete:true,unresolvedHighOrCritical:0,uncertainPriorWrite:false,alreadyApplied:false};
 assert(canApplyIntake(valid));
 for(const key of ['exactWriteAuthority','completeNativeBackup','allTabsIncludingHidden','privateAccessVerified','materialFeaturesRecoverable','disposableRecoveryProof','affectedCellBackup','backupUnchanged','freshForThisBatch','quietWindowOrAtomicPrecondition','independentReviewComplete'] as const)assert(!canApplyIntake({...valid,[key]:false}),key);
@@ -43,3 +45,11 @@ const pendingField=structuredClone(closure);pendingField.relatedFieldTriage[0].f
 const unsupportedGap=structuredClone(closure);unsupportedGap.interviewGaps[0].supportingEntityIds=['missing'];assert.throws(()=>validateClosureRecords(unsupportedGap),/Unknown gap-support entity/);
 const noTrigger=structuredClone(closure);noTrigger.entities[0].disposition='hold';assert.throws(()=>validateClosureRecords(noTrigger),/Hold lacks owner or actionable trigger/);
 console.log('Intake closure rejects lost children, pending triage, orphaned recommendations and unactionable holds.');
+
+assert.deepEqual(projectNativeRow([{formattedValue:'  displayed  ',effectiveValue:{stringValue:'other'}},{formattedValue:''},{effectiveValue:{numberValue:0}},{effectiveValue:{boolValue:false}},{userEnteredValue:{stringValue:'literal'}},{userEnteredValue:{numberValue:42}},{userEnteredValue:{boolValue:true}},{}]),['  displayed  ','','0','FALSE','literal','42','TRUE','']);
+const root=path.resolve(import.meta.dirname,'../..');
+const actual=JSON.parse(fs.readFileSync(path.join(root,'docs/evidence/SCHOLARSHIP-INTAKE-ledger.json'),'utf8')) as Ledger;
+validateIntakeLedger(actual,root,true);
+actual.rows.find(r=>r.sheetId===445586487&&r.rowNumber===2)!.values[8]='SYNTHETIC REVIEW PROJECTION TAMPER';
+assert.throws(()=>validateIntakeLedger(actual,root,true),/Source row value projection mismatch/);
+console.log('Native row projections preserve exact display text and reject independently tampered ledger values.');

@@ -1,0 +1,146 @@
+{
+  "status": "LOCAL_VALIDATION_NOT_APPLICATION_HEALTH_OR_ACCEPTANCE",
+  "commands": [
+    {
+      "rawLogSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "plan-check",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:53:13.472716+00:00",
+      "finishedAt": "2026-09-11T07:53:35.116522+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/plan-check.log",
+      "logSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285"
+    },
+    {
+      "rawLogSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:53:35.116754+00:00",
+      "finishedAt": "2026-09-11T07:53:38.903235+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/typecheck.log",
+      "logSha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"
+    },
+    {
+      "rawLogSha256": "57af8814c2926b63e6c49b585694045e13a5293de5000e937b9673f86af4d08d",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:53:38.903429+00:00",
+      "finishedAt": "2026-09-11T07:54:13.286288+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/test.log",
+      "logSha256": "57af8814c2926b63e6c49b585694045e13a5293de5000e937b9673f86af4d08d"
+    },
+    {
+      "rawLogSha256": "f0afdc07194ce98d57b6567ddcdd87709e62bc231ac075e69bed9979d0f0b512",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:54:13.286502+00:00",
+      "finishedAt": "2026-09-11T07:54:19.023437+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/build.log",
+      "logSha256": "3eef880f33cebe409c8fc9ebf9907de4d95253cdcd12467bc6459649ba6a3c7a"
+    },
+    {
+      "rawLogSha256": "b62f433b11c27bec289ded86d1c702c6dffdaba55612ebc50edcd899770e2cc9",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "runtime-boundary",
+      "command": [
+        "npm",
+        "run",
+        "p9:production:check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:54:19.023722+00:00",
+      "finishedAt": "2026-09-11T07:54:19.472765+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/runtime-boundary.log",
+      "logSha256": "b62f433b11c27bec289ded86d1c702c6dffdaba55612ebc50edcd899770e2cc9"
+    },
+    {
+      "rawLogSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "intake-complete",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/scholarship-intake.ts",
+        "--complete"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:54:19.472974+00:00",
+      "finishedAt": "2026-09-11T07:54:19.655679+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/intake-complete.log",
+      "logSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da"
+    },
+    {
+      "rawLogSha256": "83a2d900706c808e8035d2e76f3e1447a701cb309f55eebb46f26b849eeadf47",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "dry-run",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/intake-promotion.ts",
+        "--complete",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:54:19.655932+00:00",
+      "finishedAt": "2026-09-11T07:54:19.946275+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/dry-run.log",
+      "logSha256": "83a2d900706c808e8035d2e76f3e1447a701cb309f55eebb46f26b849eeadf47"
+    },
+    {
+      "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "CR/LF, trailing whitespace and terminal blank lines normalized; command message text unchanged.",
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "5fa08541b6b49484dedc8fc06012e47c658ce8fb"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake",
+      "startedAt": "2026-09-11T07:54:19.946524+00:00",
+      "finishedAt": "2026-09-11T07:54:20.033290+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation-recheck/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanInstall": {
+    "command": "npm ci --offline",
+    "exitCode": 0,
+    "packagesAdded": 438,
+    "packagesAudited": 439,
+    "vulnerabilities": 0,
+    "evidence": "Observed tool execution before this matrix; exact per-command timestamp not retained. Dependency files unchanged since install."
+  }
+}

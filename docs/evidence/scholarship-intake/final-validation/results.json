@@ -13,7 +13,9 @@
       "finishedAt": "2026-09-11T07:42:35.817503+00:00",
       "exitCode": 1,
       "logPath": "docs/evidence/scholarship-intake/final-validation/plan-check.log",
-      "logSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285"
+      "logSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285",
+      "rawLogSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "typecheck",
@@ -27,7 +29,9 @@
       "finishedAt": "2026-09-11T07:42:39.486803+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/typecheck.log",
-      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+      "logSha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+      "rawLogSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "test",
@@ -40,7 +44,9 @@
       "finishedAt": "2026-09-11T07:43:13.766455+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/test.log",
-      "logSha256": "0fbe0fc1470a5d9b6a93a34bd6c3ebcb9895b7869b990a4e6d7dac5d0f22c4ef"
+      "logSha256": "0fbe0fc1470a5d9b6a93a34bd6c3ebcb9895b7869b990a4e6d7dac5d0f22c4ef",
+      "rawLogSha256": "0fbe0fc1470a5d9b6a93a34bd6c3ebcb9895b7869b990a4e6d7dac5d0f22c4ef",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "build",
@@ -54,7 +60,9 @@
       "finishedAt": "2026-09-11T07:43:24.666517+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/build.log",
-      "logSha256": "bce795b70eb1853a9cbc7f0caaafea06b5bb300921efd220aac05819cc7a0cd8"
+      "logSha256": "8997a1d90af3b223561dbb70dbc850fb605ffe0cd76eb12d333b222e8060ed5f",
+      "rawLogSha256": "bce795b70eb1853a9cbc7f0caaafea06b5bb300921efd220aac05819cc7a0cd8",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "runtime-boundary",
@@ -68,7 +76,9 @@
       "finishedAt": "2026-09-11T07:43:25.107177+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/runtime-boundary.log",
-      "logSha256": "78bf91ecff5bc60db082860404a6cb3d5435f7a4dffaa6b0376873208b206e8e"
+      "logSha256": "78bf91ecff5bc60db082860404a6cb3d5435f7a4dffaa6b0376873208b206e8e",
+      "rawLogSha256": "78bf91ecff5bc60db082860404a6cb3d5435f7a4dffaa6b0376873208b206e8e",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "intake-complete",
@@ -84,7 +94,9 @@
       "finishedAt": "2026-09-11T07:43:25.301746+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/intake-complete.log",
-      "logSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da"
+      "logSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da",
+      "rawLogSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "dry-run",
@@ -101,7 +113,9 @@
       "finishedAt": "2026-09-11T07:43:25.593783+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/dry-run.log",
-      "logSha256": "52a79e2005d214409c9519e32ed4c11a023257bc49c868edcc36da192b619f27"
+      "logSha256": "52a79e2005d214409c9519e32ed4c11a023257bc49c868edcc36da192b619f27",
+      "rawLogSha256": "52a79e2005d214409c9519e32ed4c11a023257bc49c868edcc36da192b619f27",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     },
     {
       "name": "diff-check",
@@ -115,7 +129,9 @@
       "finishedAt": "2026-09-11T07:43:25.683780+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/scholarship-intake/final-validation/diff-check.log",
-      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawLogImmutableCommit": "06f9c821995557438919331dde191348cd32bbf7"
     }
   ],
   "cleanInstall": {
@@ -125,5 +141,6 @@
     "packagesAudited": 439,
     "vulnerabilities": 0,
     "evidence": "Observed tool execution before this matrix; exact per-command timestamp not retained. Dependency files unchanged since install."
-  }
+  },
+  "logPresentationNormalization": "Normalize CR/LF, strip trailing whitespace and terminal blank EOF lines only. Original raw logs remain in immutable candidate06f9c82 with per-log rawSHA; command messages/results unchanged."
 }
