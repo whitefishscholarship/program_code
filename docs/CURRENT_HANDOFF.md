@@ -7,32 +7,41 @@ Default branch: `main`
 
 ## Active resumption checkpoint — September 11 UTC
 
-- Resumed clean `codex/scholarship-intake` from `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`.
-  Secure fetch confirms main remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
-  Latest committed evaluation before this checkpoint: `adf3eeb4f67577abd9b932c23eef1af58b2015df`.
-  Resolve exact latest recovery commit with `git rev-parse codex/scholarship-intake`.
-- Snapshot unchanged: `intake-rev226-74df373b3e30738e`,1666rows/14tabs; full digest in prior section.
-  Sole ledger SHA256 `a94a32909cf88ccfecc27716bfc554265bb36c50b80aeda2865740392188636d`. Current counts: {"decidedRows": 1295, "pendingEntities": 232, "proposedAdds": 183, "proposedUpdates": 2, "reviewedRows": 1153}.
-- Supplemental011 independent PASS after NTHS duplicate withdrawn to Master143,
-  PAPA provenance corrected and Epic Master130 linked. Receipt `SCHOLARSHIP-INTAKE-batch-review-association-supplement.json`.
-- Housing/SEED/trades012 independent PASS after AWS duplicate withdrawn to Master148,
-  WTS pool linked Master111, complete discovery records and BuildingHope existing trades mapping.
-  One new addition BuildingHope; receipt `SCHOLARSHIP-INTAKE-batch-review-housing-seed-trades.json`.
-  Historical reviewed proposals/receipts preserved; these corrections do not rewrite history.
-- MCF013 authored56entities/56directorychildren,3conditional additions; independent review active.
-  Reviewer re-observed all5pages; Webber audience conflict requires hold instead of exclusion,
-  and typical amount qualifiers/Evelyn directory-v-detail conflict still require remediation.
-- Structural014 authored21entities/68source rows (headers/context included); independent review pending.
-- Avfuel/Pearl015 authored16entities,2proposed additions (AVTRIP, Pilot-in-Training), closed-route
-  holds and explicit Hawaii/camp exclusions; independent review pending. Avfuel form redemption
-  September1,2027 conflicts with parent October31,2027; retained unresolved in each proposal.
-- Related-field triage223rows/683differences, full testing/build, exact operations/gap report,
-  fresh workbook fingerprints and complete final independent review remain unfinished.
-- Next: resolve/recheck MCF findings; review014/015; continue remaining232entities and related triage.
-  Reuse saved evidence, do not rerun author scripts. `/private/tmp/intake_resume_*.py` append
-  decisions and must not be rerun. New durable evidence under `docs/evidence/scholarship-intake/`.
-- Backup/recovery copies absent/unauthorized; source writes0. No publishing, hosted verification,
-  applicant data, provider contact, new questions/rules or runtime changes. All proposals unapplied.
+- Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
+  Resumed clean requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`;
+  secure fetch verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged.
+  Prior exact local checkpoint `bb82231c49cd9efcb2ce141a37604909c3ed531e`;
+  resolve this checkpoint with `git rev-parse codex/scholarship-intake`. Original checkout preserved.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `7230bc48efffa699e3e1ceda9bc4bdc1f47c1c29f7b77da6aa54e235015577a1`.
+  Source snapshot unchanged `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
+  Current counts `{"rows": 1666, "entities": 916, "decidedRows": 1314, "pendingEntities": 219, "proposedAdds": 183, "proposedUpdates": 8, "reviewedRows": 1289}`. All additions/corrections are unapplied proposals.
+- Independent PASS receipts saved for supplemental011, housing/SEED/trades012,
+  MCF013, structural014, Avfuel/Pearl015. Prior receipts and source snapshot bytes preserved.
+  MCF013 holds Webber conflicting eligibility; qualifiers/portal timestamp fixed.
+  Avfuel tags fixed; parent/form redemption-date conflict remains explicit.
+- Related triage016 review of bb82231 FAIL C0/H3/M0/L0: wrong-cell URL comparisons,
+  missing reference017field differences, and generic holds for material related differences.
+  Current remediation: exact native application-cell links;9newtriage rows/33fields added;
+  total232triage rows/716fields. Bounded official verification covers10Masterprograms in018.
+  Six additional Master update records proposed:54,65,114,149,164,167; not yet independently accepted.
+  Smile web/download2026deadline conflict and BlueCollar/Wells tentative renewal/rules stay held.
+  AdoptionSTAR academic amount/deadline contaminated by unrelated adoptiongrant corrected to unknown.
+- Triage review continuation identified17more Master rows needing specific evaluation:
+  3,4,6,21,29,31,78,98,110,116,118,119,135,140,142,144,146; plus WTS L111–115.
+  Remaining generic historical/formatting/default differences reviewed as not requiring broader
+  currentMasterrefresh. Record per-field rationale and follow up18withindependentrecheck.
+- Next executable action: complete these17bounded material checks, recheck016–018, then
+  continue219remainingentities (university groups and remainingofficialproviders/aggregators).
+  FVCC/MSU/UM parent sources saved `.firecrawl/resume-*-scholarships.json`, not yet authored.
+  FVCC public browser confirms16namedprogramsections but no scholarshipapplicationlinks for
+  donor/Eagle/STEM/Honors; keep route limitations. Browser publictab1 only, no form input.
+  Reuse saved sources; do not rerun completed `/private/tmp/intake_resume_*.py` author scripts.
+- Partialledger validation passes; fullsuite/build, exact dryrun/report/gapcoverage, freshsource
+  fingerprints and complete final independent review remain unfinished. No final acceptance claim.
+- Backup/recoverycopies absent and unauthorized; affectedcellbackup absent; sourcewrites0.
+  No publishing/Preview/merge/Production/hostedverification, applicantdata, providercontact,
+  new questions/rules, runtime changes or services. New exact copy/write/release authority required.
 
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
