@@ -1,0 +1,102 @@
+{
+  "reviewer": "/root/intake_batch_review",
+  "reviewedAt": "2026-09-11T03:47:12.316986+00:00",
+  "scope": [
+    "batch-epic-009",
+    "batch-wai-010",
+    "batch-ngpa-alias-008a"
+  ],
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "candidateCommit": "3afb81b4eccaab99be66b074579d7f43d3b3fb10",
+  "candidateSupplement": "Two uncommitted hold-record fixes for c659f7c388a624e8 and 4dbe473a1a3f00fb, included in reviewed digest.",
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "reviewedSubsetSha256": "73ac6987f165ae5d95ada2196768f110641749de4812ea8f121c72912acdf4a6",
+  "digestDefinition": "UTF8 canonical JSON sorted keys, compact separators, ensure_ascii=False; recursively exclude review; exclude top-level batch/entity status. Include snapshotId, three batches, distinct entities/rows,17 referenced sources,5 Epic/WAI discoveries,41 scoped holds,scoped interview gaps,evidence hashes. Sort batches/entities/rows/sources by ID and discoveries by sourceId; otherwise preserve array order. Exclude unrelated discovery records and supplemental batch011.",
+  "coverage": {
+    "entityRecords": 140,
+    "inputRows": 147,
+    "proposedAdditions": 60,
+    "proposedUpdates": 2,
+    "existingLinks": 3,
+    "duplicates": 22,
+    "heldEntities": 41,
+    "outOfScopeEntities": 12,
+    "proposedFieldDecisions": 902,
+    "tags": 62,
+    "interviewCoverageDecisions": 182,
+    "waiCurrentNamedAwards": 63,
+    "waiCurrentAdditions": 49,
+    "waiHistoricalAdditions": 10
+  },
+  "cumulativeFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 3
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "M1",
+      "title": "Missing historical King Air mechanic award",
+      "status": "resolved",
+      "rationale": "Explicit historical mechanic identity hold and separate child discovery added.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    },
+    {
+      "id": "M2",
+      "title": "Suggested Boeing GPA became mandatory",
+      "status": "resolved",
+      "rationale": "J blank; I, evidence and coverage preserve should wording.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    },
+    {
+      "id": "M3",
+      "title": "Four Republic historical rows unaccounted",
+      "status": "resolved",
+      "rationale": "Four source rows held and linked to historical WAI identity; rename unresolved.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    },
+    {
+      "id": "L1",
+      "title": "109 field observation and route bindings",
+      "status": "resolved",
+      "rationale": "Actual cited-source times and route/deadline locators now used.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    },
+    {
+      "id": "L2",
+      "title": "Stale Epic/WAI pending prose",
+      "status": "resolved",
+      "rationale": "Discovery pending list and evidence prose now record resolved WAI child.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    },
+    {
+      "id": "L3",
+      "title": "Two held aliases lacked hold records",
+      "status": "resolved",
+      "rationale": "Both aliases have held-counterpart links and owner/reason/trigger/next action.",
+      "owner": "implementation agent",
+      "target": "Epic/WAI bounded checkpoint"
+    }
+  ],
+  "evidenceSha256": {
+    "epic-field-evidence.json": "dd93db1c96b56b02b14558e32948e4aea2c86f10903b453307b611538ca5f9f8",
+    "wai-field-evidence.json": "a7f19b0b01e2e1698a4d81c8be4fe92c61e7112c5caa483f0027e3fd8967e69a",
+    "ngpa-field-evidence.json": "59bf4b23df74056159a7dbc30b7f79481a03f799789d6e92b6c29b84eada56ff"
+  },
+  "reviewerEdits": 0,
+  "externalActions": 0,
+  "finalAuditAcceptance": false
+}
