@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 14,
+  "planRevision": 15,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-10",
+  "lastUpdated": "2026-09-11",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -466,7 +466,8 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending"
+      "P9-attestation-and-delivery-pending",
+      "PLAN-REV15-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
     ]
   },
   "governance": {
@@ -735,6 +736,22 @@
           "basis": "Kelsey replied yes on September 10, 2026 to the exact publication question after the tested independently reviewed local candidate was presented. This is new direct release authority.",
           "scope": "Deliver INTERVIEW-RELEVANCE-1 / PLAN-REV14 only: branch push, PR creation/update, resulting Vercel Preview, merge, resulting Vercel Production deployment and verification on existing project web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Refreeze, independent recheck and direct-child attestation precede publication. Verify Preview before merge and Production afterward. No rollback, source/spreadsheet access or mutation, configuration/permission changes, monitoring, applicant data or unrelated effects."
         }
+      },
+      {
+        "id": "PLAN-REV15",
+        "status": "attestation-gated",
+        "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+        "evidencePath": "docs/evidence/PLAN-REV15.md",
+        "manifestPath": "docs/evidence/PLAN-REV15-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV15.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "Kelsey authorized local preparation, prospective amendment, read-only intake evaluation, implementation, testing and independent review. New exact release authority is expressly reserved.",
+          "scope": "Local SCHOLARSHIP-INTAKE-1 preparation only. No push, PR, Preview, merge, Production or hosted verification."
+        }
       }
     ]
   },
@@ -881,5 +898,25 @@
     "Do not store applicant PII or credentials.",
     "Require independent fresh-context review before stage acceptance.",
     "Do not ask Kelsey routine Git questions."
-  ]
+  ],
+  "scholarshipIntake": {
+    "planId": "SCHOLARSHIP-INTAKE-1",
+    "status": "policy-review-pending",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV15.md",
+    "planningCommit": "0ffa90b12502b2a031a6012e16014301def07205",
+    "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "localPreparationAuthorized": true,
+    "readOnlyScholarshipEvaluationAuthorized": true,
+    "boundedOfficialSourceVerificationAuthorized": true,
+    "backupCopyAuthorized": false,
+    "recoveryCopyAuthorized": false,
+    "spreadsheetWriteAuthorized": false,
+    "publicationAuthorized": false,
+    "runtimeChangesAuthorized": false,
+    "policyReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-policy-review.json",
+    "ledgerPath": "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json",
+    "proposedWritesPath": "docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json",
+    "backupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json"
+  }
 }

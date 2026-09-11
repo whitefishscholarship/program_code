@@ -1,72 +1,153 @@
 # Current Handoff
 
 Last updated: 2026-09-10
-Plan revision: 14
+Plan revision: 15
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — PASS local candidate; exact publication authorized
+## Scholarship intake execution — policy checkpoint in progress
 
-- Execution worktree `/private/tmp/program_code-interview-relevance`, branch
-  `codex/interview-relevance`. Original checkout and planning branch remain untouched.
-  Recover this branch through the shared repository if the temporary worktree is lost;
-  do not restart from the older planning branch or reset the original checkout.
-- Exact tested, independently reviewed product candidate:
-  `d288fd0732974997d8f83fe9d066d4f2aeb4dcbf`. Baseline/live main reverified as
-  `2f517755118bc72570a2aa8b5109a2660e0d9b12`. The branch tip contains the documentation-only
-  authority checkpoint; resolve with `git rev-parse codex/interview-relevance`, and use
-  the canonical manifest candidateCommit after attestation. No product changes follow
-  the reviewed product candidate.
-- Policy `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh independent review
-  before product edits. Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085` preceded
-  implementation; all 206 connections received independent saved-evidence review.
-  One LOW mapping pointer issue and one LOW final public-copy issue are fixed/rechecked.
-  Final reviewer `/root/relevance_final_review`: PASS, C0/H0/M0/L0 unresolved.
-- Delivered locally: 38 existing answer choices (33/38 special criteria plus four
-  activities and financial need), 206 positive connections across 129 awards. No scores
-  or new exclusions. Existing GPA/school decisions and counts 166/125/152/190 remain;
-  all 192 awards stay accessible. Sensitive skip clears effects; five unsupported special
-  choices have honest explanations. P9, PR42 and all historical attestations remain complete.
-- Exact manifest and structured review receipts:
-  `docs/evidence/PLAN-REV14-local-review.json`; reviewed 31-path manifest SHA256
-  `3141e9ac150bff9c979dcd6b9afb266b7db092c3ff4c43984569ad03ac2e1fe4`.
-  Current public relevance artifact SHA256:
-  `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`.
-  The local receipt is deliberately not a canonical attestation; do not rename/reuse
-  an older manifest against a new authority-bearing candidate.
-- Evidence in `docs/evidence/`: `PLAN-REV14.md`, `PLAN-REV14-mapping.json`,
-  `PLAN-REV14-matrix.json`, `PLAN-REV14-verification.json`, `PLAN-REV14-browser-results.json`.
-  Full tests, typecheck, exact default Turbopack build, generated-data checks, zero-Google
-  built traces and root whitespace pass. All 38 enabled choices run through real UI at
-  360x800, 768x1024 and 1440x900; actual saved CSV bytes equal all public fields for
-  visible IDs/order, including search, sort and outside/all scopes. Privacy, sensitive
-  skip, keyboard, edit/reset/reload and no-overflow checks pass. All profiles are synthetic.
-- Plan validation reports exactly three expected omissions: canonical final manifest,
-  review and committed attestation. They remain intentionally absent until the authorized candidate is refrozen
-  and independently rechecked; no other validation failure remains. Do not report canonical
-  acceptance, hosted build/health or current scholarship freshness for this local release.
-- **Exact publication authority received:** Kelsey answered “yes” on September 10 to
-  this release's branch push, PR, Vercel Preview, merge, Production deployment and
-  verification on the existing web project. Recorded in Revision14 state and evidence.
-- **Next executable action:** freeze this documentation-only authority update, independently
-  recheck the exact candidate, then add only `docs/evidence/PLAN-REV14-manifest.json` and
-  `docs/reviews/PLAN-REV14.json` as its direct-child attestation. Resolve the exact authorized
-  candidate using the release branch tip before attestation, or the manifest afterward.
-  Do not append after attestation. Push and open the PR; require passing hosted CI and
-  exact Preview health/identity/digest and synthetic interview/export checks before merge.
-  Then verify main CI and Production. No hosted outcome is claimed yet. Preserve delivery
-  receipts in the PR and a separate local closeout after merge; never append the release tip.
-  Do not repeat completed policy, mapping, product or unchanged local test work.
-- Proposed existing target: Vercel project `web` (`prj_LbefE2deji6nPND6iBiuofe7IABv`),
-  team `team_6CAjRq58n0WvAH49otKSQbA7`, canonical `web-two-gules-45.vercel.app`.
-  Verify exact Preview commit/health/digests and synthetic journeys before merge; honor
-  any user-reserved Preview review. Then verify main CI, Production identity, nonce
-  health and interview/export flow. Rollback reference is PR42; actual rollback requires
-  separate explicit authority. No provider configuration changes are included.
-- Saved September 2 revision225 evidence only: 197 rows, 176 award rows and 21 portals;
-  16 catalog-only awards inherit nothing. No sources or spreadsheets accessed, new
-  questions/services/dependencies/exclusions, monitoring, applicant data or unrelated work.
-  Unsupported/current-freshness items remain explicit and do not block supported work.
+- Branch `codex/scholarship-intake`, worktree `/private/tmp/program_code-scholarship-intake`.
+  Resolve latest exact checkpoint with `git rev-parse codex/scholarship-intake`.
+- Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning source
+  `0ffa90b12502b2a031a6012e16014301def07205`. Original and planning work preserved.
+- Revision15 adopts the complete invoked plan prospectively; policy review pending.
+  Source snapshot/ledger not yet captured; rows/entities/reviews completed: 0.
+- Backup/recovery copies: not authorized, not created, not verified. Sheet writes:0.
+  Publication: not authorized, not performed. No runtime changes or applicant data.
+- Next executable action: independently review the dedicated policy commit, then capture
+  allowed scholarship fields with complete tab/row accounting and source fingerprints.
+  Read `PLAN-REV15.md`, intake plan/kickoff and policy-review receipt on resume.
+
+## Preserved intake planning closeout
+
+Plan: `docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md` (SCHOLARSHIP-INTAKE-1). Start instruction:
+`docs/kickoffs/SCHOLARSHIP-INTAKE.md`. Inventory/sample context:
+`docs/evidence/SCHOLARSHIP-INTAKE-planning.json`.
+
+- Kelsey requested a durable plan after read-only workbook/sample inspection. The
+  full audit, sheet writes, automation and new product work have **not** started.
+- Objective: account for every candidate across staging, scraped, removed/curated and
+  history/reference tabs; verify proposed additions/related updates, tags and interview
+  gaps; produce one complete, independently reviewed promotion batch. Full Master
+  freshness review, automation and selected website/interview changes remain later work.
+- Verified main baseline `5fa08541b6b49484dedc8fc06012e47c658ce8fb` (PR43), using
+  normal Git fetch and authenticated GitHub main API on September11 UTC / September10
+  Denver. Canonical revision14, all program stages accepted, active/next pointers null.
+  The proposal does not amend that state. P9, PR42 and PR43 remain delivered.
+- Isolated planning worktree `/private/tmp/program_code-scholarship-intake-plan`, branch
+  `codex/scholarship-intake-plan`, based on verified main. The local delivery handoff and
+  `PLAN-REV14-delivery.json` were deliberately copied from exact closeout commit
+  `7bd12107606e9a8c426058b21864d7cc8fbd2cd8`; original and release checkouts preserved.
+  Resolve this planning checkpoint with `git rev-parse codex/scholarship-intake-plan`.
+  Recover that local branch through the shared repository if the temporary folder is lost.
+- Planning evidence records all14 observed tabs, the 373 named staging entries,
+  429 named scraped entries plus9 nameless rows, and sample issues. These are dated
+  exploratory observations without an atomic provider revision, not verified new-award
+  counts. Execution must capture a complete allowed-field snapshot and stable row IDs.
+- Fixed controls: one ledger, official field evidence, explicit duplicate survivors and
+  unknowns, 100% independent disposition/tag review, no question required for promotion,
+  and one exact reviewed batch approval before any sheet write. Tag storage is explicit;
+  sheet changes do not publish to the immutable website. No new questions/exclusions,
+  applicant data, legacy workbook access, services or recurring jobs are included.
+- Planning validation: `npm run plan:check` PASS (13 ordered stage contracts), proposal
+  link and14-tab inventory checks PASS, canonical plan/state/AGENTS bytes unchanged,
+  preserved delivery receipt exact, and `git diff --check origin/main` PASS. No product
+  code/data changed; the full product suite was not rerun for this planning-only proposal.
+- Independent proposal review PASS on exact corrected candidate
+  `9afb74af6581ed26782266f05aed3e64af70339b`, by fresh-context read-only reviewer
+  `/root/intake_plan_review`; unresolved C0/H0/M0/L0. The sole cumulative LOW
+  formatting finding was author-fixed and independently rechecked against the complete
+  baseline-to-candidate diff. Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-plan-review.json`.
+  This is the original proposal review; the backup requirement below is a subsequent
+  user-requested update. No canonical attestation or stage acceptance is asserted.
+- **Complete-workbook protection update:** Kelsey requested documenting a mandatory full
+  workbook backup before writes. Starting planning commit:
+  `98b55c2c114ab146131957095c359c00364c6d3e`. Updated plan section7 and kickoff require
+  a separate private native copy of every tab, verified preservation/access, recovery
+  proof in an authorized disposable copy, and the existing affected-cell backup.
+  Missing, stale or incomplete backup/recovery proof blocks source writes. Keep the
+  baseline backup unchanged; fresh backup for each later write batch after a pause,
+  source change or earlier completed batch. Retention/deletion and any restore authority
+  are explicit; current edits cannot be discarded automatically.
+  Execution must record `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+  and the backup ID/location, source revision, batch digest and recovery status here.
+  No backup has been created and no workbook was accessed or changed for this update.
+  Updated proposal validation PASS; independent fresh-context read-only review PASS
+  on `e1ecb1b3c0094d229c03079f892a3a09c549fadf`, C0/H0/M0/L0, by
+  `/root/intake_backup_plan_review`. Receipt:
+  `docs/evidence/SCHOLARSHIP-INTAKE-backup-plan-review.json`; earlier receipt unchanged.
+  Full baseline-to-candidate whitespace and preservation checks pass. This receipt and
+  handoff completion are administrative closeout; reviewed plan/kickoff bytes unchanged.
+  Resolve the planning branch tip for the latest recovery commit; the earlier copied
+  kickoff's `98b55c2...` pin predates this protection update and must be replaced.
+- **Next executable action:** send the prepared kickoff in a new session. Verify current
+  baseline and any existing intake checkpoint; create an isolated execution worktree,
+  preserve this plan/evidence/handoff, and complete the dedicated prospective policy
+  amendment and independent policy review before the full audit. Continue to the tested
+  reviewed local batch; do not stop to ask routine Git questions or repeat completed rows.
+- No sheet-write or new release authority exists. Prepare the exact batch first, then
+  obtain its specific backup/write/rollback grant if needed. Push/PR/Preview/merge/
+  Production/verification require new exact release authority or verified applicable
+  suppression. Do not consume previous release grants or append to their attestations.
+
+## Interview relevance — delivered PASS
+
+The bounded PLAN-REV14 / INTERVIEW-RELEVANCE-1 release is merged and verified on
+[Production](https://web-two-gules-45.vercel.app/). Supported existing answers now improve
+ordering and explanations using saved spreadsheet information. P9 and PR42 remain complete.
+
+- [PR #43](https://github.com/whitefishscholarship/program_code/pull/43) merged at
+  `2026-09-10T23:42:01Z` as `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
+  Verified baseline was `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
+- Exact candidate `7bce8f3b229339f5ded1cde856d1eb758b3eb259`; manifest SHA256
+  `b47b6ad74f19bad47eaf62b32ea6487ff705c89cbda911468dbe22c775a255a7`.
+  Direct-child two-file attestation `478a592a7c4f89cf6ce02007fed8ea590301aeac`
+  remains `codex/interview-relevance` tip. Merged and attested trees match exactly.
+  Do not append to or rebind that historical attestation.
+- Independent policy passed before product; all206 mappings independently reviewed.
+  Final fresh-context review has no unresolved C/H/M/L findings. Its cumulative M1/L2
+  findings are resolved with count-matched dispositions; separate mapping LOW resolved.
+- PR CI `34542568050` and main CI `34543311103` passed every required command,
+  including plan validation, typecheck, full tests, exact default production build,
+  and zero-Google built traces. Local three-viewport matrix covered all38 enabled
+  choices, all206 pairs, keyboard, privacy and actual saved CSV files.
+- Preview `dpl_H55LnmCmuxR6otzPQKyM4ePFedqT` passed before merge. Production
+  `dpl_7oeA8SihBQ4FoZoBNemVufjSXoq1` is Ready/Current on the canonical hostname.
+  Authenticated HTTP200/no-store nonce health identifies exact branch/merge/deployment,
+  original P8M and shortlist digests, relevance digest
+  `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`,
+  and Google/Drive/Sheets none, ingestion/mutation disabled.
+- Both deployed browser checks preserve counts166/125/152/190, all192 access,
+  outside26 recovery, edit/reset/reload, qualified relevance explanations and exact
+  CSV visible names/order. Full baseline, pilot+Autism and sensitive-skip CSV payload
+  hashes equal the reviewed local serializer. Unsupported Mensa leaves baseline unchanged.
+  Export clicks completed; hosted OS-save was not independently observed. Local tests
+  verified actual saved downloads. Production interview observed zero requests and zero
+  local/session storage entries. No application errors; final interview reset blank.
+- API reconciles217 sources,21 portals,192 awards,four groups and197 source rows.
+  Release enables38 choices,206 connections across129 awards, preserving GPA/school
+  decisions. No new questions, exclusions, services, dependencies, live source/sheet access,
+  configuration changes, monitoring or real applicant data. Historical artifacts unchanged.
+- Durable hosted evidence: `docs/evidence/PLAN-REV14-delivery.json` and PR43 delivery
+  comments. Build/mapping/matrix/local review evidence remains in the PLAN-REV14 files.
+  Data is still saved September2 revision225. Current provider freshness/eligibility
+  remain unverified. Nonbinary, single-parent, Mensa, aviation-management and Farmers
+  Union choices remain explicitly unsupported without blocking unrelated supported work.
+- This updated handoff and delivery receipt are **local only**, in
+  `/private/tmp/program_code-interview-relevance-closeout`, branch
+  `codex/interview-relevance-local-closeout`, based on exact merge `5fa08541...`.
+  Resolve its current documentation commit with `git rev-parse codex/interview-relevance-local-closeout`.
+  Local closeout plan validation and whitespace checks pass.
+  Recover that branch through the shared repository if this temporary worktree is lost.
+  The execution worktree `/private/tmp/program_code-interview-relevance`, planning
+  worktree and original checkout remain preserved. Do not reset the original checkout.
+- **Next executable action:** no release action remains. Start any future selected work
+  by reading this handoff and verifying current main. Do not repeat completed review,
+  tests or delivery. The exact grant was used for this release; do not publish this
+  separate local closeout or perform rollback under it. Rollback reference is PR42;
+  actual rollback or a future data refresh requires its separately bounded authority.
+  The historical stale P9 blocker and unrelated items below remain outside this release.
 
 ## Spreadsheet shortlist maintenance — delivered PASS
 

@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "status": "planning_observations_not_audit_acceptance",
+  "documentedAt": "2026-09-11 01:38:06 UTC",
+  "baseline": {
+    "main": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "verifiedBy": [
+      "normal authenticated Git fetch origin main",
+      "authenticated GitHub commits/main API"
+    ],
+    "closeoutSource": "7bd12107606e9a8c426058b21864d7cc8fbd2cd8",
+    "planRevision": 14,
+    "activeStageId": null,
+    "nextPermittedStageId": null
+  },
+  "workbook": {
+    "id": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "title": "Whitefish HS Scholarship Database",
+    "url": "https://docs.google.com/spreadsheets/d/1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4/edit",
+    "destinationTab": "Master Database",
+    "destinationSheetId": 0
+  },
+  "provenance": {
+    "method": "Earlier read-only Google Drive/Sheets connector metadata and bounded range reads in this conversation; summarized from retained structured tool results.",
+    "observationDateLocal": "2026-09-10",
+    "individualRetrievalTimes": null,
+    "providerRevision": null,
+    "rawSnapshotCommitted": false,
+    "limits": [
+      "Not an atomic snapshot or a complete field-level audit.",
+      "Named entry counts exclude repeated headers and blank-name rows; some named entries are headings, portals, aliases or aggregates.",
+      "Staging inventory used G:S; amounts and other A:F fields were not fully audited.",
+      "Headers were inspected separately; returned range height includes empty rows within used extent.",
+      "Normalized names are comparison leads, not verified entity matches.",
+      "Official-source samples below are exploratory and must be reverified with dated evidence at execution.",
+      "No spreadsheet writes or promotions occurred."
+    ]
+  },
+  "normalization": "NFKC, lowercase, normalized curly apostrophes and collapsed whitespace; no semantic identity proof.",
+  "tabs": [
+    {
+      "name": "Master backup 2026-07-12",
+      "sheetId": 445586487,
+      "gridRows": 1060,
+      "gridColumns": 24,
+      "readRange": "'Master backup 2026-07-12'!A1:X1060",
+      "returnedRows": 187,
+      "namedEntries": 186,
+      "uniqueNormalizedNames": 185,
+      "exactNormalizedNameInMaster": 186,
+      "namedEntriesWithoutExactMasterName": 0
+    },
+    {
+      "name": "Staging backup 2026-06-17",
+      "sheetId": 189878200,
+      "gridRows": 1233,
+      "gridColumns": 26,
+      "readRange": "'Staging backup 2026-06-17'!G1:S1233",
+      "returnedRows": 230,
+      "namedEntries": 229,
+      "uniqueNormalizedNames": 204,
+      "exactNormalizedNameInMaster": 62,
+      "namedEntriesWithoutExactMasterName": 167
+    },
+    {
+      "name": "Start Here",
+      "sheetId": 1852930668,
+      "gridRows": 20,
+      "gridColumns": 4,
+      "readRange": "'Start Here'!A1:D20",
+      "returnedRows": 12,
+      "namedEntries": null,
+      "uniqueNormalizedNames": null,
+      "exactNormalizedNameInMaster": null,
+      "namedEntriesWithoutExactMasterName": null
+    },
+    {
+      "name": "Student View",
+      "sheetId": 1472248756,
+      "gridRows": 21,
+      "gridColumns": 15,
+      "readRange": "'Student View'!A1:O21",
+      "returnedRows": 17,
+      "namedEntries": 16,
+      "uniqueNormalizedNames": 16,
+      "exactNormalizedNameInMaster": 16,
+      "namedEntriesWithoutExactMasterName": 0
+    },
+    {
+      "name": "Archive",
+      "sheetId": 431480012,
+      "gridRows": 82,
+      "gridColumns": 15,
+      "readRange": "Archive!A1:O82",
+      "returnedRows": 78,
+      "namedEntries": 77,
+      "uniqueNormalizedNames": 76,
+      "exactNormalizedNameInMaster": 77,
+      "namedEntriesWithoutExactMasterName": 0
+    },
+    {
+      "name": "Categories",
+      "sheetId": 264421372,
+      "gridRows": 50,
+      "gridColumns": 2,
+      "readRange": "Categories!A1:B50",
+      "returnedRows": 11,
+      "namedEntries": null,
+      "uniqueNormalizedNames": null,
+      "exactNormalizedNameInMaster": null,
+      "namedEntriesWithoutExactMasterName": null
+    },
+    {
+      "name": "Master Database",
+      "sheetId": 0,
+      "gridRows": 1060,
+      "gridColumns": 24,
+      "readRange": "'Master Database'!A1:X1060",
+      "returnedRows": 198,
+      "namedEntries": 197,
+      "uniqueNormalizedNames": 196,
+      "exactNormalizedNameInMaster": 197,
+      "namedEntriesWithoutExactMasterName": 0
+    },
+    {
+      "name": "Scraped Data",
+      "sheetId": 1468843784,
+      "gridRows": 1000,
+      "gridColumns": 26,
+      "readRange": "'Scraped Data'!A1:Q1000",
+      "returnedRows": 439,
+      "namedEntries": 429,
+      "uniqueNormalizedNames": 407,
+      "exactNormalizedNameInMaster": 37,
+      "namedEntriesWithoutExactMasterName": 392,
+      "populatedNamelessRows": [
+        38,
+        198,
+        201,
+        259,
+        297,
+        305,
+        306,
+        438,
+        439
+      ],
+      "readFieldLimit": "A:Q scholarship fields; no full R:T legacy contact/outreach/applicant-count data capture"
+    },
+    {
+      "name": "Ingestion Staging",
+      "sheetId": 2106717984,
+      "gridRows": 1377,
+      "gridColumns": 26,
+      "readRange": "'Ingestion Staging'!G1:S1377",
+      "returnedRows": 374,
+      "namedEntries": 373,
+      "uniqueNormalizedNames": 248,
+      "exactNormalizedNameInMaster": 104,
+      "namedEntriesWithoutExactMasterName": 269
+    },
+    {
+      "name": "Removed 2026-06-16",
+      "sheetId": 1110204944,
+      "gridRows": 20,
+      "gridColumns": 19,
+      "readRange": "'Removed 2026-06-16'!A1:S20",
+      "returnedRows": 16,
+      "namedEntries": 14,
+      "uniqueNormalizedNames": 13,
+      "exactNormalizedNameInMaster": 0,
+      "namedEntriesWithoutExactMasterName": 14,
+      "mixedHeaders": true,
+      "secondHeaderRow": 9
+    },
+    {
+      "name": "Curated Review 2026-06-17",
+      "sheetId": 1564592053,
+      "gridRows": 21,
+      "gridColumns": 19,
+      "readRange": "'Curated Review 2026-06-17'!A1:S21",
+      "returnedRows": 18,
+      "namedEntries": 17,
+      "uniqueNormalizedNames": 17,
+      "exactNormalizedNameInMaster": 17,
+      "namedEntriesWithoutExactMasterName": 0
+    },
+    {
+      "name": "Removed 2026-06-17",
+      "sheetId": 81861408,
+      "gridRows": 20,
+      "gridColumns": 15,
+      "readRange": "'Removed 2026-06-17'!A1:O20",
+      "returnedRows": 2,
+      "namedEntries": 1,
+      "uniqueNormalizedNames": 1,
+      "exactNormalizedNameInMaster": 0,
+      "namedEntriesWithoutExactMasterName": 1
+    },
+    {
+      "name": "Curated Review 2026-07-05",
+      "sheetId": 431336182,
+      "gridRows": 29,
+      "gridColumns": 19,
+      "readRange": "'Curated Review 2026-07-05'!A1:S29",
+      "returnedRows": 24,
+      "namedEntries": 23,
+      "uniqueNormalizedNames": 23,
+      "exactNormalizedNameInMaster": 19,
+      "namedEntriesWithoutExactMasterName": 4,
+      "pushed": 19,
+      "otherDecisions": 4
+    },
+    {
+      "name": "Curated Review 2026-07-11",
+      "sheetId": 1969210817,
+      "gridRows": 71,
+      "gridColumns": 19,
+      "readRange": "'Curated Review 2026-07-11'!A1:S71",
+      "returnedRows": 63,
+      "namedEntries": 61,
+      "uniqueNormalizedNames": 61,
+      "exactNormalizedNameInMaster": 12,
+      "namedEntriesWithoutExactMasterName": 49,
+      "pushed": 11,
+      "dropped": 50
+    }
+  ],
+  "samples": [
+    {
+      "id": "chuck_peacock",
+      "rows": [
+        {
+          "tab": "Ingestion Staging",
+          "rows": [
+            16,
+            47,
+            247
+          ]
+        }
+      ],
+      "observedIssue": "Duplicate and directory-hold labels coexist; no Peacock text match was found in the inspected Master or local catalog. One staging summary described maintenance, others management.",
+      "officialUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+      "exploratorySourceObservation": "Official page described a $1,000 aviation-management award for a high school senior or college student; the 2026-27 deadline was passed and it said check back in October for 2027-28.",
+      "decision": "Candidate for full verification and existing aviation_management choice review, not an approved addition or currently-open claim."
+    },
+    {
+      "id": "lpa_aerospace",
+      "rows": [
+        {
+          "tab": "Ingestion Staging",
+          "rows": [
+            189
+          ]
+        }
+      ],
+      "observedIssue": "Held as college-level; official general eligibility included accepted OR enrolled students.",
+      "officialUrl": "https://www.lpa-aero.org/scholarships",
+      "savedUrl": "https://www.latinopilot.org/scholarships",
+      "exploratorySourceObservation": "Spring 2026 page; general LPA membership and age conditions; aerospace degree fields included engineering, business, maintenance and related disciplines; flight training excluded.",
+      "decision": "Recheck award-specific audience and cycle; do not infer categorical HS exclusion or admission."
+    },
+    {
+      "id": "folds_of_honor",
+      "rows": [
+        {
+          "tab": "Removed 2026-06-16",
+          "rows": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ]
+        }
+      ],
+      "observedIssue": "Higher Education awards are mixed with distinct K-12 awards and duplicate names.",
+      "officialUrl": null,
+      "decision": "Separate military/first-responder Higher Education candidates from K-12 siblings; no official eligibility verification completed."
+    },
+    {
+      "id": "curated_conditional_eligibility",
+      "rows": [
+        {
+          "tab": "Curated Review 2026-07-05",
+          "rows": [
+            24
+          ]
+        },
+        {
+          "tab": "Curated Review 2026-07-11",
+          "rows": [
+            9,
+            51,
+            54
+          ]
+        }
+      ],
+      "observedIssue": "Employee/member eligibility and absent wizard criterion may have been used as broad exclusion reasons. July11 row9 attributes a prior exclusion to Kelsey.",
+      "decision": "Verify audience/type and recorded decision provenance; do not silently override user decisions or treat a missing question as a reason to exclude."
+    },
+    {
+      "id": "scraped_missing_identity",
+      "rows": [
+        {
+          "tab": "Scraped Data",
+          "rows": [
+            25,
+            27,
+            45
+          ]
+        }
+      ],
+      "observedIssue": "Potential candidates or more specific aliases: NSF STEM Experience, Northwest Montana Attendance Area Waiver, Brendan Looney Foundation High School Senior Scholarships.",
+      "decision": "Identity/source leads only; no new-award or eligibility conclusion."
+    },
+    {
+      "id": "partial_directory",
+      "rows": [
+        {
+          "tab": "Ingestion Staging",
+          "rows": [
+            191
+          ]
+        }
+      ],
+      "observedIssue": "Saved flags described a 23-award directory with first-10 extraction limit.",
+      "decision": "Reconcile all relevant children or preserve exact unresolved coverage; no silent cap."
+    }
+  ],
+  "executionDeliverables": [
+    "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json",
+    "docs/evidence/scholarship-intake/",
+    "docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json",
+    "generated readable report and interview-gap list",
+    "CURRENT_HANDOFF checkpoint and independent review evidence"
+  ],
+  "nextAction": "Invoke docs/kickoffs/SCHOLARSHIP-INTAKE.md in a new session; prospective policy checkpoint precedes full read-only audit."
+}

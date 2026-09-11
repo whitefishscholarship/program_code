@@ -616,3 +616,17 @@ precede product edits. Independent policy review precedes implementation; final 
 binds the complete frozen candidate. No historical evidence is rebound. Delivery remains
 blocked pending new exact Git/Vercel authority or verified suppression, before attestation.
 Rollback reference is unchanged PR42; performing rollback needs separate authority.
+
+
+## D-027 — PLAN-REV15 bounded scholarship intake (2026-09-11 UTC)
+
+The invoked prepared plan and complete-backup update authorize one local cross-tab
+intake, preserving completed releases. Choose a dedicated Revision15 preparation
+exception and one decision ledger. Existing Revision14 authority is exhausted and its
+exception cannot implicitly apply. Reject reopening P9, a full-master refresh, runtime
+integration, blanket exclusions from historical labels, or source writes without new
+exact authority and complete verified recovery. Complete fresh-context policy review
+before audit; then practical entity batches and one complete independent final review.
+The complete fixed plan is incorporated by canonical section19. Missing facts remain
+unknown. Backup creation and all write/publication effects remain false. Rollback is
+abandonment of local changes; historical artifacts and original checkout stay intact.

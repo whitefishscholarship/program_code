@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 14
+Plan revision: 15
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1651,3 +1651,50 @@ previous release grant is exhausted and is not relied on. No configuration chang
 or additional external effects are included.
 Rollback reference is deployed PR42 merge 2f517755118bc72570a2aa8b5109a2660e0d9b12;
 any actual rollback additionally requires explicit authority.
+
+
+## 19. Plan Revision 15 — Scholarship intake evaluation
+
+Kelsey directly invoked SCHOLARSHIP-INTAKE-1 on September10 Denver / September11 UTC,
+2026, authorizing local preparation, this prospective canonical plan/state amendment,
+read-only evaluation of the named workbook's scholarship fields, bounded official-source
+verification, local implementation, testing and independent review. Adopt the complete
+fixed scope, evidence/inclusion rules, one-ledger contract, tags/interview recommendations,
+backup/recovery requirements and acceptance matrix in
+`docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md` sections1–9 and its invoked kickoff.
+P9 and completed Revisions13/14 remain complete; all program stage pointers stay null.
+The separate scholarshipIntake state tracks this one local maintenance effort.
+
+Commit and independently review this policy before the full audit or affected
+implementation. This checkpoint permits local preparation, not final acceptance or
+attestation. The exact PLAN-REV15 local-preparation exception permits false publication
+authority only outside hosted CI with the exact release blocker. Every historical
+validation and final manifest/review/direct-child attestation gate remains mandatory.
+The final local review-complete candidate may await exact authority without a premature
+canonical attestation. Local checkpoints may continue until that final freeze.
+
+Inventory all tabs including hidden tabs; access only scholarship-bearing fields of
+workbook 1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4. Scraped Data defaults to A:Q;
+exclude R:T contact/outreach/applicant-count content. Unrelated/sensitive tabs are
+metadata-only exclusions. Capture bounded native cells, formulas and rich links;
+verify snapshot stability and account for every relevant row and discovered child.
+Review every disposition, duplicate survivor, proposed field/tag and interview gap
+independently. Unsupported facts remain explicit and do not block unrelated supported work.
+New questions and matching rules are recommendations only; no runtime behavior changes.
+
+No backup/recovery-copy creation, original-workbook write or release publication is
+currently authorized. These require new exact grants after a concrete reviewed batch.
+Before any original write require a separate private complete native backup of all tabs,
+verified access/preservation, demonstrated recovery in an authorized disposable copy,
+affected-cell backups, current fingerprints, protection against newer edits and exact
+readback. Missing complete backup or recovery proof blocks writes, not read-only work.
+Retain backup locations, proof, retention and recovery state durably. Never automatically
+restore the whole workbook or overwrite newer edits. The complete section7 applies.
+
+Preserve historical artifacts, P9 zero-spreadsheet runtime, GPA/school filtering,
+all-award access, volatile interview privacy and exact visible-result CSV downloads.
+No applicant data, legacy workbook access, provider contact, forms, paid access, new
+services, full-master freshness review, automation, website publication, configuration
+changes or unrelated maintenance. Later selected publication needs exact push, PR,
+Preview, merge, Production and verification authority or verified applicable suppression.
+Rollback of this unapplied local work is abandonment of its branch; no external restore.
