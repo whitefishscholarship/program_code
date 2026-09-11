@@ -1,0 +1,32 @@
+{
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "reviewedCandidateCommit": "65f58fd048cc6ef677588b941aa181c7b13265b3",
+  "reviewer": {
+    "task": "/root/intake_triage_review",
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "coverage": {
+    "clearedIdentityLists": 20,
+    "verifiedRowReferences": 25,
+    "nasclaIndexedInheritedHold": 1,
+    "looneyRoutes": 5,
+    "dawsonHeadings": 65,
+    "dawsonCanonicalEntries": 64,
+    "dawsonEntityReferences": 71,
+    "ngpaTableRows": 20,
+    "ngpaFunds": 16
+  },
+  "hashes": {
+    "ledgerSha256": "0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b",
+    "closureAuditSha256": "2f6c25244137bf7c957f95acb51f777ccdde73130e1bdc440426b02f00efbcde"
+  },
+  "limits": "Read-only bounded recheck; final candidate review remains separate."
+}

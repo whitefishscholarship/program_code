@@ -1,7 +1,7 @@
 # Scholarship intake local proposal
 
 UNAPPLIED. 1666/1666 source rows decided; 0 entities pending. 219 proposed additions and 38 related corrections (82 cells).
-Batch digest: `4adfa2f169df014ac2447e40ac3956d1f316706d38c065f4a4cff1c71b254f4b`. Sole ledger SHA256: `0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b`.
+Batch digest: `bb19b1ea5c29c3a56264b1917964f8133b97512e6f7c43e2a19d82dadc73285e`. Sole ledger SHA256: `a2fcc4eb7002be2d9cbad0f15a83e5f77f36f24a514e9dca2e0191efa5cf26d7`.
 Source: `intake-rev226-74df373b3e30738e`; 14 tabs. These are source/evaluation counts, not accepted or published awards.
 
 ## Authority and recovery
@@ -398,6 +398,294 @@ Tags remain local public-award metadata. Broad interests do not prove eligibilit
 }
 ```
 
+### gap-ordinary-financial-need
+
+```json
+{
+  "id": "gap-ordinary-financial-need",
+  "priority": "high",
+  "decision": "recommend_optional_discovery_preference",
+  "supportingEntityIds": [
+    "intake-entity-38165a377cf092e4",
+    "intake-entity-6bde02413985885a",
+    "intake-entity-2034b3849f9e6eed",
+    "intake-entity-a5a75dd0bc921034",
+    "intake-entity-68fc44b937accb33",
+    "intake-entity-c9f1d5ecf13fe4c6",
+    "intake-entity-f4cbf1a40504e59a",
+    "intake-entity-5529a2e6789f2993",
+    "intake-entity-0c2fcde6113979a1",
+    "intake-entity-2d9b2284d3981078",
+    "intake-entity-7665bcfa836a9f07",
+    "intake-entity-d00e748c026573df",
+    "intake-entity-fc95f644590e845d",
+    "intake-entity-873f91c3edce15b4",
+    "intake-entity-5e40b7ee15dc6501",
+    "intake-entity-8f29d09965003d3a",
+    "intake-entity-d7370cf07a07d2ec",
+    "intake-entity-57ef390a78d6675f",
+    "intake-entity-1428694f10a9d393"
+  ],
+  "support": [
+    {
+      "entityId": "intake-entity-38165a377cf092e4",
+      "name": "Fran M. Albrecht Scholarship",
+      "sourceIds": [
+        "official-dawson-foundation",
+        "official-dawson-general",
+        "official-dawson-application",
+        "official-dawson-form-names"
+      ]
+    },
+    {
+      "entityId": "intake-entity-6bde02413985885a",
+      "name": "Colorado State University First Generation Award",
+      "sourceIds": [
+        "official-national27-web-csu",
+        "official-national27-csu-native"
+      ]
+    },
+    {
+      "entityId": "intake-entity-2034b3849f9e6eed",
+      "name": "Adam Montes Pride Scholarship",
+      "sourceIds": [
+        "official-bold23-2034b3849f9e6eed",
+        "official-bold23-direct-adam"
+      ]
+    },
+    {
+      "entityId": "intake-entity-a5a75dd0bc921034",
+      "name": "KPMG Future Leaders Program",
+      "sourceIds": [
+        "official-national27-kpmg-rules",
+        "official-national27-kpmg-current"
+      ]
+    },
+    {
+      "entityId": "intake-entity-68fc44b937accb33",
+      "name": "The NKL Aerospace Engineering Scholarship",
+      "sourceIds": [
+        "official-wai-2027",
+        "official-wai-parent",
+        "official-wai-apply",
+        "official-wai-faq",
+        "official-wai-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-c9f1d5ecf13fe4c6",
+      "name": "Elisha Hall Memorial Scholarship",
+      "sourceIds": [
+        "official-wai-2027",
+        "official-wai-parent",
+        "official-wai-apply",
+        "official-wai-faq",
+        "official-wai-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-f4cbf1a40504e59a",
+      "name": "Davis-Putter Scholarship",
+      "sourceIds": [
+        "official-national27-web-davis"
+      ]
+    },
+    {
+      "entityId": "intake-entity-5529a2e6789f2993",
+      "name": "Robert F. Lawson Fund for Careers that Care",
+      "sourceIds": [
+        "official-institute25-5529a2e6789f2993"
+      ]
+    },
+    {
+      "entityId": "intake-entity-0c2fcde6113979a1",
+      "name": "Evelyn B Johnson Memorial Scholarship",
+      "sourceIds": [
+        "official-mcf-evelyn",
+        "official-mcf-portal",
+        "official-mcf-faq"
+      ]
+    },
+    {
+      "entityId": "intake-entity-2d9b2284d3981078",
+      "name": "D.A. Davidson Memorial Scholarship",
+      "sourceIds": [
+        "official-mcf-davidson",
+        "official-mcf-portal",
+        "official-mcf-faq"
+      ]
+    },
+    {
+      "entityId": "intake-entity-7665bcfa836a9f07",
+      "name": "Seeley Family Memorial Scholarship",
+      "sourceIds": [
+        "official-mcf-seeley",
+        "official-mcf-portal",
+        "official-mcf-faq"
+      ]
+    },
+    {
+      "entityId": "intake-entity-d00e748c026573df",
+      "name": "James P. Vomhof Presidential Fund",
+      "sourceIds": [
+        "official-dawson-foundation",
+        "official-dawson-general",
+        "official-dawson-application",
+        "official-dawson-form-names"
+      ]
+    },
+    {
+      "entityId": "intake-entity-fc95f644590e845d",
+      "name": "Roman S. Zuroff Endowed Scholarship Fund",
+      "sourceIds": [
+        "official-dawson-foundation",
+        "official-dawson-general",
+        "official-dawson-application",
+        "official-dawson-form-names"
+      ]
+    },
+    {
+      "entityId": "intake-entity-873f91c3edce15b4",
+      "name": "Ron Conrad Drama Endowment Scholarship",
+      "sourceIds": [
+        "official-dawson-foundation",
+        "official-dawson-general",
+        "official-dawson-application",
+        "official-dawson-form-names"
+      ]
+    },
+    {
+      "entityId": "intake-entity-5e40b7ee15dc6501",
+      "name": "The Stephanie Goetz and Endre Holen Multi-Engine Commercial Scholarship",
+      "sourceIds": [
+        "official-wai-2027",
+        "official-wai-parent",
+        "official-wai-apply",
+        "official-wai-faq",
+        "official-wai-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-8f29d09965003d3a",
+      "name": "Bonita Jean Olson Memorial Scholarship",
+      "sourceIds": [
+        "official-wai-2027",
+        "official-wai-parent",
+        "official-wai-apply",
+        "official-wai-faq",
+        "official-wai-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-d7370cf07a07d2ec",
+      "name": "Women Military Aviators Dream of Flight Scholarship",
+      "sourceIds": [
+        "official-wai-2027",
+        "official-wai-parent",
+        "official-wai-apply",
+        "official-wai-faq",
+        "official-wai-portal"
+      ]
+    },
+    {
+      "entityId": "intake-entity-57ef390a78d6675f",
+      "name": "Lt. Col. Romeo and Josephine Bass Ferretti Scholarship",
+      "sourceIds": [
+        "official-aviation28-child-ferretti"
+      ]
+    },
+    {
+      "entityId": "intake-entity-1428694f10a9d393",
+      "name": "Dr. Sydell Perlmutter Gold Memorial Scholarship",
+      "sourceIds": [
+        "official-aviation28-child-gold"
+      ]
+    }
+  ],
+  "existingCoverage": "student-financial-need asks about acute financial need, with free/reduced lunch or Pell examples. It is optional; unchecked means unknown. This does not establish each provider’s ordinary-need definition.",
+  "proposedWording": "Would you like to see scholarships that consider financial need?",
+  "choices": [
+    "Yes",
+    "No",
+    "Not sure",
+    "Prefer not to answer"
+  ],
+  "rationale": "Need appears as an eligibility condition, selection factor, essay topic or preference across these awards. Preserve each distinction; a discovery preference is not financial proof and must not imply eligibility.",
+  "privacyUx": "Collect no income, documents or applicant evidence. Optional volatile preference only in a separately authorized future release. Preserve all-award access and do not hard-filter on No, unknown or skipped answers.",
+  "status": "recommendation_only_no_runtime_changes"
+}
+```
+
+### gap-first-generation-definition
+
+```json
+{
+  "id": "gap-first-generation-definition",
+  "priority": "medium",
+  "decision": "recommend_definition_clarification",
+  "supportingEntityIds": [
+    "intake-entity-6bde02413985885a",
+    "intake-entity-2034b3849f9e6eed",
+    "intake-entity-592777c6be304a55"
+  ],
+  "support": [
+    {
+      "entityId": "intake-entity-6bde02413985885a",
+      "name": "Colorado State University First Generation Award",
+      "sourceIds": [
+        "official-national27-web-csu",
+        "official-national27-csu-native"
+      ]
+    },
+    {
+      "entityId": "intake-entity-2034b3849f9e6eed",
+      "name": "Adam Montes Pride Scholarship",
+      "sourceIds": [
+        "official-bold23-2034b3849f9e6eed",
+        "official-bold23-direct-adam"
+      ]
+    },
+    {
+      "entityId": "intake-entity-592777c6be304a55",
+      "name": "Dr. Christine Lawther First in the Family Scholarship",
+      "sourceIds": [
+        "official-bold23-592777c6be304a55",
+        "official-bold23-direct-lawther"
+      ]
+    }
+  ],
+  "existingCoverage": "criterion-first-generation: First in your immediate family to attend college. Attendance and parent bachelor-degree completion are different definitions.",
+  "recommendation": "Keep each award’s exact definition on its card. Before a future release, consider replacing ambiguous attendance wording with optional parent/guardian bachelor-degree-completion wording only if selected awards support that definition. Do not infer a definition for Adam Montes or Lawther; CSU’s specific parent-degree condition remains distinct.",
+  "privacyUx": "Sensitive family educational information remains optional and volatile; unknown is not ineligible. A universal binary change could falsely exclude eligible students. No new rule or question is implemented.",
+  "status": "recommendation_only_no_runtime_changes"
+}
+```
+
+### gap-specialized-membership-and-training
+
+```json
+{
+  "id": "gap-specialized-membership-and-training",
+  "priority": "low",
+  "decision": "retain_award_card_only",
+  "supportingEntityIds": [
+    "intake-entity-1d5175e48bd31f8e"
+  ],
+  "recommendation": "Retain exact Aviation Explorer membership, provider memberships, licenses, flight hours, family service relationships and employer prerequisites on the affected award cards. A generic interest or Scouts answer does not prove these conditions. Consider additional questions only if a future selected award set demonstrates repeated usefulness.",
+  "privacyUx": "Avoid permanent questions for rare programs and avoid collecting membership numbers, license records or family employment details.",
+  "status": "recommendation_only_no_runtime_changes",
+  "support": [
+    {
+      "entityId": "intake-entity-1d5175e48bd31f8e",
+      "name": "National Aviation Explorer Scholarship",
+      "sourceIds": [
+        "official-aviation28-explorer"
+      ]
+    }
+  ]
+}
+```
+
 ## Explicit holds
 
 | Entity | Award / lead | Reason and next action |
@@ -712,6 +1000,65 @@ Tags remain local public-award metadata. Broad interests do not prove eligibilit
 | intake-entity-978adc6ec8ff9ab1 | John F. Rahilly Memorial Scholarship for Future A&P Technicians | Actualchildapplicationcontrolandconsistentcompletecycle/citizenshiprulesbecomeavailable. Next: New official information or owner selection resolves this condition |
 | intake-entity-dafb5d596fc884e7 | UAA Janice K. Barden Aviation Scholarship | Actualchildapplicationcontrolandconsistentcompletecycle/citizenshiprulesbecomeavailable. Next: New official information or owner selection resolves this condition |
 | intake-entity-2712e7df4abbce08 | William M. Fanning Maintenance Scholarship | Actualchildapplicationcontrolandconsistentcompletecycle/citizenshiprulesbecomeavailable. Next: New official information or owner selection resolves this condition |
+
+## Held related-source findings
+
+- I25: Providerparentsadjustedhouseholdincome<=125000 versusMaster2023householdallmembers<=100000. Next: Verify award-specific current income definition/tax year and preserve other historical summary conditions before proposing exact I25 correction. Owner: Kelsey Stuart. Trigger: Current award-specific Hagan requirements establish exact replacement wording.
+
+## Enumerated sources and catalog limits
+
+- {"sourceId":"official-aea-20260911","kind":"multi_award_page","enumeratedCount":21,"reviewedByImplementer":21,"remainingCount":0,"cursor":null,"entityIds":["intake-entity-5a06d2d0575b406a","intake-entity-cc2a4c62c5e2a054","intake-entity-a3e8e186b2221ccf","intake-entity-b5e8a94af018841f","intake-entity-9c0a2f6e08033fd1","intake-entity-531fbb909d0e526d","intake-entity-fd1439d79444dd8a","intake-entity-9bca7d882a69ab31","intake-entity-f8bc9cbd2c1532de","intake-entity-fa1d6a1af05683d4","intake-entity-dc0a542e963dc948","intake-entity-f604a73c814be56c","intake-entity-bb77ae23db2bf8af","intake-entity-553acc1ea61861a8","intake-entity-9fe20997f351265a","intake-entity-ee3a5fabbb2f2175","intake-entity-89101ae898fb441d","intake-entity-ea16320bc47e9d8e","intake-entity-b382c72b3a0b9c96","intake-entity-841666e0127466f6","intake-entity-6549bd9d9283302b"],"note":"All21 listed awards reconciled;5 already represented,15 proposed adds,1 policy hold. No recipient counts used as award counts."}
+- {"sourceId":"official-nths-20260911","kind":"multi_award_page","enumeratedCount":15,"reviewedByImplementer":15,"remainingCount":0,"entityIds":["intake-entity-320da372aad8ec19","intake-entity-942fb3e90320f98a","intake-entity-10fdd5d4c2991973","intake-entity-ec55ef80953de81d","intake-entity-677d9bc43b29138d","intake-entity-e4daa26d3c3e0eb6","intake-entity-16b20083574912b6","intake-entity-1a6f069ddb36808f","intake-entity-4938a5e717492009","intake-entity-8ecca308f791f5a6","intake-entity-8af8e6bebae880ce","intake-entity-882235532885dab0","intake-entity-17f598d8931c3985","intake-entity-f093eb9d146913dc","intake-entity-44fda37d719a012e"],"cursor":null,"note":"15 program identities, not the number of recipients;4 were absent from snapshot. ABC Build Your Future remains a separate unresolved entity."}
+- {"sourceId":"official-mensa-program","enumeratedCount":0,"reviewedByImplementer":0,"remainingCount":0,"completeness":"blocked_catalog_access","unknownAdditionalChildren":true,"workbookNamedChildrenHeld":54,"cursor":"AwardSpring public Sign In; no authorized account access"}
+- {"sourceId":"official-looney-program","enumeratedCount":5,"reviewedByImplementer":5,"remainingCount":0,"completeness":"all5named linked program routes on scholarships page accounted:3camp,senior,college","entityIds":["intake-entity-97180ad45131f713","intake-entity-122fbc99b4222cf7","intake-entity-69b25b70bb80c6b5","intake-entity-4d2040b97bca05b3"],"routeOccurrences":[{"name":"Gold Star camp","url":"https://brendanlooneyfoundation.org/gold-star-application","disposition":"out_of_scope","entityIds":["intake-entity-97180ad45131f713","intake-entity-122fbc99b4222cf7"],"rationale":"Camp assistance for children age 17 and under; not postsecondary aid.","evidencePath":"docs/evidence/scholarship-intake/mensa-military-field-evidence.json","sourceId":"official-looney-program"},{"name":"Wounded Warrior camp","url":"https://brendanlooneyfoundation.org/ww-app","disposition":"out_of_scope","entityIds":[],"rationale":"Camp assistance for children age 17 and under; not postsecondary aid.","evidencePath":"docs/evidence/scholarship-intake/mensa-military-field-evidence.json","sourceId":"official-looney-program"},{"name":"Active military camp","url":"https://brendanlooneyfoundation.org/active-application","disposition":"out_of_scope","entityIds":[],"rationale":"Camp assistance for children age 17 and under; not postsecondary aid.","evidencePath":"docs/evidence/scholarship-intake/mensa-military-field-evidence.json","sourceId":"official-looney-program"},{"name":"The Brendan Looney Foundation High School Senior Scholarships","entityIds":["intake-entity-69b25b70bb80c6b5"],"disposition":"propose_add","sourceId":"official-looney-program"},{"name":"The Brendan Looney Foundation College Scholarships","entityIds":["intake-entity-4d2040b97bca05b3"],"disposition":"hold","sourceId":"official-looney-program"}]}
+- {"sourceId":"official-aopa-program","enumeratedCount":32,"reviewedByImplementer":32,"remainingCount":0,"entityIds":["intake-entity-85549fd3339493df","intake-entity-95539ea5d1083ac8","intake-entity-c6492d5b4f51ff25","intake-entity-dba16ada20041fb4","intake-entity-b8292895f8eff09a","intake-entity-e00f1307cd3b718b","intake-entity-7892de3a75edf827","intake-entity-2010fda770c09990","intake-entity-905dac96b744532a","intake-entity-4f5899292c1fcaf1","intake-entity-487c97c8742c61d0","intake-entity-6e31f681cbba5b60","intake-entity-dc3db618583c7b4c","intake-entity-730bf224ae35a11e","intake-entity-b6ab019be8fd5fc1","intake-entity-c7958bc969addd05","intake-entity-a41e9354fb3cfeb5","intake-entity-0e8f75f725cdeb6e","intake-entity-cfa1251ec2df69e5","intake-entity-12c1c8c50f69529d","intake-entity-6d5616e53c8d4672","intake-entity-d2d3f6fc770c70c6","intake-entity-5cfe495024d6791d","intake-entity-3e9c66f4285b42e4","intake-entity-0bd0b40ee8c81963","intake-entity-0c85d2be7af27ed8","intake-entity-add513e34204ed9f","intake-entity-df59e907f23949e6","intake-entity-ecd67b73630c003c","intake-entity-068933269fd8d91d","intake-entity-312db1c9b9c712eb","intake-entity-83f5b2173e890b3d"],"completeness":"All32named past-examplefundheadings read; recipientquantities notawardcount. Futurefundinglist notyetpublished; unrelateddirectorylinkedproviders separatependingqueue."}
+- {"sourceId":"official-lpa-2026","enumeratedCount":12,"reviewedByImplementer":12,"remainingCount":0,"entityIds":["intake-entity-6bc8bb9e105b2570","intake-entity-00b4a3293b739302","intake-entity-41b6101781faa441","intake-entity-edfb732bb22a33f5","intake-entity-fd380b9d00f329f7","intake-entity-7859a591d4d5a7ed","intake-entity-89bbbfc6ebeff686","intake-entity-ef191ec54c2542f1","intake-entity-cd5022d9621e4bfc","intake-entity-5a004865d6dd1893","intake-entity-fa25a489d91e654f","intake-entity-37dbc807be45a144"],"completeness":"Official page12of12 reconciled; two regional awards excluded, remaining10proposed; two formerly absent children individually added."}
+- {"sourceId":"official-dawson-foundation","enumeratedCount":65,"reviewedByImplementer":65,"remainingCount":0,"completeness":"All65pageheadings read and dispositioned; Albrecht headingduplicates FranMAlbrecht body. Twoinput-only labels held. Committeeselection/lateapplications/sourceunderconstruction limits explicit. No cap26 reused.","entityIds":["intake-entity-792c2a732266dc92","intake-entity-a2a0b69f9d600d33","intake-entity-cdc9e35f86cfea0b","intake-entity-edd9e51e158c2777","intake-entity-fa762124165ad305","intake-entity-fe548b95b5be3e97","intake-entity-1737dfec25c96356","intake-entity-75fac50bf6a613e3","intake-entity-6dd0de5ecc17399d","intake-entity-2ebe858b68e20204","intake-entity-24c14affe3e1847d","intake-entity-d4d7482189293d80","intake-entity-7d8fa28c84601423","intake-entity-a6b1d066d1afd3cf","intake-entity-2bde04e5f4b7d0a3","intake-entity-4f9519e7ce25f745","intake-entity-7c21e3c53171aa53","intake-entity-f85fa712bbedb81e","intake-entity-78fbfff7d9936251","intake-entity-cfa53304e9a3673d","intake-entity-4932bf42745000e6","intake-entity-15c9300987847ac5","intake-entity-1d6b1309bf66d101","intake-entity-cb72bcf40d32389f","intake-entity-80940bbc45b59dc5","intake-entity-d85f3ce8c52edb8f","intake-entity-5e6e0f70b4f7b118","intake-entity-38165a377cf092e4","intake-entity-a96563da05f738fd","intake-entity-9879927d5d2d03c2","intake-entity-08968a556bd5c3c9","intake-entity-558f7a096b45ee61","intake-entity-3844790e0d438d56","intake-entity-93b46e7543166b26","intake-entity-29de157478357fe5","intake-entity-69069977d07093ac","intake-entity-93406a9f5a8a5ee8","intake-entity-3138f37972910fbc","intake-entity-d98c90b171bd2fc2","intake-entity-06043890685e71cd","intake-entity-19060852883d7493","intake-entity-d00e748c026573df","intake-entity-da461ef57025aa31","intake-entity-374b9211aea7db68","intake-entity-f45b0fb6ca54a7c2","intake-entity-dd18a610e5cde6da","intake-entity-21118f3dbfc7562d","intake-entity-b8263774aea8d94f","intake-entity-94b7ea5b00bd5ec9","intake-entity-87a7fb84cb5cabdb","intake-entity-1d25563175ea4e17","intake-entity-ddb5824574cbfd24","intake-entity-9804b0b8caf3467f","intake-entity-98e1797bd21d5955","intake-entity-53f8f8d84ed336f4","intake-entity-a3b6c8bd161e460a","intake-entity-8c70fc72571131f5","intake-entity-43ded9c018424ca4","intake-entity-3ab49756fbca46c4","intake-entity-30d1130de282bcd0","intake-entity-fc95f644590e845d","intake-entity-873f91c3edce15b4","intake-entity-206bace9048aa2a6","intake-entity-d4565ff7f38cc75e","intake-entity-c033765964bbd3b5","intake-entity-8a9988ee5ee7f698","intake-entity-ebc7ad282d4c7ece","intake-entity-ba8e33e4a5804dc7","intake-entity-a57798f7ec787830","intake-entity-129c8ec5d6a07a32","intake-entity-d46098e892eb4a76"],"countReconciliation":{"pageHeadings":65,"canonicalEntries":64,"aliasEntities":5,"inputOnlyHeldLabels":2,"referencedEntities":71,"explanation":"Albrecht heading repeats Fran M. Albrecht; alias entities also preserve Ardean/August spacing and two Buzz Suhr aliases. Two input-only labels remain held."}}
+- {"sourceId":"official-dawson-form-names","enumeratedCount":61,"reviewedByImplementer":61,"remainingCount":0,"uniqueFormLabels":60,"newFormOnlyLabels":6,"occurrences":[{"category":"Agriculture","ordinal":1,"entityId":"intake-entity-b8263774aea8d94f","canonicalName":"Keith P. Guelff Memorial Endowed Scholarship","decision":"propose_add"},{"category":"Agriculture","ordinal":2,"entityId":"intake-entity-8c70fc72571131f5","canonicalName":"Reid Ripley Memorial Agriculture Scholarship","decision":"hold"},{"category":"Agriculture","ordinal":3,"entityId":"intake-entity-f45b0fb6ca54a7c2","canonicalName":"Jonas Kolberg Memorial Agriculture Scholarship","decision":"propose_add"},{"category":"Art","ordinal":1,"entityId":"intake-entity-5e923ee5757c37c5","canonicalName":"Floyd Smith Memorial Art Scholarship (DCC)","decision":"propose_add"},{"category":"Art","ordinal":2,"entityId":"intake-entity-21118f3dbfc7562d","canonicalName":"Kay Dunkerley-Magnussen Memorial Art Scholarship","decision":"out_of_scope"},{"category":"Athletics","ordinal":1,"entityId":"intake-entity-edd9e51e158c2777","canonicalName":"August \" Cole\" Dooper Memorial Endowed Baseball Scholarship","decision":"propose_add"},{"category":"Business","ordinal":1,"entityId":"intake-entity-a6b1d066d1afd3cf","canonicalName":"Charles Kintz Memorial Scholarship","decision":"propose_add"},{"category":"Business","ordinal":2,"entityId":"intake-entity-d00e748c026573df","canonicalName":"James P. Vomhof Presidential Fund","decision":"propose_add"},{"category":"Business","ordinal":3,"entityId":"intake-entity-f85fa712bbedb81e","canonicalName":"Culver Insurance and Blue Cross Blue Shield Endowment Scholarship","decision":"propose_add"},{"category":"Chemistry","ordinal":1,"entityId":"intake-entity-374b9211aea7db68","canonicalName":"Joe Friederichs Memorial Science Scholarship","decision":"propose_add"},{"category":"Drama","ordinal":1,"entityId":"intake-entity-873f91c3edce15b4","canonicalName":"Ron Conrad Drama Endowment Scholarship","decision":"propose_add"},{"category":"Education","ordinal":1,"entityId":"intake-entity-ddb5824574cbfd24","canonicalName":"Mary Moore Memorial Scholarship","decision":"out_of_scope"},{"category":"Education","ordinal":2,"entityId":"intake-entity-614effa8ef61322e","canonicalName":"M.L. Graves Memorial Scholarship (DCC)","decision":"propose_add"},{"category":"Education","ordinal":3,"entityId":"intake-entity-80940bbc45b59dc5","canonicalName":"Evelyn Schaffel Education Scholarship","decision":"hold"},{"category":"Education","ordinal":4,"entityId":"intake-entity-129c8ec5d6a07a32","canonicalName":"Kettner Scholarship","decision":"hold"},{"category":"Education","ordinal":5,"entityId":"intake-entity-558f7a096b45ee61","canonicalName":"Gary Nelson Memorial Scholarship","decision":"propose_add"},{"category":"Education","ordinal":6,"entityId":"intake-entity-19060852883d7493","canonicalName":"James D. Schultz Memorial Endowed Scholarship","decision":"propose_add"},{"category":"Education","ordinal":7,"entityId":"intake-entity-1d25563175ea4e17","canonicalName":"Martha Kelly Memorial Endowed Scholarship","decision":"out_of_scope"},{"category":"Education","ordinal":8,"entityId":"intake-entity-98e1797bd21d5955","canonicalName":"Patricia A. (Trish) Matteson Endowed Educational Scholarship","decision":"hold"},{"category":"Engineering Tech or Computer Science","ordinal":1,"entityId":"intake-entity-057b994b6be37c8e","canonicalName":"MDU Foundation Scholarship (DCC)","decision":"propose_add"},{"category":"Engineering Tech or Computer Science","ordinal":2,"entityId":"intake-entity-43ded9c018424ca4","canonicalName":"Richard E. Guenzi Memorial Scholarship","decision":"propose_add"},{"category":"Engineering Tech or Computer Science","ordinal":3,"entityId":"intake-entity-98e1797bd21d5955","canonicalName":"Patricia A. (Trish) Matteson Endowed Educational Scholarship","decision":"hold"},{"category":"General","ordinal":1,"entityId":"intake-entity-38165a377cf092e4","canonicalName":"Fran M. Albrecht Scholarship","decision":"propose_add"},{"category":"General","ordinal":2,"entityId":"intake-entity-a2a0b69f9d600d33","canonicalName":"American Ford Scholarship","decision":"hold"},{"category":"General","ordinal":3,"entityId":"intake-entity-fe548b95b5be3e97","canonicalName":"Ardean A.Anvik Endowed Scholarship","decision":"propose_add"},{"category":"General","ordinal":4,"entityId":"intake-entity-7d8fa28c84601423","canonicalName":"Charles England Memorial Endowed Scholarship","decision":"out_of_scope"},{"category":"General","ordinal":5,"entityId":"intake-entity-4f9519e7ce25f745","canonicalName":"Clayton E. Hoyt Endowed Scholarship","decision":"propose_add"},{"category":"General","ordinal":6,"entityId":"intake-entity-cfa53304e9a3673d","canonicalName":"DCC Plates Endowment","decision":"hold"},{"category":"General","ordinal":7,"entityId":"intake-entity-2bde04e5f4b7d0a3","canonicalName":"Classes 56-58 & 77-78 of Dawson County High School","decision":"out_of_scope"},{"category":"General","ordinal":8,"entityId":"intake-entity-7397e6dc13bba6c8","canonicalName":"Dennis and Phyllis Washington Foundation Scholarship (DCC)","decision":"propose_add"},{"category":"General","ordinal":9,"entityId":"intake-entity-15c9300987847ac5","canonicalName":"Don Kettner Presidential Endowment","decision":"hold"},{"category":"General","ordinal":10,"entityId":"intake-entity-cb72bcf40d32389f","canonicalName":"Ellis and Irene Jones Endowed Scholarship","decision":"hold"},{"category":"General","ordinal":11,"entityId":"intake-entity-d85f3ce8c52edb8f","canonicalName":"F.J. Efta Memorial Scholarship","decision":"propose_add"},{"category":"General","ordinal":12,"entityId":"intake-entity-9879927d5d2d03c2","canonicalName":"Frank Sir Endowed Scholarship","decision":"hold"},{"category":"General","ordinal":13,"entityId":"intake-entity-29de157478357fe5","canonicalName":"Glendive Masonic Lodge","decision":"propose_add"},{"category":"General","ordinal":14,"entityId":"intake-entity-3138f37972910fbc","canonicalName":"Hildebrand Hood Pressman Scholarship","decision":"hold"},{"category":"General","ordinal":15,"entityId":"intake-entity-06043890685e71cd","canonicalName":"Hystad Family Endowment for Academic Scholarships","decision":"out_of_scope"},{"category":"General","ordinal":16,"entityId":"intake-entity-dd18a610e5cde6da","canonicalName":"JSEC Outside Scholarship","decision":"out_of_scope"},{"category":"General","ordinal":17,"entityId":"intake-entity-94b7ea5b00bd5ec9","canonicalName":"Kenneth Skillestad Memorial Scholarship Fund","decision":"out_of_scope"},{"category":"General","ordinal":18,"entityId":"intake-entity-53f8f8d84ed336f4","canonicalName":"Raymond and Natha Ostby Foundation Scholarships","decision":"propose_add"},{"category":"General","ordinal":19,"entityId":"intake-entity-206bace9048aa2a6","canonicalName":"Rotary Club of Glendive Endowed Scholarship","decision":"out_of_scope"},{"category":"General","ordinal":20,"entityId":"intake-entity-d4565ff7f38cc75e","canonicalName":"Stockman Bank Endowed Scholarship","decision":"propose_add"},{"category":"General","ordinal":21,"entityId":"intake-entity-c033765964bbd3b5","canonicalName":"Vietnam Veterans of America Scholarship Glendive Chapter \\#134","decision":"hold"},{"category":"General","ordinal":22,"entityId":"intake-entity-ba8e33e4a5804dc7","canonicalName":"Westley J. Toepke Memorial Endowed Scholarship","decision":"out_of_scope"},{"category":"General","ordinal":23,"entityId":"intake-entity-8a9988ee5ee7f698","canonicalName":"W. and Ann Dohrmann Memorial Scholarship","decision":"hold"},{"category":"Law Enforcement","ordinal":1,"entityId":"intake-entity-08968a556bd5c3c9","canonicalName":"Gary L. Olson Memorial Endowed Scholarship","decision":"propose_add"},{"category":"Law Enforcement","ordinal":2,"entityId":"intake-entity-1d6b1309bf66d101","canonicalName":"Duane Peterson Law Enforcement Memorial Scholarship","decision":"hold"},{"category":"Law Enforcement","ordinal":3,"entityId":"intake-entity-6dd0de5ecc17399d","canonicalName":"Bryan Melle Law Enforcement Memorial Scholarship","decision":"hold"},{"category":"Law Enforcement","ordinal":4,"entityId":"intake-entity-3844790e0d438d56","canonicalName":"George and Ottoni Rice Law Enforcement Memorial Scholarship","decision":"hold"},{"category":"Law Enforcement","ordinal":5,"entityId":"intake-entity-d98c90b171bd2fc2","canonicalName":"Howard C. Hodous Memorial Law Enforcement Endowed Scholarship","decision":"propose_add"},{"category":"Law Enforcement","ordinal":6,"entityId":"intake-entity-cdc9e35f86cfea0b","canonicalName":"Angel Grant Law Enforcement Memorial Scholarship","decision":"hold"},{"category":"Music","ordinal":1,"entityId":"intake-entity-5e6e0f70b4f7b118","canonicalName":"Floyd and Francis Marty Music Memorial Scholarship","decision":"propose_add"},{"category":"Music","ordinal":2,"entityId":"intake-entity-08eceb8155bd1bfb","canonicalName":"Ella Walden Schloss Memorial — Music (DCC)","decision":"propose_add"},{"category":"STEM","ordinal":1,"entityId":"intake-entity-93b46e7543166b26","canonicalName":"Glendive Coca-Cola Bottling Company Endowed Scholarship","decision":"propose_add"},{"category":"STEM","ordinal":2,"entityId":"intake-entity-3ab49756fbca46c4","canonicalName":"Richard and Winifred McMullin Memorial Scholarship","decision":"hold"},{"category":"STEM","ordinal":3,"entityId":"intake-entity-69069977d07093ac","canonicalName":"Gregory & Peggy Johnson STEM Endowment","decision":"hold"},{"category":"STEM","ordinal":4,"entityId":"intake-entity-fc95f644590e845d","canonicalName":"Roman S. Zuroff Endowed Scholarship Fund","decision":"propose_add"},{"category":"STEM","ordinal":5,"entityId":"intake-entity-ebc7ad282d4c7ece","canonicalName":"Wendee Eyer Memorial Scholarship","decision":"out_of_scope"},{"category":"Welding/GasDiesel","ordinal":1,"entityId":"intake-entity-2ebe858b68e20204","canonicalName":"Buzz Suhr Memorial","decision":"propose_add"},{"category":"Welding/GasDiesel","ordinal":2,"entityId":"intake-entity-87a7fb84cb5cabdb","canonicalName":"M.C. and Florence Kolstad Vocational Technical Scholarship","decision":"propose_add"},{"category":"Writing","ordinal":1,"entityId":"intake-entity-a91bc2d7e8bdfda6","canonicalName":"Ella Walden Schloss Memorial — Writing (DCC)","decision":"propose_add"}],"completeness":"All61named choice occurrences,60exact unique labels; Trish repeatedin2categories held. Sixform-only entries represented separately. Unlistedfoundationentries remain separately accounted."}
+- {"sourceId":"official-ngpa-2026","enumeratedCount":20,"reviewedByImplementer":20,"remainingCount":0,"uniqueNamedFunds":16,"entityIds":["intake-entity-d410f650e9eccb38","intake-entity-de530b0f6c18485f","intake-entity-c884df046a8a0d08","intake-entity-c557800bdd3a054b","intake-entity-3357724fa3082ca3","intake-entity-b53ef024195b447b","intake-entity-2f37656441b89d21","intake-entity-95be3d9dee450c02","intake-entity-b9f0c2e3c21f7db2","intake-entity-db35851c20ece530","intake-entity-379333eb5d1654af","intake-entity-64c8ccae921d974d","intake-entity-b67a0fb2f0d169c8","intake-entity-d704117a6cbfc949","intake-entity-5209eca98902b352","intake-entity-adf29ed0c1981c75"],"completeness":"All20tabledata rows read;3GeneralAviationtiers=>1fund,3Endeavoramounts=>1fund,15supportedfundsproposed,Travelproheld. Recipientquantities are separate."}
+- {"sourceId":"official-epic-2026","enumeratedCount":19,"reviewedByImplementer":19,"remainingCount":0,"primaryProgramCount":5,"partnerProgramCount":14,"partnerEntityIds":["intake-entity-3943d0b7ddf8edfe","intake-entity-2d9fce0400d2580d","intake-entity-be25f1ec47ffdbe6","intake-entity-1d871a10858fb224","intake-entity-945c605a622cd3df","intake-entity-fe0b970cd3b7c606","intake-entity-7354f8cba1a6e418","intake-entity-e36bfdd045954092","intake-entity-48b2fb118d59dfef","intake-entity-31b2ac6463915282","intake-entity-9c912b8ef01160cc","intake-entity-294212ca7ddac4c2","intake-entity-0709bdc91775a5dd","intake-entity-c209cc6e112bcd84"],"pendingEntityIds":[],"completeness":"All five current primary tiers and 14 partner programs accounted. WAI partner resolved to its distinct WAI2027 AMT award. Existing Master two-campus20k records retained;10k two recipients form one new tier. Historical2025 King Air mechanic separately enumerated; partner-school records held."}
+- {"sourceId":"official-epic-mechanic-form","enumeratedCount":1,"reviewedByImplementer":1,"remainingCount":0,"entityIds":["intake-entity-d89b833b9be63897"],"completeness":"FEAMnameddependencyheld; notcounted as supportedaward."}
+- {"sourceId":"official-wai-2027","enumeratedCount":63,"reviewedByImplementer":63,"remainingCount":0,"entityIds":["intake-entity-b628798c0095a916","intake-entity-16915cd3bbcb3c53","intake-entity-38a8137b16b13125","intake-entity-c654010fab8c5990","intake-entity-5554912740323820","intake-entity-86eca90a6715ff12","intake-entity-ba74ad0c9001d760","intake-entity-a9207590820839bc","intake-entity-04d7bc9c9593e216","intake-entity-5e40b7ee15dc6501","intake-entity-a3dc0f64c5976a75","intake-entity-902c1a03644ccf68","intake-entity-e929213876563013","intake-entity-68fc44b937accb33","intake-entity-53584cdeae3dbbe8","intake-entity-790eaf14cebe384e","intake-entity-73e26279455d2bbe","intake-entity-1cfa0d5e6bc5674e","intake-entity-c16de50d56f5e7b2","intake-entity-909eb4d59c570018","intake-entity-55bf53e75aafb61b","intake-entity-99f68e3c501ef7fe","intake-entity-022c7941d466608f","intake-entity-2aa2c6997231393d","intake-entity-6fb96cf792e65700","intake-entity-d447929b0ca805bf","intake-entity-a4b2ad7c58e5f6b9","intake-entity-bfc39f1dbf029391","intake-entity-c9f1d5ecf13fe4c6","intake-entity-966fc5d2c8b176a1","intake-entity-3b644d62378da11e","intake-entity-9c30b06e77857230","intake-entity-72b6b5ec5fa9ac7b","intake-entity-1490316e712669d0","intake-entity-5ccf39595d852b6f","intake-entity-b9cc264d3b461834","intake-entity-a8bdb6ccc613720b","intake-entity-487682fcaea22232","intake-entity-6cade135ec4182d7","intake-entity-6d7c8bf070d4db07","intake-entity-ef86872399bc978a","intake-entity-7f36ae178c79607e","intake-entity-d934113c4ff5571b","intake-entity-c261bbf49c4e4de0","intake-entity-b1c0bb608a8985bb","intake-entity-bab8726c8c2b8645","intake-entity-c8eeddfee6d17ded","intake-entity-ff6a125270bb4090","intake-entity-2f76d5731c4a6ae2","intake-entity-8f29d09965003d3a","intake-entity-dffcf3d9dc7c5ef4","intake-entity-9d44a7f3b689c6a8","intake-entity-3ebd09c08b5d437f","intake-entity-76bfb79ea4f573ba","intake-entity-dc05b8b4a9f951b5","intake-entity-c0aa1917b26be500","intake-entity-5e5721dbecd25c3b","intake-entity-0d53195844c36938","intake-entity-a379909cc979b93e","intake-entity-b3ed4a3921e45f18","intake-entity-8cf918502ce54020","intake-entity-f0178a0d086bfbc3","intake-entity-d7370cf07a07d2ec"],"completeness":"All 10/10 guide pages read, every distinct full award heading enumerated; quick guide repeats, recipient quantities and split-line headings deduplicated. Harvard separate professional-program row evaluated. Portal has zero closed-cycle rows, so PDF is named catalog denominator."}
+- {"sourceId":"official-wai-2025","enumeratedCount":29,"reviewedByImplementer":29,"remainingCount":0,"entityIds":["intake-entity-4a26d02697f44d21","intake-entity-eb39c3441f0fc7d5","intake-entity-9a676530f724da59","intake-entity-6d3e714ff257541f","intake-entity-cef5f6be14bd636a","intake-entity-8324f17255f66de4","intake-entity-fdd6a94b8a9c0cba","intake-entity-97065071af6d2f28","intake-entity-127544a895fda259","intake-entity-b2002c4406caac43","intake-entity-3c93bda66221cf16","intake-entity-2f755a0a470f05e0","intake-entity-8a5dcd88d2b7b083","intake-entity-4a6fee6eb201ba13","intake-entity-36c17d520acf1aef","intake-entity-56bdd9f8cf433cb1","intake-entity-bbe8bab730403e93","intake-entity-c98e1a4766f74f2e","intake-entity-7117adfa8e9ef226","intake-entity-1aef6b0f6a9bb915","intake-entity-0e2bad9e28a0967f","intake-entity-69122939fdb40543","intake-entity-fe99048a08f5954b","intake-entity-f10f783cffdd95c2","intake-entity-9e3299f4c7c9f701","intake-entity-99dcbb871069df5c","intake-entity-fc55a169e1d04823","intake-entity-2a1797ba7a464e67","intake-entity-a56ece558afd7b55"],"completeness":"All 10/10 extracted pages read for historical-only award identities and changed names/conditions; current matching funds accounted for under WAI2027. Name-only body omissions Level Up Helo/Kelsey Meyer and unattached $500 are explicitly held, not assumed complete eligibility. Historical original variants retained."}
+- {"sourceId":"official-epic-partner-5","enumeratedCount":2,"reviewedByImplementer":2,"remainingCount":0,"entityIds":["intake-entity-0e2ec1187dc244a7","intake-entity-b3683beb4b39e19d"],"completeness":"All two public PAPA fall2026 award headings evaluated; authenticated-only additional conditions remain unknown, no portal entry."}
+- {"sourceId":"official-epic-2026","enumeratedCount":1,"reviewedByImplementer":1,"remainingCount":0,"entityIds":["intake-entity-ab505220e961d412"],"completeness":"Additional distinct historical2025 King Air mechanic identity from award-name column; recipient identity/location columns excluded. Other table names match current primary tiers."}
+- {"sourceId":"official-nhe-portal","enumeratedCount":11,"reviewedByImplementer":11,"remainingCount":0,"entityIds":["intake-entity-bd065bf6b702013c","intake-entity-2b9467887d744518","intake-entity-4958fffaf0facad9","intake-entity-3ce2ee96bbaaa9f1","intake-entity-98e8761de4c7c7bc","intake-entity-dd6ab05e26bfc4f2","intake-entity-9ca111aabb6621aa","intake-entity-5b24c1053bd04c96","intake-entity-49d43d4d3ffe455d","intake-entity-ea16c869744e54eb","intake-entity-831d7db3158a1797"],"completeness":"Six current student funds and five grants, plus separately held historical Roger Glunt identity; closed application details inaccessible."}
+- {"sourceId":"official-acs-seed","enumeratedCount":4,"reviewedByImplementer":4,"remainingCount":0,"entityIds":["intake-entity-edb5eab088427ab1","intake-entity-eacbf78055ea2d76","intake-entity-98b86f06132a79ab","intake-entity-1063991aca375d72"],"completeness":"All four named funds; Foundant route unavailable; no internship substitute."}
+- {"sourceId":"official-miller-funds","enumeratedCount":5,"reviewedByImplementer":5,"remainingCount":0,"entityIds":["intake-entity-0d9ef7188fb617cc","intake-entity-2407276a4d51c058","intake-entity-1903de0e205d43c4","intake-entity-556215db9b232e37","intake-entity-781a2a811edc3292"],"completeness":"Five observed listed labels, one donor name redacted; matching-only further catalog inaccessible."}
+- {"sourceId":"official-mcf-directory","enumeratedCount":56,"reviewedByImplementer":56,"remainingCount":0,"entityIds":["intake-entity-0fc27a803e97f956","intake-entity-e19aec7a7728a928","intake-entity-57b579dc543cc52c","intake-entity-9b548e35c7dbff64","intake-entity-e935f206070a241b","intake-entity-baf5e2ac312f4cbd","intake-entity-59b5e4ef9ecec569","intake-entity-d6ccb5291c28fca0","intake-entity-b566fa22607f640a","intake-entity-2d9b2284d3981078","intake-entity-0c2fcde6113979a1","intake-entity-7665bcfa836a9f07","intake-entity-f7f2487b29fff0d3","intake-entity-a082270f6b535c6b","intake-entity-20ac63e6641bbbfb","intake-entity-4c0474de380afa9e","intake-entity-efdbaa89fbdc6c6a","intake-entity-9e786bbb9e2971a4","intake-entity-2f40277de41b5c41","intake-entity-6327d00a2c423b1c","intake-entity-3c466fceaaf65541","intake-entity-c60cab42cda98be4","intake-entity-933bd493eeee4c90","intake-entity-e7af825402aad3a9","intake-entity-a293470af6747257","intake-entity-9d0c0f4b821852c6","intake-entity-edf322c9f4dcacc9","intake-entity-a7610d0240183132","intake-entity-d9fe215076e6f5cc","intake-entity-fb987682ae62bb8f","intake-entity-c51fcf9fec432b9d","intake-entity-5669e7cc738baaea","intake-entity-a9c4dbc84165106c","intake-entity-182c1a96a75ac01b","intake-entity-ee80c45998f50d9c","intake-entity-5b7e8fea2757815e","intake-entity-6487365f83c7b715","intake-entity-dd2d2667a5959271","intake-entity-825b05bdf38117df","intake-entity-984740f5f66c9fb4","intake-entity-78fb268bfeb5e602","intake-entity-d735983f43e4b8cb","intake-entity-2a561efd555d4bc6","intake-entity-75335b858217cb8c","intake-entity-29cc9ab8edbc5e31","intake-entity-814c1e454b972d8c","intake-entity-2c95e728ec8b092c","intake-entity-792e81b723454e3a","intake-entity-1b222e3728e98654","intake-entity-0449556181b458e5","intake-entity-fac5664941e419c6","intake-entity-69e1ceda47c3c69e","intake-entity-2485091ed6fe2ff6","intake-entity-77521f95c9bf2014","intake-entity-96cf801ab35ce3ce","intake-entity-b011c6d0a305d0f3"],"completeness":"Prior session read all five pages (12+12+12+12+8) with no Next on page5. Page1 raw saved; pages2-5 observation transcribed from immutable continuation. One existing Louise Tribal entity remains under prior identity review; no claim of inaccessible authenticated matches.","independentEvidenceRecheckRequired":"Validate decisive page2-5 rules where prior browser transcription lacks full export."}
+- {"sourceId":"official-wts-foundation","enumeratedCount":7,"reviewedByImplementer":7,"remainingCount":0,"entityIds":["intake-entity-f820068a526f8f69","intake-entity-879625f83f64dcdb","intake-entity-1a1b9205c564bc24","intake-entity-cb5a1664f9774e8e","intake-entity-4ef2dba571dcd731","intake-entity-48a6cfa97cf5f4a9","intake-entity-f1b8e22effde7239"],"completeness":"All six named Foundation awards plus Strategic Partner pool; existing Master111-115 survive. Seven corporate allocations are not seven new award identities. Chapter-specific applications remain uninspected."}
+- {"sourceId":"official-agc-program","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-ea0542637a63a66b","intake-entity-c9d96dc16740d47a","intake-entity-b98cd4426c876f93"],"completeness":"All three public AGC programs: undergraduate/graduate outside audience; existing Master144 workforce scholarship preserved, future2027 opening is not proof of a current open route.","existingMasterMappings":[{"program":"Workforce Development","masterRows":[144,146],"entityIds":["intake-entity-b98cd4426c876f93","intake-entity-09d4ae84442344a4"],"disposition":"Both existing records identify the same AGC/NCCER workforce program. Preserve both existing source rows; no third addition. Consolidation and destination correction remain an explicit related-record recommendation, not a deletion."}]}
+- {"sourceId":"official-aws-route","enumeratedCount":1,"reviewedByImplementer":1,"remainingCount":0,"entityIds":["intake-entity-a36799ac458ef6de"],"completeness":"Only one public currently-open portal label observed and reconciled to existing Master148. Other profile-dependent catalog matches are inaccessible; not enumerated and no complete AWS catalog claim.","inaccessibleRemainder":{"status":"unknown_count","reason":"Individual matching requires profile/login; no applicant account entered.","nextAction":"Review public named-fund rules when available, no login under this scope."}}
+- {"sourceId":"official-avfuel-program","enumeratedCount":5,"reviewedByImplementer":5,"remainingCount":0,"entityIds":["intake-entity-916a84e0e89cc9d8","intake-entity-bf37512091c80c4d","intake-entity-7c1f61fdba0e1aa7","intake-entity-ed7e693a0e2b4f14","intake-entity-64e4904c504d9a58"],"completeness":"Two separate primary awards and three FutureTakesFlight categories;10recipient allocations do not create10awards. FTF route unavailable."}
+- {"sourceId":"official-pearl-program","enumeratedCount":9,"reviewedByImplementer":9,"remainingCount":0,"entityIds":["intake-entity-4c8c9f304c7bcd0f","intake-entity-f0f81142599d2222","intake-entity-3d8acdae066dd2f8","intake-entity-ca1749e5384304b0","intake-entity-8fc38e15026ec65f","intake-entity-f5799c63924c3a01","intake-entity-0802a500679cba17","intake-entity-a972e195669d255b","intake-entity-c9e4cc40f8b12495"],"completeness":"All9 distinct public programs across10 rendered headings; AviationPathways duplicate heading/alias linked. Five closed individual routes unavailable after targeted search."}
+- {"sourceId":"official-university-um-honors","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-405e049d10107592","intake-entity-dc6b1bb304efcce3","intake-entity-88797bf70e4a4710"],"completeness":"All3namedincomingDHCawards; eachMasterdestinationpreserved. AggregateJan15datecorrectedwithprogramspecificDec1yearlessdeadline."}
+- {"sourceId":"official-university-msu-additional","enumeratedCount":2,"reviewedByImplementer":2,"remainingCount":0,"entityIds":["intake-entity-ce2760a368b23103","intake-entity-ac6231602c22a72c"],"completeness":"Bothnamedawardsinsupplied#presidentialanchor;7othernavigationcategoriesoutsideanchoredscopeexplicitlynotexpanded."}
+- {"sourceId":"official-university-fvcc","enumeratedCount":14,"reviewedByImplementer":14,"remainingCount":0,"entityIds":["intake-entity-269b8254f69071c1","intake-entity-8adad6d75c1ecae0","intake-entity-bc13ed9707bbaf6b","intake-entity-821f4f499c25ec7d","intake-entity-9d982996bde6a2c8","intake-entity-4e0163950edc0f0a","intake-entity-22fee7bb884d98e4","intake-entity-ca2dacae469c41ea","intake-entity-818522e38a931726","intake-entity-4ffda8cf1dff4c2b","intake-entity-1fa085568e4ca62f","intake-entity-674db2994a2c164d","intake-entity-12fcbf3d16962ca7","intake-entity-a3e0f07e1efa2f7c"],"completeness":"6student+4graduate+4state namedsectionsconfirmedliveaccessibilitytree. 8outsideoutboundresourcesnotindividualawards; prior14not16 correction. Sharedinstitutionalcatalog behindloginisnotclaimedcomplete."}
+- {"sourceId":"official-trades22-hpfy","enumeratedCount":2,"reviewedByImplementer":2,"remainingCount":0,"entityIds":["intake-entity-f93c280427f75548","intake-entity-0ff3054c2c60305b"],"completeness":"ExactlytwonamedHPFYfunds. ExistingMakeDifferenceidentity/nativeconditionsmatch; nofullfreshnessupdatetoMaster132."}
+- {"sourceId":"official-trades22-aws-educators","enumeratedCount":6,"reviewedByImplementer":6,"remainingCount":0,"entityIds":["intake-entity-045b2e5777baa0b1","intake-entity-276cbb355b16d071","intake-entity-07d422e84077bbfe","intake-entity-75e067ec4e30711c","intake-entity-c39292577f6839b9","intake-entity-f829804d88bf7a9b"],"completeness":"FivenamedNationaleducatorfundsplusDistrictpool;allsharecurrenteducatorrestriction."}
+- {"sourceId":"official-trades22-bring-form","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-4f34cfefdaa2dc77","intake-entity-d53181542bdffcb0","intake-entity-bcb7f457f2ce908a"],"completeness":"Oneindividualmonthlyscholarshipandtwoinstitutionaltoolgrantprograms."}
+- {"sourceId":"official-institute25-extra-bulk-provider","enumeratedCount":2,"reviewedByImplementer":2,"remainingCount":0,"entityIds":["intake-entity-35b7baa9e4af1f70","intake-entity-cf147d433a959a35"],"completeness":"Exactly two named Bulkthreads programs: Lets Aim Higher/Bold and Believe in Yourself/ScholarshipOwl; no whole platform catalog claim."}
+- {"sourceId":"official-providers26-07531680b522d47d","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-339078f451bdc2e6","intake-entity-2f770a9ebbe2c864","intake-entity-2d3e02370c891bd9"],"completeness":"Three named2026–27programs inselectedcurrentprogramsection; historicalrecipienttableexcluded, nohistoricalfundcatalogclaim."}
+- {"sourceId":"official-national27-web-pgsf","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-f23e4c4073343bbb","intake-entity-410629f1161ac126","intake-entity-e6c48727698e8607"],"completeness":"Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."}
+- {"sourceId":"official-national27-web-catching","enumeratedCount":3,"reviewedByImplementer":3,"remainingCount":0,"entityIds":["intake-entity-4584b8492df03fd2","intake-entity-ffd0e4f229790d5c","intake-entity-311d1bb8e7a94c10"],"completeness":"Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."}
+- {"sourceId":"official-national27-web-rma","enumeratedCount":6,"reviewedByImplementer":6,"remainingCount":0,"entityIds":["intake-entity-45dea9af34fb7caa","intake-entity-3604e8110e1320d6","intake-entity-10a95f8b06e528b8","intake-entity-be9e9be03521ec57","intake-entity-1a0a91800fd21e22","intake-entity-17598494c2d20627"],"completeness":"Only explicitly named program/track headings in selected official evidence; no unbounded historical recipient or fund catalog claim."}
+- {"sourceId":"official-national27-web-csu","enumeratedCount":1,"reviewedByImplementer":1,"remainingCount":0,"entityIds":["intake-entity-d4cbec62bb75668e"],"completeness":"One explicitly described additional award component; no full CSU scholarship catalog claim."}
+- {"sourceId":"official-community29-ahs","enumeratedCount":2,"reviewedByImplementer":2,"remainingCount":0,"entityIds":["intake-entity-372a78c31380440e","intake-entity-8a1c7d084e92d9d7"],"completeness":"Only named categories/slots in the selected official section; no unbounded catalog or historical fund claim."}
+- {"sourceId":"official-community29-nsaa","enumeratedCount":12,"reviewedByImplementer":12,"remainingCount":0,"entityIds":["intake-entity-f0378a4c39e7c3d2","intake-entity-cd75bfa60fc2464d","intake-entity-3e60c926ffa2c70a","intake-entity-3fb7fc1261c4881a","intake-entity-9ca84f66cbce22db","intake-entity-95ed1e3595d8d73f","intake-entity-81c4aeec663fb0d2","intake-entity-5ff297ffd9f0a3f4","intake-entity-bea6faca0dfcafe6","intake-entity-9b91b0fae5af9b64","intake-entity-fa09c1c9b2334dd3","intake-entity-b5e5f796cab340e0"],"completeness":"Only named categories/slots in the selected official section; no unbounded catalog or historical fund claim."}
+- {"sourceId":"official-community29-amvets","enumeratedCount":5,"reviewedByImplementer":5,"remainingCount":0,"entityIds":["intake-entity-776bea8be94fb851","intake-entity-2f775d3dec778957","intake-entity-6d5963f93528eb02","intake-entity-1e493814e860d6b4","intake-entity-963d11c9bb5041e6"],"completeness":"Only named categories/slots in the selected official section; no unbounded catalog or historical fund claim."}
+- {"sourceId":"official-aviation28-allaround","enumeratedCount":1,"reviewedByImplementer":1,"remainingCount":0,"entityIds":["intake-entity-3640f9ae40def88d"],"completeness":"Onecurrentnamedprogram;twoentrycontrolsnotindependentawards."}
+- {"sourceId":"official-aviation28-eaa","enumeratedCount":33,"reviewedByImplementer":33,"remainingCount":0,"entityIds":["intake-entity-a44faefdf4d23ab3","intake-entity-29f34c84d1912d1d","intake-entity-85fd161a36cfc323","intake-entity-61b4b199f206cb2d","intake-entity-40258aa3c193db3b","intake-entity-75a2ea9ceb3eb0ea","intake-entity-c11dbe2017291ae8","intake-entity-6b22b2d77d152dab","intake-entity-140005c9fbbd292c","intake-entity-43311851e39ad062","intake-entity-5faf1ada0fe01dbe","intake-entity-8c9e9b604fa4fd62","intake-entity-b6790be4b5781b32","intake-entity-77a81abbbfc4732a","intake-entity-37277e23a2397526","intake-entity-5a9f6687486e3cd1","intake-entity-359777c026aeac4f","intake-entity-7aa3eaccdbec1c3b","intake-entity-81f1777bd26c5484","intake-entity-f1b4d65ffeb7c863","intake-entity-7255fb68bef8e57e","intake-entity-b682a3b2210e26c9","intake-entity-c907175ed9a2fd2e","intake-entity-44a1c1ceee16a8e8","intake-entity-c4feb26fe5ac3537","intake-entity-c5a5aa35ce11dd9f","intake-entity-3421fdbfceb5a78a","intake-entity-05fbd204ed5c74df","intake-entity-6fde3c4ef4672ed2","intake-entity-b8d20e2ae9554b75","intake-entity-ba21277eeef81671","intake-entity-28142d4c0e3818f0","intake-entity-650bbc16aa34d310"],"completeness":"Complete33observednamesonly;EAAentireparentcatalognotclaimedcomplete."}
+- {"sourceId":"official-aviation28-99s","enumeratedCount":4,"reviewedByImplementer":4,"remainingCount":0,"entityIds":["intake-entity-033ce3d17f507e5b","intake-entity-23123f7edf4573b6","intake-entity-f3d049292f8d26b0","intake-entity-9b0589569579b753"],"completeness":"Fourdescribedaward/grantcategories;chaptercatalogunknown."}
+- {"sourceId":"official-aviation28-gama","enumeratedCount":4,"reviewedByImplementer":4,"remainingCount":0,"entityIds":["intake-entity-a2b852adee40ffa8","intake-entity-4f61ad76d97daa41","intake-entity-85f28226334edd8b","intake-entity-95106ef269248edb"],"completeness":"Two directawards andtwo externalreferrals,notfourawards."}
+- {"sourceId":"official-aviation28-explorer","enumeratedCount":5,"reviewedByImplementer":5,"remainingCount":0,"entityIds":["intake-entity-1100d862935efe96","intake-entity-20e5759aeac08a82","intake-entity-62bbbfa73f56d846","intake-entity-44d9412077823387","intake-entity-e9df6258c3cbb0db"],"completeness":"Fiveapplicationcategoriesnotfiveindependentawards;2-recipientwordingconflictvisible."}
+- {"sourceId":"official-aviation28-afa","enumeratedCount":10,"reviewedByImplementer":10,"remainingCount":0,"entityIds":["intake-entity-4826a548ae754581","intake-entity-57ef390a78d6675f","intake-entity-88b230b94eb04bb0","intake-entity-f5c37dd07803efee","intake-entity-39d950c50256c080","intake-entity-1428694f10a9d393","intake-entity-a1a3c07af0f3c048","intake-entity-ebf47713d3b4002d","intake-entity-6bd2c770971531f0","intake-entity-bd9b5dc69d970356"],"completeness":{"observedNamedChildren":10,"reviewedNamedEntities":10,"remainingDirectChildChecks":0,"fullParentCount":10,"limit":"Tenobservedprogramheadingsonly;futurecatalogmaychange."}}
+- {"sourceId":"official-aviation28-nbaa","enumeratedCount":10,"reviewedByImplementer":10,"remainingCount":0,"entityIds":["intake-entity-03a7594f1fecb400","intake-entity-91f9c9b3f8adf57c","intake-entity-d0f9be0cd9c4f1b7","intake-entity-bcc9fb2e8dfd2e56","intake-entity-911eb37c94dd2d30","intake-entity-978adc6ec8ff9ab1","intake-entity-60e54e9af3c4dffe","intake-entity-fc40f9495c56b962","intake-entity-dafb5d596fc884e7","intake-entity-2712e7df4abbce08"],"completeness":{"observedNamedStudentChildren":10,"reviewedNamedEntities":10,"remainingDirectChildChecks":0,"fullParentCount":null,"unexpanded":"Working-professionalbranchnotfullyenumerated;unknownremainingcount,notzero."}}
+
+- Air Force Association Scholarship: {"observedNamedChildren":10,"reviewedNamedEntities":10,"remainingDirectChildChecks":0,"fullParentCount":10,"limit":"Tenobservedprogramheadingsonly;futurecatalogmaychange."}
+- Experimental Aircraft Association (EAA) Scholarship: {"observedNamedFlightTrainingFunds":33,"reviewedNamedEntities":33,"otherBranches":"PostsecondaryandotherEAAparentbranchesunexpanded;totalunknown","actualApplication":"Notreturned"}
+- National Business Aviation Association (NBAA) Scholarship: {"observedNamedStudentChildren":10,"reviewedNamedEntities":10,"remainingDirectChildChecks":0,"fullParentCount":null,"unexpanded":"Working-professionalbranchnotfullyenumerated;unknownremainingcount,notzero."}
+- The Ninety-Nines Scholarship: {"observedCategories":4,"chapterAwardsTotal":null,"limitation":"Section/chapterdirectoryunexpanded"}
+- Montana Coaches Association Scholarships: {"reportedAwardCount":8,"namedInputLeads":2,"remainingAwardSlotsNotResolved":4,"fullNamedProgramCount":null,"limitation":"Ralphnameattributionandremainingfourawardidentitiesunknown;do nottreatrecipientcountsasprogramcounts."}
 
 ## Coverage and limits
 

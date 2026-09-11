@@ -68,7 +68,7 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
     assert(r.id.startsWith(`${l.inputs.snapshotId}:sheet-${r.sheetId}:row-${r.rowNumber}:`));
     assert(r.id.endsWith(r.rowContentSha256.slice(0,12)));assert(/^[a-f0-9]{64}$/.test(r.rowContentSha256));
     assert(r.disposition===null||dispositions.has(r.disposition),'Invalid disposition');
-    if(r.entityId){assert(entities.has(r.entityId));assert.equal(membership.get(r.id),1,'Row entity membership not exactly one');}
+    if(r.entityId){assert(entities.has(r.entityId));assert.equal(membership.get(r.id),1,'Row entity membership not exactly one');assert(entities.get(r.entityId)!.sourceRowIds.includes(r.id),'Row points to different owning entity');}
     if(r.disposition!==null)assert(r.rationale?.trim(),'Disposition without rationale');
     if(['duplicate_of','link_existing','propose_add','propose_update'].includes(r.disposition??'')) {
       assert(r.destination,'Missing surviving destination');assert(entities.has(r.destination.entityId!),'Unknown surviving entity');
@@ -94,8 +94,29 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
     if(complete){assert.notEqual(e.status,'pending-evaluation');assert.equal(e.review.status,'reviewed');assert(e.review.reviewer);}
   }
   for(const d of l.discoveries)assert.equal(d.enumeratedCount,d.reviewedByImplementer+d.remainingCount,'Lost discovered children');
+  if(complete)validateClosureRecords(l as ClosureLedger);
   validateProposalRecords(l);
   return {rows:l.rows.length,entities:l.entities.length,decidedRows:l.rows.filter(r=>r.disposition!==null).length,pendingEntities:l.entities.filter(e=>e.status==='pending-evaluation').length,proposedAdds:l.entities.filter(e=>e.disposition==='propose_add').length};
+}
+
+type ClosureLedger = Ledger & {
+  entities:(Entity & {pendingIdentityRowIds?:string[];hold?:{owner?:string;reason?:string;trigger?:string;nextAction?:string}})[];
+  relatedFieldTriage:{id:string;review:{status:string};fields:{status:string;review:{status:string};rationale?:string}[]}[];
+  interviewGaps:{id:string;supportingEntityIds:string[]}[];
+};
+export function validateClosureRecords(l:ClosureLedger) {
+  const entities=new Set(l.entities.map(e=>e.id));
+  for(const e of l.entities){
+    assert(!e.pendingIdentityRowIds?.length,'Unresolved identity marker');
+    if(e.disposition==='hold')assert(e.hold?.owner?.trim()&&e.hold.reason?.trim()&&e.hold.trigger?.trim()&&e.hold.nextAction?.trim(),'Hold lacks owner or actionable trigger');
+  }
+  for(const d of l.discoveries)assert.equal(d.remainingCount,0,'Unaccounted enumerated discovery');
+  for(const t of l.relatedFieldTriage){
+    assert.equal(t.review.status,'reviewed','Unreviewed related triage');
+    for(const f of t.fields)assert(f.status!=='pending'&&f.review.status==='reviewed'&&f.rationale?.trim(),'Unreviewed related field');
+  }
+  assert.equal(new Set(l.interviewGaps.map(g=>g.id)).size,l.interviewGaps.length,'Duplicate gap recommendation');
+  for(const g of l.interviewGaps){assert(g.supportingEntityIds.length,'Unsupported gap recommendation');for(const id of g.supportingEntityIds)assert(entities.has(id),'Unknown gap-support entity');}
 }
 
 // Checks the promotion semantics independently of source-file I/O. Native-cell and

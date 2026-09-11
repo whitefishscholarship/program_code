@@ -1,3 +1,78 @@
+# Scholarship intake — complete local candidate, final review pending
+
+Updated September 11, 2026 UTC. Canonical plan revision15; intake plan SCHOLARSHIP-INTAKE-1.
+Execution: `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
+Prior checkpoint `65f58fd048cc6ef677588b941aa181c7b13265b3`; this freeze follows it.
+Resolve exact tip with `git rev-parse codex/scholarship-intake`. User checkpoint
+`c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` remains an ancestor. Original checkout untouched.
+Normal read-only fetch reverified `origin/main` at `5fa08541b6b49484dedc8fc06012e47c658ce8fb`;
+see `docs/evidence/scholarship-intake/final-baseline.json`.
+
+## Source, scope and reviewed work
+
+- Sole ledger: `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `a2fcc4eb7002be2d9cbad0f15a83e5f77f36f24a514e9dca2e0191efa5cf26d7`.
+- Workbook `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`; frozen source
+  `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
+- 14tabs,1,666originalrows,1,024entities; all rows/entities decided and bounded-reviewed.
+  Dispositions:219additions,38updates,310holds,173out-of-scope,159existinglinks,
+ 77duplicates,48non-records. Zero pending-evaluation entities.
+- 293related triages /1,161 differing fields reviewed.46discovery records preserve
+  enumeration units and unknown wider catalogs. All20stale identity lists cleared
+  only after exact25-row audit. Looney5routes, Dawson65headings/64canonicalentries,
+  NGPA20rows/16funds and NASCLAalias hold are reconciled.
+- Bounded receipts through029, validator/planner/cross-collision/coverage and closure
+  are saved. Aviation028 finalPASS at65f58fd resolves TaylorE/I/J and bereavementcoverage;
+  Community029 finalPASS atb94f421 resolves provenance. Prior policy/Epic/WAI PASS reused.
+- Proposed awards/updates contain3,368field recommendations,277tags and1,040coverage
+  decisions. Five grouped interview recommendations are recommendations only.
+
+## Exact unapplied batch and limits
+
+- Human report: `docs/evidence/SCHOLARSHIP-INTAKE-report.md`.
+- Exact batch: `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`.
+  Digest `bb19b1ea5c29c3a56264b1917964f8133b97512e6f7c43e2a19d82dadc73285e`;257operations/3,367cells:
+  219fixed appendedA:Orecords atA199:O417 and82changed existingcells on38Masterrows.
+- I65 is the single excluded field recommendation: preserve known native bold runs
+  through an independently reviewed mapping before any changed batch is authorized.
+  HaganI25income wording remains a related-source hold pending exact current definition/taxyear.
+ 310heldentities retain owner/reason/trigger/action; all catalog limits and findings in report.
+- Source metadata recheck07:10UTC retained revision226, same modified time and14tabs;
+  see source-recheck.json. Automatic approval review rejected saving another complete
+  local Master copy; none was saved and no workaround/native-cell recheck is claimed.
+  Metadata is not an atomic content check or future-write freshness guarantee.
+- Backup/recovery receipt `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+  explicitly NOT_AUTHORIZED_NOT_CREATED. Full native workbook backup, privacy/access,
+  disposable recovery proof, complete affected-cell preimages, fresh fingerprints,
+  newer-edit protection and exact readback are mandatory before any source write.
+- No copies, source writes or publication. No applicant data, legacy workbook,
+  provider contact, forms, new services, automation, runtime questions or matching rules.
+  P9/completed releases and runtime source/public files unchanged from verifiedmain;
+  GPA/school filtering, all-award access, privacy and exact visible-result CSV preserved.
+
+## Verification and next executable action
+
+`docs/evidence/scholarship-intake/final-validation/results.json` records commands,
+UTCtimes, exitcodes and loghashes. Clean offline install passed(438packages); typecheck,
+fullnpmtest, exact defaultTurbopackbuild, P9runtimeboundary, completeledger, deterministic
+batchcheck anddiffwhitespace passed. The build's existing middleware deprecation warning
+is retained; no unrelated migration. Plancheck exits1 with exactly3reserved final gates:
+missing PLAN-REV15manifest, review and committedattestation. These are NOT a PASS or waived;
+no premature canonicalattestation is created while exact downstream authority is absent.
+Codechecks do not establish scholarshipcurrency or hostedapplicationhealth.
+
+Next: fresh-context read-only review of this immutable localcandidate and complete
+manifest/diff,100%row/entity/field/tag/coverage/operation scope, underlying evidence,
+all held/excluded outcomes and recommendations. Root owns any remediation; reviewer
+rechecks changes. Final localreviewreceipt will bind exactcandidate+manifest+batchdigest.
+After PASS, update localreview closeout/handoff and stop at unapplied localcandidate.
+New exact authority is required before privatebackup/recoverycopies or workbookwrites;
+new separate exact push/PR/Preview/merge/Production/verificationauthority or verified
+applicable suppression is required for publication. FullMasterrefresh and selected
+interview/publication changes remain future work, not part of this intake.
+
+## Historical checkpoints below — superseded by the operative status above
+
 ## Local intake checkpoint — final batch remediation
 
 Prior exact tip `b94f421bd3b64fb7ebfd6ca5972ab08c48008b22`; resolve current execution tip with `git rev-parse codex/scholarship-intake`. Sole ledger SHA256 `0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b`. All 1,666 rows decided; 219 additions and 38 updates, 83 field recommendations (82 executable; I65 deferred). Exact dry run: 257 operations / 3,367 cells, unapplied. Community029 PASS receipt saved. Aviation028 two medium findings remediated: Taylor E/I/J and two loss-of-parent coverage assessments; bounded recheck pending. Closure audit verified20 stale identity lists/25 rows, now cleared; NASCLA inheritance and all five Looney routes recorded, recheck pending. Next: finish gap/report metadata, full required checks, then immutable fresh-context final local review. No backup/copies, source writes or publication authorized/performed. Frozen source and baseline remain as below.

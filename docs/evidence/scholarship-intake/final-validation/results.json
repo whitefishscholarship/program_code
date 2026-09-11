@@ -1,0 +1,129 @@
+{
+  "status": "LOCAL_VALIDATION_NOT_APPLICATION_HEALTH_OR_ACCEPTANCE",
+  "commands": [
+    {
+      "name": "plan-check",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:42:15.053216+00:00",
+      "finishedAt": "2026-09-11T07:42:35.817503+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/plan-check.log",
+      "logSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:42:35.817863+00:00",
+      "finishedAt": "2026-09-11T07:42:39.486803+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/typecheck.log",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+    },
+    {
+      "name": "test",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:42:39.487133+00:00",
+      "finishedAt": "2026-09-11T07:43:13.766455+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/test.log",
+      "logSha256": "0fbe0fc1470a5d9b6a93a34bd6c3ebcb9895b7869b990a4e6d7dac5d0f22c4ef"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:43:13.766808+00:00",
+      "finishedAt": "2026-09-11T07:43:24.666517+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/build.log",
+      "logSha256": "bce795b70eb1853a9cbc7f0caaafea06b5bb300921efd220aac05819cc7a0cd8"
+    },
+    {
+      "name": "runtime-boundary",
+      "command": [
+        "npm",
+        "run",
+        "p9:production:check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:43:24.667188+00:00",
+      "finishedAt": "2026-09-11T07:43:25.107177+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/runtime-boundary.log",
+      "logSha256": "78bf91ecff5bc60db082860404a6cb3d5435f7a4dffaa6b0376873208b206e8e"
+    },
+    {
+      "name": "intake-complete",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/scholarship-intake.ts",
+        "--complete"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:43:25.107495+00:00",
+      "finishedAt": "2026-09-11T07:43:25.301746+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/intake-complete.log",
+      "logSha256": "649675463a64f726b1dc9edffeb8e587362b349eccb620e8917a72b5c66461da"
+    },
+    {
+      "name": "dry-run",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/intake-promotion.ts",
+        "--complete",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake/web",
+      "startedAt": "2026-09-11T07:43:25.302150+00:00",
+      "finishedAt": "2026-09-11T07:43:25.593783+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/dry-run.log",
+      "logSha256": "52a79e2005d214409c9519e32ed4c11a023257bc49c868edcc36da192b619f27"
+    },
+    {
+      "name": "diff-check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-scholarship-intake",
+      "startedAt": "2026-09-11T07:43:25.594124+00:00",
+      "finishedAt": "2026-09-11T07:43:25.683780+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/scholarship-intake/final-validation/diff-check.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "cleanInstall": {
+    "command": "npm ci --offline",
+    "exitCode": 0,
+    "packagesAdded": 438,
+    "packagesAudited": 439,
+    "vulnerabilities": 0,
+    "evidence": "Observed tool execution before this matrix; exact per-command timestamp not retained. Dependency files unchanged since install."
+  }
+}

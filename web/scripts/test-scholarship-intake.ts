@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {canApplyIntake,INTAKE_WORKBOOK,validateProposalRecords,type WriteGate,type Ledger,type Entity} from './scholarship-intake';
+import {canApplyIntake,INTAKE_WORKBOOK,validateProposalRecords,validateClosureRecords,type WriteGate,type Ledger,type Entity} from './scholarship-intake';
 const valid:WriteGate={workbookId:INTAKE_WORKBOOK,batchDigest:'a'.repeat(64),authorizedBatchDigest:'a'.repeat(64),exactWriteAuthority:true,completeNativeBackup:true,allTabsIncludingHidden:true,privateAccessVerified:true,materialFeaturesRecoverable:true,disposableRecoveryProof:true,affectedCellBackup:true,backupUnchanged:true,freshForThisBatch:true,snapshotFingerprint:'b'.repeat(64),liveFingerprint:'b'.repeat(64),quietWindowOrAtomicPrecondition:true,independentReviewComplete:true,unresolvedHighOrCritical:0,uncertainPriorWrite:false,alreadyApplied:false};
 assert(canApplyIntake(valid));
 for(const key of ['exactWriteAuthority','completeNativeBackup','allTabsIncludingHidden','privateAccessVerified','materialFeaturesRecoverable','disposableRecoveryProof','affectedCellBackup','backupUnchanged','freshForThisBatch','quietWindowOrAtomicPrecondition','independentReviewComplete'] as const)assert(!canApplyIntake({...valid,[key]:false}),key);
@@ -35,3 +35,11 @@ for(const change of [{kind:'proposed_operation'},{sheetId:123}]) {
 update.rows[0].values[8]='A newer manual edit';
 assert.throws(()=>validateProposalRecords(update),/Stale old field value/);
 console.log('Intake proposal consistency, field provenance, controlled mapping and newer-edit fixtures PASS.');
+
+const closure={...fixture,schemaVersion:1,planId:'SCHOLARSHIP-INTAKE-1',inputs:{workbookId:INTAKE_WORKBOOK,snapshotId:'synthetic',snapshotSha256:'a'.repeat(64),snapshotFiles:[],tabs:[]},discoveries:[{enumeratedCount:1,reviewedByImplementer:1,remainingCount:0}],relatedFieldTriage:[{id:'synthetic-triage',review:{status:'reviewed'},fields:[{status:'supported_related_update_proposed',review:{status:'reviewed'},rationale:'Exact supported field.'}]}],interviewGaps:[{id:'synthetic-gap',supportingEntityIds:['synthetic-add']}]};
+validateClosureRecords(closure);
+const missedChild=structuredClone(closure);missedChild.discoveries[0].remainingCount=1;assert.throws(()=>validateClosureRecords(missedChild),/Unaccounted enumerated discovery/);
+const pendingField=structuredClone(closure);pendingField.relatedFieldTriage[0].fields[0].review.status='pending';assert.throws(()=>validateClosureRecords(pendingField),/Unreviewed related field/);
+const unsupportedGap=structuredClone(closure);unsupportedGap.interviewGaps[0].supportingEntityIds=['missing'];assert.throws(()=>validateClosureRecords(unsupportedGap),/Unknown gap-support entity/);
+const noTrigger=structuredClone(closure);noTrigger.entities[0].disposition='hold';assert.throws(()=>validateClosureRecords(noTrigger),/Hold lacks owner or actionable trigger/);
+console.log('Intake closure rejects lost children, pending triage, orphaned recommendations and unactionable holds.');
