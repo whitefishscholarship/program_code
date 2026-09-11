@@ -10,12 +10,12 @@ Default branch: `main`
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
   verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
-  Prior exact checkpoint `b126ce9e033c5b115798966cc82ca5efbf6ee0de`; this local checkpoint
+  Prior exact checkpoint `14bf385246fc163da5d1c1fdea43ff8ba1e29293`; this local checkpoint
   follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `15ad4fdd46d1d0939ed59e56372c3f3a21c03cde22d65bfaa30070da5cd0de39`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `d6b1a92476c9357fe88c43e8ecfbae7bd8930a8b89932ca255c0f33764813e76`.
   Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 925, "decidedRows": 1456, "pendingEntities": 133, "proposedAdds": 190, "proposedUpdates": 32}`. All proposals unapplied.
+  Current counts `{"rows": 1666, "entities": 925, "decidedRows": 1483, "pendingEntities": 116, "proposedAdds": 191, "proposedUpdates": 36}`. All proposals unapplied.
 - Independent PASS receipts saved through015 and related016–019. Related review covers
   238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
   All review findings corrected: exact richlinks, missing aliasfields, material official
@@ -32,16 +32,28 @@ Default branch: `main`
   UM/DHC/MSU aliases preserve separate programs. Exact current sources and conflicts in
   `docs/evidence/scholarship-intake/university-evidence.json`.
 - Trades/disability022 independently PASS, receipt saved:22entities/51source rows,3unappliedadds(BBT,DEWALT,HPFYBeyondDisability). Eightneweducator/institutionalchildrenexcluded; NASCLA/ACE/AWScatalog/Pelltypeandidentityholds explicit. Evidence `docs/evidence/scholarship-intake/trades-disability-evidence.json`; safe sources `.firecrawl/resume-trades22-*.json`.
-- Bold named-award batch023 authored: 38 entities / 41 source rows; four additions
+- Bold named-award batch023 independently PASS, receipt saved: 38 entities / 41 source rows; four additions
   (Adam Montes, Ethel Hayes, Lawther and STEAM), 21 audience exclusions and 13 specific
   route/identity holds. Rules and exact application controls checked; closed-cycle
   generic signup links do not prove an award-specific application route.
   Evidence: docs/evidence/scholarship-intake/bold-named-evidence.json.
   Safe retained source fields: .firecrawl/resume-bold23-*.json.
-- Next executable action: independent review023; continue the133remaining entities,
-  including related aliases, ScholarshipInstitute and Scholarships.com named leads,
-  remaining official providers and HoratioMontana. Preserve completed reviews.
-  Do not rerun completed author/receipt scripts, including intake_resume_bold23.py.
+- Related-alias batch024 authored: 27 entities / 32 rows (27 newly decided), 24 related
+  triage records / 208 fields. One Morelli addition; changed Master30,81,119,147,169,
+  preserving prior proposals. This confirms the MSU transition, corrects certificate
+  timing/form, adds exact Allegra deadline, AFSA exclusions, STEM certificate/two-year
+  paths and Horatio renewal-versus-entry GPA. Wells Fargo tentative fields stay held.
+  Evidence: docs/evidence/scholarship-intake/related-aliases-evidence.json.
+- Next executable action: independent review024; continue the116remaining entities.
+  Twenty-five ScholarshipInstitute-derived named awards have already been researched
+  at exact Bold pages; safe public excerpts .firecrawl/resume-institute25-*.json.
+  These are not yet ledger decisions. Some public excerpts lack route or timing and
+  need targeted follow-up; do not infer eligibility from a directory or recipient.
+  Remaining official providers, Scholarships.com leads, AOPA external resources and
+  related aliases are listed in /private/tmp/intake-pending-current.json (regenerate
+  from ledger because that convenience file predates024).
+  Do not rerun completed author/receipt scripts, including intake_resume_related24.py
+  or intake_resume_receipt23.py. Completed review source/receipt bytes are preserved.
 - Partial ledger validation and diff whitespace pass after correcting disposition vocabulary.
   Full suite/build, strengthened validation, exact dryrun/report/gapcoverage, fresh workbook
   fingerprints and final independent review unfinished. Do not claim final acceptance.
