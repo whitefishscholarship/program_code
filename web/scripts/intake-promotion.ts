@@ -8,7 +8,7 @@ export const digest=(v:unknown)=>sha256(canonical(v));
 export type NativeCell={userEnteredValue?:{stringValue?:string;numberValue?:number;boolValue?:boolean;formulaValue?:string};effectiveValue?:unknown;formattedValue?:string;hyperlink?:string;textFormatRuns?:unknown[]};
 export type PlannedCell={a1:string;column:string;before:NativeCell;beforeSha256:string;after:{userEnteredValue?:{stringValue:string};textFormatRuns:unknown[]};displayValue:string;expectedLink:string|null;fieldEvidence:Entity['fields'][number]};
 export type Operation={id:string;kind:'add'|'update';entityId:string;name:string;workbookId:string;sheetId:number;rowNumber:number;sourceRowIds:string[];expectedRowSha256:string;cells:PlannedCell[];checkpointReview:Entity['review'];operationSha256:string};
-export type Batch={schemaVersion:1;planId:string;status:string;workbookId:string;ledgerSha256:string;snapshotId:string;snapshotSha256:string;masterNativeSnapshotSha256:string;appendRange:string|null;operations:Operation[];batchDigest:string;authority:Record<string,unknown>;preconditions:string[];backupPlan:Record<string,unknown>;sourceMarkers:unknown[];priorDecisionReversals:unknown[];schemaChanges:unknown[];tagStorage:string;inversePlan:Record<string,unknown>;reconciliation:Record<string,unknown>};
+export type Batch={schemaVersion:1;planId:string;status:string;workbookId:string;ledgerSha256:string;snapshotId:string;snapshotSha256:string;masterNativeSnapshotSha256:string;appendRange:string|null;operations:Operation[];deferredCells:{entityId:string;name:string;a1:string;before:NativeCell;fieldEvidence:Entity['fields'][number];reason:string;trigger:string}[];batchDigest:string;authority:Record<string,unknown>;preconditions:string[];backupPlan:Record<string,unknown>;sourceMarkers:unknown[];priorDecisionReversals:unknown[];schemaChanges:unknown[];tagStorage:string;inversePlan:Record<string,unknown>;reconciliation:Record<string,unknown>};
 type NativeDoc={range:string;cellFields:string;response:{sheets:{properties:{sheetId:number;gridProperties:{rowCount:number;columnCount:number}};data:{startRow?:number;rowData?:{values?:NativeCell[]}[]}[]}[]}};
 const opDigest=(o:Operation)=>digest({...o,operationSha256:undefined});
 export const batchDigest=(b:Batch)=>digest({...b,batchDigest:undefined});
@@ -22,6 +22,7 @@ export function verifyBatch(b:Batch) {
     assert(!ids.has(o.id),'Duplicate operation ID');ids.add(o.id);assert.equal(o.workbookId,b.workbookId);assert.equal(o.sheetId,0,'Non-Master target');
     assert.equal(o.operationSha256,opDigest(o),'Operation digest changed');assert(o.cells.length>0);assert(o.rowNumber>=2);
     for(const c of o.cells){assert(/^[A-O]$/.test(c.column),'Unapproved column');assert.equal(c.a1,`${c.column}${o.rowNumber}`);assert(!cells.has(c.a1),'Overlapping operations');cells.add(c.a1);assert.equal(c.beforeSha256,digest(c.before),'Before-cell digest changed');assert.equal(c.displayValue,c.fieldEvidence.newValue);}
+    for(const d of b.deferredCells)assert(!o.cells.some(c=>c.a1===d.a1),'Deferred cell included in write operation');
     if(o.kind==='add'){assert.equal(o.cells.length,15,'Incomplete added row');for(const c of o.cells)assert(!c.before.userEnteredValue&&!c.before.effectiveValue&&!c.before.formattedValue,'Addition overwrites populated cell');}
   }
 }
@@ -30,22 +31,26 @@ export function makeBatch(l:Ledger,ledgerBytes:string,native:NativeDoc,nativeByt
   const rows=new Map<number,NativeCell[]>();for(const d of sheet.data)for(const [i,r]of(d.rowData??[]).entries())rows.set((d.startRow??0)+i+1,r.values??[]);
   const master=l.rows.filter(r=>r.sheetId===0);const last=Math.max(...master.map(r=>r.rowNumber));assert.equal(last,198,'Master extent changed; reconcile before planning');
   const proposed=l.entities.filter(e=>['propose_add','propose_update'].includes(e.disposition??'')).sort((a,b)=>a.id.localeCompare(b.id,'en'));let append=last;
+  const deferredCells:Batch['deferredCells']=[];
   const operations:Operation[]=proposed.map(e=>{
     const kind=e.disposition==='propose_add'?'add':'update';const rowNumber=kind==='add'?++append:e.destination!.rowNumber!;assert(rowNumber<=sheet.properties.gridProperties.rowCount,'Append needs an unapproved structural change');
-    const beforeRow=rows.get(rowNumber)??[];const cells=e.fields.slice().sort((a,b)=>a.column.localeCompare(b.column,'en')).map(f=>{
+    const beforeRow=rows.get(rowNumber)??[];const cells=e.fields.slice().sort((a,b)=>a.column.localeCompare(b.column,'en')).map((f):PlannedCell|null=>{
       const before=sourceProjection(beforeRow[f.column.charCodeAt(0)-65]??{});const displayValue=String(f.newValue??'');
-      const expectedLink=['F','H'].includes(f.column)&&/^(https?:\/\/|mailto:)/.test(displayValue)?displayValue:null;
+      const token=['F','H'].includes(f.column)?displayValue.match(/^(https?:\/\/[^\s<>"']+|mailto:[^\s<>"']+)/)?.[0]:undefined;
+      const expectedLink=token&&['http:','https:','mailto:'].includes(new URL(token).protocol)?token:null;
       // Plain strings prevent formula execution. Explicit runs retain the intended public URL.
-      const after={...(displayValue?{userEnteredValue:{stringValue:displayValue}}:{}),textFormatRuns:expectedLink?[{startIndex:0,format:{link:{uri:expectedLink}}}]:[]};
+      const after={...(displayValue?{userEnteredValue:{stringValue:displayValue}}:{}),textFormatRuns:expectedLink?[{startIndex:0,format:{link:{uri:expectedLink}}},...(expectedLink.length<displayValue.length?[{startIndex:expectedLink.length,format:{}}]:[])]:[]};
+      const styled=(before.textFormatRuns??[]).some(r=>{const format=(r as {format?:Record<string,unknown>}).format??{};return Object.keys(format).some(k=>k!=='link');});
+      if(styled){deferredCells.push({entityId:e.id,name:e.name??e.id,a1:`${f.column}${rowNumber}`,before,fieldEvidence:f,reason:'Known native text styling cannot be preserved by clearing or reusing old offsets after the text changes. This cell is excluded from the executable proposal.',trigger:'Derive and independently review an exact formatting-preserving mapping; regenerate the affected operation and obtain exact authority for the changed batch.'});return null;}
       return {a1:`${f.column}${rowNumber}`,column:f.column,before,beforeSha256:digest(before),after,displayValue,expectedLink,fieldEvidence:f};
-    });
+    }).filter((c):c is PlannedCell=>c!==null);
     const o:Operation={id:kind==='add'?`add-${e.id}`:`update-${e.id}`,kind,entityId:e.id,name:e.name??e.id,workbookId:INTAKE_WORKBOOK,sheetId:0,rowNumber,sourceRowIds:e.sourceRowIds,expectedRowSha256:digest(beforeRow),cells,checkpointReview:e.review,operationSha256:''};o.operationSha256=opDigest(o);return o;
-  });
+  }).filter(o=>o.cells.length>0);
   const opMap=new Map(operations.map(o=>[o.entityId,o]));
   const rowOperation=(r:Row)=>opMap.get(r.destination?.entityId??r.entityId??'');
   const markers=l.rows.filter(r=>rowOperation(r)).map(r=>({sourceRowId:r.id,sheetId:r.sheetId,sourceRow:r.rowNumber,originalStatus:(r as Row&{originalStatus?:string}).originalStatus??null,disposition:r.disposition,proposedOperationId:rowOperation(r)!.id,plannedMasterRow:rowOperation(r)!.rowNumber,storage:'Local ledger and this dry run only; no staging/history cell write'}));
   const priorDecisionReversals=l.rows.filter(r=>rowOperation(r)?.kind==='add'&&(/hold|drop|remove|duplicate|pushed|kelsey/i.test(String((r as Row&{originalStatus?:string}).originalStatus??''))||/Removed|Curated/.test(r.tab))).map(r=>({sourceRowId:r.id,sourceTab:r.tab,sourceRow:r.rowNumber,originalStatus:(r as Row&{originalStatus?:string}).originalStatus??null,originalScholarshipFields:r.values,proposedOperationId:rowOperation(r)!.id,decisionRationale:r.rationale,authorityInterpretation:'Historical status is evidence of a prior decision, not attribution to Kelsey or present authority. Exact batch approval must cover this proposed reversal; history remains unchanged.'}));
-  const b:Batch={schemaVersion:1,planId:'SCHOLARSHIP-INTAKE-1',status:'UNAPPLIED_LOCAL_PROPOSAL',workbookId:INTAKE_WORKBOOK,ledgerSha256:sha256(ledgerBytes),snapshotId:l.inputs.snapshotId,snapshotSha256:l.inputs.snapshotSha256,masterNativeSnapshotSha256:sha256(nativeBytes),appendRange:append>last?`'Master Database'!A${last+1}:O${append}`:null,operations,batchDigest:'',authority:{backupCopies:false,recoveryTestCopy:false,sourceWrites:false,rollback:false,push:false,pr:false,preview:false,merge:false,production:false,hostedVerification:false,writeCallsPerformed:0,finalReview:'Separate immutable local-candidate review must bind this batch digest; checkpoint review alone is insufficient.'},preconditions:[
+  const b:Batch={schemaVersion:1,planId:'SCHOLARSHIP-INTAKE-1',status:'UNAPPLIED_LOCAL_PROPOSAL',workbookId:INTAKE_WORKBOOK,ledgerSha256:sha256(ledgerBytes),snapshotId:l.inputs.snapshotId,snapshotSha256:l.inputs.snapshotSha256,masterNativeSnapshotSha256:sha256(nativeBytes),appendRange:append>last?`'Master Database'!A${last+1}:O${append}`:null,operations,deferredCells,batchDigest:'',authority:{backupCopies:false,recoveryTestCopy:false,sourceWrites:false,rollback:false,push:false,pr:false,preview:false,merge:false,production:false,hostedVerification:false,writeCallsPerformed:0,finalReview:'Separate immutable local-candidate review must bind this batch digest; checkpoint review alone is insufficient.'},preconditions:[
     'New exact authority names this unchanged batch digest and private backup/recovery-test destinations; publication remains separately unauthorized.',
     'Create and verify a fresh complete private native copy of the original workbook including every tab and hidden tab; verify owner/access and all material features without importing sensitive data into this repository.',
     'Prove approved operation recovery on a separately authorized disposable copy; never alter the original or preserved full backup for testing.',

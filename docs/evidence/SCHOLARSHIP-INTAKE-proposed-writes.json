@@ -1732,68 +1732,6 @@
             "observedAt": "2026-09-11T04:27:17.222Z",
             "decision": "proposed_supported"
           }
-        },
-        {
-          "a1": "I65",
-          "column": "I",
-          "before": {
-            "userEnteredValue": {
-              "stringValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!)."
-            },
-            "effectiveValue": {
-              "stringValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!)."
-            },
-            "formattedValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!).",
-            "textFormatRuns": [
-              {},
-              {
-                "startIndex": 173,
-                "format": {
-                  "bold": true
-                }
-              },
-              {
-                "startIndex": 431
-              }
-            ]
-          },
-          "beforeSha256": "4039930ecc4a7c413524c2fd30a4905ef80ed674924912516f5fdd5b8bdc7cde",
-          "after": {
-            "userEnteredValue": {
-              "stringValue": "For 2026, senior girls attending Whitefish, Columbia Falls, Bigfork, Flathead or Glacier public high schools. Priority is given to financial need and academic success; Montana colleges and universities are preferred, not required. Awards range from $1,000 to $3,000. The deadline was April 17, 2026; the linked form is closed and says it will accept applications in spring 2027, without a published 2027 deadline. An older 2024 application excluded children of club members; the full 2026 family restriction is unavailable in the closed form and remains unconfirmed."
-            },
-            "textFormatRuns": []
-          },
-          "displayValue": "For 2026, senior girls attending Whitefish, Columbia Falls, Bigfork, Flathead or Glacier public high schools. Priority is given to financial need and academic success; Montana colleges and universities are preferred, not required. Awards range from $1,000 to $3,000. The deadline was April 17, 2026; the linked form is closed and says it will accept applications in spring 2027, without a published 2027 deadline. An older 2024 application excluded children of club members; the full 2026 family restriction is unavailable in the closed form and remains unconfirmed.",
-          "expectedLink": null,
-          "fieldEvidence": {
-            "column": "I",
-            "oldValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!).",
-            "newValue": "For 2026, senior girls attending Whitefish, Columbia Falls, Bigfork, Flathead or Glacier public high schools. Priority is given to financial need and academic success; Montana colleges and universities are preferred, not required. Awards range from $1,000 to $3,000. The deadline was April 17, 2026; the linked form is closed and says it will accept applications in spring 2027, without a published 2027 deadline. An older 2024 application excluded children of club members; the full 2026 family restriction is unavailable in the closed form and remains unconfirmed.",
-            "sourceId": "official-triage-sorcurrent",
-            "locator": "Award-specific public rules; Current parent and exactnativeform establish same2026award andApr17deadline,localpublicschoolaudience,Montanacollegepreference and1000–3000amount. About URL is not application. Four-year-only restriction unsupported; older2024form excludeschildren ofmembers but2026fullrules hidden, so broader relatives prohibition remainsunconfirmed.",
-            "observedAt": "2026-09-11T04:27:17.222Z",
-            "decision": "proposed_supported",
-            "supportingSourceIds": [
-              "official-triage-sorcurrent",
-              "official-triage-sorform",
-              "official-triage-soroptimist"
-            ],
-            "claimEvidence": [
-              {
-                "claim": "2026schoolaudience,priorities,amount",
-                "sourceId": "official-triage-sorcurrent"
-              },
-              {
-                "claim": "Closedform,2027springreopening,no2027deadline",
-                "sourceId": "official-triage-sorform"
-              },
-              {
-                "claim": "2024children-of-members exclusion,notverified2026",
-                "sourceId": "official-triage-soroptimist"
-              }
-            ]
-          }
         }
       ],
       "checkpointReview": {
@@ -1802,7 +1740,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-aliases.json",
         "reviewedCandidateCommit": "9a2ecdd999c0946f7b918d26b07ec8487b3b7eba"
       },
-      "operationSha256": "ab2ebba80bd8a1439e0b4466af5431080a06c360de418dd476a77b29a60439a8"
+      "operationSha256": "7df7d8604d47dcf6f671a7d81bcb8bcbe5281632af886ac86b74419dc3789302"
     },
     {
       "id": "add-intake-entity-08968a556bd5c3c9",
@@ -6616,14 +6554,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)"
+                    "uri": "https://fblapbl.wufoo.com/forms/pxjne981nreatq"
                   }
                 }
+              },
+              {
+                "startIndex": 46,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://fblapbl.wufoo.com/forms/pxjne981nreatq (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://fblapbl.wufoo.com/forms/pxjne981nreatq",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -6787,7 +6729,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "14808e7f56db4f45b801546d3c073fae66b7d47206f1150cb2d0c3a60fadad75"
+      "operationSha256": "263175249efd0a7ca9817f69492e90be0f80b5704eff8031a14aaa2be180518e"
     },
     {
       "id": "add-intake-entity-17f598d8931c3985",
@@ -6981,14 +6923,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://tsaweb.org/programs/awards-and-scholarships (officially listed; verify current cycle before applying)"
+                    "uri": "https://tsaweb.org/programs/awards-and-scholarships"
                   }
                 }
+              },
+              {
+                "startIndex": 51,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://tsaweb.org/programs/awards-and-scholarships (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://tsaweb.org/programs/awards-and-scholarships (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://tsaweb.org/programs/awards-and-scholarships",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -7152,7 +7098,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "a57dd9b00721de9b836f9efc147cb1eb81cc573bee387c5a51b79e76185e2e1c"
+      "operationSha256": "f4e55c0295caa37deb052b8d4f9b9ee3a0e06494968f986de4eb93d9c02826c7"
     },
     {
       "id": "add-intake-entity-19060852883d7493",
@@ -8135,14 +8081,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://fcclainc.org/engage/youth-scholarships (officially listed; verify current cycle before applying)"
+                    "uri": "https://fcclainc.org/engage/youth-scholarships"
                   }
                 }
+              },
+              {
+                "startIndex": 46,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://fcclainc.org/engage/youth-scholarships (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://fcclainc.org/engage/youth-scholarships (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://fcclainc.org/engage/youth-scholarships",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -8303,7 +8253,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "f98779e455a23e5dc1b87bbd399b7b290fe2a4d0a2da9b147fbb80f3715d0089"
+      "operationSha256": "5986c7d87c284210453ab6ddc1c453bc9c4a9c18a422b36e4813dffac85df743"
     },
     {
       "id": "add-intake-entity-1cfa0d5e6bc5674e",
@@ -14731,14 +14681,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/portal/scholarships/?view=pop&sch=jonh (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/portal/scholarships/?view=pop&sch=jonh"
                   }
                 }
+              },
+              {
+                "startIndex": 55,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/portal/scholarships/?view=pop&sch=jonh (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/portal/scholarships/?view=pop&sch=jonh (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/portal/scholarships/?view=pop&sch=jonh",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -14899,7 +14853,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "0b815ef03949e73083a9eecb46bd00288c15c79ecf8d5609322e66f8e0bf05e9"
+      "operationSha256": "79eef33e3cf3ee7be7e9a56615b6d8d6e2da885c0269bed0e2c04f62707d0271"
     },
     {
       "id": "add-intake-entity-3357724fa3082ca3",
@@ -20460,14 +20414,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/portal/alumni-scholarships/?view=pop&sch=callen (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/portal/alumni-scholarships/?view=pop&sch=callen"
                   }
                 }
+              },
+              {
+                "startIndex": 64,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/portal/alumni-scholarships/?view=pop&sch=callen (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/portal/alumni-scholarships/?view=pop&sch=callen (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/portal/alumni-scholarships/?view=pop&sch=callen",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -20628,7 +20586,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "e9af343d10fa33818dcb08403f73ef860aeebea766a15eee28d93c7bcbffccde"
+      "operationSha256": "c1320cb32e4f826a8870ad7ee2fa4f861b5ac8b0a13bfdfea0ab5a65b8435f68"
     },
     {
       "id": "add-intake-entity-485a096e2db8fd83",
@@ -22003,14 +21961,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526 (officially listed; verify current cycle before applying)"
+                    "uri": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526"
                   }
                 }
+              },
+              {
+                "startIndex": 61,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526 (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526 (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://apply.mykaleidoscope.com/scholarships/NationalFFA2526",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -22174,7 +22136,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json",
         "reviewedCandidateCommit": "bbe221054cc173b3638f1a3f8f57fd9c074f6029"
       },
-      "operationSha256": "103d9a7031ea29c599ab973b3840595a0197277cf9480c46f23a4c4d0d04f02c"
+      "operationSha256": "64126f940cfafceb245232a23d510f75a5e9969b8971cdd82a59a5779e0fc892"
     },
     {
       "id": "add-intake-entity-49cda56dda4e48c4",
@@ -32123,14 +32085,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://bpa.org/students/scholarships-and-awards/ (officially listed; verify current cycle before applying)"
+                    "uri": "https://bpa.org/students/scholarships-and-awards/"
                   }
                 }
+              },
+              {
+                "startIndex": 49,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://bpa.org/students/scholarships-and-awards/ (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://bpa.org/students/scholarships-and-awards/ (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://bpa.org/students/scholarships-and-awards/",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -32294,7 +32260,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "7c526e616024a248d4e30654d1e7d7115ab5fe03f2d02ab8bdd568dc5e0d2041"
+      "operationSha256": "745fb1ca336c3eda9fcad0fab683dec456ba2faa580a8107c532f32046219353"
     },
     {
       "id": "update-intake-entity-678545b4abdb596c",
@@ -42685,14 +42651,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/techforce/ (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/techforce/"
                   }
                 }
+              },
+              {
+                "startIndex": 27,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/techforce/ (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/techforce/ (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/techforce/",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -42856,7 +42826,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "db302e87d9c2e4222cc17cf6f91209b81df8abcefb9933d4d4f9cc83db95fb55"
+      "operationSha256": "29525b3d3cf1703deb7cbc090c55847c387ba1bc23cbc2c3f36e223891057b23"
     },
     {
       "id": "update-intake-entity-88797bf70e4a4710",
@@ -44246,14 +44216,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://apply.mykaleidoscope.com/program/NTHS2026 (officially listed; verify current cycle before applying)"
+                    "uri": "https://apply.mykaleidoscope.com/program/NTHS2026"
                   }
                 }
+              },
+              {
+                "startIndex": 49,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://apply.mykaleidoscope.com/program/NTHS2026 (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://apply.mykaleidoscope.com/program/NTHS2026 (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://apply.mykaleidoscope.com/program/NTHS2026",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -44417,7 +44391,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "703afcb9e15fa577a480bb3abd123a80526ab0ab12a4056afb435ae7ed61e32c"
+      "operationSha256": "e62ba4c197286187eb5b6df8180163158243060843b03dfd94d7a6ca2dbb2bde"
     },
     {
       "id": "add-intake-entity-8cf918502ce54020",
@@ -45199,14 +45173,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://hosa.org/scholarships (officially listed; verify current cycle before applying)"
+                    "uri": "https://hosa.org/scholarships"
                   }
                 }
+              },
+              {
+                "startIndex": 29,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://hosa.org/scholarships (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://hosa.org/scholarships (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://hosa.org/scholarships",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -45370,7 +45348,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "23c25b71cf517d60467ba4a3534f60b424153e2ad25a489367d661bf019c3e9c"
+      "operationSha256": "1eca47458eaf7ede29daedab46c625b695b776cbba42986b6e704953b14c1860"
     },
     {
       "id": "add-intake-entity-8f29d09965003d3a",
@@ -48199,14 +48177,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/ase-endorsement/ (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/ase-endorsement/"
                   }
                 }
+              },
+              {
+                "startIndex": 33,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/ase-endorsement/ (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/ase-endorsement/ (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/ase-endorsement/",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -48370,7 +48352,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "577c1aba84ef0a1a0ab4e6489ad548407b60cc3879850b241702e7cb36c3bbda"
+      "operationSha256": "48c2c957112cfa2868be79bf08275347442224fc3efb4575c35cfe5453a04d51"
     },
     {
       "id": "add-intake-entity-952273c484979d66",
@@ -72374,14 +72356,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://www.deca.org/scholarships (officially listed; verify current cycle before applying)"
+                    "uri": "https://www.deca.org/scholarships"
                   }
                 }
+              },
+              {
+                "startIndex": 33,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://www.deca.org/scholarships (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://www.deca.org/scholarships (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://www.deca.org/scholarships",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -72545,7 +72531,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "faafed20c6d3bc33077df01bc9c753c48bd8a7c3937d0c2a01c38d762c199e83"
+      "operationSha256": "5413a2919367ddef723b04987edeac38e1ed7a5538352cd760e1bd54cb3ed0c0"
     },
     {
       "id": "add-intake-entity-e929213876563013",
@@ -73826,14 +73812,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/lapsen/ (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/lapsen/"
                   }
                 }
+              },
+              {
+                "startIndex": 24,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/lapsen/ (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/lapsen/ (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/lapsen/",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -73997,7 +73987,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "4665fdb392f28a746bc0e2441268387b95830e82caeb528311590fae5ea758f4"
+      "operationSha256": "2a46f8013394201d725e259128425620c2bac63d999e957f98261a4f0ff10d36"
     },
     {
       "id": "add-intake-entity-ecd67b73630c003c",
@@ -76011,14 +76001,18 @@
                 "startIndex": 0,
                 "format": {
                   "link": {
-                    "uri": "https://nths.org/rubin-propel-scholarship-application/ (officially listed; verify current cycle before applying)"
+                    "uri": "https://nths.org/rubin-propel-scholarship-application/"
                   }
                 }
+              },
+              {
+                "startIndex": 54,
+                "format": {}
               }
             ]
           },
           "displayValue": "https://nths.org/rubin-propel-scholarship-application/ (officially listed; verify current cycle before applying)",
-          "expectedLink": "https://nths.org/rubin-propel-scholarship-application/ (officially listed; verify current cycle before applying)",
+          "expectedLink": "https://nths.org/rubin-propel-scholarship-application/",
           "fieldEvidence": {
             "column": "H",
             "oldValue": null,
@@ -76179,7 +76173,7 @@
         "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json",
         "subsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f"
       },
-      "operationSha256": "6b90f864d6de22340ddb6614c44934c37b96b832200a42ff49514ad398149743"
+      "operationSha256": "7803b6df161cf60dd853a040161afc6006fbe588502a1ffc6ee27e27612cdde7"
     },
     {
       "id": "add-intake-entity-f45b0fb6ca54a7c2",
@@ -80656,7 +80650,65 @@
       "operationSha256": "ee51051b0b99b75bdf9e6904ff31dc42e4b5ba44ff71e5ed635db017100f20c4"
     }
   ],
-  "batchDigest": "8030ea32f343d94d4745a35c43d963eb798286119e742b906e13ddaa0ef2db63",
+  "deferredCells": [
+    {
+      "entityId": "intake-entity-0747c72322de3bd5",
+      "name": "Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School",
+      "a1": "I65",
+      "before": {
+        "userEnteredValue": {
+          "stringValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!)."
+        },
+        "effectiveValue": {
+          "stringValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!)."
+        },
+        "formattedValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!).",
+        "textFormatRuns": [
+          {},
+          {
+            "startIndex": 173,
+            "format": {
+              "bold": true
+            }
+          },
+          {
+            "startIndex": 431
+          }
+        ]
+      },
+      "fieldEvidence": {
+        "column": "I",
+        "oldValue": "Eligible students: Senior girls in Flathead County Public High Schools in 2025 who are planning to attend college or university. Criteria: financial need, academic ability, and those seeking a career that aligns with the mission of Soroptimist International. Our mission statement is \"A global volunteer organization that provides women and girls with access to the education and training they need to achieve economic empowerment.\" Priority given to girls planning to attend in-state programs (but it is NOT a requirement!).",
+        "newValue": "For 2026, senior girls attending Whitefish, Columbia Falls, Bigfork, Flathead or Glacier public high schools. Priority is given to financial need and academic success; Montana colleges and universities are preferred, not required. Awards range from $1,000 to $3,000. The deadline was April 17, 2026; the linked form is closed and says it will accept applications in spring 2027, without a published 2027 deadline. An older 2024 application excluded children of club members; the full 2026 family restriction is unavailable in the closed form and remains unconfirmed.",
+        "sourceId": "official-triage-sorcurrent",
+        "locator": "Award-specific public rules; Current parent and exactnativeform establish same2026award andApr17deadline,localpublicschoolaudience,Montanacollegepreference and1000–3000amount. About URL is not application. Four-year-only restriction unsupported; older2024form excludeschildren ofmembers but2026fullrules hidden, so broader relatives prohibition remainsunconfirmed.",
+        "observedAt": "2026-09-11T04:27:17.222Z",
+        "decision": "proposed_supported",
+        "supportingSourceIds": [
+          "official-triage-sorcurrent",
+          "official-triage-sorform",
+          "official-triage-soroptimist"
+        ],
+        "claimEvidence": [
+          {
+            "claim": "2026schoolaudience,priorities,amount",
+            "sourceId": "official-triage-sorcurrent"
+          },
+          {
+            "claim": "Closedform,2027springreopening,no2027deadline",
+            "sourceId": "official-triage-sorform"
+          },
+          {
+            "claim": "2024children-of-members exclusion,notverified2026",
+            "sourceId": "official-triage-soroptimist"
+          }
+        ]
+      },
+      "reason": "Known native text styling cannot be preserved by clearing or reusing old offsets after the text changes. This cell is excluded from the executable proposal.",
+      "trigger": "Derive and independently review an exact formatting-preserving mapping; regenerate the affected operation and obtain exact authority for the changed batch."
+    }
+  ],
+  "batchDigest": "eace784cd866b0cc4da13e88321fc5f8bf5a52fe646d1c4a8f8dc921baa7881e",
   "authority": {
     "backupCopies": false,
     "recoveryTestCopy": false,
