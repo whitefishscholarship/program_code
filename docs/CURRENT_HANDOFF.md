@@ -10,12 +10,12 @@ Default branch: `main`
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
   Resumed clean requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`;
   secure fetch verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged.
-  Prior exact local checkpoint `bb82231c49cd9efcb2ce141a37604909c3ed531e`;
+  Prior exact local checkpoint `5a27911ddccda265623c744e3cad3afbb2b0b724`;
   resolve this checkpoint with `git rev-parse codex/scholarship-intake`. Original checkout preserved.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `7230bc48efffa699e3e1ceda9bc4bdc1f47c1c29f7b77da6aa54e235015577a1`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `8b468d9ea6ca850e2556ea07569a1ea1631c263bcbde269220231702837d00e2`.
   Source snapshot unchanged `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 916, "decidedRows": 1314, "pendingEntities": 219, "proposedAdds": 183, "proposedUpdates": 8, "reviewedRows": 1289}`. All additions/corrections are unapplied proposals.
+  Current counts `{"rows": 1666, "entities": 916, "decidedRows": 1318, "pendingEntities": 217, "proposedAdds": 183, "proposedUpdates": 22}`. All proposals unapplied.
 - Independent PASS receipts saved for supplemental011, housing/SEED/trades012,
   MCF013, structural014, Avfuel/Pearl015. Prior receipts and source snapshot bytes preserved.
   MCF013 holds Webber conflicting eligibility; qualifiers/portal timestamp fixed.
@@ -23,16 +23,18 @@ Default branch: `main`
 - Related triage016 review of bb82231 FAIL C0/H3/M0/L0: wrong-cell URL comparisons,
   missing reference017field differences, and generic holds for material related differences.
   Current remediation: exact native application-cell links;9newtriage rows/33fields added;
-  total232triage rows/716fields. Bounded official verification covers10Masterprograms in018.
-  Six additional Master update records proposed:54,65,114,149,164,167; not yet independently accepted.
+  current total238triage rows/758fields after17/18/19identityextensions. Bounded officialverification covers10Masterprograms in018.
+  Six additional Master update records proposed:54,65,114,149,164,167; K54 subsequently withdrawn as existingVocational alreadycoversTrade. Specifictags/coverage and I65claimprovenance completed; awaitingrecheck.
   Smile web/download2026deadline conflict and BlueCollar/Wells tentative renewal/rules stay held.
   AdoptionSTAR academic amount/deadline contaminated by unrelated adoptiongrant corrected to unknown.
 - Triage review continuation identified17more Master rows needing specific evaluation:
   3,4,6,21,29,31,78,98,110,116,118,119,135,140,142,144,146; plus WTS L111–115.
+  These are now authored as019:14additionalupdateentities, Jenne/NDconflictsholds, HoratioKretained.
+  Sourcefields/tags/coverage and4newFordidentityrowtriagesawaitindependentreview.
   Remaining generic historical/formatting/default differences reviewed as not requiring broader
   currentMasterrefresh. Record per-field rationale and follow up18withindependentrecheck.
-- Next executable action: complete these17bounded material checks, recheck016–018, then
-  continue219remainingentities (university groups and remainingofficialproviders/aggregators).
+- Next executable action: recheck016–019 andremediateanyfindings, then
+  continue217remainingentities (university groups and remainingofficialproviders/aggregators).
   FVCC/MSU/UM parent sources saved `.firecrawl/resume-*-scholarships.json`, not yet authored.
   FVCC public browser confirms16namedprogramsections but no scholarshipapplicationlinks for
   donor/Eagle/STEM/Honors; keep route limitations. Browser publictab1 only, no form input.
