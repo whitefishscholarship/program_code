@@ -7,25 +7,32 @@ Default branch: `main`
 
 ## Active resumption checkpoint — September 11 UTC
 
-- Resumed clean execution branch from exact `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`.
-  Secure read-only fetch confirms current `origin/main` remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
-  The unchanged snapshot and initial ledger hash matched the saved continuation.
-- Batch012 housing/SEED/trades: 28 entity decisions authored, 2 proposed additions
-  (Building Hope and AWS Welder Training), explicit holds and out-of-scope dispositions;
-  independent review pending. New safe evidence: `scholarship-intake/housing-seed-trades-evidence.json`.
-- Supplemental011 independent review found a real NTHS duplicate of existing Master143.
-  Duplicate addition withdrawn; its two source rows and supplemental alias now point to
-  existing Master143. Prior reviewed proposal retained in `withdrawnProposal`, historical
-  receipts unchanged. PAPA discovery-source and Epic Master130 relation corrected.
-  Independent recheck pending; no false final acceptance.
-- Current ledger SHA256: `9578b4fa99bf94712b0ad1e7fad901daf9d674a744998c6f76a4cab6021b1b87`.
-  Counts: 1187 decided rows, 318 pending entities, 179 proposed additions, 2 proposed
-  updates. Related-field triage remains 223 rows / 683 differences, unfinished.
-- Next action: independent recheck supplemental011 and batch012; continue saved MCF and
-  Pearl/Avfuel evidence, then remaining candidates/triage, validation and exact promotion batch.
-- No backup/recovery copy or workbook write; all backup gates remain unsatisfied and
-  unauthorized. No publishing or hosted verification. Full tests/build/final review unfinished.
-- Resolve exact current local checkpoint with `git rev-parse codex/scholarship-intake`.
+- Resumed clean `codex/scholarship-intake` from `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`.
+  Secure fetch confirms main remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
+  Latest committed evaluation before this checkpoint: `adf3eeb4f67577abd9b932c23eef1af58b2015df`.
+  Resolve exact latest recovery commit with `git rev-parse codex/scholarship-intake`.
+- Snapshot unchanged: `intake-rev226-74df373b3e30738e`,1666rows/14tabs; full digest in prior section.
+  Sole ledger SHA256 `a94a32909cf88ccfecc27716bfc554265bb36c50b80aeda2865740392188636d`. Current counts: {"decidedRows": 1295, "pendingEntities": 232, "proposedAdds": 183, "proposedUpdates": 2, "reviewedRows": 1153}.
+- Supplemental011 independent PASS after NTHS duplicate withdrawn to Master143,
+  PAPA provenance corrected and Epic Master130 linked. Receipt `SCHOLARSHIP-INTAKE-batch-review-association-supplement.json`.
+- Housing/SEED/trades012 independent PASS after AWS duplicate withdrawn to Master148,
+  WTS pool linked Master111, complete discovery records and BuildingHope existing trades mapping.
+  One new addition BuildingHope; receipt `SCHOLARSHIP-INTAKE-batch-review-housing-seed-trades.json`.
+  Historical reviewed proposals/receipts preserved; these corrections do not rewrite history.
+- MCF013 authored56entities/56directorychildren,3conditional additions; independent review active.
+  Reviewer re-observed all5pages; Webber audience conflict requires hold instead of exclusion,
+  and typical amount qualifiers/Evelyn directory-v-detail conflict still require remediation.
+- Structural014 authored21entities/68source rows (headers/context included); independent review pending.
+- Avfuel/Pearl015 authored16entities,2proposed additions (AVTRIP, Pilot-in-Training), closed-route
+  holds and explicit Hawaii/camp exclusions; independent review pending. Avfuel form redemption
+  September1,2027 conflicts with parent October31,2027; retained unresolved in each proposal.
+- Related-field triage223rows/683differences, full testing/build, exact operations/gap report,
+  fresh workbook fingerprints and complete final independent review remain unfinished.
+- Next: resolve/recheck MCF findings; review014/015; continue remaining232entities and related triage.
+  Reuse saved evidence, do not rerun author scripts. `/private/tmp/intake_resume_*.py` append
+  decisions and must not be rerun. New durable evidence under `docs/evidence/scholarship-intake/`.
+- Backup/recovery copies absent/unauthorized; source writes0. No publishing, hosted verification,
+  applicant data, provider contact, new questions/rules or runtime changes. All proposals unapplied.
 
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
