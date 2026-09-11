@@ -1,3 +1,26 @@
+# Verification restart — sign-in complete; empty-project cleanup pending
+
+Operative update, September 11, 2026 UTC: owner sign-in succeeded. Private recovery
+object access and all 14 source/backup tab metadata were reverified. Original protection
+and named-range sidebars were empty. Full feature-preservation verification is incomplete.
+
+Opening the original workbook Apps Script entry unexpectedly created a new bound
+`Untitled project`, ID `1RR6xRlEYpDPvaRG3l-xSf_raAynok5vn6lWDz0R3o5DjIV4MMpAieror`.
+It contains only Google's empty starter function; zero triggers/executions/scopes, no
+code edits or run/deploy actions. This changed the workbook modification time to
+`2026-09-11T09:57:56.995Z`. Do not describe the workbook as wholly unchanged.
+Fresh full native Master A1:O1060 comparison nevertheless equals baseline for all
+15,900 cells. Scholarship batch write requests remain zero.
+
+Kelsey has been asked to confirm permanent deletion of this exact empty project;
+confirmation is pending. Google labels the action **Delete project forever**, requiring
+confirmation under browser rules. No cleanup deletion or workbook restore has occurred.
+Do not run/create further scripts or write scholarship cells while this is unresolved.
+After cleanup, refresh source metadata and finish preservation plus final freshness checks.
+Evidence: `docs/evidence/SCHOLARSHIP-INTAKE-verification-restart.json`.
+The checkpoint below describes the earlier backup/recovery work; its sign-in blocker
+is superseded and its original-write counter refers to scholarship cell writes only.
+
 # Scholarship intake — authorized batch; blocked on feature inspection
 
 Operative application status: **BLOCKED; original workbook writes = 0**. The unchanged

@@ -1,5 +1,5 @@
 {
-  "status": "BLOCKED_ORIGINAL_FEATURE_INSPECTION",
+  "status": "BLOCKED_PENDING_EMPTY_PROJECT_CLEANUP_CONFIRMATION",
   "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
   "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
   "folderId": "1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix",
@@ -32,5 +32,8 @@
     "modifiedTime": "2026-09-11T01:10:22.367Z",
     "limitation": "Metadata-only checkpoint; not final content freshness or an atomic check."
   },
-  "nextAction": "Complete signed-in read-only feature inspection and preservation proof. Original workbook must remain unchanged while any gate is pending."
+  "nextAction": "Await exact empty-project deletion confirmation; then finish preservation and final freshness checks. Scholarship batch remains unapplied.",
+  "restartEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-verification-restart.json",
+  "sourceWritesDefinition": "Scholarship cell-write requests; an unexpected bound-script creation changed workbook metadata during UI inspection.",
+  "unexpectedAttachedProjectCreations": 1
 }

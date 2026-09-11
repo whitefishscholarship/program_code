@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-11T10:01:17.444Z",
+  "checkpoint": "ab42f9f830c996209528d7517c4a56cdcdb7d507",
+  "status": "BLOCKED_PENDING_EMPTY_PROJECT_CLEANUP_CONFIRMATION",
+  "signedInAsOwner": true,
+  "backupAccessReverified": true,
+  "sourceAndBackupTabMetadataEqual": true,
+  "sourceAndBackupConditionalFormattingEqual": true,
+  "sourceProtectedRanges": {
+    "observed": "Empty Protected sheets & ranges sidebar; only Add a sheet or range and introductory help."
+  },
+  "sourceNamedRanges": {
+    "observed": "Empty Named ranges sidebar; only Add a range and introductory help."
+  },
+  "unexpectedSideEffect": {
+    "action": "Opened the workbook Apps Script entry to inspect attached automation.",
+    "result": "Google created a bound Untitled project containing only its default empty myFunction.",
+    "projectId": "1RR6xRlEYpDPvaRG3l-xSf_raAynok5vn6lWDz0R3o5DjIV4MMpAieror",
+    "projectUrl": "https://script.google.com/u/0/home/projects/1RR6xRlEYpDPvaRG3l-xSf_raAynok5vn6lWDz0R3o5DjIV4MMpAieror/edit",
+    "parentWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "createdUiTime": "3:57 AM, current session",
+    "code": "function myFunction() { }",
+    "triggers": 0,
+    "executions": 0,
+    "requestedScopes": 0,
+    "codeEdits": 0,
+    "runOrDeployActions": 0,
+    "priorSourceModifiedTime": "2026-09-11T01:10:22.367Z",
+    "subsequentSourceModifiedTime": "2026-09-11T09:57:56.995Z",
+    "cleanup": "Pending explicit user confirmation. UI labels removal Delete project forever; do not click without confirmation. No original restore requested or permitted."
+  },
+  "masterNativeReadback": {
+    "observedAt": "2026-09-11T10:00:26.537Z",
+    "scope": "Master Database A1:O1060 full CellData",
+    "equal": true,
+    "baselineSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+    "currentSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+    "cellCount": 15900
+  },
+  "scholarshipWriteRequests": 0,
+  "remaining": [
+    "Resolve empty bound-project cleanup; record outcome and refresh source metadata.",
+    "Finish original/backup material-feature preservation inventory and recovery coverage. Do not infer full coverage from today's partial checks.",
+    "Final exact preimage/fingerprint and quiet-window checks before any original scholarship write."
+  ]
+}
