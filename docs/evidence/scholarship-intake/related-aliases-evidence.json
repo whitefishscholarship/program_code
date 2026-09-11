@@ -127,7 +127,8 @@
     "intake-rev226-74df373b3e30738e:sheet-0:row-30:f432caa05470",
     "intake-rev226-74df373b3e30738e:sheet-1468843784:row-301:39f8ca69a852",
     "intake-rev226-74df373b3e30738e:sheet-1468843784:row-302:416d43aed3fd",
-    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-291:0d48e3ca1f6a"
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-291:0d48e3ca1f6a",
+    "intake-rev226-74df373b3e30738e:sheet-0:row-140:4553094fe482"
   ],
   "relatedTriageIds": [
     "related-28da43678522855a",
@@ -161,8 +162,14 @@
     "119": "May10notMay5;preservepriorK.",
     "169": "Firstcertificate/2year/4yeardegree;no4year-onlyrestriction.",
     "30": "SeniorFeb15/juniorMar1;2026seniorbody;2yeartransfer;2.0renewalnotentry;total15000notunsupported10k+5k.",
-    "Morelli": "Official2026MSUtransition establishesHilleman/Morelli identity;distinctfromgeneral139;noinheritedamount/residency."
+    "Morelli": "Official2026MSUtransition establishesHilleman/Morelli identity;distinctfromgeneral139;noinheritedamount/residency. K left unknown because four-year support duration does not prove degree type. Historical dyslexia tag bound to Foundation home source.",
+    "140": "Official eligibility excludes unsupported equivalency-only study; exact I140 proposal added, prior E preserved."
   },
   "scope": "17pendingentities resolved with related aliases, one distinct Morelli addition and two advanced-college exclusions; no workbook writes/copies/publication. Existing passed historical receipts remain unchanged.",
-  "limitations": "TargetedaboutpageandMorellispecificMSUqueryreturnedempty; retainedexplicitly. Foundationdirectapplicationlinkandpublic2026genericinstructionsverifyroute;Morelli-specificapplicationfieldsunknown. Sourcesretainprogramrulesonly."
+  "limitations": "TargetedaboutpageandMorellispecificMSUqueryreturnedempty; retainedexplicitly. Foundationdirectapplicationlinkandpublic2026genericinstructionsverifyroute;Morelli-specificapplicationfieldsunknown. Sourcesretainprogramrulesonly.",
+  "reviewRemediation": [
+    "Morelli K unknown; no duration-to-degree inference.",
+    "Historical dyslexia tag source corrected to Foundation home.",
+    "Live Your Dream exact education/exclusion terms proposed in I140; two related I triages corrected."
+  ]
 }

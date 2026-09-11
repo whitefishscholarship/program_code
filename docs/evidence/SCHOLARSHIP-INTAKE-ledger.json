@@ -37292,7 +37292,7 @@
       "id": "intake-rev226-74df373b3e30738e:sheet-0:row-140:4553094fe482",
       "entityId": "intake-entity-d7458d47b1808d27",
       "disposition": "propose_update",
-      "rationale": "Related correction locally proposed and unapplied. OfficialLYDthreelevels,potential1000–16000total,clubawardsvary/average1000,regional3000/5000,international10000. Femaleprimarysupportofselfanddependents,need,vocational/skillsorundergradaccepted/enrolled;staff/member/immediatefamilyexcluded. Notguaranteed16000.",
+      "rationale": "Related source comparison supports exact I140 eligibility correction while preserving E140 award-level proposal.",
       "destination": {
         "kind": "existing_master",
         "sheetId": 0,
@@ -37303,10 +37303,8 @@
         "official-related-sorlyd"
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_triage_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
-        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+        "status": "pending",
+        "reviewer": null
       },
       "identityEvidence": {
         "snapshotId": "intake-rev226-74df373b3e30738e",
@@ -95693,7 +95691,7 @@
         "intake-rev226-74df373b3e30738e:sheet-2106717984:row-348:e8e7d998385d"
       ],
       "comparisonOnlyNotIdentityProof": false,
-      "status": "reviewed-local-checkpoint",
+      "status": "evaluated-awaiting-independent-review",
       "disposition": "propose_update",
       "type": "scholarship",
       "existingMasterRows": [
@@ -95712,6 +95710,18 @@
             "official-related-sorlyd"
           ],
           "locator": "OfficialLYDthreelevels,potential1000–16000total,clubawardsvary/average1000,regional3000/5000,international10000. Femaleprimarysupportofselfanddependents,need,vocational/skillsorundergradaccepted/enrolled;staff/member/immediatefamilyexcluded. Notguaranteed16000.",
+          "observedAt": "2026-09-11T04:34:59.454Z",
+          "decision": "proposed_supported"
+        },
+        {
+          "column": "I",
+          "oldValue": "The Live Your Dream Awards offers cash awards to women who provide primary financial support for themselves and their dependents, have financial need, and are enrolled in or accepted to a vocational/skills training, high school equivalency, or an undergraduate degree program. Recipients can use the funds for tuition, books, transportation, or childcare.",
+          "newValue": "Soroptimist Live Your Dream Awards are for women who provide primary financial support for themselves and their dependents and have financial need. Applicants must be enrolled in or accepted to a vocational/skills training or undergraduate degree program and be motivated to achieve their education and career goals. High-school-equivalency study alone is not listed as an eligible program. Dependents may include children, spouse, partner, siblings or parents. Applicants must reside in a Soroptimist International of the Americas member country or territory, including the United States; previous Women's Opportunity or Live Your Dream recipients, people with or pursuing a graduate degree, Soroptimist members, employees and their immediate family are ineligible. Applications run August 1–November 15 (cycle year not stated). Club awards vary; selected recipients may progress to regional and international levels, for a potential total of $1,000–$16,000. Written sections must reflect the applicant's own experiences and goals; AI may help grammar or organization. Apply through the official Soroptimist application portal.",
+          "sourceId": "official-related-sorlyd",
+          "supportingSourceIds": [
+            "official-related-sorlyd"
+          ],
+          "locator": "Official Live Your Dream eligibility list and award-level/application sections; excludes unsupported equivalency-only study.",
           "observedAt": "2026-09-11T04:34:59.454Z",
           "decision": "proposed_supported"
         }
@@ -95760,13 +95770,17 @@
           "decision": "award_card_only",
           "choiceId": null,
           "rationale": "Primarysupportofdependents doesnotmean singleparent;no single_parenttag. Member/staff/immediatefamilyexcluded;cardonly."
+        },
+        {
+          "dimension": "qualifying education and exclusions",
+          "decision": "award_card_only",
+          "choiceId": null,
+          "rationale": "Accepted/enrolled vocational/skills or undergraduate degree, not equivalency study alone; exact prior-recipient, graduate-degree, member/employee-family exclusions in I140."
         }
       ],
       "review": {
-        "status": "reviewed",
-        "reviewer": "/root/intake_triage_review",
-        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
-        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+        "status": "pending",
+        "reviewer": null
       },
       "identityRationale": "Every member row has exact name plus URL/full-row identity evidence or is a directly fingerprinted Master row. No external fields promoted; no full-Master freshness review.",
       "destination": {
@@ -129732,16 +129746,17 @@
         {
           "column": "K",
           "oldValue": null,
-          "newValue": "4-Year",
+          "newValue": "",
           "sourceId": "official-related24-morelli-msu",
           "locator": "award heading: Hilleman/Morelli Scholarship",
-          "decision": "proposed_supported",
+          "decision": "unknown_leave_blank",
           "observedAt": "2026-09-11T05:47:49.828Z",
           "supportingSourceIds": [
             "official-related24-morelli-msu",
             "official-related24-morelli",
             "official-related24-hilleman-apply-public"
-          ]
+          ],
+          "reason": "Four-year scholarship duration does not prove an exclusive degree or school type."
         },
         {
           "column": "L",
@@ -129818,7 +129833,7 @@
           "label": "Dyslexia",
           "meaning": "Historicalfoundationdyslexiaconnection.",
           "effect": "topic",
-          "sourceId": "official-related24-morelli-msu",
+          "sourceId": "official-related24-morelli",
           "existingChoiceId": "dyslexia",
           "existingControlId": "criterion-dyslexia",
           "existingCriterionId": "learning.dyslexia",
@@ -129903,7 +129918,7 @@
         "https://www.montana.edu/hillemanscholars/apply.html",
         "Beginning in 2026, the former Joseph James Morelli Legacy Foundation scholarship is available only to students attending Montana State University. The foundation states that it is dissolving and transferring to MSU, which will award the four-year Hilleman/Morelli Scholarship to STEM students demonstrating learning differences, selected for academic, leadership and career potential. It combines financial, academic, leadership and mentoring support. The foundation directs applicants to the Hilleman Scholars application page, whose public instructions reference students starting MSU in Fall 2026. The application extraction did not expose Morelli-specific instructions. A Morelli-specific award amount, deadline, GPA minimum, learning-difference documentation standard, Montana residency requirement, renewal conditions and next-cycle availability are not verified. The foundation historically served students with dyslexia, but the new award uses broader learning-differences wording. This is a distinct named program from the general Hilleman scholarship; its conditions and amount must not be assumed identical.",
         "",
-        "4-Year",
+        "",
         "",
         "STEM",
         "",
@@ -169517,7 +169532,8 @@
         "intake-rev226-74df373b3e30738e:sheet-0:row-30:f432caa05470",
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-301:39f8ca69a852",
         "intake-rev226-74df373b3e30738e:sheet-1468843784:row-302:416d43aed3fd",
-        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-291:0d48e3ca1f6a"
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-291:0d48e3ca1f6a",
+        "intake-rev226-74df373b3e30738e:sheet-0:row-140:4553094fe482"
       ],
       "sourceIds": [
         "official-related24-aopa-directory",
@@ -169569,7 +169585,7 @@
         "related-4f866b78dee86186",
         "related-5e278c53d38c42c2"
       ],
-      "scope": "RelatedaliasesandMSUMorellitransition;oneunappliedadd;5changedMasterentities pluspriorcorrections preserved.",
+      "scope": "Related aliases and MSU Morelli transition; one unapplied addition; six changed Master entities (30,81,119,140,147,169), preserving prior corrections.",
       "review": {
         "status": "pending"
       }
@@ -203545,7 +203561,7 @@
           "sourceColumn": "K",
           "candidateValue": "The Soroptimist's Live Your Dream Awards program provides education awards for women who are the primary financial support for their families. It offers resources to improve their education, skills, and employment prospects, supporting enrollment in vocational training or undergraduate degree programs.",
           "masterValue": "The Live Your Dream Awards offers cash awards to women who provide primary financial support for themselves and their dependents, have financial need, and are enrolled in or accepted to a vocational/skills training, high school equivalency, or an undergraduate degree program. Recipients can use the funds for tuition, books, transportation, or childcare.",
-          "status": "reviewed_semantic_no_update",
+          "status": "supported_related_update_proposed",
           "review": {
             "status": "pending",
             "reviewer": null
@@ -203558,7 +203574,11 @@
               "official-related-sorlyd"
             ]
           },
-          "rationale": "Exact Soroptimist Live Your Dream application URL and rules identify existing140; award can be up to16000across levels, not guaranteed16000. Award-specific source and qualified current summary support the retained distinction; no extra constraint inferred from broader topic, historical description or defaults."
+          "rationale": "Exact official eligibility supports vocational/skills training or undergraduate degree, not high-school-equivalency study alone. I140 proposes the supported terms and exclusions; prior E140 remains.",
+          "proposedFieldRef": {
+            "entityId": "intake-entity-d7458d47b1808d27",
+            "column": "I"
+          }
         }
       ],
       "status": "triaged-awaiting-independent-review",
@@ -203646,7 +203666,7 @@
           "sourceColumn": "I",
           "candidateValue": "The Live Your Dream Awards provide cash awards to women who are the primary financial support for themselves and their dependents, have financial need, and are enrolled in or accepted to a vocational/skills training, high school equivalency, or an undergraduate degree program. The awards help offset tuition costs, purchase books, get transportation, or find reliable childcare.",
           "masterValue": "The Live Your Dream Awards offers cash awards to women who provide primary financial support for themselves and their dependents, have financial need, and are enrolled in or accepted to a vocational/skills training, high school equivalency, or an undergraduate degree program. Recipients can use the funds for tuition, books, transportation, or childcare.",
-          "status": "reviewed_semantic_no_update",
+          "status": "supported_related_update_proposed",
           "review": {
             "status": "pending",
             "reviewer": null
@@ -203659,7 +203679,11 @@
               "official-related-sorlyd"
             ]
           },
-          "rationale": "Exact Soroptimist Live Your Dream application URL and rules identify existing140; award can be up to16000across levels, not guaranteed16000. Award-specific source and qualified current summary support the retained distinction; no extra constraint inferred from broader topic, historical description or defaults."
+          "rationale": "Exact official eligibility supports vocational/skills training or undergraduate degree, not high-school-equivalency study alone. I140 proposes the supported terms and exclusions; prior E140 remains.",
+          "proposedFieldRef": {
+            "entityId": "intake-entity-d7458d47b1808d27",
+            "column": "I"
+          }
         }
       ],
       "status": "triaged-awaiting-independent-review",
