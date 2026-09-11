@@ -1,0 +1,7 @@
+import assert from 'node:assert/strict';
+import {canApplyIntake,INTAKE_WORKBOOK,type WriteGate} from './scholarship-intake';
+const valid:WriteGate={workbookId:INTAKE_WORKBOOK,batchDigest:'a'.repeat(64),authorizedBatchDigest:'a'.repeat(64),exactWriteAuthority:true,completeNativeBackup:true,allTabsIncludingHidden:true,privateAccessVerified:true,materialFeaturesRecoverable:true,disposableRecoveryProof:true,affectedCellBackup:true,backupUnchanged:true,freshForThisBatch:true,snapshotFingerprint:'b'.repeat(64),liveFingerprint:'b'.repeat(64),quietWindowOrAtomicPrecondition:true,independentReviewComplete:true,unresolvedHighOrCritical:0,uncertainPriorWrite:false,alreadyApplied:false};
+assert(canApplyIntake(valid));
+for(const key of ['exactWriteAuthority','completeNativeBackup','allTabsIncludingHidden','privateAccessVerified','materialFeaturesRecoverable','disposableRecoveryProof','affectedCellBackup','backupUnchanged','freshForThisBatch','quietWindowOrAtomicPrecondition','independentReviewComplete'] as const)assert(!canApplyIntake({...valid,[key]:false}),key);
+for(const change of [{workbookId:'legacy-workbook'},{authorizedBatchDigest:null},{authorizedBatchDigest:'c'.repeat(64)},{liveFingerprint:'c'.repeat(64)},{unresolvedHighOrCritical:1},{uncertainPriorWrite:true},{alreadyApplied:true},{snapshotFingerprint:'',liveFingerprint:''}]) assert(!canApplyIntake({...valid,...change}));
+console.log('Intake recovery, exact authority, newer-edit and no-blind-retry gates PASS (synthetic only).');

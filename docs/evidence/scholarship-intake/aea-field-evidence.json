@@ -1,0 +1,286 @@
+{
+  "source": {
+    "id": "official-aea-20260911",
+    "url": "https://aea.net/educationalfoundation/scholarships.asp",
+    "finalUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+    "observedAt": "2026-09-11T02:18:50.853Z",
+    "retrievalMode": "live maxAge0 basic proxy; public rules only; no form submission",
+    "statusCode": 200,
+    "contentSha256": "5e9745d9a720e49581d85b61bab712940c799315cfecfe0506be6971ded75fe7",
+    "scrapeId": "01a08e42-ac25-7400-8a43-0cb879d5caed",
+    "authority": "official program owner",
+    "locator": "Scholarship program; exact award headings",
+    "cycleObservation": {
+      "cycle": "2026-2027",
+      "status": "closed",
+      "nextCycle": "2027-2028",
+      "nextOpeningPrecision": "October, exact day unknown",
+      "deadline": null
+    },
+    "coverage": {
+      "enumeratedAwardHeadings": 21,
+      "paginationObserved": false,
+      "completeForThisPage": true,
+      "broaderDomainCompletenessClaim": false
+    },
+    "evidencePath": "docs/evidence/scholarship-intake/aea-field-evidence.json"
+  },
+  "facts": [
+    {
+      "awardName": "Gene Baker Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Gene Baker Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "AEA members or their children, grandchildren or dependents pursuing accredited college/university study; any field; tuition only.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown.",
+        "Prior 2026 PDF specifies GPA2.5 and 2025-2026 tuition despite April1 2026 deadline. Do not import this stale/inconsistent GPA or cycle wording as upcoming rules."
+      ]
+    },
+    {
+      "awardName": "Jim Cook Honorary Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Jim Cook Honorary Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "AEA members or their children, grandchildren or dependents pursuing accredited college/university study; any field; tuition only.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown.",
+        "Prior 2026 PDF specifies GPA2.5 and 2025-2026 tuition despite April1 2026 deadline. Do not import this stale/inconsistent GPA or cycle wording as upcoming rules."
+      ]
+    },
+    {
+      "awardName": "Monte Mitchell Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Monte Mitchell Scholarship",
+      "amountUsd": null,
+      "audienceAndConditions": "AEA member employee recognized for job performance and professional development; convention registration, travel and hotel support.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Chuck Freeland Memorial Scholarship for Flight Training",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Chuck Freeland Memorial Scholarship for Flight Training",
+      "amountUsd": 3500,
+      "audienceAndConditions": "Employee of an AEA member company pursuing recreational/private pilot training; prior 2026 rules specify at least one year employment and private certificate only.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown.",
+        "Parent says recreational or private; historical PDF allows private only plus one-year employment. Preserve discrepancy; propose private training only and explicit historical restriction, no current acceptance of wider eligibility."
+      ]
+    },
+    {
+      "awardName": "Sporty's Foundation Private Pilot Training for AEA Technicians",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Sporty's Foundation Private Pilot Training for AEA Technicians",
+      "amountUsd": 6000,
+      "audienceAndConditions": "Avionics technician or manager employed by an AEA Repair Station Member pursuing a private pilot certificate.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Aircraft Lighting International Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Aircraft Lighting International Scholarship",
+      "amountUsd": 5000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "James Hammond Joubert Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: James Hammond Joubert Memorial Scholarship",
+      "amountUsd": 5000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Pat Napolitano Memorial Scholarship for Aspiring Technicians",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Pat Napolitano Memorial Scholarship for Aspiring Technicians",
+      "amountUsd": 3000,
+      "audienceAndConditions": "Graduating senior or current college student pursuing Aviation Technician Certification.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Chuck Peacock Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Chuck Peacock Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student pursuing aviation-management study at an accredited school.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "David Arver Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: David Arver Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Dutch and Ginger Arver Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Dutch and Ginger Arver Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Garmin Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Garmin Scholarship",
+      "amountUsd": 2000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Garmin\u2013Jerry Smith Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Garmin\u2013Jerry Smith Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school, college or vocational/technical student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Gogo Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Gogo Scholarship",
+      "amountUsd": 2500,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Johnny Davis Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Johnny Davis Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Kevin Miesbach Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Kevin Miesbach Memorial Scholarship",
+      "amountUsd": 2000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Lee Tarbox Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Lee Tarbox Memorial Scholarship",
+      "amountUsd": 2500,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Marshall Temple Memorial Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Marshall Temple Memorial Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Mid-Continent Instruments and Avionics Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Mid-Continent Instruments and Avionics Scholarship",
+      "amountUsd": 1000,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Susan T. Friedle Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Susan T. Friedle Scholarship",
+      "amountUsd": 1750,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    },
+    {
+      "awardName": "Universal Avionics Scholarship",
+      "sourceId": "official-aea-20260911",
+      "locator": "heading: Universal Avionics Scholarship",
+      "amountUsd": 1500,
+      "audienceAndConditions": "High-school senior or college student planning or attending an accredited avionics or aircraft-maintenance program.",
+      "cycleStatus": "closed_2026_2027_next_exact_dates_unknown",
+      "uncertainties": [
+        "Amount, identity and eligibility are supported by this award heading, not inherited from another child.",
+        "2026-2027 is closed; upcoming exact deadline and application rules are unknown."
+      ]
+    }
+  ],
+  "method": "Human-readable paraphrased field observations; raw retrieved page hash and section locators retained. No bulk page/bio text committed."
+}

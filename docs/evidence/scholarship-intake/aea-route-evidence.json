@@ -1,0 +1,80 @@
+{
+  "records": [
+    {
+      "id": "official-aea-route-0",
+      "url": "https://aea.net/scholarship",
+      "finalUrl": "https://aea.net/educationalfoundation/scholarships.asp",
+      "observedAt": "2026-09-11T02:22:13.625Z",
+      "statusCode": 200,
+      "contentSha256": "48a5171dd7b2e3aab9c32f47cca71db5ac4d8493623a76627f310b4064e3971b",
+      "scrapeId": "01a08e45-bf1c-701f-aa8e-3f40472f63ec",
+      "authority": "official AEA route/document",
+      "evidencePath": "docs/evidence/scholarship-intake/aea-route-evidence.json",
+      "locator": "program cycle notice",
+      "facts": {
+        "role": "Verified current entry route redirects to current AEA scholarship program page. Closed2026-27; returnOctober for2027-28."
+      }
+    },
+    {
+      "id": "official-aea-route-1",
+      "url": "https://aea.net/EducationalFoundation/pdf/AEA_GeneBakerHonoraryScholarship_Application_2026.pdf",
+      "finalUrl": "https://aea.net/EducationalFoundation/pdf/AEA_GeneBakerHonoraryScholarship_Application_2026.pdf",
+      "observedAt": "2026-09-11T02:22:16.598Z",
+      "statusCode": 200,
+      "contentSha256": "2fe91229231f4060d4d82c7de358fa8df0b3800877df4b93a26b1145ca95dfbf",
+      "scrapeId": "01a08e45-ce0c-72ee-85bf-0bf4e77a9b7c",
+      "authority": "official AEA route/document",
+      "evidencePath": "docs/evidence/scholarship-intake/aea-route-evidence.json",
+      "locator": "page1 APPLICATION INFORMATION / ELIGIBILITY REQUIREMENTS; blank unsubmitted application",
+      "facts": {
+        "role": "Historical application rules, not accepted as upcoming rules",
+        "deadline": "2026-04-01",
+        "membership": "AEA member or child/grandchild/dependent",
+        "education": "high school senior/graduate; pursue degree at accredited US postsecondary or international equivalent",
+        "gpa": 2.5,
+        "tuitionYearText": "2025-2026 (inconsistent with parent2026-27; not imported)"
+      }
+    },
+    {
+      "id": "official-aea-route-2",
+      "url": "https://aea.net/EducationalFoundation/pdf/AEA_JimCookHonoraryScholarship_Application_2026.pdf",
+      "finalUrl": "https://aea.net/EducationalFoundation/pdf/AEA_JimCookHonoraryScholarship_Application_2026.pdf",
+      "observedAt": "2026-09-11T02:22:20.447Z",
+      "statusCode": 200,
+      "contentSha256": "91c531a5b5f04639650627196142fd1a00c956943011bb58cfab8f2d52ac9a8c",
+      "scrapeId": "01a08e45-d931-7419-b51b-989356d63428",
+      "authority": "official AEA route/document",
+      "evidencePath": "docs/evidence/scholarship-intake/aea-route-evidence.json",
+      "locator": "page1 APPLICATION INFORMATION / ELIGIBILITY REQUIREMENTS; blank unsubmitted application",
+      "facts": {
+        "role": "Historical application rules, not accepted as upcoming rules",
+        "deadline": "2026-04-01",
+        "membership": "AEA member or child/grandchild/dependent",
+        "education": "high school senior/graduate; pursue degree at accredited US postsecondary or international equivalent",
+        "gpa": 2.5,
+        "tuitionYearText": "2025-2026 (inconsistent with parent2026-27; not imported)"
+      }
+    },
+    {
+      "id": "official-aea-route-3",
+      "url": "https://aea.net/EducationalFoundation/pdf/Chuck_Freeland_Memorial_Scholarship_Application_2026.pdf",
+      "finalUrl": "https://aea.net/EducationalFoundation/pdf/Chuck_Freeland_Memorial_Scholarship_Application_2026.pdf",
+      "observedAt": "2026-09-11T02:22:23.790Z",
+      "statusCode": 200,
+      "contentSha256": "b3843e1050d4be970c79df1c9f2c6752fae31c00d47ce3d083e48127b417d879",
+      "scrapeId": "01a08e45-e87b-7520-83cb-5e5d6f376122",
+      "authority": "official AEA route/document",
+      "evidencePath": "docs/evidence/scholarship-intake/aea-route-evidence.json",
+      "locator": "page1 APPLICATION INFORMATION / ELIGIBILITY REQUIREMENTS; blank unsubmitted application",
+      "facts": {
+        "role": "Historical flight-training application; stricter than current summary",
+        "deadline": "2026-04-01",
+        "employment": "AEA member employee at least one year",
+        "training": "private pilot certificate only, start within six months",
+        "route": "email application through AEA, not submitted",
+        "conflict": "current parent also mentions recreational certificate; do not widen from stale form"
+      }
+    }
+  ],
+  "privacy": "Only blank public requirements inspected; no responses/submission or applicant data."
+}
