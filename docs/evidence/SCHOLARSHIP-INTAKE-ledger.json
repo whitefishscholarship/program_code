@@ -84679,8 +84679,8 @@
       "originalStatus": "DROPPED",
       "id": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-22:2c4e97bd94be",
       "entityId": "intake-entity-77521f95c9bf2014",
-      "disposition": "out_of_scope",
-      "rationale": "Observed MCF directory requirement: Big Horn, Carbon or Custer county eligibility; directory date remains March 31, 2025, not a 2026 claim. This does not establish a direct Whitefish graduating-senior entry path. Preserve original historical row; no deletion or fact mutation. Evidence is the prior full directory observation; exact per-page retrieval times unavailable. Historical values, cycles and statuses remain preserved in the source snapshot.",
+      "disposition": "hold",
+      "rationale": "Official directory permits former Big Horn/Carbon residents, potentially including Whitefish students, while individual rules instead specify high-school graduation and Custer Public Schools in Yellowstone County. Individual page also permits disability-based exceptions with unclear scope. Both retain March31,2025. Hold until public official clarification resolves audience conflict/exception scope and date; do not infer categorical exclusion or accept an addition. Historical values, cycles and statuses remain preserved in the source snapshot.",
       "destination": null,
       "evidenceIds": [
         "official-mcf-directory"
@@ -120269,18 +120269,24 @@
       ],
       "tags": [
         {
-          "key": "avfuel_pilot",
-          "existingChoiceId": "pilot",
+          "key": "avfuel_aviation_pilot",
+          "existingChoiceId": "aviation_pilot",
           "rationale": "Pilot training/aviation education is relevant; interest alone does not prove provider-specific conditions.",
           "sourceId": "official-avtrip-form",
-          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
+          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "label": "Aviation - Pilot",
+          "meaning": "Public pilot-training relevance; not proof of membership, certificate or eligibility",
+          "effect": "topic",
+          "qualifiedExplanation": "Pilot training/aviation education is relevant; current training and provider-specific requirements must be checked separately."
         }
       ],
       "interviewCoverage": [
         {
           "dimension": "pilot training",
           "decision": "reuse_existing_choice",
-          "choiceId": "pilot",
+          "choiceId": "aviation_pilot",
           "rationale": "Qualified discovery relevance only; current/preparing training and provider conditions must also hold."
         },
         {
@@ -120496,18 +120502,24 @@
       ],
       "tags": [
         {
-          "key": "avfuel_pilot",
-          "existingChoiceId": "pilot",
+          "key": "avfuel_aviation_pilot",
+          "existingChoiceId": "aviation_pilot",
           "rationale": "Pilot training/aviation education is relevant; interest alone does not prove provider-specific conditions.",
           "sourceId": "official-avfuel-pilot-form",
-          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules"
+          "storage": "local metadata keyed to stable entity; no sheet columns or runtime rules",
+          "existingControlId": "criterion-aviation-pilot",
+          "existingCriterionId": "career.aviation_pilot",
+          "label": "Aviation - Pilot",
+          "meaning": "Public pilot-training relevance; not proof of membership, certificate or eligibility",
+          "effect": "topic",
+          "qualifiedExplanation": "Pilot training/aviation education is relevant; current training and provider-specific requirements must be checked separately."
         }
       ],
       "interviewCoverage": [
         {
           "dimension": "pilot training",
           "decision": "reuse_existing_choice",
-          "choiceId": "pilot",
+          "choiceId": "aviation_pilot",
           "rationale": "Qualified discovery relevance only; current/preparing training and provider conditions must also hold."
         },
         {
@@ -127369,7 +127381,7 @@
       ],
       "comparisonOnlyNotIdentityProof": false,
       "status": "evaluated-awaiting-independent-review",
-      "disposition": "out_of_scope",
+      "disposition": "hold",
       "type": null,
       "existingMasterRows": [],
       "officialEvidenceIds": [
@@ -127383,7 +127395,34 @@
         "reviewer": null
       },
       "destination": null,
-      "identityRationale": "Observed MCF directory requirement: Big Horn, Carbon or Custer county eligibility; directory date remains March 31, 2025, not a 2026 claim. This does not establish a direct Whitefish graduating-senior entry path. Preserve original historical row; no deletion or fact mutation. Evidence is the prior full directory observation; exact per-page retrieval times unavailable."
+      "identityRationale": "Official directory permits former Big Horn/Carbon residents, potentially including Whitefish students, while individual rules instead specify high-school graduation and Custer Public Schools in Yellowstone County. Individual page also permits disability-based exceptions with unclear scope. Both retain March31,2025. Hold until public official clarification resolves audience conflict/exception scope and date; do not infer categorical exclusion or accept an addition.",
+      "hold": {
+        "entityId": "intake-entity-77521f95c9bf2014",
+        "reason": "Material official audience conflict and unclear exceptions; dated2025 evidence.",
+        "owner": "Kelsey Stuart",
+        "nextAction": "Official directory permits former Big Horn/Carbon residents, potentially including Whitefish students, while individual rules instead specify high-school graduation and Custer Public Schools in Yellowstone County. Individual page also permits disability-based exceptions with unclear scope. Both retain March31,2025. Hold until public official clarification resolves audience conflict/exception scope and date; do not infer categorical exclusion or accept an addition.",
+        "trigger": "New official information or owner selection resolves this condition",
+        "sourceIds": [
+          "official-mcf-directory"
+        ]
+      },
+      "sourceConflicts": [
+        {
+          "reviewer": "/root/intake_supplement_review",
+          "observedAt": "2026-09-11T04:12:20Z",
+          "sourceUrl": "https://mtcf.org/scholarship/fred-gloria-thaut-webber-scholarship",
+          "browserSessionId": "01a08ea6-ecc2-709d-a41b-233cda939051",
+          "evidenceType": "independent direct official page observation",
+          "facts": [
+            "Directory page5 permits former BigHorn/Carbon residents; detail instead requires specified high-school graduation.",
+            "Custer Public Schools is in Yellowstone County, not Custer County.",
+            "Detail permits possible mobility/physical/learning/cognitive-disability exemptions from above criteria with unclear scope.",
+            "Both pages retain March31,2025 dates; no future cycle inferred.",
+            "Evelyn directory page2 typically2000–5000 conflicts with specific detail typically3000.",
+            "All five directory pages independently observed12+12+12+12+8;page5noNext;session stopped."
+          ]
+        }
+      ]
     },
     {
       "id": "intake-entity-a7610d0240183132",
@@ -128229,7 +128268,7 @@
         {
           "column": "E",
           "oldValue": null,
-          "newValue": "$3,000",
+          "newValue": "Typically $3,000",
           "sourceId": "official-mcf-evelyn",
           "locator": "Required Criteria; Awards; Applying; dated deadline",
           "decision": "proposed_supported",
@@ -128258,9 +128297,9 @@
           "oldValue": null,
           "newValue": "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
           "sourceId": "official-mcf-portal",
-          "locator": "Required Criteria; Awards; Applying; dated deadline",
+          "locator": "Public MCF scholarship login route; individual Applying link",
           "decision": "proposed_supported",
-          "observedAt": "2026-09-11T03:49:32.225Z",
+          "observedAt": "2026-09-11T03:50:11.038Z",
           "additionalEvidence": [
             {
               "sourceId": "official-mcf-evelyn",
@@ -128373,7 +128412,7 @@
         "April 30, 2026 (closed)",
         "",
         "Scholarship",
-        "$3,000",
+        "Typically $3,000",
         "https://mtcf.org/scholarship/evelyn-b-johnson-memorial-scholarship",
         "Evelyn B Johnson Memorial Scholarship",
         "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
@@ -128389,7 +128428,17 @@
         "source": "Curated Review 2026-07-11",
         "reason": "Conditional affiliation or absent wizard criterion was used as audience hold; official senior eligibility is now supported. No prior explicit owner prohibition recorded in this row.",
         "applied": false
-      }
+      },
+      "sourceConflicts": [
+        {
+          "field": "amount",
+          "directoryValue": "Typically $2,000–$5,000",
+          "specificAwardValue": "Typically $3,000",
+          "resolution": "Use more specific individual award page with typical qualification; directory discrepancy remains explicit.",
+          "evidencePath": "docs/evidence/scholarship-intake/mcf-evidence.json",
+          "observedBy": "/root/intake_supplement_review"
+        }
+      ]
     },
     {
       "id": "intake-entity-2f40277de41b5c41",
@@ -128507,7 +128556,7 @@
         {
           "column": "E",
           "oldValue": null,
-          "newValue": "$500 to $1,500",
+          "newValue": "Typically $500 to $1,500",
           "sourceId": "official-mcf-davidson",
           "locator": "Required Criteria; Awards; Applying; dated deadline",
           "decision": "proposed_supported",
@@ -128536,9 +128585,9 @@
           "oldValue": null,
           "newValue": "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
           "sourceId": "official-mcf-portal",
-          "locator": "Required Criteria; Awards; Applying; dated deadline",
+          "locator": "Public MCF scholarship login route; individual Applying link",
           "decision": "proposed_supported",
-          "observedAt": "2026-09-11T03:50:08.967Z",
+          "observedAt": "2026-09-11T03:50:11.038Z",
           "additionalEvidence": [
             {
               "sourceId": "official-mcf-davidson",
@@ -128651,7 +128700,7 @@
         "March 31, 2026 (closed)",
         "",
         "Scholarship",
-        "$500 to $1,500",
+        "Typically $500 to $1,500",
         "https://mtcf.org/scholarship/d-a-davidson-education-memorial-scholarship",
         "D.A. Davidson Memorial Scholarship",
         "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
@@ -128729,7 +128778,7 @@
         {
           "column": "E",
           "oldValue": null,
-          "newValue": "$500 to $1,000",
+          "newValue": "Typically $500 to $1,000",
           "sourceId": "official-mcf-seeley",
           "locator": "Required Criteria; Awards; Applying; dated deadline",
           "decision": "proposed_supported",
@@ -128758,9 +128807,9 @@
           "oldValue": null,
           "newValue": "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
           "sourceId": "official-mcf-portal",
-          "locator": "Required Criteria; Awards; Applying; dated deadline",
+          "locator": "Public MCF scholarship login route; individual Applying link",
           "decision": "proposed_supported",
-          "observedAt": "2026-09-11T03:49:52.710Z",
+          "observedAt": "2026-09-11T03:50:11.038Z",
           "additionalEvidence": [
             {
               "sourceId": "official-mcf-seeley",
@@ -128873,7 +128922,7 @@
         "March 31, 2026 (closed)",
         "",
         "Scholarship",
-        "$500 to $1,000",
+        "Typically $500 to $1,000",
         "https://mtcf.org/scholarship/seeley-family-memorial-scholarship",
         "Seeley Family Memorial Scholarship",
         "https://www.grantinterface.com/Home/Logon?urlkey=mtcfscholarship",
@@ -159036,6 +159085,16 @@
       "trigger": "New official information or owner selection resolves this condition",
       "sourceIds": [
         "official-pearl-program"
+      ]
+    },
+    {
+      "entityId": "intake-entity-77521f95c9bf2014",
+      "reason": "Material official audience conflict and unclear exceptions; dated2025 evidence.",
+      "owner": "Kelsey Stuart",
+      "nextAction": "Official directory permits former Big Horn/Carbon residents, potentially including Whitefish students, while individual rules instead specify high-school graduation and Custer Public Schools in Yellowstone County. Individual page also permits disability-based exceptions with unclear scope. Both retain March31,2025. Hold until public official clarification resolves audience conflict/exception scope and date; do not infer categorical exclusion or accept an addition.",
+      "trigger": "New official information or owner selection resolves this condition",
+      "sourceIds": [
+        "official-mcf-directory"
       ]
     }
   ],
