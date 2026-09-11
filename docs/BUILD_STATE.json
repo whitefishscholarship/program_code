@@ -901,7 +901,7 @@
   ],
   "scholarshipIntake": {
     "planId": "SCHOLARSHIP-INTAKE-1",
-    "status": "exact-batch-authorized-safeguards-pass-final-check-pending",
+    "status": "exact-authorized-batch-applied-and-reconciled",
     "authorityEvidencePath": "docs/evidence/PLAN-REV15.md",
     "planningCommit": "0ffa90b12502b2a031a6012e16014301def07205",
     "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
@@ -924,6 +924,7 @@
     "applicationAuthorityEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md",
     "authorizedBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
     "quietWindow": "Kelsey confirmed no other editors during this uninterrupted session; freshness and single-writer checks remain required",
-    "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json"
+    "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json",
+    "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json"
   }
 }

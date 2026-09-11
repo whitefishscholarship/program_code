@@ -25,7 +25,7 @@ Follow AGENTS.md's required read order. Then read:
 Read `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json` before browser
 actions. Student View!F1 correction is approved and verified; the operative
 handoff has final backup checks and application state. Do not repeat
-the shortcut or blindly undo. The scholarship batch remains unapplied.
+the shortcut or blindly undo. The exact scholarship batch is applied and fully reconciled; read application-receipt.json. Do not replay it.
 
 The original local objective is complete and independently reviewed. Do not repeat its
 batches. CURRENT_HANDOFF.md's operative status and open-item routing table identify the
@@ -33,9 +33,9 @@ next action, owners, exact triggers and verification limits. The frozen ledger's
 review-pending label is superseded by the separate final receipt, not a reason to restart.
 
 This kickoff grants no new authority. The separate application-authority receipt now
-records Kelsey's exact unchanged-batch/copy grant; do not ask for it again. Complete
-the remaining feature-preservation, recovery/freshness/readback gates before any original
-write. The operative handoff records the sign-in blocker and all created recovery objects.
+records Kelsey's exact unchanged-batch/copy grant, now fully applied and reconciled.
+Do not ask for it again or replay the batch. The operative handoff and application receipt
+record completed safeguards, corrections, readback and all retained recovery objects.
 Publication requires its own exact authority or verified applicable suppression. A changed
 source or batch requires reconciliation and appropriate review; preserve every prior
 receipt rather than rebinding it. No applicant data, legacy workbook, provider contact,

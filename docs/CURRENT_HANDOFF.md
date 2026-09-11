@@ -1,3 +1,36 @@
+# Scholarship intake batch applied and reconciled
+
+Operative September 11, 2026, 10:52 UTC. **PASS for the exact authorized application.**
+Batch `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`
+applied once: 219 additions, 38 updates, 257 operations, 301 requests and 3367 cells
+in Master Database. Named Master Database records increased from 197 to 416; the existing
+one duplicate-name group of two remains unchanged, with no new duplicate-name group.
+All 3,367 target cells passed exact value/link/style readback, all 12,533 untargeted Master
+cells stayed unchanged, and all 315 Student View cells stayed unchanged. All 14 tab
+metadata, Master row/column metadata and source sharing stayed unchanged. Revision 229;
+modified `2026-09-11T10:51:53.348Z`. No retry or original rollback was performed.
+
+Evidence: `docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json`, final-backup-
+verification.json, final-feature-preservation.json, final-safeguard-review.json, and
+header-correction.json (same evidence directory). The accidental F1 header was corrected
+under explicit approval and fully verified before application. The empty script cleanup
+is also complete. No outstanding cleanup approval exists.
+
+Fresh full private backup: `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM`.
+Kelsey owns backup/recovery. Retain all earlier backups, affected-cell JSON and restored
+disposable copy. No deletion or future original restore authority is implied. Existing
+column widths/overflow layout were preserved; selecting a cell reveals long text.
+
+**Next action:** no further source mutation or website publication now. Local intake and
+its exact authorized workbook application are complete. Publication, interview/category
+changes, held awards and later cleanup continue only when their recorded triggers and
+required authority are satisfied; retain the existing open-item routing table below.
+A new batch requires fresh full backup and exact authority. Canonical PLAN-REV15 remains
+unaccepted with its three reserved manifest/review/attestation checks; do not rebind any
+historical candidate or imply application success is canonical acceptance. No push, PR,
+Preview, merge, Production or website release was performed. Prior entries below are
+history; their unapplied/pending states are superseded.
+
 # Header corrected — final backup and safeguards verified
 
 Operative September 11, 2026. Kelsey approved the exact F1 correction and continuation.
