@@ -18,14 +18,20 @@ rejects(l=>{l.entities[0].fields[8].newValue='Unreviewed replacement';},/Field a
 rejects(l=>{l.entities[0].fields[8].observedAt='2026-09-10T00:00:00.000Z';},/timestamp differs/);
 rejects(l=>{l.entities[0].fields[8].supportingSourceIds=['missing-source'];},/Unknown supporting source/);
 rejects(l=>{l.entities[0].fields[8].oldValue='Existing manual edit';},/overwrites an existing value/);
+rejects(l=>{l.entities[0].tags[0].key='unrelated-key';},/Unregistered tag/);
+rejects(l=>{l.entities[0].tags[0].label='Unrelated label';},/Unregistered tag/);
+const alias=structuredClone(fixture);alias.entities[0].tags[0].key='dcc_healthcare';validateProposalRecords(alias);
 rejects(l=>{l.entities[0].tags[0].existingControlId='criterion-stem';},/Wrong interview control/);
 rejects(l=>{l.entities[0].interviewCoverage[0].choiceId='new-unapproved-question';},/Unknown coverage choice/);
 rejects(l=>{l.entities[0].fields[9]={...l.entities[0].fields[8]};},/Duplicate proposed column/);
 const update=structuredClone(fixture);
-update.rows=[{id:'synthetic-master',sheetId:0,tab:'Master Database',rowNumber:2,rowContentSha256:'b'.repeat(64),sourcePath:'synthetic-only',entityId:'synthetic-add',disposition:'propose_update',rationale:'Synthetic correction',destination:{kind:'existing_master',rowNumber:2,entityId:'synthetic-add'},evidenceIds:['rules'],review:{status:'reviewed',reviewer:'synthetic-independent-reviewer'},values:[...proposedValues]}];
+update.rows=[{id:'synthetic-master',sheetId:0,tab:'Master Database',rowNumber:2,rowContentSha256:'b'.repeat(64),sourcePath:'synthetic-only',entityId:'synthetic-add',disposition:'propose_update',rationale:'Synthetic correction',destination:{kind:'existing_master',sheetId:0,rowNumber:2,entityId:'synthetic-add'},evidenceIds:['rules'],review:{status:'reviewed',reviewer:'synthetic-independent-reviewer'},values:[...proposedValues]}];
 update.entities[0].disposition='propose_update';update.entities[0].destination=update.rows[0].destination;
 update.entities[0].fields=[{...addition.fields[8],oldValue:proposedValues[8],newValue:'A supported correction.'}];
 validateProposalRecords(update);
+for(const change of [{kind:'proposed_operation'},{sheetId:123}]) {
+  const bad=structuredClone(update);Object.assign(bad.entities[0].destination!,change);assert.throws(()=>validateProposalRecords(bad),/Update destination (kind|sheet) mismatch/);
+}
 update.rows[0].values[8]='A newer manual edit';
 assert.throws(()=>validateProposalRecords(update),/Stale old field value/);
 console.log('Intake proposal consistency, field provenance, controlled mapping and newer-edit fixtures PASS.');

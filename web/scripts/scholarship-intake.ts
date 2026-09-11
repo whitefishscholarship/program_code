@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import tagAliases from './intake-tag-aliases.json';
 import { ACTIVITY_QUESTIONS, SPECIAL_CRITERIA } from '../src/lib/interviewQuestions';
 
 export const INTAKE_WORKBOOK = '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4';
@@ -29,7 +30,7 @@ export function canApplyIntake(g: WriteGate): boolean {
 export type Row = { id: string; sheetId: number; tab: string; rowNumber: number; rowContentSha256: string;
   values: string[];
   sourcePath: string; entityId: string | null; disposition: string | null; rationale: string | null;
-  destination: {kind: string; rowNumber?: number; entityId?: string; operationId?: string} | null;
+  destination: {kind: string; sheetId?: number; rowNumber?: number; entityId?: string; operationId?: string} | null;
   evidenceIds: string[]; review: {status: string; reviewer: string | null}; };
 export type Entity = {id: string; name?: string; sourceRowIds: string[]; disposition: string | null; status: string;
   destination?: Row['destination'];
@@ -110,6 +111,8 @@ export function validateProposalRecords(l: Pick<Ledger,'rows'|'entities'|'offici
     const master=e.disposition==='propose_update' ? l.rows.find(r=>r.sheetId===0&&r.entityId===e.id) : undefined;
     if(e.disposition==='propose_update') {
       assert(master,'Update has no exact Master identity');
+      assert.equal(e.destination?.kind,'existing_master','Update destination kind mismatch');
+      assert.equal(e.destination?.sheetId,0,'Update destination sheet mismatch');
       assert.equal(e.destination?.rowNumber,master.rowNumber,'Update destination row mismatch');
       assert.equal(e.destination?.entityId,e.id,'Update destination entity mismatch');
     } else {
@@ -138,6 +141,7 @@ export function validateProposalRecords(l: Pick<Ledger,'rows'|'entities'|'offici
       assert(['requirement','preference','topic'].includes(t.effect),'Invalid tag effect');
       if(t.existingChoiceId) {
         const c=choices.get(t.existingChoiceId);assert(c,'Unknown interview choice');
+        assert((t.key===c.id&&t.label===c.label)||tagAliases.aliases.some(a=>a.key===t.key&&a.label===t.label&&a.existingChoiceId===c.id),'Unregistered tag key or display label');
         if(t.existingControlId)assert.equal(t.existingControlId,c.controlId,'Wrong interview control');
         if(t.existingCriterionId)assert.equal(t.existingCriterionId,c.criterionId,'Wrong interview criterion');
       }
