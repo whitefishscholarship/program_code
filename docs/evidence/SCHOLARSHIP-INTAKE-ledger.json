@@ -108369,7 +108369,8 @@
       "type": "scholarship",
       "existingMasterRows": [],
       "officialEvidenceIds": [
-        "official-providers26-extra-surety"
+        "official-providers26-extra-surety",
+        "official-providers26-extra-surety-timing"
       ],
       "fields": [
         {
@@ -108471,13 +108472,14 @@
         {
           "column": "I",
           "oldValue": null,
-          "newValue": "Surety Bond Authority's 2026 scholarship offers $1,500 to a high-school or undergraduate student. Its purpose and required 500–1,000-word essay concern a career in accounting, banking, finance or another business-related field, while the eligibility wording describes preference for those fields; applicants should confirm how that preference interacts with the required career essay. Submit an original Word or PDF essay and the official transcript from the most recent semester by email to suretyauthority@gmail.com. The deadline was April 6, 2026; a future cycle is not verified. A numeric GPA, income threshold and renewal guarantee are not stated. The saved 2025 record is the prior annual cycle of this same named sponsor program, not a second award.",
+          "newValue": "Surety Bond Authority's 2026 scholarship offers $1,500 to a high-school or undergraduate student. Its purpose and required 500–1,000-word essay concern a career in accounting, banking, finance or another business-related field, while the eligibility wording describes preference for those fields; applicants should confirm how that preference interacts with the required career essay. Submit the Word or PDF essay by email to suretyauthority@gmail.com. The2026 public rules also list a copy of the official transcript from the most recent semester, but the selected quotation does not establish when it must be supplied. The2025 rules requested it from the chosen winner; confirm the2026 timing rather than assume it is an initial application prerequisite. The deadline was April 6, 2026; a future cycle is not verified. A numeric GPA, income threshold and renewal guarantee are not stated. The saved 2025 record is the prior annual cycle of this same named sponsor program, not a second award.",
           "sourceId": "official-providers26-extra-surety",
           "locator": "award heading: Surety Bond Authority Scholarship Program",
           "decision": "proposed_supported",
           "observedAt": "2026-09-11T06:14:44.872Z",
           "supportingSourceIds": [
-            "official-providers26-extra-surety"
+            "official-providers26-extra-surety",
+            "official-providers26-extra-surety-timing"
           ]
         },
         {
@@ -108596,7 +108598,7 @@
           "dimension": "application",
           "decision": "award_card_only",
           "choiceId": null,
-          "rationale": "500–1000wordWord/PDFessayandmostrecentofficialtranscripttoprogramemail."
+          "rationale": "500–1000wordWord/PDFessaytoprogramemail.2026listsrecentofficialtranscriptbuttimingunverified;2025requestedchosenwinner. Noapplicant-wideinitialtranscriptprerequisiteasserted."
         },
         {
           "dimension": "cycle/renewal",
@@ -108624,7 +108626,7 @@
         "https://suretybondauthority.com/surety-bond-authority-scholarship-2026/",
         "Surety Bond Authority Scholarship Program",
         "mailto:suretyauthority@gmail.com",
-        "Surety Bond Authority's 2026 scholarship offers $1,500 to a high-school or undergraduate student. Its purpose and required 500–1,000-word essay concern a career in accounting, banking, finance or another business-related field, while the eligibility wording describes preference for those fields; applicants should confirm how that preference interacts with the required career essay. Submit an original Word or PDF essay and the official transcript from the most recent semester by email to suretyauthority@gmail.com. The deadline was April 6, 2026; a future cycle is not verified. A numeric GPA, income threshold and renewal guarantee are not stated. The saved 2025 record is the prior annual cycle of this same named sponsor program, not a second award.",
+        "Surety Bond Authority's 2026 scholarship offers $1,500 to a high-school or undergraduate student. Its purpose and required 500–1,000-word essay concern a career in accounting, banking, finance or another business-related field, while the eligibility wording describes preference for those fields; applicants should confirm how that preference interacts with the required career essay. Submit the Word or PDF essay by email to suretyauthority@gmail.com. The2026 public rules also list a copy of the official transcript from the most recent semester, but the selected quotation does not establish when it must be supplied. The2025 rules requested it from the chosen winner; confirm the2026 timing rather than assume it is an initial application prerequisite. The deadline was April 6, 2026; a future cycle is not verified. A numeric GPA, income threshold and renewal guarantee are not stated. The saved 2025 record is the prior annual cycle of this same named sponsor program, not a second award.",
         "",
         "",
         "",
@@ -108938,10 +108940,10 @@
         {
           "column": "J",
           "oldValue": null,
-          "newValue": "3.0",
+          "newValue": "",
           "sourceId": "official-providers26-extra-pizzini-pdf",
-          "locator": "award heading: Donald E. Pizzini Memorial Nurse Scholarships",
-          "decision": "proposed_supported",
+          "locator": "No unconditional GPA floor: official3.0 rule has a discretionary work-experience waiver; preserve exact conditional rule in I.",
+          "decision": "unknown_leave_blank",
           "observedAt": "2026-09-11T06:18:19.829Z",
           "supportingSourceIds": [
             "official-providers26-extra-pizzini-pdf",
@@ -109086,7 +109088,7 @@
         "Donald E. Pizzini Memorial Nurse Scholarships",
         "https://nebula.wsimg.com/c319124166319c2be3a5ae66bd7a2a69?AccessKeyId=21EA7CECE86EC977A283&disposition=0&alloworigin=1",
         "Donald E. Pizzini Memorial Nurse Scholarships provide up to $2,500 for full-time or part-time accredited nursing degree or certificate study relevant to long-term care. Applicants must be US citizens or permanent residents, reside in Montana, plan to work or remain working in Montana long-term-care nursing, and be available for a qualifying interview. A 3.0 prior GPA is required, using high-school GPA for first-year students; the committee may waive it for current long-term-care professionals based on work performance and experience. Acceptance or enrollment proof, official transcripts and two non-family recommendations are required. Preference goes to current long-term-care workers or those interested in that career, and people with current or past MHCA-member-facility employment. Use the official Initial Scholarship Application PDF for applicants who have not previously received this award. Applications are due the last day of February, with awards in April for the coming academic year; the year is unstated. Enrollment and continued participation must be proved for payments; the committee may withhold/cancel funds below3.0. Recipients may reapply after their award expires; renewal is not guaranteed.",
-        "3.0",
+        "",
         "",
         "",
         "",
@@ -170476,6 +170478,18 @@
       "authority": "official provider/program or provider-linked document",
       "evidencePath": "docs/evidence/scholarship-intake/providers-evidence.json",
       "retrievalMode": "Live maxAge0 selected public rules or selected structured extraction; hash covers retained excerpt only; empty means failed extraction."
+    },
+    {
+      "id": "official-providers26-extra-surety-timing",
+      "url": "https://suretybondauthority.com/surety-bond-authority-scholarship-2026/",
+      "finalUrl": "https://suretybondauthority.com/surety-bond-authority-scholarship-2026/",
+      "observedAt": "2026-09-11T06:29:47.902Z",
+      "statusCode": 200,
+      "contentSha256": "2f31ec05dc1e67d5dfa176ecc89deca67353c4ea645215f1dc9c739bf31b44ce",
+      "scrapeId": "01a08f28-6ade-7366-a356-c6266d4717a6",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/providers-evidence.json",
+      "retrievalMode": "Live maxAge0 selected direct public program quotation; transcript timing remains ambiguous."
     }
   ],
   "discoveries": [
@@ -174811,7 +174825,8 @@
         "official-providers26-extra-pizzini",
         "official-providers26-extra-surety",
         "official-providers26-f7e3d955f9da124d",
-        "official-related-kitchen"
+        "official-related-kitchen",
+        "official-providers26-extra-surety-timing"
       ],
       "triageIds": [
         "related-728fe8ba995987e5",

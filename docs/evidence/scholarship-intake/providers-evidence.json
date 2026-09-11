@@ -190,6 +190,13 @@
       "observedAt": "2026-09-11T06:07:11.145Z",
       "excerpt": "",
       "contentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "sourceId": "official-providers26-extra-surety-timing",
+      "url": "https://suretybondauthority.com/surety-bond-authority-scholarship-2026/",
+      "observedAt": "2026-09-11T06:29:47.902Z",
+      "excerpt": "- Preference is given to students pursuing Accounting, Banking, Finance, or related business fields.\n\nA copy of the official transcript from the most recent semester.\n\nAll entries must be received by April 6, 2026.\n\nOnce all requirements are met, one winner will be selected to receive the $1,500 scholarship. The winning candidate will be announced on this website and contacted via email on June 1, 2026.",
+      "contentSha256": "2f31ec05dc1e67d5dfa176ecc89deca67353c4ea645215f1dc9c739bf31b44ce"
     }
   ],
   "entityIds": [
@@ -296,5 +303,15 @@
       116,
       141
     ]
-  }
+  },
+  "reviewRemediation": [
+    {
+      "id": "PROVIDERS-026-M1",
+      "resolution": "PizziniJblank;conditional3.0andprofessionalwaiverretainedinI."
+    },
+    {
+      "id": "PROVIDERS-026-M2",
+      "resolution": "Addedcurrentdirectquotation;transcripttimingexplicitlyunknownversus2025winner-onlyrule;removedinitialprerequisitefromIandcoverage."
+    }
+  ]
 }
