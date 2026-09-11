@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "batchIds": [
+    "batch-related-triage-016",
+    "batch-reference-completion-017",
+    "batch-related-material-018",
+    "batch-related-material-019"
+  ],
+  "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "recordedAt": "2026-09-11T04:58:28.131193+00:00",
+  "reviewer": {
+    "task": "/root/intake_triage_review",
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "freshContext": true
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "coverage": {
+    "triageRecords": 238,
+    "triageFields": 758,
+    "updatedEntities": 20,
+    "proposedCells": 37,
+    "tags": 23,
+    "interviewCoverageDecisions": 103,
+    "associatedSourceRows": 106
+  },
+  "reviewedLedgerSha256": "33e6d485c16640e0acab04d4d8b8c985c38036f447faa3a0349b00e989b37d92",
+  "triageSortedCompactSha256": "759bb198022f04bf4ff2de58f45adcdb77aa17707ba6979ecb5edbff735f7fda",
+  "findingsResolved": [
+    "Five exact-H richlink comparisons corrected, including Gianforte and Soroptimist.",
+    "Missing identity aliases received complete field triage and pending markers were cleared.",
+    "Ten initial and17 additional material groups plus WTS renewal received bounded official checks.",
+    "Specific award tags/coverage and claim binding replaced generic placeholders.",
+    "Unsupported K54 restriction withdrawn.",
+    "LeRoy written-exam prerequisite and AGC four-year exclusion restored."
+  ],
+  "limits": "Only016–019. Full intake review, exact promotion batch and testing unfinished; no source writes or publication."
+}

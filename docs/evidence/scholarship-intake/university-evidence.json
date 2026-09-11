@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 1,
+  "batchId": "batch-universities-020",
+  "recordedAt": "2026-09-11T05:03:44.481149+00:00",
+  "sources": [
+    {
+      "sourceId": "official-university-fvcc",
+      "summary": "14 named programs in6 current/prospective,4 graduate and4 state sections confirmed by live accessibility tree;8 outside resource links. Donor pool is existing45; Eagle80 can renew following year with GPA and6credits. Academic30FVCCcredits/3.5, SonsNorway/Logue/2+2 postcollege, Jarecki graduate loan repayment. NWattendance named11schools omitWhitefish. STEM incoming/current,2.75maintenance,need/FAFSA,transferintent,lastdollar; Honors top10percent namedWhitefish,2years/2.5renewal. No actual STEM/Honors route found in publicpage or targeted search. Indian quarter-ancestry text conflicts with Fall2026MUSform. No source application submitted.",
+      "rawFile": ".firecrawl/resume-fvcc-scholarships.json",
+      "contentSha256": "b08419fd729d0bfa8813714e2e9846a42288feaa1bbfc918f19fbd7ca767f497"
+    },
+    {
+      "sourceId": "official-university-um-umaas",
+      "summary": "Exact UMAAS title and UMprovider; initial award expressly out-of-state, international undergraduates eligible; firstBachelor. Admission application March1yearless, GPA-tiered tuition award, not fulltuition promise. Renewal2.5,15creditssemester/30annual with AND/OR wording inconsistency; tableMTresidentsavailable vs FAQforfeited uponMTresidency conflict. Scholarshipstacking restricted.",
+      "rawFile": ".firecrawl/resume-university-um-umaas.json",
+      "contentSha256": "2abcabd4ff118b92b514a8423f6784ba70be51969c4ef6a2568c5312e491c038"
+    },
+    {
+      "sourceId": "official-university-um-wue",
+      "summary": "Exact UM WUE;2026–27discount21120; listedeligible statesexcludeMT. Freshmen3.0weighted/unweightedhigher;transfer3.5. Jan15yearlessautomaticadmissionconsideration,late spaceavailable, no guarantee. Renew4years3.0; credits15semester/30year with AND/OR wording inconsistency. NotMissoula/onlineonly/graduate/secondBachelor; WUEandUMAASnotstacked.",
+      "rawFile": ".firecrawl/resume-university-um-wue.json",
+      "contentSha256": "700abb2d27935726112afe0cf80042a1f34255591e6780b7b525983dd231ded0"
+    },
+    {
+      "sourceId": "official-university-um-honors",
+      "summary": "Exactly3incoming DHC awards: PLS,PHS,DLS alreadyMaster103–105. Shared admittedUMthenDHC application byDec1at23:59MSTyearless. MTapplicantsmustalsoapplyMUSHonor. Renewal up4years3.4GPA,30annualcredits,2honorsexperiences,advising; no initial3.4minimum inferred. No recipientcontent saved.",
+      "rawFile": ".firecrawl/resume-university-um-honors.json",
+      "contentSha256": "e7c76a6b15eba29c888611f6240bd4e7691aa01d5cbb83b41d8656b0b92a8902"
+    },
+    {
+      "sourceId": "official-university-um-apply",
+      "summary": "ScholarshipUniverse is UMcentral authenticated matching/application portal, not individual award;2026–27newpriorityJan15,continuingMar1,allcloseMar1; actualumt.scholarshipuniverse.comroute. Noportaldataaccessed. Portalrepresentation requires selected type decision.",
+      "rawFile": ".firecrawl/resume-university-um-apply.json",
+      "contentSha256": "83acc05900624fe99b740e0b247c53466c354d51d046c8fa18cd2c770c89d76b"
+    },
+    {
+      "sourceId": "official-university-um-new",
+      "summary": "Four resource groups at new-studentparent: MontanaAdmissions,UMAAS,WUE,UMNeedGrant. Used onlytoidentify suppliedoldparent and linked namedchildren; no complete currentUMawardcatalogclaim.",
+      "rawFile": ".firecrawl/resume-university-um-new.json",
+      "contentSha256": "97778590a017fb596214aab02210807f3d5144e0c38b5681112f5649515d084e"
+    },
+    {
+      "sourceId": "official-university-um-external",
+      "summary": "One UMNationalMeritprogram includesfinalist2000/yearfirstchoiceUM andsemifinalist1000/year,4yearrenewable. BothalreadyexplicitinMaster107. Distinct MUSone-year tuitionwaiver isnotthis scholarship.",
+      "rawFile": ".firecrawl/resume-university-um-external.json",
+      "contentSha256": "49b482ed94dbe6cfad6a7088e43396f748407d868701262cb6a5ac6aed7e7a42"
+    },
+    {
+      "sourceId": "official-university-um-waivers",
+      "summary": "Fall2026 AmericanIndianwaiver pageeliminatesquarterbloodquantum, supportsMaster162current enrolledmember/triballycertifieddescendantMTfederaltribe,MTresident,need/annualFAFSA. PageFAQitselfnarrowsmemberonly; authoritativeMUSFall2026formresolvesdescendants. No newPIIcollected.",
+      "rawFile": ".firecrawl/resume-university-um-waivers.json",
+      "contentSha256": "8503714f30d53aa563e2fe6631d7c8fb12ef7bdf20c61bb07787ea571973d794"
+    },
+    {
+      "sourceId": "official-university-mus-indian",
+      "summary": "Fall2026blankMUSform:MTresident,qualifyingcampus,enrolledmemberortriballycertifieddescendantMTfederallyrecognizedtribe;needannualFAFSA;undergraduate tuitiononly,nofees/otherwaiver;notifycampusbythirdweek;SAPrenewal. ConfirmsMaster162overhistoricalquarterancestrycandidate. Empty form fields excluded.",
+      "rawFile": ".firecrawl/resume-university-mus-indian.json",
+      "contentSha256": "a5da331a0256def3ae55c10bf8d5a03dc16600a8b318b40286def306d23d78f9"
+    },
+    {
+      "sourceId": "official-university-mus-waivers",
+      "summary": "MTNationalGuardpersonalArmy/Airgoodstanding,SAP,applybythirdweek;lastdollar afterallotheraid,includesnonresidentGuardin-state rate. DirectApplyrouteoche.my.site.com. FVCCalso explicitly requiresIET. Supports identityMaster156; no familybenefit.",
+      "rawFile": ".firecrawl/resume-university-mus-waivers.json",
+      "contentSha256": "7a7d012a2a4265fce511774e5dc32fecab71560e6067d422932ffc2a87a3a763"
+    },
+    {
+      "sourceId": "official-university-mus-honor",
+      "summary": "MUS2027opensDec1,2026closesMar15,2027;MTresident,3yearsaccreditedHSincludinggraduationyear,3.4seventhsemester,rigorouscoreorIB,eligiblecampusacceptance. Header/applicationstep saysFebruary2027ACT/SAT butoneproofbulletstillFebruary2026; DHCparentDecember31stalespecificsnotpromoted. Fouryear8semesterconditionalrenewal,tuitionnotfees.",
+      "rawFile": ".firecrawl/resume-university-mus-honor.json",
+      "contentSha256": "435948b8cb1ad62ca3c845dfbbd35a5016257d660bdd80b855086e26c1d66af1"
+    },
+    {
+      "sourceId": "official-university-um-rotc-parent",
+      "summary": "UMArmyROTCpageidentifiesGrizzlyBattalionandlinksGoArmyROTCscholarships; supportsMaster108sameprogram. No separateawardfornamealias. No service/submission entered.",
+      "rawFile": ".firecrawl/resume-university-um-rotc-parent.json",
+      "contentSha256": "ae4a306e4707d1caaaef165c3020ac58a093097ee9bae02967dca21dba22818b"
+    },
+    {
+      "sourceId": "official-university-grizzly-history",
+      "summary": "UM2022launchdescribesGrizzlyPromise2023–24FAFSA/admission,MTfamiliesincomeunder50000;notcurrent2026terms. CurrentlinkedGrizzlyroute redirectsparent. No2026exactapplicationconfirmed.",
+      "rawFile": ".firecrawl/resume-university-grizzly-history.json",
+      "contentSha256": "27099410aee70c885e594abf85dd79407a98a525bc06de5e7ea94b17ccc70d42"
+    },
+    {
+      "sourceId": "official-university-um-grizzly",
+      "summary": "OfficialGrizzlyPromiseURLresolvedtoscholarshipsparent,whichdoesnotprovidespecificcurrentGrizzlyPromiserules. Holdcurrentprogramanddate;notzeroeligibilitynorclosedassertion.",
+      "rawFile": ".firecrawl/resume-university-um-grizzly.json",
+      "contentSha256": "e676f771fb921aa1b8066ae37075a0aa345ecf0b8b6cefa495c749e67b16b766"
+    },
+    {
+      "sourceId": "official-university-athletic-gsa",
+      "summary": "UMofficialathleticdepartmenthandbookpage200butnoretrievablefinancialaidrules. OldUMparentredirectandtwoofficialdomainsearchesdidnotexposecurrentpublicindividualawardroute. AthleticpoolnotMasterandpreviousremovedrecruitedpool;holdnotnewopenaward.",
+      "rawFile": ".firecrawl/resume-university-athletic-gsa.json",
+      "contentSha256": "7cc16cf2facfc53884e69f4174e6de295922e60164ffcc4fdfbb87d033e5f3c6"
+    },
+    {
+      "sourceId": "official-university-msu-honors",
+      "summary": "2027MSUPresidentialopenslateSep/earlyOct2026closesDec1,2026midnightMST. Incomingfreshmen3.7unweightedminimum,typical3.9notcutoff;MT/nonMT;admission,NetID,CATgeneral,presidentialsupplement,letters. Existing101. Currenthonorscycle supersedesadditionalpageDec6,2025closedcycle.",
+      "rawFile": ".firecrawl/resume-university-msu-honors.json",
+      "contentSha256": "557879b7d2713717cb1472d963aab277af516e15409b7dadd0ef3c8e451ce051"
+    },
+    {
+      "sourceId": "official-university-msu-additional",
+      "summary": "Supplied#presidentialanchor:MSUPresidentialexisting101;nonwinningfinalistsconsideredfornamedMSUProvosttuition+stipendrenew4years. ThisisnotUMProvost104. Anchoredpage2025deadline not2027proof; sharedapplication viaCAT. Othersevenresourcecategoriesoutsideanchoredrow notexpanded.",
+      "rawFile": ".firecrawl/resume-university-msu-additional.json",
+      "contentSha256": "e640b70d8edf8abeeb491da1e0af1c04d941370e74718676fc52e2c194da42d1"
+    },
+    {
+      "sourceId": "official-university-msu-departmental",
+      "summary": "MSUCATshareddepartmentalportalactualmontana.academicworks.com;newundergradapply/admit/NetID. Eightcollegecategoriesnotindividualawards;existingMaster100. Noauthenticatedcatalogaccess.",
+      "rawFile": ".firecrawl/resume-university-msu-departmental.json",
+      "contentSha256": "8b281412645586fca237b408fe3a1675fd29d5c48469adc13ef1350e23ec98a7"
+    },
+    {
+      "sourceId": "official-university-msu-hilleman",
+      "summary": "BlankofficialHillemanapplicationexplicitlyFall2026;leadershippotentialanddegreeaspiration;noexactdeadline. No formcontententered. SupportsMaster139exactroute.",
+      "rawFile": ".firecrawl/resume-university-msu-hilleman.json",
+      "contentSha256": "c6fc54042a47018c7badb88e2f964c0c9c42905251a10db3d1ba3ae9e3f1b8bd"
+    },
+    {
+      "sourceId": "official-university-hilleman-parent",
+      "summary": "MSUHilleman designedforMTresidentswithacademic,leadership,careerpotential; nofirstgenerationorPellmandatoryconditionestablished.",
+      "rawFile": ".firecrawl/resume-university-hilleman-parent.json",
+      "contentSha256": "a48ed4c640646b5406508a89e6823ffb92f67e4fbc781f621f8fd2ae21df57fc"
+    },
+    {
+      "sourceId": "official-university-hilleman-details",
+      "summary": "Hillemaninvitationonly,MTrecentHSgraduates;SummerSuccessAcademyrequired,2000stipend;fouryears4000/yearwithSAPand10–15hoursweeklydevelopment,mentoring/internship/communityactivities;3000juniorgroupstudyabroadconditional. CannotstackHoratio;page2025orientationstale. No genericPell/firstgeneligibilityinference.",
+      "rawFile": ".firecrawl/resume-university-hilleman-details.json",
+      "contentSha256": "9a6f4b1fdfdad3a8aeec91d16ca564f9d71575e2d3676c13d6e82eb394b51432"
+    }
+  ],
+  "aggregateFieldTriage": [
+    {
+      "entityId": "intake-entity-dedf9ddd44bd8c6d",
+      "sourceRowIds": [
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-10:becd28204da4"
+      ],
+      "masterRows": [
+        103,
+        104,
+        105
+      ],
+      "fieldDisposition": "BJan15,2026versusprogramDec1resolvedby3Bproposals; otheraggregateblank/Any/TBDdoesnotdefineallchildren. Lrenewalresolvedby3Lproposals.",
+      "all15SourceColumnsInspected": true
+    },
+    {
+      "entityId": "intake-entity-c79bbdeaba21b936",
+      "sourceRowIds": [
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-5:b8c26d539e8a"
+      ],
+      "masterRows": [
+        4,
+        99,
+        100,
+        101
+      ],
+      "fieldDisposition": "CategoryNonRenewingcannotoverwritethreeawardsandoneportal;historicalblank/defaultotherfieldsremainunapplied.",
+      "all15SourceColumnsInspected": true
+    },
+    {
+      "entityId": "intake-entity-f261f0871fa90497",
+      "sourceRowIds": [
+        "intake-rev226-74df373b3e30738e:sheet-1468843784:row-7:52dee2025000"
+      ],
+      "masterRows": [
+        101
+      ],
+      "fieldDisposition": "PortalNonRenewingdefaultdoesnotoverridecurrentPresidential/Provostprogram;ProvostheldandPresidentialfieldsproposed.",
+      "all15SourceColumnsInspected": true
+    }
+  ],
+  "fvccSectionCounts": {
+    "currentProspective": 6,
+    "graduate": 4,
+    "state": 4,
+    "totalNamed": 14,
+    "outsideResourceLinks": 8
+  },
+  "fvccOutsideResources": [
+    "CareerOneStop",
+    "FlatheadCountyDemocraticWomenPDF",
+    "MontanaCampusNetworkDennison",
+    "MontanaCommunityFoundation",
+    "PEO",
+    "ReachHigherMT",
+    "ShrinePDF",
+    "Soroptimists"
+  ],
+  "searchLimits": [
+    "FVCCSTEMofficialsearchreturnedparent/reportonly;HighSchoolHonorssearchparent/2009/2012catalogs,nocurrentroute.",
+    "UMAthleticsdomainsearch2queriesyieldedoldhandbook/unrelateditems;handbookpage200withnoshownfinancialaidrules.",
+    "GrizzlyPromiseofficialsearchfound2022launch;itscurrentlinkedrouteisgenericparent."
+  ],
+  "sourcePrivacy": "Onlypublicawardrules/routesretained. AutomaticreviewblockedDHCrecipientbiographies; narrowedexcerptbeforeMeetour2026Scholars saved. Noapplicant/formvalues/contactdetails retained.",
+  "relatedTriageIds": [
+    "related-74d73e9661ba2906",
+    "related-6a99450fa55c3053",
+    "related-d5964ff0bd717932",
+    "related-1540ecbb8ec83c0f",
+    "related-1a6deaed6f81b837",
+    "related-fc50a3c8c843cadf",
+    "related-23540f0b89dcae91",
+    "related-2ab0980c8f0f5907",
+    "related-bbe4156252d673e1",
+    "related-2d2c66589e3d10f3",
+    "related-ca8eac42de5a11ab",
+    "related-76b07c6244e2e4d3",
+    "related-2f46f56656fcf11b",
+    "related-4405ea30df1e1b79",
+    "related-d585548836330e78",
+    "related-5bf0d95a90e564c6",
+    "related-c1be4cba4429a311",
+    "related-8c39f3bf387159f0",
+    "related-ad0f13ff4a7041bc",
+    "related-6704cf8034cb226a",
+    "related-a22295fb892ee0ea",
+    "related-28f4a1c358c27ae5",
+    "related-6112d255463728dd"
+  ],
+  "scope": "Localuniversityintakegroup;noautomaticnewrules,sourcecopies/writesorpublication. HoratioMontanaalias awaitsprogramspecificsourcecheck."
+}

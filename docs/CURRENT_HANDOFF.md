@@ -8,42 +8,39 @@ Default branch: `main`
 ## Active resumption checkpoint — September 11 UTC
 
 - Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
-  Resumed clean requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a`;
-  secure fetch verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged.
-  Prior exact local checkpoint `5a27911ddccda265623c744e3cad3afbb2b0b724`;
-  resolve this checkpoint with `git rev-parse codex/scholarship-intake`. Original checkout preserved.
-- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `8b468d9ea6ca850e2556ea07569a1ea1631c263bcbde269220231702837d00e2`.
-  Source snapshot unchanged `intake-rev226-74df373b3e30738e`, SHA256
+  Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
+  verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
+  Prior exact checkpoint `4f3616e9c7f2e6059068ed604aa4af7f26e62e2e`; this local checkpoint
+  follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `0f9ae789acc64017a0bea0d2ebf92073afe2ce9d10396106c7886b9391222335`.
+  Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
   `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
-  Current counts `{"rows": 1666, "entities": 916, "decidedRows": 1318, "pendingEntities": 217, "proposedAdds": 183, "proposedUpdates": 22}`. All proposals unapplied.
-- Independent PASS receipts saved for supplemental011, housing/SEED/trades012,
-  MCF013, structural014, Avfuel/Pearl015. Prior receipts and source snapshot bytes preserved.
-  MCF013 holds Webber conflicting eligibility; qualifiers/portal timestamp fixed.
-  Avfuel tags fixed; parent/form redemption-date conflict remains explicit.
-- Related triage016 review of bb82231 FAIL C0/H3/M0/L0: wrong-cell URL comparisons,
-  missing reference017field differences, and generic holds for material related differences.
-  Current remediation: exact native application-cell links;9newtriage rows/33fields added;
-  current total238triage rows/758fields after17/18/19identityextensions. Bounded officialverification covers10Masterprograms in018.
-  Six additional Master update records proposed:54,65,114,149,164,167; K54 subsequently withdrawn as existingVocational alreadycoversTrade. Specifictags/coverage and I65claimprovenance completed; awaitingrecheck.
-  Smile web/download2026deadline conflict and BlueCollar/Wells tentative renewal/rules stay held.
-  AdoptionSTAR academic amount/deadline contaminated by unrelated adoptiongrant corrected to unknown.
-- Triage review continuation identified17more Master rows needing specific evaluation:
-  3,4,6,21,29,31,78,98,110,116,118,119,135,140,142,144,146; plus WTS L111–115.
-  These are now authored as019:14additionalupdateentities, Jenne/NDconflictsholds, HoratioKretained.
-  Sourcefields/tags/coverage and4newFordidentityrowtriagesawaitindependentreview.
-  Remaining generic historical/formatting/default differences reviewed as not requiring broader
-  currentMasterrefresh. Record per-field rationale and follow up18withindependentrecheck.
-- Next executable action: recheck016–019 andremediateanyfindings, then
-  continue217remainingentities (university groups and remainingofficialproviders/aggregators).
-  FVCC/MSU/UM parent sources saved `.firecrawl/resume-*-scholarships.json`, not yet authored.
-  FVCC public browser confirms16namedprogramsections but no scholarshipapplicationlinks for
-  donor/Eagle/STEM/Honors; keep route limitations. Browser publictab1 only, no form input.
-  Reuse saved sources; do not rerun completed `/private/tmp/intake_resume_*.py` author scripts.
-- Partialledger validation passes; fullsuite/build, exact dryrun/report/gapcoverage, freshsource
-  fingerprints and complete final independent review remain unfinished. No final acceptance claim.
-- Backup/recoverycopies absent and unauthorized; affectedcellbackup absent; sourcewrites0.
-  No publishing/Preview/merge/Production/hostedverification, applicantdata, providercontact,
-  new questions/rules, runtime changes or services. New exact copy/write/release authority required.
+  Current counts `{"rows": 1666, "entities": 917, "decidedRows": 1364, "pendingEntities": 185, "proposedAdds": 183, "proposedUpdates": 31}`. All proposals unapplied.
+- Independent PASS receipts saved through015 and related016–019. Related review covers
+  238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
+  All review findings corrected: exact richlinks, missing aliasfields, material official
+  checks, K54withdrawal, I65claimbinding, LeRoy exam prerequisite, AGC fouryear distinction.
+- Cross-batch duplicate review at4f3616e PASS:183proposed additions versus197Masterrows
+  and each other, no duplicate/collision. Receipt pending save. Separate coverage review
+  found3medium/1low: alternative study-path mappings, service/ordinary-need decisions,
+  HaroldPaige STEM volunteering basis, JamesSchultz educationgap membership. Implementer
+  must remediate and obtain recheck; no new runtime questions/rules.
+- University020 authored, awaiting independent review:47entities including existingMaster
+  destinations and one discovered held MSUProvost child;46newlydecidedsource rows,
+ 9additionalMasterupdates;23newrelatedtriage records/159fields. FVCC correctly14named
+  programsections (6student+4graduate+4state),8outside resource links. Prior16claim corrected.
+  UM/DHC/MSU aliases preserve separate programs. Exact current sources and conflicts in
+  `docs/evidence/scholarship-intake/university-evidence.json`.
+- Next executable action: independent review020 and coverage remediation; then185pending
+  entities, starting remaining officialproviders/aggregators and HoratioMontanaalias.
+  University scripts already ran; do not rerun `/private/tmp/intake_resume_universities.py`
+  or prior author scripts. Safe selected public source files `.firecrawl/resume-university-*.json`.
+- Partial ledger validation and diff whitespace pass after correcting disposition vocabulary.
+  Full suite/build, strengthened validation, exact dryrun/report/gapcoverage, fresh workbook
+  fingerprints and final independent review unfinished. Do not claim final acceptance.
+- Backup/recoverycopies and affected-cellbackup absent, unauthorized; sourcewrites0.
+  No push/PR/Preview/merge/Production/hostedverification, applicantdata, providercontact,
+  new services or automation. Exact copy/write/release authority still required.
 
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
