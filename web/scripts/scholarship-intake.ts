@@ -73,7 +73,7 @@ export function validateIntakeLedger(l: Ledger, root: string, complete = false) 
     for(const source of r.evidenceIds) assert(sources.has(source),'Unknown row evidence');
     if(complete){assert(r.disposition,'Pending row');assert.equal(r.review.status,'reviewed');assert(r.review.reviewer);}
   }
-  for(const s of l.officialSources){assert(/^https:\/\//.test(s.url));assert(!Number.isNaN(Date.parse(s.observedAt)));assert(/^[a-f0-9]{64}$/.test(s.contentSha256));assert(fs.existsSync(path.join(root,s.evidencePath)));}
+  for(const s of l.officialSources){assert(/^https?:\/\//.test(s.url));assert(!Number.isNaN(Date.parse(s.observedAt)));assert(/^[a-f0-9]{64}$/.test(s.contentSha256));assert(fs.existsSync(path.join(root,s.evidencePath)));}
   for(const e of l.entities){
     for(const s of e.officialEvidenceIds)assert(sources.has(s));
     if(e.disposition==='propose_add'||e.disposition==='propose_update'){
