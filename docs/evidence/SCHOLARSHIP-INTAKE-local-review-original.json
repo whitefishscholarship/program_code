@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "recordType": "independent_complete_local_candidate_review_not_attestation",
+  "outcome": "FINDINGS",
+  "reviewer": {
+    "task": "/root/intake_final_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "partitions": [
+      "/root/intake_final_review/rows",
+      "/root/intake_final_review/fields"
+    ]
+  },
+  "candidateCommit": "06f9c821995557438919331dde191348cd32bbf7",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "manifestSha256": "6328e9cdc51d44896deb51e2b7d72a58b64dd5aa9e582eb955d89c1b40ad255b",
+  "binaryDiffSha256": "b81c951eb506389909a0b03327bfdf176409b8fc679f546e879aefb2a5871663",
+  "ledgerSha256": "a2fcc4eb7002be2d9cbad0f15a83e5f77f36f24a514e9dca2e0191efa5cf26d7",
+  "batchDigest": "bb19b1ea5c29c3a56264b1917964f8133b97512e6f7c43e2a19d82dadc73285e",
+  "proposalFileSha256": "903e3287e159b28daf0d428d2c10ba26d54f4a55cb9edd0f6ba3d825c8765acf",
+  "reportSha256": "0d01387cafb2e78c13169d425758614e683578ae6c83f7d89abef72a7ca04596",
+  "findingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 3
+  },
+  "coverage": {
+    "changedPaths": 109,
+    "sourceTabs": 14,
+    "sourceRows": 1666,
+    "entities": 1024,
+    "additions": 219,
+    "updates": 38,
+    "heldEntities": 310,
+    "outOfScopeEntities": 173,
+    "existingLinks": 159,
+    "duplicateEntities": 77,
+    "nonRecordEntities": 48,
+    "proposedFields": 3368,
+    "tags": 277,
+    "interviewCoverageEntries": 1040,
+    "interviewGapRecommendations": 5,
+    "triageRecords": 293,
+    "triageFields": 1161,
+    "discoveryRecords": 46,
+    "enumeratedDiscoveryOccurrences": 581,
+    "officialSourceRecords": 369,
+    "operations": 257,
+    "executableCells": 3367,
+    "deferredCells": 1,
+    "sourceMarkers": 493,
+    "priorDecisionReversalRecords": 128,
+    "storedNativeLinks": 1694,
+    "explicitNativeIdentityRecords": 677,
+    "additionMasterPairs": 43143,
+    "additionPairs": 23871,
+    "historicalAttestationFilesPreserved": 56
+  },
+  "findings": [
+    {
+      "id": "FINAL-LOCAL-L1",
+      "severity": "low",
+      "owner": "/root",
+      "target": "remediated final local candidate",
+      "location": "web/scripts/scholarship-intake.ts:63-76 at06f9c82",
+      "problem": "Native hashes authenticated but separate row.values projection not compared. All1666current projections match.",
+      "reproduction": "In memory change sheet445586487 row2.values[8] to SYNTHETIC REVIEW PROJECTION TAMPER; completevalidator stillpasses.",
+      "requiredDisposition": "Bind nativeprojection and negative regression inclabsent-format numeric/boolean cases."
+    },
+    {
+      "id": "FINAL-LOCAL-L2",
+      "severity": "low",
+      "owner": "/root",
+      "target": "remediated final local candidate",
+      "location": "final-validation/build.log:20-22,43;typecheck.log:4",
+      "problem": "Fullbaseline-to-candidate whitespacecheck exits2 forterminal whitespace; savednoargumentcheck missednewlytrackedfiles.",
+      "requiredDisposition": "Normalizepresentationlogs withprovenance/rawhashretention; verifyfullchange set."
+    },
+    {
+      "id": "FINAL-LOCAL-L3",
+      "alias": "FIELDS-L1",
+      "severity": "low",
+      "owner": "/root",
+      "target": "remediated final local candidate",
+      "location": "AnneFord01217260b07da0c9 andLiveYourDreamd7458d47b1808d27 interviewCoverage[0]",
+      "problem": "Academic/program mappings pointtodyslexia/female ratherthaneducationconditions.",
+      "requiredDisposition": "Cardonly/null academicassessment; retainseparatevaliddisability/gendertags."
+    }
+  ],
+  "verified": [
+    "All109manifestfiles,blobs,lengths,hashes,completebinarydiff,treeandcheckpointancestry match.",
+    "All257operations/3367cells reconcile exactnativepreimages,ledgerfields,afterstrings/linkspans,operation/batchdigests; I65excluded.",
+    "493markers/128priorrecords exact; all310heldentitiesactionable; historical312holdsindexisnotcurrentheldentitydenominator.",
+    "Allproposedfields/tags/coverage tracedthrough boundedreviewsandunderlyingevidence;93timestampalignments agreeprimarysource observations;unknownfieldsblank.",
+    "Noidentitycollision;allrows/discoveryoccurrences accounted; oneharmlessHealthcareRelatedtrailing-space triagenormalization.",
+    "Runtime source/public/fixtures/workflows/dependencylock and56historicalmanifest/reviewfilesunchanged.",
+    "Fivefutureonlyrecommendationssupportcounts15/5/19/3/1;firstincludes14adds+oneexistingawardalias.",
+    "Validationloghashes andcompletedeterministicdryrunverified."
+  ],
+  "sourceIntegrity": {
+    "records": 369,
+    "retainedMarkdownHashes": 297,
+    "emptyResponsesIncluded": 8,
+    "committedExcerptHashes": 71,
+    "excerptLimit": "Generally paraphrases; integrity checks, not universal fresh provider authentication.",
+    "epicOriginalPreMinimizationObservationHash": 1,
+    "epicRetainedSafeSha256": "a9a066ac9188eab5430c068f6f8590ccff44688ee24d7c04a4cc3a030851429e"
+  },
+  "supplementalReachRecheck": {
+    "url": "https://mtcf.org/scholarship/reach-for-the-future-scholarship-for-baccelaureate-degree-programs",
+    "recordedAt": "2026-09-11T07:52:29Z",
+    "timestampLimit": "Recording time, not exactserverfetchtime",
+    "retrievalReference": "turn12view0",
+    "searchReference": "turn11search0",
+    "facts": "Official detail explicitly identifies currentjunior/seniorstudents enrolledinfour-yearprograms; clearedquestionedlatercollegeexclusion.",
+    "privateAccessOrForms": false
+  },
+  "scopeHashes": {
+    "orderedRowIds": "4bec356582397e9bc8e19725823045c068b5d138ffee0fb7b7ea1708736e2983",
+    "orderedEntityIds": "51464829130f311741a8e9a89eb38fca99ca96f0b3b23bc28d64fc62d243cb64",
+    "orderedTriageIds": "efbfed00b8bc52b89e32abc75549289f9100610d709e5369e286e4672854bb2d",
+    "orderedDiscoveries": "e906c6f3a44f897b8aff3dd57a94c6d7aa3b7ad3bceaf05a32d5d4c581417220",
+    "sortedProposedEntityIds": "7ed8d2086dfaa95682f7a078c6c1abaa717056507ac402aee3c7a715e68d66e1",
+    "proposedFields": "050092960b0ff764dca2f7be1062f9ca98afd4a61d3970d781e3bc306288472a",
+    "tags": "56ea928f4ce80a977cc959550f968822bb3aed955320283ea64fd69a7d033435",
+    "interviewCoverage": "05a87803b50b81b54e5bd2aaf4224e5f10b0542812a7d74d6ff73db03e31c960",
+    "interviewGaps": "f5e7ca41d7bb0a49e5bc6a0469c8f4dd57e4bc35481486dbea730b8d41a80075",
+    "combinedProposedPartition": "892abe61e8faad1c5f553162b0ecd09f18f71a51f1e82b5587611e33be6685da",
+    "completeProposedEntityObjects": "bc577b7ee6e37f3a2e032fb5be633439c6d64d0fe4f9e0514602d9ac2a35abf2"
+  },
+  "hashSerialization": "UTF8compactsortedkeyJSONwithoutnewline,ledgerarrayorderunlessstated;proposedentities/gapssortedbyID;field/tag/coveragearraysentityId+zero-basedindex+object.",
+  "limits": [
+    "Exactly3canonicalmanifest/review/attestationgatesNOTPASSED andreservedforgovernedacceptance.",
+    "Afterthreefindingsrechecked,localreviewcompletefinishline supportable; notsheetapplied/accepteddelivery/futuresourcefreshness/hostedhealth.",
+    "No reviewerfilesedits,workbookreads/copies,sourcewritesorexternalmutations."
+  ]
+}
