@@ -8,7 +8,7 @@ Default branch: `main`
 ## Scholarship intake execution — snapshot complete, evaluation in progress
 
 - Branch `codex/scholarship-intake`, worktree `/private/tmp/program_code-scholarship-intake`.
-  Snapshot checkpoint: `9a8259d` (resolve full SHA from Git).
+  Previous completed checkpoint: `7761cdb` (AEA/tooling); NTHS checkpoint is the next local commit.
   Resolve latest exact checkpoint with `git rev-parse codex/scholarship-intake`.
 - Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning source
   `0ffa90b12502b2a031a6012e16014301def07205`; existing work preserved.
@@ -21,8 +21,8 @@ Default branch: `main`
   Staging373; Scraped438 including9 nameless; Master197; other rows fully captured.
   Scraped R:T data excluded; Start Here outreach contact redacted with original hash.
 - Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
-  `63ef7302a37363f0816212ef7c7a5970505b78ac19cb8cc64939ea797a95a508`. AEA batch:27 comparison groups/96 rows reconciled to21 awards:15 proposed additions,
-  5 existing destinations,1 policy hold. All independent row/field reviews remain pending.
+  `42fb52617bc010a061fc6b9c59daa7c11cbf70e384cc587bba45b347e11f45f5`. AEA batch:27 comparison groups/96 rows reconciled to21 awards:15 proposed additions,
+  5 existing destinations,1 policy hold. NTHS:15 proposed awards, including4 newly discovered children and a split of the NTHS/ABC name collision. Total758 entities,152 decided rows,716 pending entities,30 draft additions. AEA/NTHS independent batch review is underway; final candidate review remains pending.
   Local excluded `.firecrawl/` contains initial AEA/Epic/BYF/Dawson evidence for the next batch.
   Dawson now enumerates65 entries; these must all be reconciled, not capped at historical26.
 - Checks: clean offline install,typecheck,policy/history/whitespace PASS. Full execution
@@ -30,8 +30,8 @@ Default branch: `main`
   attestation artifacts; hosted simulation additionally rejects missing release authority.
 - Backup/recovery copies:not authorized/not created/not verified; no affected-cell backup.
   Sheet writes:0; publication:false. No runtime changes or applicant data.
-- Next executable action: continue NTHS/BYF, Epic, Dawson and remaining groups.
-  AEA batch complete; do not repeat its unchanged research. Read
+- Next executable action: complete the reference-to-Master identity pass, then Mensa, Looney/Folds, BYF, Epic, Dawson and remaining groups.
+  AEA/NTHS authored batches complete; remediate specific independent findings, without repeating unchanged research. Read
   intake plan/kickoff, PLAN-REV15, source-start/end and sole ledger before resuming.
   New exact backup/write/publication grants remain required; do not prematurely attest.
 
