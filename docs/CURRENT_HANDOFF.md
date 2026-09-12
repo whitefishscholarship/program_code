@@ -1,3 +1,105 @@
+# Session closeout — PASS; historical reconciliation complete
+
+Operative September 12, 2026. **This section is the authoritative continuation and open-item
+routing record.** Older pending/unapplied instructions below are history where superseded.
+The original intake, exact authorized application and selected two-tab historical comparison
+are complete. The next selected objective is preparation of a practical interview-coverage
+and broad-reach scholarship-discovery plan, using the historical reconciliation as precursor.
+This closeout prepares that work; it does not implement new questions or apply another batch.
+
+## Checkpoint and verification
+
+- Worktree `/private/tmp/program_code-scholarship-intake`; branch `codex/scholarship-intake`.
+  Closeout starts from `a888df3`; resolve the final local tip with Git and preserve ancestry.
+- Applied-batch checkpoint `cf835c66f4cdd76b12cc57580ac4306c908e7a4d`; exact digest
+  `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`.
+  Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json`.
+  219 additions and 38 updates applied once; exact target and untargeted readback passed.
+- Historical audit candidate `c63d252e53891ac106df3ccc8418755639deecd8` independently
+  rechecked PASS with C0/H0/M0/L0; review and six bound files remain unchanged.
+  Start with `docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md` and its
+  `-review.json`, `-scope.json`, `-validation.json`, `.csv` and `.json` companions.
+- Full typecheck, tests and build passed in this session. Closeout reuses those results
+  for unchanged implementation and rechecks artifact bindings, counts, holds, ancestry
+  and whitespace. See `docs/evidence/SCHOLARSHIP-INTAKE-SESSION-CLOSEOUT.json`.
+- Canonical PLAN-REV15 still has three reserved manifest/review/attestation failures.
+  Session PASS is completion of the authorized work, not canonical acceptance or release.
+- No current scholarship-rule verification, live hosted health, remote-main refresh or
+  new backup freshness check is claimed by this closeout. September 12 historical read
+  receipts are observations at that time, not a future freshness guarantee.
+
+## Next session: one bounded objective
+
+Prepare an evidence-backed coverage/discovery proposal that captures useful student
+advantages while keeping the interview manageable. On resumption, verify the checkpoint
+and required read order, then execute the following local/read-only sequence. The user's
+selection permits preparation and bounded public scholarship research for this proposal;
+all later effects remain gated below. Do not repeat the completed intake or historical scan.
+
+1. Resolve historical identities first. Prioritize Unique rows 126/134/135/148, Gordon
+   Evans versus NFPA, American Industries duplicate references, and the Promises2Kids/
+   UCSD relationship. Account for Fund the Fish and other unresolved non-foster entries
+   in the same crosswalk; preserve source IDs, previous dispositions and uncertainties.
+2. Verify current official program rules and reach for selected leads. Distinguish a
+   named award, parent catalog, shared application and aid pathway. Record exact source,
+   observation date/cycle, geography, education/age, membership and other prerequisites.
+   Read public information only; no provider contact, application interaction or applicant data.
+3. Map the full current interview inventory to supported award differentiators and unique
+   award identities. Separate no question, unclear wording, missing evidence, missing
+   answer-to-award connection and genuinely thin award supply. Carry all five existing
+   `interviewGaps` recommendations forward. Do not mistake broad interests for eligibility.
+4. Produce a prioritized discovery backlog for thin categories. Measure verified reach and
+   distinct usable awards, not raw links or historical occurrences. National/broad access
+   is the priority; label state/campus/member/age limits explicitly. A county-only equestrian
+   award cannot fill broad-audience equestrian coverage. Local historical omissions still
+   deserve their own disposition. Unknown reach never counts as broad coverage.
+5. Propose a short core interview with optional relevant follow-ups, a category-to-award
+   coverage matrix, explicit unknowns and a separate candidate-addition list. Preserve
+   sensitive nonresponse as unknown/non-excluding, all-award access and public-only exports.
+   Explain the value of each added option; leave specialized one-off requirements on award
+   cards unless repeated supported value warrants a follow-up. Obtain independent review
+   of the proposal before claiming completion. Runtime or workbook delivery is a later gate.
+
+## Open-item routing — supersedes earlier routing tables
+
+Kelsey Stuart owns scope, source/recovery and release decisions. The next execution agent
+owns research/planning and implementation only within satisfied triggers. The frozen intake
+ledger remains authoritative for its existing items; the historical crosswalk holds the new
+source discrepancies. This table routes work and does not duplicate or erase either ledger.
+
+| Item | Trigger / owner and next action | Authoritative source |
+| --- | --- | --- |
+| Historical identity gaps and candidates | Next selected proposal session; agent resolves identities and verifies official reach before counting or proposing additions | Historical report and all unresolved crosswalk rows, not only foster-care examples |
+| Interview breadth and five recommendations | Historical identity work informs local coverage proposal; agent reviews all current options, organizations, teaching, ordinary need, first-generation definitions and specialized membership/training | Intake ledger `interviewGaps`; `web/src/lib/interviewQuestions.ts`, `web/src/lib/interviewRelevance.ts`, and `web/src/components/InterviewWizard.tsx`; old interview-relevance plan is historical design context, not authority to replay its delivered release |
+| Broad-audience discovery | Coverage matrix identifies a thin category; agent prioritizes officially verified national/broad reach and records restricted or unknown reach separately | Historical report discovery priorities; new proposal must quantify distinct awards and scope |
+| 310 held intake entities | Only each recorded official-evidence or owner-selection trigger reopens that entity; preserve all individual reasons/actions | `SCHOLARSHIP-INTAKE-ledger.json`: `entities[].hold`, `holds`, report |
+| Related corrections, duplicates and catalogs | Relevant official evidence/access changes or a bounded item is selected; agent preserves parent/child/cycle identities and enumeration limits | Ledger `relatedFieldTriage`, `relatedSourceFindings`, `operationalHolds`, `discoveries`, entity `catalogCoverage`; includes AGC/NCCER consolidation recommendation |
+| I65 formatting | Independently reviewed formatting-preserving replacement plus exact new batch authority; do not overwrite native bold runs | Original proposed batch `deferredCells` |
+| Hagan I25 income definition | Current award-specific income definition/tax year supports exact replacement; separate reviewed write gate | Ledger `relatedSourceFindings[id=related-hagan-income]` |
+| New workbook additions or corrections | Exact reviewed new digest/targets and Kelsey's grant; fresh complete backup, access/preservation, disposable recovery, affected cells, concurrency/freshness and readback gates | Intake plan section 7 and completed application receipts as precedent only; old digest authority is consumed and must not be replayed |
+| Retained recovery objects | Kelsey remains recovery owner; retain private folder, all native/affected-cell backups and disposable recovery copies; deletion or original restore requires separate exact authority | Final-backup-verification, application-progress and disposable-recovery receipts; latest complete backup `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM` |
+| Quiet window | Any future write session must establish current concurrency coverage and fresh preimages; this session's no-other-editors assurance does not persist across the break | Application authority and final freshness receipts |
+| Canonical acceptance, publication and new runtime behavior | Select exact scope/candidate and satisfy canonical review/manifest/direct-child gates plus exact downstream authority or verified applicable suppression | Canonical plan/BUILD_STATE; three reserved PLAN-REV15 failures remain. No push, PR, Preview, merge, Production or website publication granted by this closeout |
+| Full Master currency and accepted eligibility facts | Separately selected bounded/full review with official evidence and human review; current saved presence is not current eligibility | Intake plan section 9; P9 immutable publication and existing fact contracts. Preserve zero-Google runtime and non-excluding unknowns |
+| Monitoring or scheduled refresh | Separate exact source/cadence/identity/notification/cost/rollback scope and authority | Existing P8 schedule remains disabled; no new automation or monitor created |
+| Platform warnings and governance bookkeeping | Separate maintenance selection, platform support change or actual failure; reverify before acting | Saved Node runtime/middleware/Turbopack and reviewer-protection limitations; old P9 pending-label note is historical and must be checked against current state, not used to reopen P9 |
+| Retired issuer credential | Exact issuer-side credential identified and direct revocation authority; never expose its value | P9 evidence: removed from Vercel, issuer revocation not verified |
+| Historical local branches/worktrees | Explicit repository-hygiene scope and proof no unique required work is lost | Earlier handoff branch/worktree notes; no automatic deletion or publication |
+
+Closed issues: the accidental Student View F1 change was explicitly authorized for correction,
+corrected and fully verified before intake application. The accidental empty Apps Script
+project was explicitly authorized for deletion and deleted. No cleanup remains pending.
+The historical review's Hilleman match and held-resource wording findings are resolved.
+All review-agent results are saved; the sole reviewer is completed, with no pending response.
+No background job, reminder, monitor or separate user task was created by this closeout.
+
+Use `docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md` for the short next-session prompt.
+Recommended next-session effort: High.
+
+---
+
+## Prior session records — retained as evidence, not competing instructions
+
 # Historical source reconciliation — precursor evaluated with gaps
 
 Operative September 12, 2026. Kelsey selected an interview breadth/variety review, with

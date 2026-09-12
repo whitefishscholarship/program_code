@@ -1,55 +1,32 @@
-# Scholarship intake — next-session kickoff
+# Scholarship coverage and discovery — resume kickoff
 
-September12 continuation: completed batch must not be replayed. The user has now
-selected read-only reconciliation of the two named legacy resource tabs as a precursor
-to interview/category breadth and broad-reach discovery planning. Read the operative
-handoff and HISTORICAL-SCHOLARSHIP-RECONCILIATION.md plus its scope receipt first
-after the required governing read order. This exact new two-tab grant supersedes the
-older legacy-read exclusion only for this comparison. The historical crosswalk is now
-complete and independently reviewed at `c63d252e53891ac106df3ccc8418755639deecd8`;
-read the separate review receipt. Resume its identity-resolution and broad-reach discovery
-priorities before interview redesign. No new write/release authority.
+Resume in `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`.
+Verify clean status and ancestry from applied checkpoint
+`cf835c66f4cdd76b12cc57580ac4306c908e7a4d`, reviewed historical candidate
+`c63d252e53891ac106df3ccc8418755639deecd8` and closeout baseline `a888df3`;
+resolve the latest local tip. Preserve the original checkout and all frozen evidence.
 
-Start in `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
-If missing, recover this existing branch through
-`/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code` into an isolated
-worktree. Preserve all work; never reset or overwrite the original checkout.
+Follow `AGENTS.md`'s required read order: canonical plan, `docs/BUILD_STATE.json`,
+operative `docs/CURRENT_HANDOFF.md`, most recently accepted P9 evidence, then this
+selected maintenance kickoff. There is no active/next canonical program stage.
+Read the handoff's top section and routing table, then
+`docs/evidence/SCHOLARSHIP-INTAKE-SESSION-CLOSEOUT.json` and
+`docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md` with its review and crosswalk.
+Consult the frozen intake ledger/report for existing holds and five interview recommendations.
 
-Verify branch status and ancestry from completed checkpoint
-`706d60431c150257fd780810757dfd4f61e6fe3b` and reviewed candidate
-`8211003dab98de3035b7a94608b6bdb7ef16fdde`. Resolve the latest local handoff commit;
-reverify the Git baseline and exact review hashes before any newly selected action.
+Execute the handoff's one bounded next objective: resolve historical identities and verify
+broad-reach public scholarship candidates, then prepare the interview coverage matrix,
+prioritized category-discovery backlog and manageable optional-question proposal.
+Track every unresolved historical entry; do not focus exclusively on foster care.
+Record exact evidence and preserve geographic, age, membership and parent/child distinctions.
+Use independent review before declaring the proposal complete.
 
-Follow AGENTS.md's required read order. Then read:
-
-- `docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md`
-- `docs/evidence/SCHOLARSHIP-INTAKE-continuation.md`
-- `docs/evidence/SCHOLARSHIP-INTAKE-local-review.json` and its referenced manifest
-- `docs/evidence/SCHOLARSHIP-INTAKE-report.md`
-- `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`
-- `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json` (historical)
-- `docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md`
-- `docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json` and its referenced proofs
-- `docs/evidence/SCHOLARSHIP-INTAKE-application-preflight-review.json`
-
-Read `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json` before browser
-actions. Student View!F1 correction is approved and verified; the operative
-handoff has final backup checks and application state. Do not repeat
-the shortcut or blindly undo. The exact scholarship batch is applied and fully reconciled; read application-receipt.json. Do not replay it.
-
-The original local objective is complete and independently reviewed. Do not repeat its
-batches. CURRENT_HANDOFF.md's operative status and open-item routing table identify the
-next action, owners, exact triggers and verification limits. The frozen ledger's older
-review-pending label is superseded by the separate final receipt, not a reason to restart.
-
-This kickoff grants no new authority. The separate application-authority receipt now
-records Kelsey's exact unchanged-batch/copy grant, now fully applied and reconciled.
-Do not ask for it again or replay the batch. The operative handoff and application receipt
-record completed safeguards, corrections, readback and all retained recovery objects.
-Publication requires its own exact authority or verified applicable suppression. A changed
-source or batch requires reconciliation and appropriate review; preserve every prior
-receipt rather than rebinding it. No applicant data, legacy workbook, provider contact,
-form submission, new services, automation or unrelated maintenance. Preserve P9 and all
-completed releases, GPA/school filtering, all-award access, privacy and exact visible CSV.
+The intake batch is already applied and the two-tab historical comparison is complete;
+do not replay either. Earlier no-legacy-read text is superseded only for the two selected
+resource tabs. No other legacy tab contents, applicant data, provider contact or application
+interaction. No new workbook write/copy, runtime edit, publication, deployment, monitoring,
+credential action or cleanup is granted here. Future effects require their exact recorded
+trigger and authority; the previous editing quiet window has ended. Preserve all recovery
+objects and P9's zero-spreadsheet runtime.
 
 Recommended effort: High.
