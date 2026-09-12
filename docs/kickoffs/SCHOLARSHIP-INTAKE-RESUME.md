@@ -8,6 +8,14 @@ evidence and this kickoff, then INTERVIEW_COVERAGE_EXECUTION_PLAN.md's R1–R7 s
 Validate prior reviews against recorded Git candidates and the new roadmap review; do not
 rebind historical reviews to current HEAD or repeat completed implementation/research.
 
+If `/private/tmp/program_code-scholarship-intake` is unavailable, recover from retained
+branch `codex/scholarship-intake` in the shared repository
+`/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code`. Inspect that
+branch's saved handoff/tip and registered worktrees first; recover the exact tip into a
+new isolated authorized worktree. Preserve branch refs, ancestry and existing worktree
+metadata/folders; do not reset to main, blindly prune/delete, or replay completed work.
+If the shared Git history is also unavailable, stop for a verified recovery source.
+
 Next phase when selected: **R1 only** — prepare a concrete release package for the already
 reviewed intake/UI work and establish the legal resolution/order of the six REV15/REV16
 manifest/review/attestation failures. Verify current remote baseline and exact topology;

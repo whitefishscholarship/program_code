@@ -35,6 +35,16 @@ retain their evidence and actions. Route them through the plan's existing-backlo
 use the detailed retained routing below for recovery, I65/Hagan, monitoring, credentials
 and cleanup. No duplicate ledger and no blanket reopening of holds.
 
+**Local recovery if the temporary worktree is unavailable:** the retained branch
+`codex/scholarship-intake` and committed history live in the shared repository at
+`/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code` (Git directory
+`.git`). Inspect its branch tip and registered worktrees, read the saved handoff from that
+branch, then recover its exact tip into a new isolated worktree in an authorized location.
+Preserve existing branch refs, ancestry, folders and worktree metadata; do not reset to
+main, blindly prune/delete an existing worktree, or restart completed work. If that local
+Git history is unavailable, stop and locate a verified recovery copy; no remote backup
+is claimed by these local commits.
+
 Kelsey owns phase selection and external-effect decisions; the execution agent owns
 selected work and handoff; a fresh-context reviewer owns independent review. Follow
 [kickoff](kickoffs/SCHOLARSHIP-INTAKE-RESUME.md) each session. No runtime, workbook,
