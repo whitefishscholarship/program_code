@@ -1,3 +1,18 @@
+# Fresh-context kickoff after session closeout
+
+Resume `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`;
+verify clean current HEAD and ancestry from roadmap checkpoint `d365b7e`. Follow AGENTS
+read order, the operative CURRENT_HANDOFF top section, session-closeout.json and its
+review under `docs/evidence/interview-coverage/`, then the existing execution plan.
+When R1 is selected, execute **R1 only**: prepare the existing release package and exact
+legal path for the six acceptance gates. Preserve completed work and prior review bindings.
+Stop before release or later phases without their exact authority. No new research,
+workbook read/copy/write, runtime edits, external delivery or monitoring is implied.
+The preview is stopped; all reviewers are finished. Use the retained recovery instructions
+if the temporary worktree is missing. Recommended effort: High.
+
+---
+
 # Resume the ordered coverage build — R1 package preparation next
 
 Worktree: `/private/tmp/program_code-scholarship-intake`; branch: `codex/scholarship-intake`.

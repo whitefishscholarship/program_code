@@ -1,3 +1,55 @@
+# Session closeout — PASS; R1 next
+
+Plan revision: 16. The authorized local coverage proposal, first interview implementation
+and durable R1–R7 roadmap are complete and independently reviewed. Closeout starts from
+`d365b7eb781f63b2a8919c1c0548efee0d4dc664`; resolve the final local tip and preserve ancestry.
+The closeout receipt is `docs/evidence/interview-coverage/session-closeout.json`; its
+independent review is `docs/evidence/interview-coverage/session-closeout-review.json`.
+This PASS is local session completion, not canonical acceptance or delivery.
+
+**One next objective:** R1 in
+[INTERVIEW_COVERAGE_EXECUTION_PLAN.md](INTERVIEW_COVERAGE_EXECUTION_PLAN.md): prepare the
+existing release package and valid resolution/order of all six REV15/REV16 acceptance
+gates. R1 establishes concrete packaging and review; R2 requires exact new delivery
+authority and must actually close those gates. Do not silently advance past a blocker.
+Follow [the resume kickoff](kickoffs/SCHOLARSHIP-INTAKE-RESUME.md). Effort: High.
+
+**Verified:** all four prior review records and their 52 immutable candidate-path hashes
+match; no runtime changes since reviewed c0fffacd. Latest full tests/typecheck/build and
+mobile/desktop browser checks passed; closeout reuses unchanged application results.
+All review findings were resolved. All 83 historical routes retain actions and all nine
+backlog IDs are assigned phases. Six canonical acceptance errors remain unresolved.
+
+**Open work and triggers:** R3/R4 reconcile the already-applied catalog and remaining
+supported questions; R5 handles the bounded 26 named research records; R6 is a conditional
+new batch/publication with exact authority and fresh full backup/recovery/readback gates.
+Preserve all 310 held entities/312 hold records, four potential additions and 63 historical
+routes not newly researched. Detailed I65/Hagan, catalog, recovery, official-currency,
+monitoring, platform/credential and hygiene routing remains in the retained handoff below
+and the plan's existing-backlog table. No hold is erased or reopened by this closeout.
+One nonblocking test improvement is assigned to the next R3 UI changes: extend the existing
+automated keyboard regression beyond focus; the full keyboard journey already passed
+independent local review. Do not add another test system solely for this follow-up.
+
+**Session resources:** every reviewer is finished and its result saved; no pending agent
+response, separate user task or automation was created. The owned local preview on3216
+is stopped and no listener remains. Restart it only if selected work needs a local preview;
+commands are in the closeout receipt. Scratch logs/manifests are not required continuation
+inputs; required review bindings/results are committed. Retained failed generated cache
+is optional future hygiene, not a blocker or authority to delete worktrees/recovery objects.
+
+**Not reverified at closeout:** live remote main (recheck inR1), hosted health/deployment,
+current workbook/backup freshness or recovery, and catalog-wide current provider rules.
+No off-machine backup is claimed. If the temporary worktree is missing, follow the retained
+permanent-repository/branch recovery instructions below; never restart from main or prune
+blindly. No source/write/copy/release/monitoring authority has been added. Kelsey owns phase
+selection and external effects; the next execution agent owns selected work and handoff.
+
+This top section is operative; earlier sections below remain historical evidence and
+detailed routing, not competing instructions.
+
+---
+
 # Current continuation — ordered roadmap, R1 next
 
 Plan revision: 16. Local implementation is independently reviewed complete at candidate
