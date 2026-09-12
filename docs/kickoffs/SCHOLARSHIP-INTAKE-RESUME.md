@@ -1,5 +1,12 @@
 # Scholarship intake — next-session kickoff
 
+September12 continuation: completed batch must not be replayed. The user has now
+selected read-only reconciliation of the two named legacy resource tabs as a precursor
+to interview/category breadth and broad-reach discovery planning. Read the operative
+handoff and HISTORICAL-SCHOLARSHIP-RECONCILIATION.md plus its scope receipt first
+after the required governing read order. This exact new two-tab grant supersedes the
+older legacy-read exclusion only for this comparison. No new write/release authority.
+
 Start in `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
 If missing, recover this existing branch through
 `/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code` into an isolated

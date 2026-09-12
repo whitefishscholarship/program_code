@@ -1,3 +1,27 @@
+# Historical source reconciliation — precursor evaluated with gaps
+
+Operative September 12, 2026. Kelsey selected an interview breadth/variety review, with
+broad-audience discovery plans for thin categories, and made reconciliation of the two
+named historical resource tabs the precursor. Read-only access to just those two legacy
+tabs is now explicitly authorized by the latest instruction. Earlier no-legacy-access
+text does not block this exact review; it continues to apply outside this new scope.
+
+Read `docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md`, its CSV/JSON crosswalk
+and scope receipt. All1780 rows in the selected scholarship-column bounds accounted for;
+228 scholarship/program/resource occurrences. Senior tab:93 of94 named occurrences
+represented; Fund the Fish is unrepresented. Foster-care rows125–150:one represented
+Adoption STAR entry,19 unrepresented candidate occurrences,four name/link conflicts,
+one NFPA child identity review and one potential duplicate. Current Master already
+contains three foster-care-related program records; the interview has Foster Care Experience.
+Do not claim category absence or turn these counts into ready-to-add unique awards.
+
+No workbook changes, external official-source fact verification, linked-catalog expansion,
+runtime edits or release occurred. The existing intake/application stays complete and must
+not be replayed. Next: independent bounded audit of this new crosswalk, then resolve its
+identity gaps and selected broad-reach discovery plan before the interview redesign.
+Keep historical omission accountability distinct from broad-audience inclusion. Exact
+future write/release authority and fresh recovery safeguards remain required.
+
 # Scholarship intake batch applied and reconciled
 
 Operative September 11, 2026, 10:52 UTC. **PASS for the exact authorized application.**
