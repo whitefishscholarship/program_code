@@ -946,7 +946,7 @@
   },
   "interviewCoverage": {
     "planId": "INTERVIEW-COVERAGE-1",
-    "status": "policy-review-pending",
+    "status": "local-implementation-prepared-final-review-record-controls-completion",
     "baselineCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
     "planPath": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
     "authorityEvidencePath": "docs/evidence/PLAN-REV16.md",
@@ -956,6 +956,12 @@
     "spreadsheetReadAuthorized": false,
     "spreadsheetWriteAuthorized": false,
     "backupCopyAuthorized": false,
-    "runtimeImplementationScope": "local preparation only; policy review before code"
+    "runtimeImplementationScope": "local preparation only; policy review before code",
+    "policyReviewPath": "docs/evidence/PLAN-REV16-policy-review.json",
+    "mappingPath": "docs/evidence/PLAN-REV16-mapping.json",
+    "finalReviewPath": "docs/evidence/interview-coverage/review.json",
+    "validationPath": "docs/evidence/interview-coverage/validation.json",
+    "publicationSupplementPath": "web/fixtures/coverage/interview-coverage-v1.json",
+    "publicationSupplementSha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1"
   }
 }

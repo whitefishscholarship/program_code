@@ -1,3 +1,15 @@
+# Interview coverage implementation — current continuation
+
+Resume the existing codex/scholarship-intake worktree and verify ancestry from the reviewed
+proposal checkpoint 40ff61e and policy e01c063. Resolve current HEAD and preserve changes.
+Follow AGENTS required read order and the operative CURRENT_HANDOFF top section.
+The first interview implementation is local-only; validate its final review against the
+recorded candidate hashes before treating it complete. Its exact scope, deferred catalog
+work and release gates are in INTERVIEW_COVERAGE_EXECUTION_PLAN.md. Do not rerun completed
+intake/research or infer workbook/release authority. All earlier routing remains below.
+
+---
+
 # Coverage proposal — continuation
 
 Resume `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`.

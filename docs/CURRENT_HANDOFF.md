@@ -1,11 +1,32 @@
-# Interview coverage execution — local preparation
+# Interview coverage implementation — local candidate
 
-Plan revision: 16. Kelsey authorized execution on September 12, 2026. Read
-[INTERVIEW_COVERAGE_EXECUTION_PLAN.md](INTERVIEW_COVERAGE_EXECUTION_PLAN.md) and
-PLAN-REV16 evidence before acting. Policy/mapping review precedes product changes.
-Scope: two-input core, optional existing controls, discovery-only need preference,
-Teaching and supported NTHS/FFA connections in the unchanged 192-award catalog.
-No new workbook access/copy/write or release authority. Preserve all prior routing below.
+Plan revision: 16. Kelsey's September 12 execution instruction is recorded in PLAN-REV16.
+The scoped policy/mapping at e01c063 passed fresh-context review before product edits.
+Read [INTERVIEW_COVERAGE_EXECUTION_PLAN.md](INTERVIEW_COVERAGE_EXECUTION_PLAN.md),
+`docs/evidence/PLAN-REV16-policy-review.json`, `PLAN-REV16-mapping.json`, and
+`docs/evidence/interview-coverage/validation.json`, `browser.json`, and `review.json`.
+A matching PASS final review completes local implementation only; missing review means
+prepared. No canonical acceptance, attestation or external release is claimed.
+
+Implemented: GPA/school-type direct results, all existing controls in optional sections,
+financial-need discovery separate from typed eligibility, Teaching and supported NTHS/FFA
+choices. Four new positive connections use a separate pinned supplement; existing
+192 awards, 206 connections and all historical publications stay unchanged.
+Tests/typecheck/build and mobile/desktop browser checks passed. Canonical validation
+retains six reserved REV15/REV16 manifest/review/attestation failures.
+
+Next: inspect the local candidate or select the next bounded catalog-publication/research
+step. Seven other organization choices and all newer intake entities remain deferred until
+exact published award IDs exist; prior first-generation/care-definition and rare-training
+recommendations remain routed in the proposal. All 83 historical follow-ups, four candidate
+additions, provider conflicts and nine discovery backlog entries remain open as recorded.
+
+No workbook read/copy/write, push/PR/Preview/merge/Production/hosted verification, monitor,
+provider contact or application interaction occurred. New source batches require exact
+authority and fresh complete backup/recovery/concurrency/readback gates. Release requires
+new exact downstream-effect authority and canonical package/predecessor gate resolution.
+Do not reuse spent batch or earlier release authority. Preserve the original checkout,
+applied 257-operation intake, historical crosswalks, recovery objects and all routing below.
 
 ---
 

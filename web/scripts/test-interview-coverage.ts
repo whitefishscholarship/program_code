@@ -1,0 +1,58 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { InterviewAnswersSchema, createSyntheticAcceptedFact, matchStudentAwards, type InterviewAnswers } from '../src/lib/interviewMatcher';
+import { shortlistAwards } from '../src/lib/spreadsheetShortlist';
+import { selectedRelevanceAnswers, RELEVANCE_PUBLICATION } from '../src/lib/interviewRelevance';
+import { COVERAGE_PUBLICATION, COVERAGE_SHA256 } from '../src/lib/coverageRelevance';
+import { StudentCatalogSchema } from '../src/lib/studentCatalog';
+import { serializeAwardCsv } from '../src/lib/export';
+import { permitsLocalCoveragePreparation } from './interview-coverage-governance';
+import catalogJson from '../fixtures/p7/student-catalog.json';
+const catalog = StudentCatalogSchema.parse(catalogJson);
+const base = InterviewAnswersSchema.parse({ gpa: 3.5, targetSchoolTypes: ['four_year'] });
+assert.equal(base.residenceState, null); assert.equal(base.educationalStatus, null);
+assert.equal(base.financialNeed, false); assert.deepEqual(base.selectedCriteria, []);
+for (const invalid of [{ gpa: '' }, { gpa: 4.1 }, { targetSchoolTypes: [] }, { residenceState: '' }, { educationalStatus: '' }, { studentOrganizations: ['deca'] }, { studentOrganizations: ['ffa', 'ffa'] }, { financialNeedInterest: true }]) assert(!InterviewAnswersSchema.safeParse({ ...base, ...invalid }).success);
+const run = (p: Partial<InterviewAnswers>) => shortlistAwards(catalog.awards, { ...base, ...p });
+const before = run({});
+const decisions = (r: ReturnType<typeof run>) => Object.fromEntries(r.results.map(x => [x.award.publicId, x.decision]).sort());
+assert.deepEqual(run({ residenceState: 'MT', educationalStatus: 'high_school_senior' }), before);
+assert.equal(before.results.length, 192);
+const selected = (id: string): Partial<InterviewAnswers> => id === 'education_teaching' ? { discoveryInterests: ['education_teaching'] } : { organizationResponse: 'selected', studentOrganizations: [id === 'org_nths' ? 'nths' : 'ffa'] };
+for (const c of COVERAGE_PUBLICATION.connections) {
+  const result = run(selected(c.answerId));
+  assert.deepEqual(result.counts, before.counts); assert.deepEqual(decisions(result), decisions(before));
+  const expected = COVERAGE_PUBLICATION.connections.filter(x => x.answerId === c.answerId).map(x => x.awardId).sort();
+  assert.deepEqual(result.results.filter(x => x.relevant).map(x => x.award.publicId).sort(), expected);
+  assert(result.results.find(x => x.award.publicId === c.awardId)!.reasons.some(r => r.message === c.message));
+}
+for (const response of ['none', 'not_sure', 'prefer_not_to_answer'] as const) assert.deepEqual(run({ organizationResponse: response, studentOrganizations: ['nths', 'ffa'] }), before, 'nonpositive organization response suppresses stale selections');
+for (const response of ['no', 'not_sure', 'prefer_not_to_answer', null] as const) assert.deepEqual(run({ financialNeedInterest: response }), before);
+const need = run({ financialNeedInterest: 'yes' });
+assert.deepEqual(need.counts, before.counts); assert.deepEqual(decisions(need), decisions(before));
+assert.deepEqual(need.results.filter(x => x.relevant).map(x => x.award.publicId).sort(), [...new Set(RELEVANCE_PUBLICATION.connections.filter(c => c.answerId === 'financial_need').map(c => c.awardId))].sort());
+assert.deepEqual(run({ financialNeedInterest: 'yes', sensitiveCriteriaSkipped: true }), before);
+assert(!selectedRelevanceAnswers({ ...base, financialNeed: true, financialNeedInterest: 'no' }).has('financial_need'));
+const compound = run({ discoveryInterests: ['education_teaching'], organizationResponse: 'selected', studentOrganizations: ['nths', 'ffa'], selectedCriteria: ['public_service', 'trades'] });
+assert.deepEqual(decisions(compound), decisions(before));
+const expected = [...compound.results].sort((a, b) => Number(a.decision === 'recorded_mismatch') - Number(b.decision === 'recorded_mismatch') || Number(b.relevant) - Number(a.relevant) || Number(a.decision === 'needs_checking') - Number(b.decision === 'needs_checking') || a.award.name.localeCompare(b.award.name) || a.award.publicId.localeCompare(b.award.publicId));
+assert.deepEqual(compound.results.map(x => x.award.publicId), expected.map(x => x.award.publicId), 'multiple connections never accumulate a score');
+for (const [criterion, operator, value] of [['financial.need', 'eq', true], ['geography.residence_state', 'contains_any', ['MT']], ['education.current_status', 'eq', 'high_school_senior']] as const) {
+  const award = catalog.awards[0];
+  const fact = createSyntheticAcceptedFact(award, criterion, 'required', operator, typeof value === 'object' ? [...value] : value);
+  const result = matchStudentAwards([award], { ...base, financialNeedInterest: 'yes', discoveryInterests: ['education_teaching'], studentOrganizations: ['ffa'], organizationResponse: 'selected' }, { byAwardId: { [award.publicId]: [fact] }, cycleIdsByAwardId: {} });
+  assert.equal(result.results[0].decision, 'possible_match');
+  assert(!result.results[0].reasons.some(x => x.kind === 'confirmed_match' || x.kind === 'known_conflict'), 'discovery preference and missing optional fields are not accepted eligibility evidence');
+}
+const csv = serializeAwardCsv(compound.results.map(x => x.award));
+for (const field of ['financialNeedInterest', 'studentOrganizations', 'discoveryInterests', 'coverage-44-', 'Your FFA selection']) assert(!csv.includes(field));
+assert.equal(crypto.createHash('sha256').update(fs.readFileSync('fixtures/coverage/interview-coverage-v1.json')).digest('hex'), COVERAGE_SHA256);
+execFileSync(process.execPath, ['--import', 'tsx', 'scripts/build-interview-coverage.ts'], { stdio: 'pipe' });
+const blocker = ['PLAN-REV16-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression'];
+assert(permitsLocalCoveragePreparation('PLAN-REV16', blocker, false));
+assert(!permitsLocalCoveragePreparation('PLAN-REV16', blocker, true));
+assert(!permitsLocalCoveragePreparation('PLAN-REV15', blocker, false));
+assert(!permitsLocalCoveragePreparation('PLAN-REV16', [], false));
+console.log('COVERAGE PASS: core-only results, four connections, no/unknown/skip, discovery/fact separation, OR, public CSV, source pins and authority boundary');
