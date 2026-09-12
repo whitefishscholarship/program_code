@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent read-only historical reconciliation audit; not canonical stage acceptance",
+  "recordedAt": "2026-09-12T16:03:11.368588+00:00",
+  "originalCandidate": "0d80ddc",
+  "reviewedCandidate": "c63d252e53891ac106df3ccc8418755639deecd8",
+  "reviewer": "/root/intake_application_review",
+  "reviewerAuthorship": "Reviewer did not author or edit this historical audit; no workbook actions or file edits",
+  "outcome": "PASS",
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "HIST-01",
+      "severity": "medium",
+      "finding": "unique:90 falsely left general Hilleman unresolved against narrower Morelli program",
+      "disposition": "Resolved: map general Hilleman to Master139, retain narrower Master332 separately and historical application/currentness limits; reconcile report and CSV counts",
+      "owner": "implementation agent",
+      "target": "c63d252e53891ac106df3ccc8418755639deecd8"
+    },
+    {
+      "id": "HIST-02",
+      "severity": "low",
+      "finding": "Four held resources/catalogs were labeled individual awards",
+      "disposition": "Resolved: preserve holds, explicitly label resource/catalog in four rationales and report; no child completeness inferred",
+      "owner": "implementation agent",
+      "target": "c63d252e53891ac106df3ccc8418755639deecd8"
+    }
+  ],
+  "recheck": "Reviewer confirmed all1780 coordinates,228 CSV records,updated counts and report consistency; inputs unchanged and whitespace passes. Promises2Kids/UCSD relationship explicitly unverified. C0/H0/M0/L0.",
+  "preservationCheck": "Four frozen intake ledger/local-review/proposed-writes/application-receipt files byte-identical to cf835c66f4cdd76b12cc57580ac4306c908e7a4d",
+  "candidateFiles": [
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md",
+      "sha256": "da548f0cbe516afc57de303323a91bb45e87ab74d2800a6c664c7ed39276da43"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.json",
+      "sha256": "9ddf52f6df705449b664c83221bb24957a211df5dd79c2fbea2445a0621f9e74"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.csv",
+      "sha256": "56427ecb6cbf6a6d21abf8ecffac9083eb8c533a05a72f9ac6891c5fdc658730"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION-input.json",
+      "sha256": "3606e0b7afca94b88cc6dfd5cacac041eeec318ea68073179fc7c34b03a0fb24"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION-scope.json",
+      "sha256": "bff6fe87f576b2ba407a3c6040338cfe53981033183144848c5ceb805a47783d"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION-validation.json",
+      "sha256": "92861954998aa8980813ed29effedb7fbd27e3d32c2c99ab2967be2ed0a26110"
+    }
+  ],
+  "limits": [
+    "Review uses saved public projections and execution receipts",
+    "Not official current-eligibility verification or linked-catalog expansion",
+    "Not a canonical manifest, attestation or PLAN-REV15 acceptance",
+    "No workbook write or publication authorized or performed"
+  ]
+}

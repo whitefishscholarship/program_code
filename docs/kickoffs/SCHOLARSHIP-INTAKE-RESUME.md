@@ -5,7 +5,10 @@ selected read-only reconciliation of the two named legacy resource tabs as a pre
 to interview/category breadth and broad-reach discovery planning. Read the operative
 handoff and HISTORICAL-SCHOLARSHIP-RECONCILIATION.md plus its scope receipt first
 after the required governing read order. This exact new two-tab grant supersedes the
-older legacy-read exclusion only for this comparison. No new write/release authority.
+older legacy-read exclusion only for this comparison. The historical crosswalk is now
+complete and independently reviewed at `c63d252e53891ac106df3ccc8418755639deecd8`;
+read the separate review receipt. Resume its identity-resolution and broad-reach discovery
+priorities before interview redesign. No new write/release authority.
 
 Start in `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
 If missing, recover this existing branch through

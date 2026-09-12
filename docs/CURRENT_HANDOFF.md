@@ -7,7 +7,10 @@ tabs is now explicitly authorized by the latest instruction. Earlier no-legacy-a
 text does not block this exact review; it continues to apply outside this new scope.
 
 Read `docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md`, its CSV/JSON crosswalk
-and scope receipt. All1780 rows in the selected scholarship-column bounds accounted for;
+and scope, validation and independent-review receipts. Independent recheck PASS on
+`c63d252e53891ac106df3ccc8418755639deecd8`: no unresolved critical/high/medium/low
+findings. General Hilleman is represented at Master139; held catalogs remain distinct
+from awards. All 1,780 rows in the selected scholarship-column bounds accounted for;
 228 scholarship/program/resource occurrences. Senior tab:93 of94 named occurrences
 represented; Fund the Fish is unrepresented. Foster-care rows125–150:one represented
 Adoption STAR entry,19 unrepresented candidate occurrences,four name/link conflicts,
@@ -17,8 +20,11 @@ Do not claim category absence or turn these counts into ready-to-add unique awar
 
 No workbook changes, external official-source fact verification, linked-catalog expansion,
 runtime edits or release occurred. The existing intake/application stays complete and must
-not be replayed. Next: independent bounded audit of this new crosswalk, then resolve its
-identity gaps and selected broad-reach discovery plan before the interview redesign.
+not be replayed. The bounded independent review is complete. Next: resolve the four
+foster-care name/link conflicts and verify selected broad-reach candidates against official
+public sources, retaining prior holds and geographic/audience distinctions, before proposing
+a new batch or interview changes. Discovery priorities are in the report; no new awards are
+ready for automatic addition. Interview breadth remains the selected follow-on objective.
 Keep historical omission accountability distinct from broad-audience inclusion. Exact
 future write/release authority and fresh recovery safeguards remain required.
 
