@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 15,
+  "planRevision": 16,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-11",
+  "lastUpdated": "2026-09-12",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -467,7 +467,8 @@
     ],
     "deliveryBlockers": [
       "P9-attestation-and-delivery-pending",
-      "PLAN-REV15-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
+      "PLAN-REV15-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression",
+      "PLAN-REV16-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
     ]
   },
   "governance": {
@@ -752,6 +753,22 @@
           "basis": "Kelsey authorized local preparation, prospective amendment, read-only intake evaluation, implementation, testing and independent review. New exact release authority is expressly reserved.",
           "scope": "Local SCHOLARSHIP-INTAKE-1 preparation only. No push, PR, Preview, merge, Production or hosted verification."
         }
+      },
+      {
+        "id": "PLAN-REV16",
+        "status": "attestation-gated",
+        "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+        "evidencePath": "docs/evidence/PLAN-REV16.md",
+        "manifestPath": "docs/evidence/PLAN-REV16-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV16.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "Direct execution instruction authorizes the bounded local implementation; exact external effects remain reserved.",
+          "scope": "Local INTERVIEW-COVERAGE-1 only; no push, PR, Preview, merge, Production or hosted verification."
+        }
       }
     ]
   },
@@ -926,5 +943,19 @@
     "quietWindow": "Kelsey confirmed no other editors during this uninterrupted session; freshness and single-writer checks remain required",
     "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json",
     "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json"
+  },
+  "interviewCoverage": {
+    "planId": "INTERVIEW-COVERAGE-1",
+    "status": "policy-review-pending",
+    "baselineCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
+    "planPath": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV16.md",
+    "localImplementationAuthorized": true,
+    "sourceMode": "unchanged_reviewed_revision225_catalog_with_separate_positive_supplement",
+    "publicationAuthorized": false,
+    "spreadsheetReadAuthorized": false,
+    "spreadsheetWriteAuthorized": false,
+    "backupCopyAuthorized": false,
+    "runtimeImplementationScope": "local preparation only; policy review before code"
   }
 }

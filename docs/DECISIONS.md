@@ -630,3 +630,15 @@ before audit; then practical entity batches and one complete independent final r
 The complete fixed plan is incorporated by canonical section19. Missing facts remain
 unknown. Backup creation and all write/publication effects remain false. Rollback is
 abandonment of local changes; historical artifacts and original checkout stay intact.
+
+
+## D-028 — PLAN-REV16 interview coverage execution (2026-09-12)
+
+User execution authority selects the first useful interview implementation. Existing
+website IDs support a bounded Teaching/NTHS/FFA supplement without importing unreviewed
+intake entities. Amend the proposal's future fresh-source prerequisite explicitly for
+this unchanged-catalog case; preserve it for catalog additions. Separate financial-need
+discovery from typed acute-need disclosure. No/skip stays unknown, all existing controls
+remain reachable, and source/release gates remain reserved. Policy/mapping review precedes
+code; exact local candidate review precedes completion. Do not erase Revision15 diagnostics
+or create premature canonical acceptance. See INTERVIEW_COVERAGE_EXECUTION_PLAN.md.

@@ -1,3 +1,14 @@
+# Interview coverage execution — local preparation
+
+Plan revision: 16. Kelsey authorized execution on September 12, 2026. Read
+[INTERVIEW_COVERAGE_EXECUTION_PLAN.md](INTERVIEW_COVERAGE_EXECUTION_PLAN.md) and
+PLAN-REV16 evidence before acting. Policy/mapping review precedes product changes.
+Scope: two-input core, optional existing controls, discovery-only need preference,
+Teaching and supported NTHS/FFA connections in the unchanged 192-award catalog.
+No new workbook access/copy/write or release authority. Preserve all prior routing below.
+
+---
+
 # Coverage proposal prepared — review record controls completion
 
 Operative September12,2026. Continue from the local scholarship-intake branch, descending

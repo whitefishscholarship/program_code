@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 15
+Plan revision: 16
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1698,3 +1698,29 @@ services, full-master freshness review, automation, website publication, configu
 changes or unrelated maintenance. Later selected publication needs exact push, PR,
 Preview, merge, Production and verification authority or verified applicable suppression.
 Rollback of this unapplied local work is abandonment of its branch; no external restore.
+
+
+## 20. Plan Revision 16 — Interview coverage implementation
+
+On September 12, 2026 Kelsey instructed "proceed with execution of plan" after the
+independently reviewed scholarship coverage proposal. Adopt the bounded first execution
+step in docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md: two-input core, reachable optional
+existing questions, discovery-only financial-need preference, Teaching and the supported
+NTHS/FFA choices, using four separately reviewed connections to the existing 192-award
+saved revision225 catalog. This is local implementation, tests and independent review;
+all copy/write and external release effects remain separately gated.
+
+The selected existing-catalog supplement uses pinned saved evidence; it does not require
+or claim a fresh Master snapshot. New catalog additions still require fresh allowed source
+reconciliation. Preserve all old publications, original intake and historical proposal
+artifacts byte-for-byte. Do not promote new interests to typed accepted matching facts.
+Unknown and skipped answers remain non-excluding; preserve binary OR relevance, GPA/school
+shortlisting, all-award access, volatile-only answers and public-only visible-result CSV.
+
+Commit and independently review the policy and mapping before product edits. Keep every
+normal verification and final candidate review gate. An exact Revision16 local-preparation
+exception permits false release authority only off hosted CI with its own explicit blocker;
+it grants no acceptance or delivery. The outstanding Revision15 attestation gates remain
+unsatisfied and unchanged. No canonical attestation is created in this preparation run.
+No P9 reopening, workbook access/copy/write, provider action, application interaction,
+new services/dependencies/configuration, monitoring or deployment is authorized here.
