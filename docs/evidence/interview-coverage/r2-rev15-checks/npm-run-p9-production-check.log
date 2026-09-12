@@ -1,0 +1,32 @@
+
+> web@0.1.0 p9:production:check
+> node --import tsx scripts/p9-production-runtime.ts
+
+{
+  "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+  "publicationId": "p8m-matching-facts-v1-rev225",
+  "sourceRows": 197,
+  "scholarshipRows": 176,
+  "portalRows": 21,
+  "acceptedMatchingFacts": 0,
+  "runtimeFiles": 35,
+  "runtimeClosureSha256": "c146a4780eb749cbd83e6da55852e794e9fffb9f3edacb34252cc03532ac682c",
+  "disabledProductionAdminRoutes": [
+    "src/app/api/admin/extract/route.ts",
+    "src/app/api/admin/push/route.ts"
+  ],
+  "runtimeGoogleCapability": "none",
+  "nonceBoundHealth": true,
+  "productionDependencyGooglePackages": [],
+  "developmentOnlyGooglePackages": [
+    "@google/genai",
+    "googleapis"
+  ],
+  "deploymentConfigFilesChecked": [
+    "next.config.ts",
+    "package.json",
+    "package-lock.json"
+  ],
+  "builtServerTraceInspected": true,
+  "builtServerTraceSha256": "7e986617a5009e3dc7f0245597bf26fb286e150a80c46f741d2debc3ce156fd8"
+}

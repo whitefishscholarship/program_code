@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "cleanInstall": {
+    "command": "npm ci",
+    "result": "PASS438packages439audited0vulnerabilities",
+    "note": "Tool returned success: added438packages and audited439 in5s,0vulnerabilities. Exact start/end timestamp was not separately captured; completed before validation matrix. Deprecation notices were nonfatal.",
+    "completedBefore": "2026-09-12T23:09:29.440760+00:00"
+  },
+  "checks": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:09:29.440760+00:00",
+      "endedAt": "2026-09-12T23:09:52.131021+00:00",
+      "exitCode": 1,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-run-plan-check.log",
+      "sha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285",
+      "rawSha256": "7b3b6c8581dc5a5459ae2eb7aca04634326905cf17693a69731ca38e0a215285",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:09:52.131230+00:00",
+      "endedAt": "2026-09-12T23:09:58.584332+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-run-typecheck.log",
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+      "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:09:58.584553+00:00",
+      "endedAt": "2026-09-12T23:10:36.823949+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-test.log",
+      "sha256": "57af8814c2926b63e6c49b585694045e13a5293de5000e937b9673f86af4d08d",
+      "rawSha256": "57af8814c2926b63e6c49b585694045e13a5293de5000e937b9673f86af4d08d",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:10:36.824159+00:00",
+      "endedAt": "2026-09-12T23:10:49.031638+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-run-build.log",
+      "sha256": "52e40b3b68b5dae16d4015f41362c685e8c7b9498df8823968c328ac3ee5bb63",
+      "rawSha256": "9bbec928123f50cd13f1e3498a1f3c48954bfac85fee27bae9d8451dd4533cec",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "npm run intake:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:10:49.032043+00:00",
+      "endedAt": "2026-09-12T23:10:49.368275+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-run-intake-check.log",
+      "sha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e",
+      "rawSha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "npm run p9:production:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:10:49.368489+00:00",
+      "endedAt": "2026-09-12T23:10:49.840901+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/npm-run-p9-production-check.log",
+      "sha256": "686d505d1849427b20a229112cbde453c10a1d706c8c769ff39119b7a5051504",
+      "rawSha256": "686d505d1849427b20a229112cbde453c10a1d706c8c769ff39119b7a5051504",
+      "normalization": "Terminal line endings/trailing whitespace and final blank lines only"
+    },
+    {
+      "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+      "cwd": "web",
+      "startedAt": "2026-09-12T23:11:16.103367+00:00",
+      "endedAt": "2026-09-12T23:11:16.498015+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/node---import-tsx-scripts-p9-production-runtime.ts---require-build-trace.log",
+      "sha256": "b59107ffd775ec9fafdf926b38a7333d753b0a97fac6cc32953957dbd623c991",
+      "rawSha256": "b59107ffd775ec9fafdf926b38a7333d753b0a97fac6cc32953957dbd623c991",
+      "normalization": "Whitespace only"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "root",
+      "startedAt": "2026-09-12T23:11:16.498071+00:00",
+      "endedAt": "2026-09-12T23:11:16.618826+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r2-rev15-checks/git-diff---check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "Whitespace only"
+    }
+  ],
+  "note": "Before canonical attestation plan:check must fail only on three missing REV15 artifacts; all checks must pass after attestation",
+  "harnessIssue": "First matrix writer attempted a log filename containing slash for trace command, so saving failed; that trace command was rerun and captured here. Earlier passing tests/build unchanged; no code failure or hidden result.",
+  "browser": {
+    "command": "PLAYWRIGHT_MODULE=/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright node --import tsx /private/tmp/r2-rev15-qa.cjs",
+    "source": "web/scripts/qa-interview-relevance.cjs",
+    "sourceSha256": "e158444e6492b31446c4a5bca2961b9714ea7e13a0fce2fafb03261d1bac4007",
+    "scratchSha256": "058ddd80b7d9f8ce56523ce098e8f81eb1d7f24da8a1cdd8c07b5583aa9922f1",
+    "changes": "Only absolute import resolution and isolated output directory; assertions unchanged",
+    "exitCode": 0,
+    "observedAt": "2026-09-12T23:12:12.065Z",
+    "resultsPath": "docs/evidence/interview-coverage/r2-rev15-browser/PLAN-REV14-browser-results.json",
+    "resultsSha256": "ba7f4f66f1bddbcad0e5442e7ac8ced9c181e3726e74ad962c0891d22d777f5a",
+    "viewports": [
+      360,
+      768,
+      1440
+    ],
+    "result": "PASS synthetic paired relevance/OR/skip, GPA/school regression, exact visible CSV, keyboard, edit/reset/reload, zero answer storage/requests/logs"
+  },
+  "scope": "Fresh REV15 full local checks and preserved unchanged runtime; hosted release checks pending attested delivery"
+}

@@ -630,3 +630,14 @@ before audit; then practical entity batches and one complete independent final r
 The complete fixed plan is incorporated by canonical section19. Missing facts remain
 unknown. Backup creation and all write/publication effects remain false. Rollback is
 abandonment of local changes; historical artifacts and original checkout stay intact.
+
+## 2026-09-12 — R2 exact two-release delivery authority
+
+Kelsey directly authorized the reviewed R1 package at retained source979122a: REV15
+first, REV16 only after verified delivery. This REV15 branch starts from40ff61e and
+changes only the reviewed authority/evidence paths. Existing canonical topology requires
+separate full manifests, fresh review and two-file direct-child attestations. No rule
+amendment, historical attestation integration exception or gate waiver is introduced.
+R2 grants and exact target appear in PLAN-REV15.md and BUILD_STATE. Workbook access,
+new research, configuration changes and later phases remain prohibited. The stale P9
+bookkeeping label remains separately routed; it does not reopen P9.

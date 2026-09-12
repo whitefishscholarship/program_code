@@ -1,3 +1,48 @@
+# R2 unit 1 — REV15 authorized release preparation
+
+Worktree `/private/tmp/program_code-r2-rev15`, branch `codex/plan-rev15-intake-release`,
+source `40ff61ecc75c204cc6114fd34a5b9941e84f5ad1`, verified main
+`5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Preserve the separate source branch at
+`979122a13d4a8098d8cea26f115add1e68405355` and all other worktrees. The reviewed R1
+package/review live at that commit under `docs/evidence/interview-coverage/r1-*`.
+
+Kelsey has now authorized both sequential R2 releases and their exact Git/PR/Preview/
+merge/Production/CI/hosted-verification effects; direct quote and target are in PLAN-REV15.md.
+Current objective is **REV15 only until it is delivered and verified**. Complete all local
+checks and fresh full-candidate review, then add exactly PLAN-REV15-manifest.json and
+its canonical review as the direct-child attestation. Acceptance is controlled by those
+artifacts, not this prepared status. It must remain branch tip until delivered.
+
+Verify exact Preview before merge and exact Production afterward with source identity,
+nonce health, API/browser/public CSV and zero spreadsheet capability. Save post-freeze
+observations in the authorized PR record, never append an ordinary commit to attestation.
+After verified REV15, continue the already-authorized R2 second unit on fresh main by
+merging the retained979122a source; retain delivered REV15 record/evidence/artifact bytes.
+Do not reuse the old baseline for REV16. Stop at any gate/target/baseline/review failure.
+
+Historical intake read/copy/write flags and the 257-operation grant are spent; this R2
+grant authorizes **no workbook access or change**, new research, configuration change,
+monitoring, rollback or later R3–R7 phase. Catalog additions are not deployed by REV15.
+All retained310entities/312holds,83historicalroutes,26records,fourpotentialadditions,
+ninebacklogIDs,I65/Hagan,recoveryobjects,catalog/organizationquestions,officialcurrency,
+monitoring/platform/issuercredential/hygiene routes remain in the preserved handoff and
+R1 roadmap. The R3 keyboard automation improvement remains carried. No duplicate ledger.
+P9 stale pending label remains separately routed and is not an operative release blocker.
+
+Verification records are prefixed `r2-rev15-` under `docs/evidence/interview-coverage/`.
+Resolve exact final candidate/attestation through manifest and Git; never invent self-SHAs.
+Current hosted health and workbook freshness are not asserted by entry identity checks.
+The prior handoff below is preserved verbatim and is historical where superseded.
+
+Local verification: clean npm ci, typecheck, full tests, default build, intake check,
+zero-spreadsheet runtime/build-trace and 360/768/1440 browser/CSV/privacy checks PASS.
+Plan validation before attestation reports exactly three missing REV15 artifacts; these
+must reach zero after the valid two-file commit. Evidence: r2-rev15-validation.json and
+r2-rev15-preservation.json under docs/evidence/interview-coverage/. Hosted outcomes
+remain pending. All saved historical evidence and prior review bindings stay unchanged.
+
+---
+
 # Coverage proposal prepared — review record controls completion
 
 Operative September12,2026. Continue from the local scholarship-intake branch, descending

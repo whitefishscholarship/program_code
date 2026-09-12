@@ -1682,8 +1682,12 @@ Review every disposition, duplicate survivor, proposed field/tag and interview g
 independently. Unsupported facts remain explicit and do not block unrelated supported work.
 New questions and matching rules are recommendations only; no runtime behavior changes.
 
-No backup/recovery-copy creation, original-workbook write or release publication is
-currently authorized. These require new exact grants after a concrete reviewed batch.
+The historical exact batch was applied and reconciled under its separate recorded grant;
+that batch and quiet window are spent. On September12 Kelsey granted R2 delivery of this
+existing REV15 package followed only after verification by REV16. PLAN-REV15.md records
+the exact branch/PR/Preview/merge/Production/CI/hosted-verification scope and target.
+R2 authorizes no workbook access, new copy/write, research or configuration change.
+Any future source mutation requires a new exact grant after a concrete reviewed batch.
 Before any original write require a separate private complete native backup of all tabs,
 verified access/preservation, demonstrated recovery in an authorized disposable copy,
 affected-cell backups, current fingerprints, protection against newer edits and exact
@@ -1694,7 +1698,9 @@ restore the whole workbook or overwrite newer edits. The complete section7 appli
 Preserve historical artifacts, P9 zero-spreadsheet runtime, GPA/school filtering,
 all-award access, volatile interview privacy and exact visible-result CSV downloads.
 No applicant data, legacy workbook access, provider contact, forms, paid access, new
-services, full-master freshness review, automation, website publication, configuration
-changes or unrelated maintenance. Later selected publication needs exact push, PR,
-Preview, merge, Production and verification authority or verified applicable suppression.
-Rollback of this unapplied local work is abandonment of its branch; no external restore.
+services, full-master freshness review, automation, new catalog publication, configuration
+changes or unrelated maintenance. The September12 R2 grant covers only this package
+release and its unchanged student runtime, after fresh full-candidate review and valid
+direct-child attestation. No acceptance gate is waived. Later catalog/publication work
+requires its own selected scope and exact authority. Rollback or external restore is not
+authorized; preserve the applied receipt and recovery objects without accessing them.

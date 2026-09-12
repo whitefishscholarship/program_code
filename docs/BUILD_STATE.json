@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 15,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-11",
+  "lastUpdated": "2026-09-12",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -466,8 +466,7 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending",
-      "PLAN-REV15-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
+      "P9-attestation-and-delivery-pending"
     ]
   },
   "governance": {
@@ -745,12 +744,12 @@
         "manifestPath": "docs/evidence/PLAN-REV15-manifest.json",
         "reviewPath": "docs/reviews/PLAN-REV15.json",
         "deliveryAuthorization": {
-          "authorized": false,
-          "authorizedBy": null,
-          "authorizedAt": null,
-          "evidencePath": null,
-          "basis": "Kelsey authorized local preparation, prospective amendment, read-only intake evaluation, implementation, testing and independent review. New exact release authority is expressly reserved.",
-          "scope": "Local SCHOLARSHIP-INTAKE-1 preparation only. No push, PR, Preview, merge, Production or hosted verification."
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-12",
+          "evidencePath": "docs/evidence/PLAN-REV15.md",
+          "basis": "I authorize R2 only, following the reviewed release package: deliver REV15 first, then REV16 after REV15 is verified. This includes the required authority/evidence updates, branch pushes, PRs, Vercel Preview, merges, Production deployments, and CI/hosted verification on the existing web project. Preserve all review and acceptance gates. No workbook access or changes, new research, configuration changes, or later phases are authorized.",
+          "scope": "R2 unit1 only: finalize and independently review the preserved REV15 intake/application/historical/proposal package; attest; push codex/plan-rev15-intake-release, create/update PR, resulting Vercel Preview, ancestry-preserving merge, resulting Production deployment and CI/hosted verification on existing project web prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Authority/evidence bookkeeping only over source40ff61e; no runtime, workbook access/change, research, configuration change, or later phase. REV16 may follow only after verified REV15 delivery under its distinct unit of the same grant."
         }
       }
     ]
@@ -912,7 +911,7 @@
     "backupCopyAuthorized": true,
     "recoveryCopyAuthorized": true,
     "spreadsheetWriteAuthorized": true,
-    "publicationAuthorized": false,
+    "publicationAuthorized": true,
     "runtimeChangesAuthorized": false,
     "policyReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-policy-review.json",
     "ledgerPath": "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json",
@@ -925,6 +924,19 @@
     "authorizedBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
     "quietWindow": "Kelsey confirmed no other editors during this uninterrupted session; freshness and single-writer checks remain required",
     "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json",
-    "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json"
+    "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json",
+    "r2ReleaseBoundary": {
+      "phase": "R2",
+      "unit": "REV15",
+      "branch": "codex/plan-rev15-intake-release",
+      "sourceCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
+      "r1ReviewedTip": "979122a13d4a8098d8cea26f115add1e68405355",
+      "workbookAccessAuthorized": false,
+      "workbookMutationAuthorized": false,
+      "newResearchAuthorized": false,
+      "configurationChangesAuthorized": false,
+      "priorBatchAuthority": "spent; preserved true flags record the completed historical operation only",
+      "evidencePath": "docs/evidence/PLAN-REV15.md"
+    }
   }
 }

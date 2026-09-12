@@ -1,3 +1,19 @@
+# R2 REV15 release continuation
+
+Resume `/private/tmp/program_code-r2-rev15` on `codex/plan-rev15-intake-release`.
+Read AGENTS, canonical plan15, BUILD_STATE, operative CURRENT_HANDOFF, most recently
+accepted P9 evidence, this kickoff and PLAN-REV15.md. R1 package/review are retained at
+979122a13d4a8098d8cea26f115add1e68405355 in the source branch and worktree.
+The new direct R2 grant is recorded. Complete REV15 final review/attestation, exact
+Preview/CI before merge and Production verification afterward before beginning REV16.
+Use the R1 serial topology; preserve all source and attested history. No source/workbook
+access, research, configuration changes or later phases. Attestation remains tip until
+delivered; put later results in authorized PR evidence, then carry into REV16 candidate.
+If blocked, preserve recovery/open-item triggers and exact next action. Prior kickoff
+below remains historical where superseded; do not execute its old research instructions.
+
+---
+
 # Coverage proposal — continuation
 
 Resume `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`.
