@@ -1,3 +1,53 @@
+# R1 release-package preparation — review controls completion
+
+User-selected entry: `865730ea820cfa8c300147d98b2c9e77064eb779`, branch
+`codex/scholarship-intake`, worktree `/private/tmp/program_code-scholarship-intake`.
+R1 produces a local executable release proposal only. Read
+[the package](evidence/interview-coverage/r1-release-package.md), its `r1-grounding.json`,
+`r1-source-paths.json`, `r1-validation.json` and immutable `r1-review.json` in the same
+folder. Missing or nonmatching PASS means prepared, not review-complete. Resolve the
+final review-only checkpoint with Git; no canonical attestation is created here.
+
+**Corrected path:** R2 requires two sequential releases: new REV15 candidate from retained
+`40ff61ecc75c204cc6114fd34a5b9941e84f5ad1`, then after its attestation is delivered and
+verified, a new REV16 candidate merging the retained R1 history into fresh main.
+Each has a fresh full-change-set review and separate direct-child two-file attestation.
+No acceptance rule amendment is needed. Never stack both undelivered attestations.
+The package lists exact source paths, governance resolutions, commands and six gate owners.
+
+**Grounded:** authenticated GitHub main matched `5fa08541b6b49484dedc8fc06012e47c658ce8fb`;
+174 saved candidate-path hashes verified. Reviewed runtime, original ledger/batch/report,
+all old review records and authority flags are unchanged. Full tests, typecheck, default
+build, intake/coverage checks and zero-spreadsheet runtime check passed. Plan validation
+still FAILS with exactly six missing REV15/REV16 manifest/review/attestation diagnostics.
+These are R2 gates, not waived errors. R1 does not verify present workbook/backup freshness,
+provider configuration/health or current official scholarship facts.
+
+**One next action after independent R1 PASS:** Kelsey decides the package's exact informed
+R2 grant for BOTH named branch/PR/Preview/merge/Production/verification sequences on the
+recorded existing web project. R2 is unstarted and all delivery flags remain false until
+that grant; do not ask routine Git preferences. The R1 scope explicitly stops here.
+Reverify main/targets at R2 entry and again after REV15; new authority changes candidate
+bytes and must precede final freeze/review. Future candidate/attestation/merge IDs do not
+exist yet. Preserve original source branch, all canonical history and retained recovery.
+
+**Additional specific preservation check:** when building C16, explicitly compare delivered
+REV15 amendment object, authority evidence, manifest and review bytes. An existing validator
+history helper's earliest-record filter alone does not enforce this case. R2 agent owns
+that check; a failure blocks C16. Validator hardening itself is separate maintenance.
+The browser regression has a hardcoded historical output path: run a scratch copy with
+isolated new evidence output, preserving all existing reviewed browser files.
+
+All prior open-item routing below is retained verbatim: 310 entities/312 holds, 83 historical
+routes, 26 research records, four non-write-ready additions, nine backlog IDs, I65/Hagan,
+R3/R4 catalog and remaining organization choices, R5 research, conditional R6, recovery
+objects, currency/monitoring/platform/issuer-credential/hygiene triggers and R3 keyboard
+improvement. No source/workbook/copy/write/release/provider/monitoring action or new grant
+occurred in R1. The applied batch and quiet window are spent. All previous sections below
+are historical where superseded; the current phase and next action live only in this top.
+
+---
+
 # Session closeout — PASS; R1 next
 
 Plan revision: 16. The authorized local coverage proposal, first interview implementation

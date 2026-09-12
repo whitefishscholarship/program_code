@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-12T19:11:08.555469+00:00",
+  "selectedPhase": "R1 only",
+  "checkpoint": "865730ea820cfa8c300147d98b2c9e77064eb779",
+  "branch": "codex/scholarship-intake",
+  "entryClean": true,
+  "remote": {
+    "command": "gh api repos/whitefishscholarship/program_code/commits/main --jq .sha",
+    "result": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "cachedOriginMain": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "transportFailure": "normal git ls-remote failed DNS; permitted read-only gh API succeeded",
+    "meaning": "Git revision only; no hosted health or provider freshness claim"
+  },
+  "reviews": [
+    {
+      "path": "docs/evidence/coverage-discovery/review.json",
+      "sha256": "5bfb8f0681cab90365f06a7b961577445fe9d903a0f642cc435e6e11d630347c",
+      "candidate": "8f423c84b35ae8217258fa148fef6d5791bccc1f",
+      "boundPaths": 12,
+      "result": "PASS"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-policy-review.json",
+      "sha256": "5810dc82303cb12de97e9dd90cffb1764d281fcf91a63e5002ac194830c8a70c",
+      "candidate": "e01c063acb1a0b144bf92c1d381773ec3ef7e598",
+      "boundPaths": 9,
+      "result": "PASS"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/review.json",
+      "sha256": "63ac457433e02620e8668d30330fd02ae05f3e27ba943b631e55da5f0af5f90e",
+      "candidate": "c0fffacd3a97328afc75d8e7a06e4cfa8273f356",
+      "boundPaths": 28,
+      "result": "PASS"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/roadmap-review.json",
+      "sha256": "00ef3e2df5648252b5e7260dec2aae4df2c69ec772e2bd19749d856435458eba",
+      "candidate": "0d486e0cb319bfa97f8a1e1f81a063ae9db7f34d",
+      "boundPaths": 3,
+      "result": "PASS"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/session-closeout-review.json",
+      "sha256": "4f6fc3b7c70b2469a4843fa69e4b74929adf15931a228d08e0209e8832a4c7fa",
+      "candidate": "9472525f9b75b7a827f10d34b2e583c6cd8cdddf",
+      "boundPaths": 3,
+      "result": "PASS"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-local-review.json",
+      "candidate": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+      "manifestPath": "docs/evidence/SCHOLARSHIP-INTAKE-local-manifest.json",
+      "boundPaths": 119,
+      "ledgerProposalReportCurrentHashes": "PASS",
+      "result": "PASS"
+    }
+  ],
+  "sourceInventorySha256": "ecfcbf9a877e7dfa763f78e12d6003a4625d72c8f7b062c0495f7f03b01ccc24",
+  "sourceCounts": {
+    "rev15SourceFiles": 165,
+    "rev16ImplementationFiles": 28,
+    "laterDocumentationFiles": 7,
+    "rev16SourceFiles": 32
+  },
+  "observed": {
+    "noCanonicalRev15Rev16ArtifactAdditionInLocalAllRefHistory": true,
+    "rev15SourceHasNoProductFixtureOrDeploymentPathDelta": true,
+    "noRuntimeOrDeploymentDeltaAfterReviewedUi": true,
+    "bothDeliveryGrantsFalse": true,
+    "programPointersNull": true,
+    "appliedBatchReceipt": "PASS_APPLIED_AND_RECONCILED at historical revision229; no present workbook assertion",
+    "p9AttestationAndMergeAncestors": true
+  },
+  "overreachCorrections": [
+    "Prior unapplied-memory status superseded by committed application receipt; no new workbook inspection inferred",
+    "One immutable UI review is not review of complete combined release; distinct final canonical reviews required",
+    "Git main identity does not prove hosted health or provider configuration",
+    "P9 pending-label is stale bookkeeping; retained without reopening P9"
+  ],
+  "selfStalenessControls": [
+    "R1 docs change HEAD; preserve review bindings to original candidate blobs",
+    "R2 REV15 merge changes main and REV16 baseline; resolve actual merge and recompute complete delta before REV16 freeze",
+    "Authority additions alter candidate bytes: settle before fresh review and attestation",
+    "Any post-review change requires new candidate/manifest/review; no edits after attestation until delivered"
+  ],
+  "correctedPlan": "Two sequential R2 release units under existing rules: REV15 source40ff61e then REV16 joined with delivered REV15 ancestry; no rule amendment or attestation in R1",
+  "unknowns": [
+    "Future authority-bearing candidate/attestation/merge SHAs do not exist",
+    "Current provider target health/configuration and source/backup freshness not checked",
+    "Remote state must be refreshed at each R2 package entry"
+  ]
+}

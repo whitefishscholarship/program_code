@@ -1,3 +1,23 @@
+# Resume after R1 package preparation
+
+Resume the retained `codex/scholarship-intake` branch in
+`/private/tmp/program_code-scholarship-intake`; verify clean tip and ancestry from
+`865730ea820cfa8c300147d98b2c9e77064eb779`. Follow AGENTS read order and operative
+CURRENT_HANDOFF. Read `docs/evidence/interview-coverage/r1-release-package.md`,
+`r1-grounding.json`, `r1-source-paths.json`, `r1-validation.json`, and `r1-review.json`.
+Verify that the independent PASS matches its immutable candidate before treating R1 done.
+
+R1 is local preparation only. Next is the concrete R2 authority decision, not automatic
+execution. Exact new authority must cover both sequential named releases and every
+Git/PR/Preview/merge/Production/verification effect described in the package. Preserve
+false flags until granted. With that grant, execute R2 only: REV15 first, then REV16
+from verified delivered main; never stack undelivered attestations. Record actual SHA
+pins at each freeze; never rebind historical reviews or use spent workbook authority.
+Without it, stop before R2. All later phases and open-item/recovery triggers remain in
+the plan and retained handoff. Recovery instructions below remain operative if needed.
+
+---
+
 # Fresh-context kickoff after session closeout
 
 Resume `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`;
