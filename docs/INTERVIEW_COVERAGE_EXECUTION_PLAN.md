@@ -1,6 +1,8 @@
 # Interview coverage execution — INTERVIEW-COVERAGE-1
 
-Date: 2026-09-12. Status: local preparation; independent policy review required before product edits.
+Date: 2026-09-12. Status: first local implementation independently reviewed complete;
+remaining R1–R7 sequence is planning only. The original implementation contract below
+remains the record of its selected scope. Current progress belongs in CURRENT_HANDOFF.md.
 
 ## Objective and selected scope
 
@@ -85,3 +87,203 @@ Push/PR/Preview/merge/Production/hosted verification need direct informed author
 action, new workbook read, provider contact, application interaction or monitoring is included.
 The primary checkout stays untouched. Local rollback is abandonment of these new commits;
 no external restore is needed or authorized.
+
+## Remaining sequence across sessions
+
+This is the single remaining-work sequence. Labels R1–R7 are planning steps, not new
+canonical stages or permission grants. Canonical plan/BUILD_STATE and exact user grants
+control execution. Kelsey's instruction to tighten this plan authorizes this documentation
+update and review only. Do not start a future phase because it is listed here.
+
+The first local implementation is complete at candidate `c0fffacd3a97328afc75d8e7a06e4cfa8273f356`,
+with independent PASS saved in review-only checkpoint `17515b51ea53cdbf48d7f8b2ac14758f0d1c0d35`.
+All following steps are pending. The operative progress pointer belongs only in
+`CURRENT_HANDOFF.md`; keep evidence in the existing ledgers/review folders rather than
+creating another tracker. Kelsey owns scope and external-effect decisions; the execution
+agent owns each selected phase and remediation; a fresh-context reviewer owns its review.
+
+### R1 — Prepare the existing release package (next)
+
+**Outcome:** a concrete, independently reviewed way to deliver the existing work without
+replaying intake, losing history, or bypassing the six acceptance errors.
+
+Start from current clean local HEAD, verify the reviewed ancestors and fresh remote main,
+and inspect the actual REV15/REV16 validator and Git history. Account separately for the
+applied intake package, reviewed UI package and later documentation changes. Specify exact
+candidate boundaries, predecessor order, manifest scope, immutable review records and
+valid direct-child attestation topology. Do not rebind an old review to a changed candidate,
+retroactively insert an attestation, or assume one record can satisfy both revisions.
+If current rules cannot support the proposed packaging, prepare a dedicated prospective
+canonical amendment for independent review before changing those rules.
+
+**Done:** every gate in the table below has an exact candidate/package owner, required
+artifact and command, ordering dependency and validation expectation; the complete local
+release proposal has independent PASS and lists all downstream Git/Vercel effects. Record
+any unresolved topology problem as a blocker with a next action. R1 prepares the legal
+acceptance path; it does not claim the six errors are closed or create final attestations.
+
+**Boundary:** local package preparation only when selected. No source reads/writes or
+release. Present the concrete package for Kelsey's exact informed delivery grant after
+local preparation/review; preserve false delivery authority until that grant exists.
+
+### R2 — Accept and deliver the current interview
+
+Requires R1's reviewed packaging and exact new authority for the affected branch/PR,
+Preview, merge, Production and hosted verification, or verified applicable suppression.
+Reverify main and provider targets; reconcile only phase-owned changes. Finish all evidence
+before final candidate freeze/review, then create each valid canonical attestation in the
+order established by R1. An attestation remains its branch tip until delivery; do not append
+later implementation or ordinary handoff edits. Preserve every earlier valid attestation.
+
+**Done:** all six gates below pass under the actual canonical validator, all required checks
+pass, exact Preview is verified before merge, and exact Production afterward. Reconcile
+API/browser/visible CSV with the deployed candidate and verify zero spreadsheet capability.
+A green deployment alone is insufficient. Save actual commit/deployment/verification evidence
+and a separate permitted continuation checkpoint. If release authority or a technical gate
+is missing, R2 stays blocked; it cannot mark itself complete or silently advance to R3.
+
+| Existing gate | Resolution owner/phase | Closure evidence |
+| --- | --- | --- |
+| Missing `docs/evidence/PLAN-REV15-manifest.json` | Agent designs in R1; produces valid artifact in R2 | Exact REV15 candidate-tree and complete baseline change-set manifest |
+| Missing `docs/reviews/PLAN-REV15.json` | Independent reviewer under R2's package | Structured PASS bound to that exact manifest, with finding dispositions |
+| REV15 committed attestation missing | Agent, R2 in the reviewed predecessor order | Valid direct-child commit changing exactly the required two paths |
+| Missing `docs/evidence/PLAN-REV16-manifest.json` | Agent designs in R1; produces valid artifact in R2 | Exact REV16 candidate-tree and complete baseline change-set manifest |
+| Missing `docs/reviews/PLAN-REV16.json` | Independent reviewer under R2's package | Structured PASS bound to that exact manifest, with finding dispositions |
+| REV16 committed attestation missing | Agent, R2 after required predecessor gates | Valid direct-child two-file attestation; full plan validation passes |
+
+These are recorded failures, not administrative checkboxes. R1 must establish whether each
+candidate and its ancestry can lawfully satisfy its gate; filenames or a prior local PASS
+are not substitutes. No acceptance criteria are relaxed by this roadmap.
+
+### R3 — Publish the already-applied records into a reviewed local catalog and connections
+
+After R2, prepare and select one bounded catalog-refresh contract before implementation.
+Use the completed 219 additions/38 updates as the reconciliation queue, not a new write
+batch. Plan the exact allowed Master scholarship fields, tab/bounds and source projection
+from existing evidence first; obtain the required fresh read authority before access.
+Capture stable source revisions and account for every row within the approved bounds.
+The saved 416 names are historical context, not a required future row or award count.
+Reconcile all 257 applied operations to current rows and stable public IDs, with explicit
+published, deferred, changed, duplicate, parent/resource or unresolved outcomes. Do not
+silently import unrelated newer edits, collapse shared applications, or require every
+scholarship's official facts to become known before a useful reviewed subset can proceed.
+
+Prioritize the 38 distinct intake entities referenced across the organization, teaching,
+ordinary-need and first-generation gaps (42 references with overlap). Preserve all remaining
+applied records in the same queue. Extend only supported organization/Teaching connections;
+consider first-generation/care wording only against exact award definitions and repeated
+useful distinctions. Keep uncommon training requirements on cards. Preserve the two-input
+core and existing supported choices. Do not show a new question with no usable connection.
+
+**Done:** a separate immutable catalog/mapping candidate with complete source and applied-
+operation reconciliation; each deferred item has owner, trigger and next action; every
+shown option has exact reviewed award IDs and qualified explanations. Source freshness,
+parent/child identity, privacy, GPA/school decisions, OR relevance, all-award access,
+mobile/keyboard behavior and exact CSV are tested and independently reviewed. No deletion
+of an existing award or change of shortlist policy may be inferred from a missing field;
+propose such a change explicitly in the selected canonical contract first.
+
+**Boundary:** exact source-read/local-implementation scope and prospective canonical policy
+must be selected and reviewed first. No workbook mutation, official-fact acceptance by
+inference or automatic deployment. R3's source read does not authorize a backup or copy.
+
+### R4 — Accept and deliver the refreshed catalog
+
+Apply R2's exact-candidate release controls to the separately reviewed R3 package, with
+its own canonical policy, acceptance artifacts and new informed release authority.
+
+**Done:** required canonical checks/attestations and exact Preview/Production verification
+pass; deployed catalog counts and visible CSV match the reviewed reconciliation. Keep a
+pinned rollback reference and an operator refresh procedure. No actual rollback or
+scheduler activation is implied. If blocked, preserve the candidate and stop at this gate.
+
+### R5 — Resolve the bounded additional-opportunity queue
+
+Select a public-research contract limited initially to the 26 named records already in
+`docs/evidence/coverage-discovery/proposal.json` (`programs`). Its scope includes all 20
+previously researched historical occurrences, the four candidate additions, foster-program
+conflicts, PDK, three Pony Club funds, AQHF and named non-foster discrepancies. Reuse still-
+adequate evidence; recheck only decision-critical current rules, conflicts and availability.
+Pin any public child-page set before enumeration. Access walls remain unknown; no login,
+contact or application interaction. Do not turn this into an open-ended national search.
+
+**Done:** all selected identities have an evidence-backed ready-for-batch-review, represented,
+restricted/resource, or explicit hold disposition. Report inspected identities, supported
+unique awards, verified broad reach and currently usable awards separately. The initial
+four candidate additions remain non-write-ready until their individual gates actually pass.
+None of the other 63 historical routes disappears or becomes newly verified by inference;
+reopening one requires its recorded trigger or an explicit bounded scope amendment.
+
+**Boundary:** bounded public research/local proposals only under the selected grant; no
+workbook writes or automatic acceptance/publication. If no candidate clears its gates,
+record that outcome and skip R6 explicitly rather than manufacture additions.
+
+### R6 — Apply and publish only a separately approved new batch (conditional)
+
+If R5 produces useful reviewed changes, finish exact targets, digest, duplicate survivors,
+field evidence, tags and interview-coverage decisions before asking for a write grant.
+New original-source writes require a full private native backup, verified preservation and
+recovery in an authorized disposable copy, affected-cell preimages, fresh fingerprints,
+protection against newer edits and exact readback. **No verified complete backup means no
+source write.** Copy/recovery authority, original-write authority and release authority are
+distinct. The original batch digest and quiet window are spent and cannot be replayed.
+
+**Done:** either an explicit no-batch outcome, or exact authorized batch application and
+readback followed by a separately selected R3/R4-style immutable publication and verified
+release of those selected changes. Treat source application and publication as separate
+gates/checkpoints; a spreadsheet receipt alone does not mean the website contains the awards.
+No blind retry or whole-workbook restoration over newer edits. Stop on concurrency, recovery,
+readback or authority failure and preserve recovery pointers in the current handoff.
+
+### R7 — Close the selected build, preserve the remaining queue
+
+Reconcile planned versus delivered scope, validation limits, acceptance state, open holds
+and recovery objects. Update this plan's progress only through the current handoff and
+its evidence pointers. Unresolved research is not a reason to invent rules or expand the
+project indefinitely. Close the selected build when its agreed outcomes are delivered
+and every deferred item remains actionable; do not require every unknown to disappear.
+
+**Done:** exact final checkpoint/deployed revision, verified outcomes, unresolved items,
+owners/triggers and one next-session instruction are saved and reviewed. Monitoring,
+full-Master official currency, platform cleanup, issuer credential revocation and worktree
+cleanup remain separate selections, not automatic closeout tasks.
+
+## Existing backlog routing — no second ledger
+
+The immutable proposal retains the original research history. This table assigns its IDs
+to the ordered work above; it does not rewrite old decisions or claim new research.
+
+| Existing work | Phase and disposition |
+| --- | --- |
+| D01 organizations; D02 ordinary need; D04 Teaching | R3/R4 first: reuse already-applied entities; R5/R6 only for additional verified opportunities |
+| D03 foster/adoption/kinship | R5 resolves named conflicts/identities; R6 only after exact gates; definition changes require selected publication support |
+| D05 equestrian | R5's three named Pony Club records/AQHF parent; uninspected children remain queued |
+| D06 zero/one-connection choices | R3 distinguishes connection gaps using refreshed records; any expansion beyond R5's named set needs explicit scope selection |
+| D07 first-generation definitions | R3 reviews the three existing supporting entities without a universal definition; new wording only when supported |
+| D08 specialist memberships/training | R3 keeps the existing recommendation on cards; no new mandatory question |
+| D09 historical omissions | R5 handles named records already in its 26-item set; other historical routes remain on their individual triggers |
+| 310 held entities / 312 hold records; related corrections/catalogs | Preserve original ledger owner/trigger/next action; no bulk reopening. Selected ready changes enter R5/R6 |
+| I65 formatting and Hagan I25 definition | R6 only after exact independent evidence/review and new batch authority; otherwise preserve existing holds |
+| Recovery copies, quiet window, source-write safeguards | R6; retained objects remain protected during every phase |
+| Full-Master official currency, monitoring, platform bookkeeping, retired issuer credential, historical worktrees | R7 handoff carries existing source pointers/owners; separate scope/authority required before action |
+
+## Session discipline and limits on complexity
+
+1. Resume from the operative top of CURRENT_HANDOFF, verify the clean checkpoint/ancestry,
+   then validate prior reviews against their recorded Git candidates. Later reviewed
+   documentation changes do not rebind an older review to current HEAD. Verify implementation
+   paths still match the reviewed implementation or obtain a new review for actual changes.
+2. Select one phase and write its exact objective, inputs, output and stop boundary before
+   work. A pending phase, next pointer, green test or earlier permission is not new authority.
+3. Reuse the existing ledgers, source IDs, stable award IDs and publication architecture.
+   Add a field, question, service, dependency or abstraction only to solve a demonstrated
+   selected need; document that need and prefer the smallest sufficient change.
+4. Keep student-facing scope fixed: a short core, voluntary refinement, useful qualified
+   connections, all-award access, temporary answers and clean downloads. No scoring engine,
+   universal sensitive eligibility inference or form growth for one-off requirements.
+5. End each session with one checkpoint and update only the operative handoff: phase/status,
+   completed output, exact evidence, blockers, next action, authority needed and recovery
+   pointers. Preserve historical sections as evidence, never competing current instructions.
+6. If a phase encounters an unrelated issue, route it to its existing hold/backlog item.
+   Do not expand scope, duplicate a tracker, repeat completed reviews without changed inputs,
+   or mark a blocked/unknown item done merely to finish the session.

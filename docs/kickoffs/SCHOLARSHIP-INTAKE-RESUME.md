@@ -1,3 +1,29 @@
+# Resume the ordered coverage build — R1 package preparation next
+
+Worktree: `/private/tmp/program_code-scholarship-intake`; branch: `codex/scholarship-intake`.
+Verify current clean HEAD and ancestry from completed implementation/review checkpoint
+`17515b51ea53cdbf48d7f8b2ac14758f0d1c0d35`. Preserve unrelated work and original checkout.
+Read AGENTS, canonical plan, BUILD_STATE, operative CURRENT_HANDOFF, latest accepted-stage
+evidence and this kickoff, then INTERVIEW_COVERAGE_EXECUTION_PLAN.md's R1–R7 sequence.
+Validate prior reviews against recorded Git candidates and the new roadmap review; do not
+rebind historical reviews to current HEAD or repeat completed implementation/research.
+
+Next phase when selected: **R1 only** — prepare a concrete release package for the already
+reviewed intake/UI work and establish the legal resolution/order of the six REV15/REV16
+manifest/review/attestation failures. Verify current remote baseline and exact topology;
+prepare and independently review any required prospective policy before changing rules.
+Done means a reviewed executable packaging proposal with exact candidates, paths, commands,
+predecessors and downstream effects. It does not mean canonical acceptance or deployment.
+
+This kickoff is a continuation pointer, not additional authority. No new source research,
+workbook read/copy/write, runtime change, provider contact, application interaction,
+monitoring, push/PR/Preview/merge/Production or hosted verification is granted. Stop at
+R1's completion/approval boundary; do not start R2 or later work automatically. Preserve
+every hold/recovery pointer. End with the current checkpoint, phase status, blockers and
+one next action in CURRENT_HANDOFF. Historical kickoffs below are evidence only.
+
+---
+
 # Interview coverage implementation — current continuation
 
 Resume the existing codex/scholarship-intake worktree and verify ancestry from the reviewed

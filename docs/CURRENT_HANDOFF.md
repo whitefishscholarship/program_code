@@ -1,3 +1,49 @@
+# Current continuation — ordered roadmap, R1 next
+
+Plan revision: 16. Local implementation is independently reviewed complete at candidate
+`c0fffacd3a97328afc75d8e7a06e4cfa8273f356`; PASS review saved at checkpoint
+`17515b51ea53cdbf48d7f8b2ac14758f0d1c0d35`. This session only clarifies the remaining
+sequence in [INTERVIEW_COVERAGE_EXECUTION_PLAN.md](INTERVIEW_COVERAGE_EXECUTION_PLAN.md),
+sections “Remaining sequence across sessions” through “Session discipline and limits on
+complexity.” Its independent documentation review is
+`docs/evidence/interview-coverage/roadmap-review.json`; missing PASS means this update is
+prepared, not review-complete. Resolve the final local tip with Git; preserve ancestry.
+
+**Current phase:** roadmap documentation/review. **Next executable objective when selected:**
+R1 — prepare the existing release package and establish the valid resolution/order of all
+six REV15/REV16 acceptance gates. Start with their actual validator, candidate history and
+exact package boundaries. Do not research new scholarships or change the app during R1.
+
+**Remaining order:** R1 package preparation → R2 current-interview acceptance/delivery →
+R3 already-applied catalog and supported connections → R4 refreshed-catalog delivery →
+R5 bounded additional-opportunity research → R6 conditional exact new batch/publication →
+R7 closeout. Each phase has its entry conditions, completion test and authority boundary
+in the existing plan. These are planning labels, not canonical stage pointers or grants.
+
+**Status and blockers:** no remaining phase is started or accepted by this update. Six
+canonical manifest/review/attestation failures remain unresolved; R1 designs their lawful
+resolution, R2 must actually close them before delivery. New release authority, future
+source-read/write/copy authority and provider-target freshness remain unsatisfied where
+required. Do not waive these gates or silently skip a blocked phase. The saved P9 pending
+label is historical bookkeeping, not evidence to reopen P9; reverify if relevant in R1.
+
+**Preservation:** validate prior reviews against their immutable Git candidates, not later
+documentation-only HEAD. The reviewed runtime and frozen source/intake/research artifacts
+remain unchanged. All 83 historical routes, 26 named research records, four potential
+additions, nine backlog IDs, 310 held entities/312 hold records and five interview gaps
+retain their evidence and actions. Route them through the plan's existing-backlog table;
+use the detailed retained routing below for recovery, I65/Hagan, monitoring, credentials
+and cleanup. No duplicate ledger and no blanket reopening of holds.
+
+Kelsey owns phase selection and external-effect decisions; the execution agent owns
+selected work and handoff; a fresh-context reviewer owns independent review. Follow
+[kickoff](kickoffs/SCHOLARSHIP-INTAKE-RESUME.md) each session. No runtime, workbook,
+source/provider, Git publication, deployment or monitoring effects were added by this
+documentation update. All sections below are retained historical evidence; this top
+section alone is the operative continuation.
+
+---
+
 # Interview coverage implementation — local candidate
 
 Plan revision: 16. Kelsey's September 12 execution instruction is recorded in PLAN-REV16.
