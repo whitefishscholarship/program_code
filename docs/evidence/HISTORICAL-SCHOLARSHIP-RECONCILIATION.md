@@ -28,14 +28,14 @@ provider contact, application interaction, new questions/rules or publication.
 
 | Disposition | Senior tab | Unique Finds | Total source occurrences |
 | --- | ---: | ---: | ---: |
-| Named entry represented | 93 | 46 | 139 |
+| Named entry represented | 93 | 47 | 140 |
 | Shared resource/application represented | 0 | 5 | 5 |
 | Catalog partly represented | 0 | 15 | 15 |
-| Previously held individual entry | 0 | 23 | 23 |
+| Previously held entry (award or resource) | 0 | 23 | 23 |
 | Previously excluded individual entry | 0 | 3 | 3 |
 | Catalog requiring review / held / excluded | 0 | 8 | 8 |
 | Unrepresented candidate needing verification | 1 | 23 | 24 |
-| Identity review or conflicting name/links | 0 | 9 | 9 |
+| Identity review or conflicting name/links | 0 | 8 | 8 |
 | Repeated or potentially duplicate missing candidate | 0 | 2 | 2 |
 | **Scholarship/program/resource occurrences** | **94** | **134** | **228** |
 | Instructions, headings and general references | 12 | 11 | 23 |
@@ -43,7 +43,9 @@ provider contact, application interaction, new questions/rules or publication.
 | **All rows accounted for** | **807** | **973** | **1,780** |
 
 These counts are source occurrences, not unique eligible awards. Do not add them together
-as a discovery target. The five represented resource rows are not individual awards, and
+as a discovery target. Four of the 23 previously held entries are resources/catalogs
+(Montana Community Foundation, WUE Schools, Nursejournal.org and LSAC); their individual
+child-award coverage is not established by the parent hold. The five represented resource rows are not individual awards, and
 a shared catalog/login is never proof that all its children are present. Some records
 repeat across the two tabs; cycles and distinct same-provider awards remain separate.
 
@@ -92,7 +94,9 @@ Do not copy these four conflicting records unchanged:
   Cooley's historical note questions Whitefish availability; do not infer broad eligibility.
 - Microsoft Disability and Susanna/Lucy DeLaurentis were already held. Their absence is
   not evidence they were overlooked; reuse the recorded blockers rather than restart intake.
-- General MSU Hilleman is not automatically the narrower Hilleman/Morelli scholarship.
+- General MSU Hilleman Scholars is already Master row 139, separate from the narrower
+  Hilleman/Morelli scholarship at row 332. The historical malformed application link and
+  current-cycle status remain unverified.
 - The MUS STEM/Healthcare award is Master row 169, not MUS Honor at row 50, despite a
   shared application-login route.
 - MCA's historical note mentions eight awards and team managers. Its earlier non-record
@@ -107,6 +111,8 @@ Do not copy these four conflicting records unchanged:
    **research leads**, not assertions that their current eligibility is broad or suitable.
    Record geography, entry age/education stage, foster/adoption/guardianship pathways,
    membership conditions, current cycle and real application route for each.
+   Promises2Kids Guardian Scholars points to UC San Diego Hope Scholars in the old tab;
+   verify that relationship before counting it as a distinct program.
 3. Keep California, Connecticut, Louisiana, Virginia and Washington program labels, CSU,
    UC Riverside, Orangewood, Promises2Kids and Idaho-specific leads in a separate geographic
    assessment. Do not count them as filling broad-audience gaps before verifying reach.

@@ -8,7 +8,7 @@
   "counts": {
     "reference": 23,
     "blank": 1529,
-    "represented": 139,
+    "represented": 140,
     "unrepresented_candidate": 24,
     "catalog_partial": 15,
     "represented_resource": 5,
@@ -16,7 +16,7 @@
     "prior_exclusion": 3,
     "catalog_review": 4,
     "catalog_held": 3,
-    "identity_review": 5,
+    "identity_review": 4,
     "duplicate_missing": 1,
     "catalog_excluded": 1,
     "identity_conflict": 4,
@@ -32,14 +32,14 @@
     "unique": {
       "reference": 11,
       "blank": 828,
-      "represented": 46,
+      "represented": 47,
       "catalog_partial": 15,
       "represented_resource": 5,
       "prior_hold": 23,
       "prior_exclusion": 3,
       "catalog_review": 4,
       "catalog_held": 3,
-      "identity_review": 5,
+      "identity_review": 4,
       "unrepresented_candidate": 23,
       "duplicate_missing": 1,
       "catalog_excluded": 1,
@@ -8384,7 +8384,7 @@
       ],
       "status": "prior_hold",
       "masterRows": [],
-      "rationale": "Already held in intake; not present as this named award in Master.",
+      "rationale": "Resource/catalog already held in intake; preserve the recorded parent-resource decision. It is not an individual award and the hold is not proof of child-award coverage.",
       "priorEntityIds": [
         "intake-entity-c9b41854e4367be3"
       ],
@@ -8406,7 +8406,7 @@
         }
       ],
       "owner": "Kelsey Stuart",
-      "nextAction": "Resolve exact identity, public source, current audience and geographic reach before any proposed addition."
+      "nextAction": "Reuse the recorded resource/catalog hold and its exact trigger; assess named child awards separately before claiming coverage."
     },
     {
       "id": "unique:12",
@@ -8732,7 +8732,7 @@
       ],
       "status": "prior_hold",
       "masterRows": [],
-      "rationale": "Already held in intake; not present as this named award in Master.",
+      "rationale": "Resource/catalog already held in intake; preserve the recorded parent-resource decision. It is not an individual award and the hold is not proof of child-award coverage.",
       "priorEntityIds": [
         "intake-entity-864383961bfbe82f"
       ],
@@ -8754,7 +8754,7 @@
         }
       ],
       "owner": "Kelsey Stuart",
-      "nextAction": "Resolve exact identity, public source, current audience and geographic reach before any proposed addition."
+      "nextAction": "Reuse the recorded resource/catalog hold and its exact trigger; assess named child awards separately before claiming coverage."
     },
     {
       "id": "unique:21",
@@ -12721,15 +12721,15 @@
         "https://www.montana.edu/hillemanscholars/",
         "http://www.montana.edu.hillemanscholarship/apply"
       ],
-      "status": "identity_review",
+      "status": "represented",
       "masterRows": [
-        332
+        139
       ],
-      "rationale": "General MSU Hilleman Scholars Program is broader than Hilleman/Morelli. Related record does not prove general program is represented.",
+      "rationale": "General MSU Hilleman Scholars Program is separately represented at Master139, supported by matching name and official montana.edu/hillemanscholars/ route. Do not merge with narrower Hilleman/Morelli332; historical malformed application URL and currency remain unverified.",
       "priorEntityIds": [],
       "priorDispositions": [],
       "owner": "Kelsey Stuart",
-      "nextAction": "Resolve exact identity, public source, current audience and geographic reach before any proposed addition."
+      "nextAction": "No write. Retain identity/cycle distinctions."
     },
     {
       "id": "unique:91",
@@ -13041,7 +13041,7 @@
       ],
       "status": "prior_hold",
       "masterRows": [],
-      "rationale": "Already held in intake; not present as this named award in Master.",
+      "rationale": "Resource/catalog already held in intake; preserve the recorded parent-resource decision. It is not an individual award and the hold is not proof of child-award coverage.",
       "priorEntityIds": [
         "intake-entity-75a870da0a9b9aec"
       ],
@@ -13063,7 +13063,7 @@
         }
       ],
       "owner": "Kelsey Stuart",
-      "nextAction": "Resolve exact identity, public source, current audience and geographic reach before any proposed addition."
+      "nextAction": "Reuse the recorded resource/catalog hold and its exact trigger; assess named child awards separately before claiming coverage."
     },
     {
       "id": "unique:103",
@@ -13107,7 +13107,7 @@
       ],
       "status": "prior_hold",
       "masterRows": [],
-      "rationale": "Already held in intake; not present as this named award in Master.",
+      "rationale": "Resource/catalog already held in intake; preserve the recorded parent-resource decision. It is not an individual award and the hold is not proof of child-award coverage.",
       "priorEntityIds": [
         "intake-entity-96c44b9df35c433c"
       ],
@@ -13129,7 +13129,7 @@
         }
       ],
       "owner": "Kelsey Stuart",
-      "nextAction": "Resolve exact identity, public source, current audience and geographic reach before any proposed addition."
+      "nextAction": "Reuse the recorded resource/catalog hold and its exact trigger; assess named child awards separately before claiming coverage."
     },
     {
       "id": "unique:105",
@@ -15688,7 +15688,7 @@
       ],
       "status": "unrepresented_candidate",
       "masterRows": [],
-      "rationale": "No exact named Master identity or conclusive reviewed destination; official identity/eligibility review required.",
+      "rationale": "Historical Promises2Kids Guardian Scholars label points to a UC San Diego Hope Scholars page. The provider/program relationship is unverified; resolve identity and current audience/geography before treating this as a distinct addition.",
       "priorEntityIds": [],
       "priorDispositions": [],
       "owner": "Kelsey Stuart",
