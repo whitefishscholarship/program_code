@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 15
+Plan revision: 17
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`

@@ -1,5 +1,7 @@
 # R2 — REV17 repair continuation authorized
 
+Plan revision: 17
+
 Operate only `/private/tmp/program_code-r2-rev17`, branch
 `codex/plan-rev17-rev15-delivery-repair`, from preserved A15 `94db9e72ff241f5eb0939872d97852657f139ecb`.
 M0 remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Kelsey's exact added repair
