@@ -641,3 +641,13 @@ amendment, historical attestation integration exception or gate waiver is introd
 R2 grants and exact target appear in PLAN-REV15.md and BUILD_STATE. Workbook access,
 new research, configuration changes and later phases remain prohibited. The stale P9
 bookkeeping label remains separately routed; it does not reopen P9.
+
+
+## 2026-09-12T23:49:53Z — Authorized R2 REV15 repair continuation
+
+Record direct grant “authorize all items you have listed” for reviewed recovery
+proposal 5ecf7a7, review-only checkpoint 3b276b4. The one-MiB reader defect became
+visible only after A15. Keep all hashes and gates; do not rewrite A15. Introduce
+only the exact prospective REV17 continuation in the canonical plan/state. Policy
+review precedes implementation; complete candidate review and two-file A17 precede
+publication. All old decisions and R2 boundaries remain.

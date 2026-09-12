@@ -1,3 +1,24 @@
+# R2 — REV17 repair continuation authorized
+
+Operate only `/private/tmp/program_code-r2-rev17`, branch
+`codex/plan-rev17-rev15-delivery-repair`, from preserved A15 `94db9e72ff241f5eb0939872d97852657f139ecb`.
+M0 remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Kelsey's exact added repair
+grant and bounded pins are in PLAN-REV17.md and BUILD_STATE.
+
+Next: independently review this policy checkpoint before implementing the reader
+repair/continuation. Freeze and review C17, create only two-file A17, require zero
+actual post-attestation errors, then exact Preview/CI before merge and Production
+afterward. Only verified first release unlocks the already-authorized REV16.
+Read PLAN-REV17 kickoff and authority before acting. Do not modify locked A15 or
+source979122a. The recovery handoff at3b276b4 retains the complete R1/main histories
+and every open trigger. This overlay supersedes the old unit1 branch instruction.
+
+No workbook access/change, research, configuration change, rollback or later phase.
+Existing application receipts are spent history; do not rerun completed work.
+Post-freeze observations belong on the authorized PR, never after A17 on this branch.
+
+---
+
 # R2 unit 1 — REV15 authorized release preparation
 
 Worktree `/private/tmp/program_code-r2-rev15`, branch `codex/plan-rev15-intake-release`,
