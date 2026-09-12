@@ -1,3 +1,45 @@
+# Coverage proposal prepared — review record controls completion
+
+Operative September12,2026. Continue from the local scholarship-intake branch, descending
+from user-selected checkpoint `0ce5419`. The bounded identity/reach/interview proposal is
+[docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md](SCHOLARSHIP_COVERAGE_PROPOSAL.md). Its new research
+and continuation overlay lives under `docs/evidence/coverage-discovery/`; the original
+intake ledger, applied batch/receipt and reviewed historical crosswalk remain unchanged.
+
+Read `grounding.json`, `proposal.json`, `interview-matrix.md`, `historical-routing.md`,
+`validation.json` and `review.json` in that folder. Completion requires a PASS review bound
+to the actual candidate and its file hashes. Missing review means prepared, not complete.
+This is local proposal review only, never canonical PLAN-REV15 acceptance or release.
+
+- Grounded57 logical controls,206 saved connections to129 unique awards,all five prior
+  recommendations,and83 unresolved historical occurrences.20 occurrences received selected
+  public research;63 remain routed,not verified.26 research records include catalogs/resources.
+- Six named programs have supported broad geography; none is a write-ready addition or
+  new runtime connection. Read exact care,age,study,cycle and conflict limits in the proposal.
+- Priority recommendations: ordinary financial-need discovery wording,optional Teaching,
+  and supported student organizations. Proposed two-input core keeps all other controls
+  reachable through optional sections. No interview/schema/publication was changed.
+- Next action: Kelsey selects the desired interview/publication scope; the next agent can
+  prepare that exact implementation plan. Bounded public follow-up remains available for
+  the20 selected research items and individually selected backlog items. Do not rerun the
+  completed intake or historical scan. No program is ready for automatic workbook addition.
+- Family Fellowship citizenship/orphan ambiguity,BrandSource page contradictions,nsoro
+  adoption conflict,ISF reach,Casey transition and unresolved current cycles remain recorded.
+  Promises2Kids capacity/high-school pause and campus/state restrictions must remain visible.
+- Prior entry quiet window has ended. New writes/copies need new exact authority and fresh
+  complete backup/recovery/freshness/concurrency/readback gates. Old digest authority is spent.
+- No runtime edit,push,PR,Preview,merge,Production,hosted verification,monitor,provider contact,
+  applicant workflow,credential action or recovery-object deletion is authorized by this proposal.
+- Remote-main lookup failed on network resolution; current remote and hosted state unknown.
+  Saved workbook presence is not current freshness. No new workbook or backup inspection.
+
+All prior open-item routing remains in the preserved section below:310 held entities (312
+hold records),I65,Hagan I25,catalogs,recovery objects,full-Master currency,publication,
+monitoring,platform bookkeeping,retired issuer credential,and historical worktrees.
+The new83-row overlay references existing decisions rather than replacing their authority.
+
+---
+
 # Session closeout — PASS; historical reconciliation complete
 
 Operative September 12, 2026. **This section is the authoritative continuation and open-item

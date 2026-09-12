@@ -1,3 +1,24 @@
+# Coverage proposal — continuation
+
+Resume `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`.
+Verify ancestry from `0ce5419` and resolve the current local tip; preserve unrelated work.
+Follow the required read order and the operative top of `docs/CURRENT_HANDOFF.md`, then
+`docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md` and `docs/evidence/coverage-discovery/` grounding,
+proposal,validation and review. A PASS review must match its recorded immutable candidate.
+
+The proposal covers57 controls,all five earlier recommendations,and83 historical routes:
+20 researched here,63 carried. Its six broad-reach named programs are conditional research
+findings,not six available or approved additions. Runtime connections and new batch writes
+remain zero. Use the exact selected next scope;do not implement all recommendations merely
+because this proposal exists. Preserve the completed application,historical scan,310 held
+entities,and every earlier recovery/authority boundary. No new copy/write/release/runtime
+or monitoring authority is granted by this continuation. Refer to the proposal backlog for
+bounded public follow-up;select exact implementation and downstream effects separately.
+
+The original invoked research kickoff is retained below as history for scope/provenance.
+
+---
+
 # Scholarship coverage and discovery — resume kickoff
 
 Resume in `/private/tmp/program_code-scholarship-intake` on `codex/scholarship-intake`.
