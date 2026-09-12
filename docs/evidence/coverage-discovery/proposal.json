@@ -22,6 +22,7 @@
     "holdRecords": 312,
     "existingRecommendations": 5,
     "newProgramResearchRecords": 26,
+    "candidateAdditionsForLaterReview": 4,
     "broadReachNamedPrograms": 6,
     "writeReadyAdditions": 0,
     "newRuntimeConnections": 0
@@ -1581,7 +1582,7 @@
       "savedAwardIds": [],
       "savedConnectionIds": [],
       "gapType": "no_current_effect",
-      "proposal": "Keep visible context in proposed core; label no filtering effect until separately reviewed mapping exists."
+      "proposal": "Move to optional details; label no filtering effect until separately reviewed mapping exists. The proposed core is GPA and target school type."
     },
     {
       "id": "targetSchoolTypes",
@@ -5963,7 +5964,7 @@
       "kind": "named_award_program",
       "reach": "unknown",
       "cycle": "2026 closed;2027 forthcoming",
-      "prerequisites": "Adoption/permanent guardianship after care at13+;age<=21;US college;need;GPA2.5",
+      "prerequisites": "Adopted at or after age 13 OR exited foster care to permanent guardianship at or after age 13; age <=21; US college; financial need; GPA 2.5",
       "evidenceIds": [
         "S09"
       ],
@@ -5971,7 +5972,7 @@
         "https://umpscare.com/scholarship/all-star-college-scholarship/"
       ],
       "proposalDisposition": "candidate_for_later_review",
-      "unknowns": "Applicant geographical restrictions not explicit;next cycle",
+      "unknowns": "Applicant geographical restrictions not explicit;next cycle; prior foster-care history is not established as a requirement for adopted applicants",
       "existingChoiceIds": [
         "foster_care",
         "financial_need"
@@ -6478,6 +6479,119 @@
       "proposalDisposition": "hold_official_rules",
       "unknowns": "Whitefish reach and sponsor rules;no contact authorized",
       "existingChoiceIds": [],
+      "tagStorage": "local proposal metadata only;no worksheet schema/tag write",
+      "tagMeaning": "Discovery association only;requirements retained separately",
+      "membership": "unknown unless prerequisites explicitly establish it",
+      "applicationRoute": "Official public information URL only;application workflow uninspected",
+      "comparisonCandidates": [],
+      "comparisonLimit": "Name and exact URL comparisons nominate only; no unmatched name proves absence or survivor identity.",
+      "writeReady": false,
+      "runtimeAccepted": false
+    }
+  ],
+  "candidateAdditions": [
+    {
+      "id": "ais",
+      "name": "American Industries Trade Scholarship",
+      "kind": "named_award_program",
+      "reach": "verified_broad_conditional",
+      "cycle": "closed;check2027",
+      "prerequisites": "US care;citizen;17\u201325;diploma/GED;listed trade study",
+      "evidenceIds": [
+        "S03"
+      ],
+      "officialUrls": [
+        "https://fosterlove.com/american-industries-scholarship/"
+      ],
+      "proposalDisposition": "candidate_for_later_review",
+      "unknowns": "Exact next-cycle window;final Master survivor comparison",
+      "existingChoiceIds": [
+        "foster_care",
+        "trades"
+      ],
+      "tagStorage": "local proposal metadata only;no worksheet schema/tag write",
+      "tagMeaning": "Discovery association only;requirements retained separately",
+      "membership": "unknown unless prerequisites explicitly establish it",
+      "applicationRoute": "Official public information URL only;application workflow uninspected",
+      "comparisonCandidates": [],
+      "comparisonLimit": "Name and exact URL comparisons nominate only; no unmatched name proves absence or survivor identity.",
+      "writeReady": false,
+      "runtimeAccepted": false
+    },
+    {
+      "id": "vet",
+      "name": "American Industries Vet Tech Scholarship",
+      "kind": "named_award_program",
+      "reach": "verified_broad_conditional",
+      "cycle": "unknown",
+      "prerequisites": "US foster experience;18\u201325;citizen;full-time veterinary route;adopted-from-care excluded by FAQ",
+      "evidenceIds": [
+        "S05"
+      ],
+      "officialUrls": [
+        "https://fosterlove.com/american-industries-vet-tech-scholarship/"
+      ],
+      "proposalDisposition": "candidate_for_later_review",
+      "unknowns": "Cycle and field confirmation;do not infer from generic trade inclusion",
+      "existingChoiceIds": [
+        "foster_care",
+        "trades"
+      ],
+      "tagStorage": "local proposal metadata only;no worksheet schema/tag write",
+      "tagMeaning": "Discovery association only;requirements retained separately",
+      "membership": "unknown unless prerequisites explicitly establish it",
+      "applicationRoute": "Official public information URL only;application workflow uninspected",
+      "comparisonCandidates": [],
+      "comparisonLimit": "Name and exact URL comparisons nominate only; no unmatched name proves absence or survivor identity.",
+      "writeReady": false,
+      "runtimeAccepted": false
+    },
+    {
+      "id": "hope",
+      "name": "Comfort Cases Hope Scholarship",
+      "kind": "named_award_program",
+      "reach": "verified_broad_conditional",
+      "cycle": "2026\u201327 closed",
+      "prerequisites": "US resident;36+months foster care;current/aged-out;senior/current higher-ed;fall undergraduate/trade;one-time",
+      "evidenceIds": [
+        "S07"
+      ],
+      "officialUrls": [
+        "https://comfortcases.org/scholarship/"
+      ],
+      "proposalDisposition": "candidate_for_later_review",
+      "unknowns": "Next cycle;exact age and membership not stated",
+      "existingChoiceIds": [
+        "foster_care"
+      ],
+      "tagStorage": "local proposal metadata only;no worksheet schema/tag write",
+      "tagMeaning": "Discovery association only;requirements retained separately",
+      "membership": "unknown unless prerequisites explicitly establish it",
+      "applicationRoute": "Official public information URL only;application workflow uninspected",
+      "comparisonCandidates": [],
+      "comparisonLimit": "Name and exact URL comparisons nominate only; no unmatched name proves absence or survivor identity.",
+      "writeReady": false,
+      "runtimeAccepted": false
+    },
+    {
+      "id": "umps",
+      "name": "UMPS CARE All-Star College Scholarship",
+      "kind": "named_award_program",
+      "reach": "unknown",
+      "cycle": "2026 closed;2027 forthcoming",
+      "prerequisites": "Adopted at or after age 13 OR exited foster care to permanent guardianship at or after age 13; age <=21; US college; financial need; GPA 2.5",
+      "evidenceIds": [
+        "S09"
+      ],
+      "officialUrls": [
+        "https://umpscare.com/scholarship/all-star-college-scholarship/"
+      ],
+      "proposalDisposition": "candidate_for_later_review",
+      "unknowns": "Applicant geographical restrictions not explicit;next cycle; prior foster-care history is not established as a requirement for adopted applicants",
+      "existingChoiceIds": [
+        "foster_care",
+        "financial_need"
+      ],
       "tagStorage": "local proposal metadata only;no worksheet schema/tag write",
       "tagMeaning": "Discovery association only;requirements retained separately",
       "membership": "unknown unless prerequisites explicitly establish it",

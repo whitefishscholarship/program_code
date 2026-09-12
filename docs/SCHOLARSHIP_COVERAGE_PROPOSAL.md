@@ -70,10 +70,22 @@ or accepted intake disposition was overwritten.
 
 ## Broad reach and candidate list
 
-The separate candidate list is `programs` in the proposal data. Every record includes kind,
+The separate candidate list is `candidateAdditions` in the proposal data, generated from
+the four records marked `candidate_for_later_review`. The full `programs` array retains all
+26 research records, including holds, catalogs and resources. Every candidate retains its
 reach, cycle, prerequisites, evidence, proposed choice association, duplicate-comparison
-limits and unresolved work. Tags would live only in local metadata keyed to these proposal
-identities until reconciled to final award IDs. No new sheet columns or hidden summary tags.
+limits and unresolved work. All four require final Master identity reconciliation and
+separate batch authority; **zero are write-ready**.
+
+| Candidate ID | Proposed addition | Remaining individual gates |
+| --- | --- | --- |
+| `ais` | American Industries Trade Scholarship | Closed; verify next cycle and final Master survivor identity. Preserve US care, citizenship, age, diploma/GED and trade requirements. |
+| `vet` | American Industries Vet Tech Scholarship | Verify cycle and field rules independently of the trade award; preserve age, citizenship, full-time study and adopted-from-care FAQ exclusion. |
+| `hope` | Comfort Cases Hope Scholarship | 2026–27 closed; verify next cycle. Preserve US residence, 36+ months in care, current/aged-out status and undergraduate/trade conditions; age and membership remain unstated. |
+| `umps` | UMPS CARE All-Star College Scholarship | Verify next cycle and applicant geography. Eligibility alternatives are adoption at/after 13 OR exit from foster care to permanent guardianship at/after 13; do not impose prior care on adopted applicants. Preserve age, college, need and GPA conditions. |
+
+Tags would live only in local metadata keyed to these proposal identities until reconciled
+to final award IDs. No new sheet columns or hidden summary tags.
 
 Six named programs have affirmative evidence of broad geography: Family Fellowship,
 American Industries Trade, American Industries Vet Tech, BrandSource, Comfort Cases Hope,

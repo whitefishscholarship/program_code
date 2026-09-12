@@ -48,7 +48,7 @@ Generated from the pinned local code and revision225 publications. Counts are un
 | `company_employee` — Corporate Sponsor Employee / Dependent | 3 | current_saved_connection | Retain as optional; only supported positive relevance; exact conditions on award cards. |
 | `gpa` — Unweighted GPA | 49 | current_saved_connection | Preserve current behavior; any implementation requires separate selection. |
 | `residenceState` — State of residence | 0 | no_current_effect | Propose optional/collapsed until reviewed geographical mappings exist; no new filter in this proposal. |
-| `educationalStatus` — Current educational status | 0 | no_current_effect | Keep visible context in proposed core; label no filtering effect until separately reviewed mapping exists. |
+| `educationalStatus` — Current educational status | 0 | no_current_effect | Move to optional details; label no filtering effect until separately reviewed mapping exists. The proposed core is GPA and target school type. |
 | `targetSchoolTypes` — Target school type | 64 | current_saved_connection | Preserve current behavior; any implementation requires separate selection. |
 | `collegeAccepted` — Accepted to college? | 0 | no_current_effect | Move to optional details or defer display in a selected future release; existing controls unchanged now. |
 | `gapYear` — Planning a gap year? | 0 | no_current_effect | Move to optional details or defer display in a selected future release; existing controls unchanged now. |

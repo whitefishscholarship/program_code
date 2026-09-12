@@ -58,6 +58,9 @@ for p in d['programs']:
     assert p['evidenceIds'] and set(p['evidenceIds'])<=source_ids
     assert p['kind'] and p['reach'] and p['cycle'] and p['unknowns']
     assert set(p['existingChoiceIds'])<=expected
+assert d['candidateAdditions']==[p for p in d['programs'] if p['proposalDisposition']=='candidate_for_later_review']
+assert {p['id'] for p in d['candidateAdditions']}=={'ais','vet','hope','umps'}
+assert d['counts']['candidateAdditionsForLaterReview']==4
 intake=read('docs/evidence/SCHOLARSHIP-INTAKE-ledger.json')
 assert {x['id'] for x in d['existingRecommendations']}=={x['id'] for x in intake['interviewGaps']}
 for g in d['existingRecommendations']:

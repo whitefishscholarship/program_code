@@ -70,8 +70,23 @@
     "No source mutation,copy,runtime edit or publication"
   ],
   "deterministicViewHashes": {
-    "proposal.json": "19c510382519cb00e9361d3feb3107544de330e29b12c844a5cda47e61f2cd59",
-    "interview-matrix.md": "3ab2d2515bc3696d29851c7eae51864d5442b83818cdf892a1a5068618cff887",
+    "proposal.json": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8",
+    "interview-matrix.md": "f446c5acca6988893285d5af266ad7b7c2cafe606b2e2be10bc1b2b7e5a6714f",
     "historical-routing.md": "078b4c504bacd2f57f8064b9bfa524fb43431526d832b3db0eb6a30d7eacb3f1"
+  },
+  "reviewRemediation": {
+    "recordedAt": "2026-09-12T16:35:35.410656+00:00",
+    "reviewedCandidate": "3f7c876fc0220bd71c7c76d0987006d4dd4ef53f",
+    "findingsAddressed": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "checks": [
+      "Proposal accounting/preservation validator PASS",
+      "Generated output determinism PASS",
+      "git diff --check PASS"
+    ],
+    "applicationCheckReuse": "Full application checks above remain applicable: remediation changes only proposal evidence, generator, validator and report. Runtime, fixtures, dependencies and application test inputs remain unchanged."
   }
 }

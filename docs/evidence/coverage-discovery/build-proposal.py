@@ -43,7 +43,7 @@ def control(id, label, choices, effect, awardids=(), proposal=None):
 control('gpa','Unweighted GPA',{'numericRange':[0,4]},'saved_GPA_shortlisting',
     [r['targetId'] for r in shortlist['rows'] if r['targetKind']=='award' and r['minimumGpa'] is not None])
 control('residenceState','State of residence',inventory['RESIDENCE_STATES'],'none',proposal='Propose optional/collapsed until reviewed geographical mappings exist; no new filter in this proposal.')
-control('educationalStatus','Current educational status',inventory['EDUCATIONAL_STATUSES'],'none',proposal='Keep visible context in proposed core; label no filtering effect until separately reviewed mapping exists.')
+control('educationalStatus','Current educational status',inventory['EDUCATIONAL_STATUSES'],'none',proposal='Move to optional details; label no filtering effect until separately reviewed mapping exists. The proposed core is GPA and target school type.')
 control('targetSchoolTypes','Target school type',inventory['TARGET_SCHOOL_TYPES'],'saved_school_shortlisting',
     [r['targetId'] for r in shortlist['rows'] if r['targetKind']=='award' and r['schoolTypes']])
 for id,label in [('collegeAccepted','Accepted to college?'),('gapYear','Planning a gap year?')]:
@@ -107,6 +107,8 @@ for p in programs:
     p['writeReady']=False
     p['runtimeAccepted']=False
 
+candidate_additions=[p for p in programs if p['proposalDisposition']=='candidate_for_later_review']
+
 data={'schemaVersion':1,'id':'SCHOLARSHIP-COVERAGE-PROPOSAL-1','status':'local_proposal_prepared_review_record_controls_completion',
  'inputCheckpoint':'0ce54195cf0cf0d64bd2a4752619997880ad45a2','observationDate':'2026-09-12',
  'authority':'Selected resume kickoff and current user instruction; local/read-only proposal only',
@@ -117,11 +119,11 @@ data={'schemaVersion':1,'id':'SCHOLARSHIP-COVERAGE-PROPOSAL-1','status':'local_p
     'controls':len(controls),'specialChoices':38,'activityChoices':4,'savedConnections':len(connections),
     'savedConnectedAwards':len({x['awardId'] for x in connections}),'savedCatalogAwards':len(names),
     'heldIntakeEntities':sum(e['disposition']=='hold' for e in intake['entities']),'holdRecords':len(intake['holds']),
-    'existingRecommendations':len(gaps),'newProgramResearchRecords':len(programs),
+    'existingRecommendations':len(gaps),'newProgramResearchRecords':len(programs),'candidateAdditionsForLaterReview':len(candidate_additions),
     'broadReachNamedPrograms':sum(p['reach']=='verified_broad_conditional' and p['kind']=='named_award_program' for p in programs),
     'writeReadyAdditions':0,'newRuntimeConnections':0},
  'controls':controls,'connections':connections,'savedAwardNames':names,
- 'existingRecommendations':gaps,'historicalRouting':routes,'programs':programs,
+ 'existingRecommendations':gaps,'historicalRouting':routes,'programs':programs,'candidateAdditions':candidate_additions,
  'sources':research['sources'],'discoveryBacklog':research['discoveryBacklog'],
  'limits':['No current Master freshness audit; saved416 records only','No full provider catalog enumeration except explicit page-level accounting',
  'Broad reach counts identify named programs with evidence of broad geography; not confirmed open or universally eligible awards',
