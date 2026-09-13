@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV17",
+  "reviewerTaskId": "/root/r1_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-13T00:05:26Z",
+  "outcome": "accepted",
+  "candidateCommit": "a63d53485943996dd48f495db0171d494f373098",
+  "candidateTree": "1b83e4451490e60c48447f5bbb61d1b12e7da487",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "candidateManifestPath": "docs/evidence/PLAN-REV17-manifest.json",
+  "candidateManifestSha256": "39f9e1d78dbd43661fc2da06fcd7382d0a3413c7aa4ca40ce55d243b1dda81b2",
+  "decisionScope": "Accept the complete immutable PLAN-REV17 candidate against M0, including preserved REV15 candidate and attestation ancestry, the authorized finite Git-reader repair and exact REV15 continuation. This review does not assert that A17 exists or that post-attestation, hosted, Preview or Production gates have passed. Create only the required direct-child two-file attestation, then require actual local and hosted-mode zero-error validation before publication. Verify Preview and CI before ancestry-preserving merge and Production afterward. REV16 remains dependent on verified predecessor delivery.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "severity": "medium",
+      "summary": "Initial continuation tests lacked a known-valid repository baseline and relied on generic nonempty-error assertions.",
+      "rationale": "Resolved before candidate freeze. The isolated local fixture now proves clean pre-attestation and immutable-candidate helper contexts, asserts specific failures for changed authority and protected artifacts, missing or drifted main, wrong branch, premature REV16, ancestry and path violations, and proves validity after restoration. Independent execution passed.",
+      "owner": "R2 implementation agent",
+      "target": "Resolved in frozen PLAN-REV17 candidate a63d53485943996dd48f495db0171d494f373098"
+    }
+  ],
+  "resolvedHighFinding": {
+    "summary": "Missing or unreadable origin/main initially skipped the repair helper's baseline and branch checks.",
+    "resolution": "The helper now explicitly rejects absent, malformed or unreadable origin/main commit identity before the continuation can be valid. Targeted missing-main and drifted-main regressions pass. Independently rechecked before freeze.",
+    "owner": "R2 implementation agent",
+    "target": "Resolved in frozen PLAN-REV17 candidate a63d53485943996dd48f495db0171d494f373098"
+  },
+  "verification": [
+    "Independently verified the exact manifest SHA256, baseline, candidate and tree; regenerated the complete M0-to-C17 change set and recomputed every one of its 189 candidate-tree blob hashes.",
+    "Verified the complete A15-to-C17 change set equals precisely the 14 authorized continuation paths.",
+    "Independently verified all 574 protected A15 blobs remain byte-identical, including the original REV15 authority evidence, manifest and canonical review. Compared the complete current REV15 amendment object directly against C15.",
+    "Verified M0/C15/A15/C17 and independently reviewed policy ancestry. Original A15 remains the direct child of C15 and changes exactly the original REV15 manifest and review paths. Verified every immutable policy-review candidate hash.",
+    "Reviewed all repair implementation and governance changes. The reader has a finite 16 MiB bound and returns failure for unreadable or oversized objects; incorrect hashes remain rejected. The continuation is restricted to exact authority, identities, branch, baseline, paths, preserved records and canonical attestation context.",
+    "Verified web/package.json differs from A15 only by appending the new regression command. There is no runtime, fixture, workflow or deployment-configuration delta against M0.",
+    "Independently ran node --import tsx scripts/test-plan-rev17-rev15-delivery-repair.ts: exit 0, including the four actual oversized preserved blobs, wrong hashes, missing objects, over-limit input and targeted continuation regressions.",
+    "Independently ran the actual tracked validator against frozen C17: exit 1 with exactly the four required pre-attestation diagnostics, consisting of REV15's undelivered-tip error and REV17's missing manifest, review and committed attestation. No large-blob hash error or additional failure remained.",
+    "Inspected final recorded clean-install, typecheck, full-test, default-build, intake and zero-spreadsheet runtime/build-trace results. Final full tests include the remediated regression suite.",
+    "Verified the browser script digest, saved browser-artifact hashes and embedded 360/768/1440 results covering unchanged counts, public visible CSV, keyboard, edit/reset/reload and zero answer persistence or transmission.",
+    "Verified the clean frozen candidate and complete baseline-to-candidate git diff --check result."
+  ],
+  "limits": [
+    "Reviewer authored or edited no candidate files and created no repository commits. Regression fixtures were isolated temporary test repositories.",
+    "This review accepts C17 for its exact canonical attestation; it does not waive the mandatory post-attestation zero-error local and hosted-mode checks.",
+    "Full tests, build and browser outcomes were assessed from recorded evidence; focused repair tests and frozen-candidate validation were independently rerun.",
+    "No network, workbook, scholarship source, backup or recovery-object access, provider interaction or deployment was performed by the reviewer.",
+    "Remote and provider observations were assessed from execution evidence and were not independently refreshed.",
+    "Original scholarship uncertainties, source-freshness limits, spent workbook authority and open-item routing remain unchanged.",
+    "Subsequent REV16 integration must preserve REV15/REV17 records and artifacts, retain planRevision at least 17 and independently review the union of repair and coverage validation/test changes."
+  ]
+}

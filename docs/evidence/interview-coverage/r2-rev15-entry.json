@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-12T23:08:58.910037+00:00",
+  "phase": "R2 unit1 REV15",
+  "grant": "I authorize R2 only, following the reviewed release package: deliver REV15 first, then REV16 after REV15 is verified. This includes the required authority/evidence updates, branch pushes, PRs, Vercel Preview, merges, Production deployments, and CI/hosted verification on the existing web project. Preserve all review and acceptance gates. No workbook access or changes, new research, configuration changes, or later phases are authorized.",
+  "sourceCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "r1ReviewedTip": "979122a13d4a8098d8cea26f115add1e68405355",
+  "r1ReviewBinding": "PASS14files; candidate33838a38fb02e5354c66b60c023f03360763ccbb",
+  "remoteChecks": [
+    {
+      "command": "gh api repos/whitefishscholarship/program_code/commits/main --jq .sha",
+      "result": "5fa08541b6b49484dedc8fc06012e47c658ce8fb"
+    },
+    {
+      "command": "git -c url.https://github.com/.insteadOf=git@github.com: fetch origin main",
+      "result": "PASS; FETCH_HEAD and origin/main match API"
+    }
+  ],
+  "github": {
+    "actor": "whitefishscholarship",
+    "repository": "whitefishscholarship/program_code",
+    "private": true,
+    "push": true,
+    "mergeCommitAllowed": true
+  },
+  "provider": {
+    "inspection": "Authenticated browser DOM/accessibility, read-only",
+    "actor": "whitefishscholarship",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "projectUrl": "https://vercel.com/whitefishscholarships-projects/web/settings",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "teamUrl": "https://vercel.com/whitefishscholarships-projects/~/settings",
+    "canonicalHostname": "web-two-gules-45.vercel.app",
+    "observedProductionSource": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "observedProductionDeployment": "7oeA8SihBQ4FoZoBNemVufjSXoq1",
+    "observedProductionUrl": "web-roh5wurba-whitefishscholarships-projects.vercel.app",
+    "sourceLink": "https://github.com/whitefishscholarship/program_code/tree/main/web",
+    "downstreamEffects": "Project overview explicitly says push main to update Production; active branches show Preview linked to prior PRs; local CI runs PR/main checks",
+    "notAHealthProof": true
+  },
+  "preservation": "Original source branch and all worktrees untouched; no workbook or provider configuration action",
+  "unknowns": [
+    "Future release candidate/attestation/merge/deployment IDs",
+    "Current source/backup freshness",
+    "Hosted application health; entry only verifies identity"
+  ]
+}

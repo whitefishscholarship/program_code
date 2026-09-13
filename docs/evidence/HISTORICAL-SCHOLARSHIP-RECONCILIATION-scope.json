@@ -1,0 +1,54 @@
+{
+  "observedAt": "2026-09-12T15:52:46.153Z",
+  "authority": "User explicitly selected read-only reconciliation of the two named historical resource tabs on September 12, 2026. This supersedes previous no-legacy-access scope only for these two tabs and this comparison; no writes, further tabs, provider contact, forms or publication.",
+  "oldSource": {
+    "id": "1eWGMdavcEECUcY_-nZ9gR2nMTN7T7T6oipG5ql1LoIE",
+    "title": "Whitefish High School Senior Scholarships",
+    "mime_type": null,
+    "size": null,
+    "url": null,
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": "2026-09-11T20:51:11.628Z",
+    "parent_ids": null,
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "currentSource": {
+    "id": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "title": "Whitefish HS Scholarship Database",
+    "mime_type": null,
+    "size": null,
+    "url": null,
+    "file_or_folder": null,
+    "created_time": null,
+    "modified_time": "2026-09-11T10:51:53.348Z",
+    "parent_ids": null,
+    "drive_id": null,
+    "current_user_can_share": null,
+    "has_augmented_permissions": null,
+    "shared": null,
+    "permissions": null,
+    "source_visibility_status": "access_not_verified"
+  },
+  "sourceStableAcrossRead": true,
+  "currentStableAcrossRead": true,
+  "sourceSha256": [
+    "90bd92b841ac3fa7c99a89b5214d70639c898ffe64d28609c918b097d475b7b4",
+    "b4216ae1480b6379da48b422ea8b74a81fa79655dd6a80ce505b9c51ca50b53b"
+  ],
+  "masterSha256": "daa832dff4f9b8dda0e7b3fe0309e5388b2c854bb04bb87e2167351ac83bba16",
+  "ranges": [
+    "'Resource: WHS Senior Scholarships_Updated 2_3_26'!A1:Q807",
+    "'Resource: \"Unique\" Finds_Updated 10_2_25'!A1:Q973",
+    "'Master Database'!A1:O1060"
+  ],
+  "firstFiveSeniorRows": "A1:AA5 was used for header discovery; no senior R onward scholarship/contact/applicant body scan performed. Those header/instruction fields are omitted from saved public evidence.",
+  "tabsExcluded": "Every other legacy tab, including two preceding hidden tabs. Metadata only.",
+  "sourceContentPolicy": "Saved public names, categories and scholarship URLs only; no full workbook or applicant data copied. Row-summary text used only in bounded tool memory. No application links opened.",
+  "completedIntakePreserved": true
+}

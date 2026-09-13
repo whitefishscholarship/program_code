@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_READY_FOR_IMMEDIATE_FRESHNESS_CHECK",
+  "sourceId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "backup": {
+    "success": true,
+    "id": "11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM",
+    "title": "Whitefish HS Scholarship Database — final intake backup — 2026-09-11T1046Z — d2d4c779ff0d",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "url": "https://docs.google.com/spreadsheets/d/11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM/edit?usp=drivesdk",
+    "made_private": false
+  },
+  "access": [
+    {
+      "id": "11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM",
+      "title": "Whitefish HS Scholarship Database — final intake backup — 2026-09-11T1046Z — d2d4c779ff0d",
+      "mime_type": "application/vnd.google-apps.spreadsheet",
+      "size": null,
+      "url": null,
+      "file_or_folder": "file",
+      "created_time": "2026-09-11T10:46:36.327Z",
+      "modified_time": "2026-09-11T10:46:36.327Z",
+      "parent_ids": [
+        "1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": false,
+      "permissions": [
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": "kelsey@waypointfranchise.com",
+          "domain": null,
+          "displayName": "Kelsey Stuart",
+          "allowFileDiscovery": null
+        }
+      ],
+      "source_visibility_status": "permission_metadata_available"
+    },
+    {
+      "id": "1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix",
+      "title": "Scholarship Intake Recovery",
+      "mime_type": null,
+      "size": null,
+      "url": null,
+      "file_or_folder": null,
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": null,
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": false,
+      "permissions": [
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": "kelsey@waypointfranchise.com",
+          "domain": null,
+          "displayName": "Kelsey Stuart",
+          "allowFileDiscovery": null
+        }
+      ],
+      "source_visibility_status": "permission_metadata_available"
+    }
+  ],
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "approvedContent": [
+    {
+      "title": "Master backup 2026-07-12",
+      "ranges": [
+        "'Master backup 2026-07-12'!A1:O1060"
+      ],
+      "equal": true,
+      "sourceSha256": "d1d73e6da4065bd6a6514d0ab6697ea2c4c5ad656189b8721a22b7fa723dfa5a",
+      "backupSha256": "d1d73e6da4065bd6a6514d0ab6697ea2c4c5ad656189b8721a22b7fa723dfa5a",
+      "at": "2026-09-11T10:47:39.729Z"
+    },
+    {
+      "title": "Staging backup 2026-06-17",
+      "ranges": [
+        "'Staging backup 2026-06-17'!A1:S1233"
+      ],
+      "equal": true,
+      "sourceSha256": "33fc0c7927f43950ecc8438ef810e7371c27861b42bdbab5b32344dc151a41ec",
+      "backupSha256": "33fc0c7927f43950ecc8438ef810e7371c27861b42bdbab5b32344dc151a41ec",
+      "at": "2026-09-11T10:47:43.664Z"
+    },
+    {
+      "title": "Start Here",
+      "ranges": [
+        "'Start Here'!A1:D11",
+        "'Start Here'!B12:D12",
+        "'Start Here'!A13:D20"
+      ],
+      "equal": true,
+      "sourceSha256": "bcfeeba9b5777be2db31c88c821f66ab5141a446551ec748787756d72ba0272a",
+      "backupSha256": "bcfeeba9b5777be2db31c88c821f66ab5141a446551ec748787756d72ba0272a",
+      "at": "2026-09-11T10:47:44.631Z"
+    },
+    {
+      "title": "Student View",
+      "ranges": [
+        "'Student View'!A1:O21"
+      ],
+      "equal": true,
+      "sourceSha256": "fef299b8211cac3f0bb2fea18e4d2cbc02e8f5a60ba1a93c338232ea4b089e78",
+      "backupSha256": "fef299b8211cac3f0bb2fea18e4d2cbc02e8f5a60ba1a93c338232ea4b089e78",
+      "at": "2026-09-11T10:47:45.950Z"
+    },
+    {
+      "title": "Archive",
+      "ranges": [
+        "'Archive'!A1:O82"
+      ],
+      "equal": true,
+      "sourceSha256": "1149166e495fd36bb49e1649b86be107281f8ea4a716b025fcefa78e3333f5f6",
+      "backupSha256": "1149166e495fd36bb49e1649b86be107281f8ea4a716b025fcefa78e3333f5f6",
+      "at": "2026-09-11T10:47:47.881Z"
+    },
+    {
+      "title": "Categories",
+      "ranges": [
+        "'Categories'!A1:B50"
+      ],
+      "equal": true,
+      "sourceSha256": "77dd40a0b439e54e6efb0820c2ae78594e6cf021cea8f442b7f497a99175cfcf",
+      "backupSha256": "77dd40a0b439e54e6efb0820c2ae78594e6cf021cea8f442b7f497a99175cfcf",
+      "at": "2026-09-11T10:47:48.823Z"
+    },
+    {
+      "title": "Master Database",
+      "ranges": [
+        "'Master Database'!A1:O1060"
+      ],
+      "equal": true,
+      "sourceSha256": "31793cd47c06b5256cc15487412daac6fdfea02d80be5851b82ab8594afa676b",
+      "backupSha256": "31793cd47c06b5256cc15487412daac6fdfea02d80be5851b82ab8594afa676b",
+      "at": "2026-09-11T10:48:00.697Z"
+    },
+    {
+      "title": "Scraped Data",
+      "ranges": [
+        "'Scraped Data'!A1:Q1000"
+      ],
+      "equal": true,
+      "sourceSha256": "8a47284220553693b5967813825a6890a9209e0141fe1b9209c01e5ba2b01da9",
+      "backupSha256": "8a47284220553693b5967813825a6890a9209e0141fe1b9209c01e5ba2b01da9",
+      "at": "2026-09-11T10:48:06.356Z"
+    },
+    {
+      "title": "Ingestion Staging",
+      "ranges": [
+        "'Ingestion Staging'!A1:S1377"
+      ],
+      "equal": true,
+      "sourceSha256": "117d034a939ae8198e973b94b22583b285edf400ad322f40ecae6eabee9aa24f",
+      "backupSha256": "117d034a939ae8198e973b94b22583b285edf400ad322f40ecae6eabee9aa24f",
+      "at": "2026-09-11T10:48:11.580Z"
+    },
+    {
+      "title": "Removed 2026-06-16",
+      "ranges": [
+        "'Removed 2026-06-16'!A1:S20"
+      ],
+      "equal": true,
+      "sourceSha256": "264c2f992ebd0b0c7727cc5a2c07e4fb762bcd1585442d9254a0a6b56aded159",
+      "backupSha256": "264c2f992ebd0b0c7727cc5a2c07e4fb762bcd1585442d9254a0a6b56aded159",
+      "at": "2026-09-11T10:48:12.760Z"
+    },
+    {
+      "title": "Curated Review 2026-06-17",
+      "ranges": [
+        "'Curated Review 2026-06-17'!A1:S21"
+      ],
+      "equal": true,
+      "sourceSha256": "8b1476e995f4988935be50426f8f3f6bce0c69d00abd715618e552aff238beb3",
+      "backupSha256": "8b1476e995f4988935be50426f8f3f6bce0c69d00abd715618e552aff238beb3",
+      "at": "2026-09-11T10:48:14.088Z"
+    },
+    {
+      "title": "Removed 2026-06-17",
+      "ranges": [
+        "'Removed 2026-06-17'!A1:O20"
+      ],
+      "equal": true,
+      "sourceSha256": "1d7c75c82b357d4d2fa2ed2cad07bd83519afc20d2723682b2fc04127e99fc83",
+      "backupSha256": "1d7c75c82b357d4d2fa2ed2cad07bd83519afc20d2723682b2fc04127e99fc83",
+      "at": "2026-09-11T10:48:15.060Z"
+    },
+    {
+      "title": "Curated Review 2026-07-05",
+      "ranges": [
+        "'Curated Review 2026-07-05'!A1:S29"
+      ],
+      "equal": true,
+      "sourceSha256": "908cf500f966bff62aa32534d0426eb3aa5488c291113feaf25405fc1eadf848",
+      "backupSha256": "908cf500f966bff62aa32534d0426eb3aa5488c291113feaf25405fc1eadf848",
+      "at": "2026-09-11T10:48:16.768Z"
+    },
+    {
+      "title": "Curated Review 2026-07-11",
+      "ranges": [
+        "'Curated Review 2026-07-11'!A1:S71"
+      ],
+      "equal": true,
+      "sourceSha256": "a25a17ed912570780c4165a740664f72fdb85de91e7b638a3d9beab004e3552f",
+      "backupSha256": "a25a17ed912570780c4165a740664f72fdb85de91e7b638a3d9beab004e3552f",
+      "at": "2026-09-11T10:48:18.466Z"
+    }
+  ],
+  "masterEqualsSuccessfulRecoveryBaseline": true,
+  "backupOpenedReadOnly": "CUA tab 6, signed in as Kelsey, Master A1 shown; no editing actions.",
+  "featureReceipt": "docs/evidence/SCHOLARSHIP-INTAKE-final-feature-preservation.json",
+  "recoveryReceipt": "docs/evidence/SCHOLARSHIP-INTAKE-disposable-recovery.json",
+  "affectedCellBackup": {
+    "id": "1PpCqhvd85M0ZQ0D0QMwVd2P8JEYQuEXw",
+    "bytes": 135853,
+    "sha256": "ab5cd7159871fa26426f926b87a5fd7918900cdb5d37cfe6b2a1bfd6913cc270",
+    "previousExactByteReadback": "PASS; preimages remain applicable because complete Master unchanged."
+  },
+  "quietWindow": "Original user confirms no other editors this session; latest Yes then proceed continues it. Single writer; immediate read/revision comparison required.",
+  "scholarshipBatchWrites": 0
+}

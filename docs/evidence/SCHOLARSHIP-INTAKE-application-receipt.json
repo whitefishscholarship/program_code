@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_APPLIED_AND_RECONCILED",
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "sheet": "Master Database",
+  "sheetId": 0,
+  "authorityPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md",
+  "headerCorrectionPath": "docs/evidence/SCHOLARSHIP-INTAKE-header-correction.json",
+  "backupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-final-backup-verification.json",
+  "featurePreservationPath": "docs/evidence/SCHOLARSHIP-INTAKE-final-feature-preservation.json",
+  "safeguardReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-final-safeguard-review.json",
+  "prewrite": {
+    "at": "2026-09-11T10:51:32.518Z",
+    "revision": "228",
+    "masterAndStudentExactBaseline": true,
+    "targets": 3367,
+    "requests": 301,
+    "payloadSha256": "18e8e1efffdae87f8b5ccb9e93bb9be0ed0a8eb3fbfadd42827f5838689d466d",
+    "privateBackupAccessVerified": true,
+    "quietWindow": "User confirmed no other editors and latest Yes then proceed; one writer in current uninterrupted session."
+  },
+  "write": {
+    "attemptAt": "2026-09-11T10:51:43.806Z",
+    "successfulReplyCount": 301,
+    "requestCount": 301,
+    "operations": 257,
+    "additions": 219,
+    "updates": 38,
+    "cells": 3367,
+    "fieldMask": "userEnteredValue,textFormatRuns",
+    "retryCount": 0
+  },
+  "readback": {
+    "verifiedTargetCells": 3367,
+    "verifiedUntargetedCells": 12533,
+    "at": "2026-09-11T10:52:19.955Z",
+    "studentView315CellsUnchanged": true,
+    "all14SheetMetadataUnchanged": true,
+    "originalSharingUnchanged": true,
+    "pass": true
+  },
+  "identity": {
+    "beforeNamedRows": 197,
+    "afterNamedRows": 416,
+    "addedNamedRows": 219,
+    "uniqueOperationIds": 257,
+    "beforeDuplicateNameGroupSizes": [
+      2
+    ],
+    "afterDuplicateNameGroupSizes": [
+      2
+    ],
+    "exactExpectedCellsVerified": true,
+    "appendRange": "A199:O417",
+    "updateRows": 38,
+    "holdsUnchanged": 310,
+    "dimensionsUnchanged": true,
+    "visualCheck": "Google-rendered F199:I199 at 100%; values and links visible with original 100px columns and existing overflow/clip behavior. Long names/summaries require cell selection; no unapproved formatting or dimensions changed."
+  },
+  "postWriteRevision": "229",
+  "postWriteModifiedTime": "2026-09-11T10:51:53.348Z",
+  "postWriteMasterNativeSha256": "f51179422c68b762dd55c21c669f3565865d4279ff86694bee6f90e2bff2dcb7",
+  "privateBackupId": "11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM",
+  "recoveryOwner": "Kelsey Stuart",
+  "preservedBackupIds": [
+    "11OuqHa6JcTlJwhzcxOR5i6ZZoQQ8cLgAcglQQfMSGMY",
+    "1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo",
+    "11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM"
+  ],
+  "affectedCellBackupId": "1PpCqhvd85M0ZQ0D0QMwVd2P8JEYQuEXw",
+  "recoveryTestCopyId": "1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0",
+  "limitations": [
+    "Original column widths and overflow/clip layout retained. Long text requires selecting a cell; restyling not included in authorized batch.",
+    "No new scholarship research or currency claim beyond frozen reviewed evidence.",
+    "No website publication, runtime change, push/PR/merge/deployment or whole-workbook restore.",
+    "Not canonical stage acceptance; reserved PLAN-REV15 manifest/review/attestation checks remain unresolved.",
+    "Any further batch needs its own satisfied trigger/authority and fresh full backup. Original rollback needs exact new authority and current-state reconciliation."
+  ],
+  "closeoutReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-closeout-review.json",
+  "localVerification": {
+    "git diff --check": "PASS",
+    "node --import tsx scripts/validate-build-plan.ts": "Exit1 only three pre-existing reserved PLAN-REV15 missing manifest/review/attestation checks",
+    "codeTests": "No code changes after previously recorded passing typecheck/full test/default build. See SCHOLARSHIP-INTAKE-application-validation.json.",
+    "backupFinalCheck": "Still sole-owner private and modified time remains creation time 2026-09-11T10:46:36.327Z."
+  }
+}

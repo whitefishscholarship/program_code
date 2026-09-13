@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "recordedAt": "2026-09-11T04:08:40.157391+00:00",
+  "reviewer": {
+    "task": "/root/intake_supplement_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "reviewedCandidateCommit": "3fa53408f2c721ca08c9f0e92f8cf23f7ddf6e2a",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "batchId": "batch-association-supplement-011",
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 1
+  },
+  "dispositions": [
+    {
+      "finding": "SUP011-H1 NTHS duplicate withdrawn to Master143",
+      "status": "resolved",
+      "owner": "intake implementation agent",
+      "target": "3fa53408f2c721ca08c9f0e92f8cf23f7ddf6e2a",
+      "rationale": "SUP011-H1 NTHS duplicate withdrawn to Master143"
+    },
+    {
+      "finding": "SUP011-M1 PAPA discovery provenance resolved",
+      "status": "resolved",
+      "owner": "intake implementation agent",
+      "target": "3fa53408f2c721ca08c9f0e92f8cf23f7ddf6e2a",
+      "rationale": "SUP011-M1 PAPA discovery provenance resolved"
+    },
+    {
+      "finding": "SUP011-L1 Epic Master130 relation added",
+      "status": "resolved",
+      "owner": "intake implementation agent",
+      "target": "3fa53408f2c721ca08c9f0e92f8cf23f7ddf6e2a",
+      "rationale": "SUP011-L1 Epic Master130 relation added"
+    }
+  ],
+  "coverage": {
+    "entities": 12,
+    "rows": 23,
+    "activeProposedAdditions": 2,
+    "activeProposedFields": 30,
+    "activeTags": 2,
+    "activeInterviewCoverageDecisions": 6
+  },
+  "entityIds": [
+    "intake-entity-0e2ec1187dc244a7",
+    "intake-entity-b3683beb4b39e19d",
+    "intake-entity-19e518a6fb1d2aa0",
+    "intake-entity-7c08bd1c1e606e6b",
+    "intake-entity-134053e940915529",
+    "intake-entity-ff65aad3d64558c1",
+    "intake-entity-7e34620ef7efe6da",
+    "intake-entity-d6e88851fec5054e",
+    "intake-entity-c4b8c2e80d8f7e29",
+    "intake-entity-617b0c7fcf81867e",
+    "intake-entity-d9993145336cca57",
+    "intake-entity-10fdd5d4c2991973"
+  ],
+  "rowIds": [
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-11:e2a41e68aa4e",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-57:043c25f7c937",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-91:da5d04522957",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-211:0ab93bb8d034",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-212:9e305b6513da",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-213:69bb9ceb74b6",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-225:290854f94d59",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-226:7d7a46d5c1f5",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-227:c856cda5bdb3",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-228:2f0da51139b0",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-411:30aa014963b0",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-25:2f0da51139b0",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-48:b86dbab49538",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-88:da5d04522957",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-213:043c25f7c937",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-256:e2a41e68aa4e",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-267:290854f94d59",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-268:7d7a46d5c1f5",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-269:c856cda5bdb3",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-301:0ab93bb8d034",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-302:9e305b6513da",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-303:69bb9ceb74b6",
+    "intake-rev226-74df373b3e30738e:sheet-1110204944:row-4:02294f179155"
+  ],
+  "reviewedLedgerSha256": "9578b4fa99bf94712b0ad1e7fad901daf9d674a744998c6f76a4cab6021b1b87",
+  "limits": "Bounded independent checkpoint; not final candidate acceptance, source-write authority or publication. Historical review receipts preserved; source content is dated."
+}

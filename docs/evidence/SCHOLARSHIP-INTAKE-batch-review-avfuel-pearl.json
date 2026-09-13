@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "batchId": "batch-avfuel-pearl-015",
+  "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "recordedAt": "2026-09-11T04:28:51.203912+00:00",
+  "reviewer": {
+    "task": "/root/intake_housing_review",
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "freshContext": true
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "AVFUEL-015-M1",
+      "severity": "medium",
+      "status": "resolved",
+      "rationale": "Correct aviation_pilot tag and complete mapping metadata for both awards.",
+      "owner": "/root",
+      "target": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+    },
+    {
+      "id": "AVFUEL-015-M2",
+      "severity": "medium",
+      "status": "resolved",
+      "rationale": "Unrelated donor transaction search description removed; URL/title/position retained.",
+      "owner": "/root",
+      "target": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+    }
+  ],
+  "coverage": {
+    "entities": 16,
+    "rows": 22,
+    "proposedAdds": 2,
+    "proposedFields": 30,
+    "tags": 2,
+    "interviewCoverageDecisions": 4,
+    "officialSources": 6,
+    "distinctDiscoveryEntries": 14
+  },
+  "entityIds": [
+    "intake-entity-916a84e0e89cc9d8",
+    "intake-entity-bf37512091c80c4d",
+    "intake-entity-79b49301bda67d5c",
+    "intake-entity-7c1f61fdba0e1aa7",
+    "intake-entity-ed7e693a0e2b4f14",
+    "intake-entity-64e4904c504d9a58",
+    "intake-entity-4c8c9f304c7bcd0f",
+    "intake-entity-f0f81142599d2222",
+    "intake-entity-3d8acdae066dd2f8",
+    "intake-entity-ca1749e5384304b0",
+    "intake-entity-8fc38e15026ec65f",
+    "intake-entity-f5799c63924c3a01",
+    "intake-entity-0802a500679cba17",
+    "intake-entity-a972e195669d255b",
+    "intake-entity-c9e4cc40f8b12495",
+    "intake-entity-c85a6257e67100a7"
+  ],
+  "rowIds": [
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-103:132641bef092",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-179:53f45c9f2c15",
+    "intake-rev226-74df373b3e30738e:sheet-189878200:row-186:2e9fcd470129",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-187:9c5fc6fd931d",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-188:5cc3c495de00",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-189:11d50f5f4f5c",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-190:7d5ef130b319",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-191:2ac4fb035afc",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-192:016187afb4a4",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-193:0474afaed229",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-194:03471b0f1995",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-195:7339e3433dc0",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-229:da174930b0c9",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-230:cb1526a53a34",
+    "intake-rev226-74df373b3e30738e:sheet-1468843784:row-231:772a42fc56f0",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-38:aebae6d68325",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-82:132641bef092",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-163:53f45c9f2c15",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-166:2e9fcd470129",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-178:53f45c9f2c15",
+    "intake-rev226-74df373b3e30738e:sheet-2106717984:row-181:2e9fcd470129",
+    "intake-rev226-74df373b3e30738e:sheet-1110204944:row-6:3da41a780171"
+  ],
+  "reviewedLedgerSha256": "954f5e0f2ad1d7b1afd4a4e003eb6c69bf76c0e273e827ac1a005bd7ba49fa32",
+  "hashes": {
+    "scopeSha256": "343a9ac108515883820b8b990b40598625f80cad74d3687680220567b6c9a33c",
+    "evidenceSha256": "c72d1e5bc88a3f6c40a41a02ca2e2f0e818b941933271e40323cb48f28e15537"
+  },
+  "limits": "Bounded checkpoint only, no final acceptance, source-write or publication authority. Dated evidence and explicit holds persist."
+}

@@ -369,3 +369,36 @@ git diff --check
 ```
 
 Use the exact evidence and handoff requirements in the active stage contract.
+
+
+## Plan Revision 17 — exact REV15 delivery repair continuation
+
+Kelsey authorized the reviewed R2 repair proposal. This is a single prospective
+exception to the undelivered REV15 tip lock, never a general waiver. The original
+REV15 branch remains at A15 unchanged. Its original candidate, manifest, review,
+authority evidence and complete amendment object remain immutable. Preserve every
+A15 blob outside the exact machine-recorded allowlist. The dedicated policy
+checkpoint requires independent review before implementation.
+
+Only the authorized branch descending from the pinned A15 may prepare C17. Its
+manifest covers the whole unchanged M0 baseline to C17, including preserved A15
+ancestry and artifacts. Fresh independent full-candidate review must accept it.
+Only a valid direct-child, two-file REV17 attestation A17 may replace A15 as the
+allowed undelivered tip. Before A17, retain REV15's tip failure plus REV17's three
+missing-artifact diagnostics; after A17 actual local and hosted-mode checks must
+report zero errors. Preserve all other acceptance rules and historical exceptions.
+No ordinary post-A17 commit is allowed before delivery.
+
+The finite 16 MiB Git reader must fail closed for unreadable, over-limit or
+incorrect-hash objects; all four preserved large blobs must pass regression tests.
+Run the full existing matrix, new adversarial continuation/reader tests and exact
+Preview before merge, Production after merge. The first release delivers REV15
+and this repair; only verified predecessor delivery permits the existing REV16
+release. REV16 retains its identifier while planRevision stays at least17. Preserve
+REV15/REV17 records, evidence and canonical artifacts, using the reviewed union of
+repair and REV16 validator/test changes and original reviewed runtime/UI bytes.
+
+Exact pins, allowlist, informed effects and target are in BUILD_STATE's PLAN-REV17
+rev15DeliveryRepair and docs/evidence/PLAN-REV17.md. No workbook access/change,
+research, runtime/catalog change, configuration change, monitoring, rollback,
+provider/applicant interaction or later R3-R7 phase is authorized by this exception.

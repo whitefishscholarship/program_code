@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "status": "FRESH_BACKUP_CREATED_CONTENT_AND_ACCESS_VERIFIED_FEATURE_INVENTORY_IN_PROGRESS",
+  "sourceWorkbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "backupId": "1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo",
+  "createdAt": "2026-09-11T10:10:43.401Z",
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "reason": "Fresh full backup after pause and source metadata change, as required by intake-plan section 7. Prior backups retained unchanged.",
+  "privateAccessVerified": true,
+  "owner": "Kelsey Stuart",
+  "all14TabsAndConditionalFormattingReconciled": true,
+  "approvedNativeContentComparisons": [
+    {
+      "title": "Master backup 2026-07-12",
+      "ranges": [
+        "'Master backup 2026-07-12'!A1:O1060"
+      ],
+      "equal": true,
+      "sourceSha256": "01555b991682fb3518319cd64b2a89b5bcbead5210e112792ffa5209305f5818",
+      "backupSha256": "01555b991682fb3518319cd64b2a89b5bcbead5210e112792ffa5209305f5818",
+      "observedAt": "2026-09-11T10:11:25.468Z"
+    },
+    {
+      "title": "Staging backup 2026-06-17",
+      "ranges": [
+        "'Staging backup 2026-06-17'!A1:S1233"
+      ],
+      "equal": true,
+      "sourceSha256": "2cf5f80efa57de63ec573848c1d1de749cd1197fc58ac4653d81fd2a6a680c4e",
+      "backupSha256": "2cf5f80efa57de63ec573848c1d1de749cd1197fc58ac4653d81fd2a6a680c4e",
+      "observedAt": "2026-09-11T10:11:29.071Z"
+    },
+    {
+      "title": "Start Here",
+      "ranges": [
+        "'Start Here'!A1:D11",
+        "'Start Here'!B12:D12",
+        "'Start Here'!A13:D20"
+      ],
+      "equal": true,
+      "sourceSha256": "5b211662127a0a7cc4342c62202a37b40d88ea712e8dc0a1bf689ef12140e626",
+      "backupSha256": "5b211662127a0a7cc4342c62202a37b40d88ea712e8dc0a1bf689ef12140e626",
+      "observedAt": "2026-09-11T10:11:30.031Z"
+    },
+    {
+      "title": "Student View",
+      "ranges": [
+        "'Student View'!A1:O21"
+      ],
+      "equal": true,
+      "sourceSha256": "9027f98c8a1c4ef54520ac4fd43bb37c1f140ee514401aef6b754631a122803d",
+      "backupSha256": "9027f98c8a1c4ef54520ac4fd43bb37c1f140ee514401aef6b754631a122803d",
+      "observedAt": "2026-09-11T10:11:31.215Z"
+    },
+    {
+      "title": "Archive",
+      "ranges": [
+        "'Archive'!A1:O82"
+      ],
+      "equal": true,
+      "sourceSha256": "08ed7098eff1371d89d658e997c617a8e158a48724c5212ad68e618e811e12ba",
+      "backupSha256": "08ed7098eff1371d89d658e997c617a8e158a48724c5212ad68e618e811e12ba",
+      "observedAt": "2026-09-11T10:11:33.073Z"
+    },
+    {
+      "title": "Categories",
+      "ranges": [
+        "'Categories'!A1:B50"
+      ],
+      "equal": true,
+      "sourceSha256": "bcf292a9b762a729978df3f2ec398d551444aea4dd69671cfb3eb167b49fe696",
+      "backupSha256": "bcf292a9b762a729978df3f2ec398d551444aea4dd69671cfb3eb167b49fe696",
+      "observedAt": "2026-09-11T10:11:34.359Z"
+    },
+    {
+      "title": "Master Database",
+      "ranges": [
+        "'Master Database'!A1:O1060"
+      ],
+      "equal": true,
+      "sourceSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+      "backupSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+      "observedAt": "2026-09-11T10:11:45.147Z"
+    },
+    {
+      "title": "Scraped Data",
+      "ranges": [
+        "'Scraped Data'!A1:Q1000"
+      ],
+      "equal": true,
+      "sourceSha256": "0dc9f9aeaac312d10a19a418e6a1258c20cbdbba838bd4a18604f25eec82ae77",
+      "backupSha256": "0dc9f9aeaac312d10a19a418e6a1258c20cbdbba838bd4a18604f25eec82ae77",
+      "observedAt": "2026-09-11T10:12:12.535Z"
+    },
+    {
+      "title": "Ingestion Staging",
+      "ranges": [
+        "'Ingestion Staging'!A1:S1377"
+      ],
+      "equal": true,
+      "sourceSha256": "af6f5e257c931c340de7cd35b45ff05f0e0bfa588061b7ac268232ebc05b941b",
+      "backupSha256": "af6f5e257c931c340de7cd35b45ff05f0e0bfa588061b7ac268232ebc05b941b",
+      "observedAt": "2026-09-11T10:12:17.258Z"
+    },
+    {
+      "title": "Removed 2026-06-16",
+      "ranges": [
+        "'Removed 2026-06-16'!A1:S20"
+      ],
+      "equal": true,
+      "sourceSha256": "8c6642ec6fe415bee9e82621be351b10e61b7e57d03e6e36a4fe4a2becad4650",
+      "backupSha256": "8c6642ec6fe415bee9e82621be351b10e61b7e57d03e6e36a4fe4a2becad4650",
+      "observedAt": "2026-09-11T10:12:18.397Z"
+    },
+    {
+      "title": "Curated Review 2026-06-17",
+      "ranges": [
+        "'Curated Review 2026-06-17'!A1:S21"
+      ],
+      "equal": true,
+      "sourceSha256": "d793c5db32df694a4d18f53740bedb4d30548b78742bb498a4ae603a6a09b9ab",
+      "backupSha256": "d793c5db32df694a4d18f53740bedb4d30548b78742bb498a4ae603a6a09b9ab",
+      "observedAt": "2026-09-11T10:12:19.804Z"
+    },
+    {
+      "title": "Removed 2026-06-17",
+      "ranges": [
+        "'Removed 2026-06-17'!A1:O20"
+      ],
+      "equal": true,
+      "sourceSha256": "a36cca031e8e5f238e279ba9b2c2a06acd3825a55c060e7987a84c42525072e5",
+      "backupSha256": "a36cca031e8e5f238e279ba9b2c2a06acd3825a55c060e7987a84c42525072e5",
+      "observedAt": "2026-09-11T10:12:20.803Z"
+    },
+    {
+      "title": "Curated Review 2026-07-05",
+      "ranges": [
+        "'Curated Review 2026-07-05'!A1:S29"
+      ],
+      "equal": true,
+      "sourceSha256": "6fa68fbe3640927bf1a1b5fbdb1dbaea133200f71ee27c4decfc2940a929cbd3",
+      "backupSha256": "6fa68fbe3640927bf1a1b5fbdb1dbaea133200f71ee27c4decfc2940a929cbd3",
+      "observedAt": "2026-09-11T10:12:22.187Z"
+    },
+    {
+      "title": "Curated Review 2026-07-11",
+      "ranges": [
+        "'Curated Review 2026-07-11'!A1:S71"
+      ],
+      "equal": true,
+      "sourceSha256": "25f8b047e563564d98bb26dda386e4a12b7eb91bd0d577fc0067b2760e5e6a00",
+      "backupSha256": "25f8b047e563564d98bb26dda386e4a12b7eb91bd0d577fc0067b2760e5e6a00",
+      "observedAt": "2026-09-11T10:12:23.935Z"
+    }
+  ],
+  "readOnlyBrowserOpened": true,
+  "studentViewNamesCompared": [
+    "Open now",
+    "Closing soon",
+    "Upcoming",
+    "No GPA minimum",
+    "2-Year & Trade"
+  ],
+  "sourceProtectionAndNamedRangeInventory": "Both source sidebars empty during signed-in inspection; no changes made.",
+  "masterValidationInventory": "Source Master Data validation rules sidebar empty.",
+  "masterBasicFilterInventory": "Source Master search shows unchecked Create a filter (value 0).",
+  "recoveryBaselineLink": {
+    "masterSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+    "sameAsSuccessfulDisposableRecovery": true,
+    "receipt": "docs/evidence/SCHOLARSHIP-INTAKE-disposable-recovery.json"
+  },
+  "limits": [
+    "Saved-view names verified; complete current filter/view criteria and target-area merges/hidden dimension metadata not fully reconciled.",
+    "Source/backup metadata API omits some features; source script incident is resolved, but omission must not be called absence.",
+    "No scholarship cell writes; final source freshness is still required."
+  ]
+}

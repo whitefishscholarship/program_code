@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 14,
+  "planRevision": 17,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-10",
+  "lastUpdated": "2026-09-12",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -735,6 +735,80 @@
           "basis": "Kelsey replied yes on September 10, 2026 to the exact publication question after the tested independently reviewed local candidate was presented. This is new direct release authority.",
           "scope": "Deliver INTERVIEW-RELEVANCE-1 / PLAN-REV14 only: branch push, PR creation/update, resulting Vercel Preview, merge, resulting Vercel Production deployment and verification on existing project web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Refreeze, independent recheck and direct-child attestation precede publication. Verify Preview before merge and Production afterward. No rollback, source/spreadsheet access or mutation, configuration/permission changes, monitoring, applicant data or unrelated effects."
         }
+      },
+      {
+        "id": "PLAN-REV15",
+        "status": "attestation-gated",
+        "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+        "evidencePath": "docs/evidence/PLAN-REV15.md",
+        "manifestPath": "docs/evidence/PLAN-REV15-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV15.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-12",
+          "evidencePath": "docs/evidence/PLAN-REV15.md",
+          "basis": "I authorize R2 only, following the reviewed release package: deliver REV15 first, then REV16 after REV15 is verified. This includes the required authority/evidence updates, branch pushes, PRs, Vercel Preview, merges, Production deployments, and CI/hosted verification on the existing web project. Preserve all review and acceptance gates. No workbook access or changes, new research, configuration changes, or later phases are authorized.",
+          "scope": "R2 unit1 only: finalize and independently review the preserved REV15 intake/application/historical/proposal package; attest; push codex/plan-rev15-intake-release, create/update PR, resulting Vercel Preview, ancestry-preserving merge, resulting Production deployment and CI/hosted verification on existing project web prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Authority/evidence bookkeeping only over source40ff61e; no runtime, workbook access/change, research, configuration change, or later phase. REV16 may follow only after verified REV15 delivery under its distinct unit of the same grant."
+        }
+      },
+      {
+        "id": "PLAN-REV17",
+        "status": "attestation-gated",
+        "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+        "evidencePath": "docs/evidence/PLAN-REV17.md",
+        "manifestPath": "docs/evidence/PLAN-REV17-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV17.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-12",
+          "evidencePath": "docs/evidence/PLAN-REV17.md",
+          "basis": "authorize all items you have listed \u2014 direct response approving the independently reviewed exact R2 recovery proposal at 5ecf7a7d37e37a267b60c0894c1158ef64da3718, reviewed checkpoint 3b276b4.",
+          "scope": "Only the pinned REV15 repair continuation, validator/test/policy maintenance and its branch push, PR, Preview, ancestry-preserving merge, Production, CI and hosted verification on the existing pinned project. Preserve original A15 and all gates. First release remains REV15 plus repair; only after verified delivery continue already-authorized REV16 with reviewed shared-validator/test union. No workbook access/change, research, configuration, rollback or later R3-R7 phase."
+        },
+        "rev15DeliveryRepair": {
+          "targetAmendmentId": "PLAN-REV15",
+          "targetCandidateCommit": "74057a1f2af33ca226fb573c4f9301796048bef0",
+          "targetAttestationCommit": "94db9e72ff241f5eb0939872d97852657f139ecb",
+          "targetBaselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+          "authorityReceivedAt": "2026-09-12T23:49:53Z",
+          "authorityEvidencePath": "docs/evidence/PLAN-REV17.md",
+          "continuationBranch": "codex/plan-rev17-rev15-delivery-repair",
+          "authorizedEffects": [
+            "branch_push",
+            "pull_request",
+            "vercel_preview",
+            "merge",
+            "vercel_production",
+            "ci_and_deployment_verification"
+          ],
+          "allowedContinuationPaths": [
+            "AGENTS.md",
+            "docs/BUILD_STATE.json",
+            "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+            "docs/DECISIONS.md",
+            "docs/CURRENT_HANDOFF.md",
+            "docs/kickoffs/PLAN-REV17-REV15-DELIVERY-REPAIR.md",
+            "docs/evidence/PLAN-REV17.md",
+            "docs/evidence/interview-coverage/r2-rev17-policy-review.json",
+            "docs/evidence/interview-coverage/r2-rev17-validation.json",
+            "docs/evidence/interview-coverage/r2-rev17-preservation.json",
+            "web/package.json",
+            "web/scripts/validate-build-plan.ts",
+            "web/scripts/plan-rev17-rev15-delivery-repair.ts",
+            "web/scripts/test-plan-rev17-rev15-delivery-repair.ts"
+          ],
+          "productOrDataChangeAuthorized": false,
+          "workbookAccessAuthorized": false,
+          "researchAuthorized": false,
+          "configurationChangeAuthorized": false,
+          "laterPhaseAuthorized": false,
+          "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+          "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+          "canonicalHostname": "web-two-gules-45.vercel.app",
+          "originalSourceCommit": "979122a13d4a8098d8cea26f115add1e68405355"
+        }
       }
     ]
   },
@@ -881,5 +955,46 @@
     "Do not store applicant PII or credentials.",
     "Require independent fresh-context review before stage acceptance.",
     "Do not ask Kelsey routine Git questions."
-  ]
+  ],
+  "scholarshipIntake": {
+    "planId": "SCHOLARSHIP-INTAKE-1",
+    "status": "exact-authorized-batch-applied-and-reconciled",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV15.md",
+    "planningCommit": "0ffa90b12502b2a031a6012e16014301def07205",
+    "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "localPreparationAuthorized": true,
+    "readOnlyScholarshipEvaluationAuthorized": true,
+    "boundedOfficialSourceVerificationAuthorized": true,
+    "backupCopyAuthorized": true,
+    "recoveryCopyAuthorized": true,
+    "spreadsheetWriteAuthorized": true,
+    "publicationAuthorized": true,
+    "runtimeChangesAuthorized": false,
+    "policyReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-policy-review.json",
+    "ledgerPath": "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json",
+    "proposedWritesPath": "docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json",
+    "backupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json",
+    "localReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-local-review.json",
+    "localCandidateCommit": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+    "localBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+    "applicationAuthorityEvidencePath": "docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md",
+    "authorizedBatchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+    "quietWindow": "Kelsey confirmed no other editors during this uninterrupted session; freshness and single-writer checks remain required",
+    "applicationBackupVerificationPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json",
+    "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json",
+    "r2ReleaseBoundary": {
+      "phase": "R2",
+      "unit": "REV15",
+      "branch": "codex/plan-rev15-intake-release",
+      "sourceCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
+      "r1ReviewedTip": "979122a13d4a8098d8cea26f115add1e68405355",
+      "workbookAccessAuthorized": false,
+      "workbookMutationAuthorized": false,
+      "newResearchAuthorized": false,
+      "configurationChangesAuthorized": false,
+      "priorBatchAuthority": "spent; preserved true flags record the completed historical operation only",
+      "evidencePath": "docs/evidence/PLAN-REV15.md"
+    }
+  }
 }

@@ -1,0 +1,74 @@
+{
+  "reviewer": "/root/intake_batch_review",
+  "reviewedAt": "2026-09-11T02:43:44.955499+00:00",
+  "scope": [
+    "batch-aea-001",
+    "batch-nths-002"
+  ],
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "previousSubsetSha256": "9e66af318390749ff1e370acfb9ed89b5d84e6f878896fef5543004dcb4e72e9",
+  "reviewedSubsetSha256": "68937d1348a027a90ec12af3958ba2b51790348191fee2e2559afc9bd3b0a84f",
+  "digestDefinition": "UTF8 JSON ensure_ascii=False, recursively sorted keys, compact separators. Keys snapshotId,batches,entities,rows,officialSources,discoveries,holds,interviewGaps,evidenceSha256. Select two batches/their42entities118rows/six referenced sources/two discoveries/associated hold and gap. Sort batches/entities/rows/sources byid,discoveries bysourceId; preserve other arrayorder. Remove recursive review objects and only batch/entity top-level workflow status. Include byte hashes of3evidence files.",
+  "unchangedContentVerified": true,
+  "coverage": {
+    "entityRecordsIncludingAliases": 42,
+    "canonicalAwards": 36,
+    "inputRows": 118,
+    "proposedAdds": 30,
+    "existingMasterDestinations": 5,
+    "heldAwards": 1,
+    "discoveredAwardsWithoutInputRows": 4,
+    "proposedFieldDecisions": 450,
+    "tags": 24,
+    "interviewCoverageDecisions": 90
+  },
+  "cumulativeFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 2
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "M1",
+      "status": "resolved",
+      "rationale": "11AEA coverage entries explicitly state no award-specific membership/employment condition observed",
+      "owner": "implementation agent",
+      "target": "AEA/NTHS batch checkpoint"
+    },
+    {
+      "id": "L1",
+      "status": "resolved",
+      "rationale": "15NTHStypes scholarship consistent with columnD",
+      "owner": "implementation agent",
+      "target": "AEA/NTHS batch checkpoint"
+    },
+    {
+      "id": "L2",
+      "status": "resolved",
+      "rationale": "Freeland columnI cites historical route3page1 for private-only/one-yearemployment",
+      "owner": "implementation agent",
+      "target": "AEA/NTHS batch checkpoint"
+    }
+  ],
+  "reviewerEdits": 0,
+  "externalMutations": 0,
+  "excluded": [
+    "Other provider and Master batches",
+    "Final immutable acceptance",
+    "Spreadsheet writes or publication"
+  ],
+  "evidenceSha256": {
+    "docs/evidence/scholarship-intake/aea-field-evidence.json": "c48ddc0e5889aeb852d4b3b518b2ed355ff533c506520c117b0266d112b0159e",
+    "docs/evidence/scholarship-intake/aea-route-evidence.json": "18035f162e01c3f65d9bec76d7ecf7126ca885737ecb07a0fdb4bb7f3f03d5ea",
+    "docs/evidence/scholarship-intake/nths-field-evidence.json": "50f36ebb0f73d8f453a86d188284f7ee8771f3407c2db2e09c3b434dcd2968d8"
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-dawson-foundation",
+      "url": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html",
+      "finalUrl": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html",
+      "observedAt": "2026-09-11T02:18:55.491Z",
+      "statusCode": 200,
+      "contentSha256": "3587ce39db576d17458d20c7484f58ad1e1c18a7a8eaab237fb070f988a8d017",
+      "scrapeId": "01a08e42-b5ba-76d7-9e57-e0067f299442",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-dawson-general",
+      "url": "https://www.dawson.edu/cost-affordability/scholarships.html",
+      "finalUrl": "https://www.dawson.edu/cost-affordability/scholarships.html",
+      "observedAt": "2026-09-11T02:47:15.611Z",
+      "statusCode": 200,
+      "contentSha256": "c23658720e2368e9084955c34a3fcef1b2bbeb75c1b2ed02f06aaac911580265",
+      "scrapeId": "01a08e5c-a375-70e9-b291-c2fe13b868d6",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-dawson-application",
+      "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+      "finalUrl": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+      "observedAt": "2026-09-11T02:54:41.950Z",
+      "statusCode": 200,
+      "contentSha256": "0e4e1559adcc21be2d17ce2e96a5d3ce1de0283f9d6ecea47c117c297a359f57",
+      "scrapeId": "01a08e63-782e-747e-ada7-270fc8634849",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-dawson-form-names",
+      "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+      "finalUrl": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+      "observedAt": "2026-09-11T03:05:49.128Z",
+      "statusCode": 200,
+      "contentSha256": "b64e63bfe2cd18160cda005c7979fea2dd0112064bcf143b9d316b081cfa36c6",
+      "scrapeId": "01a08e6d-a10c-77d2-923c-5cc56095439a",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "headingCount": 65,
+  "headingNames": [
+    "Admissions Team Job Scholarship",
+    "Albrecht Scholarship",
+    "American Ford Scholarship",
+    "Angel Grant Law Enforcement Memorial Scholarship",
+    "August \" Cole\" Dooper Memorial Endowed Baseball Scholarship",
+    "Ardean A.Anvik Endowed Scholarship",
+    "Astoria Hotel & Suites Athletic Scholarship",
+    "Bryan Melle Law Enforcement Memorial Scholarship",
+    "Buzz Suhr Memorial",
+    "Charles England Memorial Endowed Scholarship",
+    "Charles Kintz Memorial Scholarship",
+    "Classes 56-58 & 77-78 of Dawson County High School",
+    "Clayton E. Hoyt Endowed Scholarship",
+    "Community First Foundation Endowed Scholarship",
+    "Culver Insurance and Blue Cross Blue Shield Endowment Scholarship",
+    "Dawson Promise Endowed Scholarship",
+    "DCC Plates Endowment",
+    "Dennis Perryman Men\u2019s Basketball Endowment",
+    "Don Kettner Presidential Endowment",
+    "Duane Peterson Law Enforcement Memorial Scholarship",
+    "Ellis and Irene Jones Endowed Scholarship",
+    "Evelyn Schaffel Education Scholarship",
+    "F.J. Efta Memorial Scholarship",
+    "Floyd and Francis Marty Music Memorial Scholarship",
+    "Fran M. Albrecht Scholarship",
+    "Frank Sir Endowed Scholarship",
+    "Gary L. Olson Memorial Endowed Scholarship",
+    "Gary Nelson Memorial Scholarship",
+    "George and Ottoni Rice Law Enforcement Memorial Scholarship",
+    "Glendive Coca-Cola Bottling Company Endowed Scholarship",
+    "Glendive Masonic Lodge",
+    "Gregory & Peggy Johnson STEM Endowment",
+    "Hayden and Madisyn Moore Scholarship",
+    "Hildebrand Hood Pressman Scholarship",
+    "Howard C. Hodous Memorial Law Enforcement Endowed Scholarship",
+    "Hystad Family Endowment for Academic Scholarships",
+    "James D. Schultz Memorial Endowed Scholarship",
+    "James P. Vomhof Presidential Fund",
+    "Jeanie Austin Nelson Memorial Rodeo Scholarship",
+    "Joe Friederichs Memorial Science Scholarship",
+    "Jonas Kolberg Memorial Agriculture Scholarship",
+    "JSEC Outside Scholarship",
+    "Kay Dunkerley-Magnussen Memorial Art Scholarship",
+    "Keith P. Guelff Memorial Endowed Scholarship",
+    "Kenneth Skillestad Memorial Scholarship Fund",
+    "M.C. and Florence Kolstad Vocational Technical Scholarship",
+    "Martha Kelly Memorial Endowed Scholarship",
+    "Mary Moore Memorial Scholarship",
+    "Music Faculty Salary Endowment",
+    "Patricia A. (Trish) Matteson Endowed Educational Scholarship",
+    "Raymond and Natha Ostby Foundation Scholarships",
+    "Ree Ride Scholarship",
+    "Reid Ripley Memorial Agriculture Scholarship",
+    "Richard E. Guenzi Memorial Scholarship",
+    "Richard and Winifred McMullin Memorial Scholarship",
+    "Roger Carl Smith Memorial Endowed Scholarship",
+    "Roman S. Zuroff Endowed Scholarship Fund",
+    "Ron Conrad Drama Endowment Scholarship",
+    "Rotary Club of Glendive Endowed Scholarship",
+    "Stockman Bank Endowed Scholarship",
+    "Vietnam Veterans of America Scholarship Glendive Chapter \\#134",
+    "W. and Ann Dohrmann Memorial Scholarship",
+    "Wendee Eyer Memorial Scholarship",
+    "Westley J. Toepke Memorial Endowed Scholarship",
+    "Zach Anderson Memorial Scholarship"
+  ],
+  "commonFacts": {
+    "application": "GeneralStudentScholarshipProgram combinesfoundationawards; officialFormstack route observed200blankform. Separatepackets/coaching/chaptermethods must still be confirmed for eachaward.",
+    "priorityDeadline": "March1,2026 for2026\u201327; lateapplicantsencouraged",
+    "limitation": "Foundationpageundated/underconstruction; donorbiographies not eligibility; historicfundamounts not automaticallycurrent; no applicantdata retained"
+  },
+  "awards": [
+    {
+      "entityId": "intake-entity-792c2a732266dc92",
+      "heading": "Admissions Team Job Scholarship",
+      "amount": "$250",
+      "conditions": "DCC admissions-team duties, paid after duties each semester. This work-contingent program needs record-type policy confirmation.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-a2a0b69f9d600d33",
+      "heading": "American Ford Scholarship",
+      "amount": null,
+      "conditions": "College selects greatest needs with donor approval each year; individual scholarship allocation and applicant criteria are not established.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-cdc9e35f86cfea0b",
+      "heading": "Angel Grant Law Enforcement Memorial Scholarship",
+      "amount": null,
+      "conditions": "DCC second-semester freshman majoring in law enforcement and returning in fall. Law Enforcement Club participation is a preference. Selection emphasizes academics, recommendations and professional potential rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-edd9e51e158c2777",
+      "heading": "August \" Cole\" Dooper Memorial Endowed Baseball Scholarship",
+      "amount": "$400",
+      "conditions": "DCC freshman or sophomore baseball player; coaching staff selects recipient.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-fe548b95b5be3e97",
+      "heading": "Ardean A.Anvik Endowed Scholarship",
+      "amount": null,
+      "conditions": "Full-time DCC student in good standing; interest in creative writing, political/civic discourse or social-science issues; overall GPA3.0.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-75fac50bf6a613e3",
+      "heading": "Astoria Hotel & Suites Athletic Scholarship",
+      "amount": null,
+      "conditions": "Returning DCC athlete nominated by coaches for character, leadership and community service; not an incoming-student award.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-6dd0de5ecc17399d",
+      "heading": "Bryan Melle Law Enforcement Memorial Scholarship",
+      "amount": "At least$250",
+      "conditions": "DCC second-semester freshman in law enforcement; returning sophomore preference.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2ebe858b68e20204",
+      "heading": "Buzz Suhr Memorial",
+      "amount": null,
+      "conditions": "Carl H. Suhr Junior Memorial Fund: vocational tuition support with preference for agri-mechanics or a related mechanical program; foundation committee sets selection standards.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-7d8fa28c84601423",
+      "heading": "Charles England Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Dawson County High School graduate; full-time DCC student, GPA2.5. Financial need is a consideration, not decisive. Whitefish graduation does not meet the named-school requirement.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-a6b1d066d1afd3cf",
+      "heading": "Charles Kintz Memorial Scholarship",
+      "amount": "$250 per semester",
+      "conditions": "DCC business major selected by financial-aid committee.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-2bde04e5f4b7d0a3",
+      "heading": "Classes 56-58 & 77-78 of Dawson County High School",
+      "amount": "$300 per semester",
+      "conditions": "Dawson County High School graduates; nontraditional students preferred; possible second-semester renewal with GPA3.0.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-4f9519e7ce25f745",
+      "heading": "Clayton E. Hoyt Endowed Scholarship",
+      "amount": "Tuition and fees; other support may vary",
+      "conditions": "DCC student in good standing with overall GPA2.0; tuition and fees supported. Additional books, supplies, equipment or campus housing may be supported with demonstrated need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-7c21e3c53171aa53",
+      "heading": "Community First Foundation Endowed Scholarship",
+      "amount": null,
+      "conditions": "DCC baseball and softball support; stated approximately$450 annual funding is explicitly based on2006 interest rates, so no current amount is proposed.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-f85fa712bbedb81e",
+      "heading": "Culver Insurance and Blue Cross Blue Shield Endowment Scholarship",
+      "amount": null,
+      "conditions": "Business study is preferred; committee may select another student if no business applicants. One-year award.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-78fbfff7d9936251",
+      "heading": "Dawson Promise Endowed Scholarship",
+      "amount": null,
+      "conditions": "Dawson Promise supports students who are homeless or aging out of foster care in obtaining a debt-free two-year education. Exact total award and program-specific intake conditions are not given here.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-cfa53304e9a3673d",
+      "heading": "DCC Plates Endowment",
+      "amount": null,
+      "conditions": "General endowment may fund or supplement multiple scholarships, with no restricted educational/sports program. Not a separately identified applicant award.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-4932bf42745000e6",
+      "heading": "Dennis Perryman Men\u2019s Basketball Endowment",
+      "amount": null,
+      "conditions": "Proceeds benefit the DCC men\u2019s basketball program; no distinct individual scholarship or applicant selection method stated.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-15c9300987847ac5",
+      "heading": "Don Kettner Presidential Endowment",
+      "amount": null,
+      "conditions": "Heading describes incoming-freshman/need endowment, then body describes a separate Kettner education scholarship with$250 and March15 terms. Distinct fund identities and applicable rules are ambiguous; do not merge or inherit one set.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-1d6b1309bf66d101",
+      "heading": "Duane Peterson Law Enforcement Memorial Scholarship",
+      "amount": null,
+      "conditions": "DCC second-semester freshman majoring in law enforcement and returning in fall; academics, recommendations and potential rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-cb72bcf40d32389f",
+      "heading": "Ellis and Irene Jones Endowed Scholarship",
+      "amount": "Equivalent of in-district tuition and fees",
+      "conditions": "Full-time DCC student in good standing, GPA2.5; eastern Montana is a preference. Financial need is considered, not decisive; limited housing/books support for high-achieving impoverished students. One-year award; reapply for another year.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-80940bbc45b59dc5",
+      "heading": "Evelyn Schaffel Education Scholarship",
+      "amount": "$500 annual ($250 per semester)",
+      "conditions": "Full-time DCC student pursuing AA/AS teacher-education emphasis and later education bachelor\u2019s degree; ED100 and another approved ED course already completed. Satisfactory academic progress needed for second payment; separate typed application packet.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d85f3ce8c52edb8f",
+      "heading": "F.J. Efta Memorial Scholarship",
+      "amount": "$500 annual ($250 per semester)",
+      "conditions": "Wibaux County High School senior/graduate OR young adult with a special Wibaux County connection, planning DCC. Full-time enrollment and GPA2.0 in12credits for continuation; up to four consecutive semesters. A qualifying county connection is a condition, not inferred from Whitefish attendance.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-5e6e0f70b4f7b118",
+      "heading": "Floyd and Francis Marty Music Memorial Scholarship",
+      "amount": "Up to$450",
+      "conditions": "Music major; piano/voice preferred; financial-aid committee selects. Page also names Francis Marty Music Scholarship as the fund title.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-38165a377cf092e4",
+      "heading": "Fran M. Albrecht Scholarship",
+      "amount": "$250 per semester",
+      "conditions": "Full-time first- or second-year DCC student demonstrating financial need. Acute-need prioritization is not established.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-9879927d5d2d03c2",
+      "heading": "Frank Sir Endowed Scholarship",
+      "amount": null,
+      "conditions": "Page contains donor biography without applicant eligibility or award-specific selection criteria. Do not convert the donor\u2019s biography to applicant requirements.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-08968a556bd5c3c9",
+      "heading": "Gary L. Olson Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Full-time DCC student in good standing, law enforcement or related field, satisfactory academics. Need considered but not decisive; one-year award with reapplication for another year.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-558f7a096b45ee61",
+      "heading": "Gary Nelson Memorial Scholarship",
+      "amount": null,
+      "conditions": "Only establishment history given; no applicant criteria.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-3844790e0d438d56",
+      "heading": "George and Ottoni Rice Law Enforcement Memorial Scholarship",
+      "amount": null,
+      "conditions": "DCC second-semester freshman majoring in law enforcement and returning in fall. Selection emphasizes academics, references and professional potential rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-93b46e7543166b26",
+      "heading": "Glendive Coca-Cola Bottling Company Endowed Scholarship",
+      "amount": "Approximately$500, subject to fund earnings",
+      "conditions": "Admitted or enrolled DCC student in good standing. Full-time attendance and study in physical education, sports management, medicine, dietetics, wellness or related fields are preferences. One-year award; need considered but not decisive.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-29de157478357fe5",
+      "heading": "Glendive Masonic Lodge",
+      "amount": null,
+      "conditions": "Entering full-time DCC student meeting general scholarship criteria; no specific major required. No Masonic membership requirement stated.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-69069977d07093ac",
+      "heading": "Gregory & Peggy Johnson STEM Endowment",
+      "amount": null,
+      "conditions": "Donor biography and endowment history only; no stated applicant criteria. Do not infer eligibility from STEM in the heading or donor careers.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-93406a9f5a8a5ee8",
+      "heading": "Hayden and Madisyn Moore Scholarship",
+      "amount": null,
+      "conditions": "Student-athletes from Colorado or Wyoming planning DCC; men\u2019s basketball preferred. The only stated$500 amount is dated2021\u201322.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-3138f37972910fbc",
+      "heading": "Hildebrand Hood Pressman Scholarship",
+      "amount": null,
+      "conditions": "Donor biography only, no applicant criteria; medical/dental profession of donor is not an applicant requirement.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-d98c90b171bd2fc2",
+      "heading": "Howard C. Hodous Memorial Law Enforcement Endowed Scholarship",
+      "amount": null,
+      "conditions": "Law-enforcement student at DCC. Full tuition is a future donor goal, not a verified current award amount.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-06043890685e71cd",
+      "heading": "Hystad Family Endowment for Academic Scholarships",
+      "amount": null,
+      "conditions": "Students from eastern Montana or Slope/Golden Valley counties North Dakota; excludes current Whitefish location. Page conflicts GPA2.2 with continuation2.5 and has additional nonathletic/conduct rules; do not resolve these by assumption.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-19060852883d7493",
+      "heading": "James D. Schultz Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Admitted/enrolled DCC student in good standing preparing to transfer to a secondary-education bachelor\u2019s degree, English teaching major or related field; satisfactory academics. One-year award with reapplication.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-d00e748c026573df",
+      "heading": "James P. Vomhof Presidential Fund",
+      "amount": null,
+      "conditions": "DCC business student with financial need; no acute-need priority established.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-da461ef57025aa31",
+      "heading": "Jeanie Austin Nelson Memorial Rodeo Scholarship",
+      "amount": "$300 annual ($150 per semester)",
+      "conditions": "DCC second-semester freshman, rodeo athlete with college rodeo points, under24, cumulative GPA2.5, full-time and returning in fall. Separate application before April8, year unspecified; academic/athletic achievement, recommendations and partial need considered.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-374b9211aea7db68",
+      "heading": "Joe Friederichs Memorial Science Scholarship",
+      "amount": null,
+      "conditions": "First/second-year student entering or returning to DCC, majoring in a field requiring chemistry, such as engineering, allied health, science or science education.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-f45b0fb6ca54a7c2",
+      "heading": "Jonas Kolberg Memorial Agriculture Scholarship",
+      "amount": null,
+      "conditions": "DCC freshman majoring in agriculture and returning in fall; academic achievement, recommendations and potential rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-dd18a610e5cde6da",
+      "heading": "JSEC Outside Scholarship",
+      "amount": "$500",
+      "conditions": "Graduating seniors from Circle,Glendive,Richey orWibaux schools, or returning DCC students from those areas. Whitefish does not meet named origin condition.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-21118f3dbfc7562d",
+      "heading": "Kay Dunkerley-Magnussen Memorial Art Scholarship",
+      "amount": null,
+      "conditions": "Graduating Dawson County High School senior attending DCC; DCHS teachers/administrator select.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-b8263774aea8d94f",
+      "heading": "Keith P. Guelff Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Full-time DCC student in good standing, agribusiness or related field, GPA2.75. Need considered, not decisive. One-year award with reapplication.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-94b7ea5b00bd5ec9",
+      "heading": "Kenneth Skillestad Memorial Scholarship Fund",
+      "amount": null,
+      "conditions": "Dawson County High School graduate attending DCC; DCHS counselors/administrator select.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-87a7fb84cb5cabdb",
+      "heading": "M.C. and Florence Kolstad Vocational Technical Scholarship",
+      "amount": null,
+      "conditions": "Skill-based vocational program at DCC; original auto-mechanics program discontinued. Academic achievement and recommendations rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-1d25563175ea4e17",
+      "heading": "Martha Kelly Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Full-time DCC education major with permanent residence within100miles of Glendive. Whitefish permanent residence does not meet this rule.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-ddb5824574cbfd24",
+      "heading": "Mary Moore Memorial Scholarship",
+      "amount": null,
+      "conditions": "Dawson County High School senior planning DCC education major; named-school requirement excludes Whitefish graduates.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-9804b0b8caf3467f",
+      "heading": "Music Faculty Salary Endowment",
+      "amount": null,
+      "conditions": "Funds a college faculty salary, not a student scholarship.",
+      "disposition": "non_record"
+    },
+    {
+      "entityId": "intake-entity-98e1797bd21d5955",
+      "heading": "Patricia A. (Trish) Matteson Endowed Educational Scholarship",
+      "amount": null,
+      "conditions": "Education career purpose stated, but page explicitly directs readers to foundation for applicant criteria. No provider contact authorized; exact conditions remain unknown.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-53f8f8d84ed336f4",
+      "heading": "Raymond and Natha Ostby Foundation Scholarships",
+      "amount": null,
+      "conditions": "DCC freshmen returning to DCC, academic excellence, desire to address a societal need and intent to transfer to a four-year institution. Two recipient scholarships are not separately named awards.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-a3b6c8bd161e460a",
+      "heading": "Ree Ride Scholarship",
+      "amount": null,
+      "conditions": "Full-time DCC first/second-year agriculture student or rodeo athlete with no access to other funds. Page makes availability conditional on fund growth and future application process; current individual application route/funding unresolved.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-8c70fc72571131f5",
+      "heading": "Reid Ripley Memorial Agriculture Scholarship",
+      "amount": null,
+      "conditions": "First/second-year agriculture student entering/returning DCC; Dawson/surrounding area preferred. Academic achievement, recommendations and potential rather than need.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-43ded9c018424ca4",
+      "heading": "Richard E. Guenzi Memorial Scholarship",
+      "amount": null,
+      "conditions": "First/second-year DCC student planning computer-science major; named institutional selection committee.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-3ab49756fbca46c4",
+      "heading": "Richard and Winifred McMullin Memorial Scholarship",
+      "amount": null,
+      "conditions": "Full-time first/second-year DCC science major, with biology,botany,earth science ormedicine preferred. Award unavailable until endowment reaches$5000; current threshold/application availability unverified.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-30d1130de282bcd0",
+      "heading": "Roger Carl Smith Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "Disbursement requires annual earnings threshold; biography and administration terms do not identify applicant criteria.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-fc95f644590e845d",
+      "heading": "Roman S. Zuroff Endowed Scholarship Fund",
+      "amount": null,
+      "conditions": "Full-time DCC student in good standing majoring in pre-health fields such as medical science/nursing,medicine,dental oroptometry; satisfactory academics; financial need considered.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-873f91c3edce15b4",
+      "heading": "Ron Conrad Drama Endowment Scholarship",
+      "amount": null,
+      "conditions": "Fine arts study preferred. If no fine-arts applicants, preference for applicants without athletic scholarships. Financial need considered, not decisive; one-year award.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-206bace9048aa2a6",
+      "heading": "Rotary Club of Glendive Endowed Scholarship",
+      "amount": null,
+      "conditions": "Dawson County high-school or home-school graduate, full-time DCC, GPA2.5 and community-service record. Whitefish does not meet county-graduation requirement.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-d4565ff7f38cc75e",
+      "heading": "Stockman Bank Endowed Scholarship",
+      "amount": "Approximately$500, subject to fund earnings",
+      "conditions": "Montana resident admitted/enrolled at DCC in good standing; agriculture-related study and full-time status preferred. Need considered, not decisive. One-year award with reapplication.",
+      "disposition": "propose_add"
+    },
+    {
+      "entityId": "intake-entity-c033765964bbd3b5",
+      "heading": "Vietnam Veterans of America Scholarship Glendive Chapter \\#134",
+      "amount": "$250",
+      "conditions": "US citizen/Montana resident with specified veteran or military-family relationship and GPA2.0; headingChapter134 conflicts bodyChapter234. Separate chapter application and identity unresolved; do not invent destination.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-8a9988ee5ee7f698",
+      "heading": "W. and Ann Dohrmann Memorial Scholarship",
+      "amount": "$500 annual",
+      "conditions": "Page restricts to area students without defining area. Full-time DCC,2.0GPA in12credits for continuedpayments, up to4semesters. Whitefish audience cannot be established from ambiguous area rule.",
+      "disposition": "hold"
+    },
+    {
+      "entityId": "intake-entity-ebc7ad282d4c7ece",
+      "heading": "Wendee Eyer Memorial Scholarship",
+      "amount": null,
+      "conditions": "Recent Dawson County High School graduate attending DCC, GPA3.0 and high-school math/science emphasis.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-ba8e33e4a5804dc7",
+      "heading": "Westley J. Toepke Memorial Endowed Scholarship",
+      "amount": null,
+      "conditions": "First-time full-time DCC student with permanent residence within100miles of Glendive. Whitefish does not meet geographic requirement.",
+      "disposition": "out_of_scope"
+    },
+    {
+      "entityId": "intake-entity-a57798f7ec787830",
+      "heading": "Zach Anderson Memorial Scholarship",
+      "amount": "$500 per semester",
+      "conditions": "Graduated from listed eastern-Montana AAU counties orWilliamsCountyND; graduating seniors through collegejuniors, athletes. Whitefish/FlatheadCounty absent from eligibleorigin list.",
+      "disposition": "out_of_scope"
+    }
+  ],
+  "formReconciliation": {
+    "sourceId": "official-dawson-form-names",
+    "commonRequirements": "The linked general form requires admission application and high-school cumulative GPA2.25 for first-year students; transfer applicants need12graded college credits and cumulative college GPA2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans,12graded credits and GPA2.0; dual-enrollment students need12credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. ",
+    "occurrenceCount": 61,
+    "uniqueLabelCount": 60,
+    "extraLabels": 6,
+    "materialConflictHolds": {
+      "Community First Foundation Endowed Scholarship": "The only foundation description concerns2006baseball/softball funding, with no individual eligibility/selection proof and no corresponding individual form entry. Hold record type and identity.",
+      "Reid Ripley Memorial Agriculture Scholarship": "Foundation says Dawson/surrounding area is a preference; current linked form requires Dawson County or surrounding-area residence. Material Whitefish audience conflict unresolved.",
+      "Ellis and Irene Jones Endowed Scholarship": "Foundation says eastern Montana preference; current linked form says located in Eastern Montana. Material Whitefish audience conflict unresolved.",
+      "Evelyn Schaffel Education Scholarship": "Foundation requires ED100 plus an additional approved ED course; current form requires EDU200 or an approved EDU course. Exact prerequisite and returning-student criteria differ; hold material audience/coursework conflict.",
+      "Angel Grant Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; current form treats returning sophomore as preference. Exact entering/returning eligibility remains contradictory.",
+      "Bryan Melle Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman; form says returning sophomore preferred. Foundation minimum$250 conflicts form up to$250; amount may be omitted, but audience conflict remains.",
+      "Duane Peterson Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; form says returning sophomore preferred. Exact audience condition unresolved.",
+      "George and Ottoni Rice Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; form says returning sophomore preferred. Exact audience condition unresolved."
+    },
+    "currentFormNarrowing": {
+      "Buzz Suhr Memorial": "The linked application now specifies Welding Technology and up to$150. The foundation\u2019s older vocational/agri-mechanics description is broader; use the form\u2019s specific welding pathway, without claiming other trades qualify. ",
+      "M.C. and Florence Kolstad Vocational Technical Scholarship": "The linked form specifies Gas and Diesel Technology or Welding Technology, with returning sophomores preferred. These specific programs narrow the foundation\u2019s generic skill-based description. ",
+      "Charles Kintz Memorial Scholarship": "The linked form specifically requires Business Management, prefers returning sophomores and may request an interview. This narrows the foundation\u2019s general business description. Amount differs in format, so no fixed semester amount is proposed. ",
+      "Floyd and Francis Marty Music Memorial Scholarship": "The linked application requires two recorded voice/instrument performance selections or an audition with the DCC music director. ",
+      "Richard E. Guenzi Memorial Scholarship": "The linked form additionally allows Engineering Technology alongside Computer Science, and lists a variable minimum$250. The foundation names computer science only; the proposed path is restricted to computer science until broader eligibility is reconciled. ",
+      "Roman S. Zuroff Endowed Scholarship Fund": "The linked form requires demonstrated financial need, beyond the foundation\u2019s statement that need is considered; FAFSA is required for the need-based application. ",
+      "Jonas Kolberg Memorial Agriculture Scholarship": "The form specifies Agribusiness and returning-sophomore preference, whereas foundation describes a freshman returning in fall. Preserve the stricter returning agribusiness pathway; exact broader entry-year eligibility remains unverified. ",
+      "Gary L. Olson Memorial Endowed Scholarship": "Current named form specifically requires Law Enforcement; broader related fields from foundation remain unresolved."
+    },
+    "newOrResolvedAwards": [
+      {
+        "name": "Gary Nelson Memorial Scholarship",
+        "amount": "Up to$300",
+        "conditions": "Education major at DCC. The form supplies eligibility absent from the foundation biography entry."
+      },
+      {
+        "name": "Floyd Smith Memorial Art Scholarship (DCC)",
+        "amount": "",
+        "conditions": "Art major; submit a portfolio, or interview with the Art Instructor if local."
+      },
+      {
+        "name": "M.L. Graves Memorial Scholarship (DCC)",
+        "amount": "Up to$1200",
+        "conditions": "Education major OR baseball/softball athlete. Education applicants must have completed EDU200 or approved EDU course and submit a philosophy-of-education essay. Returning sophomores preferred."
+      },
+      {
+        "name": "MDU Foundation Scholarship (DCC)",
+        "amount": "Up to$1000",
+        "conditions": "Engineering, business or computer-science major; returning sophomores preferred. Two recipient slots are one named award."
+      },
+      {
+        "name": "Dennis and Phyllis Washington Foundation Scholarship (DCC)",
+        "amount": "",
+        "conditions": "Montana residents and high-school graduates preferred; GPA2.0 maintenance plus co-curricular/community involvement. General first-year/transfer entry thresholds also apply."
+      },
+      {
+        "name": "Ella Walden Schloss Memorial \u2014 Music (DCC)",
+        "amount": "Up to$200",
+        "conditions": "Music major or program participant; two recorded performances or audition with music director; returning sophomores preferred."
+      },
+      {
+        "name": "Ella Walden Schloss Memorial \u2014 Writing (DCC)",
+        "amount": "Approximately$200",
+        "conditions": "Writing aptitude or intention to become novelist/journalist; two high-school or college writing samples; returning sophomores preferred."
+      }
+    ],
+    "interpretation": "Only supported subset conditions used; material geography/coursework conflicts held. BlankGPAcolumn prevents inappropriate one-number filtering."
+  }
+}

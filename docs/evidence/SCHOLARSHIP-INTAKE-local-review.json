@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "recordType": "independent_complete_local_candidate_recheck_not_canonical_attestation",
+  "outcome": "PASS",
+  "recordedAt": "2026-09-11T07:59:49.637376+00:00",
+  "reviewer": {
+    "task": "/root/intake_final_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "partitions": [
+      "/root/intake_final_review/rows",
+      "/root/intake_final_review/fields"
+    ]
+  },
+  "candidateCommit": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+  "candidateTree": "28065da4e6a1975f4b1f4d7d0c105d9ce1309c05",
+  "originalReviewedCandidate": "06f9c821995557438919331dde191348cd32bbf7",
+  "originalReviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-local-review-original.json",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "manifestPath": "docs/evidence/SCHOLARSHIP-INTAKE-local-manifest.json",
+  "manifestSha256": "951138fbf3238208bd8b7e79fdf01633e42164b3f6d367b1d6842ec7ffb1f1e0",
+  "binaryDiffSha256": "f38b534a4187459fa9cccb45b9c5d8763d8255f67a8e2d0368860b82b22c3c7a",
+  "ledgerSha256": "460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed",
+  "batchDigest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+  "proposalFileSha256": "6fb6fa54cf357432837ed534a955b6a1e85798bfc4396f5a6de9b1ff8b697d79",
+  "reportSha256": "6d199f1a8a7e4eff6fe2139c6bc0edb7e52d10da134120b8499955451c8c2fbe",
+  "remainingFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 3
+  },
+  "dispositions": [
+    {
+      "id": "FINAL-LOCAL-L1",
+      "severity": "low",
+      "status": "resolved",
+      "owner": "/root",
+      "target": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+      "rationale": "Main validator compares every row.values array to native projection. Exact formatting, empty values and numeric/boolean fallbacks explicit. Independently rerun actual-ledger tamper regression rejects the previously accepted alteration."
+    },
+    {
+      "id": "FINAL-LOCAL-L2",
+      "severity": "low",
+      "status": "resolved",
+      "owner": "/root",
+      "target": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+      "rationale": "Original terminal log normalization independently reproduces from immutable original bytes; original raw hashes retained. All current log hashes verify; complete baseline-to-candidate whitespace independently passes."
+    },
+    {
+      "id": "FINAL-LOCAL-L3",
+      "severity": "low",
+      "status": "resolved",
+      "owner": "/root",
+      "target": "8211003dab98de3035b7a94608b6bdb7ef16fdde",
+      "rationale": "Anne Ford and Live Your Dream academic/program entries use award_card_only and choiceId null with accurate education explanations. Separate disability/gender tags unchanged. Only two changed ledger entries."
+    }
+  ],
+  "coverage": {
+    "changedPaths": 119,
+    "sourceTabs": 14,
+    "sourceRows": 1666,
+    "entities": 1024,
+    "additions": 219,
+    "updates": 38,
+    "heldEntities": 310,
+    "outOfScopeEntities": 173,
+    "existingLinks": 159,
+    "duplicateEntities": 77,
+    "nonRecordEntities": 48,
+    "proposedFields": 3368,
+    "tags": 277,
+    "interviewCoverageEntries": 1040,
+    "interviewGapRecommendations": 5,
+    "triageRecords": 293,
+    "triageFields": 1161,
+    "discoveryRecords": 46,
+    "enumeratedDiscoveryOccurrences": 581,
+    "officialSourceRecords": 369,
+    "operations": 257,
+    "executableCells": 3367,
+    "deferredCells": 1,
+    "sourceMarkers": 493,
+    "priorDecisionReversalRecords": 128,
+    "storedNativeLinks": 1694,
+    "explicitNativeIdentityRecords": 677,
+    "additionMasterPairs": 43143,
+    "additionPairs": 23871,
+    "historicalAttestationFilesPreserved": 56
+  },
+  "verification": {
+    "completeManifestBlobsLengthsHashesTreeAndDiff": "PASS",
+    "completeBaselineToCandidateWhitespace": "PASS independently reproduced",
+    "nativeProjectionPositiveAndTamperRegression": "PASS independently rerun",
+    "completeDeterministicDryRun": "PASS independently rerun",
+    "operationEqualityToOriginalReviewedCandidate": "PASS; all257operations/3367cellsunchanged",
+    "ledgerDelta": "Exactly two academic coverage entries; all other ledgercontent unchanged",
+    "originalAndRecheckValidationLogHashes": "PASS",
+    "recordedTypecheckFullTestsDefaultBuildRuntimeBoundary": "PASS; recordedresults/loghashesvalidated",
+    "planCheck": "Exit1with exactlysame3reservedcanonicalmanifest/review/attestationerrors; NOTPASS/notwaived",
+    "workingTree": "Clean at recheck"
+  },
+  "updatedPartitionHashes": {
+    "proposedEntityIds": "7ed8d2086dfaa95682f7a078c6c1abaa717056507ac402aee3c7a715e68d66e1",
+    "fields": "050092960b0ff764dca2f7be1062f9ca98afd4a61d3970d781e3bc306288472a",
+    "tags": "56ea928f4ce80a977cc959550f968822bb3aed955320283ea64fd69a7d033435",
+    "interviewCoverage": "498f6286115f79be7dc63baf263bc44881a6d822060961ad8e745ddc1c2e1736",
+    "interviewGaps": "f5e7ca41d7bb0a49e5bc6a0469c8f4dd57e4bc35481486dbea730b8d41a80075",
+    "combinedProposedPartition": "a867bb33de8a2630b1d4b90b98b22b0f73ee41391f533a4fba598c46dece2ab3",
+    "completeProposedEntityObjects": "670c11e09857b8675f8a2d00fe86d823966e24a913dfbfd82bee27d41ab295a4"
+  },
+  "statusMeaning": "Local review-complete, unapplied candidate. Not sheet-applied, canonicallyaccepted,attestedordelivered.",
+  "limits": [
+    "Original100percentreviewcarriesforward throughprovenunchangedcontent; correctedcoverageentriesdirectlyreviewed.",
+    "Originalsourceintegrityqualifications,targetedReachverification,actionableholds,historicalcyclesandcataloglimitsremainoperative.",
+    "Noreviewerfileedits,sourcewrites,workbookreads/copiesorpublication. Exactfutureauthority/fullprivatebackup/recovery/freshness/concurrency/readbackremainrequired."
+  ],
+  "closeoutRule": "The following ordinarylocal documentationcommit mayretainthisreceipt/manifestandupdatedhandoff/status. Itmustnotchange reviewedledger,batch,sourcefilesorimplementation. Itisnotcanonicalattestation.",
+  "rootCloseoutVerification": {
+    "recordedAt": "2026-09-11T08:01:58.204948+00:00",
+    "reviewedArtifactsUnchanged": true,
+    "completeDryRunCheck": "PASS, unchanged digest and257operations/3367cells",
+    "planCheck": "npm run plan:check exit1; exactly the same three reserved PLAN-REV15 missing manifest/review/committed attestation diagnostics. No new error.",
+    "scope": "Root verification of ordinary documentation closeout, not an extension of reviewer authorship or canonical acceptance."
+  }
+}

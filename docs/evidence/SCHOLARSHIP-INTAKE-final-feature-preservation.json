@@ -1,0 +1,775 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_STRUCTURE_RECOVERY_COVERAGE",
+  "sourceId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+  "backupId": "11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM",
+  "observedAt": "2026-09-11T10:48:54.085Z",
+  "rawFullMetadataSource": "Exact authorized F1 correction response, unrestricted metadata with grid data disabled.",
+  "all14SheetMetadataExactlyEqual": true,
+  "sourceRootKeys": [
+    "spreadsheetId",
+    "properties",
+    "sheets",
+    "spreadsheetUrl"
+  ],
+  "sheetInventory": [
+    {
+      "properties": {
+        "sheetId": 445586487,
+        "title": "Master backup 2026-07-12",
+        "index": 0,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1060,
+          "columnCount": 24,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 189878200,
+        "title": "Staging backup 2026-06-17",
+        "index": 1,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1233,
+          "columnCount": 26,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1852930668,
+        "title": "Start Here",
+        "index": 2,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 20,
+          "columnCount": 4
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1472248756,
+        "title": "Student View",
+        "index": 3,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 21,
+          "columnCount": 15,
+          "frozenRowCount": 1
+        }
+      },
+      "conditionalFormats": [
+        {
+          "ranges": [
+            {
+              "sheetId": 1472248756,
+              "startRowIndex": 1,
+              "endRowIndex": 17,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Check site"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.8980392,
+                "green": 0.8980392,
+                "blue": 0.8784314
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.8980392,
+                  "green": 0.8980392,
+                  "blue": 0.8784314
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 1472248756,
+              "startRowIndex": 1,
+              "endRowIndex": 17,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Past due"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.95686275,
+                "green": 0.8392157,
+                "blue": 0.80784315
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.95686275,
+                  "green": 0.8392157,
+                  "blue": 0.80784315
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 1472248756,
+              "startRowIndex": 1,
+              "endRowIndex": 17,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Upcoming"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.827451,
+                "green": 0.8980392,
+                "blue": 0.9764706
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.827451,
+                  "green": 0.8980392,
+                  "blue": 0.9764706
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 1472248756,
+              "startRowIndex": 1,
+              "endRowIndex": 17,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Closing soon"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.9882353,
+                "green": 0.8980392,
+                "blue": 0.6
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.9882353,
+                  "green": 0.8980392,
+                  "blue": 0.6
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 1472248756,
+              "startRowIndex": 1,
+              "endRowIndex": 17,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Open"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.84705883,
+                "green": 0.92941177,
+                "blue": 0.8
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.84705883,
+                  "green": 0.92941177,
+                  "blue": 0.8
+                }
+              }
+            }
+          }
+        }
+      ],
+      "filterViews": [
+        {
+          "filterViewId": 1006174649,
+          "title": "Open now",
+          "range": {
+            "sheetId": 1472248756,
+            "startRowIndex": 0,
+            "endRowIndex": 17,
+            "startColumnIndex": 0,
+            "endColumnIndex": 15
+          },
+          "criteria": {
+            "5": {
+              "condition": {
+                "type": "TEXT_EQ",
+                "values": [
+                  {
+                    "userEnteredValue": "Open"
+                  }
+                ]
+              }
+            }
+          },
+          "filterSpecs": [
+            {
+              "columnIndex": 5,
+              "filterCriteria": {
+                "condition": {
+                  "type": "TEXT_EQ",
+                  "values": [
+                    {
+                      "userEnteredValue": "Open"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "filterViewId": 1451795884,
+          "title": "Closing soon",
+          "range": {
+            "sheetId": 1472248756,
+            "startRowIndex": 0,
+            "endRowIndex": 17,
+            "startColumnIndex": 0,
+            "endColumnIndex": 15
+          },
+          "criteria": {
+            "5": {
+              "condition": {
+                "type": "TEXT_EQ",
+                "values": [
+                  {
+                    "userEnteredValue": "Closing soon"
+                  }
+                ]
+              }
+            }
+          },
+          "filterSpecs": [
+            {
+              "columnIndex": 5,
+              "filterCriteria": {
+                "condition": {
+                  "type": "TEXT_EQ",
+                  "values": [
+                    {
+                      "userEnteredValue": "Closing soon"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "filterViewId": 815187770,
+          "title": "Upcoming",
+          "range": {
+            "sheetId": 1472248756,
+            "startRowIndex": 0,
+            "endRowIndex": 17,
+            "startColumnIndex": 0,
+            "endColumnIndex": 15
+          },
+          "criteria": {
+            "5": {
+              "condition": {
+                "type": "TEXT_EQ",
+                "values": [
+                  {
+                    "userEnteredValue": "Upcoming"
+                  }
+                ]
+              }
+            }
+          },
+          "filterSpecs": [
+            {
+              "columnIndex": 5,
+              "filterCriteria": {
+                "condition": {
+                  "type": "TEXT_EQ",
+                  "values": [
+                    {
+                      "userEnteredValue": "Upcoming"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "filterViewId": 1797338656,
+          "title": "No GPA minimum",
+          "range": {
+            "sheetId": 1472248756,
+            "startRowIndex": 0,
+            "endRowIndex": 17,
+            "startColumnIndex": 0,
+            "endColumnIndex": 15
+          },
+          "criteria": {
+            "8": {
+              "condition": {
+                "type": "TEXT_EQ",
+                "values": [
+                  {
+                    "userEnteredValue": "Any"
+                  }
+                ]
+              }
+            }
+          },
+          "filterSpecs": [
+            {
+              "columnIndex": 8,
+              "filterCriteria": {
+                "condition": {
+                  "type": "TEXT_EQ",
+                  "values": [
+                    {
+                      "userEnteredValue": "Any"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "filterViewId": 1362063338,
+          "title": "2-Year & Trade",
+          "range": {
+            "sheetId": 1472248756,
+            "startRowIndex": 0,
+            "endRowIndex": 17,
+            "startColumnIndex": 0,
+            "endColumnIndex": 15
+          },
+          "criteria": {
+            "7": {
+              "hiddenValues": [
+                "4-Year",
+                "Any"
+              ]
+            }
+          },
+          "filterSpecs": [
+            {
+              "columnIndex": 7,
+              "filterCriteria": {
+                "hiddenValues": [
+                  "4-Year",
+                  "Any"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "basicFilter": {
+        "range": {
+          "sheetId": 1472248756,
+          "startRowIndex": 0,
+          "endRowIndex": 17,
+          "startColumnIndex": 0,
+          "endColumnIndex": 15
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 431480012,
+        "title": "Archive",
+        "index": 4,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 82,
+          "columnCount": 15,
+          "frozenRowCount": 1
+        }
+      },
+      "conditionalFormats": [
+        {
+          "ranges": [
+            {
+              "sheetId": 431480012,
+              "startRowIndex": 1,
+              "endRowIndex": 78,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Check site"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.8980392,
+                "green": 0.8980392,
+                "blue": 0.8784314
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.8980392,
+                  "green": 0.8980392,
+                  "blue": 0.8784314
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 431480012,
+              "startRowIndex": 1,
+              "endRowIndex": 78,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Past due"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.95686275,
+                "green": 0.8392157,
+                "blue": 0.80784315
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.95686275,
+                  "green": 0.8392157,
+                  "blue": 0.80784315
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 431480012,
+              "startRowIndex": 1,
+              "endRowIndex": 78,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Upcoming"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.827451,
+                "green": 0.8980392,
+                "blue": 0.9764706
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.827451,
+                  "green": 0.8980392,
+                  "blue": 0.9764706
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 431480012,
+              "startRowIndex": 1,
+              "endRowIndex": 78,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Closing soon"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.9882353,
+                "green": 0.8980392,
+                "blue": 0.6
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.9882353,
+                  "green": 0.8980392,
+                  "blue": 0.6
+                }
+              }
+            }
+          }
+        },
+        {
+          "ranges": [
+            {
+              "sheetId": 431480012,
+              "startRowIndex": 1,
+              "endRowIndex": 78,
+              "startColumnIndex": 5,
+              "endColumnIndex": 6
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Open"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.84705883,
+                "green": 0.92941177,
+                "blue": 0.8
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.84705883,
+                  "green": 0.92941177,
+                  "blue": 0.8
+                }
+              }
+            }
+          }
+        }
+      ],
+      "basicFilter": {
+        "range": {
+          "sheetId": 431480012,
+          "startRowIndex": 0,
+          "endRowIndex": 78,
+          "startColumnIndex": 0,
+          "endColumnIndex": 15
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 264421372,
+        "title": "Categories",
+        "index": 5,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 50,
+          "columnCount": 2
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 0,
+        "title": "Master Database",
+        "index": 6,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1060,
+          "columnCount": 24,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1468843784,
+        "title": "Scraped Data",
+        "index": 7,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 2106717984,
+        "title": "Ingestion Staging",
+        "index": 8,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1377,
+          "columnCount": 26,
+          "frozenRowCount": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1110204944,
+        "title": "Removed 2026-06-16",
+        "index": 9,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 20,
+          "columnCount": 19
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1564592053,
+        "title": "Curated Review 2026-06-17",
+        "index": 10,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 21,
+          "columnCount": 19
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 81861408,
+        "title": "Removed 2026-06-17",
+        "index": 11,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 20,
+          "columnCount": 15
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 431336182,
+        "title": "Curated Review 2026-07-05",
+        "index": 12,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 29,
+          "columnCount": 19
+        }
+      }
+    },
+    {
+      "properties": {
+        "sheetId": 1969210817,
+        "title": "Curated Review 2026-07-11",
+        "index": 13,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 71,
+          "columnCount": 19
+        }
+      }
+    }
+  ],
+  "masterDimensions": {
+    "all14SheetMetadataEqual": true,
+    "masterFullGridEqual": true
+  },
+  "masterVisibility": "All 1060 row metadata and 15 column metadata entries match; no hidden rows/columns; columns 100 px. No merges in unrestricted sheet metadata.",
+  "sourceNoOpInspection": {
+    "testedAt": "2026-09-11T10:45:45.655Z",
+    "disposableId": "1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0",
+    "zeroMatchesAndChanges": true,
+    "all15900NativeCellsUnchanged": true,
+    "revisionAfter": "4",
+    "modifiedTimeBeforeAndAfter": "2026-09-11T09:15:49.024Z",
+    "comparison": "get_cells same surface exact equality; raw batch response includes empty black-color objects omitted by get_cells, not a change.",
+    "sourceRevisionBeforeAfter": "228",
+    "sourceModifiedTimeBeforeAfter": "2026-09-11T10:41:33.332Z"
+  },
+  "featureRecovery": {
+    "cells": "Proven 301-request forward and 301+5 exact inverse on disposable; full 15900 native cells exactly restored.",
+    "filters": "Both basic filters and all five saved filter criteria identical in source and backup. Unmodified by exact cell field mask or inverse.",
+    "formatting": "All per-cell styles, rich links, formulas, notes, validation in approved ranges compared; ten conditional rules and Master dimensions unchanged.",
+    "mergesNamedRangesProtectionsChartsConnections": "Absent in unrestricted raw Sheets metadata; all tabs GRID, no dataSources. Empty UI named/protected panels corroborate. No bound Apps Script remains after approved cleanup.",
+    "automation": "No scripts, schedules or connections activated. External standalone automation not inventoried; user confirmed quiet write window, source fingerprints/revisions checked.",
+    "identitySharingRevisionHistory": "Native copies have separate identity and history; do not clone source sharing/history. Precise affected-cell inverse retains original identity/sharing/history and untouched structure; any actual original rollback requires new exact authority."
+  },
+  "limits": [
+    "Read only approved scholarship ranges. Excluded Start Here A12 and Scraped Data R:T remain provider-side only.",
+    "Metadata-only source probe replaced zero cells and left revision and modified time unchanged."
+  ]
+}

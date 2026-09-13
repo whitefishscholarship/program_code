@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "scope": "Session closeout for completed local intake, exact authorized workbook application and two-tab historical reconciliation; prepare next bounded proposal/research session",
+  "recordedAt": "2026-09-12T16:11:18.998521+00:00",
+  "baselineCommit": "a888df3",
+  "authoritativeHandoff": "docs/CURRENT_HANDOFF.md",
+  "kickoff": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+  "checks": [
+    {
+      "check": "Historical independent-review candidate bindings",
+      "result": "PASS: all six recorded SHA256 values match current files"
+    },
+    {
+      "check": "Historical reconciliation accounting",
+      "result": "PASS: 1780 unique row coordinates cover807+973 exactly;228CSVentries;all status counts reconcile"
+    },
+    {
+      "check": "Held-intake routing",
+      "result": "PASS:310 held entities retain nonempty owner,reason,trigger,nextAction"
+    },
+    {
+      "check": "Frozen completed work",
+      "result": "PASS:ledger,local review,proposed writes and application receipt byte-identical to cf835c66f4cdd76b12cc57580ac4306c908e7a4d"
+    },
+    {
+      "command": "git merge-base --is-ancestor <checkpoint> HEAD",
+      "checkpoints": [
+        "cf835c66f4cdd76b12cc57580ac4306c908e7a4d",
+        "c63d252e53891ac106df3ccc8418755639deecd8",
+        "a888df3"
+      ],
+      "result": "PASS:all three"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "result": "tsx IPC blocked by sandbox EPERM",
+      "exitCode": 1
+    },
+    {
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "web",
+      "result": "FAIL:exactly three pre-existing reserved PLAN-REV15 gates",
+      "exitCode": 1,
+      "errors": [
+        "Missing required file: docs/evidence/PLAN-REV15-manifest.json",
+        "Missing required file: docs/reviews/PLAN-REV15.json",
+        "PLAN-REV15 requires a committed manifest/review attestation in current history"
+      ]
+    }
+  ],
+  "existingVerification": {
+    "receipt": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION-validation.json",
+    "typecheck": "PASS",
+    "tests": "PASS",
+    "build": "PASS",
+    "reuseReason": "Implementation unchanged; this closeout changes only handoff/kickoff/evidence and does not require repeated full runtime checks"
+  },
+  "threads": {
+    "reviewer": "/root/intake_application_review",
+    "historicalReview": "Completed PASS; all findings resolved and saved",
+    "closeoutReview": "Completed PASS: bounded independent documentation review, C0/H0/M0/L0; all owners/triggers retained, prior handoff unchanged below new section, no false acceptance or replay/new-effect authority",
+    "otherPendingAgentResults": 0,
+    "newAutomations": 0,
+    "newUserTasks": 0,
+    "reviewerStatus": "completed"
+  },
+  "authorityBoundary": [
+    "No new workbook mutation or backup/copy",
+    "No original restore or recovery-object deletion",
+    "No runtime edit or new matching rules",
+    "No push/PR/Preview/merge/Production/publication",
+    "Previous quiet window ended; future writes require fresh concurrency safeguards"
+  ],
+  "notReverified": [
+    "Current official scholarship eligibility,cycles and broad geographic availability",
+    "Live hosted application health",
+    "Remote origin/main or hosted delivery",
+    "Live workbook/backup access or fingerprints after saved observations",
+    "Issuer-side credential revocation"
+  ],
+  "openItems": "All routed in operative handoff;existing intake ledger and historical crosswalk preserved as item authorities",
+  "canonicalAcceptance": "Not claimed;three reserved PLAN-REV15 gates remain unsatisfied"
+}

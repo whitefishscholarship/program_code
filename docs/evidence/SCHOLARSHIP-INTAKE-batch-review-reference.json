@@ -1,0 +1,78 @@
+{
+  "reviewer": "/root/intake_reference_review",
+  "reviewedAt": "2026-09-11",
+  "scope": [
+    "batch-master-identity-003",
+    "batch-mensa-military-004"
+  ],
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "reviewedSubsetSha256": "8300a7a395cfdea97049fc9b2efe087896fecc3d188a0455cd9cdbaea42fdde0",
+  "payloadBytes": 2289265,
+  "observedWholeLedgerSha256": "b4b16b47114da810878b73766fa2a63c885a6c8b70ad66b2914f8bd7826006cb",
+  "digestDefinition": "UTF8JSONsort_keys=True,ensure_ascii=False,compactseparators,preserveledgerarrayorder. Payload snapshotId,snapshotSha256,batchMasterIdentity(batch003object,selectedrows,their192entitieswithsourceRowIdsfilteredto660selected,223referencedrelatedFieldTriage),batchMensaMilitary(batch004object,selectedrows/entities,referencedofficialSources,discoveries,holds,completeparsedmensa-military-field-evidence). Remove recursive review objects frombatch/row/entity records and eachrecordtop-levelstatus; retaintriagestatuses.",
+  "coverage": {
+    "masterIdentityRows": 660,
+    "masterLinks": 192,
+    "referenceDuplicates": 468,
+    "deferredIdentityRowsExcluded": 35,
+    "mensaMilitaryEntities": 65,
+    "mensaMilitaryRows": 75,
+    "mensaHeldEntities": 54,
+    "officialSourceHashesChecked": 7,
+    "snapshotHashesChecked": 14
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindings": {
+    "critical": 0,
+    "high": 2,
+    "medium": 3,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "H1",
+      "status": "resolved",
+      "rationale": "Jayceevocational separateentity targetsMaster27; collegeMaster26 retained",
+      "owner": "intake implementation agent",
+      "target": "reference/militarybatchcheckpoint"
+    },
+    {
+      "id": "H2",
+      "status": "resolved",
+      "rationale": "Foldsgeography restricted statement retains2024\u201325date,currentunknown",
+      "owner": "intake implementation agent",
+      "target": "reference/militarybatchcheckpoint"
+    },
+    {
+      "id": "M1",
+      "status": "resolved",
+      "rationale": "Ordinaryunmetexpenses do not establish acute-needprioritization;Nblank",
+      "owner": "intake implementation agent",
+      "target": "reference/militarybatchcheckpoint"
+    },
+    {
+      "id": "M2",
+      "status": "resolved",
+      "rationale": "Three tags have explicitsemantics/controlmapping; award-specific dimensionsreviewed",
+      "owner": "intake implementation agent",
+      "target": "reference/militarybatchcheckpoint"
+    },
+    {
+      "id": "M3",
+      "status": "resolved",
+      "rationale": "223pending relatedfieldtriagerows,139entities,683fields withowner/nextaction; mustfinishbeforefinal",
+      "owner": "intake implementation agent",
+      "target": "reference/militarybatchcheckpoint"
+    }
+  ],
+  "finalAuditAcceptance": false,
+  "reviewerEdits": 0,
+  "externalMutations": 0
+}

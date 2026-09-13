@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 14
+Plan revision: 17
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1651,3 +1651,89 @@ previous release grant is exhausted and is not relied on. No configuration chang
 or additional external effects are included.
 Rollback reference is deployed PR42 merge 2f517755118bc72570a2aa8b5109a2660e0d9b12;
 any actual rollback additionally requires explicit authority.
+
+
+## 19. Plan Revision 15 — Scholarship intake evaluation
+
+Kelsey directly invoked SCHOLARSHIP-INTAKE-1 on September10 Denver / September11 UTC,
+2026, authorizing local preparation, this prospective canonical plan/state amendment,
+read-only evaluation of the named workbook's scholarship fields, bounded official-source
+verification, local implementation, testing and independent review. Adopt the complete
+fixed scope, evidence/inclusion rules, one-ledger contract, tags/interview recommendations,
+backup/recovery requirements and acceptance matrix in
+`docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md` sections1–9 and its invoked kickoff.
+P9 and completed Revisions13/14 remain complete; all program stage pointers stay null.
+The separate scholarshipIntake state tracks this one local maintenance effort.
+
+Commit and independently review this policy before the full audit or affected
+implementation. This checkpoint permits local preparation, not final acceptance or
+attestation. The exact PLAN-REV15 local-preparation exception permits false publication
+authority only outside hosted CI with the exact release blocker. Every historical
+validation and final manifest/review/direct-child attestation gate remains mandatory.
+The final local review-complete candidate may await exact authority without a premature
+canonical attestation. Local checkpoints may continue until that final freeze.
+
+Inventory all tabs including hidden tabs; access only scholarship-bearing fields of
+workbook 1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4. Scraped Data defaults to A:Q;
+exclude R:T contact/outreach/applicant-count content. Unrelated/sensitive tabs are
+metadata-only exclusions. Capture bounded native cells, formulas and rich links;
+verify snapshot stability and account for every relevant row and discovered child.
+Review every disposition, duplicate survivor, proposed field/tag and interview gap
+independently. Unsupported facts remain explicit and do not block unrelated supported work.
+New questions and matching rules are recommendations only; no runtime behavior changes.
+
+The historical exact batch was applied and reconciled under its separate recorded grant;
+that batch and quiet window are spent. On September12 Kelsey granted R2 delivery of this
+existing REV15 package followed only after verification by REV16. PLAN-REV15.md records
+the exact branch/PR/Preview/merge/Production/CI/hosted-verification scope and target.
+R2 authorizes no workbook access, new copy/write, research or configuration change.
+Any future source mutation requires a new exact grant after a concrete reviewed batch.
+Before any original write require a separate private complete native backup of all tabs,
+verified access/preservation, demonstrated recovery in an authorized disposable copy,
+affected-cell backups, current fingerprints, protection against newer edits and exact
+readback. Missing complete backup or recovery proof blocks writes, not read-only work.
+Retain backup locations, proof, retention and recovery state durably. Never automatically
+restore the whole workbook or overwrite newer edits. The complete section7 applies.
+
+Preserve historical artifacts, P9 zero-spreadsheet runtime, GPA/school filtering,
+all-award access, volatile interview privacy and exact visible-result CSV downloads.
+No applicant data, legacy workbook access, provider contact, forms, paid access, new
+services, full-master freshness review, automation, new catalog publication, configuration
+changes or unrelated maintenance. The September12 R2 grant covers only this package
+release and its unchanged student runtime, after fresh full-candidate review and valid
+direct-child attestation. No acceptance gate is waived. Later catalog/publication work
+requires its own selected scope and exact authority. Rollback or external restore is not
+authorized; preserve the applied receipt and recovery objects without accessing them.
+
+
+## Plan Revision 17 — exact REV15 delivery repair continuation
+
+Kelsey authorized the reviewed R2 repair proposal. This is a single prospective
+exception to the undelivered REV15 tip lock, never a general waiver. The original
+REV15 branch remains at A15 unchanged. Its original candidate, manifest, review,
+authority evidence and complete amendment object remain immutable. Preserve every
+A15 blob outside the exact machine-recorded allowlist. The dedicated policy
+checkpoint requires independent review before implementation.
+
+Only the authorized branch descending from the pinned A15 may prepare C17. Its
+manifest covers the whole unchanged M0 baseline to C17, including preserved A15
+ancestry and artifacts. Fresh independent full-candidate review must accept it.
+Only a valid direct-child, two-file REV17 attestation A17 may replace A15 as the
+allowed undelivered tip. Before A17, retain REV15's tip failure plus REV17's three
+missing-artifact diagnostics; after A17 actual local and hosted-mode checks must
+report zero errors. Preserve all other acceptance rules and historical exceptions.
+No ordinary post-A17 commit is allowed before delivery.
+
+The finite 16 MiB Git reader must fail closed for unreadable, over-limit or
+incorrect-hash objects; all four preserved large blobs must pass regression tests.
+Run the full existing matrix, new adversarial continuation/reader tests and exact
+Preview before merge, Production after merge. The first release delivers REV15
+and this repair; only verified predecessor delivery permits the existing REV16
+release. REV16 retains its identifier while planRevision stays at least17. Preserve
+REV15/REV17 records, evidence and canonical artifacts, using the reviewed union of
+repair and REV16 validator/test changes and original reviewed runtime/UI bytes.
+
+Exact pins, allowlist, informed effects and target are in BUILD_STATE's PLAN-REV17
+rev15DeliveryRepair and docs/evidence/PLAN-REV17.md. No workbook access/change,
+research, runtime/catalog change, configuration change, monitoring, rollback,
+provider/applicant interaction or later R3-R7 phase is authorized by this exception.

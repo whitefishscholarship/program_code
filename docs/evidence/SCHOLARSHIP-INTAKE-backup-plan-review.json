@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "recordType": "backup_requirement_proposal_review_not_attestation",
+  "recordedAt": "2026-09-11T01:50:07.054507+00:00",
+  "userInstruction": "let get that added and documented completely",
+  "instructionContext": "Add the proposed mandatory full-workbook backup before any approved original-sheet write, in addition to the affected-cell backup. Documentation only.",
+  "baselineCommit": "98b55c2c114ab146131957095c359c00364c6d3e",
+  "reviewedCandidateCommit": "e1ecb1b3c0094d229c03079f892a3a09c549fadf",
+  "reviewer": {
+    "task": "/root/intake_backup_plan_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "liveSpreadsheetSourceOrProviderAccess": false
+  },
+  "outcome": "PASS",
+  "findings": [],
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "scope": [
+    "Complete native separate workbook copy including hidden tabs",
+    "Authorized private access and sensitive-data boundary",
+    "Stable source, preservation checks and recovery proof in a disposable copy",
+    "Backup retention and fresh backup before later write batches",
+    "Stop-on-error and protection against losing newer edits",
+    "Kickoff and durable handoff alignment"
+  ],
+  "candidateTreeBlobs": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "dfa894d7dda137854e976e714f08cdd5346e99fb39fa6f0d92292de7d6ced7ed"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md",
+      "sha256": "ebd9c4878fb65ef4f0592323805dde0d9b6984b8bd5d1d42263356515f0cbd1c"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE.md",
+      "sha256": "fed0409673c5ca9de2d61554ed271492f45363c6864d267cd70517bff869adec"
+    }
+  ],
+  "verification": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "result": "PASS:13 ordered stage contracts and current transition",
+      "observedByUtc": "2026-09-11T01:48:33Z"
+    },
+    {
+      "command": "git diff --check 98b55c2c114ab146131957095c359c00364c6d3e e1ecb1b3c0094d229c03079f892a3a09c549fadf",
+      "result": "PASS; independently reproduced"
+    },
+    {
+      "check": "Canonical AGENTS/plan/state, previous proposal-review receipt and PLAN-REV14 delivery receipt preserved byte-for-byte",
+      "result": "PASS; independently reproduced"
+    },
+    {
+      "check": "Exactly3 proposal documentation paths changed and plan/kickoff/handoff consistent",
+      "result": "PASS; independently reproduced"
+    },
+    {
+      "check": "Product tests/typecheck/build",
+      "result": "Not rerun: documentation-only proposal update; no product code/data or canonical policy changed."
+    }
+  ],
+  "externalEffects": {
+    "workbookRead": false,
+    "backupCreated": false,
+    "sourceWrite": false,
+    "restore": false,
+    "publication": false
+  },
+  "closeout": "This review receipt and final handoff are a local administrative closeout after the reviewed proposal candidate. No canonical attestation, active stage or live backup verification is asserted.",
+  "nextAction": "Use the latest codex/scholarship-intake-plan tip in the next-session kickoff; complete prospective policy review and the read-only audit. Create and verify the full backup only under later exact batch authority before any source write."
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-12T16:29:59.985870+00:00",
+  "scope": "Local proposal only;no canonical acceptance",
+  "checks": [
+    {
+      "command": "python3 docs/evidence/coverage-discovery/validate-proposal.py",
+      "cwd": "repository root",
+      "exitCode": 0,
+      "result": "PASS:complete accounting,exact inputs and preserved historical files"
+    },
+    {
+      "command": "Repeated build-proposal.py output SHA256 comparison",
+      "cwd": "repository root",
+      "exitCode": 0,
+      "result": "PASS:deterministic three generated views"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "exitCode": 0,
+      "result": "PASS:complete repository test chain"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "exitCode": 0,
+      "result": "PASS:Turbopack;existing middleware deprecation warning"
+    },
+    {
+      "command": "npm run intake:check",
+      "cwd": "web",
+      "exitCode": 0,
+      "result": "PASS:1666 rows,1024 entities,zero pending"
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "exitCode": 1,
+      "result": "Environment failure:tsx IPC EPERM"
+    },
+    {
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "web",
+      "exitCode": 1,
+      "result": "FAIL:exactly three pre-existing reserved PLAN-REV15 gates"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "repository root",
+      "exitCode": 0,
+      "result": "PASS"
+    }
+  ],
+  "reservedPlanErrors": [
+    "Missing required file: docs/evidence/PLAN-REV15-manifest.json",
+    "Missing required file: docs/reviews/PLAN-REV15.json",
+    "PLAN-REV15 requires a committed manifest/review attestation in current history"
+  ],
+  "limits": [
+    "No current hosted health,remote main,source workbook or backup freshness verification",
+    "No current-rule or catalog-wide completeness claim beyond selected source statements",
+    "Green tests do not accept scholarship facts",
+    "No source mutation,copy,runtime edit or publication"
+  ],
+  "deterministicViewHashes": {
+    "proposal.json": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8",
+    "interview-matrix.md": "f446c5acca6988893285d5af266ad7b7c2cafe606b2e2be10bc1b2b7e5a6714f",
+    "historical-routing.md": "078b4c504bacd2f57f8064b9bfa524fb43431526d832b3db0eb6a30d7eacb3f1"
+  },
+  "reviewRemediation": {
+    "recordedAt": "2026-09-12T16:35:35.410656+00:00",
+    "reviewedCandidate": "3f7c876fc0220bd71c7c76d0987006d4dd4ef53f",
+    "findingsAddressed": [
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "checks": [
+      "Proposal accounting/preservation validator PASS",
+      "Generated output determinism PASS",
+      "git diff --check PASS"
+    ],
+    "applicationCheckReuse": "Full application checks above remain applicable: remediation changes only proposal evidence, generator, validator and report. Runtime, fixtures, dependencies and application test inputs remain unchanged."
+  }
+}

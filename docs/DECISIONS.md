@@ -616,3 +616,38 @@ precede product edits. Independent policy review precedes implementation; final 
 binds the complete frozen candidate. No historical evidence is rebound. Delivery remains
 blocked pending new exact Git/Vercel authority or verified suppression, before attestation.
 Rollback reference is unchanged PR42; performing rollback needs separate authority.
+
+
+## D-027 — PLAN-REV15 bounded scholarship intake (2026-09-11 UTC)
+
+The invoked prepared plan and complete-backup update authorize one local cross-tab
+intake, preserving completed releases. Choose a dedicated Revision15 preparation
+exception and one decision ledger. Existing Revision14 authority is exhausted and its
+exception cannot implicitly apply. Reject reopening P9, a full-master refresh, runtime
+integration, blanket exclusions from historical labels, or source writes without new
+exact authority and complete verified recovery. Complete fresh-context policy review
+before audit; then practical entity batches and one complete independent final review.
+The complete fixed plan is incorporated by canonical section19. Missing facts remain
+unknown. Backup creation and all write/publication effects remain false. Rollback is
+abandonment of local changes; historical artifacts and original checkout stay intact.
+
+## 2026-09-12 — R2 exact two-release delivery authority
+
+Kelsey directly authorized the reviewed R1 package at retained source979122a: REV15
+first, REV16 only after verified delivery. This REV15 branch starts from40ff61e and
+changes only the reviewed authority/evidence paths. Existing canonical topology requires
+separate full manifests, fresh review and two-file direct-child attestations. No rule
+amendment, historical attestation integration exception or gate waiver is introduced.
+R2 grants and exact target appear in PLAN-REV15.md and BUILD_STATE. Workbook access,
+new research, configuration changes and later phases remain prohibited. The stale P9
+bookkeeping label remains separately routed; it does not reopen P9.
+
+
+## 2026-09-12T23:49:53Z — Authorized R2 REV15 repair continuation
+
+Record direct grant “authorize all items you have listed” for reviewed recovery
+proposal 5ecf7a7, review-only checkpoint 3b276b4. The one-MiB reader defect became
+visible only after A15. Keep all hashes and gates; do not rewrite A15. Introduce
+only the exact prospective REV17 continuation in the canonical plan/state. Policy
+review precedes implementation; complete candidate review and two-file A17 precede
+publication. All old decisions and R2 boundaries remain.

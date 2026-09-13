@@ -1,0 +1,88 @@
+{
+  "reviewer": "/root/intake_reference_review",
+  "reviewedDateUTC": "2026-09-11",
+  "recordedAt": "2026-09-11T03:18:31.215780+00:00",
+  "scope": [
+    "batch-dawson-007"
+  ],
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "reviewedSubsetSha256": "d3116299e6ce068c6d705f1d54e92db828a71bddbdf129a90dbed071442eeed4",
+  "payloadBytes": 556066,
+  "digestDefinition": "Snapshotidentifiers,selectedbatch,rows,entities,4sources,2discoveries,25hold-historyrecords,Educationgap,completeDawsonfieldevidence. Preserveledgerarrayorder; omitrecursive review; omitonlybatch/entitytop-levelworkflowstatus; keepresolvedhold/withdrawndraftstatuses. UTF8JSONsort_keys=True,ensure_ascii=False,compactseparators.",
+  "coverage": {
+    "entityRecords": 77,
+    "inputRows": 31,
+    "activeFields": 510,
+    "tags": 27,
+    "interviewCoverageDecisions": 102,
+    "foundationHeadings": 65,
+    "formChoiceOccurrences": 61,
+    "uniqueFormLabels": 60,
+    "newFormOnlyChildren": 6,
+    "withdrawnDrafts": 8,
+    "sourceHashesChecked": 4,
+    "snapshotHashesChecked": 14
+  },
+  "dispositionsCounts": {
+    "propose_add": 34,
+    "hold": 24,
+    "out_of_scope": 13,
+    "duplicate_of": 5,
+    "non_record": 1
+  },
+  "cumulativeFindings": {
+    "critical": 0,
+    "high": 3,
+    "medium": 2,
+    "low": 0
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "H1",
+      "status": "resolved",
+      "rationale": "ApplicationcategoryGPA/admission/credits/materials and need-basedFAFSApreserved; no invalidscalarGPA",
+      "owner": "implementation agent",
+      "target": "Dawsonbatchcheckpoint"
+    },
+    {
+      "id": "H2",
+      "status": "resolved",
+      "rationale": "Materialgeography/coursework/returningconflicts held; supportedformnarrowing, performanceportfolioandauditionrequirements preserved; GaryandFloydwordingrechecked",
+      "owner": "implementation agent",
+      "target": "Dawsonbatchcheckpoint"
+    },
+    {
+      "id": "H3",
+      "status": "resolved",
+      "rationale": "All61namedformoccurrences60uniquelabels mapped;6extraform-onlyentriesaccounted, music/writingvariants distinct",
+      "owner": "implementation agent",
+      "target": "Dawsonbatchcheckpoint"
+    },
+    {
+      "id": "M1",
+      "status": "resolved",
+      "rationale": "Unsupportedgenericeducation-to-arts mappingremoved; futureEducationgap recommendationonly",
+      "owner": "implementation agent",
+      "target": "Dawsonbatchcheckpoint"
+    },
+    {
+      "id": "M2",
+      "status": "resolved",
+      "rationale": "CommunityFirstprogramfund held; no unsupportedindividualaward",
+      "owner": "implementation agent",
+      "target": "Dawsonbatchcheckpoint"
+    }
+  ],
+  "evidenceSha256": "288d2531c33a77d56b81586fd2ed83b6437c09f58b667f249eb0a72df3e38fa9",
+  "reviewerEdits": 0,
+  "externalActions": 0,
+  "finalAuditAcceptance": false
+}

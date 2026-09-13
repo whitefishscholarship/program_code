@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "official-mensa-program",
+      "url": "https://www.mensafoundation.org/what-we-do/scholarships/",
+      "finalUrl": "https://www.mensafoundation.org/what-we-do/scholarships/",
+      "observedAt": "2026-09-11T02:38:55.458Z",
+      "statusCode": 200,
+      "contentSha256": "4f77086f47f55c54164d4d39c66a30be92317810bec78793d53c1a66f8e6758e",
+      "scrapeId": "01a08e55-05e4-770f-a47a-11db4b5fd841",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-mensa-portal",
+      "url": "https://mensafoundation.awardspring.com/",
+      "finalUrl": "https://mensafoundation.awardspring.com/",
+      "observedAt": "2026-09-11T02:40:29.296Z",
+      "statusCode": 200,
+      "contentSha256": "86453351abb9a0ebb0588d22fc2d6f5340d9fd31ff67e4566a4bac2e4dbbce65",
+      "scrapeId": "01a08e56-79e9-7003-a9f2-e6a6043dd779",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-looney-program",
+      "url": "https://brendanlooneyfoundation.org/scholarships",
+      "finalUrl": "https://brendanlooneyfoundation.org/scholarships",
+      "observedAt": "2026-09-11T02:39:00.664Z",
+      "statusCode": 200,
+      "contentSha256": "14137b6b572cee9cfdd5550795549a3403053fe5b2d61840c3b94863f9be2b27",
+      "scrapeId": "01a08e55-21aa-718a-ac2e-d9e90cf86ded",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-looney-senior-2026",
+      "url": "https://img1.wsimg.com/blobby/go/0aef8dbe-52b4-4056-bc21-2412ebd9ca01/2026-2027%20GOLD%20STAR%20Senior%20Education%20Scholarsh.pdf",
+      "finalUrl": "https://img1.wsimg.com/blobby/go/0aef8dbe-52b4-4056-bc21-2412ebd9ca01/2026-2027%20GOLD%20STAR%20Senior%20Education%20Scholarsh.pdf",
+      "observedAt": "2026-09-11T02:29:40.910Z",
+      "statusCode": 200,
+      "contentSha256": "175fcf33c737504a99255058cbad176dc5d424667fb117443b87061124402c78",
+      "scrapeId": "01a08e4c-46c3-7028-bccf-5c937e2dbf3f",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-looney-camp",
+      "url": "https://brendanlooneyfoundation.org/gold-star-application",
+      "finalUrl": "https://brendanlooneyfoundation.org/gold-star-application",
+      "observedAt": "2026-09-11T02:40:32.831Z",
+      "statusCode": 200,
+      "contentSha256": "b2a5cc6c22f8c1289b28aa4e7c00c7ac877bb9e41957435f2cbbb402dccb19fd",
+      "scrapeId": "01a08e56-858b-755d-94f8-fc45e5c84b92",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-looney-college-route",
+      "url": "https://brendanlooneyfoundation.org/college-plus-app",
+      "finalUrl": "https://brendanlooneyfoundation.org/college-plus-app",
+      "observedAt": "2026-09-11T02:38:58.191Z",
+      "statusCode": 404,
+      "contentSha256": "d62b07811d4198a2ebc173afdecc3230f1daafab96b035ff408a77c32dadd9c6",
+      "scrapeId": "01a08e55-1743-706a-836a-466df74098b1",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    },
+    {
+      "id": "official-folds-program",
+      "url": "https://foldsofhonor.org/scholarships/",
+      "finalUrl": "https://foldsofhonor.org/scholarships/",
+      "observedAt": "2026-09-11T02:29:24.304Z",
+      "statusCode": 200,
+      "contentSha256": "1259c487845936f23cc342a3213ae4a00e70a8fe15dabc816465e40f5848ca9d",
+      "scrapeId": "01a08e4c-30a9-73f2-9f83-6ff46342f07b",
+      "authority": "official provider/program or provider-linked document",
+      "evidencePath": "docs/evidence/scholarship-intake/mensa-military-field-evidence.json",
+      "retrievalMode": "live maxAge0 basic proxy; observation only"
+    }
+  ],
+  "fieldEvidence": [
+    {
+      "program": "Mensa",
+      "sourceIds": [
+        "official-mensa-program",
+        "official-mensa-portal"
+      ],
+      "locators": [
+        "Guidelines > Application Timeline",
+        "Additional Documentation",
+        "Apply for all scholarships in one place",
+        "AwardSpring Sign In"
+      ],
+      "facts": [
+        "Official next application window:2026-09-15 through2026-11-15; intended enrollment2027-28; essay550 words maximum.",
+        "All child award information relocated to account portal; sign-in page alone does not establish any named award exists in this cycle.",
+        "Do not conflate no-membership-needed scholarship judges with applicant eligibility."
+      ],
+      "enumeratedWorkbookNames": [
+        "GEN Y SCHOLARSHIP",
+        "STEM SCHOLARSHIP FOR WOMEN",
+        "THE SYLVIA SCHOLARSHIP",
+        "DAVID MANN SCHOLARSHIP",
+        "DR. PETER M KENDALL SCIENCE SCHOLARSHIP",
+        "THIEL MEMORIAL SCHOLARSHIP",
+        "4 PAWS AND A TAIL SCHOLARSHIP",
+        "CGM HEALTH CAREERS SCHOLARSHIP",
+        "RITA CHARLES MEMORIAL SCHOLARSHIP",
+        "HARPER FOWLEY \u2013 ISOLATED M AWARD",
+        "THE SKINNER HELL\u2019S M\u2019S MEMORIAL SCHOLARSHIP",
+        "HELEN KUPPER SCHOLARSHIP",
+        "GREG TIMMERS ARTS EDUCATION SCHOLARSHIP",
+        "ROSEMARY GREATHOUSE SCHOLARSHIP",
+        "MARGIE MANDELBLATT AWARD",
+        "MARGOT SEITELMAN MEMORIAL SCHOLARSHIP",
+        "RUTH ANN PARVIN MEMORIAL SCHOLARSHIP",
+        "MARK J GLANCEY AND JOHN G GRAY LGBT SCHOLARSHIP",
+        "CELEBRATING RACIAL DIVERISTY",
+        "FIRST TIMERS\u2019 GRANT",
+        "BOB AND MARY ANN COX SCHOLARSHIP",
+        "RITA LEVINE MEMORIAL SCHOLARSHIP",
+        "DON AND VIRGINIA PRINCE SCHOLARSHIP",
+        "WALT AND MARY MCGREW SCHOLARSHIP FOR VETERANS",
+        "J F SCHIRMER",
+        "RAMONA ROE SCHOLARSHIP",
+        "JERRY AND ABBIE SALNY SCHOLARSHIP",
+        "JOE ZANCA SCHOLARSHIP",
+        "NEIL B CAESAR PEACE SCHOLARSHIP",
+        "Carol Martinez Scholarship",
+        "Progress Pride Scholarship",
+        "Larry Brandt Scholarship",
+        "Marie Mayer Scholarship",
+        "STEM Scholarship",
+        "Foundation Trustees\u2019 Scholarship",
+        "Van Trees Family Scholarship",
+        "Grace Harrington Wilson Scholarship",
+        "Greater Phoenix Mensa Scholarship",
+        "McGrew-Fruecht Scholarship",
+        "Peter Booras Scholarship",
+        "GROSSWIRTH-SALNY SCHOLARSHIP",
+        "KUHNEL SCHOLARSHIP",
+        "MENSA FOUNDATION TRUSTEE SCHOLARSHIP",
+        "GALILEY SCHOLARSHIP",
+        "IN HONOR OF OUR PARENTS (FRUECHT-MCGREW)",
+        "ANNABELLE MOORE & CHARLES W PARVIN MEMORIAL SCHOLARSHIP",
+        "JARI WHITEACRE MEMORIAL SCHOLARSHIP",
+        "Julia Meyer Memorial Scholarship",
+        "The Charlotte Duggar Memorial Nursing Scholarship",
+        "Fruecht-McGrew Scholarship",
+        "Mensa Member Scholarship",
+        "ED VINCENT MEMORIAL SCHOLARSHIP",
+        "INTERNATIONAL SCHOLARSHIP",
+        "Mensa International Scholarship"
+      ],
+      "currentChildCount": "unknown behind registration",
+      "excludedActions": [
+        "registration",
+        "login",
+        "applicant information",
+        "recipient pages"
+      ]
+    },
+    {
+      "program": "Brendan Looney Foundation",
+      "sourceIds": [
+        "official-looney-program",
+        "official-looney-senior-2026",
+        "official-looney-camp",
+        "official-looney-college-route"
+      ],
+      "locators": [
+        "GOLD STAR SENIOR scholarships",
+        "GOLD STAR COLLEGE scholarships",
+        "CAMP SCHOLARSHIPS",
+        "senior2026-27PDFpages1\u20135",
+        "college-plus-app404"
+      ],
+      "facts": [
+        "Senior:Gold Star children/siblings,HSsenior,four-year college fall2026,one-time,deadlineMay31.",
+        "College:any undergrad year,Gold Star child/sibling; distinct route404.",
+        "Camp:17andunder,notpostsecondary; linked GoldStar PDF explicitly camp.",
+        "Senior amount/GPA unknown; documents read were blank public templates; no applicant responses retained."
+      ],
+      "discoveredCampRoutes": [
+        {
+          "name": "Gold Star camp",
+          "url": "https://brendanlooneyfoundation.org/gold-star-application",
+          "disposition": "out_of_scope"
+        },
+        {
+          "name": "Wounded Warrior camp",
+          "url": "https://brendanlooneyfoundation.org/ww-app",
+          "disposition": "out_of_scope"
+        },
+        {
+          "name": "Active military camp",
+          "url": "https://brendanlooneyfoundation.org/active-application",
+          "disposition": "out_of_scope"
+        }
+      ]
+    },
+    {
+      "program": "Folds of Honor",
+      "sourceIds": [
+        "official-folds-program"
+      ],
+      "locators": [
+        "MILITARY SCHOLARSHIPS",
+        "FIRST RESPONDER SCHOLARSHIPS",
+        "Important Dates",
+        "General Scholarship Questions > unmet need and GPA",
+        "First Responder questions > eligibility and educational categories"
+      ],
+      "facts": [
+        "Military spouse/dependent of fallen/disabled USservice member; firstresponder spouse/dependent of fallen/catastrophically injured responder.",
+        "Highereducation termGPA2.0 for each two recentfall/springterms; unmet eligible expenses; US/territories restriction inFAQ is dated2024\u20132025, currentgeographyunknown.",
+        "Currentclosed; yearlessFeb1\u2013Mar31annualwindow.",
+        "No$5000annualamount observed; $2500per-term cap is not silently converted to annualamount.",
+        "K12private-school/tutoringfourvariants excluded from this postsecondary intake."
+      ]
+    }
+  ],
+  "scope": "Paraphrased official facts only; no applicant data or application activity"
+}

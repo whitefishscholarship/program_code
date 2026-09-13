@@ -1,0 +1,20 @@
+{
+  "fullNativeEquality": true,
+  "preSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+  "postSha256": "0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e",
+  "scope": "Master A1:O1060 all CellData; 15900 cells",
+  "observedAt": "2026-09-11T09:17:17.028Z",
+  "inverse": "301 selected value/format/run restorations followed by five precise cell-format link restorations; disposable only.",
+  "initialInverseRequestCount": 301,
+  "initialInverseCanonicalSha256": "6515d90adf6345cdd4d9380da25be39858c3c4efa849636c138839cb46359c0a",
+  "completionRequestCount": 5,
+  "completionCanonicalSha256": "c5830880ae794b4f9d32ea6ed86519663e418d96feb868c1a195e4a35d4ee3e6",
+  "completionCells": [
+    "H6",
+    "H54",
+    "F65",
+    "H81",
+    "H142"
+  ],
+  "note": "Initial inverse left five original cell-format links absent. Readback diagnosed the mismatch; five exact userEnteredFormat restorations completed disposable recovery. Original restoration remains unauthorized."
+}

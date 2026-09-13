@@ -1,0 +1,79 @@
+{
+  "reviewer": "/root/intake_batch_review",
+  "reviewedAt": "2026-09-11T03:04:42.608772+00:00",
+  "scope": [
+    "batch-aopa-005",
+    "batch-lpa-006"
+  ],
+  "snapshotId": "intake-rev226-74df373b3e30738e",
+  "outcome": "PASS",
+  "acceptanceLevel": "bounded_local_batch_checkpoint_only",
+  "previousSubsetSha256": "e43e7126373afd162039ece8dc7b923f4ef68866e17c735d1d3a45573e93636b",
+  "reviewedSubsetSha256": "7296b08b24f79a17ffcdefcaa48ce1fd64283539e1a7bc9570f05d0873e3dd05",
+  "digestDefinition": "SamecanonicalizationasAEA/NTHSreceipt scopedtothesetwobatches; sourcesalsobatch.sourceIds; currentmembership excludes2PAPArows. UTF8JSONsortedkeys,compactseparators,ensure_ascii=False; recursive reviewfieldsandrecordworkflowstatusesexcluded.",
+  "coverage": {
+    "entityRecords": 50,
+    "namedAwardsEnumerated": 44,
+    "inputRows": 83,
+    "aopaRows": 60,
+    "lpaRows": 23,
+    "proposedAdditions": 34,
+    "existingMasterDestinations": 1,
+    "heldParentEntities": 4,
+    "outOfScopeAwardEntities": 9,
+    "aliasEntities": 2,
+    "entitiesWithoutOriginalRows": 12,
+    "proposedFieldDecisions": 510,
+    "tags": 34,
+    "interviewCoverageDecisions": 102
+  },
+  "cumulativeFindings": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 2
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "H1",
+      "status": "resolved",
+      "rationale": "PAPArows189878200:228/2106717984:25 split into pendingentity0e2ec1187dc244a7; LPAretains219/304 and304survivor",
+      "owner": "implementation agent",
+      "target": "AOPA/LPA batchcheckpoint"
+    },
+    {
+      "id": "M1",
+      "status": "resolved",
+      "rationale": "10LPAHvalues nowexplicitmembershiphub-to-scholarshipportalmethod; enrollmentlinkaccurate, authenticatedportaluntested",
+      "owner": "implementation agent",
+      "target": "AOPA/LPA batchcheckpoint"
+    },
+    {
+      "id": "L1",
+      "status": "resolved",
+      "rationale": "34proposedsummary/amountstrings readablewithoutfactchanges",
+      "owner": "implementation agent",
+      "target": "AOPA/LPA batchcheckpoint"
+    },
+    {
+      "id": "L2",
+      "status": "resolved",
+      "rationale": "24AOPAIfields bindFAQ; LPAEpic35000assertionremoved,amountblank",
+      "owner": "implementation agent",
+      "target": "AOPA/LPA batchcheckpoint"
+    }
+  ],
+  "evidenceSha256": {
+    "aopa-field-evidence.json": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4",
+    "lpa-field-evidence.json": "22885126daad8e2d050644c0f133734e7654447b5b2d81f9eeb0bc49178cba50"
+  },
+  "reviewerEdits": 0,
+  "externalActions": 0,
+  "finalAuditAcceptance": false
+}

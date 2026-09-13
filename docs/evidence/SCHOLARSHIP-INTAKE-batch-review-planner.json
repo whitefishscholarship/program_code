@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "recordType": "bounded_checkpoint_review_not_final_acceptance",
+  "planId": "SCHOLARSHIP-INTAKE-1",
+  "reviewedCandidateCommit": "4f8a3ca94142229ca9e84bc7ab94527632e15c3c",
+  "originalReviewedCandidateCommit": "2542f250c0fda2a6d177d502872fabb67c67b690",
+  "implementationBaseline": "0c4ea27d1034c924c331e48b96c8e9dce7a293c7",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "recordedAt": "2026-09-11T07:17:26.405052+00:00",
+  "reviewer": {
+    "task": "/root/intake_triage_review",
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "freshContext": false
+  },
+  "outcome": "PASS",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "cumulativeFindingCounts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "PLANNER-H1",
+      "severity": "high",
+      "status": "resolved",
+      "rationale": "14narrativeHvalueslinkonlyexactURLspan,suffixunlinked;fixtureadded.",
+      "owner": "/root",
+      "target": "4f8a3ca"
+    },
+    {
+      "id": "PLANNER-M1",
+      "severity": "medium",
+      "status": "resolved",
+      "rationale": "I65nativeboldconflictdeferredinJSON/report,excludedwritecells;futureexactreviewedformattingmappingrequired.",
+      "owner": "/root",
+      "target": "4f8a3ca"
+    }
+  ],
+  "coverage": {
+    "operations": 245,
+    "adds": 207,
+    "updates": 38,
+    "updateCells": 79,
+    "totalCells": 3184,
+    "deferredCells": [
+      "I65"
+    ],
+    "sourceMarkers": 480,
+    "priorDecisionRecords": 123,
+    "pendingEntitiesExcluded": 50
+  },
+  "bindings": {
+    "batchDigest": "eace784cd866b0cc4da13e88321fc5f8bf5a52fe646d1c4a8f8dc921baa7881e",
+    "proposalSha256": "e09f1ebaf44a8ff10fba48032d643950f1a6ea76bd71008e36359e54599ff1e1",
+    "reportSha256": "8460738bf330a58d91b533df09b12979a655fa2ee2a30456c7f2b83be176f4fc",
+    "plannerSha256": "64a6f09bdded1323842dc2894aa58deec7a34f1d687e70addd3f556892b96d55",
+    "testsSha256": "1d0e6643b53779fe781f26341a82363ea79bd0426cf7ab0cda4049decf20f6c3",
+    "ledgerSha256": "0da4bb45b484e4369a42e64e04ba76807a5c39634b6617c898e3ca95a3a97e4f"
+  },
+  "validation": {
+    "deterministicGeneration": "PASS",
+    "syntheticTests": "PASS",
+    "typecheck": "PASS",
+    "diffCheck": "PASS"
+  },
+  "scope": "Bounded purelocalplanneronly. No writer/networkpath. Fullnativebackup/recoveryproof/freshsource/concurrency/inverse/readbackgatesexplicit. Finalintakeacceptanceandanyexecutionnotcovered."
+}

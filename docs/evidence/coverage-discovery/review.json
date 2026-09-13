@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent read-only local coverage proposal review; not canonical stage acceptance or attestation",
+  "recordedAt": "2026-09-12T16:37:08.003302+00:00",
+  "baseline": "0ce54195cf0cf0d64bd2a4752619997880ad45a2",
+  "originalCandidate": "3f7c876fc0220bd71c7c76d0987006d4dd4ef53f",
+  "reviewedCandidate": "8f423c84b35ae8217258fa148fef6d5791bccc1f",
+  "candidateTree": "b54acf172d7cf1d8e9adb17782096df49657de9c",
+  "reviewer": "/root/coverage_proposal_review",
+  "reviewerAuthorship": "Fresh-context reviewer did not author or edit proposal files; read-only original review and remediation recheck.",
+  "outcome": "PASS",
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "medium",
+      "finding": "UMPS CARE prerequisite phrasing conflated adoption with foster-care-to-guardianship.",
+      "disposition": "Resolved: preserve adoption at or after 13 OR exit from foster care to permanent guardianship at or after 13; prior foster care for adopted applicants remains unestablished.",
+      "owner": "implementation agent",
+      "target": "8f423c84b35ae8217258fa148fef6d5791bccc1f"
+    },
+    {
+      "id": "R2",
+      "severity": "low",
+      "finding": "Generated educational-status placement contradicted the two-input core recommendation.",
+      "disposition": "Resolved: generator, matrix and proposal data consistently place educational status in optional details.",
+      "owner": "implementation agent",
+      "target": "8f423c84b35ae8217258fa148fef6d5791bccc1f"
+    },
+    {
+      "id": "R3",
+      "severity": "low",
+      "finding": "Mixed research array did not surface a separate candidate-addition list.",
+      "disposition": "Resolved: generated candidateAdditions subset contains exactly ais, vet, hope and umps; report table and validator preserve individual gates and zero write-ready status.",
+      "owner": "implementation agent",
+      "target": "8f423c84b35ae8217258fa148fef6d5791bccc1f"
+    }
+  ],
+  "recheck": "Reviewer verified complete 12-path manifest, every candidate blob hash, frozen inputs, accounting validator, generated-view hashes, clean worktree and unchanged runtime. All remediation changes checked; no regressions found. Unchanged application-suite results reuse justified.",
+  "candidateFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "4ad489d53b0da2869276a383acaa40178bb5750bf2fc4a3ec82bd7c54e7d38d2"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md",
+      "sha256": "4e958ff46a8f84d4f4d4284918bfe78c1f7c8c23189d0bcd2aff06dce07b11e5"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/build-proposal.py",
+      "sha256": "75ed796038d71868b342feb5f101a20c49ca43fdf986b60695a1d55019c3a7ad"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/grounding.json",
+      "sha256": "2390e8a4eee66606cee9164877302044c29df3b866e251cf10925d318f46d0f3"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/historical-routing.md",
+      "sha256": "078b4c504bacd2f57f8064b9bfa524fb43431526d832b3db0eb6a30d7eacb3f1"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/interview-matrix.md",
+      "sha256": "f446c5acca6988893285d5af266ad7b7c2cafe606b2e2be10bc1b2b7e5a6714f"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/proposal.json",
+      "sha256": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/question-definitions.json",
+      "sha256": "ed528fd5c0135ce69feddf48abbbabe25e322a364274f90184748565df019c43"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/research.json",
+      "sha256": "0bc6e80a252d6e31f47d57e7b53124a78afe8dc3a1e66555e25f75f5e5340a15"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/validate-proposal.py",
+      "sha256": "008408ea295353a3ab14ee4891db44db56dbd33477e3a68ba14ece398826f859"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/validation.json",
+      "sha256": "f0d36d3c3c1ac23aee8ed9b4d0bfdefed4ef7bc1891b6c8e0f06437473f941e5"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "cc1bc26bca01fda9525f0dbf65990fff0de2f5378de29f5b172a6c046bfe2cc1"
+    }
+  ],
+  "candidateChangeSet": "M\tdocs/CURRENT_HANDOFF.md\nA\tdocs/SCHOLARSHIP_COVERAGE_PROPOSAL.md\nA\tdocs/evidence/coverage-discovery/build-proposal.py\nA\tdocs/evidence/coverage-discovery/grounding.json\nA\tdocs/evidence/coverage-discovery/historical-routing.md\nA\tdocs/evidence/coverage-discovery/interview-matrix.md\nA\tdocs/evidence/coverage-discovery/proposal.json\nA\tdocs/evidence/coverage-discovery/question-definitions.json\nA\tdocs/evidence/coverage-discovery/research.json\nA\tdocs/evidence/coverage-discovery/validate-proposal.py\nA\tdocs/evidence/coverage-discovery/validation.json\nM\tdocs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md\n",
+  "reviewManifest": {
+    "reviewType": "local proposal, not canonical acceptance or attestation",
+    "baseline": "0ce54195cf0cf0d64bd2a4752619997880ad45a2",
+    "candidate": "8f423c84b35ae8217258fa148fef6d5791bccc1f",
+    "paths": [
+      {
+        "path": "docs/CURRENT_HANDOFF.md",
+        "sha256": "4ad489d53b0da2869276a383acaa40178bb5750bf2fc4a3ec82bd7c54e7d38d2"
+      },
+      {
+        "path": "docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md",
+        "sha256": "4e958ff46a8f84d4f4d4284918bfe78c1f7c8c23189d0bcd2aff06dce07b11e5"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/build-proposal.py",
+        "sha256": "75ed796038d71868b342feb5f101a20c49ca43fdf986b60695a1d55019c3a7ad"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/grounding.json",
+        "sha256": "2390e8a4eee66606cee9164877302044c29df3b866e251cf10925d318f46d0f3"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/historical-routing.md",
+        "sha256": "078b4c504bacd2f57f8064b9bfa524fb43431526d832b3db0eb6a30d7eacb3f1"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/interview-matrix.md",
+        "sha256": "f446c5acca6988893285d5af266ad7b7c2cafe606b2e2be10bc1b2b7e5a6714f"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/proposal.json",
+        "sha256": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/question-definitions.json",
+        "sha256": "ed528fd5c0135ce69feddf48abbbabe25e322a364274f90184748565df019c43"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/research.json",
+        "sha256": "0bc6e80a252d6e31f47d57e7b53124a78afe8dc3a1e66555e25f75f5e5340a15"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/validate-proposal.py",
+        "sha256": "008408ea295353a3ab14ee4891db44db56dbd33477e3a68ba14ece398826f859"
+      },
+      {
+        "path": "docs/evidence/coverage-discovery/validation.json",
+        "sha256": "f0d36d3c3c1ac23aee8ed9b4d0bfdefed4ef7bc1891b6c8e0f06437473f941e5"
+      },
+      {
+        "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+        "sha256": "cc1bc26bca01fda9525f0dbf65990fff0de2f5378de29f5b172a6c046bfe2cc1"
+      }
+    ],
+    "diff": "M\tdocs/CURRENT_HANDOFF.md\nA\tdocs/SCHOLARSHIP_COVERAGE_PROPOSAL.md\nA\tdocs/evidence/coverage-discovery/build-proposal.py\nA\tdocs/evidence/coverage-discovery/grounding.json\nA\tdocs/evidence/coverage-discovery/historical-routing.md\nA\tdocs/evidence/coverage-discovery/interview-matrix.md\nA\tdocs/evidence/coverage-discovery/proposal.json\nA\tdocs/evidence/coverage-discovery/question-definitions.json\nA\tdocs/evidence/coverage-discovery/research.json\nA\tdocs/evidence/coverage-discovery/validate-proposal.py\nA\tdocs/evidence/coverage-discovery/validation.json\nM\tdocs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md\n"
+  },
+  "reviewManifestFileSha256": "178057dd1a13d837b621ed773a07e9d44631c09b3ecc3c2a08a24a6679e2c3ca",
+  "limits": [
+    "Local proposal review only; no canonical PLAN-REV15 acceptance or attestation",
+    "Three reserved PLAN-REV15 failures remain recorded in validation.json",
+    "No workbook copy/write, runtime implementation or external release authority",
+    "Research bounded to selected items; unresolved and inaccessible provider evidence remains unknown"
+  ]
+}

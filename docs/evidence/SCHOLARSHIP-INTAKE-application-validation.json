@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-11T09:29:49.898Z",
+  "worktree": "/private/tmp/program_code-scholarship-intake",
+  "branch": "codex/scholarship-intake",
+  "checkpointParent": "d7e04b77d7e79ea35d1faaaa2e1e7b350b6541c5",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "exitCode": 0,
+      "outputLimit": "Some returned output truncated; successful process exit and terminal test results observed."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "exitCode": 0,
+      "engine": "exact default Turbopack",
+      "warning": "Existing middleware convention deprecation retained."
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "exitCode": 1,
+      "errors": [
+        "Missing required file: docs/evidence/PLAN-REV15-manifest.json",
+        "Missing required file: docs/reviews/PLAN-REV15.json",
+        "PLAN-REV15 requires a committed manifest/review attestation in current history"
+      ],
+      "result": "BLOCKED; not PASS or waiver"
+    },
+    {
+      "command": "node --import tsx scripts/test-intake-native-readback.ts",
+      "cwd": "web",
+      "exitCode": 0,
+      "scope": "whole/partial link positives and nine rejection cases; independently rerun"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": ".",
+      "exitCode": 0
+    }
+  ],
+  "limits": [
+    "Validation ran for this application-preflight change; no hosted health or scholarship-currency inference.",
+    "Final handoff/status metadata updated after code checks; no executable code changed after tests.",
+    "No canonical stage acceptance, attestation, publication or original workbook writes."
+  ]
+}

@@ -1,72 +1,944 @@
+# R2 — REV17 repair continuation authorized
+
+Plan revision: 17
+
+Operate only `/private/tmp/program_code-r2-rev17`, branch
+`codex/plan-rev17-rev15-delivery-repair`, from preserved A15 `94db9e72ff241f5eb0939872d97852657f139ecb`.
+M0 remains `5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Kelsey's exact added repair
+grant and bounded pins are in PLAN-REV17.md and BUILD_STATE.
+
+Next: independently review this policy checkpoint before implementing the reader
+repair/continuation. Freeze and review C17, create only two-file A17, require zero
+actual post-attestation errors, then exact Preview/CI before merge and Production
+afterward. Only verified first release unlocks the already-authorized REV16.
+Read PLAN-REV17 kickoff and authority before acting. Do not modify locked A15 or
+source979122a. The recovery handoff at3b276b4 retains the complete R1/main histories
+and every open trigger. This overlay supersedes the old unit1 branch instruction.
+
+No workbook access/change, research, configuration change, rollback or later phase.
+Existing application receipts are spent history; do not rerun completed work.
+Post-freeze observations belong on the authorized PR, never after A17 on this branch.
+
+---
+
+# R2 unit 1 — REV15 authorized release preparation
+
+Worktree `/private/tmp/program_code-r2-rev15`, branch `codex/plan-rev15-intake-release`,
+source `40ff61ecc75c204cc6114fd34a5b9941e84f5ad1`, verified main
+`5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Preserve the separate source branch at
+`979122a13d4a8098d8cea26f115add1e68405355` and all other worktrees. The reviewed R1
+package/review live at that commit under `docs/evidence/interview-coverage/r1-*`.
+
+Kelsey has now authorized both sequential R2 releases and their exact Git/PR/Preview/
+merge/Production/CI/hosted-verification effects; direct quote and target are in PLAN-REV15.md.
+Current objective is **REV15 only until it is delivered and verified**. Complete all local
+checks and fresh full-candidate review, then add exactly PLAN-REV15-manifest.json and
+its canonical review as the direct-child attestation. Acceptance is controlled by those
+artifacts, not this prepared status. It must remain branch tip until delivered.
+
+Verify exact Preview before merge and exact Production afterward with source identity,
+nonce health, API/browser/public CSV and zero spreadsheet capability. Save post-freeze
+observations in the authorized PR record, never append an ordinary commit to attestation.
+After verified REV15, continue the already-authorized R2 second unit on fresh main by
+merging the retained979122a source; retain delivered REV15 record/evidence/artifact bytes.
+Do not reuse the old baseline for REV16. Stop at any gate/target/baseline/review failure.
+
+Historical intake read/copy/write flags and the 257-operation grant are spent; this R2
+grant authorizes **no workbook access or change**, new research, configuration change,
+monitoring, rollback or later R3–R7 phase. Catalog additions are not deployed by REV15.
+All retained310entities/312holds,83historicalroutes,26records,fourpotentialadditions,
+ninebacklogIDs,I65/Hagan,recoveryobjects,catalog/organizationquestions,officialcurrency,
+monitoring/platform/issuercredential/hygiene routes remain in the preserved handoff and
+R1 roadmap. The R3 keyboard automation improvement remains carried. No duplicate ledger.
+P9 stale pending label remains separately routed and is not an operative release blocker.
+
+Verification records are prefixed `r2-rev15-` under `docs/evidence/interview-coverage/`.
+Resolve exact final candidate/attestation through manifest and Git; never invent self-SHAs.
+Current hosted health and workbook freshness are not asserted by entry identity checks.
+The prior handoff below is preserved verbatim and is historical where superseded.
+
+Local verification: clean npm ci, typecheck, full tests, default build, intake check,
+zero-spreadsheet runtime/build-trace and 360/768/1440 browser/CSV/privacy checks PASS.
+Plan validation before attestation reports exactly three missing REV15 artifacts; these
+must reach zero after the valid two-file commit. Evidence: r2-rev15-validation.json and
+r2-rev15-preservation.json under docs/evidence/interview-coverage/. Hosted outcomes
+remain pending. All saved historical evidence and prior review bindings stay unchanged.
+
+---
+
+# Coverage proposal prepared — review record controls completion
+
+Operative September12,2026. Continue from the local scholarship-intake branch, descending
+from user-selected checkpoint `0ce5419`. The bounded identity/reach/interview proposal is
+[docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md](SCHOLARSHIP_COVERAGE_PROPOSAL.md). Its new research
+and continuation overlay lives under `docs/evidence/coverage-discovery/`; the original
+intake ledger, applied batch/receipt and reviewed historical crosswalk remain unchanged.
+
+Read `grounding.json`, `proposal.json`, `interview-matrix.md`, `historical-routing.md`,
+`validation.json` and `review.json` in that folder. Completion requires a PASS review bound
+to the actual candidate and its file hashes. Missing review means prepared, not complete.
+This is local proposal review only, never canonical PLAN-REV15 acceptance or release.
+
+- Grounded57 logical controls,206 saved connections to129 unique awards,all five prior
+  recommendations,and83 unresolved historical occurrences.20 occurrences received selected
+  public research;63 remain routed,not verified.26 research records include catalogs/resources.
+- Six named programs have supported broad geography; none is a write-ready addition or
+  new runtime connection. Read exact care,age,study,cycle and conflict limits in the proposal.
+- Priority recommendations: ordinary financial-need discovery wording,optional Teaching,
+  and supported student organizations. Proposed two-input core keeps all other controls
+  reachable through optional sections. No interview/schema/publication was changed.
+- Next action: Kelsey selects the desired interview/publication scope; the next agent can
+  prepare that exact implementation plan. Bounded public follow-up remains available for
+  the20 selected research items and individually selected backlog items. Do not rerun the
+  completed intake or historical scan. No program is ready for automatic workbook addition.
+- Family Fellowship citizenship/orphan ambiguity,BrandSource page contradictions,nsoro
+  adoption conflict,ISF reach,Casey transition and unresolved current cycles remain recorded.
+  Promises2Kids capacity/high-school pause and campus/state restrictions must remain visible.
+- Prior entry quiet window has ended. New writes/copies need new exact authority and fresh
+  complete backup/recovery/freshness/concurrency/readback gates. Old digest authority is spent.
+- No runtime edit,push,PR,Preview,merge,Production,hosted verification,monitor,provider contact,
+  applicant workflow,credential action or recovery-object deletion is authorized by this proposal.
+- Remote-main lookup failed on network resolution; current remote and hosted state unknown.
+  Saved workbook presence is not current freshness. No new workbook or backup inspection.
+
+All prior open-item routing remains in the preserved section below:310 held entities (312
+hold records),I65,Hagan I25,catalogs,recovery objects,full-Master currency,publication,
+monitoring,platform bookkeeping,retired issuer credential,and historical worktrees.
+The new83-row overlay references existing decisions rather than replacing their authority.
+
+---
+
+# Session closeout — PASS; historical reconciliation complete
+
+Operative September 12, 2026. **This section is the authoritative continuation and open-item
+routing record.** Older pending/unapplied instructions below are history where superseded.
+The original intake, exact authorized application and selected two-tab historical comparison
+are complete. The next selected objective is preparation of a practical interview-coverage
+and broad-reach scholarship-discovery plan, using the historical reconciliation as precursor.
+This closeout prepares that work; it does not implement new questions or apply another batch.
+
+## Checkpoint and verification
+
+- Worktree `/private/tmp/program_code-scholarship-intake`; branch `codex/scholarship-intake`.
+  Closeout starts from `a888df3`; resolve the final local tip with Git and preserve ancestry.
+- Applied-batch checkpoint `cf835c66f4cdd76b12cc57580ac4306c908e7a4d`; exact digest
+  `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`.
+  Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json`.
+  219 additions and 38 updates applied once; exact target and untargeted readback passed.
+- Historical audit candidate `c63d252e53891ac106df3ccc8418755639deecd8` independently
+  rechecked PASS with C0/H0/M0/L0; review and six bound files remain unchanged.
+  Start with `docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md` and its
+  `-review.json`, `-scope.json`, `-validation.json`, `.csv` and `.json` companions.
+- Full typecheck, tests and build passed in this session. Closeout reuses those results
+  for unchanged implementation and rechecks artifact bindings, counts, holds, ancestry
+  and whitespace. See `docs/evidence/SCHOLARSHIP-INTAKE-SESSION-CLOSEOUT.json`.
+- Canonical PLAN-REV15 still has three reserved manifest/review/attestation failures.
+  Session PASS is completion of the authorized work, not canonical acceptance or release.
+- No current scholarship-rule verification, live hosted health, remote-main refresh or
+  new backup freshness check is claimed by this closeout. September 12 historical read
+  receipts are observations at that time, not a future freshness guarantee.
+
+## Next session: one bounded objective
+
+Prepare an evidence-backed coverage/discovery proposal that captures useful student
+advantages while keeping the interview manageable. On resumption, verify the checkpoint
+and required read order, then execute the following local/read-only sequence. The user's
+selection permits preparation and bounded public scholarship research for this proposal;
+all later effects remain gated below. Do not repeat the completed intake or historical scan.
+
+1. Resolve historical identities first. Prioritize Unique rows 126/134/135/148, Gordon
+   Evans versus NFPA, American Industries duplicate references, and the Promises2Kids/
+   UCSD relationship. Account for Fund the Fish and other unresolved non-foster entries
+   in the same crosswalk; preserve source IDs, previous dispositions and uncertainties.
+2. Verify current official program rules and reach for selected leads. Distinguish a
+   named award, parent catalog, shared application and aid pathway. Record exact source,
+   observation date/cycle, geography, education/age, membership and other prerequisites.
+   Read public information only; no provider contact, application interaction or applicant data.
+3. Map the full current interview inventory to supported award differentiators and unique
+   award identities. Separate no question, unclear wording, missing evidence, missing
+   answer-to-award connection and genuinely thin award supply. Carry all five existing
+   `interviewGaps` recommendations forward. Do not mistake broad interests for eligibility.
+4. Produce a prioritized discovery backlog for thin categories. Measure verified reach and
+   distinct usable awards, not raw links or historical occurrences. National/broad access
+   is the priority; label state/campus/member/age limits explicitly. A county-only equestrian
+   award cannot fill broad-audience equestrian coverage. Local historical omissions still
+   deserve their own disposition. Unknown reach never counts as broad coverage.
+5. Propose a short core interview with optional relevant follow-ups, a category-to-award
+   coverage matrix, explicit unknowns and a separate candidate-addition list. Preserve
+   sensitive nonresponse as unknown/non-excluding, all-award access and public-only exports.
+   Explain the value of each added option; leave specialized one-off requirements on award
+   cards unless repeated supported value warrants a follow-up. Obtain independent review
+   of the proposal before claiming completion. Runtime or workbook delivery is a later gate.
+
+## Open-item routing — supersedes earlier routing tables
+
+Kelsey Stuart owns scope, source/recovery and release decisions. The next execution agent
+owns research/planning and implementation only within satisfied triggers. The frozen intake
+ledger remains authoritative for its existing items; the historical crosswalk holds the new
+source discrepancies. This table routes work and does not duplicate or erase either ledger.
+
+| Item | Trigger / owner and next action | Authoritative source |
+| --- | --- | --- |
+| Historical identity gaps and candidates | Next selected proposal session; agent resolves identities and verifies official reach before counting or proposing additions | Historical report and all unresolved crosswalk rows, not only foster-care examples |
+| Interview breadth and five recommendations | Historical identity work informs local coverage proposal; agent reviews all current options, organizations, teaching, ordinary need, first-generation definitions and specialized membership/training | Intake ledger `interviewGaps`; `web/src/lib/interviewQuestions.ts`, `web/src/lib/interviewRelevance.ts`, and `web/src/components/InterviewWizard.tsx`; old interview-relevance plan is historical design context, not authority to replay its delivered release |
+| Broad-audience discovery | Coverage matrix identifies a thin category; agent prioritizes officially verified national/broad reach and records restricted or unknown reach separately | Historical report discovery priorities; new proposal must quantify distinct awards and scope |
+| 310 held intake entities | Only each recorded official-evidence or owner-selection trigger reopens that entity; preserve all individual reasons/actions | `SCHOLARSHIP-INTAKE-ledger.json`: `entities[].hold`, `holds`, report |
+| Related corrections, duplicates and catalogs | Relevant official evidence/access changes or a bounded item is selected; agent preserves parent/child/cycle identities and enumeration limits | Ledger `relatedFieldTriage`, `relatedSourceFindings`, `operationalHolds`, `discoveries`, entity `catalogCoverage`; includes AGC/NCCER consolidation recommendation |
+| I65 formatting | Independently reviewed formatting-preserving replacement plus exact new batch authority; do not overwrite native bold runs | Original proposed batch `deferredCells` |
+| Hagan I25 income definition | Current award-specific income definition/tax year supports exact replacement; separate reviewed write gate | Ledger `relatedSourceFindings[id=related-hagan-income]` |
+| New workbook additions or corrections | Exact reviewed new digest/targets and Kelsey's grant; fresh complete backup, access/preservation, disposable recovery, affected cells, concurrency/freshness and readback gates | Intake plan section 7 and completed application receipts as precedent only; old digest authority is consumed and must not be replayed |
+| Retained recovery objects | Kelsey remains recovery owner; retain private folder, all native/affected-cell backups and disposable recovery copies; deletion or original restore requires separate exact authority | Final-backup-verification, application-progress and disposable-recovery receipts; latest complete backup `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM` |
+| Quiet window | Any future write session must establish current concurrency coverage and fresh preimages; this session's no-other-editors assurance does not persist across the break | Application authority and final freshness receipts |
+| Canonical acceptance, publication and new runtime behavior | Select exact scope/candidate and satisfy canonical review/manifest/direct-child gates plus exact downstream authority or verified applicable suppression | Canonical plan/BUILD_STATE; three reserved PLAN-REV15 failures remain. No push, PR, Preview, merge, Production or website publication granted by this closeout |
+| Full Master currency and accepted eligibility facts | Separately selected bounded/full review with official evidence and human review; current saved presence is not current eligibility | Intake plan section 9; P9 immutable publication and existing fact contracts. Preserve zero-Google runtime and non-excluding unknowns |
+| Monitoring or scheduled refresh | Separate exact source/cadence/identity/notification/cost/rollback scope and authority | Existing P8 schedule remains disabled; no new automation or monitor created |
+| Platform warnings and governance bookkeeping | Separate maintenance selection, platform support change or actual failure; reverify before acting | Saved Node runtime/middleware/Turbopack and reviewer-protection limitations; old P9 pending-label note is historical and must be checked against current state, not used to reopen P9 |
+| Retired issuer credential | Exact issuer-side credential identified and direct revocation authority; never expose its value | P9 evidence: removed from Vercel, issuer revocation not verified |
+| Historical local branches/worktrees | Explicit repository-hygiene scope and proof no unique required work is lost | Earlier handoff branch/worktree notes; no automatic deletion or publication |
+
+Closed issues: the accidental Student View F1 change was explicitly authorized for correction,
+corrected and fully verified before intake application. The accidental empty Apps Script
+project was explicitly authorized for deletion and deleted. No cleanup remains pending.
+The historical review's Hilleman match and held-resource wording findings are resolved.
+All review-agent results are saved; the sole reviewer is completed, with no pending response.
+No background job, reminder, monitor or separate user task was created by this closeout.
+
+Use `docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md` for the short next-session prompt.
+Recommended next-session effort: High.
+
+---
+
+## Prior session records — retained as evidence, not competing instructions
+
+# Historical source reconciliation — precursor evaluated with gaps
+
+Operative September 12, 2026. Kelsey selected an interview breadth/variety review, with
+broad-audience discovery plans for thin categories, and made reconciliation of the two
+named historical resource tabs the precursor. Read-only access to just those two legacy
+tabs is now explicitly authorized by the latest instruction. Earlier no-legacy-access
+text does not block this exact review; it continues to apply outside this new scope.
+
+Read `docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.md`, its CSV/JSON crosswalk
+and scope, validation and independent-review receipts. Independent recheck PASS on
+`c63d252e53891ac106df3ccc8418755639deecd8`: no unresolved critical/high/medium/low
+findings. General Hilleman is represented at Master139; held catalogs remain distinct
+from awards. All 1,780 rows in the selected scholarship-column bounds accounted for;
+228 scholarship/program/resource occurrences. Senior tab:93 of94 named occurrences
+represented; Fund the Fish is unrepresented. Foster-care rows125–150:one represented
+Adoption STAR entry,19 unrepresented candidate occurrences,four name/link conflicts,
+one NFPA child identity review and one potential duplicate. Current Master already
+contains three foster-care-related program records; the interview has Foster Care Experience.
+Do not claim category absence or turn these counts into ready-to-add unique awards.
+
+No workbook changes, external official-source fact verification, linked-catalog expansion,
+runtime edits or release occurred. The existing intake/application stays complete and must
+not be replayed. The bounded independent review is complete. Next: resolve the four
+foster-care name/link conflicts and verify selected broad-reach candidates against official
+public sources, retaining prior holds and geographic/audience distinctions, before proposing
+a new batch or interview changes. Discovery priorities are in the report; no new awards are
+ready for automatic addition. Interview breadth remains the selected follow-on objective.
+Keep historical omission accountability distinct from broad-audience inclusion. Exact
+future write/release authority and fresh recovery safeguards remain required.
+
+# Scholarship intake batch applied and reconciled
+
+Operative September 11, 2026, 10:52 UTC. **PASS for the exact authorized application.**
+Batch `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`
+applied once: 219 additions, 38 updates, 257 operations, 301 requests and 3367 cells
+in Master Database. Named Master Database records increased from 197 to 416; the existing
+one duplicate-name group of two remains unchanged, with no new duplicate-name group.
+All 3,367 target cells passed exact value/link/style readback, all 12,533 untargeted Master
+cells stayed unchanged, and all 315 Student View cells stayed unchanged. All 14 tab
+metadata, Master row/column metadata and source sharing stayed unchanged. Revision 229;
+modified `2026-09-11T10:51:53.348Z`. No retry or original rollback was performed.
+
+Evidence: `docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json`, final-backup-
+verification.json, final-feature-preservation.json, final-safeguard-review.json, and
+header-correction.json (same evidence directory). The accidental F1 header was corrected
+under explicit approval and fully verified before application. The empty script cleanup
+is also complete. No outstanding cleanup approval exists.
+
+Fresh full private backup: `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM`.
+Kelsey owns backup/recovery. Retain all earlier backups, affected-cell JSON and restored
+disposable copy. No deletion or future original restore authority is implied. Existing
+column widths/overflow layout were preserved; selecting a cell reveals long text.
+
+**Next action:** no further source mutation or website publication now. Local intake and
+its exact authorized workbook application are complete. Publication, interview/category
+changes, held awards and later cleanup continue only when their recorded triggers and
+required authority are satisfied; retain the existing open-item routing table below.
+A new batch requires fresh full backup and exact authority. Canonical PLAN-REV15 remains
+unaccepted with its three reserved manifest/review/attestation checks; do not rebind any
+historical candidate or imply application success is canonical acceptance. No push, PR,
+Preview, merge, Production or website release was performed. Prior entries below are
+history; their unapplied/pending states are superseded.
+
+# Header corrected — final backup and safeguards verified
+
+Operative September 11, 2026. Kelsey approved the exact F1 correction and continuation.
+The one-cell connector correction passed full 16,215-cell readback. No repeat approval
+is needed. See SCHOLARSHIP-INTAKE-header-correction.json.
+
+Fresh backup `11GUh_QEr2c6lJg8NcM8wexgFT816xAc9Q_pTLgeKtSM` is private to Kelsey,
+opened read-only and reconciled across all 14 approved ranges, all raw sheet metadata,
+filters, rules and full Master row/column metadata. Current Master equals the successful
+disposable recovery baseline. See final-backup-verification.json and
+final-feature-preservation.json in docs/evidence. Bounded zero-match metadata inspection
+left source revision 228 and modified time unchanged.
+
+Exact batch remains unapplied. Finish final independent safeguard check and immediate
+pre-write source/preimage/access comparison, then apply only the unchanged authorized
+301 requests (219 additions, 38 updates, 3367 cells). Read back every target and all
+untargeted Master cells; no blind retry or original rollback. Prior blocked entries below
+are superseded by this update. No publication or delivery authority added.
+
+# Verification stopped — accidental Student View header change
+
+Operative update, September 11, 2026 at 10:29 UTC. A browser shortcut intended to open
+the selected filter menu instead filled `Student View!F1` from E1, changing **Status**
+to **Deadline Note**. This is an unintended original-workbook cell write outside the
+authorized scholarship batch. Kelsey has been told and asked for explicit authority to
+correct only F1's entered value to Status; no correction approval or action yet.
+
+Fresh native comparisons of all 16,215 cells in Student View A1:O21 and Master Database
+A1:O1060 against the pre-incident native backup found exactly one differing cell, F1,
+and only its entered/effective/displayed value changed. All Master cells and F1 formatting
+are unchanged. Source modified time is now `2026-09-11T10:27:58.178Z`.
+Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-filter-shortcut-incident.json`.
+
+**BLOCKED on narrow correction authority.** Existing authority excludes original restore
+and unrelated changes. Do not rerun the shortcut, blindly undo, or apply the scholarship
+batch. Once authorized, fresh-check F1 against the observed erroneous value and all other
+cell fields against backup; use one exact API update of `userEnteredValue` only and verify
+full Student View and Master against backup. Then complete remaining feature checks and
+refresh the native backup before the still-authorized unchanged batch. Earlier empty
+Apps Script cleanup remains complete. All backups remain intact; batch writes remain zero.
+The prior entries below are historical and their zero-source-change claims are superseded.
+
+# Cleanup complete — fresh backup checked; remaining preservation gaps
+
+Operative update, September 11, 2026 UTC. Kelsey explicitly approved permanent deletion
+of the exact empty project. Google confirmed **Project permanently deleted** and returned
+to the prior 45-project list. No script code was edited, executed or deployed. Cleanup
+is complete and needs no further approval. Evidence:
+`docs/evidence/SCHOLARSHIP-INTAKE-empty-project-cleanup.json`.
+
+A fresh private native workbook backup was created under the existing grant after cleanup,
+as section 7 requires following a pause/source change. ID:
+`1eEXSigIBBKTSJhFm6lbBbckp2k6ncLLHvwz4eIojqeo`, created `2026-09-11T10:10:43.401Z`,
+in the approved recovery folder with Kelsey as sole owner. Earlier backups remain intact.
+All 14 approved native scholarship-content ranges match source to fresh backup; tab
+metadata and conditional formatting match. Browser access to the backup is verified.
+All five Student View filter names exist in both source and fresh backup. Current Master
+A1:O1060 still equals the exact successful disposable-recovery baseline, hash
+`0f2aeeeb2b4fa65eb64683bcac1f6422e9b413cb91d8c0ad72170688e3f9332e`.
+Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-fresh-backup-verification.json`.
+
+**BLOCKED; scholarship cell-write requests remain zero.** Complete current filter/view
+criteria and relevant target-area merges/hidden-dimension recovery coverage have not been
+reconciled. Some browser menu actions failed to expose intended panels reliably, even
+though menu-search reads and content comparisons worked. Do not convert missing metadata
+into absent-feature assertions. Resolve those exact checks using a reliable read-only
+interface; avoid creating any more Apps Script projects. Then finish material-feature
+preservation and immediate pre-write freshness/access/quiet-window checks. After another
+pause/source change, create and verify a fresh full backup under the existing authority.
+Do not repeat the scholarship research or ask for exact batch/cleanup authority again.
+
+The original file's metadata changed during the now-resolved script incident; scholarship
+cells stayed unchanged in full native comparisons. Original restore and website publication
+remain unauthorized. The earlier entries below are history; their pending-cleanup and
+sign-in descriptions are superseded by this entry. Current checkpoint follows
+`0c6ca1b3bc1d064383dccbd52ab6257679152d6b`; resolve branch tip locally.
+
+# Verification restart — sign-in complete; empty-project cleanup pending
+
+Operative update, September 11, 2026 UTC: owner sign-in succeeded. Private recovery
+object access and all 14 source/backup tab metadata were reverified. Original protection
+and named-range sidebars were empty. Full feature-preservation verification is incomplete.
+
+Opening the original workbook Apps Script entry unexpectedly created a new bound
+`Untitled project`, ID `1RR6xRlEYpDPvaRG3l-xSf_raAynok5vn6lWDz0R3o5DjIV4MMpAieror`.
+It contains only Google's empty starter function; zero triggers/executions/scopes, no
+code edits or run/deploy actions. This changed the workbook modification time to
+`2026-09-11T09:57:56.995Z`. Do not describe the workbook as wholly unchanged.
+Fresh full native Master A1:O1060 comparison nevertheless equals baseline for all
+15,900 cells. Scholarship batch write requests remain zero.
+
+Kelsey has been asked to confirm permanent deletion of this exact empty project;
+confirmation is pending. Google labels the action **Delete project forever**, requiring
+confirmation under browser rules. No cleanup deletion or workbook restore has occurred.
+Do not run/create further scripts or write scholarship cells while this is unresolved.
+After cleanup, refresh source metadata and finish preservation plus final freshness checks.
+Evidence: `docs/evidence/SCHOLARSHIP-INTAKE-verification-restart.json`.
+The checkpoint below describes the earlier backup/recovery work; its sign-in blocker
+is superseded and its original-write counter refers to scholarship cell writes only.
+
+# Scholarship intake — authorized batch; blocked on feature inspection
+
+Operative application status: **BLOCKED; original workbook writes = 0**. The unchanged
+219-addition / 38-update batch is authorized by Kelsey's exact grant in
+`docs/evidence/SCHOLARSHIP-INTAKE-application-authority.md`. The prior local closeout
+below is historical for authority and backup status; its reviewed scope and holds persist.
+Publication and original-workbook restoration remain unauthorized.
+
+## Completed safeguards in this continuation
+
+- Created private My Drive `Scholarship Intake Recovery` folder
+  `1c_PHnY0FUCLTASb0RbvQW0WA3nxBekix`; Kelsey is sole owner of all new objects.
+- Complete native backup: `11OuqHa6JcTlJwhzcxOR5i6ZZoQQ8cLgAcglQQfMSGMY`.
+  All 14 tabs copied; approved scholarship-field ranges match. Backup never mutated.
+- Private affected-cell backup: `1PpCqhvd85M0ZQ0D0QMwVd2P8JEYQuEXw`.
+  Exact 3,367-cell native preimages, lossless dictionary JSON, 135,853 bytes;
+  downloaded readback SHA256 `ab5cd7159871fa26426f926b87a5fd7918900cdb5d37cfe6b2a1bfd6913cc270`.
+- Disposable test copy: `1RQxiI7ykgldxDIr2At0FILybYJfmDO3sZi5MPTja8S0`.
+  Exact 301 requests applied only there; 3,367 targets and 12,533 untargeted cells
+  verified. Fully restored Master A1:O1060 equals baseline including original links.
+- Google normalized rich links into native cell formatting. Exact proposed payload
+  remains unchanged. Reviewed read-only verifier checks values, link intervals,
+  rendered styles and untouched cells; nine negative cases and saved examples pass.
+- Fresh local typecheck, full tests and exact default build pass. Plan check still
+  exits 1 with exactly the three reserved PLAN-REV15 attestation errors; no waiver.
+  Detailed application check receipt is separate from historical candidate validation.
+
+## Exact next action and remaining gates
+
+Kelsey must complete Google Sheets sign-in in the in-app browser (tab currently at
+Google's Verify it's you page). Connector authentication works, but its source metadata
+omits protections and other native features. Do not infer absence from omitted fields.
+Read-only original/backup comparison must finish the material-feature inventory and
+preservation proof: protections, named ranges, filters, conditional formatting, validation,
+merges, hidden dimensions/tabs, bound scripts/triggers/connections and other material
+features. Disposable metadata is not proof of the original's feature coverage.
+
+Then recheck private backup access, exact affected-cell preimages, all required source
+fingerprints and unchanged batch immediately before any original write. Latest source
+metadata remains revision 226 / modified 2026-09-11T01:10:22.367Z; this is not final
+content freshness. Use one writer during the confirmed quiet session; if resuming after
+an interruption, verify quiet-window coverage. Stop on conflicting newer edits or any
+material batch change. Do not repeat the completed intake, create another backup blindly,
+or restore the original. Keep all 310 holds and excluded I65/Hagan I25 unchanged.
+
+## Operative application receipts and recovery
+
+Read `docs/evidence/SCHOLARSHIP-INTAKE-application-progress.json`,
+`SCHOLARSHIP-INTAKE-backup-content-check.json`, `SCHOLARSHIP-INTAKE-application-readback-proof.json`,
+`SCHOLARSHIP-INTAKE-disposable-recovery.json`, and `SCHOLARSHIP-INTAKE-application-preflight-review.json`
+(all under `docs/evidence/`). Historical `SCHOLARSHIP-INTAKE-backup-verification.json`
+remains frozen and is superseded prospectively only for completed steps.
+
+Exact original payload: `docs/evidence/SCHOLARSHIP-INTAKE-application-payload.json`;
+301 updateCells requests, only `userEnteredValue,textFormatRuns`, 219 rows A199:O417
+and 82 isolated existing cells. No structural or intervening-cell writes. On any uncertain
+write result, read back first and reconcile; never blindly retry.
+
+Recovery artifact decode is specified inside the private JSON (native-cell dictionary
+plus A1/index pairs). Disposable recovery used the same 301 targets with exact preimage
+values, formats and runs, then five precise format restorations for H6/H54/F65/H81/H142
+after readback showed their old links absent. Full 15,900-cell equality passed after that
+completion; see receipt. This is evidence of disposable recovery, not original-restore authority.
+
+Original reviewed candidate `8211003dab98de3035b7a94608b6bdb7ef16fdde` and 119-path
+manifest remain immutable. This application checkpoint follows `d7e04b77d7e79ea35d1faaaa2e1e7b350b6541c5`
+on `codex/scholarship-intake`; resolve its tip locally. No push, PR, merge or deployment.
+
+# Scholarship intake — local review-complete, unapplied
+
+Updated September 11, 2026 UTC. Plan revision 15; SCHOLARSHIP-INTAKE-1.
+Fresh-context independent review: PASS, with no unresolved findings. All three low
+findings were corrected and rechecked. This is a complete local candidate, not a
+sheet-applied, canonically accepted, attested or delivered release.
+
+## Exact checkpoint and source
+
+- Worktree: `/private/tmp/program_code-scholarship-intake`.
+- Branch: `codex/scholarship-intake`.
+- Reviewed candidate: `8211003dab98de3035b7a94608b6bdb7ef16fdde`.
+- This ordinary local closeout follows that candidate and changes only review receipts,
+  manifests, handoff and status. Resolve its exact tip with `git rev-parse codex/scholarship-intake`.
+- Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` remains an ancestor.
+  Verified `origin/main`: `5fa08541b6b49484dedc8fc06012e47c658ce8fb`. Original checkout untouched.
+- Workbook: `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`.
+- Frozen source: `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
+- Sole ledger: `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
+  `460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed`. Its frozen pre-final-review status is superseded by the
+  separate review receipt; the ledger and batch were not rewritten just to change a label.
+
+## Complete reviewed package
+
+- Final review: `docs/evidence/SCHOLARSHIP-INTAKE-local-review.json`.
+- Complete 119-path manifest: `docs/evidence/SCHOLARSHIP-INTAKE-local-manifest.json`,
+  SHA256 `951138fbf3238208bd8b7e79fdf01633e42164b3f6d367b1d6842ec7ffb1f1e0`. Original review and manifest also retained.
+- Human report: `docs/evidence/SCHOLARSHIP-INTAKE-report.md`.
+- Exact batch: `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`, digest
+  `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`.
+
+All 1,666 source rows across 14 tabs and all 1,024 entities are decided and reviewed;
+none remains pending evaluation. There are 219 proposed additions and 38 proposed
+updates: 257 operations covering 3,367 cells. The additions occupy A199:O417, followed
+by no structural changes; 82 existing cells are proposed for correction. One additional
+field recommendation, I65, is excluded from the executable batch.
+
+Review covered 3,368 field recommendations, 277 tags, 1,040 interview coverage decisions
+and five future-only recommendations. It also covered 293 related triages / 1,161 fields,
+46 discoveries / 581 enumerated occurrences (not unique awards), 369 source records,
+493 source markers and 128 records of affected prior decisions. Collision review checked
+43,143 addition-to-Master pairs and 23,871 addition pairs; no collision was found.
+
+Entity outcomes: 310 actionable holds, 173 out of scope, 159 links to existing awards,
+77 duplicates and 48 non-records, alongside the additions and updates. Source age,
+partial retrievals, paraphrased evidence and unknown wider catalog limits remain explicit.
+
+## Verification and limits
+
+Full results: `docs/evidence/scholarship-intake/final-validation-recheck/results.json`.
+Clean offline install, typecheck, full tests, exact default Turbopack build, runtime
+boundary including its built trace, complete ledger validation, deterministic batch check
+and full baseline-to-candidate whitespace check passed. The existing middleware warning
+is retained without unrelated maintenance. Code checks do not establish scholarship
+currency or hosted application health.
+
+Plan validation still exits 1 with exactly three reserved PLAN-REV15 manifest, review
+and committed-attestation gates. This is NOT a PASS or waiver. No premature canonical
+attestation was created, and no publication authority exists.
+
+Backup receipt: `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json` explicitly
+records NOT_AUTHORIZED_NOT_CREATED. No backup/recovery copies or source writes occurred.
+The selected source snapshot is not a complete native backup. The metadata-only recheck
+retained revision 226, modification time and 14 tabs; it is not an atomic content check
+or a future-write freshness guarantee. Automatic approval review rejected saving another
+complete local Master copy. None was saved or retried through a workaround; no additional
+native-cell comparison is claimed.
+
+## Next executable action and owners
+
+Local preparation, evaluation, testing and review are complete. Await NEW EXACT authority
+from Kelsey before creating private backup/recovery copies or writing the unchanged batch.
+The proposed private destination, names and recovery procedure are in the batch's backupPlan.
+Before any source write, all gates must pass: complete private native backup of every tab,
+including hidden tabs; verified access and feature preservation; disposable recovery proof;
+full affected-cell preimages; fresh fingerprints; newer-edit protection and a quiet window
+or atomic precondition; and exact readback. A changed source or batch requires reconciliation,
+updated review and renewed exact authority. Never blindly retry or restore the whole workbook.
+
+- I65 — Kelsey owns the hold. Require an independently reviewed mapping that preserves
+  existing bold formatting before including the replacement text in a newly authorized batch.
+- Hagan I25 — Kelsey owns the hold. Verify the current award-specific income definition
+  and tax year before proposing exact replacement text.
+- All 310 held entities retain individual reasons, owners, triggers and actions in the
+  ledger and report. Keep unknown catalog limits explicit; do not repeat completed batches.
+
+Full-Master freshness review and selected interview/publication changes require future scope.
+No publishing is authorized: push, PR, Preview, merge, Production and verification require
+new exact authority or verified applicable suppression. No applicant data, legacy workbook,
+provider contact, forms, new services, automation or unrelated maintenance. P9 and completed
+releases remain intact; runtime, GPA/school filtering, all-award access, privacy and exact
+visible-result CSV downloads are unchanged.
+
+## Session closeout — PASS against the authorized local objective
+
+The completed checkpoint before this final handoff-only update is
+`706d60431c150257fd780810757dfd4f61e6fe3b`. The reviewed implementation candidate remains
+`8211003dab98de3035b7a94608b6bdb7ef16fdde`; this update changes neither that candidate nor
+its ledger, report, exact batch, source evidence or review receipts. Resolve the final
+handoff tip with `git rev-parse codex/scholarship-intake`.
+
+All review agents and their partitions are complete; their findings and rechecks are
+saved in the local review receipts. No agent result, running verification or unsaved
+implementation remains pending. No reminder, background monitor, new task or automation
+was created. Original-scope local preparation, evaluation, implementation, testing and
+independent review are complete. External application and release remain unauthorized.
+
+Closeout verification rechecked the four exact review bindings (manifest, ledger, batch
+file and report), both validation-log inventories, all 310 active hold records and the
+absence of pending evaluations. Full tests/build remain the recorded successful checks
+of the unchanged implementation; they were not repeated for this handoff-only edit.
+Source currency after the saved observation, complete native backup/recovery, future-write
+freshness and hosted application health were not newly verified. The three canonical
+attestation gates remain outstanding; session PASS does not claim those gates passed.
+
+Closeout checks recorded 2026-09-11T08:51:13.282097+00:00: from `web/`,
+`node --import tsx scripts/intake-promotion.ts --complete --check` passed with the
+unchanged reviewed digest, 257 operations and 3,367 cells. `npm run plan:check` exited 1
+with exactly the same three reserved missing PLAN-REV15 manifest/review/attestation
+errors and no additional errors. Root `git diff --check` passed; the complete staged
+baseline comparison is checked before this local commit. No source or hosted checks ran.
+
+### Open-item routing — no item is implicitly activated
+
+Kelsey owns scope and authority decisions; the next execution agent owns implementation
+only after the relevant trigger is met. The existing ledger remains the sole item ledger.
+
+| Item | Trigger for future work | Authoritative record / next action |
+| --- | --- | --- |
+| Apply the supported batch | New exact authority names the unchanged batch and private backup/recovery destinations | `SCHOLARSHIP-INTAKE-proposed-writes.json` and intake plan section 7. First verify all backup, recovery, freshness, newer-edit and readback gates; stop on any unmet gate. |
+| 310 held entities | Each entity's recorded official-information or owner-selection trigger occurs | Ledger `entities[].hold` and report. Reopen only the triggered item; retain its history, evidence and exclusions. |
+| I65 formatting | A formatting-preserving replacement is independently reviewed and included in a newly authorized batch | Exact batch `deferredCells`; I65 stays excluded until then. |
+| Hagan I25 income wording | Current award-specific income definition and tax year support exact replacement wording | Ledger `relatedSourceFindings[id=related-hagan-income]`; preserve the other summary conditions. |
+| Five interview recommendations | Kelsey selects a future interview/publication scope | Ledger `interviewGaps`: student organizations, education/teaching, ordinary financial need, first-generation definition and specialized membership/training. Keep optional privacy and OR/preference distinctions; implement no rule from a recommendation alone. |
+| Unknown or unexpanded catalogs | Relevant access or official evidence changes, or Kelsey selects a bounded expansion | Ledger `discoveries` and entity `catalogCoverage`; preserve enumerated denominators and unknown wider totals. |
+| Full Master current-fact audit | Explicit selection of a separate full-Master audit | Intake plan section 9; the existing intake is not a full Master freshness audit. |
+| Scheduled refresh | Separate bounded monitoring scope and exact side-effect authority | Intake plan section 9; define field confidence, exceptions and any write grant first. No schedule or service is active. |
+| Canonical acceptance and publication | Candidate and all exact downstream authority are settled, or applicable suppression is verified | Canonical plan/state: preserve history, satisfy the three reserved PLAN-REV15 gates and required fresh-context/direct-child contract. Separate authority covers push, PR, Preview, merge, Production and verification. |
+| Middleware deprecation warning | A future framework migration is selected, or the warning becomes an actual build failure | Saved build logs; no runtime migration belongs to this completed intake. |
+
+Resume using `docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md`. Preserve the original checkout,
+all local branches/worktrees and exact historical attestations. Do not publish this
+handoff under any earlier release grant. Recommended next-session effort: High.
+
+## Historical checkpoints below — superseded by the operative status above
+
+# Scholarship intake — complete local candidate, final review pending
+
+Updated September 11, 2026 UTC. Canonical plan revision15; intake plan SCHOLARSHIP-INTAKE-1.
+Execution: `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
+Prior reviewed candidate `06f9c821995557438919331dde191348cd32bbf7`; this remediation freeze follows it.
+Resolve exact tip with `git rev-parse codex/scholarship-intake`. User checkpoint
+`c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` remains an ancestor. Original checkout untouched.
+Normal read-only fetch reverified `origin/main` at `5fa08541b6b49484dedc8fc06012e47c658ce8fb`;
+see `docs/evidence/scholarship-intake/final-baseline.json`.
+
+## Source, scope and reviewed work
+
+- Sole ledger: `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed`.
+- Workbook `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`; frozen source
+  `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
+- 14tabs,1,666originalrows,1,024entities; all rows/entities decided and bounded-reviewed.
+  Dispositions:219additions,38updates,310holds,173out-of-scope,159existinglinks,
+ 77duplicates,48non-records. Zero pending-evaluation entities.
+- 293related triages /1,161 differing fields reviewed.46discovery records preserve
+  enumeration units and unknown wider catalogs. All20stale identity lists cleared
+  only after exact25-row audit. Looney5routes, Dawson65headings/64canonicalentries,
+  NGPA20rows/16funds and NASCLAalias hold are reconciled.
+- Bounded receipts through029, validator/planner/cross-collision/coverage and closure
+  are saved. Aviation028 finalPASS at65f58fd resolves TaylorE/I/J and bereavementcoverage;
+  Community029 finalPASS atb94f421 resolves provenance. Prior policy/Epic/WAI PASS reused.
+- Proposed awards/updates contain3,368field recommendations,277tags and1,040coverage
+  decisions. Five grouped interview recommendations are recommendations only.
+
+## Exact unapplied batch and limits
+
+- Human report: `docs/evidence/SCHOLARSHIP-INTAKE-report.md`.
+- Exact batch: `docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json`.
+  Digest `d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f`;257operations/3,367cells:
+  219fixed appendedA:Orecords atA199:O417 and82changed existingcells on38Masterrows.
+- I65 is the single excluded field recommendation: preserve known native bold runs
+  through an independently reviewed mapping before any changed batch is authorized.
+  HaganI25income wording remains a related-source hold pending exact current definition/taxyear.
+ 310heldentities retain owner/reason/trigger/action; all catalog limits and findings in report.
+- Source metadata recheck07:10UTC retained revision226, same modified time and14tabs;
+  see source-recheck.json. Automatic approval review rejected saving another complete
+  local Master copy; none was saved and no workaround/native-cell recheck is claimed.
+  Metadata is not an atomic content check or future-write freshness guarantee.
+- Backup/recovery receipt `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+  explicitly NOT_AUTHORIZED_NOT_CREATED. Full native workbook backup, privacy/access,
+  disposable recovery proof, complete affected-cell preimages, fresh fingerprints,
+  newer-edit protection and exact readback are mandatory before any source write.
+- No copies, source writes or publication. No applicant data, legacy workbook,
+  provider contact, forms, new services, automation, runtime questions or matching rules.
+  P9/completed releases and runtime source/public files unchanged from verifiedmain;
+  GPA/school filtering, all-award access, privacy and exact visible-result CSV preserved.
+
+## Verification and next executable action
+
+`docs/evidence/scholarship-intake/final-validation/results.json` records commands,
+UTCtimes, exitcodes and loghashes. Clean offline install passed(438packages); typecheck,
+fullnpmtest, exact defaultTurbopackbuild, P9runtimeboundary, completeledger, deterministic
+batchcheck anddiffwhitespace passed. The build's existing middleware deprecation warning
+is retained; no unrelated migration. Plancheck exits1 with exactly3reserved final gates:
+missing PLAN-REV15manifest, review and committedattestation. These are NOT a PASS or waived;
+no premature canonicalattestation is created while exact downstream authority is absent.
+Codechecks do not establish scholarshipcurrency or hostedapplicationhealth.
+
+Next: fresh-context read-only review of this immutable localcandidate and complete
+manifest/diff,100%row/entity/field/tag/coverage/operation scope, underlying evidence,
+all held/excluded outcomes and recommendations. Root owns any remediation; reviewer
+rechecks changes. Final localreviewreceipt will bind exactcandidate+manifest+batchdigest.
+After PASS, update localreview closeout/handoff and stop at unapplied localcandidate.
+New exact authority is required before privatebackup/recoverycopies or workbookwrites;
+new separate exact push/PR/Preview/merge/Production/verificationauthority or verified
+applicable suppression is required for publication. FullMasterrefresh and selected
+interview/publication changes remain future work, not part of this intake.
+
+## Fresh-context review remediation
+
+Original candidate06f9c82 independently reviewed: no critical/high/medium findings;
+three low findings corrected by root: native row-value projection guard + tamper test,
+whitespace-normalized evidence logs retaining raw hashes, and two academic coverage
+choice references corrected to card-only without changing valid disability/gender tags.
+Full verification recheck records in final-validation-recheck/results.json.
+Final independent recheck remains pending; no source facts, operation targets or values
+changed. Reach baccalaureate exclusion separately reconfirmed against exact official
+junior/senior current-college wording; details retained in final review receipt.
+
+## Historical checkpoints below — superseded by the operative status above
+
+## Local intake checkpoint — final batch remediation
+
+Prior exact tip `b94f421bd3b64fb7ebfd6ca5972ab08c48008b22`; resolve current execution tip with `git rev-parse codex/scholarship-intake`. Sole ledger SHA256 `0cc525ba8c2063483a4d73f3f9322ee6ff1adac96e0e0974790f34424f9dab0b`. All 1,666 rows decided; 219 additions and 38 updates, 83 field recommendations (82 executable; I65 deferred). Exact dry run: 257 operations / 3,367 cells, unapplied. Community029 PASS receipt saved. Aviation028 two medium findings remediated: Taylor E/I/J and two loss-of-parent coverage assessments; bounded recheck pending. Closure audit verified20 stale identity lists/25 rows, now cleared; NASCLA inheritance and all five Looney routes recorded, recheck pending. Next: finish gap/report metadata, full required checks, then immutable fresh-context final local review. No backup/copies, source writes or publication authorized/performed. Frozen source and baseline remain as below.
+
 # Current Handoff
 
 Last updated: 2026-09-10
-Plan revision: 14
+Plan revision: 15
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
 
-## Interview relevance — PASS local candidate; exact publication authorized
+## Active resumption checkpoint — September 11 UTC
 
-- Execution worktree `/private/tmp/program_code-interview-relevance`, branch
-  `codex/interview-relevance`. Original checkout and planning branch remain untouched.
-  Recover this branch through the shared repository if the temporary worktree is lost;
-  do not restart from the older planning branch or reset the original checkout.
-- Exact tested, independently reviewed product candidate:
-  `d288fd0732974997d8f83fe9d066d4f2aeb4dcbf`. Baseline/live main reverified as
-  `2f517755118bc72570a2aa8b5109a2660e0d9b12`. The branch tip contains the documentation-only
-  authority checkpoint; resolve with `git rev-parse codex/interview-relevance`, and use
-  the canonical manifest candidateCommit after attestation. No product changes follow
-  the reviewed product candidate.
-- Policy `2581c5c851a258c7e0ead8260f915d1da3db6078` passed fresh independent review
-  before product edits. Mapping `0ed99ad910791b3fee1c41f6a309d1f525683085` preceded
-  implementation; all 206 connections received independent saved-evidence review.
-  One LOW mapping pointer issue and one LOW final public-copy issue are fixed/rechecked.
-  Final reviewer `/root/relevance_final_review`: PASS, C0/H0/M0/L0 unresolved.
-- Delivered locally: 38 existing answer choices (33/38 special criteria plus four
-  activities and financial need), 206 positive connections across 129 awards. No scores
-  or new exclusions. Existing GPA/school decisions and counts 166/125/152/190 remain;
-  all 192 awards stay accessible. Sensitive skip clears effects; five unsupported special
-  choices have honest explanations. P9, PR42 and all historical attestations remain complete.
-- Exact manifest and structured review receipts:
-  `docs/evidence/PLAN-REV14-local-review.json`; reviewed 31-path manifest SHA256
-  `3141e9ac150bff9c979dcd6b9afb266b7db092c3ff4c43984569ad03ac2e1fe4`.
-  Current public relevance artifact SHA256:
-  `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`.
-  The local receipt is deliberately not a canonical attestation; do not rename/reuse
-  an older manifest against a new authority-bearing candidate.
-- Evidence in `docs/evidence/`: `PLAN-REV14.md`, `PLAN-REV14-mapping.json`,
-  `PLAN-REV14-matrix.json`, `PLAN-REV14-verification.json`, `PLAN-REV14-browser-results.json`.
-  Full tests, typecheck, exact default Turbopack build, generated-data checks, zero-Google
-  built traces and root whitespace pass. All 38 enabled choices run through real UI at
-  360x800, 768x1024 and 1440x900; actual saved CSV bytes equal all public fields for
-  visible IDs/order, including search, sort and outside/all scopes. Privacy, sensitive
-  skip, keyboard, edit/reset/reload and no-overflow checks pass. All profiles are synthetic.
-- Plan validation reports exactly three expected omissions: canonical final manifest,
-  review and committed attestation. They remain intentionally absent until the authorized candidate is refrozen
-  and independently rechecked; no other validation failure remains. Do not report canonical
-  acceptance, hosted build/health or current scholarship freshness for this local release.
-- **Exact publication authority received:** Kelsey answered “yes” on September 10 to
-  this release's branch push, PR, Vercel Preview, merge, Production deployment and
-  verification on the existing web project. Recorded in Revision14 state and evidence.
-- **Next executable action:** freeze this documentation-only authority update, independently
-  recheck the exact candidate, then add only `docs/evidence/PLAN-REV14-manifest.json` and
-  `docs/reviews/PLAN-REV14.json` as its direct-child attestation. Resolve the exact authorized
-  candidate using the release branch tip before attestation, or the manifest afterward.
-  Do not append after attestation. Push and open the PR; require passing hosted CI and
-  exact Preview health/identity/digest and synthetic interview/export checks before merge.
-  Then verify main CI and Production. No hosted outcome is claimed yet. Preserve delivery
-  receipts in the PR and a separate local closeout after merge; never append the release tip.
-  Do not repeat completed policy, mapping, product or unchanged local test work.
-- Proposed existing target: Vercel project `web` (`prj_LbefE2deji6nPND6iBiuofe7IABv`),
-  team `team_6CAjRq58n0WvAH49otKSQbA7`, canonical `web-two-gules-45.vercel.app`.
-  Verify exact Preview commit/health/digests and synthetic journeys before merge; honor
-  any user-reserved Preview review. Then verify main CI, Production identity, nonce
-  health and interview/export flow. Rollback reference is PR42; actual rollback requires
-  separate explicit authority. No provider configuration changes are included.
-- Saved September 2 revision225 evidence only: 197 rows, 176 award rows and 21 portals;
-  16 catalog-only awards inherit nothing. No sources or spreadsheets accessed, new
-  questions/services/dependencies/exclusions, monitoring, applicant data or unrelated work.
-  Unsupported/current-freshness items remain explicit and do not block supported work.
+- Execution worktree `/private/tmp/program_code-scholarship-intake`, branch `codex/scholarship-intake`.
+  Requested checkpoint `c38ed7acb9b65fe76c7ab422d6fd5371ae5fb85a` preserved;
+  verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb` unchanged. Original checkout untouched.
+  Prior exact checkpoint `303eeec1fc606d8a7a3b63c7bcc00cc9d964419f`; this local checkpoint
+  follows it. Resolve exact current tip with `git rev-parse codex/scholarship-intake`.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256 `8efe022ac1b1003b996d06349447d4f21da7eab378b9d18bbef9d00993427be9`.
+  Frozen source identity `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`,14tabs/1666rows.
+  Current counts `{"rows": 1666, "entities": 1024, "decidedRows": 1666, "pendingEntities": 0, "proposedAdds": 219, "proposedUpdates": 38}`. All proposals unapplied.
+- Independent PASS receipts saved through015 and related016–019. Related review covers
+  238triage records/758fields,20updateentities/37cells/23tags/103coverage decisions.
+  All review findings corrected: exact richlinks, missing aliasfields, material official
+  checks, K54withdrawal, I65claimbinding, LeRoy exam prerequisite, AGC fouryear distinction.
+- Cross-batch duplicate review at4f3616e PASS:183proposed additions versus197Masterrows
+  and each other, no duplicate/collision. Cross-collisions receipt saved. Separate coverage review
+  found3medium/1low: alternative study-path mappings, service/ordinary-need decisions,
+  HaroldPaige STEM volunteering basis, JamesSchultz educationgap membership. Implementer
+  completed021 remediation for42additionentities: alternativechoices withORsemantics, explicitservice/ordinaryneed/leadershipdecisions, PaigeSTEMtagremoved, Schultzgapincluded. IndependentPASSreceipt saved; no new runtime questions/rules.
+- University020 independentlyPASSafter3fixes:47entities including existingMaster
+  destinations and one discovered held MSUProvost child;46newlydecidedsource rows,
+ 10additionalMasterupdates;23newrelatedtriage records/159fields. FVCC correctly14named
+  programsections (6student+4graduate+4state),8outside resource links. Prior16claim corrected.
+  UM/DHC/MSU aliases preserve separate programs. Exact current sources and conflicts in
+  `docs/evidence/scholarship-intake/university-evidence.json`.
+- Trades/disability022 independently PASS, receipt saved:22entities/51source rows,3unappliedadds(BBT,DEWALT,HPFYBeyondDisability). Eightneweducator/institutionalchildrenexcluded; NASCLA/ACE/AWScatalog/Pelltypeandidentityholds explicit. Evidence `docs/evidence/scholarship-intake/trades-disability-evidence.json`; safe sources `.firecrawl/resume-trades22-*.json`.
+- Bold named-award batch023 independently PASS, receipt saved: 38 entities / 41 source rows; four additions
+  (Adam Montes, Ethel Hayes, Lawther and STEAM), 21 audience exclusions and 13 specific
+  route/identity holds. Rules and exact application controls checked; closed-cycle
+  generic signup links do not prove an award-specific application route.
+  Evidence: docs/evidence/scholarship-intake/bold-named-evidence.json.
+  Safe retained source fields: .firecrawl/resume-bold23-*.json.
+- Related-alias batch024 independently PASS, receipt saved: 27 entities / 33 rows (27 newly decided), 24 related
+  triage records / 208 fields. One Morelli addition; changed Master30,81,119,140,147,169,
+  preserving prior proposals. This confirms the MSU transition, corrects certificate
+  timing/form, adds exact Allegra deadline, AFSA exclusions, STEM certificate/two-year
+  paths and Horatio renewal-versus-entry GPA. Wells Fargo tentative fields stay held.
+  Evidence: docs/evidence/scholarship-intake/related-aliases-evidence.json.
+- Batch024 review fixes: Morelli K unknown (four-year support is not a degree type);
+  historical dyslexia tag uses its actual home-page evidence; I140 eligibility and
+  related triages corrected to vocational/skills or undergraduate study, preserving E.
+- ScholarshipInstitute named batch025 independently PASS, receipt saved: 27 entities / 26 source rows.
+  Seven additions (Bulkthreads Aim Higher, Elijah, Lawson, Joseph Lowe, Hue Ta,
+  Student Referee and Action Air), two audience exclusions and18specific holds.
+  One newly discovered Bulkthreads Believe in Yourself child remains held with its
+  exact ScholarshipOwl identity. Directory marketing is not an individual award.
+  Evidence: docs/evidence/scholarship-intake/institute-named-evidence.json.
+  Safe source quotations .firecrawl/resume-institute25-*.json; all25named leads researched.
+- Batch025 M1 resolved: Student Referee requires an accredited state-endorsed class;
+  essay length is retained2026 only, not a verified2027 prompt.
+- Provider batch026 independently PASS, receipt saved:22entities/52rows (50newlydecided),4triages/16fields;
+  fouradds (Navigate Your Future, Surety Bond Authority, Pizzini Nurse, BigSun),
+  newrelatedupdates109/141; Kitchen116alias resolveswithoutduplicate/preservesI.
+  OuttoInnovateparent accounted with3advanced-collegechildren;8specificheldentities.
+  Evidence docs/evidence/scholarship-intake/providers-evidence.json.
+- Validator/timestamp checkpoint9383981 independently PASS;93 timestamp alignments and two guard findings resolved; receipt saved.
+- National027 independently PASS, receipt saved:34entities/22rows/2triages6fields; five additions (CSU FGA, KPMG, Rollins, Davis-Putter, HITEC),13 named child/components accounted. Evidence national-evidence.json.
+- Pure local planner independently PASS at4f8a3ca; receipt saved. Exact JSON/report generated; I65 only operationally deferred for native bold-format preservation.
+- Community029 authored42entities/26rows; two additions(CardRates,SaferRoadways), Haganincome-relatedhold; review pending.
+- Source metadata recheck07:10UTC matches revision226/14tabs/modificationtime. Additional local Mastercopy rejected by automatic approval review; not saved, no workaround or native-content recheck claim. No source writes/copies.
+- Aviation028 authored93entities/59source rows,10additions including7AFA;67newchildren/components;20AFA/NBAA child checks complete. All1666originalrowsdecided.
+- Community029 decisions passed but sourceprovenanceM1corrected, recheckpending.
+- Clean npmci offline PASS438packages; partialledger/typecheck/dryrunPASS. Fullsuite/buildandfinalreviewpending.
+- Next executable action: recheck029 and independent028 review; then complete exact unapplied batch/report/gap coverage, full testing and final independent review. Structured extraction can misstate rules; direct rendered rules control.
+  Generate pending list from ledger; /private/tmp/intake-pending-live.json predates026.
+  Do not rerun completed authors including intake_resume_providers26.py.
+  Source registry now permits original HTTP observation URLs as well as HTTPS;
+  no runtime URL or workbook behavior changed.
+- Partial ledger validation and diff whitespace pass after correcting disposition vocabulary.
+  Full suite/build, strengthened validation, exact dryrun/report/gapcoverage, fresh workbook
+  fingerprints and final independent review unfinished. Do not claim final acceptance.
+- Backup/recoverycopies and affected-cellbackup absent, unauthorized; sourcewrites0.
+  No push/PR/Preview/merge/Production/hostedverification, applicantdata, providercontact,
+  new services or automation. Exact copy/write/release authority still required.
+
+## Scholarship intake execution — snapshot complete, evaluation in progress
+
+- Execution branch `codex/scholarship-intake`; worktree `/private/tmp/program_code-scholarship-intake`.
+  Previous exact checkpoint `3afb81b4eccaab99be66b074579d7f43d3b3fb10`; this checkpoint is the next local commit.
+  Resolve current exact checkpoint with `git rev-parse codex/scholarship-intake`.
+- Verified main `5fa08541b6b49484dedc8fc06012e47c658ce8fb`; planning closeout
+  `0ffa90b12502b2a031a6012e16014301def07205`; original/planning work preserved.
+- Policy checkpoint independently PASS C0/H0/M0/L0. Canonical Revision15 changes
+  local intake authority only; P9, completed releases and runtime bytes preserved.
+- Complete allowed-field snapshot `intake-rev226-74df373b3e30738e`, SHA256
+  `74df373b3e30738eade0f621228c1522094e2d5808dc023a17f3e0a641598524`.
+  Revision226 / modifiedTime stable across all14tab reads;1666populated rows:
+  1632scholarship-bearing plus34headers/context; Staging373, Scraped438 including9nameless.
+  ScrapedR:Tdata excluded; StartHereoutreachcontact redacted with originalhash.
+- Sole ledger `docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`, SHA256
+  `438cd187a8a960af5a7d173d3ff5999d0278f0bedd40a580a739194220e9a83e`.
+  Counts: `{"rows": 1666, "entities": 903, "decidedRows": 1144, "pendingEntities": 342, "proposedAdds": 178, "proposedUpdates": 2, "reviewedRows": 1089}`. Entity count includes aliases and discoveries;
+  it is not a count of distinct approved awards. All proposed operations remain unapproved.
+- AEA/NTHS checkpoint independently PASS after3targeted fixes:42entityrecords,
+  118rows,30draft additions,450fielddecisions. Receipt `SCHOLARSHIP-INTAKE-batch-review-aea-nths.json`.
+- Reference/Mensa/military checkpoint independently PASS after5targeted fixes:
+  660identity rows and75Mensa/militaryrows; receipt `SCHOLARSHIP-INTAKE-batch-review-reference.json`.
+  Jaycee college/vocational names split; Folds dated geography and acute-need ambiguity corrected.
+  **223related-fieldtriage rows /139entities /683fielddifferences remain pending** and
+  must be resolved before final acceptance.35identity rows also remain deferred.
+- AOPA/LPA independently PASS:50entities,83rows,34adds/510fields. TwoPAPArows split into separate pendingentity. Receipt `SCHOLARSHIP-INTAKE-batch-review-aopa-lpa.json`.
+- Dawson independently PASS:77entities,31rows,34adds/510fields;65foundationheadings plus61formchoices/60labels;8unsupported drafts withdrawn,6form-onlychildren accounted. Receipt `SCHOLARSHIP-INTAKE-batch-review-dawson.json`.
+- NGPA independently PASS:17entities,2rows,15adds/225fields;20allocations→16funds. Receipt `SCHOLARSHIP-INTAKE-batch-review-ngpa.json`. Supplemental two-parent-alias rows separately pending.
+- Epic/WAI authored:63current WAI2027 awards plus historical-only identities/aliases, Epic10k new tier and exact I129/I130 FEAMcondition updates. Independent review PASS:140entities/147rows,60adds+2updates,902fields,62tags,182coverage entries; all6findings resolved. Receipt `SCHOLARSHIP-INTAKE-batch-review-epic-wai.json`.
+- Association supplemental batch authored:2PAPAadds plus existing-program aliases/holds.
+- Privacy: unfiltered Miller/AGC evidence saves rejected by automatic review; rule-only content and safe metadata saved successfully. Incidental recipient content removed from local Epic/WAI/AGC research. See `scholarship-intake/privacy-minimization.json`.
+  AOPA December30/31officialdeadlineconflict explicit; no futuredeadline invented.
+  Mensa54names held:currentchildcatalog behindregistration; not falsely treated as removed.
+- **User-requested pause for fresh context.** Resume using `docs/evidence/SCHOLARSHIP-INTAKE-continuation.md`; no audit-completion claim.
+- Next executable work: review saved batch11/MTcf sources and author NHE/ACS/Avfuel/AGC/BYF/MTcf decisions, then remaining source groups, nameless records and related-fieldtriage. Both WAI10-page guides already read; do not repeat. Keep oneledger.
+  Newly captured `.firecrawl/batch11-*` sources await author decisions; AGC criterion excludes HSseniors; Miller rules-only list routes AWS; Pearl closed routes unavailable after bounded official search.
+  Reuse alreadyfetched `.firecrawl/` evidence; scripts in `/private/tmp/intake_*.py` are
+  author utilities, **do not rerun completed batch scripts** (they append ledger entries).
+  Every completed batch and its sourceIDs is listed in ledger.batches; no repeatresearch.
+- Durable sourcefield evidence in `docs/evidence/scholarship-intake/`; local excluded
+  `.firecrawl/` also has Epic parent/forms,6partnerpages, LPA/Dawsonroutes and complete
+  WAI observedcontent needed for nextwork. No sourcecompleteness claim until reconciled.
+- Checks: cleanofflineinstall, typecheck, intakepartialcheck, policy/history/whitespace pass.
+  Fullsuite/build/finalcompleteledgercheck/frozenindependentreview stillpending.
+  Plancheck has3expected missing finalattestationartifacts; hosted adds missingreleaseauthority.
+- Backup/recoverycopies notauthorized/notcreated/notverified; affectedcellbackup absent.
+  Sourcewrites0; publicationfalse; no applicantdata, login, providercontact or runtimechange.
+  Newexactbackup/write/releaseauthority required. Finalcandidate/promotionbatch notyetcomplete.
+
+## Preserved intake planning closeout
+
+Plan: `docs/SCHOLARSHIP_INTAKE_BUILD_PLAN.md` (SCHOLARSHIP-INTAKE-1). Start instruction:
+`docs/kickoffs/SCHOLARSHIP-INTAKE.md`. Inventory/sample context:
+`docs/evidence/SCHOLARSHIP-INTAKE-planning.json`.
+
+- Kelsey requested a durable plan after read-only workbook/sample inspection. The
+  full audit, sheet writes, automation and new product work have **not** started.
+- Objective: account for every candidate across staging, scraped, removed/curated and
+  history/reference tabs; verify proposed additions/related updates, tags and interview
+  gaps; produce one complete, independently reviewed promotion batch. Full Master
+  freshness review, automation and selected website/interview changes remain later work.
+- Verified main baseline `5fa08541b6b49484dedc8fc06012e47c658ce8fb` (PR43), using
+  normal Git fetch and authenticated GitHub main API on September11 UTC / September10
+  Denver. Canonical revision14, all program stages accepted, active/next pointers null.
+  The proposal does not amend that state. P9, PR42 and PR43 remain delivered.
+- Isolated planning worktree `/private/tmp/program_code-scholarship-intake-plan`, branch
+  `codex/scholarship-intake-plan`, based on verified main. The local delivery handoff and
+  `PLAN-REV14-delivery.json` were deliberately copied from exact closeout commit
+  `7bd12107606e9a8c426058b21864d7cc8fbd2cd8`; original and release checkouts preserved.
+  Resolve this planning checkpoint with `git rev-parse codex/scholarship-intake-plan`.
+  Recover that local branch through the shared repository if the temporary folder is lost.
+- Planning evidence records all14 observed tabs, the 373 named staging entries,
+  429 named scraped entries plus9 nameless rows, and sample issues. These are dated
+  exploratory observations without an atomic provider revision, not verified new-award
+  counts. Execution must capture a complete allowed-field snapshot and stable row IDs.
+- Fixed controls: one ledger, official field evidence, explicit duplicate survivors and
+  unknowns, 100% independent disposition/tag review, no question required for promotion,
+  and one exact reviewed batch approval before any sheet write. Tag storage is explicit;
+  sheet changes do not publish to the immutable website. No new questions/exclusions,
+  applicant data, legacy workbook access, services or recurring jobs are included.
+- Planning validation: `npm run plan:check` PASS (13 ordered stage contracts), proposal
+  link and14-tab inventory checks PASS, canonical plan/state/AGENTS bytes unchanged,
+  preserved delivery receipt exact, and `git diff --check origin/main` PASS. No product
+  code/data changed; the full product suite was not rerun for this planning-only proposal.
+- Independent proposal review PASS on exact corrected candidate
+  `9afb74af6581ed26782266f05aed3e64af70339b`, by fresh-context read-only reviewer
+  `/root/intake_plan_review`; unresolved C0/H0/M0/L0. The sole cumulative LOW
+  formatting finding was author-fixed and independently rechecked against the complete
+  baseline-to-candidate diff. Receipt: `docs/evidence/SCHOLARSHIP-INTAKE-plan-review.json`.
+  This is the original proposal review; the backup requirement below is a subsequent
+  user-requested update. No canonical attestation or stage acceptance is asserted.
+- **Complete-workbook protection update:** Kelsey requested documenting a mandatory full
+  workbook backup before writes. Starting planning commit:
+  `98b55c2c114ab146131957095c359c00364c6d3e`. Updated plan section7 and kickoff require
+  a separate private native copy of every tab, verified preservation/access, recovery
+  proof in an authorized disposable copy, and the existing affected-cell backup.
+  Missing, stale or incomplete backup/recovery proof blocks source writes. Keep the
+  baseline backup unchanged; fresh backup for each later write batch after a pause,
+  source change or earlier completed batch. Retention/deletion and any restore authority
+  are explicit; current edits cannot be discarded automatically.
+  Execution must record `docs/evidence/SCHOLARSHIP-INTAKE-backup-verification.json`
+  and the backup ID/location, source revision, batch digest and recovery status here.
+  No backup has been created and no workbook was accessed or changed for this update.
+  Updated proposal validation PASS; independent fresh-context read-only review PASS
+  on `e1ecb1b3c0094d229c03079f892a3a09c549fadf`, C0/H0/M0/L0, by
+  `/root/intake_backup_plan_review`. Receipt:
+  `docs/evidence/SCHOLARSHIP-INTAKE-backup-plan-review.json`; earlier receipt unchanged.
+  Full baseline-to-candidate whitespace and preservation checks pass. This receipt and
+  handoff completion are administrative closeout; reviewed plan/kickoff bytes unchanged.
+  Resolve the planning branch tip for the latest recovery commit; the earlier copied
+  kickoff's `98b55c2...` pin predates this protection update and must be replaced.
+- **Next executable action:** send the prepared kickoff in a new session. Verify current
+  baseline and any existing intake checkpoint; create an isolated execution worktree,
+  preserve this plan/evidence/handoff, and complete the dedicated prospective policy
+  amendment and independent policy review before the full audit. Continue to the tested
+  reviewed local batch; do not stop to ask routine Git questions or repeat completed rows.
+- No sheet-write or new release authority exists. Prepare the exact batch first, then
+  obtain its specific backup/write/rollback grant if needed. Push/PR/Preview/merge/
+  Production/verification require new exact release authority or verified applicable
+  suppression. Do not consume previous release grants or append to their attestations.
+
+## Interview relevance — delivered PASS
+
+The bounded PLAN-REV14 / INTERVIEW-RELEVANCE-1 release is merged and verified on
+[Production](https://web-two-gules-45.vercel.app/). Supported existing answers now improve
+ordering and explanations using saved spreadsheet information. P9 and PR42 remain complete.
+
+- [PR #43](https://github.com/whitefishscholarship/program_code/pull/43) merged at
+  `2026-09-10T23:42:01Z` as `5fa08541b6b49484dedc8fc06012e47c658ce8fb`.
+  Verified baseline was `2f517755118bc72570a2aa8b5109a2660e0d9b12`.
+- Exact candidate `7bce8f3b229339f5ded1cde856d1eb758b3eb259`; manifest SHA256
+  `b47b6ad74f19bad47eaf62b32ea6487ff705c89cbda911468dbe22c775a255a7`.
+  Direct-child two-file attestation `478a592a7c4f89cf6ce02007fed8ea590301aeac`
+  remains `codex/interview-relevance` tip. Merged and attested trees match exactly.
+  Do not append to or rebind that historical attestation.
+- Independent policy passed before product; all206 mappings independently reviewed.
+  Final fresh-context review has no unresolved C/H/M/L findings. Its cumulative M1/L2
+  findings are resolved with count-matched dispositions; separate mapping LOW resolved.
+- PR CI `34542568050` and main CI `34543311103` passed every required command,
+  including plan validation, typecheck, full tests, exact default production build,
+  and zero-Google built traces. Local three-viewport matrix covered all38 enabled
+  choices, all206 pairs, keyboard, privacy and actual saved CSV files.
+- Preview `dpl_H55LnmCmuxR6otzPQKyM4ePFedqT` passed before merge. Production
+  `dpl_7oeA8SihBQ4FoZoBNemVufjSXoq1` is Ready/Current on the canonical hostname.
+  Authenticated HTTP200/no-store nonce health identifies exact branch/merge/deployment,
+  original P8M and shortlist digests, relevance digest
+  `fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0`,
+  and Google/Drive/Sheets none, ingestion/mutation disabled.
+- Both deployed browser checks preserve counts166/125/152/190, all192 access,
+  outside26 recovery, edit/reset/reload, qualified relevance explanations and exact
+  CSV visible names/order. Full baseline, pilot+Autism and sensitive-skip CSV payload
+  hashes equal the reviewed local serializer. Unsupported Mensa leaves baseline unchanged.
+  Export clicks completed; hosted OS-save was not independently observed. Local tests
+  verified actual saved downloads. Production interview observed zero requests and zero
+  local/session storage entries. No application errors; final interview reset blank.
+- API reconciles217 sources,21 portals,192 awards,four groups and197 source rows.
+  Release enables38 choices,206 connections across129 awards, preserving GPA/school
+  decisions. No new questions, exclusions, services, dependencies, live source/sheet access,
+  configuration changes, monitoring or real applicant data. Historical artifacts unchanged.
+- Durable hosted evidence: `docs/evidence/PLAN-REV14-delivery.json` and PR43 delivery
+  comments. Build/mapping/matrix/local review evidence remains in the PLAN-REV14 files.
+  Data is still saved September2 revision225. Current provider freshness/eligibility
+  remain unverified. Nonbinary, single-parent, Mensa, aviation-management and Farmers
+  Union choices remain explicitly unsupported without blocking unrelated supported work.
+- This updated handoff and delivery receipt are **local only**, in
+  `/private/tmp/program_code-interview-relevance-closeout`, branch
+  `codex/interview-relevance-local-closeout`, based on exact merge `5fa08541...`.
+  Resolve its current documentation commit with `git rev-parse codex/interview-relevance-local-closeout`.
+  Local closeout plan validation and whitespace checks pass.
+  Recover that branch through the shared repository if this temporary worktree is lost.
+  The execution worktree `/private/tmp/program_code-interview-relevance`, planning
+  worktree and original checkout remain preserved. Do not reset the original checkout.
+- **Next executable action:** no release action remains. Start any future selected work
+  by reading this handoff and verifying current main. Do not repeat completed review,
+  tests or delivery. The exact grant was used for this release; do not publish this
+  separate local closeout or perform rollback under it. Rollback reference is PR42;
+  actual rollback or a future data refresh requires its separately bounded authority.
+  The historical stale P9 blocker and unrelated items below remain outside this release.
 
 ## Spreadsheet shortlist maintenance — delivered PASS
 

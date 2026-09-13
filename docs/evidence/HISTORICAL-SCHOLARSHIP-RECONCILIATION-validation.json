@@ -1,0 +1,47 @@
+{
+  "scope": "Local historical two-tab presence/identity reconciliation; not canonical stage acceptance",
+  "recordedAt": "2026-09-12T16:01:26.922631+00:00",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "result": "PASS; existing middleware deprecation warning",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "result": "Blocked by tsx IPC sandbox EPERM; direct validator run below",
+      "exitCode": 1
+    },
+    {
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "web",
+      "result": "FAIL: exactly three pre-existing reserved PLAN-REV15 manifest/review/committed-attestation gates; no waiver",
+      "exitCode": 1
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "repository root",
+      "result": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "limitations": [
+    "No new official scholarship eligibility/current-cycle verification",
+    "No workbook mutations, runtime changes or publication",
+    "Plan validation remains unaccepted; successful audit is not canonical stage acceptance"
+  ]
+}

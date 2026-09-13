@@ -1,0 +1,436 @@
+{
+  "reviewedCandidateCommit": "b94f421bd3b64fb7ebfd6ca5972ab08c48008b22",
+  "reviewer": "/root/intake_triage_review",
+  "readOnly": true,
+  "ledgerSha256": "8efe022ac1b1003b996d06349447d4f21da7eab378b9d18bbef9d00993427be9",
+  "auditedReferenceDigest": "119cecd21ff1d0c0c0cb486da3e7ffc3696b87a443866c65f1223b51d4385228",
+  "identityMarkers": [
+    {
+      "entityId": "intake-entity-10796e0dcdca24f8",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-445586487:row-9:f11287041878",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 9,
+        "entityId": "intake-entity-10796e0dcdca24f8"
+      },
+      "rowContentSha256": "f11287041878d4ae115ba59e9af69b80746cc234a2e11d310c59327f9cfb2def",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-10796e0dcdca24f8",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-431480012:row-36:26e9692b22cf",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 9,
+        "entityId": "intake-entity-10796e0dcdca24f8"
+      },
+      "rowContentSha256": "26e9692b22cf12d5d352c2797d0393b9f653b2d613a7ffa7c2d5980465305163",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-655d2267b8322d67",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-445586487:row-24:f28f0fe4d315",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 24,
+        "entityId": "intake-entity-655d2267b8322d67"
+      },
+      "rowContentSha256": "f28f0fe4d3159d432486bc5420ebfdfc1249e75f7d558f3e1523caf0a3ffc7e3",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-655d2267b8322d67",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-431480012:row-31:c36cdf12b970",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 24,
+        "entityId": "intake-entity-655d2267b8322d67"
+      },
+      "rowContentSha256": "c36cdf12b970507b9e786c5982e0522239d7e84726b37f7b5edfaa4f69c60ae3",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-cc6ce7fdd8e92e5b",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1472248756:row-9:7f7e2d484227",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 37,
+        "entityId": "intake-entity-cc6ce7fdd8e92e5b"
+      },
+      "rowContentSha256": "7f7e2d484227268b77eb5718bd13694335d44149ce60d2bcf776764f6e30f754",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-d48b9d27163fdd61",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-445586487:row-67:6c4de9ecc9ae",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 67,
+        "entityId": "intake-entity-d48b9d27163fdd61"
+      },
+      "rowContentSha256": "6c4de9ecc9aec10a1f778a9d7eccd203e5c5d7e6fa62e6f8b6f9cdc4fe4fc5cb",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-d48b9d27163fdd61",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-431480012:row-57:d73e36f307f6",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 67,
+        "entityId": "intake-entity-d48b9d27163fdd61"
+      },
+      "rowContentSha256": "d73e36f307f6d3d5b92ed43f287e7d634899e63a7b73b8037480b1542a76616a",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-50f89f96830d4432",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1564592053:row-4:031fb9fa8149",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 154,
+        "entityId": "intake-entity-50f89f96830d4432"
+      },
+      "rowContentSha256": "031fb9fa8149a1fadb1fde045c252731a263ee2e693a64048c5e4aa2ec26dfb3",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-c78d43643dfacd2a",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1564592053:row-7:2b8b7ac552ad",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 157,
+        "entityId": "intake-entity-c78d43643dfacd2a"
+      },
+      "rowContentSha256": "2b8b7ac552adbd7d5ca639d766fcea6c04e9852b11dda54efa27e7fc8fbc9bc9",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-eeb8bd03dbe7b8c1",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1564592053:row-10:c5ae62a62f24",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 160,
+        "entityId": "intake-entity-eeb8bd03dbe7b8c1"
+      },
+      "rowContentSha256": "c5ae62a62f24b52f901d3c4840d4ca5c8d6012146bd667eb6b9bc8445796e837",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-d8e33b51b9b26e04",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1564592053:row-15:5128e1f2dd84",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 165,
+        "entityId": "intake-entity-d8e33b51b9b26e04"
+      },
+      "rowContentSha256": "5128e1f2dd84ac15912ea04742885971736e084a84a89907660cf19097eb60e4",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-ea2571a606911b0d",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1564592053:row-18:6b197cbfe62c",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 168,
+        "entityId": "intake-entity-ea2571a606911b0d"
+      },
+      "rowContentSha256": "6b197cbfe62c7f300079331ec4ee8d66fc92104ba58f00a3fe43cecf8abc73d5",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-2293be754e9546a4",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-445586487:row-172:66f8784ddbc9",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 172,
+        "entityId": "intake-entity-2293be754e9546a4"
+      },
+      "rowContentSha256": "66f8784ddbc987ec941b5587594d9e8ffd14908930ec48045f125d638a35f2f5",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-2293be754e9546a4",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-431336182:row-5:eb659b049e87",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 172,
+        "entityId": "intake-entity-2293be754e9546a4"
+      },
+      "rowContentSha256": "eb659b049e873a6379c465752fb1345f00793cf12198ee23c279ec1913631404",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-e298c3cc44afb4c1",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-445586487:row-173:3ba6759da29d",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 173,
+        "entityId": "intake-entity-e298c3cc44afb4c1"
+      },
+      "rowContentSha256": "3ba6759da29d29d53987a9fd1614a0dfe064737ece7f654716f220082e963368",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-e298c3cc44afb4c1",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-431336182:row-6:f13c2d064215",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 173,
+        "entityId": "intake-entity-e298c3cc44afb4c1"
+      },
+      "rowContentSha256": "f13c2d064215cb20876837641cc1740080eba1ff4f539057f8aaf5bb2a9acefb",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_triage_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-related-fields.json",
+        "reviewedCandidateCommit": "4f3616e9c7f2e6059068ed604aa4af7f26e62e2e"
+      }
+    },
+    {
+      "entityId": "intake-entity-0fc27a803e97f956",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-2:81e62dd6f590",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 188,
+        "entityId": "intake-entity-0fc27a803e97f956"
+      },
+      "rowContentSha256": "81e62dd6f590a0badcbca7e0a422511527a2c445796cccd40922f70fd657be70",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-e19aec7a7728a928",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-3:a84e808ed179",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 189,
+        "entityId": "intake-entity-e19aec7a7728a928"
+      },
+      "rowContentSha256": "a84e808ed1796bc933be16c26ebf0c3d7c8fdf9818000f6a0868b21de91e786a",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-57b579dc543cc52c",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-4:b386dc3e9914",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 190,
+        "entityId": "intake-entity-57b579dc543cc52c"
+      },
+      "rowContentSha256": "b386dc3e99146a1a74e761f74b31c4436fd898c9e109daa574591ab2d25337d6",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-9b548e35c7dbff64",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-5:2348bfa46fa0",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 191,
+        "entityId": "intake-entity-9b548e35c7dbff64"
+      },
+      "rowContentSha256": "2348bfa46fa0d48348f31af08446d209c8d4d7d7456ac4b9e4da2db855269e4c",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-e935f206070a241b",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-6:83ac69a59ec1",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 192,
+        "entityId": "intake-entity-e935f206070a241b"
+      },
+      "rowContentSha256": "83ac69a59ec146c8b3f2f33b7ace36bc1aee9945274304c5d1faa0e5b2a66333",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-baf5e2ac312f4cbd",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-7:bf455faedb8e",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 193,
+        "entityId": "intake-entity-baf5e2ac312f4cbd"
+      },
+      "rowContentSha256": "bf455faedb8e7f819d37ee8a4345d06ca76add8f785470d8cb81482028669dd4",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-59b5e4ef9ecec569",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-8:f7d1a0d36e2c",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 194,
+        "entityId": "intake-entity-59b5e4ef9ecec569"
+      },
+      "rowContentSha256": "f7d1a0d36e2c0ab62cc1a280d7e61aa1406885969b20233a83d4110359674436",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-d6ccb5291c28fca0",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-10:297699405fe2",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 195,
+        "entityId": "intake-entity-d6ccb5291c28fca0"
+      },
+      "rowContentSha256": "297699405fe29cdbe056459332904133f917670f26cf7017c1351fd3ce8b4064",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    },
+    {
+      "entityId": "intake-entity-b566fa22607f640a",
+      "sourceRowId": "intake-rev226-74df373b3e30738e:sheet-1969210817:row-11:efd5034ec87f",
+      "destination": {
+        "kind": "existing_master",
+        "sheetId": 0,
+        "rowNumber": 196,
+        "entityId": "intake-entity-b566fa22607f640a"
+      },
+      "rowContentSha256": "efd5034ec87f134d40e07297e31bc80181a432e4e840c171c1a97d269c98d2bb",
+      "review": {
+        "status": "reviewed",
+        "reviewer": "/root/intake_supplement_review",
+        "receiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-mcf.json",
+        "reviewedCandidateCommit": "017c6c152f5e38f8f1b02276d0117a454b5ec30c"
+      }
+    }
+  ],
+  "rootRemediation": "Clear only20auditedlists/25references; inherit NASCLA hold and record all5Looney routes. Dawson65/64/71 and NGPA20/16 denominators preserved. Await read-only recheck.",
+  "recordedAt": "2026-09-11T07:37:57.535380+00:00"
+}
