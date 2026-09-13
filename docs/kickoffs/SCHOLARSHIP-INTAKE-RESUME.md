@@ -1,3 +1,15 @@
+# Final session wrap — R2 PASS, future work remains gated
+
+Resume local branch `codex/r2-release-closeout` in `/private/tmp/program_code-r2-release-closeout`.
+Preserve reviewed closeout checkpoint `df3f20aa40e238ea8749e70885a5a1a162bd79cb` and all
+release checkpoints below. This final documentation supplement adds operational triggers;
+it does not change canonical acceptance, authorize another deployment, or reopen R2.
+See `docs/evidence/interview-coverage/r2-session-wrap.md` for the remaining operational
+owners/triggers, verification limits and short next-session kickoff. The complete prior
+handoff remains below. R3 is planned, not authorized. Recommended next effort: High.
+
+---
+
 # R2 complete — both releases delivered and verified
 
 Plan revision: 17. Operative local closeout: `/private/tmp/program_code-r2-release-closeout`,

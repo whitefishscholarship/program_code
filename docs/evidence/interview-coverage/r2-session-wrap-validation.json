@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-09-13T17:35:01.270135+00:00",
+  "baseline": "df3f20aa40e238ea8749e70885a5a1a162bd79cb",
+  "scope": "Final local documentation supplement only",
+  "preserved": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "completeBaselineSuffixPreserved": true,
+      "baselineSha256": "c0639c43fbcd4e631aeb03c8c995772240b3c01ea69b4a5bbb036614246b27f6"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "completeBaselineSuffixPreserved": true,
+      "baselineSha256": "9d2420339acc3b8a702a0d7f49ebc4403090d209d6d00b825f6d4d7f33e1f31a"
+    }
+  ],
+  "historicalReviewHashesVerified": true,
+  "newExternalActions": "none",
+  "unchangedRuntimeVerification": "Prior complete local matrix, release CI and browser evidence retained; no runtime, dependency, configuration or canonical change. No duplicate runtime testing required for this supplemental routing text.",
+  "planCheck": {
+    "command": "npm run plan:check",
+    "cwd": "/private/tmp/program_code-r2-release-closeout/web",
+    "exitCode": 0,
+    "output": "Build-plan validation passed for 13 ordered stage contracts and the current machine-state transition.",
+    "observedAt": "2026-09-13T17:35:26.449471+00:00"
+  },
+  "whitespace": {
+    "command": "git diff --check",
+    "exitCode": 0
+  }
+}
