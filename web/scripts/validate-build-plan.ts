@@ -1,3 +1,4 @@
+import { readGitBuffer, matchesBlobHash, validateRepairAtRepo, type Rev15DeliveryRepair } from './plan-rev17-rev15-delivery-repair';
 import { permitsLocalIntakePreparation } from './intake-governance';
 import { permitsLocalRelevancePreparation } from './interview-relevance-governance';
 import { createHash } from 'node:crypto';
@@ -131,6 +132,7 @@ type PlanAmendment = {
   };
   lateDeliveryContinuation?: PlanRev11LateDeliveryContinuation;
   rowSourceCorrection?: PlanRev12RowSourceCorrection;
+  rev15DeliveryRepair?: Rev15DeliveryRepair;
 };
 
 type DeliveryIntegration = {
@@ -441,15 +443,7 @@ function gitLines(args: string[]): string[] {
 }
 
 function gitBuffer(args: string[]): Buffer | null {
-  try {
-    return execFileSync('git', args, {
-      cwd: repoRoot,
-      encoding: 'buffer',
-      stdio: ['ignore', 'pipe', 'pipe'],
-    });
-  } catch {
-    return null;
-  }
+  return readGitBuffer(repoRoot, args);
 }
 
 function gitText(args: string[]): string | null {
@@ -686,7 +680,7 @@ function validateBoundAttestation(
     const blob = gitBuffer(['show', `${manifest.candidateCommit}:${file.path}`]);
     if (file.change === 'deleted') {
       if (file.sha256 !== null || blob !== null) fail(`${manifestPath} deletion ${file.path} is invalid`);
-    } else if (!blob || file.sha256 !== sha256Buffer(blob)) {
+    } else if (!matchesBlobHash(blob, file.sha256)) {
       fail(`${manifestPath} hash mismatch for ${file.path}`);
     }
   }
@@ -1603,6 +1597,15 @@ if (state) {
       }
     }
   }
+  const revision17 = planAmendments.find(item => item.id === 'PLAN-REV17');
+  const canonicalRevision15 = findCanonicalAttestation('PLAN-REV15', 'docs/evidence/PLAN-REV15-manifest.json', 'docs/reviews/PLAN-REV15.json');
+  const canonicalRevision17 = revision17 ? findCanonicalAttestation(revision17.id, revision17.manifestPath, revision17.reviewPath) : null;
+  let revision17ContinuationValid = false;
+  if (state.planRevision >= 17 || revision17) {
+    const repairErrors = validateRepairAtRepo(repoRoot, { planRevision: state.planRevision, governance: { planAmendments } }, canonicalRevision15, canonicalRevision17);
+    repairErrors.forEach(fail);
+    revision17ContinuationValid = repairErrors.length === 0;
+  }
   for (const amendment of planAmendments) {
     const amendmentRevision = Number(/^PLAN-REV(\d+)$/.exec(amendment.id)?.[1] ?? 0);
     const expectedAmendmentStatus = amendmentRevision >= 3 ? 'attestation-gated' : 'accepted';
@@ -1657,7 +1660,9 @@ if (state) {
         revision11ContinuationValid &&
         canonicalRevision11
         ? canonicalRevision11.attestationCommit
-        : undefined,
+        : amendment.id === 'PLAN-REV15' && revision17ContinuationValid && canonicalRevision17
+          ? canonicalRevision17.attestationCommit
+          : undefined,
     );
   }
 

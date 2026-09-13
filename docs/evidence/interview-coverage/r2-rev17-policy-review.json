@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent fresh-context read-only REV17 policy review",
+  "reviewerTaskId": "/root/rev17_policy_review",
+  "reviewerWasAuthorOrEditor": false,
+  "outcome": "PASS",
+  "canonicalAcceptance": false,
+  "candidateCommit": "a4fddde18893be3909c0209f949a3823bda0e17a",
+  "baselineCommit": "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+  "policyDeltaBaseCommit": "94db9e72ff241f5eb0939872d97852657f139ecb",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateFiles": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "3ab097a7f0ff3f6d20771c63518ff3c76ddece6ff835c6b596f73f240bc17d89"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "0253193963ed4eb3ec9df705306acff7e7a9958eba227d54582ef0bd3c93266f"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "aa4e637637f6a0054ec1bc28dde8ee9895240710d46c02fef259d16636ca2b53"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "424597e7c3a5348d655da56dd6e5972c8b2600e0df6ba308f22dc2abed99a0e9"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "sha256": "4ed7c1840db773692bdbe3f1b0e3cfe3754830ad329ad9c86f5b0f03eaa25085"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV17.md",
+      "sha256": "f7804bc27dd2a7f4641a3c04bb9f8902b725a0b60ac2cbdc1390d33044d5e159"
+    },
+    {
+      "path": "docs/kickoffs/PLAN-REV17-REV15-DELIVERY-REPAIR.md",
+      "sha256": "7b2c34b7dbfb3bb81100483ba4b08ddc55f7a85120c4b4939ecfd58653707d64"
+    }
+  ],
+  "verification": [
+    "Independent reviewer verified all seven immutable policy hashes, complete path scope and whitespace; exact M0/C15/A15/source ancestry; original REV15 amendment/evidence/artifacts unchanged; direct grant and exact target/effects; byte-preserved recovery proposal.",
+    "Confirmed finite reader and negative tests, four expected pre-A17 diagnostics and zero after; full-candidate manifest and fresh review; direct-child two-file attestation; Preview/CI before merge, Production after, then delayed REV16 with reviewed union and no revision regression."
+  ],
+  "nextAction": "Implement only reviewed repair and exact continuation checks, validate and obtain fresh full-candidate review before attestation/publication.",
+  "limits": [
+    "Policy PASS only, not implementation or canonical acceptance. Reviewer performed no edits, commits, network, workbook, research or deployment. Full matrix and remote/hosted/current-source status not independently verified."
+  ]
+}
