@@ -1,3 +1,46 @@
+# R3 scope preparation — local proposal, execution awaits separate authority
+
+Current worktree: `/private/tmp/program_code-r3-scope`; branch: `codex/r3-catalog-scope`.
+Preserved planning baseline: `f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e` on
+`codex/r2-release-closeout`. R1/R2 are complete. This overlay supersedes only the
+planning pointer; every earlier handoff byte and every open trigger remains below.
+
+The user selected preparation of a concrete R3 scope. Read `docs/R3_CATALOG_SCOPE.md`
+and its pinned `docs/evidence/interview-coverage/r3-scope-inputs.json`. The proposal
+covers only a future read of Master Database sheet0 `A1:O417` and exact identity/revision
+metadata, then local catalog/connection work and review. All 257 applied operations,
+192 existing awards and 38 priority entities require separate reconciliation. Of the
+38 priority entities, 37 are in the batch; the remaining NTHS duplicate follows its
+recorded row143 survivor. Never recreate the withdrawn addition or infer a current deadline.
+
+Completion requires `r3-scope-review.json` PASS bound to `r3-scope-manifest.json`, both in
+`docs/evidence/interview-coverage/`, and verified immutable candidate hashes. Resolve
+this branch's final review-only tip with Git. Missing/nonmatching review means prepared,
+not review-complete. This is a local proposal review, not canonical stage acceptance.
+Canonical plan/state and every release attestation remain unchanged.
+
+**Next action after planning PASS:** Kelsey decides the exact separate R3 grant in
+sections3–7 of the scope. Before any future source read/product edit, record that grant
+and freeze/independently review the prospective canonical policy. No workbook access,
+copy/write, linked-source research, runtime change, release or hosted verification is
+performed by this preparation. R4 delivery and all R5–R7 effects remain separately gated.
+No automatic continuation is implied by a successful scope review.
+
+Planning verifies saved evidence and repository identity only. Source revision229 and
+416 historical names are not live facts; the selected future range does not claim full
+Master completeness. Preserve the 310 held entities/312 holds, all83 historical routes,
+26 research records/four non-write-ready additions, D01–D09, I65/Hagan, remaining
+organization/definition work, recovery objects, source-currency/monitoring/platform/
+issuer-credential/hygiene triggers, NTHS date review and keyboard follow-up. The R2 wrap
+below retains the exact CLI account, protection, hosted request/download and timing limits.
+The sole intake ledger is unchanged. No copy or recovery object was accessed.
+
+If this worktree is missing, recover the retained exact planning branch from the shared
+repository after verifying its clean checkpoint/ancestry. Preserve the R2 closeout and
+all release branch tips. Never reset/replay a completed batch or prune retained worktrees.
+
+---
+
 # Final session wrap — R2 PASS, future work remains gated
 
 Resume local branch `codex/r2-release-closeout` in `/private/tmp/program_code-r2-release-closeout`.
