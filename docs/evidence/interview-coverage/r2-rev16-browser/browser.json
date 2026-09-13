@@ -1,0 +1,73 @@
+{
+  "observedAt": "2026-09-13T00:52:48.159Z",
+  "status": "PASS",
+  "target": "local production build only",
+  "syntheticOnly": true,
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "status": "PASS",
+      "coreOnlyCount": 166,
+      "preservedCriteria": 38,
+      "newChoices": [
+        "education_teaching",
+        "org_nths",
+        "org_ffa"
+      ],
+      "needResponses": 5,
+      "organizationClearResponses": 3,
+      "publicCsvExact": true,
+      "explicitSort": true,
+      "conditionalHours": true,
+      "optionalFieldsClear": true,
+      "editResetReload": true,
+      "browseAll": 192,
+      "keyboard": true,
+      "horizontalOverflow": false,
+      "answerStorageRequestsLogs": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "coreOnlyCount": 166,
+      "preservedCriteria": 38,
+      "newChoices": [
+        "education_teaching",
+        "org_nths",
+        "org_ffa"
+      ],
+      "needResponses": 5,
+      "organizationClearResponses": 3,
+      "publicCsvExact": true,
+      "explicitSort": true,
+      "conditionalHours": true,
+      "optionalFieldsClear": true,
+      "editResetReload": true,
+      "browseAll": 192,
+      "keyboard": true,
+      "horizontalOverflow": false,
+      "answerStorageRequestsLogs": 0
+    }
+  ],
+  "health": {
+    "coverage": {
+      "id": "interview-coverage-supplement-v1-rev225",
+      "sha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified"
+    },
+    "capabilities": {
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    }
+  }
+}
