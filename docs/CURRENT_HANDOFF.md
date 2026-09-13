@@ -1,3 +1,72 @@
+# R2 complete — both releases delivered and verified
+
+Plan revision: 17. Operative local closeout: `/private/tmp/program_code-r2-release-closeout`,
+branch `codex/r2-release-closeout`, based on delivered main
+`a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32`. Resolve this branch's clean tip in Git;
+its final review-only checkpoint follows the frozen local closeout candidate.
+This overlay supersedes pending R1/R2 and blocker labels in the preserved history below.
+Immutable BUILD_STATE authority and acceptance records remain unchanged; their preparation
+labels are historical, not a reason to repeat delivery. This local handoff is not pushed.
+
+**PASS:** REV15 plus its authorized REV17 delivery repair were independently accepted;
+Preview and PR CI passed before merge as [PR44](https://github.com/whitefishscholarship/program_code/pull/44) at
+`16092cb858360f2ace06f92d11ab36a080bcb03f`, followed by Production and main CI verification.
+Only afterward REV16 was independently accepted with zero findings; Preview and PR CI
+passed before merge as
+[PR45](https://github.com/whitefishscholarship/program_code/pull/45) at
+`a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32`, followed by Production and main CI verification.
+Production: https://web-two-gules-45.vercel.app . Exact release and verification receipts:
+`docs/evidence/interview-coverage/r2-release-completion.json` and
+`docs/evidence/interview-coverage/r2-rev16-predecessor-delivery.json`.
+
+Preserved immutable checkpoints: original source/R1 `979122a13d4a8098d8cea26f115add1e68405355`;
+original A15 `94db9e72ff241f5eb0939872d97852657f139ecb`;
+C17 `a63d53485943996dd48f495db0171d494f373098`, A17 `b414e17f55c32f2711d9884ef1256269a83ed3bb`;
+C16 `a5eac691e9353eb5edc19b0da1e30ede6f6d38cc`, A16 `9dece0112a590703cf849ffc7301792a15b9a650`.
+Each original release branch remains at its attestation; historical reviews are not rebound.
+The local recovery-proposal branch and its original blocker evidence remain preserved.
+
+Verified product: two required core inputs; optional Teaching/NTHS/FFA with four qualified
+connections; all 192 awards, 38 prior criteria, 206 prior relevance connections and frozen
+publications preserved. Full local matrix and 360/1440 browser regression passed; both
+actual post-attestation plan modes passed; hosted health/source/deployment, API, exact
+core/combined order and public CSV, edit/reset/reload and storage checks passed.
+Limits: saved scholarship facts are not currently officially verified. The hosted browser's
+request-event capture returned no events, including on reload; request-body evidence is
+unavailable, not proof of no transmission. Exact reviewed runtime and accepted local tests
+supply request/privacy verification. Actual saved downloads passed locally; hosted CSV bytes
+were reconciled directly, while the IAB download-notification limitation remains recorded.
+No workbook/source/recovery-object access or change, research, configuration change,
+monitoring, rollback or later phase was performed in R2. Workbook authority remains spent.
+
+**Next action:** no execution is authorized now. When Kelsey selects a next phase, follow
+AGENTS read order and `docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md`. R3 is the next planned
+phase, requiring its own exact scope and authority before source reads or implementation;
+R4 delivery remains separate. Do not repeat R1/R2, the applied 257-operation intake batch,
+reviewed research or prior recoveries. No automatic bulk reopening of held items.
+
+Carry every original owner/trigger/next action below: 310 held entities / 312 hold records;
+83 historical routes (20 selected, 63 carried); 26 research records and four non-write-ready
+additions; nine backlog IDs; I65/Hagan; R3/R4 catalog work and seven remaining organizations;
+recovery objects; source currency, monitoring, platform, issuer-credential and hygiene
+triggers; and the R3 keyboard-automation improvement. The sole intake ledger remains
+`docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`; no replacement ledger or source-freshness claim is created here.
+
+New bounded follow-up: hosted NTHS card `award-ead4360dadca` displays `Annual close rule: 46113`.
+Owner: next authorized R3 catalog/UI agent. Trigger: explicit R3 scope selection. Next action:
+inspect preserved date provenance/formatting and propose a separately reviewed correction;
+do not infer a current deadline or perform new research under this closeout. This pre-existing
+catalog display does not alter the four qualified relevance mappings or reopen R2.
+
+Local closeout review: `docs/evidence/interview-coverage/r2-closeout-review.json`, bound to
+`r2-closeout-manifest.json`. Missing/nonmatching PASS means closeout review remains pending;
+it does not undo independently accepted and verified release delivery.
+If the temporary worktree disappears, inspect this retained branch and shared repository
+worktrees before recovering its exact tip into a new isolated worktree. Never reset/replay
+completed release branches. If Git history is unavailable, stop for a verified recovery source.
+
+---
+
 # R2 unit2 — REV16 authorized release
 
 Plan revision: 17
