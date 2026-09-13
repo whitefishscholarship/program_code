@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "id": "interview-coverage-supplement-v1-rev225",
+  "basis": "organizer_recorded_not_officially_verified",
+  "snapshotDate": "2026-09-02",
+  "sourceRevision": "225",
+  "inputs": {
+    "web/fixtures/p8m/master-database-rev225.json": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106",
+    "web/fixtures/p8m/matching-facts-v1.json": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+    "web/fixtures/p7/student-catalog.json": "35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841",
+    "web/fixtures/relevance/interview-relevance-v1.json": "fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0",
+    "web/fixtures/relevance/pin.json": "0eb61141bde9dba81c8379bee3b0340c8eb777fda747cbcdea593b378d15ef37",
+    "web/fixtures/shortlist/spreadsheet-shortlist-v1.json": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+    "docs/SCHOLARSHIP_COVERAGE_PROPOSAL.md": "4e958ff46a8f84d4f4d4284918bfe78c1f7c8c23189d0bcd2aff06dce07b11e5",
+    "docs/evidence/coverage-discovery/build-proposal.py": "75ed796038d71868b342feb5f101a20c49ca43fdf986b60695a1d55019c3a7ad",
+    "docs/evidence/coverage-discovery/grounding.json": "2390e8a4eee66606cee9164877302044c29df3b866e251cf10925d318f46d0f3",
+    "docs/evidence/coverage-discovery/historical-routing.md": "078b4c504bacd2f57f8064b9bfa524fb43431526d832b3db0eb6a30d7eacb3f1",
+    "docs/evidence/coverage-discovery/interview-matrix.md": "f446c5acca6988893285d5af266ad7b7c2cafe606b2e2be10bc1b2b7e5a6714f",
+    "docs/evidence/coverage-discovery/proposal.json": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8",
+    "docs/evidence/coverage-discovery/question-definitions.json": "ed528fd5c0135ce69feddf48abbbabe25e322a364274f90184748565df019c43",
+    "docs/evidence/coverage-discovery/research.json": "0bc6e80a252d6e31f47d57e7b53124a78afe8dc3a1e66555e25f75f5e5340a15",
+    "docs/evidence/coverage-discovery/validate-proposal.py": "008408ea295353a3ab14ee4891db44db56dbd33477e3a68ba14ece398826f859",
+    "docs/evidence/coverage-discovery/validation.json": "f0d36d3c3c1ac23aee8ed9b4d0bfdefed4ef7bc1891b6c8e0f06437473f941e5",
+    "docs/evidence/coverage-discovery/review.json": "5bfb8f0681cab90365f06a7b961577445fe9d903a0f642cc435e6e11d630347c",
+    "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json": "460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed",
+    "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json": "23f71604b3c3258b20568068ddd6239248d73ca5991049ca8fbd67f26187426f",
+    "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.json": "9ddf52f6df705449b664c83221bb24957a211df5dd79c2fbea2445a0621f9e74"
+  },
+  "connections": [
+    {
+      "id": "coverage-44-education_teaching",
+      "sourceRow": 44,
+      "sourceRowId": "master-database-row-0044",
+      "sourceField": "Summary",
+      "evidenceExcerpt": "The Flathead Electric Coop. Early Childhood Education Scholarship supports students enrolled in FVCC\u2019s early childhood education program. You will be automatically considered based on your completed General Application. To complete the General Application, please sign in.",
+      "awardId": "award-36ff5fe7d091",
+      "answerId": "education_teaching",
+      "message": "Your interest in Education / Teaching connects with the saved FVCC early-childhood education record. Check enrollment in that specific program; an interest alone does not establish eligibility. Confirm current requirements and availability.",
+      "decision": "positive_discovery_only",
+      "requirementVsPreference": "The selected answer suggests interest/relevance only; all provider conditions must still be checked."
+    },
+    {
+      "id": "coverage-143-org_nths",
+      "sourceRow": 143,
+      "sourceRowId": "master-database-row-0143",
+      "sourceField": "Summary",
+      "evidenceExcerpt": "The National Technical Honor Society annually awards five $2,000 scholarships to their members committed to pursuing careers in construction-related disciplines. Application requirements include personal information, listing of awards/honors/training participation/certifications received, a letter of recommendation, and three essay questions.",
+      "awardId": "award-ead4360dadca",
+      "answerId": "org_nths",
+      "message": "Your NTHS selection connects with this saved record. Check National Technical Honor Society membership and construction-related career plans; other organizations do not establish NTHS membership. Confirm current requirements and availability.",
+      "decision": "positive_discovery_only",
+      "requirementVsPreference": "The selected answer suggests interest/relevance only; all provider conditions must still be checked."
+    },
+    {
+      "id": "coverage-170-org_ffa",
+      "sourceRow": 170,
+      "sourceRowId": "master-database-row-0170",
+      "sourceField": "Summary",
+      "evidenceExcerpt": "Open to any Montana FFA member pursuing post-secondary education or trade/technical school. FFA membership is the gating criterion; a single unified application through the Reach Higher Montana portal qualifies applicants for all Montana FFA Foundation scholarships. Graduating high school FFA seniors are eligible.",
+      "awardId": "award-b86982e726be",
+      "answerId": "org_ffa",
+      "message": "Your FFA selection connects with this saved record. Check Montana FFA membership and post-secondary study requirements. Confirm current requirements and availability.",
+      "decision": "positive_discovery_only",
+      "requirementVsPreference": "The selected answer suggests interest/relevance only; all provider conditions must still be checked."
+    },
+    {
+      "id": "coverage-174-org_ffa",
+      "sourceRow": 174,
+      "sourceRowId": "master-database-row-0174",
+      "sourceField": "Summary",
+      "evidenceExcerpt": "A $500 scholarship for Montana FFA members planning to study agriculture or the agricultural products industry (ag-business, grain industry, agri-business fields). Requires FFA membership and at least 2 years of agricultural education classes. Graduating high school FFA seniors in Montana are eligible; apply via the unified Reach Higher Montana / Montana FFA application.",
+      "awardId": "award-6b4f548adb79",
+      "answerId": "org_ffa",
+      "message": "Your FFA selection connects with this saved record. Check Montana FFA membership, agriculture-related study and at least two years of agricultural education classes. Confirm current requirements and availability.",
+      "decision": "positive_discovery_only",
+      "requirementVsPreference": "The selected answer suggests interest/relevance only; all provider conditions must still be checked."
+    }
+  ],
+  "organizationDispositions": [
+    {
+      "id": "nths",
+      "decision": "enabled_existing_catalog",
+      "connectionIds": [
+        "coverage-143-org_nths"
+      ],
+      "nextAction": "Use only exact saved award connections"
+    },
+    {
+      "id": "bpa",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "deca",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "fbla",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "fccla",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "ffa",
+      "decision": "enabled_existing_catalog",
+      "connectionIds": [
+        "coverage-170-org_ffa",
+        "coverage-174-org_ffa"
+      ],
+      "nextAction": "Use only exact saved award connections"
+    },
+    {
+      "id": "hosa",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "skillsusa",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    },
+    {
+      "id": "tsa",
+      "decision": "deferred_unpublished_child_awards",
+      "connectionIds": [],
+      "nextAction": "Reconcile and publish selected child award IDs in a separately scoped catalog refresh"
+    }
+  ],
+  "gapDispositions": [
+    {
+      "id": "gap-student-organizations",
+      "decision": "Partially enabled for NTHS and FFA in existing catalog; all 15 intake entities remain future publication work",
+      "supportingEntityIds": [
+        "intake-entity-320da372aad8ec19",
+        "intake-entity-942fb3e90320f98a",
+        "intake-entity-10fdd5d4c2991973",
+        "intake-entity-ec55ef80953de81d",
+        "intake-entity-677d9bc43b29138d",
+        "intake-entity-e4daa26d3c3e0eb6",
+        "intake-entity-16b20083574912b6",
+        "intake-entity-1a6f069ddb36808f",
+        "intake-entity-4938a5e717492009",
+        "intake-entity-8ecca308f791f5a6",
+        "intake-entity-8af8e6bebae880ce",
+        "intake-entity-882235532885dab0",
+        "intake-entity-17f598d8931c3985",
+        "intake-entity-f093eb9d146913dc",
+        "intake-entity-44fda37d719a012e"
+      ]
+    },
+    {
+      "id": "gap-education-teaching",
+      "decision": "Enabled for one existing FVCC program; five newer intake entities remain future publication work",
+      "supportingEntityIds": [
+        "intake-entity-558f7a096b45ee61",
+        "intake-entity-614effa8ef61322e",
+        "intake-entity-19060852883d7493",
+        "intake-entity-2034b3849f9e6eed",
+        "intake-entity-5529a2e6789f2993"
+      ]
+    },
+    {
+      "id": "gap-ordinary-financial-need",
+      "decision": "New discovery preference reuses existing reviewed need connections; 19 newer intake entities not imported",
+      "supportingEntityIds": [
+        "intake-entity-38165a377cf092e4",
+        "intake-entity-6bde02413985885a",
+        "intake-entity-2034b3849f9e6eed",
+        "intake-entity-a5a75dd0bc921034",
+        "intake-entity-68fc44b937accb33",
+        "intake-entity-c9f1d5ecf13fe4c6",
+        "intake-entity-f4cbf1a40504e59a",
+        "intake-entity-5529a2e6789f2993",
+        "intake-entity-0c2fcde6113979a1",
+        "intake-entity-2d9b2284d3981078",
+        "intake-entity-7665bcfa836a9f07",
+        "intake-entity-d00e748c026573df",
+        "intake-entity-fc95f644590e845d",
+        "intake-entity-873f91c3edce15b4",
+        "intake-entity-5e40b7ee15dc6501",
+        "intake-entity-8f29d09965003d3a",
+        "intake-entity-d7370cf07a07d2ec",
+        "intake-entity-57ef390a78d6675f",
+        "intake-entity-1428694f10a9d393"
+      ]
+    },
+    {
+      "id": "gap-first-generation-definition",
+      "decision": "Deferred until separately selected award-specific definitions; preserve current optional choice",
+      "supportingEntityIds": [
+        "intake-entity-6bde02413985885a",
+        "intake-entity-2034b3849f9e6eed",
+        "intake-entity-592777c6be304a55"
+      ]
+    },
+    {
+      "id": "gap-specialized-membership-and-training",
+      "decision": "Card-only; no extra questions",
+      "supportingEntityIds": [
+        "intake-entity-1d5175e48bd31f8e"
+      ]
+    }
+  ],
+  "counts": {
+    "newConnections": 4,
+    "newConnectedAwardIds": 4,
+    "newChoices": 3,
+    "newCatalogAwards": 0,
+    "priorCatalogAwards": 192,
+    "priorConnections": 206,
+    "organizationsEnabled": 2,
+    "organizationsDeferred": 7
+  },
+  "limits": [
+    "Saved source only; no current official eligibility or availability claim",
+    "Not all new intake awards published",
+    "No executable workbook batch",
+    "No typed accepted matching facts added"
+  ]
+}

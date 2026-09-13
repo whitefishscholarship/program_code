@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:10:21.410117+00:00",
+      "endedAt": "2026-09-12T19:10:45.767815+00:00",
+      "exitCode": 1,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-plan-check.log",
+      "sha256": "6718fdb39b36358103a0ec936ae07e78a30e664506713baac3ced9c4b3c6196e",
+      "rawOutputSha256": "6718fdb39b36358103a0ec936ae07e78a30e664506713baac3ced9c4b3c6196e",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:10:45.768097+00:00",
+      "endedAt": "2026-09-12T19:10:50.534149+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-typecheck.log",
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+      "rawOutputSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:10:50.534380+00:00",
+      "endedAt": "2026-09-12T19:11:30.020065+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-test.log",
+      "sha256": "d153f45e0f7661278ed95ee8deb9718974fd64be2084b4ddc6d966a841497b12",
+      "rawOutputSha256": "d153f45e0f7661278ed95ee8deb9718974fd64be2084b4ddc6d966a841497b12",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:11:30.020330+00:00",
+      "endedAt": "2026-09-12T19:11:36.251149+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-build.log",
+      "sha256": "7b0ab5c26fe50c87ea6ab4ec101ede56ea8b4042875ecd7ffa98560938d65dbc",
+      "rawOutputSha256": "c4e0011a3f11547c314dfdc05140c6ab60c1586ade62bd251a2fe7742608411f",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm run intake:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:11:36.251499+00:00",
+      "endedAt": "2026-09-12T19:11:36.568319+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-intake-check.log",
+      "sha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e",
+      "rawOutputSha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm run coverage:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:11:36.568566+00:00",
+      "endedAt": "2026-09-12T19:11:36.783707+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-coverage-check.log",
+      "sha256": "e66f211061ef342479b6f9d6e731bf7330b1b019a0eed6a49937343932b2c650",
+      "rawOutputSha256": "e66f211061ef342479b6f9d6e731bf7330b1b019a0eed6a49937343932b2c650",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "npm run p9:production:check",
+      "cwd": "web",
+      "startedAt": "2026-09-12T19:11:36.783947+00:00",
+      "endedAt": "2026-09-12T19:11:37.285070+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/npm-run-p9-production-check.log",
+      "sha256": "fddc67a34f743a665d1893847db41c793b14557c322784a1b02536fa68a335f5",
+      "rawOutputSha256": "fddc67a34f743a665d1893847db41c793b14557c322784a1b02536fa68a335f5",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "root",
+      "startedAt": "2026-09-12T19:11:37.285323+00:00",
+      "endedAt": "2026-09-12T19:11:37.302930+00:00",
+      "exitCode": 0,
+      "log": "docs/evidence/interview-coverage/r1-checks/git-diff---check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawOutputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "normalization": "Terminal line endings/trailing whitespace and final empty lines normalized; substantive output unchanged"
+    }
+  ],
+  "note": "plan:check remains expected FAIL on six unclosed acceptance gates; no waiver",
+  "initialEnvironmentFailures": [
+    {
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "result": "Sandbox tsx IPC listen EPERM before validation; exact command rerun successfully with permitted local worker support and produced six substantive gate errors"
+    },
+    {
+      "command": "git add (exact R1 paths)",
+      "exitCode": 128,
+      "result": "Sandbox index.lock denial; same exact stage paths succeeded with permitted shared Git metadata access"
+    }
+  ],
+  "preReviewChecks": {
+    "at": "2026-09-12T19:15:42.217793+00:00",
+    "priorHandoffKickoffBytes": "PASS: previous complete files are exact suffixes",
+    "logIntegrity": "PASS: all saved log SHA256 bindings recomputed",
+    "runtimeAndGovernanceUnchanged": "PASS: no web/, canonical plan, BUILD_STATE or authority edits",
+    "stagedWhitespace": "Initial check caught terminal formatting in build/typecheck logs; normalized above and rechecked before candidate freeze"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Independent fresh-context read-only R1 release-package proposal review; not canonical acceptance or release authority",
+  "recordedAt": "2026-09-12T19:18:11Z",
+  "baseline": "865730ea820cfa8c300147d98b2c9e77064eb779",
+  "reviewedCandidate": "33838a38fb02e5354c66b60c023f03360763ccbb",
+  "candidateTree": "d2cc189dc871b952b224bae4004c787ebbf75f98",
+  "reviewer": "/root/r1_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewerAuthorship": "Reviewer authored or edited no candidate files and created no commits.",
+  "outcome": "PASS",
+  "statusMeaning": "R1 local proposal preparation is independently review-complete. R2 remains unstarted pending exact informed authority for both sequential releases. Six canonical acceptance failures remain unresolved.",
+  "unresolvedFindings": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "candidateFiles": [
+    {"path": "docs/CURRENT_HANDOFF.md", "sha256": "4cee932f7ee14cc75e6556a30ecb427d5a6691a23472c2bab8d51cbb7a16a06d"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/git-diff---check.log", "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-build.log", "sha256": "7b0ab5c26fe50c87ea6ab4ec101ede56ea8b4042875ecd7ffa98560938d65dbc"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-coverage-check.log", "sha256": "e66f211061ef342479b6f9d6e731bf7330b1b019a0eed6a49937343932b2c650"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-intake-check.log", "sha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-p9-production-check.log", "sha256": "fddc67a34f743a665d1893847db41c793b14557c322784a1b02536fa68a335f5"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-plan-check.log", "sha256": "6718fdb39b36358103a0ec936ae07e78a30e664506713baac3ced9c4b3c6196e"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-run-typecheck.log", "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"},
+    {"path": "docs/evidence/interview-coverage/r1-checks/npm-test.log", "sha256": "d153f45e0f7661278ed95ee8deb9718974fd64be2084b4ddc6d966a841497b12"},
+    {"path": "docs/evidence/interview-coverage/r1-grounding.json", "sha256": "570790bd4631b2eb4d426e41d2f41e9d4a48c799fbe51c1f093d6a12940892a7"},
+    {"path": "docs/evidence/interview-coverage/r1-release-package.md", "sha256": "6c842a069574e87372aa87f614bdd050cbc70cec8159e8bc2142b066fb7de431"},
+    {"path": "docs/evidence/interview-coverage/r1-source-paths.json", "sha256": "ecfcbf9a877e7dfa763f78e12d6003a4625d72c8f7b062c0495f7f03b01ccc24"},
+    {"path": "docs/evidence/interview-coverage/r1-validation.json", "sha256": "2d822745a3c1691cbc12d2536c73d8b9bccaab8c12c983f5be637014900bee59"},
+    {"path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md", "sha256": "de207d2b08cfbdd7f4fab38d4f81b40cc45e70eb1e0031f4522656ebeb6fe4a9"}
+  ],
+  "verification": [
+    "Inspected the complete 14-path baseline-to-candidate diff and recomputed every candidate-file SHA256 from its immutable Git blob.",
+    "Independently regenerated all four source inventories from complete Git changes and compared every entry and hash: REV15 165 paths, reviewed UI 28 paths, later documentation 7 paths, complete REV16 source 32 paths.",
+    "Verified all 55 candidate-path bindings across proposal, policy, implementation, roadmap and closeout reviews; verified their candidate trees, PASS outcomes, recorded review hashes and retained ancestry.",
+    "Verified all 119 immutable intake-manifest path hashes and the current intake ledger, proposed-write and report hashes against the original local review.",
+    "Verified the complete previous handoff and kickoff remain exact suffixes of the reviewed candidate files.",
+    "Recomputed all eight saved validation-log hashes and inspected their substantive results. Required tests, typecheck, build, intake, coverage and zero-spreadsheet runtime checks passed; runtime and validation implementation files are unchanged by R1.",
+    "Independently ran node --import tsx scripts/validate-build-plan.ts against the frozen R1 candidate: exit 1 with exactly the six documented missing REV15/REV16 manifest, review and committed-attestation errors.",
+    "Independently ran git diff --check 865730ea820cfa8c300147d98b2c9e77064eb779 33838a38fb02e5354c66b60c023f03360763ccbb: exit 0.",
+    "Verified REV15 source has no web/src, web/fixtures, .github or root vercel.json delta from its pinned baseline; verified no web or deployment delta after the independently reviewed UI.",
+    "Verified both release-authority flags remain false, canonical stage pointers remain null, and no REV15/REV16 canonical-artifact addition exists in local all-reference Git history.",
+    "Inspected validateBoundAttestation, historical amendment discovery, amendment validation loop and CI actual-head binding; the sequential predecessor topology satisfies existing requirements without a rule amendment."
+  ],
+  "scopeAccounting": {
+    "selectedPhase": "R1 only",
+    "releaseUnits": [
+      "REV15 predecessor from preserved 40ff61ecc75c204cc6114fd34a5b9941e84f5ad1, with new authority-bearing candidate, complete independent review and separate two-file direct-child attestation",
+      "REV16 after verified REV15 delivery, integrating retained unattested source ancestry into freshly verified main, with its own complete review and two-file direct-child attestation"
+    ],
+    "gateMapping": "All six existing failures have distinct candidate/package owners, artifacts, commands, predecessor dependencies and validation expectations.",
+    "authorityDecision": "Concrete later grant must cover both named branch/PR/Preview/non-squash merge/Production/CI and hosted-verification sequences and bounded authority/evidence bookkeeping.",
+    "preservation": "Historical source, review, ledger, application, recovery and publication artifacts remain unchanged. R2 explicitly checks delivered REV15 amendment object, authority evidence, manifest and review equality before C16.",
+    "stopBoundary": "Stop after R1 review completion for the exact R2 authority decision; no automatic R2 or later-phase execution."
+  },
+  "limits": [
+    "This PASS is only for the executable local R1 packaging proposal. It is not canonical amendment acceptance, an attestation, a release grant, a deployment or proof that the six acceptance failures are closed.",
+    "Future authority-bearing candidate, attestation and merge commits do not yet exist. Each requires the actual R2 evidence, complete manifest, fresh independent review and live applicable checks.",
+    "The historical amendment-discovery helper has an existing earliest-record equality limitation. The proposal explicitly requires independent preservation checks for the delivered REV15 object and evidence; validator hardening remains outside R1.",
+    "Full tests and build were assessed from saved hash-bound results and unchanged implementation; the reviewer did not rerun the full suite or browser matrix.",
+    "Remote-main observation was assessed from the implementation evidence; the reviewer did not independently refresh GitHub or provider state. R2 must reverify remote main and provider targets before dependent actions.",
+    "No present scholarship-rule, workbook, backup/recovery-object, hosted application-health or provider-configuration freshness is established.",
+    "No source access, workbook read/copy/write, runtime or authority mutation, external delivery, provider contact, application interaction, monitoring, credential handling or recovery-object cleanup was performed by the reviewer."
+  ]
+}

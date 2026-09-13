@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-12T19:00:56.091541+00:00",
+  "status": "PASS",
+  "statusMeaning": "Authorized local research proposal, first interview implementation and durable remaining roadmap complete; no canonical acceptance or external release claim",
+  "closeoutBaseline": "d365b7eb781f63b2a8919c1c0548efee0d4dc664",
+  "worktree": "/private/tmp/program_code-scholarship-intake",
+  "branch": "codex/scholarship-intake",
+  "permanentRepository": "/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code",
+  "completedScopes": [
+    "Bounded identity/reach proposal and57-control inventory;83historicalroutes accounted,20researched/63carried",
+    "First local interview implementation: two-input core,optional controls,financial discovery,Teaching/NTHS/FFA andfourconnections",
+    "Durable R1-R7 sequence in existing plan/handoff/kickoff with conditions,backlogrouting andretained-branch recovery"
+  ],
+  "reviews": [
+    {
+      "path": "docs/evidence/coverage-discovery/review.json",
+      "outcome": "PASS",
+      "candidate": "8f423c84b35ae8217258fa148fef6d5791bccc1f",
+      "unresolvedFindings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "sha256": "5bfb8f0681cab90365f06a7b961577445fe9d903a0f642cc435e6e11d630347c"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-policy-review.json",
+      "outcome": "PASS",
+      "candidate": "e01c063acb1a0b144bf92c1d381773ec3ef7e598",
+      "unresolvedFindings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "sha256": "5810dc82303cb12de97e9dd90cffb1764d281fcf91a63e5002ac194830c8a70c"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/review.json",
+      "outcome": "PASS",
+      "candidate": "c0fffacd3a97328afc75d8e7a06e4cfa8273f356",
+      "unresolvedFindings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "sha256": "63ac457433e02620e8668d30330fd02ae05f3e27ba943b631e55da5f0af5f90e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/roadmap-review.json",
+      "outcome": "PASS",
+      "candidate": "0d486e0cb319bfa97f8a1e1f81a063ae9db7f34d",
+      "unresolvedFindings": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0
+      },
+      "sha256": "00ef3e2df5648252b5e7260dec2aae4df2c69ec772e2bd19749d856435458eba"
+    }
+  ],
+  "verification": {
+    "allPriorReviewCandidateBlobs": "PASS: 52 path bindings across four immutable candidates",
+    "currentRuntimeVsReviewedImplementation": "PASS: no web changes since c0fffacd",
+    "applicationChecks": "Latest complete npm test,typecheck,build and local360/1440 browser verification passed; unchanged implementation results reused for closeout",
+    "canonicalPlanCheck": "Six unresolved REV15/REV16 manifest/review/attestation failures remain FAIL, not waived",
+    "historicalRouting": "83 rows retain owner,trigger,nextAction; all9backlogIDs mapped by reviewed roadmap",
+    "whitespace": "PASS",
+    "canonicalPlanCommand": "From web: node --import tsx scripts/validate-build-plan.ts; executed at closeout, exit1; exactlysix unchanged errors",
+    "canonicalPlanErrors": [
+      "- Missing required file: docs/evidence/PLAN-REV15-manifest.json",
+      "- Missing required file: docs/reviews/PLAN-REV15.json",
+      "- PLAN-REV15 requires a committed manifest/review attestation in current history",
+      "- Missing required file: docs/evidence/PLAN-REV16-manifest.json",
+      "- Missing required file: docs/reviews/PLAN-REV16.json",
+      "- PLAN-REV16 requires a committed manifest/review attestation in current history"
+    ]
+  },
+  "next": {
+    "phase": "R1",
+    "objective": "Prepare exact existing release package and valid predecessor/attestation path for the six acceptance gates",
+    "authority": "Next selected local packaging scope only; external release/source effects remain separately gated",
+    "plan": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
+    "handoff": "docs/CURRENT_HANDOFF.md",
+    "kickoff": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+    "effort": "High"
+  },
+  "sessionIssues": [
+    {
+      "item": "UMPS CARE adoption/guardianship alternatives",
+      "state": "resolved",
+      "evidence": "docs/evidence/coverage-discovery/review.json#R1"
+    },
+    {
+      "item": "Educational-status proposal consistency and separate candidate-addition list",
+      "state": "resolved",
+      "evidence": "docs/evidence/coverage-discovery/review.json#R2-R3"
+    },
+    {
+      "item": "Temporary-worktree recovery instructions",
+      "state": "resolved",
+      "evidence": "docs/evidence/interview-coverage/roadmap-review.json#L1"
+    },
+    {
+      "item": "Synthetic test readonly type error; restricted IPC/build worker failure and cached failure",
+      "state": "resolved; full verification passed after correction/permitted rerun",
+      "evidence": "docs/evidence/interview-coverage/validation.json"
+    },
+    {
+      "item": "Automated keyboard test covers focus while full keyboard journey was independently exercised",
+      "state": "nonblocking improvement carried",
+      "owner": "next selected UI implementation agent",
+      "trigger": "R3 changes optional controls or navigation",
+      "nextAction": "Extend existing browser regression script to drive the complete keyboard journey; do not add a separate test system",
+      "evidence": "docs/evidence/interview-coverage/review.json"
+    }
+  ],
+  "openItemRouting": {
+    "sixCanonicalGates": "R1 designs exact lawful packaging;R2 closes actual gates before delivery",
+    "appliedBatchPublicationAndRemainingChoices": "R3/R4;257 appliedoperations each receive publication disposition;38 unique priorityentities;7 further organizationchoices await exactsupportedawards",
+    "additionalOpportunityResearch": "R5 initial26 namedrecords;four additions remain non-write-ready;63otherhistoricalroutes retain individualtriggers",
+    "newOriginalSourceBatch": "R6 conditional exactreviewedgrant plus fresh completebackup/recovery/concurrency/readback; originaldigest/quietwindow spent",
+    "holdsAndOlderOpenItems": "Existing roadmap backlog table and retained detailed CURRENT_HANDOFF routing:310entities/312holds,I65,Hagan,catalogs,recoveryobjects,officialcurrency,monitoring,platformbookkeeping,issuercredential,worktreehygiene",
+    "owner": "Execution agent within selected scope; Kelsey owns selections and external effects"
+  },
+  "coordination": {
+    "coverage_proposal_review": "completed; saved",
+    "coverage_execution_review": "completed; policy and final reviews saved",
+    "roadmap_review": "completed; saved",
+    "pendingAgentResponses": 0,
+    "separateUserTasksCreated": 0,
+    "automationsCreated": 0
+  },
+  "localPreview": {
+    "url": "http://127.0.0.1:3216/",
+    "state": "stopped_at_closeout",
+    "verification": "Owned exec session26830 exited130 after interrupt; lsof port3216 returned no listening process",
+    "restartTrigger": "Only if next selected work needs local preview",
+    "restart": "From web, build current checkpoint if needed, then npm run start -- --hostname 127.0.0.1 --port 3216; local only"
+  },
+  "temporaryArtifacts": {
+    "state": "No required continuation evidence depends on scratch logs/manifests/helper scripts",
+    "failedGeneratedCache": "/private/tmp/coverage-next-failed-20260912",
+    "nextAction": "Optional future authorized local hygiene after verifying no unique required artifacts; no worktree/recovery-object deletion in closeout"
+  },
+  "notVerifiedAtCloseout": [
+    "No fresh remote-main lookup; last successful session observation was5fa08541b6b49484dedc8fc06012e47c658ce8fb, reverify inR1",
+    "No hosted applicationhealth,Preview orProduction verification",
+    "No current workbook/backup permission,revision,freshness orrecovery recheck",
+    "No catalog-wide currentofficialeligibility oravailability verification",
+    "No off-machine backup of local commits claimed"
+  ],
+  "effects": "Authorized local commits only; no new source/workbook,Gitpublication,deployment,providercontact,applicationinteraction ormonitoring effects"
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 17,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-12",
+  "lastUpdated": "2026-09-13",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -809,6 +809,22 @@
           "canonicalHostname": "web-two-gules-45.vercel.app",
           "originalSourceCommit": "979122a13d4a8098d8cea26f115add1e68405355"
         }
+      },
+      {
+        "id": "PLAN-REV16",
+        "status": "attestation-gated",
+        "baselineCommit": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+        "evidencePath": "docs/evidence/PLAN-REV16.md",
+        "manifestPath": "docs/evidence/PLAN-REV16-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV16.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-12",
+          "evidencePath": "docs/evidence/PLAN-REV16.md",
+          "basis": "I authorize R2 only, following the reviewed release package: deliver REV15 first, then REV16 after REV15 is verified. This includes the required authority/evidence updates, branch pushes, PRs, Vercel Preview, merges, Production deployments, and CI/hosted verification on the existing web project. Preserve all review and acceptance gates. No workbook access or changes, new research, configuration changes, or later phases are authorized.",
+          "scope": "R2 second release only, after verified REV15/REV17 delivery: integrate unchanged reviewed interview coverage source and exact reviewed union of validator/test commands; freeze, independent review, direct-child attestation, push codex/plan-rev16-coverage-release, PR, Vercel Preview, ancestry-preserving merge, Production and CI/hosted verification on existing web project prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. No workbook access/change, research, configuration, rollback or later phase."
+        }
       }
     ]
   },
@@ -996,5 +1012,25 @@
       "priorBatchAuthority": "spent; preserved true flags record the completed historical operation only",
       "evidencePath": "docs/evidence/PLAN-REV15.md"
     }
+  },
+  "interviewCoverage": {
+    "planId": "INTERVIEW-COVERAGE-1",
+    "status": "authorized-release-preparation-canonical-review-and-attestation-required",
+    "baselineCommit": "40ff61ecc75c204cc6114fd34a5b9941e84f5ad1",
+    "planPath": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV16.md",
+    "localImplementationAuthorized": true,
+    "sourceMode": "unchanged_reviewed_revision225_catalog_with_separate_positive_supplement",
+    "publicationAuthorized": true,
+    "spreadsheetReadAuthorized": false,
+    "spreadsheetWriteAuthorized": false,
+    "backupCopyAuthorized": false,
+    "runtimeImplementationScope": "Deliver only the already-reviewed two-input/optional interview and four-connection supplement; preserve original implementation provenance and all source boundaries.",
+    "policyReviewPath": "docs/evidence/PLAN-REV16-policy-review.json",
+    "mappingPath": "docs/evidence/PLAN-REV16-mapping.json",
+    "finalReviewPath": "docs/evidence/interview-coverage/review.json",
+    "validationPath": "docs/evidence/interview-coverage/validation.json",
+    "publicationSupplementPath": "web/fixtures/coverage/interview-coverage-v1.json",
+    "publicationSupplementSha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1"
   }
 }
