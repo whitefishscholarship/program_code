@@ -651,3 +651,24 @@ visible only after A15. Keep all hashes and gates; do not rewrite A15. Introduce
 only the exact prospective REV17 continuation in the canonical plan/state. Policy
 review precedes implementation; complete candidate review and two-file A17 precede
 publication. All old decisions and R2 boundaries remain.
+
+
+## D-028 — PLAN-REV16 interview coverage execution (2026-09-12)
+
+User execution authority selects the first useful interview implementation. Existing
+website IDs support a bounded Teaching/NTHS/FFA supplement without importing unreviewed
+intake entities. Amend the proposal's future fresh-source prerequisite explicitly for
+this unchanged-catalog case; preserve it for catalog additions. Separate financial-need
+discovery from typed acute-need disclosure. No/skip stays unknown, all existing controls
+remain reachable, and source/release gates remain reserved. Policy/mapping review precedes
+code; exact local candidate review precedes completion. Do not erase Revision15 diagnostics
+or create premature canonical acceptance. See INTERVIEW_COVERAGE_EXECUTION_PLAN.md.
+
+
+## 2026-09-13T00:50:09.543072+00:00 — R2 second release after verified predecessor
+
+PR44 delivered REV15/REV17 at16092cb with exact Preview/CI/Production proof.
+Integrate original979122a ancestry and reviewed runtime unchanged, preserve both
+canonical amendment objects/evidence/artifacts, and use the reviewed union of
+validator/test changes. Record distinct REV16 authority/baseline; planRevision stays17.
+No source, workbook, configuration or later-phase scope is added.

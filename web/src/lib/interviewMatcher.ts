@@ -1,3 +1,4 @@
+import { COVERAGE_INTERESTS, STUDENT_ORGANIZATIONS, FINANCIAL_NEED_INTEREST, ORGANIZATION_RESPONSES } from './coverageQuestions';
 import { z } from 'zod';
 import { StudentAwardSchema, type ApplicationMode, type StudentAward } from './studentCatalog';
 import {
@@ -36,17 +37,21 @@ const enumFrom = <T extends string>(values: readonly T[], label: string) => z.cu
 
 export const InterviewAnswersSchema = z.strictObject({
   gpa: z.number().finite().min(0).max(4),
-  residenceState: enumFrom<ResidenceState>(RESIDENCE_STATES.map(([value]) => value), 'Residence state'),
-  educationalStatus: enumFrom<EducationalStatus>(EDUCATIONAL_STATUSES.map(([value]) => value), 'Educational status'),
+  residenceState: enumFrom<ResidenceState>(RESIDENCE_STATES.map(([value]) => value), 'Residence state').nullable().default(null),
+  educationalStatus: enumFrom<EducationalStatus>(EDUCATIONAL_STATUSES.map(([value]) => value), 'Educational status').nullable().default(null),
   targetSchoolTypes: z.array(enumFrom<TargetSchoolType>(TARGET_SCHOOL_TYPES.map(([value]) => value), 'Target school type')).min(1).max(TARGET_SCHOOL_TYPES.length).refine(uniqueValues, 'Target school types must not repeat.'),
-  collegeAccepted: z.union([z.boolean(), z.literal('prefer_not_to_answer')]).nullable(),
-  gapYear: z.union([z.boolean(), z.literal('prefer_not_to_answer')]).nullable(),
-  activities: z.array(enumFrom<ActivityId>(ACTIVITY_QUESTIONS.map(({ id }) => id), 'Activity')).max(ACTIVITY_QUESTIONS.length).refine(uniqueValues, 'Activities must not repeat.'),
-  volunteerHours: enumFrom<VolunteerHours>(VOLUNTEER_HOURS.map(([value]) => value), 'Volunteer hours').nullable(),
-  financialNeed: z.boolean(),
-  selectedCriteria: z.array(enumFrom<SpecialCriterionId>(SPECIAL_CRITERIA.map(({ id }) => id), 'Special criterion')).max(SPECIAL_CRITERIA.length).refine(uniqueValues, 'Special criteria must not repeat.'),
-  sensitiveCriteriaSkipped: z.boolean(),
-  preferredApplicationModes: z.array(z.enum(INTERVIEW_APPLICATION_MODES)).max(INTERVIEW_APPLICATION_MODES.length).refine(uniqueValues, 'Application preferences must not repeat.'),
+  collegeAccepted: z.union([z.boolean(), z.literal('prefer_not_to_answer')]).nullable().default(null),
+  gapYear: z.union([z.boolean(), z.literal('prefer_not_to_answer')]).nullable().default(null),
+  activities: z.array(enumFrom<ActivityId>(ACTIVITY_QUESTIONS.map(({ id }) => id), 'Activity')).max(ACTIVITY_QUESTIONS.length).refine(uniqueValues, 'Activities must not repeat.').default([]),
+  volunteerHours: enumFrom<VolunteerHours>(VOLUNTEER_HOURS.map(([value]) => value), 'Volunteer hours').nullable().default(null),
+  financialNeed: z.boolean().default(false),
+  financialNeedInterest: enumFrom(FINANCIAL_NEED_INTEREST.map(([value]) => value), 'Financial-need interest').nullable().optional(),
+  discoveryInterests: z.array(enumFrom(COVERAGE_INTERESTS.map(({ id }) => id), 'Discovery interest')).max(COVERAGE_INTERESTS.length).refine(uniqueValues).optional(),
+  studentOrganizations: z.array(enumFrom(STUDENT_ORGANIZATIONS.map(({ id }) => id), 'Student organization')).max(STUDENT_ORGANIZATIONS.length).refine(uniqueValues).optional(),
+  organizationResponse: z.enum(ORGANIZATION_RESPONSES).nullable().optional(),
+  selectedCriteria: z.array(enumFrom<SpecialCriterionId>(SPECIAL_CRITERIA.map(({ id }) => id), 'Special criterion')).max(SPECIAL_CRITERIA.length).refine(uniqueValues, 'Special criteria must not repeat.').default([]),
+  sensitiveCriteriaSkipped: z.boolean().default(false),
+  preferredApplicationModes: z.array(z.enum(INTERVIEW_APPLICATION_MODES)).max(INTERVIEW_APPLICATION_MODES.length).refine(uniqueValues, 'Application preferences must not repeat.').default([]),
 });
 
 export type InterviewAnswers = z.infer<typeof InterviewAnswersSchema>;
@@ -107,10 +112,10 @@ function selectedAliasObservation(answers: InterviewAnswers, criterionId: string
 
 function observationForCriterion(answers: InterviewAnswers, criterionId: string): Observation {
   if (criterionId === 'academic.gpa_unweighted') return answers.gpa;
-  if (criterionId === 'geography.residence_state') return answers.residenceState === 'OTHER' ? undefined : [answers.residenceState];
+  if (criterionId === 'geography.residence_state') return !answers.residenceState || answers.residenceState === 'OTHER' ? undefined : [answers.residenceState];
   if (criterionId === 'education.current_status') {
     const domain = P8F_MATCHING_FACT_CONTRACT.factSchema.enumDomains[criterionId] ?? [];
-    return domain.includes(answers.educationalStatus) ? answers.educationalStatus : undefined;
+    return answers.educationalStatus && domain.includes(answers.educationalStatus) ? answers.educationalStatus : undefined;
   }
   if (criterionId === 'education.target_institution_type') {
     const values = answers.targetSchoolTypes.filter((value) => value !== 'undecided');

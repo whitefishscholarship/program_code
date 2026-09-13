@@ -1706,6 +1706,38 @@ requires its own selected scope and exact authority. Rollback or external restor
 authorized; preserve the applied receipt and recovery objects without accessing them.
 
 
+## 20. Plan Revision 16 — Interview coverage implementation
+
+On September 12, 2026 Kelsey instructed "proceed with execution of plan" after the
+independently reviewed scholarship coverage proposal. Adopt the bounded first execution
+step in docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md: two-input core, reachable optional
+existing questions, discovery-only financial-need preference, Teaching and the supported
+NTHS/FFA choices, using four separately reviewed connections to the existing 192-award
+saved revision225 catalog. The original grant covered local implementation, tests and independent review.
+R2 now directly authorizes this exact reviewed release and Git/Preview/merge/Production/
+CI/hosted effects on the existing web project after verified REV15/REV17 delivery.
+Workbook access/copy/write and later phases remain prohibited.
+
+The selected existing-catalog supplement uses pinned saved evidence; it does not require
+or claim a fresh Master snapshot. New catalog additions still require fresh allowed source
+reconciliation. Preserve all old publications, original intake and historical proposal
+artifacts byte-for-byte. Do not promote new interests to typed accepted matching facts.
+Unknown and skipped answers remain non-excluding; preserve binary OR relevance, GPA/school
+shortlisting, all-award access, volatile-only answers and public-only visible-result CSV.
+
+Commit and independently review the policy and mapping before product edits. Keep every
+normal verification and final candidate review gate. An exact Revision16 local-preparation
+exception permits false release authority only off hosted CI with its own explicit blocker;
+it grants no acceptance or delivery. REV15 and the exact REV17 repair are now attested, delivered and verified in PR44
+at main16092cb. Preserve their complete records/evidence/artifacts. REV16 uses that
+fresh delivery baseline while original implementation provenance remains40ff61e.
+Keep planRevision at least17. Review the union of coverage and repair validator/tests.
+REV16 still requires its own fresh full-candidate review and direct-child attestation.
+No P9 reopening, workbook access/copy/write, provider action, application interaction,
+new services/dependencies/configuration or monitoring is authorized here.
+Deployment is authorized only through the exact R2 release grant in PLAN-REV16.md.
+
+
 ## Plan Revision 17 — exact REV15 delivery repair continuation
 
 Kelsey authorized the reviewed R2 repair proposal. This is a single prospective

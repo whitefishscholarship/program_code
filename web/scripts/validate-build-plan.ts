@@ -1,3 +1,4 @@
+import { permitsLocalCoveragePreparation } from './interview-coverage-governance';
 import { readGitBuffer, matchesBlobHash, validateRepairAtRepo, type Rev15DeliveryRepair } from './plan-rev17-rev15-delivery-repair';
 import { permitsLocalIntakePreparation } from './intake-governance';
 import { permitsLocalRelevancePreparation } from './interview-relevance-governance';
@@ -1634,7 +1635,7 @@ if (state) {
           fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
         }
       } else if (
-        (amendment.id !== 'PLAN-REV10' && !(permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))) ||
+        (amendment.id !== 'PLAN-REV10' && !(permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))) ||
         authorization?.authorized !== false ||
         authorization.authorizedBy !== null ||
         authorization.authorizedAt !== null ||
@@ -1644,7 +1645,7 @@ if (state) {
         !(
           state.deployment.deliveryBlockers.some((item) =>
             item.startsWith('PLAN-REV10-'),
-          ) || revision11ContinuationValid || (permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))
+          ) || revision11ContinuationValid || (permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))
         )
       ) {
         fail(`${amendment.id} requires direct informed delivery authority or an exact authorized local-only preparation blocker`);

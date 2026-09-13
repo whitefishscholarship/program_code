@@ -1,0 +1,220 @@
+{
+  "status": "PASS Production runtime and browser/API/CSV verification",
+  "observedAt": "2026-09-13T00:47:14.303420+00:00",
+  "mergeCommit": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+  "pr": "https://github.com/whitefishscholarship/program_code/pull/44",
+  "previewReceipt": {
+    "phase": "R2 unit1 REV15 plus REV17 Preview",
+    "status": "PASS exact Preview health and API/browser/CSV reconciliation",
+    "observedAt": "2026-09-13T00:43:40.978996+00:00",
+    "pr": "https://github.com/whitefishscholarship/program_code/pull/44",
+    "attestationCommit": "b414e17f55c32f2711d9884ef1256269a83ed3bb",
+    "provider": {
+      "method": "Authenticated Vercel browser DOM",
+      "account": "whitefishscholarship",
+      "project": "web",
+      "deploymentId": "dpl_CofNn7M9Kihren9CKfbcFnNVqhgW",
+      "environment": "Preview",
+      "status": "Ready",
+      "sourceCommit": "b414e17f55c32f2711d9884ef1256269a83ed3bb",
+      "url": "https://web-3qq8xb8sd-whitefishscholarships-projects.vercel.app"
+    },
+    "health": {
+      "method": "Read-only same-origin fetch through browser CDP in existing authenticated app session",
+      "status": 200,
+      "cacheControl": "no-store",
+      "nonce": "56fa4d723cd243029450c4faf45b3c2b",
+      "nonceMatched": true,
+      "commit": "b414e17f55c32f2711d9884ef1256269a83ed3bb",
+      "deploymentId": "dpl_CofNn7M9Kihren9CKfbcFnNVqhgW",
+      "env": "preview",
+      "serverNow": "2026-09-13T00:38:47.307Z",
+      "publicationSha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+      "relevanceSha256": "fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0",
+      "shortlistSha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    },
+    "reconciliation": {
+      "apiStatus": 200,
+      "catalogAwards": 192,
+      "catalogSha256": "bff493bb8eb8f5d91bd1429131b5a8bcf838c0fbc5fa317d96f36f9d698b706d",
+      "visibleCount": 166,
+      "visibleIdsSha256": "738f4257995c11f168be4e5e36a37210c73e806575777fc2664d739a8ba191fb",
+      "csvSha256": "5eb0010a5acd9893be98856a3ecfc5d460d6d943f5796e8604afbdb0224aa931",
+      "csvBytes": 40198,
+      "allHashesRecomputedAgainstAcceptedLocalCodeAndFixture": true,
+      "visibleNamesMatchApi": true,
+      "supportedPilotReasonVisible": true,
+      "syntheticOnly": true,
+      "editRestoredGpa": true,
+      "reloadClearedGpa": true,
+      "keyboardContinueAndFocus": true,
+      "overflow": false,
+      "appConsoleErrors": 0
+    },
+    "privacy": {
+      "localStorageCount": 0,
+      "indexedDbCount": 0,
+      "sessionStorageEntries": 3,
+      "sessionStorageClassification": "Existing Vercel toolbar keys; no synthetic answer markers present; no values retained",
+      "urlAnswers": false,
+      "capturedAppRequests": [
+        {
+          "path": "/api/scholarships",
+          "method": "GET",
+          "hasPostData": false
+        }
+      ],
+      "captureTruncated": false,
+      "captureHasMore": false
+    },
+    "ci": {
+      "web": "SUCCESS",
+      "url": "https://github.com/whitefishscholarship/program_code/actions/runs/34727242961/job/103643428710",
+      "vercel": "SUCCESS",
+      "prHeadMatched": true
+    },
+    "limits": [
+      "Direct HTTP read reaches Vercel login; top-level browser health navigation blocked by client. Same-origin authenticated read succeeded and binds actual runtime.",
+      "Browser download event timed out; exact data-URI export bytes independently reconcile, and accepted local browser tests verified actual saved download bytes. Do not claim hosted saved-file notification succeeded.",
+      "No current scholarship-source, workbook or backup freshness claim; no workbook access or configuration changes."
+    ]
+  },
+  "health": {
+    "url": "https://web-two-gules-45.vercel.app/api/health?nonce=dd570001905c48c1af6decfd81f036a2",
+    "status": 200,
+    "cacheControl": "no-store",
+    "observedAt": "2026-09-13T00:45:13.643424+00:00",
+    "body": {
+      "ok": true,
+      "commit": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+      "commitShort": "16092cb",
+      "ref": "main",
+      "message": "Merge pull request #44 from whitefishscholarship/codex/plan-rev17-rev15-delivery-repair\n\nDeliver REV15 with preserved evidence and bounded validator repair",
+      "deploymentId": "dpl_3tvWVUJwYnUypeovBPfJhxNLSdfQ",
+      "region": "iad1",
+      "env": "production",
+      "publication": {
+        "mode": "bundled_immutable_publication",
+        "path": "web/fixtures/p8m/matching-facts-v1.json",
+        "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+        "id": "p8m-matching-facts-v1-rev225",
+        "schemaVersion": 1,
+        "taxonomyVersion": "1.0.0",
+        "sourceRevision": "225",
+        "sourceRows": 197,
+        "scholarshipRows": 176,
+        "portalRows": 21,
+        "acceptedMatchingFacts": 0
+      },
+      "shortlist": {
+        "id": "spreadsheet-shortlist-v1-rev225",
+        "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+        "snapshotDate": "2026-09-02",
+        "basis": "organizer_recorded_not_officially_verified"
+      },
+      "relevance": {
+        "id": "interview-relevance-v1-rev225",
+        "sha256": "fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0",
+        "snapshotDate": "2026-09-02",
+        "basis": "organizer_recorded_not_officially_verified"
+      },
+      "capabilities": {
+        "google": "none",
+        "drive": "none",
+        "sheets": "none",
+        "productionIngestion": "disabled",
+        "productionMutation": "disabled"
+      },
+      "observationNonce": "dd570001905c48c1af6decfd81f036a2",
+      "now": "2026-09-13T00:45:13.630Z"
+    }
+  },
+  "provider": {
+    "source": "Authenticated GitHub Vercel commit status",
+    "status": "success",
+    "deploymentId": "dpl_3tvWVUJwYnUypeovBPfJhxNLSdfQ",
+    "url": "https://vercel.com/whitefishscholarships-projects/web/3tvWVUJwYnUypeovBPfJhxNLSdfQ"
+  },
+  "productionBrowser": {
+    "apiStatus": 200,
+    "catalogAwards": 192,
+    "catalogSha256": "bff493bb8eb8f5d91bd1429131b5a8bcf838c0fbc5fa317d96f36f9d698b706d",
+    "visibleCount": 166,
+    "visibleIdsSha256": "738f4257995c11f168be4e5e36a37210c73e806575777fc2664d739a8ba191fb",
+    "csvSha256": "5eb0010a5acd9893be98856a3ecfc5d460d6d943f5796e8604afbdb0224aa931",
+    "csvBytes": 40198,
+    "allHashesRecomputedAgainstAcceptedLocalCodeAndFixture": true,
+    "visibleNamesMatchApi": true,
+    "supportedPilotReasonVisible": true,
+    "syntheticOnly": true,
+    "keyboardContinueAndFocus": true,
+    "overflow": false,
+    "appConsoleErrors": 0,
+    "resetClearedGpa": true,
+    "localStorageCount": 0,
+    "sessionStorageCount": 0,
+    "indexedDbCount": 0,
+    "cookieCount": 0,
+    "capturedRequests": [
+      {
+        "path": "/api/scholarships",
+        "method": "GET",
+        "hasPostData": false
+      }
+    ],
+    "captureTruncated": false,
+    "captureHasMore": false,
+    "note": "Fresh Production browser execution; API/catalog/visible-order/CSV hashes independently equal the accepted local expected hashes and Preview. Edit/reload were observed on Preview; reset was observed on Production."
+  },
+  "mergeTreeEqualAttestation": true,
+  "mergeParents": [
+    "5fa08541b6b49484dedc8fc06012e47c658ce8fb",
+    "b414e17f55c32f2711d9884ef1256269a83ed3bb"
+  ],
+  "preservedAttestations": [
+    "94db9e72ff241f5eb0939872d97852657f139ecb",
+    "b414e17f55c32f2711d9884ef1256269a83ed3bb"
+  ],
+  "limits": [
+    "Direct HTTP read reaches Vercel login; top-level browser health navigation blocked by client. Same-origin authenticated read succeeded and binds actual runtime.",
+    "Browser download event timed out; exact data-URI export bytes independently reconcile, and accepted local browser tests verified actual saved download bytes. Do not claim hosted saved-file notification succeeded.",
+    "No current scholarship-source, workbook or backup freshness claim; no workbook access or configuration changes."
+  ],
+  "productionCi": {
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+    "url": "https://github.com/whitefishscholarship/program_code/actions/runs/34728711093"
+  },
+  "productionPrRecord": "https://github.com/whitefishscholarship/program_code/pull/44#issuecomment-5649764304",
+  "postAttestationLocalChecks": {
+    "attestationCommit": "b414e17f55c32f2711d9884ef1256269a83ed3bb",
+    "checks": [
+      {
+        "command": "npm run plan:check",
+        "cwd": "/private/tmp/program_code-r2-rev17/web",
+        "env": {},
+        "startedAt": "2026-09-13T00:07:53.672125+00:00",
+        "finishedAt": "2026-09-13T00:08:19.515023+00:00",
+        "exitCode": 0,
+        "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+      },
+      {
+        "command": "npm run plan:check",
+        "cwd": "/private/tmp/program_code-r2-rev17/web",
+        "env": {
+          "GITHUB_ACTIONS": "true"
+        },
+        "startedAt": "2026-09-13T00:08:19.515070+00:00",
+        "finishedAt": "2026-09-13T00:08:43.832310+00:00",
+        "exitCode": 0,
+        "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+      }
+    ]
+  }
+}

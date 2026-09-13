@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-12T17:24:10.157783+00:00",
+  "scope": "Local INTERVIEW-COVERAGE-1 implementation; no canonical acceptance or deployment",
+  "checks": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "result": "PASS",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "result": "PASS full repository chain including new coverage tests",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "result": "PASS default Turbopack production build with fresh generated cache and permitted local worker ports",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run coverage:check",
+      "cwd": "web",
+      "result": "PASS four exact saved source/award bindings, deterministic supplement and all pinned historical inputs",
+      "exitCode": 0
+    },
+    {
+      "command": "PLAYWRIGHT_MODULE=<bundled playwright> node --import tsx scripts/qa-interview-coverage.cjs",
+      "cwd": "web",
+      "result": "PASS at 360 and 1440px; details in browser.json",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "result": "FAIL environment: tsx IPC EPERM; substantive alternate follows",
+      "exitCode": 1
+    },
+    {
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "web",
+      "result": "FAIL exactly six reserved manifest/review/attestation errors for PLAN-REV15 and PLAN-REV16",
+      "exitCode": 1
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "repository root",
+      "result": "PASS",
+      "exitCode": 0
+    }
+  ],
+  "reservedPlanErrors": [
+    "- Missing required file: docs/evidence/PLAN-REV15-manifest.json",
+    "- Missing required file: docs/reviews/PLAN-REV15.json",
+    "- PLAN-REV15 requires a committed manifest/review attestation in current history",
+    "- Missing required file: docs/evidence/PLAN-REV16-manifest.json",
+    "- Missing required file: docs/reviews/PLAN-REV16.json",
+    "- PLAN-REV16 requires a committed manifest/review attestation in current history"
+  ],
+  "remediatedExecutionIssues": [
+    "Typecheck initially found readonly synthetic test tuple incompatible with mutable fact value; corrected test narrowing, typecheck and full suite passed afterward.",
+    "Restricted test runner failed its IPC listen; full suite passed with permitted local IPC.",
+    "Turbopack worker port failed in sandbox and cached the failure; moved generated .next cache aside, rebuilt successfully using normal command with local worker permission. No dependency or build configuration change."
+  ],
+  "limits": [
+    "Only local production build verified; no hosted health or deployment inspection",
+    "Saved revision225 catalog and source summaries; no fresh provider eligibility or availability claim",
+    "All intake/historical research remains unchanged; no new workbook read/copy/write",
+    "Canonical REV15/REV16 acceptance and external delivery remain unstarted"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV16",
+  "createdAt": "2026-09-13T00:53:55.982Z",
+  "baselineCommit": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+  "candidateCommit": "a5eac691e9353eb5edc19b0da1e30ede6f6d38cc",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "f490f004006de69d0621d08dd174d57f4c3d784904d901566cbe869da5467f9d"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "968990c582b7665e68ab4fa46233932f76008c7964744f0a2ec75173d7439f92"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "3521d926752d806705b21780ab665cf8d78ebf77d7e4e28b66369541d490df1f"
+    },
+    {
+      "path": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
+      "change": "present",
+      "sha256": "9b31d961294d3b4fdb1a4941d1a4f0b0b9849abfb45db6016abf5f835d6defb9"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "18f444ecd9f6f1e65b6aee7a44a0be55699b35a6cc4741d68c6b65f9494beea6"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-mapping.json",
+      "change": "present",
+      "sha256": "d232c2cc8686c65aab774fb1149f27ef696147e0ef08dcb6bf3142a9e942a2fc"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-policy-review.json",
+      "change": "present",
+      "sha256": "5810dc82303cb12de97e9dd90cffb1764d281fcf91a63e5002ac194830c8a70c"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16.md",
+      "change": "present",
+      "sha256": "b0437ff13eaf9dc30d40e166c77b77fdbb8d8cd09252927c5a5bf1de6fa07eb4"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/README.md",
+      "change": "present",
+      "sha256": "62de8d17a742fb16135088d7100d5382fec2f513c860b7cd110a4f59728ba7f5"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/browser.json",
+      "change": "present",
+      "sha256": "0a5b862c67f82b2095e9bbc19ccb433f678700bde1426220d3b0493d18b8ed47"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/core-1440.png",
+      "change": "present",
+      "sha256": "0a8d673f44b52b0633e5674f6e17924701f82c5369c26757447f7c76d103a42e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/core-360.png",
+      "change": "present",
+      "sha256": "63bf0487f83e210b2230236758e0fe0fbd27b31e485526af0dd8c218675896f8"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/git-diff---check.log",
+      "change": "present",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-build.log",
+      "change": "present",
+      "sha256": "7b0ab5c26fe50c87ea6ab4ec101ede56ea8b4042875ecd7ffa98560938d65dbc"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-coverage-check.log",
+      "change": "present",
+      "sha256": "e66f211061ef342479b6f9d6e731bf7330b1b019a0eed6a49937343932b2c650"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-intake-check.log",
+      "change": "present",
+      "sha256": "0221a8fde5928fb9efaee557835292296421c054486acce728f372da58466b3e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-p9-production-check.log",
+      "change": "present",
+      "sha256": "fddc67a34f743a665d1893847db41c793b14557c322784a1b02536fa68a335f5"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-plan-check.log",
+      "change": "present",
+      "sha256": "6718fdb39b36358103a0ec936ae07e78a30e664506713baac3ced9c4b3c6196e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-run-typecheck.log",
+      "change": "present",
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-checks/npm-test.log",
+      "change": "present",
+      "sha256": "d153f45e0f7661278ed95ee8deb9718974fd64be2084b4ddc6d966a841497b12"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-grounding.json",
+      "change": "present",
+      "sha256": "570790bd4631b2eb4d426e41d2f41e9d4a48c799fbe51c1f093d6a12940892a7"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-release-package.md",
+      "change": "present",
+      "sha256": "6c842a069574e87372aa87f614bdd050cbc70cec8159e8bc2142b066fb7de431"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-review.json",
+      "change": "present",
+      "sha256": "46c934b27496dd80f3883676680416cfc0273f4f0a6708fad9d7aaa6fca60b7f"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-source-paths.json",
+      "change": "present",
+      "sha256": "ecfcbf9a877e7dfa763f78e12d6003a4625d72c8f7b062c0495f7f03b01ccc24"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r1-validation.json",
+      "change": "present",
+      "sha256": "2d822745a3c1691cbc12d2536c73d8b9bccaab8c12c983f5be637014900bee59"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-browser/browser.json",
+      "change": "present",
+      "sha256": "c5bfb73251f7e96513c967685c8ce9497cd35152d1e43430bb668450379f3cb5"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-browser/core-1440.png",
+      "change": "present",
+      "sha256": "0a8d673f44b52b0633e5674f6e17924701f82c5369c26757447f7c76d103a42e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-browser/core-360.png",
+      "change": "present",
+      "sha256": "63bf0487f83e210b2230236758e0fe0fbd27b31e485526af0dd8c218675896f8"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-predecessor-delivery.json",
+      "change": "present",
+      "sha256": "55fa5696042a8cc50ef38d2aafa3e32458836375d9ce7ca31da3b112f4daecc0"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-preservation.json",
+      "change": "present",
+      "sha256": "cb360fb36bf51c1bcbf289fba017259b19984c2467e24889abbf55b1a60b36a3"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-validation.json",
+      "change": "present",
+      "sha256": "0e78a69ea1170229105d0a4b9593f7ba9a3064140d34331c14453816d674aa63"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/review.json",
+      "change": "present",
+      "sha256": "63ac457433e02620e8668d30330fd02ae05f3e27ba943b631e55da5f0af5f90e"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/roadmap-review.json",
+      "change": "present",
+      "sha256": "00ef3e2df5648252b5e7260dec2aae4df2c69ec772e2bd19749d856435458eba"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/session-closeout-review.json",
+      "change": "present",
+      "sha256": "4f6fc3b7c70b2469a4843fa69e4b74929adf15931a228d08e0209e8832a4c7fa"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/session-closeout.json",
+      "change": "present",
+      "sha256": "e023602f0e8df5937d845190615582fda4c69148f9a39650f224672e415298d3"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/validation.json",
+      "change": "present",
+      "sha256": "2176bd39dec610c192aae150fa86f717b67123f2e100363d41e28c0758e470f4"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "change": "present",
+      "sha256": "2a0d69a47985df9004266f01e3472b9a0d4a636ef6a8a59839f5f773c5c0f4c8"
+    },
+    {
+      "path": "web/fixtures/coverage/interview-coverage-v1.json",
+      "change": "present",
+      "sha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1"
+    },
+    {
+      "path": "web/fixtures/coverage/pin.json",
+      "change": "present",
+      "sha256": "c4340688482d5513f55bfd3133606cacb1c3c6d27b7c1cde786e6291127dcfba"
+    },
+    {
+      "path": "web/package.json",
+      "change": "present",
+      "sha256": "b4a1c3b00048d9755d31a7726c1ea347f363b51420307b7e6873fdcca9dd2c5b"
+    },
+    {
+      "path": "web/scripts/build-interview-coverage.ts",
+      "change": "present",
+      "sha256": "ab46713ac42a06e364e192c9e607f17c1a0812e3f0c212b158ec138b874a3139"
+    },
+    {
+      "path": "web/scripts/interview-coverage-governance.ts",
+      "change": "present",
+      "sha256": "338a5a20714d3a21e8eef50ff24020d4bbe5dc5487060f8eb7d2d1d0f7da5c77"
+    },
+    {
+      "path": "web/scripts/qa-interview-coverage.cjs",
+      "change": "present",
+      "sha256": "672e20d10cdafea6932d5c760247eb825baf72e0c4bb67b9756c480e0b5f14b5"
+    },
+    {
+      "path": "web/scripts/test-interview-coverage.ts",
+      "change": "present",
+      "sha256": "445b1bc1c520240fd66c312a91e2efc617c4f38e98172cb3f2753e7ea0666e7b"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "change": "present",
+      "sha256": "119b85b31e8ac74775d14502960017b28f5696a01197a6f1d4e1946f515cb068"
+    },
+    {
+      "path": "web/src/app/api/health/route.ts",
+      "change": "present",
+      "sha256": "94ca3e721ab1365ce7abb4c3fc5f5dfe3c56c3ad6027b1fa517aa3315f06ad17"
+    },
+    {
+      "path": "web/src/components/InterviewWizard.tsx",
+      "change": "present",
+      "sha256": "eb9174046586df4a69711ebe0ea29f47edc73340ab8607b39d96190bd654f9a4"
+    },
+    {
+      "path": "web/src/lib/coverageQuestions.ts",
+      "change": "present",
+      "sha256": "d42c84e6a2e1a84d99f3674e4f480a1611d07255d687fdbe51d5b57365e194d6"
+    },
+    {
+      "path": "web/src/lib/coverageRelevance.ts",
+      "change": "present",
+      "sha256": "0da1a9edf33bdb9d5dcec2fa2b18024779e817208f92da5b4c64ba1ecddb5fb2"
+    },
+    {
+      "path": "web/src/lib/interviewMatcher.ts",
+      "change": "present",
+      "sha256": "75c29d10d78573b037c738630c7b3cde2729ddc39ad33cc73d80a0240c83102b"
+    },
+    {
+      "path": "web/src/lib/interviewRelevance.ts",
+      "change": "present",
+      "sha256": "2978ea4f3a1ef94c20fc44623b92841e37ff2c243190ebbc7725f15683ce7103"
+    }
+  ]
+}

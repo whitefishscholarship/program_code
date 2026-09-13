@@ -1,3 +1,4 @@
+import { COVERAGE_PUBLICATION, COVERAGE_SHA256 } from '@/lib/coverageRelevance';
 import { RELEVANCE_PUBLICATION, RELEVANCE_SHA256 } from '@/lib/interviewRelevance';
 import { SHORTLIST_PUBLICATION, SHORTLIST_SHA256 } from '@/lib/spreadsheetShortlist';
 import { NextRequest, NextResponse } from 'next/server';
@@ -43,6 +44,7 @@ export function GET(request: NextRequest) {
     },
     shortlist: { id: SHORTLIST_PUBLICATION.id, sha256: SHORTLIST_SHA256, snapshotDate: SHORTLIST_PUBLICATION.snapshotDate, basis: SHORTLIST_PUBLICATION.basis },
     relevance: { id: RELEVANCE_PUBLICATION.id, sha256: RELEVANCE_SHA256, snapshotDate: RELEVANCE_PUBLICATION.snapshotDate, basis: RELEVANCE_PUBLICATION.basis },
+    coverage: { id: COVERAGE_PUBLICATION.id, sha256: COVERAGE_SHA256, snapshotDate: COVERAGE_PUBLICATION.snapshotDate, basis: COVERAGE_PUBLICATION.basis },
     capabilities: {
       google: 'none',
       drive: 'none',
