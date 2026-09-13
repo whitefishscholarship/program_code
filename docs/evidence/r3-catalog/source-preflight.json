@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "status": "BLOCKED_REQUIRED_METADATA_UNAVAILABLE",
+  "policyReviewCommit": "eceeb498b9c92df41d026b749432625833a4974e",
+  "policyCandidate": "c8be2caf739b1074ae6caddc9e7f87ab28a68078",
+  "observedAt": "2026-09-13T23:48:52.667Z",
+  "attemptType": "file-metadata-preflight-only",
+  "completeCaptureAttempts": 0,
+  "cellReads": 0,
+  "workbookWrites": 0,
+  "request": {
+    "tool": "google_drive_get_file_metadata",
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "fields": "id,name,mimeType,trashed,version,modifiedTime"
+  },
+  "startedAt": "2026-09-13T23:48:51.227Z",
+  "completedAt": "2026-09-13T23:48:52.667Z",
+  "returnedPermittedObservations": {
+    "id": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "title": "Whitefish HS Scholarship Database",
+    "mimeType": "application/vnd.google-apps.spreadsheet",
+    "modifiedTime": "2026-09-11T10:51:53.348Z"
+  },
+  "requiredRevisionToken": null,
+  "trashedStatus": "unavailable_not_inferred",
+  "observedIssue": "Connector response normalization omits requested version and trashed fields; a successful metadata response does not establish the required revision token.",
+  "decision": "Do not read the range or construct a current catalog. Complete policy remains authorized; source-dependent work awaits a supported exact route or separately authorized reviewed metadata-only supplement.",
+  "unchangedGates": [
+    "Current revision token and equal before/after observations",
+    "Two equal complete bounded native cell projections",
+    "Identity, header, range and privacy checks",
+    "Mapping review before product edits",
+    "Separate R4 delivery authority"
+  ],
+  "limits": [
+    "The modification timestamp equals the historical receipt timestamp, but revision229 was not observed and must not be inferred.",
+    "No cell contents, other tab inventory, revision history, recovery objects or external scholarship source was accessed.",
+    "No product implementation, canonical acceptance or deployment occurred."
+  ]
+}

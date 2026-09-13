@@ -1,3 +1,39 @@
+# R3 source capture blocked — original authority remains valid
+
+Plan revision: 18
+
+Execution worktree: `/private/tmp/program_code-r3-catalog`; branch:
+`codex/r3-catalog-refresh`. The prospective R3 policy passed independent review:
+candidate `c8be2caf739b1074ae6caddc9e7f87ab28a68078`, review checkpoint
+`eceeb498b9c92df41d026b749432625833a4974e`. Verify its unchanged
+`docs/evidence/r3-catalog/policy-manifest.json` and `policy-review.json`.
+
+One authorized file-metadata preflight confirmed identity and modified time but the
+connector omitted the requested version and trashed status. See
+`docs/evidence/r3-catalog/source-preflight.json`. No cells, revision history,
+other-tab inventory or recovery objects were read; no product edits or source writes
+occurred. The historical timestamp match does not prove current revision229.
+R3 remains incomplete; source-dependent processing stops on missing revision proof.
+
+**Owner/trigger/next action:** Kelsey may authorize only the proposed connector metadata
+supplement in `docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md`. It permits
+unavoidable version-history and selected-tab envelope metadata, including incidental
+editor identity that must be discarded before model-facing output or evidence storage.
+It is a proposal, not authority. The existing exact R3 grant remains valid. After
+supplemental approval, Codex must prospectively amend the policy/state/tests and obtain
+fresh independent policy review before additional source calls. If the supported route
+still cannot prove a current revision, remain blocked. Do not substitute modified time,
+the last listed revision, inaccessible metadata or a successful request for that proof.
+
+Verify the supplemental proposal's local candidate/manifest/review before relying on it.
+No original scope, historical review binding, source-read bounds, mapping gate or reserved
+R4 effect is changed by this blocker checkpoint. Canonical plan validation still has
+three explicit reserved REV18 manifest/review/attestation failures; these are not a PASS.
+All recorded R1/R2 completion, receipt/recovery, holds, backlog owners and triggers below
+remain intact. Read earlier overlays as historical evidence; this is the operative pointer.
+
+---
+
 # Execute R3 only — authorized local catalog refresh
 
 Resume `/private/tmp/program_code-r3-catalog` on `codex/r3-catalog-refresh` from the
