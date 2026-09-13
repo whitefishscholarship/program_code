@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "checks": [
+    {
+      "mode": "local",
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-13T23:41:41.991101+00:00",
+      "finishedAt": "2026-09-13T23:42:07.394474+00:00",
+      "exitCode": 1,
+      "output": "Build-plan validation failed with 4 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n- CURRENT_HANDOFF.md plan revision does not match BUILD_STATE.json\n"
+    },
+    {
+      "mode": "hosted",
+      "command": "GITHUB_ACTIONS=true node --import tsx scripts/validate-build-plan.ts",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-13T23:42:07.394601+00:00",
+      "finishedAt": "2026-09-13T23:42:32.712703+00:00",
+      "exitCode": 1,
+      "output": "Build-plan validation failed with 5 error(s):\n- PLAN-REV18 requires direct informed delivery authority or an exact authorized local-only preparation blocker\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n- CURRENT_HANDOFF.md plan revision does not match BUILD_STATE.json\n"
+    },
+    {
+      "mode": "local",
+      "command": "node --import tsx scripts/validate-build-plan.ts",
+      "startedAt": "2026-09-13T23:42:49.223348+00:00",
+      "finishedAt": "2026-09-13T23:43:14.684817+00:00",
+      "exitCode": 1,
+      "output": "Build-plan validation failed with 3 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "mode": "hosted",
+      "command": "GITHUB_ACTIONS=true node --import tsx scripts/validate-build-plan.ts",
+      "startedAt": "2026-09-13T23:43:14.685214+00:00",
+      "finishedAt": "2026-09-13T23:43:43.020194+00:00",
+      "exitCode": 1,
+      "output": "Build-plan validation failed with 4 error(s):\n- PLAN-REV18 requires direct informed delivery authority or an exact authorized local-only preparation blocker\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "node --import tsx scripts/test-r3-catalog-governance.ts",
+      "startedAt": "2026-09-13T23:43:55.234675+00:00",
+      "finishedAt": "2026-09-13T23:43:55.342762+00:00",
+      "exitCode": 0,
+      "output": "R3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\n"
+    },
+    {
+      "command": "npm run typecheck",
+      "startedAt": "2026-09-13T23:43:55.342777+00:00",
+      "finishedAt": "2026-09-13T23:43:59.994046+00:00",
+      "exitCode": 0,
+      "output": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\n"
+    }
+  ],
+  "note": "Reserved missing REV18 artifacts remain failures; no source or product execution.",
+  "remediation": "Added operative Plan revision:18 label to handoff/kickoff; initial missing-label failures retained below.",
+  "result": "POLICY_PREPARATION_CHECKS_PASS_WITH_RESERVED_CANONICAL_FAILURES",
+  "preservation": "All previous amendment, stage, data, intake and coverage objects exact; full previous handoff/kickoff suffixes; no web/src, fixtures, lockfile or deployment changes.",
+  "scope": "Dedicated prospective policy only; no workbook/source access or product edits."
+}

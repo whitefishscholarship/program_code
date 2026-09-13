@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 17,
+  "planRevision": 18,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-13",
   "repository": {
@@ -466,7 +466,8 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending"
+      "P9-attestation-and-delivery-pending",
+      "PLAN-REV18-awaits-separate-R4-Git-Vercel-authority"
     ]
   },
   "governance": {
@@ -825,6 +826,22 @@
           "basis": "I authorize R2 only, following the reviewed release package: deliver REV15 first, then REV16 after REV15 is verified. This includes the required authority/evidence updates, branch pushes, PRs, Vercel Preview, merges, Production deployments, and CI/hosted verification on the existing web project. Preserve all review and acceptance gates. No workbook access or changes, new research, configuration changes, or later phases are authorized.",
           "scope": "R2 second release only, after verified REV15/REV17 delivery: integrate unchanged reviewed interview coverage source and exact reviewed union of validator/test commands; freeze, independent review, direct-child attestation, push codex/plan-rev16-coverage-release, PR, Vercel Preview, ancestry-preserving merge, Production and CI/hosted verification on existing web project prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. No workbook access/change, research, configuration, rollback or later phase."
         }
+      },
+      {
+        "id": "PLAN-REV18",
+        "status": "attestation-gated",
+        "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+        "evidencePath": "docs/evidence/PLAN-REV18.md",
+        "manifestPath": "docs/evidence/PLAN-REV18-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV18.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "Kelsey authorized R3 local scope, bounded reads, prospective policy and local implementation/review only. R4 delivery authority remains separate.",
+          "scope": "No push, PR, Preview, merge, Production or hosted verification. Preserve all final manifest, independent review and direct-child attestation gates."
+        }
       }
     ]
   },
@@ -1032,5 +1049,77 @@
     "validationPath": "docs/evidence/interview-coverage/validation.json",
     "publicationSupplementPath": "web/fixtures/coverage/interview-coverage-v1.json",
     "publicationSupplementSha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1"
+  },
+  "r3CatalogRefresh": {
+    "planId": "R3-CATALOG-1",
+    "status": "authorized-policy-preparation-review-required-before-source-read",
+    "scopeProposalCommit": "adf45e41ced138d6f853f36faa6dd4065991d048",
+    "scopePath": "docs/R3_CATALOG_SCOPE.md",
+    "scopeSha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2",
+    "inputsPath": "docs/evidence/interview-coverage/r3-scope-inputs.json",
+    "inputsSha256": "2e760d199ba5706fcb9eb3f483440becce405ad1c72a7d389701d46bc93f7843",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV18.md",
+    "authorizedBy": "Kelsey Stuart",
+    "authorizedAt": "2026-09-13",
+    "sourceReadAuthorized": true,
+    "localImplementationAuthorized": true,
+    "localEvidencePersistenceAuthorized": true,
+    "prospectivePolicyAuthorized": true,
+    "policyReviewPath": "docs/evidence/r3-catalog/policy-review.json",
+    "mappingReviewRequiredBeforeProductEdits": true,
+    "sourceScope": {
+      "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+      "sheetId": 0,
+      "sheetTitle": "Master Database",
+      "range": "'Master Database'!A1:O417",
+      "addressableCells": 6255,
+      "dataRowPositions": 416,
+      "fileMetadataFields": [
+        "id",
+        "name",
+        "mimeType",
+        "trashed",
+        "version",
+        "modifiedTime"
+      ],
+      "spreadsheetMetadataFields": [
+        "spreadsheetId",
+        "properties.title",
+        "properties.locale",
+        "properties.timeZone"
+      ],
+      "sheetMetadataFields": [
+        "sheetId",
+        "title",
+        "gridProperties.rowCount",
+        "gridProperties.columnCount",
+        "hidden"
+      ],
+      "cellFields": "userEnteredValue,effectiveValue,formattedValue,hyperlink,textFormatRuns(startIndex,format(link)),userEnteredFormat(numberFormat),effectiveFormat(numberFormat)",
+      "maximumCaptureAttempts": 3,
+      "matchingCompleteCapturesRequired": 2,
+      "stableRevisionRequired": true,
+      "otherTabInventoryAuthorized": false,
+      "linkedSourceAccessAuthorized": false
+    },
+    "reservedEffects": {
+      "workbookWrites": false,
+      "backupCopies": false,
+      "recoveryCopies": false,
+      "restore": false,
+      "research": false,
+      "formInteraction": false,
+      "providerContact": false,
+      "credentials": false,
+      "configuration": false,
+      "paidActions": false,
+      "monitoring": false,
+      "push": false,
+      "pullRequest": false,
+      "preview": false,
+      "merge": false,
+      "production": false,
+      "hostedVerification": false
+    }
   }
 }

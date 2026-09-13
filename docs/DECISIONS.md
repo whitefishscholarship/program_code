@@ -672,3 +672,19 @@ Integrate original979122a ancestry and reviewed runtime unchanged, preserve both
 canonical amendment objects/evidence/artifacts, and use the reviewed union of
 validator/test changes. Record distinct REV16 authority/baseline; planRevision stays17.
 No source, workbook, configuration or later-phase scope is added.
+
+## 2026-09-13 — PLAN-REV18 bounded local R3 catalog refresh
+
+Kelsey granted the exact independently reviewed R3 scope with “yes, authorized.” The
+reviewed proposal at adf45e4 and checkpoint f95464d fixes the allowed source, metadata,
+projection and local-only effects. Adopt it prospectively without reopening R1/R2 or
+promoting saved facts to current official truth. A full-Master scan or whole-workbook
+copy would exceed this grant; reading only A1:O417 with explicit moved/newer/unresolved
+outcomes meets the selected reconciliation need. Preserve original receipts and IDs.
+
+Use a distinct immutable catalog/connection bundle while preserving existing criteria,
+publications and unknown handling. Review policy before source access, then source and
+mapping before product changes. Add only an exact off-hosted REV18 false-release-authority
+exception; preserve the three final canonical-artifact errors and all historical gates.
+R3 completion is local review only; R4 authority and attestation remain separate. Local
+rollback is abandonment of these new commits; external rollback or restore is unauthorized.

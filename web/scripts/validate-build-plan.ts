@@ -1,3 +1,4 @@
+import { permitsLocalR3Preparation, validateR3CatalogPolicyAt, type R3CatalogPolicy } from './r3-catalog-governance';
 import { permitsLocalCoveragePreparation } from './interview-coverage-governance';
 import { readGitBuffer, matchesBlobHash, validateRepairAtRepo, type Rev15DeliveryRepair } from './plan-rev17-rev15-delivery-repair';
 import { permitsLocalIntakePreparation } from './intake-governance';
@@ -283,6 +284,7 @@ type BuildState = {
   governance?: {
     planAmendments: PlanAmendment[];
   };
+  r3CatalogRefresh?: R3CatalogPolicy;
   activeStageId: string | null;
   nextPermittedStageId: string | null;
   stages: Stage[];
@@ -1356,6 +1358,9 @@ if (state) {
     fail(`Accepted stage history cannot regress below P${maximumHistoricalAcceptedPrefix - 1}`);
   }
 
+  if (state.planRevision >= 18 || state.r3CatalogRefresh) {
+    for (const error of validateR3CatalogPolicyAt(repoRoot, state.r3CatalogRefresh)) fail(error);
+  }
   const planAmendments = state.governance?.planAmendments ?? [];
   const historicallyAttestedPlanAmendments = discoverHistoricallyAttestedPlanAmendments();
   const canonicalPlanAmendmentRecords = [...historicallyAttestedPlanAmendments.values()].map(
@@ -1635,7 +1640,7 @@ if (state) {
           fail(`${amendment.id} requires direct informed delivery authority bound to its evidence`);
         }
       } else if (
-        (amendment.id !== 'PLAN-REV10' && !(permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))) ||
+        (amendment.id !== 'PLAN-REV10' && !(permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalR3Preparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true', state.r3CatalogRefresh))) ||
         authorization?.authorized !== false ||
         authorization.authorizedBy !== null ||
         authorization.authorizedAt !== null ||
@@ -1645,7 +1650,7 @@ if (state) {
         !(
           state.deployment.deliveryBlockers.some((item) =>
             item.startsWith('PLAN-REV10-'),
-          ) || revision11ContinuationValid || (permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true'))
+          ) || revision11ContinuationValid || (permitsLocalShortlistPreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalRelevancePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalIntakePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalCoveragePreparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true') || permitsLocalR3Preparation(amendment.id, state.deployment.deliveryBlockers, process.env.GITHUB_ACTIONS === 'true', state.r3CatalogRefresh))
         )
       ) {
         fail(`${amendment.id} requires direct informed delivery authority or an exact authorized local-only preparation blocker`);

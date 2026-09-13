@@ -1,3 +1,31 @@
+# R3 authorized — prospective policy review before source access
+
+Plan revision: 18
+
+Worktree `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`,
+preserved scope checkpoint `f95464d8a7b751e1f0a2c48663a8b1a75283ceab`.
+Kelsey directly replied “yes, authorized” to the exact reviewed R3 scope. Authority is
+recorded in `docs/evidence/PLAN-REV18.md` and `BUILD_STATE.r3CatalogRefresh`; the frozen
+proposal's earlier false flags remain historical. No repeat authorization is needed
+for that selected scope. R1/R2 remain complete; all old triggers below remain intact.
+
+Current action: freeze and independently review the dedicated REV18 policy. Missing or
+nonmatching `docs/evidence/r3-catalog/policy-review.json` PASS blocks source reads.
+Then follow `docs/kickoffs/R3-CATALOG-REFRESH.md`: exact stable bounded capture, complete
+reconciliation and mapping review before local product edits, full verification and
+fresh-context final local review. Record every partial result/failure in the same folder.
+The three final REV18 manifest/review/attestation failures remain reserved for R4; they
+are never a canonical PASS or waived gate. No source read or product edit occurred in
+this policy checkpoint. R4 delivery authority remains false and is not requested here.
+
+The approved read is solely sheet0 Master Database A1:O417 and its allowlisted projection/
+metadata. Retain the original ledger, 257 applied operations, 192 existing awards, 38
+priority entities/42 references and NTHS survivor exception. Preserve the complete prior
+R2/scope handoff, reviews, receipt/recovery and backlog triggers below. No workbook
+write/copy, new research, deployment, configuration, monitoring or later phase is included.
+
+---
+
 # R3 scope preparation — local proposal, execution awaits separate authority
 
 Current worktree: `/private/tmp/program_code-r3-scope`; branch: `codex/r3-catalog-scope`.

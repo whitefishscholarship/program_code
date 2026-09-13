@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 17
+Plan revision: 18
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1769,3 +1769,53 @@ Exact pins, allowlist, informed effects and target are in BUILD_STATE's PLAN-REV
 rev15DeliveryRepair and docs/evidence/PLAN-REV17.md. No workbook access/change,
 research, runtime/catalog change, configuration change, monitoring, rollback,
 provider/applicant interaction or later R3-R7 phase is authorized by this exception.
+
+## Plan Revision 18 — bounded local R3 catalog refresh
+
+Kelsey directly authorized the independently reviewed R3 scope on September 13, 2026
+with “yes, authorized.” Adopt sections 3–7 of `docs/R3_CATALOG_SCOPE.md` at SHA256
+`2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2` and its exact
+source/read, reconciliation, product, privacy and verification boundaries. This is one
+local maintenance phase. P0–P9 and R1/R2 remain complete; canonical stage pointers stay
+null. `r3CatalogRefresh` records the current exact grant; historical grants remain exact.
+
+The only newly permitted source is workbook `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`,
+sheet0 `Master Database`, A1:O417 and the exact metadata/projection in state. No other
+tab inventory, linked content or formula dependency may be accessed. Require stable
+before/after revision tokens, two equal full bounded cell projections, complete range
+accounting and at most three capture attempts. Fresh organizer snapshot currency is not
+official scholarship verification. Do not silently expand bounds or import newer unrelated
+edits. Preserve all 257 applied-operation outcomes, 192 existing IDs, 38 priority entities,
+42 priority references, duplicate survivor links and every held/recovery trigger.
+
+Prospectively allow a separate immutable organizer-recorded catalog/connection bundle.
+Preserve all historical publications and existing 192-award GPA/school criteria and 206+4
+connections; reuse the same binary OR, explicit-sort and all-award behavior. Only new
+awards with individually reviewed explicit GPA and resolved school-type fields may add
+organizer shortlist criteria. Missing/ambiguous/sensitive nonselection is non-excluding;
+no new officially accepted facts, hard exclusions, scoring or universal sensitive definitions.
+Add the seven remaining organization options only with exact included child-award support;
+extend supported Teaching/need/topic connections and review NTHS numeric-date provenance.
+The original two-input core and optional controls remain. Answers stay volatile, CSV stays
+public-only, and runtime retains zero Google/Drive/Sheets capability. Catalog, API, browser,
+compatibility data, CSV and health/source identity must reconcile to the selected bundle.
+
+Commit and independently review this dedicated prospective policy before source reads or
+product edits. Freeze and independently review source reconciliation, mapping/field rules
+and expected examples before product edits. Run the complete contract matrix, new R3
+adversarial tests and keyboard/mobile/local-download/privacy regression; preserve all
+historical evidence. Full local-candidate fresh review is required before R3 completion.
+
+The exact REV18 local-preparation exception accepts false release authority only off
+hosted CI, with the exact R4 blocker and unchanged approved scope/effect pins. It never
+waives canonical manifest, review, attestation or historical validation. Before R4 the
+three missing REV18 artifacts remain reported failures; other checks must pass and any
+additional failure blocks completion. R3 may end as independently reviewed local work
+with those exact reserved failures recorded. Do not create premature canonical acceptance
+or an undelivered attestation. R4 requires new direct informed release authority, fresh
+baseline/target checks, authority-bearing candidate review, valid direct-child attestation,
+zero actual canonical diagnostics and exact Preview/Production verification.
+
+No workbook mutation, cloud copy/recovery, research, source expansion, services/dependencies,
+configuration, credentials, paid actions, forms, provider contact, monitoring, rollback,
+Git publication, hosted verification or R4–R7 execution is authorized by Revision18.
