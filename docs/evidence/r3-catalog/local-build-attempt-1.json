@@ -1,0 +1,15 @@
+{
+  "scope": "local R3 only; synthetic tests, no hosted verification",
+  "checks": [
+    {
+      "command": "npm run build",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-14T14:56:17.601146+00:00",
+      "completedAt": "2026-09-14T14:56:24.063840+00:00",
+      "durationSeconds": 6.46,
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 86ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 777ms\n  Running TypeScript ...\nscripts/test-r3-catalog.ts(76,138): error TS2345: Argument of type 'string' is not assignable to parameter of type '\"Award ID\" | \"Record type\" | \"Name\" | \"Cycle status\" | \"Cycle details\" | \"Amount\" | \"Minimum GPA\" | \"School types\" | \"Application method\" | \"Official link\"'.\n",
+      "stderr": "\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\nFailed to type check.\n\n"
+    }
+  ]
+}

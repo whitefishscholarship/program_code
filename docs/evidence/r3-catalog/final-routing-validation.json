@@ -1,0 +1,21 @@
+{
+  "scope": "Final local handoff and BUILD_STATE routing; product/build unchanged since full validation",
+  "checks": [
+    {
+      "command": "npm run r3:policy:check",
+      "startedAt": "2026-09-14T15:02:28.677223+00:00",
+      "completedAt": "2026-09-14T15:02:28.841732+00:00",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 r3:policy:check\n> node --import tsx scripts/test-r3-catalog-governance.ts\n\nR3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run plan:check",
+      "startedAt": "2026-09-14T15:02:28.841782+00:00",
+      "completedAt": "2026-09-14T15:02:52.635532+00:00",
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 3 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    }
+  ]
+}

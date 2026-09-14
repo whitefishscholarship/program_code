@@ -1052,7 +1052,7 @@
   },
   "r3CatalogRefresh": {
     "planId": "R3-CATALOG-1",
-    "status": "source-captured-mapping-review-pending",
+    "status": "local-candidate-ready-final-review-required",
     "scopeProposalCommit": "adf45e41ced138d6f853f36faa6dd4065991d048",
     "scopePath": "docs/R3_CATALOG_SCOPE.md",
     "scopeSha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2",
@@ -1202,6 +1202,16 @@
       "maximumTotalAttempts": 3,
       "additionalSourceAccessAuthorized": false,
       "transactionalSnapshotClaimAuthorized": false
+    },
+    "localCandidate": {
+      "evidencePath": "docs/evidence/r3-catalog/LOCAL_CANDIDATE.md",
+      "manifestPath": "docs/evidence/r3-catalog/final-manifest.json",
+      "reviewPath": "docs/evidence/r3-catalog/final-review.json",
+      "completionRequiresMatchingIndependentPass": true,
+      "canonicalAcceptance": false,
+      "selectedBundle": "web/fixtures/r3/catalog-v1.json",
+      "nextRoute": "docs/kickoffs/R4-CATALOG-RELEASE.md",
+      "r4Authorized": false
     }
   }
 }

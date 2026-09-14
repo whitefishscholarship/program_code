@@ -435,10 +435,10 @@ function AwardCard({ award, result }: { award: StudentAward; result?: DisplayRes
           </ul>
         </div>
       )}
-      {award.summary && <p className="mt-4 text-sm leading-6 text-slate-600">{award.summary}</p>}
+      {award.summary && <p className="mt-4 break-words text-sm leading-6 text-slate-600">{award.summary}</p>}
       <dl className="mt-5 grid gap-4 border-t border-slate-200 pt-5 text-sm sm:grid-cols-2">
-        <div><dt className="font-bold text-slate-950">Application method</dt><dd className="mt-1 leading-6 text-slate-600">{award.application.label}</dd></div>
-        <div><dt className="font-bold text-slate-950">Cycle details</dt><dd className="mt-1 leading-6 text-slate-600">{award.cycle.closes ? `Annual close rule: ${award.cycle.closes}` : 'No verified closing date'}</dd></div>
+        <div><dt className="font-bold text-slate-950">Application method</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.application.label}</dd></div>
+        <div><dt className="font-bold text-slate-950">Cycle details</dt><dd className="mt-1 break-words leading-6 text-slate-600">{award.cycle.closes ? `Recorded closing information: ${award.cycle.closes}` : 'No verified closing date'}</dd></div>
       </dl>
       <div className="mt-auto pt-6">
         {award.application.url ? <a href={award.application.url} target="_blank" rel="noopener noreferrer" className="inline-flex w-full items-center justify-center rounded-xl bg-teal-800 px-5 py-3 text-center font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Check official application source <span className="sr-only">for {award.name}</span><span aria-hidden="true"> ↗</span></a> : <p className="rounded-xl bg-slate-100 px-4 py-3 text-center text-sm font-bold text-slate-700">No verified online application link</p>}

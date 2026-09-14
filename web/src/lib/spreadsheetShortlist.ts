@@ -1,3 +1,4 @@
+import { R3_SHORTLIST_ROWS, R3_CONNECTIONS, type DiscoveryConnection } from './r3Catalog';
 import { relevanceByAward } from './interviewRelevance';
 import { z } from 'zod';
 import publicationJson from '../../fixtures/shortlist/spreadsheet-shortlist-v1.json';
@@ -23,11 +24,11 @@ export type ShortlistRow = z.infer<typeof RowSchema>;
 export type ShortlistDecision = 'recorded_fit' | 'needs_checking' | 'recorded_mismatch';
 export type ShortlistResult = Omit<AwardMatchResult, 'decision'> & { decision: ShortlistDecision; relevant: boolean };
 export type DisplayResult = AwardMatchResult | ShortlistResult;
-export const SHORTLIST_NOTICE = 'Uses the saved spreadsheet from September 2, 2026. GPA and school type can narrow the shortlist where recorded; supported interests, experiences, optional personal connections and application preferences can bring awards forward with explanations. These connections never remove an award or confirm eligibility. Confirm current requirements and availability before applying.';
+export const SHORTLIST_NOTICE = 'Uses organizer records captured September 14, 2026, while preserving previously reviewed rules for existing awards. GPA and school type can narrow the shortlist where recorded; supported interests, experiences, optional personal connections and application preferences can bring awards forward with explanations. These connections never remove an award or confirm eligibility. Confirm current requirements and availability before applying.';
 
-export function shortlistAwards(awards: readonly StudentAward[], rawAnswers: InterviewAnswers, rows: readonly ShortlistRow[] = SHORTLIST_PUBLICATION.rows): { counts: MatchResponse['counts']; results: ShortlistResult[] } {
+export function shortlistAwards(awards: readonly StudentAward[], rawAnswers: InterviewAnswers, rows: readonly ShortlistRow[] = R3_SHORTLIST_ROWS, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): { counts: MatchResponse['counts']; results: ShortlistResult[] } {
   const answers = InterviewAnswersSchema.parse(rawAnswers);
-  const relevance = relevanceByAward(answers);
+  const relevance = relevanceByAward(answers, additionalConnections);
   const byId = new Map(rows.filter(row => row.targetKind === 'award').map(row => [row.targetId, row]));
   const chosenSchools = answers.targetSchoolTypes.filter(type => type !== 'undecided');
   const results = awards.map(award => {

@@ -1,0 +1,25 @@
+{
+  "scope": "local R3 only; synthetic tests, no hosted verification",
+  "checks": [
+    {
+      "command": "npm run build",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-14T14:57:07.893129+00:00",
+      "completedAt": "2026-09-14T14:57:13.222111+00:00",
+      "durationSeconds": 5.33,
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 13ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 309ms\n  Running TypeScript ...\n  Finished TypeScript in 3.8s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/10) ...\n  Generating static pages using 11 workers (2/10) \n  Generating static pages using 11 workers (4/10) \n  Generating static pages using 11 workers (7/10) \n\u2713 Generating static pages using 11 workers (10/10) in 149ms\n  Finalizing page optimization ...\n\nRoute (app)\n\u250c \u25cb /\n\u251c \u25cb /_not-found\n\u251c \u25cb /admin\n\u251c \u25cb /admin/login\n\u251c \u25cb /admin/recover\n\u251c \u0192 /api/admin/extract\n\u251c \u0192 /api/admin/push\n\u251c \u0192 /api/health\n\u251c \u0192 /api/revalidate\n\u2514 \u0192 /api/scholarships\n\n\n\u0192 Proxy (Middleware)\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n",
+      "stderr": "\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\n"
+    },
+    {
+      "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-14T14:57:13.222581+00:00",
+      "completedAt": "2026-09-14T14:57:13.589469+00:00",
+      "durationSeconds": 0.37,
+      "exitCode": 0,
+      "stdout": "{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 41,\n  \"runtimeClosureSha256\": \"5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"4280b50fc7c93f8f90339deea7ea696396d800155364c0989f0cff336c9a00c5\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

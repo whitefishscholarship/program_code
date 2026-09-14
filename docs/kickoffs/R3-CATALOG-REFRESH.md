@@ -1,3 +1,47 @@
+# R3 local candidate — final review binding controls completion
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`.
+Read `docs/evidence/r3-catalog/LOCAL_CANDIDATE.md`. Verify `final-review.json` PASS
+against the exact candidate and complete `final-manifest.json` before treating R3 as
+locally complete. If absent or not PASS, Codex owns remediation/final independent review.
+Once matching PASS is present, R3 is complete locally and the next action is the separate
+R4 scope/authority route in `docs/kickoffs/R4-CATALOG-RELEASE.md`. R4 is not authorized.
+No further source calls, intake writes or completed R1/R2 reviews need repeating.
+
+Observed local outcome:411 awards (192retained+219added),21preserved portals,291new
+qualified discovery connections,9organizations,9new GPA and7new school-type rules.
+All257operations/416capturedrows/38priorityentities/42references/5gaps are accounted for.
+Original192-award criteria,206+4connections,16catalog-only children and all relationships
+are preserved. The selected bundle equals reviewed mapping candidate9692db6, with mapping
+review checkpoint1ba4d93. Capture digest22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c
+records bounded observational consistency, not current official scholarship verification.
+
+Verification: full tests/typecheck/build and intake/coverage/P9/R3checks PASS; production
+trace retains zero source capability. Both360px/1440px browser runs PASS, including all
+choices, complete keyboard journey, actual public CSV downloads and bounded no-answer-
+storage/request/URL/log observations. The canonical plan check still fails exactly the
+three reserved REV18 manifest/review/attestation gates. Local work does not waive them.
+
+Outstanding routes remain explicit in mapping-reconciliation.json:
+- Kelsey: five existing GPA/school criterion conflicts, triggered only by separate policy
+  selection (rows110J,169K,30K,21K,101J); review exact saved deltas before changing decisions.
+- Codex: Bonita Jean Olson financial-need connection, triggered by separately authorized
+  source research; resolve old gap/current description conflict. The award is included.
+- Kelsey: first-generation/care definition recommendations, triggered by separate scope;
+  provider-specific conditions remain on cards, with no new sensitive question.
+- Codex: NTHS deadline remains unverified; future separately authorized provider/date
+  evidence is needed before replacing the message. Do not use the withdrawn duplicate.
+- Codex: existing framework middleware warning, triggered by selected framework maintenance;
+  retain it as a warning, not a failed build or reason to expand R3.
+
+All previous R1/R2 completion, authority receipts/review bindings,310heldentities/312holds,
+26-record research queue, recovery objects and all other owner/trigger/unknown routes below
+remain unchanged. The entire prior handoff is preserved as historical evidence.
+
+---
+
 # R3 source captured — mapping review before product edits
 
 Plan revision: 18

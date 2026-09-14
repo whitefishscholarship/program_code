@@ -1,0 +1,77 @@
+{
+  "observedAt": "2026-09-14T15:01:58.369829+00:00",
+  "status": "PASS",
+  "command": "PLAYWRIGHT_MODULE=/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright node --import tsx scripts/qa-r3-catalog.cjs",
+  "cwd": "/private/tmp/program_code-r3-catalog/web",
+  "target": "http://127.0.0.1:3218",
+  "serverCommand": "npm run start -- --hostname 127.0.0.1 --port 3218",
+  "scriptSha256": "f1519d44e30eca088d9834509800bdf491fb1e104b23198671457a0ba30b7546",
+  "files": [
+    {
+      "path": "docs/evidence/r3-catalog/browser/browser.json",
+      "sha256": "44d4d56794f69ee3b5d29beec3a88e9dd9bd4da9eb6158b8a1ebef53089fb6fa",
+      "bytes": 3975
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/core-1440.png",
+      "sha256": "0a8d673f44b52b0633e5674f6e17924701f82c5369c26757447f7c76d103a42e",
+      "bytes": 124971
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/core-360.png",
+      "sha256": "63bf0487f83e210b2230236758e0fe0fbd27b31e485526af0dd8c218675896f8",
+      "bytes": 110697
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/keyboard-1440.csv",
+      "sha256": "4c63cd5b1d420036f53d4af0ee008350e754313cc8ee8c08335216f94eddcab5",
+      "bytes": 124062
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/keyboard-360.csv",
+      "sha256": "4c63cd5b1d420036f53d4af0ee008350e754313cc8ee8c08335216f94eddcab5",
+      "bytes": 124062
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/new-award-1440.png",
+      "sha256": "5d0d9863fb72fc4f498ca97566fa22984fb4623c0e66b6eb3377e78a0c8f441e",
+      "bytes": 108900
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/new-award-360.png",
+      "sha256": "79537e06cdb5cee0969b6587308552c33bedf01d9d083df5e7700b0bd11fed0b",
+      "bytes": 105108
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-1440-0.csv",
+      "sha256": "b82ef3bd8c03dc2b098077bdb9c3689e18ce347bf9bfe97a57d103586be8d6c4",
+      "bytes": 124062
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-1440-1.csv",
+      "sha256": "8d2fefc2255df4c54bc432c81a836879beba1bfe136685700be691bf163b0983",
+      "bytes": 131483
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-360-0.csv",
+      "sha256": "b82ef3bd8c03dc2b098077bdb9c3689e18ce347bf9bfe97a57d103586be8d6c4",
+      "bytes": 124062
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-360-1.csv",
+      "sha256": "8d2fefc2255df4c54bc432c81a836879beba1bfe136685700be691bf163b0983",
+      "bytes": 131483
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/results-1440.png",
+      "sha256": "f822e2b68a1331b477f8d499d73fff886bbf8091c014952c7bf45d283f21d2d0",
+      "bytes": 144318
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/results-360.png",
+      "sha256": "04002b147bc4db907b3dee1900c629b6d7a69b109d6cd516f32334ad9f49f234",
+      "bytes": 44116
+    }
+  ],
+  "limits": "Fictional inputs and local production build only; no provider/hosted/source interaction. No universal privacy proof."
+}

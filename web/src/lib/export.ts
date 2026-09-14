@@ -1,6 +1,7 @@
 import type { StudentAward } from './studentCatalog';
 
 export const EXPORT_HEADERS = [
+  'Award ID',
   'Record type',
   'Name',
   'Cycle status',
@@ -23,6 +24,7 @@ const schoolTypeLabels: Record<StudentAward['eligibility']['schoolTypes'][number
 
 export function toExportRows(awards: StudentAward[]): ExportRow[] {
   return awards.map((award) => ({
+    'Award ID': award.publicId,
     'Record type': 'Award',
     'Name': award.name,
     'Cycle status': award.cycle.label,
