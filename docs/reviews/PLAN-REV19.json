@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV19",
+  "reviewerTaskId": "/root/r4_identity_final_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-14T16:59:36.975Z",
+  "outcome": "accepted",
+  "candidateCommit": "52eedbf6f9ee26cdda57b115edccbdc7629764be",
+  "candidateTree": "b1c6644d3d1e32951212de4734702551089518ec",
+  "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "candidateManifestPath": "docs/evidence/PLAN-REV19-manifest.json",
+  "candidateManifestSha256": "54994d1949be6107a4d8e680e1e16d01d6bc6c6b31adf550491536c69b5a53bb",
+  "completeChangedPathCount": 143,
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "severity": "low",
+      "summary": "REV19-FINAL-001: Carry accepted R3/R4 finding for six public CSV download evidence files with intentional BOM/CRLF bytes.",
+      "rationale": "Independent raw full-baseline git diff --check exits2 and flags exactly these six preserved CSV files. Required clean-worktree git diff --check and command-local core.whitespace=cr-at-eol full-baseline check both exit0. All six files remain byte-identical to the original independently reviewed A18/R3 evidence. Normalization would destroy exact downloaded-byte proof; no configuration or policy change is appropriate.",
+      "owner": "Codex R4 release owner",
+      "target": "This canonical acceptance and subsequent exact public CSV release verification",
+      "status": "accepted"
+    }
+  ],
+  "decisionScope": "Accept the complete frozen 143-path M0-to-C19 PLAN-REV19 candidate for its exact direct-child two-file canonical attestation. The correction implements only the directly selected prospective Whitefish identity continuation while retaining original A18/C18, all historical grants/reviews and unchanged reviewed 411-award R3 runtime. This is candidate acceptance, not a claim that real A19, post-attestation zero diagnostics, publication, Preview/CI, merge or Production verification are complete. Root execution must add only canonical manifest/review in the immediate child A19, retain its tip until delivery, require actual local and hosted-mode validators to exit0, verify published Whitefish attribution, exact Preview/CI before guarded ancestry-preserving merge, and exact Production afterward. Existing approved selected steps need no repeat user approval.",
+  "verification": [
+    "Read actual AGENTS, canonical plan including universal/independent review and REV18/REV19 contracts, BUILD_STATE, operative and preserved handoff, original REV18 evidence/canonical review, REV19 evidence, direct authority/preflight and Whitefish delivery kickoff. Original R3/R4 historical flags remain preserved; the new exact approved receipt governs this correction only.",
+    "Independently recomputed final manifest SHA25654994d1949be6107a4d8e680e1e16d01d6bc6c6b31adf550491536c69b5a53bb, complete143-path M0-to-C19 changeset, every candidate-tree blob and every corresponding working-tree byte. Final HEAD52eedbf6f9ee26cdda57b115edccbdc7629764be/treeb1c6644d3d1e32951212de4734702551089518ec is clean. Last refreeze changes only test fixture and its validation receipt; production helper/validator/policy bytes remain unchanged.",
+    "Independently verified exactly19 A18-to-C19 changed paths equal the approved21-path allowlist minus the two future canonical attestation paths. Rehashed all738 protected A18/C19 blobs and confirmed seven retained branch references. Full original state equals C19 after removing only PLAN-REV19 and restoring planRevision18; all old stages, null pointers, grants, R3/R4 objects, recovery and no-replay state remain exact.",
+    "Independently verified original canonical A18d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2 parent C185e5c140dc49250234438fa9b741064acc7aa8375, exact two canonical paths and original manifest/review hashes. Local original release branch and timestamp-hold reference remain pinned; origin/main equals M0. All seven new A18-to-C19 commits have both Whitefish author and committer with the selected email.",
+    "Independently rehashed embedded approved proposal text and proposal manifest, verified matching independent proposal-review candidate/digest and exact authority pins. Recomputed complete nine-path prospective policy manifest and its candidate blobs; policy candidate07d5d8df6b722bd83557bbcd160d68bf5cc55918 and policy receipt0ef74cbb7b7ae7b87ef6b3acc12d0e8804542efc precede implementation. Policy-review SHA256016b406992ce89f0c3623dcee3c095b6fdf9850a6a2edecf7f13207fef867442, resolved policy finding and original grants remain exact.",
+    "Confirmed append-only AGENTS/DECISIONS, complete original handoff suffix, and canonical plan changes only revision18to19 plus appended policy. Exact package transformation appends only node --import tsx scripts/test-r4-identity-delivery.ts to the existing test chain. No runtime, fixture, dependency, CI or deployment configuration path changed from the reviewed R3 checkpoint except the expressly permitted validator/test/package maintenance.",
+    "Reviewed the production helper and complete-validator integration: fixed A18/C18/M0/identity/target/effects/allowlist, preserved state and historical evidence, prospective policy binding, single-parent direct-child exactly-two-path A19, final candidate/tree/review binding, C/H0 and count-matched dispositions, exact undelivered baseline/branch/tip, historical immutability and later separately authorized runtime/state evolution. REV18 tip substitution is enabled only after full normal REV19 manifest/review validation produces no new errors. Earlier REV10/REV17 paths are unchanged.",
+    "Independently reran final node --import tsx scripts/test-r4-identity-delivery.ts: exit0,50 negative gates plus real disposable Git adapter regression. Cases cover identity/pins/grants/evidence, missing policy/review, expanded scope, wrong ancestry, non-direct/merge/extra attestation paths, post-A19 tip, final review errors and permitted later evolution with historical-proof rejection.",
+    "Independently reran unchanged REV10 governance, REV11 late-delivery and REV17 repair regressions: all exit0, including four complete large blobs and finite-reader bad hash/unreadable/oversized rejection. Independently reran R3 governance and catalog tests: exit0,411awards,192preserved outcomes across61profiles,291connections,9GPA/7schoolrules,9organizations, non-excluding sensitive skips and public CSV IDs.",
+    "Independently verified all seven preserved R3 manifests against exact immutable candidate blobs, complete changesets and PASS review candidate/digest bindings: policy12, connector-proposal9, connector-policy13, freshness-proposal9, freshness-policy13, mapping29, final119. Original final R3 review remains bound to8e419d1e7617d9ebd910c6fb74a036dd49528d7b and selected bundle SHA2569a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908.",
+    "Inspected committed timestamped full npm test/typecheck/build/intake/coverage/R3 saved-source/mapping/catalog/P9 validation records and resolved initial test type error; all required non-attestation results pass. Final fixture-only refreeze has focused test and typecheck exit0 evidence. Full suite/build/typecheck evidence is the implementation run; reviewer independently reran risk-focused checks and did not rebuild or rewrite repository artifacts.",
+    "Independently reran node --import tsx scripts/p9-production-runtime.ts --require-build-trace: exit0,41runtimefiles, closure SHA2565b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930, built trace SHA256b95475fdfb5af94e62ba35f60bf1de768048860b09b9a82986c122f9918d04f3, Google/Drive/Sheets runtime capability none, ingestion/mutation routes disabled. Unchanged source/catalog/UI/export bytes bind earlier local browser evidence without claiming a new local browser run.",
+    "Independently ran actual final node --import tsx scripts/validate-build-plan.ts and GITHUB_ACTIONS=true node --import tsx scripts/validate-build-plan.ts. Both exit1 with exactly original REV18 undelivered-tip diagnostic plus missing REV19 manifest/review/committed-attestation diagnostics. No extra diagnostic is present; these four failures are mandatory outstanding real attestation gates, never a pass.",
+    "In disposable shared local clones only, added explicitly TEST-ONLY synthetic direct-child attestations containing the complete real143-path final manifest and schema-shaped synthetic review. Both full actual validator modes exited0. A separate disposable attestation with one manifest entry removed exited1 with exactly omitted AGENTS.md and retained REV18 tip-lock diagnostics, independently proving the complete global validator prevents a helper-only or incomplete-manifest bypass. These temporary objects are not canonical acceptance or real release attestations and were never added to the governed repository.",
+    "Independently exercised final regression script from the disposable attested clone after simulated later current AGENTS/runtime/state evolution and delivered origin/main. It exits0 and constructs its historical fixture from immutable C19; the included real-adapter test still rejects changed historical policy review. This verifies the final fixture maintenance correction without changing actual candidate state or product.",
+    "Independently confirmed required git diff --check exit0, command-local format-aware complete-baseline diff exit0, and raw baseline exit2 limited exactly to six inherited BOM/CRLF CSV evidence paths. Final governed HEAD remains exact and worktree clean."
+  ],
+  "canonicalDiagnostics": {
+    "localExitCode": 1,
+    "hostedModeExitCode": 1,
+    "errors": [
+      "PLAN-REV18 undelivered branch tip must equal its attestation exactly",
+      "Missing required file: docs/evidence/PLAN-REV19-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV19.json",
+      "PLAN-REV19 requires a committed manifest/review attestation in current history"
+    ],
+    "notWaived": true,
+    "requiredBeforePublication": "Real canonical direct-child two-file A19 plus zero actual local and hosted-mode diagnostics."
+  },
+  "limits": [
+    "No governed-repository edits, commits, remediation, source/workbook/network/provider/credential access or deployment were performed. Writes were limited to disposable local test clones/artifacts and this independent review result in /private/tmp. Synthetic test attestations have no acceptance or release authority.",
+    "Preflight identity/target/remote observations are inspected implementation evidence, corroborated by local origin/main and retained refs; reviewer did not independently refresh remote state or account capability. Real published-head author attribution, exact Preview/CI and exact Production health remain mandatory execution gates. No guarantee is made that Vercel will accept the new owner-attributed tip.",
+    "Full test/build/typecheck records are implementation evidence; independent execution was focused on preservation, manifests, historical bindings, new and predecessor regressions, R3 catalog/policy, P9 trace, actual pre-attestation modes and complete-validator disposable cases. No fresh local browser session was performed.",
+    "Prior bounded connector consistency does not prove actual server head, atomic capture, complete history or current official scholarship facts. Hosted request-body/download observation limits remain unknown; unchanged-byte local browser evidence is not a universal privacy guarantee.",
+    "Five criteria conflicts, Bonita need connection hold, NTHS unverified date, first-generation/care definition recommendations, framework warning,310heldentities/312holds,26-record research queue, original257-operation no-replay and recovery objects retain existing owners/triggers. No source/workbook, paid/access, configuration, rollback, monitoring, provider/applicant interaction or R5-R7 authority is implied."
+  ]
+}
