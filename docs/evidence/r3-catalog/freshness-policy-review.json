@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only prospective R3 freshness policy correction review and remediation recheck",
+  "reviewer": "/root/r3_freshness_policy_review",
+  "reviewedAt": "2026-09-14T13:48:30Z",
+  "outcome": "PASS",
+  "policyCorrectionOnly": true,
+  "canonicalAcceptance": false,
+  "r3Complete": false,
+  "bindings": {
+    "baselineCommit": "67719dee44fc21d678f396fdbde13da6adc1334e",
+    "initialReviewCandidate": "e68c24f1bb5eb84c9ca0d26eaad38987ef45588f",
+    "candidateCommit": "73308cb659ba62c3f104867c0dc0aef85db8cf7a",
+    "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "manifestPath": "/private/tmp/r3-freshness-policy-remediated-manifest.json",
+    "manifestPathInRepository": "docs/evidence/r3-catalog/freshness-policy-manifest.json",
+    "manifestSha256": "7044c9d3c76106f5d68eb6c3653798a36d99764295c0e67eac1d09f3b0d9aea2",
+    "completeChangedPathCount": 13,
+    "approvedProposalSha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0"
+  },
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "workbookAccess": false,
+    "networkAccess": false,
+    "credentialAccess": false,
+    "providerAccountAccess": false
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "unresolved": 0
+  },
+  "findings": [
+    {
+      "id": "R3-FRESHNESS-001",
+      "severity": "medium",
+      "status": "resolved",
+      "path": "web/scripts/r3-connector-read.cjs",
+      "line": 4,
+      "title": "Reject normalized invalid timestamps",
+      "description": "The initial candidate accepted impossible dates and hour 24 because Date.parse normalized them. Synthetic February 30 and hour-24 inputs produced sanitizer PASS.",
+      "resolution": "The final candidate requires an exact normalized UTC round-trip. Invalid calendar and clock components fail, while valid leap days and supported fractional-second precision remain accepted."
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "R3-FRESHNESS-001",
+      "status": "resolved",
+      "owner": "Codex implementation agent",
+      "target": "Prospective freshness policy before source calls",
+      "rationale": "Strict UTC round-trip validation restores the approved valid-timestamp requirement for file metadata, revision metadata and capture-observation intervals.",
+      "verification": "Independently reran the expanded synthetic sanitizer and sequence tests. Invalid February 30, hour 24, non-leap February 29, April 31 and minute 60 are rejected; valid leap day and fractional timestamps pass."
+    }
+  ],
+  "checks": [
+    "Verified exact clean final candidate HEAD and ancestry from the initial reviewed candidate, proposal-review baseline and pinned delivered baseline.",
+    "Recomputed final manifest SHA256, complete 13-path baseline-to-candidate change set and every candidate Git-blob hash; working-tree files match candidate.",
+    "Verified remediation changes only the timestamp helper, its tests and the new remediation evidence record.",
+    "Verified BUILD_STATE retains only the previously reviewed R3 status, freshnessCorrection and three supplemental verification-field changes.",
+    "Verified canonical plan and decisions preserve complete baseline prefixes; handoff and both kickoff documents preserve complete baseline suffixes.",
+    "Previously reverified original policy, connector proposal, connector policy and freshness proposal manifests against their complete change sets and immutable candidate hashes. Final remediation leaves those artifacts unchanged.",
+    "Confirmed the full original validation evidence remains byte-identical.",
+    "Independently reran npm run r3:policy:check on the final candidate: PASS.",
+    "Independently reran node scripts/test-r3-connector-read.cjs on the final candidate, including remediation regressions: PASS.",
+    "Independently ran baseline-to-final-candidate git diff --check: PASS.",
+    "Initial-candidate build-plan validation independently reported exactly the three reserved REV18 diagnostics. Final remediation changes no governance inputs.",
+    "Inspected preserved full test, typecheck and build PASS evidence and the count-matched remediation record."
+  ],
+  "assessment": {
+    "authority": "The implemented correction matches the directly approved, hash-pinned proposal. It removes cross-resource timestamp equality without introducing tolerance, rounding or additional access.",
+    "freshness": "Four ordered observations require separately unchanged file timestamps, revision timestamps and connector-reported tokens around two equal complete bounded captures.",
+    "privacy": "The sanitizer retains only permitted minimal evidence, discards editor attribution and rejects unexpected metadata, invalid tokens, missing or ambiguous matching records and cap-reaching pages.",
+    "attempts": "Attempt 1 remains consumed; only attempts 2 and 3 are permitted.",
+    "preservation": "Original grants, proposals, review bindings, failed observations, historical evidence, product bytes and reserved R4 effects remain preserved."
+  },
+  "canonicalDiagnostics": {
+    "verifiedAtCandidate": "e68c24f1bb5eb84c9ca0d26eaad38987ef45588f",
+    "finalGovernanceInputsUnchanged": true,
+    "exitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ]
+  },
+  "limits": [
+    "PASS applies only to this prospective policy correction and exact final manifest. Persist the matching review before further authorized source calls.",
+    "Exact file/title/header/grid/native projection completeness and deterministic capture-digest provenance remain caller obligations; synthetic sequence validation does not establish them.",
+    "No live workbook observation was repeated. Stable connector observations do not prove actual server head, atomic snapshot, complete revision history or current official scholarship facts.",
+    "Source reconciliation and mapping review must precede product edits; final R3 review and separate R4 authority remain required.",
+    "Full test, typecheck and build evidence was inspected rather than rerun. The narrow remediation received independent targeted validation.",
+    "The three reserved canonical diagnostics remain explicit failures."
+  ]
+}
