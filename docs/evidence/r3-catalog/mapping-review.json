@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only R3 source reconciliation and proposed mapping review and remediation recheck",
+  "reviewer": "/root/r3_mapping_review",
+  "reviewedAt": "2026-09-14T14:51:03.396011+00:00",
+  "outcome": "PASS",
+  "mappingOnly": true,
+  "canonicalAcceptance": false,
+  "r3Complete": false,
+  "bindings": {
+    "baselineCommit": "33674d6cccdf94be818d619c296812a0e714ada4",
+    "candidateCommit": "9692db676645aa6cf1ed4462a47d05dfbf885dbb",
+    "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "manifestPath": "/private/tmp/r3-mapping-remediated-manifest.json",
+    "manifestSha256": "b6ca19312c2143c80bb58d366eaa674452256ecf758527e18f97dc8d612f7856",
+    "completeChangedPathCount": 29,
+    "initialReviewCandidate": "da28d330768f1efa025ca6d5e2bd6bb3582ea939"
+  },
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "workbookAccess": false,
+    "networkAccess": false,
+    "credentialAccess": false
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0,
+    "unresolved": 0
+  },
+  "findings": [
+    {
+      "id": "R3-MAPPING-001",
+      "severity": "medium",
+      "status": "resolved",
+      "path": "web/scripts/build-r3-catalog.py",
+      "line": 132,
+      "title": "Carry exact topic qualifications into new public connection messages",
+      "description": "Generic tag messages discard the saved tag meaning and qualifiedExplanation and direct the student to conditions below. Five new connections have no public summary: Work Ethic award-a4379bfbc7bd healthcare, public_service, agriculture_conservation and stem, plus Junior College/Trade School award-a4ca14a7716d female. Thus the exact saved limitations do not reach proposed student-facing copy. For example Work Ethic healthcare support is associate/LPN nursing and veterinary technology, not four-year nursing or all healthcare, and its STEM support is approved programs of two years or less. A generic non-eligibility disclaimer does not retain those award-specific qualifications required by scope section5.",
+      "requestedChange": "Use readable evidence-bound qualification text for the proposed new tag connections, especially the five without summaries. Keep existing public fields, eligibility and original connections unchanged; add a regression confirming exact qualifications remain present even when summary is null.",
+      "resolution": "Five new null-summary connections now carry exact readable approved-program and transportation/chapter qualifications, independently checked against saved source evidence."
+    },
+    {
+      "id": "R3-MAPPING-002",
+      "severity": "medium",
+      "status": "resolved",
+      "path": "web/scripts/build-r3-catalog.py",
+      "line": 124,
+      "title": "Explicitly route changed existing criteria to later policy selection",
+      "description": "The nine applied J/K deltas across eight existing awards are retained as raw field evidence, but the reconciliation has no explicit field-level conflict disposition with owner, trigger and next action. Scope4 requires conflicting existing eligibility/shortlist criteria to be recorded for explicit later policy selection while preserving accepted behavior. NATA J110, Montana STEM K169, Horatio K30, Elks K21 and Presidential J101 differ from the preserved shortlist. Work Ethic, Junior College/Trade School and Allegra school deltas already agree with current shortlist despite historical public eligibility differences; Horatio J30 already agrees with unknown shortlist GPA. Raw deltas alone do not distinguish these outcomes or establish follow-up.",
+      "requestedChange": "Record explicit per-field preserved/conflicting outcomes for all nine existing J/K deltas, pin both preserved public/shortlist behavior and the current organizer evidence, and give actual conflicts an owner, separately selected policy trigger and concrete next action. Preserve all existing decisions and fields.",
+      "resolution": "All nine existing J/K deltas now have evidence-bound field dispositions: five actual shortlist conflicts route to Kelsey for separate policy selection; four agreements preserve existing publications and route to regression checks."
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "R3-MAPPING-001",
+      "status": "resolved",
+      "owner": "Codex implementation agent",
+      "target": "Mapping proposal before product edits",
+      "rationale": "Exact qualified wording is part of the authorized connection mapping gate; it can be corrected from pinned saved tag/source evidence without further source access.",
+      "verification": "Independently inspected final changes, matched saved evidence, reran nonmutating reproduction and mapping regressions, and verified catalog and shortlist are unchanged from initial candidate."
+    },
+    {
+      "findingId": "R3-MAPPING-002",
+      "status": "resolved",
+      "owner": "Codex implementation agent",
+      "target": "Mapping proposal before product edits",
+      "rationale": "The required conflict routing prevents changed organizer criteria from silently disappearing or being promoted in later work; no new fact acceptance or runtime change is needed.",
+      "verification": "Independently inspected final changes, matched saved evidence, reran nonmutating reproduction and mapping regressions, and verified catalog and shortlist are unchanged from initial candidate."
+    }
+  ],
+  "checks": [
+    "Verified clean exact HEAD, baseline/delivered ancestry, manifest SHA256, complete28path change set, every candidate Git-blob hash and working-tree match.",
+    "Verified every mapping-pins input/output hash; historical runtime/fixtures remain untouched.",
+    "Independently reconstructed all416 current rows from original native values and257 applied replacement-field-mask operations; every full15cell entered-value vector matched.",
+    "Verified equal complete native captures, canonical row digest,417 positions,4765 returned cells,6255 addressable positions and zero formulas.",
+    "Verified all192 retained awards,16 catalog-only children,217 sources,21 portals,4 application groups and original shortlist rows/eligibility/application relationships remain unchanged except permitted public fields.",
+    "Verified219 proposed new IDs are distinct; Cat Scholarships remains a portal and withdrawn NTHS resolves to retained award-ead4360dadca with unverified numeric deadline.",
+    "Verified all38priority entities/42references,9organization support groups and5original gaps; Bonita need and new definitions are explicitly deferred.",
+    "Inspected9new GPA/7school comparisons and4program-GPA deferrals; all criteria source/review references resolve to existing pinned evidence.",
+    "Verified291unique new connections resolve to exact existing ledger tags or saved gaps and included award IDs; original206+4 connection files remain unchanged. Inspected narrower membership, Teaching, financial need and sensitive-topic wording.",
+    "python3 web/scripts/test-r3-mapping.py PASS with PYTHONDONTWRITEBYTECODE=1.",
+    "node web/scripts/test-r3-native-capture.cjs PASS.",
+    "node web/scripts/test-r3-connector-read.cjs PASS.",
+    "npm run r3:policy:check PASS.",
+    "StudentCatalogSchema proposed catalog parse PASS.",
+    "git diff baseline candidate --check PASS.",
+    "Final recheck: verified clean9692db6 HEAD and ancestry from initial candidate, original baseline and delivered baseline; recomputed final29path manifest, every Git blob and working-tree hash.",
+    "Final recheck: PYTHONDONTWRITEBYTECODE=1 python3 web/scripts/build-r3-catalog.py --check PASS; exact reproducibility of all mapping outputs and pins without writes.",
+    "Final recheck: mapping, native capture, connector/freshness tests, r3:policy:check and proposal schema validation all PASS.",
+    "Final recheck: inspected saved Work Ethic and WTS evidence supporting precise connection restrictions; five null-summary reasons now preserve them.",
+    "Final recheck: independently classified nine J/K deltas as five conflicts/four agreements; dispositions bind original field evidence and preserved shortlist with owners/triggers/next actions.",
+    "Final recheck: catalog and shortlist equal initial proposal exactly; original206+4 connection files and historical publications remain untouched.",
+    "Final recheck: baseline-to-final git diff --check PASS; direct canonical validator again produced exactly the three reserved REV18 failures."
+  ],
+  "canonicalDiagnostics": {
+    "npmPlanCheck": "Initial candidate npm wrapper blocked by sandbox tsx IPC EPERM; direct equivalent used on initial and final candidates, with exact three reserved failures, never PASS.",
+    "directEquivalentCommand": "node --import tsx scripts/validate-build-plan.ts",
+    "exitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ],
+    "verifiedAtCandidate": "9692db676645aa6cf1ed4462a47d05dfbf885dbb"
+  },
+  "limits": [
+    "PASS applies only to the exact final source-reconciliation and mapping proposal. Product implementation and full final R3 review remain required; canonical acceptance and release remain ungranted.",
+    "No source calls were repeated. Capture provenance is saved bounded connector evidence, not independent server-head/atomic/official-fact proof.",
+    "No product runtime edits were reviewed or authorized by this review. Full local runtime/browser/privacy/download matrix and final independent R3 review remain required.",
+    "Exact reserved canonical diagnostics remain failures. R4 authority, canonical acceptance and all external release actions remain separately gated."
+  ]
+}

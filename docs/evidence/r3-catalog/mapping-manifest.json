@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "R3 source reconciliation and proposed mapping only; not canonical attestation",
+  "baselineCommit": "33674d6cccdf94be818d619c296812a0e714ada4",
+  "candidateCommit": "9692db676645aa6cf1ed4462a47d05dfbf885dbb",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "4aa60d7cd75ea7d18211ac9cbc361930f031501fed7b36b8cc732ab59add2443"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "c070920da7f6152081ebe150163e3ff8338b867344dda59f195fc48109484b9a"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/MAPPING_PROPOSAL.md",
+      "sha256": "9c3f533541a3d405134a0430d5cd9dfa2f31d5518031f936f319c3580ed7f18e"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-1-receipt.json",
+      "sha256": "f17da166669789929c754a6718e79bf8a400dbde09a87f81e129e835bd3f1597"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-1.json",
+      "sha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-2-receipt.json",
+      "sha256": "70de90104ce8734e3ab7a21ca754cd59c10bf0052be30de8fc6b79fa74ad31c0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-2.json",
+      "sha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-header.json",
+      "sha256": "6ae87f21471600d8370ffb81aec70c5d78eb140935daf477a83608894b74c62c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-1.json",
+      "sha256": "2c0465f0f837c8e53e43b17983c74e144ac3f21c6592502a89e16de98df2187c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-2.json",
+      "sha256": "25224ec60c3fa87baaf1e1f204918f5bead01691fffafd5e3a3cca8f6462fd3b"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-3.json",
+      "sha256": "290a46f9acf3e3b66678ca48d5a31a94eb21443f0e4461e181f0bf462137b3c3"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-4.json",
+      "sha256": "b13ec36044628ec347181c2107307fa321d22c9b2da06218ad7baef4030ae413"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-start.json",
+      "sha256": "e9a446b7cd6ea7314b30de941953e646a2fa8dc38cc2b47f5b79f14070b7e5c7"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/capture-verification.json",
+      "sha256": "54bf777166fc94b597883e69d27d063fb246f682760d60e5e594d307b1982b32"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/control-inventory.json",
+      "sha256": "1367640e5622f8ec236f1b0239150870c754ed0326ac6d601b71b4e383c5b9df"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-bundle-proposal.json",
+      "sha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-connections.json",
+      "sha256": "faed1cee9f2b9df06053bcca4e95aff7cd0b0fb7d595b99a232ae1aba6b104fc"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-criteria.json",
+      "sha256": "aa8a6d67203ef6e53fccf56b4cfbaa441ab936507af1237c081bc432e10c3852"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-fields.json",
+      "sha256": "3eeba45468ac4eefd3d7d98a318292ecf6bfb9169751f30f7f9d74c9d78a49c5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-pins.json",
+      "sha256": "7f57107f322ae5aa9d3ed4114b675a69270dee363105d9cbbf72443ac01c8dce"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-reconciliation.json",
+      "sha256": "24e857d3ae2a795f7a0a1a001e93ac80aa8aeca9ff3f3b21b586de92dc982143"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-remediation.json",
+      "sha256": "90baaccdee455bcfbac734fc923f626a95ddb63c95451e75e7c4fbf0a38a6dd0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-validation.json",
+      "sha256": "00fd8f41e37d67c7194e1f8c7a968e8a69f6152f87a3ff234119ebf2d115960f"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "d692d0f31db4974fe9e33b81722ae5d8ba678c9c6a9196bc5974a40244dd4dd3"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "27c23b8c9c8c44f1fbfa71b92215f4c584226c79ed561010e0cc7b226c15f74e"
+    },
+    {
+      "path": "web/scripts/build-r3-catalog.py",
+      "sha256": "f0044d47f296ffe82a8616f39bc35d4fcf7b7aed0ef0c983e74241c20029392d"
+    },
+    {
+      "path": "web/scripts/r3-native-capture.cjs",
+      "sha256": "0e98916a675c35c403cdc83c98121e40cf2d807d43c9cb14fcc2470b12910eae"
+    },
+    {
+      "path": "web/scripts/test-r3-mapping.py",
+      "sha256": "921a214d1630777cde7f2127db6b03821e722b8a1f1e5d422abe4ccc115fde4c"
+    },
+    {
+      "path": "web/scripts/test-r3-native-capture.cjs",
+      "sha256": "19d1def112e4b38124627d3cc14a38d0e0ee8964b7bfd82491195a1568f99883"
+    }
+  ]
+}
