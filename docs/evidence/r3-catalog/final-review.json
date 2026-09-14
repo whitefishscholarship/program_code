@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only final R3 local candidate review",
+  "reviewer": "/root/r3_final_review",
+  "reviewedAt": "2026-09-14T15:08:46.589866+00:00",
+  "outcome": "PASS",
+  "localR3Completion": true,
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false,
+  "bindings": {
+    "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "candidateCommit": "8e419d1e7617d9ebd910c6fb74a036dd49528d7b",
+    "implementationBaseline": "1ba4d93a1d29eab81690b937bac8ff980b24f9ff",
+    "resumeBaseline": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+    "manifestPath": "/private/tmp/r3-final-manifest.json",
+    "manifestSha256": "ee5c3804d5c3a1f92ae97fc090dd04e59eef0926b7ff3d3b73debb42528b5f0f",
+    "completeChangedPathCount": 119,
+    "mappingCandidate": "9692db676645aa6cf1ed4462a47d05dfbf885dbb",
+    "mappingReviewCheckpoint": "1ba4d93a1d29eab81690b937bac8ff980b24f9ff",
+    "mappingManifestSha256": "b6ca19312c2143c80bb58d366eaa674452256ecf758527e18f97dc8d612f7856",
+    "selectedBundleSha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908"
+  },
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "sourceAccess": false,
+    "providerAccess": false,
+    "credentialAccess": false,
+    "externalNetworkAccess": false,
+    "localLoopbackSyntheticBrowserAccess": true,
+    "reviewAndBrowserOutputLocation": "/private/tmp only"
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "unresolved": 0
+  },
+  "findings": [
+    {
+      "id": "R3-FINAL-001",
+      "severity": "low",
+      "status": "accepted",
+      "title": "Saved CSV download evidence triggers the raw baseline whitespace diagnostic",
+      "path": "docs/evidence/r3-catalog/browser/",
+      "description": "The six committed public CSV downloads retain the serializer BOM and CRLF bytes. A raw baseline-to-candidate git diff --check reports CR characters as trailing whitespace and exits2. Required clean-worktree git diff --check passes, and a separate command-local core.whitespace=cr-at-eol baseline check exits0. These are expected CSV line endings rather than a product defect; normalizing the files would destroy byte-exact downloaded evidence.",
+      "requestedChange": "Retain exact downloaded bytes and record this diagnostic and its format-aware verification; do not change repository Git configuration or acceptance policy."
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "R3-FINAL-001",
+      "status": "accepted",
+      "owner": "Codex R3 implementation and future R4 review owner",
+      "target": "This final local review and future complete-candidate R4 verification",
+      "rationale": "The export serializer intentionally emits CRLF; independently downloaded CSVs exactly equal committed evidence. Preserve artifact fidelity while transparently distinguishing raw whitespace diagnostics from product and source validation. No code or evidence rewrite is appropriate.",
+      "verification": "git diff --check exit0; git -c core.whitespace=cr-at-eol diff a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32 HEAD --check exit0; six independently downloaded CSV files byte-identical to committed records."
+    }
+  ],
+  "checks": [
+    "Followed canonical repository read order and inspected R3 scope sections3-7, REV18 direct authority, policy supplements, BUILD_STATE, local-candidate evidence and operative R3/R4 handoffs. No delivered R1/R2 stage reopened.",
+    "Verified exact clean frozen HEAD and ancestry from delivered baseline, R2 resume and reviewed mapping checkpoint. Recomputed full119path manifest SHA256 and complete baseline-to-candidate changed-path set; every candidate Git blob equals manifest and working-tree bytes.",
+    "Independently verified475 protected artifacts byte-identical to mapping-review checkpoint and all5 preserved branch references unchanged.",
+    "Verified all6 prior R3 policy/proposal/mapping manifests against their immutable Git candidate blobs, exact complete changesets, independent review candidate and manifest digest bindings. Reviewed resolved mapping findings and current deferred routes.",
+    "Inspected all final runtime changes and test adaptations. New bundle is byte-identical to reviewed proposal and pins bind generator, mapping manifest/review and reconciliation. Historical fixtures and existing criteria/reasons remain unchanged.",
+    "node --import tsx scripts/test-r3-catalog.ts PASS:61 representative profiles,411 awards,192 retained outcomes/reasons,291 connections,9GPA/7school rules,9organizations, OR relevance and skip/nonselection/public CSV checks.",
+    "node scripts/check-r3-capture.cjs; node scripts/test-r3-native-capture.cjs; node scripts/test-r3-connector-read.cjs all PASS: exact source identities, native captures, four stable observations and negative scope/shape/freshness/privacy tests.",
+    "PYTHONDONTWRITEBYTECODE=1 python3 scripts/build-r3-catalog.py --check; PYTHONDONTWRITEBYTECODE=1 python3 scripts/test-r3-mapping.py PASS: reproducible exact reviewed outputs,257operations/416rows/192retained/219new/38priority/42references/9organizations/5gaps and all preserved relationships/deferrals.",
+    "node --import tsx scripts/test-r3-catalog-governance.ts PASS: exact approved scope, independent policy bindings, reserved effects and local-only exception.",
+    "Inspected committed exact commands/timestamps/output/exitcodes for full npm test, typecheck, build, intake, coverage, P9, source, mapping and catalog checks; successful reruns preserve the original TypeScript-test failures and existing framework warning.",
+    "node --import tsx scripts/p9-production-runtime.ts --require-build-trace PASS: built runtime closure and trace have no Google/Drive/Sheets production capability.",
+    "Independently verified committed browser evidence hashes and visually inspected mobile result/card screenshots; inspected full browser regression code.",
+    "Independent synthetic local browser rerun PASS360px and1440px using the existing regression with only output redirected to /private/tmp/r3-independent-final-browser. Exact API/catalog/compatibility IDs, all411awards, visible CSV IDs/order, all nine organizations, Teaching, need/skip/unknown/negative responses, explicit sorts, edit/reset/reload, full optional inventory, complete keyboard flow and actual saved downloads verified. Fresh six CSV files equal committed downloads byte-for-byte.",
+    "Browser observations saw no answer storage, cookies, answer URLs/requests or console output in these bounded local runs. Health separates selected organizer snapshot229 from preserved matching facts225; source capabilities none.",
+    "Independently reran direct canonical validator: exactly3 reserved REV18 diagnostics, exit1, never PASS. Final handoff requires matching local review and keeps R4 unauthorized, with all original hold/recovery/research owners/triggers retained.",
+    "Final repository status remains clean at8e419d1e7617d9ebd910c6fb74a036dd49528d7b."
+  ],
+  "canonicalDiagnostics": {
+    "command": "node --import tsx scripts/validate-build-plan.ts",
+    "equivalentTo": "npm run plan:check",
+    "exitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ],
+    "notWaived": true
+  },
+  "independentBrowser": {
+    "path": "/private/tmp/r3-independent-final-browser/browser.json",
+    "sha256": "54157e25e801593fcc843899027e0e393fdfe7f5c651f08cef9c61090d4c62fa",
+    "status": "PASS",
+    "viewports": [
+      360,
+      1440
+    ],
+    "savedCsvMatchesCommitted": 6,
+    "initialAttempt": "Sandbox Chromium launch failed with MachPortRendezvous permission denied; permitted local-only retry passed both viewports. Initial failure is environment evidence, not a browser PASS."
+  },
+  "limits": [
+    "PASS is final local R3 completion for this immutable candidate only. It is not canonical stage acceptance, an attestation, remote Git authority, Preview/merge/Production authority, hosted verification or R4 execution.",
+    "No source/provider/credential accesses were repeated. Source capture is saved bounded connector observational consistency, not actual server-head, atomic snapshot or current official award verification.",
+    "Browser proof is synthetic and local to the existing production build. It does not establish universal privacy or resolve historical hosted request/download visibility limits.",
+    "Five existing criteria conflicts require separate Kelsey policy selection; Bonita need remains deferred to separately authorized research; first-generation/care definitions are recommendations; NTHS46113 remains unverified. Historical holds/recovery/research routes remain intact.",
+    "Original full npm test/typecheck/build are inspected implementation evidence; reviewer independently reran targeted source/mapping/catalog/policy/trace/canonical checks and complete local browser regression, not a new complete rebuild."
+  ]
+}
