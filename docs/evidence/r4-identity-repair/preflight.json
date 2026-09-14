@@ -64,5 +64,21 @@
   "limits": [
     "Vercel target and linked owner observations are preserved evidence, not a new deployment or current health claim.",
     "No source/workbook or paid/access change."
-  ]
+  ],
+  "providerTargetRecheck": {
+    "recordedAt": "2026-09-14T16:51:41.167Z",
+    "method": "Authenticated same-origin Vercel GET /api/v9/projects/web?teamId=team_6CAjRq58n0WvAH49otKSQbA7 through existing signed-in browser",
+    "httpStatus": 200,
+    "accountId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "name": "web",
+    "rootDirectory": "web",
+    "framework": "nextjs",
+    "git": {
+      "org": "whitefishscholarship",
+      "repo": "program_code",
+      "productionBranch": "main"
+    },
+    "limits": "Target binding only; no deployment or health claim."
+  }
 }

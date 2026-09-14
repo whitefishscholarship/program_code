@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-14T16:51:41.167Z",
+  "policyCandidate": "07d5d8df6b722bd83557bbcd160d68bf5cc55918",
+  "requiredPreAttestationDiagnostics": [
+    "PLAN-REV18 undelivered branch tip must equal its attestation exactly",
+    "Missing required file: docs/evidence/PLAN-REV19-manifest.json",
+    "Missing required file: docs/reviews/PLAN-REV19.json",
+    "PLAN-REV19 requires a committed manifest/review attestation in current history"
+  ],
+  "records": [
+    {
+      "command": "npm test",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:49:09.383Z",
+      "finishedAt": "2026-09-14T16:50:02.187Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 test\n> tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-plan-rev9-interview-inventory.ts && tsx scripts/test-plan-rev10-governance.ts && tsx scripts/test-plan-rev11-late-delivery.ts && tsx scripts/test-plan-rev12-row-source.ts && node --import tsx scripts/test-p8m-proposals.ts && node --import tsx scripts/test-p8m-acceptance.ts && tsx scripts/test-production-authority.ts && tsx scripts/test-p9-evidence-v2.ts && node --import tsx scripts/test-p9-production-runtime.ts && node --import tsx scripts/p9-trusted-proof.ts --mode=self-test && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts && tsx scripts/p7-student-catalog.ts --check && tsx scripts/test-p7-student-catalog.ts && tsx scripts/p8-monitoring.ts --check && tsx scripts/test-p8-monitoring.ts && tsx scripts/test-p8r-interview.ts && node --import tsx scripts/test-p8f-preimplementation.ts && node --import tsx scripts/test-p8f-interview.ts && node --import tsx scripts/test-spreadsheet-shortlist.ts && node --import tsx scripts/test-interview-relevance-governance.ts && node --import tsx scripts/test-interview-relevance.ts && node --import tsx scripts/test-intake-governance.ts && node --import tsx scripts/test-scholarship-intake.ts && node --import tsx scripts/test-intake-promotion.ts && node --import tsx scripts/test-plan-rev17-rev15-delivery-repair.ts && node --import tsx scripts/test-interview-coverage.ts && node --import tsx scripts/test-r3-catalog-governance.ts && node --import tsx scripts/test-r3-catalog.ts && node --import tsx scripts/test-r4-identity-delivery.ts\n\nPASS  #3a $5,000 NOT grounded by $50,000\nPASS  #3b GPA 3.5 NOT grounded by $13.50\nPASS  #3c real $5,000 grounds\nPASS  #3d real GPA 3.5 grounds\nPASS  range $1,000\u2013$5,000 needs both numbers\nPASS  range fails if one number missing\nPASS  sentinel 'Any' always grounds\nPASS  hallucinated name token-fails\nPASS  groundRecord blanks fabricated name\nPASS  groundRecord blanks fabricated amount\nPASS  groundRecord blanks fabricated GPA (3.9 vs 2.5)\nPASS  groundRecord blanks fabricated summary\nPASS  confidence higher for clean grounded record\nPASS  confidence within 5..98\nPASS  isFundTotal flags '$7.5 million fund'\nPASS  isFundTotal flags '$4.2 million endowment'\nPASS  isFundTotal passes a real award\nPASS  relevance: graduate scholarship excluded\nPASS  relevance: 'for Graduates' excluded\nPASS  relevance: type rating -> review\nPASS  relevance: membership -> review\nPASS  relevance: undergraduate NOT excluded\nPASS  relevance: plain HS scholarship ok\nPASS  audience: national HS scholarship fits\nPASS  audience: other-state residency excluded\nPASS  audience: Alaskan residents excluded\nPASS  audience: AEA members excluded\nPASS  audience: teachers excluded\nPASS  audience: search platform excluded\nPASS  audience: training-location not a residency restriction\nPASS  audience: Dawson CC institution-specific held\nPASS  audience: MSU (in-state flagship) still fits\nPASS  audience: FVCC (neighboring) still fits\nPASS  audience: generic 'accredited college' NOT flagged\nPASS  audience: non-Whitefish HS restriction held\nPASS  normalizeAmount ignores donor total\nPASS  normalizeGpa qualify over maintain\nPASS  dedupe by name subset\nPASS  dedupe by name equal\nPASS  distinct name on SAME url is NOT a dup\nPASS  non-duplicate returns null\nPASS  findUrlCollision reports shared url\nPASS  findUrlCollision null when unique\nPASS  ground: fabricated name w/ shared year blanked\nPASS  ground: legit amount w/ filler words still grounds\nPASS  ground: real name still grounds\nPASS  dedupe: distinct shorter name NOT skipped\nPASS  dedupe: same-base diff-amount NOT skipped\nPASS  dedupe: exact still caught\nPASS  dedupe: all-stopword name uses full-string\nPASS  audience: 'Ohio residents' excluded\nPASS  audience: 'Texas high school seniors' excluded\nPASS  audience: demonym 'Ohioans' excluded\nPASS  audience: 'graduated from a Florida high school' excluded\nPASS  audience: 'any four-year college or university' fits\nPASS  audience: 'an accredited college' fits\nPASS  audience: 'University of Alabama' excluded\nPASS  audience: MSU still fits (institution)\nPASS  audience: 'members of the public' NOT excluded\nPASS  audience: 'exclusively for active NTHS members' excluded\nPASS  audience: Folds of Honor (military family) excluded\nPASS  audience: 'junior college/trade school' fits\nPASS  audience: 'one U.S. college or university' fits\nPASS  audience: 'a U.S. university' fits\nPASS  audience: 'Ohio State University' still excluded\nPASS  relevance: grad-inclusive stays ok\nPASS  relevance: 'graduate degree' excluded\nPASS  relevance: 'registered nurse continuing education' review\nPASS  relevance: 'graduating high school seniors' stays ok\nPASS  fund: '$1 million scholarship' is NOT a fund total\nPASS  fund: '$7.5 million fund' IS a fund total\nPASS  fund: '$2,000 from the Smith Memorial Fund' is NOT\nPASS  amount: bare $10,000 kept\nPASS  audience: 'attend Harvard University' excluded\nPASS  audience: 'Duke University freshmen' excluded\nPASS  audience: MSU prose still fits\nPASS  audience: generic 'four-year college or university' still fits\nPASS  dedupe: comma vs no-comma amount\nPASS  dedupe: year-suffix near-dup caught\nPASS  dedupe: different amount NOT a dup\nPASS  dedupe: distinct longer name still NOT a dup\nPASS  audience: 'members of the senior class' fits\nPASS  audience: 'members of the FFA' excluded\nPASS  audience: 'gold star students' (metaphor) fits\nPASS  audience: 'Gold Star families' excluded\nPASS  relevance: 'any student in a doctoral program' excluded\nPASS  relevance: 'open to all doctoral candidates' excluded\nPASS  relevance: HS+grad inclusive still ok\nPASS  fund: '$5 million endowment funds the award' IS a fund total\nPASS  audience: 'remainder of funds' fits (no false demonym)\nPASS  audience: 'for Ohioans' excluded\nPASS  audience: 'current NTHS members' excluded\nPASS  audience: 'members enrolled in automotive' excluded\nPASS  audience: 'must be active OBAP members' excluded (plural)\nPASS  audience: 'must be PAPA members' excluded\nPASS  audience: 'current WAI members' excluded\nPASS  audience: 'dual-membership' excluded\nPASS  audience: 'AOPA members receive' excluded\nPASS  audience: 'members of the senior class' still fits\nPASS  audience: 'community members' (benign) still fits\nPASS  audience: clean national 'AFSA awards' fits\nPASS  audience: national welding (Miller) fits\nPASS  audience: 'Epic Flight Academy' scholarship excluded\nPASS  audience: 'United Aviate Academy' excluded\nPASS  audience: 'must relocate to' excluded\nPASS  audience: national flight-training scholarship (no academy) fits\nPASS  audience: AOPA org-list stub excluded\nPASS  link: 'Paper Application' has no URL\nPASS  link: 'Online Application' has no URL\nPASS  link: extracts URL + strips trailing period\nPASS  link: bare URL kept\nPASS  link: HTTP 200 OK\nPASS  link: HTTP 301 OK\nPASS  link: HTTP 404 DEAD\nPASS  link: HTTP 410 DEAD\nPASS  link: HTTP 403 INCONCLUSIVE (bot-block)\nPASS  link: HTTP 429 INCONCLUSIVE (rate-limit)\nPASS  link: HTTP 500 INCONCLUSIVE (server)\nPASS  link: ENOTFOUND DEAD (DNS, e.g. Folds of Honor)\nPASS  link: ECONNREFUSED DEAD\nPASS  link: ETIMEDOUT INCONCLUSIVE\nPASS  link: CERT_HAS_EXPIRED INCONCLUSIVE\nPASS  audience: Elks 'do not have to be a member' fits\nPASS  audience: 'parents do NOT need to be a member' fits\nPASS  audience: 'members of a household' (income def) fits\nPASS  audience: 'a member of the community nominates' fits\nPASS  audience: 'also open to AEA member companies' fits\nPASS  audience: 'FFA members who are graduating seniors' fits\nPASS  audience: 'DECA members graduating seniors' fits\nPASS  audience: 'STEM members and the public' fits\nPASS  audience: 'do not need to relocate' fits\nPASS  audience: 'traditional public high school' fits\nPASS  audience: 'must be active NTHS members' STILL excluded\nPASS  audience: 'MANRRS members and their children' STILL excluded\nPASS  audience: 'must attend Lincoln Charter School' STILL excluded\nPASS  audience: 'must be able to relocate to Florida' STILL excluded\nPASS  dynamic: mykaleidoscope.com is dynamic\nPASS  dynamic: grantinterface.com is dynamic\nPASS  dynamic: oche.my.site.com (Salesforce) is dynamic\nPASS  dynamic: scholarship.aws.org is dynamic\nPASS  dynamic: a normal org site is NOT dynamic\nPASS  dynamic: non-URL method text is NOT dynamic\nPASS  dynamic: KNOWN_DYNAMIC_HOSTS seeded\nPASS  target: off-host redirect flagged\nPASS  target: same-org subdomain redirect is NOT off-host\nPASS  target: dynamic SaaS host flagged\nPASS  target: near-empty HTML flagged as dynamic shell\nPASS  target: .pdf url flagged PDF\nPASS  target: pdf content-type flagged PDF\nPASS  target: page with no apply keyword flagged LIKELY_NOT_APPLY\nPASS  target: a clean same-host apply page has NO flags\n\nALL PASS\nPASS  row length equals live header count (15)\nPASS  \"In-State / National\" mapped correctly\nPASS  \"Portal/ Scholarship\" mapped correctly\nPASS  \"Amount\" mapped correctly\nPASS  \"Scholarship Location/Information\" mapped correctly\nPASS  \"Name of Scholarship\" mapped correctly\nPASS  \"Stated Min. GPA\" mapped correctly\nPASS  \"School Type (2-or 4-Year, or Trade)\" mapped correctly\nPASS  \"Renewing/ Non-Renewing\" mapped correctly\nPASS  \"Acute Financial Need Prioritization\" mapped correctly\nPASS  \"Accepts Gap Year Applications Upon Return\" mapped correctly\nPASS  no PII value present in row\nPASS  Name is in Name column, not Summary\nPASS  scraped-spelling record maps name\nPASS  scraped-spelling PII dropped\nPASS  assertWritableHeaders accepts clean 15-col schema\nPASS  assertWritableHeaders refuses tab with PII column\nPASS  assertWritableHeaders refuses missing student column\nPASS  assertWritableHeaders refuses an unexpected extra column\nPASS  assertWritableHeaders tolerates trailing blank header cells\nPASS  sanitizeCell prefixes a leading '=' formula\nPASS  sanitizeCell prefixes leading +\nPASS  sanitizeCell prefixes leading @\nPASS  sanitizeCell prefixes leading -\nPASS  sanitizeCell leaves a normal amount untouched\nPASS  sanitizeCell leaves a normal name untouched\nPASS  sanitizeCell leaves empty untouched\nPASS  mapped formula Name is neutralized\nPASS  mapped formula Summary is neutralized\nPASS  mapped normal Amount untouched\n\nALL PASS\nPASS  isPdfUrl: .pdf path\nPASS  isPdfUrl: .pdf with query\nPASS  isPdfUrl: uppercase .PDF\nPASS  isPdfUrl: html not pdf\nPASS  isPdfUrl: pdf in querystring only is not a pdf url\nWarning: Setting up fake worker.\nPASS  parsePdfBuffer returns substantial text\nPASS  extracts the document title\nPASS  extracts scholarship wording\nPASS  extracts the year context\n\nALL PASS\nPASS  'Annual \u2014 May 31' resolves to a hard date\nPASS  'Annual \u2014 May 31' is next year (already past this year)\nPASS  'December 1' resolves to a hard future date this year\nPASS  'March 15' is NOT year 2001 (regression)\nPASS  'March 15, 2027' respects explicit year\nPASS  'Mar. 1, 2020' explicit past year => expired\nPASS  '15 May' (day-month) resolves\nPASS  '3/15/2027' hard\nPASS  'Opens 12/15' opens-only\nPASS  '12/1 (opens) - 3/1 (closes)' picks close date\nPASS  'Rolling' => rolling\nPASS  'Closed' => expired\nPASS  empty => tbd\nPASS  'Info available in December' (no day) => tbd\nPASS  undefined input => tbd (no throw)\nPASS  processor keeps \"March 15\" (not a year-2001 past-due exclude)\nPASS  processor keeps \"Annual \u2014 May 31\" (not a year-2001 past-due exclude)\nPASS  processor keeps \"December 1\" (not a year-2001 past-due exclude)\nPASS  processor keeps \"Annual \u2014 Feb 15 (opens Oct)\" (not a year-2001 past-due exclude)\nPASS  processor marks \"3/1/2020\" expired\nPASS  processor tolerates a numeric Due Date cell\n\nALL PASS\nPASS  open 'dependent of a resident' scholarship SURVIVES\nPASS  Elks-MVS-style ('dependents welcome') SURVIVES\nPASS  'honors veterans' narrative scholarship SURVIVES\nPASS  range-amount scholarship SURVIVES\nPASS  'must be a veteran' is EXCLUDED for a general applicant\nPASS  'dependents of employees' is EXCLUDED for a general applicant\nPASS  'Elks members' is EXCLUDED for a general applicant\nPASS  'must be a veteran' SURVIVES when the student ticks military\nPASS  '$500 - $2,000' amount_max is 2000 (not 500)\nPASS  '$1,000-$50,000' amount_max is 50000\nPASS  '$5,000' single amount_max is 5000\nPASS  numeric Amount cell does not throw\n\nALL PASS\nPASS  rejects AWS metadata IP\nPASS  rejects localhost\nPASS  rejects 127.0.0.1\nPASS  rejects 10.x private\nPASS  rejects 192.168.x private\nPASS  rejects 172.16.x private\nPASS  rejects 172.31.x private\nPASS  rejects IPv6 loopback\nPASS  rejects *.local\nPASS  rejects file:// scheme\nPASS  rejects gopher:// scheme\nPASS  rejects 0.0.0.0\nPASS  rejects garbage\nPASS  allows a normal https host\nPASS  allows a normal http host\nPASS  allows a public host that merely contains digits\nPASS  allows 172.32.x (public range)\n\nALL PASS\nP1 INVENTORY TEST ALL PASS dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2\ndelivery state history: PASS (2 accepted integrations; every deletion/downgrade/rebind rejected; latest equality and later evolution allowed)\ngovernance history: PASS (revision/amendment rollback, every P3-P8 field, P5/P8 exclusions, and evidence mutation rejected)\ndelivery package history: PASS (baseline governance and exact P2 scripts preserved; omissions and unrelated mutation rejected)\nPLAN REV9 INVENTORY TEST PASS pinnedBlobs=7 criteria=38 earlierAffiliations=6 typeOnly=8\nPLAN REV10 GOVERNANCE TEST PASS criteria=82 aliases=50 operators=10\nPLAN REV11 LATE DELIVERY TEST PASS exact target, authority, effects, and path boundary\nPLAN REV12 ROW SOURCE TEST PASS exact pin, row completeness, unknown blanks, no invented denominators, and no-write boundary\nP8M PROPOSAL TEST PASS baseline package and 19 fail-closed adversarial mutations\nP8M ACCEPTANCE TEST PASS baseline plus 7 fail-closed mutations\nP9 production authority: PASS (exact IDs/tabs/backups, no-write, immutable receipt paths, entry/post-cutover proof states, owners)\nP9 evidence v2: PASS (strict schemas, chronology, derived IDs/config, OIDC gate, same-runtime rollback, complete writer inventory)\nP9 PRODUCTION RUNTIME TEST PASS files=41 publication=16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07 closure=5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\nP9 trusted proof self-test: PASS (host, provider, predecessor, chronology, strict v2, and semantic negatives)\nP2 DATA MODEL TEST ALL PASS dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295\nP3 ACQUISITION CHECK PASS b577e6f2ec3b\nP3 ACQUISITION TEST ALL PASS b577e6f2ec3b\nP4 VERIFICATION CHECK PASS links=270 offline=4 cycles=20 fields=9 conflicts=5 reviews=300 digest=522d42a1bb62\nP4 VERIFICATION TEST ALL PASS links=270 hiddenApp=92 fields=9 digest=522d42a1bb62\nP5 SOURCE QUEUE CHECK PASS records=197 sources=213 fetch=50 manual=163 digest=6aa88419493b\nP5 REMEDIATION TEST PASS records=197 sources=213 form/login boundary enforced\nP5 PREBOUNDARY DEAD-LINK CHECK PASS receipts=7 digest=a1f1a7ed253f\nP5 PREBOUNDARY STATIC-APPLICATION CHECK PASS receipts=2 digest=480ef6b4f176\nP5 PUBLIC PROBE CHECK PASS sources=50 digest=38aac545f0c4\nP5 FIRECRAWL EVIDENCE CHECK PASS sources=50 retrieved=48 inconclusive=2 digest=ee5d977d8fce\nP5 AUDIT CHECK PASS rows=197 confirmed=0 corrected=10 manual=187 proposals=25 mandatoryReview=10 sample=38\nP5 AUDIT TEST PASS rows=197 proposals=25 mandatory=10 sample=38 privacy-safe\nP5 POSTWRITE CHECK PASS proposals=25 revision=222->223 rows=197 targets=25 failures=0\nP6 COVERAGE CHECK PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 fvcc=169 terminal=0 slotsObservedMin=71 legacyBindings=7 digest=d7ae32194b75\nP6 COVERAGE TEST PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 exclusions=186 slotsObservedMin=71 legacyBindings=7 authority=6 nearNameReviews=2\nP7 student catalog check passed: 192 awards, 217 sources (21 portals), 0 active, 192 unknown.\nP7 API, count, cycle, architecture-matrix, privacy, and export tests passed.\nP8 monitoring check passed: targets=1028 dryRuns=2 simulations=6 recovery=complete schedule=disabled.\nP8 full-denominator monitoring, executed retry/rate/freshness, HMAC recovery, idempotency, schedule-boundary, and privacy tests passed.\nP8R INTERVIEW TEST PASS awards=192 match=0 possible=192 conflicts=0 matrixVisualCells=30\nP8F PREIMPLEMENTATION TEST PASS academic=6 activities=4 volunteer=1 financial=1 criteria=38 affiliations=6 typeOnly=8 dispositions=30 visualCells=30 acceptedFacts=0\nP8F INTERVIEW TEST PASS awards=192 academic=6 activities=4 volunteer=1 financial=1 criteria=38 acceptedFacts=0 ruleGates=51\nSHORTLIST PASS [{\"match\":69,\"possibleMatch\":97,\"knownConflict\":26,\"total\":192},{\"match\":28,\"possibleMatch\":97,\"knownConflict\":67,\"total\":192},{\"match\":55,\"possibleMatch\":97,\"knownConflict\":40,\"total\":192},{\"match\":47,\"possibleMatch\":143,\"knownConflict\":2,\"total\":192}]\nRelevance local preparation boundary PASS; no hosted authority.\nRELEVANCE PASS {\"pairedConnections\":206,\"enabledControls\":38,\"sourceRows\":197,\"awards\":192,\"academicRegression\":[166,125,152,190]}\nIntake local preparation boundary PASS; no hosted authority.\nIntake recovery, exact authority, newer-edit and no-blind-retry gates PASS (synthetic only).\nIntake proposal consistency, field provenance, controlled mapping and newer-edit fixtures PASS.\nIntake closure rejects lost children, pending triage, orphaned recommendations and unactionable holds.\nNative row projections preserve exact display text and reject independently tampered ledger values.\nIntake deterministic exact targets, alias markers, rich links, append protection, partial readback, newer edits, tamper and no-blind-retry fixtures PASS; zero source writes.\nREV17 PASS: four complete large blobs; bad hashes, unreadable/oversized objects; valid current/canonical contexts; targeted authority, protected-file, missing/drifted main, wrong branch, premature REV16, ancestry/path rejection\nCOVERAGE PASS: core-only results, four connections, no/unknown/skip, discovery/fact separation, OR, public CSV, source pins and authority boundary\nR3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\nR3 CATALOG PASS {\"awards\":411,\"preservedAwards\":192,\"profiles\":61,\"pairedConnections\":291,\"newGpaRules\":9,\"newSchoolRules\":7,\"organizations\":9,\"publicCsvIds\":true,\"sensitiveSkipNonExcluding\":true}\nR4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.\nR4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection.\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run intake:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:02.187Z",
+      "finishedAt": "2026-09-14T16:50:02.487Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 intake:check\n> node --import tsx scripts/scholarship-intake.ts\n\n{\"rows\":1666,\"entities\":1024,\"decidedRows\":1666,\"pendingEntities\":0,\"proposedAdds\":219}\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run coverage:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:02.487Z",
+      "finishedAt": "2026-09-14T16:50:02.700Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 coverage:check\n> node --import tsx scripts/build-interview-coverage.ts\n\nCoverage supplement PASS: four exact connections; frozen inputs preserved; SHA-256 577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run r3:policy:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:02.700Z",
+      "finishedAt": "2026-09-14T16:50:02.890Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 r3:policy:check\n> node --import tsx scripts/test-r3-catalog-governance.ts\n\nR3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run r3:source:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:02.890Z",
+      "finishedAt": "2026-09-14T16:50:03.088Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 r3:source:check\n> node scripts/check-r3-capture.cjs && node scripts/test-r3-native-capture.cjs && node scripts/test-r3-connector-read.cjs\n\nR3 CAPTURE PASS: four independently stable observations, complete pinned native captures, source identity and shape; bounded consistency only.\nNative capture PASS: exact header/range/sheet, complete row positions, sparse-presence preservation, extra-field and sensitive-content rejection, discarded spreadsheet URL. Synthetic only.\nR3 revision sanitizer PASS: no editor identity output; missing, ambiguous, widened and cap-limited proof blocks. Synthetic inputs only.\nR3 freshness PASS: unequal independent timestamps allowed; instability, order, bounds, unequal captures and exhausted attempts rejected.\nR3 date-validation remediation PASS: invalid calendar/time rollovers rejected; valid leap day and fractional timestamps accepted.\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run r3:mapping:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:03.088Z",
+      "finishedAt": "2026-09-14T16:50:03.526Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 r3:mapping:check\n> python3 scripts/build-r3-catalog.py --check && python3 scripts/test-r3-mapping.py\n\n{\"status\": \"PROPOSED_FOR_INDEPENDENT_REVIEW\", \"counts\": {\"operations\": 257, \"additions\": 219, \"updates\": 38, \"targetedCells\": 3367, \"rowPositions\": 416, \"scholarshipRows\": 395, \"portalRows\": 21, \"existingAwards\": 192, \"catalogOnlyAwards\": 16, \"newAwards\": 219, \"localCandidateAwards\": 411, \"priorityEntities\": 38, \"priorityReferences\": 42, \"organizations\": 9, \"gaps\": 5, \"enteredValueMismatches\": 0, \"expectedLinkMismatches\": 0}, \"connections\": 291, \"gpaRules\": 9, \"schoolRules\": 7, \"collisionCandidates\": 25}\nR3 mapping PASS: complete denominators, frozen relationships/criteria, source identity negatives, survivor, ambiguous dates/links, no parent leakage, unsupported definition/need deferrals.\nR3 mapping remediation PASS: five qualified reasons; nine existing-field dispositions (five conflicts, four agreements).\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run r3:catalog:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:03.527Z",
+      "finishedAt": "2026-09-14T16:50:04.307Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 r3:catalog:check\n> node --import tsx scripts/test-r3-catalog.ts\n\nR3 CATALOG PASS {\"awards\":411,\"preservedAwards\":192,\"profiles\":61,\"pairedConnections\":291,\"newGpaRules\":9,\"newSchoolRules\":7,\"organizations\":9,\"publicCsvIds\":true,\"sensitiveSkipNonExcluding\":true}\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run build",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:09.894Z",
+      "finishedAt": "2026-09-14T16:50:16.102Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 13ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 453ms\n  Running TypeScript ...\n  Finished TypeScript in 4.3s ...\n  Collecting page data using 11 workers ...\n  Generating static pages using 11 workers (0/10) ...\n  Generating static pages using 11 workers (2/10) \n  Generating static pages using 11 workers (4/10) \n  Generating static pages using 11 workers (7/10) \n\u2713 Generating static pages using 11 workers (10/10) in 187ms\n  Finalizing page optimization ...\n\nRoute (app)\n\u250c \u25cb /\n\u251c \u25cb /_not-found\n\u251c \u25cb /admin\n\u251c \u25cb /admin/login\n\u251c \u25cb /admin/recover\n\u251c \u0192 /api/admin/extract\n\u251c \u0192 /api/admin/push\n\u251c \u0192 /api/health\n\u251c \u0192 /api/revalidate\n\u2514 \u0192 /api/scholarships\n\n\n\u0192 Proxy (Middleware)\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n\n",
+      "stderr": "\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\n"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:16.102Z",
+      "finishedAt": "2026-09-14T16:50:20.360Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run p9:production:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:20.361Z",
+      "finishedAt": "2026-09-14T16:50:20.866Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 p9:production:check\n> node --import tsx scripts/p9-production-runtime.ts\n\n{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 41,\n  \"runtimeClosureSha256\": \"5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"b95475fdfb5af94e62ba35f60bf1de768048860b09b9a82986c122f9918d04f3\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:50:20.866Z",
+      "finishedAt": "2026-09-14T16:50:21.307Z",
+      "exitCode": 0,
+      "stdout": "{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 41,\n  \"runtimeClosureSha256\": \"5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"b95475fdfb5af94e62ba35f60bf1de768048860b09b9a82986c122f9918d04f3\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:49:18.621Z",
+      "finishedAt": "2026-09-14T16:49:56.106Z",
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 4 error(s):\n- PLAN-REV18 undelivered branch tip must equal its attestation exactly\n- Missing required file: docs/evidence/PLAN-REV19-manifest.json\n- Missing required file: docs/reviews/PLAN-REV19.json\n- PLAN-REV19 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "GITHUB_ACTIONS=true npm run plan:check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+      "startedAt": "2026-09-14T16:49:56.106Z",
+      "finishedAt": "2026-09-14T16:50:30.234Z",
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 4 error(s):\n- PLAN-REV18 undelivered branch tip must equal its attestation exactly\n- Missing required file: docs/evidence/PLAN-REV19-manifest.json\n- Missing required file: docs/reviews/PLAN-REV19.json\n- PLAN-REV19 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair",
+      "startedAt": "2026-09-14T16:50:30.235Z",
+      "finishedAt": "2026-09-14T16:50:30.253Z",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32 HEAD --check",
+      "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair",
+      "startedAt": "2026-09-14T16:50:30.253Z",
+      "finishedAt": "2026-09-14T16:50:30.298Z",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --import tsx scripts/test-r4-identity-delivery.ts",
+      "startedAt": "2026-09-14T16:51:34.223Z",
+      "finishedAt": "2026-09-14T16:51:37.209Z",
+      "exitCode": 0,
+      "stdout": "R4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.\nR4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection.\n",
+      "stderr": ""
+    },
+    {
+      "command": "npm run typecheck",
+      "startedAt": "2026-09-14T16:51:37.209Z",
+      "finishedAt": "2026-09-14T16:51:41.167Z",
+      "exitCode": 0,
+      "stdout": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\n",
+      "stderr": ""
+    }
+  ],
+  "resolvedInitialBuildFailure": {
+    "schemaVersion": 1,
+    "policyCandidate": "07d5d8df6b722bd83557bbcd160d68bf5cc55918",
+    "records": [
+      {
+        "command": "npm run build",
+        "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+        "startedAt": "2026-09-14T16:49:14.057Z",
+        "finishedAt": "2026-09-14T16:49:27.461Z",
+        "exitCode": 1,
+        "stdout": "\n> web@0.1.0 build\n> next build\n\n\u25b2 Next.js 16.3.3 (Turbopack)\n\u2713 Running next.config.ts took 1302ms\n\n  Creating an optimized production build ...\n\u2713 Compiled successfully in 2.9s\n  Running TypeScript ...\nscripts/test-r4-identity-delivery.ts(82,12): error TS2339: Property 'GITHUB_HEAD_REF' does not exist on type '{ GIT_AUTHOR_NAME: \"whitefishscholarship\"; GIT_AUTHOR_EMAIL: \"whitefishscholarship@gmail.com\"; GIT_COMMITTER_NAME: \"whitefishscholarship\"; GIT_COMMITTER_EMAIL: \"whitefishscholarship@gmail.com\"; NODE_ENV: \"test\" | ... 1 more ... | \"development\"; TZ?: string | undefined; }'.\nscripts/test-r4-identity-delivery.ts(82,39): error TS2339: Property 'STAGE_BRANCH_TIP_SHA' does not exist on type '{ GIT_AUTHOR_NAME: \"whitefishscholarship\"; GIT_AUTHOR_EMAIL: \"whitefishscholarship@gmail.com\"; GIT_COMMITTER_NAME: \"whitefishscholarship\"; GIT_COMMITTER_EMAIL: \"whitefishscholarship@gmail.com\"; NODE_ENV: \"test\" | ... 1 more ... | \"development\"; TZ?: string | undefined; }'.\n",
+        "stderr": "\u26a0 The \"middleware\" file convention is deprecated. Please use \"proxy\" instead.\n\n  To migrate automatically, run:\n  npx @next/codemod@canary middleware-to-proxy .\n\n  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy\nFailed to type check.\n\n"
+      },
+      {
+        "command": "npm run typecheck",
+        "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+        "startedAt": "2026-09-14T16:49:27.461Z",
+        "finishedAt": "2026-09-14T16:49:35.031Z",
+        "exitCode": 2,
+        "stdout": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\nscripts/test-r4-identity-delivery.ts(82,12): error TS2339: Property 'GITHUB_HEAD_REF' does not exist on type '{ GIT_AUTHOR_NAME: \"whitefishscholarship\"; GIT_AUTHOR_EMAIL: \"whitefishscholarship@gmail.com\"; GIT_COMMITTER_NAME: \"whitefishscholarship\"; GIT_COMMITTER_EMAIL: \"whitefishscholarship@gmail.com\"; NODE_ENV: \"test\" | ... 1 more ... | \"development\"; TZ?: string | undefined; }'.\nscripts/test-r4-identity-delivery.ts(82,39): error TS2339: Property 'STAGE_BRANCH_TIP_SHA' does not exist on type '{ GIT_AUTHOR_NAME: \"whitefishscholarship\"; GIT_AUTHOR_EMAIL: \"whitefishscholarship@gmail.com\"; GIT_COMMITTER_NAME: \"whitefishscholarship\"; GIT_COMMITTER_EMAIL: \"whitefishscholarship@gmail.com\"; NODE_ENV: \"test\" | ... 1 more ... | \"development\"; TZ?: string | undefined; }'.\n",
+        "stderr": ""
+      },
+      {
+        "command": "npm run p9:production:check",
+        "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+        "startedAt": "2026-09-14T16:49:35.032Z",
+        "finishedAt": "2026-09-14T16:49:35.619Z",
+        "exitCode": 0,
+        "stdout": "\n> web@0.1.0 p9:production:check\n> node --import tsx scripts/p9-production-runtime.ts\n\n{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 41,\n  \"runtimeClosureSha256\": \"5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"f7eece28764f85f99d487cbfebec8e836c8f05c5ee067bdc24fc2610a78a22f8\"\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+        "cwd": "/private/tmp/program_code-r4-whitefish-delivery-repair/web",
+        "startedAt": "2026-09-14T16:49:35.619Z",
+        "finishedAt": "2026-09-14T16:49:36.065Z",
+        "exitCode": 0,
+        "stdout": "{\n  \"publicationSha256\": \"16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07\",\n  \"publicationId\": \"p8m-matching-facts-v1-rev225\",\n  \"sourceRows\": 197,\n  \"scholarshipRows\": 176,\n  \"portalRows\": 21,\n  \"acceptedMatchingFacts\": 0,\n  \"runtimeFiles\": 41,\n  \"runtimeClosureSha256\": \"5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930\",\n  \"disabledProductionAdminRoutes\": [\n    \"src/app/api/admin/extract/route.ts\",\n    \"src/app/api/admin/push/route.ts\"\n  ],\n  \"runtimeGoogleCapability\": \"none\",\n  \"nonceBoundHealth\": true,\n  \"productionDependencyGooglePackages\": [],\n  \"developmentOnlyGooglePackages\": [\n    \"@google/genai\",\n    \"googleapis\"\n  ],\n  \"deploymentConfigFilesChecked\": [\n    \"next.config.ts\",\n    \"package.json\",\n    \"package-lock.json\"\n  ],\n  \"builtServerTraceInspected\": true,\n  \"builtServerTraceSha256\": \"f7eece28764f85f99d487cbfebec8e836c8f05c5ee067bdc24fc2610a78a22f8\"\n}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "remediation": "Test fixture environment object explicitly typed NodeJS.ProcessEnv; subsequent full build/typecheck pass. Removed source-string assertions and retained50behavioral attacks plus real Git adapter regression; final focused test and typecheck pass.",
+  "limits": [
+    "These four attestation diagnostics remain failures, not acceptance. Actual local and hosted validators must both exit0 after valid A19 before publication.",
+    "Existing middleware deprecation and CSV BOM/CRLF evidence findings retain earlier dispositions. No runtime change or source recapture."
+  ]
+}

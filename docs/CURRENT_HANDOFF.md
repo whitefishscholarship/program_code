@@ -1,4 +1,4 @@
-# R4 Whitefish identity correction approved — policy review first
+# R4 Whitefish identity correction — final review and delivery next
 
 Plan revision: 19.
 
@@ -6,8 +6,8 @@ Resume `/private/tmp/program_code-r4-whitefish-delivery-repair` on
 `codex/r4-whitefish-delivery-repair`. Original A18 and PR46 are preserved unchanged.
 Kelsey approved the independently reviewed exact REV19 continuation; no repeat approval
 is needed for its selected policy, review and R4 delivery effects. Read PLAN-REV19.md,
-BUILD_STATE PLAN-REV19 and `docs/kickoffs/R4-WHITEFISH-DELIVERY.md`. Codex owns frozen
-policy review before implementation, complete verification, fresh candidate review/A19,
+BUILD_STATE PLAN-REV19 and `docs/kickoffs/R4-WHITEFISH-DELIVERY.md`. Policy review and implementation checks passed. Codex owns fresh
+full-candidate review/A19, zero actual validators,
 exact Preview/CI, guarded merge, Production verification and local-only closeout.
 
 Keep all prior content below unchanged. All prior issue owners/triggers and unknowns

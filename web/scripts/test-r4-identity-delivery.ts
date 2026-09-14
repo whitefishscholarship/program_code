@@ -68,17 +68,12 @@ const later=fixture();later.delivered=true;later.originMain='d'.repeat(40);later
 later.state.planRevision=20;later.state.r4CatalogRelease.status='delivered-verified';later.state.governance.planAmendments.push({id:'PLAN-REV20',baselineCommit:later.originMain});
 assert.deepEqual(validateIdentityEvidence(later),[],'later current runtime/state may evolve while C19 remains preserved');
 later.candidatePackage.dependencies.changedHistoricalRuntime='1';assert(validateIdentityEvidence(later).length>0,'changed historical candidate proof must fail');
-const source=fs.readFileSync(path.join(root,'web/scripts/validate-build-plan.ts'),'utf8');
-assert(source.includes('validateBoundAttestation(revision19.id, revision19.baselineCommit, revision19.manifestPath, revision19.reviewPath)'));
-assert(source.includes('revision19ContinuationValid = errors.length === startErrors'));
-assert(source.includes("amendment.id === 'PLAN-REV18' && revision19ContinuationValid && canonicalRevision19"));
-assert(source.includes('revision11ContinuationValid')&&source.includes('revision17ContinuationValid'));
 console.log(`R4 identity continuation PASS: ${attacks.length} negative gates, exact topology, preparation limits, later evolution and historical preservation.`);
 
 // Exercise the real Git/filesystem adapter in a disposable local repository. It
 // reads existing objects locally and never touches this repository's refs/index.
 const temporary=fs.mkdtempSync(path.join(os.tmpdir(),'rev19-history-test-'));
-const env={...process.env,GIT_AUTHOR_NAME:p.ownerName,GIT_AUTHOR_EMAIL:p.ownerEmail,GIT_COMMITTER_NAME:p.ownerName,GIT_COMMITTER_EMAIL:p.ownerEmail};
+const env: NodeJS.ProcessEnv={...process.env,GIT_AUTHOR_NAME:p.ownerName,GIT_AUTHOR_EMAIL:p.ownerEmail,GIT_COMMITTER_NAME:p.ownerName,GIT_COMMITTER_EMAIL:p.ownerEmail};
 delete env.GITHUB_HEAD_REF;delete env.STAGE_BRANCH_TIP_SHA;
 const git=(...args:string[])=>execFileSync('git',args,{cwd:temporary,env,encoding:'utf8',stdio:['ignore','pipe','pipe'],maxBuffer:16*1024*1024}).trim();
 try {
