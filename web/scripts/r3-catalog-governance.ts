@@ -4,6 +4,28 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 export const R3_BLOCKER = 'PLAN-REV18-awaits-separate-R4-Git-Vercel-authority';
+export const R3_FRESHNESS_CORRECTION = {
+  "id": "R3-FRESHNESS-CORRECTION-1",
+  "proposalPath": "docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md",
+  "proposalSha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0",
+  "proposalCandidate": "b2399edee03cbe37b5b9e195ae3e294c66dd23c1",
+  "proposalReviewCheckpoint": "67719dee44fc21d678f396fdbde13da6adc1334e",
+  "authorized": true,
+  "authorizedBy": "Kelsey Stuart",
+  "authorizedAt": "2026-09-14",
+  "authorityEvidencePath": "docs/evidence/r3-catalog/freshness-authority.json",
+  "policyReviewPath": "docs/evidence/r3-catalog/freshness-policy-review.json",
+  "crossResourceTimestampEqualityRequired": false,
+  "independentTimestampStabilityRequired": true,
+  "reportedRevisionTokenStabilityRequired": true,
+  "freshnessObservationsPerAttempt": 4,
+  "equalCompleteCapturesRequired": 2,
+  "priorAttemptsConsumed": 1,
+  "maximumAdditionalAttempts": 2,
+  "maximumTotalAttempts": 3,
+  "additionalSourceAccessAuthorized": false,
+  "transactionalSnapshotClaimAuthorized": false
+} as const;
 export const R3_CONNECTOR_SUPPLEMENT = {
   "id": "R3-CONNECTOR-METADATA-1",
   "proposalPath": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
@@ -43,7 +65,9 @@ export const R3_CONNECTOR_SUPPLEMENT = {
     ],
     "currentRevisionIdRequired": true,
     "matchingRevisionRecordRequired": true,
-    "independentModifiedTimeAgreementRequired": true,
+    "independentModifiedTimeAgreementRequired": false,
+    "independentTimestampStabilityRequired": true,
+    "freshnessObservationsPerAttempt": 4,
     "stopAtPageCap": true
   },
   "cellEnvelope": {
@@ -97,7 +121,7 @@ export type R3CatalogPolicy = {
   sourceReadAuthorized: boolean; localImplementationAuthorized: boolean;
   localEvidencePersistenceAuthorized: boolean; prospectivePolicyAuthorized: boolean;
   policyReviewPath: string; mappingReviewRequiredBeforeProductEdits: boolean;
-  sourceScope: unknown; reservedEffects: unknown; connectorSupplement?: unknown;
+  sourceScope: unknown; reservedEffects: unknown; connectorSupplement?: unknown; freshnessCorrection?: unknown;
 };
 
 // This validates only R3's selected grant, never a release or attestation substitute.
@@ -118,11 +142,15 @@ export function validateR3CatalogPolicy(policy: R3CatalogPolicy | undefined): st
   if (!isDeepStrictEqual(policy.sourceScope, R3_SOURCE_SCOPE)) errors.push('R3 source reads exceed or alter the approved exact projection');
   if (!isDeepStrictEqual(policy.reservedEffects, R3_RESERVED_EFFECTS)) errors.push('R3 cannot authorize reserved workbook, source or release effects');
   if (!isDeepStrictEqual(policy.connectorSupplement, R3_CONNECTOR_SUPPLEMENT)) errors.push('R3 connector reads require the exact authorized metadata supplement');
+  if (!isDeepStrictEqual(policy.freshnessCorrection, R3_FRESHNESS_CORRECTION)) errors.push('R3 freshness correction requires its exact direct authority and stability gates');
   return errors;
 }
 
 export function validateR3CatalogPolicyAt(repoRoot: string, policy: R3CatalogPolicy | undefined): string[] {
   const errors = validateR3CatalogPolicy(policy);
+  const correctionPath = path.join(repoRoot, R3_FRESHNESS_CORRECTION.proposalPath);
+  if (!fs.existsSync(correctionPath) || createHash('sha256').update(fs.readFileSync(correctionPath)).digest('hex') !== R3_FRESHNESS_CORRECTION.proposalSha256)
+    errors.push('R3 freshness correction proposal changed');
   const supplementPath = path.join(repoRoot, R3_CONNECTOR_SUPPLEMENT.proposalPath);
   if (!fs.existsSync(supplementPath) || createHash('sha256').update(fs.readFileSync(supplementPath)).digest('hex') !== R3_CONNECTOR_SUPPLEMENT.proposalSha256)
     errors.push('R3 connector supplement proposal changed');

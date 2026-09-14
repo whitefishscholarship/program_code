@@ -31,7 +31,8 @@ const mutations: Array<(supplement: any) => void> = [
   s => { s.revisionRoute.pageSize = 1001; }, s => { s.revisionRoute.paginationAuthorized = true; },
   s => { s.revisionRoute.maximumObservationsPerAttempt = 5; }, s => { s.revisionRoute.maximumAttempts = 4; },
   s => { s.revisionRoute.revisionContentAuthorized = true; }, s => { s.revisionRoute.currentRevisionIdRequired = false; },
-  s => { s.revisionRoute.matchingRevisionRecordRequired = false; }, s => { s.revisionRoute.independentModifiedTimeAgreementRequired = false; },
+  s => { s.revisionRoute.matchingRevisionRecordRequired = false; }, s => { s.revisionRoute.independentModifiedTimeAgreementRequired = true; },
+  s => { s.revisionRoute.independentTimestampStabilityRequired = false; }, s => { s.revisionRoute.freshnessObservationsPerAttempt = 3; },
   s => { s.revisionRoute.stopAtPageCap = false; }, s => { s.revisionRoute.fields.push('revisions.content'); },
   s => { s.cellEnvelope.selectedSheetId = 1; }, s => { s.cellEnvelope.additionalFields.push('sheets.charts'); },
   s => { s.discardEditorIdentityBeforeOutputAndPersistence = false; }, s => { s.discardRawSpreadsheetUrl = false; },
@@ -45,3 +46,11 @@ for (const mutate of mutations) {
 const missingSupplement = structuredClone(policy); delete missingSupplement.connectorSupplement;
 assert(validateR3CatalogPolicy(missingSupplement).length > 0);
 console.log('R3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.');
+
+for (const [key, value] of [['authorized', false], ['proposalSha256', 'other'], ['policyReviewPath', 'other'], ['crossResourceTimestampEqualityRequired', true], ['independentTimestampStabilityRequired', false], ['reportedRevisionTokenStabilityRequired', false], ['freshnessObservationsPerAttempt', 3], ['equalCompleteCapturesRequired', 1], ['priorAttemptsConsumed', 0], ['maximumAdditionalAttempts', 3], ['maximumTotalAttempts', 4], ['additionalSourceAccessAuthorized', true], ['transactionalSnapshotClaimAuthorized', true]] as const) {
+  const changed = structuredClone(policy); (changed.freshnessCorrection as Record<string, unknown>)[key] = value;
+  assert(validateR3CatalogPolicy(changed).length > 0, key);
+}
+const missingCorrection = structuredClone(policy); delete missingCorrection.freshnessCorrection;
+assert(validateR3CatalogPolicy(missingCorrection).length > 0);
+console.log('R3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.');

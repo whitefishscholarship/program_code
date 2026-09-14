@@ -1,3 +1,26 @@
+# R3 freshness correction approved — independent review before attempt2
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, `codex/r3-catalog-refresh`, from the
+clean descendant of proposal review checkpoint `67719dee44fc21d678f396fdbde13da6adc1334e`.
+Kelsey replied “approved. proceed” to the exact verification-rule correction.
+See `docs/evidence/r3-catalog/freshness-authority.json` and
+BUILD_STATE.r3CatalogRefresh.freshnessCorrection. Original R3/connector grants persist.
+
+Codex's next action: freeze and obtain matching independent `freshness-policy-review.json`
+PASS before any more source calls. Then attempt2 may perform four ordered observations
+around two complete A1:O417 native captures. Require separately stable file time, revision
+time and connector-reported token; both complete digests must match. Only attempts2/3
+remain. Discard editor attribution/raw spreadsheet URL before output or persistence.
+
+No repeat permission is needed for the approved correction. Prior rejected observations
+remain failures, not accepted captures. R3 is incomplete; source reconciliation/mapping
+review still precedes product edits. Preserve every earlier grant, proposal, review,
+R1/R2 completion, applied-operation/recovery/hold/backlog trigger and R4 boundary below.
+
+---
+
 # R3 blocked on freshness agreement — approved access remains valid
 
 Plan revision: 18

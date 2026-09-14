@@ -701,3 +701,15 @@ revision proof and both equal complete captures. Unknown trashed status stays un
 No source cell bounds, original mapping/product gates or R4 effects change. If the
 connector still fails to prove current revision, preserve the blocker without substituting
 timestamp-only evidence, credentials or broader reads. Original R3 authority persists.
+
+## 2026-09-14 — R3 independent freshness comparisons approved
+
+Kelsey directly approved the reviewed freshness correction with “approved. proceed.”
+The earlier cross-resource exact timestamp equality assumption is superseded only by
+the hash-pinned correction and its explicit authority record. Each timestamp and the
+reported revision token must remain independently stable across four ordered observations;
+two complete bounded captures must match. No arbitrary tolerance, additional reads,
+current-head guarantee or R4 authority is implied. Attempt1 remains consumed. Preserve
+all prior proposals, grant records, review bindings and failed observations. Independently
+review this prospective correction before attempts2/3; mapping review still precedes
+product edits. This records the approved removal of an acceptance check explicitly.

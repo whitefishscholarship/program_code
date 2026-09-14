@@ -1052,7 +1052,7 @@
   },
   "r3CatalogRefresh": {
     "planId": "R3-CATALOG-1",
-    "status": "blocked-cross-resource-timestamp-agreement",
+    "status": "freshness-correction-authorized-awaiting-policy-review",
     "scopeProposalCommit": "adf45e41ced138d6f853f36faa6dd4065991d048",
     "scopePath": "docs/R3_CATALOG_SCOPE.md",
     "scopeSha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2",
@@ -1160,8 +1160,10 @@
         ],
         "currentRevisionIdRequired": true,
         "matchingRevisionRecordRequired": true,
-        "independentModifiedTimeAgreementRequired": true,
-        "stopAtPageCap": true
+        "independentModifiedTimeAgreementRequired": false,
+        "stopAtPageCap": true,
+        "independentTimestampStabilityRequired": true,
+        "freshnessObservationsPerAttempt": 4
       },
       "cellEnvelope": {
         "tool": "google_drive_get_spreadsheet_cells",
@@ -1178,6 +1180,28 @@
       "discardRawSpreadsheetUrl": true,
       "trashedUnknownIsNotFalse": true,
       "originalCaptureGatesUnchanged": true
+    },
+    "freshnessCorrection": {
+      "id": "R3-FRESHNESS-CORRECTION-1",
+      "proposalPath": "docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md",
+      "proposalSha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0",
+      "proposalCandidate": "b2399edee03cbe37b5b9e195ae3e294c66dd23c1",
+      "proposalReviewCheckpoint": "67719dee44fc21d678f396fdbde13da6adc1334e",
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "authorizedAt": "2026-09-14",
+      "authorityEvidencePath": "docs/evidence/r3-catalog/freshness-authority.json",
+      "policyReviewPath": "docs/evidence/r3-catalog/freshness-policy-review.json",
+      "crossResourceTimestampEqualityRequired": false,
+      "independentTimestampStabilityRequired": true,
+      "reportedRevisionTokenStabilityRequired": true,
+      "freshnessObservationsPerAttempt": 4,
+      "equalCompleteCapturesRequired": 2,
+      "priorAttemptsConsumed": 1,
+      "maximumAdditionalAttempts": 2,
+      "maximumTotalAttempts": 3,
+      "additionalSourceAccessAuthorized": false,
+      "transactionalSnapshotClaimAuthorized": false
     }
   }
 }

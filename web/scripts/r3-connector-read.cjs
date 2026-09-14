@@ -1,9 +1,11 @@
 'use strict';
 
 // Local orchestration only. Never return or persist the raw connector response.
+const validTime = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/.test(value) && Number.isFinite(Date.parse(value));
+
 function sanitizeRevisionObservation(response, fileId, modifiedTime) {
   const out = { status: 'BLOCKED', fileId, currentRevisionId: null, currentRevisionModifiedTime: null,
-    returnedRevisionCount: null, currentRevisionRecordMatches: 0, editorIdentityRetained: false,
+    fileModifiedTime: null, returnedRevisionCount: null, currentRevisionRecordMatches: 0, editorIdentityRetained: false,
     reasons: [] };
   if (!response || response.isError) { out.reasons.push('connector_error_or_missing_response'); return out; }
   const s = response.structuredContent;
@@ -35,14 +37,46 @@ function sanitizeRevisionObservation(response, fileId, modifiedTime) {
   out.currentRevisionRecordMatches = matches.length;
   if (matches.length !== 1) out.reasons.push('ambiguous_or_missing_current_revision_record');
   const time = matches.length === 1 ? matches[0].modifiedTime : null;
-  if (typeof modifiedTime !== 'string' || typeof time !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/.test(time) || !Number.isFinite(Date.parse(time)) || Date.parse(time) !== Date.parse(modifiedTime))
-    out.reasons.push('current_revision_modified_time_not_verified');
+  if (!validTime(modifiedTime) || !validTime(time)) out.reasons.push('missing_or_invalid_independent_timestamp');
   if (matches.length === 1 && matches[0].mimeType != null && matches[0].mimeType !== 'application/vnd.google-apps.spreadsheet')
     out.reasons.push('revision_mime_type_mismatch');
   if (out.reasons.length === 0) {
-    out.status = 'PASS'; out.currentRevisionId = token; out.currentRevisionModifiedTime = time;
+    out.status = 'PASS'; out.currentRevisionId = token; out.currentRevisionModifiedTime = time; out.fileModifiedTime = modifiedTime;
   }
   return out;
 }
 
-module.exports = { sanitizeRevisionObservation };
+// A passing single observation does not accept a capture. The caller must also prove
+// exact sheet/header/range/projection completeness and equal native-cell digests.
+function validateFreshnessSequence(observations, captures, attempt) {
+  const errors = [];
+  if (![2, 3].includes(attempt)) errors.push('attempt_outside_remaining_authority');
+  if (!Array.isArray(observations) || observations.length !== 4 || !Array.isArray(captures) || captures.length !== 2)
+    return [...errors, 'four_observations_and_two_captures_required'];
+  const first = observations[0]?.result;
+  for (const o of observations) {
+    const r = o?.result;
+    if (!r || r.status !== 'PASS' || !validTime(r.fileModifiedTime) || !validTime(r.currentRevisionModifiedTime) ||
+        typeof r.currentRevisionId !== 'string' || !/^[A-Za-z0-9_-]{1,200}$/.test(r.currentRevisionId) ||
+        r.currentRevisionRecordMatches !== 1 || !Number.isInteger(r.returnedRevisionCount) || r.returnedRevisionCount < 1 || r.returnedRevisionCount >= 1000 ||
+        r.editorIdentityRetained !== false) errors.push('invalid_freshness_observation');
+    for (const key of ['fileId', 'currentRevisionId', 'currentRevisionModifiedTime', 'fileModifiedTime'])
+      if (r?.[key] !== first?.[key]) errors.push('unstable_' + key);
+  }
+  if (first?.fileId !== '1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4') errors.push('wrong_workbook');
+  const order = [observations[0], captures[0], observations[1], observations[2], captures[1], observations[3]];
+  let end = -Infinity;
+  for (const item of order) {
+    if (!validTime(item?.startedAt) || !validTime(item?.completedAt) || Date.parse(item.startedAt) < end || Date.parse(item.completedAt) < Date.parse(item.startedAt))
+      errors.push('unproven_capture_observation_order');
+    end = Date.parse(item?.completedAt);
+  }
+  for (const c of captures)
+    if (c?.range !== "'Master Database'!A1:O417" || c?.sheetId !== 0 || c?.complete !== true || !/^[a-f0-9]{64}$/.test(c?.sha256 || '') ||
+        c?.cellFields !== 'userEnteredValue,effectiveValue,formattedValue,hyperlink,textFormatRuns(startIndex,format(link)),userEnteredFormat(numberFormat),effectiveFormat(numberFormat)')
+      errors.push('invalid_complete_bounded_capture');
+  if (captures[0]?.sha256 !== captures[1]?.sha256) errors.push('unequal_capture_digests');
+  return [...new Set(errors)];
+}
+
+module.exports = { sanitizeRevisionObservation, validateFreshnessSequence };

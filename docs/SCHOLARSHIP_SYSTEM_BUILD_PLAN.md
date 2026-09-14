@@ -1843,3 +1843,30 @@ reserved effects stay unchanged. Freeze and independently review this prospectiv
 supplemental policy before new source calls; preserve original policy and proposal
 reviews against their own candidates. Supplemental policy PASS is not a source-capture,
 mapping, completed R3 or R4 acceptance claim.
+
+### Revision 18 approved independent freshness comparisons
+
+On September14,2026 (America/Denver), Kelsey replied “approved. proceed” to the exact
+independently reviewed `FRESHNESS_CORRECTION_PROPOSAL.md` at SHA256
+`a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0` in
+`docs/evidence/r3-catalog/`. The grant is recorded in `freshness-authority.json`
+and BUILD_STATE.r3CatalogRefresh.freshnessCorrection.
+
+This prospectively replaces ONLY the preceding supplemental cross-resource timestamp
+equality rule. Each observation still requires exact file identity, valid file time,
+a safe connector-reported currentRevisionId with exactly one matching valid-timestamp
+record, compatible MIME type and no unexpected metadata or cap-reaching revision page.
+The file timestamp and revision timestamp may differ. Across four observations surrounding
+two complete captures, require each timestamp and the reported token to stay exactly
+unchanged separately, and both complete bounded native cell digests to match. Preserve
+observation/capture order and all identity/header/grid/projection/privacy gates.
+There is no tolerance or rounding exception. Attempt1 remains consumed; only attempts2
+and3 remain. No extra access or later effects are authorized.
+
+These are bounded consistency observations. They do not prove the connector reports the
+actual server head, an atomic snapshot, complete history, or current official award facts.
+Never equate a reported revision ID with the unavailable Drive file version. Preserve the
+original proposal, authority, sanitizer evidence and independent review candidate bindings.
+Commit and independently review this dedicated prospective policy correction before more
+source calls. Source reconciliation/mapping review and final R3 review remain mandatory;
+R4 acceptance and all release effects remain separately gated.
