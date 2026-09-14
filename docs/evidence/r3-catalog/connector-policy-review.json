@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only R3 prospective connector policy review",
+  "reviewer": "/root/r3_connector_policy_review",
+  "reviewedAt": "2026-09-14T00:15:36Z",
+  "outcome": "PASS",
+  "canonicalAcceptance": false,
+  "r3Complete": false,
+  "candidateCommit": "9f7398461e639e0ea002661e395e98df869b6062",
+  "baselineCommit": "99ecf02b5b026cda69737d744a405320a352794e",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "manifestPath": "/private/tmp/r3-connector-policy-manifest.json",
+  "manifestPathInRepository": "docs/evidence/r3-catalog/connector-policy-manifest.json",
+  "manifestSha256": "f71cfbc44e7207c824f4802f790791bed2ee287ca1d424466c2c147569dca59b",
+  "completeChangedPathCount": 13,
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "networkAccess": false,
+    "workbookAccess": false,
+    "credentialAccess": false,
+    "providerAccess": false
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    "Read governing repository instructions, REV18 policy and supplement, BUILD_STATE, operative handoff, accepted-stage evidence, R2 completion context and R3 kickoff.",
+    "Inspected the complete 13-path candidate change set.",
+    "Verified clean exact candidate HEAD, baseline ancestry and delivered-baseline ancestry.",
+    "Recomputed manifest SHA256, complete changed-path equality and all 13 candidate Git-blob hashes.",
+    "Verified BUILD_STATE changes only R3 status and the exact connectorSupplement object; its supplement equals the recorded authority scope.",
+    "Verified complete prior handoff and both kickoff documents remain byte-identical suffixes; canonical plan and decisions retain their complete prior contents as prefixes.",
+    "Verified unchanged original scope and connector proposal SHA256 pins.",
+    "Reverified original policy and connector-proposal reviews against their own manifest digests, immutable candidates and every listed candidate blob.",
+    "Confirmed no changes to product implementation, mappings, publications, fixtures, dependencies, deployment configuration, historical receipts or review records.",
+    "Independently ran revision-sanitizer synthetic tests, R3 governance tests and npm run r3:policy:check: PASS.",
+    "Confirmed sanitizer rejects missing current token, absent or ambiguous matching record, mismatched modifiedTime, foreign file identity, unexpected fields, incompatible MIME type and the 1000-record cap.",
+    "Confirmed sanitizer returns only minimal revision evidence and does not reproduce synthetic editor names, addresses, permission identifiers, photo links or raw error contents.",
+    "Independently ran build-plan validation from web: exit 1 with exactly the three reserved REV18 diagnostics.",
+    "Independently ran baseline-to-candidate git diff --check: PASS.",
+    "Inspected recorded typecheck, full tests and build successes, plus supplemental synthetic-test evidence.",
+    "Verified final worktree remains clean."
+  ],
+  "assessment": {
+    "authority": "The recorded approved, proceed grant implements only the exact previously reviewed metadata supplement. Original R3 authority remains intact.",
+    "bounds": "One revision page of at most 1000 records per observation, four observations per attempt and three attempts; no pagination or revision contents. Original workbook, sheet0, A1:O417 and cell projection remain exact.",
+    "privacy": "The policy requires discarding editor attribution and raw spreadsheetUrl before model-facing output or persistence. The revision sanitizer retains only minimal permitted proof.",
+    "revisionProof": "A tool-reported currentRevisionId must have exactly one matching revision record whose modification time agrees with independently observed file modifiedTime. Missing or ambiguous proof remains blocking.",
+    "preservation": "Original capture, reconciliation, mapping-review and product gates, historical authority, completed operations, recovery/hold triggers and all reserved effects remain unchanged.",
+    "continuation": "Commit this matching supplemental policy review before additional authorized source calls. Source reconciliation and mapping review still precede product edits.",
+    "release": "This prospective policy PASS neither completes R3 nor supplies canonical acceptance or any R4 release authority."
+  },
+  "canonicalDiagnostics": {
+    "exitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ]
+  },
+  "limits": [
+    "Review applies only to this exact prospective supplemental policy candidate and manifest.",
+    "No live source calls, source capture, source reconciliation, application-health verification or provider verification were performed.",
+    "The sanitizer was tested with synthetic responses; actual connector compatibility remains unknown until authorized execution.",
+    "Observation counts, cell-envelope sanitization and complete capture gates must still be enforced during subsequent orchestration.",
+    "The recorded full typecheck/test/build matrix was inspected rather than repeated; targeted tests and plan validation were independently rerun.",
+    "Reviewer-only initial checks used an incorrect validation working directory and an incorrect historical review JSON field location; corrected read-only checks passed without file changes.",
+    "The three reserved canonical diagnostics remain explicit failures."
+  ]
+}

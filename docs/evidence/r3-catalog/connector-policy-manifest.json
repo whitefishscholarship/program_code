@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "R3 prospective connector policy only; not canonical attestation",
+  "baselineCommit": "99ecf02b5b026cda69737d744a405320a352794e",
+  "candidateCommit": "9f7398461e639e0ea002661e395e98df869b6062",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "c01ac72024b5b2b311f8237162d019e8a76053fc5eba26f89af19a9fee8ef25a"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "83e2d866e6a8ec8560f793f7b2f7542f914449875de088e59d0ce2626d677f08"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "789170cbeb3e9ccf4b56e54f6c23b1512a2b3f5498aea3a3320aad6771af4c7f"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "sha256": "68de5fa0d3fcdfc4295e673535a020915bd4276f437f4edeb48854a762073050"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-authority.json",
+      "sha256": "050a7ba81f0f42a968d0544a26a630644a839c2fdcc35ef41b3a72938e51994f"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-policy-validation.json",
+      "sha256": "89ff4db460c5ce845d9fe4943be02f923103f875a47a2242b869d7c39bcd1adc"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-sanitizer-validation.json",
+      "sha256": "e633ccfa6105ac8518e70c6e2b4a1abe4cbef8fe18bcd22be752a1c0acd1a52f"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "23cd00303c38f69123de799248e1b1fd8bfc86474731a8b6999d32c6982287d3"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "771ca403bb8d77d9c1108c47d659fac5a4254bec4e40153640773a4f227ed7a7"
+    },
+    {
+      "path": "web/scripts/r3-catalog-governance.ts",
+      "sha256": "32caeb08d8ea888e62f1bc6f07d9f835518501c9dd07f8ec0a09aa61768fe1f1"
+    },
+    {
+      "path": "web/scripts/r3-connector-read.cjs",
+      "sha256": "5ddc33917d6a35bb3ca1bff95d7e8fbe17b569c999fac0b1629fb93c4e4eff4e"
+    },
+    {
+      "path": "web/scripts/test-r3-catalog-governance.ts",
+      "sha256": "91a06b9574f087bc30c0cdee823d2a3a28404bcc17acedbc623b1322e386eb2b"
+    },
+    {
+      "path": "web/scripts/test-r3-connector-read.cjs",
+      "sha256": "8b7a46f57edd7fd1dc776e894be7ef38264f4d13a0b540ceca0d3974e734c00b"
+    }
+  ]
+}
