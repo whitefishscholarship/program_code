@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "R3 freshness correction proposal only; no changed permission or acceptance rule",
+  "baselineCommit": "93ea61442acc7d40f1daafbcb4faaa68a1728696",
+  "candidateCommit": "b2399edee03cbe37b5b9e195ae3e294c66dd23c1",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "71d1be7a7b05328a376bcabf24f856bb18e25b43f7034dfcb3cd2defec7261f8"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "2e9165453f193be422becbac5ffbb7608aa805366d09e7c9662400e2a411e3d2"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md",
+      "sha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-preflight-01.json",
+      "sha256": "9ee08487d43fcbe4079f3db7d589c2d3311cbeb8562de742fd6a164bc51ed7fb"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-preflight-02.json",
+      "sha256": "1f595c199929a671ef4f0ddb22cec8d76798f86a08f972296b253a262107dcd5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-contract-assessment.json",
+      "sha256": "37fe8cf0b7ccc1e5ef1176491d7f64d4e9915f526722f37cb455c11fe154f740"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-proposal-validation.json",
+      "sha256": "37011e2fca6a41b3c8f77878cd03fb8101271c40c71cc0143cfaba86b94d771f"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "d99572f8254c35f455bf00d90ef796cb5025da5ec9507f4d5249f0dffcc877ef"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "b9a55928be4af851c6dcfbbf69b49c07e0c2f0d8567c9f46a58ef3d10800b843"
+    }
+  ]
+}
