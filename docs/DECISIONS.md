@@ -713,3 +713,12 @@ current-head guarantee or R4 authority is implied. Attempt1 remains consumed. Pr
 all prior proposals, grant records, review bindings and failed observations. Independently
 review this prospective correction before attempts2/3; mapping review still precedes
 product edits. This records the approved removal of an acceptance check explicitly.
+# 2026-09-14 — R4 exact catalog release authorization
+
+Kelsey approved publication, Preview, merge, Production and verification after explicit
+disclosure. Record the direct receipt in docs/evidence/r4-catalog/authority.json and
+REV18 deliveryAuthorization before effects. Keep planRevision18: R4 must satisfy its
+reserved canonical manifest/review/attestation gates without relaxation or rebinding.
+Preserve the original R3 grant and all runtime bytes. Only R4 policy/evidence/routing
+and canonical two-file attestation are added. Existing decisions and triggers below
+remain on their separate routes; no R5–R7 authority is implied.

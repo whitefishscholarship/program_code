@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-14T15:24:00.381818+00:00",
+  "baseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "githubApiMain": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "authenticatedFetchExitCode": 0,
+  "fetchCommand": "GIT_CONFIG_GLOBAL=/dev/null git -c credential.helper= -c 'credential.helper=!gh auth git-credential' fetch https://github.com/whitefishscholarship/program_code.git main:refs/remotes/origin/main",
+  "transportLimitation": "SSH and rewritten HTTPS failed Repository not found. Command-local HTTPS with existing gh helper succeeded. No config/credential changes.",
+  "vercel": {
+    "method": "Authenticated browser same-origin GET /api/v9/projects/web?teamId=team_6CAjRq58n0WvAH49otKSQbA7; selected fields only",
+    "status": 200,
+    "id": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "accountId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "name": "web",
+    "framework": "nextjs",
+    "rootDirectory": "web",
+    "link": {
+      "org": "whitefishscholarship",
+      "repo": "program_code",
+      "type": "github",
+      "productionBranch": "main"
+    },
+    "dashboard": "https://vercel.com/whitefishscholarships-projects/web",
+    "productionDomain": "web-two-gules-45.vercel.app",
+    "productionDashboardDeployment": "CQfEmry9JVKaYzM8RTwnsyCyvmun",
+    "productionCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "productionStatus": "Ready"
+  },
+  "limits": [
+    "Target and baseline observation only; no new deployment/health claim.",
+    "No source/workbook access or authentication material persisted."
+  ]
+}

@@ -1,3 +1,26 @@
+# R4 authorized — exact release preparation
+
+Plan revision:18. Resume `/private/tmp/program_code-r4-release` on
+`codex/r4-catalog-release`, from retained R3 review checkpoint ec0907e.
+Kelsey approved publication, Preview, merge, Production and verification; no repeat
+approval is needed. See docs/evidence/r4-catalog/authority.json, preflight.json and
+BUILD_STATE.r4CatalogRelease. Codex owns full checks, frozen complete candidate,
+fresh independent canonical review, direct-child two-file attestation, zero local and
+hosted-mode plan diagnostics, exact Preview/CI before merge and Production verification.
+The attestation must remain tip until merged. No publication precedes acceptance.
+
+R3 is locally complete: final-review.json PASS binds candidate8e419d1 and its manifest.
+Runtime/fixture/tool bytes stay unchanged. Preserve all earlier handoff content below
+as history; its no-R4 flags describe the earlier local phase and are superseded only
+by this separate recorded grant. R1/R2 remain delivered.
+
+All five criteria conflicts, Bonita connection hold, NTHS unverified date, definition
+recommendations, framework warning,310heldentities/312holds,26-record queue, recovery
+objects and every earlier owner/trigger remain on their separate routes. No source or
+workbook call, configuration change or R5–R7 action is authorized.
+
+---
+
 # R3 local candidate — final review binding controls completion
 
 Plan revision: 18

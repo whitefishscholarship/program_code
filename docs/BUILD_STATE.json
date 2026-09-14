@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "planRevision": 18,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-13",
+  "lastUpdated": "2026-09-14",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -466,8 +466,7 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending",
-      "PLAN-REV18-awaits-separate-R4-Git-Vercel-authority"
+      "P9-attestation-and-delivery-pending"
     ]
   },
   "governance": {
@@ -835,12 +834,12 @@
         "manifestPath": "docs/evidence/PLAN-REV18-manifest.json",
         "reviewPath": "docs/reviews/PLAN-REV18.json",
         "deliveryAuthorization": {
-          "authorized": false,
-          "authorizedBy": null,
-          "authorizedAt": null,
-          "evidencePath": null,
-          "basis": "Kelsey authorized R3 local scope, bounded reads, prospective policy and local implementation/review only. R4 delivery authority remains separate.",
-          "scope": "No push, PR, Preview, merge, Production or hosted verification. Preserve all final manifest, independent review and direct-child attestation gates."
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-14",
+          "evidencePath": "docs/evidence/PLAN-REV18.md",
+          "basis": "Direct R4 approval after explicit disclosure of GitHub, automatic Preview, merge, Production and verification, recorded in docs/evidence/r4-catalog/authority.json. Original R3 grant preserved.",
+          "scope": "R4 only: publish unchanged reviewed R3 runtime from ec0907eeab92647ee394bd9b9a7614ecb6ab92cc on codex/r4-catalog-release to whitefishscholarship/program_code; PR and automatic Vercel Preview; exact Preview/CI verification before ancestry-preserving merge, resulting Production and hosted verification. Target web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Requires full checks, fresh independent review and direct-child two-file REV18 attestation. No workbook/source access or write, research, configuration/credential change, rollback, monitoring, paid actions, provider/applicant interaction or R5-R7."
         }
       }
     ]
@@ -1213,5 +1212,32 @@
       "nextRoute": "docs/kickoffs/R4-CATALOG-RELEASE.md",
       "r4Authorized": false
     }
+  },
+  "r4CatalogRelease": {
+    "stageId": "R4-CATALOG-RELEASE",
+    "r3Candidate": "8e419d1e7617d9ebd910c6fb74a036dd49528d7b",
+    "r3ReviewCheckpoint": "ec0907eeab92647ee394bd9b9a7614ecb6ab92cc",
+    "r3ManifestSha256": "ee5c3804d5c3a1f92ae97fc090dd04e59eef0926b7ff3d3b73debb42528b5f0f",
+    "r3ReviewSha256": "28b41894373812452c4e9ea64563ba1b9778a49c6560c7dad758c71e70641275",
+    "selectedBundleSha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908",
+    "effects": {
+      "push": true,
+      "pullRequest": true,
+      "preview": true,
+      "merge": true,
+      "production": true,
+      "hostedVerification": true
+    },
+    "scope": "R4 only: publish unchanged reviewed R3 runtime from ec0907eeab92647ee394bd9b9a7614ecb6ab92cc on codex/r4-catalog-release to whitefishscholarship/program_code; PR and automatic Vercel Preview; exact Preview/CI verification before ancestry-preserving merge, resulting Production and hosted verification. Target web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Requires full checks, fresh independent review and direct-child two-file REV18 attestation. No workbook/source access or write, research, configuration/credential change, rollback, monitoring, paid actions, provider/applicant interaction or R5-R7.",
+    "status": "authorized-preparing-candidate",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV18.md",
+    "receiptPath": "docs/evidence/r4-catalog/authority.json",
+    "preflightPath": "docs/evidence/r4-catalog/preflight.json",
+    "branch": "codex/r4-catalog-release",
+    "worktree": "/private/tmp/program_code-r4-release",
+    "canonicalManifestPath": "docs/evidence/PLAN-REV18-manifest.json",
+    "canonicalReviewPath": "docs/reviews/PLAN-REV18.json",
+    "completionRequiresExactHostedVerification": true,
+    "nextStageAuthorized": false
   }
 }

@@ -48,3 +48,25 @@ authorized R4 satisfies them. No other acceptance failure is permitted to disapp
 Policy, capture, mapping, tests/browser evidence and local final review are recorded
 under `docs/evidence/r3-catalog/`. `CURRENT_HANDOFF.md` is the sole progress pointer.
 The original intake ledger and every existing owner/trigger remain authoritative.
+
+## September 14: direct R4 release approval
+
+After the assistant disclosed uploading the reviewed release to GitHub, automatic
+Vercel Preview, checking Preview, merging to update the live website, and verifying
+the live release, Kelsey replied **“approved.  proceed”**. The explicit approval prompt
+was “Approve R4 publishing, Preview, merge, Production deployment, and verification.”
+The exact receipt and scope are `docs/evidence/r4-catalog/authority.json`.
+
+This authorizes only R4 delivery of unchanged R3 runtime from review checkpoint
+ec0907eeab92647ee394bd9b9a7614ecb6ab92cc to whitefishscholarship/program_code through
+codex/r4-catalog-release, its PR and Preview, ancestry-preserving merge, Production
+and exact hosted verification. Target: project web/prj_LbefE2deji6nPND6iBiuofe7IABv,
+team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app.
+
+R3 final PASS binds candidate8e419d1. Preserve all R3 grants and review bytes;
+r4CatalogRelease is the separate operative grant. Supersede only the previous R4
+release blocker. Full candidate review, immutable complete manifest, direct-child
+two-file attestation and zero actual local/hosted-mode plan errors precede publication.
+Exact Preview and CI precede merge; Production proof follows. No source/workbook
+access or write, research, config/credential change, rollback, monitoring, paid action,
+provider/applicant interaction or R5–R7. Preflight records live baseline and exact target.

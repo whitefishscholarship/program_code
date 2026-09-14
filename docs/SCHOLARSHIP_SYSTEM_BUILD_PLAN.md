@@ -1870,3 +1870,31 @@ original proposal, authority, sanitizer evidence and independent review candidat
 Commit and independently review this dedicated prospective policy correction before more
 source calls. Source reconciliation/mapping review and final R3 review remain mandatory;
 R4 acceptance and all release effects remain separately gated.
+
+### Revision 18 separately approved R4 release
+
+On September14,2026, Kelsey approved GitHub publication, automatic Vercel Preview,
+merge, Production and verification of the reviewed R3 catalog. The direct receipt is
+`docs/evidence/r4-catalog/authority.json`, incorporated in `PLAN-REV18.md` and REV18
+deliveryAuthorization. This later grant supersedes only the previous no-R4 boundary.
+Original R3 grant objects and historical reviews remain unchanged; r4CatalogRelease
+governs the release. P0–P9 and R1/R2 stay complete, with stage pointers null.
+
+Preserve every tracked runtime, fixture, dependency, test and deployment-control byte
+from R3 review checkpoint ec0907eeab92647ee394bd9b9a7614ecb6ab92cc. R4 adds its authority
+and release evidence/routing only. Publish to whitefishscholarship/program_code through
+codex/r4-catalog-release. Target is web/prj_LbefE2deji6nPND6iBiuofe7IABv, team
+team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app.
+
+Freeze the complete baseline-to-candidate set and obtain fresh-context read-only
+independent acceptance review. Add exactly canonical REV18 manifest and review in the
+direct-child attestation, which must remain branch tip until merged. Require zero
+actual local and hosted-mode plan diagnostics before publication. Verify exact Preview
+and CI before ancestry-preserving merge; verify exact Production afterward. Passing
+deployment is not health proof: bind deployed commit, selected catalog hashes/counts,
+compatibility/API/browser/public CSV behavior and zero source capability. Unavailable
+hosted request/download evidence remains unknown; distinguish local proof explicitly.
+
+No workbook/source access or write, research, configuration/credential change, rollback,
+monitoring, paid action, provider/applicant interaction or R5–R7 execution. Existing
+criteria/definition/research/recovery/hold routes retain their recorded owners/triggers.
