@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV19-POLICY",
+  "createdAt": "2026-09-14T16:38:45.663Z",
+  "baselineCommit": "d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2",
+  "candidateCommit": "07d5d8df6b722bd83557bbcd160d68bf5cc55918",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "e74430bcfc05dfc7d5f483ec5a77eb3b445b0ef6d8fa37a214f2e73488bb4556"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "52fa2a8ecb238b8a85a1d6949ecdc53880fd63471495d4e94991f3b95dbc8aed"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "7b0824664780833313868d678de707d2c61eb9a75b836ef0ac42c14fdb292f83"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "a7fa1d88a951418e9248fa5f98b54c1a0c7e26cd80e2275a067efcc8a9ad419f"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "ea0a5b866fb34d2995ac5acb5d28a72d43ff658b0864087fa704ba140d127ff3"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV19.md",
+      "change": "present",
+      "sha256": "4f8cf699acb24251a6fb60a1fcf9cf66af16d50a2e73ac9dd65ad474aa3754de"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/authority.json",
+      "change": "present",
+      "sha256": "eff73ecd1c87552b94e8de534189352daa7ca0e94397207c0052987726d52f5a"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/preflight.json",
+      "change": "present",
+      "sha256": "76f2c95f98ce306a625c89c18f44b166d9c13f74c103f9d45aec731a5cf43fc1"
+    },
+    {
+      "path": "docs/kickoffs/R4-WHITEFISH-DELIVERY.md",
+      "change": "present",
+      "sha256": "feb7bb4872e499fc327ace13975104dc7ed31995b25f4a0d6534d0bf3ae708f6"
+    }
+  ]
+}

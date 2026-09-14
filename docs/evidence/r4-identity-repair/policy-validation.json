@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-14T16:41:24.333Z",
+  "finalPolicyCandidate": "07d5d8df6b722bd83557bbcd160d68bf5cc55918",
+  "records": [
+    {
+      "pathAtObservation": "/private/tmp/r4-identity-policy-check.log",
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 5 error(s):\n- PLAN-REV18 undelivered branch tip must equal its attestation exactly\n- Missing required file: docs/evidence/PLAN-REV19-manifest.json\n- Missing required file: docs/reviews/PLAN-REV19.json\n- PLAN-REV19 requires a committed manifest/review attestation in current history\n- CURRENT_HANDOFF.md plan revision does not match BUILD_STATE.json\n"
+    },
+    {
+      "pathAtObservation": "/private/tmp/r4-identity-policy-recheck.log",
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 5 error(s):\n- PLAN-REV18 undelivered branch tip must equal its attestation exactly\n- Missing required file: docs/evidence/PLAN-REV19-manifest.json\n- Missing required file: docs/reviews/PLAN-REV19.json\n- PLAN-REV19 requires a committed manifest/review attestation in current history\n- CURRENT_HANDOFF.md plan revision does not match BUILD_STATE.json\n"
+    },
+    {
+      "pathAtObservation": "/private/tmp/r4-identity-policy-final-check.log",
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 4 error(s):\n- PLAN-REV18 undelivered branch tip must equal its attestation exactly\n- Missing required file: docs/evidence/PLAN-REV19-manifest.json\n- Missing required file: docs/reviews/PLAN-REV19.json\n- PLAN-REV19 requires a committed manifest/review attestation in current history\n"
+    }
+  ],
+  "scope": "Earlier failures retained; final four diagnostics are required unresolved attestation gates, not a pass."
+}
