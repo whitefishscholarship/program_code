@@ -1,7 +1,12 @@
 'use strict';
 
 // Local orchestration only. Never return or persist the raw connector response.
-const validTime = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/.test(value) && Number.isFinite(Date.parse(value));
+const validTime = value => {
+  if (typeof value !== 'string') return false;
+  const parts = /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.(\d{1,3}))?Z$/.exec(value);
+  if (!parts || !Number.isFinite(Date.parse(value))) return false;
+  return new Date(value).toISOString() === `${parts[1]}.${(parts[2] || '').padEnd(3, '0')}Z`;
+};
 
 function sanitizeRevisionObservation(response, fileId, modifiedTime) {
   const out = { status: 'BLOCKED', fileId, currentRevisionId: null, currentRevisionModifiedTime: null,

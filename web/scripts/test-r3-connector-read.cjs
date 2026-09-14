@@ -49,3 +49,18 @@ for (const [key, value] of [['sha256', 'b'.repeat(64)], ['complete', false], ['r
   const changed = structuredClone(captures); changed[1][key] = value; assert(validateSequence(observations, changed, 2).length, key);
 }
 console.log('R3 freshness PASS: unequal independent timestamps allowed; instability, order, bounds, unequal captures and exhausted attempts rejected.');
+
+for (const invalid of ['2026-02-30T00:00:00.000Z', '2026-01-01T24:00:00.000Z', '2026-02-29T00:00:00Z', '2026-04-31T00:00:00Z', '2026-01-01T00:60:00Z']) {
+  const changed = structuredClone(good); changed.structuredContent.result.revisions[0].modifiedTime = invalid;
+  assert.equal(sanitize(changed, fileId, modifiedTime).status, 'BLOCKED');
+  assert.equal(sanitize(good, fileId, invalid).status, 'BLOCKED');
+  for (const clock of ['startedAt', 'completedAt']) {
+    const sequence = structuredClone(observations); sequence[0][clock] = invalid;
+    assert(validateSequence(sequence, captures, 2).length);
+  }
+}
+for (const valid of ['2024-02-29T00:00:00Z', '2026-01-01T00:00:00.1Z', '2026-01-01T00:00:00.12Z', '2026-01-01T00:00:00.123Z']) {
+  const changed = structuredClone(good); changed.structuredContent.result.revisions[0].modifiedTime = valid;
+  assert.equal(sanitize(changed, fileId, valid).status, 'PASS');
+}
+console.log('R3 date-validation remediation PASS: invalid calendar/time rollovers rejected; valid leap day and fractional timestamps accepted.');

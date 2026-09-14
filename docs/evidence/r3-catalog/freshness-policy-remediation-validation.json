@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "reviewFinding": {
+    "id": "R3-FRESHNESS-M1",
+    "severity": "medium",
+    "reviewer": "/root/r3_freshness_policy_review",
+    "problem": "Date.parse normalized invalid calendar and clock timestamps",
+    "disposition": "remediated_pending_independent_recheck",
+    "rationale": "UTC round-trip validates actual components while preserving supported fractional precision",
+    "owner": "Codex implementation agent",
+    "target": "Prospective freshness policy before source calls"
+  },
+  "checks": [
+    {
+      "command": "node scripts/test-r3-connector-read.cjs",
+      "cwd": "web",
+      "startedAt": "2026-09-14T13:46:23.659778+00:00",
+      "completedAt": "2026-09-14T13:46:23.687663+00:00",
+      "exitCode": 0,
+      "output": "R3 revision sanitizer PASS: no editor identity output; missing, ambiguous, widened and cap-limited proof blocks. Synthetic inputs only.\nR3 freshness PASS: unequal independent timestamps allowed; instability, order, bounds, unequal captures and exhausted attempts rejected.\nR3 date-validation remediation PASS: invalid calendar/time rollovers rejected; valid leap day and fractional timestamps accepted.\n"
+    },
+    {
+      "command": "node --import tsx scripts/test-r3-catalog-governance.ts",
+      "cwd": "web",
+      "startedAt": "2026-09-14T13:46:23.687677+00:00",
+      "completedAt": "2026-09-14T13:46:23.789489+00:00",
+      "exitCode": 0,
+      "output": "R3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\n"
+    }
+  ],
+  "priorFullMatrix": "docs/evidence/r3-catalog/freshness-policy-validation.json",
+  "limits": [
+    "Only local timestamp validator and its tests changed after the full matrix; no product runtime or new source calls"
+  ]
+}
