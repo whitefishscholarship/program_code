@@ -1,3 +1,4 @@
+import { validateIdentityRepairAtRepo } from './r4-identity-delivery';
 import { permitsLocalR3Preparation, validateR3CatalogPolicyAt, type R3CatalogPolicy } from './r3-catalog-governance';
 import { permitsLocalCoveragePreparation } from './interview-coverage-governance';
 import { readGitBuffer, matchesBlobHash, validateRepairAtRepo, type Rev15DeliveryRepair } from './plan-rev17-rev15-delivery-repair';
@@ -135,6 +136,7 @@ type PlanAmendment = {
   lateDeliveryContinuation?: PlanRev11LateDeliveryContinuation;
   rowSourceCorrection?: PlanRev12RowSourceCorrection;
   rev15DeliveryRepair?: Rev15DeliveryRepair;
+  r4IdentityRepair?: unknown;
 };
 
 type DeliveryIntegration = {
@@ -1612,6 +1614,19 @@ if (state) {
     repairErrors.forEach(fail);
     revision17ContinuationValid = repairErrors.length === 0;
   }
+  const revision19 = planAmendments.find(item => item.id === 'PLAN-REV19');
+  const canonicalRevision18 = findCanonicalAttestation('PLAN-REV18', 'docs/evidence/PLAN-REV18-manifest.json', 'docs/reviews/PLAN-REV18.json');
+  const canonicalRevision19 = revision19 ? findCanonicalAttestation(revision19.id, revision19.manifestPath, revision19.reviewPath) : null;
+  let revision19ContinuationValid = false;
+  if (state.planRevision >= 19 || revision19) {
+    const startErrors = errors.length;
+    const identityErrors = validateIdentityRepairAtRepo(repoRoot, state, canonicalRevision18, canonicalRevision19);
+    identityErrors.forEach(fail);
+    if (canonicalRevision19 && revision19) {
+      validateBoundAttestation(revision19.id, revision19.baselineCommit, revision19.manifestPath, revision19.reviewPath);
+      revision19ContinuationValid = errors.length === startErrors;
+    }
+  }
   for (const amendment of planAmendments) {
     const amendmentRevision = Number(/^PLAN-REV(\d+)$/.exec(amendment.id)?.[1] ?? 0);
     const expectedAmendmentStatus = amendmentRevision >= 3 ? 'attestation-gated' : 'accepted';
@@ -1656,7 +1671,7 @@ if (state) {
         fail(`${amendment.id} requires direct informed delivery authority or an exact authorized local-only preparation blocker`);
       }
     }
-    validateBoundAttestation(
+    if (amendment.id !== 'PLAN-REV19' || !canonicalRevision19) validateBoundAttestation(
       amendment.id,
       amendment.baselineCommit,
       amendment.manifestPath,
@@ -1668,7 +1683,9 @@ if (state) {
         ? canonicalRevision11.attestationCommit
         : amendment.id === 'PLAN-REV15' && revision17ContinuationValid && canonicalRevision17
           ? canonicalRevision17.attestationCommit
-          : undefined,
+          : amendment.id === 'PLAN-REV18' && revision19ContinuationValid && canonicalRevision19
+            ? canonicalRevision19.attestationCommit
+            : undefined,
     );
   }
 
