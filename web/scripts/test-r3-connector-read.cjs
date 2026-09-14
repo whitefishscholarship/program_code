@@ -57,6 +57,8 @@ for (const invalid of ['2026-02-30T00:00:00.000Z', '2026-01-01T24:00:00.000Z', '
   for (const clock of ['startedAt', 'completedAt']) {
     const sequence = structuredClone(observations); sequence[0][clock] = invalid;
     assert(validateSequence(sequence, captures, 2).length);
+    const intervals = structuredClone(captures); intervals[0][clock] = invalid;
+    assert(validateSequence(observations, intervals, 2).length);
   }
 }
 for (const valid of ['2024-02-29T00:00:00Z', '2026-01-01T00:00:00.1Z', '2026-01-01T00:00:00.12Z', '2026-01-01T00:00:00.123Z']) {
