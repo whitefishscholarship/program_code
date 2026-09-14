@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only R3 blocker and supplemental permission proposal review",
+  "reviewer": "/root/r3_connector_review",
+  "reviewedAt": "2026-09-14T00:02:06Z",
+  "outcome": "PASS",
+  "canonicalAcceptance": false,
+  "supplementAuthorized": false,
+  "r3Complete": false,
+  "bindings": {
+    "baselineCommit": "eceeb498b9c92df41d026b749432625833a4974e",
+    "candidateCommit": "af7d8a1126b23430bf092647bab2bfc9b053cac9",
+    "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "manifestPath": "/private/tmp/r3-connector-proposal-manifest.json",
+    "manifestSha256": "cf82fb2bd05f51470f97c9646bfa51740884614b1fbdc3bee5dc0d3ab1f8afb1",
+    "originalScopeSha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2",
+    "preservedPolicyCandidate": "c8be2caf739b1074ae6caddc9e7f87ab28a68078",
+    "completeChangedPathCount": 9
+  },
+  "manifestPathInRepository": "docs/evidence/r3-catalog/connector-proposal-manifest.json",
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "networkAccess": false,
+    "workbookAccess": false,
+    "credentialAccess": false,
+    "providerAccess": false
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    "Verified clean exact candidate HEAD, direct-child relationship to the review baseline, and delivered-baseline ancestry.",
+    "Recomputed manifest SHA256, all nine candidate Git-blob hashes, complete changed-path equality, and worktree equality.",
+    "Verified BUILD_STATE differs only in r3CatalogRefresh.status; source bounds, original authority, capture gates and all reserved effects remain unchanged.",
+    "Verified complete previous CURRENT_HANDOFF, SCHOLARSHIP-INTAKE-RESUME and R3-CATALOG-REFRESH content remains byte-identical as suffixes.",
+    "Verified original scope digest, preserved policy manifest/review digest binding, all 12 original policy-candidate hashes, complete policy change set and original two-file review checkpoint.",
+    "Inspected the complete nine-path proposal change set and recorded verification outputs.",
+    "Verified no changes to runtime, fixtures, dependencies, deployment configuration, canonical plan, decisions, original grant evidence or historical reviews and receipts relative to the review baseline.",
+    "Inspected saved cells-0.json metadata keys only: spreadsheetUrl, selected-sheet index, sheetType and frozenRowCount support the disclosed additional envelope fields.",
+    "Compared proposed revision metadata with the saved tool declaration, including incidental editor attribution and absence of a revision field mask.",
+    "Independently ran node --import tsx scripts/test-r3-catalog-governance.ts: PASS.",
+    "Independently ran git diff --check across the complete baseline-to-candidate diff: PASS."
+  ],
+  "assessment": {
+    "authority": "The original R3 grant persists. This proposal grants nothing and requests only the additional metadata needed by the two named connector routes.",
+    "privacy": "The disclosure truthfully identifies unavoidable upstream editor attribution and spreadsheet URL exposure. It requires discarding personal attribution and unnecessary metadata before model-facing output or evidence persistence. Other-tab inventory and revision contents remain prohibited.",
+    "bounds": "Revision reads are capped at one page of 1000 records per observation, four observations per attempt and three attempts. Cell reads retain the original workbook, sheet0, A1:O417 and exact cell projection.",
+    "revisionProof": "A nonempty tool-reported currentRevisionId must have a corresponding revision record agreeing with independently observed file modifiedTime. Ambiguity, the record cap or unavailable proof keeps processing blocked. Historical revision229, modifiedTime alone and the last listed revision are explicitly insufficient.",
+    "captureGates": "Before/after equal revision tokens, two equal complete bounded projections, identity/header/dimension checks and mapping review before product edits remain required.",
+    "trashedStatus": "Unavailable remains unknown. The proposal does not infer trashed:false or waive an applicable trash-status gate.",
+    "continuation": "Supplemental approval must precede prospective policy/state/test changes and fresh independent policy review. Additional source calls remain blocked until that sequence is satisfied.",
+    "release": "No R4 effects, canonical acceptance, attestation, publication or deployment are authorized."
+  },
+  "recordedValidation": {
+    "planCheckExitCode": 1,
+    "canonicalErrors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ],
+    "typecheckExitCode": 0,
+    "testsExitCode": 0,
+    "buildExitCode": 0,
+    "diffCheckExitCode": 0,
+    "canonicalPassClaimed": false
+  },
+  "carriedExternalBlocker": {
+    "status": "unresolved_and_correctly_blocking",
+    "source": "docs/evidence/r3-catalog/connector-compatibility-assessment.json",
+    "owner": "Codex implementation agent; Kelsey for supplemental permission",
+    "trigger": "Direct approval of the exact supplemental metadata proposal",
+    "nextAction": "Prospectively amend and independently review the supplemental policy before additional source calls; remain blocked if sufficient revision proof is unavailable.",
+    "classification": "Existing source-access limitation, not a defect in this reviewed proposal"
+  },
+  "limits": [
+    "PASS applies only to this exact blocker and permission proposal candidate and manifest.",
+    "Source-preflight observations and tool behavior were assessed from committed evidence; no live connector or source verification was performed.",
+    "The saved connector envelope establishes historical response shape, not guaranteed current behavior.",
+    "The full test/typecheck/build matrix was inspected as recorded evidence rather than rerun for this documentation/status-only change.",
+    "The three reserved canonical diagnostics remain failures; this review does not complete R3 or authorize the supplement."
+  ]
+}
