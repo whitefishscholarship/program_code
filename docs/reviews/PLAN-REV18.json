@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV18",
+  "reviewerTaskId": "/root/r4_acceptance_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-14T15:36:21.403Z",
+  "outcome": "accepted",
+  "candidateCommit": "5e5c140dc49250234438fa9b741064acc7aa8375",
+  "candidateTree": "5531ea31269011f6e8bdcd9238b336e80b103e60",
+  "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "candidateManifestPath": "docs/evidence/PLAN-REV18-manifest.json",
+  "candidateManifestSha256": "a5ec94957e50cecfea9c8aadd16792b98143e92bea3c5ba9f4c03e0705ce3360",
+  "decisionScope": "Accept the complete frozen PLAN-REV18 R4 release candidate for its exact direct-child two-file canonical attestation. This review covers the full 128-path delivered-baseline-to-candidate change set, including preserved R3 policy, mapping, implementation and review ancestry. R4 adds only authority, evidence and routing after R3 review checkpoint ec0907eeab92647ee394bd9b9a7614ecb6ab92cc. Acceptance does not claim that attestation, zero post-attestation diagnostics, publication, Preview/CI, merge or Production verification are complete. The two-file attestation must remain branch tip until merged; zero actual local and hosted-mode diagnostics precede publication, exact Preview/CI precede ancestry-preserving merge and exact Production verification follows.",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "severity": "low",
+      "summary": "R4-FINAL-001: Preserve the six downloaded CSV evidence files with their intentional BOM/CRLF bytes; raw baseline git diff --check exits2 for CR whitespace. This carries the accepted R3-FINAL-001 finding.",
+      "rationale": "The six committed downloads exactly equal the independently replayed local downloads. Required clean-worktree git diff --check exits0, and a command-local core.whitespace=cr-at-eol complete baseline check exits0. Normalizing the CSV evidence would destroy exact downloaded-byte proof. No Git configuration or acceptance policy was changed.",
+      "owner": "Codex R4 release owner",
+      "target": "This canonical acceptance and subsequent exact public-CSV release verification",
+      "status": "accepted",
+      "verification": "Independently reran all three diff forms and compared all six CSV files byte-for-byte with /private/tmp/r3-independent-final-browser."
+    }
+  ],
+  "verification": [
+    "Followed AGENTS required read order, canonical plan/state and operative handoff, latest R3 local evidence and final review, R4 kickoff, original R3 scope and separately recorded R4 authority. Historical no-R4 flags remain original grant history; the later R4 receipt, canonical plan and REV18 deliveryAuthorization provide the narrow operative release grant.",
+    "Independently confirmed clean frozen HEAD, exact candidate tree, origin/main baseline and ancestry from the baseline, R3 final candidate, R3 review checkpoint and mapping candidate. Recomputed manifest SHA256, complete 128-path changeset and every candidate Git blob hash; all also equal working-tree bytes.",
+    "Compared all R3-review-checkpoint-to-R4 changes: exactly 12 documentation paths. Every tracked runtime, fixture, dependency, test and deployment-control byte is preserved. Recomputed all 667 protected-file hashes and compared them with R3 checkpoint blobs; all six retained branch refs, original R3 grant object, older amendment objects and complete prior handoff remain unchanged.",
+    "Independently validated all seven original R3 policy/proposal/mapping/final manifests: complete original changesets and immutable candidate blob hashes, matching PASS review candidate and manifest digest. Their changed-path counts are policy12, connector-proposal9, connector-policy13, freshness-proposal9, freshness-policy13, mapping29 and final119. The final local PASS remains bound to 8e419d1e7617d9ebd910c6fb74a036dd49528d7b, never to this R4 candidate.",
+    "Reviewed baseline-to-candidate runtime and validator diffs, new public catalog/compatibility implementation, shortlist/relevance defaults, supported organization controls, health identity and CSV public Award ID; reviewed predecessor test adaptations and current R3 adversarial coverage. No new official accepted matching facts, answer persistence/transmission, source capability, dependencies or deployment configuration were introduced.",
+    "Independently reran node --import tsx scripts/test-r3-catalog.ts: exit0, 411 awards, 192 preserved outcomes/reasons across61 profiles, 291 qualified connections,9 new GPA and7 school rules,9 organizations, binary OR, sensitive skip/nonselection and exact public CSV IDs/order checks.",
+    "Independently reran PYTHONDONTWRITEBYTECODE=1 python3 scripts/build-r3-catalog.py --check and PYTHONDONTWRITEBYTECODE=1 python3 scripts/test-r3-mapping.py: exit0; exact reproducible reviewed outputs,257 operations,416 rows,192 preserved plus219 new awards,38 priority entities/42 references,5 gaps and preserved resource/child/application relationships. Reviewed individual rule/field/provenance and deferred-condition handling.",
+    "Independently reran node scripts/check-r3-capture.cjs, node scripts/test-r3-native-capture.cjs and node scripts/test-r3-connector-read.cjs: all exit0 using only saved or synthetic artifacts. Exact scope, four separately stable observations, two complete equal captures, identity/projection/privacy, ambiguous or cap-reaching revision evidence, attempt limits and invalid-date regressions pass.",
+    "Independently reran node --import tsx scripts/test-r3-catalog-governance.ts: exit0; original exact scope, authority, independent policy gates, local-only boundaries, supplemental metadata and freshness correction controls pass.",
+    "Inspected committed timestamped successful npm test, npm run build, npm run typecheck, intake:check, coverage:check and all R3/P9 verification records against the unchanged reviewed runtime. Full test/build/typecheck evidence is the implementation run; this reviewer reran focused checks independently and did not rebuild.",
+    "Independently reran node --import tsx scripts/p9-production-runtime.ts --require-build-trace: exit0,41 runtime files, closure SHA256 5b04c0e61cdccd5017617c21c4863829b3581966c906fe4cc8a13d421c137930, built trace SHA256 f18a251051c8810e629c2c0ee5f99e3a1a52e74eeda4a99a4591da08b350466e; Google/Drive/Sheets capability none, production ingestion/mutation routes disabled.",
+    "Verified preserved 360px/1440px R3 browser PASS evidence for core384 shortlist and411 all awards, all organization/Teaching/need choices, explicit sorts, edit/reset/reload, complete keyboard journey, public CSV and bounded zero answer-storage/request/log observations. All six actual CSV files equal the saved independent R3 replay byte-for-byte. No fresh R4 browser run is claimed.",
+    "Independently ran actual frozen node --import tsx scripts/validate-build-plan.ts and GITHUB_ACTIONS=true node --import tsx scripts/validate-build-plan.ts in parallel. Both exit1 with exactly the three missing REV18 manifest/review/committed-attestation diagnostics and no other failures. They are mandatory outstanding attestation gates, not a canonical pass or waiver.",
+    "Independently confirmed required git diff --check exit0 and command-local format-aware full-baseline diff exit0; raw baseline diagnostic is limited to the six preserved downloaded CSVs and is count-matched above. Final HEAD remains exact and worktree clean.",
+    "Timestamp-format remediation recheck: independently confirmed the same clean candidate5e5c140dc49250234438fa9b741064acc7aa8375/tree5531ea31269011f6e8bdcd9238b336e80b103e60 and unchanged baseline. Recomputed all128 candidate hashes and complete changed-path set. The new external manifest differs only in createdAt, normalized from2026-09-14T15:27:39.006152+00:00 to2026-09-14T15:27:39.006Z. Checked the actual validator isIsoTimestamp expression: seconds or exactly three fractional digits followed by Z. This review uses Date.toISOString(), and both timestamps satisfy that strict expression.",
+    "Verified prior invalid-format attempt2f9fefb5bc43e08d11c3fda669bcb84ce8e066f1 remains unchanged on codex/r4-catalog-release-timestamp-hold with exactly the original external manifest/review bytes. Its parent is the same immutable candidate; the new delivery branch is at that candidate and does not descend from the held failed attempt. No candidate, historical attestation, validator or product bytes were changed, and no validation relaxation or published-history rewrite is involved."
+  ],
+  "canonicalDiagnostics": {
+    "localExitCode": 1,
+    "hostedModeExitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ],
+    "notWaived": true,
+    "requiredBeforePublication": "Create only canonical manifest and review in the exact direct-child attestation, then require zero actual local and hosted-mode diagnostics."
+  },
+  "limits": [
+    "No source/workbook/network/provider/credential access, repository edits, commits, deployment or browser interaction was performed by this reviewer. The only written file is this independent review result outside the repository.",
+    "Authenticated baseline and target preflight is inspected implementation evidence, corroborated by local origin/main identity; this reviewer did not repeat external checks. Exact attestation CI/Preview and Production health/browser/API/CSV verification remain future release gates.",
+    "Saved source capture establishes bounded connector observational consistency only, not actual server head, atomic snapshot, complete history, or current official scholarship facts. Selected organizer revision229 remains distinct from accepted matching-facts revision225.",
+    "Local R3 browser evidence remains applicable because reviewed runtime bytes are identical; it is not new R4 browser proof, universal privacy proof, or a resolution of historical hosted request/download observation limits. Unavailable hosted evidence must remain unknown.",
+    "Five existing criteria conflicts await separate Kelsey policy selection; Bonita need connection remains held for separately authorized research, first-generation/care definitions remain recommendations, NTHS deadline remains unverified, and framework warning remains separately selected maintenance. Original310 held entities/312 holds,26-record research queue, recovery objects and all recorded owners/triggers remain preserved. No R5-R7 authority is implied.",
+    "The previous unpublished two-file attempt failed strict timestamp-shape validation and is retained solely as failed-attempt evidence. This new independent review replaces neither that retained artifact nor any historical canonical review. It binds only the timestamp-normalized manifest for the identical reviewed candidate. It is not a claim that new post-attestation validators have passed; require both actual modes to return zero before any publication."
+  ],
+  "timestampRemediation": {
+    "previousAttempt": "2f9fefb5bc43e08d11c3fda669bcb84ce8e066f1",
+    "preservedRef": "codex/r4-catalog-release-timestamp-hold",
+    "previousReviewSha256": "938042d2ed1f95ae244b5131cc5142dcfe8345ba9ad954e6ec532de93608fec1",
+    "previousManifestSha256": "611e7abf0768429dcc5a97ab984fc54327f355b5119fcc38504c175f644df226",
+    "newManifestSha256": "a5ec94957e50cecfea9c8aadd16792b98143e92bea3c5ba9f4c03e0705ce3360",
+    "manifestChangeOnly": "createdAt UTC timestamp serialization",
+    "candidateChanged": false,
+    "validatorChanged": false,
+    "productChanged": false,
+    "originalReviewFilePreserved": true
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "observedAt": "2026-09-13T16:21:47.046797+00:00",
+  "phase": "R2",
+  "rev16": {
+    "candidate": "a5eac691e9353eb5edc19b0da1e30ede6f6d38cc",
+    "attestation": "9dece0112a590703cf849ffc7301792a15b9a650",
+    "merge": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+    "baseline": "16092cb858360f2ace06f92d11ab36a080bcb03f",
+    "pr": "https://github.com/whitefishscholarship/program_code/pull/45",
+    "mergedAt": "2026-09-13T16:18:39Z",
+    "mergeParentsAndTreeExact": true,
+    "postAttestation": [
+      {
+        "command": "npm run plan:check",
+        "startedAt": "2026-09-13T01:00:02.666510+00:00",
+        "finishedAt": "2026-09-13T01:00:28.590478+00:00",
+        "exitCode": 0,
+        "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+      },
+      {
+        "command": "GITHUB_ACTIONS=true npm run plan:check",
+        "startedAt": "2026-09-13T01:00:28.590610+00:00",
+        "finishedAt": "2026-09-13T01:00:53.250126+00:00",
+        "exitCode": 0,
+        "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+      }
+    ],
+    "preview": {
+      "observedAt": "2026-09-13T16:18:36.088384+00:00",
+      "stage": "PLAN-REV16",
+      "environment": "preview",
+      "pr": 45,
+      "commit": "9dece0112a590703cf849ffc7301792a15b9a650",
+      "deploymentId": "dpl_BeFNgELumcTT69BXrAQYZDJrAHkJ",
+      "url": "https://web-frir9k1xp-whitefishscholarships-projects.vercel.app",
+      "providerReady": true,
+      "health": {
+        "status": 200,
+        "cacheControl": "no-store",
+        "nonce": "759f1c297bc245019e84559aba034615",
+        "serverNow": "2026-09-13T16:13:00.466Z",
+        "exactSourceAndDeployment": true,
+        "coverageSha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1",
+        "google": "none",
+        "drive": "none",
+        "sheets": "none",
+        "productionIngestion": "disabled",
+        "productionMutation": "disabled"
+      },
+      "browser": {
+        "fictionalOnly": true,
+        "coreShortlist": 166,
+        "allAwards": 192,
+        "coreOrderAndCsvExact": true,
+        "combinedTeachingNthsFfaOrderAndCsvExact": true,
+        "fourExactQualifiedReasonsVisible": true,
+        "catalogSha256": "bff493bb8eb8f5d91bd1429131b5a8bcf838c0fbc5fa317d96f36f9d698b706d",
+        "visibleNamesMatchApi": true,
+        "apiStatus": 200,
+        "editRestoredGpa": true,
+        "resetAndReloadClear": true,
+        "horizontalOverflow": false,
+        "errorLogs": 0,
+        "localStorage": 0,
+        "indexedDB": 0,
+        "cookies": 0,
+        "sessionStorage": {
+          "count": 3,
+          "keys": [
+            "__vtkb-hide-key",
+            "vc-mfe-session-cleared",
+            "vc-dt-src"
+          ],
+          "syntheticAnswerMarkers": false
+        },
+        "urlContainsAnswers": false
+      },
+      "expected": {
+        "results": {
+          "core": {
+            "allCount": 192,
+            "idsSha256": "c7f54d2be9ee573ecd5ab6c02e293d462cea547ee76647916c16ac8ae290a983",
+            "csvSha256": "547472e2ddc076f83af228040cccccbf91ad6b590ff9319cce05785aede40d19",
+            "csvBytes": 46453
+          },
+          "combined": {
+            "allCount": 192,
+            "idsSha256": "5166dceb1d1fc59ddf64bb0b810b92b420036f93646f6822982c9e2100596888",
+            "csvSha256": "eebdfaeeaddcffa05f1a362a4b43a281ceb65731f57727aeaa010f209721de5c",
+            "csvBytes": 46453
+          }
+        },
+        "connections": [
+          {
+            "id": "coverage-44-education_teaching",
+            "answerId": "education_teaching",
+            "awardId": "award-36ff5fe7d091",
+            "message": "Your interest in Education / Teaching connects with the saved FVCC early-childhood education record. Check enrollment in that specific program; an interest alone does not establish eligibility. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-143-org_nths",
+            "answerId": "org_nths",
+            "awardId": "award-ead4360dadca",
+            "message": "Your NTHS selection connects with this saved record. Check National Technical Honor Society membership and construction-related career plans; other organizations do not establish NTHS membership. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-170-org_ffa",
+            "answerId": "org_ffa",
+            "awardId": "award-b86982e726be",
+            "message": "Your FFA selection connects with this saved record. Check Montana FFA membership and post-secondary study requirements. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-174-org_ffa",
+            "answerId": "org_ffa",
+            "awardId": "award-6b4f548adb79",
+            "message": "Your FFA selection connects with this saved record. Check Montana FFA membership, agriculture-related study and at least two years of agricultural education classes. Confirm current requirements and availability."
+          }
+        ]
+      },
+      "ci": "https://github.com/whitefishscholarship/program_code/actions/runs/34729480754/job/103649504746",
+      "ciConclusion": "SUCCESS",
+      "limits": [
+        "CUA call returned after an unusually long delay; live main and CI were refreshed afterward.",
+        "CDP request event capture returned no events, including after reload. This is unavailable hosted request-body evidence, not proof of no transmission. Unchanged exact runtime and accepted local regression supply request/privacy verification.",
+        "Hosted public CSV data-URI bytes were reconciled exactly; local browser regression verified actual saved downloads. Prior IAB download notification timeout remains a tool limitation."
+      ],
+      "laterPhaseObservation": {
+        "awardId": "award-ead4360dadca",
+        "display": "Annual close rule: 46113",
+        "route": "R3 catalog/date display review; preserve source and verify formatting provenance before any later authorized fix; no new research or source access performed"
+      }
+    },
+    "production": {
+      "health": {
+        "observedAt": "2026-09-13T16:19:18.171278+00:00",
+        "url": "https://web-two-gules-45.vercel.app/api/health?nonce=bfa9d5ea975141708b9fd1c110151563",
+        "status": 200,
+        "cacheControl": "no-store",
+        "body": {
+          "ok": true,
+          "commit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+          "commitShort": "a8aa6f9",
+          "ref": "main",
+          "message": "Merge pull request #45 from whitefishscholarship/codex/plan-rev16-coverage-release\n\nDeliver REV16 two-detail interview and supported optional relevance",
+          "deploymentId": "dpl_CQfEmry9JVKaYzM8RTwnsyCyvmun",
+          "region": "iad1",
+          "env": "production",
+          "publication": {
+            "mode": "bundled_immutable_publication",
+            "path": "web/fixtures/p8m/matching-facts-v1.json",
+            "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+            "id": "p8m-matching-facts-v1-rev225",
+            "schemaVersion": 1,
+            "taxonomyVersion": "1.0.0",
+            "sourceRevision": "225",
+            "sourceRows": 197,
+            "scholarshipRows": 176,
+            "portalRows": 21,
+            "acceptedMatchingFacts": 0
+          },
+          "shortlist": {
+            "id": "spreadsheet-shortlist-v1-rev225",
+            "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64",
+            "snapshotDate": "2026-09-02",
+            "basis": "organizer_recorded_not_officially_verified"
+          },
+          "relevance": {
+            "id": "interview-relevance-v1-rev225",
+            "sha256": "fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0",
+            "snapshotDate": "2026-09-02",
+            "basis": "organizer_recorded_not_officially_verified"
+          },
+          "coverage": {
+            "id": "interview-coverage-supplement-v1-rev225",
+            "sha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1",
+            "snapshotDate": "2026-09-02",
+            "basis": "organizer_recorded_not_officially_verified"
+          },
+          "capabilities": {
+            "google": "none",
+            "drive": "none",
+            "sheets": "none",
+            "productionIngestion": "disabled",
+            "productionMutation": "disabled"
+          },
+          "observationNonce": "bfa9d5ea975141708b9fd1c110151563",
+          "now": "2026-09-13T16:19:17.856Z"
+        }
+      },
+      "providerStatus": "success",
+      "providerUrl": "https://vercel.com/whitefishscholarships-projects/web/CQfEmry9JVKaYzM8RTwnsyCyvmun",
+      "browser": {
+        "fictionalOnly": true,
+        "coreShortlist": 166,
+        "allAwards": 192,
+        "coreOrderAndCsvExact": true,
+        "combinedTeachingNthsFfaOrderAndCsvExact": true,
+        "fourExactQualifiedReasonsVisible": true,
+        "catalogSha256": "bff493bb8eb8f5d91bd1429131b5a8bcf838c0fbc5fa317d96f36f9d698b706d",
+        "visibleNamesMatchApi": true,
+        "apiStatus": 200,
+        "editRestoredGpa": true,
+        "resetAndReloadClear": true,
+        "horizontalOverflow": false,
+        "errorLogs": 0,
+        "localStorage": 0,
+        "indexedDB": 0,
+        "cookies": 0,
+        "sessionStorage": {
+          "count": 0,
+          "keys": [],
+          "syntheticAnswerMarkers": false
+        },
+        "urlContainsAnswers": false
+      },
+      "expected": {
+        "results": {
+          "core": {
+            "allCount": 192,
+            "idsSha256": "c7f54d2be9ee573ecd5ab6c02e293d462cea547ee76647916c16ac8ae290a983",
+            "csvSha256": "547472e2ddc076f83af228040cccccbf91ad6b590ff9319cce05785aede40d19",
+            "csvBytes": 46453
+          },
+          "combined": {
+            "allCount": 192,
+            "idsSha256": "5166dceb1d1fc59ddf64bb0b810b92b420036f93646f6822982c9e2100596888",
+            "csvSha256": "eebdfaeeaddcffa05f1a362a4b43a281ceb65731f57727aeaa010f209721de5c",
+            "csvBytes": 46453
+          }
+        },
+        "connections": [
+          {
+            "id": "coverage-44-education_teaching",
+            "answerId": "education_teaching",
+            "awardId": "award-36ff5fe7d091",
+            "message": "Your interest in Education / Teaching connects with the saved FVCC early-childhood education record. Check enrollment in that specific program; an interest alone does not establish eligibility. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-143-org_nths",
+            "answerId": "org_nths",
+            "awardId": "award-ead4360dadca",
+            "message": "Your NTHS selection connects with this saved record. Check National Technical Honor Society membership and construction-related career plans; other organizations do not establish NTHS membership. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-170-org_ffa",
+            "answerId": "org_ffa",
+            "awardId": "award-b86982e726be",
+            "message": "Your FFA selection connects with this saved record. Check Montana FFA membership and post-secondary study requirements. Confirm current requirements and availability."
+          },
+          {
+            "id": "coverage-174-org_ffa",
+            "answerId": "org_ffa",
+            "awardId": "award-6b4f548adb79",
+            "message": "Your FFA selection connects with this saved record. Check Montana FFA membership, agriculture-related study and at least two years of agricultural education classes. Confirm current requirements and availability."
+          }
+        ]
+      },
+      "hostedRequestCapture": "unavailable: zero CDP events despite explicit capture; not a no-transmission claim",
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "headSha": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+        "url": "https://github.com/whitefishscholarship/program_code/actions/runs/34768190886"
+      }
+    },
+    "previewEvidenceComment": "https://github.com/whitefishscholarship/program_code/pull/45#issuecomment-5654476198",
+    "productionEvidenceComment": "https://github.com/whitefishscholarship/program_code/pull/45#issuecomment-5654497190"
+  },
+  "status": "PASS_R2_BOTH_RELEASES_DELIVERED_AND_VERIFIED",
+  "completedAt": "2026-09-13T16:22:29.037010+00:00",
+  "rev15PredecessorReceipt": "docs/evidence/interview-coverage/r2-rev16-predecessor-delivery.json"
+}

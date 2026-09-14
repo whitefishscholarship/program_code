@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Recorded independent read-only connector compatibility consultation",
+  "reviewer": "/root/r3_policy_review",
+  "outcome": "changes_required",
+  "sourceCallsPerformedByReviewer": 0,
+  "repositoryEditsByReviewer": 0,
+  "finding": {
+    "severity": "high",
+    "title": "Available connector routes cannot enforce the current exact metadata projection",
+    "evidence": [
+      "get_file_metadata accepts fields, but observed normalized output omitted version and trashed.",
+      "list_file_revisions has no fields selector and may return editor identity metadata outside the approved grant.",
+      "get_spreadsheet_metadata has no selected-tab filter.",
+      "get_spreadsheet_cells supports exact ranges and CellData fields but cannot mask surrounding spreadsheet and selected-sheet properties."
+    ],
+    "requiredAction": "Keep source-dependent work blocked until a supported exact route exists or a metadata-only supplement is authorized and prospectively reviewed."
+  },
+  "disposition": {
+    "status": "blocked_pending_external_scope_decision",
+    "owner": "Codex implementation agent; Kelsey for any added read permission",
+    "target": "R3 source capture before any cell read",
+    "rationale": "No discovered supported tool supplies required revision identity and native cell envelope with only the original allowlisted metadata. Filtering after a fetch cannot undo an unauthorized upstream read.",
+    "proposalPath": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md"
+  },
+  "limits": [
+    "Consultation is based on tool declarations, the single reported file-metadata result and saved prior connector envelope evidence.",
+    "No new source calls or independent live connector verification were performed by the reviewer.",
+    "This consultation does not change the accepted policy review or grant additional authority.",
+    "A supplement may still fail to provide unambiguous current revision proof; all capture gates remain blocking.",
+    "Trashed status is unavailable and must remain unknown unless observed through an authorized route."
+  ],
+  "preservedGates": [
+    "Stable current revision tokens",
+    "Two equal complete captures",
+    "Exact workbook, sheet and cell projection",
+    "Mapping review before product edits",
+    "Separate R4 authority"
+  ]
+}

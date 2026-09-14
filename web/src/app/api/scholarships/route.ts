@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import catalogJson from '../../../../fixtures/p7/student-catalog.json';
+import { R3_CATALOG } from '@/lib/r3Catalog';
+import { catalogCompatibilityRows } from '@/lib/catalogCompatibility';
 import matrixCatalogJson from '../../../../fixtures/p7/matrix-catalog.json';
-import legacyApiDataJson from '../../../../fixtures/p7/legacy-api-data.json';
 import { StudentCatalogSchema } from '@/lib/studentCatalog';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 300;
 
-const catalog = StudentCatalogSchema.parse(catalogJson);
+const catalog = R3_CATALOG;
 const matrixCatalog = StudentCatalogSchema.parse(matrixCatalogJson);
 
 export async function GET(request: NextRequest) {
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     schemaVersion: '2.0.0',
     catalog: selectedCatalog,
-    data: legacyApiDataJson,
+    data: catalogCompatibilityRows(selectedCatalog),
   }, {
     headers: {
       'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',

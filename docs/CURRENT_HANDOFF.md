@@ -1,3 +1,385 @@
+# R4 Whitefish identity correction — final review and delivery next
+
+Plan revision: 19.
+
+Resume `/private/tmp/program_code-r4-whitefish-delivery-repair` on
+`codex/r4-whitefish-delivery-repair`. Original A18 and PR46 are preserved unchanged.
+Kelsey approved the independently reviewed exact REV19 continuation; no repeat approval
+is needed for its selected policy, review and R4 delivery effects. Read PLAN-REV19.md,
+BUILD_STATE PLAN-REV19 and `docs/kickoffs/R4-WHITEFISH-DELIVERY.md`. Policy review and implementation checks passed. Codex owns fresh
+full-candidate review/A19, zero actual validators,
+exact Preview/CI, guarded merge, Production verification and local-only closeout.
+
+Keep all prior content below unchanged. All prior issue owners/triggers and unknowns
+remain active; no source calls, workbook replay or later phase are authorized.
+
+---
+
+# R4 authorized — exact release preparation
+
+Plan revision:18. Resume `/private/tmp/program_code-r4-release` on
+`codex/r4-catalog-release`, from retained R3 review checkpoint ec0907e.
+Kelsey approved publication, Preview, merge, Production and verification; no repeat
+approval is needed. See docs/evidence/r4-catalog/authority.json, preflight.json and
+BUILD_STATE.r4CatalogRelease. Codex owns full checks, frozen complete candidate,
+fresh independent canonical review, direct-child two-file attestation, zero local and
+hosted-mode plan diagnostics, exact Preview/CI before merge and Production verification.
+The attestation must remain tip until merged. No publication precedes acceptance.
+
+R3 is locally complete: final-review.json PASS binds candidate8e419d1 and its manifest.
+Runtime/fixture/tool bytes stay unchanged. Preserve all earlier handoff content below
+as history; its no-R4 flags describe the earlier local phase and are superseded only
+by this separate recorded grant. R1/R2 remain delivered.
+
+All five criteria conflicts, Bonita connection hold, NTHS unverified date, definition
+recommendations, framework warning,310heldentities/312holds,26-record queue, recovery
+objects and every earlier owner/trigger remain on their separate routes. No source or
+workbook call, configuration change or R5–R7 action is authorized.
+
+---
+
+# R3 local candidate — final review binding controls completion
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`.
+Read `docs/evidence/r3-catalog/LOCAL_CANDIDATE.md`. Verify `final-review.json` PASS
+against the exact candidate and complete `final-manifest.json` before treating R3 as
+locally complete. If absent or not PASS, Codex owns remediation/final independent review.
+Once matching PASS is present, R3 is complete locally and the next action is the separate
+R4 scope/authority route in `docs/kickoffs/R4-CATALOG-RELEASE.md`. R4 is not authorized.
+No further source calls, intake writes or completed R1/R2 reviews need repeating.
+
+Observed local outcome:411 awards (192retained+219added),21preserved portals,291new
+qualified discovery connections,9organizations,9new GPA and7new school-type rules.
+All257operations/416capturedrows/38priorityentities/42references/5gaps are accounted for.
+Original192-award criteria,206+4connections,16catalog-only children and all relationships
+are preserved. The selected bundle equals reviewed mapping candidate9692db6, with mapping
+review checkpoint1ba4d93. Capture digest22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c
+records bounded observational consistency, not current official scholarship verification.
+
+Verification: full tests/typecheck/build and intake/coverage/P9/R3checks PASS; production
+trace retains zero source capability. Both360px/1440px browser runs PASS, including all
+choices, complete keyboard journey, actual public CSV downloads and bounded no-answer-
+storage/request/URL/log observations. The canonical plan check still fails exactly the
+three reserved REV18 manifest/review/attestation gates. Local work does not waive them.
+
+Outstanding routes remain explicit in mapping-reconciliation.json:
+- Kelsey: five existing GPA/school criterion conflicts, triggered only by separate policy
+  selection (rows110J,169K,30K,21K,101J); review exact saved deltas before changing decisions.
+- Codex: Bonita Jean Olson financial-need connection, triggered by separately authorized
+  source research; resolve old gap/current description conflict. The award is included.
+- Kelsey: first-generation/care definition recommendations, triggered by separate scope;
+  provider-specific conditions remain on cards, with no new sensitive question.
+- Codex: NTHS deadline remains unverified; future separately authorized provider/date
+  evidence is needed before replacing the message. Do not use the withdrawn duplicate.
+- Codex: existing framework middleware warning, triggered by selected framework maintenance;
+  retain it as a warning, not a failed build or reason to expand R3.
+
+All previous R1/R2 completion, authority receipts/review bindings,310heldentities/312holds,
+26-record research queue, recovery objects and all other owner/trigger/unknown routes below
+remain unchanged. The entire prior handoff is preserved as historical evidence.
+
+---
+
+# R3 source captured — mapping review before product edits
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, `codex/r3-catalog-refresh`.
+Freshness policy review checkpoint33674d6cccdf94be818d619c296812a0e714ada4 is preserved.
+Attempt2 completed: two complete A1:O417 projections share digest
+22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c;
+four observations have separately stable reported token229 and both timestamps.
+See `docs/evidence/r3-catalog/capture-verification.json` for bounded evidence and limits.
+No further source reads are needed; no writes occurred. All existing grants persist.
+
+Codex's next action: freeze and independently review `MAPPING_PROPOSAL.md` and its
+mapping-bundle/reconciliation/field/criteria/connection artifacts under
+`docs/evidence/r3-catalog/`. Only matching mapping PASS permits product edits.
+All257 applied operations and416 data rows reconcile; the proposed411 awards retain192
+existing IDs and219 additions. Cat Scholarships stays a portal; all16 catalog-only
+children and original relationships remain intact. Bonita Jean Olson's financial-need
+connection is deferred to separately scoped source research (Codex owns follow-up).
+First-generation/care definition changes remain recommendations for Kelsey's separate
+scope. NTHS numeric deadline remains unverified. Preserve all earlier triggers below.
+
+R3 remains incomplete until local implementation, complete verification and final
+independent review. R4/release effects remain unauthorized. No repeat approval is needed.
+
+---
+
+# R3 freshness correction approved — independent review before attempt2
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, `codex/r3-catalog-refresh`, from the
+clean descendant of proposal review checkpoint `67719dee44fc21d678f396fdbde13da6adc1334e`.
+Kelsey replied “approved. proceed” to the exact verification-rule correction.
+See `docs/evidence/r3-catalog/freshness-authority.json` and
+BUILD_STATE.r3CatalogRefresh.freshnessCorrection. Original R3/connector grants persist.
+
+Codex's next action: freeze and obtain matching independent `freshness-policy-review.json`
+PASS before any more source calls. Then attempt2 may perform four ordered observations
+around two complete A1:O417 native captures. Require separately stable file time, revision
+time and connector-reported token; both complete digests must match. Only attempts2/3
+remain. Discard editor attribution/raw spreadsheet URL before output or persistence.
+
+No repeat permission is needed for the approved correction. Prior rejected observations
+remain failures, not accepted captures. R3 is incomplete; source reconciliation/mapping
+review still precedes product edits. Preserve every earlier grant, proposal, review,
+R1/R2 completion, applied-operation/recovery/hold/backlog trigger and R4 boundary below.
+
+---
+
+# R3 blocked on freshness agreement — approved access remains valid
+
+Plan revision: 18
+
+Worktree `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`.
+The supplemental policy passed independent review and is preserved at
+`93ea61442acc7d40f1daafbcb4faaa68a1728696` (candidate `9f7398461e639e0ea002661e395e98df869b6062`).
+Kelsey's original R3 and “approved, proceed” connector grants both remain valid.
+
+Two authorized file-metadata reads and two one-page revision observations were performed
+under attempt1. Both revision observations returned25 records and failed the reviewed
+timestamp-agreement gate. Follow-up evidence shows revision time10:51:53.207Z versus
+file time10:51:53.348Z on September11,2026:141 milliseconds apart. See
+`docs/evidence/r3-catalog/connector-preflight-01.json` and `connector-preflight-02.json`.
+These are sanitized records; editor attribution/raw responses were discarded.
+No cells, revision contents, other tabs or recovery objects were read; no product edits
+or source writes occurred. No current token was accepted.
+
+**Owner/trigger/next action:** Codex preserves the blocked state. Kelsey may approve the
+specific replacement verification rule in
+`docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md`, following its independently
+bound `freshness-proposal-manifest.json` and `freshness-proposal-review.json`.
+This proposed change requires each timestamp to remain independently stable and retains
+equal reported revision tokens and two complete equal cell captures. It removes the
+cross-resource exact timestamp equality check; it is not authorized yet. Do not invent
+a tolerance, equate a reported revision ID with Drive file version, or treat repeated
+metadata as proof of the actual server head. See `freshness-contract-assessment.json`.
+
+After direct approval of that rule change, prospectively amend policy/state/tests and
+obtain independent policy PASS before source calls. Otherwise wait for a supported
+authorized version-proof route; no repeat grant is required for existing permissions.
+The mismatch is not proof of stale scholarships or a broken file. Current authority,
+historical reviews, all R1/R2 completion and the complete earlier trigger inventory remain
+unchanged below. R3 is incomplete; no mapping/product/R4 acceptance is implied.
+
+---
+
+# R3 connector supplement approved — review before capture
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog` on `codex/r3-catalog-refresh`, descended
+from preserved proposal review checkpoint `99ecf02b5b026cda69737d744a405320a352794e`.
+Kelsey replied “approved, proceed” after the exact metadata supplement and its privacy
+risks were explained. The grant is in `docs/evidence/r3-catalog/connector-authority.json`;
+the frozen proposal remains historical. Original R3 authority persists.
+
+Current action for Codex: freeze and obtain independent `connector-policy-review.json`
+PASS bound to its candidate and manifest before any further source call. Then use the
+exact two connector routes and limits in BUILD_STATE.connectorSupplement. Discard editor
+identity and raw spreadsheet URL before output or persistence. Keep every revision,
+identity and two-capture gate. Missing usable current revision remains a blocker.
+
+R3 is incomplete. One earlier file-metadata preflight read no cells. Source reconciliation
+and mapping review still precede product edits. All R1/R2 completion, review bindings,
+applied-operation/recovery/hold/backlog triggers and R4 exclusions remain intact below.
+No repeated permission is needed for the now-authorized exact supplemental scope.
+
+---
+
+# R3 source capture blocked — original authority remains valid
+
+Plan revision: 18
+
+Execution worktree: `/private/tmp/program_code-r3-catalog`; branch:
+`codex/r3-catalog-refresh`. The prospective R3 policy passed independent review:
+candidate `c8be2caf739b1074ae6caddc9e7f87ab28a68078`, review checkpoint
+`eceeb498b9c92df41d026b749432625833a4974e`. Verify its unchanged
+`docs/evidence/r3-catalog/policy-manifest.json` and `policy-review.json`.
+
+One authorized file-metadata preflight confirmed identity and modified time but the
+connector omitted the requested version and trashed status. See
+`docs/evidence/r3-catalog/source-preflight.json`. No cells, revision history,
+other-tab inventory or recovery objects were read; no product edits or source writes
+occurred. The historical timestamp match does not prove current revision229.
+R3 remains incomplete; source-dependent processing stops on missing revision proof.
+
+**Owner/trigger/next action:** Kelsey may authorize only the proposed connector metadata
+supplement in `docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md`. It permits
+unavoidable version-history and selected-tab envelope metadata, including incidental
+editor identity that must be discarded before model-facing output or evidence storage.
+It is a proposal, not authority. The existing exact R3 grant remains valid. After
+supplemental approval, Codex must prospectively amend the policy/state/tests and obtain
+fresh independent policy review before additional source calls. If the supported route
+still cannot prove a current revision, remain blocked. Do not substitute modified time,
+the last listed revision, inaccessible metadata or a successful request for that proof.
+
+Verify the supplemental proposal's local candidate/manifest/review before relying on it.
+No original scope, historical review binding, source-read bounds, mapping gate or reserved
+R4 effect is changed by this blocker checkpoint. Canonical plan validation still has
+three explicit reserved REV18 manifest/review/attestation failures; these are not a PASS.
+All recorded R1/R2 completion, receipt/recovery, holds, backlog owners and triggers below
+remain intact. Read earlier overlays as historical evidence; this is the operative pointer.
+
+---
+
+# R3 authorized — prospective policy review before source access
+
+Plan revision: 18
+
+Worktree `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`,
+preserved scope checkpoint `f95464d8a7b751e1f0a2c48663a8b1a75283ceab`.
+Kelsey directly replied “yes, authorized” to the exact reviewed R3 scope. Authority is
+recorded in `docs/evidence/PLAN-REV18.md` and `BUILD_STATE.r3CatalogRefresh`; the frozen
+proposal's earlier false flags remain historical. No repeat authorization is needed
+for that selected scope. R1/R2 remain complete; all old triggers below remain intact.
+
+Current action: freeze and independently review the dedicated REV18 policy. Missing or
+nonmatching `docs/evidence/r3-catalog/policy-review.json` PASS blocks source reads.
+Then follow `docs/kickoffs/R3-CATALOG-REFRESH.md`: exact stable bounded capture, complete
+reconciliation and mapping review before local product edits, full verification and
+fresh-context final local review. Record every partial result/failure in the same folder.
+The three final REV18 manifest/review/attestation failures remain reserved for R4; they
+are never a canonical PASS or waived gate. No source read or product edit occurred in
+this policy checkpoint. R4 delivery authority remains false and is not requested here.
+
+The approved read is solely sheet0 Master Database A1:O417 and its allowlisted projection/
+metadata. Retain the original ledger, 257 applied operations, 192 existing awards, 38
+priority entities/42 references and NTHS survivor exception. Preserve the complete prior
+R2/scope handoff, reviews, receipt/recovery and backlog triggers below. No workbook
+write/copy, new research, deployment, configuration, monitoring or later phase is included.
+
+---
+
+# R3 scope preparation — local proposal, execution awaits separate authority
+
+Current worktree: `/private/tmp/program_code-r3-scope`; branch: `codex/r3-catalog-scope`.
+Preserved planning baseline: `f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e` on
+`codex/r2-release-closeout`. R1/R2 are complete. This overlay supersedes only the
+planning pointer; every earlier handoff byte and every open trigger remains below.
+
+The user selected preparation of a concrete R3 scope. Read `docs/R3_CATALOG_SCOPE.md`
+and its pinned `docs/evidence/interview-coverage/r3-scope-inputs.json`. The proposal
+covers only a future read of Master Database sheet0 `A1:O417` and exact identity/revision
+metadata, then local catalog/connection work and review. All 257 applied operations,
+192 existing awards and 38 priority entities require separate reconciliation. Of the
+38 priority entities, 37 are in the batch; the remaining NTHS duplicate follows its
+recorded row143 survivor. Never recreate the withdrawn addition or infer a current deadline.
+
+Completion requires `r3-scope-review.json` PASS bound to `r3-scope-manifest.json`, both in
+`docs/evidence/interview-coverage/`, and verified immutable candidate hashes. Resolve
+this branch's final review-only tip with Git. Missing/nonmatching review means prepared,
+not review-complete. This is a local proposal review, not canonical stage acceptance.
+Canonical plan/state and every release attestation remain unchanged.
+
+**Next action after planning PASS:** Kelsey decides the exact separate R3 grant in
+sections3–7 of the scope. Before any future source read/product edit, record that grant
+and freeze/independently review the prospective canonical policy. No workbook access,
+copy/write, linked-source research, runtime change, release or hosted verification is
+performed by this preparation. R4 delivery and all R5–R7 effects remain separately gated.
+No automatic continuation is implied by a successful scope review.
+
+Planning verifies saved evidence and repository identity only. Source revision229 and
+416 historical names are not live facts; the selected future range does not claim full
+Master completeness. Preserve the 310 held entities/312 holds, all83 historical routes,
+26 research records/four non-write-ready additions, D01–D09, I65/Hagan, remaining
+organization/definition work, recovery objects, source-currency/monitoring/platform/
+issuer-credential/hygiene triggers, NTHS date review and keyboard follow-up. The R2 wrap
+below retains the exact CLI account, protection, hosted request/download and timing limits.
+The sole intake ledger is unchanged. No copy or recovery object was accessed.
+
+If this worktree is missing, recover the retained exact planning branch from the shared
+repository after verifying its clean checkpoint/ancestry. Preserve the R2 closeout and
+all release branch tips. Never reset/replay a completed batch or prune retained worktrees.
+
+---
+
+# Final session wrap — R2 PASS, future work remains gated
+
+Resume local branch `codex/r2-release-closeout` in `/private/tmp/program_code-r2-release-closeout`.
+Preserve reviewed closeout checkpoint `df3f20aa40e238ea8749e70885a5a1a162bd79cb` and all
+release checkpoints below. This final documentation supplement adds operational triggers;
+it does not change canonical acceptance, authorize another deployment, or reopen R2.
+See `docs/evidence/interview-coverage/r2-session-wrap.md` for the remaining operational
+owners/triggers, verification limits and short next-session kickoff. The complete prior
+handoff remains below. R3 is planned, not authorized. Recommended next effort: High.
+
+---
+
+# R2 complete — both releases delivered and verified
+
+Plan revision: 17. Operative local closeout: `/private/tmp/program_code-r2-release-closeout`,
+branch `codex/r2-release-closeout`, based on delivered main
+`a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32`. Resolve this branch's clean tip in Git;
+its final review-only checkpoint follows the frozen local closeout candidate.
+This overlay supersedes pending R1/R2 and blocker labels in the preserved history below.
+Immutable BUILD_STATE authority and acceptance records remain unchanged; their preparation
+labels are historical, not a reason to repeat delivery. This local handoff is not pushed.
+
+**PASS:** REV15 plus its authorized REV17 delivery repair were independently accepted;
+Preview and PR CI passed before merge as [PR44](https://github.com/whitefishscholarship/program_code/pull/44) at
+`16092cb858360f2ace06f92d11ab36a080bcb03f`, followed by Production and main CI verification.
+Only afterward REV16 was independently accepted with zero findings; Preview and PR CI
+passed before merge as
+[PR45](https://github.com/whitefishscholarship/program_code/pull/45) at
+`a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32`, followed by Production and main CI verification.
+Production: https://web-two-gules-45.vercel.app . Exact release and verification receipts:
+`docs/evidence/interview-coverage/r2-release-completion.json` and
+`docs/evidence/interview-coverage/r2-rev16-predecessor-delivery.json`.
+
+Preserved immutable checkpoints: original source/R1 `979122a13d4a8098d8cea26f115add1e68405355`;
+original A15 `94db9e72ff241f5eb0939872d97852657f139ecb`;
+C17 `a63d53485943996dd48f495db0171d494f373098`, A17 `b414e17f55c32f2711d9884ef1256269a83ed3bb`;
+C16 `a5eac691e9353eb5edc19b0da1e30ede6f6d38cc`, A16 `9dece0112a590703cf849ffc7301792a15b9a650`.
+Each original release branch remains at its attestation; historical reviews are not rebound.
+The local recovery-proposal branch and its original blocker evidence remain preserved.
+
+Verified product: two required core inputs; optional Teaching/NTHS/FFA with four qualified
+connections; all 192 awards, 38 prior criteria, 206 prior relevance connections and frozen
+publications preserved. Full local matrix and 360/1440 browser regression passed; both
+actual post-attestation plan modes passed; hosted health/source/deployment, API, exact
+core/combined order and public CSV, edit/reset/reload and storage checks passed.
+Limits: saved scholarship facts are not currently officially verified. The hosted browser's
+request-event capture returned no events, including on reload; request-body evidence is
+unavailable, not proof of no transmission. Exact reviewed runtime and accepted local tests
+supply request/privacy verification. Actual saved downloads passed locally; hosted CSV bytes
+were reconciled directly, while the IAB download-notification limitation remains recorded.
+No workbook/source/recovery-object access or change, research, configuration change,
+monitoring, rollback or later phase was performed in R2. Workbook authority remains spent.
+
+**Next action:** no execution is authorized now. When Kelsey selects a next phase, follow
+AGENTS read order and `docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md`. R3 is the next planned
+phase, requiring its own exact scope and authority before source reads or implementation;
+R4 delivery remains separate. Do not repeat R1/R2, the applied 257-operation intake batch,
+reviewed research or prior recoveries. No automatic bulk reopening of held items.
+
+Carry every original owner/trigger/next action below: 310 held entities / 312 hold records;
+83 historical routes (20 selected, 63 carried); 26 research records and four non-write-ready
+additions; nine backlog IDs; I65/Hagan; R3/R4 catalog work and seven remaining organizations;
+recovery objects; source currency, monitoring, platform, issuer-credential and hygiene
+triggers; and the R3 keyboard-automation improvement. The sole intake ledger remains
+`docs/evidence/SCHOLARSHIP-INTAKE-ledger.json`; no replacement ledger or source-freshness claim is created here.
+
+New bounded follow-up: hosted NTHS card `award-ead4360dadca` displays `Annual close rule: 46113`.
+Owner: next authorized R3 catalog/UI agent. Trigger: explicit R3 scope selection. Next action:
+inspect preserved date provenance/formatting and propose a separately reviewed correction;
+do not infer a current deadline or perform new research under this closeout. This pre-existing
+catalog display does not alter the four qualified relevance mappings or reopen R2.
+
+Local closeout review: `docs/evidence/interview-coverage/r2-closeout-review.json`, bound to
+`r2-closeout-manifest.json`. Missing/nonmatching PASS means closeout review remains pending;
+it does not undo independently accepted and verified release delivery.
+If the temporary worktree disappears, inspect this retained branch and shared repository
+worktrees before recovering its exact tip into a new isolated worktree. Never reset/replay
+completed release branches. If Git history is unavailable, stop for a verified recovery source.
+
+---
+
 # R2 unit2 — REV16 authorized release
 
 Plan revision: 17

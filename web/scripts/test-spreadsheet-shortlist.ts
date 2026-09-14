@@ -5,11 +5,13 @@ import { execFileSync } from 'node:child_process';
 import catalogJson from '../fixtures/p7/student-catalog.json';
 import { StudentCatalogSchema } from '../src/lib/studentCatalog';
 import { InterviewAnswersSchema } from '../src/lib/interviewMatcher';
-import { shortlistAwards, SHORTLIST_PUBLICATION, SHORTLIST_SHA256, type ShortlistRow } from '../src/lib/spreadsheetShortlist';
+import { shortlistAwards as selectedShortlistAwards, SHORTLIST_PUBLICATION, SHORTLIST_SHA256, type ShortlistRow } from '../src/lib/spreadsheetShortlist';
 import { serializeAwardCsv } from '../src/lib/export';
 import { historicalRuntimeClosureSha256, permitsLocalShortlistPreparation } from './shortlist-governance';
 import { parseCsv } from './p8m-acceptance';
 
+// Exercise the immutable predecessor publication explicitly; selected R3 behavior has its own regression.
+const shortlistAwards: typeof selectedShortlistAwards = (awards, answers, rows = SHORTLIST_PUBLICATION.rows) => selectedShortlistAwards(awards, answers, rows, []);
 const catalog = StudentCatalogSchema.parse(catalogJson);
 const base = InterviewAnswersSchema.parse({ gpa: 3.5, residenceState: 'MT', educationalStatus: 'high_school_senior', targetSchoolTypes: ['four_year'], collegeAccepted: null, gapYear: null, activities: [], volunteerHours: null, financialNeed: false, selectedCriteria: [], sensitiveCriteriaSkipped: false, preferredApplicationModes: [] });
 const profiles = [base, {...base,gpa:2}, {...base,targetSchoolTypes:['trade_vocational'] as const}, {...base,targetSchoolTypes:['undecided'] as const}];
@@ -21,7 +23,7 @@ for (const result of results) {
   const visible = result.results.filter(r=>r.decision!=='recorded_mismatch').map(r=>r.award);
   const csv = parseCsv(serializeAwardCsv(visible).replace(/^\uFEFF/,''));
   assert.deepEqual(csv.rows.map(r=>r.Name),visible.map(a=>a.name));
-  assert.deepEqual(csv.headers,['Record type','Name','Cycle status','Cycle details','Amount','Minimum GPA','School types','Application method','Official link']);
+  assert.deepEqual(csv.headers,['Award ID','Record type','Name','Cycle status','Cycle details','Amount','Minimum GPA','School types','Application method','Official link']);
 }
 assert(results[1].counts.knownConflict > results[0].counts.knownConflict,'lower GPA must change the actual shortlist');
 assert.notDeepEqual(results[2].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),results[0].results.filter(r=>r.decision==='recorded_mismatch').map(r=>r.award.publicId),'school choice must change results');

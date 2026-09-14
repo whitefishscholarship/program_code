@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-14T00:17:34.469Z",
+  "completedAt": "2026-09-14T00:17:36.805Z",
+  "policyReviewCheckpoint": "93ea61442acc7d40f1daafbcb4faaa68a1728696",
+  "attempt": 1,
+  "revisionObservation": 1,
+  "request": {
+    "tool": "google_drive_list_file_revisions",
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "pageSize": 1000
+  },
+  "fileMetadataObservation": {
+    "status": "PASS_IDENTITY_AND_MODIFIED_TIME_ONLY",
+    "startedAt": "2026-09-14T00:17:22.604Z",
+    "completedAt": "2026-09-14T00:17:23.195Z",
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "identityVerified": true,
+    "modifiedTime": "2026-09-11T10:51:53.348Z",
+    "trashed": null,
+    "revisionToken": null
+  },
+  "result": {
+    "status": "BLOCKED",
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "currentRevisionId": null,
+    "currentRevisionModifiedTime": null,
+    "returnedRevisionCount": 25,
+    "currentRevisionRecordMatches": 1,
+    "editorIdentityRetained": false,
+    "reasons": [
+      "current_revision_modified_time_not_verified"
+    ]
+  },
+  "limits": [
+    "Raw connector response and editor attribution were not retained or printed.",
+    "No pagination or revision contents requested.",
+    "No cells read before usable revision proof."
+  ]
+}

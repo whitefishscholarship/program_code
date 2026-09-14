@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "R3 blocker and supplemental permission proposal only; not policy extension or canonical attestation",
+  "baselineCommit": "eceeb498b9c92df41d026b749432625833a4974e",
+  "candidateCommit": "af7d8a1126b23430bf092647bab2bfc9b053cac9",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "5619f0bccf49c5cc810a874b11a00dc9e5cee20573322658ed68c7b61903ccd5"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "2008bbe82660e43f6af5ce915231aa5ad14b9ecf26b67cad0e8f3e0d3ffe3aaf"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
+      "sha256": "378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/blocker-validation.json",
+      "sha256": "af095e7e8d33571d593ff1c8fa776922049d3fce3161ace8d93c31278e1f8b97"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-compatibility-assessment.json",
+      "sha256": "43a2cdf2a45685f6769fb17babff6c05f8285823bef5db649c835b27a437d53c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-tool-declarations.json",
+      "sha256": "e5cbec5d7102c8340a6cc69ee38e80519359481a1bce7431e04b23d069d96ecf"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/source-preflight.json",
+      "sha256": "fd15b05f30e6574f56fa9e83594adfd03ff27abec547f0c068a7b5adfa80d92a"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "28ec71e6b9a98071c5890c5c166f5c3d8c7066b1ca1801f8a99360e555d3e4fd"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "c327f5517e15edb13208a01d00df0bdfb4fe5963eb495215bdbca06742ac885a"
+    }
+  ]
+}

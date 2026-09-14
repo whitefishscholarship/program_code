@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-14T16:35:33.056Z",
+  "commands": [
+    "authenticated HTTPS git fetch main:refs/remotes/origin/main",
+    "gh api user --jq {login,id}",
+    "gh api repos/whitefishscholarship/program_code/pulls/46 --jq {state,head,base}",
+    "git config --local --get user.name; git config --local --get user.email"
+  ],
+  "observedMain": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "githubLogin": "whitefishscholarship",
+  "githubId": 266880911,
+  "originalPr": 46,
+  "originalPrState": "open",
+  "originalHead": "d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2",
+  "originalBranchPreserved": true,
+  "ownerIdentitySelection": {
+    "schemaVersion": 1,
+    "recordedAt": "2026-09-14T15:58:53.303Z",
+    "userInstruction": "this should be using the whitefish scholarship identity",
+    "scope": "Use the existing Whitefish Scholarship identity for this repository and its already authorized R4 delivery; do not create accounts, change access, upgrade subscription, rewrite published history or alter reviewed runtime.",
+    "verifiedGitHubLogin": "whitefishscholarship",
+    "verifiedGitHubId": 266880911,
+    "authorName": "whitefishscholarship",
+    "authorEmail": "whitefishscholarship@gmail.com",
+    "identityEvidence": "Authenticated gh api user; author of delivered main a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32; authenticated Vercel Authentication page lists linked GitHub whitefishscholarship.",
+    "localChange": "Repository-local Git user.name/user.email only; global Git identity untouched.",
+    "existingPublishedCommitUnchanged": "d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2",
+    "remainingIssue": "The published commit retains its original author. Determine whether the supported Vercel owner-account redeploy flow can release this unchanged exact commit under the newly confirmed owner identity. Prior rejection is preserved; retry only through that same supported operation with explicit user identity selection and verified owner evidence. Do not work around another rejection.",
+    "ownerRedeployInspection": {
+      "observedAt": "2026-09-14T16:00:29.460Z",
+      "action": "Click Redeploy to inspect the supported owner-account operation for Preview6ZN3RAMgLosU47xe2d3fQLByaxHJ",
+      "result": "Automatic approval review rejected before operation opened or deployment started",
+      "reason": "Clicking Redeploy is a consequential deployment attempt previously blocked for insufficient contributor access, so it is a computer bypass; the user selected the identity but did not specifically authorize this retry approach.",
+      "noWorkaroundAttempted": true,
+      "approvalNeeded": "Specific permission to attempt the exact blocked Preview redeployment through the existing Whitefish Scholarship Vercel account; no account/access/plan/code changes.",
+      "successNotGuaranteed": true
+    },
+    "ownerRedeployRetryAuthority": {
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "recordedAt": "2026-09-14T16:01:36.157Z",
+      "assistantQuestion": "Do you authorize attempting to redeploy the existing Preview through the signed-in Whitefish Scholarship Vercel account? Vercel may still reject its original author.",
+      "userReply": "yes",
+      "scope": "Attempt the supported Vercel Redeploy flow for existing Preview6ZN3RAMgLosU47xe2d3fQLByaxHJ, exact released commit d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2, using the existing signed-in Whitefish Scholarship owner account. No access, subscription, code or published history changes. Existing exact R4 Preview/CI-before-merge and Production verification requirements remain."
+    }
+  },
+  "supportedOwnerRetryResult": {
+    "schemaVersion": 1,
+    "observedAt": "2026-09-14T16:04:46.429Z",
+    "authorization": "identity-selection.json ownerRedeployRetryAuthority",
+    "account": "whitefishscholarship",
+    "targetPreview": "6ZN3RAMgLosU47xe2d3fQLByaxHJ",
+    "commit": "d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2",
+    "action": "Opened supported Redeploy dialog after direct user yes",
+    "result": "Vercel disabled environment/source/build-cache controls; only Cancel and Upgrade to Pro offered. No deployment submission possible.",
+    "providerMessage": "Hobby teams do not support collaboration. Please upgrade to Pro to add team members.",
+    "deploymentCreated": false,
+    "subscriptionOrAccessChanged": false,
+    "productionChanged": false,
+    "interpretation": "Owner-account retry cannot deploy this existing author-mismatched commit under the current Hobby configuration. Changing repository Git identity only affects new commits.",
+    "nextRoute": "WHITEFISH_IDENTITY_REPAIR_PROPOSAL.md; requires separate selection of the exact pinned release-policy correction before execution."
+  },
+  "limits": [
+    "Vercel target and linked owner observations are preserved evidence, not a new deployment or current health claim.",
+    "No source/workbook or paid/access change."
+  ],
+  "providerTargetRecheck": {
+    "recordedAt": "2026-09-14T16:51:41.167Z",
+    "method": "Authenticated same-origin Vercel GET /api/v9/projects/web?teamId=team_6CAjRq58n0WvAH49otKSQbA7 through existing signed-in browser",
+    "httpStatus": 200,
+    "accountId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "name": "web",
+    "rootDirectory": "web",
+    "framework": "nextjs",
+    "git": {
+      "org": "whitefishscholarship",
+      "repo": "program_code",
+      "productionBranch": "main"
+    },
+    "limits": "Target binding only; no deployment or health claim."
+  }
+}

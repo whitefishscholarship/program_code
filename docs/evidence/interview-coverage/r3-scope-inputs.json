@@ -1,0 +1,846 @@
+{
+  "schemaVersion": 1,
+  "id": "R3-CATALOG-SCOPE-1",
+  "status": "proposal_index_only_no_source_access_or_new_intake_decisions",
+  "planningBaseline": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+  "readAuthorization": false,
+  "implementationAuthorization": false,
+  "publicationAuthorization": false,
+  "source": {
+    "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "sheetId": 0,
+    "sheetTitle": "Master Database",
+    "proposedRange": "'Master Database'!A1:O417",
+    "headerRows": 1,
+    "addressableCells": 6255,
+    "dataRowPositions": 416,
+    "headers": [
+      {
+        "column": "A",
+        "header": "Last Updated"
+      },
+      {
+        "column": "B",
+        "header": "Due Date"
+      },
+      {
+        "column": "C",
+        "header": "In-State / National"
+      },
+      {
+        "column": "D",
+        "header": "Portal/ Scholarship"
+      },
+      {
+        "column": "E",
+        "header": "Amount"
+      },
+      {
+        "column": "F",
+        "header": "Scholarship Location/Information"
+      },
+      {
+        "column": "G",
+        "header": "Name of Scholarship"
+      },
+      {
+        "column": "H",
+        "header": "Application Link/Method"
+      },
+      {
+        "column": "I",
+        "header": "Summary"
+      },
+      {
+        "column": "J",
+        "header": "Stated Min. GPA"
+      },
+      {
+        "column": "K",
+        "header": "School Type (2-or 4-Year, or Trade)"
+      },
+      {
+        "column": "L",
+        "header": "Renewing/ Non-Renewing"
+      },
+      {
+        "column": "M",
+        "header": "Focus"
+      },
+      {
+        "column": "N",
+        "header": "Acute Financial Need Prioritization"
+      },
+      {
+        "column": "O",
+        "header": "Accepts Gap Year Applications Upon Return"
+      }
+    ],
+    "historicalReceiptRevision": "229",
+    "historicalModifiedTime": "2026-09-11T10:51:53.348Z",
+    "currentRevision": null,
+    "currentRowCount": null
+  },
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "3ab097a7f0ff3f6d20771c63518ff3c76ddece6ff835c6b596f73f240bc17d89"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "18f444ecd9f6f1e65b6aee7a44a0be55699b35a6cc4741d68c6b65f9494beea6"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "f490f004006de69d0621d08dd174d57f4c3d784904d901566cbe869da5467f9d"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "8fb1ff1dc3e39f7b4ad59a91b8b1be47d60fc2de213d2363435a2abb6fd0b749"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "5317ac7457584d1adb90c55858d97b289201418ece5a5712d4cf6c21b4512b21"
+    },
+    {
+      "path": "docs/INTERVIEW_COVERAGE_EXECUTION_PLAN.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "9b31d961294d3b4fdb1a4941d1a4f0b0b9849abfb45db6016abf5f835d6defb9"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-ledger.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "460e77edad370dce660b477284edf33a8e256cf2532e9e630797abcc6eb185ed"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "6fb6fa54cf357432837ed534a955b6a1e85798bfc4396f5a6de9b1ff8b697d79"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "23f71604b3c3258b20568068ddd6239248d73ca5991049ca8fbd67f26187426f"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-application-closeout-review.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "47ca2d34032fd2e45a0c2b56fd933051d1fe3b4fcc3ec3819c7b0e9035bc7aad"
+    },
+    {
+      "path": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-association-supplement.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "4bfea62d51a36d4d36ab0e42402a7307b71ede4a33766bd90d2d7252134ca962"
+    },
+    {
+      "path": "docs/evidence/scholarship-intake/cells-0.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "f079469c0199a0c7b945a0160eb230f0ad13d9279948b5f34425c3aec623a2e2"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-mapping.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "d232c2cc8686c65aab774fb1149f27ef696147e0ef08dcb6bf3142a9e942a2fc"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/proposal.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "b420580bd78814513279fc679503ff400f7d6b324ad8ce8f9f851bb1a8ebfef8"
+    },
+    {
+      "path": "docs/evidence/coverage-discovery/review.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "5bfb8f0681cab90365f06a7b961577445fe9d903a0f642cc435e6e11d630347c"
+    },
+    {
+      "path": "docs/evidence/HISTORICAL-SCHOLARSHIP-RECONCILIATION.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "9ddf52f6df705449b664c83221bb24957a211df5dd79c2fbea2445a0621f9e74"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "9497c058c0b9bbe280490dc5622335db9b7b8a6604c4d6b54926db36f313e5e9"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap-manifest.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "93f5bf4de2a40c5ba9dc1406c38436a998796f34b530a9d7aff8ec7141704148"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap-review.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "513d2a4ef86e0b9aa2ee8f8ad835370871d2722884e5f64d75351cc9a8611da6"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-closeout-manifest.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "0ee91cf765f0a398014a6a59ed4d20a56dec954331a8cda59858da14f3ee5bb4"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-closeout-review.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "d204dbe76089a701821ba16a7670b038dae0a199b2a13a72fe6f6a40d5c14927"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-release-completion.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "0ddce85c08669f88fc0e0fcb565f10c8bf005f3eb77b9cb6fd527a2ee92e9259"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-rev16-predecessor-delivery.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "55fa5696042a8cc50ef38d2aafa3e32458836375d9ce7ca31da3b112f4daecc0"
+    },
+    {
+      "path": "web/fixtures/p7/student-catalog.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841"
+    },
+    {
+      "path": "web/fixtures/p8m/master-database-rev225.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "cf898d6cbb5bfb6d4d576fc77e4d1666f0f67ee3cb01ed7cd16ee7991a9c4106"
+    },
+    {
+      "path": "web/fixtures/p8m/matching-facts-v1.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07"
+    },
+    {
+      "path": "web/fixtures/shortlist/spreadsheet-shortlist-v1.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "7ebec24f32feac6637df7fb903e651a6163692e13e3cff1f95d87be119c2db64"
+    },
+    {
+      "path": "web/fixtures/relevance/interview-relevance-v1.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "fd133f807ee843e307bdfcc7611d1eeb4f3c2ffff2a0a9804645f51aaf62b0d0"
+    },
+    {
+      "path": "web/fixtures/coverage/interview-coverage-v1.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV15.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "d04773678ca32d101d2804e8c62069d9bcc0cda152db7a6e0181f5e910c5f4a3"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV15-manifest.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "8fc5fd17504313cde78d0e390dcd9ea2a12dcc0f9db61edaa354a61fce866f27"
+    },
+    {
+      "path": "docs/reviews/PLAN-REV15.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "54dc22c6458b23e78c110800205f4aafb115fe714cf62c7a7373f8e00746f8c2"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV17.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "f7804bc27dd2a7f4641a3c04bb9f8902b725a0b60ac2cbdc1390d33044d5e159"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV17-manifest.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "39f9e1d78dbd43661fc2da06fcd7382d0a3413c7aa4ca40ce55d243b1dda81b2"
+    },
+    {
+      "path": "docs/reviews/PLAN-REV17.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "36885641eda7e08bcdd01bccb21bc44ffe182707072bdbf8f3f38ae810271897"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16.md",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "b0437ff13eaf9dc30d40e166c77b77fdbb8d8cd09252927c5a5bf1de6fa07eb4"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV16-manifest.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "11503b30c1ff915dbc677c39ae21d7f125b3729cbae2037035a19fc662a6004d"
+    },
+    {
+      "path": "docs/reviews/PLAN-REV16.json",
+      "commit": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+      "sha256": "2d55da6a5ad21132acb22d95b7b18c335a44e26c3c4c19fbdd259163c465583e"
+    }
+  ],
+  "batch": {
+    "path": "docs/evidence/SCHOLARSHIP-INTAKE-proposed-writes.json",
+    "applicationReceiptPath": "docs/evidence/SCHOLARSHIP-INTAKE-application-receipt.json",
+    "digest": "d2d4c779ff0d491ae653b1964b487640b3725702ce47fba4ea2a389f50b7937f",
+    "operations": 257,
+    "additions": 219,
+    "updates": 38,
+    "cells": 3367,
+    "replayPermitted": false,
+    "operationIdentityIndexSha256": "d02a75c52ae8bd657cec4c755cd5ea6eabe8737bdd182477a1de9c0c402bbcf0",
+    "operationIdentityIndexEncoding": "SHA256 of compact sorted-key JSON in original operations array order: operationId, entityId, kind, historicalRow, cellAddresses; read exact values from the pinned original proposed-writes file."
+  },
+  "priority": {
+    "uniqueEntities": 38,
+    "gapReferences": 42,
+    "entitiesWithAppliedOperation": 37,
+    "gaps": [
+      {
+        "gapId": "gap-student-organizations",
+        "entityIds": [
+          "intake-entity-320da372aad8ec19",
+          "intake-entity-942fb3e90320f98a",
+          "intake-entity-10fdd5d4c2991973",
+          "intake-entity-ec55ef80953de81d",
+          "intake-entity-677d9bc43b29138d",
+          "intake-entity-e4daa26d3c3e0eb6",
+          "intake-entity-16b20083574912b6",
+          "intake-entity-1a6f069ddb36808f",
+          "intake-entity-4938a5e717492009",
+          "intake-entity-8ecca308f791f5a6",
+          "intake-entity-8af8e6bebae880ce",
+          "intake-entity-882235532885dab0",
+          "intake-entity-17f598d8931c3985",
+          "intake-entity-f093eb9d146913dc",
+          "intake-entity-44fda37d719a012e"
+        ]
+      },
+      {
+        "gapId": "gap-education-teaching",
+        "entityIds": [
+          "intake-entity-558f7a096b45ee61",
+          "intake-entity-614effa8ef61322e",
+          "intake-entity-19060852883d7493",
+          "intake-entity-2034b3849f9e6eed",
+          "intake-entity-5529a2e6789f2993"
+        ]
+      },
+      {
+        "gapId": "gap-ordinary-financial-need",
+        "entityIds": [
+          "intake-entity-38165a377cf092e4",
+          "intake-entity-6bde02413985885a",
+          "intake-entity-2034b3849f9e6eed",
+          "intake-entity-a5a75dd0bc921034",
+          "intake-entity-68fc44b937accb33",
+          "intake-entity-c9f1d5ecf13fe4c6",
+          "intake-entity-f4cbf1a40504e59a",
+          "intake-entity-5529a2e6789f2993",
+          "intake-entity-0c2fcde6113979a1",
+          "intake-entity-2d9b2284d3981078",
+          "intake-entity-7665bcfa836a9f07",
+          "intake-entity-d00e748c026573df",
+          "intake-entity-fc95f644590e845d",
+          "intake-entity-873f91c3edce15b4",
+          "intake-entity-5e40b7ee15dc6501",
+          "intake-entity-8f29d09965003d3a",
+          "intake-entity-d7370cf07a07d2ec",
+          "intake-entity-57ef390a78d6675f",
+          "intake-entity-1428694f10a9d393"
+        ]
+      },
+      {
+        "gapId": "gap-first-generation-definition",
+        "entityIds": [
+          "intake-entity-6bde02413985885a",
+          "intake-entity-2034b3849f9e6eed",
+          "intake-entity-592777c6be304a55"
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "entityId": "intake-entity-0c2fcde6113979a1",
+        "name": "Evelyn B Johnson Memorial Scholarship",
+        "operationId": "add-intake-entity-0c2fcde6113979a1",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-0c2fcde6113979a1",
+          "entityId": "intake-entity-0c2fcde6113979a1"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-10fdd5d4c2991973",
+        "name": "NTHS Build Your Future Scholarship",
+        "operationId": null,
+        "savedDisposition": "duplicate_of",
+        "savedDestination": {
+          "kind": "existing_master",
+          "sheetId": 0,
+          "rowNumber": 143,
+          "entityId": "intake-entity-2b04ced9c8073619"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-association-supplement.json"
+      },
+      {
+        "entityId": "intake-entity-1428694f10a9d393",
+        "name": "Dr. Sydell Perlmutter Gold Memorial Scholarship",
+        "operationId": "add-intake-entity-1428694f10a9d393",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-1428694f10a9d393",
+          "entityId": "intake-entity-1428694f10a9d393"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aviation-final.json"
+      },
+      {
+        "entityId": "intake-entity-16b20083574912b6",
+        "name": "NTHS FBLA Scholarship",
+        "operationId": "add-intake-entity-16b20083574912b6",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-16b20083574912b6",
+          "entityId": "intake-entity-16b20083574912b6"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-17f598d8931c3985",
+        "name": "NTHS TSA Scholarship",
+        "operationId": "add-intake-entity-17f598d8931c3985",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-17f598d8931c3985",
+          "entityId": "intake-entity-17f598d8931c3985"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-19060852883d7493",
+        "name": "James D. Schultz Memorial Endowed Scholarship",
+        "operationId": "add-intake-entity-19060852883d7493",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-19060852883d7493",
+          "entityId": "intake-entity-19060852883d7493"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-1a6f069ddb36808f",
+        "name": "NTHS FCCLA Scholarship",
+        "operationId": "add-intake-entity-1a6f069ddb36808f",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-1a6f069ddb36808f",
+          "entityId": "intake-entity-1a6f069ddb36808f"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-2034b3849f9e6eed",
+        "name": "Adam Montes Pride Scholarship",
+        "operationId": "add-intake-entity-2034b3849f9e6eed",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-2034b3849f9e6eed",
+          "entityId": "intake-entity-2034b3849f9e6eed"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-bold-named.json"
+      },
+      {
+        "entityId": "intake-entity-2d9b2284d3981078",
+        "name": "D.A. Davidson Memorial Scholarship",
+        "operationId": "add-intake-entity-2d9b2284d3981078",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-2d9b2284d3981078",
+          "entityId": "intake-entity-2d9b2284d3981078"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-320da372aad8ec19",
+        "name": "Jon H. Poteat Scholarship",
+        "operationId": "add-intake-entity-320da372aad8ec19",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-320da372aad8ec19",
+          "entityId": "intake-entity-320da372aad8ec19"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-38165a377cf092e4",
+        "name": "Fran M. Albrecht Scholarship",
+        "operationId": "add-intake-entity-38165a377cf092e4",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-38165a377cf092e4",
+          "entityId": "intake-entity-38165a377cf092e4"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-44fda37d719a012e",
+        "name": "C. Allen Powell Alumni Scholarship",
+        "operationId": "add-intake-entity-44fda37d719a012e",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-44fda37d719a012e",
+          "entityId": "intake-entity-44fda37d719a012e"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-4938a5e717492009",
+        "name": "NTHS FFA Scholarship",
+        "operationId": "add-intake-entity-4938a5e717492009",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-4938a5e717492009",
+          "entityId": "intake-entity-4938a5e717492009"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-5529a2e6789f2993",
+        "name": "Robert F. Lawson Fund for Careers that Care",
+        "operationId": "add-intake-entity-5529a2e6789f2993",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-5529a2e6789f2993",
+          "entityId": "intake-entity-5529a2e6789f2993"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-institute-named.json"
+      },
+      {
+        "entityId": "intake-entity-558f7a096b45ee61",
+        "name": "Gary Nelson Memorial Scholarship",
+        "operationId": "add-intake-entity-558f7a096b45ee61",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-558f7a096b45ee61",
+          "entityId": "intake-entity-558f7a096b45ee61"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-dawson.json"
+      },
+      {
+        "entityId": "intake-entity-57ef390a78d6675f",
+        "name": "Lt. Col. Romeo and Josephine Bass Ferretti Scholarship",
+        "operationId": "add-intake-entity-57ef390a78d6675f",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-57ef390a78d6675f",
+          "entityId": "intake-entity-57ef390a78d6675f"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aviation-final.json"
+      },
+      {
+        "entityId": "intake-entity-592777c6be304a55",
+        "name": "Dr. Christine Lawther First in the Family Scholarship",
+        "operationId": "add-intake-entity-592777c6be304a55",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-592777c6be304a55",
+          "entityId": "intake-entity-592777c6be304a55"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-bold-named.json"
+      },
+      {
+        "entityId": "intake-entity-5e40b7ee15dc6501",
+        "name": "The Stephanie Goetz and Endre Holen Multi-Engine Commercial Scholarship",
+        "operationId": "add-intake-entity-5e40b7ee15dc6501",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-5e40b7ee15dc6501",
+          "entityId": "intake-entity-5e40b7ee15dc6501"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-614effa8ef61322e",
+        "name": "M.L. Graves Memorial Scholarship (DCC)",
+        "operationId": "add-intake-entity-614effa8ef61322e",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-614effa8ef61322e",
+          "entityId": "intake-entity-614effa8ef61322e"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-677d9bc43b29138d",
+        "name": "NTHS BPA Scholarship",
+        "operationId": "add-intake-entity-677d9bc43b29138d",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-677d9bc43b29138d",
+          "entityId": "intake-entity-677d9bc43b29138d"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-68fc44b937accb33",
+        "name": "The NKL Aerospace Engineering Scholarship",
+        "operationId": "add-intake-entity-68fc44b937accb33",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-68fc44b937accb33",
+          "entityId": "intake-entity-68fc44b937accb33"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-6bde02413985885a",
+        "name": "Colorado State University First Generation Award",
+        "operationId": "add-intake-entity-6bde02413985885a",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-6bde02413985885a",
+          "entityId": "intake-entity-6bde02413985885a"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-national.json"
+      },
+      {
+        "entityId": "intake-entity-7665bcfa836a9f07",
+        "name": "Seeley Family Memorial Scholarship",
+        "operationId": "add-intake-entity-7665bcfa836a9f07",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-7665bcfa836a9f07",
+          "entityId": "intake-entity-7665bcfa836a9f07"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-873f91c3edce15b4",
+        "name": "Ron Conrad Drama Endowment Scholarship",
+        "operationId": "add-intake-entity-873f91c3edce15b4",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-873f91c3edce15b4",
+          "entityId": "intake-entity-873f91c3edce15b4"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-882235532885dab0",
+        "name": "NTHS TechForce Scholarship",
+        "operationId": "add-intake-entity-882235532885dab0",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-882235532885dab0",
+          "entityId": "intake-entity-882235532885dab0"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-8af8e6bebae880ce",
+        "name": "NTHS SkillsUSA Scholarship",
+        "operationId": "add-intake-entity-8af8e6bebae880ce",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-8af8e6bebae880ce",
+          "entityId": "intake-entity-8af8e6bebae880ce"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-8ecca308f791f5a6",
+        "name": "NTHS HOSA Scholarship",
+        "operationId": "add-intake-entity-8ecca308f791f5a6",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-8ecca308f791f5a6",
+          "entityId": "intake-entity-8ecca308f791f5a6"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-8f29d09965003d3a",
+        "name": "Bonita Jean Olson Memorial Scholarship",
+        "operationId": "add-intake-entity-8f29d09965003d3a",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-8f29d09965003d3a",
+          "entityId": "intake-entity-8f29d09965003d3a"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-942fb3e90320f98a",
+        "name": "ASE Scholarship",
+        "operationId": "add-intake-entity-942fb3e90320f98a",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-942fb3e90320f98a",
+          "entityId": "intake-entity-942fb3e90320f98a"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-a5a75dd0bc921034",
+        "name": "KPMG Future Leaders Program",
+        "operationId": "add-intake-entity-a5a75dd0bc921034",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-a5a75dd0bc921034",
+          "entityId": "intake-entity-a5a75dd0bc921034"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-national.json"
+      },
+      {
+        "entityId": "intake-entity-c9f1d5ecf13fe4c6",
+        "name": "Elisha Hall Memorial Scholarship",
+        "operationId": "add-intake-entity-c9f1d5ecf13fe4c6",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-c9f1d5ecf13fe4c6",
+          "entityId": "intake-entity-c9f1d5ecf13fe4c6"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-d00e748c026573df",
+        "name": "James P. Vomhof Presidential Fund",
+        "operationId": "add-intake-entity-d00e748c026573df",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-d00e748c026573df",
+          "entityId": "intake-entity-d00e748c026573df"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-d7370cf07a07d2ec",
+        "name": "Women Military Aviators Dream of Flight Scholarship",
+        "operationId": "add-intake-entity-d7370cf07a07d2ec",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-d7370cf07a07d2ec",
+          "entityId": "intake-entity-d7370cf07a07d2ec"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      },
+      {
+        "entityId": "intake-entity-e4daa26d3c3e0eb6",
+        "name": "NTHS DECA Scholarship",
+        "operationId": "add-intake-entity-e4daa26d3c3e0eb6",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-e4daa26d3c3e0eb6",
+          "entityId": "intake-entity-e4daa26d3c3e0eb6"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-ec55ef80953de81d",
+        "name": "LAPSEN Scholarship",
+        "operationId": "add-intake-entity-ec55ef80953de81d",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-ec55ef80953de81d",
+          "entityId": "intake-entity-ec55ef80953de81d"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-f093eb9d146913dc",
+        "name": "Rubin Propel Scholarship",
+        "operationId": "add-intake-entity-f093eb9d146913dc",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-f093eb9d146913dc",
+          "entityId": "intake-entity-f093eb9d146913dc"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-aea-nths.json"
+      },
+      {
+        "entityId": "intake-entity-f4cbf1a40504e59a",
+        "name": "Davis-Putter Scholarship",
+        "operationId": "add-intake-entity-f4cbf1a40504e59a",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-f4cbf1a40504e59a",
+          "entityId": "intake-entity-f4cbf1a40504e59a"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-national.json"
+      },
+      {
+        "entityId": "intake-entity-fc95f644590e845d",
+        "name": "Roman S. Zuroff Endowed Scholarship Fund",
+        "operationId": "add-intake-entity-fc95f644590e845d",
+        "savedDisposition": "propose_add",
+        "savedDestination": {
+          "kind": "proposed_operation",
+          "operationId": "add-intake-entity-fc95f644590e845d",
+          "entityId": "intake-entity-fc95f644590e845d"
+        },
+        "reviewPath": "docs/evidence/SCHOLARSHIP-INTAKE-batch-review-cross-coverage.json"
+      }
+    ]
+  },
+  "preserved": {
+    "catalogAwards": 192,
+    "catalogAwardIdsSha256": "30df9bc3fc41892dca87bfcfbaac325ad7aebf942a67aef6a8a468835cfe8cef",
+    "priorCriteria": 38,
+    "priorConnections": 206,
+    "coverageConnections": 4,
+    "holdRecords": 312,
+    "heldEntities": 310,
+    "historicalRoutes": 83,
+    "researchRecords": 26,
+    "potentialAdditionsNotWriteReady": 4,
+    "backlogIds": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08",
+      "D09"
+    ],
+    "holdDenominatorNote": "310 entities with disposition hold; 312 separately retained hold records. Do not substitute unique hold-record entity IDs for the held-entity denominator."
+  },
+  "limits": [
+    "All source observations are saved evidence, not live workbook verification.",
+    "Operation references are an index, not a new ledger or unapplied batch.",
+    "The NTHS withdrawn duplicate follows its recorded row143 survivor; no duplicate addition is proposed.",
+    "No current public award count, source revision, freshness or eligibility is asserted."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "authorizedBy": "Kelsey Stuart",
+  "authorizedAtLocalDate": "2026-09-14",
+  "timeZone": "America/Denver",
+  "recordedAt": "2026-09-14T13:34:19Z",
+  "directUserReply": "approved. proceed",
+  "context": "Kelsey approved the exact independently reviewed single verification-rule correction after disclosure that it removes cross-resource exact timestamp equality, preserves independently stable timestamps and two complete equal captures, and cannot guarantee the connector reports the latest revision.",
+  "scope": {
+    "id": "R3-FRESHNESS-CORRECTION-1",
+    "proposalPath": "docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md",
+    "proposalSha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0",
+    "proposalCandidate": "b2399edee03cbe37b5b9e195ae3e294c66dd23c1",
+    "proposalReviewCheckpoint": "67719dee44fc21d678f396fdbde13da6adc1334e",
+    "authorized": true,
+    "authorizedBy": "Kelsey Stuart",
+    "authorizedAt": "2026-09-14",
+    "authorityEvidencePath": "docs/evidence/r3-catalog/freshness-authority.json",
+    "policyReviewPath": "docs/evidence/r3-catalog/freshness-policy-review.json",
+    "crossResourceTimestampEqualityRequired": false,
+    "independentTimestampStabilityRequired": true,
+    "reportedRevisionTokenStabilityRequired": true,
+    "freshnessObservationsPerAttempt": 4,
+    "equalCompleteCapturesRequired": 2,
+    "priorAttemptsConsumed": 1,
+    "maximumAdditionalAttempts": 2,
+    "maximumTotalAttempts": 3,
+    "additionalSourceAccessAuthorized": false,
+    "transactionalSnapshotClaimAuthorized": false
+  },
+  "originalR3AndConnectorAuthorityRemainValid": true,
+  "canonicalAcceptance": false,
+  "conditions": [
+    "Fresh independent policy PASS before source calls",
+    "Only attempts2 and3 remain; maximum4observations per attempt",
+    "No expanded data access or R4 effects",
+    "Preserve all prior proposals, review bindings, applied operations and hold/recovery triggers"
+  ]
+}

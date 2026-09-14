@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Fresh-context independent read-only R3 prospective policy checkpoint",
+  "outcome": "PASS",
+  "canonicalAcceptance": false,
+  "reviewer": "/root/r3_policy_review",
+  "reviewedAt": "2026-09-13T23:47:10Z",
+  "candidateCommit": "c8be2caf739b1074ae6caddc9e7f87ab28a68078",
+  "baselineCommit": "f95464d8a7b751e1f0a2c48663a8b1a75283ceab",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "reviewManifestPath": "/private/tmp/r3-policy-manifest.json",
+  "manifestPathInRepository": "docs/evidence/r3-catalog/policy-manifest.json",
+  "manifestSha256": "5d3d386cc06ba88971daa781806ab4517a29078652db8f00bdf1373a66fb8365",
+  "independence": {
+    "authoredOrEditedCandidate": false,
+    "repositoryMutations": false,
+    "networkOrWorkbookAccess": false,
+    "credentialOrProviderAccess": false
+  },
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    "Verified clean exact candidate HEAD, baseline ancestry and delivered-baseline ancestry.",
+    "Verified manifest digest, exact complete 12-path change set, all candidate Git blob hashes and worktree equality.",
+    "Verified unchanged scope-review binding, scope manifest completeness, five scope-candidate blob hashes and all 38 saved-input Git hashes.",
+    "Verified complete prior handoff and intake-kickoff suffixes remain byte-identical.",
+    "Verified prior BUILD_STATE is exactly preserved after removing only the new R3 object, REV18 amendment, exact R4 blocker and planRevision increment.",
+    "Inspected the complete policy diff, grant, source projection, stable-capture requirements, failure gates, product constraints and review sequence.",
+    "Confirmed no runtime, fixture, lockfile, deployment, historical review, receipt or attestation changes.",
+    "Independently ran node --import tsx scripts/test-r3-catalog-governance.ts: PASS.",
+    "Independently tested additional metadata expansion, linked-source access, denominator changes, scope/input/authority/review substitution and extra source fields: all rejected.",
+    "Independently ran local build-plan validation: exit 1 with exactly three reserved REV18 diagnostics.",
+    "Independently ran GITHUB_ACTIONS=true build-plan validation locally: exit 1 with exactly four expected diagnostics.",
+    "Independently ran git diff --check across baseline to candidate: PASS.",
+    "Inspected recorded policy validation and successful typecheck evidence, including retained initial handoff-label failures and remediation."
+  ],
+  "assessment": {
+    "authority": "The new direct grant adopts the exact reviewed R3 scope. Historical false proposal flags remain unchanged and are superseded only for selected R3 effects.",
+    "source": "Only sheet0 Master Database A1:O417 and the exact allowlisted metadata and cell projection are permitted. Identity/header checks, stable revisions, two equal complete captures, three-attempt limit, personal-content exclusions and incomplete-capture stops are explicit.",
+    "reviewSequence": "A committed matching policy PASS precedes source reads. Separate frozen source reconciliation, field rules, mapping and expected-example review precedes product edits.",
+    "preservation": "Existing 192 awards, criteria, 206+4 connections, original operation identities, duplicate-survivor handling and historical follow-up triggers remain protected.",
+    "acceptance": "The exception changes only false release-authority handling for exact REV18 local preparation. Canonical attestation validation and historical gates remain unchanged.",
+    "release": "R3 local review completion is distinct from canonical acceptance. R4 requires separate direct authority, fresh release checks, authority-bearing candidate review and valid direct-child attestation."
+  },
+  "canonicalDiagnostics": {
+    "localExitCode": 1,
+    "localErrors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ],
+    "hostedModeExitCode": 1,
+    "additionalHostedError": "PLAN-REV18 requires direct informed delivery authority or an exact authorized local-only preparation blocker"
+  },
+  "limits": [
+    "This PASS applies only to the exact prospective policy candidate and manifest, not source reconciliation, implementation, canonical acceptance or release.",
+    "No fresh workbook, official-source, hosted application, provider or recovery-object verification was performed.",
+    "Hosted-mode validation was a local environment-mode test, not hosted verification.",
+    "The full runtime/browser/build matrix was not rerun for this policy checkpoint; it remains mandatory for the complete R3 candidate.",
+    "An initial reviewer-only inline adversarial invocation failed because of ESM/CommonJS import interop. The corrected invocation passed without file changes.",
+    "After this review is committed with its exact candidate and manifest binding, the existing user grant permits bounded capture; product edits remain gated on the later mapping review."
+  ]
+}

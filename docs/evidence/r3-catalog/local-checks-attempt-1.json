@@ -1,0 +1,25 @@
+{
+  "scope": "local R3 only; synthetic tests, no hosted verification",
+  "checks": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-14T14:56:23.136074+00:00",
+      "completedAt": "2026-09-14T14:56:47.102202+00:00",
+      "durationSeconds": 23.97,
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 3 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "/private/tmp/program_code-r3-catalog/web",
+      "startedAt": "2026-09-14T14:56:47.102517+00:00",
+      "completedAt": "2026-09-14T14:56:50.852243+00:00",
+      "durationSeconds": 3.75,
+      "exitCode": 2,
+      "stdout": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\nscripts/test-r3-catalog.ts(76,138): error TS2345: Argument of type 'string' is not assignable to parameter of type '\"Award ID\" | \"Record type\" | \"Name\" | \"Cycle status\" | \"Cycle details\" | \"Amount\" | \"Minimum GPA\" | \"School types\" | \"Application method\" | \"Official link\"'.\n",
+      "stderr": ""
+    }
+  ]
+}

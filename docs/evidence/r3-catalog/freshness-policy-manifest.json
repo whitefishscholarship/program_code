@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Prospective approved R3 freshness correction policy; not canonical attestation",
+  "baselineCommit": "67719dee44fc21d678f396fdbde13da6adc1334e",
+  "candidateCommit": "73308cb659ba62c3f104867c0dc0aef85db8cf7a",
+  "deliveredBaseline": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "442923ab5b40b668c648d00237346a0238240bfb8287e162c6751edc2065a540"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "05ee7faeab2025c9ba270909091bde1e8f8718a257f5afa5f5ab96b7cdc710e9"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "187dc19a01f94269459bd198046d32ea6cf52e5d1aa56747db73b373746e45e1"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "sha256": "782df3bc1b4d4a40754248999a366ec877ff8d29f30ae8167677ddf625e45062"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-authority.json",
+      "sha256": "57f42fc16458d8ddb58dc0113caa5cb2b8a045bff777cf9d3586c38c6b31ee2d"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-remediation-validation.json",
+      "sha256": "051bbf62a4dd132aaccd526b531f348535d7ed7e7110ca49e84ffe17edde61ae"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-validation.json",
+      "sha256": "ddeed43a802e6378e76daf098415b1a2bc823d96d7c969cb98a2e71ed3bcfd20"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "d9245b77391419bc11d8af55e0479ffada4fe3b0ac490b6451c6e97c509846d7"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "57cc943eacd59c17418869e77483316f363da01f400658489c66e2d5782dbe48"
+    },
+    {
+      "path": "web/scripts/r3-catalog-governance.ts",
+      "sha256": "82849d122bf57f60fb8645039d52f9909e5128b256662f48e8b7bebd6bc52e9c"
+    },
+    {
+      "path": "web/scripts/r3-connector-read.cjs",
+      "sha256": "22957fffe88406869a5f2b2fe1941003fd2b935b11ede47d3a0bb6998eea03db"
+    },
+    {
+      "path": "web/scripts/test-r3-catalog-governance.ts",
+      "sha256": "ec974a6c7fc8e355a2e1268bc3e7d09bedf44f12fc2c45d21ea70b895db2d394"
+    },
+    {
+      "path": "web/scripts/test-r3-connector-read.cjs",
+      "sha256": "9bc3a657c3434d9e1c55f7a28c1ca2fdb75fec411e59304075f9816b2068aef2"
+    }
+  ]
+}

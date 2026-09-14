@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_BOUNDED_CONSISTENT_CAPTURE",
+  "attempt": 2,
+  "verifiedAt": "2026-09-14T14:24:07.157Z",
+  "policyReviewCheckpoint": "33674d6cccdf94be818d619c296812a0e714ada4",
+  "connectorReportedRevisionId": "229",
+  "fileModifiedTime": "2026-09-11T10:51:53.348Z",
+  "revisionModifiedTime": "2026-09-11T10:51:53.207Z",
+  "observationCount": 4,
+  "captureCount": 2,
+  "dataRowPositions": 416,
+  "returnedCellCount": 4765,
+  "addressableCells": 6255,
+  "digest": "22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c",
+  "encoding": "UTF-8 JSON of all ordered row positions with keys sorted, ensure_ascii=false, no insignificant whitespace; sparse cell/field presence retained",
+  "captures": [
+    {
+      "schemaVersion": 1,
+      "attempt": 2,
+      "capture": 1,
+      "startedAt": "2026-09-14T14:15:24.149Z",
+      "completedAt": "2026-09-14T14:18:54.587Z",
+      "status": "PASS",
+      "reason": null,
+      "range": "'Master Database'!A1:O417",
+      "sheetId": 0,
+      "cellFields": "userEnteredValue,effectiveValue,formattedValue,hyperlink,textFormatRuns(startIndex,format(link)),userEnteredFormat(numberFormat),effectiveFormat(numberFormat)",
+      "complete": true,
+      "headerVerified": true,
+      "rowPositions": 417,
+      "returnedCells": 4765,
+      "snapshotPath": "docs/evidence/r3-catalog/attempt-2-capture-1.json",
+      "sha256": "22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c",
+      "snapshotFileSha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6",
+      "digestEncoding": "UTF-8 JSON of all ordered row positions with keys sorted, ensure_ascii=false, no insignificant whitespace; sparse cell/field presence retained"
+    },
+    {
+      "schemaVersion": 1,
+      "attempt": 2,
+      "capture": 2,
+      "startedAt": "2026-09-14T14:21:16.650Z",
+      "completedAt": "2026-09-14T14:21:18.248Z",
+      "status": "PASS",
+      "reason": null,
+      "range": "'Master Database'!A1:O417",
+      "sheetId": 0,
+      "cellFields": "userEnteredValue,effectiveValue,formattedValue,hyperlink,textFormatRuns(startIndex,format(link)),userEnteredFormat(numberFormat),effectiveFormat(numberFormat)",
+      "complete": true,
+      "headerVerified": true,
+      "rowPositions": 417,
+      "returnedCells": 4765,
+      "snapshotPath": "docs/evidence/r3-catalog/attempt-2-capture-2.json",
+      "sha256": "22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c",
+      "snapshotFileSha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6",
+      "digestEncoding": "UTF-8 JSON of all ordered row positions with keys sorted, ensure_ascii=false, no insignificant whitespace; sparse cell/field presence retained"
+    }
+  ],
+  "observationPaths": [
+    "docs/evidence/r3-catalog/attempt-2-observation-1.json",
+    "docs/evidence/r3-catalog/attempt-2-observation-2.json",
+    "docs/evidence/r3-catalog/attempt-2-observation-3.json",
+    "docs/evidence/r3-catalog/attempt-2-observation-4.json"
+  ],
+  "errors": [],
+  "limits": [
+    "Reported revision ID is not the unavailable Drive file version.",
+    "Bounded observational consistency, not server-head proof or atomic capture.",
+    "Sparse native cell presence retained without invented values.",
+    "No source write, revision content, other-tab inventory or linked-source access.",
+    "Source reconciliation and mapping review still required before product edits."
+  ]
+}

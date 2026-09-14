@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 17
+Plan revision: 19
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1769,3 +1769,181 @@ Exact pins, allowlist, informed effects and target are in BUILD_STATE's PLAN-REV
 rev15DeliveryRepair and docs/evidence/PLAN-REV17.md. No workbook access/change,
 research, runtime/catalog change, configuration change, monitoring, rollback,
 provider/applicant interaction or later R3-R7 phase is authorized by this exception.
+
+## Plan Revision 18 — bounded local R3 catalog refresh
+
+Kelsey directly authorized the independently reviewed R3 scope on September 13, 2026
+with “yes, authorized.” Adopt sections 3–7 of `docs/R3_CATALOG_SCOPE.md` at SHA256
+`2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2` and its exact
+source/read, reconciliation, product, privacy and verification boundaries. This is one
+local maintenance phase. P0–P9 and R1/R2 remain complete; canonical stage pointers stay
+null. `r3CatalogRefresh` records the current exact grant; historical grants remain exact.
+
+The only newly permitted source is workbook `1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4`,
+sheet0 `Master Database`, A1:O417 and the exact metadata/projection in state. No other
+tab inventory, linked content or formula dependency may be accessed. Require stable
+before/after revision tokens, two equal full bounded cell projections, complete range
+accounting and at most three capture attempts. Fresh organizer snapshot currency is not
+official scholarship verification. Do not silently expand bounds or import newer unrelated
+edits. Preserve all 257 applied-operation outcomes, 192 existing IDs, 38 priority entities,
+42 priority references, duplicate survivor links and every held/recovery trigger.
+
+Prospectively allow a separate immutable organizer-recorded catalog/connection bundle.
+Preserve all historical publications and existing 192-award GPA/school criteria and 206+4
+connections; reuse the same binary OR, explicit-sort and all-award behavior. Only new
+awards with individually reviewed explicit GPA and resolved school-type fields may add
+organizer shortlist criteria. Missing/ambiguous/sensitive nonselection is non-excluding;
+no new officially accepted facts, hard exclusions, scoring or universal sensitive definitions.
+Add the seven remaining organization options only with exact included child-award support;
+extend supported Teaching/need/topic connections and review NTHS numeric-date provenance.
+The original two-input core and optional controls remain. Answers stay volatile, CSV stays
+public-only, and runtime retains zero Google/Drive/Sheets capability. Catalog, API, browser,
+compatibility data, CSV and health/source identity must reconcile to the selected bundle.
+
+Commit and independently review this dedicated prospective policy before source reads or
+product edits. Freeze and independently review source reconciliation, mapping/field rules
+and expected examples before product edits. Run the complete contract matrix, new R3
+adversarial tests and keyboard/mobile/local-download/privacy regression; preserve all
+historical evidence. Full local-candidate fresh review is required before R3 completion.
+
+The exact REV18 local-preparation exception accepts false release authority only off
+hosted CI, with the exact R4 blocker and unchanged approved scope/effect pins. It never
+waives canonical manifest, review, attestation or historical validation. Before R4 the
+three missing REV18 artifacts remain reported failures; other checks must pass and any
+additional failure blocks completion. R3 may end as independently reviewed local work
+with those exact reserved failures recorded. Do not create premature canonical acceptance
+or an undelivered attestation. R4 requires new direct informed release authority, fresh
+baseline/target checks, authority-bearing candidate review, valid direct-child attestation,
+zero actual canonical diagnostics and exact Preview/Production verification.
+
+No workbook mutation, cloud copy/recovery, research, source expansion, services/dependencies,
+configuration, credentials, paid actions, forms, provider contact, monitoring, rollback,
+Git publication, hosted verification or R4–R7 execution is authorized by Revision18.
+
+### Revision 18 approved connector metadata supplement
+
+Following disclosure of the observed connector limitation and incidental editor identity
+exposure, Kelsey replied “approved, proceed” on September 13, 2026 (America/Denver).
+Adopt only `docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md` at SHA256
+`378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06`.
+Its historical proposed status remains unchanged; `connector-authority.json` records
+the subsequent grant, and `r3CatalogRefresh.connectorSupplement` pins the exact addition.
+
+This is the sole metadata exception to the original projection: one revision-history
+page of at most1000 records per observation, at most4 observations per attempt and3
+attempts, and the named sheet0 envelope fields. No pagination or revision contents.
+Discard editor attribution and raw spreadsheetUrl before model-facing output or
+persistence. Keep only permitted minimal revision evidence. A currentRevisionId and
+matching revision record must agree with independently read file modifiedTime; missing,
+ambiguous or cap-reaching results block. Trashed status stays unknown unless observed.
+
+The workbook, sheet0, A1:O417, CellData projection, stable before/after token and two
+equal complete captures remain exact. All other grants, product/mapping gates and
+reserved effects stay unchanged. Freeze and independently review this prospective
+supplemental policy before new source calls; preserve original policy and proposal
+reviews against their own candidates. Supplemental policy PASS is not a source-capture,
+mapping, completed R3 or R4 acceptance claim.
+
+### Revision 18 approved independent freshness comparisons
+
+On September14,2026 (America/Denver), Kelsey replied “approved. proceed” to the exact
+independently reviewed `FRESHNESS_CORRECTION_PROPOSAL.md` at SHA256
+`a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0` in
+`docs/evidence/r3-catalog/`. The grant is recorded in `freshness-authority.json`
+and BUILD_STATE.r3CatalogRefresh.freshnessCorrection.
+
+This prospectively replaces ONLY the preceding supplemental cross-resource timestamp
+equality rule. Each observation still requires exact file identity, valid file time,
+a safe connector-reported currentRevisionId with exactly one matching valid-timestamp
+record, compatible MIME type and no unexpected metadata or cap-reaching revision page.
+The file timestamp and revision timestamp may differ. Across four observations surrounding
+two complete captures, require each timestamp and the reported token to stay exactly
+unchanged separately, and both complete bounded native cell digests to match. Preserve
+observation/capture order and all identity/header/grid/projection/privacy gates.
+There is no tolerance or rounding exception. Attempt1 remains consumed; only attempts2
+and3 remain. No extra access or later effects are authorized.
+
+These are bounded consistency observations. They do not prove the connector reports the
+actual server head, an atomic snapshot, complete history, or current official award facts.
+Never equate a reported revision ID with the unavailable Drive file version. Preserve the
+original proposal, authority, sanitizer evidence and independent review candidate bindings.
+Commit and independently review this dedicated prospective policy correction before more
+source calls. Source reconciliation/mapping review and final R3 review remain mandatory;
+R4 acceptance and all release effects remain separately gated.
+
+### Revision 18 separately approved R4 release
+
+On September14,2026, Kelsey approved GitHub publication, automatic Vercel Preview,
+merge, Production and verification of the reviewed R3 catalog. The direct receipt is
+`docs/evidence/r4-catalog/authority.json`, incorporated in `PLAN-REV18.md` and REV18
+deliveryAuthorization. This later grant supersedes only the previous no-R4 boundary.
+Original R3 grant objects and historical reviews remain unchanged; r4CatalogRelease
+governs the release. P0–P9 and R1/R2 stay complete, with stage pointers null.
+
+Preserve every tracked runtime, fixture, dependency, test and deployment-control byte
+from R3 review checkpoint ec0907eeab92647ee394bd9b9a7614ecb6ab92cc. R4 adds its authority
+and release evidence/routing only. Publish to whitefishscholarship/program_code through
+codex/r4-catalog-release. Target is web/prj_LbefE2deji6nPND6iBiuofe7IABv, team
+team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app.
+
+Freeze the complete baseline-to-candidate set and obtain fresh-context read-only
+independent acceptance review. Add exactly canonical REV18 manifest and review in the
+direct-child attestation, which must remain branch tip until merged. Require zero
+actual local and hosted-mode plan diagnostics before publication. Verify exact Preview
+and CI before ancestry-preserving merge; verify exact Production afterward. Passing
+deployment is not health proof: bind deployed commit, selected catalog hashes/counts,
+compatibility/API/browser/public CSV behavior and zero source capability. Unavailable
+hosted request/download evidence remains unknown; distinguish local proof explicitly.
+
+No workbook/source access or write, research, configuration/credential change, rollback,
+monitoring, paid action, provider/applicant interaction or R5–R7 execution. Existing
+criteria/definition/research/recovery/hold routes retain their recorded owners/triggers.
+
+
+## Plan Revision 19 — exact Whitefish identity delivery continuation
+
+Kelsey directly approved the independently reviewed correction proposal on September14,2026.
+The receipt embeds the exact proposal and independent review in
+`docs/evidence/r4-identity-repair/authority.json`; PLAN-REV19 state pins its21-path scope,
+original A18/C18/baseline, Whitefish author/committer identity and existing target/effects.
+This is R4 delivery only. All stage pointers remain null; completed stages remain complete.
+Original REV18 amendment/grant and all prior evidence/reviews/attestations remain canonical
+and byte-identical. No force push, rebinding, subscription or access change is permitted.
+
+Only codex/r4-whitefish-delivery-repair descending from original A18 may prepare C19.
+Freeze this prospective policy and obtain independent fresh-context read-only PASS before
+implementation. Preserve all A18 blobs outside the finite allowlist, including every product,
+catalog, source/fixture, dependency and deployment/CI byte. Package changes only append
+`node --import tsx scripts/test-r4-identity-delivery.ts` to the existing test command.
+Preserve all original state objects; only planRevision19 and the new amendment are added.
+
+The sole tip-lock exception permits only a separately valid canonical REV19 direct-child
+two-file attestation A19 to replace original A18 as REV18's allowed undelivered tip. C19
+must descend from A18 and its manifest covers the entire pinned M0-to-C19 change set.
+Require fresh independent full-candidate review, C/H0 and count-matched dispositions.
+Before A19 retain REV18's original tip error plus all three missing REV19 artifact errors;
+all other diagnostics block. After A19 actual local and hosted-mode validators must exit0.
+A19 must remain tip until delivered. Original PR46 and its branch/head stay immutable.
+
+During preparation validate active candidate preservation. Once A19 exists validate
+immutable C19/A19 trees, never freeze future runtime/state to this release. Later separately
+authorized stages may evolve them normally, but original repair amendment/authority, policy
+review, manifest and historical proof must remain exact. All new commits from A18 through
+A19 must have Whitefish author AND committer; verify GitHub head attribution before delivery.
+Add negative regressions for identity, pins, changed evidence/grants, expanded allowlist,
+missing authority/review, wrong ancestry, extra/non-direct attestation, post-A19 tips, and
+valid later evolution with rejection of changed historical proof. Preserve all older gates.
+
+Run full plan/typecheck/test/build, intake/coverage/R3 saved-evidence and P9/trace checks,
+plus git diff --check. Recompute runtime/bundle equality to bind existing local browser proof.
+Publish the new reviewed branch/PR under existing R4 effects, then close PR46 unmerged with
+replacement identified. Verify exact Preview/CI before exact-head ancestry-preserving merge;
+verify exact Production commit/catalog/compatibility/API/browser/public CSV/source capability
+afterward. Request-body/download evidence unavailable through hosted tools stays unknown.
+Record post-attestation observations outside the locked branch, then a local-only handoff
+after merge. No extra unreviewed closeout push. Continuing provider rejection is a blocker.
+
+No source/workbook access or writes, research, product change, configuration/credentials,
+paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
+all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
+criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.

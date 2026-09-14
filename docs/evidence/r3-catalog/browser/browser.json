@@ -1,0 +1,132 @@
+{
+  "observedAt": "2026-09-14T15:00:02.975Z",
+  "status": "PASS",
+  "target": "local production build only",
+  "syntheticOnly": true,
+  "viewports": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "status": "PASS",
+      "coreOnlyCount": 384,
+      "preservedCriteria": 38,
+      "newChoices": [
+        "education_teaching",
+        "org_nths",
+        "org_ffa",
+        "org_bpa",
+        "org_deca",
+        "org_fbla",
+        "org_fccla",
+        "org_hosa",
+        "org_skillsusa",
+        "org_tsa"
+      ],
+      "needResponses": 5,
+      "organizationClearResponses": 3,
+      "publicCsvExact": true,
+      "explicitSort": true,
+      "conditionalHours": true,
+      "optionalFieldsClear": true,
+      "editResetReload": true,
+      "browseAll": 411,
+      "keyboard": {
+        "completeJourney": true,
+        "inputs": true,
+        "allOptionalSections": true,
+        "collapsedChoices": true,
+        "results": true,
+        "savedCsv": true,
+        "programmaticFocus": false
+      },
+      "horizontalOverflow": false,
+      "answerStorageRequestsLogs": 0
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": "PASS",
+      "coreOnlyCount": 384,
+      "preservedCriteria": 38,
+      "newChoices": [
+        "education_teaching",
+        "org_nths",
+        "org_ffa",
+        "org_bpa",
+        "org_deca",
+        "org_fbla",
+        "org_fccla",
+        "org_hosa",
+        "org_skillsusa",
+        "org_tsa"
+      ],
+      "needResponses": 5,
+      "organizationClearResponses": 3,
+      "publicCsvExact": true,
+      "explicitSort": true,
+      "conditionalHours": true,
+      "optionalFieldsClear": true,
+      "editResetReload": true,
+      "browseAll": 411,
+      "keyboard": {
+        "completeJourney": true,
+        "inputs": true,
+        "allOptionalSections": true,
+        "collapsedChoices": true,
+        "results": true,
+        "savedCsv": true,
+        "programmaticFocus": false
+      },
+      "horizontalOverflow": false,
+      "answerStorageRequestsLogs": 0
+    }
+  ],
+  "health": {
+    "catalog": {
+      "id": "r3-catalog-v1-rev229",
+      "schemaVersion": 1,
+      "basis": "organizer_recorded_not_officially_verified",
+      "snapshotDate": "2026-09-14",
+      "sourceRevision": "229",
+      "revisionType": "connector_reported",
+      "sourceSnapshotSha256": "22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c",
+      "catalogRevision": "783fd9d9de974e781027d5a1edfe92b5d27e0f2f5634e2515f36b2563f9fcd1a",
+      "awardCount": 411,
+      "bundleSha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908",
+      "generatorSha256": "f0044d47f296ffe82a8616f39bc35d4fcf7b7aed0ef0c983e74241c20029392d",
+      "mappingReviewSha256": "e1f6e42a832581c13bb6563137292834b3f75a6945cd1cfcad752766a000e6f6",
+      "mappingManifestSha256": "b6ca19312c2143c80bb58d366eaa674452256ecf758527e18f97dc8d612f7856",
+      "reconciliationSha256": "24e857d3ae2a795f7a0a1a001e93ac80aa8aeca9ff3f3b21b586de92dc982143"
+    },
+    "matchingFacts": {
+      "mode": "bundled_immutable_publication",
+      "path": "web/fixtures/p8m/matching-facts-v1.json",
+      "sha256": "16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07",
+      "id": "p8m-matching-facts-v1-rev225",
+      "schemaVersion": 1,
+      "taxonomyVersion": "1.0.0",
+      "sourceRevision": "225",
+      "sourceRows": 197,
+      "scholarshipRows": 176,
+      "portalRows": 21,
+      "acceptedMatchingFacts": 0
+    },
+    "coverage": {
+      "id": "interview-coverage-supplement-v1-rev225",
+      "sha256": "577c062696839fca0a7aef306b460831ee08942fe84a9a9e45602874b0365eb1",
+      "snapshotDate": "2026-09-02",
+      "basis": "organizer_recorded_not_officially_verified"
+    },
+    "capabilities": {
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    }
+  }
+}

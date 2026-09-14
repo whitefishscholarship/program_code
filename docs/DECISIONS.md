@@ -672,3 +672,102 @@ Integrate original979122a ancestry and reviewed runtime unchanged, preserve both
 canonical amendment objects/evidence/artifacts, and use the reviewed union of
 validator/test changes. Record distinct REV16 authority/baseline; planRevision stays17.
 No source, workbook, configuration or later-phase scope is added.
+
+## 2026-09-13 — PLAN-REV18 bounded local R3 catalog refresh
+
+Kelsey granted the exact independently reviewed R3 scope with “yes, authorized.” The
+reviewed proposal at adf45e4 and checkpoint f95464d fixes the allowed source, metadata,
+projection and local-only effects. Adopt it prospectively without reopening R1/R2 or
+promoting saved facts to current official truth. A full-Master scan or whole-workbook
+copy would exceed this grant; reading only A1:O417 with explicit moved/newer/unresolved
+outcomes meets the selected reconciliation need. Preserve original receipts and IDs.
+
+Use a distinct immutable catalog/connection bundle while preserving existing criteria,
+publications and unknown handling. Review policy before source access, then source and
+mapping before product changes. Add only an exact off-hosted REV18 false-release-authority
+exception; preserve the three final canonical-artifact errors and all historical gates.
+R3 completion is local review only; R4 authority and attestation remain separate. Local
+rollback is abandonment of these new commits; external rollback or restore is unauthorized.
+
+## 2026-09-13 — R3 connector metadata supplement approved
+
+Kelsey replied “approved, proceed” after disclosure of the exact connector supplement
+and incidental editor identity exposure. Adopt only the hash-pinned proposal through
+the prospective REV18 appendix, BUILD_STATE.connectorSupplement and connector-authority.json.
+The earlier proposal and policy reviews retain their original candidates and bytes.
+Require fresh independent policy review before new source calls. Discard incidental
+editor identity and raw spreadsheet URL before output or persistence; require current
+revision proof and both equal complete captures. Unknown trashed status stays unknown.
+No source cell bounds, original mapping/product gates or R4 effects change. If the
+connector still fails to prove current revision, preserve the blocker without substituting
+timestamp-only evidence, credentials or broader reads. Original R3 authority persists.
+
+## 2026-09-14 — R3 independent freshness comparisons approved
+
+Kelsey directly approved the reviewed freshness correction with “approved. proceed.”
+The earlier cross-resource exact timestamp equality assumption is superseded only by
+the hash-pinned correction and its explicit authority record. Each timestamp and the
+reported revision token must remain independently stable across four ordered observations;
+two complete bounded captures must match. No arbitrary tolerance, additional reads,
+current-head guarantee or R4 authority is implied. Attempt1 remains consumed. Preserve
+all prior proposals, grant records, review bindings and failed observations. Independently
+review this prospective correction before attempts2/3; mapping review still precedes
+product edits. This records the approved removal of an acceptance check explicitly.
+# 2026-09-14 — R4 exact catalog release authorization
+
+Kelsey approved publication, Preview, merge, Production and verification after explicit
+disclosure. Record the direct receipt in docs/evidence/r4-catalog/authority.json and
+REV18 deliveryAuthorization before effects. Keep planRevision18: R4 must satisfy its
+reserved canonical manifest/review/attestation gates without relaxation or rebinding.
+Preserve the original R3 grant and all runtime bytes. Only R4 policy/evidence/routing
+and canonical two-file attestation are added. Existing decisions and triggers below
+remain on their separate routes; no R5–R7 authority is implied.
+
+
+## Plan Revision 19 — exact Whitefish identity delivery continuation
+
+Kelsey directly approved the independently reviewed correction proposal on September14,2026.
+The receipt embeds the exact proposal and independent review in
+`docs/evidence/r4-identity-repair/authority.json`; PLAN-REV19 state pins its21-path scope,
+original A18/C18/baseline, Whitefish author/committer identity and existing target/effects.
+This is R4 delivery only. All stage pointers remain null; completed stages remain complete.
+Original REV18 amendment/grant and all prior evidence/reviews/attestations remain canonical
+and byte-identical. No force push, rebinding, subscription or access change is permitted.
+
+Only codex/r4-whitefish-delivery-repair descending from original A18 may prepare C19.
+Freeze this prospective policy and obtain independent fresh-context read-only PASS before
+implementation. Preserve all A18 blobs outside the finite allowlist, including every product,
+catalog, source/fixture, dependency and deployment/CI byte. Package changes only append
+`node --import tsx scripts/test-r4-identity-delivery.ts` to the existing test command.
+Preserve all original state objects; only planRevision19 and the new amendment are added.
+
+The sole tip-lock exception permits only a separately valid canonical REV19 direct-child
+two-file attestation A19 to replace original A18 as REV18's allowed undelivered tip. C19
+must descend from A18 and its manifest covers the entire pinned M0-to-C19 change set.
+Require fresh independent full-candidate review, C/H0 and count-matched dispositions.
+Before A19 retain REV18's original tip error plus all three missing REV19 artifact errors;
+all other diagnostics block. After A19 actual local and hosted-mode validators must exit0.
+A19 must remain tip until delivered. Original PR46 and its branch/head stay immutable.
+
+During preparation validate active candidate preservation. Once A19 exists validate
+immutable C19/A19 trees, never freeze future runtime/state to this release. Later separately
+authorized stages may evolve them normally, but original repair amendment/authority, policy
+review, manifest and historical proof must remain exact. All new commits from A18 through
+A19 must have Whitefish author AND committer; verify GitHub head attribution before delivery.
+Add negative regressions for identity, pins, changed evidence/grants, expanded allowlist,
+missing authority/review, wrong ancestry, extra/non-direct attestation, post-A19 tips, and
+valid later evolution with rejection of changed historical proof. Preserve all older gates.
+
+Run full plan/typecheck/test/build, intake/coverage/R3 saved-evidence and P9/trace checks,
+plus git diff --check. Recompute runtime/bundle equality to bind existing local browser proof.
+Publish the new reviewed branch/PR under existing R4 effects, then close PR46 unmerged with
+replacement identified. Verify exact Preview/CI before exact-head ancestry-preserving merge;
+verify exact Production commit/catalog/compatibility/API/browser/public CSV/source capability
+afterward. Request-body/download evidence unavailable through hosted tools stays unknown.
+Record post-attestation observations outside the locked branch, then a local-only handoff
+after merge. No extra unreviewed closeout push. Continuing provider rejection is a blocker.
+
+No source/workbook access or writes, research, product change, configuration/credentials,
+paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
+all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
+criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.

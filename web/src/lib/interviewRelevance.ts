@@ -1,3 +1,4 @@
+import { R3_CONNECTIONS, type DiscoveryConnection } from './r3Catalog';
 import { COVERAGE_PUBLICATION } from './coverageRelevance';
 import { z } from 'zod';
 import publication from '../../fixtures/relevance/interview-relevance-v1.json';
@@ -20,10 +21,10 @@ export function selectedRelevanceAnswers(answers: InterviewAnswers): ReadonlySet
   return new Set([...answers.selectedCriteria, ...answers.activities, ...(answers.discoveryInterests ?? []), ...organizations.map(id => `org_${id}`), ...(wantsNeed ? ['financial_need'] : [])]
     .filter(id => !answers.sensitiveCriteriaSkipped || !sensitive.has(id)));
 }
-export function relevanceByAward(answers: InterviewAnswers): ReadonlyMap<string, readonly { code: string; kind: 'preference'; message: string }[]> {
+export function relevanceByAward(answers: InterviewAnswers, additionalConnections: readonly DiscoveryConnection[] = R3_CONNECTIONS): ReadonlyMap<string, readonly { code: string; kind: 'preference'; message: string }[]> {
   const selected = selectedRelevanceAnswers(answers);
   const reasons = new Map<string, { code: string; kind: 'preference'; message: string }[]>();
-  for (const connection of [...RELEVANCE_PUBLICATION.connections, ...COVERAGE_PUBLICATION.connections]) {
+  for (const connection of [...RELEVANCE_PUBLICATION.connections, ...COVERAGE_PUBLICATION.connections, ...additionalConnections]) {
     if (!selected.has(connection.answerId)) continue;
     const current = reasons.get(connection.awardId) ?? [];
     current.push({ code: connection.id, kind: 'preference', message: connection.message });
@@ -31,6 +32,6 @@ export function relevanceByAward(answers: InterviewAnswers): ReadonlyMap<string,
   }
   return reasons;
 }
-const supported = new Set(RELEVANCE_PUBLICATION.connections.map(c => c.answerId));
+const supported = new Set([...RELEVANCE_PUBLICATION.connections, ...COVERAGE_PUBLICATION.connections, ...R3_CONNECTIONS].map(c => c.answerId));
 export const UNSUPPORTED_SPECIAL_CHOICES = SPECIAL_CRITERIA.filter(item => !supported.has(item.id));
 export const UNSUPPORTED_NOTICE = `No current saved-record connection for: ${UNSUPPORTED_SPECIAL_CHOICES.map(item => item.label).join(', ')}. These choices do not affect ordering or remove awards. Residence, educational status, college acceptance, gap-year plans and volunteer-hour ranges also have no effect in this version.`;

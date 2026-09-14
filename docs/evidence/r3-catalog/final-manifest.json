@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "Complete local R3 final candidate review; not canonical REV18 attestation",
+  "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+  "candidateCommit": "8e419d1e7617d9ebd910c6fb74a036dd49528d7b",
+  "implementationBaseline": "1ba4d93a1d29eab81690b937bac8ff980b24f9ff",
+  "resumeBaseline": "f6fdb2aea09eba3d29eaa2ac6eb345c3d111ed9e",
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "1925ba077b7c3035beabdcb25560cca0916e5c4019835a25bf19c572c77a5c4a"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "867777529f9c948651df6055cf6ee9f8763d7b1589b4ff52c9e3edf8fb861370"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "187dc19a01f94269459bd198046d32ea6cf52e5d1aa56747db73b373746e45e1"
+    },
+    {
+      "path": "docs/R3_CATALOG_SCOPE.md",
+      "sha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "sha256": "782df3bc1b4d4a40754248999a366ec877ff8d29f30ae8167677ddf625e45062"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV18.md",
+      "sha256": "7da670ae9354ce6dc6801f79e25e9fa1a2c0f3511069e567cde74295686c6dd4"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-closeout-manifest.json",
+      "sha256": "0ee91cf765f0a398014a6a59ed4d20a56dec954331a8cda59858da14f3ee5bb4"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-closeout-review.json",
+      "sha256": "d204dbe76089a701821ba16a7670b038dae0a199b2a13a72fe6f6a40d5c14927"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-closeout-validation.json",
+      "sha256": "e1a4df357a5a4cdf2e087d4251f41490952c43f6a1bb2843036f69184298a768"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-release-completion.json",
+      "sha256": "0ddce85c08669f88fc0e0fcb565f10c8bf005f3eb77b9cb6fd527a2ee92e9259"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap-manifest.json",
+      "sha256": "93f5bf4de2a40c5ba9dc1406c38436a998796f34b530a9d7aff8ec7141704148"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap-review.json",
+      "sha256": "513d2a4ef86e0b9aa2ee8f8ad835370871d2722884e5f64d75351cc9a8611da6"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap-validation.json",
+      "sha256": "511ffee4dde1505ebac15d58c1d7757a1eb7bc07e05c6c7617a1c98c7e3ea9ed"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r2-session-wrap.md",
+      "sha256": "9497c058c0b9bbe280490dc5622335db9b7b8a6604c4d6b54926db36f313e5e9"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r3-scope-inputs.json",
+      "sha256": "2e760d199ba5706fcb9eb3f483440becce405ad1c72a7d389701d46bc93f7843"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r3-scope-manifest.json",
+      "sha256": "494f05c8d86c89699967018adc22cc7db09a341c35ba48ab756f48a63f808dfd"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r3-scope-review.json",
+      "sha256": "0a63615e7e69a8844e6c084411561dc4b73ffbba30e7779d310f0767c5026447"
+    },
+    {
+      "path": "docs/evidence/interview-coverage/r3-scope-validation.json",
+      "sha256": "6d56595fee153db54acf12c982f188d822da01ccba19d3625d8ab339919a3c03"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
+      "sha256": "378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md",
+      "sha256": "a9244dc56e80bcb6e8d49212162677b820f79421fb7c2caa0fd5297090e1c3c0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/LOCAL_CANDIDATE.md",
+      "sha256": "b8c7b922965a50ba7b1cbb766e75a0cd71f3205c57c5b1379156d08504571b87"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/MAPPING_PROPOSAL.md",
+      "sha256": "9c3f533541a3d405134a0430d5cd9dfa2f31d5518031f936f319c3580ed7f18e"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-1-receipt.json",
+      "sha256": "f17da166669789929c754a6718e79bf8a400dbde09a87f81e129e835bd3f1597"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-1.json",
+      "sha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-2-receipt.json",
+      "sha256": "70de90104ce8734e3ab7a21ca754cd59c10bf0052be30de8fc6b79fa74ad31c0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-capture-2.json",
+      "sha256": "246c3e1c0cf807a0a6ce089299ddf92890ff7d56220af251d8082354b66fd8c6"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-header.json",
+      "sha256": "6ae87f21471600d8370ffb81aec70c5d78eb140935daf477a83608894b74c62c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-1.json",
+      "sha256": "2c0465f0f837c8e53e43b17983c74e144ac3f21c6592502a89e16de98df2187c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-2.json",
+      "sha256": "25224ec60c3fa87baaf1e1f204918f5bead01691fffafd5e3a3cca8f6462fd3b"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-3.json",
+      "sha256": "290a46f9acf3e3b66678ca48d5a31a94eb21443f0e4461e181f0bf462137b3c3"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-observation-4.json",
+      "sha256": "b13ec36044628ec347181c2107307fa321d22c9b2da06218ad7baef4030ae413"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/attempt-2-start.json",
+      "sha256": "e9a446b7cd6ea7314b30de941953e646a2fa8dc38cc2b47f5b79f14070b7e5c7"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/blocker-validation.json",
+      "sha256": "af095e7e8d33571d593ff1c8fa776922049d3fce3161ace8d93c31278e1f8b97"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser-validation.json",
+      "sha256": "1fe77ca29fcd0e54ddd93ea82f76478711db6f977cb53fcc491a117058e6ec43"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/browser.json",
+      "sha256": "44d4d56794f69ee3b5d29beec3a88e9dd9bd4da9eb6158b8a1ebef53089fb6fa"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/core-1440.png",
+      "sha256": "0a8d673f44b52b0633e5674f6e17924701f82c5369c26757447f7c76d103a42e"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/core-360.png",
+      "sha256": "63bf0487f83e210b2230236758e0fe0fbd27b31e485526af0dd8c218675896f8"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/keyboard-1440.csv",
+      "sha256": "4c63cd5b1d420036f53d4af0ee008350e754313cc8ee8c08335216f94eddcab5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/keyboard-360.csv",
+      "sha256": "4c63cd5b1d420036f53d4af0ee008350e754313cc8ee8c08335216f94eddcab5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/new-award-1440.png",
+      "sha256": "5d0d9863fb72fc4f498ca97566fa22984fb4623c0e66b6eb3377e78a0c8f441e"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/new-award-360.png",
+      "sha256": "79537e06cdb5cee0969b6587308552c33bedf01d9d083df5e7700b0bd11fed0b"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-1440-0.csv",
+      "sha256": "b82ef3bd8c03dc2b098077bdb9c3689e18ce347bf9bfe97a57d103586be8d6c4"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-1440-1.csv",
+      "sha256": "8d2fefc2255df4c54bc432c81a836879beba1bfe136685700be691bf163b0983"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-360-0.csv",
+      "sha256": "b82ef3bd8c03dc2b098077bdb9c3689e18ce347bf9bfe97a57d103586be8d6c4"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/public-360-1.csv",
+      "sha256": "8d2fefc2255df4c54bc432c81a836879beba1bfe136685700be691bf163b0983"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/results-1440.png",
+      "sha256": "f822e2b68a1331b477f8d499d73fff886bbf8091c014952c7bf45d283f21d2d0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/browser/results-360.png",
+      "sha256": "04002b147bc4db907b3dee1900c629b6d7a69b109d6cd516f32334ad9f49f234"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/capture-verification.json",
+      "sha256": "54bf777166fc94b597883e69d27d063fb246f682760d60e5e594d307b1982b32"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-authority.json",
+      "sha256": "050a7ba81f0f42a968d0544a26a630644a839c2fdcc35ef41b3a72938e51994f"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-compatibility-assessment.json",
+      "sha256": "43a2cdf2a45685f6769fb17babff6c05f8285823bef5db649c835b27a437d53c"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-policy-manifest.json",
+      "sha256": "f71cfbc44e7207c824f4802f790791bed2ee287ca1d424466c2c147569dca59b"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-policy-review.json",
+      "sha256": "804d15b627ac7e9e94230a38ac3ced1adf858f551595549ccf5530d12f060aa8"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-policy-validation.json",
+      "sha256": "89ff4db460c5ce845d9fe4943be02f923103f875a47a2242b869d7c39bcd1adc"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-preflight-01.json",
+      "sha256": "9ee08487d43fcbe4079f3db7d589c2d3311cbeb8562de742fd6a164bc51ed7fb"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-preflight-02.json",
+      "sha256": "1f595c199929a671ef4f0ddb22cec8d76798f86a08f972296b253a262107dcd5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-proposal-manifest.json",
+      "sha256": "cf82fb2bd05f51470f97c9646bfa51740884614b1fbdc3bee5dc0d3ab1f8afb1"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-proposal-review.json",
+      "sha256": "2b2303742ac8b530be460c264857b5c9bd1c7bcf96096b8be41324b9a94fe076"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-sanitizer-validation.json",
+      "sha256": "e633ccfa6105ac8518e70c6e2b4a1abe4cbef8fe18bcd22be752a1c0acd1a52f"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/connector-tool-declarations.json",
+      "sha256": "e5cbec5d7102c8340a6cc69ee38e80519359481a1bce7431e04b23d069d96ecf"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/control-inventory.json",
+      "sha256": "1367640e5622f8ec236f1b0239150870c754ed0326ac6d601b71b4e383c5b9df"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/final-routing-validation.json",
+      "sha256": "0d0b60ef9f7ddb8b17d892294f19d48920bb027837265314d557bbfd5fa23a19"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-authority.json",
+      "sha256": "57f42fc16458d8ddb58dc0113caa5cb2b8a045bff777cf9d3586c38c6b31ee2d"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-contract-assessment.json",
+      "sha256": "37fe8cf0b7ccc1e5ef1176491d7f64d4e9915f526722f37cb455c11fe154f740"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-manifest.json",
+      "sha256": "7044c9d3c76106f5d68eb6c3653798a36d99764295c0e67eac1d09f3b0d9aea2"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-remediation-validation.json",
+      "sha256": "051bbf62a4dd132aaccd526b531f348535d7ed7e7110ca49e84ffe17edde61ae"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-review.json",
+      "sha256": "888803098f3a6d4821c1058354be71df7c7ac57a243555fd3b3c64297fd705c1"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-policy-validation.json",
+      "sha256": "ddeed43a802e6378e76daf098415b1a2bc823d96d7c969cb98a2e71ed3bcfd20"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-proposal-manifest.json",
+      "sha256": "031cba1f86d6d9c90a2986b18ddafc06ab8d086508bf671d4b1345e72380137d"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-proposal-review.json",
+      "sha256": "0d1a440b45623eb32e2dc31274ffe4e4a28ce5cf106cdd5c2a826f13abedbe23"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/freshness-proposal-validation.json",
+      "sha256": "37011e2fca6a41b3c8f77878cd03fb8101271c40c71cc0143cfaba86b94d771f"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/local-build-attempt-1.json",
+      "sha256": "90ee16e694faae34010f3d3eb5f97b9da758fe2e8280de37c27f23e6469995b0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/local-build-validation.json",
+      "sha256": "3a639026e29ca2e8a87fa16ff99c6225cd6e3eee75403e413972e6ca3b13a094"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/local-checks-attempt-1.json",
+      "sha256": "bdaf4a3208334ed9c7e3434d39a148c2aaa1e5fc66d1071a445cee0d17202373"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/local-checks-validation.json",
+      "sha256": "eac1d8ab8cffabec418b93facefb14408196e698cadf4c8487503ff06056d6f9"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/local-preservation.json",
+      "sha256": "3f496cd0d075ed2c6b9228342bed1ef308282bee63a843647b03ffe66f810e55"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-bundle-proposal.json",
+      "sha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-connections.json",
+      "sha256": "faed1cee9f2b9df06053bcca4e95aff7cd0b0fb7d595b99a232ae1aba6b104fc"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-criteria.json",
+      "sha256": "aa8a6d67203ef6e53fccf56b4cfbaa441ab936507af1237c081bc432e10c3852"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-fields.json",
+      "sha256": "3eeba45468ac4eefd3d7d98a318292ecf6bfb9169751f30f7f9d74c9d78a49c5"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-manifest.json",
+      "sha256": "b6ca19312c2143c80bb58d366eaa674452256ecf758527e18f97dc8d612f7856"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-pins.json",
+      "sha256": "7f57107f322ae5aa9d3ed4114b675a69270dee363105d9cbbf72443ac01c8dce"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-reconciliation.json",
+      "sha256": "24e857d3ae2a795f7a0a1a001e93ac80aa8aeca9ff3f3b21b586de92dc982143"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-remediation.json",
+      "sha256": "90baaccdee455bcfbac734fc923f626a95ddb63c95451e75e7c4fbf0a38a6dd0"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-review.json",
+      "sha256": "e1f6e42a832581c13bb6563137292834b3f75a6945cd1cfcad752766a000e6f6"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/mapping-validation.json",
+      "sha256": "00fd8f41e37d67c7194e1f8c7a968e8a69f6152f87a3ff234119ebf2d115960f"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/policy-manifest.json",
+      "sha256": "5d3d386cc06ba88971daa781806ab4517a29078652db8f00bdf1373a66fb8365"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/policy-review.json",
+      "sha256": "9be2527d7db36b7458a6858baad5e4d0d302c02020b4780a09a7ce8ec8b97cbe"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/policy-validation.json",
+      "sha256": "e7181e44b117f1b58262984ca300ed8e6ecce253bf129224000f09e5cb83f749"
+    },
+    {
+      "path": "docs/evidence/r3-catalog/source-preflight.json",
+      "sha256": "fd15b05f30e6574f56fa9e83594adfd03ff27abec547f0c068a7b5adfa80d92a"
+    },
+    {
+      "path": "docs/kickoffs/R3-CATALOG-REFRESH.md",
+      "sha256": "609deb54c099c523093658853f1974653fb53c622b3b306162b28ebefdd0ae30"
+    },
+    {
+      "path": "docs/kickoffs/R4-CATALOG-RELEASE.md",
+      "sha256": "c3214a1e64ba8f094985c330bb7273bf4b4865ee42b337b7816e5f0ff8fd47d7"
+    },
+    {
+      "path": "docs/kickoffs/SCHOLARSHIP-INTAKE-RESUME.md",
+      "sha256": "b7d1652eb9d874e2b23d8c7f5a169c6fd0134f425afca230fec301b1185feecc"
+    },
+    {
+      "path": "web/fixtures/r3/catalog-v1.json",
+      "sha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908"
+    },
+    {
+      "path": "web/fixtures/r3/pin.json",
+      "sha256": "522a1e26a0407b00d35a905e929dfb8e177233d469aac7aec220366094c45055"
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "b1f0dd28c37e26f4099f35bb1d60da70628026250c846ce35c695d51d5ce33c7"
+    },
+    {
+      "path": "web/scripts/build-r3-catalog.py",
+      "sha256": "f0044d47f296ffe82a8616f39bc35d4fcf7b7aed0ef0c983e74241c20029392d"
+    },
+    {
+      "path": "web/scripts/check-r3-capture.cjs",
+      "sha256": "c201442d8ff01f483dff2d0c0bf34f80a27cbb671ce85db702514b502bfa8c9f"
+    },
+    {
+      "path": "web/scripts/qa-r3-catalog.cjs",
+      "sha256": "f1519d44e30eca088d9834509800bdf491fb1e104b23198671457a0ba30b7546"
+    },
+    {
+      "path": "web/scripts/r3-catalog-governance.ts",
+      "sha256": "82849d122bf57f60fb8645039d52f9909e5128b256662f48e8b7bebd6bc52e9c"
+    },
+    {
+      "path": "web/scripts/r3-connector-read.cjs",
+      "sha256": "22957fffe88406869a5f2b2fe1941003fd2b935b11ede47d3a0bb6998eea03db"
+    },
+    {
+      "path": "web/scripts/r3-native-capture.cjs",
+      "sha256": "0e98916a675c35c403cdc83c98121e40cf2d807d43c9cb14fcc2470b12910eae"
+    },
+    {
+      "path": "web/scripts/test-interview-coverage.ts",
+      "sha256": "9746f215555912686e64f73c2b729848db3fa09ea6d926c9425b79bcfb5024dd"
+    },
+    {
+      "path": "web/scripts/test-interview-relevance.ts",
+      "sha256": "f7c874e6f96d31b89f75e28a5640edde5e444892c56191bf5934484ed6107e5c"
+    },
+    {
+      "path": "web/scripts/test-r3-catalog-governance.ts",
+      "sha256": "ec974a6c7fc8e355a2e1268bc3e7d09bedf44f12fc2c45d21ea70b895db2d394"
+    },
+    {
+      "path": "web/scripts/test-r3-catalog.ts",
+      "sha256": "e571fe58efc079555239cff5b695b8627957867b94c5eed70522583bc7933b8f"
+    },
+    {
+      "path": "web/scripts/test-r3-connector-read.cjs",
+      "sha256": "9bc3a657c3434d9e1c55f7a28c1ca2fdb75fec411e59304075f9816b2068aef2"
+    },
+    {
+      "path": "web/scripts/test-r3-mapping.py",
+      "sha256": "921a214d1630777cde7f2127db6b03821e722b8a1f1e5d422abe4ccc115fde4c"
+    },
+    {
+      "path": "web/scripts/test-r3-native-capture.cjs",
+      "sha256": "19d1def112e4b38124627d3cc14a38d0e0ee8964b7bfd82491195a1568f99883"
+    },
+    {
+      "path": "web/scripts/test-spreadsheet-shortlist.ts",
+      "sha256": "784b5536476dfe008b5625ed9c839e6868d487a7960761d6c4a5aa2d4544d162"
+    },
+    {
+      "path": "web/scripts/validate-build-plan.ts",
+      "sha256": "0f2fe66be2a749d9c5fa75563f4040a64e12642017bf0c2bdea74c121745532b"
+    },
+    {
+      "path": "web/src/app/api/health/route.ts",
+      "sha256": "47cbad44d6f9ae3d25179330edc574fc0dd1811fdf40f33e5521ef645cc4db12"
+    },
+    {
+      "path": "web/src/app/api/scholarships/route.ts",
+      "sha256": "5b7aa255ee1be1ccbfea04283f94cabc21f7a38598d8e87f292c656063c8666c"
+    },
+    {
+      "path": "web/src/components/ScholarshipBrowser.tsx",
+      "sha256": "834249a0f2ccbe0b41c3f9145f54cc52a085e60bb815e9d7c5dd846af0db523a"
+    },
+    {
+      "path": "web/src/lib/catalogCompatibility.ts",
+      "sha256": "0d8411ec6a4e3d728d5b5523fb30003a469c5be310d6493f7420e7465ac509f7"
+    },
+    {
+      "path": "web/src/lib/coverageQuestions.ts",
+      "sha256": "7862e59c8281bc1a78cfc3b1186686751884783a84c2d63218dce060225de041"
+    },
+    {
+      "path": "web/src/lib/export.ts",
+      "sha256": "21e0929e9296fcf56bf832f984a950cb589f489e2e8d42349d4c5f8bae5a2b0d"
+    },
+    {
+      "path": "web/src/lib/interviewRelevance.ts",
+      "sha256": "80a9532dc286491debfccdd47f69480d41c313e7c50bdfabcc38743f26d599b1"
+    },
+    {
+      "path": "web/src/lib/r3Catalog.ts",
+      "sha256": "4a2920b5e3d62d8f1dfd6ef5410c774ef6620031344ab564f0796992ec6d181d"
+    },
+    {
+      "path": "web/src/lib/spreadsheetShortlist.ts",
+      "sha256": "11617026ee9d0b9f6ed8d921eeef94440c052c693389981224c143168624ab45"
+    }
+  ]
+}
