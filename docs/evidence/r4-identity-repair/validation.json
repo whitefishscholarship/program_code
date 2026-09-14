@@ -207,5 +207,20 @@
   "limits": [
     "These four attestation diagnostics remain failures, not acceptance. Actual local and hosted validators must both exit0 after valid A19 before publication.",
     "Existing middleware deprecation and CSV BOM/CRLF evidence findings retain earlier dispositions. No runtime change or source recapture."
-  ]
+  ],
+  "fixtureHistoricalBindingRecheck": {
+    "recordedAt": "2026-09-14T16:54:48.484Z",
+    "change": "Disposable historical fixture reads immutable canonical C19 bytes when available, so future authorized edits cannot fabricate its historical candidate. Before attestation it uses the current frozen candidate. Production helper unchanged.",
+    "commands": [
+      {
+        "command": "node --import tsx scripts/test-r4-identity-delivery.ts",
+        "exitCode": 0,
+        "stdout": "R4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.\nR4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection."
+      },
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0
+      }
+    ]
+  }
 }

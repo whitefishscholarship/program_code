@@ -82,7 +82,11 @@ try {
  for(const file of p.allowedContinuationPaths){
   if(file===REV19_MANIFEST||file===REV19_REVIEW)continue;
   const dest=path.join(temporary,file);fs.mkdirSync(path.dirname(dest),{recursive:true});
-  fs.writeFileSync(dest,fs.existsSync(path.join(root,file))?fs.readFileSync(path.join(root,file)):'{}\n');
+  const canonicalPath=path.join(root,REV19_MANIFEST);
+  const frozen=fs.existsSync(canonicalPath)?JSON.parse(fs.readFileSync(canonicalPath,'utf8')).candidateCommit:null;
+  const bytes=frozen?readGitBuffer(root,['show',`${frozen}:${file}`]):
+    fs.existsSync(path.join(root,file))?fs.readFileSync(path.join(root,file)):Buffer.from('{}\n');
+  assert(bytes,`fixture requires immutable candidate bytes for ${file}`);fs.writeFileSync(dest,bytes);
  }
  // The real candidate state is the approved policy, regardless of when this test
  // runs in a later release whose current state/runtime may have changed.
