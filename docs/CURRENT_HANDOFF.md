@@ -1,3 +1,26 @@
+# R3 connector supplement approved — review before capture
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog` on `codex/r3-catalog-refresh`, descended
+from preserved proposal review checkpoint `99ecf02b5b026cda69737d744a405320a352794e`.
+Kelsey replied “approved, proceed” after the exact metadata supplement and its privacy
+risks were explained. The grant is in `docs/evidence/r3-catalog/connector-authority.json`;
+the frozen proposal remains historical. Original R3 authority persists.
+
+Current action for Codex: freeze and obtain independent `connector-policy-review.json`
+PASS bound to its candidate and manifest before any further source call. Then use the
+exact two connector routes and limits in BUILD_STATE.connectorSupplement. Discard editor
+identity and raw spreadsheet URL before output or persistence. Keep every revision,
+identity and two-capture gate. Missing usable current revision remains a blocker.
+
+R3 is incomplete. One earlier file-metadata preflight read no cells. Source reconciliation
+and mapping review still precede product edits. All R1/R2 completion, review bindings,
+applied-operation/recovery/hold/backlog triggers and R4 exclusions remain intact below.
+No repeated permission is needed for the now-authorized exact supplemental scope.
+
+---
+
 # R3 source capture blocked — original authority remains valid
 
 Plan revision: 18

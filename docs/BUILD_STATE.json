@@ -1052,7 +1052,7 @@
   },
   "r3CatalogRefresh": {
     "planId": "R3-CATALOG-1",
-    "status": "blocked-external-source-metadata",
+    "status": "connector-supplement-authorized-awaiting-policy-review",
     "scopeProposalCommit": "adf45e41ced138d6f853f36faa6dd4065991d048",
     "scopePath": "docs/R3_CATALOG_SCOPE.md",
     "scopeSha256": "2b0b3a58301c8667582ccb1ae06fd1970262a6686dabb51416dbcbb66893b4c2",
@@ -1120,6 +1120,64 @@
       "merge": false,
       "production": false,
       "hostedVerification": false
+    },
+    "connectorSupplement": {
+      "id": "R3-CONNECTOR-METADATA-1",
+      "proposalPath": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
+      "proposalSha256": "378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06",
+      "proposalCandidate": "af7d8a1126b23430bf092647bab2bfc9b053cac9",
+      "proposalReviewCheckpoint": "99ecf02b5b026cda69737d744a405320a352794e",
+      "authorized": true,
+      "authorizedBy": "Kelsey Stuart",
+      "authorizedAt": "2026-09-13",
+      "authorityEvidencePath": "docs/evidence/r3-catalog/connector-authority.json",
+      "policyReviewPath": "docs/evidence/r3-catalog/connector-policy-review.json",
+      "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+      "revisionRoute": {
+        "tool": "google_drive_list_file_revisions",
+        "pageSize": 1000,
+        "maximumPagesPerObservation": 1,
+        "maximumObservationsPerAttempt": 4,
+        "maximumAttempts": 3,
+        "paginationAuthorized": false,
+        "revisionContentAuthorized": false,
+        "fields": [
+          "fileId",
+          "currentRevisionId",
+          "previousRevisionId",
+          "revisions.id",
+          "revisions.mimeType",
+          "revisions.modifiedTime",
+          "revisions.keepForever",
+          "revisions.published",
+          "revisions.originalFilename",
+          "revisions.size",
+          "revisions.lastModifyingUser.displayName",
+          "revisions.lastModifyingUser.emailAddress",
+          "revisions.lastModifyingUser.me",
+          "revisions.lastModifyingUser.permissionId",
+          "revisions.lastModifyingUser.photoLink"
+        ],
+        "currentRevisionIdRequired": true,
+        "matchingRevisionRecordRequired": true,
+        "independentModifiedTimeAgreementRequired": true,
+        "stopAtPageCap": true
+      },
+      "cellEnvelope": {
+        "tool": "google_drive_get_spreadsheet_cells",
+        "additionalFields": [
+          "sheets[0].properties.index",
+          "sheets[0].properties.sheetType",
+          "sheets[0].properties.gridProperties.frozenRowCount",
+          "spreadsheetUrl"
+        ],
+        "selectedSheetId": 0,
+        "headerSentinelWithinOriginalRange": true
+      },
+      "discardEditorIdentityBeforeOutputAndPersistence": true,
+      "discardRawSpreadsheetUrl": true,
+      "trashedUnknownIsNotFalse": true,
+      "originalCaptureGatesUnchanged": true
     }
   }
 }

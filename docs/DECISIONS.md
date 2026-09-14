@@ -688,3 +688,16 @@ mapping before product changes. Add only an exact off-hosted REV18 false-release
 exception; preserve the three final canonical-artifact errors and all historical gates.
 R3 completion is local review only; R4 authority and attestation remain separate. Local
 rollback is abandonment of these new commits; external rollback or restore is unauthorized.
+
+## 2026-09-13 — R3 connector metadata supplement approved
+
+Kelsey replied “approved, proceed” after disclosure of the exact connector supplement
+and incidental editor identity exposure. Adopt only the hash-pinned proposal through
+the prospective REV18 appendix, BUILD_STATE.connectorSupplement and connector-authority.json.
+The earlier proposal and policy reviews retain their original candidates and bytes.
+Require fresh independent policy review before new source calls. Discard incidental
+editor identity and raw spreadsheet URL before output or persistence; require current
+revision proof and both equal complete captures. Unknown trashed status stays unknown.
+No source cell bounds, original mapping/product gates or R4 effects change. If the
+connector still fails to prove current revision, preserve the blocker without substituting
+timestamp-only evidence, credentials or broader reads. Original R3 authority persists.

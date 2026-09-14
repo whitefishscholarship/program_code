@@ -1819,3 +1819,27 @@ zero actual canonical diagnostics and exact Preview/Production verification.
 No workbook mutation, cloud copy/recovery, research, source expansion, services/dependencies,
 configuration, credentials, paid actions, forms, provider contact, monitoring, rollback,
 Git publication, hosted verification or R4–R7 execution is authorized by Revision18.
+
+### Revision 18 approved connector metadata supplement
+
+Following disclosure of the observed connector limitation and incidental editor identity
+exposure, Kelsey replied “approved, proceed” on September 13, 2026 (America/Denver).
+Adopt only `docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md` at SHA256
+`378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06`.
+Its historical proposed status remains unchanged; `connector-authority.json` records
+the subsequent grant, and `r3CatalogRefresh.connectorSupplement` pins the exact addition.
+
+This is the sole metadata exception to the original projection: one revision-history
+page of at most1000 records per observation, at most4 observations per attempt and3
+attempts, and the named sheet0 envelope fields. No pagination or revision contents.
+Discard editor attribution and raw spreadsheetUrl before model-facing output or
+persistence. Keep only permitted minimal revision evidence. A currentRevisionId and
+matching revision record must agree with independently read file modifiedTime; missing,
+ambiguous or cap-reaching results block. Trashed status stays unknown unless observed.
+
+The workbook, sheet0, A1:O417, CellData projection, stable before/after token and two
+equal complete captures remain exact. All other grants, product/mapping gates and
+reserved effects stay unchanged. Freeze and independently review this prospective
+supplemental policy before new source calls; preserve original policy and proposal
+reviews against their own candidates. Supplemental policy PASS is not a source-capture,
+mapping, completed R3 or R4 acceptance claim.

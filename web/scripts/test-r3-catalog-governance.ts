@@ -24,3 +24,24 @@ for (const field of ['sourceReadAuthorized', 'localImplementationAuthorized', 'l
   assert(validateR3CatalogPolicy(changed).length > 0, field);
 }
 console.log('R3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.');
+
+const mutations: Array<(supplement: any) => void> = [
+  s => { s.authorized = false; }, s => { s.workbookId = 'other'; },
+  s => { s.proposalSha256 = '0'.repeat(64); }, s => { s.policyReviewPath = 'other'; },
+  s => { s.revisionRoute.pageSize = 1001; }, s => { s.revisionRoute.paginationAuthorized = true; },
+  s => { s.revisionRoute.maximumObservationsPerAttempt = 5; }, s => { s.revisionRoute.maximumAttempts = 4; },
+  s => { s.revisionRoute.revisionContentAuthorized = true; }, s => { s.revisionRoute.currentRevisionIdRequired = false; },
+  s => { s.revisionRoute.matchingRevisionRecordRequired = false; }, s => { s.revisionRoute.independentModifiedTimeAgreementRequired = false; },
+  s => { s.revisionRoute.stopAtPageCap = false; }, s => { s.revisionRoute.fields.push('revisions.content'); },
+  s => { s.cellEnvelope.selectedSheetId = 1; }, s => { s.cellEnvelope.additionalFields.push('sheets.charts'); },
+  s => { s.discardEditorIdentityBeforeOutputAndPersistence = false; }, s => { s.discardRawSpreadsheetUrl = false; },
+  s => { s.trashedUnknownIsNotFalse = false; }, s => { s.originalCaptureGatesUnchanged = false; },
+];
+for (const mutate of mutations) {
+  const changed = structuredClone(policy); mutate(changed.connectorSupplement);
+  assert(validateR3CatalogPolicy(changed).length > 0);
+  assert(!permitsLocalR3Preparation('PLAN-REV18', [R3_BLOCKER], false, changed));
+}
+const missingSupplement = structuredClone(policy); delete missingSupplement.connectorSupplement;
+assert(validateR3CatalogPolicy(missingSupplement).length > 0);
+console.log('R3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.');

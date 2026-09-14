@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "authorizedBy": "Kelsey Stuart",
+  "authorizedAtLocalDate": "2026-09-13",
+  "timeZone": "America/Denver",
+  "recordedAt": "2026-09-14T00:08:04Z",
+  "directUserReply": "approved, proceed",
+  "context": "After the exact independently reviewed metadata supplement was linked and its purpose and privacy risks explained in plain English, Kelsey approved proceeding.",
+  "approvedProposal": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
+  "approvedProposalSha256": "378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06",
+  "proposalReviewCheckpoint": "99ecf02b5b026cda69737d744a405320a352794e",
+  "originalR3AuthorityRemainsValid": true,
+  "scope": {
+    "id": "R3-CONNECTOR-METADATA-1",
+    "proposalPath": "docs/evidence/r3-catalog/CONNECTOR_READ_SUPPLEMENT.md",
+    "proposalSha256": "378f6992f63acd9b4e5cb33629306d5e840d8a8b46edaa6bc7d819746e9a4e06",
+    "proposalCandidate": "af7d8a1126b23430bf092647bab2bfc9b053cac9",
+    "proposalReviewCheckpoint": "99ecf02b5b026cda69737d744a405320a352794e",
+    "authorized": true,
+    "authorizedBy": "Kelsey Stuart",
+    "authorizedAt": "2026-09-13",
+    "authorityEvidencePath": "docs/evidence/r3-catalog/connector-authority.json",
+    "policyReviewPath": "docs/evidence/r3-catalog/connector-policy-review.json",
+    "workbookId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "revisionRoute": {
+      "tool": "google_drive_list_file_revisions",
+      "pageSize": 1000,
+      "maximumPagesPerObservation": 1,
+      "maximumObservationsPerAttempt": 4,
+      "maximumAttempts": 3,
+      "paginationAuthorized": false,
+      "revisionContentAuthorized": false,
+      "fields": [
+        "fileId",
+        "currentRevisionId",
+        "previousRevisionId",
+        "revisions.id",
+        "revisions.mimeType",
+        "revisions.modifiedTime",
+        "revisions.keepForever",
+        "revisions.published",
+        "revisions.originalFilename",
+        "revisions.size",
+        "revisions.lastModifyingUser.displayName",
+        "revisions.lastModifyingUser.emailAddress",
+        "revisions.lastModifyingUser.me",
+        "revisions.lastModifyingUser.permissionId",
+        "revisions.lastModifyingUser.photoLink"
+      ],
+      "currentRevisionIdRequired": true,
+      "matchingRevisionRecordRequired": true,
+      "independentModifiedTimeAgreementRequired": true,
+      "stopAtPageCap": true
+    },
+    "cellEnvelope": {
+      "tool": "google_drive_get_spreadsheet_cells",
+      "additionalFields": [
+        "sheets[0].properties.index",
+        "sheets[0].properties.sheetType",
+        "sheets[0].properties.gridProperties.frozenRowCount",
+        "spreadsheetUrl"
+      ],
+      "selectedSheetId": 0,
+      "headerSentinelWithinOriginalRange": true
+    },
+    "discardEditorIdentityBeforeOutputAndPersistence": true,
+    "discardRawSpreadsheetUrl": true,
+    "trashedUnknownIsNotFalse": true,
+    "originalCaptureGatesUnchanged": true
+  },
+  "conditions": [
+    "Fresh independent prospective policy review before additional source calls",
+    "Discard incidental editor attribution and raw spreadsheet URL before model-facing output and repository persistence",
+    "No weakening of stable revision or equal bounded capture checks",
+    "No source writes, other tabs, revision contents, credentials or R4 effects"
+  ],
+  "canonicalAcceptance": false
+}
