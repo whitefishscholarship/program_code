@@ -1,5 +1,7 @@
 # R4 Whitefish identity correction approved — policy review first
 
+Plan revision:19.
+
 Resume `/private/tmp/program_code-r4-whitefish-delivery-repair` on
 `codex/r4-whitefish-delivery-repair`. Original A18 and PR46 are preserved unchanged.
 Kelsey approved the independently reviewed exact REV19 continuation; no repeat approval
