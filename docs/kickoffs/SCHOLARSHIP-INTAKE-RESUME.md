@@ -1,3 +1,40 @@
+# R3 blocked on freshness agreement — approved access remains valid
+
+Plan revision: 18
+
+Worktree `/private/tmp/program_code-r3-catalog`, branch `codex/r3-catalog-refresh`.
+The supplemental policy passed independent review and is preserved at
+`93ea61442acc7d40f1daafbcb4faaa68a1728696` (candidate `9f7398461e639e0ea002661e395e98df869b6062`).
+Kelsey's original R3 and “approved, proceed” connector grants both remain valid.
+
+Two authorized file-metadata reads and two one-page revision observations were performed
+under attempt1. Both revision observations returned25 records and failed the reviewed
+timestamp-agreement gate. Follow-up evidence shows revision time10:51:53.207Z versus
+file time10:51:53.348Z on September11,2026:141 milliseconds apart. See
+`docs/evidence/r3-catalog/connector-preflight-01.json` and `connector-preflight-02.json`.
+These are sanitized records; editor attribution/raw responses were discarded.
+No cells, revision contents, other tabs or recovery objects were read; no product edits
+or source writes occurred. No current token was accepted.
+
+**Owner/trigger/next action:** Codex preserves the blocked state. Kelsey may approve the
+specific replacement verification rule in
+`docs/evidence/r3-catalog/FRESHNESS_CORRECTION_PROPOSAL.md`, following its independently
+bound `freshness-proposal-manifest.json` and `freshness-proposal-review.json`.
+This proposed change requires each timestamp to remain independently stable and retains
+equal reported revision tokens and two complete equal cell captures. It removes the
+cross-resource exact timestamp equality check; it is not authorized yet. Do not invent
+a tolerance, equate a reported revision ID with Drive file version, or treat repeated
+metadata as proof of the actual server head. See `freshness-contract-assessment.json`.
+
+After direct approval of that rule change, prospectively amend policy/state/tests and
+obtain independent policy PASS before source calls. Otherwise wait for a supported
+authorized version-proof route; no repeat grant is required for existing permissions.
+The mismatch is not proof of stale scholarships or a broken file. Current authority,
+historical reviews, all R1/R2 completion and the complete earlier trigger inventory remain
+unchanged below. R3 is incomplete; no mapping/product/R4 acceptance is implied.
+
+---
+
 # R3 connector supplement approved — review before capture
 
 Plan revision: 18
