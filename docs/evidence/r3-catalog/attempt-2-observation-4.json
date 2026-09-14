@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "attempt": 2,
+  "observation": 4,
+  "startedAt": "2026-09-14T14:21:51.429Z",
+  "completedAt": "2026-09-14T14:21:53.677Z",
+  "fileMetadata": {
+    "identityVerified": true,
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "modifiedTime": "2026-09-11T10:51:53.348Z",
+    "trashed": null,
+    "completedAt": "2026-09-14T14:21:52.109Z"
+  },
+  "result": {
+    "status": "PASS",
+    "fileId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "currentRevisionId": "229",
+    "currentRevisionModifiedTime": "2026-09-11T10:51:53.207Z",
+    "fileModifiedTime": "2026-09-11T10:51:53.348Z",
+    "returnedRevisionCount": 25,
+    "currentRevisionRecordMatches": 1,
+    "editorIdentityRetained": false,
+    "reasons": []
+  },
+  "requests": {
+    "fileMetadataFields": "id,name,mimeType,trashed,version,modifiedTime",
+    "revisionPageSize": 1000,
+    "pagination": false
+  },
+  "limits": [
+    "Editor identity and raw responses discarded.",
+    "Reported revision ID is not the unavailable Drive file version.",
+    "Bounded observations do not prove actual server head or atomic capture."
+  ]
+}

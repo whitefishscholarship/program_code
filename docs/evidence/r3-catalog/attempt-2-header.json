@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "attempt": 2,
+  "startedAt": "2026-09-14T13:51:27.884Z",
+  "completedAt": "2026-09-14T13:51:29.279Z",
+  "range": "'Master Database'!A1:O1",
+  "status": "PASS",
+  "reason": null,
+  "headerVerified": true,
+  "rowPositions": 1,
+  "gridRows": 1060,
+  "gridColumns": 24,
+  "snapshot": {
+    "schemaVersion": 1,
+    "spreadsheetId": "1Dp5AMnrfSQ-Xf-r03S75lKsGPJk7o0inOgvC9Q6lOl4",
+    "properties": {
+      "title": "Whitefish HS Scholarship Database",
+      "locale": "en_US",
+      "timeZone": "America/Denver"
+    },
+    "sheetProperties": {
+      "sheetId": 0,
+      "title": "Master Database",
+      "index": 6,
+      "sheetType": "GRID",
+      "gridProperties": {
+        "rowCount": 1060,
+        "columnCount": 24,
+        "frozenRowCount": 1
+      }
+    },
+    "range": "'Master Database'!A1:O1",
+    "cellFields": "userEnteredValue,effectiveValue,formattedValue,hyperlink,textFormatRuns(startIndex,format(link)),userEnteredFormat(numberFormat),effectiveFormat(numberFormat)",
+    "rows": [
+      {
+        "row": 1,
+        "returnedCellCount": 15,
+        "cells": [
+          {
+            "formattedValue": "Last Updated",
+            "userEnteredValue": {
+              "stringValue": "Last Updated"
+            },
+            "effectiveValue": {
+              "stringValue": "Last Updated"
+            }
+          },
+          {
+            "formattedValue": "Due Date",
+            "userEnteredValue": {
+              "stringValue": "Due Date"
+            },
+            "effectiveValue": {
+              "stringValue": "Due Date"
+            }
+          },
+          {
+            "formattedValue": "In-State / National",
+            "userEnteredValue": {
+              "stringValue": "In-State / National"
+            },
+            "effectiveValue": {
+              "stringValue": "In-State / National"
+            }
+          },
+          {
+            "formattedValue": "Portal/ Scholarship",
+            "userEnteredValue": {
+              "stringValue": "Portal/ Scholarship"
+            },
+            "effectiveValue": {
+              "stringValue": "Portal/ Scholarship"
+            }
+          },
+          {
+            "formattedValue": "Amount",
+            "userEnteredValue": {
+              "stringValue": "Amount"
+            },
+            "effectiveValue": {
+              "stringValue": "Amount"
+            },
+            "userEnteredFormat": {
+              "numberFormat": {
+                "type": "CURRENCY",
+                "pattern": "\"$\"#,##0"
+              }
+            },
+            "effectiveFormat": {
+              "numberFormat": {
+                "type": "CURRENCY",
+                "pattern": "\"$\"#,##0"
+              }
+            }
+          },
+          {
+            "formattedValue": "Scholarship Location/Information",
+            "userEnteredValue": {
+              "stringValue": "Scholarship Location/Information"
+            },
+            "effectiveValue": {
+              "stringValue": "Scholarship Location/Information"
+            }
+          },
+          {
+            "formattedValue": "Name of Scholarship",
+            "userEnteredValue": {
+              "stringValue": "Name of Scholarship"
+            },
+            "effectiveValue": {
+              "stringValue": "Name of Scholarship"
+            }
+          },
+          {
+            "formattedValue": "Application Link/Method",
+            "userEnteredValue": {
+              "stringValue": "Application Link/Method"
+            },
+            "effectiveValue": {
+              "stringValue": "Application Link/Method"
+            }
+          },
+          {
+            "formattedValue": "Summary",
+            "userEnteredValue": {
+              "stringValue": "Summary"
+            },
+            "effectiveValue": {
+              "stringValue": "Summary"
+            }
+          },
+          {
+            "formattedValue": "Stated Min. GPA",
+            "userEnteredValue": {
+              "stringValue": "Stated Min. GPA"
+            },
+            "effectiveValue": {
+              "stringValue": "Stated Min. GPA"
+            }
+          },
+          {
+            "formattedValue": "School Type (2-or 4-Year, or Trade)",
+            "userEnteredValue": {
+              "stringValue": "School Type (2-or 4-Year, or Trade)"
+            },
+            "effectiveValue": {
+              "stringValue": "School Type (2-or 4-Year, or Trade)"
+            }
+          },
+          {
+            "formattedValue": "Renewing/ Non-Renewing",
+            "userEnteredValue": {
+              "stringValue": "Renewing/ Non-Renewing"
+            },
+            "effectiveValue": {
+              "stringValue": "Renewing/ Non-Renewing"
+            }
+          },
+          {
+            "formattedValue": "Focus",
+            "userEnteredValue": {
+              "stringValue": "Focus"
+            },
+            "effectiveValue": {
+              "stringValue": "Focus"
+            }
+          },
+          {
+            "formattedValue": "Acute Financial Need Prioritization",
+            "userEnteredValue": {
+              "stringValue": "Acute Financial Need Prioritization"
+            },
+            "effectiveValue": {
+              "stringValue": "Acute Financial Need Prioritization"
+            }
+          },
+          {
+            "formattedValue": "Accepts Gap Year Applications Upon Return",
+            "userEnteredValue": {
+              "stringValue": "Accepts Gap Year Applications Upon Return"
+            },
+            "effectiveValue": {
+              "stringValue": "Accepts Gap Year Applications Upon Return"
+            }
+          }
+        ],
+        "valuesFieldReturned": true
+      }
+    ],
+    "limits": [
+      "Bounded native response only; omitted cell fields and trailing cells are not invented values.",
+      "No claim of whole-workbook completeness, official fact currency or server-head revision binding.",
+      "Spreadsheet URL discarded; formulas and links not followed."
+    ]
+  }
+}

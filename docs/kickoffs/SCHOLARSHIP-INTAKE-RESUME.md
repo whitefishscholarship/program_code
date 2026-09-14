@@ -1,3 +1,30 @@
+# R3 source captured — mapping review before product edits
+
+Plan revision: 18
+
+Resume `/private/tmp/program_code-r3-catalog`, `codex/r3-catalog-refresh`.
+Freshness policy review checkpoint33674d6cccdf94be818d619c296812a0e714ada4 is preserved.
+Attempt2 completed: two complete A1:O417 projections share digest
+22427fc3873cbfec95e7274a90f6a7b23f912b83845cca15ae96aac89a965f7c;
+four observations have separately stable reported token229 and both timestamps.
+See `docs/evidence/r3-catalog/capture-verification.json` for bounded evidence and limits.
+No further source reads are needed; no writes occurred. All existing grants persist.
+
+Codex's next action: freeze and independently review `MAPPING_PROPOSAL.md` and its
+mapping-bundle/reconciliation/field/criteria/connection artifacts under
+`docs/evidence/r3-catalog/`. Only matching mapping PASS permits product edits.
+All257 applied operations and416 data rows reconcile; the proposed411 awards retain192
+existing IDs and219 additions. Cat Scholarships stays a portal; all16 catalog-only
+children and original relationships remain intact. Bonita Jean Olson's financial-need
+connection is deferred to separately scoped source research (Codex owns follow-up).
+First-generation/care definition changes remain recommendations for Kelsey's separate
+scope. NTHS numeric deadline remains unverified. Preserve all earlier triggers below.
+
+R3 remains incomplete until local implementation, complete verification and final
+independent review. R4/release effects remain unauthorized. No repeat approval is needed.
+
+---
+
 # R3 freshness correction approved — independent review before attempt2
 
 Plan revision: 18

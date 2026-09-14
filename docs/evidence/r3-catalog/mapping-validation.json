@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-09-14T14:43:32.623132+00:00",
+  "status": "PASS_LOCAL_MAPPING_CHECKS_WITH_RESERVED_CANONICAL_GATES",
+  "checks": [
+    "python3 web/scripts/build-r3-catalog.py: reproduced proposal",
+    "python3 web/scripts/test-r3-mapping.py: PASS",
+    "node web/scripts/test-r3-native-capture.cjs: PASS",
+    "node web/scripts/test-r3-connector-read.cjs: PASS",
+    "StudentCatalogSchema proposal validation: PASS",
+    "npm run r3:policy:check: PASS",
+    "git diff --check: PASS"
+  ],
+  "canonicalPlanCheck": {
+    "exitCode": 1,
+    "errors": [
+      "Missing required file: docs/evidence/PLAN-REV18-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV18.json",
+      "PLAN-REV18 requires a committed manifest/review attestation in current history"
+    ]
+  },
+  "runtime": "Unchanged; full matrix remains required after local product implementation.",
+  "scope": "mapping proposal only; not canonical acceptance or R3 completion"
+}
