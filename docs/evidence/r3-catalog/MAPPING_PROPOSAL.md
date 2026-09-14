@@ -64,3 +64,9 @@ pins, wire the same catalog to API/browser/compatibility/CSV, extend supported e
 optional organization controls, preserve the GPA/school algorithm and binary OR relevance,
 and complete local unit/runtime/browser/privacy/download verification plus final independent
 review. Historical matching-facts revision225 must remain separately labeled in health.
+
+Review remediation: five new connections attached to cards with no summary now state
+exact program qualifications in the reason itself. All nine changed existing GPA/school
+fields have explicit dispositions: five conflicts remain for Kelsey's separate policy
+selection; four agree with preserved shortlist rules and require only regression checks.
+The generator now supports non-mutating `--check` reproduction.

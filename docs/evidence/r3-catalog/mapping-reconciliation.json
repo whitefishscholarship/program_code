@@ -10900,6 +10900,34 @@
   ],
   "deferred": [
     {
+      "entityId": "intake-entity-1edaf7fa7b050a1d",
+      "awardId": "award-7e66bc43f068",
+      "sourceRow": 110,
+      "field": "J",
+      "outcome": "changed_pending_policy_selection",
+      "recordedDelta": {
+        "column": "J",
+        "oldValue": "Any",
+        "newValue": "3.0",
+        "sourceId": "official-related-nataofficial",
+        "locator": "Official Richard L. Taylor amount, requirements and incoming-freshman application instructions; retained source independently reconfirmed during 028 review.",
+        "observedAt": "2026-09-11T04:35:49.886Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 110,
+        "targetKind": "award",
+        "targetId": "award-7e66bc43f068",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "applicationPreference": null
+      },
+      "rationale": "Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.",
+      "owner": "Kelsey",
+      "trigger": "separate existing-criteria policy selection",
+      "nextAction": "review this exact field delta and retained criteria before changing existing award decisions"
+    },
+    {
       "entityId": "intake-entity-2034b3849f9e6eed",
       "awardId": "award-d06d7c7342e2",
       "answerId": "first_generation",
@@ -10908,6 +10936,101 @@
       "owner": "Kelsey",
       "trigger": "separately selected definition policy",
       "nextAction": "review saved provider definitions before new connection"
+    },
+    {
+      "entityId": "intake-entity-4bfb80dc1b2a0062",
+      "awardId": "award-1f64dfaa7bf7",
+      "sourceRow": 169,
+      "field": "K",
+      "outcome": "changed_pending_policy_selection",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "4-Year",
+        "newValue": "2-Year, 4-Year, Trade",
+        "sourceId": "official-related24-stem",
+        "supportingSourceIds": [
+          "official-related24-stem"
+        ],
+        "locator": "Relatedsource/programfieldreviewcorrects4year-onlyMasterK; officialfirstcertificate/twoyeareligibilityandimmediatefallstart are explicit.",
+        "observedAt": "2026-09-11T05:47:53.155Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 169,
+        "targetKind": "award",
+        "targetId": "award-1f64dfaa7bf7",
+        "minimumGpa": 3.25,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "applicationPreference": "direct_per_award"
+      },
+      "rationale": "Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.",
+      "owner": "Kelsey",
+      "trigger": "separate existing-criteria policy selection",
+      "nextAction": "review this exact field delta and retained criteria before changing existing award decisions"
+    },
+    {
+      "entityId": "intake-entity-4cddbe0cdbf08dae",
+      "awardId": "award-a4379bfbc7bd",
+      "sourceRow": 149,
+      "field": "K",
+      "outcome": "preserved_existing_recorded_agreement",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "Trade",
+        "newValue": "2-Year, Trade",
+        "sourceId": "official-triage-workethic",
+        "locator": "Award-specific public rules; Officialapprovedprograms expresslyinclude associate/LPNnursing,cosmetology,IT,agriculture andprotectiveservices. K2-Year,Trade andfullprogramfocus corrections supported. Four-yearprograms excluded; broadtopics alone do not qualify.",
+        "observedAt": "2026-09-11T04:24:33.625Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 149,
+        "targetKind": "award",
+        "targetId": "award-a4379bfbc7bd",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "applicationPreference": "direct_per_award"
+      },
+      "rationale": "Recorded delta agrees with the existing shortlist criterion, although historical public display may differ; both existing publications are preserved.",
+      "owner": "Codex",
+      "trigger": "local preservation regression",
+      "nextAction": "verify unchanged existing shortlist and public eligibility"
+    },
+    {
+      "entityId": "intake-entity-4ef2dba571dcd731",
+      "awardId": "award-a4ca14a7716d",
+      "sourceRow": 114,
+      "field": "K",
+      "outcome": "preserved_existing_recorded_agreement",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "2-Year",
+        "newValue": "2-Year, Trade",
+        "sourceId": "official-wts-foundation",
+        "locator": "Award-specific public rules; Saved officialWTSsource supports community/tradecolleges andAssociate/technicaldegree. KneedsTradeincluded. Summarydifferences are equivalent educational scope; chapterdeadlinevaries andannualMayannouncementnotdeadline. Renewalunknown.",
+        "observedAt": "2026-09-11T03:36:06.360Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 114,
+        "targetKind": "award",
+        "targetId": "award-a4ca14a7716d",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "applicationPreference": "direct_per_award"
+      },
+      "rationale": "Recorded delta agrees with the existing shortlist criterion, although historical public display may differ; both existing publications are preserved.",
+      "owner": "Codex",
+      "trigger": "local preservation regression",
+      "nextAction": "verify unchanged existing shortlist and public eligibility"
     },
     {
       "entityId": "intake-entity-592777c6be304a55",
@@ -10930,6 +11053,41 @@
       "nextAction": "review saved provider definitions before new connection"
     },
     {
+      "entityId": "intake-entity-757d209de40296a9",
+      "awardId": "award-00c8fd2e3b19",
+      "sourceRow": 119,
+      "field": "K",
+      "outcome": "preserved_existing_recorded_agreement",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "Any",
+        "newValue": "2-Year, Trade",
+        "sourceId": "official-related-allegra",
+        "supportingSourceIds": [
+          "official-related-allegra",
+          "official-related-fordform"
+        ],
+        "locator": "Same2026deadline;communitycollege,vocational/technicalandspecializeddisabilityprograms expresslyeligible. Do notreduceeligiblepaths to2yearcollegeonly. Financialneedselectionfactor. Shared2026publicapplication:Anne10000/4yearsBachelorfulltime,Allegra5000/2yearscommunity/vocational/technical/specializeddisabilityprogram;documentedLDrequired,ADHDaloneinsufficient. May10,202623:59timezoneunstated,loginonlynoentry.",
+        "observedAt": "2026-09-11T04:34:41.943Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 119,
+        "targetKind": "award",
+        "targetId": "award-00c8fd2e3b19",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "trade_vocational",
+          "two_year"
+        ],
+        "applicationPreference": null
+      },
+      "rationale": "Recorded delta agrees with the existing shortlist criterion, although historical public display may differ; both existing publications are preserved.",
+      "owner": "Codex",
+      "trigger": "local preservation regression",
+      "nextAction": "verify unchanged existing shortlist and public eligibility"
+    },
+    {
       "entityId": "intake-entity-78fbfff7d9936251",
       "awardId": "award-2f8fa31e3280",
       "answerId": "foster_care",
@@ -10950,6 +11108,72 @@
       "nextAction": "review saved provider definitions before new connection"
     },
     {
+      "entityId": "intake-entity-8d58baa04a65768f",
+      "awardId": "award-b42417e9530c",
+      "sourceRow": 30,
+      "field": "J",
+      "outcome": "preserved_existing_recorded_agreement",
+      "recordedDelta": {
+        "column": "J",
+        "oldValue": "2.0",
+        "newValue": "",
+        "sourceId": "official-related24-horatio",
+        "supportingSourceIds": [
+          "official-related24-horatio"
+        ],
+        "locator": "RelatedMontanaaliasrevealsprogramdeadline/school/renewal/entryGPAinconsistencies. Preserve2026bodyvsannualjuniorwindowlimits; currenttotalnotunverifiedfundingsplit.",
+        "observedAt": "2026-09-11T05:47:30.936Z",
+        "decision": "unknown_leave_blank"
+      },
+      "preservedShortlist": {
+        "sourceRow": 30,
+        "targetKind": "award",
+        "targetId": "award-b42417e9530c",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "applicationPreference": null
+      },
+      "rationale": "Recorded delta agrees with the existing shortlist criterion, although historical public display may differ; both existing publications are preserved.",
+      "owner": "Codex",
+      "trigger": "local preservation regression",
+      "nextAction": "verify unchanged existing shortlist and public eligibility"
+    },
+    {
+      "entityId": "intake-entity-8d58baa04a65768f",
+      "awardId": "award-b42417e9530c",
+      "sourceRow": 30,
+      "field": "K",
+      "outcome": "changed_pending_policy_selection",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "4-year",
+        "newValue": "2-Year, 4-Year",
+        "sourceId": "official-related24-horatio",
+        "supportingSourceIds": [
+          "official-related24-horatio"
+        ],
+        "locator": "RelatedMontanaaliasrevealsprogramdeadline/school/renewal/entryGPAinconsistencies. Preserve2026bodyvsannualjuniorwindowlimits; currenttotalnotunverifiedfundingsplit.",
+        "observedAt": "2026-09-11T05:47:30.936Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 30,
+        "targetKind": "award",
+        "targetId": "award-b42417e9530c",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "applicationPreference": null
+      },
+      "rationale": "Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.",
+      "owner": "Kelsey",
+      "trigger": "separate existing-criteria policy selection",
+      "nextAction": "review this exact field delta and retained criteria before changing existing award decisions"
+    },
+    {
       "entityId": "intake-entity-8f29d09965003d3a",
       "awardId": "award-0546c2fa9e62",
       "answerId": "financial_need",
@@ -10958,6 +11182,73 @@
       "owner": "Codex",
       "trigger": "separately authorized source research",
       "nextAction": "resolve saved gap versus award-specific evidence"
+    },
+    {
+      "entityId": "intake-entity-c83194a02dd042d9",
+      "awardId": "award-2c06399c35e5",
+      "sourceRow": 21,
+      "field": "K",
+      "outcome": "changed_pending_policy_selection",
+      "recordedDelta": {
+        "column": "K",
+        "oldValue": "2-Year, 4-Year",
+        "newValue": "4-Year",
+        "sourceId": "official-related-elksmvs",
+        "supportingSourceIds": [
+          "official-related-elksmvs"
+        ],
+        "locator": "2027MVS explicitly4yearundergraduatedegreeonly,fulltime>=12credits,USCseniors. Neitherhistorical2YearlabelnorMaster2/4coverscurrentconstraint. Membershipnotrequired. Nov12,202623:59Pacificfor2027; no unrelateddeadlinechangeproposed.",
+        "observedAt": "2026-09-11T04:33:14.964Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 21,
+        "targetKind": "award",
+        "targetId": "award-2c06399c35e5",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year",
+          "two_year"
+        ],
+        "applicationPreference": "direct_per_award"
+      },
+      "rationale": "Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.",
+      "owner": "Kelsey",
+      "trigger": "separate existing-criteria policy selection",
+      "nextAction": "review this exact field delta and retained criteria before changing existing award decisions"
+    },
+    {
+      "entityId": "intake-entity-ce2760a368b23103",
+      "awardId": "award-7e11abb8d4fc",
+      "sourceRow": 101,
+      "field": "J",
+      "outcome": "changed_pending_policy_selection",
+      "recordedDelta": {
+        "column": "J",
+        "oldValue": "Any",
+        "newValue": "3.7",
+        "sourceId": "official-university-msu-honors",
+        "supportingSourceIds": [
+          "official-university-msu-honors"
+        ],
+        "locator": "SuppliedMSUanchoredreferenceandcurrentofficialhonorsminimum/cycle/nonresidenteligibility.",
+        "observedAt": "2026-09-11T04:45:57.400Z",
+        "decision": "proposed_supported"
+      },
+      "preservedShortlist": {
+        "sourceRow": 101,
+        "targetKind": "award",
+        "targetId": "award-7e11abb8d4fc",
+        "minimumGpa": null,
+        "schoolTypes": [
+          "four_year"
+        ],
+        "applicationPreference": "direct_per_award"
+      },
+      "rationale": "Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.",
+      "owner": "Kelsey",
+      "trigger": "separate existing-criteria policy selection",
+      "nextAction": "review this exact field delta and retained criteria before changing existing award decisions"
     }
   ],
   "collisionCandidates": [

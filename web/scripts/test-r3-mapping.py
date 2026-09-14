@@ -44,3 +44,11 @@ else:raise AssertionError('Unrelated edit imported')
 assert m.single_url({'hyperlink':'https://example.test/?q=one#two'})=='https://example.test/?q=one#two'
 assert m.single_url({'textFormatRuns':[{'format':{'link':{'uri':u}}} for u in ['https://a.test','https://b.test']]}) is None
 print('R3 mapping PASS: complete denominators, frozen relationships/criteria, source identity negatives, survivor, ambiguous dates/links, no parent leakage, unsupported definition/need deferrals.')
+
+existing_deltas=[d for d in r['deferred'] if d.get('field')]
+assert len(existing_deltas)==9 and sum(d['outcome']=='changed_pending_policy_selection' for d in existing_deltas)==5
+assert sum(d['outcome']=='preserved_existing_recorded_agreement' for d in existing_deltas)==4
+for c in b['connections']:
+ if new[c['awardId']]['summary'] is None:
+  assert 'two years or less' in c['message'] or 'qualifying associate or technical program' in c['message']
+print('R3 mapping remediation PASS: five qualified reasons; nine existing-field dispositions (five conflicts, four agreements).')

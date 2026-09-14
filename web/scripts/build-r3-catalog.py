@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Offline, deterministic R3 mapping proposal. Never contacts or writes a source."""
-import copy, hashlib, json, re
+import copy, hashlib, json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'docs/evidence/r3-catalog'
 def read(path): return json.loads((ROOT / path).read_text())
 def digest(value): return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
 def filehash(path): return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
-def save(name, value): (OUT / name).write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
+def save(name, value):
+    encoded = json.dumps(value, ensure_ascii=False, indent=2) + '\n'
+    if '--check' in sys.argv: assert (OUT / name).read_text() == encoded, 'Generated artifact drift: '+name
+    else: (OUT / name).write_text(encoded)
 def pid(kind, key): return kind + '-' + hashlib.sha256(('r3:' + key).encode()).hexdigest()[:12]
 def values(cells): return [cells[i].get('userEnteredValue', {}) if i < len(cells) else {} for i in range(15)]
 def text(cell):
@@ -109,7 +112,12 @@ def build():
             shortlist.append(dict(sourceRow=now,targetKind='award',targetId=award_id,minimumGpa=gpa,schoolTypes=school,applicationPreference=None))
             award = dict(publicId=award_id,name=v[6],summary=None,amount={},eligibility=dict(audience=v[2] or 'Geography not recorded',minimumGpa=gpa,schoolTypes=['trade' if x=='trade_vocational' else x for x in school],focus=v[12] or None),cycle={},application=dict(mode='unknown',label=v[7] or 'Application route not recorded; check the source.',url=single_url(cells[7]),groupPublicId=None,supplements='unknown'),sourcePublicIds=[source_id])
             catalog['awards'].append(award);byid[award_id]=award;new_entities[award_id]=e['id']
-        else: award = byid[award_id]
+        else:
+            award = byid[award_id]
+            for c in o['cells']:
+                if c['column'] in ['J','K']:
+                    is_conflict = (historical,c['column']) in [(110,'J'),(169,'K'),(30,'K'),(21,'K'),(101,'J')]
+                    deferred.append(dict(entityId=e['id'],awardId=award_id,sourceRow=now,field=c['column'],outcome='changed_pending_policy_selection' if is_conflict else 'preserved_existing_recorded_agreement',recordedDelta=c['fieldEvidence'],preservedShortlist=rowtargets[historical],rationale='Updated organizer criterion conflicts with preserved shortlist; do not change existing decisions.' if is_conflict else 'Recorded delta agrees with the existing shortlist criterion, although historical public display may differ; both existing publications are preserved.',owner='Kelsey' if is_conflict else 'Codex',trigger='separate existing-criteria policy selection' if is_conflict else 'local preservation regression',nextAction='review this exact field delta and retained criteria before changing existing award decisions' if is_conflict else 'verify unchanged existing shortlist and public eligibility'))
         changed_columns = {c['column'] for c in o['cells']}
         if 'G' in changed_columns: award['name']=v[6]
         if 'I' in changed_columns: award['summary']=v[8] or None
@@ -129,7 +137,16 @@ def build():
             if answer in ['first_generation','foster_care']:
                 deferred.append(dict(entityId=e['id'],awardId=award_id,answerId=answer,outcome='recommendation_only',rationale='Provider definitions remain on card; no universal definition or new sensitive question selected.',owner='Kelsey',trigger='separately selected definition policy',nextAction='review saved provider definitions before new connection'))
             elif answer in controls:
-                desired.append((answer, f"Your {controls[answer]} choice brings {award['name']} forward for review. Check its specific recorded conditions below; this connection does not confirm eligibility.", dict(tag=tag)))
+                qualifiers = {
+                    ('intake-entity-4cddbe0cdbf08dae','healthcare'): 'The recorded program list includes associate or LPN nursing and veterinary technology. Only approved programs of two years or less qualify; four-year nursing and other healthcare programs are not covered by this connection.',
+                    ('intake-entity-4cddbe0cdbf08dae','public_service'): 'The recorded protective-service examples include police, fire and EMT training. Only the provider’s approved programs of two years or less qualify.',
+                    ('intake-entity-4cddbe0cdbf08dae','agriculture_conservation'): 'The recorded program list includes farming and agriculture. Only approved programs of two years or less qualify; broader conservation degrees are not established by this connection.',
+                    ('intake-entity-4cddbe0cdbf08dae','stem'): 'The recorded program list includes information technology and technical training. Only the provider’s approved programs of two years or less qualify.',
+                    ('intake-entity-4ef2dba571dcd731','female'): 'This WTS scholarship is recorded for women pursuing transportation study in a qualifying associate or technical program. Check the chapter’s specific requirements and application route; chapter routing does not establish a WTS membership requirement.',
+                }
+                qualification = qualifiers.get((e['id'],answer),'Check its specific recorded conditions below.')
+                if (award_id,answer) not in seen_connections and award['summary'] is None: assert (e['id'],answer) in qualifiers
+                desired.append((answer, f"Your {controls[answer]} choice brings {award['name']} forward for review. {qualification} This connection does not confirm eligibility.", dict(tag=tag)))
         if e['id'] in teaching:
             qualifiers = {'intake-entity-614effa8ef61322e':'Athletics OR education is recorded; education is one alternative.', 'intake-entity-2034b3849f9e6eed':'An education degree is a preference, not a requirement.', 'intake-entity-5529a2e6789f2993':'Education is one helping-career alternative; other helping fields also qualify.', 'intake-entity-19060852883d7493':'Secondary education or English teaching is the recorded field.'}
             desired.append(('education_teaching',f"Education / Teaching brings {award['name']} forward. "+qualifiers.get(e['id'],'An education path is recorded; check the stated college and program conditions.')+' Confirm all requirements; interest alone does not establish eligibility.',dict(gapId='gap-education-teaching')))

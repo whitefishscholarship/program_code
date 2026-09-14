@@ -1,0 +1,27 @@
+{
+  "observedAt": "2026-09-14T14:49:09.049537+00:00",
+  "initialCandidate": "da28d330768f1efa025ca6d5e2bd6bb3582ea939",
+  "findings": [
+    {
+      "id": "R3-MAPPING-001",
+      "severity": "medium",
+      "owner": "Codex",
+      "target": "mapping review before product edits",
+      "status": "remediated-awaiting-recheck",
+      "rationale": "Five null-summary connections now state exact approved-program or transportation/chapter qualifications in readable copy."
+    },
+    {
+      "id": "R3-MAPPING-002",
+      "severity": "medium",
+      "owner": "Codex",
+      "target": "mapping review before product edits",
+      "status": "remediated-awaiting-recheck",
+      "rationale": "Nine existing GPA/school deltas explicitly classified: five shortlist conflicts routed to separate policy selection, four agreements preserved; no existing rule changed."
+    }
+  ],
+  "checks": [
+    "python3 web/scripts/build-r3-catalog.py: PASS",
+    "python3 web/scripts/test-r3-mapping.py: PASS"
+  ],
+  "newReviewRequired": true
+}
