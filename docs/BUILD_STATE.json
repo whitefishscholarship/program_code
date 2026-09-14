@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 18,
+  "planRevision": 19,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-14",
   "repository": {
@@ -840,6 +840,82 @@
           "evidencePath": "docs/evidence/PLAN-REV18.md",
           "basis": "Direct R4 approval after explicit disclosure of GitHub, automatic Preview, merge, Production and verification, recorded in docs/evidence/r4-catalog/authority.json. Original R3 grant preserved.",
           "scope": "R4 only: publish unchanged reviewed R3 runtime from ec0907eeab92647ee394bd9b9a7614ecb6ab92cc on codex/r4-catalog-release to whitefishscholarship/program_code; PR and automatic Vercel Preview; exact Preview/CI verification before ancestry-preserving merge, resulting Production and hosted verification. Target web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, canonical web-two-gules-45.vercel.app. Requires full checks, fresh independent review and direct-child two-file REV18 attestation. No workbook/source access or write, research, configuration/credential change, rollback, monitoring, paid actions, provider/applicant interaction or R5-R7."
+        }
+      },
+      {
+        "id": "PLAN-REV19",
+        "status": "attestation-gated",
+        "baselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+        "evidencePath": "docs/evidence/PLAN-REV19.md",
+        "manifestPath": "docs/evidence/PLAN-REV19-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV19.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-14",
+          "evidencePath": "docs/evidence/PLAN-REV19.md",
+          "basis": "Direct user reply approved to the independently reviewed exact correction proposal, recorded verbatim with proposal/review binding in docs/evidence/r4-identity-repair/authority.json.",
+          "scope": "Only the approved PLAN-REV19 correction: preserve canonical A18 and all historical grants/artifacts, new Whitefish-authored codex/r4-whitefish-delivery-repair descendant, exact21-path policy/validator/test/evidence allowlist, fresh policy and final reviews, complete M0-to-C19 manifest and direct-child two-file A19. Publish replacement PR and automatic Preview to the existing web project/team/hostname; verify exact Preview and CI before exact-head ancestry-preserving merge, then Production and hosted verification. Close PR46 unmerged only after replacement exists and identify it; preserve original head. No additional effects beyond authority.json pins."
+        },
+        "r4IdentityRepair": {
+          "targetAmendmentId": "PLAN-REV18",
+          "targetCandidateCommit": "5e5c140dc49250234438fa9b741064acc7aa8375",
+          "targetAttestationCommit": "d6fdc0d0470dec199c6b93e2c0525b6eebe2e4e2",
+          "targetBaselineCommit": "a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32",
+          "targetManifestSha256": "a5ec94957e50cecfea9c8aadd16792b98143e92bea3c5ba9f4c03e0705ce3360",
+          "targetReviewSha256": "2e4021edb28bcfc4431a2834c0b5027e35ac7d4e474fc61a4b7e8edb611ec4f4",
+          "continuationBranch": "codex/r4-whitefish-delivery-repair",
+          "ownerName": "whitefishscholarship",
+          "ownerEmail": "whitefishscholarship@gmail.com",
+          "githubOwnerId": 266880911,
+          "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+          "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+          "canonicalHostname": "web-two-gules-45.vercel.app",
+          "allowedContinuationPaths": [
+            "AGENTS.md",
+            "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+            "docs/BUILD_STATE.json",
+            "docs/DECISIONS.md",
+            "docs/CURRENT_HANDOFF.md",
+            "web/scripts/validate-build-plan.ts",
+            "web/package.json",
+            "docs/evidence/PLAN-REV19.md",
+            "docs/evidence/PLAN-REV19-manifest.json",
+            "docs/reviews/PLAN-REV19.json",
+            "docs/kickoffs/R4-WHITEFISH-DELIVERY.md",
+            "web/scripts/r4-identity-delivery.ts",
+            "web/scripts/test-r4-identity-delivery.ts",
+            "docs/evidence/r4-identity-repair/authority.json",
+            "docs/evidence/r4-identity-repair/preflight.json",
+            "docs/evidence/r4-identity-repair/policy-manifest.json",
+            "docs/evidence/r4-identity-repair/policy-review.json",
+            "docs/evidence/r4-identity-repair/policy-validation.json",
+            "docs/evidence/r4-identity-repair/preservation.json",
+            "docs/evidence/r4-identity-repair/validation.json",
+            "docs/evidence/r4-identity-repair/RELEASE_CANDIDATE.md"
+          ],
+          "authorizedEffects": [
+            "branch_push",
+            "pull_request",
+            "vercel_preview",
+            "merge",
+            "vercel_production",
+            "ci_and_deployment_verification",
+            "close_original_pr_unmerged_after_replacement_exists"
+          ],
+          "forbiddenEffects": [
+            "source_or_workbook_access",
+            "runtime_change",
+            "dependency_change",
+            "configuration_change",
+            "account_or_access_change",
+            "paid_action",
+            "published_history_rewrite",
+            "rollback",
+            "monitoring",
+            "provider_or_applicant_interaction",
+            "R5_R7"
+          ]
         }
       }
     ]
