@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "policyCheckpoint": "e10443c",
+  "records": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "/private/tmp/program_code-r4-release/web",
+      "startedAt": "2026-09-14T15:25:27.650153+00:00",
+      "finishedAt": "2026-09-14T15:26:03.233722+00:00",
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 3 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "GITHUB_ACTIONS=true npm run plan:check",
+      "cwd": "/private/tmp/program_code-r4-release/web",
+      "startedAt": "2026-09-14T15:26:03.234101+00:00",
+      "finishedAt": "2026-09-14T15:26:35.824013+00:00",
+      "exitCode": 1,
+      "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n",
+      "stderr": "Build-plan validation failed with 3 error(s):\n- Missing required file: docs/evidence/PLAN-REV18-manifest.json\n- Missing required file: docs/reviews/PLAN-REV18.json\n- PLAN-REV18 requires a committed manifest/review attestation in current history\n"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/private/tmp/program_code-r4-release",
+      "startedAt": "2026-09-14T15:26:35.824316+00:00",
+      "finishedAt": "2026-09-14T15:26:35.845960+00:00",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "git -c core.whitespace=cr-at-eol diff a8aa6f958f029b7edfacf03ac6c5848e9e8f4b32 HEAD --check",
+      "cwd": "/private/tmp/program_code-r4-release",
+      "startedAt": "2026-09-14T15:26:35.846315+00:00",
+      "finishedAt": "2026-09-14T15:26:35.897567+00:00",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}
