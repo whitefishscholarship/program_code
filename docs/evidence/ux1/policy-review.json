@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-local-prospective-policy-review",
+  "stepId": "UX1",
+  "candidateCommit": "ab580996d546fd812776c2d5c036e037d5ff2f91",
+  "manifestPath": "docs/evidence/ux1/policy-manifest.json",
+  "manifestSha256": "0518d446d7bf2350b1d0f24962929ef4b54dccf84f09b864b306ec7c596194b0",
+  "recordedAt": "2026-09-16T13:25:34.913675+00:00",
+  "reviewer": "/root/ux1_policy_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "remediationHistory": [
+    {
+      "originalSeverity": "medium",
+      "finding": "Timer handoff omitted required R5 saved input absent from main",
+      "owner": "Codex",
+      "resolution": "Exact source commit/path/input hashes, post-transfer inventory reproduction and delivered UX preservation added to plan and handoff; reviewer rechecked corrected candidate."
+    }
+  ],
+  "reviewerSummary": "All nine manifest entries, candidate ancestry, whitespace, historical state/runtime/CI/validator/prior handoff preservation verified. All three timer input/output hashes match009fa57. PASS authorizes proceeding under the existing local implementation grant only.",
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false,
+  "limits": [
+    "Four disclosed Revision20 delivery-authority and final canonical attestation failures remain.",
+    "Prior policy validation checked; full implementation matrix still required."
+  ]
+}
