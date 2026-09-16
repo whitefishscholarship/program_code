@@ -1335,7 +1335,7 @@
   },
   "interviewUx": {
     "planId": "UX1",
-    "status": "local-policy-preparation-review-pending",
+    "status": "local-verified-final-independent-review-pending",
     "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
     "planPath": "docs/INTERVIEW_UX_BUILD_PLAN.md",
     "authorityEvidencePath": "docs/evidence/PLAN-REV20.md",
@@ -1363,6 +1363,8 @@
       "trigger": "verified UX delivery or explicit earlier user prioritization",
       "recipient": "kelsey@waypointfranchise.com",
       "section": "docs/INTERVIEW_UX_BUILD_PLAN.md section 7"
-    }
+    },
+    "validationPath": "docs/evidence/ux1/validation.json",
+    "localFinalReviewPath": "docs/evidence/ux1/local-review.json"
   }
 }

@@ -1,12 +1,16 @@
 # UX1 — four-screen journey first; timer follows directly
 
-Plan revision: 20. Local execution is authorized; prospective policy review is next.
+Plan revision: 20. Local execution is authorized; prospective policy review passed at ab58099.
 Resume `/private/tmp/program_code-ux1-four-screen-journey`, branch
 `codex/ux1-four-screen-journey`, verified main baseline
 `aae973238bed8651c3404b17cd51c1385f457075`. Read
 `docs/INTERVIEW_UX_BUILD_PLAN.md` and `docs/evidence/PLAN-REV20.md`.
 Keep only existing GPA/school answers required. New order1,4,2,3; Continue then
-results on final step; Back/edit preserve current-visit answers. No runtime edits yet.
+results on final step; Back/edit preserve current-visit answers. Runtime changes are
+implemented locally in InterviewWizard.tsx. Typecheck, full tests, production build
+and 360px/1440px browser checks passed; plan check retains exactly four release gates.
+Validation: docs/evidence/ux1/validation.json. Independent final candidate review
+is next; its exact outcome will be in docs/evidence/ux1/local-review.json.
 P9/completed stages remain complete; canonical pointers stay null. All historical
 review/attestation artifacts remain unchanged. Four Revision20 release-authority and
 final-attestation diagnostics are expected failures; no acceptance or release claimed.
