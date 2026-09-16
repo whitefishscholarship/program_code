@@ -10,9 +10,11 @@
       "startedAt": "2026-09-16T13:26:24.996037+00:00",
       "completedAt": "2026-09-16T13:26:33.223169+00:00",
       "exitCode": 0,
-      "logPath": "docs/evidence/ux1/logs/typecheck.log",
+      "logPath": "docs/evidence/ux1/logs/typecheck.raw.json",
       "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
-      "originalLogPath": "/private/tmp/ux1-checks/typecheck.log"
+      "originalLogPath": "/private/tmp/ux1-checks/typecheck.log",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "archiveSha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668"
     },
     {
       "command": "npm run build",
@@ -20,9 +22,11 @@
       "startedAt": "2026-09-16T13:26:33.223571+00:00",
       "completedAt": "2026-09-16T13:26:47.186886+00:00",
       "exitCode": 0,
-      "logPath": "docs/evidence/ux1/logs/build.log",
+      "logPath": "docs/evidence/ux1/logs/build.raw.json",
       "logSha256": "a207ee8e1932d4d24269bae21f9ce1c3b72e7a50fbc8d76bff9f30ff26254fa4",
-      "originalLogPath": "/private/tmp/ux1-checks/build.log"
+      "originalLogPath": "/private/tmp/ux1-checks/build.log",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "archiveSha256": "df029e105d6ae61f6918dbb50eb6074bf43350a43e57e09cc368cfa9a0545787"
     },
     {
       "command": "git diff --check",
@@ -109,5 +113,14 @@
     "Browser proof is local only; no Production or scholarship freshness verification.",
     "Final review/authority-bearing freeze, attestation and release remain pending."
   ],
-  "postCheckEdits": "Only QA selector, evidence and progress documents changed after application matrix; final whitespace check runs before freeze."
+  "postCheckEdits": "Only QA selector, evidence and progress documents changed after application matrix; final whitespace check runs before freeze.",
+  "reviewRemediation": [
+    {
+      "severity": "low",
+      "finding": "The complete baseline-to-candidate whitespace check included terminal CR/trailing spaces and blank EOF lines in newly committed build/typecheck logs, which the earlier worktree check did not cover.",
+      "resolution": "Stored exact original raw log bytes as base64 JSON with decoded and archive hashes; no output bytes discarded or altered. Complete baseline whitespace check is rerun before the corrected candidate freeze.",
+      "owner": "Codex",
+      "originalCandidate": "97f2a63b24bdb2d53b8562b01159fb2c7209d7b2"
+    }
+  ]
 }
