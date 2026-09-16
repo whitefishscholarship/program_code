@@ -54,7 +54,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
   };
   const goTo = (next: number) => { if (validCore()) setStep(next); };
   const renderCriteria = (categories: string[]) => categories.map((category) => (
-    <details key={category} className="rounded-2xl border border-slate-200 p-4">
+    <details key={category} open className="rounded-2xl border border-slate-200 p-4">
       <summary className="cursor-pointer rounded-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-200">{category}</summary>
       <CheckboxGroup legend={category}>{SPECIAL_CRITERIA.filter((item) => item.category === category).map((item) => <Choice key={item.id} id={item.controlId} label={item.label} detail={item.detail ?? undefined} checked={selectedCriteria.includes(item.id)} onChange={() => { toggle(item.id, selectedCriteria, setSelectedCriteria); }} />)}</CheckboxGroup>
     </details>

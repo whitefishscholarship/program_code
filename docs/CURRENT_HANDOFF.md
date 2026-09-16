@@ -1,12 +1,23 @@
-# UX1 category visibility refinement — prospective review next
+# UX1 all categories expanded — final local review next
 
-User requests every category expanded so students see all choices. Execute UX plan
-section4b under docs/evidence/ux1-expanded/authority.md. Existing local checkpoint
-7be4e99 and all prior UX1/cleanup reviews/evidence remain immutable. Review the
-prospective policy, then add `open` to the shared category renderer, adapt current QA
-with separate outputs, run full checks and final independent local review.
-No other runtime/answer/data changes. Four canonical release gates remain; no
-publication. Required direct timer handoff in section7 remains unchanged.
+User's default-expansion refinement is implemented: only the `open` attribute in
+InterviewWizard.tsx changes runtime behavior. All six categories and38 choices are
+visible on entry to steps3/4, and on Back/Edit. Existing optional answers and handlers
+are preserved. Prospective policy734b4a1 passed independent review. Required tests,
+typecheck/build and phone/desktop browser matrix passed, including collapse/re-entry,
+blank answers, matching/CSV, legacy compatibility and privacy observations.
+
+Evidence and current QA: docs/evidence/ux1-expanded/validation.json,
+docs/evidence/ux1-expanded/browser/browser.json, web/scripts/qa-ux1-expanded.cjs.
+All52 original UX/cleanup artifacts remain byte-identical; do not overwrite prior
+QA outputs. Freeze and independently review this complete candidate. Four existing
+canonical authority/manifest/review/attestation gates remain. No publication authority.
+The local production preview at http://127.0.0.1:3220 has been rebuilt/restarted.
+
+Required direct timer handoff is unchanged in UX plan section7. Codex resumes
+unfinished M1 from saved009fa57 after verified UX delivery or explicit earlier user
+reprioritization; retain recipient, pinned research input and post-UX baseline rules.
+
 
 ---
 
