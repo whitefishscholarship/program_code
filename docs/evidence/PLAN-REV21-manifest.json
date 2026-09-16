@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV21",
+  "createdAt": "2026-09-16T17:04:34.360Z",
+  "baselineCommit": "c2042402e137fec4763ee33d40833d9069cf904b",
+  "candidateCommit": "3306cb965e3aee28756da5d7e0ff215cdf9c852e",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "present",
+      "sha256": "dfa21e22f246ab46a9841f266e41983173c6a27d40f0a0886ce6de1fd11c1e6a"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "b5025ef50b0201ed6f4334043f67d09161f73d509af45e12710c26ce745095ff"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "d32cbc90668b855b9a3d9cbaa4e035031160914312ee6de142749a9976ece04a"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "05bfaadab108d547c36e6528bc0ec9892709d78f25f17ded0953eee07b147eb9"
+    },
+    {
+      "path": "docs/INTERVIEW_UX_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "317ee4ab71b2a7703c7ffa961afc5ed22031386ffb496f783620e1790ed4ed5c"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "ebc52c6c23811d00f15aa4e17356e38f07d5db03bdeb3f6a49a55b036f74b08e"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV21.md",
+      "change": "present",
+      "sha256": "590e984fcdc75dcd7179c190c7d6d561a39aa5c29a9d8d2b40e1531e9e3679a5"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/browser.json",
+      "change": "present",
+      "sha256": "6982b622b681d2fc8736a4c24d6f5b0d9613e8a55df0a96f709d4805afb75308"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/policy-manifest.json",
+      "change": "present",
+      "sha256": "88c182af87385f903c19216dcb4cced8699331271f0c0e2077b2f81cb8bfe727"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/policy-review.json",
+      "change": "present",
+      "sha256": "1af82d27d8ffc93633e97ec3bfe83c961945c4bcc5adb20b4bd8df4986d3e90b"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/preflight.json",
+      "change": "present",
+      "sha256": "cf990bf3cd128ca7a0c2843bda67dddb6629618c154779c978713edd0eb48eb9"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-build.log.json",
+      "change": "present",
+      "sha256": "adfc9ff9fe7b24f3cba75ad0eb060ef33412ad43357c16008935a768b7031a54"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-npm-ci.log.json",
+      "change": "present",
+      "sha256": "3e75c68e1bdc3868cf1576fb0d38989be66a598305d0e1452bb65c5db2b0a562"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-plan.log.json",
+      "change": "present",
+      "sha256": "3b079e4549ba8f3f6a553bfd8c8f7c09dd967d989bea1f7b513cf0259b730581"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-policy-plan-final.log.json",
+      "change": "present",
+      "sha256": "21530a113c5105521fbf0ec1673687173d5afba19ed5f755ac9d7555f02f833d"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-policy-plan.log.json",
+      "change": "present",
+      "sha256": "3a5ee84881e38f01805ca5c7471246f9e04195d57cf331d41392a471698f02c1"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-runtime.log.json",
+      "change": "present",
+      "sha256": "89334a7f1ed4560f84f3ee41db724958ad0692fe322730087e576855982885a9"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-tests.log.json",
+      "change": "present",
+      "sha256": "89f0e0efb11d32bc0dbf0b9e437de6ff281e242503272614b804b32d7dfa49f1"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/ux2-typecheck.log.json",
+      "change": "present",
+      "sha256": "c710ae931a80f366d7d54ce0b52a7b277bec73e9034fef8ff83d9ca2195cc28f"
+    },
+    {
+      "path": "docs/evidence/ux2-hours/validation.json",
+      "change": "present",
+      "sha256": "20924643a2b6388adeefe53fc4af2406dd3861086a68c0fee77e64630daca6f0"
+    },
+    {
+      "path": "web/src/components/InterviewWizard.tsx",
+      "change": "present",
+      "sha256": "32f09597a40f7fd937b6acb2248da93f8d5ba98041a73992319e98edfe774b92"
+    }
+  ]
+}

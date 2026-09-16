@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV21",
+  "reviewerTaskId": "/root/ux2_final_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-16T17:11:26.567Z",
+  "outcome": "accepted",
+  "candidateCommit": "3306cb965e3aee28756da5d7e0ff215cdf9c852e",
+  "candidateTree": "93dc1c8851cc64855959ae3d37e4fee71669aade",
+  "baselineCommit": "c2042402e137fec4763ee33d40833d9069cf904b",
+  "candidateManifestPath": "docs/evidence/PLAN-REV21-manifest.json",
+  "candidateManifestSha256": "f0bda5bce861671fb981f01b36ca5a7f7a0211bb27c713e07a70c902449420db",
+  "completeChangedPathCount": 21,
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "decisionScope": "Accept the complete frozen21-path UX2 / PLAN-REV21 candidate for its exact direct-child two-file canonical attestation. Add only docs/evidence/PLAN-REV21-manifest.json and docs/reviews/PLAN-REV21.json in that child. This review does not claim attestation, zero post-attestation validators, publication, Preview/CI, merge or Production verification are complete. Require both actual local and hosted-mode plan checks to exit0 before publishing; retain attestation as branch tip until delivery. Verify exact Preview/CI before ancestry-preserving merge and exact Production afterward. Then execute the preserved direct timer M1 handoff within its existing gates.",
+  "verification": [
+    "Read actual AGENTS, canonical purpose/invariants/universal completion and independent-review rules, full Revision20/21, BUILD_STATE pointers and amendment, operative handoff, latest accepted UX1 authority/canonical review and P9 evidence, UX plan section7 and UX2 appendix, new authority/decision, policy review, validation, preflight and browser records. Active and next-permitted stage pointers remain null; no later program stage starts.",
+    "Independently recomputed final manifest SHA256 f0bda5bce861671fb981f01b36ca5a7f7a0211bb27c713e07a70c902449420db. Its21 unique paths exactly equal the complete baseline-to-candidate Git change set; every candidate-tree blob hash and corresponding worktree byte matches. HEAD is3306cb965e3aee28756da5d7e0ff215cdf9c852e, local origin/main is the pinned baseline, and candidate descends from it. Manifest createdAt has valid millisecond UTC format. Only the prospective untracked manifest is outside the frozen candidate.",
+    "Independently verified exact historical BUILD_STATE equality after removing only new volunteerHoursUx and PLAN-REV21 objects and restoring planRevision20. All778 baseline web/CI/evidence/review paths other than InterviewWizard are byte-identical. This includes legacy schema/options/matcher tests, UX1 QA scripts, catalog/publications, validator, dependencies, CI/deployment controls and historical attestations. Prior AGENTS, decisions and UX plan remain exact prefixes; the prior handoff remains an exact suffix.",
+    "Independently recomputed the complete7-path prospective policy manifest/digest against9ecc92ecc415b0dd2d2fbc3ae3d9c5737869ec14. Its independent read-only PASS record was committed in7ea38dd before the runtime edit in3306cb9. Policy baseline runtime is unchanged. The resolved low handoff-marker finding is preserved in its original policy review and does not remain open. No prior review or manifest is rebound.",
+    "Inspected the actual full component and four-hunk runtime diff: remove VOLUNTEER_HOURS UI import, hours useState/initialAnswers read, the complete conditional label/select and hours-only service clearing. The service activity checkbox still toggles the same activities value. The sole submit path explicitly supplies volunteerHours:null with no later overriding spread or transformation; the unchanged nullable schema accepts null. Thus legacy initial hours cannot enter new submitted results. All other state, screen order, required basics, optional questions, categories, Back/Edit and matching/export behavior are unchanged.",
+    "Independently decoded and rehashed all8 raw command archives against both archive and validation digests. Inspected saved npm ci/typecheck/full npm test/build/runtime trace successes, including P8F compatibility, coverage, R3/R4 and historical governance checks. Recorded full-suite exit0 remains implementation evidence; it was not redundantly rerun. The built trace reports41 runtime files, runtime closure f92802e9c85fa50afc2300ba66c248cc4ecf1f8bc86038616d5ca49d9496a52d, trace5ecf3d91191c5ade3fb4c0e70c0dbc491d32fd891f4b5e64325997eabbebb6b8 and no production Google/Drive/Sheets capability. Existing middleware and package deprecation warnings do not arise from changed dependencies.",
+    "Inspected saved mobile360x800 and desktop1440x1000 production-build CUA evidence bound to the exact component hash. Its service/blank optional/Back/Edit/results checks and exact ordered-ID/public-CSV comparisons are explicitly recorded. Legacy null verification is correctly disclosed as static; CSV proof is decoded data-URI bytes, not download-event capture; no new universal storage/request privacy claim is made.",
+    "Independently exercised a fresh hidden local CUA tab against127.0.0.1:3221. At360x800, traversed all four screens using synthetic core answers, toggled service on/off and observed no hours text or selects, returned Back and confirmed service retention, reached384-award results with other optional screens blank, and used Edit to confirm GPA/school/service retention. At1440x1000, observed service preserved and zero step3 selects/hours text or horizontal overflow. Restored viewport and closed the temporary tab. This independent spot-check complements the saved wider matrix; it does not claim a new exact CSV comparison or mounted legacy probe.",
+    "Independently executed the complete baseline-to-candidate git diff --check: exit0. Direct npm run plan:check in reviewer sandbox stopped before validation on tsx IPC listen EPERM. Executing the same unchanged validator with node --import tsx scripts/validate-build-plan.ts then completed: exit1 with exactly2 expected remaining errors, missing canonical review and committed attestation. The prospective manifest is already present, explaining the reduction from saved3-error logs. No diagnostic is waived; both actual required validator modes remain mandatory after the real attestation.",
+    "Read exact UX1 closeout11f5cad6ecd1a91b82c033d8a666d6ddd6c361a8 operative handoff and timer transfer receipt. Independently compared all13 carried timer/input paths to original009fa57 source blobs and receipt hashes; all match, including saved437-record inventory digest87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8. The new handoff preserves Codex ownership, recipient, existing allowance/sender unknowns, original queues, and fresh-main-with-both-UX-releases requirement. No timer execution or activation occurred in this review."
+  ],
+  "canonicalDiagnostics": {
+    "savedPreManifestRequiredCommandExitCode": 1,
+    "savedPreManifestErrorCount": 3,
+    "independentNpmWrapperAttempt": "Blocked by local tsx IPC sandbox EPERM before validator execution",
+    "independentDirectValidatorCommand": "node --import tsx scripts/validate-build-plan.ts",
+    "independentDirectValidatorExitCode": 1,
+    "manifestWasMaterialized": true,
+    "errors": [
+      "Missing required file: docs/reviews/PLAN-REV21.json",
+      "PLAN-REV21 requires a committed manifest/review attestation in current history"
+    ],
+    "notWaived": true
+  },
+  "limits": [
+    "Reviewer authored no candidate files, tests, repository edits or commits and performed no external network/provider, source/workbook, credential or publication action. Only this structured review output is written to /private/tmp. Browser interaction used synthetic local answers.",
+    "GitHub/Vercel identity, live baseline and target observations are inspected implementation evidence corroborated by local origin/main; reviewer did not independently refresh external state. Actual exact-head attribution, Preview/CI and Production application verification remain release gates.",
+    "Full application install/typecheck/test/build and broad browser/CSV matrix are hash-bound implementation evidence. Independent execution was limited to manifest/preservation/archive/policy/whitespace/validator checks and the disclosed browser spot-check. Static unconditional-null dataflow is sufficient for this simple removal; no mounted legacy browser test or new full-suite run is claimed.",
+    "Tests and preserved publications do not establish current scholarship facts. Prior hosted request-body/download visibility limits remain unknown. The release grants no source/workbook mutation or replay, configuration/credential change, paid action, provider/applicant interaction, email sending or monitoring activation.",
+    "The timer M1 transfer remains required after verified UX2 delivery. Its saved inventory integrity is verified, but allowance/sender setup and later M2/M3/M4 gates remain incomplete and unactivated."
+  ]
+}
