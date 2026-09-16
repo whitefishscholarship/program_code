@@ -1966,7 +1966,7 @@ stages and stage pointers remain unchanged; interviewUx tracks local preparation
 Commit and independently review this prospective plan/policy before product edits.
 Local implementation and review follow under the direct user grant; canonical
 acceptance, final attestation and delivery remain gated. Keep the validator unchanged
-and report all four Revision20 delivery-authority/manifest/review/attestation failures
+and report outstanding Revision20 delivery-authority/manifest/review/attestation failures
 until settled. No diagnostic suppression or acceptance waiver is authorized. Freeze
 and review the full final candidate; all normal canonical attestation gates still apply.
 
@@ -1988,3 +1988,16 @@ Prepare the local result before requesting any missing informed Git/Preview/Prod
 effects. At verified UX delivery, Codex must execute the direct timer handoff in section7
 of the UX plan, retaining the saved timer checkpoint and incorporating delivered UX
 into any subsequent timer implementation/release baseline.
+
+### September16 UX1 live delivery grant
+
+Kelsey's direct instruction to push the reviewed updates live now supplies the
+missing release effects. docs/evidence/ux1-release/authority.md and PLAN-REV20 state
+bind the exact existing repository, branch, Vercel project/team and hostname. This
+supersedes only the earlier no-publication status for UX1; no other authority changes.
+Freeze/review the complete candidate, preserve all earlier artifacts, add exactly the
+canonical manifest/review in a direct-child attestation, and require actual local and
+hosted-mode validation to pass. Keep attestation at tip until exact Preview/CI and
+ancestry-preserving merge, then verify exact Production/application behavior.
+No runtime additions or validation exceptions are needed. Preserve section7's direct
+timer handoff and execute it after verified delivery, within the timer's existing gates.

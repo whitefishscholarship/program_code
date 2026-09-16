@@ -813,3 +813,13 @@ to the shared six-category renderer; students may collapse and re-entry opens al
 No answers become required and no handler/matching/data changes. Record prospective
 and final reviews/new QA under ux1-expanded; preserve previous evidence and the direct
 timer handoff. Owner Codex, local implementation authorized; release gates unchanged.
+
+## D-UX1-LIVE — publish the reviewed UX
+
+September16: Kelsey directly requests the updates pushed live. This supplies the
+previously missing UX1 release authority, pinned in a new receipt while preserving
+all prior local evidence. Record effects in unattested PLAN-REV20, refreeze/review
+full candidate, add canonical direct-child attestation, publish via established Git
+and Vercel integration, verify Preview/CI before merge and exact Production after.
+No new runtime/validator scope or historical rewrite. Owner Codex, direct timer
+handoff follows verified delivery under its existing M1 boundary.

@@ -16,11 +16,10 @@ requested Back with answer editing, authorized a complete stored plan and execut
 and required a direct handoff to the timer plan. Exact statements are recorded in
 `docs/evidence/PLAN-REV20.md`.
 
-Local planning, prospective policy, implementation, tests and independent review
-are authorized. Publication is a separate final gate because Git pushes/PRs can
-create Vercel Preview deployments and merging creates Production deployment.
-No prior release grant is reused. Prepare a concrete reviewed change before asking
-for any missing release authority. Do not stop local work merely because it is missing.
+Local planning, implementation and review are complete. Kelsey now directly requests
+the reviewed updates pushed live; docs/evidence/ux1-release/authority.md records exact
+repository/target and push/PR/Preview/merge/Production/verification effects. Canonical
+review/attestation and exact hosted checks remain required; no prior grant is reused.
 
 ## 2. Baseline and isolation
 
@@ -143,14 +142,15 @@ another program stage. Update this table and CURRENT_HANDOFF; no duplicate backl
 | --- | --- | --- |
 | Plan and policy | Store and review the prospective cleanup correction before affected runtime edits | Original PASS preserved; cleanup policy PASS at6d77046, C0/H0/M0/L0 |
 | Local implementation | Preserve four-step flow; remove decline controls and extra notices; make optional answers clearable | Cleanup implemented; optional clearing and concise copy verified locally |
-| Verification and independent review | Required checks, revised browser matrix, preserved artifacts and fresh final cleanup review | Original PASS at1207be2 preserved; cleanup tests/build/browser PASS; independent final local PASS atbc22ae1, C0/H0/M0/L0; four canonical release gates remain |
-| Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Not authorized or started |
+| Verification and independent review | Required checks, revised browser matrix, preserved artifacts and fresh final cleanup review | Original PASS at1207be2 preserved; cleanup tests/build/browser PASS; independent final local PASS atbc22ae1, C0/H0/M0/L0; three canonical attestation gates remain |
+| Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Directly authorized September16; canonical candidate/review/attestation next |
 | Direct timer handoff | After UX delivery is verified, continue only unfinished timer M1 under section 7 below | Queued; Codex owns continuation |
 
 The plan/policy checkpoint is local prospective preparation. It does not create a
 canonical attestation or claim acceptance. Keep the existing validator unchanged:
-until exact delivery authority and the final canonical manifest/review/attestation
-exist, expect four Revision 20 diagnostics. They remain failures and block release;
+Direct delivery authority is now recorded. Until the final canonical manifest/review/
+attestation exist, expect three Revision20 diagnostics. The earlier local four-error
+receipts remain preserved history. They remain failures and block release;
 never suppress them or treat other diagnostics as expected. Local implementation
 may follow the independent prospective-policy review under the direct user grant.
 
@@ -179,7 +179,7 @@ Use fictional profiles against the local production build, with 360×800 and
 Required commands from `web/`: `npm run plan:check`, `npm run typecheck`, `npm test`,
 `npm run build`, plus the new local browser QA command recorded in validation.
 From root: `git diff --check`. Preserve actual exit codes, timestamps and log hashes.
-Full plan validation is not PASS while the four disclosed release gates remain.
+Full plan validation is not PASS while the three canonical attestation gates remain.
 Saved fixtures and tests do not prove scholarship facts are current or hosted health.
 
 Freeze complete local candidate before fresh-context read-only review. Manifest the

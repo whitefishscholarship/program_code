@@ -1,0 +1,132 @@
+{
+  "scope": "UX1 release validation; three canonical attestation gates remain before final review; no hosted or freshness claim",
+  "commands": [
+    {
+      "name": "plan-check",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:03:41.355655+00:00",
+      "completedAt": "2026-09-16T16:04:20.677323+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1-release/plan-check.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "4ba17dbd0f819a83edbf0c590775e9832f00cfe91c9481bcd345802fb30a094a",
+      "archiveSha256": "55a3314acb43f3cd55b342b684defa64533bbb4ccffcbe9129d28d8d6388bded"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:04:20.677576+00:00",
+      "completedAt": "2026-09-16T16:04:25.636305+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-release/typecheck.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "archiveSha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:04:25.636646+00:00",
+      "completedAt": "2026-09-16T16:05:16.967861+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-release/tests.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "749fe1e68bbc344b31b291ca4acbba9e07d5c6e78e3e58b6d54c9b8b868b8c7e",
+      "archiveSha256": "4fe3ddf9521ddced60c917e8ec13f582305e1b0422879cee812ba5a9cdc4b240"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:05:16.968131+00:00",
+      "completedAt": "2026-09-16T16:05:23.546720+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-release/build.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "685874ce19b9fd0d4fb7af580923c32b82bdaa1c5f2f7bde49f93ecebf05102b",
+      "archiveSha256": "0da366e459009a2256d703d02d68cedf0a6270d6e79cce0dde3fd6634ecbe854"
+    },
+    {
+      "name": "runtime-trace",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/p9-production-runtime.ts",
+        "--require-build-trace"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:05:23.547016+00:00",
+      "completedAt": "2026-09-16T16:05:23.977992+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-release/runtime-trace.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "3bf03f5d9dda491db79df017cad296de97bf05c87e6454cf1c3a761860b75360",
+      "archiveSha256": "76f1053787a5ad950a41a08bb3acede9a063d769a4795f3ef9446a1b84306d04"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey",
+      "startedAt": "2026-09-16T16:05:23.978413+00:00",
+      "completedAt": "2026-09-16T16:05:24.003386+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-release/whitespace.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "b6a66528dfc8eeeb0ac2ec68bf1bbc68e7182c56d79b146bea7020f4660d381c"
+    },
+    {
+      "name": "hosted-mode-plan",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/validate-build-plan.ts"
+      ],
+      "environment": {
+        "GITHUB_ACTIONS": "true"
+      },
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T16:05:54.395904+00:00",
+      "completedAt": "2026-09-16T16:06:30.420920+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1-release/hosted-mode-plan.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "db2d5e2a681977260d064e8f1f9f18cb8b49e9076c134784040f7fa9cbe081e7",
+      "archiveSha256": "5d1688da5cae5a64c0be80c2070f964a1335c57971b3474d75d01d6852c27beb"
+    }
+  ],
+  "summary": {
+    "tests": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "runtimeTrace": "PASS; no Google/Drive/Sheets runtime capability",
+    "planLocal": "FAIL: only3 missing canonical attestation artifacts",
+    "planHostedMode": "FAIL: only3 missing canonical attestation artifacts",
+    "runtimeBrowserEvidence": "Reuse exact byte-identical9db5723 runtime and its independent mobile/desktop review; hosted checks follow publication.",
+    "canonicalAcceptanceBeforeAttestation": false
+  }
+}

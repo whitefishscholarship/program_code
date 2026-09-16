@@ -462,7 +462,13 @@ public-only exports. The September16 correction in UX plan section4a removes vis
 prefer-not/sensitive-skip controls and extra notices, with clearable optional answers;
 review that committed prospective correction before affected runtime edits. Local execution
 is directly authorized; final canonical acceptance and release effects are not. Keep
-all historical artifacts and validator gates intact; disclose the four outstanding
+all historical artifacts and validator gates intact; disclose outstanding
 Revision20 release diagnostics. The direct timer handoff in plan section7 is required
 after verified UX delivery and is owned by Codex. Do not mix timer implementation
 into UX1 or deploy the saved pre-UX timer tree.
+
+The September16 direct UX1 live instruction is recorded in
+`docs/evidence/ux1-release/authority.md` and current PLAN-REV20 state. It supersedes
+only the earlier missing-publication status for this release; push/PR/automatic
+Preview/merge/Production and exact verification are authorized under normal review,
+attestation and CI gates. No historical evidence or acceptance rule is changed.

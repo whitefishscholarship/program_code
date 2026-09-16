@@ -1,3 +1,29 @@
+# UX1 live release authorized — canonical candidate next
+
+Kelsey directly requests: Updates push live. If not, do so. Authority is recorded in
+docs/evidence/ux1-release/authority.md and PLAN-REV20. Current local branch/worktree
+codex/ux1-four-screen-journey, /private/tmp/program_code-ux1-four-screen-journey.
+Fresh remote main and live health equal aae973238bed8651c3404b17cd51c1385f457075;
+preflight verifies Whitefish GitHub publishing identity and existing Vercel web project.
+Original reviewed runtime9db5723/closeout7a8dc4d and all evidence remain preserved.
+
+Next owner Codex: finish required checks; freeze complete authority-bearing candidate;
+fresh independent canonical PLAN-REV20 review; exact two-file direct-child attestation;
+actual local and hosted-mode plan checks0. Normal authenticated HTTPS Git push with
+command-local gh helper; PR and automatic Preview; verify exact CI/Preview before
+ancestry-preserving merge; verify exact Production health/API/browser after. Default
+SSH transport fails; Vercel CLI account/token is unsuitable, so use existing signed-in
+Whitefish Vercel browser plus Git integration. Do not change accounts/credentials.
+
+Before attestation the three remaining manifest/review/attestation diagnostics are
+real gates. Do not suppress them. After attestation keep branch tip locked; save
+hosted observations outside the repository until delivered. No extra closeout push.
+At verified delivery execute UX plan section7's direct timer handoff into unfinished
+M1 with009fa57 and confirmed recipient; preserve all source/input/activation gates.
+The older no-publication sections below are historical only.
+
+---
+
 # UX1 all categories expanded — locally reviewed preview ready
 
 User's requested category visibility refinement is complete locally. Resume
