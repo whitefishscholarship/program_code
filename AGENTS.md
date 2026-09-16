@@ -472,3 +472,12 @@ The September16 direct UX1 live instruction is recorded in
 only the earlier missing-publication status for this release; push/PR/automatic
 Preview/merge/Production and exact verification are authorized under normal review,
 attestation and CI gates. No historical evidence or acceptance rule is changed.
+
+## Plan Revision 21 — volunteer-hours follow-up removal
+
+Follow canonical Revision21 and docs/evidence/PLAN-REV21.md for this one requested
+UX2 follow-up. Remove the hours question/dropdown only, retain service checkbox and
+all other behavior, and submit null for the hidden legacy field. Review committed
+prospective policy before runtime edits; preserve historical schema/tests/reviews,
+full validation, fresh final review, exact attestation and live verification. The
+session live-publish preference applies. Preserve the required timer M1 handoff.

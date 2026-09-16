@@ -1,0 +1,78 @@
+{
+  "recordedAt": "2026-09-16T17:04:14.306Z",
+  "timestampMeaning": "Evidence consolidation after command completion; raw outputs preserved losslessly",
+  "commands": [
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "logArchive": "docs/evidence/ux2-hours/ux2-npm-ci.log.json",
+      "decodedSha256": "3ffc0685dd68136eef44970d0e42a71692eb46d28e790b32523b3436cfa3a9b3"
+    },
+    {
+      "command": "npm run plan:check (original policy)",
+      "exitCode": 1,
+      "logArchive": "docs/evidence/ux2-hours/ux2-policy-plan.log.json",
+      "decodedSha256": "4a5d7b208f69d8c8550305dcde9c6a93cb3e86d7e0a49ad9c9c65a2829587ef4"
+    },
+    {
+      "command": "npm run plan:check (corrected policy)",
+      "exitCode": 1,
+      "logArchive": "docs/evidence/ux2-hours/ux2-policy-plan-final.log.json",
+      "decodedSha256": "914cfb4ce2387866acabfc19b4099c67b46b3f48c60c4721daf13185760d8e13"
+    },
+    {
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "logArchive": "docs/evidence/ux2-hours/ux2-plan.log.json",
+      "decodedSha256": "914cfb4ce2387866acabfc19b4099c67b46b3f48c60c4721daf13185760d8e13"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "logArchive": "docs/evidence/ux2-hours/ux2-typecheck.log.json",
+      "decodedSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "logArchive": "docs/evidence/ux2-hours/ux2-tests.log.json",
+      "decodedSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "logArchive": "docs/evidence/ux2-hours/ux2-build.log.json",
+      "decodedSha256": "60983ff4e48aef11eda1bd9838c783922d5f34e852781f54e4f4a61ac0c2ca2a"
+    },
+    {
+      "command": "node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+      "exitCode": 0,
+      "logArchive": "docs/evidence/ux2-hours/ux2-runtime.log.json",
+      "decodedSha256": "16b0f4c4db498bf0479c63a3c86e9c74e6eeebffd1a9cccdfb818e2ee7604aa6"
+    }
+  ],
+  "expectedPreAttestationDiagnostics": [
+    "Missing required file: docs/evidence/PLAN-REV21-manifest.json",
+    "Missing required file: docs/reviews/PLAN-REV21.json",
+    "PLAN-REV21 requires a committed manifest/review attestation in current history"
+  ],
+  "initialPolicyFailure": "Fourth handoff-revision marker diagnostic fixed in policy9ecc92e and independently rechecked; original failed log retained.",
+  "canonicalAcceptance": false,
+  "whitespace": {
+    "command": "git diff --check",
+    "exitCode": 0
+  },
+  "historicalRuntimeCiEvidencePathsPreserved": 778,
+  "historicalStateAndAmendmentsPreserved": true,
+  "runtimeChangedPaths": [
+    "web/src/components/InterviewWizard.tsx"
+  ],
+  "browserPath": "docs/evidence/ux2-hours/browser.json",
+  "noTestOrDependencyChanges": true,
+  "pending": [
+    "canonical final review and direct-child two-file attestation",
+    "actual local and hosted-mode validator0",
+    "exact Preview/CI, merge and Production verification",
+    "local post-delivery handoff preserving timer11f5cad provenance"
+  ]
+}

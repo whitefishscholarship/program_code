@@ -823,3 +823,16 @@ full candidate, add canonical direct-child attestation, publish via established 
 and Vercel integration, verify Preview/CI before merge and exact Production after.
 No new runtime/validator scope or historical rewrite. Owner Codex, direct timer
 handoff follows verified delivery under its existing M1 boundary.
+
+## D-UX2 — remove the volunteer-hours qualifier (September16,2026)
+
+Evidence: direct user request and screenshot; PLAN-REV21.md. Remove the complete
+conditional question/dropdown while retaining community service. Hiding a live
+legacy value could make results depend on an invisible answer, so remove its UI
+state and submit null. Keeping the old optional dropdown would not satisfy the
+request; a replacement number input would add an unrequested question. Preserve
+legacy schema/matcher compatibility and historical tests; no facts change.
+Revision21 records the narrow supersession before implementation and requires
+independent policy/final reviews and normal exact release gates. Reversal would
+be a later reviewed UI change, never history rewrite. Timer handoff remains owned
+by Codex and resumes unfinished M1 after the verified live refinement.

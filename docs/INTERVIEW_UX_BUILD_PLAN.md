@@ -252,3 +252,15 @@ do not restore external data or rewrite history. A deployed rollback is a separa
 explicit effect. Stop affected work on source drift, unexpected validation failures,
 scope expansion or review findings; record owner and next action. Complete all
 unaffected local work. After verified UX delivery use section 7 directly.
+
+## September16 UX2 follow-up — remove volunteer-hours question
+
+UX1 was delivered in PR48 as c204240; complete live evidence and timer transfer are
+saved locally at11f5cad in /private/tmp/program_code-ux1-live-closeout. The user now
+requests removal of the volunteer-hours dropdown. Canonical Revision21 prospectively
+supersedes this plan's conditional-hours UI requirement only. Keep service checkbox,
+four screens, optional answers, all expanded categories and Back/Edit. Legacy hours
+remain supported by schema/tests; current UI submits null. One-file runtime scope
+and checks are in Revision21; all earlier reviews remain immutable. After verified
+UX2 delivery, continue the section7 timer handoff from fresh main containing both
+UX releases, preserving the437-record inventory and confirmed email recipient.

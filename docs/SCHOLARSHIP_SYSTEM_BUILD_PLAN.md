@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 20
+Plan revision: 21
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -2001,3 +2001,43 @@ hosted-mode validation to pass. Keep attestation at tip until exact Preview/CI a
 ancestry-preserving merge, then verify exact Production/application behavior.
 No runtime additions or validation exceptions are needed. Preserve section7's direct
 timer handoff and execute it after verified delivery, within the timer's existing gates.
+
+## Plan Revision 21 — UX2 remove volunteer-hours follow-up
+
+Kelsey directly requested on September16,2026: "Remove the drop-down qualifier for
+the number of hours in the form", with an image of the optional volunteer-hours
+question below the selected community-service checkbox. The immediately preceding
+live-publish instruction persists for this requested follow-up on the same website.
+Use docs/evidence/PLAN-REV21.md for exact authority, target and effects.
+
+This one maintenance release removes the entire optional volunteer-hours label and
+dropdown from step3. Preserve the community-service checkbox, its service value,
+every other question, the four-screen order, expanded categories and Back/Edit.
+Remove only the now-unused UI import/state and hours-specific activity clearing.
+Submit volunteerHours:null, including edits initialized with a legacy hours value,
+so an invisible prior answer cannot affect results. Preserve the legacy answer
+schema, options and matching tests for compatibility; no matcher/catalog changes.
+This directly requested scope supersedes only earlier requirements to display the
+conditional hours follow-up. Historical plans, tests, reviews and manifests remain
+unaltered. Do not edit the historical UX1 QA scripts that exercised that old UI.
+
+Commit this prospective policy and obtain fresh-context read-only review before
+product edits. Run npm ci, plan:check, typecheck, npm test, npm run build, built
+runtime capability trace and git diff --check. Check phone/desktop browser flow:
+service on/off, no hours question/select, Back/Edit retention, blank optional screens,
+results with service selection and exact public CSV. Legacy hours must submit null.
+Keep the validator and all other acceptance gates unchanged. Before canonical
+attestation only the three new missing manifest/review/attestation diagnostics are
+expected. Freeze and independently review the entire final baseline-to-candidate
+change set. Add only PLAN-REV21 manifest/review as its direct-child attestation;
+both actual local and hosted-mode plan checks must pass before publishing.
+
+Delivery uses the existing repository/Vercel Git integration: exact reviewed head,
+Preview and CI verification before ancestry-preserving merge, exact Production
+health/catalog/UI verification afterward. No source/workbook reads or writes,
+credentials/configuration/dependency changes, paid services, notifications or timer
+activation. Stage pointers and all historical amendment records remain unchanged.
+The required timer M1 handoff remains next. Preserve local UX1 closeout11f5cad and
+its carried437-record inventory; carry this delivered refinement into the timer's
+fresh-main continuation before any future timer code/release. Do not deploy an old
+pre-refinement tree. Codex owns the post-delivery handoff and existing setup unknowns.

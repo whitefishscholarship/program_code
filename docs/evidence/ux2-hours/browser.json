@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-09-16T17:04:14.306Z",
+  "origin": "http://127.0.0.1:3221/",
+  "surface": "CUA actual browser against production build",
+  "componentSha256": "32f09597a40f7fd937b6acb2248da93f8d5ba98041a73992319e98edfe774b92",
+  "viewports": [
+    {
+      "width": 360,
+      "height": 800
+    },
+    {
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "checks": {
+    "orderedFourScreens": true,
+    "serviceCheckboxRetained": true,
+    "serviceOnOffNoHoursQuestionOrSelect": true,
+    "backRetainsService": true,
+    "editRetainsService": true,
+    "editClearRecalculatesResults": true,
+    "optionalScreensBlankReachResults": true,
+    "criteriaRemainExpanded": true,
+    "noHorizontalOverflow": true,
+    "capturedWarningsErrors": [],
+    "viewportRestored": true
+  },
+  "exactResultAndCsvComparisons": [
+    {
+      "syntheticActivities": [],
+      "count": 384,
+      "idsSha256": "eb7c2356c7e2389596d49773e3ff7d91eadc278d1dff723682145b29579e809d",
+      "csvSha256": "b82ef3bd8c03dc2b098077bdb9c3689e18ce347bf9bfe97a57d103586be8d6c4"
+    },
+    {
+      "syntheticActivities": [
+        "service"
+      ],
+      "count": 384,
+      "idsSha256": "00637a52afbf3784708bd706b10077161dc173764c2b650a0931589a2dce3f99",
+      "csvSha256": "d7f5a8deab6cff05e90d6d0e0ebf5425a65ab25b5a13c5c7a8ddfcae42d6f78e"
+    }
+  ],
+  "legacyHoursVerification": "Static reviewed submit path always assigns null and no initial/state hours read remains, regardless of legacy initialAnswers. Legacy schema, options and matcher tests are unchanged and pass. No synthetic mounted legacy-initial browser probe claimed.",
+  "limits": [
+    "No new storage/request instrumentation was installed. Existing privacy implementation is unchanged; no universal privacy proof claimed.",
+    "CSV data-URI decoded bytes were compared, not download-event capture.",
+    "No scholarship current-availability claim."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "planRevision": 20,
+  "planRevision": 21,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
   "lastUpdated": "2026-09-16",
   "repository": {
@@ -933,6 +933,22 @@
           "basis": "Direct request after reviewing the local UX result: Updates push live. If not, do so. Existing repository workflow and prior explanations identify automatic Preview and Production effects.",
           "scope": "Publish reviewed UX1 on codex/ux1-four-screen-journey to whitefishscholarship/program_code: normal push/PR, Vercel Preview, CI/exact preview verification, ancestry-preserving merge, Vercel Production and exact hosted verification on web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, web-two-gules-45.vercel.app. No data/source/workbook, credential/configuration, paid, monitoring/email or provider action. Requires full canonical review/attestation and unchanged historical gates."
         }
+      },
+      {
+        "id": "PLAN-REV21",
+        "status": "attestation-gated",
+        "baselineCommit": "c2042402e137fec4763ee33d40833d9069cf904b",
+        "evidencePath": "docs/evidence/PLAN-REV21.md",
+        "manifestPath": "docs/evidence/PLAN-REV21-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV21.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-16",
+          "evidencePath": "docs/evidence/PLAN-REV21.md",
+          "basis": "Direct removal request with persistent immediately preceding same-site live-publish instruction.",
+          "scope": "UX2 volunteer-hours UI removal only; normal push/PR/Preview/CI/merge/Production and exact verification on existing Whitefish project web prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, web-two-gules-45.vercel.app. No source/workbook/configuration/credential/paid/monitor/email effects."
+        }
       }
     ]
   },
@@ -1386,5 +1402,19 @@
     "releaseAuthorityEvidencePath": "docs/evidence/ux1-release/authority.md",
     "releasePreflightPath": "docs/evidence/ux1-release/preflight.json",
     "releaseValidationPath": "docs/evidence/ux1-release/validation.json"
+  },
+  "volunteerHoursUx": {
+    "planId": "UX2",
+    "status": "implemented-verified-awaiting-canonical-review",
+    "baselineCommit": "c2042402e137fec4763ee33d40833d9069cf904b",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV21.md",
+    "runtimePaths": [
+      "web/src/components/InterviewWizard.tsx"
+    ],
+    "policyReviewPath": "docs/evidence/ux2-hours/policy-review.json",
+    "validationPath": "docs/evidence/ux2-hours/validation.json",
+    "timerContinuationCheckpoint": "11f5cad6ecd1a91b82c033d8a666d6ddd6c361a8",
+    "timerContinuationWorktree": "/private/tmp/program_code-ux1-live-closeout",
+    "nextWork": "unfinished timer M1 only after verified UX2 delivery; preserve current live UX"
   }
 }
