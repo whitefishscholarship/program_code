@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { INTERVIEW_APPLICATION_MODES, InterviewAnswersSchema, type InterviewAnswers } from '@/lib/interviewMatcher';
-import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES, VOLUNTEER_HOURS } from '@/lib/interviewQuestions';
+import { ACTIVITY_QUESTIONS, EDUCATIONAL_STATUSES, RESIDENCE_STATES, SPECIAL_CRITERIA, SPECIAL_CRITERIA_CATEGORIES, TARGET_SCHOOL_TYPES } from '@/lib/interviewQuestions';
 import { COVERAGE_INTERESTS, STUDENT_ORGANIZATIONS, FINANCIAL_NEED_INTEREST } from '@/lib/coverageQuestions';
 
 const stepHeadings = ['Start with two details', 'More details and application preferences', 'Study plans and activities', 'Helpful scholarship connections'] as const;
@@ -20,7 +20,6 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
   const [collegeAccepted, setCollegeAccepted] = useState<InterviewAnswers['collegeAccepted']>(initialAnswers?.collegeAccepted === 'prefer_not_to_answer' ? null : initialAnswers?.collegeAccepted ?? null);
   const [gapYear, setGapYear] = useState<InterviewAnswers['gapYear']>(initialAnswers?.gapYear === 'prefer_not_to_answer' ? null : initialAnswers?.gapYear ?? null);
   const [activities, setActivities] = useState<InterviewAnswers['activities']>((initialAnswers?.activities ?? []).filter(id => !initialAnswers?.sensitiveCriteriaSkipped || id !== 'caregiving'));
-  const [volunteerHours, setVolunteerHours] = useState<InterviewAnswers['volunteerHours']>(initialAnswers?.volunteerHours ?? null);
   const [financialNeedInterest, setFinancialNeedInterest] = useState<InterviewAnswers['financialNeedInterest']>(initialAnswers?.sensitiveCriteriaSkipped || initialAnswers?.financialNeedInterest === 'prefer_not_to_answer' ? null : initialAnswers?.financialNeedInterest ?? (initialAnswers?.financialNeed ? 'yes' : null));
   const [discoveryInterests, setDiscoveryInterests] = useState<NonNullable<InterviewAnswers['discoveryInterests']>>(initialAnswers?.discoveryInterests ?? []);
   const [studentOrganizations, setStudentOrganizations] = useState<NonNullable<InterviewAnswers['studentOrganizations']>>(initialAnswers?.organizationResponse === 'prefer_not_to_answer' ? [] : initialAnswers?.studentOrganizations ?? []);
@@ -45,7 +44,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
     if (step !== stepHeadings.length - 1 || !validCore()) return;
     const parsed = InterviewAnswersSchema.safeParse({
       gpa: Number(gpa), residenceState, educationalStatus, targetSchoolTypes, collegeAccepted, gapYear, activities,
-      volunteerHours: activities.includes('service') ? volunteerHours : null,
+      volunteerHours: null,
       financialNeed: false, financialNeedInterest, discoveryInterests, studentOrganizations, organizationResponse,
       selectedCriteria, sensitiveCriteriaSkipped: false, preferredApplicationModes,
     });
@@ -86,8 +85,7 @@ export default function InterviewWizard({ initialAnswers, onComplete, onCancel }
       {step === 2 && <div className="mt-7 space-y-7">
         <CheckboxGroup legend="Education interests">{COVERAGE_INTERESTS.map(item => <Choice key={item.id} id={`discovery-${item.id}`} label={item.label} checked={discoveryInterests.includes(item.id)} onChange={() => toggle(item.id, discoveryInterests, setDiscoveryInterests)} />)}</CheckboxGroup>
         {renderCriteria(['Career Interests', 'Extracurriculars & Activities'])}
-        <CheckboxGroup legend="Activities and responsibilities">{ACTIVITY_QUESTIONS.map((item) => <Choice key={item.id} id={item.controlId} label={item.label} checked={activities.includes(item.id)} onChange={() => { if (item.id === 'service' && activities.includes('service')) setVolunteerHours(null); toggle(item.id, activities, setActivities); }} />)}</CheckboxGroup>
-        {activities.includes('service') && <label htmlFor="student-volunteer-hours" className="block text-base font-bold">Approximately how many volunteer hours have you completed? <Optional /><select id="student-volunteer-hours" value={volunteerHours ?? ''} onChange={(event) => setVolunteerHours((event.target.value || null) as InterviewAnswers['volunteerHours'])} className="mt-3 block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 font-normal sm:max-w-sm"><option value="">Choose a range</option>{VOLUNTEER_HOURS.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>}
+        <CheckboxGroup legend="Activities and responsibilities">{ACTIVITY_QUESTIONS.map((item) => <Choice key={item.id} id={item.controlId} label={item.label} checked={activities.includes(item.id)} onChange={() => { toggle(item.id, activities, setActivities); }} />)}</CheckboxGroup>
       </div>}
 
       {step === 3 && <div className="mt-7 space-y-7">

@@ -2,6 +2,11 @@
 
 Plan revision: 21
 
+Prospective policy PASS at9ecc92e; review in docs/evidence/ux2-hours/policy-review.json.
+Implementation and required application/browser checks passed. Canonical plan check
+still reports exactly three expected missing REV21 artifacts. Freeze/final review,
+exact attestation, both actual validators0, and hosted release remain next.
+
 September16,2026. Branch codex/ux2-remove-volunteer-hours in
 /private/tmp/program_code-ux2-remove-volunteer-hours; fresh live baseline
 c2042402e137fec4763ee33d40833d9069cf904b. User directly requests removal of the
