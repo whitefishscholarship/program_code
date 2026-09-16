@@ -1,25 +1,38 @@
-# UX1 cleanup implemented — final independent local review next
+# UX1 cleanup locally reviewed — preview ready; release gate next
 
-Plan revision20. User-requested prefer-not/sensitive-skip controls and extra notices
-are removed; substantive questions, optional clearing and four-step Back/edit remain.
-Runtime scope is exactly the three UI files in UX plan section4a. Policy candidate
-6d77046 passed independent review; all original UX1 artifacts remain immutable.
-Required typecheck/tests/build and desktop/mobile browser matrix passed, including
-legacy skipped-answer normalization, exact matcher/CSV, storage/request/log checks.
-Evidence: docs/evidence/ux1-cleanup/validation.json and browser/browser.json.
-The plan validator still reports exactly four pending canonical release gates.
-No canonical acceptance, push, hosted deployment or timer activation is claimed.
+Plan revision20. The requested optional-answer and notice cleanup is complete locally.
+Resume worktree /private/tmp/program_code-ux1-four-screen-journey on
+codex/ux1-four-screen-journey. Reviewed candidate:
+bc22ae1f0283695db616080ff589df519416fe67. Cleanup manifest SHA256:
+14355c906db6c2b006f973e7ff314a66d469ed9b76e691521834aa68675222e9.
+Independent local review in docs/evidence/ux1-cleanup/local-review.json is PASS,
+C0/H0/M0/L0. It binds that candidate only; this later status update does not rebind it.
 
-Next: freeze this complete local candidate and obtain fresh independent final review
-with the cleanup local-manifest/review. After PASS, save status and show the refreshed
-local preview at http://127.0.0.1:3220. Release remains subject to direct informed
-Git/Preview/Production authority and normal canonical attestation/hosted verification.
-No earlier publication question has been answered by the cleanup request.
+Removed visible prefer-not/sensitive-skip controls and the extra generic notices;
+retained substantive questions, optional clearing and four-step Back/edit behavior.
+Local tests/typecheck/build, exact matcher/public CSV and mobile/desktop browser checks
+passed. Independent browser rerun, legacy compatibility and preservation checks passed.
+Original UX1 evidence remains byte-identical. All four canonical Revision20 release
+authority/manifest/review/attestation diagnostics remain; no canonical acceptance.
 
-Required direct timer handoff is unchanged: UX plan section7, checkpoint009fa57,
-437-record inventory and confirmed kelsey@waypointfranchise.com. Owner Codex resumes
-unfinished M1 after verified UX delivery (or explicit earlier reprioritization).
-Preserve pinned R5 input/provenance and use a post-UX main baseline for later timer work.
+Local preview is running at http://127.0.0.1:3220. Refresh to see the cleanup; if stopped,
+run from web: npm run build, then npm run start -- --hostname 127.0.0.1 --port 3220.
+New QA is web/scripts/qa-ux1-cleanup.cjs; command/receipts are in cleanup/validation.json.
+Do not overwrite frozen evidence during future QA; use a separate output destination.
+
+Next action owner Codex: user review of the concrete local result in
+cleanup/RELEASE_CANDIDATE.md, then obtain missing direct informed push/PR/Preview/
+merge/Production/hosted-verification effects for this UX release. The cleanup request
+did not answer the earlier publication question. Refreeze/review the authority-bearing
+candidate, satisfy canonical direct-child attestation and exact Preview/CI/Production
+checks before delivery. No further feature work or repeated QA unless changed bytes
+or findings justify it. Nothing has been pushed or deployed.
+
+Required direct timer handoff remains UX plan section7. Codex resumes unfinished M1
+after verified UX delivery or explicit earlier reprioritization. Preserve009fa57,
+437-record inventory, pinned R5 input/provenance, kelsey@waypointfranchise.com and all
+saved owners/triggers. Later timer implementation starts from post-UX main and must
+retain this delivered UX. No timer activation, email/source/workbook or provider action.
 
 ---
 

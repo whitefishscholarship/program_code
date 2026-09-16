@@ -127,7 +127,7 @@ another program stage. Update this table and CURRENT_HANDOFF; no duplicate backl
 | --- | --- | --- |
 | Plan and policy | Store and review the prospective cleanup correction before affected runtime edits | Original PASS preserved; cleanup policy PASS at6d77046, C0/H0/M0/L0 |
 | Local implementation | Preserve four-step flow; remove decline controls and extra notices; make optional answers clearable | Cleanup implemented; optional clearing and concise copy verified locally |
-| Verification and independent review | Required checks, revised browser matrix, preserved artifacts and fresh final cleanup review | Original PASS at1207be2 preserved; cleanup tests/build/browser PASS; final local review pending; four canonical release gates remain |
+| Verification and independent review | Required checks, revised browser matrix, preserved artifacts and fresh final cleanup review | Original PASS at1207be2 preserved; cleanup tests/build/browser PASS; independent final local PASS atbc22ae1, C0/H0/M0/L0; four canonical release gates remain |
 | Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Not authorized or started |
 | Direct timer handoff | After UX delivery is verified, continue only unfinished timer M1 under section 7 below | Queued; Codex owns continuation |
 
