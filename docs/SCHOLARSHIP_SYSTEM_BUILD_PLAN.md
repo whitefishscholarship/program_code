@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 19
+Plan revision: 20
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1947,3 +1947,33 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## Plan Revision 20 — four-screen interview journey
+
+Kelsey directly authorized the complete UX plan and local execution on September 16,
+2026, explicitly prioritizing it before the season timer and requiring a direct timer
+handoff. Adopt docs/INTERVIEW_UX_BUILD_PLAN.md for this one maintenance release.
+The new route is original screens 1,4,2,3 with a visible four-step progression, primary
+Continue on the first three screens and results on the fourth. Preserve all controls
+and optional answers; only existing GPA/school basics require input. Back/edit retain
+current-visit state and final submission recomputes from revised answers. No persistent
+answer storage, matching/schema/catalog changes or new question is authorized.
+
+This prospectively supersedes only Revision16's early-results and optional-section
+navigation behavior; preserve its historical record and all other invariants. Completed
+stages and stage pointers remain unchanged; interviewUx tracks local preparation.
+Commit and independently review this prospective plan/policy before product edits.
+Local implementation and review follow under the direct user grant; canonical
+acceptance, final attestation and delivery remain gated. Keep the validator unchanged
+and report all four Revision20 delivery-authority/manifest/review/attestation failures
+until settled. No diagnostic suppression or acceptance waiver is authorized. Freeze
+and review the full final candidate; all normal canonical attestation gates still apply.
+
+Runtime changes are confined to InterviewWizard.tsx; scope changes require prior review.
+No source/workbook access or changes, credentials/configuration, dependencies, provider
+contact, monitoring, email sending, paid action, rollback or remote release is granted.
+Prepare the local result before requesting any missing informed Git/Preview/Production
+effects. At verified UX delivery, Codex must execute the direct timer handoff in section7
+of the UX plan, retaining the saved timer checkpoint and incorporating delivered UX
+into any subsequent timer implementation/release baseline.

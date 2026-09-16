@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 19,
+  "planRevision": 20,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-14",
+  "lastUpdated": "2026-09-16",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -466,7 +466,8 @@
       }
     ],
     "deliveryBlockers": [
-      "P9-attestation-and-delivery-pending"
+      "P9-attestation-and-delivery-pending",
+      "PLAN-REV20-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression"
     ]
   },
   "governance": {
@@ -917,6 +918,22 @@
             "R5_R7"
           ]
         }
+      },
+      {
+        "id": "PLAN-REV20",
+        "status": "attestation-gated",
+        "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+        "evidencePath": "docs/evidence/PLAN-REV20.md",
+        "manifestPath": "docs/evidence/PLAN-REV20-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV20.json",
+        "deliveryAuthorization": {
+          "authorized": false,
+          "authorizedBy": null,
+          "authorizedAt": null,
+          "evidencePath": null,
+          "basis": "User authorized local UX plan and execution; no direct informed release effects were granted.",
+          "scope": "Await exact UX branch/PR/automatic Preview/merge/Production/hosted verification authority after a concrete reviewed local candidate."
+        }
       }
     ]
   },
@@ -1315,5 +1332,37 @@
     "canonicalReviewPath": "docs/reviews/PLAN-REV18.json",
     "completionRequiresExactHostedVerification": true,
     "nextStageAuthorized": false
+  },
+  "interviewUx": {
+    "planId": "UX1",
+    "status": "local-policy-preparation-review-pending",
+    "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+    "planPath": "docs/INTERVIEW_UX_BUILD_PLAN.md",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV20.md",
+    "localImplementationAuthorized": true,
+    "policyReviewRequiredBeforeImplementation": true,
+    "policyReviewPath": "docs/evidence/ux1/policy-review.json",
+    "publicationAuthorized": false,
+    "runtimePaths": [
+      "web/src/components/InterviewWizard.tsx"
+    ],
+    "requiredAnswers": "existing GPA and target school type only",
+    "screenOrder": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "timerHandoff": {
+      "planPath": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+      "worktree": "/private/tmp/program_code-season-monitor-plan",
+      "branch": "codex/scholarship-season-monitor-plan",
+      "checkpoint": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+      "nextCheckpoint": "unfinished M1 setup",
+      "owner": "Codex",
+      "trigger": "verified UX delivery or explicit earlier user prioritization",
+      "recipient": "kelsey@waypointfranchise.com",
+      "section": "docs/INTERVIEW_UX_BUILD_PLAN.md section 7"
+    }
   }
 }

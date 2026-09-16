@@ -1,3 +1,34 @@
+# UX1 — four-screen journey first; timer follows directly
+
+Plan revision: 20. Local execution is authorized; prospective policy review is next.
+Resume `/private/tmp/program_code-ux1-four-screen-journey`, branch
+`codex/ux1-four-screen-journey`, verified main baseline
+`aae973238bed8651c3404b17cd51c1385f457075`. Read
+`docs/INTERVIEW_UX_BUILD_PLAN.md` and `docs/evidence/PLAN-REV20.md`.
+Keep only existing GPA/school answers required. New order1,4,2,3; Continue then
+results on final step; Back/edit preserve current-visit answers. No runtime edits yet.
+P9/completed stages remain complete; canonical pointers stay null. All historical
+review/attestation artifacts remain unchanged. Four Revision20 release-authority and
+final-attestation diagnostics are expected failures; no acceptance or release claimed.
+
+Required next-project handoff: UX plan section7 gives the direct return to timer M1.
+Preserve `/private/tmp/program_code-season-monitor-plan`, branch
+`codex/scholarship-season-monitor-plan`, checkpoint
+`009fa57e7def04ce2a9b49051f395c32b1393c14`. Inventory is prepared; confirm existing
+Actions allowance/zero overage and email sender/service for kelsey@waypointfranchise.com.
+Recipient is confirmed. Codex owns resumption after verified UX delivery. The saved
+timer plan/evidence and its complete original handoff remain in that worktree; its
+older monitor-only priority statement is superseded by this UX-first instruction.
+Carry only timer-owned files into a fresh post-UX baseline before later implementation
+or release. Never ship its older runtime. All research/hold/recovery routes, ETV/Fund
+the Fish and257spentoperations remain preserved there; do not replay them.
+
+No source/workbook access, email sends, timer activation, credentials/configuration,
+remote publication or deployment. Complete local UX before seeking missing release
+effects. The full pre-UX main handoff follows as historical evidence.
+
+---
+
 # R4 Whitefish identity correction — final review and delivery next
 
 Plan revision: 19.

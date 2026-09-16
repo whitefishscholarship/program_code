@@ -1,0 +1,184 @@
+# Four-screen interview journey — UX1
+
+Date: 2026-09-16. Owner: Codex. Priority: before the scholarship season timer.
+Single implementation plan for this UX maintenance release; canonical authority is
+Plan Revision 20 in SCHOLARSHIP_SYSTEM_BUILD_PLAN.md and BUILD_STATE.json.
+
+## 1. Outcome and authority
+
+Make the full four-screen interview the normal route to personalized results.
+Only the existing GPA and target-school-type answers are required. Students may
+leave every other answer blank or use existing none/unknown/prefer-not answers.
+The user expressly clarified that mandatory screens do not mean mandatory input,
+requested Back with answer editing, authorized a complete stored plan and execution,
+and required a direct handoff to the timer plan. Exact statements are recorded in
+`docs/evidence/PLAN-REV20.md`.
+
+Local planning, prospective policy, implementation, tests and independent review
+are authorized. Publication is a separate final gate because Git pushes/PRs can
+create Vercel Preview deployments and merging creates Production deployment.
+No prior release grant is reused. Prepare a concrete reviewed change before asking
+for any missing release authority. Do not stop local work merely because it is missing.
+
+## 2. Baseline and isolation
+
+- Verified GitHub main: `aae973238bed8651c3404b17cd51c1385f457075` on 2026-09-16.
+  Exact read command and UTC observation are in `docs/evidence/ux1/preflight.json`.
+- Branch: `codex/ux1-four-screen-journey`.
+- Worktree: `/private/tmp/program_code-ux1-four-screen-journey`.
+- Timer branch remains `codex/scholarship-season-monitor-plan`, saved at
+  `009fa57e7def04ce2a9b49051f395c32b1393c14`; preserve its original files and history.
+- P0–P9 and historical amendments remain complete and unchanged. Stage pointers
+  stay null; `interviewUx` tracks only this local maintenance work.
+
+## 3. Exact behavior and control inventory
+
+| New step | Existing screen | Controls retained |
+| --- | --- | --- |
+| 1 of 4 — Start with two details | 1 | Required unweighted GPA and target school type |
+| 2 of 4 — More details and application preferences | 4 | Residence, educational status, college acceptance, gap year and six application format choices; all optional |
+| 3 of 4 — Study plans and activities | 2 | Education interests, career/activity criteria, four activities, conditional volunteer hours and sensitive skip |
+| 4 of 4 — Helpful scholarship connections | 3 | Financial-need discovery preference, student organizations and clearing responses, remaining criteria and sensitive skip |
+
+Preserve all 38 special criteria, every currently configured interest/organization,
+all option values and IDs, conditional clearing, and existing eligibility semantics.
+No new question, checkbox or answer acknowledgement is introduced.
+
+- Display `Step 1 of 4` through `Step 4 of 4`; remove optional-section headings and
+  invitations to stop early. Individual optional-field labels remain accurate.
+- Steps 1–3 have one prominent `Continue` action. Step 4 has one prominent
+  `Show my results` action. No personalized-results shortcut on steps 1–3.
+- Steps 2–4 have a secondary `Back` action. Keep existing all-award browsing and
+  cancel-edit access as a visually quieter first-step exit, separate from the
+  primary progression. Leaving an edit via Back to results keeps prior submitted
+  results; completing the edited journey submits the revised answers.
+- Back does not validate or clear answers. Forward progression validates the
+  existing required core only. Blank optional screens must advance successfully.
+- Guard completion so it can occur only from the final step. Preserve validation
+  feedback for blank/out-of-range GPA and no target school selection.
+- Preserve live component state while moving backward/forward. Edit answers from
+  results repopulates the four screens; final submission replaces the previous
+  answer set and recalculates results. Clearing a prior selection takes effect.
+- Reset and page reload retain their existing clearing behavior. Answers remain
+  in volatile page memory; no local/session storage, cookies, URLs, requests,
+  logs, analytics or exports contain interview answers.
+- Continue/Back/results are keyboard accessible, visibly focused and usable at
+  360px and desktop widths. Focus follows the current step heading.
+
+## 4. Implementation boundary
+
+Runtime scope: `web/src/components/InterviewWizard.tsx` only. Existing
+ScholarshipBrowser state already supports edit/recalculation; do not change it
+unless review proves a required defect, then amend the scope before that edit.
+Add a current local browser regression script and evidence under `docs/evidence/ux1/`.
+Preserve historical QA scripts and evidence; they describe their original releases.
+No new dependency, matcher/schema change, catalog/data change, source fetch,
+spreadsheet access, provider contact, email send, credential/configuration change,
+monitor/timer implementation, paid action or remote release during local execution.
+
+## 5. Execution tracker and completion gates
+
+These are checkpoints within one UX maintenance release, not permission to start
+another program stage. Update this table and CURRENT_HANDOFF; no duplicate backlog.
+
+| Checkpoint | Work and completion gate | Status |
+| --- | --- | --- |
+| Plan and policy | Store this plan, direct timer handoff, prospective Revision 20, exact authority and baseline; freeze and independently review before runtime edits | Prepared; review pending |
+| Local implementation | Reorder the existing panels, unify progression, retain optional answers and Back/edit semantics | Pending policy review |
+| Verification and independent review | Required checks, browser acceptance matrix, preserved artifacts, exact candidate manifest, fresh-context read-only final review; resolve findings | Pending |
+| Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Not authorized or started |
+| Direct timer handoff | After UX delivery is verified, continue only unfinished timer M1 under section 7 below | Queued; Codex owns continuation |
+
+The plan/policy checkpoint is local prospective preparation. It does not create a
+canonical attestation or claim acceptance. Keep the existing validator unchanged:
+until exact delivery authority and the final canonical manifest/review/attestation
+exist, expect four Revision 20 diagnostics. They remain failures and block release;
+never suppress them or treat other diagnostics as expected. Local implementation
+may follow the independent prospective-policy review under the direct user grant.
+
+## 6. Acceptance and evidence
+
+Use fictional profiles against the local production build, with 360×800 and
+1440×1000 viewports. Check actual controls and results, not just source text.
+
+1. Exact 1→4→2→3 content order and step count; only one primary forward action;
+   no early results; blank optional screens reach results.
+2. Empty/invalid GPA and missing school type block Continue with visible errors;
+   valid basics advance. Back always works without demanding new input.
+3. Enter optional values on every panel, go Back repeatedly, verify values remain,
+   change and clear selections, then compare final ordered IDs/reasons with the
+   unchanged matcher for the final profile. Re-enter through Edit answers and
+   verify replacement rather than accumulation of prior answers.
+4. Preserve all controls, sensitive skip/clearing, conditional service hours,
+   none/not-sure/prefer-not responses and all-award access. Keep unsupported and
+   unknown choices non-excluding; no eligibility facts change.
+5. Keyboard-only forward/back traversal, heading focus, mobile/desktop layout,
+   no horizontal overflow, and screenshots of the reordered flow.
+6. Reset/reload clearing; no answer storage/requests/logs/URLs; exact public CSV
+   for visible awards/order; API catalog remains identical to the saved publication.
+
+Required commands from `web/`: `npm run plan:check`, `npm run typecheck`, `npm test`,
+`npm run build`, plus the new local browser QA command recorded in validation.
+From root: `git diff --check`. Preserve actual exit codes, timestamps and log hashes.
+Full plan validation is not PASS while the four disclosed release gates remain.
+Saved fixtures and tests do not prove scholarship facts are current or hosted health.
+
+Freeze complete local candidate before fresh-context read-only review. Manifest the
+entire verified main-to-candidate change set, hashing candidate-tree blobs. Bind the
+local policy and final reviews separately; no old review is rebound. Address all
+critical/high findings, and fix or disposition every medium/low finding with owner
+and rationale. Final canonical attestation is withheld until all release gates are
+satisfied; once added it must be the exact direct child and remain tip until delivered.
+
+## 7. Direct handoff — continue the scholarship season timer
+
+Trigger: UX release is merged and exact Production UX behavior is verified, or Kelsey
+explicitly directs resumption sooner. Codex owns this handoff; it is required closeout
+work, not an optional suggestion or a new unowned task.
+
+1. Record the exact UX candidate/attestation/merge/deployment, verification result
+   and any unresolved owner/trigger in CURRENT_HANDOFF. Point next to timer M1.
+2. Open `/private/tmp/program_code-season-monitor-plan`, branch
+   `codex/scholarship-season-monitor-plan`, retained checkpoint
+   `009fa57e7def04ce2a9b49051f395c32b1393c14`. Recover a missing worktree from that
+   retained branch without reset, force-push or history rewrite.
+3. Read AGENTS, canonical plan/state, operative CURRENT_HANDOFF and
+   `docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md`; then
+   `docs/evidence/season-monitor-m1/{inventory,setup,review,notification-preference}.json`.
+   The current UX handoff supersedes the older monitor-only priority instruction.
+4. Resume unfinished M1 setup: verify existing GitHub Actions allowance/usage and
+   zero-paid-overage protection; verify the existing email sender/service/allowance
+   for **kelsey@waypointfranchise.com**. Direct-email alerts must include findings,
+   review actions and official links; unchanged runs stay quiet. No GitHub visit is
+   required to read an alert. Recipient selection is complete; do not ask again.
+5. Reuse the finished 437-record inventory (411 awards + 26 leads), 416 public-signal
+   candidate routes, 21 manual routes and 242 proposed fetch URLs. Reproduce its
+   pinned digest with `python3 docs/evidence/season-monitor-m1/build-inventory.py --check`.
+   Preserve M0 review and partial M1 review; do not claim full M1 completion.
+6. The saved timer branch predates this UX release. Before timer code or release
+   preparation, verify fresh main includes the delivered UX; prepare a clean
+   continuation from that main, carrying only timer-owned documentation/evidence.
+   Preserve original review files and source checkpoints; never deploy the old
+   timer tree or revert the UX. Route CURRENT_HANDOFF conflicts by keeping the
+   newest operative instructions and preserving older sections as history.
+7. Follow the timer's own M1→M2→M3→M4 gates. M2 needs its selected build contract;
+   the 12-source public pilot remains M3; suppression/state writes, scheduling and
+   email sending/receipt proof remain M4 with exact authority. This UX grant does
+   not activate the timer or authorize those effects.
+
+Unresolved monitoring setup and all original research/recovery queues remain in
+the retained timer handoff. Preserve ETV/Fund the Fish as separate follow-ups,
+257 spent operations and recovery objects; no replays or source changes.
+
+## 8. Recovery, rollback and fresh-session kickoff
+
+Resume `codex/ux1-four-screen-journey` in its worktree. Read AGENTS, canonical plan,
+BUILD_STATE, operative CURRENT_HANDOFF, latest local UX review/evidence and this plan.
+Verify current Git status, baseline ancestry and candidate hashes. Execute only the
+first unfinished authorized UX checkpoint; no repeated completed reviews or tests
+unless changes, failures or unresolved concerns justify them.
+Local rollback is abandoning the UX-owned change while preserving the checkpoint;
+do not restore external data or rewrite history. A deployed rollback is a separate
+explicit effect. Stop affected work on source drift, unexpected validation failures,
+scope expansion or review findings; record owner and next action. Complete all
+unaffected local work. After verified UX delivery use section 7 directly.

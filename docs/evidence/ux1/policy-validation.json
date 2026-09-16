@@ -1,0 +1,12 @@
+{
+  "phase": "prospective-policy",
+  "startedAt": "2026-09-16T13:17:35.705566+00:00",
+  "completedAt": "2026-09-16T13:18:12.623353+00:00",
+  "command": "npm run plan:check",
+  "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+  "exitCode": 1,
+  "logPath": "/private/tmp/ux1-policy-plan.log",
+  "logSha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+  "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 4 error(s):\n- PLAN-REV20 requires direct informed delivery authority or an exact authorized local-only preparation blocker\n- Missing required file: docs/evidence/PLAN-REV20-manifest.json\n- Missing required file: docs/reviews/PLAN-REV20.json\n- PLAN-REV20 requires a committed manifest/review attestation in current history\n",
+  "interpretation": "Four pending Revision20 release gates expected; failures retained. No canonical acceptance claimed."
+}

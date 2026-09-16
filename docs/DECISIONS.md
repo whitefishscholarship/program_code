@@ -771,3 +771,18 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## D-UX1 — Four-screen journey first, direct timer continuation
+
+- Date: 2026-09-16. Status: prospective; local policy review required.
+- Evidence: Kelsey's exact request/clarification/execution grant in PLAN-REV20.md.
+- Decision: separate UX release before timer, with required progression and optional
+  nonessential answers; reorder existing screens 1,4,2,3 and retain Back/edit.
+- Alternatives: combining scheduler/email work delays independently useful UX; forcing
+  answers contradicts the user's clarification. Neither is selected.
+- Impact: navigation/wording only; original questions, data, matching and privacy remain.
+  Supersede only the prior early-results/optional-section presentation prospectively.
+- Rollback: retain local baseline; no destructive reset or deployed rollback authority.
+- Continuation: Codex must follow UX plan section7 directly into timer M1 after verified
+  UX delivery; preserve timer009fa57 and use delivered UX in later timer code baselines.

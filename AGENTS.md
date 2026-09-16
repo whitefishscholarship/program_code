@@ -451,3 +451,16 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## Plan Revision 20 — UX1 local journey change
+
+Use docs/INTERVIEW_UX_BUILD_PLAN.md for the selected four-screen UX release. Only
+existing GPA/school answers are required; all other answers remain optional. Preserve
+current-visit Back/edit state, all controls, unknown/non-exclusion and public-only
+exports. Review the committed prospective policy before runtime edits. Local execution
+is directly authorized; final canonical acceptance and release effects are not. Keep
+all historical artifacts and validator gates intact; disclose the four outstanding
+Revision20 release diagnostics. The direct timer handoff in plan section7 is required
+after verified UX delivery and is owned by Codex. Do not mix timer implementation
+into UX1 or deploy the saved pre-UX timer tree.
