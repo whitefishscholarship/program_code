@@ -1,3 +1,30 @@
+# UX2 — remove volunteer-hours dropdown, then resume timer M1
+
+September16,2026. Branch codex/ux2-remove-volunteer-hours in
+/private/tmp/program_code-ux2-remove-volunteer-hours; fresh live baseline
+c2042402e137fec4763ee33d40833d9069cf904b. User directly requests removal of the
+volunteer-hours qualifier beneath community service; persistent live-publish
+preference applies. Follow canonical Revision21 and PLAN-REV21.md.
+
+Only InterviewWizard.tsx may change runtime: remove hours question/import/state,
+keep service checkbox, submit hours:null even for legacy initial answers. Review
+prospective policy before edits; full checks and fresh final canonical review;
+exact two-file direct-child attestation; both validators0; exact Preview/CI then
+merge and exact Production. No source/data/configuration/monitoring effects.
+
+UX1 is already delivered/verified. Local closeout11f5cad in
+/private/tmp/program_code-ux1-live-closeout holds its complete receipts and exact
+carried437-record timer inventory. Keep that checkpoint unchanged. After verified
+UX2 delivery, Codex owns direct continuation into unfinished timer M1 on fresh main
+including both UX releases; bring forward those pinned timer files/provenance,
+reproduce inventory, preserve all original reviews and queues. Existing allowance
+and email-sender/service verification remain open; recipient is
+kelsey@waypointfranchise.com. No schedule or email activation is authorized.
+
+Previous live-baseline handoff preserved as historical context below.
+
+---
+
 # UX1 live release authorized — canonical candidate next
 
 Kelsey directly requests: Updates push live. If not, do so. Authority is recorded in
