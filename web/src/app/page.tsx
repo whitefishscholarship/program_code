@@ -10,9 +10,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.22em] text-teal-200">Whitefish Scholarship Fund</p>
           <div className="max-w-4xl">
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Find scholarships without giving up your privacy.</h1>
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">Find scholarships for your next step.</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-200">
-              Use a short private interview to see transparent matches, or browse the complete catalog whenever you prefer.
+              Explore scholarships in four short steps, or browse the complete catalog.
             </p>
           </div>
         </div>
@@ -22,7 +22,6 @@ export default function Home() {
       </main>
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-8 text-sm text-slate-600 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
-          <p>Always confirm requirements and availability on the official source before applying.</p>
           <a href="/admin" className="font-semibold text-teal-800 underline-offset-4 hover:underline focus:outline-none focus:ring-4 focus:ring-teal-200">Administrator sign-in</a>
         </div>
       </footer>

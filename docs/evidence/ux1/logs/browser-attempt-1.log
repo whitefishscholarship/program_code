@@ -1,0 +1,10 @@
+locator.innerText: Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+    1) <p role="alert" id="interview-error" class="mt-5 rounded-xl border border-rose-200 bg-rose-50 p-4 font-bold text-rose-900">Choose at least one target school type.</p> aka getByText('Choose at least one target')
+    2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+Call log:
+[2m  - waiting for getByRole('alert')[22m
+
+    at /private/tmp/program_code-ux1-four-screen-journey/web/scripts/qa-ux1-journey.cjs:87:165 {
+  log: [ "  - waiting for getByRole('alert')" ]
+}

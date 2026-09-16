@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-09-16T13:17:05.091775+00:00",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "baselineCheck": {
+    "command": "gh api repos/whitefishscholarship/program_code/commits/main --jq '{sha: .sha, committedAt: .commit.committer.date}'",
+    "result": {
+      "sha": "aae973238bed8651c3404b17cd51c1385f457075",
+      "committedAt": "2026-09-14T17:57:02Z"
+    },
+    "scope": "read-only GitHub revision check; not hosted health"
+  },
+  "branch": "codex/ux1-four-screen-journey",
+  "baselineWasClean": true,
+  "timerCheckpoint": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+  "originalWizardSha256": "eb9174046586df4a69711ebe0ea29f47edc73340ab8607b39d96190bd654f9a4",
+  "planSource": "Direct current conversation instructions",
+  "currentRuntimeEqualsMain": true,
+  "externalWrites": false
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-local-final-review-not-canonical-attestation",
+  "stepId": "UX1-cleanup",
+  "candidateCommit": "bc22ae1f0283695db616080ff589df519416fe67",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "manifestPath": "docs/evidence/ux1-cleanup/local-manifest.json",
+  "manifestSha256": "14355c906db6c2b006f973e7ff314a66d469ed9b76e691521834aa68675222e9",
+  "recordedAt": "2026-09-16T14:41:46.021110+00:00",
+  "reviewer": "/root/ux1_cleanup_final_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "reviewerSummary": "Verified all61 manifest paths,480 historical artifacts,27 original UX artifacts, policy binding, log hashes, narrow runtime/test scope and exact timer handoff/input hashes. Independent browser rerun passed phone/desktop and legacy normalization; targeted P8F and full baseline whitespace passed. Independent plan check returns exactly4 existing canonical release failures.",
+  "independentBrowserReceiptOriginalPath": "/private/tmp/ux1-independent-cleanup-evidence/browser.json",
+  "independentBrowserReceiptSha256": "fc96486c54f5519715a9547a5dfdb8b3fef86f1dc0d81e1f84d1ddb4519b8af6",
+  "independentBrowserReceipt": {
+    "recordedAt": "2026-09-16T14:39:12.193Z",
+    "status": "PASS",
+    "legacyCompatibility": true,
+    "origin": "http://127.0.0.1:3220",
+    "scope": "Local production build; fictional inputs only; no hosted or source-freshness claim",
+    "viewports": [
+      {
+        "viewport": {
+          "width": 360,
+          "height": 800
+        },
+        "status": "PASS",
+        "blankOptionalScreens": true,
+        "blankProfileCount": 384,
+        "catalogAwards": 411,
+        "stepOrder": [
+          1,
+          4,
+          2,
+          3
+        ],
+        "preservedCriteria": 38,
+        "backRetainsValues": true,
+        "editRecalculates": true,
+        "clearingSelections": true,
+        "optionalRadioClearAllValues": true,
+        "organizationClear": true,
+        "removedCopyAbsent": true,
+        "cancelEditKeepsPriorResults": true,
+        "keyboard": true,
+        "noHorizontalOverflow": true,
+        "resetReloadClears": true,
+        "publicCsvExact": true,
+        "observedAnswerStorageRequestsLogs": 0
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "status": "PASS",
+        "blankOptionalScreens": true,
+        "blankProfileCount": 384,
+        "catalogAwards": 411,
+        "stepOrder": [
+          1,
+          4,
+          2,
+          3
+        ],
+        "preservedCriteria": 38,
+        "backRetainsValues": true,
+        "editRecalculates": true,
+        "clearingSelections": true,
+        "optionalRadioClearAllValues": true,
+        "organizationClear": true,
+        "removedCopyAbsent": true,
+        "cancelEditKeepsPriorResults": true,
+        "keyboard": true,
+        "noHorizontalOverflow": true,
+        "resetReloadClears": true,
+        "publicCsvExact": true,
+        "observedAnswerStorageRequestsLogs": 0
+      }
+    ]
+  },
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false,
+  "limits": [
+    "Four canonical authority/manifest/review/attestation failures remain.",
+    "Local browser and saved evidence do not establish hosted health or current scholarship facts."
+  ]
+}

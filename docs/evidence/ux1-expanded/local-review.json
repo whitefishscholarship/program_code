@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-local-final-review-not-canonical-attestation",
+  "stepId": "UX1-expanded",
+  "candidateCommit": "9db5723452c2da0e97ddf74c9cfa538f13bca80c",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "manifestPath": "docs/evidence/ux1-expanded/local-manifest.json",
+  "manifestSha256": "9a68cb361b1e1191208f3851b656284e26a21f3eeeb9569391feaa4ec745bc8f",
+  "recordedAt": "2026-09-16T15:12:37Z",
+  "reviewer": "/root/ux1_expanded_final_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "reviewerSummary": "Complete84path manifest/change set verified; exactly one runtime open-attribute change;52 prior UX artifacts and480 baseline evidence/review blobs, non-UX state and timer section7 preserved. Archive hashes and full baseline whitespace pass.",
+  "independentBrowserProbe": {
+    "viewports": [
+      {
+        "width": 360,
+        "height": 800
+      },
+      {
+        "width": 1440,
+        "height": 1000
+      }
+    ],
+    "status": "PASS",
+    "categories": 6,
+    "visibleChoices": 38,
+    "checks": [
+      "keyboard collapse",
+      "Back/Edit reopen groups",
+      "selections persist and clear",
+      "blank optional answers reach results",
+      "no overflow",
+      "no page errors"
+    ]
+  },
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false,
+  "limits": [
+    "Four disclosed canonical release failures remain.",
+    "Local review does not prove hosted health or scholarship freshness."
+  ]
+}

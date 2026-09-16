@@ -1,3 +1,174 @@
+# UX1 live release authorized — canonical candidate next
+
+Kelsey directly requests: Updates push live. If not, do so. Authority is recorded in
+docs/evidence/ux1-release/authority.md and PLAN-REV20. Current local branch/worktree
+codex/ux1-four-screen-journey, /private/tmp/program_code-ux1-four-screen-journey.
+Fresh remote main and live health equal aae973238bed8651c3404b17cd51c1385f457075;
+preflight verifies Whitefish GitHub publishing identity and existing Vercel web project.
+Original reviewed runtime9db5723/closeout7a8dc4d and all evidence remain preserved.
+
+Next owner Codex: finish required checks; freeze complete authority-bearing candidate;
+fresh independent canonical PLAN-REV20 review; exact two-file direct-child attestation;
+actual local and hosted-mode plan checks0. Normal authenticated HTTPS Git push with
+command-local gh helper; PR and automatic Preview; verify exact CI/Preview before
+ancestry-preserving merge; verify exact Production health/API/browser after. Default
+SSH transport fails; Vercel CLI account/token is unsuitable, so use existing signed-in
+Whitefish Vercel browser plus Git integration. Do not change accounts/credentials.
+
+Before attestation the three remaining manifest/review/attestation diagnostics are
+real gates. Do not suppress them. After attestation keep branch tip locked; save
+hosted observations outside the repository until delivered. No extra closeout push.
+At verified delivery execute UX plan section7's direct timer handoff into unfinished
+M1 with009fa57 and confirmed recipient; preserve all source/input/activation gates.
+The older no-publication sections below are historical only.
+
+---
+
+# UX1 all categories expanded — locally reviewed preview ready
+
+User's requested category visibility refinement is complete locally. Resume
+/private/tmp/program_code-ux1-four-screen-journey, codex/ux1-four-screen-journey.
+Reviewed candidate9db5723452c2da0e97ddf74c9cfa538f13bca80c; full manifest SHA256
+9a68cb361b1e1191208f3851b656284e26a21f3eeeb9569391feaa4ec745bc8f.
+docs/evidence/ux1-expanded/local-review.json is independent PASS, C0/H0/M0/L0.
+This later closeout records status only and does not rebind the reviewed candidate.
+
+All six category groups and38 choices open by default on steps3/4 and on Back/Edit.
+Students can collapse them; optional answers and handlers are preserved. The only
+runtime delta since7be4e99 is `open` in the shared InterviewWizard details renderer.
+Full tests/typecheck/build and phone/desktop QA passed; independent browser probes
+confirmed visibility, collapse, Back/Edit, selection/clearing, blank optional answers
+and no overflow/errors. All52 earlier UX artifacts remain byte-identical.
+The four canonical authority/manifest/review/attestation diagnostics remain unresolved;
+no canonical acceptance or publication. See docs/evidence/ux1-expanded/validation.json for exact checks.
+
+Preview is running at http://127.0.0.1:3220; refresh to see the expanded categories.
+If stopped, run from web: npm run build, then
+npm run start -- --hostname 127.0.0.1 --port 3220.
+Current regression script is web/scripts/qa-ux1-expanded.cjs; full command/output are
+in docs/evidence/ux1-expanded/validation.json. Never overwrite frozen QA evidence.
+
+Next action owner Codex: obtain missing informed UX release effects for the locally
+reviewed four-step, cleanup and expanded-category result; refreeze/review the complete
+authority-bearing candidate and satisfy canonical attestation/Preview/CI/merge/exact
+Production verification. No more feature work or repeated checks unless requested
+changes or new findings justify them. No earlier publication question has been answered.
+
+Required direct timer continuation stays in UX plan section7 unchanged: Codex resumes
+unfinished M1 after verified UX delivery or explicit earlier reprioritization. Retain
+009fa57, recipient kelsey@waypointfranchise.com, inventory/input provenance and the
+post-UX-main baseline rule. No timer/email/source/workbook action is part of this change.
+
+---
+
+# UX1 cleanup locally reviewed — preview ready; release gate next
+
+Plan revision20. The requested optional-answer and notice cleanup is complete locally.
+Resume worktree /private/tmp/program_code-ux1-four-screen-journey on
+codex/ux1-four-screen-journey. Reviewed candidate:
+bc22ae1f0283695db616080ff589df519416fe67. Cleanup manifest SHA256:
+14355c906db6c2b006f973e7ff314a66d469ed9b76e691521834aa68675222e9.
+Independent local review in docs/evidence/ux1-cleanup/local-review.json is PASS,
+C0/H0/M0/L0. It binds that candidate only; this later status update does not rebind it.
+
+Removed visible prefer-not/sensitive-skip controls and the extra generic notices;
+retained substantive questions, optional clearing and four-step Back/edit behavior.
+Local tests/typecheck/build, exact matcher/public CSV and mobile/desktop browser checks
+passed. Independent browser rerun, legacy compatibility and preservation checks passed.
+Original UX1 evidence remains byte-identical. All four canonical Revision20 release
+authority/manifest/review/attestation diagnostics remain; no canonical acceptance.
+
+Local preview is running at http://127.0.0.1:3220. Refresh to see the cleanup; if stopped,
+run from web: npm run build, then npm run start -- --hostname 127.0.0.1 --port 3220.
+New QA is web/scripts/qa-ux1-cleanup.cjs; command/receipts are in cleanup/validation.json.
+Do not overwrite frozen evidence during future QA; use a separate output destination.
+
+Next action owner Codex: user review of the concrete local result in
+cleanup/RELEASE_CANDIDATE.md, then obtain missing direct informed push/PR/Preview/
+merge/Production/hosted-verification effects for this UX release. The cleanup request
+did not answer the earlier publication question. Refreeze/review the authority-bearing
+candidate, satisfy canonical direct-child attestation and exact Preview/CI/Production
+checks before delivery. No further feature work or repeated QA unless changed bytes
+or findings justify it. Nothing has been pushed or deployed.
+
+Required direct timer handoff remains UX plan section7. Codex resumes unfinished M1
+after verified UX delivery or explicit earlier reprioritization. Preserve009fa57,
+437-record inventory, pinned R5 input/provenance, kelsey@waypointfranchise.com and all
+saved owners/triggers. Later timer implementation starts from post-UX main and must
+retain this delivered UX. No timer activation, email/source/workbook or provider action.
+
+---
+
+# UX1 locally reviewed — release authority next, timer M1 afterward
+
+Plan revision: 20. UX1 local implementation and independent final review are complete.
+Resume `/private/tmp/program_code-ux1-four-screen-journey`, branch
+`codex/ux1-four-screen-journey`. Reviewed candidate:
+`1207be2421f2a1bb197bef649f013ac949c88a92`; local manifest SHA256
+`b3e2ca8398a7ee9198d9898bf47fd5c9ab0f747e2c87e885e711cef9f04878bd`.
+`docs/evidence/ux1/local-review.json` records fresh-context read-only PASS, C0/H0/M0/L0.
+Application tests/typecheck/build and mobile/desktop browser checks passed. The full
+baseline whitespace check passed after exact raw log outputs were archived losslessly.
+Plan validation still fails only the four disclosed Revision20 release-authority and
+canonical manifest/review/attestation gates. No canonical acceptance or release.
+This closeout updates progress only; it does not rebind the reviewed candidate.
+
+Next action, owner Codex: obtain the missing informed release effects for the concrete
+UX-only result in `docs/evidence/ux1/RELEASE_CANDIDATE.md`; verify current main/target,
+freeze and independently review the authority-bearing candidate, then complete normal
+canonical attestation, Preview/CI, merge and Production verification. No new feature
+work or repeated local QA is needed unless changed bytes or findings justify it.
+Local preview was started at http://127.0.0.1:3220; restart from web with
+`npm run build` then `npm run start -- --hostname 127.0.0.1 --port 3220` if stopped.
+For browser regression, use the command and PLAYWRIGHT_MODULE path in validation.json.
+
+Required direct timer handoff: after verified UX delivery, follow section7 of
+`docs/INTERVIEW_UX_BUILD_PLAN.md` directly into unfinished timer M1. Saved timer
+checkpoint009fa57 remains intact, recipient kelsey@waypointfranchise.com confirmed,
+437-record inventory reusable. Carry its pinned R5 input and provenance when preparing
+a fresh post-UX timer baseline, then reproduce the inventory. Never revert delivered
+UX or replay spent257operations. All other research/recovery owners and triggers remain
+in the retained timer handoff. No timer activation, source/workbook access, email send,
+configuration/credential change or paid effect is included.
+
+---
+
+# UX1 — four-screen journey first; timer follows directly
+
+Plan revision: 20. Local execution is authorized; prospective policy review passed at ab58099.
+Resume `/private/tmp/program_code-ux1-four-screen-journey`, branch
+`codex/ux1-four-screen-journey`, verified main baseline
+`aae973238bed8651c3404b17cd51c1385f457075`. Read
+`docs/INTERVIEW_UX_BUILD_PLAN.md` and `docs/evidence/PLAN-REV20.md`.
+Keep only existing GPA/school answers required. New order1,4,2,3; Continue then
+results on final step; Back/edit preserve current-visit answers. Runtime changes are
+implemented locally in InterviewWizard.tsx. Typecheck, full tests, production build
+and 360px/1440px browser checks passed; plan check retains exactly four release gates.
+Validation: docs/evidence/ux1/validation.json. Independent final candidate review
+is next; its exact outcome will be in docs/evidence/ux1/local-review.json.
+P9/completed stages remain complete; canonical pointers stay null. All historical
+review/attestation artifacts remain unchanged. Four Revision20 release-authority and
+final-attestation diagnostics are expected failures; no acceptance or release claimed.
+
+Required next-project handoff: UX plan section7 gives the direct return to timer M1.
+Preserve `/private/tmp/program_code-season-monitor-plan`, branch
+`codex/scholarship-season-monitor-plan`, checkpoint
+`009fa57e7def04ce2a9b49051f395c32b1393c14`. Inventory is prepared; confirm existing
+Actions allowance/zero overage and email sender/service for kelsey@waypointfranchise.com.
+Recipient is confirmed. Codex owns resumption after verified UX delivery. The saved
+timer plan/evidence and its complete original handoff remain in that worktree; its
+older monitor-only priority statement is superseded by this UX-first instruction.
+Carry timer-owned files and the exact required saved R5 research input/provenance
+listed in UX plan section7 into a fresh post-UX baseline, then reproduce the inventory
+before later implementation or release. Never ship its older runtime. All research/hold/recovery routes, ETV/Fund
+the Fish and257spentoperations remain preserved there; do not replay them.
+
+No source/workbook access, email sends, timer activation, credentials/configuration,
+remote publication or deployment. Complete local UX before seeking missing release
+effects. The full pre-UX main handoff follows as historical evidence.
+
+---
+
 # R4 Whitefish identity correction — final review and delivery next
 
 Plan revision: 19.

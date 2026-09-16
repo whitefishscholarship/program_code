@@ -451,3 +451,24 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## Plan Revision 20 — UX1 local journey change
+
+Use docs/INTERVIEW_UX_BUILD_PLAN.md for the selected four-screen UX release. Only
+existing GPA/school answers are required; all other answers remain optional. Preserve
+current-visit Back/edit state, substantive questions, unknown/non-exclusion and
+public-only exports. The September16 correction in UX plan section4a removes visible
+prefer-not/sensitive-skip controls and extra notices, with clearable optional answers;
+review that committed prospective correction before affected runtime edits. Local execution
+is directly authorized; final canonical acceptance and release effects are not. Keep
+all historical artifacts and validator gates intact; disclose outstanding
+Revision20 release diagnostics. The direct timer handoff in plan section7 is required
+after verified UX delivery and is owned by Codex. Do not mix timer implementation
+into UX1 or deploy the saved pre-UX timer tree.
+
+The September16 direct UX1 live instruction is recorded in
+`docs/evidence/ux1-release/authority.md` and current PLAN-REV20 state. It supersedes
+only the earlier missing-publication status for this release; push/PR/automatic
+Preview/merge/Production and exact verification are authorized under normal review,
+attestation and CI gates. No historical evidence or acceptance rule is changed.

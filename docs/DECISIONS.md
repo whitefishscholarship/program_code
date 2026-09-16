@@ -771,3 +771,55 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## D-UX1 — Four-screen journey first, direct timer continuation
+
+- Date: 2026-09-16. Status: prospective; local policy review required.
+- Evidence: Kelsey's exact request/clarification/execution grant in PLAN-REV20.md.
+- Decision: separate UX release before timer, with required progression and optional
+  nonessential answers; reorder existing screens 1,4,2,3 and retain Back/edit.
+- Alternatives: combining scheduler/email work delays independently useful UX; forcing
+  answers contradicts the user's clarification. Neither is selected.
+- Impact: navigation/wording only; original questions, data, matching and privacy remain.
+  Supersede only the prior early-results/optional-section presentation prospectively.
+- Rollback: retain local baseline; no destructive reset or deployed rollback authority.
+- Continuation: Codex must follow UX plan section7 directly into timer M1 after verified
+  UX delivery; preserve timer009fa57 and use delivered UX in later timer code baselines.
+
+
+## D-UX1-COPY — Optional-answer cleanup from user preview feedback
+
+- Date: 2026-09-16. Direct user authority: docs/evidence/ux1-cleanup/authority.md.
+- Decision: refine the existing unshipped UX1 release; remove visible prefer-not and
+  sensitive-skip controls and extra explanatory copy. Keep substantive questions,
+  optional blank answers, clearable radio responses and normal navigation.
+- Scope: Wizard plus copy-only Browser/page changes; no matcher/schema, source,
+  privacy mechanism, persistence or timer change. Preserve legacy compatibility.
+- Review: prospective cleanup review before affected edits; separate final review.
+  Original candidate and all UX1 evidence remain immutable and unrebound.
+- Rollback: retain d7e8872 locally; no history rewrite or deployment authority.
+- Direct timer handoff remains required and unchanged.
+
+D-UX1-COPY verification clarification: the two current P8F source assertions requiring
+sensitive-skip text and SHORTLIST_NOTICE are superseded presentation requirements.
+Replace only those assertions with absence checks; preserve actual matcher/privacy/
+export regressions and original UX1 QA/evidence. Include in prospective review.
+
+## D-UX1-EXPANDED — show all category choices by default
+
+Kelsey's September16 screenshot review requests all categories expanded. Apply `open`
+to the shared six-category renderer; students may collapse and re-entry opens all.
+No answers become required and no handler/matching/data changes. Record prospective
+and final reviews/new QA under ux1-expanded; preserve previous evidence and the direct
+timer handoff. Owner Codex, local implementation authorized; release gates unchanged.
+
+## D-UX1-LIVE — publish the reviewed UX
+
+September16: Kelsey directly requests the updates pushed live. This supplies the
+previously missing UX1 release authority, pinned in a new receipt while preserving
+all prior local evidence. Record effects in unattested PLAN-REV20, refreeze/review
+full candidate, add canonical direct-child attestation, publish via established Git
+and Vercel integration, verify Preview/CI before merge and exact Production after.
+No new runtime/validator scope or historical rewrite. Owner Codex, direct timer
+handoff follows verified delivery under its existing M1 boundary.

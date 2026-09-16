@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-implementation-manifest-not-canonical-attestation",
+  "stepId": "UX1",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "candidateCommit": "1207be2421f2a1bb197bef649f013ac949c88a92",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "sha256": "6a40c71efce9f19fb000aed01cb8aa2f2ff4a72daf26880544df7b834c4bcde6",
+      "sizeBytes": 30082
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "status": "M",
+      "sha256": "e3127fdb7032adbcdfb00089cfa9b720204b0f6afc0172de1bfb7da6e004ee17",
+      "sizeBytes": 85496
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "status": "M",
+      "sha256": "9492c3710d564c639d5d1d111167c40ef9625a538569331e70e7ece7666849d5",
+      "sizeBytes": 585397
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "status": "M",
+      "sha256": "a04c2b0945548a284f665cccbacd78890b74066fff06cb94a35dcd75076ab499",
+      "sizeBytes": 52175
+    },
+    {
+      "path": "docs/INTERVIEW_UX_BUILD_PLAN.md",
+      "status": "A",
+      "sha256": "a4a2abb7b865393b27873ac18ab39bc786e5850fa666a23018177fd6921d1a3b",
+      "sizeBytes": 13617
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "status": "M",
+      "sha256": "5483d789766de14c55175b7015e6c8215ea6dee3288c095f3b39523586342028",
+      "sizeBytes": 126885
+    },
+    {
+      "path": "docs/evidence/PLAN-REV20.md",
+      "status": "A",
+      "sha256": "f71b7cbecf6f67aa39cd3796de6702f4e66f298fb1e518fd4a1afd3edde07243",
+      "sizeBytes": 2918
+    },
+    {
+      "path": "docs/evidence/ux1/RELEASE_CANDIDATE.md",
+      "status": "A",
+      "sha256": "654a48f9e45c36a6e9a6c2ab83efde614ec0c72e371d3f7e3f39eac1c25e3eb4",
+      "sizeBytes": 2420
+    },
+    {
+      "path": "docs/evidence/ux1/browser/browser.json",
+      "status": "A",
+      "sha256": "0b93065c5e74932b1a3d4df449b5adf522d067e8068bda18ca5bb2a83e4975ed",
+      "sizeBytes": 1464
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-1-1440.png",
+      "status": "A",
+      "sha256": "c2b328371d654e08e002d23403587f10360066320391dcfd1df52bc4a784d0f2",
+      "sizeBytes": 112844
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-1-360.png",
+      "status": "A",
+      "sha256": "42ea77df53e79d21d829770baee642a8c86c19ee3e4c8eb3a30f6f0a4dd07278",
+      "sizeBytes": 100143
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-2-1440.png",
+      "status": "A",
+      "sha256": "da54c11a45c606b0d5cce1ab7f7239e30fef44b56ddbf1ec9099eb7319cc88a6",
+      "sizeBytes": 177910
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-2-360.png",
+      "status": "A",
+      "sha256": "ce14a2a20174be73fbf59ab1ec10500e4bba35896e25fc24268dec5e864d3785",
+      "sizeBytes": 181944
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-3-1440.png",
+      "status": "A",
+      "sha256": "9c254a84fabc9ddfbb9eb05e5b1ee436c3e1b40a328d9d37283b0bbc6e1d2588",
+      "sizeBytes": 170404
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-3-360.png",
+      "status": "A",
+      "sha256": "b9bf955066273f4c14489112bbf43e7dcbf3f721e37e8447944e52f093705ec9",
+      "sizeBytes": 151735
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-4-1440.png",
+      "status": "A",
+      "sha256": "cd2a7e8c948f9638eb279a4d7f13a9430b08ffed3ef44a5c9c8fa560d9908b4c",
+      "sizeBytes": 222080
+    },
+    {
+      "path": "docs/evidence/ux1/browser/step-4-360.png",
+      "status": "A",
+      "sha256": "ab188e621f192a3e51d2d5c3815752c5aa381362fc2a93feb27bb888fe0b1ab6",
+      "sizeBytes": 215773
+    },
+    {
+      "path": "docs/evidence/ux1/logs/browser-attempt-1.log",
+      "status": "A",
+      "sha256": "0ca9a0b4dd241502c962801e3462c4c48591168aae0b226a1efdc1e72d84b67c",
+      "sizeBytes": 644
+    },
+    {
+      "path": "docs/evidence/ux1/logs/browser-attempt-2.log",
+      "status": "A",
+      "sha256": "55d2da5903f9cb5ca2f00da3cff0c12fab7ac0a528642cb52c2fbe0cf8e0b7cf",
+      "sizeBytes": 43
+    },
+    {
+      "path": "docs/evidence/ux1/logs/build.raw.json",
+      "status": "A",
+      "sha256": "df029e105d6ae61f6918dbb50eb6074bf43350a43e57e09cc368cfa9a0545787",
+      "sizeBytes": 1703
+    },
+    {
+      "path": "docs/evidence/ux1/logs/plan.log",
+      "status": "A",
+      "sha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+      "sizeBytes": 418
+    },
+    {
+      "path": "docs/evidence/ux1/logs/policy-plan.log",
+      "status": "A",
+      "sha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+      "sizeBytes": 418
+    },
+    {
+      "path": "docs/evidence/ux1/logs/tests.log",
+      "status": "A",
+      "sha256": "5935a30a6a30d601944aa9b9d80979c1baec0581322390c749844c8694b8c308",
+      "sizeBytes": 19755
+    },
+    {
+      "path": "docs/evidence/ux1/logs/typecheck.raw.json",
+      "status": "A",
+      "sha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668",
+      "sizeBytes": 219
+    },
+    {
+      "path": "docs/evidence/ux1/logs/whitespace.log",
+      "status": "A",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sizeBytes": 0
+    },
+    {
+      "path": "docs/evidence/ux1/policy-manifest.json",
+      "status": "A",
+      "sha256": "0518d446d7bf2350b1d0f24962929ef4b54dccf84f09b864b306ec7c596194b0",
+      "sizeBytes": 1985
+    },
+    {
+      "path": "docs/evidence/ux1/policy-review.json",
+      "status": "A",
+      "sha256": "eb2dc7552e88ee14ee08bf8a54de50cbce1b7bcc01328fdfcb6dbdccc700c9af",
+      "sizeBytes": 1532
+    },
+    {
+      "path": "docs/evidence/ux1/policy-validation.json",
+      "status": "A",
+      "sha256": "3a7a646f9383fa7d805fb9488860086afea409c146f5d1ec2540b2548773f22f",
+      "sizeBytes": 956
+    },
+    {
+      "path": "docs/evidence/ux1/preflight.json",
+      "status": "A",
+      "sha256": "cfedf18035dbd6321e0d713b8748ede942a94b999ff387632c7a87df7d9029a5",
+      "sizeBytes": 824
+    },
+    {
+      "path": "docs/evidence/ux1/preservation.json",
+      "status": "A",
+      "sha256": "948272efccfcfc011a9ed89e67d63c8e43e706f0bc6b1bfabc5628d9ac52985b",
+      "sizeBytes": 674
+    },
+    {
+      "path": "docs/evidence/ux1/validation.json",
+      "status": "A",
+      "sha256": "c3fb8649e9fc62153bb946009bf5aaa4dbb7c32ad5f8efefd3c0f08bedc06c86",
+      "sizeBytes": 6590
+    },
+    {
+      "path": "web/scripts/qa-ux1-journey.cjs",
+      "status": "A",
+      "sha256": "906ca96fc0be644f983aa36f793fc394c121577cb66fc3b57a8fd566bd56f1a4",
+      "sizeBytes": 14717
+    },
+    {
+      "path": "web/src/components/InterviewWizard.tsx",
+      "status": "M",
+      "sha256": "0602e5f84e5443fa4109379c7d61f911d19984eed16db2e187cfd7e58b309e61",
+      "sizeBytes": 19707
+    }
+  ],
+  "canonicalAcceptanceClaimed": false,
+  "releaseAuthorized": false
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "stepId": "UX1",
+  "recordedAt": "2026-09-16T13:30:20.961097+00:00",
+  "scope": "Local implementation validation, fictional inputs; no canonical acceptance or hosted/current-source claim",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T13:26:24.996037+00:00",
+      "completedAt": "2026-09-16T13:26:33.223169+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1/logs/typecheck.raw.json",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "originalLogPath": "/private/tmp/ux1-checks/typecheck.log",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "archiveSha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T13:26:33.223571+00:00",
+      "completedAt": "2026-09-16T13:26:47.186886+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1/logs/build.raw.json",
+      "logSha256": "a207ee8e1932d4d24269bae21f9ce1c3b72e7a50fbc8d76bff9f30ff26254fa4",
+      "originalLogPath": "/private/tmp/ux1-checks/build.log",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "archiveSha256": "df029e105d6ae61f6918dbb50eb6074bf43350a43e57e09cc368cfa9a0545787"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey",
+      "startedAt": "2026-09-16T13:26:47.187217+00:00",
+      "completedAt": "2026-09-16T13:26:47.213377+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1/logs/whitespace.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "originalLogPath": "/private/tmp/ux1-checks/whitespace.log"
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T13:26:24.995714+00:00",
+      "completedAt": "2026-09-16T13:27:07.939675+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1/logs/plan.log",
+      "logSha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+      "originalLogPath": "/private/tmp/ux1-checks/plan.log"
+    },
+    {
+      "command": "npm test",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T13:26:24.996009+00:00",
+      "completedAt": "2026-09-16T13:27:19.568956+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1/logs/tests.log",
+      "logSha256": "5935a30a6a30d601944aa9b9d80979c1baec0581322390c749844c8694b8c308",
+      "originalLogPath": "/private/tmp/ux1-checks/tests.log"
+    },
+    {
+      "command": "node --import tsx scripts/qa-ux1-journey.cjs",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "environmentOverride": {
+        "PLAYWRIGHT_MODULE": "/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright"
+      },
+      "startedAt": "2026-09-16T13:27:41.714962+00:00",
+      "completedAt": "2026-09-16T13:27:42.819050+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1/logs/browser-attempt-1.log",
+      "logSha256": "0ca9a0b4dd241502c962801e3462c4c48591168aae0b226a1efdc1e72d84b67c",
+      "originalLogPath": "/private/tmp/ux1-checks/browser-attempt-1.log"
+    },
+    {
+      "command": "node --import tsx scripts/qa-ux1-journey.cjs",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "environmentOverride": {
+        "PLAYWRIGHT_MODULE": "/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright"
+      },
+      "startedAt": "2026-09-16T13:28:17.537777+00:00",
+      "completedAt": "2026-09-16T13:28:23.367029+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1/logs/browser-attempt-2.log",
+      "logSha256": "55d2da5903f9cb5ca2f00da3cff0c12fab7ac0a528642cb52c2fbe0cf8e0b7cf",
+      "originalLogPath": "/private/tmp/ux1-checks/browser-attempt-2.log"
+    }
+  ],
+  "planValidation": {
+    "exitCode": 1,
+    "errors": [
+      "PLAN-REV20 requires direct informed delivery authority or an exact authorized local-only preparation blocker",
+      "Missing required file: docs/evidence/PLAN-REV20-manifest.json",
+      "Missing required file: docs/reviews/PLAN-REV20.json",
+      "PLAN-REV20 requires a committed manifest/review attestation in current history"
+    ],
+    "unexpectedErrors": 0,
+    "suppressedErrors": 0,
+    "fullPlanCheckPass": false
+  },
+  "browserAttemptResolution": "First attempt failed because its generic alert selector included the Next.js route announcer. The QA selector was narrowed to the actual interview validation error; no product change was needed. Corrected browser run passed both viewports.",
+  "runtimeSha256": "0602e5f84e5443fa4109379c7d61f911d19984eed16db2e187cfd7e58b309e61",
+  "qaScriptSha256": "906ca96fc0be644f983aa36f793fc394c121577cb66fc3b57a8fd566bd56f1a4",
+  "buildId": "Z49oPdd-ItXJlcKJkyJ8y",
+  "browserEvidence": "docs/evidence/ux1/browser/browser.json",
+  "preservationEvidence": "docs/evidence/ux1/preservation.json",
+  "manualVisualInspection": [
+    "step-1-1440.png",
+    "step-2-360.png"
+  ],
+  "visualResult": "Continue is prominent, browse exit secondary, new step2 contains former step4 with optional controls and Back; no layout overflow seen.",
+  "knownLimits": [
+    "Four release authority/final canonical attestation gates remain.",
+    "Browser proof is local only; no Production or scholarship freshness verification.",
+    "Final review/authority-bearing freeze, attestation and release remain pending."
+  ],
+  "postCheckEdits": "Only QA selector, evidence and progress documents changed after application matrix; final whitespace check runs before freeze.",
+  "reviewRemediation": [
+    {
+      "severity": "low",
+      "finding": "The complete baseline-to-candidate whitespace check included terminal CR/trailing spaces and blank EOF lines in newly committed build/typecheck logs, which the earlier worktree check did not cover.",
+      "resolution": "Stored exact original raw log bytes as base64 JSON with decoded and archive hashes; no output bytes discarded or altered. Complete baseline whitespace check is rerun before the corrected candidate freeze.",
+      "owner": "Codex",
+      "originalCandidate": "97f2a63b24bdb2d53b8562b01159fb2c7209d7b2"
+    }
+  ]
+}

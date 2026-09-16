@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 19,
+  "planRevision": 20,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-14",
+  "lastUpdated": "2026-09-16",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -917,6 +917,22 @@
             "R5_R7"
           ]
         }
+      },
+      {
+        "id": "PLAN-REV20",
+        "status": "attestation-gated",
+        "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+        "evidencePath": "docs/evidence/ux1-release/authority.md",
+        "manifestPath": "docs/evidence/PLAN-REV20-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV20.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-09-16",
+          "evidencePath": "docs/evidence/ux1-release/authority.md",
+          "basis": "Direct request after reviewing the local UX result: Updates push live. If not, do so. Existing repository workflow and prior explanations identify automatic Preview and Production effects.",
+          "scope": "Publish reviewed UX1 on codex/ux1-four-screen-journey to whitefishscholarship/program_code: normal push/PR, Vercel Preview, CI/exact preview verification, ancestry-preserving merge, Vercel Production and exact hosted verification on web (prj_LbefE2deji6nPND6iBiuofe7IABv), team team_6CAjRq58n0WvAH49otKSQbA7, web-two-gules-45.vercel.app. No data/source/workbook, credential/configuration, paid, monitoring/email or provider action. Requires full canonical review/attestation and unchanged historical gates."
+        }
       }
     ]
   },
@@ -1315,5 +1331,60 @@
     "canonicalReviewPath": "docs/reviews/PLAN-REV18.json",
     "completionRequiresExactHostedVerification": true,
     "nextStageAuthorized": false
+  },
+  "interviewUx": {
+    "planId": "UX1",
+    "status": "release-authorized-preparing-canonical-candidate",
+    "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+    "planPath": "docs/INTERVIEW_UX_BUILD_PLAN.md",
+    "authorityEvidencePath": "docs/evidence/PLAN-REV20.md",
+    "localImplementationAuthorized": true,
+    "policyReviewRequiredBeforeImplementation": true,
+    "policyReviewPath": "docs/evidence/ux1/policy-review.json",
+    "publicationAuthorized": true,
+    "runtimePaths": [
+      "web/src/components/InterviewWizard.tsx",
+      "web/src/components/ScholarshipBrowser.tsx",
+      "web/src/app/page.tsx"
+    ],
+    "requiredAnswers": "existing GPA and target school type only",
+    "screenOrder": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "timerHandoff": {
+      "planPath": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+      "worktree": "/private/tmp/program_code-season-monitor-plan",
+      "branch": "codex/scholarship-season-monitor-plan",
+      "checkpoint": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+      "nextCheckpoint": "unfinished M1 setup",
+      "owner": "Codex",
+      "trigger": "verified UX delivery or explicit earlier user prioritization",
+      "recipient": "kelsey@waypointfranchise.com",
+      "section": "docs/INTERVIEW_UX_BUILD_PLAN.md section 7"
+    },
+    "validationPath": "docs/evidence/ux1/validation.json",
+    "localFinalReviewPath": "docs/evidence/ux1/local-review.json",
+    "cleanup": {
+      "authorityEvidencePath": "docs/evidence/ux1-cleanup/authority.md",
+      "policyReviewPath": "docs/evidence/ux1-cleanup/policy-review.json",
+      "validationPath": "docs/evidence/ux1-cleanup/validation.json",
+      "localFinalReviewPath": "docs/evidence/ux1-cleanup/local-review.json",
+      "priorCheckpoint": "d7e887293437338e0b428e6bdac491d3d296c70b",
+      "scope": "Remove visible decline/skip controls and explanatory notices; preserve questions, clearable optional answers, navigation, matcher and actual privacy; direct timer handoff unchanged."
+    },
+    "expandedCategories": {
+      "authorityEvidencePath": "docs/evidence/ux1-expanded/authority.md",
+      "priorCheckpoint": "7be4e990afee28b10caebaf9101a32d4e13bc6ec",
+      "policyReviewPath": "docs/evidence/ux1-expanded/policy-review.json",
+      "validationPath": "docs/evidence/ux1-expanded/validation.json",
+      "localFinalReviewPath": "docs/evidence/ux1-expanded/local-review.json",
+      "scope": "All six criterion groups expanded by default on steps3/4; all answers and existing handlers preserved."
+    },
+    "releaseAuthorityEvidencePath": "docs/evidence/ux1-release/authority.md",
+    "releasePreflightPath": "docs/evidence/ux1-release/preflight.json",
+    "releaseValidationPath": "docs/evidence/ux1-release/validation.json"
   }
 }

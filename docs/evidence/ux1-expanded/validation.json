@@ -1,0 +1,111 @@
+{
+  "scope": "Local UX1 expanded-category checks; four known canonical release gates remain; no hosted or freshness claim",
+  "commands": [
+    {
+      "name": "plan-check",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T15:05:57.622785+00:00",
+      "completedAt": "2026-09-16T15:06:30.004932+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1-expanded/plan-check.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+      "archiveSha256": "997be9e360e5d7426786fc1f850f30e9821821a44a43a6bbc93c3e28904edea8"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T15:06:30.005148+00:00",
+      "completedAt": "2026-09-16T15:06:34.565651+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-expanded/typecheck.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "archiveSha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T15:06:34.565892+00:00",
+      "completedAt": "2026-09-16T15:07:20.291534+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-expanded/tests.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "749fe1e68bbc344b31b291ca4acbba9e07d5c6e78e3e58b6d54c9b8b868b8c7e",
+      "archiveSha256": "4fe3ddf9521ddced60c917e8ec13f582305e1b0422879cee812ba5a9cdc4b240"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T15:07:20.291793+00:00",
+      "completedAt": "2026-09-16T15:07:26.811075+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-expanded/build.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "9b5fefec03e11015c8c04cc682edeb1fda3919ea4f4adc0693b4be37a7d14232",
+      "archiveSha256": "a1d88266e9bbc7531d28870dcd27986be1c9739a347757b9b0264ae77b2e4f62"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey",
+      "startedAt": "2026-09-16T15:07:26.811381+00:00",
+      "completedAt": "2026-09-16T15:07:26.830464+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-expanded/whitespace.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "b6a66528dfc8eeeb0ac2ec68bf1bbc68e7182c56d79b146bea7020f4660d381c"
+    },
+    {
+      "name": "browser",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "scripts/qa-ux1-expanded.cjs"
+      ],
+      "environment": {
+        "PLAYWRIGHT_MODULE": "/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright"
+      },
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T15:07:48.615831+00:00",
+      "completedAt": "2026-09-16T15:07:56.750724+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-expanded/browser.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "479eaf83583b0e82e3f73d60e9ebe05a04a1ba592058bbcfc5033b9e99e0e39b",
+      "archiveSha256": "e1181d0aead09dada2b5e16038b132475e31b3efe650a6ae2d2efc4939d79105"
+    }
+  ],
+  "summary": {
+    "applicationChecks": "typecheck/tests/build PASS",
+    "browser": "360x800 and1440x1000 PASS;38 choices visible on every entry/Back/Edit; manual collapse/re-entry passed",
+    "planCheck": "FAIL: exactly4 previously disclosed canonical release gates",
+    "fullAcceptance": false,
+    "publication": false
+  }
+}

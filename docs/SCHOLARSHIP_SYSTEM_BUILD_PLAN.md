@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 19
+Plan revision: 20
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -1947,3 +1947,57 @@ No source/workbook access or writes, research, product change, configuration/cre
 paid/access actions, rollback, monitoring, provider/applicant interaction or R5–R7. Retain
 all existing owners/triggers,257-operation no-replay, recovery objects, hold/research queues,
 criteria/definition/Bonita/NTHS issues and historical verification limits unchanged.
+
+
+## Plan Revision 20 — four-screen interview journey
+
+Kelsey directly authorized the complete UX plan and local execution on September 16,
+2026, explicitly prioritizing it before the season timer and requiring a direct timer
+handoff. Adopt docs/INTERVIEW_UX_BUILD_PLAN.md for this one maintenance release.
+The new route is original screens 1,4,2,3 with a visible four-step progression, primary
+Continue on the first three screens and results on the fourth. Preserve substantive
+questions and optional answers; only existing GPA/school basics require input. Back/edit retain
+current-visit state and final submission recomputes from revised answers. No persistent
+answer storage, matching/schema/catalog changes or new question is authorized.
+
+This prospectively supersedes only Revision16's early-results and optional-section
+navigation behavior; preserve its historical record and all other invariants. Completed
+stages and stage pointers remain unchanged; interviewUx tracks local preparation.
+Commit and independently review this prospective plan/policy before product edits.
+Local implementation and review follow under the direct user grant; canonical
+acceptance, final attestation and delivery remain gated. Keep the validator unchanged
+and report outstanding Revision20 delivery-authority/manifest/review/attestation failures
+until settled. No diagnostic suppression or acceptance waiver is authorized. Freeze
+and review the full final candidate; all normal canonical attestation gates still apply.
+
+The September16 direct user cleanup refines this same undelivered UX1 release.
+After independent prospective review, remove visible prefer-not/sensitive-skip controls
+and extra explanatory notices, retaining clearable optional answers and underlying
+privacy behavior. Runtime scope is InterviewWizard.tsx plus copy-only edits in
+ScholarshipBrowser.tsx and app/page.tsx, as specified in UX plan section4a. Preserve
+all original UX1 reviews/evidence; use ux1-cleanup for new reviews/evidence. No existing
+review is rebound. Update only the two obsolete presentation assertions identified
+in UX plan section4; no matcher/privacy regression is weakened. Scope changes require prior review.
+The further direct category-visibility refinement in UX plan section4b opens all six
+criterion groups by default through the shared renderer. Preserve existing questions/
+handlers and prior evidence; review its policy before the edit and its final candidate
+after validation. No release authority or other scope is added.
+No source/workbook access or changes, credentials/configuration, dependencies, provider
+contact, monitoring, email sending, paid action, rollback or remote release is granted.
+Prepare the local result before requesting any missing informed Git/Preview/Production
+effects. At verified UX delivery, Codex must execute the direct timer handoff in section7
+of the UX plan, retaining the saved timer checkpoint and incorporating delivered UX
+into any subsequent timer implementation/release baseline.
+
+### September16 UX1 live delivery grant
+
+Kelsey's direct instruction to push the reviewed updates live now supplies the
+missing release effects. docs/evidence/ux1-release/authority.md and PLAN-REV20 state
+bind the exact existing repository, branch, Vercel project/team and hostname. This
+supersedes only the earlier no-publication status for UX1; no other authority changes.
+Freeze/review the complete candidate, preserve all earlier artifacts, add exactly the
+canonical manifest/review in a direct-child attestation, and require actual local and
+hosted-mode validation to pass. Keep attestation at tip until exact Preview/CI and
+ancestry-preserving merge, then verify exact Production/application behavior.
+No runtime additions or validation exceptions are needed. Preserve section7's direct
+timer handoff and execute it after verified delivery, within the timer's existing gates.

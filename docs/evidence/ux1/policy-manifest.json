@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-prospective-policy-manifest-not-canonical-attestation",
+  "stepId": "UX1",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "candidateCommit": "ab580996d546fd812776c2d5c036e037d5ff2f91",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "sha256": "6a40c71efce9f19fb000aed01cb8aa2f2ff4a72daf26880544df7b834c4bcde6",
+      "sizeBytes": 30082
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "status": "M",
+      "sha256": "c2632e11a32e76a966f34c3d5c151d2336dd86ae550f0ab2e9c75d143563f2c0",
+      "sizeBytes": 85362
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "status": "M",
+      "sha256": "172d0fe056161f4dbb689053edaa72b91cc2e61c86461ea57b386a0ca4509378",
+      "sizeBytes": 585061
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "status": "M",
+      "sha256": "a04c2b0945548a284f665cccbacd78890b74066fff06cb94a35dcd75076ab499",
+      "sizeBytes": 52175
+    },
+    {
+      "path": "docs/INTERVIEW_UX_BUILD_PLAN.md",
+      "status": "A",
+      "sha256": "57870160c8b620952ffa1b87a4b92bed0b34302383ef9f6c76a844a96cee8caf",
+      "sizeBytes": 13465
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "status": "M",
+      "sha256": "5483d789766de14c55175b7015e6c8215ea6dee3288c095f3b39523586342028",
+      "sizeBytes": 126885
+    },
+    {
+      "path": "docs/evidence/PLAN-REV20.md",
+      "status": "A",
+      "sha256": "f71b7cbecf6f67aa39cd3796de6702f4e66f298fb1e518fd4a1afd3edde07243",
+      "sizeBytes": 2918
+    },
+    {
+      "path": "docs/evidence/ux1/policy-validation.json",
+      "status": "A",
+      "sha256": "3a7a646f9383fa7d805fb9488860086afea409c146f5d1ec2540b2548773f22f",
+      "sizeBytes": 956
+    },
+    {
+      "path": "docs/evidence/ux1/preflight.json",
+      "status": "A",
+      "sha256": "cfedf18035dbd6321e0d713b8748ede942a94b999ff387632c7a87df7d9029a5",
+      "sizeBytes": 824
+    }
+  ],
+  "canonicalAcceptanceClaimed": false
+}
