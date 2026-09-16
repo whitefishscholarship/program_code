@@ -457,8 +457,10 @@ criteria/definition/Bonita/NTHS issues and historical verification limits unchan
 
 Use docs/INTERVIEW_UX_BUILD_PLAN.md for the selected four-screen UX release. Only
 existing GPA/school answers are required; all other answers remain optional. Preserve
-current-visit Back/edit state, all controls, unknown/non-exclusion and public-only
-exports. Review the committed prospective policy before runtime edits. Local execution
+current-visit Back/edit state, substantive questions, unknown/non-exclusion and
+public-only exports. The September16 correction in UX plan section4a removes visible
+prefer-not/sensitive-skip controls and extra notices, with clearable optional answers;
+review that committed prospective correction before affected runtime edits. Local execution
 is directly authorized; final canonical acceptance and release effects are not. Keep
 all historical artifacts and validator gates intact; disclose the four outstanding
 Revision20 release diagnostics. The direct timer handoff in plan section7 is required

@@ -1335,7 +1335,7 @@
   },
   "interviewUx": {
     "planId": "UX1",
-    "status": "local-review-complete-awaiting-exact-release-authority",
+    "status": "cleanup-policy-review-pending",
     "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
     "planPath": "docs/INTERVIEW_UX_BUILD_PLAN.md",
     "authorityEvidencePath": "docs/evidence/PLAN-REV20.md",
@@ -1344,7 +1344,9 @@
     "policyReviewPath": "docs/evidence/ux1/policy-review.json",
     "publicationAuthorized": false,
     "runtimePaths": [
-      "web/src/components/InterviewWizard.tsx"
+      "web/src/components/InterviewWizard.tsx",
+      "web/src/components/ScholarshipBrowser.tsx",
+      "web/src/app/page.tsx"
     ],
     "requiredAnswers": "existing GPA and target school type only",
     "screenOrder": [
@@ -1365,6 +1367,14 @@
       "section": "docs/INTERVIEW_UX_BUILD_PLAN.md section 7"
     },
     "validationPath": "docs/evidence/ux1/validation.json",
-    "localFinalReviewPath": "docs/evidence/ux1/local-review.json"
+    "localFinalReviewPath": "docs/evidence/ux1/local-review.json",
+    "cleanup": {
+      "authorityEvidencePath": "docs/evidence/ux1-cleanup/authority.md",
+      "policyReviewPath": "docs/evidence/ux1-cleanup/policy-review.json",
+      "validationPath": "docs/evidence/ux1-cleanup/validation.json",
+      "localFinalReviewPath": "docs/evidence/ux1-cleanup/local-review.json",
+      "priorCheckpoint": "d7e887293437338e0b428e6bdac491d3d296c70b",
+      "scope": "Remove visible decline/skip controls and explanatory notices; preserve questions, clearable optional answers, navigation, matcher and actual privacy; direct timer handoff unchanged."
+    }
   }
 }

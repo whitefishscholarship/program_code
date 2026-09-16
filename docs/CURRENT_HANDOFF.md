@@ -1,3 +1,18 @@
+# UX1 cleanup correction — prospective review next
+
+Plan revision: 20. Kelsey requested removal of all visible prefer-not/sensitive-skip
+controls and extra explanatory notices while keeping optional input and the four-step
+journey. Current scope is UX plan section4a; direct authority is
+docs/evidence/ux1-cleanup/authority.md. Preserve the entire prior UX1 evidence folder,
+policy/final review and candidate1207be2. Prior PASS does not cover this correction.
+Resume the existing UX1 worktree/branch at saved d7e8872. Review the dedicated local
+policy correction before runtime edits; final cleanup review/evidence get separate
+paths. No publication is authorized. Four canonical release gates remain.
+Required direct timer handoff remains UX plan section7, same009fa57 checkpoint and
+confirmed recipient; no timer action or input changes are part of this cleanup.
+
+---
+
 # UX1 locally reviewed — release authority next, timer M1 afterward
 
 Plan revision: 20. UX1 local implementation and independent final review are complete.

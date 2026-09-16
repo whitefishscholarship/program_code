@@ -1955,8 +1955,8 @@ Kelsey directly authorized the complete UX plan and local execution on September
 2026, explicitly prioritizing it before the season timer and requiring a direct timer
 handoff. Adopt docs/INTERVIEW_UX_BUILD_PLAN.md for this one maintenance release.
 The new route is original screens 1,4,2,3 with a visible four-step progression, primary
-Continue on the first three screens and results on the fourth. Preserve all controls
-and optional answers; only existing GPA/school basics require input. Back/edit retain
+Continue on the first three screens and results on the fourth. Preserve substantive
+questions and optional answers; only existing GPA/school basics require input. Back/edit retain
 current-visit state and final submission recomputes from revised answers. No persistent
 answer storage, matching/schema/catalog changes or new question is authorized.
 
@@ -1970,7 +1970,13 @@ and report all four Revision20 delivery-authority/manifest/review/attestation fa
 until settled. No diagnostic suppression or acceptance waiver is authorized. Freeze
 and review the full final candidate; all normal canonical attestation gates still apply.
 
-Runtime changes are confined to InterviewWizard.tsx; scope changes require prior review.
+The September16 direct user cleanup refines this same undelivered UX1 release.
+After independent prospective review, remove visible prefer-not/sensitive-skip controls
+and extra explanatory notices, retaining clearable optional answers and underlying
+privacy behavior. Runtime scope is InterviewWizard.tsx plus copy-only edits in
+ScholarshipBrowser.tsx and app/page.tsx, as specified in UX plan section4a. Preserve
+all original UX1 reviews/evidence; use ux1-cleanup for new reviews/evidence. No existing
+review is rebound. Scope changes require prior review.
 No source/workbook access or changes, credentials/configuration, dependencies, provider
 contact, monitoring, email sending, paid action, rollback or remote release is granted.
 Prepare the local result before requesting any missing informed Git/Preview/Production

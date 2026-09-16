@@ -786,3 +786,17 @@ criteria/definition/Bonita/NTHS issues and historical verification limits unchan
 - Rollback: retain local baseline; no destructive reset or deployed rollback authority.
 - Continuation: Codex must follow UX plan section7 directly into timer M1 after verified
   UX delivery; preserve timer009fa57 and use delivered UX in later timer code baselines.
+
+
+## D-UX1-COPY — Optional-answer cleanup from user preview feedback
+
+- Date: 2026-09-16. Direct user authority: docs/evidence/ux1-cleanup/authority.md.
+- Decision: refine the existing unshipped UX1 release; remove visible prefer-not and
+  sensitive-skip controls and extra explanatory copy. Keep substantive questions,
+  optional blank answers, clearable radio responses and normal navigation.
+- Scope: Wizard plus copy-only Browser/page changes; no matcher/schema, source,
+  privacy mechanism, persistence or timer change. Preserve legacy compatibility.
+- Review: prospective cleanup review before affected edits; separate final review.
+  Original candidate and all UX1 evidence remain immutable and unrebound.
+- Rollback: retain d7e8872 locally; no history rewrite or deployment authority.
+- Direct timer handoff remains required and unchanged.

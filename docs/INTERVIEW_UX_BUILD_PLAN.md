@@ -8,7 +8,9 @@ Plan Revision 20 in SCHOLARSHIP_SYSTEM_BUILD_PLAN.md and BUILD_STATE.json.
 
 Make the full four-screen interview the normal route to personalized results.
 Only the existing GPA and target-school-type answers are required. Students may
-leave every other answer blank or use existing none/unknown/prefer-not answers.
+leave every other answer blank or use existing none/unknown answers. The September16
+cleanup removes visible prefer-not answers and sensitive-skip controls; its direct
+authority is in docs/evidence/ux1-cleanup/authority.md.
 The user expressly clarified that mandatory screens do not mean mandatory input,
 requested Back with answer editing, authorized a complete stored plan and execution,
 and required a direct handoff to the timer plan. Exact statements are recorded in
@@ -37,11 +39,13 @@ for any missing release authority. Do not stop local work merely because it is m
 | --- | --- | --- |
 | 1 of 4 — Start with two details | 1 | Required unweighted GPA and target school type |
 | 2 of 4 — More details and application preferences | 4 | Residence, educational status, college acceptance, gap year and six application format choices; all optional |
-| 3 of 4 — Study plans and activities | 2 | Education interests, career/activity criteria, four activities, conditional volunteer hours and sensitive skip |
-| 4 of 4 — Helpful scholarship connections | 3 | Financial-need discovery preference, student organizations and clearing responses, remaining criteria and sensitive skip |
+| 3 of 4 — Study plans and activities | 2 | Education interests, career/activity criteria, four activities, conditional volunteer hours |
+| 4 of 4 — Helpful scholarship connections | 3 | Financial-need discovery preference, student organizations and clearing responses, remaining criteria |
 
 Preserve all 38 special criteria, every currently configured interest/organization,
-all option values and IDs, conditional clearing, and existing eligibility semantics.
+all substantive option values and IDs, conditional clearing, and existing eligibility
+semantics. Explicitly retire only the prefer-not and sensitive-skip UI controls.
+Keep legacy schema values compatible internally; no matcher/schema migration.
 No new question, checkbox or answer acknowledgement is introduced.
 
 - Display `Step 1 of 4` through `Step 4 of 4`; remove optional-section headings and
@@ -67,14 +71,48 @@ No new question, checkbox or answer acknowledgement is introduced.
 
 ## 4. Implementation boundary
 
-Runtime scope: `web/src/components/InterviewWizard.tsx` only. Existing
-ScholarshipBrowser state already supports edit/recalculation; do not change it
-unless review proves a required defect, then amend the scope before that edit.
-Add a current local browser regression script and evidence under `docs/evidence/ux1/`.
+Runtime scope: `web/src/components/InterviewWizard.tsx`,
+`web/src/components/ScholarshipBrowser.tsx` and `web/src/app/page.tsx`. The latter
+two permit copy/notice removal only; preserve all catalog, result, edit and reset logic.
+Keep the original UX1 evidence immutable. Record this correction under
+`docs/evidence/ux1-cleanup/` with a separate current browser regression script.
 Preserve historical QA scripts and evidence; they describe their original releases.
 No new dependency, matcher/schema change, catalog/data change, source fetch,
 spreadsheet access, provider contact, email send, credential/configuration change,
 monitor/timer implementation, paid action or remote release during local execution.
+
+## 4a. September16 optional-answer and copy refinement
+
+- Remove every visible Prefer not to answer option: college acceptance, gap year,
+  financial-need interest and organization response. Remove both sensitive-skip
+  checkboxes and their helper copy. All substantive questions and categories remain.
+- Blank optional answers remain valid before and after editing. Provide a small
+  keyboard-accessible Clear answer action only when an optional radio group has an
+  answer; this resets that answer to null. Checkbox choices remain individually
+  toggleable; organization clearing resets both choices and response. This is an
+  editing action, not a substitute decline answer or a required acknowledgement.
+- Preserve legacy parsed-answer compatibility and non-exclusion: legacy prefer-not
+  choices display as blank; previous sensitive skipping never resurrects cleared
+  selections or leaves visible options permanently disabled. Explicit later choices
+  take effect. No answer/schema/catalog/matcher fact is promoted or persisted.
+- Remove the temporary-memory paragraph and How your answers are used disclosure,
+  global organizer/snapshot/unsupported-choice notices, no-effect annotations,
+  financial-need/organization/application-preference implementation explanations,
+  and generic nonselection/points explanations. Remove the repeated results banner
+  and introductory matching-status explanation. Keep per-award facts, status labels,
+  specific result reasons, accessible counts and required-field validation errors.
+- Simplify the privacy-focused hero/start/results copy to plain scholarship wording;
+  remove the legacy start-screen promise cards and generic footer warning. Keep
+  Administrator sign-in, browse-all, all questions, progress and Continue/Back/results.
+  Retain concise question definitions when needed to understand an answer choice.
+- Actual privacy behavior stays identical: volatile current-visit state, no answer
+  storage/transmission/logging or answer-bearing CSV. Removing explanatory text
+  does not authorize changing those mechanisms.
+- Preserve all original docs/evidence/ux1 files and the existing QA script byte-for-
+  byte; use new cleanup evidence and QA. Recheck desktop/mobile four-step flow, blank
+  screens, selecting then clearing each optional radio, clearing organizations,
+  Back/edit/recalculation, legacy compatibility, reset/reload, keyboard/focus and
+  exact public CSV. Assert removed copy/options absent on all screens and results.
 
 ## 5. Execution tracker and completion gates
 
@@ -83,9 +121,9 @@ another program stage. Update this table and CURRENT_HANDOFF; no duplicate backl
 
 | Checkpoint | Work and completion gate | Status |
 | --- | --- | --- |
-| Plan and policy | Store this plan, direct timer handoff, prospective Revision 20, exact authority and baseline; freeze and independently review before runtime edits | PASS at ab58099; review record in docs/evidence/ux1/policy-review.json |
-| Local implementation | Reorder the existing panels, unify progression, retain optional answers and Back/edit semantics | Implemented locally; browser and application checks passed |
-| Verification and independent review | Required checks, browser acceptance matrix, preserved artifacts, exact candidate manifest, fresh-context read-only final review; resolve findings | PASS at1207be2; exact local-review.json controls; four canonical release gates remain |
+| Plan and policy | Store and review the prospective cleanup correction before affected runtime edits | Original PASS preserved; cleanup policy review pending |
+| Local implementation | Preserve four-step flow; remove decline controls and extra notices; make optional answers clearable | Original implemented/reviewed; cleanup pending policy review |
+| Verification and independent review | Required checks, revised browser matrix, preserved artifacts and fresh final cleanup review | Original PASS at1207be2 preserved; cleanup review pending; four canonical release gates remain |
 | Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Not authorized or started |
 | Direct timer handoff | After UX delivery is verified, continue only unfinished timer M1 under section 7 below | Queued; Codex owns continuation |
 
@@ -109,8 +147,9 @@ Use fictional profiles against the local production build, with 360×800 and
    change and clear selections, then compare final ordered IDs/reasons with the
    unchanged matcher for the final profile. Re-enter through Edit answers and
    verify replacement rather than accumulation of prior answers.
-4. Preserve all controls, sensitive skip/clearing, conditional service hours,
-   none/not-sure/prefer-not responses and all-award access. Keep unsupported and
+4. Preserve substantive controls, direct answer clearing, conditional service hours,
+   none/not-sure responses and all-award access. Verify no prefer-not/sensitive-skip
+   controls remain visible; preserve conservative legacy skipped-answer behavior. Keep unsupported and
    unknown choices non-excluding; no eligibility facts change.
 5. Keyboard-only forward/back traversal, heading focus, mobile/desktop layout,
    no horizontal overflow, and screenshots of the reordered flow.
