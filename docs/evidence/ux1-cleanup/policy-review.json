@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-local-prospective-policy-review",
+  "stepId": "UX1-cleanup",
+  "candidateCommit": "6d77046d8dc55d2e649e7ed5dc0cca27d2934ad8",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "manifestPath": "docs/evidence/ux1-cleanup/policy-manifest.json",
+  "manifestSha256": "aba19d3fe1095ae03f174314a7dbe1b96f9e8d5faf66d52965aa157d6efdbb29",
+  "recordedAt": "2026-09-16T14:30:39.829479+00:00",
+  "reviewer": "/root/ux1_cleanup_policy_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "reviewerSummary": "Verified all37 manifest entries and ancestry; 27 original UX1 evidence/QA and480 baseline evidence/review artifacts preserved. No runtime/test changes; prior state/handoff/timer section7 preserved. Only two superseded presentation assertions permitted to change. Full whitespace passed; independent npm run plan:check returns exactly four existing release failures.",
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false
+}
