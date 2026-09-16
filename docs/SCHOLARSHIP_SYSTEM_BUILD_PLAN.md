@@ -1976,7 +1976,8 @@ and extra explanatory notices, retaining clearable optional answers and underlyi
 privacy behavior. Runtime scope is InterviewWizard.tsx plus copy-only edits in
 ScholarshipBrowser.tsx and app/page.tsx, as specified in UX plan section4a. Preserve
 all original UX1 reviews/evidence; use ux1-cleanup for new reviews/evidence. No existing
-review is rebound. Scope changes require prior review.
+review is rebound. Update only the two obsolete presentation assertions identified
+in UX plan section4; no matcher/privacy regression is weakened. Scope changes require prior review.
 No source/workbook access or changes, credentials/configuration, dependencies, provider
 contact, monitoring, email sending, paid action, rollback or remote release is granted.
 Prepare the local result before requesting any missing informed Git/Preview/Production

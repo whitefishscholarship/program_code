@@ -800,3 +800,8 @@ criteria/definition/Bonita/NTHS issues and historical verification limits unchan
   Original candidate and all UX1 evidence remain immutable and unrebound.
 - Rollback: retain d7e8872 locally; no history rewrite or deployment authority.
 - Direct timer handoff remains required and unchanged.
+
+D-UX1-COPY verification clarification: the two current P8F source assertions requiring
+sensitive-skip text and SHORTLIST_NOTICE are superseded presentation requirements.
+Replace only those assertions with absence checks; preserve actual matcher/privacy/
+export regressions and original UX1 QA/evidence. Include in prospective review.

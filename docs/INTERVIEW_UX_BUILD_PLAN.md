@@ -76,7 +76,11 @@ Runtime scope: `web/src/components/InterviewWizard.tsx`,
 two permit copy/notice removal only; preserve all catalog, result, edit and reset logic.
 Keep the original UX1 evidence immutable. Record this correction under
 `docs/evidence/ux1-cleanup/` with a separate current browser regression script.
-Preserve historical QA scripts and evidence; they describe their original releases.
+Preserve original UX1 QA and evidence; they describe the original reviewed release.
+The two presentation assertions in web/scripts/test-p8f-interview.ts that require
+SensitiveSkip text and SHORTLIST_NOTICE are prospectively superseded by this direct
+correction. Update only those assertions to verify their removal; keep every actual
+matcher, privacy, schema and export regression unchanged.
 No new dependency, matcher/schema change, catalog/data change, source fetch,
 spreadsheet access, provider contact, email send, credential/configuration change,
 monitor/timer implementation, paid action or remote release during local execution.
