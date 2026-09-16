@@ -85,7 +85,7 @@ another program stage. Update this table and CURRENT_HANDOFF; no duplicate backl
 | --- | --- | --- |
 | Plan and policy | Store this plan, direct timer handoff, prospective Revision 20, exact authority and baseline; freeze and independently review before runtime edits | PASS at ab58099; review record in docs/evidence/ux1/policy-review.json |
 | Local implementation | Reorder the existing panels, unify progression, retain optional answers and Back/edit semantics | Implemented locally; browser and application checks passed |
-| Verification and independent review | Required checks, browser acceptance matrix, preserved artifacts, exact candidate manifest, fresh-context read-only final review; resolve findings | Local verification complete; four release gates remain; final review pending |
+| Verification and independent review | Required checks, browser acceptance matrix, preserved artifacts, exact candidate manifest, fresh-context read-only final review; resolve findings | PASS at1207be2; exact local-review.json controls; four canonical release gates remain |
 | Release | Obtain any missing exact push/PR/Preview/merge/Production/verification authority; refreeze/review authority-bearing candidate; canonical direct-child two-file attestation; exact Preview/CI then merge and exact Production checks | Not authorized or started |
 | Direct timer handoff | After UX delivery is verified, continue only unfinished timer M1 under section 7 below | Queued; Codex owns continuation |
 

@@ -1,3 +1,37 @@
+# UX1 locally reviewed — release authority next, timer M1 afterward
+
+Plan revision: 20. UX1 local implementation and independent final review are complete.
+Resume `/private/tmp/program_code-ux1-four-screen-journey`, branch
+`codex/ux1-four-screen-journey`. Reviewed candidate:
+`1207be2421f2a1bb197bef649f013ac949c88a92`; local manifest SHA256
+`b3e2ca8398a7ee9198d9898bf47fd5c9ab0f747e2c87e885e711cef9f04878bd`.
+`docs/evidence/ux1/local-review.json` records fresh-context read-only PASS, C0/H0/M0/L0.
+Application tests/typecheck/build and mobile/desktop browser checks passed. The full
+baseline whitespace check passed after exact raw log outputs were archived losslessly.
+Plan validation still fails only the four disclosed Revision20 release-authority and
+canonical manifest/review/attestation gates. No canonical acceptance or release.
+This closeout updates progress only; it does not rebind the reviewed candidate.
+
+Next action, owner Codex: obtain the missing informed release effects for the concrete
+UX-only result in `docs/evidence/ux1/RELEASE_CANDIDATE.md`; verify current main/target,
+freeze and independently review the authority-bearing candidate, then complete normal
+canonical attestation, Preview/CI, merge and Production verification. No new feature
+work or repeated local QA is needed unless changed bytes or findings justify it.
+Local preview was started at http://127.0.0.1:3220; restart from web with
+`npm run build` then `npm run start -- --hostname 127.0.0.1 --port 3220` if stopped.
+For browser regression, use the command and PLAYWRIGHT_MODULE path in validation.json.
+
+Required direct timer handoff: after verified UX delivery, follow section7 of
+`docs/INTERVIEW_UX_BUILD_PLAN.md` directly into unfinished timer M1. Saved timer
+checkpoint009fa57 remains intact, recipient kelsey@waypointfranchise.com confirmed,
+437-record inventory reusable. Carry its pinned R5 input and provenance when preparing
+a fresh post-UX timer baseline, then reproduce the inventory. Never revert delivered
+UX or replay spent257operations. All other research/recovery owners and triggers remain
+in the retained timer handoff. No timer activation, source/workbook access, email send,
+configuration/credential change or paid effect is included.
+
+---
+
 # UX1 — four-screen journey first; timer follows directly
 
 Plan revision: 20. Local execution is authorized; prospective policy review passed at ab58099.
