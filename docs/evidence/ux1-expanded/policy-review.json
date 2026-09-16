@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "independent-local-prospective-policy-review",
+  "stepId": "UX1-expanded",
+  "candidateCommit": "734b4a152c1831ef669632396b63cc7ae89db854",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "manifestPath": "docs/evidence/ux1-expanded/policy-manifest.json",
+  "manifestSha256": "590842956c1be004b5443b34a31a3114e1265c066e27fc3d5e775a2442fade9e",
+  "recordedAt": "2026-09-16T15:05:51.299379+00:00",
+  "reviewer": "/root/ux1_expanded_policy_review",
+  "freshContext": true,
+  "readOnly": true,
+  "outcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "reviewerSummary": "All64 manifest entries and six-path policy delta verified. Prior runtime/QA/CI,480 baseline artifacts, original UX/cleanup manifest bindings and evidence, historical state, complete prior handoff and timer section7 preserved. Full whitespace PASS. Independent node --import tsx scripts/validate-build-plan.ts exit1 with exactly4 disclosed release failures.",
+  "canonicalAcceptance": false,
+  "releaseAuthorized": false
+}
