@@ -805,3 +805,11 @@ D-UX1-COPY verification clarification: the two current P8F source assertions req
 sensitive-skip text and SHORTLIST_NOTICE are superseded presentation requirements.
 Replace only those assertions with absence checks; preserve actual matcher/privacy/
 export regressions and original UX1 QA/evidence. Include in prospective review.
+
+## D-UX1-EXPANDED — show all category choices by default
+
+Kelsey's September16 screenshot review requests all categories expanded. Apply `open`
+to the shared six-category renderer; students may collapse and re-entry opens all.
+No answers become required and no handler/matching/data changes. Record prospective
+and final reviews/new QA under ux1-expanded; preserve previous evidence and the direct
+timer handoff. Owner Codex, local implementation authorized; release gates unchanged.

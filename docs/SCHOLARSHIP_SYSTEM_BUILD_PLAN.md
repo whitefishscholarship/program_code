@@ -1978,6 +1978,10 @@ ScholarshipBrowser.tsx and app/page.tsx, as specified in UX plan section4a. Pres
 all original UX1 reviews/evidence; use ux1-cleanup for new reviews/evidence. No existing
 review is rebound. Update only the two obsolete presentation assertions identified
 in UX plan section4; no matcher/privacy regression is weakened. Scope changes require prior review.
+The further direct category-visibility refinement in UX plan section4b opens all six
+criterion groups by default through the shared renderer. Preserve existing questions/
+handlers and prior evidence; review its policy before the edit and its final candidate
+after validation. No release authority or other scope is added.
 No source/workbook access or changes, credentials/configuration, dependencies, provider
 contact, monitoring, email sending, paid action, rollback or remote release is granted.
 Prepare the local result before requesting any missing informed Git/Preview/Production

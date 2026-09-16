@@ -1,3 +1,15 @@
+# UX1 category visibility refinement — prospective review next
+
+User requests every category expanded so students see all choices. Execute UX plan
+section4b under docs/evidence/ux1-expanded/authority.md. Existing local checkpoint
+7be4e99 and all prior UX1/cleanup reviews/evidence remain immutable. Review the
+prospective policy, then add `open` to the shared category renderer, adapt current QA
+with separate outputs, run full checks and final independent local review.
+No other runtime/answer/data changes. Four canonical release gates remain; no
+publication. Required direct timer handoff in section7 remains unchanged.
+
+---
+
 # UX1 cleanup locally reviewed — preview ready; release gate next
 
 Plan revision20. The requested optional-answer and notice cleanup is complete locally.

@@ -1335,7 +1335,7 @@
   },
   "interviewUx": {
     "planId": "UX1",
-    "status": "cleanup-locally-reviewed-awaiting-release-authority",
+    "status": "expanded-categories-policy-review-pending",
     "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
     "planPath": "docs/INTERVIEW_UX_BUILD_PLAN.md",
     "authorityEvidencePath": "docs/evidence/PLAN-REV20.md",
@@ -1375,6 +1375,14 @@
       "localFinalReviewPath": "docs/evidence/ux1-cleanup/local-review.json",
       "priorCheckpoint": "d7e887293437338e0b428e6bdac491d3d296c70b",
       "scope": "Remove visible decline/skip controls and explanatory notices; preserve questions, clearable optional answers, navigation, matcher and actual privacy; direct timer handoff unchanged."
+    },
+    "expandedCategories": {
+      "authorityEvidencePath": "docs/evidence/ux1-expanded/authority.md",
+      "priorCheckpoint": "7be4e990afee28b10caebaf9101a32d4e13bc6ec",
+      "policyReviewPath": "docs/evidence/ux1-expanded/policy-review.json",
+      "validationPath": "docs/evidence/ux1-expanded/validation.json",
+      "localFinalReviewPath": "docs/evidence/ux1-expanded/local-review.json",
+      "scope": "All six criterion groups expanded by default on steps3/4; all answers and existing handlers preserved."
     }
   }
 }

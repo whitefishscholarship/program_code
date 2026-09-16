@@ -118,6 +118,20 @@ monitor/timer implementation, paid action or remote release during local executi
   Back/edit/recalculation, legacy compatibility, reset/reload, keyboard/focus and
   exact public CSV. Assert removed copy/options absent on all screens and results.
 
+## 4b. September16 category visibility refinement
+
+User authority: docs/evidence/ux1-expanded/authority.md. Make all six criterion
+categories on steps3 and4 expanded by default using `open` on their shared details
+renderer. Every choice is visible without opening a section; students may collapse
+a section if desired, and re-entering a screen opens its categories again. Education
+and activities remain visible. Preserve every question, optional answer and handler.
+The runtime delta is confined to InterviewWizard.tsx. Preserve all prior UX1/cleanup
+evidence and QA scripts; adapt the cleanup QA into qa-ux1-expanded.cjs with separate
+output and assertions that all38 criteria are visible on first entry and Back/edit.
+Keep normal full checks, prospective/final independent reviews, all release gates and
+the direct timer handoff. This is an additive UX refinement, with no new matching/data
+or release scope. Track its current status in BUILD_STATE and CURRENT_HANDOFF.
+
 ## 5. Execution tracker and completion gates
 
 These are checkpoints within one UX maintenance release, not permission to start
