@@ -157,9 +157,20 @@ work, not an optional suggestion or a new unowned task.
    Preserve M0 review and partial M1 review; do not claim full M1 completion.
 6. The saved timer branch predates this UX release. Before timer code or release
    preparation, verify fresh main includes the delivered UX; prepare a clean
-   continuation from that main, carrying only timer-owned documentation/evidence.
-   Preserve original review files and source checkpoints; never deploy the old
-   timer tree or revert the UX. Route CURRENT_HANDOFF conflicts by keeping the
+   continuation from that main, carrying timer-owned documentation/evidence plus
+   required pinned saved inputs and their original provenance. The inventory builder
+   requires `docs/evidence/r5-research/results.json` from timer checkpoint009fa57,
+   SHA256 `b559cf798e624259d1ce5acd16fa793e2b215e9f8a53d40885086d8726eca848`;
+   it is absent from the pre-UX main baseline. Carry that exact saved input without
+   rereading sources or changing its contents. Verify the other input,
+   `web/fixtures/r3/catalog-v1.json`, SHA256
+   `9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908`.
+   Record original commit/path/hash provenance; preserve original review records
+   without rebinding them to the new tree. Reproduce the inventory after transfer
+   and require SHA256 `87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8`.
+   Any source drift requires reconciliation before continuing. Preserve delivered
+   UX/runtime bytes; never deploy the old timer tree or revert the UX.
+   Route CURRENT_HANDOFF conflicts by keeping the
    newest operative instructions and preserving older sections as history.
 7. Follow the timer's own M1→M2→M3→M4 gates. M2 needs its selected build contract;
    the 12-source public pilot remains M3; suppression/state writes, scheduling and

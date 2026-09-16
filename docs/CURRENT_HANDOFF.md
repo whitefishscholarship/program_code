@@ -19,8 +19,9 @@ Actions allowance/zero overage and email sender/service for kelsey@waypointfranc
 Recipient is confirmed. Codex owns resumption after verified UX delivery. The saved
 timer plan/evidence and its complete original handoff remain in that worktree; its
 older monitor-only priority statement is superseded by this UX-first instruction.
-Carry only timer-owned files into a fresh post-UX baseline before later implementation
-or release. Never ship its older runtime. All research/hold/recovery routes, ETV/Fund
+Carry timer-owned files and the exact required saved R5 research input/provenance
+listed in UX plan section7 into a fresh post-UX baseline, then reproduce the inventory
+before later implementation or release. Never ship its older runtime. All research/hold/recovery routes, ETV/Fund
 the Fish and257spentoperations remain preserved there; do not replay them.
 
 No source/workbook access, email sends, timer activation, credentials/configuration,
