@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV20",
+  "reviewerTaskId": "/root/ux1_canonical_release_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "reviewedAt": "2026-09-16T16:18:57.149Z",
+  "outcome": "accepted",
+  "candidateCommit": "50a7a8e53280e841b3f3b59b5863cbfdf2f7d683",
+  "candidateTree": "35d8e5968f8f553a1044489ec4ac916d489331c5",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "candidateManifestPath": "docs/evidence/PLAN-REV20-manifest.json",
+  "candidateManifestSha256": "bee20a7d13604054e059a0e82a11721ef6a723922ce0179c1f6f7c48a47d7c8d",
+  "completeChangedPathCount": 97,
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 2
+  },
+  "unresolvedFindings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "severity": "low",
+      "summary": "UX1-CANONICAL-001: stale UX1 delivery-authority blocker in current BUILD_STATE after the direct live grant.",
+      "rationale": "The implementation owner removed only PLAN-REV20-awaits-exact-Git-Vercel-effect-authority-or-verified-suppression in final candidate50a7a8e. Independent recheck proves the exact one-string correction and preservation of the historical P9 blocker, all other state, runtime and evidence. The finding is resolved before acceptance.",
+      "owner": "Codex UX1 release owner",
+      "target": "Final canonical candidate50a7a8e53280e841b3f3b59b5863cbfdf2f7d683 before attestation",
+      "status": "resolved"
+    },
+    {
+      "severity": "low",
+      "summary": "UX1-CANONICAL-002: manifest createdAt used six fractional-second digits, rejected by the unchanged validator.",
+      "rationale": "The first local attempted attestation1ed345c352a097aeb01cd49a96b4b4800f1ddc9f failed both actual validator modes solely on timestamp format and was never published or accepted by full validation. It is preserved unchanged on codex/ux1-rejected-timestamp-attestation. The corrected prospective manifest changes only createdAt to2026-09-16T16:17:00.554Z; independent recheck verifies the exact unchanged candidate, complete97-path change set, every blob hash and working-tree byte, and exact validator timestamp regex. This review binds the new digest; the failed record remains rejected historical evidence.",
+      "owner": "Codex UX1 release owner",
+      "target": "Corrected prospective canonical manifest bee20a7d13604054e059a0e82a11721ef6a723922ce0179c1f6f7c48a47d7c8d before replacement attestation",
+      "status": "resolved"
+    }
+  ],
+  "decisionScope": "Accept the complete frozen97-path UX1 / PLAN-REV20 candidate for its exact direct-child two-file canonical attestation. This does not claim that the attestation, zero post-attestation validators, push, Preview/CI, merge, Production or timer handoff are complete. Add only docs/evidence/PLAN-REV20-manifest.json and docs/reviews/PLAN-REV20.json in the immediate child; preserve the attestation as branch tip until delivery; require actual local and hosted-mode plan validation exit0 before push. Verify exact Preview/CI before ancestry-preserving merge and exact Production afterward. Then execute UX plan section7 within the timer existing gates. The earlier rejected timestamp attempt is retained as failed evidence; this record binds only the corrected prospective manifest and requires fresh full validation after the corrected real attestation.",
+  "verification": [
+    "Read actual AGENTS, canonical universal/independent-review rules and complete Revision20, current BUILD_STATE and operative handoff, latest accepted amendment evidence and P9 evidence, original UX authority, complete INTERVIEW_UX_BUILD_PLAN, cleanup/expanded review records, current live authority/preflight/validation/preservation, and actual runtime/test/governance diff. Active and next-permitted canonical stage pointers remain null; no later program stage is started.",
+    "Independently recomputed final manifest SHA256bee20a7d13604054e059a0e82a11721ef6a723922ce0179c1f6f7c48a47d7c8d; all97 distinct paths exactly equal the complete baseline-to-candidate Git change set, every candidate blob hash matches and every corresponding working-tree byte is identical. Final HEAD50a7a8e has tree35d8e5968f8f553a1044489ec4ac916d489331c5; local origin/main equals the pinned baseline and candidate descends from it. Only the untracked prospective canonical manifest is present outside the committed candidate.",
+    "Independently verified all553 evidence/review paths from prior closeout7a8dc4d remain byte-identical. Final BUILD_STATE equals main after removing only new interviewUx and PLAN-REV20 objects and restoring revision/date metadata. All historical amendments, stages, authorities, source/recovery records and the historical P9 blocker remain exact. The entire baseline handoff is preserved as an exact suffix. Timer section7 and timerHandoff state remain exact to the preceding closeout.",
+    "Recomputed all six prior policy/final manifests and bound reviews: original UX1 policy9/local33 paths, cleanup policy37/local61 paths, expanded policy64/local84 paths. Each review is independent read-only PASS and its candidate/digest matches the exact full immutable change set. Policy-review introduction commits precede their affected runtime implementation. No prior review or manifest is rebound.",
+    "Final runtime, QA, package/dependency and CI bytes equal independently reviewed expanded candidate9db5723452c2da0e97ddf74c9cfa538f13bca80c. Against main, runtime changes are confined to InterviewWizard and copy removal in ScholarshipBrowser/page; two expressly superseded P8F presentation assertions change, with three new local QA scripts. Matcher/schema, public publication/catalog, source capability, privacy/export mechanisms, validator, dependencies and CI/deployment controls are unchanged.",
+    "Inspected actual four-step implementation and full latest QA script/receipt: order1,4,2,3, only existing GPA/school required, no early submission, unconditional Back, retained visit/edit state, replacement results, optional radio/organization clearing, legacy declined/skipped-answer normalization, six expanded category groups/38 controls, conditional service-hour clearing, keyboard/focus, required validation and preserved public CSV checks. Existing360x800 and1440x1000 QA and independent expanded-category probes are correctly bound to identical final runtime; no redundant fresh browser run claimed.",
+    "Independently rehashed all UX base64 raw archives and corresponding validation archive/digests. Inspected timestamped current full npm test/typecheck/build/runtime-trace logs with exit0 and required whitespace receipt. Build retains the existing middleware deprecation warning with its prior owner/trigger. Saved pre-manifest local and hosted-mode plan logs correctly report exactly3 missing canonical artifacts, with no authority diagnostic or suppressed failure.",
+    "Independently executed node --import tsx scripts/test-p8f-interview.ts: exit0, all38 criteria and51 rule gates. Independently executed node --import tsx scripts/p9-production-runtime.ts --require-build-trace: exit0,41 runtime files, closure SHA25643b92d3256ddb87f22b76cb5ab28cf1e136dbcfa23529b702eb1ea338c204541, built trace SHA256b3eddaa349f982bdd7d436a448f9d0e870d7a7816c65429901aa71e4766e0c58, no runtime Google/Drive/Sheets capability and disabled production ingestion/mutation routes.",
+    "Independently executed actual local and GITHUB_ACTIONS=true full validators with the prospective canonical manifest materialized on20b2b99: both exit1 with exactly2 remaining diagnostics, missing canonical review and committed attestation. This reduction from saved3-error logs follows manifest materialization; it is not a waiver. Final one-string state correction does not change validator/runtime/test bytes. Parent performs final correction plan check and must run both actual modes after the real attestation.",
+    "Independently rechecked the final correction as a direct single-parent child of20b2b99 with exactly one changed path and one removed UX1 blocker string. Recomputed the complete final97-path manifest and all candidate/worktree hashes after correction. Both ordinary required git diff --check and complete baseline-to-final git diff --check exit0.",
+    "Narrow metadata recheck after real post-attestation validation failure: inspected actual unchanged isIsoTimestamp regex, both captured validator logs showing only one createdAt-format error, rejected attestation topology and preservation branch. Independently proved corrected manifest differs from the rejected manifest only in createdAt, now2026-09-16T16:17:00.554Z, and recomputed complete97-path manifest SHA256bee20a7d13604054e059a0e82a11721ef6a723922ce0179c1f6f7c48a47d7c8d and every candidate/worktree hash against unchanged candidate50a7a8e53280e841b3f3b59b5863cbfdf2f7d683. HEAD is the unchanged candidate; ordinary history and all product bytes are preserved. No failed-branch acceptance or delivery is claimed."
+  ],
+  "canonicalDiagnostics": {
+    "independentPreRemediationLocalExitCode": 1,
+    "independentPreRemediationHostedModeExitCode": 1,
+    "manifestWasMaterialized": true,
+    "errors": [
+      "Missing required file: docs/reviews/PLAN-REV20.json",
+      "PLAN-REV20 requires a committed manifest/review attestation in current history"
+    ],
+    "notWaived": true,
+    "requiredBeforePublication": "Real direct-child two-file canonical attestation and zero actual local and hosted-mode validator diagnostics."
+  },
+  "limits": [
+    "Reviewer performed no repository edits, commits, publication, source/workbook, provider, network or credential access. Only this review result is written to /private/tmp. The implementation owner made and committed the single documented remediation.",
+    "Fresh GitHub/Vercel identity, target and baseline observations are inspected implementation evidence corroborated by local origin/main; reviewer did not independently refresh external state. Exact published commit attribution, Preview/CI, Production health/API/browser and timer continuation remain execution gates.",
+    "Full application tests/typecheck/build and phone/desktop browser evidence are implementation and prior independent-review records, authenticated by hashes and runtime identity. Independent execution here was targeted to preservation, bindings, actual validator modes, P8F regression, P9 trace and whitespace. No new full application suite or browser run is claimed.",
+    "Saved publication, fixture or test success is not current official scholarship verification. Existing hosted request-body/download visibility limits remain unknown; bounded local no-answer observations are not a universal privacy guarantee.",
+    "The UX release grants no source/workbook mutation or replay, credential/configuration changes, paid actions, provider/applicant interaction, email sending or monitoring activation. Preserve all prior unresolved owners/triggers and the mandatory timer section7; resume only its already-authorized unfinished M1 after verified UX delivery."
+  ],
+  "rejectedAttestation": {
+    "commit": "1ed345c352a097aeb01cd49a96b4b4800f1ddc9f",
+    "retainedBranch": "codex/ux1-rejected-timestamp-attestation",
+    "manifestSha256": "9ba61c576b9299f366822dbedd9b15a717491ac242343fe64185b64cf9efb1e9",
+    "localValidatorExitCode": 1,
+    "hostedModeValidatorExitCode": 1,
+    "soleDiagnostic": "docs/evidence/PLAN-REV20-manifest.json createdAt must be an ISO UTC timestamp",
+    "published": false,
+    "acceptedByFullValidation": false,
+    "replacementScope": "Only prospective manifest createdAt formatting and independent review binding; same immutable candidate and97paths. Rejected retained branch must not be merged or used as acceptance proof. Actual replacement attestation local and hosted-mode validators must both exit0 before publication."
+  }
+}
