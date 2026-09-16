@@ -1,5 +1,7 @@
 # UX2 — remove volunteer-hours dropdown, then resume timer M1
 
+Plan revision: 21
+
 September16,2026. Branch codex/ux2-remove-volunteer-hours in
 /private/tmp/program_code-ux2-remove-volunteer-hours; fresh live baseline
 c2042402e137fec4763ee33d40833d9069cf904b. User directly requests removal of the
