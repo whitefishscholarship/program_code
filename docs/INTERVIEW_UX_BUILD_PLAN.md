@@ -131,7 +131,8 @@ output and assertions that all38 criteria are visible on first entry and Back/ed
 Keep normal full checks, prospective/final independent reviews, all release gates and
 the direct timer handoff. This is an additive UX refinement, with no new matching/data
 or release scope. Track its current status in BUILD_STATE and CURRENT_HANDOFF. Prospective policy PASS
-at734b4a1; implementation and local checks complete, final independent review pending.
+at734b4a1; implementation and local checks complete. Independent final local review
+PASS at9db5723, C0/H0/M0/L0; canonical release gates remain pending.
 
 ## 5. Execution tracker and completion gates
 

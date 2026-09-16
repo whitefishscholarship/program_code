@@ -1,23 +1,37 @@
-# UX1 all categories expanded — final local review next
+# UX1 all categories expanded — locally reviewed preview ready
 
-User's default-expansion refinement is implemented: only the `open` attribute in
-InterviewWizard.tsx changes runtime behavior. All six categories and38 choices are
-visible on entry to steps3/4, and on Back/Edit. Existing optional answers and handlers
-are preserved. Prospective policy734b4a1 passed independent review. Required tests,
-typecheck/build and phone/desktop browser matrix passed, including collapse/re-entry,
-blank answers, matching/CSV, legacy compatibility and privacy observations.
+User's requested category visibility refinement is complete locally. Resume
+/private/tmp/program_code-ux1-four-screen-journey, codex/ux1-four-screen-journey.
+Reviewed candidate9db5723452c2da0e97ddf74c9cfa538f13bca80c; full manifest SHA256
+9a68cb361b1e1191208f3851b656284e26a21f3eeeb9569391feaa4ec745bc8f.
+docs/evidence/ux1-expanded/local-review.json is independent PASS, C0/H0/M0/L0.
+This later closeout records status only and does not rebind the reviewed candidate.
 
-Evidence and current QA: docs/evidence/ux1-expanded/validation.json,
-docs/evidence/ux1-expanded/browser/browser.json, web/scripts/qa-ux1-expanded.cjs.
-All52 original UX/cleanup artifacts remain byte-identical; do not overwrite prior
-QA outputs. Freeze and independently review this complete candidate. Four existing
-canonical authority/manifest/review/attestation gates remain. No publication authority.
-The local production preview at http://127.0.0.1:3220 has been rebuilt/restarted.
+All six category groups and38 choices open by default on steps3/4 and on Back/Edit.
+Students can collapse them; optional answers and handlers are preserved. The only
+runtime delta since7be4e99 is `open` in the shared InterviewWizard details renderer.
+Full tests/typecheck/build and phone/desktop QA passed; independent browser probes
+confirmed visibility, collapse, Back/Edit, selection/clearing, blank optional answers
+and no overflow/errors. All52 earlier UX artifacts remain byte-identical.
+The four canonical authority/manifest/review/attestation diagnostics remain unresolved;
+no canonical acceptance or publication. See docs/evidence/ux1-expanded/validation.json for exact checks.
 
-Required direct timer handoff is unchanged in UX plan section7. Codex resumes
-unfinished M1 from saved009fa57 after verified UX delivery or explicit earlier user
-reprioritization; retain recipient, pinned research input and post-UX baseline rules.
+Preview is running at http://127.0.0.1:3220; refresh to see the expanded categories.
+If stopped, run from web: npm run build, then
+npm run start -- --hostname 127.0.0.1 --port 3220.
+Current regression script is web/scripts/qa-ux1-expanded.cjs; full command/output are
+in docs/evidence/ux1-expanded/validation.json. Never overwrite frozen QA evidence.
 
+Next action owner Codex: obtain missing informed UX release effects for the locally
+reviewed four-step, cleanup and expanded-category result; refreeze/review the complete
+authority-bearing candidate and satisfy canonical attestation/Preview/CI/merge/exact
+Production verification. No more feature work or repeated checks unless requested
+changes or new findings justify them. No earlier publication question has been answered.
+
+Required direct timer continuation stays in UX plan section7 unchanged: Codex resumes
+unfinished M1 after verified UX delivery or explicit earlier reprioritization. Retain
+009fa57, recipient kelsey@waypointfranchise.com, inventory/input provenance and the
+post-UX-main baseline rule. No timer/email/source/workbook action is part of this change.
 
 ---
 
