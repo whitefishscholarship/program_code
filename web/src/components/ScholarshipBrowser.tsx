@@ -10,8 +10,7 @@ import {
   type InterviewAnswers,
 } from '@/lib/interviewMatcher';
 import { CURRENT_ACCEPTED_MATCH_FACTS } from '@/lib/p8mMatchingFacts';
-import { UNSUPPORTED_NOTICE } from '@/lib/interviewRelevance';
-import { shortlistAwards, SHORTLIST_NOTICE, type DisplayResult } from '@/lib/spreadsheetShortlist';
+import { shortlistAwards, type DisplayResult } from '@/lib/spreadsheetShortlist';
 import { loadStudentCatalog, type CatalogQaMode } from '@/lib/studentCatalogClient';
 import {
   APPLICATION_MODES,
@@ -239,18 +238,13 @@ export default function ScholarshipBrowser() {
     return (
       <section aria-labelledby="interview-start-heading" className="mx-auto max-w-5xl">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 lg:p-12">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Private scholarship interview</p>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Scholarship interview</p>
           <h2 ref={experienceHeadingRef} tabIndex={-1} id="interview-start-heading" className="mt-3 max-w-3xl text-4xl font-black tracking-tight outline-none sm:text-5xl">Find scholarships that fit your education plans.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Start with your GPA and education plans. We compare your answers with the saved scholarship spreadsheet, explain the shortlist, and keep uncertain opportunities available to check.</p>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">Follow four short steps to explore scholarships for your education plans.</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the private interview</button>
+            <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-6 py-4 text-lg font-bold text-white shadow-sm hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start the interview</button>
             <button type="button" onClick={showBrowseAll} className="rounded-xl border-2 border-teal-800 bg-white px-6 py-4 text-lg font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Browse all {catalog.counts.awards} awards</button>
           </div>
-        </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          <PromiseCard title="Temporary by design">Answers live only in this page&apos;s memory and disappear on reload.</PromiseCard>
-          <PromiseCard title="Useful, explained results">See which recorded requirements fit and which details still need checking.</PromiseCard>
-          <PromiseCard title="Transparent results">Every decision includes reasons and a link back to the official source when available.</PromiseCard>
         </div>
       </section>
     );
@@ -285,9 +279,8 @@ export default function ScholarshipBrowser() {
         <div>
           <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Your private results</p>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-800">Your results</p>
               <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">Your scholarship shortlist.</h2>
-              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">Fits recorded criteria means the requirements we compared fit your answers. It does not confirm full eligibility. Needs checking keeps incomplete records in consideration; outside shortlist remains available to review.</p>
             </div>
             <div className="flex flex-wrap gap-2">
               <button type="button" onClick={() => beginInterview(true)} className="rounded-xl border border-teal-800 bg-white px-4 py-3 font-bold text-teal-900 hover:bg-teal-50 focus:outline-none focus:ring-4 focus:ring-teal-200">Edit answers</button>
@@ -295,7 +288,6 @@ export default function ScholarshipBrowser() {
               <button type="button" onClick={resetInterview} className="rounded-xl bg-slate-800 px-4 py-3 font-bold text-white hover:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-slate-300">Reset interview</button>
             </div>
           </div>
-          {!isSyntheticMatrix && <div role="status" className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-950">{SHORTLIST_NOTICE}<p className="mt-2">{UNSUPPORTED_NOTICE}</p></div>}
           <dl className="mt-8 grid gap-3 sm:grid-cols-3" aria-label="Interview result counts">
             <Count label={isSyntheticMatrix ? "Structured matches" : "Fits recorded criteria"} value={matching.counts.match} emphasis="positive" />
             <Count label={isSyntheticMatrix ? "Possible matches" : "Needs checking"} value={matching.counts.possibleMatch} emphasis="warning" />
@@ -316,7 +308,7 @@ export default function ScholarshipBrowser() {
               <h2 ref={experienceHeadingRef} tabIndex={-1} id="catalog-heading" className="mt-2 text-3xl font-black tracking-tight outline-none sm:text-4xl">See what is verified—and what is not.</h2>
               <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{catalog.notice}</p>
             </div>
-            <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start private interview</button>
+            <button type="button" onClick={() => beginInterview(false)} className="rounded-xl bg-teal-800 px-5 py-3 font-bold text-white hover:bg-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-300">Start interview</button>
           </div>
           <dl className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" aria-label="Canonical catalog counts">
             <Count label="Award records" value={catalog.counts.awards} />
@@ -393,10 +385,6 @@ export default function ScholarshipBrowser() {
       )}
     </section>
   );
-}
-
-function PromiseCard({ title, children }: { title: string; children: React.ReactNode }) {
-  return <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"><h3 className="font-black text-slate-950">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{children}</p></div>;
 }
 
 function Count({ label, value, suffix = '', emphasis = 'neutral' }: { label: string; value: number; suffix?: string; emphasis?: 'neutral' | 'warning' | 'positive' | 'negative' }) {

@@ -1,15 +1,25 @@
-# UX1 cleanup correction — prospective review next
+# UX1 cleanup implemented — final independent local review next
 
-Plan revision: 20. Kelsey requested removal of all visible prefer-not/sensitive-skip
-controls and extra explanatory notices while keeping optional input and the four-step
-journey. Current scope is UX plan section4a; direct authority is
-docs/evidence/ux1-cleanup/authority.md. Preserve the entire prior UX1 evidence folder,
-policy/final review and candidate1207be2. Prior PASS does not cover this correction.
-Resume the existing UX1 worktree/branch at saved d7e8872. Review the dedicated local
-policy correction before runtime edits; final cleanup review/evidence get separate
-paths. No publication is authorized. Four canonical release gates remain.
-Required direct timer handoff remains UX plan section7, same009fa57 checkpoint and
-confirmed recipient; no timer action or input changes are part of this cleanup.
+Plan revision20. User-requested prefer-not/sensitive-skip controls and extra notices
+are removed; substantive questions, optional clearing and four-step Back/edit remain.
+Runtime scope is exactly the three UI files in UX plan section4a. Policy candidate
+6d77046 passed independent review; all original UX1 artifacts remain immutable.
+Required typecheck/tests/build and desktop/mobile browser matrix passed, including
+legacy skipped-answer normalization, exact matcher/CSV, storage/request/log checks.
+Evidence: docs/evidence/ux1-cleanup/validation.json and browser/browser.json.
+The plan validator still reports exactly four pending canonical release gates.
+No canonical acceptance, push, hosted deployment or timer activation is claimed.
+
+Next: freeze this complete local candidate and obtain fresh independent final review
+with the cleanup local-manifest/review. After PASS, save status and show the refreshed
+local preview at http://127.0.0.1:3220. Release remains subject to direct informed
+Git/Preview/Production authority and normal canonical attestation/hosted verification.
+No earlier publication question has been answered by the cleanup request.
+
+Required direct timer handoff is unchanged: UX plan section7, checkpoint009fa57,
+437-record inventory and confirmed kelsey@waypointfranchise.com. Owner Codex resumes
+unfinished M1 after verified UX delivery (or explicit earlier reprioritization).
+Preserve pinned R5 input/provenance and use a post-UX main baseline for later timer work.
 
 ---
 

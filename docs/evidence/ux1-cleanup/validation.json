@@ -1,0 +1,106 @@
+{
+  "scope": "Local UX1 cleanup checks; four known canonical release gates remain; no hosted or freshness claim",
+  "commands": [
+    {
+      "name": "plan-check",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T14:32:13.623479+00:00",
+      "completedAt": "2026-09-16T14:32:45.587387+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/ux1-cleanup/plan-check.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "f58d71ef30904e4684f0f080e3e4c46e0cf050916262524d363b74ca34ac814f",
+      "archiveSha256": "997be9e360e5d7426786fc1f850f30e9821821a44a43a6bbc93c3e28904edea8"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T14:32:45.587643+00:00",
+      "completedAt": "2026-09-16T14:32:52.289216+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-cleanup/typecheck.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "archiveSha256": "4df723a10367c1790226a9fb96e647ca41915c8e4307faa56ec7978a4b78a668"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T14:32:52.289427+00:00",
+      "completedAt": "2026-09-16T14:33:37.412481+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-cleanup/tests.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "9fae261543c8068d20c9caa8f41bd5152e12e8bc949cf6e400893188b1e960ed",
+      "archiveSha256": "48f885fbb5c50c86c63c2222328bfe7c6fa1bac3858e3487394e2816c1f4a127"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "startedAt": "2026-09-16T14:33:37.412734+00:00",
+      "completedAt": "2026-09-16T14:33:44.522424+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-cleanup/build.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "116f2be3daea7a03ce49ab906bafe904676d015542c96b152eaef52089beaf97",
+      "archiveSha256": "b55f730866b3941cc749359c7be003515752486ecf2b02c6b48edeff21c6af7b"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey",
+      "startedAt": "2026-09-16T14:33:44.522689+00:00",
+      "completedAt": "2026-09-16T14:33:44.541705+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-cleanup/whitespace.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveSha256": "b6a66528dfc8eeeb0ac2ec68bf1bbc68e7182c56d79b146bea7020f4660d381c"
+    },
+    {
+      "name": "browser",
+      "command": "PLAYWRIGHT_MODULE=/Users/kelseystuart/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright node --import tsx scripts/qa-ux1-cleanup.cjs",
+      "cwd": "/private/tmp/program_code-ux1-four-screen-journey/web",
+      "completionObservedAt": "2026-09-16T14:35:44.364380+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/ux1-cleanup/browser.raw.json",
+      "logEncoding": "json-base64; logSha256 hashes decoded original bytes",
+      "logSha256": "479eaf83583b0e82e3f73d60e9ebe05a04a1ba592058bbcfc5033b9e99e0e39b",
+      "archiveSha256": "e1181d0aead09dada2b5e16038b132475e31b3efe650a6ae2d2efc4939d79105",
+      "receiptPath": "docs/evidence/ux1-cleanup/browser/browser.json"
+    }
+  ],
+  "summary": {
+    "typecheck": "PASS",
+    "tests": "PASS",
+    "build": "PASS",
+    "whitespace": "PASS",
+    "browser": "PASS on360x800 and1440x1000 plus legacy in-memory compatibility",
+    "planCheck": "FAIL: exactly4 pending Revision20 canonical release gates",
+    "canonicalAcceptance": false,
+    "publication": false
+  }
+}

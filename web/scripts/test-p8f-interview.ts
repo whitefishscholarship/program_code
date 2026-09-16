@@ -190,13 +190,13 @@ const browserSource = fs.readFileSync(path.join(webRoot, 'src/components/Scholar
 const matcherSource = fs.readFileSync(path.join(webRoot, 'src/lib/interviewMatcher.ts'), 'utf8');
 const clientSource = fs.readFileSync(path.join(webRoot, 'src/lib/studentCatalogClient.ts'), 'utf8');
 assert(wizardSource.includes('SPECIAL_CRITERIA.filter((item) => item.category === category).map'), 'every preserved criterion is rendered from the verified question inventory');
-assert(wizardSource.includes('Prefer not to answer sensitive questions'));
+assert(!wizardSource.includes('Prefer not to answer sensitive questions'), 'UX1 removes the optional sensitive-skip control');
 assert(!wizardSource.includes('organization_affiliations'));
 for (const excluded of questionMap.typeOnlyExcluded.map((item) => item.split('.').at(-1))) assert(!new RegExp(`\\b${String(excluded)}\\b`).test(wizardSource), `type-only field rendered: ${excluded}`);
 for (const forbidden of ['sessionStorage', 'localStorage', 'indexedDB', 'document.cookie', 'sendBeacon', 'fetch(', 'XMLHttpRequest', 'history.pushState', 'history.replaceState', 'console.']) assert(!wizardSource.includes(forbidden), `wizard contains forbidden channel ${forbidden}`);
 for (const forbidden of ['processAndFilter', './processor', 'rulesPack', 'studentCatalogLegacy', 'amountRank', 'is_new']) assert(!matcherSource.includes(forbidden), `matcher contains retired behavior ${forbidden}`);
 assert(browserSource.includes('CURRENT_ACCEPTED_MATCH_FACTS'));
-assert(browserSource.includes('SHORTLIST_NOTICE'), 'current shortlist must disclose its snapshot and effect limits');
+assert(!browserSource.includes('SHORTLIST_NOTICE'), 'UX1 removes the blanket shortlist notice');
 assert(browserSource.includes('Browse all'));
 assert(browserSource.includes('awardCsvDataUri(visibleAwards)'));
 assert(browserSource.includes('rel="noopener noreferrer"'));
