@@ -232,17 +232,19 @@ before adding new questions. Optional refinements remain optional and clearable.
 Priority proposal: Apply now = supported fit, evidenced current open route and no
 unresolved critical prerequisite; Prepare next = announced future cycle with useful
 preparation; Check first = potentially relevant but material unresolved requirement/
-route/availability; Later = evidenced closed/unavailable or recorded conflict, retained
-for inspection. Within bands sort by verified deadline, then supported personal
+route/availability, including conflicting source evidence; Later = evidenced closed/
+unavailable or a supported student mismatch, retained for inspection. Within bands sort by verified deadline, then supported personal
 connection; alphabetical/stable ID is the deterministic tie break. Value and effort
 are explicit alternative sorts, not invented win odds/qualification percentages.
 Annual and conditional totals must not be compared as guaranteed equal value.
 Materials can justify a workload description; time estimates must be labeled estimates.
 Unknown school/program types stay visible as Needs checking when filtering.
 
-SD5 due policy: 14 elapsed days after successful checks for closed/unverified records;
+SD5 due policy: 14 elapsed days after successful checks for every in-scope non-open
+record, including Closed, Unverified, Upcoming beyond 30 days and Unavailable;
 7 days when announced/estimated opening is within 30 days or an open cycle is being
-followed; check near an explicit deadline. Expected dates are hints, never reopened
+followed; check near an explicit deadline. An explicit exclusion from monitoring
+retains its reason and supporting evidence; no status alone silently removes work. Expected dates are hints, never reopened
 facts. Failed attempts do not advance last_verified or reset overdue work as success.
 Retry once on the next due run, then persist blocked/manual state and 14-day review
 visibility; no daily infinite login retries. Shared-source checks fan out only to
@@ -369,7 +371,7 @@ read-only review and stop. Proposed SD1 execution requires selected authority.
 
 ```text
 Use the common preamble. Resume SD2's existing ledger at the exact next IDs in
-section 9. Process only the frozen ordered batch (initially3complex or 6simple).
+section 9. Process only the frozen ordered batch (initially 3 complex or 6 simple).
 Reuse current applicable saved evidence; refresh only the scoped missing/stale/
 conflicting official sources when source reads are authorized. Inspect actual
 links and complete relevant documents, including scans; record every field's

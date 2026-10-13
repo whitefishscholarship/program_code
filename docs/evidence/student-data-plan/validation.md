@@ -67,3 +67,16 @@ Tests establish software compatibility only, not scholarship factual currency.
 Independent review must assess an immutable committed candidate, identify severity
 and scope, and preserve the reviewer result in independent-review.md. This is a
 prospective proposal review; no canonical stage manifest is created or rebound.
+
+## Proposal review remediation
+
+The first immutable proposal candidate was
+`e7efffa72b71ea96d9ae1cf7347848c7f37980ad`. Fresh read-only reviewer plan_review
+identified two medium findings and a low spacing typo, with no critical/high
+findings. Author-owned remediation updates only the proposal text: default
+14-day coverage now explicitly includes every in-scope non-open record; explicit
+exclusions retain evidence. Source contradictions stay in Check first, whereas a
+supported student mismatch may use Later. The kickoff batch-size spacing is fixed.
+No runtime, data, authority or canonical acceptance bytes changed. Existing tests
+need no repeat for these prose-only corrections; final diff/plan checks and fresh
+recheck of the replacement immutable candidate are recorded in the review record.
