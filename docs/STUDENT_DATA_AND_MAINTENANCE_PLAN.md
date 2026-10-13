@@ -1,7 +1,7 @@
 # Student scholarship data and maintenance plan
 
 Version: 1.3. Updated October 13, 2026, America/Denver: selected first SD2 local research checkpoint.
-Status: SD1 retained; first SD2 local research checkpoint prepared for independent review; full SD2 incomplete; canonical implementation unstarted. SD1 validation/review: docs/evidence/sd1/. Earlier proposal/replacement reviews remain in docs/evidence/student-data-plan/.
+Status: SD1 retained; first SD2 local research checkpoint independently reviewed PASS; full SD2 incomplete; canonical implementation unstarted. SD1 validation/review: docs/evidence/sd1/. Earlier proposal/replacement reviews remain in docs/evidence/student-data-plan/.
 Owner: Codex maintains the plan and implements selected work; Kelsey selects scope and external effects.
 Repository: whitefishscholarship/program_code.
 
@@ -369,10 +369,10 @@ not duplicate project progress trackers. Update this small block at every checkp
   Pell award-2179b44d009d, Neurodiversity award-97dfaadd1d31 and Barnes
   award-ce44143820a7 researched in order after fresh name/source-route identification.
   Rows18/255/400 are locators only. Local evidence/proposals: `docs/evidence/sd2-first-batch/`.
-  Next exact action: independent local packet review, then select additional exact
+  Next exact action: select additional exact
   evidence or another SD2 batch; named human fact reviewer required before acceptance.
   Short prompt: `docs/evidence/sd2-first-batch/CONTINUE.md`.
-- SD1 local planning/pilot complete; first SD2 research batch prepared, full SD2 incomplete; SD3/SD4/SD5/SD6 unstarted. No migration/publication/activation.
+- SD1 local planning/pilot complete; first SD2 research batch independently reviewed locally, full SD2 incomplete; SD3/SD4/SD5/SD6 unstarted. No migration/publication/activation.
 - Continuation verification: `docs/evidence/sd1-continuation/README.md` and its
   receipts reverify retained SD1 candidate/review and seasonal M1 objects locally.
   All nine owner/trigger rows below are preserved unchanged. SD2 selection and
@@ -396,6 +396,10 @@ not duplicate project progress trackers. Update this small block at every checkp
 - Current proposal holds: Pell entry3.0/renewal3.0 and mixed aid observed; ND mixed
   cycle labels/prior-FAQ age conflict and next-cycle funding held; Barnes past-example
   offering remains unverified. All facts proposed/held; no runtime truth changed.
+- Selected SD2 local review: immutable candidate `cf29dde2c8c329c5c6c8b0b7551f7630a65ef770`,
+  `docs/evidence/sd2-first-batch/review.json`, PASS with zero unresolved findings;
+  candidate manifest remains bound to that exact tree. Local research checkpoint
+  complete;42field-evidence links verified. Full SD2 and human fact acceptance remain open.
 - All nine owner/trigger rows below remain open and byte-identical. Their selected
   read trigger has evidence for this batch only; no acceptance or later effect follows.
 

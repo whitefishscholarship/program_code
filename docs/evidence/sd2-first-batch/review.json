@@ -1,0 +1,60 @@
+{
+  "reviewType": "fresh-context-independent-read-only-local-SD2-checkpoint",
+  "reviewer": "/root/sd2_independent_review",
+  "freshContext": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-13T16:50:06.680594+00:00",
+  "outcome": "PASS",
+  "outcomeScope": "Only the directly selected first SD2 bounded research checkpoint. Full SD2 remains incomplete. This is not canonical implementation acceptance, scholarship-fact acceptance, or delivery authority.",
+  "candidateCommit": "cf29dde2c8c329c5c6c8b0b7551f7630a65ef770",
+  "candidateTree": "93ebbfb13a8d13b675d2faee9cbda8f2cfd1f52f",
+  "entryBaseline": "1697789a6ba4c8fd4f9026778318abb020986455",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "manifestPath": "/private/tmp/sd2-cf29dde-review-manifest.json",
+  "manifestSha256": "0921b3c3a51ca7a546c78fd629dbf4e73079bab279d8ef5106b3ff42bcf4fdf4",
+  "manifestFileCount": 50,
+  "completeDiffHashes": {
+    "method": "SHA256 of exact git diff --binary BASE CANDIDATE output",
+    "entryToCandidate": "9e037e4fb7eae332128075fe5bcd88ded8fce8edeac229eb132f2d8d1f138179",
+    "retainedMainToCandidate": "c8713b2cb4ff56412eb3f2b20b554827b77a791e8d3625aef3270087ded005a8"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "findings": [],
+  "checksPerformed": [
+    "Read controlling repository instructions, canonical plan/state, current handoff, accepted P9 evidence, local SD2 continuation, STUDENT_DATA_CONTRACT, selected authority and complete section9 owner/trigger table.",
+    "Verified frozen HEAD/tree, clean worktree, all 50 manifest file paths, Git blob identities, byte counts and SHA256 bindings. Recomputed both complete diff hashes.",
+    "Inspected the checkpoint changes, proposal/extraction/verifier scripts, saved native captures, ledger, source sections, HTTP/extraction receipts and validation records. Retained-main changes are documentation/evidence only; canonical controls, app, dependencies and deployment paths remain unchanged.",
+    "Executed python3 docs/evidence/sd2-first-batch/verify-evidence.py read-only: exit0 PASS at 2026-10-13T16:47:04.569563+00:00.",
+    "Verified exactly794 selected rows with complete F/G/O cell accounting:411 named,383 empty selected projections,410 unique exact names, duplicate-name rows40/68 held separately,3 selected records and408 unselected named rows pending.",
+    "Verified exact workbook/tab identity and bounded read arguments; selected detail reads occurred in Pell/Neurodiversity/Barnes order. Detail identity cells match inventory captures. No P:Y or other-tab cell captures are present.",
+    "Verified initial ten bounded inventory captures equal the final complete selected native projection, including retained formula/link/run metadata and explicit trailing-empty expansion. Before/after reported file and sheet metadata are equal.",
+    "Independently reproduced all42 field evidence IDs and source IDs. Every evidence record is referenced exactly once by its matching award/field/scope, and source-section hashes match. All79 proposal fields retain explicit evidence states; accepted facts remain0 and human reviewer remains null.",
+    "Verified raw byte counts/hashes for all six selected HTTP bodies. Independently reconstructed every retained HTML field scope with its documented boundaries and redactions; all match saved sections.",
+    "Confirmed fresh ND singular/plural sections are byte-identical and the singular receipt redirects to the approved plural URL. Current month-only dates do not inherit the cached November2027 view.",
+    "Checked Pell entry3.0 against the qualifying paragraph separately from renewal3.0 cumulative; mixed loan/gift funding is retained and not represented as a guaranteed tuition gift.",
+    "Checked ND current2027-2028 age observation separately from the historical2026-2027 FAQ internal age conflict; mixed cycle labels and next-cycle funding remain held.",
+    "Checked Barnes as one named historical fund with three recipient slots under past examples. Parent dates, membership and materials remain parent-scoped; no current Barnes reopening, funding or inherited You Can Fly criteria is asserted.",
+    "Visually reviewed all four author-rendered AOPA FAQ pages. Independently extracted all four pages from the hash-bound raw PDF with pdftotext -layout; saved page text matches after stated email redaction, whitespace normalization and printed page-number ordering. Printed revision20260925 is present; Barnes is absent.",
+    "Verified all nine owner/trigger rows and the complete prior handoff suffix remain byte-identical. SD1/continuation/prior-plan evidence is preserved; retained SD1/review/M1 commit and tree hashes match prior receipts.",
+    "Verified seasonal-monitor branch remains009fa57e7def04ce2a9b49051f395c32b1393c14 and its inventory retains437 unique records:411 catalog awards plus26 research leads.",
+    "Reviewed recorded fresh plan-check retry:exit0 for13 ordered stage contracts. Historical standard-build EPERM and fresh delivery-main HTTP404 remain explicitly unresolved.",
+    "Executed git diff --check ENTRY CANDIDATE:exit0. Frozen HEAD and clean worktree remained unchanged at review completion."
+  ],
+  "limitations": [
+    "No live workbook, public-source, network, provider, credentials or applicant-data access was performed by reviewer.",
+    "No files edited, writing generators run, Git mutated, messages sent to other chats or findings self-remediated.",
+    "Recorded HTTP200 responses establish access at their observation times only; they do not accept scholarship facts or prove future availability.",
+    "Workbook version, trashed status and atomic snapshot proof remain unavailable. Equality establishes only bounded observed native-projection and reported-metadata consistency.",
+    "Pell exact direct acquisition start/completion is unavailable and disclosed; file-copy time is not treated as HTTP completion.",
+    "Successful SD1 app checks were reviewed as preserved evidence rather than repeated. The reviewer did not rerun build or plan validation; current plan-check success is author-recorded evidence.",
+    "Retained main is a local historical object, not fresh authenticated remote proof. Standard-build and delivery-baseline blockers remain required future gates.",
+    "Full population identity/collision/relationship reconciliation,408 unselected named rows, current fact acceptance, SD3-SD6, workbook migration, publication and monitoring adoption/activation remain unfinished."
+  ],
+  "nextAction": "Author may save this exact-candidate local review without rebinding earlier reviews. Preserve every remaining hold and owner/trigger. Further source or identity work requires an expressly selected SD2 scope; pin a named human fact reviewer before fact acceptance. Stop before SD3."
+}

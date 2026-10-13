@@ -19,7 +19,8 @@ mixed loan/gift package; ND mixed cycle/year/age/funding holds; Barnes past fund
 not opened by parent calendar. All facts remain proposed/held. Before acceptance,
 pin a named human fact reviewer. Additional source/identity work needs expressly
 selected exact scope. No application/login, provider contact or other award discovery.
-If a reviewer finding remains, Codex remediates and independent reviewer rechecks.
+Candidate cf29dde is independently reviewed PASS with zero unresolved findings;
+review.json and candidate-manifest.json retain that exact binding. Preserve it.
 
 Section9 remains the sole progress pointer; carry every one of its nine open rows.
 Original SD1 bbeb9a4/302105f, continuationf0a98f3 and seasonal M1 009fa57 with437
@@ -27,7 +28,7 @@ records remain preserved. No old workbook or old-cell fallback. Only selected
 replacement 1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0 is eligible under its
 exact grant; no automatic scope expansion or write/release effect.
 
-Full SD2 is incomplete; next local action is review these proposals, then select
+Full SD2 is incomplete; next local action is examine these proposals, then select
 additional exact public evidence or another SD2 identity batch. No source-policy,
 canonical acceptance or human fact approval is inferred from local review.
 Stop before SD3. Preserve unchanged app/journey/privacy and historical build/main
