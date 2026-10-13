@@ -1,0 +1,1345 @@
+{
+  "outcome": "PASS",
+  "scope": "local continuation preservation/handoff only; SD2 unstarted",
+  "recordedAt": "2026-10-13T15:49:47.040294+00:00",
+  "entryCommit": "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd",
+  "reviewedCandidate": "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae",
+  "reviewRecordCommit": "302105f644bc5aa3829a05569ebaa42d9717c1c0",
+  "verifiedObjects": {
+    "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd": {
+      "commit": {
+        "gitObjectId": "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd",
+        "sha256": "206db4a0f16326d7cbe6d04a6e6c20fd0257df56b71971e028d73018f61d8440"
+      },
+      "tree": {
+        "gitObjectId": "459de876d0c3e67f79e594e33d0281a9e1553308",
+        "sha256": "aa25cfad8ac9a812e7e7497124f2991ca9d6c41ac92815aada4dc96bd2dacc8b"
+      }
+    },
+    "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae": {
+      "commit": {
+        "gitObjectId": "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae",
+        "sha256": "a1255025df4d9a63724348e9474221d6d4dfe8758e3b897212980d6ab0b1ffb7"
+      },
+      "tree": {
+        "gitObjectId": "dccb44781e3bbcece7193c1596b8da93d4adfa54",
+        "sha256": "e4cdf833ef10efbb938ac2fc07770bff48049551ba2727829e903d9da8970c43"
+      }
+    },
+    "302105f644bc5aa3829a05569ebaa42d9717c1c0": {
+      "commit": {
+        "gitObjectId": "302105f644bc5aa3829a05569ebaa42d9717c1c0",
+        "sha256": "3e2f2fa26159a73678f617dfc0c764cd15daad2c93f3a593ad639edd920c2ba6"
+      },
+      "tree": {
+        "gitObjectId": "d362fc68c096d1f904af82542666107460d6fccf",
+        "sha256": "1b0501cd1a773cfa8b195838e4128ece4a2ad4ab24ea078519f456dbfa6787e3"
+      }
+    },
+    "009fa57e7def04ce2a9b49051f395c32b1393c14": {
+      "commit": {
+        "gitObjectId": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+        "sha256": "e6d0efeb6271dc92c2042ff7003b5b40c4b2c4871fb62a895bdcda9057045225"
+      },
+      "tree": {
+        "gitObjectId": "1217380736e58eab74637b26c7accc1f98d803e8",
+        "sha256": "7425ef763aebc0115db5429d667e54e8ffac69c45fb2d07d339c13c668451985"
+      }
+    }
+  },
+  "reviewSha256": "85f6dfdef803595999efc3a17d38eaec93aa6374054f31feaa5aa747b2cc21d7",
+  "reviewDiffSha256": {
+    "entryToCandidate": "1032ef32a59fe15c5f18f38d32b634ff0c9c0f7be6d6fb6f2eb1460248a07609",
+    "retainedMainToCandidate": "31af4e2e68e35e2f3988d75bb874cc47707f005195a77035fa41d1bff57b0034",
+    "originalCandidateToReplacement": "68a694dde9c90e185960d6be844cbb52bfc9e9b6992cc18565000c7482744042"
+  },
+  "recordedPilotProbes": 35,
+  "probesRerun": false,
+  "currentAcceptedFacts": 0,
+  "preservedPriorEvidence": [
+    {
+      "path": "docs/STUDENT_DATA_CONTRACT.md",
+      "sha256": "9f0913c2f9e711be0257ae6246d482a6db5ea81ced1ff5af8df5b8f09d9903c7"
+    },
+    {
+      "path": "docs/evidence/sd1/CONTINUE.md",
+      "sha256": "b357a26a6150b2c369cd23496fde08a11e73fae279bfb24279250c850efa7a47"
+    },
+    {
+      "path": "docs/evidence/sd1/PILOT.md",
+      "sha256": "a022b394723e461eda5d96f0a0c95523c61c61b52cd823552e5eb0b8cb35dac3"
+    },
+    {
+      "path": "docs/evidence/sd1/README.md",
+      "sha256": "6e3c1068bfd9cc21523028926070cd857cfc7b57a5d656eec2f27a57481105d6"
+    },
+    {
+      "path": "docs/evidence/sd1/SESSION_CLOSE.md",
+      "sha256": "3916fbbf1153df40da6a45d2195cc52c594edca63893caaabecf2ee173dcd4e6"
+    },
+    {
+      "path": "docs/evidence/sd1/VALIDATION.md",
+      "sha256": "bea8fc0a5fccee747740a334a8f0530f64a7582c37c208ecb1ece083f475231c"
+    },
+    {
+      "path": "docs/evidence/sd1/check-public.ts",
+      "sha256": "ed4d49694a77ec2e1810bcd7159233c98c4c8f1b26cb0503ea2257dbfdffdcc6"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/build-permitted.log",
+      "sha256": "29f841358f946b53f9812e0a79fbd1be801fc928fd86ad6ddb9ff712500a7701"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/build-webpack.log.json",
+      "sha256": "c9ba0e1cf2549c759d2b9f3f04771bf64a1eed417545e204f591815f4ef29f26"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/build.log",
+      "sha256": "2ebe675f2a1b85e0af8e9422256dab9452b7446ab379b3e767f1ed953564472a"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/diff-check.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/permitted-results.json",
+      "sha256": "a12c7d280415622496ec070706f7f15c6fc7bd15af9d017b327e92969e7d8896"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/plan-check.log",
+      "sha256": "74f5e0f051e5d8508057a66cbaa578123889ec21f6f2b85367510509eb7fa2c7"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/plan-final.json",
+      "sha256": "aa40b29b62d799c888a22b0b373338f53671d46ba3f11b3945ebdd12025ecdd3"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/results.json",
+      "sha256": "d1662f2de984ab582560110063b1a74bedfee500556c94abd7d8e298a3d28b37"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/test-permitted.log",
+      "sha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/test.log",
+      "sha256": "4d1618ed1a5cacaa4e997e1b187d0317ae5cff76f30c858b1eb98d431f81b080"
+    },
+    {
+      "path": "docs/evidence/sd1/checks/typecheck.log.json",
+      "sha256": "4bba1c0205a4f48f7cf9a5e6e3abbfad2196b92ef90b20598fe31da0b4220a38"
+    },
+    {
+      "path": "docs/evidence/sd1/headers.json",
+      "sha256": "d804648640f161809603cf32e98db28df593885c3465b126cfb4c95c3662ef6f"
+    },
+    {
+      "path": "docs/evidence/sd1/metadata.json",
+      "sha256": "85f59f1d1d3bb521fc438bf518a3681402edda4499bd9719b95bfaaf6be3002f"
+    },
+    {
+      "path": "docs/evidence/sd1/pilot-validation.json",
+      "sha256": "5c65686ecb446c7a47dfb036f912a31ccace59999b70889f7e1c37301f3690a0"
+    },
+    {
+      "path": "docs/evidence/sd1/pilot.json",
+      "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1"
+    },
+    {
+      "path": "docs/evidence/sd1/records.json",
+      "sha256": "406fd92a9fbb3768659e5d627dd196e14b34e8960cdf49418b6c7e0b20ce1bfe"
+    },
+    {
+      "path": "docs/evidence/sd1/review-original.json",
+      "sha256": "8765c515887a600d6b00f0b345bf744cffa7823fac07b4348a195b632ba2d85f"
+    },
+    {
+      "path": "docs/evidence/sd1/review.json",
+      "sha256": "85f6dfdef803595999efc3a17d38eaec93aa6374054f31feaa5aa747b2cc21d7"
+    },
+    {
+      "path": "docs/evidence/sd1/run-pilot.py",
+      "sha256": "22db19132783e59502ae41b934b9a99428b7051929fd18dc1f1d9d369ab13624"
+    },
+    {
+      "path": "docs/evidence/sd1/session-close-verification.json",
+      "sha256": "f78c046f08bdcde852b1a0473fe175c329bd58494885568ff0e6abdc70da7dbd"
+    },
+    {
+      "path": "docs/evidence/student-data-plan/independent-review.md",
+      "sha256": "e0c9479fa103c5ab413bf0bbf953f59f03acbef7b5a76029f44143114376d4af"
+    },
+    {
+      "path": "docs/evidence/student-data-plan/replacement-sheet-update.md",
+      "sha256": "5902fffc8ed3f3b20391a30430fa229d19d69a15e2bbb341c74a0eb51a153f75"
+    },
+    {
+      "path": "docs/evidence/student-data-plan/validation.md",
+      "sha256": "d453f3dba7578ab7851463d66614a39a8e07a6fec33e96df0eda47b582645689"
+    }
+  ],
+  "canonicalControls": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "dfa21e22f246ab46a9841f266e41983173c6a27d40f0a0886ce6de1fd11c1e6a"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "sha256": "ebc52c6c23811d00f15aa4e17356e38f07d5db03bdeb3f6a49a55b036f74b08e"
+    },
+    {
+      "path": "docs/BUILD_STATE.json",
+      "sha256": "b5025ef50b0201ed6f4334043f67d09161f73d509af45e12710c26ce745095ff"
+    }
+  ],
+  "activeStageId": null,
+  "nextPermittedStageId": null,
+  "openAttention": {
+    "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+    "rows": 9,
+    "sha256": "c794cb2a85437a1cb9fc9879314c003ff3006af7fb005396ae80006f3fed7ac7",
+    "unchangedFromEntry": true,
+    "routedPilotIds": [
+      "award-577dacb8c225",
+      "award-2179b44d009d",
+      "award-8bce77306c27",
+      "award-62a1f1662db9",
+      "award-26c4b3c65985",
+      "award-5dd4c3d3988a",
+      "award-a2f7b9b6cbec",
+      "award-cd0fb7cd0c64",
+      "award-97dfaadd1d31",
+      "award-52b096183d9d",
+      "award-d8ff6ef257b3",
+      "award-ce44143820a7"
+    ],
+    "unresolvedRowsClosed": 0,
+    "ownersAndTriggersUnchanged": true
+  },
+  "retainedM1": {
+    "commit": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+    "reviewCandidate": "dba45832e7c5a32635202784b78624f562ba0377",
+    "inventorySha256": "87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8",
+    "counts": {
+      "records": 437,
+      "catalogAwards": 411,
+      "researchLeads": 26,
+      "catalogSourcesAccountedFor": 436,
+      "portalsPreserved": 21,
+      "applicationGroupsPreserved": 4,
+      "routeCounts": {
+        "manual_known_block": 1,
+        "manual_separate_followup": 2,
+        "manual_source_review": 18,
+        "public_signal_candidate": 416
+      },
+      "excluded": 0,
+      "confirmedDuplicateChildMerges": 0,
+      "leadRecordsWithCandidateAwardOrPortalOverlap": 4,
+      "uniqueRegisteredUrls": 273,
+      "uniqueScheduledCandidateUrls": 242,
+      "uniqueScheduledCandidateHosts": 133,
+      "sharedFetchUrls": 36,
+      "sourceCallsPerformed": 0,
+      "monitorSuccessfulChecks": 0
+    },
+    "preservedArtifacts": [
+      {
+        "path": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+        "sha256": "0937d2b3279f09fb10df0c2567ed97f749bb1eaeeddcf78ab30a380561e454fd"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/build-inventory.py",
+        "sha256": "3a00adafd41b9a3c3db2e6a028779f8465be506ebc6403117ce411775c0fe434"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/inventory.json",
+        "sha256": "87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/manifest.json",
+        "sha256": "04d59ae97ebc054e0e051ec18f54f4e5d41f3862900791afcca12150cd2d1989"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/notification-preference.json",
+        "sha256": "d2a61ecd390e2da5beced7cabecfa2e4fd4138a3c032014359c5999509e6a008"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/notification-recipient-validation.json",
+        "sha256": "544e770c4147cd099a88bceff3f57ac01341af35c48541a504731e2bf9036b6c"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/notification-validation.json",
+        "sha256": "4e96c66e71bb103d737bd5973dbb6d26937f170eba2297a6fecb45cac6c43769"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/review.json",
+        "sha256": "010408bef9ec0098cb1b46621f73c3eecc7aeacc271f1a90afb2376a8bb96ff2"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/setup.json",
+        "sha256": "30dbeee6971023e9bd42ebad08ec7cfa90b4736631b7ecfcdd61d2143173882e"
+      },
+      {
+        "path": "docs/evidence/season-monitor-m1/validation.json",
+        "sha256": "836ec3476f80bf5c9e77f7dab426f6852a4c6eef024ca9c7d2b8cd9cd46658df"
+      },
+      {
+        "path": "docs/evidence/season-monitor-plan/manifest.json",
+        "sha256": "971062df0136748ae8ca080af780143bcb1bd4750fb60d30627f0a411b211eb9"
+      },
+      {
+        "path": "docs/evidence/season-monitor-plan/review.json",
+        "sha256": "6fcf20ac357bd7c9e1f7ea57c3734ec24b08a88111695b6ad9bad98a85521d85"
+      }
+    ],
+    "M1Complete": false,
+    "inventoryRebuilt": false
+  },
+  "primaryCheckout": {
+    "head": "20476b8384cfbda6aaa04a3da4b7f0a3fbd291e5",
+    "branch": "codex/p1-reproducible-baseline",
+    "status": "",
+    "changed": false
+  },
+  "workingWorkbook": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+  "nextOrderedIds": [
+    "award-2179b44d009d",
+    "award-97dfaadd1d31",
+    "award-ce44143820a7"
+  ],
+  "pendingAuthority": [
+    "direct SD2 selection",
+    "exact selected-copy tab/identity metadata and field/range read scope",
+    "exact public program/FAQ source and document/child scope",
+    "separately selected complete ledger denominator and bounded inventory projection"
+  ],
+  "historicalLimits": [
+    "standard npm run build process/port EPERM; Webpack is no waiver",
+    "fresh authenticated delivery baseline HTTP404; not refreshed here",
+    "all unresolved rows retain section 9 owner/trigger"
+  ],
+  "runtimeDeploymentDiff": [],
+  "priorHandoffExactSuffix": true,
+  "effects": {
+    "newSourceReads": 0,
+    "sheetReads": 0,
+    "sheetWrites": 0,
+    "appChanges": 0,
+    "deployment": 0,
+    "monitorActivation": 0,
+    "messages": 0,
+    "remoteGitActions": 0
+  },
+  "modelEffort": "exact backend identifiers unavailable; no model switch",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.636947+00:00",
+      "endedAt": "2026-10-13T15:49:38.655321+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.655355+00:00",
+      "endedAt": "2026-10-13T15:49:38.671539+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.671573+00:00",
+      "endedAt": "2026-10-13T15:49:38.687378+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "commit",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.687432+00:00",
+      "endedAt": "2026-10-13T15:49:38.703826+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd^{tree}"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.704422+00:00",
+      "endedAt": "2026-10-13T15:49:38.723388+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "tree",
+        "459de876d0c3e67f79e594e33d0281a9e1553308"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.723432+00:00",
+      "endedAt": "2026-10-13T15:49:38.737502+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.737577+00:00",
+      "endedAt": "2026-10-13T15:49:38.749964+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "commit",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.750024+00:00",
+      "endedAt": "2026-10-13T15:49:38.763521+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae^{tree}"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.763589+00:00",
+      "endedAt": "2026-10-13T15:49:38.776906+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "tree",
+        "dccb44781e3bbcece7193c1596b8da93d4adfa54"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.776948+00:00",
+      "endedAt": "2026-10-13T15:49:38.789879+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.789935+00:00",
+      "endedAt": "2026-10-13T15:49:38.802302+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "commit",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.802340+00:00",
+      "endedAt": "2026-10-13T15:49:38.815096+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0^{tree}"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.815154+00:00",
+      "endedAt": "2026-10-13T15:49:38.827776+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "tree",
+        "d362fc68c096d1f904af82542666107460d6fccf"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.827812+00:00",
+      "endedAt": "2026-10-13T15:49:38.840138+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.840198+00:00",
+      "endedAt": "2026-10-13T15:49:38.851758+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "commit",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.851784+00:00",
+      "endedAt": "2026-10-13T15:49:38.863428+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14^{tree}"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.863472+00:00",
+      "endedAt": "2026-10-13T15:49:38.874947+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "cat-file",
+        "tree",
+        "1217380736e58eab74637b26c7accc1f98d803e8"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.874969+00:00",
+      "endedAt": "2026-10-13T15:49:38.886380+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0^"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.886438+00:00",
+      "endedAt": "2026-10-13T15:49:38.897752+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd^"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.897778+00:00",
+      "endedAt": "2026-10-13T15:49:38.909049+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.909073+00:00",
+      "endedAt": "2026-10-13T15:49:38.920749+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.920772+00:00",
+      "endedAt": "2026-10-13T15:49:38.931644+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "302105f644bc5aa3829a05569ebaa42d9717c1c0:docs/evidence/sd1/review.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.931675+00:00",
+      "endedAt": "2026-10-13T15:49:38.943475+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--binary",
+        "72e39fe95daa64dd0a2fb47083e56d112a78d0bc",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.943789+00:00",
+      "endedAt": "2026-10-13T15:49:38.966611+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--binary",
+        "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.966757+00:00",
+      "endedAt": "2026-10-13T15:49:38.986490+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--binary",
+        "8254eeee73575f946e074ffb7bd9fcf9f5efd0e2",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:38.986688+00:00",
+      "endedAt": "2026-10-13T15:49:39.000754+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.002173+00:00",
+      "endedAt": "2026-10-13T15:49:39.014538+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/CURRENT_HANDOFF.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.015109+00:00",
+      "endedAt": "2026-10-13T15:49:39.028194+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd",
+        "docs/evidence/sd1",
+        "docs/evidence/student-data-plan",
+        "docs/STUDENT_DATA_CONTRACT.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.028255+00:00",
+      "endedAt": "2026-10-13T15:49:39.040153+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/STUDENT_DATA_CONTRACT.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.040181+00:00",
+      "endedAt": "2026-10-13T15:49:39.051042+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/CONTINUE.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.051345+00:00",
+      "endedAt": "2026-10-13T15:49:39.063192+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/PILOT.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.063433+00:00",
+      "endedAt": "2026-10-13T15:49:39.075049+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/README.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.075325+00:00",
+      "endedAt": "2026-10-13T15:49:39.086616+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/SESSION_CLOSE.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.086904+00:00",
+      "endedAt": "2026-10-13T15:49:39.098528+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/VALIDATION.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.098741+00:00",
+      "endedAt": "2026-10-13T15:49:39.110007+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/check-public.ts"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.110275+00:00",
+      "endedAt": "2026-10-13T15:49:39.121695+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/build-permitted.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.121948+00:00",
+      "endedAt": "2026-10-13T15:49:39.133265+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/build-webpack.log.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.133627+00:00",
+      "endedAt": "2026-10-13T15:49:39.144949+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/build.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.145316+00:00",
+      "endedAt": "2026-10-13T15:49:39.156185+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/diff-check.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.156448+00:00",
+      "endedAt": "2026-10-13T15:49:39.167457+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/permitted-results.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.167557+00:00",
+      "endedAt": "2026-10-13T15:49:39.178365+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/plan-check.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.178683+00:00",
+      "endedAt": "2026-10-13T15:49:39.189408+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/plan-final.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.189683+00:00",
+      "endedAt": "2026-10-13T15:49:39.200947+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/results.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.201250+00:00",
+      "endedAt": "2026-10-13T15:49:39.212350+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/test-permitted.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.212601+00:00",
+      "endedAt": "2026-10-13T15:49:39.224695+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/test.log"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.224996+00:00",
+      "endedAt": "2026-10-13T15:49:39.236501+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/checks/typecheck.log.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.236654+00:00",
+      "endedAt": "2026-10-13T15:49:39.248102+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/headers.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.248329+00:00",
+      "endedAt": "2026-10-13T15:49:39.259722+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/metadata.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.259967+00:00",
+      "endedAt": "2026-10-13T15:49:39.271156+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/pilot-validation.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.271430+00:00",
+      "endedAt": "2026-10-13T15:49:39.282658+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/pilot.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.282766+00:00",
+      "endedAt": "2026-10-13T15:49:39.294293+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/records.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.294482+00:00",
+      "endedAt": "2026-10-13T15:49:39.305202+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/review-original.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.305581+00:00",
+      "endedAt": "2026-10-13T15:49:39.316941+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/review.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.317182+00:00",
+      "endedAt": "2026-10-13T15:49:39.328304+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/run-pilot.py"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.328401+00:00",
+      "endedAt": "2026-10-13T15:49:39.339668+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/sd1/session-close-verification.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.339998+00:00",
+      "endedAt": "2026-10-13T15:49:39.351565+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/student-data-plan/independent-review.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.351817+00:00",
+      "endedAt": "2026-10-13T15:49:39.362935+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/student-data-plan/replacement-sheet-update.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.363302+00:00",
+      "endedAt": "2026-10-13T15:49:39.374406+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/evidence/student-data-plan/validation.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.374795+00:00",
+      "endedAt": "2026-10-13T15:49:39.386185+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:AGENTS.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.386473+00:00",
+      "endedAt": "2026-10-13T15:49:39.397620+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae:AGENTS.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.397914+00:00",
+      "endedAt": "2026-10-13T15:49:39.409697+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.409755+00:00",
+      "endedAt": "2026-10-13T15:49:39.420993+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae:docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.421328+00:00",
+      "endedAt": "2026-10-13T15:49:39.432972+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd:docs/BUILD_STATE.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.433064+00:00",
+      "endedAt": "2026-10-13T15:49:39.444192+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae:docs/BUILD_STATE.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.444532+00:00",
+      "endedAt": "2026-10-13T15:49:39.455833+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd",
+        "--",
+        "web",
+        ".github",
+        "vercel.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.456220+00:00",
+      "endedAt": "2026-10-13T15:49:39.469141+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.469163+00:00",
+      "endedAt": "2026-10-13T15:49:39.482348+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "codex/scholarship-season-monitor-plan"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.482374+00:00",
+      "endedAt": "2026-10-13T15:49:39.492854+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14",
+        "docs/evidence/season-monitor-m1",
+        "docs/evidence/season-monitor-plan",
+        "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.492881+00:00",
+      "endedAt": "2026-10-13T15:49:39.504435+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.504468+00:00",
+      "endedAt": "2026-10-13T15:49:39.516096+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/build-inventory.py"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:39.516147+00:00",
+      "endedAt": "2026-10-13T15:49:41.138186+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/inventory.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:41.138329+00:00",
+      "endedAt": "2026-10-13T15:49:41.176595+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/manifest.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:41.177435+00:00",
+      "endedAt": "2026-10-13T15:49:41.200270+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/notification-preference.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:41.200353+00:00",
+      "endedAt": "2026-10-13T15:49:42.337834+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/notification-recipient-validation.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:42.337989+00:00",
+      "endedAt": "2026-10-13T15:49:43.421203+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/notification-validation.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:43.421314+00:00",
+      "endedAt": "2026-10-13T15:49:44.586842+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/review.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:44.587022+00:00",
+      "endedAt": "2026-10-13T15:49:44.622438+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/setup.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:44.622542+00:00",
+      "endedAt": "2026-10-13T15:49:45.704112+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/validation.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:45.704292+00:00",
+      "endedAt": "2026-10-13T15:49:46.859675+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-plan/manifest.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.859849+00:00",
+      "endedAt": "2026-10-13T15:49:46.902476+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-plan/review.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.902583+00:00",
+      "endedAt": "2026-10-13T15:49:46.927517+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/review.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.927611+00:00",
+      "endedAt": "2026-10-13T15:49:46.947128+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/manifest.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.947256+00:00",
+      "endedAt": "2026-10-13T15:49:46.965582+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/inventory.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.965690+00:00",
+      "endedAt": "2026-10-13T15:49:46.984469+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:46.989531+00:00",
+      "endedAt": "2026-10-13T15:49:47.005103+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code",
+        "branch",
+        "--show-current"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:47.005159+00:00",
+      "endedAt": "2026-10-13T15:49:47.020034+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/Users/kelseystuart/Documents/Codex/2026-08-23/i-x20/work/program_code",
+        "status",
+        "--porcelain"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:47.020088+00:00",
+      "endedAt": "2026-10-13T15:49:47.040232+00:00",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "show",
+        "009fa57e7def04ce2a9b49051f395c32b1393c14:docs/evidence/season-monitor-m1/inventory.json"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:49:47.040379+00:00",
+      "endedAt": "2026-10-13T15:49:47.060353+00:00",
+      "exitCode": 0
+    }
+  ]
+}

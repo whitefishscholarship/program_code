@@ -370,6 +370,11 @@ not duplicate project progress trackers. Update this small block at every checkp
   award-ce44143820a7 (David and Lisa Barnes), in that order. Reidentify fresh;
   rows18/255/400 are hints. Short prompt: `docs/evidence/sd1/CONTINUE.md`.
 - SD1 local planning/pilot complete; SD2/SD3/SD4/SD5/SD6 unstarted. No live migration/publication/activation.
+- Continuation verification: `docs/evidence/sd1-continuation/README.md` and its
+  receipts reverify retained SD1 candidate/review and seasonal M1 objects locally.
+  All nine owner/trigger rows below are preserved unchanged. SD2 selection and
+  exact source/read/complete-denominator scope remain pending; no new access or
+  implementation authority is inferred. Original SD1 evidence is not rebound.
 - Outstanding: all current-cycle material facts; Spear/Live Your Dream app-ID holds;
   full population/preservation controls and publication acceptance; standard-build
   environment limit and fresh delivery baseline; SD5 whole-inventory queue adoption,

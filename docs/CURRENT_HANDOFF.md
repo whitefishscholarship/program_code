@@ -1,3 +1,25 @@
+# After SD1 — retained evidence verified; SD2 awaits selection
+
+October 13, 2026. Local preservation/handoff checkpoint only. Read
+STUDENT_DATA_AND_MAINTENANCE_PLAN section 9, the sole progress pointer, and
+`docs/evidence/sd1-continuation/README.md` with its verification receipts.
+Reviewed candidate bbeb9a4 and review closeout 302105f remain immutable; original
+SD1 evidence and all nine owner/trigger rows are preserved. Seasonal M1 plan,
+review and 437-record inventory remain at retained checkpoint 009fa57.
+
+SD2 has not begun. Await direct SD2 selection with exact new-copy identity/read,
+public program/FAQ source and separately selected complete-denominator scope.
+Next ordered IDs: award-2179b44d009d, award-97dfaadd1d31, award-ce44143820a7.
+Use only workbook 1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0 under later
+selected reads; saved tab/rows are hints requiring verification. Keep every held
+identity/source, preservation, build/delivery and seasonal-M1 trigger. Existing
+journey/privacy and canonical gates remain unchanged. No new source/Sheet reads,
+implementation, external effects or messages were performed. Stop before SD3.
+
+Original handoff preserved byte-for-byte below.
+
+---
+
 # SD1 — local contract and representative pilot checkpoint
 
 Session wrap: SD1 local PASS; immutable reviewed candidate bbeb9a4 and review
