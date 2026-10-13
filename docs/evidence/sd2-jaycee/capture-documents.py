@@ -29,7 +29,9 @@ for i, kind in enumerate(['vocational','university']):
     assert 'JANUARY 12, 2027' in body
     assert '15. WALLET SIZE PHOTO' in body
     shutil.copyfile(raw, P/f'{kind}-source.doc')
-    shutil.copyfile(txt, P/f'{kind}-source.txt')
+    # Preserve original DOC and original extraction digest; clean only line-end whitespace.
+    normalized='\n'.join(line.rstrip() for line in body.split('\n')).rstrip()+'\n'
+    (P/f'{kind}-source.txt').write_text(normalized)
     shutil.copyfile(render, P/f'{kind}-render.pdf')
     pages = (TMP/f'sd2-jaycee-{kind}-render.txt').read_text().split('\f')
     if not pages[-1].strip(): pages.pop()
@@ -61,11 +63,13 @@ for i, kind in enumerate(['vocational','university']):
            'publishedCycleLabel':'SCHOLAR:2026-2027','sourceMetadataPageCount':6,
            'httpLastModifiedIsNotFactVerification':True})
     write(f'{kind}-extraction.json',{'sourceSha256':sha(raw.read_bytes()),
-          'textArtifact':f'{kind}-source.txt','textSha256':sha(txt.read_bytes()),
+          'textArtifact':f'{kind}-source.txt','textSha256':sha((P/f'{kind}-source.txt').read_bytes()),
+          'originalTextutilSha256':sha(txt.read_bytes()),'textNormalization':'line-end whitespace and trailing blank lines removed only; exact DOC bytes preserved',
           'renderArtifact':f'{kind}-render.pdf','renderSha256':sha(render.read_bytes()),
           'renderedPages':count,'pagesExtracted':len(pages),'pagesVisuallyInspected':list(range(1,count+1)),
           'pages':[{'page':n+1,'characters':len(t),'text':t} for n,t in enumerate(pages)],
           'structuralParts':parts,'sourceSectionsInspected':list(range(1,16)),
+          'otherStoryOrEmbeddedParts':[],
           'applicantContent':'blank public form labels only; no responses, filled signature or attachments',
           'completeness':'Entire textutil text, all converted body/table/header/footer paragraphs and every rendered page inspected; sections1-15 and instructions A-I present.',
           'conversionLimit':'Local LibreOffice reflows legacy DOC: vocational metadata6 pages becomes7, including checklist spillover. Blank table borders reach right margin. Rule text agrees across textutil, OOXML and render. These are local page locators, not asserted original Word pagination.',

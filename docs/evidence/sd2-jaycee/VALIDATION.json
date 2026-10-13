@@ -3,8 +3,8 @@
   "evidenceVerification": {
     "outcome": "PASS",
     "scope": "local two-record held continuation only",
-    "startedAt": "2026-10-13T22:08:01.159471+00:00",
-    "endedAt": "2026-10-13T22:08:09.907040+00:00",
+    "startedAt": "2026-10-13T22:09:07.971128+00:00",
+    "endedAt": "2026-10-13T22:09:16.911547+00:00",
     "selectedInputOutcomes": 2,
     "fieldEvidenceEnvelopes": 62,
     "completePublicDocuments": 2,
@@ -131,11 +131,23 @@
     "command": [
       "git",
       "diff",
-      "--check"
+      "--check",
+      "f742890"
     ],
     "exitCode": 0,
     "stdout": "",
     "stderr": "",
-    "observedAt": "2026-10-13T22:08:09.932385+00:00"
+    "observedAt": "2026-10-13T22:09:16.940881+00:00"
+  },
+  "stagedWhitespaceCorrection": {
+    "initialCommand": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "initialExitCode": 2,
+    "initialIssue": "Line-end whitespace and trailing blank lines in complete textutil captures. Draft92f8732 was saved before remediation; no review binds it.",
+    "remediation": "Remove line-end whitespace/trailing blank lines only; retain exact DOCs and original textutil SHA256; refresh extraction/proposal hashes. No network/workbook calls or facts changed."
   }
 }

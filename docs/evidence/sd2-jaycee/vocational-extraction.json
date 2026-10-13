@@ -1,7 +1,9 @@
 {
   "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
   "textArtifact": "vocational-source.txt",
-  "textSha256": "7493e6b7c116251f1e5768ed815b8988aa92e9d3514a1f1f77ee5fb00188e704",
+  "textSha256": "7fe4e002054e73341bef0586e10cbba5ea818deb9729ec0f5d9051711871b920",
+  "originalTextutilSha256": "7493e6b7c116251f1e5768ed815b8988aa92e9d3514a1f1f77ee5fb00188e704",
+  "textNormalization": "line-end whitespace and trailing blank lines removed only; exact DOC bytes preserved",
   "renderArtifact": "vocational-render.pdf",
   "renderSha256": "b4bedb383a5dae5f59f84ab9cd272bcce8900b063022d7ab93e0eae8e1eab4a9",
   "renderedPages": 7,
@@ -441,6 +443,7 @@
     14,
     15
   ],
+  "otherStoryOrEmbeddedParts": [],
   "applicantContent": "blank public form labels only; no responses, filled signature or attachments",
   "completeness": "Entire textutil text, all converted body/table/header/footer paragraphs and every rendered page inspected; sections1-15 and instructions A-I present.",
   "conversionLimit": "Local LibreOffice reflows legacy DOC: vocational metadata6 pages becomes7, including checklist spillover. Blank table borders reach right margin. Rule text agrees across textutil, OOXML and render. These are local page locators, not asserted original Word pagination.",

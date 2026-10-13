@@ -37,8 +37,10 @@ identification. No parent, state contact list, old application alias, search or
 linked source was opened. HTTP response and byte identity establish the observed
 document version, not current participation or an open application route.
 
-Complete original DOC bytes, textutil text, local PDFs, hashes, safe HTTP headers,
-page text and converted structural paragraph/table counts are retained. All13 local
+Complete original DOC bytes, normalized textutil text, local PDFs, hashes, safe HTTP headers,
+page text and converted structural paragraph/table counts are retained. Source text
+removes only line-end whitespace/trailing blanks for Git checks; original textutil
+digests and exact DOC bytes are retained. All13 local
 render pages were visually inspected: vocational7, university6. Both documents
 include instructionsA–I, checklist and sections1–15 with blank application tables.
 Converted structure has12 body tables/136 body cells plus one footer table per
