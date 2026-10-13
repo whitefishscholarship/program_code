@@ -75,7 +75,8 @@ The first immutable proposal candidate was
 identified two medium findings and a low spacing typo, with no critical/high
 findings. Author-owned remediation updates only the proposal text: default
 14-day coverage now explicitly includes every in-scope non-open record; explicit
-exclusions retain evidence. Source contradictions stay in Check first, whereas a
+exclusions retain evidence. Failed due checks retry once at the next daily wake
+before the documented manual/blocked cadence. Source contradictions stay in Check first, whereas a
 supported student mismatch may use Later. The kickoff batch-size spacing is fixed.
 No runtime, data, authority or canonical acceptance bytes changed. Existing tests
 need no repeat for these prose-only corrections; final diff/plan checks and fresh
