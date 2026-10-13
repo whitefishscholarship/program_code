@@ -1,0 +1,85 @@
+{
+  "reviewType": "fresh-context-independent-read-only-local-SD1",
+  "outcome": "BLOCKED",
+  "outcomeScope": "SD1 completion needs the local behavioral-pilot remediation below. No critical/high findings; no canonical acceptance or release review.",
+  "reviewer": "/root/sd1_review",
+  "freshContext": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-13T15:26:22.683345Z",
+  "candidateCommit": "8254eeee73575f946e074ffb7bd9fcf9f5efd0e2",
+  "candidateTree": "21178884ec763b72098ebf10ac1e2f56371d7043",
+  "entryBaseline": "72e39fe95daa64dd0a2fb47083e56d112a78d0bc",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "baselineLimit": "Retained authenticated main object; not freshly authenticated during this review. Implementer disclosed current refresh HTTP404.",
+  "completeDiffHashes": {
+    "method": "SHA256 of exact git diff --binary BASE HEAD output",
+    "entryToCandidate": "ff70409706f03ca8a526978d3ad2ce7427b4c732a5792bb5674949cb6274ed30",
+    "retainedMainToCandidate": "2fda59dd409a119ac57c6ac38d437c9bf53236c54635b68635ccdbac807c96ba"
+  },
+  "pilotSha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1",
+  "inputHashes": {
+    "metadata.json": "85f59f1d1d3bb521fc438bf518a3681402edda4499bd9719b95bfaaf6be3002f",
+    "headers.json": "d804648640f161809603cf32e98db28df593885c3465b126cfb4c95c3662ef6f",
+    "records.json": "406fd92a9fbb3768659e5d627dd196e14b34e8960cdf49418b6c7e0b20ce1bfe"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "unresolved": 1
+  },
+  "findings": [
+    {
+      "id": "SD1-M1",
+      "severity": "medium",
+      "title": "Complete the representative filter, fit and priority probes",
+      "locations": [
+        "docs/evidence/sd1/run-pilot.py:26",
+        "docs/evidence/sd1/run-pilot.py:176",
+        "docs/evidence/sd1/run-pilot.py:202",
+        "docs/STUDENT_DATA_CONTRACT.md:179"
+      ],
+      "finding": "The pilot tests scalar need filters and priority bands, but does not exercise multi-valued school/study filters, unknown school-type visibility, fit-explanation behavior, within-band ordering or manual-sort precedence. The scalar filter helper returns different for an accepted applicable schoolTypes=['two_year','trade'] fact when selecting trade. All twelve real pilot priorities are conservatively Check first, so the missing synthetic comparisons matter for demonstrating the intended design.",
+      "requestedChange": "Add bounded local contract scenarios for accepted multi-value membership, unknown/conflicting school/path facts, optional-answer non-exclusion, supported connection versus unresolved prerequisite explanations, and deterministic deadline/connection/name/ID ordering with manual-sort precedence. Preserve all real facts as proposed/as-of and keep app code unchanged.",
+      "rationale": "The selected SD1 objective explicitly includes testing student filters, fit explanations and priority locally. These scenarios can be tested without fresh research or implementation.",
+      "owner": "Codex implementation agent",
+      "target": "Replacement immutable SD1 candidate before completion review"
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "SD1-M1",
+      "status": "requires-implementer-remediation",
+      "rationale": "Implementer has selected local-probe remediation followed by this reviewer's read-only recheck.",
+      "owner": "Codex implementation agent",
+      "target": "Final SD1 local checkpoint"
+    }
+  ],
+  "verification": [
+    "Resolved candidate commit/tree and independently recomputed both complete binary-diff hashes and pilot hash.",
+    "Inspected candidate scope:25entry-to-candidate paths; only CURRENT_HANDOFF and STUDENT_DATA_AND_MAINTENANCE_PLAN modify existing files; all other changes are new SD1 documentation/evidence.",
+    "Verified exact byte preservation of AGENTS, canonical plan, BUILD_STATE and all three prior planning/replacement review/evidence files; original entry handoff is an exact suffix.",
+    "Verified activeStageId and nextPermittedStageId remain null; runtime, fixtures, CI/deployment paths and historical attestations remain unchanged.",
+    "Verified fresh capture contains exactly rows2,18,45,80,115,150,185,220,255,290,325,400 with one15-cell A:O block each for the selected new workbook.",
+    "Checked all changed JSON parses and every pilot saved-source/catalog input hash matches its referenced artifact.",
+    "Reviewed all15 selected evidence objects, per-field scope/freshness/proposal envelopes and two identity holds; no current accepted facts, open claims or unsupported need-selection negatives.",
+    "Independently ran check-public.ts:exit0,12awards/16sources, unchanged public schemas, no orphan source references or prefix collisions.",
+    "Ran read-only isolated helper probe confirming the missing multi-value behavior; did not run the file-writing pilot generator.",
+    "Independently ran git diff --check ENTRY HEAD:exit0.",
+    "Inspected mandatory validation receipts:plan/typecheck/full tests passed after disclosed process-access retries; standard build remains EPERM-blocked after retry; webpack build passed and is accurately distinguished.",
+    "Inspected exact retained009fa57 monitor plan, original M1 review and inventory:437records=411awards+26leads;416candidate routes+21manual routes;273registered URLs; no exclusions or confirmed child merges.",
+    "Confirmed Reviews decision/due ownership versus retained runner attempts/fingerprints/outbox is explicitly reconciled, with whole-inventory adoption deferred to SD5.",
+    "Confirmed exact proposed SD2 batch and source/denominator authority gate; no SD2 execution or substitution authorization."
+  ],
+  "limits": [
+    "No live spreadsheet, remote Git, public-source, provider or applicant-data access; no old spreadsheet cell snapshots read.",
+    "No files or Git state mutated and no findings repaired by reviewer.",
+    "Recorded source evidence was reviewed as historical bounded evidence, not freshly fetched or complete-document inspection.",
+    "Full new-copy population, equivalence, write permissions, preservation/concurrency and current-cycle material facts remain unverified.",
+    "Standard npm run build remains environment-blocked; alternate webpack success does not satisfy or waive canonical universal acceptance gates.",
+    "No browser/app change verification:app remained unchanged; these are local contract probes.",
+    "SD2–SD6, workbook writes, public acceptance/publication, deployments, monitor activation and notifications remain unstarted/unauthorized."
+  ],
+  "nextAction": "Implementer remediates SD1-M1 locally, freezes a replacement candidate and supplies final diff/pilot hashes and evidence for independent read-only recheck. Stop before SD2."
+}
