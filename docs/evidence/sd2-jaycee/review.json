@@ -1,0 +1,105 @@
+{
+  "reviewType": "independent-local-technical-final-recheck",
+  "reviewer": "/root/sd2_jaycee_independent_review",
+  "freshContext": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-13T22:16:37Z",
+  "outcome": "PASS",
+  "outcomeScope": "Technical PASS for the selected two-record, proposed/held local SD2 checkpoint only. No scholarship facts or mappings are accepted. Canonical acceptance, the standard-build gate, fresh-main proof, human fact review, full SD2 completion and SD3 remain open.",
+  "candidateCommit": "1aa0e4b8b96bd8e16a1cda5937b3e59790bdedb4",
+  "candidateTree": "8764b2a9f09623869c1732338685b816a9c613f1",
+  "entryBaseline": "f742890517dce0633a7a69d06214f348bc687a38",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "manifestPath": "docs/evidence/sd2-jaycee/final-candidate-manifest.json",
+  "manifestSha256": "e4bd7555555c402d34125300e432d20d3fdef31b5450b722c226f0befee161a8",
+  "manifestFileCount": 41,
+  "diffAndHashChecks": {
+    "headAndTreeMatch": true,
+    "completeEntryChangedPathSetMatchesManifest": true,
+    "all41CandidateBlobIdsSizesAndSha256Match": true,
+    "trackedWorktreeBytesMatchCandidate": true,
+    "entryToCandidateBinaryDiff": {
+      "bytes": 1120342,
+      "sha256": "cc4c1f9039cb7c0007f0951a9f19339db55ee929193173b8560da873851ed9a8",
+      "matchesManifest": true,
+      "whitespaceCheck": "PASS"
+    },
+    "retainedMainToCandidateBinaryDiff": {
+      "bytes": 4202082,
+      "sha256": "03434379afa53a60578fed6eddc161b9011588f19ef85026c435aa4ce151bac8",
+      "matchesManifest": true,
+      "whitespaceCheck": "PASS"
+    },
+    "originalCandidateManifestPreserved": {
+      "path": "docs/evidence/sd2-jaycee/candidate-manifest.json",
+      "candidateCommit": "8e955801461ebd97b8eb3ef3955621eee9d93120",
+      "sha256": "3edbf7a07a0838e2921cff35633c9441f5bf7da053d8e421333cfa0c02036dd3"
+    },
+    "originalReviewPreserved": {
+      "path": "docs/evidence/sd2-jaycee/review-round1.json",
+      "sha256": "9029b71062e50126c657c89bd76f945eae0a7bc0c5514d88cc8f898822fcb3cc",
+      "originalCandidateAndManifestBindingRetained": true
+    },
+    "allNineAttentionRowsAndPriorSupplementsPreserved": true,
+    "historicalEvidenceAndReviewBindingsPreserved": true,
+    "retainedM1Records": 437,
+    "originalSourceNativeHttpExtractionIdentityAndCheckReceiptsUnchanged": true,
+    "runtimeAndCanonicalControlChanges": false,
+    "worktreeStatus": "Only final-candidate-manifest.json is untracked, as disclosed."
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "priorFindingCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "findingId": "SD2-JAYCEE-M1",
+      "severity": "medium",
+      "status": "fixed",
+      "rationale": "Both materials proposals and their evidence now include the required active working home email address and applicant signature, plus complete-form categories. The added exact excerpts independently match the unchanged source text and rendered pages: email on page 1 in both documents, signature on vocational page 6/university page 5, complete-form checklist on page 3 in both. All corrected values remain held, with no applicant values or signatures retained.",
+      "owner": "Codex implementation author",
+      "target": "Satisfied in final candidate 1aa0e4b8b96bd8e16a1cda5937b3e59790bdedb4",
+      "evidencePaths": [
+        "docs/evidence/sd2-jaycee/proposals.json",
+        "docs/evidence/sd2-jaycee/build-proposals.py",
+        "docs/evidence/sd2-jaycee/remediation.json"
+      ]
+    }
+  ],
+  "checksPerformed": [
+    "Retained the original objective and governing-contract review; examined the complete remediation change set and final candidate bindings.",
+    "Independently recomputed final manifest SHA256, all 41 candidate-tree blob identities/sizes/hashes, changed-path equality and both complete binary-diff hashes.",
+    "Independently ran entry-to-final and retained-main-to-final whitespace checks: PASS.",
+    "Verified original round-one manifest/review bindings and the exactly one count-matched remediation disposition.",
+    "Independently checked corrected materials values against their evidence envelopes, exact unchanged source excerpts and rendered-page text locators.",
+    "Executed the inspected read-only verify-evidence.py: PASS, 2026-10-13T22:16:28.601447Z through 2026-10-13T22:16:37.543070Z.",
+    "Reconfirmed two held input outcomes, 62 held evidence envelopes, zero accepted facts/mappings, both identity holds, preserved public/canonical IDs, and 406 named rows without selected research.",
+    "Reconfirmed all nine attention rows, every prior supplement, historical evidence bindings and retained M1's 437 records.",
+    "Confirmed original DOC/PDFs, native/HTTP/extraction/identity receipts and plan/type/test/build receipts are unchanged from the initially reviewed candidate.",
+    "Carried forward the initial independent inspection of all 13 rendered pages and complete saved PDF/structural text comparisons; the underlying artifacts remain byte-identical.",
+    "Made no edits, network calls, workbook/source reads, builders, publication, deployment, monitoring activation or external messages."
+  ],
+  "limitationsAndUnknowns": [
+    "Fresh authenticated remote-main and delivery proof remain unknown; origin/main is retained local evidence.",
+    "Both recorded exact npm run build attempts failed with process/port EPERM. This technical PASS neither resolves nor waives that standard gate.",
+    "Plan/typecheck/tests passed in preserved author receipts after recorded IPC retries; repository-wide validation was not rerun by this strictly read-only reviewer.",
+    "Saved HTTP/workbook observations establish their bounded historical observations, not independently refreshed remote state.",
+    "Workbook version, atomic snapshot, server-head and whole-workbook preservation remain unverified.",
+    "Vocational local rendering reflows stored six-page metadata to seven pages; existing conversion limits remain explicit.",
+    "Montana sponsor relationship, current state participation, old/new route continuity and present usable submission route remain unresolved.",
+    "Both identity holds, financial-statement conflict, need-selection uncertainty and all other field holds remain intact.",
+    "A named human reviewer is required before later fact acceptance.",
+    "Complete canonical/public-ID relationship and collision reconciliation, full SD2 completion and SD3 remain uncompleted.",
+    "This local review grants no canonical attestation, workbook writes, app changes, external delivery, activation or messages."
+  ],
+  "nextAction": "Preserve this final review with its exact final manifest/candidate binding through the authorized local closeout. Codex may prepare the next bounded SD2 read proposal; further source/identity reads require Kelsey's exact selection. Keep all facts and mappings held, retain every existing owner/trigger and stop before SD3."
+}
