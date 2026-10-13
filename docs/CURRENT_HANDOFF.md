@@ -1,3 +1,29 @@
+# Student data and maintenance — local planning proposal
+
+October 13, 2026. User requests a comprehensive but lean plan for the background
+Sheet, student-only app, accurate publication and year-round review queue.
+
+Read `docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md` for the one project plan,
+SD1–SD6 boundaries, vocabulary, source-reuse policy, model/context guidance,
+progress block and six copy-ready kickoff prompts. Proposed slices are not new
+accepted canonical stages; BUILD_STATE pointers remain null. Current authority
+is documentation/planning/review only. No implementation, source/Sheet access,
+migration, publication, deployment, schedule or notification activation occurred.
+
+Local branch: codex/plan-student-data-maintenance.
+Worktree: /private/tmp/program_code-student-data-maintenance-plan.
+Authenticated main baseline: 1c8e33f23beb55c2ed2ebe78fe4e256722af8392.
+Next proposed selection: SD1 local contract and representative saved-evidence pilot.
+Validation and independent proposal review: docs/evidence/student-data-plan/.
+
+This planning pointer temporarily precedes the historical handoff. It does not
+revoke, expand or execute the existing timer M1 grant, spend a cleanup batch again,
+reopen accepted P0–P9, or alter old review/attestation/recipient records. SD5 must
+reconcile the existing seasonal-monitor design rather than create a second system.
+The original CURRENT_HANDOFF content is preserved byte-for-byte below.
+
+---
+
 # UX2 — remove volunteer-hours dropdown, then resume timer M1
 
 Plan revision: 21
