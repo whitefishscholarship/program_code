@@ -425,6 +425,17 @@ not duplicate project progress trackers. Update this small block at every checkp
   backup/recovery, standard build/fresh delivery main and actual monitor operation
   remain unverified at their existing owner/trigger gates. No new product fix is due.
 
+- Next-read preparation after verified wrap `a4e9c7c`: local proposal at
+  `docs/evidence/sd2-next-read-proposal/NEXT_READ_PROPOSAL.md`; verification and
+  short continuation are in the same directory. Recommended scope: only the
+  Montana Jaycee duplicate-name input locators40then68, bounded identity/A:O
+  detail reads and their two exact saved public document URLs. This is proposed,
+  not selected or executed. All nine rows and every prior supplement remain exact;
+  408unselected named rows and all original437M1 routes/holds remain pending.
+  Codex owns execution only after direct selection; Kelsey selects the read scope
+  and names a human reviewer before later fact acceptance. No new access, accepted
+  facts, canonical acceptance, completed-work replay or SD3 start during preparation.
+
 ### Open attention items — owners and triggers
 
 This is the continuation routing for the existing plan, not a second backlog.

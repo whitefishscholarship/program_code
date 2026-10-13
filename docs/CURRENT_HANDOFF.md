@@ -1,3 +1,22 @@
+# Bounded next SD2 read proposal prepared — selection pending
+
+Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress pointer, then
+docs/evidence/sd2-next-read-proposal/{NEXT_READ_PROPOSAL.md,verification.json,CONTINUE.md}.
+Closeout a4e9c7c, reviewed candidate cf29dde, its50-file manifest/diff bindings and
+all52prior SD2 artifacts were reverified. Original reviews and wrap remain immutable.
+
+Recommended next scope: Montana Jaycee duplicate-name input locators40then68,
+their exact identity/detail ranges and two saved public document URLs. This is a
+proposal only; direct selection is required before new access. A named human fact
+reviewer is required before later acceptance. All nine rows, every SD2 supplement
+and original437M1 routes/holds retain their owners/triggers. No completed research
+replayed, new source/Sheet reads, facts accepted, external effect or SD3 start.
+Historical standard-build/fresh-delivery and later monitoring gates remain open.
+
+Original handoff preserved byte-for-byte below.
+
+---
+
 # Session wrapped — selected SD2 checkpoint complete; all follow-ups routed
 
 Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9 first: it is the sole progress
