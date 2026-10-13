@@ -40,7 +40,7 @@ Root commands:
 `node --import ./web/node_modules/tsx/dist/loader.mjs docs/evidence/sd1/check-public.ts`
 
 Both exit0. The first produces deterministic pilot/validation/summary files and
-23 behavioral probes (names and result in pilot-validation.json). The second parses
+35 behavioral probes (names and result in pilot-validation.json). The second parses
 all12 conservative public award projections and16 source projections with the
 existing unchanged StudentAwardSchema/StudentSourceSchema and checks source links.
 Probes include adversarial missing/stale/conflicting facts, need-selection separation,
@@ -80,3 +80,18 @@ Preserve reviewed candidate bytes; append only the new review/closure record loc
 
 Final close: one local PASS/BLOCKED/FAIL with scope and unresolved exact standard
 build/fresh-delivery-baseline limits. Stop before SD2.
+
+## Independent review remediation
+
+Fresh read-only reviewer /root/sd1_review checked candidate
+8254eeee73575f946e074ffb7bd9fcf9f5efd0e2 and found C0/H0/M1/L0. SD1-M1 identified
+missing multi-valued school/study filtering, fit explanation and within-band ordering
+probes. Author Codex added explicit-OR multi-value membership; conflicting/unknown
+school/path and blank/undecided outcomes; a2.8GPA/trades/renewal scenario; qualified
+fit explanations; date/connection/name/ID sorting, timezone offsets, yearless-date
+noncoercion and manual-order precedence. Local probe count is35, all passing.
+The12-record pilot.json, fresh source captures and app bytes are unchanged. Only
+the local probe/validation artifacts changed; required app checks need no repeat.
+Final full-diff whitespace check and replacement-candidate independent recheck are
+required. Original finding/result is preserved in the final review record, with
+count-matched author disposition and the replacement's exact hashes.

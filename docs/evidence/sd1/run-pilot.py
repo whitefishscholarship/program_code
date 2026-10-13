@@ -26,6 +26,39 @@ def usable(f):
 def filter_result(f, wanted):
     return 'needs_checking' if not usable(f) else ('matches' if f['value'] == wanted else 'different')
 
+def multi_filter(f, selected, undecided=False):
+    if not selected:
+        return 'no_preference'
+    if not usable(f) or f.get('operator') != 'OR':
+        return 'needs_checking'
+    if set(f['value']) & set(selected):
+        return 'matches'
+    return 'needs_checking' if undecided else 'different'
+
+def fit_explanation(entry, renewal, gpa):
+    if not usable(entry) or entry['value'] is None or gpa is None:
+        return 'Entry GPA needs checking; renewal GPA does not determine entry eligibility.'
+    return ('Your GPA is below the stated entry minimum; keep this award available to inspect.'
+            if gpa < entry['value'] else
+            'Your GPA meets the stated entry minimum; other requirements still need checking.')
+
+def order_key(item):
+    band={'Apply now':0,'Prepare next':1,'Check first':2,'Later':3}[item['priority']]
+    deadline=item['deadline']
+    # Only accepted date-only/exact cycle deadlines participate; no yearless coercion.
+    date='9999-12-31'
+    if usable(deadline) and deadline.get('precision') == 'date_only':
+        date=deadline['value']  # Published calendar day; no clock time invented.
+    elif usable(deadline) and deadline.get('precision') == 'exact_datetime':
+        date=dt.datetime.fromisoformat(deadline['value']).astimezone(dt.timezone.utc).isoformat()
+    return (band,date,not item['connection'],item['name'].casefold(),item['awardId'])
+
+def ordered(items, manual_ids=None):
+    if manual_ids is not None:
+        assert set(manual_ids)=={x['awardId'] for x in items}, 'manual order denominator mismatch'
+        return sorted(items,key=lambda x:manual_ids.index(x['awardId']))
+    return sorted(items,key=order_key)
+
 def gpa_conflict(entry, answer):
     return answer is not None and usable(entry) and entry['value'] is not None and answer < entry['value']
 
@@ -207,10 +240,32 @@ def main():
     required=fact('not_required','verified',scope='synthetic',freshness='applicable'); required['acceptance']='accepted'
     check('need eligibility independent of selection',filter_result(required,'required')=='different' and filter_result(considered,'considered')=='matches')
     check('unknown need remains visible',filter_result(fact(),'required')=='needs_checking')
+    school=fact(['two_year','trade'],'verified',scope='synthetic',freshness='applicable');school.update(acceptance='accepted',operator='OR')
+    path=fact(['certificate','associate'],'verified',scope='synthetic',freshness='applicable');path.update(acceptance='accepted',operator='OR')
+    check('trade and certificate match explicit multi-value OR',multi_filter(school,['trade'])=='matches' and multi_filter(path,['certificate'])=='matches')
+    check('known different school stays inspectable; undecided stays checking',multi_filter(school,['four_year'])=='different' and multi_filter(school,['four_year'],True)=='needs_checking')
+    check('unknown school and optional blank remain nonexcluding',multi_filter(fact(),['trade'])=='needs_checking' and multi_filter(school,[])=='no_preference')
+    check('conflicting study paths remain visible',multi_filter(dict(path,state='conflict'),['certificate'])=='needs_checking')
+    check('ambiguous list operator is not guessed',multi_filter(dict(school,operator='unknown'),['trade'])=='needs_checking')
+    check('2.8 GPA trades scenario does not use Pell renewal3.0 as entry cutoff',not gpa_conflict(byrow[18]['fields']['entryGpa'],2.8) and 'needs checking' in fit_explanation(byrow[18]['fields']['entryGpa'],byrow[18]['fields']['renewalGpa'],2.8))
+    check('fit explanation qualifies supported GPA without full eligibility claim','other requirements still need checking' in fit_explanation(dict(accepted,value=2.7),fact(),2.8) and 'keep this award available' in fit_explanation(dict(accepted,value=3.0),fact(),2.8))
     check('Apply now needs current accepted open plus usable route',priority(accepted,True,False)=='Apply now' and priority(accepted,False,False)=='Check first')
     future=dict(accepted,value='upcoming'); closed=dict(accepted,value='closed')
     check('future and closed priority branches',priority(future,False,False)=='Prepare next' and priority(closed)=='Later')
     check('material conflict stays Check first',priority(accepted,True,True)=='Check first')
+    deadline=dict(accepted,value='2026-11-01',precision='date_only')
+    entries=[dict(awardId='synthetic-b',name='Same',priority='Check first',deadline=fact(),connection=True),
+             dict(awardId='synthetic-a',name='Same',priority='Check first',deadline=fact(),connection=True),
+             dict(awardId='synthetic-c',name='Z',priority='Check first',deadline=deadline,connection=False)]
+    check('within-band verified deadline precedes connection then stable tie break',[x['awardId'] for x in ordered(entries)]==['synthetic-c','synthetic-a','synthetic-b'])
+    named=[dict(entries[0],name='Z'),dict(entries[1],name='A')]
+    check('name precedes ID only after deadline and connection tie',[x['awardId'] for x in ordered(named)]==['synthetic-a','synthetic-b'])
+    zone_a=dict(entries[0],deadline=dict(deadline,value='2026-11-01T23:00:00-07:00',precision='exact_datetime'))
+    zone_b=dict(entries[1],deadline=dict(deadline,value='2026-11-02T01:00:00-04:00',precision='exact_datetime'))
+    check('exact deadline ordering respects timezone offsets',[x['awardId'] for x in ordered([zone_a,zone_b])]==['synthetic-a','synthetic-b'])
+    entries[2]['deadline']=dict(deadline,value='November 1',precision='annual_rule')
+    check('yearless deadline does not become current-year sort key',[x['awardId'] for x in ordered(entries)]==['synthetic-a','synthetic-b','synthetic-c'])
+    check('manual sort precedes automatic priority ordering',[x['awardId'] for x in ordered(entries,['synthetic-b','synthetic-c','synthetic-a'])]==['synthetic-b','synthetic-c','synthetic-a'])
     check('optional GPA blank is nonexcluding',not gpa_conflict(dict(accepted,value=3.0),None))
     check('explicit AND OR and unknown operator',rule_result([True,None],'OR') is True and rule_result([True,None],'AND') is None and rule_result([True,False],'unknown') is None)
     check('all uninitialized records due now; no fake success',due()==AS_OF and all(r['review']['lastSuccessfulCheckAt'] is None for r in records))
