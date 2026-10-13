@@ -375,6 +375,9 @@ not duplicate project progress trackers. Update this small block at every checkp
   All nine owner/trigger rows below are preserved unchanged. SD2 selection and
   exact source/read/complete-denominator scope remain pending; no new access or
   implementation authority is inferred. Original SD1 evidence is not rebound.
+- Session close: continuation checkpoint `f0a98f3`;
+  `docs/evidence/sd1-continuation/SESSION_CLOSE.md`, closeout verification and
+  `CONTINUE.md` carry every unresolved row into the next session. No SD2 start.
 - Outstanding: all current-cycle material facts; Spear/Live Your Dream app-ID holds;
   full population/preservation controls and publication acceptance; standard-build
   environment limit and fresh delivery baseline; SD5 whole-inventory queue adoption,

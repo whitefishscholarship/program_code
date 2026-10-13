@@ -1,3 +1,20 @@
+# SD1 continuation session closed — local preservation complete
+
+Continuation checkpoint f0a98f3 is retained. Read
+`docs/evidence/sd1-continuation/SESSION_CLOSE.md` and its closeout verification;
+short kickoff: `docs/evidence/sd1-continuation/CONTINUE.md`.
+STUDENT_DATA_AND_MAINTENANCE_PLAN section 9 remains the sole progress pointer.
+All nine unresolved owner/trigger rows remain unchanged; SD2 awaits exact direct
+selection/source/read/complete-denominator authority. Original SD1 candidates,
+evidence and seasonal M1 009fa57/inventory remain preserved. New temporary IPC
+and Git-index restrictions were resolved with permitted retries; historical
+build/delivery and all other unknowns retain their existing triggers. No new
+source/Sheet reads, implementation or external effects. Stop before SD3.
+
+Original handoff preserved byte-for-byte below.
+
+---
+
 # After SD1 — retained evidence verified; SD2 awaits selection
 
 October 13, 2026. Local preservation/handoff checkpoint only. Read
