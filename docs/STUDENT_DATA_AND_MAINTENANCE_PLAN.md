@@ -394,6 +394,47 @@ not duplicate project progress trackers. Update this small block at every checkp
   migration or release information needed for this completed read-only checkpoint.
   Short prompt: `docs/evidence/sd2-jaycee/CONTINUE.md`. Old progress follows as
   immutable history; this dated continuation is the operative checkpoint.
+<!-- SD2-JAYCEE-SESSION-WRAP-START -->
+- Session wrap of retained807fe41: final candidate1aa0e4b and final manifest/review
+  remain exact; independent PASS C0/H0/M0/L0 with sole earlier medium materials
+  omission author-fixed and independently rechecked. Wrap evidence/short kickoff:
+  `docs/evidence/sd2-jaycee/{SESSION_WRAP.md,wrap-verification.json,NEXT_SESSION.md}`.
+  This is author-verified documentation closeout, not a rebound technical review.
+- Jaycee follow-up owner: Codex identity/source reconciliation. Trigger: a later
+  directly selected exact SD2 evidence scope for locators40/68 and existing ID
+  candidates. Preserve both holds; verify Montana sponsor/state/contact and old/new
+  route/version continuity. No unscope-selected parent/contact/old-link access or
+  name-only merging. Current selected document batch is complete, not replayable.
+- Every Jaycee field hold in proposals.json remains with Codex research/proposals:
+  opening/availability/academic-year/GPA scale-basis/amount-choice/live route;
+  university school-type/degree/focus scope; need judging and optional5-B/checklist
+  conflict; renewal/reapplication/nomination/extra eligibility unstated. Trigger:
+  later exact applicable official-source selection for these fields/identities.
+  Source silence remains unstated; no negative, unrestricted or accepted facts.
+- Codex owns the406 named rows without selected research and complete canonical
+  collision/relationship reconciliation. Trigger: later exact SD2 batch/reconciliation
+  scope; use the completed inventory for selection without a fresh full scan.
+  Pell/ND/Barnes, Spear/Live Your Dream and seven other pilot owners/triggers below
+  remain exact. Human fact reviewer: Kelsey names the person before acceptance;
+  no name is needed for next-session local proposal preparation.
+- New issues closed: source-text whitespace normalized while exact DOCs retained;
+  medium materials omission fixed/rechecked; temporary plan/test IPC resolved.
+  Standard-build EPERM remains with Codex validation/delivery before canonical
+  acceptance/release, alongside fresh authenticated main/target proof. Version/
+  atomicity/preservation/native backup/recovery/permissions remain at SD3 gates;
+  SD3/SD4 public-feed/student tasks and canonical/external effects remain unstarted.
+- OriginalM1 remains at009fa57 with all437 exact routes/holds/IDs, selected recipient
+  and existing owners/triggers. Codex monitor owner carries ETV/Fund the Fish,
+  Reviews/state adoption, allowances/zero-overage, sender/service/receipt, suppression,
+  measured pilot/full sweep, recovery/catch-up/schedule health into later selected
+  SD5/M1 work on a fresh delivered-UX baseline. No second queue or old-runner activation.
+- Next exact action: next-session Codex performs local-only hold triage and prepares
+  a bounded next SD2 read proposal; Kelsey selects further exact source/identity
+  scope. No new source/Sheet reads or facts accepted by this wrap/kickoff. Completed
+  reviewer has no pending task. No workbook writes, app/config changes, publication/
+  deployment, application/login/contact, monitoring activation/messages or SD3.
+  Recommended next-session effort: High.
+<!-- SD2-JAYCEE-SESSION-WRAP-END -->
 <!-- SD2-JAYCEE-CONTINUATION-END -->
 
 - Current slice: selected SD2 first-three local research checkpoint; full SD2 incomplete. SD1 remains complete within its local review/validation limits. No canonical acceptance or fact acceptance.
