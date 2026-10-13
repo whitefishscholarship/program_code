@@ -3,6 +3,14 @@
 October 13, 2026. User requests a comprehensive but lean plan for the background
 Sheet, student-only app, accurate publication and year-round review queue.
 
+Working spreadsheet (user-selected October 13):
+https://docs.google.com/spreadsheets/d/1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0/edit?usp=sharing
+ID: 1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0. Metadata title: Spreadsheet Clean Up 4.
+The predecessor 1ifwt24eEI2ITG7ME58bH190kUX4NtizMDBM0pGN2BY0 is retired:
+do not read/use it as a reference or fallback. Historical snapshots are audit-only.
+Verify new-copy tabs, row identities and controls before bounded content work;
+copy equivalence and tab IDs are unverified. Source selection is not a write grant.
+
 Read `docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md` for the one project plan,
 SD1–SD6 boundaries, vocabulary, source-reuse policy, model/context guidance,
 progress block and six copy-ready kickoff prompts. Proposed slices are not new

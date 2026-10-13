@@ -1,6 +1,6 @@
 # Student scholarship data and maintenance plan
 
-Version: 1. Proposed October 13, 2026, America/Denver.
+Version: 1.1. Updated October 13, 2026, America/Denver: replacement working spreadsheet selected.
 Status: local planning proposal; implementation unstarted. Validation and independent review are recorded in docs/evidence/student-data-plan/.
 Owner: Codex maintains the plan and implements selected work; Kelsey selects scope and external effects.
 Repository: whitefishscholarship/program_code.
@@ -12,8 +12,10 @@ the existing student app. Students use only the app and its output. Provide conc
 filters, understandable fit explanations, useful application priority, and a durable
 queue that detects new cycles and material scholarship changes throughout the year.
 
-This request authorizes this local plan, necessary documentation, validation and
-independent plan review. It does not execute the proposed stages, access or change
+The original planning request authorized this local plan, necessary documentation,
+validation and independent plan review. The October 13 replacement-sheet instruction
+selects the current workbook and permits identity metadata verification, now completed.
+These requests do not execute proposed stages, inspect workbook cells, change
 scholarship sources/workbooks, publish code, deploy, schedule checks or send alerts.
 The earlier final-three cleanup authority is completed and must not be replayed.
 
@@ -45,22 +47,34 @@ specifically selects a later change. No private-form submissions or provider con
   interviewRelevance,monitoring}.ts`, `web/src/components/{InterviewWizard,
   ScholarshipBrowser}.tsx`, `web/src/lib/export.ts`. Reuse schemas, stable public IDs,
   publication validation, relationship model and monitoring tests where suitable.
-- Research workbook: `1ifwt24eEI2ITG7ME58bH190kUX4NtizMDBM0pGN2BY0`,
-  `School Resource - Cleaned Up`, sheet405588227. Saved final-three packet:
+- **Current working workbook and project reference:** [1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0](https://docs.google.com/spreadsheets/d/1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0/edit?usp=sharing).
+  User selected this copy October 13. Drive metadata confirms title
+  `Spreadsheet Clean Up 4` and native Google Sheets file type. Contents, tab IDs,
+  row identities, permissions and equivalence to the predecessor are not verified.
+  All selected future workbook work and reference reads target this ID only.
+- **Retired predecessor:** `1ifwt24eEI2ITG7ME58bH190kUX4NtizMDBM0pGN2BY0`.
+  Do not open/read it, use it as a reference, fall back to it, or write to it for
+  this project. Older workbook IDs in historical plans/state/evidence remain
+  provenance only, not current reference or destination choices. This direct
+  source selection supersedes predecessor reference instructions for SD1–SD6;
+  it does not change runtime configuration or grant migration/write authority.
+- Saved final-three packet:
   `/Users/kelseystuart/.codex/visualizations/2026/10/13/01a13336-2097-7d61-a2e0-7b185f96b89c/whitefish-410-412/`.
-  `BATCH-REPORT.md`, `final-verified.json`, `verification.json`, identity manifest,
-  earlier-disposition reconciliation, original-order boundary and source index are
-  entry evidence. Its October12 final reports 411 reviewed dispositions, including
-  uncertainty/skips; this is not 411 verified current/open awards. Preserve originals
-  through 412; later historical names are blank. Do not substitute adjacent live rows.
-- App411 records and research411 dispositions are different denominators. Reconcile
-  award/sponsor/source identity, not counts, names alone or physical row numbers.
-  Current source/Master roles and actual embedded links must be refreshed only within
-  an expressly selected read scope. Organizer Master and legacy school list retain
-  their separate IDs/roles; neither is an automatically authorized write destination.
-- Research source protections: preserve A,D,E,F,G,H,N, prior P notes, Pell original 364/
-  live 18 yellow formatting and note, hidden P (589 px) and source structure. A background
-  workbook redesign is a separate migration, never permission to undo those controls.
+  Keep its reports, snapshots and dispositions as immutable historical audit
+  records only. They are not a current spreadsheet baseline or a substitute for
+  inspecting the selected copy. Independently captured official scholarship
+  sources may be reused after identity/cycle/field/freshness checks against the
+  new copy; predecessor cell values and notes do not establish current facts.
+- Before bounded content work, verify the selected copy's actual tab names/IDs,
+  dimensions, embedded links, stable award identities and preservation controls.
+  Do not transfer old row coordinates, counts or sheet ID 405588227 automatically.
+  App records, historical research dispositions and the new copy's records are
+  separate denominators. If the new copy is inaccessible or differs, record the
+  gap and stop dependent work; never substitute a retired workbook.
+- Historical preservation controls include A,D,E,F,G,H,N, prior P notes, Pell
+  original 364/live 18 yellow formatting and note, and hidden P (589 px). Verify
+  their actual counterparts in the new copy before applying any preservation
+  check. The predecessor remains untouched; historical evidence is never rewritten.
 - Existing seasonal plan at retained branch `codex/scholarship-season-monitor-plan`,
   checkpoint `009fa57e7def04ce2a9b49051f395c32b1393c14`, is a dependency, not completed
   activation. Read its `docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md` and M1 evidence on
@@ -159,10 +173,12 @@ Log private access limits without accounts, answers, submissions or outreach.
 
 ## 5. Accuracy and efficiency
 
-First reconcile every identity and material field against saved reviewed evidence.
+First establish the selected copy's verified bounded baseline, then reconcile every
+identity and material field against applicable official-source evidence. Historical
+spreadsheet snapshots are audit-only and cannot supply current values by fallback.
 For each award, also record whether existing interview questions cover the supported
 criteria; flag a gap only when it affects a useful student decision.
-Do not research all 411 again just because the schema changed. Reuse source captures
+Do not repeat all official-source research just because the schema changed. Reuse source captures
 only where award/cycle/field identity and freshness support the claim. Refresh expired,
 ambiguous, conflicting, incomplete, inaccessible or newly needed evidence. Older
 criteria never become verified future-cycle criteria automatically.
@@ -199,7 +215,7 @@ All stages below are unstarted; their prompts do not independently grant authori
 | SD6 — Reviewed release and operating proof | Separately authorized workbook/app/monitor effects, exact published version and sample records, successful scheduled pilot/catch-up, useful changed-only alerts, recovery runbook | Sol High; fresh Astra High review for release/data integrity |
 
 SD1 decisions: approve exact field definitions; reconcile existing IDs; choose the
-background workbook destination at migration time; select Reviews queue ownership;
+selected replacement workbook's schema/migration operations; select Reviews queue ownership;
 decide how any existing recorded narrowing rules become current accepted facts.
 Use cases: financial need required vs considered; renewal vs reapplication; GPA
 initial vs renewal; OR affiliation eligibility; named institution; shared application;
@@ -331,10 +347,13 @@ not duplicate project progress trackers. Update this small block at every checkp
 - Baseline: `1c8e33f23beb55c2ed2ebe78fe4e256722af8392`.
 - Last completed: local design proposal; final validation/review is recorded in
   `docs/evidence/student-data-plan/` once finished.
-- Next exact action: select SD1 local contract/pilot and reconcile canonical authority;
-  read saved baseline records, then freeze definitions and a representative dry-run.
+- Working workbook: `1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0`; predecessor references retired.
+- Next exact action: select SD1 contract/pilot and reconcile canonical authority;
+  verify the new copy's bounded baseline when content reads are selected, then freeze
+  definitions and a representative dry-run. Do not reuse predecessor coordinates.
 - SD1/SD2/SD3/SD4/SD5/SD6: all unstarted. No live migration/publication/activation.
-- Outstanding: workbook destination; ID/cycle collisions; new field evidence gaps;
+- Outstanding: new-copy tab/content baseline and preservation controls; ID/cycle
+  collisions; new field evidence gaps;
   Reviews queue adoption vs older monitor state; accepted-fact publication selection;
   monitor setup/allowances; later exact release authority. Resolve in the relevant
   slice, not by adding unrequested platforms.
@@ -353,6 +372,9 @@ progress block and the selected slice. Verify fresh Git/authority, input IDs/has
 and current checkpoint. Preserve earlier work. Execute only the first unfinished
 authorized checkpoint of that slice; otherwise complete local review/preparation
 and report the exact missing authority. Do not infer authority from a kickoff file.
+Use only working workbook `1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0`. Do not consult the retired predecessor
+or treat its saved Sheet snapshots as the current baseline; verify new-copy tabs
+and identities before selected content work. Never fall back to an older workbook.
 Use the model/effort suggested in section 8. Keep one checkpoint and one next action.
 
 ### SD1 — local contract and pilot
@@ -360,8 +382,11 @@ Use the model/effort suggested in section 8. Keep one checkpoint and one next ac
 ```text
 Use the common preamble in docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md.
 Prepare SD1 only: finalize controlled vocabulary, fact states, IDs/cycle mapping,
-review-queue ownership and app-publication fields. Use the saved cleanup/catalog
-evidence, preserving unknowns, to test 8–12 representative identities locally.
+review-queue ownership and app-publication fields. Use the selected new-copy
+baseline when content reads are authorized, applicable official-source evidence
+and published app comparison, preserving unknowns, for 8–12 local identities.
+If no new-copy baseline exists, finish schema preparation and hold dependent facts;
+do not substitute predecessor snapshots.
 Do not access/write live Sheets, research new sources, change product code or
 activate monitoring from this prompt. Resolve only decisions needed for SD1,
 record exact unresolved fields and the first SD2 batch, obtain the required fresh
