@@ -360,6 +360,10 @@ not duplicate project progress trackers. Update this small block at every checkp
 - Last completed: final SD1 vocabulary/fields/IDs, five-table workbook feed,
   monitor queue ownership and12-record local pilot. Contract:
   `docs/STUDENT_DATA_CONTRACT.md`; validation/review: `docs/evidence/sd1/`.
+  Independently reviewed candidate: `bbeb9a4fb75cd7c0781edfc017404037a1bf72ae`;
+  saved review closeout: `302105f644bc5aa3829a05569ebaa42d9717c1c0`.
+  Final review PASS, zero unresolved findings;35 local probes passed. Session-wrap
+  evidence: `docs/evidence/sd1/SESSION_CLOSE.md`. Never rebind the original reviews.
 - Working workbook: `1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0`; predecessor references retired.
 - Next exact action: wait for selected SD2/source/denominator authority, then process
   exactly award-2179b44d009d (Pell Promise), award-97dfaadd1d31 (Neurodiversity),
@@ -371,6 +375,29 @@ not duplicate project progress trackers. Update this small block at every checkp
   environment limit and fresh delivery baseline; SD5 whole-inventory queue adoption,
   monitor setup/allowances and later exact release authority. Owners/triggers and
   field-specific gaps are in SD1 evidence; resolve only in the selected later slice.
+
+### Open attention items — owners and triggers
+
+This is the continuation routing for the existing plan, not a second backlog.
+The next session must carry every unresolved row forward, preserving its evidence
+and trigger. Close a row only with verified evidence/disposition; waiting for a
+later selection is an explicit state, not permission to drop or execute it.
+
+| Attention item / evidence | Owner | Trigger and next action |
+| --- | --- | --- |
+| First SD2 batch: Pell Promise award-2179b44d009d; Neurodiversity award-97dfaadd1d31; Barnes award-ce44143820a7. Pell entry/renewal GPA and loan/gift scope; ND age/date/need conflict; Barnes current named-fund offering/funding/date. `sd1/PILOT.md`, `pilot.json` | Codex research/proposals; named human fact reviewer must be pinned before acceptance | Direct SD2 selection with exact public-source reads and separately selected denominator. Process these three IDs in order; reidentify in the new copy; record every unknown or hold. No current facts accepted in SD1. |
+| Two app-ID holds: Spear award-8bce77306c27 changed document; Live Your Dream award-52b096183d9d lacks published source-locator binding and current cycle. `sd1/PILOT.md` | Codex identity reconciliation | A later expressly selected SD2 batch containing each held ID. Verify award/document/version/aliases, keep holds until resolved; no substitution, merging or name-only acceptance. These IDs are not added to the first batch. |
+| Other seven sampled awards: Ted Lund award-577dacb8c225; Astoria award-62a1f1662db9; Clerk & Recorder award-26c4b3c65985; Whitefish Soroptimist award-5dd4c3d3988a; NGPA management award-a2f7b9b6cbec; WAI LIFT award-cd0fb7cd0c64; AOPA You Can Fly award-d8ff6ef257b3. Each current offering/window/route and specific rule gap remains in `sd1/PILOT.md` | Codex source reconciliation | Their later selected SD2 batches. Preserve counselor/document, returning/nomination, destination/residency, need, membership/supplement and historical-child terms as separate issues. Complete every row's explicit outcome; do not infer a future cycle from a parent or past cycle. |
+| New-copy whole-population denominator and all unsampled identities; full canonical/public-ID collision and relationship reconciliation. `sd1/README.md`, contract | Codex inventory/reconciliation | Exact bounded SD2 inventory-read authority. Establish the complete selected denominator first; pilot12, app411 and monitor437 are distinct. No applicant/other-tab scans or old-cell fallback. |
+| Workbook preservation/concurrency/version, hidden-P/format counterparts, private native backup and recovery, permissions; five-table adapter/public allowlist/field extensions. Contract; SD3 section6 | Codex migration/publication implementer | Selected SD3 local design first; before any live migration require exact destination/operations, separately authorized backup/readback/recovery and all canonical gates. Missing version or edit access never becomes authority. |
+| Current accepted-fact publication versus recorded shortlist; unknown-aware filters, fit/priority and actual student/CSV/browser tasks. Contract; SD4 section6 | Codex app implementer and independent reviewer | Selected SD3/SD4 checkpoint and canonical prospective contract. Preserve current journey/privacy/manual sorting; do not turn this local pilot into runtime truth. Verify phone/Chromebook/keyboard/export in SD4, not by claiming SD1 browser proof. |
+| Standard build process/port EPERM; fresh authenticated delivery baseline failed HTTP404. `sd1/VALIDATION.md`, review limits | Codex validation/delivery owner | Before any canonical implementation acceptance or authorized release, rerun the exact required build in an environment that supports it and verify current owner-authorized main/target. Keep failures visible; Webpack does not waive the standard gate. No account/configuration change or release is authorized here. |
+| Existing seasonal M1 setup and all original437-record routes/holds/follow-ups, including ETV/Fund the Fish; Reviews/state-branch adoption, allowance/zero-overage, sender/service/receipt, deployment suppression, measured pilot/full sweep, recovery/catch-up/schedule health. Retained monitor009fa57 and original M1 review/inventory; contract | Codex monitor owner; Kelsey selects reserved configuration/activation effects | Carry the saved M1 checkpoint on a fresh baseline preserving delivered UX when monitor work is selected; reconcile Reviews ownership at SD5 before implementation/adoption. Preserve original IDs and triggers; do not replay spent work, add a second queue or activate P8. Setup, source pilot, state writes, synthetic email receipt and real scheduled proof need their separately selected effects. Recipient remains the already selected destination. |
+| Canonical selection/acceptance and exact external effects for later SD slices. AGENTS, canonical plan, BUILD_STATE | Codex governance/delivery owner; Kelsey selects scope/effects | Before later implementation, use the existing prospective selection/amendment and independent review/attestation machinery. Before push/PR/merge or activation, verify direct stage-specific authority for every deployment/state/notification effect. This local plan/closeout grants none. |
+
+Resolved here: SD1-M1 local filter/fit/ordering coverage was author-remediated and
+independently rechecked; review.json records its sole count-matched disposition.
+No unresolved SD1 reviewer finding is transferred as if it were completed work.
 
 At close record commit/evidence paths; completed IDs or code checkpoint; exact next
 ID/task; unresolved blockers and owner/trigger; commands/results; actual model/effort;

@@ -1,5 +1,15 @@
 # SD1 — local contract and representative pilot checkpoint
 
+Session wrap: SD1 local PASS; immutable reviewed candidate bbeb9a4 and review
+closeout302105f are preserved. STUDENT_DATA_AND_MAINTENANCE_PLAN section9 now
+routes every open attention item to an owner and explicit future trigger, including
+all12 pilot gaps, both identity holds, unsampled-denominator/preservation work,
+build/remote limits and the retained monitor's original M1 routes/setup gates.
+The next session must carry unresolved items forward and act only on selected
+scope. Closeout verification: docs/evidence/sd1/SESSION_CLOSE.md; short kickoff:
+docs/evidence/sd1/CONTINUE.md. This wrap changes handoff documentation only and
+does not rebind reviews, accept current facts or start SD2.
+
 October13,2026. Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9 for the sole current
 project progress pointer, STUDENT_DATA_CONTRACT for the final local definitions,
 and docs/evidence/sd1/ for exact authority, twelve fresh-copy records, saved-source
