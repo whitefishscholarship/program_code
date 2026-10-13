@@ -109,11 +109,17 @@ for index,(row,kind,gpa,levels,slots) in enumerate([(40,'vocational',3.25,[1000,
     'photo':'optional but encouraged',
     'schoolCommunityEmploymentStatements':'separate attached responses for sections7,8,9',
     'financialStatement':'first year or total vocational program cost' if kind=='vocational' else 'first-year costs',
+    'completeApplicationForm':{'required':True,'blocks':['applicant information','high school information','destination school and field/major','parent/guardian information','financial statement','applicant signature']},
+    'workingHomeEmailAddress':{'required':True,'scope':'active working HOME email listed in applicant information and signature section; blank labels only, no applicant values retained'},
+    'applicantSignature':{'required':True,'dateSignedFieldPresent':True,'scope':'complete section6; applicant certifies accuracy/permits verification; no signature or answer retained'},
     'typedPackage':'black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages'},'verified',
     ['Complete a statement of 300 to 500 words, indicating your chosen field of study.',
      'REFERENCE LETTERS (maximum of three (3) letters)',
      'At least one reference letter must be from an educator.',
-     'A copy of your current high school transcript MUST be included.'])
+     'A copy of your current high school transcript MUST be included.',
+     'Each student must have an active, working HOME EMAIL ADDRESS listed.',
+     '6. SIGNATURE (You must complete this section)',
+     'Entire application form is complete.'])
  field('testScores',{'required':False,'includeIfAvailable':True,'selectionPointsMayBeAwarded':True if kind=='university' else None},'verified',
     ['NOTE: The ACT/SAT scores are not required.' if kind=='vocational' else 'NOTE: The ACT/SAT scores are not mandatory, but judging points may awarded for the test scores.'])
  field('focus',{'description':'vocational/technical/trade paths; examples non-exhaustive' if kind=='vocational' else 'chosen field explained in statement; no major restriction stated',

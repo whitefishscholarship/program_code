@@ -360,7 +360,7 @@ not duplicate project progress trackers. Update this small block at every checkp
   only, locators40then68 reidentified before details; both outcomes/identity holds
   and62 field proposals remain held. No canonical/fact acceptance; full SD2 incomplete.
 - Evidence/handoff: `docs/evidence/sd2-jaycee/{README.md,VALIDATION.json,proposals.json,
-  candidate-manifest.json,review.json,CONTINUE.md}`. Independent technical outcome
+  final-candidate-manifest.json,review.json,CONTINUE.md}`. Independent technical outcome
   is valid only against its frozen candidate binding. Two exact public documents
   completely inspected, including13 local render pages and all tables/sections.
   Native30-cell detail/report metadata equality observed; version/atomicity unknown.

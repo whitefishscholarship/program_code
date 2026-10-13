@@ -4,7 +4,7 @@ Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS controlling read order, then
 read complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9 and
 docs/evidence/sd2-jaycee/{AUTHORITY.md,README.md,VALIDATION.json,proposals.json,
-candidate-manifest.json,review.json}. Verify the review matches the frozen tree,
+final-candidate-manifest.json,review.json}. Verify the review matches the frozen tree,
 current local tip and retained f742890/a4e9c7c; never rebind historical reviews.
 
 Only locators40then68 and their exact documents were selected. Both identities

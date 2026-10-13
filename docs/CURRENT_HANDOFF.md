@@ -2,7 +2,7 @@
 
 October13,2026. Read complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the
 sole progress pointer, then docs/evidence/sd2-jaycee/{AUTHORITY,README,VALIDATION,
-proposals,candidate-manifest,review,CONTINUE}. Entry f742890 and retained a4e9c7c,
+proposals,final-candidate-manifest,review,CONTINUE}. Entry f742890 and retained a4e9c7c,
 cf29dde and all original review/evidence bindings remain immutable.
 
 Only locators40then68 and their two exact public documents researched. Both

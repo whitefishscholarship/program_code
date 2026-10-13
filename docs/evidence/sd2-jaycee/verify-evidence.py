@@ -81,6 +81,9 @@ for r in proposals['records']:
  assert r['fields']['montanaParticipation']['value'] is None
  assert r['fields']['needRequired']['value'] is None and r['fields']['needSelection']['value'] is None
  assert r['fields']['financialStatementAmbiguity']['state']=='conflict'
+ assert r['fields']['materials']['value']['workingHomeEmailAddress']['required'] is True
+ assert r['fields']['materials']['value']['applicantSignature']['required'] is True
+ assert r['fields']['materials']['value']['completeApplicationForm']['required'] is True
 for kind,count in [('vocational',7),('university',6)]:
  h=read(kind+'-http.json');x=read(kind+'-extraction.json')
  assert h['redirectsObserved']==0 and h['url']==h['finalUrl'] and h['httpStatus']==200

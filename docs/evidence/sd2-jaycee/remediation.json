@@ -1,0 +1,28 @@
+{
+  "reviewPath": "docs/evidence/sd2-jaycee/review-round1.json",
+  "reviewSha256": "9029b71062e50126c657c89bd76f945eae0a7bc0c5514d88cc8f898822fcb3cc",
+  "reviewedCandidate": "8e955801461ebd97b8eb3ef3955621eee9d93120",
+  "reviewedManifestPath": "docs/evidence/sd2-jaycee/candidate-manifest.json",
+  "reviewedManifestSha256": "3edbf7a07a0838e2921cff35633c9441f5bf7da053d8e421333cfa0c02036dd3",
+  "recordedAt": "2026-10-13T22:14:58.699654+00:00",
+  "findingsCount": 1,
+  "dispositions": [
+    {
+      "findingId": "SD2-JAYCEE-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Both complete documents explicitly require working home email and signed section6; those blank public requirement categories were omitted from materials. Added both held requirements plus complete-form blocks and direct excerpts/local render pages. No applicant values retained, source calls repeated or source bytes changed.",
+      "owner": "Codex implementation author",
+      "target": "Final frozen local candidate and independent recheck before checkpoint PASS",
+      "paths": [
+        "build-proposals.py",
+        "proposals.json",
+        "verify-evidence.py",
+        "README.md"
+      ]
+    }
+  ],
+  "acceptedFacts": 0,
+  "identityHoldsRetained": 2,
+  "newSourceOrWorkbookReads": 0
+}

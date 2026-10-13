@@ -643,11 +643,31 @@
             "photo": "optional but encouraged",
             "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
             "financialStatement": "first year or total vocational program cost",
+            "completeApplicationForm": {
+              "required": true,
+              "blocks": [
+                "applicant information",
+                "high school information",
+                "destination school and field/major",
+                "parent/guardian information",
+                "financial statement",
+                "applicant signature"
+              ]
+            },
+            "workingHomeEmailAddress": {
+              "required": true,
+              "scope": "active working HOME email listed in applicant information and signature section; blank labels only, no applicant values retained"
+            },
+            "applicantSignature": {
+              "required": true,
+              "dateSignedFieldPresent": true,
+              "scope": "complete section6; applicant certifies accuracy/permits verification; no signature or answer retained"
+            },
             "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
           },
           "state": "verified",
           "evidenceIds": [
-            "evd_7b52c369c56686fe27748caedd1b5f28a46ee435feb2ff68c15d2622ab2d3d65"
+            "evd_5f0967492dfb5a6af6d30395191354267b281f2950e441c3791e343188f6ba76"
           ],
           "scope": {
             "subject": "selected-input-locator-40",
@@ -1391,11 +1411,31 @@
             "photo": "optional but encouraged",
             "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
             "financialStatement": "first-year costs",
+            "completeApplicationForm": {
+              "required": true,
+              "blocks": [
+                "applicant information",
+                "high school information",
+                "destination school and field/major",
+                "parent/guardian information",
+                "financial statement",
+                "applicant signature"
+              ]
+            },
+            "workingHomeEmailAddress": {
+              "required": true,
+              "scope": "active working HOME email listed in applicant information and signature section; blank labels only, no applicant values retained"
+            },
+            "applicantSignature": {
+              "required": true,
+              "dateSignedFieldPresent": true,
+              "scope": "complete section6; applicant certifies accuracy/permits verification; no signature or answer retained"
+            },
             "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
           },
           "state": "verified",
           "evidenceIds": [
-            "evd_1d046caddca091070e5bd03887e912d64dbf8e1cd66eb5886327da3a8ddb298a"
+            "evd_a9de7b947f7ebd957cca5930e8b338f34bf73ef607e2e685d746f353cec404e0"
           ],
           "scope": {
             "subject": "selected-input-locator-68",
@@ -2562,6 +2602,26 @@
         "photo": "optional but encouraged",
         "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
         "financialStatement": "first year or total vocational program cost",
+        "completeApplicationForm": {
+          "required": true,
+          "blocks": [
+            "applicant information",
+            "high school information",
+            "destination school and field/major",
+            "parent/guardian information",
+            "financial statement",
+            "applicant signature"
+          ]
+        },
+        "workingHomeEmailAddress": {
+          "required": true,
+          "scope": "active working HOME email listed in applicant information and signature section; blank labels only, no applicant values retained"
+        },
+        "applicantSignature": {
+          "required": true,
+          "dateSignedFieldPresent": true,
+          "scope": "complete section6; applicant certifies accuracy/permits verification; no signature or answer retained"
+        },
         "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
       },
       "state": "verified",
@@ -2583,7 +2643,10 @@
         "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
         "REFERENCE LETTERS (maximum of three (3) letters)",
         "At least one reference letter must be from an educator.",
-        "A copy of your current high school transcript MUST be included."
+        "A copy of your current high school transcript MUST be included.",
+        "Each student must have an active, working HOME EMAIL ADDRESS listed.",
+        "6. SIGNATURE (You must complete this section)",
+        "Entire application form is complete."
       ],
       "locators": [
         {
@@ -2609,13 +2672,31 @@
           "localRenderPages": [
             7
           ]
+        },
+        {
+          "textutilExactExcerpt": "Each student must have an active, working HOME EMAIL ADDRESS listed.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "6. SIGNATURE (You must complete this section)",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Entire application form is complete.",
+          "localRenderPages": [
+            3
+          ]
         }
       ],
       "completeSourceInspected": true,
       "absenceOrLimit": null,
       "acceptance": "held",
       "reviewer": null,
-      "evidenceId": "evd_7b52c369c56686fe27748caedd1b5f28a46ee435feb2ff68c15d2622ab2d3d65"
+      "evidenceId": "evd_5f0967492dfb5a6af6d30395191354267b281f2950e441c3791e343188f6ba76"
     },
     {
       "inputRowLocator": 40,
@@ -3743,6 +3824,26 @@
         "photo": "optional but encouraged",
         "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
         "financialStatement": "first-year costs",
+        "completeApplicationForm": {
+          "required": true,
+          "blocks": [
+            "applicant information",
+            "high school information",
+            "destination school and field/major",
+            "parent/guardian information",
+            "financial statement",
+            "applicant signature"
+          ]
+        },
+        "workingHomeEmailAddress": {
+          "required": true,
+          "scope": "active working HOME email listed in applicant information and signature section; blank labels only, no applicant values retained"
+        },
+        "applicantSignature": {
+          "required": true,
+          "dateSignedFieldPresent": true,
+          "scope": "complete section6; applicant certifies accuracy/permits verification; no signature or answer retained"
+        },
         "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
       },
       "state": "verified",
@@ -3764,7 +3865,10 @@
         "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
         "REFERENCE LETTERS (maximum of three (3) letters)",
         "At least one reference letter must be from an educator.",
-        "A copy of your current high school transcript MUST be included."
+        "A copy of your current high school transcript MUST be included.",
+        "Each student must have an active, working HOME EMAIL ADDRESS listed.",
+        "6. SIGNATURE (You must complete this section)",
+        "Entire application form is complete."
       ],
       "locators": [
         {
@@ -3790,13 +3894,31 @@
           "localRenderPages": [
             6
           ]
+        },
+        {
+          "textutilExactExcerpt": "Each student must have an active, working HOME EMAIL ADDRESS listed.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "6. SIGNATURE (You must complete this section)",
+          "localRenderPages": [
+            5
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Entire application form is complete.",
+          "localRenderPages": [
+            3
+          ]
         }
       ],
       "completeSourceInspected": true,
       "absenceOrLimit": null,
       "acceptance": "held",
       "reviewer": null,
-      "evidenceId": "evd_1d046caddca091070e5bd03887e912d64dbf8e1cd66eb5886327da3a8ddb298a"
+      "evidenceId": "evd_a9de7b947f7ebd957cca5930e8b338f34bf73ef607e2e685d746f353cec404e0"
     },
     {
       "inputRowLocator": 68,

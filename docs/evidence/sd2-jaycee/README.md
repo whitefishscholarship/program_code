@@ -3,7 +3,7 @@
 October 13, 2026, America/Denver. Two selected input records researched in order,
 locators40 then68. This is local proposed/held research only. Full SD2 is incomplete;
 SD3–SD6 remain unstarted. No fact or canonical stage acceptance. The independent
-technical outcome is authoritative only in review.json bound to candidate-manifest.json.
+technical outcome is authoritative only in review.json bound to final-candidate-manifest.json.
 
 Entry checkpoint f742890 is a clean direct child of retained closeout
 a4e9c7cb0232ded152fcc57166c0a73bfa4c33d0. Original cf29dde candidate, its50-file
@@ -68,7 +68,7 @@ separately. Last-Modified is not fact verification.
 | Funding use | Tuition in first year of full-time study immediately after HS; school payment | Same first-year tuition/payment scope |
 | Destination | Accredited U.S. vocational/technical/trade program; qualifying community college; certificate/diploma/license/associate path | Accredited U.S. college/university; no explicit degree/two-year/four-year classification |
 | Deadline/method | Mailed and postmarked January12,2027; state scholarship contact; no electronic submission | Same date/method |
-| Materials | 300–500-word statement plus word count; maximum3 references with at least1 educator; current HS transcript; acceptance letter if accepted; separate school/community/employment responses; financial statement | Same core materials; cost statement is first-year college scope |
+| Materials | Complete form, active working home email and signed applicant certification;300–500-word statement plus word count; maximum3 references with at least1 educator; current HS transcript; acceptance letter if accepted; separate school/community/employment responses; financial statement | Same core materials; cost statement is first-year college scope |
 | ACT/SAT and photo | Scores optional; include if taken; photo optional/encouraged | Scores optional; judging points may be awarded; photo optional/encouraged |
 
 62 complete field-evidence envelopes preserve scope, observation, source/version
@@ -155,5 +155,5 @@ must name the person who will check and approve them. No reviewer name, billing,
 email, application account, migration or release information is needed to complete
 this read-only checkpoint. Keep all facts held and stop before SD3.
 
-Short resume prompt: CONTINUE.md. Immutable review bindings: candidate-manifest.json
+Short resume prompt: CONTINUE.md. Immutable review bindings: final-candidate-manifest.json
 and review.json. Current local Git tip is the durable saved checkpoint.
