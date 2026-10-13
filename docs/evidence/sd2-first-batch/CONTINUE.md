@@ -1,3 +1,19 @@
+# Fresh-context session-wrap kickoff
+
+Read SESSION_WRAP.md, wrap-verification.json and the entire section9 progress/
+owner/trigger block first. Verify retained reviewed candidate cf29dde and closeout
+6792a64 without changing the primary checkout. Follow controlling read order and
+this directory's original authority/evidence/review. Codex owns next-session local
+triage and a bounded next-read proposal; new source/identity access needs direct
+selection, and fact acceptance needs a named human reviewer. Carry all nine rows,
+SD2 supplements and M1's437-record routes. Do not replay completed work. Stop
+before SD3. If information is needed from Kelsey, explain it in plain English.
+Recommended next-session effort: High.
+
+Earlier continuation preserved byte-for-byte below.
+
+---
+
 # Continue after first SD2 local research checkpoint
 
 Open retained /private/tmp/program_code-student-data-maintenance-plan on

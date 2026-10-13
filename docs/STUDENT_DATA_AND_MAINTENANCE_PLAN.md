@@ -357,7 +357,7 @@ not duplicate project progress trackers. Update this small block at every checkp
 - Branch/worktree: `codex/plan-student-data-maintenance`,
   `/private/tmp/program_code-student-data-maintenance-plan`.
 - Baseline: `1c8e33f23beb55c2ed2ebe78fe4e256722af8392`.
-- Last completed: final SD1 vocabulary/fields/IDs, five-table workbook feed,
+- Retained SD1 completion: final vocabulary/fields/IDs, five-table workbook feed,
   monitor queue ownership and12-record local pilot. Contract:
   `docs/STUDENT_DATA_CONTRACT.md`; validation/review: `docs/evidence/sd1/`.
   Independently reviewed candidate: `bbeb9a4fb75cd7c0781edfc017404037a1bf72ae`;
@@ -369,8 +369,9 @@ not duplicate project progress trackers. Update this small block at every checkp
   Pell award-2179b44d009d, Neurodiversity award-97dfaadd1d31 and Barnes
   award-ce44143820a7 researched in order after fresh name/source-route identification.
   Rows18/255/400 are locators only. Local evidence/proposals: `docs/evidence/sd2-first-batch/`.
-  Next exact action: select additional exact
-  evidence or another SD2 batch; named human fact reviewer required before acceptance.
+  Next exact action: Codex in the next session checks these proposal holds and prepares
+  a bounded next-read proposal; Kelsey selects any additional exact source/identity scope
+  and names the human fact reviewer before acceptance. Preparation is not new access.
   Short prompt: `docs/evidence/sd2-first-batch/CONTINUE.md`.
 - SD1 local planning/pilot complete; first SD2 research batch independently reviewed locally, full SD2 incomplete; SD3/SD4/SD5/SD6 unstarted. No migration/publication/activation.
 - Continuation verification: `docs/evidence/sd1-continuation/README.md` and its
@@ -402,6 +403,27 @@ not duplicate project progress trackers. Update this small block at every checkp
   complete;42field-evidence links verified. Full SD2 and human fact acceptance remain open.
 - All nine owner/trigger rows below remain open and byte-identical. Their selected
   read trigger has evidence for this batch only; no acceptance or later effect follows.
+- Latest completed local checkpoint: review closeout `6792a64`; final session wrap:
+  `docs/evidence/sd2-first-batch/SESSION_WRAP.md` and `wrap-verification.json`.
+  Original candidate `cf29dde`, manifest, review, captures and earlier closeouts remain
+  immutable. No successful SD1/source batch replay, fact acceptance or SD3 start.
+- First-batch row follow-up: Codex owns Pell entry-GPA scale/basis, extra/athletic
+  criteria and application-window gaps; ND coherent cycle/current funding/exact dates
+  and historical FAQ age conflict; Barnes current named-fund offering/funding/terms.
+  Trigger: a later directly selected exact official-source scope for these same IDs.
+  Kelsey selects the named human fact reviewer before any acceptance checkpoint;
+  independent technical PASS does not resolve these fact holds or authorize contact.
+- Inventory-row follow-up: Codex owns duplicate-name rows40/68 (Montana Jaycee
+  Foundation Scholarship) and all408 unselected named rows. Trigger: an expressly
+  selected SD2 identity batch with bounded sponsor/route/detail reads. Keep the two
+  duplicate-name records separate; no name-only merge or invented stable award IDs.
+  The completed F/G/O inventory can inform selection, not substitute for field reads.
+- New session issues: temporary plan-check IPC and shared Git-index restrictions were
+  resolved with permitted retries. Cached ND opening-year mismatch was separated from
+  fresh live evidence; source-cycle/age and current Barnes holds remain routed above.
+  Current workbook version/atomicity, complete identity reconciliation, preservation/
+  backup/recovery, standard build/fresh delivery main and actual monitor operation
+  remain unverified at their existing owner/trigger gates. No new product fix is due.
 
 ### Open attention items — owners and triggers
 

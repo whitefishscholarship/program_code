@@ -1,3 +1,23 @@
+# Session wrapped — selected SD2 checkpoint complete; all follow-ups routed
+
+Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9 first: it is the sole progress
+pointer and retains all nine original owner/trigger rows. Its SD2 supplements now
+route the first-three remaining fact holds, duplicate-name rows40/68,408unselected
+names and human-reviewer selection explicitly. Codex owns next-session local
+triage and the bounded next-read proposal; Kelsey selects source/identity scope
+and the human fact reviewer before acceptance. No automatic research expansion.
+
+Verified reviewed candidate cf29dde and local closeout6792a64; manifest/review
+and all original evidence remain exact. Final wrap evidence:
+docs/evidence/sd2-first-batch/{SESSION_WRAP.md,wrap-verification.json}.
+Short kickoff: docs/evidence/sd2-first-batch/CONTINUE.md.
+Full SD2 incomplete; no SD3, acceptance, writes, app changes, release, activation
+or messages. Historical build/delivery and M1 setup gates remain open.
+
+Original handoff preserved byte-for-byte below.
+
+---
+
 # SD2 first selected research checkpoint — independently reviewed local PASS
 
 October13,2026. Follow STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole
