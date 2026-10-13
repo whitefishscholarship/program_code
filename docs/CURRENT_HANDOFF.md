@@ -1,3 +1,21 @@
+# SD2 first selected research checkpoint — local review pending
+
+October13,2026. Follow STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole
+progress pointer, and docs/evidence/sd2-first-batch/{AUTHORITY,README,VALIDATION,CONTINUE}.
+The user approved exact new-copy metadata/header/F-G-O inventory, three reidentified
+A:O records and six exact public sources. All794selected rows accounted:411named/
+383empty in projection; duplicate-name rows40/68held;408unselected names pending.
+Pell, Neurodiversity and Barnes processed in order; facts remain proposed/held.
+Review only this bounded local checkpoint; full SD2 is incomplete. SD3–SD6 unstarted.
+All nine section9 owner/trigger rows and prior SD1/M1 evidence remain unchanged.
+No workbook writes, app/configuration changes, release, activation or messages.
+Next exact action: independent packet review, then expressly select additional
+source evidence or another SD2 batch. Name a human reviewer before fact acceptance.
+
+Original handoff preserved byte-for-byte below.
+
+---
+
 # SD1 continuation session closed — local preservation complete
 
 Continuation checkpoint f0a98f3 is retained. Read

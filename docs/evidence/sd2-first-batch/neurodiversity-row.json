@@ -1,0 +1,132 @@
+{
+  "startedAt": "2026-10-13T16:23:50.177Z",
+  "endedAt": "2026-10-13T16:23:50.851Z",
+  "args": {
+    "spreadsheet_id": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+    "ranges": [
+      "'School Resource - Cleaned Up'!A255:O255"
+    ],
+    "cell_fields": "formattedValue,userEnteredValue,hyperlink,textFormatRuns"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+      "properties": {
+        "title": "Spreadsheet Clean Up 4",
+        "locale": "en_US",
+        "timeZone": "America/Denver"
+      },
+      "sheets": [
+        {
+          "properties": {
+            "sheetId": 405588227,
+            "title": "School Resource - Cleaned Up",
+            "index": 3,
+            "sheetType": "GRID",
+            "gridProperties": {
+              "rowCount": 795,
+              "columnCount": 25,
+              "frozenRowCount": 1,
+              "hideGridlines": true
+            }
+          },
+          "data": [
+            {
+              "startRow": 254,
+              "rowData": [
+                {
+                  "values": [
+                    {
+                      "formattedValue": "2027-01-01",
+                      "userEnteredValue": {
+                        "stringValue": "2027-01-01"
+                      }
+                    },
+                    {
+                      "formattedValue": "National",
+                      "userEnteredValue": {
+                        "stringValue": "National"
+                      }
+                    },
+                    {},
+                    {
+                      "formattedValue": "National",
+                      "userEnteredValue": {
+                        "stringValue": "National"
+                      }
+                    },
+                    {
+                      "formattedValue": "$1,000 or $2,500 depending on enrollment status and school type",
+                      "userEnteredValue": {
+                        "stringValue": "$1,000 or $2,500 depending on enrollment status and school type"
+                      }
+                    },
+                    {
+                      "formattedValue": "https://thendalliance.org/scholarship/",
+                      "userEnteredValue": {
+                        "stringValue": "https://thendalliance.org/scholarship/"
+                      },
+                      "hyperlink": "https://thendalliance.org/scholarship/"
+                    },
+                    {
+                      "formattedValue": "The Neurodiversity Scholarship",
+                      "userEnteredValue": {
+                        "stringValue": "The Neurodiversity Scholarship"
+                      }
+                    },
+                    {
+                      "formattedValue": "Dyslexia; ADHD; Autism Spectrum; Other Learning Disability",
+                      "userEnteredValue": {
+                        "stringValue": "Dyslexia; ADHD; Autism Spectrum; Other Learning Disability"
+                      }
+                    },
+                    {},
+                    {
+                      "formattedValue": "Any",
+                      "userEnteredValue": {
+                        "stringValue": "Any"
+                      }
+                    },
+                    {},
+                    {
+                      "formattedValue": "Neurodiversity/Learning Differences",
+                      "userEnteredValue": {
+                        "stringValue": "Neurodiversity/Learning Differences"
+                      }
+                    },
+                    {
+                      "formattedValue": "Yes",
+                      "userEnteredValue": {
+                        "stringValue": "Yes"
+                      }
+                    },
+                    {
+                      "formattedValue": "Neurodivergent students age 16-26, including Dyslexia, ADHD, Processing Disorders and Autism, planning an Associate, Bachelor or Certificate program at a not-for-profit US college.",
+                      "userEnteredValue": {
+                        "stringValue": "Neurodivergent students age 16-26, including Dyslexia, ADHD, Processing Disorders and Autism, planning an Associate, Bachelor or Certificate program at a not-for-profit US college."
+                      }
+                    },
+                    {
+                      "formattedValue": "Neurodiversity Scholarship",
+                      "userEnteredValue": {
+                        "stringValue": "Neurodiversity Scholarship"
+                      },
+                      "hyperlink": "https://thendalliance.org/scholarships/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}

@@ -1,7 +1,7 @@
 # Student scholarship data and maintenance plan
 
-Version: 1.2. Updated October 13, 2026, America/Denver: selected SD1 local contract and pilot.
-Status: SD1 local planning checkpoint; canonical implementation unstarted. SD1 validation/review: docs/evidence/sd1/. Earlier proposal/replacement reviews remain in docs/evidence/student-data-plan/.
+Version: 1.3. Updated October 13, 2026, America/Denver: selected first SD2 local research checkpoint.
+Status: SD1 retained; first SD2 local research checkpoint prepared for independent review; full SD2 incomplete; canonical implementation unstarted. SD1 validation/review: docs/evidence/sd1/. Earlier proposal/replacement reviews remain in docs/evidence/student-data-plan/.
 Owner: Codex maintains the plan and implements selected work; Kelsey selects scope and external effects.
 Repository: whitefishscholarship/program_code.
 
@@ -214,7 +214,7 @@ preservation failure; keep factual uncertainty visible and continue unaffected w
 
 Only one selected SD slice per session; large slices use bounded checkpoints rather
 than fabricated completion. Dates/session counts are estimates, not deadlines.
-SD1's selected local design/pilot is recorded in section9; SD2–SD6 remain unstarted.
+SD1's local design/pilot and selected first SD2 research checkpoint are recorded in section9; SD2 is incomplete and SD3–SD6 remain unstarted.
 The prompts do not independently grant authority or canonical stage acceptance.
 
 | Slice | Deliverable and exit check | Suggested model / effort |
@@ -353,7 +353,7 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
-- Current slice: SD1 local design/pilot complete, subject to its recorded independent review and validation limits; no canonical stage acceptance. Next proposed slice: SD2.
+- Current slice: selected SD2 first-three local research checkpoint; full SD2 incomplete. SD1 remains complete within its local review/validation limits. No canonical acceptance or fact acceptance.
 - Branch/worktree: `codex/plan-student-data-maintenance`,
   `/private/tmp/program_code-student-data-maintenance-plan`.
 - Baseline: `1c8e33f23beb55c2ed2ebe78fe4e256722af8392`.
@@ -365,24 +365,39 @@ not duplicate project progress trackers. Update this small block at every checkp
   Final review PASS, zero unresolved findings;35 local probes passed. Session-wrap
   evidence: `docs/evidence/sd1/SESSION_CLOSE.md`. Never rebind the original reviews.
 - Working workbook: `1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0`; predecessor references retired.
-- Next exact action: wait for selected SD2/source/denominator authority, then process
-  exactly award-2179b44d009d (Pell Promise), award-97dfaadd1d31 (Neurodiversity),
-  award-ce44143820a7 (David and Lisa Barnes), in that order. Reidentify fresh;
-  rows18/255/400 are hints. Short prompt: `docs/evidence/sd1/CONTINUE.md`.
-- SD1 local planning/pilot complete; SD2/SD3/SD4/SD5/SD6 unstarted. No live migration/publication/activation.
+- Selected SD2 action: direct approved scope in `docs/evidence/sd2-first-batch/AUTHORITY.md`;
+  Pell award-2179b44d009d, Neurodiversity award-97dfaadd1d31 and Barnes
+  award-ce44143820a7 researched in order after fresh name/source-route identification.
+  Rows18/255/400 are locators only. Local evidence/proposals: `docs/evidence/sd2-first-batch/`.
+  Next exact action: independent local packet review, then select additional exact
+  evidence or another SD2 batch; named human fact reviewer required before acceptance.
+  Short prompt: `docs/evidence/sd2-first-batch/CONTINUE.md`.
+- SD1 local planning/pilot complete; first SD2 research batch prepared, full SD2 incomplete; SD3/SD4/SD5/SD6 unstarted. No migration/publication/activation.
 - Continuation verification: `docs/evidence/sd1-continuation/README.md` and its
   receipts reverify retained SD1 candidate/review and seasonal M1 objects locally.
   All nine owner/trigger rows below are preserved unchanged. SD2 selection and
-  exact source/read/complete-denominator scope remain pending; no new access or
-  implementation authority is inferred. Original SD1 evidence is not rebound.
+  exact source/read/complete-denominator scope were pending at that earlier checkpoint;
+  the later direct SD2 grant is recorded separately, without rebinding SD1 evidence.
 - Session close: continuation checkpoint `f0a98f3`;
   `docs/evidence/sd1-continuation/SESSION_CLOSE.md`, closeout verification and
-  `CONTINUE.md` carry every unresolved row into the next session. No SD2 start.
+  `CONTINUE.md` preserve the earlier no-SD2 checkpoint. Later selected SD2 evidence
+  does not rewrite that historical closeout.
 - Outstanding: all current-cycle material facts; Spear/Live Your Dream app-ID holds;
   full population/preservation controls and publication acceptance; standard-build
   environment limit and fresh delivery baseline; SD5 whole-inventory queue adoption,
   monitor setup/allowances and later exact release authority. Owners/triggers and
   field-specific gaps are in SD1 evidence; resolve only in the selected later slice.
+
+- Selected inventory: A1:O1 header, F2:G795/O2:O795 account for794rows:411named/383empty
+  in this projection;410unique names, one held duplicate-name group at40/68. Three
+  selected detail rows only;408other named rows pending. Equal before/after native
+  projection and reported metadata; version/atomicity remain unknown. Complete
+  canonical/public-ID reconciliation is not claimed; app411/M1's437remain distinct.
+- Current proposal holds: Pell entry3.0/renewal3.0 and mixed aid observed; ND mixed
+  cycle labels/prior-FAQ age conflict and next-cycle funding held; Barnes past-example
+  offering remains unverified. All facts proposed/held; no runtime truth changed.
+- All nine owner/trigger rows below remain open and byte-identical. Their selected
+  read trigger has evidence for this batch only; no acceptance or later effect follows.
 
 ### Open attention items — owners and triggers
 

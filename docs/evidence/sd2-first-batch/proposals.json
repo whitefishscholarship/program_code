@@ -1,0 +1,1762 @@
+{
+  "schemaVersion": 1,
+  "scope": "Only selected three-award SD2 local research checkpoint, not full SD2 completion",
+  "asOf": "2026-10-13",
+  "workbookId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+  "orderedAwardIds": [
+    "award-2179b44d009d",
+    "award-97dfaadd1d31",
+    "award-ce44143820a7"
+  ],
+  "acceptedFacts": 0,
+  "humanFactReviewer": null,
+  "records": [
+    {
+      "awardId": "award-2179b44d009d",
+      "retainedCycleSlotId": "cyc_967b4fa3d976565444dcb38e1c87331761c417b8bb22a66fd94811d530748183",
+      "recordedName": "Pell Promise for Montana Students",
+      "identityState": "mapped_candidate",
+      "identityBasis": "Fresh unique selected name + sponsor/program/source-route correspondence, checked against existing public ID. No row-position-only or shared-URL-only binding.",
+      "freshRowCapture": "pell-row.json",
+      "outcome": "researched_proposals_with_explicit_unknowns",
+      "fields": {
+        "officialProgramName": {
+          "value": "Pell Promise for Qualified Students",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_8eea15cd45733559cd76a39c3b3144daa7d4d4f88256ddf69f7b1d9b428f491d"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Current program heading expands the prior Montana-specific label; preserve existing award ID and proposed alias."
+        },
+        "academicYear": {
+          "value": {
+            "entryTerm": "Fall 2027"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_f0c934a14eaf17c2c41d64f1675c76559cc54c9b245e37fb2ee1a767c1f6d8cc"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "An announced entry term, not an application opening date."
+        },
+        "entryGpa": {
+          "value": {
+            "minimum": 3.0,
+            "scale": null,
+            "basis": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_abf1c207ecc8265dfb6868847665c52902d78dbc68bee773bd027726b1b9df92"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "The qualifying paragraph expressly requires GPA >=3.0; entry scale/basis is not stated. Do not derive this from the renewal bullet."
+        },
+        "renewalGpa": {
+          "value": {
+            "minimum": 3.0,
+            "scale": null,
+            "basis": "cumulative"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_3ef9d5b13191ea6a60003e5944f4fc3f05c6b53ef58fb6199a0001e38fec2e45"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Maintain a cumulative GPA >=3.0; renewal is distinct from entry."
+        },
+        "needRequired": {
+          "value": "required",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_04f94bf52a84b4c038c3c2e0bc5c6bf2a9dc53020213074e8c96dc019226d2e6"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Pell eligibility is expressly required; provider describes federal Pell as need based. No generalized FAFSA-income cutoff is invented."
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_066dd8c8d0f201feefd0b5316000c917d1fcc12e4425170771512e2caa85a609"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Inspected criteria do not state a separate need-selection preference; extra criteria may apply, so broader selection policy remains unverified."
+        },
+        "amount": {
+          "value": {
+            "currency": "USD",
+            "tuitionCoveragePercent": 100,
+            "guaranteedGiftAmount": null,
+            "basis": "tuition_only"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_93860958b0028f99c21a14f184845e87bde7ef8e46965e0d0511630ad3036c3c"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Tuition package includes loans; cannot rank as a guaranteed 100% gift or include room/board."
+        },
+        "fundingKind": {
+          "value": "mixed",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_70209c6d428679fb4cdbd7be83c59ec421d13fb21af693400e2b64b66424e162"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Federal/institutional aid plus subsidized Stafford borrowing; amounts vary by study year."
+        },
+        "loanComponent": {
+          "value": {
+            "freshman": 3500,
+            "sophomore": 4500,
+            "junior": 5500,
+            "senior": 5500,
+            "currency": "USD"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_6190984ce0efe53f916e8892bf2d6d153322da817d5a3221637d31c4cc5516b1"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Provider-listed annual subsidized loan components, not scholarship gift amounts."
+        },
+        "eligibleEntryTypes": {
+          "value": [
+            "first_time_freshman",
+            "transfer_undergraduate"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_0a20936cdf1d1afc21acc86d251e1de265d98be5fb4d1989fce18ac3b1321e96"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "First-time entering freshmen and transfers; do not claim every college student or every transfer qualifies."
+        },
+        "eligibilityConditions": {
+          "value": {
+            "operator": "AND",
+            "conditions": [
+              "first-time freshman or transfer undergraduate entering Fall 2027",
+              "US residence",
+              "on-campus residence",
+              "FAFSA completion",
+              "federal Pell eligibility",
+              "loan acceptance",
+              "satisfactory academic progress",
+              "12 successfully completed credits per semester"
+            ],
+            "extraCriteriaPossible": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_148e38ea54e8ca5287aadc83a80ac68ce1c1f3611e665b92215a2f112222bdd8"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Keep residence, enrollment, aid and credit conditions explicit; athletic-aid exceptions are unresolved."
+        },
+        "renewal": {
+          "value": "conditional",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_bbefc5fa3cc7749e026ee68ec76988833ff60dc545e91a776a29b3b58fc95822"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Annual renewal requires continued FAFSA/Pell/campus/GPA/credit compliance; duration up to eight semesters."
+        },
+        "maximumDuration": {
+          "value": {
+            "semesters": 8
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_5fbfdb2ac189e3865ecbd9a6a3b2596bb6a958bad63d762d765a581cd1135521"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Conditional maximum; no guaranteed total funding."
+        },
+        "applicationMode": {
+          "value": "automatic_consideration",
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_04451587c687631a9246d63d691bbcaa31b57b126476db63802d9b9536e41db7"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Proposed admission/FAFSA/aid-offer pathway; separate award-form requirement is not established. Verify automatic-consideration semantics before publication."
+        },
+        "applicationRoute": {
+          "value": {
+            "method": "Carroll admission + FAFSA + aid-offer review",
+            "publicProgramUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+            "applicationWorkflowInspected": false
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_ef658b51bd86ee3841726e7139826940cb53b19c1480a3466635d2ca9a5cdfd2"
+          ],
+          "scope": "Carroll Pell Promise / announced Fall 2027",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Public instructions observed; linked admissions/FAFSA workflows not opened."
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "opens": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "applicantStage": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "recipientSlots": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        },
+        "materials": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "No applicable selected-source proof for this normalized field; keep unknown. An academic entry term does not establish an application window."
+        }
+      },
+      "humanFactReviewer": null,
+      "acceptedFacts": 0,
+      "studentPublication": "held; no runtime output or Apply now classification authorized",
+      "remaining": [
+        "Pin named human reviewer before acceptance",
+        "Verify entry GPA scale/basis and extra/athletic criteria only under later exact source scope",
+        "Application-window/route-operability evidence and unsupported field gaps remain"
+      ]
+    },
+    {
+      "awardId": "award-97dfaadd1d31",
+      "retainedCycleSlotId": "cyc_9012cd2f977718eb1b9290e35a8ef4369daca70e5f199a10cff38d3de117e000",
+      "recordedName": "The Neurodiversity Scholarship",
+      "identityState": "mapped_candidate",
+      "identityBasis": "Fresh unique selected name + sponsor/program/source-route correspondence, checked against existing public ID. No row-position-only or shared-URL-only binding.",
+      "freshRowCapture": "neurodiversity-row.json",
+      "outcome": "researched_held_cycle_and_age_conflicts",
+      "fields": {
+        "officialProgramName": {
+          "value": "The Neurodiversity Scholarship",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_f9acae84038f36f0067a3c48cdb354521f6d4de59fb83ff6d8a25d090a0d766b"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Same named program/sponsor on both fresh singular-redirect and plural routes; preserve ID."
+        },
+        "academicYear": {
+          "value": "2027-2028",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_f88421554d62291a0fe25db3bf9120599d2b684425a260bd67975cb782d8254f"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Eligibility block expressly uses 2027-2028; awards/closed banner still refer to 2026/2026-2027."
+        },
+        "age": {
+          "value": {
+            "minimum": 16,
+            "maximum": 26,
+            "basis": "any time during academic 2027-2028"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_3da82dd4bc30e87b0cb95c2309f56ee525c2886a7e011da3c865e6ea54f5b59e"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Current eligibility statement is observed. Publication held pending coherent cycle reconciliation; do not use the prior FAQ age to override a different academic year."
+        },
+        "historicalAgeConflict": {
+          "value": {
+            "academicYear": "2026-2027",
+            "alternatives": [
+              [
+                16,
+                26
+              ],
+              [
+                18,
+                26
+              ]
+            ]
+          },
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_f26147ba3aad371fda44c9f2dc4413511cfedb3a9155e38471867b5b3c055b38"
+          ],
+          "scope": "academic 2026-2027 FAQ",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Within the same prior-cycle FAQ the list and age answer disagree. Birthdate example omitted; no provider contact authorized."
+        },
+        "studyPaths": {
+          "value": [
+            "associate",
+            "bachelor",
+            "certificate"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_2f62a8566e85b06856e5c5bf16429278e3cca4da6e69f344e18ac7416f732ede"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Provider explicitly permits these objectives; no blanket all-trade-school claim."
+        },
+        "institutionConditions": {
+          "value": {
+            "nonprofit": true,
+            "country": "US",
+            "enrollment": [
+              "full_time",
+              "part_time"
+            ]
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_c0055e0fd7e18662487b7a4a2cec67155ed4ce6a74afc67359ca2ee24968d4d7"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Institution ownership/location and degree objectives stay separate from guessed school type."
+        },
+        "needSelection": {
+          "value": "prioritized",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e95e9d7616ac5f6b7d6ff71208ffb3bbf765ade244945aef8e1d3122d259220a"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Priority statement combines community involvement and unmet need; exact weighting is unstated. Does not establish a financial-need eligibility requirement."
+        },
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_122493f57816aec3b74bfbce89f8d3916c05297998c110cc37685917a83ded7c"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "No explicit need eligibility requirement is established; the linked FAQ is older. Do not convert missing requirement or Sheet Yes into not_required/required."
+        },
+        "professionalIdentification": {
+          "value": {
+            "required": true,
+            "authority": "healthcare or educational professional",
+            "scope": "specified learning differences"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_3ce1a77168c90c5ec997cf78a15bfd2cdd4920069f3e7345d95613b3e383b684"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Observe published rule without collecting proof, applicant health data or changing app questions."
+        },
+        "staffAndInternationalRestrictions": {
+          "value": [
+            "staff/board/contractors and their relatives excluded",
+            "international students on temporary visas excluded"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_628b4ee84f19a74d70840b38daa5dad7c27ec30ce6aaba6f81bf45a4324eb4ad"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Direct current-page restrictions; no new student question or hard exclusion implemented."
+        },
+        "opens": {
+          "value": {
+            "value": "2026-11",
+            "precision": "month_only",
+            "timezone": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_6f864fc1e3243e9edc232db2a1b5c5edde4f176ff6a76a95b6a9dc6ee67995cd"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Fresh live singular and plural pages agree on November 2026; no exact day/time inferred. An older cached singular view had November 2027 and is excluded from current proposals."
+        },
+        "deadline": {
+          "value": {
+            "value": "2027-01",
+            "precision": "month_only",
+            "timezone": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_1ecada4942b8dafd4f1a37b1cd52c38891073563b37c358477295c8e317ed58b"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "January 2027 only. The workbook exact January 1 date is not supported; prior FAQ January15,2026 is a different cycle."
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_0988eb5e162375bf86266b79a3773b93f328246ea849334cc307e50ce0b256d9"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Closed-2026 banner/2026-2027 awards coexist with 2027-2028 eligibility and newer timeline. Hold overall cycle; do not label current open/upcoming from mixed page."
+        },
+        "historicalAmount": {
+          "value": {
+            "currency": "USD",
+            "fullTimeFourYear": 2500,
+            "communityTechnicalOrPartTimeFourYear": 1000,
+            "basis": "one_academic_year",
+            "recipientSlots": 25
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_788ed1fdc661eca5de70b4fd30787ac1f54669b084d5f260351bae4e80d8b5c3"
+          ],
+          "scope": "academic 2026-2027 awards block",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Amounts/25 recipient slots explicitly described for 2026-2027; not 25 independent awards and not established for academic2027-2028."
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_d38d58b970e67995197f38fb3881f5d1010d9e3f98ec09a73da9bd6b1a371474"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No coherent next-cycle funding amount established."
+        },
+        "historicalReapplication": {
+          "value": {
+            "allowed": true,
+            "maximumYears": 4,
+            "newCompetitiveApplicationRequired": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_d98a1efc191ee1c646aaaecb5edd0ca8d58b80db8f344dede69836066702c27a"
+          ],
+          "scope": "academic 2026-2027 FAQ",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "One-year award with competitive reapplication; no automatic renewal. Older FAQ scope only."
+        },
+        "historicalApplicationMaterials": {
+          "value": [
+            "written story or video alternative",
+            "post-selection disability/enrollment/ID verification categories"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_d1a69f46cb26c6638b86aaf502ca2453b578f0ac2a50d27fbb8e11a29524378e"
+          ],
+          "scope": "academic 2026-2027 FAQ",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Public categories only; no applicant document or submission accessed. Do not transfer older requirements to an unverified next cycle."
+        },
+        "applicationRoute": {
+          "value": {
+            "method": "ND Alliance online portal/mobile app",
+            "applicationWorkflowInspected": false
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b70b1de2e00e2ee805edb5e503efeee5624f8e1cec968194a67fae8e0a1fb453"
+          ],
+          "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "rationale": "Public route description only; login/registration/app not accessed."
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "materials": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        },
+        "recipientSlots": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved next cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "No complete applicable proof; keep unknown rather than inherit old terms."
+        }
+      },
+      "humanFactReviewer": null,
+      "acceptedFacts": 0,
+      "studentPublication": "held; no runtime output or Apply now classification authorized",
+      "remaining": [
+        "Named human fact reviewer before acceptance",
+        "Coherent provider cycle/funding and exact next deadline",
+        "Historical FAQ age conflict remains; resolve only with a selected official update, never provider contact here",
+        "No linked certification document, application/login, applicant data or additional awards accessed"
+      ]
+    },
+    {
+      "awardId": "award-ce44143820a7",
+      "retainedCycleSlotId": "cyc_e023e6c3e3dcc15ce6d8bc8da435b510e3c0bd32ff7567c8cd6cb4b2b15441f1",
+      "recordedName": "The David and Lisa Barnes Flight Training Scholarship",
+      "identityState": "mapped_candidate",
+      "identityBasis": "Fresh unique selected name + sponsor/program/source-route correspondence, checked against existing public ID. No row-position-only or shared-URL-only binding.",
+      "freshRowCapture": "barnes-row.json",
+      "outcome": "researched_held_current_named_fund_offering",
+      "fields": {
+        "officialProgramName": {
+          "value": "The David and Lisa Barnes Flight Training Scholarship",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e89a6804ca2690cc66810163f75dd576802558c7ffc259777d51f42602efa444"
+          ],
+          "scope": "Named Barnes fund under Examples of Past Scholarships",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Named fund + donor + route supports retained identity; shared AOPA route does not merge child awards."
+        },
+        "historicalAmount": {
+          "value": {
+            "currency": "USD",
+            "amount": 10000,
+            "recipientSlots": 3,
+            "basis": "per_recipient"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_2250869591675228b1da15b1cb8b554328d16fb43e6303b72dece6eb83576b05"
+          ],
+          "scope": "Named Barnes fund under Examples of Past Scholarships",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Past example only; three recipients of one fund, no guaranteed current offering."
+        },
+        "historicalAgeAndTraining": {
+          "value": {
+            "age": [
+              16,
+              18
+            ],
+            "applicantStage": "high_school_student",
+            "objective": "private_pilot_certificate"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_ff940a2978d730d2eec26fe4d9e5611816a0af845cb03924693484303b6780b3"
+          ],
+          "scope": "Named Barnes fund under Examples of Past Scholarships",
+          "observedAt": "2026-10-13",
+          "freshness": "historical",
+          "acceptance": "held",
+          "rationale": "Named child historical terms; do not import You Can Fly GPA or exam rules."
+        },
+        "parentApplicationPeriods": {
+          "value": {
+            "spring": {
+              "opens": "04-01",
+              "deadline": "06-30T23:59",
+              "precision": "annual_rule"
+            },
+            "fall": {
+              "opens": "10-01",
+              "deadline": "12-31T23:59",
+              "precision": "annual_rule"
+            },
+            "timezone": "America/New_York",
+            "parentCurrentlyAdvertisingApplications": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b3909ea211c9f48f1a7107f6e62a7a378d8dae0976ef15c76d88d47ade81858f"
+          ],
+          "scope": "AOPA parent/shared program; not Barnes cycle",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Fresh parent and four-page FAQ agree December31; older December30 observation stays historical. Parent opening does not open Barnes."
+        },
+        "parentApplicationMode": {
+          "value": "eligibility_matched",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_6f0c2c8debfd07f9dc3f9d852970c60b59ce7dbc696ee979d31848a59da87db0"
+          ],
+          "scope": "AOPA parent/shared application; not accepted child binding",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "One general application automatically matches eligible scholarships; donor-funded child set is not frozen on the public page."
+        },
+        "parentMembership": {
+          "value": {
+            "required": true,
+            "highSchoolFreeMembershipAvailable": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_600d9fb23b1d44a79c17d984b9ea3812c92d034837d7a9eb1d9e7b3dd738f933"
+          ],
+          "scope": "AOPA parent FAQ revision20260925",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Shared-program membership rule only; no account created."
+        },
+        "parentMaterials": {
+          "value": {
+            "writtenResponses": true,
+            "referenceCount": 2,
+            "highSchoolTranscript": true,
+            "referenceFormRequired": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_756093f18d887ba2e78767c70a68c9c0ec88a2c12bb1b719a7aea26da1c1ec56"
+          ],
+          "scope": "AOPA parent FAQ revision20260925",
+          "observedAt": "2026-10-13",
+          "freshness": "applicable",
+          "acceptance": "proposed",
+          "rationale": "Public required categories only, never applicant submissions. No Barnes-specific proof or inherited GPA cutoff."
+        },
+        "currentOffering": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_aa5b33ca9bd8149bc6f5961797c9d5cd3ff16cfd364cdbe0b558830de3df16a6"
+          ],
+          "scope": "Named Barnes fund under Examples of Past Scholarships",
+          "observedAt": "2026-10-13",
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Barnes appears only under past examples; donor funding determines current matches. Entire selected named section and all four FAQ pages inspected; named current fund not established."
+        },
+        "applicationRoute": {
+          "value": {
+            "publicParentUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+            "applicationWorkflowInspected": false,
+            "namedFundAvailabilityVerified": false
+          },
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_71c4964c1b15c388be2011a527b35fca165f5ea856f20713cf33f515c4d4e0de"
+          ],
+          "scope": "Named Barnes fund under Examples of Past Scholarships",
+          "observedAt": "2026-10-13",
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Public common-application description is observed; no portal/login or current Barnes match inspected."
+        },
+        "academicYear": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "opens": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "recipientSlots": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "applicantStage": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        },
+        "materials": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved current Barnes cycle",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "held",
+          "rationale": "Current named child offering/terms not evidenced. Parent or past-example terms never become current child facts."
+        }
+      },
+      "humanFactReviewer": null,
+      "acceptedFacts": 0,
+      "studentPublication": "held; no runtime output or Apply now classification authorized",
+      "remaining": [
+        "Named human reviewer before acceptance",
+        "Current Barnes-specific offering, donor funding, cycle and applicable child criteria remain held",
+        "Additional source/portal/provider effects require separately selected authority; none performed"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "evd_8eea15cd45733559cd76a39c3b3144daa7d4d4f88256ddf69f7b1d9b428f491d",
+      "awardId": "award-2179b44d009d",
+      "field": "officialProgramName",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line1-3",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Current program heading expands the prior Montana-specific label; preserve existing award ID and proposed alias.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_f0c934a14eaf17c2c41d64f1675c76559cc54c9b245e37fb2ee1a767c1f6d8cc",
+      "awardId": "award-2179b44d009d",
+      "field": "academicYear",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line2,27",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "An announced entry term, not an application opening date.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_abf1c207ecc8265dfb6868847665c52902d78dbc68bee773bd027726b1b9df92",
+      "awardId": "award-2179b44d009d",
+      "field": "entryGpa",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line3",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "The qualifying paragraph expressly requires GPA >=3.0; entry scale/basis is not stated. Do not derive this from the renewal bullet.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_3ef9d5b13191ea6a60003e5944f4fc3f05c6b53ef58fb6199a0001e38fec2e45",
+      "awardId": "award-2179b44d009d",
+      "field": "renewalGpa",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line4,32",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Maintain a cumulative GPA >=3.0; renewal is distinct from entry.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_04f94bf52a84b4c038c3c2e0bc5c6bf2a9dc53020213074e8c96dc019226d2e6",
+      "awardId": "award-2179b44d009d",
+      "field": "needRequired",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line3,14,20,29",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Pell eligibility is expressly required; provider describes federal Pell as need based. No generalized FAFSA-income cutoff is invented.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_066dd8c8d0f201feefd0b5316000c917d1fcc12e4425170771512e2caa85a609",
+      "awardId": "award-2179b44d009d",
+      "field": "needSelection",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line24-39",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Inspected criteria do not state a separate need-selection preference; extra criteria may apply, so broader selection policy remains unverified.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_93860958b0028f99c21a14f184845e87bde7ef8e46965e0d0511630ad3036c3c",
+      "awardId": "award-2179b44d009d",
+      "field": "amount",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line2-3,31,36-39",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Tuition package includes loans; cannot rank as a guaranteed 100% gift or include room/board.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_70209c6d428679fb4cdbd7be83c59ec421d13fb21af693400e2b64b66424e162",
+      "awardId": "award-2179b44d009d",
+      "field": "fundingKind",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line3,21,31,39",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Federal/institutional aid plus subsidized Stafford borrowing; amounts vary by study year.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_6190984ce0efe53f916e8892bf2d6d153322da817d5a3221637d31c4cc5516b1",
+      "awardId": "award-2179b44d009d",
+      "field": "loanComponent",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line39",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Provider-listed annual subsidized loan components, not scholarship gift amounts.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_0a20936cdf1d1afc21acc86d251e1de265d98be5fb4d1989fce18ac3b1321e96",
+      "awardId": "award-2179b44d009d",
+      "field": "eligibleEntryTypes",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line2,19,27",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "First-time entering freshmen and transfers; do not claim every college student or every transfer qualifies.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_148e38ea54e8ca5287aadc83a80ac68ce1c1f3611e665b92215a2f112222bdd8",
+      "awardId": "award-2179b44d009d",
+      "field": "eligibilityConditions",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line19-39",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Keep residence, enrollment, aid and credit conditions explicit; athletic-aid exceptions are unresolved.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_bbefc5fa3cc7749e026ee68ec76988833ff60dc545e91a776a29b3b58fc95822",
+      "awardId": "award-2179b44d009d",
+      "field": "renewal",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line4,32-35",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Annual renewal requires continued FAFSA/Pell/campus/GPA/credit compliance; duration up to eight semesters.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_5fbfdb2ac189e3865ecbd9a6a3b2596bb6a958bad63d762d765a581cd1135521",
+      "awardId": "award-2179b44d009d",
+      "field": "maximumDuration",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line34",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Conditional maximum; no guaranteed total funding.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_04451587c687631a9246d63d691bbcaa31b57b126476db63802d9b9536e41db7",
+      "awardId": "award-2179b44d009d",
+      "field": "applicationMode",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line19-21",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Proposed admission/FAFSA/aid-offer pathway; separate award-form requirement is not established. Verify automatic-consideration semantics before publication.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_ef658b51bd86ee3841726e7139826940cb53b19c1480a3466635d2ca9a5cdfd2",
+      "awardId": "award-2179b44d009d",
+      "field": "applicationRoute",
+      "sourceId": "src_bf5a9a314ad7eab297677aaa4f0a02ec52e28ed310e692f0a9767de1ac715b51",
+      "sourceUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "artifact": "pell-source.txt",
+      "artifactSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "locator": "line19-23",
+      "scope": "Carroll Pell Promise / announced Fall 2027",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "pell-web-observation.json",
+      "rationale": "Public instructions observed; linked admissions/FAFSA workflows not opened.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_f9acae84038f36f0067a3c48cdb354521f6d4de59fb83ff6d8a25d090a0d766b",
+      "awardId": "award-97dfaadd1d31",
+      "field": "officialProgramName",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line2-3",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Same named program/sponsor on both fresh singular-redirect and plural routes; preserve ID.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_f88421554d62291a0fe25db3bf9120599d2b684425a260bd67975cb782d8254f",
+      "awardId": "award-97dfaadd1d31",
+      "field": "academicYear",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line15-16",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Eligibility block expressly uses 2027-2028; awards/closed banner still refer to 2026/2026-2027.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_3da82dd4bc30e87b0cb95c2309f56ee525c2886a7e011da3c865e6ea54f5b59e",
+      "awardId": "award-97dfaadd1d31",
+      "field": "age",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line15",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Current eligibility statement is observed. Publication held pending coherent cycle reconciliation; do not use the prior FAQ age to override a different academic year.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_f26147ba3aad371fda44c9f2dc4413511cfedb3a9155e38471867b5b3c055b38",
+      "awardId": "award-97dfaadd1d31",
+      "field": "historicalAgeConflict",
+      "sourceId": "src_30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "sourceUrl": "https://thendalliance.org/scholarships/faq/",
+      "artifact": "nd-faq-source.txt",
+      "artifactSha256": "a0752cee51a35596b35527b0e583f269648f8df727988750444d6fc9dbeac2a2",
+      "locator": "line11,26",
+      "scope": "academic 2026-2027 FAQ",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-faq-http.json",
+      "rationale": "Within the same prior-cycle FAQ the list and age answer disagree. Birthdate example omitted; no provider contact authorized.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_2f62a8566e85b06856e5c5bf16429278e3cca4da6e69f344e18ac7416f732ede",
+      "awardId": "award-97dfaadd1d31",
+      "field": "studyPaths",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line16",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Provider explicitly permits these objectives; no blanket all-trade-school claim.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_c0055e0fd7e18662487b7a4a2cec67155ed4ce6a74afc67359ca2ee24968d4d7",
+      "awardId": "award-97dfaadd1d31",
+      "field": "institutionConditions",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line16",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Institution ownership/location and degree objectives stay separate from guessed school type.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_e95e9d7616ac5f6b7d6ff71208ffb3bbf765ade244945aef8e1d3122d259220a",
+      "awardId": "award-97dfaadd1d31",
+      "field": "needSelection",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line18",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Priority statement combines community involvement and unmet need; exact weighting is unstated. Does not establish a financial-need eligibility requirement.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_122493f57816aec3b74bfbce89f8d3916c05297998c110cc37685917a83ded7c",
+      "awardId": "award-97dfaadd1d31",
+      "field": "needRequired",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line14-19",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "No explicit need eligibility requirement is established; the linked FAQ is older. Do not convert missing requirement or Sheet Yes into not_required/required.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_3ce1a77168c90c5ec997cf78a15bfd2cdd4920069f3e7345d95613b3e383b684",
+      "awardId": "award-97dfaadd1d31",
+      "field": "professionalIdentification",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line17",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Observe published rule without collecting proof, applicant health data or changing app questions.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_628b4ee84f19a74d70840b38daa5dad7c27ec30ce6aaba6f81bf45a4324eb4ad",
+      "awardId": "award-97dfaadd1d31",
+      "field": "staffAndInternationalRestrictions",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line18",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Direct current-page restrictions; no new student question or hard exclusion implemented.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_6f864fc1e3243e9edc232db2a1b5c5edde4f176ff6a76a95b6a9dc6ee67995cd",
+      "awardId": "award-97dfaadd1d31",
+      "field": "opens",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line33",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Fresh live singular and plural pages agree on November 2026; no exact day/time inferred. An older cached singular view had November 2027 and is excluded from current proposals.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_1ecada4942b8dafd4f1a37b1cd52c38891073563b37c358477295c8e317ed58b",
+      "awardId": "award-97dfaadd1d31",
+      "field": "deadline",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line21-22",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "January 2027 only. The workbook exact January 1 date is not supported; prior FAQ January15,2026 is a different cycle.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_0988eb5e162375bf86266b79a3773b93f328246ea849334cc307e50ce0b256d9",
+      "awardId": "award-97dfaadd1d31",
+      "field": "cycleStatus",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line1,8,15-16,21-33",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Closed-2026 banner/2026-2027 awards coexist with 2027-2028 eligibility and newer timeline. Hold overall cycle; do not label current open/upcoming from mixed page.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_788ed1fdc661eca5de70b4fd30787ac1f54669b084d5f260351bae4e80d8b5c3",
+      "awardId": "award-97dfaadd1d31",
+      "field": "historicalAmount",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line8-11",
+      "scope": "academic 2026-2027 awards block",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Amounts/25 recipient slots explicitly described for 2026-2027; not 25 independent awards and not established for academic2027-2028.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_d38d58b970e67995197f38fb3881f5d1010d9e3f98ec09a73da9bd6b1a371474",
+      "awardId": "award-97dfaadd1d31",
+      "field": "amount",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line8-16",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "No coherent next-cycle funding amount established.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_d98a1efc191ee1c646aaaecb5edd0ca8d58b80db8f344dede69836066702c27a",
+      "awardId": "award-97dfaadd1d31",
+      "field": "historicalReapplication",
+      "sourceId": "src_30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "sourceUrl": "https://thendalliance.org/scholarships/faq/",
+      "artifact": "nd-faq-source.txt",
+      "artifactSha256": "a0752cee51a35596b35527b0e583f269648f8df727988750444d6fc9dbeac2a2",
+      "locator": "line87-88",
+      "scope": "academic 2026-2027 FAQ",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-faq-http.json",
+      "rationale": "One-year award with competitive reapplication; no automatic renewal. Older FAQ scope only.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_d1a69f46cb26c6638b86aaf502ca2453b578f0ac2a50d27fbb8e11a29524378e",
+      "awardId": "award-97dfaadd1d31",
+      "field": "historicalApplicationMaterials",
+      "sourceId": "src_30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "sourceUrl": "https://thendalliance.org/scholarships/faq/",
+      "artifact": "nd-faq-source.txt",
+      "artifactSha256": "a0752cee51a35596b35527b0e583f269648f8df727988750444d6fc9dbeac2a2",
+      "locator": "line44-59,69-78",
+      "scope": "academic 2026-2027 FAQ",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-faq-http.json",
+      "rationale": "Public categories only; no applicant document or submission accessed. Do not transfer older requirements to an unverified next cycle.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_b70b1de2e00e2ee805edb5e503efeee5624f8e1cec968194a67fae8e0a1fb453",
+      "awardId": "award-97dfaadd1d31",
+      "field": "applicationRoute",
+      "sourceId": "src_a3aad8a255072e0ca82ce82acc2f89744dd113708a293ecae7fd8d8268321682",
+      "sourceUrl": "https://thendalliance.org/scholarships/",
+      "artifact": "nd-program-source.txt",
+      "artifactSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "locator": "line33",
+      "scope": "Program eligibility block for academic 2027-2028; overall page has mixed cycle labels",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "nd-program-http.json",
+      "rationale": "Public route description only; login/registration/app not accessed.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_e89a6804ca2690cc66810163f75dd576802558c7ffc259777d51f42602efa444",
+      "awardId": "award-ce44143820a7",
+      "field": "officialProgramName",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line27-28,36-37",
+      "scope": "Named Barnes fund under Examples of Past Scholarships",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Named fund + donor + route supports retained identity; shared AOPA route does not merge child awards.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_2250869591675228b1da15b1cb8b554328d16fb43e6303b72dece6eb83576b05",
+      "awardId": "award-ce44143820a7",
+      "field": "historicalAmount",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line27-30",
+      "scope": "Named Barnes fund under Examples of Past Scholarships",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Past example only; three recipients of one fund, no guaranteed current offering.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_ff940a2978d730d2eec26fe4d9e5611816a0af845cb03924693484303b6780b3",
+      "awardId": "award-ce44143820a7",
+      "field": "historicalAgeAndTraining",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line31-34",
+      "scope": "Named Barnes fund under Examples of Past Scholarships",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Named child historical terms; do not import You Can Fly GPA or exam rules.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_b3909ea211c9f48f1a7107f6e62a7a378d8dae0976ef15c76d88d47ade81858f",
+      "awardId": "award-ce44143820a7",
+      "field": "parentApplicationPeriods",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line2,6-7,25",
+      "scope": "AOPA parent/shared program; not Barnes cycle",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Fresh parent and four-page FAQ agree December31; older December30 observation stays historical. Parent opening does not open Barnes.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_6f0c2c8debfd07f9dc3f9d852970c60b59ce7dbc696ee979d31848a59da87db0",
+      "awardId": "award-ce44143820a7",
+      "field": "parentApplicationMode",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line14-15",
+      "scope": "AOPA parent/shared application; not accepted child binding",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "One general application automatically matches eligible scholarships; donor-funded child set is not frozen on the public page.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_600d9fb23b1d44a79c17d984b9ea3812c92d034837d7a9eb1d9e7b3dd738f933",
+      "awardId": "award-ce44143820a7",
+      "field": "parentMembership",
+      "sourceId": "src_674a028e063ce5e42f42d8736990eadb175cf988fbe3625af391ef1821496627",
+      "sourceUrl": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+      "artifact": "aopa-faq-source.txt",
+      "artifactSha256": "174542fef0b2eb80d378f4ccc3a930a1dddc40aed110c44357b7de4695b24bd8",
+      "locator": "page1 Eligibility/Getting Started",
+      "scope": "AOPA parent FAQ revision20260925",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-faq-http.json",
+      "rationale": "Shared-program membership rule only; no account created.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_756093f18d887ba2e78767c70a68c9c0ec88a2c12bb1b719a7aea26da1c1ec56",
+      "awardId": "award-ce44143820a7",
+      "field": "parentMaterials",
+      "sourceId": "src_674a028e063ce5e42f42d8736990eadb175cf988fbe3625af391ef1821496627",
+      "sourceUrl": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+      "artifact": "aopa-faq-source.txt",
+      "artifactSha256": "174542fef0b2eb80d378f4ccc3a930a1dddc40aed110c44357b7de4695b24bd8",
+      "locator": "page2 Application Requirements/Recommendation Process",
+      "scope": "AOPA parent FAQ revision20260925",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-faq-http.json",
+      "rationale": "Public required categories only, never applicant submissions. No Barnes-specific proof or inherited GPA cutoff.",
+      "acceptance": "proposed",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_aa5b33ca9bd8149bc6f5961797c9d5cd3ff16cfd364cdbe0b558830de3df16a6",
+      "awardId": "award-ce44143820a7",
+      "field": "currentOffering",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line15,27-38",
+      "scope": "Named Barnes fund under Examples of Past Scholarships",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Barnes appears only under past examples; donor funding determines current matches. Entire selected named section and all four FAQ pages inspected; named current fund not established.",
+      "acceptance": "held",
+      "reviewer": null
+    },
+    {
+      "evidenceId": "evd_71c4964c1b15c388be2011a527b35fca165f5ea856f20713cf33f515c4d4e0de",
+      "awardId": "award-ce44143820a7",
+      "field": "applicationRoute",
+      "sourceId": "src_be0d9e96c443a6810e217d97e16d6408ad83f3c59091758e6d6e881d962e54cc",
+      "sourceUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "artifact": "aopa-program-source.txt",
+      "artifactSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "locator": "line4,14-15,27-38",
+      "scope": "Named Barnes fund under Examples of Past Scholarships",
+      "observedAt": "2026-10-13",
+      "exactAcquisitionReceipt": "aopa-program-http.json",
+      "rationale": "Public common-application description is observed; no portal/login or current Barnes match inspected.",
+      "acceptance": "held",
+      "reviewer": null
+    }
+  ],
+  "remainingInventory": "408 unselected named rows pending; duplicate-name group held; no full canonical/public-ID reconciliation claimed",
+  "privacy": "No applicant answers/documents/PII, login/application, provider contact, workbook writes, app change or external release.",
+  "nextBoundary": "Stop before SD3; further SD2 research requires selected exact source/identity scope; no second review queue."
+}
