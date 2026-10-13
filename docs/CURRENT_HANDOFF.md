@@ -1,3 +1,32 @@
+# Selected Montana Jaycee SD2 checkpoint — held research complete
+
+October13,2026. Read complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the
+sole progress pointer, then docs/evidence/sd2-jaycee/{AUTHORITY,README,VALIDATION,
+proposals,candidate-manifest,review,CONTINUE}. Entry f742890 and retained a4e9c7c,
+cf29dde and all original review/evidence bindings remain immutable.
+
+Only locators40then68 and their two exact public documents researched. Both
+identities matched before detail research;30-cell/report metadata readback matched.
+Two documents/13 local pages/all tables inspected; both identity outcomes and62
+field proposals remain held. Separate vocational/university track candidates retain
+existing public/canonical IDs. Montana sponsor/state participation, source continuity,
+open-route usability and all unknowns remain unresolved. No facts or mappings accepted.
+Five named rows now have bounded research;406 remain without selected research.
+All nine section9 rows/supplements and original437M1 routes/holds are carried unchanged.
+
+Plan/type/tests and local evidence checks passed; exact standard build process/port
+EPERM persists after permitted retry. Fresh remote-main/delivery proof unknown.
+Independent technical outcome is authoritative only in review.json bound to its
+frozen candidate; that review does not waive either limit or accept facts.
+Next: Codex prepares a bounded next SD2 read proposal; Kelsey selects further scope
+and names the human reviewer before later acceptance. No current reviewer name or
+billing/email/application/migration/release information is needed for this research.
+No workbook writes, app changes, release/activation/messages or SD3. Full SD2 incomplete.
+
+Prior handoff preserved byte-for-byte below.
+
+---
+
 # Bounded next SD2 read proposal prepared — selection pending
 
 Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress pointer, then

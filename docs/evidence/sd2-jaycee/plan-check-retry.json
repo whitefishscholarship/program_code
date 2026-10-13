@@ -1,0 +1,13 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-13T18:37:48.671551+00:00",
+  "endedAt": "2026-10-13T18:38:29.512114+00:00",
+  "exitCode": 0,
+  "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n",
+  "stderr": ""
+}

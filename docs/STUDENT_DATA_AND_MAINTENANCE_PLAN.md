@@ -353,6 +353,49 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-JAYCEE-CONTINUATION-START -->
+- Latest selected SD2 continuation, October13,2026: exact Montana Jaycee scope in
+  `docs/evidence/sd2-jaycee/AUTHORITY.md`, selected from immutable proposal at
+  f742890; retained wrap a4e9c7c unchanged. Local two-record research checkpoint
+  only, locators40then68 reidentified before details; both outcomes/identity holds
+  and62 field proposals remain held. No canonical/fact acceptance; full SD2 incomplete.
+- Evidence/handoff: `docs/evidence/sd2-jaycee/{README.md,VALIDATION.json,proposals.json,
+  candidate-manifest.json,review.json,CONTINUE.md}`. Independent technical outcome
+  is valid only against its frozen candidate binding. Two exact public documents
+  completely inspected, including13 local render pages and all tables/sections.
+  Native30-cell detail/report metadata equality observed; version/atomicity unknown.
+- Proposed document tracks: vocational and college/university, U.S.JCI Senate
+  Foundation, preserved app candidates award-67de97a4f446/award-e05338ef963f and
+  their existing canonical IDs. Document2027-01-12 postmark date differs from
+  recorded2026-01-12; published grant alternatives exceed recorded amounts.
+  These are held corrections, not edits. Both Montana sponsor/state participation
+  and old/new route continuity remain unresolved; no new IDs or duplicate merge.
+  Opens, GPA scales/bases, amount-selection rule, live-route usability and all
+  unstated fields remain explicit. Optional5-B/checklist conflict retained in both.
+- Local coverage arithmetic only: saved794rows/411named/383empty/410unique names;
+  prior3 plus selected2 means5 researched names and406 without selected research.
+  Both duplicate-name identity holds remain. Earlier408-pending supplements below
+  are historical checkpoints preserved unchanged, not the current remaining count.
+- Every nine-row owner/trigger entry and every previous supplement below stays
+  byte-identical. Pell/ND/Barnes source/field holds, Spear/Live Your Dream, other
+  seven pilot records, complete canonical/relationship/collision and preservation/
+  backup/recovery/permission, SD3/SD4 and all reserved effects remain routed.
+  OriginalM1 at009fa57 retains all437 records/routes/holds and exact artifacts;
+  ETV/Fund the Fish, Reviews adoption, allowances/zero-overage, sender/service/
+  receipt, suppression, pilot/full sweep, recovery/catch-up/schedule health stay open.
+- Current local checks: evidence verifier, plan/type/tests passed; required standard
+  build still fails process/port EPERM on both initial and permitted retry. No waiver,
+  canonical acceptance or fresh remote-delivery proof. Runtime/control bytes unchanged.
+  No completed source/inventory replay, workbook writes, application/login/contact,
+  app changes, release, activation, messages or SD3 start.
+- Next action: Codex owns local hold triage and a bounded next-read proposal;
+  Kelsey selects further exact source/identity scope. Human fact reviewer name is
+  needed only before later fact acceptance. No application account, billing, email,
+  migration or release information needed for this completed read-only checkpoint.
+  Short prompt: `docs/evidence/sd2-jaycee/CONTINUE.md`. Old progress follows as
+  immutable history; this dated continuation is the operative checkpoint.
+<!-- SD2-JAYCEE-CONTINUATION-END -->
+
 - Current slice: selected SD2 first-three local research checkpoint; full SD2 incomplete. SD1 remains complete within its local review/validation limits. No canonical acceptance or fact acceptance.
 - Branch/worktree: `codex/plan-student-data-maintenance`,
   `/private/tmp/program_code-student-data-maintenance-plan`.

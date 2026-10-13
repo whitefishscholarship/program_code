@@ -1,0 +1,3951 @@
+{
+  "schemaVersion": 1,
+  "scope": "selected two-record SD2 continuation; all facts/mappings held",
+  "entryBaseline": "f742890",
+  "orderedInputLocators": [
+    40,
+    68
+  ],
+  "records": [
+    {
+      "inputRecord": {
+        "ledgerPath": "docs/evidence/sd2-first-batch/inventory-ledger.json",
+        "rowLocator": 40,
+        "ledgerRowOutcome": "named_identity_pending",
+        "ledgerIdentityResolution": "name_duplicate_hold",
+        "recordedName": "Montana Jaycee Foundation Scholarship"
+      },
+      "freshDetailCapture": "row40-before.json",
+      "closingCapture": "rows-after.json",
+      "outcome": "held",
+      "identityHoldPreserved": true,
+      "existingPublicIdCandidate": "award-67de97a4f446",
+      "existingCanonicalIdCandidate": "sch_67de97a4f446d534a1471806d784dc2bd79e16a5837a0d2f3ac3bef57d2df681",
+      "mappingAcceptance": "held",
+      "newAwardId": null,
+      "proposedDisposition": "retain separate vocational and college/university program-track candidates; preserve both existing IDs and both input records pending sponsor/route/version continuity evidence and human review",
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "fields": {
+        "documentSponsor": {
+          "value": "United States JCI Senate Foundation",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b78dd2b6b09edf5b5b161cee012dd7f72daa69a93f4bde39deff25d08d81d45f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "documentAwardName": {
+          "value": "Vocational/Technical/Trade Scholarship",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_a28e43eaf1de833702553b631b5ccedf8aee95ad684c5f88ceaca1d4225a8f97"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "montanaSponsorRelationship": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_452d5dc5a8744818550862f9ebb9a068653ea3a76898266e4c80f8184375b212"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Neither complete document names Montana Jaycee Foundation or binds that organizer-recorded name to this national program; no parent or state list was selected."
+        },
+        "applicationCycleLabel": {
+          "value": "SCHOLAR:2026-2027",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_9fc42eb7eab3dcb8cbb7a5111697e0d5e32223f42cb49e57d43c2ca176695074"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "educationalStartYear": {
+          "value": 2027,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_d7c9583fd8ae3b6817e2f269fa819fa4260dcee4cd4bfb7bc827bc38dd3b61fc"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "academicYear": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_4f4ca82b26490e181f675a7ff129e85780436d7a50e2a59a9ed62bc64bbacb1f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document form label and start year do not specify the full academic-year window."
+        },
+        "deadline": {
+          "value": {
+            "value": "2027-01-12",
+            "purpose": "mailing and postmark",
+            "timezone": null,
+            "precision": "date_only"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_5d535b32967dd5d98fd8e6f7091c6b2e98e0cf46b8ddc231536216a52b818209"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "opens": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_831256532b74242de30b25a585c7793361d7fa4af9ac1254900aab6114384c52"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No opening date stated anywhere in the complete document. A downloadable blank application does not prove an open state route."
+        },
+        "availability": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_b72f97d009e2f0925136797bd0876bbe7d7c34a5474b6ca02ddc63f4a3598181"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document announces2027 grants; live open/closed state, state participation, destination contact and application route usability are outside selected evidence. No present-open inference."
+        },
+        "entryGpa": {
+          "value": {
+            "minimum": 3.25,
+            "scale": null,
+            "basis": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_a856f2f8939c8363188bffada694906236175f5dfa3b18c457d607d5edd97086"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Threshold explicit; scale, weighting and calculation basis remain unverified. Do not assume4.0 scale or weighted/unweighted."
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_8cd986abe205f8c849d5fb376f89c91a74e89bd11e28cf92126d078719d44188"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No renewal GPA stated."
+        },
+        "applicantStage": {
+          "value": [
+            "hs_senior"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_bf5860ad4d5fcffe43672930c9c3fa67205f2e1395aed50330af3aac69fd3cd9"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "eligibilityConditions": {
+          "value": {
+            "operator": "AND",
+            "conditions": [
+              {
+                "kind": "stage",
+                "value": "graduating high school senior;2027 graduate"
+              },
+              {
+                "kind": "citizenship",
+                "value": "U.S. citizen"
+              },
+              {
+                "kind": "residence",
+                "value": "U.S. state with listed JCI Senate scholarship chairperson/contact",
+                "participatingStates": null
+              },
+              {
+                "kind": "destination",
+                "value": "accredited U.S. vocational/technical/trade program"
+              },
+              {
+                "kind": "entryGpa",
+                "minimum": 3.25,
+                "scale": null
+              },
+              {
+                "kind": "start",
+                "year": 2027
+              },
+              {
+                "kind": "attendance",
+                "value": "first year of full-time study immediately following high school graduation"
+              }
+            ]
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_55c17a824e35357dcc815468eb8d45de3791b0244ef22c68a1a7ef57140c1de2"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "montanaParticipation": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_5a54320985ac05702db90fbe6aa55bedee630ab30cb35752ca6068b95cea92f6"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Participating-state contact list is linked but not selected; no Montana/Whitefish eligibility assertion."
+        },
+        "destinationScope": {
+          "value": {
+            "country": "United States",
+            "accreditationRequired": true,
+            "description": "short-term specialized vocational, technical or trade programs, including qualifying community-college programs; not bachelor degree programs"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_f0c7d24589db5fdb16901ec1b4cd5443b64fa3bd7599765b26a304b57a678d62"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "schoolTypes": {
+          "value": [
+            "trade"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_57d0e75fd940ea8a34e9673d0e53f4af401a8e2b32ad4aa97777fad6cdaf4050"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Community college is qualified by specialized program, not unrestricted two-year eligibility."
+        },
+        "studyPaths": {
+          "value": {
+            "normalized": [
+              "certificate",
+              "associate"
+            ],
+            "otherPublished": [
+              "diploma",
+              "license"
+            ],
+            "bachelorExcludedByProgramDescription": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_066cd6743bb7c9b0f289b4db01070d5c7c801a568928a36112ccf04b63a66aa8"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "amount": {
+          "value": {
+            "currency": "USD",
+            "minimum": 1000,
+            "maximum": 1500,
+            "publishedDiscreteAmounts": [
+              1000,
+              1500
+            ],
+            "basis": "one_time",
+            "use": "tuition in first year of full-time study immediately following high school graduation",
+            "recipientSlots": 10,
+            "payee": "school; check in recipient name",
+            "selectionBetweenAmounts": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_fb311cb06e5343c3fef667ab45976de7cfdf9a7742315dc9ed3e97bc6f89ee64"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Amounts are alternatives, not a continuous promised range; slot counts are recipients, not independent awards. First-year tuition scope supports one-payment proposal; renewal rights are separately unstated."
+        },
+        "fundingKind": {
+          "value": "gift",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_f10623e15226993bf016082dcc2caf5afecb43cc878b7da7af01a8c2d76cfe60"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document says grants, not loans; no inferred guaranteed receipt."
+        },
+        "needRequired": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_6c390481c8fe5ee57e7180e01c1ac79f5089ee7fd781bcb17a7b4be3e9511af6"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Complete eligibility and financial sections state no financial-need threshold; silence is not not_required."
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_0b4e4836d50117a24464af9e2cd899fc8b168890bb5178f39a637cf18d34c492"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Optional financial-circumstances explanation is allowed. These questions do not establish an explicit judging rule or priority weight for need."
+        },
+        "financialStatementAmbiguity": {
+          "value": {
+            "section5A": "financing explanation requested",
+            "section5B": "labelled optional",
+            "checklist": "questions5Aand5B answered"
+          },
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_3f3598c45dc3ed7eeb65200cd473a7ce499e4e9d185e6e1799e1431369e02adc"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Checklist asks questions5-A and5-B answered while section5-B explicitly says optional. Preserve conflict; do not convert to a mandatory need condition."
+        },
+        "renewal": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_ad7ce48bc65b17ec64d8834aad0078b9a749ce8c79ac6dd28a52960384a6f7ca"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "First-year tuition use does not explicitly state nonrenewable status or renewal rights."
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_d717c0509feafeb7d79499022731bb0eeb53a9bbdf3200b33228b25423fdbd1f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No later competitive reapplication rule stated."
+        },
+        "nomination": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_c9578de78aaaa5d7b14596c494f17271d202dfea649f7763914867d2d81918f8"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Educator reference and state processing are not evidence of a nomination requirement."
+        },
+        "applicationMode": {
+          "value": "offline",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_7dc6b48d3382da92cc780102fd0ff243a478e401dfea86ef9c79566b903e8145"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "applicationRouting": {
+          "value": {
+            "method": "postal package",
+            "recipientRule": "state scholarship chairperson/contact listed for residence state; contact may live in another state",
+            "stateContact": null,
+            "stateContactListInspected": false,
+            "wrongAddressPackagesForwarded": false
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_45b1d7fdcad4ebfa62103ee0e92072de0a9f780d19239c9ae2048ec1a3839322"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Actual contact/address and current mailing destination not inspected; no application interaction or linked-list read."
+        },
+        "materials": {
+          "value": {
+            "personalStatement": {
+              "minimumWords": 300,
+              "maximumWords": 500,
+              "wordCountIncluded": true
+            },
+            "referenceLetters": {
+              "maximum": 3,
+              "minimumEducatorReferences": 1
+            },
+            "transcript": {
+              "currentHighSchoolRequired": true,
+              "includeClassGradesOrScores": true
+            },
+            "acceptanceLetter": "include if already accepted",
+            "supportingDocumentation": "up to3 pages of applicant choice; checklist asks attachment; no invented universal3-page minimum",
+            "photo": "optional but encouraged",
+            "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
+            "financialStatement": "first year or total vocational program cost",
+            "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_484901acde4020372e2f45c6f36a198b5e1d6d7e6e72201df06ff2f4c7e573ef"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "testScores": {
+          "value": {
+            "required": false,
+            "includeIfAvailable": true,
+            "selectionPointsMayBeAwarded": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e4935fded49585ec736de5ee4fd5a283778544047a30856af1a8ef345441cde5"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "focus": {
+          "value": {
+            "description": "vocational/technical/trade paths; examples non-exhaustive",
+            "mandatoryMajor": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_4427d85ad06ff3a15e6bd35c338ab53efe3e78a874fcb41eeeee0b1ff33ab335"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Do not limit vocational focus to construction or map university Any to unrestricted verified eligibility."
+        },
+        "otherEligibility": {
+          "value": {
+            "ageThreshold": null,
+            "GED": null,
+            "gapYear": null,
+            "membership": null,
+            "gender": null,
+            "disability": null,
+            "ethnicity": null
+          },
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_27c613dd412fda0a245ab27fef454e020a0cdb6b2afac71e54826cb965fa065b"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-40",
+            "programTrack": "vocational",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:21:52.963635+00:00"
+          },
+          "observedAt": "2026-10-13T18:21:52.963635+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No extra explicit rule in complete selected documents; no negative values or unrestricted claims. Immediate full-time post-high-school study requirement stays separate."
+        }
+      },
+      "acceptedFacts": 0,
+      "observedCellDifferences": [
+        {
+          "column": "A",
+          "recorded": "2026-01-12",
+          "documentProposed": "2027-01-12",
+          "state": "held"
+        },
+        {
+          "column": "E",
+          "recorded": "$1,000",
+          "documentProposedDiscreteAmounts": [
+            1000,
+            1500
+          ],
+          "state": "held"
+        },
+        {
+          "column": "N",
+          "recorded": "statement up to500words; up to3references; counselor deadline confirmation",
+          "documentProposed": "300-500words with word count; at least1educator reference; mailed/postmarked2027-01-12; current state destination still unknown",
+          "state": "held"
+        }
+      ],
+      "unknowns": [
+        "Montana sponsor relationship; current participating-state list and actual submission destination",
+        "Route/version continuity to preserved app/canonical identity and older Google Doc aliases",
+        "Opening date, usable open route, GPA scale/weighting/basis, amount-selection basis",
+        "Need judging rule and optional5-B/checklist conflict; renewal/reapplication/nomination unstated",
+        "Full population identity/collision/relationship reconciliation; human fact reviewer not named"
+      ]
+    },
+    {
+      "inputRecord": {
+        "ledgerPath": "docs/evidence/sd2-first-batch/inventory-ledger.json",
+        "rowLocator": 68,
+        "ledgerRowOutcome": "named_identity_pending",
+        "ledgerIdentityResolution": "name_duplicate_hold",
+        "recordedName": "Montana Jaycee Foundation Scholarship"
+      },
+      "freshDetailCapture": "row68-before.json",
+      "closingCapture": "rows-after.json",
+      "outcome": "held",
+      "identityHoldPreserved": true,
+      "existingPublicIdCandidate": "award-e05338ef963f",
+      "existingCanonicalIdCandidate": "sch_e05338ef963fa531412a774d999f7d1e82dc6ccc4251f5e72712805051fb80e7",
+      "mappingAcceptance": "held",
+      "newAwardId": null,
+      "proposedDisposition": "retain separate vocational and college/university program-track candidates; preserve both existing IDs and both input records pending sponsor/route/version continuity evidence and human review",
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "fields": {
+        "documentSponsor": {
+          "value": "United States JCI Senate Foundation",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_eaf4d1c0deb10f6089a49c8ba7e33dd5624409bfda08cf8fad0dd7af822bec0f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "documentAwardName": {
+          "value": "College/University Scholarship",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_52dbd8a4a28a6fbc5ebfae32fd740c37cde00405c7e1cae1e7e3f0cb7d537ad7"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "montanaSponsorRelationship": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_c48e1d668148692fb1ad9d111e429599eb5f065b8dde13e09dd8aef7fe0bee00"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Neither complete document names Montana Jaycee Foundation or binds that organizer-recorded name to this national program; no parent or state list was selected."
+        },
+        "applicationCycleLabel": {
+          "value": "SCHOLAR:2026-2027",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_7a7f522459055c64f65cc775868cd2ddf48ebb440e060ceb2327b89caeceba6f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "educationalStartYear": {
+          "value": 2027,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_a64d07adc4350b869c336b290867871645734059634a5b800b0a067d7375cfc2"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "academicYear": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_6c9651901e091d2437907f384446215e21244290e59974643d8ecff66200c5ad"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document form label and start year do not specify the full academic-year window."
+        },
+        "deadline": {
+          "value": {
+            "value": "2027-01-12",
+            "purpose": "mailing and postmark",
+            "timezone": null,
+            "precision": "date_only"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_64442c42be74b6dd44d3e733dfb4d061b8c52575b3676daa0050473d19cd224d"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "opens": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_baf896132ea6e0a820ca44259137f5d600b1ecf0707774a10208ddc9a950ce9e"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No opening date stated anywhere in the complete document. A downloadable blank application does not prove an open state route."
+        },
+        "availability": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_6a344eeb3f5d30c88f53f1708c9414426d5b3453878c676b43ca656e02159fd7"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document announces2027 grants; live open/closed state, state participation, destination contact and application route usability are outside selected evidence. No present-open inference."
+        },
+        "entryGpa": {
+          "value": {
+            "minimum": 3.75,
+            "scale": null,
+            "basis": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_420c2229eb3526509622cb8d98784500c922ed9067883c1fbc78734f8823f032"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Threshold explicit; scale, weighting and calculation basis remain unverified. Do not assume4.0 scale or weighted/unweighted."
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_023672fa4cb7a23fd6d8acfffa8ea2e61411f72e02540a8e3a145a67a2f0ca56"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No renewal GPA stated."
+        },
+        "applicantStage": {
+          "value": [
+            "hs_senior"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b014c722a64519ebb7b827f2857183b528958068d6fefea07e019d0ea43c7da5"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "eligibilityConditions": {
+          "value": {
+            "operator": "AND",
+            "conditions": [
+              {
+                "kind": "stage",
+                "value": "graduating high school senior;2027 graduate"
+              },
+              {
+                "kind": "citizenship",
+                "value": "U.S. citizen"
+              },
+              {
+                "kind": "residence",
+                "value": "U.S. state with listed JCI Senate scholarship chairperson/contact",
+                "participatingStates": null
+              },
+              {
+                "kind": "destination",
+                "value": "accredited U.S. college/university"
+              },
+              {
+                "kind": "entryGpa",
+                "minimum": 3.75,
+                "scale": null
+              },
+              {
+                "kind": "start",
+                "year": 2027
+              },
+              {
+                "kind": "attendance",
+                "value": "first year of full-time study immediately following high school graduation"
+              }
+            ]
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e7dbe011c4eefd905195721d99b92b31a3265d3413b1b86b082a16f1632af2a1"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "montanaParticipation": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_a89ad0203db2d2587504592446eb39caed0f8954aad17b218d2ae6b4e3d99b99"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Participating-state contact list is linked but not selected; no Montana/Whitefish eligibility assertion."
+        },
+        "destinationScope": {
+          "value": {
+            "country": "United States",
+            "accreditationRequired": true,
+            "description": "post-secondary college or university; no degree-level or two/four-year classification supplied"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b2ac5b4d7d5154d95595022f164ea222b3d9009025c5358ff2580f2f8f3b30eb"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "schoolTypes": {
+          "value": [],
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_8c4a39a52456a3c2f519dd610d3fef1984e6f469c0508a36be5613c61edc17df"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "College/university wording retained; do not impose four-year-only or Any-school mapping."
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_5e359fe3fa1c826dca3b928fb6059bcdf5df798e5661608635814d3259908c86"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No named degree path. College/university does not prove bachelor-only."
+        },
+        "amount": {
+          "value": {
+            "currency": "USD",
+            "minimum": 2000,
+            "maximum": 2500,
+            "publishedDiscreteAmounts": [
+              2000,
+              2500
+            ],
+            "basis": "one_time",
+            "use": "tuition in first year of full-time study immediately following high school graduation",
+            "recipientSlots": 50,
+            "payee": "school; check in recipient name",
+            "selectionBetweenAmounts": null
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_b11f1af779dc7523ef8f8c74d6fe46c08cdb574c115cf4241ff49d39c93e1379"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Amounts are alternatives, not a continuous promised range; slot counts are recipients, not independent awards. First-year tuition scope supports one-payment proposal; renewal rights are separately unstated."
+        },
+        "fundingKind": {
+          "value": "gift",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_31bbaad38e51fe47c8323219b08a8a9c64f66b37daffc955cab26ae1df934828"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Document says grants, not loans; no inferred guaranteed receipt."
+        },
+        "needRequired": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_29dedb069db0b21d0999513de17954361fceccf2a8f7bf94e4e60bfb41de9278"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Complete eligibility and financial sections state no financial-need threshold; silence is not not_required."
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_19fe6f85275885bd15f19d39f8ee11eb87067ed2661167480193619128c6966e"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Optional financial-circumstances explanation is allowed. These questions do not establish an explicit judging rule or priority weight for need."
+        },
+        "financialStatementAmbiguity": {
+          "value": {
+            "section5A": "financing explanation requested",
+            "section5B": "labelled optional",
+            "checklist": "questions5Aand5B answered"
+          },
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_298f5e1b251db340237f2d780cc8663f3e670a653bf5c07f834ab0d15d6c70f9"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Checklist asks questions5-A and5-B answered while section5-B explicitly says optional. Preserve conflict; do not convert to a mandatory need condition."
+        },
+        "renewal": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_38c7e2632920ee2942fdedbe4fb51c1269c0512e33fd5d279fe2cf40ee481cc1"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "First-year tuition use does not explicitly state nonrenewable status or renewal rights."
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_3e9f240b2d99190552eeb4a0f8e4e503b87c1ed397d09c6d712b35ba81cfa683"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No later competitive reapplication rule stated."
+        },
+        "nomination": {
+          "value": null,
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_9c9a554d8c160767f672259af8aa2cb12da07b5cb219118177886d005723747a"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Educator reference and state processing are not evidence of a nomination requirement."
+        },
+        "applicationMode": {
+          "value": "offline",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_41e7d056ab569d506085113f64e5fff3f07f22ff1d5ba367452d4577f8bcc1e2"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "applicationRouting": {
+          "value": {
+            "method": "postal package",
+            "recipientRule": "state scholarship chairperson/contact listed for residence state; contact may live in another state",
+            "stateContact": null,
+            "stateContactListInspected": false,
+            "wrongAddressPackagesForwarded": false
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_eefc282e43ae01bcb057b02a7eba38f6a7702861bfc430741729d1ebca390db0"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Actual contact/address and current mailing destination not inspected; no application interaction or linked-list read."
+        },
+        "materials": {
+          "value": {
+            "personalStatement": {
+              "minimumWords": 300,
+              "maximumWords": 500,
+              "wordCountIncluded": true
+            },
+            "referenceLetters": {
+              "maximum": 3,
+              "minimumEducatorReferences": 1
+            },
+            "transcript": {
+              "currentHighSchoolRequired": true,
+              "includeClassGradesOrScores": true
+            },
+            "acceptanceLetter": "include if already accepted",
+            "supportingDocumentation": "up to3 pages of applicant choice; checklist asks attachment; no invented universal3-page minimum",
+            "photo": "optional but encouraged",
+            "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
+            "financialStatement": "first-year costs",
+            "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_aa1753934a905508084f2ce83cfaf0ef5de39e2d8e4e4180350be8167fc81f4f"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "testScores": {
+          "value": {
+            "required": false,
+            "includeIfAvailable": true,
+            "selectionPointsMayBeAwarded": true
+          },
+          "state": "verified",
+          "evidenceIds": [
+            "evd_d171cd6d56799ed9bf9782af7b4028752d5653df3f9756fa49cdb22227c047e8"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": null
+        },
+        "focus": {
+          "value": {
+            "description": "chosen field explained in statement; no major restriction stated",
+            "mandatoryMajor": null
+          },
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_ed5f77c704b126a0cc753d67058e4bda28053e4cae97ea054201e59923ed3aac"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "Do not limit vocational focus to construction or map university Any to unrestricted verified eligibility."
+        },
+        "otherEligibility": {
+          "value": {
+            "ageThreshold": null,
+            "GED": null,
+            "gapYear": null,
+            "membership": null,
+            "gender": null,
+            "disability": null,
+            "ethnicity": null
+          },
+          "state": "unstated",
+          "evidenceIds": [
+            "evd_ccf2db24bd6af6940d39caed19a23880bd7316315cbe4aefd379e3f3c7d9a856"
+          ],
+          "scope": {
+            "subject": "selected-input-locator-68",
+            "programTrack": "university",
+            "providerDocumentLabel": "SCHOLAR:2026-2027",
+            "graduatingClass": 2027,
+            "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+            "asOf": "2026-10-13T18:22:59.466480+00:00"
+          },
+          "observedAt": "2026-10-13T18:22:59.466480+00:00",
+          "freshness": "applicable",
+          "acceptance": "held",
+          "reason": "No extra explicit rule in complete selected documents; no negative values or unrestricted claims. Immediate full-time post-high-school study requirement stays separate."
+        }
+      },
+      "acceptedFacts": 0,
+      "observedCellDifferences": [
+        {
+          "column": "A",
+          "recorded": "2026-01-12",
+          "documentProposed": "2027-01-12",
+          "state": "held"
+        },
+        {
+          "column": "E",
+          "recorded": "Up to $2,000",
+          "documentProposedDiscreteAmounts": [
+            2000,
+            2500
+          ],
+          "state": "held"
+        },
+        {
+          "column": "N",
+          "recorded": "statement up to500words; up to3references; counselor deadline confirmation",
+          "documentProposed": "300-500words with word count; at least1educator reference; mailed/postmarked2027-01-12; current state destination still unknown",
+          "state": "held"
+        }
+      ],
+      "unknowns": [
+        "Montana sponsor relationship; current participating-state list and actual submission destination",
+        "Route/version continuity to preserved app/canonical identity and older Google Doc aliases",
+        "Opening date, usable open route, GPA scale/weighting/basis, amount-selection basis",
+        "Need judging rule and optional5-B/checklist conflict; renewal/reapplication/nomination unstated",
+        "Full population identity/collision/relationship reconciliation; human fact reviewer not named"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "inputRowLocator": 40,
+      "field": "documentSponsor",
+      "value": "United States JCI Senate Foundation",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "United States JCI Senate Foundation"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "United States JCI Senate Foundation",
+          "localRenderPages": [
+            1,
+            5,
+            6
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_b78dd2b6b09edf5b5b161cee012dd7f72daa69a93f4bde39deff25d08d81d45f"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "documentAwardName",
+      "value": "Vocational/Technical/Trade Scholarship",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Vocational/Technical/Trade Scholarship Application"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Vocational/Technical/Trade Scholarship Application",
+          "localRenderPages": [
+            5
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_a28e43eaf1de833702553b631b5ccedf8aee95ad684c5f88ceaca1d4225a8f97"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "montanaSponsorRelationship",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Neither complete document names Montana Jaycee Foundation or binds that organizer-recorded name to this national program; no parent or state list was selected.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_452d5dc5a8744818550862f9ebb9a068653ea3a76898266e4c80f8184375b212"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "applicationCycleLabel",
+      "value": "SCHOLAR:2026-2027",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "SCHOLAR:2026-2027"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "SCHOLAR:2026-2027",
+          "localRenderPages": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_9fc42eb7eab3dcb8cbb7a5111697e0d5e32223f42cb49e57d43c2ca176695074"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "educationalStartYear",
+      "value": 2027,
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "You must begin your educational program in 2027."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "You must begin your educational program in 2027.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_d7c9583fd8ae3b6817e2f269fa819fa4260dcee4cd4bfb7bc827bc38dd3b61fc"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "academicYear",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document form label and start year do not specify the full academic-year window.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_4f4ca82b26490e181f675a7ff129e85780436d7a50e2a59a9ed62bc64bbacb1f"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "deadline",
+      "value": {
+        "value": "2027-01-12",
+        "purpose": "mailing and postmark",
+        "timezone": null,
+        "precision": "date_only"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "APPLICATIONS MUST BE MAILED AND POSTMARKED BY JANUARY 12, 2027."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "APPLICATIONS MUST BE MAILED AND POSTMARKED BY JANUARY 12, 2027.",
+          "localRenderPages": [
+            2
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_5d535b32967dd5d98fd8e6f7091c6b2e98e0cf46b8ddc231536216a52b818209"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "opens",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No opening date stated anywhere in the complete document. A downloadable blank application does not prove an open state route.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_831256532b74242de30b25a585c7793361d7fa4af9ac1254900aab6114384c52"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "availability",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document announces2027 grants; live open/closed state, state participation, destination contact and application route usability are outside selected evidence. No present-open inference.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_b72f97d009e2f0925136797bd0876bbe7d7c34a5474b6ca02ddc63f4a3598181"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "entryGpa",
+      "value": {
+        "minimum": 3.25,
+        "scale": null,
+        "basis": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "STUDENTS MUST HAVE A GPA OF 3.25 AND ABOVE TO BE CONSIDERED."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "STUDENTS MUST HAVE A GPA OF 3.25 AND ABOVE TO BE CONSIDERED.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Threshold explicit; scale, weighting and calculation basis remain unverified. Do not assume4.0 scale or weighted/unweighted.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_a856f2f8939c8363188bffada694906236175f5dfa3b18c457d607d5edd97086"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "renewalGpa",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No renewal GPA stated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_8cd986abe205f8c849d5fb376f89c91a74e89bd11e28cf92126d078719d44188"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "applicantStage",
+      "value": [
+        "hs_senior"
+      ],
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Graduating high school seniors in the United States, who reside in a state that has a JCI Senate scholarship chairperson or contact."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Graduating high school seniors in the United States, who reside in a state that has a JCI Senate scholarship chairperson or contact.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_bf5860ad4d5fcffe43672930c9c3fa67205f2e1395aed50330af3aac69fd3cd9"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "eligibilityConditions",
+      "value": {
+        "operator": "AND",
+        "conditions": [
+          {
+            "kind": "stage",
+            "value": "graduating high school senior;2027 graduate"
+          },
+          {
+            "kind": "citizenship",
+            "value": "U.S. citizen"
+          },
+          {
+            "kind": "residence",
+            "value": "U.S. state with listed JCI Senate scholarship chairperson/contact",
+            "participatingStates": null
+          },
+          {
+            "kind": "destination",
+            "value": "accredited U.S. vocational/technical/trade program"
+          },
+          {
+            "kind": "entryGpa",
+            "minimum": 3.25,
+            "scale": null
+          },
+          {
+            "kind": "start",
+            "year": 2027
+          },
+          {
+            "kind": "attendance",
+            "value": "first year of full-time study immediately following high school graduation"
+          }
+        ]
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "You must be a U.S. citizen to apply for this scholarship.",
+        "If your state does not have a chairperson or contact listed, you are not eligible to apply.",
+        "Scholarships must be used for tuition in the first year of full-time study immediately following high school graduation."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "You must be a U.S. citizen to apply for this scholarship.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "If your state does not have a chairperson or contact listed, you are not eligible to apply.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Scholarships must be used for tuition in the first year of full-time study immediately following high school graduation.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_55c17a824e35357dcc815468eb8d45de3791b0244ef22c68a1a7ef57140c1de2"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "montanaParticipation",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Participating-state contact list is linked but not selected; no Montana/Whitefish eligibility assertion.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_5a54320985ac05702db90fbe6aa55bedee630ab30cb35752ca6068b95cea92f6"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "destinationScope",
+      "value": {
+        "country": "United States",
+        "accreditationRequired": true,
+        "description": "short-term specialized vocational, technical or trade programs, including qualifying community-college programs; not bachelor degree programs"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "accredited school offering vocational, technical or trade programs within the United States."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "accredited school offering vocational, technical or trade programs within the United States.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_f0c7d24589db5fdb16901ec1b4cd5443b64fa3bd7599765b26a304b57a678d62"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "schoolTypes",
+      "value": [
+        "trade"
+      ],
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Vocational/Technical/Trade"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Vocational/Technical/Trade",
+          "localRenderPages": [
+            1,
+            2,
+            3,
+            5
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Community college is qualified by specialized program, not unrestricted two-year eligibility.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_57d0e75fd940ea8a34e9673d0e53f4af401a8e2b32ad4aa97777fad6cdaf4050"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "studyPaths",
+      "value": {
+        "normalized": [
+          "certificate",
+          "associate"
+        ],
+        "otherPublished": [
+          "diploma",
+          "license"
+        ],
+        "bachelorExcludedByProgramDescription": true
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Completion leads to a certificate, diploma, license, or associate degree, rather than a bachelor’s degree."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Completion leads to a certificate, diploma, license, or associate degree, rather than a bachelor’s degree.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_066cd6743bb7c9b0f289b4db01070d5c7c801a568928a36112ccf04b63a66aa8"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "amount",
+      "value": {
+        "currency": "USD",
+        "minimum": 1000,
+        "maximum": 1500,
+        "publishedDiscreteAmounts": [
+          1000,
+          1500
+        ],
+        "basis": "one_time",
+        "use": "tuition in first year of full-time study immediately following high school graduation",
+        "recipientSlots": 10,
+        "payee": "school; check in recipient name",
+        "selectionBetweenAmounts": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Scholarship grants in amounts of $1000 or $1500 will be awarded",
+        "Ten (10) grants will be awarded to 2027 graduates by the United States JCI Senate Foundation."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Scholarship grants in amounts of $1000 or $1500 will be awarded",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Ten (10) grants will be awarded to 2027 graduates by the United States JCI Senate Foundation.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Amounts are alternatives, not a continuous promised range; slot counts are recipients, not independent awards. First-year tuition scope supports one-payment proposal; renewal rights are separately unstated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_fb311cb06e5343c3fef667ab45976de7cfdf9a7742315dc9ed3e97bc6f89ee64"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "fundingKind",
+      "value": "gift",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Scholarship grants in amounts"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Scholarship grants in amounts",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document says grants, not loans; no inferred guaranteed receipt.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_f10623e15226993bf016082dcc2caf5afecb43cc878b7da7af01a8c2d76cfe60"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "needRequired",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Complete eligibility and financial sections state no financial-need threshold; silence is not not_required.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_6c390481c8fe5ee57e7180e01c1ac79f5089ee7fd781bcb17a7b4be3e9511af6"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "needSelection",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "This financial section is to show your understanding of the costs of your education.",
+        "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+        "Explain any personal, family or financial circumstances you believe merit consideration."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "This financial section is to show your understanding of the costs of your education.",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Explain any personal, family or financial circumstances you believe merit consideration.",
+          "localRenderPages": [
+            6
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Optional financial-circumstances explanation is allowed. These questions do not establish an explicit judging rule or priority weight for need.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_0b4e4836d50117a24464af9e2cd899fc8b168890bb5178f39a637cf18d34c492"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "financialStatementAmbiguity",
+      "value": {
+        "section5A": "financing explanation requested",
+        "section5B": "labelled optional",
+        "checklist": "questions5Aand5B answered"
+      },
+      "state": "conflict",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+        "Questions 5-A and 5-B are answered."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Questions 5-A and 5-B are answered.",
+          "localRenderPages": [
+            3
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Checklist asks questions5-A and5-B answered while section5-B explicitly says optional. Preserve conflict; do not convert to a mandatory need condition.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_3f3598c45dc3ed7eeb65200cd473a7ce499e4e9d185e6e1799e1431369e02adc"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "renewal",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "First-year tuition use does not explicitly state nonrenewable status or renewal rights.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_ad7ce48bc65b17ec64d8834aad0078b9a749ce8c79ac6dd28a52960384a6f7ca"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "reapplication",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No later competitive reapplication rule stated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_d717c0509feafeb7d79499022731bb0eeb53a9bbdf3200b33228b25423fdbd1f"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "nomination",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Educator reference and state processing are not evidence of a nomination requirement.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_c9578de78aaaa5d7b14596c494f17271d202dfea649f7763914867d2d81918f8"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "applicationMode",
+      "value": "offline",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "All application materials MUST be submitted in one mailing.",
+        "NO ELECTRONIC SUBMISSIONS WILL BE ACCEPTED."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "All application materials MUST be submitted in one mailing.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "NO ELECTRONIC SUBMISSIONS WILL BE ACCEPTED.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_7dc6b48d3382da92cc780102fd0ff243a478e401dfea86ef9c79566b903e8145"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "applicationRouting",
+      "value": {
+        "method": "postal package",
+        "recipientRule": "state scholarship chairperson/contact listed for residence state; contact may live in another state",
+        "stateContact": null,
+        "stateContactListInspected": false,
+        "wrongAddressPackagesForwarded": false
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Using the “State Chairman Contact List” locate the state where you live and submit your application to the state chairperson or contact listed for that state."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Using the “State Chairman Contact List” locate the state where you live and submit your application to the state chairperson or contact listed for that state.",
+          "localRenderPages": [
+            2
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Actual contact/address and current mailing destination not inspected; no application interaction or linked-list read.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_45b1d7fdcad4ebfa62103ee0e92072de0a9f780d19239c9ae2048ec1a3839322"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "materials",
+      "value": {
+        "personalStatement": {
+          "minimumWords": 300,
+          "maximumWords": 500,
+          "wordCountIncluded": true
+        },
+        "referenceLetters": {
+          "maximum": 3,
+          "minimumEducatorReferences": 1
+        },
+        "transcript": {
+          "currentHighSchoolRequired": true,
+          "includeClassGradesOrScores": true
+        },
+        "acceptanceLetter": "include if already accepted",
+        "supportingDocumentation": "up to3 pages of applicant choice; checklist asks attachment; no invented universal3-page minimum",
+        "photo": "optional but encouraged",
+        "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
+        "financialStatement": "first year or total vocational program cost",
+        "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
+        "REFERENCE LETTERS (maximum of three (3) letters)",
+        "At least one reference letter must be from an educator.",
+        "A copy of your current high school transcript MUST be included."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
+          "localRenderPages": [
+            7
+          ]
+        },
+        {
+          "textutilExactExcerpt": "REFERENCE LETTERS (maximum of three (3) letters)",
+          "localRenderPages": [
+            7
+          ]
+        },
+        {
+          "textutilExactExcerpt": "At least one reference letter must be from an educator.",
+          "localRenderPages": [
+            7
+          ]
+        },
+        {
+          "textutilExactExcerpt": "A copy of your current high school transcript MUST be included.",
+          "localRenderPages": [
+            7
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_484901acde4020372e2f45c6f36a198b5e1d6d7e6e72201df06ff2f4c7e573ef"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "testScores",
+      "value": {
+        "required": false,
+        "includeIfAvailable": true,
+        "selectionPointsMayBeAwarded": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "NOTE: The ACT/SAT scores are not required."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "NOTE: The ACT/SAT scores are not required.",
+          "localRenderPages": [
+            2
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_e4935fded49585ec736de5ee4fd5a283778544047a30856af1a8ef345441cde5"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "focus",
+      "value": {
+        "description": "vocational/technical/trade paths; examples non-exhaustive",
+        "mandatoryMajor": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [
+        "Fields of study may include, but are not limited to:"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Fields of study may include, but are not limited to:",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Do not limit vocational focus to construction or map university Any to unrestricted verified eligibility.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_4427d85ad06ff3a15e6bd35c338ab53efe3e78a874fcb41eeeee0b1ff33ab335"
+    },
+    {
+      "inputRowLocator": 40,
+      "field": "otherEligibility",
+      "value": {
+        "ageThreshold": null,
+        "GED": null,
+        "gapYear": null,
+        "membership": null,
+        "gender": null,
+        "disability": null,
+        "ethnicity": null
+      },
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-40",
+        "programTrack": "vocational",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:21:52.963635+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+      "sourceArtifact": "vocational-source.doc",
+      "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+      "extractionArtifact": "vocational-extraction.json",
+      "extractionSha256": "16d002c8cbaf5cc223e4964c8bcd31a626b1fd1f7b22d0237ba95c1b5373b408",
+      "observedAt": "2026-10-13T18:21:52.963635+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No extra explicit rule in complete selected documents; no negative values or unrestricted claims. Immediate full-time post-high-school study requirement stays separate.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_27c613dd412fda0a245ab27fef454e020a0cdb6b2afac71e54826cb965fa065b"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "documentSponsor",
+      "value": "United States JCI Senate Foundation",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "United States JCI Senate Foundation"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "United States JCI Senate Foundation",
+          "localRenderPages": [
+            1,
+            4,
+            5
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_eaf4d1c0deb10f6089a49c8ba7e33dd5624409bfda08cf8fad0dd7af822bec0f"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "documentAwardName",
+      "value": "College/University Scholarship",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "College/University Scholarship Application"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "College/University Scholarship Application",
+          "localRenderPages": [
+            1,
+            4
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_52dbd8a4a28a6fbc5ebfae32fd740c37cde00405c7e1cae1e7e3f0cb7d537ad7"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "montanaSponsorRelationship",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Neither complete document names Montana Jaycee Foundation or binds that organizer-recorded name to this national program; no parent or state list was selected.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_c48e1d668148692fb1ad9d111e429599eb5f065b8dde13e09dd8aef7fe0bee00"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "applicationCycleLabel",
+      "value": "SCHOLAR:2026-2027",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "SCHOLAR:2026-2027"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "SCHOLAR:2026-2027",
+          "localRenderPages": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_7a7f522459055c64f65cc775868cd2ddf48ebb440e060ceb2327b89caeceba6f"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "educationalStartYear",
+      "value": 2027,
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "You must begin your college career in 2027."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "You must begin your college career in 2027.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_a64d07adc4350b869c336b290867871645734059634a5b800b0a067d7375cfc2"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "academicYear",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document form label and start year do not specify the full academic-year window.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_6c9651901e091d2437907f384446215e21244290e59974643d8ecff66200c5ad"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "deadline",
+      "value": {
+        "value": "2027-01-12",
+        "purpose": "mailing and postmark",
+        "timezone": null,
+        "precision": "date_only"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "APPLICATIONS MUST BE POSTMARKED AND MAILED BY JANUARY 12, 2027"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "APPLICATIONS MUST BE POSTMARKED AND MAILED BY JANUARY 12, 2027",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_64442c42be74b6dd44d3e733dfb4d061b8c52575b3676daa0050473d19cd224d"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "opens",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No opening date stated anywhere in the complete document. A downloadable blank application does not prove an open state route.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_baf896132ea6e0a820ca44259137f5d600b1ecf0707774a10208ddc9a950ce9e"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "availability",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document announces2027 grants; live open/closed state, state participation, destination contact and application route usability are outside selected evidence. No present-open inference.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_6a344eeb3f5d30c88f53f1708c9414426d5b3453878c676b43ca656e02159fd7"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "entryGpa",
+      "value": {
+        "minimum": 3.75,
+        "scale": null,
+        "basis": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "STUDENTS MUST HAVE A GPA OF 3.75 AND ABOVE TO BE CONSIDERED."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "STUDENTS MUST HAVE A GPA OF 3.75 AND ABOVE TO BE CONSIDERED.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Threshold explicit; scale, weighting and calculation basis remain unverified. Do not assume4.0 scale or weighted/unweighted.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_420c2229eb3526509622cb8d98784500c922ed9067883c1fbc78734f8823f032"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "renewalGpa",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No renewal GPA stated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_023672fa4cb7a23fd6d8acfffa8ea2e61411f72e02540a8e3a145a67a2f0ca56"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "applicantStage",
+      "value": [
+        "hs_senior"
+      ],
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "Graduating high school seniors in the United States, who reside in a state that has a JCI Senate scholarship chairperson or contact."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Graduating high school seniors in the United States, who reside in a state that has a JCI Senate scholarship chairperson or contact.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_b014c722a64519ebb7b827f2857183b528958068d6fefea07e019d0ea43c7da5"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "eligibilityConditions",
+      "value": {
+        "operator": "AND",
+        "conditions": [
+          {
+            "kind": "stage",
+            "value": "graduating high school senior;2027 graduate"
+          },
+          {
+            "kind": "citizenship",
+            "value": "U.S. citizen"
+          },
+          {
+            "kind": "residence",
+            "value": "U.S. state with listed JCI Senate scholarship chairperson/contact",
+            "participatingStates": null
+          },
+          {
+            "kind": "destination",
+            "value": "accredited U.S. college/university"
+          },
+          {
+            "kind": "entryGpa",
+            "minimum": 3.75,
+            "scale": null
+          },
+          {
+            "kind": "start",
+            "year": 2027
+          },
+          {
+            "kind": "attendance",
+            "value": "first year of full-time study immediately following high school graduation"
+          }
+        ]
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "You must be a U.S. citizen to apply for this scholarship.",
+        "If your state does not have a chairperson or contact listed, you are not eligible to apply.",
+        "Scholarships must be used for tuition in the first year of full-time study immediately following high school graduation."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "You must be a U.S. citizen to apply for this scholarship.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "If your state does not have a chairperson or contact listed, you are not eligible to apply.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Scholarships must be used for tuition in the first year of full-time study immediately following high school graduation.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_e7dbe011c4eefd905195721d99b92b31a3265d3413b1b86b082a16f1632af2a1"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "montanaParticipation",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Participating-state contact list is linked but not selected; no Montana/Whitefish eligibility assertion.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_a89ad0203db2d2587504592446eb39caed0f8954aad17b218d2ae6b4e3d99b99"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "destinationScope",
+      "value": {
+        "country": "United States",
+        "accreditationRequired": true,
+        "description": "post-secondary college or university; no degree-level or two/four-year classification supplied"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "accredited post-secondary college or university within the United States."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "accredited post-secondary college or university within the United States.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_b2ac5b4d7d5154d95595022f164ea222b3d9009025c5358ff2580f2f8f3b30eb"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "schoolTypes",
+      "value": [],
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "College/university wording retained; do not impose four-year-only or Any-school mapping.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_8c4a39a52456a3c2f519dd610d3fef1984e6f469c0508a36be5613c61edc17df"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "studyPaths",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No named degree path. College/university does not prove bachelor-only.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_5e359fe3fa1c826dca3b928fb6059bcdf5df798e5661608635814d3259908c86"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "amount",
+      "value": {
+        "currency": "USD",
+        "minimum": 2000,
+        "maximum": 2500,
+        "publishedDiscreteAmounts": [
+          2000,
+          2500
+        ],
+        "basis": "one_time",
+        "use": "tuition in first year of full-time study immediately following high school graduation",
+        "recipientSlots": 50,
+        "payee": "school; check in recipient name",
+        "selectionBetweenAmounts": null
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "Scholarship grants in amounts of $2000 or $2500 will be awarded",
+        "Fifty (50) grants will be awarded to 2027 graduates by the United States JCI Senate Foundation."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Scholarship grants in amounts of $2000 or $2500 will be awarded",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Fifty (50) grants will be awarded to 2027 graduates by the United States JCI Senate Foundation.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Amounts are alternatives, not a continuous promised range; slot counts are recipients, not independent awards. First-year tuition scope supports one-payment proposal; renewal rights are separately unstated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_b11f1af779dc7523ef8f8c74d6fe46c08cdb574c115cf4241ff49d39c93e1379"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "fundingKind",
+      "value": "gift",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "Scholarship grants in amounts"
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Scholarship grants in amounts",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Document says grants, not loans; no inferred guaranteed receipt.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_31bbaad38e51fe47c8323219b08a8a9c64f66b37daffc955cab26ae1df934828"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "needRequired",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Complete eligibility and financial sections state no financial-need threshold; silence is not not_required.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_29dedb069db0b21d0999513de17954361fceccf2a8f7bf94e4e60bfb41de9278"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "needSelection",
+      "value": null,
+      "state": "unverified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "This financial section is to show your understanding of the costs of your education.",
+        "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+        "Explain any personal, family or financial circumstances you believe merit consideration."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "This financial section is to show your understanding of the costs of your education.",
+          "localRenderPages": [
+            5
+          ]
+        },
+        {
+          "textutilExactExcerpt": "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+          "localRenderPages": [
+            5
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Explain any personal, family or financial circumstances you believe merit consideration.",
+          "localRenderPages": [
+            5
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Optional financial-circumstances explanation is allowed. These questions do not establish an explicit judging rule or priority weight for need.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_19fe6f85275885bd15f19d39f8ee11eb87067ed2661167480193619128c6966e"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "financialStatementAmbiguity",
+      "value": {
+        "section5A": "financing explanation requested",
+        "section5B": "labelled optional",
+        "checklist": "questions5Aand5B answered"
+      },
+      "state": "conflict",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+        "Questions 5-A and 5-B are answered."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "5-B. FINANCIAL CONSIDERATIONS: (optional)",
+          "localRenderPages": [
+            5
+          ]
+        },
+        {
+          "textutilExactExcerpt": "Questions 5-A and 5-B are answered.",
+          "localRenderPages": [
+            3
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Checklist asks questions5-A and5-B answered while section5-B explicitly says optional. Preserve conflict; do not convert to a mandatory need condition.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_298f5e1b251db340237f2d780cc8663f3e670a653bf5c07f834ab0d15d6c70f9"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "renewal",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "First-year tuition use does not explicitly state nonrenewable status or renewal rights.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_38c7e2632920ee2942fdedbe4fb51c1269c0512e33fd5d279fe2cf40ee481cc1"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "reapplication",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No later competitive reapplication rule stated.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_3e9f240b2d99190552eeb4a0f8e4e503b87c1ed397d09c6d712b35ba81cfa683"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "nomination",
+      "value": null,
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Educator reference and state processing are not evidence of a nomination requirement.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_9c9a554d8c160767f672259af8aa2cb12da07b5cb219118177886d005723747a"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "applicationMode",
+      "value": "offline",
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "All materials MUST be submitted in one mailing.",
+        "NO ELECTRONIC SUBMISSIONS WILL BE ACCEPTED."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "All materials MUST be submitted in one mailing.",
+          "localRenderPages": [
+            1
+          ]
+        },
+        {
+          "textutilExactExcerpt": "NO ELECTRONIC SUBMISSIONS WILL BE ACCEPTED.",
+          "localRenderPages": [
+            1
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_41e7d056ab569d506085113f64e5fff3f07f22ff1d5ba367452d4577f8bcc1e2"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "applicationRouting",
+      "value": {
+        "method": "postal package",
+        "recipientRule": "state scholarship chairperson/contact listed for residence state; contact may live in another state",
+        "stateContact": null,
+        "stateContactListInspected": false,
+        "wrongAddressPackagesForwarded": false
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "Using the “State Chairman Contact List” locate the state where you live and submit your application to the state chairperson or contact listed for that state."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Using the “State Chairman Contact List” locate the state where you live and submit your application to the state chairperson or contact listed for that state.",
+          "localRenderPages": [
+            2
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Actual contact/address and current mailing destination not inspected; no application interaction or linked-list read.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_eefc282e43ae01bcb057b02a7eba38f6a7702861bfc430741729d1ebca390db0"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "materials",
+      "value": {
+        "personalStatement": {
+          "minimumWords": 300,
+          "maximumWords": 500,
+          "wordCountIncluded": true
+        },
+        "referenceLetters": {
+          "maximum": 3,
+          "minimumEducatorReferences": 1
+        },
+        "transcript": {
+          "currentHighSchoolRequired": true,
+          "includeClassGradesOrScores": true
+        },
+        "acceptanceLetter": "include if already accepted",
+        "supportingDocumentation": "up to3 pages of applicant choice; checklist asks attachment; no invented universal3-page minimum",
+        "photo": "optional but encouraged",
+        "schoolCommunityEmploymentStatements": "separate attached responses for sections7,8,9",
+        "financialStatement": "first-year costs",
+        "typedPackage": "black ink; single-sided; numbered; prescribed order; stapled; checklist first; exclude first two instruction pages"
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
+        "REFERENCE LETTERS (maximum of three (3) letters)",
+        "At least one reference letter must be from an educator.",
+        "A copy of your current high school transcript MUST be included."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "Complete a statement of 300 to 500 words, indicating your chosen field of study.",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "REFERENCE LETTERS (maximum of three (3) letters)",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "At least one reference letter must be from an educator.",
+          "localRenderPages": [
+            6
+          ]
+        },
+        {
+          "textutilExactExcerpt": "A copy of your current high school transcript MUST be included.",
+          "localRenderPages": [
+            6
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_aa1753934a905508084f2ce83cfaf0ef5de39e2d8e4e4180350be8167fc81f4f"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "testScores",
+      "value": {
+        "required": false,
+        "includeIfAvailable": true,
+        "selectionPointsMayBeAwarded": true
+      },
+      "state": "verified",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [
+        "NOTE: The ACT/SAT scores are not mandatory, but judging points may awarded for the test scores."
+      ],
+      "locators": [
+        {
+          "textutilExactExcerpt": "NOTE: The ACT/SAT scores are not mandatory, but judging points may awarded for the test scores.",
+          "localRenderPages": [
+            2
+          ]
+        }
+      ],
+      "completeSourceInspected": true,
+      "absenceOrLimit": null,
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_d171cd6d56799ed9bf9782af7b4028752d5653df3f9756fa49cdb22227c047e8"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "focus",
+      "value": {
+        "description": "chosen field explained in statement; no major restriction stated",
+        "mandatoryMajor": null
+      },
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "Do not limit vocational focus to construction or map university Any to unrestricted verified eligibility.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_ed5f77c704b126a0cc753d67058e4bda28053e4cae97ea054201e59923ed3aac"
+    },
+    {
+      "inputRowLocator": 68,
+      "field": "otherEligibility",
+      "value": {
+        "ageThreshold": null,
+        "GED": null,
+        "gapYear": null,
+        "membership": null,
+        "gender": null,
+        "disability": null,
+        "ethnicity": null
+      },
+      "state": "unstated",
+      "scope": {
+        "subject": "selected-input-locator-68",
+        "programTrack": "university",
+        "providerDocumentLabel": "SCHOLAR:2026-2027",
+        "graduatingClass": 2027,
+        "identityBinding": "held; evidence supports document-scoped proposals, not acceptance against the Montana-named record",
+        "asOf": "2026-10-13T18:22:59.466480+00:00"
+      },
+      "sourceUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+      "sourceArtifact": "university-source.doc",
+      "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+      "extractionArtifact": "university-extraction.json",
+      "extractionSha256": "ef95c87a8d1fdf0083637029844a0b12512adfeb99f043114496179ac0fe57c7",
+      "observedAt": "2026-10-13T18:22:59.466480+00:00",
+      "excerpts": [],
+      "locators": [],
+      "completeSourceInspected": true,
+      "absenceOrLimit": "No extra explicit rule in complete selected documents; no negative values or unrestricted claims. Immediate full-time post-high-school study requirement stays separate.",
+      "acceptance": "held",
+      "reviewer": null,
+      "evidenceId": "evd_ccf2db24bd6af6940d39caed19a23880bd7316315cbe4aefd379e3f3c7d9a856"
+    }
+  ],
+  "acceptedFacts": 0,
+  "humanFactReviewer": null,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "continuationLedger": {
+    "parent": "docs/evidence/sd2-first-batch/inventory-ledger.json",
+    "parentSha256": "819a185856aa98dc925b832986b7a8e870c0178237986a034691adf1db2cf422",
+    "identityKey": "original selected-copy ledger row + exact native name/source projection; row is only a locator, not a stable award ID",
+    "outcomes": [
+      {
+        "parentRowLocator": 40,
+        "outcome": "held",
+        "identityHoldPreserved": true,
+        "proposalRecordIndex": 0
+      },
+      {
+        "parentRowLocator": 68,
+        "outcome": "held",
+        "identityHoldPreserved": true,
+        "proposalRecordIndex": 1
+      }
+    ],
+    "noSecondReviewsQueue": true
+  },
+  "denominators": {
+    "savedSelectedRows": 794,
+    "savedNamedRows": 411,
+    "savedEmptyProjectionRows": 383,
+    "savedUniqueExactNames": 410,
+    "previousResearchRows": 3,
+    "thisCheckpointRows": 2,
+    "cumulativeBoundedResearchRows": 5,
+    "remainingNamedRowsWithoutSelectedResearch": 406,
+    "thisCheckpointSources": 2,
+    "sourceDocumentsComplete": 2,
+    "futureDistinctAwardCount": null,
+    "appRecords": 411,
+    "M1Records": 437,
+    "limits": "Local research coverage accounting only; no new inventory capture, closed identity hold, accepted award count or canonical completeness claim."
+  },
+  "inferences": [
+    "The two named document tracks support preserving separate candidates; shared sponsor and duplicate organizer name do not justify merging.",
+    "GPA/destination differences corroborate possible continuity to two existing app IDs; historical route change and Montana relationship keep mapping held."
+  ]
+}

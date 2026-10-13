@@ -1,0 +1,41 @@
+{
+  "url": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+  "finalUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc",
+  "httpStatus": 200,
+  "curlExitCode": 0,
+  "redirectFollowingDisabled": true,
+  "redirectsObserved": 0,
+  "headers": [
+    "HTTP/1.1 200 OK",
+    "Date: Tue, 13 Oct 2026 18:22:59 GMT",
+    "Last-Modified: Wed, 16 Sep 2026 03:44:24 GMT",
+    "Content-Length: 138752",
+    "Content-Type: application/msword"
+  ],
+  "sourceBytes": 138752,
+  "sourceSha256": "5e31c5738bda9b00b3b5f881fc3ba6ac2423b680c91aca174d67a94007a3ffc2",
+  "sourceArtifact": "university-source.doc",
+  "observedAt": "2026-10-13T18:22:59.466480+00:00",
+  "retrievalStartedAt": null,
+  "timingLimit": "Completion time uses local download file mtime; exact tool launch time unavailable.",
+  "command": [
+    "curl",
+    "-fsSL",
+    "--max-redirs",
+    "0",
+    "--proto",
+    "=https",
+    "--connect-timeout",
+    "30",
+    "--max-time",
+    "60",
+    "-D",
+    "/private/tmp/sd2-jaycee-university-headers.txt",
+    "-o",
+    "/private/tmp/sd2-jaycee-university.doc",
+    "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20%20Foundation%20University%20Scholarship%20Application%20_.doc"
+  ],
+  "publishedCycleLabel": "SCHOLAR:2026-2027",
+  "sourceMetadataPageCount": 6,
+  "httpLastModifiedIsNotFactVerification": true
+}
