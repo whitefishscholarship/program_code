@@ -1,0 +1,4381 @@
+{
+  "schemaVersion": 1,
+  "status": "local_design_pilot_only",
+  "asOf": "2026-10-13",
+  "counts": {
+    "records": 12,
+    "sourceResources": 16,
+    "evidenceRecords": 15,
+    "identityHolds": 2,
+    "currentAcceptedFacts": 0
+  },
+  "inputPins": {
+    "web/fixtures/r3/catalog-v1.json": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908",
+    "docs/evidence/scholarship-intake/related-material-additional-evidence.json": "e6832f375b00e7f253e160efcc4f250041905a9e02f1859c5a3f3ff544f20729",
+    "docs/evidence/scholarship-intake/dawson-field-evidence.json": "288d2531c33a77d56b81586fd2ed83b6437c09f58b667f249eb0a72df3e38fa9",
+    "docs/evidence/scholarship-intake/ngpa-field-evidence.json": "59bf4b23df74056159a7dbc30b7f79481a03f799789d6e92b6c29b84eada56ff",
+    "docs/evidence/scholarship-intake/wai-field-evidence.json": "a7f19b0b01e2e1698a4d81c8be4fe92c61e7112c5caa483f0027e3fd8967e69a",
+    "docs/evidence/scholarship-intake/remaining-community-evidence.json": "0d838476af26eaf8f54bec6fc7b13f64ab4afa8caeca9155d3914c87416cda9c",
+    "docs/evidence/scholarship-intake/aopa-field-evidence.json": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4"
+  },
+  "records": [
+    {
+      "awardId": "award-577dacb8c225",
+      "name": "Ted Lund Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 2
+      },
+      "sourceIds": [
+        "src_cc76c70549f4a91f88f72091c61ebcf37c5777d0d7a7ff6cfd4d9e3f63a605e8"
+      ],
+      "cycleId": "cyc_801c82e9f0bd6d4998c2b62a62c5312199f0dca8b6148b9f24042d78232bc546",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "Not open yet",
+        "B": "In-State",
+        "C": null,
+        "D": "Whitefish High School",
+        "E": "TBD",
+        "F": "Paper Application",
+        "G": "Ted Lund Scholarship",
+        "H": "Student Athlete / Sports Background",
+        "I": null,
+        "J": "Any",
+        "K": null,
+        "L": "Any",
+        "M": null,
+        "N": "Must have played on a WHS team. Short essay on the impact of sports and a coach letter; 3 typed paper copies. Confirm the current deadline with your counselor.",
+        "O": "https://docs.google.com/document/d/1zh2DUt015wNF_049edAxG2qURNrAMWfn/edit"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "WHS sport connection; essay, coach reference and three paper copies are recorded, unverified. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Current counselor instructions, deadline/cycle, school types and materials; source not inspected.",
+      "review": {
+        "reviewId": "rev_85dbc4629fb01a82cf72cc20a7d8f436e46a5f6d1ea499ffe3a6cfa4a8e143a4",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-2179b44d009d",
+      "name": "Pell Promise for Montana Students",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "official saved Pell route transition",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 18
+      },
+      "sourceIds": [
+        "src_04a21a2ba1a4b8501d73a10a57a6c505ab7276b7104f4624287bcc102d19e566"
+      ],
+      "cycleId": "cyc_967b4fa3d976565444dcb38e1c87331761c417b8bb22a66fd94811d530748183",
+      "cycleLabel": "Fall 2027",
+      "recorded": {
+        "A": null,
+        "B": "U.S. resident",
+        "C": "Carroll College",
+        "D": "National",
+        "E": "Potentially up to 100% of tuition; package includes loans",
+        "F": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+        "G": "Pell Promise for Montana Students",
+        "H": "Financial need; Full-time enrollment",
+        "I": "3",
+        "J": "4-Year",
+        "K": "Renewing",
+        "L": "Undergrad",
+        "M": "Yes",
+        "N": "Fall 2027 first-time freshmen and transfers qualifying for Pell through FAFSA, living on campus. Keep a 3.0 GPA and 12 credits per semester. Combines aid and loans; not all grant funding.",
+        "O": "Carroll Pell Promise"
+      },
+      "fields": {
+        "needRequired": {
+          "value": "required",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_0c47a707fffa9e36c11356771c40aab82dc17fb46edd718a2a7ba910b2d497ea"
+          ],
+          "scope": "Fall 2027",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": 3.0,
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_0c47a707fffa9e36c11356771c40aab82dc17fb46edd718a2a7ba910b2d497ea"
+          ],
+          "scope": "maintenance proposed from fresh N; saved synopsis does not resolve entry/renewal distinction",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": "mixed",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_0c47a707fffa9e36c11356771c40aab82dc17fb46edd718a2a7ba910b2d497ea"
+          ],
+          "scope": "Fall 2027",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleLabel": {
+          "value": "Fall 2027",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_0c47a707fffa9e36c11356771c40aab82dc17fb46edd718a2a7ba910b2d497ea"
+          ],
+          "scope": "Fall 2027",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Pell qualification is a recorded prerequisite; 3.0 may be maintenance GPA, not an entry cutoff. Aid includes loans. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Refresh Fall 2027 page; distinguish entry/renewal GPA, grant/loan components and route/window.",
+      "review": {
+        "reviewId": "rev_543954da21fcc80fe77d00ba232d020d78a01d93483ed26ff87763b163429ad6",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-8bce77306c27",
+      "name": "Gladys R. Spear Memorial Scholarship ($500)",
+      "identityState": "held",
+      "mappingBasis": "name-only candidate; locator changed/missing",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 45
+      },
+      "sourceIds": [
+        "src_c4a8dcbe5717ddd037768e73ea1f58e84ea0911d9f086b5906eac554bd4111dc"
+      ],
+      "cycleId": "cyc_08f92b79def048ed9076ed6ba3d940b393c3b2db1da00d4eac9b42fef5f3c1c8",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "2025-04-04",
+        "B": "In-State",
+        "C": null,
+        "D": "Whitefish High School",
+        "E": "$500",
+        "F": "Paper Application",
+        "G": "Gladys R. Spear Memorial Scholarship ($500)",
+        "H": "Other Learning Disability; Chronic Disease / Physical Health",
+        "I": null,
+        "J": "Any",
+        "K": null,
+        "L": "Any",
+        "M": null,
+        "N": "For students with a physical or learning disability who have learned to rise above their disability. Paper application. Confirm the current deadline with your counselor.",
+        "O": "https://drive.google.com/file/d/1x-jB-FmJdyNR37IlmrMISCqWNVv88pmp/view?usp=sharing"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Optional disability connection; no negative inference from an unanswered sensitive choice. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Document differs from app locator; verify identity/version and full current public instructions.",
+      "review": {
+        "reviewId": "rev_0f42dbdf564e1fc3b58daf849f5937cdb41f654edd3f5e6ddec0813fa00757bb",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-62a1f1662db9",
+      "name": "Astoria Hotel & Suites Athletic Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 80
+      },
+      "sourceIds": [
+        "src_fc55fc0c56283c14209967acfa5e14fffc332d9053648c35f7eebd555f40d618",
+        "src_525cfb2f08da92c481d6ad1f0ea5f789934bd8e7bb041016c4db3bfba9db7839"
+      ],
+      "cycleId": "cyc_49bff3a5125e5cd5c68111692537459f1da9cc582b68a8e314561b7715e79f86",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "2026-03-01",
+        "B": "In-State",
+        "C": "Dawson Community College",
+        "D": "National",
+        "E": null,
+        "F": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+        "G": "Astoria Hotel & Suites Athletic Scholarship",
+        "H": "Student Athlete / Sports Background; Already enrolled in college; Nomination required; Not open to graduating seniors",
+        "I": null,
+        "J": "2-Year",
+        "K": null,
+        "L": "Athletics; leadership; community service",
+        "M": null,
+        "N": "Returning DCC athlete nominated by coaches; not an incoming-student award. GPA 2.0, essay, two recommendations. Late applicants should still apply. Confirm the current deadline with your counselor.",
+        "O": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": 2.0,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_92c890a945120a26ab25421e53415ae474708aa1ca57454d6071fa8e467d8f1a",
+            "evd_a9b9e623636dbc5c75575a538a1721ba8eadf6f22fd95589ef4663162f94aa23"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": [
+            "two_year"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_92c890a945120a26ab25421e53415ae474708aa1ca57454d6071fa8e467d8f1a",
+            "evd_a9b9e623636dbc5c75575a538a1721ba8eadf6f22fd95589ef4663162f94aa23"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": "required",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_92c890a945120a26ab25421e53415ae474708aa1ca57454d6071fa8e467d8f1a",
+            "evd_a9b9e623636dbc5c75575a538a1721ba8eadf6f22fd95589ef4663162f94aa23"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "applicantStage": {
+          "value": "college_student",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_92c890a945120a26ab25421e53415ae474708aa1ca57454d6071fa8e467d8f1a",
+            "evd_a9b9e623636dbc5c75575a538a1721ba8eadf6f22fd95589ef4663162f94aa23"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Returning DCC athlete and coach nomination are supported as-of the saved source; incoming seniors need checking. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Refresh award/general-form scope, returning status, GPA and coach nomination versus shared application.",
+      "review": {
+        "reviewId": "rev_51e6675a58827761bd4a4756f20c02b86697935d97cf342ed5405b4b46bde4c9",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-26c4b3c65985",
+      "name": "Montana Clerk & Recorder's Scholarship (2) $1,000",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 115
+      },
+      "sourceIds": [
+        "src_4745caf8a439a91eddc770cf35d5795bf9c990f0b165f18452f69a87c622798b"
+      ],
+      "cycleId": "cyc_97dff3688fb60930c47e8afa23ef04aee1564e252efed276ad47036a562fa949",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "2026-03-13",
+        "B": "In-State",
+        "C": "Montana post-secondary school (no named institution)",
+        "D": "Montana",
+        "E": "$1,000",
+        "F": "Paper Application",
+        "G": "Montana Clerk & Recorder's Scholarship (2) $1,000",
+        "H": null,
+        "I": null,
+        "J": "4-Year, Community College or Vo-Tech; form also lists Other",
+        "K": null,
+        "L": null,
+        "M": null,
+        "N": "For Montana seniors attending an in-state post-secondary school. Asks about your career goals, family or personal circumstances, and activities. Confirm the current deadline with your counselor.",
+        "O": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Recorded Montana destination allows college/vo-tech options; two recipients are one award. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Current program document, residency versus destination, cycle/priority date and permitted paths.",
+      "review": {
+        "reviewId": "rev_5f65258a4a80a51c785e13d8c7e2f2be0e9ad5c11774b9c8e39a8c9182dd52c5",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-5dd4c3d3988a",
+      "name": "Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 150
+      },
+      "sourceIds": [
+        "src_5520098a05698d1df51d7b641209fd4fd25d4ae29839a75280e2800a7ac8c07a"
+      ],
+      "cycleId": "cyc_1dd893edf2d62b9425d8a52d4d89c82fda6cfd67de71af55aa6428e4500f51a4",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "2026-04-17",
+        "B": "In-State",
+        "C": null,
+        "D": "Flathead",
+        "E": "$1,000 - $3,000",
+        "F": "Online Application",
+        "G": "Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School",
+        "H": "Female",
+        "I": null,
+        "J": null,
+        "K": null,
+        "L": "Women",
+        "M": "Yes",
+        "N": "For Flathead County public high school senior girls going to college, with financial need and academic ability. Confirm the current deadline with your counselor.",
+        "O": "https://docs.google.com/forms/d/e/1FAIpQLSfLo_j4XJoK6JEM8PeAJSU3YqbNJlp5rwD1-WQ8q0EJrNo5RA/viewform"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Recorded local senior/girl/need connection; M=Yes cannot distinguish required need from selection. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Public applicable award criteria and window; do not open responses or infer need from the header.",
+      "review": {
+        "reviewId": "rev_844808126811f12f0446432a20490d2d03eae2dde1ced324a2243d741bbde642",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-a2f7b9b6cbec",
+      "name": "Republic Airways Aviation Management Scholarship (NGPA)",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 185
+      },
+      "sourceIds": [
+        "src_9648f29529e612bda10ad07a283318eae8661d4862901d0eaaf406c40151754b",
+        "src_4d92d0e3e074d112f03da9c02bc9f4728dcf91812218ffb72c60f9c565708323"
+      ],
+      "cycleId": "cyc_52108d2fb060f98815b5e1da79307282d134bf5d4ddf15cc4bfb7255cb4d1586",
+      "cycleLabel": "NGPA 2026",
+      "recorded": {
+        "A": "2026-08-07",
+        "B": null,
+        "C": null,
+        "D": "National",
+        "E": "$5000",
+        "F": "Apply through NGPA scholarship tab to Reviewr during the window: https://www.ngpa.org/applynow . Public login observed; authenticated application not tested.",
+        "G": "Republic Airways Aviation Management Scholarship (NGPA)",
+        "H": "Aviation - Management; Age limit applies",
+        "I": null,
+        "J": null,
+        "K": null,
+        "L": "Management",
+        "M": null,
+        "N": "Aviation-management or related-program student, including dispatcher certification. Active NGPA member, 18 or older. Now closed. No GPA is stated. Confirm the current deadline with your counselor.",
+        "O": "https://www.ngpa.org/2026_scholarships"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": [
+            "certificate"
+          ],
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+            "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230"
+          ],
+          "scope": "program-to-study-path mapping needs current field-specific review",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": 5000,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+            "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230"
+          ],
+          "scope": "NGPA 2026",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleLabel": {
+          "value": "NGPA 2026",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+            "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230"
+          ],
+          "scope": "NGPA 2026",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "historicalCycleStatus": {
+          "value": "closed",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+            "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230"
+          ],
+          "scope": "NGPA 2026",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "historicalDeadline": {
+          "value": "2026-08-07T23:59:00-07:00",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+            "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230"
+          ],
+          "scope": "NGPA 2026",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Saved NGPA 2026 source supports aviation management/dispatcher study, membership and age; that cycle is closed. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Next cycle and sponsor prerequisites/route; no authenticated portal review.",
+      "review": {
+        "reviewId": "rev_7f1bed311b15d3e28cf797790d2434b420e4401588093e3127954bf5c869327f",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-cd0fb7cd0c64",
+      "name": "LIFT Academy Pilot Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 220
+      },
+      "sourceIds": [
+        "src_869df1b06d328df4335c970ad52c31be6ccc0e6039350c4e91bf139d538e256f",
+        "src_ae5295da636042cd670abfef57dec0532632b64985962352a344c70406388088"
+      ],
+      "cycleId": "cyc_ef8f1bf3eacc2c1e0197f59012f9f994133620c241ffed76496a0fda26c75cff",
+      "cycleLabel": "WAI2027",
+      "recorded": {
+        "A": "2026-09-01",
+        "B": "National",
+        "C": "LIFT Academy",
+        "D": "National",
+        "E": "$5,000",
+        "F": "WAI online scholarship portal via https://www.wai.org/scholarship-listings ",
+        "G": "LIFT Academy Pilot Scholarship",
+        "H": "Female; Aviation - Pilot Training",
+        "I": null,
+        "J": "Flight",
+        "K": null,
+        "L": "Aviation",
+        "M": null,
+        "N": "Female pilot; current or incoming LIFT Academy student. WAI member; 500-word essay, two recommendations, resume. Closed September 1, 2026. Confirm the current deadline with your counselor.",
+        "O": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": 5000,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_1ea8f82680d45ed00df95398dd448e52f4a0738c4d688947377869b4864d0f70",
+            "evd_4fd9816206029aeb35f521bbccbb122199a676c0cfa068827a881b9772dcfd78"
+          ],
+          "scope": "WAI2027",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleLabel": {
+          "value": "WAI2027",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_1ea8f82680d45ed00df95398dd448e52f4a0738c4d688947377869b4864d0f70",
+            "evd_4fd9816206029aeb35f521bbccbb122199a676c0cfa068827a881b9772dcfd78"
+          ],
+          "scope": "WAI2027",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "historicalCycleStatus": {
+          "value": "closed",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_1ea8f82680d45ed00df95398dd448e52f4a0738c4d688947377869b4864d0f70",
+            "evd_4fd9816206029aeb35f521bbccbb122199a676c0cfa068827a881b9772dcfd78"
+          ],
+          "scope": "WAI2027",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "historicalDeadline": {
+          "value": "2026-09-01T23:59:00-04:00",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_1ea8f82680d45ed00df95398dd448e52f4a0738c4d688947377869b4864d0f70",
+            "evd_4fd9816206029aeb35f521bbccbb122199a676c0cfa068827a881b9772dcfd78"
+          ],
+          "scope": "WAI2027",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "WAI2027 closed in 2026; this female-pilot LIFT award differs from the NGPA LIFT fund. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Next offering, award-specific prerequisites, membership and supplements; portal unreviewed.",
+      "review": {
+        "reviewId": "rev_91d029eff3b98f48c98352962daa238a96ab55a27dcf429ebd94ec8891955e10",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-97dfaadd1d31",
+      "name": "The Neurodiversity Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 255
+      },
+      "sourceIds": [
+        "src_6f5be4bb2fdad447edf8b28ecb3377babf9bf2f3e7ece101c662252325ae804a",
+        "src_df804cf550de0e3d1ac14c4a40ec9bc51969e00d80d3e117e747afce6e9519ef"
+      ],
+      "cycleId": "cyc_9012cd2f977718eb1b9290e35a8ef4369daca70e5f199a10cff38d3de117e000",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "2027-01-01",
+        "B": "National",
+        "C": null,
+        "D": "National",
+        "E": "$1,000 or $2,500 depending on enrollment status and school type",
+        "F": "https://thendalliance.org/scholarship/",
+        "G": "The Neurodiversity Scholarship",
+        "H": "Dyslexia; ADHD; Autism Spectrum; Other Learning Disability",
+        "I": null,
+        "J": "Any",
+        "K": null,
+        "L": "Neurodiversity/Learning Differences",
+        "M": "Yes",
+        "N": "Neurodivergent students age 16-26, including Dyslexia, ADHD, Processing Disorders and Autism, planning an Associate, Bachelor or Certificate program at a not-for-profit US college.",
+        "O": "Neurodiversity Scholarship"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": [
+            "associate",
+            "bachelor",
+            "certificate"
+          ],
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e64a2147fd487efd226b3a2dd9ab546ed4bcd08b69c43d6168b67d62905b9767",
+            "evd_3e6394cebf0ead9e10536d74f9c774bd4428aa8d54723a89fd17b9cb5a740e57",
+            "evd_7864fa72115725778fcfd7d134a3fbab3b72503b972728865be63d253bddbf95"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_e64a2147fd487efd226b3a2dd9ab546ed4bcd08b69c43d6168b67d62905b9767",
+            "evd_3e6394cebf0ead9e10536d74f9c774bd4428aa8d54723a89fd17b9cb5a740e57",
+            "evd_7864fa72115725778fcfd7d134a3fbab3b72503b972728865be63d253bddbf95"
+          ],
+          "scope": "unresolved cycle",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "conflict",
+          "evidenceIds": [
+            "evd_e64a2147fd487efd226b3a2dd9ab546ed4bcd08b69c43d6168b67d62905b9767",
+            "evd_3e6394cebf0ead9e10536d74f9c774bd4428aa8d54723a89fd17b9cb5a740e57",
+            "evd_7864fa72115725778fcfd7d134a3fbab3b72503b972728865be63d253bddbf95"
+          ],
+          "scope": "2026–27 source",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Associate/bachelor/certificate paths have saved support; age and dates conflict. Any does not prove all trade schools. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Resolve named program, singular/plural routes, age 16–26 versus 18–26, need wording and current window.",
+      "review": {
+        "reviewId": "rev_fc8d7a23d25e13cbe01d84272936e23589474dc8ea4ad79da9a79879b53ebbd2",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-52b096183d9d",
+      "name": "Live Your Dream Award",
+      "identityState": "held",
+      "mappingBasis": "name-only candidate; locator changed/missing",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 290
+      },
+      "sourceIds": [
+        "src_1b300bcee130bf3d1b0682070c88630a39bade3418f16ffb53472a7ccf4ad930",
+        "src_571adbd6777246fc44cdf1e6e1d35761f69425abf52f45a8c25477aad6105825"
+      ],
+      "cycleId": "cyc_e32680c08800fea6e5e82f59d0394a54c07aa788b9aab36d45dbe6dd28e8a5b0",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "August 1 - November 15",
+        "B": "SIA member countries",
+        "C": null,
+        "D": "National",
+        "E": "Potential $1,000 - $16,000 across award levels; club awards vary",
+        "F": "http://www.soroptimist.org/awards/apply.html",
+        "G": "Live Your Dream Award",
+        "H": "Female; Financial need; Citizenship or residency requirement",
+        "I": null,
+        "J": "2-Year / 4-Year / Trade / GED",
+        "K": "Non-Renewing",
+        "L": "Women's education / training",
+        "M": "Yes",
+        "N": "Women who are the primary financial support for themselves and dependents, with financial need, in vocational or undergraduate programs. High-school-equivalency study alone is not listed.",
+        "O": "Live Your Dream — eligibility & apply"
+      },
+      "fields": {
+        "needRequired": {
+          "value": "required",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_4857b0ff991287aacdf361bd7a326ee9544e3bede73c41da6b23915911a65daa"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": [
+            "certificate",
+            "associate",
+            "bachelor"
+          ],
+          "state": "unverified",
+          "evidenceIds": [
+            "evd_4857b0ff991287aacdf361bd7a326ee9544e3bede73c41da6b23915911a65daa"
+          ],
+          "scope": "program-to-study-path mapping needs current field-specific review",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": "gift",
+          "state": "verified",
+          "evidenceIds": [
+            "evd_4857b0ff991287aacdf361bd7a326ee9544e3bede73c41da6b23915911a65daa"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "refresh_needed",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Saved source supports primary financial support and financial need; yearless window cannot prove open today. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Bind app identity/route, current cycle/year and need selection; GED-only acceptance remains unsupported.",
+      "review": {
+        "reviewId": "rev_a77267065218646e04724b5e2a8df42ca065568ce105988faa6d2e04d825d8c4",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-d8ff6ef257b3",
+      "name": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 325
+      },
+      "sourceIds": [
+        "src_8c7bbbf9ca1e8cb4aaa4570dd70a23ca6d8f078d30a0ba162843ff6d5eb95185"
+      ],
+      "cycleId": "cyc_63402c5e8a1dcc4dbd2d5b15f6967bbf00d8b1f3ce9fc49a0621fda6012dfdce",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "June 30, December 31",
+        "B": "National",
+        "C": null,
+        "D": "National",
+        "E": "$12,000",
+        "F": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+        "G": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
+        "H": "Aviation - Pilot Training; Age limit applies",
+        "I": "2.7",
+        "J": null,
+        "K": null,
+        "L": "Pilot Training",
+        "M": null,
+        "N": "High school students aged 16-18 earning a private pilot certificate. Must have passed the FAA Private Pilot written knowledge exam before applying.",
+        "O": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": 2.7,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_5ad161570c0ef2ad65d3a8174c60809235f24c1d447de54e24111e78b396def4",
+            "evd_0c0d4c58960f507c10b0a2ce0c3d137917c54e1791e4c70edbadaa4ec245f35b"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": 12000,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_5ad161570c0ef2ad65d3a8174c60809235f24c1d447de54e24111e78b396def4",
+            "evd_0c0d4c58960f507c10b0a2ce0c3d137917c54e1791e4c70edbadaa4ec245f35b"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "2.7 GPA and $12,000 are historical child terms; parent opening and conflicting December dates are not child proof. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Confirm named child offering/current terms and resolve parent December 30 versus FAQ December 31.",
+      "review": {
+        "reviewId": "rev_3ead74fae6c0db8a542e57417c21e6b3530293eb55d198bf347873fdd0a0a60f",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    },
+    {
+      "awardId": "award-ce44143820a7",
+      "name": "The David and Lisa Barnes Flight Training Scholarship",
+      "identityState": "mapped_candidate",
+      "mappingBasis": "unique app name plus fresh source locator",
+      "rowLocator": {
+        "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+        "sheetId": 405588227,
+        "row": 400
+      },
+      "sourceIds": [
+        "src_8c7bbbf9ca1e8cb4aaa4570dd70a23ca6d8f078d30a0ba162843ff6d5eb95185"
+      ],
+      "cycleId": "cyc_e023e6c3e3dcc15ce6d8bc8da435b510e3c0bd32ff7567c8cd6cb4b2b15441f1",
+      "cycleLabel": "unresolved-slot",
+      "recorded": {
+        "A": "Unknown",
+        "B": null,
+        "C": null,
+        "D": "National",
+        "E": "$10000 (past example; next funding unconfirmed)",
+        "F": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+        "G": "The David and Lisa Barnes Flight Training Scholarship",
+        "H": "Aviation - Pilot Training; Age limit applies",
+        "I": null,
+        "J": null,
+        "K": null,
+        "L": "Private pilot training",
+        "M": null,
+        "N": "Past fund for high school students age 16–18; private pilot certificate. AOPA membership required; HS membership is free. Applications reopen October 1, 2026; this fund is unconfirmed.",
+        "O": "AOPA scholarships"
+      },
+      "fields": {
+        "needRequired": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "needSelection": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "entryGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewalGpa": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "schoolTypes": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "studyPaths": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "renewal": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "reapplication": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "nomination": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "cycleStatus": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "deadline": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "amount": {
+          "value": 10000,
+          "state": "verified",
+          "evidenceIds": [
+            "evd_e05bee05514ea17a1c33e6ea2c9e8c005b298a54f8a204474492bd6be4c5cc5f",
+            "evd_5afaf98671a1bc1675819cd2da92aaf0e38c0d6125b0702d3a477c0c51ffbdcb"
+          ],
+          "scope": "source_as_of_2026-09-11",
+          "observedAt": "2026-09-11",
+          "freshness": "historical",
+          "acceptance": "proposed"
+        },
+        "fundingKind": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        },
+        "age": {
+          "value": null,
+          "state": "unverified",
+          "evidenceIds": [],
+          "scope": "unresolved",
+          "observedAt": null,
+          "freshness": "unknown",
+          "acceptance": "proposed"
+        }
+      },
+      "fitExplanation": "Named past AOPA fund shares a parent with You Can Fly but remains a separate award; $10,000 is historical. Current eligibility is not confirmed.",
+      "filterOutcomes": {
+        "needRequired": "needs_checking",
+        "needSelection": "needs_checking"
+      },
+      "priority": "Check first",
+      "missingEvidence": "Confirm child offering/funding/prerequisites and current dates; never inherit parent reopening.",
+      "review": {
+        "reviewId": "rev_6070d21f6d5f4e7df047f84587f3eab48109569a606dc1d213432781e9f609b6",
+        "owner": "Codex proposal review; Kelsey fact acceptance",
+        "state": "open",
+        "initialDueAt": "2026-10-13",
+        "lastSuccessfulCheckAt": null,
+        "lastFactVerifiedAt": null,
+        "hypotheticalNextAfterSuccess": "2026-10-27",
+        "hypotheticalBasis": "Only after a successful official check October 13; unknown/closed/distant upcoming =14 days"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "src_cc76c70549f4a91f88f72091c61ebcf37c5777d0d7a7ff6cfd4d9e3f63a605e8",
+      "url": "https://docs.google.com/document/d/1zh2DUt015wNF_049edAxG2qURNrAMWfn/edit",
+      "aliases": [
+        "source-ec0d9057b128"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-577dacb8c225"
+      ]
+    },
+    {
+      "sourceId": "src_04a21a2ba1a4b8501d73a10a57a6c505ab7276b7104f4624287bcc102d19e566",
+      "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-2179b44d009d"
+      ]
+    },
+    {
+      "sourceId": "src_c4a8dcbe5717ddd037768e73ea1f58e84ea0911d9f086b5906eac554bd4111dc",
+      "url": "https://drive.google.com/file/d/1x-jB-FmJdyNR37IlmrMISCqWNVv88pmp/view?usp=sharing",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-8bce77306c27"
+      ]
+    },
+    {
+      "sourceId": "src_fc55fc0c56283c14209967acfa5e14fffc332d9053648c35f7eebd555f40d618",
+      "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+      "aliases": [
+        "source-38d067ff9b32",
+        "source-50b400bb43b2",
+        "source-605031b54332",
+        "source-6928b42fe38b",
+        "source-b635d98ac545",
+        "source-d24c44f947c9",
+        "source-f4bd69ecca3b"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-62a1f1662db9"
+      ]
+    },
+    {
+      "sourceId": "src_525cfb2f08da92c481d6ad1f0ea5f789934bd8e7bb041016c4db3bfba9db7839",
+      "url": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html",
+      "aliases": [
+        "source-06e091c47bb2",
+        "source-078cd40f16b9",
+        "source-09ed49380d56",
+        "source-29a09d648214",
+        "source-2f8fa31e3280",
+        "source-343120fd6333",
+        "source-50bcf3e9b734",
+        "source-5a38f085903a",
+        "source-62a1f1662db9",
+        "source-64db0bf7d10b",
+        "source-778e9253ce6d",
+        "source-84ae951380f0",
+        "source-8d772774a201",
+        "source-a782a3fbc54a",
+        "source-a9e9afc47c79",
+        "source-accf465ba36a",
+        "source-add96070b66e",
+        "source-b6ad51367540",
+        "source-bc98a78a6008",
+        "source-c6bf70d530da",
+        "source-ca18e06be6db",
+        "source-de2472768ac1",
+        "source-dff1020e685c",
+        "source-e19043cae9b6",
+        "source-ee389267b9e8",
+        "source-f3a6e63a87c4",
+        "source-fb0f8c7451e4"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-62a1f1662db9"
+      ]
+    },
+    {
+      "sourceId": "src_4745caf8a439a91eddc770cf35d5795bf9c990f0b165f18452f69a87c622798b",
+      "url": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+      "aliases": [
+        "source-6ca79e4c3bb2"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-26c4b3c65985"
+      ]
+    },
+    {
+      "sourceId": "src_5520098a05698d1df51d7b641209fd4fd25d4ae29839a75280e2800a7ac8c07a",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfLo_j4XJoK6JEM8PeAJSU3YqbNJlp5rwD1-WQ8q0EJrNo5RA/viewform",
+      "aliases": [
+        "source-e877897d7f4e"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-5dd4c3d3988a"
+      ]
+    },
+    {
+      "sourceId": "src_9648f29529e612bda10ad07a283318eae8661d4862901d0eaaf406c40151754b",
+      "url": "https://www.ngpa.org/2026_scholarships",
+      "aliases": [
+        "source-033b1d3e62a1",
+        "source-068bd3a04e24",
+        "source-19c987735664",
+        "source-453110814fe5",
+        "source-4b8060812f60",
+        "source-79c1268f1ea5",
+        "source-7b8c0838e0b9",
+        "source-8b09bb021129",
+        "source-8e7ecab8f784",
+        "source-a2f7b9b6cbec",
+        "source-aeb5e9e39b82",
+        "source-b23111c6755c",
+        "source-bb776f54425c",
+        "source-c0661550686b",
+        "source-d6ae56218094"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-a2f7b9b6cbec"
+      ]
+    },
+    {
+      "sourceId": "src_4d92d0e3e074d112f03da9c02bc9f4728dcf91812218ffb72c60f9c565708323",
+      "url": "https://www.ngpa.org/applynow",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-a2f7b9b6cbec"
+      ]
+    },
+    {
+      "sourceId": "src_869df1b06d328df4335c970ad52c31be6ccc0e6039350c4e91bf139d538e256f",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "aliases": [
+        "source-01dc5649ad46",
+        "source-01f442f53c03",
+        "source-0546c2fa9e62",
+        "source-0a1f1d1b8505",
+        "source-0b75492e8353",
+        "source-0c6f9832a101",
+        "source-142da69533e6",
+        "source-1b7e12cc1279",
+        "source-25d250ec58c6",
+        "source-2726fc6e69fc",
+        "source-3c1de856d59e",
+        "source-44bcbb2eeb9c",
+        "source-4562d94cb7b9",
+        "source-4792ca67f2e1",
+        "source-4a29a85c87bc",
+        "source-4abfd54c1a6a",
+        "source-4ac74a9f17fd",
+        "source-519dce301c62",
+        "source-59d82b621dea",
+        "source-667db7bac4b9",
+        "source-66bd050a37ca",
+        "source-67869a40834d",
+        "source-6f66c4a77103",
+        "source-74e0f7fdd4c5",
+        "source-82867636c6e1",
+        "source-84615bac9529",
+        "source-88670d80cadf",
+        "source-9049848e68c9",
+        "source-9545b3c2a03a",
+        "source-9da4b8e00a27",
+        "source-a3c9f5127f45",
+        "source-a9386e11715e",
+        "source-abf4abd96954",
+        "source-b4cd9cb209ea",
+        "source-ba504649a05d",
+        "source-c3491944119d",
+        "source-c36fdba14b1f",
+        "source-cc404ac65f10",
+        "source-cd0fb7cd0c64",
+        "source-d1dc783a1ff8",
+        "source-d7fd424f278f",
+        "source-d9861aae050d",
+        "source-db429f56aafe",
+        "source-df3626999a99",
+        "source-e6d33b3f2691",
+        "source-e8e0a4382e8d",
+        "source-e9ca489e5a61",
+        "source-f31bf2ed527a",
+        "source-fd629c83fb3f"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-cd0fb7cd0c64"
+      ]
+    },
+    {
+      "sourceId": "src_ae5295da636042cd670abfef57dec0532632b64985962352a344c70406388088",
+      "url": "https://www.wai.org/scholarship-listings",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-cd0fb7cd0c64"
+      ]
+    },
+    {
+      "sourceId": "src_6f5be4bb2fdad447edf8b28ecb3377babf9bf2f3e7ece101c662252325ae804a",
+      "url": "https://thendalliance.org/scholarship/",
+      "aliases": [
+        "source-bdfff18bc385"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-97dfaadd1d31"
+      ]
+    },
+    {
+      "sourceId": "src_df804cf550de0e3d1ac14c4a40ec9bc51969e00d80d3e117e747afce6e9519ef",
+      "url": "https://thendalliance.org/scholarships/",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-97dfaadd1d31"
+      ]
+    },
+    {
+      "sourceId": "src_1b300bcee130bf3d1b0682070c88630a39bade3418f16ffb53472a7ccf4ad930",
+      "url": "http://www.soroptimist.org/awards/apply.html",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-52b096183d9d"
+      ]
+    },
+    {
+      "sourceId": "src_571adbd6777246fc44cdf1e6e1d35761f69425abf52f45a8c25477aad6105825",
+      "url": "https://www.soroptimist.org/awards/apply.html",
+      "aliases": [],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-52b096183d9d"
+      ]
+    },
+    {
+      "sourceId": "src_8c7bbbf9ca1e8cb4aaa4570dd70a23ca6d8f078d30a0ba162843ff6d5eb95185",
+      "url": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "aliases": [
+        "source-000eeb62b003",
+        "source-02666b75eb76",
+        "source-0fdf8e6ce228",
+        "source-168218cd3b3c",
+        "source-1ba2675c98f9",
+        "source-1ff8a3062d23",
+        "source-201e7734747c",
+        "source-21b6dce7662e",
+        "source-23a5338563e4",
+        "source-2974a6462e95",
+        "source-2b025268ec9e",
+        "source-3100c2d6122e",
+        "source-3b5ec8c60897",
+        "source-5648e87a76d7",
+        "source-62b0511e59fe",
+        "source-816598124402",
+        "source-846cd31bf119",
+        "source-8739a664c0d7",
+        "source-913072c89540",
+        "source-ad1e28e0e26c",
+        "source-b1a9ae5d6f04",
+        "source-ce44143820a7",
+        "source-d629176b982e",
+        "source-e360b55057a5",
+        "source-fb2de42b1e28"
+      ],
+      "accessResult": "unreviewed",
+      "awardIds": [
+        "award-d8ff6ef257b3",
+        "award-ce44143820a7"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidenceId": "evd_0c47a707fffa9e36c11356771c40aab82dc17fb46edd718a2a7ba910b2d497ea",
+      "awardId": "award-2179b44d009d",
+      "artifact": "docs/evidence/scholarship-intake/related-material-additional-evidence.json",
+      "artifactSha256": "e6832f375b00e7f253e160efcc4f250041905a9e02f1859c5a3f3ff544f20729",
+      "locator": "sources[official-related-carroll-current]",
+      "selected": {
+        "sourceId": "official-related-carroll-current",
+        "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+        "finalUrl": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+        "observedAt": "2026-09-11T04:38:20.354Z",
+        "contentSha256": "0b41bdae4720ada9ac5bd02f3e24fed47a8bb7192bfa083c32d301866ca3b4c7",
+        "fieldSpecificSummary": "Newofficialprogrampage:Fall2027firstfreshmanortransfer,USresident,oncampus,Pell/FAFSA,3.0GPA,12successfulcredits/semester,up8semesters. Aidincludesfederal/CarrollgiftandStaffordloan. Stepssayborrow3500;criteriaassumemaxsubsidizedloan3500/4500/5500byyear. Preservewordingdifference; notallgiftaid,noguaranteedtuitioncoverage."
+      },
+      "sourceReceipts": [
+        {
+          "sourceId": "official-related-leroy",
+          "url": "https://leroywhomerjr.org/scholarships/application/",
+          "observedAt": "2026-09-11T04:33:23.443Z",
+          "contentSha256": "e9c5992e4e63dedac3d4b81200d69e3707edab4e168e083ee248e121c83eed8a"
+        },
+        {
+          "sourceId": "official-related-leroyfaq",
+          "url": "https://leroywhomerjr.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:34:48.702Z",
+          "contentSha256": "6402f451ffa194870507af86caece613b72dfd70508df786ddb1feecc4869d9a"
+        },
+        {
+          "sourceId": "official-related-msu-resident",
+          "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
+          "observedAt": "2026-09-11T04:33:10.078Z",
+          "contentSha256": "c8ec3b8c2e54354449fd168137f9088d3362b6838746ddb791a0ff276991a73c"
+        },
+        {
+          "sourceId": "official-related-carroll",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise-montana-students",
+          "observedAt": "2026-09-11T04:33:12.359Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-node",
+          "url": "https://www.carroll.edu/node/44893",
+          "observedAt": "2026-09-11T04:34:13.762Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-parent",
+          "url": "https://www.carroll.edu/admission-aid/scholarships-grants",
+          "observedAt": "2026-09-11T04:37:22.446Z",
+          "contentSha256": "d180d2f7247faec1929574df21e0999050c64ac38235b2102105a979490984a2"
+        },
+        {
+          "sourceId": "official-related-carroll-current",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+          "observedAt": "2026-09-11T04:38:20.354Z",
+          "contentSha256": "0b41bdae4720ada9ac5bd02f3e24fed47a8bb7192bfa083c32d301866ca3b4c7"
+        },
+        {
+          "sourceId": "official-related-elksmvs",
+          "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+          "observedAt": "2026-09-11T04:33:14.964Z",
+          "contentSha256": "1eba8e9244fe49ccb718cee239998ed6e97d9915703157d44618323fecdaa7f5"
+        },
+        {
+          "sourceId": "official-related-mtelks",
+          "url": "https://mtelks.org/",
+          "observedAt": "2026-09-11T04:33:46.692Z",
+          "contentSha256": "0844bd1ef224c72271bdb0622abf65c9487a9d3e9c05f784777e70a09bf34b93"
+        },
+        {
+          "sourceId": "official-related-mtelksscholar",
+          "url": "https://mtelks.org/community-charity/",
+          "observedAt": "2026-09-11T04:34:53.782Z",
+          "contentSha256": "ca5d89b1d70154c3fbac1e5e0ec117a3411fb7cdeec2448e38f9105d52503c4f"
+        },
+        {
+          "sourceId": "official-related-jennepdf",
+          "url": "https://montanaelks.b-cdn.net/wp-content/uploads/2024/01/scholarship-william-and-sara-jenne-scholarship-application.pdf",
+          "observedAt": "2026-09-11T04:35:33.248Z",
+          "contentSha256": "0d3eabdb040af8008f7c037d490ab2177662f20288d38e7d25152e76c38baf26"
+        },
+        {
+          "sourceId": "official-related-horatio",
+          "url": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:33:55.268Z",
+          "contentSha256": "7789922eee4277970398e46415f6ee38f8dcae4349b314ceaf8bc5842731c336"
+        },
+        {
+          "sourceId": "official-related-norrish",
+          "url": "https://www.buildingflathead.com/assets/pdf/John+and+Joe+Norrish+Scholarship+Application+2025-26/",
+          "observedAt": "2026-09-11T04:33:50.944Z",
+          "contentSha256": "80231ded4e1ba4339a0e19b3f16e12b35bb5b9eb46253fd5ae5a1822ac54a3d1"
+        },
+        {
+          "sourceId": "official-related-nataform",
+          "url": "https://nataaero.wufoo.com/forms/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:34:56.811Z",
+          "contentSha256": "e8bbfe436508ab2cecea79e22ef7fe7f96b84800edfe9dda7bcfa17d8aea6ea8"
+        },
+        {
+          "sourceId": "official-related-nataofficial",
+          "url": "https://nata.aero/national-air-transportation-foundation/scholarships/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:35:49.886Z",
+          "contentSha256": "0ce028552702354962dd43247ab4aabc8aef0cc170ad8fa1d3875b2dcce86dc5"
+        },
+        {
+          "sourceId": "official-related-kitchen",
+          "url": "https://kitchencabinetkings.com/scholarship",
+          "observedAt": "2026-09-11T04:33:19.421Z",
+          "contentSha256": "71955f6fddf569c902b2b51eb91c58ee0484c36d335016a83ceca3fa5bfae349"
+        },
+        {
+          "sourceId": "official-related-fordform",
+          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "observedAt": "2026-09-11T04:33:44.048Z",
+          "contentSha256": "d7475893a2102bd5f4682df614133398d8641de9da6905ea5f023177014a261f"
+        },
+        {
+          "sourceId": "official-related-anne",
+          "url": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
+          "observedAt": "2026-09-11T04:34:45.119Z",
+          "contentSha256": "90870306a99a01254f9a166576a1cb9237e5bd35d5a31f47696423e54d025af4"
+        },
+        {
+          "sourceId": "official-related-allegra",
+          "url": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
+          "observedAt": "2026-09-11T04:34:41.943Z",
+          "contentSha256": "3c52792a79eeb2a5f1eb3e10b95e6228aa76298d1de1d9f86e995d319c5de6e2"
+        },
+        {
+          "sourceId": "official-related-ndalliance",
+          "url": "https://thendalliance.org/scholarship/",
+          "observedAt": "2026-09-11T04:33:40.515Z",
+          "contentSha256": "3e2339d61026c132d77e8cf39508c552f6381b304ffea665a7fb456cbe931894"
+        },
+        {
+          "sourceId": "official-related-ndfaq",
+          "url": "https://thendalliance.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:35:47.444Z",
+          "contentSha256": "16c7fd64f87cfcf721d704b06056a7af045c097b3c5b19bb3fb166dc262b9d73"
+        },
+        {
+          "sourceId": "official-related-sorlyd",
+          "url": "https://www.soroptimist.org/awards/apply.html",
+          "observedAt": "2026-09-11T04:34:59.454Z",
+          "contentSha256": "a2a63f05e2e17dc8e652a1734899bd0191389bee352d097237924b8b51ccc9bf"
+        },
+        {
+          "sourceId": "official-related-bebold",
+          "url": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
+          "observedAt": "2026-09-11T04:35:37.834Z",
+          "contentSha256": "c217732dbffd2604f32f03740b63025e1556ad92f6a89806ac411bcd21d11ebf"
+        },
+        {
+          "sourceId": "official-related-institute",
+          "url": "https://scholarshipinstitute.org/scholarships/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:37:02.657Z",
+          "contentSha256": "23c08c853fdba0c99a0a988c1ed76c1699faf392e02f6757bc8595f51bded9d4"
+        },
+        {
+          "sourceId": "official-related-agc-workforce",
+          "url": "https://smr.to/p109007",
+          "observedAt": "2026-09-11T04:37:25.325Z",
+          "contentSha256": "801fd85761b2bef4b5a53950f10b0cef6343c12940f5a19c843d777b06464975"
+        },
+        {
+          "sourceId": "official-related-agc-criteria",
+          "url": "https://www.agc.org/sites/default/files/Files/Workforce%20Applicant%20Criteria.pdf",
+          "observedAt": "2026-09-11T04:38:22.144Z",
+          "contentSha256": "82a360fbf66143b2046560509cb42be2e723bf86c0dd99adc1fa1dcada1db123"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_92c890a945120a26ab25421e53415ae474708aa1ca57454d6071fa8e467d8f1a",
+      "awardId": "award-62a1f1662db9",
+      "artifact": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "artifactSha256": "288d2531c33a77d56b81586fd2ed83b6437c09f58b667f249eb0a72df3e38fa9",
+      "locator": "awards[5]",
+      "selected": {
+        "entityId": "intake-entity-75fac50bf6a613e3",
+        "heading": "Astoria Hotel & Suites Athletic Scholarship",
+        "amount": null,
+        "conditions": "Returning DCC athlete nominated by coaches for character, leadership and community service; not an incoming-student award.",
+        "disposition": "propose_add"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-dawson-foundation",
+          "url": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html",
+          "observedAt": "2026-09-11T02:18:55.491Z",
+          "contentSha256": "3587ce39db576d17458d20c7484f58ad1e1c18a7a8eaab237fb070f988a8d017"
+        },
+        {
+          "id": "official-dawson-general",
+          "url": "https://www.dawson.edu/cost-affordability/scholarships.html",
+          "observedAt": "2026-09-11T02:47:15.611Z",
+          "contentSha256": "c23658720e2368e9084955c34a3fcef1b2bbeb75c1b2ed02f06aaac911580265"
+        },
+        {
+          "id": "official-dawson-application",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "observedAt": "2026-09-11T02:54:41.950Z",
+          "contentSha256": "0e4e1559adcc21be2d17ce2e96a5d3ce1de0283f9d6ecea47c117c297a359f57"
+        },
+        {
+          "id": "official-dawson-form-names",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "observedAt": "2026-09-11T03:05:49.128Z",
+          "contentSha256": "b64e63bfe2cd18160cda005c7979fea2dd0112064bcf143b9d316b081cfa36c6"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_a9b9e623636dbc5c75575a538a1721ba8eadf6f22fd95589ef4663162f94aa23",
+      "awardId": "award-62a1f1662db9",
+      "artifact": "docs/evidence/scholarship-intake/dawson-field-evidence.json",
+      "artifactSha256": "288d2531c33a77d56b81586fd2ed83b6437c09f58b667f249eb0a72df3e38fa9",
+      "locator": "formReconciliation",
+      "selected": {
+        "sourceId": "official-dawson-form-names",
+        "commonRequirements": "The linked general form requires admission application and high-school cumulative GPA2.25 for first-year students; transfer applicants need12graded college credits and cumulative college GPA2.25. Current/former DCC students need degree-seeking admission, degree/certificate enrollment or plans,12graded credits and GPA2.0; dual-enrollment students need12credits to use the returning category. Resume, academic-goals essay, transcripts, two recommendations and award-specific materials are required. DCC requires FAFSA for need-based awards. These general conditions do not replace higher or narrower award-specific conditions. ",
+        "occurrenceCount": 61,
+        "uniqueLabelCount": 60,
+        "extraLabels": 6,
+        "materialConflictHolds": {
+          "Community First Foundation Endowed Scholarship": "The only foundation description concerns2006baseball/softball funding, with no individual eligibility/selection proof and no corresponding individual form entry. Hold record type and identity.",
+          "Reid Ripley Memorial Agriculture Scholarship": "Foundation says Dawson/surrounding area is a preference; current linked form requires Dawson County or surrounding-area residence. Material Whitefish audience conflict unresolved.",
+          "Ellis and Irene Jones Endowed Scholarship": "Foundation says eastern Montana preference; current linked form says located in Eastern Montana. Material Whitefish audience conflict unresolved.",
+          "Evelyn Schaffel Education Scholarship": "Foundation requires ED100 plus an additional approved ED course; current form requires EDU200 or an approved EDU course. Exact prerequisite and returning-student criteria differ; hold material audience/coursework conflict.",
+          "Angel Grant Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; current form treats returning sophomore as preference. Exact entering/returning eligibility remains contradictory.",
+          "Bryan Melle Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman; form says returning sophomore preferred. Foundation minimum$250 conflicts form up to$250; amount may be omitted, but audience conflict remains.",
+          "Duane Peterson Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; form says returning sophomore preferred. Exact audience condition unresolved.",
+          "George and Ottoni Rice Law Enforcement Memorial Scholarship": "Foundation requires second-semester freshman returning in fall; form says returning sophomore preferred. Exact audience condition unresolved."
+        },
+        "currentFormNarrowing": {
+          "Buzz Suhr Memorial": "The linked application now specifies Welding Technology and up to$150. The foundation’s older vocational/agri-mechanics description is broader; use the form’s specific welding pathway, without claiming other trades qualify. ",
+          "M.C. and Florence Kolstad Vocational Technical Scholarship": "The linked form specifies Gas and Diesel Technology or Welding Technology, with returning sophomores preferred. These specific programs narrow the foundation’s generic skill-based description. ",
+          "Charles Kintz Memorial Scholarship": "The linked form specifically requires Business Management, prefers returning sophomores and may request an interview. This narrows the foundation’s general business description. Amount differs in format, so no fixed semester amount is proposed. ",
+          "Floyd and Francis Marty Music Memorial Scholarship": "The linked application requires two recorded voice/instrument performance selections or an audition with the DCC music director. ",
+          "Richard E. Guenzi Memorial Scholarship": "The linked form additionally allows Engineering Technology alongside Computer Science, and lists a variable minimum$250. The foundation names computer science only; the proposed path is restricted to computer science until broader eligibility is reconciled. ",
+          "Roman S. Zuroff Endowed Scholarship Fund": "The linked form requires demonstrated financial need, beyond the foundation’s statement that need is considered; FAFSA is required for the need-based application. ",
+          "Jonas Kolberg Memorial Agriculture Scholarship": "The form specifies Agribusiness and returning-sophomore preference, whereas foundation describes a freshman returning in fall. Preserve the stricter returning agribusiness pathway; exact broader entry-year eligibility remains unverified. ",
+          "Gary L. Olson Memorial Endowed Scholarship": "Current named form specifically requires Law Enforcement; broader related fields from foundation remain unresolved."
+        },
+        "newOrResolvedAwards": [
+          {
+            "name": "Gary Nelson Memorial Scholarship",
+            "amount": "Up to$300",
+            "conditions": "Education major at DCC. The form supplies eligibility absent from the foundation biography entry."
+          },
+          {
+            "name": "Floyd Smith Memorial Art Scholarship (DCC)",
+            "amount": "",
+            "conditions": "Art major; submit a portfolio, or interview with the Art Instructor if local."
+          },
+          {
+            "name": "M.L. Graves Memorial Scholarship (DCC)",
+            "amount": "Up to$1200",
+            "conditions": "Education major OR baseball/softball athlete. Education applicants must have completed EDU200 or approved EDU course and submit a philosophy-of-education essay. Returning sophomores preferred."
+          },
+          {
+            "name": "MDU Foundation Scholarship (DCC)",
+            "amount": "Up to$1000",
+            "conditions": "Engineering, business or computer-science major; returning sophomores preferred. Two recipient slots are one named award."
+          },
+          {
+            "name": "Dennis and Phyllis Washington Foundation Scholarship (DCC)",
+            "amount": "",
+            "conditions": "Montana residents and high-school graduates preferred; GPA2.0 maintenance plus co-curricular/community involvement. General first-year/transfer entry thresholds also apply."
+          },
+          {
+            "name": "Ella Walden Schloss Memorial — Music (DCC)",
+            "amount": "Up to$200",
+            "conditions": "Music major or program participant; two recorded performances or audition with music director; returning sophomores preferred."
+          },
+          {
+            "name": "Ella Walden Schloss Memorial — Writing (DCC)",
+            "amount": "Approximately$200",
+            "conditions": "Writing aptitude or intention to become novelist/journalist; two high-school or college writing samples; returning sophomores preferred."
+          }
+        ],
+        "interpretation": "Only supported subset conditions used; material geography/coursework conflicts held. BlankGPAcolumn prevents inappropriate one-number filtering."
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-dawson-foundation",
+          "url": "https://www.dawsoncollegefoundation.org/what-we-do/endowments-scholarships.html",
+          "observedAt": "2026-09-11T02:18:55.491Z",
+          "contentSha256": "3587ce39db576d17458d20c7484f58ad1e1c18a7a8eaab237fb070f988a8d017"
+        },
+        {
+          "id": "official-dawson-general",
+          "url": "https://www.dawson.edu/cost-affordability/scholarships.html",
+          "observedAt": "2026-09-11T02:47:15.611Z",
+          "contentSha256": "c23658720e2368e9084955c34a3fcef1b2bbeb75c1b2ed02f06aaac911580265"
+        },
+        {
+          "id": "official-dawson-application",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "observedAt": "2026-09-11T02:54:41.950Z",
+          "contentSha256": "0e4e1559adcc21be2d17ce2e96a5d3ce1de0283f9d6ecea47c117c297a359f57"
+        },
+        {
+          "id": "official-dawson-form-names",
+          "url": "https://dawsoncommunitycollege.formstack.com/forms/dcc_general_scholarship_application",
+          "observedAt": "2026-09-11T03:05:49.128Z",
+          "contentSha256": "b64e63bfe2cd18160cda005c7979fea2dd0112064bcf143b9d316b081cfa36c6"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_c08a35deed0f0a92d65a87e89724f727f000436419d8e4b70892f8cb8c8966fb",
+      "awardId": "award-a2f7b9b6cbec",
+      "artifact": "docs/evidence/scholarship-intake/ngpa-field-evidence.json",
+      "artifactSha256": "59bf4b23df74056159a7dbc30b7f79481a03f799789d6e92b6c29b84eada56ff",
+      "locator": "awards[15]",
+      "selected": {
+        "entityId": "intake-entity-adf29ed0c1981c75",
+        "tableTitle": "Republic Airways Aviation Management Scholarship",
+        "amount": "$5000",
+        "conditions": "Current aviation-management or related-program student, including dispatcher certification.",
+        "disposition": "propose_add"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-ngpa-2026",
+          "url": "https://www.ngpa.org/2026_scholarships",
+          "observedAt": "2026-09-11T03:05:25.877Z",
+          "contentSha256": "ac14907bad38f7a1a96eff34cf3c0319a1f64a96609e8fd6bf6d4a291b154e37"
+        },
+        {
+          "id": "official-ngpa-faq",
+          "url": "https://www.ngpa.org/about_scholarships",
+          "observedAt": "2026-09-11T03:13:34.473Z",
+          "contentSha256": "8a803c9c8fb12e8fcbdd30782beba9fd4c9d000e267a66c5b39364f99b25f497"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_218d56acf6884cb8f1646e30e0d02ec9a9822aa836121515563ee552673fa230",
+      "awardId": "award-a2f7b9b6cbec",
+      "artifact": "docs/evidence/scholarship-intake/ngpa-field-evidence.json",
+      "artifactSha256": "59bf4b23df74056159a7dbc30b7f79481a03f799789d6e92b6c29b84eada56ff",
+      "locator": "commonFacts",
+      "selected": {
+        "cycle": "2026closed; startbyJuly31,completeAugust7,23:59Pacific",
+        "membership": "activeNGPA,age18+",
+        "flightTraining": "currentthirdclassorhighermedical,atleaststudentpilotcertificate; nonflightmedicalnotrequired",
+        "advocacy": "allies welcome withdocumentedLGBTQadvocacy; committee names notgendereligibility",
+        "application": "ReviewrthroughNGPAscholarshiptab; publicloginobserved, noaccountentry",
+        "limitation": "FAQcontainsolder2024/2025references; useonlyexplicit2026timing/current2026universalcorroboratedrules, nofuturecycleinference"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-ngpa-2026",
+          "url": "https://www.ngpa.org/2026_scholarships",
+          "observedAt": "2026-09-11T03:05:25.877Z",
+          "contentSha256": "ac14907bad38f7a1a96eff34cf3c0319a1f64a96609e8fd6bf6d4a291b154e37"
+        },
+        {
+          "id": "official-ngpa-faq",
+          "url": "https://www.ngpa.org/about_scholarships",
+          "observedAt": "2026-09-11T03:13:34.473Z",
+          "contentSha256": "8a803c9c8fb12e8fcbdd30782beba9fd4c9d000e267a66c5b39364f99b25f497"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_1ea8f82680d45ed00df95398dd448e52f4a0738c4d688947377869b4864d0f70",
+      "awardId": "award-cd0fb7cd0c64",
+      "artifact": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "artifactSha256": "a7f19b0b01e2e1698a4d81c8be4fe92c61e7112c5caa483f0027e3fd8967e69a",
+      "locator": "awards[41]",
+      "selected": {
+        "entityId": "intake-entity-7f36ae178c79607e",
+        "name": "LIFT Academy Pilot Scholarship",
+        "cycle": "WAI2027",
+        "amount": "$5,000",
+        "conditions": "Female pilot pursuing professional career; current or incoming LIFT Academy student. Academic standing, accomplishments, teamwork, leadership and airmanship considered.",
+        "aliases": [],
+        "disposition": "propose_add"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-wai-2027",
+          "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+          "observedAt": "2026-09-11T02:29:33.196Z",
+          "contentSha256": "0d8bf2c68970f774d3bed6019d56a1b023260a3eac55fdf48986b597c5aefca4"
+        },
+        {
+          "id": "official-wai-parent",
+          "url": "https://www.wai.org/scholarships",
+          "observedAt": "2026-09-11T02:26:19.262Z",
+          "contentSha256": "3ec50c8b2a650a322f46ec16a02c0cb7028892909d4f27d89fba08646485fa60"
+        },
+        {
+          "id": "official-wai-apply",
+          "url": "https://www.wai.org/how-to-apply",
+          "observedAt": "2026-09-11T03:27:48.734Z",
+          "contentSha256": "0330a6978cea9e674ada8c09bd3715c023917334f4b383a2711e50a378b9756d"
+        },
+        {
+          "id": "official-wai-faq",
+          "url": "https://www.wai.org/faqs",
+          "observedAt": "2026-09-11T03:27:45.183Z",
+          "contentSha256": "98d0c9e605c9d0426db5c6dc0e86ecb41da285475d404b9c5094886eeff5273d"
+        },
+        {
+          "id": "official-wai-portal",
+          "url": "https://www.wai.org/scholarship-listings",
+          "observedAt": "2026-09-11T03:29:20.346Z",
+          "contentSha256": "2f696f2b171ecaf3b6e066822ad934fe04a90aa1204f40dd2afe40f163d72808"
+        },
+        {
+          "id": "official-wai-2025",
+          "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2025_Scholarships/2025_Scholarships_10_9_24_V6.pdf",
+          "observedAt": "2026-09-11T03:29:16.673Z",
+          "contentSha256": "d576340d23a48a78fb74603590ab95f66c1e3245cb6dbf4a32bc78203a6c932b"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_4fd9816206029aeb35f521bbccbb122199a676c0cfa068827a881b9772dcfd78",
+      "awardId": "award-cd0fb7cd0c64",
+      "artifact": "docs/evidence/scholarship-intake/wai-field-evidence.json",
+      "artifactSha256": "a7f19b0b01e2e1698a4d81c8be4fe92c61e7112c5caa483f0027e3fd8967e69a",
+      "locator": "commonFacts",
+      "selected": {
+        "cycle": "WAI2027 closed 2026-09-01 23:59 ET",
+        "membership": "by 2026-08-30, active through 2027-03-30",
+        "application": "WAI public portal links OAuth; no account entered",
+        "sourceConflicts": "How-to-apply first paragraph says no later than March30 but final paragraph, FAQ and guide agree active March30 or later; use corroborated latter. PDF says EST whereas live cycle page says ET; preserve live ET. Blanket membership nondiscrimination is qualified by FAQ award-specific requirements.",
+        "privacy": "Only public program facts extracted; no applicant materials entered or collected."
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-wai-2027",
+          "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+          "observedAt": "2026-09-11T02:29:33.196Z",
+          "contentSha256": "0d8bf2c68970f774d3bed6019d56a1b023260a3eac55fdf48986b597c5aefca4"
+        },
+        {
+          "id": "official-wai-parent",
+          "url": "https://www.wai.org/scholarships",
+          "observedAt": "2026-09-11T02:26:19.262Z",
+          "contentSha256": "3ec50c8b2a650a322f46ec16a02c0cb7028892909d4f27d89fba08646485fa60"
+        },
+        {
+          "id": "official-wai-apply",
+          "url": "https://www.wai.org/how-to-apply",
+          "observedAt": "2026-09-11T03:27:48.734Z",
+          "contentSha256": "0330a6978cea9e674ada8c09bd3715c023917334f4b383a2711e50a378b9756d"
+        },
+        {
+          "id": "official-wai-faq",
+          "url": "https://www.wai.org/faqs",
+          "observedAt": "2026-09-11T03:27:45.183Z",
+          "contentSha256": "98d0c9e605c9d0426db5c6dc0e86ecb41da285475d404b9c5094886eeff5273d"
+        },
+        {
+          "id": "official-wai-portal",
+          "url": "https://www.wai.org/scholarship-listings",
+          "observedAt": "2026-09-11T03:29:20.346Z",
+          "contentSha256": "2f696f2b171ecaf3b6e066822ad934fe04a90aa1204f40dd2afe40f163d72808"
+        },
+        {
+          "id": "official-wai-2025",
+          "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2025_Scholarships/2025_Scholarships_10_9_24_V6.pdf",
+          "observedAt": "2026-09-11T03:29:16.673Z",
+          "contentSha256": "d576340d23a48a78fb74603590ab95f66c1e3245cb6dbf4a32bc78203a6c932b"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_e64a2147fd487efd226b3a2dd9ab546ed4bcd08b69c43d6168b67d62905b9767",
+      "awardId": "award-97dfaadd1d31",
+      "artifact": "docs/evidence/scholarship-intake/related-material-additional-evidence.json",
+      "artifactSha256": "e6832f375b00e7f253e160efcc4f250041905a9e02f1859c5a3f3ff544f20729",
+      "locator": "sources[official-related-ndalliance]",
+      "selected": {
+        "sourceId": "official-related-ndalliance",
+        "url": "https://thendalliance.org/scholarship/",
+        "finalUrl": "https://thendalliance.org/scholarships/",
+        "observedAt": "2026-09-11T04:33:40.515Z",
+        "contentSha256": "3e2339d61026c132d77e8cf39508c552f6381b304ffea665a7fb456cbe931894",
+        "fieldSpecificSummary": "Associate/Bachelor/certificate atnot-for-profitUScollege/university;currentpage mixesclosed2026award,2027–28eligibility,Jan2027deadlineandNov2027opening. No futuredateaccepted. Certificate doesnotmeananyindependenttradeschool."
+      },
+      "sourceReceipts": [
+        {
+          "sourceId": "official-related-leroy",
+          "url": "https://leroywhomerjr.org/scholarships/application/",
+          "observedAt": "2026-09-11T04:33:23.443Z",
+          "contentSha256": "e9c5992e4e63dedac3d4b81200d69e3707edab4e168e083ee248e121c83eed8a"
+        },
+        {
+          "sourceId": "official-related-leroyfaq",
+          "url": "https://leroywhomerjr.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:34:48.702Z",
+          "contentSha256": "6402f451ffa194870507af86caece613b72dfd70508df786ddb1feecc4869d9a"
+        },
+        {
+          "sourceId": "official-related-msu-resident",
+          "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
+          "observedAt": "2026-09-11T04:33:10.078Z",
+          "contentSha256": "c8ec3b8c2e54354449fd168137f9088d3362b6838746ddb791a0ff276991a73c"
+        },
+        {
+          "sourceId": "official-related-carroll",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise-montana-students",
+          "observedAt": "2026-09-11T04:33:12.359Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-node",
+          "url": "https://www.carroll.edu/node/44893",
+          "observedAt": "2026-09-11T04:34:13.762Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-parent",
+          "url": "https://www.carroll.edu/admission-aid/scholarships-grants",
+          "observedAt": "2026-09-11T04:37:22.446Z",
+          "contentSha256": "d180d2f7247faec1929574df21e0999050c64ac38235b2102105a979490984a2"
+        },
+        {
+          "sourceId": "official-related-carroll-current",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+          "observedAt": "2026-09-11T04:38:20.354Z",
+          "contentSha256": "0b41bdae4720ada9ac5bd02f3e24fed47a8bb7192bfa083c32d301866ca3b4c7"
+        },
+        {
+          "sourceId": "official-related-elksmvs",
+          "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+          "observedAt": "2026-09-11T04:33:14.964Z",
+          "contentSha256": "1eba8e9244fe49ccb718cee239998ed6e97d9915703157d44618323fecdaa7f5"
+        },
+        {
+          "sourceId": "official-related-mtelks",
+          "url": "https://mtelks.org/",
+          "observedAt": "2026-09-11T04:33:46.692Z",
+          "contentSha256": "0844bd1ef224c72271bdb0622abf65c9487a9d3e9c05f784777e70a09bf34b93"
+        },
+        {
+          "sourceId": "official-related-mtelksscholar",
+          "url": "https://mtelks.org/community-charity/",
+          "observedAt": "2026-09-11T04:34:53.782Z",
+          "contentSha256": "ca5d89b1d70154c3fbac1e5e0ec117a3411fb7cdeec2448e38f9105d52503c4f"
+        },
+        {
+          "sourceId": "official-related-jennepdf",
+          "url": "https://montanaelks.b-cdn.net/wp-content/uploads/2024/01/scholarship-william-and-sara-jenne-scholarship-application.pdf",
+          "observedAt": "2026-09-11T04:35:33.248Z",
+          "contentSha256": "0d3eabdb040af8008f7c037d490ab2177662f20288d38e7d25152e76c38baf26"
+        },
+        {
+          "sourceId": "official-related-horatio",
+          "url": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:33:55.268Z",
+          "contentSha256": "7789922eee4277970398e46415f6ee38f8dcae4349b314ceaf8bc5842731c336"
+        },
+        {
+          "sourceId": "official-related-norrish",
+          "url": "https://www.buildingflathead.com/assets/pdf/John+and+Joe+Norrish+Scholarship+Application+2025-26/",
+          "observedAt": "2026-09-11T04:33:50.944Z",
+          "contentSha256": "80231ded4e1ba4339a0e19b3f16e12b35bb5b9eb46253fd5ae5a1822ac54a3d1"
+        },
+        {
+          "sourceId": "official-related-nataform",
+          "url": "https://nataaero.wufoo.com/forms/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:34:56.811Z",
+          "contentSha256": "e8bbfe436508ab2cecea79e22ef7fe7f96b84800edfe9dda7bcfa17d8aea6ea8"
+        },
+        {
+          "sourceId": "official-related-nataofficial",
+          "url": "https://nata.aero/national-air-transportation-foundation/scholarships/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:35:49.886Z",
+          "contentSha256": "0ce028552702354962dd43247ab4aabc8aef0cc170ad8fa1d3875b2dcce86dc5"
+        },
+        {
+          "sourceId": "official-related-kitchen",
+          "url": "https://kitchencabinetkings.com/scholarship",
+          "observedAt": "2026-09-11T04:33:19.421Z",
+          "contentSha256": "71955f6fddf569c902b2b51eb91c58ee0484c36d335016a83ceca3fa5bfae349"
+        },
+        {
+          "sourceId": "official-related-fordform",
+          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "observedAt": "2026-09-11T04:33:44.048Z",
+          "contentSha256": "d7475893a2102bd5f4682df614133398d8641de9da6905ea5f023177014a261f"
+        },
+        {
+          "sourceId": "official-related-anne",
+          "url": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
+          "observedAt": "2026-09-11T04:34:45.119Z",
+          "contentSha256": "90870306a99a01254f9a166576a1cb9237e5bd35d5a31f47696423e54d025af4"
+        },
+        {
+          "sourceId": "official-related-allegra",
+          "url": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
+          "observedAt": "2026-09-11T04:34:41.943Z",
+          "contentSha256": "3c52792a79eeb2a5f1eb3e10b95e6228aa76298d1de1d9f86e995d319c5de6e2"
+        },
+        {
+          "sourceId": "official-related-ndalliance",
+          "url": "https://thendalliance.org/scholarship/",
+          "observedAt": "2026-09-11T04:33:40.515Z",
+          "contentSha256": "3e2339d61026c132d77e8cf39508c552f6381b304ffea665a7fb456cbe931894"
+        },
+        {
+          "sourceId": "official-related-ndfaq",
+          "url": "https://thendalliance.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:35:47.444Z",
+          "contentSha256": "16c7fd64f87cfcf721d704b06056a7af045c097b3c5b19bb3fb166dc262b9d73"
+        },
+        {
+          "sourceId": "official-related-sorlyd",
+          "url": "https://www.soroptimist.org/awards/apply.html",
+          "observedAt": "2026-09-11T04:34:59.454Z",
+          "contentSha256": "a2a63f05e2e17dc8e652a1734899bd0191389bee352d097237924b8b51ccc9bf"
+        },
+        {
+          "sourceId": "official-related-bebold",
+          "url": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
+          "observedAt": "2026-09-11T04:35:37.834Z",
+          "contentSha256": "c217732dbffd2604f32f03740b63025e1556ad92f6a89806ac411bcd21d11ebf"
+        },
+        {
+          "sourceId": "official-related-institute",
+          "url": "https://scholarshipinstitute.org/scholarships/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:37:02.657Z",
+          "contentSha256": "23c08c853fdba0c99a0a988c1ed76c1699faf392e02f6757bc8595f51bded9d4"
+        },
+        {
+          "sourceId": "official-related-agc-workforce",
+          "url": "https://smr.to/p109007",
+          "observedAt": "2026-09-11T04:37:25.325Z",
+          "contentSha256": "801fd85761b2bef4b5a53950f10b0cef6343c12940f5a19c843d777b06464975"
+        },
+        {
+          "sourceId": "official-related-agc-criteria",
+          "url": "https://www.agc.org/sites/default/files/Files/Workforce%20Applicant%20Criteria.pdf",
+          "observedAt": "2026-09-11T04:38:22.144Z",
+          "contentSha256": "82a360fbf66143b2046560509cb42be2e723bf86c0dd99adc1fa1dcada1db123"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_3e6394cebf0ead9e10536d74f9c774bd4428aa8d54723a89fd17b9cb5a740e57",
+      "awardId": "award-97dfaadd1d31",
+      "artifact": "docs/evidence/scholarship-intake/related-material-additional-evidence.json",
+      "artifactSha256": "e6832f375b00e7f253e160efcc4f250041905a9e02f1859c5a3f3ff544f20729",
+      "locator": "sources[official-related-ndfaq]",
+      "selected": {
+        "sourceId": "official-related-ndfaq",
+        "url": "https://thendalliance.org/scholarships/faq/",
+        "finalUrl": "https://thendalliance.org/scholarships/faq/",
+        "observedAt": "2026-09-11T04:35:47.444Z",
+        "contentSha256": "16c7fd64f87cfcf721d704b06056a7af045c097b3c5b19bb3fb166dc262b9d73",
+        "fieldSpecificSummary": "2026–27FAQsupportsassociate/Bachelor/certificateatnonprofitUScollege/university; age16–26eligibilitylistbutage18–26FAQanswerconflict. Actualbirthdateexampleomitted. Providercorrectionneeded; donotpromoteschooltypeAnyTradeornewage/date."
+      },
+      "sourceReceipts": [
+        {
+          "sourceId": "official-related-leroy",
+          "url": "https://leroywhomerjr.org/scholarships/application/",
+          "observedAt": "2026-09-11T04:33:23.443Z",
+          "contentSha256": "e9c5992e4e63dedac3d4b81200d69e3707edab4e168e083ee248e121c83eed8a"
+        },
+        {
+          "sourceId": "official-related-leroyfaq",
+          "url": "https://leroywhomerjr.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:34:48.702Z",
+          "contentSha256": "6402f451ffa194870507af86caece613b72dfd70508df786ddb1feecc4869d9a"
+        },
+        {
+          "sourceId": "official-related-msu-resident",
+          "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
+          "observedAt": "2026-09-11T04:33:10.078Z",
+          "contentSha256": "c8ec3b8c2e54354449fd168137f9088d3362b6838746ddb791a0ff276991a73c"
+        },
+        {
+          "sourceId": "official-related-carroll",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise-montana-students",
+          "observedAt": "2026-09-11T04:33:12.359Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-node",
+          "url": "https://www.carroll.edu/node/44893",
+          "observedAt": "2026-09-11T04:34:13.762Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-parent",
+          "url": "https://www.carroll.edu/admission-aid/scholarships-grants",
+          "observedAt": "2026-09-11T04:37:22.446Z",
+          "contentSha256": "d180d2f7247faec1929574df21e0999050c64ac38235b2102105a979490984a2"
+        },
+        {
+          "sourceId": "official-related-carroll-current",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+          "observedAt": "2026-09-11T04:38:20.354Z",
+          "contentSha256": "0b41bdae4720ada9ac5bd02f3e24fed47a8bb7192bfa083c32d301866ca3b4c7"
+        },
+        {
+          "sourceId": "official-related-elksmvs",
+          "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+          "observedAt": "2026-09-11T04:33:14.964Z",
+          "contentSha256": "1eba8e9244fe49ccb718cee239998ed6e97d9915703157d44618323fecdaa7f5"
+        },
+        {
+          "sourceId": "official-related-mtelks",
+          "url": "https://mtelks.org/",
+          "observedAt": "2026-09-11T04:33:46.692Z",
+          "contentSha256": "0844bd1ef224c72271bdb0622abf65c9487a9d3e9c05f784777e70a09bf34b93"
+        },
+        {
+          "sourceId": "official-related-mtelksscholar",
+          "url": "https://mtelks.org/community-charity/",
+          "observedAt": "2026-09-11T04:34:53.782Z",
+          "contentSha256": "ca5d89b1d70154c3fbac1e5e0ec117a3411fb7cdeec2448e38f9105d52503c4f"
+        },
+        {
+          "sourceId": "official-related-jennepdf",
+          "url": "https://montanaelks.b-cdn.net/wp-content/uploads/2024/01/scholarship-william-and-sara-jenne-scholarship-application.pdf",
+          "observedAt": "2026-09-11T04:35:33.248Z",
+          "contentSha256": "0d3eabdb040af8008f7c037d490ab2177662f20288d38e7d25152e76c38baf26"
+        },
+        {
+          "sourceId": "official-related-horatio",
+          "url": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:33:55.268Z",
+          "contentSha256": "7789922eee4277970398e46415f6ee38f8dcae4349b314ceaf8bc5842731c336"
+        },
+        {
+          "sourceId": "official-related-norrish",
+          "url": "https://www.buildingflathead.com/assets/pdf/John+and+Joe+Norrish+Scholarship+Application+2025-26/",
+          "observedAt": "2026-09-11T04:33:50.944Z",
+          "contentSha256": "80231ded4e1ba4339a0e19b3f16e12b35bb5b9eb46253fd5ae5a1822ac54a3d1"
+        },
+        {
+          "sourceId": "official-related-nataform",
+          "url": "https://nataaero.wufoo.com/forms/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:34:56.811Z",
+          "contentSha256": "e8bbfe436508ab2cecea79e22ef7fe7f96b84800edfe9dda7bcfa17d8aea6ea8"
+        },
+        {
+          "sourceId": "official-related-nataofficial",
+          "url": "https://nata.aero/national-air-transportation-foundation/scholarships/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:35:49.886Z",
+          "contentSha256": "0ce028552702354962dd43247ab4aabc8aef0cc170ad8fa1d3875b2dcce86dc5"
+        },
+        {
+          "sourceId": "official-related-kitchen",
+          "url": "https://kitchencabinetkings.com/scholarship",
+          "observedAt": "2026-09-11T04:33:19.421Z",
+          "contentSha256": "71955f6fddf569c902b2b51eb91c58ee0484c36d335016a83ceca3fa5bfae349"
+        },
+        {
+          "sourceId": "official-related-fordform",
+          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "observedAt": "2026-09-11T04:33:44.048Z",
+          "contentSha256": "d7475893a2102bd5f4682df614133398d8641de9da6905ea5f023177014a261f"
+        },
+        {
+          "sourceId": "official-related-anne",
+          "url": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
+          "observedAt": "2026-09-11T04:34:45.119Z",
+          "contentSha256": "90870306a99a01254f9a166576a1cb9237e5bd35d5a31f47696423e54d025af4"
+        },
+        {
+          "sourceId": "official-related-allegra",
+          "url": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
+          "observedAt": "2026-09-11T04:34:41.943Z",
+          "contentSha256": "3c52792a79eeb2a5f1eb3e10b95e6228aa76298d1de1d9f86e995d319c5de6e2"
+        },
+        {
+          "sourceId": "official-related-ndalliance",
+          "url": "https://thendalliance.org/scholarship/",
+          "observedAt": "2026-09-11T04:33:40.515Z",
+          "contentSha256": "3e2339d61026c132d77e8cf39508c552f6381b304ffea665a7fb456cbe931894"
+        },
+        {
+          "sourceId": "official-related-ndfaq",
+          "url": "https://thendalliance.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:35:47.444Z",
+          "contentSha256": "16c7fd64f87cfcf721d704b06056a7af045c097b3c5b19bb3fb166dc262b9d73"
+        },
+        {
+          "sourceId": "official-related-sorlyd",
+          "url": "https://www.soroptimist.org/awards/apply.html",
+          "observedAt": "2026-09-11T04:34:59.454Z",
+          "contentSha256": "a2a63f05e2e17dc8e652a1734899bd0191389bee352d097237924b8b51ccc9bf"
+        },
+        {
+          "sourceId": "official-related-bebold",
+          "url": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
+          "observedAt": "2026-09-11T04:35:37.834Z",
+          "contentSha256": "c217732dbffd2604f32f03740b63025e1556ad92f6a89806ac411bcd21d11ebf"
+        },
+        {
+          "sourceId": "official-related-institute",
+          "url": "https://scholarshipinstitute.org/scholarships/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:37:02.657Z",
+          "contentSha256": "23c08c853fdba0c99a0a988c1ed76c1699faf392e02f6757bc8595f51bded9d4"
+        },
+        {
+          "sourceId": "official-related-agc-workforce",
+          "url": "https://smr.to/p109007",
+          "observedAt": "2026-09-11T04:37:25.325Z",
+          "contentSha256": "801fd85761b2bef4b5a53950f10b0cef6343c12940f5a19c843d777b06464975"
+        },
+        {
+          "sourceId": "official-related-agc-criteria",
+          "url": "https://www.agc.org/sites/default/files/Files/Workforce%20Applicant%20Criteria.pdf",
+          "observedAt": "2026-09-11T04:38:22.144Z",
+          "contentSha256": "82a360fbf66143b2046560509cb42be2e723bf86c0dd99adc1fa1dcada1db123"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_7864fa72115725778fcfd7d134a3fbab3b72503b972728865be63d253bddbf95",
+      "awardId": "award-97dfaadd1d31",
+      "artifact": "docs/evidence/scholarship-intake/remaining-community-evidence.json",
+      "artifactSha256": "0d838476af26eaf8f54bec6fc7b13f64ab4afa8caeca9155d3914c87416cda9c",
+      "locator": "sources[11]",
+      "selected": {
+        "sourceId": "official-community29-ncld",
+        "url": "https://thendalliance.org/scholarships/",
+        "observedAt": "2026-09-11T07:08:00Z",
+        "excerpt": "Input named NCLD annual awards but supplied NDAlliance route redirects to Neurodiversity scholarship related to Master135. Same source historically occurs on distinct Morelli Master136; dates on currentpage conflict. Do not collapse organizations/awards from shared URLs or promote these dates.",
+        "contentSha256": "3a53bd1c815e189aef655acb71ed1c8c21ce26afda2c3e3eca70e19cc54f342b",
+        "supportingOfficialUrls": [],
+        "observationPrecision": "Reviewer-reported approximate time/window, not an exact native request timestamp",
+        "observationWindow": {
+          "start": "2026-09-11T06:57:00Z",
+          "end": "2026-09-11T07:08:00Z"
+        }
+      },
+      "sourceReceipts": [
+        {
+          "sourceId": "official-community29-everyday",
+          "url": "https://ncld.org/scholarships-awards/everyday-champion-award/",
+          "observedAt": "2026-09-11T06:59:09Z",
+          "contentSha256": "7ef3c3e818acbe417c5a5708c873e58665b31f2fe956a3a88b809488cc40afe4"
+        },
+        {
+          "sourceId": "official-community29-life",
+          "url": "https://mtfgc.org/wp-content/uploads/2025/12/2025-MFGC-Life-Members-Scholarship-Application-Info.docx",
+          "observedAt": "2026-09-11T07:05:11Z",
+          "contentSha256": "161e706281b666a2c1a5f086e4c8c856707974eaa24d69e017519fccd518069b"
+        },
+        {
+          "sourceId": "official-community29-marj",
+          "url": "https://reachhighermontana.org/scholarship-detail/view_express_entity/4553",
+          "observedAt": "2026-09-11T07:05:14Z",
+          "contentSha256": "b895eca1d01248d9c979575a4cfc92bb699af9f99dbe664847b0ff44cd88b216"
+        },
+        {
+          "sourceId": "official-community29-covid",
+          "url": "https://ncld.org/wp-content/uploads/2023/10/231027-NCLD-Annual-Report-1.pdf",
+          "observedAt": "2026-09-11T07:07:44Z",
+          "contentSha256": "5755e5c7a4c81ae84976e5d3bc8b5e4c42f5d9b70598fa8f02b78e6d240c82d9"
+        },
+        {
+          "sourceId": "official-community29-pride",
+          "url": "https://pridefoundation.org/find-funding/scholarships/guidelines/",
+          "observedAt": "2026-09-11T07:00:43Z",
+          "contentSha256": "ed8d1c0ed77a5eb5492401d3481ad70150115758b08b674a120fa27cf1b2b12d"
+        },
+        {
+          "sourceId": "official-community29-noble",
+          "url": "https://msubillings.academicworks.com/opportunities/9176",
+          "observedAt": "2026-09-11T07:06:00Z",
+          "contentSha256": "c53fe69f512e0c9e73cfa4117be7dc23ae8d9ec1c3caa7302ceb71d2065f16e6"
+        },
+        {
+          "sourceId": "official-community29-nursing",
+          "url": "https://www.logan.org/community/community-enrichment/",
+          "observedAt": "2026-09-11T07:05:18Z",
+          "contentSha256": "111e4db6a0fda4eddcadee95d9e9734b9da847d1a17dca5f61c75b37b4bb0410"
+        },
+        {
+          "sourceId": "official-community29-glacier",
+          "url": "https://www.glaciermedicalassociates.com/",
+          "observedAt": "2026-09-11T07:07:42Z",
+          "contentSha256": "ebfe9aec241762510a08d8f7b7ae3dd60aad1ee172d5460f66efa740fbae5b35"
+        },
+        {
+          "sourceId": "official-community29-nursejournal",
+          "url": "https://nursejournal.org/",
+          "observedAt": "2026-09-11T06:59:17Z",
+          "contentSha256": "7410ead007da985a0fef7d94f061290502fd46ff66ea57b4a068802a2e170cf9"
+        },
+        {
+          "sourceId": "official-community29-lsac",
+          "url": "https://app.lawhub.org/programs/how-to-pay-for-law-school",
+          "observedAt": "2026-09-11T06:58:00Z",
+          "contentSha256": "7a7929d94dfb97462e4faf21fa80fd8d911aab6f84383a69f460bc3de4b9560b"
+        },
+        {
+          "sourceId": "official-community29-premed",
+          "url": "https://docs.google.com/document/d/1Jk8icJTBOJaHWnpBpxIEMFObzfxtzlro/edit",
+          "observedAt": "2026-09-11T07:00:36Z",
+          "contentSha256": "82af24caaeed6cb08547e0e1c42c14532ab4ee455a541514160e6007a3e91c74"
+        },
+        {
+          "sourceId": "official-community29-ncld",
+          "url": "https://thendalliance.org/scholarships/",
+          "observedAt": "2026-09-11T07:08:00Z",
+          "contentSha256": "3a53bd1c815e189aef655acb71ed1c8c21ce26afda2c3e3eca70e19cc54f342b"
+        },
+        {
+          "sourceId": "official-community29-trout",
+          "url": "https://www.tu.org/get-involved/volunteer-tacklebox/risk-management-and-financial-controls-resources/5013crequirements/scholarships/",
+          "observedAt": "2026-09-11T07:05:24Z",
+          "contentSha256": "a615a8983eca18dce8e5e823777e46362081e7e3ae895c5b562fbc64c4ee4f71"
+        },
+        {
+          "sourceId": "official-community29-ashs",
+          "url": "https://ashs.org/page/ScholarsAward",
+          "observedAt": "2026-09-11T06:59:02Z",
+          "contentSha256": "badf059a7ce64181739b43fbfebf4c868644657beb5b303000e5d39390b6a096"
+        },
+        {
+          "sourceId": "official-community29-bark",
+          "url": "https://www.barklawfirm.com/scholarship-application/",
+          "observedAt": "2026-09-11T07:06:50Z",
+          "contentSha256": "72589630621b7f97eee31af2fb6f4e4a5631abff0811c1e3cc8536adea4e6596"
+        },
+        {
+          "sourceId": "official-community29-kennedy",
+          "url": "https://www.epinjury.com/scholarships",
+          "observedAt": "2026-09-11T07:05:52Z",
+          "contentSha256": "a0f8423b8fb3a02e223d4bcc057683d23adbefec6966102b0841633cbf5e5f14"
+        },
+        {
+          "sourceId": "official-community29-waddoups",
+          "url": "https://www.waddoupslaw.com/scholarship-application/",
+          "observedAt": "2026-09-11T07:05:49Z",
+          "contentSha256": "fd0bdbd423f1175bde8ec082490dfb4469130727c2d468be6b8e8733425100ed"
+        },
+        {
+          "sourceId": "official-community29-msub",
+          "url": "https://msubillings.academicworks.com/",
+          "observedAt": "2026-09-11T07:01:11Z",
+          "contentSha256": "bd88f2d1547c95ec8284fe41ecdd055aa288915982313aa3fddcf83f1cf90e91"
+        },
+        {
+          "sourceId": "official-community29-ahs",
+          "url": "https://ahsgardening.org/scholarships/",
+          "observedAt": "2026-09-11T07:06:39Z",
+          "contentSha256": "e1d4ed7a50f0dbfb0fdb3fb626ce1043be47a84213602f702aafe95d0f37e49a"
+        },
+        {
+          "sourceId": "official-community29-nsaa",
+          "url": "https://www.nsaa.org/MtnFnd/Apply/MtnFnd/applicant_info.aspx",
+          "observedAt": "2026-09-11T06:59:06Z",
+          "contentSha256": "17b72623e444609468616162add36acfa5a6c75a39a1b36259fb4fe6ff2a6bcf"
+        },
+        {
+          "sourceId": "official-community29-amvets",
+          "url": "https://www.amvets.org/scholarships",
+          "observedAt": "2026-09-11T06:58:58Z",
+          "contentSha256": "9d71aa35fdbe82da9c60dbad84d90089745f19f48eebf483c4c7c5c91ad179a7"
+        },
+        {
+          "sourceId": "official-community29-hagan",
+          "url": "https://haganscholarships.org/",
+          "observedAt": "2026-09-11T06:59:12Z",
+          "contentSha256": "05de7db6092630919f5a74676485359a5ed457ce55f1a22750e0b19f2dac5745"
+        },
+        {
+          "sourceId": "official-community29-cardrates",
+          "url": "https://www.cardrates.com/scholarship/",
+          "observedAt": "2026-09-11T07:05:32Z",
+          "contentSha256": "7d44cdeffdc38c614946f6734f46e4eec04f19f5e22f7a50b8e855faba664b2b"
+        },
+        {
+          "sourceId": "official-community29-safer",
+          "url": "https://www.wellscall.com/scholarship-contest/",
+          "observedAt": "2026-09-11T07:06:37Z",
+          "contentSha256": "516e43ac0b469e10f58702877f4a26635eb209508bd8f40967880d0db0dd98e5"
+        },
+        {
+          "sourceId": "official-community29-marj-pdf",
+          "url": "https://reachhighermontana.org/application/files/6417/7332/8476/2026-27_PEO_MK-MM_Scholarship_App.pdf",
+          "observedAt": "2026-09-11T07:01:17.991Z",
+          "contentSha256": "0841f7c97c494eb94e5595f150ed223d76585c6a6d1142d5ed4552985c7918b7"
+        },
+        {
+          "sourceId": "official-community29-life-directory",
+          "url": "https://mtfgc.org/opportunities/",
+          "observedAt": "2026-09-11T06:58:54.065Z",
+          "contentSha256": "46403e200f130fc68d32e9528cf6c85b9ae7467651d983b8c7390a2fc9b1fef4"
+        },
+        {
+          "sourceId": "official-community29-cardrates-essay-recheck",
+          "url": "https://www.cardrates.com/scholarship/",
+          "observedAt": "2026-09-11T07:22:15.904Z",
+          "contentSha256": "068bcec1e7c9baa6a226cd55bf8c18a57444d0c86b34dec56f1dd0353cc785ed"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_4857b0ff991287aacdf361bd7a326ee9544e3bede73c41da6b23915911a65daa",
+      "awardId": "award-52b096183d9d",
+      "artifact": "docs/evidence/scholarship-intake/related-material-additional-evidence.json",
+      "artifactSha256": "e6832f375b00e7f253e160efcc4f250041905a9e02f1859c5a3f3ff544f20729",
+      "locator": "sources[official-related-sorlyd]",
+      "selected": {
+        "sourceId": "official-related-sorlyd",
+        "url": "https://www.soroptimist.org/awards/apply.html",
+        "finalUrl": "https://www.soroptimist.org/our-work/live-your-dream-awards/apply-for-the-live-your-dream-awards.html",
+        "observedAt": "2026-09-11T04:34:59.454Z",
+        "contentSha256": "a2a63f05e2e17dc8e652a1734899bd0191389bee352d097237924b8b51ccc9bf",
+        "fieldSpecificSummary": "OfficialLYDthreelevels,potential1000–16000total,clubawardsvary/average1000,regional3000/5000,international10000. Femaleprimarysupportofselfanddependents,need,vocational/skillsorundergradaccepted/enrolled;staff/member/immediatefamilyexcluded. Notguaranteed16000."
+      },
+      "sourceReceipts": [
+        {
+          "sourceId": "official-related-leroy",
+          "url": "https://leroywhomerjr.org/scholarships/application/",
+          "observedAt": "2026-09-11T04:33:23.443Z",
+          "contentSha256": "e9c5992e4e63dedac3d4b81200d69e3707edab4e168e083ee248e121c83eed8a"
+        },
+        {
+          "sourceId": "official-related-leroyfaq",
+          "url": "https://leroywhomerjr.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:34:48.702Z",
+          "contentSha256": "6402f451ffa194870507af86caece613b72dfd70508df786ddb1feecc4869d9a"
+        },
+        {
+          "sourceId": "official-related-msu-resident",
+          "url": "https://www.montana.edu/admissions/scholarships/residents/index.html",
+          "observedAt": "2026-09-11T04:33:10.078Z",
+          "contentSha256": "c8ec3b8c2e54354449fd168137f9088d3362b6838746ddb791a0ff276991a73c"
+        },
+        {
+          "sourceId": "official-related-carroll",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise-montana-students",
+          "observedAt": "2026-09-11T04:33:12.359Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-node",
+          "url": "https://www.carroll.edu/node/44893",
+          "observedAt": "2026-09-11T04:34:13.762Z",
+          "contentSha256": "4b514fb988fff8c317dd2ad84f1f42e1f37f8cb16d62f0ddc88eb1c99ca68a18"
+        },
+        {
+          "sourceId": "official-related-carroll-parent",
+          "url": "https://www.carroll.edu/admission-aid/scholarships-grants",
+          "observedAt": "2026-09-11T04:37:22.446Z",
+          "contentSha256": "d180d2f7247faec1929574df21e0999050c64ac38235b2102105a979490984a2"
+        },
+        {
+          "sourceId": "official-related-carroll-current",
+          "url": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+          "observedAt": "2026-09-11T04:38:20.354Z",
+          "contentSha256": "0b41bdae4720ada9ac5bd02f3e24fed47a8bb7192bfa083c32d301866ca3b4c7"
+        },
+        {
+          "sourceId": "official-related-elksmvs",
+          "url": "https://www.elks.org/scholars/scholarships/mvs.cfm",
+          "observedAt": "2026-09-11T04:33:14.964Z",
+          "contentSha256": "1eba8e9244fe49ccb718cee239998ed6e97d9915703157d44618323fecdaa7f5"
+        },
+        {
+          "sourceId": "official-related-mtelks",
+          "url": "https://mtelks.org/",
+          "observedAt": "2026-09-11T04:33:46.692Z",
+          "contentSha256": "0844bd1ef224c72271bdb0622abf65c9487a9d3e9c05f784777e70a09bf34b93"
+        },
+        {
+          "sourceId": "official-related-mtelksscholar",
+          "url": "https://mtelks.org/community-charity/",
+          "observedAt": "2026-09-11T04:34:53.782Z",
+          "contentSha256": "ca5d89b1d70154c3fbac1e5e0ec117a3411fb7cdeec2448e38f9105d52503c4f"
+        },
+        {
+          "sourceId": "official-related-jennepdf",
+          "url": "https://montanaelks.b-cdn.net/wp-content/uploads/2024/01/scholarship-william-and-sara-jenne-scholarship-application.pdf",
+          "observedAt": "2026-09-11T04:35:33.248Z",
+          "contentSha256": "0d3eabdb040af8008f7c037d490ab2177662f20288d38e7d25152e76c38baf26"
+        },
+        {
+          "sourceId": "official-related-horatio",
+          "url": "https://horatioalger.org/scholarships-and-services/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:33:55.268Z",
+          "contentSha256": "7789922eee4277970398e46415f6ee38f8dcae4349b314ceaf8bc5842731c336"
+        },
+        {
+          "sourceId": "official-related-norrish",
+          "url": "https://www.buildingflathead.com/assets/pdf/John+and+Joe+Norrish+Scholarship+Application+2025-26/",
+          "observedAt": "2026-09-11T04:33:50.944Z",
+          "contentSha256": "80231ded4e1ba4339a0e19b3f16e12b35bb5b9eb46253fd5ae5a1822ac54a3d1"
+        },
+        {
+          "sourceId": "official-related-nataform",
+          "url": "https://nataaero.wufoo.com/forms/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:34:56.811Z",
+          "contentSha256": "e8bbfe436508ab2cecea79e22ef7fe7f96b84800edfe9dda7bcfa17d8aea6ea8"
+        },
+        {
+          "sourceId": "official-related-nataofficial",
+          "url": "https://nata.aero/national-air-transportation-foundation/scholarships/richard-l-taylor-flight-training-scholarship/",
+          "observedAt": "2026-09-11T04:35:49.886Z",
+          "contentSha256": "0ce028552702354962dd43247ab4aabc8aef0cc170ad8fa1d3875b2dcce86dc5"
+        },
+        {
+          "sourceId": "official-related-kitchen",
+          "url": "https://kitchencabinetkings.com/scholarship",
+          "observedAt": "2026-09-11T04:33:19.421Z",
+          "contentSha256": "71955f6fddf569c902b2b51eb91c58ee0484c36d335016a83ceca3fa5bfae349"
+        },
+        {
+          "sourceId": "official-related-fordform",
+          "url": "https://apply.mykaleidoscope.com/program/AnneAllegraFordThomas2026",
+          "observedAt": "2026-09-11T04:33:44.048Z",
+          "contentSha256": "d7475893a2102bd5f4682df614133398d8641de9da6905ea5f023177014a261f"
+        },
+        {
+          "sourceId": "official-related-anne",
+          "url": "https://ncld.org/scholarships-awards/anne-ford-scholarship/",
+          "observedAt": "2026-09-11T04:34:45.119Z",
+          "contentSha256": "90870306a99a01254f9a166576a1cb9237e5bd35d5a31f47696423e54d025af4"
+        },
+        {
+          "sourceId": "official-related-allegra",
+          "url": "https://ncld.org/scholarships-awards/allegra-ford-thomas-scholarship/",
+          "observedAt": "2026-09-11T04:34:41.943Z",
+          "contentSha256": "3c52792a79eeb2a5f1eb3e10b95e6228aa76298d1de1d9f86e995d319c5de6e2"
+        },
+        {
+          "sourceId": "official-related-ndalliance",
+          "url": "https://thendalliance.org/scholarship/",
+          "observedAt": "2026-09-11T04:33:40.515Z",
+          "contentSha256": "3e2339d61026c132d77e8cf39508c552f6381b304ffea665a7fb456cbe931894"
+        },
+        {
+          "sourceId": "official-related-ndfaq",
+          "url": "https://thendalliance.org/scholarships/faq/",
+          "observedAt": "2026-09-11T04:35:47.444Z",
+          "contentSha256": "16c7fd64f87cfcf721d704b06056a7af045c097b3c5b19bb3fb166dc262b9d73"
+        },
+        {
+          "sourceId": "official-related-sorlyd",
+          "url": "https://www.soroptimist.org/awards/apply.html",
+          "observedAt": "2026-09-11T04:34:59.454Z",
+          "contentSha256": "a2a63f05e2e17dc8e652a1734899bd0191389bee352d097237924b8b51ccc9bf"
+        },
+        {
+          "sourceId": "official-related-bebold",
+          "url": "https://bold.org/scholarships/the-be-bold-no-essay-scholarship/",
+          "observedAt": "2026-09-11T04:35:37.834Z",
+          "contentSha256": "c217732dbffd2604f32f03740b63025e1556ad92f6a89806ac411bcd21d11ebf"
+        },
+        {
+          "sourceId": "official-related-institute",
+          "url": "https://scholarshipinstitute.org/scholarships/undergraduate-scholarships/",
+          "observedAt": "2026-09-11T04:37:02.657Z",
+          "contentSha256": "23c08c853fdba0c99a0a988c1ed76c1699faf392e02f6757bc8595f51bded9d4"
+        },
+        {
+          "sourceId": "official-related-agc-workforce",
+          "url": "https://smr.to/p109007",
+          "observedAt": "2026-09-11T04:37:25.325Z",
+          "contentSha256": "801fd85761b2bef4b5a53950f10b0cef6343c12940f5a19c843d777b06464975"
+        },
+        {
+          "sourceId": "official-related-agc-criteria",
+          "url": "https://www.agc.org/sites/default/files/Files/Workforce%20Applicant%20Criteria.pdf",
+          "observedAt": "2026-09-11T04:38:22.144Z",
+          "contentSha256": "82a360fbf66143b2046560509cb42be2e723bf86c0dd99adc1fa1dcada1db123"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_5ad161570c0ef2ad65d3a8174c60809235f24c1d447de54e24111e78b396def4",
+      "awardId": "award-d8ff6ef257b3",
+      "artifact": "docs/evidence/scholarship-intake/aopa-field-evidence.json",
+      "artifactSha256": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4",
+      "locator": "awards[2]",
+      "selected": {
+        "entityId": "intake-entity-c6492d5b4f51ff25",
+        "heading": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
+        "historicalAmount": "$12000",
+        "historicalConditions": "High-school students age 16–18; GPA 2.7; FAA private-pilot written exam passed before applying.",
+        "disposition": "link_existing",
+        "locator": "Examples of Past Scholarships > AOPA Foundation You Can Fly High School Flight Training Scholarship"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-aopa-program",
+          "url": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+          "observedAt": "2026-09-11T02:26:08.670Z",
+          "contentSha256": "4ac12502d48a1b482c163a6938a018d520ea13754e39391aa14ba1b53e4886fb"
+        },
+        {
+          "id": "official-aopa-faq-2026",
+          "url": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+          "observedAt": "2026-09-11T02:45:57.603Z",
+          "contentSha256": "4f0c45dc5a38ff71884cc47aabaa05ae354acf65fc31cd1833210aaf4e191964"
+        },
+        {
+          "id": "official-aopa-process",
+          "url": "https://www.aopa.org/news-and-media/all-news/2025/october/09/aopa-foundation-opens-scholarship-applications-revamps-process",
+          "observedAt": "2026-09-11T02:47:19.535Z",
+          "contentSha256": "acb0d453a206550e443cc8f00a05e5f14e0bab21665769cbad85146d35dc4c58"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_0c0d4c58960f507c10b0a2ce0c3d137917c54e1791e4c70edbadaa4ec245f35b",
+      "awardId": "award-d8ff6ef257b3",
+      "artifact": "docs/evidence/scholarship-intake/aopa-field-evidence.json",
+      "artifactSha256": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4",
+      "locator": "commonFacts",
+      "selected": {
+        "membership": "currentAOPAmember",
+        "residency": "US/DC,Canada,Guam,PuertoRico,USVirginIslands",
+        "cycle": "parentclosed; opens2026-10-01; parentends12-30versusFAQ12-31 unresolved",
+        "application": "officialparentHowItWorks and official2025process article route back toprogram; generalapplicationautomatcheseligiblefunds",
+        "limitation": "Childsections explicitlyExamplesofPastScholarships; neither amountnorofferingisassuredfornextcycle"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-aopa-program",
+          "url": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+          "observedAt": "2026-09-11T02:26:08.670Z",
+          "contentSha256": "4ac12502d48a1b482c163a6938a018d520ea13754e39391aa14ba1b53e4886fb"
+        },
+        {
+          "id": "official-aopa-faq-2026",
+          "url": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+          "observedAt": "2026-09-11T02:45:57.603Z",
+          "contentSha256": "4f0c45dc5a38ff71884cc47aabaa05ae354acf65fc31cd1833210aaf4e191964"
+        },
+        {
+          "id": "official-aopa-process",
+          "url": "https://www.aopa.org/news-and-media/all-news/2025/october/09/aopa-foundation-opens-scholarship-applications-revamps-process",
+          "observedAt": "2026-09-11T02:47:19.535Z",
+          "contentSha256": "acb0d453a206550e443cc8f00a05e5f14e0bab21665769cbad85146d35dc4c58"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_e05bee05514ea17a1c33e6ea2c9e8c005b298a54f8a204474492bd6be4c5cc5f",
+      "awardId": "award-ce44143820a7",
+      "artifact": "docs/evidence/scholarship-intake/aopa-field-evidence.json",
+      "artifactSha256": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4",
+      "locator": "awards[15]",
+      "selected": {
+        "entityId": "intake-entity-c7958bc969addd05",
+        "heading": "The David and Lisa Barnes Flight Training Scholarship",
+        "historicalAmount": "$10000",
+        "historicalConditions": "High school students age 16–18; private pilot certificate.",
+        "disposition": "propose_add",
+        "locator": "Examples of Past Scholarships > The David and Lisa Barnes Flight Training Scholarship"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-aopa-program",
+          "url": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+          "observedAt": "2026-09-11T02:26:08.670Z",
+          "contentSha256": "4ac12502d48a1b482c163a6938a018d520ea13754e39391aa14ba1b53e4886fb"
+        },
+        {
+          "id": "official-aopa-faq-2026",
+          "url": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+          "observedAt": "2026-09-11T02:45:57.603Z",
+          "contentSha256": "4f0c45dc5a38ff71884cc47aabaa05ae354acf65fc31cd1833210aaf4e191964"
+        },
+        {
+          "id": "official-aopa-process",
+          "url": "https://www.aopa.org/news-and-media/all-news/2025/october/09/aopa-foundation-opens-scholarship-applications-revamps-process",
+          "observedAt": "2026-09-11T02:47:19.535Z",
+          "contentSha256": "acb0d453a206550e443cc8f00a05e5f14e0bab21665769cbad85146d35dc4c58"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    },
+    {
+      "evidenceId": "evd_5afaf98671a1bc1675819cd2da92aaf0e38c0d6125b0702d3a477c0c51ffbdcb",
+      "awardId": "award-ce44143820a7",
+      "artifact": "docs/evidence/scholarship-intake/aopa-field-evidence.json",
+      "artifactSha256": "53ca0c2043ebeeed2b4742d47d6b4b9c7c243d4cf47059583dab80ce76ed14f4",
+      "locator": "commonFacts",
+      "selected": {
+        "membership": "currentAOPAmember",
+        "residency": "US/DC,Canada,Guam,PuertoRico,USVirginIslands",
+        "cycle": "parentclosed; opens2026-10-01; parentends12-30versusFAQ12-31 unresolved",
+        "application": "officialparentHowItWorks and official2025process article route back toprogram; generalapplicationautomatcheseligiblefunds",
+        "limitation": "Childsections explicitlyExamplesofPastScholarships; neither amountnorofferingisassuredfornextcycle"
+      },
+      "sourceReceipts": [
+        {
+          "id": "official-aopa-program",
+          "url": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+          "observedAt": "2026-09-11T02:26:08.670Z",
+          "contentSha256": "4ac12502d48a1b482c163a6938a018d520ea13754e39391aa14ba1b53e4886fb"
+        },
+        {
+          "id": "official-aopa-faq-2026",
+          "url": "https://download.aopa.org/youcanfly/2026scholarshipfaq.pdf",
+          "observedAt": "2026-09-11T02:45:57.603Z",
+          "contentSha256": "4f0c45dc5a38ff71884cc47aabaa05ae354acf65fc31cd1833210aaf4e191964"
+        },
+        {
+          "id": "official-aopa-process",
+          "url": "https://www.aopa.org/news-and-media/all-news/2025/october/09/aopa-foundation-opens-scholarship-applications-revamps-process",
+          "observedAt": "2026-09-11T02:47:19.535Z",
+          "contentSha256": "acb0d453a206550e443cc8f00a05e5f14e0bab21665769cbad85146d35dc4c58"
+        }
+      ],
+      "reuse": "as_of_only_no_current_acceptance"
+    }
+  ],
+  "firstSD2Batch": [
+    "award-2179b44d009d",
+    "award-97dfaadd1d31",
+    "award-ce44143820a7"
+  ],
+  "publicProjection": [
+    {
+      "publicId": "award-577dacb8c225",
+      "name": "Ted Lund Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-cc76c70549f4"
+      ]
+    },
+    {
+      "publicId": "award-2179b44d009d",
+      "name": "Pell Promise for Montana Students",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-04a21a2ba1a4"
+      ]
+    },
+    {
+      "publicId": "award-8bce77306c27",
+      "name": "Gladys R. Spear Memorial Scholarship ($500)",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-c4a8dcbe5717"
+      ]
+    },
+    {
+      "publicId": "award-62a1f1662db9",
+      "name": "Astoria Hotel & Suites Athletic Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-fc55fc0c5628",
+        "source-525cfb2f08da"
+      ]
+    },
+    {
+      "publicId": "award-26c4b3c65985",
+      "name": "Montana Clerk & Recorder's Scholarship (2) $1,000",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-4745caf8a439"
+      ]
+    },
+    {
+      "publicId": "award-5dd4c3d3988a",
+      "name": "Whitefish Soroptimist Memorial Scholarship for Girls Graduating High School",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-5520098a0569"
+      ]
+    },
+    {
+      "publicId": "award-a2f7b9b6cbec",
+      "name": "Republic Airways Aviation Management Scholarship (NGPA)",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-9648f29529e6",
+        "source-4d92d0e3e074"
+      ]
+    },
+    {
+      "publicId": "award-cd0fb7cd0c64",
+      "name": "LIFT Academy Pilot Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-869df1b06d32",
+        "source-ae5295da6360"
+      ]
+    },
+    {
+      "publicId": "award-97dfaadd1d31",
+      "name": "The Neurodiversity Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-6f5be4bb2fda",
+        "source-df804cf550de"
+      ]
+    },
+    {
+      "publicId": "award-52b096183d9d",
+      "name": "Live Your Dream Award",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-1b300bcee130",
+        "source-571adbd67772"
+      ]
+    },
+    {
+      "publicId": "award-d8ff6ef257b3",
+      "name": "AOPA Foundation You Can Fly High School Flight Training Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-8c7bbbf9ca1e"
+      ]
+    },
+    {
+      "publicId": "award-ce44143820a7",
+      "name": "The David and Lisa Barnes Flight Training Scholarship",
+      "summary": "Current requirements and availability need checking.",
+      "amount": {
+        "label": "Amount not verified",
+        "minimum": null,
+        "maximum": null,
+        "currency": null,
+        "state": "unknown"
+      },
+      "eligibility": {
+        "audience": "Eligibility not verified",
+        "minimumGpa": null,
+        "schoolTypes": [],
+        "focus": null
+      },
+      "cycle": {
+        "status": "unknown",
+        "label": "Availability not verified",
+        "year": null,
+        "opens": null,
+        "closes": null,
+        "recurrence": "unknown"
+      },
+      "application": {
+        "mode": "unknown",
+        "label": "Application method not verified",
+        "url": null,
+        "groupPublicId": null,
+        "supplements": "unknown"
+      },
+      "sourcePublicIds": [
+        "source-8c7bbbf9ca1e"
+      ]
+    }
+  ]
+}

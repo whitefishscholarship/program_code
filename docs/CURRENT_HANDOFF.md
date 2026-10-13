@@ -1,3 +1,28 @@
+# SD1 — local contract and representative pilot checkpoint
+
+October13,2026. Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9 for the sole current
+project progress pointer, STUDENT_DATA_CONTRACT for the final local definitions,
+and docs/evidence/sd1/ for exact authority, twelve fresh-copy records, saved-source
+scope/freshness, local checks, independent review and continuation prompt.
+
+Worktree/branch remain /private/tmp/program_code-student-data-maintenance-plan,
+codex/plan-student-data-maintenance. Only workbook1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0
+was inspected: metadata, scholarship headers,12 exact A:O rows; no old workbook,
+old cell snapshots, other-tab/applicant cells, notes/contact records or writes.
+Canonical controls/state and the app remain unchanged. This completes selected
+SD1 planning/pilot only; no accepted current facts or canonical stage acceptance.
+
+SD2 is unstarted. First proposed batch: Pell Promise award-2179b44d009d,
+Neurodiversity award-97dfaadd1d31, David and Lisa Barnes award-ce44143820a7.
+Wait for selected SD2/source/denominator authority. No app/workbook implementation,
+deployment, monitoring activation or notifications. Preserve prior reviews and the
+retained seasonal monitor009fa57 with all437 inventory identities and existing gates.
+Standard build environment limit and all missing current evidence remain explicit.
+
+Earlier planning and full historical handoff preserved below.
+
+---
+
 # Student data and maintenance — local planning proposal
 
 October 13, 2026. User requests a comprehensive but lean plan for the background

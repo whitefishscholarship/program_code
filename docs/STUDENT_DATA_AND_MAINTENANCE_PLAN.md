@@ -1,7 +1,7 @@
 # Student scholarship data and maintenance plan
 
-Version: 1.1. Updated October 13, 2026, America/Denver: replacement working spreadsheet selected.
-Status: local planning proposal; implementation unstarted. Validation and independent review are recorded in docs/evidence/student-data-plan/.
+Version: 1.2. Updated October 13, 2026, America/Denver: selected SD1 local contract and pilot.
+Status: SD1 local planning checkpoint; canonical implementation unstarted. SD1 validation/review: docs/evidence/sd1/. Earlier proposal/replacement reviews remain in docs/evidence/student-data-plan/.
 Owner: Codex maintains the plan and implements selected work; Kelsey selects scope and external effects.
 Repository: whitefishscholarship/program_code.
 
@@ -18,6 +18,13 @@ selects the current workbook and permits identity metadata verification, now com
 These requests do not execute proposed stages, inspect workbook cells, change
 scholarship sources/workbooks, publish code, deploy, schedule checks or send alerts.
 The earlier final-three cleanup authority is completed and must not be replayed.
+
+The later direct SD1 instruction separately authorizes local contract/pilot/review
+and bounded metadata/header/12-scholarship inspection of the selected copy. That
+inspection is recorded in docs/evidence/sd1/README.md; it does not grant writes,
+source fetches, app implementation, deployment, monitoring or notifications. The
+final selected vocabulary/ID/workbook/queue definitions are in
+docs/STUDENT_DATA_CONTRACT.md; they supersede section3–4 proposals for SD1 design.
 
 AGENTS.md, SCHOLARSHIP_SYSTEM_BUILD_PLAN.md and BUILD_STATE.json remain controlling.
 SD1–SD6 below are proposed delivery slices, not accepted canonical stages or new
@@ -52,6 +59,10 @@ specifically selects a later change. No private-form submissions or provider con
   `Spreadsheet Clean Up 4` and native Google Sheets file type. Contents, tab IDs,
   row identities, permissions and equivalence to the predecessor are not verified.
   All selected future workbook work and reference reads target this ID only.
+  SD1 subsequently verified seven actual tabs and twelve bounded scholarship
+  identities/candidates in `School Resource - Cleaned Up`, gid405588227. See SD1
+  evidence for exact ranges and two held app mappings. Whole-copy population,
+  applicant/other-tab content, write permissions and equivalence remain unverified.
 - **Retired predecessor:** `1ifwt24eEI2ITG7ME58bH190kUX4NtizMDBM0pGN2BY0`.
   Do not open/read it, use it as a reference, fall back to it, or write to it for
   this project. Older workbook IDs in historical plans/state/evidence remain
@@ -203,7 +214,8 @@ preservation failure; keep factual uncertainty visible and continue unaffected w
 
 Only one selected SD slice per session; large slices use bounded checkpoints rather
 than fabricated completion. Dates/session counts are estimates, not deadlines.
-All stages below are unstarted; their prompts do not independently grant authority.
+SD1's selected local design/pilot is recorded in section9; SD2–SD6 remain unstarted.
+The prompts do not independently grant authority or canonical stage acceptance.
 
 | Slice | Deliverable and exit check | Suggested model / effort |
 | --- | --- | --- |
@@ -341,22 +353,24 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
-- Current slice: none; planning only. Next proposed slice: SD1.
+- Current slice: SD1 local design/pilot complete, subject to its recorded independent review and validation limits; no canonical stage acceptance. Next proposed slice: SD2.
 - Branch/worktree: `codex/plan-student-data-maintenance`,
   `/private/tmp/program_code-student-data-maintenance-plan`.
 - Baseline: `1c8e33f23beb55c2ed2ebe78fe4e256722af8392`.
-- Last completed: local design proposal; final validation/review is recorded in
-  `docs/evidence/student-data-plan/` once finished.
+- Last completed: final SD1 vocabulary/fields/IDs, five-table workbook feed,
+  monitor queue ownership and12-record local pilot. Contract:
+  `docs/STUDENT_DATA_CONTRACT.md`; validation/review: `docs/evidence/sd1/`.
 - Working workbook: `1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0`; predecessor references retired.
-- Next exact action: select SD1 contract/pilot and reconcile canonical authority;
-  verify the new copy's bounded baseline when content reads are selected, then freeze
-  definitions and a representative dry-run. Do not reuse predecessor coordinates.
-- SD1/SD2/SD3/SD4/SD5/SD6: all unstarted. No live migration/publication/activation.
-- Outstanding: new-copy tab/content baseline and preservation controls; ID/cycle
-  collisions; new field evidence gaps;
-  Reviews queue adoption vs older monitor state; accepted-fact publication selection;
-  monitor setup/allowances; later exact release authority. Resolve in the relevant
-  slice, not by adding unrequested platforms.
+- Next exact action: wait for selected SD2/source/denominator authority, then process
+  exactly award-2179b44d009d (Pell Promise), award-97dfaadd1d31 (Neurodiversity),
+  award-ce44143820a7 (David and Lisa Barnes), in that order. Reidentify fresh;
+  rows18/255/400 are hints. Short prompt: `docs/evidence/sd1/CONTINUE.md`.
+- SD1 local planning/pilot complete; SD2/SD3/SD4/SD5/SD6 unstarted. No live migration/publication/activation.
+- Outstanding: all current-cycle material facts; Spear/Live Your Dream app-ID holds;
+  full population/preservation controls and publication acceptance; standard-build
+  environment limit and fresh delivery baseline; SD5 whole-inventory queue adoption,
+  monitor setup/allowances and later exact release authority. Owners/triggers and
+  field-specific gaps are in SD1 evidence; resolve only in the selected later slice.
 
 At close record commit/evidence paths; completed IDs or code checkpoint; exact next
 ID/task; unresolved blockers and owner/trigger; commands/results; actual model/effort;
@@ -462,9 +476,9 @@ Planning-session resume pointer:
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Read the controlling repository files,
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md and docs/evidence/student-data-plan/.
-The plan is a local docs-only proposal; all six SD slices remain unstarted.
-Select only SD1 contract/pilot before implementation, respecting canonical state
-and exact effect authority. Preserve completed cleanup and existing timer records.
+SD1 local contract/pilot is complete; read docs/evidence/sd1/CONTINUE.md and review.
+SD2–SD6 remain unstarted; select only the exact next SD2 batch/source scope before
+execution, respecting canonical state/effects. Preserve cleanup and timer records.
 No Sheet edit, source research, app release or monitoring activation is authorized
 merely by the saved plan. Verify the current checkpoint before continuing.
 ```

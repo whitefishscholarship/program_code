@@ -1,0 +1,42 @@
+[
+  {
+    "command": "npm run plan:check",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:52:51.109592+00:00",
+    "endedAt": "2026-10-13T14:52:51.268062+00:00",
+    "exitCode": 1,
+    "log": "docs/evidence/sd1/checks/plan-check.log"
+  },
+  {
+    "command": "npm run typecheck",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:52:51.268254+00:00",
+    "endedAt": "2026-10-13T14:52:55.932992+00:00",
+    "exitCode": 0,
+    "log": "docs/evidence/sd1/checks/typecheck.log.json"
+  },
+  {
+    "command": "npm test",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:52:55.933155+00:00",
+    "endedAt": "2026-10-13T14:52:56.055052+00:00",
+    "exitCode": 1,
+    "log": "docs/evidence/sd1/checks/test.log"
+  },
+  {
+    "command": "npm run build",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:52:56.055210+00:00",
+    "endedAt": "2026-10-13T14:52:57.766545+00:00",
+    "exitCode": 1,
+    "log": "docs/evidence/sd1/checks/build.log"
+  },
+  {
+    "command": "git diff --check",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+    "startedAt": "2026-10-13T14:52:57.766762+00:00",
+    "endedAt": "2026-10-13T14:52:57.787863+00:00",
+    "exitCode": 0,
+    "log": "docs/evidence/sd1/checks/diff-check.log"
+  }
+]
