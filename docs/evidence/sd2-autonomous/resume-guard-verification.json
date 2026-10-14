@@ -1,0 +1,34 @@
+{
+  "outcome": "PASS",
+  "checks": [
+    {
+      "arguments": [],
+      "exitCode": 0,
+      "stdout": "PASS:406 frozen inputs verified; existing checkpoint progress preserved without writes.\n",
+      "stderr": "",
+      "queueAndProgressUnchanged": true
+    },
+    {
+      "arguments": [
+        "--check"
+      ],
+      "exitCode": 0,
+      "stdout": "PASS:406 frozen inputs verified; existing checkpoint progress preserved without writes.\n",
+      "stderr": "",
+      "queueAndProgressUnchanged": true
+    },
+    {
+      "arguments": [
+        "--initialize"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "Refusing initialization: queue/checkpoint already exists; preserve recorded progress.\n",
+      "queueAndProgressUnchanged": true
+    }
+  ],
+  "beforeAfterSha256": {
+    "queue.json": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43",
+    "checkpoint-001.json": "b2c9a4a715e3be3fd5e31ce4b77e36b8aeac58dccc7ab2467891cf8b967767a4"
+  }
+}

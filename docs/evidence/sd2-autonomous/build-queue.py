@@ -1,8 +1,16 @@
 """Freeze the saved SD2 denominator; no network, spreadsheet or app mutation."""
 from pathlib import Path
-import hashlib,json,re,subprocess
+import hashlib,json,re,subprocess,sys
 P=Path(__file__).resolve().parent; ROOT=P.parents[2]
 ENTRY='3f3462d26a046a25ab1a3738d4556e312b64823d'
+mode=sys.argv[1] if len(sys.argv)==2 else '--check'
+if len(sys.argv)>2 or mode not in ['--check','--initialize']:
+ raise SystemExit('Use --check (default) or first-time --initialize; no reset/force option.')
+existing=[(P/n).exists() for n in ['queue.json','checkpoint-001.json']]
+if mode=='--initialize' and any(existing):
+ raise SystemExit('Refusing initialization: queue/checkpoint already exists; preserve recorded progress.')
+if mode=='--check' and not all(existing):
+ raise SystemExit('Both queue and checkpoint must exist for verification; first initialization requires --initialize.')
 def sha(b):return hashlib.sha256(b).hexdigest()
 def read(p):return json.loads((ROOT/p).read_text())
 def git(*a):return subprocess.check_output(['git',*a],cwd=ROOT)
@@ -51,7 +59,16 @@ result={'schemaVersion':1,'scope':'saved SD2 input keys, never accepted award id
  'checkpointSize':20,'firstCheckpointInputKeys':[r['inputKey'] for r in records[:20]],
  'records':records,'noNewSpreadsheetRead':True,'humanCheckpointApprovalRequired':False,
  'canonicalFactOrStageAcceptance':False}
-(P/'queue.json').write_text(json.dumps(result,indent=2)+'\n')
+queue_text=json.dumps(result,indent=2)+'\n'
+if mode=='--check':
+ assert (P/'queue.json').read_text()==queue_text
+ checkpoint=json.loads((P/'checkpoint-001.json').read_text())
+ assert checkpoint['queueSha256']==sha(queue_text.encode())
+ assert checkpoint['orderedInputKeys']==result['firstCheckpointInputKeys']
+ assert [r['inputKey'] for r in checkpoint['records']]==result['firstCheckpointInputKeys']
+ print('PASS:406 frozen inputs verified; existing checkpoint progress preserved without writes.')
+ raise SystemExit(0)
+(P/'queue.json').write_text(queue_text)
 ledger={'schemaVersion':1,'queueSha256':sha((P/'queue.json').read_bytes()),'checkpoint':1,
  'orderedInputKeys':result['firstCheckpointInputKeys'],
  'records':[{'inputKey':r['inputKey'],'rowLocator':r['rowLocator'],'recordedName':r['recordedName'],

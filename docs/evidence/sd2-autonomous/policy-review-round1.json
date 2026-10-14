@@ -1,0 +1,52 @@
+{
+  "reviewType": "fresh-context-read-only-prospective-policy",
+  "reviewer": "/root/sd2_autonomous_policy_review",
+  "outcome": "FAIL",
+  "candidateCommit": "e3c653bd91c281586748b7b97972ea47567a89a8",
+  "candidateTree": "7cd9f2887642f147487819a84113c6ada79d84f2",
+  "manifestPath": "docs/evidence/sd2-autonomous/policy-manifest-round1.json",
+  "manifestSha256": "af7983fb4185ea6fd628dc6cbf1946ddcb92b0effc35956beb6ffc37014d30a8",
+  "completeDiffSha256": "a60d2468f4f2f32c98b828bce795c011e1b5759ce606c25567e59bba3add8aa6",
+  "recordedAt": "2026-10-14T15:16:27Z",
+  "freshContext": true,
+  "readOnly": true,
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 1
+  },
+  "findings": [
+    {
+      "id": "SD2-AUTO-M1",
+      "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/build-queue.py",
+      "line": 54,
+      "summary": "Unconditional queue/checkpoint writes erase recorded progress on rerun.",
+      "owner": "Codex author",
+      "remediation": "Fail closed for existing initialization; default verify-only without writes."
+    },
+    {
+      "id": "SD2-AUTO-L1",
+      "severity": "low",
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "line": 440,
+      "summary": "New blank line at EOF fails complete Git diff whitespace check.",
+      "owner": "Codex author",
+      "remediation": "Remove extra blank line."
+    }
+  ],
+  "checks": [
+    "Recomputed10-path manifest/tree/blob identities/sizes/hashes/complete diff",
+    "Verified1005 prior paths outside candidate change set unchanged",
+    "Verified406 remaining names and exact20 first inputs",
+    "Reproduced queue and pending checkpoint entirely in memory without writes",
+    "Verified original437 unique M1 records",
+    "Checked authority/official/native/PII/form/contact/depth boundaries and retained gates"
+  ],
+  "limitations": [
+    "Remote source contents not reauthenticated",
+    "New author command matrix separate and pending"
+  ],
+  "canonicalAcceptance": false
+}
