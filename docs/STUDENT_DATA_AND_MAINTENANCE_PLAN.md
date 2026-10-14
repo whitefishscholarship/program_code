@@ -355,6 +355,17 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-006-START -->
+<!-- SD2-CHECKPOINT-006-CLOSE-START -->
+- Final session closure audited all120initial dispositions/2,262fieldholds/
+  120identityholds,190seed-alias/720source-link disposition occurrences, all
+  inherited/new material routes, nineattentionrows/every supplement and437M1.
+  Every owner/trigger/nextaction retained; no pending reviewer repair or recheck.
+  Evidence: checkpoint-006/SESSION_CLOSE.md and session-close-verification.json.
+  Next-session Codex resumes offset120/row124 under existing AUTHORITY/POLICY;
+  source-output sanitization and temporary custody/Clerk gaps retain their exact
+  triggers. All build/freshmain/preservation/acceptance/student/monitor/effect
+  gates unchanged. No new source research/acceptance/reset/replay/later slice.
+<!-- SD2-CHECKPOINT-006-CLOSE-END -->
 - October14,2026: one bounded checkpoint006 completed at frozen offsets100–119,
   beginning savedrow104/Keith P. Guelff Memorial Endowed Scholarship. Packet:
   sd2-autonomous/checkpoint-006.json and checkpoint-006/.

@@ -1,3 +1,7 @@
+Final closure audited in checkpoint-006/SESSION_CLOSE.md and
+session-close-verification.json. Original source review and all holds remain exact.
+Use plansection9 as the sole progress pointer, then the authoritative packet below.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS read order, then complete
 STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress pointer, and
