@@ -655,7 +655,7 @@
     "parentSourceId": "davis",
     "sourceRole": "selected-public-page",
     "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-007/sources/davis-faq.md",
-    "artifactSha256": "0e061f17d897b77fbae743bcc88624d9c26079be72a8307477871684643a230f",
+    "artifactSha256": "744e933edb4a2fb345e4af7a064f1a2a5c15c6b9e5d8e187494fdcf8acc3ba90",
     "sourceScope": "Sanitized selected program text; excluded scope cannot establish silence",
     "linkDispositions": [
       {
@@ -685,7 +685,17 @@
     ],
     "owner": "Codex source/identity reconciliation",
     "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-    "nextAction": "Reconcile exact selected program/source/version and every deferred material at this source path; preserve access/identity/freshness limits."
+    "nextAction": "Reconcile exact selected program/source/version and every deferred material at this source path; preserve access/identity/freshness limits.",
+    "sanitizationRecovery": {
+      "scope": "Restore substantive high-school/degree-credit answer from original in-session captured response; contact sentence/link excluded",
+      "newSourceRead": false,
+      "rawFullEnvelopeHashRetained": false,
+      "originalCallWindow": {
+        "startedAt": "2026-10-14T22:26:09.062Z",
+        "completedAt": "2026-10-14T22:26:21.161Z"
+      },
+      "provenanceLimit": "Recovered wording was verified in retained in-session original tool result; no raw full-envelope hash or independent source refresh. Original sanitized omission remains in immutable candidate4373ca3."
+    }
   },
   {
     "sourceId": "nths-scholarships",

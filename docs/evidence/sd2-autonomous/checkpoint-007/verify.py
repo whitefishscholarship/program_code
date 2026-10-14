@@ -68,6 +68,26 @@ assert v(138,'materials')['wordingDistinctionHeld'] and v(139,'amount')['annualB
 assert v(140,'materials')['essay']['selectedLimit'] is None and v(141,'deadline')['year'] is None
 assert v(142,'minimumGPA')['HSorCurrentCollege']==2.5 and v(143,'minimumGPA') is None
 assert v(143,'selection')['random'] and not v(143,'selection')['meritBased']
+dual=v(131,'eligibility')['highSchoolDualEnrollment'];assert dual['degreeCreditsAtHigherEducationInstitutionRequired'] and dual['APGenerallyDoesNotMeetRequirement'] and dual['partTimeCollegeEnrolleeStillInHighSchoolMayQualify'] and not dual['automaticEligibility']
+assert any(e['sourceId']=='davis-faq' and 'part-time college enrollees' in e['excerpt'] for e in rows[131]['fieldProposals']['eligibility']['evidence'])
+assert reg['davis-faq']['sanitizationRecovery']['newSourceRead'] is False and reg['davis-faq']['sanitizationRecovery']['rawFullEnvelopeHashRetained'] is False
+for row in [124,125,126,127,134]:
+ method=rows[row]['fieldProposals']['applicationMethod'];assert method['state']=='verified' and method['acceptance']=='held' and method['evidence']
+ assert method['value']['currentRouteUsability'] is None and method['value']['currentPublicAccess'] is None and method['value']['currentApplicableCycle'] is None
+ assert method['value']['actualApplicationAccessVerified'] is False and method['value']['loginFormSubmissionContactActions'] is False and method['value']['applicationPortalVisited'] is False
+assert v(127,'applicationMethod')['publishedApplicationAccessCode']=='26SFMS'
+assert v(134,'applicationMethod')['alternativeMethods']==['mailed paper application','online through published program link']
+originalNative=json.loads(git('show','4373ca3:docs/evidence/sd2-autonomous/checkpoint-007/native-inspection.json'))
+interim=load(P/'native-inspection.json')
+for orig,cur in zip(originalNative,interim):
+ assert all(cur[k]==val for k,val in orig.items())
+ assert cur['receiptStatus']=='interim extraction observation, superseded for final retained-text binding'
+ assert cur['finalRetainedTextVerificationPath']=='docs/evidence/sd2-autonomous/checkpoint-007/document-inspection.json'
+luedke=next(x for x in interim if x['id']=='luedke');assert luedke['selectedTextSha256']!=sha((ROOT/luedke['selectedTextPath']).read_bytes()) and 'does not match' in luedke['selectedTextBindingLimit']
+originalReview=load(P/'review-round1.json');assert originalReview['outcome']=='FAIL' and originalReview['severityCounts']=={'critical':0,'high':0,'medium':2,'low':1}
+assert sha((P/'manifest-round1.json').read_bytes())==originalReview['binding']['manifestSha256']
+assert (P/'verification-round1.json').read_bytes()==git('show','4373ca3:docs/evidence/sd2-autonomous/checkpoint-007/verification.json')
+fixes=load(P/'remediation.json');assert fixes['requiredFixCount']==len(fixes['dispositions'])==3 and {x['findingId'] for x in fixes['dispositions']}=={x['id'] for x in originalReview['findings']}
 d=load(P/'document-inspection.json');assert len(d['nativeDocuments'])==9 and len(d['safePageViews'])==14 and d['all14SelectedPageViewsInspected']
 for x in d['nativeDocuments']:
  assert sha(Path(x['rawArtifactPath']).read_bytes())==x['rawSha256']

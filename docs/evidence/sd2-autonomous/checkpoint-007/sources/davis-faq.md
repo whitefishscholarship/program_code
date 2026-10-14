@@ -44,7 +44,7 @@ No. The Davis Putter Scholarship Fund is **a need-based grant**. We look compreh
 
 ### I am still in high school, but I am taking college courses. Can I apply for a grant for these courses?
 
-[contact line omitted]
+Probably not, but you should review the eligibility criteria to check based on your specific context. You must be **enrolled** at an institution of higher education and be receiving degree credits from that institution. Advanced placement courses while in high school generally do not meet those requirements, though part-time college enrollees who are still in high school **may** be eligible.
 
 ### I have not been accepted by a school yet, but I don’t want to miss out on applying for a scholarship for this year. How can I fill out the application?
 

@@ -162,3 +162,35 @@ review receipt is separate from canonical attestation; no fact/stage acceptance.
 
 No new workbook access/write, app/configuration/CI change, login/form interaction,
 providercontact/messages, remoteGit/release/deployment/monitoractivation or SD3.
+
+## Author remediation after independent review
+
+Original candidate4373ca3, manifest-round1.json, review-round1.json and
+verification-round1.json remain preserved against their exact original binding.
+Two medium findings and one low were author-fixed; three count-matched dispositions
+are in remediation.json. Final independent recheck is required for the replacement.
+
+Davis-Putter's retained original in-session FAQ answer is restored with only the
+contact sentence/link removed: actual degree-credit enrollment is required; AP
+courses generally do not meet it, while part-time college enrollees still in high
+school may qualify. Context qualification remains, no automatic eligibility. This
+is recovered original capture wording, not a fresh read; no raw full-envelope hash
+was retained. Source artifact/evidence hashes, held typed qualifier and all row131
+next actions carry that limitation.
+
+Rows124–126 now separately retain source-described required online WCF portal
+submission. Seeley127 retains the MCF portal and published application access code;
+WET134 retains paper submission OR an online alternative, without contact/mailing
+values. All five method observations stay held; actual application access, current
+usability, public access, identity and cycle remain unverified. All action flags
+are false. No portal visit or source refresh was needed.
+
+native-inspection.json explicitly labels every entry as an interim extraction
+observation superseded for final selected-text verification. Luedke's historical
+selectedTextSha256 intentionally predates mailing-value sanitization and does not
+match the final path; original keys/hash remain exact and immutable4373ca3 retains
+the original unlabeled receipt. document-inspection.json is the final hash authority.
+Semantic checks verify this relationship and all three repairs. Field totals stay
+384new/2,646cumulative;0accepted. Full matrix binds unchanged canonical/web/control
+bytes; focused final evidence verification and independent recheck bind corrections.
+No builder/reset/replay/new research, prior evidence change or gate waiver.
