@@ -354,6 +354,50 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-005-START -->
+- October 14, 2026: one bounded checkpoint005 completed at frozen offsets80–99,
+  beginning savedrow84/Clayton E. Hoyt. Authoritative packet:
+  sd2-autonomous/checkpoint-005.json and checkpoint-005/.
+  Twenty initial outcomes:2researched-held,13held-identity,5held-access;
+  6source receipts (5new/1reused),366heldfields/20identities,0accepted facts.
+- Cumulative100/406 initial input dispositions,306unprocessed;
+  all1,886autonomous fieldholds/100identityholds remain held. Prior1,520fields/
+  80identities and every source/seed/link/deferred-material route remain exact.
+  Next-session Codex resumes offset100/savedrow104, Keith P. Guelff Memorial
+  Endowed Scholarship, under existing AUTHORITY/POLICY. Never initialize/reset/
+  replay; fullSD2 incomplete; stop beforeSD3. Short prompt: NEXT_SESSION.md.
+- Independent source review PASS C0/H0/M0/L0 binds candidate25bd824;
+  exact local direct-child two-file receipt1021f06. checkpoint-005/final-manifest.json
+  and review.json control. Original361f25e/manifest-round1/review-round1/
+  verification-round1 remain immutable. One medium finding was author-fixed and
+  independently rechecked: Word format for all Elks recommendations, separately
+  from the essay. No pending reviewer repair; this separate wrap never rebinds review.
+- Codex source/identity reconciliation owns all held facts/identities on applicable
+  authorized evidence arrival or SD2 consolidation after initial queue coverage.
+  Nineteen Dawson children remain separate; five form-only locators unfetched.
+  Promise broader program versus endowed award, eligibility conjunction/appeal,
+  deferred brochure/HUD definition and all future offering/material gaps stay held.
+  Elks parent1000/PDF500, current/native public identity and yearless versions,
+  applicant/Lodge/relative timing, filing/upload-email, full materials including
+  Word recommendations/essay, vocational conditions and renewal/continuing rules
+  remain explicit. Every specific next action/link disposition is in the ledger.
+- Native Elks12pages rendered/visually inspected; CDN12page extracted layout text
+  byte-equal despite distinct raw PDFs, no separate CDN visual claim. Prior Norrish
+  custody hashes/PDF/four images verified without reacquisition/replay. At next
+  required audit Codex checks temporary custody or reports specific availability
+  gaps, preserving original receipts. Before each next source output Codex narrows/
+  sanitizes selected program scope/minimal metadata; recorded contact/unrelated/
+  maintainer/download-reference output lapses are contained in persisted evidence.
+- Every prior packet/PRELUDE decision, nine original attentionrows/every supplement,
+  all historical bindings and437M1 routes/owners/triggers remain exact. Plan/type/
+  fulltests and evidence/preservation/full-frozen-diff checks PASS; both exact builds
+  remain process/portEPERM. Fresh authenticated main/target, native preservation/
+  backup/recovery/permissions, human/canonical/publication/student/CSV/browser and
+  all seasonalM1/SD5/effect gates remain open at original owners/triggers.
+  No workbook access/write, app/configuration, login/forms/contact/messages,
+  remoteGit/release/monitor activation orSD3. Closeout: checkpoint-005/SESSION_WRAP.md
+  and wrap-verification.json; section9 remains the sole progress pointer.
+<!-- SD2-CHECKPOINT-005-END -->
 <!-- SD2-CHECKPOINT-004-START -->
 - Final session closure audited all80initial dispositions/1,520autonomous field
   holds/80identityholds, every record/source/seed/link route and nine original
