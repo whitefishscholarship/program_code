@@ -355,6 +355,14 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-004-START -->
+- Final session closure audited all80initial dispositions/1,520autonomous field
+  holds/80identityholds, every record/source/seed/link route and nine original
+  attentionrows/every supplement. No pending reviewer repair; original owners/
+  triggers retained. Evidence: checkpoint-004/session-close-verification.json.
+  checkpoint-004/SESSION_CLOSE.md additionally routes safe source-output handling
+  before next reads and temporary Norrish custody availability at next evidence
+  audit. Next-session Codex resumes offset80/row84under existing authority. No new
+  research/acceptance/reset/replay/later slice or reserved effects.
 - October14,2026: checkpoint004 completes one bounded autonomous SD2 initial
   research checkpoint at immutable offsets60–79, starting savedrow63/ElksMVS.
   Packet: `sd2-autonomous/checkpoint-004.json` and `checkpoint-004/`.

@@ -2,7 +2,8 @@ Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS controlling read order, then
 complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9 and sd2-autonomous AUTHORITY/
 POLICY, checkpoint-004.json and checkpoint-004/{README.md,final-manifest.json,
-review.json,SESSION_WRAP.md,wrap-verification.json}. Preserve original8cd41aa,
+review.json,SESSION_WRAP.md,wrap-verification.json,SESSION_CLOSE.md,
+session-close-verification.json}. Preserve original8cd41aa,
 round1manifest/review/verification and all checkpoint001–003/history exact.
 
 Resume existing autonomous SD2 at queue offset80, saved row84:
@@ -23,3 +24,8 @@ permissions, later human/canonical/publication/student/monitor gates remain open
 at original owners/triggers. No workbook access/write, app/configuration, login/
 forms/contact/messages, remoteGit/release or monitoringactivation. Recommended
 effort:High.
+
+Before next permitted source outputs, follow SESSION_CLOSE.md safe selected-scope
+handling; provider redaction alone is insufficient. At an audit needing Norrish raw
+files, verify recorded temporary paths/custody or record an availability gap. Keep
+original receipts/holds; never reconstruct facts or replay completed research.
