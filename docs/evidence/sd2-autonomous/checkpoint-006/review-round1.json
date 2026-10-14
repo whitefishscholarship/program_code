@@ -1,0 +1,85 @@
+{
+  "outcome": "FAIL",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint006_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "memoryUsed": false,
+    "networkOrExternalActions": false
+  },
+  "binding": {
+    "entryCommit": "194fd2b086d34607d915b4d551a28b6c013728ae",
+    "candidateCommit": "cdac48be73cf24de68cd16b34621da722b9bad8d",
+    "candidateTree": "4c8e5cff3c924c14c7c9ef8f1ad9646b0876463d",
+    "manifestSha256": "7be8d90c79295975437372cc101f5631108f71ec301ec61fbdaf214a018dd623",
+    "completeDiffSha256": "84358ac6ff9c5de87b3788e31543ff13c6be16c960cb7659e9a871dc2c50d9f4",
+    "changedPaths": 48
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-006-M1",
+      "severity": "medium",
+      "title": "Retain FCD's local high-school-senior eligibility condition",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-006.json",
+      "line": 3085,
+      "inputKey": "saved-405588227-row-114",
+      "evidence": "Both retained fcd-page and fcd-pdf state that the program offers scholarships to qualified local high school seniors. The condition is also visible on the inspected safe PDF page1. Row114 records residence, GPA, study focus and recipient limits but has no typed observation for the high-school-senior condition; its README summary and specific next action omit it.",
+      "impact": "The material eligibility reconciliation loses an explicit applicant-stage condition even though the source is available. A later consolidation using the held ledger could overlook it.",
+      "requiredFix": "Add a source-scoped, held eligibility observation preserving the exact local high-school-senior wording, with exact excerpt, URL, artifact hash and locator. Preserve the parent's conditional homeschool category separately; do not infer a homeschool exclusion or current applicability. Carry the condition in README and record/seed next actions. Add an appropriate semantic verifier assertion and reconcile any changed field totals.",
+      "owner": "Codex implementation author",
+      "trigger": "Before replacement candidate review",
+      "target": "Replacement immutable checkpoint006 candidate"
+    },
+    {
+      "id": "SD2-006-M2",
+      "severity": "medium",
+      "title": "Retain Clerk's graduating-senior and parent high-school scope",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-006.json",
+      "line": 3640,
+      "inputKey": "saved-405588227-row-115",
+      "evidence": "The retained Clerk PDF explicitly requires a graduating senior. clerk-page describes a graduating Flathead County high school senior and separately a graduating high school senior attending an in-state college or university. Row115 captures destination-type conflict but does not retain the graduating-senior condition or parent Flathead County high-school scope in a typed eligibility observation. README and specific next action also omit them.",
+      "impact": "A supported applicant-stage condition and locally scoped parent statement are absent from the research reconciliation. The acknowledged incomplete official-information section does not make these readable statements unavailable.",
+      "requiredFix": "Add held, source-scoped eligibility observations for the PDF's graduating-senior requirement and the parent's Flathead County high-school wording, with exact excerpts, URLs, hashes and locators. Distinguish high-school location from applicant residence; do not infer county residency, resolve the destination conflict, or claim complete PDF inspection. Carry these conditions in README and record/seed next actions, assert them in the verifier, and reconcile changed field totals.",
+      "owner": "Codex implementation author",
+      "trigger": "Before replacement candidate review",
+      "target": "Replacement immutable checkpoint006 candidate"
+    }
+  ],
+  "requiredFixCount": 2,
+  "checksPerformed": [
+    "Read governing repository instructions, relevant canonical plan/state and current handoff, P9 evidence, selected NEXT_SESSION, complete student-data plan section9, autonomous authority/policy and checkpoint005 review/remediation/wrap bindings.",
+    "Independently recomputed candidate tree, manifest SHA256 and complete entry-to-candidate binary-diff SHA256; verified all48 changed path names, candidate blob IDs, byte counts, SHA256 values and worktree equality.",
+    "Inspected and ran the read-only checkpoint006 verifier: PASS with20 initial inputs,120 cumulative dispositions,286 unprocessed,374 new field envelopes,2260 cumulative held fields,120 held identities,175 evidence references,24 source receipts,80 link dispositions,1253 protected entry paths,12 M1 pins and437 M1 records.",
+    "Independently verified all175 exact excerpts, source URLs and artifact hashes, plus23 new capture/source/window bindings and18 retained final-URL-map entries.",
+    "Compared material typed values and summaries against all retained selected source artifacts and inspected all14 safe page views across seven blank PDFs.",
+    "Independently inspected Hawkins DOCX body XML:20 paragraphs,0 tables; all nonempty paragraph content is retained after trailing-whitespace normalization.",
+    "Checked conflicts and distinctions for Clerk award counts/destination scope; Hawkins years/student-counselor dates; Barbara historical/current forms, need proof, nonprofit wording and volunteer conditions; Davidson tenure/hours/reapplication; Campbell references/consecutive-year possibility; RISE affiliation/timezone/history; MSGA excluded form facts and HITEC separate timeline dates.",
+    "Confirmed nineteen prior Elks/Norrish custody hashes through the read-only audit, without reacquisition or a new historical full-inspection claim.",
+    "Verified passing plan/typecheck/full-test command receipts and log hashes after disclosed IPC retries, and both exact standard-build process/port permission failures.",
+    "Ran frozen entry-to-candidate whitespace validation successfully. Confirmed only final-manifest.json is untracked.",
+    "Scanned persisted selected sources, ledger and metadata for contact values and token-bearing references; containment checks passed. Original output-scope lapses remain disclosed."
+  ],
+  "limits": [
+    "This review concerns one local held-research checkpoint. No scholarship facts, current offering, canonical stage or release are accepted.",
+    "Live source availability, current workbook state, native public/sponsor authority and fresh authenticated remote main/target were not independently verified.",
+    "Clerk raw-byte, visual and complete official-information-section proof remain unavailable; readable provider200 does not resolve those limits.",
+    "Safe page views exclude disclosed contact/biography regions; no complete unredacted visual proof or excluded-scope silence is asserted.",
+    "Raw documents and renderings remain temporary. Future required audits must verify exact custody or report specific availability gaps.",
+    "Provider-call windows are retained; origin-fetch times/revisions and some raw-download timing/status remain unavailable.",
+    "The disclosed intermediate selected-output breaches and unexpected MSGA blank-form retrieval remain recorded; persisted containment does not erase them.",
+    "Both standard-build failures remain open and unwaived. Full SD2 remains incomplete; all earlier holds, nine attention rows, historical bindings and437 M1 routes remain preserved."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "Receipt of this independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-006/",
+    "action": "Preserve this original candidate, manifest, review and verification unchanged. Author-remediate the two count-matched findings using existing retained sources only, freeze and manifest a replacement candidate, and request independent recheck. Do not replay source research, accept facts, begin another checkpoint/SD3 or perform external effects."
+  }
+}

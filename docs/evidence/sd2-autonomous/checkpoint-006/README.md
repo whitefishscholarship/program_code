@@ -17,8 +17,8 @@ continuation only. All external effects and canonical acceptance remain excluded
 Authoritative record/source ledger: ../checkpoint-006.json. Frozen offsets100–119,
 savedrows104–123 only. Twenty initial outcomes:7held-identity,2held-access,
 11researched-held. Twenty-four source receipts:23new/1unchanged same-day Dawson
-notice reuse. All374new field envelopes/20identities held,0accepted facts.
-Cumulative120/406 initial dispositions,286unprocessed;2,260autonomous fields/
+notice reuse. All376new field envelopes/20identities held,0accepted facts.
+Cumulative120/406 initial dispositions,286unprocessed;2,262autonomous fields/
 120identities held. Counts describe saved input keys, not accepted/distinct awards.
 Next offset120/savedrow124: Jean Atkinson Driggers Scholarship ($2,500), only in
 a later bounded checkpoint. FullSD2 incomplete; stop beforeSD3.
@@ -40,7 +40,7 @@ full application materials remain unknown. Other NAHB awards are excluded;
 the shared application portal remains locator-only.
 
 Flathead Conservation District retains AcademicYear2025-2026 fiveUSD500slots,
-one per local high school and possible sixth homeschool slot, Flathead residence,
+one per local high school and possible sixth homeschool slot, qualified local high-school-senior wording and Flathead residence,
 natural-resource degree and entry2.5GPA, once-only receipt, March13,2026 at4pm
 parent/yearlessPDF. Instructor recommendation, official transcript, original
 500-word essay choosing one of two prompts, signed certification, no document
@@ -50,7 +50,9 @@ redacted but its4pm time remains source-scoped; no guessed combined datetime.
 
 Clerk & Recorder parent says one winner/one alternate and in-state college/
 university, while readablePDF says twoUSD1000winners and an in-state school with
-broader form-listed options. No selected count/school scope. March13,2026,
+broader form-listed options. Its graduating-senior requirement and parent Flathead
+County high-school scope are retained separately from applicant residence (unknown).
+No selected count/school scope. March13,2026,
 completed application/all signatures, applicant/guardian/official-school section,
 four-year work history/activities, career statement,500wordcircumstances and
 four county-government impacts in250–500words remain held. In-person delivery
@@ -176,3 +178,16 @@ student/CSV/browser, seasonalM1/SD5setup/effect and every reserved gate remain a
 their original owner/trigger. No workbook access/write, app/configuration/CI change,
 login/forms/contact/messages, remoteGit/release/deployment or monitoractivation.
 FullSD2 incomplete; stop beforeSD3. Section9 remains sole progress pointer.
+
+## Author remediation after independent review
+
+Originalcdac48b and exact manifest-round1/review-round1/verification-round1 remain
+preserved. Two medium findings were author-fixed using unchanged retained sources:
+FCDlocal-high-school-senior condition with no homeschool exclusion, and Clerk
+graduating-senior/FlatheadCounty high-school scope with applicant residence unknown.
+New held eligibility envelopes/excerpts, README/record-seed next actions and semantic
+checks carry both;376newfields/2,262cumulative,0accepted. Two count-matched
+dispositions are in remediation.json. No source refresh/builder replay/reset or
+change to source artifacts/receipts/validation/priorholds/gates. Focused final
+verification and replacement independent recheck required; full matrix binds
+unchanged canonical/web/control bytes.

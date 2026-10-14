@@ -3593,12 +3593,40 @@
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
           "nextAction": "Reconcile this held field together with record-specific next action at its exact evidence path."
+        },
+        "eligibility": {
+          "value": {
+            "sourceWording": "qualified local high school seniors",
+            "highSchoolSenior": true,
+            "currentApplicability": null,
+            "homeschoolExclusion": null,
+            "conditionalHomeschoolSlotSeparate": true
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "PDFpage1 and parent local-high-school-senior statement; historical/yearless applicability held. Conditional homeschool slot remains separately in amount.",
+          "observedAt": "2026-10-14T21:41:00.351402+00:00",
+          "sourceRevision": null,
+          "freshness": "Source-scoped historical/yearless observation only; no current accepted truth or future-cycle extrapolation.",
+          "evidence": [
+            {
+              "sourceId": "fcd-pdf",
+              "sourceUrl": "https://flatheadcd.org/wp-content/uploads/Flathead-CD-College-Scholarship-Application-4.pdf",
+              "artifactSha256": "092d47616b480ffb44e4c2b4ffac3cd16b868239e68f9e8414f5445d85d8cf91",
+              "locator": "PDFpage1 opening program statement",
+              "excerpt": "qualified local high school seniors."
+            }
+          ],
+          "note": "Omitted, unavailable or deferred scope cannot establish source silence; unknown stays non-excluding.",
+          "owner": "Codex source/identity reconciliation",
+          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+          "nextAction": "Preserve exact qualified local high school seniors applicant-stage wording alongside separate conditional homeschool slot; no homeschool exclusion/current applicability inferred. Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
         }
       },
       "outcome": "researched-held",
       "owner": "Codex source/identity reconciliation",
       "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms.",
+      "nextAction": "Preserve exact qualified local high school seniors applicant-stage wording alongside separate conditional homeschool slot; no homeschool exclusion/current applicability inferred. Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms.",
       "interviewCoverage": "No app changes; all proposals held/non-excluding.",
       "seedDispositions": [
         {
@@ -3609,7 +3637,7 @@
           "disposition": "Selected source inspected/reused with exact limitations; all facts/identity held",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
+          "nextAction": "Preserve exact qualified local high school seniors applicant-stage wording alongside separate conditional homeschool slot; no homeschool exclusion/current applicability inferred. Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
         },
         {
           "url": "https://flatheadcd.org/programs/education-programs/college-scholarship/",
@@ -3619,7 +3647,7 @@
           "disposition": "Selected source inspected/reused with exact limitations; all facts/identity held",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
+          "nextAction": "Preserve exact qualified local high school seniors applicant-stage wording alongside separate conditional homeschool slot; no homeschool exclusion/current applicability inferred. Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
         },
         {
           "url": "https://flatheadcd.org/",
@@ -3627,7 +3655,7 @@
           "disposition": "Pinned alias deferred as redundant parent scope; no fetch or silence claim",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
+          "nextAction": "Preserve exact qualified local high school seniors applicant-stage wording alongside separate conditional homeschool slot; no homeschool exclusion/current applicability inferred. Resolve current cycle/yearless PDF and subsequent paperwork due/time against exact source; preserve entry2.5, once-only, instructor reference/official transcript/original500-word choice, meeting/June paperwork/direct-school payment/publicity/signature terms."
         }
       ],
       "allowedSourceIds": [
@@ -4065,12 +4093,48 @@
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
           "nextAction": "Reconcile this held field together with record-specific next action at its exact evidence path."
+        },
+        "eligibility": {
+          "value": {
+            "documentGraduatingSeniorRequired": true,
+            "parentGraduatingHighSchoolSenior": true,
+            "parentHighSchoolCounty": "Flathead County",
+            "applicantCountyResidency": null,
+            "destinationScopeUnresolved": true,
+            "completePDFInspection": false
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "Readable PDF first eligibility statement and parent named school scope; school location is not applicant residence; no complete PDF/current applicability proof.",
+          "observedAt": "2026-10-14T21:41:00.351402+00:00",
+          "sourceRevision": null,
+          "freshness": "Source-scoped historical/yearless observation only; no current accepted truth or future-cycle extrapolation.",
+          "evidence": [
+            {
+              "sourceId": "clerk-pdf",
+              "sourceUrl": "https://flatheadcounty.gov/application/files/8317/6556/9093/2025-26_Scholarship_Application_Fillable.pdf",
+              "artifactSha256": "8af795a61c7b6bdd2bb0dd2385b704262d28867be3da9926168e756556672885",
+              "locator": "Readable first section, raw/visual unavailable",
+              "excerpt": "APPLICANT MUST BE A GRADUATING SENIOR"
+            },
+            {
+              "sourceId": "clerk-page",
+              "sourceUrl": "https://flatheadcounty.gov/department-directory/clerk-and-recorder/scholarship",
+              "artifactSha256": "4f54ce95f5686adc4b9abe579994f098517467c6667b2bae0efbe3cfa53ead2a",
+              "locator": "Parent opening scholarship statement",
+              "excerpt": "graduating Flathead County high school senior"
+            }
+          ],
+          "note": "Omitted, unavailable or deferred scope cannot establish source silence; unknown stays non-excluding.",
+          "owner": "Codex source/identity reconciliation",
+          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+          "nextAction": "Preserve graduating-senior requirement and parent Flathead County high-school scope, not inferred applicant residency; destination conflict/raw/visual/completeness holds remain. Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements."
         }
       },
       "outcome": "researched-held",
       "owner": "Codex source/identity reconciliation",
       "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements.",
+      "nextAction": "Preserve graduating-senior requirement and parent Flathead County high-school scope, not inferred applicant residency; destination conflict/raw/visual/completeness holds remain. Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements.",
       "interviewCoverage": "No app changes; all proposals held/non-excluding.",
       "seedDispositions": [
         {
@@ -4081,7 +4145,7 @@
           "disposition": "Selected source inspected/reused with exact limitations; all facts/identity held",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements."
+          "nextAction": "Preserve graduating-senior requirement and parent Flathead County high-school scope, not inferred applicant residency; destination conflict/raw/visual/completeness holds remain. Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements."
         },
         {
           "url": "https://flatheadcounty.gov/application/files/8317/6556/9093/2025-26_Scholarship_Application_Fillable.pdf",
@@ -4091,7 +4155,7 @@
           "disposition": "Selected source inspected/reused with exact limitations; all facts/identity held",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements."
+          "nextAction": "Preserve graduating-senior requirement and parent Flathead County high-school scope, not inferred applicant residency; destination conflict/raw/visual/completeness holds remain. Resolve parent one-winner/alternate versus PDF two1000 winners, provider/raw access discrepancy and complete official-information section; no missing-content silence or inferred GPA/need rule. Preserve signature/essay/handdelivery requirements."
         }
       ],
       "allowedSourceIds": [
@@ -9000,8 +9064,8 @@
     "cumulativeInitialDispositions": 120,
     "unprocessedInputs": 286,
     "heldIdentities": 20,
-    "fieldEnvelopes": 374,
-    "cumulativeAutonomousHeldFields": 2260,
+    "fieldEnvelopes": 376,
+    "cumulativeAutonomousHeldFields": 2262,
     "cumulativeAutonomousHeldIdentities": 120,
     "sourceReceipts": 24,
     "newSourceReceipts": 23,

@@ -52,12 +52,20 @@ for r,seed in zip(l['records'],q['records'][100:120]):
    s=reg[e['sourceId']];assert e['sourceId'] in affinity[r['rowLocator']]
    assert e['sourceUrl']==s['originalUrl'] and e['artifactSha256']==s['artifactSha256']
    assert e['excerpt'] in (ROOT/s['artifactPath']).read_text() and e['locator'];refs+=1
-cov=l['coverage'];assert len(fields)==cov['fieldEnvelopes']==374
-assert cov['cumulativeAutonomousHeldFields']==2260==len(fields)+sum(len(r['fieldProposals']) for c in prior for r in c['records'])
+cov=l['coverage'];assert len(fields)==cov['fieldEnvelopes']==376
+assert cov['cumulativeAutonomousHeldFields']==2262==len(fields)+sum(len(r['fieldProposals']) for c in prior for r in c['records'])
 assert cov['cumulativeInitialDispositions']==cov['cumulativeAutonomousHeldIdentities']==120 and cov['unprocessedInputs']==286
 assert cov['outcomes']==dict(collections.Counter(r['outcome'] for r in l['records']))=={'held-identity':7,'held-access':2,'researched-held':11}
 rows={r['rowLocator']:r for r in l['records']}
 def val(row,f):return rows[row]['fieldProposals'][f]['value']
+assert val(114,'eligibility')['highSchoolSenior'] is True and val(114,'eligibility')['homeschoolExclusion'] is None
+assert val(114,'amount')['possibleSixthHomeschool'] is True
+assert any(e['sourceId']=='fcd-pdf' and e['excerpt']=='qualified local high school seniors.' and 'page1' in e['locator'] for e in rows[114]['fieldProposals']['eligibility']['evidence'])
+assert val(115,'eligibility')['documentGraduatingSeniorRequired'] is True and val(115,'eligibility')['parentHighSchoolCounty']=='Flathead County'
+assert val(115,'eligibility')['applicantCountyResidency'] is None and val(115,'eligibility')['completePDFInspection'] is False
+assert {e['sourceId'] for e in rows[115]['fieldProposals']['eligibility']['evidence']}=={'clerk-pdf','clerk-page'}
+for row,word in [(114,'qualified local high school seniors'),(115,'Flathead County high-school')]:
+ assert word in rows[row]['nextAction'] and all(word in d['nextAction'] for d in rows[row]['seedDispositions'])
 assert val(115,'amount')['selectedSlotCount'] is None and rows[115]['fieldProposals']['amount']['state']=='conflict'
 assert val(115,'sourceInspectionLimit')['visualProof'] is False
 assert val(116,'currentOffering')['2027OpeningDate'] is None
@@ -106,4 +114,4 @@ for p in (P/'sources').glob('*.md'):
  assert not re.search(r'\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}|mailto:|tel:|[?&](?:token|sig|signature|se|ouid)=|800 S Main|133 Interstate|CookieYes|ApplicationGateway',t),p
  assert not re.search(r'(?:\b\d{3}[-/.]|\(\d{3}\)\s*)\d{3}[-/.]\d{4}',t),p
 git('diff','--check',entry)
-print(json.dumps({'outcome':'PASS','checkpointInputs':20,'cumulativeInitialDispositions':120,'unprocessed':286,'nextInputKey':l['nextInputKey'],'fieldEnvelopes':374,'cumulativeHeldFields':2260,'heldIdentities':120,'evidenceReferences':refs,'sourceReceipts':24,'sourceLinkDispositions':links,'outcomes':cov['outcomes'],'preservedEntryPaths':preserved,'M1Records':437,'M1Pins':len(pins),'priorCustodyHashes':19,'selectedRenderedPageViews':14,'ClerkRawVisualProof':False,'acceptedFacts':0,'SD3Started':False},indent=2))
+print(json.dumps({'outcome':'PASS','checkpointInputs':20,'cumulativeInitialDispositions':120,'unprocessed':286,'nextInputKey':l['nextInputKey'],'fieldEnvelopes':376,'cumulativeHeldFields':2262,'heldIdentities':120,'evidenceReferences':refs,'sourceReceipts':24,'sourceLinkDispositions':links,'outcomes':cov['outcomes'],'preservedEntryPaths':preserved,'M1Records':437,'M1Pins':len(pins),'priorCustodyHashes':19,'selectedRenderedPageViews':14,'ClerkRawVisualProof':False,'acceptedFacts':0,'SD3Started':False},indent=2))
