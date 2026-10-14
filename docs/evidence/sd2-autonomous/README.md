@@ -1,3 +1,15 @@
+# Latest checkpoint —002 independently reviewed
+
+Current progress pointer is plan section9. Checkpoint002 adds20 initial held
+outcomes,17receipts and400held fields;40of406inputs now initially disposed,366remain.
+Next offset40/savedrow42: Fred J. Epstein Youth Achievement Award. Exact source
+review binds485241d/receipt9c79b15; final-manifest/review in checkpoint-002/.
+All original evidence/review bindings and owners/triggers remain exact; see
+checkpoint-002/SESSION_WRAP.md and wrap-verification.json, then NEXT_SESSION.md.
+No facts accepted or SD3 started. Earlier README retained unchanged below.
+
+---
+
 # Autonomous SD2 progress
 
 Kelsey authorized autonomous research across the frozen406 remaining saved inputs,

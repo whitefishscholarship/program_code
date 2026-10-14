@@ -1,0 +1,107 @@
+{
+  "outcome": "PASS",
+  "scope": "Author-verified documentation wrap; independent research binding unchanged",
+  "recordedAt": "2026-10-14T18:32:03.678307+00:00",
+  "entryCommit": "ec895940b0c93fcb063a357572504bcbe8e79648",
+  "reviewedCandidate": "485241d83244373ece3df73aa2099b8ba5f1c47d",
+  "localReviewReceipt": "9c79b15332cfb6960dbfda7c9298b35536fa3c43",
+  "manifestSha256": "3a6b6e4451b3c4eef4aed8ab1335ab2cc147d0d6b509a44b551da5b0d835ca1d",
+  "reviewSha256": "9ebffb9db39cf5322b33e929fe6af723e251ceaaa4ee00eb536b674187309bcd",
+  "coverage": {
+    "frozenInputs": 406,
+    "checkpointInputs": 20,
+    "cumulativeInitialDispositions": 40,
+    "unprocessedInputs": 366,
+    "autonomousHeldFieldEnvelopes": 744,
+    "autonomousHeldIdentities": 40,
+    "acceptedFacts": 0,
+    "nextQueueOffset": 40,
+    "nextSavedRow": 42,
+    "nextInputKey": "saved-405588227-row-42",
+    "sourceReceiptsByCheckpoint": [
+      18,
+      17
+    ]
+  },
+  "preservation": {
+    "preEntryPaths": 1055,
+    "reviewedSourcePacketPaths": 27,
+    "allNineOriginalRowsAndSupplements": true,
+    "priorHandoffAndREADMEExactSuffix": true,
+    "M1Records": 437,
+    "M1ArtifactPins": 12,
+    "originalPolicyResearchJayceeBindings": "unchanged and retained",
+    "originalFailedCandidateAndReview": "preserved; both findings independently fixed/rechecked"
+  },
+  "openItemRouting": {
+    "authoritativePath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "supplementPath": "docs/evidence/sd2-autonomous/checkpoint-002/SESSION_WRAP.md",
+    "fieldHoldPaths": [
+      "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "docs/evidence/sd2-autonomous/checkpoint-002.json"
+    ],
+    "owner": "Existing Codex source/identity owners; existing human acceptance gate retained",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining queue coverage",
+    "nextAction": "Reconcile every field/identity without false exclusions; preserve every original later-stage/effect trigger"
+  },
+  "verification": "Required plan/type/fulltests PASS; exact standard build twice EPERM; full final candidate diff PASS. See validation.json/validation-remediation.json; source/runtime checks not redundantly rerun for documentation wrap. Final wrap plan consistency receipt: wrap-plan-check.json.",
+  "freshMainTarget": "unverified, retained local pin only; Codex establishes before later acceptance/release",
+  "sourcePolicyDeviation": "Unpinned guessed Stockman URL404; disclosed/excluded/no retry or search; containment independently reviewed",
+  "reviewerTasks": "complete; zero unresolved findings",
+  "newSourceOrWorkbookReadsDuringWrap": 0,
+  "workbookWrites": 0,
+  "runtimeConfigurationRemoteGitContactLoginMessagesActivation": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "actualBackendModelAndEffort": "Not independently observable; no switch claimed",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/checkpoint-002/verify.py"
+      ],
+      "startedAt": "2026-10-14T18:31:51.492696+00:00",
+      "completedAt": "2026-10-14T18:31:51.942706+00:00",
+      "exitCode": 0,
+      "stdout": "{\n  \"outcome\": \"PASS\",\n  \"checkpointInputs\": 20,\n  \"cumulativeInputs\": 40,\n  \"unprocessedInputs\": 366,\n  \"nextInputKey\": \"saved-405588227-row-42\",\n  \"sourceReceipts\": 17,\n  \"fieldEnvelopes\": 400,\n  \"fieldStates\": {\n    \"unverified\": 264,\n    \"verified\": 124,\n    \"conflict\": 11,\n    \"unstated\": 1\n  },\n  \"outcomes\": {\n    \"held-identity\": 3,\n    \"held-access\": 3,\n    \"researched-held\": 14\n  },\n  \"preservedEntryPaths\": 1055,\n  \"M1Records\": 437,\n  \"M1Pins\": 12,\n  \"acceptedFacts\": 0,\n  \"SD3Started\": false,\n  \"sourcePolicyDeviationExcluded\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/verify.py"
+      ],
+      "startedAt": "2026-10-14T18:31:51.942717+00:00",
+      "completedAt": "2026-10-14T18:32:03.131492+00:00",
+      "exitCode": 0,
+      "stdout": "{\n  \"outcome\": \"PASS\",\n  \"remainingDenominator\": 406,\n  \"checkpointInputs\": 20,\n  \"outcomes\": {\n    \"researched-held\": 20\n  },\n  \"sourceReceipts\": 18,\n  \"protectedPreEntryFiles\": 939,\n  \"originalSection9AndHandoffPreserved\": true,\n  \"M1Records\": 437,\n  \"acceptedFacts\": 0,\n  \"researchComplete\": true,\n  \"SD3Started\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/build-queue.py",
+        "--check"
+      ],
+      "startedAt": "2026-10-14T18:32:03.131502+00:00",
+      "completedAt": "2026-10-14T18:32:03.242276+00:00",
+      "exitCode": 0,
+      "stdout": "PASS:406 frozen inputs verified; existing checkpoint progress preserved without writes.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "ec895940b0c93fcb063a357572504bcbe8e79648"
+      ],
+      "startedAt": "2026-10-14T18:32:03.242297+00:00",
+      "completedAt": "2026-10-14T18:32:03.260693+00:00",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

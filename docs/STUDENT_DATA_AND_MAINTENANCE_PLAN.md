@@ -354,6 +354,46 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-002-START -->
+- October14,2026 continuation: checkpoint002 resumes exactly offsets20–39 under
+  existing autonomous AUTHORITY.md/POLICY.md; no new routine approval or worksheet
+  read. Local packet: `sd2-autonomous/checkpoint-002.json` and `checkpoint-002/`.
+  Twenty initial outcomes (14researched-held,3held-identity,3held-access),17receipts
+  (15new/2reused),400held field envelopes/20held identities,0accepted facts.
+- Cumulative progress:40of406 frozen inputs initially disposed;366unprocessed.
+  Next exact action: next-session Codex resumes offset40/savedrow42, Fred J. Epstein
+  Youth Achievement Award, under the same bounded source/read/review authority.
+  Never initialize/reset, replay a completed batch or infer accepted award counts.
+  Short prompt: `docs/evidence/sd2-autonomous/NEXT_SESSION.md`.
+- Independent source-packet PASS C0/H0/M0/L0 binds candidate485241d and local
+  direct-child two-file review receipt9c79b15; final-manifest.json/review.json in
+  checkpoint-002/ are authoritative. Original535fbc8/round1review/manifest archives
+  and count-matched medium/low fixes remain exact. The separate documentation wrap
+  does not rebind any source review or grant canonical/fact acceptance.
+- All744 autonomous field holds/40identity holds remain in unchanged checkpoint001
+  and reviewed checkpoint002. Codex source/identity reconciliation owns every hold
+  on applicable authorized evidence arrival or SD2 consolidation after initial
+  remaining-queue coverage. Prior five research packets/PRELUDE decisions, original
+  nine attention rows/every earlier supplement and all437M1 routes/owners/triggers
+  remain exact. Account for every unresolved field/identity before fullSD2 completion.
+- New specific holds: Stockman/Peck child mappings; disabled Louie form/terms;
+  Wells tentative2026 entry3.0 versus renewal2.5; both conflicting Gianforte
+  campus/program poster variants with no source choice; six Memorial named awards
+  versus aggregate/shared application; historical2024SOKN; David/DavideSobba and
+  undated GPA/window; historical2025WAI children versus unbound2027 parent terms,
+  membership-expiration contradiction and literal EST/ET limits. Owners/triggers/
+  next actions and every link disposition remain in checkpoint002, not a new queue.
+- One unpinned guessed StockmanURL read returned404; disclosed/excluded from every
+  proposal, no retry/search. Independent review confirmed containment. Required
+  plan/type/fulltests and local evidence/history/full-diff checks passed. Both exact
+  standard builds still fail process/portEPERM; fresh-main/target is unverified.
+  Those Codex acceptance/release gates and all original preservation/native backup/
+  recovery/permissions, human/canonical/publication, student/CSV/browser and seasonal
+  M1/SD5 reserved-effect triggers remain open. No workbook/app/configuration changes,
+  login/application action/contact/messages, remoteGit/release or activation.
+  FullSD2 incomplete; SD3–SD6 remain unstarted. Wrap: checkpoint-002/SESSION_WRAP.md
+  and wrap-verification.json. Prior checkpoint text below is retained history.
+<!-- SD2-CHECKPOINT-002-END -->
 - October14,2026 direct user mandate: document/start autonomous remaining SD2
   research; no manual Kelsey review or approval at every checkpoint. This prospectively
   replaces page-by-page selection within the exact POLICY.md source boundary.
