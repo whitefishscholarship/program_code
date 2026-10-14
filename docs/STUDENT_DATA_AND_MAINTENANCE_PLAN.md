@@ -353,6 +353,38 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-AUTONOMOUS-START -->
+- October14,2026 direct user mandate: document/start autonomous remaining SD2
+  research; no manual Kelsey review or approval at every checkpoint. This prospectively
+  replaces page-by-page selection within the exact POLICY.md source boundary.
+  Authority/policy/queue/evidence: `docs/evidence/sd2-autonomous/`. Local task-owned
+  evidence/handoff writes and local Git checkpoints are now selected; workbook/app
+  writes and all release/activation/contact effects remain excluded.
+- Remaining denominator:406 saved named input keys from the existing794-position
+  F/G/O projection. Approximately20-record progress checkpoints, starting Spear45,
+  Live Your Dream290, then remaining original order. No inventory replay or new
+  worksheet read; no name-only IDs or accepted distinct-award count. Follow the
+  live checkpoint ledger for completed counts, holds and next cursor.
+- Kelsey Stuart is the named human reviewer and approved only the listed Jaycee
+  current-cycle correction proposals in PRELUDE.json. Codex determines identity
+  from evidence because Kelsey did not author the original sheet. Pell now focuses
+  on the initial award; retain qualifying freshman/transfer entry types and all
+  historical renewal evidence. ND/Barnes remain held after the October14 selected
+  gap check: mixed ND cycles/age/amounts; Barnes only a past-example card.
+- Codex verifies evidence and obtains independent fresh-context GPT review of
+  frozen policy/research candidates. Kelsey need not manually inspect routine
+  checkpoints. GPT review never supplies canonical fact/stage acceptance, weakens
+  historical human/publication gates or creates accepted runtime truth.
+- All original nine attention rows and every earlier supplement below are retained
+  byte-for-byte as history; no completed reviewer repair is reopened. Original
+  1aa0e4b/807fe41/3f3462d bindings and M1 009fa57's437 routes/owners/triggers stay exact.
+  Build/fresh-main, full preservation/native backup/recovery/permissions, SD3/SD4,
+  Reviews/state adoption, allowance/zero-overage, sender/service/receipt, suppression,
+  measured pilot/full sweep, recovery/catch-up/schedule health and all later effects
+  remain at their existing owners/triggers. New continuation: this directory's
+  CONTINUE.md. Full SD2 incomplete; stop before SD3.
+<!-- SD2-AUTONOMOUS-END -->
+
 <!-- SD2-JAYCEE-CONTINUATION-START -->
 - Latest selected SD2 continuation, October13,2026: exact Montana Jaycee scope in
   `docs/evidence/sd2-jaycee/AUTHORITY.md`, selected from immutable proposal at

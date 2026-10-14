@@ -1,3 +1,26 @@
+# Autonomous SD2 research selected — no routine manual checkpoint review
+
+October14,2026. Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress
+pointer, then docs/evidence/sd2-autonomous/{AUTHORITY.md,POLICY.md,README.md,
+queue.json,checkpoint-001.json,PRELUDE.json,CONTINUE.md} and its new review receipts.
+Kelsey directly authorized remaining saved SD2 research, local evidence/handoffs
+and GPT-led review. Freeze406 input keys; use20-record checkpoints starting45/Spear,
+290/Live Your Dream then original order. Routine pages/checkpoints within POLICY.md
+do not require further user selection/manual review. Follow ledger receipts for
+actual progress; a prepared queue does not claim research completion.
+
+Kelsey is the named human reviewer; specific Jaycee corrections are approved;
+Codex determines identity from evidence. Pell initial award only; ND/Barnes held.
+Keep all historical candidates/reviews, nine attention rows/supplements and M1's437
+routes/owners/triggers exact. Existing fact/canonical acceptance, build/fresh-main,
+preservation and later release/activation gates remain intact. No new Sheet access,
+workbook/app changes, application/login/contact/messages, external Git, release,
+activation or SD3. The short fresh-session block is CONTINUE.md above.
+
+Previous handoff preserved byte-for-byte below.
+
+---
+
 # Session closed — bounded SD2 goal complete; open work routed
 
 Read STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress pointer, then
