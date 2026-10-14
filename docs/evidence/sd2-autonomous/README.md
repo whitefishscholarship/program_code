@@ -16,6 +16,9 @@ accepted facts. This is research with explicit gaps, not20 accepted awards or fu
 SD2 completion. The remaining unprocessed frozen inputs number386. Source artifacts
 are sanitized selected program scopes; raw pages/recipient lists/credentials are
 not retained. Native blank-file PDF pages/XML were inspected as recorded.
+Research round1 found one low transcription consistency issue; the author aligned
+Ted’s sanitized receipt with the source artifact and recorded the restoration.
+The final research-review.json binds the independent remediation recheck.
 
 Material findings include Spear cross-file candidate continuity with expired2026
 rules, Soroptimist's separate competitive award levels/annual window, ambiguous
@@ -30,9 +33,8 @@ input order, not a second mutable progress tracker. research-review.json, when
 present, gives the independent review result for its exact research-manifest.json
 candidate. A research PASS does not accept facts or waive build/publication gates.
 
-Plan validation/typecheck passed. Tests completed with final PASS messages; provider
-completion did not expose an explicit final exit field; test-retry.log preserves the
-complete observed output. Standard build failed both ordinary and permitted attempts
+Plan validation/typecheck passed. Tests passed with explicit final exit0 in
+test-final-verification.json; test-retry.log preserves complete earlier output. Standard build failed both ordinary and permitted attempts
 with the existing process/port EPERM. Fresh authenticated main/target proof and all
 later source-version/preservation/backup/permissions gates remain open, as recorded
 in validation-summary.json and the original section9 supplements.

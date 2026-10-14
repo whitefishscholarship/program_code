@@ -1,0 +1,50 @@
+{
+  "scope": "fresh-context independent read-only local SD2 research checkpoint; no canonical acceptance",
+  "reviewer": "/root/sd2_autonomous_research_review",
+  "outcome": "FAIL",
+  "recordedAt": "2026-10-14T16:28:50.333129+00:00",
+  "candidateCommit": "02780600ef41b56426aff8c3ad3d661d8e5b9805",
+  "candidateTree": "1b8cd1ef410be3babf53745eec240e64e072d9d3",
+  "manifestPath": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+  "manifestSha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+  "completeDiffSha256": "604a10196eb1846370dbfa6dc0fd763308001671f0671a4e5cf97ef355e0300f",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "freshContext": true,
+  "readOnly": true,
+  "findings": [
+    {
+      "id": "SD2-RESEARCH-L1",
+      "severity": "low",
+      "path": "docs/evidence/sd2-autonomous/native-receipts.json",
+      "line": 79,
+      "summary": "Ted sanitized native selectedScope omits source-corroborated three-copy delivery instruction retained in source artifact; normalization does not describe restoration.",
+      "owner": "Codex implementation agent",
+      "trigger": "before final review binding",
+      "nextAction": "Refresh sanitized receipt and explicitly document restoration; freeze and recheck",
+      "factCorrectionRequired": false
+    }
+  ],
+  "checks": [
+    "20ordered inputs once;18source receipts;344envelopes;all excerpts/artifact hashes",
+    "Complete44-path manifest and original section9 nine rows/supplements",
+    "939protected paths;12pinnedM1 artifacts/437records exact",
+    "Jaycee originalcandidate1aa0e4b direct parent807fe41; laterdocs3f distinct",
+    "Five prior inputs excluded;allidentitiesheld;accepted0;SD3unstarted",
+    "NativeSpear full pages and all3 original byte hashes",
+    "Material typed claims source-supported;no privacy/scope violations",
+    "Historical/current,parent/child,need/selection,initial/renewal distinguished"
+  ],
+  "limitations": [
+    "Read-only;no network/workbook",
+    "Conversion limits and identity/current-cycle gaps explicit",
+    "Supplemental exacttests exit0; hash ec120dad07448cca8c149ee4f1661b2f5fcf2f723da15f72c337f621918b5aaf",
+    "StandardbuildEPERM,freshmain/target,canonical acceptance remain open",
+    "OldJaycee verifier cannot rununchanged against later supplements; current preservation/M1 checks passed"
+  ],
+  "canonicalAcceptance": false
+}

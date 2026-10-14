@@ -12,11 +12,12 @@
     "receipt": "command-matrix.json"
   },
   "tests": {
-    "outcome": "PASS-observed",
-    "restrictedAttempt": "EPERM IPC; exit1",
-    "permittedRetry": "complete test-retry.log contains finalR4 PASS; provider completed session37987 without an explicit exit field",
-    "exitCode": null,
-    "limit": "Do not claim retained explicit final exit status. No failed test observed."
+    "outcome": "PASS",
+    "exitCode": 0,
+    "command": "npm test",
+    "execution": "permitted",
+    "receipt": "docs/evidence/sd2-autonomous/test-final-verification.json",
+    "earlierCaptureLimitResolved": "Explicit final exit0 now retained; previous full retry output remains separately saved."
   },
   "standardBuild": {
     "outcome": "BLOCKED",

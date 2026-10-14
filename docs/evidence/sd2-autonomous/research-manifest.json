@@ -1,0 +1,275 @@
+{
+  "scope": "independent local SD2 first research-checkpoint review; no canonical fact/stage acceptance or attestation",
+  "createdAt": "2026-10-14T16:22:49.426449+00:00",
+  "entryCommit": "3f3462d26a046a25ab1a3738d4556e312b64823d",
+  "policyCandidateCommit": "351876367b9d790f75f18584b37b3d8eb1a5861b",
+  "candidateCommit": "02780600ef41b56426aff8c3ad3d661d8e5b9805",
+  "candidateTree": "1b8cd1ef410be3babf53745eec240e64e072d9d3",
+  "completeDiffSha256": "604a10196eb1846370dbfa6dc0fd763308001671f0671a4e5cf97ef355e0300f",
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "blob": "2a3b139e8d6f655f50942b961d0d4cafd7065738",
+      "bytes": 610326,
+      "sha256": "b7a8eb89c225ae9113ced07942b609809ad08ff469458cd5cf97efad83d6f337"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "blob": "b3def1f147a808ab5909e524200f8bb9277fd646",
+      "bytes": 54584,
+      "sha256": "be94fca682f20c81b124d162981d96001ecfeb37f527e474f63d0ba98eb22d94"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+      "blob": "b6aa0caff2bfe13e0205a503bc35a1cc25b1bd46",
+      "bytes": 3422,
+      "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/CONTINUE.md",
+      "blob": "83ddd26e54b195e95b20b9ca19058df63d2a3369",
+      "bytes": 2662,
+      "sha256": "c887960477a0c07d3e372c0982ac9dac4a0a988e1da01a716cd8f4aa3bbdb20e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/POLICY.md",
+      "blob": "f44cf67e49fe6581fdbe4b7895176faa63770f9a",
+      "bytes": 7386,
+      "sha256": "6135c3950190d9983fce5eca7eb27d2a9676299fbcede912c7a562e02357d6f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "blob": "5b0b4366858c1b506aa2d204000fd822620f76ab",
+      "bytes": 19794,
+      "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/README.md",
+      "blob": "314ea626a45f3f8e3ffc7ca172a569c554eb91e4",
+      "bytes": 2986,
+      "sha256": "3a066d821a6d25a999a8051d2dec3302360de8fae80522ff1167dd54ee89c2c2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/build-queue.py",
+      "blob": "c21bd8bc5c8c060e85aaa98cc8bb64ee17a430af",
+      "bytes": 4976,
+      "sha256": "c5d6b1d6d2318a4728c7e53e49c5d9ae1d920fda1e0115eeb2d338ce3d5450db"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "blob": "9ea85cb335f1c099c3192141b2adda3900dffc2b",
+      "bytes": 514997,
+      "sha256": "f78145d15e115d436ac275d9de7f2641f37c81d9d68deedcfedb459bcf3a6338"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/command-matrix.json",
+      "blob": "82e4f95fb4b90480610ccb01f5caff576e8f049d",
+      "bytes": 850,
+      "sha256": "99975789cd16546fc11921044caf7ab37e800524fdf78c9f7d4a316bba5a7649"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/native-receipts.json",
+      "blob": "310f0e764087106ecea76c759ff16043f74eb58c",
+      "bytes": 8083,
+      "sha256": "8a8c78e1cf16ab4e0f90c1c1f8286ea611641e6364a1327df899214d68167b9b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/plan-check-retry.json",
+      "blob": "e953ec47c9f4a9693324ba13fc316ef3b2ddc969",
+      "bytes": 783,
+      "sha256": "cc2740bb0f3a6f01bb2936aeda6902b8e2858ffbbe2732029428aa529c6455af"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-dispositions.json",
+      "blob": "8e1da1199963afaf76e1928dfff315851117d74a",
+      "bytes": 801,
+      "sha256": "225d5bbc658d57a41d37141ecd71aa53ac8f1cc3be1ae26d0334df6410c8a882"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-manifest-round1.json",
+      "blob": "8aa00e567c7cd9680e3b27eb0cff649ff6f7876f",
+      "bytes": 2792,
+      "sha256": "af7983fb4185ea6fd628dc6cbf1946ddcb92b0effc35956beb6ffc37014d30a8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-manifest.json",
+      "blob": "0742b759c222d4ee68942122d2d7d097f7fd5cfc",
+      "bytes": 4015,
+      "sha256": "d45ea5f4c147ced2eca17cf9cecc3cababa74725243524d331e885dd2bf39520"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-review-round1.json",
+      "blob": "baa48fa53ae71499e8619d2fa04e2b3013904f4b",
+      "bytes": 2006,
+      "sha256": "26eaeab1a3ef97902e712fd3e8fac0dd299a8da83fd5fbdafe8651e03dbf7b41"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-review.json",
+      "blob": "939962391bc42217773bcb85c26bf9923f22ba38",
+      "bytes": 1700,
+      "sha256": "e3f7040ad8049afa3439be48bd93e4df4798594985b7a1d332d9fde87d1203f9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/public-receipts.json",
+      "blob": "8bf975011926d7502ea541a93e821d42d7735024",
+      "bytes": 149115,
+      "sha256": "18cd04220b739967ae6ad531f64a84e30038944950d81fc26ae1249ca9e3a34e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/queue.json",
+      "blob": "83d42d1f43ea2b31db45474ba8aa962afec93031",
+      "bytes": 277302,
+      "sha256": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/resume-guard-verification.json",
+      "blob": "085c385cff8ea5a0288850dfbb94ff7aa4e7aed6",
+      "bytes": 983,
+      "sha256": "1f8243c8a69017d7ba1603f57f08d9198e31f30f6c2f0c6ab51a4c0260775912"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/run-build.log",
+      "blob": "e4bf906eae28169e169503786f6fa957f9705f72",
+      "bytes": 4579,
+      "sha256": "a36b3bd0fb109f72bfd113534d59c853520a3dfe2542b1eb66c3afda93a9fdbc"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/run-typecheck.log",
+      "blob": "0d7b0b56a2fd8cb1ea9902c8b20adbee8099e588",
+      "bytes": 38,
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/adoption.md",
+      "blob": "dc78f8a960acd11959f1b3eff4421eb0aeb4f969",
+      "bytes": 1621,
+      "sha256": "97d1558cfae1f65f654456d974b7eda96b2359cf82fe6a4bfdea43271c42f829"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/amtopp.md",
+      "blob": "98afb213f6fed548a5b05f64898d6c670e6da366",
+      "bytes": 2438,
+      "sha256": "02b15c6ff7b620fdae93cd6984bd626f7e193c51abd5d5318e8c5ecdd3044386"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-applications.md",
+      "blob": "b9fd3af9dabb40412b9b1fd60192eaf3b5dd7c7c",
+      "bytes": 1245,
+      "sha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-college-rubric.md",
+      "blob": "d63d3eadb3416eceee35c5fa5c0fe691b3f9e136",
+      "bytes": 16270,
+      "sha256": "49c4f33e21dab09098513f433732983a69531c1c013cc531ec7fff97f844cce4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-guidelines.md",
+      "blob": "274109b98b91aada55a5fc7aea32618b42e584ff",
+      "bytes": 4663,
+      "sha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-leadership-rubric.md",
+      "blob": "f658b904df6ee3367d06f19f2b0d1d809cef36d7",
+      "bytes": 16655,
+      "sha256": "8c5a6d1bdb0317cecf5d15327977fc29bf6fb16d90d6d6e85c3d9f71a50225e6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa.md",
+      "blob": "d92358248a8d62834aa849563e3a6963aa68dd1c",
+      "bytes": 6968,
+      "sha256": "ba8353176fb75bfeb0dc7bff6298c24b62909a380aefa7f5842ad9523db78ec1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/flathead-scholarships.md",
+      "blob": "1cc9b37ec60f7774b5eec2e6b5c590d43480d77e",
+      "bytes": 4309,
+      "sha256": "1c5d12a7807af9fc6b2f94e45fdd1f2eb50756cb92ed236441f9ece0c7e3bcb2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/flathead.md",
+      "blob": "0057e8645300b40ccdf01d7120a845a450ab6b96",
+      "bytes": 97,
+      "sha256": "6f803f7e0ae12df345eadb796b3284cbc20a819e050969d17ca59484fa22afca"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/kids.md",
+      "blob": "7d63ff2a8fab57b5cd9d1a721cc70b55bdd294de",
+      "bytes": 2100,
+      "sha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ncld.md",
+      "blob": "682c35536ee0d8386223c170b914989ba6d436cf",
+      "bytes": 1419,
+      "sha256": "77579b0fe567ad56e4c649ad644ba8f4a2b8cff0c667daa78e2d79efae194cbd"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/rh-alias.md",
+      "blob": "61eba3319b814d6419b7728e8f64119f48c1c39c",
+      "bytes": 7360,
+      "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/rh-old.md",
+      "blob": "61eba3319b814d6419b7728e8f64119f48c1c39c",
+      "bytes": 7360,
+      "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/sor-preparing.md",
+      "blob": "3253b73f8de6bd60a3d692d7022a47a61d3b3a5b",
+      "bytes": 2710,
+      "sha256": "9fd8c39186ab3606f8254b2bc264b078e25cb3b18e30b820c68de7fefc1735a7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/soroptimist.md",
+      "blob": "e535a39c9bb0b816ecdb5a0e1905509e9117e3c1",
+      "bytes": 3684,
+      "sha256": "52a833cdbf7a40ed63409bcb88458b953052e31103ae64d88bf3ec265a0b7108"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/spear-2025.md",
+      "blob": "ee93c6ba9b2a33f84ac5e1a5e60cba4cd25712d7",
+      "bytes": 1192,
+      "sha256": "a861b12e5005d1008d1c15f82061edd8a0bf0cfe56d4b312d987ed7546650041"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/spear-2026.md",
+      "blob": "8c9c5d32eb29a501459ea6466e57b32528d5cc18",
+      "bytes": 2027,
+      "sha256": "22c62132fa7d8e8150ef60fc1da39113498fc956f989778639446b4e8947fa9e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ted-2026.md",
+      "blob": "f97ec058757261c344d5d381449e6e41cea516cc",
+      "bytes": 900,
+      "sha256": "5feebf6ba8dc3141f9b2fd6872cd5b18aad0a459e3b2d4c9daefcf4112521ad6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/test-retry.log",
+      "blob": "5913d3437e6d812ebe7410472f4e3a8cb4eed48d",
+      "bytes": 19755,
+      "sha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/test.log",
+      "blob": "23848d03b43eedd098470927287aa8fd8d03a824",
+      "bytes": 3459,
+      "sha256": "86f944a1b822608c3a36f37e2cc90b72e6be316990967cb7e81527dd764c520c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/validation-summary.json",
+      "blob": "f66ff5af6209995c157d399270e7bc0abdff4b01",
+      "bytes": 1930,
+      "sha256": "26bdb365e399f357d27d4cb7074cb848a61944dbf056344556e6d8e934dced53"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/verify.py",
+      "blob": "470d241c1d156d7e04d7a0cb72688bc6774190eb",
+      "bytes": 3468,
+      "sha256": "62707769fba91a1f1b40b7e977e4a18798a4cacdec96324a842d553e5553e42f"
+    }
+  ]
+}
