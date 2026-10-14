@@ -1,21 +1,22 @@
 Open /private/tmp/program_code-student-data-maintenance-plan on
-codex/plan-student-data-maintenance. Follow AGENTS controlling read order, then read
-complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9 and autonomous AUTHORITY/POLICY,
-checkpoint-002.json, checkpoint-002/{README.md,final-manifest.json,review.json,SESSION_WRAP.md,
-wrap-verification.json}. Historical checkpoint001/reviews remain exact.
+codex/plan-student-data-maintenance. Follow AGENTS controlling read order, then
+complete STUDENT_DATA_AND_MAINTENANCE_PLAN section9 and sd2-autonomous AUTHORITY/
+POLICY, checkpoint-003.json and checkpoint-003/{README.md,final-manifest.json,
+review.json,SESSION_WRAP.md,wrap-verification.json}. Preserve original287e1a7,
+round1 review/manifest and all checkpoint001/002/history exact.
 
-Resume existing autonomous SD2 at queue offset40, saved row42:
-Fred J. Epstein Youth Achievement Award;366 unprocessed frozen inputs remain.
-40 initial dispositions are recorded across checkpoints001/002; all identities/
-facts remain held,0accepted. Routine research/checkpoint review needs no renewed
-human approval within POLICY.md. Reuse exact queue/evidence; never initialize/reset.
+Resume existing autonomous SD2 at queue offset60, saved row63:
+Elks Most Valuable Student Scholarship;346unprocessed frozen inputs remain.
+60initial dispositions recorded across checkpoints001–003; all1,136autonomous
+field holds/60identity holds remain held,0accepted. No renewed routine human
+approval within POLICY. Reuse exact queue/evidence; never initialize/reset/replay.
+Continue one bounded checkpoint only; fullSD2 incomplete; stop beforeSD3.
 
-Carry all744 autonomous field holds/40 autonomous identity holds, every source-link disposition and
-applicable evidence-arrival/SD2-consolidation trigger; retain prior five research
-packets and supplied decisions. Keep nine original attention rows/every supplement,
-all historical review bindings and original437M1 routes/owners/triggers.
-Standard build EPERM on both attempts, fresh-main/target, preservation/native backup/
-recovery/permissions, later human/canonical/publication/student/monitor gates remain
-open at original triggers. No workbook access/write, app/configuration changes,
-login/forms/contact/messages, remote Git/release or monitoring activation. Continue
-one bounded checkpoint; fullSD2 incomplete; stop beforeSD3. Recommended effort:High.
+Carry every source-link disposition and applicable evidence-arrival/SD2-
+consolidation trigger, prior five research packets/PRELUDE supplied decisions,
+nine original attention rows/every supplement, all historical bindings and437M1
+routes/owners/triggers. Both standard-buildEPERM/fresh-main-target, preservation/
+native backup/recovery/permissions, later human/canonical/publication/student/
+monitor gates remain open at original triggers. No workbook access/write,
+app/configuration changes, login/forms/contact/messages, remoteGit/release or
+monitoring activation. Recommended effort:High.

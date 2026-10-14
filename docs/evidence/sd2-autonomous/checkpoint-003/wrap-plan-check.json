@@ -1,0 +1,14 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "web",
+  "startedAt": "2026-10-14T19:36:39.676776+00:00",
+  "completedAt": "2026-10-14T19:37:14.101921+00:00",
+  "exitCode": 0,
+  "stdout": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n",
+  "stderr": "",
+  "scope": "Final documentation-wrap consistency only; source review unchanged"
+}
