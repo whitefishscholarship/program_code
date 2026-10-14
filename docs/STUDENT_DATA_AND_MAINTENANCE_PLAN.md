@@ -354,6 +354,56 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-006-START -->
+- October14,2026: one bounded checkpoint006 completed at frozen offsets100–119,
+  beginning savedrow104/Keith P. Guelff Memorial Endowed Scholarship. Packet:
+  sd2-autonomous/checkpoint-006.json and checkpoint-006/.
+  Twenty initial outcomes:7held-identity,2held-access,11researched-held;
+  24receipts (23new/1unchangedDawsonreuse),376newheldfields/20identities,0accepted.
+- Cumulative120/406initial dispositions,286unprocessed; all2,262autonomous
+  fieldholds/120identityholds stay held. Prior1,886fields/100identities and every
+  source/seed/link/deferred-material route remain exact. Next-session Codex resumes
+  offset120/savedrow124: Jean Atkinson Driggers Scholarship ($2,500), under existing
+  AUTHORITY/POLICY without renewed routine human approval. Never initialize/reset/
+  replay; fullSD2 incomplete, stopbeforeSD3. Shortprompt: NEXT_SESSION.md.
+- Independent PASS C0/H0/M0/L0 binds5434035; exact local direct-child two-file
+  receipt e1f2185. checkpoint-006/final-manifest.json/review.json control.
+  Originalcdac48b/manifest-round1/review-round1/verification-round1 preserved;
+  two medium eligibility omissions author-fixed/independentlyrechecked: FCDlocal
+  high-school-senior condition with homeschoolslot separately retained, and Clerk
+  graduating-senior/parentFlatheadCountyhigh-school scope, applicant residence
+  unknown. No pending reviewer repair; this separate wrap does not rebind review.
+- Codex source/identity reconciliation owns every hold on applicable authorized
+  evidence arrival or SD2 consolidation after initial queue coverage. Nine new
+  Dawsonchildren stay separate (7notice-only/2form-only). BuildingHope criteria,
+  HITECclosed2026/separate timeline/missingdetails; FCDnaturalresource/residence/
+  entry2.5/once-only/materials/June paperwork; Clerkcount/destination/raw-proof
+  conflicts; MSGAexcludedform/fall2027hint; Hawkins2025/2026/student-counselor
+  dates; Barbara2025instructions/2026form/need/nonprofit/volunteer/materials;
+  Lionsgeneric/memorialidentity/twoessays; Davidsonaffiliation/tenure/hours/
+  noreapplication; Campbellgraduatewithin3years/annualpossibility/provideruploads;
+  RISEformeremployee/finalcurrentqualifier/timezone/history/404restaurantlist
+  remain explicit. Every exact nextaction/seed/link is in checkpoint006 ledger.
+- Seven blankPDFs complete layouttext and14sanitized rule-region views inspected;
+  no whole-unredacted visual claim. Hawkinscomplete20paragraph/0tableXML only.
+  Clerkraw/visual/official-section completeness unavailable despite provider200text;
+  no silence/livebyte claim.19priorElks/Norrish custody hashes verified without
+  reacquisition or newfullinspection; separateElksCDNvisualproof remains unclaimed.
+  Future audits recheck temporary custody or report specific gaps preserving receipts.
+- Intermediate source-output scope lapses (navigation/consent/publiccontact/
+  maintainerquery/initialunmaskedFCDrender) disclosed, persisted containment checked;
+  MSGAseed unexpectedly returned blankform, allformfacts excluded/nointeraction.
+  Before every next call/output Codex narrows program/minimalmetadata and sanitizes
+  values/images; no full duplicated envelopes/contact/maintainer/signedreferences.
+- Every prior packet/PRELUDE, nineattentionrows/every supplement, all historical
+  bindings and437M1routes/owners/triggers stay exact. Plan/type/fulltests and
+  evidence/history/frozen-diff checks PASS; both exact builds still process/portEPERM.
+  Fresh authenticated main/target and every native preservation/backup/recovery/
+  permission, human/canonical/publication, student/CSV/browser and seasonalM1/SD5/
+  effect gate stay open at original owners/triggers. No workbookaccess/write,
+  app/configuration, login/forms/contact/messages, remoteGit/release/activation
+  orSD3. Closeout: checkpoint-006/SESSION_WRAP.md and wrap-verification.json.
+<!-- SD2-CHECKPOINT-006-END -->
 <!-- SD2-CHECKPOINT-005-START -->
 - October 14, 2026: one bounded checkpoint005 completed at frozen offsets80–99,
   beginning savedrow84/Clayton E. Hoyt. Authoritative packet:

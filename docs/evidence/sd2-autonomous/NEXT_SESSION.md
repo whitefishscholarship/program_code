@@ -1,48 +1,54 @@
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS read order, then complete
-docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9, the sole progress pointer,
-and sd2-autonomous AUTHORITY/POLICY. Read checkpoint-005.json and checkpoint-005/
-README.md, final-manifest.json, review.json, remediation.json, SESSION_WRAP.md
-and wrap-verification.json. Preserve original361f25e/manifest-round1/review-round1/
-verification-round1 and every checkpoint001–004/history byte unchanged.
+STUDENT_DATA_AND_MAINTENANCE_PLAN section9, the sole progress pointer, and
+sd2-autonomous AUTHORITY/POLICY. Read checkpoint-006.json and checkpoint-006/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+wrap-verification.json}. Preserve originalcdac48b/manifest-round1/review-round1/
+verification-round1 and every checkpoint001–005/history byte unchanged.
 
-Resume one later bounded SD2 checkpoint at offset100, savedrow104:
-Keith P. Guelff Memorial Endowed Scholarship. 306 frozen inputs remain.
-100 initial dispositions recorded; all1,886 autonomous field holds/100 identity
-holds remain held,0accepted. Existing AUTHORITY/POLICY permits routine research/
-GPT checkpoint review without renewed human approval. Reuse exact queue/evidence;
-Never initialize/reset/replay. FullSD2 incomplete; stop beforeSD3.
+Resume one later bounded SD2 checkpoint at offset120/savedrow124:
+Jean Atkinson Driggers Scholarship ($2,500).286frozen inputs remain;
+120initial dispositions recorded,2,262autonomous fieldholds/120identityholds
+remain held,0accepted. Existing AUTHORITY/POLICY permits routine research/GPT
+review without renewed human approval. Reuse exact queue/evidence; never
+initialize/reset/replay. FullSD2incomplete; stopbeforeSD3.
 
-Independent source review PASS C0/H0/M0/L0 binds 25bd8249c4ec34694214a05210ddd3d3da74494b; exact local
-two-file receipt 1021f06254416c94a6748e9bdf71046b20f573a5. One original medium finding was author-fixed and
-independently rechecked: Elks page7 requires Word format for all recommendations,
-separately from the essay. Original failed candidate/review remains preserved.
-This separate handoff does not rebind that review or accept facts.
+Independent PASS C0/H0/M0/L0 binds5434035979d9465f55bd6f56fb5d042f5045ae75;
+exact two-file local receipt e1f21854425e9dca7f6e285412400c82c1a418ee. Two
+original medium findings author-fixed/rechecked: FCDlocal-high-school-senior
+condition/no homeschool exclusion, Clerkgraduating-senior/FlatheadCounty
+high-school scope distinct from unknown applicant residence. Original failed
+review preserved; separate handoff never rebinds review or accepts facts.
 
-Next-session Codex owns continuation and source/identity reconciliation at each
-ledger's applicable authorized evidence-arrival or SD2-consolidation trigger.
-Carry every field/identity/seed/source-link/deferred material route: nineteen
-distinct Dawson children with five form-only access holds; broader Dawson Promise
-versus endowed award, detailed category logic/appeal and deferred brochure/HUD
-definition; Elks parent1000/PDF500 conflict, current/nativepublic identity,
-March1/March15/relative timing, Lodge versus upload/email route, complete materials
-including Word recommendations/essay, renewal by reapplication and continuing
-conditions. Preserve all prior packets/PRELUDE decisions, nine original attention
-rows/every supplement, all historical bindings and437M1 routes/owners/triggers.
+Next-session Codex owns every field/identity/seed/source-link/deferred-material
+route at each ledger's applicable authorized evidence-arrival or SD2-consolidation
+trigger. Carry nine new Dawsonchildren, BuildingHope/HITECmissingcriteria/current
+cycle, FCDmaterials/subsequentJuneconditions, Clerkcount/destination/raw/visual/
+completeness gaps, MSGAexcludedform/2027hint, Hawkinsyear/student-counselordates,
+Barbara2025instructions/2026form/need/nonprofit/volunteer/materials, Lionsmemorial
+identity/materials, Davidsontenure/hours/no reapplication, Campbell3years/annual
+possibility/provideruploads and RISEaffiliation/timezone/history/restaurant404.
+Exact actions in ledger/wrap. Preserve prior nineteenDawsonchildren/fiveformholds,
+Promiseendowed/categoryappeal/brochure/HUD, Elksamount/nativeidentity/date/filing/
+Wordrecommendations separateessay/continuing/reapplication, all priorpackets/
+PRELUDE, nineattentionrows/every supplement, all bindings/437M1owners/triggers.
 
-Before next permitted source output, narrow and sanitize selected program scope
-and minimal metadata; provider redaction alone is insufficient. Never forward full
-duplicated provider envelopes, contact/recipient/unrelated program or maintainer
-scope, or signed download references. At the next audit requiring temporary Elks/
-Norrish files, verify recorded paths/custody hashes. If unavailable, preserve exact
-historical receipts and report the specific availability gap; no reconstructed
-facts, new full-inspection claim or completed-research replay. Native Elks12pages
-visually inspected; distinct CDN raw bytes but complete layout text equal;
-separate CDN visual proof remains unclaimed. All raw files remain temporary.
+Before every next source call/output, narrow selectedprogramscope/minimalmetadata
+and sanitize values and images. ProviderredactPII alone insufficient; never
+forward full duplicated envelopes, contacts/recipient/unrelatedprogram/maintainer
+scope or signed references. Earlier lapses disclosed/persistedcontainment checked.
+MSGAstaticseed unexpectedly returned blankform; allformfacts excluded/noactions.
+At next required temporaryevidence audit verify exact recorded custody paths/
+hashes or preserve receipts and report specific availability gaps. No facts
+reconstruction/newfullinspection/completedresearch replay. Clerkraw/visual proof
+unavailable despite provider-readable200; no silence/currentbyte claim. Elksnative
+12pages historicalinspection retained/CDNseparatevisual unclaimed; Norrish/Elks
+19custodyhashes verified without reacquisition. New14safeprogramviews/HawkinsXML
+limits in document-inspection.json. All rawfiles temporary.
 
-Standard-build process/portEPERM on both attempts and fresh authenticated main/
-target remain open for Codex before canonical acceptance/authorized release.
-Original preservation/native backup/recovery/permission, human/canonical/publication,
-student/CSV/browser and seasonalM1/SD5 setup/effect gates remain at their recorded
-owners/triggers. No workbook access/write, app/configuration, login/forms/contact/
-messages, remoteGit/release or monitoring activation. Recommended effort:High.
+Both exact standard-build process/portEPERM and fresh authenticated main/target
+remain with Codex before canonicalacceptance/authorizedrelease. All original
+nativepreservation/backup/recovery/permission, human/canonical/publication,
+student/CSV/browser, seasonalM1/SD5setup/effect gates retain original owner/trigger.
+No workbookaccess/write, app/configuration, login/forms/contact/messages,
+remoteGit/release or monitoractivation. Recommended effort:High.
