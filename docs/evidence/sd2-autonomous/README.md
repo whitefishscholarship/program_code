@@ -1,32 +1,45 @@
 # Autonomous SD2 progress
 
-October14,2026. New local mandate; historical entry3f3462d unchanged.
+Kelsey authorized autonomous research across the frozen406 remaining saved inputs,
+with local evidence/handoffs and GPT review instead of manual checkpoint approval.
+The source boundary, author/remediation/reviewer duties and reserved effects are
+in AUTHORITY.md and POLICY.md. The original entry is3f3462d; no historical evidence
+or acceptance has been rebound.
 
-- AUTHORITY.md records direct authority and supplied decisions.
-- POLICY.md is the bounded autonomous source/review contract.
-- queue.json freezes all406 remaining named input keys from the saved794-position
-  projection. First checkpoint:20 inputs, Spear45thenLive Your Dream290, then original
-  order. No new spreadsheet read or accepted distinct-award count.
-- checkpoint-001.json is the one current research ledger; pending until receipts
-  and explicit outcomes exist. Shared sources use a single sourceRegistry.
-- PRELUDE.json preserves the selected October14 parent/legacy/ND-Barnes observations,
-  Kelsey's reviewer designation and specific Jaycee approval, and Pell initial-award
-  scope. Original62/42-field proposals and their reviews remain immutable.
-- CONTINUE.md is the copy-ready fresh-session continuation.
+The prospective policy passed independent review at candidate3518763 after fixing
+an initialization/resume defect and an EOF formatting finding. Round1 bindings and
+both count-matched dispositions remain preserved. See policy-review.json.
 
-Current status: prospective policy prepared; frozen independent policy review
-required before new source reads. Source research is not started by writing queue
-entries. No independent/canonical acceptance or external effect is claimed.
+The first20 inputs now have initial source dispositions:20 source-inspected records,
+18 shared/exact source receipts,20 held identities,344 typed field envelopes, zero
+accepted facts. This is research with explicit gaps, not20 accepted awards or full
+SD2 completion. The remaining unprocessed frozen inputs number386. Source artifacts
+are sanitized selected program scopes; raw pages/recipient lists/credentials are
+not retained. Native blank-file PDF pages/XML were inspected as recorded.
 
-Codex owns author verification and remediation; a fresh-context GPT owns independent
-policy/research review. Kelsey is not asked to manually approve every checkpoint.
-Research evidence still stays proposed/held until the existing later acceptance/
-publication contract is satisfied. No assumption replaces missing source evidence.
+Material findings include Spear cross-file candidate continuity with expired2026
+rules, Soroptimist's separate competitive award levels/annual window, ambiguous
+ADHD and AMTOPP identities, conflicting Horse Creek amounts/Odd Fellows slots/
+Amberson student stages, historical2021 FFA materials still linked with2026 pages,
+and Kids' Chance initial-versus-renewal eligibility. Flathead's official parent
+points to the FVCC early-childhood program; portal details remain locator-only.
+Every unknown/hold remains at its Codex owner, trigger and next action in the ledger.
 
-All original nine section9 routes, every prior supplement and M1's437 records remain
-at their owners/triggers. Standard-build EPERM, fresh authenticated main/target,
-workbook version/preservation/backup/recovery/permissions, SD3/SD4 and SD5/M1 setup/
-allowance/sender/suppression/pilot/recovery/schedule health remain explicit later gates.
-No workbook access/write, app/catalog change, application/login/contact, messages,
-release, activation or SD3. Follow the live ledger and final validation/review receipts
-for actual progress; this initial README is not proof research is complete.
+checkpoint-001.json is the sole source registry/field ledger. queue.json is immutable
+input order, not a second mutable progress tracker. research-review.json, when
+present, gives the independent review result for its exact research-manifest.json
+candidate. A research PASS does not accept facts or waive build/publication gates.
+
+Plan validation/typecheck passed. Tests completed with final PASS messages; provider
+completion did not expose an explicit final exit field; test-retry.log preserves the
+complete observed output. Standard build failed both ordinary and permitted attempts
+with the existing process/port EPERM. Fresh authenticated main/target proof and all
+later source-version/preservation/backup/permissions gates remain open, as recorded
+in validation-summary.json and the original section9 supplements.
+
+Next: Codex continues checkpoint002 from queue offset20, beginning saved row21,
+without routine manual approval. Checkpoints are progress/review boundaries, not
+new permissions. CONTINUE.md supplies the fresh-session block. Keep previously
+researched Pell/Jaycee/ND/Barnes inputs out of routine replay. SD2 remains incomplete;
+stop before SD3. No workbook/app changes, application/login/contact/messages,
+remote Git/release or monitor activation follows from this mandate.

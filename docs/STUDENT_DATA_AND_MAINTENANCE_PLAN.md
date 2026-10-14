@@ -383,6 +383,11 @@ not duplicate project progress trackers. Update this small block at every checkp
   measured pilot/full sweep, recovery/catch-up/schedule health and all later effects
   remain at their existing owners/triggers. New continuation: this directory's
   CONTINUE.md. Full SD2 incomplete; stop before SD3.
+- First autonomous checkpoint:20 source-inspected inputs,18 source receipts,20 held
+  identities and zero accepted facts;386 unprocessed remain at queue offset20.
+  Prospective policy independently PASS at3518763; research candidate/result is
+  bound by sd2-autonomous/research-{manifest,review}.json. Local research does not
+  resolve the existing standard-build EPERM or fresh-main/target gate.
 <!-- SD2-AUTONOMOUS-END -->
 
 <!-- SD2-JAYCEE-CONTINUATION-START -->

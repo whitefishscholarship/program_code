@@ -6,9 +6,11 @@ read STUDENT_DATA_AND_MAINTENANCE_PLAN section9 and this directory's
 AUTHORITY.md, POLICY.md, README.md, queue.json, checkpoint-001.json and reviews.
 
 Kelsey authorized the remaining saved SD2 research and local evidence/handoffs,
-without manual review or approval at each checkpoint. Process the frozen406 input
-keys in approximately20-record checkpoints, starting45/Spear then290/Live Your
-Dream and remaining original order. Follow recorded/relevant official sources
+without manual review or approval at each checkpoint. The policy has independently passed; checkpoint001 accounts for20 source-inspected
+inputs with18 receipts and all facts/identities held. Read research-review.json
+for the exact frozen checkpoint candidate and any findings. Continue the remaining386
+unprocessed inputs from queue offset20 (next saved row21), in approximately20-record
+checkpoints and frozen order. Do not repeat checkpoint001 or reset its ledger. Follow recorded/relevant official sources
 under POLICY.md, without returning for each routine page. Use native Google reads
 for exact document IDs. No folder/other-file/applicant-data access. Uncertain or
 inaccessible facts receive explicit holds; continue unaffected inputs.
@@ -20,8 +22,9 @@ only; ND/Barnes held after October14 gap checks. Avoid successful-source replay
 without a specific new gap/freshness reason. Source/cycle identity and PDF/page/
 table completeness must be demonstrable; a fetch alone is not a verified fact.
 
-Obtain independent fresh-context GPT review of the frozen policy and research
-candidate; author remediates. No routine human checkpoint review is required.
+The frozen policy already passed independent GPT review; do not replay it. Obtain
+independent fresh-context GPT review of each new frozen research candidate; author
+remediates. No routine human checkpoint review is required.
 Do not claim canonical fact/stage acceptance from that review: the existing later
 human-review/publication and independent-attestation gates remain intact.
 

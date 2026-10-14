@@ -9,6 +9,12 @@ and GPT-led review. Freeze406 input keys; use20-record checkpoints starting45/Sp
 do not require further user selection/manual review. Follow ledger receipts for
 actual progress; a prepared queue does not claim research completion.
 
+First checkpoint now accounts for20 source-inspected inputs and18 receipts;
+all20 identities/facts held, zero accepted.386 unprocessed remain, next queue
+offset20/saved row21. Prospective policy PASS at3518763; research-review.json
+binds the independent research result. Standard-build EPERM and fresh-main/target
+remain open. Continue within the recorded authority without routine manual review.
+
 Kelsey is the named human reviewer; specific Jaycee corrections are approved;
 Codex determines identity from evidence. Pell initial award only; ND/Barnes held.
 Keep all historical candidates/reviews, nine attention rows/supplements and M1's437
