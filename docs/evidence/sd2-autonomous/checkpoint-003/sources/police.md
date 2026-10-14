@@ -1,0 +1,6 @@
+# Whitefish Police Protective Association Scholarship — three blank scan pages
+Page 1: The Whitefish Police Protective Association (WPPA) is offering two $1000.00 scholarships to a graduating Whitefish High School senior. The recipient will be selected by the Application Committee based on need, academic standing and completed essay. Applicants must have their completed application turned in by April 15th.
+Eligibility: Whitefish High School senior; high school grade point average of 2.5 or higher and plans to be enrolled as a full-time college or trade school student. Include current High School transcript and two reference letters.
+Page 2: Blank activities/honors, community activities, universities/trade schools applied to, confirmed acceptance, GPA, impact-of-scholarship statement, applicant signature, work experience fields. References section: Please list three references.
+Page 3: Essay on the importance of law enforcement in today's society and its impact in your life. Award winner's $1000 check issued in recipient's name and forwarded to enrolled college/university/trade school. Completed applications may be hand delivered or mailed to Whitefish Police Department.
+No year printed in criteria. Native filename says 2025. No completed applicant values.

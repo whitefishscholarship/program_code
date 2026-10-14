@@ -1,0 +1,15 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "web",
+  "startedAt": "2026-10-14T19:22:54.069874+00:00",
+  "completedAt": "2026-10-14T19:22:54.253929+00:00",
+  "exitCode": 1,
+  "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check.log",
+  "originalOutputSha256": "b25ad541d676ff1447f841d8c73c01abf611e929925041a47547c859d3b12b86",
+  "logSha256": "f7174a9477d26e9dd121ebf29277b8c7db7228894fd730806a240fd89bb9a492",
+  "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+}

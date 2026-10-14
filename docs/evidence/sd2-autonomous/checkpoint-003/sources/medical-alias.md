@@ -1,0 +1,27 @@
+Glacier Medical Associates Scholarship Application
+A $500 is available to all graduating seniors from WHS, CFHS, FHS, GHS and SHS seeking a
+career in Health sciences. Please mail your application to Glacier Medical Associates, attn. HR,
+1111 Baker Avenue, Whitefish MT 59937. Deadline April 23, 2025.
+
+
+Name_________________________________________________________________________
+School/University plan to attend___________________________________________________
+Program or degree of interest______________________________________________________
+GPA___________
+Mother’s name and occupation____________________________________________________
+Father’s name and occupation_____________________________________________________
+List siblings and their ages_________________________________________________________
+______________________________________________________________________________
+Please explain how you plan to finance your education_________________________________
+______________________________________________________________________________
+______________________________________________________________________________
+Please list other scholarships that you have received___________________________________
+______________________________________________________________________________
+______________________________________________________________________________
+_____Please attach your resume
+_____Please attach an official transcript
+_____Please attach two letters of recommendation
+_____Please explain on one page or less why you seek a career in Health Sciences
+_____Please tell us one thing you would like us to know that is not covered in this application
+
+[page break]
