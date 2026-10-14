@@ -21,7 +21,7 @@ This scholarship is not based on financial need. This scholarship is sent direct
 recipient’s school.
 
 Each applicant must:
-   1. Make formal written application for the scholarship. Turn into WHS Guidance Office by
+   1. Make formal written application for the scholarship. Turn into [named recipient omitted] by
       4/30/2026.
    2. Attach a resume and school transcript to the application.
 

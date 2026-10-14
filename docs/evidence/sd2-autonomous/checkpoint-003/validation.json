@@ -15,7 +15,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check.log",
       "originalOutputSha256": "b25ad541d676ff1447f841d8c73c01abf611e929925041a47547c859d3b12b86",
       "logSha256": "f7174a9477d26e9dd121ebf29277b8c7db7228894fd730806a240fd89bb9a492",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -30,7 +30,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check-retry.log",
       "originalOutputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
       "logSha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -45,7 +45,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/typecheck.log",
       "originalOutputSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
       "logSha256": "0b54cac6bb99f126f42ca5170163caf98f0e739747455757ea0b215a6140458f",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -59,7 +59,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/tests.log",
       "originalOutputSha256": "5a8c6263c0e8a9955ded8942ddf59f4cadf657801f5ae2837c219238549ff4bf",
       "logSha256": "3c443b12cd226e06dc408953d92531543004a60d295f21648f172142174f8fd5",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -73,7 +73,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/tests-retry.log",
       "originalOutputSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
       "logSha256": "e921e37c99307c46be1d8a811cdc751e542db81ee54eb84c9e0c7e2bd1835993",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -88,7 +88,7 @@
       "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/build.log",
       "originalOutputSha256": "153d6208cdb81825dc80e0501079d20b5e079aea201dbef6504d764a4c1b40d3",
       "logSha256": "e70a13a7e7bd3be22dcd3b427a5b2587ccd429a92753c681396d1c17fcab14f5",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     },
     {
       "command": [
@@ -104,7 +104,7 @@
       "execution": "permitted retry",
       "originalOutputSha256": "047362f7654e95f3f46b82bd653b8a55817f5b163991a0959eb2818366cca2ad",
       "logSha256": "f4388119c3cadae3301ed52a62d5dbabf87f777779c4e41247e943614e34f9cc",
-      "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
     }
   ],
   "localChecks": [
@@ -170,5 +170,5 @@
   "canonicalAcceptance": false,
   "fullSD2Complete": false,
   "SD3Started": false,
-  "fullDiffPreparation": "First staged full diff found one new blank EOF in typecheck.log; only command-log trailing/EOF whitespace normalized, original output hashes retained. Full staged recheck is required before commit."
+  "fullDiffPreparation": "First staged full diff found one new blank EOF in typecheck.log; only command-log leading/trailing blank lines and trailing line whitespace normalized, original output hashes retained. Full staged recheck is required before commit."
 }

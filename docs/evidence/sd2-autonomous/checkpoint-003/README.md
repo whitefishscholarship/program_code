@@ -107,3 +107,14 @@ attestation. Later documentation wrapping cannot rebind the source review.
 No workbook/app/configuration writes, login/forms/contact/messages, remoteGit/
 release, monitoring activation or SD3. Backend model/effort not independently
 observable; no switch claimed. Recommended next-session effort:High.
+
+## Independent first-review remediation
+
+Original287e1a7 and its manifest-round1.json/review-round1.json are retained.
+Independent C0/H0/M2/L2 findings have four count-matched author dispositions:
+final source-receipt hashes/status limits now exactly equal the operative ledger;
+inferred Fellows/Collinsworth destinations replaced by explicit omitted-name
+markers; historical clinic contact omitted; log-normalization wording corrected
+to include leading blank lines. All claim values/states/holds remain unchanged.
+No canonical acceptance, source refresh or later slice follows. Replacement
+manifest/review must bind the new exact candidate; recheck pending at preparation.

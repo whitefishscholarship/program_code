@@ -65,6 +65,6 @@ over again?
 
 
 
-Please print this completed application form (1 hard copy) and give it to WHS guidance counselor by April 10th, 2026.
+Please print this completed application form (1 hard copy) and give it to [named recipient omitted], guidance counselor by April 10th, 2026.
 
 [page break]

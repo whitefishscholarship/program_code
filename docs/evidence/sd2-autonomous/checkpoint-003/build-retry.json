@@ -12,5 +12,5 @@
   "execution": "permitted retry",
   "originalOutputSha256": "047362f7654e95f3f46b82bd653b8a55817f5b163991a0959eb2818366cca2ad",
   "logSha256": "f4388119c3cadae3301ed52a62d5dbabf87f777779c4e41247e943614e34f9cc",
-  "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+  "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
 }

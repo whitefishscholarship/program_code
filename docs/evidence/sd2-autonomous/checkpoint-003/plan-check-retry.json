@@ -11,5 +11,5 @@
   "logPath": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check-retry.log",
   "originalOutputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
   "logSha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389",
-  "logNormalization": "Trailing line whitespace and EOF blank lines only, to satisfy git diff --check; command/exit/times unchanged"
+  "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output, commands, exit codes and timestamps unchanged"
 }

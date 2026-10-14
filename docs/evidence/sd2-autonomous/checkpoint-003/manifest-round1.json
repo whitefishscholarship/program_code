@@ -1,0 +1,325 @@
+{
+  "scope": "Local third SD2 held-research candidate; not canonical attestation",
+  "entryCommit": "2b021a6162f8b94684c10c390bef5ee8bbb47bed",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "freshAuthenticatedMainVerified": false,
+  "candidateCommit": "287e1a71145d5ec299566301f26b34bd51319dfd",
+  "candidateTree": "91c62cf132ac667f95ecd03b02bb58b9d525e0ad",
+  "completeDiffSha256": "6b0cffc879508e1411967264d0416aeb90354426007f91028ce28116de103b9f",
+  "recordedAt": "2026-10-14T19:25:39.225787+00:00",
+  "changedFiles": [
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003.json",
+      "blob": "ae2a697b13153dc3e9d428ee446f511a719e0436",
+      "bytes": 495842,
+      "sha256": "cf75b3c611c3dfac2d868cb83ef9c033476561935653b8d1cd496dc329071527"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/README.md",
+      "blob": "e81ce4e7a46bffc9d6039cd39efed179b63ac4d5",
+      "bytes": 7580,
+      "sha256": "888160b8f5a2a14d853be2196af1a472bdc4bb37c9dca5134e67f1380857c81f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/build-checkpoint.py",
+      "blob": "5680c0a26846b780adf2e29369869c4c052276f2",
+      "bytes": 38214,
+      "sha256": "80c8d7b27f71a3455ec721c8c6eaa7d291331cdb0b55a16e6bf9e34b70810bb4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/build-retry.json",
+      "blob": "60ee0bd02bd150dc57c035bf458b832350938143",
+      "bytes": 615,
+      "sha256": "75098034df0276949758729ff93e5a570ed0a0ccf6000ab787087cb242443ec2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/build-retry.log",
+      "blob": "49d15c591ff1b749b103911e6808376054889974",
+      "bytes": 4596,
+      "sha256": "f4388119c3cadae3301ed52a62d5dbabf87f777779c4e41247e943614e34f9cc"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/build.json",
+      "blob": "137e9055847279c71d2adf7975bfd13f201548fc",
+      "bytes": 575,
+      "sha256": "3818743a1fef25867e05f97b29aaa94cfe93b1512c7fa00eae36384db88ea9e5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/build.log",
+      "blob": "68041d6e40afd92f853ada8d000a446f1098653d",
+      "bytes": 4596,
+      "sha256": "e70a13a7e7bd3be22dcd3b427a5b2587ccd429a92753c681396d1c17fcab14f5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/capture-receipts.json",
+      "blob": "480758e1849942c956bb75689d088ce686cdbc2d",
+      "bytes": 74704,
+      "sha256": "4f14000ee165bc282641aa5fa76d6d6c0cc457481cbbddb164a3b84a8c9f50f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check-retry.json",
+      "blob": "96d437369fbac2f1bb422a4cbce8123a79bb4801",
+      "bytes": 591,
+      "sha256": "c0ffc612c82c5f615377ae4ac0dcb22aea2762ce3a61bea679875f367b09ae32"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check-retry.log",
+      "blob": "8a0f4feaf0b3d2f56ef74bd262d08371ac98bc6f",
+      "bytes": 163,
+      "sha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check.json",
+      "blob": "b79e5623de5172499ea3d05000edbf1c10df80c7",
+      "bytes": 585,
+      "sha256": "a4f87e16302af3706ba023082d215e44d18962b2745f1a737a6aff0d066eb733"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/plan-check.log",
+      "blob": "d44dc4aceb4e095d4d99d92c8d45ad252c4abe0b",
+      "bytes": 997,
+      "sha256": "f7174a9477d26e9dd121ebf29277b8c7db7228894fd730806a240fd89bb9a492"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/source-receipts.json",
+      "blob": "692f93c22c9974917b36fb19bca58f463357466c",
+      "bytes": 107151,
+      "sha256": "f0b1ccf8c7e5a3b942eb3a537334cffbefe99fc7f2ed1834ebc70c8d37a5137a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/booster.md",
+      "blob": "bc4ea8c2d94e475b98fa5a37c585aa56145d418b",
+      "bytes": 2369,
+      "sha256": "699ad42122be74a8039d59499a7236012a0752c04c69cdfe0a2571b508227501"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/collinsworth.md",
+      "blob": "49f8876c7aa97c5bef9804daeced0ef4afba1c2a",
+      "bytes": 1277,
+      "sha256": "2d839d7c206e489fdcc4f282c233a5afc9b7b397301bc82931316a1dc466e5a7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/dawson.md",
+      "blob": "ff5cce8ab99b7f2fcda24e83b456c9ba62fd983e",
+      "bytes": 277,
+      "sha256": "ec5374f7e293385394c4531a84ec309033a2eaacdbb13561ed75832954ab2335"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/emily.md",
+      "blob": "5007e9f8323cc878b61796f01f14a89cd5d0b0d3",
+      "bytes": 1486,
+      "sha256": "ecdc91ff5c650eb27a44082598a785cf0f36c9613771f9042479cdd5870952dc"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/epstein-2025.md",
+      "blob": "4453378cecc8b2b1dd6c94d3bb1c0c469bab9c30",
+      "bytes": 1370,
+      "sha256": "062b1ef4c88a69fac59d741db4cd7817303ca6185a2eb583587234494ebcd204"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/epstein-2026.md",
+      "blob": "59b3463ce463da581253435fa1539d54b80cce0e",
+      "bytes": 1656,
+      "sha256": "69b7d18bff3f2562b4ef39d8346268da506fc1038c3f976aed91e07a38d1ffb0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fcdw-2026.md",
+      "blob": "d2bf67e9f994e7897f2caebd29fac4a852b32665",
+      "bytes": 1488,
+      "sha256": "7a2f5004dadd1209abb2cc87e426a32ebe110aea36ae9aed0a4b3484c1fae832"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fcdw-alias.md",
+      "blob": "88cff51a8e44c522b66eacb06ff2b8d320476506",
+      "bytes": 1284,
+      "sha256": "15c66a4012a0d51d4ea96d05a17cd907bbbe9c18fa7e4547ce17d4cf85de1065"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fcdw.md",
+      "blob": "f78aa8a272272f1cd1740891de47f759d64b850c",
+      "bytes": 661,
+      "sha256": "d3aa8e2820d9e241e7f58448e017191e8d91bda9c3266d320f5b98f0f794915a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fellows-alias.md",
+      "blob": "fd6c1f206f1810f961a4b702a21047513a841bc2",
+      "bytes": 848,
+      "sha256": "1f9e87cf6f559b6466713f03aeeed8daa779b3201529d1f1b64388f88f17d46a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fellows.md",
+      "blob": "bdde1638ea50333a750384953aa38af8d31b5bd3",
+      "bytes": 1586,
+      "sha256": "9aa090308e12224aa09cbc53ed34d8a28d72e6e2d6d616c6b4e098f6e20c9f97"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/jenne-alias.md",
+      "blob": "d0e57f72ed81d5033788c1fd702ad5e8d45177c4",
+      "bytes": 7491,
+      "sha256": "b73316ab6f6c856f5815d2a67c82516365683f4b37b5eb7675652ca77d380896"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/jenne-community.md",
+      "blob": "d5f7b71be7b77e6e3053a353704a2a52efcd0933",
+      "bytes": 4612,
+      "sha256": "7ad6d90e39d7e16c586371b92a33c10d7dfc8affaead1cf64b7d559b9a6b30cd"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/jenne-page.md",
+      "blob": "9bb20faa69424f1340578492815d7e926f1a6981",
+      "bytes": 144,
+      "sha256": "f3ce4d63f388bb974fd391e705a403931d2a46ef14cf35de8d618efd6174debe"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/jenne.md",
+      "blob": "d0e57f72ed81d5033788c1fd702ad5e8d45177c4",
+      "bytes": 7491,
+      "sha256": "b73316ab6f6c856f5815d2a67c82516365683f4b37b5eb7675652ca77d380896"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/jerry.md",
+      "blob": "09998409d01dc0cfc9fd8d9a197d5cd9b7c987dd",
+      "bytes": 589,
+      "sha256": "d7a87c327cff5804fe631d89c27b05df77fd775b8c879d927ed766a2717476ab"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/medical-alias.md",
+      "blob": "7791574bb1da7ea9ee71244783dafc362cab8bbc",
+      "bytes": 1701,
+      "sha256": "682ac63072cccd3199dd3d9529627ce797b0d2645c747090268b20ff778187d3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/medical-page.md",
+      "blob": "f0836bdb2dd606c90cd7ce0815289bf2f0474780",
+      "bytes": 551,
+      "sha256": "86ac484239a42814da29ff8733f05cc2a428eee8b7e67e0b4b4f87b730f5ca68"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/medical.md",
+      "blob": "3a24481fc208167397246678e5e829ca9f3be540",
+      "bytes": 1755,
+      "sha256": "ed472039a02ab3f291a0e7048d26f211a17b8a78731ffd1975ffd361d313398e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/muldown-alias.md",
+      "blob": "e5b5787e1d4645215cdcd0041e92870f8423aa31",
+      "bytes": 2007,
+      "sha256": "ca089c61833244712deab47c3436d8abd709b8351ce5a2f7c3ce1253858eee5d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/peo-about.md",
+      "blob": "b0159e11a982e64f6ed7845bc4a62f2198613077",
+      "bytes": 156,
+      "sha256": "afd10eb3ced41c62967f19c76765d75292e34fda63b613a2856d4039e34d8ddb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/peo-alias.md",
+      "blob": "6d1d1f22f3713229c29668b8a44262bbe8d5234b",
+      "bytes": 1880,
+      "sha256": "04e3d7a8bb989d145addbcb01acbc5792e9e503d81bdde242495982bf6355a51"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/peo.md",
+      "blob": "47304fed89ce7d15ace5ff3d8d80767500e5bf89",
+      "bytes": 2495,
+      "sha256": "aad2989030fe1763e9bd753e350abca79a7b455224b3d5b5fd404b68c95e16d6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/police-page.md",
+      "blob": "29e36530c3a81aa57bbc83eeab3d88847183b394",
+      "bytes": 185,
+      "sha256": "0030128ab0dfe6dd0c3d8c69e9434057eaa456eae1a12eeba57d36a1faed74a3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/police.md",
+      "blob": "e88efe759bb24d4312ada0ce2fb0d003f7699cf4",
+      "bytes": 1278,
+      "sha256": "84a68a98b2a7bb2f95ba9d6731c8a5ce34f29650549b809bafba1bb65f8cf55e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/quatman.md",
+      "blob": "1f7c59d0f53c287c66f48e744b35aa59a48d2c7a",
+      "bytes": 1560,
+      "sha256": "cbc8052c4bceac221fc5459ba3ad29792dea78b3fd80c1d5014609384faa51f4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/studentview.md",
+      "blob": "bf2318a8ab732bcc3ea9fc2d7b742e8e26238e56",
+      "bytes": 1772,
+      "sha256": "3a2446d2b0a42d3321dace19ed41b1f5654eb6220e910320dd52dadda2a7d3f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/taylor.md",
+      "blob": "d23764967a41a969dab8f2ed49dd9f310635ae72",
+      "bytes": 2833,
+      "sha256": "2ade642deb1aaea8e798d225dccbcd8aded1b9c69e91c655023e426b764e1de0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/vfw.md",
+      "blob": "91f2555da0c7ac53f6c80f1a692611865369fee9",
+      "bytes": 12904,
+      "sha256": "ab81aa57118b40102c718564d57eb8cadced7c08fd7db3dfe0630daa8cc70dde"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/wef-common.md",
+      "blob": "63176a1f28be29be09290d87841cf9a59a6f12e5",
+      "bytes": 2040,
+      "sha256": "ac134e8be3f861783a456e681a92c2ca584d4470724085bfd8a9bf7c1d2e9ba7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/sources/wef-community.md",
+      "blob": "3171818107020885befd77cb8a1d3d0446a6d76a",
+      "bytes": 4229,
+      "sha256": "ea3fe8bae762a0b6dd401c14fa616f145ec90f58a1e5b0fc18803cd7c240a830"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/tests-retry.json",
+      "blob": "3c3f0086ae616bfefabb35ec56d9597d9ef292e7",
+      "bytes": 569,
+      "sha256": "37017260ca16c680bdddf1e68d45866d7b5f4a275fd794b05df997dbc3d4ab44"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/tests-retry.log",
+      "blob": "f460fcdcc9ec9acb2cd6e3b8c57dab6510ba3b1f",
+      "bytes": 19754,
+      "sha256": "e921e37c99307c46be1d8a811cdc751e542db81ee54eb84c9e0c7e2bd1835993"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/tests.json",
+      "blob": "3aa84470ff92b32ee4f65261508ae36742e0bf66",
+      "bytes": 563,
+      "sha256": "00e7660d4cb305ebbc340fb69efb0615d7e88fbcb78efab3d256369abcb6887e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/tests.log",
+      "blob": "991a34a608be3647000653e8027b03a79455ae90",
+      "bytes": 3458,
+      "sha256": "3c443b12cd226e06dc408953d92531543004a60d295f21648f172142174f8fd5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/typecheck.json",
+      "blob": "0c0e4b4d0b7240a1824fa39ca707da527dbf441b",
+      "bytes": 583,
+      "sha256": "4a2b9b1ad034f802ad0ba9d3f5771e11f12012c353b0b97674908a42f693acf0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/typecheck.log",
+      "blob": "d22ad9368f92bf3b154ebaa6f411b016fa816ecc",
+      "bytes": 37,
+      "sha256": "0b54cac6bb99f126f42ca5170163caf98f0e739747455757ea0b215a6140458f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/validation.json",
+      "blob": "6e79ec82fd4f7c434f1c3f0a9554804106c29b19",
+      "bytes": 7966,
+      "sha256": "41663151e7727e52f68fdac13ca68b6f75e3a5b0c2715ed88590f25ca7e7bc49"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003/verify.py",
+      "blob": "8bac2a9f20365a6bc1b88f9102da06d8939fe5bc",
+      "bytes": 6853,
+      "sha256": "d9bff0896cc8975d54ae84b8823d42ab04fd7e5b96550e2665c894a66f0b89a7"
+    }
+  ],
+  "canonicalAcceptance": false
+}

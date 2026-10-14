@@ -1,0 +1,87 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of the local SD2 checkpoint003 held-research packet only; no canonical stage or fact acceptance.",
+  "reviewer": {
+    "task": "/root/sd2_checkpoint003_review",
+    "freshContext": true,
+    "authoredOrEditedCandidate": false,
+    "readOnly": true,
+    "externalEffects": false
+  },
+  "binding": {
+    "entryCommit": "2b021a6162f8b94684c10c390bef5ee8bbb47bed",
+    "candidateCommit": "287e1a71145d5ec299566301f26b34bd51319dfd",
+    "candidateTree": "91c62cf132ac667f95ecd03b02bb58b9d525e0ad",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-003/final-manifest.json",
+    "manifestSha256": "6ec93c80c72451a19f35d8825724d66aa00345bb67ed535506a23f770abbaded",
+    "completeDiffSha256": "6b0cffc879508e1411967264d0416aeb90354426007f91028ce28116de103b9f",
+    "changedPaths": 52,
+    "bindingIndependentlyVerified": true
+  },
+  "severityCounts": {"critical":0,"high":0,"medium":2,"low":2},
+  "findings": [
+    {
+      "id":"SD2-003-M1","severity":"medium",
+      "path":"docs/evidence/sd2-autonomous/checkpoint-003/source-receipts.json",
+      "lines":[23,1510,1545,1582],
+      "title":"Source receipts do not bind the finalized artifacts or transport observations",
+      "evidence":"Eleven receipt artifactSha256 values differ from both the actual files and the operative ledger sourceRegistry: epstein-2026, epstein-2025, studentview, dawson, fcdw, peo, medical-page, peo-about, jenne-page, jenne-community and police-page. For example, the epstein-2026 receipt records d305702ca34a64e812934c7404a9b8c5419e90c947cbd091735c7f826ed8e19a, while the actual finalized artifact and ledger record 69b7d18bff3f2562b4ef39d8346268da506fc1038c3f976aed91e07a38d1ffb0. The fcdw-2026, jenne and vfw receipts also assert HTTP 200 while the operative ledger correctly records an unknown exact HTTP status, successful transport exit and its limit. The builder updates sources in memory but never saves those updates to source-receipts.json; verify.py does not compare that file with the ledger.",
+      "action":"Finalize source-receipts.json from the same source objects used by the ledger. Require structural equality with sourceRegistry and independently verify every artifact hash and the three transport-status limitations. Preserve the rejected candidate and regenerate the replacement manifest.",
+      "owner":"Implementation author","target":"Replacement checkpoint003 candidate before re-review"
+    },
+    {
+      "id":"SD2-003-M2","severity":"medium",
+      "path":"docs/evidence/sd2-autonomous/checkpoint-003/sources/fellows.md","lines":[24],
+      "relatedPaths":["docs/evidence/sd2-autonomous/checkpoint-003/sources/collinsworth.md:68","docs/evidence/sd2-autonomous/checkpoint-003.json"],
+      "title":"Sanitization substitutes inferred submission destinations into source text",
+      "evidence":"The actual Fellows page says to turn the application in to a named recipient by 4/30/2026; it does not print WHS Guidance Office. The sanitized artifact substitutes that office, and bound evidence excerpts inherit the substitution. Collinsworth similarly changes the printed named guidance counselor into WHS guidance counselor. Emily, Quatman and Community Service explicitly print WHS Guidance Office, but those separate sources do not establish the Fellows route.",
+      "action":"Replace omitted names with explicit redaction markers without adding a school or office. Retain the printed dates and roles, keep unsupported submission-route provenance held, and refresh affected excerpts and hashes. Check the other sanitized transcripts for equivalent inference presented as source text.",
+      "owner":"Implementation author","target":"Replacement checkpoint003 candidate before re-review"
+    },
+    {
+      "id":"SD2-003-L1","severity":"low",
+      "path":"docs/evidence/sd2-autonomous/checkpoint-003/sources/medical-alias.md","lines":[4],
+      "relatedPaths":["docs/evidence/sd2-autonomous/checkpoint-003.json"],
+      "title":"Historical medical artifact retains a contact address despite the stated sanitization scope",
+      "evidence":"The historical medical artifact retains the provider postal address, and the historicalAlias evidence excerpt repeats it. README, validation and source extraction limits say contact values were omitted. This is a public provider contact rather than an applicant response or applicant PII, but the packet's sanitization claim is inaccurate.",
+      "action":"Omit the postal contact value using an explicit marker, preserve the organization, submission method and deadline, and update every affected excerpt and hash.",
+      "owner":"Implementation author","target":"Replacement checkpoint003 candidate before re-review"
+    },
+    {
+      "id":"SD2-003-L2","severity":"low",
+      "path":"docs/evidence/sd2-autonomous/checkpoint-003/validation.json","lines":[18,33,48,62,76,91,107],
+      "relatedPaths":["docs/evidence/sd2-autonomous/checkpoint-003/plan-check.json","docs/evidence/sd2-autonomous/checkpoint-003/plan-check-retry.json","docs/evidence/sd2-autonomous/checkpoint-003/typecheck.json","docs/evidence/sd2-autonomous/checkpoint-003/tests.json","docs/evidence/sd2-autonomous/checkpoint-003/tests-retry.json","docs/evidence/sd2-autonomous/checkpoint-003/build.json","docs/evidence/sd2-autonomous/checkpoint-003/build-retry.json"],
+      "title":"Log-normalization descriptions omit removal of leading blank lines",
+      "evidence":"The receipts say only trailing whitespace and EOF blank lines were normalized. Independently reconstructing the recorded originalOutputSha256 values requires restoring one leading newline to every command log; typecheck additionally requires restoring its second terminal newline. Commands, exit codes, substantive output and timestamps are not contradicted.",
+      "action":"Correct each normalization description to include leading blank-line removal. Preserve original-output hashes, finalized-log hashes, commands, timestamps and exit codes.",
+      "owner":"Implementation author","target":"Replacement checkpoint003 candidate before re-review"
+    }
+  ],
+  "checksPerformed": [
+    "Read repository operating rules, controlling plan/state/handoff, complete student-plan section9, autonomous authority/policy and continuation instructions; confirmed canonical active and next-stage pointers are null.",
+    "Independently recomputed manifest digest, candidate tree, full binary diff digest, exact 52-path change set, candidate blob IDs, sizes and SHA256 values; current reviewed files equal frozen candidate blobs.",
+    "Ran inspected read-only checkpoint003/verify.py successfully: 20 unique inputs, offsets40–59, 60 cumulative dispositions,346 remaining, next saved-405588227-row-63,392 field envelopes,159 evidence references,32 sources, zero accepted facts and SD3 unstarted.",
+    "Verified all159 excerpts occur in their bound sanitized artifacts and all operative sourceRegistry artifact hashes match. Separately discovered the stale standalone receipt hashes and transport claims reported above.",
+    "Independently verified original bytes, render-PDF hashes and every rendered-page hash for20 documents and46 pages.",
+    "Visually inspected all46 rendered pages directly or through contact sheets, including all five Booster pages, three Police scans, Jerry scan, both historical Fellows scans, both VFW pages, PEO flyer, FCDW variants, Jenne variants and remaining document pages.",
+    "Reviewed all20 records and392 field envelopes against retained source scope, including amounts versus slots, parent versus child, historical versus current cycles, entry/renewal and requested GPA distinctions, need selection versus eligibility, materials/signatures, political-support ambiguity, source authority and identity holds.",
+    "Confirmed Booster April17/18 and Jenne parent-scope conflicts remain unresolved; Special Recognition child applicability, Schultz identity/redaction, native sponsor/public-access, PEO linked-document and current-cycle gaps remain held.",
+    "Verified every exact seed/alias has a disposition and application/login/survey routes remain unvisited locators in the packet. No replacement seed or new award ID was introduced.",
+    "Recomputed preservation of1089 protected entry paths, prior744 field/40 identity holds, historical checkpoint002 review bindings,12 retained M1 artifact pins and437 unique M1 records.",
+    "Inspected required-check receipts and logs: plan/typecheck/full tests passed after disclosed IPC retries; both exact standard builds failed process/port EPERM. Verified finalized command-log hashes and reconstructed original-output hashes.",
+    "Ran full frozen entry-to-candidate git diff --check successfully."
+  ],
+  "limits": [
+    "This review performed no network or workbook access and cannot independently establish live source availability, public access, sponsor authority, current worksheet state or source-request history beyond retained evidence.",
+    "Raw documents and renderings are temporary. Durable captures contain selected sanitized scope; excluded scopes cannot support absence claims.",
+    "Required application checks were assessed from retained receipts and logs rather than rerun by the read-only reviewer.",
+    "The standard build remains blocked; fresh authenticated main and delivery-target proof remain unverified. Neither gate is waived.",
+    "No local research-review outcome accepts facts, resolves all identities, completes SD2, authorizes publication or begins SD3."
+  ],
+  "nextAction": {
+    "owner":"Implementation author; independent reviewer rechecks after author remediation",
+    "trigger":"Immediately before calling checkpoint003 reviewed",
+    "path":"docs/evidence/sd2-autonomous/checkpoint-003/",
+    "action":"Preserve this exact rejected candidate/manifest/review, record four count-matched dispositions, repair the two medium and two low findings, freeze a replacement candidate and regenerate its complete manifest. Return the new immutable bindings and remediation diff to this reviewer. Do not request routine human checkpoint approval or perform external effects."
+  }
+}

@@ -17,6 +17,9 @@ assert len(oldkeys)==len(set(oldkeys))==40 and set(oldkeys).isdisjoint(l['ordere
 assert l['nextCheckpointInputOffset']==60 and l['nextInputKey']==q['records'][60]['inputKey']
 assert len(q['records'][60:])==346 and l['coverage']['cumulativeInitialDispositions']==60
 assert l['acceptedFacts']==0 and not l['fullSD2Complete'] and not l['canonicalAcceptance'] and not l['SD3Started']
+assert l['sourceRegistry']==load(P/'source-receipts.json')
+for sid in ['fcdw-2026','jenne','vfw']:
+ s=next(x for x in l['sourceRegistry'] if x['sourceId']==sid);assert s['statusCode'] is None and s['transportExitCode']==0 and s['statusLimit']
 registry={s['sourceId']:s for s in l['sourceRegistry']};assert len(registry)==len(l['sourceRegistry'])==32
 seedurls={u for r in q['records'][40:60] for u in r['recordedSeedUrls']+r['publishedSourceAliases']}
 fileids={re.search(r'/d/([^/]+)',u).group(1) for u in seedurls if '/d/' in u}
