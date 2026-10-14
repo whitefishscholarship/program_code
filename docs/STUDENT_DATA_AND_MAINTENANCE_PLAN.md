@@ -355,6 +355,11 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-003-START -->
+- Final session closure audited all60initial dispositions/1,136autonomous field
+  holds/60identity holds,74input-source-link dispositions and nine original
+  attention rows; every recorded owner/trigger/next action retained. Evidence:
+  checkpoint-003/session-close-verification.json. Next-session Codex resumes
+  offset60/row63under existing authority. No new research/acceptance/later slice.
 - October14,2026: checkpoint003 completes one bounded autonomous SD2 initial
   research checkpoint at frozen offsets40–59 (saved42–44/46–62). Packet:
   `sd2-autonomous/checkpoint-003.json` and `checkpoint-003/`.20initial held
