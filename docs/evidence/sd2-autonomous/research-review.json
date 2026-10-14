@@ -1,0 +1,60 @@
+{
+  "scope": "independent fresh-context read-only local SD2 research recheck; no canonical acceptance/attestation",
+  "reviewer": "/root/sd2_autonomous_research_review",
+  "outcome": "PASS",
+  "recordedAt": "2026-10-14T16:31:34.688044+00:00",
+  "candidateCommit": "9d5a45b6de8d5932ed2a1117318773811e2eff1c",
+  "candidateTree": "49a50687c3fcdc1bcc183089687d92fb1f1e6416",
+  "manifestPath": "docs/evidence/sd2-autonomous/research-manifest.json",
+  "manifestSha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+  "completeDiffSha256": "80570d3cb2edf645870ca0b4e8be96c040312fcd60fcfce0ddd62a11c298796f",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "freshContext": true,
+  "readOnly": true,
+  "dispositionsRechecked": [
+    {
+      "findingId": "SD2-RESEARCH-L1",
+      "result": "fixed",
+      "checks": [
+        "Ted sanitized receipt exact source-artifact equality",
+        "Receipt/registry explicitly document three-copy restoration",
+        "Original DOCX/18artifact hashes/344typed values unchanged",
+        "Single count-matched rationale/owner/target disposition"
+      ]
+    }
+  ],
+  "checks": [
+    "Complete49-path candidate/tree/blobs/hashes/diff binding; whitespacePASS",
+    "20ordered inputs once;18receipts;386unprocessed",
+    "939protected paths;original9 attention rows/supplements unchanged",
+    "12originalM1 artifact pins;437records exact",
+    "Originalround1 manifest/review preserved;oldalias bound0278060;finalmanifestbound9d5a45b",
+    "Allsource-derived materialclaims supported;excerpts/artifact hashes checked",
+    "NativeSpear pages/XML/3original filebytehashes corroborated in round1",
+    "Initial/renewal,parent/child,need/selection,historical/current distinguished",
+    "Exacttests exit0; allidentitiesheld;accepted0;SD3unstarted"
+  ],
+  "coverage": {
+    "inputs": 20,
+    "sourceReceipts": 18,
+    "fieldEnvelopes": 344,
+    "heldIdentities": 20,
+    "acceptedFacts": 0,
+    "unprocessedInputs": 386
+  },
+  "limitations": [
+    "Localresearch checkpoint only;fullSD2incomplete",
+    "Read-only review;no network/workbook access",
+    "StandardbuildEPERM and fresh-main/target gate remain open",
+    "Conversionlimits,identity/current-cycle/conflict holds and later human/canonical acceptance/publication gates retained"
+  ],
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}
