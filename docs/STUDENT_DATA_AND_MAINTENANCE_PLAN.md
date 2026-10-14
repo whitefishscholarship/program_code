@@ -354,6 +354,46 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-004-START -->
+- October14,2026: checkpoint004 completes one bounded autonomous SD2 initial
+  research checkpoint at immutable offsets60–79, starting savedrow63/ElksMVS.
+  Packet: `sd2-autonomous/checkpoint-004.json` and `checkpoint-004/`.
+  20initial outcomes:13researched-held/6held-identity/1held-access;28receipts
+  (27new/1unchangedsame-dayDawsonreused),384heldfields/20identityholds,0accepted.
+  Four Norrish blank PDF pages completely rendered/inspected; custody hashes saved.
+- Cumulative80of406inputs initially disposed;326unprocessed. All1,520autonomous
+  fieldholds/80identityholds remain held; earlier1,136fields/60identities unchanged.
+  Next-session Codex resumes offset80/savedrow84, Clayton E. Hoyt Endowed Scholarship,
+  under existing AUTHORITY/POLICY without renewed routine human approval.
+  Never initialize/reset/replay. Short prompt: sd2-autonomous/NEXT_SESSION.md.
+- Independent source-packet PASS C0/H0/M0/L0 binds candidatec9050bb; local direct-child
+  two-file receiptbf17ea2. final-manifest.json/review.json in checkpoint-004/ control.
+  Original8cd41aa/manifest-round1/review-round1/verification-round1 remain exact.
+  Three C0/H1/M2/L0 findings were authorfixed/independentlyrechecked: FEC/Duke
+  input assignment, two Duke FAQ qualifiers and Cooke continuing/institution terms.
+  Exact input-key/source affinity now rejects the original error. No unresolved
+  reviewer repair transferred. This later wrap never rebinds source review.
+- Codex source/identity reconciliation owns every field/identity/source-link hold,
+  on applicable authorized evidence arrival or SD2 consolidation after initial
+  remaining-queue coverage. New holds include Elks cross-program award stacking;
+  Cooke gross/AGI/transcript/currentyear and distinct3.75entry/3.0continuing rules;
+  Hagan initialpurchase1000/2000 and fall/spring/one-time application; incomplete
+  Nelson body; distinct Basin/MECA children/sharedroute versus FEC criteria;
+  genericWUE versus UM-only/currentroute/priority/renewalcredits; Alcohol historical
+  2026/404PDF; YouthServe cycle/amount/hours/memberlist; Homer2027opening/2026FAQ;
+  Dell2027Texas/readiness; Duke2025/26application/2027training; Norrish historical
+  membership/template/payout; DEWALTloginlocator and five Dawsonchildidentities.
+  Every exact nextaction/deferredmateriallink remains in checkpoint004 registry.
+- Prior five research packets/PRELUDE supplied decisions, nine original attention
+  rows/every supplement, all historicalbindings and original437M1 IDs/routes/owners/
+  triggers remain exact. Plan/type/fulltests and evidence/history/fullfrozendiff
+  audits PASS; both exact builds still process/portEPERM. Fresh authenticated main/
+  target, preservation/nativebackup/recovery/permissions, human/canonical/publication,
+  student/CSV/browser and seasonalM1/SD5/reservedeffect gates remain open at their
+  original owners/triggers. FullSD2 incomplete; stopbeforeSD3. No workbook access/
+  write, app/configuration, login/forms/contact/messages, remoteGit/release/activation.
+  Closeout: checkpoint-004/SESSION_WRAP.md and wrap-verification.json.
+<!-- SD2-CHECKPOINT-004-END -->
 <!-- SD2-CHECKPOINT-003-START -->
 - Final session closure audited all60initial dispositions/1,136autonomous field
   holds/60identity holds,74input-source-link dispositions and nine original
