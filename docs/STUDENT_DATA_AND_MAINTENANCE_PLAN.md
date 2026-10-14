@@ -388,6 +388,14 @@ not duplicate project progress trackers. Update this small block at every checkp
   Prospective policy independently PASS at3518763; research candidate/result is
   bound by sd2-autonomous/research-{manifest,review}.json. Local research does not
   resolve the existing standard-build EPERM or fresh-main/target gate.
+- Autonomous session wrap: `docs/evidence/sd2-autonomous/{SESSION_WRAP.md,
+  wrap-verification.json,NEXT_SESSION.md}`. Reviewed9d5a45b and receipt6551d2e
+  remain bound to their own exact commits; this later docs wrap is separate.
+  Codex resumes offset20/row21 under existing authority and revisits every held
+  field/identity on applicable evidence arrival or at SD2 consolidation after
+  initial remaining-queue coverage. Source-link follow-ups, temporary-evidence
+  limits and every older owner/trigger remain routed in the wrap; no holds close
+  merely because an initial source disposition exists.
 <!-- SD2-AUTONOMOUS-END -->
 
 <!-- SD2-JAYCEE-CONTINUATION-START -->
