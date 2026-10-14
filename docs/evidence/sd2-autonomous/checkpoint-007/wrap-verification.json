@@ -1,0 +1,97 @@
+{
+  "outcome": "PASS",
+  "recordedAt": "2026-10-14T22:46:03.722250+00:00",
+  "scope": "Separate author-verified final handoff and routing audit, not rebound independent source review",
+  "reviewedCandidate": "2d0d0acc511458fa8c0ea11ba7b58cfd52a8754d",
+  "localReviewReceipt": "27ed0421cc41fdc021941b10a898557d1ac583b9",
+  "manifestSha256": "23995295b291ecc239d69e9579f8fedb4709b01f2fe55e81fc649c5180c32bcd",
+  "candidatePathsPreserved": 72,
+  "allOlderPlanSupplementsNineAttentionRowsAndOldHandoffPromptBytesPreserved": true,
+  "initialDispositions": 140,
+  "unprocessedInputs": 266,
+  "heldFields": 2646,
+  "heldIdentities": 140,
+  "factsAccepted": 0,
+  "seedAliasDispositionOccurrences": 235,
+  "sourceLinkDispositionOccurrences": 744,
+  "allOwnersTriggersNextActionsPresent": true,
+  "noPendingReviewerRepair": true,
+  "resolvedReviewFindings": 3,
+  "originalFailedReviewPreserved": true,
+  "ledgers": [
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-002.json",
+      "sha256": "19b064197fc87302be79b1423a86527f03eb06fcecdd7fc81c27217a442005fb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003.json",
+      "sha256": "2afb2153bfb645302c1257c7bb1564be37cc2360ae9f1cb0540a62dfb6297a89"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-004.json",
+      "sha256": "d4070ea88b9e837d17a80b0f40244811263813ef446681356a3b7eb3f5c6fde6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-005.json",
+      "sha256": "010aca022dfc1f81942a4cb6e709f906ee63dff741dde701393a100f340e2813"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-006.json",
+      "sha256": "09a61e83bddbb606e6e64e94c24d9f2312b887f95415e8259ec99ce9040d315b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-007.json",
+      "sha256": "86816c95d6f38847a15cac3f06c123017d4be040a3bb5091f36bc5ae32cd5e25"
+    }
+  ],
+  "sourceAudit": {
+    "outcome": "PASS",
+    "checkpointInputs": 20,
+    "cumulativeInitialDispositions": 140,
+    "unprocessed": 266,
+    "nextInputKey": "saved-405588227-row-144",
+    "fieldEnvelopes": 384,
+    "cumulativeHeldFields": 2646,
+    "heldIdentities": 140,
+    "evidenceReferences": 121,
+    "sourceReceipts": 36,
+    "sourceLinkDispositions": 24,
+    "preservedEntryPaths": 1315,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "priorCustodyHashes": 41,
+    "safePageViews": 14,
+    "WETRawVisualProof": false,
+    "acceptedFacts": 0,
+    "SD3Started": false
+  },
+  "M1Records": 437,
+  "M1Pins": 12,
+  "temporaryPriorCustodyPinsVerified": 41,
+  "safePageViewsVerified": 14,
+  "newSourceReadsDuringRemediationOrHandoff": false,
+  "standardBuildGate": "Both exact process/portEPERM failures open/unwaived; Codex before canonical acceptance/authorized release",
+  "freshMainTargetGate": "Unverified; Codex before canonical acceptance/authorized release",
+  "WETRawVisualProofUnavailable": true,
+  "ClerkPriorRawVisualGapRetained": true,
+  "DavisRecoveredOriginalCaptureNoRawEnvelopeHash": true,
+  "nativeInterimFinalBindingExplicit": true,
+  "sourceOutputLapsesAndFutureSanitizationRouted": true,
+  "allLaterPreservationAcceptanceStudentMonitorEffectGatesRetained": true,
+  "newExternalEffects": false,
+  "SD3Started": false,
+  "next": {
+    "owner": "Next-session Codex research/proposals",
+    "trigger": "Next selected session under existing AUTHORITY/POLICY",
+    "authoritativeProgressPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "kickoffPath": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+    "offset": 140,
+    "inputKey": "saved-405588227-row-144",
+    "name": "P.E.O. Chapter D Scholarship (1) $1,400",
+    "action": "Resume one bounded SD2 checkpoint; never initialize/reset/replay; stopbeforeSD3"
+  }
+}
