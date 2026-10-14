@@ -11,11 +11,11 @@ section 9 remains the sole project progress pointer.
 The immutable queue's offsets 60–79 are the exact 20 inputs in ../checkpoint-004.json.
 Outcomes: 13 researched-held, 6 held-identity, 1 held-access. Every identity stays
 held, including existing public-ID candidates; no new ID or name-only merge.
-28 receipts (27 new, 1 unchanged same-day Dawson capture reused), 381 held field
-envelopes, 156 source-bound evidence references, zero accepted facts. Four complete
+28 receipts (27 new, 1 unchanged same-day Dawson capture reused), 384 held field
+envelopes, 171 source-bound evidence references, zero accepted facts. Four complete
 Norrish blank PDF pages were rendered and visually inspected; custody hashes are
 in document-inspection.json. Cumulative autonomous coverage is 80/406 initial
-input dispositions, 326 unprocessed, 1,517 held fields and 80 held identities.
+input dispositions, 326 unprocessed, 1,520 held fields and 80 held identities.
 This is initial research accounting, never 80 accepted/distinct awards or full SD2.
 
 The next exact input is offset 80, saved-405588227-row-84, Clayton E. Hoyt Endowed
@@ -39,6 +39,10 @@ an exact view of that registry, not another Reviews/progress system.
   test-score wording; military-base eligibility versus FAQ geographic wording needs
   reconciliation. Preserve two teacher plus one counselor recommendations, school
   report, short essays, three-year AGI information, GED/gap-year and deferral rules.
+  The captured FAQ states full-time participation, no online four-year funding,
+  annual discretionary renewal/revocation, continuing cumulative GPA 3.0 and
+  intended four-year funding with case-by-case duration exceptions. Entry GPA
+  3.75 stays distinct. Applicability and all continuing conditions remain held.
 - Hagan: separate fall and spring 2027–28 phases; fall December 1, 2026 deadline;
   3.50 CGPA, 2025 household AGI cap, 240 hours supervised paid nonfamily work and
   distinct U.S./non-U.S. finalist materials. Up to $7,500/semester is conditional;
@@ -140,3 +144,19 @@ canonical attestation, fact acceptance or completed SD2. No workbook reads/write
 app/configuration changes, login/forms/contact/messages, remote Git/release or monitor
 activation. Stop before SD3. Backend model/effort not independently observable;
 no model switch claimed. Recommended next-session effort: High.
+
+## Author remediation after initial independent review
+
+Original candidate8cd41aa, exact manifest-round1.json/review-round1.json and
+verification-round1.json are retained. Independent initial C0/H1/M2/L0 found
+wrong FEC/Duke assignment, two unbound Duke qualifiers and omitted captured
+Cooke continuing/institution conditions. Three count-matched author dispositions
+are in remediation.json. Duke observations now belong to exact savedrow76;
+FECrow75 has separately sourced FEC fields/route, distinct from Basin/MECA.
+The verifier checks all20 exact input-key/source affinities and rejects the
+original immutable misbinding. Duke FAQ explicitly binds age-at-application
+and training-mode qualifiers. Cooke annual renewal/revocation, continuing3.0
+GPA, fulltime/noonline and funding duration/exceptions are captured as held
+observations. Original command receipts/source artifacts/custody hashes remain
+unchanged. No source refresh, completed-work replay or accepted fact. New
+384fields/1,520cumulative holds; replacement freeze/recheck controls outcome.

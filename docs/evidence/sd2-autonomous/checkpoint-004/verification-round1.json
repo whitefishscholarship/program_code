@@ -1,0 +1,25 @@
+{
+  "outcome": "PASS",
+  "checkpointInputs": 20,
+  "cumulativeInitialDispositions": 80,
+  "unprocessed": 326,
+  "nextInputKey": "saved-405588227-row-84",
+  "sourceReceipts": 28,
+  "fieldEnvelopes": 381,
+  "fieldEvidenceReferences": 156,
+  "fieldStates": {
+    "verified": 91,
+    "unverified": 283,
+    "conflict": 7
+  },
+  "preservedEntryPaths": 1153,
+  "M1Records": 437,
+  "M1Pins": 12,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/checkpoint-004/verify.py"
+  ],
+  "recordedAt": "2026-10-14T20:10:13.485988+00:00"
+}

@@ -512,7 +512,9 @@
         "schoolType": {
           "value": {
             "accreditedFourYearBachelor": true,
-            "USCollegeRequired": false
+            "USCollegeRequired": false,
+            "onlineFourYearProgramsExcluded": true,
+            "fullTime": true
           },
           "state": "verified",
           "acceptance": "held",
@@ -527,6 +529,20 @@
               "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
               "locator": "FAQ institution scope and baccalaureate qualification / schoolType",
               "excerpt": "No, you do not have to attend college in the U.S."
+            },
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "No, accredited online four-year programs are not covered by Cooke College Scholarship Program funds."
+            },
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "planning to enroll full time in an accredited four-year institution"
             }
           ]
         },
@@ -600,15 +616,48 @@
           "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
         },
         "renewability": {
-          "value": null,
-          "state": "unverified",
+          "value": {
+            "annualDiscretionaryReview": true,
+            "reviewFactors": [
+              "grades",
+              "financialeligibility",
+              "conduct",
+              "degreeprogress",
+              "cooperation"
+            ],
+            "inYearRevocationPossible": true,
+            "intendedFundingYears": 4,
+            "durationExceptionsCaseByCase": true
+          },
+          "state": "verified",
           "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceScope": "YearlessFAQ continuation policy; acceptance/current applicability held",
+          "observedAt": "2026-10-14T19:58:32.383Z",
           "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "YearlessFAQ continuation policy; acceptance/current applicability held / renewability",
+              "excerpt": "No. The scholarship is renewable each year."
+            },
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "revoke a scholarship during the academic year"
+            },
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "Exceptions to this would only be considered on a case-by-case basis."
+            }
+          ]
         },
         "gapYears": {
           "value": {
@@ -801,6 +850,29 @@
             }
           ]
         },
+        "renewalGPA": {
+          "value": {
+            "min": 3.0,
+            "basis": "cumulative",
+            "scale": null,
+            "challengingCourseLoad": true
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "Continuing condition distinct from initial3.75unweighted GPA; applicability held",
+          "observedAt": "2026-10-14T19:58:32.383Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "cooke-faq",
+              "sourceUrl": "https://www.jkcf.org/our-scholarships/college-scholarship-program/faqs/",
+              "artifactSha256": "2990f860090dcf45a2a5cd578e3f7db3869e513f11a210f1493a78c3863f03c8",
+              "locator": "Continuing condition distinct from initial3.75unweighted GPA; applicability held / renewalGPA",
+              "excerpt": "cumulative GPA of 3.0 or better"
+            }
+          ]
+        },
         "transcriptConflict": {
           "value": {
             "howToApply": "unofficial with possible official semifinalist request",
@@ -833,7 +905,7 @@
       },
       "owner": "Codex source/identity reconciliation",
       "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction and three recommendations; no CommonApp visit.",
+      "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction, three recommendations, fulltime/noonlineinstitutionrule, annualdiscretionaryreview/revocation and distinctcontinuing3.0GPA/fouryearfundingexceptions; no CommonApp visit.",
       "interviewCoverage": "No app change. Only later accepted award-bound facts can affect matching; unknown/current-scope gaps remain non-excluding.",
       "seedDispositions": [
         {
@@ -844,7 +916,7 @@
           "disposition": "inspected/reused exact source; source limitations and all holds retained",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction and three recommendations; no CommonApp visit."
+          "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction, three recommendations, fulltime/noonlineinstitutionrule, annualdiscretionaryreview/revocation and distinctcontinuing3.0GPA/fouryearfundingexceptions; no CommonApp visit."
         },
         {
           "url": "https://apply.commonapp.org/login?ma=987",
@@ -852,7 +924,7 @@
           "disposition": "application/login locator only; not fetched or interacted with",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction and three recommendations; no CommonApp visit."
+          "nextAction": "Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction, three recommendations, fulltime/noonlineinstitutionrule, annualdiscretionaryreview/revocation and distinctcontinuing3.0GPA/fouryearfundingexceptions; no CommonApp visit."
         }
       ]
     },
@@ -4154,6 +4226,328 @@
       "outcome": "researched-held",
       "fieldProposals": {
         "amount": {
+          "value": {
+            "currency": "USD",
+            "individualRange": [
+              1500,
+              6000
+            ]
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "FEC individual scholarship range; no recipient count or guaranteed award inferred",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "FEC individual scholarship range; no recipient count or guaranteed award inferred / amount",
+              "excerpt": "Individual scholarships range from $1,500 to $6,000."
+            }
+          ]
+        },
+        "minimumGPA": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "gpaBasis": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "schoolType": {
+          "value": {
+            "accreditedPostSecondaryInMontana": true,
+            "degreeTypesNotExplicit": null
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "FEC specific destination restriction",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "FEC specific destination restriction / schoolType",
+              "excerpt": "Scholarship money must be used to attend an accredited post-secondary education institution in Montana."
+            }
+          ]
+        },
+        "residency": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "membership": {
+          "value": {
+            "applicantORparentLegalGuardianCoopMember": true,
+            "primaryResidenceServedByCoop": true
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "Literal FEC member alternatives distinct from Basin/MECA member-child",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "Literal FEC member alternatives distinct from Basin/MECA member-child / membership",
+              "excerpt": "The applicant or their parent/legal guardian must be a member of Flathead Electric Cooperative, served by the Co-op at their primary residence."
+            }
+          ]
+        },
+        "needRequirement": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "needPriority": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "renewability": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "gapYears": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "deadline": {
+          "value": {
+            "date": "2026-02-22",
+            "timezone": null
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "Explicit FEC 2026 deadline; no future cycle inferred",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "Explicit FEC 2026 deadline; no future cycle inferred / deadline",
+              "excerpt": "Applications are due February 22, 2026."
+            }
+          ]
+        },
+        "applicationWindow": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "cycle": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "applicationMethod": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "materials": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "identityContinuity": {
+          "value": {
+            "program": "Flathead Electric Co-op Scholarships",
+            "sponsor": "Flathead Electric Cooperative",
+            "separateFromBasinMECA": true
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "Exact named FEC section; aggregate amount not separate new awards",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "Exact named FEC section; aggregate amount not separate new awards / identityContinuity",
+              "excerpt": "### Flathead Electric Co-op Scholarships"
+            }
+          ]
+        },
+        "currentOffering": {
+          "value": null,
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Current named-award applicability unresolved",
+          "observedAt": "2026-10-14T20:10:13.304888+00:00",
+          "sourceRevision": null,
+          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
+          "evidence": [],
+          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
+        },
+        "sourceStatus": {
+          "value": {
+            "posted": "closed",
+            "deadlineYear": 2026,
+            "nextOffering": null
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "First closed statement follows FEC-specific deadline; Basin/MECA closure separately retained",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "First closed statement follows FEC-specific deadline; Basin/MECA closure separately retained / sourceStatus",
+              "excerpt": "**Applications are now closed. Please check back next year.**"
+            }
+          ]
+        },
+        "parentStageOptions": {
+          "value": {
+            "graduatingAccreditedServiceAreaHS": true,
+            "graduatingHomeschool": true,
+            "currentUndergrad": true,
+            "namedChildApplicabilityResolution": null
+          },
+          "state": "unverified",
+          "acceptance": "held",
+          "sourceScope": "Parent-wide stage options only; individual child qualification held",
+          "observedAt": "2026-10-14T19:55:57.953Z",
+          "sourceRevision": null,
+          "freshness": "Source-scoped observation only. Historical/yearless facts cannot establish a future cycle. Applicability/identity and later acceptance remain held.",
+          "evidence": [
+            {
+              "sourceId": "fec",
+              "sourceUrl": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+              "artifactSha256": "477b79a1753a3854c806eefe6f9732384dced8821d8ca65cdd8cdf1241f53d2b",
+              "locator": "Parent-wide stage options only; individual child qualification held / parentStageOptions",
+              "excerpt": "Current undergraduate college students"
+            }
+          ]
+        }
+      },
+      "owner": "Codex source/identity reconciliation",
+      "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+      "nextAction": "Resolve exact current FEC section/ID and nextcycle rules/materials; preserve1500–6000range, literal applicantORparent/guardian membership at primaryresidence, Montana destination, February22/2026closure and separate Basin/MECA children. No portal visit or newID.",
+      "interviewCoverage": "No app change. Only later accepted award-bound facts can affect matching; unknown/current-scope gaps remain non-excluding.",
+      "seedDispositions": [
+        {
+          "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
+          "sourceIds": [
+            "fec"
+          ],
+          "disposition": "inspected/reused exact source; source limitations and all holds retained",
+          "owner": "Codex source/identity reconciliation",
+          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+          "nextAction": "Resolve exact current FEC section/ID and nextcycle rules/materials; preserve1500–6000range, literal applicantORparent/guardian membership at primaryresidence, Montana destination, February22/2026closure and separate Basin/MECA children. No portal visit or newID."
+        },
+        {
+          "url": "https://fec.submittable.com/submit/336920/2026-flathead-electric-co-op-scholarships",
+          "sourceIds": [],
+          "disposition": "application/login locator only; not fetched or interacted with",
+          "owner": "Codex source/identity reconciliation",
+          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+          "nextAction": "Resolve exact current FEC section/ID and nextcycle rules/materials; preserve1500–6000range, literal applicantORparent/guardian membership at primaryresidence, Montana destination, February22/2026closure and separate Basin/MECA children. No portal visit or newID."
+        }
+      ]
+    },
+    {
+      "inputKey": "saved-405588227-row-76",
+      "rowLocator": 76,
+      "recordedName": "Fly for Duke Aviation Scholarships",
+      "publicIdCandidates": [
+        "award-c8846f19dca4"
+      ],
+      "identityAcceptance": "held",
+      "outcome": "researched-held",
+      "fieldProposals": {
+        "amount": {
           "value": null,
           "state": "unverified",
           "acceptance": "held",
@@ -4422,6 +4816,13 @@
               "artifactSha256": "0724919141f2b98f45cb7d7bec45589c94c611b019f0a0d9c4b8d906c5c66a24",
               "locator": "Separate scope/variant or qualification",
               "excerpt": "Must be a U.S. citizen"
+            },
+            {
+              "sourceId": "duke-faq",
+              "sourceUrl": "https://dukecarrillofoundation.org/scholarships/fly-for-duke-aviation-scholarship-faq/",
+              "artifactSha256": "c892554b69cd503ae633a04ae2b3b098f2fa5a92a6646ccc58b92100e73e729b",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "17-24 years of age at time of application"
             }
           ]
         },
@@ -4444,6 +4845,13 @@
               "artifactSha256": "070c4c3d257c5e1c8c9db5227c9690217644e92a9c7742568790b4fa94d389bc",
               "locator": "Trainingaidnotcollegetuitionscholarship / fundUse",
               "excerpt": "earn a private pilot’s license."
+            },
+            {
+              "sourceId": "duke-faq",
+              "sourceUrl": "https://dukecarrillofoundation.org/scholarships/fly-for-duke-aviation-scholarship-faq/",
+              "artifactSha256": "c892554b69cd503ae633a04ae2b3b098f2fa5a92a6646ccc58b92100e73e729b",
+              "locator": "Separate scope/variant or qualification",
+              "excerpt": "As long as all training is at an approved FAA flight school for private pilot’s license, all forms of training with that school will be accepted."
             }
           ]
         },
@@ -4474,229 +4882,6 @@
       "interviewCoverage": "No app change. Only later accepted award-bound facts can affect matching; unknown/current-scope gaps remain non-excluding.",
       "seedDispositions": [
         {
-          "url": "https://www.flatheadelectric.com/our-community/educational-support/scholarships/",
-          "sourceIds": [
-            "fec"
-          ],
-          "disposition": "inspected/reused exact source; source limitations and all holds retained",
-          "owner": "Codex source/identity reconciliation",
-          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve2025label/2026application/2027trainingdatecurrentcycleandamount/fullmaterials. Preserve17–24atapplication/UScitizenship/FAAmedicalbeforetraining and reapplication; no inventedcashcap or form."
-        },
-        {
-          "url": "https://fec.submittable.com/submit/336920/2026-flathead-electric-co-op-scholarships",
-          "sourceIds": [],
-          "disposition": "application/login locator only; not fetched or interacted with",
-          "owner": "Codex source/identity reconciliation",
-          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Resolve2025label/2026application/2027trainingdatecurrentcycleandamount/fullmaterials. Preserve17–24atapplication/UScitizenship/FAAmedicalbeforetraining and reapplication; no inventedcashcap or form."
-        }
-      ]
-    },
-    {
-      "inputKey": "saved-405588227-row-76",
-      "rowLocator": 76,
-      "recordedName": "Fly for Duke Aviation Scholarships",
-      "publicIdCandidates": [
-        "award-c8846f19dca4"
-      ],
-      "identityAcceptance": "held",
-      "outcome": "researched-held",
-      "fieldProposals": {
-        "amount": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "minimumGPA": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "gpaBasis": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "schoolType": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "residency": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "membership": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "needRequirement": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "needPriority": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "renewability": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "gapYears": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "deadline": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "applicationWindow": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "cycle": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "applicationMethod": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "materials": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "identityContinuity": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        },
-        "currentOffering": {
-          "value": null,
-          "state": "unverified",
-          "acceptance": "held",
-          "sourceScope": "Current named-award applicability unresolved",
-          "observedAt": "2026-10-14T20:10:13.304888+00:00",
-          "sourceRevision": null,
-          "freshness": "No current fact inferred from retrieval, historical cycle, filename or parent page",
-          "evidence": [],
-          "note": "Unknown is non-excluding; selected excerpts never prove silence in uninspected/excluded scope."
-        }
-      },
-      "owner": "Codex source/identity reconciliation",
-      "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Reconcile each held named identity/current material field under POLICY and later human/canonical/publication gates.",
-      "interviewCoverage": "No app change. Only later accepted award-bound facts can affect matching; unknown/current-scope gaps remain non-excluding.",
-      "seedDispositions": [
-        {
           "url": "https://dukecarrillofoundation.org/scholarships/fly-for-duke-aviation-scholarship/",
           "sourceIds": [
             "duke"
@@ -4704,7 +4889,7 @@
           "disposition": "inspected/reused exact source; source limitations and all holds retained",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile each held named identity/current material field under POLICY and later human/canonical/publication gates."
+          "nextAction": "Resolve2025label/2026application/2027trainingdatecurrentcycleandamount/fullmaterials. Preserve17–24atapplication/UScitizenship/FAAmedicalbeforetraining and reapplication; no inventedcashcap or form."
         }
       ]
     },
@@ -10332,8 +10517,8 @@
     "cumulativeInitialDispositions": 80,
     "unprocessedInputs": 326,
     "heldIdentities": 20,
-    "fieldEnvelopes": 381,
-    "cumulativeAutonomousHeldFields": 1517,
+    "fieldEnvelopes": 384,
+    "cumulativeAutonomousHeldFields": 1520,
     "cumulativeAutonomousHeldIdentities": 80,
     "sourceReceipts": 28,
     "newSourceReceipts": 27,

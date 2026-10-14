@@ -15,7 +15,7 @@ for s in sources:
  for d in s['linkDispositions']:
   linked=[x['sourceId'] for x in sources if x['originalUrl']==d['url']]
   if linked:d['disposition']='inspected/reused exact source; limits/holds retained';d['sourceIds']=linked
-registry={s['sourceId']:s for s in sources};now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+registry={s['sourceId']:s for s in sources};now=load(P.parent/'checkpoint-004.json')['completedAt'] if (P.parent/'checkpoint-004.json').exists() else datetime.datetime.now(datetime.timezone.utc).isoformat()
 fields=['amount','minimumGPA','gpaBasis','schoolType','residency','membership','needRequirement','needPriority','renewability','gapYears','deadline','applicationWindow','cycle','applicationMethod','materials','identityContinuity','currentOffering']
 records=[]
 for seed in q['records'][60:80]:
@@ -60,7 +60,13 @@ put(64,'applicationWindow',{'open':'2026-08-19','deadline':'2026-11-11','timezon
 extra(64,'applicationWindow','cooke','**November 11, 2026**')
 put(64,'currentOffering',{'pageSays':'application currently open','deadline':'2026-11-11','livePortalVerified':False},'cooke','application is currently open and will close on November 11, 2026.','Sponsor claim only; no action-path usability proof')
 put(64,'minimumGPA',{'min':3.75,'basis':'cumulative unweighted','scale':None},'cooke','minimum, cumulative unweighted GPA of 3.75 or above.','Entry GPA; scale not inferred')
-put(64,'schoolType',{'accreditedFourYearBachelor':True,'USCollegeRequired':False},'cooke-faq','No, you do not have to attend college in the U.S.','FAQ institution scope and baccalaureate qualification')
+put(64,'schoolType',{'accreditedFourYearBachelor':True,'USCollegeRequired':False,'onlineFourYearProgramsExcluded':True,'fullTime':True},'cooke-faq','No, you do not have to attend college in the U.S.','FAQ institution scope and baccalaureate qualification')
+extra(64,'schoolType','cooke-faq','No, accredited online four-year programs are not covered by Cooke College Scholarship Program funds.')
+extra(64,'schoolType','cooke-faq','planning to enroll full time in an accredited four-year institution')
+put(64,'renewability',{'annualDiscretionaryReview':True,'reviewFactors':['grades','financialeligibility','conduct','degreeprogress','cooperation'],'inYearRevocationPossible':True,'intendedFundingYears':4,'durationExceptionsCaseByCase':True},'cooke-faq','No. The scholarship is renewable each year.','YearlessFAQ continuation policy; acceptance/current applicability held')
+extra(64,'renewability','cooke-faq','revoke a scholarship during the academic year')
+extra(64,'renewability','cooke-faq','Exceptions to this would only be considered on a case-by-case basis.')
+put(64,'renewalGPA',{'min':3.0,'basis':'cumulative','scale':None,'challengingCourseLoad':True},'cooke-faq','cumulative GPA of 3.0 or better','Continuing condition distinct from initial3.75unweighted GPA; applicability held')
 put(64,'amount',{'currency':'USD','maxPerYear':55000,'lastDollarAfterInstitutionalAid':True,'fixedAward':False},'cooke','can provide as much as $55,000 per year','Maximum last-dollar amount, not guaranteed')
 put(64,'needRequirement',{'demonstratedUnmetNeed':True,'familyIncomeUpperUSD':95000,'basisResolution':None},'cooke','**Demonstrate Unmet Financial Need**','Need required but income metric conflicts',state='conflict')
 extra(64,'needRequirement','cooke','family annual gross income up to $95,000')
@@ -73,7 +79,7 @@ put(64,'transcriptConflict',{'howToApply':'unofficial with possible official sem
 extra(64,'transcriptConflict','cooke-faq','Yes, and your official high school transcript will be submitted by your school counselor')
 put(64,'gapYears',{'postGraduationGapYearExcluded':True,'approvedPostAwardDeferralPossible':True,'GEDExcluded':True},'cooke-faq','Students who are taking a gap year','FAQ separate gap-year/deferral/GED rules')
 extra(64,'gapYears','cooke-faq','No. If you received a GED diploma')
-byrow[64]['nextAction']='Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction and three recommendations; no CommonApp visit.'
+byrow[64]['nextAction']='Resolve gross-versus-AGI income and official-versus-unofficial transcript contradictions, military-base FAQ scope and stale FAQ academic-year phrase. Retain2027entry, test-score-without-minimum distinction, three recommendations, fulltime/noonlineinstitutionrule, annualdiscretionaryreview/revocation and distinctcontinuing3.0GPA/fouryearfundingexceptions; no CommonApp visit.'
 put(65,'identityContinuity',{'sponsor':'Hagan Scholarship Foundation','program':'Hagan Scholarship'},'hagan','Hagan Scholarship Fall Application','Named official program; identity held')
 put(65,'cycle',{'academicYear':'2027-2028','graduatingClass':2027},'hagan','For the 2027-2028 Academic Year','Explicit 2027 graduating-class fall application')
 put(65,'deadline',{'date':'2026-12-01','time':None,'timezone':None},'hagan','Application Deadline: December 1, 2026.','Fall application only; spring separately')
@@ -176,15 +182,25 @@ extra(74,'applicationWindow','dell','2027\n\nJAN12')
 put(74,'amount',{'currency':'USD','totalFlexible':20000,'recipientSlotsPerYear':500,'otherBenefits':['laptop','bookcredits','emergencyfunds'],'annualAward':False},'dell','$20,000 flexible scholarship','Totalflexibleawardnotannualcash')
 put(74,'materials',{'finalistsHighSchoolTranscript':True,'FAFSASubmissionSummary':True,'otherRequiredInformationUnknown':True},'dell','Finalists are asked to submit a current copy of their high school transcript','Finalistmaterialsnotinitialcompleteapplicationproof')
 byrow[74]['nextAction']='Resolve2027Texas-onlyscopeversussavedWhitefishlistingandapprovedreadinessprogramlist; preserve500recipients,20000total,calendarphases/PellruleandunknownGPAbasis. No runtime exclusion or account action.'
-put(75,'identityContinuity',{'program':'Fly for Duke Aviation Scholarships','sponsor':'Duke Carrillo Foundation'},'duke','The Duke Carrillo Foundation offers Fly For Duke','Namedprogramcontinuityproposedonly')
-put(75,'historicalWindow',{'open':'2025-11-16','deadline':'2026-02-25','time':'17:00','timezoneLiteral':'CST','trainingCompleteBy':'2027-05-01'},'duke-faq','opens on November 16, 2025 and closes February 25, 2026 at 5:00 PM CST.','2025/26applicationversus2027trainingend; no2027applicationinferred')
-extra(75,'historicalWindow','duke-faq','Training must be completed by May 1, 2027.')
-put(75,'eligibility',{'ageAtApplicationRange':[17,24],'USCitizen':True,'approvedFAAFlightSchool':True,'privatePilotGroundSchoolAndThirdClassMedicalBeforeTraining':True},'duke-criteria','Must be between the ages of 17 – 24 years','Yearlesscriteriawith2026deadline; heldapplicability')
-extra(75,'eligibility','duke-criteria','Must be a U.S. citizen')
-put(75,'fundUse',{'privatePilotLicenseTraining':True,'mentoringOnRequest':True,'approvedSchoolOnlineOrInpersonTraining':True},'duke','earn a private pilot’s license.','Trainingaidnotcollegetuitionscholarship')
-put(75,'materials',{'collegeTranscriptInsteadOfHSIfCollegeEnrolled':True,'USCitizenshipProofAndPhotoIDIfSelected':True,'exactInitialFormMaterials':None},'duke-faq','No, please provide your college transcript.','FAQlimitedmaterials; no response collection')
-put(75,'reapplication',{'afterNonselectionNextPeriod':True},'duke-faq','Yes, you can reapply','Notrenewal')
-byrow[75]['nextAction']='Resolve2025label/2026application/2027trainingdatecurrentcycleandamount/fullmaterials. Preserve17–24atapplication/UScitizenship/FAAmedicalbeforetraining and reapplication; no inventedcashcap or form.'
+put(75,'identityContinuity',{'program':'Flathead Electric Co-op Scholarships','sponsor':'Flathead Electric Cooperative','separateFromBasinMECA':True},'fec','### Flathead Electric Co-op Scholarships','Exact named FEC section; aggregate amount not separate new awards')
+put(75,'amount',{'currency':'USD','individualRange':[1500,6000]},'fec','Individual scholarships range from $1,500 to $6,000.','FEC individual scholarship range; no recipient count or guaranteed award inferred')
+put(75,'membership',{'applicantORparentLegalGuardianCoopMember':True,'primaryResidenceServedByCoop':True},'fec','The applicant or their parent/legal guardian must be a member of Flathead Electric Cooperative, served by the Co-op at their primary residence.','Literal FEC member alternatives distinct from Basin/MECA member-child')
+put(75,'schoolType',{'accreditedPostSecondaryInMontana':True,'degreeTypesNotExplicit':None},'fec','Scholarship money must be used to attend an accredited post-secondary education institution in Montana.','FEC specific destination restriction')
+put(75,'deadline',{'date':'2026-02-22','timezone':None},'fec','Applications are due February 22, 2026.','Explicit FEC 2026 deadline; no future cycle inferred')
+put(75,'sourceStatus',{'posted':'closed','deadlineYear':2026,'nextOffering':None},'fec','**Applications are now closed. Please check back next year.**','First closed statement follows FEC-specific deadline; Basin/MECA closure separately retained')
+put(75,'parentStageOptions',{'graduatingAccreditedServiceAreaHS':True,'graduatingHomeschool':True,'currentUndergrad':True,'namedChildApplicabilityResolution':None},'fec','Current undergraduate college students','Parent-wide stage options only; individual child qualification held',state='unverified')
+byrow[75]['nextAction']='Resolve exact current FEC section/ID and nextcycle rules/materials; preserve1500–6000range, literal applicantORparent/guardian membership at primaryresidence, Montana destination, February22/2026closure and separate Basin/MECA children. No portal visit or newID.'
+put(76,'identityContinuity',{'program':'Fly for Duke Aviation Scholarships','sponsor':'Duke Carrillo Foundation'},'duke','The Duke Carrillo Foundation offers Fly For Duke','Namedprogramcontinuityproposedonly')
+put(76,'historicalWindow',{'open':'2025-11-16','deadline':'2026-02-25','time':'17:00','timezoneLiteral':'CST','trainingCompleteBy':'2027-05-01'},'duke-faq','opens on November 16, 2025 and closes February 25, 2026 at 5:00 PM CST.','2025/26applicationversus2027trainingend; no2027applicationinferred')
+extra(76,'historicalWindow','duke-faq','Training must be completed by May 1, 2027.')
+put(76,'eligibility',{'ageAtApplicationRange':[17,24],'USCitizen':True,'approvedFAAFlightSchool':True,'privatePilotGroundSchoolAndThirdClassMedicalBeforeTraining':True},'duke-criteria','Must be between the ages of 17 – 24 years','Yearlesscriteriawith2026deadline; heldapplicability')
+extra(76,'eligibility','duke-criteria','Must be a U.S. citizen')
+extra(76,'eligibility','duke-faq','17-24 years of age at time of application')
+put(76,'fundUse',{'privatePilotLicenseTraining':True,'mentoringOnRequest':True,'approvedSchoolOnlineOrInpersonTraining':True},'duke','earn a private pilot’s license.','Trainingaidnotcollegetuitionscholarship')
+extra(76,'fundUse','duke-faq','As long as all training is at an approved FAA flight school for private pilot’s license, all forms of training with that school will be accepted.')
+put(76,'materials',{'collegeTranscriptInsteadOfHSIfCollegeEnrolled':True,'USCitizenshipProofAndPhotoIDIfSelected':True,'exactInitialFormMaterials':None},'duke-faq','No, please provide your college transcript.','FAQlimitedmaterials; no response collection')
+put(76,'reapplication',{'afterNonselectionNextPeriod':True},'duke-faq','Yes, you can reapply','Notrenewal')
+byrow[76]['nextAction']='Resolve2025label/2026application/2027trainingdatecurrentcycleandamount/fullmaterials. Preserve17–24atapplication/UScitizenship/FAAmedicalbeforetraining and reapplication; no inventedcashcap or form.'
 put(77,'identityContinuity',{'program':'John & Joe Norrish Memorial Scholarship','sponsor':'Flathead Building Association'},'norrish','2025-2026 John & Joe Norrish Memorial Scholarship','Raw4pagePDFindependentlyidentifiedname; Firecrawlredactedname not absence')
 put(77,'historicalWindow',{'open':'2025-12-15','deadline':'2026-02-27','time':'16:00','timezone':None},'norrish','Application Deadline—Friday, Feb. 27, 2026 4:00 PM','Explicit2025/26document; timezoneunknown')
 put(77,'amount',{'USDTypicalRange':[500,1500],'committeeDiscretion':True,'recipientCountVariable':True,'tuitionOnly':True},'norrish','typically ranges from $500 to $1500','Typicalrangeandcommitteeavailabilitynotguaranteed')

@@ -45,9 +45,31 @@ for r,seed in zip(l['records'],q['records'][60:80]):
   for e in f['evidence']:
    s=registry[e['sourceId']];assert e['sourceUrl']==s['originalUrl'] and e['artifactSha256']==s['artifactSha256']
    assert e['excerpt'] in (ROOT/s['artifactPath']).read_text();refs+=1
-assert len(fields)==l['coverage']['fieldEnvelopes']==381
+# Exact immutable input keys and claim-source affinity independently reject the initial misbinding.
+allowed={63:{'elks-mvs','elks-faq','elks-legacy'},64:{'cooke','cooke-faq'},65:{'hagan','hagan-description','hagan-timeline'},66:{'nelson'},67:{'fec'},69:{'wue','wue-old','wue-incoming','wue-current'},70:{'alcohol','alcohol-alias','alcohol-pdf'},71:{'youth'},72:{'homer','homer-faq'},73:{'elks-legacy','elks-legacy-faq','elks-faq'},74:{'dell'},75:{'fec'},76:{'duke','duke-criteria','duke-faq'},77:{'norrish','norrish-parent'},78:set(),79:{'dawson'},80:{'dawson'},81:{'dawson'},82:{'dawson'},83:{'dawson'}}
+def affinity(rows):
+ for r in rows:
+  row=r['rowLocator'];assert r['inputKey']==f'saved-405588227-row-{row}'
+  for name,f in r['fieldProposals'].items():
+   for e in f['evidence']:assert e['sourceId'] in allowed[row],f'Wrong named input/source affinity: {r["inputKey"]}/{name}/{e["sourceId"]}'
+  if row==75:assert r['recordedName']=='FEC Scholarships' and r['fieldProposals']['identityContinuity']['value']['program']=='Flathead Electric Co-op Scholarships'
+  if row==76:assert r['recordedName']=='Fly for Duke Aviation Scholarships' and r['fieldProposals']['identityContinuity']['value']['program']=='Fly for Duke Aviation Scholarships'
+affinity(l['records'])
+original=json.loads(git('show','8cd41aa:docs/evidence/sd2-autonomous/checkpoint-004.json'))
+try:affinity(original['records'])
+except AssertionError as e:negativeProof=str(e)
+else:raise AssertionError('Original wrong FEC/Duke binding was not rejected')
+assert 'saved-405588227-row-75' in negativeProof
+fec=next(r for r in l['records'] if r['rowLocator']==75);duke=next(r for r in l['records'] if r['rowLocator']==76)
+assert all('Duke' not in d['nextAction'] for d in fec['seedDispositions'])
+for field in ['eligibility','fundUse']:assert any(e['sourceId']=='duke-faq' for e in duke['fieldProposals'][field]['evidence'])
+cooke=next(r for r in l['records'] if r['rowLocator']==64)
+assert cooke['fieldProposals']['minimumGPA']['value']['min']==3.75 and cooke['fieldProposals']['renewalGPA']['value']['min']==3.0
+assert cooke['fieldProposals']['schoolType']['value']['onlineFourYearProgramsExcluded'] and cooke['fieldProposals']['schoolType']['value']['fullTime']
+assert cooke['fieldProposals']['renewability']['value']['annualDiscretionaryReview'] and cooke['fieldProposals']['renewability']['value']['inYearRevocationPossible']
+assert len(fields)==l['coverage']['fieldEnvelopes']==384
 assert sum(len(r['fieldProposals']) for a in prior for r in a['records'])==1136
-assert l['coverage']['cumulativeAutonomousHeldFields']==1517
+assert l['coverage']['cumulativeAutonomousHeldFields']==1520
 inspection=load(P/'document-inspection.json');assert inspection['pageCount']==4 and inspection['allPagesVisuallyInspected']
 assert sha(Path(inspection['rawArtifactPath']).read_bytes())==inspection['rawSha256']
 for p in inspection['pages']:assert sha(Path(p['path']).read_bytes())==p['sha256']
@@ -80,4 +102,4 @@ for p in (P/'sources').glob('*.md'):
  assert not re.search(r'ouid=|access_token=|[?&](?:token|nonce|signature)=',t),p
 # Full diff includes staged new files; frozen-candidate audit repeats separately.
 git('diff','--check',entry)
-print(json.dumps({'outcome':'PASS','checkpointInputs':20,'cumulativeInitialDispositions':80,'unprocessed':326,'nextInputKey':l['nextInputKey'],'sourceReceipts':28,'fieldEnvelopes':len(fields),'fieldEvidenceReferences':refs,'fieldStates':dict(collections.Counter(f['state'] for f in fields)),'preservedEntryPaths':preserved,'M1Records':437,'M1Pins':len(pins),'acceptedFacts':0,'SD3Started':False},indent=2))
+print(json.dumps({'outcome':'PASS','originalMisbindingRejected':negativeProof,'checkpointInputs':20,'cumulativeInitialDispositions':80,'unprocessed':326,'nextInputKey':l['nextInputKey'],'sourceReceipts':28,'fieldEnvelopes':len(fields),'fieldEvidenceReferences':refs,'fieldStates':dict(collections.Counter(f['state'] for f in fields)),'preservedEntryPaths':preserved,'M1Records':437,'M1Pins':len(pins),'acceptedFacts':0,'SD3Started':False},indent=2))

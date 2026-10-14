@@ -110,10 +110,11 @@
   "typecheck": "PASS",
   "fullTests": "PASS after permitted IPC retry",
   "standardBuild": "Both exact npm run build attempts failed process/port EPERM; no waiver/alternatebuild",
-  "evidenceAudit": "PASS, verification.json",
+  "evidenceAudit": "Replacement PASS verification.json; original verification-round1.json retained against8cd41aa",
   "freshAuthenticatedMainTarget": "unknown; retainedorigin/mainonly",
   "diffCheck": "PASS git diff --check 02e8b2a after50newownedpaths staged; frozen diff independently rechecked",
   "sourceMaterialization": "ExactNorrishPDF ordinarycurl failedDNS; permittedretry exit0;4pagesrendered/visuallyinspected; exactcurlHTTPstatus unavailable; provider200separate",
   "reservedEffects": "No workbook access/write, app/configuration, login/form/contact/messages, externalGit/release or monitor activation; SD3unstarted",
-  "localGitLimit": "Ordinary stage attempt could not create shared index.lock (EPERM). Permitted git add retry exit0; no unrelated paths staged."
+  "localGitLimit": "Ordinary stage attempt could not create shared index.lock (EPERM). Permitted git add retry exit0; no unrelated paths staged.",
+  "remediation": "Allthree author-owned fixes; independent replacement recheck pending. All required command receipts unchanged because every tracked web/governance/CI/source artifact byte remains exact; new evidence/affinity audit rerun."
 }
