@@ -63,6 +63,9 @@ elks=next(r for r in l['records'] if r['rowLocator']==88);promise=next(r for r i
 assert elks['fieldProposals']['amount']['state']=='conflict' and elks['fieldProposals']['amount']['value']['selectedAmount'] is None
 assert elks['fieldProposals']['minimumGPA']['value'] is None and elks['fieldProposals']['needRequirement']['value'] is None
 assert elks['fieldProposals']['deadline']['value']['year'] is None
+assert elks['fieldProposals']['materials']['value']['recommendationsWordProgram'] is True
+assert any(e['sourceId']=='elks-native' and e['excerpt']=='use Word program for all recommendations.' and 'page7' in e['locator'] for e in elks['fieldProposals']['materials']['evidence'])
+assert 'all recommendations' in elks['nextAction']
 assert promise['fieldProposals']['identityContinuity']['value']['endowedAwardBinding'] is None
 inspection=load(P/'document-inspection.json');assert inspection['pageCount']==inspection['cdnPageCount']==12 and inspection['allPagesVisuallyInspected'] and inspection['blankApplication']
 assert not inspection['rawBytesEqual'] and inspection['layoutTextBytesEqual']

@@ -65,7 +65,7 @@ no required income or numeric GPA threshold fabricated. GPA reporting is separat
 Allpages, English/signed/dated/typedpreferred documents,300wordessay, two separate
 recommendation limits, transcript/counselor report, achievement copies, no personal
 photos, applicant/guardian signatures, activities/awards/work, checklist and Word
-essay requirement retained. Expiration, conduct/publicity/forum/retention rules and
+essay and recommendation requirements retained. Expiration, conduct/publicity/forum/retention rules and
 evaluator-only rubric remain source-scoped conditions, never app scoring.
 
 Every input, seed, registry link and held field has its original/reconciler owner,
@@ -114,3 +114,15 @@ remoteGit/deployment/release or monitoring activation. All later preservation,
 backup/recovery/permission, human/canonical/publication/student/CSV/browser and
 seasonalM1/SD5/external-effect gates remain at their original owners/triggers.
 Backend model/effort not independently observable; no model switch claimed.
+
+## Author remediation after independent review
+
+Original361f25e and exact manifest-round1/review-round1/verification-round1 remain
+preserved. Reviewer SD2-005-M1 found the missing page7 Word-program condition for
+all recommendations. The author added that held materials value, exact source
+excerpt and specific next action, separately from the essay requirement, plus a
+semantic verifier assertion. One count-matched disposition is in remediation.json.
+No source refresh, builder rerun, progress reset, field-count or accepted-fact change.
+Original source artifacts, timestamps, validation receipts, prior holds and gates
+remain exact. Existing full matrix binds unchanged web/canonical bytes; focused
+evidence/preservation/full-diff audit and independent replacement recheck apply.
