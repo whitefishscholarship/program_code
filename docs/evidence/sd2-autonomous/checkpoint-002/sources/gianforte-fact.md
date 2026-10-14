@@ -4,16 +4,16 @@
 
 **INCREASED  AMOUNT***
 
-**Gianforte Trade 
-and Technology** 
+**Gianforte Trade
+and Technology**
 **Scholarships**
 
-**$1,500 per semester for full-time 
-students. Renewable up to $6,000.** 
+**$1,500 per semester for full-time
+students. Renewable up to $6,000.**
 **Maximum eligibility four semesters.**
 
-**$750 per semester for part-time 
-students. Renewable up to $6,000.** 
+**$750 per semester for part-time
+students. Renewable up to $6,000.**
 **Maximum eligibility eight semesters.**
 
 ## Qualifications
@@ -26,15 +26,15 @@ Good standing at school ****
 
 ### Taking minimum of 6 credits in program
 
-* Per Montana Board of Regents Policy 940.1 
-** Dual Credit students are not required to file a FAFSA 
-*** Cost of Attendance minus Student Aid Index amount minus other aid except loans = Unmet Need 
+* Per Montana Board of Regents Policy 940.1
+** Dual Credit students are not required to file a FAFSA
+*** Cost of Attendance minus Student Aid Index amount minus other aid except loans = Unmet Need
 **** Maintain Satisfactory Academic Progress (SAP)
 
-**Fall DEADLINE** 
+**Fall DEADLINE**
 **Sept. 1**
 
-**Spring DEADLINE** 
+**Spring DEADLINE**
 **Feb. 1**
 
 # APPLY AwardMontana.mus.edu
@@ -149,7 +149,7 @@ Good standing at school ****
 
 •Photonics and Laser Technology
 
-•Robotic Tending & Integration 
+•Robotic Tending & Integration
 •Welding Technology
 
 #### Great Falls College
@@ -220,7 +220,7 @@ Good standing at school ****
 
 #### Little Big Horn College
 
-•Information Systems 
+•Information Systems
 •Information Technology Assistant
 
 #### MSU-Northern
@@ -285,7 +285,7 @@ Good standing at school ****
 
 #### Salish Kootenai College
 
-•Computer Science Transfer 
+•Computer Science Transfer
 •Geospatial Science
 
 •Highway Construction Tech
@@ -299,4 +299,3 @@ Good standing at school ****
 •Computer Science - Information Systems
 
 •Pre-Engineering
-

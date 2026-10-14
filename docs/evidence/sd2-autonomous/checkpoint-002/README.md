@@ -16,7 +16,8 @@ remain outside this406-input queue; no accepted distinct-award count is claimed.
 
 Material holds: Stockman/Peck named-child mappings; disabled Louie form and
 missing current terms; Wells tentative2026 window versus3.0entry/2.5renewal GPA;
-Gianforte yearless semester deadlines and applicable campus/program/SAP/need terms;
+Gianforte conflicting campus/program lists from both official poster variants,
+yearless semester deadlines and SAP/need terms;
 Memorial aggregate mapping to six named awards rather than six recipient slots;
 historical2024 SOKN; David/Davide Sobba continuity and undated GPA basis/window;
 all ten WAI2025 children versus unbound2027 general guidance. WAI membership
@@ -24,9 +25,9 @@ expiry wording contradicts itself; literal EST versus ET is not silently resolve
 Current WAI guide cover/index was inspected for parent context, not a complete
 negative child census. Every child currentOffering remains unverified.
 
-Seven original PDFs have byte hashes. All relevant selected pages of historical
+Eight original PDFs have byte hashes. All relevant selected pages of historical
 WAI2025 and native blank scans were rendered/visually inspected;2027 general
-cover/index and the single Gianforte poster were inspected. Temporary raw PDFs/
+cover/index and both single-page Gianforte poster variants were inspected. Temporary raw PDFs/
 renderings stay outside Git; only sanitized scope transcripts, hashes and limits
 are durable. Native access does not prove public access or sponsor authority.
 The2027 PDF includes recipient/photos in omitted scopes; none is retained here.

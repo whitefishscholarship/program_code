@@ -82,4 +82,3 @@ Each applicant will be required to submit an essay on the question: What life ex
 **NOTE:** If you are providing SAT or ACT test scores, and those scores are not listed on your high school transcript, you will need to upload an official copy of those test scores separately. If you are uploading a college transcript, those scores are not required.
 
 **Your application is not complete unless all required documents are submitted electronically.**
-

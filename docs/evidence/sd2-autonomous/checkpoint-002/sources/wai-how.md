@@ -36,4 +36,3 @@ Resumes should include the following:
 - Certificates already obtained, date, and flight hours completed (only if applying for a flight training scholarship.)
 
 All applicants must be current WAI members with an expiration date of March 30, 2027, or later, or join WAI by August 30, 2026.
-

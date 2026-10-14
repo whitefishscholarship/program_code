@@ -64,4 +64,3 @@ by the deadline for their application to be considered complete;
 - MSU Northern
 - Salish Kootenai College
 - Stone Child
-

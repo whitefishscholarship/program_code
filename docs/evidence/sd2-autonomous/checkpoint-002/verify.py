@@ -39,6 +39,15 @@ for r,src in zip(l['records'],q['records'][20:40]):
    s=registry[e['sourceId']];assert e['artifactSha256']==s['artifactSha256']
    assert e['excerpt'] in (ROOT/s['artifactPath']).read_text()
 assert len(fields)==l['coverage']['fieldEnvelopes']==400
+program=next(r for r in l['records'] if r['rowLocator']==25)['fieldProposals']['schoolType']
+assert program['state']=='conflict' and program['value']['qualifyingCampusProgramResolution'] is None
+assert {e['sourceId'] for e in program['evidence']}=={'gianforte','gianforte-fact','gianforte-dash'}
+assert all(registry[s]['visuallyInspectedPages']==[1] for s in ['gianforte-fact','gianforte-dash'])
+for s in registry.values():
+ if Path(s['artifactPath']).parent==P/'sources':
+  text=(ROOT/s['artifactPath']).read_text()
+  assert text.endswith('\n') and not text.endswith('\n\n')
+  assert all(line==line.rstrip() for line in text.splitlines())
 # Every pre-entry blob except selected current documentation must remain exact.
 allowed={'docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md','docs/CURRENT_HANDOFF.md','docs/evidence/sd2-autonomous/NEXT_SESSION.md','docs/evidence/sd2-autonomous/CONTINUE.md','docs/evidence/sd2-autonomous/README.md'}
 tree=git('ls-tree','-r','-z',ENTRY);preserved=0
@@ -65,4 +74,5 @@ m1=json.loads(git('show','009fa57:docs/evidence/season-monitor-m1/inventory.json
 assert len(m1['records'])==len({r['id'] for r in m1['records']})==437
 state=load(ROOT/'docs/BUILD_STATE.json');assert state['activeStageId'] is None and state['nextPermittedStageId'] is None
 git('diff','--check')
+git('diff','--check',ENTRY)
 print(json.dumps({'outcome':'PASS','checkpointInputs':20,'cumulativeInputs':40,'unprocessedInputs':366,'nextInputKey':l['nextInputKey'],'sourceReceipts':17,'fieldEnvelopes':400,'fieldStates':dict(collections.Counter(f['state'] for f in fields)),'outcomes':dict(collections.Counter(r['outcome'] for r in l['records'])),'preservedEntryPaths':preserved,'M1Records':437,'M1Pins':len(m1pins),'acceptedFacts':0,'SD3Started':False,'sourcePolicyDeviationExcluded':True},indent=2))

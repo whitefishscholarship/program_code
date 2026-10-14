@@ -20,11 +20,11 @@ for s in sources:
  s.setdefault('owner','Codex research/proposals')
  s.setdefault('sourceScope','Selected source text; identity/current applicability held')
  s.setdefault('extractionLimits','Sanitized selected text; no rendered HTML or whole-site completeness claim')
- if s['sourceId'] in ['memorial','sokn','sokn-overview','sobba','wai','wai-2027','gianforte-fact']:
+ if s['sourceId'] in ['memorial','sokn','sokn-overview','sobba','wai','wai-2027','gianforte-fact','gianforte-dash']:
   f={'wai':'wai','wai-2027':'wai-2027','gianforte-fact':'gianforte'}.get(s['sourceId'],s['sourceId'])
   raw=Path('/private/tmp/sd2-002-work')/(f+'.pdf')
   s['originalBytesSha256']=sha(raw.read_bytes()); s['originalBytes']=raw.stat().st_size
-  pages={'memorial':2,'sokn':1,'sokn-overview':1,'sobba':2,'wai':10,'wai-2027':10,'gianforte-fact':1}[s['sourceId']]
+  pages={'memorial':2,'sokn':1,'sokn-overview':1,'sobba':2,'wai':10,'wai-2027':10,'gianforte-fact':1,'gianforte-dash':1}[s['sourceId']]
   inspected={'wai':[1,3,4,5,6,8,9,10],'wai-2027':[1,2]}.get(s['sourceId'],list(range(1,pages+1)))
   s['pageCount']=pages; s['visuallyInspectedPages']=inspected
   s['renderSha256']={str(p):sha((raw.parent/(f+'-'+(str(p).zfill(2) if pages==10 else str(p))+'.png')).read_bytes()) for p in inspected}
@@ -74,7 +74,10 @@ put(25,'materials',{'FAFSA':'required except dual credit','completePortalApplica
 put(25,'residency',{'MontanaResident':True,'policy':'940.1 definition not independently inspected'},'gianforte','Must be a resident of the state of Montana','Program requirement; sponsor location not substituted')
 put(25,'renewability',{'maximumEquivalentFullTimeSemesters':4,'maximumPartTimeSemesters':8,'mixedAwardsAllowed':True},'gianforte','may not receive more than the equivalent of 4 semesters full-time or 8 semesters part-time','Program aggregate enrollment cap; contingent upon requirements')
 put(25,'deadline',{'fall':{'month':9,'day':1,'year':None},'spring':{'month':2,'day':1,'year':None},'timezone':None},'gianforte','Fall semester - September 1','Yearless semester deadlines; spring February1 in same artifact; no future date created')
-put(25,'schoolType',{'qualifyingCampusesAndPrograms':'complete poster list retained','minimumCredits':6,'enrolledDuringAppliedTerm':True},'gianforte','Applicants must be currently enrolled during the term they are applying for.','Poster campus/program restrictions; no all-program eligibility inferred')
+put(25,'schoolType',{'qualifyingCampusProgramResolution':None,'minimumCredits':6,'enrolledDuringAppliedTerm':True,'posterVariants':['Gianforte_Trade_Tech_FACT_SHEET.pdf','Gianforte_Trade_Tech_FACT-SHEET.pdf']},'gianforte','Applicants must be currently enrolled during the term they are applying for.','Program enrollment supported; exact campus/program lists conflict',state='conflict',note='Underscore includes FVCC Electrical Apprentice; dash includes Building Trades instead, plus other campus differences. No source selection, union/intersection or current applicability inferred; reconcile scope/version under POLICY.')
+for sid,excerpt in [('gianforte-fact','•Electrical Apprentice'),('gianforte-dash','•Building Trades')]:
+ s=registry[sid];byrow[25]['fieldProposals']['schoolType']['evidence'].append({'sourceId':sid,'sourceUrl':s['originalUrl'],'artifactSha256':s['artifactSha256'],'locator':'Visually inspected FVCC program column; unresolved variant conflict','excerpt':excerpt})
+byrow[25]['nextAction']='Reconcile both official poster variants against exact current qualifying campus/program/version evidence; no newer-date source choice or merged list.'
 put(25,'posterMaximum',{'currency':'USD','maximumTotal':6000},'gianforte-fact','Renewable up to $6,000.','Poster qualifications/complete campus columns inspected; no year verified')
 put(27,'sourceNamedAwards',['Wayde Davis Family','Kim Dowaliby','Pam Fredenberg','Jim Withrow','Stefanie Daily','Tracy Maddux'],'memorial','MEMORIAL SCHOLARSHIP APPLICATION','Undated scanned shared application; aggregate identity held')
 put(27,'studentStage','graduating WHS senior with committee discretion','memorial','Student must be a graduating WHS senior. (Selection committee has discretion in certain situations).','Undated document')
@@ -112,12 +115,12 @@ for row,(name,amount,page) in waiRows.items():
 put(30,'eligibility',{'femaleMechanic':True,'pursuing':'A&P certification','goal':'mechanic for Alaska Air Group','program':['accredited aviation maintenance','Alaska Maintenance Technician Development'],'standing':'good'},'wai','Applicants must be students enrolled in an accredited','Historical2025 child page3')
 put(30,'recipientSlots',1,'wai','Alaska Airlines will award one $5,000 scholarship','Historical2025 child; slots distinct from award count')
 put(31,'focus',['private pilot certificate','instrument rating'],'wai','pursuing a private pilot certificate or instrument rating','Historical2025 child page8')
-put(31,'trainingUseLimit','within one year of receipt','wai','Flight \ntraining must be completed within one year','Historical2025 child page8')
+put(31,'trainingUseLimit','within one year of receipt','wai','Flight\ntraining must be completed within one year','Historical2025 child page8')
 put(32,'eligibility',{'women':True,'ageRange':[16,30],'soloWithinMonths':6,'certificates':['recreational','sport','private'],'advancedRatings':'may be considered based on applicant pool'},'wai','ages 16-30 that have soloed within the last six months','Historical2025 child page8')
 put(32,'residencyPriority',['New Jersey','Illinois','Arizona'],'wai','Preference will be given to New Jersey, Illinois, and Arizona residents but all','Historical2025 preference; not hard residence restriction')
 put(32,'materials',{'soloEndorsement':True,'additionalEssayPages':[1,2],'topic':'Why I Love to Fly','generalWAIRequirements':'referenced;2025 complete checklist unresolved'},'wai','provide a copy of their solo endorsement with the application.','Historical2025 child; supplemental essay distinct from general essay')
 put(33,'minimumGPA',3.0,'wai','cumulative 3.0 GPA or better','Historical2025 child page4; scale not stated')
-put(33,'eligibility',{'fullTime':True,'program':['AMT A&P','aviation maintenance technology degree'],'status':['US citizen','eligible non-citizen']},'wai','a U.S. citizen or \neligible non-citizen.','Historical2025 child page4')
+put(33,'eligibility',{'fullTime':True,'program':['AMT A&P','aviation maintenance technology degree'],'status':['US citizen','eligible non-citizen']},'wai','a U.S. citizen or\neligible non-citizen.','Historical2025 child page4')
 put(34,'eligibility',{'intendedFor':'women pursuing professional airline pilot career','training':['instrument','commercial','CFI','CFII','MEI','primary certificates']},'wai','working toward their instrument, commercial, CFI, CFII, MEI, and primary certificates.','Historical2025 pilot child page8; distinct from Propel')
 put(34,'trainingUseLimit','within one year; paid directly to flight school','wai','training must be completed within a year.','Historical2025 child page8')
 put(35,'eligibility',{'currentlyInDeltaPropel':['collegiate','company','community partner'],'intendedFor':'women pursuing professional airline pilot career'},'wai','currently participating in Delta’s Propel Program','Historical2025 Propel child page6')
@@ -132,7 +135,7 @@ put(38,'eligibility',{'training':['fixed-wing','rotorcraft','private','commercia
 put(38,'recipientSlots',1,'wai','offering one scholarship to a WAI member','Historical2025 child page9')
 put(39,'membershipPriority','Atlanta Chapter preference; all applicants considered','wai','Preference will be given to members of the Atlanta Chapter, but all applicants','Historical2025 child page10; not chapter restriction')
 put(39,'materials',{'essayWords':500,'include':['aviation dream','effect of scholarship','where funds used','goal timeline'],'followDirections':True,'generalWAIRequirements':'2025 complete checklist unresolved'},'wai','Within the required 500-word essay include the details of your aviation dream','Historical2025 child page10')
-put(39,'trainingUseLimit','within one year; paid to organization','wai','Applicants \nmust use funds within one year of acceptance.','Historical2025 child page10')
+put(39,'trainingUseLimit','within one year; paid to organization','wai','Applicants\nmust use funds within one year of acceptance.','Historical2025 child page10')
 # Every selected seed/alias accounted without crawling login/application routes.
 for r,seed in zip(records,q['records'][20:40]):
  r['seedDispositions']=[{'url':u,'disposition':('application/login locator only; not fetched' if any(x in u for x in ['grantinterface.com','apply.mykaleidoscope.com','https://awardmontana.mus.edu/']) and '/documents/' not in u else 'Exact source or pinned alias inspected/reused as recorded in sourceRegistry; unresolved identity/current cycle held')} for u in dict.fromkeys(seed['recordedSeedUrls']+seed['publishedSourceAliases'])]
