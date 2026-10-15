@@ -1,3 +1,22 @@
+# Session closed — checkpoint008 obligations audited
+
+Original one-bounded-SD2-checkpoint goal is complete within local held-research
+limits. Final closure: sd2-autonomous/checkpoint-008/{SESSION_CLOSE.md,
+session-close-verification.json}. Section9 remains the soleprogresspointer;
+SESSION_WRAP.md and all ledgers retain every owner/trigger/action. NEXT_SESSION.md
+resumes offset160/savedrow164 under existing AUTHORITY/POLICY. All160initial
+inputdispositions/3,033fieldholds/160identityholds remain held,0accepted;
+246unprocessed. All historical bindings/nineattentionrows/supplements/437M1 stay
+exact. No pending reviewer repair/recheck/delegated work. Source-output handling,
+temporary custody, rawbatchrejection/material gaps and all build/freshmain/later
+preservation/acceptance/student/monitor/effect gates retain original triggers.
+No new research, reset/replay, fact acceptance, reserved effect orSD3 during closure.
+This author-verified closure does not rebind independent source review.
+
+Previous handoff preserved byte-for-byte below.
+
+---
+
 # SD2 checkpoint008 independently reviewed — session closed at offset160
 
 Read STUDENT_DATA_AND_MAINTENANCE_PLAN complete section9, the soleprogresspointer,

@@ -355,6 +355,20 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-008-START -->
+<!-- SD2-CHECKPOINT-008-CLOSE-START -->
+- Final session closure audited all160initial dispositions/3,033fieldholds/
+  160identityholds,272seed-alias/766source-link occurrences, every original/new
+  owner/trigger/action, nineattentionrows/all supplements and437M1routes.
+  Evidence: checkpoint-008/SESSION_CLOSE.md and session-close-verification.json.
+  Original source candidate/reviews/receipts and405c926handoff stay exact; no
+  pending reviewer repair/recheck/delegated work. Next-session Codex resumes
+  offset160/row164 under existing AUTHORITY/POLICY. Source-output handling,
+  temporary custody, rawbatchrejection/Herriges-DonK gaps and prior WET/Clerk/
+  Davis/interim-receipt limits retain explicit triggers. Build/freshmain and all
+  later preservation/acceptance/student/monitor/effect gates stay open with their
+  original owners/triggers. No new research, fact acceptance, reset/replay,
+  reserved effect orSD3 during closure.
+<!-- SD2-CHECKPOINT-008-CLOSE-END -->
 - October14,2026: checkpoint008 completes frozen offsets140–159, beginning
   savedrow144/P.E.O. Chapter D. Authoritative ledger/packet:
   sd2-autonomous/checkpoint-008.json and checkpoint-008/.
