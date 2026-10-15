@@ -355,6 +355,22 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-011-START -->
+<!-- SD2-CHECKPOINT-011-CLOSE-START -->
+- Final session closure audited220initial dispositions/4,351fieldholds/
+  220identityholds,336seed-alias/815source-link occurrences, every original/new
+  owner/trigger/action, nineattentionrows/all supplements and437M1routes.
+  Evidence:checkpoint-011/SESSION_CLOSE.md and session-close-verification.json.
+  Original candidate/reviews/receipts and6b588b9handoff remain exact; no pending
+  reviewer repair/recheck/delegated work. Next-session Codex resumes offset220/
+  savedrow224 under existing AUTHORITY/POLICY. Current/prior output narrowing,
+  conversion/redactedidentity/plainhost, custody, NGPA/BLF/rawbatch/Herriges-DonK/
+  WET/Clerk/Davis/interimreceipt and historicalguardretention retain exact routes.
+  Build/freshmain and later preservation/acceptance/student/monitor/effect gates
+  keep original owners/triggers. Draft/helper/Git corrections are resolved,
+  documented and not new pending work. No new research/reset/replay/fact acceptance,
+  external effect orSD3 during closure. Use checkpoint-011/verify-session-close.py
+  for closure recheck; earlier verifiers retain original pre-close allowlists/bindings.
+<!-- SD2-CHECKPOINT-011-CLOSE-END -->
 - October14,2026: one bounded checkpoint011 completes frozen offsets200–219,
   saved204–223, beginning Boeing Maintenance Training. Ledger/packet:
   sd2-autonomous/checkpoint-011.json and checkpoint-011/.20initial outcomes:

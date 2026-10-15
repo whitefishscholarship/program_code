@@ -1,3 +1,13 @@
+Final session closure:checkpoint-011/SESSION_CLOSE.md and
+session-close-verification.json. Every open item retains exact owner/trigger/
+action; no pending reviewer repair/recheck/delegated work. Follow plansection9
+as sole progress pointer, then the authoritative checkpoint011 kickoff below.
+Resume one bounded SD2 checkpoint at offset220/savedrow224, Republic Airways
+Aviation Management Scholarship. Never initialize/reset/replay; stop before SD3.
+Existing authority and all later gates remain unchanged. For final closure
+recheck use checkpoint-011/verify-session-close.py; earlier verifiers retain
+original pre-close allowlists/bindings. Recommended next-session effort:High.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
