@@ -354,6 +354,48 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-012-START -->
+- October15,2026: one bounded checkpoint012 completes offsets220–239/saved224–243,
+  starting Republic Airways Aviation Management. Packet:sd2-autonomous/
+  checkpoint-012.json and checkpoint-012/.20initialoutcomes:14researched-held/
+  4held-identity/2held-access;4newretrievals/4receipts,370newheldfields/20identities.
+  Cumulative240/406initialdispositions,166unprocessed;all4,721fields/240identities
+  held,0accepted. FullSD2 incomplete; no later checkpoint processed.
+- IndependentPASS C0/H0/M0/L0 binds 53eef896e5d7419bedccc27fc23ad4c888728435;
+  local two-file research-review receipt d6c42b1c0bf55e5fa89ba344da2bdaa5e0cfdbd0.
+  Final manifest/review control; one medium Epic recommendation-material omission
+  author-fixed/independently rechecked; original4920769/round1binding retained.
+  No pending reviewer repair/recheck/delegated work.
+  Separate author handoff never rebinds independent review or accepts facts.
+- Codex source/identity reconciliation owns every new/prior field/identity/seed/
+  link/material at applicable authorized evidencearrival or SD2consolidation;
+  exact actions remain in twelveledgers/README/SESSION_WRAP.359seed-alias/
+  820source-link occurrences retain exact routes. Keep Republicmanagement/flight-
+  cadet distinction,Sporty'syouth/preference,NKLschool/GPA/essay/need,White100hours/
+  written/recommendation,Verticaldate/schoolvariants,WAI-TBDtuition/PAPAseparation,
+  WMA141-61wording/membership and Epiccampus/value/essay-scope distinctions.
+  Fourredactedidentityholds remain unassigned; Tednamedbody/titlecurrentholds stay.
+- Allpriorpackets/PRELUDE/candidate-manifest-reviewreceipts,nineattentionrows/every
+  supplement and437M1IDs/routes/owners/triggers remain byte-exact. Four selected
+  readable conversions only; no raw/page/image/form/source-silence/current/native/
+  public proof. Output-scope lapses disclosed; final artifacts exclude unrelated
+  recipient/biography/contact/marketing values without erasing earlier output.
+  Before every call/output Codex narrows scope/minimalmetadata/sanitizes values.
+- All71temporarycustodyhashes matched without reinspection/reacquisition/replay;
+  next required rawuse/audit rechecks originalpaths/hashes or preserves receipts/
+  reports gaps. All prior NGPA/BLF/rawbatch/Herriges-DonK/WET403/Clerkvisual/
+  Davisrecovery/interimreceipt/historicalguardretention limits keep original routes.
+- Plan/type/fulltests PASS after permitted IPC retries; both exact standardbuilds
+  still process/portEPERM. Codex validation/governance/delivery owns build/freshmain
+  before canonicalacceptance/authorizedrelease. Nativepreservation/backup/recovery/
+  permission,human/canonical/publication,student/CSV/browser and437M1/SD5/effect
+  gates retain original owners/triggers. SharedGit-index local retry resolved.
+- Next-session Codex resumes offset240/savedrow244, Captain Judy Rice Pilot
+  Scholarship, under existing AUTHORITY/POLICY; neverinitialize/reset/replay;
+  stop before SD3. No workbook/app/config/CI/login/forms/contact/messages/remoteGit/
+  release/deployment/monitoractivation. Handoff:checkpoint-012/SESSION_WRAP.md and
+  wrap-verification.json; short kickoff:NEXT_SESSION.md. Recommended effort:High.
+<!-- SD2-CHECKPOINT-012-END -->
 <!-- SD2-CHECKPOINT-011-START -->
 <!-- SD2-CHECKPOINT-011-CLOSE-START -->
 - Final session closure audited220initial dispositions/4,351fieldholds/

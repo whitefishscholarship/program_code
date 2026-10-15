@@ -1,3 +1,46 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-012.json plus checkpoint-012/
+{README.md,final-manifest.json,review.json,SESSION_WRAP.md,wrap-verification.json}.
+
+Resume one bounded SD2 checkpoint at offset240/savedrow244:
+Captain Judy Rice Pilot Scholarship.166frozeninputs remain;240initialoutcomes/
+4,721fieldholds/240identityholds,0accepted. Existing authority permits routine
+research/GPT review without renewed human checkpoint approval. Never initialize/
+reset/replay; preserve every hold/reviewbinding; stop before SD3.
+
+IndependentPASS C0/H0/M0/L0 binds 53eef896e5d7419bedccc27fc23ad4c888728435;
+local two-file receipt d6c42b1c0bf55e5fa89ba344da2bdaa5e0cfdbd0. No pending
+reviewer repair/recheck/delegated work. Preserve allcheckpoint001–011/originalfive
+packets/PRELUDE/history/nineattentionrows/supplements/437M1IDs/routes/owners/triggers.
+All359seed-alias/820source-link occurrences keep exact actions. Next-session Codex
+owns every hold at applicable authorized evidencearrival or SD2consolidation.
+New Republic/cadet/Sporty's/NKL/White/Vertical/WAI-PAPA/WMA/Epic distinctions,
+fourredactedidentityholds and Tednamedbody/title-currenthold remain explicit.
+
+Before every source call/output narrow exactprogram/minimalmetadata and sanitize
+all values/images. Current recipient-caption/TOC/neighboringbiography/donation-
+contact preview lapses remain disclosed; final selected artifacts exclude them.
+No full duplicated envelopes, signedreferences, contact/account/recipient/biography/
+unrelated scope; provider redactPII alone insufficient. Allprior NGPA timing/WAI-
+BLFconversion/redactedlocator/rawbatch/Herriges-DonK/WET403/Clerkvisual/Davisrecovery/
+interimreceipt/historicalguardretention limits keep original routes. Selected
+conversions prove no native/raw/page/image/form/fullfield/source-silence/current
+public continuity. At next required rawuse/audit verify71originaltemporarycustody
+paths/hashes or preserve receipts/report gaps; no reconstruction/reacquisition/replay.
+
+Both exact standardbuilds remain process/portEPERM; fresh authenticated main/target
+and all nativepreservation/backup/recovery/permission,human/canonical/publication,
+student/CSV/browser and437M1/SD5/effect gates retain original owners/triggers.
+No workbook/app/config/CI,login/forms/contact/messages,remoteGit/release/deployment/
+monitoractivation orSD3. Closure:checkpoint-012/SESSION_WRAP.md and
+wrap-verification.json. Recommended effort:High. Handoff never rebinds source review.
+
+Previous authoritative kickoff retained as history below; the new packet above controls.
+
+---
+
 Final session closure:checkpoint-011/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains exact owner/trigger/
 action; no pending reviewer repair/recheck/delegated work. Follow plansection9
