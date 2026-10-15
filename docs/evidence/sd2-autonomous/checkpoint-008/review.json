@@ -1,0 +1,96 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one local SD2 held-research checkpoint only",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint008_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": "Brief historical registry lookup during initial review only; findings and recheck rely on current governing files, immutable candidates and retained evidence."
+  },
+  "binding": {
+    "entryCommit": "d394d074b7e375f9bd6919a7774c9e72f84dae80",
+    "candidateCommit": "2c59114f643ea90f84e55a43f7e73dba2b57dbba",
+    "candidateTree": "cecc723bd1088c1e129e537045f7aa6044fad175",
+    "manifestSha256": "54e1d908efb8eb16a718f9fcca9cff2aa7e1ff812e70b8573d736db12c3104cb",
+    "completeDiffSha256": "61e73cfdb54c4a9c7eae514f505fc833068e6e1428cf9d644c043c36d4fd85f5",
+    "changedPaths": 59
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "originalReview": {
+    "candidateCommit": "6be403829cbcf68bb075b6bfaee239c921b351b4",
+    "manifestSha256": "85ff9c613a90f1a0eb45daa7806aa1affb994a8bb0ab854d1ed10c0a855d9cdd",
+    "reviewPath": "docs/evidence/sd2-autonomous/checkpoint-008/review-round1.json",
+    "reviewSha256": "5f77c7a24b82b4ba1a4edd22e90c26abd2a0142b99343211ca55abf7d715069f",
+    "outcome": "FAIL",
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "transcriptionMatchesOriginalResponse": true,
+    "originalManifestBytesVerified": true,
+    "originalVerificationBytesVerified": true
+  },
+  "requiredFixCount": 2,
+  "resolvedDispositionCount": 2,
+  "unresolvedRequiredFixes": 0,
+  "dispositions": [
+    {
+      "findingId": "SD2-008-M1",
+      "originalSeverity": "medium",
+      "status": "resolved-independently-rechecked",
+      "evidence": "Row146 preserves every original PDF eligibility key and its original evidence. A separate parentEligibilityScope retains environmental science/studies, environmental engineering, biology, sustainability and the other-environmental-emphasis clause, supported by the exact retained parent artifact. Explicit scoping prevents collapse into the PDF ecology/hydrology/water-quality-and-WLI-approval condition. Record, field and seed routes identify the variation; README and semantic checks agree. Acceptance remains held.",
+      "owner": "Codex implementation author",
+      "target": "2c59114f643ea90f84e55a43f7e73dba2b57dbba"
+    },
+    {
+      "findingId": "SD2-008-M2",
+      "originalSeverity": "medium",
+      "status": "resolved-independently-rechecked",
+      "evidence": "Row162 adds a separate held payment envelope retaining the exact parent restriction that all funds go directly to the certified educational institution. Evidence matches the unchanged LPA artifact. The envelope identifies parent scope, unverified saved-American-Airlines-child applicability, acceptedForSavedAAChild=false and paymentActionPerformed=false. Record, field and seed routes, README and semantic checks preserve that boundary.",
+      "owner": "Codex implementation author",
+      "target": "2c59114f643ea90f84e55a43f7e73dba2b57dbba"
+    }
+  ],
+  "checksPerformed": [
+    "Independently recomputed final manifest SHA256, candidate tree and complete entry-to-candidate binary-diff SHA256.",
+    "Verified all59 changed paths, candidate blob IDs, lengths, SHA256 values and worktree equality.",
+    "Reviewed the complete eight-path original-to-replacement change set and both count-matched author dispositions.",
+    "Verified archived original manifest bytes, original candidate blobs, original verification bytes and original review transcription against this reviewer's response.",
+    "Independently compared old/new ledgers: only rows146/162 change; existing factual values and evidence remain unchanged except the Ripple eligibility extension. Other changes are the two rows' next-action routes, the new payment envelope and coverage totals.",
+    "Checked both repaired observations against their actual unchanged retained source artifacts.",
+    "Ran the read-only verifier successfully:20 ordered inputs,160 cumulative initial dispositions,246 pending,387 new held fields,3033 cumulative held fields,160 held identities,26 source receipts,111 exact evidence references,37 seed dispositions and22 source-link dispositions.",
+    "Reverified1398 protected entry paths, seven prior ledgers, six checkpoint002–007 historical manifest/review bindings, prior section9/handoff bytes,68 custody pins, both corrected PEO safe-view hashes,12 M1 pins and437 unique M1 records.",
+    "Retained the initial complete source review and corrected PEO rule-page visual inspections. All source artifacts, receipts, document-inspection evidence and validation logs remain unchanged.",
+    "Verified frozen entry-to-final and worktree whitespace checks pass.",
+    "Confirmed exact final candidate remains HEAD and only prepared final-manifest.json is untracked.",
+    "No repository file was edited; no assembly, source research, workbook access, network call or external effect was performed."
+  ],
+  "limits": [
+    "PASS establishes evidence fidelity and accountable held dispositions for this exact local packet. It accepts no scholarship fact, current offering, canonical stage, full SD2 completion or release.",
+    "All3033 autonomous field holds and160 identity holds remain held; zero facts are accepted and SD3 remains unstarted.",
+    "Live source availability, source revisions, origin currency, native public/sponsor continuity and fresh authenticated main/target remain unverified.",
+    "Only PEO has new raw PDF and corrected sanitized rule-page visual proof. Other readable conversions do not establish raw/page/image completeness or source silence; Rotary's inline image remains uninspected.",
+    "Native body concordance remains recorded capture evidence, without a fresh connector observation. Timestamp precision and content-call timing retain their disclosed limits.",
+    "The rejected raw batch and Herriges/DonK gaps remain disclosed. No unsafe download, retry or bypass is required for these held initial outcomes.",
+    "Historical signed-reference, public-contact and initial wrong-mask output lapses remain disclosed; persisted sanitization does not erase them.",
+    "Temporary custody was verified locally only. Later required audits must verify exact paths/hashes or report specific gaps while preserving receipts.",
+    "The original full plan/typecheck/tests receipts remain unchanged and passing after disclosed IPC retries. Both exact standard-build attempts remain process/portEPERM failures without waiver.",
+    "All preservation, backup/recovery/permission, human/canonical acceptance, publication, student, monitoring and reserved-effect gates retain their existing owners and triggers."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation and handoff owner",
+    "trigger": "Recording this exact final independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-008/",
+    "action": "Record this final review and exact final manifest in the selected local two-file research-review receipt. Preserve original6be4038 and its failed-round artifacts unchanged. Prepare a separate section9/session handoff for offset160, savedrow164, Elevated Access Advanced Rating Scholarship, without rebinding this source review. Carry every held field, identity, seed, source-link and deferred-material route to its applicable evidence-arrival or SD2-consolidation trigger. Preserve all later gates; no fact acceptance, new checkpoint or external effect follows from this PASS."
+  }
+}
