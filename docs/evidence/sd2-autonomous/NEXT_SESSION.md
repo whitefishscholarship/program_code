@@ -1,3 +1,52 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-015.json plus checkpoint-015/
+{README.md,final-manifest.json,review.json,SESSION_WRAP.md,wrap-verification.json}.
+
+Resume one bounded SD2 checkpoint at offset300/savedrow306:
+Sporty's Foundation Private Pilot Training for AEA Technicians.106frozeninputs
+remain;300initialdispositions/5,642fieldholds/300identityholds,0accepted.
+Existing AUTHORITY/POLICY permits routine research/GPTreview without renewed
+checkpoint approval. Neverinitialize/reset/replay;preserveeveryhold/reviewbinding;
+fullSD2incomplete;stopbeforeSD3. Recommended effort:High.
+
+IndependentPASS C0/H0/M0/L0 binds 936848d77b2cdd50bb9103ccb4d186ad40ef57c3;
+localtwo-file receipt:1ae7af24695d429ab2f8382208597755aed7c059. No pendingreviewerrepair/recheck/delegatedwork.
+All15ledgers/priorpackets/PRELUDE/nineattentionrows/supplements/437M1IDs/routes/
+owners/triggers remain exact.473seed-alias/950source-link occurrences retain
+actions. Codex owns all holds at applicable authorized evidencearrival or SD2
+consolidation. Preserve every new row-specific qualifier/variant/unknown in
+checkpoint015ledger/README20-rowtable/SESSION_WRAP,including Heroesparentservice/
+ID/GPA/material/funding,NFPAage/category conflict,GTMF2026vs2027,Duckdeadlines/
+prizes/IP/AI,NTHSyear/manual,HPFYtwochildren,AFSAchild and AEAredactedidentities/
+recreational-privatepilot/documentrequirements. No ordinal assignment/union/
+intersection as accepted truth. Exact genericASP/Wufoo/manual routes stay held.
+
+Before every sourcecall/output narrow selectedprogram/minimalmetadata and sanitize
+all text/images/links/queries/values. Earlier output/contact/address/biography/
+recipient-template lapses remain disclosed;finalsanitization never erases history.
+Codex evidence/governance/delivery assesses handling before later authorized
+evidence/history/canonical/publication review. Selectedconversions/authorconcordance
+never prove original/raw/native/page/image/table/form completeness,source silence,
+originfreshness/current/public/sponsor/route continuity. ThreequeuedPDFs are
+readableconversions only. Every earlier NGPA/WAI/BLF/rawbatch/Herriges-DonK/WET/
+Clerk/Davis/interimreceipt/historicalguard/oratory/DOCX/dynamicfile limit retains
+original owner/trigger/action. Next required rawuse/audit verifies71original
+temporarypaths/hashes or preservesreceipts/reports specificgaps;no reconstruction/
+reacquisition/completed-input replay.
+
+Both exactbuild EPERM and freshauthenticatedmain/target remain with Codex before
+canonicalacceptance/authorizedrelease. Every preservation/backup/recovery/
+permission,human/canonical/publication,student/CSV/browser and437M1/SD5/effect
+gate retains original owner/trigger/action. No workbook/app/configuration/CI,
+login/forms/contact/messages,remoteGit/release/deployment,monitoractivation orSD3.
+Closure:checkpoint-015/SESSION_WRAP.md and wrap-verification.json;recheck with
+verify-wrap.py. This separate authorhandoff never rebinds researchreview or accepts
+facts. Previous authoritative kickoff retained below;the new packet controls.
+
+---
+
 Final session closure:checkpoint-014/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains its owner/trigger/action;
 no reviewer repair/recheck/delegated work is pending. Follow plan section9 as the

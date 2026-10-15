@@ -354,6 +354,41 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-015-START -->
+- October15,2026:checkpoint015 completes frozen offsets280–299/saved285–305,
+  excluding already-completed290,startingHeroes'Legacy. Packet:sd2-autonomous/
+  checkpoint-015.json and checkpoint-015/.20initialoutcomes:12researched-held/
+  8held-identity;301newfieldholds/20identities;14publicretrievals/selectedartifacts.
+  Cumulative300/406 initial dispositions,106unprocessed;all5,642fields/300identities
+  held,0accepted. FullSD2incomplete;stop beforeSD3;neverinitialize/reset/replay.
+- IndependentPASS C0/H0/M0/L0 binds 936848d77b2cdd50bb9103ccb4d186ad40ef57c3;
+  localtwo-file receipt:1ae7af24695d429ab2f8382208597755aed7c059. Finalmanifest/review control;no pending reviewer
+  repair/recheck/delegation. All originalreviewbindings/packets/PRELUDE/15ledgers,
+  nineattentionrows/supplements and437M1IDs/routes/owners/triggers remain exact.
+- Codex source/identity owns all473seed-alias/950source-link occurrences and every
+  field/identity/material at applicable authorized evidencearrival orSD2consolidation.
+  Exact new actions:ledger/README20-rowtable/SESSION_WRAP. Preserve HeroesID/GPA/
+  parentservice/funding, NFPAage/category conflict, GTMFcyclevariants,Duckentry/
+  overall/prize/IP/AIrules,NTHSyear/manual,HPFYdistinctchildren,AFSAchild and AEA
+  redactedidentities/privatepilot/documentrequirements. No ordinal namedassignment.
+- Selectedconversions/authorconcordance never prove original/native/page/image/
+  form/table completeness,source silence,current/public/sponsor/route continuity.
+  Output/contact/address/biography/recipient-template lapses remain disclosed in
+  ASSEMBLY_NOTES;Codex evidence/governance/delivery assesses historicalhandling at
+  later authorized evidence/history/canonical/publication review. Before every
+  nextcall/output narrow/sanitize. All priorlimits retain original owners/triggers.
+- All71custodyhashes matched without contentreinspection/reacquisition/replay;
+  next required rawuse/audit verifies originalpaths/hashes or preservesreceipts/
+  reports gaps. Plan/type/fulltests and evidence/history/full-diff checks PASS;
+  both exactbuilds remain process/portEPERM. Codexvalidation/governance/delivery
+  owns build/freshmain before acceptance/release. Every preservation/backup/
+  recovery/permission,human/canonical/publication,student/CSV/browser and437M1/
+  SD5/effect gate retains original owner/trigger/action. No external effect orSD3.
+- Next-session Codex resumes offset300/savedrow306:Sporty's Foundation Private
+  Pilot Training for AEA Technicians under existingAUTHORITY/POLICY. FullSD2 is
+  incomplete. Closure:checkpoint-015/SESSION_WRAP.md and wrap-verification.json;
+  recheck:verify-wrap.py. Kickoff:NEXT_SESSION.md. Recommended effort:High.
+<!-- SD2-CHECKPOINT-015-END -->
 <!-- SD2-CHECKPOINT-014-START -->
 <!-- SD2-CHECKPOINT-014-CLOSE-START -->
 - Final session closure audited280 initial dispositions,5,341 field holds,
