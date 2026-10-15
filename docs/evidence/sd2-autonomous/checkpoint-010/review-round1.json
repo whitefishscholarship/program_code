@@ -1,0 +1,82 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent review of one local SD2 held-research checkpoint only",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint010_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": false
+  },
+  "binding": {
+    "entryCommit": "5ab4a592be5b28b62e98af39533bc26870169424",
+    "candidateCommit": "120bb754eec5be7e6e906f4ae8244f5d1e9d9847",
+    "candidateTree": "8ac187363e4fb4dd03876d1ae0a3a74e8563a7da",
+    "manifestSha256": "97c044a251a0c342f09692e310e012a8cd63d73599a57dcf75d2d3a273e480b6",
+    "completeDiffSha256": "c7f787b6e7c8f24338686f9be26efd84010a03a9b4e88fc7c62177620ae42166",
+    "changedPaths": 26
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-010-M1",
+      "severity": "medium",
+      "title": "Sanitizer guard persists excluded biographical dates",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-010/verify.py",
+      "line": 162,
+      "evidence": "The sanitizer assertion contains literal memorial birth/death dates from the disclosed source preview. The retained sources, ledger and capture metadata exclude those values, but committing them inside the verifier still persists them. The guard scans selected data artifacts and does not scan itself.",
+      "contractEvidence": [
+        "docs/evidence/sd2-autonomous/checkpoint-010/capture-metadata.json:194 requires removing all biographical dates before forwarding or persistence.",
+        "docs/evidence/sd2-autonomous/POLICY.md requires sanitizing captured scope before persistence and excluding birthdate examples."
+      ],
+      "requiredAction": "Replace the source-derived date literals with nonliteral structural checks. Verify the revised tooling and other new packet files without printing the excluded values. Explicitly disclose that immutable historical candidate history retains the original guard; do not claim retroactive erasure or rewrite that history.",
+      "owner": "Codex implementation author",
+      "trigger": "Before replacement-candidate independent review",
+      "target": "Replacement immutable checkpoint010 candidate",
+      "dispositionRequired": true
+    }
+  ],
+  "requiredFixCount": 1,
+  "resolvedDispositionCount": 0,
+  "unresolvedRequiredFixes": 1,
+  "checksPerformed": [
+    "Read repository governance, current state/handoff, accepted P9 evidence, local plan section9, autonomous authority/policy and checkpoint009 baseline records. Canonical stage pointers remain null.",
+    "Independently recomputed the manifest digest, candidate tree, complete binary-diff digest, exact 26-path change set, and every candidate blob ID, byte length, SHA256 and worktree equality.",
+    "Confirmed the candidate is HEAD and final-manifest.json is the only untracked path. All changes are additions confined to checkpoint010.json and checkpoint-010/.",
+    "Ran checkpoint-010/verify.py read-only successfully: 20 ordered inputs, 444 new held fields, 252 evidence references, 20 seed dispositions, 21 source-link dispositions, 200 cumulative initial dispositions, 3939 held fields, 200 held identities and 206 pending inputs.",
+    "Independently checked all 200 record routes, 3939 field routes, 314 seed/alias dispositions and 809 source-link dispositions across ten ledgers. Historical field routes retain their original record-level inheritance; current field routes are explicit.",
+    "Verified all nine historical manifest/review bindings, preserved baseline bytes, nine attention rows and supplements, 71 temporary custody pins without gaps, 12 M1 pins and 437 unique M1 records.",
+    "Reviewed all selected material field values against retained NGPA, AFSA and WAI artifacts. All 252 evidence excerpts resolve to the exact permitted source artifacts and hashes.",
+    "Confirmed NGPA child distinctions, conditional medical/student-certificate rules, nationality qualifiers, material variants and unresolved cycle conflicts remain faithful and held.",
+    "Confirmed AFSA explicit no-GPA/no-income language, historical dates, eligibility, random selection, application and post-selection conditions remain scoped correctly.",
+    "Confirmed WAI common versus child requirements, AOPA conditional cumulative GPA and unresolved 300/500-word essay applicability, Boeing GPA wording 'should', and all selected award amounts and training conditions remain faithful.",
+    "Confirmed both redacted Wings profiles remain unmapped to both saved identities, with no accepted ordinal mapping or inferred gender/career eligibility.",
+    "Confirmed six source receipts represent three new retrievals plus three unchanged prior NGPA receipts. WAI's thirteen selected profiles share one converted artifact.",
+    "Confirmed corrected NGPA timing is explicitly a subsequent record timestamp; invalid requests returned no content and no precise corrected-call duration is claimed.",
+    "Verified every retained Markdown destination in the three new source artifacts has an exact disposition, including the unresolved WAI locator without an invented scheme.",
+    "Checked validation-log hashes and equality with individual command receipts. Recorded plan, typecheck and full tests pass; both exact standard builds fail with process/port EPERM.",
+    "Complete entry-to-candidate git diff --check passed.",
+    "No files were edited and no assembly, research, workbook access, replay, network operation or external effect was performed."
+  ],
+  "limits": [
+    "The single required repair concerns persistence in review tooling. No additional substantive source-fidelity finding was identified.",
+    "The passing integrity script does not resolve the finding because its sanitizer excludes its own source file.",
+    "All 3939 field observations and 200 identities remain held; accepted facts remain zero, full SD2 remains incomplete and SD3 remains unstarted.",
+    "Selected converted text cannot prove raw PDF, page/image/full-field completeness, native public/sponsor continuity, origin freshness, current offering or portal usability.",
+    "Provider-reported and author-recorded full-conversion counts were not independently reconstructed from unavailable raw responses.",
+    "Source-output lapses remain disclosed; later sanitization cannot erase earlier output.",
+    "Both standard-build failures remain unwaived. Fresh authenticated main/target and all later preservation, acceptance, publication, student, monitoring and external-effect gates retain their original owners and triggers."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation and handoff owner",
+    "trigger": "Receipt of this independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-010/",
+    "action": "Preserve this candidate, manifest and failed review unchanged. Provide one count-matched disposition for SD2-010-M1, make the scoped repair, freeze a replacement candidate and request independent recheck. Preserve the otherwise reviewed scholarship data, sources, holds and historical bindings. After a passing replacement review, prepare the separate section9/session handoff for offset200/savedrow204, Boeing Maintenance Training Scholarship. No fact acceptance, additional checkpoint, SD3 or external effect follows from this review."
+  }
+}

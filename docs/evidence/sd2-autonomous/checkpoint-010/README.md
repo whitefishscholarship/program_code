@@ -180,3 +180,21 @@ queue coverage. These same routes also attach to every individual field and seed
 | 201 / Anne Bridge Baddour Aviation Scholarship | researched-held | Reconcile Anne Baddour USD5000/female pilot/instrument OR multi-engine OR ATP development; no prerequisite degree/GPA/citizenship inferred from biography. |
 | 202 / AOPA Student Pilot Scholarship | researched-held | Reconcile AOPA USD3000/private OR recreational OR sport/student-pilot-certificate by deadline/US citizenship, conditional fulltime GPA3.0 of4.0,300word child essay versus500word common requirement, direct recipient/use within one year. Preserve unresolved essay applicability. |
 | 203 / Boeing Flight Training Scholarship | researched-held | Reconcile Boeing Flight USD7500/female/private OR recreational OR sport OR instrument/direct school/completion within one year; conditional fulltime GPA wording should>=3.0 not hardened must; two character letters and common materials retained. |
+
+## Author remediation after independent review
+
+Original120bb75, manifest-round1.json, review-round1.json and verification-round1.json
+remain bound to their original bytes. Reviewer SD2-010-M1 is one medium finding:
+the original sanitizer guard itself retained excluded public memorial date literals.
+The replacement uses generic structural checks and scans every new packet text
+file including tooling. Sources/records/fields/coverage/routes and matrix results
+are unchanged. No new source read/assembly/reset/replay. remediation.json is the
+sole count-matched author disposition; final independent replacement recheck required.
+
+The immutable original candidate retains the original guard. This is disclosed
+historical retention, never retroactive erasure. Codex evidence/governance/delivery
+owns this route at any later authorized history-preservation, canonical-acceptance
+or publication review: disclose the original retained exposure, verify final-packet
+exclusion without printing values, assess exact authorized handling before any
+external effect, and never silently rewrite history. No applicant responses were
+collected. This local remediation supplies no later publication authority.

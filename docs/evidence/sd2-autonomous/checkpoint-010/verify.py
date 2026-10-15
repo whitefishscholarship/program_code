@@ -126,6 +126,19 @@ for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,10)]:
     for f in m['changedFiles']:
         assert sha(git('show',m['candidateCommit']+':'+f['path']))==f['sha256']
     history+=1
+if (P/'remediation.json').exists():
+    repair=load(P/'remediation.json'); first=load(P/'review-round1.json'); original=repair['originalCandidate']
+    assert first['outcome']=='FAIL' and first['severityCounts']==dict(critical=0,high=0,medium=1,low=0)
+    assert repair['requiredFixCount']==len(repair['dispositions'])==1
+    assert repair['dispositions'][0]['findingId']==first['findings'][0]['id']=='SD2-010-M1'
+    assert repair['originalManifestSha256']==sha((P/'manifest-round1.json').read_bytes())
+    assert repair['originalReviewSha256']==sha((P/'review-round1.json').read_bytes())
+    assert first['binding']['candidateCommit']==original
+    assert l==json.loads(git('show',original+':docs/evidence/sd2-autonomous/checkpoint-010.json'))
+    assert (P/'verification-round1.json').read_bytes()==git('show',original+':docs/evidence/sd2-autonomous/checkpoint-010/verification.json')
+    for f in load(P/'manifest-round1.json')['changedFiles']:
+        if f['path'] not in {str((P/x).relative_to(ROOT)) for x in ['README.md','verify.py','verification.json']}:
+            assert (ROOT/f['path']).read_bytes()==git('show',original+':'+f['path']),f['path']
 mutable={'docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md','docs/CURRENT_HANDOFF.md','docs/evidence/sd2-autonomous/NEXT_SESSION.md'}
 changed=set(git('diff','--name-only',ENTRY).decode().splitlines())
 untracked=set(git('ls-files','--others','--exclude-standard').decode().splitlines())
@@ -159,8 +172,14 @@ for path in list((P/'sources').glob('*.md'))+[B/'checkpoint-010.json',P/'source-
     t=path.read_text()
     assert not re.search(r'\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}|[?&](?:token|sig|signature|se|ouid)=',t),path
     assert not re.search(r'(?:\b\d{3}[-/.]|\(\d{3}\)\s*)\d{3}[-/.]\d{4}',t),path
-    assert not re.search(r'August 21, 1993|October 15, 2024|Home Address|Date of Birth|United 2026 Scholarship Recipients',t),path
+    assert not re.search(r'Home Address|Date of Birth|United 2026 Scholarship Recipients',t),path
     assert t.endswith('\n') and all(x==x.rstrip() for x in t.splitlines()),path
+# Scan the tooling and every new packet text file too; no source-derived date literals.
+# Generic twentieth-century full dates and parenthesized full-year date spans
+# identify excluded biographical shapes without reproducing any observed values.
+structural_date = re.compile(r'\b[A-Z][a-z]+\s+\d{1,2},\s+19\d{2}\b|\([^()\n]*\b\d{4}\s*[–-]\s*[^()\n]*\b\d{4}\)')
+for path in [B/'checkpoint-010.json']+[x for x in P.rglob('*') if x.is_file()]:
+    assert not structural_date.search(path.read_text()), ('Excluded biographical date shape',str(path))
 if (P/'validation.json').exists():
     validation=load(P/'validation.json')
     assert not any(validation[k] for k in ['canonicalAcceptance','externalEffects','SD3Started'])
