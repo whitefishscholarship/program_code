@@ -1,3 +1,53 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-017.json plus checkpoint-017/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+SESSION_CLOSE.md,wrap-verification.json,session-close-verification.json}.
+
+Resume ONE bounded SD2 checkpoint at offset340/savedrow346:Welder Training
+Scholarship.66 frozen inputs remain;340 initial dispositions/6253 field holds/
+340 identity holds,0 accepted. Existing authority permits routine research/GPT
+review without renewed checkpoint approval. Never initialize/reset/replay;
+preserve every hold/review binding;full SD2 incomplete;stop before SD3.
+
+Independent PASS C0/H0/M0/L0 binds 35cd7dda064d3b1649632638d5f99c1efa080707;local two-file
+receipt:8a2b90a482bb0382026cd2c749b0060f93628ccb. Three medium and one low finding fixed/rechecked;original b4d6238/
+both rejected manifest-review-verification bindings and all earlier history remain exact.
+No pending reviewer repair/recheck/delegated work. All17 ledgers/priorpackets/
+PRELUDE/nineattentionrows/supplements/437M1routes/owners/triggers remain exact.
+All562 seed-alias/1020 source-link occurrences retain owned actions. Codex owns
+every hold at applicable authorized evidence arrival or SD2 consolidation;exact
+row-specific qualifiers/unknowns/variants remain in ledger/README/SESSION_WRAP.
+
+Before every source dispatch normalize hostname,await samehost completion,max4
+distinct hosts globally. Current26 intervals comply;historical checkpoint016
+NAEHCY overlap stays noncompliant with unchanged timestamps. Before every output
+narrow program scope and independently sanitize every text/link/query/image/
+metadata value;preview only necessary key/name/offset. Early board/memorial/
+contact/address/access-code/unrelated/template outputs remain disclosed;final
+sanitization erases no history. Codex source/evidence/governance assesses handling
+at later authorized evidence/history/canonical/publication review.
+
+Selected conversions/author concordance prove no original/raw/native/page/image/
+table/form completeness,source silence,origin freshness,current/public/sponsor/
+route continuity. Source-specific military versus firstresponder rules and costs
+must stay separate. All prior conversion/redactedidentity/rawbatch/native/timing/
+custody/history limits retain original owners/triggers. Next required raw use/
+audit verifies71 original temporary paths/hashes or preservesreceipts/reports gaps;
+no reconstruction/reacquisition/completed-input replay.
+
+Both exact standardbuild EPERM and fresh authenticatedmain/target remain with Codex
+before canonicalacceptance/authorizedrelease. Every preservation/backup/recovery/
+permission,human/canonical/publication,studentCSV/browser/fit and437M1/SD5/effect
+gate retains original owner/trigger/action. No workbook/app/configuration/CI/
+login/forms/contact/messages/remoteGit/release/deployment/monitoractivation orSD3.
+Recheck:checkpoint-017/verify.py --review-bound. Recommended effort:High.
+
+Previous authoritative kickoff preserved byte-for-byte below;new packet controls.
+
+---
+
 Final requested session no-loss audit:checkpoint-016/FINAL_SESSION_AUDIT.md and
 final-session-audit.json. Every open item retains its owner/trigger/action;
 explicit and inherited routes are verified without rewriting historical packets.

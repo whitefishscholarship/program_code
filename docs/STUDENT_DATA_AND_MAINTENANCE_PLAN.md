@@ -354,6 +354,43 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-017-START -->
+- October15,2026:one bounded checkpoint017 completes frozen offsets320–339,
+  savedrows326–345,starting Donald E. Pizzini Memorial Nurse Scholarships.
+  Packet:sd2-autonomous/checkpoint-017.json and checkpoint-017/.20 researched-held
+  outcomes,306 new field holds/20 identities,26 selected source receipts,0 accepted.
+  Cumulative340/406 initial dispositions,66 unprocessed;all6253 fields/340 identities
+  remain held. Full SD2 incomplete;never initialize/reset/replay;stop before SD3.
+- Independent PASS C0/H0/M0/L0 binds 35cd7dda064d3b1649632638d5f99c1efa080707;
+  local two-file receipt:8a2b90a482bb0382026cd2c749b0060f93628ccb. Final manifest/review control.
+  Both b4d6238/8d04435 rejected binding preserved;three medium and one low finding author-fixed/
+  independently rechecked:Pizzini excerpt restoration,typed omitted qualifiers,
+  family-specific Folds rules. No new reads or pending reviewer/delegated work.
+- All prior packets/PRELUDE/17 ledgers/review bindings,nine attention rows/every
+  supplement/437 M1 routes stay exact. Codex source/identity owns all6253 field/
+  340 identity/562 seed-alias/1020 source-link holds at applicable authorized
+  evidence arrival or SD2 consolidation;exact actions in ledger/README/SESSION_WRAP.
+  Preserve every row-specific qualifier/unknown/variant;no accepted union or mapping.
+- Selected conversions/author concordance prove no original/raw/native/page/image/
+  table/form completeness,source silence,origin freshness/current/public/sponsor/
+  route continuity. Early board/memorial/contact/address/access-code/unrelated/
+  template previews remain disclosed,not erased;Codex evidence/governance assesses
+  at later authorized history/canonical/publication review. Before every output
+  narrow/sanitize;before every dispatch serialize normalized host/max4distincthosts.
+  Current26 intervals comply;checkpoint016 historical overlap stays noncompliant.
+- All71 custody hashes matched;next required raw use/audit verifies original paths/
+  hashes or preserves receipts/reports gaps,no reconstruction/reacquisition/replay.
+  Plan/type/fulltests/evidence/history/full-diff checks PASS;both exact builds
+  remain process/port EPERM. Codex validation/governance/delivery owns supporting
+  exact build and fresh authenticated main/target before acceptance/release.
+  Every preservation/backup/recovery/permission,human/canonical/publication,
+  studentCSV/browser/fit and437 M1/SD5/effect gate retains original owner/trigger.
+- Next-session Codex resumes one bounded SD2 checkpoint at offset340/savedrow346:
+  Welder Training Scholarship under existing AUTHORITY/POLICY. Never initialize/
+  reset/replay;full SD2 incomplete;stop before SD3. Closure:checkpoint-017/
+  SESSION_WRAP.md,SESSION_CLOSE.md and verification receipts. Recheck:verify.py
+  --review-bound. Kickoff:NEXT_SESSION.md. Effort:High. No external effect or SD3.
+<!-- SD2-CHECKPOINT-017-END -->
 <!-- SD2-CHECKPOINT-016-START -->
 <!-- SD2-CHECKPOINT-016-FINAL-AUDIT-START -->
 - Requested final session no-loss audit:original one-checkpoint goal is complete
