@@ -1,3 +1,13 @@
+Final session closure:checkpoint-015/SESSION_CLOSE.md and
+session-close-verification.json. Every open item retains its owner/trigger/action;
+no reviewer repair/recheck/delegated work is pending. Follow plan section9 as the
+sole progress pointer,then the authoritative checkpoint015 kickoff below. Resume
+one bounded SD2 checkpoint at offset300/savedrow306:Sporty's Foundation Private
+Pilot Training for AEA Technicians. Never initialize/reset/replay;stop before SD3.
+Existing AUTHORITY/POLICY and all later gates remain unchanged. Closure recheck:
+checkpoint-015/verify-session-close.py;earlier verifiers retain pre-close bindings.
+Recommended effort:High.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),

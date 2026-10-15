@@ -355,6 +355,20 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-015-START -->
+<!-- SD2-CHECKPOINT-015-CLOSE-START -->
+- Final session closure audited300 initial dispositions,5,642 field holds,
+  300 identity holds,473 seed/alias and950 source-link occurrences, every owner/
+  trigger/action, nine attention rows/all supplements and437 M1 routes. Evidence:
+  checkpoint-015/SESSION_CLOSE.md and session-close-verification.json. Candidate,
+  original rejected binding, final receipt and a9551b0 handoff remain exact.
+  Three medium findings fixed/rechecked;no pending reviewer/delegated work.
+- Next-session Codex resumes offset300/savedrow306 under existing AUTHORITY/POLICY.
+  All source handling/conversion/redacted-identity/custody/history limitations and
+  build/fresh-main/later preservation/acceptance/student/monitor/effect gates retain
+  original owners/triggers/actions. No new research/reset/replay, acceptance,
+  external effect or SD3 during closure. Recheck:verify-session-close.py;
+  earlier verifiers retain original pre-close allowlists/bindings. Effort:High.
+<!-- SD2-CHECKPOINT-015-CLOSE-END -->
 - October15,2026:checkpoint015 completes frozen offsets280–299/saved285–305,
   excluding already-completed290,startingHeroes'Legacy. Packet:sd2-autonomous/
   checkpoint-015.json and checkpoint-015/.20initialoutcomes:12researched-held/
