@@ -1,0 +1,43 @@
+{
+  "priorCandidateCommit": "5351727159f211c0294d581df3d975920d225ea0",
+  "priorManifestSha256": "0d7733e9b13cc31c79649f1253fac3ac1837162ef541a5f01419b0d8a7b2d54f",
+  "priorReviewSha256": "dda23f2cbd8616749647d448052322c1c9ed7d0e15c5ef82cde2b0f48e98ec20",
+  "counts": {
+    "medium": 3,
+    "low": 1
+  },
+  "dispositions": [
+    {
+      "id": "SD2-014-M1",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Restore exact achievement-based and fax/sign/date passages from original in-session conversion; retain CSKT certificate/test-result and 2026-graduate diploma/transcript-after-graduation alternatives. No source reread/reconstruction.",
+      "owner": "Codex implementation/evidence author",
+      "target": "Replacement frozen checkpoint014 candidate and exact independent recheck"
+    },
+    {
+      "id": "SD2-014-M2",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Keep Fisher enrolled OR planning-to-enroll and Gates plan-to-enroll explicitly, without current-enrollment narrowing.",
+      "owner": "Codex implementation/evidence author",
+      "target": "Replacement frozen checkpoint014 candidate and exact independent recheck"
+    },
+    {
+      "id": "SD2-014-M3",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Separate general active NESA membership each award period and all-program full-time/proof/schedule terms from Cooke bachelor-program/transcript requirements.",
+      "owner": "Codex implementation/evidence author",
+      "target": "Replacement frozen checkpoint014 candidate and exact independent recheck"
+    },
+    {
+      "id": "SD2-014-L1",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Remove remaining telephone extension from selected CSKT artifact and every dependent excerpt; original rejected candidate/history retained with no erasure claim.",
+      "owner": "Codex implementation/evidence author",
+      "target": "Replacement frozen checkpoint014 candidate and exact independent recheck"
+    }
+  ],
+  "newSourceReads": 0,
+  "fieldCountsAndHoldsUnchanged": true,
+  "originalFidelityLimit": "Restored lines checked against ephemeral original converted text only; no raw/full-page/independent original-fidelity claim.",
+  "recordedAt": "2026-10-15T14:30:16.412224+00:00"
+}

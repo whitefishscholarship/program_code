@@ -59,6 +59,7 @@ assert cov['outcomes']==dict(collections.Counter(r['outcome'] for r in l['record
 rows={r['rowLocator']:r for r in l['records']};v=lambda n,k:rows[n]['fieldProposals'][k]['value']
 assert set(rows)==set(range(265,285))
 assert v(268,'minimumGPA')['highSchool']==3 and v(268,'minimumGPA')['college']==2.5
+assert v(268,'eligibility')['enrollmentStatusOR']==['enrolled','planning to enroll']
 assert v(269,'materials')['phase1']=={'essay':False,'transcript':False,'recommendations':False}
 assert v(269,'materials')['phase2']['recommendation']==1 and v(269,'materials')['phase4']
 assert v(272,'eligibility')['redactedAffiliationRoleUnknown'] and v(272,'materials')['recommendations']['distinctVariantsNotUnioned']
@@ -69,9 +70,18 @@ assert not rows[276]['allowedSourceIds'] and v(276,'application')['noFetchOrInte
 assert rows[277]['outcome']=='held-identity' and v(277,'identityObservation')['noAbsenceConclusion']
 assert v(278,'renewal')['upToAcademicYears']==4 and v(278,'reapplication')['previousRecipientsMayApplyAgain'] is False
 assert v(279,'need')['notCategoricalOffReservationExclusion'] and v(279,'reapplication')['applyEachYear']
+cm=v(279,'materials');assert cm['diplomaGEDHiSET']['OR']==['high school diploma','GED/HiSET certificate','GED/HiSET test results']
+assert cm['diplomaGEDHiSET']['2026HighSchoolGraduates']=={'OR':['diploma','transcript'],'timing':'after graduation date'}
+assert cm['signedDatedForms'] and cm['faxAccepted'] is False
+assert 'complete, sign and date all forms' in texts['csktpdf'] and 'Faxed applications will not be accepted.' in texts['csktpdf']
+assert 'achievement-based scholarship' in texts['coca'] and v(269,'amount')['scholarship']=='achievement-based'
 assert rows[280]['fieldProposals']['cycle']['state']=='conflict' and v(280,'minimumGPA')['basis']=='cumulative weighted or equivalent'
+assert v(280,'eligibility')['enrollmentModality']=='must plan to enroll; current enrollment not required by this statement'
 assert v(281,'eligibility')['LGBTQorAlly'] and v(281,'cycle')['applicationCalendarYear'] is None and v(281,'amount')['annualOrTotalBasis'] is None
 assert len(v(282,'amount')['tiers'])==8 and v(282,'reapplication')['mayReceiveNESAOnlyOnce']
+nr=v(282,'renewal');assert nr['activeNESAMembershipEachAwardPeriod'] and nr['generalProgramMaintenance']['fullTimeMinimumCredits']==12
+assert nr['generalProgramMaintenance']['maintainAndProvideFullTimeProof'] and nr['generalProgramMaintenance']['paymentUponCourseScheduleReceived']
+assert 'active' not in nr['CookeFourYearTerms'] and nr['CookePaymentVerification']==['course schedule','unofficial transcript']
 assert rows[284]['fieldProposals']['amount']['state']=='conflict' and all(v(n,'eligibility')['noUnionOrIntersectionAsAcceptedCriteria'] for n in [283,284])
 con=load(P/'source-concordance.json');assert len(con['checks'])==24
 for c in con['checks']:assert not c['unmatched'] and c['retainedNonblankLines']==sum(bool(x.strip()) and not x.startswith('[Editorial:') for x in texts[c['sourceId']].splitlines())
@@ -82,6 +92,17 @@ for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,14)]:
  assert sha(git('diff','--binary',m['entryCommit'],m['candidateCommit']))==m['completeDiffSha256']
  for item in m['changedFiles']:assert sha(git('show',m['candidateCommit']+':'+item['path']))==item['sha256']
  history+=1
+om=load(P/'manifest-round1.json');rv=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert om['candidateCommit']==rv['binding']['candidateCommit']==rem['priorCandidateCommit']=='5351727159f211c0294d581df3d975920d225ea0'
+assert sha((P/'manifest-round1.json').read_bytes())==rv['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+assert rv['outcome']=='FAIL' and rv['severityCounts']==dict(critical=0,high=0,medium=3,low=1)
+assert [f['id'] for f in rv['findings']]==[d['id'] for d in rem['dispositions']]==['SD2-014-M1','SD2-014-M2','SD2-014-M3','SD2-014-L1']
+assert all(all(d.get(k) for k in ['rationale','owner','target']) for d in rem['dispositions'])
+assert rem['newSourceReads']==0 and rem['fieldCountsAndHoldsUnchanged']
+assert sha(git('diff','--binary',ENTRY,om['candidateCommit']))==om['completeDiffSha256']
+for item in om['changedFiles']:assert sha(git('show',om['candidateCommit']+':'+item['path']))==item['sha256']
+assert sha((P/'verification-round1.json').read_bytes())==next(x['sha256'] for x in om['changedFiles'] if x['path'].endswith('/verification.json'))
 mutable={'docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md','docs/CURRENT_HANDOFF.md','docs/evidence/sd2-autonomous/NEXT_SESSION.md'}
 paths=set(git('diff','--name-only',ENTRY).decode().splitlines())|set(git('ls-files','--others','--exclude-standard').decode().splitlines())
 assert all(p in mutable or p=='docs/evidence/sd2-autonomous/checkpoint-014.json' or p.startswith('docs/evidence/sd2-autonomous/checkpoint-014/') for p in paths)
@@ -112,6 +133,7 @@ state=load(R/'docs/BUILD_STATE.json');assert state['activeStageId'] is None and 
 for p in [B/'checkpoint-014.json']+[f for f in P.rglob('*') if f.is_file()]:
  t=p.read_text();assert not re.search(r'\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}|[?&](?:token|sig|signature|se|ouid)=',t),str(p)
  assert not re.search(r'(?:\b\d{3}[-/.]|\(\d{3}\)\s*)\d{3}[-/.]\d{4}',t),str(p)
+ assert not re.search(r'\[phone redacted\]\s+(?:ext\.?|extension)\s*\d+',t,re.I),str(p)
  assert not re.search(r'\b[A-Z][a-z]+\s+\d{1,2},\s+19\d{2}\b|\([^()\n]*\b\d{4}\s*[–-]\s*[^()\n]*\b\d{4}\)',t),str(p)
  assert all(x==x.rstrip() for x in t.splitlines()) and t.endswith('\n'),str(p)
 va=load(P/'validation.json');assert not any(va[k] for k in ['canonicalAcceptance','externalEffects','SD3Started'])

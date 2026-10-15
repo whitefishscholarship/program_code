@@ -1,3 +1,5 @@
+The Coca-Cola Scholars Program scholarship is an achievement-based scholarship awarded to students in their final year of high school. Students are recognized for their capacity to lead and serve, as well as their commitment to making a significant impact on their schools and communities.
+
 **The 2027 Coca-Cola Scholars application is now closed.**
 
 [View Eligibility Requirements](https://www.coca-colascholarsfoundation.org/apply/#TheCocaColaScholarsProgramScholarship)

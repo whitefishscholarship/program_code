@@ -53,7 +53,7 @@ retains per-field/seed/link routes; this table summarizes the exact next actions
 |265 Bulkthreads|One500/undergraduate-or-graduate/300–500word build-impact essay; displayedOpen/June29,2027 remains observation, not accepted current offering.|
 |266 Safer Roadways|1500/500–1000word teen drunk-driving prevention idea/action; outgoing summer2027senior OR enrolled college/trade/university as of fall2027; July14/August15. Embedded form excluded; no transcript rule inferred.|
 |267 Oratory|Keep current2027scheduleTBD, under20/highschool/two speech lengths and post/state/national progression distinct from historical2025District4 amounts/date/registration award. Current Department fourthplace500 differs from historical three-place list. DOCX alias unread; national rules returned heading only. No cross-year/level merge.|
-|268 Military Children|2026–27closed versus December2026opening for2027–28;500x2000/commissary allocation; unmarriedunder23/USID/parentservice-status; bachelorORdirect-transfer/fulltime; highschool3.0versuscollege2.5unweighted4.0 and collegefreshman firstsemester. Student-attestation/500wordessay/transcripts/USID validation remain separate; no personal values collected.|
+|268 Military Children|2026–27closed versus December2026opening for2027–28;500x2000/commissary allocation; unmarriedunder23/USID/parentservice-status; bachelorORdirect-transfer/fulltime/enrolledORplanning; highschool3.0versuscollege2.5unweighted4.0 and collegefreshman firstsemester. Student-attestation/500wordessay/transcripts/USID validation remain separate; no personal values collected.|
 |269 Coca-Cola|2027closed; annual August3–September30 not extrapolated; finalyear/graduateyear/location/status/Coca-Cola family exclusions; overallB/3.0. Phase1 noessay/transcript/reference; phase2essays/transcript/one recommendation; phase3interview; phase4requiredAtlantaweekend.150x20k, achievement-based.|
 |270 Greufe|Redacted Honor title mapping held despite pinnedJotform match;1500/memberORchild/accrediteddegree/notagriculture-only/April1,2026. Original parent404 is not award-death proof.|
 |271 Farm Bureau WLC|2x1500/currentpaidmemberORimmediatefamily/postsecondaryanygrade/useawardyear/boysandgirls; April1,2026 and Jotform locator. Do not transfer neighboring agriculture rules.|
@@ -64,10 +64,10 @@ retains per-field/seed/link routes; this table summarizes the exact next actions
 |276 AMVETS|Kaleidoscope application-only locator uninspected; current identity/eligibility/cycle/amount/materials unknown, held-access. No login/form action.|
 |277 Blackfeet|Directory responded but no retained selected HigherEducation program detail; identity remains held. No whole-directory traversal or absence/closure conclusion.|
 |278 Dean|Redacted title mapping held;2026January1–March31; eightMontanatribes/enrollmentproof/2.25/needproof/accreditedinstitution-by-first-term. Typical2500–3000/year/3–4recipients/up-to4years; continuationcriteria/transcript/enrollment/form distinct from prohibited reapplication. Recenttranscript/tribalverification/FAFSAFSS/code26DEANTN.|
-|279 CSKT|CSKTmembership/diplomaGEDHiSET/regionallyaccreditedacceptance/nofundingdefault/no-pastyearfelony/annualapplication.2026–27May1application/August7completefile/latefundingconditional/finalOctober31. Reservationfirstpriority is not off-reservation exclusion; needanalysis/otheraid adjustment/goodstanding. Allcollege officialtranscripts/annual timing/FNAstudent-and-officer/diploma/acceptance/tribalID/studentagreement/signatures/faxprohibition. Formfulltime/parttime/graduate options do not guarantee eligibility; Handbook/dynamicfiles incomplete.|
-|280 Gates|DisplayedOpen conflicts with September15,2026deadline; preserve conflict. Senior/Pelleligible/USC-orPR/3.3weighted4.0/fulltimefouryearUSnonprofit; ideal top10%/leadership distinct from mandatory. LastdollarCOAminusotheraid/SAI, not fixed award.|
+|279 CSKT|CSKTmembership/diplomaGEDHiSET/regionallyaccreditedacceptance/nofundingdefault/no-pastyearfelony/annualapplication.2026–27May1application/August7completefile/latefundingconditional/finalOctober31. Reservationfirstpriority is not off-reservation exclusion; needanalysis/otheraid adjustment/goodstanding. Allcollege officialtranscripts/annual timing/FNAstudent-and-officer/diplomaOR-GEDHiSETcertificateORtestresults/2026graduate-diplomaORtranscript-aftergraduation/acceptance/tribalID/studentagreement/signatures-dates/faxprohibition. Formfulltime/parttime/graduate options do not guarantee eligibility; Handbook/dynamicfiles incomplete.|
+|280 Gates|DisplayedOpen conflicts with September15,2026deadline; preserve conflict. Senior/Pelleligible/USC-orPR/3.3weighted4.0/plan-to-enroll-fulltimefouryearUSnonprofit; ideal top10%/leadership distinct from mandatory. LastdollarCOAminusotheraid/SAI, not fixed award.|
 |281 Point|LGBTQORally/atleastsenior/3.3cumulative/fulltimeundergrad-grad-professionalUSnonprofit;100%online/fourFlagshipyears/formalPointrelationships and immediatefamily exclusions. Priorrecipients activeexit condition. Up-to15k basisunknown/up-to4supportyears/fall2027; September9/November19literalPST with calendar-year unknown.|
-|282 NESA|Eagle/NESAmember/seniorthroughundergradjunior-or-halfassociate/trade/fulltime12credits; militaryacademy/grad exclusions; one lifetime award; Cookefouryearbachelor distinct. December1,2026–February1,2027 23:59CST/BoardReviewJanuary24/June10announce; eight tiers/slots and redactedchildnames stay distinct. Needconditional/servicecharacter; activeNESAmembership/fulltime/schedule/transcript/video/payment/nodeferral conditions retained.|
+|282 NESA|Eagle/NESAmember/seniorthroughundergradjunior-or-halfassociate/trade/fulltime12credits; militaryacademy/grad exclusions; one lifetime award; Cookefouryearbachelor distinct. December1,2026–February1,2027 23:59CST/BoardReviewJanuary24/June10announce; eight tiers/slots and redactedchildnames stay distinct. Needconditional/servicecharacter; activeNESAmembership-each-awardperiod/general-fulltime-proof-schedule-payment separately from Cooke-bachelor-transcript/video/nodeferral conditions retained.|
 |283 MABA-MGEA|SponsorFFA/agstudies versus sharedpageHSsenior/FFA/2.0;500each versus2slots remain variants. No union/intersection accepted rule. Sharedannualwindow/onlineonly/supplements/unofficialtranscript/nonrenewable/reapply/payment/followup kept child-cycle-held.|
 |284 Leave a Legacy|SponsorstatewideFFA/postsecondary-or-trades/500 versus sharedHSsenior/FFA/2.0/500–1000/1+ conflict. Preserve both, never choose/union/intersect. Same sharedapplication distinctions held for exact child/cycle.|
 
@@ -103,3 +103,23 @@ non-author read-only GPT review will bind the immutable candidate and manifest.
 Research PASS never accepts facts or a canonical stage. No workbook/app/config/CI,
 login/forms/contact/messages, remoteGit/release/deployment, monitoring activation
 or SD3. Stop after this single checkpoint and its separate durable handoff.
+
+## Independent round1 corrections
+
+Original candidate5351727 and manifest-round1/review-round1/verification-round1
+remain immutable. Three medium and one low findings have count-matched author
+dispositions in remediation.json. M1 restores exact achievement-based and fax/
+sign/date passages from still-available original in-session conversions, without
+new reads or reconstruction, and preserves certificate/test-result plus2026
+graduate diploma/transcript-after-graduation alternatives. M2 explicitly retains
+Fisher enrolled-OR-planning and Gates plan-to-enroll modality. M3 separates general
+NESA active-membership-each-award-period/fulltime/proof/schedule-payment terms from
+Cooke-specific bachelor/transcript conditions. L1 removes the residual extension
+from selected CSKT text and every dependent excerpt. Historical exposure persists
+in the original rejected candidate; no erasure/history rewrite is claimed. Codex
+evidence/governance/delivery owns disclosure and handling assessment before later
+authorized evidence/history/canonical/publication work. Source hashes, receipts,
+semantic assertions, concordance and focused checks are rebound. No new retrieval,
+field-count/hold change or external effect. Independent replacement-candidate
+recheck is required. Full software matrix is retained: no runtime/governance byte
+changed; source/field/history/concordance/full-diff checks are rerun for these fixes.

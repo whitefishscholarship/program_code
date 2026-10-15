@@ -35,3 +35,13 @@ All prior output, temporary custody, raw-batch rejection, NGPA timing, WAI/BLF
 conversion/redacted identity, Herriges/DonK, WET403, Clerk visual, Davis recovery,
 interim receipt and historical guard retention limits remain at original paths,
 owners and triggers. No reinspection, reconstruction, reacquisition or replay.
+
+Round1 author remediation restores substantive source lines from existing
+in-session converted text only; no new read or reconstructed source. Telephone
+extension redaction now includes the complete contact token. Prior rejected
+candidate retains the original exposure. Codex evidence/governance/delivery owns
+historical disclosure and assessment before later authorized evidence/history/
+canonical/publication work; no erasure claim. Local patch-context and concordance
+file-replacement syntax errors were corrected before execution; no source/queue
+reset or replay. Shared Git-index sandbox failure was resolved by permitted local
+retry; no remote operation.

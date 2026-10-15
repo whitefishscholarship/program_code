@@ -1,3 +1,7 @@
+Faxed applications will not be accepted. Remember to acquaint yourself with the Student Policy Handbook,
+application process, and be sure to complete, sign and date all forms needed on the application and
+financial needs analysis pages.
+
 The Higher Education Scholarship Application deadline date: **Friday, May 1, 2026.**
 Priority file completion deadline date: **Friday, August 7, 2026.**
 
@@ -54,7 +58,7 @@ for admission at the school(s) you plan to attend. Continuing students will alre
 unless you have changed schools.
 
 6. (     ) Copy of Tribal ID or Certificate of Indian Blood (CIB). You can contact the Tribal Enrollment
-Office [phone redacted] ext. 1014 and request that it be sent to the CSKT Scholarship Officer or you
+Office [phone redacted] and request that it be sent to the CSKT Scholarship Officer or you
 can pick it up.
 
 7. (     ) Financial Needs Analysis Part 2. The Financial Aid Officer, from you school, may send it to

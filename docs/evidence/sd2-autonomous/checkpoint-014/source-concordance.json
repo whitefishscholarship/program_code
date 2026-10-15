@@ -1,5 +1,10 @@
 {
-  "scope": "Author line concordance against original in-session readable conversions after disclosed image/contact redaction and whitespace normalization. Original envelopes not retained; independent fidelity/native completeness unproved.",
+  "scope": "Author line concordance against original in-session readable conversions after disclosed image/contact/extension redaction and whitespace normalization. Original envelopes not retained; independent fidelity/native completeness unproved.",
+  "restoredFromExistingEphemeralConversion": [
+    "coca",
+    "csktpdf"
+  ],
+  "newSourceReads": 0,
   "checks": [
     {
       "sourceId": "stem",
@@ -28,7 +33,7 @@
     },
     {
       "sourceId": "csktpdf",
-      "retainedNonblankLines": 52,
+      "retainedNonblankLines": 55,
       "unmatched": []
     },
     {
@@ -108,7 +113,7 @@
     },
     {
       "sourceId": "coca",
-      "retainedNonblankLines": 24,
+      "retainedNonblankLines": 25,
       "unmatched": []
     },
     {
