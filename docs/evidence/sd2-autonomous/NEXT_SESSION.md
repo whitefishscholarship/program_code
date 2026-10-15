@@ -1,3 +1,48 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-011.json plus checkpoint-011/
+{README.md,final-manifest.json,review.json,SESSION_WRAP.md,wrap-verification.json}.
+
+Resume one bounded SD2 checkpoint at offset220/savedrow224:
+Republic Airways Aviation Management Scholarship.186frozen inputs remain;
+220initial outcomes/4,351fieldholds/220identityholds,0accepted. Existing authority
+permits routine research/GPT review without renewed human checkpoint approval.
+Never initialize/reset/replay; preserve every hold/reviewbinding; stop before SD3.
+
+IndependentPASS C0/H0/M0/L0 binds 0ac9a3b2db33965379bc0f1276152baa9f4ba7dd;
+exact local two-file receipt 8d50e2ea7033a1f656666f8f61049130b6b1e06f. No pending
+reviewer repair/recheck/delegated work. Preserve every checkpoint001–010/original
+fivepacket/PRELUDE/history/nineattentionrow/supplement and437M1route/owner/trigger.
+All336seed-alias/815source-link occurrences retain exact actions. Next-session
+Codex owns every new/prior hold at applicable authorized evidencearrival or SD2
+consolidation. Keep Boeing advisoryGPA/grammar,Daremedical-letter,Epiccampuses,
+GlennCocourse/plainhost,ISAannual-versusWAIdeadline/route/material/lifetime/
+reapplication/expense,Norrisform/unmappedWAI/unknownamount,eightredactedidentity/
+Jerrynamedbody and separateWAI/NGPALIFT-PSA distinctions. Exact actions:ledger/wrap.
+
+Before every source call/output narrow selectedprogram/minimalmetadata and sanitize
+all values/images; no full duplicated envelopes/signedrefs/contact/account/recipient/
+biography/unrelated scope. Current WAI TOC/ISArecipient-heading previews and all
+prior source-output/NGPAtiming/WAI-BLFconversion/redactedlocator/rawbatch/Herriges-
+DonK/WET403/Clerkvisual/Davisrecovery/interimreceipt/historicalguardretention limits
+stay disclosed/routed. At next required rawmaterial use/audit verify71original
+temporarycustody paths/hashes or preserve receipts/report gaps; no reconstruction,
+reacquisition or completedresearch replay. No PDF/page/image/fullfield/source-silence
+or current/public/native proof from selected readable conversions.
+
+Both exact standardbuilds remain process/portEPERM; fresh authenticated main/target
+and every nativepreservation/backup/recovery/permission,human/canonical/publication,
+student/CSV/browser and seasonalM1/SD5setup/effect gate retain original owners/
+triggers. No workbookaccess/write,app/config/CI,login/forms/contact/messages,
+remoteGit/release/deployment/monitoractivation orSD3. Routine localGit restriction
+resolved. Closure:checkpoint-011/SESSION_WRAP.md and wrap-verification.json.
+Recommended next-session effort:High. Handoff never rebinds independent review.
+
+Previous authoritative kickoff retained as history below; the new packet above controls.
+
+---
+
 Final session closure:checkpoint-010/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains its exact owner/trigger/
 action; no pending reviewer repair/recheck/delegated work. Follow plansection9

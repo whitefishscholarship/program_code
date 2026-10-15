@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-10-15T04:37:37.760776+00:00",
+  "entryCommit": "7343656bd849e8651e2b0e0ec44f97341d5f1533",
+  "reviewedCandidate": "0ac9a3b2db33965379bc0f1276152baa9f4ba7dd",
+  "reviewReceiptCommit": "8d50e2ea7033a1f656666f8f61049130b6b1e06f",
+  "independentReviewOutcome": "PASS",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "reviewReceiptMeaning": "Authorized local research-only receipt; not canonical attestation or stage/fact acceptance",
+  "separateAuthorVerifiedHandoff": true,
+  "policyAuthorityImmutableBlobsVerified": true,
+  "localGitRestriction": "Initial local candidate add/commit could not access shared index; permitted exact local retry passed. No remote effect.",
+  "noPendingReviewerRepair": true,
+  "sourceReadsDuringHandoff": 0,
+  "externalEffects": false,
+  "SD3Started": false
+}

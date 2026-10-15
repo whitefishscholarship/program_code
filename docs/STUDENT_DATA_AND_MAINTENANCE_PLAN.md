@@ -354,6 +354,44 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-011-START -->
+- October14,2026: one bounded checkpoint011 completes frozen offsets200–219,
+  saved204–223, beginning Boeing Maintenance Training. Ledger/packet:
+  sd2-autonomous/checkpoint-011.json and checkpoint-011/.20initial outcomes:
+  12researched-held/8held-identity;4newretrievals/4receipts,412newheldfields/
+  20identities,0accepted. Cumulative220/406initial dispositions,186unprocessed;
+  all4,351fields/220identities held.336seed-alias/815source-link occurrences keep
+  exact owner/trigger/action. FullSD2 incomplete; no later checkpoint processed.
+- Independent PASS C0/H0/M0/L0 binds 0ac9a3b2db33965379bc0f1276152baa9f4ba7dd;
+  local two-file receipt 8d50e2ea7033a1f656666f8f61049130b6b1e06f.
+  final-manifest/review control; no pending reviewer repair/recheck/delegated work.
+  Every earlier candidate/manifest/review/receipt remains byte-exact. Separate
+  handoff never rebinds source review or accepts facts.
+- Codex source/identity reconciliation owns every new/prior field/identity/seed/
+  link/material at applicable authorized evidencearrival/SD2consolidation; exact
+  actions in ledger/SESSION_WRAP. Preserve Boeing should/grammar, Dare medical/
+  recommendation, Epiccampuses/GlennCocourse, ISAannual-versusWAIdeadline/route/
+  form-material/lifetime/reapplication/expense distinctions, Norrisexactform/
+  unboundWAI/unknownamount, eightredactedidentityholds/Jerrynamedbody, separate
+  WAI/NGPALIFT-PSA children. No ordinal mapping, current offering or acceptance.
+- Every priorpacket/PRELUDE/tenledgers/history/nineattentionrows/supplements/
+  437M1ownertrigger stays exact.71temporarycustodypins matched without reinspection/
+  reacquisition/reconstruction; next required use/audit verifies exact paths/hashes
+  or preserves receipts/reports gaps. Before each next sourcecall/output narrow/
+  sanitize; WAI TOC/ISArecipient-heading preview lapses, conversion/redactedlocator/
+  prior NGPA timing/BLF/rawbatch/Herriges-DonK/WET403/Clerkvisual/Davisrecovery/
+  interimreceipt and historicalguardretention keep original owners/triggers.
+- Plan/type/fulltests/evidence/history/full-diff PASS; both exact standardbuilds
+  remain process/portEPERM and fresh authenticated main/target unverified. Every
+  nativepreservation/backup/recovery/permission,human/canonical/publication,
+  student/CSV/browser and seasonalM1/SD5setup/effect gate keeps original owner/
+  trigger. LocalGit shared-index restriction resolved by permitted local retry.
+- Next-session Codex resumes offset220/savedrow224, Republic Airways Aviation
+  Management Scholarship, under existing AUTHORITY/POLICY; never initialize/reset/
+  replay; stop before SD3. Shortkickoff:NEXT_SESSION.md. Closure:checkpoint-011/
+  SESSION_WRAP.md and wrap-verification.json. No workbook/app/configuration/CI,
+  login/forms/contact/messages, remoteGit/release/deployment/monitoractivation.
+<!-- SD2-CHECKPOINT-011-END -->
 <!-- SD2-CHECKPOINT-010-START -->
 <!-- SD2-CHECKPOINT-010-CLOSE-START -->
 - Final session closure audited200initial dispositions/3,939fieldholds/
