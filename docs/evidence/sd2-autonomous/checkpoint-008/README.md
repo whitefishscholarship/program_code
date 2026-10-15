@@ -11,8 +11,8 @@ AUTHORITY/POLICY supplies this research continuation, not canonical acceptance.
 
 Exactly offsets140–159/savedrows144–163 have initial held dispositions in
 ../checkpoint-008.json. Twenty inputs:13researched-held/5held-access/2held-identity;
-26source receipts,386newheld fields/20held identities,0accepted. Cumulative160/406
-initial dispositions,246unprocessed;3,032held autonomous fields/160held identities.
+26source receipts,387newheld fields/20held identities,0accepted. Cumulative160/406
+initial dispositions,246unprocessed;3,033held autonomous fields/160held identities.
 These are saved input keys, never accepted or distinct award counts. Next offset160,
 savedrow164: Elevated Access Advanced Rating Scholarship. FullSD2incomplete.
 
@@ -34,6 +34,9 @@ savedrow164: Elevated Access Advanced Rating Scholarship. FullSD2incomplete.
   postmark and scan-email instructions conflict. SubsequentSeptember1recipient
   paperwork/payment and publicityagreement retained without collecting values.
   OlderPDFalias deferred; no page/raw proof or source-silence inference.
+  Parent eligibility separately includes environmentalengineering/sustainability
+  and othermajors demonstrating environmentalemphasis. PDF ecology/hydrology/
+  water-quality-and-WLI-approval condition remains distinct; no accepted choice.
 - Hinderman:2026native/2025PDF distinct;April17,2026 versus historicalApril18;
   need/SAI versus olderEFC. Undeterminedamount/count,7thsemesterWHStranscript,
   seniorresume/twoletters/SAI/acceptedMontanainstitutionletter; graduationyearuse,
@@ -101,6 +104,8 @@ savedrow164: Elevated Access Advanced Rating Scholarship. FullSD2incomplete.
   11:59pmPT,activeLPA17+/accreditedUS-or-Territories institution/resume/twoletters/
   two500wordessays/enrollmentproofatAward. Parent terms/opening not accepted for
   savedAAchild; no membershipform/account/payment or new sponsor assumption.
+  Parent allfunds-direct-to-certified-educational-institution restriction has its
+  own held payment envelope. Its applicability to savedAAchild remains unverified.
 
 Every row's complete action and every field/identity/seed/source-link disposition
 has owner/trigger/nextAction in ../checkpoint-008.json. No hold is closed by a
@@ -157,3 +162,16 @@ two-file research review receipt is not canonical attestation or fact acceptance
 Do not rebind any original review, initialize/reset/replay, begin another checkpoint
 or SD3. No workbookaccess/write, app/configuration/CI change, login/forminteraction,
 providercontact/messages, remoteGit/release/deployment/monitoractivation.
+
+## Author remediation after independent review
+
+Original6be4038candidate/manifest-round1/review-round1/verification-round1 remain
+bound to their original bytes. IndependentC0/H0/M2/L0 found two structured-source
+omissions, not unsafe-download requirements. Two count-matched author fixes in
+remediation.json retain Ripple's parent major breadth separately from PDF scope,
+and LPA parent's direct-institution funding restriction separately from AAchild.
+Only the latter adds an envelope:386to387newfields/3,032to3,033cumulativeheldfields.
+All20identities and every field remain held,0accepted. Source artifacts/receipts,
+rawcustody/visuals and canonical/web/control/validation bytes stay exact. No source
+refresh, assembly rerun, reset/replay or new research. Replacement frozen-candidate
+independent recheck is required; author may not self-accept the fixes.

@@ -1,0 +1,35 @@
+{
+  "originalCandidate": "6be403829cbcf68bb075b6bfaee239c921b351b4",
+  "originalManifestSha256": "85ff9c613a90f1a0eb45daa7806aa1affb994a8bb0ab854d1ed10c0a855d9cdd",
+  "originalReviewSha256": "5f77c7a24b82b4ba1a4edd22e90c26abd2a0142b99343211ca55abf7d715069f",
+  "recordedAt": "2026-10-15T01:00:53.065231+00:00",
+  "requiredFixCount": 2,
+  "dispositions": [
+    {
+      "findingId": "SD2-008-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Preserved original PDF criteria plus separate parent named majors/other-environmental-emphasis qualification with exact retained parent evidence; every row146 route now explicitly reconciles variation. No source refresh or accepted criterion.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint008 candidate"
+    },
+    {
+      "findingId": "SD2-008-M2",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Added one separate held parent-scope payment envelope for direct-to-certified-institution funding, with exact retained quote, AA-child applicability unverified/acceptance false and all row162 routes updated. No payment/source action.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint008 candidate"
+    }
+  ],
+  "noNewSourceReadBuilderResetOrReplay": true,
+  "fieldTotalsBeforeAfter": [
+    386,
+    387
+  ],
+  "cumulativeHeldFieldsBeforeAfter": [
+    3032,
+    3033
+  ],
+  "acceptedFacts": 0
+}

@@ -40,9 +40,9 @@ for r,seed in zip(l['records'],q['records'][140:160]):
    s=reg[e['sourceId']];assert e['sourceId'] in r['allowedSourceIds']
    assert e['sourceUrl']==s['originalUrl'] and e['artifactSha256']==s['artifactSha256'] and e['artifactPath']==s['artifactPath']
    assert e['excerpt'] in (ROOT/e['artifactPath']).read_text() and e['locator'];refs+=1
-cov=l['coverage'];assert fields==cov['fieldEnvelopes']==386
+cov=l['coverage'];assert fields==cov['fieldEnvelopes']==387
 oldfields=sum(len(r['fieldProposals']) for c in prior for r in c['records']);assert oldfields==2646
-assert cov['cumulativeAutonomousHeldFields']==oldfields+fields==3032
+assert cov['cumulativeAutonomousHeldFields']==oldfields+fields==3033
 assert cov['cumulativeInitialDispositions']==cov['cumulativeAutonomousHeldIdentities']==160 and cov['unprocessedInputs']==246
 assert cov['outcomes']==dict(collections.Counter(r['outcome'] for r in l['records']))=={'researched-held':13,'held-access':5,'held-identity':2}
 rows={r['rowLocator']:r for r in l['records']}
@@ -51,6 +51,10 @@ assert rows[144]['fieldProposals']['applicationMethod']['state']=='conflict' and
 assert v(145,'amount')['perRecipient']==1000 and len(v(145,'amount')['onePerEachSchool'])==6
 assert reg['smile-doc']['unexpectedExternalRedirectHeld']
 assert v(146,'deadline')['year'] is None and v(146,'minimumGPA')['value']==3.0
+parent=v(146,'eligibility')['parentEligibilityScope'];assert parent['namedMajorExamples']==['environmental science/studies','environmental engineering','biology','sustainability']
+assert parent['otherMajorsCondition']=='demonstrate a link to an environmental emphasis' and v(146,'eligibility')['otherWaterQualityFieldNeedsWLIApproval'] and v(146,'eligibility')['parentAndPDFNotCollapsed']
+assert {e['sourceId'] for e in rows[146]['fieldProposals']['eligibility']['evidence']}=={'ripple','ripple-pdf'}
+assert 'Preserve parent environmental-engineering/sustainability' in rows[146]['nextAction']
 assert v(147,'amount')['value'] is None and v(147,'needRequirement')['currentDocument']=='SAI'
 assert {e['sourceId'] for e in rows[147]['fieldProposals']['deadline']['evidence']}=={'hinderman','hinderman-alias'}
 assert v(149,'eligibility')['RotaryLunchRecognitionRequired'] and v(149,'amount')['amountPaymentReconciliationUnresolved']
@@ -65,6 +69,13 @@ assert v(158,'deadline')['intendedExactDate'] is None and datetime.date(2027,5,1
 assert v(159,'cycle')['listingMarked']=='Awarded' and v(159,'eligibility')['HVACProgram']
 assert v(160,'renewability')['continuingCumulativeGPA']==2.5 and v(160,'amount')['maximumAdditionalRenewalYears']==3
 assert v(162,'opening')['savedAAChildOpeningAccepted'] is False and rows[162]['outcome']=='held-identity'
+payment=v(162,'payment');assert payment['allFundsSentDirectlyToCertifiedEducationalInstitution'] and payment['sourceScope'].startswith('LPA parent')
+assert payment['savedAmericanAirlinesChildApplicability']=='unverified' and not payment['acceptedForSavedAAChild'] and not payment['paymentActionPerformed']
+assert rows[162]['fieldProposals']['payment']['acceptance']=='held' and 'parent direct-to-certified-educational-institution' in rows[162]['nextAction']
+first=load(P/'review-round1.json');assert first['binding']['candidateCommit']=='6be403829cbcf68bb075b6bfaee239c921b351b4' and first['outcome']=='FAIL' and first['severityCounts']=={'critical':0,'high':0,'medium':2,'low':0}
+assert sha((P/'manifest-round1.json').read_bytes())==first['binding']['manifestSha256']
+assert (P/'verification-round1.json').read_bytes()==g('show','6be4038:docs/evidence/sd2-autonomous/checkpoint-008/verification.json')
+fix=load(P/'remediation.json');assert fix['requiredFixCount']==len(fix['dispositions'])==2 and {d['findingId'] for d in fix['dispositions']}=={d['id'] for d in first['findings']}
 for row in [155,161,163]:
  assert not rows[row]['allowedSourceIds'] and all(f['state']=='inaccessible' for f in rows[row]['fieldProposals'].values())
  assert rows[row]['outcome']=='held-access'
@@ -110,4 +121,4 @@ for f in [B/'checkpoint-008.json',P/'source-receipts.json',P/'capture-metadata.j
 allowed=mutable|{str((B/'checkpoint-008.json').relative_to(ROOT))};changed=set(g('diff','--name-only',entry).decode().splitlines())|set(g('ls-files','--others','--exclude-standard').decode().splitlines())
 assert all(x in allowed or x.startswith(str(P.relative_to(ROOT))+'/') for x in changed),changed
 g('diff','--check',entry)
-print(json.dumps(dict(outcome='PASS',checkpointInputs=20,cumulativeInitialDispositions=160,unprocessed=246,nextInputKey=l['nextInputKey'],fieldEnvelopes=fields,cumulativeHeldFields=3032,heldIdentities=160,sourceReceipts=26,evidenceReferences=refs,seedDispositions=seedcount,sourceLinkDispositions=linkcount,preservedEntryPaths=preserved,historicalManifestReviewsVerified=historical,priorCustodyPins=68,safePageViews=2,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False),indent=2))
+print(json.dumps(dict(outcome='PASS',checkpointInputs=20,cumulativeInitialDispositions=160,unprocessed=246,nextInputKey=l['nextInputKey'],fieldEnvelopes=fields,cumulativeHeldFields=3033,heldIdentities=160,sourceReceipts=26,evidenceReferences=refs,seedDispositions=seedcount,sourceLinkDispositions=linkcount,preservedEntryPaths=preserved,historicalManifestReviewsVerified=historical,priorCustodyPins=68,safePageViews=2,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False),indent=2))
