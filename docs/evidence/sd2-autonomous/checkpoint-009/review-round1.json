@@ -1,0 +1,66 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of one local SD2 held-research checkpoint",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint009_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": false
+  },
+  "binding": {
+    "entryCommit": "5b971ee6656d1fa3aa63f13354e5b6e8297dec76",
+    "candidateCommit": "fb370e5fad0987d304af8bf36d8c8e48eac8914e",
+    "candidateTree": "92f90dcd7c78859b0e4782f0ce69cb5b987a1fd5",
+    "manifestSha256": "23c18eaae19cf841d8ae9f7833383e8e5b42357609da464fd42a2476eabe19b6",
+    "completeDiffSha256": "ae69f2b9761c223fe9d0964d5ae4ef81c601c748e4143fc50087e2d278947a7c",
+    "changedPaths": 34
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 1, "low": 0},
+  "findings": [{
+    "id": "SD2-009-M1",
+    "severity": "medium",
+    "title": "Preserve actual link targets and explicitly unresolved redacted locators",
+    "paths": [
+      "docs/evidence/sd2-autonomous/checkpoint-009/source-receipts.json:194",
+      "docs/evidence/sd2-autonomous/checkpoint-009/source-receipts.json:379",
+      "docs/evidence/sd2-autonomous/checkpoint-009.json",
+      "docs/evidence/sd2-autonomous/checkpoint-009/assemble.py:28",
+      "docs/evidence/sd2-autonomous/checkpoint-009/verify.py"
+    ],
+    "evidence": "The NGPA FAQ artifact at sources/ngpa-about.md:25 contains the exact Markdown destination https://www.faa.gov/pilots/become/student_cert/. The registry instead stores the escaped display label, Markdown delimiter and destination as one malformed URL: https://www.faa.gov/pilots/become/student\\_cert/](https://www.faa.gov/pilots/become/student_cert/. The Looney parent artifact at sources/looney.md:9 contains a provider-redacted destination, but its registry disposition stores only https://br. Both defects also occur in the ledger's duplicated sourceRegistry. The broad URL regular expression in assemble.py produces these values, and the verifier does not validate link-target fidelity.",
+    "impact": "The packet claims exact, resumable source-link accounting, but these two dispositions do not preserve the observed target or explicitly represent its unresolved redaction. A later reconciliation could follow an invalid or truncated address while the local verifier reports PASS.",
+    "requiredRemediation": "Use the already retained artifacts to preserve the exact FAA destination and classify the complete displayed Looney destination as provider-redacted and unresolved, without reconstructing its host or claiming it is usable. Keep the independently pinned senior-application seed distinct. Correct both registry copies and the parser logic, and add focused read-only verification for Markdown destinations and redacted locators. Preserve owner/trigger/action routes and update affected evidence, counts or documentation only where necessary. Do not rerun assembly, source research, downloads or completed queue processing.",
+    "owner": "Codex implementation author",
+    "target": "Replacement frozen checkpoint009 candidate before independent recheck"
+  }],
+  "checksPerformed": [
+    "Read governing contracts, current progress pointer, AUTHORITY/POLICY, checkpoint008 review/wrap and checkpoint009 evidence.",
+    "Independently recomputed manifest SHA256, candidate tree and complete entry-to-candidate binary-diff SHA256.",
+    "Verified all34 changed paths, candidate blob IDs, byte lengths, SHA256 values and equality with the worktree.",
+    "Ran checkpoint009/verify.py successfully:20 ordered inputs,180 cumulative initial dispositions,226 pending,462 new held fields,3495 cumulative held fields,180 held identities,9 receipts,293 exact excerpt references,22 seed dispositions and22 source-link dispositions.",
+    "Compared material typed claims with retained selected source text, including LPA parent-child terms, absent-name holds, NGPA funding/material/cycle variants, conditional medical rules, nationality qualifiers, advocacy wording, Rollins dates/routes and Looney materials/payment/conversion limits.",
+    "Verified preservation checks covering all eight prior ledgers, historical manifest/review bindings, section9/handoff history,71 custody pins without gaps,12 M1 pins and437 unique M1 records.",
+    "Verified recorded plan/typecheck/full-test passes and both disclosed standard-build failures.",
+    "Ran complete entry-to-candidate git diff --check successfully.",
+    "Confirmed frozen candidate remains HEAD and only final-manifest.json is untracked.",
+    "No repository file was edited, and no assembly, replay, research, workbook access, network operation or external effect was performed."
+  ],
+  "limits": [
+    "No other actionable finding was identified in the reviewed retained evidence.",
+    "This review accepts no scholarship fact, identity, current offering, canonical stage, release or fullSD2 completion.",
+    "All3495 fields and180 identities remain held; accepted facts remain zero and SD3 remains unstarted.",
+    "Source revisions, origin currency, native public/sponsor continuity, current availability and portal usability remain unverified.",
+    "Looney PDF evidence is sanitized readable conversion only; no raw PDF, rendered-page, image, full-field or certification completeness proof was established.",
+    "Source-output narrowing lapses remain disclosed; persisted sanitization cannot erase earlier output.",
+    "Temporary custody checks establish local availability at review time only.",
+    "Both exact standard-build attempts remain process/portEPERM failures. Fresh authenticated main/target and all later preservation, acceptance, publication, student and monitoring gates remain open without waiver."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "Receipt of this independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-009/",
+    "action": "Preserve this original candidate and its manifest/review binding. Remedy SD2-009-M1 using retained evidence only, record a count-matched disposition, freeze a replacement candidate and request independent recheck. Do not begin another checkpoint or SD3."
+  }
+}

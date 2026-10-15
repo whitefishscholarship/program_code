@@ -1,0 +1,37 @@
+{
+  "originalCandidate": "fb370e5fad0987d304af8bf36d8c8e48eac8914e",
+  "originalManifestSha256": "23c18eaae19cf841d8ae9f7833383e8e5b42357609da464fd42a2476eabe19b6",
+  "originalReviewSha256": "de0994ddd55ddd27a926bd4509a423e069ba1c7ff781c168e8493278db5341ed",
+  "recordedAt": "2026-10-15T02:55:26.418237+00:00",
+  "requiredFixCount": 1,
+  "dispositions": [
+    {
+      "findingId": "SD2-009-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Corrected exact FAA Markdown destination; retained complete provider-redacted Looney locator as unresolved with null usable URL, no reconstructed host and separate queued seed. Updated both registry copies and parser; added exact target-accounting checks. All owner/trigger/nextAction routes,20 records/462fields/facts/sourceartifacts/custody/matrix unchanged.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint009 candidate"
+    }
+  ],
+  "locatorCorrections": [
+    {
+      "sourceId": "looney",
+      "oldMalformedValue": "https://br",
+      "observedTarget": "https://br<PRIVATE_PERSON>foundation.org/senior-application",
+      "owner": "Codex source/identity reconciliation",
+      "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+      "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+    },
+    {
+      "sourceId": "ngpa-about",
+      "oldMalformedValue": "https://www.faa.gov/pilots/become/student\\_cert/](https://www.faa.gov/pilots/become/student_cert/",
+      "observedTarget": "https://www.faa.gov/pilots/become/student_cert/",
+      "owner": "Codex source/identity reconciliation",
+      "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+      "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+    }
+  ],
+  "noNewSourceReadDownloadAssemblyResetOrReplay": true,
+  "acceptedFacts": 0
+}

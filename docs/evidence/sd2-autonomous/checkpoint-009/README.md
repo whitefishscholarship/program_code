@@ -138,3 +138,15 @@ independent review, and have the implementation author remedy/recheck findings.
 Review PASS can establish only local held-research fidelity, never accepted facts,
 canonical stage completion, a release or fullSD2 completion. A later separate wrap
 must carry every route without rebinding this source review.
+
+## Author remediation after independent review
+
+Original fb370e5/manifest-round1/review-round1/verification-round1 remain bound
+to their own bytes. One medium source-link accounting finding was author-fixed
+using retained artifacts only: exact FAA target separated from its display label;
+complete provider-redacted BLF locator explicitly unresolved with url=null, no
+host reconstruction or usable-route claim. The exact independently pinned senior
+seed remains distinct. Both registry copies/parser/target checks corrected; every
+owner/trigger/action, sourceartifact and scholarship field/value remains unchanged.
+No source refresh/download/assembly rerun/reset/replay. Replacement independent
+recheck required; remediation.json has the sole count-matched author disposition.

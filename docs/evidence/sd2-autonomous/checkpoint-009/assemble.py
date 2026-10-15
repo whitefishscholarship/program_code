@@ -1,6 +1,7 @@
 """Assemble this new offset160 packet once; never modify/replay a prior ledger."""
 from pathlib import Path
 import json, hashlib, datetime, subprocess, re, collections
+from link_targets import observed_targets, is_redacted
 P=Path(__file__).resolve().parent; B=P.parent; ROOT=P.parents[3]
 load=lambda p:json.loads(p.read_text()); sha=lambda b:hashlib.sha256(b).hexdigest()
 ENTRY='5b971ee6656d1fa3aa63f13354e5b6e8297dec76'
@@ -25,11 +26,13 @@ for m in meta:
   parentSourceId=parents.get(m['id']),sourceScope=m['retainedScope'],linkDispositions=[],
   nativePublicSponsorContinuityVerified=False,completeRawPageImageInspection=False,
   **route('Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits.'))
- for u in dict.fromkeys(re.findall(r'https?://[^\s<>)]+',text)):
-  u=u.rstrip('.,;'); matched=[x['id'] for x in meta if x['originalUrl']==u]
+ for u in observed_targets(text):
+  matched=[x['id'] for x in meta if x['originalUrl']==u]
   locator=any(x in u.lower() for x in ['neoncrm','tally.so','/applynow','/join','member_levels'])
   s['linkDispositions'].append(dict(url=u,sourceIds=matched,disposition='inspected-selected-source' if matched else 'locator-only-no-action' if locator else 'deferred-material-or-out-of-selected-scope',
    **route('Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference.')))
+  if is_redacted(u):
+   s['linkDispositions'][-1].update(url=None,redactedLocator=u,disposition='held-provider-redacted-locator',usableUrlEstablished=False,doesNotReplacePinnedSeed=True)
  if m['id']=='ngpa':s['selectedTableAccounting']={'retrievedAwardRows':21,'retainedRowsForSelectedNames':13,'unrelatedRowsExplicitlyExcluded':8,'selectedInputNames':9}
  if m['id']=='lpa':s['selectedProgramAccounting']={'retrievedProgramHeadings':5,'selectedHeadingsRetained':4,'unrelatedDispatcherChildExcluded':1,'fiveSavedNamesNotEstablished':True}
  if m['id']=='looney-pdf':s.update(externalDocumentRelationship='Exact PDF link embedded by queued senior-application page; hosting link is observed, independent sponsor/native authority unverified',rawDownloadPerformed=False,conversionPageMarkers=[1,2,3,4,5],blankFieldsOmitted=True,sourceSilenceClaimed=False)

@@ -1,6 +1,7 @@
 """Read-only evidence, complete denominator, held-state and preservation audit."""
 from pathlib import Path
 import json, hashlib, subprocess, collections, re
+from link_targets import observed_targets, is_redacted
 P=Path(__file__).resolve().parent; B=P.parent; ROOT=P.parents[3]
 load=lambda p:json.loads(p.read_text());sha=lambda b:hashlib.sha256(b).hexdigest()
 g=lambda *a:subprocess.check_output(['git',*a],cwd=ROOT)
@@ -24,6 +25,13 @@ for s in reg.values():
  assert s['callStartedAt']<=s['callCompletedAt']==s['observedAt']
  assert not s['rawArtifactRetained'] and not s['originFreshnessVerified']
  assert sha((ROOT/s['artifactPath']).read_bytes())==s['artifactSha256']
+ targets=observed_targets((ROOT/s['artifactPath']).read_text())
+ assert len(targets)==len(s['linkDispositions'])
+ for target,d in zip(targets,s['linkDispositions']):
+  if is_redacted(target):
+   assert d['url'] is None and d['redactedLocator']==target and d['disposition']=='held-provider-redacted-locator'
+   assert not d['usableUrlEstablished'] and d['doesNotReplacePinnedSeed'] and not d['sourceIds']
+  else:assert d['url']==target and 'redactedLocator' not in d
  if s['parentSourceId']:
   parent=reg[s['parentSourceId']];assert s['depth']==parent['depth']+1
   # Every followed URL must appear verbatim in its selected parent artifact.
@@ -31,7 +39,13 @@ for s in reg.values():
  else:assert s['originalUrl'] in seedurls
  for d in s['linkDispositions']:
   assert all(d.get(k) for k in ['owner','trigger','nextAction','disposition']);linkcount+=1
-  assert set(d['sourceIds'])<=set(reg)
+ assert set(d['sourceIds'])<=set(reg)
+assert observed_targets('[https://a.example/display\\_path/](https://b.example/actual_path/)')==['https://b.example/actual_path/']
+assert observed_targets('[x](https://br<PRIVATE_PERSON>foundation.org/senior-application)')==['https://br<PRIVATE_PERSON>foundation.org/senior-application']
+assert any(d['url']=='https://www.faa.gov/pilots/become/student_cert/' for d in reg['ngpa-about']['linkDispositions'])
+assert len([d for d in reg['looney']['linkDispositions'] if d['url'] is None])==1
+assert all(d['url']!='https://br' for d in reg['looney']['linkDispositions'])
+assert reg['looney-senior']['originalUrl']=='https://brendanlooneyfoundation.org/senior-application'
 for r,seed in zip(l['records'],q['records'][160:180]):
  for k in ['inputKey','rowLocator','recordedName','publicIdCandidates','identityAcceptance','recordedSeedUrls','publishedSourceAliases']:assert r[k]==seed[k]
  assert r['identityAcceptance']=='held' and r['status']==r['outcome']
@@ -82,6 +96,20 @@ assert len(v(180,'amount')['variants'])==3 and sum(x['slots'] for x in v(180,'am
 assert v(181,'eligibility')['applicantGenderIdentityRestriction'] is None and v(182,'eligibility')['applicantWomenOnlyRestriction'] is None
 assert 'payment' not in rows[183]['fieldProposals']
 assert reg['ngpa']['selectedTableAccounting']=={'retrievedAwardRows':21,'retainedRowsForSelectedNames':13,'unrelatedRowsExplicitlyExcluded':8,'selectedInputNames':9}
+original='fb370e5fad0987d304af8bf36d8c8e48eac8914e'
+originalLedger=json.loads(g('show',original+':docs/evidence/sd2-autonomous/checkpoint-009.json'))
+assert l['records']==originalLedger['records'] and l['coverage']==originalLedger['coverage']
+for s,old in zip(l['sourceRegistry'],originalLedger['sourceRegistry']):
+ assert {k:v for k,v in s.items() if k!='linkDispositions'}=={k:v for k,v in old.items() if k!='linkDispositions'}
+ for d,previous in zip(s['linkDispositions'],old['linkDispositions']):
+  for key in ['owner','trigger','nextAction','sourceIds']:assert d[key]==previous[key]
+old=dict(originalLedger);old['sourceRegistry']=l['sourceRegistry'];assert old==l
+first=load(P/'review-round1.json');fix=load(P/'remediation.json')
+assert first['outcome']=='FAIL' and first['severityCounts']=={'critical':0,'high':0,'medium':1,'low':0}
+assert first['binding']['candidateCommit']==original and first['binding']['manifestSha256']==sha((P/'manifest-round1.json').read_bytes())
+assert fix['requiredFixCount']==len(fix['dispositions'])==1 and fix['dispositions'][0]['findingId']==first['findings'][0]['id']
+assert fix['originalReviewSha256']==sha((P/'review-round1.json').read_bytes()) and len(fix['locatorCorrections'])==2
+assert (P/'verification-round1.json').read_bytes()==g('show',original+':docs/evidence/sd2-autonomous/checkpoint-009/verification.json')
 # All prior candidate/manifest/review bindings remain historical, never rebound.
 historical=0
 for i in range(2,9):
