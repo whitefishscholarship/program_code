@@ -354,6 +354,45 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-010-START -->
+- October14,2026: one bounded checkpoint010 completes frozen offsets180–199,
+  saved184–203, beginning PSA Airlines Flight Scholarship (NGPA). Ledger/packet:
+  sd2-autonomous/checkpoint-010.json and checkpoint-010/.20initial outcomes:
+  18researched-held/2held-identity;6receipts (3new/3unchangedNGPAcommon reuses),
+  444newheldfields/20identities,0accepted. Cumulative200/406initial dispositions,
+  206unprocessed;all3,939fields/200identities held.314seed-alias/809source-link
+  occurrences preserve exact owner/trigger/action. FullSD2 incomplete.
+- Independent PASS C0/H0/M0/L0 binds e4c6a5bb441918adf7b9e8c69150bba3754c4d3a;
+  exact local two-file receipt 8bba35859fe96a443972200e9a81eb7634e63703.
+  final-manifest/review control. Original120bb75/round1manifest-review-verification
+  preserved. One medium guard-retention finding author-fixed/independentlyrechecked;
+  no pending reviewer repair/recheck/delegated work. Earlier candidate retains the
+  original guard exposure: Codex evidence/governance/delivery discloses and assesses
+  handling at any later authorized history-preservation/acceptance/publication
+  review. No erasure claim/history rewrite. Final tooling scans all packet files.
+- Every prior/new field/identity/seed/link/material stays with original Codex owner
+  at applicable authorized evidencearrival/SD2consolidation; exact actions in ledger/
+  SESSION_WRAP. Keep six NGPA children/common cycle-material/nationality/medical
+  qualifiers; AFSA2026dates/explicit noGPA-income; WAI13profiles/common minima,
+  AOPA300/500essay and conditional3.0, Boeing shouldGPA, both redacted Wings titles
+  unmapped with no ordinal mapping. Future offerings/route/native-public unverified.
+- Every priorpacket/PRELUDE/nineledgers/history/nineattentionrows/supplements/437M1
+  ownertrigger stays exact. All71temporarycustodypins matched; next required audit
+  verifies paths/hashes or reports gaps preserving receipts, no reacquisition/
+  reconstruction/replay. Before every sourcecall/output narrow/sanitize; all
+  outputlapses/NGPAtiming/WAIconversion and prior BLFredactedlocator/rawbatch/WET/
+  Clerk/Davis/interimreceipt limits retain exact routes. Git-index retry resolved.
+- Plan/type/fulltests/evidence/history/full-diff PASS; both exact standardbuilds
+  remain process/portEPERM; fresh authenticated main/target unverified. Every
+  nativepreservation/backup/recovery/permission,human/canonical/publication,
+  student/CSV/browser and seasonalM1/SD5setup/effect gate retains original owner/
+  trigger. Separate handoff never rebinds source review or accepts facts.
+- Next-session Codex resumes offset200/savedrow204, Boeing Maintenance Training
+  Scholarship, under existing AUTHORITY/POLICY. Never initialize/reset/replay;
+  stop before SD3. Short kickoff:NEXT_SESSION.md. Closure:checkpoint-010/
+  SESSION_WRAP.md and wrap-verification.json. No workbook/app/configuration/CI,
+  login/forms/contact/messages,remoteGit/release/monitoractivation or SD3.
+<!-- SD2-CHECKPOINT-010-END -->
 <!-- SD2-CHECKPOINT-009-START -->
 <!-- SD2-CHECKPOINT-009-CLOSE-START -->
 - Final session closure audited all180initial dispositions/3,495fieldholds/

@@ -1,3 +1,60 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
+STUDENT_DATA_AND_MAINTENANCE_PLAN section9 (sole progress pointer), autonomous
+AUTHORITY/POLICY and checkpoint-010.json plus checkpoint-010/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+wrap-verification.json}. Preserve original120bb75/manifest-round1/review-round1/
+verification-round1 and every checkpoint001–009/history unchanged.
+
+Resume one bounded SD2 checkpoint at offset200/savedrow204:
+Boeing Maintenance Training Scholarship.206frozen inputs remain;200initial
+outcomes/3,939fieldholds/200identityholds,0accepted. Existing AUTHORITY/POLICY
+permits routine research/GPTreview without renewed human checkpoint approval.
+Never initialize/reset/replay. FullSD2 incomplete; stop before SD3.
+
+Independent PASS C0/H0/M0/L0 binds e4c6a5bb441918adf7b9e8c69150bba3754c4d3a;
+exact local two-file receipt 8bba35859fe96a443972200e9a81eb7634e63703. One medium
+retained-date guard finding author-fixed/independentlyrechecked; no pending
+reviewer repair/recheck/delegated work. Original failed candidate/review/manifest/
+verification retain their own bytes. Final verifier uses nonliteral structural
+checks across all new packet text including itself. Immutable original guard
+retention remains disclosed: Codex evidence/governance/delivery owns exact handling
+at any later authorized history-preservation/canonical-acceptance/publication
+review. No claim of erasure or history rewrite; no external publication selected.
+
+Next-session Codex owns all original/new field/identity/seed/link/material routes
+at applicable authorized evidence arrival or SD2 consolidation. Exact row actions
+in ledger/SESSION_WRAP. Preserve six distinct NGPA children/common conflicts/
+medical-nationality qualifiers; AFSA2026window/explicit noGPA-income; WAIcommon
+minimums, AOPA300/500essay and conditional GPA, Boeing shouldGPA and BOTH Wings
+redacted profile candidates with no ordinal assignment. All314seed-alias/809
+source-link occurrences, original five packets/PRELUDE/nineledgers/history,
+nineattentionrows/every supplement and437M1IDs/routes/owners/triggers remain exact.
+
+Before every source call/output narrow program/minimalmetadata and sanitize all
+values/images; no full duplicated envelopes/signedrefs/contact/account/recipient/
+biography/unrelated scope. Earlier/current output lapses remain disclosed; provider
+redactPII alone insufficient. NGPA corrected-call time is subsequent record time,
+not exact measured start/end. WAI is selected readable conversion only, not raw/
+page/image/fullfield proof;13profiles share one source. Plain WAIhost-path has
+url=null/no invented scheme. Prior BLFredactedlocator/FAAexacttarget/rawbatch/
+Herriges-DonK/WET403/Clerkvisual/Davisrecovery/interim-final receipt limits unchanged.
+At next required rawmaterial use/audit verify71recordedtemporarycustody paths/
+hashes or preserve receipts/report gaps; no reconstruction/reacquisition/replay.
+
+Both exact standard-build process/portEPERM and fresh authenticated main/target
+remain with Codex before canonical acceptance/authorized release. Every native
+preservation/backup/recovery/permission,human/canonical/publication,student/CSV/
+browser and seasonalM1/SD5setup/effect gate retains original owner/trigger. No
+workbookaccess/write,app/config/CI,login/forms/contact/messages,remoteGit/release/
+monitoractivation or SD3. Git-index retry resolved locally. Recommended effort:High.
+Closure:checkpoint-010/SESSION_WRAP.md and wrap-verification.json. This separate
+handoff never rebinds independent research review or accepts facts.
+
+Previous authoritative kickoff retained as history below; the new packet above controls.
+
+---
+
 Final session closure: checkpoint-009/SESSION_CLOSE.md and
 session-close-verification.json. All open items retain exact owner/trigger/action;
 no pending reviewer repair/recheck/delegated work. Follow plansection9 as the sole
