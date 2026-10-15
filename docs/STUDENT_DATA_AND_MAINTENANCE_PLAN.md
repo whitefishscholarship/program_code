@@ -355,6 +355,22 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-013-START -->
+<!-- SD2-CHECKPOINT-013-CLOSE-START -->
+- Final session closure audited260initialdispositions/5,041fieldholds/
+  260identityholds,398seed-alias/909source-link occurrences,every owner/trigger/
+  action,nineattentionrows/supplements and437M1routes. Evidence:checkpoint-013/
+  SESSION_CLOSE.md and session-close-verification.json. Original candidate,
+  round1/finalreview/receipts/19f407fhandoff remain exact. Two review findings
+  author-fixed/independentlyrechecked;no pending reviewer repair/recheck/delegation.
+  Next-session Codex resumes offset260/savedrow265 under existing AUTHORITY/POLICY.
+  Sourceoutput/conversion/timing/redactedidentity/custody/current/public/native
+  and every prior NGPA/BLF/rawbatch/Herriges-DonK/WET/Clerk/Davis/interimreceipt/
+  historicalguardretention limit retains exact owner/trigger/action. Build/freshmain
+  and later preservation/acceptance/student/monitor/effect gates remain open.
+  Local draft/helper corrections resolved;no new research/reset/replay/acceptance/
+  external effect orSD3. Recheck with checkpoint-013/verify-session-close.py;
+  original verifiers retain their pre-close allowlists/bindings. Effort:High.
+<!-- SD2-CHECKPOINT-013-CLOSE-END -->
 - October15,2026: one bounded checkpoint013 completes frozenoffsets240–259/
   saved244–264, beginning Captain Judy Rice Pilot Scholarship;255alreadyexcluded.
   Ledger/packet:sd2-autonomous/checkpoint-013.json and checkpoint-013/.

@@ -1,3 +1,13 @@
+Final session closure:checkpoint-013/SESSION_CLOSE.md and
+session-close-verification.json. Every open item retains exact owner/trigger/
+action;no pending reviewer repair/recheck/delegatedwork. Follow plansection9
+as sole progress pointer,then the authoritative checkpoint013 kickoff below.
+Resume one bounded SD2 checkpoint at offset260/savedrow265,Bulkthreads.com's
+"Let's Aim Higher" Scholarship. Never initialize/reset/replay;stop before SD3.
+Existing AUTHORITY/POLICY and all later gates unchanged. For closure recheck use
+checkpoint-013/verify-session-close.py;earlier verifiers retain pre-close
+allowlists/bindings. Recommended next-session effort:High.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),

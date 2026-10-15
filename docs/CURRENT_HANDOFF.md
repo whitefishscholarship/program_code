@@ -1,3 +1,25 @@
+# Session closed — checkpoint013 obligations audited
+
+Original one-bounded-SD2-checkpoint goal is complete within local held-research
+limits. Finalclosure:sd2-autonomous/checkpoint-013/{SESSION_CLOSE.md,
+session-close-verification.json}. Section9 remains sole progress pointer;
+SESSION_WRAP.md/thirteenledgers retain every owner/trigger/action. NEXT_SESSION.md
+resumes offset260/savedrow265 under existing AUTHORITY/POLICY. All260initial
+outcomes/5,041fieldholds/260identityholds remain held,0accepted;146unprocessed.
+Every reviewbinding/nineattentionrow/supplement/437M1route stays exact. Two review
+findings fixed/rechecked;no pending reviewer repair/recheck/delegatedwork.
+All sourceoutput/conversion/timing/redactedidentity/custody/current/public/native
+and prior NGPA/BLF/rawbatch/Herriges-DonK/WET/Clerk/Davis/interimreceipt/historical
+retention limits plus build/freshmain/later gates retain original owners/triggers/
+actions. Local draft/helper corrections resolved. No new research/reset/replay/
+acceptance/external effect orSD3 during closure. Closure recheck:checkpoint-013/
+verify-session-close.py;earlier verifiers retain originalallowlists/bindings.
+Recommended next-session effort:High.
+
+Previous handoff preserved byte-for-byte below.
+
+---
+
 # SD2 checkpoint013 independently reviewed — resume offset260
 
 One bounded local held-research checkpoint is complete. Read
