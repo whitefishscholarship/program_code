@@ -1,0 +1,15 @@
+{
+  "recordedAt": "2026-10-15T02:58:49.019014+00:00",
+  "timestampLimit": "Record time; exact original Git command time not retained",
+  "commands": [
+    "git add docs/evidence/sd2-autonomous/checkpoint-009",
+    "git commit -m 'docs(sd2): restore every-link integrity verification'"
+  ],
+  "initialExitCode": 128,
+  "error": "Unable to create shared worktree index.lock: Operation not permitted",
+  "owner": "Codex local checkpoint owner",
+  "trigger": "Before final candidate freeze",
+  "nextAction": "Retry exact task-owned local stage/commit through permitted shared-index execution; no remote Git or external effects",
+  "unreviewedWrongHeadManifestDiscarded": true,
+  "explanation": "Manifest generated after rejected commit still named round2 HEAD; caught before any review/binding and discarded. Original round2 manifest remains exact."
+}

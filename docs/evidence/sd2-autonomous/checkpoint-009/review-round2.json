@@ -1,0 +1,55 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only remediation recheck; local held research only",
+  "reviewer": {"identity": "/root/sd2_checkpoint009_review", "authoredOrEdited": false, "readOnly": true, "networkOrExternalActions": false},
+  "binding": {
+    "entryCommit": "5b971ee6656d1fa3aa63f13354e5b6e8297dec76",
+    "candidateCommit": "64aa516f7c2cee7fc1ea0e657be825103257c60f",
+    "candidateTree": "1620f487beb6f32e76ee80d1243dadca909e090a",
+    "manifestSha256": "09a828573af4879e399be55e114060ab691c14cf9bfe371f74aa277f29a96b2d",
+    "completeDiffSha256": "14fa9fe40955be7778d2d5a0768f5fa23eafa5e778961b9438b879ef2c41c91d",
+    "changedPaths": 39
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 1},
+  "dispositions": [{
+    "findingId": "SD2-009-M1", "status": "resolved-independently-rechecked",
+    "evidence": "Both registry copies now retain the exact FAA destination. The complete provider-redacted Looney locator is explicitly held with url=null, usableUrlEstablished=false and doesNotReplacePinnedSeed=true. The original exact queued senior-application seed remains separate. Parser fixtures and generic target accounting cover the observed cases. Source artifacts, factual records, coverage totals, owners, triggers, next actions and sourceIds remain unchanged."
+  }],
+  "findings": [{
+    "id": "SD2-009-L1", "severity": "low", "title": "Restore source-ID validation for every link disposition",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-009/verify.py:42",
+    "evidence": "The remediation moved assert set(d['sourceIds'])<=set(reg) outside the for d in s['linkDispositions'] loop. It now checks only the last disposition of each nonempty source and reuses a preceding source's d when the current source has no dispositions.",
+    "impact": "This weakens the original all-link integrity guard. An unknown sourceId in an earlier disposition can evade that check. Independent inspection confirms the current22 dispositions contain only valid sourceIds, so no current scholarship data corruption was found.",
+    "requiredRemediation": "Restore the assertion inside the per-disposition loop. Preserve all source and factual evidence. Re-run the read-only verifier and full entry-to-candidate whitespace check, freeze the replacement, and request independent recheck.",
+    "owner": "Codex implementation author", "target": "Final replacement checkpoint009 candidate"
+  }],
+  "originalReviewPreservation": {
+    "originalCandidate": "fb370e5fad0987d304af8bf36d8c8e48eac8914e",
+    "originalManifestSha256": "23c18eaae19cf841d8ae9f7833383e8e5b42357609da464fd42a2476eabe19b6",
+    "originalReviewSha256": "de0994ddd55ddd27a926bd4509a423e069ba1c7ff781c168e8493278db5341ed",
+    "transcriptionMatchesOriginalResponse": true, "originalManifestBytesVerified": true,
+    "originalCandidateBlobHashesVerified": true, "originalVerificationBytesVerified": true,
+    "countMatchedMediumDispositionVerified": true
+  },
+  "checksPerformed": [
+    "Reviewed the complete original-to-replacement eleven-path change set.",
+    "Recomputed replacement manifest, tree, complete diff and all39 candidate blob hashes, byte lengths and worktree equality.",
+    "Ran verify.py successfully:20 inputs,180 cumulative dispositions,226 pending,462 new held fields,3495 cumulative fields,180 held identities,9 receipts,293 evidence references,22 seed dispositions and22 source-link dispositions.",
+    "Independently checked sourceIds for all22 link dispositions.",
+    "Confirmed scholarship records and coverage equal the original candidate exactly.",
+    "Confirmed source artifacts, custody evidence, validation matrices, prior ledgers and historical bindings remain preserved.",
+    "Reverified71 custody pins without gaps,12 M1 pins and437 unique M1 records.",
+    "Complete entry-to-candidate git diff --check passed.",
+    "Confirmed replacement is HEAD and only final-manifest.json is untracked.",
+    "No edits, assembly, research, downloads, replay, workbook access, network operation or external effect."
+  ],
+  "limits": [
+    "Original substantive source review remains applicable because factual records and source artifacts are unchanged.",
+    "All3495 fields and180 identities remain held; zero facts accepted; fullSD2 incomplete; SD3 unstarted.",
+    "Both exact standard-build failures and fresh authenticated main/target remain open without waiver.",
+    "Source currency, native public/sponsor continuity, portal usability and raw/page/image completeness remain unverified.",
+    "Looney PDF conversion limitations and source-output handling disclosures remain unchanged.",
+    "All later preservation, human/canonical acceptance, publication, student, monitoring and reserved-effect gates remain open at their original owners and triggers."
+  ],
+  "nextAction": {"owner": "Codex implementation author", "trigger": "Receipt of this recheck", "path": "docs/evidence/sd2-autonomous/checkpoint-009/", "action": "Preserve the round2 binding, remedy SD2-009-L1, record its disposition, freeze the final replacement and request independent recheck. No new source processing or later stage."}
+}

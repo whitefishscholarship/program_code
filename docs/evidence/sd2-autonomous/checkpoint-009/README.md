@@ -150,3 +150,10 @@ seed remains distinct. Both registry copies/parser/target checks corrected; ever
 owner/trigger/action, sourceartifact and scholarship field/value remains unchanged.
 No source refresh/download/assembly rerun/reset/replay. Replacement independent
 recheck required; remediation.json has the sole count-matched author disposition.
+
+Round2 independent review resolved SD2-009-M1 and identified SD2-009-L1:
+per-link source-ID guard had moved outside its loop. Author restored the guard
+for every disposition. Round2 candidate64aa516/manifest/review/verification are
+preserved; remediation-round2.json records the sole count-matched low fix. All
+records, fields, source artifacts/registries/custody and matrix evidence stay exact.
+No research/assembly/reset/replay. Final replacement independent recheck required.

@@ -39,7 +39,7 @@ for s in reg.values():
  else:assert s['originalUrl'] in seedurls
  for d in s['linkDispositions']:
   assert all(d.get(k) for k in ['owner','trigger','nextAction','disposition']);linkcount+=1
- assert set(d['sourceIds'])<=set(reg)
+  assert set(d['sourceIds'])<=set(reg)
 assert observed_targets('[https://a.example/display\\_path/](https://b.example/actual_path/)')==['https://b.example/actual_path/']
 assert observed_targets('[x](https://br<PRIVATE_PERSON>foundation.org/senior-application)')==['https://br<PRIVATE_PERSON>foundation.org/senior-application']
 assert any(d['url']=='https://www.faa.gov/pilots/become/student_cert/' for d in reg['ngpa-about']['linkDispositions'])
