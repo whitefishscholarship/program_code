@@ -1,3 +1,51 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY,checkpoint-014.json and checkpoint-014/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+wrap-verification.json}. Preserve original5351727/round1 and all earlier bindings.
+
+Resume one bounded SD2 checkpoint at offset280/savedrow285:
+Heroes' Legacy Scholarship (Fisher House).126 frozen inputs remain;280 initial
+outcomes,5,341 held fields,280 held identities,0 accepted facts. Existing authority
+permits routine research/GPT review without renewed checkpoint approval. Never
+initialize/reset/replay;preserve every hold/review binding;stop before SD3.
+
+Independent PASS C0/H0/M0/L0 binds 01936d4ccc1fca1fe02f4c8e8076681bb44fc65a;
+local two-file receipt:b7023529967e1f179ebb239f1667035d5d44fe71.3medium/1low findings fixed/rechecked;no pending
+reviewer work. Every earlier packet/PRELUDE/14 ledgers, nine attention rows/all
+supplements and437 M1 routes/owners/triggers remain exact.433 seed/alias and934
+source-link occurrences retain actions. Codex owns holds at applicable authorized
+evidence arrival or SD2 consolidation. Exact row actions remain in ledger/README/
+wrap:preserve enrollment modalities,phase materials,entry/renewal GPA,CSKT document
+alternatives/timing/late priority,NESA general membership versus Cooke conditions,
+redacted identities,Point calendar-year unknown,Gates status/date conflict and
+FFA sponsor/shared variants. No union/intersection as accepted current criteria.
+
+Before every source call/output narrow program/minimal metadata and sanitize all
+text/images/links/queries/extensions. Earlier output and original rejected-candidate
+exposure remain disclosed;final sanitization does not erase history. Codex evidence/
+governance/delivery assesses handling before later authorized evidence/history/
+canonical/publication work. Qualifiers were restored from original in-session
+conversions only;no new read/reconstruction. Author concordance never proves
+original/native/page/image/form completeness,source silence or current/public
+continuity. Native version/checksum,unexpected DOCX,historical Oratory,national
+rules,dynamic files and all prior NGPA/WAI/BLF/raw-batch/Herriges-DonK/WET/Clerk/
+Davis/interim-receipt/historical-guard limits retain original owners/triggers/actions.
+At next required raw use/audit verify71 original temporary paths/hashes or preserve
+receipts/report gaps;no reacquisition/reconstruction/completed-input replay.
+
+Both exact standard-build process/port EPERM,fresh authenticated main/target and
+every preservation/backup/recovery/permission,human/canonical/publication,student/
+CSV/browser and437 M1/SD5/effect gate retain original owners/triggers/actions.
+No workbook/app/configuration/CI,login/forms/contact/messages,remote Git/release/
+deployment,monitor activation or SD3. Full SD2 is incomplete. Closure:checkpoint-014/
+SESSION_WRAP.md and wrap-verification.json. Recommended effort:High.
+
+Previous authoritative kickoff retained as history below;new packet above controls.
+
+---
+
 Final session closure:checkpoint-013/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains exact owner/trigger/
 action;no pending reviewer repair/recheck/delegatedwork. Follow plansection9
