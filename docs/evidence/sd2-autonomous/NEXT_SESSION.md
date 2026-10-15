@@ -1,3 +1,55 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS read order, then complete
+STUDENT_DATA_AND_MAINTENANCE_PLAN section9 (sole progress pointer), autonomous
+AUTHORITY/POLICY, checkpoint-008.json and checkpoint-008/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+wrap-verification.json}. Preserve original6be4038/manifest-round1/review-round1/
+verification-round1 and every checkpoint001–007/history byte unchanged.
+
+Resume one later bounded SD2 checkpoint at offset160/savedrow164:
+Elevated Access Advanced Rating Scholarship.246frozeninputs remain;160initial
+dispositions/3,033fieldholds/160identityholds,0accepted. Existing AUTHORITY/POLICY
+permits routine research/GPTreview without renewed human approval. Never
+initialize/reset/replay. FullSD2incomplete;stopbeforeSD3.
+
+Independent PASS C0/H0/M0/L0 binds2c59114f643ea90f84e55a43f7e73dba2b57dbba; exact
+local two-file reviewreceiptde40c298624280cc671bc1134213b1e7ef0bd600. Two medium fixes
+independentlyrechecked: Ripple parentmajorbreadth separately fromPDFwaterquality
+criteria; LPAparent directinstitutionpayment separately fromunresolvedAAchild.
+No pending reviewerrepair/recheck. Every row-specific action/heldfield/source/seed/
+link/material route is in ledger/wrap; all272seed-alias/766source-link occurrences,
+nineattentionrows/every supplement/437M1ownertrigger and all historicalbindings exact.
+
+Next-session Codex owns every original/new hold on its applicable authorized
+evidencearrival or SD2consolidation trigger. Carry PEOtypedconflict;SmileCDN/sixschools;
+RippleparentPDF;HindermanSAI/EFC/currentyear;Rotarygapyear/ceremonies/payment;
+Herrigesapplication/DonKrawgaps;Stimpsonmaterials;EvelynRainbow/code;Explorercategories/
+redemption/supplements;Sloanhardship;BigSkyweekday;ActionAirawarded;Kuchenbrodrenewal;
+LPA-AAidentity/funding;Donley/Allegra/Anneapplicationonly holds and every olderpacket/
+PRELUDE/child/date/GPA/need/material/identity route. No acceptedfacts or mergedchildren.
+
+Before every next sourcecall/output narrow selectedprogram/minimalmetadata and
+sanitize values/images first. Do not forward duplicated envelopes/signedrefs/
+contacts/maintainer/unrelated scope. Source-output lapses remain disclosed. Automatic
+review rejected rawbatch for unverifiedblankness/possibleapplicantPII; safer
+connector-readable alternatives and held gaps completed packet; no deniedbatch
+retry/bypass. At next required rawaudit verify exact68priorpins plus3newPEOPDF/views
+custody paths/hashes or retain receipts/reportgaps; no reconstruction/reacquisition/
+completedresearch replay. Other raw/page/image/nativepublicsponsor/sourcecurrency
+proofs unknown. PriorWET403/Clerkvisual/Davisrecovery/interimreceipt limits unchanged.
+
+Both exact standardbuild process/portEPERM and fresh authenticated main/target stay
+with Codex before canonicalacceptance/authorizedrelease. All nativepreservation/
+backup/recovery/permission,human/canonical/publication/student/CSV/browser and
+seasonalM1/SD5setup/effect gates retain original owner/trigger. No workbookaccess/
+write,app/config/CI,login/forms/contact/messages,remoteGit/release/monitoractivation.
+Recommended effort:High. Final closeout:checkpoint-008/SESSION_WRAP.md and
+wrap-verification.json. This handoff never rebinds independent source review.
+
+Previous authoritative kickoff retained as history below; the new packet above controls.
+
+---
+
 Final closeout is checkpoint-007/SESSION_CLOSE.md and
 session-close-verification.json. All open routes, limits and original review
 bindings remain preserved; no pending reviewer repair. Follow plansection9 as the

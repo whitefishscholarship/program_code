@@ -354,6 +354,47 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-008-START -->
+- October14,2026: checkpoint008 completes frozen offsets140–159, beginning
+  savedrow144/P.E.O. Chapter D. Authoritative ledger/packet:
+  sd2-autonomous/checkpoint-008.json and checkpoint-008/.
+  Twentyinitialoutcomes:13researched-held/5held-access/2held-identity;26receipts,
+  387newheldfields/20identities,0accepted. Cumulative160/406initialdispositions,
+  246unprocessed;all3,033autonomous fields/160identities remainheld.
+- Independent PASS C0/H0/M0/L0 binds2c59114f643ea90f84e55a43f7e73dba2b57dbba; exactlocal
+  two-file reviewreceiptde40c298624280cc671bc1134213b1e7ef0bd600. final-manifest/review control.
+  Original6be4038/round1manifest/review/verification stayexact; two medium
+  source omissions authorfixed/independentlyrechecked: Ripple parentmajorbreadth
+  versus PDFwaterqualityapproval and LPAparent directinstitutionfunding as its
+  own held payment. No pending reviewerrepair; separate wrap never rebinds review.
+- Codex source/identity reconciliation owns every heldfield/identity/seed/link/
+  deferredmaterial at applicable authorized evidencearrival or SD2consolidation.
+  All20specific actions in ledger/SESSION_WRAP: PEOtypedconflict/Smile6schoolsCDN/
+  RippleparentPDF/Hinderman2026SAIversus2025EFC/Rotarygapyearceremonies/Herriges
+  rawgap/Stimpson750word/EvelynRainbowcode/Explorer5types2awards/Sloanhardship/
+  BigSky2027weekday/ActionAirawarded/Kuchenbrodrenewal/LPA-AAidentity and three
+  applicationonlyinputs remain distinct. All272seed-alias/766source-link
+  occurrences across160inputs preserve owner/trigger/nextaction.
+- Exact68prior custodypins and3newPEOPDF/twocorrectedviews verified; native
+  threeDocsparagraph/bodyconcordance,0tables/1uninspectedRotaryinlineimage.
+  Other raw/page/visual/sourcecurrency/currentoffering/sponsor proofs unknown.
+  Rawbatchrejected byautomaticreview for unverifiedblankness/possibleapplicantPII;
+  safe readable alternatives/heldHerriges-DonKgaps, no retry/bypass. Streamedref/
+  publiccontact/text/wronginitialmask outputlapses disclosed/containmentrouted.
+  Before each nextcall/output narrow/sanitize; at nextaudit verify exacttemporary
+  custody or reportgaps preserving receipts, no reconstruction/reacquisition/replay.
+- Every priorpacket/PRELUDE/sevenledgers/history/nineattentionrows/supplements/
+  437M1routeownertrigger stays exact. WET/Clerk/Davis/interimreceipt gaps unchanged.
+  Plan/type/fulltests/evidence/history/routing PASS; both exactbuilds still
+  process/portEPERM/freshmain-target unverified. Every nativepreservation/backup/
+  recovery/permission,human/canonical/publication/student/CSV/browser and seasonal
+  M1/SD5setup/effect gate remains at original owner/trigger; no waiver.
+- Next-session Codex resumes offset160/savedrow164, Elevated Access Advanced
+  Rating Scholarship, under existing AUTHORITY/POLICY; neverinitialize/reset/replay.
+  Shortprompt:NEXT_SESSION.md. FullSD2incomplete;stopbeforeSD3. No workbook/app/
+  configuration/CI,login/forms/contact/messages,remoteGit/release/activation.
+  Closeout:checkpoint-008/SESSION_WRAP.md and wrap-verification.json.
+<!-- SD2-CHECKPOINT-008-END -->
 <!-- SD2-CHECKPOINT-007-START -->
 <!-- SD2-CHECKPOINT-007-CLOSE-START -->
 - Final session closure audited all140initial dispositions/2,646autonomous field
