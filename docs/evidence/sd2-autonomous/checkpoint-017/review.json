@@ -1,0 +1,115 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one bounded local SD2 held-research checkpoint017.",
+  "reviewedAt": "2026-10-15T20:25:12Z",
+  "reviewer": {
+    "identity": "/root/checkpoint017_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false
+  },
+  "binding": {
+    "entryCommit": "89d84f329b065e29daf1a4f724cb8b6404b74afc",
+    "candidateCommit": "35cd7dda064d3b1649632638d5f99c1efa080707",
+    "candidateTree": "ea636d4af0c60f374797cc909d6e4ef2dad178fc",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-017/final-manifest.json",
+    "manifestSha256": "71b4f3894b5719d917c4a4bed61dd6b0f9b80d1cc7bdb496d1daab1b2a338340",
+    "completeDiffSha256": "77d8caef5d3b6ab1db97653b0924b045f5cfa571c6b85f70c0fed24def3602c2",
+    "completeDiffBytes": 1842876,
+    "changedPaths": 63,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1893,
+    "allPreEntryBlobIdsAndModesPreserved": true,
+    "rejectedCandidateCommits": [
+      "b4d62383d2610da0fd58b1c5f10d7fa9db56e911",
+      "8d044359b900d77bb499fd4b55d789cac4e87bfb"
+    ],
+    "bothRejectedBindingsPreserved": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositionsRechecked": [
+    {
+      "id": "SD2-017-M1",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "Restored recommendation passage supports confidentiality, healthcare/long-term-care involvement and geriatric/long-term-care preference.",
+        "Source artifact, capture accounting, registry, concordance and dependent field excerpts/hashes agree.",
+        "Superseded source hash and rejected candidate remain preserved.",
+        "Acquisition timestamps remain unchanged; original/native fidelity is not asserted."
+      ]
+    },
+    {
+      "id": "SD2-017-M2",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "GBCI student labels are typed without invented exclusivity.",
+        "Military eligibility retains enrolled-or-planning alternatives.",
+        "Each family retains its own PDF most-fees and approved-required-uniform examples separately from general FAQ costs."
+      ]
+    },
+    {
+      "id": "SD2-017-M3",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "Military cycle excludes the first-responder-only no-accommodations FAQ.",
+        "Military renewal excludes first-responder legacy status.",
+        "Military cycle remains unverified; first-responder observations remain on row338.",
+        "Negative source-affinity checks cover the corrected military fields."
+      ]
+    },
+    {
+      "id": "SD2-017-L1",
+      "originalSeverity": "low",
+      "result": "fixed",
+      "checks": [
+        "Row339 record, field and seed nextAction values consistently retain annual-window/weekend-extension/year uncertainty.",
+        "README row339 and conditional assembler wording agree.",
+        "Row338 retains its existing conflict wording.",
+        "All source receipts, typed values, counts, holds and other rows remain unchanged from the second candidate."
+      ]
+    }
+  ],
+  "checks": [
+    "Completed the original governance/source review and inspected both subsequent remediation diffs.",
+    "Independently recomputed final manifest, candidate tree and complete entry-to-candidate binary-diff hashes.",
+    "Verified all63 changed blob IDs, lengths, hashes and worktree equality; all changes add files.",
+    "Verified all1893 entry paths retain exact Git blobs and modes.",
+    "Verified both rejected candidate/manifest/review/verification bindings and all four count-matched rationale/owner/trigger/target dispositions.",
+    "Reran the read-only verifier successfully:20 ordered inputs,306 new field envelopes,6253 cumulative field holds,340 identity holds,66 remaining,26 sources and200 evidence references.",
+    "Verified38 seed dispositions,27 source-link dispositions, maximum4 recorded concurrent reads and zero same-host overlaps in this checkpoint.",
+    "Verified16 prior manifest/review bindings,71 custody pins without gaps,12 original M1 artifact pins and437 M1 records.",
+    "Confirmed original nine attention rows, all prior supplements, historical packets/rejected bindings and protected governance/runtime files remain preserved.",
+    "Recorded plan/type/fulltests remain passing after documented IPC retries; both exact standard builds remain process/port EPERM failures.",
+    "No files edited, assemblers executed, source/network calls made, software tests/builds rerun or Git writes performed."
+  ],
+  "limits": [
+    "Selected artifacts and author concordance do not establish original-response fidelity, native/raw/page/image/table/form completeness, source silence, origin freshness, current offering, public access, sponsor continuity or route usability.",
+    "Restored recommendation text remains author-selected retained conversion evidence; independent original/native fidelity is unproved.",
+    "Final sanitization does not erase disclosed earlier output/history.",
+    "Concurrency compliance was recomputed from retained request intervals; independent provider execution telemetry was unavailable.",
+    "Both exact standard-build EPERM failures, fresh authenticated main/target and all later preservation/recovery, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gates remain open.",
+    "This PASS covers local held-research evidence only; it accepts no scholarship fact, identity or canonical stage."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex checkpoint017 implementation and handoff owner",
+    "trigger": "Recording this exact independent final review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-017/",
+    "action": "Record the exact final manifest and review through the authorized local research-review receipt. Preserve both rejected bindings and every hold. Prepare the separate durable section9/session handoff carrying all owners, triggers, actions and limits, with next-session routing to offset340/savedrow346. No further checkpoint, fact acceptance, SD3 or external effect follows."
+  }
+}
