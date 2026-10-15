@@ -1,0 +1,15 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "web",
+  "startedAt": "2026-10-15T14:15:47.164401+00:00",
+  "completedAt": "2026-10-15T14:15:47.330677+00:00",
+  "exitCode": 1,
+  "logPath": "docs/evidence/sd2-autonomous/checkpoint-014/plan.log",
+  "originalOutputSha256": "4a2821bfe635328c9634ab82550101d89df3a755c48b3c9f4ab8ec8e83752ad3",
+  "logSha256": "38392f6b6059e922b628075dd48770d2d7c79914176facb1875404717838c360",
+  "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+}
