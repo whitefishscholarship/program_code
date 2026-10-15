@@ -1,3 +1,53 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-016.json plus checkpoint-016/
+{README.md,final-manifest.json,review.json,SESSION_WRAP.md,SESSION_CLOSE.md,
+wrap-verification.json,session-close-verification.json}.
+
+Resume one bounded SD2 checkpoint at offset320/savedrow326:
+Donald E. Pizzini Memorial Nurse Scholarships.86frozeninputs remain;320initial
+dispositions/5947fieldholds/320identityholds,0accepted. Existing authority permits
+routine research/GPTreview without renewed checkpoint approval. Never initialize/
+reset/replay;preserve every hold/reviewbinding;fullSD2incomplete;stopbeforeSD3.
+
+IndependentPASS C0/H0/M0/L0 binds 20fbfe071e041206fb18f543ee8eb157ab9ddc18;localtwofile receipt:7e81382c3647c720b79aee15895444b17efecf00.
+Three medium findings remediated/rechecked;original4f3bef3/failedmanifest-review
+remain exact. No pending reviewer repair/recheck/delegatedwork. All16ledgers/
+priorpackets/PRELUDE/nineattentionrows/supplements/437M1routes/owners/triggers
+remain exact. All524seed-alias/993source-link occurrences retain owned actions.
+Codex owns every hold at applicable authorized evidencearrival orSD2consolidation.
+Exact row-specific qualifiers/unknowns/variants remain in016ledger/README/wrap.
+
+Before every subsequent source dispatch:normalize hostname,await any active read
+on that host,at most4distinct hosts globally. Historical NAEHCYsamehostoverlap is
+recorded as noncompliant with unchanged timestamps,never erased/reacquired.
+Before every call/output:narrow exactprogram/minimalmetadata and independently
+sanitize all text/link/query/image/metadata values;preview only requiredkey/name/
+offset. Earlier contact/address/dropoff/account-query/nextinputquery/broadscope
+output lapses remain disclosed;finalsanitization does not erase sessionhistory.
+Codex sourceexecution/evidence/governance assesses at later authorized evidence/
+history/canonical/publication review. No raw/signed/accountquery locator previews.
+
+Selectedconversions/authorconcordance never prove original/native/page/image/
+table/form completeness,source silence,current/public/sponsor/routecontinuity.
+Empty/partialnative/WCEAunexpectedDOCX-PPTX/UMcrossdomain holds stay exact. All
+earlier NGPA/WAI/BLF/rawbatch/Herriges-DonK/WET/Clerk/Davis/interimreceipt/guard/
+oratory/DOCX/dynamicfile/custody/history limits retain original owners/triggers.
+Next required rawuse/audit verifies71original temporarypaths/hashes or preserves
+receipts/reports exactgaps,no reconstruction/reacquisition/completed-input replay.
+
+Both exact standardbuild EPERM and fresh authenticatedmain/target remain with
+Codex before canonicalacceptance/authorizedrelease. Every preservation/backup/
+recovery/permission,human/canonical/publication,studentCSV/browser and437M1/SD5/
+effect gate retains original owner/trigger/action. No workbook/app/configuration/
+CI/login/forms/contact/messages/remoteGit/release/deployment/monitoractivation
+orSD3. Recheck:checkpoint-016/verify.py --review-bound. Effort:High.
+
+Previous authoritative kickoff retained unchanged below;new packet controls.
+
+---
+
 Final session closure:checkpoint-015/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains its owner/trigger/action;
 no reviewer repair/recheck/delegated work is pending. Follow plan section9 as the
