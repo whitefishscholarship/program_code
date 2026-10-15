@@ -1,0 +1,1 @@
+Selected exact P.E.O. organization page responded HTTP 200. General organization scope is not evidence of local Chapter D scholarship current offering, terms or sponsor/file continuity. No source-silence claim.
