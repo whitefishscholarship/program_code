@@ -30,6 +30,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -69,6 +70,7 @@
     "linkDispositions": [
       {
         "url": "https://form.jotform.com/260607434083151",
+        "renderedDestination": "https://form.jotform.com/260607434083151",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -77,6 +79,7 @@
       },
       {
         "url": "https://form.jotform.com/253366200193148",
+        "renderedDestination": "https://form.jotform.com/253366200193148",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -116,43 +119,58 @@
     "linkDispositions": [
       {
         "url": "https://bigsunathletics.com/#collapseOne",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "renderedDestination": "https://bigsunathletics.com/#collapseOne",
+        "sourceIds": [
+          "bigsun"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
         "url": "https://bigsunathletics.com/#collapseTwo",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "renderedDestination": "https://bigsunathletics.com/#collapseTwo",
+        "sourceIds": [
+          "bigsun"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
         "url": "https://bigsunathletics.com/#collapseThree",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "renderedDestination": "https://bigsunathletics.com/#collapseThree",
+        "sourceIds": [
+          "bigsun"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
         "url": "https://bigsunathletics.com/#collapseFour",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "renderedDestination": "https://bigsunathletics.com/#collapseFour",
+        "sourceIds": [
+          "bigsun"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
         "url": "https://bigsunathletics.com/#collapseFive",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "renderedDestination": "https://bigsunathletics.com/#collapseFive",
+        "sourceIds": [
+          "bigsun"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       }
     ]
   },
@@ -187,6 +205,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -228,6 +247,7 @@
     "linkDispositions": [
       {
         "url": "https://epicflightacademy.com/captain-judy-rice/",
+        "renderedDestination": "https://epicflightacademy.com/captain-judy-rice/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -236,6 +256,7 @@
       },
       {
         "url": "https://epicflightacademy.com/locations/",
+        "renderedDestination": "https://epicflightacademy.com/locations/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -244,6 +265,7 @@
       },
       {
         "url": "https://kingairnation.com/blog/taking-flight-with-king-air-nation-foundation-82a6c2/",
+        "renderedDestination": "https://kingairnation.com/blog/taking-flight-with-king-air-nation-foundation-82a6c2/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -252,6 +274,7 @@
       },
       {
         "url": "https://epicflightacademy.com/locations-erlanger/",
+        "renderedDestination": "https://epicflightacademy.com/locations-erlanger/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -260,6 +283,7 @@
       },
       {
         "url": "https://epicflightacademy.com/aircraft-mechanic/",
+        "renderedDestination": "https://epicflightacademy.com/aircraft-mechanic/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -268,6 +292,7 @@
       },
       {
         "url": "https://epicflightacademy.com/flight-school-faq/what-exams-are-required-to-get-my-private-pilot-rating-and-where-do-i-take-them/",
+        "renderedDestination": "https://epicflightacademy.com/flight-school-faq/what-exams-are-required-to-get-my-private-pilot-rating-and-where-do-i-take-them/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -307,6 +332,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -346,6 +372,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -354,6 +381,7 @@
       },
       {
         "url": "https://bold.org/scholarships/by-demographics/minorities/asian-american-students-scholarships/",
+        "renderedDestination": "https://bold.org/scholarships/by-demographics/minorities/asian-american-students-scholarships/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -362,6 +390,7 @@
       },
       {
         "url": "https://bold.org/scholarships/by-demographics/mental-health-scholarships/",
+        "renderedDestination": "https://bold.org/scholarships/by-demographics/mental-health-scholarships/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -401,14 +430,16 @@
     "linkDispositions": [
       {
         "url": "https://kitchencabinetkings.com/scholarship#kck-apply",
+        "renderedDestination": "https://kitchencabinetkings.com/scholarship#kck-apply",
         "sourceIds": [],
-        "disposition": "Application/account/portal locator only; no retrieval or interaction",
+        "disposition": "Embedded application anchor locator only; form excluded, no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Preserve exact locator; no login, application action or submission. Usability remains unknown."
+        "nextAction": "Preserve locator without redundant source read or form/application action."
       },
       {
         "url": "https://www.facebook.com/KitchenCabinetKings/",
+        "renderedDestination": "https://www.facebook.com/KitchenCabinetKings/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -417,6 +448,7 @@
       },
       {
         "url": "https://www.youtube.com/@KitchenCabinetKings",
+        "renderedDestination": "https://www.youtube.com/@KitchenCabinetKings",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -425,6 +457,7 @@
       },
       {
         "url": "https://www.instagram.com/kitchencabinetkings",
+        "renderedDestination": "https://www.instagram.com/kitchencabinetkings",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -433,6 +466,7 @@
       },
       {
         "url": "https://www.pinterest.com/cabinetkings/",
+        "renderedDestination": "https://www.pinterest.com/cabinetkings/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -441,6 +475,7 @@
       },
       {
         "url": "https://x.com/cabinetkings/",
+        "renderedDestination": "https://x.com/cabinetkings/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -449,6 +484,7 @@
       },
       {
         "url": "https://www.houzz.com/professionals/cabinets-and-cabinetry/kitchen-cabinet-kings-pfvwus-pf~1325611680",
+        "renderedDestination": "https://www.houzz.com/professionals/cabinets-and-cabinetry/kitchen-cabinet-kings-pfvwus-pf~1325611680",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -457,6 +493,7 @@
       },
       {
         "url": "https://www.tiktok.com/@kitchencabinetkings",
+        "renderedDestination": "https://www.tiktok.com/@kitchencabinetkings",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -465,6 +502,7 @@
       },
       {
         "url": "https://kitchencabinetkings.com/",
+        "renderedDestination": "https://kitchencabinetkings.com/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -473,6 +511,7 @@
       },
       {
         "url": "https://kitchencabinetkings.com/privacy-policy.html",
+        "renderedDestination": "https://kitchencabinetkings.com/privacy-policy.html",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -512,6 +551,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -551,6 +591,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -559,6 +600,7 @@
       },
       {
         "url": "https://bold.org/scholarships/by-demographics/first-generation-scholarships/",
+        "renderedDestination": "https://bold.org/scholarships/by-demographics/first-generation-scholarships/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -598,6 +640,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -637,16 +680,18 @@
     "linkDispositions": [
       {
         "url": "https://www.montana.edu/honors/scholarships.html",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships.html",
         "sourceIds": [
           "msuhonors"
         ],
         "disposition": "Retrieved selected static content; never application action",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Keep exact route/fragment and source binding; reconcile scope at the recorded trigger."
+        "nextAction": "Retain exact source binding; do not replay already observed scope."
       },
       {
         "url": "http://catalog.montana.edu/expenses/",
+        "renderedDestination": "http://catalog.montana.edu/expenses/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -654,12 +699,15 @@
         "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
       },
       {
-        "url": "https://www.montana.edu/admissions/scholarships/residents/\\#collapsed84e515_d84e529",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/admissions/scholarships/residents/#collapsed84e515_d84e529",
+        "renderedDestination": "https://www.montana.edu/admissions/scholarships/residents/\\#collapsed84e515_d84e529",
+        "sourceIds": [
+          "msu"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       }
     ]
   },
@@ -694,6 +742,7 @@
     "linkDispositions": [
       {
         "url": "https://www.montana.edu/honors/",
+        "renderedDestination": "https://www.montana.edu/honors/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -702,11 +751,14 @@
       },
       {
         "url": "https://montana.academicworks.com/opportunities/30968#",
-        "sourceIds": [],
-        "disposition": "Application/account/portal locator only; no retrieval or interaction",
+        "renderedDestination": "https://montana.academicworks.com/opportunities/30968#",
+        "sourceIds": [
+          "msuaward"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Preserve exact locator; no login, application action or submission. Usability remains unknown."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       }
     ]
   },
@@ -740,135 +792,184 @@
     "nextAction": "Reconcile exact child/cycle/source and existing ID candidates; preserve every qualifier/variant/unknown; no name-only merge, accepted fact or current-offering inference.",
     "linkDispositions": [
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e122",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e122",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e122",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e127",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e127",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e127",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e132",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e132",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e132",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e137",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e137",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e137",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e142",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e142",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e142",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e147",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e147",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e147",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e152",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e152",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e152",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e157",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e157",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e157",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e174",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e174",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e174",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e179",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e179",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e179",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e186",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e186",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e186",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e191",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e191",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e191",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e196",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e196",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e196",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e201",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e201",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e201",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e206",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e206",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e206",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e211",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e211",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e211",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
         "url": "https://www3.montana.edu/netidclaim/",
+        "renderedDestination": "https://www3.montana.edu/netidclaim/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -877,6 +978,7 @@
       },
       {
         "url": "https://montana.academicworks.com/",
+        "renderedDestination": "https://montana.academicworks.com/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -884,12 +986,15 @@
         "nextAction": "Preserve exact locator; no login, application action or submission. Usability remains unknown."
       },
       {
-        "url": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e237",
-        "sourceIds": [],
-        "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
+        "url": "https://www.montana.edu/honors/scholarships_faq.html#collapsed84e108_d84e237",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html\\#collapsed84e108_d84e237",
+        "sourceIds": [
+          "msufaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Retain context only; no source expansion, social action or policy acceptance."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       }
     ],
     "redactedLocatorDispositions": [
@@ -934,16 +1039,18 @@
     "linkDispositions": [
       {
         "url": "https://www.montana.edu/honors/scholarships_faq.html",
+        "renderedDestination": "https://www.montana.edu/honors/scholarships_faq.html",
         "sourceIds": [
           "msufaq"
         ],
         "disposition": "Retrieved selected static content; never application action",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Keep exact route/fragment and source binding; reconcile scope at the recorded trigger."
+        "nextAction": "Retain exact source binding; do not replay already observed scope."
       },
       {
         "url": "https://www.montana.edu/admissions/apply/",
+        "renderedDestination": "https://www.montana.edu/admissions/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -952,16 +1059,18 @@
       },
       {
         "url": "https://montana.academicworks.com/opportunities/30968",
+        "renderedDestination": "https://montana.academicworks.com/opportunities/30968",
         "sourceIds": [
           "msuaward"
         ],
         "disposition": "Retrieved selected static content; never application action",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Keep exact route/fragment and source binding; reconcile scope at the recorded trigger."
+        "nextAction": "Retain exact source binding; do not replay already observed scope."
       },
       {
         "url": "https://www3.montana.edu/netidclaim/",
+        "renderedDestination": "https://www3.montana.edu/netidclaim/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -970,6 +1079,7 @@
       },
       {
         "url": "https://montana.academicworks.com/",
+        "renderedDestination": "https://montana.academicworks.com/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -1009,6 +1119,7 @@
     "linkDispositions": [
       {
         "url": "https://mus.edu/Prepare/Pay/MUS_Honor_Scholarship-Eligibility_and_Procedures.pdf",
+        "renderedDestination": "https://mus.edu/Prepare/Pay/MUS_Honor_Scholarship-Eligibility_and_Procedures.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1017,6 +1128,7 @@
       },
       {
         "url": "https://mus.edu/Prepare/Pay/Scholarships/MUSHS-Fact-Sheet%202024.pdf",
+        "renderedDestination": "https://mus.edu/Prepare/Pay/Scholarships/MUSHS-Fact-Sheet%202024.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1025,6 +1137,7 @@
       },
       {
         "url": "https://awardmontana.mus.edu/awardmontanafaq.html#scholarship_waiver_faq",
+        "renderedDestination": "https://awardmontana.mus.edu/awardmontanafaq.html#scholarship_waiver_faq",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1033,6 +1146,7 @@
       },
       {
         "url": "https://oche.my.site.com/",
+        "renderedDestination": "https://oche.my.site.com/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -1041,6 +1155,7 @@
       },
       {
         "url": "https://mus.edu/Prepare/Pay/Scholarships/_MT%20High%20schools%20accredited%20by%20MT%20Board%20of%20Public%20Ed.pdf",
+        "renderedDestination": "https://mus.edu/Prepare/Pay/Scholarships/_MT%20High%20schools%20accredited%20by%20MT%20Board%20of%20Public%20Ed.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1049,6 +1164,7 @@
       },
       {
         "url": "https://mus.edu/Prepare/docs/Rigorous-Core-Fact-Sheet.pdf",
+        "renderedDestination": "https://mus.edu/Prepare/docs/Rigorous-Core-Fact-Sheet.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1057,6 +1173,7 @@
       },
       {
         "url": "https://mus.edu/borpol/bor900/940-1.pdf",
+        "renderedDestination": "https://mus.edu/borpol/bor900/940-1.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1065,6 +1182,7 @@
       },
       {
         "url": "https://awardmontana.mus.edu/",
+        "renderedDestination": "https://awardmontana.mus.edu/",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1104,6 +1222,7 @@
     "linkDispositions": [
       {
         "url": "https://www.nationalhonorsociety.org/create-an-account/",
+        "renderedDestination": "https://www.nationalhonorsociety.org/create-an-account/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -1112,16 +1231,18 @@
       },
       {
         "url": "https://www.nationalhonorsociety.org/students/the-nhs-scholarship/scholarship-faq/",
+        "renderedDestination": "https://www.nationalhonorsociety.org/students/the-nhs-scholarship/scholarship-faq/",
         "sourceIds": [
           "nhsfaq"
         ],
         "disposition": "Retrieved selected static content; never application action",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Keep exact route/fragment and source binding; reconcile scope at the recorded trigger."
+        "nextAction": "Retain exact source binding; do not replay already observed scope."
       },
       {
         "url": "https://webportalapp.com/sp/nhs2027",
+        "renderedDestination": "https://webportalapp.com/sp/nhs2027",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -1130,6 +1251,7 @@
       },
       {
         "url": "https://www.nationalhonorsociety.org/wp-content/uploads/2025/09/NPA26-115_NHS_Grant-Resources_F.pdf",
+        "renderedDestination": "https://www.nationalhonorsociety.org/wp-content/uploads/2025/09/NPA26-115_NHS_Grant-Resources_F.pdf",
         "sourceIds": [],
         "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
         "owner": "Codex source/identity reconciliation",
@@ -1168,92 +1290,125 @@
     "nextAction": "Reconcile exact child/cycle/source and existing ID candidates; preserve every qualifier/variant/unknown; no name-only merge, accepted fact or current-offering inference.",
     "linkDispositions": [
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-does-good-standing-mean-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-what-does-good-standing-mean-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-does-good-standing-mean-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-is-an-ideal-candidate-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-what-is-an-ideal-candidate-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-is-an-ideal-candidate-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-will-i-be-asked-to-provide-in-the-scholarship-application-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-what-will-i-be-asked-to-provide-in-the-scholarship-application-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-will-i-be-asked-to-provide-in-the-scholarship-application-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-do-i-select-a-great-recommender-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-how-do-i-select-a-great-recommender-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-do-i-select-a-great-recommender-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-is-the-difference-between-verification-and-the-nhs-adviser-certification-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-what-is-the-difference-between-verification-and-the-nhs-adviser-certification-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-what-is-the-difference-between-verification-and-the-nhs-adviser-certification-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-when-are-scholarship-recipients-announced-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-when-are-scholarship-recipients-announced-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-when-are-scholarship-recipients-announced-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-much-are-the-individual-awards-this-year-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-how-much-are-the-individual-awards-this-year-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-much-are-the-individual-awards-this-year-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-do-winners-receive-their-award-payments-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-how-do-winners-receive-their-award-payments-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-how-do-winners-receive-their-award-payments-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-is-the-nhs-scholarship-renewable-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-is-the-nhs-scholarship-renewable-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-is-the-nhs-scholarship-renewable-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-where-can-nhs-scholarship-funds-be-used-and-what-can-they-be-used-for-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-where-can-nhs-scholarship-funds-be-used-and-what-can-they-be-used-for-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-where-can-nhs-scholarship-funds-be-used-and-what-can-they-be-used-for-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       },
       {
-        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-are-international-students-eligible-content",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/#block-are-international-students-eligible-content",
+        "renderedDestination": "https://www.nationalhonorsociety.org/the-nhs-scholarship/scholarship-faq/\\#block-are-international-students-eligible-content",
+        "sourceIds": [
+          "nhsfaq"
+        ],
+        "disposition": "Retained same-document selected-section context; no separate retrieval or replay",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Preserve exact fragment identity with retained section; no redundant fetch or action."
       }
     ]
   },
@@ -1287,12 +1442,15 @@
     "nextAction": "Reconcile exact child/cycle/source and existing ID candidates; preserve every qualifier/variant/unknown; no name-only merge, accepted fact or current-offering inference.",
     "linkDispositions": [
       {
-        "url": "https://bold.org/scholarships/student-referee-scholarship/](https://bold.org/scholarships/student-referee-scholarship/",
-        "sourceIds": [],
-        "disposition": "Relevant static linked material deferred; not retrieved in this checkpoint",
+        "url": "https://bold.org/scholarships/student-referee-scholarship/",
+        "renderedDestination": "https://bold.org/scholarships/student-referee-scholarship/",
+        "sourceIds": [
+          "refereebold"
+        ],
+        "disposition": "Retrieved selected static content; never application action",
         "owner": "Codex source/identity reconciliation",
         "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-        "nextAction": "Resolve exact linked rule/material only at applicable authorized evidence need; preserve missing-native/completeness limits."
+        "nextAction": "Retain exact source binding; do not replay already observed scope."
       }
     ]
   },
@@ -1357,6 +1515,7 @@
     "linkDispositions": [
       {
         "url": "https://bold.org/apply/",
+        "renderedDestination": "https://bold.org/apply/",
         "sourceIds": [],
         "disposition": "Application/account/portal locator only; no retrieval or interaction",
         "owner": "Codex source/identity reconciliation",
@@ -1365,6 +1524,7 @@
       },
       {
         "url": "https://bold.org/scholarships/by-major/stem-scholarships/",
+        "renderedDestination": "https://bold.org/scholarships/by-major/stem-scholarships/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",
@@ -1373,6 +1533,7 @@
       },
       {
         "url": "https://bold.org/scholarships/by-demographics/minorities/immigrants-scholarships/",
+        "renderedDestination": "https://bold.org/scholarships/by-demographics/minorities/immigrants-scholarships/",
         "sourceIds": [],
         "disposition": "Taxonomy/social/policy/in-page/context locator; no new award seed or follow",
         "owner": "Codex source/identity reconciliation",

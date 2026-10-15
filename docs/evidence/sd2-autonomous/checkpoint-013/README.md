@@ -66,7 +66,7 @@ ineligible, unrestricted or source-silent. All observations remain held.
 |249 AVTRIP|Keep current-member condition, oneUSD2000maximum/calendar year, flight/tuition/license-or-rating use, joint endorsement and redemption deadline separate from pilot-in-training.|
 |250 NHS|Keep current-senior/diploma, local goodstanding/bylaws, verified studentaccount, adviserCertification distinct from accountverification, one nonfamily/nonadviser adult recommendation and portal-only completion. Main2027cycle versus historicalFAQnotifications/undated awardtiers remains held. Institution-only nonrenewable undergraduate use; international FAQwording retained.|
 |251 STEAM|Preserve bachelor/masterSTEAM, immigrantORunderrepresented condition and parents/grandparents education clause without a universal first-generation definition;3165total/3x1055,400–600essay and dates remain route-bound.|
-|252 Presidential MSU|Keep entry3.7unweighted/4.0 and competitive-contact exception separate from typical3.9/top3%. Renewal3.7MSU versus FAQ3.5cumulative remains conflict, no chosen value. MidnightMST versus11:59PMMDT/MST conflict unresolved.32credits/8semesters/earlygraduation/fulltime/Honors activity variants, tuition/stipend/historical value, nondeferral/fall2027, ACTSATnotused, three500wordessays/1counselor/2recommenders, General-before-supplement, no-guaranteed-finalist and incompleteShow2More all explicit.|
+|252 Presidential MSU|Keep entry3.7unweighted/4.0 and competitive-contact exception separate from typical3.9/top3%. Renewal3.7MSU versus FAQ3.5cumulative remains conflict, no chosen value. MidnightMST versus11:59PMMDT/MST conflict unresolved.32credits/8semesters/earlygraduation/fulltime/Honors activity variants, tuition/stipend/historical value, nondeferral/fall2027, ACTSATnotused, three500wordessays/1counselor/2recommenders, personal-link transcript/recommendation uploads with no mail/email, conditional confidential/percentile counselor ranking, General-before-supplement, no-guaranteed-finalist and incompleteShow2More all explicit.|
 |253 Hue Ta|Keep undergraduateAsianAmerican/volunteer/mentalhealthcareer conjunction, should-language advocacy/inclusivity/experience/creative/strong-record qualifiers; no invented numericGPA.2x500,400–600essay plus one helping-imageORportrait remain distinct.|
 |254 Kitchen Cabinet Kings|Keep citizenship/upcoming accreditedcollege-university-trade/undergrad-grad scope,2socialfollows,500max/noAI/originalessay/topic, rights/ownership disclosure, one-time/priorrecipient exclusion,7dayresponse/proof variants, directcheck and cancel/reservation. Embedded form excluded/no interaction or follows.|
 |256 MUS Honor|Keep applygraduationyear/3fulltimeaccreditedMTyearsincluding senior, resident/acceptedcampus/coreORIB/testbyFebruary conjunction. Entry3.4end7thsemester versus annualrenewal3.4;8semesters/9monthstart/30-60-90credits/continuous12credits/conduct stay distinct.16eligiblecampuses, tuition-only/illustrativevalue/200fundingcontingent, scoring-rounding/superscores/certifications/middle-schoolAlgebraI conditions retained. Linked rules/FAQ/factsheet/schoollist/residency/core definitions deferred, not assumed complete.|
@@ -119,3 +119,19 @@ PASS can establish accountable held research only, never fact/stage acceptance.
 Local docs/evidence/scripts/commits only. No workbook/app/config/CI change, login/
 forms/contact/messages, remoteGit/release/deployment/hosted verification, account/
 access/paid change, monitoractivation or SD3. Stop after this single checkpoint.
+
+## Independent round1 corrections
+
+Original candidate5ffc8ea,manifest-round1/review-round1/verification-round1 remain
+immutable. Medium SD2-013-M1:row252 now explicitly retains transcript/recommendation
+personal-link portal uploads, mail/email prohibition and conditional confidential/
+percentile counselor-ranking request with actual please-ask modality/visibility.
+Low SD2-013-L1:link dispositions now parse exact Markdown destinations, preserve
+escaped fragment identity separately, bind the already retrieved refereeBold page
+and treat retained NHS/MSU same-document sections as context without replay.
+All89link occurrences remain accounted. Focused read-only verifier checks guard
+both fixes, source affinity and exact destination accounting. Two count-matched
+dispositions are in remediation.json. No new source calls or full matrix rerun;
+all source text, receipts' observation metadata, field counts, holds, priorhistory
+and effect exclusions unchanged. Final independent recheck must bind a new frozen
+candidate; the original FAIL is never relabeled.

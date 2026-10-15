@@ -28,8 +28,17 @@ for s in reg.values():
  raw=(R/s['artifactPath']).read_bytes();assert sha(raw)==s['artifactSha256'];texts[s['sourceId']]=raw.decode()
  assert not s['rawArtifactRetained'] and not s['originFreshnessVerified'] and not s['completeRawPageImageInspection']
  for d in s['linkDispositions']:
-  assert d['url'] in texts[s['sourceId']] and set(d['sourceIds'])<=set(reg)
+  assert d['renderedDestination'] in texts[s['sourceId']] and set(d['sourceIds'])<=set(reg)
+  assert d['url']==d['renderedDestination'].replace('\\#','#') and '](' not in d['url'] and '[' not in d['url'] and not re.search(r'\s',d['url'])
+  direct=[x['sourceId'] for x in reg.values() if d['url'] in [x['originalUrl'],x['finalUrl']]]
+  if direct:assert set(direct)==set(d['sourceIds']) and 'deferred' not in d['disposition']
+  if '#' in d['url'] and d['url'].split('#')[0] in [s['originalUrl'],s['finalUrl']] and '#kck-apply' not in d['url']:
+   assert d['sourceIds']==[s['sourceId']] and 'same-document' in d['disposition'] and 'deferred' not in d['disposition']
   assert all(d.get(k) for k in ['owner','trigger','nextAction','disposition'])
+# Every destination occurrence is accounted once; labels cannot masquerade as URLs.
+for src in reg.values():
+ expected=list(dict.fromkeys(re.findall(r'(?<=\]\()(https?://[^)\s]+)',texts[src['sourceId']])))
+ assert [d['renderedDestination'] for d in src['linkDispositions']]==expected
 refs=fields=seeds=0
 for r,seed in zip(l['records'],q['records'][240:260]):
  for k in ['inputKey','rowLocator','recordedName','publishedSourceAliases','publicIdCandidates','identityBasis','identityAcceptance']:assert r[k]==seed[k],k
@@ -69,6 +78,13 @@ assert v(248,'eligibility')['AVTRIPMembershipForThisChildUnknown'] and v(249,'el
 assert v(250,'affiliation')['numericNationalGPAUnknown'] and v(250,'materials')['accountVerificationDistinctFromApplicationCertification']
 assert v(250,'renewal')['renewable'] is False and v(250,'amount')['FAQCurrentYearScopeUnbound']
 assert v(251,'eligibility')['noUniversalFirstGenDefinition']
+sub=v(252,'materials')['transcriptAndRecommendationSubmission'];rank=v(252,'materials')['schoolDoesNotRankCondition']
+assert sub['modality']=='must' and sub['transcriptsRequiredByThisInstruction'] and not sub['mailAccepted'] and not sub['emailAttachmentsAccepted']
+assert 'personal links emailed to counselors and recommenders' in sub['method'] and sub['noUploadOrApplicantMaterialCollected']
+assert rank['condition']=='school does not rank students' and rank['modality']=='please ask school counselor to provide'
+assert rank['requestedRankingOR']==['confidential ranking','percentile ranking'] and rank['visibleTo']=='review committee only; not applicant'
+assert reg['referee']['linkDispositions'][0]['url']=='https://bold.org/scholarships/student-referee-scholarship/' and reg['referee']['linkDispositions'][0]['sourceIds']==['refereebold']
+assert len(reg['nhsfaq']['linkDispositions'])==11 and all(d['sourceIds']==['nhsfaq'] for d in reg['nhsfaq']['linkDispositions'])
 assert v(252,'renewal')['noVariantChosen'] and [x.get('MSUGPA',x.get('minimumCumulativeGPA')) for x in v(252,'renewal')['variants']]==[3.7,3.5]
 assert v(252,'cycle')['chosenTimeZoneOrMidnightBoundary'] is None and v(252,'materials')['publicConversionHasShow2MoreUninspected']
 assert v(253,'eligibility')['shouldQualifiers'] and v(253,'minimumGPA')['numericMinimum'] is None
@@ -90,6 +106,17 @@ for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,13)]:
  assert sha(git('diff','--binary',m['entryCommit'],m['candidateCommit']))==m['completeDiffSha256']
  for f in m['changedFiles']:assert sha(git('show',m['candidateCommit']+':'+f['path']))==f['sha256']
  history+=1
+# Preserve the rejected immutable candidate and count-match all author dispositions.
+om=load(P/'manifest-round1.json');orr=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert om['candidateCommit']==orr['binding']['candidateCommit']==rem['priorCandidateCommit']=='5ffc8ea51c33657db2715f83ffcae457379cb6e1'
+assert sha((P/'manifest-round1.json').read_bytes())==orr['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+assert orr['outcome']=='FAIL' and orr['severityCounts']==dict(critical=0,high=0,medium=1,low=1)
+assert [f['id'] for f in orr['findings']]==[d['id'] for d in rem['dispositions']]==['SD2-013-M1','SD2-013-L1']
+assert all(all(d.get(k) for k in ['rationale','owner','target']) for d in rem['dispositions'])
+assert sha((P/'verification-round1.json').read_bytes())==next(f['sha256'] for f in om['changedFiles'] if f['path'].endswith('/verification.json'))
+assert sha(git('diff','--binary',ENTRY,om['candidateCommit']))==om['completeDiffSha256']
+for f in om['changedFiles']:assert sha(git('show',om['candidateCommit']+':'+f['path']))==f['sha256']
 mutable={'docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md','docs/CURRENT_HANDOFF.md','docs/evidence/sd2-autonomous/NEXT_SESSION.md'}
 paths=set(git('diff','--name-only',ENTRY).decode().splitlines())|set(git('ls-files','--others','--exclude-standard').decode().splitlines())
 assert all(x in mutable or x=='docs/evidence/sd2-autonomous/checkpoint-013.json' or x.startswith('docs/evidence/sd2-autonomous/checkpoint-013/') for x in paths),paths
