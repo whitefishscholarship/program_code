@@ -1,0 +1,198 @@
+{
+  "entryCommit": "5ab4a592be5b28b62e98af39533bc26870169424",
+  "recordedAt": "2026-10-15T03:48:22.838Z",
+  "calls": [
+    {
+      "id": "ngpa",
+      "url": "https://www.ngpa.org/2026_scholarships",
+      "initialRejectedCall": {
+        "start": "2026-10-15T03:46:16.049Z",
+        "end": "2026-10-15T03:46:19.150Z",
+        "error_code": "INVALID_ARGUMENT",
+        "requestedOptionalFlags": [
+          "storeInCache:false",
+          "zeroDataRetention:true",
+          "removeBase64Images:true"
+        ],
+        "sourceRetrievedMeaning": "No source content returned; origin request status unknown",
+        "contentReturned": false
+      },
+      "correctedCall": {
+        "start": null,
+        "end": "2026-10-15T03:46:39.706Z",
+        "startNotCaptured": true,
+        "statusCode": 200,
+        "finalUrl": "https://www.ngpa.org/2026_scholarships",
+        "request": {
+          "url": "https://www.ngpa.org/2026_scholarships",
+          "formats": [
+            "markdown"
+          ],
+          "onlyMainContent": true,
+          "redactPII": true,
+          "maxAge": 0
+        },
+        "timingMeaning": "start not captured; end is subsequent local record timestamp, not measured call completion"
+      },
+      "convertedCharacterCount": 5844
+    },
+    {
+      "id": "afsa",
+      "url": "https://www.afsascholarship.org/secondchance/",
+      "initialRejectedCall": {
+        "start": "2026-10-15T03:46:16.049Z",
+        "end": "2026-10-15T03:46:18.134Z",
+        "error_code": "INVALID_ARGUMENT",
+        "requestedOptionalFlags": [
+          "storeInCache:false",
+          "zeroDataRetention:true",
+          "removeBase64Images:true"
+        ],
+        "sourceRetrievedMeaning": "No source content returned; origin request status unknown",
+        "contentReturned": false
+      },
+      "correctedCall": {
+        "start": "2026-10-15T03:46:39.707Z",
+        "end": "2026-10-15T03:46:42.643Z",
+        "statusCode": 200,
+        "finalUrl": "https://www.afsascholarship.org/secondchance/",
+        "request": {
+          "url": "https://www.afsascholarship.org/secondchance/",
+          "formats": [
+            "markdown"
+          ],
+          "onlyMainContent": true,
+          "redactPII": true,
+          "maxAge": 0
+        }
+      },
+      "convertedCharacterCount": 4660
+    },
+    {
+      "id": "wai",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "initialRejectedCall": {
+        "start": "2026-10-15T03:46:16.049Z",
+        "end": "2026-10-15T03:46:20.102Z",
+        "error_code": "INVALID_ARGUMENT",
+        "requestedOptionalFlags": [
+          "storeInCache:false",
+          "zeroDataRetention:true",
+          "removeBase64Images:true"
+        ],
+        "sourceRetrievedMeaning": "No source content returned; origin request status unknown",
+        "contentReturned": false
+      },
+      "correctedCall": {
+        "start": "2026-10-15T03:46:39.707Z",
+        "end": "2026-10-15T03:46:46.894Z",
+        "statusCode": 200,
+        "finalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+        "request": {
+          "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+          "formats": [
+            "markdown"
+          ],
+          "onlyMainContent": true,
+          "redactPII": true,
+          "maxAge": 0
+        }
+      },
+      "convertedCharacterCount": 59587,
+      "providerPagesReported": 10,
+      "totalPagesReported": 10,
+      "markupHeadingCount": 106,
+      "selectedPrograms": 13,
+      "nativePageImageInspection": false
+    }
+  ],
+  "waiSections": [
+    {
+      "row": 193,
+      "heading": "## AeroStar ATP CTP Certification Training Scholarship",
+      "conversionOffset": 9014,
+      "retainedCharacters": 1219
+    },
+    {
+      "row": 194,
+      "heading": "## Airlines on Autopilot MEI Scholarship",
+      "conversionOffset": 10234,
+      "retainedCharacters": 603
+    },
+    {
+      "row": 201,
+      "heading": "## Anne Bridge Baddour Aviation Scholarship $5,000 value",
+      "conversionOffset": 11060,
+      "retainedCharacters": 213
+    },
+    {
+      "row": 199,
+      "heading": "## American Airlines Engineering Scholarship",
+      "conversionOffset": 19248,
+      "retainedCharacters": 630
+    },
+    {
+      "row": 195,
+      "heading": "## Amazon Maintenance Technician Scholarship $2,500 value",
+      "conversionOffset": 21470,
+      "retainedCharacters": 603
+    },
+    {
+      "row": 198,
+      "heading": "## American Airlines Aircraft Maintenance Technician Scholarship",
+      "conversionOffset": 22074,
+      "retainedCharacters": 383
+    },
+    {
+      "row": 196,
+      "heading": "## Amazon Professional Flight Training Scholarship $2,500 value",
+      "conversionOffset": 39221,
+      "retainedCharacters": 533
+    },
+    {
+      "row": 200,
+      "heading": "## American Airlines Flight Educational Scholarship",
+      "conversionOffset": 39755,
+      "retainedCharacters": 688
+    },
+    {
+      "row": 197,
+      "heading": "## Amazon Unmanned Aircraft System",
+      "conversionOffset": 50575,
+      "retainedCharacters": 565
+    },
+    {
+      "row": 202,
+      "heading": "## AOPA Student Pilot Scholarship",
+      "conversionOffset": 51768,
+      "retainedCharacters": 1295
+    },
+    {
+      "row": 203,
+      "heading": "## Boeing Flight Training Scholarship $7,500 value",
+      "conversionOffset": 53064,
+      "retainedCharacters": 706
+    },
+    {
+      "row": 191,
+      "heading": "## 2027 Wings for Val Foundation Lt. <PRIVATE_PERSON> Memorial Scholarship",
+      "conversionOffset": 55745,
+      "retainedCharacters": 519
+    },
+    {
+      "row": 192,
+      "heading": "## 2027 Wings for Val Foundation Lt<PRIVATE_PERSON> Memorial Scholarship",
+      "conversionOffset": 56967,
+      "retainedCharacters": 655
+    }
+  ],
+  "sourceHandlingDeviations": [
+    {
+      "issue": "Initial preview of AFSA included navigation, footer, unrelated high-school/winner locators, blank required-field labels and boilerplate. WAI common preview included unrelated quick-guide/TOC programs and public recipient-caption text. A targeted Wings context preview included memorial biographical dates. No applicant responses or actual contact values were retained; earlier output cannot be erased.",
+      "owner": "Codex source/evidence owner",
+      "trigger": "Before every subsequent source call/output and SD2 evidence consolidation",
+      "nextAction": "Narrow exact selected program and minimal metadata; remove all biographical dates, recipient/navigation/contact/account/unrelated scope before forwarding or persistence. Inspect text/image sanitization independently of provider redactPII. Preserve disclosed earlier lapses; never claim retroactive removal."
+    }
+  ],
+  "waiSectionsMeaning": "Offsets/headings/pre-finalization selected lengths in provider conversion; final source artifact and exact excerpts/hashes control. No native PDF page/image completeness."
+}
