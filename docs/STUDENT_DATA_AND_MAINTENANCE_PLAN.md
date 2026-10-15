@@ -355,6 +355,22 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-010-START -->
+<!-- SD2-CHECKPOINT-010-CLOSE-START -->
+- Final session closure audited200initial dispositions/3,939fieldholds/
+  200identityholds,314seed-alias/809source-link occurrences, every original/new
+  owner/trigger/action, nineattentionrows/all supplements and437M1routes.
+  Evidence: checkpoint-010/SESSION_CLOSE.md and session-close-verification.json.
+  Original candidate/reviews/receipts andd707180handoff remain exact; no pending
+  reviewer repair/recheck/delegated work. Next-session Codex resumes offset200/
+  row204 under existing AUTHORITY/POLICY. Source-output handling, NGPA timing,
+  WAI conversion/redacted identities, historical guard retention, custody and
+  all earlier BLF/rawbatch/WET/Clerk/Davis/interimreceipt limits retain routes.
+  Build/freshmain and later preservation/acceptance/student/monitor/effect gates
+  keep original owners/triggers. Resolved review/Git/helper corrections remain
+  documented, no new pending repair. No new research, reset/replay, fact acceptance,
+  external effect orSD3 during closure. Use checkpoint-010/verify-session-close.py
+  for closure recheck; earlier verifiers retain their pre-close allowlists/bindings.
+<!-- SD2-CHECKPOINT-010-CLOSE-END -->
 - October14,2026: one bounded checkpoint010 completes frozen offsets180–199,
   saved184–203, beginning PSA Airlines Flight Scholarship (NGPA). Ledger/packet:
   sd2-autonomous/checkpoint-010.json and checkpoint-010/.20initial outcomes:
