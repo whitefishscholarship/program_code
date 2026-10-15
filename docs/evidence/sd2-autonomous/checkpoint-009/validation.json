@@ -1,0 +1,138 @@
+{
+  "recordedAt": "2026-10-15T02:50:10.263083+00:00",
+  "scope": "Required local matrix; unchanged canonical/runtime/web/CI/control bytes",
+  "checks": [
+    {
+      "label": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:06.928207+00:00",
+      "completedAt": "2026-10-15T02:48:07.076123+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/plan.log",
+      "originalOutputSha256": "4fa86bb5417ff6323765e82c62421214ca31f01aa76146f2f23ac85339b0d0aa",
+      "logSha256": "2edd17b9e7c08616d5c5bea2ca0abdafeca8e714cf4c74af55ce2f98a2f0d547",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "plan-retry",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:18.022836+00:00",
+      "completedAt": "2026-10-15T02:48:59.440498+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/plan-retry.log",
+      "originalOutputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "logSha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:06.928208+00:00",
+      "completedAt": "2026-10-15T02:48:11.237257+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/typecheck.log",
+      "originalOutputSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "logSha256": "0b54cac6bb99f126f42ca5170163caf98f0e739747455757ea0b215a6140458f",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:06.928221+00:00",
+      "completedAt": "2026-10-15T02:48:07.076171+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/tests.log",
+      "originalOutputSha256": "9b555d30ab1091f370d3b07120d806ec2e30d901d6ac13c347faff6b330e669f",
+      "logSha256": "049ae3acb6a8180e7c04b663725c833296d4e9deedc329715cf6c8414a998961",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "tests-retry",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:18.306952+00:00",
+      "completedAt": "2026-10-15T02:49:06.065828+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/tests-retry.log",
+      "originalOutputSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "logSha256": "e921e37c99307c46be1d8a811cdc751e542db81ee54eb84c9e0c7e2bd1835993",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:06.928220+00:00",
+      "completedAt": "2026-10-15T02:48:08.678158+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/build.log",
+      "originalOutputSha256": "43f06a39cbc5c25107a6301c0350deea582aaaf49bc1a1b547c8a64f7db2489c",
+      "logSha256": "f6a0532c97c51f2c5292a864537052cd58c8aae96530e3d868c7c180d2a84a11",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    },
+    {
+      "label": "build-retry",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "web",
+      "startedAt": "2026-10-15T02:48:32.278924+00:00",
+      "completedAt": "2026-10-15T02:48:33.233323+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-autonomous/checkpoint-009/build-retry.log",
+      "originalOutputSha256": "b1c473024b48e0e95b44427c00bfbc8401e6558c27d72b6fd62bdff8a535d6f0",
+      "logSha256": "e166ba981b81a536843f8ac1697b1f6cca3f3b45b3344f2e5d03fe8b54dfdb7a",
+      "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+    }
+  ],
+  "gitDiffCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exitCode": 0,
+    "output": ""
+  },
+  "canonicalAcceptance": false,
+  "externalEffects": false,
+  "SD3Started": false,
+  "buildGate": {
+    "owner": "Codex validation/governance/delivery",
+    "trigger": "Before canonical acceptance or authorized release",
+    "nextAction": "Require exact standard build in permitted supporting environment; both process/port EPERM failures remain unwaived"
+  },
+  "freshMainTargetGate": {
+    "owner": "Codex validation/governance/delivery",
+    "trigger": "Before canonical acceptance or authorized release",
+    "nextAction": "Verify fresh authenticated owner-authorized main/target; saved baseline not current proof"
+  }
+}
