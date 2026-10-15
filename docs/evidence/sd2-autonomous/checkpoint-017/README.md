@@ -95,3 +95,19 @@ immutable candidate and complete manifest/diff. Research PASS never accepts fact
 identity or a canonical stage. Final review.json controls historical pending text.
 No workbook/app/configuration/CI/login/form/contact/message/remoteGit/release/
 deployment/monitor activation or SD3. All observations remain held.
+
+## Independent round1 remediation
+
+Original b4d6238,manifest-round1/review-round1/verification-round1 remain exact.
+Three medium findings have count-matched owned dispositions in remediation.json.
+The Pizzini recommendation paragraph was restored from the retained in-session
+conversion with a start-scoped end-marker search; no source was reacquired.
+Original excerpt hash is labeled superseded, not final. All dependent source,
+registry,field-excerpt,metadata-accounting and concordance hashes are refreshed.
+GBCI student labels remain labels without invented exclusivity; military
+enrolled-or-planning eligibility and each family PDF most-fees/approved-uniform
+examples are typed separately. First-responder-only deadline/legacy FAQ rules
+are excluded from military row339; its yearless cycle is unverified rather
+than a cross-family conflict. Semantic and negative-affinity checks cover all
+three repairs. All306 field holds/20 identities/counts and earlier bindings
+remain held and exact. Independent replacement-candidate recheck is required.

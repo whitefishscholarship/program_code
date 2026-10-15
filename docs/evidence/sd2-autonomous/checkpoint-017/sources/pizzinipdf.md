@@ -87,3 +87,19 @@ You can either mail the original OR scan and submit an electronic version via em
 #### AGREEMENTS / SIGNATURE
 
 I certify that the above information is complete, true, and correct to the best of my knowledge. If asked, I agree to provide substantiation of the information that I have given on this application. I have read all scholarship conditions as provided and agree to abide by such. If I typed an electronic signature on this document, I acknowledge my electronic signature may be considered as original.
+
+##### To the Recommender:
+
+The <PRIVATE_PERSON> Memorial Nurse Scholarship Program is designed to facilitate the development of a nursing workforce to meet current and future demands of the long-term care industry.
+
+Scholarships of up to $2,500 will be awarded to students who best exhibit the following attributes:
+
+- a) Academic achievement
+- b) Health care and/or long-term care involvement*
+- c) Enthusiasm or passion for a career in nursing*
+
+\*Preference will be given to those with a demonstrated interest in geriatric/long term care nursing.
+
+Applicants are required to submit two confidential letters of recommendation from individual’s familiar with the applicant, such as teachers, mentors, or employers who can discuss the applicant’s scholastic potential, personal qualities, and enthusiasm or passion for the nursing profession. Recommendations from family members of the applicant will not be accepted.
+
+Please complete this form, keeping in mind this applicant’s qualification for the scholarship based on the three qualities mentioned above.

@@ -87,7 +87,7 @@ assert len(v(336,'eligibility')['documentedMontanaConnectionOR'])==3 and v(336,'
 assert all(v(336,'materials')[k] for k in ['FAFSA_FSS','recommendationLetters','references'])
 assert v(337,'need')['requiredNeedThreshold'] is None and v(337,'materials')['references']
 for n in [338,339]:
- assert rows[n]['fieldProposals']['cycle']['state']=='conflict' and v(n,'amount')['partTimePerTermMaximumUSD']==1250
+ assert rows[n]['fieldProposals']['cycle']['state']==('conflict' if n==338 else 'unverified') and v(n,'amount')['partTimePerTermMaximumUSD']==1250
  assert v(n,'minimumGPA')['entryNumericRequirementNotSeparatelyEstablished'] and v(n,'minimumGPA')['summerExcluded']
  assert v(n,'checkInMaterials')['requiredTextbooks'] and len(v(n,'checkInMaterials')['reimbursement'])==3
 assert v(338,'eligibility')['incidentNeedNotOnDutyButWhileActiveDuty'] and 'incident does not have to be considered' in texts['folds']
@@ -100,6 +100,49 @@ assert v(343,'eligibility')['debtOwedToSchoolRequired'] and 'debt owed to the sc
 assert rows[344]['fieldProposals']['cycle']['state']=='conflict' and v(344,'cycle')['PDFSubmissionDeadline']=='2023-04-15'
 assert 'April 15, 2023' in texts['bmspdf'] and 'April 15, 2024' in texts['blackmountain'] and v(344,'materials')['essay']['wordLimit']==500
 assert v(345,'eligibility')['dualMembership']==['NTHS','FFA'] and v(345,'application')['exactBoxFileHeldUninspected']
+assert 'two confidential letters of recommendation' in texts['pizzinipdf'] and 'Health care and/or long-term care involvement' in texts['pizzinipdf']
+assert v(326,'materials')['initialRecommendations']['confidential'] and 'healthcare/long-term-care involvement' in v(326,'materials')['recommendationSelection']
+assert v(333,'applicantStage')['observedEligibleStudentLabels']==['Current College Students','Graduating High School Seniors'] and v(333,'applicantStage')['labelsAreNotAnInventedExclusiveEligibilityRule']
+assert v(339,'eligibility')['enrollmentStatusOR']==['enrolled','planning to enroll'] and 'enrolled or planning to enroll' in texts['foldsmilpdf']
+for n,sid in [(338,'foldsfirstpdf'),(339,'foldsmilpdf')]:
+ assert v(n,'fundUse')['PDFTermsOfUseAllowedExamples']['items']==['tuition','most fees','required textbooks','approved required school uniforms']
+ assert 'most fees' in texts[sid] and 'school uniforms' in texts[sid]
+assert 'FAQ' in v(338,'cycle') and 'legacyConsecutiveYears' in v(338,'renewal')
+assert 'FAQ' not in v(339,'cycle') and 'legacyConsecutiveYears' not in v(339,'renewal')
+assert rows[339]['fieldProposals']['cycle']['state']=='unverified'
+original=load(P/'manifest-round1.json');review=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert original['candidateCommit']==review['binding']['candidateCommit']==rem['priorCandidateCommit']=='b4d62383d2610da0fd58b1c5f10d7fa9db56e911'
+assert sha((P/'manifest-round1.json').read_bytes())==review['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+assert review['outcome']=='FAIL' and review['severityCounts']==dict(critical=0,high=0,medium=3,low=0)
+assert [d['id'] for d in rem['dispositions']]==[f['id'] for f in review['findings']]
+assert all(all(d.get(k) for k in ['rationale','owner','trigger','target']) for d in rem['dispositions'])
+assert rem['newSourceReads']==0 and rem['fieldCountsAndHoldsUnchanged']
+assert sha(git('diff','--binary',ENTRY,original['candidateCommit']))==original['completeDiffSha256']
+for f in original['changedFiles']:assert sha(git('show',original['candidateCommit']+':'+f['path']))==f['sha256']
+assert sha((P/'verification-round1.json').read_bytes())==rem['priorVerificationSha256']==next(f['sha256'] for f in original['changedFiles'] if f['path'].endswith('/verification.json'))
+oldLedger=json.loads(git('show',original['candidateCommit']+':docs/evidence/sd2-autonomous/checkpoint-017.json'))
+assert oldLedger['coverage']==l['coverage']
+for osource,nsource in zip(oldLedger['sourceRegistry'],sources):
+ if osource['sourceId']!='pizzinipdf':assert osource==nsource
+ else:
+  for key in osource:
+   if key not in ['artifactSha256','selectedCharacters','selectionAccounting']:assert osource[key]==nsource[key]
+  assert osource['artifactSha256']==rem['originalSourceSha256Superseded'] and nsource['artifactSha256']==rem['finalSourceSha256']
+  assert osource['selectionAccounting']['convertedCharacters']==nsource['selectionAccounting']['convertedCharacters']
+changed={(326,'materials'),(333,'applicantStage'),(338,'fundUse'),(339,'fundUse'),(339,'eligibility'),(339,'cycle'),(339,'renewal')}
+for old,new in zip(oldLedger['records'],l['records']):
+ for k in old:
+  if k!='fieldProposals':assert old[k]==new[k]
+ for k,f in old['fieldProposals'].items():
+  nf=new['fieldProposals'][k]
+  if (old['rowLocator'],k) not in changed:
+   # Row326 only changes supporting artifact hash/excerpt/locator for its other bound fields.
+   if old['rowLocator']==326:
+    for key in f:
+     if key!='evidence':assert f[key]==nf[key]
+   else:assert f==nf
+  else:assert f['acceptance']==nf['acceptance']=='held'
 history=0
 for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,17)]:
  mp=folder/('research-manifest.json' if folder==B else 'final-manifest.json');rp=folder/('research-review.json' if folder==B else 'review.json');m=load(mp);rv=load(rp);binding=rv.get('binding',rv)
