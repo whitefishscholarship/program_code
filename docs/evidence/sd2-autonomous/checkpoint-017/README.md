@@ -57,7 +57,7 @@ routes into the single ledger; no second review queue is created.
 |336|Reconcile Reach Montana-residency/graduate/strongties OR, fulltime Montana public/private/tribal vocational enrollment and need; nontraditional preference, continuing2.5 and two-year/no-reapplication distinction; all materials.|
 |337|Reconcile Young graduatingMontana senior/3.0/STEM-or-healthcare, Montana-college preference only and need as selection; full material set/no reapplication.|
 |338|Reconcile Folds first responder higher-education child, source-specific status/dependency/service proofs, GPA-on-acceptance versus entry, unmetneed, parttime caps, weekend deadline conflict, annual reapplication and checkin/material conditions. Historical2024-25/2025 documents do not prove next cycle.|
-|339|Reconcile Folds military higher-education child, source-specific status/dependency/service proofs, GPA-on-acceptance versus entry, unmetneed, parttime caps, weekend deadline conflict, annual reapplication and checkin/material conditions. Historical2024-25/2025 documents do not prove next cycle.|
+|339|Reconcile Folds military higher-education child, source-specific status/dependency/service proofs, GPA-on-acceptance versus entry, unmetneed, parttime caps, annual window/weekend extension/year uncertainty, annual reapplication and checkin/material conditions. Historical2024-25/2025 documents do not prove next cycle.|
 |340|Reconcile exact NTHS child, membership/endorsement and localchapter criteria versus scholarship selection; preserve yearless dates/account routes and any source-specific GPA alternatives. No general-network total or unrelated child transfer.|
 |341|Reconcile exact NTHS child, membership/endorsement and localchapter criteria versus scholarship selection; preserve yearless dates/account routes and any source-specific GPA alternatives. No general-network total or unrelated child transfer.|
 |342|Reconcile exact NTHS child, membership/endorsement and localchapter criteria versus scholarship selection; preserve yearless dates/account routes and any source-specific GPA alternatives. No general-network total or unrelated child transfer.|
@@ -111,3 +111,10 @@ are excluded from military row339; its yearless cycle is unverified rather
 than a cross-family conflict. Semantic and negative-affinity checks cover all
 three repairs. All306 field holds/20 identities/counts and earlier bindings
 remain held and exact. Independent replacement-candidate recheck is required.
+
+The replacement recheck found one low routing inconsistency:military row339 still
+said weekend-deadline conflict in current follow-up wording. Row339 record/field/seed/
+README/assembler routes now preserve annual-window/weekend-extension/year
+uncertainty;row338 and both rejected bindings remain exact. No source,typed value,
+count or hold changed. remediation-followup.json owns the count-matched fix;
+semantic checks reject military routing drift. Final independent recheck required.

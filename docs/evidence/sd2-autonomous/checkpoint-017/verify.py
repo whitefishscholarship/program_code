@@ -133,7 +133,7 @@ for osource,nsource in zip(oldLedger['sourceRegistry'],sources):
 changed={(326,'materials'),(333,'applicantStage'),(338,'fundUse'),(339,'fundUse'),(339,'eligibility'),(339,'cycle'),(339,'renewal')}
 for old,new in zip(oldLedger['records'],l['records']):
  for k in old:
-  if k!='fieldProposals':assert old[k]==new[k]
+  if k!='fieldProposals' and not (old['rowLocator']==339 and k in ['nextAction','seedDispositions']):assert old[k]==new[k]
  for k,f in old['fieldProposals'].items():
   nf=new['fieldProposals'][k]
   if (old['rowLocator'],k) not in changed:
@@ -141,8 +141,40 @@ for old,new in zip(oldLedger['records'],l['records']):
    if old['rowLocator']==326:
     for key in f:
      if key!='evidence':assert f[key]==nf[key]
+   elif old['rowLocator']==339:
+    assert {key:value for key,value in f.items() if key!='nextAction'}=={key:value for key,value in nf.items() if key!='nextAction'}
    else:assert f==nf
   else:assert f['acceptance']==nf['acceptance']=='held'
+follow=load(P/'remediation-followup.json');mr2=load(P/'manifest-round2.json');rr2=load(P/'review-round2.json')
+assert mr2['candidateCommit']==rr2['binding']['candidateCommit']==follow['priorCandidateCommit']=='8d044359b900d77bb499fd4b55d789cac4e87bfb'
+assert sha((P/'manifest-round2.json').read_bytes())==rr2['binding']['manifestSha256']==follow['priorManifestSha256']
+assert sha((P/'review-round2.json').read_bytes())==follow['priorReviewSha256']
+assert rr2['severityCounts']==dict(critical=0,high=0,medium=0,low=1) and rr2['outcome']=='FAIL'
+assert [d['id'] for d in follow['dispositions']]==[f['id'] for f in rr2['findings']]==['SD2-017-L1']
+assert all(all(d.get(k) for k in ['rationale','owner','trigger','target']) for d in follow['dispositions'])
+assert follow['newSourceReads']==0 and follow['allSourceReceiptsUnchanged'] and follow['fieldValuesCountsAndHoldsUnchanged']
+assert sha(git('diff','--binary',ENTRY,mr2['candidateCommit']))==mr2['completeDiffSha256']
+for f in mr2['changedFiles']:assert sha(git('show',mr2['candidateCommit']+':'+f['path']))==f['sha256']
+assert sha((P/'verification-round2.json').read_bytes())==follow['priorVerificationSha256']==next(f['sha256'] for f in mr2['changedFiles'] if f['path'].endswith('/verification.json'))
+old2=json.loads(git('show',mr2['candidateCommit']+':docs/evidence/sd2-autonomous/checkpoint-017.json'))
+assert old2['sourceRegistry']==sources and old2['coverage']==l['coverage']
+for old,new in zip(old2['records'],l['records']):
+ if old['rowLocator']!=339:assert old==new
+ else:
+  assert old['nextAction']==follow['originalRow339NextAction'] and new['nextAction']==follow['correctedRow339NextAction']
+  for key in old:
+   if key not in ['nextAction','fieldProposals','seedDispositions']:assert old[key]==new[key]
+  for od,nd in zip(old['seedDispositions'],new['seedDispositions']):
+   assert {k:v for k,v in od.items() if k!='nextAction'}=={k:v for k,v in nd.items() if k!='nextAction'}
+   assert nd['nextAction']==new['nextAction']
+  for key,f in old['fieldProposals'].items():
+   nf=new['fieldProposals'][key];assert {k:v for k,v in f.items() if k!='nextAction'}=={k:v for k,v in nf.items() if k!='nextAction'}
+   assert nf['nextAction']==new['nextAction']
+assert 'weekend deadline conflict' in rows[338]['nextAction']
+assert 'weekend deadline conflict' not in rows[339]['nextAction'] and 'annual window/weekend extension/year uncertainty' in rows[339]['nextAction']
+assert all(f['nextAction']==rows[339]['nextAction'] for f in rows[339]['fieldProposals'].values())
+assert all(d['nextAction']==rows[339]['nextAction'] for d in rows[339]['seedDispositions'])
+readme=(P/'README.md').read_text();row339=next(x for x in readme.splitlines() if x.startswith('|339|'));assert 'weekend deadline conflict' not in row339 and 'annual window/weekend extension/year uncertainty' in row339
 history=0
 for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,17)]:
  mp=folder/('research-manifest.json' if folder==B else 'final-manifest.json');rp=folder/('research-review.json' if folder==B else 'review.json');m=load(mp);rv=load(rp);binding=rv.get('binding',rv)

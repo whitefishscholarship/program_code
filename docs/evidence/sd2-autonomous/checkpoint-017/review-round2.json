@@ -1,0 +1,99 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent replacement-candidate recheck of bounded local SD2 checkpoint017.",
+  "reviewedAt": "2026-10-15T20:21:58Z",
+  "reviewer": {
+    "identity": "/root/checkpoint017_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false
+  },
+  "binding": {
+    "entryCommit": "89d84f329b065e29daf1a4f724cb8b6404b74afc",
+    "candidateCommit": "8d044359b900d77bb499fd4b55d789cac4e87bfb",
+    "candidateTree": "00da911398905b6aa588b6e6c3b9c73f60f275ad",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-017/final-manifest.json",
+    "manifestSha256": "8b8df8b968797be83179b3217efd6dea9d6c4fe5d6ecc7c004fd4dc20bc6d80c",
+    "completeDiffSha256": "9a3936736731ea728ef0f84c465845135228ef85dc8bde80766d570cf6024c14",
+    "completeDiffBytes": 1813268,
+    "changedPaths": 59,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1893,
+    "allPreEntryBlobIdsAndModesPreserved": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "findings": [
+    {
+      "id": "SD2-017-L1",
+      "severity": "low",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-017.json",
+      "preciseIssue": "Current row339 nextAction and every copied field nextAction still instruct reconciliation of a 'weekend deadline conflict'. The assembler's shared follow-up string and README row339 repeat it. The remediation correctly removed the first-responder-only premise and changed military cycle to unverified; these current continuation instructions therefore contradict the corrected observation.",
+      "requiredFix": "Update row339-only current routing and matching assembler/README wording to preserve annual-window/weekend-extension/year uncertainty without asserting the removed cross-family conflict. Preserve row338 wording and all historical rejected bindings. Add a consistency check for the corrected military routing.",
+      "owner": "Codex implementation owner",
+      "trigger": "Before final checkpoint review receipt",
+      "target": "Replacement immutable checkpoint017 candidate"
+    }
+  ],
+  "dispositionsRechecked": [
+    {
+      "id": "SD2-017-M1",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "Restored recommendation passage directly supports confidentiality, healthcare/long-term-care involvement and geriatric/long-term-care preference.",
+        "Source, capture accounting, registry, concordance and all dependent field excerpts/hashes agree.",
+        "Original source hash remains explicitly superseded and preserved through the rejected candidate.",
+        "Original/native fidelity remains unproved; no new source receipt or changed acquisition timestamp was introduced."
+      ]
+    },
+    {
+      "id": "SD2-017-M2",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "GBCI student labels are typed with explicit non-exclusivity.",
+        "Military enrollment preserves enrolled-or-planning alternatives.",
+        "Each family retains its own PDF most-fees and approved-required-uniform examples separately from general FAQ costs."
+      ]
+    },
+    {
+      "id": "SD2-017-M3",
+      "originalSeverity": "medium",
+      "result": "substantive source-affinity repair fixed; continuation wording issue tracked separately as SD2-017-L1",
+      "checks": [
+        "Military cycle excludes the first-responder-only no-accommodations FAQ.",
+        "Military renewal excludes first-responder legacy status.",
+        "Military cycle is unverified; first-responder observations remain on row338.",
+        "Negative-affinity assertions cover the repaired military values."
+      ]
+    }
+  ],
+  "checks": [
+    "Independently recomputed complete replacement manifest, candidate tree and binary-diff hashes and verified all59 changed blobs, lengths, hashes and worktree equality.",
+    "Confirmed all59 entry-to-candidate changes add files and preserve all1893 entry paths exactly.",
+    "Inspected the complete original-to-replacement remediation diff and changed typed observations against retained source passages.",
+    "Verified original candidate, manifest-round1, review-round1 and verification-round1 bindings and three count-matched owned dispositions.",
+    "Reran read-only verifier successfully:20 inputs,306 held fields,6253 cumulative field holds,340 identity holds,66 remaining,26 sources and200 evidence references.",
+    "Confirmed all other25 source receipts, acquisition timestamps, unaffected fields, prior16 review bindings,71 custody pins, original nine attention rows/supplements and437 M1 routes remain preserved.",
+    "No files edited, source/network calls made, software tests/builds rerun or Git writes performed."
+  ],
+  "limits": [
+    "Restored source text is author-selected retained conversion evidence; independent original/native/raw/page/image/table/form fidelity remains unproved.",
+    "Final sanitization does not erase disclosed earlier output/history.",
+    "Both exact standard-build EPERM failures, fresh authenticated main/target and every later preservation/recovery, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gate remain open.",
+    "This is local held-research review, not fact, identity or canonical-stage acceptance.",
+    "Implementation owner must resolve SD2-017-L1 and submit a replacement immutable candidate for independent recheck."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}
