@@ -1,6 +1,6 @@
 {
   "outcome": "PASS",
-  "recordedAt": "2026-10-15T18:56:01.608649+00:00",
+  "recordedAt": "2026-10-15T19:02:20.787319+00:00",
   "entryCommit": "65a5434288d458e6cfcd99dac6e6485a75c53cb7",
   "scope": "Local held-research integrity only",
   "checkpointInputs": 20,
@@ -11,6 +11,14 @@
   "heldIdentities": 320,
   "sourceReceipts": 27,
   "evidenceReferences": 171,
+  "nativeMetadataBindings": 5,
+  "historicalHostOverlapPairs": [
+    [
+      "naeinstructions",
+      "naefaq"
+    ]
+  ],
+  "historicalDispatchCompliant": false,
   "seedDispositions": 51,
   "sourceLinkDispositions": 43,
   "historicalManifestReviewsVerified": 15,

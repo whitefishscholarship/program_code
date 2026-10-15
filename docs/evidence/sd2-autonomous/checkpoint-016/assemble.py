@@ -63,7 +63,7 @@ for row,tier,name in [(309,'DLS','Deans Leadership Scholarship'),(310,'PLS','Pre
  r=record(row,['umhonors','umgeneral'],'Reconcile exact DHC '+tier+' tier, yearless December1 MST deadline, UM admission and MUS application, separate entry unknown from 3.4 renewal, retain all progression/waiver conditions. General umontana-to-umt redirect remains identity/access hold.')
  put(r,'identityObservation',{'namedProgram':name,'tier':tier,'institution':'University of Montana Davidson Honors College','mapping':'proposed'},['umhonors'])
  put(r,'cycle',{'applicationCloseMonthDay':'12-01','time':'23:59','timezoneLiteral':'MST','year':None,'UMAdmissionRecommendedBy':'11-24','review':'December-January','interviewInvitation':'mid-late January','virtualInterview':'mid-February','offers':'mid-March','acceptDeclineBy':'05-01','lateDHCAdmissionConsideredButNoIncomingScholarship':True},['umhonors'])
- put(r,'amount',{'type':'waiver or donor funds','dependentOnDonorCriteriaAvailability':True,'largestDonorAwardsMayExceedTuition':True,'waiverCombinationCap':'tuition','tier':tier,'PLSMaximum':{'nonresident':'may reduce to WUE rate','WUE':'may reduce to instate rate','MontanaResident':'may be fully waived via eligible waivers'} if tier=='PLS' else None,'PHSAndDLSWaiversDecreaseRelativeToPLS':tier!='PLS'},['umhonors'])
+ put(r,'amount',{'type':'waiver or donor funds','dependentOnDonorCriteriaAvailability':True,'largestDonorAwardsMayExceedTuition':True,'waiverCombinationCap':'tuition','tier':tier,'PLSMaximum':{'nonresident':'may reduce to WUE rate','WUE':'may reduce to instate rate','MontanaResident':'may be fully waived via eligible waivers'} if tier=='PLS' else None,'PHSAndDLSWaiversDecreaseRelativeToPLS':True},['umhonors'])
  put(r,'eligibility',{'incomingStudent':True,'firstApplyAndAcceptedByUM':True,'DHCApplicationsOnlyFromFourYearUndergraduateApplicants':True,'MontanaResidentsMustApplyMUSHonor':True,'meritSelection':['talent','academic performance','leadership potential'],'academicCriteriaNotAbsolute':True},['umhonors'])
  put(r,'minimumGPA',{'entryMinimum':None,'renewalMinimum':3.4,'renewalScale':None,'appealBelowThreshold':True},['umhonors'])
  put(r,'renewal',{'upToYears':4,'honorsExperiencesPerAcademicYearMinimum':2,'firstYearIntroductionToHonors':True,'cumulativeGPAMinimum':3.4,'appealAllowedBelowGPA':True,'continuedFailureMayWithdraw':True,'averageCreditsPerAcademicYear':30,'onTrackCompletionYears':4,'advisingOrCareerSessionPerYearMinimum':1,'academicPersonalIntegrity':True,'goodStandingUM':True},['umhonors'])
@@ -111,10 +111,10 @@ put(r,'amount',{'USD':1000,'annualRecipients':'several local high school student
 put(r,'eligibility',{'localHighSchoolStudents':True,'exactGeographyMembershipRequirements':None},['parkside'])
 put(r,'application',{'parentPointsTo2026Kaleidoscope':True,'visited':False,'observedParentNowAvailableNotCurrentCycleProof':True,'empty2025PDFNotSilence':True},['parkside','parkfile'],state='unverified')
 r=record(317,['wceafile'],'Primary Doc URL returned unexpected DOCX and slide alias unexpected PPTX; both held without content fetch.2024PDF yielded one undated April26 frontoffice line only; no current identity/rules/material inference.',status='held-access')
-put(r,'identityObservation',{'primaryMime':'DOCX','slideAliasMime':'PPTX','unexpectedTypesHeld':True,'historicalPDFTitle':'2024 Classified Employees.pdf','mapping':None,'onlyReadableLine':'April26 frontoffice dropoff; contact redacted'},['wceafile'],state='unverified')
+put(r,'identityObservation',{'primaryMime':'application/vnd.openxmlformats-officedocument.wordprocessingml.document','slideAliasMime':'application/vnd.openxmlformats-officedocument.presentationml.presentation','unexpectedTypesHeld':True,'historicalPDFTitle':'2024 Classified Employees.pdf','mapping':None,'onlyReadableLine':'April26 frontoffice dropoff; contact redacted'},['wceafile'],state='unverified')
 put(r,'application',{'historicalPartialLine':'April26 High School front office dropoff','year':None,'currentRouteUnverified':True,'primaryAndSlideContentNotRead':True},['wceafile'],state='unverified')
 r=record(318,['beta','betaalias'],'Reconcile2026XiOmicron named local Beta child/17April3pm deadline/2.0 GPA/Montana application/no-memberchild/materials;2025alias only one line, no complete/current equivalence.')
-put(r,'identityObservation',{'program':'2026 Beta Sigma Phi Xi Omicron Chapter Scholarship','local':'Whitefish','oldAliasTitle':'Beta Sigma Phi Updated WHS2025','mapping':'proposed'},['beta','betaalias'])
+put(r,'identityObservation',{'program':'2026 Beta Sigma Phi Xi Omicron Chapter Scholarship','local':'Whitefish','oldAliasTitle':'Beta Sigma Phi_Updated_WHS_2025.pdf','mapping':'proposed'},['beta','betaalias'])
 put(r,'cycle',{'submitTo':'guidance counselor','deadline':'2026-04-17','time':'15:00','timezone':None,'historicalAtObservation':True},['beta'])
 put(r,'amount',{'USD':1000,'otherScholarshipDoesNotDisqualify':True},['beta'])
 put(r,'eligibility',{'graduatingSeniorWhitefishHighSchool':True,'appliedHigherLearningOrTrainingInMontana':True,'childOfBetaSigmaPhiMemberExcluded':True},['beta'])
@@ -169,6 +169,17 @@ put(r,'minimumGPA',{'minimum':2.7,'transcriptCumulativeUnweightedScale':4.0},['a
 put(r,'materials',{'onlineWrittenResponses':True,'recentCurrentSchoolYearTranscriptUploadNotMail':True,'transcriptLists':['all highschool courses','each course grade','currentyear grades','cumulative unweighted GPA4scale','school name'],'ninthGradeMayIncludeMiddleSchool':True,'referencesCount':2,'providedFormRequiredNoEmailOrAlternative':True,'typedPreferredHandwrittenAccepted':True,'atLeastOneTeacherCounselorCoachOrSchoolOfficial':True,'secondTeacherSchoolOfficialFlightInstructorOrSupervisingAdult':True,'excludedReferences':['parents','guardians','relatives','sameage friends'],'homeschoolParentTeacherMustUseAlternative':True,'referenceContent':['relationship','responsibility/leadership','decisionmaking','aviation interest','why deserve award'],'allFormsApplicantUploadsByDeadline':True,'FAAexamBeforeSubmission':True},['aopa','aopafaq'])
 put(r,'reapplication',{'newOrResubmitEachCycle':True,'maintainCurrentMembership':True,'nonselectedMayNextPeriod':True},['aopafaq'])
 put(r,'application',{'oneGeneralAutomaticallyMatchesEligibleScholarships':True,'separatePortalCredentialsFromAOPA':True,'onlineOnlyNoPaper':True,'lateIncompleteNoExceptions':True,'portalNotVisited':True,'examHelpDocumentDeferred':True},['aopa','aopafaq'])
+# These bindings use only the retained native metadata, never another read.
+metaPath='docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json'
+meta=load(R/metaPath)['nativeMetadata']
+for r in records:
+ n=r['rowLocator']
+ if n not in [316,317,318]:continue
+ f=r['fieldProposals']['identityObservation'];f['metadataEvidence']=[]
+ selected={316:{'parkfile':['name']},317:{'wcea':['mimeType'],'wceaslide':['mimeType'],'wceafile':['name']},318:{'betaalias':['name']}}[n]
+ for id,props in selected.items():
+  i=next(i for i,m in enumerate(meta) if m['sourceId']==id);m=meta[i]
+  f['metadataEvidence'].append(dict(artifactPath=metaPath,artifactSha256=sha((R/metaPath).read_bytes()),sourceId=id,sourceFileId=m['fileId'],entryPointer=f'/nativeMetadata/{i}',propertyPointers=[f'/nativeMetadata/{i}/{p}' for p in props],observedProperties={p:m[p] for p in props},observedAt=m['callCompletedAt'],scope='Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance.'))
 assert [r['inputKey'] for r in records]==[r['inputKey'] for r in q['records'][300:320]]
 fields=sum(len(r['fieldProposals']) for r in records);priorfields=sum(len(r['fieldProposals']) for l in prior for r in l['records'])
 assert priorfields==5642

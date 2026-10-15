@@ -81,3 +81,18 @@ review must bind the immutable candidate and complete diff manifest. Independent
 research PASS never accepts facts/identity/canonicalstage or grants release.
 No workbook/app/configuration/CI/login/form/contact/message/remoteGit/release/
 deployment/monitoractivation or SD3. Every field and identity remains held.
+
+## Independent round1 remediation
+
+Original4f3bef3/manifest-round1/review-round1/verification-round1 remain exact.
+Three medium findings have count-matched owned dispositions in remediation.json.
+Native filename/MIME subclaims now bind five exact metadata entries/properties,
+fileidentities,hashes and observationtimes, separate from readable content.
+The shared PHS/DLS waiver-decrease comparison is corrected to true in row310.
+concurrency-audit.json reports one historical overlapping naehcy.org request pair
+with unchanged timestamps and historicalCompliance:false. ASSEMBLY_NOTES carries
+the exact lapse and unnecessary query-locator preview disclosure without values.
+Codex source execution/evidence/governance owns later historical assessment;
+before every subsequent dispatch serialize by hostname, at most four distinct
+hosts globally, and narrow/sanitize every output. No new source read, historical
+compliance claim or hold closure. Independent replacement recheck is required.

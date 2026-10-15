@@ -1,0 +1,38 @@
+{
+  "priorCandidateCommit": "4f3bef34bc00558ae36667a3cb7201d7051f3b90",
+  "priorManifestSha256": "f78d2a16172833c6586702eb0aac7e1efa354133f6b6624770d7ea7369ee4f56",
+  "priorReviewSha256": "5b04fe51c22ac2176821b30af6ba50ce701d28f657ff947a09dbd2169cc3f8f3",
+  "dispositions": [
+    {
+      "id": "SD2-016-M1",
+      "originalSeverity": "medium",
+      "status": "author-remediated-pending-independent-recheck",
+      "rationale": "Five exact metadata entry/property/file/hash/time bindings distinguish metadata from readable content; all holds preserved.",
+      "owner": "Codex checkpoint016 implementation owner",
+      "trigger": "Before replacement candidate freeze and independent recheck",
+      "target": "checkpoint016 ledger, assembler, metadata bindings and verifier"
+    },
+    {
+      "id": "SD2-016-M2",
+      "originalSeverity": "medium",
+      "status": "author-remediated-pending-independent-recheck",
+      "rationale": "The shared PHS/DLS reduction assertion is true in every DHC tier; only contradictory row310 boolean and its assertion corrected.",
+      "owner": "Codex checkpoint016 implementation owner",
+      "trigger": "Before replacement candidate freeze and independent recheck",
+      "target": "row310 amount and corresponding assembler/verifier logic"
+    },
+    {
+      "id": "SD2-016-M3",
+      "originalSeverity": "medium",
+      "status": "author-remediated-pending-independent-recheck",
+      "rationale": "Exact timestamp overlap remains a historical policy violation; new overlap audit/disclosure and prospective host serialization resolve unrecorded handling, not historical noncompliance. Query-preview lapse also disclosed without values.",
+      "owner": "Codex source execution and evidence/governance owners",
+      "trigger": "Replacement disclosure before recheck; host serialization before every subsequent source dispatch",
+      "target": "checkpoint016 assembly notes, deviation accounting, verifier and continuation guidance"
+    }
+  ],
+  "newSourceReads": 0,
+  "fieldCountsAndHoldsUnchanged": true,
+  "canonicalAcceptance": false,
+  "SD3Started": false
+}

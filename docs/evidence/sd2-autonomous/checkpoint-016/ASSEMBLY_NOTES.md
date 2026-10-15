@@ -58,6 +58,33 @@ without values. source-concordance.json records author-only selected-text checks
 it cannot establish original-response fidelity or independent/source completeness.
 No source was reacquired for assembly, no prior completed input was researched.
 
+## Independent round1 remediation and historical dispatch lapse
+
+Original4f3bef3/manifest-round1/review-round1/verification-round1 remain exact.
+Three medium findings have count-matched rationale/owner/trigger/target in
+remediation.json. Five exact metadata entry/property/file/hash/time bindings now
+support filenames and MIME subclaims separately from readable program content;
+every identity/access hold remains. The shared PHS/DLS waiver-decrease fact is
+true also in the PLS record, correcting its contradictory boolean only.
+
+naeinstructions and naefaq both started2026-10-15T18:46:51.038Z on naehcy.org;
+their finish times were18:47:05.416Z and18:46:58.094Z. This one overlapping pair
+violated POLICY's one-per-host rule. concurrency-audit.json computes the exact
+pair from unchanged retained timestamps and reports historicalCompliance:false.
+It is not repaired execution or retroactively compliant. Codex source execution
+and evidence/governance owners retain this lapse for later authorized evidence/
+history/canonical/publication assessment. Before every subsequent source dispatch,
+normalize the hostname and await any active read for that host; at most four
+distinct-host calls globally. Never dispatch two same-host requests together.
+No reacquisition/replay/timestamp change is used as remediation.
+
+An unnecessary next-input queue preview also printed a query-bearing source
+locator, without dereference. No value is repeated here or in the new handoff.
+The same source/evidence/governance owner assesses historical output before later
+authorized review; before every next preview print only required key/name/offset
+and sanitize all metadata/query/text/image values. Final artifacts never erase
+that output history. This supplement does not weaken frozen POLICY.
+
 All previous source-output/conversion/timing/redacted-identity/native/current/
 custody/history limitations retain original owners/triggers/actions in unchanged
 checkpoint015 SESSION_WRAP and all earlier packets.71 original temporary custody

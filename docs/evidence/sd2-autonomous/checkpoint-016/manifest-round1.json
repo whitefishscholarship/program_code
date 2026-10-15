@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "scope": "One bounded local SD2 held-research checkpoint016; no canonical acceptance",
+  "entryCommit": "65a5434288d458e6cfcd99dac6e6485a75c53cb7",
+  "candidateCommit": "4f3bef34bc00558ae36667a3cb7201d7051f3b90",
+  "candidateTree": "d6198a9e8af8bdb9d774cd329ab35b8ee33fc932",
+  "completeDiffSha256": "a4600364e8f565c2fd8d6c3ac1ba6e0bd16a278e1fd9e60693755b4d52297572",
+  "changedFiles": [
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016.json",
+      "blob": "20dad5947a644e82437eb4b03e63f33dda53ba1f",
+      "bytes": 1173837,
+      "sha256": "80e44acbe4b8c5918b22f11b3f40311a8ecc2e47260020423f21c258c6770a1a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/ASSEMBLY_NOTES.md",
+      "blob": "5e84d535c3aeaf95f398ecf5445e8bf4c2992087",
+      "bytes": 4997,
+      "sha256": "711f1f4b73c20a5e6ce256f39ebe22e01a5be12e82fbc50f87ddcdd9fab135e4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/README.md",
+      "blob": "b730b1b8f3e66f6bbf41338d9e665c25652fea39",
+      "bytes": 7932,
+      "sha256": "47e3ddbc9b769fbcc39ef914d2627d72e2552cff08c6decf47eefecdb542b016"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/assemble.py",
+      "blob": "1ec8245d97ab6e6a78ac86c56d3474aa31e34fff",
+      "bytes": 37934,
+      "sha256": "733f2c18809838cb204dfc6d209952d6d33592b671374b3a644d99149325d9a1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/build-retry.json",
+      "blob": "76aa0bf0db8ccce69dc3fd537bffbce939a9c9c5",
+      "bytes": 600,
+      "sha256": "653f80b44a07ade70902ea496f897fc59d02dc0a318367d60ffb471899118a5d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/build-retry.log",
+      "blob": "59a5c18424c48b6710ace30c69d87999503096fe",
+      "bytes": 4596,
+      "sha256": "397c90d7a722b6ad08368d7a4c2da02b6eff15a0aedc377695d06e5c6209bc43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/build.json",
+      "blob": "a087dbc51df25885990340981b40f8d214ee5b04",
+      "bytes": 594,
+      "sha256": "686d46f528172efa53447b2154b948f20d32e6fa87a53402858268c28317d80d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/build.log",
+      "blob": "b4be775fa55bd91fe9f3e9eeb51e638e447590bb",
+      "bytes": 4596,
+      "sha256": "17434b3e76a079980854a1eeba3ff341e7568630bfeec4f938d029eb6d5399c9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+      "blob": "fd3aa1a41a13865e0de27afaeb02f836da56d81c",
+      "bytes": 30897,
+      "sha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/plan-retry.json",
+      "blob": "b0b384ef065bff8953542731fa4c7908f3e7523f",
+      "bytes": 604,
+      "sha256": "b2d5e6ee350cb11a43b57218aeecfdcfe349558b73895bff6b4c8ecd3cdfb717"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/plan-retry.log",
+      "blob": "8a0f4feaf0b3d2f56ef74bd262d08371ac98bc6f",
+      "bytes": 163,
+      "sha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/plan.json",
+      "blob": "b18324b3bf1b782b8d7450b70685c3562dbaad5c",
+      "bytes": 598,
+      "sha256": "c8bf819944c731eacdb452edc960ad4e405019c844eba5c5f197c4a24b0347c0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/plan.log",
+      "blob": "c7c170749b4953eafb23d747da5bed94912e49a7",
+      "bytes": 997,
+      "sha256": "641801b83d49e5fd2eb5794608486623473e5e534340f243d45158e00ead3dd5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/prior-custody-audit.json",
+      "blob": "ec1ccc1915c049fb0c535e7b3b4b07c8e3b87582",
+      "bytes": 40595,
+      "sha256": "babbb3434e27ba6302acd639c02e01d25c7c5ff6e06f96ef7e7153be692726f3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/retained-evidence-verification.json",
+      "blob": "9dac0255d0785c61c08c24780ee096807693f9d0",
+      "bytes": 684,
+      "sha256": "5e4c2bb0f318af8393a520a0e008535c67e70f9dfcb51f657b5d375705d0d55f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/run-check.py",
+      "blob": "562f660f2c35dad9768cfb3db2e096bffecc6ccf",
+      "bytes": 1239,
+      "sha256": "31d508bc2936e356f5e1704328eab9ddbbc08198e180e66cc74169aa9e8a22d7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/source-concordance.json",
+      "blob": "fc5c5557a2d9eccecbfc257378fd8f72ddef2dcf",
+      "bytes": 11786,
+      "sha256": "a056f83094bb4d7121cb8798942edc226a6f7c9fc7383179bde1f1a0c69c5ba8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/source-receipts.json",
+      "blob": "52ac726d74508b2903c0ffc73c2b7d2d2b5ed91e",
+      "bytes": 75798,
+      "sha256": "65b8bcd4015652099952299f5d3a1a8149fffa320488d12ee994406cdb05436f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/aea.md",
+      "blob": "f86344adfbccd2c8d059c37de14041292d4041eb",
+      "bytes": 1233,
+      "sha256": "603bad32df0c0232489c363a4df59b42cc3b1612b44d9dea149f81985316bb88"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/agc.md",
+      "blob": "a51109c10443ccc479f84df0e2b03b11b6424209",
+      "bytes": 504,
+      "sha256": "267d1edad13409719f8ae6313534de0ed3b80ebfbaac65a8907836a3af828f83"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/agccrit.md",
+      "blob": "6fbdfd64222fb6ce49d1cc98818aa80d5b0de821",
+      "bytes": 2789,
+      "sha256": "5b904e56225fdcf37b97f41e72e2cd0bbe185d7914b1cc0b7c78f0103519e13f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/aopa.md",
+      "blob": "b440efcdaa506a69383ad9225a73dca1463af5b2",
+      "bytes": 3295,
+      "sha256": "e7fbc314bba6a8b5d093e2f6444564828c0177de614d5592f45c445ba586806d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/aopafaq.md",
+      "blob": "a411eb06acf11b70735c1bd463796b15e545d593",
+      "bytes": 6045,
+      "sha256": "93053c9ceabc6a67cc6adbca5c8c8aa2c062668501008db249e82e7395220c1f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/beta.md",
+      "blob": "44daa59108361ab319e5a39a8de8990144ff59e0",
+      "bytes": 1649,
+      "sha256": "81cfa9a62a259752a69012e6725a24708ebf11fe8a27f008f8ec15a064d6a40e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/betaalias.md",
+      "blob": "3a4fb5aab3b82da408ff3a6bdd8a6c9a983d86d1",
+      "bytes": 145,
+      "sha256": "e53762d0290d57aeb33fc1c78f75fcf09f9757c18f31daee308e528e666d920e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/byf.md",
+      "blob": "f66471f024958df732b9c839867018f66dc3e852",
+      "bytes": 509,
+      "sha256": "edbeff6dfbed7cfd6124a915edb2905508133e9b7b7b3dd17f408fcacbfd8596"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/card.md",
+      "blob": "a23ee9d77503d584da3f849370815d3d0d826ccf",
+      "bytes": 2412,
+      "sha256": "16fa3f398293837dd129e863301ee2b3573747f84d4bf521682960efbadc749c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/csu.md",
+      "blob": "5e3eab5f0eb26b928b4106dc8e12d8ff75fda437",
+      "bytes": 5933,
+      "sha256": "1129c385291708809493c06590764923db623e5921cf0bd63aac15a95098bf02"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/dpw.md",
+      "blob": "11b67a11785343b7712ccb3915f2a9a34491d10b",
+      "bytes": 3464,
+      "sha256": "d7a03c8a6f046b412f468fc666230a239dadae2b643af09226e2d3212a0efc51"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/equitable.md",
+      "blob": "17497b9dd19d99719b5e323636c3ff4aff856fea",
+      "bytes": 5567,
+      "sha256": "5742d0f878d43e25b8be1e245459acb33698462f2a291186c9638b09ed47eac0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/flathead.md",
+      "blob": "8f42620fbb627d6f696b6681a6b3e50ce506ff30",
+      "bytes": 1434,
+      "sha256": "d350e23a69d30d13bd90c932db58bee9266b6d6271bd0b93ccb7407924e7cdf8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/flatheadfailure.md",
+      "blob": "e061aa619a2d14d74a190ab57e3450932262b8bf",
+      "bytes": 157,
+      "sha256": "5da2b4a2e0c1df17f4047c084f5dece6e1240ff527e650263c8d6652815cd09d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/hosa.md",
+      "blob": "ebaac0dcede921ac83b7529009ca1ab6678133e7",
+      "bytes": 157,
+      "sha256": "5e7373a37d8ebdda3efdeeb8990803db7c27c17f03d36a19f31d7b8660281120"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/mtech.md",
+      "blob": "b6c2696a7e90bb9948777c5bb6bfddeb6b900b33",
+      "bytes": 5736,
+      "sha256": "9f36c0d17e48ad167477ec7320da83b78cebaadc642c4e86cd87526dfb3fcb56"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/naefaq.md",
+      "blob": "52d2e10a04bebbf667398c88733ea651a6de03f6",
+      "bytes": 7490,
+      "sha256": "57024cf53e1e827390c2778b24bef429ddddb4df131a70dd012e4827a26130e6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/naehcy.md",
+      "blob": "e3c9f9a11b9cb1ee2e674dfb8cf38e9f3df1bcfd",
+      "bytes": 1248,
+      "sha256": "06c13dbbaa9975b59912a2c518636681f9fec5809c483bb32e3926d150f4c2d7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/naeinstructions.md",
+      "blob": "e945ee718c0df4ba26be39b45f5593fd5ab0b361",
+      "bytes": 8874,
+      "sha256": "f064bffc6a51d6a39ad137e198cf67f7c2f944d168dcefc15a4446af356027fb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/nths.md",
+      "blob": "126aa406480aa7f0734eb72bd00b77015517089b",
+      "bytes": 1769,
+      "sha256": "2ba49a0367141f89a7f8aa7e8ed8acd88d32e908131d0f97bfed3b98ccca6690"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/parkfile.md",
+      "blob": "3a70910790ec63fdb9d66b877c6ce265691de8b9",
+      "bytes": 71,
+      "sha256": "fec3c77a15bd1f9efafefc0a39b241647ababa5ea3de7a3d222575e34a36c2b2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/parkside.md",
+      "blob": "d59b00345bff74ee645c154ed5be6bbb4ee77e66",
+      "bytes": 560,
+      "sha256": "4bf04f446fa3678bccbe78171c0783fb568302dc5e1c79324bd3b420dd2905c5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/sportys.md",
+      "blob": "cdecdbb4c15d6d1055b859ed033f18566b8d976f",
+      "bytes": 2122,
+      "sha256": "e6bc4894ce0fdc19e06bb976fb082764973d1b7a1e2b08c53cbdb0296b7d82de"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/tsa.md",
+      "blob": "823275f3aff3f738221e23ce42e971f83867ed34",
+      "bytes": 1936,
+      "sha256": "e0f04d38c5edb485d6ffeafd65a882b1166e7c415a9f6b94472709e6eb40c2f5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/umgeneral.md",
+      "blob": "5585f4932141830d1ad0ff5aca689bb7b084c3a5",
+      "bytes": 2575,
+      "sha256": "6b07c86bd20fd1c0956bb25e31d3f068657184c74f9845d90ad7f82eb69cd7ac"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/umhonors.md",
+      "blob": "2908e8a8fc2391cc6b1a0f3b3e71e8d918d58e6f",
+      "bytes": 4897,
+      "sha256": "a4c795ebe543925142e34770b04f608d3b6fee7f685008929fc14b58798f773d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/wceafile.md",
+      "blob": "870fbc8d39499cc40b37aa8abcb91ed93999938b",
+      "bytes": 157,
+      "sha256": "09370cbff4415e88e90a3d4ddbdc781de6d48809101a9308308b51d41b2d0b6b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/tests-retry.json",
+      "blob": "ac95b13474bf39230652fea9debb8b06ca8bc6de",
+      "bytes": 588,
+      "sha256": "948f39d70a24fa885a93276bf2608124fddac2e0043cd37ef2b8339987904998"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/tests-retry.log",
+      "blob": "f460fcdcc9ec9acb2cd6e3b8c57dab6510ba3b1f",
+      "bytes": 19754,
+      "sha256": "e921e37c99307c46be1d8a811cdc751e542db81ee54eb84c9e0c7e2bd1835993"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/tests.json",
+      "blob": "99bee297b59de5d3c1591518972be98e2e335e3f",
+      "bytes": 582,
+      "sha256": "a444c9318cf33ebafe7ec95673331dc5601a56ba467d15fdc8efebb07df2c58d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/tests.log",
+      "blob": "605f52c6e3769abab15736a01ed5cee1c97c43ce",
+      "bytes": 3458,
+      "sha256": "a71162ba8707dd644277891fa017d21c89cd387eb810c4b7a59a2f1ae594a1f1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/typecheck.json",
+      "blob": "531c01d84fd4e87e1f2d14a3264134eeef61168f",
+      "bytes": 602,
+      "sha256": "313799a8115f19ee0e6f42c2bc1af23240d5dab2bbcddb3bdd7140a158c638b1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/typecheck.log",
+      "blob": "d22ad9368f92bf3b154ebaa6f411b016fa816ecc",
+      "bytes": 37,
+      "sha256": "0b54cac6bb99f126f42ca5170163caf98f0e739747455757ea0b215a6140458f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/validation.json",
+      "blob": "efb23abfbab16d00905c33dbbaa64251b7653cc1",
+      "bytes": 4883,
+      "sha256": "9d5c5b0143f897039313d4e7da1ea06d918a0235f9b610ba16b06aefe1dd574b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/verification.json",
+      "blob": "156275d5692b233c769adcb5141d59fcfad3d4aa",
+      "bytes": 745,
+      "sha256": "f774a30b9a924fdfb6b5ae0fbdc8d9060859495cdb4d97fae3b3452bacada432"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-016/verify.py",
+      "blob": "650ace4e8c8f32b9200d668ab67f19637e27a59d",
+      "bytes": 14610,
+      "sha256": "3f4fbb6f5cd305f5ec73aac4e385ac24e4e609d3adb0846892e6988c9b5fee2e"
+    }
+  ]
+}

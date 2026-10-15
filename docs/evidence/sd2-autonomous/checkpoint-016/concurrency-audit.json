@@ -1,0 +1,32 @@
+{
+  "rule": "At most four independent public source reads; one per host at a time",
+  "publicIntervalsChecked": 23,
+  "historicalOverlaps": [
+    {
+      "host": "naehcy.org",
+      "sourceIds": [
+        "naeinstructions",
+        "naefaq"
+      ],
+      "firstInterval": [
+        "2026-10-15T18:46:51.038Z",
+        "2026-10-15T18:47:05.416Z"
+      ],
+      "secondInterval": [
+        "2026-10-15T18:46:51.038Z",
+        "2026-10-15T18:46:58.094Z"
+      ],
+      "policyCompliant": false,
+      "owner": "Codex source execution and evidence/governance owners",
+      "trigger": "Before every subsequent source dispatch; before later authorized evidence/history/canonical/publication review",
+      "nextAction": "Serialize by normalized hostname: never dispatch two active source calls to the same host; at most four distinct-host calls globally. Preserve historical overlap and assess handling; do not reread or rewrite timestamps."
+    }
+  ],
+  "historicalCompliance": false,
+  "originalTimestampsUnchanged": true,
+  "newSourceReads": 0,
+  "prospectiveRule": "Before dispatch compute normalized host; dispatch only when that host has no active read; await each previous same-host request. Retain up-to-four global cap.",
+  "owner": "Codex source execution and evidence/governance owners",
+  "trigger": "Before every subsequent source dispatch",
+  "nextAction": "Use frozen POLICY host serialization, minimize/sanitize output, preserve and report historical overlap without reacquisition."
+}

@@ -1624,7 +1624,7 @@
               "WUE": "may reduce to instate rate",
               "MontanaResident": "may be fully waived via eligible waivers"
             },
-            "PHSAndDLSWaiversDecreaseRelativeToPLS": false
+            "PHSAndDLSWaiversDecreaseRelativeToPLS": true
           },
           "state": "verified",
           "acceptance": "held",
@@ -1642,7 +1642,7 @@
               "excerpt": "## Scholarships for Prospective Students\n\nThe Davidson Honors College (DHC) offers merit-based scholarships to incoming students to recognize outstanding talent, academic performance, and leadership potential. These are the University of Montana's premier academic scholarships and include the Presidential Leadership Scholarship (PLS), Provost’s Honors Scholarship (PHS), and the Dean’s Leadership Scholarship (DLS).\n\nThese scholarships reduce the cost of attendance at the University of Montana and students who meet progression standards may have their awards renewed for up to four years.\n\nWe are looking for well-rounded, ambitious, and curious learners. While we look at academic performance and achievements, these criteria are not absolute and all highly motivated students are encouraged to apply.\n\nMontana high school graduates should also apply for the [Montana University System Honors Scholarship](https://mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html).\n\n- [Step 1: Apply to UM](https://umontana.edu/how-to-apply/process/undergraduate.php)\n- [Step 2: Apply to DHC](https://beagriz.umontana.edu/portal/bear_tracks)\n\n## Scholarship Details\n\n- The Fine Print\n\nScholarships may be waivers or donor funds. Some of the largest donor awards may defray the cost of attendance beyond tuition. All scholarship funds will be awarded based on donor criteria and available awards.\n\n  - Maximum PLS Scholarships waivers are offered using the following criteria:\n    - [Non-resident student tuition](https://www.umt.edu/finaid/cost-of-attendance/bachelors-deg-COA/out-of-state-coa.php) may be waived to the [WUE tuition rate](https://www.umt.edu/finaid/cost-of-attendance/bachelors-deg-COA/wue-coa.php).\n    - WUE tuition may be waived to the [in-state tuition rate](https://www.umt.edu/finaid/cost-of-attendance/bachelors-deg-COA/in-state-coa.php).\n    - Montana residents may have tuition fully waived by [certain eligible waiversPDF (PDF document)](https://mus.edu/borpol/bor900/940-13.pdf).\n\n\n      - All Montana residents wishing to be considered for DHC scholarships must apply for the [Montana University System Honor Scholarship](https://www.mus.edu/Prepare/Pay/Scholarships/MUS_Honor_Scholarship.html). Students will retain the PLS, PHS, or DLS title if they use the MUS Honor Scholarship.\n  - No waivers or combination of waivers may exceed the cost of tuition.\n  - Waivers decrease across the scholarship tiers (PHS and DLS).\n  - No applications received after December 1 at 11:59 PM MST will be considered for incoming student scholarships.\n\n- Renewal Criteria\n\nStudents who are requesting renewal of the PLS, PHS, or DLS will be reviewed using the following criteria:\n\n  - Making adequate progress in the honors college, which is defined as taking at least two honors experiences per academic year, including the completion of Introduction to Honors in your first year.\n\n  - Maintaining at least a 3.4 cumulative GPA. If GPA is below 3.4, students may appeal to provide additional context and outline a plan to elevate their GPA. If students continue to fall short of the expectations of scholars, their scholarship may be withdrawn.\n\n  - Completing an average of 30 credits per academic year/be on track for completion within four years.\n\n  - Attending at least one 1:1 or group advising or career development session per academic year.\n\n  - Demonstrate the highest standards of academic and personal integrity.\n\n  - Be in good standing with the University of Montana.\n\n\n## Important Dates\n\n- DHC Scholarship Deadline and Review Process\n\nTo apply to the Davidson Honors College, you must first apply to and be accepted by the University of Montana. To ensure adequate time for admission to UM and time to complete your DHC application by the scholarship deadline, it is recommended you apply to the University of Montana by November 24. The DHC application due date for scholarship consideration is December 1. DHC Applications received by 11:59 PM (MST) on December 1 will be considered for the Incoming Student Scholarships: Presidential Leadership Scholarship (PLS), Provost Honors Scholarship (PHS), and Dean’s Leadership Scholarship (DLS).\n\nApplications received after that date will be considered for admission to the Davidson Honors College, but NOT for the Incoming Student Scholarships. Davidson Honors College applications will be considered only from those who have applied for admission to a four-year undergraduate program at the University of Montana.\n\nApplications received before December 1 will be reviewed by a scholarship committee between December and January. Students will be notified if they have been invited to interview in mid-late January. Interviews will be conducted virtually in mid-February. Students will be notified of scholarship offers by mid-March and have until May 1 to notify us of their plans to accept or decline the offer."
             }
           ],
-          "semanticAssertion": "Typed held observation: {\"type\":\"waiver or donor funds\",\"dependentOnDonorCriteriaAvailability\":true,\"largestDonorAwardsMayExceedTuition\":true,\"waiverCombinationCap\":\"tuition\",\"tier\":\"PLS\",\"PLSMaximum\":{\"nonresident\":\"may reduce to WUE rate\",\"WUE\":\"may reduce to instate rate\",\"MontanaResident\":\"may be fully waived via eligible waivers\"},\"PHSAndDLSWaiversDecreaseRelativeToPLS\":false}",
+          "semanticAssertion": "Typed held observation: {\"type\":\"waiver or donor funds\",\"dependentOnDonorCriteriaAvailability\":true,\"largestDonorAwardsMayExceedTuition\":true,\"waiverCombinationCap\":\"tuition\",\"tier\":\"PLS\",\"PLSMaximum\":{\"nonresident\":\"may reduce to WUE rate\",\"WUE\":\"may reduce to instate rate\",\"MontanaResident\":\"may be fully waived via eligible waivers\"},\"PHSAndDLSWaiversDecreaseRelativeToPLS\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
           "nextAction": "Reconcile exact DHC PLS tier, yearless December1 MST deadline, UM admission and MUS application, separate entry unknown from 3.4 renewal, retain all progression/waiver conditions. General umontana-to-umt redirect remains identity/access hold."
@@ -4101,7 +4101,24 @@
           "semanticAssertion": "Typed held observation: {\"namedProgram\":\"Park Side Credit Union Scholarship Program\",\"mapping\":\"proposed\",\"priorDocumentTitle\":\"2025 Park Side.pdf\",\"priorDocumentContentUnknown\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile ParkSide annual local-high-school1000 parent versus2026portal and empty2025PDF conversion; membership/count/deadline/materials remain unknown."
+          "nextAction": "Reconcile ParkSide annual local-high-school1000 parent versus2026portal and empty2025PDF conversion; membership/count/deadline/materials remain unknown.",
+          "metadataEvidence": [
+            {
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+              "artifactSha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2",
+              "sourceId": "parkfile",
+              "sourceFileId": "1an46Q_asK1LbcKNy_YA0t_lDXr9RqBJH",
+              "entryPointer": "/nativeMetadata/0",
+              "propertyPointers": [
+                "/nativeMetadata/0/name"
+              ],
+              "observedProperties": {
+                "name": "2025 Park Side.pdf"
+              },
+              "observedAt": "2026-10-15T18:45:29.186Z",
+              "scope": "Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance."
+            }
+          ]
         },
         "cycle": {
           "value": null,
@@ -4406,8 +4423,8 @@
       "fieldProposals": {
         "identityObservation": {
           "value": {
-            "primaryMime": "DOCX",
-            "slideAliasMime": "PPTX",
+            "primaryMime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "slideAliasMime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
             "unexpectedTypesHeld": true,
             "historicalPDFTitle": "2024 Classified Employees.pdf",
             "mapping": null,
@@ -4429,10 +4446,57 @@
               "excerpt": "April 26 (Drop off in High School front office to [contact redacted])\n[Only one short readable line returned; all other content and year remain unverified.]"
             }
           ],
-          "semanticAssertion": "Typed held observation: {\"primaryMime\":\"DOCX\",\"slideAliasMime\":\"PPTX\",\"unexpectedTypesHeld\":true,\"historicalPDFTitle\":\"2024 Classified Employees.pdf\",\"mapping\":null,\"onlyReadableLine\":\"April26 frontoffice dropoff; contact redacted\"}",
+          "semanticAssertion": "Typed held observation: {\"primaryMime\":\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\",\"slideAliasMime\":\"application/vnd.openxmlformats-officedocument.presentationml.presentation\",\"unexpectedTypesHeld\":true,\"historicalPDFTitle\":\"2024 Classified Employees.pdf\",\"mapping\":null,\"onlyReadableLine\":\"April26 frontoffice dropoff; contact redacted\"}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Primary Doc URL returned unexpected DOCX and slide alias unexpected PPTX; both held without content fetch.2024PDF yielded one undated April26 frontoffice line only; no current identity/rules/material inference."
+          "nextAction": "Primary Doc URL returned unexpected DOCX and slide alias unexpected PPTX; both held without content fetch.2024PDF yielded one undated April26 frontoffice line only; no current identity/rules/material inference.",
+          "metadataEvidence": [
+            {
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+              "artifactSha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2",
+              "sourceId": "wcea",
+              "sourceFileId": "1bpfyBjBux0gAQ6dLNiuU8Pl620WBPpni",
+              "entryPointer": "/nativeMetadata/1",
+              "propertyPointers": [
+                "/nativeMetadata/1/mimeType"
+              ],
+              "observedProperties": {
+                "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              },
+              "observedAt": "2026-10-15T18:45:29.669Z",
+              "scope": "Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance."
+            },
+            {
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+              "artifactSha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2",
+              "sourceId": "wceaslide",
+              "sourceFileId": "1IJCocOXljp8s9uB1UmwUUy6eVmOkpbUA",
+              "entryPointer": "/nativeMetadata/2",
+              "propertyPointers": [
+                "/nativeMetadata/2/mimeType"
+              ],
+              "observedProperties": {
+                "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+              },
+              "observedAt": "2026-10-15T18:45:30.000Z",
+              "scope": "Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance."
+            },
+            {
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+              "artifactSha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2",
+              "sourceId": "wceafile",
+              "sourceFileId": "1Jd3fcKvGEB_sGzMkYb_ov5Qp0XEHJ8yL",
+              "entryPointer": "/nativeMetadata/3",
+              "propertyPointers": [
+                "/nativeMetadata/3/name"
+              ],
+              "observedProperties": {
+                "name": "2024 Classified Employees.pdf"
+              },
+              "observedAt": "2026-10-15T18:45:30.348Z",
+              "scope": "Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance."
+            }
+          ]
         },
         "cycle": {
           "value": null,
@@ -4704,7 +4768,7 @@
           "value": {
             "program": "2026 Beta Sigma Phi Xi Omicron Chapter Scholarship",
             "local": "Whitefish",
-            "oldAliasTitle": "Beta Sigma Phi Updated WHS2025",
+            "oldAliasTitle": "Beta Sigma Phi_Updated_WHS_2025.pdf",
             "mapping": "proposed"
           },
           "state": "verified",
@@ -4731,10 +4795,27 @@
               "excerpt": "7. Must be a graduating Senior from Whitefish High School\n[Only one short readable line returned; full document unavailable in this conversion.]"
             }
           ],
-          "semanticAssertion": "Typed held observation: {\"program\":\"2026 Beta Sigma Phi Xi Omicron Chapter Scholarship\",\"local\":\"Whitefish\",\"oldAliasTitle\":\"Beta Sigma Phi Updated WHS2025\",\"mapping\":\"proposed\"}",
+          "semanticAssertion": "Typed held observation: {\"program\":\"2026 Beta Sigma Phi Xi Omicron Chapter Scholarship\",\"local\":\"Whitefish\",\"oldAliasTitle\":\"Beta Sigma Phi_Updated_WHS_2025.pdf\",\"mapping\":\"proposed\"}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile2026XiOmicron named local Beta child/17April3pm deadline/2.0 GPA/Montana application/no-memberchild/materials;2025alias only one line, no complete/current equivalence."
+          "nextAction": "Reconcile2026XiOmicron named local Beta child/17April3pm deadline/2.0 GPA/Montana application/no-memberchild/materials;2025alias only one line, no complete/current equivalence.",
+          "metadataEvidence": [
+            {
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+              "artifactSha256": "64665b3c37e6ad36a112fad039e18649ea66cb9c50fdaf3e2766057dd49983b2",
+              "sourceId": "betaalias",
+              "sourceFileId": "1VafTvXTtVkQ2ht3pXvLLGSnvwbsnlvUq",
+              "entryPointer": "/nativeMetadata/5",
+              "propertyPointers": [
+                "/nativeMetadata/5/name"
+              ],
+              "observedProperties": {
+                "name": "Beta Sigma Phi_Updated_WHS_2025.pdf"
+              },
+              "observedAt": "2026-10-15T18:45:31.242Z",
+              "scope": "Exact native metadata observation only; not readable program facts or public/sponsor/current identity acceptance."
+            }
+          ]
         },
         "cycle": {
           "value": {
@@ -9289,7 +9370,9 @@
   "sourcePolicyDeviations": [
     "Source output previews included broader unrelated/redacted biography/template scope and unredacted contact/address values; one native metadata envelope exposed account-query URL. Final artifacts sanitize these but do not erase output history.",
     "UM general seed returned cross-domain umontana-to-umt final URL; identity/access continuity held; general rules not transferred to named children.",
-    "Native DOCX/PPTX unexpected MIME types held without content fetch; other readable results empty/partial remain explicit holds."
+    "Native DOCX/PPTX unexpected MIME types held without content fetch; other readable results empty/partial remain explicit holds.",
+    "Historical one-per-host violation: naeinstructions and naefaq overlapped on naehcy.org. concurrency-audit.json retains exact unchanged intervals and owned prospective host serialization; no rereads or compliance relabeling.",
+    "Next-input queue preview printed an unnecessary query-bearing source locator without dereference. Values excluded from new handoff/artifacts; historical output handling remains disclosed and owned."
   ],
   "limits": [
     "No original/raw/native/page/image/form fidelity, public/sponsor/currentoffering/source silence or route-usability proof from conversions.",

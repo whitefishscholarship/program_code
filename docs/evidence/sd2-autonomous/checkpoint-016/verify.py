@@ -1,6 +1,6 @@
 """Read-only audit of checkpoint016; never initialize/reset/replay an input."""
 from pathlib import Path
-import json,hashlib,subprocess,datetime,collections,re,os,sys
+import json,hashlib,subprocess,datetime,collections,re,os,sys,urllib.parse,itertools,copy
 P=Path(__file__).resolve().parent;B=P.parent;R=P.parents[3]
 ENTRY='65a5434288d458e6cfcd99dac6e6485a75c53cb7'
 sha=lambda b:hashlib.sha256(b).hexdigest()
@@ -37,6 +37,37 @@ assert len([s for s in sources if s['provider']=='Firecrawl connector'])==23
 metas=load(P/'capture-metadata.json')['nativeMetadata'];assert len(metas)==6
 assert [m['sourceId'] for m in metas if m['unexpectedFileType']]==['wcea','wceaslide']
 assert all(not m['contentRead'] for m in metas if m['unexpectedFileType'])
+metadataRefs=0
+for r in l['records']:
+ ev=r['fieldProposals']['identityObservation'].get('metadataEvidence',[])
+ expectedIds={316:['parkfile'],317:['wcea','wceaslide','wceafile'],318:['betaalias']}.get(r['rowLocator'],[])
+ assert [e['sourceId'] for e in ev]==expectedIds
+ seed=next(s for s in q['records'] if s['inputKey']==r['inputKey'])
+ seedIDs={m for u in seed['recordedSeedUrls']+seed['publishedSourceAliases'] for m in re.findall(r'/d/([^/]+)',u)}
+ for e in ev:
+  metadataRefs+=1;p=R/e['artifactPath'];assert sha(p.read_bytes())==e['artifactSha256']
+  content=load(p);i=int(e['entryPointer'].split('/')[-1]);m=content['nativeMetadata'][i]
+  assert e['sourceFileId']==m['fileId'] and m['fileId'] in seedIDs and e['sourceId']==m['sourceId']
+  assert e['observedAt']==m['callCompletedAt'] and e['scope']
+  assert e['propertyPointers']==[e['entryPointer']+'/'+k for k in e['observedProperties']]
+  assert e['observedProperties']=={k:m[k] for k in e['observedProperties']}
+ assert r['identityAcceptance']=='held'
+assert metadataRefs==5
+metaByID={m['sourceId']:m for m in metas}
+rv=lambda n:next(r for r in l['records'] if r['rowLocator']==n)['fieldProposals']['identityObservation']['value']
+assert rv(316)['priorDocumentTitle']==metaByID['parkfile']['name']
+assert rv(317)['primaryMime']==metaByID['wcea']['mimeType'] and rv(317)['slideAliasMime']==metaByID['wceaslide']['mimeType']
+assert rv(317)['historicalPDFTitle']==metaByID['wceafile']['name'] and rv(318)['oldAliasTitle']==metaByID['betaalias']['name']
+pub=[s for s in sources if s['provider']=='Firecrawl connector'];pairs=[]
+for a,b in itertools.combinations(pub,2):
+ if urllib.parse.urlsplit(a['originalUrl']).hostname==urllib.parse.urlsplit(b['originalUrl']).hostname and max(a['callStartedAt'],b['callStartedAt'])<min(a['callCompletedAt'],b['callCompletedAt']):pairs.append([a['sourceId'],b['sourceId']])
+audit=load(P/'concurrency-audit.json');assert pairs==[['naeinstructions','naefaq']]
+assert audit['historicalCompliance'] is False and audit['originalTimestampsUnchanged'] and audit['newSourceReads']==0
+assert [o['sourceIds'] for o in audit['historicalOverlaps']]==pairs
+for o in audit['historicalOverlaps']:
+ assert o['host']=='naehcy.org' and o['policyCompliant'] is False and all(o.get(k) for k in ['owner','trigger','nextAction'])
+ assert o['firstInterval']==[reg[o['sourceIds'][0]]['callStartedAt'],reg[o['sourceIds'][0]]['callCompletedAt']]
+ assert o['secondInterval']==[reg[o['sourceIds'][1]]['callStartedAt'],reg[o['sourceIds'][1]]['callCompletedAt']]
 fields=refs=seeds=0
 for r,seed in zip(l['records'],q['records'][300:320]):
  for k,v in seed.items():
@@ -76,6 +107,8 @@ for n in [309,310,311]:
  assert v(n,'minimumGPA')['entryMinimum'] is None and v(n,'minimumGPA')['renewalMinimum']==3.4
  assert v(n,'renewal')['honorsExperiencesPerAcademicYearMinimum']==2 and v(n,'renewal')['averageCreditsPerAcademicYear']==30
  assert v(n,'cycle')['year'] is None and v(n,'application')['genericJuly1RuleNotTransferred']
+ assert v(n,'amount')['PHSAndDLSWaiversDecreaseRelativeToPLS'] is True
+assert 'Waivers decrease across the scholarship tiers (PHS and DLS).' in texts['umhonors']
 assert v(312,'need')['required'] and v(312,'minimumGPA')['minimum']==2.5
 assert v(312,'amount')['newAwardsUpTo']==100 and v(312,'amount')['separateEducatorGiftCardUSD']==500
 assert v(312,'renewal')['professionalDevelopmentWorkshopsMinimumEachYear']==2
@@ -100,6 +133,26 @@ assert v(324,'amount')['checksDirectRecipientNotEducationalFacility'] and v(324,
 assert v(325,'materials')['referencesCount']==2 and v(325,'eligibility')['highSchoolStudentAgeInclusive']==[16,18]
 assert v(325,'minimumGPA')['minimum']==2.7 and v(325,'minimumGPA')['transcriptCumulativeUnweightedScale']==4
 assert v(325,'eligibility')['FAAprivatePilotWrittenExamBeforeSubmission'] and v(325,'amount')['flightTrainingExpiresMonthsAfterAward']==12
+original=load(P/'manifest-round1.json');review=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert original['candidateCommit']==review['binding']['candidateCommit']==rem['priorCandidateCommit']=='4f3bef34bc00558ae36667a3cb7201d7051f3b90'
+assert sha((P/'manifest-round1.json').read_bytes())==review['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+assert review['outcome']=='FAIL' and review['severityCounts']==dict(critical=0,high=0,medium=3,low=0)
+assert [d['id'] for d in rem['dispositions']]==[f['id'] for f in review['findings']]
+assert all(all(d.get(k) for k in ['rationale','owner','trigger','target']) for d in rem['dispositions'])
+assert rem['newSourceReads']==0 and rem['fieldCountsAndHoldsUnchanged']
+assert sha(git('diff','--binary',ENTRY,original['candidateCommit']))==original['completeDiffSha256']
+for f in original['changedFiles']:assert sha(git('show',original['candidateCommit']+':'+f['path']))==f['sha256']
+assert sha((P/'verification-round1.json').read_bytes())==next(f['sha256'] for f in original['changedFiles'] if f['path'].endswith('/verification.json'))
+oldLedger=json.loads(git('show',original['candidateCommit']+':docs/evidence/sd2-autonomous/checkpoint-016.json'))
+assert oldLedger['sourceRegistry']==l['sourceRegistry'] and oldLedger['coverage']==l['coverage']
+for old,new in zip(oldLedger['records'],l['records']):
+ for k in old:
+  if k!='fieldProposals':assert old[k]==new[k]
+ for k,f in old['fieldProposals'].items():
+  n=old['rowLocator'];newf=new['fieldProposals'][k]
+  if (n,k) not in [(316,'identityObservation'),(317,'identityObservation'),(318,'identityObservation'),(310,'amount')]:assert f==newf
+  else:assert f['state']==newf['state'] and f['acceptance']==newf['acceptance'] and f['evidence']==newf['evidence']
 history=0
 for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,16)]:
  mp=folder/('research-manifest.json' if folder==B else 'final-manifest.json');rp=folder/('research-review.json' if folder==B else 'review.json');m=load(mp);rv=load(rp);binding=rv.get('binding',rv)
@@ -153,4 +206,4 @@ if '--review-bound' in sys.argv:
  assert set(git('diff','--name-only',m['candidateCommit'],receipt).decode().splitlines())=={'docs/evidence/sd2-autonomous/checkpoint-016/final-manifest.json','docs/evidence/sd2-autonomous/checkpoint-016/review.json'}
  for name in ['SESSION_WRAP.md','SESSION_CLOSE.md']:
   text=(P/name).read_text();assert all(x in text for x in ['owner','trigger','SD3','offset320','86','5947','437'])
-print(json.dumps(dict(outcome='PASS',recordedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),entryCommit=ENTRY,scope='Local held-research integrity only',checkpointInputs=20,cumulativeInitialDispositions=320,unprocessedInputs=86,fieldEnvelopes=fields,cumulativeHeldFields=5947,heldIdentities=320,sourceReceipts=27,evidenceReferences=refs,seedDispositions=seeds,sourceLinkDispositions=sum(len(s['linkDispositions']) for s in sources),historicalManifestReviewsVerified=history,protectedTrackedFiles=protected,priorCustodyPins=71,custodyGaps=gaps,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False,nextInputKey=l['nextInputKey'],reviewBound='--review-bound' in sys.argv),indent=2))
+print(json.dumps(dict(outcome='PASS',recordedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),entryCommit=ENTRY,scope='Local held-research integrity only',checkpointInputs=20,cumulativeInitialDispositions=320,unprocessedInputs=86,fieldEnvelopes=fields,cumulativeHeldFields=5947,heldIdentities=320,sourceReceipts=27,evidenceReferences=refs,nativeMetadataBindings=metadataRefs,historicalHostOverlapPairs=pairs,historicalDispatchCompliant=False,seedDispositions=seeds,sourceLinkDispositions=sum(len(s['linkDispositions']) for s in sources),historicalManifestReviewsVerified=history,protectedTrackedFiles=protected,priorCustodyPins=71,custodyGaps=gaps,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False,nextInputKey=l['nextInputKey'],reviewBound='--review-bound' in sys.argv),indent=2))

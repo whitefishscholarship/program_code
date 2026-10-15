@@ -1,0 +1,124 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of bounded local SD2 held-research checkpoint016; no canonical acceptance",
+  "reviewedAt": "2026-10-15T18:58:51Z",
+  "reviewer": {
+    "identity": "/root/checkpoint016_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": false
+  },
+  "binding": {
+    "entryCommit": "65a5434288d458e6cfcd99dac6e6485a75c53cb7",
+    "candidateCommit": "4f3bef34bc00558ae36667a3cb7201d7051f3b90",
+    "candidateTree": "d6198a9e8af8bdb9d774cd329ab35b8ee33fc932",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-016/final-manifest.json",
+    "manifestSha256": "f78d2a16172833c6586702eb0aac7e1efa354133f6b6624770d7ea7369ee4f56",
+    "completeDiffSha256": "a4600364e8f565c2fd8d6c3ac1ba6e0bd16a278e1fd9e60693755b4d52297572",
+    "completeDiffBytes": 1546037,
+    "changedPaths": 54,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1822,
+    "allPreEntryBlobIdsAndModesPreserved": true,
+    "allNewFileModes": "100644"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-016-M1",
+      "severity": "medium",
+      "title": "Bind native metadata subclaims to their actual evidence",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-016.json",
+      "line": 4409,
+      "relatedEvidence": [
+        "checkpoint-016.json:4074",
+        "checkpoint-016.json:4410-4432",
+        "checkpoint-016.json:4707-4734",
+        "checkpoint-016/capture-metadata.json:679-770",
+        "checkpoint-016/assemble.py:109",
+        "checkpoint-016/assemble.py:114",
+        "checkpoint-016/assemble.py:117"
+      ],
+      "description": "Rows316–318 combine readable-source observations with native filename/MIME claims, but their field evidence cites only readable conversions. The empty ParkSide artifact cannot establish its filename; the WCEA one-line artifact cannot establish either unexpected MIME or the historical filename; the Beta alias one-line artifact cannot establish its filename. Row318 marks the entire composite verified. The necessary metadata exists in capture-metadata.json, but these field claims have no exact metadata pointer/hash/observation binding.",
+      "requestedChange": "Add explicit field-level metadata evidence with artifact hash, exact nativeMetadata entry/property pointers, exact file identity and observation time. Distinguish metadata observations from readable program content, preserve every identity/access hold, and extend the verifier to validate those bindings and input affinity. Use retained metadata only.",
+      "owner": "Codex checkpoint016 implementation owner",
+      "trigger": "Before replacement candidate freeze and independent recheck",
+      "target": "checkpoint016 ledger, assembler, metadata bindings and verifier"
+    },
+    {
+      "id": "SD2-016-M2",
+      "severity": "medium",
+      "title": "Correct the contradictory PLS waiver-tier assertion",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-016.json",
+      "line": 1627,
+      "relatedEvidence": [
+        "checkpoint-016.json:1645",
+        "checkpoint-016/assemble.py:66",
+        "checkpoint-016/sources/umhonors.md:28"
+      ],
+      "description": "Row310's verified amount value sets PHSAndDLSWaiversDecreaseRelativeToPLS=false. This globally named assertion contradicts the retained source statement that waivers decrease across the PHS and DLS tiers. The assembler derives the false value from the current record being PLS rather than from the proposition named by the key.",
+      "requestedChange": "Represent the shared PHS/DLS comparison consistently as true, or rename and scope the field explicitly to whether this record's own tier has a reduced waiver. Refresh its semantic assertion and add a focused source-semantic check without changing unrelated award facts.",
+      "owner": "Codex checkpoint016 implementation owner",
+      "trigger": "Before replacement candidate freeze and independent recheck",
+      "target": "row310 amount and corresponding assembler/verifier logic"
+    },
+    {
+      "id": "SD2-016-M3",
+      "severity": "medium",
+      "title": "Record the demonstrated same-host concurrency violation",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-016/capture-metadata.json",
+      "line": 457,
+      "relatedEvidence": [
+        "checkpoint-016/capture-metadata.json:458",
+        "checkpoint-016/capture-metadata.json:482-483",
+        "POLICY.md:85-86",
+        "checkpoint-016/ASSEMBLY_NOTES.md"
+      ],
+      "description": "The naeinstructions and naefaq requests both start at2026-10-15T18:46:51.038Z on naehcy.org and finish at18:47:05.416Z and18:46:58.094Z respectively. Their overlap violates the explicit one-per-host-at-a-time rule. An independent comparison of all retained source intervals found this one same-host overlapping pair. The candidate's assembly notes and deviation list do not disclose it.",
+      "requestedChange": "Preserve the original timestamps and historical lapse; add an exact owned disclosure and prospective host-serialization rule. Add read-only overlap accounting that reports this historical pair rather than relabeling it compliant. Do not reacquire sources or rewrite execution history. Carry the implementation owner's additional disclosure about unnecessary next-input query-locator preview without reproducing its value.",
+      "owner": "Codex source execution and evidence/governance owners",
+      "trigger": "Replacement disclosure before recheck; host serialization before every subsequent source dispatch",
+      "target": "checkpoint016 assembly notes, deviation accounting, verifier and continuation guidance"
+    }
+  ],
+  "checksPerformed": [
+    "Read governing repository contracts, relevant canonical plan/state, SD2 authority/policy, prior015 review and continuation, and current packet.",
+    "Inspected all27 retained selected source artifacts and all20 records' typed material values, including identity, eligibility, application, amount, cycle, renewal, materials, conflicts and unknowns.",
+    "Ran python3 docs/evidence/sd2-autonomous/checkpoint-016/verify.py: PASS.",
+    "Verified exact ordered offsets300:320,20 outcomes,305 new field holds,5947 cumulative field holds,320 identity holds,86 remaining, and next savedrow326.",
+    "Verified171 readable-artifact excerpt/hash references,51 seed dispositions,43 retained source-link dispositions,27 receipts,23 public retrievals,4 native readable retrievals and6 metadata calls.",
+    "Independently recomputed manifest SHA256, candidate tree, complete baseline-to-candidate binary diff SHA256, exact54-path change set, every candidate blob ID/length/hash, worktree equality and new file modes.",
+    "Independently verified all1822 pre-entry tracked paths retain exact blobs and modes.",
+    "Verifier confirmed15 historical manifest/review bindings,1819 protected worktree paths,71 prior custody pins with zero gaps,12 M1 pins and437 M1 records.",
+    "Full baseline-to-candidate git diff --check passed.",
+    "Checked retained validation evidence: plan/type/fulltests pass after documented IPC retries; both exact standard builds remain process/port EPERM failures.",
+    "Scanned all current packet files, including scripts, for email, telephone and sensitive-query patterns without reproducing contact or account values.",
+    "Performed no edits, assembler execution, source/network/workbook reads or external actions."
+  ],
+  "limits": [
+    "Selected conversions and author concordance do not establish original-response fidelity, native/raw/page/image/table/form completeness, source silence, origin freshness, current offering, public access, sponsor continuity or usable routes.",
+    "Unexpected DOCX/PPTX sources remain held without content reads; empty/partial native results and the cross-domain redirect remain explicit holds.",
+    "Earlier output exposure cannot be erased by final artifact sanitization.",
+    "Fresh authenticated main/target, successful exact standard build, preservation/recovery, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gates retain their existing owners and triggers.",
+    "This failure concerns the bound research packet. It neither rejects preserved historical reviews nor accepts scholarship facts or a canonical stage."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex checkpoint016 implementation owner",
+    "trigger": "Receipt of this exact bound review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-016/",
+    "action": "Preserve this failed candidate, original manifest and review binding. Author three count-matched dispositions with rationale, owner and target; remediate using retained evidence; freeze a replacement immutable candidate and request this independent reviewer's recheck. Prepare the separate handoff only after final PASS. No additional checkpoint, SD3 or external effect follows."
+  }
+}
