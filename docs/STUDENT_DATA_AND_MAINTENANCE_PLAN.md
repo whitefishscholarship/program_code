@@ -355,6 +355,21 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-009-START -->
+<!-- SD2-CHECKPOINT-009-CLOSE-START -->
+- Final session closure audited all180initial dispositions/3,495fieldholds/
+  180identityholds,294seed-alias/788source-link occurrences, every original/new
+  owner/trigger/action, nineattentionrows/all supplements and437M1routes.
+  Evidence: checkpoint-009/SESSION_CLOSE.md and session-close-verification.json.
+  Original candidate/reviews/receipts and7eaa47ahandoff remain exact; no pending
+  reviewer repair/recheck/delegated work. Next-session Codex resumes offset180/
+  row184 under existing AUTHORITY/POLICY. Source-output handling, BLFredacted
+  locator/conversion, temporarycustody, prior rawbatch/WET/Clerk/Davis/interim
+  receipt gaps and all build/freshmain/later gates retain original triggers.
+  Resolved review/Git-index/wrong-head-draft issues remain documented, no new task.
+  No new research, reset/replay, fact acceptance, reserved effect orSD3 during
+  closure. For closure recheck use checkpoint-009/verify-session-close.py;
+  earlier wrap audits retain original pre-close path allowlists and bindings.
+<!-- SD2-CHECKPOINT-009-CLOSE-END -->
 - October14,2026: one bounded checkpoint009 completes frozen offsets160–179,
   beginning row164/ElevatedAccessAdvancedRating. Ledger/packet:
   sd2-autonomous/checkpoint-009.json and checkpoint-009/. Twentyinitialoutcomes:
