@@ -1,0 +1,5 @@
+|     |
+| --- |
+| |     |
+| --- |
+| Black Mountain Software is offering scholarships to Montana students. All interested 2024 graduating Montana high school seniors who will be attending an accredited institution of higher education, regardless of their field of study, are eligible. These accredited institutions include trade schools, technical schools, colleges or universities.<br> <br>Two Scholarships will be awarded in the amount of $1,000.00 each. Scholarship payment will be made directly to the school that the applicant will be attending. <br> <br>Applications and essays must be submitted electronically to Black Mountain Software. <br> <br>Please email to: [[contact redacted]]([contact locator redacted])<br>**All submissions must be emailed on or before April 15, 2024.**<br>Copies of the application and instructions can be accessed here: <br>**[BMS\_2024\_Scholarship\_Application.pdf](https://devsupport.blackmountainsoftware.com/info/BMS_Scholarship2024.pdf)**<br>Black Mountain Software looks forward to honoring Montana high school graduates by helping to defray some of the costs of continuing their education. | |

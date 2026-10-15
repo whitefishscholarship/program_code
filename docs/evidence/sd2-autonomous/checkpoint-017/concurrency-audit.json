@@ -1,0 +1,9 @@
+{
+  "historicalCompliance": true,
+  "sameHostOverlaps": [],
+  "maximumConcurrentReads": 4,
+  "sourceReads": 26,
+  "owner": "Codex source execution",
+  "trigger": "Before every subsequent dispatch",
+  "nextAction": "Normalize hostname; await samehost completion; at most four distinct hosts globally. Preserve prior checkpoint016 noncompliance exact."
+}
