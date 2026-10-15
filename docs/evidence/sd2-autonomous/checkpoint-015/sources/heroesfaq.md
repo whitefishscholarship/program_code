@@ -103,3 +103,21 @@ No. This is a merit-based program that does not consider need. That said, the sc
 
 
 If a student receives other scholarships (e.g. GI-Bill, 9/11 Fry Scholarship or other resources) that when combined fully meet or exceed the cost of tuition, we ask the student to consider declining this scholarship so that it is available for others. Fisher House Foundation has a limited amount of funds for scholarships and would like to help those with unmet needs.
+
+[Editorial: restored Heroes-specific FAQ from the original in-session conversion; no new retrieval.]
+
+- Where do I go if I have other questions?
+
+
+
+
+
+Questions concerning eligibility to apply, special circumstances that might preclude having a parent sign the application, or a request to submit the application by email rather than mail, and other similar subjects should be addressed to Fisher House Foundation by sending an email to [contact redacted]. Include "Heroes' Legacy Scholarships" in the subject line.
+
+
+
+Questions concerning the application, transcripts, grade point averages, and similar subjects should be addressed to Scholarship Managers by sending an email to [contact redacted].
+
+
+
+If you are having technical difficulties using the online application system, creating an account or logging in, send an email to: [contact redacted].

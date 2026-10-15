@@ -55,7 +55,7 @@ summarize exact per-field/seed/link actions in the ledger, not another queue.
 |291 HPFY Beyond Disability|Documenteddisability/full-or-parttime/US2–4year or technical/HSshouldplan nextfall versus shared accepted copy.1000/August15yearunknown/Octobersecondweek; enrollmentcertificate-or-transcript, GPAdoesnotaffectselection,medicalproof,500minimum disabilityessay,optionalsupport/recommendations.|
 |292 HPFY Make Difference|Fulltime/US/accreditedacceptance nextfall/3.0cumulative scaleunknown/100documented localvolunteerhours over2years.1000/yearlessAugust15;GPAstatement-transcript/hourproof/500minimum service-projectessay/optionalrecommendations. No disability condition transferred.|
 |293 AFSA|Saved broad name versus exactSecondChance child;USC/legalresident/diplomaGED/accreditedUScollege-trade/fall2026or spring2027;no GPA/income/stafffamily/priorwinner. Jan1–Aug31literal12:59CDT,5x1000/random/tuitionbooks/schoolpayee. Oneentry/8quiz;postselection2IDs/citizenship proof,14businessdaynotice/10dayreply/60daycompletion.|
-|294 Freeland|Exact employer-form title supports route proposal;parent3500/recreational-or-private conflicts withPDFprivateonly. AEAemployment1year,flighttrainingonly,within6months,employerdisbursement;April1,2027;typed doublespaced200maxessay/employerrecommendation and character prompt.|
+|294 Freeland|Exact employer-form title supports route proposal;parent3500/recreational-or-private conflicts withPDFprivateonly. AEAemployment1year,flighttrainingonly,within6months,employerdisbursement;April1,2027;typed doublespaced200maxessay/employerrecommendation and character prompt; email application/essay/recommendation, contact redacted.|
 |295 Peacock|Redacted AEA memorial titles/sharedASP do not identify exact named child. Unassigned aviation-management profile retained;no ordinal amount/criteria assignment.|
 |296 Garmin|Exactnamed2000/HSsenior-or-college/plans-or-attends accreditedavionics-or-aircraftmaintenance. Parent2027–28 not child offering proof;sharedASP held unvisited.|
 |297 Garmin–Jerry Smith|Redacted Garmin memorial title not mapped to saved person. Unassigned1000/highschool-college-vocational profile retained without named fact transfer.|
@@ -103,3 +103,19 @@ Author:Codex; runtime model/effort not independently exposed. Fresh-context read
 non-author review must bind the immutable candidate/manifest. A research PASS never
 accepts facts, identities, a canonical stage or release. No workbook/app/config/CI,
 login/form/contact/message,remoteGit/release/deployment/monitoractivation orSD3.
+
+## Independent round1 corrections
+
+Original8ea1e02 and manifest-round1/review-round1/verification-round1 remain exact.
+Three medium findings have count-matched owner/target/rationale dispositions in
+remediation.json. Heroes-specific parent-signature/email-versus-mail questions
+are restored from the original in-session FAQ;no other Fisher program terms.
+Both exact Baker/Cook recommendation artifacts restore course-grade/months-taught
+prompt labels from original conversions;personal response blanks remain excluded.
+Exact PDF profiles294/298/300 no longer inherit neighboring genericASP. Freeland
+email submission of application/essay/employer recommendation is typed without
+contact values or route-usability proof. Baker/Cook return-to-AEA wording remains
+document-scoped with no invented channel. Hashes/excerpts/receipts/concordance/
+semantic assertions/focused checks are refreshed;counts/holds unchanged. No new
+read/reconstruction/external effect. Author concordance never establishes original
+fidelity/native/page/form completeness. Independent replacement recheck required.

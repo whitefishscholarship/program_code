@@ -1,0 +1,81 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of bounded local SD2 held-research checkpoint015",
+  "reviewedAt": "2026-10-15T15:22:52.679960+00:00",
+  "reviewer": {
+    "identity": "/root/checkpoint015_review",
+    "freshContext": true,
+    "authoredOrEdited": false,
+    "readOnly": true,
+    "networkOrExternalActions": false,
+    "memoryConsulted": true,
+    "memoryUse": "Navigation and review procedure only; candidate findings independently verified from current retained evidence."
+  },
+  "binding": {
+    "entryCommit": "fc38c772799d4e285759cbc00041f5aa233aeb6b",
+    "candidateCommit": "8ea1e02116551fd92652767d387f7eeba926a509",
+    "candidateTree": "d5927206dc0655581594dd897e40f203a2bb2ab4",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-015/final-manifest.json",
+    "manifestSha256": "854faafe62ab6b98955aeccd5e8446288de5af8eb618991649a5ae0e71405777",
+    "completeDiffSha256": "4e6ecc6f916955654ff8f8bbe950cf3ec9172f813b2257c2455ca8dcc7f1e7bf",
+    "changedPaths": 39,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "all1770PreEntryTrackedPathsPreservedByBlobAndMode": true,
+    "onlyUntrackedPath": "docs/evidence/sd2-autonomous/checkpoint-015/final-manifest.json"
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 3, "low": 0},
+  "findings": [
+    {
+      "id": "SD2-015-M1", "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-015.json:454",
+      "rationale": "Row285 application.FAQSpecialCircumstances is marked verified and asserts parent-signature/email-versus-mail FAQ questions. Neither retained heroesfaq.md nor the bound FAQ excerpt contains those questions. The retained Heroes page supports an online parent/sponsor/guardian signature, while the retained FAQ supports email-based case-by-case eligibility review. The additional question/route variants are unsupported by this evidence and may originate outside the selected Heroes scope.",
+      "requiredFix": "Remove the unsupported question/route assertions or restore exact Heroes-scoped supporting passages from the already obtained conversion with disclosed provenance. Do not transfer other Fisher program FAQ material. Update semantic assertions, dependent bindings, README route language and focused verifier coverage."
+    },
+    {
+      "id": "SD2-015-M2", "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-015.json:4906",
+      "rationale": "Rows298 and300 materials.recommendation.formPrompts both assert course grade and months taught, marked verified. Neither retained baker.md/cook.md nor either bound materials excerpt contains that prompt. The artifacts retain rating tables, specific rating comments and a character-incident prompt, but the claimed additional material cannot be independently verified.",
+      "requiredFix": "Restore the exact non-contact prompt from the original already obtained conversions, explicitly identifying any previously excluded blank-field scope, or remove/hold the unsupported subclaim. Update both exact document bindings, excerpts, hashes, receipts, concordance, semantic assertions and focused verifier checks while preserving separate identity holds."
+    },
+    {
+      "id": "SD2-015-M3", "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-015.json:3574",
+      "rationale": "Rows294,298 and300 inherit application.sharedASP as a verified per-record application observation. Their independently delimited AEA parent profiles instead link their exact Freeland/Baker/Cook PDFs; the generic ASP belongs to other profiles. No retained evidence binds that generic ASP to these three document-scoped inputs. Additionally, Freeland's retained PDF explicitly directs email submission of application, essay and employer recommendation, but that observed method is absent from its typed application value.",
+      "requiredFix": "Represent each record's exact PDF locator and document-observed application method separately. Remove the unsupported per-record sharedASP association or label it explicitly as an unassigned parent-page locator. Preserve Freeland's observed email method without retaining contact values or claiming route usability. Keep Baker/Cook return-to-AEA wording document-scoped and unresolved beyond what is retained. Add exact-input/profile route assertions to the verifier and update dependent documentation."
+    }
+  ],
+  "checksPerformed": [
+    "Read repository governance, canonical plan/current BUILD_STATE/handoff, SD plan section9, frozen AUTHORITY/POLICY/queue, current kickoff, original policy review and prior checkpoint014 review boundaries.",
+    "Independently recomputed manifest SHA256, candidate tree, full entry-to-candidate binary diff SHA256, exact39-path change set, and every changed candidate blob ID, byte length, SHA256 and worktree equality.",
+    "Independently verified all1770 pre-entry tracked paths retain their exact candidate blob IDs and Git modes; candidate changes only add the authorized checkpoint packet and ledger.",
+    "Verified all134 evidence references resolve to the exact retained excerpt, artifact SHA256, source URL and allowed input-source registry.",
+    "Compared nonnull typed values against retained source passages, including eligibility, materials, cycle, amount, application, need, GPA and identity qualifiers; identified the three findings above.",
+    "Verified exact ordered offsets280:300,20 initial outcomes,12 researched-held/8 held-identity,301 new held fields,5642 cumulative field holds,300 identity holds,106 remaining and nextoffset300/savedrow306.",
+    "Checked eight redacted AEA identity holds and absence of ordinal-based named amount/eligibility transfer for unassigned shared-ASP profiles.",
+    "Ran the read-only checkpoint verifier: PASS for structural integrity,14 prior manifest/review bindings,1767 protected tracked files,40 seed dispositions,16 source-link dispositions,71 custody pins with no gaps,12 M1 pins and437 original M1 records.",
+    "Independently recomputed all71 current custody hashes against their unchanged original pins.",
+    "Inspected validation commands, timestamps, exit codes and retained logs: plan/type/fulltests pass after disclosed IPC retries; both exact standard builds fail process/port EPERM.",
+    "Full entry-to-candidate git diff --check passed.",
+    "Confirmed no file changes were made during this review."
+  ],
+  "checks": {
+    "structuralVerifier": "PASS", "manifestAndPreservation": "PASS",
+    "semanticEvidenceReview": "FAIL pending three medium repairs",
+    "requiredSoftwareValidation": {"plan": "PASS after recorded IPC retry", "typecheck": "PASS", "fullTests": "PASS after recorded IPC retry", "standardBuild": "FAIL on both exact attempts; open gate preserved"}
+  },
+  "limits": [
+    "Review covers retained selected converted passages, not independently authenticated original responses or complete native/raw/page/image/table/form fidelity.",
+    "Author concordance cannot establish independent original fidelity; no source silence, current offering, public access, sponsor continuity or usable route is established.",
+    "Historical model-facing scope/contact exposure is disclosed; this review makes no erasure claim.",
+    "No new source acquisition, queue processing, workbook access, application interaction, external action or software-validation rerun occurred during review.",
+    "Fresh authenticated main/target, exact successful standard build and all later preservation, human/canonical/publication, student/browser/CSV, monitoring and external-effect gates remain open at their original owners and triggers."
+  ],
+  "canonicalAcceptance": false, "acceptedFacts": 0, "fullSD2Complete": false, "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex checkpoint015 implementation owner", "trigger": "This independent review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-015/",
+    "action": "Preserve this rejected candidate, exact manifest and review binding. Repair only the authorized checkpoint packet, record three count-matched dispositions, refresh dependent evidence, rerun relevant integrity/diff checks, freeze a replacement candidate and request independent recheck. Keep all facts and identities held; do not advance the queue, accept a canonical stage, begin SD3 or perform external effects."
+  }
+}

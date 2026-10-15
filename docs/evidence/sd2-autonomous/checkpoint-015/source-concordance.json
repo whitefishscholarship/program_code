@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-15T15:18:29.681Z",
+  "recordedAt": "2026-10-15T15:26:00.867Z",
   "scope": "Author line concordance against original in-session Firecrawl conversions after disclosed whitespace/contact/image/selected-scope transformations. Complete original responses not persisted; no independent native/raw/page/image/form or original-fidelity proof.",
   "checks": [
     {
@@ -28,13 +28,13 @@
     },
     {
       "sourceId": "cook",
-      "retainedNonblankNonEditorialLines": 38,
+      "retainedNonblankNonEditorialLines": 40,
       "unmatched": [],
       "authorOnly": true
     },
     {
       "sourceId": "baker",
-      "retainedNonblankNonEditorialLines": 38,
+      "retainedNonblankNonEditorialLines": 40,
       "unmatched": [],
       "authorOnly": true
     },
@@ -82,9 +82,10 @@
     },
     {
       "sourceId": "heroesfaq",
-      "retainedNonblankNonEditorialLines": 26,
+      "retainedNonblankNonEditorialLines": 30,
       "unmatched": [],
       "authorOnly": true
     }
-  ]
+  ],
+  "remediationProvenance": "Restored from original in-session conversions; no new reads, reconstruction or independent original-fidelity proof."
 }

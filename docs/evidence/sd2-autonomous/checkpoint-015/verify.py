@@ -64,6 +64,8 @@ assert v(285,'eligibility')['enrollmentOR']==['enroll','plan to enroll'] and len
 assert v(285,'eligibility')['ageAndUSIDTiming']=='first scheduled day of fall classes for award academic year'
 assert v(285,'need')['needBased'] is False and v(285,'materials')['parentSponsorGuardianDigitalSignature']
 assert v(285,'reapplication')['priorApplicants'] and v(285,'amount')['fullyCoveredTuition']
+assert 'special circumstances that might preclude having a parent sign the application' in texts['heroesfaq']
+assert 'a request to submit the application by email rather than mail' in texts['heroesfaq']
 assert rows[286]['fieldProposals']['eligibility']['state']=='conflict' and v(286,'eligibility')['ageConflictUnresolved']
 assert v(286,'materials')['postAward']==['college acceptance copy','enrollment proof']
 assert v(287,'cycle')['2027']['deadline']=='2027-05-03' and v(287,'amount')['amountCycle'].startswith('2026')
@@ -88,11 +90,30 @@ for n in [298,300]:
  assert rows[n]['outcome']=='held-identity' and v(n,'minimumGPA')['minimum']==2.5 and v(n,'minimumGPA')['scale']==4
  assert v(n,'cycle')['receivedDeadline']=='2027-04-01' and v(n,'cycle')['topDeadlineRedacted']
  assert v(n,'materials')['essay']['maximumWords']==300 and v(n,'materials')['recommendation']['dated'] and v(n,'materials')['recommendation']['signed']
+ assert 'Course grade in your class' in texts['baker' if n==298 else 'cook'] and 'How many months did you have this person as a student?' in texts['baker' if n==298 else 'cook']
+for n,id in [(294,'freeland'),(298,'baker'),(300,'cook')]:
+ app=v(n,'application');assert 'sharedASP' not in app and app['sharedASPNamedAssociation'] is False
+ assert app['parentProfileApplicationLocator']==reg[id]['originalUrl'] and app['routeUsabilityVerified'] is False
+ assert [e['sourceId'] for e in rows[n]['fieldProposals']['application']['evidence']]==[id]
+ assert reg[id]['originalUrl'] in texts['aea']
+assert v(294,'application')['observedMethod'].startswith('Email application, essay and employer recommendation')
+assert 'Email application, essay and employer recommendation:' in texts['freeland']
 for n in [295,297,301,302,303,304]:
  assert rows[n]['outcome']=='held-identity' and v(n,'amount') is None and v(n,'eligibility') is None
 for n,amt in [(296,2000),(299,2500),(305,1000)]:
  assert v(n,'amount')['USD']==amt and v(n,'eligibility')['enrollmentOR']==['plans to attend','attending']
 con=load(P/'source-concordance.json');assert len(con['checks'])==14 and all(not c['unmatched'] for c in con['checks'])
+om=load(P/'manifest-round1.json');ov=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert om['candidateCommit']==ov['binding']['candidateCommit']==rem['priorCandidateCommit']=='8ea1e02116551fd92652767d387f7eeba926a509'
+assert sha((P/'manifest-round1.json').read_bytes())==ov['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256'] and ov['outcome']=='FAIL'
+assert ov['severityCounts']==dict(critical=0,high=0,medium=3,low=0)
+assert [x['id'] for x in ov['findings']]==[x['id'] for x in rem['dispositions']]
+assert all(all(x.get(k) for k in ['rationale','owner','target']) for x in rem['dispositions'])
+assert rem['newSourceReads']==0 and rem['fieldCountsAndHoldsUnchanged']
+assert sha(git('diff','--binary',ENTRY,om['candidateCommit']))==om['completeDiffSha256']
+for x in om['changedFiles']:assert sha(git('show',om['candidateCommit']+':'+x['path']))==x['sha256']
+assert sha((P/'verification-round1.json').read_bytes())==next(x['sha256'] for x in om['changedFiles'] if x['path'].endswith('/verification.json'))
 history=0
 for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,15)]:
  mp=folder/('research-manifest.json' if folder==B else 'final-manifest.json');rp=folder/('research-review.json' if folder==B else 'review.json');m=load(mp);rv=load(rp);binding=rv.get('binding',rv)

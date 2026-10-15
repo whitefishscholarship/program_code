@@ -44,3 +44,11 @@ A first local draft commit3739445 included two trailing blank lines detected by
 the staged full-diff check. They are corrected prospectively in a new commit;
 no review was bound to that draft and no history is rewritten. Dependent FAQ
 hashes are refreshed. The final verifier and entry-to-candidate diff are rerun.
+
+Independent round1 identified three medium evidence/route defects. Original
+8ea1e02,manifest-round1/review-round1/verification-round1 remain unchanged.
+Corrections restore Heroes-specific FAQ and recommendation prompt labels from
+original in-session conversions only;no new reads/reconstruction. Blank response
+areas and contacts remain excluded. Copied genericASP assertions on exact-PDF
+profiles are replaced with actual methods/unknowns. Counts/holds unchanged.
+Concordance remains author-only;native/original/page/form fidelity unproved.

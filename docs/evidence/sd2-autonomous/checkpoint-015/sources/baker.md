@@ -60,3 +60,9 @@ Your comments on this student.  Please respond with specifics if you checked any
 
 Please recount an incident that would provide your insight into this student’s character, personality and values.  Use an additional
 sheet if necessary.
+
+[Editorial: restored exact recommendation prompt labels from original conversion; response blanks omitted, no applicant values collected.]
+
+Course grade in your class
+
+How many months did you have this person as a student?

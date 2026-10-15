@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-10-15T15:25:11.333983+00:00",
+  "priorCandidateCommit": "8ea1e02116551fd92652767d387f7eeba926a509",
+  "priorManifestSha256": "854faafe62ab6b98955aeccd5e8446288de5af8eb618991649a5ae0e71405777",
+  "priorReviewSha256": "1d969a95c7f536afd1a961436376aa46477bf81ab9be28ba589e984d4caaf4ef",
+  "newSourceReads": 0,
+  "fieldCountsAndHoldsUnchanged": true,
+  "dispositions": [
+    {
+      "id": "SD2-015-M1",
+      "severity": "medium",
+      "result": "author-fixed; independent recheck required",
+      "rationale": "Restored exact Heroes-scoped Where-do-I-go FAQ from original in-session conversion, sanitized contacts and refreshed application excerpt/hash; no other Fisher program paragraph retained.",
+      "owner": "Codex checkpoint015 implementation owner",
+      "target": "Replacement immutable checkpoint015 candidate and independent recheck"
+    },
+    {
+      "id": "SD2-015-M2",
+      "severity": "medium",
+      "result": "author-fixed; independent recheck required",
+      "rationale": "Restored exact course-grade/months-taught recommendation labels from each original in-session PDF conversion; blank response areas excluded; both separate held identities and material bindings refreshed.",
+      "owner": "Codex checkpoint015 implementation owner",
+      "target": "Replacement immutable checkpoint015 candidate and independent recheck"
+    },
+    {
+      "id": "SD2-015-M3",
+      "severity": "medium",
+      "result": "author-fixed; independent recheck required",
+      "rationale": "Removed per-record genericASP from294/298/300, replaced with exact PDF locator and actual document-method/unknowns. Freeland email submission of application/essay/employer recommendation now typed with redacted contact and unverified route. Baker/Cook return-to-AEA remains document-scoped.",
+      "owner": "Codex checkpoint015 implementation owner",
+      "target": "Replacement immutable checkpoint015 candidate and independent recheck"
+    }
+  ]
+}
