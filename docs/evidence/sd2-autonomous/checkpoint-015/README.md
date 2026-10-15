@@ -103,4 +103,3 @@ Author:Codex; runtime model/effort not independently exposed. Fresh-context read
 non-author review must bind the immutable candidate/manifest. A research PASS never
 accepts facts, identities, a canonical stage or release. No workbook/app/config/CI,
 login/form/contact/message,remoteGit/release/deployment/monitoractivation orSD3.
-

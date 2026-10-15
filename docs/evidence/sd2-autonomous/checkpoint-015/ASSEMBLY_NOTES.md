@@ -39,3 +39,8 @@ Yearless dates, shared-versus-child wording and conflict variants stay separate.
 No union/intersection is accepted eligibility. All later evidence gaps retain the
 ledger's Codex owner and applicable authorized evidence-arrival/consolidation
 trigger. All historical handling/native/custody/build/main/later gates remain open.
+
+A first local draft commit3739445 included two trailing blank lines detected by
+the staged full-diff check. They are corrected prospectively in a new commit;
+no review was bound to that draft and no history is rewritten. Dependent FAQ
+hashes are refreshed. The final verifier and entry-to-candidate diff are rerun.

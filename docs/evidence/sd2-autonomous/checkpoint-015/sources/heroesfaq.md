@@ -103,4 +103,3 @@ No. This is a merit-based program that does not consider need. That said, the sc
 
 
 If a student receives other scholarships (e.g. GI-Bill, 9/11 Fry Scholarship or other resources) that when combined fully meet or exceed the cost of tuition, we ask the student to consider declining this scholarship so that it is available for others. Fisher House Foundation has a limited amount of funds for scholarships and would like to help those with unmet needs.
-
