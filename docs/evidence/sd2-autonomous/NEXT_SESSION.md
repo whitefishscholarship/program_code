@@ -1,3 +1,8 @@
+Final closeout is checkpoint-007/SESSION_CLOSE.md and
+session-close-verification.json. All open routes, limits and original review
+bindings remain preserved; no pending reviewer repair. Follow plansection9 as the
+sole progress pointer, then the authoritative checkpoint007 kickoff below.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS read order, complete
 STUDENT_DATA_AND_MAINTENANCE_PLAN section9 (sole progress pointer), autonomous
