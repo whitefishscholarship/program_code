@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "fragment": "Republic Airways Aviation Management",
+      "exactFragmentObserved": true,
+      "conversionOnly": true,
+      "identityMappingAccepted": false
+    },
+    {
+      "fragment": "Martha King",
+      "exactFragmentObserved": false,
+      "conversionOnly": true,
+      "identityMappingAccepted": false
+    },
+    {
+      "fragment": "Stephanie Goetz",
+      "exactFragmentObserved": false,
+      "conversionOnly": true,
+      "identityMappingAccepted": false
+    },
+    {
+      "fragment": "Elaine D. Harmon",
+      "exactFragmentObserved": false,
+      "conversionOnly": true,
+      "identityMappingAccepted": false
+    },
+    {
+      "fragment": "Yukiko Howell",
+      "exactFragmentObserved": false,
+      "conversionOnly": true,
+      "identityMappingAccepted": false
+    }
+  ],
+  "limits": "Exact fragments concern only provider-redacted conversion; no native source-silence or ordinal child mapping."
+}

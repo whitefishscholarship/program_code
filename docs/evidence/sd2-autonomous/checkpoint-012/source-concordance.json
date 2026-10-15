@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "sourceId": "wai",
+      "comparison": "Each retained substantive paragraph against original in-session conversion with whitespace normalization; headings/editorial markers counted separately",
+      "passages": 39,
+      "allSubstantivePassagesContained": true,
+      "rawNativeFidelityClaim": false
+    },
+    {
+      "sourceId": "wma",
+      "comparison": "Each retained substantive paragraph against original in-session conversion with whitespace normalization; headings/editorial markers counted separately",
+      "passages": 4,
+      "allSubstantivePassagesContained": true,
+      "rawNativeFidelityClaim": false
+    },
+    {
+      "sourceId": "papa",
+      "comparison": "Each retained substantive paragraph against original in-session conversion with whitespace normalization; headings/editorial markers counted separately",
+      "passages": 31,
+      "allSubstantivePassagesContained": true,
+      "rawNativeFidelityClaim": false
+    },
+    {
+      "sourceId": "epic",
+      "comparison": "Each retained substantive paragraph against original in-session conversion with whitespace normalization; headings/editorial markers counted separately",
+      "passages": 16,
+      "allSubstantivePassagesContained": true,
+      "rawNativeFidelityClaim": false
+    }
+  ],
+  "originalRawConversionsRetained": false
+}
