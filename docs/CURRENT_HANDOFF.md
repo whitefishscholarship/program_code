@@ -1,3 +1,23 @@
+# Session closed — checkpoint014 obligations audited
+
+The original one-bounded-SD2-checkpoint goal is complete within local held-research
+limits. Final closure:sd2-autonomous/checkpoint-014/SESSION_CLOSE.md and
+session-close-verification.json. Section9 remains the sole progress pointer.
+SESSION_WRAP.md and all14 ledgers retain every owner/trigger/action. NEXT_SESSION.md
+resumes offset280/savedrow285 under existing AUTHORITY/POLICY. All280 initial
+outcomes,5,341 field holds and280 identity holds remain held;0 accepted;126 unprocessed.
+Every review binding, nine attention rows/supplements and437 M1 routes stay exact.
+Three medium/one low findings fixed/rechecked;no pending reviewer/delegated work.
+Every source/output/conversion/redaction/custody/history limitation and build/
+fresh-main/later gate retains its owner/trigger/action. Local helper/Git issues
+resolved. No new research/reset/replay, acceptance, external effect or SD3 during
+closure. Recheck:checkpoint-014/verify-session-close.py;earlier verifiers retain
+original pre-close allowlists/bindings. Recommended next-session effort:High.
+
+Previous handoff preserved byte-for-byte below.
+
+---
+
 # SD2 checkpoint014 independently reviewed — resume offset280
 
 One bounded local held-research checkpoint is complete. Read complete section9

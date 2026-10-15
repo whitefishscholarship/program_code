@@ -355,6 +355,20 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-014-START -->
+<!-- SD2-CHECKPOINT-014-CLOSE-START -->
+- Final session closure audited280 initial dispositions,5,341 field holds,
+  280 identity holds,433 seed/alias and934 source-link occurrences, every owner/
+  trigger/action, nine attention rows/all supplements and437 M1 routes. Evidence:
+  checkpoint-014/SESSION_CLOSE.md and session-close-verification.json. Reviewed
+  candidate, original rejected binding, final receipt and fd445d4 handoff stay exact.
+  Three medium/one low findings fixed/rechecked;no pending reviewer/delegated work.
+- Next-session Codex resumes offset280/savedrow285 under existing AUTHORITY/POLICY.
+  All source handling/conversion/redacted-identity/custody/history limits and
+  build/fresh-main/later acceptance/student/monitor/effect gates retain original
+  owners/triggers/actions. No new research/reset/replay, acceptance, external
+  effect or SD3 during closure. Recheck:checkpoint-014/verify-session-close.py;
+  earlier verifiers retain pre-close allowlists/bindings. Recommended effort:High.
+<!-- SD2-CHECKPOINT-014-CLOSE-END -->
 - October15,2026:checkpoint014 completed offsets260–279/saved265–284, beginning
   Bulkthreads Let's Aim Higher. Evidence:sd2-autonomous/checkpoint-014.json and
   checkpoint-014/.20 initial held outcomes:16 researched,3 identity,1 access;
