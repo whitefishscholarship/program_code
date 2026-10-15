@@ -1,3 +1,54 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
+STUDENT_DATA_AND_MAINTENANCE_PLAN section9 (sole progress pointer), autonomous
+AUTHORITY/POLICY, checkpoint-009.json and checkpoint-009/
+{README.md,final-manifest.json,review.json,remediation.json,remediation-round2.json,
+SESSION_WRAP.md,wrap-verification.json}. Preserve originalfb370e5/64aa516 and
+round1/round2manifest-review-verification, every checkpoint001–008/history exact.
+
+Resume one bounded SD2 checkpoint at offset180/savedrow184:
+PSA Airlines Flight Scholarship (NGPA).226frozeninputs remain;180initial
+outcomes/3,495fieldholds/180identityholds,0accepted. Existing AUTHORITY/POLICY
+permits routine research/GPTreview without renewed human checkpoint approval.
+Never initialize/reset/replay. FullSD2incomplete;stopbeforeSD3.
+
+IndependentPASS C0/H0/M0/L0 binds f4413e986bec7eef9a307ff8b5b97e81fb79ce3c;
+exact local two-file receipt 7f8fdd14c6655884843077aae057a5d1e61237da. One medium locator-accounting
+and one low per-link-integrity finding authorfixed/independentlyrechecked;
+no pending reviewer repair/recheck/delegated work. Prior bindings unchanged.
+
+Next-session Codex owns every original/new field/identity/seed/link/redactedlocator/
+deferredmaterial at applicable authorized evidencearrival or SD2consolidation.
+Exact rowactions in ledger/SESSION_WRAP. Carry LPAfiveabsentnames/parent-child
+terms, NGPAfunding/logbook/diploma-transcript/cycle variants/conditionalmedical/
+nationality/advocacy, RollinsTallychange and BLFGoldStar/source/conversion holds.
+Keep priorfivepackets/PRELUDE/eightledgers/all nineattentionrows/every supplement,
+all294seed-alias/788source-link occurrences and437M1IDs/owners/triggers exact.
+
+Before every sourcecall/output narrow program/minimalmetadata and sanitize all
+values/images; no full duplicated envelope/signedrefs/contact/address/account/
+maintainer/recipient/unrelated scope. Earlier/current lapses remain disclosed.
+BLFredactedlocator has url=null; no reconstructed host/usable URL; exact queued
+senior seed separate. FAA target is exact. At next required rawmaterial use/audit,
+verify71recordedtemporarycustody paths/hashes or retain receipts/report specific
+gaps; no reconstruction/reacquisition/completedresearch replay. No newrawPDF in
+checkpoint009; BLFreadableconversion is not fullfields/certification/page/image
+proof. Prior rejectedrawbatch/Herriges-DonK/WET403/Clerkvisual/Davisrecovery/interim
+receipt limitations unchanged. SharedGitindexEPERM resolved locally; correct
+finalmanifest independently verified after discarded unreviewedwrongheaddraft.
+
+Both exactstandardbuild process/portEPERM and freshauthenticatedmain/target remain
+with Codex before canonicalacceptance/authorizedrelease. Every nativepreservation/
+backup/recovery/permission,human/canonical/publication/student/CSV/browser and
+seasonalM1/SD5setup/effect gate retains originalowner/trigger. No workbookaccess/
+write,app/config/CI,login/forms/contact/messages,remoteGit/release/monitoractivation.
+Recommended effort:High. Closure:checkpoint-009/SESSION_WRAP.md and
+wrap-verification.json. This separate handoff never rebinds independent source review.
+
+Previous authoritative kickoff retained as history below; the new packet above controls.
+
+---
+
 Final session closure: checkpoint-008/SESSION_CLOSE.md and
 session-close-verification.json. All open items retain exact owner/trigger/action;
 no pending reviewer repair/recheck/delegated work. Follow plansection9 as the sole
