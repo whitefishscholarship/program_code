@@ -1,0 +1,75 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one bounded local SD2 held-research checkpoint015",
+  "reviewedAt": "2026-10-15T15:28:34.541971+00:00",
+  "reviewer": {
+    "identity": "/root/checkpoint015_review", "freshContext": true, "readOnly": true,
+    "authoredOrEdited": false, "networkOrExternalActions": false, "memoryConsulted": true,
+    "memoryUse": "Navigation and review procedure only; candidate findings and bindings independently verified."
+  },
+  "binding": {
+    "entryCommit": "fc38c772799d4e285759cbc00041f5aa233aeb6b",
+    "candidateCommit": "936848d77b2cdd50bb9103ccb4d186ad40ef57c3",
+    "candidateTree": "727b3372220442f5865e1c87b08e8398fcaac781",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-015/final-manifest.json",
+    "manifestSha256": "b51d1eb20749b21c5e8ea53f22fceec90b63c8eb6717d9c17eefcccb47f79856",
+    "completeDiffSha256": "e849e89f76a76cda776477f56fd66d10e3adf6294c004aeec823ccce4997c99c",
+    "changedPaths": 43, "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true, "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1770, "allPreEntryBlobIdsAndModesPreserved": true,
+    "originalCandidateCommit": "8ea1e02116551fd92652767d387f7eeba926a509",
+    "originalManifestSha256": "854faafe62ab6b98955aeccd5e8446288de5af8eb618991649a5ae0e71405777",
+    "originalReviewSha256": "1d969a95c7f536afd1a961436376aa46477bf81ab9be28ba589e984d4caaf4ef",
+    "originalFailedBindingPreserved": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositionsRechecked": [
+    {"id": "SD2-015-M1", "originalSeverity": "medium", "result": "fixed", "checks": [
+      "The restored Heroes-specific FAQ supports special circumstances preventing a parent signature and requesting email submission rather than mail.",
+      "The retained paragraph remains scoped to Heroes' Legacy and separates Fisher eligibility questions from Scholarship Managers application questions.",
+      "Contact values remain redacted; the typed route-compatibility uncertainty remains explicit.",
+      "Dependent excerpt, hash, receipt, concordance, documentation and focused checks agree."
+    ]},
+    {"id": "SD2-015-M2", "originalSeverity": "medium", "result": "fixed", "checks": [
+      "Both separate Baker/Cook artifacts now retain the course-grade and months-taught prompt labels.",
+      "Both typed materials claims have exact supporting excerpts and refreshed artifact hashes.",
+      "Response blanks and applicant values remain excluded.",
+      "Both records retain their separate identity holds and document-scoped facts."
+    ]},
+    {"id": "SD2-015-M3", "originalSeverity": "medium", "result": "fixed", "checks": [
+      "Rows294/298/300 no longer inherit a neighboring generic ASP application association.",
+      "Each record identifies its exact parent-profile PDF locator.",
+      "Freeland preserves email submission of application, essay and employer recommendation without contact values or route-usability proof.",
+      "Baker/Cook preserve return-to-AEA wording while leaving delivery channel and destination unproved.",
+      "Only these three application typed values changed; other field values, states, holds and record controls remain unchanged."
+    ]}
+  ],
+  "checksPerformed": [
+    "Completed the original governance/source/ledger review and independently inspected the complete original-to-replacement remediation diff.",
+    "Recomputed replacement manifest SHA256, candidate tree, complete entry-to-candidate binary-diff SHA256, exact43-path change set and every changed candidate blob ID, byte length, SHA256 and worktree equality.",
+    "Independently verified all1770 pre-entry tracked paths preserve their exact Git blobs and modes.",
+    "Verified the original failed candidate, manifest, review and verification receipt remain bound and preserved, with three count-matched rationale/owner/target dispositions.",
+    "Independently checked all131 replacement evidence references against exact retained excerpts, artifact hashes, source URLs and permitted input-source affinity.",
+    "Reran the read-only checkpoint verifier: PASS, including14 prior manifest/review bindings,1767 protected tracked files,40 seed dispositions,16 source-link dispositions,71 custody pins with no gaps,12 M1 pins and437 M1 records.",
+    "Confirmed exact ordered20 outcomes at offsets280:300,301 new held fields,5642 cumulative field holds,300 identity holds,106 remaining and nextoffset300/savedrow306.",
+    "Confirmed eight redacted AEA identities remain held without ordinal assignment.",
+    "Confirmed the required software-validation evidence remains unchanged: plan/type/fulltests pass after recorded IPC retries; both exact standard builds remain failed with process/port EPERM.",
+    "Full entry-to-replacement-candidate git diff --check passed.",
+    "No files were edited and no sources or external systems were accessed during review."
+  ],
+  "limits": [
+    "Restored passages are attributed to already obtained in-session conversions; independent original-response fidelity remains unproved.",
+    "Selected conversions and author concordance do not establish native/raw/page/image/table/form completeness, source silence, current offering, public access, sponsor continuity or usable routes.",
+    "Historical scope/contact exposure remains disclosed; no erasure claim is made.",
+    "Fresh authenticated main/target, exact successful standard build and all later preservation, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gates remain open with their original owners and triggers.",
+    "This is local research-evidence review, not canonical scholarship-fact or stage acceptance."
+  ],
+  "canonicalAcceptance": false, "acceptedFacts": 0, "fullSD2Complete": false, "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex checkpoint015 implementation and handoff owner",
+    "trigger": "Recording this exact final independent review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-015/",
+    "action": "Record this review and exact manifest in the authorized local research-review receipt. Preserve the original failed and all historical bindings. Prepare the separate durable section9/session handoff carrying every hold, limit and owner/trigger/action, routing the next session to offset300/savedrow306 under existing AUTHORITY/POLICY. No additional checkpoint, fact acceptance, SD3 or external effect follows."
+  }
+}
