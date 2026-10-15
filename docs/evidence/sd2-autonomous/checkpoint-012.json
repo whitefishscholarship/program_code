@@ -7406,8 +7406,7 @@
         "materials": {
           "value": {
             "highSchoolInformation": true,
-            "recommendationLetters": true,
-            "countOfLettersUnknown": true,
+            "recommendationLetters": 2,
             "YouTubeVideoMaxMinutes": 2,
             "videoPrompt": "why strongest candidate",
             "aviationPhotoFormats": [
@@ -7420,7 +7419,35 @@
             "shortEssay2AviationMotivationShownGeneralButFAQPilotOnly": true,
             "communityServicePDFPilotOnly": true,
             "essayScopeVariantHeld": true,
-            "noApplicantDataCollected": true
+            "noApplicantDataCollected": true,
+            "recommenderConditions": {
+              "atLeastOne": {
+                "modality": "must",
+                "roles": [
+                  "high school teacher",
+                  "counselor",
+                  "coach",
+                  "other school official"
+                ]
+              },
+              "bothMayBeSchoolOfficials": {
+                "modality": "may",
+                "value": true
+              },
+              "relativesIncludingGuardian": {
+                "modality": "must not",
+                "permitted": false
+              },
+              "adultsWhoServedSupervisoryRole": {
+                "modality": "should",
+                "value": true
+              },
+              "referenceContactInformation": {
+                "modality": "please ensure",
+                "requested": true,
+                "valuesNotCollected": true
+              }
+            }
           },
           "state": "verified",
           "acceptance": "held",
@@ -7844,8 +7871,7 @@
         "materials": {
           "value": {
             "highSchoolInformation": true,
-            "recommendationLetters": true,
-            "countOfLettersUnknown": true,
+            "recommendationLetters": 2,
             "YouTubeVideoMaxMinutes": 2,
             "videoPrompt": "why strongest candidate",
             "aviationPhotoFormats": [
@@ -7858,7 +7884,35 @@
             "shortEssay2AviationMotivationShownGeneralButFAQPilotOnly": true,
             "communityServicePDFPilotOnly": true,
             "essayScopeVariantHeld": true,
-            "noApplicantDataCollected": true
+            "noApplicantDataCollected": true,
+            "recommenderConditions": {
+              "atLeastOne": {
+                "modality": "must",
+                "roles": [
+                  "high school teacher",
+                  "counselor",
+                  "coach",
+                  "other school official"
+                ]
+              },
+              "bothMayBeSchoolOfficials": {
+                "modality": "may",
+                "value": true
+              },
+              "relativesIncludingGuardian": {
+                "modality": "must not",
+                "permitted": false
+              },
+              "adultsWhoServedSupervisoryRole": {
+                "modality": "should",
+                "value": true
+              },
+              "referenceContactInformation": {
+                "modality": "please ensure",
+                "requested": true,
+                "valuesNotCollected": true
+              }
+            }
           },
           "state": "verified",
           "acceptance": "held",

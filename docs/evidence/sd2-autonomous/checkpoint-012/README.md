@@ -67,7 +67,12 @@ age18bycompletion, under18approval, transport/relocation, start12months/use24mon
 October1deadline/closed2026 and October28finalists are explicit. Pilot-only medical,
 community-service and first-essay instructions are not transferred to mechanics.
 The generic second essay and FAQ's pilot-only essay scope remain an explicit variant.
-Photo/video/letters describe public material requirements, not collected applicant data.
+Two recommendation letters are required for mechanics as well as pilots. At least one
+must be from a high-school teacher/counselor/coach/other school official; both may
+be school officials. Neither may be from a relative or guardian; adults who served
+a supervisory role are recommended with should-language. Reference contact
+information is requested, never collected here. Photo/video/letters describe public
+material requirements, not collected applicant data.
 
 ## Every new input's next action
 
@@ -142,3 +147,13 @@ Freeze this candidate and obtain independent fresh-context read-only GPT review.
 Local docs/evidence/scripts/commits only. No workbook/app/configuration/CI change,
 remoteGit/release/deployment/hosted verification, login/forms/contact/messages,
 paid/account/access changes, monitoractivation orSD3. No later checkpoint processed.
+
+## Independent round1 correction
+
+Original candidate4920769,manifest-round1/review-round1/verification-round1 remain
+immutable. One medium SD2-012-M1 was author-fixed in both Epic materials values:
+count2 and all recommender must/may/must-not/should/requested qualifiers now retained.
+Focused verifier assertions protect every qualifier; source artifacts/excerpts,
+field counts, all holds, prior history and external-effect exclusions remain unchanged.
+remediation.json records the count-matched disposition. Independent final recheck
+must bind a newly frozen candidate; the original FAIL is never relabeled.

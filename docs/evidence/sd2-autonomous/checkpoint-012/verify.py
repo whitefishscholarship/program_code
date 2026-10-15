@@ -74,6 +74,14 @@ for n in [242,243]:
  assert v(n,'amount')['variantsPerCampus']==[{'value':20000,'slots':1},{'value':10000,'slots':1}]
  assert v(n,'eligibility')['currentlySeniorAtUSHighSchool'] and v(n,'eligibility')['age18ByProgramCompletion']
  assert v(n,'materials')['essayScopeVariantHeld'] and v(n,'eligibility')['medicalRequirementIsPilotOnlyNotTransferred']
+ assert v(n,'materials')['recommendationLetters']==2 and 'countOfLettersUnknown' not in v(n,'materials')
+ rc=v(n,'materials')['recommenderConditions']
+ assert rc['atLeastOne']=={'modality':'must','roles':['high school teacher','counselor','coach','other school official']}
+ assert rc['bothMayBeSchoolOfficials']=={'modality':'may','value':True}
+ assert rc['relativesIncludingGuardian']=={'modality':'must not','permitted':False}
+ assert rc['adultsWhoServedSupervisoryRole']=={'modality':'should','value':True}
+ assert rc['referenceContactInformation']=={'modality':'please ensure','requested':True,'valuesNotCollected':True}
+
  assert v(n,'paymentAndTrainingConditions')=={'startTrainingWithinMonths':12,'useWithinMonths':24}
  assert v(n,'cycle')['sourceSaysApplicationsClosed']
 assert all(c['allSubstantivePassagesContained'] for c in load(P/'source-concordance.json')['checks'])
@@ -85,6 +93,18 @@ for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,12)]:
  assert sha(git('diff','--binary',m['entryCommit'],m['candidateCommit']))==m['completeDiffSha256']
  for f in m['changedFiles']:assert sha(git('show',m['candidateCommit']+':'+f['path']))==f['sha256']
  history+=1
+# Preserve rejected round1 and require one count-matched author disposition.
+if (P/'manifest-round1.json').exists():
+ om=load(P/'manifest-round1.json');orr=load(P/'review-round1.json');rem=load(P/'remediation.json')
+ assert om['candidateCommit']==orr['binding']['candidateCommit']=='4920769cc6cae3d62ca0772c2282dc6b81d0294c'
+ assert sha((P/'manifest-round1.json').read_bytes())==orr['binding']['manifestSha256']==rem['priorManifestSha256']
+ assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+ assert orr['outcome']=='FAIL' and orr['severityCounts']=={'critical':0,'high':0,'medium':1,'low':0}
+ assert len(rem['dispositions'])==len(orr['findings'])==1 and rem['dispositions'][0]['id']==orr['findings'][0]['id']=='SD2-012-M1'
+ assert all(rem['dispositions'][0].get(k) for k in ['rationale','owner','target'])
+ assert sha((P/'verification-round1.json').read_bytes())==next(f['sha256'] for f in om['changedFiles'] if f['path'].endswith('/verification.json'))
+ assert sha(git('diff','--binary',ENTRY,om['candidateCommit']))==om['completeDiffSha256']
+ for f in om['changedFiles']:assert sha(git('show',om['candidateCommit']+':'+f['path']))==f['sha256']
 mutable={'docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md','docs/CURRENT_HANDOFF.md','docs/evidence/sd2-autonomous/NEXT_SESSION.md'}
 paths=set(git('diff','--name-only',ENTRY).decode().splitlines())|set(git('ls-files','--others','--exclude-standard').decode().splitlines())
 assert all(x in mutable or x=='docs/evidence/sd2-autonomous/checkpoint-012.json' or x.startswith('docs/evidence/sd2-autonomous/checkpoint-012/') for x in paths),paths

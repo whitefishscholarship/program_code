@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-10-15T06:30:26.473509+00:00",
+  "priorCandidate": "4920769cc6cae3d62ca0772c2282dc6b81d0294c",
+  "priorManifestSha256": "6f2187db84bfc8093dd797f316d0d95ec7538d3744e205204ff8c11ae72b7cea",
+  "priorReviewSha256": "8eb2b3a71417e01ea7a9240dff3a7d21f98b7ce7f352413f41bb40ffcaba2f9b",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "id": "SD2-012-M1",
+      "severity": "medium",
+      "status": "author-fixed-pending-independent-recheck",
+      "rationale": "Typed materials contradicted retained source; both mechanics rows now preserve count2 and original recommender modalities, with focused regression assertions.",
+      "owner": "Codex implementation owner",
+      "target": "Final immutable checkpoint012 candidate before clean independent review",
+      "paths": [
+        "docs/evidence/sd2-autonomous/checkpoint-012.json",
+        "docs/evidence/sd2-autonomous/checkpoint-012/verify.py",
+        "docs/evidence/sd2-autonomous/checkpoint-012/README.md"
+      ]
+    }
+  ],
+  "newSourceReads": false,
+  "acceptanceChanged": false,
+  "SD3Started": false
+}
