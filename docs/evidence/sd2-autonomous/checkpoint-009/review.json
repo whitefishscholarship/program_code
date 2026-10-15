@@ -1,0 +1,48 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one local SD2 held-research checkpoint only",
+  "reviewer": {"identity": "/root/sd2_checkpoint009_review", "freshContext": true, "readOnly": true, "authoredOrEdited": false, "networkOrExternalActions": false, "memoryConsulted": false},
+  "binding": {
+    "entryCommit": "5b971ee6656d1fa3aa63f13354e5b6e8297dec76",
+    "candidateCommit": "f4413e986bec7eef9a307ff8b5b97e81fb79ce3c",
+    "candidateTree": "5289ba7e4c6c83dcc9da50a5def2c503605db25d",
+    "manifestSha256": "cd840836c6b3b27426f7146eca2cb5ee2a55fcd7661fc7a5910dfd162de823fa",
+    "completeDiffSha256": "be1d578a5d6ca00f46e48bb4e43197a81a049dbdad9d041d690a18c280c12c01",
+    "changedPaths": 44
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [], "requiredFixCount": 2, "resolvedDispositionCount": 2, "unresolvedRequiredFixes": 0,
+  "dispositions": [
+    {"findingId": "SD2-009-M1", "originalSeverity": "medium", "status": "resolved-independently-rechecked", "evidence": "Both registry copies retain the exact FAA Markdown destination. The complete provider-redacted Looney locator remains explicitly unresolved with url=null, usableUrlEstablished=false and doesNotReplacePinnedSeed=true. The independently pinned senior-application seed remains separate. Parser fixtures and generic target-accounting checks cover these cases. All existing owner/trigger/action/sourceIds routes remain preserved.", "owner": "Codex implementation author", "target": "f4413e986bec7eef9a307ff8b5b97e81fb79ce3c"},
+    {"findingId": "SD2-009-L1", "originalSeverity": "low", "status": "resolved-independently-rechecked", "evidence": "The sourceIds subset assertion is restored inside the per-disposition loop. Direct diff inspection and Python syntax-tree inspection confirm every disposition receives the integrity check. The read-only verifier passes, and no source, registry, factual or coverage data changed during this repair.", "owner": "Codex implementation author", "target": "f4413e986bec7eef9a307ff8b5b97e81fb79ce3c"}
+  ],
+  "priorReviewPreservation": [
+    {"candidateCommit": "fb370e5fad0987d304af8bf36d8c8e48eac8914e", "manifestSha256": "23c18eaae19cf841d8ae9f7833383e8e5b42357609da464fd42a2476eabe19b6", "reviewSha256": "de0994ddd55ddd27a926bd4509a423e069ba1c7ff781c168e8493278db5341ed", "outcome": "FAIL", "severityCounts": {"critical": 0, "high": 0, "medium": 1, "low": 0}, "transcriptionMatchesOriginalResponse": true, "manifestBytesAndCandidateBlobsVerified": true, "verificationBytesVerified": true},
+    {"candidateCommit": "64aa516f7c2cee7fc1ea0e657be825103257c60f", "manifestSha256": "09a828573af4879e399be55e114060ab691c14cf9bfe371f74aa277f29a96b2d", "reviewSha256": "bd1f65302187fc9ab08009b98e757908fdf2162b0ce85d0c55cfbbc852f2236e", "outcome": "FAIL", "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 1}, "transcriptionMatchesOriginalResponse": true, "manifestBytesAndCandidateBlobsVerified": true, "verificationBytesVerified": true}
+  ],
+  "checksPerformed": [
+    "Retained the original complete substantive source review and independently checked both author remediation rounds.",
+    "Reviewed the complete round2-to-final eight-path change set; the verifier change restores only the misplaced assertion.",
+    "Independently recomputed final manifest SHA256, candidate tree, complete entry-to-candidate binary-diff SHA256 and all44 changed candidate blob IDs, byte lengths, hashes and worktree equality.",
+    "Reverified both preserved round manifests, complete historical diffs, candidate blobs, review transcriptions and original verification bytes.",
+    "Confirmed two count-matched author dispositions cover exactly SD2-009-M1 and SD2-009-L1.",
+    "Ran verify.py successfully:20 ordered inputs,180 cumulative initial dispositions,226 pending,462 new held fields,3495 cumulative held fields,180 held identities,9 receipts,293 exact evidence references,22 seed dispositions and22 source-link dispositions.",
+    "Confirmed all scholarship records and coverage equal the original candidate exactly; source artifacts, capture metadata, custody evidence and validation matrices remain unchanged.",
+    "Reverified all eight prior ledgers, seven historical manifest/review bindings, prior progress/handoff preservation,71 custody pins without gaps,12 M1 pins and437 unique M1 records.",
+    "Complete entry-to-final git diff --check passed.",
+    "Confirmed final candidate is HEAD and only final-manifest.json is untracked.",
+    "No file edits, assembly, research, downloads, workbook access, replay, network operations or external effects were performed."
+  ],
+  "limits": [
+    "PASS establishes fidelity and accountable held dispositions for this exact local research packet. It accepts no scholarship fact, identity, current offering, canonical stage, release or fullSD2 completion.",
+    "All3495 field observations and180 identities remain held; accepted facts remain zero and SD3 remains unstarted.",
+    "Source revisions, origin currency, native public/sponsor continuity, current availability and portal usability remain unverified.",
+    "Looney PDF evidence remains sanitized readable conversion only, without raw PDF, rendered-page, image, full-field or certification completeness proof.",
+    "Source-output narrowing lapses remain disclosed; persisted sanitization cannot erase earlier output.",
+    "Temporary custody was verified locally only. Later required audits must verify exact paths/hashes or report specific gaps while preserving receipts.",
+    "Recorded plan/typecheck/full-test passes remain unchanged. Both exact standard-build attempts remain process/portEPERM failures without waiver.",
+    "Fresh authenticated main/target and all later preservation, human/canonical acceptance, publication, student, monitoring and reserved-effect gates retain their existing owners and triggers.",
+    "The local Git retry receipt discloses its timestamp limit and discarded unreviewed wrong-head draft. This PASS binds only the verified final manifest above."
+  ],
+  "nextAction": {"owner": "Codex implementation and handoff owner", "trigger": "Recording this exact final independent review", "path": "docs/evidence/sd2-autonomous/checkpoint-009/", "action": "Record this final review and exact final manifest in the selected local research-review receipt. Preserve both earlier candidates and failed-round artifacts unchanged. Prepare a separate section9/session handoff for offset180, savedrow184, PSA Airlines Flight Scholarship (NGPA), without rebinding this source review. Carry every original/new field, identity, seed, source-link, redacted-locator and deferred-material route to its applicable evidence-arrival or SD2-consolidation trigger. No fact acceptance, next checkpoint, SD3 or external effect follows from this PASS."}
+}
