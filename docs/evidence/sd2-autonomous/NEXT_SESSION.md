@@ -1,3 +1,15 @@
+Final requested session no-loss audit:checkpoint-016/FINAL_SESSION_AUDIT.md and
+final-session-audit.json. Every open item retains its owner/trigger/action;
+explicit and inherited routes are verified without rewriting historical packets.
+No reviewer repair/recheck/delegated work remains. Read plansection9 as sole
+progress pointer,then the authoritative kickoff below. Resume one bounded SD2
+checkpoint at offset320/savedrow326,Donald E. Pizzini Memorial Nurse Scholarships,
+under existing AUTHORITY/POLICY. Never initialize/reset/replay;stopbeforeSD3.
+Historical overlap/outputhandling and all build/freshmain/sourcefidelity/current/
+public/later gates retain original owners/triggers/actions. Before every source
+call serializehostname/max4distincthosts;before output narrow/sanitize. Recheck:
+checkpoint-016/verify-final-session-audit.py. Recommended effort:High.
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),

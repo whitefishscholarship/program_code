@@ -355,6 +355,21 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-016-START -->
+<!-- SD2-CHECKPOINT-016-FINAL-AUDIT-START -->
+- Requested final session no-loss audit:original one-checkpoint goal is complete
+  within local held-research limits. FINAL_SESSION_AUDIT.md and
+  final-session-audit.json verify320initialoutcomes/5947fieldholds/320identityholds,
+  524seed-alias/993source-link routes,nineattentionrows/supplements/437M1routes,
+  original failed/final bindings and71custodypins. Every explicit or inherited
+  field/record/source route retains its owner/trigger/nextAction;historical
+  pre-review pending markers are resolved only by unchanged final review.json.
+- Next-session Codex resumes offset320/savedrow326 under existing AUTHORITY/POLICY.
+  Build/freshmain/sourcefidelity/currentpublic and all later gates retain exact
+  original owners/triggers;historicaloverlap/outputhandling stays disclosed.
+  No newresearch/reset/replay,acceptance,external effect orSD3 during finalaudit.
+  Recheck:verify-final-session-audit.py;earlier verifiers keep original bindings.
+  No pendingreviewer/delegatedwork. Recommended next-session effort:High.
+<!-- SD2-CHECKPOINT-016-FINAL-AUDIT-END -->
 - October15,2026:checkpoint016 completes one bounded frozen offsets300–319,
   savedrows306–325,startingSportysAEA. Packet:sd2-autonomous/checkpoint-016.json
   and checkpoint-016/.20initialoutcomes:18researched-held/1held-identity/1held-access;
