@@ -1,3 +1,20 @@
+Final requested session no-loss audit:checkpoint-017/FINAL_SESSION_AUDIT.md and
+final-session-audit.json. Every explicit/inherited owner/trigger/action is verified;
+all6253fieldholds/340identityholds,562seed-alias/1020source-links,nineattentionrows/
+supplements/437M1routes/71custodypins and both rejected/final bindings stay exact.
+No reviewer repair/recheck/delegated work remains. Read plan section9 as sole
+progress pointer,then the authoritative kickoff below. Next-session Codex resumes
+ONE bounded SD2 checkpoint at offset340/savedrow346,Welder Training Scholarship,
+under existing AUTHORITY/POLICY.66 frozen inputs remain;0 accepted. Never initialize/
+reset/replay;full SD2 incomplete;stop before SD3. Build EPERM/freshmain/sourcefidelity/
+current/public/later gates and historical output/overlap retain original owners/
+triggers/actions. No new research/acceptance/external effect/SD3 during final audit.
+Recheck:checkpoint-017/verify-final-session-audit.py. Recommended effort:High.
+
+Previous authoritative kickoff preserved byte-for-byte below.
+
+---
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md read order,then complete
 docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),

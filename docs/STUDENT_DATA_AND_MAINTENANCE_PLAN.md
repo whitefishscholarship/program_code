@@ -355,6 +355,21 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CHECKPOINT-017-START -->
+<!-- SD2-CHECKPOINT-017-FINAL-AUDIT-START -->
+- Requested final session no-loss audit:original one-checkpoint goal is complete
+  within local held-research limits. checkpoint-017/FINAL_SESSION_AUDIT.md and
+  final-session-audit.json verify all6253 fieldholds/340 identityholds,562 seed-alias/
+  1020 source-link routes,nine attention rows/supplements/437 M1 routes and71 custody
+  pins. Every explicit or inherited route retains its owner/trigger/nextAction.
+  All three medium/one low findings fixed/rechecked;both rejected bindings and
+  original research candidate/receipt/handoff remain exact. No pending reviewer/
+  delegated work;no new research/reset/replay/acceptance/external effect or SD3.
+- Next-session Codex resumes offset340/savedrow346,Welder Training Scholarship,
+  under existing AUTHORITY/POLICY. Build EPERM/freshmain/sourcefidelity/current/
+  public and all later gates retain original owners/triggers/actions. Historical
+  output/overlap stays disclosed. Recheck:checkpoint-017/verify-final-session-audit.py;
+  earlier verifiers retain original bindings. Recommended next-session effort:High.
+<!-- SD2-CHECKPOINT-017-FINAL-AUDIT-END -->
 - October15,2026:one bounded checkpoint017 completes frozen offsets320–339,
   savedrows326–345,starting Donald E. Pizzini Memorial Nurse Scholarships.
   Packet:sd2-autonomous/checkpoint-017.json and checkpoint-017/.20 researched-held
