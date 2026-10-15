@@ -1,3 +1,49 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md read order, then complete
+docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer),
+sd2-autonomous AUTHORITY/POLICY, checkpoint-013.json and checkpoint-013/
+{README.md,final-manifest.json,review.json,SESSION_WRAP.md,wrap-verification.json}.
+
+Resume one bounded SD2 checkpoint at offset260/savedrow265:
+Bulkthreads.com's "Let's Aim Higher" Scholarship.146frozeninputs remain;
+260initialoutcomes/5,041fieldholds/260identityholds,0accepted. Existing authority
+permits routine research/GPTreview without renewed humancheckpoint approval.
+Never initialize/reset/replay;preserve every hold/reviewbinding;stop before SD3.
+
+IndependentPASS C0/H0/M0/L0 binds 45329716653955220e2f689a076d480ae144a156;
+local two-file receipt 430eca470e6d8b93c13aa6ac82982cb1f4b05741. No pending reviewerrepair/recheck/
+delegatedwork. Preserve allcheckpoint001–012/originalfivepackets/PRELUDE/history/
+nineattentionrows/supplements/437M1IDs/routes/owners/triggers. All398seed-alias/
+909source-link occurrences retain exact actions. Codex owns every hold at applicable
+existing authorized evidencearrival or SD2consolidation. Keep new Epicpilot/mechanic/
+campus, Avfuelchild, NHSversion/verification-certification, STEAMclause, MSUentry/
+renewal/timezone/incompleteconversion, Hueshould, KCKconditions, MUSentry-renewal/
+materials/linkedrules, Refereecycle, sixredactedBoldtitle and BigSuncontactlocator
+holds explicit. BigSun mailto stays in immutablequeue; new null/hash/pointer cannot
+be reconstructed or used for contact. Exact rowactions in ledger/README/wrap.
+
+Before every sourcecall/output narrow exactprogram/minimalmetadata and sanitize
+all values/images. FullEpic/draftpreview scope lapses remain disclosed; final
+selectedartifacts exclude unrelatedrecipient/contact/biography/example/footer
+values, historicaloutput not erased. Epic exactcalltimes unmeasured/subsequent
+record/manualtranscription;20otherconcordances author-only. Selectedconversions
+prove no native/raw/page/image/form/fullfield/source-silence/currentpublic
+continuity. All prior NGPA/BLF/rawbatch/Herriges-DonK/WET403/Clerkvisual/Davisrecovery/
+interimreceipt/historicalguardretention routes stay exact. At next required rawuse/
+audit verify71originaltemporarycustodypaths/hashes or preserve receipts/reportgaps;
+no reconstruction/reacquisition/completedresearch replay.
+
+Both exact standardbuilds remain process/portEPERM; fresh authenticatedmain/target
+and all nativepreservation/backup/recovery/permission,human/canonical/publication,
+student/CSV/browser and437M1/SD5/effect gates retain original owners/triggers.
+No workbook/app/config/CI,login/forms/contact/messages,remoteGit/release/deployment/
+monitoractivation orSD3. Closure:checkpoint-013/SESSION_WRAP.md and
+wrap-verification.json. Recommended next-session effort:High.
+
+Previous authoritative kickoff retained as history below; new packet above controls.
+
+---
+
 Final session closure:checkpoint-012/SESSION_CLOSE.md and
 session-close-verification.json. Every open item retains exact owner/trigger/
 action;no pending reviewer repair/recheck/delegatedwork. Follow plansection9

@@ -354,6 +354,44 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-013-START -->
+- October15,2026: one bounded checkpoint013 completes frozenoffsets240–259/
+  saved244–264, beginning Captain Judy Rice Pilot Scholarship;255alreadyexcluded.
+  Ledger/packet:sd2-autonomous/checkpoint-013.json and checkpoint-013/.
+  20initialoutcomes:13researched-held/7held-identity;21retrievals/21selectedreceipts,
+  320newfieldholds/20identityholds. Cumulative260/406initialdispositions,
+  146unprocessed;all5,041fields/260identities held,0accepted. FullSD2 incomplete.
+- IndependentPASS C0/H0/M0/L0 binds 45329716653955220e2f689a076d480ae144a156;
+  local two-file research-review receipt 430eca470e6d8b93c13aa6ac82982cb1f4b05741.
+  final-manifest/review control; no pending reviewer repair/recheck/delegatedwork.
+  Separate authorhandoff never rebinds source review or accepts facts. All prior
+  packets/PRELUDE/reviews/nineattentionrows/supplements/437M1routes remain exact.
+- Codex source/identity owns every new/prior heldfield/identity/seed/link/material
+  at applicable authorized evidencearrival or SD2consolidation.398seed-alias/
+  909source-link occurrences retain actions in13ledgers/README/SESSION_WRAP.
+  Keep Epicpilot/mechanic/campus distinctions, Avfuelchildren, NHSFAQversion/
+  verification-certification, STEAMscope, MSUrenewal/timezone conflicts, Hueshould
+  qualifiers,KCKconditions,MUSentry-renewal/materials,Refereecyclevariants,
+  sixredactedBoldtitles and BigSunnull/hash/queueboundcontactlocator explicit.
+- All21sources are selectedreadableconversions only. Epicexactcalltimes unmeasured,
+  subsequentrecord/manualtranscription, no rawhash/machineconcordance.20other
+  authorconcordances never prove original/native/page/image/form/fullfield/
+  source-silence/currentpublic continuity. Outputlapses disclosed; finalartifacts
+  exclude unrelatedscope, noerasureclaim. Before every call/output Codex narrows
+  exactprogram/minimalmetadata/sanitizes. All prior NGPA/BLF/rawbatch/Herriges-DonK/
+  WET403/Clerkvisual/Davisrecovery/interimreceipt/historicalguardretention routes stay.
+- All71temporarycustodypins matched without reinspection/reacquisition/replay;
+  next required rawuse/audit verifies originalpaths/hashes or preservesreceipts/
+  reportsgaps. Plan/type/fulltests PASS after IPCretries; both exactbuilds remain
+  process/portEPERM. Codexvalidation/governance/delivery owns build/freshmain before
+  canonicalacceptance/authorizedrelease. Nativepreservation/backup/recovery/
+  permission,human/canonical/publication,student/CSV/browser and437M1/SD5/effect
+  gates retain exact originalowners/triggers/actions. No new external effect/SD3.
+- Next-session Codex resumes offset260/savedrow265:Bulkthreads.com's "Let's Aim
+  Higher" Scholarship under existing AUTHORITY/POLICY. Never initialize/reset/
+  replay;stop before SD3. Shortkickoff:NEXT_SESSION.md;closure:checkpoint-013/
+  SESSION_WRAP.md and wrap-verification.json. Recommended effort:High.
+<!-- SD2-CHECKPOINT-013-END -->
 <!-- SD2-CHECKPOINT-012-START -->
 <!-- SD2-CHECKPOINT-012-CLOSE-START -->
 - Final session closure audited240initialdispositions/4,721fieldholds/
