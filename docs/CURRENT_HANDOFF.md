@@ -1,3 +1,47 @@
+# SD2 selected saved-evidence pilot — October 16, 2026
+
+Kelsey delegated outstanding decisions; Codex selected the exact completed
+proposal prospectively. Spear45, Live Your Dream290, Jaycee40, Jaycee68 were
+compared in order:4 inputs/3 cases/96 existing envelopes. All remain held;
+0accepted facts. No research replay, new source/workbook access, raw content
+reinspection/reacquisition, external effect or SD3. Never initialize/reset/replay.
+Stop before SD3. FullSD2 remains incomplete.
+
+Current pilot evidence/closeout: sd2-autonomous/consolidation-pilot-001/README.md,
+AUTHORITY.md, selection.json, comparison.json, identity-assessment.json,
+validation.json and verify.py. Independent full-candidate status is authoritative
+only in its matching final-manifest.json/review.json; absent/non-PASS/mismatched
+means review pending, never acceptance. policy-review.json covers policy only.
+
+Queue406/406,cursor406,no next input;all7406 field/406 identity holds, original
+packets/PRELUDE/676seed-alias/1127links/365receipts/35inherited routes/628destinations,
+nine attention rows/every supplement,437M1routes/12pins/71custodypins and every
+review binding are preserved. Original proposal stays historical/unselected;
+new selection is recorded separately under direct delegation, not backdated.
+
+Next owner: Codex source/identity reconciliation. After matching review PASS,
+prepare the next concrete bounded saved-evidence SD2 proposal using pilot results;
+no automatic next execution. Kelsey is already named human reviewer; limited
+Jaycee approvals retain exact scope. Facts requiring missing proof remain held.
+Every original owner/trigger/path/action survives in the prior SESSION_CLOSE
+routing table, original packets and plan section9. Standard build remains local
+process/portEPERM after unchanged retry; Codex validation/delivery owns supported
+standard build and fresh main/target before canonical acceptance/release. Later
+preservation/recovery/human/publication/student/M1/SD5/effect gates stay at their
+original triggers. Desktop opening was queued; visibility remains unknown with
+Codex workspace owner only on an explicit UI request. No checkout recreation.
+
+Fresh entry: follow AGENTS governing read order, plan section9, original frozen
+AUTHORITY/POLICY and latest original SESSION_CLOSE supplement, then this pilot's
+AUTHORITY/POLICY, selection, README, comparison, immutable manifest/review and
+validation. Run pilot verify.py --review-bound after its review receipt exists.
+The prior verify-close.py remains unchanged in its pre-pilot context: its fresh
+entry receipt is pilot entry-audit.json; verify preserved bytes, do not widen its
+allowlist or rerun it against new pilot paths as if it were a current validator.
+Recommended effort: High. Earlier handoffs are preserved byte-for-byte below.
+
+---
+
 # SD2 verification session closed — October 16, 2026
 
 PASS for the original worktree/branch, authoritative-read-order and read-only

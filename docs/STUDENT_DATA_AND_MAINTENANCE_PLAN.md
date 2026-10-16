@@ -353,6 +353,36 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PILOT-001-START -->
+- October16,2026 delegated choice: Kelsey instructed Codex to make outstanding
+  decisions so work can proceed. Codex selected the exact completed proposal
+  prospectively; historical proposal/scope/reviews unchanged. Evidence/closeout:
+  sd2-autonomous/consolidation-pilot-001/README.md and AUTHORITY.md/selection.json.
+- Ordered45,290,40,68:4 inputs/3cases/96 envelopes compared;36 saved-evidence
+  consistent,40 applicability/identity unresolved,18 evidence unavailable,
+  2 existing checklist conflicts. All96 held;no fact/mapping changed or accepted.
+  Preserve distinct Jaycee IDs,PRELUDE reviewer/limited approvals,source versions,
+  school/program/GPA/material/cycle/route limits. No new reads or research replay.
+- Entry verify-close.py PASS in original pre-pilot context;new verify.py preserves
+  every entry blob/mode except three append-only handoff surfaces. Original old
+  verifiers remain unchanged;use fresh entry receipt plus byte proof afterward.
+  Plan/type/tests PASS after unchanged IPC retries;both exact standard builds
+  remain process/portEPERM. No alternate-build waiver,freshmain or release claim.
+- Full independent pilot status is only matching final-manifest.json/review.json;
+  absent/non-PASS/mismatched means pending. Policy review alone is not pilot review.
+  This is local comparison/research review,not canonical acceptance/attestation.
+- Queue406/406,cursor406,no next input;all7406fields/406identities,676seed-alias/
+  1127links/365receipts/35inherited routes/628destinations,nine attention rows/all
+  supplements/437M1routes/12pins/71custodypins and every old review stay exact.
+  Original owners/triggers/paths/actions remain in original SESSION_CLOSE and
+  packets;pilot README routes each selected gap and every later dependency.
+- Next owner Codex:after matching pilot review PASS,prepare the next bounded saved-
+  evidence SD2 proposal;no automatic further execution. Missing facts stay held;
+  Kelsey need not repeat settled reviewer/approval/organizer-intent decisions.
+  Build/freshmain before acceptance/release and all preservation/human/canonical/
+  publication/student/M1/SD5/effect gates retain original owners/triggers. FullSD2
+  incomplete. Never initialize/reset/replay. Stop before SD3. Effort:High.
+<!-- SD2-PILOT-001-END -->
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CONSOLIDATION-PROPOSAL-START -->
 <!-- SD2-CONSOLIDATION-CLOSE-START -->
