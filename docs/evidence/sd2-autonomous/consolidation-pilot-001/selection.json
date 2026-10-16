@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "entryCommit": "c89427c21f3bd09205bb27b3402a40143bc6ba9d",
+  "selectionKind": "Codex exact selection under Kelsey direct delegated decision authority",
+  "authorityPath": "docs/evidence/sd2-autonomous/consolidation-pilot-001/AUTHORITY.md",
+  "selectedPilot": {
+    "caseCount": 3,
+    "savedInputOccurrences": 4,
+    "fieldEnvelopeOccurrences": 96,
+    "orderedInputs": [
+      {
+        "order": 1,
+        "savedInputKey": "saved-405588227-row-45",
+        "savedRowLocator": 45,
+        "autonomousQueueMember": true,
+        "queueOffset": 0,
+        "recordedName": "Gladys R. Spear Memorial Scholarship ($500)",
+        "publicIdCandidates": [
+          "award-8bce77306c27"
+        ],
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/0",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopes": 17,
+        "existingIdentityAcceptance": "held"
+      },
+      {
+        "order": 2,
+        "savedInputKey": "saved-405588227-row-290",
+        "savedRowLocator": 290,
+        "autonomousQueueMember": true,
+        "queueOffset": 1,
+        "recordedName": "Live Your Dream Award",
+        "publicIdCandidates": [
+          "award-52b096183d9d"
+        ],
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/1",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopes": 17,
+        "existingIdentityAcceptance": "held"
+      },
+      {
+        "order": 3,
+        "savedInputKey": "saved-405588227-row-40",
+        "savedRowLocator": 40,
+        "autonomousQueueMember": false,
+        "queueOffset": null,
+        "recordedName": "Montana Jaycee Foundation Scholarship",
+        "publicIdCandidates": [
+          "award-67de97a4f446"
+        ],
+        "packetPath": "docs/evidence/sd2-jaycee/proposals.json",
+        "packetSha256": "809f6e260e0faf321655d8de973e148172c7293da0a5e683c005d1bac56647a3",
+        "recordPointer": "/records/0",
+        "fieldContainer": "fields",
+        "fieldEnvelopes": 31,
+        "existingIdentityAcceptance": "held"
+      },
+      {
+        "order": 4,
+        "savedInputKey": "saved-405588227-row-68",
+        "savedRowLocator": 68,
+        "autonomousQueueMember": false,
+        "queueOffset": null,
+        "recordedName": "Montana Jaycee Foundation Scholarship",
+        "publicIdCandidates": [
+          "award-e05338ef963f"
+        ],
+        "packetPath": "docs/evidence/sd2-jaycee/proposals.json",
+        "packetSha256": "809f6e260e0faf321655d8de973e148172c7293da0a5e683c005d1bac56647a3",
+        "recordPointer": "/records/1",
+        "fieldContainer": "fields",
+        "fieldEnvelopes": 31,
+        "existingIdentityAcceptance": "held"
+      }
+    ],
+    "outputsAreDerivedViews": true,
+    "sourceOfTruth": "Existing exact packets and routes; no second queue",
+    "allFactsAndIdentitiesRemainHeld": true,
+    "scopeExpansionRequiresSelection": true
+  },
+  "historicalProposalPins": [
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/PROPOSAL.md",
+      "sha256": "38e168faed6965e35a61f081be4c2244d22a59567365db8a525922bfb71da4ba"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/scope.json",
+      "sha256": "367d7f53bdd4dc162156bdd89ee05791fe35629fd8a663308dd85b6ae38bf319"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/final-manifest.json",
+      "sha256": "db2780ff6c2b35916273816204286e233dc9a3d06e1d4bfa6085c987aa1b0c83"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/review.json",
+      "sha256": "6dd4638a2f8eea18b50f73f72561dec0349e9a90af6dbbf3863fa66fc3a332ab"
+    }
+  ],
+  "savedEvidencePins": [
+    {
+      "path": "docs/evidence/sd2-autonomous/queue.json",
+      "sha256": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+      "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/POLICY.md",
+      "sha256": "6135c3950190d9983fce5eca7eb27d2a9676299fbcede912c7a562e02357d6f7"
+    },
+    {
+      "path": "docs/evidence/sd1/PILOT.md",
+      "sha256": "a022b394723e461eda5d96f0a0c95523c61c61b52cd823552e5eb0b8cb35dac3"
+    },
+    {
+      "path": "docs/evidence/sd1/pilot.json",
+      "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1"
+    },
+    {
+      "path": "docs/evidence/sd2-jaycee/proposals.json",
+      "sha256": "809f6e260e0faf321655d8de973e148172c7293da0a5e683c005d1bac56647a3"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/proposals.json",
+      "sha256": "887bf6bd83ddf4b9cab930bb5c76cac8a42242ce679024fc5116f7ac3585838a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/spear-2025.md",
+      "sha256": "a861b12e5005d1008d1c15f82061edd8a0bf0cfe56d4b312d987ed7546650041"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/spear-2026.md",
+      "sha256": "22c62132fa7d8e8150ef60fc1da39113498fc956f989778639446b4e8947fa9e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/soroptimist.md",
+      "sha256": "52a833cdbf7a40ed63409bcb88458b953052e31103ae64d88bf3ec265a0b7108"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/sor-preparing.md",
+      "sha256": "9fd8c39186ab3606f8254b2bc264b078e25cb3b18e30b820c68de7fefc1735a7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-021/FINAL_SESSION_AUDIT.md",
+      "sha256": "57c978688dfdfe55530411240d60b2f041095d933597229c16a9464f6bd40d3e"
+    }
+  ],
+  "executionSelected": true,
+  "acceptedFacts": 0,
+  "identityAcceptanceChanged": false,
+  "newSourceOrWorkbookReads": 0,
+  "externalEffects": false,
+  "SD3Started": false
+}
