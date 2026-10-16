@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of the complete bounded SD2 proposal003 candidate. Proposal preparation only; no 52-field reconciliation, fact acceptance, canonical acceptance or release.",
+  "reviewer": {
+    "identity": "Codex /root/sd2_proposal003_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "binding": {
+    "entryCommit": "db0b341283c1c65bcc02b59badb588aacbb67116",
+    "candidateCommit": "98c1189fbee5df98bc4aa6d8b2a8650cfa39936a",
+    "candidateTree": "a8ca58939c60d4d890852c51f674009d0b414fb0",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal-003/final-manifest.json",
+    "manifestSha256": "dd3f349fdc752d2260fa1b351c11b737320f650bdd48e41cf4f6a0eb9ab05f33",
+    "completeDiffSha256": "28eff709332d63a7458ca49a00c44d28f7babfa8f92980f9f1cc9e1a9baadb36",
+    "completeDiffBytes": 176562,
+    "changedPathCount": 23,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Verified local predecessor entry only. Authenticated current origin/main and deployment target were not refreshed."
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable complete candidate",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed the manifest SHA256, candidate tree, complete 176562-byte binary diff SHA256, exact 23-path change set, and every candidate blob ID, mode, size, SHA256 and current-file equality. Entry-to-candidate git diff --check passed. HEAD equals the frozen candidate; only final-manifest.json remained untracked."
+    },
+    {
+      "name": "Authority and valid predecessor entry",
+      "outcome": "PASS",
+      "evidence": "The supplied direct continuation follows batch002's explicit next action to prepare another bounded proposal under retained routine delegation. Proposal preparation does not select execution. Independently verified batch002's manifest/review binding and db0b341 as its exact direct-child two-file receipt. The new entry-audit result digest matches its recorded stdout digest. Historical verifiers were neither modified nor rerun after new proposal paths existed."
+    },
+    {
+      "name": "Exact proposed denominator and record bindings",
+      "outcome": "PASS",
+      "evidence": "Verified ordered saved rows5,6,7 and queue offsets5,6,7: Agri16, AMTOPP18 and Bridging18, totaling52 existing field envelopes. Packet hashes, canonical-record hashes, queue name-reference hashes, record pointers, ordered field names, original public-ID candidates, held identity acceptance and original owner/trigger/path/action routes match the original records. Proposed reconciliation-batch-003 does not exist."
+    },
+    {
+      "name": "Eight saved source references and affinity",
+      "outcome": "PASS",
+      "evidence": "Verified all eight source IDs, registry pointers, exact artifact paths/hashes, null revisions, extraction-limit pointers and permitted input keys. rh-old/rh-alias apply only within the three selected records; amtopp and the five FFA references are restricted to row6. Equal rh-old/rh-alias artifact hashes are explicitly not independent corroboration, and main eligibility evidence remains assigned to rh-old."
+    },
+    {
+      "name": "Selected proposal fidelity",
+      "outcome": "PASS",
+      "evidence": "The proposal preserves Agri amounts-vary, high-school-senior OR college-student wording and career interests without inventing a compulsory degree or major. AMTOPP's original held identityBranches conflict remains separate across member-company employees, FFA and4-H; no union, intersection, winner, new award or accepted mapping is selected. General, college and leadership FFA materials remain subject to child/branch applicability holds. Bridging preserves USD1000, one-or-more recipients, the shared application requirement and exact will-or-have-aged-out foster-care wording without broadening eligibility to all foster-care or adopted applicants."
+    },
+    {
+      "name": "Read-only preservation verification",
+      "outcome": "PASS",
+      "evidence": "Inspected and independently ran only the new proposal verify.py without --review-bound. It exited0, started2026-10-16T17:11:05.491038+00:00 and completed2026-10-16T17:11:06.038269+00:00. It verified2299 protected entry files/modes, exact append-only handoff and section9 preservation, all7406 held fields and406 held identities, exhausted cursor406 and no next input. Previous comparisons, reviews, rejected history, original routes,437M1 records/12pins and71custody receipts remain protected."
+    },
+    {
+      "name": "Honest coverage and no execution",
+      "outcome": "PASS",
+      "evidence": "Current comparison coverage remains144 occurrences across5 autonomous inputs plus2 prior Jaycee inputs, leaving401 autonomous inputs outside comparisons. This proposal adds0 comparisons. Separately selected execution would produce196 cumulative occurrences across8 autonomous plus2 Jaycee inputs, leaving398 autonomous inputs outside comparisons. No fact, identity or fullSD2 completion is claimed."
+    },
+    {
+      "name": "Validation receipt provenance",
+      "outcome": "PASS_WITH_RETAINED_LIMITS",
+      "evidence": "Independently verified all seven standalone command receipts equal validation.json copies, their exact commands, ordered UTC timestamps, raw byte counts/SHA256 values, normalized log bytes/SHA256 values and normalization provenance. Plan and tests retain initial IPC EPERM failures followed by unchanged passing retries; typecheck passed. Both exact npm run build attempts failed creating a process/binding a port with Operation not permitted. standardBuild correctly remains BLOCKED_ENVIRONMENT, with no alternate-build waiver or success claim."
+    },
+    {
+      "name": "Incidents, handoff and later gates",
+      "outcome": "PASS",
+      "evidence": "The new-checker schema mismatch and premature untracked-log guard refusal are disclosed and resolved only in the new checker/workflow; historical verifiers and criteria remain unchanged. Batch002's unrelated sanitized receipt-preview incident remains preserved. Handoffs retain original owners, triggers, authoritative paths and next actions, require a later continuation selecting execution, and stop beforeSD3. Build/current-main, source/custody, preservation/recovery, human/canonical/publication, student-task, M1/SD5 and external-effect gates remain explicit."
+    }
+  ],
+  "limits": [
+    "PASS applies only to this immutable bounded proposal. It does not select or execute the52-field reconciliation, accept facts or identities, completeSD2, authorizeSD3, establish canonical acceptance or authorize release.",
+    "Review used retained local documentation, JSON metadata, Git objects and selected sanitized saved Markdown. It performed no live source/workbook access, raw/native-content inspection, reacquisition, semantic reconciliation of the52 fields or semantic comparison of other award records.",
+    "Retained source hashes and receipts do not prove original/native/visual fidelity, complete source silence, current public access, current offerings, publisher custody or usable application routes. Temporary custody availability was not rechecked.",
+    "Exact supported standard-build PASS and authenticated current main/target remain owned by Codex validation/governance/delivery before canonical acceptance or authorized release. All other later gates retain their original recorded owners and triggers.",
+    "No files were edited, no review file was created, no Git mutations or assembler/npm/build commands were run, no historical verifier was rerun, and no network or external effect occurred during this review.",
+    "The local direct-child manifest/review receipt remains the author's next packaging action. This review does not claim that receipt already exists."
+  ]
+}
