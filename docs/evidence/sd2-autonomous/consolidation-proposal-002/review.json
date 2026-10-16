@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of the bounded proposal only; no comparison execution, canonical acceptance or release",
+  "reviewer": {
+    "identity": "Codex /root/sd2_proposal002_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "binding": {
+    "entryCommit": "16164762998a6c9d057105d991feaf0de915bacb",
+    "candidateCommit": "a4e1654f3186c46533951e0ca39bffac9c1366fc",
+    "candidateTree": "ddff059995ab753e58ba0c40e669633389889938",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal-002/final-manifest.json",
+    "manifestSha256": "b4bbe596efc399362a96134e319d9f6f320381218127f06cb86ec1fb0e0f8d4d",
+    "completeDiffSha256": "b9c65056c4582cc988e0a0d7c46eab80e0fbd2cf74892c3238432869eeec8690",
+    "completeDiffBytes": 169760,
+    "changedPathCount": 23,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Local saved-evidence proposal entry only; current authenticated remote main and target remain unverified"
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable candidate and complete change set",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed manifest SHA256, candidate tree, complete binary diff bytes and SHA256, exact 23-path change set, and every candidate blob ID, mode, size, SHA256 and current-file equality. Exact entry-to-candidate git diff --check passed. Only final-manifest.json was untracked."
+    },
+    {
+      "name": "Authority and proposal-only boundary",
+      "outcome": "PASS",
+      "evidence": "The continuation prepares the previously stated next proposal under retained routine decision delegation. Proposal, scope, section9 and both handoffs consistently report zero new comparisons, executionSelected:false, no acceptance and a later bounded execution trigger. Prior pilot and original unselected proposal remain historical and unchanged."
+    },
+    {
+      "name": "Exact proposed inputs and coverage",
+      "outcome": "PASS",
+      "evidence": "Confirmed original queue offsets2,3,4 and saved locators2,3,4, exact packet and canonical-record hashes, recorded-name pointers/digests, original source IDs, routes and field-name ordering. Counts are16+16+16=48 existing held envelopes. Existing candidate lists remain Ted award-577dacb8c225, ADHD empty, Adoption award-2a22470d390c. Current coverage remains two autonomous plus two prior Jaycee inputs; proposal adds zero. Later selected execution would produce5/406 autonomous comparison coverage and401 remaining."
+    },
+    {
+      "name": "Source scope and material boundaries",
+      "outcome": "PASS",
+      "evidence": "Read the three selected sanitized saved Markdown sources and relevant original record, source-registry and retained review/receipt metadata. Independently confirmed source artifact hashes, registry pointers, extraction-limit pointers and null source revisions. Ted retains the documented three-copy transcription restoration, historical2026 scope and athletics-prompt versus hard-eligibility distinction. Generic ADHD remains unidentified and cannot be deleted or replaced by Anne Ford or Allegra Ford Thomas; named children, documented-LD conjunction and distinct program scopes remain separate. Adoption academic eligibility and materials remain distinct from sibling/adoption grants. These are planning boundaries, not48 completed semantic comparisons."
+    },
+    {
+      "name": "Predecessor binding and preservation",
+      "outcome": "PASS",
+      "evidence": "Independently confirmed predecessor pilot manifest/review digest and its exact direct-child two-file receipt1616476. Entry-audit stdout digest matches its recorded result. Inspected and ran only the new read-only proposal verify.py: exit0, started2026-10-16T15:31:19.488077+00:00, completed2026-10-16T15:31:19.736926+00:00. It verified2248 protected entry files, original modes and exact older handoff/section9 bytes; all7406 field holds/406 identity holds remain held, cursor406 has no next input. Prior reviews, packets, routes, nine attention rows/supplements,437M1 routes/12pins and71custody receipts remain preserved."
+    },
+    {
+      "name": "Validation provenance and retained failures",
+      "outcome": "PASS_WITH_RETAINED_LIMITS",
+      "evidence": "Independently verified all seven standalone command receipts equal their validation.json copies, all raw output byte counts/SHA256 values, and exact normalized log bytes/SHA256 values. Plan and tests retain initial IPC EPERM failures plus unchanged passing retries; typecheck passed. Both exact npm run build attempts failed creating a process/binding a port with Operation not permitted. No alternative build, success claim or gate waiver is present."
+    },
+    {
+      "name": "Durable handoff and downstream exclusions",
+      "outcome": "PASS",
+      "evidence": "Changes are confined to the new proposal directory and three append-only handoff surfaces. Original ownership, triggers, authoritative paths and next actions remain preserved and routed. No second factual queue, new identity allocation, source/workbook access, raw content reinspection, external effect, research replay, canonical acceptance or SD3 is claimed."
+    }
+  ],
+  "limits": [
+    "PASS applies only to the bounded local proposal. It does not execute or review48 semantic comparisons, accept facts or mappings, establish publication readiness or complete SD2.",
+    "Review used sanitized saved Markdown and retained JSON/documentation metadata. No original native/raw document, temporary custody content, live source or workbook was opened.",
+    "Historical receipts and source hashes do not independently prove native/visual fidelity, source silence, present public access, sponsor continuity, current offering or usable application routes.",
+    "Temporary custody availability was not rechecked by this reviewer. The fresh predecessor entry receipt remains evidence of its own timestamped checks only.",
+    "Exact supported standard-build PASS and authenticated current main/target remain Codex-owned prerequisites before canonical acceptance or authorized release. Later preservation, human-review, publication, student-task, M1/SD5 and external-effect gates retain their original owners and triggers.",
+    "No edits, Git mutations, npm/build/assembler execution, historical-verifier reruns, source fetches, workbook access or external effects occurred during review."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "This matching immutable-candidate proposal PASS",
+    "authoritativePath": "docs/evidence/sd2-autonomous/consolidation-proposal-002/final-manifest.json",
+    "action": "Add only final-manifest.json and review.json in the direct-child local proposal review receipt, run the new verifier with --review-bound, and retain the proposal handoff. Comparison execution requires its later selected continuation; preparation alone does not start it."
+  },
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "comparisonExecuted": false,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": false
+}
