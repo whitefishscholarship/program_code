@@ -1,3 +1,52 @@
+# SD2 comparison batch004 — October 16, 2026
+
+Kelsey directly selected proposal004's exact53-field comparison. Carl Valvoda8,
+Dr. Max L Amberson Ag Education9,Dr. Van Shelhamer Memorial10 compared in order:
+18+18+17 fields;14consistent,29applicability/identity unresolved,9evidence unavailable,
+1existing Amberson studentStage conflict. All original envelopes/identities/states/
+times/acceptance unchanged;0accepted facts/mappings. Never initialize/reset/replay.
+Stop before SD3. FullSD2 incomplete.
+
+Current evidence/closeout:sd2-autonomous/reconciliation-batch-004/README.md,
+AUTHORITY.md,selection.json,entry-audit.json,comparison.json,identity-assessment.json,
+saved-source-references.json,selected-context.json,session-issues.json,validation.json
+and verify.py. Full independent status only matching final-manifest.json/review.json;
+absent/non-PASS/mismatched means pending. Proposal review covers proposal only.
+Fresh proposal004 review-bound PASS/1d463db before edits;new verification protects
+all entry blobs/modes and append-only older handoffs. Old reviews/contexts/allowlists
+stay unchanged;use valid receipts plus byte proof,never rebind or widen.
+
+Preserve Carl requiredapplication AND serving/have-served ROTC OR ArmedForces;
+Amberson RHMsenior/freshman versusFFAfreshman/sophomore conflict,AgEducation/GPA/FFA/
+two500slots;Shelhamer MontanaFFAStateOfficer/MSU/GPA/one1500slot. CopiedAMTOPP GPA
+annotations remain original,flagged as drift,not affinity/substitution evidence.
+Shared historical/yearless timing,rubric/material/GPA-basis and renewal/reapplication
+limits remain exact. No biography/fullsharedsource/unrelatedaward forwarding;
+prior incidents retained in session-issues. No new incident identified this execution.
+
+Prior196comparisons exact;cumulative249field occurrences across11autonomous+2Jaycee;
+395autonomous inputs outside comparisons. Research406/406,cursor406,no nextinput;
+7406fields/406identities,676seed-alias/1127links/365receipts/35inheritedroutes/
+628destinations including one unclosed,nineattentionrows/all supplements,
+437M1routes/12pins/71custodyreceipts/every original owner/trigger/path/action/review
+remain exact. Current validation/checks retain actual outcomes/limits;no build/
+freshmain/source/custody/history/preservation/recovery/human/canonical/publication/
+student/M1/SD5/effect gate waived. Original owners/triggers remain in packets/
+SESSION_CLOSE/README/section9. Codex validation owns exact supported build/current
+main-target before acceptance/release;desktopvisibility only explicitUItrigger.
+
+Next Codex under retained delegation:after matching full-batch PASS and later
+continuation,prepare next bounded proposal;no replay/automatic next execution.
+Kelsey named reviewer/limited Jaycee approvals exact;no repeated routine question.
+No new source/workbook/raw reads,acceptance,external effects orSD3. Retain user's
+context stopping condition with durable handoff,no invented percentage. Fresh
+entry:AGENTS governing order,section9,original AUTHORITY/POLICY/latestSESSION_CLOSE,
+current authority/selection/README/comparison/identity/source views/validation/
+manifest/review. Run batch004 verify.py --review-bound in valid receipt context.
+Recommended effort:High. Prior handoff remains exact below.
+
+---
+
 # SD2 proposal004 — October 16, 2026
 
 The next bounded proposal covers Carl Valvoda8,Dr. Max L Amberson Ag Education9,

@@ -353,6 +353,31 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-004-START -->
+- October16,2026 direct exactselection:proposal004 comparison executed forCarl8,
+  Amberson9,Shelhamer10;53held fields,14consistent/29applicability-identity unresolved/
+  9evidenceunavailable/1existingstudentStageconflict. Currentcloseoutbatch004README.
+  All original envelopes/identities unchanged;0accepted facts/mappings.FullSD2incomplete.
+- PreserveCarlapplicationANDserviceROTCorArmedForces;Ambersonstageconflict/AgEd/
+  FFA/GPA/two500slots;ShelhamerStateOfficer/MSU/GPA/one1500. CopiedAMTOPP annotations
+  retained andflagged,neveraffinity/substitutionproof. No biography/fullsharedsource
+  forwarding;allpriorincidentsretained. No newincidentidentifiedinthisexecution.
+- Freshproposal004review-boundPASS/1d463dbbeforeedits;newverify.py protectsentry
+  blobs/modes andappend-onlyhistory. Independentstatusonlymatchingmanifest/review;
+  otherwise pending. All earlierreviews/rejectedbindings/contexts stayexact.
+- Prior196comparisons preserved;cumulative249fields/11autonomous+2Jaycee;
+  395autonomousoutsidecomparisons. Research406/406,cursor406,no nextinput;
+  7406fields/406identities/676seed-alias/1127links/365receipts/35inheritedroutes/
+  628destinations/nineattentionrows/all supplements/437M1routes/12pins/71custody
+  receipts/everyoriginalowner-trigger-path-actionpreserved.
+- validation/checksreportactualoutcomes/limits,no waivedbuild/currentmain/source/
+  custody/history/preservation/recovery/human/canonical/publication/student/M1/SD5/
+  effectgate. Originalowners/triggersremaininpackets/SESSION_CLOSE/README.NextCodex:
+  aftermatchingfull-batchPASS andlatercontinue,preparenextboundedproposal,no replay/
+  automaticexecution/routinequestion. No newreads,acceptance,externaleffectsorSD3.
+  Retainusercontextstopwithdurablehandoff,noinventedpercentage. Never initialize/
+  reset/replay. StopbeforeSD3. Recommendedeffort:High.
+<!-- SD2-BATCH-004-END -->
 <!-- SD2-PROPOSAL-004-START -->
 - October16,2026 continue-until-needed:prepared next bounded proposal004 at
   sd2-autonomous/consolidation-proposal-004/PROPOSAL.md/scope.json. OrderedCarl8,

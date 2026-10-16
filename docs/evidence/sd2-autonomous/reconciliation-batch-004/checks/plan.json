@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-16T18:25:54.622276+00:00",
+  "completedAt": "2026-10-16T18:25:54.796331+00:00",
+  "exitCode": 1,
+  "logPath": "docs/evidence/sd2-autonomous/reconciliation-batch-004/checks/plan.log",
+  "logSha256": "687eb53f764523bf75c3d2805f06c00a80a1d3b9a343f84473eb39baf279ccf0",
+  "rawOutputUtf8": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nnode:net:1918\n      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);\n                    ^\n\nError: listen EPERM: operation not permitted /var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/31640.pipe\n    at Server.setupListenHandle [as _listen2] (node:net:1918:21)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2119:5)\n    at file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31537\n    at new Promise (<anonymous>)\n    at createIpcServer (file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31515)\n    at async file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:55:459 {\n  code: 'EPERM',\n  errno: -1,\n  syscall: 'listen',\n  address: '/var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/31640.pipe',\n  port: -1\n}\n\nNode.js v22.20.0\n",
+  "rawLogBytes": 998,
+  "rawLogSha256": "687eb53f764523bf75c3d2805f06c00a80a1d3b9a343f84473eb39baf279ccf0",
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact original raw output retained in this receipt."
+}
