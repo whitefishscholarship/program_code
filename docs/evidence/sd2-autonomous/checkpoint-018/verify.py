@@ -151,7 +151,7 @@ assert routecounts['fields']==6560 and routecounts['identities']==360
 for p in [B/'checkpoint-018.json']+[f for f in P.rglob('*') if f.is_file()]:
  t=p.read_text();assert not re.search(r'\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}|[?&](?:AccessKeyId|token|sig|signature|se|ouid)=|tel:\d+',t,re.I),str(p)
  assert not re.search(r'(?:\b\d{3}[-/.]|\(\d{3}\)\s*)\d{3}[-/.]\d{4}',t),str(p)
- assert all(x==x.rstrip() for x in t.splitlines()) and t.endswith('\n'),str(p)
+ assert all(x==x.rstrip() for x in t.splitlines()) and t.endswith('\n') and not t.endswith('\n\n'),str(p)
 va=load(P/'validation.json');assert not any(va[k] for k in ['canonicalAcceptance','externalEffects','SD3Started'])
 for c in va['checks']:assert sha((R/c['logPath']).read_bytes())==c['logSha256']
 assert [load(P/(n+'.json'))['exitCode'] for n in ['plan-retry','typecheck','tests-retry']]==[0,0,0]

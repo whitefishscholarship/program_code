@@ -5,4 +5,3 @@ Two (2) scholarships for $2,500 each will be awarded to current, eligible employ
 [2026 Eligibility Requirements](https://emb.sfo3.cdn.digitaloceanspaces.com/whitefish/documents/GRG-RISE-Scholarship-Application-Criteria-2026.pdf)
 
 [image omitted; uninspected]
-
