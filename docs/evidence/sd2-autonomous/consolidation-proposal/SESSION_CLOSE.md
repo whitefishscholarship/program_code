@@ -117,3 +117,149 @@ scope.json, final-manifest.json, review.json and session-close-verification.json
 Run consolidation-proposal/verify-close.py. Preserve every hold/review binding.
 The proposal is complete; execute the exact pilot only after direct selection.
 Never initialize/reset/replay. Stop before SD3. Recommended next effort: High.
+
+
+## Fresh-context verification session close — October 15, 2026
+
+Status: PASS for this session's original objective: open the existing specified
+worktree/branch, follow the governing records and rerun verify-close.py. This
+session did not author the previously completed proposal or independently review
+it again. No exact pilot selection was received; the pilot remains unexecuted.
+No initialization/reset/replay, source/workbook access, acceptance, external
+release or SD3 occurred. All original content above remains byte-for-byte intact.
+
+The verification below independently reran the existing mechanical checks,
+including 2212 protected pre-close tracked files, immutable proposal candidate and
+review, global held-field/identity routes, prior handoffs and all71 custody hashes.
+It does not extend the independent proposal review to this author-only supplement.
+Plan validation first hit the existing local IPC EPERM; the permitted same-command
+retry passed all13 stage contracts/current transition. No IPC repair remains.
+Typecheck/tests/build were not rerun for this documentation-only verification
+session. Their historical results and the exact standard-build EPERM remain as
+recorded; this session grants no alternate-build waiver.
+
+```json
+{
+  "sessionEntryCommit": "f3afae0db502066af7eeee1d88a1283d2c95f6bc",
+  "verificationCommand": [
+    "python3",
+    "docs/evidence/sd2-autonomous/consolidation-proposal/verify-close.py"
+  ],
+  "entryRecheck": {
+    "outcome": "PASS",
+    "startedAt": "2026-10-16T05:12:59.042692+00:00",
+    "completedAt": "2026-10-16T05:13:00.527933+00:00",
+    "protectedPreCloseTrackedFiles": 2212,
+    "allPreCloseBindingsBytesModesPreserved": true,
+    "allPriorHandoffSection9BytesPreserved": true,
+    "immutableCandidatePathsVerified": 24,
+    "routeCounts": {
+      "identities": 406,
+      "fields": 7406,
+      "seeds": 676,
+      "links": 1127
+    },
+    "sourceReceipts": 365,
+    "inheritedSourceRoutes": 35,
+    "convertedDestinations": 628,
+    "unclosedDestinationHolds": 1,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "custodyPins": 71,
+    "custodyGaps": [],
+    "cursor": 406,
+    "nextInputKey": null,
+    "pilotExecuted": false,
+    "acceptedFacts": 0,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "externalEffects": false
+  },
+  "planInitialAttempt": {
+    "command": [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-16T05:13:00.535029+00:00",
+    "completedAt": "2026-10-16T05:13:00.699795+00:00",
+    "exitCode": 1,
+    "outputSha256": "8f08b32ff4d34e4adf479c7464bdb4263a891dff3c2c03d0f30eba0fd7a560e3"
+  },
+  "planPermittedRetry": {
+    "command": [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-16T05:13:15.844950+00:00",
+    "completedAt": "2026-10-16T05:13:52.748163+00:00",
+    "exitCode": 0,
+    "outputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+  },
+  "planOutput": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+}
+```
+
+Every open item remains owned in the original routing table above, authoritative
+plan section9, original packets/wraps and021 FINAL_SESSION_AUDIT.md. The complete
+7406 field holds/406 identities,676seed-alias/1127source-link routes,365 receipts/
+35 inherited routes/628 destinations (one unclosed), prior first-three/Jaycee/
+PRELUDE records, nine attention rows/all supplements,437 M1 routes/12pins and
+71custody pins retain their original owners, triggers, paths and next actions.
+No facts/identities are accepted; fullSD2 remains incomplete. No pending author
+repair, reviewer recheck or delegated work remains for this verification objective.
+
+The only desktop action requested opening SESSION_CLOSE.md and returned queued;
+visible-tab confirmation remains unknown. Codex workspace owner investigates only
+on a later explicit UI/managed-attachment request; preserve checkout/history and
+never convert/recreate/reset them as part of this verification task.
+
+Next owner: Kelsey. Trigger: direct exact saved-evidence-only pilot selection,
+if desired, from PROPOSAL.md and scope.json. Next action: Codex performs only
+Spear45, Live Your Dream290, Jaycee40, Jaycee68/96 existing envelope comparisons
+and obtains independent review after selection. Wrapping up is not selection.
+Do not prepare the completed proposal again or automatically start further work.
+
+Important unverified items remain exactly those in the earlier Not verified
+paragraph and routing table: original/native/visual/form completeness, current
+provider/public/sponsor/route truth and timing; fresh authenticated main/target;
+whole-workbook version/concurrency/preservation/permission/backup/recovery;
+student/filter/fit/CSV/browser behavior; human/canonical/publication and M1/SD5
+operation/effect gates. Codex validation/delivery owns exact supported standard
+build and current main/target proof before later canonical acceptance/release.
+The other original owners act only at their recorded authorized evidence-arrival,
+selected reconciliation, SD3/SD4/M1/SD5 or external-effect triggers. No such trigger
+is newly activated by this supplement. Temporary custody availability is verified
+only at the recorded recheck time. Never initialize/reset/replay. Stop before SD3.
+
+Fresh-session kickoff: open this worktree/branch; follow AGENTS read order, then
+student-data plan section9 and this SESSION_CLOSE.md, including this supplement.
+Run the unchanged consolidation-proposal/verify-close.py. Preserve the completed
+proposal and every hold/review binding; execute its pilot only after direct exact
+selection. Recommended next-session effort: High.
+
+Post-update verification (same unchanged verifier; exit0):
+
+```json
+{
+  "outcome": "PASS",
+  "startedAt": "2026-10-16T05:14:58.274794+00:00",
+  "completedAt": "2026-10-16T05:14:59.648512+00:00",
+  "routeCounts": {
+    "identities": 406,
+    "fields": 7406,
+    "seeds": 676,
+    "links": 1127
+  },
+  "custodyPins": 71,
+  "custodyGaps": [],
+  "protectedPreCloseTrackedFiles": 2212,
+  "pilotExecuted": false,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "externalEffects": false
+}
+```
