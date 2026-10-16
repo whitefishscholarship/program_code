@@ -1,3 +1,56 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS governingreadorder,thencomplete
+STUDENT_DATA_AND_MAINTENANCE_PLAN section9 (soleprogresspointer),sd2-autonomous
+AUTHORITY/POLICY andcheckpoint-019.json plus019/README.md,final-manifest.json,
+review.json,SESSION_WRAP.md,SESSION_CLOSE.md,wrap-verification.json.
+
+Resume ONEboundedSD2checkpoint atoffset380/savedrow386,ERRAL LEA AND GLENN PLYMATE
+MEMORIAL FLIGHT TRAINING SCHOLARSHIP (exactsavedname).26frozeninputs remain;
+380initialdispositions/6876fieldholds/380identityholds,0accepted. Existingauthority
+permits routineresearch/GPTreview without renewedcheckpointapproval. Neverinitialize/
+reset/replay;preserve everyhold/reviewbinding;fullSD2incomplete;stopbeforeSD3.
+Recommendedeffort:High.
+
+Independent PASS C0/H0/M0/L0 binds 9190582ee6f666291ad25ef0b84696132d8eb2d2;
+manifest:final-manifest.json;review:review.json;local direct-child two-file receipt:
+4133ba5ab0053b4008bd0cb7fedc8733b587ac72.
+No pendingreviewerrepair/recheck/delegatedwork. All19ledgers/packets/PRELUDE/
+nineattentionrows/supplements/437M1routes/71custodypins andallpriorbindings stayexact.
+All647seed-alias/1111source-link/469conversiondestinationhash occurrencesretainowned
+actions;oneUMexternaldelimiterunclosed. Codex owns everyhold atapplicableauthorized
+evidencearrival orSD2consolidation. Exactrowconditions/variants/unknowns inledger/
+README20rowtable/SESSION_WRAP. No secondqueue orfact/identityacceptance.
+
+Preserve generalHilleman vsMorelliMSUtransition/learningdifferences/STEMlegacy;
+WTSFoundationchapter/selection versusStrategicPartner2027six/2026seven/yearlessclose
+andredactedBanks;Payneidentityhold;MSUPremierentry/renewal versusTreasureunknownrenewal;
+UMNationalMerit;UMAASoverlap/unstatedperiod/cohorts/stacking/materials;AGCWorkforce;
+STEAMmaterial/prompt/recommendation/appreciationlettervariants;AOPApastchildren versus
+parentcurrent/yearless/member/residency/sharedapplication/funding;fourunvisited
+SmarterSelectholds. No ordinalmapping,acceptedunion/intersection orfutureoffering.
+
+Before everydispatchnormalizehost,awaitsamehostcompletion,max4distincthosts;before
+outputnarrow/sanitize alltext/link/query/image/metadata.15exactclientintervals comply,
+max1/no samehostoverlap;no providertelemetry. Earlier018AWSunmeasured/016overlap and
+alloutputhistory stayexact. Newtrackingseed/contactfooter/biography/unrelatedheadings/
+blanklabels exposure isdisclosed;finalsanitization erasesnohistory. Codexevidence/
+governance assesses at laterauthorizedhistory/canonical/publicationreview.
+
+Selectedconversions/authorconcordance prove no original/raw/native/page/image/table/
+formcompleteness,sourcesilence,originfreshness,current/public/sponsor/routecontinuity.
+Allpriorrawbatch/native/redactedidentity/timing/custody/historylimits retainoriginal
+routes. Nextrequiredrawuse/audit verifies71originaltemporarypaths/hashes orpreserves
+receipts/reports exactgaps;no reconstruction/reacquisition/completedinputreplay.
+
+Both exactstandardbuildEPERM andfreshauthenticatedmain/target remain withCodexbefore
+canonicalacceptance/authorizedrelease. Everypreservation/backup/recovery/permission,
+human/canonical/publication,studentCSV/browser/fit and437M1/SD5/effectgate retains
+originalowner/trigger/action. No workbook/app/config/CI/login/forms/contact/messages/
+remoteGit/release/deployment/monitoractivation orSD3. Recheck019/verify.py --review-bound
+andverify-close.py. Previousauthoritativekickoff preservedbyte-for-bytebelow.
+
+---
+
 Final requested session no-loss audit:checkpoint-018/FINAL_SESSION_AUDIT.md and
 final-session-audit.json. Every open item retains its explicit/inherited owner,
 trigger,authoritative path and next action. All6561fieldholds/360identityholds,
