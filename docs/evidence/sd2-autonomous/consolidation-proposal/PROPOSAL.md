@@ -169,6 +169,15 @@ proposed scope; it does not assess scholarship truth or execute comparisons.
 `final-manifest.json` and `review.json`, when present, bind independent proposal
 review to its own immutable candidate. No earlier research review is rebound.
 
+Original proposal candidate `d381c824` failed independent review on one MEDIUM
+verification-evidence finding: the pre-freeze diff omitted then-untracked files
+and missed a trailing blank line in a new command log. Its manifest/review and raw
+log remain preserved in `manifest-round1.json`, `review-round1.json` and immutable
+Git history. `remediation.json` records the author's EOF-only normalization,
+original raw hash and superseded verification claims. Final checks require all
+new candidate files staged and a complete frozen diff; only a matching independent
+replacement PASS closes that finding. No scholarship evidence or scope changed.
+
 No backend model/effort value is exposed in this session; no model switch was
 requested. Recommended next-session effort: High. Preserve the original worktree
 and branch; the live authenticated main/target gate remains open.

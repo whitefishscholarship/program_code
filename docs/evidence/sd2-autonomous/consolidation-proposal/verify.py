@@ -59,10 +59,14 @@ z = '<!-- SD2-CONSOLIDATION-PROPOSAL-END -->\n'
 assert t.count(a) == t.count(z) == 1
 assert t[:t.index(a)] + t[t.index(z) + len(z):] == git('show', ENTRY + ':' + path).decode()
 changed = set(git('diff', '--name-only', ENTRY).decode().splitlines())
-changed |= set(git('ls-files', '--others', '--exclude-standard').decode().splitlines())
+untracked = set(git('ls-files', '--others', '--exclude-standard').decode().splitlines())
+changed |= untracked
 prefix = str(P.relative_to(R)) + '/'
 assert all(x in MUTABLE or x.startswith(prefix) for x in changed), changed
 assert len(changed & MUTABLE) == 3
+# Git diff omits untracked additions. Stage every new candidate path before a
+# successful full-candidate check; only the following review-receipt files may wait.
+assert untracked <= {prefix + 'final-manifest.json', prefix + 'review.json'}, untracked
 
 audit = load(P / 'entry-audit.json')
 assert audit['outcome'] == 'PASS' and audit['allOriginalBindingsAndPacketsPreserved']
@@ -125,6 +129,23 @@ if (P / 'validation.json').exists():
     for check in validation['checks']:
         assert sha((R / check['logPath']).read_bytes()) == check['logSha256']
     assert 'Operation not permitted' in (P / 'build.log').read_text()
+if (P / 'remediation.json').exists():
+    rem = load(P / 'remediation.json')
+    old_manifest = load(P / 'manifest-round1.json')
+    old_review = load(P / 'review-round1.json')
+    assert old_review['outcome'] == 'FAIL'
+    assert old_manifest['candidateCommit'] == old_review['binding']['candidateCommit'] == rem['originalCandidateCommit']
+    assert sha((P / 'manifest-round1.json').read_bytes()) == old_review['binding']['manifestSha256'] == rem['originalManifestSha256']
+    assert sha((P / 'review-round1.json').read_bytes()) == rem['originalReviewSha256']
+    assert rem['severityCounts'] == old_review['severityCounts'] == dict(critical=0, high=0, medium=1, low=0)
+    assert len(rem['dispositions']) == 1 and rem['dispositions'][0]['findingId'] == 'M1'
+    typecheck = load(P / 'typecheck.json')
+    normalization = typecheck['logNormalization']
+    raw = git('show', normalization['originalCandidateCommit'] + ':' + normalization['originalPath'])
+    assert sha(raw) == normalization['originalSha256'] and len(raw) == normalization['originalBytes']
+    assert (P / 'typecheck.log').read_bytes() == raw.rstrip(b'\n') + b'\n'
+    for receipt in validation['supersededOriginalReceipts']:
+        assert sha(git('show', receipt['candidateCommit'] + ':' + receipt['path'])) == receipt['sha256']
 git('diff', '--check', ENTRY)
 print(json.dumps(dict(outcome='PASS', scope='Local proposal preservation and bounded-scope checks only',
     startedAt=started, completedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),

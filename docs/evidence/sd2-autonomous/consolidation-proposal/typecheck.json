@@ -9,5 +9,15 @@
   "completedAt": "2026-10-16T04:27:39.002690+00:00",
   "exitCode": 0,
   "logPath": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
-  "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+  "logSha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+  "logNormalization": {
+    "operation": "Remove trailing blank lines only; keep one final newline",
+    "originalCandidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+    "originalPath": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
+    "originalSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+    "originalBytes": 39,
+    "normalizedBytes": 38,
+    "commandNotRerun": true,
+    "rawOutputPreservedInImmutableCandidate": true
+  }
 }

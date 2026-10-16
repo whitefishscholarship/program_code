@@ -1,6 +1,6 @@
 {
   "scope": "Local SD2 proposal only; not pilot execution, canonical acceptance or scholarship verification",
-  "recordedAt": "2026-10-16T04:28:52.063369+00:00",
+  "recordedAt": "2026-10-16T04:33:11.289574+00:00",
   "entryCommit": "37d0b041423fb9db8eb9bf63484694230e1ac12f",
   "checks": [
     {
@@ -40,7 +40,17 @@
       "completedAt": "2026-10-16T04:27:39.002690+00:00",
       "exitCode": 0,
       "logPath": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
-      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+      "logSha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+      "logNormalization": {
+        "operation": "Remove trailing blank lines only; keep one final newline",
+        "originalCandidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+        "originalPath": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
+        "originalSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+        "originalBytes": 39,
+        "normalizedBytes": 38,
+        "commandNotRerun": true,
+        "rawOutputPreservedInImmutableCandidate": true
+      }
     },
     {
       "command": [
@@ -108,7 +118,8 @@
       "37d0b041423fb9db8eb9bf63484694230e1ac12f"
     ],
     "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
-    "exitCode": 0
+    "exitCode": 0,
+    "coverage": "Complete entry-to-worktree diff with every newly added non-attestation path staged; reviewer also checks exact entry-to-immutable-replacement-candidate diff."
   },
   "observedLimits": [
     "Initial plan and full tests failed temporary IPC creation with EPERM; permitted local retries passed; both first results retained.",
@@ -118,7 +129,8 @@
     "Entry audit rechecked all71 original temporary custody pins; availability after that audit remains unknown.",
     "Saved evidence consistency and preservation do not establish original-source fidelity, source silence, current/public/sponsor/route continuity or complete native/visual inspection.",
     "Historical021 verifiers retain frozen entry path allowlists; later proposal preservation is checked by its own task-local read-only verifier.",
-    "All prior open owners/triggers/actions, including all nine attention rows/supplements and M1, are preserved by exact byte equality."
+    "All prior open owners/triggers/actions, including all nine attention rows/supplements and M1, are preserved by exact byte equality.",
+    "Independent original-candidate review found one MEDIUM M1: pre-freeze Git diff omitted then-untracked files and missed a trailing blank log line. Original candidate/manifest/review/raw output preserved; normalize only that EOF, update its hashes, and require complete staged/frozen replacement diff plus independent recheck. No scholarship evidence or prior review changed."
   ],
   "newSourceOrWorkbookReads": 0,
   "consolidationExecuted": false,
@@ -127,5 +139,19 @@
   "fullSD2Complete": false,
   "canonicalAcceptance": false,
   "externalEffects": false,
-  "SD3Started": false
+  "SD3Started": false,
+  "supersededOriginalReceipts": [
+    {
+      "candidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/validation.json",
+      "sha256": "ddeda695b6bba1b137e7ca8ba864e9076487699da910be23b1344bde38b104b9",
+      "limit": "Pre-freeze diff inspection omitted then-untracked new log files; not a passing complete-candidate check. Independent round1 review FAIL M1 is preserved."
+    },
+    {
+      "candidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/preservation.json",
+      "sha256": "8065c6ed702429cde827351016f9ac16d9ce0631195eb333ae1ed84813201630",
+      "limit": "Pre-freeze diff inspection omitted then-untracked new log files; not a passing complete-candidate check. Independent round1 review FAIL M1 is preserved."
+    }
+  ]
 }
