@@ -354,6 +354,43 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-021-START -->
+- October15,2026:one bounded checkpoint021 completes frozenoffsets400:406,
+  savedrows407-412. Six researched-held outcomes,122newfieldholds/sixidentities,
+  eightsequentialpublicconversions/58references/128converted-destinationhashroutes.
+  Initialqueuecoverage406/406,zero unprocessed;cursor406 has no next input.
+  All7406fieldholds/406identities/676seed-alias/1127source-links/365source-receipts/
+  628converted-destinationoccurrences stayheld/owned;0accepted. FullSD2incomplete;
+  never initialize/reset/replay;Stop before SD3.
+- Independent PASS C0/H0/M0/L0 binds f45d05741e76abe630ca0e8cd6a7384795da317f; local direct-child two-file review receipt ec445f3bca4b392237a06ebc99d79c0d95c5570b. Manifest:checkpoint-021/final-manifest.json;review:checkpoint-021/review.json. One LOW provenance label fixed/rechecked; originalae00e42/manifest-round1/review-round1 and all prior bindings remain exact.
+  No pending reviewerrepair/recheck/delegation. All21ledgers/priorpackets/PRELUDE/
+  nineattentionrows/supplements/437M1routes/12M1pins/71custodypins remain exact.
+  Every explicit/inherited owner/trigger/path/nextAction stays inledger/README/
+  SESSION_WRAP;35historicalsource schemas inherit originalshared routes unchanged.
+- Preserve three AOPA pastchildren/currentunknown andparentconditions separately;
+  Hilleman/Morelli MSU-vs-foundation/generalHillemanFall2026/reference/essay and
+  excludedformunknowns;MSF2026dates/fulltime/goodstanding/approvedprogram/safety/
+  unknownamount;EAAchapter-vs-scholarfunding/windows/nomination/certificates/medical/
+  age/preferences/flights/service/reports/milestones/member-onlycriteria. Exact
+  distinctions/unknowns remaininheldtypedfields;no accepted union/intersection.
+- Selectedconversions/authorconcordance prove nooriginal/native/visual/fullform/
+  source-silence/current/public/sponsor/route/originfidelity. Eight measured client
+  intervals sequential;no providertelemetry. Earlier016overlap/018unmeasured and
+  alloutput/history remain disclosed. Before dispatch normalize/serializehost,max4;
+  before output narrow/sanitize text/link/query/image/metadata. Finalsanitization
+  erasesnohistory. At next rawuse/audit verify71originalpaths/hashes orpreserve
+  receipts/report gaps;no reconstruction/reacquisition/replay.
+- Plan/type/fulltests/evidence/history/full-diffchecks PASS after permitted IPC
+  retries. Both exactstandardbuilds remainprocessportEPERM;freshauthenticatedmain/
+  target remainsopen withCodexbeforecanonicalacceptance/authorizedrelease. Every
+  preservation/backup/recovery/permission,human/canonical/publication,studentCSV/
+  browser/fit and437M1/SD5/effectgate retains originalowner/trigger/action.
+- Next-session Codex prepares exactboundedSD2consolidation/holdproposal fromsaved
+  evidence;Kelsey selects additionalexecution scope whererequired. Noautomatic
+  furtherreads/consolidation,acceptance,externaleffect orSD3. Closure:021/
+  SESSION_WRAP.md,SESSION_CLOSE.md,wrap-verification.json. Kickoff:NEXT_SESSION.md.
+  Recheck:021/verify.py --review-bound andverify-close.py. Recommended effort:High.
+<!-- SD2-CHECKPOINT-021-END -->
 <!-- SD2-CHECKPOINT-020-START -->
 <!-- SD2-CHECKPOINT-020-FINAL-AUDIT-START -->
 - Requested final no-loss audit:checkpoint020 original goal is complete within
