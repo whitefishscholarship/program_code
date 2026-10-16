@@ -1,3 +1,52 @@
+# SD2 shared-source proposal003 — October16,2026
+
+Prepared the next bounded proposal under direct continue and retained delegated
+routine decisions. Proposed ordered Agri Industries5,AMTOPP6,Bridging the Gap7:
+3inputs/52 existing held fields;8 saved source references with exact per-record
+relevance. Proposal only;0new comparisons,0accepted facts,no execution. Never
+initialize/reset/replay. Stop before SD3. FullSD2 incomplete.
+
+Authoritative proposal:sd2-autonomous/consolidation-proposal-003/PROPOSAL.md and
+scope.json. entry-audit.json freshly verifies completed batch002/db0b341 in its
+valid pre-proposal context. New verify.py protects entry blobs/modes and exact
+append-only earlier handoffs/section9. Independent proposal status only matching
+final-manifest.json/review.json;if absent/non-PASS/mismatched,pending. Old review
+bindings/verifier contexts/allowlists stay unchanged;no rebinding or widening.
+validation.json/checks record actual current commands/results/limits.
+
+Current comparison coverage remains144 occurrences across5autonomous+2priorJaycee
+inputs;401autonomous inputs outside comparisons. Proposal adds zero. If separately
+executed:196occurrences across8autonomous+2Jaycee,398autonomous outside comparisons.
+Research remains406/406,cursor406,no next input;all7406fields/406identities,
+676seed-alias/1127links/365receipts/35inherited routes/628destinations including one
+unclosed,nine attention rows/all supplements,437M1routes/12pins/71custodyreceipts
+and every original owner/trigger/path/action/review binding remain exact.
+
+Keep Agri child interests/stageOR/amounts-vary,AMTOPPmember-FFA-4Hbranches/conflict,
+Bridging will-or-have-aged-out wording and one-or-more recipients distinct.
+Equal rh-old/rh-alias hashes are not independent corroboration;shared general,
+college and leadership material is not automatically a child/branch requirement.
+No new source/workbook/raw-content read,acceptance,external effect orSD3 here.
+
+Next owner Codex under retained delegation:after matching proposal PASS and a
+continuation selecting execution,pin fresh entry and compare only52 fields.
+Do not reprepare this completed proposal or replay prior batches. Kelsey remains
+named reviewer;limited Jaycee approvals unchanged;no repeated preference question.
+Every original source/custody/timing/output/history/build/freshmain/preservation/
+recovery/human/canonical/publication/student/M1/SD5/effect owner/trigger/path/action
+remains in original packets/SESSION_CLOSE,batch002README and plansection9.
+Codex validation owns exact supported build/current main-target before acceptance/
+release. Preserve all failure/incident history,no waiver. Desktop opening remains
+queued/visibility unknown with original workspace owner/explicit UI trigger.
+
+Fresh entry:AGENTS governing order,student-data plansection9,original AUTHORITY/
+POLICY/SESSION_CLOSE,completed batch002manifest/review/entry receipt and this
+proposal/scope/validation/manifest/review. Run proposal003 verify.py --review-bound
+in valid receipt context;use earlier valid-entry receipts plus unchanged-byte proof
+for historical verifiers. Recommended effort:High. Prior handoff preserved below.
+
+---
+
 # SD2 comparison batch002 — October16,2026
 
 Direct continue selected the reviewed proposal002 execution. Ted Lund2,ADHD-labeled3,

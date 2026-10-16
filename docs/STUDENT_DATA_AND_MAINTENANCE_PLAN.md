@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-003-START -->
+- October16,2026 direct continue:next bounded shared-source proposal prepared at
+  sd2-autonomous/consolidation-proposal-003/PROPOSAL.md and scope.json. Proposed
+  ordered Agri5,AMTOPP6,Bridging7:3inputs/52existing held fields,8exact saved source
+  references;no new comparisons or execution. FullSD2 incomplete;0accepted facts.
+- Preserve Agri stageOR/careerinterest/amountvaries,AMTOPPmember/FFA/4HidentityBranches
+  conflict and distinct terms,Bridging exactwill-or-have-aged-out/recipientcount.
+  rh-old/rh-alias equality not independent corroboration;sharedrubrics not automatic
+  child rules. All prior144comparisons and original holds/review bindings exact.
+- Fresh pre-edit batch002 review-bound PASS/db0b341 in entry-audit;new verify.py
+  protects entrybytes/modes and exact append-only history. Independent proposal
+  status only matching final-manifest.json/review.json;absent/non-PASS/mismatched
+  means pending. Old verifiers keep original contexts/allowlists;no rebinding.
+- Current comparison coverage5autonomous+2Jaycee/144fields;401autonomous outside
+  comparisons. Proposal adds0. If later separately executed:8autonomous+2Jaycee/
+  196fields,398autonomous outside. Research406/406,cursor406,no nextinput;
+  all7406fields/406identities/676seed-alias/1127links/365receipts/35inheritedroutes/
+  628destinations/nine attention rows/all supplements/437M1routes/12pins/71custody
+  receipts and all original owners/triggers/paths/actions remain exact.
+- Next owner Codex:after matching proposalPASS and continuation selecting execution,
+  pin fresh entry and perform only52comparisons;no repeated reviewer/intention/Git
+  choice and no re-preparation/replay. Every source/custody/history/build/freshmain/
+  preservation/recovery/human/canonical/publication/student/M1/SD5/effect gate keeps
+  original owner/trigger/path/action in original packets/SESSION_CLOSE/batch002README.
+  validation/checks disclose actual results,never a waiver. No new reads,acceptance,
+  external effect orSD3. Never initialize/reset/replay. Stop before SD3. Effort:High.
+<!-- SD2-PROPOSAL-003-END -->
 <!-- SD2-BATCH-002-START -->
 - October16,2026 direct continue:selected reviewed proposal002 execution;
   reconciliation-batch-002/README.md is current evidence/closeout. Ordered Ted2,
