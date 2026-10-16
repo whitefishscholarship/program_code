@@ -356,6 +356,20 @@ not duplicate project progress trackers. Update this small block at every checkp
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CONSOLIDATION-PROPOSAL-START -->
 <!-- SD2-CONSOLIDATION-CLOSE-START -->
+- October16,2026 requested session close: original worktree/branch/read-order/
+  verify-close.py objective PASS;plan and preservation checks passed. Current evidence and limits are appended to
+  consolidation-proposal/SESSION_CLOSE.md; original table/packets retain every
+  owner/trigger/path/action. Queue406/406,cursor406,no next input;all7406field/
+  406identity holds,96 proposed envelopes,437M1routes/12pins/71custodypins and
+  every prior review binding remain exact;0accepted;fullSD2 incomplete.
+  Pilot unselected/unexecuted. Next owner Kelsey;trigger direct exact selection
+  of PROPOSAL.md/scope.json;then Codex executes/reviews only45,290,40,68 in order.
+  This wrap-up is not selection;do not prepare the completed proposal again.
+  Existing buildEPERM/freshmain/source/preservation/human/canonical/publication/
+  student/M1/SD5/effect gates retain original owners/triggers. Queued desktop
+  visibility remains unknown;Codex workspace owner checks only on explicit UI
+  request without checkout recreation/reset. No pending repair/recheck/delegation.
+  Never initialize/reset/replay. Stop before SD3. Recommended next effort:High.
 - October15,2026 fresh-context verification session: PASS for the requested
   worktree/branch entry and read-only verify-close.py recheck; no pilot selection.
   New session supplement/evidence in consolidation-proposal/SESSION_CLOSE.md.

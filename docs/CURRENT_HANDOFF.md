@@ -1,3 +1,30 @@
+# SD2 verification session closed — October 16, 2026
+
+PASS for the original worktree/branch, authoritative-read-order and read-only
+verify-close.py objective. Current-session closeout evidence is appended to
+consolidation-proposal/SESSION_CLOSE.md. The completed proposal remains unselected;
+the 96-envelope pilot was not executed. Queue406/406,cursor406,no next input;
+all7406 field holds/406 identity holds, every prior hold/review binding,437 M1
+routes/12 pins/71 custody pins remain exact;0accepted. FullSD2 remains incomplete.
+
+Next owner: Kelsey; trigger: direct exact selection of PROPOSAL.md and scope.json.
+Only then does Codex execute/review Spear45, Live Your Dream290, Jaycee40, Jaycee68
+in order. This closeout is not selection. Do not prepare the completed proposal
+again. Never initialize/reset/replay. Stop before SD3.
+
+All original open-item owners/triggers/authoritative paths/next actions remain
+in SESSION_CLOSE.md's original routing table and plan section9, the sole progress
+pointer. Standard-build EPERM/fresh main/target/source fidelity/preservation/
+human/canonical/publication/student/M1/SD5/effect gates retain original triggers.
+Queued desktop opening has no visible-tab confirmation; Codex workspace owner
+checks it only on a later explicit UI request, preserving this checkout/history.
+No pending author repair, reviewer recheck or delegated work for this objective.
+No new source/workbook access, acceptance or external effects. Effort: High.
+Closeout preservation/verifier and plan validation passed (IPC retry).
+Prior handoff is preserved byte-for-byte below.
+
+---
+
 # SD2 fresh-context verification session closed — October 15, 2026
 
 PASS for this session's original objective: open the specified worktree/branch,

@@ -263,3 +263,170 @@ Post-update verification (same unchanged verifier; exit0):
   "externalEffects": false
 }
 ```
+
+
+## Requested fresh-context session close — October 16, 2026
+
+Status: PASS for the original objective: use the existing requested worktree and
+branch, follow NEXT_SESSION.md's authoritative read order and rerun the unchanged
+verify-close.py. Entry commit: `455b0b2dec0eb796bc315e879bfe42f09a0955c4`.
+The clean checkout was verified on codex/plan-student-data-maintenance. The desktop
+file-open request returned queued; visible-tab confirmation is unknown. Filesystem
+and Git use of the requested checkout succeeded; no recreation/reset is required.
+
+The proposal is already complete and independently reviewed against its immutable
+candidate. This session has no pending author repair, independent reviewer recheck,
+or delegated task. This author closeout does not extend or rebind that review.
+The exact proposed pilot remains unselected and unexecuted; wrapping up supplies
+no selection. No new source/workbook reads, raw content reinspection/reacquisition,
+initialization/reset/replay, fact/identity acceptance, external release, monitoring
+activation or SD3 work occurred. FullSD2 remains incomplete.
+
+The original open-dependency routing table above, checkpoint021 FINAL_SESSION_AUDIT,
+all original packets/wraps and plan section9 retain every original owner, trigger,
+authoritative path and next action. They remain operative; no new backlog replaces
+them and no row closes from coverage or a verifier PASS. Specifically preserved:
+7406 autonomous field holds/406 identity holds, prior first-three/Jaycee/PRELUDE,
+676 seed-alias/1127 link routes,365 receipts/35 inherited routes/628 destinations
+including one unclosed destination, nine attention rows/every supplement,437 M1
+routes/12 pins and71 custody pins. Zero accepted facts.
+
+| Current next action / authoritative path | Owner | Trigger and action |
+| --- | --- | --- |
+| Completed PROPOSAL.md, scope.json and immutable review.json | Kelsey selects; Codex executes/reviews | Only direct exact pilot selection permits the saved-evidence comparisons for Spear45, Live Your Dream290, Jaycee40, Jaycee68/96 envelopes, in order. Preserve every original hold/binding and stop at the reviewed bounded pilot, before SD3. Do not prepare this proposal again. |
+| Every other open item in the original routing table above, section9 and original packets/wraps | Each original recorded owner | Original authorized evidence-arrival, separately selected reconciliation, raw-use/audit, acceptance/release, SD3/SD4/M1/SD5 or external-effect trigger only. Perform its exact saved next action; this closeout activates none. |
+| Queued desktop opening / this paragraph | Codex workspace owner | A later explicit UI or managed-attachment request: verify visibility if needed while preserving this checkout and history; no conversion/recreation/reset from this closeout. |
+
+New issues reviewed: the plan check again hit the known local IPC listen EPERM;
+its unchanged-command retry/result is recorded below. No new product/source issue
+was found. Desktop visibility is adjacent to the completed filesystem/Git entry
+objective and remains routed above. No prior source/review repair is reopened.
+
+Verification: the unchanged verifier passed at entry; current-result summary below.
+It checked2212 protected pre-close blobs/modes,24 immutable candidate paths,
+append-only historical handoffs, all held routes and71 custody hashes without
+source content reinspection or reacquisition. No custody gaps were observed at
+that timestamp; future availability is not promised.
+
+```json
+{
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/consolidation-proposal/verify-close.py"
+  ],
+  "startedAt": "2026-10-16T14:30:05.260057+00:00",
+  "completedAt": "2026-10-16T14:30:06.699949+00:00",
+  "outcome": "PASS",
+  "protectedPreCloseTrackedFiles": 2212,
+  "allPreCloseBindingsBytesModesPreserved": true,
+  "allPriorHandoffSection9BytesPreserved": true,
+  "immutableCandidatePathsVerified": 24,
+  "routeCounts": {
+    "identities": 406,
+    "fields": 7406,
+    "seeds": 676,
+    "links": 1127
+  },
+  "sourceReceipts": 365,
+  "inheritedSourceRoutes": 35,
+  "convertedDestinations": 628,
+  "unclosedDestinationHolds": 1,
+  "M1Records": 437,
+  "M1Pins": 12,
+  "custodyPins": 71,
+  "custodyGaps": [],
+  "cursor": 406,
+  "nextInputKey": null,
+  "pilotExecuted": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": false
+}
+```
+
+Important unverified items: original/native/visual/full-form completeness, source
+silence, current offerings/public access/sponsor/route/origin fidelity and provider
+timing; fresh authenticated main/target; whole-workbook version/concurrency/
+preservation/permissions/private native backup/recovery; actual student/filter/
+fit/CSV/browser behavior; human/canonical/publication and M1/SD5 operation/effect
+gates. All retain the original routing table's owners/triggers/paths/actions.
+The exact standard build remains historically blocked by process/port EPERM,
+owned by Codex validation/delivery before canonical acceptance or authorized
+release. Typecheck/tests/build were not repeated for this unchanged-runtime,
+read-only verification and author documentation closeout. Historical results and
+build limitations remain exact; no alternate-build waiver or new acceptance claim.
+
+Fresh-session kickoff: open this worktree/branch; start at NEXT_SESSION.md and
+follow its authoritative read order, including this final SESSION_CLOSE supplement.
+Run the unchanged consolidation-proposal/verify-close.py. Preserve the completed
+proposal and every hold/review binding; execute its exact pilot only after direct
+exact selection. Never initialize/reset/replay. Stop before SD3. Effort: High.
+
+
+Current-session documentation verification:
+
+- `npm run plan:check` from web initially exited1 with local `listen EPERM`
+  while opening its tsx IPC pipe; the same-command permitted retry below exited0.
+  All13 ordered stage contracts/current machine-state transition passed. No IPC
+  repair remains; no configuration or external service was changed.
+- `git diff --check 455b0b2dec0eb796bc315e879bfe42f09a0955c4`: exit0.
+- Exact current-entry preservation and unchanged close verifier: PASS below.
+  Only the four named session-owned documentation paths changed. All previous
+  SESSION_CLOSE bytes, handoffs and section9 content remain intact; every other
+  current-entry tracked blob/mode is unchanged. The final post-save verifier and
+  clean-tree check are performed before delivery; original review remains bound
+  only to its own immutable candidate. No independent review is claimed for this
+  author-only closeout and no canonical/stage/fact acceptance is requested.
+
+```json
+{
+  "planPermittedRetry": {
+    "command": [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-16T14:31:13.764754+00:00",
+    "completedAt": "2026-10-16T14:31:49.149810+00:00",
+    "exitCode": 0,
+    "outputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+    "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+  },
+  "currentEntryPreservation": {
+    "outcome": "PASS",
+    "startedAt": "2026-10-16T14:31:30.097013+00:00",
+    "completedAt": "2026-10-16T14:31:31.761344+00:00",
+    "entryCommit": "455b0b2dec0eb796bc315e879bfe42f09a0955c4",
+    "protectedCurrentEntryTrackedFiles": 2216,
+    "changedPaths": [
+      "docs/CURRENT_HANDOFF.md",
+      "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "docs/evidence/sd2-autonomous/consolidation-proposal/SESSION_CLOSE.md"
+    ],
+    "allOtherEntryBlobsAndModesUnchanged": true,
+    "allPriorSessionCloseBytesRetained": true,
+    "allPriorHandoffAndSection9BytesRetained": true,
+    "unchangedVerifierOutcome": "PASS",
+    "routeCounts": {
+      "identities": 406,
+      "fields": 7406,
+      "seeds": 676,
+      "links": 1127
+    },
+    "custodyPins": 71,
+    "custodyGaps": [],
+    "pilotExecuted": false,
+    "acceptedFacts": 0,
+    "SD3Started": false,
+    "externalEffects": false
+  }
+}
+```
+
+No further work is pending within the original verification objective. Next owner
+and trigger remain Kelsey/direct exact pilot selection; every adjacent open item
+retains the original routing table and selected future trigger. No automatic next
+slice, source read, acceptance or external effect. Recommended effort: High.
