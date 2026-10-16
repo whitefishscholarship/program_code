@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-16T17:57:34.713406+00:00",
+  "completedAt": "2026-10-16T17:58:13.705918+00:00",
+  "exitCode": 0,
+  "logPath": "docs/evidence/sd2-autonomous/consolidation-proposal-004/checks/plan-retry.log",
+  "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+  "rawOutputUtf8": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n",
+  "rawLogBytes": 164,
+  "rawLogSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact original raw output retained in this receipt."
+}

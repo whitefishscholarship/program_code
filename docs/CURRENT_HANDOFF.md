@@ -1,3 +1,51 @@
+# SD2 proposal004 — October 16, 2026
+
+The next bounded proposal covers Carl Valvoda8,Dr. Max L Amberson Ag Education9,
+Dr. Van Shelhamer Memorial10, in order:3inputs/53 existing held fields,7 saved
+source references. Preparation only;0new comparisons,0accepted facts/no execution.
+Never initialize/reset/replay. Stop before SD3. FullSD2 remains incomplete.
+
+Authoritative proposal:sd2-autonomous/consolidation-proposal-004/PROPOSAL.md and
+scope.json. Fresh batch003 review-bound PASS/82a86a3 in entry-audit before new paths;
+verify.py protects all entry bytes/modes and exact append-only prior handoffs.
+Independent status only matching final-manifest.json/review.json; absent/non-PASS/
+mismatched means pending. No prior review or verifier context/allowlist is rebound.
+validation.json/checks disclose actual commands/results/limits; no gate waived.
+
+Preserve Carl RHM application AND serving/have-served ROTC OR U.S.ArmedForces;
+Amberson studentStage conflict RHM senior/freshman versusFFA freshman/sophomore,
+AgEddegree/GPA/FFA/two500slots;Shelhamer Montana FFA State Officer/MSU/GPA/one1500.
+Amberson/Shelhamer copiedAMTOPP GPA notes stay unchanged,flagged as annotation
+drift,never evidence affinity or child substitution. Sharedrubric/material/date
+scope and RHMalias equality limits remain exact. No fullsharedfile/biography/
+otheraward forwarding. Local saved memorial-biography preview lapse retained
+in session-issues;excluded from new proposal facts/views. Earlier incidents exact.
+
+Current comparison coverage196fields across8autonomous+2Jaycee;398autonomous
+outside comparisons. Proposal adds0;separate selected execution would249fields/
+11autonomous+2Jaycee,395autonomous outside. Research406/406,cursor406,no nextinput;
+7406field/406identity holds,676seed-alias/1127links/365receipts/35inheritedroutes/
+628destinations including one unclosed,nine attentionrows/all supplements,
+437M1routes/12pins/71custodyreceipts and all original owner/trigger/path/action/
+review bindings remain exact in original packets/SESSION_CLOSE/batch003README.
+All source/custody/history/build/freshmain/preservation/recovery/human/canonical/
+publication/student/M1/SD5/effect gates retain original owners/triggers. Exact
+standard-build/currentmain before acceptance/release remains owned by Codex
+validation/delivery. Desktopqueued/visibilityunknown only later explicitUItrigger.
+
+Next owner Kelsey:direct exact selection of this completed53-field proposal;
+then Codex executes/reviews only selected scope,with all holds unchanged. Current
+continue-until-needed selects preparation,not unseen execution;no automatic run.
+No routine preference/Git/reviewer question remains. No new source/workbook/raw
+reads,acceptance,external effects orSD3. Do not reprepare completed proposal.
+Fresh entry:AGENTS governing order,plansection9,original AUTHORITY/POLICY/latest
+SESSION_CLOSE,batch003receipt,this proposal/scope/entry/validation/manifest/review;
+run proposal004 verify.py --review-bound in valid receipt context. Preserve older
+valid receipts plus byte proof;never widen old verifiers. Recommended effort:High.
+Prior handoff remains exact below.
+
+---
+
 # SD2 comparison batch003 — October 16, 2026
 
 Direct continuation selected reviewed proposal003. Agri Industries5, AMTOPP6,

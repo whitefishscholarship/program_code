@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-004-START -->
+- October16,2026 continue-until-needed:prepared next bounded proposal004 at
+  sd2-autonomous/consolidation-proposal-004/PROPOSAL.md/scope.json. OrderedCarl8,
+  Amberson9,Shelhamer10:53existingheldfields/7savedsource references;0newcomparisons,
+  noexecution/acceptedfacts. FullSD2 incomplete;never initialize/reset/replay.
+- PreserveCarlROTCorArmedForces serving/have-served ANDRHMapplication;Amberson
+  studentStageconflictRHMsenior/freshmanversusFFAfreshman/sophomore andAgEddegree;
+  ShelhamerStateOfficer/MSU/GPA. CopiedAMTOPP GPAannotationsremain originalbutflagged,
+  notsourceaffinity. No ruleunion/intersection/winner,child substitutionornewID.
+- Freshbatch003review-boundPASS/82a86a3beforeedits in entry-audit;newverify.py
+  preservesallentrybytes/modes andappend-onlyhistory. Independentproposalstatus
+  onlymatchingmanifest/review;otherwisepending. Oldreviewbindings/contextsunchanged.
+- Current196comparedfields/8autonomous+2Jaycee,398autonomousoutsidecomparisons;
+  proposaladds0. Separateexecutionwould249fields/11autonomous+2Jaycee,395outside.
+  Research406/406,cursor406,no nextinput;7406fields/406identities,676seed-alias/
+  1127links/365receipts/35inheritedroutes/628destinations,nineattentionrows/every
+  supplement/437M1routes/12pins/71custodyreceipts/everyoriginalroutepreserved.
+- Newsavedmemorialbiographypreview lapseexcluded andrecordedinsession-issues;
+  earlierincidentsretained. validation/checksreportactualoutcomes/limits,no waiver.
+  Allsource/custody/history/build/freshmain/preservation/recovery/human/canonical/
+  publication/student/M1/SD5/effectowners/triggers/path/actionsremainoriginal.
+- NextKelsey:directexactselectionofcompleted53-fieldproposal;thenCodexexecutes/
+  reviewsonlyselectedscope. Currentcontinue-until-neededispreparation,notunseen
+  execution. Noroutinepreference/Git/reviewerquestion. Nonewreads,acceptance,
+  externaleffectsorSD3. StopbeforeSD3. Recommendedeffort:High.
+<!-- SD2-PROPOSAL-004-END -->
 <!-- SD2-BATCH-003-START -->
 - October16,2026 direct continuation selected reviewed proposal003 execution.
   reconciliation-batch-003/README.md is current closeout. Agri5,AMTOPP6,Bridging7:
