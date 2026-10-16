@@ -1,0 +1,12 @@
+{
+  "measuredReads": 18,
+  "maximumMeasuredConcurrentReads": 4,
+  "measuredSameHostOverlaps": [],
+  "firstAWSIntervalUnmeasured": true,
+  "firstReadSequentialBeforeOthers": true,
+  "independentProviderTelemetry": false,
+  "historicalCheckpoint016OverlapUnchanged": true,
+  "owner": "Codex source execution",
+  "trigger": "Before every subsequent dispatch",
+  "nextAction": "Normalize hostname, await samehost completion, at most4 distinct hosts globally; never relabel historical overlap."
+}
