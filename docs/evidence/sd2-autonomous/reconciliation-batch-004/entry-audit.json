@@ -1,0 +1,45 @@
+{
+  "entryCommit": "1d463dbc5e73bf26c4f9d84f0eb371b8229b32b1",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/consolidation-proposal-004/verify.py",
+    "--review-bound"
+  ],
+  "startedAt": "2026-10-16T18:22:12.338357+00:00",
+  "completedAt": "2026-10-16T18:22:13.365606+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "fea4b4687f72f9531015e43f396c75bd934157b4e95bab519ffefee2c63c4336",
+  "result": {
+    "outcome": "PASS",
+    "scope": "Proposal preservation and exact scope only; no semantic field comparison",
+    "startedAt": "2026-10-16T18:22:12.364529+00:00",
+    "completedAt": "2026-10-16T18:22:13.350992+00:00",
+    "entryCommit": "82a86a3539b921a35331b3ca320388d21608688b",
+    "protectedEntryFiles": 2351,
+    "allPriorBytesModesHandoffsAndReviewBindingsPreserved": true,
+    "proposedInputLocators": [
+      8,
+      9,
+      10
+    ],
+    "proposedFieldOccurrences": 53,
+    "newComparedInputs": 0,
+    "newComparedFields": 0,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "priorComparedFieldOccurrences": 196,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "custodyPins": 71,
+    "custodyLimit": "Retained original receipts and fresh predecessor entry verification; no raw reinspection or new custody-availability claim",
+    "acceptedFacts": 0,
+    "newSourceOrWorkbookReads": 0,
+    "comparisonExecuted": false,
+    "fullSD2Complete": false,
+    "canonicalAcceptance": false,
+    "externalEffects": false,
+    "SD3Started": false
+  }
+}
