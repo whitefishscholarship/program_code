@@ -1,0 +1,41 @@
+{
+  "entryCommit": "16164762998a6c9d057105d991feaf0de915bacb",
+  "scope": "Fresh predecessor pilot review-bound verification before any new path exists; not new field reconciliation",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/consolidation-pilot-001/verify.py",
+    "--review-bound"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "fae617574edb75e515ade10e5f8c16bd97af713c3fccf173a296e9a20bf93891",
+  "result": {
+    "outcome": "PASS",
+    "startedAt": "2026-10-16T15:25:06.917999+00:00",
+    "completedAt": "2026-10-16T15:25:08.179505+00:00",
+    "entryCommit": "c89427c21f3bd09205bb27b3402a40143bc6ba9d",
+    "protectedEntryFiles": 2217,
+    "allEntryBytesModesAndPriorHandoffsPreserved": true,
+    "selectedInputs": 4,
+    "fieldOccurrences": 96,
+    "categoryCounts": {
+      "existing evidence consistent": 36,
+      "evidence unavailable": 18,
+      "applicability/identity unresolved": 40,
+      "existing evidence conflicting": 2
+    },
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "cursor": 406,
+    "nextInputKey": null,
+    "priorReviewBindingsUnchanged": true,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "custodyPins": 71,
+    "custodyLimit": "Fresh entry audit verified hashes; original receipts and all entry files unchanged; future availability unpromised",
+    "acceptedFacts": 0,
+    "newSourceOrWorkbookReads": 0,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "externalEffects": false
+  }
+}

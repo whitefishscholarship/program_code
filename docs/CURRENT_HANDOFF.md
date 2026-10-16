@@ -1,3 +1,51 @@
+# SD2 next bounded proposal — October 16, 2026
+
+Prepared the next proposal under Kelsey's continue-as-planned instruction and
+retained delegated decision authority. Proposed order: Ted Lund2, saved ADHD-
+labeled3, Adoption STAR4;3 inputs/48 existing held fields. This session prepares
+and reviews the proposal only;0new comparisons,0accepted facts. No new source/
+workbook access,raw content reinspection/reacquisition,external effect orSD3.
+Never initialize/reset/replay. Stop before SD3. FullSD2 incomplete.
+
+Authoritative proposal: sd2-autonomous/consolidation-proposal-002/PROPOSAL.md and
+scope.json. entry-audit.json freshly verifies preceding pilot1616476 in its valid
+entry context. This proposal's independent status is only its matching final-
+manifest.json/review.json;absent/non-PASS/mismatched means review pending. Prior
+pilot PASS96comparisons and every prior rejected/final binding remain unchanged.
+validation.json/checks record current commands/results/limits;verify.py checks
+entry bytes/modes,append-only history and exact proposed scope without semantic
+comparison. Old verifiers keep original contexts/allowlists unchanged.
+
+Queue406/406,cursor406,no next research input;all7406fields/406identities,676seed-
+alias/1127links/365receipts/35inherited routes/628destinations including one unclosed,
+nine attention rows/all supplements,437M1routes/12pins/71custodypins and every
+original owner/trigger/path/action are preserved. Keep Ted athletics prompt distinct
+from hard eligibility,ADHD input distinct from named parent children/no deletion,
+Adoption academic award distinct from sibling grants. Source/route/cycle/native/
+current/public/custody/output/timing/history limits remain exact and held.
+
+Next owner: Codex under retained delegation. After matching proposal PASS and a
+continuation selecting execution,freeze a fresh execution entry and perform only
+these48 saved-evidence comparisons/review;do not reprepare this completed proposal.
+No repeated reviewer/organizer-intent/Git preference is needed. Kelsey remains named
+human reviewer;limited Jaycee approvals unchanged. Preparation is not execution.
+Every later build/freshmain/preservation/recovery/human/canonical/publication/
+student/M1/SD5/effect gate retains its original owner/trigger/path/action in original
+SESSION_CLOSE,original packets,pilot README and plansection9. Codex validation owns
+exact supported build/current main-target before acceptance/release;check new
+validation for actual outcomes,never infer success or waive historical failure.
+Desktop file opening remains queued/visibility unknown,owned by Codex workspace
+owner only on an explicit UI request;preserve this checkout/history.
+
+Fresh-session read order: AGENTS/canonical plan/state/CURRENT_HANDOFF/latest accepted
+evidence,then student-data plansection9,original AUTHORITY/POLICY/SESSION_CLOSE,
+preceding pilot manifest/review and this proposal/entry audit/scope/validation/
+manifest/review. Run proposal002 verify.py --review-bound only after its receipt.
+Use original verifiers only in their valid entries or fresh entry receipts plus
+byte-preservation proof. Recommended effort:High. Earlier handoffs remain exact.
+
+---
+
 # SD2 selected saved-evidence pilot — October 16, 2026
 
 Kelsey delegated outstanding decisions; Codex selected the exact completed

@@ -353,6 +353,31 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-002-START -->
+- October16,2026 continue-as-planned:next bounded saved-evidence proposal prepared
+  at sd2-autonomous/consolidation-proposal-002/PROPOSAL.md and scope.json.
+  Proposed ordered rows2Ted Lund,3ADHD-labeled,4Adoption STAR:3inputs/48 existing
+  held fields. Preparation only;0new comparisons,no executed next batch.
+- Prior pilot96comparison PASS/1616476 and every original rejected/final binding
+  remain exact. Fresh pre-edit pilot review-bound verifier PASS in entry-audit;
+  new verify.py protects all entry blobs/modes and earlier append-only handoffs.
+  Proposal review is only matching final-manifest.json/review.json;if absent or
+  non-PASS/mismatched,pending. No semantic comparison/fact or canonical acceptance.
+- Queue406/406,cursor406,no next research input;all7406fields/406identities,
+  676seed-alias/1127links/365receipts/35inherited routes/628destinations,nine attention
+  rows/every supplement/437M1routes/12pins/71custodypins and all original routes
+  preserved. Ted athletics prompt not hard eligibility;ADHD not deleted/substituted
+  by parent children;Adoption academic award distinct from sibling grants.
+- Next owner Codex under retained delegation:after matching proposal PASS and a
+  continuation selecting execution,pin fresh entry and compare only48 fields.
+  Do not reprepare this proposal;no repeated reviewer/organizer-intent/Git choices.
+  No automatic new read,comparison,acceptance,external effect orSD3 from preparation.
+  All original build/freshmain/source/custody/history/preservation/recovery/human/
+  canonical/publication/student/M1/SD5/effect owners/triggers/paths/actions remain
+  in originalSESSION_CLOSE/packets/pilotREADME. Current validation/checks disclose
+  actual results;no gate waiver. FullSD2 incomplete. Never initialize/reset/replay.
+  Stop before SD3. Recommended effort:High.
+<!-- SD2-PROPOSAL-002-END -->
 <!-- SD2-PILOT-001-START -->
 - October16,2026 delegated choice: Kelsey instructed Codex to make outstanding
   decisions so work can proceed. Codex selected the exact completed proposal
