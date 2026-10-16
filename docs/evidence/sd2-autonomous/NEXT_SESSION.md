@@ -1,3 +1,21 @@
+Final requested session no-loss audit:checkpoint-018/FINAL_SESSION_AUDIT.md and
+final-session-audit.json. Every open item retains its explicit/inherited owner,
+trigger,authoritative path and next action. All6561fieldholds/360identityholds,
+611seed-alias/1071source-link routes,nineattentionrows/supplements/437M1routes/
+71custodypins and rejected/final bindings remain exact. No pending reviewerrepair/
+recheck/delegatedwork. Read plansection9 as soleprogresspointer,then the authoritative
+kickoff below. Next-session Codex resumes ONE bounded SD2 checkpoint at offset360/
+savedrow366,Hilleman Scholars Program,under existing AUTHORITY/POLICY.46inputs
+remain;0accepted. Never initialize/reset/replay;fullSD2incomplete;stop before SD3.
+BuildEPERM/freshmain/sourcefidelity/currentpublic/native/timing/custody/history
+and later gates retain original owners/triggers/actions. No new research,
+acceptance,external effect orSD3 in finalaudit. Recheck:checkpoint-018/
+verify-final-session-audit.py. Recommended effort:High.
+
+Previous authoritative kickoff preserved byte-for-byte below.
+
+---
+
 Open /private/tmp/program_code-student-data-maintenance-plan on
 codex/plan-student-data-maintenance. Follow AGENTS.md governing read order,then
 complete docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (soleprogresspointer),
