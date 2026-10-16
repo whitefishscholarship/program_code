@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-005-START -->
+- October16,2026 direct exactselection:Teachers11,FVCCchild12,Horse13 compared,
+  17+16+18=51 held fields;10consistent/27applicability-identity unresolved/13unavailable/
+  1existing Horse amount conflict. Current closeoutbatch005README. All original
+  envelopes/identities unchanged;0accepted facts/mappings. FullSD2 incomplete.
+- PreserveTeachers career-plan/HSsenior/FFA/GPA/copiedAMTOPP annotation drift;
+  FVCC acceptedSameIdentity:false/old-new locators/parent exclusions;Horse2000/1500,
+  six slots,MT-HS graduation,half-time ANY accredited nationwide,business-degree OR
+  course,FAFSAApril1year:null,two-slot preference. No winner/forcedmajor/all-slot
+  restriction,award-deadline/need substitution,parent inheritance or accepted route.
+- Freshproposal005 review-bound PASS/00b0a75 before paths;newverify protectsentry
+  blobs/modes/append-onlyhistory. Independentstatus onlymatchingmanifest/review,
+  otherwise pending. All old reviews/rejectedbindings/contexts remain exact.
+- Prior249comparisons intact;cumulative300fields/14autonomous+2Jaycee,392outside.
+  Research406/406,cursor406,no nextinput;7406field/406identity holds,676seed-alias/
+  1127links/365receipts/35inheritedroutes/628destinations,nine attentionrows/every
+  supplement/437M1routes/12pins/71custodyreceipts/all originalroutes preserved.
+- No fullsharedsource/biography/unrelated output;priorincidents retained,no new
+  executionincident identified. validation/checks retainactualresults/limits;no
+  waivedbuild/currentmain/source/custody/history/preservation/recovery/human/
+  canonical/publication/student/M1/SD5/effectgate. Originalowners/triggersremain
+  inpackets/SESSION_CLOSE/README. NextCodex:afterfull-batchPASS andlatercontinue,
+  preparenextboundedproposal,no replay/automaticexecution/routinequestion.
+  No newreads,acceptance,externaleffects orSD3. Retaincontextstopwithdurablehandoff,
+  no inventedpercentage. Never initialize/reset/replay. StopbeforeSD3. Effort:High.
+<!-- SD2-BATCH-005-END -->
 <!-- SD2-PROPOSAL-005-START -->
 - October16,2026 continue: prepared proposal005 for Teachers11,FVCCearly-childhood12,
   HorseCreek13, ordered17+16+18=51 existing held fields/9 saved source references.

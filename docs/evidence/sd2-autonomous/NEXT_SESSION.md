@@ -1,3 +1,52 @@
+# SD2 comparison batch005 — October 16, 2026
+
+Kelsey directly selected proposal005's exact51-field comparison. Teachers11,
+FVCC early-childhood12,Horse Creek13 compared in order:17+16+18 fields;
+10consistent,27applicability/identity unresolved,13evidence unavailable,1existing
+Horse amount conflict. All original envelopes/identities/states/times/acceptance
+unchanged;0accepted facts/mappings. Full SD2 incomplete. Never initialize/reset/
+replay. Stop before SD3.
+
+Current closeout:sd2-autonomous/reconciliation-batch-005/README.md,AUTHORITY.md,
+selection.json,entry-audit.json,comparison.json,identity-assessment.json,saved-source-
+references.json,selected-context.json,session-issues.json,validation.json,verify.py.
+Full independent status only matching final-manifest.json/review.json;absent/non-PASS/
+mismatched means pending. Proposal review covers proposal only. Fresh proposal005
+review-bound PASS/00b0a75 before edits;new verification protects entry blobs/modes
+and exact append-only history. All older reviews/rejected bindings/contexts/
+allowlists remain unchanged;use valid receipts plus byte proof,never widen/rebind.
+
+Teachers career-plan/HSsenior/FFA/GPA and copiedAMTOPP annotation drift stay exact;
+FVCC academicworks3986 versus awardspring433125 acceptedSameIdentity:false and
+parent exclusions remain;Horse2000/1500conflict,six recipients,MT-HS graduation,
+half-time ANY accredited nationwide institution,business-degree OR course,FAFSA
+April1year:null and two-slot county preference remain distinct. No winner,forced
+major/all-slot restriction,award-deadline/need substitution or accepted route.
+No full shared-source/biography/unrelated output; prior incidents retained and
+no new execution incident identified. No new source/workbook/raw reads or effects.
+
+Prior249comparisons exact;cumulative300 occurrences across14autonomous+2Jaycee;
+392autonomous inputs outside comparisons. Research406/406,cursor406,no nextinput;
+7406fields/406identities,676seed-alias/1127links/365receipts/35inherited routes/
+628destinations including one unclosed,nine attentionrows/all supplements,
+437M1routes/12pins/71custody receipts/every owner-trigger-path-action-review remain
+exact. validation/checks disclose actual outcomes/limits. No source/custody/history/
+build/freshmain/preservation/recovery/human/canonical/publication/student/M1/SD5/
+effect gate waived;original owners/triggers remain in packets/SESSION_CLOSE/README/
+section9. Codex validation owns supported exact build/current main-target before
+acceptance/release. Desktop visibility remains only later explicit UI trigger.
+
+Next Codex under retained delegation:after matching full-batch PASS and later
+continuation,prepare next bounded proposal;no replay/automatic execution or routine
+preference question. Kelsey named reviewer/limited Jaycee approvals unchanged.
+No acceptance,external effects orSD3. Retain user's context stop with durable
+handoff,no invented percentage. Fresh entry:AGENTS order,section9,originalAUTHORITY/
+POLICY/latestSESSION_CLOSE,current authority/selection/README/comparison/identity/
+source views/validation/manifest/review;run batch005 verify.py --review-bound in
+valid receipt context. Recommended effort:High. Earlier handoff stays exact below.
+
+---
+
 # SD2 proposal005 — October 16, 2026
 
 Prepared the next bounded proposal: FFA Ag Teachers Memorial11, Flathead Electric
