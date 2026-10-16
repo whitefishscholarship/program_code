@@ -1,3 +1,54 @@
+# SD2 proposal005 — October 16, 2026
+
+Prepared the next bounded proposal: FFA Ag Teachers Memorial11, Flathead Electric
+Coop. Early Childhood Education at FVCC12, Horse Creek13, in that order. Three
+inputs/51 existing held fields; nine saved source references. Proposal only;
+zero new comparisons or accepted facts, no execution. Never initialize/reset/
+replay. Stop before SD3. Full SD2 remains incomplete.
+
+Authoritative proposal: sd2-autonomous/consolidation-proposal-005/PROPOSAL.md and
+scope.json. entry-audit.json freshly ran batch004 review-bound PASS/9e2e8e2 before
+new paths. verify.py protects entry bytes/modes and exact append-only earlier
+handoffs/section9. Independent status only matching final-manifest.json/review.json;
+absent/non-PASS/mismatched means pending. Earlier reviews/contexts/allowlists are
+unchanged. validation/checks retain actual commands/outcomes/limits, never a waiver.
+
+Preserve Teachers HS-senior/FFA/GPA/AgEd-teacher career plan and copied AMTOPP GPA
+annotation as original drift, not affinity. FVCC academicworks3986 versus old
+awardspring433125 remains acceptedSameIdentity:false; no parent FEC amount/date
+inheritance or portal inspection. Horse Creek summary2000/detail1500 conflict,
+six slots, Montana-high-school graduation, half-time ANY accredited nationwide
+institution, business certificate/degree OR one business/finance course, FAFSA
+by yearlessApril1 and two-slot county preference all remain distinct. FAFSA date
+is not award deadline or need threshold; county preference is not all-slot exclusion.
+Equal RHM alias hashes are not independent proof. No full shared-source/biography/
+unrelated output. All earlier incidents preserved; no new preparation incident
+identified. No new source/workbook/raw reads, acceptance, external effects or SD3.
+
+Current comparisons remain249 occurrences across11autonomous+2priorJaycee inputs;
+395autonomous inputs outside comparisons. Proposal adds0. Separate selected
+execution would300 occurrences across14autonomous+2Jaycee,392autonomous outside.
+Research406/406,cursor406,no next input;7406fields/406identities,676seed-alias/
+1127links/365receipts/35inherited routes/628destinations including one unclosed,
+nine attention rows/all supplements,437M1routes/12pins/71custody receipts/every
+original owner/trigger/path/action/review remain exact in original packets/
+SESSION_CLOSE/batch004README/section9. All source/custody/history/build/freshmain/
+preservation/recovery/human/canonical/publication/student/M1/SD5/effect gates retain
+original owners/triggers. Codex validation owns exact supported build/current
+main-target before acceptance/release; desktop visibility only explicit UI trigger.
+
+Next owner Kelsey: direct exact selection of the completed51-field proposal;
+then Codex executes/reviews only selected scope. Current continue selects proposal
+preparation, not unseen execution. Do not reprepare or replay completed work.
+No routine preference/Git/reviewer question remains. Preserve user's context-stop
+condition with durable handoff; no invented percentage. Fresh entry: AGENTS order,
+section9,original AUTHORITY/POLICY/latest SESSION_CLOSE,batch004receipt,this proposal/
+scope/entry/validation/manifest/review; run proposal005 verify.py --review-bound
+in valid receipt context. Use older valid receipts plus byte proof, never widen
+historical verifiers. Recommended effort: High. Prior handoff stays exact below.
+
+---
+
 # SD2 comparison batch004 — October 16, 2026
 
 Kelsey directly selected proposal004's exact53-field comparison. Carl Valvoda8,

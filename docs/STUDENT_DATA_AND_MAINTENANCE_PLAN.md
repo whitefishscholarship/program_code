@@ -353,6 +353,34 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-005-START -->
+- October16,2026 continue: prepared proposal005 for Teachers11,FVCCearly-childhood12,
+  HorseCreek13, ordered17+16+18=51 existing held fields/9 saved source references.
+  Authoritative PROPOSAL.md/scope.json under consolidation-proposal-005. Proposal
+  only;zero new comparisons/execution/accepted facts. Full SD2 remains incomplete.
+- Keep Teachers career-plan/HSsenior/FFA/GPA and copied AMTOPP annotation drift;
+  FVCC child locator/acceptedSameIdentity:false versus parent terms; Horse amount
+  conflict2000/1500,six slots, MontanaHS graduation,half-time ANY accredited national
+  institution,business-degree OR course,FAFSAyearlessApril1 and two-slot preference.
+  No source winner,parent inheritance,award-deadline substitution or need inference.
+- Fresh batch004 review-bound PASS/9e2e8e2 before new paths in entry-audit; new
+  verify.py protects entry bytes/modes and exact append-only history. Independent
+  status only matching manifest/review,otherwise pending. No prior binding changed.
+- Current249comparisons/11autonomous+2Jaycee,395autonomous outside;proposal adds0.
+  Separate execution would300/14autonomous+2Jaycee,392outside. Research406/406,
+  cursor406,no nextinput;7406field/406identity holds,676seed-alias/1127links/365receipts/
+  35inheritedroutes/628destinations,nine attentionrows/all supplements/437M1routes/
+  12pins/71custodyreceipts/every owner-trigger-path-action-review remain exact.
+- All source/output/timing/history/custody incidents preserved;no new preparation
+  incident identified. validation/checks record actual outcomes/limits;no waived
+  build/currentmain/preservation/recovery/human/canonical/publication/student/M1/SD5/
+  effect gate. Original owners/triggers remain in packets/SESSION_CLOSE/batch004README.
+- Next Kelsey:direct exact selection of completed51-field proposal;then Codex
+  executes/reviews only selected scope. No automatic execution or routine preference
+  question. No new reads,acceptance,external effects orSD3. Preserve context stop
+  with durable handoff,no invented percentage. Never initialize/reset/replay.
+  Stop before SD3. Recommended effort:High.
+<!-- SD2-PROPOSAL-005-END -->
 <!-- SD2-BATCH-004-START -->
 - October16,2026 direct exactselection:proposal004 comparison executed forCarl8,
   Amberson9,Shelhamer10;53held fields,14consistent/29applicability-identity unresolved/
