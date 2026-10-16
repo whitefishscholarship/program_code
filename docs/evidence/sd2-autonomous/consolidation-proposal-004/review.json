@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of proposal004 only: Carl Valvoda8, Dr. Max L Amberson Ag Education9, Dr. Van Shelhamer Memorial10, ordered 3 inputs/53 existing held field envelopes. No semantic comparison execution, canonical acceptance or release.",
+  "reviewedAt": "2026-10-16T18:02:21.972652+00:00",
+  "reviewer": {"identity": "Codex /root/sd2_proposal004_review", "freshContext": true, "readOnly": true, "authoredOrEdited": false},
+  "binding": {
+    "entryCommit": "82a86a3539b921a35331b3ca320388d21608688b",
+    "candidateCommit": "6cdec544b6400a5a91b3c14e69e1ca7cafdb3ca0",
+    "candidateTree": "984998bd82332d593b341d7abaff155f4bcd2f53",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal-004/final-manifest.json",
+    "manifestSha256": "e439907e312004889f4a1e77c95d621a6ce36df2ebef989c09a1d40a0ac6dc66",
+    "completeDiffSha256": "6c0cccf9d1077f27ff48291324c5d58a280b580140fe64a4f303b34a259c64ab",
+    "completeDiffBytes": 174555,
+    "changedPathCount": 24,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Verified local predecessor receipt entry; authenticated current origin/main and deployment target were not refreshed."
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Complete immutable candidate",
+      "outcome": "PASS",
+      "evidence": "Independently verified HEAD and branch, candidate tree/direct parent, manifest SHA256, complete binary diff bytes/SHA256, exact24-path change set, every changed blob ID/mode/size/SHA256 and worktree equality. Tracked worktree/index clean; only proposal004 final-manifest.json untracked. Entry-to-candidate git diff --check passed."
+    },
+    {
+      "name": "Authority and predecessor receipt",
+      "outcome": "PASS",
+      "evidence": "The current continuation selects the next permitted proposal preparation after completed batch003. Proposal004 execution remains explicitly unselected. Independently verified batch003 manifest/review binding, candidate/tree/diff/blob hashes and entry82a86a3 as its exact direct-child two-file local receipt. Entry-audit records fresh predecessor review-bound PASS before proposal paths existed. No historical verifier was rerun in the expanded context."
+    },
+    {
+      "name": "Exact prospective denominator",
+      "outcome": "PASS",
+      "evidence": "Verified ordered offsets/locators8,9,10, saved input keys, canonical recorded-name and whole-record digests, checkpoint packet hash/pointers, existing candidate IDs, exact ordered18+18+17 fields and original owner/trigger/path/nextAction routes. No reconciliation-batch-004 directory exists. Proposal adds zero comparisons; current196 fields across8autonomous+2Jaycee and hypothetical249 across11autonomous+2Jaycee reconcile to398 and395 autonomous inputs outside comparisons respectively."
+    },
+    {
+      "name": "Seven saved source references and affinity",
+      "outcome": "PASS",
+      "evidence": "Verified source registry pointers, artifact hashes, revision/limit pointers and exact permitted-input affinity: rh-old/rh-alias for all three; five FFA references for Amberson/Shelhamer only. Fourteen selected material-evidence excerpt occurrences matched pinned artifact bytes. Equal RHM alias hashes are expressly not independent corroboration; main eligibility retains rh-old affinity. No full shared FFA section or biography was forwarded."
+    },
+    {
+      "name": "Material proposal boundaries",
+      "outcome": "PASS",
+      "evidence": "Carl retains one2000USD slot and required RHM application AND serving/have-served ROTC OR U.S.ArmedForces, without veteran-only narrowing or dependent expansion. Amberson retains two500USD slots, GPA2.0/FFA/AgEducation and the existing RHMsenior-or-freshman versus FFAfreshman-or-sophomore studentStage conflict without winner/union/intersection. Shelhamer retains one1500USD slot, Montana FFA State Officer, Montana State University and GPA2.0 rather than general membership. Copied AMTOPP GPA annotations remain unchanged and explicitly flagged as annotation drift, never affinity or substitution evidence."
+    },
+    {
+      "name": "Timing, materials and source limits",
+      "outcome": "PASS",
+      "evidence": "Yearless RHM application timing remains currentYear:null; unknown deadline/materials/GPA-basis envelopes remain held. Pinned bytes retain March1,2026 applications, historical2021/December31 guidelines and distinct College/Leadership labels. Proposal explicitly prevents shared rubric/material guidance from becoming current child rules, an automatic checklist or a4.0GPA basis. Native/visual/current/public/completeness/provider-timing limits remain explicit."
+    },
+    {
+      "name": "Protected history and global routes",
+      "outcome": "PASS",
+      "evidence": "Independently verified all2351 protected entry file blobs/modes and exact earlier bytes on the three append-only handoff surfaces. Recounted406 held identities,7406 held fields,676seed-alias routes,1127links,365source receipts,35inherited source routes and628converted destinations including one unclosed. Queue order/cursor406/no next input remain exact. Verified437unique M1 IDs and all12historical artifact pins;71custody receipts retain their hashes/routes. Earlier reviews, rejected bindings, incidents and ownership remain protected."
+    },
+    {
+      "name": "Independent proposal verifier",
+      "outcome": "PASS",
+      "evidence": "Inspected and independently ran proposal004 verify.py without --review-bound. PASS from2026-10-16T18:00:03.017005+00:00 through18:00:03.854840+00:00. It confirms proposal-only preservation/scope, all holds and zero execution/acceptance/effects. No predecessor verifier, npm command, build or assembler was executed by this reviewer."
+    },
+    {
+      "name": "Seven validation receipt provenance checks",
+      "outcome": "PASS",
+      "evidence": "All seven standalone JSON receipts equal their validation.json entries. Independently verified exact commands/cwd, chronological timestamps before manifest creation, raw output byte counts/SHA256, normalization and saved-log SHA256. Plan/typecheck/tests pass after unchanged permitted IPC retries. Exactly two npm run build attempts fail creating a process/binding a port with Operation not permitted. standardBuild correctly remains BLOCKED_ENVIRONMENT, with no alternative-build waiver or fresh-main claim."
+    },
+    {
+      "name": "Incident retention and stopping condition",
+      "outcome": "PASS",
+      "evidence": "session-issues.json preserves the overbroad local memorial-biography preview as a scope lapse, excludes that content from new proposal artifacts and requires exact sentence selection before future output. It does not relabel the lapse compliant; all earlier incidents remain unchanged. Handoff correctly stops at this completed reviewed proposal: next owner Kelsey for direct exact selection, then Codex for only selected execution/review. No automatic run, invented context percentage or SD3."
+    }
+  ],
+  "limits": [
+    "PASS covers proposal fidelity, exact scope and preservation only. It accepts no scholarship fact, identity mapping, canonical stage or release.",
+    "No53-field semantic comparison was performed. No file edit, Git mutation, network/workbook/new-source/raw-native-content read, npm/build/assembler execution or external effect was performed by this reviewer.",
+    "Current offerings, public access, native/visual completeness, source silence, sponsor/route continuity and independent provider timing remain unverified.",
+    "All71custody receipts are preserved; present temporary raw-material availability was not rechecked or claimed.",
+    "Exact supported standard-build PASS and fresh authenticated main/target remain owned by Codex validation/governance/delivery before canonical acceptance or authorized release.",
+    "All original preservation/recovery, human/canonical/publication, student/browser/CSV, M1/SD5 and external-effect gates retain their original owners, triggers, authoritative paths and next actions.",
+    "FullSD2 remains incomplete. Direct exact selection is required before proposal004 execution. Never initialize/reset/replay. Stop before SD3."
+  ]
+}
