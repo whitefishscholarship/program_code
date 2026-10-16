@@ -71,8 +71,8 @@ for r,seed in zip(l['records'],q['records'][340:360]):
    refs+=1;s=reg[e['sourceId']];assert e['sourceId'] in r['allowedSourceIds']
    assert (e['sourceUrl'],e['sourceUrlSha256'],e['artifactPath'],e['artifactSha256'])==(s['originalUrl'],s['originalUrlSha256'],s['artifactPath'],s['artifactSha256'])
    assert e['excerpt'] in texts[e['sourceId']] and e['locator']
-assert fields==307 and sum(len(r['fieldProposals']) for p in prior for r in p['records'])==6253
-assert l['coverage']==dict(checkpointInputs=20,fieldEnvelopes=307,sourceReceipts=19,newPublicRetrievals=19,nativeReadableRetrievals=0,nativeMetadataRetrievals=0,outcomes={'researched-held':15,'held-identity':5},cumulativeInitialDispositions=360,cumulativeAutonomousHeldFields=6560,cumulativeAutonomousHeldIdentities=360,unprocessedInputs=46)
+assert fields==308 and refs==119 and sum(len(r['fieldProposals']) for p in prior for r in p['records'])==6253
+assert l['coverage']==dict(checkpointInputs=20,fieldEnvelopes=308,sourceReceipts=19,newPublicRetrievals=19,nativeReadableRetrievals=0,nativeMetadataRetrievals=0,outcomes={'researched-held':15,'held-identity':5},cumulativeInitialDispositions=360,cumulativeAutonomousHeldFields=6561,cumulativeAutonomousHeldIdentities=360,unprocessedInputs=46)
 rows={r['rowLocator']:r for r in l['records']};v=lambda n,k:rows[n]['fieldProposals'][k]['value']
 assert v(346,'studyPath')['certificateProgramYearsLessThan']==2 and v(346,'amount')['annualRecipientMaximum']==800 and 'associate or bachelor' in texts['aws']
 assert len(v(346,'eligibility')['excludedFamilies'])==2 and v(346,'amount')['redemptionYears']==1
@@ -99,6 +99,38 @@ assert v(364,'materials')['noEssayAdvertised'] and v(364,'minimumGPA')['advertis
 assert v(365,'nationalProgramEligibility')['nationalOnlyNotTransferred'] and v(365,'eligibility') is None and v(365,'minimumGPA') is None
 assert v(365,'nationalProgramEligibility')['HSApplicantsUnweightedGPAMinimum']==2.5 and v(365,'nationalProgramObligation')['futureServiceYears']==8
 assert all(e['sourceId']=='army' for k,f in rows[365]['fieldProposals'].items() if k!='identityObservation' for e in f['evidence'])
+# Independent findings require distinct scoped conditions,not evidence-only preservation.
+assert v(359,'eligibility')==dict(historical2026Only=True,intentToEnrollRequired=True,institutionScope='post-secondary educational institution',term='fall2026',futureOfferingUnknown=True)
+assert 'Intend to enroll at a post-secondary educational institution in the fall of 2026' in ' '.join(rows[359]['fieldProposals']['eligibility']['evidence'][0]['excerpt'].split())
+assert rows[359]['fieldProposals']['affiliation']['state']=='conflict' and rows[359]['fieldProposals']['cycle']['state']=='conflict'
+payment=v(352,'amount')['DECAProgramDisbursement'];assert payment['mustCompleteForm'] and payment['formEmailedMonth']=='May' and payment['generalDECAProgramOnly'] and payment['formUrl'] is None and payment['unvisitedChildApplicationRequirementsNotInferred']
+assert 'completing a form that will be emailed to you in May' in texts['deca']
+selection=v(352,'selection');assert selection['selectionFactors']==['DECA involvement','leadership ability','community service','academic performance'] and selection['donorSpecificCriteriaAlsoApply'] and selection['generalDECACorporateProgramOnly'] and selection['notMandatoryChildEligibility'] and selection['noScoringOrHardExclusionAuthority']
+assert all(x in rows[352]['fieldProposals']['selection']['evidence'][0]['excerpt'] for x in selection['selectionFactors'])
+assert 'selectionFactors' not in v(352,'eligibility') and 'May-emailed payment-form' in rows[352]['nextAction'] and 'requiredintent' in rows[359]['nextAction']
+original=load(P/'manifest-round1.json');rv1=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert original['candidateCommit']==rv1['binding']['candidateCommit']==rem['priorCandidateCommit']=='75861c229b6d9b0494b7c3f65b25a2502f07b607'
+assert sha((P/'manifest-round1.json').read_bytes())==rv1['binding']['manifestSha256']==rem['priorManifestSha256']
+assert sha((P/'review-round1.json').read_bytes())==rem['priorReviewSha256']
+assert sha((P/'verification-round1.json').read_bytes())==rem['priorVerificationSha256']==next(f['sha256'] for f in original['changedFiles'] if f['path'].endswith('/verification.json'))
+assert rv1['outcome']=='FAIL' and rv1['severityCounts']==dict(critical=0,high=0,medium=3,low=0)
+assert [d['id'] for d in rem['dispositions']]==[f['id'] for f in rv1['findings']]==['SD2-018-M1','SD2-018-M2','SD2-018-M3']
+assert all(all(d.get(k) for k in ['rationale','owner','trigger','target']) for d in rem['dispositions'])
+assert rem['newSourceReads']==0 and rem['allSourceReceiptsUnchanged']
+assert sha(git('diff','--binary',ENTRY,original['candidateCommit']))==original['completeDiffSha256']
+for f in original['changedFiles']:assert sha(git('show',original['candidateCommit']+':'+f['path']))==f['sha256']
+old=json.loads(git('show',original['candidateCommit']+':docs/evidence/sd2-autonomous/checkpoint-018.json'));assert old['sourceRegistry']==sources
+for oldr,r in zip(old['records'],l['records']):
+ if r['rowLocator'] not in [352,359]:assert oldr==r
+ else:
+  for k in oldr:
+   if k not in ['fieldProposals','nextAction','seedDispositions']:assert oldr[k]==r[k]
+  for od,nd in zip(oldr['seedDispositions'],r['seedDispositions']):assert {k:v for k,v in od.items() if k!='nextAction'}=={k:v for k,v in nd.items() if k!='nextAction'}
+  for k,f in oldr['fieldProposals'].items():
+   nf=r['fieldProposals'][k]
+   if (r['rowLocator'],k) in [(352,'amount'),(359,'eligibility')]:assert nf['acceptance']=='held'
+   else:assert {a:v for a,v in f.items() if a!='nextAction'}=={a:v for a,v in nf.items() if a!='nextAction'}
+  assert set(r['fieldProposals'])-set(oldr['fieldProposals'])==({'selection'} if r['rowLocator']==352 else set())
 history=0
 for folder in [B]+[B/f'checkpoint-{i:03d}' for i in range(2,18)]:
  mp=folder/('research-manifest.json' if folder==B else 'final-manifest.json');rp=folder/('research-review.json' if folder==B else 'review.json');m=load(mp);rv=load(rp);binding=rv.get('binding',rv)
@@ -147,7 +179,7 @@ def routes(x,parents=None):
 for packet in prior+[l]:
  for r in packet['records']:routecounts['identities']+=1;routes(r)
  for s in packet['sourceRegistry']:routes(s)
-assert routecounts['fields']==6560 and routecounts['identities']==360
+assert routecounts['fields']==6561 and routecounts['identities']==360
 for p in [B/'checkpoint-018.json']+[f for f in P.rglob('*') if f.is_file()]:
  t=p.read_text();assert not re.search(r'\b[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}|[?&](?:AccessKeyId|token|sig|signature|se|ouid)=|tel:\d+',t,re.I),str(p)
  assert not re.search(r'(?:\b\d{3}[-/.]|\(\d{3}\)\s*)\d{3}[-/.]\d{4}',t),str(p)
@@ -165,4 +197,4 @@ if '--review-bound' in sys.argv:
  for f in m['changedFiles']:assert sha(git('show',m['candidateCommit']+':'+f['path']))==f['sha256']
  receipt=load(P/'local-review-receipt.json')['commit'];assert git('rev-parse',receipt+'^').decode().strip()==m['candidateCommit']
  assert set(git('diff','--name-only',m['candidateCommit'],receipt).decode().splitlines())=={'docs/evidence/sd2-autonomous/checkpoint-018/final-manifest.json','docs/evidence/sd2-autonomous/checkpoint-018/review.json'}
-print(json.dumps(dict(outcome='PASS',recordedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),entryCommit=ENTRY,scope='Local held-research integrity only',checkpointInputs=20,cumulativeInitialDispositions=360,unprocessedInputs=46,fieldEnvelopes=fields,cumulativeHeldFields=6560,heldIdentities=360,sourceReceipts=19,evidenceReferences=refs,maximumMeasuredConcurrentReads=peak,measuredSameHostOverlaps=pairs,firstAWSIntervalUnmeasured=True,routeCounts=dict(routecounts),historicalManifestReviewsVerified=history,protectedTrackedFiles=protected,priorCustodyPins=71,custodyGaps=gaps,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False,nextInputKey=l['nextInputKey'],reviewBound='--review-bound' in sys.argv),indent=2))
+print(json.dumps(dict(outcome='PASS',recordedAt=datetime.datetime.now(datetime.timezone.utc).isoformat(),entryCommit=ENTRY,scope='Local held-research integrity only',checkpointInputs=20,cumulativeInitialDispositions=360,unprocessedInputs=46,fieldEnvelopes=fields,cumulativeHeldFields=6561,heldIdentities=360,sourceReceipts=19,evidenceReferences=refs,maximumMeasuredConcurrentReads=peak,measuredSameHostOverlaps=pairs,firstAWSIntervalUnmeasured=True,routeCounts=dict(routecounts),historicalManifestReviewsVerified=history,protectedTrackedFiles=protected,priorCustodyPins=71,custodyGaps=gaps,M1Records=437,M1Pins=len(pins),acceptedFacts=0,SD3Started=False,nextInputKey=l['nextInputKey'],reviewBound='--review-bound' in sys.argv),indent=2))

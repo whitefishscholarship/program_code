@@ -1920,7 +1920,7 @@
       ],
       "owner": "Codex source/identity reconciliation",
       "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection.",
+      "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown.",
       "fieldProposals": {
         "identityObservation": {
           "value": {
@@ -1960,7 +1960,7 @@
           "semanticAssertion": "Typed held observation: {\"namedChildObserved\":\"National Technical Honor Society Scholarship\",\"dualMembership\":[\"NTHS\",\"DECA\"],\"mapping\":\"proposed; held\"}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "cycle": {
           "value": {
@@ -2001,17 +2001,24 @@
           "semanticAssertion": "Typed held observation: {\"NTHSWindowYearless\":[\"10-01\",\"01-09\"],\"DECAChildDeadline\":\"2027-01-11\",\"timezone\":null,\"scopeVersionReconciliationRequired\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "amount": {
           "value": {
             "annualRecipientCount": 3,
             "USD": 1000,
-            "DECAProgramFundingDirectToCollege": true
+            "DECAProgramFundingDirectToCollege": true,
+            "DECAProgramDisbursement": {
+              "mustCompleteForm": true,
+              "formEmailedMonth": "May",
+              "generalDECAProgramOnly": true,
+              "formUrl": null,
+              "unvisitedChildApplicationRequirementsNotInferred": true
+            }
           },
           "state": "verified",
           "acceptance": "held",
-          "sourceScope": "Exact named child and stated source variant only; identity/current applicability remain held.",
+          "sourceScope": "NTHS named child award amount; separately general DECA program disbursement conditions, not the unvisited child application.",
           "observationRecordedAt": "2026-10-16T01:17:04.644239+00:00",
           "sourceRevision": null,
           "freshness": "As-observed selected conversion; no future/current offering or native/origin proof",
@@ -2035,10 +2042,10 @@
               "excerpt": "# Student Scholarships\n\nApply for your share of $200,000 in scholarships from DECA's corporate partners.\n\nDECA’s scholarship program provides over $200,000 in scholarships to high school and college DECA members at the International Career Development Conference (ICDC) each year. DECA Inc. administers the program based on guidelines set by the donor. DECA scholarships are strictly merit-based.\n\nDECA members will apply for scholarships through [**this website**](https://my.reviewr.com/s2/site/deca_scholarship2026[query-withheld]). Student members will need to create an account on the page. Click \"CREATE AN ACCOUNT\" and fill in your information to begin your application.\n\n**Applications will close on January 11, 2027.**\n\n## Corporate Scholarship Program\n\nThe Corporate Scholarship Program consists of scholarships provided by partners that have specific eligibility criteria. Scholarships are awarded based on the specific criteria as well as DECA involvement, leadership ability, community service and academic performance.\n\n[image omitted; uninspected]\n\n## National Technical Honor Society\n\nThe National Technical Honor Society (NTHS) provides three (3) $1,000 scholarships awarded to DECA members who are also members of NTHS. Applicants will be required to upload an essay.\n\nSubmissions due by:\n\nJanuary 11, 2027\n\n[Apply](https://my.reviewr.com/s2/site/deca_scholarship2026[query-withheld])\n\n[image omitted; uninspected]\n\n## Frequently Asked Questions\n\n[Are DECA scholarships based on financial need?](https://www.deca.org/scholarships#)\n\nNo, most of DECA scholarships are merit-based.\n\n[Are unofficial transcripts accepted?](https://www.deca.org/scholarships#)\n\nYes, you may upload unofficial transcripts.\n\n[Can I apply for more than one scholarship?](https://www.deca.org/scholarships#)\n\nYes, you may apply for more than one scholarship providing you meet the criteria of each scholarship.\n\n[Can I use the scholarship if I am a part-time student?](https://www.deca.org/scholarships#)\n\nNo, you must be enrolled as a full-time student at a college/university.\n\n[Can my scholarship be deferred?](https://www.deca.org/scholarships#)\n\nYes, your scholarship can be deferred up to three (3) years.\n\n[Do I have to attend the International Career Development Conference (ICDC) if I win a scholarship?](https://www.deca.org/scholarships#)\n\nNo, you do not need to attend DECA ICDC in order to receive your scholarship.\n\n[Do I have to be a current DECA member to apply for DECA scholarships and what are the requirements to become a DECA member?](https://www.deca.org/scholarships#)\n\nYes, you must be a current DECA member to be eligible for DECA scholarships. Ask your school counselor if your school has a DECA chapter and register through the chapter advisor.\n\n[Do I have to be a high school DECA senior to apply?](https://www.deca.org/scholarships#)\n\nNo, all grade levels (from high school freshmen to Collegiate DECA members) are welcome to apply. Unless the scholarship application specifically requires a grade level/collegiate, you can assume that all members can apply.\n\n[What is a statement of interest?](https://www.deca.org/scholarships#)\n\nA statement of interest is an opportunity to share some valuable information about who you are, and why do you feel that you should receive a DECA scholarship. This part of your application gives the review committee to see more than your GPA, by including your future goals and interest. It basically gives you an opportunity to stand out from other applicants and tell your story. There is no word limit to your statement of interest.\n\n[Where are the scholarship monies sent?](https://www.deca.org/scholarships#)\n\nMonies are sent directly to the college/university that you will be attending by completing a form that will be emailed to you in May.\n\n[Once my application is submitted can I go back in and make changes?](https://www.deca.org/scholarships#)\n\nNo, once you submit your application you cannot make any further changes."
             }
           ],
-          "semanticAssertion": "Typed held observation: {\"annualRecipientCount\":3,\"USD\":1000,\"DECAProgramFundingDirectToCollege\":true}",
+          "semanticAssertion": "Typed held observation: {\"annualRecipientCount\":3,\"USD\":1000,\"DECAProgramFundingDirectToCollege\":true,\"DECAProgramDisbursement\":{\"mustCompleteForm\":true,\"formEmailedMonth\":\"May\",\"generalDECAProgramOnly\":true,\"formUrl\":null,\"unvisitedChildApplicationRequirementsNotInferred\":true}}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "eligibility": {
           "value": {
@@ -2078,7 +2085,7 @@
           "semanticAssertion": "Typed held observation: {\"dualMembership\":[\"NTHS\",\"DECA\"],\"DECAProgramFullTimeCollegeRequired\":true,\"DECAProgramGradeLevels\":\"all grade levels high-school freshman through Collegiate DECA unless child specifically restricts\"}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "minimumGPA": {
           "value": null,
@@ -2092,7 +2099,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "need": {
           "value": {
@@ -2120,7 +2127,7 @@
           "semanticAssertion": "Typed held observation: {\"DECAIntro\":\"strictly merit-based\",\"DECAFAQ\":\"most scholarships merit-based\",\"explicitChildNeedThreshold\":null}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "schoolType": {
           "value": null,
@@ -2134,7 +2141,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "studyPath": {
           "value": null,
@@ -2148,7 +2155,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "applicantStage": {
           "value": null,
@@ -2162,7 +2169,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "affiliation": {
           "value": null,
@@ -2176,7 +2183,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "renewal": {
           "value": null,
@@ -2190,7 +2197,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "reapplication": {
           "value": null,
@@ -2204,7 +2211,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "nomination": {
           "value": null,
@@ -2218,7 +2225,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "materials": {
           "value": {
@@ -2247,7 +2254,7 @@
           "semanticAssertion": "Typed held observation: {\"childEssayUpload\":true,\"DECAFAQAcceptsUnofficialTranscripts\":true,\"DECAStatementOfInterestNoWordLimit\":true,\"unseenApplicationMayHaveOtherRequirements\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "application": {
           "value": {
@@ -2277,7 +2284,7 @@
           "semanticAssertion": "Typed held observation: {\"accountRequired\":true,\"unvisited\":true,\"multipleAwardsIfEachCriteriaMet\":true,\"changesAfterSubmissionAllowed\":false,\"ICDCAttendanceRequired\":false}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         "deferral": {
           "value": {
@@ -2303,7 +2310,42 @@
           "semanticAssertion": "Typed held observation: {\"DECAProgramMaximumYears\":3}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
+        },
+        "selection": {
+          "value": {
+            "generalDECACorporateProgramOnly": true,
+            "donorSpecificCriteriaAlsoApply": true,
+            "selectionFactors": [
+              "DECA involvement",
+              "leadership ability",
+              "community service",
+              "academic performance"
+            ],
+            "notMandatoryChildEligibility": true,
+            "noScoringOrHardExclusionAuthority": true
+          },
+          "state": "verified",
+          "acceptance": "held",
+          "sourceScope": "General DECA Corporate Scholarship Program selection observation only; not mandatory child eligibility, accepted facts, scoring or hard exclusions.",
+          "observationRecordedAt": "2026-10-16T01:17:04.644239+00:00",
+          "sourceRevision": null,
+          "freshness": "As-observed selected conversion; no future/current offering or native/origin proof",
+          "evidence": [
+            {
+              "sourceId": "deca",
+              "sourceUrl": "https://www.deca.org/scholarships",
+              "sourceUrlSha256": "cc206343547c031219fb7feecaca637aebdf08e1ea4a6afd899c15b380c857c1",
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-018/sources/deca.md",
+              "artifactSha256": "4811f107f080ef99c17961564081c10a92b812192d547649c758627bae3429b4",
+              "locator": "Selected DECA Corporate Scholarship Program paragraph, line 13",
+              "excerpt": "The Corporate Scholarship Program consists of scholarships provided by partners that have specific eligibility criteria. Scholarships are awarded based on the specific criteria as well as DECA involvement, leadership ability, community service and academic performance."
+            }
+          ],
+          "semanticAssertion": "Typed held observation: {\"generalDECACorporateProgramOnly\":true,\"donorSpecificCriteriaAlsoApply\":true,\"selectionFactors\":[\"DECA involvement\",\"leadership ability\",\"community service\",\"academic performance\"],\"notMandatoryChildEligibility\":true,\"noScoringOrHardExclusionAuthority\":true}",
+          "owner": "Codex source/identity reconciliation",
+          "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         }
       },
       "seedDispositions": [
@@ -2315,7 +2357,7 @@
           "disposition": "Deferred exact locator/annotated seed/native file/account/form/alias; no visit or rule inference",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         {
           "url": null,
@@ -2325,7 +2367,7 @@
           "disposition": "Deferred exact locator/annotated seed/native file/account/form/alias; no visit or rule inference",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         {
           "url": "https://www.deca.org/scholarships",
@@ -2337,7 +2379,7 @@
           "disposition": "Retrieved selected conversion; limits retained",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         },
         {
           "url": "https://nths.org/scholarships-2/",
@@ -2349,7 +2391,7 @@
           "disposition": "Retrieved selected conversion; limits retained",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection."
+          "nextAction": "Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown."
         }
       ]
     },
@@ -4713,7 +4755,7 @@
       ],
       "owner": "Codex source/identity reconciliation",
       "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-      "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering.",
+      "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance.",
       "fieldProposals": {
         "identityObservation": {
           "value": {
@@ -4750,7 +4792,7 @@
           "semanticAssertion": "Typed held observation: {\"namedProgram\":\"Glacier Restaurant Group R.I.S.E. Scholarship\",\"duplicateCandidateOnly\":\"earlier saved RISE input retained separately\",\"mapping\":\"proposed; held\"}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "cycle": {
           "value": {
@@ -4792,7 +4834,7 @@
           "semanticAssertion": "Typed held observation: {\"opens\":\"2026-01-30\",\"deadlineDate\":\"2026-03-31\",\"time\":\"23:59\",\"parentZone\":\"MST\",\"documentZone\":\"MDT\",\"awardAnnouncement\":\"2026-05\",\"enrollment\":\"fall2026\",\"futureOffering\":null}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "amount": {
           "value": {
@@ -4831,21 +4873,37 @@
           "semanticAssertion": "Typed held observation: {\"2026Recipients\":2,\"eachUSD\":2500,\"savedInputLabel\":\"3 - $1,000\",\"paidDirectToInstitutionAfterEnrollmentVerification\":true,\"savedVsSourceDifferenceHeld\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "eligibility": {
-          "value": null,
-          "state": "unverified",
+          "value": {
+            "historical2026Only": true,
+            "intentToEnrollRequired": true,
+            "institutionScope": "post-secondary educational institution",
+            "term": "fall2026",
+            "futureOfferingUnknown": true
+          },
+          "state": "verified",
           "acceptance": "held",
-          "sourceScope": "Exact named child and stated source variant only; identity/current applicability remain held.",
-          "observationRecordedAt": "2026-10-16T01:17:04.644934+00:00",
+          "sourceScope": "RISE historical2026 application eligibility only; future offering and independent identity remain held.",
+          "observationRecordedAt": "2026-10-16T01:17:04.644999+00:00",
           "sourceRevision": null,
           "freshness": "As-observed selected conversion; no future/current offering or native/origin proof",
-          "evidence": [],
-          "semanticAssertion": "Unknown remains non-excluding.",
+          "evidence": [
+            {
+              "sourceId": "risepdf",
+              "sourceUrl": "https://emb.sfo3.cdn.digitaloceanspaces.com/whitefish/documents/GRG-RISE-Scholarship-Application-Criteria-2026.pdf",
+              "sourceUrlSha256": "bf2bda5dec76b7b45e6fc886367c97fd63fae2bcf5e5e2315a3dd828fd6f5eb9",
+              "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-018/sources/risepdf.md",
+              "artifactSha256": "aa971eeebdd8ff67bb9f9c6f314f825d321d5fb86d90ae0ed7ffd551f56b47ea",
+              "locator": "Selected enrollment-intent passage lines 42-43",
+              "excerpt": "• Intend to enroll at a post-secondary educational institution in the fall of 2026 (all\nscholarships are paid directly to the institution upon verification of enrollment)."
+            }
+          ],
+          "semanticAssertion": "Typed held observation: {\"historical2026Only\":true,\"intentToEnrollRequired\":true,\"institutionScope\":\"post-secondary educational institution\",\"term\":\"fall2026\",\"futureOfferingUnknown\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "minimumGPA": {
           "value": {
@@ -4873,7 +4931,7 @@
           "semanticAssertion": "Typed held observation: {\"minimum\":3.5,\"basis\":\"highschool or currentcollege\",\"scale\":null}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "need": {
           "value": null,
@@ -4887,7 +4945,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "schoolType": {
           "value": null,
@@ -4901,7 +4959,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "studyPath": {
           "value": null,
@@ -4915,7 +4973,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "applicantStage": {
           "value": null,
@@ -4929,7 +4987,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "affiliation": {
           "value": {
@@ -4967,7 +5025,7 @@
           "semanticAssertion": "Typed held observation: {\"parent\":\"current eligible employee OR child/legal dependent of current employee\",\"PDF\":\"current associated-business employee OR employed by GRG within one year before application OR child/legal dependent of eligible associated-business employee\",\"PDFFinalQualifier\":\"eligible employee must be employed by employer at application\",\"unresolvedScope\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "renewal": {
           "value": null,
@@ -4981,7 +5039,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "reapplication": {
           "value": null,
@@ -4995,7 +5053,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "nomination": {
           "value": null,
@@ -5009,7 +5067,7 @@
           "semanticAssertion": "Unknown remains non-excluding.",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "materials": {
           "value": {
@@ -5056,7 +5114,7 @@
           "semanticAssertion": "Typed held observation: {\"transcriptUpload\":true,\"recommendations\":[{\"from\":\"current/former teacher/professor/instructor\",\"writtenWithinYears\":2},{\"from\":\"current/former employer/community-involvement supervisor\",\"writtenWithinYears\":2}],\"referencesUploadThemselvesByDeadline\":true,\"applicantDoesNotUploadLetters\":true,\"essayCount\":3,\"essayTopics\":[\"special attributes/accomplishments\",\"short/long goals and relation to college education\",\"volunteering choices,reasons and effect on life\"],\"completedOnlineApplication\":true,\"enrollmentProofForFunds\":true,\"lateApplicationsNotAccepted\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         },
         "application": {
           "value": {
@@ -5083,7 +5141,7 @@
           "semanticAssertion": "Typed held observation: {\"onlineFoundationPortalUnvisited\":true,\"noFormInteraction\":true}",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         }
       },
       "seedDispositions": [
@@ -5097,7 +5155,7 @@
           "disposition": "Retrieved selected conversion; limits retained",
           "owner": "Codex source/identity reconciliation",
           "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
-          "nextAction": "Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering."
+          "nextAction": "Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance."
         }
       ]
     },
@@ -8545,7 +8603,7 @@
   "SD3Started": false,
   "coverage": {
     "checkpointInputs": 20,
-    "fieldEnvelopes": 307,
+    "fieldEnvelopes": 308,
     "sourceReceipts": 19,
     "newPublicRetrievals": 19,
     "nativeReadableRetrievals": 0,
@@ -8555,7 +8613,7 @@
       "held-identity": 5
     },
     "cumulativeInitialDispositions": 360,
-    "cumulativeAutonomousHeldFields": 6560,
+    "cumulativeAutonomousHeldFields": 6561,
     "cumulativeAutonomousHeldIdentities": 360,
     "unprocessedInputs": 46
   },

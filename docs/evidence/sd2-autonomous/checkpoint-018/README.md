@@ -6,8 +6,8 @@ branch:codex/plan-student-data-maintenance. Existing AUTHORITY/POLICY and origin
 independent prospective policy PASS govern frozen offsets340–359/savedrows346–365.
 Never initialize/reset/replay. Full SD2 incomplete;stop before SD3.
 
-20 initial outcomes:15 researched-held/5 held-identity.307 new field holds/20 held
-identities; cumulative360/406 initial dispositions,6560 field holds/360 identity
+20 initial outcomes:15 researched-held/5 held-identity.308 new field holds/20 held
+identities; cumulative360/406 initial dispositions,6561 field holds/360 identity
 holds,46 unprocessed,0 accepted facts. Next offset360/savedrow366:Hilleman Scholars
 Program. No later input processed. These counts are saved inputs,not accepted
 unique awards or current worksheet state.
@@ -49,14 +49,14 @@ are in the single ledger;no second Reviews/progress queue is created.
 |349|Reconcile exact AEA named child,2027-28 parent availability, accredited avionics/aircraft-maintenance program, amount and uninspected application requirements; no generic/current fact acceptance.|
 |350|Reconcile exact named AEA child using independently observable sponsor/title/route evidence; provider-redacted profiles cannot be assigned by ordinal, adjacent names or common application. All child terms remain unknown.|
 |351|Reconcile exact named AEA child using independently observable sponsor/title/route evidence; provider-redacted profiles cannot be assigned by ordinal, adjacent names or common application. All child terms remain unknown.|
-|352|Reconcile dual NTHS-DECA child; yearlessJanuary9 versus January11,2027 deadline variants, child essay, general DECA fulltime/grade-level/merit/material/funding rules and unvisited account route; no silent source selection.|
+|352|Reconcile dualNTHS-DECA child Januarydatevariants,essay/generalfulltime/merit/material rules; preserve generalDECA May-emailed payment-form completion and donor/fourfactor selection separately from child eligibility; accounts/formURL/fullchild requirements remain unknown.|
 |353|Reconcile NTHS-BPA dual membership/secondary-postsecondary divisions/selection; pinned404 versus alternate200; general5pmET versus child11:59pmET March15,2027 deadline; account requirements held.|
 |354|Reconcile NTHS-FCCLA active dual membership,March1,2027 ET deadline,unified selectable scholarships,three tuition awards and historical2025-26 rubric/materials; current fullform unseen.|
 |355|Reconcile Rubin professional-email prompt,2x1000/yearlesswindow and logged-in NTHS application; prompt/fullform and complete requirements remain unseen.|
 |356|Reconcile WorkEthic UScitizenship/HSsenior-graduate/approved<=2yearprogram/pledge,4shortanswers/video/2references/transcript/tuitionbill; yearlessquarterlydates and embedded2page/3page documents remain held/uninspected.|
 |357|Reconcile saved8x2500 versus observednine2026 awards; 2027February opening hint is not future criteria; sixmonthmembership/60daytransaction/2026senior-or-adult/financialcheckup and deferred native alias stay held.|
 |358|Reconcile Eagle newincoming-degree status including RunningStart,firstcome merit/GPA-GED-HiSET/6credits/renewalappropriateGPA and December15-untilfundsexhausted; exact numerical thresholds/year and account unverified.|
-|359|Reconcile distinct saved RISE input/survivor relationship;2026two2500 versus savedthree1000; parentcurrentemployee versus PDFformer-withinoneyear/finalcurrentqualifier;MST-MDT,3.5,two provider-uploaded letters/3essays/enrollment; no merge or future offering.|
+|359|Reconcile exact saved RISE input/duplicate relationship, historical2026 requiredintent to enroll in postsecondaryinstitution in fall2026,separate paymentproof,currentformer/finalcurrentaffiliation,MST-MDT,3.5,two provideruploadedletters/threeessays; no merge/futureoffering/acceptance.|
 |360|Reconcile exact named NTHS child against provider-redacted title; retain unassigned selected profile separately, never map by position/acronym/adjacency alone. Account query remains hash-bound unvisited locator.|
 |361|Reconcile exact named NTHS child against provider-redacted title; retain unassigned selected profile separately, never map by position/acronym/adjacency alone. Account query remains hash-bound unvisited locator.|
 |362|Reconcile exact Soroptimist Certificate child,women/enrolled-or-considering certificate-instead-of-degree,once-only/yearlessAugust1-September15;publicform remains locator with no amount/fullmaterials/currentcycle inference.|
@@ -116,3 +116,15 @@ Fresh-context non-author read-only review must bind the immutable candidate and 
 manifest/diff. Final review.json controls pending historical wording. GPT research
 PASS never accepts scholarship facts,identities or a canonical stage. Author:Codex;
 actual backend model/effort independently unexposed. Recommended next effort:High.
+
+## Independent round1 remediation
+
+Rejected75861c2/manifest-round1/review-round1/verification-round1 remain exact.
+Three medium omissions were author-fixed using existing retained passages only:
+RISE historical2026 requiredintent to enroll at a postsecondaryinstitution in fall2026;
+generalDECA May-emailed payment-form completion;generalcorporate DECA donorcriteria
+and four selection factors separate from mandatory childeligibility/scoring/exclusions.
+All308fieldholds/6561cumulative and360identityholds remain held,0accepted. Original
+affiliation/timezone/date conflicts and all source receipts remain unchanged. Every
+repair has count-matched rationale/owner/trigger/target in remediation.json and new
+semantic/negative-affinity assertions. Independent replacement review is required.
