@@ -1,3 +1,59 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on
+codex/plan-student-data-maintenance. Follow AGENTS.md governing read order,then
+complete docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (soleprogresspointer),
+sd2-autonomous AUTHORITY/POLICY and checkpoint-018.json plus checkpoint-018/
+{README.md,final-manifest.json,review.json,remediation.json,SESSION_WRAP.md,
+SESSION_CLOSE.md,wrap-verification.json,session-close-verification.json}.
+
+Resume ONE bounded SD2 checkpoint at offset360/savedrow366:Hilleman Scholars
+Program.46 frozen inputs remain;360 initial dispositions/6561 fieldholds/360
+identityholds,0accepted. Existing authority permits routine research/GPTreview
+without renewed checkpoint approval. Never initialize/reset/replay;preserve every
+hold/review binding;fullSD2incomplete;stop before SD3. Recommended effort:High.
+
+IndependentPASS C0/H0/M0/L0 binds 340ee370e3d835909494db3335a35c76d160c20e;localtwofile
+receipt:a1138163bc4b5f9c404ffdf971f79dd942a8b360. Three medium omissions fixed/independentlyrechecked;
+original75861c2/manifest-round1/review-round1/verification-round1 and all earlier
+bindings remain exact. No pending reviewerrepair/recheck/delegatedwork. All18
+ledgers/packets/PRELUDE/nineattentionrows/supplements/437M1routes/owners/triggers
+stay exact. All611seed-alias/1071source-link occurrences retain owned actions.
+Codex owns every hold at applicable authorized evidencearrival orSD2consolidation.
+Exact row-specific conditions/variants/unknowns are in ledger/README/SESSION_WRAP.
+
+Preserve AWS certificate/district/family/fund rules,AEA/NTHS unassigned redacted
+identities,DECA datevariant/Maypaymentform/fourfactorselection distinct from child
+eligibility,BPAtimevariant,FCCLA2025-26rubric,Rubinaccount,WorkEthicdocumentgaps,
+Clearwater9vs8/2027hint,FVCC6credits,RISEpostsecondaryintent/currentformer/MST-MDT/
+letters,Certificateonceonly,BCBpausedhistorical,Boldadvertisedprofile and national
+ROTC-only variants. No ordinal mapping,acceptedunion/intersection or futureoffering.
+
+Before every source dispatch normalizehost,await samehost completion,max4distinct
+hosts globally.18 measured intervals comply;firstAWS exactinterval unmeasured,
+no independentprovidertelemetry. Historical016overlap stays exact/noncompliant.
+Before output narrow/sanitize all text/link/query/image/metadata values. Unrelated
+Boldnavigation/redactedcontactplaceholders/transientmasking and earlier output
+lapses remain disclosed;finalsanitization erases no history. Codex evidence/
+governance assesses at later authorized history/canonical/publication review.
+
+Selectedconversions/authorconcordance prove no original/raw/native/page/image/
+table/form completeness,source silence,originfreshness,current/public/sponsor/
+route continuity. UMunexpectedexternalredirect stays held with no newhost followup.
+All prior rawbatch/native/redactedidentity/timing/current/custody/historylimits
+retain original routes. Next required rawuse/audit verifies71original temporary
+paths/hashes or preservesreceipts/reports gaps,no reconstruction/reacquisition/
+completed-input replay.
+
+Both exactstandardbuild EPERM and fresh authenticatedmain/target remain with Codex
+before canonicalacceptance/authorizedrelease. Every preservation/backup/recovery/
+permission,human/canonical/publication,studentCSV/browser/fit and437M1/SD5/effect
+gate retains originalowner/trigger/action. No workbook/app/config/CI/login/forms/
+contact/messages/remoteGit/release/deployment/monitoractivation orSD3. Recheck:
+checkpoint-018/verify.py --review-bound and verify-close.py.
+
+Previous authoritative kickoff preserved byte-for-byte below;new packet controls.
+
+---
+
 Final requested session no-loss audit:checkpoint-017/FINAL_SESSION_AUDIT.md and
 final-session-audit.json. Every explicit/inherited owner/trigger/action is verified;
 all6253fieldholds/340identityholds,562seed-alias/1020source-links,nineattentionrows/

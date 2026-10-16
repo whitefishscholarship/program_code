@@ -354,6 +354,44 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-018-START -->
+- October15,2026:checkpoint018 completes frozen offsets340–359/saved346–365,
+  beginningWelderTraining. Packet:sd2-autonomous/checkpoint-018.json and018/.
+  20initialoutcomes:15researched-held/5held-identity;308newfieldholds/20identities,
+  19publicreads/receipts,119references. Cumulative360/406initialdispositions,
+  46unprocessed;all6561fieldholds/360identityholds,0accepted. FullSD2incomplete;
+  never initialize/reset/replay;stop beforeSD3.
+- IndependentPASS C0/H0/M0/L0 binds 340ee370e3d835909494db3335a35c76d160c20e;localtwofile
+  receipt:a1138163bc4b5f9c404ffdf971f79dd942a8b360. Three medium omissions author-fixed/rechecked;
+  original75861c2/manifest-round1/review-round1/verification-round1 remain exact.
+  No pending reviewerrepair/recheck/delegation. All18ledgers/priorpackets/PRELUDE/
+  nineattentionrows/supplements/437M1routes/owners/triggers stay exact. Codex owns
+  all6561fieldholds/360identities/611seed-alias/1071source-link occurrences at
+  applicable authorized evidencearrival orSD2consolidation;exact actions inledger/
+  README20rowtable/SESSION_WRAP. No second queue or factacceptance.
+- Preserve every row-specific qualifier/variant/unknown including RISE required
+  historicalpostsecondaryintent,DECA Maypaymentform and generalfourfactorselection
+  distinct from childeligibility;AEA/NTHS unassignedtitles,nationalROTC-onlyscope,
+  FCCLAhistoricalrubric,DECA/BPAdate-timevariants,Clearwater9vs8,WorkEthicunseenfiles.
+  Allsources/receipts unchanged during remediation;no newreads.
+- Selectedconversions/authorconcordance prove no original/native/page/image/table/
+  form completeness,source silence,current/public/sponsor/route/origincontinuity.
+  UMunexpectedexternalredirect held,no newhostfollowup.18measuredintervals comply
+  withmax4/normalizedhostserialization;firstAWSexactinterval unmeasured. Historical
+  016overlap/outputlapses remain disclosed;before eachdispatch serializehost,before
+  output narrow/sanitize. Original source/native/timing/custody/history owners/
+  triggers remain unchanged.71custodyhashes/12M1pins/437M1records verified,no replay.
+- Plan/type/fulltests PASS after permitted IPCretries;both exactstandardbuilds
+  remain process/portEPERM. Codexvalidation/governance/delivery owns build/freshmain
+  before canonicalacceptance/authorizedrelease. Every preservation/backup/recovery/
+  permission,human/canonical/publication,studentCSV/browser/fit and437M1/SD5/effect
+  gate remains at originalowner/trigger/action. No external effect orSD3.
+- Next-session Codex resumes ONE bounded checkpoint at offset360/savedrow366,
+  Hilleman Scholars Program,under existing AUTHORITY/POLICY. Closure:checkpoint-018/
+  SESSION_WRAP.md/SESSION_CLOSE.md/wrap-verification.json/session-close-verification.json.
+  Recheck:verify.py --review-bound and verify-close.py. Kickoff:NEXT_SESSION.md.
+  Recommended effort:High. Previous section9 bytes remain exact below.
+<!-- SD2-CHECKPOINT-018-END -->
 <!-- SD2-CHECKPOINT-017-START -->
 <!-- SD2-CHECKPOINT-017-FINAL-AUDIT-START -->
 - Requested final session no-loss audit:original one-checkpoint goal is complete
