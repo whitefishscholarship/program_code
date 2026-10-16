@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Independent read-only full replacement-candidate review and L1 remediation recheck of one local SD2 checkpoint021",
+  "reviewer": {
+    "identity": "Codex /root/checkpoint021_review",
+    "readOnly": true,
+    "freshContext": true,
+    "authoredOrEdited": false,
+    "backendModelAndEffort": "Not exposed to this reviewer"
+  },
+  "binding": {
+    "entryCommit": "00687b689eec233cbd3dc40e9196886af5bb06d3",
+    "candidateCommit": "f45d05741e76abe630ca0e8cd6a7384795da317f",
+    "candidateTree": "40707299ed3237d8f923e606d31aca36b45e82d7",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-021/final-manifest.json",
+    "manifestSha256": "d8cb6470e5e8b8844be92d676fe0c870f417879bd5d5611622ee8dd8bb7b9da9",
+    "completeDiffSha256": "930ba0c220747bab6b5d90c2121c1efc335a87a821207bfca846c2a5ba3bffc1",
+    "completeDiffBytes": 639580,
+    "changedPathCount": 40,
+    "allChangesAreAdditions": true,
+    "candidateBlobsHashesBytesAndWorktreeEqualityVerified": true,
+    "originalCandidateCommit": "ae00e4221c5a923348fab78834571587253e7963",
+    "originalManifestRetainedPath": "docs/evidence/sd2-autonomous/checkpoint-021/manifest-round1.json",
+    "originalManifestSha256": "f35084624b496ad8dcea3ef62614fafe8ed640401185003db2de01c096927e72",
+    "originalReviewRetainedPath": "docs/evidence/sd2-autonomous/checkpoint-021/review-round1.json",
+    "originalReviewBindingUnchanged": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [
+    {
+      "findingId": "L1",
+      "originalSeverity": "low",
+      "status": "fixed-and-independently-rechecked",
+      "rationale": "prior-custody-audit.json:647 explicitly labels the correction as inherited checkpoint020 history rather than a checkpoint021 event. Lines649-651 bind the original path and SHA256, which independently matches checkpoint020. All current custody results are unchanged.",
+      "owner": "Codex checkpoint021 implementation author",
+      "target": "Replacement checkpoint021 candidate f45d05741e76abe630ca0e8cd6a7384795da317f",
+      "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-021/prior-custody-audit.json:647",
+      "nextAction": "None for L1; remediation is complete.",
+      "countMatchedOriginalFindings": true
+    }
+  ],
+  "checks": [
+    {"name": "Full replacement candidate and historical binding", "outcome": "PASS", "evidence": "Independently recomputed the replacement manifest hash, tree, complete639580-byte binary diff/hash, exact40-path addition set, and every candidate blob ID/hash/size/current-file equality. Exact entry-to-candidate git diff --check passed. The original manifest bytes and original verification bytes remain exact; original review retains its original binding, with manifest relocation explicitly documented in remediation.json."},
+    {"name": "Remediation scope and unchanged research", "outcome": "PASS", "evidence": "Reviewed all eight paths changed since the original candidate. Changes comprise the custody provenance clarification/origin, retained round1 artifacts, count-matched remediation record, additional verifier assertions, and updated author/verifier timestamps. The ledger, all eight retained source selections, source receipts, capture/concurrency/destination records, README, validation records and command logs are byte-identical to the independently reviewed original candidate. No held fact, source observation or custody result changed."},
+    {"name": "Source affinity and typed material semantics", "outcome": "PASS", "evidence": "The original full semantic review remains applicable to the unchanged evidence. All58 references bind exact retained excerpts and source affinity. AOPA children remain past examples with parent conditions separately scoped. Hilleman/Morelli MSU/foundation variants and the general Fall2026 application/reference/essay remain separate, with excluded form structure and child applicability unknown. Montana State Fund preserves date-only2026 dates, approved-program/full-time/good-standing and safety motivation without inventing an amount. Ray preserves chapter versus scholar funding/windows, conditional certificates/medical, preferences, nomination, monthly service/reports and conditional milestones; premium chapter content and unvisited portal remain held."},
+    {"name": "Denominator, holds, routes and protected history", "outcome": "PASS", "evidence": "Read-only verify.py exited0 at2026-10-16T03:09:02.958722+00:00. Exact offsets400:406/savedrows407-412 add six researched-held identities and122 held fields. Cumulative406 initial dispositions,7406 held fields,406 identity holds,676 seed-alias and1127 source-link routes reconcile. It verified20 historical manifest/review bindings,2135 protected tracked files,71 original custody hashes with no gaps,437 M1 identities and12 M1 pins. Offset406 has no next input; initial coverage is complete while full SD2 remains incomplete."},
+    {"name": "Capture, handling and required verification", "outcome": "PASS_WITH_RETAINED_LIMITS", "evidence": "Eight recorded sequential client intervals and128 owned hash-only destination occurrences are unchanged. Preview exposure, omitted scope, author-only concordance and inherited timing/output limits remain disclosed. Recorded plan/type/full-tests passes and both exact standard-build process/port EPERM failures retain matching log hashes. Build and fresh authenticated main/target gates remain owned and open."},
+    {"name": "Review boundary", "outcome": "PASS", "evidence": "No edits, assembler/run-check execution, Git mutation, network/source/workbook access, npm/build rerun or external effect occurred. Final status showed only the supplied untracked final-manifest.json. Subsequent author closeout and local review receipt are outside this frozen candidate."}
+  ],
+  "limits": [
+    "Consistency with retained selected conversions does not establish independent original-source fidelity, complete native/visual/page/image/table/form inspection, source silence, public access, sponsor continuity or origin freshness.",
+    "Hash-only destination records cannot reconstruct omitted URLs or independently prove original-link completeness.",
+    "General Hilleman form/material completeness and exact child applicability, Montana State Fund platform materials, Ray premium chapter criteria and unvisited account/application routes remain held.",
+    "Client intervals are recorded evidence rather than independent provider telemetry; all inherited handling and timing limits remain unchanged.",
+    "Both exact standard-build failures and fresh authenticated origin/main/target proof remain open with their recorded owners before canonical acceptance or authorized release.",
+    "All preservation, backup, recovery, permission, human/canonical/publication, student/CSV/browser/fit, M1/SD5 and reserved-effect gates retain their owners, triggers and next actions.",
+    "This PASS is local held-research review, not scholarship-fact acceptance, canonical attestation, release authority or authorization for consolidation/source replay."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}
