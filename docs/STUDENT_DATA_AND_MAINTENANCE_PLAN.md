@@ -354,6 +354,29 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CONSOLIDATION-PROPOSAL-START -->
+- October15,2026: bounded saved-evidence SD2 proposal prepared at
+  sd2-autonomous/consolidation-proposal/PROPOSAL.md and scope.json. Proposed pilot:
+  Spear45,LiveYourDream290,Jaycee40,Jaycee68;three cases/four inputs/96 existing
+  field-envelope occurrences. Proposal only; pilot/consolidation not executed.
+  Kelsey is already named human reviewer; limited Jaycee approvals stay exact.
+- Queue406/406,cursor406,no next input;all7406autonomous fieldholds/406identities,
+  prior packets/676seed-alias/1127links/365receipts/35inherited routes/628destinations,
+  nineattentionrows/every supplement/437M1routes/12pins/71custodypins and all review
+  bindings remain unchanged.0accepted;fullSD2incomplete;never initialize/reset/replay.
+- Entry021 finalaudit rechecked before edits;entry-audit.json and new verify.py
+  preserve pre-proposal bytes/modes and every earlier section9/handoff supplement.
+  validation.json records exact checks/limits;final-manifest.json/review.json bind
+  only this immutable proposal candidate when present. No prior review rebound;
+  no claim of independent review if the matching PASS record is absent.
+- Next owner/trigger/action:Kelsey reviews this concrete proposal and selects the
+  exact saved-evidence-only pilot if desired;Codex then executes only selected
+  comparisons/review. All other original owners/triggers/actions remain in021
+  FINAL_SESSION_AUDIT.md and original ledgers/wraps,including buildEPERM/freshmain,
+  source/native/current/public/custody/history,preservation/human/canonical/
+  publication/student/M1/SD5/effect gates. No new source/workbook reads,automatic
+  consolidation,acceptance,external effect orSD3. Stop before SD3. Effort:High.
+<!-- SD2-CONSOLIDATION-PROPOSAL-END -->
 <!-- SD2-CHECKPOINT-021-START -->
 <!-- SD2-CHECKPOINT-021-FINAL-AUDIT-START -->
 - Requested final no-loss audit:checkpoint021 original goal complete within local

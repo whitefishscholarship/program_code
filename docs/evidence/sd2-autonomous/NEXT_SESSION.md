@@ -1,3 +1,36 @@
+# SD2 saved-evidence hold-reconciliation proposal prepared
+
+Local proposal only: docs/evidence/sd2-autonomous/consolidation-proposal/PROPOSAL.md
+and scope.json. Recommended separately selected pilot: Spear45, Live Your Dream290,
+Jaycee40, Jaycee68, in that order; three cases/four inputs/96 existing field-envelope
+occurrences. No pilot or consolidation executed. Kelsey is already the named human
+reviewer; the exact supplied Jaycee approvals in PRELUDE remain intact.
+
+Initial queue remains406/406, cursor406 has no next input; all7406 autonomous field
+holds/406 identity holds, prior packets,676seed-alias/1127source-link routes,
+365source receipts/35inherited routes/628converted destinations, nine attention
+rows/every supplement/437M1routes/12pins/71custodypins and every review binding stay
+exact. 0accepted facts; fullSD2incomplete. Never initialize/reset/replay. Stop before SD3.
+
+Section9 remains the sole progress pointer. Read governing docs, section9, existing
+AUTHORITY/POLICY and021 final audit, then consolidation-proposal/PROPOSAL.md,
+scope.json, entry-audit.json, validation.json and candidate-bound final-manifest.json/
+review.json. Independent review applies only to that proposal candidate; if its
+record is absent or not PASS, do not call the proposal independently reviewed.
+Historical verifiers keep their original entry/allowlists; use the new verify.py
+for this proposal's unchanged-byte/append-only preservation check.
+
+Next owner: Kelsey selects the exact proposed saved-evidence-only pilot if desired;
+Codex executes only after that selection, retaining every original hold/action.
+All unselected records and all buildEPERM/freshmain/sourcefidelity/current/public/
+native/timing/custody/history/preservation/human/canonical/publication/student/
+M1/SD5/effect gates retain original owners/triggers/actions in021 FINAL_SESSION_AUDIT
+and the original packets. No new source/workbook reads, consolidation execution,
+acceptance, remoteGit/release/deployment/messages/monitoractivation orSD3.
+Recommended effort:High. Prior kickoff/handoff preserved byte-for-byte below.
+
+---
+
 Final requested no-loss audit:checkpoint-021/FINAL_SESSION_AUDIT.md and
 final-session-audit.json. Every open item retains its explicit/inherited owner,
 trigger,authoritative path,nextAction. Initial coverage406/406;cursor406 has no
