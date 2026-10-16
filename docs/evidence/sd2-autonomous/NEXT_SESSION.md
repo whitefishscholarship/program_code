@@ -1,3 +1,19 @@
+Open /private/tmp/program_code-student-data-maintenance-plan on codex/plan-student-data-maintenance. Follow AGENTS governing read order; then complete STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 (sole progress pointer), sd2-autonomous AUTHORITY/POLICY and checkpoint-020.json plus020/{README.md,final-manifest.json,review.json,SESSION_WRAP.md,SESSION_CLOSE.md,wrap-verification.json}.
+
+Next-session Codex resumes ONE bounded checkpoint at offset400/savedrow407: THE RICHARD MCSPADDEN SCHOLARSHIP FOR ADVANCED PILOT TRAINING, under existing AUTHORITY/POLICY. Preserve every hold/review binding; never initialize/reset/replay; stop before SD3.
+Six frozen inputs remain. 400/406 initial dispositions; 6 unprocessed; all7284 field holds/400 identity holds, 668 seed-alias/1116 source-link routes, 0accepted facts. This checkpoint adds408 held fields/20 held identities:18 researched-held/2 held-access, one shared public conversion/198 excerpt references/31 converted-destination hash routes.
+
+Independent PASS C0/H0/M0/L0 binds 3d64564e6069807faf9d09cde61b8e42094c6ca8; local direct-child two-file review receipt fa0f3a8e30a80654f0f0205461659203d5e29cd5. Manifest: checkpoint-020/final-manifest.json; review: checkpoint-020/review.json.
+No pending reviewer repair/recheck/delegatedwork. Preserve all20ledgers/packets/PRELUDE/nineattentionrows/supplements/437M1routes/71custodypins and original review bindings. Every explicit/inherited owner/trigger/action is authoritative in ledger/SESSION_WRAP. Codex owns holds at applicable authorized evidence arrival or SD2 consolidation; no accepted union/intersection/name-only/ordinal mapping.
+
+Preserve every AOPA child amount/certificate/slot/purpose/preference/GPA/age wording, Caruso preference-clause boundary, Carlsbad FBO employment at application AND award, CAA dedicated application/general-manager recommendation, two SmarterSelect holds and parent yearless timing/materials/funding/expiry/resubmit terms separately. Current child offering remains unknown:all18 are past examples. Unseen donor/image/native/document/form scope stays held.
+
+Before dispatch normalize/serializehost,max4distincthosts;before output narrow/sanitize all text/link/query/image/metadata. One measured interval complies;no independent provider telemetry. Preserve earlier018unmeasured/016overlap and all output history;final sanitization erases none. All31new converted-destination hash routes and every earlier conversion route remain owned. No original/native/visual/completeness/silence/current/public/sponsor/origin proof from selected conversions or author concordance. At next required raw use/audit verify71original custody paths/hashes or preserve receipts/report gaps; no reconstruction/reacquisition/replay.
+
+Both exactbuildEPERM/fresh authenticatedmain-target remain with Codex before canonicalacceptance/authorizedrelease. Every preservation/backup/recovery/permission,human/canonical/publication,studentCSV/browser/fit and437M1/SD5/effect gate retains originalowner/trigger/action. No workbook/app/configuration/CI/login/forms/contact/messages/remoteGit/release/deployment/monitoractivation or SD3. Recheck020/verify.py --review-bound andverify-close.py. Recommended effort:High. Previous authoritative kickoff preserved byte-for-byte below.
+
+---
+
 Final requested no-loss audit:checkpoint-019/FINAL_SESSION_AUDIT.md and
 final-session-audit.json. Every open item retains its explicit/inherited owner,
 trigger, authoritative path and next action. All6876 fieldholds/380 identityholds,

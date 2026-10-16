@@ -354,6 +354,38 @@ Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
 <!-- SD2-AUTONOMOUS-START -->
+<!-- SD2-CHECKPOINT-020-START -->
+- October15,2026:one bounded checkpoint020 completes offsets380:400/savedrows386-406
+  excluding previously-completed400.20initial outcomes:18researched-held/2held-access;
+  408newfieldholds/20identityholds,one shared public conversion,198references/31hashed
+  converted destinations. Cumulative400/406initialdispositions,6unprocessed;
+  all7284fieldholds/400identityholds,668seed-alias/1116source-link routes,0accepted.
+  FullSD2incomplete;never initialize/reset/replay;stop before SD3.
+- Independent PASS C0/H0/M0/L0 binds 3d64564e6069807faf9d09cde61b8e42094c6ca8; local direct-child two-file review receipt fa0f3a8e30a80654f0f0205461659203d5e29cd5. Manifest: checkpoint-020/final-manifest.json; review: checkpoint-020/review.json.
+  No pending reviewer repair/recheck/delegation. Earlier19reviewbindings/all20ledgers/
+  packets/PRELUDE/nineattentionrows/supplements/437M1routes/71custodypins stayexact.
+  Every explicit/inherited owner/trigger/action remains inledger/README20rowtable/
+  SESSION_WRAP. Codex owns holds at applicable authorized evidence arrival or SD2
+  consolidation;no accepted union/intersection/name-only/ordinal mapping.
+- Preserve18AOPA past-example children and2SmarterSelectholds,childamount/certificate/
+  slot/purpose/age/preference/GPA/FBOemployment/CAAroute-generalmanagerrecommendation;
+  parent yearless dates/materials/funding/expiry/resubmission stayseparate.
+  Currentchildoffering/native/donor/image/completeness/origin/public/sponsor continuity
+  unknown.31newconversiondestinationroutes andeveryearlierroute remainowned.
+- One measured client interval complies;no provider telemetry. Earlier018unmeasured/
+  016overlap/outputhistory stays disclosed. Beforedispatch normalize/serializehost,
+  max4distincthosts;beforeoutput narrow/sanitize. Finalsanitization erasesnohistory.
+- Plan/type/fulltests PASS afterpermittedIPCretries;both exactstandardbuilds retain
+  processportEPERM. Exactbuild/freshauthenticatedmain-target remainwithCodexbefore
+  canonicalacceptance/authorizedrelease. Allpreservation/backup/recovery/permission,
+  human/canonical/publication/studentCSV/browser/fit and437M1/SD5/effectgates retain
+  originalowner/trigger/action.71custodyhashes/12M1pins/437M1records verified.
+- Next-sessionCodex resumesONEboundedcheckpoint atoffset400/savedrow407,THE RICHARD
+  MCSPADDEN SCHOLARSHIP FOR ADVANCED PILOT TRAINING,underexistingAUTHORITY/POLICY.
+  Closure:020/SESSION_WRAP.md,SESSION_CLOSE.md,wrap-verification.json. Kickoff:
+  NEXT_SESSION.md. Recheck020/verify.py --review-bound andverify-close.py.
+  Noexternal effect/SD3. Recommended effort:High. Previoussection9bytes stayexactbelow.
+<!-- SD2-CHECKPOINT-020-END -->
 <!-- SD2-CHECKPOINT-019-START -->
 <!-- SD2-CHECKPOINT-019-FINAL-AUDIT-START -->
 - Requested final no-loss audit:checkpoint019 original goal is complete within
