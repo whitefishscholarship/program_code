@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of completed SD2 batch004: Carl Valvoda8, Dr. Max L Amberson Ag Education9, Dr. Van Shelhamer Memorial10, in order, covering exactly 53 original held field envelopes. No canonical acceptance or release.",
+  "reviewedAt": "2026-10-16T18:30:49.618037+00:00",
+  "reviewer": {"identity": "Codex /root/sd2_batch004_review", "freshContext": true, "readOnly": true, "authoredOrEdited": false},
+  "binding": {
+    "entryCommit": "1d463dbc5e73bf26c4f9d84f0eb371b8229b32b1",
+    "selectionCheckpoint": "45dfb9bd62e02952ecb95e2db1790423a25c7e1b",
+    "candidateCommit": "dcdc58d6cd42ac5f8ffad094f755a1fba8be48cd",
+    "candidateTree": "c0f153507c13f9e378024ef2c28b22cc1492fc24",
+    "manifestPath": "docs/evidence/sd2-autonomous/reconciliation-batch-004/final-manifest.json",
+    "manifestSha256": "e20d2cdb2234adf0482aab4585d72f4bbffece320282350d43c1ccc5d223abba",
+    "completeDiffSha256": "c5721b19ffd33aac359f901c1abaf5c390e2b91e2ea4a55268536a70161cf38c",
+    "completeDiffBytes": 689896,
+    "changedPathCount": 31,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Verified local predecessor proposal receipt; authenticated current origin/main and deployment target were not refreshed."
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable complete candidate",
+      "outcome": "PASS",
+      "evidence": "Independently verified branch, HEAD, candidate tree, selection-checkpoint ancestry, manifest SHA256, complete entry-to-candidate binary diff bytes/SHA256, exact 31-path change set, and every changed blob ID/mode/size/SHA256 and worktree equality. Tracked worktree/index remain clean; only final-manifest.json is untracked."
+    },
+    {
+      "name": "Authority and predecessor review",
+      "outcome": "PASS",
+      "evidence": "Direct human instruction selects proposal004's exact 53-field comparison. Selection matches the unchanged reviewed proposal scope. Independently verified proposal004 candidate/tree/full-diff/blob/mode/size/hash binding and entry1d463dbc as its exact direct-child two-file local receipt. Entry-audit records fresh proposal004 review-bound PASS before batch paths existed. No historical verifier was rerun in the expanded context."
+    },
+    {
+      "name": "All 53 original envelopes and three identities",
+      "outcome": "PASS",
+      "evidence": "Independently verified ordered offsets/locators8,9,10, saved input keys, recorded-name and whole-record canonical digests, exact checkpoint001 pointers, existing candidate IDs and ordered18+18+17 fields. Every full envelope, state, held acceptance, timestamp, evidence and original owner/trigger/path/nextAction remains unchanged. Three identity proposals remain held with zero accepted mappings, new IDs, deletions, merges or child creation."
+    },
+    {
+      "name": "All semantic comparison notes and minimum-proof routes",
+      "outcome": "PASS",
+      "evidence": "Reviewed all53 notes and field-specific minimum-proof proposals against exact original envelopes and relevant selected source passages. Categories reconcile to14existing-evidence-consistent,29applicability/identity-unresolved,9evidence-unavailable and1existing Amberson studentStage conflict. Minimum-proof routes retain original routing and select no new read."
+    },
+    {
+      "name": "Material child-specific semantics",
+      "outcome": "PASS",
+      "evidence": "Carl retains one2000USD slot and required RHM application AND serving/have-served ROTC OR U.S.ArmedForces, without veteran-only narrowing or dependent/residency/citizenship inference. Amberson retains two500USD slots,FFA,GPA2.0,AgEducation and RHMsenior-or-freshman versusFFAfreshman-or-sophomore conflict without winner/union/intersection. Shelhamer retains one1500USD slot,MontanaFFAStateOfficer,MSU andGPA2.0 rather than generic membership. Both copiedAMTOPP GPA annotations remain unchanged and explicitly flagged as annotation drift, never source affinity or substitution evidence."
+    },
+    {
+      "name": "Seven sources and exact bounded passages",
+      "outcome": "PASS",
+      "evidence": "Verified source registry/artifact/hash/revision/limit bindings and exact affinity:rh-old/rh-alias for all three;fiveFFA references only for Amberson/Shelhamer. Independently checked all24 selected passages against pinned UTF-8 artifact bytes using zero-based Unicode offsets. FFA context contains exactly the original Amberson stage excerpt,shared route paragraph,and exact annual1500StateOfficer sentence. No fullsharedFFA section,biography or unselected award section was forwarded. Equal RHM alias hashes remain expressly non-independent; original main eligibility affinity staysrh-old."
+    },
+    {
+      "name": "Timing, scoring, materials and renewal distinctions",
+      "outcome": "PASS",
+      "evidence": "Yearless RHMJanuary1-March1/FAQ19March1at11:59PMMST remains currentYear:null. FFAapplicationsMarch1,2026 and2021guidelines/December31 remain separate versions; no2027/current-open inference. Historical College/Leadership4.0scoring and financial-need judging remain distinct from current child threshold basis or hard eligibility. Shared transcripts/supplements,historical photo/two-reference materials,and post-award grades/enrollment/thanks/classes/payment remain distinct from a complete current child checklist. Nonrenewable remains separate from reapplication while eligible with annual reevaluation."
+    },
+    {
+      "name": "Protected history and global routes",
+      "outcome": "PASS",
+      "evidence": "Independently verified2374protected entry files by blob/mode and exact prior bytes on all three append-only handoff surfaces. Recounted406held identities,7406held fields,676seed-alias routes,1127links,365source receipts,35inherited source routes and628converted destinations including one unclosed. Cursor406/no nextresearchinput remains exact. Verified437uniqueM1IDs and12pins against historical009fa57;71custody receipts and their original routes remain preserved. All prior comparisons,reviews,rejected bindings and incidents remain unchanged."
+    },
+    {
+      "name": "New read-only verifier",
+      "outcome": "PASS",
+      "evidence": "Inspected verify.py and independently ran it without --review-bound. PASS from2026-10-16T18:28:58.747488+00:00 through18:28:59.478519+00:00. Inspected build-comparison.py without executing it. Entry-to-candidate whitespace verification passed."
+    },
+    {
+      "name": "Validation receipt provenance",
+      "outcome": "PASS",
+      "evidence": "Independently verified all seven standalone receipts equal validation.json entries, exact commands/cwd, chronological timestamps before manifest creation, raw byte counts/SHA256, normalization and saved-log hashes. Plan/typecheck/tests pass after unchanged permitted IPC retries. Exactly two standard npm run build attempts fail creating a process/binding a port with Operation not permitted. standardBuild correctly remains BLOCKED_ENVIRONMENT; no alternate-build waiver or fresh-main claim."
+    },
+    {
+      "name": "Incident retention, coverage and stopping boundary",
+      "outcome": "PASS",
+      "evidence": "Prior proposal004 biography-preview and batch003/batch002 incidents remain explicitly retained without retrospective relabeling. No new execution incident was identified in reviewed artifacts. Prior196comparisons remain exact; cumulative249fields across11autonomous+2Jaycee inputs leaves395autonomous inputs outside comparisons. Handoff retains original owners/triggers/path/actions, stops after this batch beforeSD3,and requires later continuation for any next proposal. No next proposal or automatic execution is selected."
+    }
+  ],
+  "limits": [
+    "PASS covers fidelity, exact bounded comparison, preservation and reviewability only. It accepts no scholarship fact, identity mapping, canonical stage or release.",
+    "The reviewer made no edits or Git mutations, ran no npm/build/assembler or historical verifier, and performed no network/workbook/raw-native-content access, reacquisition or external effect.",
+    "Current offering, public access, native/visual completeness, source silence, sponsor/route continuity and independent provider timing remain unverified.",
+    "All71custody receipts are preserved; current temporary raw-material availability was not rechecked or claimed.",
+    "Exact supported standard-build PASS and fresh authenticated main/target remain owned by Codex validation/governance/delivery before canonical acceptance or authorized release.",
+    "Original preservation/recovery, human/canonical/publication, student/browser/CSV, M1/SD5 and external-effect gates retain their original owners, triggers, authoritative paths and next actions.",
+    "FullSD2 remains incomplete. Never initialize/reset/replay. Stop beforeSD3."
+  ]
+}
