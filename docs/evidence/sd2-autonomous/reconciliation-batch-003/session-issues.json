@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "issues": [
+    {
+      "id": "SOURCE-PREVIEW-001",
+      "status": "contained; retained scope noncompliance, not relabeled",
+      "observed": "A combined local preview printed complete sanitized FFA rubric artifacts and full source-registry entries rather than narrowed selected passages/minimal metadata; output included other FFA award descriptions/navigation and was truncated.",
+      "effect": "No new source/workbook/raw/native-content read, external effect or accepted fact. Unselected award descriptions and unrelated navigation are excluded from semantic comparison and derived views. Output truncation supplies no negative evidence or completeness claim.",
+      "owner": "Codex evidence/source governance",
+      "trigger": "This comparison and every later selected saved-source preview",
+      "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-003/session-issues.json",
+      "nextAction": "Use exact selected-record/sourceId and bounded passage references before model-facing output. Generate source views only from finalized selected field evidence; preserve original extraction limits and all prior incidents. No repeated broad preview or reacquisition.",
+      "priorIncidentPath": "docs/evidence/sd2-autonomous/reconciliation-batch-002/session-issues.json"
+    }
+  ]
+}

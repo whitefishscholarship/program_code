@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-003-START -->
+- October16,2026 direct continuation selected reviewed proposal003 execution.
+  reconciliation-batch-003/README.md is current closeout. Agri5,AMTOPP6,Bridging7:
+  52held fields compared;9consistent,26applicability/identity unresolved,16evidence
+  unavailable,1existing AMTOPPidentityBranches conflict.0accepted/modified facts
+  or identities. Prior144comparisons unchanged;cumulative196occurrences across
+  8autonomous+2Jaycee;398autonomous outside comparisons. FullSD2 incomplete.
+- Preserve Agri stageOR/careerinterest,AMTOPPbranches/GPA/need/material/rubric/date
+  distinctions,Bridging will-or-have-aged-out/recipientminimum and ambiguous amount
+  allocation. Original perRecipient1000 envelope stays held;no winner or merged rule.
+  Equal RHM alias bytes not independent corroboration; exact source affinity retained.
+- Fresh proposal003 review-bound PASS/49e0563 at pre-edit entry;new verify.py protects
+  all entryblobs/modes and append-only history. Full independent status only matching
+  final-manifest.json/review.json;otherwise pending. No prior review/context rebound.
+- Queue406/406,cursor406,no nextinput;7406field/406identity holds,676seed-alias/
+  1127links/365receipts/35inheritedroutes/628destinations,nine attentionrows/all
+  supplements/437M1routes/12pins/71custodyreceipts/every original route remain exact.
+  Overbroad saved source/registry preview excluded unrelated scope from semantic
+  work;session-issues retains lapse,priorincidents and scoped-output correction.
+- validation/checks retain actual outcomes/limits,no waived standardbuild/currentmain
+  or source/custody/preservation/recovery/human/canonical/publication/student/M1/SD5/
+  effect gate. Every original owner/trigger/path/action remains in original packets/
+  SESSION_CLOSE/README. Next Codex:after matching full-batch PASS and later continue,
+  prepare next bounded proposal;no automatic execution,repeated preference or replay.
+  No new source/workbook/raw reads,acceptance,external effects orSD3. Never initialize/
+  reset/replay. Stop before SD3. Recommended effort:High.
+<!-- SD2-BATCH-003-END -->
 <!-- SD2-PROPOSAL-003-START -->
 - October16,2026 direct continue:next bounded shared-source proposal prepared at
   sd2-autonomous/consolidation-proposal-003/PROPOSAL.md and scope.json. Proposed

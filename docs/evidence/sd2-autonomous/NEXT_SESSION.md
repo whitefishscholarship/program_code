@@ -1,3 +1,53 @@
+# SD2 comparison batch003 — October 16, 2026
+
+Direct continuation selected reviewed proposal003. Agri Industries5, AMTOPP6,
+Bridging the Gap7 compared in order: 3 inputs/52 original held fields;9 consistent,
+26 applicability/identity unresolved,16 evidence unavailable,1 existing AMTOPP
+identityBranches conflict. No original envelope/identity/state/time/acceptance
+changed;0accepted facts. Prior144 comparisons remain exact; cumulative196 field
+occurrences across8 autonomous+2 prior Jaycee inputs;398 autonomous inputs outside
+comparisons. Full SD2 incomplete. Never initialize/reset/replay. Stop before SD3.
+
+Current evidence/closeout: sd2-autonomous/reconciliation-batch-003/README.md,
+AUTHORITY.md,selection.json,entry-audit.json,comparison.json,identity-assessment.json,
+saved-source-references.json,selected-context.json,validation.json,verify.py and
+session-issues.json. Full independent status only matching final-manifest.json/
+review.json; absent/non-PASS/mismatched means pending. Proposal review covers only
+the proposal. Fresh predecessor proposal003 review-bound PASS at49e0563 in valid
+pre-batch context; old verifiers/contexts/allowlists/bindings stay unchanged.
+
+Preserve Agri stage OR/career interests/amounts vary; AMTOPP member/employee,FFA,
+4-H branches and different dates/GPA/need/material/rubric scopes; Bridging exact
+will-or-have-aged-out and one-or-more recipients. Retain original perRecipient1000
+held while amount allocation stays ambiguous. RHM alias equal bytes do not prove
+independent corroboration; sourceIds remain exact. Overbroad saved-source/registry
+preview included unrelated sanitized scope; excluded from semantic work and
+recorded in session-issues, never erased/reclassified as compliant. Scoped passage
+views follow; no raw/new source/workbook access occurred.
+
+Research406/406,cursor406,no next input;7406fields/406identities,676seed-alias/
+1127links/365receipts/35inherited routes/628destinations including one unclosed,
+nine attention rows/all supplements,437M1routes/12pins/71custodyreceipts and every
+original owner/trigger/path/action/review remain exact. validation/checks record
+actual current outcomes/limits. All source/custody/history/build/freshmain/native
+preservation/recovery/human/canonical/publication/student/M1/SD5/effect gates retain
+original owners/triggers in original packets/SESSION_CLOSE/README and plansection9.
+Codex validation owns exact supported standard build/current main-target before
+acceptance/release; no waiver. Desktop queued/visibility unknown remains owned
+by Codex workspace only on an explicit UI request; preserve checkout/history.
+
+Next owner Codex under retained delegation: after matching full-batch PASS and a
+later continuation, prepare next bounded saved-evidence proposal; no automatic
+execution/replay. Kelsey named reviewer and limited Jaycee approvals unchanged;
+no repeated preference question. No new reads,acceptance,external effects orSD3.
+Fresh entry: AGENTS governing order,plansection9,original AUTHORITY/POLICY/latest
+SESSION_CLOSE,then current batch authority/selection/README/comparison/identity/
+source views/validation/manifest/review. Run batch003 verify.py --review-bound in
+valid receipt context; use earlier valid receipts plus byte proof for old contexts.
+Recommended effort: High. Earlier handoff remains exact below.
+
+---
+
 # SD2 shared-source proposal003 — October16,2026
 
 Prepared the next bounded proposal under direct continue and retained delegated
