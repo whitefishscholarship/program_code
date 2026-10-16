@@ -115,6 +115,15 @@ for pin in cust['pins']:
  if actual!=pin['recordedSha256']:gaps.append(pin['path'])
  assert all(pin.get(k) for k in ['owner','trigger','nextAction'])
 assert gaps==cust['gaps']
+assert cust['auditCorrection'].startswith('Inherited checkpoint020 historical correction, not a checkpoint021 event: ')
+assert cust['auditCorrectionOrigin']['sha256']==sha((B/'checkpoint-020/prior-custody-audit.json').read_bytes())
+oldm=load(P/'manifest-round1.json');oldrv=load(P/'review-round1.json');rem=load(P/'remediation.json')
+assert oldrv['outcome']=='FAIL' and oldrv['binding']['candidateCommit']==oldm['candidateCommit']=='ae00e4221c5a923348fab78834571587253e7963'
+assert oldrv['binding']['manifestSha256']==sha((P/'manifest-round1.json').read_bytes())==rem['originalManifestSha256']
+assert oldrv['severityCounts']==rem['counts']==dict(critical=0,high=0,medium=0,low=1) and len(rem['dispositions'])==1
+assert rem['dispositions'][0]['findingId']=='L1' and rem['newSourceReads']==rem['changedHeldFacts']==0
+assert sha(git('diff','--binary',ENTRY,oldm['candidateCommit']))==oldm['completeDiffSha256']
+for f in oldm['changedFiles']:assert sha(git('show',oldm['candidateCommit']+':'+f['path']))==f['sha256']
 pins=load(R/'docs/evidence/sd2-next-read-proposal/verification.json')['retainedM1Artifacts']
 for pin in pins:assert sha(git('show','009fa57:'+pin['path']))==pin['sha256']
 m1=json.loads(git('show','009fa57:docs/evidence/season-monitor-m1/inventory.json'));assert len(m1['records'])==len({r['id'] for r in m1['records']})==437

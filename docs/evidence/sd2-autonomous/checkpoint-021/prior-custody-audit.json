@@ -644,6 +644,10 @@
   ],
   "gaps": [],
   "nativeCurrencyOrSponsorProof": false,
-  "auditCorrection": "Initial new draft compared the wrong expected-key name; corrected to immutable recordedSha256 before review. No custody gap was resolved by this correction.",
-  "method": "Original paths/hashes only; no source reads, content reinspection, reconstruction or reacquisition. Future required use/audit must reverify availability or report exact gaps retaining receipts."
+  "auditCorrection": "Inherited checkpoint020 historical correction, not a checkpoint021 event: Initial new draft compared the wrong expected-key name; corrected to immutable recordedSha256 before review. No custody gap was resolved by this correction.",
+  "method": "Original paths/hashes only; no source reads, content reinspection, reconstruction or reacquisition. Future required use/audit must reverify availability or report exact gaps retaining receipts.",
+  "auditCorrectionOrigin": {
+    "path": "docs/evidence/sd2-autonomous/checkpoint-020/prior-custody-audit.json",
+    "sha256": "f3ded44c1dd3390570adbbbf1c99b0a1e2bacdbadd4fc0d61280f841ffbefc7e"
+  }
 }

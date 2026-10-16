@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "scope": "Independent read-only local held-research review of SD2 checkpoint021; one low provenance clarification requires author remediation and recheck",
+  "reviewer": {
+    "identity": "Codex /root/checkpoint021_review",
+    "readOnly": true,
+    "freshContext": true,
+    "authoredOrEdited": false,
+    "backendModelAndEffort": "Not exposed to this reviewer"
+  },
+  "binding": {
+    "entryCommit": "00687b689eec233cbd3dc40e9196886af5bb06d3",
+    "candidateCommit": "ae00e4221c5a923348fab78834571587253e7963",
+    "candidateTree": "e46801664720a784d7483bac40026243a401009c",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-021/final-manifest.json",
+    "manifestSha256": "f35084624b496ad8dcea3ef62614fafe8ed640401185003db2de01c096927e72",
+    "completeDiffSha256": "ab6bb89bfaaf2733be2677b8dc0e1ffdf78c0e11a315c098d11a7a46d5bb5d9d",
+    "completeDiffBytes": 614568,
+    "changedPathCount": 36,
+    "allChangesAreAdditions": true,
+    "candidateBlobsHashesBytesModesAndWorktreeEqualityVerified": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 1},
+  "findings": [
+    {
+      "id": "L1",
+      "severity": "low",
+      "title": "Label the inherited custody correction as checkpoint020 history",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-021/prior-custody-audit.json",
+      "line": 647,
+      "evidence": "The checkpoint021 receipt has its own current recordedAt on line3, but auditCorrection repeats checkpoint020/prior-custody-audit.json:647 verbatim: 'Initial new draft compared the wrong expected-key name; corrected to immutable recordedSha256 before review.' It does not identify that event as inherited checkpoint020 history. The author separately confirmed that this describes the prior packet, not a new checkpoint021 correction.",
+      "impact": "The current audit reads as if checkpoint021 experienced that correction, making the procedural provenance ambiguous. This does not invalidate the current custody hashes: all71 original pins independently matched and no gap was found.",
+      "requestedChange": "Clarify that the correction note is inherited checkpoint020 history, while keeping the current checkpoint021 hash-audit result and original prior artifacts unchanged. Preserve this candidate, manifest and review binding; freeze a replacement candidate for recheck.",
+      "owner": "Checkpoint021 implementation author",
+      "target": "Replacement checkpoint021 candidate before final reviewed-checkpoint receipt",
+      "status": "unresolved"
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "L1",
+      "status": "author-remediation-required",
+      "rationale": "A narrow provenance clarification resolves the ambiguity without changing any source observation, custody hash, held fact or historical artifact.",
+      "owner": "Checkpoint021 implementation author",
+      "trigger": "Before replacement candidate is submitted for independent recheck",
+      "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-021/prior-custody-audit.json:647",
+      "nextAction": "Label the historical note explicitly, freeze a replacement candidate and manifest, and request read-only recheck."
+    }
+  ],
+  "checks": [
+    {"name": "Immutable candidate and manifest", "outcome": "PASS", "evidence": "Independently recomputed manifest SHA256, complete binary diff SHA256 and614568-byte length, candidate tree, exact36-path addition set, each candidate blob ID, SHA256 and byte length, and current file equality. git diff --check over the exact entry-to-candidate range passed."},
+    {"name": "Frozen scope, cursor and held outcomes", "outcome": "PASS", "evidence": "The six records exactly match queue offsets400:406 and savedrows407-412. All are researched-held with held identity acceptance. All122 field envelopes remain held. Cumulative initial dispositions406, held identities406 and held fields7406 reconcile to all prior packets. No unprocessed input or next input remains; next offset406 is a stop boundary.", "initialQueueCoverageComplete": true, "acceptedFacts": 0},
+    {"name": "Typed source affinity and material semantics", "outcome": "PASS", "evidence": "Compared all material typed observations against the eight actual retained selections. All58 excerpt references resolve with matching source URL/hash/artifact/locator and allowed input affinity. AOPA named children remain under Examples of Past Scholarships; McSpadden variable amount/count, Santori USD6000 and primary-certificate alternatives, and Phillippi USD2500 lower bound/seaplane rating are preserved. Parent dates, membership/residency, funding, materials, account/matching, expiry and resubmission remain separately scoped and unverified for child applicability."},
+    {"name": "Hilleman and Montana State Fund", "outcome": "PASS", "evidence": "Hilleman/Morelli MSU Montana residency, learning differences, STEM/community motivation, selection potential and four-year support match the MSU selection. Foundation wording remains a separate variant without an accepted union/intersection. General Hilleman Fall2026 introduction, non-family personal reference, post-submission recommendation contact, approximate500-1000-word essay and encouraged pre-submission review remain separately scoped, with child applicability and excluded blank-form structure/material completeness unknown. Montana State Fund opening/deadline are2026-10-07/2026-11-13 with unknown time/timezone; full-time/good-standing/approved-program and safety motivation are retained. The Award heading supplies no invented amount."},
+    {"name": "Ray chapter and scholar separation", "outcome": "PASS", "evidence": "Funding upper bound and annual aggregate, chapter core/matching shares and qualification, yearless chapter and nominated-scholar windows, and2027 chapter opening remain distinct. Scholar age ranges, US-only student certificate, Private-Pilot-only medical condition, Young Eagles flight and30-day start requirement match the selection. Additional-consideration preferences remain preferences. Chapter nomination/EAA screening, two monthly service hours, monthly progress reports, conditional3/6-month milestones,12-month checkride and funding consequences are preserved. The portal remains coordinator-only/unvisited; chapter premium content remains inaccessible without login."},
+    {"name": "Historical preservation and owned routes", "outcome": "PASS", "evidence": "Read-only verify.py exited0 at2026-10-16T03:04:44.810879+00:00. It checked all20 historical manifest/review bindings and candidate hashes,2135 protected tracked files, prior ledgers and routes,71 original temporary custody hashes with no gaps,437 unique M1 records and12 M1 pins. Current route totals are406 identities,7406 fields,676 seed-alias routes and1127 source-link routes. Earlier plan/handoff/kickoff bytes remain unchanged in this candidate.", "limitation": "L1 concerns only the labeling of an inherited procedural note."},
+    {"name": "Capture, destination accounting and output handling", "outcome": "PASS_WITH_LIMITS", "evidence": "Eight recorded client intervals are sequential, maximum measured concurrency1, with no measured same-host overlap. All128 converted Markdown destination occurrences have hash-only dispositions with owner, trigger and next action. Source receipts and retained selections explicitly disclose omitted scope and author-only concordance. Preview contact/recipient/staff/address/blank-label exposure and the stopped dispatch loop remain disclosed; final sanitization makes no claim to erase prior output history."},
+    {"name": "Recorded required verification", "outcome": "PASS_WITH_RETAINED_GATES", "evidence": "Retained log hashes and results reconcile: plan:check and complete tests pass after IPC retries; typecheck passes. Both exact standard builds fail with process/port Operation not permitted. The build and fresh authenticated main/target gates remain explicitly owned and open. Reviewer did not rerun npm or builds."},
+    {"name": "Read-only review boundary", "outcome": "PASS", "evidence": "Reviewer performed no edits, assembler/run-check execution, Git mutations, network/source/workbook access, npm/build reruns or external effects. Final status showed only the supplied untracked final-manifest.json. Author closeout and any later two-file local receipt are outside this candidate review."}
+  ],
+  "limits": [
+    "Review establishes consistency with retained selected conversions, not independent fidelity to original source bytes.",
+    "No original raw conversion hash, complete native/visual/page/image/table/form inspection, source-silence, public-access, sponsor-continuity or origin-freshness proof is available.",
+    "Hash-only destination records cannot independently reconstruct omitted destinations or establish original-link completeness.",
+    "General Hilleman omitted form structure and exact child applicability, Montana State Fund application/platform materials, Ray chapter premium content and all unvisited account/application routes remain held.",
+    "Client intervals are recorded evidence rather than independent provider telemetry; inherited timing/output-handling limits remain unchanged.",
+    "Both standard-build failures and fresh authenticated origin/main/target proof remain open with their recorded Codex owners before canonical acceptance or authorized release.",
+    "All preservation, backup, recovery, permission, human/canonical/publication, student/CSV/browser/fit, M1/SD5 and reserved-effect gates remain in force.",
+    "No current scholarship fact or source-currentness claim was independently verified through new retrieval."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}
