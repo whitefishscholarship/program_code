@@ -353,6 +353,34 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-002-START -->
+- October16,2026 direct continue:selected reviewed proposal002 execution;
+  reconciliation-batch-002/README.md is current evidence/closeout. Ordered Ted2,
+  ADHD-labeled3,Adoption4:48original held fields compared;3consistent,20applicability/
+  identity unresolved,25evidence unavailable,0new conflicts.0accepted or modified
+  facts/identities;original packets remain authoritative. FullSD2 incomplete.
+- Prior96pilot comparisons unchanged;cumulative144occurrences across5autonomous
+  inputs+2priorJaycee inputs;401autonomous inputs remain outside comparisons.
+  Keep Ted3copies/strictless2page/SAI,no hard athletics/GPA/need inference;ADHD no
+  ID/deletion/substitution/child merge;Adoption academic/must-should/and-or scope.
+- Fresh predecessor proposal review-bound PASS at entry7de87a3;new verification
+  protects entry blobs/modes and exact earlier handoffs. Final independent batch
+  status only matching final-manifest.json/review.json;if absent/non-PASS/mismatched
+  pending. Historical reviews remain bound to their own candidates,never rebound.
+- Queue406/406,cursor406,no next research input;all7406fields/406identities,
+  676seed-alias/1127links/365receipts/35inherited routes/628destinations,nine attention
+  rows/all supplements/437M1routes/12pins/71custodyreceipts unchanged. Every original
+  owner/trigger/path/action stays in original packets/SESSION_CLOSE/README. Local
+  receipt-preview overmatch disclosed in session-issues;unrelated sanitized Spear
+  excerpts excluded from comparison,no erasure or compliance relabeling.
+- Current validation/checks record actual results/limits;standard build/freshmain
+  and all source/custody/history/preservation/recovery/human/canonical/publication/
+  student/M1/SD5/effect gates retain original owners/triggers. No new sources,
+  workbook/raw content reads,acceptance or external effect. Kelsey reviewer and
+  limited Jaycee approvals unchanged. Next Codex:after matching final batch PASS,
+  prepare next bounded saved-evidence proposal,no automatic execution/replay.
+  Never initialize/reset/replay. Stop before SD3. Recommended effort:High.
+<!-- SD2-BATCH-002-END -->
 <!-- SD2-PROPOSAL-002-START -->
 - October16,2026 continue-as-planned:next bounded saved-evidence proposal prepared
   at sd2-autonomous/consolidation-proposal-002/PROPOSAL.md and scope.json.

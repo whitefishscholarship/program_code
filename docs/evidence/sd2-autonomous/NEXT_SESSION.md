@@ -1,3 +1,54 @@
+# SD2 comparison batch002 — October16,2026
+
+Direct continue selected the reviewed proposal002 execution. Ted Lund2,ADHD-labeled3,
+Adoption STAR4 compared in order:3inputs/48 original held fields;3saved-evidence
+consistent,20applicability/identity unresolved,25evidence unavailable,0new conflicts.
+No original field/identity/state/time/acceptance changed;0accepted facts. Prior96
+pilot comparisons remain exact;cumulative144 occurrences across5autonomous inputs
+plus2prior Jaycee inputs.401autonomous inputs remain outside these comparisons.
+FullSD2 incomplete. Never initialize/reset/replay. Stop before SD3.
+
+Current evidence/closeout:sd2-autonomous/reconciliation-batch-002/README.md,
+AUTHORITY.md,selection.json,entry-audit.json,comparison.json,identity-assessment.json,
+saved-source-references.json,validation.json,verify.py and session-issues.json.
+Independent full-batch status is only matching final-manifest.json/review.json;
+absent/non-PASS/mismatched means pending. Proposal002 review covers proposal only.
+Fresh entry verified its immutable receipt7de87a3 before new paths existed;old
+verifiers retain original contexts/allowlists. New verification protects original
+bytes/modes and exact append-only handoffs;no historical review is rebound.
+
+Preserve Ted3copies/less-than2page essay/SAI/materials and no inferred athletics/GPA/
+need threshold;ADHD no ID/deletion/substitution/child merge,documentedLD distinctions;
+Adoption academic-vs-sibling scope,must/should,and/or and story-sharing obligation.
+Local broad receipt preview displayed two unrelated sanitized Spear excerpts;
+excluded from semantic comparison,exactTedsourceId/pointer used thereafter.
+History retained and routed in session-issues.json;no raw/source fetch or PII value.
+
+Queue406/406,cursor406,no next research input;all7406fields/406identities,676seed-alias/
+1127links/365receipts/35inherited routes/628destinations including one unclosed,nine
+attention rows/every supplement,437M1routes/12pins/71custodyreceipts and all prior
+review bindings/owners/triggers/paths/actions remain exact. Build/freshmain before
+acceptance/release and every source/custody/history/preservation/recovery/human/
+canonical/publication/student/M1/SD5/effect gate retain their original owners/triggers;
+current validation/checks report actual outcomes,no waived gate. Desktop opening
+remains queued/visibility unknown with original Codex workspace owner/UI trigger.
+
+Next owner Codex under retained delegation:after matching final batch review PASS,
+prepare the next concrete bounded saved-evidence SD2 proposal;no automatic next
+execution. Do not reprepare or replay this completed batch. Kelsey remains named
+human reviewer;limited Jaycee approvals unchanged. No new sources/workbook/raw
+content reads,acceptance,external effects orSD3. No repeated reviewer/intention/Git
+preference needed. All original open routes remain in original packets/SESSION_CLOSE,
+prior proposals/pilot,README and plansection9;no replacement queue.
+
+Fresh entry:AGENTS governing order,plansection9,original AUTHORITY/POLICY/SESSION_CLOSE,
+current batch authority/selection/README/comparison/source views/identity/validation/
+manifest/review. Run batch002 verify.py --review-bound in its valid entry context;
+use predecessor receipts plus byte-preservation proof for earlier contexts,never
+widen their allowlists. Recommended effort:High. Prior handoff preserved below.
+
+---
+
 # SD2 next bounded proposal — October 16, 2026
 
 Prepared the next proposal under Kelsey's continue-as-planned instruction and
