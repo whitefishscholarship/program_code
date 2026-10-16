@@ -1,0 +1,74 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent read-only review of proposal005’s exact completed 51-field SD2 comparison only; no canonical fact, identity, stage or release acceptance.",
+  "reviewer": "/root/sd2_batch005_review",
+  "freshContext": true,
+  "authoredOrEditedCandidate": false,
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "binding": {
+    "entryCommit": "00b0a75c9dbb1c85983e62b3b2fab35c9006e048",
+    "selectionCheckpoint": "3c420bb39c3db2661bcfe9bb41467befbc34bc5c",
+    "candidateCommit": "5778b1969f5c01dcbbc458385c6379328693d7ff",
+    "candidateTree": "a2ed53e6a6c6a92499c9c22ac844482a59d6fecf",
+    "manifestPath": "docs/evidence/sd2-autonomous/reconciliation-batch-005/final-manifest.json",
+    "manifestSha256": "54f5f48833eec4e9e6f25210199cabfd99c98285ccb4428460ea06356f48a126",
+    "completeDiffSha256": "59127db953be4f449472c9b729fc968bdeff8e6f7eb89bb989144196dd9f128c",
+    "completeDiffBytes": 614861,
+    "changedPathCount": 31,
+    "candidateBlobsModesSizesHashesVerified": true,
+    "baselineLimit": "Verified local predecessor receipt; authenticated current origin/main and deployment target were not refreshed."
+  },
+  "checks": {
+    "governanceAndAuthority": "Read governing instructions, canonical plan/state/handoff, P9 evidence, current kickoff, student-data section9, original AUTHORITY/POLICY, SESSION_CLOSE supplement and proposal005/current batch evidence. Direct selection matches exactly Teachers11, FVCC early-childhood12 and Horse Creek13 in order.",
+    "freshEntryAudit": "Proposal005 review-bound PASS was recorded before new batch paths. Proposal selection, manifest/review binding and saved-evidence pins match. No historical verifier was rerun in an expanded context.",
+    "newVerifier": {
+      "command": "python3 docs/evidence/sd2-autonomous/reconciliation-batch-005/verify.py",
+      "outcome": "PASS",
+      "startedAt": "2026-10-16T19:45:48.712517+00:00",
+      "completedAt": "2026-10-16T19:45:49.732844+00:00"
+    },
+    "independentGitVerification": "Recomputed complete binary diff hash/length and exact 31-path manifest membership; checked every candidate blob, mode, byte length and SHA-256. Independently confirmed 2427 protected entry tree blobs/modes and exact preservation beneath the three handoff additions. HEAD equals candidate; only final-manifest.json is untracked.",
+    "exactFieldCoverage": {
+      "orderedLocators": [11, 12, 13],
+      "orderedFieldCounts": [17, 16, 18],
+      "fieldOccurrences": 51,
+      "existingEvidenceConsistent": 10,
+      "applicabilityOrIdentityUnresolved": 27,
+      "evidenceUnavailable": 13,
+      "existingEvidenceConflicting": 1
+    },
+    "envelopesAndRouting": "All 51 complete original envelopes, pointers, canonical hashes, field order, values, states, acceptance, timestamps, annotations, source references and original owner/trigger/path/action routes match checkpoint-001 records11–13. Every minimum-proof proposal remains routed through its original hold with newReadSelected:false.",
+    "teachersSemantics": "Preserves one USD500 recipient, HS senior, FFA membership, GPA2.0-or-higher and an AgEd-teacher career plan. No compulsory degree or borrowed child eligibility. Copied AMTOPP annotation remains unchanged and explicitly identified as drift. Historical GPA scoring, materials and versioned timing are not promoted into current child rules.",
+    "fvccSemantics": "Preserves academicworks3986 versus awardspring433125 and acceptedSameIdentity:false. Parent amount/deadline terms are excluded; recorded name/link supports only a candidate relationship. Unsupported child fields stay null/held, with neither portal inspected.",
+    "horseCreekSemantics": "Preserves USD2000 summary versus USD1500 detail without a winner or invented total; six recipient slots; Montana-high-school graduation distinct from residence; half-time ANY accredited nationwide institution; business certificate/degree OR at least one Business/Finance course; yearless April1 FAFSA completion distinct from award deadline, need threshold and upload requirements; two-slot county preference without all-slot exclusion or invented slash operator.",
+    "sharedSemantics": "Recurring January1–March1 and FAQ19 11:59PM MST remain year-unknown, separate from FFA2026 and historical2021/December31 guidance. Nonrenewability stays separate from annual reapplication and reevaluation. Initial requirements remain distinct from awardee follow-up.",
+    "identities": "Three existing candidate IDs and original held identity proposals preserved. Zero accepted mappings, new IDs, deletions, merges or child creation.",
+    "sourceViews": "Nine source-reference views retain exact source affinity, original observation/status/revision/limits and selected evidence occurrences. Main eligibility remains rh-old; equal alias hashes are not independent corroboration.",
+    "selectedContext": "Independently verified all23 passage slices against pinned saved artifacts using the stated Unicode offsets. Flathead parent has zero passages; flathead-scholarships contains only the original early-childhood link. No full shared FFA memorial section, biography, navigation or unrelated award content is present in the selected view.",
+    "historicalPreservation": "Prior249 comparisons, all historical/rejected review bindings, 7406 field holds, 406 identity holds, exhausted cursor406 and null next input remain preserved. Original seed/link/source/destination routes, nine attention rows and supplements, 437 M1 routes,12 pins and71 custody receipts remain unchanged through entry-byte preservation. Cumulative comparison accounting is300 fields across14 autonomous plus2 prior Jaycee inputs;392 autonomous inputs remain outside comparisons.",
+    "validationReceipts": "All seven standalone check receipts exactly equal their validation entries. Raw output lengths/hashes, normalized log hashes, timestamps, commands and exit codes agree. Plan/typecheck/tests passed, including unchanged permitted IPC retries. Both exact standard-build attempts retain the process/port Operation-not-permitted failure.",
+    "historyAndHandoff": "Earlier incidents remain retained without relabeling; no new execution incident is identified in the reviewed packet. Open owners, triggers, authoritative paths and actions remain explicit. Handoff stops after this reviewed batch before SD3; no next proposal is part of this review."
+  },
+  "limits": {
+    "standardBuild": {
+      "status": "BLOCKED_ENVIRONMENT",
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or authorized release",
+      "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-005/validation.json",
+      "nextAction": "Obtain an exact standard-build PASS in a supported environment; no alternate-build waiver."
+    },
+    "freshMainAndTarget": {
+      "status": "Not refreshed",
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or authorized release",
+      "authoritativePath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "nextAction": "Authenticate the current authorized main baseline and deployment target."
+    },
+    "sourceTruth": "Review verifies saved-evidence comparison fidelity, not current offering, public access, source silence, native/visual completeness, origin equivalence or new custody availability.",
+    "laterGates": "Human/canonical/publication, workbook preservation/recovery, student/browser/CSV, M1/SD5 and external-effect gates remain operative under their original owners and triggers.",
+    "reviewEffects": "No edits, Git mutations, assembler, npm/build execution, network/source/workbook access, raw/native-content inspection, reacquisition or external effects were performed.",
+    "acceptance": "All facts and identities remain held; full SD2 remains incomplete; SD3 has not started."
+  }
+}
