@@ -355,6 +355,27 @@ not duplicate project progress trackers. Update this small block at every checkp
 
 <!-- SD2-AUTONOMOUS-START -->
 <!-- SD2-CONSOLIDATION-PROPOSAL-START -->
+<!-- SD2-CONSOLIDATION-CLOSE-START -->
+- Requested session close: original bounded SD2 proposal complete; independent
+  PASS C0/H0/M0/L0 binds962f6ba,local two-file receipt ebd7673. Sole MEDIUM M1 fixed/
+  independently rechecked;original rejected/final candidate/manifest/reviews exact.
+  No pending author repair,reviewer recheck or delegated work. Closeout:
+  consolidation-proposal/SESSION_CLOSE.md,session-close-verification.json,
+  verify-close.py. This author closeout does not rebind independent proposal review.
+- Queue406/406,cursor406,no next input;all7406autonomous fields/406identities,
+  prior packets/PRELUDE/676seed-alias/1127links/365receipts/35inherited routes/
+  628destinations/nineattentionrows/supplements/437M1routes/12pins/71custodypins
+  retain every original owner/trigger/path/action.0accepted;fullSD2incomplete.
+- Proposed pilot45,290,40,68/96existing fields remains unselected/unexecuted.
+  Next owner:Kelsey;trigger:direct selection of exact reviewed proposal if desired;
+  next action:next-session Codex executes/reviews only that selected pilot.
+  Do not prepare the same proposal again or infer selection from session wrap-up.
+  Kelsey already named reviewer;limited Jaycee approvals stay exact. No new reads,
+  automatic consolidation,acceptance,external effect orSD3. Every buildEPERM/
+  freshmain/sourcefidelity/current/public/native/timing/custody/history and later
+  gate retains original owners/triggers/actions. Never initialize/reset/replay.
+  Stop before SD3. Recommended next-session effort:High.
+<!-- SD2-CONSOLIDATION-CLOSE-END -->
 - October15,2026: bounded saved-evidence SD2 proposal prepared at
   sd2-autonomous/consolidation-proposal/PROPOSAL.md and scope.json. Proposed pilot:
   Spear45,LiveYourDream290,Jaycee40,Jaycee68;three cases/four inputs/96 existing
