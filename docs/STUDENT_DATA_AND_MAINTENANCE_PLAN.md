@@ -353,6 +353,30 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-006-START -->
+- October16,2026 next bounded proposal006:Kozlowski14,Kid'sChance15,Murdoch16,
+  17+19+17=53held fields,8saved source references. Proposal only;0new comparisons/
+  acceptedfacts,no execution. Exact scope/selection in proposal006PROPOSAL.md/scope.
+- Preserve Kozlowski stageOR/two2000slots,Murdoch HSsenior/one500slot,GPA/FFA and
+  copiedAMTOPP annotation drift. Kids stage/injury/MT-event scope differences,
+ 16–26held interpretation,educationOR,initial/renewal checklists/funds/uses/direct
+  payment/FAFSA nonrequirement/four-year limit remain distinct. No source winner,
+  automaticrenewal,need=false,currentcycle or inherited child rule. Prior/new
+  output incidents retained;unrelatedregistry/navigation/background excluded.
+- Fresh batch005PASS/1e175d2 in entry-audit;newverify protectsentry bytes/modes/
+  append-onlyhistory. Independentstatus only matchingmanifest/review,otherwise
+  pending. All old reviews/rejectedbindings/contexts preserved. validation/checks
+  retainactualresults/limits;alloriginalgateowners/triggers remain exact.
+- Compared300occurrences/14autonomous+2Jaycee,392outside;proposaladds0. Separate
+  selected execution would353fields/17autonomous+2Jaycee,389outside. Research406/406,
+  cursor406,no nextinput;7406fields/406identities/676seeds/1127links/365receipts/
+ 35inheritedroutes/628destinations/nineattentionrows/allsupplements/437M1routes/
+ 12pins/71custodyreceipts/everyroute unchanged. No source/workbook/raw reads,
+  acceptance,external effects orSD3. NextKelsey:direct exact53-field selection;
+  thenCodex executes/reviews onlythat scope,no automaticrun/routinequestion/replay.
+  Retaincontextstop/durablehandoff,no inventedpercentage. Never initialize/reset/
+  replay. Stop before SD3. Effort:High.
+<!-- SD2-PROPOSAL-006-END -->
 <!-- SD2-BATCH-005-START -->
 - October16,2026 direct exactselection:Teachers11,FVCCchild12,Horse13 compared,
   17+16+18=51 held fields;10consistent/27applicability-identity unresolved/13unavailable/

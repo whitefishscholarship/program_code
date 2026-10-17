@@ -1,3 +1,49 @@
+# SD2 proposal006 — October 16, 2026
+
+Prepared next bounded proposal:John Kozlowski Memorial14,Kid's Chance15,Murdoch16,
+in order:17+19+17=53 existing held fields/3 inputs,8 saved source references.
+Proposal only;0new comparisons,0accepted facts,no execution. Never initialize/
+reset/replay. Stop before SD3. Full SD2 remains incomplete.
+
+Authoritative proposal:sd2-autonomous/consolidation-proposal-006/PROPOSAL.md and
+scope.json. Fresh batch005 review-bound PASS/1e175d2 before paths in entry-audit;
+new verify protects all entry blobs/modes and exact append-only prior handoffs.
+Independent status only matching final-manifest.json/review.json; absent/non-PASS/
+mismatched means pending. Historical reviews/rejected bindings/contexts stay exact.
+
+Preserve Kozlowski HSsenior OR undergraduate/two2000slots;Murdoch HSsenior/one500slot;
+both GPA2.0/FFA/copiedAMTOPP annotation drift,not affinity. Kids administrator versus
+provider stage/injury/MT-event scopes,16–26 wording/held endpoint interpretation,
+education alternatives,initial-versus-renewal eligibility/checklists,funds/uses/
+direct institution payment/FAFSA nonrequirement/four-year limit stay distinct.
+No automatic renewal,source winner,need=false,current2027,forceddegree or accepted
+route. SharedRHMannual/reapplication and FFA2026/2021/rubric scopes stay exact.
+New local registry/navigation/background preview scope lapse retained in issues,
+excluded from facts;all prior incidents preserved,no retrospective relabeling.
+
+Comparisons remain300occurrences/14autonomous+2Jaycee,392autonomous outside. Proposal
+adds0;separate exact-selected execution would353fields/17autonomous+2Jaycee,389outside.
+Research406/406,cursor406,no nextinput;7406field/406identity holds,676seed-alias/
+1127links/365receipts/35inheritedroutes/628destinations including one unclosed,nine
+attentionrows/all supplements,437M1routes/12pins/71custodyreceipts/every original
+owner-trigger-path-action-review stay exact. validation/checks retainactualresults/
+limits. No source/custody/history/build/freshmain/preservation/recovery/human/
+canonical/publication/student/M1/SD5/effect gate waived;original owners/triggers in
+packets/SESSION_CLOSE/batch005README/section9 remain. Codex validation owns supported
+exactbuild/currentmain-target before acceptance/release;desktop only explicitUItrigger.
+
+Next owner Kelsey:direct exact selection of completed53-field proposal;then Codex
+executes/reviews only selected scope. Continue here selects preparation,not unseen
+execution. No routine preference/Git/reviewer question. No new source/workbook/raw
+reads,acceptance,external effects orSD3. Retain user's context stop via durable
+handoff,no inventedpercentage. Fresh entry:AGENTS order,section9,originalAUTHORITY/
+POLICY/latestSESSION_CLOSE,batch005receipt,this proposal/scope/entry/validation/
+manifest/review;run proposal006 verify.py --review-bound in valid receipt context.
+Use valid older receipts plus byte proof,never widen historical verifiers. Effort:High.
+Earlier handoff remains exact below.
+
+---
+
 # SD2 comparison batch005 — October 16, 2026
 
 Kelsey directly selected proposal005's exact51-field comparison. Teachers11,

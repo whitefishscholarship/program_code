@@ -1,0 +1,49 @@
+{
+  "entryCommit": "1e175d2f6e448591ee4747313798302845a3ce51",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-005/verify.py",
+    "--review-bound"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+  "startedAt": "2026-10-17T00:26:51.920158+00:00",
+  "completedAt": "2026-10-17T00:26:53.407840+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "12763cfcb4366cedbcc37cc7a2cb136fc6852da3ce1057b04e05a96fa3074047",
+  "stderrUtf8": "",
+  "result": {
+    "outcome": "PASS",
+    "startedAt": "2026-10-17T00:26:51.955836+00:00",
+    "completedAt": "2026-10-17T00:26:53.382279+00:00",
+    "entryCommit": "00b0a75c9dbb1c85983e62b3b2fab35c9006e048",
+    "protectedEntryFiles": 2427,
+    "allPriorBytesModesHandoffsAndReviewBindingsPreserved": true,
+    "selectedInputs": 3,
+    "fieldOccurrences": 51,
+    "categoryCounts": {
+      "existing evidence consistent": 10,
+      "applicability/identity unresolved": 27,
+      "evidence unavailable": 13,
+      "existing evidence conflicting": 1
+    },
+    "cumulativeComparedFieldOccurrences": 300,
+    "comparedAutonomousInputs": 14,
+    "remainingAutonomousInputsOutsideComparison": 392,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "custodyPins": 71,
+    "custodyLimit": "Original receipts and fresh predecessor verification preserved; no new raw custody-availability claim",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "newSourceOrWorkbookReads": 0,
+    "rawContentReinspections": 0,
+    "fullSD2Complete": false,
+    "canonicalAcceptance": false,
+    "SD3Started": false,
+    "externalEffects": false
+  }
+}
