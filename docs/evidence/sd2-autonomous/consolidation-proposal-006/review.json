@@ -1,0 +1,81 @@
+{
+  "outcome": "PASS",
+  "scope": "Local prospective proposal006 only; no comparison execution, fact acceptance, canonical acceptance or release",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "binding": {
+    "entryCommit": "1e175d2f6e448591ee4747313798302845a3ce51",
+    "candidateCommit": "76e349db474b0bce8363471fff8c49084ce27b4f",
+    "candidateTree": "bbac5053cc7d43e3d2630cbb3863be25e0698dac",
+    "manifestSha256": "3c4a83e559200d729db6768b5bdad7883ad9000b063406ccfd452ed1a3888a83",
+    "completeDiffSha256": "614f6c8a6eee0c692f78d543768d9ab809616ebf28d28154d72bf8ba1c6d546a",
+    "completeDiffBytes": 179524,
+    "changedPaths": 24
+  },
+  "reviewer": "/root/sd2_proposal006_review",
+  "reviewedAt": "2026-10-17T00:32:13.562213+00:00",
+  "freshContext": true,
+  "readOnly": true,
+  "authoredOrEditedCandidate": false,
+  "checks": {
+    "governingDocumentsAndPlanningSkill": "Reviewed",
+    "candidateManifestBlobsModesSizesHashesAndCompleteDiff": "PASS",
+    "predecessorDirectChildReviewReceipt": "PASS",
+    "proposalVerifier": "PASS; independently executed without --review-bound",
+    "protectedEntryFiles": 2457,
+    "appendOnlyHandoffs": 3,
+    "originalAttentionRows": 9,
+    "historicalReviewsRejectedBindingsAndSupplements": "Preserved byte-for-byte",
+    "proposedOrderedLocators": [14, 15, 16],
+    "proposedFieldOccurrences": [17, 19, 17],
+    "proposedTotalFields": 53,
+    "savedSourceReferences": 8,
+    "exactIdentityRoutesHashesFieldOrderAndSourceAffinity": "PASS",
+    "semanticBoundaries": "Kozlowski/Murdoch stage, amount, recipient slots, GPA/FFA and copied AMTOPP annotation drift retained. Kids administrator/provider scope differences, held age-endpoint interpretation, education alternatives, initial/renewal requirements, funding, uses, direct payment, FAFSA scope, four-year limit and renewal/reapplication differences retained without source selection or exclusions.",
+    "preservedRouteCounts": {
+      "identities": 406,
+      "fields": 7406,
+      "seeds": 676,
+      "links": 1127,
+      "sourceReceipts": 365,
+      "inheritedSourceRoutes": 35,
+      "convertedDestinations": 628,
+      "unclosedDestinationHolds": 1,
+      "M1Records": 437,
+      "M1Pins": 12,
+      "custodyReceipts": 71
+    },
+    "validationReceipts": "All seven records verified against recorded raw output, normalization, byte counts, hashes, commands and timestamps",
+    "recordedPlanTypecheckTests": "PASS; initial IPC EPERM attempts and unchanged retries retained",
+    "recordedStandardBuild": "BLOCKED_ENVIRONMENT; both exact attempts retain process/port EPERM",
+    "gitDiffCheck": "PASS",
+    "comparisonCoverage": "Unchanged at 300 occurrences across 14 autonomous plus two Jaycee inputs; separately selected execution would yield 353 across 17 plus two, leaving 389 autonomous inputs",
+    "outputIncidents": "Current preparation lapse and historical disclosures retained without retrospective relabeling",
+    "completeDiffTransmissionRecheck": {
+      "recheckedAt": "2026-10-17T00:32:40.589419+00:00",
+      "outcome": "PASS",
+      "method": "Independently recomputed complete git diff --binary between manifest entry and candidate; digest and byte count match unchanged manifest",
+      "candidateAndManifestUnchanged": true
+    }
+  },
+  "transmissionCorrections": [
+    {
+      "field": "binding.completeDiffSha256",
+      "originalMistypedValue": "614f6c8a6eee0c692f78d543768d9ab809616ebf28b28154d72bf8ba1c6d546a",
+      "correctedValue": "614f6c8a6eee0c692f78d543768d9ab809616ebf28d28154d72bf8ba1c6d546a",
+      "explanation": "Corrects a transcription error in the original structured transmission only. Independent recomputation matches the unchanged candidate and manifest. No candidate, finding, disposition or review outcome changed."
+    }
+  ],
+  "limits": [
+    "No files edited, staged or committed; no assemblers, npm commands, builds, historical verifiers, network, workbook or raw/native-content access executed by reviewer.",
+    "No new custody-availability, source-completeness, current-scholarship-truth or authenticated-current-main/target claim.",
+    "Standard-build and all existing preservation, recovery, human, canonical, publication, student, M1/SD5 and external-effect gates remain open at their original triggers.",
+    "Execution requires direct exact selection of this completed proposal. Full SD2 remains incomplete; stop before SD3."
+  ]
+}
