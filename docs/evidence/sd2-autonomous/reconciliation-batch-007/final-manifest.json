@@ -1,0 +1,217 @@
+{
+  "scope": "Exact selected53-field saved comparison plus prospective unselected386-input7062-field continuation; no canonical acceptance or release",
+  "createdAt": "2026-10-19T16:26:50.480210+00:00",
+  "entryCommit": "d436720a4aa85b578de5f4de6355efe15580d1e2",
+  "selectionCheckpoint": "8a01b3173a3ff0c0d33cac98922f44856d396dad",
+  "candidateCommit": "4ac85fb026d58ae8ca752ad78dc7e771f5a2907a",
+  "candidateTree": "1c08fe11552941044f47a8c7db52058e5b6940db",
+  "completeDiffSha256": "1f4b3c0a64ba60eff61e3f1b4fdc9f52a3f596100511452f81f34a37d10450db",
+  "completeDiffBytes": 870611,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "blob": "a482f729833756dbed80f039a6e1597bbf5e2a29",
+      "bytes": 711661,
+      "sha256": "1715e318a325aa88cfd3d2e6f591b5a8062f16f6137728b985b6ec9391aa7d7c"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "blob": "cff585b707c98989f0626d061e4c74e18cdba9bf",
+      "bytes": 166329,
+      "sha256": "940c251fa0b698338db6bbbb97ce27cb41c11c7fe2abc44c934a0638c6e47505"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "blob": "32289976640c7c9cab63a24ca7d8e0459b485ab9",
+      "bytes": 113523,
+      "sha256": "84e01b3e1894b3f9ca58d8451f7a0081fe44bca6806b540bf56de6c0a8c0f87c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/AUTHORITY.md",
+      "mode": "100644",
+      "blob": "7183fe644e4dd8fd860c3a8074b7918d90cfe634",
+      "bytes": 1360,
+      "sha256": "3fe4e12f4b1025427bc26c19a16c4c7855c662b7012606c9cefba404eb84e77e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/CONTINUATION.md",
+      "mode": "100644",
+      "blob": "e6da6f511500c1d69f60bd5375379abd5fcf8793",
+      "bytes": 7694,
+      "sha256": "acb000d2d9b7373d9510a9d4319a71f49fed960d437bf5626f86d0019461fdc7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/README.md",
+      "mode": "100644",
+      "blob": "a2e7f5348d18516829f12766b579fb16919a87cd",
+      "bytes": 10990,
+      "sha256": "4d2e3fada7638a4e48c86353316b4ed3d12009aef0030ec20dcf891ef32c8cc0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/artifact-pins.json",
+      "mode": "100644",
+      "blob": "84d5df7992b6ee637c26ec43f3a2149b896ee6d6",
+      "bytes": 2400,
+      "sha256": "2b083865758c59d7fe845ff2fbe76a0d35149c23a537323bd626cc5ec45d567a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/build-comparison.py",
+      "mode": "100644",
+      "blob": "bc18d78d426d9b05d639e1c22afe858af1cae44d",
+      "bytes": 25021,
+      "sha256": "15bc038b738c9cb42b7429558d3c656ef8dacb89cba3fdb564279cb287de43a1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/build.json",
+      "mode": "100644",
+      "blob": "6180b1092f5da636d07f8ead420f9a45477b95be",
+      "bytes": 751,
+      "sha256": "58a841e17ed3a762255a55d110ab14ae473602d21db9baf6615c1284cff5c113"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/build.log",
+      "mode": "100644",
+      "blob": "fae1964af24a622ff941edbcf0df07b87151742e",
+      "bytes": 61,
+      "sha256": "0c1c95857a742e9b6262a3838c813363a6ca89298cedc13999c10024b5dc8c87"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/plan.json",
+      "mode": "100644",
+      "blob": "9f007d721d9e1376eb99bf093b798c7593c8022e",
+      "bytes": 783,
+      "sha256": "244771099a0eb212d5bf60704dfb611f13d82888fd90bde4b9dcf70e1f4f1730"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/plan.log",
+      "mode": "100644",
+      "blob": "e1d868aec5709926401b37d5f4d04d2dc67b5630",
+      "bytes": 89,
+      "sha256": "fb5a9ecdf0efd94321cef1b3e703be521da03282032bedc839510cff5435db8e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/tests.json",
+      "mode": "100644",
+      "blob": "7be87acc7ada24eaa9d4ae46fd6fc73f0c554f5c",
+      "bytes": 3230,
+      "sha256": "8d6d9e50849a64197c96bae61152740128d015276923c37a696c4cc5cd5af381"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/tests.log",
+      "mode": "100644",
+      "blob": "0ca0ecfaf450935e174abadd1b6b1be3307623c0",
+      "bytes": 2550,
+      "sha256": "81792e5126f979687d0045974f094bd71fca9f91bd09a3e6b1c6598ee3127872"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/typecheck.json",
+      "mode": "100644",
+      "blob": "fd46d5151a274b05a781a7f00b88f794864f191c",
+      "bytes": 764,
+      "sha256": "af37fae4386a835a56d0bd3273c11bc626891075c758cb4f201b98a1ac67e7c1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/checks/typecheck.log",
+      "mode": "100644",
+      "blob": "510ec5daf15eaf31cca722f4f674626d7c042772",
+      "bytes": 66,
+      "sha256": "acb52d3485af3fc24a164b44849b0ab1bd669305b2435c1a3ae534c41387dc9d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/comparison.json",
+      "mode": "100644",
+      "blob": "da0b37f96b78255aa5e7e8feaf7cbf0bb457382e",
+      "bytes": 375363,
+      "sha256": "1cc6619fe8eccc19f2012cea48ce7c37182eaf3c08d27323fa3ca990cb916bd7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/continuation-scope.json",
+      "mode": "100644",
+      "blob": "12a01309bb21e538ea5d549c64bc1ac7946ad8d3",
+      "bytes": 287107,
+      "sha256": "987a886db192f25dceb9877b065f77506a96d095ea7524e53f8bfdc64cd9ede4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/entry-audit.json",
+      "mode": "100644",
+      "blob": "ab9031e5c54cd2d90cfd1a71eb45f3b33925e666",
+      "bytes": 1637,
+      "sha256": "c6740baafd501576c1a9c7bd2bcd822f94b899f52c4cf11933a134511e830038"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/identity-assessment.json",
+      "mode": "100644",
+      "blob": "4b097c66a6ff6dda5ca809e79addf52445524b69",
+      "bytes": 13579,
+      "sha256": "7d7f0dece4dd2b6ce186f9c81b9c8606cf37ebb9c617c2ca8fa30959c26fbc96"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/saved-source-references.json",
+      "mode": "100644",
+      "blob": "e88a3ade5d5eb36ae56570ad0d7b13a36bdc1a52",
+      "bytes": 54814,
+      "sha256": "8cf2195714930972933c8f9e44871726fa37db833a937015da22c2eaad001883"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/selected-context.json",
+      "mode": "100644",
+      "blob": "56b2411dec54ca5dbd88803afcb1d3498ba26963",
+      "bytes": 8718,
+      "sha256": "7ad1eb773ce56fec0af0c4ac475392749032261749699ab80fac8d9736a0813c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/selection.json",
+      "mode": "100644",
+      "blob": "642b306a34977c58c4a5c0b525ee21a79ea2d2d0",
+      "bytes": 15739,
+      "sha256": "d02d62a4251b2f1aced719c66ddbed9d120ae02b21f6bce1517df45169f1ae94"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/session-issues.json",
+      "mode": "100644",
+      "blob": "e7056c79d3d52c3908c9d3ae6796461736b45c34",
+      "bytes": 1178,
+      "sha256": "5115af98f82eac5bf698f2d3cb1d1a89ab9355768f0e2c2ffece270a4668fd09"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/validation.json",
+      "mode": "100644",
+      "blob": "cd7460a8c9b6b7534498b19d6f7f1326b26635d5",
+      "bytes": 6770,
+      "sha256": "90c468c0d4fee5b78596ef1c0f9f7323a2ebd49e43a6df8e730ccbfab2d48c4f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/verification.json",
+      "mode": "100644",
+      "blob": "af0cf5ee8a68bfa4907384b8543f00cad971b4ec",
+      "bytes": 1171,
+      "sha256": "b5264baf523acd2eb0ab596bb8e344deb23819588d509614d636849aa4f3903a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-007/verify.py",
+      "mode": "100644",
+      "blob": "503d650f038a1f2d50e4b10347f532a4fbc25c44",
+      "bytes": 17072,
+      "sha256": "8533bd85d6c0160801ff6092a90c77cd99ee857f09af842c85d908b0bd084ca6"
+    }
+  ],
+  "baselineLimit": "Fresh verified local predecessor receipt; authenticated current origin/main and deployment target not refreshed",
+  "retainedLocalOriginMain": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "selectedInputLocators": [
+    17,
+    19,
+    20
+  ],
+  "fieldOccurrences": 53,
+  "continuationScopeSha256": "987a886db192f25dceb9877b065f77506a96d095ea7524e53f8bfdc64cd9ede4",
+  "futureInputOccurrences": 386,
+  "futureFieldOccurrences": 7062,
+  "futureExecutionSelected": false,
+  "acceptedFacts": 0,
+  "canonicalAcceptance": false,
+  "SD3Started": false,
+  "externalEffects": false
+}
