@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "reviewerIdentity": "/root/sd2_continuation011_review",
+  "independence": {
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEditedCandidate": false,
+    "repositoryWrites": false,
+    "newSourceWorkbookRawNativeAcquisition": false,
+    "externalEffects": false
+  },
+  "binding": {
+    "group": 11,
+    "entryCommit": "0d76d744d9da5386e2301113911c90885f814f16",
+    "candidateCommit": "1c93b4d72cc9f3c66905931b5424b2bd34b4df02",
+    "candidateTree": "fb867215be6f62199305f7bd110b8ff85972d98a",
+    "manifestSha256": "cae61652b2ecb9fa233558375465049e52045ab0a3dca1c9486f1a04f9635d61",
+    "completeDiffSha256": "3ff1e39d6c3ac42c18c1d1c1478a64c789403b2ce6bd153009af98dee8333395",
+    "completeDiffBytes": 2732541,
+    "changedPaths": 18
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Unrelated WAI parent context propagates onto PAPA and Epic records",
+      "paths": [
+        "checkpoint-011/author-decisions.json#/records/16/semanticGuard",
+        "checkpoint-011/author-decisions.json#/records/17/semanticGuard",
+        "checkpoint-011/author-decisions.json#/records/18/semanticGuard",
+        "checkpoint-011/author-decisions.json#/records/19/semanticGuard",
+        "checkpoint-011/comparison.json#/records/16",
+        "checkpoint-011/comparison.json#/records/17",
+        "checkpoint-011/comparison.json#/records/18",
+        "checkpoint-011/comparison.json#/records/19",
+        "checkpoint-011/identity-assessment.json#/records/16"
+      ],
+      "evidence": "Saved rows240–243 have evidence-binding source sets papa,papa,epic,epic. Their new semantic guards nevertheless append WAI-specific deadline, membership and parent-checklist context. This propagates into all75 fields and four identity conclusions.",
+      "impact": "Parent-only and unknown-applicability language retains holds but does not establish source affinity. The unrelated context creates an unsupported parent relationship and avoidable deadline/checklist ambiguity, particularly beside the separately retained Epic deadline.",
+      "requiredAuthorFix": "Restrict WAI-specific common context to the sixteen WAI records. Give rows240–243 neutral saved-source limits and retain their exact PAPA/Epic distinctions. Regenerate affected derived comparison and identity views, preserve this rejected candidate/manifest/review, freeze a replacement candidate and obtain independent read-only recheck."
+    }
+  ],
+  "dispositions": [
+    {
+      "findingId": "M1",
+      "status": "open",
+      "owner": "Codex author",
+      "rationale": "Source-affinity correction is required before this group receives a matching PASS.",
+      "target": "Replacement group011 candidate before local receipt or group012 paths",
+      "trigger": "Author remediation and immutable replacement freeze",
+      "nextAction": "Apply the scoped correction, preserve rejected artifacts and request this reviewer's read-only recheck."
+    }
+  ],
+  "coverage": {
+    "orderedScope": "201–220",
+    "inputs": 20,
+    "fieldOccurrences": 370,
+    "evidenceBindings": 158,
+    "categories": {
+      "existing evidence consistent": 14,
+      "applicability/identity unresolved": 156,
+      "evidence unavailable": 199,
+      "existing evidence conflicting": 1
+    },
+    "positiveClaimsReviewed": "Nine amounts and five eligibility fields, including Republic Management/Flight, Sporty's, Sun Country and WMA eligibility.",
+    "fieldAudit": "Independently checked every original whole envelope, field order, candidate identity, held state, explicit record route, original packet reference, evidence hash, Unicode offsets, registry/source affinity and minimum-proof route. Derived source views match the original field bindings.",
+    "semanticAudit": "Checked child/prerequisite/slot boundaries; missing-name holds; Ted redacted-title versus observed-body distinction; UAA separators/plural/TBD uncertainty; WAI/PAPA/LPA distinctions; NKL entry-GPA and AND/OR scope; White Family hours; helicopter date boundary; WMA military-prerequisite non-inference; and Epic campus/allocation/age/medical distinctions. Apart from M1, no additional finding was identified.",
+    "verticalMaintenance": "The new eligibility conflict correctly preserves the original verified envelope, expectedCompletionBefore annotation and beforeBoundaryIneligible flag. The exact retained prior-date exclusion supports flagging annotation/source-direction drift. No silent directional correction or exact-boundary eligibility is accepted."
+  },
+  "preservation": {
+    "protectedPriorFiles": 2694,
+    "allPriorBytesAndModesPreserved": true,
+    "exactAppendHistories": 3,
+    "allTenPriorCandidateReviewDigestsVerified": true,
+    "allTenPriorDirectChildTwoFileReceiptsVerified": true,
+    "validGroup010ReceiptPrecedesGroup011Paths": true,
+    "allOriginal7406FieldAnd406IdentityHoldsPreserved": true,
+    "originalResearchCursor": 406,
+    "nextResearchInput": null,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "originalAttentionSupplementsM1CustodyAndRoutesPreserved": true
+  },
+  "checks": [
+    {
+      "check": "Independent candidate-manifest and complete-diff verification",
+      "result": "PASS",
+      "detail": "Verified candidate tree, complete binary diff digest/length/path set and every changed blob's bytes, SHA256 and mode."
+    },
+    {
+      "check": "Group011 local-check.py verify",
+      "result": "PASS",
+      "exitCode": 0,
+      "startedAt": "2026-10-19T22:45:29.965373+00:00",
+      "completedAt": "2026-10-19T22:45:31.430193+00:00",
+      "reviewBound": false
+    },
+    {
+      "check": "Independent memory-only adapter adversarial checks",
+      "result": "PASS",
+      "detail": "Twelve exact bindings accepted;51 tamper cases rejected, including changed identity/record, changed excerpt, absent registry, changed source hash and all three unresolved named-amount promotion attempts. Shared engine hash remains pinned and unchanged."
+    },
+    {
+      "check": "Application-check receipt provenance",
+      "result": "BLOCKED_ENVIRONMENT",
+      "detail": "Verified group011 reference hash and group010's four actual raw-output hashes: plan/typecheck/test/build exited127 with missing tsx/tsc/next. No rerun, installation, repair, waiver or application PASS is claimed."
+    },
+    {
+      "check": "Whitespace and scope",
+      "result": "PASS",
+      "detail": "Local verifier completed the root diff whitespace check. Candidate contains only group011 paths and three permitted append histories."
+    }
+  ],
+  "limits": {
+    "canonicalAcceptance": false,
+    "currentSourceOrIdentityTruthEstablished": false,
+    "nativeVisualFullFormCompletenessEstablished": false,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "outstandingGates": "Original evidence, custody, workbook preservation/recovery, permissions, human/canonical/publication/student/M1/SD5/effect gates remain operative. Codex validation/governance/delivery retains exact dependencies, unchanged checks, supported exact build and fresh authenticated main/target proof before separately authorized acceptance/release."
+  },
+  "nextPointer": {
+    "status": "Blocked by M1 until replacement matching PASS and valid local receipt",
+    "afterResolution": "Capture group011 review-bound PASS at its valid receipt tip before creating group012 paths.",
+    "nextGroup": 12,
+    "scopeOrder": 221,
+    "savedInputKey": "saved-405588227-row-244",
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-013.json",
+    "recordPointer": "/records/0",
+    "nextGroupInputs": 20,
+    "nextGroupFields": 320,
+    "remainingInputs": 166,
+    "remainingFields": 2685,
+    "finalUnionAudit": "Additional independent386-input/7062-field coverage audit remains mandatory after20groups."
+  },
+  "incidents": [
+    {
+      "owner": "This reviewer",
+      "description": "One diagnostic printed six preselected bounded spans, each at most150characters; two included beyond-needed RJet navigation wording and brief WMA history words. No action, acquisition, full excerpt, applicant data or mutation occurred.",
+      "disposition": "Disclosed to author; stopped source-span output and completed checks using internal predicates/counts/hashes."
+    },
+    {
+      "owner": "This reviewer",
+      "description": "Initial bounded handoff/section9 diagnostics included earlier progress blocks beyond the current block, without printing either complete historical chain.",
+      "disposition": "No historical state changed; subsequent preservation checking used byte/hash comparisons and current-block markers."
+    }
+  ],
+  "availability": "Available for read-only replacement-candidate recheck; author owns all remediation."
+}

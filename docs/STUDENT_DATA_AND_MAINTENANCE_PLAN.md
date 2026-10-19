@@ -378,6 +378,9 @@ not duplicate project progress trackers. Update this small block at every checkp
   target beforeacceptance/release;allothergateowners/triggers exact. Kelseyreviewer/
   limitedJayceeapprovals unchanged. No newsource/workbook/raw/native reads,acceptance,
   externaleffects/SD3. Never initialize/reset/replay. No context%/backgroundschedule.
+- Round1 M1 guarded-source correction retained rejectedcandidate/manifest/review;
+  remediation.json/affinity-checks pin fourPAPA/Epic records/75fieldguards. Only exact
+  replacement finalmanifest/reviewPASS controls;alloriginalenvelopes/routes unchanged.
 <!-- SD2-CONTINUATION-011-END -->
 <!-- SD2-CONTINUATION-010-START -->
 - Existing full386/7062authority persists; group010:20inputs/412heldfields;

@@ -57,3 +57,9 @@ summaries, profiles, biography, blank labels and unrelated/FAQ context.
 No app/config/CI change, external Git/deployment, provider contact, messages, monitoring,
 acceptance or SD3. Existing authority continues in a fresh context with this exact
 next pointer. No invented context percentage or unattended/background task. EffortHigh.
+
+Round1 candidate/manifest/review remain immutable in Git and manifest-round1.json/
+review-round1.json. M1 source-affinity remediation is in remediation.json: WAI parent
+common guards apply only to records0–15; PAPA/Epic16–19 keep only their existing-source
+limits and exact distinctions. Matching final PASS must independently recheck this
+replacement. No original envelope, review, held state or route changed.

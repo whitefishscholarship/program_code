@@ -30,6 +30,11 @@ reset/replay. Stop beforeSD3. Freshentry:AGENTS canonicalorder,studentplan secti
 originalAUTHORITY/POLICY/latestclose,batch007CONTINUATION/scope,rootauthority,current
 README/entry/guards/comparison/sourceviews/checks/manifest/review. EffortHigh.
 
+Round1 M1 source-affinity correction: WAI common guards are limited to records0–15;
+PAPA/Epic16–19 retain neutral exact-source limits. Rejected candidate/manifest/review
+retained in manifest-round1.json/review-round1.json; remediation.json and affinity-checks
+record the author fix. Only matching replacement final-manifest/review may PASS.
+
 Priorhandoffexactbelow.
 
 ---

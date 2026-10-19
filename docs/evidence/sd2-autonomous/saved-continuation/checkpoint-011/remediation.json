@@ -1,0 +1,33 @@
+{
+  "scope": "Author-owned correction of currentgroup011 M1 before local receipt; no original source/evidence/history changes.",
+  "recordedAt": "2026-10-19T22:49:26.973010+00:00",
+  "rejectedCandidateCommit": "1c93b4d72cc9f3c66905931b5424b2bd34b4df02",
+  "rejectedManifestPath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-011/manifest-round1.json",
+  "rejectedManifestSha256": "cae61652b2ecb9fa233558375465049e52045ab0a3dca1c9486f1a04f9635d61",
+  "rejectedReviewPath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-011/review-round1.json",
+  "rejectedReviewSha256": "ac7204d3b4d155f6130aba2f3bf20b9eb7ec1bf18f07937ee5267c0523e5fe4f",
+  "originalSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "findingId": "M1",
+      "severity": "medium",
+      "status": "author-fixed-pending-independent-recheck",
+      "owner": "Codex author",
+      "target": "Replacement group011 candidate before local receipt or group012 paths",
+      "rationale": "Rows240–243 contain only PAPA/Epic sources. Unrelated WAI common parent rules create unsupported source relationship and deadline/checklist ambiguity.",
+      "action": "Limited WAI-specific common guard to records0–15; neutral original-source limits for16–19 retain their exact PAPA/Epic scopes. Regenerated comparison and identity views, preserving every original envelope, reference, route, category, positive decision and derived source binding.",
+      "trigger": "This independent review M1",
+      "nextAction": "Freeze replacement; reviewer independently rechecks complete candidate and exact guard/source affinity before matching PASS."
+    }
+  ],
+  "originalFactsChanged": 0,
+  "acceptedFacts": 0,
+  "newSourceWorkbookRawNativeReads": 0,
+  "SD3Started": false,
+  "externalEffects": false
+}

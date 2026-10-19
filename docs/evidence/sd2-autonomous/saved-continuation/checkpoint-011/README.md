@@ -54,3 +54,9 @@ after all20 groups. No gaps, duplicates, prior overlap or unverified review bind
 No invented context percentage, new chat, unattended schedule or background service.
 No new source/workbook/metadata/search/portal/login/form/raw/native reads, acceptance,
 app/config/CI change, remote Git/deployment, contact, monitoring or SD3.
+
+Round1 candidate/manifest/review remain immutable in Git and manifest-round1.json/
+review-round1.json. M1 source-affinity remediation is in remediation.json: WAI parent
+common guards apply only to records0–15; PAPA/Epic16–19 keep only their existing-source
+limits and exact distinctions. Matching final PASS must independently recheck this
+replacement. No original envelope, review, held state or route changed.
