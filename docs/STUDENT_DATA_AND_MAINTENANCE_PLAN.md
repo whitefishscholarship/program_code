@@ -353,6 +353,28 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-006-START -->
+- October19,2026 directexactselection:Kozlowski14,Kid'sChance15,Murdoch16 compared,
+  17+19+17=53held fields;13consistent/35unresolved/4unavailable/1existingKidsstage
+  conflict. Batch006README authoritative. All envelopes/identities unchanged;
+  0acceptedfacts/mappings. FullSD2incomplete. Never initialize/reset/replay;stopSD3.
+- PreserveKozlowskiOR/two2000,MurdochHSsenior/one500,GPA/FFA/AMTOPPannotationdrift;
+  Kidsstage/injury/MTevent/agewording/heldendpoints/educationOR,initial-renewal
+  checklist/FAFSAscope/funds/uses/directpayment/fouryearlimit/renewal-reapplication.
+- Entry30cc24a preserved;1582matchingfiles/901missingrestored/Gitlink,nooverwrite/
+  index/branch/historychange/researchreplay/rawread. Properproposal006PASS before
+  paths;prematurefailedverifierretained. Allfourcurrentnpmchecks exit127missing
+  localtsx/tsc/next;noPassorwaiver. Codexvalidationownspermitteddeps/unchangedchecks/
+  supportedexactbuild/currentmain-target beforeacceptance/release;allotheroriginal
+  gateowners/triggers exact. Priorincidents retained;no newsourceoutputincident.
+- Prior300exact;cumulative353occurrences/17autonomous+2Jaycee,389outside. Research
+  406/406,cursor406,no nextinput;7406fields/406identities/676seeds/1127links/365receipts/
+  35inheritedroutes/628destinations/nineattentionrows/allsupplements/437M1/12pins/
+  71custodyreceipts/everyroute exact. Independentstatus onlymatchingmanifest/review;
+  otherwisepending. NextCodex:afterfullbatchPASS/latercontinue,preparenextproposal;
+  noautomaticexecution/routinequestion. No source/workbook/rawreads,acceptance,
+  externaleffects orSD3. Retaincontextstop/durablehandoff,noinventedpercent.EffortHigh.
+<!-- SD2-BATCH-006-END -->
 <!-- SD2-PROPOSAL-006-START -->
 - October16,2026 next bounded proposal006:Kozlowski14,Kid'sChance15,Murdoch16,
   17+19+17=53held fields,8saved source references. Proposal only;0new comparisons/

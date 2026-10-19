@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "savedRowLocator": 14,
+      "displayLabel": "John Kozlowski Memorial Scholarship",
+      "publicIdCandidates": [
+        "award-df57e3f6a067"
+      ],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "Exact named Kozlowski child/shared RHM route supports only existing award-df57e3f6a067 candidate. HSsenior OR undergraduate/GPA/FFA/two2000slots and copiedAMTOPP annotation drift stay held. No mapping or additional IDs accepted.",
+      "minimumAdditionalProof": "Applicable child/source/cycle identity and formal candidate validation; annotation correction separately selected.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "Exact named child, official shared application, and saved app/name provenance support only a candidate link."
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/14"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/0"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/6"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/2"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/7"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/12"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/13"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/5"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/14"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/6"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    },
+    {
+      "savedRowLocator": 15,
+      "displayLabel": "Kid's Chance of Montana",
+      "publicIdCandidates": [
+        "award-66c48204573e"
+      ],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "Existing award-66c48204573e remains held. Shared RHM and provider initial/renewal scope differences do not authorize same-cycle identity,rule winner,hard exclusions or accepted mapping. Preserve original identity proposal.",
+      "minimumAdditionalProof": "Applicable exact-child/source/cycle and shared-route/initial-renewal relationship,retaining unresolved variants.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "Exact named child, official shared application, and saved app/name provenance support only a candidate link."
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/15"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/0"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/8"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/7"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    },
+    {
+      "savedRowLocator": 16,
+      "displayLabel": "Murdoch's Scholarship",
+      "publicIdCandidates": [
+        "award-fc37c2d47f56"
+      ],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "Exact Murdoch named child/shared RHM route supports only existing award-fc37c2d47f56 candidate. HSsenior/GPA/FFA/one500slot and copiedAMTOPP drift stay held; sponsor background establishes no identity or eligibility rule.",
+      "minimumAdditionalProof": "Applicable exact-child/source/cycle identity and formal candidate validation; annotation correction separately selected.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "Exact named child, official shared application, and saved app/name provenance support only a candidate link."
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/16"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/0"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/6"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/2"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/7"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/12"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/13"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/5"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/14"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selected-context.json",
+          "sha256": "fab0cd818736013878f25ad7bbdadbc784d0758abe3aad13c19857e054ee877b",
+          "pointer": "/sources/6"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    }
+  ],
+  "acceptedMappings": 0,
+  "newStableIds": 0,
+  "deletedInputs": 0,
+  "mergedInputs": 0,
+  "childAwardsCreated": 0,
+  "completePopulationIdentityReconciliation": false,
+  "SD3Started": false
+}

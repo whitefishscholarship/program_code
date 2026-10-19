@@ -1,3 +1,51 @@
+# SD2 comparison batch006 — October 19, 2026
+
+Kelsey directly selected proposal006 exact53fields. Kozlowski14,Kid'sChance15,
+Murdoch16 compared in order:17+19+17;13consistent/35applicability-identity unresolved/
+4unavailable/1existingKids education-stage conflict. All envelopes/identities/
+states/times/acceptance unchanged;0accepted facts/mappings. FullSD2 incomplete.
+Never initialize/reset/replay. Stop before SD3.
+
+Current closeout:sd2-autonomous/reconciliation-batch-006/README.md,AUTHORITY.md,
+selection.json,entry-audit.json,checkout-recovery.json,comparison.json,identity-
+assessment.json,source views/selected-context.json,session-issues,validation/checks,
+verify.py. Full independentstatus only matchingfinal-manifest/review;otherwise
+pending. Fresh proposal006 review-bound PASS/30cc24a after non-overwriting local
+recovery and before newpaths;priorreviews/rejectedbindings/contexts unchanged.
+Entry1582matching files preserved,901missing tracked blobs/modes and Gitlink restored
+from exacttip,no index/branch/history change,reset/queue/researchreplay or rawread.
+One premature verifierfailed before recoveryfinished;proper entryPASS retained.
+
+PreserveKozlowski stageOR/two2000slots,Murdoch HSsenior/one500slot,GPA/FFA/copied
+AMTOPP annotation drift;Kids administrator/provider stage/injury/MT-work-event
+scopes,agewording/heldinclusiveinterpretation,educationOR,initial/renewalchecklists,
+FAFSAinitialscope/need distinction,funds/uses/directpayment/fouryearlimit/shared
+reapplication versus provider mayrenew. No sourcewinner or accepted identity.
+No new source-output incidentidentified;allprior scope lapses remain disclosed.
+
+Prior300comparisons exact;cumulative353fields/17autonomous+2Jaycee,389outside.
+Research406/406,cursor406,no nextinput;7406fields/406identities/676seeds/1127links/
+365receipts/35inheritedroutes/628destinations including1unclosed/nineattentionrows/
+allsupplements/437M1routes/12pins/71custodyreceipts/every originalowner-trigger-path-
+action-review retained. No newcustodyavailabilityclaim. Current allfour npmchecks
+blocked:missinglocaltsx/tsc/next exit127,not oldEPERM,nopassclaimed. Codexvalidation
+owns permittedexactdependencyrestoration/unchangedchecks and supportedexactbuild/
+authenticatedcurrentmain-target before acceptance/release;historicalgates/owners/
+triggers remain. No install/config/waiver. Other preservation/recovery/human/
+canonical/publication/student/M1/SD5/effect gates exact in originalpackets/SESSION_CLOSE/
+README/section9. Desktop visibility remains only laterexplicitUItrigger.
+
+NextCodex underretaineddelegation:aftermatchingfull-batchPASS andlatercontinue,
+prepare nextboundedproposal,no replay/automaticexecution/routinequestion. Kelsey
+namedreviewer/limitedJayceeapprovals unchanged. No newsource/workbook/rawreads,
+acceptance,external effects orSD3. Retaincontextstop/durablehandoff,noinventedpercent.
+Freshentry:AGENTSorder,section9,originalAUTHORITY/POLICY/latestSESSION_CLOSE,current
+batchauthority/selection/README/comparison/identity/sourceviews/validation/manifest/
+review;runbatch006verify.py --review-bound in valid receipt context. Earlier valid
+receipts plusbyteproof,neverwidenoldverifiers. Effort:High. Priorhandoffexactbelow.
+
+---
+
 # SD2 proposal006 — October 16, 2026
 
 Prepared next bounded proposal:John Kozlowski Memorial14,Kid's Chance15,Murdoch16,

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "currentExecutionIncidents": [
+    {
+      "kind": "missing-local-checkout-files",
+      "description": "Entry had no Git link and901missing tracked files. All1582remaining tracked files and retained index matched exact30cc24a checkpoint. Restored only missing tracked bytes/modes and Git link,without overwrite,branch/history/index change,reset,queue/research replay or raw reacquisition.",
+      "evidencePath": "docs/evidence/sd2-autonomous/reconciliation-batch-006/checkout-recovery.json",
+      "containment": "Fresh unchanged proposal006 review-bound verifier passed after recovery,before new batch paths. Historical custody receipts are preserved; no raw custody availability claim."
+    },
+    {
+      "kind": "premature-local-verifier-attempt",
+      "description": "A verifier attempt ran before the background checkout restoration completed and failed because the Git link was still absent. It made no semantic comparison or source read. The subsequent proper entry verification passed and is retained in entry-audit.json.",
+      "containment": "Dependent batch work began only after full restoration and valid entry PASS."
+    },
+    {
+      "kind": "missing-local-node-dependencies",
+      "description": "All four exact npm check commands exited127 because their local tsx/tsc/next executables are missing after checkout loss. These are new environment failures,not the historical IPC/buildEPERM and not passing checks.",
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or authorized release in supporting environment",
+      "nextAction": "Restore exact lockfile dependencies only in a permitted environment and rerun unchanged plan/type/tests/standard-build checks. Retain current and historical failures; no dependency installation,network fetch,configuration repair or alternative-build waiver here."
+    }
+  ],
+  "retainedIncidentPaths": [
+    "docs/evidence/sd2-autonomous/consolidation-proposal-006/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-005/session-issues.json",
+    "docs/evidence/sd2-autonomous/consolidation-proposal-005/session-issues.json",
+    "docs/evidence/sd2-autonomous/consolidation-proposal-004/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-003/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-002/session-issues.json"
+  ],
+  "newSourceOutputIncidentsIdentified": false,
+  "owner": "Codex evidence/source governance",
+  "trigger": "Every later selected preview/dispatch or original later history review",
+  "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-006/session-issues.json",
+  "nextAction": "Preserve all prior output disclosures,select exact input/source/field sentence before output,never whole source registry/shared source/biography/background. No relabeling,reacquisition or replay."
+}
