@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-007-START -->
+- Context handoff:saved-continuation/checkpoint-007/SESSION_CLOSE.md preserves full
+  authorization and exact nextgroup008 pointer;no renewed selection required.
+- October19,2026 already-authorized group007: 20inputs/387heldfields;
+  16 consistent, 109 unresolved, 257 unavailable, 5 conflicting. Independent status only matching groupmanifest/review,
+  otherwise pending. Every original envelope/identity/route remainsheld;0accepted.
+  Continuation140/386inputs,2689/7062fields;
+  cumulative3095fieldoccurrences/160autonomous+2Jaycee inputs.
+- Currentauthoritativecloseout:saved-continuation/checkpoint-007/README,author-decisions,
+  comparison,identity/sourceviews,entry-audit,session-issues,next-input,verification/
+  final-manifest/review. Record-specific semanticguards preserve composite/current-
+  historical/parent-child/materials/eligibility distinctions. No original changes.
+- NextCodex after matching PASS: automatically group008,scopeorder141, docs/evidence/sd2-autonomous/checkpoint-009.json /records/0,keysaved-405588227-row-164.
+  Remaining246inputs/4373fields. All386/7062authority persists with automatic
+  internal reviews/remediation/continuation,no per-checkpoint approval. Capture fresh
+  predecessor receipt BEFOREnewpaths;alloldbytes/modes/bindings/appendhistories exact.
+  After20groups additional independent386/7062unionaudit. Unknowns stayheld/routed.
+- Research406/406,cursor406,nextnull;7406field/406identityholds and every original
+  seed/link/source/inheritedroute/destination/attention/supplement/M1/custody route
+  retained. Current4shared appchecks blockedmissingtsx/tsc/next127,noPASS/waiver/install.
+  Codexvalidationowns separately permittedexactdeps/unchangedchecks/exactbuild/fresh
+  main-target beforeacceptance/release;allotheroriginalgateowners/triggers exact.
+  No newsource/workbook/rawreads/acceptance/externaleffects/SD3. Kelseynamedreviewer/
+  limitedJayceeapprovals exact. FullSD2incomplete. Contexthandoff retains authorization/
+  pointer,noinventedpercentage/backgroundtask. Never initialize/reset/replay;stopSD3.
+<!-- SD2-CONTINUATION-007-END -->
 <!-- SD2-CONTINUATION-006-START -->
 - October19,2026 already-authorized group006: 20inputs/384heldfields;
   18 consistent, 168 unresolved, 192 unavailable, 6 conflicting. Independent status only matching groupmanifest/review,
