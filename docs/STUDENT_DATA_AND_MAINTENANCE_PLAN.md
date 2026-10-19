@@ -353,6 +353,29 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-BATCH-007-START -->
+- October19,2026 exactproposal007completed:Odd17/RHM19/Servant20,18+18+17=53heldfields;
+  17consistent/25unresolved/10unavailable/1Oddminima conflict. All originalsheld,
+  0acceptedfacts/mappings.Cumulative406fields/20autonomous+2Jaycee,386outside.
+- Prepareduserrequestedlargercontinuation:batch007CONTINUATION.md/continuation-scope,
+  SD2-SAVED-CONTINUATION-1,386inputs/7062heldfields,20reviewgroups(19x20+6). Planonly,
+  nofuturecomparisons. One laterdirectexactselectioncoversall386;thenCodexreviews/
+  repairs/continuesgroupsautomaticallywithoutper-checkpointapproval. Unknownsstay
+  held/routed,pauseonlygenuineoutside-scope/evidence/effectdecisions. Noanother3input
+  proposal bydefault. All substantiveaccuracy/source/human/canonical/SD3gatesexact.
+- PreserveOddmax3.0/nonmembership/slot-stagevariants/heading;RHM2000child/50/MTschools/
+  halftime/FAFSA-notneed-orresidence;Servant500/FFA/2.0/AMTOPPdrift/FAQannex. Prior
+  author/reviewer/infrastructure/checkerincidents/holdroutes stayexact. Proper
+  proposal007PASS/d436720 beforepaths;alloldreviewbindings/verifiercontextspreserved.
+- Research406/406,cursor406,nextnull;7406fields/406identities/676seeds/1127links/
+  365receipts/35inheritedroutes/628destinations/nineattentionrows/allsupplements/
+  437M1/12pins/71custodyreceipts/everyrouteexact. Current4appchecks missingcommands,
+  noPASS/waiver;Codexvalidationownspermitteddeps/unchangedchecks/exactbuild/main-target
+  beforeacceptance/release,allotheroriginalgates/ownerstriggersexact. Independent
+  status onlymatchingmanifest/review,otherwisepending. No newsource/workbook/rawreads,
+  acceptance,externaleffects orSD3. NextKelsey:oneexact386input/7062fieldselection;
+  thenautomaticCodexreviewedgroups. Never initialize/reset/replay. EffortHigh.
+<!-- SD2-BATCH-007-END -->
 <!-- SD2-PROPOSAL-007-START -->
 - October19,2026 nextproposal007:OddFellows17,RHMchild19,Servant20 (offset17/18/19),
   18+18+17=53held fields/7sources. Proposalonly;0newcomparisons/facts,noexecution.

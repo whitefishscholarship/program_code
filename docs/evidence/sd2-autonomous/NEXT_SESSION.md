@@ -1,3 +1,47 @@
+# SD2 comparison007 and larger continuation — October19,2026
+
+Executed exactproposal007:Odd17,RHMchild19,Servant20(offset17/18/19),53held fields:
+17consistent/25unresolved/10unavailable/1existingOddrecipient-minima conflict.
+All original envelopes/identities unchanged;0acceptedfacts/mappings. Cumulative
+406fieldoccurrences/20autonomous+2Jaycee,386autonomousoutside. Research406/406,
+cursor406,nextnull;7406field/406identity holds. FullSD2incomplete;stopbeforeSD3.
+
+Currentcloseout:sd2-autonomous/reconciliation-batch-007/README.md,AUTHORITY/selection/
+entry-audit/comparison/identity/sourceviews/selected-context/session-issues/validation/
+verify.py. Independentstatus onlymatchingmanifest/review;otherwisepending. Proper
+proposal007review-boundPASS/d436720 beforepaths;alloldbindings/rejectedreviews/
+verifiercontexts/entrybytes/modes/append-onlyhistory preserved. Never initialize/
+reset/replay. PreserveOddmaximum3.0/nonmembership/3+vs1+/stagevariants/neighborheading;
+RHM2000child/50slots/MTschools/half-time/FAFSA-notneed-orresidence;Servant500/FFA/
+GPA2.0/AMTOPPdrift/sharedFAQannex. Shared/current/historical/materialscopes distinct.
+
+Userrequestslargerchunks/lessinteraction. PreparedCONTINUATION.md andcontinuation-
+scope.json:SD2-SAVED-CONTINUATION-1,exactremaining386inputs/7062heldfields,offset20–405,
+20internalreviewgroups(19x20+6). Planningonly,executionSelected:false;no bulksemantic
+comparison. One directexactselection of reviewedmanifest permits all386;Codex then
+reviews/repairs/continuesapprovedgroups automatically,withoutper-group humanprompt.
+Unknowns stayheld,routed;pauseonlygenuineoutside-scope/evidence/effectdecisions.
+Donotfallbacktoanotherthree-inputproposal. Existingapplication/source/human/
+canonical/preservation/release/SD3gates are unchanged. Context handoffsretainselected
+authorityandnextoriginalpointer,noinventedpercentage orscheduledbackgroundtask.
+
+All676seeds/1127links/365receipts/35inheritedroutes/628destinations1unclosed/nine
+attentionrows/allsupplements/437M1routes/12pins/71custodyreceipts/everyowner-trigger-
+path-action-review retained. Currentfourappchecks exit127missingtsx/tsc/next,noPASS/
+waiver. Codexvalidationownspermittedexactdeps/unchangedchecks/exactbuild/currentmain-
+targetbeforeacceptance/release. Allotheroriginalgates/routes remaininpackets/
+SESSION_CLOSE/README/section9;desktoponlyexplicitUItrigger. No newsource/workbook/
+rawreads,acceptance,externaleffects orSD3. Retainpriorauthor/reviewer/incidents.
+
+NextKelsey:oneexact386input/7062fieldcontinuationselection aftermatchingfullPASS.
+NextCodexafterselection:execute/reviewapprovedgroupswithoutcheckpointreapproval,
+withinCONTINUATIONbounds;no routineGit/reviewerquestion. Freshentry:AGENTSorder,
+section9,originalAUTHORITY/POLICY/latestSESSION_CLOSE,currentbatch/continuation/
+manifest/review;runbatch007verify.py --review-bound in valid receipt context.
+Preserveearliervalidreceipts plusbyteproof. EffortHigh. Priorhandoffexactbelow.
+
+---
+
 # SD2 proposal007 — October 19, 2026
 
 Prepared next bounded proposal:OddFellows/Rebekahs saved17,RHMchild19,Servant20;
