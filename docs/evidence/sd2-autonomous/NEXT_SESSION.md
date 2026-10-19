@@ -1,3 +1,44 @@
+# Authorized saved continuation — internal group003
+
+The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
+Progress is authoritative in studentplan section9. Group003:20inputs/384fields;
+18 consistent, 114 unresolved, 245 unavailable, 7 conflicting. Independent status only matching final-manifest/review;
+otherwise pending. All original facts/identities remainheld;0accepted. FullSD2
+incomplete. Never initialize/reset/replay. Stop beforeSD3.
+
+Currentcloseout:saved-continuation/checkpoint-003/README,config,author-decisions,
+comparison,identity-assessment,source-references,session-issues,entry-audit,next-input,
+verification,final-manifest/review. Rootauthority pins frozen batch007CONTINUATION/
+scope;sharedengine/checks/validation unchanged. All previousbytes/modes/reviews and
+three append-only handoff histories preserved. No prior verifier context widened.
+NextCodex after matching PASS: automatically group004,scopeorder61,
+docs/evidence/sd2-autonomous/checkpoint-005.json /records/0,keysaved-405588227-row-84.
+Remaining326inputs/5886fields. Capture fresh current review-bound receipt
+BEFORE newpaths. Fullauthorization includes automatic independent reviews/author
+remediation/continuation,no routine checkpointselection. Context handoffs preserve
+this authority and exact next pointer;no inventedpercentage/backgroundschedule.
+
+Research406/406,cursor406,nextnull;7406field/406identityholds. All original owner-
+trigger-path-action-review routes,nineattentionrows/supplements,437M1/12pins,71custody
+receipts,676seeds/1127links/365receipts/35inheritedroutes/628destinations(1unclosed)
+retained. No new custodyavailabilityclaim. Four sharedcurrentappchecks blockedmissing
+tsx/tsc/next(exit127),notPASS/waiver. Codexvalidationowns separately permittedexactdeps/
+unchangedchecks/exactbuild/freshmain-target before acceptance/release;all other
+original source/custody/history/workbook/recovery/permission/human/canonical/
+publication/student/M1/SD5/effect gate owners/triggers remain in originalpackets/
+latestSESSION_CLOSE and priorhandoffs. Kelseynamedreviewer/limitedJayceeapprovals exact.
+Unknowns stayheld;continue unaffected inputs. Pauseonlygenuine outside-scope/user-
+evidence/effectdecision. No newsource/workbook/raw/native reads,acceptance,external
+effects orSD3. Finaladditional386/7062coverageaudit remains mandatory.
+
+Freshentry:AGENTS canonicalreadorder,studentplan section9,originalAUTHORITY/POLICY/
+latestSESSION_CLOSE,batch007CONTINUATION/scope,rootauthority,currentgroupREADME/
+entry/comparison/guards/sourceviews/validation/manifest/review. Run engine verify 3
+--review-bound only at its valid receipt tip;retain old validreceipts plusbyteproof.
+EffortHigh. Priorhandoffexactbelow.
+
+---
+
 # Authorized saved continuation — internal group002
 
 The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
