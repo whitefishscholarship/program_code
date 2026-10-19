@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-011-START -->
+- Existing full386/7062authority persists; group011:20inputs/370heldfields;
+  14 consistent, 156 unresolved, 199 unavailable, 1 conflicting. Independent status only matching
+  final-manifest/review,otherwise pending. All original fields/identities/routesheld;
+  0acceptedfacts/mappings. Continuation220/386inputs,4377/7062fields;cumulative
+  4783occurrences/240autonomous+2priorJaycee. FullSD2 incomplete;stopbeforeSD3.
+- Closeout:saved-continuation/checkpoint-011/SESSION_CLOSE.md,README,config,entry-audit,
+  author-decisions,comparison,identity/sourceviews,local-check/amount-heading-bindings/
+  adapter-checks,application-checks,verification/manifest/review,next-input. Exact
+  recordguards retain every source/identity/parent-child/current/material/eligibility
+  distinction. Group-only PDFbinding pins wholeoriginalrecord/evidence/source/unique
+  excerpt/headings;no oldengine/context change or unresolved namedbinding promotion.
+- NextCodex after matching PASS:automatic group012, scope order221, keysaved-405588227-row-244, docs/evidence/sd2-autonomous/checkpoint-013.json /records/0.
+  Remaining166inputs/2685fields. BEFOREnewpaths at valid receipt tip,capture
+  python3 docs/evidence/sd2-autonomous/saved-continuation/checkpoint-011/local-check.py verify --review-bound
+  Preserve every priorbyte/mode/review/threeappendhistories;no replay/widening. Existing
+  fullauthorization includes automaticreviews/authorremediation/continuation,no routine
+  question. Additionalindependent386/7062unionaudit remains pending after20groups.
+- Research406/406,cursor406,nextnull;7406field/406identityholds/alloriginalsource/link/
+  inherited/destination/attention/supplement/M1/custody routes/owners/triggers/actions
+  exact. Requiredappchecks blockedmissingtsx/tsc/next127,noPASS/waiver/install. Codex
+  validation owns separatelypermittedexactdeps/unchangedchecks/exactbuild/freshmain-
+  target beforeacceptance/release;allothergateowners/triggers exact. Kelseyreviewer/
+  limitedJayceeapprovals unchanged. No newsource/workbook/raw/native reads,acceptance,
+  externaleffects/SD3. Never initialize/reset/replay. No context%/backgroundschedule.
+<!-- SD2-CONTINUATION-011-END -->
 <!-- SD2-CONTINUATION-010-START -->
 - Existing full386/7062authority persists; group010:20inputs/412heldfields;
   14 consistent, 179 unresolved, 213 unavailable, 6 conflicting. Independent status only matching

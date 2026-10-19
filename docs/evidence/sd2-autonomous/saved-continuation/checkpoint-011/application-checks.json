@@ -1,0 +1,19 @@
+{
+  "scope": "Reused unchanged application-check failure receipts; no new attempt or PASS claimed for group011.",
+  "receiptReference": {
+    "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-010/application-checks.json",
+    "sha256": "f6de201823589f270b6ded88c8aec20efb0c2f6acc776ce62bc0a06fd7947b32"
+  },
+  "results": {
+    "['npm', 'run', 'plan:check']": "BLOCKED_ENVIRONMENT",
+    "['npm', 'run', 'typecheck']": "BLOCKED_ENVIRONMENT",
+    "['npm', 'test']": "BLOCKED_ENVIRONMENT",
+    "['npm', 'run', 'build']": "BLOCKED_ENVIRONMENT"
+  },
+  "requiredChecksRemainUnfulfilled": true,
+  "repeated": false,
+  "rationale": "No application/dependency/environment bytes changed; group010 actual unchanged commands all stopped127 missing tools. Current group011 Python adapter has its own actual positive/negative checks.",
+  "owner": "Codex validation/governance/delivery",
+  "trigger": "Separately permitted exact-lockfile restoration and unchanged checks before canonical acceptance/authorized release",
+  "nextAction": "Retain missing tools and historical IPC/build/fresh-main-target gates; no app PASS claimed."
+}
