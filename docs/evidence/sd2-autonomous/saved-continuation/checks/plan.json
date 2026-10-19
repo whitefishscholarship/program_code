@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-19T16:49:36.537217+00:00",
+  "completedAt": "2026-10-19T16:49:36.678035+00:00",
+  "exitCode": 127,
+  "logPath": "docs/evidence/sd2-autonomous/saved-continuation/checks/plan.log",
+  "logSha256": "fb5a9ecdf0efd94321cef1b3e703be521da03282032bedc839510cff5435db8e",
+  "rawOutputUtf8": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nsh: tsx: command not found\n",
+  "rawLogBytes": 89,
+  "rawLogSha256": "fb5a9ecdf0efd94321cef1b3e703be521da03282032bedc839510cff5435db8e",
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact raw output retained in this receipt."
+}

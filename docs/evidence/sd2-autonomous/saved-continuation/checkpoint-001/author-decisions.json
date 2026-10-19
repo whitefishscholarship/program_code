@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "meaning": "Author semantic decisions; categories are not derived from original verified state alone. All guards/minimum-proof routes remain held and require fresh independent review.",
+  "records": [
+    {
+      "recordIndex": 0,
+      "savedInputKey": "saved-405588227-row-21",
+      "semanticGuard": "Stockman named-child continuity is unresolved. FFA shared application route is parent context only; no named-child criteria,current offering or accepted mapping. Do not inherit generic FFA/RHM rules.",
+      "consistentFields": [],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 1,
+      "savedInputKey": "saved-405588227-row-22",
+      "semanticGuard": "Louie2026-titled page reports form disabled. Preserve that captured status without current route usability. Supplemental transcripts/test scores/tax forms are partial instructions; official copies if awarded are later conditional,not all initial official documents or complete checklist.",
+      "consistentFields": [
+        "applicationMethod"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 2,
+      "savedInputKey": "saved-405588227-row-23",
+      "semanticGuard": "Peck named-child continuity is unresolved. Shared FFA/RHM route is parent-only evidence,not child eligibility,current offering or accepted identity.",
+      "consistentFields": [],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 3,
+      "savedInputKey": "saved-405588227-row-24",
+      "semanticGuard": "Wells StaceyMilbern: distinguish entry3.0/4.0-or-equivalent from renewal cumulative2.5. Preserve full-time2500/half-time1250,6-credit undergraduate accreditedUS2/4-year study,citizen/legal-resident currentlyUS,financial need,long-term/recurring disability and first700completed applications. Half-time up-to-seven-years wording does not explicitly say seven ADDITIONAL years although original value does; retain original and flag duration interpretation. Full-time three ADDITIONAL years and half-time bachelor-earlier cap remain separate. Reportedclosed/tentative2026 is captured status,not current truth. SAT/ACT conditional on college transcript differs from current complete transcript; grade reports not accepted. No applicant records collected. The disability definition includes someone who has OR considers themselves to have the stated long-term/recurring issue;do not invent a medical-diagnosis or document requirement.",
+      "consistentFields": [
+        "amount",
+        "minimumGPA",
+        "gpaBasis",
+        "schoolType",
+        "residency",
+        "needRequirement",
+        "studentStage",
+        "renewalGPA",
+        "applicationLimit",
+        "disabilityCriterion"
+      ],
+      "fieldOverrides": {
+        "renewability": {
+          "category": "applicability/identity unresolved",
+          "comparison": "Original halfTimeAdditionalYears:7 is stronger than the retained up-to-seven-years wording. Keep original value,full-time three additional years,half-time bachelor-earlier cap and original years-based-on-initial-grade annotation;total-versus-additional and timeline applicability remain unresolved. Do not silently repair or promise eight years.",
+          "minimumAdditionalProof": "Applicable named-program/cycle renewal duration clarifying additional versus total half-time years,initial graduation/grade basis and bachelor-earlier condition."
+        }
+      }
+    },
+    {
+      "recordIndex": 4,
+      "savedInputKey": "saved-405588227-row-25",
+      "semanticGuard": "Gianforte1500full/750part per semester,maximum6000 and four-equivalent-full/eight-part semesters with mixed awards are distinct bases. Need is COA minus SAI minus other aid EXCEPT loans; residency policy940.1 not independently inspected. Keep6credits,current-term enrollment,SAP and dual-credit FAFSA exception. Exact eligible programs conflict in underscore/dash official posters(FVCC ElectricalApprentice versus BuildingTrades plus other campus differences); never choose by modification date,union/intersect or invent current whitelist. FallSept1/springFeb1 have no year/timezone.",
+      "consistentFields": [
+        "amount",
+        "residency",
+        "needRequirement",
+        "deadline",
+        "posterMaximum"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 5,
+      "savedInputKey": "saved-405588227-row-26",
+      "semanticGuard": "AMVETS veteran source is retained access/identity hold; no fetching/retrying or borrowing sibling veteran/family criteria. All unsupported facts stay unknown.",
+      "consistentFields": [],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 6,
+      "savedInputKey": "saved-405588227-row-27",
+      "semanticGuard": "Memorial six named award labels are not six newly allocated identities or per-award amounts. Preserve graduatingWHSsenior with committee discretion,selection factors in ANY order,yearlessApril16,initial blank-application/transcript/needs-goals/activity/other-award disclosure versus August registration before disbursement. No provider contact values or applicant responses.",
+      "consistentFields": [
+        "needPriority",
+        "deadline",
+        "studentStage"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 7,
+      "savedInputKey": "saved-405588227-row-28",
+      "semanticGuard": "SOKN historical2024: female graduatingWhitefishHS student,STEM focus,3000,April26,2024,counselor application. Preserve exact essay/material limits from original fields without new current deadline or source-offering inference.",
+      "consistentFields": [
+        "amount",
+        "deadline",
+        "applicationMethod",
+        "studentStage",
+        "focus"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 8,
+      "savedInputKey": "saved-405588227-row-29",
+      "semanticGuard": "Saved nameDavide versus sourceDavidSobba remains identity/annotation variation,not accepted alias. Historical undated1000,GPAminimum3,Whitefish-community HSsenior,4-year/2-year/technical options,financial need NOT required. Preserve essayminimum300words/chooseoneof3,twoletters,transcript,GPA/classrank/essay-quality scope; no current cycle or complete-native proof.",
+      "consistentFields": [
+        "amount",
+        "minimumGPA",
+        "schoolType",
+        "needRequirement",
+        "studentStage"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 9,
+      "savedInputKey": "saved-405588227-row-30",
+      "semanticGuard": "Alaska/Horizon historicalWAI2025:5000scholarshipvalue,one slot,female mechanic pursuingA&P and AlaskaAirGroup mechanic goal,accreditedmaintenance OR AlaskaMaintenanceTechnicianDevelopment program,good standing. Not parent2027 opening or accepted current child. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 10,
+      "savedInputKey": "saved-405588227-row-31",
+      "semanticGuard": "BunnyConnors historicalWAI2025:979.82scholarshipvalue,privatepilot OR instrument focus,use withinoneyear. Do not round amount,require both pathways or infer current offering. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 11,
+      "savedInputKey": "saved-405588227-row-32",
+      "semanticGuard": "ChristineReed historicalWAI2025:2500,women16\u201330,solo within6months,recreational/sport/private;advanced ratings may be considered based on pool,not guaranteed. NJ/IL/AZ residence is priority,not exclusion. Soloendorsement and additional1\u20132page WhyILovetoFly essay remain separate from general WAI materials/current parent. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 12,
+      "savedInputKey": "saved-405588227-row-33",
+      "semanticGuard": "DeltaAMT historicalWAI2025:5000,GPA3,full-time AMT A&P OR aviationmaintenance degree,US citizen OR eligible noncitizen. No sibling pilot/private-certificate or current parent criteria transfer. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 13,
+      "savedInputKey": "saved-405588227-row-34",
+      "semanticGuard": "DeltaPilot historicalWAI2025:5000,intended women pursuing professionalairlinepilot career;instrument/commercial/CFI/CFII/MEI/primary certificates alternatives. Use withinone year,paid directlyflight school,not cash or every training simultaneously. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 14,
+      "savedInputKey": "saved-405588227-row-35",
+      "semanticGuard": "DeltaPropel historicalWAI2025:5000,two recipients,current DeltaPropel collegiate/company/community-partner pathway,intended women professionalairlinepilot career. Preserve currentPropel participation separately from sibling DeltaPilot or parentWAI2027. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 15,
+      "savedInputKey": "saved-405588227-row-36",
+      "semanticGuard": "Flexjet historicalWAI2025:2000,one slot,GPA3,accreditedUS AMT A&P OR maintenance degree,US citizen OR permanentresident. No full-time or other siblings GPA basis inherited. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 16,
+      "savedInputKey": "saved-405588227-row-37",
+      "semanticGuard": "LevelUp historicalWAI2025:1000,certification OR degree,maintenance/ATC/scheduling/engineering/other aviation careers. Economically disadvantaged/underrepresented funding purpose is not an explicit individual need threshold. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 17,
+      "savedInputKey": "saved-405588227-row-38",
+      "semanticGuard": "DorothyThompson/TampaBay historicalWAI2025:1500CREDIT at TampaBayAviation,one recipient,fixed-wing/rotorcraft/private/commercial/instrument options;exam/other fees recipient responsibility,rental-only use false. No cash/per-recipient extrapolation or mandatory all-options. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 18,
+      "savedInputKey": "saved-405588227-row-39",
+      "semanticGuard": "AtlantaWheelsDownSouth historicalWAI2025:1000;AtlantaChapter preference while ALL applicants considered,not hard chapter membership. Preserve500word essaycontents(goal,effect,use,timeline),general2025checklist unresolved,withinoneyear paidorganization versus cash. No parent2027 checklist/cycle transfer. HistoricalWAI child membership by2024-10-01 and deadline2024-10-11 23:59 literalEST(timezone interpretation:null)/cycleWAI2025 stay historical. Current-parent2027 reportedclosed has childBinding:null. Parent membership wording no-later-thanMarch30,2027 conflicts with March30,2027-or-later; preserve both without winner. Parent two recommendations,500word essay,two-page resume,flight-only pilot/medical/last3logbook pages,5MB and other-child-as-requested are parent context,not automatically this child initial checklist. Training/disbursement/time limits are not application deadlines.",
+      "consistentFields": [
+        "amount",
+        "membership",
+        "deadline",
+        "cycle"
+      ],
+      "fieldOverrides": {}
+    },
+    {
+      "recordIndex": 19,
+      "savedInputKey": "saved-405588227-row-41",
+      "semanticGuard": "KPMG retained source/identity/access hold. No invented dates,amounts,criteria or parent/sibling substitution; current named-child proof remains unavailable.",
+      "consistentFields": [],
+      "fieldOverrides": {}
+    }
+  ]
+}

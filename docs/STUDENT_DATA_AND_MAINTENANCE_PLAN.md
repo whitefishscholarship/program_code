@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-001-START -->
+- October19,2026 Kelsey directly authorized SD2-SAVED-CONTINUATION-1's exact386inputs/
+  7062heldfields with automatic internal reviews. saved-continuation/authority.json
+  pins frozen reviewed scope;no per-group approval. Prepared flags remain historical.
+- Group00120inputs/400fields:69consistent/98unresolved/222unavailable/11conflicting;
+  independent status only matching group001final-manifest/review,otherwise pending.
+  All original envelopes/identities/routes held;0acceptedfacts/mappings. Cumulative
+  806fieldoccurrences/40autonomous+2Jaycee;continuation20/386inputs,400/7062fields.
+- Preserve recordguards,Wells half-time total/additionalyears uncertainty,Gianforte
+  program/poster conflict and loan exception,WAI2025child versus2027parent/credit/
+  preference/training/materials boundaries. Current diagnostic/output lapses and all
+  earlier author/reviewer/infrastructure incidents disclosed;allpriorbindings exact.
+- NextCodex after matching fullreviewPASS:automatic group002originalcheckpoint003,
+  scopeorder21/queueoffset40 /records/0,20inputs/392fields;next-input.json exactkey/hash.
+  Remaining366inputs/6662fields. Capture predecessor freshreceipt before newpaths;
+  then protect priorbytes/modes/append-onlyhistory. Fullauthorization persists across
+  context handoffs;no inventedpercentage/newpermission/backgroundtask. Final20groups
+  require independent386/7062coverageaudit. Unknowns stayheld/routed;continue others.
+- Research406/406,cursor406,nextnull;7406field/406identity holds/all seeds/links/receipts/
+  inheritedroutes/destinations/nineattentionrows/supplements/437M1/12pins/71custodypins
+  and every owner-trigger-path-action-review retained. Current4appchecks missing
+  commands(exit127),BLOCKED_ENVIRONMENT,noPASS/waiver. Codexvalidation owns separately
+  permittedexactdeps/unchangedchecks/exactbuild/freshmain-target before acceptance/
+  release;allotheroriginalgateowners/triggers exact. No install/newsource/workbook/
+  rawreads/acceptance/externaleffects/SD3. Kelsey remains named reviewer,limitedJaycee
+  approvals exact. FullSD2 incomplete. Never initialize/reset/replay. Stop beforeSD3.
+<!-- SD2-CONTINUATION-001-END -->
 <!-- SD2-BATCH-007-START -->
 - October19,2026 exactproposal007completed:Odd17/RHM19/Servant20,18+18+17=53heldfields;
   17consistent/25unresolved/10unavailable/1Oddminima conflict. All originalsheld,

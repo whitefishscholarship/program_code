@@ -1,3 +1,48 @@
+# Authorized saved continuation — internal group001
+
+Kelsey directly authorized SD2-SAVED-CONTINUATION-1: all386inputs/7062held fields,
+with automatic internal reviews. authority.json pins the immutable reviewed scope.
+No per-group human approval is needed; historical executionSelected:false remains
+unchanged in the prepared plan. Progress is authoritative in student plan section9.
+Group001:20inputs/400fields drafted;69consistent/98unresolved/222unavailable/11conflict.
+Independent status only matching manifest/review,otherwise pending. All facts and
+identities held;0accepted. FullSD2 incomplete. Never initialize/reset/replay;stopSD3.
+
+Current closeout:saved-continuation/checkpoint-001/README.md,config,author-decisions,
+comparison,identity-assessment,source-references,additional-context,entry-audit,
+session-issues,next-input,final-manifest/review;root authority,engine,validation/checks.
+Preserve Wells half-time up-to-seven-years versus original ADDITIONAL annotation,
+Gianforte program/version conflict and loan exception,WAI2025 exact child versus2027
+parent membership/material/cycle and credit/preference/training distinctions. Earlier
+incidents and current diagnostic/output lapses disclosed; all historical bindings exact.
+
+After matching review PASS,Codex continues group002 automatically:original scopeorder21,
+checkpoint003 /records/0,queueoffset40,20inputs/392fields. Capture group001 fresh
+review-bound receipt BEFORE newpaths;then use entry byte/mode proof for old contexts.
+Next original key/whole hash/pointer in group001/next-input.json. Remaining366inputs/
+6662fields;full authorized continuation persists across context handoffs. No newpermission
+for existing scope,no invented context percentage,no unattended schedule/background task.
+
+Research406/406,cursor406,nextnull;7406field/406identityholds. All prior owner-trigger-
+path-action routes,nine attention rows/supplements,437M1/12pins,71custody receipts,
+676seeds/1127links/365receipts/35inheritedroutes/628destinations(1unclosed) retained.
+Four current appchecks blockedmissingtsx/tsc/next(exit127),notPASS/waiver;rootvalidation
+records exact attempts. Codexvalidation owns separately permitted exactdeps/unchanged
+checks/exactbuild/freshmain-target before acceptance/release;all other original source/
+custody/history/workbook/recovery/permission/human/canonical/publication/student/M1/SD5/
+effect gate owners/triggers remain exact in packets/SESSION_CLOSE/priorhandoffs.
+No newsource/workbook/raw/native reads,acceptance,externaleffects orSD3. Kelsey remains
+namedreviewer;limitedJayceeapprovals unchanged. Stoponlygenuineoutside-scope/evidence/
+effectdecisions;unknowns stayheld and unaffected authorized work continues.
+
+Freshentry:AGENTS canonicalreadorder,studentplan section9,originalAUTHORITY/POLICY/
+latestSESSION_CLOSE,batch007CONTINUATION/scope,saved-continuationauthority,currentgroup
+README/entry/comparison/sourceviews/validation/manifest/review. Run engine verify 1
+--review-bound only at its valid receipt tip. Preserve old receipts plusbyteproof.
+EffortHigh. Previous handoff exact below.
+
+---
+
 # SD2 comparison007 and larger continuation — October19,2026
 
 Executed exactproposal007:Odd17,RHMchild19,Servant20(offset17/18/19),53held fields:
