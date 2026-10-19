@@ -1,3 +1,39 @@
+# Authorized saved continuation — internal group010
+
+Full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authority persists across
+contexts, including automatic independent reviews/author remediation/continuation.
+Sole progress pointer: student-plan section9. Current group:20inputs/412fields;
+14 consistent, 179 unresolved, 213 unavailable, 6 conflicting. Status only matching final-manifest/review, otherwise
+pending. All facts/identities/routes held;0accepted. FullSD2 incomplete.
+
+Currentcloseout:saved-continuation/checkpoint-010/SESSION_CLOSE.md and README/config/
+entry-audit/author-decisions/comparison/identity/sourceviews/local-check/adapter-checks/
+application-checks/verification/manifest/review/next-input. Sharedengine/priorverifiers
+unchanged. Group-only PDF adapter pins originalrecord/evidence/source/heading/full
+uniqueexcerpt; unresolved named bindings stayheld. All priorbytes/modes/reviews and
+threeappendhistories preserved. Incidents disclosed; output only exact neededclauses.
+
+Next after matching PASS:automatically group011, scope order201, keysaved-405588227-row-224, docs/evidence/sd2-autonomous/checkpoint-012.json /records/0.
+Remaining186inputs/3055fields. BEFOREnewpaths at valid currentreceipt tip,capture:
+python3 docs/evidence/sd2-autonomous/saved-continuation/checkpoint-010/local-check.py verify --review-bound
+Retain oldvalidreceipts plusbyteproof;never widen oldcontexts. Finalindependent386/
+7062coverageaudit mandatory after20groups. No renewedselection/context%/backgroundtask.
+
+Research406/406,cursor406,nextnull;7406field/406identityholds and all original seeds/
+links/receipts/inherited/destination/attention/supplement/M1/custodyroutes protected.
+Requiredappchecks blockedmissingtsx/tsc/next127,noPASS/waiver/install. Codexvalidation
+owns separatelypermittedexactdeps/unchangedchecks/exactbuild/freshmain-target before
+acceptance/release. Every other original owner-trigger-path-action-gate remains exact
+in SESSION_CLOSE/originalpackets. Kelseynamedreviewer/limitedJayceeapprovals unchanged.
+No newsource/workbook/raw/native read,acceptance,externaleffects orSD3. Never initialize/
+reset/replay. Stop beforeSD3. Freshentry:AGENTS canonicalorder,studentplan section9,
+originalAUTHORITY/POLICY/latestclose,batch007CONTINUATION/scope,rootauthority,current
+README/entry/guards/comparison/sourceviews/checks/manifest/review. EffortHigh.
+
+Priorhandoffexactbelow.
+
+---
+
 # Authorized saved continuation — internal group009
 
 The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
