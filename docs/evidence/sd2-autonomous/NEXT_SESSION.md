@@ -1,3 +1,46 @@
+# SD2 proposal007 — October 19, 2026
+
+Prepared next bounded proposal:OddFellows/Rebekahs saved17,RHMchild19,Servant20;
+queueoffsets17,18,19,18+18+17=53held fields/3inputs/7savedsource references.
+Proposal only;0newcomparisons/acceptedfacts,noexecution. Never initialize/reset/
+replay. Stop beforeSD3. FullSD2incomplete.
+
+Authoritative proposal:sd2-autonomous/consolidation-proposal-007/PROPOSAL.md/scope.
+Freshbatch006 review-boundPASS/4c70ed2 beforepaths inentry-audit;newverifyprotects
+entryblobs/modes/append-onlyhistory. Independentstatus onlymatchingmanifest/review;
+otherwisepending. Allhistorical/rejectedreviewbindings/contexts remainexact.
+
+PreserveOddmaximumGPA3.0notminimum,scope-specificnonmembership,1000USD,3+summary/
+1+detailrecipient conflict and Seniors-College/HSsenior scopevariants. NeighborFFA
+headinginoriginalexcerpt givesnoOddaffiliation. RHMexact2000child/50recipients,
+MT-HSgraduation/half-timeaccreditedMTinstitutionprogram,completedFAFSA distinctfrom
+residence/need/upload/date. Servantone500/HSsenior/FFA/GPA2.0/AMTOPPannotationdrift;
+originalsharedFAQannex stayswholebutseparatefromchildmeaning. No winner,ruleunion/
+intersection,current2027,borrowedchildrule oracceptedroute. New repeatedFAQ/heading
+previewlapse disclosed;earlierauthor/reviewer/infrastructureincidents stayexact.
+
+Compared353fields/17autonomous+2Jaycee,389outside;proposaladds0. Separateexecution
+would406fieldoccurrences/20autonomous+2Jaycee,386outside. Do not confuse406compared
+fieldswith406initialresearchinputs. Research406/406,cursor406,nextnull;7406fields/
+406identities/676seeds/1127links/365receipts/35inheritedroutes/628destinations1unclosed/
+nineattentionrows/allsupplements/437M1routes/12pins/71custodyreceipts/everyroute exact.
+Currentfourappchecks blockedmissingtsx/tsc/next;noPass/waiver. Codexvalidationowns
+permittedexactdeps/unchangedchecks/supportedexactbuild/currentmain-targetbefore
+acceptance/release. All other original source/custody/history/preservation/recovery/
+human/canonical/publication/student/M1/SD5/effectowners/triggers remain operative
+inpackets/SESSION_CLOSE/batch006README/section9;desktoponlyexplicitUItrigger.
+
+NextownerKelsey:directexact completed53-fieldselection;thenCodexexecutes/reviews
+onlyselectedscope. Continue selects preparation,not unseenexecution. No routine
+preference/Git/reviewerquestion. No newsource/workbook/rawreads,acceptance,external
+effects orSD3. Retaincontextstop/durablehandoff,noinventedpercent. Freshentry:
+AGENTSorder,section9,originalAUTHORITY/POLICY/latestSESSION_CLOSE,batch006receipt,
+thisproposal/scope/entry/validation/manifest/review;runproposal007verify.py
+--review-bound in valid receipt context. Earlier validreceipts plusbyteproof,
+neverwidenoldverifiers. Effort:High. Earlierhandoffexactbelow.
+
+---
+
 # SD2 comparison batch006 — October 19, 2026
 
 Kelsey directly selected proposal006 exact53fields. Kozlowski14,Kid'sChance15,

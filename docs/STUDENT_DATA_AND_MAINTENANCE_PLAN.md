@@ -353,6 +353,28 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-PROPOSAL-007-START -->
+- October19,2026 nextproposal007:OddFellows17,RHMchild19,Servant20 (offset17/18/19),
+  18+18+17=53held fields/7sources. Proposalonly;0newcomparisons/facts,noexecution.
+  Exactscope/selectioninproposal007PROPOSAL.md/scope.json. Directexactselectionneeded.
+- PreserveOddmaximum3.0/notminimum/nonmembership/3+vs1+andstagevariants/neighborheading;
+  RHM2000child/50slots/MT-HS/halftimeaccreditedMTschool/FAFSA-notneedorresidence;
+  Servant500/HSsenior/FFA/GPA2.0/AMTOPPannotationdrift/sharedFAQannexboundary.
+  Newpreviewlapse/earlierauthor-reviewer/infrastructureincidents retained,no relabel.
+- Freshbatch006PASS/4c70ed2 beforepaths;newverifyprotectsentrybytes/modes/appendhistory.
+  Independentstatus onlymatchingmanifest/review,otherwisepending.Allpriorbindingsexact.
+  Currentappchecks missingtsx/tsc/next;nowaiver/pass. Codexvalidationowns permitteddeps/
+  unchangedchecks/supportedexactbuild/currentmain-targetbeforeacceptance/release;
+  alloriginalgateowners/triggers remain inpackets/SESSION_CLOSE/batch006README.
+- Compared353occurrences/17autonomous+2Jaycee,389outside;proposaladds0;selectedexecution
+  would406fields/20autonomous+2Jaycee,386outside. Research406/406,cursor406,nextnull;
+  7406field/406identityholds/676seeds/1127links/365receipts/35inheritedroutes/628destinations/
+  nineattentionrows/allsupplements/437M1/12pins/71custodyreceipts/everyrouteexact.
+  No newsource/workbook/rawreads,acceptance,externaleffects orSD3. NextKelsey:exact
+  completed53-fieldselection,thenCodexexecutes/reviews onlythat scope,noautomaticrun.
+  Retaincontextstop/durablehandoff,noinventedpercent. Never initialize/reset/replay.
+  Stop beforeSD3. EffortHigh.
+<!-- SD2-PROPOSAL-007-END -->
 <!-- SD2-BATCH-006-START -->
 - October19,2026 directexactselection:Kozlowski14,Kid'sChance15,Murdoch16 compared,
   17+19+17=53held fields;13consistent/35unresolved/4unavailable/1existingKidsstage

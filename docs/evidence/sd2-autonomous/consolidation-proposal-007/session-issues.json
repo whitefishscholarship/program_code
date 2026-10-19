@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "currentPreparationIncidents": [
+    {
+      "kind": "overbroad-local-selected-envelope-preview",
+      "description": "The initial selected original-envelope preview repeated a long sharedFAQ annex from the Servant record and included the neighboring MontanaFFA heading in an OddFellows excerpt; tool output was truncated. This is an output-narrowing lapse,not a completeness proof or new award processing.",
+      "containment": "No network/workbook/raw/native access or comparison execution occurred. Subsequent previews retain field metadata and preselected child prefixes only. Original envelope bytes stay untouched; sharedFAQ and neighboring-heading text are excluded from child-specific eligibility meaning.",
+      "owner": "Codex evidence/source governance",
+      "trigger": "Before every later selected preview or original history review",
+      "nextAction": "Select exact input/source/field sentence before output; retain this and prior incidents without retrospective relabeling."
+    },
+    {
+      "kind": "author-checker-literal-spacing",
+      "description": "Initial new-proposal verifier exited1 because its prose sentinel expected Stop beforeSD3 while the proposal explicitly states Stop before SD3. The author corrected only the new checker literal; no scope,stage boundary,acceptance requirement or historical verifier changed.",
+      "retainedError": "AssertionError: Stop beforeSD3",
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/consolidation-proposal-007/verify.py"
+      ],
+      "exactAttemptTimestamp": null,
+      "correctedAt": "2026-10-19T16:09:28.264907+00:00",
+      "owner": "Codex proposal author",
+      "trigger": "Before freezing this candidate",
+      "nextAction": "Rerun complete task-local preservation/scope verification and retain its actual result before independent review."
+    }
+  ],
+  "retainedIncidentPaths": [
+    "docs/evidence/sd2-autonomous/reconciliation-batch-006/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-006/review.json",
+    "docs/evidence/sd2-autonomous/consolidation-proposal-006/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-005/session-issues.json"
+  ],
+  "owner": "Codex evidence/source governance",
+  "trigger": "Every later selected evidence preview/dispatch",
+  "authoritativePath": "docs/evidence/sd2-autonomous/consolidation-proposal-007/session-issues.json",
+  "nextAction": "Preserve all original source/output/custody/history disclosures. Narrow before output; never forward whole source registries,shared source sections,FAQ annexes,biographies/background or unrelated awards. No replay/reacquisition."
+}
