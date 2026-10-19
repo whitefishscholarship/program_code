@@ -1,0 +1,33 @@
+{
+  "scope": "Group009-only binding adapter checks against saved evidence in memory; no original file edits or raw/new reads.",
+  "recordedAt": "2026-10-19T22:26:19.526725+00:00",
+  "outcome": "PASS",
+  "checks": [
+    {
+      "case": "exact original PDF reference saved-405588227-row-191",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF reference saved-405588227-row-193",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF reference saved-405588227-row-197",
+      "outcome": "PASS"
+    },
+    {
+      "case": "changed original record",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "same-value wrong excerpt",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "redacted Wings positive promotion",
+      "outcome": "PASS rejected"
+    }
+  ],
+  "sharedEngineUnchanged": true,
+  "priorVerifierContextsWidened": false
+}

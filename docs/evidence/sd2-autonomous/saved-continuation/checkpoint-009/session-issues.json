@@ -1,0 +1,25 @@
+{
+  "incidents": [
+    {
+      "type": "author output minimization lapse",
+      "description": "A short-excerpt diagnostic displayed two unmapped Wings generic profile paragraphs, several complete short child excerpts including Amazon/AA materials wording and a brief child question list. No applicant response, new source/raw/native read or repository-original mutation occurred.",
+      "owner": "Codex author",
+      "trigger": "future source/diagnostic output",
+      "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-009/session-issues.json",
+      "nextAction": "Preserve disclosure. Do not display whole excerpts by length. Preselect exact field-specific policy sentences and exclude profiles, questions and materials wording."
+    },
+    {
+      "type": "group009 historical engine format mismatch",
+      "description": "Unchanged shared engine build9 failed ValueError: substring not found in the historical wai amount HTML ### marker branch. Current saved PDF evidence uses ## headings and two redacted unallocated profiles.",
+      "owner": "Codex author and independent reviewer",
+      "trigger": "group009 comparison build/verify only",
+      "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-009/local-check.py",
+      "nextAction": "Use exact group009-only full original excerpt/heading/record/evidence/source-hash binding adapter, and independently review it. Shared engine and all historical contexts unchanged; Wings profiles remain unresolved."
+    }
+  ],
+  "priorIncidents": "Every prior author/reviewer/source-output/infrastructure incident is preserved unchanged in prior session-issues and review receipts.",
+  "newSourceWorkbookRawNativeReads": 0,
+  "acceptedFacts": 0,
+  "externalEffects": false,
+  "SD3Started": false
+}

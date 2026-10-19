@@ -353,6 +353,39 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-009-START -->
+- Context handoff:saved-continuation/checkpoint-009/SESSION_CLOSE.md preserves full
+  continuing authority/exactgroup010pointer. Group009:20inputs/444heldfields;
+  38 consistent, 205 unresolved, 188 unavailable, 13 conflicting. Independent status only matching
+  final-manifest/review,otherwise pending. All original envelopes/identities/routes
+  held;0accepted. Continuation180/386inputs,3595/7062fields;cumulative4001occurrences/
+  200autonomous+2earlierJayceeinputs. FullSD2incomplete;stopbeforeSD3.
+- Closeout:saved-continuation/checkpoint-009/README,author-decisions,comparison,
+  identity/sourceviews,entry-audit,session-issues,local-check,amount-heading-bindings,
+  adapter-checks,next-input,verification/manifest/review. SixNGPA child/parent scopes,
+  AFSAnoGPA/income/diploma/lottery/repeatwinnerterms,Wingsunmappedprofiles,WAIchild
+  amounts/entry-versus-course/conditionalmustGPAversusshould/currentcycle/materials
+  remain distinct. No name-based restrictions oracceptedsource/currentidentity.
+- Sharedengine unchanged;historical wai amountHTMLheading branch fails on PDF##.
+  Group009-only adapter pins originalengine/wholeoriginalrecord/evidence/source hashes,
+  exactuniquechildexcerpts/headings;redactedWingsamounts remain unallocated/held.
+  Positive/adversarialadapterchecks preserved;no priorcontext widening.
+- NextCodex after matching PASS:automatic group010,scopeorder181,
+  docs/evidence/sd2-autonomous/checkpoint-011.json /records/0,keysaved-405588227-row-204.
+  Remaining206inputs/3467fields. BEFOREnewpaths at validgroup009receipt tip,capture
+  checkpoint-009/local-check.py verify --review-bound PASS. All oldbytes/modes/reviews/
+  threeappendhistories exact. Existingfull386/7062grant includes automaticindependent
+  reviews/authorremediation/continuation;no routinequestion. Finaladditional386/7062
+  independentunionaudit after20groups;allunknowns held/routed. No inventedcontext%/
+  backgroundschedule. LaterPDFgroups need exact ownscopebindings,not changedhistory.
+- Research406/406,cursor406,nextnull;7406field/406identityholds/alloriginalsource/link/
+  inherited/destination/attention/supplement/M1/custodyroutes retained. Shared/group008
+  requiredappchecks remain blockedmissingtsx/tsc/next127,noPASS/waiver/install. Codex
+  validation owns separatelypermittedexactdeps/unchangedchecks/exactbuild/freshmain-
+  target beforeacceptance/release;everyothergateowner/trigger/path/action exact.
+  Kelseynamedreviewer/limitedJayceeapprovals preserved. No newsource/workbook/raw/
+  native reads,acceptance,externaleffects/SD3. Never initialize/reset/replay.
+<!-- SD2-CONTINUATION-009-END -->
 <!-- SD2-CONTINUATION-008-START -->
 - Context handoff:saved-continuation/checkpoint-008/SESSION_CLOSE.md preserves full
   authorization/exact group009 pointer;no renewed selection. Group008:20inputs/

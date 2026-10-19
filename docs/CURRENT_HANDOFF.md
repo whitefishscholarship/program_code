@@ -1,3 +1,47 @@
+# Authorized saved continuation — internal group009
+
+The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
+Progress is authoritative in studentplan section9. Group009:20inputs/444fields;
+38 consistent, 205 unresolved, 188 unavailable, 13 conflicting. Independent status only matching final-manifest/review;
+otherwise pending. Every original fact/identity/route remainsheld;0accepted.
+FullSD2incomplete. Never initialize/reset/replay. Stop beforeSD3.
+
+Context handoff:saved-continuation/checkpoint-009/SESSION_CLOSE.md. Fullauthority
+persists across contexts without routine selection. Comparison/proofroutes/guards,
+identity/sourceviews,entry-audit,next-input,adapterchecks,verification/manifest/review
+retain every source/identity limit. Sharedengine unchanged: its HTMLheading branch
+fails on saved PDFamount headings. Group009-only local-check.py pins original engine,
+record/evidence/source hashes and exact unique PDFexcerpts/headings. Two redacted
+Wings profiles stay unallocated/held. No historical verifier is widened. Review this
+adapter with its group. Author/reviewer output incidents remain disclosed.
+
+NextCodex after matching PASS:automatically group010,scopeorder181,
+docs/evidence/sd2-autonomous/checkpoint-011.json /records/0,keysaved-405588227-row-204.
+Remaining206inputs/3467fields. BEFOREnewpaths at valid group009receipt tip,capture
+checkpoint-009/local-check.py verify --review-bound PASS. Preserve priorvalidreceipts
+plusbytes/modes/reviews/threeappendhistories. Later PDFgroups need their own exact
+scope bindings if needed,never widen historical contexts. Finaladditional386/7062
+independentunionaudit remains mandatory after all20groups. No inventedpercentage/
+backgroundtask/per-groupapproval. Continue unknowns held under existingfullgrant.
+
+Research406/406,cursor406,nextnull;7406field/406identityholds,nineattentionrows/all
+supplements,437M1/12pins,71custodyreceipts/all source-link/inherited/destinationroutes
+and every original owner-trigger-path-action-review remain exact. No newcustodyclaim.
+Shared and group008requiredappchecks blockedmissingtsx/tsc/next127,noPASS/waiver/install.
+Codexvalidation owns separatelypermittedexactdeps/unchangedchecks/exactbuild/fresh
+main-target beforeacceptance/release. All other source/workbook/recovery/permission/
+human/canonical/publication/student/M1/SD5/effect gates keep original owners/triggers.
+Kelseynamedreviewer/limitedJayceeapprovals exact. No newsource/workbook/raw/native
+reads,acceptance,external effects orSD3.
+
+Freshentry:AGENTS canonicalreadorder,studentplan section9,originalAUTHORITY/POLICY/
+latestSESSION_CLOSE,batch007CONTINUATION/scope,rootauthority,currentgroupREADME/
+entry/comparison/guards/sourceviews/local-check/adapterchecks/validation/manifest/
+review. Use only its valid currentreceipt verifier;retain oldreceipts andbyteproof.
+EffortHigh. Priorhandoffexactbelow.
+
+---
+
 # Authorized saved continuation — internal group008
 
 The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
