@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "issues": [
+    {
+      "type": "Author saved-field excerpt preview output lapse",
+      "status": "Disclosed; narrowing corrected",
+      "details": "Author preview emitted complete repeated Epstein field excerpts including irrelevant gala/travel details, and later several bounded field previews were explicitly shortened. Complete field excerpts are wider than necessary field sentences. No whole shared artifact,raw/native/applicant response,new source or fact acceptance resulted. Follow-up previews preselect exact field/regex lines; no completeness inferred from shortened output."
+    },
+    {
+      "type": "Sandbox Git index-lock failure",
+      "status": "Resolved through unchanged direct Git command",
+      "details": "Python orchestration invoking ordinary git add failed with index.lock Operation not permitted. Exact same staging paths succeeded as direct Git command in permitted tool environment. No reset/recreation/index deletion or history rewrite."
+    }
+  ],
+  "priorIncidents": "All original author/reviewer/source-output/infrastructure disclosures retained byte-for-byte in protected entry; no relabeling or waiver.",
+  "applicationChecks": "Shared ../validation.json retains actual four exit127 missing-command attempts; no environment/code changes or repair authorized."
+}
