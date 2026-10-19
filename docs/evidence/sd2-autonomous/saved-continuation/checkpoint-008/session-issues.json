@@ -1,0 +1,17 @@
+{
+  "incidents": [
+    {
+      "type": "author output minimization lapse",
+      "description": "Initial diagnostic displayed repeated original typed materials summaries and a later narrow-filter diagnostic included a brief blank enrollment label/provider-redacted locator. No full FAQ/materials excerpt or applicant response was emitted. No raw/native/new source read occurred.",
+      "owner": "Codex author",
+      "trigger": "future diagnostic/source output",
+      "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-008/session-issues.json",
+      "nextAction": "Preserve disclosure. Select exact field-specific policy clauses before display; exclude material summaries, blank labels and unrelated contextual lines."
+    }
+  ],
+  "priorIncidents": "All prior author/reviewer/source-output/infrastructure incidents preserved byte-for-byte in original packets/reviews; no new custody availability claim.",
+  "newSourceWorkbookRawNativeReads": 0,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "externalEffects": false
+}

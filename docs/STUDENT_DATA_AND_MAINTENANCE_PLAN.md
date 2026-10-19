@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-008-START -->
+- Context handoff:saved-continuation/checkpoint-008/SESSION_CLOSE.md preserves full
+  authorization/exact group009 pointer;no renewed selection. Group008:20inputs/
+  462heldfields;28 consistent, 167 unresolved, 249 unavailable, 18 conflicting. Independent status
+  only matching final-manifest/review,otherwise pending. All original envelopes/
+  identities/routes remainheld;0accepted. Continuation160/386inputs,3151/7062fields;
+  cumulative3557fieldoccurrences/180autonomous+2earlierJaycee inputs.
+- Closeout:saved-continuation/checkpoint-008/README,author-decisions,comparison,
+  identity/sourceviews,entry-audit,session-issues,application-checks,next-input,
+  verification/final-manifest/review. LPA parent-child/missing-name/currency scopes,
+  Rollins Tally difference,BLF GoldStar/redacted/readable limits,NGPA amount variants/
+  advocacy/cycle/materials remain distinct;no newsource/identity/currenttruth.
+- NextCodex after matching PASS:automatically group009,scopeorder161,
+  docs/evidence/sd2-autonomous/checkpoint-010.json /records/0,keysaved-405588227-row-184.
+  Remaining226inputs/3911fields;full386/7062grant persists with automatic independent
+  review/authorremediation/continuation. Capture fresh current receipt BEFOREnewpaths;
+  preserve all priorbytes/modes/reviews/threeappendhistories,no oldverifier widening.
+  Additional386/7062independentunionaudit after all20groups;unknowns held/routed.
+- Research406/406,cursor406,nextnull;7406field/406identityholds/all original seed/link/
+  source/inherited/destination/attention/supplement/M1/custody routes retained. Fresh
+  fourappchecks blocked missingtsx/tsc/next127,noPASS/waiver/install. Codexvalidation
+  retains separately permittedexactdeps/unchangedchecks/exactbuild/freshmain-target
+  beforeacceptance/release. All original gate owners/triggers/paths/actions and named
+  human/limitedJaycee approvals preserved. FullSD2incomplete;no newsource/workbook/raw/
+  native reads,acceptance,externaleffects/SD3. Never initialize/reset/replay. StopSD3.
+<!-- SD2-CONTINUATION-008-END -->
 <!-- SD2-CONTINUATION-007-START -->
 - Context handoff:saved-continuation/checkpoint-007/SESSION_CLOSE.md preserves full
   authorization and exact nextgroup008 pointer;no renewed selection required.

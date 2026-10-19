@@ -1,3 +1,47 @@
+# Authorized saved continuation — internal group008
+
+The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
+Progress is authoritative in studentplan section9. Group008:20inputs/462fields;
+28 consistent, 167 unresolved, 249 unavailable, 18 conflicting. Independent status only matching final-manifest/review;
+otherwise pending. All original facts/identities remainheld;0accepted. FullSD2
+incomplete. Never initialize/reset/replay. Stop beforeSD3.
+
+Context handoff:saved-continuation/checkpoint-008/SESSION_CLOSE.md;full authority
+persists across fresh contexts,not a new human approval.
+
+Currentcloseout:saved-continuation/checkpoint-008/README,config,author-decisions,
+comparison,identity-assessment,source-references,session-issues,entry-audit,next-input,
+application-checks,verification,final-manifest/review. Rootauthority pins frozen
+batch007CONTINUATION/scope;sharedengine/checks/validation unchanged. Every prior
+byte/mode/review and three append-only histories preserved;no widened verifier.
+NextCodex after matching PASS: automatically group009,scopeorder161,
+docs/evidence/sd2-autonomous/checkpoint-010.json /records/0,keysaved-405588227-row-184.
+Remaining226inputs/3911fields. Capture fresh current review-bound receipt BEFORE
+newpaths. Existing fullauthorization includes independent reviews/remediation/
+continuation;no routine selection. No inventedpercentage/backgroundschedule.
+
+Preserve LPA missing-name holds/parent-child scopes/variablecurrency uncertainty,
+Rollins changed Tally locators,BLF GoldStar senior/redactedlocator/readablelimits,
+NGPA tiered amounts/advocacy not identity restrictions/cycle-material conflicts.
+Exact recordguards/proofroutes remain in comparison/author-decisions. All original
+owner-trigger-path-action-review routes,nineattentionrows/supplements,437M1/12pins,
+71custodyreceipts,7406field/406identityholds and research406/406,cursor406,nextnull
+remain unchanged. No new custodyavailability claim. Fresh four required appchecks
+blocked missingtsx/tsc/next exit127,notPASS/waiver. Codexvalidation owns separately
+permittedexactdeps/unchangedchecks/exactbuild/freshmain-target beforeacceptance/
+release. Every other original gate/owner/trigger remains in SESSION_CLOSE/original
+packets;Kelseynamedreviewer/limitedJaycee approvals exact. Continue unknowns held.
+No newsource/workbook/raw/native reads,acceptance,external effects orSD3. Final
+additional386/7062coverageaudit mandatory after all20groups.
+
+Freshentry:AGENTS canonicalreadorder,studentplan section9,originalAUTHORITY/POLICY/
+latestSESSION_CLOSE,batch007CONTINUATION/scope,rootauthority,currentgroupREADME/
+entry/comparison/guards/sourceviews/validation/manifest/review. Run engine verify 8
+--review-bound only at its valid receipt tip;retain older validreceipts andbyteproof.
+EffortHigh. Priorhandoffexactbelow.
+
+---
+
 # Authorized saved continuation — internal group007
 
 The full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authorization persists.
