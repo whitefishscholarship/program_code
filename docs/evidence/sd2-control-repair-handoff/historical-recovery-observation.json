@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-20T18:17:18.590194+00:00",
+  "outcome": "PASS",
+  "scope": "Restore absent tracked evidence and review unselected proposals only",
+  "worktree": "/private/tmp/program_code-student-data-maintenance-plan",
+  "branch": "codex/plan-student-data-maintenance",
+  "unchangedHead": "0336d32b930a87d458414611184ab546b00df047",
+  "recovery": {
+    "userAuthority": "proceed with your best strategic suggestion",
+    "missingTrackedFiles": 1288,
+    "preRecoveryExistingFileMismatches": 0,
+    "missingPathListSha256": "11db3823aa7ad09205bd57dcf93a54676db3d7e20dabad159825e2576e7e3f68",
+    "method": "Read existing HEAD blobs and exclusively create absent tracked files; verify every recovered Git blob hash and file mode; no existing file overwritten",
+    "resetInitializationReplay": false,
+    "indexChanged": false,
+    "commitsCreated": 0
+  },
+  "receiptVerification": {
+    "command": [
+      "python3",
+      "docs/evidence/sd2-consolidation-package/verify.py",
+      "--review-bound"
+    ],
+    "exitCode": 0,
+    "outcome": "PASS",
+    "startedAt": "2026-10-20T18:15:43.766509+00:00",
+    "completedAt": "2026-10-20T18:16:13.861262+00:00",
+    "reviewBound": true,
+    "protectedEntryFiles": 2854,
+    "priorBytesModesHoldsReviewBindingsAndThreeAppendHistoriesPreserved": true,
+    "manifestSha256": "b9df62ae8748b16f81ff75c9e1a5d879641b512f653eb7f7a38089b0ebb71c93",
+    "candidateCommit": "7805fc2e5c79a9e0b04e46e356ab7c7122e7e5af",
+    "receiptCommit": "0336d32b930a87d458414611184ab546b00df047"
+  },
+  "scopeReview": {
+    "sourceProof": {
+      "id": "SD2-RESOLUTION-PROOF-1",
+      "executionSelected": false,
+      "recordedLocators": 397,
+      "preflightCandidates": 379,
+      "blockedLocators": 18,
+      "assessment": "Finite optional scope; saved evidence reuse and material-claim triage precede any selected read; candidate identity/public/safe-content proof remains required; preserve all blocked outcomes."
+    },
+    "validationRepair": {
+      "id": "SD2-LOCKED-VALIDATION-1",
+      "executionSelected": false,
+      "pinsMatch": true,
+      "maximumInstallAttempts": 1,
+      "lifecycleScriptsPermitted": false,
+      "assessment": "Recommended first next selection because required validation tools tsx/tsc/next are absent; exact locked restore and unchanged checks only, retaining failures without waiver."
+    }
+  },
+  "recommendedSequence": [
+    "Direct selection of SD2-LOCKED-VALIDATION-1, then exact pinned restore and unchanged checks in permitted environment",
+    "Separately selected SD2-RESOLUTION-PROOF-1 only for material accepted-use proof needs; retain explicit holds elsewhere"
+  ],
+  "finalChecks": {
+    "gitDiffCheckExitCode": 0,
+    "worktreeClean": true,
+    "headUnchanged": true
+  },
+  "limits": {
+    "sourceOrWorkbookReads": 0,
+    "dependencyInstalls": 0,
+    "newFactOrMappingAcceptance": 0,
+    "canonicalAcceptance": false,
+    "SD2Complete": false,
+    "SD3Started": false,
+    "externalEffects": false
+  },
+  "openItems": {
+    "owner": "Original owners unchanged in acceptance-gates.json and original packets",
+    "trigger": "Original exact triggers or direct selection of the corresponding optional scope",
+    "authoritativePath": "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-consolidation-package/SESSION_CLOSE.md",
+    "nextAction": "Use acceptance-gates.json original owner-trigger-path-action routes; do not substitute this recovery record as a progress ledger or acceptance receipt"
+  },
+  "recordStatus": "Supplemental recovery observation outside locked worktree; no historical receipt, manifest, review, approval or canonical progress file changed"
+}

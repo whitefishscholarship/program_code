@@ -1,0 +1,49 @@
+{
+  "id": "SD2-CONTROL-REPAIR-HANDOFF-1",
+  "recordedAt": "2026-10-20T22:04:28.290333+00:00",
+  "entryCommit": "03362252704c0032ae13befc015b7376de54056b",
+  "sessionStatus": "FAIL",
+  "request": "prepare to do that in a new session",
+  "currentWork": "Prepare, verify and preserve fresh-session handoff only; do not implement repair or dispatch sources now.",
+  "nextSessionObjective": "One large local control-repair and397-target reconciliation batch with synthetic interruption tests and fresh independent review.",
+  "permittedNextBatch": [
+    "Add an append-only exclusive pre-dispatch intent and immediate immutable per-call result journal in a NEW task-owned repair packet.",
+    "Import current cumulative completed/frontier reservations without changing historical files or inventing missing dispatch times/results.",
+    "Test cancellation/crash/restart, duplicate and competing reservations, partial writes, target/locator/preflight mismatch, lost responses and budget/host limits with synthetic responses only.",
+    "Reconcile all397 original targets and preserve all original identities, holds, routes and review bindings.",
+    "Have a fresh-context read-only reviewer check prospective controls, adversarial tests, exact unused-target proof and final immutable repair candidate.",
+    "Save a verified next action; no routine small-run user approval checkpoints."
+  ],
+  "sourceRequestsDuringNextLocalBatch": 0,
+  "knownFacts": {
+    "targets": 397,
+    "observedCompletedToolRecords": 64,
+    "failedToolRecordsWithin64": 9,
+    "conservativeExplicitCallReservation": 68,
+    "uncertainAdditionalCalls": 4,
+    "confirmedReplayOrders": [
+      26,
+      30,
+      34
+    ],
+    "possibleReplayOrders": [
+      32
+    ],
+    "acquisitionCandidatesQuarantined": 272,
+    "otherOriginalTriageHolds": 125,
+    "theoreticalUnusedExpandedTargets": 72
+  },
+  "conditionalFutureReads": "Existing finite original grant is preserved, not expanded. No read before independently verified durable controls AND exact never-dispatched target proof AND original saved-source safety/accepted-use gates.72 is a theoretical remainder, not a selected/cleared read queue; unknown dispatch is spent/held. Source acquisition is outside the next local-only batch.",
+  "exclusions": [
+    "No reset/initialize/replay or rerun of successful saved comparisons.",
+    "No source/workbook/native reads, discovery, provider contact, form actions, applicant/recipient/contact data or raw provider-body retention during the local repair batch.",
+    "No dependency restoration repeat: the one selected install is spent; existing pins and scripts stay unchanged.",
+    "No app/catalog/config/CI/canonical plan-state changes, Git publication, deployment, monitoring or SD3.",
+    "No weakening acceptance gates, changing the failed run to PASS, or rebinding previous reviews/manifests."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false,
+  "recommendedEffort": "High"
+}

@@ -1,3 +1,28 @@
+# Fresh-session preparation — source execution remains FAIL
+
+Sole progress pointer:student-plan section9. Read the current handoff:
+docs/evidence/sd2-control-repair-handoff/README.md and NEXT_SESSION.md.
+Before new repair paths at the clean matching handoff record:
+python3 docs/evidence/sd2-control-repair-handoff/verify.py --review-bound
+This verifies handoff integrity only; it never accepts the failed source execution.
+Next selected session:one large local-only control-repair/reconciliation batch with
+synthetic interruption tests and fresh independent review; no source requests in
+that batch. All272 candidates remain quarantined. Confirmed replays26/30/34 and
+possible32 remainfailed;64completed/68reserved calls are not exact attempts.
+All397dispositions and14original gate bindings are retained;72theoretical unused
+expanded targets need independent proof before any later conditional read.
+Carry every owner/trigger/path/action in scope/open-items and original gates.
+Exactbuild EPERM/fresh-main-target, privacy/native/source completeness, humanreview,
+custody/recovery/permissions, student/publication/M1/SD5/reserved effects remain open.
+Preserve all previous bytes/modes/holds/approvals/routes/rejected/final reviews and
+three append histories. Do not run old context-bound verifiers after new prepends;
+the new verifier checks immutable prior records plus the fresh entry proof.
+No workbook/app/config/CI/canonical acceptance/remoteGit/deployment/contact/monitoring.
+Never initialize/reset/replay. Stop beforeSD3. Recommended next effort:High.
+Prior handoff exact below.
+
+---
+
 # SD2 selected run — FAIL; acquisition contained
 
 Sole progress pointer:student-plan section9. Current close:
