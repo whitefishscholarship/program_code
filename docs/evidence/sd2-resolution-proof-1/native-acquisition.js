@@ -22,10 +22,10 @@ async function acquireNative(target, existing=null) {
   const fileId=match[1];let meta;
   try{out.explicitRemoteCalls++;meta=existing?existing.metadata:await tools.mcp__codex_apps__google_drive_get_file_metadata({fileId,fields:"id,name,mimeType,size,modifiedTime,version,md5Checksum,webViewLink"});}catch(e){out.errorSha256=sha(String(e));return finish("held_native_metadata_transport");}
   const metaSerialized=JSON.stringify(meta);out.metadataEnvelopeBytes=unescape(encodeURIComponent(metaSerialized)).length;out.metadataEnvelopeSha256=sha(metaSerialized);if(out.metadataEnvelopeBytes>16777216)return finish("held_native_metadata_envelope_over_limit");
-  if(meta.isError){out.providerErrorCode=meta.structuredContent?.error_code||null;return finish("held_native_metadata_access");}
+  if(meta.isError){out.providerErrorCode="NATIVE_METADATA_PROVIDER_ERROR";return finish("held_native_metadata_access");}
   let d=meta.structuredContent||{};if(!d.id){for(const x of(meta.content||[])){if(x.type==="text"){try{const a=JSON.parse(x.text);if(a.id)d=a;}catch{}}}}
   const name=d.name||d.title||"",mime=d.mimeType||d.mime_type||"";
-  out.nativeIdentityMatched=d.id===fileId;out.nativeMimeType=/^[a-z0-9.+-]+\/[a-z0-9.+-]+$/i.test(mime)?mime:null;out.nativeSize=Number(d.size)||null;out.modifiedTime=/^\d{4}-\d{2}-\d{2}T/.test(d.modifiedTime||d.modified_time||"")?(d.modifiedTime||d.modified_time):null;out.version=d.version||null;out.metadataNameSha256=sha(name);out.unrequestedProviderMetadataExcluded=true;
+  out.nativeIdentityMatched=d.id===fileId;out.nativeMimeType=["application/vnd.google-apps.document","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"].includes(mime)?mime:"unexpected_type";out.nativeSize=Number(d.size)||null;out.modifiedTime=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/.test(d.modifiedTime||d.modified_time||"")?(d.modifiedTime||d.modified_time):null;out.version=/^\d{1,20}$/.test(String(d.version||""))?String(d.version):null;out.metadataNameSha256=sha(name);out.unrequestedProviderMetadataExcluded=true;
   if(!out.nativeIdentityMatched)return finish("held_native_identity_mismatch");
   if(out.nativeSize>16777216)return finish("held_native_over_limit");
   if(!["application/vnd.google-apps.document","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"].includes(mime))return finish("held_unexpected_native_type");
@@ -35,7 +35,7 @@ async function acquireNative(target, existing=null) {
   if(!out.metadataProgramNameOverlap)return finish("held_native_program_title_unclear");
   let raw;
   try{out.explicitRemoteCalls++;raw=existing?existing.content:await tools.mcp__codex_apps__google_drive_fetch({url:target.exactLocator});}catch(e){out.errorSha256=sha(String(e));return finish("held_native_content_transport");}
-  const contentSerialized=JSON.stringify(raw);out.contentEnvelopeBytes=unescape(encodeURIComponent(contentSerialized)).length;out.contentEnvelopeSha256=sha(contentSerialized);if(out.contentEnvelopeBytes>16777216)return finish("held_native_content_envelope_over_limit");if(raw.isError){out.providerErrorCode=raw.structuredContent?.error_code||null;return finish("held_native_content_access");}
+  const contentSerialized=JSON.stringify(raw);out.contentEnvelopeBytes=unescape(encodeURIComponent(contentSerialized)).length;out.contentEnvelopeSha256=sha(contentSerialized);if(out.contentEnvelopeBytes>16777216)return finish("held_native_content_envelope_over_limit");if(raw.isError){out.providerErrorCode="NATIVE_CONTENT_PROVIDER_ERROR";return finish("held_native_content_access");}
   const c=raw.structuredContent||{};const text=typeof c.content==="string"?c.content:typeof c.structuredContent?.content==="string"?c.structuredContent.content:"";
   out.sourceTextSha256=sha(text);out.sourceTextBytes=unescape(encodeURIComponent(text)).length;
   if(c.id&&c.id!==fileId)return finish("held_native_content_identity_mismatch");

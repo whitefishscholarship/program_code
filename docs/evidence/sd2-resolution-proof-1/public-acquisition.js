@@ -23,18 +23,18 @@ async function acquirePublic(target) {
   } catch(e) {out.outcome="held_provider_transport_error";out.errorSha256=sha(String(e));out.completedAt=new Date().toISOString();return out;}
   const serialized=JSON.stringify(raw);out.returnedEnvelopeSha256=sha(serialized);out.returnedEnvelopeBytes=unescape(encodeURIComponent(serialized)).length;
   if(out.returnedEnvelopeBytes>16777216){out.outcome="held_over_limit";out.completedAt=new Date().toISOString();return out;}
-  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=raw.structuredContent?.error_code||null;out.completedAt=new Date().toISOString();return out;}
+  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=["INVALID_ARGUMENT","NOT_FOUND","PERMISSION_DENIED","UNAUTHENTICATED","RESOURCE_EXHAUSTED","DEADLINE_EXCEEDED","INTERNAL","UNAVAILABLE","UNKNOWN"].includes(raw.structuredContent?.error_code)?raw.structuredContent.error_code:"UNKNOWN_PROVIDER_ERROR";out.completedAt=new Date().toISOString();return out;}
   const candidates=[];const scan=(v,depth=0)=>{if(!v||typeof v!=="object"||depth>5)return;if(v.markdown!==undefined||v.metadata||v.json)candidates.push(v);if(Array.isArray(v)){for(const x of v)scan(x,depth+1);}else for(const [k,x]of Object.entries(v)){if(k==="text"&&typeof x==="string"){try{scan(JSON.parse(x),depth+1);}catch{}}else if(x&&typeof x==="object")scan(x,depth+1);}};
   scan(raw);const d=candidates.find(x=>typeof x.markdown==="string")||candidates.find(x=>x.json)||{};
   const md=typeof d.markdown==="string"?d.markdown:"";const meta=d.metadata||{};let json=d.json;
   if(typeof json==="string"){try{json=JSON.parse(json);}catch{json=null;}}
-  out.sourceMarkdownSha256=sha(md);out.sourceMarkdownBytes=unescape(encodeURIComponent(md)).length;
+  out.exactRecordedNameMatches=target.names.filter(n=>md.toLowerCase().includes(n.toLowerCase()));out.sourceMarkdownSha256=sha(md);out.sourceMarkdownBytes=unescape(encodeURIComponent(md)).length;
   out.httpStatus=Number.isInteger(meta.statusCode)?meta.statusCode:null;
   const finalUrl=typeof meta.url==="string"?meta.url:typeof meta.sourceURL==="string"?meta.sourceURL:null;
   out.returnedUrlSha256=finalUrl?sha(finalUrl):null;
-  const hostOf=u=>{const m=/^https?:\/\/([^\/?#:]+)/i.exec(u||"");return m?m[1].toLowerCase():null;};
-  out.returnedHost=hostOf(finalUrl);
-  if(out.returnedHost&&out.returnedHost!==target.host){out.outcome="held_unexpected_redirect";out.completedAt=new Date().toISOString();return out;}
+  const hostOf=u=>{const m=/^https?:\/\/([a-z0-9](?:[a-z0-9.-]{0,251}[a-z0-9])?)(?::[0-9]{1,5})?(?:[\/?#]|$)/i.exec(u||"");return m?m[1].toLowerCase():null;};
+  const parsedHost=hostOf(finalUrl);out.returnedHost=parsedHost===target.host?target.host:null;out.returnedHostMismatch=!!finalUrl&&parsedHost!==target.host;
+  if(out.returnedHostMismatch){out.outcome="held_unexpected_redirect";out.completedAt=new Date().toISOString();return out;}
   if(out.httpStatus&&out.httpStatus>=400){out.outcome="held_http_"+out.httpStatus;out.completedAt=new Date().toISOString();return out;}
   if(!md||!json){out.outcome="held_incomplete_or_no_structured_program_proof";out.completedAt=new Date().toISOString();return out;}
   if(json.suspectedApplicantData===true){out.outcome="held_suspected_applicant_content";out.completedAt=new Date().toISOString();return out;}
