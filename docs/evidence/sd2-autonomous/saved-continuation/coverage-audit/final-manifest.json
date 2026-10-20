@@ -1,0 +1,102 @@
+{
+  "scope": "Additional independent full386/7062 union/preservation audit already required by selected SD2-SAVED-CONTINUATION-1",
+  "createdAt": "2026-10-20T00:17:40.320960+00:00",
+  "entryCommit": "4a84305df8e06e799980a44f7824893dd3eed904",
+  "candidateCommit": "b38abebe0e426e805f857037ced5bf3f56c6ce14",
+  "candidateTree": "2b4eddfa0ee4de4e8c5126418fa1fe67a279a132",
+  "completeDiffSha256": "54f76bf84d93e6eb6bff6a3ee3960c0c67d72b1e7b4fb2bebfe4d65a09c9fb27",
+  "completeDiffBytes": 58422,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "blob": "2ccb1897e11ac19194cecd12ea4c0a03f055c150",
+      "bytes": 767242,
+      "sha256": "27ed69e92b3d7fe443007795134508cfae70f2d0b2b628b32f65200e2946568a"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "blob": "52f580c4df575c8297e59be90db4eee88ee5ff2a",
+      "bytes": 212834,
+      "sha256": "78f6ab5bbc5dc38fde9931723ece2b75aed10d6840ab70015276fc83aca0b2c6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "blob": "ac58b967422496945aba1663eddb9fe20193b030",
+      "bytes": 169104,
+      "sha256": "d23d21b7e08407a50e31cab024d01f28413b508cd6243de8eb89582c4bd15a10"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/README.md",
+      "mode": "100644",
+      "blob": "60ce015f5c0f85598a39cbeff3eba7c891d83efe",
+      "bytes": 3059,
+      "sha256": "d48e14d53f9ad6026cd71c4b181115aecbcb18c29e4c181aaa59a7f557315dc1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/SESSION_CLOSE.md",
+      "mode": "100644",
+      "blob": "5ef7aa726805e19dde0c781beb78d5a1d944ec55",
+      "bytes": 5292,
+      "sha256": "f60d489f60aa8d9d17c6e0f3115c11f83416450eb3159a436f8a394f48c9551f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/application-checks.json",
+      "mode": "100644",
+      "blob": "f3838dc843d0eaa9ef0e220008d7fa8bbce17ca5",
+      "bytes": 1148,
+      "sha256": "259ee2d0ad19c730f7f61a17c0ee95123b56ccf17b53dc642980b29844167d5c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/config.json",
+      "mode": "100644",
+      "blob": "d6adc1bc582013a237210cd63177cec8158cfe27",
+      "bytes": 372,
+      "sha256": "a0f411b96fb9e038c582d050d0e0a463eb66671555ef95e752399445f3abea13"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/entry-audit.json",
+      "mode": "100644",
+      "blob": "ed701ff19d2122e083464177db63c6e02ce57ab4",
+      "bytes": 1587,
+      "sha256": "a42284b60f4e596cc40ad6870ff80b744fd5830134fcb54b824d63eee2c0f511"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/next-action.json",
+      "mode": "100644",
+      "blob": "40bd8cb76eb2fac36a728041e982ae3fee17bc96",
+      "bytes": 1065,
+      "sha256": "64c5a677e1273944aec788c229714c2ca9cffacece7e0ed05d2e0f5c6edf103a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/session-issues.json",
+      "mode": "100644",
+      "blob": "20e631c0f9e6c435597dde96ed8fbf3e3b18ed2b",
+      "bytes": 1765,
+      "sha256": "9b77ac9af8adfc13516e70aa184480b71699b8bb2ca148e2c97fd437bf4529e7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verification.json",
+      "mode": "100644",
+      "blob": "d2f5c5ef506221a7748a87e8b8ec3604b8e4edd1",
+      "bytes": 13941,
+      "sha256": "f6ef83783a031666096373d254b313928c35626307187091649b5f0349d88e02"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verify.py",
+      "mode": "100644",
+      "blob": "3ff1c956b130d7728e2ee4628b88abb5220b29a5",
+      "bytes": 18370,
+      "sha256": "c7a36f6de1dab6c3979dc514bb4ec6e643fd94b1fa808d4a1b2e6c3ccf691dd7"
+    }
+  ],
+  "selectedInputs": 386,
+  "fieldOccurrences": 7062,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "externalEffects": false,
+  "SD3Started": false
+}
