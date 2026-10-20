@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTROL-REPAIR-CLOSEOUT-START -->
+# SD2 repair session closed — PASS for local objective
+
+Sole progress pointer:student-plan section9. Current closeout:
+docs/evidence/sd2-control-repair-closeout/SESSION_CLOSE.md and NEXT_SESSION.md.
+The large local control-repair/synthetic35-test/all397-reconciliation objective is
+complete with independent PASS at repair candidate72e27f0 and local receiptce7d094.
+Original source execution remains FAIL permanently. All397 held/272quarantined;
+72theoretical unused/0cleared; exact never-dispatched proof NOT ESTABLISHED.
+Both prior review tasks completed. H1 mandatory-head fix independently rechecked.
+Current open-items retains9original items/4repair items/14original gates plus limits,
+with exact owners/triggers/paths/actions; synthetic repair review is closed, never
+live-source clearance. No original record/review/hold/approval binding is replaced.
+Before new paths at the matching clean closeout receipt run:
+python3 docs/evidence/sd2-control-repair-closeout/verify.py --review-bound
+This verifies the immutable prior repair receipt and recorded clean-entry proof;
+do not rerun the old context verifier after this new prepend. No completed work replay.
+Next-session Codex owns local dispatch-evidence availability/sufficiency triage only
+when selected. If complete target-specific proof is unavailable, retain all397holds.
+Do not repair missing historical evidence with a source request. A later live adapter
+requires separate bounded selection plus every original control/safety/authority gate.
+Exactbuild EPERM/fresh-main-target, privacy/native/fact/humanreview/Kelsey-Jaycee,
+custody/preservation/recovery/permissions, student/publication/M1/SD5 and reserved
+effects remain open at original triggers. No dependency install, source/workbook read,
+app/config/CI/canonical state change, remoteGit/deployment/contact/monitoring orSD3.
+Never initialize/reset/replay. Stop beforeSD3. Recommended next effort:High.
+<!-- SD2-CONTROL-REPAIR-CLOSEOUT-END -->
 <!-- SD2-CONTROL-REPAIR-1-START -->
 # SD2 local control repair — synthetic candidate
 

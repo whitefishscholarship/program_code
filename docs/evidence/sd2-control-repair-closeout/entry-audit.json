@@ -1,0 +1,33 @@
+{
+  "entryCommit": "ce7d094e04fc07f04d2fb267eb74affcced4a8a8",
+  "cleanStatus": "",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-control-repair-1/verify.py",
+    "--review-bound"
+  ],
+  "startedAt": "2026-10-20T23:56:33.719029+00:00",
+  "completedAt": "2026-10-20T23:56:35.500738+00:00",
+  "exitCode": 0,
+  "result": {
+    "localRepairIntegrity": "PASS",
+    "reviewBound": true,
+    "originalSourceExecution": "FAIL",
+    "protectedPreEntryFiles": 2951,
+    "appendHistories": 3,
+    "targetsHeld": 397,
+    "originalQuarantines": 272,
+    "originalGateBindings": 14,
+    "conservativeCalls": 68,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "clearedForAcquisition": 0,
+    "sourceRequestsDuringBatch": 0,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "exactBuildGate": "BLOCKED_EPERM",
+    "freshAuthenticatedMainTarget": "UNVERIFIED",
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false
+  }
+}
