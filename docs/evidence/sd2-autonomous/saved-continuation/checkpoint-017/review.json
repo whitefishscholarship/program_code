@@ -1,0 +1,138 @@
+{
+  "outcome": "PASS",
+  "reviewerTask": "/root/sd2_continuation017_review",
+  "reviewedAt": "2026-10-19T23:58:56.629985+00:00",
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedCandidate": false,
+    "repositoryReadOnly": true,
+    "onlyWrittenArtifact": "/private/tmp/sd2-review-017.json",
+    "scope": "Independent full group017 saved-evidence comparison review; no source/workbook/raw/native access or external effect."
+  },
+  "binding": {
+    "entryCommit": "fc2e4215b57d9cfb8b0dc9f81706924554ad749e",
+    "candidateCommit": "506fd449663114d6eaca63f55a1dcfda3948de94",
+    "candidateTree": "412448b5d4a3af58233ce3dabc7ff3603e6f7adc",
+    "manifestSha256": "edfe9374d0520a335c5046bff5a1e4e3c9ee29f3a90bb287099ab10872efb471",
+    "completeDiffSha256": "84a92822ac7b0e7c574c09f17fa13de7c3012f015de149ec7aedce73a1a3c192",
+    "completeDiffBytes": 2220806,
+    "changedPaths": 15
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "countMatchedDispositions": true,
+  "coverage": {
+    "selectedInputs": 20,
+    "scopeOrders": [
+      321,
+      340
+    ],
+    "fieldOccurrences": 308,
+    "categoryCounts": {
+      "existing evidence consistent": 14,
+      "applicability/identity unresolved": 81,
+      "evidence unavailable": 209,
+      "existing evidence conflicting": 4
+    },
+    "exhaustiveChecks": "All20 original record pointers, canonical hashes, ordered fields/envelopes, held identities/candidates, explicit/inherited routes, evidence/registry references, sanitized artifact hashes and exact Unicode excerpt offsets, source views, additional contexts and minimum-proof routes checked. All308 comparison and next-action routes retain original holds and select no new read.",
+    "limitedPositiveChecks": "All14 limited positives checked against their own original clauses: two AEA children retain both stage/enrollment/program OR distinctions; BPA/FCCLA/Rubin retain3/3/2 recipients at1000 with FCCLA tuition basis; FVCC retains500–1000 with unknown basis; RISE3.5 remains historical; Soroptimist retains certificate enrollment OR consideration and once-only aid; Blue Collar GPA remains historical2025; Bold25000 and advertised any-GPA are narrowly represented.",
+    "semanticGuards": "All20 record guards checked. AWS headline does not replace minimum1000 or guarantee an award; redacted AEA child identities stay unresolved; NTHS general parent material does not prove unvisited DECA child scope; Work Ethic four-year exclusion preserved; Clearwater label8 versus source9 and historical2026 preserved; FVCC new degree-seeking/Running Start distinctions preserved; RISE label3x1000 versus2026 two2500 preserved; unsupported Poteat/Powell/ROTC facts held; Bold advertising does not establish generalized absence of restrictions.",
+    "continuationInputs": 340,
+    "continuationFields": 6217,
+    "cumulativeComparedFieldOccurrences": 6623,
+    "comparedAutonomousInputs": 360,
+    "priorJayceeInputs": 2
+  },
+  "preservation": {
+    "priorFilesBytesAndModes": 2787,
+    "exactAppendHistories": 3,
+    "priorPassReviewsAndFullManifestDirectChildReceipts": 16,
+    "priorReceiptChecks": "Recomputed all16 full candidate trees, binary diffs, changed path inventories, blobs, lengths, SHA256s and modes; each PASS remains bound to its unique direct-child two-file receipt. All earlier bytes/modes preserved. Group011 rejected candidate/manifest/FAIL review, one matched remediation disposition and finalPASS remain intact.",
+    "predecessorEntry": "Fresh verify16 --review-bound PASS receipt hash and timestamps validated at exact valid receipt tip fc2e421 before any017 path existed; group017 candidate is its direct child.",
+    "oldEngineAndVerifiersUnchanged": true,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "externalEffects": false,
+    "originalRoutes": "Original seeds, links, attention/supplement, inherited/destination, M1/custody, owners/triggers/actions and limited Jaycee/human-review bindings preserved by complete prior-tree byte/mode checks."
+  },
+  "checks": [
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/saved-continuation/engine.py verify 17",
+      "exitCode": 0,
+      "outcome": "PASS",
+      "reviewBound": false,
+      "startedAt": "2026-10-19T23:55:07.940183+00:00",
+      "completedAt": "2026-10-19T23:55:09.451929+00:00"
+    },
+    {
+      "check": "Independent full candidate manifest/tree/binary diff/path blobs/modes and all prior receipt validation",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Independent all2787 prior-tree blobs/modes, three exact append histories, group011 rejection/remediation and original406/7406 held totals",
+      "outcome": "PASS"
+    },
+    {
+      "check": "Actual checkpoint010 four application-command receipts, inline raw-output hashes/lengths, current reference digest",
+      "outcome": "BLOCKED_ENVIRONMENT retained",
+      "exitCodes": [
+        127,
+        127,
+        127,
+        127
+      ],
+      "missingTools": [
+        "tsx",
+        "tsc",
+        "next"
+      ],
+      "repeated": false,
+      "installOrWaiver": false
+    },
+    {
+      "command": "git diff --check entryCommit",
+      "outcome": "PASS via unchanged engine"
+    }
+  ],
+  "limits": [
+    "This PASS concerns the frozen local saved-evidence comparison only. It accepts no scholarship fact, identity, mapping, canonical stage or release.",
+    "Current source truth, complete material requirements, unresolved child identities and current cycles remain held. No new source/workbook/metadata/raw/native reads were performed.",
+    "Required application checks remain unfulfilled. Codex validation owns separately permitted exact-lockfile restoration, unchanged checks, exact build and fresh main-target proof before acceptance/release. No PASS, installation, repetition or waiver is inferred.",
+    "Final group017 review-bound validation becomes due only after the matching direct-child manifest/review receipt; it was not falsely run or claimed against the candidate."
+  ],
+  "nextPointer": {
+    "owner": "Codex",
+    "trigger": "Matching group017 PASS direct-child two-file local receipt",
+    "beforeNewPaths": "python3 docs/evidence/sd2-autonomous/saved-continuation/engine.py verify 17 --review-bound at valid receipt tip",
+    "nextReviewGroup": 18,
+    "scopeOrder": 341,
+    "savedInputKey": "saved-405588227-row-366",
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-019.json",
+    "recordPointer": "/records/0",
+    "nextGroupInputs": 20,
+    "nextGroupFields": 315,
+    "inputsRemaining": 46,
+    "fieldsRemaining": 845,
+    "finalAudit": "Additional independent exact386-input/7062-field union/no-gap/no-overlap/full-binding audit mandatory after20 groups; fullSD2 remains incomplete; never initialize/reset/replay; stop beforeSD3."
+  },
+  "incidents": [
+    {
+      "owner": "Independent reviewer",
+      "type": "Review output minimization incident",
+      "detail": "An inspection diagnostic emitted broader saved excerpt paragraphs than intended, including unrelated profile/material text; earlier header diagnostics also extended beyond the requested bounded header/block. No new-source access, applicant-data collection or repository mutation occurred. The reviewer stopped broad diagnostics and used internal predicates/counts/hashes for remaining checks. This is disclosed without repeating content; it is not a candidate-content finding.",
+      "nextAction": "Retain this disclosure and narrow future diagnostics before output."
+    }
+  ]
+}
