@@ -27,13 +27,21 @@ two explicit remote calls per attempt, 758 attempts / 1516 calls overall. No ret
 for access denial/login/404. Native files require exact-ID minimal metadata first;
 unexpected identity, type or content is held. Connected access proves no public use.
 
+The interim independent FAIL and privacy-remediation record remain canonical for
+that candidate. Before continuing, require a separately recorded independently
+inspected, hash-bound saved-source retrieval preflight. Names, candidate flags,
+institutional suffixes and provider flags alone cannot supply it. Unclear sources
+remain held without further reads. Native public/blank type needs its own proof.
+
 Source acquisition must request only named-program scope, exclude contact/recipient/
 biographical/applicant/form-response data, then sanitize before forwarding or saving.
 Provider redaction alone is insufficient. Raw provider results remain in volatile
-memory only. Persist selected exact program excerpts with hashes, field/input affinity,
-scope, observation time and explicit extraction/completeness/current-origin limits.
-An excerpt must match returned content exactly before it supports a proposal. Never
-persist an uninspected full source or claim full inspection from selected excerpts.
+memory only. After the interim privacy finding, persist only exact-matched excerpt
+hashes, lengths, offsets, field/input affinity, observation times and explicit limits.
+Do not persist source prose or raw provider-error messages. Hashes do not establish
+the underlying criterion or resolve an original fact hold. Any future usable prose
+or typed factual proposal needs independent safe inspection under its original gate.
+Never claim full inspection from selected excerpts.
 16 MiB maximum returned artifact; over-limit/incomplete results are held. Never infer
 source silence, current availability, accepted facts or identity from a 200 response.
 

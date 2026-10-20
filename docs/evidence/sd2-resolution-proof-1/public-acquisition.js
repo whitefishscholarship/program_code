@@ -23,7 +23,7 @@ async function acquirePublic(target) {
   } catch(e) {out.outcome="held_provider_transport_error";out.errorSha256=sha(String(e));out.completedAt=new Date().toISOString();return out;}
   const serialized=JSON.stringify(raw);out.returnedEnvelopeSha256=sha(serialized);out.returnedEnvelopeBytes=unescape(encodeURIComponent(serialized)).length;
   if(out.returnedEnvelopeBytes>16777216){out.outcome="held_over_limit";out.completedAt=new Date().toISOString();return out;}
-  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=raw.structuredContent?.error_code||null;out.providerErrorReason=(raw.content||[]).filter(x=>x.type==="text").map(x=>String(x.text).replace(/https?:\/\/\S+|\S+@\S+/g,"[redacted]")).join(" ").slice(0,500);out.completedAt=new Date().toISOString();return out;}
+  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=raw.structuredContent?.error_code||null;out.completedAt=new Date().toISOString();return out;}
   const candidates=[];const scan=(v,depth=0)=>{if(!v||typeof v!=="object"||depth>5)return;if(v.markdown!==undefined||v.metadata||v.json)candidates.push(v);if(Array.isArray(v)){for(const x of v)scan(x,depth+1);}else for(const [k,x]of Object.entries(v)){if(k==="text"&&typeof x==="string"){try{scan(JSON.parse(x),depth+1);}catch{}}else if(x&&typeof x==="object")scan(x,depth+1);}};
   scan(raw);const d=candidates.find(x=>typeof x.markdown==="string")||candidates.find(x=>x.json)||{};
   const md=typeof d.markdown==="string"?d.markdown:"";const meta=d.metadata||{};let json=d.json;

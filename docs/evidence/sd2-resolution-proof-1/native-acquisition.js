@@ -25,7 +25,7 @@ async function acquireNative(target, existing=null) {
   if(meta.isError){out.providerErrorCode=meta.structuredContent?.error_code||null;return finish("held_native_metadata_access");}
   let d=meta.structuredContent||{};if(!d.id){for(const x of(meta.content||[])){if(x.type==="text"){try{const a=JSON.parse(x.text);if(a.id)d=a;}catch{}}}}
   const name=d.name||d.title||"",mime=d.mimeType||d.mime_type||"";
-  out.nativeIdentityMatched=d.id===fileId;out.nativeMimeType=mime;out.nativeSize=Number(d.size)||null;out.modifiedTime=d.modifiedTime||d.modified_time||null;out.version=d.version||null;out.metadataNameSha256=sha(name);out.unrequestedProviderMetadataExcluded=true;
+  out.nativeIdentityMatched=d.id===fileId;out.nativeMimeType=/^[a-z0-9.+-]+\/[a-z0-9.+-]+$/i.test(mime)?mime:null;out.nativeSize=Number(d.size)||null;out.modifiedTime=/^\d{4}-\d{2}-\d{2}T/.test(d.modifiedTime||d.modified_time||"")?(d.modifiedTime||d.modified_time):null;out.version=d.version||null;out.metadataNameSha256=sha(name);out.unrequestedProviderMetadataExcluded=true;
   if(!out.nativeIdentityMatched)return finish("held_native_identity_mismatch");
   if(out.nativeSize>16777216)return finish("held_native_over_limit");
   if(!["application/vnd.google-apps.document","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"].includes(mime))return finish("held_unexpected_native_type");
