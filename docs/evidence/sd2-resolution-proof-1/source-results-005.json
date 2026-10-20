@@ -1,0 +1,897 @@
+{
+  "records": [
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-318a06e814ce8b8feb30",
+      "order": 83,
+      "exactLocatorSha256": "318a06e814ce8b8feb30223b1137379f556fdefaca5f879f375f58d6c9a59f19",
+      "host": "www.duckbrand.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-288"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-288#identityObservation"
+      ],
+      "startedAt": "2026-10-20T19:08:33.930Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_material_program_clause": 3,
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "6eb7fb5d33164d8f29831ae7e8bd6758fa26ceb83cf517d054a652120b94231e",
+      "returnedEnvelopeBytes": 28133,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "874484add55776fe4b4c4e009ed8797d207ce9bcce4b3f1cc15aa7d65b17df7c",
+      "sourceMarkdownBytes": 9041,
+      "httpStatus": 200,
+      "returnedUrlSha256": "318a06e814ce8b8feb30223b1137379f556fdefaca5f879f375f58d6c9a59f19",
+      "returnedHost": "www.duckbrand.com",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:42.645Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-342285b33a6ae54f2976",
+      "order": 88,
+      "exactLocatorSha256": "342285b33a6ae54f2976217f09e472d0d4e05d6cb3073e1f5bbbcabdaaeec4f6",
+      "host": "nesa.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-282"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-282#cycle",
+        "saved-405588227-row-282#eligibility",
+        "saved-405588227-row-282#identityObservation",
+        "saved-405588227-row-282#materials",
+        "saved-405588227-row-282#need",
+        "saved-405588227-row-282#reapplication"
+      ],
+      "startedAt": "2026-10-20T19:08:33.930Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "NESA Scholarships (National Eagle Scout Association)",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "ffd70a0b22973c9d4dee5334bdbd0d92015d7c3eb44d748ed734f9d48789c133",
+          "quoteCharacters": 122,
+          "hashOnlyEvidence": true,
+          "matchOffset": 540,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "NESA Scholarships (National Eagle Scout Association)",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "a3a9a075baf23b872774106ce3ffe3fbf03d2b119e503bba02e0345f6c90cc74",
+          "quoteCharacters": 86,
+          "hashOnlyEvidence": true,
+          "matchOffset": 711,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "798dae488815dcdc1a837e4281cca7233cc588f648904d6efb2dc7692f7fb984",
+      "returnedEnvelopeBytes": 21778,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "b86f8cef15c320617640a229e880a0a28f2a08c3e9c8d6823f7c6f56906c6f55",
+      "sourceMarkdownBytes": 6416,
+      "httpStatus": 200,
+      "returnedUrlSha256": "342285b33a6ae54f2976217f09e472d0d4e05d6cb3073e1f5bbbcabdaaeec4f6",
+      "returnedHost": "nesa.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:51.276Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-37a44ecac0ed5d564ac2",
+      "order": 91,
+      "exactLocatorSha256": "37a44ecac0ed5d564ac2ee4ea6de11cd9b9a999bd7dfeba654dfa4a96d5eb486",
+      "host": "www.healthproductsforyou.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-291",
+        "saved-405588227-row-292"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-291#applicantStage",
+        "saved-405588227-row-291#application",
+        "saved-405588227-row-291#cycle",
+        "saved-405588227-row-291#eligibility",
+        "saved-405588227-row-291#identityObservation",
+        "saved-405588227-row-291#materials",
+        "saved-405588227-row-291#minimumGPA",
+        "saved-405588227-row-291#schoolType",
+        "saved-405588227-row-292#applicantStage",
+        "saved-405588227-row-292#application",
+        "saved-405588227-row-292#cycle",
+        "saved-405588227-row-292#eligibility",
+        "saved-405588227-row-292#identityObservation",
+        "saved-405588227-row-292#materials",
+        "saved-405588227-row-292#schoolType"
+      ],
+      "startedAt": "2026-10-20T19:08:33.930Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "HPFY Beyond Disability Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "2e949ef23a64aceba3938e7a7b500bf929c283b0b28fad92ae505c0c088508db",
+          "quoteCharacters": 108,
+          "hashOnlyEvidence": true,
+          "matchOffset": 2063,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "HPFY Beyond Disability Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e925d921362727d500683a81eb8115a20ef65f9bdb774fd94d5e7cd5c4169eb5",
+          "quoteCharacters": 231,
+          "hashOnlyEvidence": true,
+          "matchOffset": 2172,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "HPFY Beyond Disability Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "4b2dde9bc08b7f8a7da282e0f5a62c4b5de604f7e31767c9ddaddb8143da3369",
+          "quoteCharacters": 57,
+          "hashOnlyEvidence": true,
+          "matchOffset": 2404,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "HPFY Make a Difference Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "0e3fa9994b59b36ce42f5579aad39860962ee52afedeb69654d7751e559af503",
+          "quoteCharacters": 72,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4856,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "HPFY Make a Difference Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "c65aeba41f74f36ddc9918ae573391c6ccc3173ab9382c1901a90a8d054826d2",
+          "quoteCharacters": 39,
+          "hashOnlyEvidence": true,
+          "matchOffset": 5237,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "HPFY Make a Difference Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e28d510de31e7aef2b6a716a056d950a20d4967b74ba659316a03d2ca33d1b7c",
+          "quoteCharacters": 138,
+          "hashOnlyEvidence": true,
+          "matchOffset": 19401,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "e2b91b0505a94f6a75122a09330312604b4dadadc4eb6737e0f422223bc10d72",
+      "returnedEnvelopeBytes": 53375,
+      "exactRecordedNameMatches": [
+        "HPFY Beyond Disability Scholarship",
+        "HPFY Make a Difference Scholarship"
+      ],
+      "sourceMarkdownSha256": "5c3c548a65039259cd3c9fafe3f1473c64a892bbcb097200262f7b0a5f30a24e",
+      "sourceMarkdownBytes": 21234,
+      "httpStatus": 200,
+      "returnedUrlSha256": "37a44ecac0ed5d564ac2ee4ea6de11cd9b9a999bd7dfeba654dfa4a96d5eb486",
+      "returnedHost": "www.healthproductsforyou.com",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:09:03.482Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-3a653520c81b8fb37b24",
+      "order": 94,
+      "exactLocatorSha256": "3a653520c81b8fb37b2414f7a0e5a5165e9a4331f725d9ea5528fccb67b45b7a",
+      "host": "nths.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-341"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-341#application",
+        "saved-405588227-row-341#eligibility",
+        "saved-405588227-row-341#identityObservation",
+        "saved-405588227-row-341#materials",
+        "saved-405588227-row-341#minimumGPA"
+      ],
+      "startedAt": "2026-10-20T19:08:33.930Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 3,
+        "not_material_program_clause": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "693b7f31c0a8a325a261ef46f03a3e5d0f9a137588a06acfd49d0656a1b76bf7",
+      "returnedEnvelopeBytes": 18887,
+      "exactRecordedNameMatches": [
+        "LAPSEN Scholarship"
+      ],
+      "sourceMarkdownSha256": "9de024ea91211352fd768eb31081a6c89e2366af52b321350cb663ce29058b4d",
+      "sourceMarkdownBytes": 6398,
+      "httpStatus": 200,
+      "returnedUrlSha256": "3a653520c81b8fb37b2414f7a0e5a5165e9a4331f725d9ea5528fccb67b45b7a",
+      "returnedHost": "nths.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:09:18.523Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-3eee78ad8ccd3d0fb353",
+      "order": 103,
+      "exactLocatorSha256": "3eee78ad8ccd3d0fb3535cb5a7860d641d31975da4f4d8220a429fd812098ea7",
+      "host": "pointfoundation.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-281"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-281#cycle",
+        "saved-405588227-row-281#eligibility",
+        "saved-405588227-row-281#identityObservation",
+        "saved-405588227-row-281#reapplication"
+      ],
+      "startedAt": "2026-10-20T19:09:18.526Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Point Foundation Flagship Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "841933d2a36a3f73907e47d8ef64d36e0d5eb9357fa911a3ecb1af96ae157efd",
+          "quoteCharacters": 309,
+          "hashOnlyEvidence": true,
+          "matchOffset": 24,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Point Foundation Flagship Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "089f36795746e0e7516ef21f8659500729b65e4e7bbce88cf4ef89e6402036de",
+          "quoteCharacters": 73,
+          "hashOnlyEvidence": true,
+          "matchOffset": 3783,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "cbf171f1fadafda5750bd73237e4d2958682ae107867ddeb02e47c509747a5a5",
+      "returnedEnvelopeBytes": 18072,
+      "exactRecordedNameMatches": [
+        "Point Foundation Flagship Scholarship"
+      ],
+      "sourceMarkdownSha256": "9db7a9780781c78a28ff41690a73e2fd3ac9046e65a246d647fc31ab483de54d",
+      "sourceMarkdownBytes": 5480,
+      "httpStatus": 200,
+      "returnedUrlSha256": "3eee78ad8ccd3d0fb3535cb5a7860d641d31975da4f4d8220a429fd812098ea7",
+      "returnedHost": "pointfoundation.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:09:48.993Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-3ff00be1f424b15625e8",
+      "order": 105,
+      "exactLocatorSha256": "3ff00be1f424b15625e8f2dd21241c2ab1d1aa09a00922eccc9a6e34db436981",
+      "host": "bringbackthetrades.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-343"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-343#application",
+        "saved-405588227-row-343#cycle",
+        "saved-405588227-row-343#eligibility",
+        "saved-405588227-row-343#identityObservation",
+        "saved-405588227-row-343#materials",
+        "saved-405588227-row-343#need"
+      ],
+      "startedAt": "2026-10-20T19:09:18.526Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Bring Back The Trades Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "9501305183eb5d69d182eac68f822d0ab48eb81071ee8a69a8d4e70a98995eb2",
+          "quoteCharacters": 154,
+          "hashOnlyEvidence": true,
+          "matchOffset": 407,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Bring Back The Trades Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "ba849fc84f47251476f0c20258aaf29039dce876fde84a85a7e32d79cfbb5375",
+          "quoteCharacters": 65,
+          "hashOnlyEvidence": true,
+          "matchOffset": 806,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "c06faf12ce46b51958a995d4bc64d66aedf960cb8a010962094b132c3350b676",
+      "returnedEnvelopeBytes": 15461,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "209867d2d4437839da7665fa78ad6d1f42ad1fb30ad2ec9c0fbef71a0fb6138a",
+      "sourceMarkdownBytes": 3760,
+      "httpStatus": 200,
+      "returnedUrlSha256": "3ff00be1f424b15625e8f2dd21241c2ab1d1aa09a00922eccc9a6e34db436981",
+      "returnedHost": "bringbackthetrades.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:09:58.021Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-45fda935d4f3c2f74988",
+      "order": 107,
+      "exactLocatorSha256": "45fda935d4f3c2f74988661f1f015ee0d6d6cc2606b2c7505440b2007e15c0b8",
+      "host": "umontana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-309",
+        "saved-405588227-row-310",
+        "saved-405588227-row-311"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-309#application",
+        "saved-405588227-row-310#application",
+        "saved-405588227-row-311#application"
+      ],
+      "startedAt": "2026-10-20T19:09:18.526Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "9271d4a075dc2eae369cde5f39ac7f6f7f4be09d7a8d0e66823f071291985bdd",
+      "returnedEnvelopeBytes": 22911,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "71adde5a580b8f3f7f926168288bbe16c615268c63e85ef8bbcc7841241d6635",
+      "sourceMarkdownBytes": 6298,
+      "httpStatus": 200,
+      "returnedUrlSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "returnedHost": null,
+      "returnedHostMismatch": true,
+      "outcome": "held_unexpected_redirect",
+      "completedAt": "2026-10-20T19:09:39.659Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-4e69827d99e9582d05dd",
+      "order": 122,
+      "exactLocatorSha256": "4e69827d99e9582d05ddb312947db9173cbc7a3bf3381150094f34e3a949525f",
+      "host": "www.goarmy.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-365"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-365#application",
+        "saved-405588227-row-365#identityObservation",
+        "saved-405588227-row-365#nationalProgramCycle",
+        "saved-405588227-row-365#nationalProgramEligibility"
+      ],
+      "startedAt": "2026-10-20T19:09:18.526Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Grizzly Battalion Army ROTC Scholarship Program",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "2da44e329256bb2076f1cf8ae30f741bb271982999af2fb9dffc57d815c44d2f",
+          "quoteCharacters": 132,
+          "hashOnlyEvidence": true,
+          "matchOffset": 713,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 3
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "2356d64b8f91d7b0153683c72c95f1270fe3c2869f80b274b563f42ea7984420",
+      "returnedEnvelopeBytes": 28523,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "63e0b3ebfbb1d499542093d9966e4f6830c486fed6154b9c9e9af6573ece74ae",
+      "sourceMarkdownBytes": 9433,
+      "httpStatus": 200,
+      "returnedUrlSha256": "4e69827d99e9582d05ddb312947db9173cbc7a3bf3381150094f34e3a949525f",
+      "returnedHost": "www.goarmy.com",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:09:29.245Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-4e97a9eaa683cfd171c0",
+      "order": 123,
+      "exactLocatorSha256": "4e97a9eaa683cfd171c057e6ca339a473fa5bcee405046e0c9574688f1141a2a",
+      "host": "www.mus.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-274"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-274#cycle",
+        "saved-405588227-row-274#eligibility",
+        "saved-405588227-row-274#identityObservation",
+        "saved-405588227-row-274#materials"
+      ],
+      "startedAt": "2026-10-20T19:09:58.026Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "0f260640d696a03eef81b4b6082b6269d3bf29bde2cc3035212fb376c0462bf4",
+      "returnedEnvelopeBytes": 20408,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "26c594ae1c1634d1f6afc745b06ea813b04baa7b7db6fba7cac9bad15e203059",
+      "sourceMarkdownBytes": 7896,
+      "httpStatus": 200,
+      "returnedUrlSha256": "4e97a9eaa683cfd171c057e6ca339a473fa5bcee405046e0c9574688f1141a2a",
+      "returnedHost": "www.mus.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:10:34.797Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-4f2b36a607199514758b",
+      "order": 124,
+      "exactLocatorSha256": "4f2b36a607199514758b6ade21394b4e8b47a5ed0f1ebe953dfeb427d1ba0c27",
+      "host": "www.fisherhouse.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-285"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-285#application",
+        "saved-405588227-row-285#eligibility",
+        "saved-405588227-row-285#need",
+        "saved-405588227-row-285#reapplication"
+      ],
+      "startedAt": "2026-10-20T19:09:58.026Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Heroes' Legacy Scholarship (Fisher House)",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "d7079fb3487bde3da6a98c3919d29c51d881f8640eaf25127892ab46cb77fa35",
+          "quoteCharacters": 319,
+          "hashOnlyEvidence": true,
+          "matchOffset": 8722,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Heroes' Legacy Scholarship (Fisher House)",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "4d60f666a04d984c225115404bbc603b0b8bcc60ee34f86ab49072cca45c4d32",
+          "quoteCharacters": 95,
+          "hashOnlyEvidence": true,
+          "matchOffset": 6894,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Heroes' Legacy Scholarship (Fisher House)",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "48fea02551b0e7aee3546e6d494d0ed3e7958aab17354b601d44122fb7172161",
+          "quoteCharacters": 77,
+          "hashOnlyEvidence": true,
+          "matchOffset": 6993,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Heroes' Legacy Scholarship (Fisher House)",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "8c71bd3b794e63d2c9335eca9b5ea55701ec7dce5b77c39df4101ca8c4ad9d6a",
+          "quoteCharacters": 168,
+          "hashOnlyEvidence": true,
+          "matchOffset": 33291,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "92c46c8a4b2c07b1d971e591b992dc83fd627404b1e2907217cef1f291de9805",
+      "returnedEnvelopeBytes": 137343,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "8806aa743cfca3476003e30ac1bfa9200126a6cf7d85f579b91f609807274268",
+      "sourceMarkdownBytes": 64090,
+      "httpStatus": 200,
+      "returnedUrlSha256": "4f2b36a607199514758b6ade21394b4e8b47a5ed0f1ebe953dfeb427d1ba0c27",
+      "returnedHost": "www.fisherhouse.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:10:14.613Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-51ddb13472f971301125",
+      "order": 128,
+      "exactLocatorSha256": "51ddb13472f9713011253daa616ce3b7ec165884984469ec460ba0b246e6bda0",
+      "host": "morelli.foundation",
+      "affectedSavedInputs": [
+        "saved-405588227-row-375",
+        "saved-405588227-row-410"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-375#application",
+        "saved-405588227-row-375#cycle",
+        "saved-405588227-row-375#eligibility",
+        "saved-405588227-row-375#identityObservation"
+      ],
+      "startedAt": "2026-10-20T19:09:58.026Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "The Joseph James Morelli Legacy Foundation Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "5643a3516a92a7dd9c58ee5c206fb129af6698d596b895f64a4b390111bc801f",
+          "quoteCharacters": 247,
+          "hashOnlyEvidence": true,
+          "matchOffset": 346,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "The Joseph James Morelli Legacy Foundation Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "be2fdf6e0f3fc9d65616e8509675e06cf32e2e807d5215604f442e95d6c06adb",
+          "quoteCharacters": 78,
+          "hashOnlyEvidence": true,
+          "matchOffset": 594,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Hilleman/Morelli Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "417ba9b015bad6949fe6c541243233045a4907504b6377aa2c50c6c3a469b39c",
+          "quoteCharacters": 120,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1807,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Hilleman/Morelli Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "07afeccbe20b0f59147355d1511440859b73500e196679fe51b4172dd01ad25a",
+          "quoteCharacters": 138,
+          "hashOnlyEvidence": true,
+          "matchOffset": 2050,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "74860ba6dc9bf5cc9414c152b439ca5d2ac60bf01ee8c46863d10e2e685cb424",
+      "returnedEnvelopeBytes": 14474,
+      "exactRecordedNameMatches": [
+        "Hilleman/Morelli Scholarship"
+      ],
+      "sourceMarkdownSha256": "8dc6ba4f9c173f21c16a881e44de9e3090b06cece709b57cca2cd5fe9164db64",
+      "sourceMarkdownBytes": 2942,
+      "httpStatus": 200,
+      "returnedUrlSha256": "51ddb13472f9713011253daa616ce3b7ec165884984469ec460ba0b246e6bda0",
+      "returnedHost": "morelli.foundation",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:10:24.218Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-524e527447e443687427",
+      "order": 129,
+      "exactLocatorSha256": "524e527447e4436874275b89a852f956c57f58e8572e35327f4e814a9432b01c",
+      "host": "www.wtsinternational.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-374"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-374#cycle",
+        "saved-405588227-row-374#eligibility",
+        "saved-405588227-row-374#identityObservation",
+        "saved-405588227-row-374#materials"
+      ],
+      "startedAt": "2026-10-20T19:09:58.026Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Strategic Partner Scholarships",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "31ee0432f9f638cb7f4eca0a47aae7c3deac7b28b48f18ea3c8a3bf2c0d195f2",
+          "quoteCharacters": 112,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1701,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Strategic Partner Scholarships",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "1196bf2b0121c163ec37d27db008b78846fb8531c513654189eefcae114d182a",
+          "quoteCharacters": 21,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1816,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "e53f9c6bd710894924ab86949f6ea31e37d9761cd428399f8397680f3d6051ca",
+      "returnedEnvelopeBytes": 9872,
+      "exactRecordedNameMatches": [
+        "Strategic Partner Scholarships"
+      ],
+      "sourceMarkdownSha256": "dc53af091788c53ea986c3fdd38b3fa6e574b5370133ac95ae9573b16f408fbe",
+      "sourceMarkdownBytes": 2730,
+      "httpStatus": 200,
+      "returnedUrlSha256": "524e527447e4436874275b89a852f956c57f58e8572e35327f4e814a9432b01c",
+      "returnedHost": "www.wtsinternational.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:10:42.570Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    }
+  ]
+}

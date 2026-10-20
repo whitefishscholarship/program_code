@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-RESOLUTION-PROOF-1-START -->
+# SD2 selected run — FAIL; acquisition contained
+
+Sole progress pointer:student-plan section9. Current close:
+docs/evidence/sd2-resolution-proof-1/SESSION_CLOSE.md.
+Three prohibited replays(orders26/30/34) remain failed; no acceptance receipt.
+All397targets have forensic dispositions;64observed completed calls are a floor,
+not full dispatch proof. All272 acquisition candidates quarantined; no further
+source calls this run. Cumulative trace/correction/independent ledger review supersede
+earlier interrupted counts/replayed=false flags. Missing bodies not reconstructed.
+Hash-only results establish no criterion values. One pinnedrestore/plan/typecheck/
+tests passed; exactbuild EPERM remains. Before future action verify matching frozen
+failure-record integrity:
+python3 docs/evidence/sd2-resolution-proof-1/verify.py --forensic-bound
+This reports FAIL execution with verified integrity; --review-bound rejects.
+Read AGENTS canonicalorder/student-plansection9/originalAUTHORITY/POLICY/currentclose,
+selection/entry/forensic-correction/source-call-audit/call-ledger-review/outcomes/
+summary/validation/interimFAIL/safetyrecheck/finalmanifest/finalreview.
+Codex owns durable pre-call journal and independently verified exact-unused proof
+before any remaining selected acquisition; ambiguous/spent targets stayheld.
+Original owners/triggers/paths/actions at consolidation acceptance-gates/original
+packets remain. Every prior byte/mode/hold/approval/route/review and3appendhistories
+protected. FullSD2 incomplete;0accepted;Kelsey/Jaycee roles unchanged.
+No new scope/workbook/app/config/CI/contact/monitoring/remoteGit/deployment effects.
+Never initialize/reset/replay. Stop beforeSD3.
+<!-- SD2-RESOLUTION-PROOF-1-END -->
 <!-- SD2-CONSOLIDATION-PACKAGE-START -->
 - SD2-CONSOLIDATION-PACKAGE-1:one local consolidation/acceptance-preparation package,
   status only matching final-manifest/PASSreview/direct-childreceipt;elsepending.

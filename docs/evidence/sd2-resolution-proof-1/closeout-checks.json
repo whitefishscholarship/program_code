@@ -1,0 +1,59 @@
+{
+  "recordedAt": "2026-10-20T19:25:11.483391+00:00",
+  "timingMeaning": "Recorded after observing tool results; original validation folder retains exact first-run command timestamps/logs. No fabricated start/end times for these closeout checks.",
+  "commands": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "context": "restricted closeout retry after handoff edits",
+      "exitCode": 1,
+      "result": "EPERM tsx local IPC bind"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "context": "unchanged command in permitted IPC environment",
+      "exitCode": 0,
+      "result": "13 ordered stage contracts and current machine-state transition validated"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "workingDirectory": "repository root",
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "0336d32b930a87d458414611184ab546b00df047"
+      ],
+      "workingDirectory": "repository root",
+      "exitCode": 2,
+      "result": "Two retained EOF warnings: bound acquisition-code file and authentic raw typecheck log. No silent rewrite."
+    },
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-resolution-proof-1/verify.py",
+        "--integrity-only"
+      ],
+      "exitCode": 0,
+      "result": "Integrity PASS; execution FAIL.2879protected entry files,3prior append histories,397held dispositions,64observed/68reserved calls."
+    }
+  ],
+  "acceptedExecution": false,
+  "acceptanceCriteriaChanged": false
+}

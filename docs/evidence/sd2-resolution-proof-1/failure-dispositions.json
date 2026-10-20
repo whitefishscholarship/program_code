@@ -1,0 +1,66 @@
+{
+  "outcome": "FAIL",
+  "dispositions": [
+    {
+      "findingId": "REPLAY-1",
+      "severity": "high",
+      "status": "UNRESOLVED_HISTORICAL_VIOLATION",
+      "rationale": "Three confirmed repeated requests cannot be undone. Keep failure visible; no acceptance receipt.",
+      "owner": "Codex continuation",
+      "trigger": "Before any further selected source acquisition",
+      "target": "source-call-audit.json; forensic-correction.json; outcomes.json",
+      "nextAction": "Maintain all272 quarantines. Independently prove exact never-dispatched target set and durable exclusive pre-call intent/result controls before any new selected requests. No new calls this run."
+    },
+    {
+      "findingId": "DISPATCH-1",
+      "severity": "high",
+      "status": "CONTAINED_NOT_CLEARED",
+      "rationale": "Interrupted controllers did not durably journal every dispatched call; reserve uncertain frontier and possible replay32.",
+      "owner": "Codex continuation",
+      "trigger": "Before any resumption under existing finite grant",
+      "target": "call-ledger-review.json and source-call-audit.json",
+      "nextAction": "Treat missing result and uncertain dispatch as spent; retain all272 quarantines until independent exact-unused proof."
+    },
+    {
+      "findingId": "BUILD-1",
+      "severity": "high",
+      "status": "OPEN_GATE",
+      "rationale": "Exact required build failed process/port EPERM; successful other checks confer no waiver.",
+      "owner": "Codex validation/governance",
+      "trigger": "Unchanged supported execution context available before canonical acceptance or any separately permitted release",
+      "target": "validation/build.json; validation/build.log; consolidation acceptance-gates.json",
+      "nextAction": "Preserve actual failure; run only the exact unchanged build when permitted, with fresh main/target verification at its original gate. No alternative build or unrelated repair."
+    }
+  ],
+  "noAcceptanceCriteriaChanged": true,
+  "canonicalAcceptance": false,
+  "callLedgerFindingDispositions": [
+    {
+      "findingId": "H1",
+      "severity": "high",
+      "owner": "Codex continuation",
+      "target": "forensic-correction.json; source-call-audit.json; outcomes.json; SESSION_CLOSE.md",
+      "trigger": "Before any future source dispatch under this existing selection",
+      "rationale": "Historical execution constraint remains failed; all272 acquisition candidates quarantined. No further calls in this run; durable control validation remains a gate.",
+      "status": "CONTAINED_UNRESOLVED"
+    },
+    {
+      "findingId": "H2",
+      "severity": "high",
+      "owner": "Codex continuation",
+      "target": "forensic-correction.json; source-call-audit.json; outcomes.json; SESSION_CLOSE.md",
+      "trigger": "Forensic closeout and before any authorized continuation",
+      "rationale": "Historical execution constraint remains failed; all272 acquisition candidates quarantined. No further calls in this run; durable control validation remains a gate.",
+      "status": "CONTAINED_UNRESOLVED"
+    },
+    {
+      "findingId": "M1",
+      "severity": "medium",
+      "owner": "Codex continuation",
+      "target": "forensic-correction.json; source-call-audit.json; outcomes.json; SESSION_CLOSE.md",
+      "trigger": "Before final handoff and final whole-run review",
+      "rationale": "Inaccurate snapshots are explicitly superseded by the cumulative trace/correction; historical bytes preserved. All272 candidates held. This evidence repair does not erase the source replay violations.",
+      "status": "EVIDENCE_OVERLAY_RECORDED_NOT_EXECUTION_ACCEPTANCE"
+    }
+  ]
+}

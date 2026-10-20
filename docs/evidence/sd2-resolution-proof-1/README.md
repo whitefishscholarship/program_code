@@ -1,3 +1,19 @@
+# Current execution status: FAIL; acquisition suspended
+
+The selected scopes below remain the recorded authorization. Their execution failed
+the no-replay constraint: three confirmed repeated requests and one possible replay
+are retained in the forensic ledger. No acceptance receipt may be issued for this run.
+All272 source-read candidates are quarantined. Source acquisition is incomplete;
+all397 targets receive explicit forensic dispositions, with no accepted facts/mappings.
+Use SESSION_CLOSE.md, forensic-correction.json, source-call-audit.json,
+call-ledger-review.json and outcomes.json before the original execution protocol below.
+Earlier interrupted upper bounds and replayed=false flags are superseded by the
+cumulative forensic ledger. Existing bound review/result bytes remain preserved.
+verify.py --forensic-bound checks the frozen failure record; --review-bound rejects.
+No more source requests this run. Exact build remains an open gate.
+
+---
+
 # Selected SD2 validation and material proof run
 
 Kelsey's direct instruction selects both already reviewed finite proposals in
