@@ -1,0 +1,21 @@
+{
+  "command": [
+    "node",
+    "docs/evidence/sd2-resolution-proof-1/test-acquisition.cjs"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-10-20T18:54:07.056732+00:00",
+  "completedAt": "2026-10-20T18:54:09.433524+00:00",
+  "stdoutSha256": "6029fa53ce5b8675cd9ec9e8b893a6febec69d7d12c937dcc508e960e24822c0",
+  "result": {
+    "outcome": "PASS",
+    "remoteCalls": 0,
+    "checks": [
+      "public/native missing-preflight no-call",
+      "public/native hash-only benign/excluded clauses",
+      "error-body hash-only",
+      "full native metadata/content envelope caps"
+    ]
+  },
+  "remoteCalls": 0
+}

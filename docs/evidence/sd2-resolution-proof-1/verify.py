@@ -46,6 +46,10 @@ def verify(bound=False):
     for p in sorted(G.glob('source-results-*.json')):
         x=load(p);forbidden(x);acquisitions.extend(x['records'])
     assert len({x['targetId']for x in acquisitions})==len(acquisitions)
+    targetby={x['targetId']:x for x in triage['targets']}
+    for x in acquisitions:
+        t=targetby[x['targetId']];assert x['order']==t['order'] and x['exactLocatorSha256']==t['exactLocatorSha256']
+        assert x['affectedSavedInputs']==t['affectedSavedInputs'] and t['mode']in['public','native']
     ids={x['targetId']for x in triage['targets']};assert {x['targetId']for x in acquisitions}<=ids
     assert all(x['allOriginalHoldsRetained'] and x['factsAccepted']==x['mappingsAccepted']==0 for x in acquisitions)
     assert all(x['allOriginalHoldsRetained'] and not x['acceptedFact'] and not x['acceptedMapping']for x in ledger)
@@ -62,12 +66,17 @@ def verify(bound=False):
     for pin in repair['pins']:assert sha((R/pin['path']).read_bytes())==pin['sha256']
     assert load(G/'interim-review-fail.json')['outcome']=='FAIL'
     safe=load(G/'safety-recheck.json');assert safe['outcome']=='PASS' and not any(safe['severityCounts'].values())
+    for n,h in safe['codeSha256'].items():assert sha((G/n).read_bytes())==h,n
     fixes=load(G/'author-remediation.json')['dispositions'];assert len(fixes)==3 and {x['findingId']for x in fixes}=={'H1','H2','M1'}
     assert all(x['owner']and x['rationale']and x['target']for x in fixes)
-    inspection=load(G/'retrieval-preflight.json');approved={x['targetId']:x for x in inspection['records']if x['outcome']=='PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY'}
+    approved={}
+    for pp in G.glob('retrieval-preflight-*.json'):
+        for x in load(pp)['records']:
+            if x['outcome']=='PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY' and x.get('retrievalEligibleAfterThisReview',True) and not x.get('noReplayHold',False):approved[x['targetId']]=x
     for x in acquisitions:
         if x.get('afterSafetyRecheck'):
-            assert x['targetId']in approved and x['preflightSha256']==sha((G/'retrieval-preflight.json').read_bytes()) and not x.get('replayed')
+            ref=x['preflightReference'];assert x['targetId']in approved and ref['sha256']==sha((R/ref['path']).read_bytes()) and not x.get('replayed')
+            assert any(y['targetId']==x['targetId'] and y['outcome']=='PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY' for y in load(R/ref['path'])['records'])
     summary=load(G/'summary.json');assert summary['targets']==397 and summary['sourceTargetDispositions']==len(acquisitions) and summary['knownExplicitRemoteCalls']==known and summary['maximumExplicitRemoteCallsIncludingInterrupted']==upper
     assert summary['acceptedFacts']==summary['acceptedMappings']==0 and not summary['fullSD2Complete'] and not summary['SD3Started']
     m=None
@@ -77,6 +86,7 @@ def verify(bound=False):
         cp=set(git('diff','--name-only',ENTRY,m['candidateCommit']).decode().splitlines());assert cp=={x['path']for x in m['changedFiles']}
         for x in m['changedFiles']:
             b=git('show',m['candidateCommit']+':'+x['path']);assert sha(b)==x['sha256']and len(b)==x['bytes']and(R/x['path']).read_bytes()==b
+            mode=git('ls-tree',m['candidateCommit'],x['path']).decode().split()[0];assert mode==x['mode']
     if bound:
         assert m;rv=load(G/'review.json');assert rv['outcome']=='PASS'and not any(rv['severityCounts'].values())
         assert rv['binding']['candidateCommit']==m['candidateCommit']and rv['binding']['manifestSha256']==sha((G/'final-manifest.json').read_bytes())
