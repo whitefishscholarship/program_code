@@ -1,0 +1,393 @@
+{
+  "records": [
+    {
+      "targetId": "sd2-read-3c94a3d4fff0cf554121",
+      "order": 100,
+      "exactLocatorSha256": "3c94a3d4fff0cf554121cebca80c1c56ac29565b4579b4b5563e4e675d2a2781",
+      "affectedSavedInputs": [
+        "saved-405588227-row-309",
+        "saved-405588227-row-310",
+        "saved-405588227-row-311"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved Davidson Honors College incoming-student page expressly groups Presidential Leadership, Provost Honors and Dean Leadership scholarships and describes college academic merit/progression. Supports exact institution-program page affinity; individual rule application remains held.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-016/source-receipts.json",
+            "sha256": "65b8bcd4015652099952299f5d3a1a8149fffa320488d12ee994406cdb05436f",
+            "pointer": "/2"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/umhonors.md",
+            "sha256": "a4c795ebe543925142e34770b04f608d3b6fee7f685008929fc14b58798f773d"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-609ec378d6d927aa2778",
+      "order": 146,
+      "exactLocatorSha256": "609ec378d6d927aa2778697e7e42a9a508d5b07e0e432b6a6d90debac3c7685c",
+      "affectedSavedInputs": [
+        "saved-405588227-row-410"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved information.html page describes Montana resident Hilleman/Morelli scholarship support through financial, academic, leadership and mentoring components. Informational program page differs from apply.html. No application interaction or child-rule acceptance.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-021/source-receipts.json",
+            "sha256": "e6c71d7a6c56af3a9045c747e0683020bb17b5b9949e642d0d0cf3e7bf786dd4",
+            "pointer": "/2"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-021/sources/msuMorelli.md",
+            "sha256": "411959acfbc2b28934a4118072cf06343de0db7731067194e4134a28507bf661"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-7d1e0325681210e19ec7",
+      "order": 200,
+      "exactLocatorSha256": "7d1e0325681210e19ec7a1c2eb880e54544a440511f4e8cd6d90731751d81afd",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved Honors College Presidential Scholarship page describes the university academic scholarship, eligibility/application instructions and renewal headings. Supports historical institutional named-program information-page provenance only.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/source-receipts.json",
+            "sha256": "8a1faec4700cb366fb2b0b8886619b7e9577a53bd22fd062674de1b6a71429ed",
+            "pointer": "/14"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/sources/msuhonors.md",
+            "sha256": "b1f052354041fc2c448c2c2bf6b1e350d029e49c9a8fef82a89a2f8f178a878b"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-8ec9b1da07f3a3a8f70d",
+      "order": 227,
+      "exactLocatorSha256": "8ec9b1da07f3a3a8f70d88b9286df5747f11716c20cf0e6c492fbe85d1f99112",
+      "affectedSavedInputs": [
+        "saved-405588227-row-371"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved source states University of Montana participation in National Merit and institution-specific finalist/semifinalist award context. This is substantive institutional-program relation, not a name mention alone.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/source-receipts.json",
+            "sha256": "24a1aecebc539df3fa9e90d4a5cae8d314d68b8cb080be30f1f3b79b8410daab",
+            "pointer": "/6"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/sources/umexternal.md",
+            "sha256": "c7d0028bfbc50f19998739615f355da97e5aa179201aa5ddef9dff78b518f7ca"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-90d85fde284219f48eca",
+      "order": 233,
+      "exactLocatorSha256": "90d85fde284219f48eca08a4cd13fe3a5850c2077f2134276984358136c7f5f0",
+      "affectedSavedInputs": [
+        "saved-405588227-row-366"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved MSU Hilleman page describes a Montana-student leadership program and financial/academic support purpose. Program introduction supports exact historical institution-program page retrieval.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/source-receipts.json",
+            "sha256": "24a1aecebc539df3fa9e90d4a5cae8d314d68b8cb080be30f1f3b79b8410daab",
+            "pointer": "/1"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/sources/hillemanroot.md",
+            "sha256": "63d274318a948038afa43bb1667c7424f8facce154c26e1045b636f126e0ba7f"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-931da39486e45635990c",
+      "order": 234,
+      "exactLocatorSha256": "931da39486e45635990c31fdfdd80e1c02e92e66e124977bbbe2edee3a932a11",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252",
+        "saved-405588227-row-369",
+        "saved-405588227-row-370"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved Montana resident freshman scholarship page substantively describes institutional Premier and Treasure State First Generation programs; historical Presidential link is retained as separate child context. Supports original public scholarship-information locator including recorded redirect provenance, not current individual-child criteria.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/source-receipts.json",
+            "sha256": "8a1faec4700cb366fb2b0b8886619b7e9577a53bd22fd062674de1b6a71429ed",
+            "pointer": "/11"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/sources/msu.md",
+            "sha256": "ba8c0bf783b0196f73886b1c7dfe49fd1ed33a4122699d866bee476d0d08ed3a"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": false,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        },
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/source-receipts.json",
+            "sha256": "24a1aecebc539df3fa9e90d4a5cae8d314d68b8cb080be30f1f3b79b8410daab",
+            "pointer": "/5"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-019/sources/msuresident.md",
+            "sha256": "d13aab587b9ab49c88871bd3eb1024facf22dc00c397a5c1d9dbee956bcc936d"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": false,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false,
+      "scopeLimit": "Parent resident-scholarship information and explicit historical child links only; no shared or individual child criterion assignment."
+    },
+    {
+      "targetId": "sd2-read-b636edfd244c6940f9b1",
+      "order": 292,
+      "exactLocatorSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "affectedSavedInputs": [
+        "saved-405588227-row-372",
+        "saved-405588227-row-376"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved general University of Montana scholarship information page explains incoming merit consideration and links/names UMAAS. Supports institutional scholarship-page retrieval and UMAAS context; saved source does not independently establish Payne Family identity/affinity.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-004/source-receipts.json",
+            "sha256": "5f4ac4de2dc4633805e18add5d54d111afb4ff5fb0cd664c2f51898f5e5e71ed",
+            "pointer": "/5"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-004/sources/wue-old.md",
+            "sha256": "5472991655c47dc8d846201e54021a93e5ab647e9b6226bbd07879bbf68753bb"
+          },
+          "originalLocatorMatchesFrozenTarget": false,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        },
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-016/source-receipts.json",
+            "sha256": "65b8bcd4015652099952299f5d3a1a8149fffa320488d12ee994406cdb05436f",
+            "pointer": "/17"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-016/sources/umgeneral.md",
+            "sha256": "6b07c86bd20fd1c0956bb25e31d3f068657184c74f9845d90ad7f82eb69cd7ac"
+          },
+          "originalLocatorMatchesFrozenTarget": false,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false,
+      "unsupportedNamedInputAffinityRetainedHeld": [
+        "saved-405588227-row-372"
+      ],
+      "historicallySupportedNamedInputContext": [
+        "saved-405588227-row-376"
+      ]
+    },
+    {
+      "targetId": "sd2-read-b9994cd63d16a61d8a82",
+      "order": 295,
+      "exactLocatorSha256": "b9994cd63d16a61d8a82b71e6ba94f944f8bf901e8acb37c52fdbec108f5d1f8",
+      "affectedSavedInputs": [
+        "saved-405588227-row-70"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved government Alcohol Responsibility Matters program page includes the named annual scholarship requirements, purpose, original artwork remit and FAQ/submission instructions. Retrieval scope excludes winner/recipient sections and all form interaction; no future/current offering claim.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-004/source-receipts.json",
+            "sha256": "5f4ac4de2dc4633805e18add5d54d111afb4ff5fb0cd664c2f51898f5e5e71ed",
+            "pointer": "/6"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-004/sources/alcohol.md",
+            "sha256": "7545222dfed7b8c0c6d33feeae6580daaa29cbb92b90cc9a6e16247c19d5a326"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    },
+    {
+      "targetId": "sd2-read-dd9981c2ea3fb92c48b2",
+      "order": 348,
+      "exactLocatorSha256": "dd9981c2ea3fb92c48b25d7a1683ca50c8a83254739e89400a905b75718d9545",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252"
+      ],
+      "outcome": "PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY",
+      "independentSavedInspection": true,
+      "exactReferenceHashesVerified": true,
+      "retrievalEligibleAfterThisReview": true,
+      "noReplayHold": false,
+      "rationale": "Saved institutional Honors College FAQ explains Presidential scholarship academic purpose and recurring eligibility/selection/renewal questions. Supports exact named institutional program FAQ-page provenance.",
+      "evidence": [
+        {
+          "receiptReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/source-receipts.json",
+            "sha256": "8a1faec4700cb366fb2b0b8886619b7e9577a53bd22fd062674de1b6a71429ed",
+            "pointer": "/13"
+          },
+          "artifactReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-013/sources/msufaq.md",
+            "sha256": "1dc8fc7169354beca2dd1ad729c1a910b9699a04f61d8a7f1b49e9c8ea87ec1c"
+          },
+          "originalLocatorMatchesFrozenTarget": true,
+          "finalLocatorMatchesFrozenTarget": true,
+          "historicalStatusCode": 200,
+          "inspection": "Actual selected saved program clauses/headings and recorded source/extraction scope inspected. No full-source/native/current/public-origin continuity claim."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentPublicAccessEstablished": false,
+      "currentOfficialContinuityEstablished": false,
+      "blankNativeSafetyEstablished": false,
+      "completeHistoricalPublicPageInspection": false
+    }
+  ],
+  "reviewReference": {
+    "path": "docs/evidence/sd2-resolution-proof-1/safety-recheck.json",
+    "sha256": "85761a6b8e79016fffd17fa19a3a913df548bcb08f887459c52b7d1814bc81dc"
+  },
+  "purpose": "Nine independently inspected exact public-page retrieval preflights only; all factual/current/public/identity holds remain."
+}
