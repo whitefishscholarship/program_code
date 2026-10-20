@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONSOLIDATION-PACKAGE-START -->
+- SD2-CONSOLIDATION-PACKAGE-1:one local consolidation/acceptance-preparation package,
+  status only matching final-manifest/PASSreview/direct-childreceipt;elsepending.
+  Currentclose:docs/evidence/sd2-consolidation-package/SESSION_CLOSE.md,PACKAGE.md,
+  summary,DECISIONS,decision-ledger/field-decisions,inventory/publication-crosswalk,
+  acceptance-gates,proposedread/repairscopes,read-targets,checks/entry/verification/
+  manifest/review. No canonical/factacceptance or SD3selection.
+- Exact411named/794savedpositions,7547originaldefinitions(7406auto+62Jaycee+79first),
+  7518held/29proposed,0accepted.7468existingcomparisons/408inputs retained separately;
+  first79definitions/42evidenceentries notinventedcomparisons. App411separateIDs,
+  407existingcandidate-linked/4unlinked;4savedinputslackcandidate. Proposed409held/
+  2duplicate-candidate-held,nomerge/newID/name-onlymapping. Unknowns mayremainheld.
+- Prior final386/7062audit freshly review-boundPASS at validreceipt BEFOREnewpaths.
+  Preserve everypriorblob/mode/rejected/finalreview/threeappendhistories and all
+  originalfield/identity/source/route/humanapproval boundaries. Beforefutureaction
+  atvalidpackagereceipt:python3 docs/evidence/sd2-consolidation-package/verify.py --review-bound
+- OptionalSD2-RESOLUTION-PROOF-1 freezes397locators/379preflight/18blocked,max758sourceattempts;
+  optionalSD2-LOCKED-VALIDATION-1 proposesonepinnedrestore/unchangedchecks. Neither
+  executionselected. Alloriginalsource/custody/current/native/gate limitations and
+  originalnineattentionrows/everysupplement/437M1routes/12pins/71custodypins retained
+  withowners/triggers/paths/actions in acceptance-gates/originalpackets. Actualapp
+  checksrecordedwithoutwaiver;exactbuild/freshmain-targetstillgated. Kelseyreviewer/
+  limitedJayceeapproval unchanged. Canonicalplan/state unchanged, pointersnull.
+- No newsource/workbook/raw/native read,install/repair,app/config/CIchange,acceptance,
+  remoteGit/deployment/contact/monitoring/effects. No routine small-runinteraction,
+  backgroundtask or secondReviewsqueue. Never initialize/reset/replay. Stop beforeSD3.
+<!-- SD2-CONSOLIDATION-PACKAGE-END -->
 <!-- SD2-CONTINUATION-COVERAGE-AUDIT-START -->
 - SelectedSD2-SAVED-CONTINUATION-1 comparison processing386/386inputs,7062/7062held
   fieldoccurrences complete across20matching independentPASS/localreceipts. Additional

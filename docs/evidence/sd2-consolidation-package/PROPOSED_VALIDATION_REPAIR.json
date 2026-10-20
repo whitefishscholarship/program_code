@@ -1,0 +1,64 @@
+{
+  "id": "SD2-LOCKED-VALIDATION-1",
+  "status": "proposal_only_not_selected",
+  "authorizationRequiredBeforeExecution": true,
+  "workingDirectory": "web",
+  "pins": [
+    {
+      "path": "web/package.json",
+      "sha256": "1e5e0604ddcb094631c877e159489af2bf4922d5664efd9ba566f753de47cd29"
+    },
+    {
+      "path": "web/package-lock.json",
+      "sha256": "ad7a92a99c1019a5d3ce3bdb84bed519fd1a834ed4fd31a900df4aa0ffcd0765"
+    }
+  ],
+  "proposedRestoreCommand": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "maximumInstallAttempts": 1,
+  "lifecycleScriptsAuthorized": false,
+  "networkPurpose": "Fetch only exact locked dependencies from their lockfile-resolved registries using existing configuration; no credential/account/configuration changes or paid services.",
+  "allowedWrites": "Generated/ignored web/node_modules, build/test outputs and ordinary task-local/npm caches only, with platform filesystem approval if needed. No source, manifest, lockfile, CI, deployment, git configuration or existing evidence edits.",
+  "requiredCommands": [
+    [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    [
+      "npm",
+      "run",
+      "typecheck"
+    ],
+    [
+      "npm",
+      "test"
+    ],
+    [
+      "npm",
+      "run",
+      "build"
+    ]
+  ],
+  "standardBuild": "Exact npm run build required in supporting permitted environment; alternate command cannot waive it. Retain original build/IPC failures and new failures until actual resolution.",
+  "stopConditions": [
+    "manifest/lockfile/source/configuration drift",
+    "new lifecycle-script requirement",
+    "registry authentication or permission change",
+    "inaccessible locked dependency",
+    "unsupported exact build environment",
+    "any new reserved external effect"
+  ],
+  "onFailure": "Record exact command/result/limits; do not install substitutes, change scripts, bypass checks or silently broaden repair. Continue unaffected saved package work.",
+  "environmentRepairSelected": false,
+  "appSourceChange": false,
+  "canonicalAcceptance": false,
+  "release": false,
+  "sourceOrWorkbookAccess": false,
+  "SD3Started": false
+}

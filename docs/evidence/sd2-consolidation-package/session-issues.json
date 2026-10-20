@@ -1,0 +1,36 @@
+{
+  "incidents": [
+    {
+      "kind": "read-only preparation schema probes",
+      "detail": "A preliminary record-shape probe encountered original missing recordedSeedUrls in checkpoint001; the existing queue is the exact pinned seed authority. No original changed, source acquired or false PASS recorded."
+    },
+    {
+      "kind": "read-only governance output minimization",
+      "detail": "Some initial canonical-state/older-closeout inspections emitted larger historical governance ranges than intended and tool-truncated. No source-body, applicant data, new external read or native/raw artifact was acquired; later inspections used bounded current headers, metadata and predicates."
+    },
+    {
+      "kind": "pre-freeze summary denominator correction",
+      "detail": "Initial derived summary nested79earliest proposal definitions beside7468comparison categories. Author separated comparison categories and all-field outcome counts before candidate freeze; original data/comparisons unchanged."
+    }
+  ],
+  "preservation": "Every earlier author/reviewer/operational incident and rejected/final candidate/manifest/review remains byte-identical at its original path.",
+  "newSourceOrWorkbookReads": 0,
+  "environmentRepairExecuted": false,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "externalEffects": false,
+  "verificationAttempts": [
+    {
+      "attempt": 1,
+      "command": [
+        "python3",
+        "docs/evidence/sd2-consolidation-package/verify.py"
+      ],
+      "exitCode": 1,
+      "outcome": "FAIL",
+      "error": "JSONDecodeError while validating whole-file inherited Markdown reference",
+      "resolution": "New verifier now validates whole-file references by exact SHA/bytes without treating Markdown as JSON; JSON pointers still parse and resolve exactly. No original or completed comparison changed, no PASS recorded for failure.",
+      "recordedAt": "2026-10-20T04:19:35.948539+00:00"
+    }
+  ]
+}

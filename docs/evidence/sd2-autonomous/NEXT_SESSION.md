@@ -1,3 +1,39 @@
+# SD2 consolidated decision and acceptance-preparation package
+
+Current progress:student-plan section9. SD2-CONSOLIDATION-PACKAGE-1 prepares one local
+package; status only matching immutable manifest/PASSreview/direct-child local receipt,
+elsepending. Currentclose:docs/evidence/sd2-consolidation-package/SESSION_CLOSE.md and
+PACKAGE.md; summary/DECISIONS/decision-ledger/field-decisions/inventory/publication/
+acceptance-gates/proposedscopes/read-targets/checks/entry/verification/manifest/review.
+411named/794savedpositions;7547originalfielddefinitions(7518held/29proposed),7468prior
+comparisons separately retained;0accepted. Pinnedapp411separate,407candidate-linked/
+4unlinked;4saved inputs lackpublic-IDcandidate. Proposed409held/2duplicate-held.
+
+Before future action at matching clean package receipt:
+python3 docs/evidence/sd2-consolidation-package/verify.py --review-bound
+Prior final386/7062audit was freshly verified at its valid receipt BEFORE newpaths;
+all priorbytes/modes/holds/rejected andfinalreviewbindings/3appendhistories preserved.
+No reinit/reset/replay/oldcontextwidening or acceptance. FullSD2 incomplete;SD3closed.
+
+Optionalnextlargeproofscope SD2-RESOLUTION-PROOF-1:397recordedlocators/379preflight/
+18blocked/max758sourceattempts, shared-source reuse/explicit holds/internalreviews. Optional
+SD2-LOCKED-VALIDATION-1:one pinned dependency restore and unchanged checks. Both are
+concrete proposals,not selected execution. No source/workbook/raw/native read, install/
+repair, app/config/CIchange, remoteGit/deployment/contact/monitoring/effect here.
+Originalnineattentionrows/supplements/676seeds/1127links/365receipts/35inheritedroutes/
+628destinations(oneunclosed)/71custodypins/437M1routes12pins retain exactowners/triggers/
+paths/actions in acceptance-gates/originalpackets. Kelseyreviewer/limitedJayceeapprovals
+unchanged. Exactbuild/freshmain-target, canonical/human/publication/preservation/
+recovery/permission/student/M1/SD5/effect gates remain. No native/custodycurrentclaim.
+
+Read AGENTS canonicalorder,student-plan section9,originalAUTHORITY/POLICY/latestclose,
+prior finalaudit andcurrentpackagefiles. Use savedsanitizedevidence only. Outputcounts/
+hashes/neededbriefpolicyclauses,notwholehistory/envelopes/sourcebody/materials/profiles/
+formlabels. No routine checkpointquestions/backgroundtask/new Reviewsqueue.
+Stop beforeSD3. Priorhandoffexactbelow.
+
+---
+
 # Saved SD2 continuation — final coverage audit
 
 Authoritative progress:student-plan section9. All20groups have matching independent

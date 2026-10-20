@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+      "startedAt": "2026-10-20T04:08:53.573078+00:00",
+      "completedAt": "2026-10-20T04:08:53.698432+00:00",
+      "exitCode": 127,
+      "result": "BLOCKED_ENVIRONMENT",
+      "rawLogPath": "docs/evidence/sd2-consolidation-package/checks/plan-check.log",
+      "rawLogSha256": "fb5a9ecdf0efd94321cef1b3e703be521da03282032bedc839510cff5435db8e",
+      "rawLogBytes": 89
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+      "startedAt": "2026-10-20T04:08:53.698550+00:00",
+      "completedAt": "2026-10-20T04:08:53.770064+00:00",
+      "exitCode": 127,
+      "result": "BLOCKED_ENVIRONMENT",
+      "rawLogPath": "docs/evidence/sd2-consolidation-package/checks/typecheck.log",
+      "rawLogSha256": "acb52d3485af3fc24a164b44849b0ab1bd669305b2435c1a3ae534c41387dc9d",
+      "rawLogBytes": 66
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+      "startedAt": "2026-10-20T04:08:53.770132+00:00",
+      "completedAt": "2026-10-20T04:08:53.842676+00:00",
+      "exitCode": 127,
+      "result": "BLOCKED_ENVIRONMENT",
+      "rawLogPath": "docs/evidence/sd2-consolidation-package/checks/tests.log",
+      "rawLogSha256": "81792e5126f979687d0045974f094bd71fca9f91bd09a3e6b1c6598ee3127872",
+      "rawLogBytes": 2550
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+      "startedAt": "2026-10-20T04:08:53.842744+00:00",
+      "completedAt": "2026-10-20T04:08:53.921359+00:00",
+      "exitCode": 127,
+      "result": "BLOCKED_ENVIRONMENT",
+      "rawLogPath": "docs/evidence/sd2-consolidation-package/checks/build.log",
+      "rawLogSha256": "0c1c95857a742e9b6262a3838c813363a6ca89298cedc13999c10024b5dc8c87",
+      "rawLogBytes": 61
+    }
+  ],
+  "requiredChecksRemainUnfulfilled": true,
+  "environmentRepairExecuted": false,
+  "dependencyInstallAttempted": false,
+  "previousActualFailures": {
+    "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-010/application-checks.json",
+    "sha256": "f6de201823589f270b6ded88c8aec20efb0c2f6acc776ce62bc0a06fd7947b32"
+  },
+  "owner": "Codex validation/governance/delivery",
+  "trigger": "Before canonical acceptance/release, under separately selected exact repair if required",
+  "nextAction": "Restore exact locked dependencies only after selected repair authority; run unchanged required checks and exact supported standard build/fresh authenticated main-target. Preserve all failures; no waiver."
+}
