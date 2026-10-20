@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "workingDirectory": "web",
+  "startedAt": "2026-10-20T18:26:58.188357+00:00",
+  "completedAt": "2026-10-20T18:27:11.242549+00:00",
+  "exitCode": 0,
+  "rawLogPath": "docs/evidence/sd2-resolution-proof-1/validation/restore.log",
+  "rawLogBytes": 587,
+  "rawLogSha256": "294a209c25f3741aa7ea930086a947d7b64c85966dca65ce135fd8f51be5cd4a",
+  "result": "PASS"
+}

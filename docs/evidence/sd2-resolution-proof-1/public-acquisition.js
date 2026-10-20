@@ -47,7 +47,7 @@ async function acquirePublic(target) {
     if(/@|https?:\/\/|www\.|data:|base64|bearer|access.token|api.key|recipient|winner|awardee|born\b|biograph|personal story|our story|privacy policy|mailing address|phone:|contact:|\b\d{3}[-. )]\s*\d{3}[-. ]\s*\d{4}\b/i.test(s)){rejected("excluded_or_uninspected_content");continue;}
     if(!/scholar|award|eligible|eligibility|applica|deadline|admission|student|program|funding|GPA|renew|must|require|education|training|grant|nomina/i.test(s)){rejected("not_material_program_clause");continue;}
     per[q.program]=(per[q.program]||0)+1;
-    out.excerpts.push({program:q.program,purpose:q.purpose,scope:q.scope,exactQuote:s,exactQuoteSha256:sha(s),matchOffset:md.indexOf(s),proposedEvidenceOnly:true,completeRuleEstablished:false});
+    out.excerpts.push({program:q.program,purpose:q.purpose,scope:"selected_page_scope_unresolved",providerProposedScope:q.scope,assignmentStatus:"Named-program/parent applicability remains held",exactQuote:s,exactQuoteSha256:sha(s),matchOffset:md.indexOf(s),proposedEvidenceOnly:true,completeRuleEstablished:false});
   }
   out.outcome=out.excerpts.length?"held_with_new_selected_program_excerpts":"held_no_safe_exact_material_excerpt";
   out.completenessLimit="Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.";
