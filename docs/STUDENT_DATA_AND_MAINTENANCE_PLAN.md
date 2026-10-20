@@ -353,6 +353,31 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTROL-REPAIR-1-START -->
+# SD2 local control repair — synthetic candidate
+
+Sole progress pointer:student-plan section9. Current packet:
+docs/evidence/sd2-control-repair-1/SESSION_CLOSE.md and NEXT_SESSION.md.
+Status only matching immutable manifest/PASS independent review/direct-child local
+receipt; otherwise pending. Original source execution remains FAIL permanently.
+One local repair batch:exclusive durable intents/immediate immutable results,
+synthetic process-death/cancellation/restart/competing/partial-write/scope/budget/host
+tests and all397-target metadata reconciliation. No source requests or old-run replay.
+All397 remain held, including272 original quarantines and125 other triage holds.
+64observed completions +4frontier reservations =68conservative explicit calls, not
+exact attempts/HTTP.72theoretical unused expanded targets remain conditional; exact
+never-dispatched proof NOT ESTABLISHED,0cleared. No real-source dispatcher added.
+Before new paths at the clean matching repair receipt run:
+python3 docs/evidence/sd2-control-repair-1/verify.py --review-bound
+Then follow NEXT_SESSION, inherited-open-items/open-items and14original gate bindings.
+Do not rerun old context verifiers after widening the tree. All prior bytes/modes,
+original owners/triggers/paths/actions, Kelsey/Jaycee approvals and3append histories
+remain exact. Plan/type/tests pass; exactbuild process/port EPERM and fresh-main-target
+remain open. Privacy/native/current-fact/custody/preservation/recovery/permissions,
+student/publication/M1/SD5/reserved effects retain original gates. No dependency
+install repeat, workbook/app/config/CI/canonical change, remoteGit/deployment/contact/
+monitoring orSD3. Never initialize/reset/replay. Stop beforeSD3.
+<!-- SD2-CONTROL-REPAIR-1-END -->
 <!-- SD2-CONTROL-REPAIR-HANDOFF-START -->
 # Fresh-session preparation — source execution remains FAIL
 

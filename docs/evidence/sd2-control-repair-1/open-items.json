@@ -1,0 +1,48 @@
+{
+  "inheritedReference": {
+    "path": "docs/evidence/sd2-control-repair-handoff/open-items.json",
+    "sha256": "d1c82714a309b944caf10bf4fa807cc9bf978787a2ba4a40b1b9f3824e94adf0"
+  },
+  "inheritedCopy": "inherited-open-items.json",
+  "originalGateCount": 14,
+  "originalOwnersTriggersPathsActionsUnchanged": true,
+  "repairItems": [
+    {
+      "id": "prospective-durable-controls",
+      "status": "IMPLEMENTED_PENDING_FINAL_REVIEW",
+      "owner": "Codex local control author and independent reviewer",
+      "trigger": "Matching frozen repair candidate review",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/journal.py; test_journal.py; manifest.json; review.json",
+      "nextAction": "Verify synthetic-only reservation/result durability and adversarial tests. No real source dispatcher is implemented or cleared; retain all real target holds."
+    },
+    {
+      "id": "exact-never-dispatched-proof",
+      "status": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+      "owner": "Codex metadata/evidence author and independent reviewer",
+      "trigger": "Before any future source acquisition under the original finite grant",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/reconciliation.json; summary.json; original call-ledger-review.json",
+      "nextAction": "Obtain independently verifiable complete dispatch evidence for exact target exclusion and satisfy original safety/authority gates. Available saved completed-event metadata gives conditional controller nonreachability only. If completeness cannot be established, retain all397 holds; do not reacquire missing evidence or replay."
+    },
+    {
+      "id": "future-acquisition-integration",
+      "status": "NOT_IMPLEMENTED_NOT_AUTHORIZED_BY_THIS_BATCH",
+      "owner": "Codex controls implementer and independent source-safety reviewer",
+      "trigger": "A later bounded continuation scope plus exact target proof and every original safety/authority gate",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/POLICY.md",
+      "nextAction": "Before any actual acquisition validate integration cannot bypass durable reservations/results and separately gate native metadata/content, privacy and accepted-use. Current journal has no live source client/callback; never use old unsafe acquisition runners."
+    },
+    {
+      "id": "historical-failure",
+      "status": "FAIL_PERMANENT",
+      "owner": "Codex governance/evidence owner",
+      "trigger": "Every future use of historical source work",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/review.json; forensic-correction.json",
+      "nextAction": "Preserve confirmed replays26/30/34 and possible32, source incident limits, all272 quarantines and original FAIL. Current synthetic PASS never repairs historical dispatch uncertainty or fact acceptance."
+    }
+  ],
+  "all397Held": true,
+  "all272QuarantinesPreserved": true,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false
+}

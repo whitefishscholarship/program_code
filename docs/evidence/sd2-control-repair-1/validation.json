@@ -1,0 +1,176 @@
+{
+  "checks": [
+    {
+      "name": "synthetic",
+      "command": [
+        "python3",
+        "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-control-repair-1/test_journal.py"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:35:21.907739+00:00",
+      "completedAt": "2026-10-20T23:35:23.648338+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/synthetic.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "2e627e0ba9e48f79f5b40adc7a7fdec0cba10616898d90b1214e594bee0e0b1b",
+      "rawBytes": 3562,
+      "storedSha256": "e9e4367c1928904f2af4bea1fad71fc5c1a9306190f4df8064a2a98f019e2301",
+      "storedBytes": 801
+    },
+    {
+      "name": "reconciliation",
+      "command": [
+        "python3",
+        "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-control-repair-1/reconcile.py",
+        "--check"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:35:23.648453+00:00",
+      "completedAt": "2026-10-20T23:35:24.061029+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/reconciliation.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "eac097084b3fe46c8a12ee5b240e37fdd1121d388c63910b9cde91c5d7cf9491",
+      "rawBytes": 83,
+      "storedSha256": "e7a78cb2ac34043b7ab8c4196aad3a83f0baa3fff806511fad0e13d2a0d33345",
+      "storedBytes": 100
+    },
+    {
+      "name": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:35:24.061104+00:00",
+      "completedAt": "2026-10-20T23:35:59.475814+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/plan.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "rawBytes": 164,
+      "storedSha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "storedBytes": 143
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:35:59.475883+00:00",
+      "completedAt": "2026-10-20T23:36:03.807787+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/typecheck.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "rawBytes": 39,
+      "storedSha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "storedBytes": 59
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:36:03.807859+00:00",
+      "completedAt": "2026-10-20T23:36:48.164795+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/tests.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "rawBytes": 19755,
+      "storedSha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "storedBytes": 6842
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:36:48.164862+00:00",
+      "completedAt": "2026-10-20T23:37:15.345607+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/build.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "2ea25fbc3a5716e1504b7aff872fbdfc63b7c3f08d9842216bee43dea78b81b7",
+      "rawBytes": 4597,
+      "storedSha256": "ec893ed59b7bb88f338c4a1dddbe7713e6d6892fee866541700b00a9b624000d",
+      "storedBytes": 1408
+    },
+    {
+      "name": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:37:15.345715+00:00",
+      "completedAt": "2026-10-20T23:37:15.366995+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/diff.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20
+    },
+    {
+      "name": "complete-diff",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:37:15.367131+00:00",
+      "completedAt": "2026-10-20T23:37:15.390264+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/complete-diff.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20
+    }
+  ],
+  "dependencyInstallAttempts": 0,
+  "unchangedRequiredCommands": true,
+  "allRequiredChecksPassed": false,
+  "exactBuildGateCleared": false,
+  "freshAuthenticatedMainTargetVerified": false,
+  "supplementalChecks": [
+    {
+      "name": "synthetic-final",
+      "command": [
+        "python3",
+        "docs/evidence/sd2-control-repair-1/test_journal.py"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:48:58.323527+00:00",
+      "completedAt": "2026-10-20T23:49:00.410168+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/synthetic-final.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "44ef33d13b665583aa90b7e3c96778e5c018fcae999090e4e9d53f99370288a7",
+      "rawBytes": 3562,
+      "storedSha256": "dc01177bbd84aaa1fd38f7201b9770decd175c7dafcb12c016f018a81c730528",
+      "storedBytes": 801
+    }
+  ],
+  "finalSyntheticCodePins": {
+    "docs/evidence/sd2-control-repair-1/journal.py": "97a7f72fbf4669aaf730d423082cedfb13c0b5ef6af0c36e8a24f0a03ca89309",
+    "docs/evidence/sd2-control-repair-1/test_journal.py": "c76513f037bddd367aaf299cb70504f858bde408ecf7f0d333d2f9d7e60c9838",
+    "docs/evidence/sd2-control-repair-1/reconcile.py": "dafce06be0a1c5a5c2d26cf5e1afe93de1834ce2d3ec0b4e204e7297be68efbc"
+  }
+}
