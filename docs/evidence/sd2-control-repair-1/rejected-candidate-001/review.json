@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "reviewType": "Fresh-context independent read-only full-candidate local synthetic repair review, interim finding",
+  "reviewerTask": "/root/final_control_review",
+  "reviewedAt": "2026-10-20T23:51:18.157872+00:00",
+  "binding": {
+    "baselineCommit": "e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae",
+    "candidateCommit": "964f5ffa7f03a26bd11ad82626a0b02ca9a08118",
+    "candidateTree": "5de3cfceed1bb348bc37e14637c14d796c4f2e7d",
+    "manifestPath": "docs/evidence/sd2-control-repair-1/manifest.json",
+    "manifestSha256": "ec8f08116a13128e17c840ee16badf4613b210ee7c2f0081b206ebb7fcc44ec7",
+    "completeDiffFiles": 32,
+    "completeDiffBytes": 1014666,
+    "completeDiffSha256": "83212ae7d4e9b1f94fda36fe983e0ae51e6a8ae3b7edec33cd6291c175ef9adc"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "title": "Mutating APIs allow omission of the external head pin, permitting rollback to forget a spent target",
+      "status": "UNRESOLVED",
+      "path": "docs/evidence/sd2-control-repair-1/journal.py",
+      "lines": [
+        246,
+        256,
+        267
+      ],
+      "evidence": "audit/reserve/result default pinned_head to None; _state checks rollback only when non-None; synthetic_call invokes reserve/result without pins. In a NEW fictional fixture, completed synthetic_call returned sequence2 and conservativeCalls69. Deleting its complete events+receipts suffix then constructing a fresh Journal caused explicit audit(savedHead) to reject rollback, but ordinary synthetic_call for the SAME target succeeded again at sequence2/conservativeCalls69. No real targets or prior state were used or changed.",
+      "impact": "The ordinary public synthetic execution path can forget a permanently spent target and cumulative budget after complete suffix loss. The existing regression checks only opt-in pinned audit, so it does not enforce the prospective mandatory external-head requirement at mutation/dispatch boundaries. Real-source containment remains intact because all397 real targets are held and no source integration exists.",
+      "owner": "Codex local controls implementation author",
+      "trigger": "Before final local synthetic repair PASS and before any future acquisition integration",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/POLICY.md; journal.py; test_journal.py",
+      "nextAction": "Require a valid independently held current head pin for every mutating API and synthetic_call, reject omission/None/malformed/stale pins before reserving or producing work, carry the returned intent head into immediate result persistence, and add restart/suffix-loss/missing-pin mutation regressions. Preserve this candidate, manifest and finding before remediation; freeze a new candidate for independent recheck."
+    }
+  ],
+  "mediumLowDispositions": [],
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedReviewedStage": false,
+    "readOnlyRepository": true,
+    "repositoryMutations": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "rawBodiesOrTracesRead": false,
+    "dependencyInstallation": false,
+    "onlyOutput": "/private/tmp/sd2-control-repair-review-interim.json"
+  },
+  "checks": [
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/verify.py",
+      "exitCode": 0,
+      "protectedPreEntryFiles": 2951,
+      "historiesPreserved": 3,
+      "gateBindings": 14
+    },
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/reconcile.py --check",
+      "exitCode": 0,
+      "targets": 397,
+      "held": 397,
+      "originalQuarantines": 272,
+      "conservativeCalls": 68,
+      "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+      "cleared": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/test_journal.py",
+      "exitCode": 0,
+      "testsPassed": 33
+    },
+    {
+      "command": "Independent NEW fictional fixture complete-suffix-loss restart probe",
+      "result": "REPRODUCED H1; saved pinned audit rejects rollback but ordinary synthetic_call reuses same spent target"
+    }
+  ],
+  "assessment": {
+    "complete32PathDiffManifestHashesSizesModesVerified": true,
+    "baselineProtected2951FilesBytesModesAnd3HistoriesVerified": true,
+    "all397OriginalIdentityLocatorFieldInputOwnerTriggerPathActionBindingsRetained": true,
+    "inherited9ItemsAnd14OriginalGatesByteExact": true,
+    "historical64CompletedAnd4FrontierImportedByHashes": true,
+    "real397TargetsDeniedByTests": true,
+    "72TheoreticalUnusedNotExactProofZeroCleared": true,
+    "prospectivePolicyReviewAndEntryProofInspected": true,
+    "originalFailureAndPrivacyLimitsRetained": true,
+    "noAppConfigCiCanonicalSourceScopeDiff": true,
+    "allValidationGzipStoredRawHashesSizesVerified": true,
+    "requiredRecordedPlanTypeTestsPassed": true,
+    "exactBuildGate": "BLOCKED_EPERM",
+    "freshAuthenticatedMainTarget": "UNVERIFIED"
+  },
+  "limits": [
+    "PASS would concern local synthetic repair integrity only; source/fact/canonical acceptance is excluded.",
+    "Original source execution FAIL with original two unresolved high historical findings remains permanent and is not counted as a new candidate finding.",
+    "Hardware power loss, hostile filesystem administrators and lost external receipt custody remain outside this harness proof. Mandatory use of available pins is nevertheless enforceable and currently omitted.",
+    "No original context-bound verifier was rerun after the new paths widened the tree.",
+    "No source requests, native/workbook reads or raw provider bodies/traces were inspected."
+  ],
+  "openGates": [
+    "H1 remediation and frozen final independent recheck",
+    "Exact unchanged build in permitted context; current process/port EPERM remains",
+    "Fresh authenticated main/target proof at original acceptance/release trigger",
+    "All397 original holds and272 quarantines; exact never-dispatched proof absent",
+    "Original safety/privacy/native completeness/current-fact/human-review/custody/preservation/recovery/permission/student/publication/M1/SD5/reserved-effects gates unchanged"
+  ]
+}

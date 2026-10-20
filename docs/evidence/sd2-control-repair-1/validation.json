@@ -166,11 +166,29 @@
       "rawBytes": 3562,
       "storedSha256": "dc01177bbd84aaa1fd38f7201b9770decd175c7dafcb12c016f018a81c730528",
       "storedBytes": 801
+    },
+    {
+      "name": "synthetic-remediation",
+      "command": [
+        "python3",
+        "docs/evidence/sd2-control-repair-1/test_journal.py"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:52:27.327039+00:00",
+      "completedAt": "2026-10-20T23:52:29.834457+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-1/checks/synthetic-remediation.log.gz",
+      "logEncoding": "gzip",
+      "rawSha256": "6cd11838fc72b92b68bb491f1ff2bde16f0867e635cd30423f859ca37fd3995a",
+      "rawBytes": 3848,
+      "storedSha256": "1e7c9ec6ea9d96ae99db6cb643b774260a031ce9542cd4451cb394ee2a59d8b7",
+      "storedBytes": 860
     }
   ],
   "finalSyntheticCodePins": {
-    "docs/evidence/sd2-control-repair-1/journal.py": "97a7f72fbf4669aaf730d423082cedfb13c0b5ef6af0c36e8a24f0a03ca89309",
-    "docs/evidence/sd2-control-repair-1/test_journal.py": "c76513f037bddd367aaf299cb70504f858bde408ecf7f0d333d2f9d7e60c9838",
+    "docs/evidence/sd2-control-repair-1/journal.py": "64d0f6aa0b69c02dbcb29292b1468d9a845fdc4fc9f8a7ad3a5f3cf3060af800",
+    "docs/evidence/sd2-control-repair-1/test_journal.py": "0f2c5d14d221e372de799e5540cd1327452f0d28ed67dde08148ddbf900c0836",
     "docs/evidence/sd2-control-repair-1/reconcile.py": "dafce06be0a1c5a5c2d26cf5e1afe93de1834ce2d3ec0b4e204e7297be68efbc"
-  }
+  },
+  "finalSyntheticTestCount": 35
 }

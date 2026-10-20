@@ -48,16 +48,23 @@ class Controls(unittest.TestCase):
         self.pin = j.digest(self.cp.read_bytes())
         j.exclusive(self.store / 'anchor.json', dict(schema=1,
                     contractSha256=self.pin, importSha256=self.import_sha))
+        # Held OUTSIDE the event store, supplied on each mutating operation.
+        self.head = j.digest((self.store / 'anchor.json').read_bytes())
         self.journal = j.Journal(self.store, self.cp, self.pin,
                                 self.root / 'import.json', self.import_sha)
 
     def reserve(self, i=0, **kwargs):
-        return self.journal.reserve(self.targets[i], self.locators[i], **kwargs)
+        kwargs.setdefault('pinned_head', self.head)
+        receipt = self.journal.reserve(self.targets[i], self.locators[i], **kwargs)
+        self.head = receipt['head']
+        return receipt
 
     def finish(self, i=0, status='completed'):
         e = self.journal.audit()['intents'][self.targets[i]['targetId']]
-        return self.journal.result(self.targets[i]['targetId'], e['sequence'], status,
-                                   j.digest(b'fictional safe response'), 24)
+        receipt = self.journal.result(self.targets[i]['targetId'], e['sequence'], status,
+                                   j.digest(b'fictional safe response'), 24, pinned_head=self.head)
+        self.head = receipt['head']
+        return receipt
 
     def test_immediate_immutable_result_and_restart(self):
         a = self.reserve()
@@ -169,25 +176,25 @@ class Controls(unittest.TestCase):
 
     def test_result_without_intent(self):
         with self.assertRaises(j.Denied):
-            self.journal.result('synthetic-target-0', 1, 'completed', j.digest(b'x'), 1)
+            self.journal.result('synthetic-target-0', 1, 'completed', j.digest(b'x'), 1, pinned_head=self.head)
 
     def test_bad_result_binding_and_raw_payload(self):
         self.reserve()
         for seq, sha, count in [(2, j.digest(b'x'), 1), (1, 'raw source prose', 1),
                                 (1, j.digest(b'x'), True), (1, j.digest(b'x'), 1048577)]:
             with self.assertRaises(j.Denied):
-                self.journal.result(self.targets[0]['targetId'], seq, 'completed', sha, count)
+                self.journal.result(self.targets[0]['targetId'], seq, 'completed', sha, count, pinned_head=self.head)
 
     def test_target_order_tool_preflight_host_mismatch(self):
         for key, value in [('targetId','synthetic-other'), ('order',99), ('order',True),
                            ('tool','google_drive.fetch'), ('preflightSha256',j.ZERO),
                            ('host','other.invalid'), ('held',True)]:
             t = dict(self.targets[0]); t[key] = value
-            with self.assertRaises(j.Denied): self.journal.reserve(t, self.locators[0])
+            with self.assertRaises(j.Denied): self.journal.reserve(t, self.locators[0], pinned_head=self.head)
 
     def test_locator_mismatch(self):
         with self.assertRaises(j.Denied):
-            self.journal.reserve(self.targets[0], 'synthetic://host0.invalid/changed')
+            self.journal.reserve(self.targets[0], 'synthetic://host0.invalid/changed', pinned_head=self.head)
 
     def test_contract_import_and_anchor_pin_mismatch(self):
         for p in [self.cp, self.root / 'import.json', self.store / 'anchor.json']:
@@ -245,7 +252,7 @@ class Controls(unittest.TestCase):
         self.c = c; self.provision()
         triage = json.loads((G.parent / 'sd2-resolution-proof-1/triage.json').read_bytes())['targets']
         for target, tri in zip(c['targets'], triage):
-            with self.assertRaises(j.Denied): self.journal.reserve(target, tri['exactLocator'])
+            with self.assertRaises(j.Denied): self.journal.reserve(target, tri['exactLocator'], pinned_head=self.head)
         self.assertEqual(self.journal.audit()['sequence'], 0)
 
     def test_native_and_live_tool_cannot_be_unheld_synthetic(self):
@@ -282,7 +289,7 @@ class Controls(unittest.TestCase):
         with self.assertRaises(j.Denied): self.journal.audit()
 
     def test_fixed_synthetic_call_persists_each_result_before_return(self):
-        receipt = self.journal.synthetic_call(self.targets[0], self.locators[0])
+        receipt = self.journal.synthetic_call(self.targets[0], self.locators[0], pinned_head=self.head)
         state = self.journal.audit(receipt['head'])
         self.assertEqual(state['sequence'], 2)
         self.assertEqual(len(state['results']), 1)
@@ -293,8 +300,34 @@ class Controls(unittest.TestCase):
         with patch.object(self.journal, 'reserve', side_effect=j.Denied('blocked')):
             with patch.object(self.journal, 'result') as result:
                 with self.assertRaises(j.Denied):
-                    self.journal.synthetic_call(self.targets[0], self.locators[0])
+                    self.journal.synthetic_call(self.targets[0], self.locators[0], pinned_head=self.head)
                 result.assert_not_called()
+
+    def test_mutations_reject_missing_none_malformed_and_stale_head(self):
+        for pin in [None, '', 'raw prose', True, j.ZERO]:
+            with self.assertRaises(j.Denied):
+                self.journal.reserve(self.targets[0], self.locators[0], pinned_head=pin)
+            with self.assertRaises(j.Denied):
+                self.journal.synthetic_call(self.targets[0], self.locators[0], pinned_head=pin)
+        self.reserve()
+        for pin in [None, '', 'raw prose', True, j.ZERO]:
+            with self.assertRaises(j.Denied):
+                self.journal.result(self.targets[0]['targetId'], 1, 'completed',
+                                    j.digest(b'x'), 1, pinned_head=pin)
+        self.assertEqual(self.journal.audit()['sequence'], 1)
+
+    def test_suffix_loss_restart_cannot_redispatch_spent_target(self):
+        receipt = self.journal.synthetic_call(self.targets[0], self.locators[0], pinned_head=self.head)
+        # NEW fictional fixture suffix-loss probe, never real state recovery.
+        for directory in ['events', 'receipts']:
+            for p in (self.store / directory).iterdir(): p.unlink()
+        restarted = j.Journal(self.store, self.cp, self.pin,
+                              self.root / 'import.json', self.import_sha)
+        with self.assertRaises(j.Denied):
+            restarted.synthetic_call(self.targets[0], self.locators[0])
+        with self.assertRaises(j.Denied):
+            restarted.synthetic_call(self.targets[0], self.locators[0], pinned_head=receipt['head'])
+        self.assertEqual(restarted.audit()['sequence'], 0)
 
 
 if __name__ == '__main__':

@@ -42,3 +42,14 @@ Original open-items and14 gate bindings are copied byte-for-byte and verified ag
 their historical source. Build/fresh-main-target, safety/privacy/native completeness,
 human review including Kelsey/Jaycee limits, custody/preservation/recovery/permission,
 student/publication, M1/SD5 and reserved effects stay open at original triggers.
+
+The first frozen candidate964f5ff was independently rejected for H1: mutating APIs
+allowed omitted external head pins. Its exact manifest and FAIL review are preserved
+in rejected-candidate-001, and its Git tree is immutable. Author remediation requires
+a valid current external receipt for reserve/result/synthetic_call; fixed synthetic_call
+passes its durable reservation head to its immediate result.35tests now pass, including
+missing/None/malformed/stale pins and restart after a complete two-file suffix loss.
+Caller-held receipt trust and persistence outside the event store remain prerequisites;
+read-only unpinned audit is observational, never replacement authority. A lost/stale
+receipt blocks writes, including a result that loses a concurrency race. No reset,
+head refresh/recovery or dispatch integration is added. No source was contacted.

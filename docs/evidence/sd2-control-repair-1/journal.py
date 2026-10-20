@@ -246,12 +246,16 @@ class Journal:
             return self._state(pinned_head)
 
     def reserve(self, target, locator, pinned_head=None):
+        require(isinstance(pinned_head, str) and HEX.fullmatch(pinned_head),
+                'external current head receipt required before mutation')
         with self.locked():
             s = self._state(pinned_head)
             self._eligible(s['contract'], self._contract()[1], s['intents'], s['active'], target, locator)
             return self._append(s, 'intent', {'target': target, 'locator': locator})
 
     def result(self, target_id, intent_sequence, status, result_sha, byte_count, pinned_head=None):
+        require(isinstance(pinned_head, str) and HEX.fullmatch(pinned_head),
+                'external current head receipt required before mutation')
         with self.locked():
             s = self._state(pinned_head)
             require(target_id in s['intents'] and target_id not in s['results'], 'missing/duplicate intent')
@@ -264,13 +268,13 @@ class Journal:
                                 'intentSequence': intent_sequence, 'status': status,
                                 'resultSha256': result_sha, 'bytes': byte_count})
 
-    def synthetic_call(self, target, locator):
+    def synthetic_call(self, target, locator, pinned_head=None):
         """Fixed fictional work only, with no callback capable of source access.
 
         Return only AFTER both immutable intent and result receipts are durable.
         If interrupted anywhere after reservation, that target remains spent.
         """
-        intent = self.reserve(target, locator)
+        intent = self.reserve(target, locator, pinned_head=pinned_head)
         response = b'fictional synthetic response\n'
         return self.result(target['targetId'], intent['sequence'], 'completed',
-                           digest(response), len(response))
+                           digest(response), len(response), pinned_head=intent['head'])

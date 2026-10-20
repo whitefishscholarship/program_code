@@ -1,0 +1,15 @@
+{
+  "findingId": "H1",
+  "severity": "high",
+  "status": "AUTHOR_REMEDIATED_PENDING_INDEPENDENT_RECHECK",
+  "owner": "Codex control author",
+  "trigger": "Final candidate independent recheck before local receipt",
+  "authoritativePath": "docs/evidence/sd2-control-repair-1/rejected-candidate-001/review.json",
+  "rejectedCandidate": "964f5ffa7f03a26bd11ad82626a0b02ca9a08118",
+  "rejectedManifestSha256": "ec8f08116a13128e17c840ee16badf4613b210ee7c2f0081b206ebb7fcc44ec7",
+  "rationale": "Require valid externally supplied current head on every mutation. Missing/None/malformed pins fail before any write; stale/suffix-loss pins fail chain equality. Fixed synthetic_call propagates reservation head into result. Read-only unpinned audit remains observation only.",
+  "tests": "35 passed including mandatory-head denial and restart after complete suffix loss; original33test logs preserved.",
+  "remainingLimits": "Caller must preserve a trustworthy receipt outside the event store. Audit output is not replacement authority. Lost/stale receipt fails closed; no live source dispatcher or target clearance exists.",
+  "sourceExecutionStatus": "FAIL",
+  "all397Held": true
+}

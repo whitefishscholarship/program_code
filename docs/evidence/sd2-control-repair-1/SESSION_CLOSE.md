@@ -12,8 +12,11 @@ implementation; original policy/reviews/bindings remain unchanged. The new journ
 is synthetic-only, with exclusive fsynced intents/results and event receipts, process
 locking, exact pins, permanent spent reservations and fail-closed partial-state tests.
 It has no real source dispatch client/callback. See implementation-notes for proof limits.
+Initial candidate964f5ff received independent FAIL H1 for optional external head pins.
+Its immutable manifest/review are retained in rejected-candidate-001. Author remediation
+requires external current pins on every mutation; final review must recheck H1.
 
-33 synthetic tests passed, including real process death/cancellation and6competing
+35 synthetic tests passed, including real process death/cancellation and6competing
 processes with one winner; every real397 target reservation is rejected. Reconciliation
 matches64observed completions including9failed +4uncertain frontier reservations,
 68conservative explicit calls,55observed/frontier target orders. No exact attempt/HTTP
