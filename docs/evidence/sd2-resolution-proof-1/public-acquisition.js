@@ -13,6 +13,7 @@ async function acquirePublic(target) {
       for(let i=0;i<8;i++)hh[i]=(hh[i]+v[i])|0;}
     return hh.map(x=>(x>>>0).toString(16).padStart(8,"0")).join("");
   };
+  if(!target.savedPreflight||target.savedPreflight.outcome!=="PASS_FOR_PUBLIC_PAGE_RETRIEVAL_ONLY"||!target.savedPreflight.independentSavedInspection||!target.savedPreflight.exactReferenceHashesVerified){return {schemaVersion:1,targetId:target.targetId,order:target.order,outcome:"held_before_read_no_independent_saved_preflight",attempts:0,explicitRemoteCalls:0,excerpts:[],allOriginalHoldsRetained:true,factsAccepted:0,mappingsAccepted:0};}
   const start=new Date().toISOString();
   const out={schemaVersion:1,targetId:target.targetId,order:target.order,exactLocatorSha256:target.exactLocatorSha256,host:target.host,affectedSavedInputs:target.affectedSavedInputs,materialProofGaps:target.materialProofGaps,startedAt:start,explicitRemoteCalls:1,attempts:1,allOriginalHoldsRetained:true,factsAccepted:0,mappingsAccepted:0,excerpts:[],rejectedQuoteCounts:{},currentOfferingEstablished:false,completeNativeOrVisualInspection:false,underlyingHttpRequests:"UNMEASURED"};
   const prompt="Inspect ONLY public program information for these exact saved program names: "+JSON.stringify(target.names)+". Do not include applicants/recipients/winners, biographies, personal stories, contacts, mailing addresses, phone/email values, filled forms/responses, birthdate examples, credentials or token links. Return at most 4 short exact plain-text quotations per named program, only for material identity, current cycle/deadline, eligibility or application-route criteria. Each quotation must occur verbatim in page markdown and be at most 900 characters. Do not summarize as a quotation. Preserve all qualifiers; mark parent/common scope separately and never transfer parent criteria to an individual child. Return no quotation if named-program identity or safe content is unclear. Unknown/unstated remains unknown. Do not follow links or interact with forms. Include flags suspectedApplicantData, programIdentityClear, contentScope. JSON schema: {suspectedApplicantData:boolean,programIdentityClear:boolean,contentScope:string,quotes:[{program:string,purpose:'identity'|'cycle_deadline'|'eligibility'|'application_route',scope:'named_program'|'parent_common'|'unclear',exactQuote:string}]}. This is selected-excerpt evidence, not full-source or factual acceptance.";
@@ -22,7 +23,7 @@ async function acquirePublic(target) {
   } catch(e) {out.outcome="held_provider_transport_error";out.errorSha256=sha(String(e));out.completedAt=new Date().toISOString();return out;}
   const serialized=JSON.stringify(raw);out.returnedEnvelopeSha256=sha(serialized);out.returnedEnvelopeBytes=unescape(encodeURIComponent(serialized)).length;
   if(out.returnedEnvelopeBytes>16777216){out.outcome="held_over_limit";out.completedAt=new Date().toISOString();return out;}
-  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=raw.structuredContent?.error_code||null;out.completedAt=new Date().toISOString();return out;}
+  if(raw.isError){out.outcome="held_provider_error";out.providerErrorCode=raw.structuredContent?.error_code||null;out.providerErrorReason=(raw.content||[]).filter(x=>x.type==="text").map(x=>String(x.text).replace(/https?:\/\/\S+|\S+@\S+/g,"[redacted]")).join(" ").slice(0,500);out.completedAt=new Date().toISOString();return out;}
   const candidates=[];const scan=(v,depth=0)=>{if(!v||typeof v!=="object"||depth>5)return;if(v.markdown!==undefined||v.metadata||v.json)candidates.push(v);if(Array.isArray(v)){for(const x of v)scan(x,depth+1);}else for(const [k,x]of Object.entries(v)){if(k==="text"&&typeof x==="string"){try{scan(JSON.parse(x),depth+1);}catch{}}else if(x&&typeof x==="object")scan(x,depth+1);}};
   scan(raw);const d=candidates.find(x=>typeof x.markdown==="string")||candidates.find(x=>x.json)||{};
   const md=typeof d.markdown==="string"?d.markdown:"";const meta=d.metadata||{};let json=d.json;
@@ -47,9 +48,10 @@ async function acquirePublic(target) {
     if(/@|https?:\/\/|www\.|data:|base64|bearer|access.token|api.key|recipient|winner|awardee|born\b|biograph|personal story|our story|privacy policy|mailing address|phone:|contact:|\b\d{3}[-. )]\s*\d{3}[-. ]\s*\d{4}\b/i.test(s)){rejected("excluded_or_uninspected_content");continue;}
     if(!/scholar|award|eligible|eligibility|applica|deadline|admission|student|program|funding|GPA|renew|must|require|education|training|grant|nomina/i.test(s)){rejected("not_material_program_clause");continue;}
     per[q.program]=(per[q.program]||0)+1;
-    out.excerpts.push({program:q.program,purpose:q.purpose,scope:"selected_page_scope_unresolved",providerProposedScope:q.scope,assignmentStatus:"Named-program/parent applicability remains held",exactQuote:s,exactQuoteSha256:sha(s),matchOffset:md.indexOf(s),proposedEvidenceOnly:true,completeRuleEstablished:false});
+    out.excerpts.push({program:q.program,purpose:q.purpose,scope:"selected_page_scope_unresolved",providerProposedScope:q.scope,assignmentStatus:"Named-program/parent applicability remains held",exactQuoteSha256:sha(s),quoteCharacters:s.length,hashOnlyEvidence:true,matchOffset:md.indexOf(s),proposedEvidenceOnly:true,completeRuleEstablished:false});
   }
   out.outcome=out.excerpts.length?"held_with_new_selected_program_excerpts":"held_no_safe_exact_material_excerpt";
   out.completenessLimit="Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.";
   out.completedAt=new Date().toISOString();return out;
 }
+

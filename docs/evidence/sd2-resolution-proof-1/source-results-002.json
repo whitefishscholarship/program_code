@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-06669337016bd8d40c63",
+      "order": 10,
+      "host": "drive.google.com",
+      "exactLocatorSha256": "06669337016bd8d40c63d379cef8f6fc6433f5f284bfc5634bff54cebdf6062e",
+      "affectedSavedInputs": [
+        "saved-405588227-row-59"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-59#identityContinuity",
+        "saved-405588227-row-59#materials"
+      ],
+      "outcome": "held_interrupted_acquisition_results_unavailable",
+      "explicitRemoteCalls": null,
+      "explicitRemoteCallsUpperBound": 2,
+      "attempts": 1,
+      "excerpts": [],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "reason": "Interim safety review terminated acquisition before group completion; response unavailable. No replay. Tool-call upper bound retained, actual underlying HTTP unmeasured."
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0cf251bfb86bf9e77279",
+      "order": 19,
+      "host": "foldsofhonor.org",
+      "exactLocatorSha256": "0cf251bfb86bf9e77279828f7f6e24a8cb41e0290ed9b19a3377526c6840dc00",
+      "affectedSavedInputs": [
+        "saved-405588227-row-339"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-339#application",
+        "saved-405588227-row-339#cycle",
+        "saved-405588227-row-339#identityObservation",
+        "saved-405588227-row-339#reapplication"
+      ],
+      "outcome": "held_interrupted_acquisition_results_unavailable",
+      "explicitRemoteCalls": null,
+      "explicitRemoteCallsUpperBound": 1,
+      "attempts": 1,
+      "excerpts": [],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "reason": "Interim safety review terminated acquisition before group completion; response unavailable. No replay. Tool-call upper bound retained, actual underlying HTTP unmeasured."
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0d35d7a89e5ae0cc16d8",
+      "order": 21,
+      "host": "www.umt.edu",
+      "exactLocatorSha256": "0d35d7a89e5ae0cc16d856e9ddbf27a28a471842dbd4a7bd9cba09fb1ecd5c09",
+      "affectedSavedInputs": [
+        "saved-405588227-row-69"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-69#applicationMethod",
+        "saved-405588227-row-69#deadline",
+        "saved-405588227-row-69#identityContinuity",
+        "saved-405588227-row-69#minimumGPA",
+        "saved-405588227-row-69#residency",
+        "saved-405588227-row-69#schoolType"
+      ],
+      "outcome": "held_interrupted_acquisition_results_unavailable",
+      "explicitRemoteCalls": null,
+      "explicitRemoteCallsUpperBound": 1,
+      "attempts": 1,
+      "excerpts": [],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "reason": "Interim safety review terminated acquisition before group completion; response unavailable. No replay. Tool-call upper bound retained, actual underlying HTTP unmeasured."
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0e26d146d1ea5ad5a44f",
+      "order": 24,
+      "host": "kitchencabinetkings.com",
+      "exactLocatorSha256": "0e26d146d1ea5ad5a44f859476b0e091c2af46ee6a41fa161635a85bdeb75067",
+      "affectedSavedInputs": [
+        "saved-405588227-row-254"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-254#applicationMethod",
+        "saved-405588227-row-254#cycle",
+        "saved-405588227-row-254#eligibility",
+        "saved-405588227-row-254#extraEligibility",
+        "saved-405588227-row-254#identityObservation",
+        "saved-405588227-row-254#materials",
+        "saved-405588227-row-254#reapplication"
+      ],
+      "outcome": "held_interrupted_acquisition_results_unavailable",
+      "explicitRemoteCalls": null,
+      "explicitRemoteCallsUpperBound": 1,
+      "attempts": 1,
+      "excerpts": [],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "reason": "Interim safety review terminated acquisition before group completion; response unavailable. No replay. Tool-call upper bound retained, actual underlying HTTP unmeasured."
+    }
+  ],
+  "incident": "Acquisition interrupted for privacy remediation before any completed group or new file."
+}

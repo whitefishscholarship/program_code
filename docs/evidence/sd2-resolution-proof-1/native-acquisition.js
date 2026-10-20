@@ -14,13 +14,14 @@ async function acquireNative(target, existing=null) {
     return hh.map(x=>(x>>>0).toString(16).padStart(8,"0")).join("");
   };
 
+  if(!target.savedPreflight||target.savedPreflight.outcome!=="PASS_FOR_NATIVE_BLANK_DOCUMENT_RETRIEVAL_ONLY"||!target.savedPreflight.independentSavedInspection||!target.savedPreflight.exactReferenceHashesVerified){return {schemaVersion:1,targetId:target.targetId,order:target.order,outcome:"held_before_read_no_native_public_blank_preflight",attempts:0,explicitRemoteCalls:0,excerpts:[],allOriginalHoldsRetained:true,factsAccepted:0,mappingsAccepted:0};}
   const out={schemaVersion:1,targetId:target.targetId,order:target.order,host:target.host,exactLocatorSha256:target.exactLocatorSha256,affectedSavedInputs:target.affectedSavedInputs,materialProofGaps:target.materialProofGaps,startedAt:new Date().toISOString(),explicitRemoteCalls:0,attempts:1,excerpts:[],allOriginalHoldsRetained:true,factsAccepted:0,mappingsAccepted:0,currentOfferingEstablished:false,publicOriginEstablished:false,completeNativeOrVisualInspection:false,underlyingHttpRequests:"UNMEASURED"};
   const finish=why=>{out.outcome=why;out.completedAt=new Date().toISOString();return out;};
   const match=target.exactLocator.match(/\/(?:document|file)\/d\/([A-Za-z0-9_-]+)/)||target.exactLocator.match(/[?&]id=([A-Za-z0-9_-]+)/);
   if(!match)return finish("held_exact_native_id_unavailable");
   const fileId=match[1];let meta;
   try{out.explicitRemoteCalls++;meta=existing?existing.metadata:await tools.mcp__codex_apps__google_drive_get_file_metadata({fileId,fields:"id,name,mimeType,size,modifiedTime,version,md5Checksum,webViewLink"});}catch(e){out.errorSha256=sha(String(e));return finish("held_native_metadata_transport");}
-  out.metadataEnvelopeSha256=sha(JSON.stringify(meta));
+  const metaSerialized=JSON.stringify(meta);out.metadataEnvelopeBytes=unescape(encodeURIComponent(metaSerialized)).length;out.metadataEnvelopeSha256=sha(metaSerialized);if(out.metadataEnvelopeBytes>16777216)return finish("held_native_metadata_envelope_over_limit");
   if(meta.isError){out.providerErrorCode=meta.structuredContent?.error_code||null;return finish("held_native_metadata_access");}
   let d=meta.structuredContent||{};if(!d.id){for(const x of(meta.content||[])){if(x.type==="text"){try{const a=JSON.parse(x.text);if(a.id)d=a;}catch{}}}}
   const name=d.name||d.title||"",mime=d.mimeType||d.mime_type||"";
@@ -34,7 +35,7 @@ async function acquireNative(target, existing=null) {
   if(!out.metadataProgramNameOverlap)return finish("held_native_program_title_unclear");
   let raw;
   try{out.explicitRemoteCalls++;raw=existing?existing.content:await tools.mcp__codex_apps__google_drive_fetch({url:target.exactLocator});}catch(e){out.errorSha256=sha(String(e));return finish("held_native_content_transport");}
-  out.contentEnvelopeSha256=sha(JSON.stringify(raw));if(raw.isError){out.providerErrorCode=raw.structuredContent?.error_code||null;return finish("held_native_content_access");}
+  const contentSerialized=JSON.stringify(raw);out.contentEnvelopeBytes=unescape(encodeURIComponent(contentSerialized)).length;out.contentEnvelopeSha256=sha(contentSerialized);if(out.contentEnvelopeBytes>16777216)return finish("held_native_content_envelope_over_limit");if(raw.isError){out.providerErrorCode=raw.structuredContent?.error_code||null;return finish("held_native_content_access");}
   const c=raw.structuredContent||{};const text=typeof c.content==="string"?c.content:typeof c.structuredContent?.content==="string"?c.structuredContent.content:"";
   out.sourceTextSha256=sha(text);out.sourceTextBytes=unescape(encodeURIComponent(text)).length;
   if(c.id&&c.id!==fileId)return finish("held_native_content_identity_mismatch");
@@ -48,7 +49,7 @@ async function acquireNative(target, existing=null) {
     if(!/eligib|scholarship|deadline|\bGPA\b|must|require|graduat|postmark|enroll|resident|citizen|submit|nomina|renewal/i.test(line))continue;
     if(/@|https?:\/\/|www\.|data:|base64|bearer|access.token|api.key|recipient|winner|awardee|born\b|biograph|address|phone|e-?mail|contact|signature|name\s*:|\b\d{3}[-. )]\s*\d{3}[-. ]\s*\d{4}\b/i.test(line)){rejected++;continue;}
     if(!text.includes(line)){rejected++;continue;}
-    seen.add(line);out.excerpts.push({programs:target.names,purpose:"selected_native_material_clause",scope:"named_document_identity_still_held",exactQuote:line,exactQuoteSha256:sha(line),matchOffset:text.indexOf(line),proposedEvidenceOnly:true,completeRuleEstablished:false});
+    seen.add(line);out.excerpts.push({programs:target.names,purpose:"selected_native_material_clause",scope:"named_document_identity_still_held",exactQuoteSha256:sha(line),quoteCharacters:line.length,hashOnlyEvidence:true,matchOffset:text.indexOf(line),proposedEvidenceOnly:true,completeRuleEstablished:false});
     if(out.excerpts.length===10)break;
   }
   out.excludedLineCount=rejected;
