@@ -1,0 +1,235 @@
+{
+  "scope": "One local synthetic SD2 control repair and397-target reconciliation; no source clearance or canonical acceptance",
+  "entryCommit": "e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae",
+  "candidateCommit": "72e27f0ed1910e194f057cb6b74d86e5a5e5c309",
+  "candidateTree": "0b43bd3bbff3c5bb347c7b72abad422bb0d2f6a2",
+  "completeDiffSha256": "b0614ff4e262d2df4eb7552eaddb436680ef062553231cdd60814d4fc366a27f",
+  "completeDiffBytes": 1036794,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "45a677829b639f9aa7b91ebb8de7fe654527801111623ac520d0934420d90313",
+      "bytes": 774705
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "a6f092e2188765e162dc7f1a13538d9e65f731a371a9807e2e2229cdafcecbf2",
+      "bytes": 220219
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "1182e7e2eca3af9d19a12e0b24516890086cb5f54ad54351d25fbddeea762da0",
+      "bytes": 176567
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "a6a4b82bd2cca2debabfcf99449806e9fe25615fb8e19c0764e22dc33f39faea",
+      "bytes": 2459
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/POLICY.md",
+      "mode": "100644",
+      "sha256": "c920af56e361c0f2e455b0298e8ceb04f5add35adaa3709e6db045fc85589b82",
+      "bytes": 4474
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/README.md",
+      "mode": "100644",
+      "sha256": "e3d36afcbbf36ad2c7c0a7f4a7f9fe6e72d11d910f0018993187852b763b1844",
+      "bytes": 517
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "e1a2c30fb4229506f4004ded0f5228a5bed13cee7655617acf286fe11685b14a",
+      "bytes": 3884
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "ec893ed59b7bb88f338c4a1dddbe7713e6d6892fee866541700b00a9b624000d",
+      "bytes": 1408
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/complete-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/reconciliation.log.gz",
+      "mode": "100644",
+      "sha256": "e7a78cb2ac34043b7ab8c4196aad3a83f0baa3fff806511fad0e13d2a0d33345",
+      "bytes": 100
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/synthetic-final.log.gz",
+      "mode": "100644",
+      "sha256": "dc01177bbd84aaa1fd38f7201b9770decd175c7dafcb12c016f018a81c730528",
+      "bytes": 801
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/synthetic-remediation.log.gz",
+      "mode": "100644",
+      "sha256": "1e7c9ec6ea9d96ae99db6cb643b774260a031ce9542cd4451cb394ee2a59d8b7",
+      "bytes": 860
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/synthetic.log.gz",
+      "mode": "100644",
+      "sha256": "e9e4367c1928904f2af4bea1fad71fc5c1a9306190f4df8064a2a98f019e2301",
+      "bytes": 801
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/contract.json",
+      "mode": "100644",
+      "sha256": "04a8030b5e76e288943f96b335c142790893e44aabd09d483906f043a913fa52",
+      "bytes": 122132
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/entry-audit.json",
+      "mode": "100644",
+      "sha256": "5b95d4e1e72164f4fd9e3f0bcbee9ce2af9bec3d0ef94b5c6d8319f0125b1198",
+      "bytes": 1046
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/historical-import.json",
+      "mode": "100644",
+      "sha256": "959285a7b19c800943dfd87e7d3d20f1462d6ffe39abe913c6867d5694d305e2",
+      "bytes": 35684
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/implementation-notes.md",
+      "mode": "100644",
+      "sha256": "590a610fc1db4533b5de295c34e83c4f956a676db78f06f8e8f5f5635f18cfce",
+      "bytes": 4004
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/inherited-open-items.json",
+      "mode": "100644",
+      "sha256": "d1c82714a309b944caf10bf4fa807cc9bf978787a2ba4a40b1b9f3824e94adf0",
+      "bytes": 19239
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/journal.py",
+      "mode": "100644",
+      "sha256": "64d0f6aa0b69c02dbcb29292b1468d9a845fdc4fc9f8a7ad3a5f3cf3060af800",
+      "bytes": 13158
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/open-items.json",
+      "mode": "100644",
+      "sha256": "674a1539280bcd3c9202979702d2b7546624a949b93e3ba110a7e451dd5088e0",
+      "bytes": 2975
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/policy-review.json",
+      "mode": "100644",
+      "sha256": "eb27f36ecd82e39e6f76625809921beb7629723aeee5bad10a3ee85f0073a829",
+      "bytes": 3018
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/reconcile.py",
+      "mode": "100644",
+      "sha256": "dafce06be0a1c5a5c2d26cf5e1afe93de1834ce2d3ec0b4e204e7297be68efbc",
+      "bytes": 8109
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/reconciliation.json",
+      "mode": "100644",
+      "sha256": "b0a9f9539e11bdbc2e5a0406410681913d2c8c0807ad258cfc535fb3152813d9",
+      "bytes": 731728
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/rejected-candidate-001/manifest.json",
+      "mode": "100644",
+      "sha256": "ec8f08116a13128e17c840ee16badf4613b210ee7c2f0081b206ebb7fcc44ec7",
+      "bytes": 7460
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/rejected-candidate-001/review.json",
+      "mode": "100644",
+      "sha256": "04fd1e0dc8d789c2233b1da68a28714f7c60bdf283e05754cc6a02099d145fcb",
+      "bytes": 6490
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/remediation.json",
+      "mode": "100644",
+      "sha256": "b34697da23bf9d50c8e152ecad12e375ed3d345128919dccb502cd09aa2340f5",
+      "bytes": 1172
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/run_checks.py",
+      "mode": "100644",
+      "sha256": "e27b97d40519fca7cee34e6fd60a42e1df9683e3ca09329d1a31a291fd25e87e",
+      "bytes": 2167
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/summary.json",
+      "mode": "100644",
+      "sha256": "0e43b7d1b9312e768e647f573eaab7b405846f92650eff48711a684236a3cd69",
+      "bytes": 3514
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/test_journal.py",
+      "mode": "100644",
+      "sha256": "0f2c5d14d221e372de799e5540cd1327452f0d28ed67dde08148ddbf900c0836",
+      "bytes": 15540
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/validation.json",
+      "mode": "100644",
+      "sha256": "8175ee2c5f685483cc421aa3ce5a1eafe4dc496ef5dd6905c285a18e912a6a82",
+      "bytes": 7128
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/verification.json",
+      "mode": "100644",
+      "sha256": "3a707c1274639118e0c4b91ff3075947a5f0d7136601dd7a6d87a7ecacb98d4d",
+      "bytes": 805
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/verify.py",
+      "mode": "100644",
+      "sha256": "56ae29844c61e9ce98b6d9f52f36c17262b2829d4d2f86d8cfd91cd6b85732d4",
+      "bytes": 8071
+    }
+  ],
+  "sourceExecutionStatus": "FAIL",
+  "all397Held": true,
+  "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+  "clearedForAcquisition": 0,
+  "sourceRequestsDuringBatch": 0,
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false
+}
