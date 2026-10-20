@@ -1,0 +1,129 @@
+{
+  "scope": "Fresh-session handoff integrity only; original source execution remains FAIL",
+  "entryCommit": "03362252704c0032ae13befc015b7376de54056b",
+  "candidateCommit": "bd7f4105494887c763e1a2d113066a64273c251c",
+  "candidateTree": "bc2ac0774398227bd6a7362ccc0009bf09c77360",
+  "completeDiffSha256": "2abcc5a2311c33ac159874a1139374147f54b797955916b1b38384e4bc4886b1",
+  "completeDiffBytes": 71516,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "d16cafeb6857e34ae3e9274d90dc38d6f521f385b4da85b5ff322ed3d302114e",
+      "bytes": 772953
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "a3775e9bcf13f2cf6637c5e5193134aabe736ef7d4f970bf4323136927648dff",
+      "bytes": 218431
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "f2393a788dae7e2196144eb23fc13a2bef9092a9274f598418cabb8f5eba827e",
+      "bytes": 174815
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "d13cb7c52976154049638ecfe3200b2f4bb3cd4cffe350e24b66d411097c46ae",
+      "bytes": 2395
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/README.md",
+      "mode": "100644",
+      "sha256": "a5b624fe2247fd462c5eab99ecc68ea937cc5fcc29268842ddd89dfdc0cbed3d",
+      "bytes": 2623
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "7b770b9ea76d47261f839ba86c24ccdb6f1f5b027071c8d7e7762877de88be5c",
+      "bytes": 2597
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "fe86adbaf2c6733eebd9ee918325d75c3cbce010bb9ba6aeec5a264aaaaff57a",
+      "bytes": 1406
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/entry-audit.json",
+      "mode": "100644",
+      "sha256": "d3238c0ab9867e31a6333e24d2f91d679fea2a1857c28094d5dece488fefad02",
+      "bytes": 1495
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/historical-recovery-observation.json",
+      "mode": "100644",
+      "sha256": "07ab7982893c9ecb5047317c4bd2a84430f080140102a3844c632c1f89ed64d3",
+      "bytes": 3694
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/make-manifest.py",
+      "mode": "100644",
+      "sha256": "a65850a3f8b4a67a17f7853790404339e1e5a1d9f63f3f179cc837516d5634c6",
+      "bytes": 1252
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/open-items.json",
+      "mode": "100644",
+      "sha256": "d1c82714a309b944caf10bf4fa807cc9bf978787a2ba4a40b1b9f3824e94adf0",
+      "bytes": 19239
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/run-checks.py",
+      "mode": "100644",
+      "sha256": "b2537d6e70c98d65426d94da9e51096cd9b952df469aef54d0cc5110bdc04442",
+      "bytes": 1361
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/scope.json",
+      "mode": "100644",
+      "sha256": "57f6d84a9cb381d8f5ed4f5af1f411c3b03ce972173210121af76d734d342bd6",
+      "bytes": 3010
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/validation.json",
+      "mode": "100644",
+      "sha256": "f6ef6030e6c9ef990b8ed81bcf26f3fd5590a201699b3e197f18eb0bfc1eefb2",
+      "bytes": 2841
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/verification.json",
+      "mode": "100644",
+      "sha256": "6867b662f28db4779666387f5f25b91ee2a9a81a7843432bc421a896886586e6",
+      "bytes": 839
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-handoff/verify.py",
+      "mode": "100644",
+      "sha256": "758fc660dbe1a0abf3a41c8e6cc2e270975d0196506f873e82f55cd683a4d95d",
+      "bytes": 7878
+    }
+  ],
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false
+}
