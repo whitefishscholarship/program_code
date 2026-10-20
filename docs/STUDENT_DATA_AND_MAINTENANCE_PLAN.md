@@ -353,6 +353,33 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-CONTINUATION-COVERAGE-AUDIT-START -->
+- SelectedSD2-SAVED-CONTINUATION-1 comparison processing386/386inputs,7062/7062held
+  fieldoccurrences complete across20matching independentPASS/localreceipts. Additional
+  coverage-audit status authoritative only matching immutable manifest/PASSreview/
+  direct-child receipt;elsepending. Currentclose:saved-continuation/coverage-audit/
+  SESSION_CLOSE.md,README,config,entry-audit,verify,verification,application-checks,
+  session-issues,final-manifest,review,next-action. No next selected comparison input.
+- Exact-union audit checks ordered membership, gaps/duplicates/prioroverlap, full
+  originalenvelopes/evidence/identity/routes and every review/receipt/blob/mode plus
+  threeappendhistories. Cumulative7468comparisonoccurrences/406autonomous+2priorJaycee;
+  original7406field/406identityholds remain,0acceptedfacts/mappings. Not unique/current
+  or acceptedfacts. Research406/406,cursor406,nextnull. FullSD2 incomplete;stopbeforeSD3.
+- Beforefutureaction atmatching clean auditreceipt tip,capture python3
+  docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verify.py --review-bound
+  Preserve validhistoricalreceipts/allbytesmodes;never widen/replay oldcontexts.
+  All original nineattentionrows/supplements/source/link/inherited/destination/M1/
+  custody/human/canonical/workbookpreservation/recovery/permission/publication/student/
+  SD5/effect owners/triggers/paths/actions remainexact perSESSION_CLOSE/originalpackets.
+  Kelseyreviewer/limitedJayceeapprovalsunchanged. Codexvalidation retains blocked127
+  missingtsx/tsc/next checks, exactstandardbuild/IPC/freshauthenticatedmain-target gate;
+  noPASS/waiver/install/repair. No further executionselection is inferred.
+- Large-runinstruction checkpoint012/RUN_CONTINUATION.json fulfilled only byfinal
+  matchingcoverageauditPASS. No new smallproposal,backgroundtask or routinecheckpoint
+  interaction. No newsource/workbook/metadata/raw/native reads,app/config/CIchange,
+  acceptance,remoteGit/deployment/contact/monitoring/effects orSD3. Never initialize/
+  reset/replay. Every earlier rejected/final binding and outputincident preserved.
+<!-- SD2-CONTINUATION-COVERAGE-AUDIT-END -->
 <!-- SD2-CONTINUATION-020-START -->
 - Existing full386/7062authority persists; group020:6inputs/122heldfields;
   3 consistent, 56 unresolved, 63 unavailable, 0 conflicting. Independent status only matching

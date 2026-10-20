@@ -1,0 +1,49 @@
+{
+  "entryCommit": "4a84305df8e06e799980a44f7824893dd3eed904",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/saved-continuation/engine.py",
+    "verify",
+    "20",
+    "--review-bound"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+  "startedAt": "2026-10-20T00:15:38.707456+00:00",
+  "completedAt": "2026-10-20T00:15:40.757676+00:00",
+  "exitCode": 0,
+  "stdoutSha256": "8033bffaac0e2807bd15130db3e9625803cef17c303ff51016fd508637afbfe2",
+  "stderrUtf8": "",
+  "result": {
+    "outcome": "PASS",
+    "group": 20,
+    "reviewBound": true,
+    "startedAt": "2026-10-20T00:15:38.737286+00:00",
+    "completedAt": "2026-10-20T00:15:40.749238+00:00",
+    "entryCommit": "7a2a1182d69b65d0076dc5efbdac48f2cff77e80",
+    "protectedEntryFiles": 2829,
+    "allPriorBytesModesHandoffsAndReviewBindingsPreserved": true,
+    "selectedInputs": 6,
+    "fieldOccurrences": 122,
+    "categoryCounts": {
+      "applicability/identity unresolved": 56,
+      "evidence unavailable": 63,
+      "existing evidence consistent": 3
+    },
+    "continuationComparedInputs": 386,
+    "continuationComparedFields": 7062,
+    "cumulativeComparedFieldOccurrences": 7468,
+    "comparedAutonomousInputs": 406,
+    "remainingAuthorizedInputs": 0,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "newSourceOrWorkbookReads": 0,
+    "rawNativeReads": 0,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "externalEffects": false
+  }
+}

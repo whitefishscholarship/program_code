@@ -1,3 +1,37 @@
+# Saved SD2 continuation — final coverage audit
+
+Authoritative progress:student-plan section9. All20groups have matching independent
+PASS/local receipts:386/386inputs,7062/7062heldfieldoccurrences. Final independent
+coverage-audit status ONLY matching manifest/review/direct-child receipt, else pending.
+Current close:saved-continuation/coverage-audit/SESSION_CLOSE.md; README/config/entry-
+audit/verify/verification/application-checks/session-issues/final-manifest/review/
+next-action. No remaining selected saved-comparison input or new factual queue.
+
+Before any future action at its matching clean receipt tip:
+python3 docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verify.py --review-bound
+Retain valid prior receipts/bytes; never widen old contexts or replay comparisons.
+Cumulative7468comparisonoccurrences/406autonomous+2priorJaycee, not accepted facts.
+Original7406field/406identityholds,406/406research,cursor406,nextnull,0accepted remain.
+FullSD2 incomplete. All source/identity/candidate/envelope/routes/earlier rejected and
+final review bindings, bytes/modes and3appendhistories preserved. Nine attention rows,
+all supplements,676seeds/1127links/365receipts/35inheritedroutes/628destinations(1unclosed),
+437M1routes/12pins and71custodyreceipts remain held at original paths. No new native/
+custody availability claim. Every open item has original owner/trigger/path/action
+in SESSION_CLOSE and exact original packets. Kelsey's named-review role and limited
+Jaycee approvals unchanged. Appchecks blocked127missingtsx/tsc/next; exactbuild/IPC/
+freshmain-target and all original acceptance/effect gates remain, no waiver/install.
+
+Freshentry:AGENTS canonicalorder,student-plansection9,originalAUTHORITY/POLICY/latest
+close,batch007CONTINUATION/scope,rootauthority,currentauditfiles. Output only needed
+counts/hashes/short policy clauses. No newsource/workbook/raw/native reads, acceptance,
+remoteGit/deployment/contact/monitoring/effects. Never initialize/reset/replay.
+Stop beforeSD3. Large-runinstruction checkpoint012/RUN_CONTINUATION.json fulfilled
+only after final matching audit PASS; no routine small-run selection is needed.
+
+Priorhandoffexactbelow.
+
+---
+
 # Authorized saved continuation — internal group020
 
 Full386-input/7062-held-field SD2-SAVED-CONTINUATION-1 authority persists across
