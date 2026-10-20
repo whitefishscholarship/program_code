@@ -5,7 +5,7 @@ async function acquirePublic(target) {
     const hh=h.slice(0,8),words=[],len=s.length;for(let i=0;i<len;i++)words[i>>2]|=s.charCodeAt(i)<<(24-i%4*8);
     words[len>>2]|=128<<(24-len%4*8);words[((len+8>>6)+1)*16-1]=len*8;
     const rr=(x,n)=>(x>>>n)|(x<<(32-n));
-    for(let j=0;j<words.length;j+=16){const w=words.slice(j,j+16),v=hh.slice();for(let i=0;i<64;i++){
+    for(let j=0;j<words.length;j+=16){const w=Array.from({length:16},(_,i)=>words[j+i]||0),v=hh.slice();for(let i=0;i<64;i++){
       const a=w[i-15],b=w[i-2];if(i>=16)w[i]=((rr(a,7)^rr(a,18)^(a>>>3))+w[i-16]+(rr(b,17)^rr(b,19)^(b>>>10))+w[i-7])|0;
       const t=(v[7]+(rr(v[4],6)^rr(v[4],11)^rr(v[4],25))+((v[4]&v[5])^(~v[4]&v[6]))+k[i]+w[i])|0;
       const t2=((rr(v[0],2)^rr(v[0],13)^rr(v[0],22))+((v[0]&v[1])^(v[0]&v[2])^(v[1]&v[2])))|0;
