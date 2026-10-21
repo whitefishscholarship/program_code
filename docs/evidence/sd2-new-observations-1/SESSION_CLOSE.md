@@ -40,3 +40,10 @@ Their absence means delivery is unverified. Verify exact attestation ancestry on
 origin/main, CI and Production commit before treating the enabling stage as delivered.
 The immutable candidate records pre-delivery gates honestly; the delivery receipt
 records later observations without rebinding its candidate/manifest/reviews.
+
+Pre-attestation portability correction: local-only receipt Git-object dependency was
+removed; exact65file path/mode/content inventory is hash-pinned in validator. A fresh
+single-branch clone lacking62cc97b passes the actual governance validator. Original
+accepted-but-unattested candidate/review remain under rejected-final-001; replacement
+final review is required. Current portable-matrix.json records exact timestamped
+plan/typecheck/fulltests/build rerun; no control/source behavior changed.
