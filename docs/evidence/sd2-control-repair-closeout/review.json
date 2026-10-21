@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewType": "Fresh-context independent read-only documentation-only local SD2 repair session-closeout review",
+  "reviewerTask": "/root/closeout_review",
+  "reviewedAt": "2026-10-21T00:01:12.390892+00:00",
+  "objective": "Close the completed one local synthetic control repair and all397-target metadata reconciliation cleanly; preserve original failure, all holds, approvals, owners and triggers; durable handoff, short fresh-session kickoff and next effort; no repeated implementation or source work.",
+  "binding": {
+    "baselineCommit": "ce7d094e04fc07f04d2fb267eb74affcced4a8a8",
+    "candidateCommit": "c9d9367a2ec637cab0ee8d98bdd456134f6b8e66",
+    "candidateTree": "52174a7232076833f34f152085c0abba3a4b8574",
+    "manifestPath": "docs/evidence/sd2-control-repair-closeout/manifest.json",
+    "manifestSha256": "6e6e07063d20b8249e695954263a51e6979ef3ad44e3b080a481484dc03b19e1",
+    "completeDiffFiles": 17,
+    "completeDiffBytes": 74864,
+    "completeDiffSha256": "fd7c362f6e1630bb868303ca3f2546551683b88d99fecad86fac8e561e5aa23f"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "sessionStatus": "PASS",
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false,
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedReviewedStage": false,
+    "readOnlyRepository": true,
+    "repositoryMutations": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "remoteGitRequests": 0,
+    "rawBodiesOrTracesRead": false,
+    "dependencyInstallation": false,
+    "completedSyntheticTestsRepeated": false,
+    "oldContextVerifiersReplayed": false,
+    "output": "/private/tmp/sd2-control-repair-closeout-review.json"
+  },
+  "authorityAssessment": {
+    "canonicalReadOrderObserved": true,
+    "latestAcceptedStageEvidence": "docs/evidence/P9.md",
+    "activeStageId": null,
+    "nextPermittedStageId": null,
+    "nextCanonicalKickoff": null,
+    "studentProgressPointer": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "originalSd2AuthorityPolicyRead": true,
+    "repairPolicyImplementationNotesAndReviewRead": true,
+    "scope": "Local documentation/evidence/continuity only. No canonical acceptance, source clearance or release effect."
+  },
+  "checks": [
+    {
+      "command": "python3 docs/evidence/sd2-control-repair-closeout/verify.py",
+      "exitCode": 0,
+      "protectedPreEntryFiles": 2986,
+      "appendHistories": 3,
+      "carriedItems": 13,
+      "originalGates": 14,
+      "additionalDispositions": 4
+    },
+    {
+      "command": "Independent git diff --binary ce7d094e04fc07f04d2fb267eb74affcced4a8a8 c9d9367a2ec637cab0ee8d98bdd456134f6b8e66 and SHA256/size comparison",
+      "result": "PASS:74864bytes; complete17path manifest matches candidate tree and blobs/modes"
+    },
+    {
+      "command": "git diff --check ce7d094e04fc07f04d2fb267eb74affcced4a8a8 c9d9367a2ec637cab0ee8d98bdd456134f6b8e66",
+      "exitCode": 0
+    },
+    {
+      "command": "Inspect immutable prior repair manifest/PASS review/direct-child receipt and clean recorded review-bound entry",
+      "result": "PASS:repair72e27f0 / receiptce7d094; H1 remediated and independently rechecked; rejected candidate and original failure remain exact"
+    },
+    {
+      "command": "Verify all current6 validation gzip stored/raw hashes and sizes; inspect commands/outcomes",
+      "result": "PASS:unchanged plan/typecheck/tests exit0; exact build exit1 EPERM; diff and entry-diff exit0"
+    },
+    {
+      "command": "Verify prior repair10 validation/supplemental gzip stored/raw hashes and sizes",
+      "result": "PASS:final35-test evidence retained without repeating completed synthetic work"
+    },
+    {
+      "command": "Inspect current13 carried items,14 original gate bindings,4 additional dispositions, handoff and kickoff",
+      "result": "PASS:exact original owner/trigger/path/action preserved; only completed local repair/H1/review tasks closed; every future gate retained"
+    }
+  ],
+  "preservationAssessment": {
+    "all2986PreEntryBlobsAndModesExact": true,
+    "all3HistoricalHandoffBodiesExact": true,
+    "priorRepairFilesManifestReviewCandidateUntouched": true,
+    "noProductConfigCiCanonicalPlanStateDiff": true,
+    "originalFailurePermanent": true,
+    "confirmedReplayOrders": [
+      26,
+      30,
+      34
+    ],
+    "possibleReplayOrder": 32,
+    "quarantinesHeld": 272,
+    "allTargetsHeld": 397,
+    "theoreticalUnusedExpandedTargets": 72,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "clearedForAcquisition": 0,
+    "conservativeExplicitCalls": 68,
+    "observedCompletedCalls": 64,
+    "frontierReservations": 4,
+    "noExactAttemptOrHttpCountClaim": true,
+    "privacyNativeBodyCurrencyCustodyLimitsPreserved": true
+  },
+  "ownersAssessment": {
+    "all9OriginalItemsRetainedWithExactOriginalBindings": true,
+    "all4RepairItemsRetainedWithExactOriginalBindings": true,
+    "all14OriginalGatesRetainedWithExactOriginalBindings": true,
+    "all4AdditionalDispositionsHaveOwnerTriggerPathNextAction": true,
+    "closedOnlyCompletedLocalSyntheticRepairH1AndReviewWork": true,
+    "noOrphanPriorReviewWork": true,
+    "openItemsPath": "docs/evidence/sd2-control-repair-closeout/open-items.json",
+    "nextOwner": "Codex controls/evidence author and independent reviewer",
+    "nextTrigger": "Later separately selected local dispatch-evidence availability/sufficiency checkpoint",
+    "nextAuthoritativePath": "docs/evidence/sd2-control-repair-closeout/NEXT_SESSION.md",
+    "nextAction": "Assess trustworthy complete target-specific dispatch proof without source acquisition; if unavailable retain all397holds and record evidence limit. Do not repeat completed synthetic tests/comparisons.",
+    "recommendedEffort": "High"
+  },
+  "kickoffAssessment": {
+    "durableSessionCloseAndShortKickoffExist": true,
+    "matchingReceiptReviewBoundVerificationBeforeNewPaths": true,
+    "doesNotAuthorizeSourceExecution": true,
+    "doesNotSelectNextCheckpoint": true,
+    "noRoutineReplayOrRepeatedSyntheticBatch": true,
+    "everyOriginalGateAppliesToFutureIntegration": true,
+    "noSourceRequestToRepairHistoricalEvidence": true,
+    "stopBeforeSD3": true
+  },
+  "validationAssessment": {
+    "currentPlanTypeTestsPassed": true,
+    "exactBuildGate": "BLOCKED_EPERM",
+    "freshAuthenticatedMainTarget": "UNVERIFIED",
+    "hardwarePowerLoss": "NOT_PROVEN",
+    "hostileFilesystemResistance": "NOT_PROVEN",
+    "trustworthyExternalHeadCustody": "FUTURE_PREREQUISITE",
+    "liveAdapterNonBypassability": "NOT_IMPLEMENTED_NOT_PROVEN",
+    "noInstallWorkaroundWaiverOrRemoteRefresh": true,
+    "preReceiptStatus": "HEAD equals frozen candidate; only current manifest untracked. Author must add only manifest and review in direct-child local receipt, then run new verifier --review-bound."
+  },
+  "limits": [
+    "PASS applies only to documentation-only closeout and continuity of the previously independently passed local synthetic repair objective. It accepts no source execution, facts, identities, mappings, fullSD2 or canonical stage.",
+    "Original source execution remains FAIL permanently; all397held,272quarantined and0cleared.72theoretical unused targets are not an executable queue. Complete dispatch visibility is not established.",
+    "No old context-bound verifier or completed synthetic batch was rerun. Continuity relies on immutable prior receipt/artifacts and its recorded timestamped clean matching review-bound entry.",
+    "Recorded current and prior validation evidence was independently hash-verified; application tests/build were not repeated by this read-only reviewer. Exact build EPERM remains an unresolved acceptance gate.",
+    "No source/workbook/raw provider body/trace access or remoteGit occurred. Provider erasure, public/native completeness, current facts and custody availability remain unknown.",
+    "Process-kill/fsync evidence does not establish hardware power-loss durability or hostile filesystem resistance. A trusted externally preserved current receipt and independently reviewed non-bypassable live integration remain future prerequisites.",
+    "Review-bound closeout check is intentionally pending the author-owned direct-child two-file local receipt; no canonical attestation or delivery authority follows."
+  ]
+}
