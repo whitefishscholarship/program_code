@@ -4,6 +4,7 @@ Plan revision: 23
 
 Authority docs/evidence/m1-approved-setup/authority.json; exact proposal preserved.
 Revision23 normal governance/review/attestation governs this one approved config release.
+Typecheck/fulltests PASS; current build and secret metadata remain pending, no push.
 GitHub environment provisioned main-only/reviewer/no-bypass; flags false. Key creation
 and direct environment-secret entry remain user handoff; no secret value read by agent.
 M2/source checks/email sends/activation/state-ref creation off;437routes/12pins retained.
