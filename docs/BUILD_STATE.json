@@ -1490,7 +1490,11 @@
         "sha256": "83f08bf3d9fe38849e442fbf9063f69e73a31e7d0f8b8ada4f8c53e581f8cc42"
       }
     ],
-    "closureAttestation": null,
+    "closureAttestation": {
+      "manifestPath": "docs/evidence/sd2-held-research-closure/manifest.json",
+      "reviewPath": "docs/evidence/sd2-held-research-closure/review.json",
+      "proofPath": "docs/evidence/sd2-held-research-closure/manifest.json#/heldResearchProof"
+    },
     "nextOwner": "Codex governance author and fresh independent reviewer",
     "nextTrigger": "Revision22 delivery, then separately reviewed exact closure candidate with original gates",
     "attentionPath": "docs/evidence/sd2-access-session-closeout/open-items.json"

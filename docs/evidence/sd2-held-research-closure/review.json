@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "stageId": "SD2-HELD-RESEARCH",
+  "reviewerTaskId": "/root/sd2_closure_final_review",
+  "reviewerWasAuthorOrEditor": false,
+  "reviewMode": "fresh-context-read-only",
+  "outcome": "accepted",
+  "reviewedAt": "2026-10-21T03:59:14.733Z",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "dispositions": [],
+  "candidateManifestPath": "docs/evidence/sd2-held-research-closure/manifest.json",
+  "candidateManifestSha256": "728b782ae5f78b6c00279fa57ab44f031ca9ffc129047ea5c1651a1281bd4688",
+  "checks": [
+    "Inspected actual AGENTS, canonical plan/state/handoff, P9 evidence, Revision22 kickoff and operative section17; reviewed original immutable draft contract as provenance rather than treating its obsolete draft status as operative policy.",
+    "Independently recomputed complete baseline-to-candidate binary diff: 40313 bytes SHA256 6467ac60c4013bb76cceeb1f0dfd5fea14f333393a5c6787ea3cb38e44b5088e; all 10 changed paths, candidate tree, per-blob bytes/hash/mode match manifest. Exact candidate 8dc30ffd809a030764d0b7cf8115c040f5625a12; baseline 3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177.",
+    "BUILD_STATE is deeply identical to baseline after restoring only canonical closureAttestation pointer; stored completion flags remain false, stage pointers null, accepted facts/mappings zero, SD3 false. Both navigation documents preserve complete historical bytes as suffixes.",
+    "Protected evidence reference hashes/bytes remain identical; original G1-G14 bound dispositions preserve source FAIL, 397 held, 272 quarantined, zero cleared and original attention ownership. No runtime/dependency/config/CI/source/workbook change; full web tree exactly unchanged.",
+    "All five exact command logs match proof hashes and byte lengths; inspected actual standard build output and recorded instrumented supported execution times. Freeze 2026-10-21T03:57:03Z equals candidate commit timestamp; entry/pre-freeze observations and commands precede freeze. Superseded unreviewed freeze remains documented without historical review rebinding.",
+    "Read unchanged governor and validate-build-plan integration. Independently ran focused governor tests: blocked state plus 31 adversarial mutations, stale/missing/substitute-build negatives, exact scope/mode/runtime/CI rejection and evolved-baseline acceptance passed. Independently invoked validateClosureProofAtRepo: [] only with explicitly simulated canonical-attestation context; this is a structural proof check, not an assertion that an attestation exists.",
+    "Entry npm run plan:check exit0 predates pointer, honestly distinguished from prospective candidate exit1 missing-own-attestation. Existing section11 canonical workflow necessarily adds review/manifest afterward. Acceptance authorizes exact direct-child two-file attestation only; actual unchanged npm run plan:check must exit0 against that real attestation before any publication, and again on delivered main. No missing-attestation PASS or gate waiver is accepted.",
+    "Authority explicitly selects separate accounting closure and bounded delivery effects under delivered Revision22. Candidate makes no fact/currentness/publication/use acceptance claim; permanent acquisition failure and all native/privacy/custody gaps persist. Subsequent source, workbook, SD3, monitoring and accepted-use effects remain separately governed."
+  ],
+  "limits": [
+    "No network, workbook, source or private raw-provider trace read performed. Current authenticated provider/main observations and supported-host process result are reviewed from candidate bound evidence, not independently repeated by this read-only reviewer.",
+    "Attestation and delivery do not yet exist. Author owns exact two-file direct-child attestation, actual local/hosted CI checks, refreshed exact target/head readiness and ancestry-preserving delivery. Any actual attested plan failure blocks publication and requires author remediation with a new independently reviewed candidate if candidate bytes change.",
+    "Preview protection access is not expanded by this review; earlier temporary grant remains deployment-specific. Record protected health access as explicit limit if applicable while verifying exact provider/project/head readiness and CI runtime evidence. Production canonical nonce/commit/capability health is mandatory after merge.",
+    "Initial reviewer helper invocation from repository root could not resolve tsx; next invocation from web used relative Git pathspec incorrectly. Corrected read-only invocation with repository-root Git cwd returned no errors; neither preliminary invocation changed files or supplied acceptance evidence."
+  ]
+}

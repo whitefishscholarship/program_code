@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "selectedEntry": {
+    "selectedAt": "2026-10-21T03:49:12.861131+00:00",
+    "selectedEntryCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "baselineCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "receiptSha256": "d76117f5a19208d1afe97647274a5bf4e379264baa30da2d163195b20913f949",
+    "receiptVerification": "PASS"
+  },
+  "receiptVerificationBeforeNewPaths": true,
+  "entryObservation": {
+    "at": "2026-10-21T03:49:18.148815+00:00",
+    "mainCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "hostname": "web-two-gules-45.vercel.app",
+    "authenticated": true
+  },
+  "authorityQuote": "Proceed with the separate held-research closure under delivered Revision 22. Keep going in large batches through review and delivery, preserve all holds, and don\u2019t accept facts or mappings or start SD3. No more planning loops.",
+  "observed": {
+    "revision22Delivered": true,
+    "rawMaintenanceFlagsRemainFalse": true,
+    "originalInputsUnchanged": true,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "SD3Started": false
+  },
+  "accountingSourceReference": {
+    "path": "docs/evidence/sd2-consolidation-package/summary.json",
+    "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7"
+  },
+  "accountingSummary": {
+    "inventory": {
+      "savedPositions": 794,
+      "namedInputs": 411,
+      "emptySelectedProjectionPositions": 383,
+      "uniqueExactNames": 410
+    },
+    "originalFieldDefinitions": 7547,
+    "originalAcceptance": {
+      "held": 7518,
+      "proposed": 29
+    },
+    "identityProposals": {
+      "held": 409,
+      "duplicate_candidate_held": 2
+    },
+    "publication": {
+      "existingAwards": 411,
+      "withCandidateLink": 407,
+      "withoutCandidateLink": 4,
+      "withMultipleCandidateLinks": 0,
+      "savedInputsWithoutCandidate": 4,
+      "candidateIdsOutsidePinnedPublication": []
+    }
+  },
+  "attentionReference": {
+    "path": "docs/evidence/sd2-access-session-closeout/open-items.json",
+    "sha256": "1ee9f70fa2a6cdb0f8234b4d42e00665eac285c98f0822e2c0799516fdfb150d",
+    "preservedByteForByte": true
+  },
+  "limits": [
+    "Accounting closure is not scholarship truth, accepted identity/facts or public-use acceptance.",
+    "Original native/source/custody/privacy/dispatch gaps and failed replay history remain unchanged.",
+    "No source/workbook/raw-provider traces accessed or replayed.",
+    "No account/configuration/credential changes; existing authentication reused.",
+    "Saved old context verifiers were not rerun after their handoff prepends."
+  ],
+  "nextOwner": "Codex closure author and fresh independent reviewer",
+  "nextTrigger": "Exact frozen candidate plus proof logs, then actual attested plan check and selected delivery",
+  "nextAction": "Review and deliver exact held-accounting candidate, preserve every inherited future owner/trigger and stop before SD3.",
+  "planCheckChronology": "Entry plan0 captured before prospective pointer; candidate missing-attestation errors recorded separately; actual attested plan0 mandatory before publication.",
+  "supportedBuild": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "startedAt": "2026-10-21T03:52:30.167611+00:00",
+    "completedAt": "2026-10-21T03:52:39.970468+00:00",
+    "logPath": "docs/evidence/sd2-held-research-closure/build.log",
+    "logSha256": "a86d37e5b2d622f3c903ae7b29af34435e5824a8bc2e4215ca3c9698f7c5761f",
+    "logBytes": 1154,
+    "executionContext": "User-operated existing Mac Terminal; exact npm run build with instrumented process result"
+  },
+  "requiredChecks": [
+    {
+      "command": "npm run plan:check",
+      "exitCode": 0,
+      "startedAt": "2026-10-21T03:51:03.671429+00:00",
+      "completedAt": "2026-10-21T03:53:10.706606+00:00",
+      "logPath": "docs/evidence/sd2-held-research-closure/plan.log",
+      "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "logBytes": 164,
+      "context": "Selected closure entry, delivered policy state before adding prospective pointer. Final candidate attested plan:check remains mandatory.",
+      "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "startedAt": "2026-10-21T03:51:59.884518+00:00",
+      "completedAt": "2026-10-21T03:52:06.481494+00:00",
+      "logPath": "docs/evidence/sd2-held-research-closure/typecheck.log",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "logBytes": 39,
+      "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "startedAt": "2026-10-21T03:52:06.482019+00:00",
+      "completedAt": "2026-10-21T03:53:22.296767+00:00",
+      "logPath": "docs/evidence/sd2-held-research-closure/tests.log",
+      "logSha256": "0acf62633acf2d5838bca0c7fb1ca8f27ed6002a86f2b4fef8ec492161d180d3",
+      "logBytes": 20348,
+      "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "startedAt": "2026-10-21T03:52:30.167611+00:00",
+      "completedAt": "2026-10-21T03:52:39.970468+00:00",
+      "logPath": "docs/evidence/sd2-held-research-closure/build.log",
+      "logSha256": "a86d37e5b2d622f3c903ae7b29af34435e5824a8bc2e4215ca3c9698f7c5761f",
+      "logBytes": 1154,
+      "executionContext": "User-operated existing Mac Terminal; exact npm run build with instrumented process result",
+      "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "startedAt": "2026-10-21T03:53:22.297234+00:00",
+      "completedAt": "2026-10-21T03:53:22.323957+00:00",
+      "logPath": "docs/evidence/sd2-held-research-closure/diff.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logBytes": 0,
+      "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+    }
+  ],
+  "runtimeDependencyTreeSha256": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da",
+  "runtimeOrDependencyChanged": false,
+  "preFreezeObservation": {
+    "at": "2026-10-21T03:56:20.713183+00:00",
+    "mainCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "hostname": "web-two-gules-45.vercel.app",
+    "authenticated": true
+  },
+  "prospectivePlanCheck": {
+    "command": "npm run plan:check",
+    "startedAt": "2026-10-21T03:53:37.789500+00:00",
+    "completedAt": "2026-10-21T03:55:27.597953+00:00",
+    "exitCode": 1,
+    "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 1 error(s):\n- SD2 closure requires its own exact independent attestation\n",
+    "rawSha256": "f5a21d691f1852ad742da9682e3c8f7dbc2f559a842405274de59e8019d06e0b"
+  },
+  "freezeAt": "2026-10-21T03:57:03+00:00",
+  "reviewGate": "No attestation exists yet; exact independent final review and actual post-attestation plan0 required before publication.",
+  "deliveryVerification": "Use exact provider deployment/project/commit readiness and CI build/runtime trace; protected Preview health may remain an explicit access limit without new token grants. Canonical Production nonce/commit/capabilities verification is required after merge.",
+  "supersededFreezeObservation": {
+    "candidate": "d6e1069",
+    "recordedFreezeAt": "2026-10-21T03:56:20.806906+00:00",
+    "reason": "Subsecond observation exceeded Git second-precision commit timestamp; unreviewed candidate retained, replacement uses second-precision actual freeze."
+  }
+}
