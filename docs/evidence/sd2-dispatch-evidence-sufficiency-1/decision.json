@@ -1,0 +1,112 @@
+{
+  "checkpointObjective": "Complete one bounded local dispatch-evidence sufficiency decision with independent review; do not repeat completed work",
+  "localObjectiveStatus": "COMPLETE_ONLY_AT_MATCHING_INDEPENDENT_PASS_RECEIPT",
+  "evidenceDecision": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+  "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+  "conclusion": "The selected saved packet does not establish complete historical dispatch visibility or an exact never-dispatched exclusion proof for any target. Retain all397 holds and all272 quarantines. End this checkpoint without further acquisition or a repair loop.",
+  "evidenceAssessment": [
+    {
+      "id": "completed-events-only",
+      "reference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/source-call-audit.json",
+        "sha256": "fc3870655938cb3fc1f63eb062706479f5a81cf9dda7db1cdba65a1b9b73145a",
+        "pointer": "/doesNotProveNoUnloggedInFlightDispatch"
+      },
+      "observation": true,
+      "implication": "64 completed-event records are a floor, not a complete invocation ledger; absence cannot clear a target."
+    },
+    {
+      "id": "bounded-trace-prefix",
+      "reference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+        "sha256": "a9da9440f85dcfa83b44f9773ad3f26051e1567b3a90ecac4bfa5249a2fb218e",
+        "pointer": "/traceBinding"
+      },
+      "observation": "Receipt binds a completed-line prefix and expressly limits visibility to item_completed events.",
+      "implication": "A prefix digest and event hashes prove integrity of the observed metadata, not absence of queued/in-flight effects. The raw trace was not reopened."
+    },
+    {
+      "id": "frontier-uncertainty",
+      "reference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json",
+        "sha256": "a631b0c4d47db849bd7bcca05b60717db2dfc1cfcce9905afda1187a0d505605",
+        "pointer": "/uncertainFrontierReservations"
+      },
+      "observation": "Four reservations remain uncertain; conservative explicit-call reservation is68.",
+      "implication": "No invented dispatch times, exact attempts or HTTP totals; missing response bodies cannot establish non-dispatch."
+    },
+    {
+      "id": "import-not-original-journal",
+      "reference": {
+        "path": "docs/evidence/sd2-control-repair-1/historical-import.json",
+        "sha256": "959285a7b19c800943dfd87e7d3d20f1462d6ffe39abe913c6867d5694d305e2",
+        "pointer": "/exactAttemptsEstablished"
+      },
+      "observation": false,
+      "implication": "The later import has64 completions and4 frontier reservations. It adds no contemporaneous complete pre-dispatch accounting."
+    },
+    {
+      "id": "conditional72",
+      "reference": {
+        "path": "docs/evidence/sd2-control-repair-1/summary.json",
+        "sha256": "0e43b7d1b9312e768e647f573eaab7b405846f92650eff48711a684236a3cd69",
+        "pointer": "/proofLimit"
+      },
+      "observation": "Saved completed-event metadata and reconstructed await frontiers only.",
+      "implication": "The72 theoretical expanded targets are conditional controller nonreachability, not a cleared queue. Do not recompute or execute that queue."
+    },
+    {
+      "id": "synthetic-only-contract",
+      "reference": {
+        "path": "docs/evidence/sd2-control-repair-1/contract.json",
+        "sha256": "04a8030b5e76e288943f96b335c142790893e44aabd09d483906f043a913fa52",
+        "pointer": "/mode"
+      },
+      "observation": "synthetic-only",
+      "implication": "Later successful synthetic controls cannot retroactively prove the original history or establish non-bypassable live integration."
+    },
+    {
+      "id": "external-receipt-limits",
+      "reference": {
+        "path": "docs/evidence/sd2-control-repair-1/review.json",
+        "sha256": "c6c354650453ec8b03889047a755fd0137c16eb0147c389e2c8ac13ddda97951",
+        "pointer": "/controlAssessment"
+      },
+      "observation": "Trusted independent current-head custody remains prerequisite; hardware power-loss and hostile-administrator resistance are outside the synthetic evidence.",
+      "implication": "No future live-source safety clearance follows from the synthetic PASS."
+    }
+  ],
+  "proofNeededBeforeAnyFutureClearance": [
+    "Trustworthy complete contemporaneous dispatch accounting covering all relevant invocation paths and the full selected interval, including queued/in-flight/cancelled and native metadata/content calls.",
+    "Independent integrity/completeness and custody evidence for that accounting, with exact target/locator/tool bindings and no unexplained gaps.",
+    "Independently reviewed exact target-specific exclusion proof plus separately selected scope and every original authority/safety/privacy/native/accepted-use gate."
+  ],
+  "scopeLimit": "This is a sufficiency judgment about the finite pinned saved packet. It neither proves that no other evidence exists nor authorizes searching raw traces, provider systems or sources. No global impossibility claim.",
+  "newEvidenceEstablished": "No new complete historical dispatch evidence is established by the selected packet. This checkpoint records a terminal sufficiency decision; it does not reproduce old reconciliation or synthetic tests.",
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "otherHolds": 125,
+  "clearedForAcquisition": 0,
+  "observedCompletedCalls": 64,
+  "frontierReservations": 4,
+  "conservativeExplicitCalls": 68,
+  "theoreticalUnusedExpandedTargets": 72,
+  "exactAttempts": "NOT_ESTABLISHED",
+  "underlyingHttpRequests": "UNMEASURED",
+  "originalSourceExecution": "FAIL",
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextOwner": "Codex evidence/governance owner and independent reviewer",
+  "nextTrigger": "Only genuinely new trustworthy dispatch evidence under separate bounded selection, or a separately selected SD2 acceptance-readiness decision under original gates",
+  "nextAction": "Keep all holds. Do not repeat this insufficiency decision merely on a new session. Any later SD2 readiness proposal may retain explicit unknowns but cannot accept the failed execution or bypass existing acceptance/build/human-review/publication gates.",
+  "actualModelAndEffort": "NOT_EXPOSED_TO_SESSION; recommended High; no model-menu or effort claim made",
+  "sufficiencyReasoning": {
+    "observation": "The pinned audit exposes completed events and explicitly disclaims complete queued/in-flight invocation visibility.",
+    "logicalCounterexample": "An unobserved target with no dispatch and an unobserved target whose dispatch was cancelled before a completed event can both be consistent with completion-only absence. This is a logical ambiguity, not a claim that an additional dispatch occurred.",
+    "conditionalFrontierLimit": "Recorded await barriers may support conditional nonreachability under the reconstructed controller history. The saved packet does not establish that this history captures every invocation, so the condition cannot be dropped.",
+    "result": "Absent independent complete dispatch evidence, the selected metadata cannot distinguish those possibilities well enough to clear an exact target. Retain all holds. No new synthetic experiment or old reconciliation was run."
+  }
+}

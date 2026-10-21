@@ -353,6 +353,29 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-DISPATCH-SUFFICIENCY-1-START -->
+# SD2 dispatch-evidence sufficiency checkpoint
+
+Sole progress pointer:student-plan section9. Current packet:
+docs/evidence/sd2-dispatch-evidence-sufficiency-1/SESSION_CLOSE.md and NEXT_SESSION.md.
+Local checkpoint status only matching manifest/PASS review/direct-child receipt.
+Terminal saved-packet decision:complete dispatch proof NOT ESTABLISHED;397held,
+272quarantined,0cleared. Original source execution FAIL remains permanent.
+No source requests, raw trace/body reads, old reconciliation/comparison/synthetic
+replays or new controls.64completed+4uncertain=68conservative explicit calls;
+72theoretical targets are not cleared. No global claim about other evidence stores.
+Carry13original items/14gates/4prior dispositions exactly; original owners/triggers/
+paths/actions remain. Exactbuild/fresh-main, privacy/native/fact/human/Kelsey-Jaycee,
+custody/preservation/recovery/permissions/student/publication/M1/SD5/effect gates remain.
+Before new paths at matching clean receipt run:
+python3 docs/evidence/sd2-dispatch-evidence-sufficiency-1/verify.py --review-bound
+This checks immutable prior receipt and clean entry; never replay old context checks.
+End this checkpoint at evidence limit. Do not repeat without genuinely new selected
+evidence. A later SD2 readiness assessment needs separate selection and original
+canonical gates; explicit unknowns are allowed, historical failure is not accepted.
+No install/source/workbook/app/config/CI/canonical change, remoteGit/deployment/contact/
+monitoring orSD3. Never initialize/reset/replay. Stop beforeSD3. Next effort:High.
+<!-- SD2-DISPATCH-SUFFICIENCY-1-END -->
 <!-- SD2-CONTROL-REPAIR-CLOSEOUT-START -->
 # SD2 repair session closed — PASS for local objective
 

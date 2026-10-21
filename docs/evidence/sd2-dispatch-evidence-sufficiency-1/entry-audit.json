@@ -1,0 +1,38 @@
+{
+  "entryCommit": "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4",
+  "cleanStatus": "",
+  "branch": "codex/plan-student-data-maintenance",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-control-repair-closeout/verify.py",
+    "--review-bound"
+  ],
+  "startedAt": "2026-10-21T00:10:54.629649+00:00",
+  "completedAt": "2026-10-21T00:10:56.728156+00:00",
+  "exitCode": 0,
+  "result": {
+    "sessionStatus": "PASS",
+    "scope": "Completed local SD2 repair and session continuity only",
+    "reviewBound": true,
+    "protectedPreEntryFiles": 2986,
+    "appendHistories": 3,
+    "carriedItems": 13,
+    "originalGates": 14,
+    "additionalDispositions": 4,
+    "priorReviewTasksComplete": true,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "exactUnusedProof": "NOT_ESTABLISHED",
+    "clearedForAcquisition": 0,
+    "sourceRequestsDuringWrap": 0,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "exactBuildGate": "BLOCKED_EPERM",
+    "freshMainTarget": "UNVERIFIED",
+    "SD3Started": false
+  },
+  "newPacketCreatedAfterVerification": true
+}
