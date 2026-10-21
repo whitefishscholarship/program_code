@@ -36,3 +36,5 @@ test), activation, state ref creation/writes, reviewer removal, branch protectio
 paid effect or credential expansion. Actual suppression/inbox proof remainsM4.
 
 Current validation/provisioning/delivery evidence is under m1-approved-setup/.
+
+User amendment: “Use existing RESEND name”; only current secret reference changes, historical approved proposal stays unchanged. Current exact supported build and restricted-key metadata pass; packet SESSION_CLOSE.md names final gates and limits.

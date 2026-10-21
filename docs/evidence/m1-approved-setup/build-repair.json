@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-21T20:07:18.905087+00:00",
+  "cause": "Agent-created node_modules symlink points outside Turbopack filesystem root",
+  "owner": "Codex",
+  "repair": "Replace only agent-created ignored symlink with byte-equivalent local copy of existing installed dependencies; no install/network/package/lockfile/build-flag or application-config change",
+  "originalFailedReceipt": "docs/evidence/m1-approved-setup/failed-build-symlink/build.json",
+  "result": "repaired",
+  "completedAt": "2026-10-21T20:08:19.705932+00:00",
+  "dependencyEntriesCompared": 25265,
+  "dependencyContentManifestSha256": "fb1a0e98dac763164811287ca3949cbed89ca6202b7e444dfe4a0dde68f0c493",
+  "allEntriesEqual": true,
+  "rootDependencySymlinkRemoved": true,
+  "packageInstallationPerformed": false
+}

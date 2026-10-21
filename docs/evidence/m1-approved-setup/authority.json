@@ -30,5 +30,13 @@
     "paid action",
     "SD3"
   ],
-  "keyCustody": "Kelsey creates and transfers new key directly into GitHub secret; agent never reads key value"
+  "keyCustody": "Kelsey creates and transfers new key directly into GitHub secret; agent never reads key value",
+  "amendments": [
+    {
+      "recordedAt": "2026-10-21T20:53:20.626021+00:00",
+      "userInstruction": "Use existing RESEND name",
+      "scope": "Use RESEND instead of SCHOLARSHIP_MONITOR_RESEND_API_KEY in the same scholarship-season-monitor GitHub environment. No credential-value access, permission, sender, recipient, or disabled-setting change.",
+      "historicalProposalPreserved": true
+    }
+  ]
 }

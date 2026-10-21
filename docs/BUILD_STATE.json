@@ -1517,7 +1517,7 @@
   },
   "m1Setup": {
     "contractId": "m1-approved-setup-v1",
-    "status": "blocked-user-credential-and-supported-build",
+    "status": "setup-verified-pending-final-review-and-delivery",
     "authorityPath": "docs/evidence/m1-approved-setup/authority.json",
     "proposalContractPath": "docs/evidence/season-monitor-m1-change-proposal/contract.json",
     "setupEvidencePath": "docs/evidence/m1-approved-setup/",
@@ -1526,7 +1526,7 @@
     "from": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>",
     "to": "kelsey@waypointfranchise.com",
     "environment": "scholarship-season-monitor",
-    "secretName": "SCHOLARSHIP_MONITOR_RESEND_API_KEY",
+    "secretName": "RESEND",
     "stateBranch": "codex/scholarship-monitor-state",
     "M2Started": false,
     "sourceChecksAuthorized": false,
