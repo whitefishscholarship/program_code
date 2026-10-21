@@ -350,6 +350,24 @@ never a demand to finish an entire portal within one context window.
 ## 9. Progress and session handoff
 
 This section is the sole project progress pointer; CURRENT_HANDOFF links here.
+
+<!-- REV22-START -->
+# Revision22 held SD2 policy implementation
+
+Plan revision: 22
+Status: implementation and required checks complete; final review/attestation/delivery pending.
+Authority/evidence: docs/evidence/PLAN-REV22.md. Existing contract is now implemented
+with blocked maintenance state; research/fullSD2 completion false, facts/mappings0,
+397holds/272quarantines/0cleared, sourceFAIL permanent, SD3false.
+Owner Codex governance/delivery; next trigger final verified candidate. Required matrix and supported exact build PASS (plan has3expected pre-attestation
+errors only). Next: final independent review, complete
+verified-main manifest, direct-child attestation, authorized PR/CI/Preview/merge/
+Production checks. No fact or closure acceptance follows automatically.
+Original open-items owners/triggers remain authoritative at
+docs/evidence/sd2-access-session-closeout/open-items.json. No source/workbook or
+reconciliation/readiness repeat. Prior handoffs remain historical below.
+
+<!-- REV22-END -->
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 

@@ -481,3 +481,11 @@ all other behavior, and submit null for the hidden legacy field. Review committe
 prospective policy before runtime edits; preserve historical schema/tests/reviews,
 full validation, fresh final review, exact attestation and live verification. The
 session live-publish preference applies. Preserve the required timer M1 handoff.
+
+## Revision22 SD2 held research boundary
+
+PLAN-REV22.md supplies direct informed governance delivery authority. The new
+sd2ResearchClosure record is initially blocked; this amendment accepts no facts,
+identities or closure. Preserve all397holds/272quarantines, permanent source FAIL,
+0acceptedfacts/mappings and SD3false. Follow canonical section17 and section14;
+a later exact reviewed/delivered closure is distinct from this policy amendment.

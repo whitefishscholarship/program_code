@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 21
+Plan revision: 22
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -2041,3 +2041,32 @@ The required timer M1 handoff remains next. Preserve local UX1 closeout11f5cad a
 its carried437-record inventory; carry this delivered refinement into the timer's
 fresh-main continuation before any future timer code/release. Do not deploy an old
 pre-refinement tree. Codex owns the post-delivery handoff and existing setup unknowns.
+
+## 17. Revision22 — held SD2 research accounting
+
+Revision22 authorizes only the existing14path governance implementation under
+PLAN-REV22.md. The maintenance record sd2ResearchClosure starts blocked-external;
+researchDeliverableComplete/fullSD2Complete remain false. All411named inputs and
+7547original fields retain their immutable held/proposed accounting. 397source
+targets remain held,272quarantined,0cleared; original execution FAIL is permanent.
+Accepted facts/mappings remain0, active/next stage pointers null, SD3Started false.
+
+Unknown is a legitimate research outcome, never a false eligibility fact. Original
+G1-G14, native/privacy/custody/human/student/publication/M1/SD5 owners and triggers
+remain in the preserved attention path. No second factual registry or stage array.
+Amendment acceptance does not accept research closure or source/fact truth.
+
+Only after Revision22 is independently accepted, attested and delivered may a
+separate exact closure candidate establish accepted-held-research under all original
+gates, same-scope fresh authenticated main/target and supported exact build, complete
+required matrix, independent review and normal canonical attestation/delivery.
+This revision implements the guarded later transition now, without activating it.
+Completion is derived only from a separate exact closure proof after its canonical
+attestation is delivered; raw completion booleans are never authority. No further
+policy-amendment loop is required. No implicit SD3.
+
+Direct user authority covers this amendment's branch push/PR/Preview/merge/Production
+on the exact existing Whitefish target, not runtime/configuration/source/workbook
+changes. Preserve accepted P0-P9 and every historical grant/attestation. Full manifest
+covers verified-main-to-candidate changes, including carried SD2 history. The direct
+child attestation changes only PLAN-REV22 manifest/review and remains tip until merge.

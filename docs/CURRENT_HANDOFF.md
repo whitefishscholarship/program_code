@@ -1,3 +1,18 @@
+# Revision22 held SD2 policy implementation
+
+Plan revision: 22
+Status: implementation and required checks complete; final review/attestation/delivery pending.
+Authority/evidence: docs/evidence/PLAN-REV22.md. Existing contract is now implemented
+with blocked maintenance state; research/fullSD2 completion false, facts/mappings0,
+397holds/272quarantines/0cleared, sourceFAIL permanent, SD3false.
+Owner Codex governance/delivery; next trigger final verified candidate. Required matrix and supported exact build PASS (plan has3expected pre-attestation
+errors only). Next: final independent review, complete
+verified-main manifest, direct-child attestation, authorized PR/CI/Preview/merge/
+Production checks. No fact or closure acceptance follows automatically.
+Original open-items owners/triggers remain authoritative at
+docs/evidence/sd2-access-session-closeout/open-items.json. No source/workbook or
+reconciliation/readiness repeat. Prior handoffs remain historical below.
+
 # SD2 closeout — access verified, closure still blocked
 
 Sole progress pointer: student-plan section9. Current closeout:
