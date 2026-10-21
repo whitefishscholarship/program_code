@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-10-21T03:16:52.928070+00:00",
+  "command": [
+    "npm",
+    "run",
+    "plan:check"
+  ],
+  "head": "fb60b73ffdf5a926d0cb6e377bf50ac0e0d313af",
+  "exitCode": 0,
+  "output": "Build-plan validation passed for 13 ordered stage contracts and the current machine-state transition.",
+  "scope": "post-attestation required check; source/fact/SD3 acceptance not implied"
+}

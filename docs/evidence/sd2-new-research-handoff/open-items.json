@@ -1,0 +1,51 @@
+{
+  "inheritedRegister": {
+    "path": "docs/evidence/sd2-new-research-handoff/previous-closeout/open-items.json",
+    "sha256": "d0c248f6172316336eca3afda328dfe86335c8168a525f9e814629a8bc265a05"
+  },
+  "inheritedContentUnchanged": true,
+  "items": [
+    {
+      "id": "new-policy-and-live-adapter",
+      "owner": "Codex next-session implementer and fresh independent policy/final reviewers",
+      "trigger": "This selected local continuation after packet verification",
+      "path": "amendment-spec.json; scope.json",
+      "nextAction": "Implement the exact amendment and real integration once; obtain required reviews/checks. No re-planning or source calls before gates."
+    },
+    {
+      "id": "amendment-delivery-effects",
+      "owner": "Kelsey selects exact effects; Codex owns delivery mechanics",
+      "trigger": "Before push/PR/Preview/merge/Production for the new amendment",
+      "path": "authority.md; NEXT_SESSION.md",
+      "nextAction": "Use explicit informed new-session authority if provided; otherwise finish local implementation/review and report release-only blocker. Never borrow Revision22/23/M1 effects."
+    },
+    {
+      "id": "source-safety-and-evidence",
+      "owner": "Codex integrator and independent source-safety reviewer",
+      "trigger": "Before real campaign dispatch",
+      "path": "proposed-plan-section.md",
+      "nextAction": "Verify safe structured output, exact target affinity, durable trusted receipts and no hidden dispatch/redirect; otherwise skip/stop held."
+    },
+    {
+      "id": "required-exact-build",
+      "owner": "Codex validator; supported execution context provider only if needed",
+      "trigger": "New implementation changes web validation/control inputs",
+      "path": "VALIDATION.md",
+      "nextAction": "Use exact required commands and current-input supported build proof. Never repeat known EPERM context, substitute flags, install or waive."
+    },
+    {
+      "id": "historical-holds-and-search",
+      "owner": "Codex continuity owner and original owners",
+      "trigger": "Every use of original research",
+      "path": "previous-closeout/open-items.json; local-metadata-search.json",
+      "nextAction": "Preserve original FAIL/397holds/272quarantines/0clearance; no repeated log search, reconciliation, delivery or readiness loops."
+    },
+    {
+      "id": "M1-and-later-effects",
+      "owner": "Original M1/SD3/SD4/SD5 owners",
+      "trigger": "Original separate selected effects only",
+      "path": "docs/BUILD_STATE.json; inherited attention register",
+      "nextAction": "Preserve Revision23 setup unchanged; do not activate monitoring or any later SD stage."
+    }
+  ]
+}

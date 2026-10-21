@@ -1,0 +1,140 @@
+{
+  "recordedAt": "2026-10-21T03:44:51.969830+00:00",
+  "status": "PASS_REVISION22_DELIVERED",
+  "scope": "Revision22 governance amendment delivery only",
+  "candidate": "bf0fc666f9956ce90bf74fef579e95ee9bb6c3fc",
+  "attestation": "fb60b73ffdf5a926d0cb6e377bf50ac0e0d313af",
+  "manifestSha256": "0cf95cd6bfd1bfa4a6a3085681bda8df838e0630a3289a0d8c61e59865f1f6da",
+  "independentReview": "accepted C0/H0/M0/L0; prior H1/H2 remediated; rejected evidence embedded immutable candidate",
+  "requiredAttestedPlanCheck": "PASS exit0",
+  "pr": "https://github.com/whitefishscholarship/program_code/pull/50",
+  "prCI": "SUCCESS",
+  "previewDeployment": "dpl_FJn9bDN4Y7xfDj5quYb7qB6gBQ9Y",
+  "previewProviderState": "READY exact attested head",
+  "previewHealth": "PASS HTTP200 exact attested commit/fresh nonce/capabilities; authorized600second deployment-only link immediately revoked",
+  "productionMerge": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+  "sourceExecution": "FAIL permanent",
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextOwner": "Codex governance author and independent reviewer; user selects separate closure scope",
+  "nextTrigger": "Direct selection of a separate exact held-research closure candidate under delivered Revision22",
+  "nextAction": "Use existing guarded closure contract and original gates; do not repeat planning/readiness/reconciliation/source work. Preserve all397holds/272quarantines, permanent sourceFAIL, zero facts/mappings, fullSD2incomplete and SD3false.",
+  "originalAttentionPath": "docs/evidence/sd2-access-session-closeout/open-items.json",
+  "evidence": [
+    {
+      "path": "/private/tmp/rev22-attested-plan-result.json",
+      "sha256": "1cc4845c83866524d633f567c5141804a0c7932d6f7c79cff0283458154b7d65"
+    },
+    {
+      "path": "/private/tmp/rev22-publication-start.json",
+      "sha256": "269449fd99547deb86ad554069e5c3f8f51ced0eddd22e3f741177f4779db062"
+    },
+    {
+      "path": "/private/tmp/rev22-pr-status.json",
+      "sha256": "9b7e9ee903dbc188e62b3ccf227edb1856869c51ac6a33caede7689253fbef20"
+    },
+    {
+      "path": "/private/tmp/rev22-preview-inspect.json",
+      "sha256": "21e97abaf0acdf279dd43421e7af70a5f5d41c8d153907db630f4e207316d145"
+    },
+    {
+      "path": "/private/tmp/rev22-unexpected-token-metadata.json",
+      "sha256": "a65b542392c8c8b58afcbbc45a11c42add60c71d35877832ea916a53d145e2fb"
+    },
+    {
+      "path": "/private/tmp/rev22-unexpected-token-remediation.json",
+      "sha256": "a0e23cb7ff1d81edbc8752d48fef63938fccdd32e8fb8d4a2ce9d4e8ba807ad4"
+    },
+    {
+      "path": "/private/tmp/rev22-preview-scoped-verification.json",
+      "sha256": "7deadbfa4c3bc04e8c2ecafa0219c17b433b77683a988cd83cea7eb98068f389"
+    },
+    {
+      "path": "/private/tmp/rev22-preview-health-verified.json",
+      "sha256": "4599168b5c7fbf091a3bef1cfd1933c25ab5396c155a920ce0ec9198747c6a80"
+    },
+    {
+      "path": "/private/tmp/rev22-merge.json",
+      "sha256": "4905e204fabf21d0846fef28e8e7608d2186a8cf8c919f0d812e5dbdb3adaa1c"
+    },
+    {
+      "path": "/private/tmp/rev22-production-inspect.json",
+      "sha256": "b1fadc6f108748952eaa5eaae85fa29cc803007ab25442d31e6297d57538e5be"
+    },
+    {
+      "path": "/private/tmp/rev22-production-verification.json",
+      "sha256": "8646bec9b8f1471cf70418d68cd44596533bc97946e5515fa1ae9be6be7d7576"
+    },
+    {
+      "path": "/private/tmp/rev22-main-ci-final.json",
+      "sha256": "509d5f776451c1c9984aac8d6d4a7efb7737ef646be693c8d9bf1a7a100f6dee"
+    },
+    {
+      "path": "/private/tmp/rev22-delivered-main-plan.json",
+      "sha256": "21eb9c112b9b19650fd9e1c9d493f58c0c3d7533f0216ddafba54f9e166502d3"
+    },
+    {
+      "path": "/private/tmp/rev22-delivered-main-plan.log",
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    }
+  ],
+  "previewTemporaryAccess": {
+    "authority": "User explicitly authorized scoped temporary link",
+    "ttlSeconds": 600,
+    "revocationConfirmed": true,
+    "secretPrintedOrSaved": false
+  },
+  "productionDeployment": "dpl_MpZoKnwfau2YvcjS7peJzQkBWHdW",
+  "productionProviderState": "READY",
+  "productionHealth": "PASS canonical hostname HTTP200, exact merge/deployment/fresh nonce, unchanged publication/capabilities; home200",
+  "mainCI": {
+    "status": "success",
+    "runId": 39539715962,
+    "url": "https://github.com/whitefishscholarship/program_code/actions/runs/39539715962",
+    "headSha": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "requiredSteps": [
+      {
+        "name": "Run npm run plan:check",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run typecheck",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm test",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run build",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "deliveredMainPlanCheck": {
+    "startedAt": "2026-10-21T03:39:15.326017+00:00",
+    "completedAt": "2026-10-21T03:41:32.476033+00:00",
+    "exitCode": 0,
+    "command": [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    "head": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+  },
+  "trackedCheckout": "CLEAN exact merged tree; historical manifest/review unchanged",
+  "authoritativeContract": "docs/evidence/sd2-held-closure-contract-1/CONTRACT.md",
+  "authoritativeState": "docs/BUILD_STATE.json#/sd2ResearchClosure",
+  "remainingOpenWork": "Separate research closure is unselected and incomplete; all inherited13items/14gates retain original owners/triggers in originalAttentionPath",
+  "pendingPRsOrDeploymentsForThisAmendment": 0,
+  "pendingAutomationsOrSourceRuns": 0
+}

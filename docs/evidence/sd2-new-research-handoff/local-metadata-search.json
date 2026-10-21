@@ -1,0 +1,107 @@
+{
+  "status": "BLOCKED",
+  "searchCompleted": true,
+  "observedAtUtc": "2026-10-21T21:35:22.260394+00:00",
+  "scope": "New local metadata-store search only; no reassessment of settled saved-packet sufficiency; no target clearance proposed",
+  "originalThreadId": "01a15a5a-258b-7e20-8e62-55b1084f890d",
+  "priorDecisionPath": "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-dispatch-evidence-sufficiency-1/decision.json",
+  "priorDecisionSha256": "4abca7e912b4ded1e8af9b5396629cbaa92cfeeb294da956da9076588a7c2d07",
+  "reviewedPrefixHashMatches": true,
+  "originalTrace": {
+    "path": "/Users/kelseystuart/.codex/sessions/2026/10/20/rollout-2026-10-20T11-26-59-01a15a5a-258b-7e20-8e62-55b1084f890d.jsonl",
+    "lines": 1934,
+    "bytes": 10415179,
+    "sha256": "314bab97271707f9d26b02aa094e461be3bd38973255d2cb0216460f0b0aae8d",
+    "mcpItemsThroughReviewedPrefix": 64,
+    "laterMcpMetadata": [
+      {
+        "id": "exec-8421c3f2-6a9b-490b-99f0-b2d9964ecd18",
+        "server": "codex_app",
+        "tool": "open_in_codex",
+        "status": "completed",
+        "line": 1622,
+        "startedAtMs": 1792524554708,
+        "completedAtMs": 1792524554797
+      },
+      {
+        "id": "exec-bebc2c49-0c7e-4b0d-8034-d2faa6d68287",
+        "server": "codex_app",
+        "tool": "open_in_codex",
+        "status": "completed",
+        "line": 1925,
+        "startedAtMs": 1792534307098,
+        "completedAtMs": 1792534307144
+      }
+    ]
+  },
+  "historyDatabase": {
+    "path": "/Users/kelseystuart/.codex/thread_history_1.sqlite",
+    "mcpRows": 66,
+    "sameItemIdsAsTrace": true,
+    "projectionOrdinal": 1934,
+    "projectionByteOffset": 10415179,
+    "interpretation": "Projection of same rollout; no additional incomplete source invocation found"
+  },
+  "diagnosticLogs": {
+    "path": "/Users/kelseystuart/.codex/logs_2.sqlite",
+    "originalThreadRows": 1000,
+    "firstUtc": "2026-10-20T19:22:32+00:00",
+    "lastUtc": "2026-10-21T02:41:06+00:00",
+    "interpretation": "Original-thread retained logs start after both interrupted acquisition controllers; no complete historical dispatch coverage"
+  },
+  "desktopLogs": [
+    {
+      "path": "/Users/kelseystuart/Library/Logs/com.openai.codex/2026/10/20/codex-desktop-0c6b0ab5-7dbc-47fd-b1f2-710a28e398c9-21756-t1-i1-032246-0.log",
+      "sha256": "641fcf6809dcf8ff2afbfc4aa091a8188c044215d4a8789b2740b8c9d206200d",
+      "matchingThreadLinesInSelectedInterval": 0,
+      "dispatchMarkerLines": 0,
+      "methodCounts": {}
+    },
+    {
+      "path": "/Users/kelseystuart/Library/Logs/com.openai.codex/2026/10/20/codex-desktop-0c6b0ab5-7dbc-47fd-b1f2-710a28e398c9-21756-t0-i1-000014-0.log",
+      "sha256": "93a28f8e27563b5f036d32b9116f00b45d010abfa4e10191f2b98d557184b2e6",
+      "matchingThreadLinesInSelectedInterval": 303,
+      "dispatchMarkerLines": 0,
+      "methodCounts": {
+        "mcpServerStatus/list": 6
+      }
+    },
+    {
+      "path": "/Users/kelseystuart/Library/Logs/com.openai.codex/2026/10/20/codex-desktop-0c6b0ab5-7dbc-47fd-b1f2-710a28e398c9-21756-t0-i1-000014-1.log",
+      "sha256": "997ec0cdbc2d580f219fd6f265db6f6f884097ddfaf11f860116173f11d012bc",
+      "matchingThreadLinesInSelectedInterval": 0,
+      "dispatchMarkerLines": 0,
+      "methodCounts": {}
+    }
+  ],
+  "otherStores": {
+    "currentQueuedItemsForThread": 0,
+    "desktopTimelineLedgerRowsForThread": 0,
+    "currentQueueAbsenceIsNotHistoricalNonDispatchProof": true,
+    "stateDatabase": "Thread catalog and spawn metadata; no dispatch ledger table",
+    "loginLog": "Excluded: authentication log, no credential contents inspected"
+  },
+  "conclusion": "No new target-bound dispatch evidence found in the inspected local stores. Additional desktop diagnostic metadata exists, but no complete dispatch ledger or target exclusion proof was found. Stop this search; preserve settled decision.",
+  "limits": [
+    "Not a global claim about every possible file or uninspected external storage",
+    "Raw source bodies, tool result contents, messages, reasoning and credential contents were not inspected or exported; structured envelopes only",
+    "No absence of a record is treated as proof of non-dispatch",
+    "No target clearance proposed, so no clearance acceptance review initiated"
+  ],
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "cleared": 0,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "historicalSourceExecution": "FAIL_PERMANENT",
+  "SD3Started": false,
+  "owner": "Codex evidence/governance owner",
+  "nextTrigger": "Genuinely new independently preserved complete invocation evidence; no rerun of this search on unchanged stores",
+  "nextAction": "Retain all holds. Stop local search. Independently review any future exact target exclusion proof before clearance.",
+  "effects": {
+    "sourceRequests": 0,
+    "externalEffects": 0,
+    "canonicalFilesChanged": 0,
+    "localOutputOnly": true
+  }
+}

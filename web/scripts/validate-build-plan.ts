@@ -1,3 +1,4 @@
+import { validateNewAtRepo } from './sd2-new-observations-governance';
 import { validateHeldAtRepo, validateClosureProofAtRepo, type ClosureProof, type HeldState } from './sd2-held-closure-governance';
 import { validateIdentityRepairAtRepo } from './r4-identity-delivery';
 import { permitsLocalR3Preparation, validateR3CatalogPolicyAt, type R3CatalogPolicy } from './r3-catalog-governance';
@@ -1627,6 +1628,10 @@ if (state) {
       validateBoundAttestation(revision19.id, revision19.baselineCommit, revision19.manifestPath, revision19.reviewPath);
       revision19ContinuationValid = errors.length === startErrors;
     }
+  }
+  if (state.planRevision >= 24) {
+    const revision24=findCanonicalAttestation('PLAN-REV24','docs/evidence/PLAN-REV24-manifest.json','docs/reviews/PLAN-REV24.json');
+    validateNewAtRepo(repoRoot,state as unknown as Record<string,unknown>,revision24?.manifest.candidateCommit).forEach(fail);
   }
   if (state.planRevision >= 22) {
     const revision22 = findCanonicalAttestation('PLAN-REV22', 'docs/evidence/PLAN-REV22-manifest.json', 'docs/reviews/PLAN-REV22.json');
