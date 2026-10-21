@@ -156,7 +156,12 @@
     "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation failed with 1 error(s):\n- SD2 closure requires its own exact independent attestation\n",
     "rawSha256": "f5a21d691f1852ad742da9682e3c8f7dbc2f559a842405274de59e8019d06e0b"
   },
-  "freezeAt": "2026-10-21T03:56:20.806906+00:00",
+  "freezeAt": "2026-10-21T03:57:03+00:00",
   "reviewGate": "No attestation exists yet; exact independent final review and actual post-attestation plan0 required before publication.",
-  "deliveryVerification": "Use exact provider deployment/project/commit readiness and CI build/runtime trace; protected Preview health may remain an explicit access limit without new token grants. Canonical Production nonce/commit/capabilities verification is required after merge."
+  "deliveryVerification": "Use exact provider deployment/project/commit readiness and CI build/runtime trace; protected Preview health may remain an explicit access limit without new token grants. Canonical Production nonce/commit/capabilities verification is required after merge.",
+  "supersededFreezeObservation": {
+    "candidate": "d6e1069",
+    "recordedFreezeAt": "2026-10-21T03:56:20.806906+00:00",
+    "reason": "Subsecond observation exceeded Git second-precision commit timestamp; unreviewed candidate retained, replacement uses second-precision actual freeze."
+  }
 }
