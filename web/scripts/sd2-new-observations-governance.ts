@@ -40,7 +40,12 @@ export function validateNewAtRepo(root:string,current:Record<string,unknown>,can
  const changes=candidate?git('diff','--name-only',NEW_BASE,candidate).toString().split('\n'):[...git('diff','--name-only',NEW_BASE).toString().split('\n'),...git('ls-files','--others','--exclude-standard').toString().split('\n')];
  for(const p of changes.filter(Boolean))if(!NEW_ALLOW.includes(p)&&!packets.includes(p)&&!p.startsWith(NEW_DIR))errors.push('outside enabling scope '+p);
  // Any baseline path outside explicit allowance is immutable, including old controls/results.
- for(const p of git('ls-tree','-r','--name-only',NEW_BASE).toString().trim().split('\n'))if(!NEW_ALLOW.includes(p)&&!read(p).equals(git('show',`${NEW_BASE}:${p}`)))errors.push('protected baseline changed '+p);
+ const entries=(ref:string)=>new Map(git('ls-tree','-r','-z',ref).toString().split('\0').filter(Boolean).map(row=>{const [meta,p]=row.split('\t');return [p,meta];}));
+ const baseEntries=entries(NEW_BASE),candidateEntries=candidate?entries(candidate):null;
+ for(const [p,meta]of baseEntries){if(NEW_ALLOW.includes(p))continue;
+ if(candidateEntries){if(candidateEntries.get(p)!==meta)errors.push('protected baseline changed '+p);}
+ else {const file=path.join(root,p),st=fs.lstatSync(file);const raw=st.isSymbolicLink()?Buffer.from(fs.readlinkSync(file)):fs.readFileSync(file);const mode=st.isSymbolicLink()?'120000':(st.mode&0o111?'100755':'100644');const oid=createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${raw.length}\0`),raw])).digest('hex');if(`${mode} blob ${oid}`!==meta)errors.push('protected baseline changed '+p);}}
+
  const oldPkg=JSON.parse(git('show',`${NEW_BASE}:web/package.json`).toString());const pkg=JSON.parse(read('web/package.json').toString());
  if(pkg.scripts.test!==oldPkg.scripts.test+NEW_TEST)errors.push('focused test must append exactly once');pkg.scripts.test=oldPkg.scripts.test;if(!equal(pkg,oldPkg))errors.push('unrelated package change');
  for(const p of ['AGENTS.md','docs/DECISIONS.md','docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md']){let old=git('show',`${NEW_BASE}:${p}`).toString();if(p.endsWith('BUILD_PLAN.md'))old=old.replace('Plan revision: 23','Plan revision: 24');if(!read(p).toString().startsWith(old))errors.push('historical policy changed '+p);}

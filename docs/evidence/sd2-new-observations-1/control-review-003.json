@@ -1,0 +1,83 @@
+{
+  "outcome": "PASS",
+  "reviewType": "independent actual integration controls; pre-freeze enabling review, not canonical acceptance",
+  "reviewedAt": "2026-10-21T22:07:04.251288+00:00",
+  "reviewerWasAuthorOrEditor": false,
+  "files": [
+    {
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "sha256": "ea446c32e017a688a247e05551b22c4f30d2b528c0b54d42ac978e8ecd74b7d5"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/entry.py",
+      "sha256": "95c60200022f26b69f38414c8560558d3e99962d6b40592125d5f35835e238f6"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/test_adapter.py",
+      "sha256": "033b3e68c0d6dd1af3cef6210d07af1eb48788abaafce6380ee08cc769ee5e03"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/control-pins.json",
+      "sha256": "131d1818651452a37fea006ccabc96802615d3d03177a408c56cfab01f64ef8a"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/CONTROLS.md",
+      "sha256": "1cbefecf34fdf0f599bf12848070f486cafaea4b030aca7352fc3508d34ec62e"
+    }
+  ],
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "resolvedFindings": [
+    {
+      "id": "H1",
+      "disposition": "resolved",
+      "evidence": "Absolute store/custody pins, alias rejection, exclusive singleton registry CAS in shared Git common directory before provisioning; alternative-path and deleted-store re-provision tests pass."
+    },
+    {
+      "id": "H2",
+      "disposition": "resolved",
+      "evidence": "Separate externally retained HEAD_REF records sequence/content hash, checked on every audit and CAS-advanced after durable event/receipt/custody. Consistent rollback of both local directory trees and external cursor deletion fail closed."
+    },
+    {
+      "id": "H3",
+      "disposition": "resolved",
+      "evidence": "durable_object/durable_ref explicitly fsync loose objects, references, reflogs and containing directories before dispatch/advance; command-local Git loose-object/reference fsync with fsync method avoids ambient defaults. Durability failure test rejects before transport."
+    }
+  ],
+  "checks": {
+    "liveControls": "PASS",
+    "testCommand": "python3 docs/evidence/sd2-new-observations-1/test_adapter.py",
+    "testResult": "PASS:17 tests in57.738s",
+    "controlPins": "PASS:131d1818651452a37fea006ccabc96802615d3d03177a408c56cfab01f64ef8a",
+    "examined": [
+      "exclusive predispatch intent and external durability ordering",
+      "callback loss and interruption spent-state/no replay",
+      "restart duplicate exclusion and100-call budget",
+      "source-affinity/control/scope hash binding",
+      "scalar-only privacy projection and conservative unknowns",
+      "redirect/content boundary and private DNS refusal",
+      "final attestation/main/provider authentication gates inspected statically; preattestation actual gate refusal tested"
+    ],
+    "sourceProviderCalls": 0,
+    "realStoreProvisioning": 0,
+    "repositoryEdits": 0,
+    "historicalSyntheticSuiteReplayed": false
+  },
+  "scope": {
+    "targets": 100,
+    "savedInputs": 185,
+    "gapOccurrences": 853,
+    "uniqueGaps": 816,
+    "historicalHolds": 397,
+    "historicalQuarantines": 272,
+    "cleared": 0,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "SD3": false
+  },
+  "limits": "No real source/provider calls or real campaign provisioning. Provider authentication/real TLS inspected, not exercised live. PASS applies to exact listed controls only; frozen full-candidate canonical review, attestation, plan gates and authorized delivery remain required. No factual acceptance or execution authority is created by this review."
+}

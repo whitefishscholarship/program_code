@@ -1,0 +1,77 @@
+{
+  "outcome": "FAIL",
+  "reviewType": "independent actual integration controls, pre-freeze; not canonical acceptance",
+  "reviewedAt": "2026-10-21T22:02:53.881262+00:00",
+  "reviewerWasAuthorOrEditor": false,
+  "files": [
+    {
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "sha256": "299bf868cfa5322e957270c32d582d19ccf2fad945360afb7f0d65c6f1f5af33"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/entry.py",
+      "sha256": "95c60200022f26b69f38414c8560558d3e99962d6b40592125d5f35835e238f6"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/test_adapter.py",
+      "sha256": "6e83a54fe8cf0e8c74fda47e8316da813a334450e272879d8a15ecc895f8129e"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/control-pins.json",
+      "sha256": "48801c187bc57e896d694b13dbda0cd593f7c176b4528ce394a0a8b72cea0551"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/CONTROLS.md",
+      "sha256": "05824daa883bdfe0bed20f4f6f55aef4fe4c4dbe9301f65ac2e42b32b1c3cd0d"
+    }
+  ],
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "lines": [
+        191,
+        196,
+        286,
+        298
+      ],
+      "title": "Multiple independently provisioned stores replay the same campaign",
+      "detail": "Campaign validates only root/custody basenames; provision has no globally unique campaign registration or pinned absolute store/custody identity. Two arbitrary parents can each provision this campaign, obtain separate locks, and dispatch the same first target. Therefore one-call-per-target, concurrency1 and 100-total apply only per chosen directory pair, not to the authorized campaign.",
+      "evidence": "Offline mocked gates/transport reproduction created two temporary parent directories, called provision/run_next once each, and observed two transport invocations for sd2-read-0ecb63a87a257aeb15ea. No source/provider calls.",
+      "requiredRemediation": "Bind one immutable campaign store/custody identity and exclusive global registration before provisioning, and reject alternate store paths and concurrent duplicate campaign instances; independently test this boundary."
+    },
+    {
+      "id": "H2",
+      "severity": "high",
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "lines": [
+        198,
+        217,
+        238,
+        253
+      ],
+      "title": "Caller-selected local custody does not enforce externally anchored current cursor",
+      "detail": "Custody is an ordinary caller-selected directory written by the same process. audit derives its head only from the mutable local event/receipt/custody files, and run_next accepts this locally derived head. No trusted external last committed cursor or non-rollback append-only anchor is authenticated. A consistent rollback/loss of the entire local pair to a prior valid prefix therefore appears current and permits redispatch; matching file sequences catch partial loss only. This fails section19 current external append-only receipt plus last committed campaign cursor requirement.",
+      "requiredRemediation": "Use an independently retained append-only campaign head/cursor with authenticated identity, verify its exact current value under campaign exclusion, and fail closed on missing/rollback/replaced custody. Add rollback-of-consistent-prefix integration coverage."
+    }
+  ],
+  "checks": {
+    "existingIntegrationTests": "PASS: python3 docs/evidence/sd2-new-observations-1/test_adapter.py, 13 tests",
+    "duplicateCampaignOfflineReproduction": "FAIL: two mocked invocations of same target from two permitted directory pairs",
+    "sourceProviderCalls": 0,
+    "realStoreProvisioning": 0,
+    "repositoryEdits": 0,
+    "historicalSyntheticSuiteReplayed": false
+  },
+  "scopePreserved": {
+    "targets": 100,
+    "savedInputs": 185,
+    "gapOccurrences": 853,
+    "uniqueGaps": 816,
+    "historicalHolds": 397,
+    "historicalQuarantines": 272,
+    "cleared": 0
+  },
+  "limitations": "Provider/main authentication and real transport inspected statically and existing offline tests only; no live external calls authorized in this review."
+}

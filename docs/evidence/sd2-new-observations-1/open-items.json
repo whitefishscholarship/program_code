@@ -1,0 +1,48 @@
+{
+  "inheritedReferences": [
+    {
+      "path": "docs/evidence/sd2-new-research-handoff/previous-closeout/open-items.json",
+      "sha256": "d0c248f6172316336eca3afda328dfe86335c8168a525f9e814629a8bc265a05"
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/open-items.json",
+      "sha256": "1ee9f70fa2a6cdb0f8234b4d42e00665eac285c98f0822e2c0799516fdfb150d"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/manifest.json",
+      "sha256": "728b782ae5f78b6c00279fa57ab44f031ca9ffc129047ea5c1651a1281bd4688"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/review.json",
+      "sha256": "f7a0559cd9903cc5c26e0d171cc294c16af8f84278f1fb5c10bf1709bbe5e4e8"
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/journal.py",
+      "sha256": "64d0f6aa0b69c02dbcb29292b1468d9a845fdc4fc9f8a7ad3a5f3cf3060af800"
+    }
+  ],
+  "inheritedBindingsUnchanged": true,
+  "items": [
+    {
+      "id": "enabling-review-delivery",
+      "owner": "Codex implementation/delivery and fresh independent reviewer",
+      "trigger": "Current exact control implementation and required checks complete",
+      "path": "docs/evidence/PLAN-REV24.md; docs/evidence/sd2-new-observations-1/SESSION_CLOSE.md",
+      "nextAction": "Freeze full candidate, obtain final independent review, direct-child attestation, actual plan PASS, authorized delivery/CI/Preview/merge/Production verification. No research requests in enabling stage."
+    },
+    {
+      "id": "bounded-execution",
+      "owner": "Codex next execution stage",
+      "trigger": "Verified Revision24 delivered and independent actual live-control PASS plus current exact entry receipts",
+      "path": "docs/kickoffs/PLAN-REV24-SD2-NEW-OBSERVATIONS.md",
+      "nextAction": "Execute only frozen100target scope through actual adapter. Skip unsafe, retain all gaps and quarantined proposed values. Stop on any spent missing-result/control mismatch. No reset/retry or later stage."
+    },
+    {
+      "id": "later-acceptance-and-effects",
+      "owner": "Original named human reviewers and inherited effect owners",
+      "trigger": "Original separately selected exact evidence/effect triggers only",
+      "path": "docs/evidence/sd2-new-research-handoff/previous-closeout/open-items.json",
+      "nextAction": "Preserve every original approval and owner/trigger/path/action. No new acceptance, workbook/native/monitoring/SD3 authority follows."
+    }
+  ]
+}

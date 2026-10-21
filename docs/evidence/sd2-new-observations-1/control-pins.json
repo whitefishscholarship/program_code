@@ -1,0 +1,28 @@
+{
+  "campaignId": "SD2-NEW-OBSERVATIONS-1",
+  "policyCommit": "6c15e35f85ebb8e559f38ce9da4e32e80edc0173",
+  "scopeSha256": "d370162ae44777cd9737a83af4f76308ff0fbe737fc9e5e97b3dd416f901ac12",
+  "tool": "sd2.public-program-https-v1",
+  "files": [
+    {
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "sha256": "ea446c32e017a688a247e05551b22c4f30d2b528c0b54d42ac978e8ecd74b7d5"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/entry.py",
+      "sha256": "95c60200022f26b69f38414c8560558d3e99962d6b40592125d5f35835e238f6"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/test_adapter.py",
+      "sha256": "033b3e68c0d6dd1af3cef6210d07af1eb48788abaafce6380ee08cc769ee5e03"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/policy-review.json",
+      "sha256": "209458c92ab9ea27c8107b3cea83d5b0f28e423cf8a70c22f31a1230ec88a1c2"
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-1/journal.py",
+      "sha256": "64d0f6aa0b69c02dbcb29292b1468d9a845fdc4fc9f8a7ad3a5f3cf3060af800"
+    }
+  ]
+}

@@ -17,3 +17,24 @@ Retain historical FAIL397holds272quarantines0cleared and inherited owner/trigger
 register docs/evidence/sd2-new-research-handoff/previous-closeout/open-items.json.
 Codex owns bounded execution only after entry; original reviewers own later acceptance.
 Stop at100target accounting or any unresolved control receipt. Never reset/replay.
+
+## Exact operation after entry gates (next session only)
+
+Use existing dependencies and saved identity. Read CONTROLS.md and control-pins.json.
+Run `python3 docs/evidence/sd2-new-observations-1/entry.py <new-exclusive-metadata-directory>`
+to fetch main and create exact freshness receipts without scholarship-source requests.
+Never reuse an old metadata directory or change target/identity/protection/config.
+If already provisioned, instantiate Campaign on exactly the pinned STORE_ROOT and
+CUSTODY_ROOT; audit and continue only a complete immediate-result cursor. Do not call
+provision again. On first entry only, call provision with those exact constants and
+freshness.json; it creates one shared local singleton/cursor custody ref before store
+creation. If either ref/store exists inconsistently, stop held; never delete or repair.
+For each next ordered target call Campaign.run_next with the independently anchored
+current audit head; do not invoke any private function or substitute callback/transport.
+Audit after each returned durable result; stop immediately on exception, active intent,
+missing/stale receipt or cursor drift. Complete at most100ordered outcomes. All853gap
+occurrences remain represented; non-GPA/unproven fields remain held-unknown.
+Refresh only expired main/Production metadata as needed in a new exclusive directory;
+never change scope, pins, stored history, spent target or current custody ref by hand.
+Keep outputs and receipts append-only; bind all100target outcomes/counts/hashes in an
+execution-only closeout. No facts/mappings acceptance, workbook/native/monitoring/SD3.

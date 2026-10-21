@@ -1,0 +1,25 @@
+{
+  "historicalFindings": [
+    {
+      "id": "H1",
+      "owner": "Codex implementer",
+      "target": "adapter.py Campaign/provision",
+      "disposition": "Resolved with exact absolute store/custody plus atomic once-only shared Git singleton registry; alternate-root and store-loss tests deny re-provision."
+    },
+    {
+      "id": "H2",
+      "owner": "Codex implementer",
+      "target": "adapter.py _external_head/_append",
+      "disposition": "Resolved with shared external sequence/hash ref CAS before every request/result advance; consistent dual-directory rollback and missing-head tests fail closed."
+    },
+    {
+      "id": "H3",
+      "owner": "Codex implementer",
+      "target": "adapter.py durable_object/durable_ref",
+      "disposition": "Resolved with command-scoped loose-object/reference fsync method plus explicit object/ref/reflog/ancestor-directory fsync ordering before dispatch. Failure never permits request."
+    }
+  ],
+  "rejectedReview002Limit": "Diagnostic review captured overlapping remediation hashes; not a frozen candidate review/attestation. Original diagnostic preserved verbatim; final003 exact hashes authoritative.",
+  "sourceRequests": 0,
+  "realCampaignProvisioned": false
+}

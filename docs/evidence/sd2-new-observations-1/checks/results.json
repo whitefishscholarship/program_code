@@ -1,0 +1,78 @@
+{
+  "recordedAt": "2026-10-21T22:02:26.764186+00:00",
+  "checks": [
+    {
+      "command": "npm run plan:check",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-new-observations-1/checks/policy-plan.log",
+      "sha256": "2105a2935aa06c8d3786039dac96fd488ca013930d8f569ed879687fd915b759",
+      "bytes": 307,
+      "logCreatedAt": "2026-10-21T21:56:32.226646+00:00",
+      "lastLogWriteAt": "2026-10-21T21:58:40.936161+00:00",
+      "timeMeaning": "filesystem log-write timestamps, command statuses verified in execution tool receipt",
+      "limit": "policy plan has exactly own three pre-attestation errors",
+      "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/policy-plan.log.gz",
+      "storage": "lossless gzip; sha256/bytes describe original raw log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-new-observations-1/checks/typecheck.log",
+      "sha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "bytes": 39,
+      "logCreatedAt": "2026-10-21T22:00:16.869868+00:00",
+      "lastLogWriteAt": "2026-10-21T22:00:17.014720+00:00",
+      "timeMeaning": "filesystem log-write timestamps, command statuses verified in execution tool receipt",
+      "limit": null,
+      "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/typecheck.log.gz",
+      "storage": "lossless gzip; sha256/bytes describe original raw log"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-new-observations-1/checks/tests.log",
+      "sha256": "c129f156c69ecb3af8ec646e4a91268266256e7dd59d895546c7dfc3ff84ed9c",
+      "bytes": 20457,
+      "logCreatedAt": "2026-10-21T22:00:24.127828+00:00",
+      "lastLogWriteAt": "2026-10-21T22:01:15.261471+00:00",
+      "timeMeaning": "filesystem log-write timestamps, command statuses verified in execution tool receipt",
+      "limit": null,
+      "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/tests.log.gz",
+      "storage": "lossless gzip; sha256/bytes describe original raw log"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-new-observations-1/checks/build.log",
+      "sha256": "fb8bece2a79cd9688e3a29cf12a7d9497a0f773b3c415f914d21698f15e99b12",
+      "bytes": 1155,
+      "logCreatedAt": "2026-10-21T22:01:45.960062+00:00",
+      "lastLogWriteAt": "2026-10-21T22:01:59.635115+00:00",
+      "timeMeaning": "filesystem log-write timestamps, command statuses verified in execution tool receipt",
+      "limit": null,
+      "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/build.log.gz",
+      "storage": "lossless gzip; sha256/bytes describe original raw log"
+    },
+    {
+      "command": "python3 docs/evidence/sd2-new-observations-1/test_adapter.py",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-new-observations-1/checks/integration-tests.log",
+      "sha256": "189079e2e05e770a646609b4e206e0406221eb54e90dfb06fab34eed744542a2",
+      "bytes": 112,
+      "logCreatedAt": "2026-10-21T21:59:55.275325+00:00",
+      "lastLogWriteAt": "2026-10-21T22:00:57.966101+00:00",
+      "timeMeaning": "filesystem log-write timestamps, command statuses verified in execution tool receipt",
+      "limit": null
+    }
+  ],
+  "sourceRequests": 0,
+  "oldJournalUnchanged": true,
+  "finalIntegration": {
+    "command": "python3 docs/evidence/sd2-new-observations-1/test_adapter.py",
+    "exitCode": 0,
+    "tests": 17,
+    "logPath": "docs/evidence/sd2-new-observations-1/checks/integration-tests-durable.log",
+    "sha256": "5700abd6f38bc15231b312828e353dd3778bc6cc1fd31381a4d8a0c2004eb234",
+    "bytes": 117
+  }
+}
