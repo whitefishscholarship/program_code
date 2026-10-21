@@ -1,3 +1,25 @@
+# SD2 held-research accounting closure
+
+Plan revision: 22
+Current closure authority: docs/evidence/sd2-held-research-closure/authority.md.
+Canonical proof: docs/evidence/sd2-held-research-closure/manifest.json#/heldResearchProof;
+exact independent review: same directory/review.json. Completion is derived only
+when that canonical closure attestation is delivered on freshly verified main.
+Stored maintenance status/booleans intentionally remain blocked/false; they are
+not rewritten into accepted facts. This candidate accepts0facts/0mappings; source
+FAIL permanent,397held/272quarantined/0cleared,SD3false. Scope is research accounting
+under explicit holds only, not current scholarship truth or publication approval.
+
+Original attention owner/trigger/path/action bindings remain unchanged in
+sd2-access-session-closeout/open-items.json. No source/workbook/reset/replay/install/
+runtime/config/CI/monitoring or SD3. Codex owns exact closure review, attestation,
+required plan PASS, authorized Git delivery, CI and deployment verification.
+Later accepted use requires its own original evidence and separately selected effect.
+The section9 continuation pointer is the canonical proof above; historical progress
+text below is preserved verbatim, including prior now-completed Revision22 gates.
+
+---
+
 # Revision22 held SD2 policy implementation
 
 Plan revision: 22

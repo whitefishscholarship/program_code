@@ -1,3 +1,12 @@
+<!-- SD2-HELD-CLOSURE-NAVIGATION -->
+Section9 continuation reference:
+docs/evidence/sd2-held-research-closure/manifest.json#/heldResearchProof.
+Effective accounting status is derived from its exact canonical review, attestation
+and verified delivery. All historical section9 supplements below are preserved
+verbatim; the original open-items artifact retains every owner and trigger.
+This is a navigation reference, not a new factual ledger or Reviews queue.
+<!-- END-SD2-HELD-CLOSURE-NAVIGATION -->
+
 # Student scholarship data and maintenance plan
 
 Version: 1.3. Updated October 13, 2026, America/Denver: selected first SD2 local research checkpoint.
