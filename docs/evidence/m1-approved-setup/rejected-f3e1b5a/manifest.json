@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "stageId": "PLAN-REV23",
+  "createdAt": "2026-10-21T21:05:57.464401Z",
+  "baselineCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+  "candidateCommit": "f3e1b5ab4f514257ab4ed3dc98a3d4a9d70677ed",
+  "candidateTree": "9b6046c5eda10df76eb8aaea6e6590915c06b9a3",
+  "completeDiffSha256": "00e4c50bd5473a54e76e5fc667051f38181d552c93e3c2134550ce072412884f",
+  "completeDiffBytes": 1554842,
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "293c13b75582cae186dbf5de2f366857196a3d2e7516dc45731794f8c9e0fac1",
+      "bytes": 95043,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "bd9dfb1c77ee7a55f9840a37984a13f0453d271daa2a72e96141dff920f40622",
+      "bytes": 786125,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "change": "present",
+      "sha256": "f831ed85d1e472729bb43927c441768382a60caaa022536db4778115837a3df7",
+      "bytes": 56484,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+      "change": "present",
+      "sha256": "b4aedb65cc434cac6f5bc523e72bec1fb41049960b3b87ce1999354f6b28cc46",
+      "bytes": 28832,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+      "change": "present",
+      "sha256": "bd1fe2d915916d7383c0e4e21a478269351b4fc5c5d947fb71b89d57c072a7c2",
+      "bytes": 135814,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/PLAN-REV23.md",
+      "change": "present",
+      "sha256": "33b1297a875dffc2e4fe314050187d63a0cce584fe4520a9cb0b4929be2625a3",
+      "bytes": 2429,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/NEXT_SESSION.md",
+      "change": "present",
+      "sha256": "6bec04eab3083ca2591d3a1525051c8ceadb9a834c712c4ae435488e0baf0925",
+      "bytes": 360,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/SESSION_CLOSE.md",
+      "change": "present",
+      "sha256": "d65fc71eb59255ad1f96a0558ca98457de419bd1da0aee52538833da8a45bb79",
+      "bytes": 1877,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/authority.json",
+      "change": "present",
+      "sha256": "fb71ab4a1a40a53a5adf5127bc7c29c03c38eece6fb3b906a566a0bca02958f0",
+      "bytes": 1765,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/build-repair.json",
+      "change": "present",
+      "sha256": "824a9dc71ba1b7b6e4b4cf52162c427ed3842fe332ee7fe818400f1025e7a335",
+      "bytes": 789,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/build.json",
+      "change": "present",
+      "sha256": "ed1c446f729cbd95b43d62a083bc34c8cd380fabda2c4708d201f61acb2268e1",
+      "bytes": 32372,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/build.log",
+      "change": "present",
+      "sha256": "53c2d80214fae4cb9bf7971d3534a6c9d422e82026e08a526a495df0448b841d",
+      "bytes": 1155,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/checkpoint-status.json",
+      "change": "present",
+      "sha256": "e76bed2fa3e7e83d72fcf9f001b3d41720adc9a1c56f9cb2b977e266409412e9",
+      "bytes": 543,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/credential-followup.json",
+      "change": "present",
+      "sha256": "b70ec85a0e76b0374b8cb4c1929ef7a5f4bb1de1f4e67a949aeadb90be421818",
+      "bytes": 6107,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/failed-build-symlink/build.json",
+      "change": "present",
+      "sha256": "789d8db5fe73a5da2c0fdbaabda6c1d40312d7edae6d304c9a9df87591a84d7f",
+      "bytes": 32372,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/failed-build-symlink/build.log",
+      "change": "present",
+      "sha256": "52d6c763e076e89eff8663e4609fce473cbb09a6c02356480d5fb2d11e96c355",
+      "bytes": 3108,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/github-provisioning.json",
+      "change": "present",
+      "sha256": "6881270189d771334a6dbf37f956b4ffe66c2475d6c83bc6208dcca919a62ae3",
+      "bytes": 21395,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/policy-plan-initial.json",
+      "change": "present",
+      "sha256": "4ecfdd7a380a1a905551d9a889870c452f6a0006baee7482ce364e9780dd9d5d",
+      "bytes": 422,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/policy-plan-initial.log",
+      "change": "present",
+      "sha256": "04d6b66a432b7b65294941b4d9c9e5b433cec21fb609c1ac39ddfbc8a71242af",
+      "bytes": 373,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/policy-plan.json",
+      "change": "present",
+      "sha256": "c44dcfbe1d682dd87b293b0215cafd700b7b6f6a5c2c3ab3cbacfb8795001415",
+      "bytes": 353,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/policy-plan.log",
+      "change": "present",
+      "sha256": "49337ecc33681bc414325309320c4ffa213f743f8eba8dd384dcba378e14a2f3",
+      "bytes": 307,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/policy-review.json",
+      "change": "present",
+      "sha256": "ca603c867b776e79fab4f222459109e6ddb6aba09803c6f20bb88ef7d6a526c2",
+      "bytes": 1916,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/preservation.json",
+      "change": "present",
+      "sha256": "46d132accae8b7a8fcdac6b407bdef46cf64abc25f6bd3698c4a533a1e536ca4",
+      "bytes": 4161,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/resend-key-followup.json",
+      "change": "present",
+      "sha256": "c8dd6e8b607d9f1a19f849b2b1c7f775d783be0df38b6468b665afd5addc1461",
+      "bytes": 1007,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/run-supported-build.py",
+      "change": "present",
+      "sha256": "79855e376dc4ad95a415decf63144fe2d719851b5738ec0c456a8bbe46ccae7c",
+      "bytes": 1285,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/tests.json",
+      "change": "present",
+      "sha256": "324e5f8632b35d2cc63e8e20e21b856c6f2fab870700e519fd6e2b55aa83cffd",
+      "bytes": 306,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/tests.log",
+      "change": "present",
+      "sha256": "0acf62633acf2d5838bca0c7fb1ca8f27ed6002a86f2b4fef8ec492161d180d3",
+      "bytes": 20348,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/typecheck.json",
+      "change": "present",
+      "sha256": "24ee412b680a6a74e15ef09ea77009080889a9bb301ef8f7ebc64d9b8ce52026",
+      "bytes": 319,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/typecheck.log",
+      "change": "present",
+      "sha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "bytes": 39,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/vercel-preflight.json",
+      "change": "present",
+      "sha256": "b31b0e1aa7cbd5ce3fc85ded82d296cedf40d3ae9fccab8a78b2783e48858c4d",
+      "bytes": 2050,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/m1-approved-setup/verify.py",
+      "change": "present",
+      "sha256": "b685ac1557944b824d3aae34f796761d6637e471e9b763218b672dc7a57017ab",
+      "bytes": 3172,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/REVIEW.md",
+      "change": "present",
+      "sha256": "22c46ee3cc955e409e26a13975080af42d8ca13c64ac90a41593ae5a8b21b7d8",
+      "bytes": 10320,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/SESSION_CLOSE.md",
+      "change": "present",
+      "sha256": "05c54550188a7380a36f2cefc55c2ec08d0545a0a67e5f10599012008bc7b216",
+      "bytes": 2456,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/contract.json",
+      "change": "present",
+      "sha256": "cd3172fa8963edfdf6826068790b23803e1be1587a9fba58c3134ba1d72bcdb8",
+      "bytes": 5122,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/main-observation.json",
+      "change": "present",
+      "sha256": "2d10c2177c21a12acea8c80f678469c3e81ccb5ab8d67b2c3b42625df47aa6a4",
+      "bytes": 409,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/manifest.json",
+      "change": "present",
+      "sha256": "80406a2c9c914e37f36903e0d4482698c3c4c49df34800f44a276d3ff0e7363f",
+      "bytes": 2511,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/preservation.json",
+      "change": "present",
+      "sha256": "60b52ed5bf60cd51cfd7062d6e3acf5c8a3f39d85ccb5267bd7371b1853e473e",
+      "bytes": 8713,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/proposed/deployment-suppression.patch",
+      "change": "present",
+      "sha256": "a4686358c85ff1d821876cbafdf3bc7595655cdf72662e8dcaf62b33b0fbf0e9",
+      "bytes": 281,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/proposed/web-vercel.json",
+      "change": "present",
+      "sha256": "ff60caea396e33831400883528ac89cfa3313b7e6282d2e48b8e741056c5904c",
+      "bytes": 153,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/review.json",
+      "change": "present",
+      "sha256": "6a2fead6d732a5533d79ed94be458bf8bea84404cd071a02aca03bcb9905fdbc",
+      "bytes": 2032,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/validation.json",
+      "change": "present",
+      "sha256": "f8f56f2b0f4ce94aa83c42df7a7a405486415608bb8468eeb9bcf938b1f56c1e",
+      "bytes": 694,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/verify.py",
+      "change": "present",
+      "sha256": "59636e558f6849887d138948b9e0c5144bef525e67f2f28a55632d386a08f6aa",
+      "bytes": 4673,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/build-inventory.py",
+      "change": "present",
+      "sha256": "3a00adafd41b9a3c3db2e6a028779f8465be506ebc6403117ce411775c0fe434",
+      "bytes": 11458,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/inventory.json",
+      "change": "present",
+      "sha256": "87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8",
+      "bytes": 1226312,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/manifest.json",
+      "change": "present",
+      "sha256": "04d59ae97ebc054e0e051ec18f54f4e5d41f3862900791afcca12150cd2d1989",
+      "bytes": 5446,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/notification-preference.json",
+      "change": "present",
+      "sha256": "d2a61ecd390e2da5beced7cabecfa2e4fd4138a3c032014359c5999509e6a008",
+      "bytes": 2349,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/notification-recipient-validation.json",
+      "change": "present",
+      "sha256": "544e770c4147cd099a88bceff3f57ac01341af35c48541a504731e2bf9036b6c",
+      "bytes": 3548,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/notification-validation.json",
+      "change": "present",
+      "sha256": "4e96c66e71bb103d737bd5973dbb6d26937f170eba2297a6fecb45cac6c43769",
+      "bytes": 3256,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/review.json",
+      "change": "present",
+      "sha256": "010408bef9ec0098cb1b46621f73c3eecc7aeacc271f1a90afb2376a8bb96ff2",
+      "bytes": 2702,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/setup.json",
+      "change": "present",
+      "sha256": "30dbeee6971023e9bd42ebad08ec7cfa90b4736631b7ecfcdd61d2143173882e",
+      "bytes": 20270,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/validation.json",
+      "change": "present",
+      "sha256": "836ec3476f80bf5c9e77f7dab426f6852a4c6eef024ca9c7d2b8cd9cd46658df",
+      "bytes": 6478,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-plan/manifest.json",
+      "change": "present",
+      "sha256": "971062df0136748ae8ca080af780143bcb1bd4750fb60d30627f0a411b211eb9",
+      "bytes": 3813,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/season-monitor-plan/review.json",
+      "change": "present",
+      "sha256": "6fcf20ac357bd7c9e1f7ea57c3734ec24b08a88111695b6ad9bad98a85521d85",
+      "bytes": 2665,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/kickoffs/M1-APPROVED-SETUP.md",
+      "change": "present",
+      "sha256": "b5a9564abb10a9b2f2a9f11a5f977aafe4a63495e298b46063c3fb3906dac372",
+      "bytes": 629,
+      "mode": "100644"
+    },
+    {
+      "path": "web/vercel.json",
+      "change": "present",
+      "sha256": "ff60caea396e33831400883528ac89cfa3313b7e6282d2e48b8e741056c5904c",
+      "bytes": 153,
+      "mode": "100644"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "candidateCommit": "f3e1b5ab4f514257ab4ed3dc98a3d4a9d70677ed",
+  "reviewer": "/root/m1_final_candidate_review",
+  "id": "M1",
+  "severity": "medium",
+  "finding": "CURRENT_HANDOFF lines7-9 incorrectly say supported build and credential pending; may route repeat credential work. Correct current header and freeze replacement for independent recheck.",
+  "disposition": {
+    "owner": "Codex",
+    "target": "replacement candidate before acceptance",
+    "rationale": "Align authoritative entry with verified setup receipts; preserve historical rejected candidate and full manifest."
+  }
+}
