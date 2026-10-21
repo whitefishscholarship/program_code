@@ -1,0 +1,13 @@
+diff --git a/web/vercel.json b/web/vercel.json
+new file mode 100644
+--- /dev/null
++++ b/web/vercel.json
+@@ -0,0 +1,8 @@
++{
++  "$schema": "https://openapi.vercel.sh/vercel.json",
++  "git": {
++    "deploymentEnabled": {
++      "codex/scholarship-monitor-state": false
++    }
++  }
++}

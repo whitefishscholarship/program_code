@@ -1,0 +1,26 @@
+{
+  "observedAt": "2026-10-21T20:53:49.469076+00:00",
+  "method": "read-only native Chrome accessibility on existing signed-in Waypoint Resend key detail",
+  "keyId": "f6a3c240-317d-482d-bbf8-0766a941e5be",
+  "name": "whitefish-season-alerts",
+  "permission": "Sending access",
+  "domain": "All domains",
+  "totalUses": 0,
+  "lastUsed": "No activity",
+  "result": "BLOCKED_DOMAIN_SCOPE_MISMATCH",
+  "requiredDomain": "mail.waypointfranchise.com",
+  "secretValueRead": false,
+  "nextOwner": "Kelsey",
+  "nextAction": "Restrict credential to approved domain; if replacement necessary, enter directly into existing RESEND environment secret; no send.",
+  "followup": {
+    "observedAt": "2026-10-21T21:05:44.976215+00:00",
+    "domain": "mail.waypointfranchise.com",
+    "domainId": "bfb1391e-08ca-4207-b13b-e0393865d929",
+    "permission": "Sending access",
+    "totalUses": 0,
+    "lastUsed": "No activity",
+    "keyIdUnchanged": true,
+    "result": "PASS",
+    "userConfirmation": "domain restricted"
+  }
+}

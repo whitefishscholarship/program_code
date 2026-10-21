@@ -846,3 +846,13 @@ outcomes can complete accounting only; no fact/identity acceptance. Repeating so
 or readiness loops cannot cure historical dispatch gaps. Preserve failed execution,
 all holds/owners/triggers and historical attestations. No SD3. Rollback requires a
 later reviewed governance amendment, never historical rewrite.
+
+
+## October21,2026 — Revision23 approved M1 setup/configuration release
+
+Kelsey approved the exact M1 proposal including credential provisioning and Git/Vercel
+Preview/Production effects. Record this bounded authority through a new amendment
+and additive M1 setup record, preserving all prior records and null stage pointers.
+Apply only the exact state-branch exclusion after prospective policy review. New
+Resend credential remains user-created/directly entered; existing full-access key
+is untouched. M2/source/send/state-ref/activation andSD3 stay off.

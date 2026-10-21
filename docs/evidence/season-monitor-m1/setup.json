@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "stepId": "M1",
+  "status": "inventory-prepared-setup-gates-incomplete",
+  "recordedAt": "2026-09-15T20:29:02.750328+00:00",
+  "timestampMeaning": "Evidence consolidation after observations; not invented per-call timestamps",
+  "authority": {
+    "userInstruction": "Resume `codex/scholarship-season-monitor-plan` at `8b8a1d0`. Follow CURRENT_HANDOFF and SCHOLARSHIP_SEASON_MONITOR_PLAN.md; begin M1 inventory and setup.",
+    "date": "2026-09-15",
+    "scope": "M1 saved-input inventory, read-only existing platform setup checks, local configuration/cost proposals, verification and independent local checkpoint review",
+    "M2": false,
+    "publicScholarshipReads": false,
+    "sourceWrites": false,
+    "configurationChanges": false,
+    "remoteWrites": false,
+    "notifications": false,
+    "activation": false
+  },
+  "m0Verification": {
+    "reviewPath": "docs/evidence/season-monitor-plan/review.json",
+    "outcome": "PASS",
+    "candidate": "527488a57a47cc932c26b8302d2c45952525d016",
+    "manifestSha256": "971062df0136748ae8ca080af780143bcb1bd4750fb60d30627f0a411b211eb9",
+    "candidateBlobsMatched": 22
+  },
+  "inventory": {
+    "path": "docs/evidence/season-monitor-m1/inventory.json",
+    "sha256": "87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8",
+    "counts": {
+      "records": 437,
+      "catalogAwards": 411,
+      "researchLeads": 26,
+      "catalogSourcesAccountedFor": 436,
+      "portalsPreserved": 21,
+      "applicationGroupsPreserved": 4,
+      "routeCounts": {
+        "manual_known_block": 1,
+        "manual_separate_followup": 2,
+        "manual_source_review": 18,
+        "public_signal_candidate": 416
+      },
+      "excluded": 0,
+      "confirmedDuplicateChildMerges": 0,
+      "leadRecordsWithCandidateAwardOrPortalOverlap": 4,
+      "uniqueRegisteredUrls": 273,
+      "uniqueScheduledCandidateUrls": 242,
+      "uniqueScheduledCandidateHosts": 133,
+      "sharedFetchUrls": 36,
+      "sourceCallsPerformed": 0,
+      "monitorSuccessfulChecks": 0
+    },
+    "reproduce": "python3 docs/evidence/season-monitor-m1/build-inventory.py --check"
+  },
+  "platformObservations": [
+    {
+      "surface": "Git SSH",
+      "command": "git ls-remote origin refs/heads/main refs/heads/codex/scholarship-monitor-state",
+      "observed": "Sandbox DNS failed; network-enabled retry reached GitHub but returned Repository not found",
+      "conclusion": "SSH transport unavailable; no remote URL or credentials changed"
+    },
+    {
+      "surface": "GitHub connector",
+      "operation": "get_repo whitefishscholarship/program_code",
+      "observed": "404; connector profile is a different GitHub account",
+      "conclusion": "Use authenticated local Whitefish CLI for read-only metadata; connector access not inferred"
+    },
+    {
+      "surface": "GitHub CLI",
+      "command": "gh api user --jq {login,id}",
+      "observed": {
+        "login": "whitefishscholarship",
+        "id": 266880911
+      }
+    },
+    {
+      "surface": "GitHub repository",
+      "command": "gh api repos/whitefishscholarship/program_code (minimal metadata projection)",
+      "observed": {
+        "id": 1177349487,
+        "full_name": "whitefishscholarship/program_code",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false,
+        "disabled": false,
+        "permissions": {
+          "admin": true,
+          "maintain": true,
+          "pull": true,
+          "push": true,
+          "triage": true
+        }
+      }
+    },
+    {
+      "surface": "GitHub main",
+      "command": "gh api repos/whitefishscholarship/program_code/git/ref/heads/main",
+      "observedSha": "aae973238bed8651c3404b17cd51c1385f457075",
+      "localOriginMainMatches": true,
+      "conclusion": "Current default-branch identity verified through authenticated API; no fresh application-health claim"
+    },
+    {
+      "surface": "state branch",
+      "command": "gh api repos/whitefishscholarship/program_code/git/ref/heads/codex/scholarship-monitor-state",
+      "observed": "404; complete paginated branch list also lacks branch",
+      "branchCreated": false
+    },
+    {
+      "surface": "Actions repository settings",
+      "command": "gh api repos/whitefishscholarship/program_code/actions/permissions",
+      "observed": {
+        "enabled": true,
+        "allowed_actions": "all",
+        "sha_pinning_required": false
+      }
+    },
+    {
+      "surface": "Actions workflow token defaults",
+      "command": "gh api repos/whitefishscholarship/program_code/actions/permissions/workflow",
+      "observed": {
+        "default_workflow_permissions": "read",
+        "can_approve_pull_request_reviews": false
+      },
+      "conclusion": "Propose job-scoped contents:write and issues:write only under future exact authority; no setting changed or write test run"
+    },
+    {
+      "surface": "branch controls",
+      "command": "gh api repos/whitefishscholarship/program_code/branches?per_page=100 --paginate; gh api repos/whitefishscholarship/program_code/rulesets?includes_parents=true",
+      "observed": "43 branches all protected:false; rulesets API403 says current private-repository plan does not support feature",
+      "conclusion": "Application allowlist and exact-parent compare-and-swap required. No claim that GitHub token is branch/path scoped; it can write beyond the two allowed paths"
+    },
+    {
+      "surface": "Actions allowance",
+      "command": "gh api users/whitefishscholarship/settings/billing/usage?year=2026&month=9; legacy billing/actions; user plan projection",
+      "observed": "Both usage APIs404 and report missing user scope; plan.name null. In-app billing page is logged out",
+      "remainingMinutes": null,
+      "planAllowance": null,
+      "paidSpendBlockedVerified": false,
+      "conclusion": "Unavailable, not zero and not unlimited. No authentication scope, billing setting or paid plan changed"
+    },
+    {
+      "surface": "notification destination",
+      "command": "gh api search/issues?q=repo:whitefishscholarship/program_code+is:issue+in:title+%22Scholarship+season+updates%22",
+      "observed": {
+        "total_count": 0,
+        "incomplete_results": false
+      },
+      "issueCreated": false,
+      "preferredRouteConfirmedByUser": false
+    },
+    {
+      "surface": "Vercel Git settings",
+      "url": "https://vercel.com/whitefishscholarships-projects/web/settings/git",
+      "method": "authenticated read-only visible UI",
+      "observed": {
+        "actor": "whitefishscholarship",
+        "teamLabel": "whitefishscholarship's projects",
+        "plan": "Hobby",
+        "connectedRepository": "whitefishscholarship/program_code"
+      },
+      "sensitiveUIFieldsPersisted": false
+    },
+    {
+      "surface": "Vercel build settings",
+      "url": "https://vercel.com/whitefishscholarships-projects/web/settings/build-and-deployment",
+      "method": "authenticated read-only visible UI",
+      "observed": {
+        "rootDirectory": "web",
+        "includeOutsideRoot": true,
+        "skipUnaffectedProjects": false,
+        "ignoredBuildStep": "Automatic",
+        "nodeVersion": "24.x"
+      },
+      "conclusion": "Do not rely on docs-only/state-only pushes being ignored"
+    },
+    {
+      "surface": "tracked deployment configuration",
+      "command": "git ls-files and saved reviewed tree inspection",
+      "observed": "No vercel.json or vercel.ts in current tree. No season workflow; P8 schedule remains disabled/artifact-only",
+      "deploymentSuppressionConfigured": false,
+      "deploymentSuppressionProven": false
+    }
+  ],
+  "proposedSetup": {
+    "repository": "whitefishscholarship/program_code",
+    "repositoryId": 1177349487,
+    "codeBranch": "main",
+    "runner": "ubuntu-latest standard Linux; Node22 as existing CI",
+    "wakeUpUtc": "07:23 daily",
+    "displayTimezone": "America/Denver",
+    "stateBranch": "codex/scholarship-monitor-state",
+    "mutablePaths": [
+      "state.json",
+      "REPORT.md"
+    ],
+    "stateBranchIsMergedIntoMain": false,
+    "initialBranchTree": "Create from the exact future reviewed/delivered main commit with suppression already present. Inherit code/config unchanged; add only state.json and REPORT.md. Later commits change only those two paths. Never execute code from the state branch.",
+    "suppressionProposalPath": "web/vercel.json",
+    "suppressionProposal": {
+      "$schema": "https://openapi.vercel.sh/vercel.json",
+      "git": {
+        "deploymentEnabled": {
+          "codex/scholarship-monitor-state": false
+        }
+      }
+    },
+    "suppressionGates": [
+      "Read effective configuration at the future approved code and initial state branch commits; reject every true wildcard matching the state branch",
+      "Verify project root stays web, no alternate vercel.ts or conflicting control",
+      "Configuration-bearing code release must finish before first state ref creation",
+      "Check actual provider deployment history for initial creation and later state writes in M4; absence of an app build alone is insufficient"
+    ],
+    "suppressionFallbackIfUnverifiable": "Stop activation. Propose GitHub Actions artifacts with explicit retention/recovery in this same repository as a separately reviewed persistence amendment; do not silently adopt it or add a second platform.",
+    "concurrency": {
+      "group": "scholarship-season-monitor",
+      "cancelInProgress": false,
+      "rejectStaleStateHead": true,
+      "codeMustComeFromReviewedMain": true,
+      "checkpointBeforeNotification": true,
+      "noPushTrigger": true
+    },
+    "permissions": {
+      "jobContents": "write",
+      "jobIssues": "write",
+      "allUnspecified": "none",
+      "newCredentialPlanned": false,
+      "enforcementLimit": "GITHUB_TOKEN repository write scope exceeds branch/path contract; reviewed code enforces exact branch/two-file writes; no provider-side path confinement claimed"
+    },
+    "notification": {
+      "type": "proposed_single_github_issue",
+      "title": "Scholarship season updates",
+      "issueNumber": null,
+      "recipientRouteConfirmed": false,
+      "syntheticReceiptVerified": false,
+      "postOn": "New opening/date/rule evidence, newly persistent source failure, or actionable run failure; unchanged quiet",
+      "sensitiveInformation": "No student answers, applicant data or private contact content"
+    },
+    "inactivity": {
+      "repositoryPrivate": true,
+      "public60DayRuleAppliesNow": false,
+      "visibilityChangeRequiresRecheck": true,
+      "outageDetection": "No independent watchdog; show last completed sweep/overdue status; inspect Actions manually if silent; a disabled scheduler cannot alert on itself"
+    }
+  },
+  "capacityProposal": {
+    "uniqueCandidateSourceCount": 242,
+    "hostCount": 133,
+    "initialSourceFetchesNoRetry": 242,
+    "attemptsMaximumPerSource": 3,
+    "redirectsMaximumPerAttempt": 5,
+    "worstCaseHttpRequestsPerSweep": 4356,
+    "maximumParallelHosts": 4,
+    "perHostConcurrency": 1,
+    "perHostMinimumSpacingMs": 1000,
+    "endToEndAttemptTimeoutSeconds": 20,
+    "maxResponseBytes": 2000000,
+    "jobTimeoutMinutes": 30,
+    "acquisitionStopBeforeMinutes": 25,
+    "httpRequestsPerRunCap": 4500,
+    "monthlyMonitorRunnerMinuteCeilingProposal": 1000,
+    "maximumDailyRuns": 1,
+    "additionalManualRunsShareMonthlyCeiling": true,
+    "unmeasuredAssumptionSecondsPerSuccessfulSource": 8,
+    "unmeasuredSetupMinutesPerWake": 2,
+    "estimatedInitialSweepMinutes": 10.07,
+    "estimated31DayMinutesAt14DayCadence": 79.86,
+    "estimated31DayMinutesIfAll7Day": 97.72,
+    "worstCaseFetchOnlySweepMinutes": 60.5,
+    "worstCaseExcludes": "Setup, parsing, per-host bottlenecks and retry backoff; cannot promise one-run completion",
+    "monthlyScheduledMaximumMinutes": 930,
+    "availableAllowanceVerified": false,
+    "withinExistingAllowanceVerified": false,
+    "measuredPilot": false,
+    "firstFullSweepFitsVerified": false,
+    "overBudgetBehavior": "Commit unfinished targets and overdue state; resume next daily wake without dropping records or counting failure as success. No paid capacity or coverage reduction. Monthly quota risk blocks activation until account allowance and zero-overage controls are verified.",
+    "sampleBoundary": "M1 calculated from saved unique targets. Live representative timing/extraction belongs to M3 and needs explicit 12-source authority. No network benchmark fabricated."
+  },
+  "proposedM3Sample": [
+    {
+      "case": "direct named award",
+      "fetchId": "url-671c729149fc0783",
+      "url": "https://umpscare.com/scholarship/all-star-college-scholarship/",
+      "affectedRecordIds": [
+        "lead:umps"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "closed trade award",
+      "fetchId": "url-32498e28030be067",
+      "url": "https://fosterlove.com/american-industries-scholarship/",
+      "affectedRecordIds": [
+        "lead:ais"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "shared children",
+      "fetchId": "url-65401e2f2646f157",
+      "url": "https://nfpaonline.org/resources/scholarships/",
+      "affectedRecordIds": [
+        "award-5b5b0db70dd0",
+        "lead:dondiego",
+        "lead:gordon"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "shared named funds",
+      "fetchId": "url-d4ce774cda0dfff4",
+      "url": "https://secure.ponyclub.org/support/college-scholarships",
+      "affectedRecordIds": [
+        "lead:helbert",
+        "lead:read",
+        "lead:renfro"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "PDF with many named children",
+      "fetchId": "url-3256571ad11c2117",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "affectedRecordIds": [
+        "award-01dc5649ad46",
+        "award-01f442f53c03",
+        "award-0546c2fa9e62",
+        "award-0a1f1d1b8505",
+        "award-0b75492e8353",
+        "award-0c6f9832a101",
+        "award-142da69533e6",
+        "award-1b7e12cc1279",
+        "award-25d250ec58c6",
+        "award-2726fc6e69fc",
+        "award-3c1de856d59e",
+        "award-44bcbb2eeb9c",
+        "award-4562d94cb7b9",
+        "award-4792ca67f2e1",
+        "award-4a29a85c87bc",
+        "award-4abfd54c1a6a",
+        "award-4ac74a9f17fd",
+        "award-519dce301c62",
+        "award-59d82b621dea",
+        "award-667db7bac4b9",
+        "award-66bd050a37ca",
+        "award-67869a40834d",
+        "award-6f66c4a77103",
+        "award-74e0f7fdd4c5",
+        "award-82867636c6e1",
+        "award-84615bac9529",
+        "award-88670d80cadf",
+        "award-9049848e68c9",
+        "award-9545b3c2a03a",
+        "award-9da4b8e00a27",
+        "award-a3c9f5127f45",
+        "award-a9386e11715e",
+        "award-abf4abd96954",
+        "award-b4cd9cb209ea",
+        "award-ba504649a05d",
+        "award-c3491944119d",
+        "award-c36fdba14b1f",
+        "award-cc404ac65f10",
+        "award-cd0fb7cd0c64",
+        "award-d1dc783a1ff8",
+        "award-d7fd424f278f",
+        "award-d9861aae050d",
+        "award-db429f56aafe",
+        "award-df3626999a99",
+        "award-e6d33b3f2691",
+        "award-e8e0a4382e8d",
+        "award-e9ca489e5a61",
+        "award-f31bf2ed527a",
+        "award-fd629c83fb3f"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "direct PDF",
+      "fetchId": "url-0783f818afedb3fd",
+      "url": "https://whitefishcommunityfoundation.org/wp-content/uploads/2025/12/2026-Dorothy-and-Luther-Campbell-Scholarship-Application-Criteria.pdf",
+      "affectedRecordIds": [
+        "award-97aa9bb0adf8"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "announced cycle",
+      "fetchId": "url-a5f903b610cfd74a",
+      "url": "https://www.mensafoundation.org/now-accepting-applications-for-foundation-scholarships/",
+      "affectedRecordIds": [
+        "lead:mensa"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "conflicting dates or amounts",
+      "fetchId": "url-5bbf66262bdb58e6",
+      "url": "https://fosterlove.com/brandsource-scholars/",
+      "affectedRecordIds": [
+        "lead:brand"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "conflicting rules",
+      "fetchId": "url-25f9d466217fa86e",
+      "url": "https://nsoro.foundation/frequently-asked-questions/",
+      "affectedRecordIds": [
+        "lead:nsoro"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "capacity closure",
+      "fetchId": "url-5fa5d5e150e35c61",
+      "url": "https://promises2kids.org/guardian-scholars/",
+      "affectedRecordIds": [
+        "lead:promises"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "known access block - one public request only if pilot-authorized",
+      "fetchId": "url-009334379ce5c95b",
+      "url": "https://aqhfoundation.smapply.io/res/p/Scholarship-Criteria/",
+      "affectedRecordIds": [
+        "lead:aqhf"
+      ],
+      "readAuthorized": false
+    },
+    {
+      "case": "parent-only, no recursive expansion",
+      "fetchId": "url-618bf26d0eb2bdc5",
+      "url": "https://pdkintl.org/pdk-scholarship/",
+      "affectedRecordIds": [
+        "lead:pdk"
+      ],
+      "readAuthorized": false
+    }
+  ],
+  "remainingGates": [
+    {
+      "id": "capacity",
+      "owner": "Kelsey for existing account usage visibility; Codex for budget reconciliation",
+      "trigger": "Read-only account allowance/usage and zero-overage control evidence becomes available",
+      "nextAction": "Verify available standard Linux minutes after other account usage and no-paid-overage protection; replace capacity assumptions with M3 timing before activation"
+    },
+    {
+      "id": "notification",
+      "owner": "Kelsey selects route; Codex pins exact issue and recipient delivery evidence",
+      "trigger": "User confirms intended notification destination",
+      "nextAction": "Record selected route in M1; exact issue creation/comment and synthetic receipt remain M4 effects requiring authority"
+    },
+    {
+      "id": "suppression",
+      "owner": "Codex",
+      "trigger": "Separately approved M4 configuration/release contract",
+      "nextAction": "Implement reviewed web/vercel.json exact branch exclusion before creating state ref; verify no conflicting true rule and actual provider result"
+    },
+    {
+      "id": "pilot",
+      "owner": "Codex",
+      "trigger": "M2 complete and explicit bounded M3 public-source authority",
+      "nextAction": "Test exact 12 registered sample URLs; reconcile all affected IDs and request/time limits; verify first full sweep budget before activation"
+    },
+    {
+      "id": "review",
+      "owner": "Codex independent reviewer",
+      "trigger": "Freeze M1 local checkpoint and run full required checks",
+      "nextAction": "Read-only review of inventory completeness, overlap limits and setup findings; record blockers without claiming M1 fully complete"
+    }
+  ],
+  "effectsPerformed": {
+    "publicScholarshipFetches": 0,
+    "workbookReads": 0,
+    "workbookWrites": 0,
+    "runtimeChanges": 0,
+    "remoteWrites": 0,
+    "issuePosts": 0,
+    "configurationChanges": 0,
+    "monitorActivations": 0
+  },
+  "historicalPreservation": "R1-R7, all source snapshots/reviews/attestations and original handoff remain unchanged; ETV/Fund the Fish retain separate research triggers",
+  "technicalReferences": [
+    {
+      "url": "https://vercel.com/docs/project-configuration/git-configuration#git.deploymentenabled",
+      "verifiedAtDate": "2026-09-15",
+      "finding": "Unspecified branches enabled; matching true rule enables deployment despite a matching false rule; proposed exact false rule has no wildcard true"
+    },
+    {
+      "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule",
+      "verifiedAtDate": "2026-09-15",
+      "finding": "Default-branch schedule can delay/drop; public repository inactivity rule is 60 days"
+    },
+    {
+      "url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+      "verifiedAtDate": "2026-09-15",
+      "finding": "Private repository standard runners consume owner allowance; Free lists2000minutes/month, but current account plan and remaining allowance not observed"
+    }
+  ]
+}

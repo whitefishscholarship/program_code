@@ -1,6 +1,6 @@
 # Whitefish Scholarship System Build Plan
 
-Plan revision: 22
+Plan revision: 23
 Status: canonical
 Repository: `whitefishscholarship/program_code`
 Default branch: `main`
@@ -2070,3 +2070,37 @@ on the exact existing Whitefish target, not runtime/configuration/source/workboo
 changes. Preserve accepted P0-P9 and every historical grant/attestation. Full manifest
 covers verified-main-to-candidate changes, including carried SD2 history. The direct
 child attestation changes only PLAN-REV22 manifest/review and remains tip until merge.
+
+
+## 18. Revision23 — approved M1 setup and exact deployment exclusion
+
+Direct October21 approval selects the exact reviewed M1 proposal at local receipt
+278d3ca, recorded verbatim and full-SHA bound in docs/evidence/m1-approved-setup/authority.json.
+This amendment records and delivers one M1 setup/config release. It may provision only
+the new whitefish-season-alerts Resend sending_access key restricted to verified
+mail.waypointfranchise.com (user creates/transfers directly), and the approved
+scholarship-season-monitor GitHub environment/secret/fourvariables with main-only
+branch rule, required Whitefish reviewer and administrator bypass disabled. Existing
+keys/Vercel secrets/protections remain unchanged. No secret value belongs in Git.
+
+The only active deployment config addition is web/vercel.json with git.deploymentEnabled
+containing exactly codex/scholarship-monitor-state:false and no other branch rule.
+Root/project/team/canonical hostname remain unchanged. Config release may create
+its normal GitHub PR/CI and Vercel Preview/Production effects under direct authority.
+Preserve all P0-P9, historical grants/attestations, effective held-SD2 accounting proof,
+397holds/272quarantines/0cleared, sourceFAIL permanent,0acceptedfacts/mappings andSD3false.
+Null stage pointers stay null; this does not introduce a second stage array.
+
+Record approval/observations, normal policy and frozen-candidate independent review,
+complete verified-main manifest and direct-child exact two-file PLAN-REV23 attestation.
+Run unchanged required checks and actual attested plan:check PASS before publication.
+Use supported exact-build evidence for current candidate inputs; historical PASS is not
+a new build and environment failures are not waived. Deliver ancestry-preserving merge
+only after CI/Preview readiness; verify Production commit and unchanged runtime/publication.
+No further post-attestation commit is allowed before delivery.
+
+No M2 runner/workflow, source check, email (including test), state ref/write, schedule,
+activation, key reuse/permission expansion, reviewer removal, branch-protection change,
+paid action, spreadsheet/applicant/provider-contact effect orSD3 is authorized.
+Actual state-branch suppression/inbox/full-sweep/schedule proof remains separately
+authorized M3/M4. M1 setup acceptance must not claim those operational proofs.

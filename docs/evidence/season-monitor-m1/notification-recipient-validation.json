@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stepId": "M1",
+  "kind": "notification-recipient-validation",
+  "recordedAt": "2026-09-15T21:51:05.515158+00:00",
+  "baselineCommit": "197ef5afa59ff462aaf05859d42c3868240b151b",
+  "scope": "Record user-confirmed alert recipient kelsey@waypointfranchise.com in the plan, operative handoff and notification preference.",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "/private/tmp/program_code-season-monitor-plan/web",
+      "startedAt": "2026-09-15T21:49:49.151728+00:00",
+      "completedAt": "2026-09-15T21:49:53.850598+00:00",
+      "exitCode": 0,
+      "logPath": "/private/tmp/season-monitor-recipient-checks/typecheck.log",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "/private/tmp/program_code-season-monitor-plan/web",
+      "startedAt": "2026-09-15T21:49:53.850928+00:00",
+      "completedAt": "2026-09-15T21:50:00.521982+00:00",
+      "exitCode": 0,
+      "logPath": "/private/tmp/season-monitor-recipient-checks/build.log",
+      "logSha256": "5ce4aae2ff16b54e766e5623453379bc7a654e46ece47c0cd6cfdd9e5e83e07d"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "/private/tmp/program_code-season-monitor-plan",
+      "startedAt": "2026-09-15T21:50:00.522182+00:00",
+      "completedAt": "2026-09-15T21:50:00.543601+00:00",
+      "exitCode": 0,
+      "logPath": "/private/tmp/season-monitor-recipient-checks/whitespace.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "/private/tmp/program_code-season-monitor-plan/web",
+      "startedAt": "2026-09-15T21:49:49.151363+00:00",
+      "completedAt": "2026-09-15T21:50:29.645752+00:00",
+      "exitCode": 0,
+      "logPath": "/private/tmp/season-monitor-recipient-checks/plan.log",
+      "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "command": "npm test",
+      "cwd": "/private/tmp/program_code-season-monitor-plan/web",
+      "startedAt": "2026-09-15T21:49:49.151705+00:00",
+      "completedAt": "2026-09-15T21:50:39.806060+00:00",
+      "exitCode": 0,
+      "logPath": "/private/tmp/season-monitor-recipient-checks/tests.log",
+      "logSha256": "0cb2649a0d7da950a33fa08a5027e896fbcca7df5599fe8dbaa1a3d8fe0591d7"
+    }
+  ],
+  "additionalVerification": [
+    "python3 docs/evidence/season-monitor-m1/build-inventory.py --check passed with unchanged inventory SHA256 87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8; all 437 records accounted for; zero source calls.",
+    "AGENTS, canonical plan/state, M1 inventory/setup/manifest/review and prior handoff suffix unchanged from aeb704e.",
+    "Earlier notification validation remains unchanged from 197ef5a.",
+    "Recipient exact-match and confirmed=true; sendAuthorized and activationAuthorized remain false."
+  ],
+  "limitations": [
+    "Checks ran after the recipient changes and before adding this validation record; final whitespace check follows.",
+    "Recipient selection is confirmed; sender/service, available allowance and inbox receipt remain unverified.",
+    "No independent review, M1 completion, acceptance, delivery test or activation is claimed."
+  ],
+  "runtimeChanged": false,
+  "externalEffectsPerformed": false,
+  "nextAction": "Codex verifies existing sender/service and allowance read-only; retain the M1 account allowance gate and reserve actual inbox proof for M4."
+}

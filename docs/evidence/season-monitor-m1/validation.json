@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "stepId": "M1",
+  "recordedAt": "2026-09-15T20:32:42.485447+00:00",
+  "commands": [
+    {
+      "command": "python3 docs/evidence/season-monitor-m1/build-inventory.py --check",
+      "cwd": "repository root",
+      "startedAt": "2026-09-15T20:30:45.596641+00:00",
+      "completedAt": "2026-09-15T20:30:45.655533+00:00",
+      "exitCode": 0,
+      "logSha256": "9102ea5ceca1909748c4f6c37365f4589e15bca091a0f625668ac62b6b39f198",
+      "logPath": "/private/tmp/season-monitor-m1-checks/inventory.log",
+      "disposition": "PASS",
+      "logExcerpt": "{\"sha256\": \"87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8\", \"records\": 437, \"catalogAwards\": 411, \"researchLeads\": 26, \"catalogSourcesAccountedFor\": 436, \"portalsPreserved\": 21, \"applicationGroupsPreserved\": 4, \"routeCounts\": {\"manual_known_block\": 1, \"manual_separate_followup\": 2, \"manual_source_review\": 18, \"public_signal_candidate\": 416}, \"excluded\": 0, \"confirmedDuplicateChildMerges\": 0, \"leadRecordsWithCandidateAwardOrPortalOverlap\": 4, \"uniqueRegisteredUrls\": 273, \"uniqueScheduledCandidateUrls\": 242, \"uniqueScheduledCandidateHosts\": 133, \"sharedFetchUrls\": 36, \"sourceCallsPerformed\": 0, \"monitorSuccessfulChecks\": 0}"
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "startedAt": "2026-09-15T20:30:45.596772+00:00",
+      "completedAt": "2026-09-15T20:30:45.775917+00:00",
+      "exitCode": 1,
+      "logSha256": "c7b07a0e5169da5978bada88f74456728198f6d571b1aabd3dd32a7b50c22a2d",
+      "logPath": "/private/tmp/season-monitor-m1-checks/plan.log",
+      "disposition": "Local tsx IPC pipe blocked with EPERM; exact command rerun with approved execution and passed",
+      "logExcerpt": "Error: listen EPERM: operation not permitted; tsx local IPC pipe"
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "startedAt": "2026-09-15T20:30:45.596841+00:00",
+      "completedAt": "2026-09-15T20:30:52.982832+00:00",
+      "exitCode": 0,
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "logPath": "/private/tmp/season-monitor-m1-checks/typecheck.log",
+      "disposition": "PASS",
+      "logExcerpt": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "startedAt": "2026-09-15T20:30:45.596904+00:00",
+      "completedAt": "2026-09-15T20:30:45.775881+00:00",
+      "exitCode": 1,
+      "logSha256": "694e08eef6b7fb6d2b6c64480e14ad693c505cc5bb45dfda88dac52b324299a5",
+      "logPath": "/private/tmp/season-monitor-m1-checks/tests.log",
+      "disposition": "Local tsx IPC pipe blocked with EPERM; exact command rerun with approved execution and passed",
+      "logExcerpt": "Error: listen EPERM: operation not permitted; tsx local IPC pipe"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "repository root",
+      "startedAt": "2026-09-15T20:30:45.599411+00:00",
+      "completedAt": "2026-09-15T20:30:45.625418+00:00",
+      "exitCode": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logPath": "/private/tmp/season-monitor-m1-checks/whitespace.log",
+      "disposition": "PASS",
+      "logExcerpt": ""
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "environment": "approved execution outside IPC-restricted sandbox",
+      "startedAt": "2026-09-15T20:31:22.116662+00:00",
+      "completedAt": "2026-09-15T20:32:03.960714+00:00",
+      "exitCode": 0,
+      "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "logPath": "/private/tmp/season-monitor-m1-checks/plan-network-enabled.log",
+      "disposition": "PASS",
+      "logExcerpt": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition."
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "environment": "approved execution outside IPC-restricted sandbox",
+      "startedAt": "2026-09-15T20:31:22.116927+00:00",
+      "completedAt": "2026-09-15T20:32:14.545687+00:00",
+      "exitCode": 0,
+      "logSha256": "0cb2649a0d7da950a33fa08a5027e896fbcca7df5599fe8dbaa1a3d8fe0591d7",
+      "logPath": "/private/tmp/season-monitor-m1-checks/tests-network-enabled.log",
+      "disposition": "PASS",
+      "logExcerpt": "COVERAGE PASS: core-only results, four connections, no/unknown/skip, discovery/fact separation, OR, public CSV, source pins and authority boundary\nR3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\nR3 CATALOG PASS {\"awards\":411,\"preservedAwards\":192,\"profiles\":61,\"pairedConnections\":291,\"newGpaRules\":9,\"newSchoolRules\":7,\"organizations\":9,\"publicCsvIds\":true,\"sensitiveSkipNonExcluding\":true}\nR4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.\nR4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "environment": "approved execution outside IPC-restricted sandbox",
+      "startedAt": "2026-09-15T20:31:22.117008+00:00",
+      "completedAt": "2026-09-15T20:31:28.890966+00:00",
+      "exitCode": 0,
+      "logSha256": "f3ff8d3bfdce84f2cdf75a2cc85a23434f1f7f8fcc7a52ef4da9802d699ead9b",
+      "logPath": "/private/tmp/season-monitor-m1-checks/build.log",
+      "disposition": "PASS",
+      "logExcerpt": "\n\n\u0192 Proxy (Middleware)\n\n\u25cb  (Static)   prerendered as static content\n\u0192  (Dynamic)  server-rendered on demand\n"
+    }
+  ],
+  "finalRequiredChecks": "PASS",
+  "scope": "local partial M1 inventory/setup checkpoint; no current scholarship/activation/capacity claim",
+  "preservation": {
+    "historicalHandoffSuffixMatches": true,
+    "canonicalPlanStateUnchanged": true,
+    "M0ManifestReviewUnchanged": true,
+    "pinnedSourceBytesUnchanged": true,
+    "runtimeChanged": false
+  },
+  "remainingSetupGates": "See setup.json and the sole build tracker; no M1 completion or canonical acceptance"
+}

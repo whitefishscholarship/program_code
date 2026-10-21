@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "stepId": "M1",
+  "kind": "notification-planning-correction",
+  "recordedAt": "2026-09-15T21:41:45.277642+00:00",
+  "userStatement": "I don't think we should use GitHub. I'm not logged in to that often, and unless there's some notification outside of GitHub, the odds of me seeing it are pretty much zero",
+  "confirmedRequirement": "Deliver alerts outside GitHub; do not require checking GitHub issues",
+  "proposedDestinationType": "direct_email",
+  "recipientAddress": "kelsey@waypointfranchise.com",
+  "recipientConfirmed": true,
+  "providerSelected": false,
+  "existingIntegrationCandidate": {
+    "provider": "Resend",
+    "codePath": "web/src/app/admin/actions.ts",
+    "purpose": "Existing admin recovery email only",
+    "monitorCapabilityVerified": false,
+    "credentialReuseAuthorized": false,
+    "configurationReadPerformed": false
+  },
+  "messageRequirements": [
+    "Scholarship names and observed changes in the email body",
+    "Supported dates and clear review actions",
+    "Direct official-source links",
+    "No GitHub visit required to understand findings",
+    "Meaningful changes/failures only; unchanged runs quiet"
+  ],
+  "supersedes": {
+    "historicalCheckpoint": "aeb704e69d5288c0a46e7dd43cb5f7cac0249586",
+    "evidencePath": "docs/evidence/season-monitor-m1/setup.json",
+    "only": [
+      "proposedSetup.notification",
+      "proposedSetup.permissions.jobIssues",
+      "remainingGates notification destination/action"
+    ]
+  },
+  "historicalEvidenceModified": false,
+  "githubIssuesWriteProposed": false,
+  "githubSchedulingStorageChanged": false,
+  "sendAuthorized": false,
+  "activationAuthorized": false,
+  "M1Complete": false,
+  "nextAction": "Codex prepares read-only existing email-service verification for the confirmed recipient; record exact sender/allowance/credential and sending effects before later implementation/activation; independent review before acceptance",
+  "owner": "Codex; recipient selection completed by Kelsey",
+  "validationPath": "docs/evidence/season-monitor-m1/notification-recipient-validation.json",
+  "recipientConfirmation": {
+    "recordedAt": "2026-09-15T21:49:23.227666+00:00",
+    "source": "Direct user reply identifying the requested alert destination",
+    "scope": "Recipient selection only; delivery setup and activation remain pending"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "authorizedAt": "2026-10-21T18:58:36.874945+00:00",
+  "authorizedBy": "Kelsey Stuart",
+  "userInstruction": "I approve the exact M1 proposal, including credential provisioning, Git delivery, and Vercel Preview/Production effects. Proceed within that scope. Keep M2, source checks, email sends, and activation off.",
+  "approvedProposalCandidate": "0e519bc43c445987f820bc0e6820bbc431185cfc",
+  "proposalReceiptFull": "278d3cad6427a0513cec6d86b74afe8b6a54bdd6",
+  "baselineCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+  "selections": [
+    "A",
+    "B",
+    "C"
+  ],
+  "effects": [
+    "dedicated Resend sending_access domain-restricted key via Kelsey handoff",
+    "dedicated protected GitHub environment, secret and four variables",
+    "exact web/vercel.json state-branch automatic deployment exclusion",
+    "required local governance/review/attestation",
+    "branch push,PR,CI,Preview,merge,Production and exact read-only verification"
+  ],
+  "forbidden": [
+    "M2",
+    "source checks",
+    "email sends including tests",
+    "activation",
+    "state-ref creation",
+    "workflow implementation",
+    "existing key permission changes",
+    "reviewer removal",
+    "branch-protection change",
+    "paid action",
+    "SD3"
+  ],
+  "keyCustody": "Kelsey creates and transfers new key directly into GitHub secret; agent never reads key value",
+  "amendments": [
+    {
+      "recordedAt": "2026-10-21T20:53:20.626021+00:00",
+      "userInstruction": "Use existing RESEND name",
+      "scope": "Use RESEND instead of SCHOLARSHIP_MONITOR_RESEND_API_KEY in the same scholarship-season-monitor GitHub environment. No credential-value access, permission, sender, recipient, or disabled-setting change.",
+      "historicalProposalPreserved": true
+    }
+  ]
+}

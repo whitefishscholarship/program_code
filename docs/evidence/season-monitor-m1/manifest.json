@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-partial-M1-inventory-setup-checkpoint",
+  "candidateCommit": "dba45832e7c5a32635202784b78624f562ba0377",
+  "baselineCommit": "aae973238bed8651c3404b17cd51c1385f457075",
+  "baselineCurrentRemoteVerified": true,
+  "baselineVerification": "Authenticated GitHub CLI refs/heads/main read September15,2026; matches local origin/main",
+  "resumeCheckpoint": "8b8a1d0b4295c828428b371a7c5909e7beb573fb",
+  "M1OnlyChangePaths": [
+    "docs/CURRENT_HANDOFF.md",
+    "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+    "docs/evidence/season-monitor-m1/build-inventory.py",
+    "docs/evidence/season-monitor-m1/inventory.json",
+    "docs/evidence/season-monitor-m1/setup.json",
+    "docs/evidence/season-monitor-m1/validation.json"
+  ],
+  "completeChangeSet": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "aafbfbd320ef5244faed4c1829623721230e0e4561315f97ac4aeada6ef3988e"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "9a5e9703daef11d360f65ffaee89debf91637e684045e127a2d89cd61e03680f"
+    },
+    {
+      "path": "docs/R5_RESEARCH_PLAN.md",
+      "sha256": "1828c79119f34d369d7a3729db7f9fc4a211be867a923012bebfeb1269948fd7"
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+      "sha256": "fb8410482270e7fadd5a6d356508fd9c7ae13796df4b3bb211aa942b8e140f0c"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/DELIVERY_COMPLETE.json",
+      "sha256": "380f82f1ba8a68e844e94d95972d3c057a94f00dd5781b93e7abcd3838229c01"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/closeout-validation.json",
+      "sha256": "906419454911f06a4415a8d932e596bf8039a38c8b2be0ade8885f8047110ae7"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/merge.json",
+      "sha256": "c8681c47205569ae148ced5ee58d4d97540f9e170aa5ab983a0923cf8716acd8"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/original-pr-final.json",
+      "sha256": "444b674a1ef20d1e7a7a133a7d9ae2445086737b3fcca7594ebf682643e45ccc"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/post-attestation-validation.json",
+      "sha256": "036eff4cad8bffc25e1fc3bd80f76f591b386835a9936f8bf18c788343ded972"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/preview-verification.json",
+      "sha256": "fbe257eb4f2579bac77774f26277f379c97824e6bfcce3d5988f728d587ddbb3"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/production-api.json",
+      "sha256": "3c707f7ada103a7c79dc9e9206cb171883766a0f6ec71d5021e89278f3ea8a62"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/production-browser.json",
+      "sha256": "be4ad0b27d8ed40422e62accd2c5820a64bc497f30c9bd5680139489d29f415e"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/production-ci.json",
+      "sha256": "993e52f490513090d55129d2de59f7867813f9bec2b4abdfc4aed9ebda665c19"
+    },
+    {
+      "path": "docs/evidence/r4-identity-repair/published-attribution.json",
+      "sha256": "9496c90a4598e8158345032436c25ae6062f471972d935af1f810e2d1d0aea1a"
+    },
+    {
+      "path": "docs/evidence/r5-research/authority.json",
+      "sha256": "6acbb3a562025b5c772573fdae0582ba6e005ac9610277d821729467779404f2"
+    },
+    {
+      "path": "docs/evidence/r5-research/final-manifest.json",
+      "sha256": "70886f472c852b535802dc0c8397a72f06329a813b0e22d4f13fc2948db6cf1f"
+    },
+    {
+      "path": "docs/evidence/r5-research/final-review.json",
+      "sha256": "d00913b13d7c18d35c0ee3936abfbf26265500b9313c124ce700333f7bea1e8b"
+    },
+    {
+      "path": "docs/evidence/r5-research/plan-review.json",
+      "sha256": "1547fea89ed97d1451a1ea802d686d059df0cac23fca5274cc3c757ea58af101"
+    },
+    {
+      "path": "docs/evidence/r5-research/results.json",
+      "sha256": "b559cf798e624259d1ce5acd16fa793e2b215e9f8a53d40885086d8726eca848"
+    },
+    {
+      "path": "docs/evidence/r7-closeout/manifest.json",
+      "sha256": "a2c444ec424cc14dc3e0b479ddd252eaec8f8cbe465edaa731d7b60c932dbec1"
+    },
+    {
+      "path": "docs/evidence/r7-closeout/review.json",
+      "sha256": "a0f4daca8b85f704e8562e518e3ea13522254023325c1dec49cc99d0737d4098"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/build-inventory.py",
+      "sha256": "3a00adafd41b9a3c3db2e6a028779f8465be506ebc6403117ce411775c0fe434"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/inventory.json",
+      "sha256": "87d560f3feb2fcb35167e5a4f570a2f39a584a09df28b74d2f57a7d0509baac8"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/setup.json",
+      "sha256": "30dbeee6971023e9bd42ebad08ec7cfa90b4736631b7ecfcdd61d2143173882e"
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1/validation.json",
+      "sha256": "836ec3476f80bf5c9e77f7dab426f6852a4c6eef024ca9c7d2b8cd9cd46658df"
+    },
+    {
+      "path": "docs/evidence/season-monitor-plan/manifest.json",
+      "sha256": "971062df0136748ae8ca080af780143bcb1bd4750fb60d30627f0a411b211eb9"
+    },
+    {
+      "path": "docs/evidence/season-monitor-plan/review.json",
+      "sha256": "6fcf20ac357bd7c9e1f7ea57c3734ec24b08a88111695b6ad9bad98a85521d85"
+    },
+    {
+      "path": "docs/kickoffs/R4-WHITEFISH-CLOSEOUT-RESUME.md",
+      "sha256": "10a860655f01962e2ededa04eccf5366d7713049e14487f095ca906dbd9cf502"
+    }
+  ],
+  "canonicalStageAcceptance": false,
+  "M1CompletionClaim": false,
+  "scope": "Review correctness and honest routing of completed local M1 work; setup blockers remain and M2/activation are unauthorized"
+}

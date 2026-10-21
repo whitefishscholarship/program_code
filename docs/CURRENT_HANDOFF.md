@@ -1,3 +1,19 @@
+# Approved M1 setup/configuration release in progress
+
+Plan revision: 23
+
+Authority docs/evidence/m1-approved-setup/authority.json; exact proposal preserved.
+Revision23 normal governance/review/attestation governs this one approved config release.
+Typecheck/fulltests and supported current-input build PASS; restricted-key metadata verified.
+GitHub environment provisioned main-only/reviewer/no-bypass; flags false. User-approved
+secret name RESEND; key Sending access only mail.waypointfranchise.com, zero uses.
+No secret value read by agent. Final candidate review/attestation and delivery pending; no push.
+M2/source checks/email sends/activation/state-ref creation off;437routes/12pins retained.
+No later phase, source clearance, fact acceptance orSD3. Read current evidence and
+sole seasonal tracker before continuation.
+
+---
+
 # SD2 held-research accounting closure
 
 Plan revision: 22

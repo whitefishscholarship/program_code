@@ -1,0 +1,8 @@
+
+> web@0.1.0 plan:check
+> tsx scripts/validate-build-plan.ts
+
+Build-plan validation failed with 3 error(s):
+- Missing required file: docs/evidence/PLAN-REV23-manifest.json
+- Missing required file: docs/reviews/PLAN-REV23.json
+- PLAN-REV23 requires a committed manifest/review attestation in current history

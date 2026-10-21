@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "mode": "PROPOSAL_ONLY_UNAPPLIED",
+  "preparedAt": "2026-10-21T18:47:53.914764+00:00",
+  "baselineCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+  "priorReceipt": "9b2ba0fad42e7127d0a57f9ff823152314abcdd7",
+  "sourceCheckpoint": "009fa57e7def04ce2a9b49051f395c32b1393c14",
+  "repository": {
+    "id": 1177349487,
+    "name": "whitefishscholarship/program_code",
+    "visibilityEvidence": "9b2ba0f:docs/evidence/season-monitor-m1-public-resend/github-observations.json"
+  },
+  "sender": {
+    "from": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>",
+    "to": [
+      "kelsey@waypointfranchise.com"
+    ],
+    "replyTo": null,
+    "recipientEnforcement": "Future reviewed application allowlist; domain-restricted Resend key does not restrict recipients",
+    "purpose": "New scholarship opening/date/rule signals or actionable persistent source/run failures; unchanged quiet",
+    "configured": false,
+    "mailboxCreationRequired": false,
+    "inboxReceivingConfigured": false
+  },
+  "resendKey": {
+    "team": "waypointfranchise",
+    "name": "whitefish-season-alerts",
+    "permission": "sending_access",
+    "domain": "mail.waypointfranchise.com",
+    "domainId": "bfb1391e-08ca-4207-b13b-e0393865d929",
+    "reuseExistingFullAccessKey": false,
+    "existingWhitefishKeyModified": false,
+    "created": false,
+    "secretValueIncluded": false,
+    "custody": "Kelsey creates only after approval; transfers directly to dedicated GitHub environment secret using normal provider UI; no chat/Git/log/plaintext file copy"
+  },
+  "githubEnvironment": {
+    "name": "scholarship-season-monitor",
+    "selectedBranchRules": [
+      {
+        "type": "branch",
+        "name": "main"
+      }
+    ],
+    "tagRules": [],
+    "requiredReviewers": [
+      {
+        "type": "User",
+        "login": "whitefishscholarship",
+        "id": 266880911
+      }
+    ],
+    "preventSelfReview": false,
+    "administratorBypass": false,
+    "secretName": "SCHOLARSHIP_MONITOR_RESEND_API_KEY",
+    "variables": {
+      "SCHOLARSHIP_MONITOR_ALERT_FROM": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>",
+      "SCHOLARSHIP_MONITOR_ALERT_TO": "kelsey@waypointfranchise.com",
+      "SCHOLARSHIP_MONITOR_ENABLED": "false",
+      "SCHOLARSHIP_MONITOR_EMAIL_ENABLED": "false"
+    },
+    "created": false,
+    "secretStored": false,
+    "workflowAdded": false,
+    "note": "False flags are proposed configuration, not an implemented runtime kill switch. Manual reviewer initially required because observed main protected=false. Future unattended operation needs separately reviewed effective main protection/access policy before any reviewer removal; no removal authorized."
+  },
+  "deploymentSuppression": {
+    "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+    "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+    "projectRoot": "web",
+    "targetPath": "web/vercel.json",
+    "stateBranch": "codex/scholarship-monitor-state",
+    "draftPath": "docs/evidence/season-monitor-m1-change-proposal/proposed/web-vercel.json",
+    "effectiveConfig": {
+      "$schema": "https://openapi.vercel.sh/vercel.json",
+      "git": {
+        "deploymentEnabled": {
+          "codex/scholarship-monitor-state": false
+        }
+      }
+    },
+    "applied": false,
+    "stateRefCreated": false,
+    "providerBehaviorProved": false,
+    "firstStateRefPrerequisite": "Reviewed suppression-bearing main already delivered; initial state ref descends from that exact main tree and preserves config",
+    "limits": "Automatic Vercel Git deployments only. Does not prevent manual/API/deploy-hook deployments; no such action selected."
+  },
+  "reviewSelections": [
+    {
+      "id": "A",
+      "scope": "Approve exact setup design only",
+      "externalEffects": [],
+      "selected": false
+    },
+    {
+      "id": "B",
+      "scope": "Later provision dedicated Resend key, dedicated GitHub environment/secret/variables with no consumer workflow",
+      "externalEffects": [
+        "Resend sending credential creation",
+        "GitHub environment/access settings and encrypted secret/variable writes"
+      ],
+      "selected": false
+    },
+    {
+      "id": "C",
+      "scope": "Later apply exact Vercel config via normal reviewed governance/config release",
+      "externalEffects": [
+        "Branch push/pull request/CI",
+        "Automatic Vercel Preview",
+        "Merge main and automatic Vercel Production",
+        "Read-only exact CI/provider and unchanged runtime verification"
+      ],
+      "selected": false
+    }
+  ],
+  "outsideAllSelections": [
+    "M2 runner/workflow implementation",
+    "Source checks or sample reads",
+    "Email sends including tests",
+    "Monitoring activation or timers",
+    "State-ref creation or state writes",
+    "Credential permission expansion/reuse",
+    "Required-reviewer removal or branch-protection changes",
+    "Paid plan/storage/overage",
+    "Provider contact/workbook/applicant effects",
+    "SD3"
+  ],
+  "M1Complete": false,
+  "M2Started": false,
+  "sourceCalls": 0,
+  "emailSends": 0,
+  "monitoringActivated": false,
+  "externalMutations": 0
+}

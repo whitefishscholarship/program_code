@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "fresh-context-independent-local-partial-checkpoint",
+  "stepId": "M1",
+  "recordedAt": "2026-09-15T20:37:40.869796+00:00",
+  "reviewer": "/root/m1_inventory_review",
+  "freshContext": true,
+  "readOnly": true,
+  "reviewerAuthorship": "Did not author or edit reviewed files; no external calls or Git mutations",
+  "outcome": "PASS",
+  "candidateCommit": "dba45832e7c5a32635202784b78624f562ba0377",
+  "manifestPath": "docs/evidence/season-monitor-m1/manifest.json",
+  "manifestSha256": "04d59ae97ebc054e0e051ec18f54f4e5d41f3862900791afcca12150cd2d1989",
+  "findings": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [],
+  "canonicalStageAcceptance": false,
+  "M1Complete": false,
+  "M2Authorized": false,
+  "monitoringActivated": false,
+  "summary": "PASS for correctness of the local partial M1 inventory/setup checkpoint only. Exact28path full manifest and6M1-only paths;411awards+26leads;416candidate+21manual routes;273registered URLs/242scheduled candidates;436catalog sources,21portals,4application groups,20historical links and4unmerged overlap candidates reconciled. M0 and complete historical handoff/canonical/runtime bytes preserved.",
+  "verification": [
+    "Exact candidate, direct resume parent and baseline ancestry verified",
+    "Complete parsed source-input comparison of names, identities, cycles, application locators, research triggers and overlaps",
+    "All273registered URLs inspected and forward/reverse mappings verified",
+    "No current observation/date promotion, exclusions, new awards, active fetch permissions or workflow activation",
+    "12pilot source/record mappings and request/time arithmetic verified",
+    "Inventory reproduction and independent whitespace check passed",
+    "Eight validation-log hashes matched; required checks passed after disclosed IPC failures"
+  ],
+  "limits": [
+    "Platform observations reviewed as recorded evidence, not independently repeated external verification",
+    "Billing allowance/zero-overage protection and intended notification delivery remain unresolved",
+    "Deployment suppression, measured pilot capacity and full-sweep performance remain later authority/proof gates",
+    "No full M1 completion, canonical acceptance, M2 or activation authority follows from this PASS"
+  ],
+  "nextAction": "Continue M1 only using remainingGates in setup.json and the sole season-monitor plan tracker; obtain missing account/delivery facts without expanding scopes or changing settings",
+  "reviewerReportingCorrection": "Reviewer corrected nine to eight validation-log entries; candidate, manifest, PASS and findings unchanged"
+}

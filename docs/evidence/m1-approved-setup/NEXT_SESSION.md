@@ -1,0 +1,1 @@
+Follow SESSION_CLOSE.md and authority.json in this packet. Verify current verify.py and saved build receipt first. Setup gates now verified; only final independent candidate review, direct-child attestation, actual planPASS and approved Git/Vercel delivery remain. Preserve original437routes12pins/reviews. No M2/source/send/state-ref/schedule/activation/SD3.

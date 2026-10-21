@@ -1,0 +1,18 @@
+{
+  "command": [
+    "gh",
+    "api",
+    "repos/whitefishscholarship/program_code/branches/main",
+    "--jq",
+    "{name,sha:.commit.sha,protected}"
+  ],
+  "startedAt": "2026-10-21T18:50:02.503384+00:00",
+  "completedAt": "2026-10-21T18:50:03.124846+00:00",
+  "exitCode": 0,
+  "result": {
+    "name": "main",
+    "protected": false,
+    "sha": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5"
+  },
+  "error": ""
+}
