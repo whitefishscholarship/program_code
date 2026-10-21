@@ -1,0 +1,168 @@
+{
+  "scope": "Prospective SD2 held-research closure contract draft and exact read-only/build blocker observations; no canonical activation",
+  "entryCommit": "901040e62d871f592f5600d366b3a19b39d08d07",
+  "candidateCommit": "5ab4fa4640e8e5525fccf886827b458375090fba",
+  "candidateTree": "f7c795560138c3f6aeb1989e0a6b9c6fcfced8b8",
+  "completeDiffSha256": "8a0b2b2a7de0daec86fe9d26eb633bed504646f6862a82fdaf0810cd123a8587",
+  "completeDiffBytes": 117358,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "525454a004499017ffd65140160c1d1020c5baee758e04414cc1bf3dcdaef44a",
+      "bytes": 781310
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "276d6650956fd9f2cc70c1a258aa893a70d0c1a743f5e40333a3f5e65336c7b1",
+      "bytes": 227020
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "f5450dda26bf6b3c9b457c34fe93aa35b5c8757a6833636ae95089891ffc0563",
+      "bytes": 183172
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/AUTHORITY.md",
+      "mode": "100644",
+      "sha256": "c69c3ccb5d4d468cce8a8e1f39b2789cc5dfebb4ae96470a0ab79e16e69a13c4",
+      "bytes": 1855
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/CONTRACT.md",
+      "mode": "100644",
+      "sha256": "4b1aa2a6eb9fbed649a648db4ad8a7d3de4cd2c904901572a387ea703ae31832",
+      "bytes": 6865
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "d63b626c3e8e68cc2c036b604fcdb081a2d31bfc2b3c83e8ce8db5c94bc993be",
+      "bytes": 1693
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "d2241e974dd619c723943461c8d028ebe5293be98b476ad83578951865546010",
+      "bytes": 3069
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/amendment-spec.json",
+      "mode": "100644",
+      "sha256": "83f08bf3d9fe38849e442fbf9063f69e73a31e7d0f8b8ada4f8c53e581f8cc42",
+      "bytes": 6341
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "935e50b5520aad5c63159f81dbc33e47c72f0a8b8438754e97c68ce928b27f3f",
+      "bytes": 1407
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/entry-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/cli-observations.json",
+      "mode": "100644",
+      "sha256": "fe9730a70b4ebffa6b41b51674b1cf03bf66e27a29965fae0eba0f20539f1958",
+      "bytes": 2925
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/connector-observations.json",
+      "mode": "100644",
+      "sha256": "54b16208ad69da254203398b5576bda99c973cd7ccbab47748cc4e236115d7b8",
+      "bytes": 2596
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/entry-audit.json",
+      "mode": "100644",
+      "sha256": "2f10c9d5a1d887e829927893ef6057a023c5e03a1c2b1cbf3d044e5f81008bf8",
+      "bytes": 1061
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/grounding.json",
+      "mode": "100644",
+      "sha256": "6a8f7b7cf276d08fff8358a8d517d97b66d986b1e5bfe14ba42768d3287d5e31",
+      "bytes": 2025
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/input-inventory.json",
+      "mode": "100644",
+      "sha256": "2d38c96fa904c2b0916062c7542224d3b6b2a89e4cd38dc77b2cef715fd977a6",
+      "bytes": 5523
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/open-items.json",
+      "mode": "100644",
+      "sha256": "2b06d2c54743fd9354bc505533ae91a97f35c35bf0f678cf96da0849e70e76ff",
+      "bytes": 36215
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/result.json",
+      "mode": "100644",
+      "sha256": "3fac848d559dede8f44cdd62aee961108161fa1c0b24352269a4e68d0901154b",
+      "bytes": 1026
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/run-validation.py",
+      "mode": "100644",
+      "sha256": "f9d3f3b5b10896c816a96001f22c2a63501eb7be89b48bec6fbe5d473a2ed703",
+      "bytes": 1964
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/validation.json",
+      "mode": "100644",
+      "sha256": "a30136cc7d6bee8249eeae3f3e646e6e605afeabd399bb36d5239cad947f9b0e",
+      "bytes": 4003
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/verification.json",
+      "mode": "100644",
+      "sha256": "e263a9b83e883746f4d60a3949bff341a3424ad703a636e4663182306a97a6bb",
+      "bytes": 979
+    },
+    {
+      "path": "docs/evidence/sd2-held-closure-contract-1/verify.py",
+      "mode": "100644",
+      "sha256": "3cd0bc556abe119ec4c99dc09692b18f40b9b6231bc89caa51c7061afa4dea71",
+      "bytes": 14460
+    }
+  ],
+  "overallExecutionStatus": "BLOCKED_BUILD_AND_ACCESS",
+  "canonicalActivation": false,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "originalSourceExecution": "FAIL",
+  "SD3Started": false
+}
