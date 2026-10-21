@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "docs/evidence/sd2-acceptance-readiness-1/verify.py"
+  ],
+  "startedAt": "2026-10-21T00:25:43.940939+00:00",
+  "completedAt": "2026-10-21T00:25:45.812971+00:00",
+  "exitCode": 0,
+  "result": {
+    "localObjectiveIntegrity": "PASS",
+    "reviewBound": false,
+    "canonicalAcceptanceReady": false,
+    "blockingAcceptanceGates": [
+      "G6",
+      "G8"
+    ],
+    "protectedPreEntryFiles": 3026,
+    "appendHistories": 3,
+    "inheritedItems": 13,
+    "originalGates": 14,
+    "inheritedAdditionalDispositions": 4,
+    "inheritedSupplementDispositions": 2,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false
+  }
+}

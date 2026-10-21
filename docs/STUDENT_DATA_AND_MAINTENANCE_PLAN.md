@@ -353,6 +353,29 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-ACCEPTANCE-READINESS-1-START -->
+# SD2 local acceptance-readiness decision
+
+Sole progress pointer:student-plan section9. Current packet:
+docs/evidence/sd2-acceptance-readiness-1/SESSION_CLOSE.md and NEXT_SESSION.md.
+Local assessment completion only matching manifest/PASSreview/direct-child receipt.
+Held/unknown outcomes permit a0accepted-fact/0accepted-mapping research closure
+proposal; canonical acceptance remains false. G6 operative contract and G8 supported
+exact build/fresh authenticated main-target remain open. No gate waiver.
+All397held/272quarantined/0cleared;original source execution FAIL permanent.
+No old research/reconciliation/synthetic/sufficiency repeat or new acquisition.
+All13items/14gates/4prior dispositions/2sufficiency supplements retain exact original
+owners/triggers/paths/actions; Kelsey/Jaycee/custody/privacy/native/student/publication/
+M1/SD5/reserved-effect gates remain. FullSD2incomplete;SD3closed.
+Before new paths at matching clean receipt:
+python3 docs/evidence/sd2-acceptance-readiness-1/verify.py --review-bound
+Verify immutable prior receipt and clean entry; never widen/replay old contexts.
+Next concrete route:NEXT_ACTION_PROPOSAL.md prospective held-outcome canonical
+contract plus G8 evidence, only under separately selected exact scope/effects.
+No generic readiness loop. No install/source/workbook/app/config/CI/canonical
+change/remoteGit/deployment/contact/monitoring orSD3. Never initialize/reset/replay.
+Stop beforeSD3. Next selected effort:High.
+<!-- SD2-ACCEPTANCE-READINESS-1-END -->
 <!-- SD2-DISPATCH-SUFFICIENCY-1-START -->
 # SD2 dispatch-evidence sufficiency checkpoint
 

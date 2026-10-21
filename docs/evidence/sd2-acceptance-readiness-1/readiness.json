@@ -1,0 +1,67 @@
+{
+  "assessmentStatus": "COMPLETE_ONLY_AT_MATCHING_INDEPENDENT_PASS_RECEIPT",
+  "canonicalAcceptanceReady": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "originalSourceExecution": "FAIL",
+  "heldResearchAccounting": "SUPPORTED_BY_EXISTING_INDEPENDENT_PACKAGE_REVIEW_ONLY",
+  "savedPositions": 794,
+  "namedInputs": 411,
+  "emptyPositions": 383,
+  "originalFieldDefinitions": 7547,
+  "originalHeldFields": 7518,
+  "originalProposedFields": 29,
+  "separateAppAwardIds": 411,
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "clearedForAcquisition": 0,
+  "result": "A zero-accepted-fact, zero-accepted-mapping held research closure can preserve explicit unknowns under the existing SD2 plan. Canonical acceptance is not ready because G6 and G8 remain open. No source reacquisition or rerun of the insufficiency decision is required merely to assess this closure path.",
+  "blockingAcceptanceGates": [
+    "G6",
+    "G8"
+  ],
+  "blockers": [
+    {
+      "id": "canonical-contract",
+      "gate": "G6",
+      "status": "OPEN_NOT_SELECTED",
+      "owner": "Codex governance; Kelsey selects canonical scope",
+      "trigger": "Separately selected prospective canonical SD2 held-outcome closure contract under existing section14 machinery",
+      "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/NEXT_ACTION_PROPOSAL.md",
+      "nextAction": "Prepare and independently review the prospective canonical acceptance contract before any canonical state transition. Preserve P0-P9, pointers and all historical attestations; do not waive G8 or accept facts/source execution."
+    },
+    {
+      "id": "supported-exact-build",
+      "gate": "G8",
+      "status": "OPEN_EPERM",
+      "owner": "Codex validation/governance",
+      "trigger": "Supported permitted execution context before canonical acceptance or selected release",
+      "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/validation.json",
+      "nextAction": "Obtain PASS for exact unchanged npm run build in supported context. Preserve actual failures; no alternate build, install, script/config/account change or waiver."
+    },
+    {
+      "id": "fresh-authenticated-main-target",
+      "gate": "G8",
+      "status": "UNVERIFIED_OUTSIDE_LOCAL_SCOPE",
+      "owner": "Codex validation/governance/delivery; Kelsey selects exact external verification effects",
+      "trigger": "Direct bounded authority for current authenticated repository/default-branch and existing target verification before acceptance/release",
+      "authoritativePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json#/gates/7",
+      "nextAction": "Verify current owner-authorized main and existing project/team/hostname through permitted authenticated read-only capability. Localrefs/provider history do not establish freshness; no remote read or release selected here."
+    }
+  ],
+  "retainedConditionalLimits": [
+    "Every identity/fact/duplicate/native/custody hold remains; no later accepted use inherits research completeness.",
+    "Human reviewer designation and exact Jaycee approvals remain without re-request or expansion.",
+    "Dispatch proof remains unavailable for future acquisition; all397targets held,272quarantined,0cleared.",
+    "Unknown/held outcome is not false/ineligible/no-restriction and never becomes student/runtime truth.",
+    "SD3/SD4/SD5/SD6 and every reserved effect remain separately gated."
+  ],
+  "noNewAcquisitionRequiredForHeldClosureAssessment": true,
+  "noClaimAllScholarshipFactsVerified": true,
+  "currentWorkbookOrHostedStateVerified": false,
+  "noCanonicalChangesAuthorized": true,
+  "actualModelAndEffort": "NOT_EXPOSED_TO_SESSION; later selected effort High recommended"
+}
