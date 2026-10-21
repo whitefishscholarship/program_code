@@ -1,0 +1,115 @@
+{
+  "status": "PROSPECTIVE_DRAFT_NOT_APPLIED",
+  "currentEntryCommit": "901040e62d871f592f5600d366b3a19b39d08d07",
+  "proposedRevision": 22,
+  "currentRevisionRequired": 21,
+  "canonicalActivation": false,
+  "proposedMaintenanceObject": "sd2ResearchClosure",
+  "canonicalStagePointersRemainNull": true,
+  "priorP0ThroughP9RemainAccepted": true,
+  "exactDenominator": {
+    "savedPositions": 794,
+    "namedInputs": 411,
+    "emptyPositions": 383,
+    "originalFieldDefinitions": 7547,
+    "heldFields": 7518,
+    "proposedFields": 29,
+    "separateAppAwardIds": 411,
+    "separateSourceLocators": 397,
+    "quarantines": 272
+  },
+  "inputReferences": [
+    {
+      "path": "docs/evidence/sd2-consolidation-package/final-manifest.json",
+      "sha256": "b9df62ae8748b16f81ff75c9e1a5d879641b512f653eb7f7a38089b0ebb71c93"
+    },
+    {
+      "path": "docs/evidence/sd2-consolidation-package/review.json",
+      "sha256": "18463accf7e49f06e26a007e7239e8edfff815ad65c7786d5013f6f9d9779cfe"
+    },
+    {
+      "path": "docs/evidence/sd2-consolidation-package/summary.json",
+      "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7"
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/manifest.json",
+      "sha256": "1a6459fe763bf559be39905963fca84d85140574259adb2b32080d6e65cada57"
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/review.json",
+      "sha256": "ebd11f04b336b210537f2d607ccc77a318e67f6372494e24c3ab17c183d312f4"
+    }
+  ],
+  "proposedImplementationAllowlist": [
+    "AGENTS.md",
+    "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+    "docs/BUILD_STATE.json",
+    "docs/DECISIONS.md",
+    "docs/CURRENT_HANDOFF.md",
+    "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+    "docs/evidence/PLAN-REV22.md",
+    "docs/evidence/PLAN-REV22-manifest.json",
+    "docs/reviews/PLAN-REV22.json",
+    "docs/kickoffs/PLAN-REV22-SD2-HELD-CLOSURE.md",
+    "web/scripts/sd2-held-closure-governance.ts",
+    "web/scripts/test-sd2-held-closure-governance.ts",
+    "web/scripts/validate-build-plan.ts",
+    "web/package.json"
+  ],
+  "notAnExecutablePatch": true,
+  "transition": {
+    "before": {
+      "status": "blocked-external",
+      "researchDeliverableComplete": false,
+      "fullSD2Complete": false,
+      "acceptedFacts": 0,
+      "acceptedMappings": 0,
+      "SD3Started": false
+    },
+    "after": {
+      "status": "accepted-held-research",
+      "researchDeliverableComplete": true,
+      "fullSD2Complete": true,
+      "acceptedFacts": 0,
+      "acceptedMappings": 0,
+      "SD3Started": false
+    },
+    "semantics": "Only a later prospectively accepted/delivered contract and a separately reviewed exact held-outcome closure candidate may make this transition. Complete means research accounting under explicit holds, never fact/source/mapping acceptance or automatic SD3 permission."
+  },
+  "activationPrerequisites": [
+    "Fresh same-scope authenticated main and project/team/domain proof; current404/403denials cannot satisfy it.",
+    "Actual exact unchanged build PASS in a supported permitted context, complete required validation, and binding to the closure candidate runtime/dependency bytes.",
+    "Normal section14 amendment authority/review/attestation/delivery requirements, including original G14 for any publication effects; current selection supplies no remote publication grant.",
+    "Independent prospective policy review before validator/state implementation; final exact-candidate review and canonical two-file direct-child attestation; no diagnostics suppression.",
+    "Fresh local revision/baseline/allowlist checks before applying proposed changes; if revision/baseline changes, stop and prospectively rebind a new candidate, never an old review."
+  ],
+  "proposedStateTransformation": [
+    "Keep all existing stage records, grants, amendment objects and historical proof unchanged.",
+    "Set planRevision22 only in a separately selected operative amendment; append its own attestation-gated object. No acceptance predeclaration.",
+    "Add one maintenance object sd2ResearchClosure using the exact local evidence references, frozen denominator and zero-accepted invariants. No second factual registry, Reviews queue or parallel stage array.",
+    "Initial maintenance status remains blocked-external while any prerequisite is missing; accepted-held-research is derived only from its own valid canonical closure attestation/delivery and original gate evidence.",
+    "Keep activeStageId and nextPermittedStageId null; SD3 and every later reserved effect need separate selection.",
+    "Delivery authority remains false/ungranted under this selection. Do not write fabricated true authority or add a new local-preparation exception to make validation green."
+  ],
+  "packageJsonOnlyPermittedDelta": "Append exactly one new focused governance test command to the complete existing test script, once; dependencies,lockfile,all other metadata/scripts unchanged. Do not implement before prospective policy review and activation prerequisites.",
+  "adversarialValidationRequirements": [
+    "Reject missing/extra/duplicate saved input or field accounting and denominator substitution.",
+    "Reject promotion of any original held/proposed field, candidate mapping or quarantined acquisition into accepted-use truth.",
+    "Reject altered original failed source status, replay history, approvals, manifests, rejected/final reviews or owner/trigger/path/action bindings.",
+    "Reject accepted transition with missing/stale/main-target-mismatched proof, failed/substitute build, false delivery authority, missing independent review or invalid attestation.",
+    "Reject SD3/pointer activation, workbook/source/client capability, runtime/catalog/config/CI changes or expanded implementation allowlist.",
+    "Reject changed historical accepted transition while permitting later separately governed evolution of current state; do not freeze all future runtime/state to this maintenance candidate."
+  ],
+  "currentOutcome": {
+    "contractDraftCompleteOnlyAtMatchingIndependentPassReceipt": true,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "originalSourceExecution": "FAIL",
+    "SD3Started": false
+  }
+}

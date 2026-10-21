@@ -1,0 +1,64 @@
+{
+  "scope": "Selected exact read-only repository/main and existing Vercel project/team/domain observations only; no authentication/account/permission/configuration changes",
+  "observations": [
+    {
+      "key": "repo",
+      "tool": "mcp__codex_apps__github_get_repo",
+      "args": {
+        "repository_full_name": "whitefishscholarship/program_code"
+      },
+      "startedAt": "2026-10-21 02:01:06 UTC",
+      "completedAt": "2026-10-21 02:01:07 UTC",
+      "isError": true,
+      "error_code": "NOT_FOUND",
+      "httpStatus": 404,
+      "errorMessage": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/repos#get-a-repository\",\"status\":\"404\"}"
+    },
+    {
+      "key": "branch",
+      "tool": "mcp__codex_apps__github_search_branches",
+      "args": {
+        "owner": "whitefishscholarship",
+        "repo_name": "program_code",
+        "query": "main",
+        "page_size": 10
+      },
+      "startedAt": "2026-10-21 02:01:07 UTC",
+      "completedAt": "2026-10-21 02:01:07 UTC",
+      "isError": true,
+      "error_code": "UNKNOWN",
+      "httpStatus": null,
+      "errorMessage": "InvalidInputException: Repository not found: whitefishscholarship/program_code"
+    },
+    {
+      "key": "project",
+      "tool": "mcp__codex_apps__vercel_get_project",
+      "args": {
+        "idOrName": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "teamId": "team_6CAjRq58n0WvAH49otKSQbA7"
+      },
+      "startedAt": "2026-10-21 02:01:07 UTC",
+      "completedAt": "2026-10-21 02:01:10 UTC",
+      "isError": true,
+      "error_code": "INVALID_ARGUMENT",
+      "httpStatus": 403,
+      "errorMessage": "Vercel API request failed (403: forbidden). Not authorized: Trying to access resource under scope \"whitefishscholarships-projects\". You must re-authenticate to this scope or use a token with access to this scope."
+    },
+    {
+      "key": "domains",
+      "tool": "mcp__codex_apps__vercel_list_project_domains",
+      "args": {
+        "idOrName": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+        "limit": 100,
+        "production": "true"
+      },
+      "startedAt": "2026-10-21 02:01:10 UTC",
+      "completedAt": "2026-10-21 02:01:12 UTC",
+      "isError": true,
+      "error_code": "INVALID_ARGUMENT",
+      "httpStatus": 403,
+      "errorMessage": "Vercel API request failed (403: forbidden). Not authorized: Trying to access resource under scope \"whitefishscholarships-projects\". You must re-authenticate to this scope or use a token with access to this scope."
+    }
+  ]
+}

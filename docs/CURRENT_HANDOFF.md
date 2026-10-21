@@ -1,3 +1,28 @@
+# SD2 held-research closure contract — draft prepared, execution blocked
+
+Sole progress pointer:student-plan section9. Current packet:
+docs/evidence/sd2-held-closure-contract-1/SESSION_CLOSE.md and NEXT_SESSION.md.
+Draft review/integrity only matching manifest/PASSreview/direct-child local receipt;
+canonical acceptance false. CONTRACT.md/amendment-spec.json define the concrete
+prospective closure and exact guarded transition; no canonical activation/waiver.
+GitHub connector/CLI404and Vercel connector403/CLI scope denial leave exact current
+main/project/domain unverified. Exact build remains process/port blocked. User-owned
+access restoration/supported execution context are next triggers, not another plan.
+Before new paths at matching clean receipt:
+python3 docs/evidence/sd2-held-closure-contract-1/verify.py --review-bound
+Continue already selected exact checks only after access/context changes; preserve
+original section14/G6/G8/G14 before any operative amendment or reserved effect.
+No completed draft/readiness/sufficiency/reconciliation/synthetic/source repeats.
+All13items/14gates/4dispositions/2sufficiency supplements/3readiness blockers and current
+observed blockers retain owners/triggers/paths/actions.397held/272quarantined/0cleared,
+sourceFAIL permanent;0accepted;fullSD2incomplete;SD3closed. No source/workbook/install/
+app/config/CI/canonical change/remoteGit mutation/deployment/contact/monitoring.
+Never initialize/reset/replay. Stop beforeSD3. Later permitted effort:High.
+
+Prior handoff exact below.
+
+---
+
 # SD2 local acceptance-readiness decision
 
 Sole progress pointer:student-plan section9. Current packet:
