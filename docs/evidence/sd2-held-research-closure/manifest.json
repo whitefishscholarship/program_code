@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "stageId": "SD2-HELD-RESEARCH",
+  "createdAt": "2026-10-21T03:57:04.642Z",
+  "baselineCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+  "candidateCommit": "8dc30ffd809a030764d0b7cf8115c040f5625a12",
+  "candidateTree": "17c9e84a93d24a3555ee5b2d7fe03e39dfa92f1d",
+  "completeDiffSha256": "6467ac60c4013bb76cceeb1f0dfd5fea14f333393a5c6787ea3cb38e44b5088e",
+  "completeDiffBytes": 40313,
+  "files": [
+    {
+      "path": "docs/BUILD_STATE.json",
+      "change": "present",
+      "sha256": "890639bb29e70a7dcd752edf81b8e89fd1cabb30903d29b007db32a0b05c774d",
+      "bytes": 92833,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "change": "present",
+      "sha256": "019ff1e65a4235ec2298e3bf2e8e842742e3b4b574510f01fa21ca36be1d9a29",
+      "bytes": 785395,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "change": "present",
+      "sha256": "b7bc127d4ea6843ce67b32d8bce0ad562f97285c8dc11ea6225fe2058a769b7e",
+      "bytes": 230397,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/authority.md",
+      "change": "present",
+      "sha256": "578c78d9c7e57e27db38a3c195f282e2349045a88af03bd6bba7238ebd5a93aa",
+      "bytes": 4952,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/build.log",
+      "change": "present",
+      "sha256": "a86d37e5b2d622f3c903ae7b29af34435e5824a8bc2e4215ca3c9698f7c5761f",
+      "bytes": 1154,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/diff.log",
+      "change": "present",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/observations.json",
+      "change": "present",
+      "sha256": "6b6696dbe11845921b278564aeb8ee2d4678dac95588c5f8b93f7440a8fbb50e",
+      "bytes": 8046,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/plan.log",
+      "change": "present",
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "bytes": 164,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/tests.log",
+      "change": "present",
+      "sha256": "0acf62633acf2d5838bca0c7fb1ca8f27ed6002a86f2b4fef8ec492161d180d3",
+      "bytes": 20348,
+      "mode": "100644"
+    },
+    {
+      "path": "docs/evidence/sd2-held-research-closure/typecheck.log",
+      "change": "present",
+      "sha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "bytes": 39,
+      "mode": "100644"
+    }
+  ],
+  "heldResearchProof": {
+    "schemaVersion": 1,
+    "selectedAt": "2026-10-21T03:49:12.861131+00:00",
+    "freezeAt": "2026-10-21T03:57:03+00:00",
+    "selectedEntryCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "baselineCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+    "candidateCommit": "8dc30ffd809a030764d0b7cf8115c040f5625a12",
+    "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da",
+    "authority": {
+      "authorized": true,
+      "evidenceSha256": "578c78d9c7e57e27db38a3c195f282e2349045a88af03bd6bba7238ebd5a93aa",
+      "scope": "SD2-HELD-RESEARCH"
+    },
+    "observations": [
+      {
+        "at": "2026-10-21T03:49:18.148815+00:00",
+        "mainCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+        "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+        "hostname": "web-two-gules-45.vercel.app",
+        "authenticated": true
+      },
+      {
+        "at": "2026-10-21T03:56:20.713183+00:00",
+        "mainCommit": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+        "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "teamId": "team_6CAjRq58n0WvAH49otKSQbA7",
+        "hostname": "web-two-gules-45.vercel.app",
+        "authenticated": true
+      }
+    ],
+    "checks": [
+      {
+        "command": "npm run plan:check",
+        "exitCode": 0,
+        "startedAt": "2026-10-21T03:51:03.671429+00:00",
+        "completedAt": "2026-10-21T03:53:10.706606+00:00",
+        "logPath": "docs/evidence/sd2-held-research-closure/plan.log",
+        "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+        "logBytes": 164,
+        "context": "Selected closure entry, delivered policy state before adding prospective pointer. Final candidate attested plan:check remains mandatory.",
+        "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+      },
+      {
+        "command": "npm run typecheck",
+        "exitCode": 0,
+        "startedAt": "2026-10-21T03:51:59.884518+00:00",
+        "completedAt": "2026-10-21T03:52:06.481494+00:00",
+        "logPath": "docs/evidence/sd2-held-research-closure/typecheck.log",
+        "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+        "logBytes": 39,
+        "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+      },
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "startedAt": "2026-10-21T03:52:06.482019+00:00",
+        "completedAt": "2026-10-21T03:53:22.296767+00:00",
+        "logPath": "docs/evidence/sd2-held-research-closure/tests.log",
+        "logSha256": "0acf62633acf2d5838bca0c7fb1ca8f27ed6002a86f2b4fef8ec492161d180d3",
+        "logBytes": 20348,
+        "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+      },
+      {
+        "command": "npm run build",
+        "exitCode": 0,
+        "startedAt": "2026-10-21T03:52:30.167611+00:00",
+        "completedAt": "2026-10-21T03:52:39.970468+00:00",
+        "logPath": "docs/evidence/sd2-held-research-closure/build.log",
+        "logSha256": "a86d37e5b2d622f3c903ae7b29af34435e5824a8bc2e4215ca3c9698f7c5761f",
+        "logBytes": 1154,
+        "executionContext": "User-operated existing Mac Terminal; exact npm run build with instrumented process result",
+        "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+      },
+      {
+        "command": "git diff --check",
+        "exitCode": 0,
+        "startedAt": "2026-10-21T03:53:22.297234+00:00",
+        "completedAt": "2026-10-21T03:53:22.323957+00:00",
+        "logPath": "docs/evidence/sd2-held-research-closure/diff.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "logBytes": 0,
+        "runtimeDigest": "86b4f66c96c15d6d42f41fc31c7eecab4dff62dc33ea98aecef04e949f4a75da"
+      }
+    ],
+    "originalGates": [
+      {
+        "id": "G1",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "satisfied"
+      },
+      {
+        "id": "G2",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G3",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G4",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G5",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "satisfied"
+      },
+      {
+        "id": "G6",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "satisfied"
+      },
+      {
+        "id": "G7",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G8",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "satisfied"
+      },
+      {
+        "id": "G9",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G10",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "preserved-held-not-accepted"
+      },
+      {
+        "id": "G11",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "separately-unstarted"
+      },
+      {
+        "id": "G12",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "separately-unstarted"
+      },
+      {
+        "id": "G13",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "separately-unstarted"
+      },
+      {
+        "id": "G14",
+        "bindingSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "disposition": "satisfied"
+      }
+    ]
+  }
+}
