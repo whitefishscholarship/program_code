@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "vercel",
+      "--global-config",
+      "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+      "--scope",
+      "team_6CAjRq58n0WvAH49otKSQbA7",
+      "whoami",
+      "--non-interactive"
+    ],
+    "startedAt": "2026-10-21T21:55:45.219023+00:00",
+    "completedAt": "2026-10-21T21:55:46.677540+00:00",
+    "exitCode": 0,
+    "observed": "whitefishscholarship",
+    "error": ""
+  },
+  {
+    "command": [
+      "vercel",
+      "--global-config",
+      "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+      "--scope",
+      "team_6CAjRq58n0WvAH49otKSQbA7",
+      "api",
+      "/v9/projects/prj_LbefE2deji6nPND6iBiuofe7IABv?teamId=team_6CAjRq58n0WvAH49otKSQbA7",
+      "--method",
+      "GET"
+    ],
+    "startedAt": "2026-10-21T21:55:46.678184+00:00",
+    "completedAt": "2026-10-21T21:55:47.535960+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+      "name": "web",
+      "accountId": "team_6CAjRq58n0WvAH49otKSQbA7",
+      "rootDirectory": "web",
+      "framework": "nextjs",
+      "link": {
+        "type": "github",
+        "repo": "program_code",
+        "repoId": 1177349487,
+        "org": "whitefishscholarship",
+        "productionBranch": "main"
+      },
+      "commandForIgnoringBuildStep": null,
+      "enableAffectedProjectsDeployments": false
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "vercel",
+      "--global-config",
+      "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+      "--scope",
+      "team_6CAjRq58n0WvAH49otKSQbA7",
+      "api",
+      "/v9/projects/prj_LbefE2deji6nPND6iBiuofe7IABv/domains/web-two-gules-45.vercel.app?teamId=team_6CAjRq58n0WvAH49otKSQbA7",
+      "--method",
+      "GET"
+    ],
+    "startedAt": "2026-10-21T21:55:47.536705+00:00",
+    "completedAt": "2026-10-21T21:55:48.549321+00:00",
+    "exitCode": 0,
+    "observed": {
+      "name": "web-two-gules-45.vercel.app",
+      "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+      "verified": true,
+      "gitBranch": null,
+      "redirect": null
+    },
+    "error": ""
+  }
+]

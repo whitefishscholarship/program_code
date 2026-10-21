@@ -1,0 +1,60 @@
+{
+  "outcome": "FAIL",
+  "reviewType": "independent actual integration re-review, pre-freeze; not canonical acceptance",
+  "reviewedAt": "2026-10-21T22:05:21.280940+00:00",
+  "reviewerWasAuthorOrEditor": false,
+  "files": [
+    {
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "sha256": "b5e449050512075fe3c5040af0e7000a4cf346641c492773592990cb533056b0"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/entry.py",
+      "sha256": "95c60200022f26b69f38414c8560558d3e99962d6b40592125d5f35835e238f6"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/test_adapter.py",
+      "sha256": "933bc65b85663e94fb964e45dde56b73810e827e31f4f69c1ac53cf08472ccad"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/control-pins.json",
+      "sha256": "31defc26bd58d1d1f3f6bc3ad303e8d2bb38986481e4b17e37cb932bfdc68951"
+    },
+    {
+      "path": "docs/evidence/sd2-new-observations-1/CONTROLS.md",
+      "sha256": "1cbefecf34fdf0f599bf12848070f486cafaea4b030aca7352fc3508d34ec62e"
+    }
+  ],
+  "resolvedFindings": [
+    {
+      "id": "H1",
+      "disposition": "resolved",
+      "evidence": "Exact absolute root/custody pins and atomic exclusive REGISTRY_REF shared across worktrees reject alternative paths and reprovisioning after store loss."
+    },
+    {
+      "id": "H2",
+      "disposition": "resolved for process interruption and local directory rollback",
+      "evidence": "Independent HEAD_REF is checked on audit and advanced by CAS after event/custody writes. Consistent local pair rollback and missing external cursor fail closed."
+    }
+  ],
+  "findings": [
+    {
+      "id": "H3",
+      "severity": "high",
+      "path": "docs/evidence/sd2-new-observations-1/adapter.py",
+      "title": "External Git registry/current-head durability is not hardened before dispatch",
+      "detail": "git helper invokes hash-object/update-ref with ambient defaults, and _append returns to source dispatch after update-ref without explicit durable reference/object barrier. core.fsync and core.fsyncMethod are unset in this environment. Installed Git2.54 manual documents default committed,-loose-object (not reference hardening) and macOS writeout-only fsyncMethod, which may lose data on system crash. External registry/head can therefore be lost or revert after dispatch; restored consistent old journal/custody snapshots could appear current, or lost singleton permit fresh provisioning. Atomic CAS alone establishes exclusion, not host-crash durability.",
+      "requiredRemediation": "Use explicit command-local fsync settings for loose objects and references with fsync method, establish any needed directory durability before dispatch/provision completion, fail closed on hardening failure, and test actual ordering/failure without real sources. Do not change global credentials/configuration.",
+      "evidence": "env MANPAGER=cat man git-config | col -b: core.fsync lines2593-2645; core.fsyncMethod lines2647-2656. git config --get core.fsync and core.fsyncMethod each yielded no configured value."
+    }
+  ],
+  "checks": {
+    "testInvocation": "python3 docs/evidence/sd2-new-observations-1/test_adapter.py",
+    "testResult": "PASS: 16 tests in40.799s",
+    "sourceProviderCalls": 0,
+    "realStoreProvisioning": 0,
+    "repositoryEdits": 0,
+    "historicalSyntheticSuiteReplayed": false
+  },
+  "limitations": "Static real transport/auth gate inspection and offline test execution only; no real-provider or source requests. Implementation changed concurrently after H3 identification; file hashes were captured at record writing time and may include subsequent remediation. This rejected record is diagnostic, not a candidate attestation."
+}

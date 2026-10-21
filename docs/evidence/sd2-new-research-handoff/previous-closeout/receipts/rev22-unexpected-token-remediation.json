@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-21T03:21:24.575131+00:00",
+  "scope": "Only exact single newly generated CLI token, creation timestamp matched triggering request within30seconds",
+  "createdAt": 1792552769090,
+  "revocationExitCode": 0,
+  "regenerate": false,
+  "remainingBypassTokenCount": 0,
+  "secretPrintedOrPersisted": false,
+  "configurationEffect": "CLI unexpectedly linked local ignored project and generated token; exact new token revoked. No protection mode changed.",
+  "previewHealthVerified": false,
+  "localLinkCleanup": [
+    {
+      "path": "web/.vercel/project.json",
+      "sha256": "660b54614f99df62a2158a3aef2a16d6ca51ce2de7440108de68ad2c38e1566b",
+      "createdBy": "unexpected CLI link at03:19:28Z"
+    },
+    {
+      "path": "web/.vercel/README.txt",
+      "sha256": "f5d1ed0f5032ae128931f46459b5faa1af6319fc2dfb3e7a5fe54a84bf93dbd6",
+      "createdBy": "unexpected CLI link at03:19:28Z"
+    }
+  ],
+  "localLinkDirectoryRemoved": true
+}

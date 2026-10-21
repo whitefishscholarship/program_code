@@ -1,0 +1,38 @@
+[
+  {
+    "command": "npm run plan:check",
+    "startedAt": "2026-10-21T22:10:41.034088+00:00",
+    "completedAt": "2026-10-21T22:11:55.749699+00:00",
+    "exitCode": 1,
+    "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/portable-plan.log.gz",
+    "rawSha256": "684e14999f6d1d064ddf0749b53e624229c2e77b7dfc41d6727b995cb5222f78",
+    "rawBytes": 243
+  },
+  {
+    "command": "npm run typecheck",
+    "startedAt": "2026-10-21T22:11:55.750257+00:00",
+    "completedAt": "2026-10-21T22:12:03.600386+00:00",
+    "exitCode": 0,
+    "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/portable-typecheck.log.gz",
+    "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+    "rawBytes": 39
+  },
+  {
+    "command": "npm test",
+    "startedAt": "2026-10-21T22:12:03.600878+00:00",
+    "completedAt": "2026-10-21T22:12:51.172777+00:00",
+    "exitCode": 0,
+    "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/portable-tests.log.gz",
+    "rawSha256": "c129f156c69ecb3af8ec646e4a91268266256e7dd59d895546c7dfc3ff84ed9c",
+    "rawBytes": 20457
+  },
+  {
+    "command": "npm run build",
+    "startedAt": "2026-10-21T22:12:51.173591+00:00",
+    "completedAt": "2026-10-21T22:12:58.376777+00:00",
+    "exitCode": 0,
+    "savedLogPath": "docs/evidence/sd2-new-observations-1/checks/portable-build.log.gz",
+    "rawSha256": "81471297d42671d23986c86cd668fd8d702e43bc03006d0b322d6bbde871df43",
+    "rawBytes": 1154
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "preMerge": {
+      "baseRefOid": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+      "headRefOid": "d5e31ec20d893c790451187f1904ae27d87988c3",
+      "mergeStateStatus": "CLEAN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-21T04:06:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/whitefishscholarship/program_code/actions/runs/39541876526/job/119031229740",
+          "name": "web",
+          "startedAt": "2026-10-21T04:02:54Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "StatusContext",
+          "context": "Vercel",
+          "startedAt": "2026-10-21T04:03:20Z",
+          "state": "SUCCESS",
+          "targetUrl": "https://vercel.com/whitefishscholarships-projects/web/BKBMLLkX1sscVEDeyHsjZH3HYwPh"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-21T04:03:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://vercel.com/github",
+          "name": "Vercel Preview Comments",
+          "startedAt": "2026-10-21T04:03:21Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ]
+    }
+  },
+  {
+    "at": "2026-10-21T04:06:56.075711+00:00",
+    "mergeExitCode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "postMerge": {
+      "headRefOid": "d5e31ec20d893c790451187f1904ae27d87988c3",
+      "mergeCommit": {
+        "oid": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5"
+      },
+      "mergedAt": "2026-10-21T04:06:54Z",
+      "state": "MERGED",
+      "url": "https://github.com/whitefishscholarship/program_code/pull/51"
+    }
+  },
+  {
+    "originalAccountRestored": true
+  }
+]

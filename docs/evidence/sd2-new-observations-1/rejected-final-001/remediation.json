@@ -1,0 +1,8 @@
+{
+  "owner": "Codex implementation author",
+  "finding": "Author-discovered pre-attestation CI portability defect: imported packet verification referenced local-only receipt62cc97b absent from fresh clone.",
+  "resolution": "Replace Git-object dependency with65-file path/mode/content digest inventory hash-pinned in validator; packet bytes unchanged. No acceptance gate/scope/control behavior changes.",
+  "originalAcceptedReviewPreserved": true,
+  "target": "replacement final candidate",
+  "recheck": "Required fresh-context reviewer rechecks replacement manifest and validator; exact build/typecheck/fulltests rerun for changed web inputs."
+}

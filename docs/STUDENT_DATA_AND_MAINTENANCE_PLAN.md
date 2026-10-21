@@ -2944,3 +2944,9 @@ execution, respecting canonical state/effects. Preserve cleanup and timer record
 No Sheet edit, source research, app release or monitoring activation is authorized
 merely by the saved plan. Verify the current checkpoint before continuing.
 ```
+
+<!-- REV24-START -->
+Selected enabling stage: canonical Revision24 policy/adapter/review/delivery only.
+Exact new campaign kickoff docs/kickoffs/PLAN-REV24-SD2-NEW-OBSERVATIONS.md.
+Historical failure/holds/approvals/routes stay unchanged. No source dispatch here.
+<!-- REV24-END -->

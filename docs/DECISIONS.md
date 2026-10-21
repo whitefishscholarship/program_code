@@ -856,3 +856,15 @@ and additive M1 setup record, preserving all prior records and null stage pointe
 Apply only the exact state-branch exclusion after prospective policy review. New
 Resend credential remains user-created/directly entered; existing full-access key
 is untouched. M2/source/send/state-ref/activation andSD3 stay off.
+
+## D-SD2-NEW-OBSERVATIONS-1 — new finite observations with old failure preserved
+
+Direct current-session authority selects the exact prepared 100-target campaign.
+Implement section19 and additive state/validator, then independent policy review
+before adapter edits. New observations cannot establish historical non-dispatch.
+Reject missing-log recovery, unknown-as-unused, hold resets, synthetic rework and SD3.
+The original handoff packet is imported byte-for-byte solely to preserve exact scope,
+authority and inherited routes; its historical verifier is not an activation gate.
+The exact first operative adapter is a direct HTTPS request with no redirects/retry,
+strict numeric projection and response rejection; fields outside projection stay held.
+Rollback requires later reviewed dispatch-disable governance; never delete reservations.

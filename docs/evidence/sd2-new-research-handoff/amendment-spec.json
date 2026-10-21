@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "kind": "EXACT_PROSPECTIVE_AMENDMENT_NOT_OPERATIVE",
+  "selectedBaseline": "304b80c4c3e5a31a606ce547b6b3de97ab47b8df",
+  "baselineIsFreshRemoteObservation": false,
+  "proposedRevision": 24,
+  "revisionCollisionRule": "Use24 only if fresh authenticated main is still23. If a newer unrelated revision exists, preserve it and use the next integer; do not re-plan or overwrite another amendment. Re-review exact resulting candidate.",
+  "stateTransition": {
+    "preserveAllExistingRootValuesExcept": [
+      "planRevision",
+      "lastUpdated",
+      "governance.planAmendments appended entry only"
+    ],
+    "planRevision": "current+1",
+    "lastUpdated": "actual implementation date",
+    "addRootKey": "sd2NewResearchCampaign",
+    "addRootValue": {
+      "contractId": "sd2-new-observations-v1",
+      "campaignId": "SD2-NEW-OBSERVATIONS-1",
+      "status": "blocked-pending-live-control-review",
+      "scopePath": "docs/evidence/sd2-new-research-handoff/scope.json",
+      "historicalClosurePath": "docs/evidence/sd2-held-research-closure/manifest.json#/heldResearchProof",
+      "historicalHoldsRetained": 397,
+      "historicalQuarantinesRetained": 272,
+      "historicalTargetsCleared": 0,
+      "historicalExecution": "FAIL",
+      "historicalNeverDispatchedProof": "NOT_ESTABLISHED",
+      "newObservationsStarted": false,
+      "acceptedFacts": 0,
+      "acceptedMappings": 0,
+      "SD3Started": false,
+      "sourceCount": 100,
+      "maxExplicitToolInvocations": 100,
+      "maxPerTarget": 1,
+      "maxConcurrent": 1,
+      "retryAllowed": false,
+      "workbookAccessAuthorized": false,
+      "nativeReadsAuthorized": false,
+      "monitoringAuthorized": false,
+      "factAcceptanceAuthorized": false,
+      "deliveryAuthorized": false,
+      "sourceExecutionAuthorizedAfterGates": true,
+      "controlsReviewPath": null,
+      "authorityPath": "docs/evidence/sd2-new-research-handoff/authority.md",
+      "owner": "Codex implementer and fresh independent reviewers",
+      "nextAction": "Implement new finite live integration and canonical amendment once; review frozen implementation; no dispatch before operative policy, exact preflight and independent control PASS."
+    },
+    "governanceRecord": "Append only one normal PLAN-REV<next> amendment object using existing schema; authorityPath points to original selected user instruction plus any separately supplied informed delivery grant. Never manufacture a granted delivery flag.",
+    "immutablePaths": [
+      "/sd2ResearchClosure",
+      "/m1Setup",
+      "/activeStageId",
+      "/nextPermittedStageId",
+      "/stages",
+      "/deployment existing grants"
+    ]
+  },
+  "planChange": {
+    "header": "advance current revision only",
+    "appendExactTextPath": "docs/evidence/sd2-new-research-handoff/proposed-plan-section.md",
+    "preserveExistingSections": true
+  },
+  "decisionsAppend": {
+    "title": "D-SD2-NEW-OBSERVATIONS-1 \u2014 new finite observations with old failure preserved",
+    "decision": "Allow only explicit new observations for the exact scope; never historical non-dispatch clearance. Recovering missing logs is not a dependency of this new grant.",
+    "alternativesRejected": [
+      "Recover/reanalyze unchanged missing logs",
+      "Treat unknown-dispatch as unused",
+      "Clear or reset old holds",
+      "Rebuild all completed synthetic controls",
+      "Begin SD3"
+    ],
+    "rollback": "Disable new campaign dispatch through later reviewed governance; preserve all spent reservations and evidence. Never delete/reset history."
+  },
+  "implementationAllowlist": [
+    "AGENTS.md",
+    "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
+    "docs/BUILD_STATE.json",
+    "docs/DECISIONS.md",
+    "docs/CURRENT_HANDOFF.md",
+    "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+    "docs/kickoffs/PLAN-REV<next>-SD2-NEW-OBSERVATIONS.md",
+    "docs/evidence/PLAN-REV<next>.md",
+    "docs/evidence/PLAN-REV<next>-manifest.json",
+    "docs/reviews/PLAN-REV<next>.json",
+    "web/scripts/validate-build-plan.ts",
+    "web/scripts/sd2-new-observations-governance.ts",
+    "web/scripts/test-sd2-new-observations-governance.ts",
+    "docs/evidence/sd2-new-observations-1/ new integration/evidence files only",
+    "web/package.json only append new governance/integration test commands, preserve all existing scripts/dependencies/metadata"
+  ],
+  "validatorRequirements": [
+    "Reject old failure/hold/quarantine/state-pointer or previous amendment mutation",
+    "Pin exact scope digest and user authority; reject target/tool/URL/budget expansion",
+    "Reject live activation without matched independently reviewed actual adapter and policy candidate",
+    "Reject stale/missing external receipts and missing immediate results; never infer unused",
+    "Reject facts/mappings acceptance, workbook/native/runtime/config/CI/monitoring/SD3 effects",
+    "Discover/preserve canonical historical attestations and require exact new direct-child manifest/review attestation"
+  ],
+  "activationOrder": [
+    "Implement exact prospective canonical policy and validator in dedicated coherent local commit",
+    "Fresh independent policy review before live-adapter implementation",
+    "Implement integration-specific control changes using existing synthetic durability code unchanged; no real source calls",
+    "Run required checks with honest supported-context limits; freeze complete exact amendment/control candidate",
+    "Fresh independent final review and exact direct-child two-file canonical attestation",
+    "Obtain actual plan PASS; deliver only if direct informed downstream-effect authority covers it",
+    "After canonical delivery/verification and control PASS, next bounded SD2 execution reads only selected safe sources; this setup session performs none"
+  ],
+  "acceptanceMeaning": "This package review accepts prospective handoff quality only; not canonical amendment, source safety, actual integration, facts or delivery.",
+  "enablingStageBoundary": "Canonical amendment and actual adapter/control implementation/review/delivery are one bounded enabling stage. Do not perform research calls in that stage; leave exact execution kickoff afterward. Prior selected research scope persists without another planning selection."
+}

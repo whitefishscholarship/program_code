@@ -1,3 +1,19 @@
+# Revision24 — SD2 enabling stage
+
+Plan revision: 24
+
+Baseline authenticated main304b80c4c3e5a31a606ce547b6b3de97ab47b8df.
+Policy accepted at6c15e35; actual adapter implemented and17integration tests pass.
+Actual control review PASS; final frozen review/attestation/delivery gates recorded
+at candidate freeze. Later delivery observations are external immutable receipts,
+linked from the authoritative SESSION_CLOSE.md.
+Authoritative continuation docs/evidence/sd2-new-observations-1/SESSION_CLOSE.md.
+No source dispatch in this stage. Preserve old FAIL397holds272quarantines0cleared,
+all original routes/approvals and Revision23M1. No workbook/facts/monitoring/SD3.
+Required final checks, independent reviews, attestation and delivery remain pending.
+
+---
+
 # Approved M1 setup/configuration release in progress
 
 Plan revision: 23

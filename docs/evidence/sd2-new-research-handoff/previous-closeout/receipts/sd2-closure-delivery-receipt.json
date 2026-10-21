@@ -1,0 +1,157 @@
+{
+  "recordedAt": "2026-10-21T04:13:28.739841+00:00",
+  "status": "PASS_HELD_RESEARCH_ACCOUNTING_CLOSED_AND_DELIVERED",
+  "scope": "Held research accounting closure only; not accepted scholarship truth or mapping/publication/SD3 authority",
+  "pr": "https://github.com/whitefishscholarship/program_code/pull/51",
+  "candidate": "8dc30ffd809a030764d0b7cf8115c040f5625a12",
+  "attestation": "d5e31ec20d893c790451187f1904ae27d87988c3",
+  "mergeCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+  "manifestSha256": "728b782ae5f78b6c00279fa57ab44f031ca9ffc129047ea5c1651a1281bd4688",
+  "independentReview": "accepted C0/H0/M0/L0",
+  "effective": {
+    "errors": [],
+    "status": "accepted-held-research",
+    "researchDeliverableComplete": true,
+    "fullSD2Complete": true,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "SD3Started": false
+  },
+  "rawStoredCompletionFlagsIntentionallyFalse": true,
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "clearedForAcquisition": 0,
+  "originalSourceExecution": "FAIL",
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false,
+  "preview": {
+    "providerState": "READY",
+    "exactAttestedHeadVerified": true,
+    "deploymentId": "dpl_BKBMLLkX1sscVEDeyHsjZH3HYwPh",
+    "healthRead": "Not attempted; protected access limit retained, no new token or permission created",
+    "verificationBasis": "Exact authenticated provider project/commit readiness and passing PR CI/runtime trace"
+  },
+  "production": {
+    "at": "2026-10-21T04:08:36.663970+00:00",
+    "canonicalHostname": "web-two-gules-45.vercel.app",
+    "healthStatus": 200,
+    "homeStatus": 200,
+    "commit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+    "deploymentId": "dpl_5kkHPPkB2jpVRUr1vrHqXfoAegJt",
+    "nonce": "b754fc74dced44d68b5183314be236ef",
+    "publicationAndCapabilitiesUnchangedFromVerifiedBaseline": true,
+    "acceptedMatchingFacts": 0,
+    "capabilities": {
+      "google": "none",
+      "drive": "none",
+      "sheets": "none",
+      "productionIngestion": "disabled",
+      "productionMutation": "disabled"
+    },
+    "healthSha256": "403fe57794e35c73db558657ce915e7497921bcffbeeafbdad7f07e0bd29100e"
+  },
+  "originalAttention": {
+    "path": "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-access-session-closeout/open-items.json",
+    "sha256": "1ee9f70fa2a6cdb0f8234b4d42e00665eac285c98f0822e2c0799516fdfb150d",
+    "allOriginalOwnersTriggersPathsActionsRetained": true
+  },
+  "nextOwner": "Every original recorded owner, as retained verbatim in originalAttention.path; Codex owns continuity of those routes",
+  "nextTrigger": "Each original evidence-arrival or later separately selected exact scope/effect trigger; accounting closure itself activates none",
+  "nextAction": "Use the original recorded path and next action only when its original prerequisites and scope/effect authority are satisfied. Preserve failed source history, all holds and zero accepted facts/mappings; do not start SD3.",
+  "futureAttentionRouting": "Every original open item retains its exact original owner/trigger/path/action. Research-accounting closure does not clear acquisitions, native/privacy/custody/identity/field holds or later-stage/effect requirements.",
+  "mainCI": {
+    "status": "success",
+    "runId": 39542247070,
+    "url": "https://github.com/whitefishscholarship/program_code/actions/runs/39542247070",
+    "headSha": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+    "requiredSteps": [
+      {
+        "name": "Run npm run plan:check",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run typecheck",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm test",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run npm run build",
+        "conclusion": "success"
+      },
+      {
+        "name": "Run node --import tsx scripts/p9-production-runtime.ts --require-build-trace",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "deliveredMainPlanCheck": {
+    "command": "npm run plan:check",
+    "startedAt": "2026-10-21T04:07:49.315431+00:00",
+    "completedAt": "2026-10-21T04:09:40.408017+00:00",
+    "exitCode": 0,
+    "head": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+    "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+  },
+  "trackedCheckout": "CLEAN exact merged/attested tree; historical manifest/review preserved",
+  "runtimeDependencyConfigCIChanges": 0,
+  "sourceWorkbookRequests": 0,
+  "newCredentialsAccessOrProtectionChanges": 0,
+  "pendingPRsDeploymentsAutomationsOrSourceRuns": 0,
+  "canonicalProofPath": "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-held-research-closure/manifest.json",
+  "canonicalReviewPath": "/private/tmp/program_code-student-data-maintenance-plan/docs/evidence/sd2-held-research-closure/review.json",
+  "completedScope": "Research outcome accounting under explicit holds, not current scholarship verification, field/identity acceptance, or later-stage publication/migration permission",
+  "deliveryEvidence": [
+    {
+      "path": "/private/tmp/sd2-closure-attested-plan.json",
+      "sha256": "00796af4512f08625fa94a2d9c2de7ebc036603456871795c5effeec3fb2f829"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-attested-plan.log",
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-publication.json",
+      "sha256": "00b39fbf454b759e11d6bf01fe88790a08b3292eacad144c4b2a8c1a0ed17cbc"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-pr-status.json",
+      "sha256": "5e4b9f1f6018aa68cc17cea669e808ed1ed4d1cae3575f71f2996472641ad13b"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-preview-inspect.json",
+      "sha256": "abd5a4579644acfaa0c03ae6ed1c62c1cc93451ee760688f229e8b1792ccaace"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-merge.json",
+      "sha256": "4f727f1fa611d87130e18c63c365ab966e7b152dbb3ac5443ef30dc03ad46733"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-production-inspect.json",
+      "sha256": "5796eb4c80db56a112119882e845cc3ce59c065854ea78ad9d8413f03f9003e8"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-production-verification.json",
+      "sha256": "19e8fa6b40980fad29717b002e764e1a934ae2ee3c036e2758d7575542e9a316"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-main-ci-final.json",
+      "sha256": "a24ba1376540154cef1c97f64bd6cd09395e21f7d6fc08da0ae93b8990484c99"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-main-plan.json",
+      "sha256": "379bae5520cada93041fb3951b46d499fff25ff785f67abcceadcd9e9ac0bd04"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-main-plan.log",
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "path": "/private/tmp/sd2-closure-effective-verification.json",
+      "sha256": "3555eff4ecef99c475523f5df7b7c52d55bc7e38fe6d758a107fb9ddc485e5a8"
+    }
+  ]
+}

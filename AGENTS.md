@@ -489,3 +489,9 @@ sd2ResearchClosure record is initially blocked; this amendment accepts no facts,
 identities or closure. Preserve all397holds/272quarantines, permanent source FAIL,
 0acceptedfacts/mappings and SD3false. Follow canonical section17 and section14;
 a later exact reviewed/delivered closure is distinct from this policy amendment.
+
+## Revision24 SD2 new-observation boundary
+
+Follow canonical section19 and docs/kickoffs/PLAN-REV24-SD2-NEW-OBSERVATIONS.md.
+This enabling stage performs no source requests. Old FAIL/397holds/272quarantines
+and all approvals/routes remain immutable; no workbook, fact acceptance or SD3.
