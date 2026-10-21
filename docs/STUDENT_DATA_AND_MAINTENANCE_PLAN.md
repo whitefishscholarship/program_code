@@ -353,6 +353,32 @@ This section is the sole project progress pointer; CURRENT_HANDOFF links here.
 Future data ledger and recurring Reviews table have their distinct factual jobs,
 not duplicate project progress trackers. Update this small block at every checkpoint:
 
+<!-- SD2-ACCESS-SESSION-CLOSEOUT-START -->
+# SD2 closeout — access verified, closure still blocked
+
+Sole progress pointer: student-plan section9. Current closeout:
+docs/evidence/sd2-access-session-closeout/SESSION_CLOSE.md and NEXT_SESSION.md.
+GitHub main verified at1c8e33f23beb55c2ed2ebe78fe4e256722af8392 using saved
+Whitefish login; prior active account restored. Isolated Vercel login now identifies
+whitefishscholarship; exact pinned web project/team/canonical domain verified.
+Point-in-time metadata only; build/runtime/release/whole-G8 proof not implied.
+Exact standard build remains blocked; concrete held-closure contract is still draft.
+Canonical revision21/null pointers unchanged. Existing section14/G6/G8/G14 govern.
+Before new paths at matching clean local receipt:
+python3 docs/evidence/sd2-access-session-closeout/verify.py --review-bound
+Preserve inherited13items/14gates/4dispositions/2sufficiency supplements/3readiness
+blockers/4oldblocker objects exactly; current session dispositions supply access
+resolution and every remaining owner/trigger/path/action. Profile continuity and
+verification limits are in SESSION_CLOSE and observations; no repeated login or
+resolved checks without freshness/access trigger. No orphan prior reviews/flows.
+No draft/readiness/sufficiency/reconciliation/synthetic/source repeat.397held,
+272quarantined,0cleared;sourceFAIL permanent;0accepted;fullSD2incomplete;SD3closed.
+No source/workbook/install/app/config/CI/canonical acceptance/remoteGit mutation/
+deployment/messages/monitoring. Never initialize/reset/replay. Stop beforeSD3.
+Next permitted work needs supported exact-build evidence and original canonical
+prerequisites. All M1/SD5/custody/privacy/native/student/publication/approval and
+reserved-effect triggers remain routed. Recommended next effort: High.
+<!-- SD2-ACCESS-SESSION-CLOSEOUT-END -->
 <!-- SD2-HELD-CLOSURE-CONTRACT-1-START -->
 # SD2 held-research closure contract — draft prepared, execution blocked
 

@@ -1,0 +1,29 @@
+{
+  "sessionStatus": "BLOCKED",
+  "localScope": "Verified account-specific exact target metadata and durable no-loss session handoff only",
+  "canonicalContractApplied": false,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "originalSourceExecution": "FAIL",
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "clearedForAcquisition": 0,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+  "repositoryMain": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "exactCliAccessVerified": true,
+  "requiredBuildGateOpen": true,
+  "requiredCheckExitCodes": [
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "noSourceOrWorkbookRequests": true,
+  "noRemoteGitMutationOrDeployment": true,
+  "canonicalPlanStateValidatorUnchanged": true
+}
