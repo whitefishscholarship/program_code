@@ -1,0 +1,149 @@
+{
+  "scope": "Local no-loss closeout with authorized account-specific exact metadata observations; no canonical activation or acceptance",
+  "entryCommit": "49a978544ee158b0cc87841e0d94c30c53aa0596",
+  "candidateCommit": "f3e145dd4668d10613057a5f41ed0c5003ec80af",
+  "candidateTree": "6d8a10df9096f3a651b82b09bf30c67214964a52",
+  "completeDiffSha256": "5847c1453d569d4b2ed9e2a29c723d7507d70c4e16968bd029a1daaa8790e40e",
+  "completeDiffBytes": 101648,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "1900fd2b89371b9c14b2b8204bf488791ab006ee14ba94c501169f63e73352c5",
+      "bytes": 783123
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "2d47fae159445dc9d8e8d885db92e8d3e4702e1f6ccce5ac7a1ba764b38d8079",
+      "bytes": 228883
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/AUTHORITY.md",
+      "mode": "100644",
+      "sha256": "99ae4302666940eafefbc87278dea90cd1fbf745e45dc4864a8ce5387dfdf758",
+      "bytes": 1310
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "2c745f19e0e2c1f9a77bfb5082ccdfdd4ad4639868b76c31bb90ccd42252d45a",
+      "bytes": 1505
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "9be158cd84e847f1c71f97c676adea8eee9d5befed94252b9ffe427258fd7a14",
+      "bytes": 5132
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "55f18deef985c173f957fe7155ce0049f5ec0de12c3bf4d7a1b751be05b22fa3",
+      "bytes": 1408
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/entry-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/entry-audit.json",
+      "mode": "100644",
+      "sha256": "f9e08baf99c0e0771ec764f8fea072c270ed5a541f4b4904f66decf5e3c69ad6",
+      "bytes": 1127
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/github-observations.json",
+      "mode": "100644",
+      "sha256": "09f0a24e830bb92822a8c6ed8a6815a08403917eed22c437e110ff80507a32e5",
+      "bytes": 2301
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/grounding.json",
+      "mode": "100644",
+      "sha256": "53f16e4f1e804f718605919efe14fefc53b700ebd2cfda6316fd6cf499d0103d",
+      "bytes": 2205
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/open-items.json",
+      "mode": "100644",
+      "sha256": "1ee9f70fa2a6cdb0f8234b4d42e00665eac285c98f0822e2c0799516fdfb150d",
+      "bytes": 43100
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/result.json",
+      "mode": "100644",
+      "sha256": "81303187d2bfed6f1d76bc34a64cf2070b3b4fd4bdd688b51978cbd170b9a488",
+      "bytes": 809
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/run-validation.py",
+      "mode": "100644",
+      "sha256": "211fe5c19174a11af0dafe1d9fd75642600057b905cbe9b0b46b3bd3c6e18b09",
+      "bytes": 1963
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/validation.json",
+      "mode": "100644",
+      "sha256": "be443384ed023e28f229efc28b6f7f3651a381102149ade297212cde831bf2c5",
+      "bytes": 3903
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/vercel-observations.json",
+      "mode": "100644",
+      "sha256": "81d669dccfe0a9508a8e5ba27adde1beddb062574946c6be37b7a5dbc8185f2e",
+      "bytes": 2850
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/verification.json",
+      "mode": "100644",
+      "sha256": "0370d975f22f6dafef4b37e6ccee9aa632224adfde9ffb5f0b310604692b45bf",
+      "bytes": 645
+    },
+    {
+      "path": "docs/evidence/sd2-access-session-closeout/verify.py",
+      "mode": "100644",
+      "sha256": "7429bb481abad24b524a561a4a801e7500575fe4be51da79fe87d3d0e63dec49",
+      "bytes": 10182
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "d24699eb5a3c1a65c06ff3ffef935f30a2360b89682e51f740bcfe8e3682501a",
+      "bytes": 184985
+    }
+  ],
+  "sessionStatus": "BLOCKED",
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "originalSourceExecution": "FAIL",
+  "acceptedFacts": 0,
+  "acceptedMappings": 0
+}
