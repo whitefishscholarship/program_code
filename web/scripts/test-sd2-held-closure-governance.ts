@@ -1,6 +1,9 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { SD2_GATE_DISPOSITIONS, deriveHeldClosure, validateHeldState, SD2_DENOMINATOR, type HeldState } from './sd2-held-closure-governance';
+import os from 'node:os';
+import path from 'node:path';
+import {execFileSync} from 'node:child_process';
+import { validateClosureScopeAtRepo, closureScopeErrors, validateHeldAtRepo, SD2_GATE_DISPOSITIONS, deriveHeldClosure, validateHeldState, SD2_DENOMINATOR, type HeldState } from './sd2-held-closure-governance';
 const state: HeldState = JSON.parse(fs.readFileSync('../docs/BUILD_STATE.json','utf8'));
 assert.deepEqual(validateHeldState(state), []);
 let cases=0;
@@ -42,3 +45,39 @@ for(const change of [
 (p:typeof proof)=>{p.originalGates[0].bindingSha256='c'.repeat(64);},
 ]) {const p=structuredClone(proof);change(p);assert.ok(deriveHeldClosure(p,context).errors.length);}
 console.log('Future SD2 closure: synthetic valid proof and delivery/missing/stale/mismatch/substitute-build negatives passed; no real closure accepted');
+
+// Exercise the actual immutable-candidate adapter rather than only the pure gate.
+const head=execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim();
+const malformed=structuredClone(state);
+malformed.sd2ResearchClosure!.closureAttestation={manifestPath:'docs/evidence/elsewhere/manifest.json',reviewPath:'docs/reviews/elsewhere.json',proofPath:'ignored'};
+assert.ok(validateHeldAtRepo('..',malformed,head).some(e=>e.includes('exact future closure proof routes')));
+for(const p of ['web/src/app/page.tsx','web/package-lock.json','web/package.json','.github/workflows/ci.yml','vercel.json','web/src/lib/studentCatalog.ts']) {
+  assert.ok(closureScopeErrors([{path:p,before:'100644 blob old',after:'100644 blob new'}]).length);
+  assert.ok(closureScopeErrors([{path:p,before:null,after:'100644 blob new'}]).length);
+  assert.ok(closureScopeErrors([{path:p,before:'100644 blob old',after:'100755 blob old'}]).length);
+  assert.deepEqual(closureScopeErrors([{path:p,before:'100644 blob same',after:'100644 blob same'}]),[]);
+}
+console.log('Repo adapter rejects unchecked live proof routes; future closure scope rejects runtime/dependency/config/CI edits, additions and mode changes while permitting unchanged evolved baseline');
+
+const fixture=fs.mkdtempSync(path.join(os.tmpdir(),'sd2-closure-scope-'));
+try {
+  const git=(...args:string[])=>execFileSync('git',args,{cwd:fixture,encoding:'utf8',stdio:['ignore','pipe','pipe']}).trim();
+  git('init');
+  const files=['web/src/app/page.tsx','web/package-lock.json','web/package.json','.github/workflows/ci.yml','vercel.json'];
+  for(const p of files) {fs.mkdirSync(path.dirname(path.join(fixture,p)),{recursive:true});fs.writeFileSync(path.join(fixture,p),'baseline\n');}
+  git('add','.');git('-c','user.name=Synthetic test','-c','user.email=synthetic@example.invalid','commit','-m','baseline');
+  const base=git('rev-parse','HEAD');
+  assert.deepEqual(validateClosureScopeAtRepo(fixture,base,base),[]);
+  for(const p of files.slice(0,4)) fs.writeFileSync(path.join(fixture,p),'unauthorized candidate change\n');
+  fs.chmodSync(path.join(fixture,'vercel.json'),0o755);
+  git('add','.');git('-c','user.name=Synthetic test','-c','user.email=synthetic@example.invalid','commit','-m','bad closure');
+  const bad=git('rev-parse','HEAD');
+  const failures=validateClosureScopeAtRepo(fixture,base,bad);
+  for(const p of files) assert.ok(failures.some(e=>e.endsWith(p)),p);
+  assert.deepEqual(validateClosureScopeAtRepo(fixture,bad,bad),[],'independently evolved baseline does not freeze later runtime');
+  fs.mkdirSync(path.join(fixture,'docs/evidence/sd2-held-research-closure'),{recursive:true});
+  fs.writeFileSync(path.join(fixture,'docs/evidence/sd2-held-research-closure/build.log'),'synthetic log\n');
+  git('add','.');git('-c','user.name=Synthetic test','-c','user.email=synthetic@example.invalid','commit','-m','proof only');
+  assert.deepEqual(validateClosureScopeAtRepo(fixture,bad,git('rev-parse','HEAD')),[]);
+} finally {fs.rmSync(fixture,{recursive:true,force:true});}
+console.log('Actual Git fixture: runtime/package/lock/CI edits and config mode change rejected; proof-only scope and evolved baseline accepted');

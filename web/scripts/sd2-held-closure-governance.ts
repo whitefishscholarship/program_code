@@ -124,6 +124,7 @@ export function validateHeldAtRepo(root: string, current: HeldState, candidate?:
     }
     // This amendment does not license a later mutable completion marker.
     // A separately governed closure must add its own canonical proof validation.
+    errors.push(...validateHeldState({...s, sd2ResearchClosure: current.sd2ResearchClosure}));
     if (!current.sd2ResearchClosure) errors.push('SD2 held closure: maintenance record cannot be removed');
     if (current.sd2ResearchClosure) {
       const initial = {...s.sd2ResearchClosure, closureAttestation: null};
@@ -172,6 +173,21 @@ export function deriveHeldClosure(proof: ClosureProof, context: ClosureContext) 
 }
 
 
+export const SD2_CLOSURE_PATHS = [
+  'docs/BUILD_STATE.json','docs/CURRENT_HANDOFF.md','docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md',
+  ...['authority.md','plan.log','typecheck.log','tests.log','build.log','diff.log','observations.json','manifest.json','review.json'].map(p=>'docs/evidence/sd2-held-research-closure/'+p),
+];
+export function closureScopeErrors(changes:Array<{path:string;before:string|null;after:string|null}>) {
+  return changes.filter(c=>!SD2_CLOSURE_PATHS.includes(c.path) && c.before!==c.after).map(c=>'closure outside exact governance scope '+c.path);
+}
+export function validateClosureScopeAtRepo(root:string,baseline:string,candidate:string):string[] {
+  try {
+    const git=(...args:string[])=>execFileSync('git',args,{cwd:root,maxBuffer:128*1024*1024});
+    const entries=(commit:string)=>new Map(git('ls-tree','-r','-z',commit).toString().split('\0').filter(Boolean).map(row=>{const [meta,p]=row.split('\t');return[p,meta];}));
+    const before=entries(baseline),after=entries(candidate);
+    return closureScopeErrors([...new Set([...before.keys(),...after.keys()])].map(p=>({path:p,before:before.get(p)??null,after:after.get(p)??null})));
+  } catch(e) {return ['closure scope Git comparison failed: '+(e as Error).message];}
+}
 export function validateClosureProofAtRepo(root:string, proof:ClosureProof, context:ClosureContext):string[] {
   const errors=deriveHeldClosure(proof,context).errors;
   try {
@@ -192,6 +208,16 @@ export function validateClosureProofAtRepo(root:string, proof:ClosureProof, cont
     const closureEntries=new Map(git('ls-tree','-r','-z',proof.candidateCommit,'--','docs/evidence','docs/reviews').toString().split('\0').filter(Boolean).map(row=>{const [meta,p]=row.split('\t');return[p,meta];}));
     for (const row of originalEntries) {const [meta,p]=row.split('\t');if(closureEntries.get(p)!==meta) errors.push(`closure changed protected history ${p}`);}
 
+    errors.push(...validateClosureScopeAtRepo(root,proof.baselineCommit,proof.candidateCommit));
+    const baselineState=JSON.parse(git('show',`${proof.baselineCommit}:docs/BUILD_STATE.json`).toString());
+    const nextState=JSON.parse(git('show',`${proof.candidateCommit}:docs/BUILD_STATE.json`).toString());
+    nextState.sd2ResearchClosure.closureAttestation=baselineState.sd2ResearchClosure.closureAttestation;
+    if(!isDeepStrictEqual(nextState,baselineState)) errors.push('closure changed state beyond its canonical proof pointer');
+    for(const p of ['docs/CURRENT_HANDOFF.md','docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md']) {
+      const before=git('show',`${proof.baselineCommit}:${p}`).toString();
+      const after=git('show',`${proof.candidateCommit}:${p}`).toString();
+      if(!after.endsWith(before)) errors.push('closure did not preserve complete handoff history '+p);
+    }
     const tree=git('ls-tree','-r',proof.candidateCommit,'--','web');
     if (createHash('sha256').update(tree).digest('hex')!==context.runtimeDigest) errors.push('runtime/dependency tree mismatch');
     const gates=git('show',`${proof.candidateCommit}:docs/evidence/sd2-consolidation-package/acceptance-gates.json`);
