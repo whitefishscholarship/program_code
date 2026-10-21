@@ -1,0 +1,13 @@
+{
+  "reviewPath": "docs/evidence/sd2-autonomous/research-review-round1.json",
+  "dispositions": [
+    {
+      "findingId": "SD2-RESEARCH-L1",
+      "severity": "low",
+      "disposition": "fixed",
+      "rationale": "Ted sanitized receipt now exactly equals source artifact; transcription restoration explicitly recorded in receipt/sourceRegistry; original source/artifact hashes and344factual values unchanged.",
+      "owner": "Codex author",
+      "target": "before final research review binding"
+    }
+  ]
+}

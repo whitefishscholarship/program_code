@@ -1,0 +1,87 @@
+{
+  "sources": [
+    {
+      "sourceId": "wai",
+      "originalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "finalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "statusCode": 200,
+      "callStartedAt": "2026-10-15T06:17:08.269Z",
+      "callCompletedAt": "2026-10-15T06:17:12.902Z",
+      "originalConversionCharacters": 59587,
+      "selectedCharacters": 9104,
+      "rawArtifactRetained": false,
+      "sourceRevision": null,
+      "originFreshnessVerified": false,
+      "provider": "Firecrawl connector",
+      "maxAgeRequested": 0,
+      "redactPIIRequested": true
+    },
+    {
+      "sourceId": "wma",
+      "originalUrl": "https://womenmilitaryaviators.org/dream-of-flight-scholarship/",
+      "finalUrl": "https://womenmilitaryaviators.org/dream-of-flight-scholarship/",
+      "statusCode": 200,
+      "callStartedAt": "2026-10-15T06:17:08.270Z",
+      "callCompletedAt": "2026-10-15T06:17:19.795Z",
+      "originalConversionCharacters": 4662,
+      "selectedCharacters": 1927,
+      "rawArtifactRetained": false,
+      "sourceRevision": null,
+      "originFreshnessVerified": false,
+      "provider": "Firecrawl connector",
+      "maxAgeRequested": 0,
+      "redactPIIRequested": true
+    },
+    {
+      "sourceId": "papa",
+      "originalUrl": "https://www.asianpilots.org/scholarships",
+      "finalUrl": "https://www.asianpilots.org/scholarships",
+      "statusCode": 200,
+      "callStartedAt": "2026-10-15T06:17:08.270Z",
+      "callCompletedAt": "2026-10-15T06:17:23.211Z",
+      "originalConversionCharacters": 3879,
+      "selectedCharacters": 3517,
+      "rawArtifactRetained": false,
+      "sourceRevision": null,
+      "originFreshnessVerified": false,
+      "provider": "Firecrawl connector",
+      "maxAgeRequested": 0,
+      "redactPIIRequested": true
+    },
+    {
+      "sourceId": "epic",
+      "originalUrl": "https://epicflightacademy.com/aviation-scholarship/",
+      "finalUrl": "https://epicflightacademy.com/aviation-scholarship/",
+      "statusCode": 200,
+      "callStartedAt": "2026-10-15T06:17:08.270Z",
+      "callCompletedAt": "2026-10-15T06:17:26.533Z",
+      "originalConversionCharacters": 18442,
+      "selectedCharacters": 5062,
+      "rawArtifactRetained": false,
+      "sourceRevision": null,
+      "originFreshnessVerified": false,
+      "provider": "Firecrawl connector",
+      "maxAgeRequested": 0,
+      "redactPIIRequested": true
+    }
+  ],
+  "sourcePolicyDeviations": [
+    {
+      "issue": "One selected WAI WMA profile preview included a trailing unrelated recipient-caption fragment. Final artifacts must omit it; earlier tool output is not erased.",
+      "owner": "Codex source/evidence owner",
+      "trigger": "Before every source output and SD2 consolidation",
+      "nextAction": "Narrow exact selected program boundaries and independently sanitize all values; do not forward headings/captions outside selected scope."
+    },
+    {
+      "issue": "A subsequent token-context preview selected TOC/unrelated neighboring biography and donation/contact framing. No such values will be retained in selected artifacts; historical output is not erased.",
+      "owner": "Codex source/evidence owner",
+      "trigger": "Before every source output and SD2 consolidation",
+      "nextAction": "Use exact independently observed program boundaries; exclude biography, recipient captions, contacts and unrelated navigation before output/persistence."
+    }
+  ],
+  "limits": [
+    "Readable converted selections only; no native PDF/page/image/table/form completeness or source silence proof.",
+    "Call timestamps measure tool dispatch/completion; provider source revision/origin freshness/public-route usability unknown.",
+    "One new retrieval per unique pinned URL; no form, login, contact, wider search or completed-input replay."
+  ]
+}

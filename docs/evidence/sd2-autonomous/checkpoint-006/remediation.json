@@ -1,0 +1,35 @@
+{
+  "originalCandidate": "cdac48be73cf24de68cd16b34621da722b9bad8d",
+  "originalManifestSha256": "7be8d90c79295975437372cc101f5631108f71ec301ec61fbdaf214a018dd623",
+  "recordedAt": "2026-10-14T21:53:00.084105+00:00",
+  "requiredFixCount": 2,
+  "dispositions": [
+    {
+      "findingId": "SD2-006-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Preserve explicit local-high-school-senior condition with exact source evidence and route; conditional homeschool slot separately retained, no exclusion/current acceptance.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint006 candidate",
+      "paths": [
+        "docs/evidence/sd2-autonomous/checkpoint-006.json",
+        "docs/evidence/sd2-autonomous/checkpoint-006/README.md",
+        "docs/evidence/sd2-autonomous/checkpoint-006/verify.py"
+      ]
+    },
+    {
+      "findingId": "SD2-006-M2",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Preserve graduating-senior requirement and parent high-school location with exact evidence/route; applicant residence remains unknown, destination/raw/visual/completeness conflicts unchanged.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint006 candidate",
+      "paths": [
+        "docs/evidence/sd2-autonomous/checkpoint-006.json",
+        "docs/evidence/sd2-autonomous/checkpoint-006/README.md",
+        "docs/evidence/sd2-autonomous/checkpoint-006/verify.py"
+      ]
+    }
+  ],
+  "noSourceRefreshOrReplay": true
+}

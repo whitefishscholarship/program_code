@@ -1,0 +1,35 @@
+{
+  "scope": "Exact field-specific saved context supplement;not new capture,complete source or acceptance",
+  "passages": [
+    {
+      "savedInputKey": "saved-405588227-row-24",
+      "field": "disabilityCriterion",
+      "sourceId": "wells",
+      "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-002/sources/wells.md",
+      "artifactSha256": "27d01e8c37d407c7581a4813fe07e541198c31218c4cd82115dcc2c32d5d3cb9",
+      "startCharacter": 1567,
+      "endCharacter": 1738,
+      "quote": "- Have an identified disability (defined as someone who has, or considers themselves to have, a long-term or recurring issue that impacts one or more major life activity)."
+    },
+    {
+      "savedInputKey": "saved-405588227-row-25",
+      "field": "needRequirement",
+      "sourceId": "gianforte",
+      "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-002/sources/gianforte.md",
+      "artifactSha256": "16d3cbb370ee2e45cf8686575e2d65bd2bcb7303f3388cea90a5d19eaf10ea46",
+      "startCharacter": 1494,
+      "endCharacter": 1604,
+      "quote": "Have Unmet Need (Cost of Attendance minus Student Aid Index SAI minus other aid except\n    loans = Unmet Need)"
+    },
+    {
+      "savedInputKey": "saved-405588227-row-25",
+      "field": "deadline",
+      "sourceId": "gianforte",
+      "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-002/sources/gianforte.md",
+      "artifactSha256": "16d3cbb370ee2e45cf8686575e2d65bd2bcb7303f3388cea90a5d19eaf10ea46",
+      "startCharacter": 1115,
+      "endCharacter": 1143,
+      "quote": "Spring semester - February 1"
+    }
+  ]
+}

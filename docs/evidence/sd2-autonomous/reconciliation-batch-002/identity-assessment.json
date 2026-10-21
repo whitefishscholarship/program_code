@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "savedRowLocator": 2,
+      "displayLabel": "Ted Lund Scholarship",
+      "publicIdCandidates": [
+        "award-577dacb8c225"
+      ],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "SD1 corroborates an existing mapped candidate by unique app name/source locator; saved Ted native metadata and text support document continuity. It remains a candidate, not formal accepted identity, current public custody or an accepted athletics restriction.",
+      "minimumAdditionalProof": "Publisher/public-access and applicable-cycle identity/candidate validation; explicit eligibility before any hard athletic rule.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "source evidence considered below; no accepted identity/mapping"
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/2"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/17"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/sources/ted-2026.md",
+          "sha256": "5feebf6ba8dc3141f9b2fd6872cd5b18aad0a459e3b2d4c9daefcf4112521ad6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/native-receipts.json",
+          "sha256": "303a21645274402fc4702fe14805239b922e3f4e096454d017fb049f2afd4c54",
+          "pointer": "/2"
+        },
+        {
+          "path": "docs/evidence/sd1/pilot.json",
+          "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "docs/evidence/sd1/review.json",
+          "sha256": "85f6dfdef803595999efc3a17d38eaec93aa6374054f31feaa5aa747b2cc21d7",
+          "pointer": ""
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    },
+    {
+      "savedRowLocator": 3,
+      "displayLabel": "Saved ADHD-labeled record",
+      "publicIdCandidates": [],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "No public ID candidate. Parent names Anne Ford and Allegra Ford Thomas with distinct scopes; neither identifies the generic input. Preserve the original identity hold without deletion, substitution, merging or ID allocation.",
+      "minimumAdditionalProof": "Evidence identifying the original generic input and its relationship to any specifically named program, or a retained unsupported-identity disposition.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "Held: parent has two different named student awards with documentedLD requirement; source does not identify the original generic ADHD record."
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/3"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/sources/ncld.md",
+          "sha256": "77579b0fe567ad56e4c649ad644ba8f4a2b8cff0c667daa78e2d79efae194cbd",
+          "pointer": ""
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    },
+    {
+      "savedRowLocator": 4,
+      "displayLabel": "Adoption STAR Academic Scholarship",
+      "publicIdCandidates": [
+        "award-2a22470d390c"
+      ],
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "Saved academic-program title/criteria support the existing Adoption STAR academic candidate. That does not establish accepted mapping/current offering or any relationship to sibling/adoption grants. Preserve must/should qualifiers.",
+      "minimumAdditionalProof": "Formal academic-program candidate validation, applicable-cycle evidence and any claimed route/public identity proof.",
+      "originalIdentityProposal": {
+        "status": "held",
+        "basis": "source evidence considered below; no accepted identity/mapping"
+      },
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/4"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/sourceRegistry/2"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/sources/adoption.md",
+          "sha256": "97d1558cfae1f65f654456d974b7eda96b2359cf82fe6a4bfdea43271c42f829",
+          "pointer": ""
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+          "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+          "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+          "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c",
+          "pointer": ""
+        }
+      ],
+      "originalRoute": {
+        "owner": "Codex research/proposals",
+        "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+        "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+      },
+      "nextAction": "Retain exact original mapping/identity state; propose missing proof only.",
+      "acceptedMapping": false,
+      "newIdentityAllocated": false
+    }
+  ],
+  "acceptedMappings": 0,
+  "newStableIds": 0,
+  "deletedInputs": 0,
+  "mergedInputs": 0,
+  "childAwardsCreated": 0,
+  "completePopulationIdentityReconciliation": false,
+  "SD3Started": false
+}

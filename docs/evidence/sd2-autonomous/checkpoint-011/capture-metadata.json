@@ -1,0 +1,147 @@
+{
+  "calls": [
+    {
+      "id": "wai",
+      "start": "2026-10-15T04:25:47.213Z",
+      "end": "2026-10-15T04:25:50.525Z",
+      "url": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "finalUrl": "https://assets.noviams.com/novi-file-uploads/wai/WAI2027_Scholarships/WAI2027_Scholarship_Listings.pdf",
+      "statusCode": 200,
+      "convertedCharacters": 59587,
+      "request": {
+        "formats": [
+          "markdown"
+        ],
+        "onlyMainContent": true,
+        "redactPII": true,
+        "maxAge": 0
+      },
+      "rawStored": false,
+      "rawOutputForwarded": false
+    },
+    {
+      "id": "isa",
+      "start": "2026-10-15T04:26:13.350Z",
+      "end": "2026-10-15T04:26:17.079Z",
+      "url": "https://isa21.org/scholarship/financial-scholarships/",
+      "finalUrl": "https://isa21.org/scholarship/financial-scholarships/",
+      "statusCode": 200,
+      "convertedCharacters": 5622,
+      "request": {
+        "formats": [
+          "markdown"
+        ],
+        "onlyMainContent": true,
+        "redactPII": true,
+        "maxAge": 0
+      },
+      "rawStored": false,
+      "rawOutputForwarded": false
+    },
+    {
+      "id": "norris",
+      "start": "2026-10-15T04:26:40.323Z",
+      "end": "2026-10-15T04:26:42.466Z",
+      "url": "https://isa21.org/wp-content/uploads/2021/08/FRANCESCA-NORRIS-MEMORIAL-SCHOLARSHIP-APPLICATION-FORM-b.pdf",
+      "finalUrl": "https://isa21.org/wp-content/uploads/2021/08/FRANCESCA-NORRIS-MEMORIAL-SCHOLARSHIP-APPLICATION-FORM-b.pdf",
+      "statusCode": 200,
+      "convertedCharacters": 5245,
+      "request": {
+        "formats": [
+          "markdown"
+        ],
+        "onlyMainContent": true,
+        "redactPII": true,
+        "maxAge": 0
+      },
+      "rawStored": false,
+      "rawOutputForwarded": false
+    },
+    {
+      "id": "financial",
+      "start": "2026-10-15T04:26:56.757Z",
+      "end": "2026-10-15T04:26:59.072Z",
+      "url": "https://isa21.org/wp-content/uploads/2021/08/FINANCIAL-SCHOLARSHIP-FORM-b.pdf",
+      "finalUrl": "https://isa21.org/wp-content/uploads/2021/08/FINANCIAL-SCHOLARSHIP-FORM-b.pdf",
+      "statusCode": 200,
+      "convertedCharacters": 4916,
+      "request": {
+        "formats": [
+          "markdown"
+        ],
+        "onlyMainContent": true,
+        "redactPII": true,
+        "maxAge": 0
+      },
+      "rawStored": false,
+      "rawOutputForwarded": false
+    }
+  ],
+  "scope": "Four new selected public readable retrievals; no prior input replay, raw artifact download or native/page/image completeness proof.",
+  "sourceHandlingDeviation": {
+    "issue": "Intermediate previews included WAI TOC/unselected headings and ISA recipient-heading fragments. No applicant responses collected; final artifacts omit these previews. Earlier output remains disclosed.",
+    "owner": "Codex source/evidence owner",
+    "trigger": "Before every next source call/output and SD2 consolidation",
+    "nextAction": "Narrow selected program/minimal metadata and sanitize values before forwarding. No claim of retroactive erasure."
+  },
+  "waiAccounting": {
+    "totalConvertedCharacters": 59587,
+    "markupHeadings": 106,
+    "selectedExactNamedProfiles": 10,
+    "redactedNamedInputsHeld": 8,
+    "nativePDFPagesInspected": 0,
+    "selectedInputKeys": 20,
+    "selectedNamedBodyProfiles": 1
+  },
+  "selectedWaiSections": [
+    {
+      "heading": "## Dare to Dream Scholarship",
+      "offset": 11710
+    },
+    {
+      "heading": "## ISA+21 Financial Scholarship 2027",
+      "offset": 12827
+    },
+    {
+      "heading": "## PSA Airlines Engineering Scholarship $3,000 value",
+      "offset": 21004
+    },
+    {
+      "heading": "## Boeing Maintenance Training Scholarship $7,500 value",
+      "offset": 22976
+    },
+    {
+      "heading": "## Epic Flight Academy Aviation Maintenance Technician Scholarship",
+      "offset": 23658
+    },
+    {
+      "heading": "## GlennCo Electrical Repair Training Scholarship",
+      "offset": 27787
+    },
+    {
+      "heading": "## PSA Airlines Maintenance Scholarship",
+      "offset": 28698
+    },
+    {
+      "heading": "## FedEx Flight Training Scholarship",
+      "offset": 40444
+    },
+    {
+      "heading": "## LIFT Academy Pilot Scholarship",
+      "offset": 42160
+    },
+    {
+      "heading": "## PSA Airlines Flight Scholarship",
+      "offset": 42500
+    }
+  ],
+  "commonTextTruncation": "APPLICATION REMINDERS ending before printed page16/TOC. One existing printed application locator retained as a locator only.",
+  "limits": [
+    "All four artifacts contain selected readable converted text only, not source silence or complete-page/table/image/form proof.",
+    "Source revision and origin currency unknown; request maxAge0 does not establish fresh origin.",
+    "ISA financial and Norris material instructions retained; all profile/education input labels excluded. No application interaction."
+  ],
+  "finalizationNotes": [
+    "Same cached WAI conversion contains Jerry Holland in a profile body despite redacted heading. Selected body independently grounds proposed child mapping; exact public/native/current identity still held. No new source request."
+  ]
+}

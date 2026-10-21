@@ -1,0 +1,19 @@
+{
+  "requiredChecksRemainUnfulfilled": true,
+  "result": "BLOCKED_ENVIRONMENT",
+  "repeated": false,
+  "receiptReferences": [
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/validation.json",
+      "sha256": "bc37a96ea526b65d2341fe3d4c33c9483e138e854e8871027a2ae352e52f92b8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-010/application-checks.json",
+      "sha256": "f6de201823589f270b6ded88c8aec20efb0c2f6acc776ce62bc0a06fd7947b32"
+    }
+  ],
+  "meaning": "Four unchanged application checks have actual retained exit127missingtsx/tsc/next receipts. No app/dependency/environment change; no PASS, repeat, install, environment repair or waiver. Historical standard-build/IPC and fresh authenticated main-target gate remain.",
+  "owner": "Codex validation/governance/delivery",
+  "trigger": "Separately permitted exact-lockfile restoration/checks and canonical acceptance or authorized release",
+  "nextAction": "Run unchanged required checks in permitted environment, supported exact standard build and fresh authenticated main-target proof; retain specific failures until resolved."
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "Group011-only in-memory exact binding and adverse cases; no original edits/new reads.",
+  "recordedAt": "2026-10-19T22:43:53.686904+00:00",
+  "outcome": "PASS",
+  "checks": [
+    {
+      "case": "exact original PDF binding saved-405588227-row-224",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-228",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-235",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-236",
+      "outcome": "PASS"
+    },
+    {
+      "case": "changed original record",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "same-value excerpt substitution",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "missing registry",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "unresolved binding positive promotion saved-405588227-row-228",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "unresolved binding positive promotion saved-405588227-row-235",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "unresolved binding positive promotion saved-405588227-row-236",
+      "outcome": "PASS rejected"
+    }
+  ],
+  "sharedEngineUnchanged": true,
+  "historicalContextsWidened": false
+}

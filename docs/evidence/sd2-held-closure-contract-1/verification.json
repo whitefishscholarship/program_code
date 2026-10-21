@@ -1,0 +1,33 @@
+{
+  "command": [
+    "python3",
+    "docs/evidence/sd2-held-closure-contract-1/verify.py"
+  ],
+  "startedAt": "2026-10-21T02:10:18.669059+00:00",
+  "completedAt": "2026-10-21T02:10:20.533451+00:00",
+  "exitCode": 0,
+  "result": {
+    "localObjectiveIntegrity": "PASS",
+    "reviewBound": false,
+    "contractDraftIntegrity": "PASS",
+    "canonicalActivation": false,
+    "overallExecutionStatus": "BLOCKED_BUILD_AND_ACCESS",
+    "protectedPreEntryFiles": 3050,
+    "appendHistories": 3,
+    "inheritedItems": 13,
+    "originalGates": 14,
+    "inheritedAdditionalDispositions": 4,
+    "inheritedSupplementDispositions": 2,
+    "inheritedReadinessBlockers": 3,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false
+  }
+}

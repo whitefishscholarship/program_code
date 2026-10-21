@@ -1,0 +1,113 @@
+{
+  "outcome": "PASS",
+  "scope": "Group009 local saved-evidence comparison only; no canonical acceptance",
+  "reviewerTask": "/root/sd2_continuation009_review",
+  "reviewedAt": "2026-10-19T22:30:29Z",
+  "freshContext": true,
+  "readOnly": true,
+  "authoredOrEditedCandidate": false,
+  "binding": {
+    "entryCommit": "55f99e0cdffa184c67660cccddd04f0862ae2675",
+    "candidateCommit": "77d29cc20b76fd472051067eaf9a54831cf34331",
+    "candidateTree": "56516760486ad751520f73b23122e0fb0c3b6143",
+    "manifestSha256": "b29b7ce52f58980acd92a5a1a499ae662f218afe58975c2ba11a7b07f58be49a",
+    "completeDiffSha256": "abf1a06df223f2e5cf71a32fdb3a5c7d5937cac7b91355b55dcb7149952a51c0",
+    "completeDiffBytes": 3431138,
+    "changedPaths": 17,
+    "allChangedBlobsModesBytesAndHashesIndependentlyVerified": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "coverage": {
+    "selectedInputs": 20,
+    "fieldOccurrences": 444,
+    "sourceBindings": 252,
+    "orderedMembershipSha256": "d8fbbb74364e6fed2aa8947651d113af1554dc94da5d4fb13eea0e4d1e30ca82",
+    "categoryCounts": {
+      "existing evidence consistent": 38,
+      "applicability/identity unresolved": 205,
+      "evidence unavailable": 188,
+      "existing evidence conflicting": 13
+    },
+    "allOriginalEnvelopesFieldOrderCandidatesAndRoutesVerified": true,
+    "all444MinimumProofRoutesSelectNoRead": true,
+    "semanticReview": "Checked all decisions, including the38 positives against exact saved clauses. NGPA child and parent scopes remain distinct; AFSA no-GPA/income does not erase other eligibility, literal deadline or repeat-winner restrictions. WAI cash, in-kind value, slots, prerequisites, preferences and training-use conditions remain distinct. AOPA cumulative3.0/4 conditional MUST and Boeing3.0/4 conditional SHOULD are preserved. Past literal Sep1,2026 23:59 EST does not become a new opening. Both Wings records retain all42 fields nonpositive and unallocated.",
+    "continuationComparedInputs": 180,
+    "continuationComparedFields": 3595,
+    "cumulativeComparedFieldOccurrences": 4001,
+    "remainingAuthorizedInputs": 206,
+    "remainingAuthorizedFields": 3467,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "fullSD2Complete": false
+  },
+  "preservation": {
+    "protectedPredecessorFiles": 2661,
+    "priorBytesModesAndReviewBindings": "PASS",
+    "threeAppendOnlyHistories": "PASS",
+    "group008DirectChildTwoFileReceipt": "PASS",
+    "group008ReviewBoundEntryAuditBeforeGroup009Paths": "PASS",
+    "group009AbsentAtPredecessorReceipt": true,
+    "sharedEngineUnchanged": true,
+    "historicalVerifierContextsWidened": false,
+    "originalAutonomousFieldHolds": 7406,
+    "originalAutonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "attentionCustodyM1AndOriginalOwnerTriggerPathActionRoutes": "Preserved; no new availability claim or raw/native custody inspection"
+  },
+  "verification": {
+    "group009LocalVerify": {
+      "command": "python3 docs/evidence/sd2-autonomous/saved-continuation/checkpoint-009/local-check.py verify",
+      "exitCode": 0,
+      "outcome": "PASS",
+      "reviewBound": false,
+      "completedAt": "2026-10-19T22:28:17.822021+00:00"
+    },
+    "independentAdapterChecks": "PASS: all252 bindings; unchanged delegation outside WAI amount; exact PDF bindings; rejection of changed record, altered evidence, actual same-value sibling excerpt, missing registry and redacted-Wings positive promotion. Trials were memory-only.",
+    "gitDiffCheck": "PASS",
+    "candidateUnchanged": true,
+    "applicationChecks": "BLOCKED_ENVIRONMENT: retained shared/group008 plan,typecheck,tests,build attempts exit127 for missingtsx/tsc/next. No fresh PASS, installation, repair or waiver.",
+    "limits": [
+      "Historical engine verify9 format failure remains disclosed; this PASS applies to the exact group009 adapter.",
+      "Saved sanitized evidence establishes neither current offering nor native/visual/completeness/public-origin or accepted identity proof.",
+      "Exact standard build and fresh authenticated main/target gates remain open before canonical acceptance or authorized release.",
+      "Final independent386-input/7062-field union audit remains pending after all20groups.",
+      "No new source/workbook/raw/native reads, network/remote effects, fact acceptance orSD3 occurred."
+    ]
+  },
+  "nextPointer": {
+    "owner": "Codex",
+    "trigger": "Matching group009 PASS saved in candidate's direct-child receipt containing only final-manifest.json and review.json",
+    "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-009/next-input.json",
+    "nextAction": "At that valid receipt tip, capture local-check.py verify --review-bound PASS BEFORE creating group010 paths; then continue automatically under existing authority.",
+    "nextReviewGroup": 10,
+    "scopeOrder": 181,
+    "savedInputKey": "saved-405588227-row-204",
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-011.json",
+    "recordPointer": "/records/0",
+    "inputs": 20,
+    "fields": 412,
+    "boundary": "Never initialize/reset/replay. Preserve every hold and review. Future PDF groups require their own exact scoped bindings when needed. Stop beforeSD3."
+  },
+  "incidents": [
+    {
+      "type": "reviewer output minimization lapse",
+      "description": "A targeted AFSA repeat-winner diagnostic also displayed unnecessary generic winner-notification/publication policy lines. No applicant values, profiles, materials, form labels, new source reads or candidate edits occurred.",
+      "owner": "Codex reviewer",
+      "trigger": "Future diagnostic output",
+      "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-009/review.json",
+      "nextAction": "Retain this disclosure and preselect only the exact necessary policy clause before display."
+    },
+    {
+      "type": "prior incidents retained",
+      "description": "Group009 author output lapse, historical engine-format mismatch and all earlier disclosed incidents remain unchanged in their original packets and review receipts."
+    }
+  ]
+}

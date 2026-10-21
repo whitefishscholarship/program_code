@@ -1,0 +1,903 @@
+{
+  "records": [
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0ecb63a87a257aeb15ea",
+      "order": 26,
+      "exactLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "host": "montanaffa.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-10",
+        "saved-405588227-row-11",
+        "saved-405588227-row-21",
+        "saved-405588227-row-283",
+        "saved-405588227-row-284",
+        "saved-405588227-row-9"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-21#applicationMethod",
+        "saved-405588227-row-283#application",
+        "saved-405588227-row-283#cycle",
+        "saved-405588227-row-283#eligibility",
+        "saved-405588227-row-283#identityObservation",
+        "saved-405588227-row-283#minimumGPA",
+        "saved-405588227-row-284#application",
+        "saved-405588227-row-284#cycle",
+        "saved-405588227-row-284#eligibility",
+        "saved-405588227-row-284#identityObservation",
+        "saved-405588227-row-284#minimumGPA",
+        "saved-405588227-row-9#studentStage"
+      ],
+      "startedAt": "2026-10-20T19:06:01.667Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Montana FFA Foundation Leave a Legacy Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "4916d77ac597d2cf40762c37f2b958ad1e22f12070a8956077d71cacaf230ff7",
+          "quoteCharacters": 114,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1741,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Montana FFA Foundation Leave a Legacy Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "68513ca5fbbb9335078f2d61a158fb47c56c4bdd84339944a787a41ff42d4b4d",
+          "quoteCharacters": 125,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1856,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Stockman Bank Next Gen Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "00656be26702c26e145ef29d9074efe323c6b9c3c3f7a3b6db8013f05ac7f120",
+          "quoteCharacters": 122,
+          "hashOnlyEvidence": true,
+          "matchOffset": 9518,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Stockman Bank Next Gen Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "22cc2bf5f9a1aeeb13b22174b9072dc66deb31ea4d55fdb7abe1c3356cb948f1",
+          "quoteCharacters": 81,
+          "hashOnlyEvidence": true,
+          "matchOffset": 9762,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "f1080a4c0cea7addf41868e3051e8584b197dfd6f394b638394199a5b0ca5ddb",
+      "returnedEnvelopeBytes": 69875,
+      "exactRecordedNameMatches": [
+        "Stockman Bank Next Gen Scholarship",
+        "MABA-MGEA Scholarship",
+        "Montana FFA Foundation Leave a Legacy Scholarship"
+      ],
+      "sourceMarkdownSha256": "75375c5fb47611d8d4cb1bdd56e9b855cae21f8fda01946716901c28b00533c6",
+      "sourceMarkdownBytes": 29574,
+      "httpStatus": 200,
+      "returnedUrlSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "returnedHost": "montanaffa.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:06:31.511Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-10985f6fc47c008d4fc4",
+      "order": 30,
+      "exactLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "host": "gtmf.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-287"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-287#application",
+        "saved-405588227-row-287#cycle",
+        "saved-405588227-row-287#eligibility",
+        "saved-405588227-row-287#identityObservation",
+        "saved-405588227-row-287#materials"
+      ],
+      "startedAt": "2026-10-20T19:06:01.667Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Donald Runnicles Musical Arts Scholarship Competition (Grand Teton Music Festival)",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "3e851f6cb98072e1bcd0395808cb69b10d452c8b57a4d0c2ba515d22a0a5fe21",
+          "quoteCharacters": 167,
+          "hashOnlyEvidence": true,
+          "matchOffset": 81,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2,
+        "not_material_program_clause": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "58bac4844de15c4f79525e3e874f2130a825d8f4fa6f2017070d3a7aa1e146c1",
+      "returnedEnvelopeBytes": 15949,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "36433431075395b72d714b184e6320599e7e6016bb292ed7a3da6a647396201f",
+      "sourceMarkdownBytes": 3986,
+      "httpStatus": 200,
+      "returnedUrlSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "returnedHost": "gtmf.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:06:11.637Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-119ae832d51f13b62c26",
+      "order": 32,
+      "exactLocatorSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+      "host": "mtech.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-315"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-315#identityObservation"
+      ],
+      "startedAt": "2026-10-20T19:06:01.667Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "identity_or_scope": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "5ed7eb593bd07c7ab6960a19efb6a45bfd75d6b3110af4d8295d1c248b9ca75f",
+      "returnedEnvelopeBytes": 45583,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "993157d96cf9a5b9e289f3bdcf0c802847edd531eff540c1eb257cf051efce69",
+      "sourceMarkdownBytes": 18673,
+      "httpStatus": 200,
+      "returnedUrlSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+      "returnedHost": "mtech.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:06:21.606Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-12ed182c13c1589245dc",
+      "order": 34,
+      "exactLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "host": "serve.mt.gov",
+      "affectedSavedInputs": [
+        "saved-405588227-row-71"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-71#applicationMethod",
+        "saved-405588227-row-71#eligibility",
+        "saved-405588227-row-71#identityContinuity",
+        "saved-405588227-row-71#materials",
+        "saved-405588227-row-71#minimumGPA"
+      ],
+      "startedAt": "2026-10-20T19:06:01.667Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "MT Youth Serve Scholarships",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "3d718bc7ce5041f1e29d266ddd9e7077ebe0c8b3f8f3be1d4d28bee7583db084",
+          "quoteCharacters": 239,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1509,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "MT Youth Serve Scholarships",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "5e13589a9cf2c64b320ffa0b883f82c5f9d3cec4764f7836f30e3e6ebfe50136",
+          "quoteCharacters": 117,
+          "hashOnlyEvidence": true,
+          "matchOffset": 781,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "012227dc6b3160fcacb290ab3132ba3356a2c5f8ca810c24b4dd7621aeee6079",
+      "returnedEnvelopeBytes": 39443,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "cfc56afe7492934b78c4896c15c1f5f94980329597ec8d05d05d40e5a7ed11f0",
+      "sourceMarkdownBytes": 16943,
+      "httpStatus": 200,
+      "returnedUrlSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "returnedHost": "serve.mt.gov",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:06:40.111Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-1323707329dde1d64ee0",
+      "order": 35,
+      "exactLocatorSha256": "1323707329dde1d64ee0f74e5eb296694e77055c75b01108e40e38635aebfa8f",
+      "host": "www.mikeroweworks.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-356"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-356#application",
+        "saved-405588227-row-356#cycle",
+        "saved-405588227-row-356#eligibility",
+        "saved-405588227-row-356#identityObservation",
+        "saved-405588227-row-356#materials"
+      ],
+      "startedAt": "2026-10-20T19:06:40.113Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "3bcc28895e6e288a609982238604b9179259bed1a1be6bcc37a0a92caf4e279a",
+      "returnedEnvelopeBytes": 105433,
+      "exactRecordedNameMatches": [
+        "Work Ethic Scholarship Program"
+      ],
+      "sourceMarkdownSha256": "84ebe6d417bcc17e1e677bcee4717918e93f1e7c80d1ac960b2e4f369278f61d",
+      "sourceMarkdownBytes": 47365,
+      "httpStatus": 200,
+      "returnedUrlSha256": "af08b452a4fe69470596949cccfca1723207e10f2bb7bcb61072754eb6cbe9aa",
+      "returnedHost": null,
+      "returnedHostMismatch": true,
+      "outcome": "held_unexpected_redirect",
+      "completedAt": "2026-10-20T19:07:43.454Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-18288ac10d37f3b37377",
+      "order": 43,
+      "exactLocatorSha256": "18288ac10d37f3b37377b277bb7a43d3796228427b4b6230a9abd5e465b079a3",
+      "host": "leroywhomerjr.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-72"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-72#applicationWindow",
+        "saved-405588227-row-72#identityContinuity"
+      ],
+      "startedAt": "2026-10-20T19:06:40.113Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "The LeRoy W. Homer Jr. Foundation Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e1af0df78ded2d6a97131f65891238c0c8ecde78c6d1dcf24aae947a0b54d6e3",
+          "quoteCharacters": 56,
+          "hashOnlyEvidence": true,
+          "matchOffset": 284,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "The LeRoy W. Homer Jr. Foundation Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "2925725a064ca0a8ea9303a41eac3b1ab76e5210899a70d2f430f434bccee950",
+          "quoteCharacters": 48,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1006,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "The LeRoy W. Homer Jr. Foundation Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "aafb8b1226a1ea76ec4de6b3be978748d62833115af081148873f62b01f8d35e",
+          "quoteCharacters": 94,
+          "hashOnlyEvidence": true,
+          "matchOffset": 911,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_material_program_clause": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "7940974790f07e62192a3826fec690737fe0aa9426a386d8bd0fad9c6ac333e4",
+      "returnedEnvelopeBytes": 6861,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "78daa7ea9e69c8ea39c10ed4e4751c1d65fb1d11c539f47f9a1628d936cf3fd1",
+      "sourceMarkdownBytes": 1440,
+      "httpStatus": 200,
+      "returnedUrlSha256": "18288ac10d37f3b37377b277bb7a43d3796228427b4b6230a9abd5e465b079a3",
+      "returnedHost": "leroywhomerjr.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:07:23.730Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-1991755adb0fad741a9f",
+      "order": 47,
+      "exactLocatorSha256": "1991755adb0fad741a9f23fee0834eaa87de75b3148fd8a8fac05bc5bf49a505",
+      "host": "c4e.colostate.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-314"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-314#application",
+        "saved-405588227-row-314#cycle",
+        "saved-405588227-row-314#eligibility",
+        "saved-405588227-row-314#identityObservation",
+        "saved-405588227-row-314#materials",
+        "saved-405588227-row-314#minimumGPA",
+        "saved-405588227-row-314#need"
+      ],
+      "startedAt": "2026-10-20T19:06:40.113Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Colorado State University First Generation Award",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "280353c0f5e8783d96c5a3f9f7bab14c51cc6e43af220ba8a9086ad632e9ecf2",
+          "quoteCharacters": 187,
+          "hashOnlyEvidence": true,
+          "matchOffset": 234,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Colorado State University First Generation Award",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e0de663502346bde5fb1a585072bc2e47d99257c043fa1ddcf29c8f80f3f5673",
+          "quoteCharacters": 118,
+          "hashOnlyEvidence": true,
+          "matchOffset": 3560,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "f17221c9536786746ae6ca405f4fd73586994e993cc783b769625c1114bb6458",
+      "returnedEnvelopeBytes": 16767,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "b8d63f2594c20cb2577dfef4d76dd03860f65329b7f2ce44e649775777a920f0",
+      "sourceMarkdownBytes": 6145,
+      "httpStatus": 200,
+      "returnedUrlSha256": "1991755adb0fad741a9f23fee0834eaa87de75b3148fd8a8fac05bc5bf49a505",
+      "returnedHost": "c4e.colostate.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:07:13.124Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-1de162b0b9e04e373198",
+      "order": 54,
+      "exactLocatorSha256": "1de162b0b9e04e373198607666897b41a4f33191eb9e0020ec626e5747830583",
+      "host": "www.nationalhonorsociety.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-250"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-250#applicationMethod",
+        "saved-405588227-row-250#cycle",
+        "saved-405588227-row-250#eligibility",
+        "saved-405588227-row-250#materials"
+      ],
+      "startedAt": "2026-10-20T19:06:40.113Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "National Honor Society Member Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "a68008850df2b55fe3d04676b0f8d26c16034eb7c6e16bb6f7fd5ea6c29e5cda",
+          "quoteCharacters": 84,
+          "hashOnlyEvidence": true,
+          "matchOffset": 26336,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "National Honor Society Member Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "5709146dfd51107672603646671a9f661ed2b697219ff3f25651cacdd9ef8abe",
+          "quoteCharacters": 118,
+          "hashOnlyEvidence": true,
+          "matchOffset": 20420,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "excluded_or_uninspected_content": 1,
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "c7cfbbe38fc7d9b4616d3df71cc5f1d6c8f9372f4161b99e0a611296f9692491",
+      "returnedEnvelopeBytes": 70279,
+      "exactRecordedNameMatches": [],
+      "sourceMarkdownSha256": "50c3ee987afb65be2776b917564342a934bee6b280e9782e08a6b9fe1afacdd6",
+      "sourceMarkdownBytes": 28230,
+      "httpStatus": 200,
+      "returnedUrlSha256": "982968a97b3d67557550d3c52126daac41fa0ba9739e64b98d57c73a71b71e16",
+      "returnedHost": "www.nationalhonorsociety.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:07:52.236Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-27d545d499780873f0ca",
+      "order": 69,
+      "exactLocatorSha256": "27d545d499780873f0ca8ef5c3b2fd5eb6e1a35ad67566ca1717d32b73147e55",
+      "host": "officialsdepot.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-257"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-257#applicationMethod",
+        "saved-405588227-row-257#cycle",
+        "saved-405588227-row-257#eligibility",
+        "saved-405588227-row-257#identityObservation"
+      ],
+      "startedAt": "2026-10-20T19:07:52.238Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Student Referee Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "7d089da6ea511cafce953d29c8f5fbf33676d566f2f5f98334ebcf0acce1af7e",
+          "quoteCharacters": 35,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1641,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Student Referee Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "9e0cc319c8b7ed3ce7631602b6e11b06a0a235ed02d76f04054d6be8a17b55cc",
+          "quoteCharacters": 34,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1800,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "ad089549a7b695219f32e577bb57599c788dfd4464c30047e4501786749eda7a",
+      "returnedEnvelopeBytes": 26738,
+      "exactRecordedNameMatches": [
+        "Student Referee Scholarship"
+      ],
+      "sourceMarkdownSha256": "a96a6a569f1765aefdfa27b25036171c3ba8b6a649390b415e78bb485e9c2ce8",
+      "sourceMarkdownBytes": 8961,
+      "httpStatus": 200,
+      "returnedUrlSha256": "27d545d499780873f0ca8ef5c3b2fd5eb6e1a35ad67566ca1717d32b73147e55",
+      "returnedHost": "officialsdepot.com",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:14.774Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-2b9a69050b35a081dba8",
+      "order": 76,
+      "exactLocatorSha256": "2b9a69050b35a081dba8e76bacf11ceff7ca95ca050225388f0ad3515fc44950",
+      "host": "scholarshipamerica.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-312"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-312#application",
+        "saved-405588227-row-312#cycle",
+        "saved-405588227-row-312#eligibility",
+        "saved-405588227-row-312#identityObservation",
+        "saved-405588227-row-312#materials",
+        "saved-405588227-row-312#need"
+      ],
+      "startedAt": "2026-10-20T19:07:52.238Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Equitable Excellence Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "15d9e587968e24e9fda6872d9fce661dbcd0cbdbc26e807962907963d90d4628",
+          "quoteCharacters": 234,
+          "hashOnlyEvidence": true,
+          "matchOffset": 194,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Equitable Excellence Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "d7beb572adaecc87ff7c285994c366b4888339176301f1f3a4743987b6cdfbae",
+          "quoteCharacters": 57,
+          "hashOnlyEvidence": true,
+          "matchOffset": 533,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "253a3a38b5081225c9d0526c569930eac482a70fb7ff17562eeebd4ee917a3b9",
+      "returnedEnvelopeBytes": 22292,
+      "exactRecordedNameMatches": [
+        "Equitable Excellence Scholarship"
+      ],
+      "sourceMarkdownSha256": "d081edc49c0ab37ad796c070a9c13cbb986b97a3dcb0d34e1646544dae91f420",
+      "sourceMarkdownBytes": 6851,
+      "httpStatus": 200,
+      "returnedUrlSha256": "2b9a69050b35a081dba8e76bacf11ceff7ca95ca050225388f0ad3515fc44950",
+      "returnedHost": "scholarshipamerica.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:02.841Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-2eaa129ee53487ddd83d",
+      "order": 79,
+      "exactLocatorSha256": "2eaa129ee53487ddd83d8aabbdc2ec6528acb5c9e44fe2b251c684255e9b6bf5",
+      "host": "www.elks.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-63",
+        "saved-405588227-row-73"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-63#materials",
+        "saved-405588227-row-63#needPriority",
+        "saved-405588227-row-63#schoolType"
+      ],
+      "startedAt": "2026-10-20T19:07:52.238Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Elks Most Valuable Student Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "cbb5c65fc98c5c816a377916319ade6af7d51d8d838c789b8c980c146aec4779",
+          "quoteCharacters": 86,
+          "hashOnlyEvidence": true,
+          "matchOffset": 2498,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Elks Most Valuable Student Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "aebab78a75daf6b42e34865a3d8516024eba3c4ea7dcd0d99d6e44ffec1c34ca",
+          "quoteCharacters": 135,
+          "hashOnlyEvidence": true,
+          "matchOffset": 704,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Elks Most Valuable Student Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "b947e5ebc69434edcd683c4ee8de23aa5bb7d36994f9412a6f3954c7b7f37a1b",
+          "quoteCharacters": 101,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4676,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "4caea6eaa93d53053fa7b96e871cf90c77b5e5be9dfbda3c29b8abd79d6729f7",
+      "returnedEnvelopeBytes": 19403,
+      "exactRecordedNameMatches": [
+        "Elks Most Valuable Student Scholarship"
+      ],
+      "sourceMarkdownSha256": "4ffe84350c35bd3954634f33650a8a27df573c92f5f64fad7b33c295849b1eab",
+      "sourceMarkdownBytes": 7452,
+      "httpStatus": 200,
+      "returnedUrlSha256": "2eaa129ee53487ddd83d8aabbdc2ec6528acb5c9e44fe2b251c684255e9b6bf5",
+      "returnedHost": "www.elks.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:33.899Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-30a545edc90383232f9a",
+      "order": 82,
+      "exactLocatorSha256": "30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "host": "thendalliance.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-255"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-255#historicalAgeConflict",
+        "saved-405588227-row-255#historicalApplicationMaterials",
+        "saved-405588227-row-255#historicalReapplication"
+      ],
+      "startedAt": "2026-10-20T19:07:52.238Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "The Neurodiversity Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "420a49063fb63c0c1d986e6c077b1596417ec3a83a43bdb36090c0f8f5248242",
+          "quoteCharacters": 134,
+          "hashOnlyEvidence": true,
+          "matchOffset": 393,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "The Neurodiversity Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "f467cbc526bde94612f7782385e889967f4bc9a3246d52fda8beb3f50f64ab8c",
+          "quoteCharacters": 91,
+          "hashOnlyEvidence": true,
+          "matchOffset": 577,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "42d52cea37db148a4549748746bb36644828bb6e25f02ba43c5947cde597ce55",
+      "returnedEnvelopeBytes": 32218,
+      "exactRecordedNameMatches": [
+        "The Neurodiversity Scholarship"
+      ],
+      "sourceMarkdownSha256": "012ff03ca792e67455801af747d3738129f4fbb7850d737b1c0f3915907f5825",
+      "sourceMarkdownBytes": 11818,
+      "httpStatus": 200,
+      "returnedUrlSha256": "30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "returnedHost": "thendalliance.org",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T19:08:26.309Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+        "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+      },
+      "replayed": false
+    }
+  ]
+}

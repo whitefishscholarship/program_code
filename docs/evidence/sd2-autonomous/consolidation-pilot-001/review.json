@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Independent read-only full immutable-candidate review of the selected local saved-evidence pilot; not canonical acceptance or release",
+  "reviewer": {
+    "identity": "Codex /root/sd2_pilot_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "priorRole": "Prospective policy reviewer only"
+  },
+  "binding": {
+    "entryCommit": "c89427c21f3bd09205bb27b3402a40143bc6ba9d",
+    "candidateCommit": "25c4e2f65aac914a80a2a0594e605731b41153ba",
+    "candidateTree": "cfa4e36f7c1a666844e7cca10c3020180b5458b4",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-pilot-001/final-manifest.json",
+    "manifestSha256": "5049c08f1d9d0f7f6d5377189a3fea97f0510208ae391fd698d43564d841c784",
+    "completeDiffSha256": "0b2763ea077e25b84c633e2e375adbb954c2ab168858b0603902b6849438aea2",
+    "completeDiffBytes": 814464,
+    "changedPathCount": 32,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Local selected-pilot entry only; fresh authenticated remote main and target remain unverified"
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Complete immutable candidate binding",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed manifest digest, candidate tree, complete 814464-byte binary diff and digest, exact 32-path change set, and every candidate blob ID, mode, byte count, SHA256 and current-file equality. Exact entry-to-candidate git diff --check passed. Only final-manifest.json was untracked."
+    },
+    {
+      "name": "Delegated selection and prospective policy",
+      "outcome": "PASS",
+      "evidence": "The direct delegated decision instruction is accurately distinguished from human entry of exact IDs. Selection exactly matches the historical proposed pilot. Historical proposal/scope remain unchanged and unselected in their original context. Reviewed prospective hashes remain exact; policy checkpoint 9452cfe precedes implementation candidate 25c4e2f."
+    },
+    {
+      "name": "All selected comparisons and references",
+      "outcome": "PASS",
+      "evidence": "Reviewed all 96 annotations and four identity assessments in ordered locators45,290,40,68. Exact occurrence counts are17+17+31+31. Original envelopes, values, scopes, timestamps, acceptance states, packet pointers and original explicit/inherited routes remain exact. Independently resolved982 declared artifact/JSON references and checked their hashes. Categories reconcile to36 consistent,40 applicability/identity unresolved,18 evidence unavailable and2 conflicting."
+    },
+    {
+      "name": "Spear and Live Your Dream source affinity",
+      "outcome": "PASS",
+      "evidence": "Compared annotations with the four selected sanitized saved source Markdown artifacts and original evidence. Spear preserves historical250-word versus2026 brief essay, two recommendations, diagnosis/program/school scope and historical class/use/deadline limits. Live Your Dream preserves yearless annual timing, competitive award levels, full retained eligibility excerpt, own-voice requirements, one online reference form completed by deadline with optional second,750-word statement and300-word goals limits. Neither case accepts app identity, current offering or usable-route claims."
+    },
+    {
+      "name": "Both Jaycee tracks and nested qualifiers",
+      "outcome": "PASS",
+      "evidence": "Compared both31-field records with their exact proposal evidence, retained extraction metadata, identity comparison and selected PRELUDE supplements. Separate public/canonical candidates, track destinations,3.25/3.75 thresholds with unknown GPA basis, discrete amounts, recipient counts, start/deadline/cycle distinctions, immediate first-year full-time tuition scope, postal routing and all nested materials remain preserved. Required home email/signature/complete form, conditional acceptance letter, reference limits, optional photo, package instructions and track-specific financial/test-score rules remain held. Both optional5B/checklist conflicts remain unresolved. Later parent/state/legacy observations supplement historical gaps without proving legal sponsor identity, explicit replacement chain or current route usability. Kelsey's enumerated approvals remain distinct from formal acceptance."
+    },
+    {
+      "name": "History, holds, routes and handoffs",
+      "outcome": "PASS",
+      "evidence": "Inspected and reran read-only pilot verify.py, which exited0 at2026-10-16T14:54:42.390931+00:00. It protects2217 entry files and verifies exact older handoff/section9 bytes. Global7406 field holds/406 identity holds remain held; cursor406 has no next input. Original packets, reviews, PRELUDE, proposal bindings, nine attention rows/supplements, M1's437 routes/12 pins and71 custody receipts remain protected. Handoffs retain original owners/triggers/paths/actions and permit only preparation of a next bounded proposal after matching review."
+    },
+    {
+      "name": "Validation provenance and retained build gate",
+      "outcome": "PASS_WITH_RETAINED_LIMITS",
+      "evidence": "Independently verified all eight standalone command receipts equal their validation.json copies, every raw output digest/byte count, and exact normalized log bytes/digests. Typecheck raw39bytes and normalized38bytes are explicitly distinguished. Initial plan/tests IPC failures and unchanged passing retries remain recorded; final post-handoff plan validation passed. Both exact npm run build attempts failed creating a process/binding a port with Operation not permitted. No alternate build or gate waiver is claimed."
+    },
+    {
+      "name": "Scope and effect boundaries",
+      "outcome": "PASS",
+      "evidence": "Changes are confined to the pilot directory and three append-only handoff surfaces. Original canonical controls, runtime, workbook evidence and historical artifacts remain unchanged. Derived views do not replace factual packets or create a second Reviews queue. No fact/mapping acceptance, new source/workbook read, release effect, automatic next execution or SD3 is claimed."
+    }
+  ],
+  "limits": [
+    "This PASS reviews the bounded local pilot only; it does not establish canonical fact/stage acceptance, publication readiness, complete-population identity reconciliation or full SD2 completion.",
+    "Review used sanitized saved Markdown, proposal evidence, selected PRELUDE material and retained extraction JSON. No original DOC/PDF/TXT artifact, live source, workbook or temporary raw custody artifact was opened.",
+    "Saved consistency and preserved historical inspection receipts do not independently establish original/native/visual fidelity, source silence, current public access, sponsor continuity, current offering or live route usability.",
+    "Temporary custody hashes were not rechecked by this reviewer. The fresh entry receipt records its own observations; future availability remains unknown.",
+    "Standard-build support and fresh authenticated main/target remain Codex-owned gates before canonical acceptance or authorized release. All later preservation, human-review, publication, student-task, M1/SD5 and reserved-effect gates retain their original owners and triggers.",
+    "Review performed no edits, Git mutations, assembler/npm/build execution, historical-verifier rerun, source fetch, workbook access or external effects."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "This matching immutable-candidate PASS",
+    "authoritativePath": "docs/evidence/sd2-autonomous/consolidation-pilot-001/final-manifest.json",
+    "action": "Add only final-manifest.json and review.json in the direct-child local research review receipt, verify --review-bound, and retain the bounded handoff. Do not treat the receipt as canonical acceptance or release authority."
+  },
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

@@ -1,0 +1,42 @@
+{
+  "recordedAt": "2026-10-15T20:19:27.059121+00:00",
+  "priorCandidateCommit": "b4d62383d2610da0fd58b1c5f10d7fa9db56e911",
+  "priorManifestSha256": "46d3cb1d942e2226639bd1c17e1d8a704ce55db60251d9ff5004e6e67ee098dd",
+  "priorReviewSha256": "a1344dd39ea1d3c4000d8bea73777a332deacdf0834bf75812347336fb61887e",
+  "priorVerificationSha256": "12db3e42757001599532249d6dbc1aa8a64088f8f8fd8669dc13e173dde4106d",
+  "dispositions": [
+    {
+      "id": "SD2-017-M1",
+      "severity": "medium",
+      "status": "author-fixed; independent recheck required",
+      "rationale": "Restored exact recommendation paragraph from original retained in-session conversion. The original end-marker search matched an earlier contents occurrence; a start-scoped search restored confidentiality and healthcare/LTC selection wording. Refreshed source/capture/registry/excerpts/hashes; no new fetch or original/native fidelity claim.",
+      "owner": "Codex implementation owner",
+      "trigger": "Independent replacement-candidate review",
+      "target": "checkpoint-017/final-manifest.json and replacement review.json"
+    },
+    {
+      "id": "SD2-017-M2",
+      "severity": "medium",
+      "status": "author-fixed; independent recheck required",
+      "rationale": "Typed GBCI observed student labels without exclusivity, military enrolled-or-planning eligibility, and each family PDF Terms of Use examples (most fees/approved required school uniforms) separately from general FAQ costs.",
+      "owner": "Codex implementation owner",
+      "trigger": "Independent replacement-candidate review",
+      "target": "checkpoint-017/final-manifest.json and replacement review.json"
+    },
+    {
+      "id": "SD2-017-M3",
+      "severity": "medium",
+      "status": "author-fixed; independent recheck required",
+      "rationale": "Removed first-responder FAQ/legacy observations from military row339; retained military annual window/weekend extension and changed cycle to unverified, not a cross-family conflict. Source-specific first-responder observations remain only on row338.",
+      "owner": "Codex implementation owner",
+      "trigger": "Independent replacement-candidate review",
+      "target": "checkpoint-017/final-manifest.json and replacement review.json"
+    }
+  ],
+  "newSourceReads": 0,
+  "fieldCountsAndHoldsUnchanged": true,
+  "originalSourceSha256Superseded": "097483601a073ba5a216e2e1f9536b47d20a7e3c049bc3ae6e096e9be479c642",
+  "finalSourceSha256": "99c05b454a56ed7a01fe552291265e956bfd009aa1b52a0b216e6ab3d5b4f329",
+  "sourceArtifact": "docs/evidence/sd2-autonomous/checkpoint-017/sources/pizzinipdf.md",
+  "scope": "Only current packet remediation; rejected binding and every prior checkpoint remain exact"
+}

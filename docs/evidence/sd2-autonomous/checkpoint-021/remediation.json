@@ -1,0 +1,31 @@
+{
+  "scope": "Author remediation of one independent LOW provenance finding; no new source or fact changes",
+  "recordedAt": "2026-10-16T03:07:33.987005+00:00",
+  "originalCandidateCommit": "ae00e4221c5a923348fab78834571587253e7963",
+  "originalManifestRetainedPath": "docs/evidence/sd2-autonomous/checkpoint-021/manifest-round1.json",
+  "originalReviewRetainedPath": "docs/evidence/sd2-autonomous/checkpoint-021/review-round1.json",
+  "originalManifestSha256": "f35084624b496ad8dcea3ef62614fafe8ed640401185003db2de01c096927e72",
+  "manifestRelocation": "Round1 review retains the originally supplied final-manifest.json path. Exact manifest bytes/hash and original candidate remain at manifest-round1.json; replacement final-manifest.json will bind only the replacement candidate. No historical review binding is changed.",
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "dispositions": [
+    {
+      "findingId": "L1",
+      "severity": "low",
+      "status": "author-fixed-pending-independent-recheck",
+      "rationale": "Label auditCorrection as inherited checkpoint020 history and bind its source path/hash; unchanged current custody hashes and all source/ledger facts.",
+      "owner": "Codex checkpoint021 implementation author",
+      "target": "Replacement checkpoint021 candidate before final review receipt",
+      "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-021/prior-custody-audit.json",
+      "nextAction": "Independent reviewer rechecks replacement immutable candidate, manifest and complete entry diff."
+    }
+  ],
+  "newSourceReads": 0,
+  "changedHeldFacts": 0,
+  "canonicalAcceptance": false,
+  "SD3Started": false
+}

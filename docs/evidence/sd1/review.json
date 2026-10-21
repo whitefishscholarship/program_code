@@ -1,0 +1,72 @@
+{
+  "reviewType": "fresh-context-independent-read-only-local-SD1-final-recheck",
+  "outcome": "PASS",
+  "outcomeScope": "Completed SD1 local contract and representative pilot only, subject to disclosed validation limits. No canonical stage acceptance, accepted current scholarship facts or external-effect authority.",
+  "reviewer": "/root/sd1_review",
+  "freshContext": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-13T15:31:31.758910Z",
+  "candidateCommit": "bbeb9a4fb75cd7c0781edfc017404037a1bf72ae",
+  "candidateTree": "dccb44781e3bbcece7193c1596b8da93d4adfa54",
+  "originalReviewedCandidate": "8254eeee73575f946e074ffb7bd9fcf9f5efd0e2",
+  "entryBaseline": "72e39fe95daa64dd0a2fb47083e56d112a78d0bc",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "baselineLimit": "Retained authenticated main object; current refresh failed HTTP404 and is not represented as successful.",
+  "completeDiffHashes": {
+    "method": "SHA256 of exact git diff --binary BASE HEAD output",
+    "entryToCandidate": "1032ef32a59fe15c5f18f38d32b634ff0c9c0f7be6d6fb6f2eb1460248a07609",
+    "retainedMainToCandidate": "31af4e2e68e35e2f3988d75bb874cc47707f005195a77035fa41d1bff57b0034",
+    "originalCandidateToReplacement": "68a694dde9c90e185960d6be844cbb52bfc9e9b6992cc18565000c7482744042"
+  },
+  "pilotSha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1",
+  "initialSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0,
+    "unresolved": 1
+  },
+  "finalSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "unresolved": 0
+  },
+  "dispositions": [
+    {
+      "findingId": "SD1-M1",
+      "originalSeverity": "medium",
+      "status": "fixed-and-independently-rechecked",
+      "rationale": "Author added explicit-OR multi-value school/path filtering, conservative unknown/conflict/optional/undecided handling, qualified GPA fit explanations and deterministic priority ordering. Independent read-only assertions verified multi-value membership, nonaccepted/stale/inaccessible facts remaining Needs checking, Pell renewal GPA not becoming an entry cutoff, fit qualification, priority bands, date/connection/name/ID ordering, timezone offsets, yearless noncoercion and manual precedence.",
+      "owner": "Codex implementation agent",
+      "target": "Replacement SD1 candidate bbeb9a4fb75cd7c0781edfc017404037a1bf72ae",
+      "reviewerRepairedFinding": false
+    }
+  ],
+  "verification": [
+    "Resolved exact final candidate/tree; candidate checkout clean before and after review.",
+    "Recomputed complete entry-to-final, retained-main-to-final and remediation diff hashes.",
+    "Inspected complete remediation diff:exactly run-pilot.py, pilot-validation.json and VALIDATION.md changed.",
+    "Verified pilot.json byte-identical to the original reviewed candidate; scholarship inputs, identity holds, field proposals and public projections unchanged.",
+    "Saved pilot validation contains35unique passing probe names, increased from23; inspected added assertions.",
+    "Independently executed isolated helper functions in memory with read-only assertions covering the original finding and adverse unknown/state/freshness cases; all passed.",
+    "Independently reran check-public.ts:exit0,12awards/16sources, unchanged StudentAwardSchema/StudentSourceSchema and valid public source references.",
+    "Independently ran git diff --check ENTRY HEAD:exit0.",
+    "Original preservation review remains applicable:canonical controls/state, null stage pointers, historical attestations, prior proposal/replacement records, handoff suffix, runtime/fixtures/deployment bytes preserved.",
+    "Retained monitor design/inventory remains distinct:437records=411awards+26leads; Reviews owns decisions/due dates, runner state owns attempts/fingerprints/outbox; whole-inventory adoption remains SD5 work.",
+    "Need-required versus need-in-selection, proposed/as-of versus accepted/current facts, parent/child awards and historical/unknown cycles remain conservatively separated.",
+    "Exact proposed first SD2 batch remains Pell Promise, Neurodiversity, David and Lisa Barnes, with fresh identity/source/denominator authority required."
+  ],
+  "validationLimits": [
+    "Mandatory plan/typecheck/full-test passes and standard/webpack build results were reviewed as recorded evidence. Runtime and dependency bytes did not change in remediation.",
+    "Exact npm run build remains environment-blocked by process/port EPERM after the permitted retry. Webpack passed; it is not represented as standard-build success or canonical universal-gate satisfaction.",
+    "Fresh authenticated delivery baseline remains unresolved.",
+    "No live spreadsheet, public-source, remote Git, provider or applicant-data access was performed by reviewer; no old spreadsheet cell snapshots read.",
+    "Saved source evidence supports bounded historical/proposed interpretations only; no current fact acceptance or complete-source silence inference.",
+    "No generator executed, files edited, Git mutated or findings repaired by reviewer.",
+    "Full workbook population/equivalence, preservation/concurrency, current offering/window/route facts, implementation/publication and monitor setup/activation remain deferred.",
+    "Local probes establish contract behavior; they do not claim browser implementation or live app verification."
+  ],
+  "nextAction": "Save the independent review and local SD1 closure without rebinding the frozen candidate. Stop before SD2; await direct selection of the exact SD2 batch, official-source reads and denominator scope. No Sheet writes, app changes, deployments, monitoring activation or notifications."
+}

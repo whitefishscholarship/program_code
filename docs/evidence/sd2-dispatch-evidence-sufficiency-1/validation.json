@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "name": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:12:06.240017+00:00",
+      "completedAt": "2026-10-21T00:12:06.389698+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/plan.log.gz",
+      "rawSha256": "8787d37f60e7210c406090de29173dc9b716a65d94022c4da955ef36f29cd58e",
+      "rawBytes": 998,
+      "storedSha256": "7641a56619c3d9083617fd833ea4123a5ea11edece1f6ec69fa6a35fe3235bfa",
+      "storedBytes": 494,
+      "encoding": "gzip"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:12:06.390083+00:00",
+      "completedAt": "2026-10-21T00:12:10.693838+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/typecheck.log.gz",
+      "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "rawBytes": 39,
+      "storedSha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "storedBytes": 59,
+      "encoding": "gzip"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:12:10.694476+00:00",
+      "completedAt": "2026-10-21T00:12:10.804367+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/tests.log.gz",
+      "rawSha256": "0d1773e996eb3c45839f61a61e8c542a173a7ae208bf4d195b80630165c11fd6",
+      "rawBytes": 3459,
+      "storedSha256": "bce0a930948c4d825d76807126440b2d44342ef942be019b928178ac4548c674",
+      "storedBytes": 989,
+      "encoding": "gzip"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:12:10.804733+00:00",
+      "completedAt": "2026-10-21T00:12:12.528897+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/build.log.gz",
+      "rawSha256": "7d21bb7fd3a58eff1a7e1dd053341b8d46212a00d41d9e8c34e70de70b313272",
+      "rawBytes": 4597,
+      "storedSha256": "e4c92fcda91e249ccca4e19aa6a991a9ecfd073d7d589634e2cca540fea6f555",
+      "storedBytes": 1408,
+      "encoding": "gzip"
+    },
+    {
+      "name": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-21T00:12:12.529528+00:00",
+      "completedAt": "2026-10-21T00:12:12.559931+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    },
+    {
+      "name": "entry-diff",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-21T00:12:12.560390+00:00",
+      "completedAt": "2026-10-21T00:12:12.590435+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/entry-diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    }
+  ],
+  "dependencyInstallAttempts": 0,
+  "sourceRequests": 0,
+  "workbookRequests": 0,
+  "requiredBuildGateRemainsOpen": true,
+  "freshAuthenticatedMainTargetVerified": false
+}

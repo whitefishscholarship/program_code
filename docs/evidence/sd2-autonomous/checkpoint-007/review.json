@@ -1,0 +1,41 @@
+{
+  "outcome":"PASS",
+  "scope":"Independent final recheck of one local SD2 held-research checkpoint only",
+  "reviewer":{"identity":"/root/sd2_checkpoint007_review","freshContext":true,"readOnly":true,"authoredOrEdited":false,"memoryUsed":false,"networkOrExternalActions":false},
+  "binding":{"entryCommit":"4a490a70f3be08b402439e9a92d0c4285762b787","candidateCommit":"2d0d0acc511458fa8c0ea11ba7b58cfd52a8754d","candidateTree":"31a6020ac142d171404b298179e7e6e60389b74c","manifestSha256":"23995295b291ecc239d69e9579f8fedb4709b01f2fe55e81fc649c5180c32bcd","completeDiffSha256":"67dd3c4a5dfca9e20dfe2e15c80ebe5664a43f2608f6e62015a1703d06402f05","changedPaths":72},
+  "severityCounts":{"critical":0,"high":0,"medium":0,"low":0},
+  "findings":[],
+  "originalReview":{"candidateCommit":"4373ca3b96bd47b47d880b6e740130cba2445a97","manifestSha256":"ac67cd2fd81ee8a411dc541b90af6d17e9c9096d306b6fc01e7ce145e3bea76d","reviewPath":"docs/evidence/sd2-autonomous/checkpoint-007/review-round1.json","reviewSha256":"5a2f0f8571672e805d9b5f48bc022d88aec3677cd5a29067b58e606baee01262","outcome":"FAIL","severityCounts":{"critical":0,"high":0,"medium":2,"low":1},"transcriptionMatchesOriginalResponse":true,"transcriptionDifference":"JSON formatting only","originalManifestBytesVerified":true,"originalVerificationBytesVerified":true},
+  "requiredFixCount":3,
+  "resolvedDispositionCount":3,
+  "unresolvedRequiredFixes":0,
+  "dispositions":[
+    {"findingId":"SD2-007-M1","originalSeverity":"medium","status":"resolved-independently-rechecked","evidence":"The FAQ now retains the qualified degree-credit, AP-course and conditional high-school/part-time-college answer without the contact sentence/link. Row131 contains the matching held typed qualifier and exact evidence. Updated source hashes, routes, README and semantic checks preserve the disclosed original-capture recovery and missing raw-envelope-hash limit.","owner":"Codex implementation author","target":"2d0d0acc511458fa8c0ea11ba7b58cfd52a8754d"},
+    {"findingId":"SD2-007-M2","originalSeverity":"medium","status":"resolved-independently-rechecked","evidence":"Rows124–126 retain source-described required online WCF submission; row127 retains the MCF portal and published access code; row134 retains paper-or-online alternatives. All five envelopes have exact retained evidence and remain held. Current usability, public access and applicable cycle remain null; identity remains held; application access, portal visits and action flags remain false.","owner":"Codex implementation author","target":"2d0d0acc511458fa8c0ea11ba7b58cfd52a8754d"},
+    {"findingId":"SD2-007-L1","originalSeverity":"low","status":"resolved-independently-rechecked","evidence":"Every native-inspection entry explicitly identifies its interim status and routes final retained-text verification to document-inspection.json. Luedke explicitly explains the historical hash mismatch. All original receipt keys and values remain preserved, and immutable candidate4373ca3 retains the original unlabeled receipt.","owner":"Codex implementation author","target":"2d0d0acc511458fa8c0ea11ba7b58cfd52a8754d"}
+  ],
+  "checksPerformed":[
+    "Independently recomputed the final manifest SHA256, candidate tree and complete entry-to-candidate binary-diff SHA256; verified all72 changed paths, blob IDs, byte lengths, SHA256 values and worktree equality.",
+    "Reviewed the complete12-path original-to-replacement change set, remediation script, three count-matched dispositions and archived original review against this reviewer's actual response.",
+    "Verified original manifest bytes and original verification preservation. The original failed candidate and review binding remain intact.",
+    "Independently verified structural ledger changes are limited to five application-method envelopes, one eligibility extension, existing FAQ evidence-hash updates and associated routes. All other ledger top-level values remain unchanged except the source-registry repair.",
+    "Ran the read-only verifier successfully:20 ordered inputs,140 cumulative initial dispositions,266 unprocessed,384 new held field envelopes,2646 cumulative held fields,140 held identities,36 receipts,121 exact evidence references and24 source-link dispositions.",
+    "Verified all121 exact excerpts, source URLs and artifact hashes against the retained source artifacts and permitted source affinity.",
+    "Retained the initial complete source review, six DOCX body-XML/table inspections and all14 safe page-view inspections. Raw documents, page views, document-inspection and capture/download receipts remain unchanged.",
+    "Reverified41 prior custody pins,1315 protected entry paths, all six prior ledgers, older plan/handoff bytes, checkpoint006 candidate5434035 and receipte1f2185,12 M1 pins and437 unique M1 records.",
+    "Confirmed validation receipts and logs remain unchanged: plan/typecheck/fulltests passed after disclosed IPC retries; both exact standard builds remain blocked by process/port permission errors without waiver.",
+    "Verified frozen entry-to-final and worktree whitespace checks pass. Only the pending final-manifest.json is untracked.",
+    "No files were edited and no builder, source research, workbook access, network action or external effect was performed by this reviewer."
+  ],
+  "limits":[
+    "PASS establishes evidence fidelity and accountable held dispositions for this immutable local research packet. It accepts no scholarship facts, current offering, canonical stage, full SD2 completion or release.",
+    "The restored Davis FAQ wording comes from the author's original in-session capture. No raw full-envelope hash was retained and no independent source refresh was performed; that provenance limit remains explicit.",
+    "Live source availability, current workbook state, native public/sponsor authority and fresh authenticated remote main/target remain unverified.",
+    "Provider indexed-content freshness and source revisions remain unknown; the first Jean call lacks a precise captured timestamp.",
+    "WET raw-byte and visual proof remain unavailable despite readable provider text. Six DOCX files have body-XML evidence only. Sanitized views establish no excluded-scope silence.",
+    "Intermediate source-output lapses remain disclosed; persisted containment does not erase them.",
+    "Raw documents and renderings remain temporary. Future required audits must verify exact custody or report specific availability gaps while preserving receipts.",
+    "Both standard-build failures and every later preservation, human/canonical acceptance, publication, student, monitoring and reserved-effect gate remain open at their existing owners and triggers. All2646 field holds and140 identity holds remain held; SD3 remains unstarted."
+  ],
+  "nextAction":{"owner":"Codex implementation and handoff owner","trigger":"Recording this exact final independent review","path":"docs/evidence/sd2-autonomous/checkpoint-007/","action":"Record this review and exact final manifest in the selected local two-file research-review receipt. Preserve original candidate4373ca3 and its failed-round artifacts unchanged. Prepare a separate section9/session handoff for offset140, savedrow144, P.E.O. Chapter D Scholarship (1) $1,400, without rebinding this source review. Carry every held field, identity, seed, source-link and deferred-material route to its applicable authorized evidence-arrival or SD2-consolidation trigger. Preserve all later gates. No fact acceptance or external effect follows from this PASS."}
+}

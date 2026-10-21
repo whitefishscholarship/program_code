@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "status": "CORRECTED_BEFORE_FREEZE",
+      "command": "python3 docs/evidence/sd2-acceptance-readiness-1/verify.py",
+      "initialResult": "KeyError:sessionStatus at new verifier entry-result check",
+      "cause": "New verifier initially used older closeout result key; actual inherited receipt uses localObjectiveIntegrity.",
+      "correction": "Changed only new verifier check to actual localObjectiveIntegrity key. Original entry receipt/artifacts untouched; subsequent new unbound verifier PASS.",
+      "owner": "Codex local readiness evidence author",
+      "trigger": "Completed author validation before candidate freeze",
+      "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/verify.py",
+      "nextAction": "No unresolved fix; preserve actual prior receipt schema and final reviewed binding."
+    }
+  ]
+}

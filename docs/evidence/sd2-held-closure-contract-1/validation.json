@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "name": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T02:08:12.329115+00:00",
+      "completedAt": "2026-10-21T02:08:49.304873+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/plan.log.gz",
+      "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "rawBytes": 164,
+      "storedSha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "storedBytes": 143,
+      "encoding": "gzip"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T02:08:49.305326+00:00",
+      "completedAt": "2026-10-21T02:08:53.562425+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/typecheck.log.gz",
+      "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "rawBytes": 39,
+      "storedSha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "storedBytes": 59,
+      "encoding": "gzip"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T02:08:53.562829+00:00",
+      "completedAt": "2026-10-21T02:09:41.354299+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/tests.log.gz",
+      "rawSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "rawBytes": 19755,
+      "storedSha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "storedBytes": 6842,
+      "encoding": "gzip"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T02:09:41.354980+00:00",
+      "completedAt": "2026-10-21T02:09:42.417035+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/build.log.gz",
+      "rawSha256": "43c00e50708da0eca8f78d4bfda1716af30ee8730264b293244a18468107971e",
+      "rawBytes": 4597,
+      "storedSha256": "935e50b5520aad5c63159f81dbc33e47c72f0a8b8438754e97c68ce928b27f3f",
+      "storedBytes": 1407,
+      "encoding": "gzip"
+    },
+    {
+      "name": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-21T02:09:42.417481+00:00",
+      "completedAt": "2026-10-21T02:09:42.442198+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    },
+    {
+      "name": "entry-diff",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "901040e62d871f592f5600d366b3a19b39d08d07"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-21T02:09:42.442538+00:00",
+      "completedAt": "2026-10-21T02:09:42.464311+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/entry-diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    }
+  ],
+  "dependencyInstallAttempts": 0,
+  "sourceRequests": 0,
+  "workbookRequests": 0,
+  "requiredBuildGateRemainsOpen": true,
+  "freshAuthenticatedMainTargetVerified": false,
+  "executionRequest": "require_escalated; exact unchanged local matrix; actual failures retained"
+}

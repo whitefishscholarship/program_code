@@ -1,0 +1,24 @@
+{
+  "scope": "local continuation plan validation only",
+  "command": "npm run plan:check",
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "initial": {
+    "startedAt": "2026-10-13 15:50:06 UTC",
+    "exitCode": 1,
+    "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nnode:net:1918\n      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);\n                    ^\n\nError: listen EPERM: operation not permitted /var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/60412.pipe\n    at Server.setupListenHandle [as _listen2] (node:net:1918:21)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2119:5)\n    at file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31537\n    at new Promise (<anonymous>)\n    at createIpcServer (file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31515)\n    at async file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:55:459 {\n  code: 'EPERM',\n  errno: -1,\n  syscall: 'listen',\n  address: '/var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/60412.pipe',\n  port: -1\n}\n\nNode.js v22.20.0\n"
+  },
+  "retry": {
+    "startedAt": "2026-10-13 15:50:16 UTC",
+    "completionObservedAt": "2026-10-13 15:53:41 UTC",
+    "exactCompletionTime": null,
+    "sandboxPermissions": "require_escalated",
+    "exitCode": 0,
+    "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nBuild-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+  },
+  "repeatedApplicationChecks": false,
+  "retainedApplicationEvidence": "docs/evidence/sd1/VALIDATION.md",
+  "limits": [
+    "Successful SD1 probes/typecheck/full tests not repeated; app unchanged",
+    "Original exact standard build EPERM and live-main HTTP404 remain unresolved; no canonical acceptance"
+  ]
+}

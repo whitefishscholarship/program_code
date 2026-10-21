@@ -1,0 +1,117 @@
+{
+  "startedAt": "2026-10-13T16:25:16.188Z",
+  "endedAt": "2026-10-13T16:25:17.106Z",
+  "args": {
+    "spreadsheet_id": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+    "ranges": [
+      "'School Resource - Cleaned Up'!A400:O400"
+    ],
+    "cell_fields": "formattedValue,userEnteredValue,hyperlink,textFormatRuns"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+      "properties": {
+        "title": "Spreadsheet Clean Up 4",
+        "locale": "en_US",
+        "timeZone": "America/Denver"
+      },
+      "sheets": [
+        {
+          "properties": {
+            "sheetId": 405588227,
+            "title": "School Resource - Cleaned Up",
+            "index": 3,
+            "sheetType": "GRID",
+            "gridProperties": {
+              "rowCount": 795,
+              "columnCount": 25,
+              "frozenRowCount": 1,
+              "hideGridlines": true
+            }
+          },
+          "data": [
+            {
+              "startRow": 399,
+              "rowData": [
+                {
+                  "values": [
+                    {
+                      "formattedValue": "Unknown",
+                      "userEnteredValue": {
+                        "stringValue": "Unknown"
+                      }
+                    },
+                    {},
+                    {},
+                    {
+                      "formattedValue": "National",
+                      "userEnteredValue": {
+                        "stringValue": "National"
+                      }
+                    },
+                    {
+                      "formattedValue": "$10000 (past example; next funding unconfirmed)",
+                      "userEnteredValue": {
+                        "stringValue": "$10000 (past example; next funding unconfirmed)"
+                      }
+                    },
+                    {
+                      "formattedValue": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+                      "userEnteredValue": {
+                        "stringValue": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships"
+                      },
+                      "hyperlink": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships"
+                    },
+                    {
+                      "formattedValue": "The David and Lisa Barnes Flight Training Scholarship",
+                      "userEnteredValue": {
+                        "stringValue": "The David and Lisa Barnes Flight Training Scholarship"
+                      }
+                    },
+                    {
+                      "formattedValue": "Aviation - Pilot Training; Age limit applies",
+                      "userEnteredValue": {
+                        "stringValue": "Aviation - Pilot Training; Age limit applies"
+                      }
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                      "formattedValue": "Private pilot training",
+                      "userEnteredValue": {
+                        "stringValue": "Private pilot training"
+                      }
+                    },
+                    {},
+                    {
+                      "formattedValue": "Past fund for high school students age 16–18; private pilot certificate. AOPA membership required; HS membership is free. Applications reopen October 1, 2026; this fund is unconfirmed.",
+                      "userEnteredValue": {
+                        "stringValue": "Past fund for high school students age 16–18; private pilot certificate. AOPA membership required; HS membership is free. Applications reopen October 1, 2026; this fund is unconfirmed."
+                      }
+                    },
+                    {
+                      "formattedValue": "AOPA scholarships",
+                      "userEnteredValue": {
+                        "stringValue": "AOPA scholarships"
+                      },
+                      "hyperlink": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}

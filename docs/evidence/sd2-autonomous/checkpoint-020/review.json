@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Independent local held-research review of one SD2 checkpoint020",
+  "reviewer": {
+    "identity": "Codex /root/checkpoint020_review",
+    "readOnly": true,
+    "freshContext": true,
+    "authoredOrEdited": false,
+    "backendModelAndEffort": "Not exposed to this reviewer"
+  },
+  "binding": {
+    "entryCommit": "59fa4da23e84de267c2f58af15ee5c6d23074ecd",
+    "candidateCommit": "3d64564e6069807faf9d09cde61b8e42094c6ca8",
+    "candidateTree": "252f998708fdd46b00b31a01754011e0304b86e9",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-020/final-manifest.json",
+    "manifestSha256": "11eb855d95d4e1c4722f4c621f13860fb196fe237fe546c3f7166bcea4acfacc",
+    "completeDiffSha256": "e94c75d1fa9931e42386e52466ee7a74287e7b0e13fbe3019aea87c401895445",
+    "completeDiffBytes": 1183680,
+    "changedPathCount": 29,
+    "changedPaths": [
+      "docs/evidence/sd2-autonomous/checkpoint-020.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/README.md",
+      "docs/evidence/sd2-autonomous/checkpoint-020/assemble.py",
+      "docs/evidence/sd2-autonomous/checkpoint-020/author-checks.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/build-retry.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/build-retry.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/build.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/build.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/capture-metadata.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/concurrency-audit.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/conversion-link-dispositions.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/plan-retry.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/plan-retry.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/plan.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/plan.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/prior-custody-audit.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/run-check.py",
+      "docs/evidence/sd2-autonomous/checkpoint-020/source-concordance.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/source-receipts.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/sources/aopa.md",
+      "docs/evidence/sd2-autonomous/checkpoint-020/tests-retry.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/tests-retry.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/tests.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/tests.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/typecheck.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/typecheck.log",
+      "docs/evidence/sd2-autonomous/checkpoint-020/validation.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/verification.json",
+      "docs/evidence/sd2-autonomous/checkpoint-020/verify.py"
+    ],
+    "allChangesAreAdditions": true,
+    "candidateBlobsHashesBytesAndWorktreeEqualityVerified": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Scope, cursor and holds",
+      "outcome": "PASS",
+      "evidence": "Verified exact frozen queue offsets380:400, savedrows386-406 excluding previously completed400; 18 researched-held inputs and two unvisited SmarterSelect held-access inputs. Every new field and identity remains held.",
+      "checkpointInputs": 20,
+      "newHeldFields": 408,
+      "cumulativeInitialDispositions": 400,
+      "cumulativeHeldFields": 7284,
+      "cumulativeIdentityHolds": 400,
+      "unprocessedInputs": 6,
+      "nextOffset": 400,
+      "nextInputKey": "saved-405588227-row-407",
+      "nextInputName": "THE RICHARD MCSPADDEN SCHOLARSHIP FOR ADVANCED PILOT TRAINING"
+    },
+    {
+      "name": "Retained source affinity and material semantics",
+      "outcome": "PASS",
+      "evidence": "Compared all typed child identity, amount, eligibility, materials, application and cycle claims with the actual retained AOPA selection. All 198 evidence references resolve to the selected artifact with matching excerpts and locators. The 18 children remain past examples with unknown current cycles and funding. Preferences remain preferences; literal must-be-16 wording retains its interpretation hold. Caruso preference-clause scope, GPA and award-time age are preserved. Carlsbad employment is required at application and award; heading and broader career criteria remain separate. Ceci purposes, Malone sex-specific slots, CAA 200 recipient slots and dedicated application/general-manager recommendation, Shafer non-exhaustive career examples, Fitts preferences and submission-time age, Ibrahim GPA/student scope, and Copeland high-school scope are retained without unsupported exclusions.",
+      "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-020/sources/aopa.md",
+      "artifactSha256": "7a34342daaad86ada59a941236d65f2174bc5a126a922ebdc0ef158faa8a15ae",
+      "independentOriginalSourceFidelity": false
+    },
+    {
+      "name": "Parent and child separation",
+      "outcome": "PASS",
+      "evidence": "Parent yearless application windows, current membership and residency, transcript/references/material deadlines, automatic matching, donor funding, prepaid expense card, 12/24-month expiry and resubmission observations remain separately scoped and unverified for child applicability. CAA dedicated-route exception is preserved. No parent opening becomes a current child offering."
+    },
+    {
+      "name": "Historical preservation and owned routes",
+      "outcome": "PASS",
+      "evidence": "Read-only verify.py exited0 at 2026-10-16T02:44:09.405179+00:00. It recomputed 19 earlier manifest/review bindings and historical candidate hashes, verified 2092 protected tracked files, original nine attention rows and supplements, all prior ledgers and owned routes, 437 M1 identities/routes and 12 M1 pins. All 71 original temporary custody hashes matched with no current gaps.",
+      "routeCounts": {
+        "identities": 400,
+        "fields": 7284,
+        "seeds": 668,
+        "links": 1116
+      }
+    },
+    {
+      "name": "Capture, conversion links and handling limits",
+      "outcome": "PASS",
+      "evidence": "One shared recorded AOPA retrieval, one measured client interval, maximum measured concurrency1 and no measured same-host overlap. Reviewed omission accounting and all31 hash-only converted Markdown destination routes with owner, trigger and next action. Source concordance explicitly identifies itself as author comparison. Historical heading/output handling and earlier overlap/unmeasured limits remain disclosed."
+    },
+    {
+      "name": "Recorded required verification",
+      "outcome": "PASS_WITH_RETAINED_GATES",
+      "evidence": "Validated retained log hashes and results: plan:check and full tests pass after IPC retry; typecheck passes. Both exact standard builds fail with process/port Operation not permitted. Read-only verifier includes git diff --check and passes. Reviewer did not rerun npm or builds."
+    },
+    {
+      "name": "Review boundary",
+      "outcome": "PASS",
+      "evidence": "Reviewer performed no edits, assembler execution, Git mutations, network/source/workbook reads, npm/build reruns or external effects. Git status after review showed only the supplied untracked final-manifest.json. Future two-file receipt and handoff are outside this candidate review."
+    }
+  ],
+  "limits": [
+    "This review establishes consistency with the retained selected conversion, not independent fidelity to the original source.",
+    "No full raw conversion, original byte hash, native/visual/page/image/table/form completeness, source-silence, public-access, sponsor-continuity or origin-freshness proof is available.",
+    "The31 destination hashes cannot independently establish original-link completeness or reconstruct omitted destinations.",
+    "Unvisited SmarterSelect, CAA/account, membership and exam-document routes remain held.",
+    "Client timing is recorded evidence, not independent provider telemetry; historical output, overlap and unmeasured intervals remain unchanged.",
+    "Both standard-build EPERM failures and fresh authenticated origin/main/target verification remain open with Codex before canonical acceptance or authorized release.",
+    "All preservation, backup, recovery, permission, human/canonical/publication, student/CSV/browser/fit, M1/SD5 and reserved-effect gates retain their existing owners, triggers and next actions.",
+    "No new source retrieval or source-currentness verification was performed by this reviewer."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

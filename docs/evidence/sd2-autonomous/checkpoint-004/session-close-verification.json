@@ -1,0 +1,86 @@
+{
+  "outcome": "PASS",
+  "scope": "Final user-requested session close only, not a new SD2 checkpoint or rebound source review",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/checkpoint-004/verify-session-close.py",
+    "--record"
+  ],
+  "startedAt": "2026-10-14T20:40:27.041936+00:00",
+  "completedAt": "2026-10-14T20:40:46.022304+00:00",
+  "baselineBeforeCloseout": "5851e95",
+  "reviewedCandidate": "c9050bbcaf3dcbbae44c7e7d375cb5618d53eba2",
+  "localReviewReceipt": "bf17ea2864151e63f957d9efdda0fbe8f64ddac3",
+  "originalReviewAndManifestPreserved": true,
+  "independentReviewerCompletedNoPendingRepair": true,
+  "threeFindingsResolvedIndependently": true,
+  "initialDispositions": 80,
+  "frozenInputs": 406,
+  "unprocessedInputs": 326,
+  "heldFields": 1520,
+  "heldIdentities": 80,
+  "factsAccepted": 0,
+  "checkpointLedgers": [
+    {
+      "checkpoint": 1,
+      "inputKeys": 20,
+      "heldFields": 344,
+      "ledgerPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "ledgerSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86"
+    },
+    {
+      "checkpoint": 2,
+      "inputKeys": 20,
+      "heldFields": 400,
+      "ledgerPath": "docs/evidence/sd2-autonomous/checkpoint-002.json",
+      "ledgerSha256": "19b064197fc87302be79b1423a86527f03eb06fcecdd7fc81c27217a442005fb"
+    },
+    {
+      "checkpoint": 3,
+      "inputKeys": 20,
+      "heldFields": 392,
+      "ledgerPath": "docs/evidence/sd2-autonomous/checkpoint-003.json",
+      "ledgerSha256": "2afb2153bfb645302c1257c7bb1564be37cc2360ae9f1cb0540a62dfb6297a89"
+    },
+    {
+      "checkpoint": 4,
+      "inputKeys": 20,
+      "heldFields": 384,
+      "ledgerPath": "docs/evidence/sd2-autonomous/checkpoint-004.json",
+      "ledgerSha256": "d4070ea88b9e837d17a80b0f40244811263813ef446681356a3b7eb3f5c6fde6"
+    }
+  ],
+  "recordRoutesAudited": 80,
+  "seedAliasDispositionsAudited": 112,
+  "seedAliasRoutesInheritedFromVerifiedParentRecord": 32,
+  "auditPreparationCorrection": "Initial close-audit assertion expected routing copied into every seed object; checkpoint002 legitimately inherits its complete owner/trigger/specific next action from its named record. Audit now explicitly validates that inheritance. Original ledger/history untouched; initial assertion resolved.",
+  "sourceLinkDispositionOccurrencesAudited": 563,
+  "allOwnersTriggersNextActionsPresent": true,
+  "originalNineAttentionRowsAndEverySupplementPreserved": true,
+  "originalM1Records": 437,
+  "M1Pins": 12,
+  "newSourceReadOrReplay": false,
+  "newExternalEffects": false,
+  "SD3Started": false,
+  "newIssues": [
+    "Three source-review findings resolved by author and independently rechecked; immutable failed history retained.",
+    "Initial public recipient/contact output exposure disclosed; persisted containment verified; safe-output follow-through owned by next Codex before permitted source outputs.",
+    "Temporary raw custody audited; next evidence owner must record availability gaps rather than reconstruct/replay."
+  ],
+  "laterGates": {
+    "standardBuild": "Both exact process/portEPERM failures remain open, no waiver",
+    "freshAuthenticatedMainTarget": "Unverified; retainedlocalpinonly",
+    "liveWorkbookPublicSourceAuthorityNativePreservationBackupRecovery": "Not established by this local research/closeout",
+    "humanCanonicalPublicationStudentMonitorEffects": "All original owner/trigger/gates remain open"
+  },
+  "next": {
+    "owner": "Next-session Codex research/proposals",
+    "trigger": "Fresh session under existing AUTHORITY/POLICY",
+    "authoritativeProgressPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "kickoffPath": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+    "inputKey": "saved-405588227-row-84",
+    "name": "Clayton E. Hoyt Endowed Scholarship",
+    "action": "Resume one bounded SD2checkpoint at offset80; neverinitialize/reset/replay; stopbeforeSD3",
+    "recommendedEffort": "High"
+  }
+}

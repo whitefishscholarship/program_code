@@ -1,0 +1,159 @@
+{
+  "outcome": "PASS",
+  "recordedAt": "2026-10-15T02:04:49.695355+00:00",
+  "scope": "Final requested session closure only; not another research checkpoint or rebound independent review",
+  "priorHandoffCommit": "405c9268bcbb4b5a11e08080d020e46676f6e55b",
+  "priorTrackedPathsPreserved": 1465,
+  "sourceCandidate": "2c59114f643ea90f84e55a43f7e73dba2b57dbba",
+  "localReviewReceipt": "de40c298624280cc671bc1134213b1e7ef0bd600",
+  "allPriorProgressHandoffKickoffBytesRetained": true,
+  "allHeldFactsIdentitiesSourcesAndMaterialsKeepOriginalOwnersTriggersActions": true,
+  "closureAttentionRoutes": 10,
+  "noPendingReviewerRepairOrRecheck": true,
+  "reviewerAgentObservedCompleted": true,
+  "originalGoalCompleteWithinLocalHeldResearchLimits": true,
+  "initialDispositions": 160,
+  "heldFields": 3033,
+  "heldIdentities": 160,
+  "acceptedFacts": 0,
+  "unprocessedInputs": 246,
+  "M1Records": 437,
+  "freshPreCloseAudit": {
+    "outcome": "PASS",
+    "recordedAt": "2026-10-15T02:02:11.708486+00:00",
+    "scope": "Separate author-verified final handoff and routing audit, not rebound independent source review",
+    "reviewedCandidate": "2c59114f643ea90f84e55a43f7e73dba2b57dbba",
+    "localReviewReceipt": "de40c298624280cc671bc1134213b1e7ef0bd600",
+    "manifestSha256": "54e1d908efb8eb16a718f9fcca9cff2aa7e1ff812e70b8573d736db12c3104cb",
+    "candidatePathsPreserved": 59,
+    "allOlderPlanSupplementsNineAttentionRowsAndHandoffPromptBytesPreserved": true,
+    "initialDispositions": 160,
+    "unprocessedInputs": 246,
+    "heldFields": 3033,
+    "heldIdentities": 160,
+    "factsAccepted": 0,
+    "seedAliasDispositionOccurrences": 272,
+    "sourceLinkDispositionOccurrences": 766,
+    "allOwnersTriggersNextActionsPresent": true,
+    "noPendingReviewerRepair": true,
+    "resolvedReviewFindings": 2,
+    "originalFailedReviewPreserved": true,
+    "ledgers": [
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-002.json",
+        "sha256": "19b064197fc87302be79b1423a86527f03eb06fcecdd7fc81c27217a442005fb"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-003.json",
+        "sha256": "2afb2153bfb645302c1257c7bb1564be37cc2360ae9f1cb0540a62dfb6297a89"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-004.json",
+        "sha256": "d4070ea88b9e837d17a80b0f40244811263813ef446681356a3b7eb3f5c6fde6"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-005.json",
+        "sha256": "010aca022dfc1f81942a4cb6e709f906ee63dff741dde701393a100f340e2813"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-006.json",
+        "sha256": "09a61e83bddbb606e6e64e94c24d9f2312b887f95415e8259ec99ce9040d315b"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-007.json",
+        "sha256": "86816c95d6f38847a15cac3f06c123017d4be040a3bb5091f36bc5ae32cd5e25"
+      },
+      {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-008.json",
+        "sha256": "16253e2d758d9aeab4fafe27d569b8f71a136698403a5e9c77446f48b0f40d86"
+      }
+    ],
+    "sourceAudit": {
+      "outcome": "PASS",
+      "checkpointInputs": 20,
+      "cumulativeInitialDispositions": 160,
+      "unprocessed": 246,
+      "nextInputKey": "saved-405588227-row-164",
+      "fieldEnvelopes": 387,
+      "cumulativeHeldFields": 3033,
+      "heldIdentities": 160,
+      "sourceReceipts": 26,
+      "evidenceReferences": 111,
+      "seedDispositions": 37,
+      "sourceLinkDispositions": 22,
+      "preservedEntryPaths": 1398,
+      "historicalManifestReviewsVerified": 6,
+      "priorCustodyPins": 68,
+      "safePageViews": 2,
+      "M1Records": 437,
+      "M1Pins": 12,
+      "acceptedFacts": 0,
+      "SD3Started": false
+    },
+    "M1Records": 437,
+    "M1Pins": 12,
+    "temporaryPriorCustodyPinsVerified": 68,
+    "newPEORawAndSafeViewPins": 3,
+    "rawBatchRejectionAndSafeHeldAlternativesRouted": true,
+    "sourceOutputLapsesAndFutureSanitizationRouted": true,
+    "allLaterPreservationAcceptanceStudentMonitorEffectGatesRetained": true,
+    "newSourceReadsDuringRemediationHandoff": false,
+    "newExternalEffects": false,
+    "SD3Started": false,
+    "standardBuildGate": {
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or authorized release",
+      "nextAction": "Require exact standard build pass in a permitted supporting environment; both current process/portEPERM failures remain unwaived."
+    },
+    "freshMainTargetGate": {
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or authorized release",
+      "nextAction": "Verify fresh authenticated owner-authorized main/target; saved baseline not current proof."
+    },
+    "next": {
+      "owner": "Next-session Codex research/proposals",
+      "trigger": "Next selected session under existing AUTHORITY/POLICY",
+      "authoritativeProgressPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+      "kickoffPath": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "offset": 160,
+      "inputKey": "saved-405588227-row-164",
+      "name": "Elevated Access Advanced Rating Scholarship",
+      "action": "Resume one bounded SD2 checkpoint; never initialize/reset/replay; stopbeforeSD3."
+    }
+  },
+  "closurePlanCheck": {
+    "command": [
+      "npm",
+      "run",
+      "plan:check"
+    ],
+    "cwd": "web",
+    "startedAt": "2026-10-15T02:03:22.196512+00:00",
+    "completedAt": "2026-10-15T02:04:00.233197+00:00",
+    "exitCode": 0,
+    "logPath": "docs/evidence/sd2-autonomous/checkpoint-008/session-close-plan.log",
+    "originalOutputSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+    "logSha256": "654665d2bbc2e9ed80b7a6fb4dd32aeaa722e9ab4d299c239048653d8b456389",
+    "logNormalization": "Leading/trailing blank lines and trailing line whitespace normalized only; substantive output/command/exit/timestamps unchanged"
+  },
+  "runtimeTestsNotReplayed": "Original passing typecheck/fulltests and both exact blocked builds retained unchanged; only local closure documentation changed.",
+  "newSourceReads": false,
+  "newExternalEffects": false,
+  "SD3Started": false,
+  "next": {
+    "owner": "Next-session Codex research/proposals",
+    "trigger": "Next selected session under existing AUTHORITY/POLICY",
+    "authoritativeProgressPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "kickoffPath": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+    "offset": 160,
+    "savedRow": 164,
+    "inputKey": "saved-405588227-row-164",
+    "name": "Elevated Access Advanced Rating Scholarship",
+    "action": "Resume one bounded SD2 checkpoint; preserve every hold and route; never initialize/reset/replay; stop before SD3."
+  },
+  "importantUnverifiedItems": "Current offering/source revisions/currency; native public/sponsor continuity; non-PEO complete raw/page/image proof; permanent temporary custody; fresh authenticated main/target; current workbook/preservation/backup/permission and every later acceptance/publication/student/monitor/effect gate. Exact standard build remains process/port permission-blocked."
+}

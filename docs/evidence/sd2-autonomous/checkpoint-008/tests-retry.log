@@ -1,0 +1,310 @@
+> web@0.1.0 test
+> tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-plan-rev9-interview-inventory.ts && tsx scripts/test-plan-rev10-governance.ts && tsx scripts/test-plan-rev11-late-delivery.ts && tsx scripts/test-plan-rev12-row-source.ts && node --import tsx scripts/test-p8m-proposals.ts && node --import tsx scripts/test-p8m-acceptance.ts && tsx scripts/test-production-authority.ts && tsx scripts/test-p9-evidence-v2.ts && node --import tsx scripts/test-p9-production-runtime.ts && node --import tsx scripts/p9-trusted-proof.ts --mode=self-test && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts && tsx scripts/p7-student-catalog.ts --check && tsx scripts/test-p7-student-catalog.ts && tsx scripts/p8-monitoring.ts --check && tsx scripts/test-p8-monitoring.ts && tsx scripts/test-p8r-interview.ts && node --import tsx scripts/test-p8f-preimplementation.ts && node --import tsx scripts/test-p8f-interview.ts && node --import tsx scripts/test-spreadsheet-shortlist.ts && node --import tsx scripts/test-interview-relevance-governance.ts && node --import tsx scripts/test-interview-relevance.ts && node --import tsx scripts/test-intake-governance.ts && node --import tsx scripts/test-scholarship-intake.ts && node --import tsx scripts/test-intake-promotion.ts && node --import tsx scripts/test-plan-rev17-rev15-delivery-repair.ts && node --import tsx scripts/test-interview-coverage.ts && node --import tsx scripts/test-r3-catalog-governance.ts && node --import tsx scripts/test-r3-catalog.ts && node --import tsx scripts/test-r4-identity-delivery.ts
+
+PASS  #3a $5,000 NOT grounded by $50,000
+PASS  #3b GPA 3.5 NOT grounded by $13.50
+PASS  #3c real $5,000 grounds
+PASS  #3d real GPA 3.5 grounds
+PASS  range $1,000–$5,000 needs both numbers
+PASS  range fails if one number missing
+PASS  sentinel 'Any' always grounds
+PASS  hallucinated name token-fails
+PASS  groundRecord blanks fabricated name
+PASS  groundRecord blanks fabricated amount
+PASS  groundRecord blanks fabricated GPA (3.9 vs 2.5)
+PASS  groundRecord blanks fabricated summary
+PASS  confidence higher for clean grounded record
+PASS  confidence within 5..98
+PASS  isFundTotal flags '$7.5 million fund'
+PASS  isFundTotal flags '$4.2 million endowment'
+PASS  isFundTotal passes a real award
+PASS  relevance: graduate scholarship excluded
+PASS  relevance: 'for Graduates' excluded
+PASS  relevance: type rating -> review
+PASS  relevance: membership -> review
+PASS  relevance: undergraduate NOT excluded
+PASS  relevance: plain HS scholarship ok
+PASS  audience: national HS scholarship fits
+PASS  audience: other-state residency excluded
+PASS  audience: Alaskan residents excluded
+PASS  audience: AEA members excluded
+PASS  audience: teachers excluded
+PASS  audience: search platform excluded
+PASS  audience: training-location not a residency restriction
+PASS  audience: Dawson CC institution-specific held
+PASS  audience: MSU (in-state flagship) still fits
+PASS  audience: FVCC (neighboring) still fits
+PASS  audience: generic 'accredited college' NOT flagged
+PASS  audience: non-Whitefish HS restriction held
+PASS  normalizeAmount ignores donor total
+PASS  normalizeGpa qualify over maintain
+PASS  dedupe by name subset
+PASS  dedupe by name equal
+PASS  distinct name on SAME url is NOT a dup
+PASS  non-duplicate returns null
+PASS  findUrlCollision reports shared url
+PASS  findUrlCollision null when unique
+PASS  ground: fabricated name w/ shared year blanked
+PASS  ground: legit amount w/ filler words still grounds
+PASS  ground: real name still grounds
+PASS  dedupe: distinct shorter name NOT skipped
+PASS  dedupe: same-base diff-amount NOT skipped
+PASS  dedupe: exact still caught
+PASS  dedupe: all-stopword name uses full-string
+PASS  audience: 'Ohio residents' excluded
+PASS  audience: 'Texas high school seniors' excluded
+PASS  audience: demonym 'Ohioans' excluded
+PASS  audience: 'graduated from a Florida high school' excluded
+PASS  audience: 'any four-year college or university' fits
+PASS  audience: 'an accredited college' fits
+PASS  audience: 'University of Alabama' excluded
+PASS  audience: MSU still fits (institution)
+PASS  audience: 'members of the public' NOT excluded
+PASS  audience: 'exclusively for active NTHS members' excluded
+PASS  audience: Folds of Honor (military family) excluded
+PASS  audience: 'junior college/trade school' fits
+PASS  audience: 'one U.S. college or university' fits
+PASS  audience: 'a U.S. university' fits
+PASS  audience: 'Ohio State University' still excluded
+PASS  relevance: grad-inclusive stays ok
+PASS  relevance: 'graduate degree' excluded
+PASS  relevance: 'registered nurse continuing education' review
+PASS  relevance: 'graduating high school seniors' stays ok
+PASS  fund: '$1 million scholarship' is NOT a fund total
+PASS  fund: '$7.5 million fund' IS a fund total
+PASS  fund: '$2,000 from the Smith Memorial Fund' is NOT
+PASS  amount: bare $10,000 kept
+PASS  audience: 'attend Harvard University' excluded
+PASS  audience: 'Duke University freshmen' excluded
+PASS  audience: MSU prose still fits
+PASS  audience: generic 'four-year college or university' still fits
+PASS  dedupe: comma vs no-comma amount
+PASS  dedupe: year-suffix near-dup caught
+PASS  dedupe: different amount NOT a dup
+PASS  dedupe: distinct longer name still NOT a dup
+PASS  audience: 'members of the senior class' fits
+PASS  audience: 'members of the FFA' excluded
+PASS  audience: 'gold star students' (metaphor) fits
+PASS  audience: 'Gold Star families' excluded
+PASS  relevance: 'any student in a doctoral program' excluded
+PASS  relevance: 'open to all doctoral candidates' excluded
+PASS  relevance: HS+grad inclusive still ok
+PASS  fund: '$5 million endowment funds the award' IS a fund total
+PASS  audience: 'remainder of funds' fits (no false demonym)
+PASS  audience: 'for Ohioans' excluded
+PASS  audience: 'current NTHS members' excluded
+PASS  audience: 'members enrolled in automotive' excluded
+PASS  audience: 'must be active OBAP members' excluded (plural)
+PASS  audience: 'must be PAPA members' excluded
+PASS  audience: 'current WAI members' excluded
+PASS  audience: 'dual-membership' excluded
+PASS  audience: 'AOPA members receive' excluded
+PASS  audience: 'members of the senior class' still fits
+PASS  audience: 'community members' (benign) still fits
+PASS  audience: clean national 'AFSA awards' fits
+PASS  audience: national welding (Miller) fits
+PASS  audience: 'Epic Flight Academy' scholarship excluded
+PASS  audience: 'United Aviate Academy' excluded
+PASS  audience: 'must relocate to' excluded
+PASS  audience: national flight-training scholarship (no academy) fits
+PASS  audience: AOPA org-list stub excluded
+PASS  link: 'Paper Application' has no URL
+PASS  link: 'Online Application' has no URL
+PASS  link: extracts URL + strips trailing period
+PASS  link: bare URL kept
+PASS  link: HTTP 200 OK
+PASS  link: HTTP 301 OK
+PASS  link: HTTP 404 DEAD
+PASS  link: HTTP 410 DEAD
+PASS  link: HTTP 403 INCONCLUSIVE (bot-block)
+PASS  link: HTTP 429 INCONCLUSIVE (rate-limit)
+PASS  link: HTTP 500 INCONCLUSIVE (server)
+PASS  link: ENOTFOUND DEAD (DNS, e.g. Folds of Honor)
+PASS  link: ECONNREFUSED DEAD
+PASS  link: ETIMEDOUT INCONCLUSIVE
+PASS  link: CERT_HAS_EXPIRED INCONCLUSIVE
+PASS  audience: Elks 'do not have to be a member' fits
+PASS  audience: 'parents do NOT need to be a member' fits
+PASS  audience: 'members of a household' (income def) fits
+PASS  audience: 'a member of the community nominates' fits
+PASS  audience: 'also open to AEA member companies' fits
+PASS  audience: 'FFA members who are graduating seniors' fits
+PASS  audience: 'DECA members graduating seniors' fits
+PASS  audience: 'STEM members and the public' fits
+PASS  audience: 'do not need to relocate' fits
+PASS  audience: 'traditional public high school' fits
+PASS  audience: 'must be active NTHS members' STILL excluded
+PASS  audience: 'MANRRS members and their children' STILL excluded
+PASS  audience: 'must attend Lincoln Charter School' STILL excluded
+PASS  audience: 'must be able to relocate to Florida' STILL excluded
+PASS  dynamic: mykaleidoscope.com is dynamic
+PASS  dynamic: grantinterface.com is dynamic
+PASS  dynamic: oche.my.site.com (Salesforce) is dynamic
+PASS  dynamic: scholarship.aws.org is dynamic
+PASS  dynamic: a normal org site is NOT dynamic
+PASS  dynamic: non-URL method text is NOT dynamic
+PASS  dynamic: KNOWN_DYNAMIC_HOSTS seeded
+PASS  target: off-host redirect flagged
+PASS  target: same-org subdomain redirect is NOT off-host
+PASS  target: dynamic SaaS host flagged
+PASS  target: near-empty HTML flagged as dynamic shell
+PASS  target: .pdf url flagged PDF
+PASS  target: pdf content-type flagged PDF
+PASS  target: page with no apply keyword flagged LIKELY_NOT_APPLY
+PASS  target: a clean same-host apply page has NO flags
+
+ALL PASS
+PASS  row length equals live header count (15)
+PASS  "In-State / National" mapped correctly
+PASS  "Portal/ Scholarship" mapped correctly
+PASS  "Amount" mapped correctly
+PASS  "Scholarship Location/Information" mapped correctly
+PASS  "Name of Scholarship" mapped correctly
+PASS  "Stated Min. GPA" mapped correctly
+PASS  "School Type (2-or 4-Year, or Trade)" mapped correctly
+PASS  "Renewing/ Non-Renewing" mapped correctly
+PASS  "Acute Financial Need Prioritization" mapped correctly
+PASS  "Accepts Gap Year Applications Upon Return" mapped correctly
+PASS  no PII value present in row
+PASS  Name is in Name column, not Summary
+PASS  scraped-spelling record maps name
+PASS  scraped-spelling PII dropped
+PASS  assertWritableHeaders accepts clean 15-col schema
+PASS  assertWritableHeaders refuses tab with PII column
+PASS  assertWritableHeaders refuses missing student column
+PASS  assertWritableHeaders refuses an unexpected extra column
+PASS  assertWritableHeaders tolerates trailing blank header cells
+PASS  sanitizeCell prefixes a leading '=' formula
+PASS  sanitizeCell prefixes leading +
+PASS  sanitizeCell prefixes leading @
+PASS  sanitizeCell prefixes leading -
+PASS  sanitizeCell leaves a normal amount untouched
+PASS  sanitizeCell leaves a normal name untouched
+PASS  sanitizeCell leaves empty untouched
+PASS  mapped formula Name is neutralized
+PASS  mapped formula Summary is neutralized
+PASS  mapped normal Amount untouched
+
+ALL PASS
+PASS  isPdfUrl: .pdf path
+PASS  isPdfUrl: .pdf with query
+PASS  isPdfUrl: uppercase .PDF
+PASS  isPdfUrl: html not pdf
+PASS  isPdfUrl: pdf in querystring only is not a pdf url
+Warning: Setting up fake worker.
+PASS  parsePdfBuffer returns substantial text
+PASS  extracts the document title
+PASS  extracts scholarship wording
+PASS  extracts the year context
+
+ALL PASS
+PASS  'Annual — May 31' resolves to a hard date
+PASS  'Annual — May 31' is next year (already past this year)
+PASS  'December 1' resolves to a hard future date this year
+PASS  'March 15' is NOT year 2001 (regression)
+PASS  'March 15, 2027' respects explicit year
+PASS  'Mar. 1, 2020' explicit past year => expired
+PASS  '15 May' (day-month) resolves
+PASS  '3/15/2027' hard
+PASS  'Opens 12/15' opens-only
+PASS  '12/1 (opens) - 3/1 (closes)' picks close date
+PASS  'Rolling' => rolling
+PASS  'Closed' => expired
+PASS  empty => tbd
+PASS  'Info available in December' (no day) => tbd
+PASS  undefined input => tbd (no throw)
+PASS  processor keeps "March 15" (not a year-2001 past-due exclude)
+PASS  processor keeps "Annual — May 31" (not a year-2001 past-due exclude)
+PASS  processor keeps "December 1" (not a year-2001 past-due exclude)
+PASS  processor keeps "Annual — Feb 15 (opens Oct)" (not a year-2001 past-due exclude)
+PASS  processor marks "3/1/2020" expired
+PASS  processor tolerates a numeric Due Date cell
+
+ALL PASS
+PASS  open 'dependent of a resident' scholarship SURVIVES
+PASS  Elks-MVS-style ('dependents welcome') SURVIVES
+PASS  'honors veterans' narrative scholarship SURVIVES
+PASS  range-amount scholarship SURVIVES
+PASS  'must be a veteran' is EXCLUDED for a general applicant
+PASS  'dependents of employees' is EXCLUDED for a general applicant
+PASS  'Elks members' is EXCLUDED for a general applicant
+PASS  'must be a veteran' SURVIVES when the student ticks military
+PASS  '$500 - $2,000' amount_max is 2000 (not 500)
+PASS  '$1,000-$50,000' amount_max is 50000
+PASS  '$5,000' single amount_max is 5000
+PASS  numeric Amount cell does not throw
+
+ALL PASS
+PASS  rejects AWS metadata IP
+PASS  rejects localhost
+PASS  rejects 127.0.0.1
+PASS  rejects 10.x private
+PASS  rejects 192.168.x private
+PASS  rejects 172.16.x private
+PASS  rejects 172.31.x private
+PASS  rejects IPv6 loopback
+PASS  rejects *.local
+PASS  rejects file:// scheme
+PASS  rejects gopher:// scheme
+PASS  rejects 0.0.0.0
+PASS  rejects garbage
+PASS  allows a normal https host
+PASS  allows a normal http host
+PASS  allows a public host that merely contains digits
+PASS  allows 172.32.x (public range)
+
+ALL PASS
+P1 INVENTORY TEST ALL PASS dc373a09d062ae6e5e03347ab391291ecc3dea427f90a21132e89cad113393e2
+delivery state history: PASS (2 accepted integrations; every deletion/downgrade/rebind rejected; latest equality and later evolution allowed)
+governance history: PASS (revision/amendment rollback, every P3-P8 field, P5/P8 exclusions, and evidence mutation rejected)
+delivery package history: PASS (baseline governance and exact P2 scripts preserved; omissions and unrelated mutation rejected)
+PLAN REV9 INVENTORY TEST PASS pinnedBlobs=7 criteria=38 earlierAffiliations=6 typeOnly=8
+PLAN REV10 GOVERNANCE TEST PASS criteria=82 aliases=50 operators=10
+PLAN REV11 LATE DELIVERY TEST PASS exact target, authority, effects, and path boundary
+PLAN REV12 ROW SOURCE TEST PASS exact pin, row completeness, unknown blanks, no invented denominators, and no-write boundary
+P8M PROPOSAL TEST PASS baseline package and 19 fail-closed adversarial mutations
+P8M ACCEPTANCE TEST PASS baseline plus 7 fail-closed mutations
+P9 production authority: PASS (exact IDs/tabs/backups, no-write, immutable receipt paths, entry/post-cutover proof states, owners)
+P9 evidence v2: PASS (strict schemas, chronology, derived IDs/config, OIDC gate, same-runtime rollback, complete writer inventory)
+P9 PRODUCTION RUNTIME TEST PASS files=41 publication=16db9f32a14c7b63d2a912a84c43ac973ae43a07d7c40841174d6fbdfd5a6b07 closure=f92802e9c85fa50afc2300ba66c248cc4ecf1f8bc86038616d5ca49d9496a52d
+P9 trusted proof self-test: PASS (host, provider, predecessor, chronology, strict v2, and semantic negatives)
+P2 DATA MODEL TEST ALL PASS dcbc9a28b093d1f32ec149d7c37b20606ea3108eaa3bdcea1ecc76474cd2d295
+P3 ACQUISITION CHECK PASS b577e6f2ec3b
+P3 ACQUISITION TEST ALL PASS b577e6f2ec3b
+P4 VERIFICATION CHECK PASS links=270 offline=4 cycles=20 fields=9 conflicts=5 reviews=300 digest=522d42a1bb62
+P4 VERIFICATION TEST ALL PASS links=270 hiddenApp=92 fields=9 digest=522d42a1bb62
+P5 SOURCE QUEUE CHECK PASS records=197 sources=213 fetch=50 manual=163 digest=6aa88419493b
+P5 REMEDIATION TEST PASS records=197 sources=213 form/login boundary enforced
+P5 PREBOUNDARY DEAD-LINK CHECK PASS receipts=7 digest=a1f1a7ed253f
+P5 PREBOUNDARY STATIC-APPLICATION CHECK PASS receipts=2 digest=480ef6b4f176
+P5 PUBLIC PROBE CHECK PASS sources=50 digest=38aac545f0c4
+P5 FIRECRAWL EVIDENCE CHECK PASS sources=50 retrieved=48 inconclusive=2 digest=ee5d977d8fce
+P5 AUDIT CHECK PASS rows=197 confirmed=0 corrected=10 manual=187 proposals=25 mandatoryReview=10 sample=38
+P5 AUDIT TEST PASS rows=197 proposals=25 mandatory=10 sample=38 privacy-safe
+P5 POSTWRITE CHECK PASS proposals=25 revision=222->223 rows=197 targets=25 failures=0
+P6 COVERAGE CHECK PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 fvcc=169 terminal=0 slotsObservedMin=71 legacyBindings=7 digest=d7ae32194b75
+P6 COVERAGE TEST PASS queue=5 completed=3 blocked=2 discovered=202 accepted=16 active=0 unknown=16 exclusions=186 slotsObservedMin=71 legacyBindings=7 authority=6 nearNameReviews=2
+P7 student catalog check passed: 192 awards, 217 sources (21 portals), 0 active, 192 unknown.
+P7 API, count, cycle, architecture-matrix, privacy, and export tests passed.
+P8 monitoring check passed: targets=1028 dryRuns=2 simulations=6 recovery=complete schedule=disabled.
+P8 full-denominator monitoring, executed retry/rate/freshness, HMAC recovery, idempotency, schedule-boundary, and privacy tests passed.
+P8R INTERVIEW TEST PASS awards=192 match=0 possible=192 conflicts=0 matrixVisualCells=30
+P8F PREIMPLEMENTATION TEST PASS academic=6 activities=4 volunteer=1 financial=1 criteria=38 affiliations=6 typeOnly=8 dispositions=30 visualCells=30 acceptedFacts=0
+P8F INTERVIEW TEST PASS awards=192 academic=6 activities=4 volunteer=1 financial=1 criteria=38 acceptedFacts=0 ruleGates=51
+SHORTLIST PASS [{"match":69,"possibleMatch":97,"knownConflict":26,"total":192},{"match":28,"possibleMatch":97,"knownConflict":67,"total":192},{"match":55,"possibleMatch":97,"knownConflict":40,"total":192},{"match":47,"possibleMatch":143,"knownConflict":2,"total":192}]
+Relevance local preparation boundary PASS; no hosted authority.
+RELEVANCE PASS {"pairedConnections":206,"enabledControls":38,"sourceRows":197,"awards":192,"academicRegression":[166,125,152,190]}
+Intake local preparation boundary PASS; no hosted authority.
+Intake recovery, exact authority, newer-edit and no-blind-retry gates PASS (synthetic only).
+Intake proposal consistency, field provenance, controlled mapping and newer-edit fixtures PASS.
+Intake closure rejects lost children, pending triage, orphaned recommendations and unactionable holds.
+Native row projections preserve exact display text and reject independently tampered ledger values.
+Intake deterministic exact targets, alias markers, rich links, append protection, partial readback, newer edits, tamper and no-blind-retry fixtures PASS; zero source writes.
+REV17 PASS: four complete large blobs; bad hashes, unreadable/oversized objects; valid current/canonical contexts; targeted authority, protected-file, missing/drifted main, wrong branch, premature REV16, ancestry/path rejection
+COVERAGE PASS: core-only results, four connections, no/unknown/skip, discovery/fact separation, OR, public CSV, source pins and authority boundary
+R3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.
+R3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.
+R3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.
+R3 CATALOG PASS {"awards":411,"preservedAwards":192,"profiles":61,"pairedConnections":291,"newGpaRules":9,"newSchoolRules":7,"organizations":9,"publicCsvIds":true,"sensitiveSkipNonExcluding":true}
+R4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.
+R4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection.

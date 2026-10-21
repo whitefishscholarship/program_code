@@ -1,0 +1,94 @@
+{
+  "outcome": "PASS",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint006_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "memoryUsed": false,
+    "networkOrExternalActions": false
+  },
+  "binding": {
+    "entryCommit": "194fd2b086d34607d915b4d551a28b6c013728ae",
+    "candidateCommit": "5434035979d9465f55bd6f56fb5d042f5045ae75",
+    "candidateTree": "76fe36fdaefe5d998fd24ab6a3070eb6e773264a",
+    "manifestSha256": "fc4fef430d1f36621f217e9024979326ffff09ca4468f1a39d5b96b31fc9922c",
+    "completeDiffSha256": "16cfa5c8e7b5a5ed1c161d1b8f3ca63dbf02f1fc51cade7cf620dbce998e1fc3",
+    "changedPaths": 52
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "originalReview": {
+    "candidateCommit": "cdac48be73cf24de68cd16b34621da722b9bad8d",
+    "manifestSha256": "7be8d90c79295975437372cc101f5631108f71ec301ec61fbdaf214a018dd623",
+    "reviewPath": "docs/evidence/sd2-autonomous/checkpoint-006/review-round1.json",
+    "reviewSha256": "eb4248b6a71e6240b59fa3f9fda77eb9136597da207e829051f506a83ed0f3e9",
+    "outcome": "FAIL",
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "transcriptionMatchesOriginalResponse": true,
+    "transcriptionDifference": "JSON formatting only",
+    "originalManifestBytesVerified": true,
+    "originalVerificationBytesVerified": true
+  },
+  "requiredFixCount": 2,
+  "resolvedDispositionCount": 2,
+  "unresolvedRequiredFixes": 0,
+  "dispositions": [
+    {
+      "findingId": "SD2-006-M1",
+      "originalSeverity": "medium",
+      "status": "resolved-independently-rechecked",
+      "evidence": "Row114 now has a held eligibility envelope retaining qualified local high school seniors with the exact unchanged fcd-pdf page1 excerpt, URL and artifact hash. Current applicability and homeschool exclusion remain null; the conditional homeschool slot remains separate. README, record/seed next actions and semantic verifier carry the condition.",
+      "owner": "Codex implementation author",
+      "target": "5434035979d9465f55bd6f56fb5d042f5045ae75"
+    },
+    {
+      "findingId": "SD2-006-M2",
+      "originalSeverity": "medium",
+      "status": "resolved-independently-rechecked",
+      "evidence": "Row115 now has a held eligibility envelope retaining the PDF graduating-senior requirement and parent Flathead County high-school wording with two exact unchanged source excerpts, URLs and hashes. Applicant county residence remains null; destination conflict, raw/visual limits and incomplete PDF inspection remain explicit. README, record/seed next actions and semantic verifier carry both conditions.",
+      "owner": "Codex implementation author",
+      "target": "5434035979d9465f55bd6f56fb5d042f5045ae75"
+    }
+  ],
+  "checksPerformed": [
+    "Independently recomputed replacement manifest SHA256, candidate tree and complete entry-to-candidate binary-diff SHA256; verified all52 changed paths, candidate blob IDs, byte counts, SHA256 values and worktree equality.",
+    "Reviewed the complete eight-path original-to-replacement change set. Repairs add two held eligibility envelopes and three evidence references, associated routes/summaries, semantic assertions, adjusted counts and four archival/disposition files.",
+    "Verified original manifest bytes and original verification preservation. Compared archived review-round1.json with this reviewer's actual original response; content matches.",
+    "Verified two count-matched author dispositions and independently rechecked both repairs against unchanged retained sources. FCD page1 was visually inspected during the initial full review.",
+    "Confirmed all18 other records, every original field envelope, sourceRegistry and all other ledger top-level values remain unchanged except the two field-count totals.",
+    "Verified focused verification changes only fieldEnvelopes374to376, cumulativeHeldFields2260to2262 and evidenceReferences175to178.",
+    "Inspected the verifier changes and ran the read-only verifier successfully:20 inputs,120 cumulative initial dispositions,286 remaining,376 new field envelopes,2262 cumulative held fields,120 held identities,178 evidence references,24 receipts,80 link dispositions,1253 protected entry paths,12 M1 pins,437 M1 records and19 prior custody hashes; zero accepted facts and SD3 unstarted.",
+    "Independently verified all178 exact excerpts, source URLs and artifact hashes.",
+    "Retained initial full-review inspection of all material source distinctions,14 safe PDF page views, complete Hawkins20-paragraph/zero-table body XML, selected-source privacy containment, exact source affinity and checkpoint005 historical bindings.",
+    "Confirmed unchanged source artifacts, capture inputs, custody receipts, validation and command receipts/logs. No source refresh or builder execution was required.",
+    "Retained passing plan/typecheck/full-test receipts after disclosed IPC retries and both exact standard-build process/port permission failures. No build waiver.",
+    "Ran complete frozen entry-to-replacement and worktree whitespace checks successfully. Confirmed only final-manifest.json is untracked."
+  ],
+  "limits": [
+    "PASS establishes evidence fidelity and accountable held dispositions for this immutable local research packet. It accepts no scholarship facts, current offering, canonical stage or release.",
+    "Live source availability, current workbook state, native public/sponsor authority and fresh authenticated remote main/target were not independently verified.",
+    "Clerk raw-byte, visual and complete official-information-section proof remain unavailable; readable provider200 does not resolve those limits.",
+    "Safe page views exclude disclosed contact/biography regions; no complete unredacted visual proof or excluded-scope silence is asserted.",
+    "Raw documents/renderings remain temporary. Future required audits must verify exact custody or report specific availability gaps.",
+    "Provider-call windows remain retained; origin-fetch times/revisions and some raw-download timing/status remain unavailable.",
+    "Original intermediate output-scope breaches and unexpected MSGA blank-form retrieval remain disclosed. Persisted containment does not erase them.",
+    "Both standard-build failures remain open and unwaived. Full SD2 remains incomplete; all2262 field holds and120 identity holds retain recorded owners/triggers. SD3 and reserved effects remain unstarted."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation and handoff owner",
+    "trigger": "Recording this exact final independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-006/",
+    "action": "Record this review and exact replacement final manifest in the selected local two-file research-review receipt. Preserve the original failed candidate, manifest, review and verification unchanged. Prepare a separate section9/session handoff for offset120, savedrow124, Jean Atkinson Driggers Scholarship ($2,500), without rebinding this source review. Carry every held field, identity, source link and deferred material to its applicable authorized evidence-arrival or SD2-consolidation trigger. Preserve all build, fresh-main, preservation, acceptance, publication, student and monitoring gates. No routine human approval, fact acceptance or external effect follows from this PASS."
+  }
+}

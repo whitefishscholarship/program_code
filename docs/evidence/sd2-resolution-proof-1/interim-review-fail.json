@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "reviewType": "interim-acquisition-safety-review-not-final-whole-run-acceptance",
+  "reviewerTask": "/root/sd2_selected_scope_review",
+  "reviewedAt": "2026-10-20T18:40:25.003929+00:00",
+  "reviewedCommit": "555766dadd28a42b5a9203ddab9059f23404b2bf",
+  "independence": {
+    "freshContextForOriginalScope": true,
+    "authoredOrEditedImplementation": false,
+    "repairedFindings": false,
+    "repositoryReadOnly": true,
+    "newExternalSourceCalls": 0,
+    "syntheticProbesUsedMockToolsOnly": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "title": "Excluded source content can survive both excerpt filters",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/public-acquisition.js:39",
+        "docs/evidence/sd2-resolution-proof-1/public-acquisition.js:47",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:43",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:49",
+        "docs/evidence/sd2-resolution-proof-1/source-results-001.json#/records/9/excerpts/1"
+      ],
+      "evidence": "Both actual processors retained all six synthetic mocked postal-contact, birthdate, and named-recipient probes. An actual native excerpt matched postal-address and mail/submission context. Its quote SHA256 was 93f6e7814348d7a23eab6cc8b1975e76400a5837010bbff866c4838a6d4cb203. No suspect text printed. Public filter relies on provider suspectedApplicantData and narrow terms; native whole-text detection and line regex miss ordinary contact/DOB/recipient wording.",
+      "impact": "Violates selected source-data exclusions before factual acceptance; held status does not make excluded text safe to retain.",
+      "requiredRemediation": "Author must enforce independent fail-closed safe-clause inspection and broader exclusions before any forwarding/persistence. Provider redaction/flags or regex alone do not certify arbitrary prose. Where safety is unclear persist hashes/counts/held reasons only. Audit all newly saved excerpts locally without reproducing excluded text; retain hashes and incident provenance.",
+      "owner": "Codex implementation author",
+      "status": "Partially contained: acquisition stopped; independently verified all ten initial uncommitted exactQuote values are absent now and privacy-remediation.json exists. Processor correction and recheck remain required."
+    },
+    {
+      "id": "H2",
+      "severity": "high",
+      "title": "No recorded independent saved-source identity and public-blank preflight before content acquisition",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/prepare-targets.py:24",
+        "docs/evidence/sd2-resolution-proof-1/public-acquisition.js:18",
+        "docs/evidence/sd2-resolution-proof-1/public-acquisition.js:40",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:29",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:33",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:36"
+      ],
+      "evidence": "Triage classifies material gaps and locator type, without a per-target saved official-program/public/blank evidence gate. Public content relies on provider programIdentityClear; native content follows a single nongeneric title-token overlap. These are not independent official/public/blank provenance. Existing target references establish exact historical locator affinity, not themselves official/public/safe authority. Parent confirms saved-source preflight will be strengthened before resumption.",
+      "impact": "Exact frozen locator and held facts do not by themselves satisfy selected prospective source-read/content-use safeguards. No assertion is made that every queried source was unsafe.",
+      "requiredRemediation": "Record exact-target independently inspected applicable saved-source/identity evidence and public/blank safety preflight before further reads. Bind path/hash/pointer and program/document identity; preserve connected-access/public-origin distinction. Hold targets lacking sufficient preflight and never promote a provider flag or token overlap into conclusive scope.",
+      "owner": "Codex implementation author",
+      "status": "Open pending implementation and recheck."
+    },
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Native processor caps selected text rather than the full returned artifact envelope",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:23",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:28",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:37",
+        "docs/evidence/sd2-resolution-proof-1/native-acquisition.js:42"
+      ],
+      "evidence": "Full metadata/content envelopes are hashed without serialized-byte length checks. Only provider-declared file size and selected text length are bounded. A response containing additional large fields can exceed16MiB while the selected text passes.",
+      "impact": "The selected maximum returned artifact bound is not enforced for native results.",
+      "requiredRemediation": "Measure full UTF-8 serialized metadata and content envelope bytes immediately on return; hold over-limit results before dependent processing and persist only safe hashes/counts/hold reason. Maintain selected-text cap as an additional limit.",
+      "owner": "Codex implementation author",
+      "status": "Open; author reports planned full-envelope cap."
+    }
+  ],
+  "reviewedImplementationHashes": {
+    "public-acquisition.js": "85e931551cc53df54e4159ba715f5291877d4eec06b0a7426fbd7f68e23205d9",
+    "native-acquisition.js": "def2df22ad61e9a5fb49405953f86ff320d63a183596e20e8769e8963b677dd3",
+    "acquisition-incidents.json": "73e0907e377e64558b19e2622ae50e7bfc2736166474393fee86c53a3aea1836"
+  },
+  "containmentObserved": {
+    "initialSourceResultRecords": 10,
+    "initialExcerpts": 10,
+    "initialResultCallsIncludingIncidentMergedCounts": 16,
+    "allExactQuoteValuesNowRemoved": true,
+    "sanitizedSourceResultsSha256": "8fe02b1212ba63880fa65bb17a48dc3982a21322a50cc767f225c6d0af6ad654",
+    "privacyRemediationSha256": "d9d5762ad0762897ad1afb51db1f397ec1e2b7131d43fd6885cc1acbc2afb488",
+    "authorReportsNoSourceTextCommitted": true,
+    "lostInFlightCalls": "Author reports at most first four requests after initial group may have run; preserve exact identities and conservative call bounds without replay."
+  },
+  "otherAssessments": {
+    "providerJsonIsUntrustedProposal": true,
+    "allReturnedExcerptsRetainUnresolvedApplicability": true,
+    "hashesAndExactSubstringChecksDoNotProveScopeOrPrivacy": true,
+    "originalFactsAndMappingsRemainHeldAndUnaccepted": true,
+    "nativeMetadataIdentityAndMimeChecksPresent": true,
+    "nativeContentTextIsBestEffortNotFullNativeOrVisualInspection": true,
+    "firstRejectedCallsAndEnvelopeHashesPreserved": true,
+    "noThirdCallForFirstFourProviderArgumentRejections": true,
+    "fullBudgetConcurrencyAndRequestHistoryNotYetIndependentlyComplete": true,
+    "targetFieldAffinity": "Top-level original input/gap affinities remain exact. Excerpt purpose or provider program label must not close a field gap until actual saved/new evidence affinity is independently reviewed.",
+    "validation": "Parent reports pinned install/plan/typecheck/tests pass and exact build EPERM retained. This interim review does not re-execute or accept those checks."
+  },
+  "safeResumption": {
+    "owner": "Codex implementation author",
+    "trigger": "H1/H2/M1 remediation independently rechecked before further excerpt persistence/source processing",
+    "authoritativePaths": [
+      "docs/evidence/sd2-resolution-proof-1/README.md",
+      "docs/evidence/sd2-resolution-proof-1/privacy-remediation.json",
+      "docs/evidence/sd2-resolution-proof-1/public-acquisition.js",
+      "docs/evidence/sd2-resolution-proof-1/native-acquisition.js"
+    ],
+    "nextAction": "Correct acquisition gates, document conservative lost-call accounting, inspect exact saved evidence before each additional eligible read, hold unclear targets, and retain all original holds. Use hashes/counts only where safe excerpt inspection is not possible. Continue unaffected local work automatically; freeze complete candidate for separate final independent review."
+  },
+  "limits": {
+    "canonicalAcceptance": false,
+    "factsAccepted": 0,
+    "mappingsAccepted": 0,
+    "SD3Started": false,
+    "remoteDeliveryAuthorized": false,
+    "finalWholeRunAcceptance": false
+  },
+  "priorProspectiveSelectionReview": {
+    "schemaVersion": 1,
+    "outcome": "PASS",
+    "reviewType": "prospective-selected-scope-policy-and-local-triage-only",
+    "reviewerTask": "/root/sd2_selected_scope_review",
+    "reviewedAt": "2026-10-20T18:31:01.877704+00:00",
+    "independence": {
+      "freshContext": true,
+      "authoredOrEditedCandidate": false,
+      "repairedFindings": false,
+      "repositoryReadOnly": true,
+      "soleReviewerOutput": "/private/tmp/sd2-selected-scope-review.json"
+    },
+    "binding": {
+      "policyCheckpoint": "fff651307af04b574533c5aef1e05747fafd064f",
+      "triageCheckpoint": "bcbf2318c82447c35b6a44ad757fae8c89330e2f",
+      "priorReceipt": "0336d32b930a87d458414611184ab546b00df047",
+      "priorCandidate": "7805fc2e5c79a9e0b04e46e356ab7c7122e7e5af",
+      "priorManifestSha256": "b9df62ae8748b16f81ff75c9e1a5d879641b512f653eb7f7a38089b0ebb71c93",
+      "frozenTargetsSha256": "18bbfcff82d50a3152ef398a6dda9ed340f88572269c4deac9abded0e3923014",
+      "triageSha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1"
+    },
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "findings": [],
+    "dispositions": [],
+    "authority": {
+      "directUserSelectionSuppliedByParent": true,
+      "selectedScopes": [
+        "SD2-LOCKED-VALIDATION-1",
+        "SD2-RESOLUTION-PROOF-1"
+      ],
+      "selectionMatchesFiniteExistingProposals": true,
+      "canonicalPlanStateUnchanged": true,
+      "canonicalStagePointersNull": true,
+      "canonicalAcceptance": false,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "SD3Started": false,
+      "automaticIndependentInternalReviewAndAuthorRemediationSelected": true,
+      "noRoutineHumanCheckpointApprovalRequired": true
+    },
+    "preservation": {
+      "allPriorReceiptTrackedFilesByteModeVerified": 2882,
+      "mismatches": 0,
+      "priorProtectedFileCountFromFreshEntryReceipt": 2854,
+      "priorCandidateChangedFilesBlobModeShaVerified": 26,
+      "priorCandidateTreeVerified": true,
+      "priorCompleteDiffBytes": 13917604,
+      "priorCompleteDiffSha256": "185e5a877f7453b2111c70b0357b5d387ebc896d5510c76d95e42b0af08da1b4",
+      "originalReceiptDirectChildTwoFileBindingVerified": true,
+      "policyCheckpointAddsExactlyThreeSelectedScopeFiles": true,
+      "restorationAssessment": "Current complete tracked tree matches original receipt blobs and modes. The author-reported 1288-file pre-restoration missing count was not independently observed. No reset/replay or old widened verifier was run by reviewer.",
+      "fourteenExistingAcceptanceGatesRetained": true,
+      "historicalHoldsApprovalsRoutesReviewsRemainUnchanged": true
+    },
+    "triage": {
+      "originalTargets": 397,
+      "originalPreflightCandidates": 379,
+      "originalBlockedLocators": 18,
+      "publicCandidates": 230,
+      "nativeCandidates": 42,
+      "retainExistingHeldRoute": 103,
+      "reuseLimitedSavedProof": 3,
+      "explicitHolds": 19,
+      "additionalMalformedLocatorHolds": 1,
+      "orderedTargetReferenceHashAndAffinityErrors": 0,
+      "originalLocatorReferencesResolvedAndHashVerified": 4140,
+      "distinctOriginalLocatorReferenceFiles": 24,
+      "priorityMaterialGapOccurrences": 1926,
+      "savedConsistentProofReferencesResolvedAndHashVerified": 293,
+      "distinctSavedProofReferenceFiles": 27,
+      "classificationAssessment": "Retain has no attached priority material field; reuse has only consistent limited saved proof and preserves all freshness/identity limits; every proposed read has attached material proof gaps. Every original blocked target remains held. Candidate mode proves neither official identity nor public/safe content.",
+      "originalTargetAndFieldReferencesExact": true,
+      "sensitiveQueryKeyLocatorCount": 0
+    },
+    "sourceReadSafeguards": {
+      "savedEvidenceTriageRequiredBeforeReads": true,
+      "officialProgramIdentityPreflightRequired": true,
+      "frozenExactLocatorOnly": true,
+      "unlistedDiscoveryChildrenAndUnexpectedHostAdoptionProhibited": true,
+      "nativeExactIdMinimalMetadataThenSafeBlankContentOnly": true,
+      "nativeConnectedAccessNotPublicAuthority": true,
+      "noApplicationFormLoginContactOrWorkbookAccess": true,
+      "rawProviderContentVolatileOnlySanitizeBeforeForwardingOrPersistence": true,
+      "exactExcerptHashAndInputFieldAffinityRequired": true,
+      "completeInspectionOrExplicitExtractionCompletenessLimits": true,
+      "maximumConcurrentDistinctHosts": 4,
+      "maximumConcurrentPerHost": 1,
+      "maximumReturnedBytesPerArtifact": 16777216,
+      "maximumAcquisitionAttempts": 758,
+      "maximumExplicitRemoteToolCalls": 1516,
+      "retryOnlyTemporaryTransportFailure": true,
+      "providerInternalHttpRequests": "UNMEASURED",
+      "unavailableNotFalseAndResponseNotCurrentOffering": true
+    },
+    "validationPolicy": {
+      "packageAndLockPinsCurrentlyMatch": true,
+      "maximumInstallAttempts": 1,
+      "command": [
+        "npm",
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "lifecycleScriptsNotAuthorized": true,
+      "onlyExactLockedDependenciesExistingConfiguration": true,
+      "unchangedFourRequiredChecksAndExactStandardBuildRetained": true,
+      "noSourceLockConfigCredentialChangesOrFailureWaivers": true,
+      "actualRunResults": "Concurrent author execution is outside this prospective review; record actual command/timestamps/codes/log hashes and preserve unresolved failures."
+    },
+    "limits": {
+      "finalWholeRunAcceptance": false,
+      "acquisitionImplementationReviewed": false,
+      "newSourceWorkbookRawNativeAcquisitionsByReviewer": 0,
+      "currentOfficialIdentityPublicAccessFreshnessCompletenessOrCustodyProved": false,
+      "externalEffectsByReviewer": false,
+      "fullSD2Complete": false,
+      "actualSourceSafeguardsAndFinalCompleteCandidateRequireFreshIndependentReview": true
+    },
+    "nextAction": {
+      "owner": "Codex implementation author",
+      "trigger": "This prospective PASS",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/README.md",
+      "action": "Continue selected validation and complete exact-target material-proof processing automatically. Enforce all preflight/sanitization/budget/hold rules. Preserve original gates; record full-denominator outcomes and update sole section-9 progress pointer. Freeze final immutable candidate and obtain fresh independent whole-run review before direct-child local receipt. No acceptance, SD3 or remote delivery."
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewType": "Fresh-context independent read-only full-candidate handoff-containment review only",
+  "reviewerTask": "/root/sd2_handoff_review",
+  "reviewedAt": "2026-10-20T22:11:24.626707+00:00",
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedReviewedStage": false,
+    "readOnlyRepository": true,
+    "repositoryMutations": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "dependencyInstallation": false,
+    "onlyOutput": "/private/tmp/sd2-handoff-review.json"
+  },
+  "binding": {
+    "baselineCommit": "03362252704c0032ae13befc015b7376de54056b",
+    "candidateCommit": "bd7f4105494887c763e1a2d113066a64273c251c",
+    "candidateTree": "bc2ac0774398227bd6a7362ccc0009bf09c77360",
+    "manifestPath": "docs/evidence/sd2-control-repair-handoff/manifest.json",
+    "manifestSha256": "bc1775fcaed0219de072281af269fa763f7297977ac96e719ddab178a4dd5410",
+    "completeDiffFiles": 19,
+    "completeDiffSha256": "2abcc5a2311c33ac159874a1139374147f54b797955916b1b38384e4bc4886b1",
+    "completeDiffBytes": 71516
+  },
+  "objective": "Wrap the original SD2 objective with one FAIL status, durable owner/trigger/path/next-action coverage for all open work, one large local-only control-repair batch for a new session, a short authoritative kickoff and recommended effort. Do not repair controls, reacquire sources or clear unused targets in this wrap.",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "authorityAndScopeAssessment": {
+    "canonicalReadOrderObserved": true,
+    "latestAcceptedStageEvidenceRead": "docs/evidence/P9.md",
+    "activeStageId": null,
+    "nextPermittedStageId": null,
+    "nextCanonicalKickoff": null,
+    "originalSd2AuthorityAndPolicyRead": true,
+    "soleProgressPointer": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "nextBatch": "One local control-repair/reconciliation batch with synthetic interruption tests, all397-target reconciliation and independent review of prospective controls and the final frozen candidate; zero source requests in that batch.",
+    "finiteExistingGrantPreservedConditionally": true,
+    "noNewSourceScopeOrRoutineCheckpointApprovalRequirement": true,
+    "noControlRepairImplementedByHandoff": true,
+    "noCanonicalPlanStateRuntimeDependencyConfigOrCiDiff": true
+  },
+  "preservationAssessment": {
+    "protectedPreEntryFilesBytesAndModes": 2933,
+    "appendHistoriesPreservedExactly": 3,
+    "historyPaths": [
+      "docs/CURRENT_HANDOFF.md",
+      "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "docs/evidence/sd2-autonomous/NEXT_SESSION.md"
+    ],
+    "all19CandidatePathBlobsModesSizesAndHashesVerified": true,
+    "completeEntryToCandidateDiffVerified": true,
+    "allOtherPreEntryTreeBlobsAndModesUnchanged": true,
+    "oldCandidate": "f77c730dd4d93dbe349b2782330ced52829e650d",
+    "oldFailureRecord": "03362252704c0032ae13befc015b7376de54056b",
+    "oldDirectChildTwoFileTopologyAndManifestReviewBindingVerified": true,
+    "oldContextBoundVerifiersNotRerunInWidenedTree": true,
+    "freshEntryReceiptInspected": {
+      "path": "docs/evidence/sd2-control-repair-handoff/entry-audit.json",
+      "command": [
+        "python3",
+        "docs/evidence/sd2-resolution-proof-1/verify.py",
+        "--forensic-bound"
+      ],
+      "exitCode": 0,
+      "scope": "Recorded clean matching failed-record integrity before new paths; underlying execution FAIL retained"
+    },
+    "historicalRecoveryCopy": {
+      "originalPath": "/private/tmp/sd2-receipt-recovery-0336d32b/RECOVERY_AND_SCOPE_REVIEW.json",
+      "copiedPath": "docs/evidence/sd2-control-repair-handoff/historical-recovery-observation.json",
+      "bytes": 3694,
+      "sha256": "07ab7982893c9ecb5047317c4bd2a84430f080140102a3844c632c1f89ed64d3",
+      "byteForByteEqual": true,
+      "historicalPreSelectionOnly": true
+    }
+  },
+  "failureAndAccountingAssessment": {
+    "originalExecutionPermanentlyFail": true,
+    "priorUnresolvedHighFindingsRemainInOriginalFailReview": 2,
+    "confirmedProhibitedReplayOrders": [
+      26,
+      30,
+      34
+    ],
+    "possibleAdditionalReplayOrders": [
+      32
+    ],
+    "observedCompletedToolRecords": 64,
+    "failedRecordsWithin64": 9,
+    "frontierReservations": 4,
+    "conservativeExplicitCallReservation": 68,
+    "notExactAttemptsOrHttpCount": true,
+    "originalTargetsWithForensicDispositions": 397,
+    "acquisitionCandidatesQuarantined": 272,
+    "otherOriginalTriageHolds": 125,
+    "theoreticalUnusedExpandedTargets": 72,
+    "exactUnusedProofNotEstablishedOrClaimed": true,
+    "futureReadsOutsideNextLocalBatchAndConditionedOnIndependentControlsExactNeverDispatchedProofAndAllOriginalSafetyAuthorityGates": true,
+    "missingBodiesNotReconstructed": true,
+    "hashOnlyObservationsProveNoCriterionValuesOrAcceptedIdentity": true
+  },
+  "ownershipAssessment": {
+    "sessionItems": 9,
+    "allSessionItemsHaveOwnerTriggerPathNextAction": true,
+    "originalGates": 14,
+    "allOriginalGateOwnersTriggersPathsAndActionsMatchHashPointerBindingsExactly": true,
+    "gateSourcePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+    "gateSourceSha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+    "originalAttentionSupplementsCustodyM1AndHumanApprovalBindingsUnchanged": true,
+    "kelseyNamedFactReviewerAndLimitedJayceeApprovalsPreserved": true,
+    "buildFreshMainPrivacyNativeCompletenessCustodyPreservationRecoveryPermissionsStudentPublicationM1Sd5AndReservedEffectsRemainOpenAtOriginalTriggers": true,
+    "adjacentMiddlewareDeprecationRoutedToSeparatelySelectedFutureMaintenance": true,
+    "noNewChatBackgroundAutomationReviewQueueOrDelegatedOrphanWorkCreatedByPacket": true
+  },
+  "validationAssessment": {
+    "requiredCommandsUnchanged": [
+      [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      [
+        "npm",
+        "test"
+      ],
+      [
+        "npm",
+        "run",
+        "build"
+      ]
+    ],
+    "recordedExitCodes": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "allFourLosslessGzipLogsIndependentlyDecompressedAndVerifiedAgainstStoredAndRawHashesAndByteCounts": true,
+    "exactBuildError": "Turbopack creating new process/binding to a port: Operation not permitted (os error1)",
+    "exactBuildGateRemainsOpen": true,
+    "freshAuthenticatedMainTargetProofStillUnverified": true,
+    "noInstallRepeatAlternativeBuildDependencyRepairOrWaiver": true,
+    "candidateEntryToHandoffDiffCheckExitCode": 0,
+    "oldFullBaselineEofWarningsRemainDisclosedAndUnchanged": true,
+    "reviewerExecutedReadOnlyNewVerifier": {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-control-repair-handoff/verify.py"
+      ],
+      "exitCode": 0,
+      "result": {
+        "sessionStatus": "FAIL",
+        "handoffIntegrity": "PASS",
+        "reviewBound": false,
+        "protectedPreEntryFiles": 2933,
+        "priorAppendHistories": 3,
+        "originalGateBindings": 14,
+        "sessionItems": 9
+      }
+    },
+    "preAttestationStatus": "HEAD is the exact immutable candidate; only manifest.json is untracked. The author must add only manifest.json and this review in its direct child and then verify --review-bound. No remote delivery or canonical acceptance follows."
+  },
+  "privacyAndEvidenceLimits": [
+    "Reviewer made no external source, native or workbook calls and did not inspect raw provider-body envelopes or reconstruct missing content.",
+    "Prior privacy incident, ten-excerpt purge, unknown external-provider erasure and original independent safety-review limitations remain disclosed.",
+    "Saved metadata and prior review bindings establish containment continuity; they do not establish current public access, native/visual completeness, current scholarship truth, accepted identity or exact unobserved dispatch totals.",
+    "Entry clean-state execution is evidenced by the preserved timestamped receipt and its old verifier clean-tip checks; this reviewer did not rerun that context-bound verifier after widening the tree.",
+    "PASS applies solely to this immutable handoff candidate. Original execution remains FAIL and neither full SD2 nor any canonical stage or fact is accepted."
+  ]
+}

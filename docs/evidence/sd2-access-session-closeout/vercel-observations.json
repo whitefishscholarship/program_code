@@ -1,0 +1,82 @@
+{
+  "recordedAt": "2026-10-21T02:35:05.225023+00:00",
+  "timestampPrecision": "Recorded after successful tool completion; individual provider request timestamps not captured",
+  "loginOutcome": "User completed device authorization; waiting CLI exited0 before whoami was run",
+  "profileDirectory": "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+  "profileMode": "0o700",
+  "credentialContentsRead": false,
+  "globalProfileChanged": false,
+  "processEnvironmentOnly": {
+    "omit": "VERCEL_TOKEN",
+    "CI": "1"
+  },
+  "workingDirectory": "web",
+  "observations": [
+    {
+      "command": [
+        "vercel",
+        "--global-config",
+        "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+        "whoami",
+        "--non-interactive"
+      ],
+      "exitCode": 0,
+      "observedUsername": "whitefishscholarship"
+    },
+    {
+      "command": [
+        "vercel",
+        "--global-config",
+        "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+        "--scope",
+        "team_6CAjRq58n0WvAH49otKSQbA7",
+        "project",
+        "inspect",
+        "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "--non-interactive"
+      ],
+      "exitCode": 0,
+      "observed": {
+        "id": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "name": "web",
+        "owner": "whitefishscholarship's projects",
+        "rootDirectory": "web",
+        "framework": "Next.js"
+      }
+    },
+    {
+      "command": [
+        "vercel",
+        "--global-config",
+        "/private/tmp/whitefish-vercel-auth-zn6gmpor",
+        "--scope",
+        "team_6CAjRq58n0WvAH49otKSQbA7",
+        "api",
+        "/v9/projects/prj_LbefE2deji6nPND6iBiuofe7IABv/domains/web-two-gules-45.vercel.app?teamId=team_6CAjRq58n0WvAH49otKSQbA7",
+        "--method",
+        "GET"
+      ],
+      "exitCode": 0,
+      "observed": {
+        "name": "web-two-gules-45.vercel.app",
+        "projectId": "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "verified": true,
+        "redirect": null,
+        "gitBranch": null,
+        "customEnvironmentId": null
+      }
+    }
+  ],
+  "limits": [
+    "Project/team/domain metadata only; no new deployment/runtime/build/health/CI or current scholarship truth verified",
+    "Earlier connector403/scope denials preserved, connector not rechecked",
+    "Older isolated attempts resolved to Franscale; no project requests under those attempts; do not reuse profiles",
+    "Underlying HTTP and authentication polling counts unmeasured; these are not scholarship-source calls"
+  ],
+  "remoteProjectMutations": 0,
+  "canonicalTargetPins": {
+    "providerProjectFingerprintSha256": "ca64aa6ca87036c311b2fa3e412a7794fb848fd88dc82b8c6054d5ca0905cfe4",
+    "providerTeamFingerprintSha256": "f4317b9fab487e672aa1939c939c44a8a0c654f0c785112b3ab40106bed3f9e3",
+    "canonicalProductionHostnameSha256": "b1eb88bf68716ce612a9a4f559614a90027ad5d2373d6a803b5d1a21246de075"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "rawArtifactPath": "/private/tmp/sd2-checkpoint005-raw/elks-native.pdf",
+  "rawSha256": "7acf6c12cb45b6679091253119bfb7fde13747a4d4ca46cd49fbe23989634f60",
+  "cdnRawArtifactPath": "/private/tmp/sd2-checkpoint005-raw/elks-cdn.pdf",
+  "cdnRawSha256": "81a4fbbd424f415c4e12ce7d5e8cb4ba7c806dc39c1f3ce31f5fbb00645f90c2",
+  "rawBytesEqual": false,
+  "pageCount": 12,
+  "allPagesVisuallyInspected": true,
+  "blankApplication": true,
+  "rawTemporaryOnly": true,
+  "pages": [
+    {
+      "page": 1,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-01.png",
+      "sha256": "006eaec32ab0f0fb551c6cad050f7c9d817692b446706acaf9234c6ae86a7f6b"
+    },
+    {
+      "page": 2,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-02.png",
+      "sha256": "a8d5018ee6db1231fc7f7d3215273ae139f5208548eaee83298149c3dda5386b"
+    },
+    {
+      "page": 3,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-03.png",
+      "sha256": "25edc3167e27dbf56a84e52656bbb3fda3b0f1453dc01d3df42792e0d1341698"
+    },
+    {
+      "page": 4,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-04.png",
+      "sha256": "7170a2e3121b97c2f4eaf7c246b41f35dc91dda967dea26d03ced3740545596e"
+    },
+    {
+      "page": 5,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-05.png",
+      "sha256": "425e39d818e353e840caa8a8dffac4c0a11b884d4ce8286147935cc26805b3dc"
+    },
+    {
+      "page": 6,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-06.png",
+      "sha256": "be6b51da9f5dc846818f17b4737c97841e3c52d2ab00df3b2b3569b7b74ad92a"
+    },
+    {
+      "page": 7,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-07.png",
+      "sha256": "71eacc6cb855437d5d1a22bdda5d904e0564c0177edf90a6c1dac0f304c7df5c"
+    },
+    {
+      "page": 8,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-08.png",
+      "sha256": "8ec88fb5d8790dad8d7240ed4b6b055a6374efa271ab469fbf5ab24e0d305455"
+    },
+    {
+      "page": 9,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-09.png",
+      "sha256": "f8f80b7b95120289d709da064b55cae4500542d816f7afa7a21ac1391aca2220"
+    },
+    {
+      "page": 10,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-10.png",
+      "sha256": "c743a232ed5bf5f6fed478f619d084dbb120c0b6f594005bcfac327cb94347ee"
+    },
+    {
+      "page": 11,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-11.png",
+      "sha256": "a2c7bbb952257a4ff3bb8d13dfefb01ce885cb833016618ee5d3a102803e21da"
+    },
+    {
+      "page": 12,
+      "path": "/private/tmp/sd2-checkpoint005-raw/elks-native-12.png",
+      "sha256": "1ac8302a2d73c78ad762bf5f2ac67a8731fdd06d6b618462ebe2c412f3d73e51"
+    }
+  ],
+  "extraction": "Both PDFs: pdfinfo and complete pdftotext -layout; native12pages rendered/visually inspected. Raw PDFs differ; extracted layout text is byte-equal.",
+  "limits": "No current academic year printed in blank template; Drive filename2025/CDNpath2024 do not establish applicability. Contact values/blank identifying field layout omitted from durable selected text. No applicant responses present.",
+  "cdnPageCount": 12,
+  "layoutTextBytesEqual": true,
+  "cdnVisualInspection": "Not claimed; native twelve pages visually inspected; full CDN pdftotext -layout output compared byte-equal despite distinct raw PDF bytes. No absence inferred."
+}

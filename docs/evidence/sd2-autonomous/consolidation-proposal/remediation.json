@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "scope": "Author remediation of one independent MEDIUM verification-evidence finding; proposal scope and all scholarship evidence unchanged",
+  "recordedAt": "2026-10-16T04:33:11.315557+00:00",
+  "originalCandidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+  "originalManifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal/manifest-round1.json",
+  "originalManifestSha256": "fbd67e91a71d8e45d57264066bd8f673dc14298c2c6c8bea41a7a373e98d75a5",
+  "originalReviewPath": "docs/evidence/sd2-autonomous/consolidation-proposal/review-round1.json",
+  "originalReviewSha256": "54da25e6426f6c982b1d2a1e4ef15ab49db5d2fbd69ed596c31ae590bf1ea245",
+  "manifestRelocation": "Original review retains supplied final-manifest.json path and exact original hash. Exact original manifest bytes now at manifest-round1.json; replacement final-manifest.json binds only replacement candidate. No original review is rebound.",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "dispositions": [
+    {
+      "findingId": "M1",
+      "severity": "medium",
+      "status": "author-fixed-pending-independent-recheck",
+      "rationale": "Normalized only the final blank line in the task-owned typecheck log; original raw bytes/hash remain in immutable d381 candidate. Updated log hash references, explicitly superseded pre-freeze full-diff PASS receipts and require all added paths staged before preservation/diff checks. No command replay or historical evidence edit.",
+      "owner": "Codex proposal author",
+      "trigger": "Before final proposal PASS",
+      "authoritativePath": "docs/evidence/sd2-autonomous/consolidation-proposal/validation.json",
+      "target": "Immutable replacement proposal candidate and independent recheck",
+      "nextAction": "Reviewer verifies complete replacement diff, raw/normalized output provenance and all preserved bindings."
+    }
+  ],
+  "changedScholarshipFacts": 0,
+  "newSourceOrWorkbookReads": 0,
+  "pilotExecuted": false,
+  "acceptedFacts": 0,
+  "canonicalAcceptance": false,
+  "SD3Started": false,
+  "sessionIssue": {
+    "recordedAt": "2026-10-16T04:33:32.532272+00:00",
+    "command": "git add docs/evidence/sd2-autonomous/consolidation-proposal",
+    "initialResult": "exit128: shared worktree index.lock Operation not permitted; task-local verifier correctly refused untracked candidate additions and produced no valid PASS receipt",
+    "resolution": "Permitted local git add retry exited0. Rerun preservation and complete staged/frozen diff before commit/review; no remote effect."
+  }
+}

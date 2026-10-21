@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scope": "One derived SD2 consolidation/acceptance-preparation view; not a second Reviews queue or factual registry",
+  "inventory": {
+    "savedPositions": 794,
+    "namedInputs": 411,
+    "emptySelectedProjectionPositions": 383,
+    "uniqueExactNames": 410
+  },
+  "originalProposalFields": {
+    "autonomous7406": 7406,
+    "jaycee62": 62,
+    "firstBatch79": 79,
+    "total7547": 7547,
+    "firstBatchEvidenceEntries": 42,
+    "firstBatchOriginalAcceptance": {
+      "proposed": 29,
+      "held": 50
+    }
+  },
+  "comparisonCoverage": {
+    "inputs": 408,
+    "fieldOccurrences": 7468,
+    "continuationInputs": 386,
+    "continuationFields": 7062,
+    "priorInputs": 22,
+    "priorFields": 406,
+    "firstBatchFieldsWithoutThisComparisonPass": 79,
+    "categories": {
+      "evidence unavailable": 4169,
+      "applicability/identity unresolved": 2661,
+      "existing evidence consistent": 521,
+      "existing evidence conflicting": 117
+    }
+  },
+  "allFieldOutcomeCounts": {
+    "evidence unavailable": 4169,
+    "applicability/identity unresolved": 2661,
+    "existing evidence consistent": 521,
+    "existing evidence conflicting": 117,
+    "original first-batch proposal; no saved-comparison occurrence": 79
+  },
+  "allFieldStateCounts": {
+    "unverified": 4959,
+    "verified": 2326,
+    "conflict": 118,
+    "unstated": 19,
+    "inaccessible": 125
+  },
+  "allOriginalAcceptanceCounts": {
+    "held": 7518,
+    "proposed": 29
+  },
+  "proposedIdentityDispositions": {
+    "held": 409,
+    "duplicate_candidate_held": 2
+  },
+  "publication": {
+    "existingAwards": 411,
+    "withCandidateLink": 407,
+    "withoutCandidateLink": 4,
+    "withMultipleCandidateLinks": 0,
+    "savedInputsWithoutCandidate": 4,
+    "candidateIdsOutsidePinnedPublication": []
+  },
+  "additionalReadProposal": {
+    "exactDistinctLocatorCandidates": 397,
+    "preflightCandidateLocators": 379,
+    "blockedLocatorOnly": 18,
+    "fieldEvidenceReferenceOccurrences": 3642
+  },
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "newSourceOrWorkbookReads": 0,
+  "environmentRepairExecuted": false,
+  "fullSD2Complete": false,
+  "canonicalAcceptance": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

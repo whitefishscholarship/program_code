@@ -1,0 +1,45 @@
+{
+  "reason": "Initial unchanged plan/test commands failed before running due to sandbox IPC listen EPERM. Exact same commands retried in permitted execution context; original failures/logs retained.",
+  "checks": [
+    {
+      "name": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:12:33.091411+00:00",
+      "completedAt": "2026-10-21T00:13:09.611390+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/retry-plan.log.gz",
+      "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "rawBytes": 164,
+      "storedSha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "storedBytes": 143,
+      "encoding": "gzip"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-21T00:13:09.611838+00:00",
+      "completedAt": "2026-10-21T00:13:54.722259+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/retry-tests.log.gz",
+      "rawSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "rawBytes": 19755,
+      "storedSha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "storedBytes": 6842,
+      "encoding": "gzip"
+    }
+  ],
+  "dependencyInstallAttempts": 0,
+  "sourceRequests": 0,
+  "workbookRequests": 0,
+  "alternateBuild": false,
+  "buildGateWaived": false
+}

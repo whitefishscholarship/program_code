@@ -1,0 +1,4657 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "reviewType": "interim-current-run-source-call-metadata-forensic-audit-only",
+  "reviewerTask": "/root/sd2_selected_scope_review",
+  "reviewedAt": "2026-10-20T19:23:16.078527+00:00",
+  "observedCommit": "3b6e0cc48ba2ec0a246eee003213128067817abe",
+  "independence": {
+    "authoredOrEditedImplementation": false,
+    "repositoryReadOnly": true,
+    "repairedFindings": false,
+    "sourceBodiesInspectedOrUsed": false,
+    "opaqueResultsOnlyHashed": true,
+    "remoteSourceCalls": 0,
+    "soleOutput": "/private/tmp/sd2-call-ledger-review.json"
+  },
+  "traceBinding": {
+    "path": "/Users/kelseystuart/.codex/sessions/2026/10/20/rollout-2026-10-20T11-26-59-01a15a5a-258b-7e20-8e62-55b1084f890d.jsonl",
+    "selectionRecordedAt": "2026-10-20T18:26:11.688941+00:00",
+    "selectionSha256": "26087ffadf04b317b4b4066797196c20799e6b8c0b2c92df8dd96a665bb6f11f",
+    "snapshotPrefixBytes": 8836396,
+    "snapshotPrefixSha256": "faa308e139d1da9df82920ddeb740720383b9030d208d890d3c7f0623aa4415c",
+    "completeLinesAtSnapshot": 1403,
+    "lastSnapshotEventTimestamp": "2026-10-20T19:23:14.280Z",
+    "hashAlgorithm": "SHA256; opaque result/argument canonical objects use JSON sorted keys, ASCII escapes, compact separators; trace events hash exact original line bytes including newline.",
+    "appendOnlyLimit": "Trace may continue appending. This receipt binds the exact completed-line prefix above, not a later whole-file hash.",
+    "eventVisibilityLimit": "Available source events are item_completed; absence is not proof no queued/in-flight call was invoked. No source-body/error-prose content was consulted."
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "title": "Interrupted controllers lost source-call history and undercounted resource use",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-results-002.json",
+        "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+        "docs/evidence/sd2-resolution-proof-1/source-results-005.json"
+      ],
+      "evidence": "64 completed MCP source-tool records versus54 calls known/reserved by saved snapshots. Cell51 has13 completed calls, not the prior upper bound5; cell86 has26 completed calls versus24 durable packet results. Four more frontier calls require conservative reservation; interrupted isolate stores are not durable execution truth.",
+      "requiredAction": "Preserve original snapshots and trace hashes. Add authoritative append-only trace reconciliation and durable per-target/per-call pre-dispatch intent plus immutable results; reserve all completed and uncertain-frontier targets. Validate interruption/crash behavior independently before any further source work.",
+      "owner": "Codex acquisition/control author",
+      "trigger": "Before any future source dispatch under this existing selection",
+      "status": "OPEN; acquisition paused and this run will close without more calls"
+    },
+    {
+      "id": "H2",
+      "severity": "high",
+      "title": "Three completed ordinary public reads were repeated without eligible transport-retry evidence",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+        "docs/evidence/sd2-resolution-proof-1/selected-expanded-targets.json"
+      ],
+      "evidence": "Exact orders26,30,34 each have completed source calls in both cell51 and cell86; original calls are not marked tool errors. No qualifying temporary-transport failure is shown. Order32 has an additional possible earlier invocation at the discarded frontier, so its later call cannot be certified unused.",
+      "requiredAction": "Record the three irreversible historical protocol violations and the separate32 uncertainty. Do not waive them, recast them as transport retries, erase history or accept source execution. Skip every completed/frontier target in all continuation controls.",
+      "owner": "Codex source-governance/control author and independent reviewer",
+      "trigger": "Forensic closeout and before any authorized continuation",
+      "status": "HISTORICAL_VIOLATION_NOT_REPAIRED_AWAY; future containment/review required"
+    },
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Snapshot no-replay and unused-target claims contradict completed metadata",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+        "docs/evidence/sd2-resolution-proof-1/selected-expanded-targets.json",
+        "docs/evidence/sd2-resolution-proof-1/source-results-002.json"
+      ],
+      "evidence": "Repeated orders26,30,34 retain replayed:false flags; selected-expanded-targets claims completed targets were not replayed. The old upper-bound5 source51 placeholder is below13 observed completed calls. These records cannot serve as current authoritative execution counters.",
+      "requiredAction": "Keep historical bytes and add an explicit superseding reconciliation/disposition that marks inaccurate accounting/no-replay claims. All progress, attempts, budgets, source results and final candidate checks must use reconciled dispatch metadata and reservations.",
+      "owner": "Codex evidence/reconciliation author",
+      "trigger": "Before final handoff and final whole-run review",
+      "status": "OPEN pending authoritative forensic overlay"
+    }
+  ],
+  "summary": {
+    "completedSourceToolRecords": 64,
+    "toolCounts": {
+      "firecrawl.firecrawl_scrape": 57,
+      "google_drive.get_file_metadata": 4,
+      "google_drive.fetch": 3
+    },
+    "toolStatuses": {
+      "failed": 9,
+      "completed": 55
+    },
+    "allExactSourceUrlOrSelectedNativeIdMappingsResolved": true,
+    "unmatchedOrAmbiguousSelectedNativeAssignments": 0,
+    "completedPublicExactLocators": 49,
+    "completedLogicalTargetOrdersIncludingNativeMetadata": 53,
+    "savedSnapshotRecordCount": 47,
+    "savedSnapshotKnownOrReservedCalls": 54,
+    "undercountAgainstObservedCompletedCalls": 10,
+    "uncertainFrontierAdditionalCallsUpperBound": 4,
+    "conservativeTotalExplicitCallReservation": 68,
+    "confirmedHistoricalRepeatedPublicOrders": [
+      26,
+      30,
+      34
+    ],
+    "possibleAdditionalRepeatedPublicOrders": [
+      32
+    ],
+    "noPerTargetObservedPublicCallCountAbove2": true,
+    "underlyingProviderHttpRequests": "UNMEASURED",
+    "sourceAttemptsExact": "NOT_ESTABLISHED; tool/control rejections, native metadata/content pairs and incomplete frontiers cannot be silently recast as exact acquisition attempts.",
+    "sourceExecutionAccepted": false
+  },
+  "phaseBounds": {
+    "cell51Start": "2026-10-20T18:36:29.973000+00:00",
+    "cell51TerminationRequest": "2026-10-20T18:37:52.808000+00:00",
+    "cell86Start": "2026-10-20T19:06:01.647000+00:00",
+    "cell86TerminationRequest": "2026-10-20T19:11:06.913000+00:00"
+  },
+  "controllers": {
+    "call_de165aba633a418c8532ea48f11f3110": {
+      "traceLine": 477,
+      "traceEventSha256": "147cce6ff9717f0b8297cb05d00a807e5ee86a6d8bd151a9aab5fea8dc36eb8d",
+      "inputSha256": "df6162b618700c6b10edef6a5a5fa5ec84c37b70155c68dc06d2dc971c458a1f",
+      "timestamp": "2026-10-20T18:36:29.973Z"
+    },
+    "call_d9bc6c16a93748fa9975267eb5331912": {
+      "traceLine": 1039,
+      "traceEventSha256": "228a7c63c54ce772388f1307405e0c2714445d965b6a5310ceee6ca6404bda58",
+      "inputSha256": "1dcb8b3bc2f7b50a3ce74d30c6aadd93bc4e2a2ac4aa545a0068c466fc8b503d",
+      "timestamp": "2026-10-20T19:06:01.647Z"
+    }
+  },
+  "phaseSummary": {
+    "initial_setup_and_first_source_packet": {
+      "completedToolRecords": 16,
+      "toolCounts": {
+        "firecrawl.firecrawl_scrape": 14,
+        "google_drive.get_file_metadata": 1,
+        "google_drive.fetch": 1
+      },
+      "ordersWithCompletedCalls": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        9,
+        11,
+        15,
+        18
+      ],
+      "firstObservedStartedAt": "2026-10-20T18:31:38.395000+00:00",
+      "lastObservedCompletedAt": "2026-10-20T18:34:55.835000+00:00",
+      "concurrency": {
+        "maximumObservedConcurrentToolIntervals": 2,
+        "maximumObservedDistinctSourceHosts": 2,
+        "maximumObservedPerSourceHost": 1,
+        "perSourceHostPeaks": {
+          "lineworker.com": 1,
+          "www.umt.edu": 1,
+          "foldsofhonor.org": 1,
+          "www.ngpa.org": 1,
+          "www.asianpilots.org": 1,
+          "drive.google.com": 1,
+          "nths.org": 1,
+          "bold.org": 1,
+          "www.dawson.edu": 1,
+          "www.allamericanpestcontrol.com": 1
+        }
+      }
+    },
+    "cell51_interrupted_pre_safety": {
+      "completedToolRecords": 13,
+      "toolCounts": {
+        "google_drive.get_file_metadata": 3,
+        "firecrawl.firecrawl_scrape": 8,
+        "google_drive.fetch": 2
+      },
+      "ordersWithCompletedCalls": [
+        10,
+        17,
+        19,
+        21,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        34
+      ],
+      "firstObservedStartedAt": "2026-10-20T18:36:29.993000+00:00",
+      "lastObservedCompletedAt": "2026-10-20T18:37:47.834000+00:00",
+      "concurrency": {
+        "maximumObservedConcurrentToolIntervals": 1,
+        "maximumObservedDistinctSourceHosts": 1,
+        "maximumObservedPerSourceHost": 1,
+        "perSourceHostPeaks": {
+          "drive.google.com": 1,
+          "foldsofhonor.org": 1,
+          "kitchencabinetkings.com": 1,
+          "www.umt.edu": 1,
+          "devsupport.blackmountainsoftware.com": 1,
+          "montanaffa.org": 1,
+          "gtmf.org": 1,
+          "docs.google.com": 1,
+          "mtcf.org": 1,
+          "serve.mt.gov": 1
+        }
+      }
+    },
+    "approved_nine_public_pages": {
+      "completedToolRecords": 9,
+      "toolCounts": {
+        "firecrawl.firecrawl_scrape": 9
+      },
+      "ordersWithCompletedCalls": [
+        100,
+        146,
+        200,
+        227,
+        233,
+        234,
+        292,
+        295,
+        348
+      ],
+      "firstObservedStartedAt": "2026-10-20T18:50:03.504000+00:00",
+      "lastObservedCompletedAt": "2026-10-20T18:51:26.469000+00:00",
+      "concurrency": {
+        "maximumObservedConcurrentToolIntervals": 1,
+        "maximumObservedDistinctSourceHosts": 1,
+        "maximumObservedPerSourceHost": 1,
+        "perSourceHostPeaks": {
+          "revenue.mt.gov": 1,
+          "www.montana.edu": 1,
+          "www.umt.edu": 1
+        }
+      }
+    },
+    "cell86_interrupted_expanded_pages": {
+      "completedToolRecords": 26,
+      "toolCounts": {
+        "firecrawl.firecrawl_scrape": 26
+      },
+      "ordersWithCompletedCalls": [
+        26,
+        30,
+        32,
+        34,
+        35,
+        43,
+        47,
+        54,
+        69,
+        76,
+        79,
+        82,
+        83,
+        88,
+        91,
+        94,
+        103,
+        105,
+        107,
+        122,
+        123,
+        124,
+        127,
+        128,
+        129,
+        136
+      ],
+      "firstObservedStartedAt": "2026-10-20T19:06:01.668000+00:00",
+      "lastObservedCompletedAt": "2026-10-20T19:11:00.551000+00:00",
+      "concurrency": {
+        "maximumObservedConcurrentToolIntervals": 1,
+        "maximumObservedDistinctSourceHosts": 1,
+        "maximumObservedPerSourceHost": 1,
+        "perSourceHostPeaks": {
+          "gtmf.org": 1,
+          "mtech.edu": 1,
+          "montanaffa.org": 1,
+          "serve.mt.gov": 1,
+          "c4e.colostate.edu": 1,
+          "leroywhomerjr.org": 1,
+          "www.mikeroweworks.org": 1,
+          "www.nationalhonorsociety.org": 1,
+          "scholarshipamerica.org": 1,
+          "officialsdepot.com": 1,
+          "thendalliance.org": 1,
+          "www.elks.org": 1,
+          "www.duckbrand.com": 1,
+          "nesa.org": 1,
+          "www.healthproductsforyou.com": 1,
+          "nths.org": 1,
+          "www.goarmy.com": 1,
+          "umontana.edu": 1,
+          "pointfoundation.org": 1,
+          "bringbackthetrades.org": 1,
+          "www.fisherhouse.org": 1,
+          "morelli.foundation": 1,
+          "www.mus.edu": 1,
+          "www.wtsinternational.org": 1
+        }
+      }
+    }
+  },
+  "concurrency": {
+    "maximumObservedConcurrentToolIntervals": 2,
+    "maximumObservedDistinctSourceHosts": 2,
+    "maximumObservedPerSourceHost": 1,
+    "perSourceHostPeaks": {
+      "lineworker.com": 1,
+      "www.umt.edu": 1,
+      "foldsofhonor.org": 1,
+      "www.ngpa.org": 1,
+      "www.asianpilots.org": 1,
+      "drive.google.com": 1,
+      "nths.org": 1,
+      "bold.org": 1,
+      "www.dawson.edu": 1,
+      "www.allamericanpestcontrol.com": 1,
+      "kitchencabinetkings.com": 1,
+      "devsupport.blackmountainsoftware.com": 1,
+      "montanaffa.org": 1,
+      "gtmf.org": 1,
+      "docs.google.com": 1,
+      "mtcf.org": 1,
+      "serve.mt.gov": 1,
+      "revenue.mt.gov": 1,
+      "www.montana.edu": 1,
+      "mtech.edu": 1,
+      "c4e.colostate.edu": 1,
+      "leroywhomerjr.org": 1,
+      "www.mikeroweworks.org": 1,
+      "www.nationalhonorsociety.org": 1,
+      "scholarshipamerica.org": 1,
+      "officialsdepot.com": 1,
+      "thendalliance.org": 1,
+      "www.elks.org": 1,
+      "www.duckbrand.com": 1,
+      "nesa.org": 1,
+      "www.healthproductsforyou.com": 1,
+      "www.goarmy.com": 1,
+      "umontana.edu": 1,
+      "pointfoundation.org": 1,
+      "bringbackthetrades.org": 1,
+      "www.fisherhouse.org": 1,
+      "morelli.foundation": 1,
+      "www.mus.edu": 1,
+      "www.wtsinternational.org": 1
+    },
+    "observedIntervalDefinition": "[started_at_ms,completed_at_ms) MCP tool callback intervals; native hostname assignment is source-scope identity, not a measured provider HTTP endpoint.",
+    "frontierConcurrencyUpperBoundFromReviewedControllers": 4,
+    "perNormalizedSourceHostUpperBoundFromReviewedControllers": 1,
+    "providerInternalNetworkConcurrency": "UNMEASURED"
+  },
+  "protocolAssessment": {
+    "allPublicUrlsMatchFrozenExactLocators": true,
+    "allNativeMetadataIdsMatchOneSelectedNativeTarget": true,
+    "nativeMetadataRequestedOnlyEightAllowedFields": true,
+    "noFolderSearchPermissionOwnerCommentRevisionOrUnlistedToolCalls": true,
+    "firstFiveCacheOnlyCalls": 5,
+    "schemaBearingCalls": 8,
+    "rejectedToolCalls": 9,
+    "configurationRejectionLimit": "Argument/schema/cache corrections are recorded control invocations, not demonstrated temporary-transport retries. This metadata-only audit does not infer whether rejected calls made underlying HTTP requests. Every explicit call remains counted.",
+    "resourceCeilings": "64 observed and68 conservative reserved explicit calls are below1516; conservative per-call attempt upper bound is below758. Remaining capacity does not excuse replay or missing dispatch evidence.",
+    "preSafetyLimits": "Historical source51/native reads predate corrected independent preflight and hash-only safeguards; this audit does not inspect their bodies or retroactively validate them."
+  },
+  "records": [
+    {
+      "traceLine": 353,
+      "traceEventSha256": "e46839cc299ff93ce024ee1a6aa413cced4a1dc30b5000bf482bb1528ecb8478",
+      "invocationId": "exec-eff3554f-f44d-4386-b432-5eb76059439e",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521098395,
+      "completedAtMs": 1792521098778,
+      "startedAt": "2026-10-20T18:31:38.395000+00:00",
+      "completedAt": "2026-10-20T18:31:38.778000+00:00",
+      "durationMs": 383,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-001f11e34746535833cb",
+      "order": 2,
+      "exactLocatorSha256": "001f11e34746535833cb5c948c2bdcb525dc7621881a274f012d35b446fbd128",
+      "sourceScopeHost": "lineworker.com",
+      "selectedMode": "public",
+      "argumentsSha256": "5cfba6ebdbfa3e90280792a806276ffebb4ff2378fd67d140ee9874ea38fed4b",
+      "opaqueResultCanonicalSha256": "9670f18e7fcbe2e66de52bd85d740be5e83780e8df98287ca55f32264471e8bf",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/1"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": true,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "dc40c8b7e9c2520e1133f961b80783d1abfd997d833adae4608c3726a74bfdd2"
+      }
+    },
+    {
+      "traceLine": 354,
+      "traceEventSha256": "d403f825ae10beccc3a49df8116532d011ab6a2b76cfe036245055851e4c7b19",
+      "invocationId": "exec-8c05264b-19d8-47e7-a5e7-55910deb8e7c",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521098786,
+      "completedAtMs": 1792521099022,
+      "startedAt": "2026-10-20T18:31:38.786000+00:00",
+      "completedAt": "2026-10-20T18:31:39.022000+00:00",
+      "durationMs": 236,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-000d841ae42c1c9d46e4",
+      "order": 1,
+      "exactLocatorSha256": "000d841ae42c1c9d46e413e8b5ea9ccf34e6a7e6a134c30754cbf8ddd680ff91",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "67c914f8888cba8009cf4565a20e1a84dc17551a348589299bad13b81cb7f0e4",
+      "opaqueResultCanonicalSha256": "8ad0281d698d6e13629b546e923218b8bbad2971f8f16d13c9e85fd4248514ea",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/0"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": true,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "9698d20357cd90cd4d8e2066ea036429205a07508e43eb77fd11728b84188235"
+      }
+    },
+    {
+      "traceLine": 355,
+      "traceEventSha256": "d42ceb2733063abe47760bf96f6adbbe842c31a50cca222b101ffaab4df96e1d",
+      "invocationId": "exec-7a0d7362-d228-48a8-afdf-41ca17124a57",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521099028,
+      "completedAtMs": 1792521099248,
+      "startedAt": "2026-10-20T18:31:39.028000+00:00",
+      "completedAt": "2026-10-20T18:31:39.248000+00:00",
+      "durationMs": 220,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-0030dc6deda8cdd8ca2c",
+      "order": 4,
+      "exactLocatorSha256": "0030dc6deda8cdd8ca2cfcd9b0000f0618fb61eda46f7dd0199f2ca014dab60b",
+      "sourceScopeHost": "foldsofhonor.org",
+      "selectedMode": "public",
+      "argumentsSha256": "61daa0adcea3cd5c1adf5c7b7b6c2d3b764de811c54cc3df0068b6cf71cc14d3",
+      "opaqueResultCanonicalSha256": "c9dc7927f98b69c9df16f4e53dff13c52d2c751110c373889edcf4e11526da0a",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/3"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": true,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "79561749d86d31c6b2a20bfd9f2c7dae334ac1ab7a2318373bf921a58ea9d816"
+      }
+    },
+    {
+      "traceLine": 356,
+      "traceEventSha256": "9b22efc35fcf396e36634aa698af283091daffd7f3ab2ff8b9785d07c7180362",
+      "invocationId": "exec-21dfca64-15d1-4655-818c-281ceeff3ba9",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521099253,
+      "completedAtMs": 1792521099546,
+      "startedAt": "2026-10-20T18:31:39.253000+00:00",
+      "completedAt": "2026-10-20T18:31:39.546000+00:00",
+      "durationMs": 293,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-01061a6b33be02787ece",
+      "order": 5,
+      "exactLocatorSha256": "01061a6b33be02787ece04416bb0f287603446675c8218ff613829930bdf4f9e",
+      "sourceScopeHost": "www.ngpa.org",
+      "selectedMode": "public",
+      "argumentsSha256": "fc539ee8146db5fa736bb0bff206a7996aa37b6a6dac87b873ca2a3de61d75d7",
+      "opaqueResultCanonicalSha256": "2dc1b3d07dfb91c8a9fe35a2d45d314231e300ff4597622a79075529bda57033",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/4"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": true,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "11f273bfaafdee6e386da148352220dd7638771c4338bd9c28af1922001bae73"
+      }
+    },
+    {
+      "traceLine": 363,
+      "traceEventSha256": "81f189edf7a3b29cc616143847ae2d36b039534fe5d6b4ee81a5f3610449e0b4",
+      "invocationId": "exec-c88e01ec-1098-400b-af15-34ac49706715",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521114389,
+      "completedAtMs": 1792521117183,
+      "startedAt": "2026-10-20T18:31:54.389000+00:00",
+      "completedAt": "2026-10-20T18:31:57.183000+00:00",
+      "durationMs": 2794,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-045efadb26cab1da7892",
+      "order": 6,
+      "exactLocatorSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "sourceScopeHost": "www.asianpilots.org",
+      "selectedMode": "public",
+      "argumentsSha256": "ddd91ec519d91e6f9cc6527ac7412362c93c9e6ba5642b9c160f2744b41c6185",
+      "opaqueResultCanonicalSha256": "0d56294f7b818d8e378b02aeec2d67b316a618db2e0f8a2a661a0dfad7bf5854",
+      "opaqueResultCanonicalBytes": 428,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/5"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": true,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [],
+        "jsonPromptSha256": null
+      }
+    },
+    {
+      "traceLine": 384,
+      "traceEventSha256": "e47c42bda88ef29efb9dd8c9b65a223f621c42b84412257613b4f006b14cb664",
+      "invocationId": "exec-535dca93-7c29-442a-9ec2-5f92e401c81b",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521156199,
+      "completedAtMs": 1792521156393,
+      "startedAt": "2026-10-20T18:32:36.199000+00:00",
+      "completedAt": "2026-10-20T18:32:36.393000+00:00",
+      "durationMs": 194,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-001f11e34746535833cb",
+      "order": 2,
+      "exactLocatorSha256": "001f11e34746535833cb5c948c2bdcb525dc7621881a274f012d35b446fbd128",
+      "sourceScopeHost": "lineworker.com",
+      "selectedMode": "public",
+      "argumentsSha256": "6d043795f6b8cf3a882c8ee703a91f76b6cd8b14c63cc08f196b8f4a590e6720",
+      "opaqueResultCanonicalSha256": "55803ddb07e1c9a6500c5bcc37022b2763d9c82a55e81ae8cbd86ac5baa4cd9a",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/1"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "dc40c8b7e9c2520e1133f961b80783d1abfd997d833adae4608c3726a74bfdd2"
+      }
+    },
+    {
+      "traceLine": 385,
+      "traceEventSha256": "86a21da48168ba5e53a61f2a6e60e09c34251a66c86bb148896575f59fe0a2ae",
+      "invocationId": "exec-0a13f6d0-8bb1-4789-874c-31ffd21335ed",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521156398,
+      "completedAtMs": 1792521156551,
+      "startedAt": "2026-10-20T18:32:36.398000+00:00",
+      "completedAt": "2026-10-20T18:32:36.551000+00:00",
+      "durationMs": 153,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-0030dc6deda8cdd8ca2c",
+      "order": 4,
+      "exactLocatorSha256": "0030dc6deda8cdd8ca2cfcd9b0000f0618fb61eda46f7dd0199f2ca014dab60b",
+      "sourceScopeHost": "foldsofhonor.org",
+      "selectedMode": "public",
+      "argumentsSha256": "2b2d9399fc9f025061f9e4af347b929e24aad1880e71b3e31c5fece93edf1205",
+      "opaqueResultCanonicalSha256": "83fdc3d3971e60485d64b915baa0706f66ed2558e2b22e30690e4c6da520f868",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/3"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "79561749d86d31c6b2a20bfd9f2c7dae334ac1ab7a2318373bf921a58ea9d816"
+      }
+    },
+    {
+      "traceLine": 386,
+      "traceEventSha256": "bf40c805cd50aad990e890b1e14aafcb4db1cc8374b46f3e13c44812ec37415c",
+      "invocationId": "exec-656ac58e-c646-4db2-88dc-99322f44d778",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521156559,
+      "completedAtMs": 1792521156743,
+      "startedAt": "2026-10-20T18:32:36.559000+00:00",
+      "completedAt": "2026-10-20T18:32:36.743000+00:00",
+      "durationMs": 184,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-000d841ae42c1c9d46e4",
+      "order": 1,
+      "exactLocatorSha256": "000d841ae42c1c9d46e413e8b5ea9ccf34e6a7e6a134c30754cbf8ddd680ff91",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "37c6d9fa3e10eaff252ebc8eac45d18593b05d6ac87743dfff1b0dea33432bd9",
+      "opaqueResultCanonicalSha256": "1ff423ff2db750b389eca36e6fe5a0b78ff47842145cc49c4086bef315d8a486",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/0"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "9698d20357cd90cd4d8e2066ea036429205a07508e43eb77fd11728b84188235"
+      }
+    },
+    {
+      "traceLine": 389,
+      "traceEventSha256": "f5f6062bbc6f8d302b6cb06642d2317792e9bbb4b98c9af040b225669b4fd9bf",
+      "invocationId": "exec-9b197a40-7b61-4e4b-bb94-45c6334de689",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521156749,
+      "completedAtMs": 1792521157202,
+      "startedAt": "2026-10-20T18:32:36.749000+00:00",
+      "completedAt": "2026-10-20T18:32:37.202000+00:00",
+      "durationMs": 453,
+      "status": "failed",
+      "toolIsError": true,
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "targetId": "sd2-read-01061a6b33be02787ece",
+      "order": 5,
+      "exactLocatorSha256": "01061a6b33be02787ece04416bb0f287603446675c8218ff613829930bdf4f9e",
+      "sourceScopeHost": "www.ngpa.org",
+      "selectedMode": "public",
+      "argumentsSha256": "72992d164c2e419e7ce4dcc6f1b314883176dd4401375b2485b642fb61fec3ac",
+      "opaqueResultCanonicalSha256": "e46812a25064757258009a02893f27e1191fa0707c6b68f4d105ef5961fc9c53",
+      "opaqueResultCanonicalBytes": 3159,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/4"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt",
+          "schema"
+        ],
+        "jsonPromptSha256": "11f273bfaafdee6e386da148352220dd7638771c4338bd9c28af1922001bae73"
+      }
+    },
+    {
+      "traceLine": 395,
+      "traceEventSha256": "e3b6aaf6cca8f3d3df2b07a4426a6764e0e2043492ae38064496833a496f151f",
+      "invocationId": "exec-facb4c46-e516-44d5-b339-d91bd994e98c",
+      "server": "codex_apps",
+      "tool": "google_drive.get_file_metadata",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521174377,
+      "completedAtMs": 1792521174738,
+      "startedAt": "2026-10-20T18:32:54.377000+00:00",
+      "completedAt": "2026-10-20T18:32:54.738000+00:00",
+      "durationMs": 361,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "order": 9,
+      "exactLocatorSha256": "065aafdaf3e2b20cb29bad54f24fd8187646827d4e1a2729c5b2678fa4693ccc",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "658dea10f0fe06bf84d2f55aa144f69c413bb160baeaedad761be5cfe70a4514",
+      "opaqueResultCanonicalSha256": "368148ad99dc744e7b8955a65434d281fb334893a209095b253e12eb8dbcaac7",
+      "opaqueResultCanonicalBytes": 714,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/8"
+      },
+      "exactUrlMatchedFrozenTarget": false,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": true,
+      "nativeFileIdSha256": "03411e1ab43fc685af184437a552c896a133625d93d6600bb3a452aa4036411c",
+      "requestMetadata": {
+        "argumentKeys": [
+          "fields",
+          "fileId"
+        ],
+        "requestedFields": [
+          "id",
+          "md5Checksum",
+          "mimeType",
+          "modifiedTime",
+          "name",
+          "size",
+          "version",
+          "webViewLink"
+        ],
+        "fieldsOutsideAllowedScope": []
+      }
+    },
+    {
+      "traceLine": 414,
+      "traceEventSha256": "b63beb29cc09fbe48fb5502fdfc9a05744d2260d3fb3f0bb836e3215de362124",
+      "invocationId": "exec-25bb4168-1be7-49ca-b491-0a8b3a0d0120",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521198642,
+      "completedAtMs": 1792521208090,
+      "startedAt": "2026-10-20T18:33:18.642000+00:00",
+      "completedAt": "2026-10-20T18:33:28.090000+00:00",
+      "durationMs": 9448,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-045efadb26cab1da7892",
+      "order": 6,
+      "exactLocatorSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "sourceScopeHost": "www.asianpilots.org",
+      "selectedMode": "public",
+      "argumentsSha256": "df93895ebb97ceec59d7a1a007a7864407796c0b944c9964db27e57a9a6a15b9",
+      "opaqueResultCanonicalSha256": "44c7f2ed6cf38484efd0d05fe6fbfdf8ce923d38e55aebb6d27697b99a19472b",
+      "opaqueResultCanonicalBytes": 14461,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/5"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "8c4a3542e17c54e32c6a9df50e24b91e7c12bc8639a2aab929de78124be839c1"
+      }
+    },
+    {
+      "traceLine": 438,
+      "traceEventSha256": "d09567bda62e65f3a962bb4560c85a993c59b732d353c8b670fb66dbb4fcdfeb",
+      "invocationId": "exec-d5a8f01e-4919-4b04-9ff1-cc318adb6cca",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521248179,
+      "completedAtMs": 1792521268336,
+      "startedAt": "2026-10-20T18:34:08.179000+00:00",
+      "completedAt": "2026-10-20T18:34:28.336000+00:00",
+      "durationMs": 20157,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0ca56b1a92eea05539af",
+      "order": 18,
+      "exactLocatorSha256": "0ca56b1a92eea05539af6d4172a2de7d33dac00a84fb5f224e105181dbd3f494",
+      "sourceScopeHost": "nths.org",
+      "selectedMode": "public",
+      "argumentsSha256": "9037b054be55b2b923d216da353a3308ce01d969a89f0de6efacb38298c3cac7",
+      "opaqueResultCanonicalSha256": "642b3f465322e6eaaf9f1529eaedf64d424ce588024f270e90813d6cf9514d8e",
+      "opaqueResultCanonicalBytes": 17306,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/17"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "e7a83fe256fbeb9173b46c98fe26994e684b2b7e626057ca18e6b1b5603a2171"
+      }
+    },
+    {
+      "traceLine": 441,
+      "traceEventSha256": "74f477bf4c0f50d2cbcae8bf151859ae7ba908b8859ef9d3b4e95f714374542a",
+      "invocationId": "exec-99867123-c70f-4fa8-9ccd-3813c6904adc",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521268344,
+      "completedAtMs": 1792521277013,
+      "startedAt": "2026-10-20T18:34:28.344000+00:00",
+      "completedAt": "2026-10-20T18:34:37.013000+00:00",
+      "durationMs": 8669,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-07d061a4d9a481d32eaf",
+      "order": 15,
+      "exactLocatorSha256": "07d061a4d9a481d32eaf53aaa0e4ae39f123894143d1e14ba8c8418f1f10ea20",
+      "sourceScopeHost": "bold.org",
+      "selectedMode": "public",
+      "argumentsSha256": "16785edd60b531e6973c02e37e15927ac787aa2341693cfee723d537bd465bf5",
+      "opaqueResultCanonicalSha256": "421595713fe64f5c55faf78d196738b927071704238654dfacc37315154f9ba9",
+      "opaqueResultCanonicalBytes": 34958,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/14"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "8988e84b43ad15ed3fb297187c17fe997bff7e0497a6bb7669f0c4259dc28416"
+      }
+    },
+    {
+      "traceLine": 447,
+      "traceEventSha256": "2cbe4504922cb35143e6a829c82cf7fd8c46ec9bc92aa96ce202adc93b68204c",
+      "invocationId": "exec-fad0ae4a-1862-4ab3-a8ce-64c4f8854e91",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521277019,
+      "completedAtMs": 1792521286205,
+      "startedAt": "2026-10-20T18:34:37.019000+00:00",
+      "completedAt": "2026-10-20T18:34:46.205000+00:00",
+      "durationMs": 9186,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-056965468430d391f5e4",
+      "order": 8,
+      "exactLocatorSha256": "056965468430d391f5e45a20d105258343d12c4a471d2046cfb8221dbb868cb0",
+      "sourceScopeHost": "www.dawson.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "2fd8d18f8b7a86dc73661d16a6eedfd426b3f09579935be3dee73b5275672230",
+      "opaqueResultCanonicalSha256": "72b45d3ec3fb7498a62cd8f5210033f0ee6f78f276204f72cf1f7e78ca51d583",
+      "opaqueResultCanonicalBytes": 18252,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/7"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "34da6f09fde2179b6bb46136f645b384fae392ec13e4f34a76c78453e437f11a"
+      }
+    },
+    {
+      "traceLine": 444,
+      "traceEventSha256": "9e9a94f40b80d1f877bee6df666f415c26eadbb3c298fa2d18a9097f37c7ce18",
+      "invocationId": "exec-819d3df6-5c6c-484d-946a-e7e900a1c1f8",
+      "server": "codex_apps",
+      "tool": "google_drive.fetch",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521278407,
+      "completedAtMs": 1792521279704,
+      "startedAt": "2026-10-20T18:34:38.407000+00:00",
+      "completedAt": "2026-10-20T18:34:39.704000+00:00",
+      "durationMs": 1297,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "order": 9,
+      "exactLocatorSha256": "065aafdaf3e2b20cb29bad54f24fd8187646827d4e1a2729c5b2678fa4693ccc",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "b8d0c20a0bf46626ef7cf03a2926c9f16eed8d715439fa2e869ecb57a4bd6bfb",
+      "opaqueResultCanonicalSha256": "94f8007493d91bbd42ca0faf754577eca480e432592d3b92632cef3876e053c8",
+      "opaqueResultCanonicalBytes": 4829,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/8"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "argumentKeys": [
+          "url"
+        ]
+      }
+    },
+    {
+      "traceLine": 448,
+      "traceEventSha256": "f4d78d9e496f29c54a5d84aa7942042531ac522d256c1911a1abc0aff4f25f0e",
+      "invocationId": "exec-6ad68d51-1633-414f-93bc-8270a41842d5",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "initial_setup_and_first_source_packet",
+      "startedAtMs": 1792521286211,
+      "completedAtMs": 1792521295835,
+      "startedAt": "2026-10-20T18:34:46.211000+00:00",
+      "completedAt": "2026-10-20T18:34:55.835000+00:00",
+      "durationMs": 9624,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-068b268a18d9f73f4740",
+      "order": 11,
+      "exactLocatorSha256": "068b268a18d9f73f4740c8e0cb95f508bef646ef9a3cea3ff824dd94abd1b385",
+      "sourceScopeHost": "www.allamericanpestcontrol.com",
+      "selectedMode": "public",
+      "argumentsSha256": "2ced34cadf0ecd9b26f0cf8c75b20aa0717e34bff75c80d6ea9b49c2119e7113",
+      "opaqueResultCanonicalSha256": "1eb8da4de7fa87f04fbf3b0ef5c7334c5d0206e122c454e06552ce82769cb95d",
+      "opaqueResultCanonicalBytes": 28459,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/10"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "a0dab0a8f24375403b20dbc46aa1f29b26dc3e27169766cc404a4e37296e8f8b"
+      }
+    },
+    {
+      "traceLine": 479,
+      "traceEventSha256": "2f242ad0d9fabbd6f611f260077fe7c2b6427702de8a81d7e9d6e64b23fd150d",
+      "invocationId": "exec-14d42b95-9c32-45f3-86cb-642f2aef9818",
+      "server": "codex_apps",
+      "tool": "google_drive.get_file_metadata",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521389993,
+      "completedAtMs": 1792521390679,
+      "startedAt": "2026-10-20T18:36:29.993000+00:00",
+      "completedAt": "2026-10-20T18:36:30.679000+00:00",
+      "durationMs": 686,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-06669337016bd8d40c63",
+      "order": 10,
+      "exactLocatorSha256": "06669337016bd8d40c63d379cef8f6fc6433f5f284bfc5634bff54cebdf6062e",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "4b441191642a84a85528355411a4764b677d73ff9820ec8c0a598430abcbb57a",
+      "opaqueResultCanonicalSha256": "b78a61accaa35405e45e2ad93ca87cac2031ce61d99f8ad8aefc263617d2c79a",
+      "opaqueResultCanonicalBytes": 696,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/9"
+      },
+      "exactUrlMatchedFrozenTarget": false,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": true,
+      "nativeFileIdSha256": "bffbfa17c359de1c727880a5b6c81215a2d34ade51b6052ce6d9b34c587a1467",
+      "requestMetadata": {
+        "argumentKeys": [
+          "fields",
+          "fileId"
+        ],
+        "requestedFields": [
+          "id",
+          "md5Checksum",
+          "mimeType",
+          "modifiedTime",
+          "name",
+          "size",
+          "version",
+          "webViewLink"
+        ],
+        "fieldsOutsideAllowedScope": []
+      }
+    },
+    {
+      "traceLine": 484,
+      "traceEventSha256": "f21f07d2b47063d16f71bf8c9d1c9b7905b62569c6add6521de31ed544f6a8c5",
+      "invocationId": "exec-d3e114bc-62aa-4117-a30c-49d28da1d93e",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521390685,
+      "completedAtMs": 1792521401554,
+      "startedAt": "2026-10-20T18:36:30.685000+00:00",
+      "completedAt": "2026-10-20T18:36:41.554000+00:00",
+      "durationMs": 10869,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0cf251bfb86bf9e77279",
+      "order": 19,
+      "exactLocatorSha256": "0cf251bfb86bf9e77279828f7f6e24a8cb41e0290ed9b19a3377526c6840dc00",
+      "sourceScopeHost": "foldsofhonor.org",
+      "selectedMode": "public",
+      "argumentsSha256": "80b91fb0a07bf4ed3c4e55ac37d6de600c832afb698c47d4492cd20a8e96b996",
+      "opaqueResultCanonicalSha256": "6fee54ec599e7b23de15c92a405ff98b943a94853b212d835155918b069ddca2",
+      "opaqueResultCanonicalBytes": 14852,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/18"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "752bac1524236c860548cf5367fc2d18fd77015504e3dc90a5414b7afa27866c"
+      }
+    },
+    {
+      "traceLine": 490,
+      "traceEventSha256": "cbd684c7a6b1b8b95cc583ecc097830ac238c91d514c9efd4f68c6365b3ca846",
+      "invocationId": "exec-4e27f8a6-1c63-4e5c-be82-6408e1e95ab0",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521401559,
+      "completedAtMs": 1792521410470,
+      "startedAt": "2026-10-20T18:36:41.559000+00:00",
+      "completedAt": "2026-10-20T18:36:50.470000+00:00",
+      "durationMs": 8911,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0e26d146d1ea5ad5a44f",
+      "order": 24,
+      "exactLocatorSha256": "0e26d146d1ea5ad5a44f859476b0e091c2af46ee6a41fa161635a85bdeb75067",
+      "sourceScopeHost": "kitchencabinetkings.com",
+      "selectedMode": "public",
+      "argumentsSha256": "f7faabdd3bba13cfbc0fa6704ae733a9c9d2bf978347e038c427c5503f86fa8c",
+      "opaqueResultCanonicalSha256": "8fda841ac94ec39afdb8d853906519f579f2aef7f142b1e0ab93122cce7ee21d",
+      "opaqueResultCanonicalBytes": 53054,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/23"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "93b69ad6c262afa667c5932a4091b0dccbeaf4aa275d3e588950e67f05edeb8f"
+      }
+    },
+    {
+      "traceLine": 491,
+      "traceEventSha256": "0a5603669c051e2d2c8a9594078807ed0cb82bb32b79f507936c433282ce1a36",
+      "invocationId": "exec-b9228bf2-72ee-4967-9acf-b702d1d6fce7",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521410477,
+      "completedAtMs": 1792521418592,
+      "startedAt": "2026-10-20T18:36:50.477000+00:00",
+      "completedAt": "2026-10-20T18:36:58.592000+00:00",
+      "durationMs": 8115,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0d35d7a89e5ae0cc16d8",
+      "order": 21,
+      "exactLocatorSha256": "0d35d7a89e5ae0cc16d856e9ddbf27a28a471842dbd4a7bd9cba09fb1ecd5c09",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "4549b232a1b6cfb5e6110404b82614d0d42a4d68d68746c12dcf590d99926e33",
+      "opaqueResultCanonicalSha256": "fcf56664ec72e01e304e342e5f6e207b963fa215ed4438938d71bf02d8d70521",
+      "opaqueResultCanonicalBytes": 28316,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/20"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "883fc567683788246346fd52083a2de770075af0b242d40019c2baa53b0d6d76"
+      }
+    },
+    {
+      "traceLine": 494,
+      "traceEventSha256": "daa656df21ba80d347cc3bf796671aebf3728329113969d6459ef638363adce9",
+      "invocationId": "exec-ab32ead4-dbe0-4025-b3c1-8ba77e667e94",
+      "server": "codex_apps",
+      "tool": "google_drive.fetch",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521418598,
+      "completedAtMs": 1792521420144,
+      "startedAt": "2026-10-20T18:36:58.598000+00:00",
+      "completedAt": "2026-10-20T18:37:00.144000+00:00",
+      "durationMs": 1546,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-06669337016bd8d40c63",
+      "order": 10,
+      "exactLocatorSha256": "06669337016bd8d40c63d379cef8f6fc6433f5f284bfc5634bff54cebdf6062e",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "5ebc9eba2ef2b9a08199f358dc4d17026e333e81ebcdc5939ee8cfff93775eae",
+      "opaqueResultCanonicalSha256": "1ad372412132eab753a76af1d7205d29e2e98d196b231b89ca96ccff5b5b373f",
+      "opaqueResultCanonicalBytes": 4067,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/9"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "argumentKeys": [
+          "url"
+        ]
+      }
+    },
+    {
+      "traceLine": 497,
+      "traceEventSha256": "14140807be84f5720a93a12bb40728a768c2bdaf602ce89d0e1a0886787fd4e4",
+      "invocationId": "exec-04c159e0-01ea-4791-b45a-231875e3baaa",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521420161,
+      "completedAtMs": 1792521430583,
+      "startedAt": "2026-10-20T18:37:00.161000+00:00",
+      "completedAt": "2026-10-20T18:37:10.583000+00:00",
+      "durationMs": 10422,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0f0703778f83f3229714",
+      "order": 28,
+      "exactLocatorSha256": "0f0703778f83f32297147a3823725fb6e2189aa51a31163fff3235c2506c2310",
+      "sourceScopeHost": "devsupport.blackmountainsoftware.com",
+      "selectedMode": "public",
+      "argumentsSha256": "9f29ffe7a41cf7ecae3a00beae06ec3be123c08af89edf4b68c35a0e919396e8",
+      "opaqueResultCanonicalSha256": "890bafba59c82bd701519799622ea6816e2d56d7349bffabd24acf3ba9f6c719",
+      "opaqueResultCanonicalBytes": 11147,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/27"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "b9344f68f15cfa897221065fbf7da8b2ff3b940e5e29acc287c526f98edfd204"
+      }
+    },
+    {
+      "traceLine": 498,
+      "traceEventSha256": "c7831b69149af94b9305439bc06b5e13b9b4307ac08c4279af6a4db3f2397efe",
+      "invocationId": "exec-14b37108-4855-4483-9042-a556e69e352b",
+      "server": "codex_apps",
+      "tool": "google_drive.get_file_metadata",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521430589,
+      "completedAtMs": 1792521430978,
+      "startedAt": "2026-10-20T18:37:10.589000+00:00",
+      "completedAt": "2026-10-20T18:37:10.978000+00:00",
+      "durationMs": 389,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0c63cc68d6a2687afd79",
+      "order": 17,
+      "exactLocatorSha256": "0c63cc68d6a2687afd79ee06aa7c57694a4a47ec392b7d29bd4640e2b3631fc8",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "32f4e090872a9c87b1d5d43fcdb293db10318c8efe489821016562d2483ca06c",
+      "opaqueResultCanonicalSha256": "0663f963a7d44f7bf9e877021692898189e47f35998d59f62010c00019375781",
+      "opaqueResultCanonicalBytes": 673,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/16"
+      },
+      "exactUrlMatchedFrozenTarget": false,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": true,
+      "nativeFileIdSha256": "07e584f2116c4245b9f279d61520834df01bf567221d7d73e113386bbb2206d1",
+      "requestMetadata": {
+        "argumentKeys": [
+          "fields",
+          "fileId"
+        ],
+        "requestedFields": [
+          "id",
+          "md5Checksum",
+          "mimeType",
+          "modifiedTime",
+          "name",
+          "size",
+          "version",
+          "webViewLink"
+        ],
+        "fieldsOutsideAllowedScope": []
+      }
+    },
+    {
+      "traceLine": 499,
+      "traceEventSha256": "292ae49db521f40b12c950328b6a53aedc4e4d4f66e5905c42b2df68635446fb",
+      "invocationId": "exec-d5388643-825f-49c1-8289-c67f6d02f235",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521430983,
+      "completedAtMs": 1792521440110,
+      "startedAt": "2026-10-20T18:37:10.983000+00:00",
+      "completedAt": "2026-10-20T18:37:20.110000+00:00",
+      "durationMs": 9127,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0ecb63a87a257aeb15ea",
+      "order": 26,
+      "exactLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "sourceScopeHost": "montanaffa.org",
+      "selectedMode": "public",
+      "argumentsSha256": "c051f6af930cc1c7731b7c32dc50f214ce9bcb0b2a53fa408b848dcb4f148976",
+      "opaqueResultCanonicalSha256": "4e8bc6ec4d4df727c3709eae1a9f012f0d827d34ca5790824935a69958bbc175",
+      "opaqueResultCanonicalBytes": 70273,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/25"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "e690347485d74abc72a4294e784c7d661240a976ad3c7c5c55e391dd9ecb40a6"
+      }
+    },
+    {
+      "traceLine": 500,
+      "traceEventSha256": "9e4fb54e534a1e6cf0daacc5efa5e9c4bec9189f4a1d76145cde54a062828c1d",
+      "invocationId": "exec-c786e79f-5242-40d2-9076-8cef402ca9fe",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521440116,
+      "completedAtMs": 1792521448170,
+      "startedAt": "2026-10-20T18:37:20.116000+00:00",
+      "completedAt": "2026-10-20T18:37:28.170000+00:00",
+      "durationMs": 8054,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-10985f6fc47c008d4fc4",
+      "order": 30,
+      "exactLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "sourceScopeHost": "gtmf.org",
+      "selectedMode": "public",
+      "argumentsSha256": "f8d26bc0e711885db23693c0b9eab8ca81d15410aebb8d0efde1a88cc51f9a1c",
+      "opaqueResultCanonicalSha256": "53042ed76ab1d3ba9bc1ce429b6b8502e110f9e3c4ac52b82ac60c4530b307a3",
+      "opaqueResultCanonicalBytes": 15869,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/29"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "b0721c750fca969997ea6fa7a5060ab20bea6d0fa4b62415a2c9b93d5f0beba7"
+      }
+    },
+    {
+      "traceLine": 506,
+      "traceEventSha256": "faf2b9fac6b75425fd2809214e758c95f7762bcbcbc704416c1620825144d229",
+      "invocationId": "exec-24e9c573-9649-4b35-81a8-b64dc86d6089",
+      "server": "codex_apps",
+      "tool": "google_drive.fetch",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521448184,
+      "completedAtMs": 1792521449537,
+      "startedAt": "2026-10-20T18:37:28.184000+00:00",
+      "completedAt": "2026-10-20T18:37:29.537000+00:00",
+      "durationMs": 1353,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0c63cc68d6a2687afd79",
+      "order": 17,
+      "exactLocatorSha256": "0c63cc68d6a2687afd79ee06aa7c57694a4a47ec392b7d29bd4640e2b3631fc8",
+      "sourceScopeHost": "drive.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "b09bf2028f0335a54b7729d633c1aa947a7b57aa963f8bc68af63c905989f835",
+      "opaqueResultCanonicalSha256": "7ab09f528a53312524d2ca9e32bf749aa57d15c83603b26d845a4578782d7ef9",
+      "opaqueResultCanonicalBytes": 5989,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/16"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "argumentKeys": [
+          "url"
+        ]
+      }
+    },
+    {
+      "traceLine": 507,
+      "traceEventSha256": "992e93d793b165df885b118f27441a7af7fea59d56b70930aabb3ea21a869835",
+      "invocationId": "exec-b541c2a4-8f54-491b-b7c3-8c95dec2f004",
+      "server": "codex_apps",
+      "tool": "google_drive.get_file_metadata",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521449557,
+      "completedAtMs": 1792521449958,
+      "startedAt": "2026-10-20T18:37:29.557000+00:00",
+      "completedAt": "2026-10-20T18:37:29.958000+00:00",
+      "durationMs": 401,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0f3fae09cf3cb40aa59a",
+      "order": 29,
+      "exactLocatorSha256": "0f3fae09cf3cb40aa59ab8055d52f99311730d3fa76bff5fd97816de673e72bd",
+      "sourceScopeHost": "docs.google.com",
+      "selectedMode": "native",
+      "argumentsSha256": "9b138df1bcd019022a9a39bc0eea5305722be9e62097e979f9d9f0451985c432",
+      "opaqueResultCanonicalSha256": "3aee3200d03b479a941e016c463cd939bc3a3b9a534a17a5750a06033dbe7f03",
+      "opaqueResultCanonicalBytes": 728,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/28"
+      },
+      "exactUrlMatchedFrozenTarget": false,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": true,
+      "nativeFileIdSha256": "ef0c22bd72f8f45153000138ff71747440f4f90a985ab7e1faf0bd4183b212fc",
+      "requestMetadata": {
+        "argumentKeys": [
+          "fields",
+          "fileId"
+        ],
+        "requestedFields": [
+          "id",
+          "md5Checksum",
+          "mimeType",
+          "modifiedTime",
+          "name",
+          "size",
+          "version",
+          "webViewLink"
+        ],
+        "fieldsOutsideAllowedScope": []
+      }
+    },
+    {
+      "traceLine": 508,
+      "traceEventSha256": "b5cef093b9f896bfeb175222d46e19ab4d3f24ec079d3b981d67f0f05703afcb",
+      "invocationId": "exec-0245b0a1-aa6a-4f42-bfec-f9b3ff41a2f9",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521449963,
+      "completedAtMs": 1792521458973,
+      "startedAt": "2026-10-20T18:37:29.963000+00:00",
+      "completedAt": "2026-10-20T18:37:38.973000+00:00",
+      "durationMs": 9010,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-10dedfdb8ad762739dea",
+      "order": 31,
+      "exactLocatorSha256": "10dedfdb8ad762739dea442c5d17e6b263dd395be4ecf6884579554b021507dd",
+      "sourceScopeHost": "mtcf.org",
+      "selectedMode": "public",
+      "argumentsSha256": "230eac67c53e9d5d52e0351392a27cca7f2bff902a583589cb8adff7802aeecb",
+      "opaqueResultCanonicalSha256": "2200a1a04129b6c5d78977685a8354e6c3792a09f0889fa58b29456ce0c6d526",
+      "opaqueResultCanonicalBytes": 14012,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/30"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "dcfdc390d42c9c2e7ed5999d2500faa7ca015e9fda8bb7d26314f66caecbe8cf"
+      }
+    },
+    {
+      "traceLine": 514,
+      "traceEventSha256": "8db77821b5fc6da01a2f05a1d7955ba945bfeba8a700a3981c225089aa06a37a",
+      "invocationId": "exec-b05f3adf-ba3a-4a77-8d86-51fc9b857fa2",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell51_interrupted_pre_safety",
+      "startedAtMs": 1792521458983,
+      "completedAtMs": 1792521467834,
+      "startedAt": "2026-10-20T18:37:38.983000+00:00",
+      "completedAt": "2026-10-20T18:37:47.834000+00:00",
+      "durationMs": 8851,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-12ed182c13c1589245dc",
+      "order": 34,
+      "exactLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "sourceScopeHost": "serve.mt.gov",
+      "selectedMode": "public",
+      "argumentsSha256": "f7bc601abefec502b7db1d4988788d83bc977ea7f88c68492bd5e5439a4de8b6",
+      "opaqueResultCanonicalSha256": "498607bc38ab9710cdad7783c8d58be9b71f45a4b2d239f22b8247c045406a61",
+      "opaqueResultCanonicalBytes": 40023,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/33"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "3ee18567b8a9885b5b6d2cdc98aa71b36023cdbc4fb044489894a1c0bebdbe20"
+      }
+    },
+    {
+      "traceLine": 776,
+      "traceEventSha256": "90b8ed623fd47dce8c8908f413786cb19de7ca19eb75c24a294e083087700071",
+      "invocationId": "exec-6c90a82f-b5e2-47f8-9e6f-2d3ef8b036b1",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522203504,
+      "completedAtMs": 1792522212306,
+      "startedAt": "2026-10-20T18:50:03.504000+00:00",
+      "completedAt": "2026-10-20T18:50:12.306000+00:00",
+      "durationMs": 8802,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-b9994cd63d16a61d8a82",
+      "order": 295,
+      "exactLocatorSha256": "b9994cd63d16a61d8a82b71e6ba94f944f8bf901e8acb37c52fdbec108f5d1f8",
+      "sourceScopeHost": "revenue.mt.gov",
+      "selectedMode": "public",
+      "argumentsSha256": "5f985b9eaa3d01ddc443a4c3c186d7f01aa9fd25ac0e3abb854c3e25a8b0c02b",
+      "opaqueResultCanonicalSha256": "0b5a0200280cbb5a8ac5cb20a8c9d57de7d23e73089dc1e9b07af5130b7b0d43",
+      "opaqueResultCanonicalBytes": 21492,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/294"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "f85bd566da924ef2d0cc3075ec2fca85ad6a3d890a2d933a7dfe632bb9405aab"
+      }
+    },
+    {
+      "traceLine": 782,
+      "traceEventSha256": "a19541c2bc81c81ccf35179b92a1432aa2acfc2e7ef588cbbfd667792f79a892",
+      "invocationId": "exec-188f0141-9a03-4a4b-ae4b-f2e6e37ad376",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522212315,
+      "completedAtMs": 1792522219997,
+      "startedAt": "2026-10-20T18:50:12.315000+00:00",
+      "completedAt": "2026-10-20T18:50:19.997000+00:00",
+      "durationMs": 7682,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-609ec378d6d927aa2778",
+      "order": 146,
+      "exactLocatorSha256": "609ec378d6d927aa2778697e7e42a9a508d5b07e0e432b6a6d90debac3c7685c",
+      "sourceScopeHost": "www.montana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "9165d82c3c4892d5c23a6f835a3af02555e6fe5ea85fac8cca5abba7ff51e3eb",
+      "opaqueResultCanonicalSha256": "29b00419b2d6ac908e1aa23ff4eaf02c14a425b9a2805d7e1ae8c58706ffcc72",
+      "opaqueResultCanonicalBytes": 10389,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/145"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "8298a2fa2d3d6b43d511e73df6e6dd607bb837b35806b950e8c3dd8c73e3856c"
+      }
+    },
+    {
+      "traceLine": 783,
+      "traceEventSha256": "67a76deed7d13d58b247afff1e208c34d31fed10bdf80d9e65d3339b54f1c388",
+      "invocationId": "exec-7437e138-ee7a-43f1-a8d5-74f7e21e14bc",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522220002,
+      "completedAtMs": 1792522232128,
+      "startedAt": "2026-10-20T18:50:20.002000+00:00",
+      "completedAt": "2026-10-20T18:50:32.128000+00:00",
+      "durationMs": 12126,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-3c94a3d4fff0cf554121",
+      "order": 100,
+      "exactLocatorSha256": "3c94a3d4fff0cf554121cebca80c1c56ac29565b4579b4b5563e4e675d2a2781",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "9626cddc4b01086346c3578858d752e344154c27e4308f51ff00198502285a97",
+      "opaqueResultCanonicalSha256": "f33f2950f759ee5431465476f1fda15ea0d62ef764da00820787bbb8a9976edf",
+      "opaqueResultCanonicalBytes": 36058,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/99"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "a1c157e25cc74f6251566f99682e48e4198382d9dd530d5df5f2c1ee100979c1"
+      }
+    },
+    {
+      "traceLine": 786,
+      "traceEventSha256": "fb870a04561c5a7fc00ef4f5808fe33e12c062fec2109df3e2a14300da2ba37b",
+      "invocationId": "exec-7566fdf7-7f05-4866-b2f3-159b9bc2d79a",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522232148,
+      "completedAtMs": 1792522240692,
+      "startedAt": "2026-10-20T18:50:32.148000+00:00",
+      "completedAt": "2026-10-20T18:50:40.692000+00:00",
+      "durationMs": 8544,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-8ec9b1da07f3a3a8f70d",
+      "order": 227,
+      "exactLocatorSha256": "8ec9b1da07f3a3a8f70d88b9286df5747f11716c20cf0e6c492fbe85d1f99112",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "ca20587e7d203113147009c3534717dd198097f4d8821a53e7df1cba47625814",
+      "opaqueResultCanonicalSha256": "698c6673d45e3629487603e5a5786636e6862973f6a429495c871b69b3719f33",
+      "opaqueResultCanonicalBytes": 26507,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/226"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "9fc1bd877f2e55a4b2c386672ae7dd76b954e84c066dbbcd57ec210f652181ee"
+      }
+    },
+    {
+      "traceLine": 789,
+      "traceEventSha256": "f3443fabcc885f303d82042305463424910a607ccd05f30b123e5848e687a297",
+      "invocationId": "exec-436cae31-67a3-4cc3-a377-b3e7a6d882ff",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522240695,
+      "completedAtMs": 1792522248746,
+      "startedAt": "2026-10-20T18:50:40.695000+00:00",
+      "completedAt": "2026-10-20T18:50:48.746000+00:00",
+      "durationMs": 8051,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-7d1e0325681210e19ec7",
+      "order": 200,
+      "exactLocatorSha256": "7d1e0325681210e19ec7a1c2eb880e54544a440511f4e8cd6d90731751d81afd",
+      "sourceScopeHost": "www.montana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "697d29e9d4a7ccfb5b3e2afa284a25efee43c6c5520e8f38359a5ba5a465da25",
+      "opaqueResultCanonicalSha256": "2fa87f62dbd27b8f682cb74283a320d064b822c5b41a95b7783857283d5c8901",
+      "opaqueResultCanonicalBytes": 15016,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/199"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "609136569f9fc7e13d887d7733833bd3573f4161e603293efaff02c9d02b7a4f"
+      }
+    },
+    {
+      "traceLine": 796,
+      "traceEventSha256": "bbf8d7ed49eac65256f10d15b946d06b121cd9f9862b39b10de484b2ab6d4d03",
+      "invocationId": "exec-2a0c7ddc-1f4e-4225-9a52-a1023e240411",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522248757,
+      "completedAtMs": 1792522260249,
+      "startedAt": "2026-10-20T18:50:48.757000+00:00",
+      "completedAt": "2026-10-20T18:51:00.249000+00:00",
+      "durationMs": 11492,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-90d85fde284219f48eca",
+      "order": 233,
+      "exactLocatorSha256": "90d85fde284219f48eca08a4cd13fe3a5850c2077f2134276984358136c7f5f0",
+      "sourceScopeHost": "www.montana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "d794baba1bb4055f65f9f585c9fee6b5ccd28d053ef8761d4fec20a0078f1303",
+      "opaqueResultCanonicalSha256": "dff1f5e25ceb7336147116c0b68e854d27e91982a93c67b833d550da7d5ea331",
+      "opaqueResultCanonicalBytes": 17940,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/232"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "662b99013fc077f4e7d964389027aef3ba192d2ae118bfd88c4795add2190335"
+      }
+    },
+    {
+      "traceLine": 799,
+      "traceEventSha256": "0794bc7fee4c29c3ee1c93a456a4b0f6b738f8836aa31e1609ef0898d9f2b414",
+      "invocationId": "exec-12015c1e-0bc2-4989-be2f-e7329e1faad5",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522260255,
+      "completedAtMs": 1792522269269,
+      "startedAt": "2026-10-20T18:51:00.255000+00:00",
+      "completedAt": "2026-10-20T18:51:09.269000+00:00",
+      "durationMs": 9014,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-b636edfd244c6940f9b1",
+      "order": 292,
+      "exactLocatorSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "sourceScopeHost": "www.umt.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "59b31ac355d34968be5be5b412d0d3d9d13bb40971a7fabfe003dfb5753afd2f",
+      "opaqueResultCanonicalSha256": "b174f4ad9e9004ae979367a0730959465fddafa4e846f799de51a4a446400aff",
+      "opaqueResultCanonicalBytes": 21921,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/291"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "9b5f0ec1d97f3a6805666b005a517f57c804e1b9e29912107c24f5061713e230"
+      }
+    },
+    {
+      "traceLine": 802,
+      "traceEventSha256": "4bd0562b67ac6df11437ba15fb1bdba7a0f68f93d3ee7bbdeee4af5401c52f69",
+      "invocationId": "exec-91e01f97-7e94-4ecd-b946-a481d49b74ab",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522269288,
+      "completedAtMs": 1792522277838,
+      "startedAt": "2026-10-20T18:51:09.288000+00:00",
+      "completedAt": "2026-10-20T18:51:17.838000+00:00",
+      "durationMs": 8550,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-931da39486e45635990c",
+      "order": 234,
+      "exactLocatorSha256": "931da39486e45635990c31fdfdd80e1c02e92e66e124977bbbe2edee3a932a11",
+      "sourceScopeHost": "www.montana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "3fbaca17a0878eb97a6a4a1d1b62c0a17d985d872295a81f9513247add9a266e",
+      "opaqueResultCanonicalSha256": "4685c50a57c2822a7ff383ed3a8231c957c8e1f9929d39e6c36290390747ea68",
+      "opaqueResultCanonicalBytes": 21617,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/233"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "b944d297e2291146b3e385d5f98587e22eb6aab84fdde5be0e53ff543baab95b"
+      }
+    },
+    {
+      "traceLine": 803,
+      "traceEventSha256": "90452d56ebb1eef2813441effae2daa871f2f25220d5535c1d19693ef656824d",
+      "invocationId": "exec-8398b460-a585-491d-8fe0-c63ded460c06",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "approved_nine_public_pages",
+      "startedAtMs": 1792522277855,
+      "completedAtMs": 1792522286469,
+      "startedAt": "2026-10-20T18:51:17.855000+00:00",
+      "completedAt": "2026-10-20T18:51:26.469000+00:00",
+      "durationMs": 8614,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-dd9981c2ea3fb92c48b2",
+      "order": 348,
+      "exactLocatorSha256": "dd9981c2ea3fb92c48b25d7a1683ca50c8a83254739e89400a905b75718d9545",
+      "sourceScopeHost": "www.montana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "3fb9e7ad3d568aed93ac8dfa882bf13ae3b76da908a261fc346ed53ff115a3a2",
+      "opaqueResultCanonicalSha256": "0169a23a1056e443b83cc94102c19164a0fdd8074699fb87bca3d248b221db24",
+      "opaqueResultCanonicalBytes": 24973,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/347"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "609136569f9fc7e13d887d7733833bd3573f4161e603293efaff02c9d02b7a4f"
+      }
+    },
+    {
+      "traceLine": 1043,
+      "traceEventSha256": "eab8666379edefe962be315f6758dbc9981474ce13d6c32c5aeb5417e515f6d4",
+      "invocationId": "exec-9ba2660b-27f8-458c-aa23-d396c9001d51",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523161668,
+      "completedAtMs": 1792523171616,
+      "startedAt": "2026-10-20T19:06:01.668000+00:00",
+      "completedAt": "2026-10-20T19:06:11.616000+00:00",
+      "durationMs": 9948,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-10985f6fc47c008d4fc4",
+      "order": 30,
+      "exactLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "sourceScopeHost": "gtmf.org",
+      "selectedMode": "public",
+      "argumentsSha256": "f8d26bc0e711885db23693c0b9eab8ca81d15410aebb8d0efde1a88cc51f9a1c",
+      "opaqueResultCanonicalSha256": "1e1e634d670ad1786aae178e043e22861de8de6bbf95849dfaa4d0f1f3c6060b",
+      "opaqueResultCanonicalBytes": 16047,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/29"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "b0721c750fca969997ea6fa7a5060ab20bea6d0fa4b62415a2c9b93d5f0beba7"
+      }
+    },
+    {
+      "traceLine": 1046,
+      "traceEventSha256": "ffb2ef7eb2385e6eac7e7c59bb15280488b1e973d7a2ae7bb372565fa10e33ca",
+      "invocationId": "exec-97408c7b-7d05-493d-b567-ea291b37f0a3",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523171623,
+      "completedAtMs": 1792523181583,
+      "startedAt": "2026-10-20T19:06:11.623000+00:00",
+      "completedAt": "2026-10-20T19:06:21.583000+00:00",
+      "durationMs": 9960,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-119ae832d51f13b62c26",
+      "order": 32,
+      "exactLocatorSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+      "sourceScopeHost": "mtech.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "e14d3596ef1a962992abc0320391ae0a09b8a60a0757a570d2e690eca3711dc9",
+      "opaqueResultCanonicalSha256": "9e823748252fbddc3491e93264651dfd5ed604f2fd06d62b8425ade95dcd22b6",
+      "opaqueResultCanonicalBytes": 45869,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/31"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "c333061e18e48bdb8d263be6be13d104623f1ece62780eaf9c00ae0cc1c0dd0b"
+      }
+    },
+    {
+      "traceLine": 1049,
+      "traceEventSha256": "935ac4bc2a20e1cee5aacda25570f8338c4cebf3042b042c1fa2c3c9b8d330eb",
+      "invocationId": "exec-ed8239c0-920e-491c-b3a3-bdc30e8cc20c",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523181587,
+      "completedAtMs": 1792523191493,
+      "startedAt": "2026-10-20T19:06:21.587000+00:00",
+      "completedAt": "2026-10-20T19:06:31.493000+00:00",
+      "durationMs": 9906,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-0ecb63a87a257aeb15ea",
+      "order": 26,
+      "exactLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "sourceScopeHost": "montanaffa.org",
+      "selectedMode": "public",
+      "argumentsSha256": "c051f6af930cc1c7731b7c32dc50f214ce9bcb0b2a53fa408b848dcb4f148976",
+      "opaqueResultCanonicalSha256": "29db763209f250a2c015ed5c33951089ef818db76d6c7b610a2e904e683c8fc9",
+      "opaqueResultCanonicalBytes": 70207,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/25"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "e690347485d74abc72a4294e784c7d661240a976ad3c7c5c55e391dd9ecb40a6"
+      }
+    },
+    {
+      "traceLine": 1052,
+      "traceEventSha256": "fab764a0818189ec2e84c708d5722b8915ad90ac75419ce89b43df344d68810f",
+      "invocationId": "exec-7bc29eee-491e-4e2e-9158-b0150d266304",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523191501,
+      "completedAtMs": 1792523200095,
+      "startedAt": "2026-10-20T19:06:31.501000+00:00",
+      "completedAt": "2026-10-20T19:06:40.095000+00:00",
+      "durationMs": 8594,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-12ed182c13c1589245dc",
+      "order": 34,
+      "exactLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "sourceScopeHost": "serve.mt.gov",
+      "selectedMode": "public",
+      "argumentsSha256": "f7bc601abefec502b7db1d4988788d83bc977ea7f88c68492bd5e5439a4de8b6",
+      "opaqueResultCanonicalSha256": "7f1161b04b03042acea7ce3a7715ee7504629faffe0486434f866b95da8fe3aa",
+      "opaqueResultCanonicalBytes": 40031,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/33"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "3ee18567b8a9885b5b6d2cdc98aa71b36023cdbc4fb044489894a1c0bebdbe20"
+      }
+    },
+    {
+      "traceLine": 1057,
+      "traceEventSha256": "1cc0454db1068334bf55683a95ba617537ba7509b61571cd8a79c44a9b9fe0a8",
+      "invocationId": "exec-a6b8c770-5ecf-409d-85c4-0097b8fb6c9e",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523200114,
+      "completedAtMs": 1792523233110,
+      "startedAt": "2026-10-20T19:06:40.114000+00:00",
+      "completedAt": "2026-10-20T19:07:13.110000+00:00",
+      "durationMs": 32996,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-1991755adb0fad741a9f",
+      "order": 47,
+      "exactLocatorSha256": "1991755adb0fad741a9f23fee0834eaa87de75b3148fd8a8fac05bc5bf49a505",
+      "sourceScopeHost": "c4e.colostate.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "17f7afb79ae794057027aa4fecac3689a0e83a15d2fed460d5a1e87e14b0d647",
+      "opaqueResultCanonicalSha256": "b9fff53d0d6d2fc74290ed94834a82bf055779680ea33e17ed18b46e2cef23ba",
+      "opaqueResultCanonicalBytes": 16907,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/46"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "59581daf5eb39f27432d29e6bb7b484ec7bf093551493c38c300f02efc143f08"
+      }
+    },
+    {
+      "traceLine": 1060,
+      "traceEventSha256": "f8afe1ac9bd4efa874edc1c413bbddaac2b1b257c7edd511ec9d6425f43c9806",
+      "invocationId": "exec-716944be-4ffe-4ef8-a5e3-952d3bfe7845",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523233119,
+      "completedAtMs": 1792523243719,
+      "startedAt": "2026-10-20T19:07:13.119000+00:00",
+      "completedAt": "2026-10-20T19:07:23.719000+00:00",
+      "durationMs": 10600,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-18288ac10d37f3b37377",
+      "order": 43,
+      "exactLocatorSha256": "18288ac10d37f3b37377b277bb7a43d3796228427b4b6230a9abd5e465b079a3",
+      "sourceScopeHost": "leroywhomerjr.org",
+      "selectedMode": "public",
+      "argumentsSha256": "40a86833c61e2f139e3c7eb3190755d95a59e7e0f6c3d890bfb326dac381bfce",
+      "opaqueResultCanonicalSha256": "4d79b6abc7321408ca67ffbeebfadc4af801ebe26b123b9d59469d63eaf4a637",
+      "opaqueResultCanonicalBytes": 6911,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/42"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "f0ab18ef44a2ba0b9f60ae415fc74ec3234696b59e8bd719d15489430baa41f1"
+      }
+    },
+    {
+      "traceLine": 1063,
+      "traceEventSha256": "ad4a205f46220b7b9a04189fcca25812f36a8a838626981aaec91618b6fcecf9",
+      "invocationId": "exec-ab73ef8b-5154-4115-9868-8d1c4742a834",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523243727,
+      "completedAtMs": 1792523263428,
+      "startedAt": "2026-10-20T19:07:23.727000+00:00",
+      "completedAt": "2026-10-20T19:07:43.428000+00:00",
+      "durationMs": 19701,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-1323707329dde1d64ee0",
+      "order": 35,
+      "exactLocatorSha256": "1323707329dde1d64ee0f74e5eb296694e77055c75b01108e40e38635aebfa8f",
+      "sourceScopeHost": "www.mikeroweworks.org",
+      "selectedMode": "public",
+      "argumentsSha256": "f815e0661c1b47c94de80858513433e3366621ed92e887996785ce82afd22ba0",
+      "opaqueResultCanonicalSha256": "4cb0c0e4686f4f3b6804f4e664db0d8a4f2e8bb401266cd9bd497dddd1f1e3e6",
+      "opaqueResultCanonicalBytes": 106287,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/34"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "9bd8594d2ebbfde937cb047e528f127c1f63c7f0f0777e4a9df67fc3fe2f1c66"
+      }
+    },
+    {
+      "traceLine": 1064,
+      "traceEventSha256": "cf47e221f04c1cafb8f8ebfed747e63e3ec7290375b1ecd75250435f3be236cc",
+      "invocationId": "exec-a43d147e-b120-4d00-ae16-cbfbc164a973",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523263437,
+      "completedAtMs": 1792523272216,
+      "startedAt": "2026-10-20T19:07:43.437000+00:00",
+      "completedAt": "2026-10-20T19:07:52.216000+00:00",
+      "durationMs": 8779,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-1de162b0b9e04e373198",
+      "order": 54,
+      "exactLocatorSha256": "1de162b0b9e04e373198607666897b41a4f33191eb9e0020ec626e5747830583",
+      "sourceScopeHost": "www.nationalhonorsociety.org",
+      "selectedMode": "public",
+      "argumentsSha256": "d81c2a1c1b112341cffd9b568288e20e949f61e5145c8e13119677c02c2fa8e4",
+      "opaqueResultCanonicalSha256": "b8a4996dcbf3886a8f14db8ff27c0c3addfeb67f74d92932e975d53961c27775",
+      "opaqueResultCanonicalBytes": 70575,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/53"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "0eae24003cb4adb4fc3a64ba2a29253b2ff1e12a23d0a758542748e5cb22b9d7"
+      }
+    },
+    {
+      "traceLine": 1068,
+      "traceEventSha256": "e507fafd328e2bc50c835f8610b76c37ed7672a1d99ea8e14736266f0e790c03",
+      "invocationId": "exec-8f4456e3-280f-4db0-9608-d134a9919591",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523272327,
+      "completedAtMs": 1792523282827,
+      "startedAt": "2026-10-20T19:07:52.327000+00:00",
+      "completedAt": "2026-10-20T19:08:02.827000+00:00",
+      "durationMs": 10500,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-2b9a69050b35a081dba8",
+      "order": 76,
+      "exactLocatorSha256": "2b9a69050b35a081dba8e76bacf11ceff7ca95ca050225388f0ad3515fc44950",
+      "sourceScopeHost": "scholarshipamerica.org",
+      "selectedMode": "public",
+      "argumentsSha256": "d206926de2119c92f227e8c356cdb5df78cd7f3fc19271a4f483ee91464420e7",
+      "opaqueResultCanonicalSha256": "6aa906180916ccb05a2ee6185242cbc4084c8afdd9bdee64386a8d05c91b6351",
+      "opaqueResultCanonicalBytes": 22476,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/75"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "51862a390b962889abeeab4bd256dbfc5b0259f7969a10e679f90a89e97ee143"
+      }
+    },
+    {
+      "traceLine": 1081,
+      "traceEventSha256": "31752c600392b536c08d39f9ba023a44a1feed116143d9d73be485c0a841a341",
+      "invocationId": "exec-29a97e85-fe2a-4188-8b79-dba9b74c2f89",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523282835,
+      "completedAtMs": 1792523294759,
+      "startedAt": "2026-10-20T19:08:02.835000+00:00",
+      "completedAt": "2026-10-20T19:08:14.759000+00:00",
+      "durationMs": 11924,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-27d545d499780873f0ca",
+      "order": 69,
+      "exactLocatorSha256": "27d545d499780873f0ca8ef5c3b2fd5eb6e1a35ad67566ca1717d32b73147e55",
+      "sourceScopeHost": "officialsdepot.com",
+      "selectedMode": "public",
+      "argumentsSha256": "5377902989bf638e54a84f8ab4a0a06e2516c35d9c19869c26d5195aec7609fc",
+      "opaqueResultCanonicalSha256": "d8f96ab197c571b341cb96e6ec6021954d113b623b94237879772ddbfe041d85",
+      "opaqueResultCanonicalBytes": 26992,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/68"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "398121a0353630d9e248487576a87b34458e2c24b0a6f92ffc91a6a9021b537f"
+      }
+    },
+    {
+      "traceLine": 1088,
+      "traceEventSha256": "ab21bc6731e223934b24671596ae1a8474b43ce0d1aca2901838ecb925bd1bef",
+      "invocationId": "exec-23fcd4b1-e831-424f-992a-8646646976ce",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523294766,
+      "completedAtMs": 1792523306291,
+      "startedAt": "2026-10-20T19:08:14.766000+00:00",
+      "completedAt": "2026-10-20T19:08:26.291000+00:00",
+      "durationMs": 11525,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-30a545edc90383232f9a",
+      "order": 82,
+      "exactLocatorSha256": "30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "sourceScopeHost": "thendalliance.org",
+      "selectedMode": "public",
+      "argumentsSha256": "8d66bdcccd68f77fa54b8cebdb30b6f44db671bdbe077b61563fc6e3dcc371c5",
+      "opaqueResultCanonicalSha256": "952190f14a91277ced384000cd25c93f6ab0ebdceafd53ea7df960bf0f791277",
+      "opaqueResultCanonicalBytes": 32386,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/81"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "19182a8debeee7aeaf9c26c44e9cbd2efb57d92d857c812fe85322e0c811f3f6"
+      }
+    },
+    {
+      "traceLine": 1089,
+      "traceEventSha256": "9e876bded12bef96b985fd7949e23261877224a8578c7bc2447c1f84beb076a9",
+      "invocationId": "exec-48baa44f-9160-44f4-a828-e047f7ec369a",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523306303,
+      "completedAtMs": 1792523313887,
+      "startedAt": "2026-10-20T19:08:26.303000+00:00",
+      "completedAt": "2026-10-20T19:08:33.887000+00:00",
+      "durationMs": 7584,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-2eaa129ee53487ddd83d",
+      "order": 79,
+      "exactLocatorSha256": "2eaa129ee53487ddd83d8aabbdc2ec6528acb5c9e44fe2b251c684255e9b6bf5",
+      "sourceScopeHost": "www.elks.org",
+      "selectedMode": "public",
+      "argumentsSha256": "0c2989289be8c2d604a8ac2cae5cfb317bf9cd86f20b73a3870c0b12af0e1f2d",
+      "opaqueResultCanonicalSha256": "1b2a6e83ffa9043a7795968ac061e0265a1591df87db41a7e8115eb33d13c4bd",
+      "opaqueResultCanonicalBytes": 19421,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/78"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "91e90ef6da7e59fa573a4ea730706229d1b72fbdd7158b73292cc92774e6fcee"
+      }
+    },
+    {
+      "traceLine": 1094,
+      "traceEventSha256": "fe3ee88966a390ab80abd406165fedceda8101e2e287cbe79ec6d1ea68cfdcd0",
+      "invocationId": "exec-8ee9bf50-2b04-46d5-9a08-0e97183fd21f",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523313931,
+      "completedAtMs": 1792523322630,
+      "startedAt": "2026-10-20T19:08:33.931000+00:00",
+      "completedAt": "2026-10-20T19:08:42.630000+00:00",
+      "durationMs": 8699,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-318a06e814ce8b8feb30",
+      "order": 83,
+      "exactLocatorSha256": "318a06e814ce8b8feb30223b1137379f556fdefaca5f879f375f58d6c9a59f19",
+      "sourceScopeHost": "www.duckbrand.com",
+      "selectedMode": "public",
+      "argumentsSha256": "e424391795d2483dbb63bb00be373732226902e01785e7106674ebba6ef2318e",
+      "opaqueResultCanonicalSha256": "85eadc2f4a415c1da9bf7157f415e5700dff0f513734ba2263399d13509dda82",
+      "opaqueResultCanonicalBytes": 28421,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/82"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "db1dd1abffc64f33a486d727ff13df17888eb92e0ec800a2eba0e6e2e2c4818f"
+      }
+    },
+    {
+      "traceLine": 1097,
+      "traceEventSha256": "22af2f1b963e10da80befe3870ad166dd2bd1830643ffed6a01eafa50e8d07cb",
+      "invocationId": "exec-2bb5f99b-a9eb-4556-a585-29dae84644e4",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523322637,
+      "completedAtMs": 1792523331263,
+      "startedAt": "2026-10-20T19:08:42.637000+00:00",
+      "completedAt": "2026-10-20T19:08:51.263000+00:00",
+      "durationMs": 8626,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-342285b33a6ae54f2976",
+      "order": 88,
+      "exactLocatorSha256": "342285b33a6ae54f2976217f09e472d0d4e05d6cb3073e1f5bbbcabdaaeec4f6",
+      "sourceScopeHost": "nesa.org",
+      "selectedMode": "public",
+      "argumentsSha256": "3317b867fa26822fe24d40f8bf5618ffe2dc59d3d27a76089d9501c223dca7ae",
+      "opaqueResultCanonicalSha256": "1da0763eadfc75e70568e33ec258a35711047d98759e1a8a4309b6906ea1509d",
+      "opaqueResultCanonicalBytes": 21868,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/87"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "9e2b9679cffa0b4654c6b52ae3ccc69fb93b08951aecd9bddb14667c4186c9eb"
+      }
+    },
+    {
+      "traceLine": 1100,
+      "traceEventSha256": "eecdd17157751d123e2126f9d679103ed2e180f434e8699e7acebfcd448cf14b",
+      "invocationId": "exec-55094ad3-ca4f-42b3-b550-96850fc28ca6",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523331268,
+      "completedAtMs": 1792523343465,
+      "startedAt": "2026-10-20T19:08:51.268000+00:00",
+      "completedAt": "2026-10-20T19:09:03.465000+00:00",
+      "durationMs": 12197,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-37a44ecac0ed5d564ac2",
+      "order": 91,
+      "exactLocatorSha256": "37a44ecac0ed5d564ac2ee4ea6de11cd9b9a999bd7dfeba654dfa4a96d5eb486",
+      "sourceScopeHost": "www.healthproductsforyou.com",
+      "selectedMode": "public",
+      "argumentsSha256": "b9e2330f119e382c7869f9a1fd9122a9cb48186791efc65fcb20c19034e2f4df",
+      "opaqueResultCanonicalSha256": "cae917546af7268ff6f6b08a92a12e7ecea9851e2686651dc2061e6b971cf5d7",
+      "opaqueResultCanonicalBytes": 53411,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/90"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "20ee65086c70e4a322abda432bd3e545158a1537caef2210d524b470098b56df"
+      }
+    },
+    {
+      "traceLine": 1105,
+      "traceEventSha256": "e7dc3d6d41dd04e2c66ffa492daf12ade6dd43541530d479aaea955511b9b93c",
+      "invocationId": "exec-19e657ce-e851-4820-8b3c-e1f3a571cf2c",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523343470,
+      "completedAtMs": 1792523358506,
+      "startedAt": "2026-10-20T19:09:03.470000+00:00",
+      "completedAt": "2026-10-20T19:09:18.506000+00:00",
+      "durationMs": 15036,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-3a653520c81b8fb37b24",
+      "order": 94,
+      "exactLocatorSha256": "3a653520c81b8fb37b2414f7a0e5a5165e9a4331f725d9ea5528fccb67b45b7a",
+      "sourceScopeHost": "nths.org",
+      "selectedMode": "public",
+      "argumentsSha256": "7a88ed2440b87417a4e165c41aa66872472a31043982f7ab6dd8c819dad12c79",
+      "opaqueResultCanonicalSha256": "122600249611792d88456ade8880d40299d8ceeae7c2b2a869b8335b5c03e50f",
+      "opaqueResultCanonicalBytes": 18991,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/93"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "3293455196aa10c051de6d98cf7744fa334072c9e4e340d7bd0e61d92671789b"
+      }
+    },
+    {
+      "traceLine": 1110,
+      "traceEventSha256": "f7b203e0d615da3a94b2794fa224cd744428e8819c478ca2e1dfce2ea4760fef",
+      "invocationId": "exec-3cc12c8a-5a7d-41c8-9707-a1be5bc6d0df",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523358527,
+      "completedAtMs": 1792523369231,
+      "startedAt": "2026-10-20T19:09:18.527000+00:00",
+      "completedAt": "2026-10-20T19:09:29.231000+00:00",
+      "durationMs": 10704,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-4e69827d99e9582d05dd",
+      "order": 122,
+      "exactLocatorSha256": "4e69827d99e9582d05ddb312947db9173cbc7a3bf3381150094f34e3a949525f",
+      "sourceScopeHost": "www.goarmy.com",
+      "selectedMode": "public",
+      "argumentsSha256": "45d51aa259b9ff61fe090150ea92a3fe4d2d49b833ecae803e0ef5800f20730c",
+      "opaqueResultCanonicalSha256": "77cf727e11472656d17da51f3bcf423d5ff071b9774c276edfb43ebabec91c1d",
+      "opaqueResultCanonicalBytes": 28649,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/121"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "7d70779e8c214376ef9f53fc2b0432cfc5a2a1b8fec33779e35ca36f58d5a7d3"
+      }
+    },
+    {
+      "traceLine": 1111,
+      "traceEventSha256": "7ce6b7dae0e1976258d0c39dcd499dd99e608051892ea4e0d2c76e5e732291eb",
+      "invocationId": "exec-7114d2b4-84cb-43d5-8754-24edf4890c19",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523369236,
+      "completedAtMs": 1792523379646,
+      "startedAt": "2026-10-20T19:09:29.236000+00:00",
+      "completedAt": "2026-10-20T19:09:39.646000+00:00",
+      "durationMs": 10410,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-45fda935d4f3c2f74988",
+      "order": 107,
+      "exactLocatorSha256": "45fda935d4f3c2f74988661f1f015ee0d6d6cc2606b2c7505440b2007e15c0b8",
+      "sourceScopeHost": "umontana.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "4732084d1cd01784504fe219967646b43befe2387465da3314398beed6a9dbaf",
+      "opaqueResultCanonicalSha256": "1e09634a7367fb983d7186ee89c0db839b50214196febdcb6777ab91e74365bf",
+      "opaqueResultCanonicalBytes": 23023,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/106"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "a1c157e25cc74f6251566f99682e48e4198382d9dd530d5df5f2c1ee100979c1"
+      }
+    },
+    {
+      "traceLine": 1112,
+      "traceEventSha256": "555d2e24b74ca7619502133db6b1d832416d45fc76c74ae4d43e2968f42c9d3c",
+      "invocationId": "exec-87ccc08e-7bde-45ac-ae91-5cbb280db3ac",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523379653,
+      "completedAtMs": 1792523388980,
+      "startedAt": "2026-10-20T19:09:39.653000+00:00",
+      "completedAt": "2026-10-20T19:09:48.980000+00:00",
+      "durationMs": 9327,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-3eee78ad8ccd3d0fb353",
+      "order": 103,
+      "exactLocatorSha256": "3eee78ad8ccd3d0fb3535cb5a7860d641d31975da4f4d8220a429fd812098ea7",
+      "sourceScopeHost": "pointfoundation.org",
+      "selectedMode": "public",
+      "argumentsSha256": "16b84ed8bbab701c01b7a1edeff6e42ceba751e830470bbf1aac5aae86593fd1",
+      "opaqueResultCanonicalSha256": "5b650c730862681898ad431b4db951502eb0c3b3f1f703621d65116026781b65",
+      "opaqueResultCanonicalBytes": 18126,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/102"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "86441a03ff4b9ff4e51c47ceba9729fe1609fff79e80ef0bdf9df7e95783840f"
+      }
+    },
+    {
+      "traceLine": 1116,
+      "traceEventSha256": "897e4575a310d4dcb4c8ec61d66c984a1271bab806fd3fb6a5f177c53b68aea4",
+      "invocationId": "exec-936e0bc5-d20c-4ad3-b126-a79fa14d40f3",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523388987,
+      "completedAtMs": 1792523398008,
+      "startedAt": "2026-10-20T19:09:48.987000+00:00",
+      "completedAt": "2026-10-20T19:09:58.008000+00:00",
+      "durationMs": 9021,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-3ff00be1f424b15625e8",
+      "order": 105,
+      "exactLocatorSha256": "3ff00be1f424b15625e8f2dd21241c2ab1d1aa09a00922eccc9a6e34db436981",
+      "sourceScopeHost": "bringbackthetrades.org",
+      "selectedMode": "public",
+      "argumentsSha256": "9c1e4df77c83e78c6be04252719902157925be62b7cbe172135f465874c7b6e7",
+      "opaqueResultCanonicalSha256": "b9c1532d907181f3a7e9dc29ada0f283f44346a1887b267a8cc54fb29f2fc34b",
+      "opaqueResultCanonicalBytes": 15475,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/104"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "8ddd9bffd5069558f3eda8f263e66545baa33611746052063b745517812cc5f4"
+      }
+    },
+    {
+      "traceLine": 1128,
+      "traceEventSha256": "dc92f639bee13d8d8358b84d8504478b05a472a96c64c3b9efdd2ad69684c7e3",
+      "invocationId": "exec-6293e431-223c-4d81-8aa6-f3d37f996087",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523398027,
+      "completedAtMs": 1792523414582,
+      "startedAt": "2026-10-20T19:09:58.027000+00:00",
+      "completedAt": "2026-10-20T19:10:14.582000+00:00",
+      "durationMs": 16555,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-4f2b36a607199514758b",
+      "order": 124,
+      "exactLocatorSha256": "4f2b36a607199514758b6ade21394b4e8b47a5ed0f1ebe953dfeb427d1ba0c27",
+      "sourceScopeHost": "www.fisherhouse.org",
+      "selectedMode": "public",
+      "argumentsSha256": "0c736061e7c2df20c96259ec5f9974fba65c8917228a4e12e9af9db2d094c47a",
+      "opaqueResultCanonicalSha256": "09edf9ac1bdbe99095afe87c4ee1229d8edd854774115415de30f1ead596e3fb",
+      "opaqueResultCanonicalBytes": 137641,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/123"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "eb2d2f4262436a717190bc3c22a842d246142cc4a93d35e20caddb5e24d3eca3"
+      }
+    },
+    {
+      "traceLine": 1138,
+      "traceEventSha256": "36163f6629481eb05b6c33a63fe1d48f48424339c733fd1e46156acc12af9b38",
+      "invocationId": "exec-8fb1dc8b-39af-4289-9b0a-fd616c85b7b1",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523414590,
+      "completedAtMs": 1792523424208,
+      "startedAt": "2026-10-20T19:10:14.590000+00:00",
+      "completedAt": "2026-10-20T19:10:24.208000+00:00",
+      "durationMs": 9618,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-51ddb13472f971301125",
+      "order": 128,
+      "exactLocatorSha256": "51ddb13472f9713011253daa616ce3b7ec165884984469ec460ba0b246e6bda0",
+      "sourceScopeHost": "morelli.foundation",
+      "selectedMode": "public",
+      "argumentsSha256": "8f2e2f53b75d2b379057bcda1654b1e0fa31563701904a409cbe1e59dcfe58ce",
+      "opaqueResultCanonicalSha256": "f37c6de4219eab722f79762cd38f7dec3db1cdba7636b8b61fbe911eab1ad9f2",
+      "opaqueResultCanonicalBytes": 14552,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/127"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "3a6d8db5afc7780effc5a89a625e848cc398362f91a30486841637d2813287da"
+      }
+    },
+    {
+      "traceLine": 1148,
+      "traceEventSha256": "03543031954b5735967a4e02d0764fa9b24ba0e7c859272678c846a94ca07c1d",
+      "invocationId": "exec-ef88502c-4f01-4ce7-a5e7-ae99db161a93",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523424214,
+      "completedAtMs": 1792523434782,
+      "startedAt": "2026-10-20T19:10:24.214000+00:00",
+      "completedAt": "2026-10-20T19:10:34.782000+00:00",
+      "durationMs": 10568,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-4e97a9eaa683cfd171c0",
+      "order": 123,
+      "exactLocatorSha256": "4e97a9eaa683cfd171c057e6ca339a473fa5bcee405046e0c9574688f1141a2a",
+      "sourceScopeHost": "www.mus.edu",
+      "selectedMode": "public",
+      "argumentsSha256": "6dede9e44ed58ecd5eb7e2c5948b8f8480014980309f9b373d447d01dfae4510",
+      "opaqueResultCanonicalSha256": "38591f5db84dd02af8d21aaaa886607a67c9594b0683b4132e270b4143379b27",
+      "opaqueResultCanonicalBytes": 20524,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/122"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "481b7a2ee59ddac5437b741064aedbe9d1beaa6d16a0583d66a8f982e980255f"
+      }
+    },
+    {
+      "traceLine": 1154,
+      "traceEventSha256": "d62e387ef82418b4fbe3845cfe4b81305c2ae10881163a4c1231b79f9b253e67",
+      "invocationId": "exec-12e27466-f628-4f68-9f5f-9ea728e651e5",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523434790,
+      "completedAtMs": 1792523442560,
+      "startedAt": "2026-10-20T19:10:34.790000+00:00",
+      "completedAt": "2026-10-20T19:10:42.560000+00:00",
+      "durationMs": 7770,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-524e527447e443687427",
+      "order": 129,
+      "exactLocatorSha256": "524e527447e4436874275b89a852f956c57f58e8572e35327f4e814a9432b01c",
+      "sourceScopeHost": "www.wtsinternational.org",
+      "selectedMode": "public",
+      "argumentsSha256": "b3a70882621c8f22c233ab1933a51a8be3ca55942ae9aa70193e0cb1d207e678",
+      "opaqueResultCanonicalSha256": "96590aefad9463a9e81aa7461e589c21b64561615b5c42be78088194f92ba5fb",
+      "opaqueResultCanonicalBytes": 9926,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/128"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "3929f4ea54ecc0a9268f97d1e29d83836bb7bf6cf27e1f11633b7f6706e11eec"
+      }
+    },
+    {
+      "traceLine": 1158,
+      "traceEventSha256": "d57efb3ffc6b4d7831bfccf6a479652f1dcab06f97a26702837c7870e2b8b3b7",
+      "invocationId": "exec-dc1ce0f2-8935-4e2c-8769-974e6c9f15c0",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523442603,
+      "completedAtMs": 1792523452626,
+      "startedAt": "2026-10-20T19:10:42.603000+00:00",
+      "completedAt": "2026-10-20T19:10:52.626000+00:00",
+      "durationMs": 10023,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-5031c37ec0615ac9ec7c",
+      "order": 127,
+      "exactLocatorSha256": "5031c37ec0615ac9ec7cff52b232f3e0738086897e0341ac3783602b01b61871",
+      "sourceScopeHost": "www.fisherhouse.org",
+      "selectedMode": "public",
+      "argumentsSha256": "58b1c335b4ba25540006cda070c117399ae95a4b7d4f76d34a941adf9c8be91e",
+      "opaqueResultCanonicalSha256": "d7aa87258691915bcd766f04bf1b3fb4248053065291dd071abd34f3eea6d2bb",
+      "opaqueResultCanonicalBytes": 50364,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/126"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "7453c75b71339457532a0c83e2696ec5842d13e13065115c65132e62578d0d11"
+      }
+    },
+    {
+      "traceLine": 1161,
+      "traceEventSha256": "2aa960c59d4ae2a060415f5c303c9a74e0e89075784fecd60c575d5f231238df",
+      "invocationId": "exec-de50d335-adf4-4a40-9f7d-7f457dd1efe5",
+      "server": "codex_apps",
+      "tool": "firecrawl.firecrawl_scrape",
+      "phase": "cell86_interrupted_expanded_pages",
+      "startedAtMs": 1792523452632,
+      "completedAtMs": 1792523460551,
+      "startedAt": "2026-10-20T19:10:52.632000+00:00",
+      "completedAt": "2026-10-20T19:11:00.551000+00:00",
+      "durationMs": 7919,
+      "status": "completed",
+      "toolIsError": false,
+      "providerErrorCode": null,
+      "targetId": "sd2-read-591262dd73cff3135700",
+      "order": 136,
+      "exactLocatorSha256": "591262dd73cff3135700049154e43bdb7366e61af440a8dffe2780f338f6de3f",
+      "sourceScopeHost": "www.elks.org",
+      "selectedMode": "public",
+      "argumentsSha256": "958d5f1938e910fa40b6a86b57ec4035a267dbf96649e1fd889b98bd2570d602",
+      "opaqueResultCanonicalSha256": "5dadd8a75117a1ef599fef7d1dc46a4c1232703f11520473e3f954b54970b77e",
+      "opaqueResultCanonicalBytes": 18333,
+      "targetReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+        "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1",
+        "pointer": "/targets/135"
+      },
+      "exactUrlMatchedFrozenTarget": true,
+      "nativeIdMatchedExactlyOneSelectedNativeTarget": false,
+      "nativeFileIdSha256": null,
+      "requestMetadata": {
+        "formats": [
+          "markdown",
+          "json"
+        ],
+        "onlyMainContent": true,
+        "excludeTags": [
+          "nav",
+          "footer",
+          "header",
+          "form",
+          "input",
+          "textarea",
+          "script",
+          "style"
+        ],
+        "maxAge": 0,
+        "redactPII": true,
+        "removeBase64Images": true,
+        "domainTools": false,
+        "lockdown": false,
+        "timeout": 45000,
+        "storeInCache": false,
+        "jsonOptionsKeys": [
+          "prompt"
+        ],
+        "jsonPromptSha256": "91e90ef6da7e59fa573a4ea730706229d1b72fbdd7158b73292cc92774e6fcee"
+      }
+    }
+  ],
+  "controllerFrontiers": {
+    "cell51": {
+      "firstThreeGroups": [
+        [
+          10,
+          19,
+          21,
+          24
+        ],
+        [
+          17,
+          26,
+          28,
+          30
+        ],
+        [
+          29,
+          31,
+          32,
+          34
+        ]
+      ],
+      "completedToolCalls": 13,
+      "knownObservedTargetOrders": [
+        10,
+        17,
+        19,
+        21,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        34
+      ],
+      "quarantineThirdGroupOrders": [
+        29,
+        31,
+        32,
+        34
+      ],
+      "possibleAdditionalCallsUpperBound": 2,
+      "conservativePhaseCallUpperBound": 15,
+      "durableWriteBarrier": "No source packet until all48; notifications/isolate store were not durable execution records."
+    },
+    "cell86": {
+      "firstSevenGroups": [
+        [
+          26,
+          30,
+          32,
+          34
+        ],
+        [
+          35,
+          43,
+          47,
+          54
+        ],
+        [
+          69,
+          76,
+          79,
+          82
+        ],
+        [
+          83,
+          88,
+          91,
+          94
+        ],
+        [
+          103,
+          105,
+          107,
+          122
+        ],
+        [
+          123,
+          124,
+          128,
+          129
+        ],
+        [
+          127,
+          136,
+          139,
+          143
+        ]
+      ],
+      "durableCompletedTargetPackets": 24,
+      "observedCompletedPublicCalls": 26,
+      "quarantineSeventhGroupOrders": [
+        127,
+        136,
+        139,
+        143
+      ],
+      "possibleAdditionalCallsUpperBound": 2,
+      "conservativePhaseCallUpperBound": 28,
+      "durableWriteBarrier": "Six complete4-target groups produced packets004/005; seventh group reached but not durably finalized."
+    },
+    "reservations": [
+      {
+        "phase": "cell51_interrupted_pre_safety",
+        "order": 32,
+        "tool": "firecrawl.firecrawl_scrape",
+        "additionalExplicitCallsUpperBound": 1,
+        "basis": "Reached third group calls all four acquire functions before await. This exact public target lacks a completed event; no timestamps invented. Later cell86 callback exists, so a second acquisition is possible.",
+        "targetId": "sd2-read-119ae832d51f13b62c26",
+        "exactLocatorSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+        "startedAtMs": null,
+        "completedAtMs": null,
+        "disposition": "QUARANTINE_NO_REPLAY"
+      },
+      {
+        "phase": "cell51_interrupted_pre_safety",
+        "order": 29,
+        "tool": "google_drive.fetch",
+        "additionalExplicitCallsUpperBound": 1,
+        "basis": "Native metadata callback is observed. Whether metadata gates admitted its content fetch cannot be inferred without inspecting the opaque result; reserve one possible content call.",
+        "targetId": "sd2-read-0f3fae09cf3cb40aa59a",
+        "exactLocatorSha256": "0f3fae09cf3cb40aa59ab8055d52f99311730d3fa76bff5fd97816de673e72bd",
+        "startedAtMs": null,
+        "completedAtMs": null,
+        "disposition": "QUARANTINE_NO_REPLAY"
+      },
+      {
+        "phase": "cell86_interrupted_expanded_pages",
+        "order": 139,
+        "tool": "firecrawl.firecrawl_scrape",
+        "additionalExplicitCallsUpperBound": 1,
+        "basis": "Reached seventh four-target group;127/136 completed,139/143 were invoked or queued by the group controller but have no completed callback record.",
+        "targetId": "sd2-read-5aa83df1d182a466c463",
+        "exactLocatorSha256": "5aa83df1d182a466c4638d78a81b08c4e36b9d53f9bce48ef8fa64ac110c89c1",
+        "startedAtMs": null,
+        "completedAtMs": null,
+        "disposition": "QUARANTINE_NO_REPLAY"
+      },
+      {
+        "phase": "cell86_interrupted_expanded_pages",
+        "order": 143,
+        "tool": "firecrawl.firecrawl_scrape",
+        "additionalExplicitCallsUpperBound": 1,
+        "basis": "Reached seventh four-target group; reserve request without inventing completion/dispatch times.",
+        "targetId": "sd2-read-5ea392d00f0785775385",
+        "exactLocatorSha256": "5ea392d00f0785775385ef2ec4bfc4d10fd3ac981d6e9ce27040f20ec7eb1315",
+        "startedAtMs": null,
+        "completedAtMs": null,
+        "disposition": "QUARANTINE_NO_REPLAY"
+      }
+    ],
+    "noTimestampsManufacturedForUncompletedFrontier": true
+  },
+  "confirmedReplays": [
+    {
+      "targetId": "sd2-read-0ecb63a87a257aeb15ea",
+      "order": 26,
+      "exactLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "traceLines": [
+        499,
+        1049
+      ],
+      "observedCalls": 2,
+      "priorToolStatus": "completed",
+      "priorToolIsError": false,
+      "laterToolStatus": "completed",
+      "qualifyingTemporaryTransportFailureShown": false,
+      "historicalViolationReversible": false
+    },
+    {
+      "targetId": "sd2-read-10985f6fc47c008d4fc4",
+      "order": 30,
+      "exactLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "traceLines": [
+        500,
+        1043
+      ],
+      "observedCalls": 2,
+      "priorToolStatus": "completed",
+      "priorToolIsError": false,
+      "laterToolStatus": "completed",
+      "qualifyingTemporaryTransportFailureShown": false,
+      "historicalViolationReversible": false
+    },
+    {
+      "targetId": "sd2-read-12ed182c13c1589245dc",
+      "order": 34,
+      "exactLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "traceLines": [
+        514,
+        1052
+      ],
+      "observedCalls": 2,
+      "priorToolStatus": "completed",
+      "priorToolIsError": false,
+      "laterToolStatus": "completed",
+      "qualifyingTemporaryTransportFailureShown": false,
+      "historicalViolationReversible": false
+    }
+  ],
+  "sourceSnapshots": [
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-001.json",
+      "sha256": "8fe02b1212ba63880fa65bb17a48dc3982a21322a50cc767f225c6d0af6ad654",
+      "records": 10,
+      "orders": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        8,
+        11,
+        15,
+        18,
+        9
+      ],
+      "knownOrReservedCallsFromSnapshot": 16
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-002.json",
+      "sha256": "f74db6a1b109d445c9f5920dc98fe6aa41f4f94157a32fcd55ee0c315f37cfdc",
+      "records": 4,
+      "orders": [
+        10,
+        19,
+        21,
+        24
+      ],
+      "knownOrReservedCallsFromSnapshot": 5
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-003.json",
+      "sha256": "9788b070fc23fe505ae3f48af7e36aa02753f7a0e7f455e1a489cb58aaf282f4",
+      "records": 9,
+      "orders": [
+        100,
+        146,
+        295,
+        200,
+        227,
+        233,
+        292,
+        234,
+        348
+      ],
+      "knownOrReservedCallsFromSnapshot": 9
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+      "sha256": "f0eb4eb76596aded341f90b48e79872a7a3de2d52a45cfa098ffa3e9c6f378b2",
+      "records": 12,
+      "orders": [
+        26,
+        30,
+        32,
+        34,
+        35,
+        43,
+        47,
+        54,
+        69,
+        76,
+        79,
+        82
+      ],
+      "knownOrReservedCallsFromSnapshot": 12
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-005.json",
+      "sha256": "21d7f6297aeb3f1cabb89fc097c892e7222d9cb7bc79a7afaf0f127fbb1899ea",
+      "records": 12,
+      "orders": [
+        83,
+        88,
+        91,
+        94,
+        103,
+        105,
+        107,
+        122,
+        123,
+        124,
+        128,
+        129
+      ],
+      "knownOrReservedCallsFromSnapshot": 12
+    }
+  ],
+  "incorrectReplayFlags": [
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+      "order": 26,
+      "recordedReplayed": false
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+      "order": 30,
+      "recordedReplayed": false
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+      "order": 34,
+      "recordedReplayed": false
+    }
+  ],
+  "knownCompletedTargetOrdersMissingFromSourceSnapshots": [
+    17,
+    28,
+    29,
+    31,
+    127,
+    136
+  ],
+  "quarantineAllCompletedAndFrontierTargetOrders": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    15,
+    17,
+    18,
+    19,
+    21,
+    24,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    34,
+    35,
+    43,
+    47,
+    54,
+    69,
+    76,
+    79,
+    82,
+    83,
+    88,
+    91,
+    94,
+    100,
+    103,
+    105,
+    107,
+    122,
+    123,
+    124,
+    127,
+    128,
+    129,
+    136,
+    139,
+    143,
+    146,
+    200,
+    227,
+    233,
+    234,
+    292,
+    295,
+    348
+  ],
+  "theoreticalUnusedExpandedTargets": {
+    "count": 72,
+    "orders": [
+      133,
+      148,
+      150,
+      159,
+      160,
+      163,
+      169,
+      173,
+      175,
+      181,
+      190,
+      191,
+      211,
+      212,
+      213,
+      218,
+      219,
+      221,
+      231,
+      237,
+      239,
+      246,
+      248,
+      249,
+      253,
+      258,
+      260,
+      263,
+      268,
+      269,
+      271,
+      274,
+      276,
+      277,
+      280,
+      285,
+      287,
+      288,
+      289,
+      298,
+      300,
+      301,
+      304,
+      307,
+      310,
+      315,
+      320,
+      325,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      338,
+      341,
+      342,
+      345,
+      355,
+      357,
+      360,
+      362,
+      367,
+      370,
+      376,
+      377,
+      379,
+      381,
+      384,
+      395,
+      396
+    ],
+    "targetIds": [
+      "sd2-read-568718cb7c7d92e67570",
+      "sd2-read-619288dac5c590bb65ab",
+      "sd2-read-65401e2f2646f157ef7c",
+      "sd2-read-6b16b6d42fafa30c9c8c",
+      "sd2-read-6b75a4cba21b7cdc1415",
+      "sd2-read-6da27c4cf5f8fc9a787f",
+      "sd2-read-72e5a94d3f6726f2aff8",
+      "sd2-read-7443be7e1cb6f0709cf5",
+      "sd2-read-7487f51cda30baff2e72",
+      "sd2-read-75a5721a06a1a6809d79",
+      "sd2-read-7893ff316e9411a11498",
+      "sd2-read-78becdaa7c0c0219eb92",
+      "sd2-read-84947a4ff7fe0af10fef",
+      "sd2-read-8521e931d21514b7f2c0",
+      "sd2-read-8532c09c7dbb80b07cc0",
+      "sd2-read-86e35c8221aa6844f100",
+      "sd2-read-882e0f210585d1c470d7",
+      "sd2-read-89ad97acfc7807dc01a4",
+      "sd2-read-90446410f9a1e0e0f47f",
+      "sd2-read-96c325121305806c4d7a",
+      "sd2-read-975033fcdde519eb5527",
+      "sd2-read-993fbf5c3a7842a58422",
+      "sd2-read-9bfe53266b2942dd1206",
+      "sd2-read-9cfe1eb2088dede8c679",
+      "sd2-read-9f626b5197570e3fe850",
+      "sd2-read-a43e1ba7f75c5dddbd94",
+      "sd2-read-a550af9b6701d99e5daa",
+      "sd2-read-a614c0536d4f49218e5d",
+      "sd2-read-a8ffdab6e26103b704e8",
+      "sd2-read-a976e172e924df467048",
+      "sd2-read-aa1560fa93a2f5bfd138",
+      "sd2-read-adbaa2bb90dd9b6aba12",
+      "sd2-read-aef1618ecc7f6a9d342a",
+      "sd2-read-aef407900a520df8d3e9",
+      "sd2-read-b0039b99be3125186626",
+      "sd2-read-b33f453683ceebe969a4",
+      "sd2-read-b38dd0c166fd70570454",
+      "sd2-read-b4514a42c7fc84dc893a",
+      "sd2-read-b46a192cd0246c7ec847",
+      "sd2-read-bc05b1bd4e49185a1246",
+      "sd2-read-bd4af27c06c51f46eb08",
+      "sd2-read-be0d9e96c443a6810e21",
+      "sd2-read-bf5a9a314ad7eab29767",
+      "sd2-read-c2ace845df2c8edddca1",
+      "sd2-read-c51513c3f2055943e56a",
+      "sd2-read-c9f3d56a201660d5392d",
+      "sd2-read-cc206343547c031219fb",
+      "sd2-read-ce3fae47f417e73c0d35",
+      "sd2-read-cf8062fc3e880370dc78",
+      "sd2-read-cf88b9cfe78824a01203",
+      "sd2-read-cf9eff4a6afbc3a5fb09",
+      "sd2-read-d03331631e3e2531a3a9",
+      "sd2-read-d097265c66c727fea259",
+      "sd2-read-d225a041cc2c7ad6733f",
+      "sd2-read-d27c915ced2e04170e4d",
+      "sd2-read-d59f3e04d0a405f3fa94",
+      "sd2-read-d6f19e6856b1992c2b7c",
+      "sd2-read-d7c861fa3fae19a80ae9",
+      "sd2-read-dad6100ae4d261bc67e5",
+      "sd2-read-e3fff0a51f811ddbe0f2",
+      "sd2-read-e45ae216b204dfcc1f0e",
+      "sd2-read-e8323d13c3f28d922978",
+      "sd2-read-e8824ea8636a203f0bd1",
+      "sd2-read-ebff8d33a46edfabac46",
+      "sd2-read-eed6bdd5695aebf3a73d",
+      "sd2-read-f6a8f1b6a44987e8c5f6",
+      "sd2-read-f71e0e21a121e9282890",
+      "sd2-read-f731299c3d2ec6db9ed3",
+      "sd2-read-f8f2f5b04ba87c83bbb4",
+      "sd2-read-fa94c2b83f88056182d0",
+      "sd2-read-ff324c5b94be75728db2",
+      "sd2-read-ff44c06b73e53787a89a"
+    ],
+    "executionAuthorizedNow": false,
+    "basis": "Outside every observed completed call and reconstructed reached controller frontier, assuming available completed-event trace and await barriers are complete. This proves controller non-reachability, not absence of all conceivable external effects.",
+    "currentDisposition": "ALL_REMAIN_HELD_PENDING_INDEPENDENTLY_VERIFIED_DURABLE_INTENT_CONTROL; no more source calls this run."
+  },
+  "preservationAndLimits": {
+    "allOriginalHoldsFactsMappingsAndReviewBindingsUnchanged": true,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "priorSafetyAndSavedProvenanceReviewsRemainExact": true,
+    "thisAuditSupersedesNoPriorImmutableReview": "It updates operational no-replay eligibility from newly inspected dispatch evidence, not historical source-proof or review bindings.",
+    "bodyPrivacyOrCurrentScholarshipTruthEstablished": false,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "remoteGitDeploymentAuthorized": false,
+    "finalWholeRunAcceptance": false
+  },
+  "nextAction": {
+    "owner": "Codex control/reconciliation author, then fresh independent control/final reviewers",
+    "trigger": "Forensic FAIL/BLOCKED handoff; no renewed routine human checkpoint approval is needed for already selected unaffected scope",
+    "authoritativePaths": [
+      "docs/evidence/sd2-resolution-proof-1/source-call-audit.json",
+      "docs/evidence/sd2-resolution-proof-1/README.md",
+      "/private/tmp/sd2-call-ledger-review.json"
+    ],
+    "action": "Close this run with no further acquisition. Preserve64 observed call records,4 frontier reservations,3 confirmed replays,32 uncertainty and all incorrect historical snapshots/reviews. Reconcile397 targets and all budgets using durable append-only evidence; quarantine every completed/frontier target. Implement and independently validate pre-call O_EXCL intent plus immutable per-call result/reconciliation controls before any future unused-target continuation. Keep remaining72 eligible pages held until that control gate passes. No acceptance, SD3, release, source replay or timestamp invention."
+  }
+}

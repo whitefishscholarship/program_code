@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewerTask": "/root/sd2_continuation014_review",
+  "completedAt": "2026-10-19T23:43:17.769886+00:00",
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedCandidate": false,
+    "repositoryReadOnly": true,
+    "onlyWrittenPath": "/private/tmp/sd2-review-014.json",
+    "scope": "Independent saved-evidence consistency review; no fact, mapping, stage acceptance or release."
+  },
+  "binding": {
+    "entryCommit": "697acb780708f42315801425e93ced06a1c41715",
+    "candidateCommit": "bf1b596d8b18d603a71ce620425b75005a9ec321",
+    "candidateTree": "accf9771c3bfa9a38881162dc56aa0eba28a9e98",
+    "manifestSha256": "731f8f9cb67b75caff84eececf5ee564442f7a8a60563e7ec4d2f07f315e92c0",
+    "completeDiffSha256": "f9fbee3974ba27bb002e5773ec56eef1f654fc61e2f17e2323dc50bcb1de719d",
+    "completeDiffBytes": 2545388,
+    "changedPaths": 15
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "coverage": {
+    "selectedInputs": 20,
+    "fieldOccurrences": 301,
+    "evidenceBindings": 131,
+    "categoryCounts": {
+      "applicability/identity unresolved": 99,
+      "existing evidence consistent": 14,
+      "evidence unavailable": 184,
+      "existing evidence conflicting": 4
+    },
+    "everyFieldReviewed": true,
+    "positiveComparisonsReviewed": 14,
+    "independentSourceAffinityAudit": "Every original key, ordered field, envelope/hash, allowedSourceIds membership, own registry artifact/URL/hash, exact Unicode offset and derived binding matched. All184 unavailable outcomes retain null/no-evidence,99 unresolved retain applicability/identity holds,4 conflict outcomes retain original conflict state.",
+    "semanticReview": "Heroes separate high-school/college cumulative unweighted GPA and freshman semester; NFPA senior-regardless-age versus17–21 conflict; Runnicles2026 prize body versus2027 schedule; Duck separate tiers/counts/caps/ARV and cycle conflict; NTHS dual membership/recipient slots; HPFY two child scopes and GPA non-selection wording without no-requirement inference; AFSA observed2ndChance versus HS contest; Freeland recreational/private parent versus private-only PDF conflict; AEA inclusive OR stage/enrollment/program criteria, redacted child identity holds, Baker/Cook queued-document-only GPA without current mapping acceptance. All14 positives checked against their own saved source clauses/sections.",
+    "continuationComparedInputs": 280,
+    "continuationComparedFields": 5298,
+    "cumulativeComparedFieldOccurrences": 5704,
+    "remainingInputs": 106,
+    "remainingFields": 1764
+  },
+  "preservation": {
+    "protectedEntryFiles": 2745,
+    "allPriorBytesModesPreserved": true,
+    "exactThreeAppendHistoriesPreserved": true,
+    "priorFullManifestsAndDirectChildReceipts": 13,
+    "priorReceiptsFirstCanonicalBindingsPreserved": true,
+    "group011RejectedCandidateManifestReviewAndCountMatchedM1DispositionPreserved": true,
+    "sharedEngineAndPriorVerifiersUnchanged": true,
+    "originalAutonomousInputs": 406,
+    "originalHeldFields": 7406,
+    "originalHeldIdentities": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "allOriginalRoutesHeld": true
+  },
+  "checks": {
+    "requiredReadOrderAndCurrentAuthority": "Read repository contract/canonical plan/build-state/current handoff/latest accepted evidence, student-plan section9, original authority/policy/close, batch007 continuation and frozen scope, selected authority and current packet. Current saved continuation supersedes historical unselected proposal status only prospectively.",
+    "unchangedEngine": "python3 docs/evidence/sd2-autonomous/saved-continuation/engine.py verify 14: exit0 PASS, reviewBound=false,2026-10-19T23:39:33–23:39:34Z.",
+    "fullCandidate": "Independently recomputed tree, complete binary diff SHA/2545388bytes, exact15-path set, every path mode/blob/SHA/size/worktree equality and complete candidate diff whitespace check.",
+    "history": "All13 earlier manifests, complete diffs and first matching exact direct-child two-file receipts independently checked; every rejected group011 manifest blob/mode/hash and review/remediation binding retained. Fresh group013 review-bound PASS was recorded at valid entry receipt before014 paths.",
+    "application": "Group014 reference digest matches actual group010 four embedded command outputs, hashes/bytes, exit127 BLOCKED_ENVIRONMENT missingtsx/tsc/next. No installation, repair, repeated app command, PASS or waiver.",
+    "nextPointer": "Exact next scope membership and group015 denominator20inputs/305fields verified.",
+    "reviewerPredicateCorrections": "Local predicate initially required literal OR instead of source inclusive and/or and assumed separate log paths rather than embedded outputs. Corrected read-only predicates passed; no candidate issue or mutation."
+  },
+  "limits": {
+    "currentTruthOrFullNativeProof": false,
+    "canonicalAcceptance": false,
+    "newSourceWorkbookMetadataRawNativeReads": 0,
+    "externalEffects": false,
+    "SD3Started": false,
+    "fullSD2Complete": false,
+    "openGates": "Original source/custody/history/workbook preservation/recovery/permission/human/canonical/publication/student/M1/SD5/effect routes retain original owners,triggers,paths,actions. Codex validation/governance/delivery owns separately permitted exact dependency restoration, unchanged application checks, exact supported build and fresh authenticated main/target before acceptance/release. Final independent386-input/7062-field union/digest/held-state audit remains mandatory after20groups."
+  },
+  "nextPointer": {
+    "owner": "Codex author",
+    "trigger": "Matching independent PASS and exact direct-child local two-file receipt, then fresh current review-bound verification before new paths",
+    "group": 15,
+    "scopeOrder": 281,
+    "savedInputKey": "saved-405588227-row-306",
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-016.json",
+    "recordPointer": "/records/0",
+    "nextAction": "Continue already-selected scope automatically; preserve all holds/history and stop beforeSD3."
+  },
+  "incidents": [
+    {
+      "scope": "Reviewer output minimization",
+      "status": "disclosed",
+      "detail": "Bounded source prefixes and HPFY heading labels appeared in tool output before tighter clause/predicate selection. No full envelope/guard/source excerpt, raw/native artifact, applicant response or contact value was printed; subsequent semantic checks used counts,predicates and necessary brief clauses. Repository unchanged."
+    }
+  ]
+}

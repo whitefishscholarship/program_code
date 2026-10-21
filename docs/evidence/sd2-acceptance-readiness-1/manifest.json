@@ -1,0 +1,171 @@
+{
+  "scope": "Selected local SD2 held-outcome acceptance-readiness assessment only; no canonical acceptance or implementation",
+  "entryCommit": "bfe7975edc752caae48e376e406b5ad26d8e886b",
+  "candidateCommit": "a24325e03db139a5eea99e7894e2f34c2fbf0128",
+  "candidateTree": "700741a4f73129faf0410d04d3224ed9623d554f",
+  "completeDiffSha256": "e4db67398df521c22928dd8ff002b3be62395c9eacde6894e73c97c00d0571b7",
+  "completeDiffBytes": 124776,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "b887db72e0bd29f841f7ae0b7fd217d0a9ce5ca6b6ae4244123648370b7f6a9d",
+      "bytes": 779772
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "eda79fc26e0450e5bb4623d8151c526b0a840bd0fcaa98b8a40983fdbe9fbd6b",
+      "bytes": 225432
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/AUTHORITY.md",
+      "mode": "100644",
+      "sha256": "8f013cffbfe2afec6fe1ce5d4a8ff9512f585d29d31a0b53b75e9d2d9829cb75",
+      "bytes": 1222
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/NEXT_ACTION_PROPOSAL.md",
+      "mode": "100644",
+      "sha256": "86f506985f160cf5d5b73089cedc002f211f92914ed578df903a4017d07f6a95",
+      "bytes": 2799
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "8434788257d2d9c011dfb8ecdc2f083c75ece0a1874a5fccbd148d0497229f9f",
+      "bytes": 1642
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/README.md",
+      "mode": "100644",
+      "sha256": "ec5188b2d958f1c09cfa281cd439bfa14bd9d599e5fe9cc408606cdb0910af4d",
+      "bytes": 2604
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "8dfd867130f1543d449db7f3e18f739bb71a647bb29b252855407a75a434ad25",
+      "bytes": 2640
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/author-checks.json",
+      "mode": "100644",
+      "sha256": "05a2ba8daf2ea5142fa4d008a6a6fd20d305f0d6aa2a28aef5aa9235863a33f3",
+      "bytes": 858
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "c77342146473d8b07ef889199e617e303572ffefa62dcb65e93306395b5fb3ea",
+      "bytes": 1408
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/entry-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/entry-audit.json",
+      "mode": "100644",
+      "sha256": "f9610dcc55b0f0ab983f57fd3829e43e2967e06e69ffb3343ea673b396405057",
+      "bytes": 1041
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/grounding.json",
+      "mode": "100644",
+      "sha256": "475a76057bb24e439589f770f6f041d267ce27cb2d5c8af145ff7f5c02429b38",
+      "bytes": 1857
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/input-inventory.json",
+      "mode": "100644",
+      "sha256": "135066fa6ca478a1c586b85029b1e939e26303d7da50bca89c928ba2bbeddc96",
+      "bytes": 5938
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/open-items.json",
+      "mode": "100644",
+      "sha256": "d0994197d8e0f9122a6919cb1ab4870acba12fb3fc5b1921a083741faf6b953f",
+      "bytes": 33337
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/readiness-matrix.json",
+      "mode": "100644",
+      "sha256": "32f118874d16a3d1017c76b45f34cdae9111780e6826e9ff50f93f45f61d58a8",
+      "bytes": 22049
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/readiness.json",
+      "mode": "100644",
+      "sha256": "fae05f15e8deebe031fcbbd833829cace600d274135c9f2a0261d93398644d27",
+      "bytes": 3782
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/run-validation.py",
+      "mode": "100644",
+      "sha256": "85f87519110a43fb47a4de1aedb8c8f19c84b72defc81f5561423ca81c763699",
+      "bytes": 1964
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/validation.json",
+      "mode": "100644",
+      "sha256": "6fc166791f5908a3fff21740cf24a0ea96bcd671b13c96c6d87937e8bf1fdabd",
+      "bytes": 4037
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/verification.json",
+      "mode": "100644",
+      "sha256": "50e144fdd5f039d490a59a7bc12e724f92ad7735f1a9bc6c5c3e2811f1bf3587",
+      "bytes": 913
+    },
+    {
+      "path": "docs/evidence/sd2-acceptance-readiness-1/verify.py",
+      "mode": "100644",
+      "sha256": "67b92fb9616dff7927a03897c4957da675982c34c9fd759baddbf1a3fcc569dc",
+      "bytes": 13335
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "9b7a8da522736edb125a6ffb09e05a69a0564d57324565b4f69ee70ecdd4c98f",
+      "bytes": 181634
+    }
+  ],
+  "canonicalAcceptanceReady": false,
+  "blockingAcceptanceGates": [
+    "G6",
+    "G8"
+  ],
+  "originalSourceExecution": "FAIL",
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

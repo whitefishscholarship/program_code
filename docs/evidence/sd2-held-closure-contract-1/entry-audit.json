@@ -1,0 +1,38 @@
+{
+  "entryCommit": "901040e62d871f592f5600d366b3a19b39d08d07",
+  "cleanStatus": "",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-acceptance-readiness-1/verify.py",
+    "--review-bound"
+  ],
+  "startedAt": "2026-10-21T02:06:53.729980+00:00",
+  "completedAt": "2026-10-21T02:06:56.262485+00:00",
+  "exitCode": 0,
+  "result": {
+    "localObjectiveIntegrity": "PASS",
+    "reviewBound": true,
+    "canonicalAcceptanceReady": false,
+    "blockingAcceptanceGates": [
+      "G6",
+      "G8"
+    ],
+    "protectedPreEntryFiles": 3026,
+    "appendHistories": 3,
+    "inheritedItems": 13,
+    "originalGates": 14,
+    "inheritedAdditionalDispositions": 4,
+    "inheritedSupplementDispositions": 2,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false
+  },
+  "newPacketCreatedAfterVerification": true
+}

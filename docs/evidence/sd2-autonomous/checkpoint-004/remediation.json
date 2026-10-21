@@ -1,0 +1,37 @@
+{
+  "originalCandidate": "8cd41aa9491cccd959839a3f93390619a4779d5d",
+  "originalManifestSha256": "83754af231fe4a9af2da0e2244746c755c8639d5d70f0df84b807a611620ea36",
+  "originalReview": "docs/evidence/sd2-autonomous/checkpoint-004/review-round1.json",
+  "requiredFixCount": 3,
+  "dispositions": [
+    {
+      "findingId": "SD2-004-H1",
+      "originalSeverity": "high",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Moved Duke six claim groups/followup to exact savedrow76; separately sourced FECrow75 fields and route. All20inputkey/source-affinities enforced; immutable8cd41aa misbinding now rejected. Queue/earlierholds/history untouched.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint004 candidate and independent final recheck"
+    },
+    {
+      "findingId": "SD2-004-M1",
+      "originalSeverity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Dukeageatapplication and approvedtrainingmodes now carry exact duke-faq excerpts/hashes on row76; all scopes/acceptance held.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint004 candidate and independent final recheck"
+    },
+    {
+      "findingId": "SD2-004-M2",
+      "originalSeverity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Cooke fulltime/noonline, annualdiscretionaryrenewal/revocation, continuingcumulative3.0GPA, fouryearfunding and casebycaseexceptions are sourcebound held observations. Initial3.75GPA remains separate. Summary and exact followup updated.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint004 candidate and independent final recheck"
+    }
+  ],
+  "newSourceReads": 0,
+  "factsAccepted": 0,
+  "oldHoldsClosed": 0,
+  "SD3Started": false,
+  "independentRecheckPending": true
+}

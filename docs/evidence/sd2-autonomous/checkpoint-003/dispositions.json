@@ -1,0 +1,42 @@
+{
+  "originalCandidate": "287e1a71145d5ec299566301f26b34bd51319dfd",
+  "countMatched": 4,
+  "dispositions": [
+    {
+      "findingId": "SD2-003-M1",
+      "originalSeverity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Finalize receipt objects and ledger together; assert exact equality plus every artifact hash and three unknown-status transport limits.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint003 frozen candidate and independent recheck",
+      "affectedPath": "docs/evidence/sd2-autonomous/checkpoint-003/source-receipts.json"
+    },
+    {
+      "findingId": "SD2-003-M2",
+      "originalSeverity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Remove inferred office/school from redaction; preserve only printed recipient role/date and keep unsupported route provenance held. Other sources independently print WHS Guidance Office.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint003 frozen candidate and independent recheck",
+      "affectedPath": "docs/evidence/sd2-autonomous/checkpoint-003/sources/fellows.md"
+    },
+    {
+      "findingId": "SD2-003-L1",
+      "originalSeverity": "low",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Remove public clinic postal address with an explicit omission marker; retain organization/method/date and refresh bound evidence.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint003 frozen candidate and independent recheck",
+      "affectedPath": "docs/evidence/sd2-autonomous/checkpoint-003/sources/medical-alias.md"
+    },
+    {
+      "findingId": "SD2-003-L2",
+      "originalSeverity": "low",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Correct normalization wording to include leading blank lines; preserve all raw/final hashes, actual output and command/exit/times.",
+      "owner": "Codex implementation author",
+      "target": "Replacement checkpoint003 frozen candidate and independent recheck",
+      "affectedPath": "docs/evidence/sd2-autonomous/checkpoint-003/validation.json"
+    }
+  ]
+}

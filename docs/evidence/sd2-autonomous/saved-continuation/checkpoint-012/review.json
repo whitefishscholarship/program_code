@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewerTask": "/root/sd2_continuation012_review",
+  "reviewedAt": "2026-10-19T23:27:05.759510+00:00",
+  "independence": {
+    "freshContext": true,
+    "readOnly": true,
+    "noCandidateAuthorshipOrEdits": true,
+    "onlyWrite": "/private/tmp/sd2-review-012.json"
+  },
+  "scope": "Independent local saved-evidence comparison review of SD2-SAVED-CONTINUATION-1 internal group012; no canonical acceptance.",
+  "binding": {
+    "group": 12,
+    "entryCommit": "35845b93e6ed58f439c150dd195d1e0a60e8ce4b",
+    "candidateCommit": "2113eafc5c158a71023586b2fd05d8e511656836",
+    "candidateTree": "8e1357ad270794340590c99b32b07a6c473ea9b0",
+    "manifestSha256": "30df0a448221199f72f7546a2255b48439a262cdf68d45118e67d563fa8037ad",
+    "completeDiffSha256": "b59d93d51d7e3420350617830f58b929d242dcdb90b959be5bda338d5c65cdc1",
+    "completeDiffBytes": 2635387,
+    "changedPaths": 16
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "coverage": {
+    "orderedInputs": 20,
+    "scopeOrders": [
+      221,
+      240
+    ],
+    "fieldOccurrences": 320,
+    "exactOriginalEnvelopes": 320,
+    "exactExplicitOrInheritedRouteBindings": 320,
+    "fieldSpecificMinimumProofRoutes": 320,
+    "exactEvidenceSourceBindings": 194,
+    "derivedSourceViewEquality": true,
+    "categoryCounts": {
+      "existing evidence consistent": 6,
+      "applicability/identity unresolved": 149,
+      "evidence unavailable": 159,
+      "existing evidence conflicting": 6
+    },
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "allFieldsAndIdentitiesHeld": true,
+    "currentGroupPriorOverlap": 0,
+    "continuationComparedInputs": 240,
+    "continuationComparedFields": 4697,
+    "cumulativeComparedFieldOccurrences": 5103,
+    "comparedAutonomousInputs": 260,
+    "priorJayceeInputs": 2,
+    "fullSD2Complete": false,
+    "final386Input7062FieldIndependentUnionAuditPending": true
+  },
+  "semanticReview": {
+    "sixConsistencyPositives": "Checked typed value, limited saved scope and exact source binding for AVTRIP eligibility, STEAM/Hue amounts, MUS entry GPA, and BigSun amount/eligibility. All remain held.",
+    "guardedHolds": "Checked Epic pilot/mechanic/child/campus distinctions; Avfuel child separation; NHS year/budget/slot limitations; STEAM alternatives/attachment ambiguity; MSU tuition/stipend/GPA/deferral distinctions; Hue qualitative wording; Kings one-time restriction; MUS ranking/scale/illustrative duration; Referee source/cycle conflict; every redacted named binding; conjunction/preference, essay-topic and family-wording distinctions. Neutral shared guards introduce no unrelated parent terms.",
+    "originalConflictsRetained": 6,
+    "sourceSilenceOrCurrentTruthInferred": false
+  },
+  "preservation": {
+    "protectedEntryFilesBytesModes": 2716,
+    "all16CandidateBlobModesBytesHashesVerified": true,
+    "completeBinaryDiffAndTreeVerified": true,
+    "threeExactAppendHistories": true,
+    "priorFinalReceiptBindingsVerified": 11,
+    "group011RejectedM1ManifestReviewAndReplacementPreserved": true,
+    "group011M1DispositionCount": 1,
+    "predecessorReviewBoundReceipt": "Saved fresh PASS at entry commit; direct-child two-file receipt and audit digest/timestamps verified before the single new group012 candidate. Historical contexts were not widened.",
+    "originalHolds": {
+      "fields": 7406,
+      "identities": 406,
+      "researchCursor": 406,
+      "nextResearchInput": null
+    },
+    "originalRoutePacketsProtected": "676 seeds,1127 links,365 receipts,35 inherited routes,628 destinations including one unclosed,all attention supplements,437 M1 routes/12 pins,71 custody receipts and original owners/triggers/actions/gates remain byte-identical. No new custody availability claim."
+  },
+  "verification": {
+    "sharedEngine": "python3 docs/evidence/sd2-autonomous/saved-continuation/engine.py verify 12",
+    "sharedEngineExitCode": 0,
+    "sharedEngineReviewBound": false,
+    "independentChecks": "Independent Git-object/tree/diff/blob/mode audit, complete 320-envelope/order/route/hash/offset/registry/view/proof audit, semantic predicates and git diff --check passed.",
+    "applicationChecks": "Group010 actual four command receipts and raw-output byte/hash bindings independently checked; all exit127 BLOCKED_ENVIRONMENT missing tsx/tsc/next. Exact group012 reference hash verified. No repeat/install/repair/waiver/PASS."
+  },
+  "limits": [
+    "Only saved sanitized scope consistency reviewed; no new source/workbook/raw/native acquisition or inspection.",
+    "No current offering,public origin,native/visual/full-source completeness or accepted identity/fact claim.",
+    "Application checks and historical standard-build/fresh authenticated main-target gates remain unfulfilled with original owners/triggers.",
+    "No external effects,canonical stage acceptance or SD3. Matching manifest/review must be committed only as the direct-child two-file local receipt before review-bound continuation."
+  ],
+  "nextPointer": {
+    "group": 13,
+    "scopeOrder": 241,
+    "savedInputKey": "saved-405588227-row-265",
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-014.json",
+    "recordPointer": "/records/0",
+    "nextGroupInputs": 20,
+    "nextGroupFields": 300,
+    "remainingInputs": 146,
+    "remainingFields": 2365,
+    "action": "After exact matching receipt and fresh group012 review-bound PASS at its valid tip, continue automatically through authorized groups and final independent union audit; no routine small-run interaction."
+  },
+  "incidents": [
+    {
+      "owner": "Independent reviewer",
+      "kind": "Output narrowing",
+      "description": "An early inspection emitted all20 author semantic guards, including held-profile summaries, exceeding the strict narrow-output instruction. No full source/excerpt or raw/native material was emitted. Stopped this pattern; remaining outputs used predicates/hashes and one essential105-character selected policy clause. Parent notified. This is reviewer conduct,not an authored candidate defect.",
+      "disposition": "Disclosed; retain in the local receipt. No candidate repair performed."
+    },
+    {
+      "owner": "Independent reviewer",
+      "kind": "Bounded handoff read",
+      "description": "One CURRENT_HANDOFF inspection extended to95lines and included prior progress headers rather than only the current header. No full handoff/history file was emitted.",
+      "disposition": "Disclosed; later reads bounded to current section9 block and original attention routes."
+    }
+  ],
+  "pendingAuthorFixes": [],
+  "canonicalStageAccepted": false
+}

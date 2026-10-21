@@ -1,0 +1,34 @@
+{
+  "command": "npm run plan:check",
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "initial": {
+    "exitCode": 1,
+    "kind": "sandbox IPC EPERM",
+    "exactStartUnavailable": true,
+    "output": "npm run plan:check exited1. Error: listen EPERM: operation not permitted /var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/1011.pipe. code EPERM, errno -1, syscall listen, port -1. Node.js v22.20.0."
+  },
+  "retry": {
+    "startedAt": "2026-10-13T16:33:41.266Z",
+    "endedAt": "2026-10-13T16:40:43.223Z",
+    "result": {
+      "chunk_id": "d354d9",
+      "wall_time_seconds": 1.001201833,
+      "session_id": 55752,
+      "original_token_count": 16,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n"
+    }
+  },
+  "completion": {
+    "chunk_id": "87ed7c",
+    "wall_time_seconds": 5.25e-06,
+    "exit_code": 0,
+    "original_token_count": 26,
+    "output": "Build-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+  },
+  "completionObservedAt": "2026-10-13T16:42:29.028Z",
+  "limits": [
+    "No repeated successful SD1 probes/typecheck/tests; app and dependencies unchanged",
+    "Historical standard build process/port EPERM and fresh delivery main HTTP404 unresolved",
+    "This is local evidence validation, not canonical implementation acceptance"
+  ]
+}

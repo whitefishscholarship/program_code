@@ -1,0 +1,88 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one local SD2 held-research checkpoint only",
+  "reviewedAt": "2026-10-15T04:03:32.024011+00:00",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint010_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": false
+  },
+  "binding": {
+    "entryCommit": "5ab4a592be5b28b62e98af39533bc26870169424",
+    "candidateCommit": "e4c6a5bb441918adf7b9e8c69150bba3754c4d3a",
+    "candidateTree": "25691fbbb085ba24cd3c11b809dc5453f9ca2056",
+    "manifestSha256": "2812667099f85bc9d91039296d2b025ff3b1f251fad983e98e335b0072add1d0",
+    "completeDiffSha256": "3e5eec3df4d9a56cc48a6451bbd63bb1f799a1227906f738ef37046c49b1201d",
+    "changedPaths": 30
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "requiredFixCount": 1,
+  "resolvedDispositionCount": 1,
+  "unresolvedRequiredFixes": 0,
+  "dispositions": [
+    {
+      "findingId": "SD2-010-M1",
+      "originalSeverity": "medium",
+      "status": "resolved-independently-rechecked",
+      "evidence": "Source-derived biographical date literals were removed from the verifier. Generic structural checks now scan all new packet text files, including the verifier. Independent comparisons confirmed the excluded values are absent from all31 current packet files without printing them. Synthetic structural checks passed. README and remediation.json explicitly disclose immutable historical retention and assign its later handling to Codex evidence/governance/delivery at authorized history-preservation, canonical-acceptance or publication review.",
+      "owner": "Codex implementation author",
+      "target": "e4c6a5bb441918adf7b9e8c69150bba3754c4d3a"
+    }
+  ],
+  "priorReviewPreservation": {
+    "candidateCommit": "120bb754eec5be7e6e906f4ae8244f5d1e9d9847",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-010/manifest-round1.json",
+    "manifestSha256": "97c044a251a0c342f09692e310e012a8cd63d73599a57dcf75d2d3a273e480b6",
+    "reviewPath": "docs/evidence/sd2-autonomous/checkpoint-010/review-round1.json",
+    "reviewSha256": "baed7c89f61c65deedca8a8b8f026b397102924de091f1a9d67cc0d07ea5e435",
+    "outcome": "FAIL",
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 1,
+      "low": 0
+    },
+    "transcriptionMatchesOriginalResponse": true,
+    "manifestBytesAndCandidateBlobsVerified": true,
+    "originalVerificationBytesPreserved": true
+  },
+  "checksPerformed": [
+    "Preserved the complete original substantive review and independently reviewed the seven-path remediation change set.",
+    "Recomputed the replacement manifest digest, candidate tree, complete entry-to-candidate binary-diff digest and all30 candidate blob IDs, lengths, hashes and worktree equality.",
+    "Verified the original manifest, failed review and verification receipt remain bound to their original candidate and bytes.",
+    "Confirmed exactly one author disposition addresses SD2-010-M1.",
+    "Confirmed every scholarship record, field, source artifact, source registry, capture record, custody record, coverage value, route and matrix receipt remains unchanged from the substantively reviewed original candidate.",
+    "Confirmed the structural exclusion scans tooling and all current packet files; independently checked absence of the excluded literal values without emitting them.",
+    "Ran read-only verify.py successfully:20 ordered inputs,444 new held fields,252 evidence references,20 seed dispositions,21 source-link dispositions,200 cumulative initial dispositions,3939 held fields,200 held identities and206 pending inputs.",
+    "Reverified all nine historical manifest/review bindings, baseline preservation,71 custody pins without gaps,12 M1 pins and437 unique M1 records.",
+    "Original substantive review confirmed NGPA conditional requirements and cycle/material variants, AFSA historical dates and explicit no-GPA/no-income language, WAI common/child distinctions, AOPA essay conflict, Boeing 'should' GPA wording and both unmapped Wings profiles.",
+    "Confirmed six source receipts mean three new retrievals plus three unchanged prior NGPA receipts; thirteen WAI profiles share one converted artifact.",
+    "Complete entry-to-replacement git diff --check passed.",
+    "Confirmed replacement candidate is HEAD and only final-manifest.json is untracked.",
+    "No files were edited and no research, assembly, replay, workbook access, network operation, matrix rerun or external effect was performed."
+  ],
+  "limits": [
+    "PASS establishes fidelity and accountable held dispositions for this exact local research packet. It accepts no scholarship fact, identity, current offering, canonical stage, release or fullSD2 completion.",
+    "All3939 fields and200 identities remain held; accepted facts remain zero and SD3 remains unstarted.",
+    "The immutable original candidate retains the original guard exposure. Remediation does not erase historical Git objects; its explicit owner/trigger/action remains open for later authorized handling.",
+    "Selected converted text does not prove raw PDF, page/image/full-field completeness, native public/sponsor continuity, origin freshness, current availability or portal usability.",
+    "Source-output lapses and all earlier conversion, redacted-locator, raw-material and temporary-custody limitations remain disclosed and routed.",
+    "Recorded plan, typecheck and full-test passes remain unchanged. Both exact standard-build attempts remain process/port EPERM failures without waiver.",
+    "Fresh authenticated main/target and every later preservation, acceptance, publication, student, monitoring and reserved-effect gate retain their existing owners and triggers."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation and handoff owner",
+    "trigger": "Recording this exact final independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-010/",
+    "action": "Record this review and exact final manifest in the selected local research-review receipt. Preserve the original failed-round artifacts unchanged. Prepare the separate section9/session handoff for offset200/savedrow204, Boeing Maintenance Training Scholarship, without rebinding this source review. Carry every original/new hold and the historical-retention route with its owner, trigger and next action. No fact acceptance, additional checkpoint, SD3 or external effect follows from this PASS."
+  }
+}

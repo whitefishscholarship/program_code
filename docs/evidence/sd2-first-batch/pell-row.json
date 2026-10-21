@@ -1,0 +1,142 @@
+{
+  "startedAt": "2026-10-13T16:22:05.237Z",
+  "endedAt": "2026-10-13T16:22:05.885Z",
+  "args": {
+    "spreadsheet_id": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+    "ranges": [
+      "'School Resource - Cleaned Up'!A18:O18"
+    ],
+    "cell_fields": "formattedValue,userEnteredValue,hyperlink,textFormatRuns"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+      "properties": {
+        "title": "Spreadsheet Clean Up 4",
+        "locale": "en_US",
+        "timeZone": "America/Denver"
+      },
+      "sheets": [
+        {
+          "properties": {
+            "sheetId": 405588227,
+            "title": "School Resource - Cleaned Up",
+            "index": 3,
+            "sheetType": "GRID",
+            "gridProperties": {
+              "rowCount": 795,
+              "columnCount": 25,
+              "frozenRowCount": 1,
+              "hideGridlines": true
+            }
+          },
+          "data": [
+            {
+              "startRow": 17,
+              "rowData": [
+                {
+                  "values": [
+                    {},
+                    {
+                      "formattedValue": "U.S. resident",
+                      "userEnteredValue": {
+                        "stringValue": "U.S. resident"
+                      }
+                    },
+                    {
+                      "formattedValue": "Carroll College",
+                      "userEnteredValue": {
+                        "stringValue": "Carroll College"
+                      }
+                    },
+                    {
+                      "formattedValue": "National",
+                      "userEnteredValue": {
+                        "stringValue": "National"
+                      }
+                    },
+                    {
+                      "formattedValue": "Potentially up to 100% of tuition; package includes loans",
+                      "userEnteredValue": {
+                        "stringValue": "Potentially up to 100% of tuition; package includes loans"
+                      }
+                    },
+                    {
+                      "formattedValue": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise",
+                      "userEnteredValue": {
+                        "stringValue": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise"
+                      },
+                      "hyperlink": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise"
+                    },
+                    {
+                      "formattedValue": "Pell Promise for Montana Students",
+                      "userEnteredValue": {
+                        "stringValue": "Pell Promise for Montana Students"
+                      }
+                    },
+                    {
+                      "formattedValue": "Financial need; Full-time enrollment",
+                      "userEnteredValue": {
+                        "stringValue": "Financial need; Full-time enrollment"
+                      }
+                    },
+                    {
+                      "formattedValue": "3",
+                      "userEnteredValue": {
+                        "stringValue": "3"
+                      }
+                    },
+                    {
+                      "formattedValue": "4-Year",
+                      "userEnteredValue": {
+                        "stringValue": "4-Year"
+                      }
+                    },
+                    {
+                      "formattedValue": "Renewing",
+                      "userEnteredValue": {
+                        "stringValue": "Renewing"
+                      }
+                    },
+                    {
+                      "formattedValue": "Undergrad",
+                      "userEnteredValue": {
+                        "stringValue": "Undergrad"
+                      }
+                    },
+                    {
+                      "formattedValue": "Yes",
+                      "userEnteredValue": {
+                        "stringValue": "Yes"
+                      }
+                    },
+                    {
+                      "formattedValue": "Fall 2027 first-time freshmen and transfers qualifying for Pell through FAFSA, living on campus. Keep a 3.0 GPA and 12 credits per semester. Combines aid and loans; not all grant funding.",
+                      "userEnteredValue": {
+                        "stringValue": "Fall 2027 first-time freshmen and transfers qualifying for Pell through FAFSA, living on campus. Keep a 3.0 GPA and 12 credits per semester. Combines aid and loans; not all grant funding."
+                      }
+                    },
+                    {
+                      "formattedValue": "Carroll Pell Promise",
+                      "userEnteredValue": {
+                        "stringValue": "Carroll Pell Promise"
+                      },
+                      "hyperlink": "https://www.carroll.edu/admission-aid/financial-aid/types-aid/pell-promise"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}

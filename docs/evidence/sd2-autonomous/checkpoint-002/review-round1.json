@@ -1,0 +1,80 @@
+{
+  "reviewType": "independent fresh-context read-only SD2 research review",
+  "reviewer": "/root/sd2_checkpoint002_review",
+  "reviewedAt": "2026-10-14T18:23:48Z",
+  "outcome": "FAIL",
+  "scope": "Local checkpoint-002 source packet only; no canonical fact/stage acceptance",
+  "binding": {
+    "entryCommit": "ec895940b0c93fcb063a357572504bcbe8e79648",
+    "candidateCommit": "535fbc85061c768c86546e44a5f9239480cecdf8",
+    "candidateTree": "d6574d1ed8190de5dabafe094fc0950737210a2b",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-002/manifest.json",
+    "manifestSha256": "4893e206db898f29607a40b1e48e27dac9484db2244ae1854ffc3979bf60e8f2",
+    "manifestLocation": "Separate untracked prospective review input; not a candidate blob",
+    "completeDiffCommand": "git diff ec895940b0c93fcb063a357572504bcbe8e79648 535fbc85061c768c86546e44a5f9239480cecdf8",
+    "completeDiffSha256": "7c876dd08e98d2c1984f30369aba78c7c367f9a70aecc2c69415a233ba0a608f",
+    "changedPaths": 22,
+    "allCandidateBlobHashesAndWorktreeBytesVerified": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 1, "low": 1},
+  "findings": [
+    {
+      "id": "SD2-002-M1", "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-002.json", "line": 1179,
+      "title": "Gianforte program-list conflict is not represented",
+      "evidence": [
+        "Row25 schoolType says qualifyingCampusesAndPrograms='complete poster list retained', state='verified', and cites only the parent page's enrollment sentence.",
+        "sources/gianforte-fact.md lists FVCC Electrical Apprentice at line90; sources/gianforte-dash.md lists FVCC Building Trades at line75 instead. Other campuses also have materially different program lists.",
+        "The underscore poster's complete rendered page independently confirms Electrical Apprentice. The subsequently supplied dash rendering independently confirms Building Trades and additional differences."
+      ],
+      "impact": "Both official linked variants are captured, but the field ledger omits their material disagreement and has no explicit source-selection hold. A later reviewer could mistake the singular verified poster-list description for a reconciled eligibility list. All facts remain held, limiting immediate impact.",
+      "remediation": "Author must represent campus/program applicability as conflict or explicit unverified source-selection hold, bind both distinct poster artifacts, retain each observed list separately, identify representative differences, and record that no variant has been selected as current. Preserve owner/trigger/next action and acceptedFacts=0. Inspect the dash PDF to distinguish genuine differences from conversion errors, then freeze a new candidate and obtain independent recheck.",
+      "owner": "Codex author", "trigger": "Before checkpoint-002 independent PASS",
+      "target": "Replacement frozen local checkpoint-002 candidate"
+    },
+    {
+      "id": "SD2-002-L1", "severity": "low",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-002/validation.json", "line": 58,
+      "title": "Whitespace verification did not cover the committed candidate additions",
+      "evidence": [
+        "The recorded bare git diff --check passes against an empty tracked worktree.",
+        "git diff --check ec895940b0c93fcb063a357572504bcbe8e79648 535fbc85061c768c86546e44a5f9239480cecdf8 exits2 with105 trailing-whitespace/new-EOF-blank-line diagnostics across9 new source transcripts.",
+        "Affected sources are gianforte-dash.md, gianforte-fact.md, gianforte.md, louie.md, wai-2027.md, wai-how.md, wai.md, wells-alias.md and wells.md."
+      ],
+      "impact": "The recorded command outcome is accurate, but does not establish that the complete frozen change set passes the required whitespace gate.",
+      "remediation": "Normalize whitespace only in new checkpoint-002 transcripts and dependent exact excerpts. Update all affected artifact/evidence hashes and the prospective manifest. Record and pass the entry-to-replacement-candidate git diff --check without rewriting historical packets.",
+      "owner": "Codex author", "trigger": "Before checkpoint-002 independent PASS",
+      "target": "Replacement frozen local checkpoint-002 candidate and validation receipt"
+    }
+  ],
+  "checks": [
+    {"check": "Controlling authority and acceptance boundaries", "result": "PASS", "details": "Read repository AGENTS, canonical plan gates, BUILD_STATE, CURRENT_HANDOFF, accepted P9 evidence, SD plan section9, autonomous AUTHORITY/POLICY and current continuation. Canonical stage pointers remain null. Research authority does not confer acceptance, publication or SD3 authority."},
+    {"check": "Complete manifest and change-set binding", "result": "PASS", "details": "Recomputed manifest SHA256, candidate tree, every changed blob/byte count/SHA256, exact worktree equality, complete22-path change list and complete diff digest. Every changed path is a new checkpoint-002 packet path."},
+    {"check": "Ordered denominator, cursor and no replay", "result": "PASS", "details": "Frozen406-input queue verified against saved inventory. New20 keys equal offsets20:40 in order and are disjoint from checkpoint001. Cumulative40 initial dispositions,366 unprocessed, next offset40/input saved-405588227-row-42. Five earlier researched inputs stay outside the406 queue."},
+    {"check": "Field/evidence references", "result": "PASS with SD2-002-M1", "details": "All400 envelopes remain held. Verified138 evidence references against exact excerpts, artifact hashes, source URLs and revision fields. States reconcile to264 unverified,125 verified,1 unstated and10 conflict. Material typed claims were assessed against retained source scope; Gianforte program conflict requires remediation."},
+    {"check": "Native/PDF evidence", "result": "PASS", "details": "Independently verified all7 candidate raw-PDF hashes, sizes and page counts plus17 retained render hashes. Visually inspected Memorial2 pages, SOKN1, SOKN overview1, Sobba2, WAI2025 pages1/3/4/5/6/8/9/10, WAI2027 general cover/index1/2 and Gianforte underscore poster1. Claims inspected include amounts, historical/yearless dates, GPA distinctions, need rules, sensitive criteria, application/materials scope and recipient-slot distinctions."},
+    {"check": "Holds and source limitations", "result": "PASS with SD2-002-M1", "details": "Native public/sponsor authority remains unverified. Disabled Louie form is not converted into award closure. AMVETS/KPMG application-only routes were retained without fabricated transport failures. WAI2025 child terms remain historical;2027 parent closure/materials do not establish named-child current offering. WAI membership contradiction and literal EST/ET limits remain held. Sobba spelling/current-cycle and Memorial aggregate identity remain unresolved."},
+    {"check": "Disclosed Stockman source-policy deviation", "result": "Contained historical deviation", "details": "The guessed unpinned URL violated POLICY's selected-source boundary. It is disclosed with owner/trigger/next action, excluded from sourceRegistry and every factual proposal, and was not retried/searched. No Stockman offering/eligibility claim depends on its404 response. Containment is adequate for this held packet; the request cannot be retroactively authorized or erased."},
+    {"check": "Immutable history and routing preservation", "result": "PASS", "details": "New verifier reproduced1055 preserved entry paths, original section9/handoff equality, exact policy/research manifest-review bindings and12 retained M1 artifact pins. Original437 unique M1 records and their routes/owners/triggers remain exact. Prior344 field holds/20 identity holds remain at unchanged checkpoint001 paths."},
+    {"check": "Read-only verification scripts", "result": "PASS", "commands": ["python3 docs/evidence/sd2-autonomous/checkpoint-002/verify.py", "python3 docs/evidence/sd2-autonomous/verify.py", "python3 docs/evidence/sd2-autonomous/build-queue.py --check"], "details": "Scripts were inspected before execution. No writing wrapper or builder initialization was run."},
+    {"check": "Required application validation evidence", "result": "Observed receipt; build remains BLOCKED", "details": "Recorded plan-check permitted retry, typecheck and full tests pass. Standard npm run build failed ordinary and permitted runs with process/port EPERM. No waiver or fresh-main proof is claimed. Reviewer did not rerun potentially writing application checks."},
+    {"check": "Complete candidate whitespace check", "result": "FAIL", "details": "Entry-to-candidate git diff --check exits2; see SD2-002-L1."}
+  ],
+  "confirmatoryEvidenceOutsideCandidate": {
+    "dashPdfPath": "/private/tmp/sd2-002-work/gianforte-dash.pdf",
+    "dashPdfSha256": "5e62ca588d0f5746a8e23b7dcc0120ad1093b592689a61158f07d3d8265ebf63",
+    "dashRenderPath": "/private/tmp/sd2-002-work/gianforte-dash-1.png",
+    "dashRenderSha256": "ad3607afe9baf126305de2303ce24ec11399611a1a1b35ba23e791c400df0d73",
+    "limit": "Provided by author after original freeze, inspected locally read-only; confirms the original captured-text finding but is not an original candidate artifact."
+  },
+  "limits": [
+    "No reviewer edits, writes, network fetches, workbook/app changes or external effects.",
+    "Fresh authenticated origin/main and delivery target were not verified; retained main is only a local pin.",
+    "Sanitized HTML captures are assessed locally; their remote rendering, public accessibility and exhaustive site completeness were not independently re-fetched.",
+    "Temporary full PDFs/renderings are source-inspection aids, not safe durable full-source deliverables. Omitted recipient/photo/contact scopes do not establish source silence.",
+    "Capture-time receipt hashes are historical where a later transcription correction changed an artifact; checkpoint002 sourceRegistry is the operative registry.",
+    "Pending section9/current-handoff/NEXT_SESSION documentation wrap is not a defect of this frozen source packet.",
+    "Full SD2 remains incomplete; acceptedFacts=0, canonicalAcceptance=false and SD3Started=false."
+  ],
+  "nextAction": {"owner": "Codex author", "trigger": "This independent review", "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-002.json", "action": "Fix both findings, preserve this original candidate/review binding, freeze replacement candidate and manifest, and request independent read-only recheck with count-matched dispositions."}
+}

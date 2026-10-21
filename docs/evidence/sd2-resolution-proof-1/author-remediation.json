@@ -1,0 +1,27 @@
+{
+  "dispositions": [
+    {
+      "findingId": "H1",
+      "rationale": "Source quote bodies are no longer returned/persisted, including all six independently recreated excluded-clause probes. Error-body prose is removed; error codes are fixed allowlist tokens; URL userinfo/host text is not echoed; native metadata scalars are restricted. Existing uncommitted source quote bodies were purged, hashes/incidents retained. This does not certify arbitrary prose sanitization or authorize future prose retention.",
+      "owner": "Codex author",
+      "target": "8b27672; safety-recheck.json",
+      "status": "fixed_and_independently_rechecked"
+    },
+    {
+      "findingId": "H2",
+      "rationale": "Both processors return before any request when independent saved preflight is absent. Current397-target preflight keeps260 lacking proof held,125 original triage outcomes, and12 candidates requiring actual review. This reviewer verified exact receipts/artifact hashes and inspected selected historical program content; nine public-page targets below may receive further reads, two page-provenance passes remain no-replay, and application target385 remains held. No native target receives blank/public approval. Source calls must be cross-checked against these exact IDs/hashes.",
+      "owner": "Codex author",
+      "target": "8b27672; safety-recheck.json",
+      "status": "fixed_and_independently_rechecked"
+    },
+    {
+      "findingId": "M1",
+      "rationale": "Native metadata and content full serialized UTF-8 envelopes now fail held above16MiB before dependent parsing/extraction; selected-text cap remains additional. Mocked full-envelope overflow cases pass.",
+      "owner": "Codex author",
+      "target": "8b27672; safety-recheck.json",
+      "status": "fixed_and_independently_rechecked"
+    }
+  ],
+  "preservedRejectedReview": "interim-review-fail.json",
+  "excludedSourceTextNeverCommitted": true
+}

@@ -1,0 +1,70 @@
+{
+  "outcome": "PASS",
+  "reviewerId": "/root/sd2_continuation001_review",
+  "freshContext": true,
+  "readOnly": true,
+  "authoredOrEditedCandidate": false,
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "binding": {
+    "entryCommit": "d1424ee2c9659407c22734303ce21097c0a7e4ca",
+    "candidateCommit": "df3e55cec9e16f623f2d98c5fcf2473260e20e08",
+    "candidateTree": "3a167932e377c4b1c9f1dae612df9f461e4d1a3a",
+    "manifestPath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-001/final-manifest.json",
+    "manifestSha256": "fe7df87e46db96b71fbcde4a8ff706c432a92b00f0c942b1f1a248e1c470fec3",
+    "completeDiffSha256": "374ee69eca53fefea33b6a4ce27af57da90c68916228a6ea54cd554124f751d6",
+    "completeDiffBytes": 2275859,
+    "changedFiles": 27,
+    "completeManifestBlobModeSizeAndWorkingTreeEquality": true
+  },
+  "coverage": {
+    "group": 1,
+    "savedInputsReviewed": 20,
+    "distinctSemanticGuardsReviewed": 20,
+    "identityAssessmentsReviewed": 20,
+    "uniqueFieldOccurrencesReviewed": 400,
+    "exactSavedEvidenceBindingsChecked": 140,
+    "additionalContextPassagesChecked": 3,
+    "categoryCounts": {"existing evidence consistent": 69, "applicability/identity unresolved": 98, "evidence unavailable": 222, "existing evidence conflicting": 11},
+    "protectedEntryFiles": 2548,
+    "allOriginalEnvelopesIdentityProposalsRoutesAndHeldAcceptancePreserved": true,
+    "allPriorBytesModesHistoricalBindingsAndAppendOnlyHandoffsPreserved": true,
+    "frozenContinuationMembershipHashesAndOriginalOrderChecked": {"inputs": 386, "fieldOccurrences": 7062, "groups": 20},
+    "nextPointerVerified": {"group": 2, "scopeOrder": 21, "originalQueueOffset": 40, "savedInputKey": "saved-405588227-row-42", "packetPath": "docs/evidence/sd2-autonomous/checkpoint-003.json", "recordPointer": "/records/0", "remainingInputs": 366, "remainingFields": 6662}
+  },
+  "semanticReview": [
+    "All 400 categories and preserved typed envelopes were inspected, including unsupported null fields; categories were not accepted solely from original verified state.",
+    "Stockman and Peck retain unresolved named-child identity and shared-parent application scope.",
+    "Louie retains captured disabled status and initial-versus-awardee document distinctions.",
+    "Wells retains entry-versus-renewal GPA, disability self-description, application cap, and unresolved half-time total-versus-additional duration without correcting the original envelope.",
+    "Gianforte retains loan exclusion, semester and cumulative funding bases, yearless deadlines, and unresolved conflicting school/program posters.",
+    "Memorial, SOKN and David/Davide retain recipient-versus-identity, historical-cycle, material-stage and name-variation limits.",
+    "Every WAI child-specific binding falls within its exact named child section. Amount bindings correctly cross parenthesized value subheadings without using sibling amounts.",
+    "Historical WAI2025 membership/deadline/cycle context remains separate from current-parent WAI2027 window, materials and conflicting membership wording.",
+    "WAI alternatives, preferences, recipient slots, credit-versus-cash, use restrictions and training deadlines retain their original scope.",
+    "AMVETS and KPMG retain unavailable-source and identity holds."
+  ],
+  "toolingAndAuthority": {"sharedEngineReadAndReviewed": true, "exactAuthorizationAndPolicyScopeDigestsVerified": true, "historicalExecutionSelectedFalsePreserved": true, "automaticInternalReviewsAuthorized": true, "perGroupHumanApprovalRequired": false, "predecessorValidContextReceiptPreserved": true, "noHistoricalVerifierExecutedInLaterTree": true},
+  "evidence": [
+    {"command": "python3 docs/evidence/sd2-autonomous/saved-continuation/engine.py verify 1", "exitCode": 0, "outcome": "PASS", "startedAt": "2026-10-19T16:50:34.004547+00:00", "completedAt": "2026-10-19T16:50:34.894911+00:00"},
+    {"command": "git diff --check d1424ee2c9659407c22734303ce21097c0a7e4ca", "exitCode": 0},
+    {"check": "Independent read-only Python recomputation of manifest tree, complete binary diff, all 27 file blobs/modes/sizes/hashes, 400 envelopes, 140 excerpt offsets, 386 scope record/order hashes and next pointer", "outcome": "PASS"},
+    {"check": "Current application validation receipts and exact raw/normalized log hashes", "outcome": "BLOCKED_ENVIRONMENT", "exitCodes": [127, 127, 127, 127], "missingCommands": ["tsx", "tsc", "next"], "requiredChecksRemainUnfulfilled": true}
+  ],
+  "limits": [
+    "PASS applies only to this frozen local research candidate and its supporting controls.",
+    "No new source, workbook, raw/native, network or custody-availability inspection occurred.",
+    "No dependency installation, environment repair, application acceptance or release verification occurred.",
+    "Disclosed prior diagnostic/output incidents remain preserved; this review does not erase them.",
+    "All original source, identity, preservation, recovery, permission, human, canonical, publication, student, M1, SD5 and external-effect gates remain operative.",
+    "The final independent 386-input/7062-field union audit remains required after all groups."
+  ],
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "externalEffects": false,
+  "SD3Started": false,
+  "nextAction": {"owner": "Codex", "trigger": "Persist this matching PASS as the direct-child two-file local receipt and obtain its fresh review-bound verification before new paths", "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-001/next-input.json", "action": "Continue already-authorized group002 automatically; retain all unknowns and original routes."}
+}

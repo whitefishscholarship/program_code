@@ -1,0 +1,55 @@
+{
+  "startedAt": "2026-10-13T16:21:10.185Z",
+  "endedAt": "2026-10-13T16:21:10.735Z",
+  "args": {
+    "spreadsheet_id": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+    "ranges": [
+      "'School Resource - Cleaned Up'!F722:G795",
+      "'School Resource - Cleaned Up'!O722:O795"
+    ],
+    "cell_fields": "formattedValue,userEnteredValue,hyperlink,textFormatRuns"
+  },
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "spreadsheetId": "1-rgieaL5Hd87W97Zzx9SPFFSmPAmSPGqkzPYnjDQzL0",
+      "properties": {
+        "title": "Spreadsheet Clean Up 4",
+        "locale": "en_US",
+        "timeZone": "America/Denver"
+      },
+      "sheets": [
+        {
+          "properties": {
+            "sheetId": 405588227,
+            "title": "School Resource - Cleaned Up",
+            "index": 3,
+            "sheetType": "GRID",
+            "gridProperties": {
+              "rowCount": 795,
+              "columnCount": 25,
+              "frozenRowCount": 1,
+              "hideGridlines": true
+            }
+          },
+          "data": [
+            {
+              "startRow": 721,
+              "startColumn": 5
+            },
+            {
+              "startRow": 721,
+              "startColumn": 14
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  }
+}

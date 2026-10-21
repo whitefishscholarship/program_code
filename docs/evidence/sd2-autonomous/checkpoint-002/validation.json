@@ -1,0 +1,80 @@
+{
+  "recordedAt": "2026-10-14T18:19:14.962Z",
+  "scope": "Local checkpoint002; no canonical acceptance",
+  "commands": [
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "ordinaryExitCode": 1,
+      "ordinaryReason": "tsx local IPC listen EPERM",
+      "permittedRetryExitCode": 0,
+      "stdout": "Build-plan validation passed for 13 ordered stage contracts and the current machine-state transition."
+    },
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "chunk_id": "1ebd16",
+      "wall_time_seconds": 0.000005,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": "",
+      "observedAt": "2026-10-14T18:18:06.245Z"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "chunk_id": "12c021",
+      "wall_time_seconds": 0.023819625,
+      "exit_code": 0,
+      "original_token_count": 691,
+      "output": "P8 full-denominator monitoring, executed retry/rate/freshness, HMAC recovery, idempotency, schedule-boundary, and privacy tests passed.\nP8R INTERVIEW TEST PASS awards=192 match=0 possible=192 conflicts=0 matrixVisualCells=30\nP8F PREIMPLEMENTATION TEST PASS academic=6 activities=4 volunteer=1 financial=1 criteria=38 affiliations=6 typeOnly=8 dispositions=30 visualCells=30 acceptedFacts=0\nP8F INTERVIEW TEST PASS awards=192 academic=6 activities=4 volunteer=1 financial=1 criteria=38 acceptedFacts=0 ruleGates=51\nSHORTLIST PASS [{\"match\":69,\"possibleMatch\":97,\"knownConflict\":26,\"total\":192},{\"match\":28,\"possibleMatch\":97,\"knownConflict\":67,\"total\":192},{\"match\":55,\"possibleMatch\":97,\"knownConflict\":40,\"total\":192},{\"match\":47,\"possibleMatch\":143,\"knownConflict\":2,\"total\":192}]\nRelevance local preparation boundary PASS; no hosted authority.\nRELEVANCE PASS {\"pairedConnections\":206,\"enabledControls\":38,\"sourceRows\":197,\"awards\":192,\"academicRegression\":[166,125,152,190]}\nIntake local preparation boundary PASS; no hosted authority.\nIntake recovery, exact authority, newer-edit and no-blind-retry gates PASS (synthetic only).\nIntake proposal consistency, field provenance, controlled mapping and newer-edit fixtures PASS.\nIntake closure rejects lost children, pending triage, orphaned recommendations and unactionable holds.\nNative row projections preserve exact display text and reject independently tampered ledger values.\nIntake deterministic exact targets, alias markers, rich links, append protection, partial readback, newer edits, tamper and no-blind-retry fixtures PASS; zero source writes.\nREV17 PASS: four complete large blobs; bad hashes, unreadable/oversized objects; valid current/canonical contexts; targeted authority, protected-file, missing/drifted main, wrong branch, premature REV16, ancestry/path rejection\nCOVERAGE PASS: core-only results, four connections, no/unknown/skip, discovery/fact separation, OR, public CSV, source pins and authority boundary\nR3 policy PASS: exact scope, authority, review, local-only and reserved-effect rejection gates; no source access.\nR3 connector policy PASS: missing authority, widened metadata, privacy and revision-proof regressions rejected.\nR3 freshness authority PASS: exact correction, independent stability, capture count and remaining attempt bounds.\nR3 CATALOG PASS {\"awards\":411,\"preservedAwards\":192,\"profiles\":61,\"pairedConnections\":291,\"newGpaRules\":9,\"newSchoolRules\":7,\"organizations\":9,\"publicCsvIds\":true,\"sensitiveSkipNonExcluding\":true}\nR4 identity continuation PASS: 50 negative gates, exact topology, preparation limits, later evolution and historical preservation.\nR4 identity real Git adapter PASS: immutable candidate, later runtime/state evolution, historical proof rejection.\n",
+      "observedAt": "2026-10-14T18:18:06.268Z",
+      "captureLimit": "Early stdout chunks truncated in interactive display; final exact exit0 and final chunk retained. No claim of a complete durable test log."
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "ordinaryExitCode": 1,
+      "permittedRetryExitCode": 1,
+      "reason": "TurbopackInternalError [project]/src/app/globals.css [app-client] (css): creating new process; binding to a port; Operation not permitted (os error 1)",
+      "observedAt": "2026-10-14T18:19:14.962Z"
+    },
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/verify.py",
+      "exitCode": 0,
+      "coverage": "406frozen/20prior/18priorreceipts/939protected/437M1"
+    },
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/build-queue.py --check",
+      "exitCode": 0,
+      "stdout": "PASS:406 frozen inputs verified; existing checkpoint progress preserved without writes."
+    },
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/checkpoint-002/verify.py",
+      "exitCode": 0,
+      "coverage": "20new/40total/366remaining/17receipts/400fields/1055preserved/437M1/12pins/0accepted"
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "timingLimits": "Exact command-start windows were not recorded for initial executions; observed final results are time-stamped here or in individual receipts. No reconstructed execution timestamps.",
+  "standardBuild": {
+    "outcome": "BLOCKED",
+    "owner": "Codex validation/delivery owner",
+    "trigger": "Before canonical acceptance or authorized release in a supporting permitted environment",
+    "nextAction": "Rerun exact npm run build; no alternate-build waiver",
+    "authorityPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9"
+  },
+  "freshMainTarget": {
+    "outcome": "unverified preserved",
+    "owner": "Codex governance/delivery owner",
+    "trigger": "Later explicitly selected acceptance/release",
+    "nextAction": "Establish authenticated current authorized main/target; retained origin/main is only a local pin"
+  },
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "actualBackendModelAndEffort": "Not independently observable; no model switch claimed"
+}

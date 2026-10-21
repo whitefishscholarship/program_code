@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "typecheck"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-16T14:48:12.848906+00:00",
+  "completedAt": "2026-10-16T14:48:17.210429+00:00",
+  "exitCode": 0,
+  "logPath": "docs/evidence/sd2-autonomous/consolidation-pilot-001/checks/typecheck.log",
+  "logSha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407",
+  "rawOutputUtf8": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\n",
+  "rawLogSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+  "rawLogBytes": 39,
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact original command output retained as rawOutputUtf8 with original digest/bytes in this receipt."
+}

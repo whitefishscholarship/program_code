@@ -1,0 +1,13 @@
+{
+  "scope": "Author pre-freeze repairs only; no independent review claim",
+  "newSourceReads": 0,
+  "corrections": [
+    "Rebuilt initially over-masked transient links from retained conversions before persistence.",
+    "Restored retained DECA submission-change paragraph and unassigned AEA redacted headings before freeze; refreshed dependent hashes.",
+    "Initial verifier assertion expected adjacent words within one year across a PDF line break. Changed only the audit string normalization; typed source/rules unchanged. Initial verifier exited1 at this assertion; subsequent integrity audit PASS.",
+    "Initial staged diff check flagged one extra blank EOF in the RISE selected artifact. Shell sequencing still created the pre-review checkpoint3c60d3b. Preserved that commit; normalized only selected artifact EOF and dependent hashes, then require full entry-to-candidate diff PASS before review. No review had been requested or bound to the superseded freeze."
+  ],
+  "allExistingHistoryPreserved": true,
+  "acceptedFacts": 0,
+  "supersededPreReviewFreeze": "3c60d3b"
+}

@@ -1,0 +1,131 @@
+{
+  "meaning": "Derived readiness and ownership view; all original routes remain authoritative and unchanged. No gate waiver or stage acceptance.",
+  "gates": [
+    {
+      "id": "G1",
+      "item": "Saved input and field accounting",
+      "status": "prepared_complete",
+      "owner": "Codex consolidation author and independent reviewer",
+      "trigger": "Matching immutable package review",
+      "nextAction": "Confirm794savedpositions/411named/383empty,411separate app IDs,7547field definitions/7468existingcomparison occurrences and first79 definitions without invented comparison.",
+      "authoritativePaths": "summary.json; decision-ledger.json; inventory-dispositions.json; publication-crosswalk.json"
+    },
+    {
+      "id": "G2",
+      "item": "Original identity and candidate binding",
+      "status": "held_by_original_input",
+      "owner": "Original recorded identity/source owners",
+      "trigger": "Original selected reconciliation/evidence trigger or separately selected proof scope",
+      "nextAction": "Retain each exact candidate, duplicate-name hold and missing link; proposed held outcomes may remain. No name-only mapping/merge/new ID.",
+      "authoritativePaths": "decision-ledger.json; originalRecordReference; original inventory; original first/Jaycee/autonomous packets"
+    },
+    {
+      "id": "G3",
+      "item": "Material fact evidence and source/cycle applicability",
+      "status": "held_or_originally_proposed",
+      "owner": "Each original recorded evidence owner",
+      "trigger": "Only selected material accepted-use claim or original evidence-arrival trigger",
+      "nextAction": "Use original proof/route, reconcile or explicitly retain uncertainty; complete native/current/source claims need their own evidence. No claim becomes accepted from consistency.",
+      "authoritativePaths": "field-decisions.jsonl; originalRouteReference; minimumProofReference; original evidence packets"
+    },
+    {
+      "id": "G4",
+      "item": "Optional targeted evidence run",
+      "status": "proposal_not_selected",
+      "owner": "Kelsey selects exact scope; Codex executes/reviews",
+      "trigger": "Direct selection of SD2-RESOLUTION-PROOF-1",
+      "nextAction": "At matching package receipt capture fresh review-bound PASS, then only the exact eligible locators and bounds; preflight/skip blocked locators, preserve all holds.",
+      "authoritativePaths": "PROPOSED_READ_SCOPE.json; read-targets.json"
+    },
+    {
+      "id": "G5",
+      "item": "Dependency restoration and required checks",
+      "status": "environment_blocked_no_waiver",
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Direct selection of SD2-LOCKED-VALIDATION-1 and permitted environment",
+      "nextAction": "Restore exact locks only and run unchanged four commands; retain actual failures and exact standard-build gate. No installation occurred in preparation.",
+      "authoritativePaths": "PROPOSED_VALIDATION_REPAIR.json; application-checks.json; original shared validation/checks"
+    },
+    {
+      "id": "G6",
+      "item": "Canonical SD2 selection and acceptance",
+      "status": "not_selected_not_accepted",
+      "owner": "Codex governance; Kelsey retains scope/fact-review decisions",
+      "trigger": "Prospective selection/amendment under existing canonical machinery if required",
+      "nextAction": "Keep canonical plan/state unchanged and stage pointers null. Reconcile SD slice with existing canonical contract, meet all gates and obtain independent exact-candidate review; no parallel stage system or self-acceptance.",
+      "authoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md sections1,6,7; docs/BUILD_STATE.json; AGENTS.md"
+    },
+    {
+      "id": "G7",
+      "item": "Named human fact review and limited Jaycee approvals",
+      "status": "existing_scope_unchanged",
+      "owner": "Kelsey Stuart; Codex determines identity from evidence",
+      "trigger": "Only exact existing approval or later selected acceptance decision",
+      "nextAction": "Preserve already supplied reviewer designation and specific Jaycee approvals; do not ask for them again or generalize to unstated facts/mappings/publication.",
+      "authoritativePaths": "docs/evidence/sd2-autonomous/AUTHORITY.md; PRELUDE.json#/reviewerAndPell; PRELUDE.json#/jayceeLegacy"
+    },
+    {
+      "id": "G8",
+      "item": "Fresh authenticated main/target and supported exact build",
+      "status": "open_original_gate",
+      "owner": "Codex validation/governance/delivery",
+      "trigger": "Before canonical acceptance or separately authorized release",
+      "nextAction": "Obtain actual current authenticated main/target and supported exact build evidence under separately permitted effects; saved local refs/provider history are not fresh proof. Preserve historical IPC failures and their successful retries; do not reopen a resolved historical IPC repair without a new failure.",
+      "authoritativePaths": "coverage-audit/SESSION_CLOSE.md; original021validation; original build/IPC receipts"
+    },
+    {
+      "id": "G9",
+      "item": "All nine attention rows and supplements",
+      "status": "retained_not_closed",
+      "owner": "Every original recorded owner",
+      "trigger": "Each exact original recorded trigger",
+      "nextAction": "Perform original next action only when selected. New package does not close or replace these routes.",
+      "authoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 and every preserved supplement"
+    },
+    {
+      "id": "G10",
+      "item": "Custody/native/visual/full-source limitations",
+      "status": "retained_unknown",
+      "owner": "Original custody/source owners",
+      "trigger": "Original authorized raw-use/audit trigger",
+      "nextAction": "Verify exact availability/hashes then or report gap; no new custody availability or raw/native reinspection claim.",
+      "authoritativePaths": "Original71custodypins and original source receipts/021audits"
+    },
+    {
+      "id": "G11",
+      "item": "Workbook preservation/recovery/permissions and SD3",
+      "status": "outside_current_scope",
+      "owner": "Original migration/publication owners; Kelsey selects effects",
+      "trigger": "Separately selected SD3 and exact live-effect gates",
+      "nextAction": "Use replacement workbook only if a future bounded read/write is selected; verify current identities/permissions/native backup/recovery before valuable-source changes. No access/migration now.",
+      "authoritativePaths": "docs/STUDENT_DATA_CONTRACT.md; section9; original preservation/recovery routes"
+    },
+    {
+      "id": "G12",
+      "item": "Student fit/filter/priority/CSV/browser/publication",
+      "status": "outside_current_scope",
+      "owner": "Original governance/app owners",
+      "trigger": "Later selected SD3/SD4/canonical/publication scope",
+      "nextAction": "Preserve current runtime/unknown-aware behavior and public allowlist; verify actual student tasks then, no new runtime truth here.",
+      "authoritativePaths": "Canonical plan/state; student contract; original student/publication routes"
+    },
+    {
+      "id": "G13",
+      "item": "M1/SD5 monitor and reserved effects",
+      "status": "retained_not_activated",
+      "owner": "Original monitor owner; Kelsey selects reserved effects",
+      "trigger": "Only exact existing M1/SD5/setup/effect selection",
+      "nextAction": "Retain437routes/12pins, ETV/Fund the Fish, allowance/zero-overage/sender/receipt/suppression/pilot/catchup/recovery/health; no second queue, old-runner replay or activation.",
+      "authoritativePaths": "Retained009fa57 M1 plan/evidence and original section9 routes"
+    },
+    {
+      "id": "G14",
+      "item": "Remote Git/deployment/contact/configuration/other effects",
+      "status": "not_selected",
+      "owner": "Original governance/delivery owners; Kelsey selects effects",
+      "trigger": "Direct stage-specific informed authority for exact effect and target",
+      "nextAction": "Inspect downstream effects and preserve current branch/local receipts; no push/PR/Preview/merge/Production/messages/contact or configuration from this package.",
+      "authoritativePaths": "AGENTS.md; canonical plan/state; original effect evidence"
+    }
+  ]
+}

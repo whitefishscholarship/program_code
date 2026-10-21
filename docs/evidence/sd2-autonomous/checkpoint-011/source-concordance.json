@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-10-15T04:33:46.399Z",
+  "scope": "Author comparison of finalized selected artifacts against original in-session provider conversions without new source requests.",
+  "method": "Whitespace-normalized paragraph containment against original conversion; explicitly count editorial limitation/redaction markers and contact-redacted passages separately. No raw/page/image/native-source or origin-revision claim.",
+  "artifacts": [
+    {
+      "artifact": "isa",
+      "checkedExactNormalizedPassages": 8,
+      "editorialLimitOrRedactionMarkers": 1,
+      "contactRedactedPassages": 3,
+      "unmatched": []
+    },
+    {
+      "artifact": "norris",
+      "checkedExactNormalizedPassages": 4,
+      "editorialLimitOrRedactionMarkers": 1,
+      "contactRedactedPassages": 1,
+      "unmatched": []
+    },
+    {
+      "artifact": "financial",
+      "checkedExactNormalizedPassages": 6,
+      "editorialLimitOrRedactionMarkers": 1,
+      "contactRedactedPassages": 1,
+      "unmatched": []
+    },
+    {
+      "artifact": "wai",
+      "checkedExactNormalizedPassages": 51,
+      "editorialLimitOrRedactionMarkers": 4,
+      "contactRedactedPassages": 0,
+      "unmatched": []
+    }
+  ],
+  "allSubstantiveNonContactPassagesMatched": true,
+  "limits": [
+    "Selected-artifact hashes/registry/exact field excerpt equality are verified separately by verify.py.",
+    "Contact-redacted paragraphs retain exclusion markers; excluded values are not printed or restored.",
+    "Provider-redacted memorial identity gaps and all historical output/custody/conversion limitations remain held."
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "originalCandidate": "4373ca3b96bd47b47d880b6e740130cba2445a97",
+  "originalManifestSha256": "ac67cd2fd81ee8a411dc541b90af6d17e9c9096d306b6fc01e7ce145e3bea76d",
+  "originalReviewSha256": "5a2f0f8571672e805d9b5f48bc022d88aec3677cd5a29067b58e606baee01262",
+  "recordedAt": "2026-10-14T22:40:59.383547+00:00",
+  "requiredFixCount": 3,
+  "dispositions": [
+    {
+      "findingId": "SD2-007-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Restored qualified dual-enrollment/AP answer from original in-session capture without contact sentence; updated held eligibility/evidence/hash/routes and disclosed missing raw-envelope hash. No refresh.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint007 candidate"
+    },
+    {
+      "findingId": "SD2-007-M2",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Retained observed online/portal or paper-online methods for all five rows with exact evidence; actual access/usability/identity/cycle remain unknown, all actions false.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint007 candidate"
+    },
+    {
+      "findingId": "SD2-007-L1",
+      "severity": "low",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Labeled every original extraction entry interim/superseded for final selected-text binding, explicitly documented Luedke historical mismatch and routed final proof to document-inspection.json; preserved original keys/hashes and immutable original candidate.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint007 candidate"
+    }
+  ],
+  "noNewSourceReadBuilderResetOrReplay": true
+}

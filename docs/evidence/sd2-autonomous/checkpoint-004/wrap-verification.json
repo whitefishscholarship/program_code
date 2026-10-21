@@ -1,0 +1,49 @@
+{
+  "outcome": "PASS",
+  "recordedAt": "2026-10-14T20:23:48.541441+00:00",
+  "scope": "Separateauthorverifiedsessionhandoff; never rebinds independent source review",
+  "reviewedCandidate": "c9050bbcaf3dcbbae44c7e7d375cb5618d53eba2",
+  "localReviewReceipt": "bf17ea2864151e63f957d9efdda0fbe8f64ddac3",
+  "manifestSha256": "52f637940850f9f439c7aca3aa7fcf071763da3f1775ec697b007d545bed37ce",
+  "originalCandidate": "8cd41aa9491cccd959839a3f93390619a4779d5d",
+  "originalReviewPreserved": true,
+  "threeFindingsIndependentlyResolved": true,
+  "candidatePathsPreserved": 54,
+  "allOlderPlanSupplementsAndNineAttentionRowsBytePreserved": true,
+  "CURRENT_HANDOFFOldBytesPreserved": true,
+  "everyFieldIdentitySeedLinkOwnerTriggerNextActionRetained": true,
+  "M1Records": 437,
+  "sourceAudit": {
+    "outcome": "PASS",
+    "originalMisbindingRejected": "Wrong named input/source affinity: saved-405588227-row-75/materials/duke-faq",
+    "checkpointInputs": 20,
+    "cumulativeInitialDispositions": 80,
+    "unprocessed": 326,
+    "nextInputKey": "saved-405588227-row-84",
+    "sourceReceipts": 28,
+    "fieldEnvelopes": 384,
+    "fieldEvidenceReferences": 171,
+    "fieldStates": {
+      "verified": 99,
+      "unverified": 278,
+      "conflict": 7
+    },
+    "preservedEntryPaths": 1153,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "acceptedFacts": 0,
+    "SD3Started": false
+  },
+  "standardBuildGate": "bothrecordedEPERMfailuresremainopen",
+  "freshMainTarget": "unknownretainedpinonly",
+  "allLaterPreservationHumanCanonicalPublicationStudentMonitorEffectGatesRetained": true,
+  "noNewResearchFactAcceptanceOrSD3": true,
+  "next": {
+    "owner": "NextsessionCodexresearch/proposals",
+    "trigger": "NextselectedsessionunderexistingAUTHORITY/POLICY",
+    "path": "docs/evidence/sd2-autonomous/queue.json records[80:]",
+    "inputKey": "saved-405588227-row-84",
+    "name": "Clayton E. Hoyt Endowed Scholarship",
+    "action": "Resumeoneboundedcheckpointat80; neverinitialize/reset/replay; stopbeforeSD3"
+  }
+}

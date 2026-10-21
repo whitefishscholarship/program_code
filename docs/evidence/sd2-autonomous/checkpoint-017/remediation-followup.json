@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-15T20:23:14.905463+00:00",
+  "priorCandidateCommit": "8d044359b900d77bb499fd4b55d789cac4e87bfb",
+  "priorManifestSha256": "8b8df8b968797be83179b3217efd6dea9d6c4fe5d6ecc7c004fd4dc20bc6d80c",
+  "priorReviewSha256": "9b22e45ca85cdbdd64e24193b04244ec45ffc604c41812bd8c7be810316a3a90",
+  "priorVerificationSha256": "8c4a674a88fc18f429f87067e348cd01ddbead88d2f5b283f6bd28fc6a6e65d0",
+  "dispositions": [
+    {
+      "id": "SD2-017-L1",
+      "severity": "low",
+      "status": "author-fixed; independent recheck required",
+      "rationale": "Row339 current record/field/seed/README/assembler follow-up now preserves annual window, weekend extension and year uncertainty; no removed cross-family conflict. Row338 and both rejected bindings remain exact.",
+      "owner": "Codex implementation owner",
+      "trigger": "Independent final replacement-candidate recheck",
+      "target": "checkpoint-017 final-manifest/review"
+    }
+  ],
+  "newSourceReads": 0,
+  "allSourceReceiptsUnchanged": true,
+  "fieldValuesCountsAndHoldsUnchanged": true,
+  "originalRow339NextAction": "Reconcile Folds military higher-education child, source-specific status/dependency/service proofs, GPA-on-acceptance versus entry, unmetneed, parttime caps, weekend deadline conflict, annual reapplication and checkin/material conditions. Historical2024-25/2025 documents do not prove next cycle.",
+  "correctedRow339NextAction": "Reconcile Folds military higher-education child, source-specific status/dependency/service proofs, GPA-on-acceptance versus entry, unmetneed, parttime caps, annual window/weekend extension/year uncertainty, annual reapplication and checkin/material conditions. Historical2024-25/2025 documents do not prove next cycle."
+}

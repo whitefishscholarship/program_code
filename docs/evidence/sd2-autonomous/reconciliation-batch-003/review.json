@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of the complete selected SD2 reconciliation-batch-003 candidate: Agri Industries5, AMTOPP6 and Bridging the Gap7, in order; exactly52 original held field envelopes and three held identity assessments. Research comparison only; no canonical acceptance or release.",
+  "reviewer": {
+    "identity": "Codex /root/sd2_batch003_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "binding": {
+    "entryCommit": "49e0563a9a74a2c25b8f9349362c24ffd9eca01c",
+    "candidateCommit": "aaeabc816ffbbdce17926aaa903678aa29ca1eeb",
+    "candidateTree": "c501ec20623a7e510a592983bec297e5e0ad57ec",
+    "manifestPath": "docs/evidence/sd2-autonomous/reconciliation-batch-003/final-manifest.json",
+    "manifestSha256": "3e333857425c13862d922ff7e4c106333b1dc22c63e2b49f6bde8299eac990ca",
+    "completeDiffSha256": "afbda8fd44eac48a05d52169f0538ecc4468835e7e3b4f9dd9e452d399dec9b6",
+    "completeDiffBytes": 643811,
+    "changedPathCount": 31,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Verified local predecessor receipt entry. Authenticated current origin/main and deployment target were not refreshed."
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable complete candidate",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed manifest SHA256, candidate tree, complete643811-byte binary diff SHA256 and exact31-path change set. Verified every changed candidate blob ID, mode, byte count, SHA256 and worktree equality. HEAD equals frozen candidate; tracked worktree and index are clean; only final-manifest.json is untracked. Entry-to-candidate git diff --check passed."
+    },
+    {
+      "name": "Authority, selection and predecessor binding",
+      "outcome": "PASS",
+      "evidence": "The supplied direct continuation follows the reviewed proposal003 and its explicit exact52-field execution step under retained routine delegation. selection.json matches the unchanged proposedComparison. Verified proposal manifest/review PASS binding and49e0563 as its exact direct-child two-file receipt. Entry-audit records the fresh unchanged predecessor review-bound PASS in its valid pre-batch context. No historical verifier was rerun after new paths existed."
+    },
+    {
+      "name": "Exact selected identities and original envelopes",
+      "outcome": "PASS",
+      "evidence": "Verified selected queue offsets/locators5,6,7, canonical recorded-name digests, packet hashes, record hashes/pointers, original candidate IDs and ordered16+18+18 fields. All52 full envelopes match checkpoint-001 records5,6,7 byte-derived canonical values; original state, acceptance, scope, observation time and evidence are retained. All three original identity proposals and original owner/trigger/path/nextAction routes match."
+    },
+    {
+      "name": "All52 semantic comparisons and minimum-proof routes",
+      "outcome": "PASS",
+      "evidence": "Individually reviewed every comparison note and proposed minimum-proof route against its original envelope and selected saved passages. Categories reconcile to9 consistent,26 applicability/identity unresolved,16 evidence unavailable and1 existing AMTOPP identityBranches conflict. Missing proof remains proposal-only with no selected fetch, fact change or hold release."
+    },
+    {
+      "name": "Selected source fidelity and affinity",
+      "outcome": "PASS",
+      "evidence": "Verified all eight saved source registry/artifact bindings, every bounded selected-context passage against original line ranges, all26 selected original evidence occurrences against original artifact bytes and all referenced hashes/pointers. Generated source-reference occurrences match finalized comparison evidence exactly. Original extraction/status/revision/observation limits remain intact. rh-old/rh-alias equal hashes are expressly not independent corroboration; eligibility evidence retains original rh-old affinity."
+    },
+    {
+      "name": "Agri boundaries",
+      "outcome": "PASS",
+      "evidence": "Retains amounts-vary, high-school-senior OR college-student and career interests without inventing a required degree, major or institution type. Shared timing remains yearless with currentYear:null; renewal is distinct from annual reapplication; shared transcript/supplement guidance is distinct from a complete child checklist and post-award payment follow-up."
+    },
+    {
+      "name": "AMTOPP branch, version and rubric boundaries",
+      "outcome": "PASS",
+      "evidence": "Preserves employee/member drawing, FFA and4-H branches and existing generic identity conflict without winner, rule union/intersection or new award. Retains January5 receipt/postmark, March13,2026 4-H, March1,2026 shared applications and historical2021/December31 guideline distinctions. Montana school affiliation is separated from residence; senior/freshman alternatives, any-state college/vocational study, two agricultural-education years, GPA2.0 and horticulture/arboriculture scope remain qualified. Need scoring is distinct from hard eligibility; College/Leadership scoring and materials are not adopted as current child requirements; nextCycle remains null."
+    },
+    {
+      "name": "Bridging boundaries",
+      "outcome": "PASS",
+      "evidence": "Preserves exact will-or-have-aged-out foster-care wording and required shared application without widening to all foster-care/adopted applicants. One-or-more recipients supports minimum1 only. Original perRecipient1000 envelope remains held while the new comparison explicitly retains total-versus-per-recipient allocation ambiguity."
+    },
+    {
+      "name": "Protected history, holds and append-only handoffs",
+      "outcome": "PASS",
+      "evidence": "Independently verified2321 protected entry file blobs/modes and exact preservation of earlier bytes on all three append-only handoff surfaces. The inspected new verifier independently ran successfully at2026-10-16T17:24:04.826378+00:00 through17:24:05.746258+00:00, confirming7406 held fields,406 held identities, cursor406/no next research input and cumulative196 compared occurrences across8 autonomous plus2 prior Jaycee inputs. Earlier reviews, routes,437 M1 records/12 pins and71 custody receipts remain protected; no new custody-availability claim is made."
+    },
+    {
+      "name": "Seven command receipts and actual validation limits",
+      "outcome": "PASS",
+      "evidence": "Independently verified all seven standalone receipts equal their aggregate entries, exact commands/cwd, chronological timestamps before manifest creation, raw byte counts/hashes and normalized log bytes/hashes. Plan/typecheck/tests pass after unchanged permitted IPC retries. Both exact npm run build attempts fail creating a process/binding a port with Operation not permitted; standardBuild correctly remains BLOCKED_ENVIRONMENT. No alternate-build waiver, fresh-main claim or acceptance claim is present."
+    },
+    {
+      "name": "Retained session incident and stop boundary",
+      "outcome": "PASS",
+      "evidence": "session-issues.json preserves the overbroad sanitized registry/rubric preview as scope noncompliance, including unrelated output and truncation; it is not relabeled compliant. Unrelated material is excluded from semantic comparison and derived views, with bounded subsequent passages and no absence/completeness inference. Prior incidents remain protected. The candidate stops after this batch and handoff; a later continuation may prepare the next bounded proposal, with no automatic comparison or SD3."
+    }
+  ],
+  "limits": [
+    "This PASS establishes saved-evidence comparison fidelity and preservation only; it accepts no scholarship fact, identity mapping, canonical stage or release.",
+    "No network, workbook, metadata, raw/native-content reinspection/reacquisition, assembler, npm/build execution, Git mutation or external effect was performed by this reviewer.",
+    "Current offerings, public access, source/native/visual completeness, source silence, sponsor/route continuity and independent provider timing remain unverified.",
+    "Original71 custody receipts are preserved; present raw-material availability was not rechecked.",
+    "Exact supported standard-build PASS and fresh authenticated main/target remain owned by Codex validation/governance/delivery before canonical acceptance or authorized release.",
+    "All original preservation/recovery, human/canonical/publication, student/browser/CSV, M1/SD5 and external-effect gates retain their original owners, triggers, authoritative paths and next actions.",
+    "Full SD2 remains incomplete;398 autonomous inputs remain outside these comparisons. Stop before SD3."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent review of local SD2 checkpoint005 held research only; no canonical stage or scholarship-fact acceptance.",
+  "reviewer": {"task": "/root/sd2_checkpoint005_review", "freshContext": true, "authoredOrEditedCandidate": false, "readOnly": true, "externalEffects": false},
+  "binding": {"entryCommit": "ab360d1b443e7a5f340c71f02ebbadcb95bc56ec", "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392", "freshAuthenticatedMainVerified": false, "candidateCommit": "361f25e70d1456dab4b9c3176fa9c5ace45bec0e", "candidateTree": "722415708db89c46985c8d24b70346a391242337", "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-005/final-manifest.json", "manifestSha256": "f0235eb9d76e1b63da0d78b8e5c75d597c7984e2e2a1b8524fff7482ba9c6cd5", "completeDiffSha256": "7f71baaeb6048f35536d10fe4b878d91b034b6248b1da2c0d6fb9a9511374c73", "changedPaths": 29, "bindingIndependentlyVerified": true},
+  "severityCounts": {"critical": 0, "high": 0, "medium": 1, "low": 0},
+  "findings": [{"id": "SD2-005-M1", "severity": "medium", "path": "docs/evidence/sd2-autonomous/checkpoint-005.json", "locator": "saved-405588227-row-88.fieldProposals.materials", "title": "Retain the recommendation-format requirement", "evidence": "Native PDF page7, visually inspected and retained at sources/elks-native.md:186, explicitly says 'use Word program for all recommendations.' The materials value records essayWordProgram=true but omits the separate recommendation-format condition and its evidence binding. README lines65–68 likewise retains the Word essay requirement only. The source text is preserved, so remediation requires no additional research.", "impact": "A later consolidation consuming the typed materials proposal could omit an explicit application requirement despite the completed document inspection.", "requiredFix": "Add a held, source-scoped recommendation-format observation with the exact elks-native page7 excerpt, URL, artifact hash and locator. Carry this condition into the packet summary and specific next action, and add an appropriate semantic verifier assertion. Preserve all existing values, timestamps, holds, coverage and source artifacts; do not rerun the builder, reset progress or fetch sources.", "owner": "Codex implementation author", "target": "Replacement checkpoint005 candidate before independent recheck"}],
+  "requiredFixCount": 1,
+  "unresolvedRequiredFixes": 1,
+  "checksPerformed": [
+    "Read the controlling repository contract, canonical plan/state, current handoff, P9 accepted-stage evidence, complete student-data section9, autonomous AUTHORITY/POLICY and checkpoint004 continuation/review/closure receipts.",
+    "Independently recomputed manifest SHA256, candidate tree and complete entry-to-candidate binary-diff SHA256. Verified the exact29-path change set and every candidate blob ID, byte count and SHA256 against both Git and worktree files.",
+    "Confirmed all29 changed paths are additions confined to checkpoint005 evidence and its ledger; canonical state, policy, runtime, CI and earlier artifacts are unchanged.",
+    "Inspected verify.py before running it read-only with Python bytecode writing disabled. It passed with20 checkpoint inputs,100 cumulative initial dispositions,306 remaining inputs,366 new held fields,1886 cumulative held fields,100 held identities,105 evidence references,6 receipts and77 link dispositions.",
+    "Verified exact ordered offsets80–99, frozen input keys, source affinity and preserved public-ID candidates. Thirteen identity holds and five form-only access holds retain explicit reasons, owners, triggers and next actions.",
+    "Checked every evidence excerpt and artifact hash through the read-only verifier and reviewed all substantive typed Promise and Elks values against their captured sources.",
+    "Confirmed Promise's detailed conjunction, two-year education-completion condition, alternative foster-care/HUD categories, conditional appeal and broader-summary ambiguity remain program-scoped and held. Its endowed-award binding is null; brochure/HUD material documents remain explicitly deferred.",
+    "Visually inspected all12 native Elks pages, including blank fields, materials instructions, signatures, tables and evaluator rubric. Verified the two raw PDF custody hashes and all12 render hashes; confirmed complete layout-text equality despite different raw PDF bytes.",
+    "Confirmed Elks parentUSD1000 versus PDFUSD500 remains an unresolved amount conflict; annual March1 applicant and March15 Lodge-forwarding dates remain distinct. Current year, native public authority, minimum GPA, required need threshold and route sequence remain unresolved.",
+    "Checked vocational credential/destination/full-time exclusions, possible renewal by reapplication, permitted expenses/direct payment, publicity/conduct/retention conditions and evaluator-only scoring scope.",
+    "Verified all1215 protected entry paths, prior checkpoint004 candidate/review/diff/blob and direct-child two-file receipt binding, prior1520 field holds/80 identity holds, older section9/handoff bytes,12 original M1 artifact pins and437 M1 records.",
+    "Verified validation receipt/log hashes and recorded command results. Plan/typecheck/full tests pass after disclosed IPC retries; both exact standard builds fail with process/port EPERM.",
+    "Ran complete frozen entry-to-candidate git diff --check successfully.",
+    "Checked persisted packet sanitization and its source-output deviation disclosure. No contact values, signed download references or applicant responses were found in the newly persisted source scope. Privacy-pattern hits elsewhere were verifier pattern literals only.",
+    "Confirmed final worktree status contains only the supplied untracked final manifest. Edited no files, ran no builders/writers, created no commits and performed no network/source/workbook access."
+  ],
+  "limits": [
+    "This review verifies a local held-research packet; it accepts no scholarship facts, current cycle, canonical stage or release.",
+    "Live source availability, current workbook state, public access/sponsor authority and fresh authenticated remote main/target were not independently verified.",
+    "The disclosed source-output lapse remains recorded. Persisted containment does not erase the earlier exposure.",
+    "Exact source-call retrieval times remain unknown; evidence-recording completion timestamps and observation windows are explicit.",
+    "Raw PDFs and renders remain temporary. CDN visual inspection is not claimed; complete extracted layout text matches the visually inspected native PDF.",
+    "Sanitized or deferred scope cannot prove source silence or full program-rule completeness.",
+    "Both standard-build failures remain open and unwaived. Full SD2 remains incomplete; all1886 field holds and100 identity holds retain their recorded owners/triggers. SD3 and reserved effects remain unstarted."
+  ],
+  "nextAction": {"owner": "Codex implementation author", "trigger": "This independent finding", "path": "docs/evidence/sd2-autonomous/checkpoint-005/", "action": "Preserve this original candidate, manifest, verification and review binding. Remediate SD2-005-M1 locally, record one count-matched disposition, freeze a replacement candidate and manifest, then request independent recheck. Prepare the separate progress/handoff only after the exact replacement review is recorded. No new research, routine human approval, fact acceptance or external effect is required."}
+}

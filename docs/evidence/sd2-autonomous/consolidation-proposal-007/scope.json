@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "entryCommit": "4c70ed280aa76090369541bf9e9e6be9a8e983ec",
+  "branch": "codex/plan-student-data-maintenance",
+  "status": "proposal-only; execution requires direct exact selection",
+  "authority": "Direct whats next? continue after completed independently reviewed batch006; retained routine-decision delegation selects next bounded proposal preparation only",
+  "proposedComparison": {
+    "cases": 3,
+    "savedInputOccurrences": 3,
+    "fieldEnvelopeOccurrences": 53,
+    "orderedInputs": [
+      {
+        "order": 1,
+        "displayLabel": "Odd Fellows and Rebekah's Scholarship",
+        "queueOffset": 17,
+        "savedRowLocator": 17,
+        "savedInputKey": "saved-405588227-row-17",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/17/recordedName",
+          "valueSha256": "89c9ed8185a94f4f6221cbd2182233e7db4fa590dda46f1c7c57914b04e30fae"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/17",
+        "recordCanonicalSha256": "f5983a7cfdcb873cc3aba78dff77c3bc2704e77724f9a994c57cd0dda20f698a",
+        "publicIdCandidates": [
+          "award-10b85bfc0c0c"
+        ],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 18,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "namedEligibilityStatement",
+          "maximumGPA",
+          "recipientSlots"
+        ],
+        "sourceIds": [
+          "rh-old",
+          "rh-alias"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      },
+      {
+        "order": 2,
+        "displayLabel": "Reach Higher Montana Scholarship",
+        "queueOffset": 18,
+        "savedRowLocator": 19,
+        "savedInputKey": "saved-405588227-row-19",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/18/recordedName",
+          "valueSha256": "d826f0b1b03058cc27390eaede87f85eb6bc27f343218da537a7bc37f64b0ab4"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/18",
+        "recordCanonicalSha256": "0b43ede7956142dfab705a07e41a82c2297a211fe1c5b9dca976178e6f68c00a",
+        "publicIdCandidates": [
+          "award-54af9ccbbb57"
+        ],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 18,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "namedEligibilityStatement",
+          "recipientSlots",
+          "fafsaRequired"
+        ],
+        "sourceIds": [
+          "rh-old",
+          "rh-alias"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      },
+      {
+        "order": 3,
+        "displayLabel": "Servant Leadership Scholarship",
+        "queueOffset": 19,
+        "savedRowLocator": 20,
+        "savedInputKey": "saved-405588227-row-20",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/19/recordedName",
+          "valueSha256": "15f0ef3818a73016816635f51d2ff514d9c379e44b3597eb66abf470f1850b10"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/19",
+        "recordCanonicalSha256": "cb60f6fc9be993d2d586e7641997d0bbed6d252cb8855b82c0c3f39837f96b70",
+        "publicIdCandidates": [
+          "award-ec7d28fb15f9"
+        ],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 17,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "namedEligibilityStatement",
+          "recipientSlots"
+        ],
+        "sourceIds": [
+          "rh-old",
+          "rh-alias",
+          "ffa",
+          "ffa-applications",
+          "ffa-guidelines",
+          "ffa-college-rubric",
+          "ffa-leadership-rubric"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "sourceId": "rh-old",
+        "registryPointer": "/sourceRegistry/3",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/rh-old.md",
+        "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/3/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-17",
+          "saved-405588227-row-19",
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "rh-alias",
+        "registryPointer": "/sourceRegistry/4",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/rh-alias.md",
+        "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/4/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-17",
+          "saved-405588227-row-19",
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "ffa",
+        "registryPointer": "/sourceRegistry/6",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ffa.md",
+        "artifactSha256": "ba8353176fb75bfeb0dc7bff6298c24b62909a380aefa7f5842ad9523db78ec1",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/6/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "ffa-applications",
+        "registryPointer": "/sourceRegistry/7",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ffa-applications.md",
+        "artifactSha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/7/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "ffa-guidelines",
+        "registryPointer": "/sourceRegistry/12",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ffa-guidelines.md",
+        "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/12/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "ffa-college-rubric",
+        "registryPointer": "/sourceRegistry/13",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ffa-college-rubric.md",
+        "artifactSha256": "49c4f33e21dab09098513f433732983a69531c1c013cc531ec7fff97f844cce4",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/13/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-20"
+        ]
+      },
+      {
+        "sourceId": "ffa-leadership-rubric",
+        "registryPointer": "/sourceRegistry/14",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ffa-leadership-rubric.md",
+        "artifactSha256": "8c5a6d1bdb0317cecf5d15327977fc29bf6fb16d90d6d6e85c3d9f71a50225e6",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/14/extractionLimits",
+        "permittedInputKeys": [
+          "saved-405588227-row-20"
+        ]
+      }
+    ],
+    "proposedOutputDirectory": "docs/evidence/sd2-autonomous/reconciliation-batch-007",
+    "allFactsAndIdentitiesRemainHeld": true
+  },
+  "savedEvidencePins": [
+    {
+      "path": "docs/evidence/sd2-autonomous/queue.json",
+      "sha256": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+      "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/POLICY.md",
+      "sha256": "6135c3950190d9983fce5eca7eb27d2a9676299fbcede912c7a562e02357d6f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+      "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-review.json",
+      "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+      "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+      "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+      "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/SESSION_WRAP.md",
+      "sha256": "b2530b454a85cb92ad1563d70baf9d0dc0da24af0554fd5d4d0ac8e893444fc8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/SESSION_CLOSE.md",
+      "sha256": "b98fb483f2e1d7505930d9f1f30d56ac1b6daf15c37f6260a0d9f6a9f5b6d099"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/README.md",
+      "sha256": "acf58355ac30470f2a08ef1417fbd557f4d34152da7cbec908202e38dea3e5a1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/selection.json",
+      "sha256": "866b400660dd55ce1db569e5cae0c2fc1cb4b37e70078c30d22ea2aa13528bdf"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/entry-audit.json",
+      "sha256": "cd46b8dbf2cd4f8b6692e0633d3379d37415311795e033864bdc2bd18b855a12"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/checkout-recovery.json",
+      "sha256": "cd9696c08c39b106351f38343b29999614366db857419793985e6a0959e3cede"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/validation.json",
+      "sha256": "9205e6b35c8da7934b064a547bfe85e0cb70dfc9463b31f723d6197cc4d15e05"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/final-manifest.json",
+      "sha256": "11c5f3547bfce26f1d534c61c6c1c19556e5187296a776ee556051c49de9fbf4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/review.json",
+      "sha256": "512787f0762f7b95f074502a662c5b409ded761605722e12ae9c18db4fe2ec47"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/reconciliation-batch-006/session-issues.json",
+      "sha256": "10a7fbf074b7ea1d50f756ffd773f9c96a1bcb122573496c4c19d5820742a27f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/session-issues.json",
+      "sha256": "63d591a7474d2eb3309fc00c0687e5333a96c04c2a59bae7d0d24639c7391cfa"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/rh-old.md",
+      "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/rh-alias.md",
+      "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa.md",
+      "sha256": "ba8353176fb75bfeb0dc7bff6298c24b62909a380aefa7f5842ad9523db78ec1"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-applications.md",
+      "sha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-guidelines.md",
+      "sha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-college-rubric.md",
+      "sha256": "49c4f33e21dab09098513f433732983a69531c1c013cc531ec7fff97f844cce4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ffa-leadership-rubric.md",
+      "sha256": "8c5a6d1bdb0317cecf5d15327977fc29bf6fb16d90d6d6e85c3d9f71a50225e6"
+    }
+  ],
+  "coverage": {
+    "initialResearchInputs": 406,
+    "initialResearchDispositions": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "alreadyComparedAutonomousInputs": 17,
+    "alreadyComparedPriorJayceeInputs": 2,
+    "alreadyComparedFieldOccurrences": 353,
+    "thisProposalAddsComparedInputs": 0,
+    "thisProposalAddsComparedFields": 0,
+    "ifSeparatelyExecutedAutonomousInputsCompared": 20,
+    "ifSeparatelyExecutedRemainingAutonomousInputs": 386,
+    "ifSeparatelyExecutedCumulativeComparedFields": 406,
+    "acceptedFacts": 0
+  },
+  "executionSelected": false,
+  "comparisonExecuted": false,
+  "newSourceOrWorkbookReads": 0,
+  "newRawContentReinspection": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

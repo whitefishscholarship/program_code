@@ -1,0 +1,1344 @@
+{
+  "schemaVersion": 1,
+  "scope": "Current selected-run tool-call metadata only; no page prose/facts reacquired or inspected",
+  "traceSource": "/Users/kelseystuart/.codex/sessions/2026/10/20/rollout-2026-10-20T11-26-59-01a15a5a-258b-7e20-8e62-55b1084f890d.jsonl",
+  "phaseBounds": {
+    "cell51Start": "2026-10-20T18:36:29.973Z",
+    "cell51Terminated": "2026-10-20T18:37:52.808Z",
+    "cell86Start": "2026-10-20T19:06:01.647Z",
+    "cell86Terminated": "2026-10-20T19:11:06.913Z"
+  },
+  "records": [
+    {
+      "traceLine": 353,
+      "toolItemId": "exec-eff3554f-f44d-4386-b432-5eb76059439e",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-001f11e34746535833cb"
+      ],
+      "matchedTargetOrders": [
+        2
+      ],
+      "argumentLocatorSha256": "001f11e34746535833cb5c948c2bdcb525dc7621881a274f012d35b446fbd128",
+      "nativeFileIdSha256": null,
+      "host": "lineworker.com",
+      "startedAtMs": 1792521098395,
+      "completedAtMs": 1792521098778,
+      "eventTimestamp": "2026-10-20T18:31:38.778Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 354,
+      "toolItemId": "exec-8c05264b-19d8-47e7-a5e7-55910deb8e7c",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-000d841ae42c1c9d46e4"
+      ],
+      "matchedTargetOrders": [
+        1
+      ],
+      "argumentLocatorSha256": "000d841ae42c1c9d46e413e8b5ea9ccf34e6a7e6a134c30754cbf8ddd680ff91",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792521098786,
+      "completedAtMs": 1792521099022,
+      "eventTimestamp": "2026-10-20T18:31:39.022Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 355,
+      "toolItemId": "exec-7a0d7362-d228-48a8-afdf-41ca17124a57",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0030dc6deda8cdd8ca2c"
+      ],
+      "matchedTargetOrders": [
+        4
+      ],
+      "argumentLocatorSha256": "0030dc6deda8cdd8ca2cfcd9b0000f0618fb61eda46f7dd0199f2ca014dab60b",
+      "nativeFileIdSha256": null,
+      "host": "foldsofhonor.org",
+      "startedAtMs": 1792521099028,
+      "completedAtMs": 1792521099248,
+      "eventTimestamp": "2026-10-20T18:31:39.248Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 356,
+      "toolItemId": "exec-21dfca64-15d1-4655-818c-281ceeff3ba9",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-01061a6b33be02787ece"
+      ],
+      "matchedTargetOrders": [
+        5
+      ],
+      "argumentLocatorSha256": "01061a6b33be02787ece04416bb0f287603446675c8218ff613829930bdf4f9e",
+      "nativeFileIdSha256": null,
+      "host": "www.ngpa.org",
+      "startedAtMs": 1792521099253,
+      "completedAtMs": 1792521099546,
+      "eventTimestamp": "2026-10-20T18:31:39.546Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 363,
+      "toolItemId": "exec-c88e01ec-1098-400b-af15-34ac49706715",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-045efadb26cab1da7892"
+      ],
+      "matchedTargetOrders": [
+        6
+      ],
+      "argumentLocatorSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "nativeFileIdSha256": null,
+      "host": "www.asianpilots.org",
+      "startedAtMs": 1792521114389,
+      "completedAtMs": 1792521117183,
+      "eventTimestamp": "2026-10-20T18:31:57.183Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 384,
+      "toolItemId": "exec-535dca93-7c29-442a-9ec2-5f92e401c81b",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-001f11e34746535833cb"
+      ],
+      "matchedTargetOrders": [
+        2
+      ],
+      "argumentLocatorSha256": "001f11e34746535833cb5c948c2bdcb525dc7621881a274f012d35b446fbd128",
+      "nativeFileIdSha256": null,
+      "host": "lineworker.com",
+      "startedAtMs": 1792521156199,
+      "completedAtMs": 1792521156393,
+      "eventTimestamp": "2026-10-20T18:32:36.393Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 385,
+      "toolItemId": "exec-0a13f6d0-8bb1-4789-874c-31ffd21335ed",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0030dc6deda8cdd8ca2c"
+      ],
+      "matchedTargetOrders": [
+        4
+      ],
+      "argumentLocatorSha256": "0030dc6deda8cdd8ca2cfcd9b0000f0618fb61eda46f7dd0199f2ca014dab60b",
+      "nativeFileIdSha256": null,
+      "host": "foldsofhonor.org",
+      "startedAtMs": 1792521156398,
+      "completedAtMs": 1792521156551,
+      "eventTimestamp": "2026-10-20T18:32:36.551Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 386,
+      "toolItemId": "exec-656ac58e-c646-4db2-88dc-99322f44d778",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-000d841ae42c1c9d46e4"
+      ],
+      "matchedTargetOrders": [
+        1
+      ],
+      "argumentLocatorSha256": "000d841ae42c1c9d46e413e8b5ea9ccf34e6a7e6a134c30754cbf8ddd680ff91",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792521156559,
+      "completedAtMs": 1792521156743,
+      "eventTimestamp": "2026-10-20T18:32:36.743Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 389,
+      "toolItemId": "exec-9b197a40-7b61-4e4b-bb94-45c6334de689",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-01061a6b33be02787ece"
+      ],
+      "matchedTargetOrders": [
+        5
+      ],
+      "argumentLocatorSha256": "01061a6b33be02787ece04416bb0f287603446675c8218ff613829930bdf4f9e",
+      "nativeFileIdSha256": null,
+      "host": "www.ngpa.org",
+      "startedAtMs": 1792521156749,
+      "completedAtMs": 1792521157202,
+      "eventTimestamp": "2026-10-20T18:32:37.203Z",
+      "status": "failed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 395,
+      "toolItemId": "exec-facb4c46-e516-44d5-b339-d91bd994e98c",
+      "tool": "google_drive.get_file_metadata",
+      "matchedTargetIds": [
+        "sd2-read-065aafdaf3e2b20cb29b"
+      ],
+      "matchedTargetOrders": [
+        9
+      ],
+      "argumentLocatorSha256": null,
+      "nativeFileIdSha256": "03411e1ab43fc685af184437a552c896a133625d93d6600bb3a452aa4036411c",
+      "host": "google-native-connector",
+      "startedAtMs": 1792521174377,
+      "completedAtMs": 1792521174738,
+      "eventTimestamp": "2026-10-20T18:32:54.738Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 414,
+      "toolItemId": "exec-25bb4168-1be7-49ca-b491-0a8b3a0d0120",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-045efadb26cab1da7892"
+      ],
+      "matchedTargetOrders": [
+        6
+      ],
+      "argumentLocatorSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "nativeFileIdSha256": null,
+      "host": "www.asianpilots.org",
+      "startedAtMs": 1792521198642,
+      "completedAtMs": 1792521208090,
+      "eventTimestamp": "2026-10-20T18:33:28.090Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 438,
+      "toolItemId": "exec-d5a8f01e-4919-4b04-9ff1-cc318adb6cca",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0ca56b1a92eea05539af"
+      ],
+      "matchedTargetOrders": [
+        18
+      ],
+      "argumentLocatorSha256": "0ca56b1a92eea05539af6d4172a2de7d33dac00a84fb5f224e105181dbd3f494",
+      "nativeFileIdSha256": null,
+      "host": "nths.org",
+      "startedAtMs": 1792521248179,
+      "completedAtMs": 1792521268336,
+      "eventTimestamp": "2026-10-20T18:34:28.336Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 441,
+      "toolItemId": "exec-99867123-c70f-4fa8-9ccd-3813c6904adc",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-07d061a4d9a481d32eaf"
+      ],
+      "matchedTargetOrders": [
+        15
+      ],
+      "argumentLocatorSha256": "07d061a4d9a481d32eaf53aaa0e4ae39f123894143d1e14ba8c8418f1f10ea20",
+      "nativeFileIdSha256": null,
+      "host": "bold.org",
+      "startedAtMs": 1792521268344,
+      "completedAtMs": 1792521277013,
+      "eventTimestamp": "2026-10-20T18:34:37.013Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 444,
+      "toolItemId": "exec-819d3df6-5c6c-484d-946a-e7e900a1c1f8",
+      "tool": "google_drive.fetch",
+      "matchedTargetIds": [
+        "sd2-read-065aafdaf3e2b20cb29b"
+      ],
+      "matchedTargetOrders": [
+        9
+      ],
+      "argumentLocatorSha256": "065aafdaf3e2b20cb29bad54f24fd8187646827d4e1a2729c5b2678fa4693ccc",
+      "nativeFileIdSha256": null,
+      "host": "drive.google.com",
+      "startedAtMs": 1792521278407,
+      "completedAtMs": 1792521279704,
+      "eventTimestamp": "2026-10-20T18:34:39.704Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 447,
+      "toolItemId": "exec-fad0ae4a-1862-4ab3-a8ce-64c4f8854e91",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-056965468430d391f5e4"
+      ],
+      "matchedTargetOrders": [
+        8
+      ],
+      "argumentLocatorSha256": "056965468430d391f5e45a20d105258343d12c4a471d2046cfb8221dbb868cb0",
+      "nativeFileIdSha256": null,
+      "host": "www.dawson.edu",
+      "startedAtMs": 1792521277019,
+      "completedAtMs": 1792521286205,
+      "eventTimestamp": "2026-10-20T18:34:46.205Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 448,
+      "toolItemId": "exec-6ad68d51-1633-414f-93bc-8270a41842d5",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-068b268a18d9f73f4740"
+      ],
+      "matchedTargetOrders": [
+        11
+      ],
+      "argumentLocatorSha256": "068b268a18d9f73f4740c8e0cb95f508bef646ef9a3cea3ff824dd94abd1b385",
+      "nativeFileIdSha256": null,
+      "host": "www.allamericanpestcontrol.com",
+      "startedAtMs": 1792521286211,
+      "completedAtMs": 1792521295835,
+      "eventTimestamp": "2026-10-20T18:34:55.835Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 479,
+      "toolItemId": "exec-14d42b95-9c32-45f3-86cb-642f2aef9818",
+      "tool": "google_drive.get_file_metadata",
+      "matchedTargetIds": [
+        "sd2-read-06669337016bd8d40c63"
+      ],
+      "matchedTargetOrders": [
+        10
+      ],
+      "argumentLocatorSha256": null,
+      "nativeFileIdSha256": "bffbfa17c359de1c727880a5b6c81215a2d34ade51b6052ce6d9b34c587a1467",
+      "host": "google-native-connector",
+      "startedAtMs": 1792521389993,
+      "completedAtMs": 1792521390679,
+      "eventTimestamp": "2026-10-20T18:36:30.679Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 484,
+      "toolItemId": "exec-d3e114bc-62aa-4117-a30c-49d28da1d93e",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0cf251bfb86bf9e77279"
+      ],
+      "matchedTargetOrders": [
+        19
+      ],
+      "argumentLocatorSha256": "0cf251bfb86bf9e77279828f7f6e24a8cb41e0290ed9b19a3377526c6840dc00",
+      "nativeFileIdSha256": null,
+      "host": "foldsofhonor.org",
+      "startedAtMs": 1792521390685,
+      "completedAtMs": 1792521401554,
+      "eventTimestamp": "2026-10-20T18:36:41.554Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 490,
+      "toolItemId": "exec-4e27f8a6-1c63-4e5c-be82-6408e1e95ab0",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0e26d146d1ea5ad5a44f"
+      ],
+      "matchedTargetOrders": [
+        24
+      ],
+      "argumentLocatorSha256": "0e26d146d1ea5ad5a44f859476b0e091c2af46ee6a41fa161635a85bdeb75067",
+      "nativeFileIdSha256": null,
+      "host": "kitchencabinetkings.com",
+      "startedAtMs": 1792521401559,
+      "completedAtMs": 1792521410470,
+      "eventTimestamp": "2026-10-20T18:36:50.470Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 491,
+      "toolItemId": "exec-b9228bf2-72ee-4967-9acf-b702d1d6fce7",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0d35d7a89e5ae0cc16d8"
+      ],
+      "matchedTargetOrders": [
+        21
+      ],
+      "argumentLocatorSha256": "0d35d7a89e5ae0cc16d856e9ddbf27a28a471842dbd4a7bd9cba09fb1ecd5c09",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792521410477,
+      "completedAtMs": 1792521418592,
+      "eventTimestamp": "2026-10-20T18:36:58.592Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 494,
+      "toolItemId": "exec-ab32ead4-dbe0-4025-b3c1-8ba77e667e94",
+      "tool": "google_drive.fetch",
+      "matchedTargetIds": [
+        "sd2-read-06669337016bd8d40c63"
+      ],
+      "matchedTargetOrders": [
+        10
+      ],
+      "argumentLocatorSha256": "06669337016bd8d40c63d379cef8f6fc6433f5f284bfc5634bff54cebdf6062e",
+      "nativeFileIdSha256": null,
+      "host": "drive.google.com",
+      "startedAtMs": 1792521418598,
+      "completedAtMs": 1792521420144,
+      "eventTimestamp": "2026-10-20T18:37:00.144Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 497,
+      "toolItemId": "exec-04c159e0-01ea-4791-b45a-231875e3baaa",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0f0703778f83f3229714"
+      ],
+      "matchedTargetOrders": [
+        28
+      ],
+      "argumentLocatorSha256": "0f0703778f83f32297147a3823725fb6e2189aa51a31163fff3235c2506c2310",
+      "nativeFileIdSha256": null,
+      "host": "devsupport.blackmountainsoftware.com",
+      "startedAtMs": 1792521420161,
+      "completedAtMs": 1792521430583,
+      "eventTimestamp": "2026-10-20T18:37:10.583Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 498,
+      "toolItemId": "exec-14b37108-4855-4483-9042-a556e69e352b",
+      "tool": "google_drive.get_file_metadata",
+      "matchedTargetIds": [
+        "sd2-read-0c63cc68d6a2687afd79"
+      ],
+      "matchedTargetOrders": [
+        17
+      ],
+      "argumentLocatorSha256": null,
+      "nativeFileIdSha256": "07e584f2116c4245b9f279d61520834df01bf567221d7d73e113386bbb2206d1",
+      "host": "google-native-connector",
+      "startedAtMs": 1792521430589,
+      "completedAtMs": 1792521430978,
+      "eventTimestamp": "2026-10-20T18:37:10.978Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 499,
+      "toolItemId": "exec-d5388643-825f-49c1-8289-c67f6d02f235",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0ecb63a87a257aeb15ea"
+      ],
+      "matchedTargetOrders": [
+        26
+      ],
+      "argumentLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "nativeFileIdSha256": null,
+      "host": "montanaffa.org",
+      "startedAtMs": 1792521430983,
+      "completedAtMs": 1792521440110,
+      "eventTimestamp": "2026-10-20T18:37:20.110Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 500,
+      "toolItemId": "exec-c786e79f-5242-40d2-9076-8cef402ca9fe",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-10985f6fc47c008d4fc4"
+      ],
+      "matchedTargetOrders": [
+        30
+      ],
+      "argumentLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "nativeFileIdSha256": null,
+      "host": "gtmf.org",
+      "startedAtMs": 1792521440116,
+      "completedAtMs": 1792521448170,
+      "eventTimestamp": "2026-10-20T18:37:28.170Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 506,
+      "toolItemId": "exec-24e9c573-9649-4b35-81a8-b64dc86d6089",
+      "tool": "google_drive.fetch",
+      "matchedTargetIds": [
+        "sd2-read-0c63cc68d6a2687afd79"
+      ],
+      "matchedTargetOrders": [
+        17
+      ],
+      "argumentLocatorSha256": "0c63cc68d6a2687afd79ee06aa7c57694a4a47ec392b7d29bd4640e2b3631fc8",
+      "nativeFileIdSha256": null,
+      "host": "drive.google.com",
+      "startedAtMs": 1792521448184,
+      "completedAtMs": 1792521449537,
+      "eventTimestamp": "2026-10-20T18:37:29.537Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 507,
+      "toolItemId": "exec-b541c2a4-8f54-491b-b7c3-8c95dec2f004",
+      "tool": "google_drive.get_file_metadata",
+      "matchedTargetIds": [
+        "sd2-read-0f3fae09cf3cb40aa59a"
+      ],
+      "matchedTargetOrders": [
+        29
+      ],
+      "argumentLocatorSha256": null,
+      "nativeFileIdSha256": "ef0c22bd72f8f45153000138ff71747440f4f90a985ab7e1faf0bd4183b212fc",
+      "host": "google-native-connector",
+      "startedAtMs": 1792521449557,
+      "completedAtMs": 1792521449958,
+      "eventTimestamp": "2026-10-20T18:37:29.959Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 508,
+      "toolItemId": "exec-0245b0a1-aa6a-4f42-bfec-f9b3ff41a2f9",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-10dedfdb8ad762739dea"
+      ],
+      "matchedTargetOrders": [
+        31
+      ],
+      "argumentLocatorSha256": "10dedfdb8ad762739dea442c5d17e6b263dd395be4ecf6884579554b021507dd",
+      "nativeFileIdSha256": null,
+      "host": "mtcf.org",
+      "startedAtMs": 1792521449963,
+      "completedAtMs": 1792521458973,
+      "eventTimestamp": "2026-10-20T18:37:38.974Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 514,
+      "toolItemId": "exec-b05f3adf-ba3a-4a77-8d86-51fc9b857fa2",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-12ed182c13c1589245dc"
+      ],
+      "matchedTargetOrders": [
+        34
+      ],
+      "argumentLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "nativeFileIdSha256": null,
+      "host": "serve.mt.gov",
+      "startedAtMs": 1792521458983,
+      "completedAtMs": 1792521467834,
+      "eventTimestamp": "2026-10-20T18:37:47.834Z",
+      "status": "completed",
+      "phase": "cell51",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 776,
+      "toolItemId": "exec-6c90a82f-b5e2-47f8-9e6f-2d3ef8b036b1",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-b9994cd63d16a61d8a82"
+      ],
+      "matchedTargetOrders": [
+        295
+      ],
+      "argumentLocatorSha256": "b9994cd63d16a61d8a82b71e6ba94f944f8bf901e8acb37c52fdbec108f5d1f8",
+      "nativeFileIdSha256": null,
+      "host": "revenue.mt.gov",
+      "startedAtMs": 1792522203504,
+      "completedAtMs": 1792522212306,
+      "eventTimestamp": "2026-10-20T18:50:12.307Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 782,
+      "toolItemId": "exec-188f0141-9a03-4a4b-ae4b-f2e6e37ad376",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-609ec378d6d927aa2778"
+      ],
+      "matchedTargetOrders": [
+        146
+      ],
+      "argumentLocatorSha256": "609ec378d6d927aa2778697e7e42a9a508d5b07e0e432b6a6d90debac3c7685c",
+      "nativeFileIdSha256": null,
+      "host": "www.montana.edu",
+      "startedAtMs": 1792522212315,
+      "completedAtMs": 1792522219997,
+      "eventTimestamp": "2026-10-20T18:50:19.997Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 783,
+      "toolItemId": "exec-7437e138-ee7a-43f1-a8d5-74f7e21e14bc",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-3c94a3d4fff0cf554121"
+      ],
+      "matchedTargetOrders": [
+        100
+      ],
+      "argumentLocatorSha256": "3c94a3d4fff0cf554121cebca80c1c56ac29565b4579b4b5563e4e675d2a2781",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792522220002,
+      "completedAtMs": 1792522232128,
+      "eventTimestamp": "2026-10-20T18:50:32.129Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 786,
+      "toolItemId": "exec-7566fdf7-7f05-4866-b2f3-159b9bc2d79a",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-8ec9b1da07f3a3a8f70d"
+      ],
+      "matchedTargetOrders": [
+        227
+      ],
+      "argumentLocatorSha256": "8ec9b1da07f3a3a8f70d88b9286df5747f11716c20cf0e6c492fbe85d1f99112",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792522232148,
+      "completedAtMs": 1792522240692,
+      "eventTimestamp": "2026-10-20T18:50:40.692Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 789,
+      "toolItemId": "exec-436cae31-67a3-4cc3-a377-b3e7a6d882ff",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-7d1e0325681210e19ec7"
+      ],
+      "matchedTargetOrders": [
+        200
+      ],
+      "argumentLocatorSha256": "7d1e0325681210e19ec7a1c2eb880e54544a440511f4e8cd6d90731751d81afd",
+      "nativeFileIdSha256": null,
+      "host": "www.montana.edu",
+      "startedAtMs": 1792522240695,
+      "completedAtMs": 1792522248746,
+      "eventTimestamp": "2026-10-20T18:50:48.746Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 796,
+      "toolItemId": "exec-2a0c7ddc-1f4e-4225-9a52-a1023e240411",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-90d85fde284219f48eca"
+      ],
+      "matchedTargetOrders": [
+        233
+      ],
+      "argumentLocatorSha256": "90d85fde284219f48eca08a4cd13fe3a5850c2077f2134276984358136c7f5f0",
+      "nativeFileIdSha256": null,
+      "host": "www.montana.edu",
+      "startedAtMs": 1792522248757,
+      "completedAtMs": 1792522260249,
+      "eventTimestamp": "2026-10-20T18:51:00.249Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 799,
+      "toolItemId": "exec-12015c1e-0bc2-4989-be2f-e7329e1faad5",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-b636edfd244c6940f9b1"
+      ],
+      "matchedTargetOrders": [
+        292
+      ],
+      "argumentLocatorSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "nativeFileIdSha256": null,
+      "host": "www.umt.edu",
+      "startedAtMs": 1792522260255,
+      "completedAtMs": 1792522269269,
+      "eventTimestamp": "2026-10-20T18:51:09.269Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 802,
+      "toolItemId": "exec-91e01f97-7e94-4ecd-b946-a481d49b74ab",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-931da39486e45635990c"
+      ],
+      "matchedTargetOrders": [
+        234
+      ],
+      "argumentLocatorSha256": "931da39486e45635990c31fdfdd80e1c02e92e66e124977bbbe2edee3a932a11",
+      "nativeFileIdSha256": null,
+      "host": "www.montana.edu",
+      "startedAtMs": 1792522269288,
+      "completedAtMs": 1792522277838,
+      "eventTimestamp": "2026-10-20T18:51:17.838Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 803,
+      "toolItemId": "exec-8398b460-a585-491d-8fe0-c63ded460c06",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-dd9981c2ea3fb92c48b2"
+      ],
+      "matchedTargetOrders": [
+        348
+      ],
+      "argumentLocatorSha256": "dd9981c2ea3fb92c48b25d7a1683ca50c8a83254739e89400a905b75718d9545",
+      "nativeFileIdSha256": null,
+      "host": "www.montana.edu",
+      "startedAtMs": 1792522277855,
+      "completedAtMs": 1792522286469,
+      "eventTimestamp": "2026-10-20T18:51:26.469Z",
+      "status": "completed",
+      "phase": "other_selected_calls",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1043,
+      "toolItemId": "exec-9ba2660b-27f8-458c-aa23-d396c9001d51",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-10985f6fc47c008d4fc4"
+      ],
+      "matchedTargetOrders": [
+        30
+      ],
+      "argumentLocatorSha256": "10985f6fc47c008d4fc4f01d87f6740ce099e6d33eccefc92b80fb1426b8803d",
+      "nativeFileIdSha256": null,
+      "host": "gtmf.org",
+      "startedAtMs": 1792523161668,
+      "completedAtMs": 1792523171616,
+      "eventTimestamp": "2026-10-20T19:06:11.616Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1046,
+      "toolItemId": "exec-97408c7b-7d05-493d-b567-ea291b37f0a3",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-119ae832d51f13b62c26"
+      ],
+      "matchedTargetOrders": [
+        32
+      ],
+      "argumentLocatorSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+      "nativeFileIdSha256": null,
+      "host": "mtech.edu",
+      "startedAtMs": 1792523171623,
+      "completedAtMs": 1792523181583,
+      "eventTimestamp": "2026-10-20T19:06:21.583Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1049,
+      "toolItemId": "exec-ed8239c0-920e-491c-b3a3-bdc30e8cc20c",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-0ecb63a87a257aeb15ea"
+      ],
+      "matchedTargetOrders": [
+        26
+      ],
+      "argumentLocatorSha256": "0ecb63a87a257aeb15eaa32b574a0ff2ff72484eb236bb2c3e462bab8942090a",
+      "nativeFileIdSha256": null,
+      "host": "montanaffa.org",
+      "startedAtMs": 1792523181587,
+      "completedAtMs": 1792523191493,
+      "eventTimestamp": "2026-10-20T19:06:31.493Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1052,
+      "toolItemId": "exec-7bc29eee-491e-4e2e-9158-b0150d266304",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-12ed182c13c1589245dc"
+      ],
+      "matchedTargetOrders": [
+        34
+      ],
+      "argumentLocatorSha256": "12ed182c13c1589245dce2647387800584ad0237fd248e09c31e356773f8cd14",
+      "nativeFileIdSha256": null,
+      "host": "serve.mt.gov",
+      "startedAtMs": 1792523191501,
+      "completedAtMs": 1792523200095,
+      "eventTimestamp": "2026-10-20T19:06:40.095Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1057,
+      "toolItemId": "exec-a6b8c770-5ecf-409d-85c4-0097b8fb6c9e",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-1991755adb0fad741a9f"
+      ],
+      "matchedTargetOrders": [
+        47
+      ],
+      "argumentLocatorSha256": "1991755adb0fad741a9f23fee0834eaa87de75b3148fd8a8fac05bc5bf49a505",
+      "nativeFileIdSha256": null,
+      "host": "c4e.colostate.edu",
+      "startedAtMs": 1792523200114,
+      "completedAtMs": 1792523233110,
+      "eventTimestamp": "2026-10-20T19:07:13.110Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1060,
+      "toolItemId": "exec-716944be-4ffe-4ef8-a5e3-952d3bfe7845",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-18288ac10d37f3b37377"
+      ],
+      "matchedTargetOrders": [
+        43
+      ],
+      "argumentLocatorSha256": "18288ac10d37f3b37377b277bb7a43d3796228427b4b6230a9abd5e465b079a3",
+      "nativeFileIdSha256": null,
+      "host": "leroywhomerjr.org",
+      "startedAtMs": 1792523233119,
+      "completedAtMs": 1792523243719,
+      "eventTimestamp": "2026-10-20T19:07:23.719Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1063,
+      "toolItemId": "exec-ab73ef8b-5154-4115-9868-8d1c4742a834",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-1323707329dde1d64ee0"
+      ],
+      "matchedTargetOrders": [
+        35
+      ],
+      "argumentLocatorSha256": "1323707329dde1d64ee0f74e5eb296694e77055c75b01108e40e38635aebfa8f",
+      "nativeFileIdSha256": null,
+      "host": "www.mikeroweworks.org",
+      "startedAtMs": 1792523243727,
+      "completedAtMs": 1792523263428,
+      "eventTimestamp": "2026-10-20T19:07:43.429Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1064,
+      "toolItemId": "exec-a43d147e-b120-4d00-ae16-cbfbc164a973",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-1de162b0b9e04e373198"
+      ],
+      "matchedTargetOrders": [
+        54
+      ],
+      "argumentLocatorSha256": "1de162b0b9e04e373198607666897b41a4f33191eb9e0020ec626e5747830583",
+      "nativeFileIdSha256": null,
+      "host": "www.nationalhonorsociety.org",
+      "startedAtMs": 1792523263437,
+      "completedAtMs": 1792523272216,
+      "eventTimestamp": "2026-10-20T19:07:52.216Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1068,
+      "toolItemId": "exec-8f4456e3-280f-4db0-9608-d134a9919591",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-2b9a69050b35a081dba8"
+      ],
+      "matchedTargetOrders": [
+        76
+      ],
+      "argumentLocatorSha256": "2b9a69050b35a081dba8e76bacf11ceff7ca95ca050225388f0ad3515fc44950",
+      "nativeFileIdSha256": null,
+      "host": "scholarshipamerica.org",
+      "startedAtMs": 1792523272327,
+      "completedAtMs": 1792523282827,
+      "eventTimestamp": "2026-10-20T19:08:02.828Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1081,
+      "toolItemId": "exec-29a97e85-fe2a-4188-8b79-dba9b74c2f89",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-27d545d499780873f0ca"
+      ],
+      "matchedTargetOrders": [
+        69
+      ],
+      "argumentLocatorSha256": "27d545d499780873f0ca8ef5c3b2fd5eb6e1a35ad67566ca1717d32b73147e55",
+      "nativeFileIdSha256": null,
+      "host": "officialsdepot.com",
+      "startedAtMs": 1792523282835,
+      "completedAtMs": 1792523294759,
+      "eventTimestamp": "2026-10-20T19:08:14.759Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1088,
+      "toolItemId": "exec-23fcd4b1-e831-424f-992a-8646646976ce",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-30a545edc90383232f9a"
+      ],
+      "matchedTargetOrders": [
+        82
+      ],
+      "argumentLocatorSha256": "30a545edc90383232f9ac81592a63d0b0fd7eb96bed107f573100e3ea82bc7b3",
+      "nativeFileIdSha256": null,
+      "host": "thendalliance.org",
+      "startedAtMs": 1792523294766,
+      "completedAtMs": 1792523306291,
+      "eventTimestamp": "2026-10-20T19:08:26.291Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1089,
+      "toolItemId": "exec-48baa44f-9160-44f4-a828-e047f7ec369a",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-2eaa129ee53487ddd83d"
+      ],
+      "matchedTargetOrders": [
+        79
+      ],
+      "argumentLocatorSha256": "2eaa129ee53487ddd83d8aabbdc2ec6528acb5c9e44fe2b251c684255e9b6bf5",
+      "nativeFileIdSha256": null,
+      "host": "www.elks.org",
+      "startedAtMs": 1792523306303,
+      "completedAtMs": 1792523313887,
+      "eventTimestamp": "2026-10-20T19:08:33.888Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1094,
+      "toolItemId": "exec-8ee9bf50-2b04-46d5-9a08-0e97183fd21f",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-318a06e814ce8b8feb30"
+      ],
+      "matchedTargetOrders": [
+        83
+      ],
+      "argumentLocatorSha256": "318a06e814ce8b8feb30223b1137379f556fdefaca5f879f375f58d6c9a59f19",
+      "nativeFileIdSha256": null,
+      "host": "www.duckbrand.com",
+      "startedAtMs": 1792523313931,
+      "completedAtMs": 1792523322630,
+      "eventTimestamp": "2026-10-20T19:08:42.630Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1097,
+      "toolItemId": "exec-2bb5f99b-a9eb-4556-a585-29dae84644e4",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-342285b33a6ae54f2976"
+      ],
+      "matchedTargetOrders": [
+        88
+      ],
+      "argumentLocatorSha256": "342285b33a6ae54f2976217f09e472d0d4e05d6cb3073e1f5bbbcabdaaeec4f6",
+      "nativeFileIdSha256": null,
+      "host": "nesa.org",
+      "startedAtMs": 1792523322637,
+      "completedAtMs": 1792523331263,
+      "eventTimestamp": "2026-10-20T19:08:51.263Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1100,
+      "toolItemId": "exec-55094ad3-ca4f-42b3-b550-96850fc28ca6",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-37a44ecac0ed5d564ac2"
+      ],
+      "matchedTargetOrders": [
+        91
+      ],
+      "argumentLocatorSha256": "37a44ecac0ed5d564ac2ee4ea6de11cd9b9a999bd7dfeba654dfa4a96d5eb486",
+      "nativeFileIdSha256": null,
+      "host": "www.healthproductsforyou.com",
+      "startedAtMs": 1792523331268,
+      "completedAtMs": 1792523343465,
+      "eventTimestamp": "2026-10-20T19:09:03.465Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1105,
+      "toolItemId": "exec-19e657ce-e851-4820-8b3c-e1f3a571cf2c",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-3a653520c81b8fb37b24"
+      ],
+      "matchedTargetOrders": [
+        94
+      ],
+      "argumentLocatorSha256": "3a653520c81b8fb37b2414f7a0e5a5165e9a4331f725d9ea5528fccb67b45b7a",
+      "nativeFileIdSha256": null,
+      "host": "nths.org",
+      "startedAtMs": 1792523343470,
+      "completedAtMs": 1792523358506,
+      "eventTimestamp": "2026-10-20T19:09:18.506Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1110,
+      "toolItemId": "exec-3cc12c8a-5a7d-41c8-9707-a1be5bc6d0df",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-4e69827d99e9582d05dd"
+      ],
+      "matchedTargetOrders": [
+        122
+      ],
+      "argumentLocatorSha256": "4e69827d99e9582d05ddb312947db9173cbc7a3bf3381150094f34e3a949525f",
+      "nativeFileIdSha256": null,
+      "host": "www.goarmy.com",
+      "startedAtMs": 1792523358527,
+      "completedAtMs": 1792523369231,
+      "eventTimestamp": "2026-10-20T19:09:29.231Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1111,
+      "toolItemId": "exec-7114d2b4-84cb-43d5-8754-24edf4890c19",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-45fda935d4f3c2f74988"
+      ],
+      "matchedTargetOrders": [
+        107
+      ],
+      "argumentLocatorSha256": "45fda935d4f3c2f74988661f1f015ee0d6d6cc2606b2c7505440b2007e15c0b8",
+      "nativeFileIdSha256": null,
+      "host": "umontana.edu",
+      "startedAtMs": 1792523369236,
+      "completedAtMs": 1792523379646,
+      "eventTimestamp": "2026-10-20T19:09:39.646Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1112,
+      "toolItemId": "exec-87ccc08e-7bde-45ac-ae91-5cbb280db3ac",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-3eee78ad8ccd3d0fb353"
+      ],
+      "matchedTargetOrders": [
+        103
+      ],
+      "argumentLocatorSha256": "3eee78ad8ccd3d0fb3535cb5a7860d641d31975da4f4d8220a429fd812098ea7",
+      "nativeFileIdSha256": null,
+      "host": "pointfoundation.org",
+      "startedAtMs": 1792523379653,
+      "completedAtMs": 1792523388980,
+      "eventTimestamp": "2026-10-20T19:09:48.980Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1116,
+      "toolItemId": "exec-936e0bc5-d20c-4ad3-b126-a79fa14d40f3",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-3ff00be1f424b15625e8"
+      ],
+      "matchedTargetOrders": [
+        105
+      ],
+      "argumentLocatorSha256": "3ff00be1f424b15625e8f2dd21241c2ab1d1aa09a00922eccc9a6e34db436981",
+      "nativeFileIdSha256": null,
+      "host": "bringbackthetrades.org",
+      "startedAtMs": 1792523388987,
+      "completedAtMs": 1792523398008,
+      "eventTimestamp": "2026-10-20T19:09:58.008Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1128,
+      "toolItemId": "exec-6293e431-223c-4d81-8aa6-f3d37f996087",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-4f2b36a607199514758b"
+      ],
+      "matchedTargetOrders": [
+        124
+      ],
+      "argumentLocatorSha256": "4f2b36a607199514758b6ade21394b4e8b47a5ed0f1ebe953dfeb427d1ba0c27",
+      "nativeFileIdSha256": null,
+      "host": "www.fisherhouse.org",
+      "startedAtMs": 1792523398027,
+      "completedAtMs": 1792523414582,
+      "eventTimestamp": "2026-10-20T19:10:14.582Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1138,
+      "toolItemId": "exec-8fb1dc8b-39af-4289-9b0a-fd616c85b7b1",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-51ddb13472f971301125"
+      ],
+      "matchedTargetOrders": [
+        128
+      ],
+      "argumentLocatorSha256": "51ddb13472f9713011253daa616ce3b7ec165884984469ec460ba0b246e6bda0",
+      "nativeFileIdSha256": null,
+      "host": "morelli.foundation",
+      "startedAtMs": 1792523414590,
+      "completedAtMs": 1792523424208,
+      "eventTimestamp": "2026-10-20T19:10:24.209Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1148,
+      "toolItemId": "exec-ef88502c-4f01-4ce7-a5e7-ae99db161a93",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-4e97a9eaa683cfd171c0"
+      ],
+      "matchedTargetOrders": [
+        123
+      ],
+      "argumentLocatorSha256": "4e97a9eaa683cfd171c057e6ca339a473fa5bcee405046e0c9574688f1141a2a",
+      "nativeFileIdSha256": null,
+      "host": "www.mus.edu",
+      "startedAtMs": 1792523424214,
+      "completedAtMs": 1792523434782,
+      "eventTimestamp": "2026-10-20T19:10:34.782Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1154,
+      "toolItemId": "exec-12e27466-f628-4f68-9f5f-9ea728e651e5",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-524e527447e443687427"
+      ],
+      "matchedTargetOrders": [
+        129
+      ],
+      "argumentLocatorSha256": "524e527447e4436874275b89a852f956c57f58e8572e35327f4e814a9432b01c",
+      "nativeFileIdSha256": null,
+      "host": "www.wtsinternational.org",
+      "startedAtMs": 1792523434790,
+      "completedAtMs": 1792523442560,
+      "eventTimestamp": "2026-10-20T19:10:42.560Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1158,
+      "toolItemId": "exec-dc1ce0f2-8935-4e2c-8769-974e6c9f15c0",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-5031c37ec0615ac9ec7c"
+      ],
+      "matchedTargetOrders": [
+        127
+      ],
+      "argumentLocatorSha256": "5031c37ec0615ac9ec7cff52b232f3e0738086897e0341ac3783602b01b61871",
+      "nativeFileIdSha256": null,
+      "host": "www.fisherhouse.org",
+      "startedAtMs": 1792523442603,
+      "completedAtMs": 1792523452626,
+      "eventTimestamp": "2026-10-20T19:10:52.626Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    },
+    {
+      "traceLine": 1161,
+      "toolItemId": "exec-de50d335-adf4-4a40-9f7d-7f457dd1efe5",
+      "tool": "firecrawl.firecrawl_scrape",
+      "matchedTargetIds": [
+        "sd2-read-591262dd73cff3135700"
+      ],
+      "matchedTargetOrders": [
+        136
+      ],
+      "argumentLocatorSha256": "591262dd73cff3135700049154e43bdb7366e61af440a8dffe2780f338f6de3f",
+      "nativeFileIdSha256": null,
+      "host": "www.elks.org",
+      "startedAtMs": 1792523452632,
+      "completedAtMs": 1792523460551,
+      "eventTimestamp": "2026-10-20T19:11:00.551Z",
+      "status": "completed",
+      "phase": "cell86",
+      "rawProviderBodyNotInspectedForFacts": true
+    }
+  ],
+  "exactCompletedToolCallRecords": 64,
+  "toolCounts": {
+    "firecrawl.firecrawl_scrape": 57,
+    "google_drive.get_file_metadata": 4,
+    "google_drive.fetch": 3
+  },
+  "phaseCounts": {
+    "other_selected_calls": 25,
+    "cell51": 13,
+    "cell86": 26
+  },
+  "ambiguousNativeAssignments": 0,
+  "confirmedRepeatedPublicTargets": [
+    {
+      "targetId": "sd2-read-0ecb63a87a257aeb15ea",
+      "order": 26,
+      "callCount": 2,
+      "toolItemIds": [
+        "exec-d5388643-825f-49c1-8289-c67f6d02f235",
+        "exec-ed8239c0-920e-491c-b3a3-bdc30e8cc20c"
+      ],
+      "reason": "Same frozen public locator dispatched in interrupted cell51 and later cell86; no temporary transport retry basis retained."
+    },
+    {
+      "targetId": "sd2-read-10985f6fc47c008d4fc4",
+      "order": 30,
+      "callCount": 2,
+      "toolItemIds": [
+        "exec-c786e79f-5242-40d2-9076-8cef402ca9fe",
+        "exec-9ba2660b-27f8-458c-aa23-d396c9001d51"
+      ],
+      "reason": "Same frozen public locator dispatched in interrupted cell51 and later cell86; no temporary transport retry basis retained."
+    },
+    {
+      "targetId": "sd2-read-12ed182c13c1589245dc",
+      "order": 34,
+      "callCount": 2,
+      "toolItemIds": [
+        "exec-b05f3adf-ba3a-4a77-8d86-51fc9b857fa2",
+        "exec-7bc29eee-491e-4e2e-9158-b0150d266304"
+      ],
+      "reason": "Same frozen public locator dispatched in interrupted cell51 and later cell86; no temporary transport retry basis retained."
+    }
+  ],
+  "maximumObservedExplicitToolCallConcurrency": 2,
+  "underlyingHttpRequests": "UNMEASURED",
+  "doesNotProveNoUnloggedInFlightDispatch": true,
+  "sourceExecutionAcceptance": false,
+  "allOriginalHoldsRetained": true,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0
+}

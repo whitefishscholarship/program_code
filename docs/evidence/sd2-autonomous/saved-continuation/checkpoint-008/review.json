@@ -1,0 +1,139 @@
+{
+  "outcome": "PASS",
+  "reviewerTask": "/root/sd2_continuation008_review",
+  "reviewedAt": "2026-10-19T19:24:23Z",
+  "scope": "Independent acceptance of group008 local saved-evidence comparisons only; no canonical stage, fact, identity or release acceptance.",
+  "freshContext": true,
+  "readOnly": true,
+  "authoredCandidate": false,
+  "editedCandidate": false,
+  "binding": {
+    "entryCommit": "0bfc6c63d0cc6aeb05336f52aeb7416af2476ed8",
+    "candidateCommit": "dc1cc49775b5d61ac9be6b69e06a3e2f961e3b88",
+    "candidateTree": "f79305f7ad55dc527dce742a88be9343fb8f6cdd",
+    "manifestSha256": "d6ef9500be5366d75dedc03a55c55d1a7f56561e1af80e40ff53b8412a36a9d5",
+    "completeDiffSha256": "3da762ae155435ff297acfa49256d489473bfe077d35d911f02beeadf6eec47f",
+    "completeDiffBytes": 4000997,
+    "changedFilesVerified": 15,
+    "allChangedBlobsModesBytesAndHashesVerified": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "coverage": {
+    "orderedScope": [141, 160],
+    "inputs": 20,
+    "uniqueFieldOccurrences": 462,
+    "derivedSourceOccurrences": 293,
+    "savedSanitizedArtifacts": 7,
+    "categoryCounts": {
+      "existing evidence consistent": 28,
+      "applicability/identity unresolved": 167,
+      "evidence unavailable": 249,
+      "existing evidence conflicting": 18
+    },
+    "allOriginalEnvelopesAndRoutesCompared": true,
+    "allEvidenceOffsetsHashesAndDerivedViewsVerified": true,
+    "allMinimumProofRoutesRetainHoldsAndSelectNoRead": true,
+    "semanticReview": [
+      "All 28 positive decisions are supported within their original limited scopes.",
+      "LPA missing-name and parent-child holds remain explicit. Three variable-amount envelopes remain unresolved; USD denomination is not inferred from Varies. The saved source registry distinguishes five retrieved headings from four retained headings.",
+      "Rollins amount alternatives, high-school-senior scope, exact January 15 2027 23:59 EST deadline and late-response rule are supported. Differing Tally locators remain unresolved.",
+      "BLF Gold Star Senior eligibility and direct academic-institution payment are supported. Other tracks, readable-conversion limits, redacted locator and incomplete cycle/checklist evidence remain held.",
+      "NGPA tiered amounts, recipient slots and child eligibility remain distinct. Advocacy wording creates no inferred applicant-gender restriction. All nine cycle and nine materials conflicts remain unresolved.",
+      "No unavailable field is treated as source silence, false eligibility, unrestricted eligibility or current truth."
+    ],
+    "continuationComparedInputs": 160,
+    "continuationComparedFields": 3151,
+    "cumulativeComparedFieldOccurrences": 3557,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0
+  },
+  "preservation": {
+    "unchangedEngineVerify8": "PASS",
+    "reviewBound": false,
+    "protectedEntryFiles": 2647,
+    "allPriorBytesModesAndReviewBindingsPreserved": true,
+    "threeHandoffHistoriesAppendOnly": true,
+    "predecessorReceipt": {
+      "group": 7,
+      "receiptCommit": "0bfc6c63d0cc6aeb05336f52aeb7416af2476ed8",
+      "candidateCommit": "1e835d0a9359b09742ff53ff2bb28d221fb8ff91",
+      "directChildTwoFileReceiptVerified": true,
+      "freshReviewBoundPassCapturedAt": "2026-10-19T19:20:05.202349+00:00",
+      "capturedBeforeGroup008Paths": true
+    },
+    "originalResearchInputs": 406,
+    "originalResearchCursor": 406,
+    "originalNextResearchInput": null,
+    "originalFieldHolds": 7406,
+    "originalIdentityHolds": 406,
+    "originalAttentionRowsAndSupplementsPreserved": true,
+    "originalM1Records": 437,
+    "originalM1Pins": 12,
+    "originalCustodyPins": 71,
+    "newCustodyAvailabilityClaim": false,
+    "originalOwnersTriggersPathsActionsAndGatesPreserved": true,
+    "historicalVerifiersWidened": false,
+    "SD3Started": false,
+    "externalEffects": false
+  },
+  "verification": {
+    "engineVerify8": {
+      "exitCode": 0,
+      "completedAt": "2026-10-19T19:22:39.441385+00:00"
+    },
+    "completeCandidateDiffCheck": {
+      "exitCode": 0
+    },
+    "independentRequiredApplicationChecks": {
+      "plan": "BLOCKED_ENVIRONMENT: exit127, missing tsx",
+      "typecheck": "BLOCKED_ENVIRONMENT: exit127, missing tsc",
+      "tests": "BLOCKED_ENVIRONMENT: exit127, missing tsx",
+      "build": "BLOCKED_ENVIRONMENT: exit127, missing next"
+    },
+    "freshAndSharedApplicationReceiptHashesVerified": true,
+    "installationRepairOrWaiver": false,
+    "repositoryMutationsByReviewer": 0
+  },
+  "limits": [
+    "Saved sanitized-source consistency does not establish raw/native/visual completeness, source silence, current offerings, public access, sponsor continuity, route usability or accepted identity.",
+    "Application checks remain unfulfilled. Historical IPC/build EPERM and fresh authenticated main/target gates remain open.",
+    "Workbook preservation, recovery, permissions, human/canonical/publication/student/M1/SD5 and external-effect gates retain their original owners and triggers.",
+    "Full SD2 remains incomplete. The additional independent exact386-input/7062-field union audit remains mandatory after all20 groups.",
+    "The current manifest is untracked pending the author's direct-child two-file local review receipt; that receipt has not yet been created or reviewed."
+  ],
+  "nextPointer": {
+    "owner": "Codex",
+    "trigger": "Matching group008 review saved in its valid direct-child local receipt",
+    "action": "Run unchanged engine.py verify 8 --review-bound at that receipt tip before creating group009 paths, then continue the already-authorized scope automatically.",
+    "group": 9,
+    "scopeOrder": 161,
+    "packetPath": "docs/evidence/sd2-autonomous/checkpoint-010.json",
+    "recordPointer": "/records/0",
+    "savedInputKey": "saved-405588227-row-184",
+    "groupInputs": 20,
+    "groupFields": 444,
+    "remainingInputs": 226,
+    "remainingFields": 3911
+  },
+  "incidents": {
+    "candidateDisclosuresPreserved": true,
+    "candidateRemediationRequired": false
+  },
+  "reviewProcessIncidents": [
+    {
+      "type": "Reviewer output-minimization lapse",
+      "description": "Reviewer diagnostics displayed repeated attached saved-source excerpts, including truncated passages, BLF blank-form labels and a provider-redacted locator, Rollins essay wording, and several LPA parent checklist lines. No applicant response, raw/native/new-source read or repository mutation occurred.",
+      "owner": "Codex independent reviewer",
+      "trigger": "Future diagnostic or source output",
+      "authoritativePath": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-008/review.json#/reviewProcessIncidents/0",
+      "nextAction": "Preserve this disclosure. Preselect exact brief policy clauses before display and exclude repeated excerpts, materials summaries, blank labels and unrelated context. This process incident does not require candidate edits or alter the scoped review outcome."
+    }
+  ]
+}

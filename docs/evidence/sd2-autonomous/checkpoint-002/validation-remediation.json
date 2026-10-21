@@ -1,0 +1,32 @@
+{
+  "scope": "Author fixes; original full matrix retained because runtime/test/acceptance files unchanged; independent recheck pending",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/checkpoint-002/verify.py"
+      ],
+      "startedAt": "2026-10-14T18:26:23.601168+00:00",
+      "completedAt": "2026-10-14T18:26:23.951576+00:00",
+      "exitCode": 0,
+      "stdout": "{\n  \"outcome\": \"PASS\",\n  \"checkpointInputs\": 20,\n  \"cumulativeInputs\": 40,\n  \"unprocessedInputs\": 366,\n  \"nextInputKey\": \"saved-405588227-row-42\",\n  \"sourceReceipts\": 17,\n  \"fieldEnvelopes\": 400,\n  \"fieldStates\": {\n    \"unverified\": 264,\n    \"verified\": 124,\n    \"conflict\": 11,\n    \"unstated\": 1\n  },\n  \"outcomes\": {\n    \"held-identity\": 3,\n    \"held-access\": 3,\n    \"researched-held\": 14\n  },\n  \"preservedEntryPaths\": 1055,\n  \"M1Records\": 437,\n  \"M1Pins\": 12,\n  \"acceptedFacts\": 0,\n  \"SD3Started\": false,\n  \"sourcePolicyDeviationExcluded\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "ec895940b0c93fcb063a357572504bcbe8e79648"
+      ],
+      "startedAt": "2026-10-14T18:26:23.951601+00:00",
+      "completedAt": "2026-10-14T18:26:23.967088+00:00",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "originalCandidateWhitespace": "535fbc8 full change-set check failed105diagnostics across9sourcefiles; original receipt retained",
+  "standardBuild": "Both existing attempts failedEPERM; gate not waived",
+  "canonicalAcceptance": false
+}

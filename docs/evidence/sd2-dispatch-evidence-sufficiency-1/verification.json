@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "docs/evidence/sd2-dispatch-evidence-sufficiency-1/verify.py"
+  ],
+  "startedAt": "2026-10-21T00:14:30.382700+00:00",
+  "completedAt": "2026-10-21T00:14:31.868876+00:00",
+  "exitCode": 0,
+  "result": {
+    "localObjectiveIntegrity": "PASS",
+    "reviewBound": false,
+    "evidenceDecision": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+    "protectedPreEntryFiles": 3002,
+    "appendHistories": 3,
+    "inheritedItems": 13,
+    "originalGates": 14,
+    "inheritedAdditionalDispositions": 4,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "canonicalAcceptance": false,
+    "fullSD2Complete": false,
+    "SD3Started": false
+  }
+}

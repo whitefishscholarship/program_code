@@ -1,0 +1,404 @@
+{
+  "outcome": "PASS",
+  "scope": "final session wrap; selected SD2 original objective only",
+  "recordedAt": "2026-10-13T17:08:00.816717+00:00",
+  "priorCloseout": "6792a64c3063c02bf7500a69205599a26e5df6bd",
+  "reviewedCandidate": "cf29dde2c8c329c5c6c8b0b7551f7630a65ef770",
+  "manifestSha256": "0921b3c3a51ca7a546c78fd629dbf4e73079bab279d8ef5106b3ff42bcf4fdf4",
+  "independentUnresolvedFindings": 0,
+  "evidenceVerification": {
+    "outcome": "PASS",
+    "scope": "selected local SD2 evidence only",
+    "startedAt": "2026-10-13T17:07:59.375368+00:00",
+    "endedAt": "2026-10-13T17:08:00.004980+00:00",
+    "selectedRows": 794,
+    "namedRows": 411,
+    "emptySelectedProjectionRows": 383,
+    "orderedSelectedAwards": 3,
+    "fieldEvidenceRecords": 42,
+    "acceptedFacts": 0,
+    "nativeBeforeAfterEquality": true,
+    "reportedMetadataEquality": true,
+    "versionAndAtomicSnapshotProof": false,
+    "allNineAttentionRowsPreserved": true,
+    "allHistoricalEvidenceAndControlBytesPreserved": true,
+    "retainedM1UniqueRecords": 437,
+    "runtimeDeploymentBytesChanged": false,
+    "primaryCheckoutChanged": false
+  },
+  "originalOwnerTriggerRowsPreserved": 9,
+  "allPriorSD2EvidenceFilesPreserved": 52,
+  "priorSD2Artifacts": [
+    {
+      "path": "docs/evidence/sd2-first-batch/AUTHORITY.md",
+      "priorSha256": "82fcb12b89ad40fba95e21bb4b8bfeeacde847ee7591768b6978dc75d3105043",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/CONTINUE.md",
+      "priorSha256": "994d1f74b213689610751f2e36ae173f8ac016d6f6288fc05ff4eefeefb9378d",
+      "preserved": "exact suffix in updated continuation"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/README.md",
+      "priorSha256": "92a11ac2aee868463a98e6db6d3f2e41097c8980e57a3f085ecf2708ed230e30",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/SESSION_CLOSE.md",
+      "priorSha256": "d134d660e1bb83b9c16a93fa115db2351d88737150e7d0364074dab8f44a7eb9",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/VALIDATION.json",
+      "priorSha256": "a4f947dc306aa009dd0ed374b7e9fd0bbc243762af2f09de6dc049a45b48e4c0",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-faq-extraction.json",
+      "priorSha256": "e0dd25be37a974dc8582cff770be8934512898a48a85d6542620ae61284e107e",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-faq-http.json",
+      "priorSha256": "fd0328ec6eab84297ad939bbc693e2fa8a5a8b069e6cc9dc3f701c6d146b0385",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-faq-source.txt",
+      "priorSha256": "174542fef0b2eb80d378f4ccc3a930a1dddc40aed110c44357b7de4695b24bd8",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-program-extraction.json",
+      "priorSha256": "4fa2dca13c065ca9854ef67ad1290cedf11dfbe443cbfc809de0fbe37ab6542f",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-program-http.json",
+      "priorSha256": "9c78c6ab97fb9c0beaa57d0ad7692b066fbfe660f03b2155775dbddd124c9fbe",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/aopa-program-source.txt",
+      "priorSha256": "4addeea91b664516790b2bea29fe350e47f904a58c1094fa8a51d16fd3248cf6",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/barnes-row.json",
+      "priorSha256": "41687f7732d7742010cc10e75b1e53c75bf6e6565a98de64c46446b54fbddf22",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/build-proposals.py",
+      "priorSha256": "0b6cd249640f10fc1533863bb7cbf2da883addfce1c7eedeb5faacdbc1a645ad",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/candidate-manifest.json",
+      "priorSha256": "0921b3c3a51ca7a546c78fd629dbf4e73079bab279d8ef5106b3ff42bcf4fdf4",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/closeout-verification.json",
+      "priorSha256": "65eb0a9c0d345ac052ee65a183148baa21f3e5dec58c72c154cc7dd5d7148699",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/extract-sources.py",
+      "priorSha256": "287559a9e56ef42a45ac17b0729aa959c1f2ba47254ecb00086564188f515824",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/file-metadata-after.json",
+      "priorSha256": "20c8caa83c6cad4edfda48d4443f2edfbef013b146529aa458a72efabd2eb78e",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/file-metadata-before.json",
+      "priorSha256": "005ee7b22dfe87b15b7baa97616d489355fb7cc9474862b7d9155ecfbe413d22",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/header.json",
+      "priorSha256": "093131d681800aad16244101c9b06691fca9fcb77919681ce31e6b26dc109da3",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-162.json",
+      "priorSha256": "b2ac3ac95390f07720b9e2e3c5b27a3377feca5ce9e26b914fef6e917363ad3b",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-2.json",
+      "priorSha256": "40bc79560ea4a0567928142bd1bc3a9201100d5ef603f6cb254e19421f4400f4",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-242.json",
+      "priorSha256": "7ce06be245237cca5c712eb40f399d07a138dabfd531312cdfd468f9b3c266d3",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-322.json",
+      "priorSha256": "6e5bfd9602476fb0106975ae14fb6b5536f686494bccdeda89f3cf9569b9c12c",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-402.json",
+      "priorSha256": "256cf8b7e76de42dfe6df61a7e3132cc42b02be84528bd69a3ec3c1c58e738ee",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-482.json",
+      "priorSha256": "4bc3f61094c771a21183649385f62ad07c92c8e662c407f09a9af039a0c6e5da",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-562.json",
+      "priorSha256": "25f717239acecbe5e9818112b1dbe04b9f7360e5e213ba817c021966dff85417",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-642.json",
+      "priorSha256": "ef004f508f131b94c2e2f2a6ae6268190e53398ff22f725f00de79c04fbb78e1",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-722.json",
+      "priorSha256": "ac27b1ea6f6d260274dface50455af318314def8d12e4109c87e703f334d052a",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-82.json",
+      "priorSha256": "defd13b184574c124d2cf3c4fbf4d86b0c93768349ba0298daa934e906555be9",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-final.json",
+      "priorSha256": "82e87af81cd3fe1d6feb85ad116f6f0573e955967d0b025acf130eb81a46d939",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/inventory-ledger.json",
+      "priorSha256": "819a185856aa98dc925b832986b7a8e870c0178237986a034691adf1db2cf422",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-faq-extraction.json",
+      "priorSha256": "b512100ffad495efd630f901ae70a20050cb95632a6238b010e931bfad1da196",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-faq-http.json",
+      "priorSha256": "2865ed6ed8998cb53ad2a3ca40be64dccf99462cd6f1b3457cac99e34e039cff",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-faq-source.txt",
+      "priorSha256": "a0752cee51a35596b35527b0e583f269648f8df727988750444d6fc9dbeac2a2",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-program-extraction.json",
+      "priorSha256": "475023c8bae3ff88fa81691f9c9a40862342ce101a986f10f4224517d1493104",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-program-http.json",
+      "priorSha256": "d4b27b80d799d8f10e00db3b6fd92ce86b8b6e9e532a50284a373a9070210f07",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-program-source.txt",
+      "priorSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-singular-extraction.json",
+      "priorSha256": "cf3afef81f484610e6dbb923331025017029c9cacc2de28d56b2ff30275d2f9a",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-singular-http.json",
+      "priorSha256": "541f626036d963d62d8fbb94508ef0ea8e944fe24411e8ae78c68d6cd7d24743",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/nd-singular-source.txt",
+      "priorSha256": "38e8ae4d9d420d9e311948206fc696f09cf001111ea1a5ac602c3e87d0ad7d4b",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/neurodiversity-row.json",
+      "priorSha256": "7f9f3980b88ba5dcfc06ced97a2e136eb45ac0df264637e0c18a8f4faa9a433a",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/pell-extraction.json",
+      "priorSha256": "01d239baa813618bba1ce7eafe9704328762f36d99ee170eb04a4337e24cfbee",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/pell-http-headers.txt",
+      "priorSha256": "b487a4e52251444864d4a78643d35210d6fb53f28599632dacba740b194a844d",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/pell-row.json",
+      "priorSha256": "9fea986f4a9e1af4717fb4370d454bf26b7aee26b2a40e36237be2a1e9b0cdd0",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/pell-source.txt",
+      "priorSha256": "16b1a180ad5514a3de067b81bf2b512b152c7912929498ff2f3b61b337150a96",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/pell-web-observation.json",
+      "priorSha256": "18b000fd258a374b5f8fb8a3da96f6b9f217c812d7de7f0031e407a583e7f9eb",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/plan-check.json",
+      "priorSha256": "35a1e3c2daefaaaa4c911edfc61612cdd87fb469aa3939bc727a8e9c05e17cdd",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/proposals.json",
+      "priorSha256": "887bf6bd83ddf4b9cab930bb5c76cac8a42242ce679024fc5116f7ac3585838a",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/review.json",
+      "priorSha256": "cf31c722b9de0539b6ddc2d44e9725a5e7dbb33671ed9d34216f41d8b2c92e20",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/sheet-metadata-after.json",
+      "priorSha256": "262d06564642ab3eda95d54a2aff9e5b16c9e4bc0c2f56612d09d7a48646459c",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/sheet-metadata-before.json",
+      "priorSha256": "43721659df42789277eb037a9a87ab0ccdd5f694ffda392fabaac27d8c271dbb",
+      "preserved": "exact bytes"
+    },
+    {
+      "path": "docs/evidence/sd2-first-batch/verify-evidence.py",
+      "priorSha256": "cffb80eea5ad3df1f8e31ca2312e1a653e1eb793b716d321ed6a8a69602253ed",
+      "preserved": "exact bytes"
+    }
+  ],
+  "priorHandoffExactSuffix": true,
+  "newFollowupsRoutedIntoExistingRows": [
+    "first-three remaining fact holds and named human fact reviewer",
+    "duplicate-name rows40/68 and408unselected named rows"
+  ],
+  "newIssuesResolved": [
+    "temporary IPC restriction via permitted plan retry",
+    "shared Git-index restriction via permitted local Git retries",
+    "cached ND mismatch separated from fresh source evidence"
+  ],
+  "importantUnverified": [
+    "current human-accepted facts",
+    "ND coherent next cycle/current funding and historical FAQ age conflict",
+    "current Barnes fund offering/terms",
+    "full canonical/public-ID identity and relationship reconciliation",
+    "workbook version/atomicity/full preservation/native backup/recovery/edit permissions",
+    "exact standard-build success and fresh authenticated delivery main",
+    "changed-app/browser behavior and actual monitor/notification operation"
+  ],
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "newSourceOrWorkbookReads": 0,
+  "externalEffects": 0,
+  "activeDelegatedWork": 0,
+  "nextOwner": "Codex",
+  "nextAction": "local triage and bounded next-read proposal; Kelsey selects additional source/identity scope and human fact reviewer before acceptance",
+  "recommendedNextEffort": "High",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "docs/evidence/sd2-first-batch/verify-evidence.py"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T17:07:59.336531+00:00",
+      "endedAt": "2026-10-13T17:08:00.012511+00:00",
+      "exitCode": 0,
+      "output": "{\n  \"outcome\": \"PASS\",\n  \"scope\": \"selected local SD2 evidence only\",\n  \"startedAt\": \"2026-10-13T17:07:59.375368+00:00\",\n  \"endedAt\": \"2026-10-13T17:08:00.004980+00:00\",\n  \"selectedRows\": 794,\n  \"namedRows\": 411,\n  \"emptySelectedProjectionRows\": 383,\n  \"orderedSelectedAwards\": 3,\n  \"fieldEvidenceRecords\": 42,\n  \"acceptedFacts\": 0,\n  \"nativeBeforeAfterEquality\": true,\n  \"reportedMetadataEquality\": true,\n  \"versionAndAtomicSnapshotProof\": false,\n  \"allNineAttentionRowsPreserved\": true,\n  \"allHistoricalEvidenceAndControlBytesPreserved\": true,\n  \"retainedM1UniqueRecords\": 437,\n  \"runtimeDeploymentBytesChanged\": false,\n  \"primaryCheckoutChanged\": false\n}\n"
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T17:08:00.012563+00:00",
+      "endedAt": "2026-10-13T17:08:00.023845+00:00",
+      "exitCode": 0,
+      "output": "6792a64c3063c02bf7500a69205599a26e5df6bd\n"
+    },
+    {
+      "command": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "6792a64c3063c02bf7500a69205599a26e5df6bd",
+        "docs/evidence/sd2-first-batch"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T17:08:00.023859+00:00",
+      "endedAt": "2026-10-13T17:08:00.036773+00:00",
+      "exitCode": 0,
+      "output": "docs/evidence/sd2-first-batch/AUTHORITY.md\ndocs/evidence/sd2-first-batch/CONTINUE.md\ndocs/evidence/sd2-first-batch/README.md\ndocs/evidence/sd2-first-batch/SESSION_CLOSE.md\ndocs/evidence/sd2-first-batch/VALIDATION.json\ndocs/evidence/sd2-first-batch/aopa-faq-extraction.json\ndocs/evidence/sd2-first-batch/aopa-faq-http.json\ndocs/evidence/sd2-first-batch/aopa-faq-source.txt\ndocs/evidence/sd2-first-batch/aopa-program-extraction.json\ndocs/evidence/sd2-first-batch/aopa-program-http.json\ndocs/evidence/sd2-first-batch/aopa-program-source.txt\ndocs/evidence/sd2-first-batch/barnes-row.json\ndocs/evidence/sd2-first-batch/build-proposals.py\ndocs/evidence/sd2-first-batch/candidate-manifest.json\ndocs/evidence/sd2-first-batch/closeout-verification.json\ndocs/evidence/sd2-first-batch/extract-sources.py\ndocs/evidence/sd2-first-batch/file-metadata-after.json\ndocs/evidence/sd2-first-batch/file-metadata-before.json\ndocs/evidence/sd2-first-batch/header.json\ndocs/evidence/sd2-first-batch/inventory-162.json\ndocs/evidence/sd2-first-batch/inventory-2.json\ndocs/evidence/sd2-first-batch/inventory-242.json\ndocs/evidence/sd2-first-batch/inventory-322.json\ndocs/evidence/sd2-first-batch/inventory-402.json\ndocs/evidence/sd2-first-batch/inventory-482.json\ndocs/evidence/sd2-first-batch/inventory-562.json\ndocs/evidence/sd2-first-batch/inventory-642.json\ndocs/evidence/sd2-first-batch/inventory-722.json\ndocs/evidence/sd2-first-batch/inventory-82.json\ndocs/evidence/sd2-first-batch/inventory-final.json\ndocs/evidence/sd2-first-batch/inventory-ledger.json\ndocs/evidence/sd2-first-batch/nd-faq-extraction.json\ndocs/evidence/sd2-first-batch/nd-faq-http.json\ndocs/evidence/sd2-first-batch/nd-faq-source.txt\ndocs/evidence/sd2-first-batch/nd-program-extraction.json\ndocs/evidence/sd2-first-batch/nd-program-http.json\ndocs/evidence/sd2-first-batch/nd-program-source.txt\ndocs/evidence/sd2-first-batch/nd-singular-extraction.json\ndocs/evidence/sd2-first-batch/nd-singular-http.json\ndocs/evidence/sd2-first-batch/nd-singular-source.txt\ndocs/evidence/sd2-first-batch/neurodiversity-row.json\ndocs/evidence/sd2-first-batch/pell-extraction.json\ndocs/evidence/sd2-first-batch/pell-http-headers.txt\ndocs/evidence/sd2-first-batch/pell-row.json\ndocs/evidence/sd2-first-batch/pell-source.txt\ndocs/evidence/sd2-first-batch/pell-web-observation.json\ndocs/evidence/sd2-first-batch/plan-check.json\ndocs/evidence/sd2-first-batch/proposals.json\ndocs/evidence/sd2-first-batch/review.json\ndocs/evidence/sd2-first-batch/sheet-metadata-after.json\ndocs/evidence/sd2-first-batch/sheet-metadata-before.json\ndocs/evidence/sd2-first-batch/verify-evidence.py\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "6792a64c3063c02bf7500a69205599a26e5df6bd",
+        "--name-only",
+        "web",
+        ".github",
+        "docs/evidence/sd1",
+        "docs/evidence/sd1-continuation",
+        "docs/evidence/student-data-plan"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T17:08:00.768450+00:00",
+      "endedAt": "2026-10-13T17:08:00.782720+00:00",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "6792a64c3063c02bf7500a69205599a26e5df6bd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T17:08:00.797442+00:00",
+      "endedAt": "2026-10-13T17:08:00.816691+00:00",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "finalStagedWhitespaceCheck": {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "startedAt": "2026-10-13T17:08:21.004566+00:00",
+    "endedAt": "2026-10-13T17:08:21.023989+00:00",
+    "exitCode": 0,
+    "output": ""
+  }
+}

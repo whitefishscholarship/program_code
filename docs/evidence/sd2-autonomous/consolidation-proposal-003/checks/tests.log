@@ -1,0 +1,24 @@
+
+> web@0.1.0 test
+> tsx scripts/test-grounding.ts && tsx scripts/test-push-mapping.ts && tsx scripts/test-pdf-extract.ts && tsx scripts/test-date-parse.ts && tsx scripts/test-wizard-filter.ts && tsx scripts/test-fetch-guard.ts && tsx scripts/test-p1-inventory.ts && tsx scripts/test-delivery-state-history.ts && tsx scripts/test-governance-history.ts && tsx scripts/test-delivery-package-history.ts && tsx scripts/test-plan-rev9-interview-inventory.ts && tsx scripts/test-plan-rev10-governance.ts && tsx scripts/test-plan-rev11-late-delivery.ts && tsx scripts/test-plan-rev12-row-source.ts && node --import tsx scripts/test-p8m-proposals.ts && node --import tsx scripts/test-p8m-acceptance.ts && tsx scripts/test-production-authority.ts && tsx scripts/test-p9-evidence-v2.ts && node --import tsx scripts/test-p9-production-runtime.ts && node --import tsx scripts/p9-trusted-proof.ts --mode=self-test && tsx scripts/test-p2-data-model.ts && tsx scripts/p3-acquisition.ts --check && tsx scripts/test-p3-acquisition.ts && tsx scripts/p4-verification.ts --check && tsx scripts/test-p4-verification.ts && tsx scripts/p5-remediation.ts --check && tsx scripts/test-p5-remediation.ts && tsx scripts/p5-preserve-dead-observations.ts --check && tsx scripts/p5-preserve-static-application-observations.ts --check && tsx scripts/p5-public-probe.ts --check && tsx scripts/p5-firecrawl-evidence.ts --check && tsx scripts/p5-audit.ts --check && tsx scripts/test-p5-audit.ts && tsx scripts/p5-postwrite.ts --check && tsx scripts/p6-coverage.ts --check && tsx scripts/test-p6-coverage.ts && tsx scripts/p7-student-catalog.ts --check && tsx scripts/test-p7-student-catalog.ts && tsx scripts/p8-monitoring.ts --check && tsx scripts/test-p8-monitoring.ts && tsx scripts/test-p8r-interview.ts && node --import tsx scripts/test-p8f-preimplementation.ts && node --import tsx scripts/test-p8f-interview.ts && node --import tsx scripts/test-spreadsheet-shortlist.ts && node --import tsx scripts/test-interview-relevance-governance.ts && node --import tsx scripts/test-interview-relevance.ts && node --import tsx scripts/test-intake-governance.ts && node --import tsx scripts/test-scholarship-intake.ts && node --import tsx scripts/test-intake-promotion.ts && node --import tsx scripts/test-plan-rev17-rev15-delivery-repair.ts && node --import tsx scripts/test-interview-coverage.ts && node --import tsx scripts/test-r3-catalog-governance.ts && node --import tsx scripts/test-r3-catalog.ts && node --import tsx scripts/test-r4-identity-delivery.ts
+
+node:net:1918
+      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);
+                    ^
+
+Error: listen EPERM: operation not permitted /var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/81895.pipe
+    at Server.setupListenHandle [as _listen2] (node:net:1918:21)
+    at listenInCluster (node:net:1997:12)
+    at Server.listen (node:net:2119:5)
+    at file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31537
+    at new Promise (<anonymous>)
+    at createIpcServer (file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31515)
+    at async file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:55:459 {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '/var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/81895.pipe',
+  port: -1
+}
+
+Node.js v22.20.0

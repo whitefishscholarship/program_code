@@ -1,0 +1,41 @@
+{
+  "url": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+  "finalUrl": "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc",
+  "httpStatus": 200,
+  "curlExitCode": 0,
+  "redirectFollowingDisabled": true,
+  "redirectsObserved": 0,
+  "headers": [
+    "HTTP/1.1 200 OK",
+    "Date: Tue, 13 Oct 2026 18:21:52 GMT",
+    "Last-Modified: Wed, 16 Sep 2026 03:44:29 GMT",
+    "Content-Length: 139264",
+    "Content-Type: application/msword"
+  ],
+  "sourceBytes": 139264,
+  "sourceSha256": "b64888e865885cf58f6b37b6e035f98a8090ae4cb211771071a889615f837043",
+  "sourceArtifact": "vocational-source.doc",
+  "observedAt": "2026-10-13T18:21:52.963635+00:00",
+  "retrievalStartedAt": null,
+  "timingLimit": "Completion time uses local download file mtime; exact tool launch time unavailable.",
+  "command": [
+    "curl",
+    "-fsSL",
+    "--max-redirs",
+    "0",
+    "--proto",
+    "=https",
+    "--connect-timeout",
+    "30",
+    "--max-time",
+    "60",
+    "-D",
+    "/private/tmp/sd2-jaycee-vocational-headers.txt",
+    "-o",
+    "/private/tmp/sd2-jaycee-vocational.doc",
+    "https://www.usjcisenate.org/images/scholarship/2026-2027%20U.S.%20JCI%20Senate%20Vocational%20Scholarship%20Application.doc"
+  ],
+  "publishedCycleLabel": "SCHOLAR:2026-2027",
+  "sourceMetadataPageCount": 6,
+  "httpLastModifiedIsNotFactVerification": true
+}

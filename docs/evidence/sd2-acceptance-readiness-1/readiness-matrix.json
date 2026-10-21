@@ -1,0 +1,420 @@
+{
+  "meaning": "Derived assessment only; original14gates remain exact and no gate is waived or accepted",
+  "gateCount": 14,
+  "gates": [
+    {
+      "id": "G1",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/0"
+      },
+      "original": {
+        "id": "G1",
+        "item": "Saved input and field accounting",
+        "status": "prepared_complete",
+        "owner": "Codex consolidation author and independent reviewer",
+        "trigger": "Matching immutable package review",
+        "nextAction": "Confirm794savedpositions/411named/383empty,411separate app IDs,7547field definitions/7468existingcomparison occurrences and first79 definitions without invented comparison.",
+        "authoritativePaths": "summary.json; decision-ledger.json; inventory-dispositions.json; publication-crosswalk.json"
+      },
+      "readinessStatus": "SUPPORTED_FOR_HELD_RESEARCH_ACCOUNTING",
+      "assessment": "The independently reviewed saved package accounts for411named inputs/7547original field definitions, separate411app IDs and original held/proposed outcomes. No current-workbook or distinct-award claim.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/summary.json",
+          "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-consolidation-package/review.json",
+          "sha256": "18463accf7e49f06e26a007e7239e8edfff815ad65c7786d5013f6f9d9779cfe",
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/1"
+      },
+      "original": {
+        "id": "G2",
+        "item": "Original identity and candidate binding",
+        "status": "held_by_original_input",
+        "owner": "Original recorded identity/source owners",
+        "trigger": "Original selected reconciliation/evidence trigger or separately selected proof scope",
+        "nextAction": "Retain each exact candidate, duplicate-name hold and missing link; proposed held outcomes may remain. No name-only mapping/merge/new ID.",
+        "authoritativePaths": "decision-ledger.json; originalRecordReference; original inventory; original first/Jaycee/autonomous packets"
+      },
+      "readinessStatus": "COMPATIBLE_WITH_HELD_CLOSURE_ACCEPTED_MAPPINGS_UNRESOLVED",
+      "assessment": "409held+2duplicate-candidate-held are explicit proposed input outcomes.407app candidate links and4unlinked app IDs do not establish accepted mappings;4saved inputs also lack candidates. Retain exact identity holds.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/summary.json",
+          "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7",
+          "pointer": "/proposedIdentityDispositions"
+        },
+        {
+          "path": "docs/evidence/sd2-consolidation-package/summary.json",
+          "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7",
+          "pointer": "/publication"
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/2"
+      },
+      "original": {
+        "id": "G3",
+        "item": "Material fact evidence and source/cycle applicability",
+        "status": "held_or_originally_proposed",
+        "owner": "Each original recorded evidence owner",
+        "trigger": "Only selected material accepted-use claim or original evidence-arrival trigger",
+        "nextAction": "Use original proof/route, reconcile or explicitly retain uncertainty; complete native/current/source claims need their own evidence. No claim becomes accepted from consistency.",
+        "authoritativePaths": "field-decisions.jsonl; originalRouteReference; minimumProofReference; original evidence packets"
+      },
+      "readinessStatus": "COMPATIBLE_WITH_HELD_CLOSURE_ACCEPTED_FACTS_UNRESOLVED",
+      "assessment": "7518held+29proposed fields are accounted;0accepted. Unknown/held outcomes are permitted. No current criterion, native completeness or source currency is inferred.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/summary.json",
+          "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7",
+          "pointer": "/allOriginalAcceptanceCounts"
+        },
+        {
+          "path": "docs/STUDENT_DATA_CONTRACT.md",
+          "sha256": "9f0913c2f9e711be0257ae6246d482a6db5ea81ced1ff5af8df5b8f09d9903c7",
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/3"
+      },
+      "original": {
+        "id": "G4",
+        "item": "Optional targeted evidence run",
+        "status": "proposal_not_selected",
+        "owner": "Kelsey selects exact scope; Codex executes/reviews",
+        "trigger": "Direct selection of SD2-RESOLUTION-PROOF-1",
+        "nextAction": "At matching package receipt capture fresh review-bound PASS, then only the exact eligible locators and bounds; preflight/skip blocked locators, preserve all holds.",
+        "authoritativePaths": "PROPOSED_READ_SCOPE.json; read-targets.json"
+      },
+      "readinessStatus": "OPTIONAL_SOURCE_PATH_FAILED_HELD_NOT_REQUIRED_FOR_ZERO_ACCEPTED_CLOSURE",
+      "assessment": "Original proposal-only wording is historical: the later scope was selected and its execution failed. Current terminal proof decision retains397holds/272quarantines/0cleared. No more reads are required merely to replace explicit unknowns.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-resolution-proof-1/selection.json",
+          "sha256": "26087ffadf04b317b4b4066797196c20799e6b8c0b2c92df8dd96a665bb6f11f",
+          "pointer": "/selectedScopes"
+        },
+        {
+          "path": "docs/evidence/sd2-resolution-proof-1/review.json",
+          "sha256": "07f93fc2a645f73a8faed1bf330683fc55f2393d34bc0a00989874215046b1b6",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/decision.json",
+          "sha256": "4abca7e912b4ded1e8af9b5396629cbaa92cfeeb294da956da9076588a7c2d07",
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/4"
+      },
+      "original": {
+        "id": "G5",
+        "item": "Dependency restoration and required checks",
+        "status": "environment_blocked_no_waiver",
+        "owner": "Codex validation/governance/delivery",
+        "trigger": "Direct selection of SD2-LOCKED-VALIDATION-1 and permitted environment",
+        "nextAction": "Restore exact locks only and run unchanged four commands; retain actual failures and exact standard-build gate. No installation occurred in preparation.",
+        "authoritativePaths": "PROPOSED_VALIDATION_REPAIR.json; application-checks.json; original shared validation/checks"
+      },
+      "readinessStatus": "LOCKED_RESTORE_SPENT_VALIDATION_SPLIT_FROM_BUILD_BLOCKER",
+      "assessment": "The later selected validation records one completed pinned restore; do not repeat installation. Current unchanged plan/type/tests validation is recorded separately. Exact standard build remains its own unwaived G8 gate.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-resolution-proof-1/validation/summary.json",
+          "sha256": "3b669f00c4129a2a6636f121166034d3b3d7d2faa2b803025ac6f5d77d8a45ce",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/validation-retry.json",
+          "sha256": "ccf7ff33ecf73c357e033f27de68713f28ea4b457bb5bf6f3027333f5f5683f6",
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/5"
+      },
+      "original": {
+        "id": "G6",
+        "item": "Canonical SD2 selection and acceptance",
+        "status": "not_selected_not_accepted",
+        "owner": "Codex governance; Kelsey retains scope/fact-review decisions",
+        "trigger": "Prospective selection/amendment under existing canonical machinery if required",
+        "nextAction": "Keep canonical plan/state unchanged and stage pointers null. Reconcile SD slice with existing canonical contract, meet all gates and obtain independent exact-candidate review; no parallel stage system or self-acceptance.",
+        "authoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md sections1,6,7; docs/BUILD_STATE.json; AGENTS.md"
+      },
+      "readinessStatus": "BLOCKER_CANONICAL_ACCEPTANCE_CONTRACT_NOT_SELECTED_OR_IMPLEMENTED",
+      "assessment": "This selects readiness assessment only. Canonical revision21/P0-P9 remain accepted, pointersnull; SD2 is a proposed maintenance slice without an operative canonical acceptance transition. Existing section14 machinery must define it prospectively without reopening stages or inventing a parallel stage system.",
+      "evidence": [
+        {
+          "path": "docs/BUILD_STATE.json",
+          "sha256": "b5025ef50b0201ed6f4334043f67d09161f73d509af45e12710c26ce745095ff",
+          "pointer": ""
+        },
+        {
+          "path": "docs/STUDENT_DATA_CONTRACT.md",
+          "sha256": "9f0913c2f9e711be0257ae6246d482a6db5ea81ced1ff5af8df5b8f09d9903c7",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/5"
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/6"
+      },
+      "original": {
+        "id": "G7",
+        "item": "Named human fact review and limited Jaycee approvals",
+        "status": "existing_scope_unchanged",
+        "owner": "Kelsey Stuart; Codex determines identity from evidence",
+        "trigger": "Only exact existing approval or later selected acceptance decision",
+        "nextAction": "Preserve already supplied reviewer designation and specific Jaycee approvals; do not ask for them again or generalize to unstated facts/mappings/publication.",
+        "authoritativePaths": "docs/evidence/sd2-autonomous/AUTHORITY.md; PRELUDE.json#/reviewerAndPell; PRELUDE.json#/jayceeLegacy"
+      },
+      "readinessStatus": "EXISTING_REVIEWER_APPROVALS_PRESERVED_NO_NEW_FACT_ACCEPTANCE",
+      "assessment": "Kelsey is already named and exact Jaycee approvals remain scoped. Do not ask for that designation/approval again. A zero-accepted-fact research closure does not generalize those approvals or require bulk fact approval; future accepted-use decisions still need their original gates.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+          "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/reviewerAndPell"
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/7"
+      },
+      "original": {
+        "id": "G8",
+        "item": "Fresh authenticated main/target and supported exact build",
+        "status": "open_original_gate",
+        "owner": "Codex validation/governance/delivery",
+        "trigger": "Before canonical acceptance or separately authorized release",
+        "nextAction": "Obtain actual current authenticated main/target and supported exact build evidence under separately permitted effects; saved local refs/provider history are not fresh proof. Preserve historical IPC failures and their successful retries; do not reopen a resolved historical IPC repair without a new failure.",
+        "authoritativePaths": "coverage-audit/SESSION_CLOSE.md; original021validation; original build/IPC receipts"
+      },
+      "readinessStatus": "BLOCKER_EXACT_BUILD_AND_FRESH_AUTHENTICATED_MAIN_TARGET",
+      "assessment": "Recorded build process/port EPERM remains open pending actual supported exact build proof; localrefs are not current authenticated main/target. New local commands are in validation.json. No remote refresh is selected.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/validation.json",
+          "sha256": "460303bb45d6a184a8281c49dae85fade9b18bf5947f83327afa7b7c70e15cab",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/7"
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/8"
+      },
+      "original": {
+        "id": "G9",
+        "item": "All nine attention rows and supplements",
+        "status": "retained_not_closed",
+        "owner": "Every original recorded owner",
+        "trigger": "Each exact original recorded trigger",
+        "nextAction": "Perform original next action only when selected. New package does not close or replace these routes.",
+        "authoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 and every preserved supplement"
+      },
+      "readinessStatus": "RETAINED_ORIGINAL_TRIGGERS",
+      "assessment": "All nine attention rows and every supplement remain at original owner/trigger/path/action; no row is closed by this readiness assessment.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json",
+          "sha256": "99517eb1b0abbbf2dcb325f2d476dfd856a9f0525795620a6d08a4116879a451",
+          "pointer": ""
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/9"
+      },
+      "original": {
+        "id": "G10",
+        "item": "Custody/native/visual/full-source limitations",
+        "status": "retained_unknown",
+        "owner": "Original custody/source owners",
+        "trigger": "Original authorized raw-use/audit trigger",
+        "nextAction": "Verify exact availability/hashes then or report gap; no new custody availability or raw/native reinspection claim.",
+        "authoritativePaths": "Original71custodypins and original source receipts/021audits"
+      },
+      "readinessStatus": "CONDITIONAL_ACCEPTED_USE_GATE_RETAINED",
+      "assessment": "Native/visual/full-source/custody limits stay unknown at original triggers. Held closure makes none of those claims and does not clear later raw or accepted use.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/9"
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/10"
+      },
+      "original": {
+        "id": "G11",
+        "item": "Workbook preservation/recovery/permissions and SD3",
+        "status": "outside_current_scope",
+        "owner": "Original migration/publication owners; Kelsey selects effects",
+        "trigger": "Separately selected SD3 and exact live-effect gates",
+        "nextAction": "Use replacement workbook only if a future bounded read/write is selected; verify current identities/permissions/native backup/recovery before valuable-source changes. No access/migration now.",
+        "authoritativePaths": "docs/STUDENT_DATA_CONTRACT.md; section9; original preservation/recovery routes"
+      },
+      "readinessStatus": "LATER_SD3_GATE_UNSTARTED",
+      "assessment": "Workbook preservation/backup/recovery/permissions require separately selected SD3 scope. No workbook access or schema migration is part of readiness.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/10"
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/11"
+      },
+      "original": {
+        "id": "G12",
+        "item": "Student fit/filter/priority/CSV/browser/publication",
+        "status": "outside_current_scope",
+        "owner": "Original governance/app owners",
+        "trigger": "Later selected SD3/SD4/canonical/publication scope",
+        "nextAction": "Preserve current runtime/unknown-aware behavior and public allowlist; verify actual student tasks then, no new runtime truth here.",
+        "authoritativePaths": "Canonical plan/state; student contract; original student/publication routes"
+      },
+      "readinessStatus": "LATER_STUDENT_PUBLICATION_GATE_UNSTARTED",
+      "assessment": "Current app and immutable-publication boundary stay unchanged. No held facts/mappings become runtime truth; student tasks await separately selected scope.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/11"
+        }
+      ]
+    },
+    {
+      "id": "G13",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/12"
+      },
+      "original": {
+        "id": "G13",
+        "item": "M1/SD5 monitor and reserved effects",
+        "status": "retained_not_activated",
+        "owner": "Original monitor owner; Kelsey selects reserved effects",
+        "trigger": "Only exact existing M1/SD5/setup/effect selection",
+        "nextAction": "Retain437routes/12pins, ETV/Fund the Fish, allowance/zero-overage/sender/receipt/suppression/pilot/catchup/recovery/health; no second queue, old-runner replay or activation.",
+        "authoritativePaths": "Retained009fa57 M1 plan/evidence and original section9 routes"
+      },
+      "readinessStatus": "LATER_M1_SD5_GATE_UNSTARTED",
+      "assessment": "Original437routes/12pins and every setup/effect gate remain; no second queue, spent-work replay or monitoring activation.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/12"
+        }
+      ]
+    },
+    {
+      "id": "G14",
+      "originalReference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/13"
+      },
+      "original": {
+        "id": "G14",
+        "item": "Remote Git/deployment/contact/configuration/other effects",
+        "status": "not_selected",
+        "owner": "Original governance/delivery owners; Kelsey selects effects",
+        "trigger": "Direct stage-specific informed authority for exact effect and target",
+        "nextAction": "Inspect downstream effects and preserve current branch/local receipts; no push/PR/Preview/merge/Production/messages/contact or configuration from this package.",
+        "authoritativePaths": "AGENTS.md; canonical plan/state; original effect evidence"
+      },
+      "readinessStatus": "RESERVED_EFFECT_GATE_UNSELECTED",
+      "assessment": "No branch push/PR/Preview/merge/Production/contact/messages/configuration effects follow. Any later effect requires exact direct informed authority and target verification.",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+          "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+          "pointer": "/gates/13"
+        }
+      ]
+    }
+  ]
+}

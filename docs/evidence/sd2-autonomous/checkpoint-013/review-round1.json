@@ -1,0 +1,88 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of bounded local SD2 held-research checkpoint013",
+  "reviewedAt": "2026-10-15T07:08:50Z",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint013_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": true,
+    "memoryUse": "Navigation only; candidate findings independently checked against current retained evidence."
+  },
+  "binding": {
+    "entryCommit": "cc146e6da7a977aa223d72f3be46d72c5503a181",
+    "candidateCommit": "5ffc8ea51c33657db2715f83ffcae457379cb6e1",
+    "candidateTree": "b2599a06e017fc35139810582432675adb9363fb",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-013/final-manifest.json",
+    "manifestSha256": "01fdf1f6eb88a846042a2df93287aa54bbefad03c16c7e3ed22e7ce7315a4a67",
+    "completeDiffSha256": "27411dc7222af5de0be99822d7d56174f774ea4051172fc86b51650819d6b466",
+    "changedPaths": 45,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "protectedPreEntryTrackedPaths": 1647,
+    "preservedBlobIdsAndModes": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 1, "low": 1},
+  "findings": [
+    {
+      "id": "SD2-013-M1",
+      "severity": "medium",
+      "title": "Carry the Presidential transcript and conditional counselor-ranking requirements explicitly",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-013.json",
+      "line": 3604,
+      "affectedInput": "saved-405588227-row-252",
+      "problem": "The materials value records the general application, counselor, two recommenders and three essays, but omits material instructions present in retained evidence. MSU Honors states that transcripts and recommendation letters are not accepted by mail/email and must be uploaded through counselors’ and recommenders’ personal portal links. The FAQ additionally asks a counselor for confidential or percentile ranking when the school does not rank students. A generic academicBackgroundQuestions flag and generic reconciliation nextAction do not preserve these requirements explicitly.",
+      "evidence": ["checkpoint-013/sources/msuhonors.md:61-65", "checkpoint-013/sources/msufaq.md:71-76"],
+      "requestedChange": "Add held, source-bound materials observations for transcript/recommendation upload routing and the mail/email prohibition, plus the conditional counselor-ranking request with its actual modality. Preserve all current conflict, incomplete-conversion and no-interaction limits. Add focused verifier assertions and update the README row summary. Use retained evidence only.",
+      "owner": "Codex implementation/source-reconciliation author",
+      "trigger": "Before freezing the remediated checkpoint013 candidate",
+      "target": "checkpoint-013.json row252 materials, README.md and verify.py"
+    },
+    {
+      "id": "SD2-013-L1",
+      "severity": "low",
+      "title": "Correct malformed and falsely deferred source-link dispositions",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-013/source-receipts.json",
+      "line": 1290,
+      "affectedSources": ["referee", "nhsfaq"],
+      "problem": "The referee link-disposition URL concatenates the Markdown label and destination, producing a string containing ]( rather than the exact Bold target. It has no source binding and is marked deferred although refereebold was retrieved. Also, the eleven NHS FAQ self-fragment links are marked as unretrieved deferred material even though their corresponding sections are retained in nhsfaq.md. Those actions can misdirect later reconciliation toward replaying already observed scope. The current substring-only verifier permits the malformed entry.",
+      "requestedChange": "Record the referee link’s exact destination and bind it to refereebold as already retrieved. Classify the NHS FAQ fragments as retained same-document context or retrieved selected sections, preserving their fragment identity without scheduling redundant retrieval. Correct both source-receipts.json and its ledger mirror. Strengthen read-only checks to reject Markdown-concatenated URLs and inconsistent already-retrieved dispositions; recompute accounting if necessary.",
+      "owner": "Codex implementation/evidence author",
+      "trigger": "Before freezing the remediated checkpoint013 candidate",
+      "target": "source-receipts.json, checkpoint-013.json sourceRegistry and verify.py"
+    }
+  ],
+  "checksPerformed": [
+    "Read governing repository instructions, canonical plan/state and relevant evidence/handoff, autonomous authority/policy, section9 and current kickoff.",
+    "Independently recomputed manifest SHA256, candidate tree, exact45-path change set, complete binary-diff SHA256, and every changed blob ID, length, SHA256 and worktree equality.",
+    "Ran the read-only verify.py successfully:20 ordered inputs,320 held field envelopes,194 exact excerpt references,39 seed dispositions,89 recorded source-link dispositions,12 historical manifest/review bindings,71 custody pins without gaps,12 original M1 pins and437 unique M1 records.",
+    "Compared all20 row outcomes and320 field values/states/holds with all21 retained source artifacts, including material eligibility, sensitive conditions, GPA, need, award amounts, cycle, application, payment and renewal distinctions.",
+    "Confirmed offsets240–259, saved244–264 excluding previously processed255;13researched-held/7held-identity;260 cumulative initial dispositions,5041 held fields,260 held identities,146 unprocessed and0 accepted facts.",
+    "Checked MSU3.7-versus3.5 renewal and timezone conflicts, Referee2027-versusBold2026 separation, six provider-redacted Bold title holds, Epic generic mechanic campus/child/essay distinctions, and NHS historical FAQ scope.",
+    "Verified BigSun’s null URL and exact immutable queue offset/field/index/hash binding without printing or reproducing the contact value; that value is absent from every new candidate file.",
+    "Confirmed all pre-entry tracked files/modes, earlier packets, review bindings, nine attention rows, handoff supplements, governance/runtime/queue and original M1 evidence remain preserved.",
+    "Inspected retained command evidence: plan/typecheck/full tests pass after recorded IPC retries; both exact standard builds fail with process/port EPERM. No full matrix rerun.",
+    "Entry-to-candidate git diff --check passed.",
+    "No files edited, source/workbook/network calls, initialization/reset/replay, external effects or SD3 work occurred."
+  ],
+  "limits": [
+    "This review accepts no scholarship fact, identity, current offering, canonical stage, release or fullSD2 completion.",
+    "Epic’s initial full output was not retained; exact call timestamps were unmeasured. Its selected transcription has no machine original-concordance proof.",
+    "The other20 source-concordance checks are author assertions against unretained in-session conversions; independent original-conversion fidelity cannot be established here.",
+    "Selected text and matching excerpts do not prove native/page/image/table/form completeness, source silence, public/sponsor continuity, origin freshness, current availability or usable application routes.",
+    "Handling/output lapses remain disclosed. Final-packet sanitization does not erase earlier tool output; existing custody, raw-material and historical limitations remain routed.",
+    "Both exact build failures, fresh authenticated main/target proof and all later preservation, human/canonical acceptance, publication, student/browser/CSV, monitoring and reserved-effect gates remain open with their original owners/triggers."
+  ],
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "Receipt of this review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-013/",
+    "action": "Preserve this candidate, manifest and review as round1. Remediate both findings locally from retained evidence, record two count-matched dispositions, freeze a new candidate and request independent recheck. Do not perform new source calls, replay research, accept facts or begin SD3."
+  }
+}

@@ -1,0 +1,482 @@
+[
+  {
+    "id": "lpa",
+    "originalUrl": "https://www.lpa-aero.org/scholarships",
+    "finalUrl": "https://www.lpa-aero.org/scholarships",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:42:51.040Z",
+    "callCompletedAt": "2026-10-15T02:43:04.920Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "lpa",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/lpa.md",
+    "artifactSha256": "902bc8cefea3c4befc4b6ee0a2e64b5bb250600510f5cc630773dd4917f106dc",
+    "observedAt": "2026-10-15T02:43:04.920Z",
+    "depth": 0,
+    "parentSourceId": null,
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://latinopilot.app.neoncrm.com/forms/newmembership2024",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.lpa-aero.org/scholarships#scholarships",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits.",
+    "selectedProgramAccounting": {
+      "retrievedProgramHeadings": 5,
+      "selectedHeadingsRetained": 4,
+      "unrelatedDispatcherChildExcluded": 1,
+      "fiveSavedNamesNotEstablished": true
+    }
+  },
+  {
+    "id": "ngpa",
+    "originalUrl": "https://www.ngpa.org/2026_scholarships",
+    "finalUrl": "https://www.ngpa.org/2026_scholarships",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:42:51.040Z",
+    "callCompletedAt": "2026-10-15T02:42:57.921Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "ngpa",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/ngpa.md",
+    "artifactSha256": "b334fc9843047863c4afc3ef7ad9e1d7300407dcf27927b4b6d6cd6deb50dd14",
+    "observedAt": "2026-10-15T02:42:57.921Z",
+    "depth": 0,
+    "parentSourceId": null,
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://www.ngpa.org/scholarships_prepare#pages",
+        "sourceIds": [
+          "ngpa-prepare"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/2026_scholarships#pages",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/scholarships_faq#pages",
+        "sourceIds": [
+          "ngpa-faq"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/about_scholarships",
+        "sourceIds": [
+          "ngpa-about"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/applynow#pages",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits.",
+    "selectedTableAccounting": {
+      "retrievedAwardRows": 21,
+      "retainedRowsForSelectedNames": 13,
+      "unrelatedRowsExplicitlyExcluded": 8,
+      "selectedInputNames": 9
+    }
+  },
+  {
+    "id": "rollins",
+    "originalUrl": "https://www.rollinsscholarship.org/scholarship-application",
+    "finalUrl": "https://www.rollinsscholarship.org/scholarship-application",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:42:51.040Z",
+    "callCompletedAt": "2026-10-15T02:42:55.217Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "rollins",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/rollins.md",
+    "artifactSha256": "7e917afa82cb31fa758bfad29b40ece55783900b228d2e54879716468c73c98b",
+    "observedAt": "2026-10-15T02:42:55.217Z",
+    "depth": 0,
+    "parentSourceId": null,
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://tally.so/r/EkjjV4",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "looney",
+    "originalUrl": "https://brendanlooneyfoundation.org/scholarships",
+    "finalUrl": "https://brendanlooneyfoundation.org/scholarships",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:42:51.040Z",
+    "callCompletedAt": "2026-10-15T02:43:00.460Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "looney",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/looney.md",
+    "artifactSha256": "95c7b910bd85571d05509808aae1e3affaec94dd3d3efba08b77b71da94f04ba",
+    "observedAt": "2026-10-15T02:43:00.460Z",
+    "depth": 0,
+    "parentSourceId": null,
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": null,
+        "sourceIds": [],
+        "disposition": "held-provider-redacted-locator",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference.",
+        "redactedLocator": "https://br<PRIVATE_PERSON>foundation.org/senior-application",
+        "usableUrlEstablished": false,
+        "doesNotReplacePinnedSeed": true
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "ngpa-prepare",
+    "originalUrl": "https://www.ngpa.org/scholarships_prepare#pages",
+    "finalUrl": "https://www.ngpa.org/scholarships_prepare#pages",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:43:24.758Z",
+    "callCompletedAt": "2026-10-15T02:43:27.727Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "ngpa-prepare",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/ngpa-prepare.md",
+    "artifactSha256": "7fca8c39e7a4e81fffa9ed23f1b7894a19ab20b5558f1f11d08e7e345847ceb6",
+    "observedAt": "2026-10-15T02:43:27.727Z",
+    "depth": 1,
+    "parentSourceId": "ngpa",
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://www.ngpa.org/scholarships_prepare#pages",
+        "sourceIds": [
+          "ngpa-prepare"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/2026_scholarships#pages",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/scholarships_faq#pages",
+        "sourceIds": [
+          "ngpa-faq"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/applynow",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/member_levels_benefits",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "ngpa-faq",
+    "originalUrl": "https://www.ngpa.org/scholarships_faq#pages",
+    "finalUrl": "https://www.ngpa.org/scholarships_faq#pages",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:43:35.411Z",
+    "callCompletedAt": "2026-10-15T02:43:39.278Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "ngpa-faq",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/ngpa-faq.md",
+    "artifactSha256": "b7ac0ef117748714f15acc2dcbde4aca62b800e596dd98d0b338f16c189dbb24",
+    "observedAt": "2026-10-15T02:43:39.278Z",
+    "depth": 1,
+    "parentSourceId": "ngpa",
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://www.ngpa.org/scholarships_prepare#pages",
+        "sourceIds": [
+          "ngpa-prepare"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/2026_scholarships#pages",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/scholarships_faq#pages",
+        "sourceIds": [
+          "ngpa-faq"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/about_scholarships",
+        "sourceIds": [
+          "ngpa-about"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "ngpa-about",
+    "originalUrl": "https://www.ngpa.org/about_scholarships",
+    "finalUrl": "https://www.ngpa.org/about_scholarships",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:43:55.000Z",
+    "callCompletedAt": "2026-10-15T02:44:00.760Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "ngpa-about",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/ngpa-about.md",
+    "artifactSha256": "dc6d2f4b25b0d3464727c8f5efd37d5a0519d4a8a0db6b5d66bd96683bee8ee0",
+    "observedAt": "2026-10-15T02:44:00.760Z",
+    "depth": 1,
+    "parentSourceId": "ngpa",
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://www.ngpa.org/join_v2",
+        "sourceIds": [],
+        "disposition": "locator-only-no-action",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.faa.gov/pilots/become/student_cert/",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      },
+      {
+        "url": "https://www.ngpa.org/2025_scholarships#pages",
+        "sourceIds": [],
+        "disposition": "deferred-material-or-out-of-selected-scope",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "looney-senior",
+    "originalUrl": "https://brendanlooneyfoundation.org/senior-application",
+    "finalUrl": "https://brendanlooneyfoundation.org/senior-application",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:43:27.728Z",
+    "callCompletedAt": "2026-10-15T02:43:35.411Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "looney-senior",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/looney-senior.md",
+    "artifactSha256": "be63fc34b195d5ad3d77b84fdefc6f18bd67c8216dbee0318055a41383776403",
+    "observedAt": "2026-10-15T02:43:35.411Z",
+    "depth": 1,
+    "parentSourceId": "looney",
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [
+      {
+        "url": "https://img1.wsimg.com/blobby/go/0aef8dbe-52b4-4056-bc21-2412ebd9ca01/2026-2027%20GOLD%20STAR%20Senior%20Education%20Scholarsh.pdf",
+        "sourceIds": [
+          "looney-pdf"
+        ],
+        "disposition": "inspected-selected-source",
+        "owner": "Codex source/identity reconciliation",
+        "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+        "nextAction": "Retain exact link and source scope. Forms/login/account/Apply/contact stay untouched; only separately material evidence within depth/host policy may be considered at applicable trigger. No widening, source-silence or child-opening inference."
+      }
+    ],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits."
+  },
+  {
+    "id": "looney-pdf",
+    "originalUrl": "https://img1.wsimg.com/blobby/go/0aef8dbe-52b4-4056-bc21-2412ebd9ca01/2026-2027%20GOLD%20STAR%20Senior%20Education%20Scholarsh.pdf",
+    "finalUrl": "https://img1.wsimg.com/blobby/go/0aef8dbe-52b4-4056-bc21-2412ebd9ca01/2026-2027%20GOLD%20STAR%20Senior%20Education%20Scholarsh.pdf",
+    "statusCode": 200,
+    "callStartedAt": "2026-10-15T02:43:55.001Z",
+    "callCompletedAt": "2026-10-15T02:43:57.867Z",
+    "provider": "Firecrawl connector",
+    "maxAgeRequested": 0,
+    "sourceRevision": null,
+    "originFreshnessVerified": false,
+    "retainedScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "redactPIIRequested": true,
+    "rawArtifactRetained": false,
+    "sourceId": "looney-pdf",
+    "artifactPath": "docs/evidence/sd2-autonomous/checkpoint-009/sources/looney-pdf.md",
+    "artifactSha256": "24a8300e6fbda924cb4f469d1ec0b68857ab838e9fab1e3d86fb30c149225e3f",
+    "observedAt": "2026-10-15T02:43:57.867Z",
+    "depth": 2,
+    "parentSourceId": "looney-senior",
+    "sourceScope": "Sanitized selected program rules only; omitted scope cannot establish source silence",
+    "linkDispositions": [],
+    "nativePublicSponsorContinuityVerified": false,
+    "completeRawPageImageInspection": false,
+    "owner": "Codex source/identity reconciliation",
+    "trigger": "Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage",
+    "nextAction": "Reconcile exact source/cycle/child applicability and deferred material at authorized evidence arrival/consolidation. Preserve selected-text, provider-redaction, origin freshness and visual limits.",
+    "externalDocumentRelationship": "Exact PDF link embedded by queued senior-application page; hosting link is observed, independent sponsor/native authority unverified",
+    "rawDownloadPerformed": false,
+    "conversionPageMarkers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "blankFieldsOmitted": true,
+    "sourceSilenceClaimed": false
+  }
+]

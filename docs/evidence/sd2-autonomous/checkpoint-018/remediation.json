@@ -1,0 +1,42 @@
+{
+  "priorCandidateCommit": "75861c229b6d9b0494b7c3f65b25a2502f07b607",
+  "priorManifestSha256": "f24a18b61c7ca7b2f41fabdc22f3e52353f7550754a35d554148d179a8bcc254",
+  "priorReviewSha256": "bf514b1ed9a74b6488ca70cfb87221f67ec982ac2f6cd5b0c3121f2d56876825",
+  "priorVerificationSha256": "6f3f7a4b833e759fda400a1b602907d83fe8337300ddcdc1ebb74409f4ba3b55",
+  "recordedAt": "2026-10-16T01:28:40.857798+00:00",
+  "newSourceReads": 0,
+  "allSourceReceiptsUnchanged": true,
+  "priorHeldValuesPreservedExceptThreeScopedRepairs": true,
+  "oldFieldEnvelopes": 307,
+  "newFieldEnvelopes": 308,
+  "cumulativeHeldFields": 6561,
+  "dispositions": [
+    {
+      "id": "SD2-018-M1",
+      "severity": "medium",
+      "disposition": "fixed; independent recheck required",
+      "rationale": "Typed the separate historical2026 postsecondary enrollment-intent condition using exact retained RISE paragraph.",
+      "owner": "Codex checkpoint018 implementation",
+      "trigger": "Before final independent replacement-candidate review",
+      "target": "row359 eligibility"
+    },
+    {
+      "id": "SD2-018-M2",
+      "severity": "medium",
+      "disposition": "fixed; independent recheck required",
+      "rationale": "Retained the general DECA May-emailed payment-form condition separately from unseen child application.",
+      "owner": "Codex checkpoint018 implementation",
+      "trigger": "Before final independent replacement-candidate review",
+      "target": "row352 amount.DECAProgramDisbursement"
+    },
+    {
+      "id": "SD2-018-M3",
+      "severity": "medium",
+      "disposition": "fixed; independent recheck required",
+      "rationale": "Typed general corporate DECA donor/fourfactor selection separately from child eligibility and hard exclusions.",
+      "owner": "Codex checkpoint018 implementation",
+      "trigger": "Before final independent replacement-candidate review",
+      "target": "row352 selection"
+    }
+  ]
+}

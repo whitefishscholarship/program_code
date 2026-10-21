@@ -1,0 +1,26 @@
+{
+  "priorCandidateCommit": "5ffc8ea51c33657db2715f83ffcae457379cb6e1",
+  "priorManifestSha256": "01fdf1f6eb88a846042a2df93287aa54bbefad03c16c7e3ed22e7ce7315a4a67",
+  "priorReviewSha256": "ae4210cb79e12725e3a634a58e75845673468a9b111a38b7e2f3ffa61d597b2f",
+  "recordedAt": "2026-10-15T07:11:40.077894+00:00",
+  "sourceReads": 0,
+  "acceptedFacts": 0,
+  "dispositions": [
+    {
+      "id": "SD2-013-M1",
+      "severity": "medium",
+      "resolution": "fixed",
+      "rationale": "Retained MSU source text explicitly requires personal-link portal upload for transcripts/recommendations with no mail/email, and asks the counselor for confidential or percentile ranking when school does not rank. Both are now explicit held materials values; no actual transcript/rank/reference collected.",
+      "owner": "Codex implementation/source-reconciliation author",
+      "target": "checkpoint-013.json row252 materials; README row252; verify.py"
+    },
+    {
+      "id": "SD2-013-L1",
+      "severity": "low",
+      "resolution": "fixed",
+      "rationale": "Exact Markdown destinations replace label-target concatenation. Retrieved refereeBold and retained self-fragment sections bind their observed source instead of false deferred retrieval. Rendering escapes are recorded separately; all89 destinations checked and no research replay.",
+      "owner": "Codex implementation/evidence author",
+      "target": "source-receipts.json and checkpoint-013.json sourceRegistry; verify.py"
+    }
+  ]
+}

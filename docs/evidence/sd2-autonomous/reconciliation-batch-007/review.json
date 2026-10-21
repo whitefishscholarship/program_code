@@ -1,0 +1,141 @@
+{
+  "outcome": "PASS",
+  "scope": "Exact selected 53-field saved-evidence comparison and prospective unselected 386-input continuation plan only",
+  "reviewedAt": "2026-10-19T16:30:53Z",
+  "reviewer": "/root/sd2_batch007_and_continuation_review",
+  "freshContext": true,
+  "readOnly": true,
+  "authoredOrEditedCandidate": false,
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "binding": {
+    "entryCommit": "d436720a4aa85b578de5f4de6355efe15580d1e2",
+    "selectionCheckpoint": "8a01b3173a3ff0c0d33cac98922f44856d396dad",
+    "candidateCommit": "4ac85fb026d58ae8ca752ad78dc7e771f5a2907a",
+    "candidateTree": "1c08fe11552941044f47a8c7db52058e5b6940db",
+    "manifestSha256": "af2a0f0692bece06d2cb8a391c7be0b56845bc6d2480b284d3e128820960fd6a",
+    "completeDiffBytes": 870611,
+    "completeDiffSha256": "1f4b3c0a64ba60eff61e3f1b4fdc9f52a3f596100511452f81f34a37d10450db",
+    "changedPathCount": 27,
+    "continuationScopeSha256": "987a886db192f25dceb9877b065f77506a96d095ea7524e53f8bfdc64cd9ede4"
+  },
+  "selected53Comparison": {
+    "outcome": "PASS",
+    "orderedSavedLocators": [17, 19, 20],
+    "orderedQueueOffsets": [17, 18, 19],
+    "fieldOccurrences": 53,
+    "categoryCounts": {
+      "existing evidence consistent": 17,
+      "applicability/identity unresolved": 25,
+      "evidence unavailable": 10,
+      "existing evidence conflicting": 1
+    },
+    "details": [
+      "All 53 original envelopes occur exactly once in scope order. Whole envelopes, identity proposals, values, states, acceptance, notes, source affinity, excerpts, times, limits and original routes remain unchanged.",
+      "Odd Fellows preserves maximum GPA3.0, unknown basis, scoped student/parent/guardian nonmembership, education alternatives, conflicting 3+/1+ recipient minima and summary/detail stage variants. No source winner, total, rule union/intersection or borrowed FFA affiliation.",
+      "RHM is the exact $2000 child with 50 recipient slots, Montana-high-school graduation, completed FAFSA AND at-least-half-time accredited Montana institution/program attendance. No residence, financial-need, upload, FAFSA-date or sibling-rule substitution.",
+      "Servant preserves one $500 slot, HS senior, FFA membership, minimum GPA2.0, copied AMTOPP annotation drift and the distinction between its exact child prefix and retained shared FAQ annex.",
+      "Historical/shared/current versions, GPA entry/scoring basis, renewal/reapplication and initial/awardee materials remain distinct. Original nulls and holds remain; minimum-proof proposals select no fetch."
+    ],
+    "acceptedFacts": 0,
+    "acceptedMappings": 0
+  },
+  "prospectiveContinuationPlan": {
+    "outcome": "PASS",
+    "id": "SD2-SAVED-CONTINUATION-1",
+    "executionSelected": false,
+    "inputOccurrences": 386,
+    "fieldOccurrences": 7062,
+    "queueOffsets": "20–405",
+    "originalPackets": "checkpoint-002 through checkpoint-021",
+    "reviewGroups": 20,
+    "groupSizes": "19 groups of20, followed by6",
+    "minimumIndependentReviews": 21,
+    "details": [
+      "Mechanically verified exact original membership, order, packet/registry/whole-record hashes, field counts and field-order hashes, group coverage, uniqueness and exclusion of the first20 autonomous inputs. No future facts were semantically compared.",
+      "One future direct exact selection authorizes the entire frozen remaining corpus. A separate new authority/selection receipt pins the immutable prepared manifest; the prepared scope and historical reviews remain unchanged.",
+      "Internal groups retain mandatory fresh-context independent semantic review, author-owned remediation, rejected-binding preservation and exact local receipt boundaries. Matching scoped PASS permits automatic continuation without routine checkpoint approval.",
+      "The final independent coverage audit is additional to all20 group reviews. Unknowns remain held and routed while unaffected approved work continues; genuine evidence, scope or reserved-effect decisions remain pause conditions.",
+      "Context handoffs preserve selected authority and the next original record pointer. No new factual queue, routine reapproval loop, automation, new chat, source acquisition, dependency repair, acceptance or SD3 is authorized.",
+      "The plan reduces human interruptions without weakening substantive accuracy, preservation, source, human, canonical, application-build or external-effect gates."
+    ],
+    "futureOutputRootExists": false,
+    "coverageIfFullySelectedAndExecuted": {
+      "autonomousFieldOccurrences": 7406,
+      "priorJayceeFieldOccurrences": 62,
+      "totalComparedFieldOccurrences": 7468,
+      "autonomousInputs": 406,
+      "priorJayceeInputs": 2,
+      "fullSD2Accepted": false
+    }
+  },
+  "checks": [
+    {
+      "name": "Immutable candidate and complete manifest binding",
+      "outcome": "PASS",
+      "details": "Independently verified HEAD, candidate tree, complete binary diff size/hash, exact27-path change set, and every changed Git blob, mode, byte count, SHA256 and working-file equality."
+    },
+    {
+      "name": "Predecessor receipt and selected-entry ancestry",
+      "outcome": "PASS",
+      "details": "Verified proposal007 matching PASS review/manifest and exact direct-child two-file receipt at entry, then selection checkpoint as entry's direct child containing exactly AUTHORITY.md, selection.json and entry-audit.json. Fresh recorded predecessor review-bound verification passed before new paths."
+    },
+    {
+      "name": "Current batch verifier",
+      "outcome": "PASS",
+      "command": "python3 docs/evidence/sd2-autonomous/reconciliation-batch-007/verify.py",
+      "exitCode": 0,
+      "startedAt": "2026-10-19T16:28:54.313558+00:00",
+      "completedAt": "2026-10-19T16:28:55.421732+00:00",
+      "details": "Verified2522 protected entry files, exact three append-only handoffs, all prior/rejected review bindings, selected envelopes/identities/source views and prospective386/7062 membership. No older verifier was executed."
+    },
+    {
+      "name": "Global preservation and retained routes",
+      "outcome": "PASS",
+      "details": "Original ledgers and historical count receipt remain immutable:7406 field holds,406 identity holds,676 seeds,1127 links,365 source receipts,35 inherited source routes,628 converted destinations including1 unclosed hold,9 attention rows and supplements,437 M1 routes,12 pins and71 custody receipts. No new custody availability claim or raw reinspection."
+    },
+    {
+      "name": "Coverage accounting",
+      "outcome": "PASS",
+      "details": "Prior353 comparisons remain exact; cumulative406 field occurrences span20 autonomous plus2 prior Jaycee inputs, leaving386 autonomous inputs outside comparison. Initial research remains406 inputs, cursor406, nextnull; fullSD2 remains incomplete."
+    },
+    {
+      "name": "Application verification evidence",
+      "outcome": "BLOCKED_ENVIRONMENT",
+      "details": "Verified four actual exit127 receipts, raw/normalized logs, hashes and sizes: plan/tests missing tsx, typecheck missing tsc, build missing next. requiredChecksRemainUnfulfilled is true. Historical build EPERM and fresh authenticated main/target gates remain open. No suite/build PASS, waiver, installation or environment repair."
+    },
+    {
+      "name": "Complete immutable diff whitespace",
+      "outcome": "PASS",
+      "command": "git diff --check d436720a4aa85b578de5f4de6355efe15580d1e2 4ac85fb026d58ae8ca752ad78dc7e771f5a2907a",
+      "exitCode": 0
+    }
+  ],
+  "reviewProcessIncidents": [
+    {
+      "id": "REVIEWER-OUTPUT-007-1",
+      "type": "reviewer-only source-output and labeling lapse",
+      "details": "Reviewer assumed selected-context array positions1/2 were RHM/Servant child prefixes. They actually contained shared FAQ12 renewal and FAQ01 window context. The tool emitted the complete FAQ12 paragraph once and FAQ01 window text under incorrect child labels. This breached the required output-narrowing discipline.",
+      "candidateDefect": false,
+      "candidateEdited": false,
+      "containment": "Disclosed immediately to the author. Reidentified exact rh-old child prefixes by actual source/name boundaries and rechecked child semantics. Later shared-context inspection emitted only necessary field-specific sentences or assertions. Original candidate, source envelopes and historical incidents remain unchanged.",
+      "owner": "/root/sd2_batch007_and_continuation_review; Codex evidence/source governance",
+      "trigger": "This review's durable record and every later source preview",
+      "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-007/review.json",
+      "nextAction": "Retain this incident in reviewProcessIncidents without candidate repair or historical relabeling; identify actual sourceId and exact child/sentence boundaries before every preview."
+    }
+  ],
+  "limits": [
+    "PASS applies only to the selected53-field comparison and prospective continuation plan. It does not execute or validate future386-input factual comparisons.",
+    "Application plan/type/tests/build gates remain unfulfilled; no canonical stage acceptance, fact acceptance, identity acceptance or release is established.",
+    "No new source/workbook/metadata/raw/native reads, custody reacquisition, network access, npm/build execution, assembler execution, edits, staging or commits were performed by this reviewer.",
+    "No new current offering, source silence, public/sponsor/route/native/visual completeness, workbook preservation/recovery or authenticated delivery-baseline claim.",
+    "Future continuation still requires one direct exact selection of its frozen scope. All original owners/triggers/actions and reserved-effect gates remain operative. Stop beforeSD3."
+  ]
+}

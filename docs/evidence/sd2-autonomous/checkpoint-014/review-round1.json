@@ -1,0 +1,106 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of one bounded local SD2 held-research checkpoint014",
+  "reviewer": {
+    "identity": "/root/checkpoint014_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": true,
+    "memoryUse": "Navigation only; current bindings and findings verified directly from frozen retained evidence."
+  },
+  "binding": {
+    "entryCommit": "889057e8807ec55c41796d737262a35dda282e31",
+    "candidateCommit": "5351727159f211c0294d581df3d975920d225ea0",
+    "candidateTree": "15b1ead3caf48c371e5c0940acc08dada289e206",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-014/final-manifest.json",
+    "manifestSha256": "0d7733e9b13cc31c79649f1253fac3ac1837162ef541a5f01419b0d8a7b2d54f",
+    "completeDiffSha256": "c016f2adcc3acacb35cd1b2bc1f9cd5bb8a6b1846f2de04a6fe1470958a207ed",
+    "changedPaths": 49,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "protectedPreEntryTrackedPaths": 1705,
+    "preservedBlobIdsAndModes": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 3, "low": 1},
+  "findings": [
+    {
+      "id": "SD2-014-M1",
+      "severity": "medium",
+      "title": "Verified typed claims exceed the retained source support",
+      "paths": ["docs/evidence/sd2-autonomous/checkpoint-014.json", "docs/evidence/sd2-autonomous/checkpoint-014/sources/coca.md", "docs/evidence/sd2-autonomous/checkpoint-014/sources/csktpdf.md", "docs/evidence/sd2-autonomous/checkpoint-014/README.md"],
+      "locations": ["row269.fieldProposals.amount.value.scholarship", "row279.fieldProposals.materials.value.signedDatedForms", "row279.fieldProposals.materials.value.faxAccepted", "row279.fieldProposals.materials.value.diplomaGEDHiSET", "checkpoint-014.json lines1652,5401–5402", "sources/csktpdf.md lines49–50,60–63"],
+      "evidence": [
+        "The Coca-Cola amount envelope asserts scholarship='achievement-based' as verified, but neither coca.md nor its bound excerpt contains that description.",
+        "CSKT materials asserts signedDatedForms=true; the retained passage says paperwork must be signed and completed, without the dated qualifier.",
+        "CSKT materials asserts faxAccepted=false and README repeats a fax prohibition; no retained CSKT passage supports that prohibition.",
+        "CSKT materials compresses completion evidence to diplomaGEDHiSET=true, omitting the retained certificate-or-test-results alternative and the 2026-graduate diploma-or-transcript-after-graduation condition."
+      ],
+      "impact": "The selected artifacts and matching excerpts pass structural checks while failing to support every verified component and substantive materials alternative.",
+      "authorFix": "Restore exact substantive non-contact passages only if already available from the original in-session conversion, or mark unsupported components unknown. Explicitly retain the CSKT alternatives and timing qualifier. Rebind affected artifact hashes, excerpts, semantic assertions, receipts, concordance, README and focused verifier assertions. Do not make new source reads or reconstruct missing text.",
+      "owner": "Codex implementation/evidence author", "trigger": "Before replacement-candidate review", "status": "unresolved"
+    },
+    {
+      "id": "SD2-014-M2", "severity": "medium", "title": "Typed eligibility omits prospective enrollment alternatives",
+      "paths": ["docs/evidence/sd2-autonomous/checkpoint-014.json", "docs/evidence/sd2-autonomous/checkpoint-014/sources/fisher.md", "docs/evidence/sd2-autonomous/checkpoint-014/sources/gates.md"],
+      "locations": ["row268.fieldProposals.eligibility.value", "row280.fieldProposals.eligibility.value", "checkpoint-014.json lines1309–1310,5597"],
+      "evidence": ["Fisher explicitly permits students enrolled OR planning to enroll in the stated full-time program.", "Gates explicitly requires students to plan to enroll full-time.", "The corresponding typed values retain fullTime and program properties but omit these enrollment modalities."],
+      "impact": "Later consumers could interpret the typed conditions as requiring current enrollment and incorrectly narrow high-school eligibility.",
+      "authorFix": "Explicitly encode Fisher's enrolled-or-planning alternative and Gates' plan-to-enroll condition in held typed values and semantic assertions. Carry the distinction into README and focused verifier checks.",
+      "owner": "Codex implementation/evidence author", "trigger": "Before replacement-candidate review", "status": "unresolved"
+    },
+    {
+      "id": "SD2-014-M3", "severity": "medium", "title": "NESA award-period membership is incorrectly scoped only to Cooke terms",
+      "paths": ["docs/evidence/sd2-autonomous/checkpoint-014.json", "docs/evidence/sd2-autonomous/checkpoint-014/sources/nesa.md"],
+      "locations": ["row282.fieldProposals.renewal.value.CookeFourYearTerms", "checkpoint-014.json line6474", "sources/nesa.md lines54–62"],
+      "evidence": ["Award Condition1 requires active NESA membership for each award period for the offered scholarship generally.", "Award Condition3 separately imposes the Cooke four-year bachelor-program requirement.", "The typed renewal envelope combines active membership with CookeFourYearTerms; initial NESAMember=true does not preserve the general award-period continuation scope."],
+      "impact": "The held representation loses a general continuing award condition and makes it appear Cooke-specific.",
+      "authorFix": "Represent active NESA membership for each award period as a general condition, separate from Cooke-specific bachelor enrollment. Preserve general full-time maintenance/proof and course-schedule payment conditions, with Cooke transcript verification separately scoped. Update semantic assertions, README and focused verifier checks.",
+      "owner": "Codex implementation/evidence author", "trigger": "Before replacement-candidate review", "status": "unresolved"
+    },
+    {
+      "id": "SD2-014-L1", "severity": "low", "title": "Contact redaction leaves a telephone extension",
+      "paths": ["docs/evidence/sd2-autonomous/checkpoint-014/sources/csktpdf.md", "docs/evidence/sd2-autonomous/checkpoint-014.json"],
+      "locations": ["sources/csktpdf.md line57", "All dependent CSKT PDF evidence excerpts"],
+      "evidence": ["The retained selected artifact leaves a telephone extension immediately after the phone-redaction marker.", "POLICY.md excludes unrelated contact values before persistence."],
+      "impact": "Sanitization is incomplete despite the documented exclusion of contact values.",
+      "authorFix": "Remove the remaining extension from the selected artifact and dependent excerpts. Update hashes, concordance and receipts; disclose the additional redaction without claiming historical output was erased.",
+      "owner": "Codex implementation/evidence author", "trigger": "Before replacement-candidate review", "status": "unresolved"
+    }
+  ],
+  "checksPerformed": [
+    "Read repository governance, current machine-state stage records, current handoff, P9 evidence, current autonomous kickoff, AUTHORITY/POLICY, relevant SD plan factual/review contracts, section9 current progress and original nine attention rows.",
+    "Read checkpoint014 README, ASSEMBLY_NOTES, ledger typed values for all20 records, all24 selected source artifacts, capture metadata, source concordance, source receipts, validation records, verifier and check-runner.",
+    "Independently recomputed manifest SHA256, candidate tree, complete entry-to-candidate binary-diff SHA256, exact49-path change set and every candidate blob ID, byte length, SHA256 and worktree equality.",
+    "Independently ran python3 docs/evidence/sd2-autonomous/checkpoint-014/verify.py; PASS at2026-10-15T14:25:08.569803+00:00.",
+    "Independently ran exact entry-to-candidate git diff --check; exit0.",
+    "Verifier confirmed20 ordered inputs at offsets260:280, rows265–284;300 new held fields;148 exact excerpt references;35 seed dispositions;25 retained source-link dispositions.",
+    "Verified280 cumulative initial dispositions,5341 cumulative held fields,280 held identities,126 unprocessed,0 accepted facts and next input saved-405588227-row-285.",
+    "Verified13 historical manifest/review bindings,1705 protected tracked files and modes,71 original custody pins without gaps,12 original M1 artifact pins and437 unique M1 records.",
+    "Verified capture-metadata sources equal source receipts with only artifact hashes and link dispositions omitted from the capture projection.",
+    "Checked23 public retrievals,22status200 and one404, one native readable PDF conversion, two native metadata observations and four separate pre-observation parameter errors.",
+    "Checked all24 concordance entries, totaling602 retained nonblank non-editorial lines; original-conversion concordance remains an author assertion.",
+    "Checked source affinity, parent-child depths, exact saved seed/alias dispositions, retained Markdown link accounting, historical/current cycle separation, identity holds and unknowns.",
+    "Read retained plan/typecheck/full-test passing evidence and initial IPC failures; inspected both exact standard-build process/port EPERM failures. No full software matrix rerun.",
+    "Confirmed HEAD remains the reviewed candidate and only final-manifest.json is untracked.",
+    "No files edited, sources fetched, workbook reads, external effects, queue initialization/reset/replay or SD3 work performed."
+  ],
+  "limits": [
+    "This FAIL requests bounded author remediation; it is not a failure of checkpoint denominator or historical preservation.",
+    "No critical or high findings were identified; three medium and one low findings remain unresolved against this original candidate.",
+    "A replacement candidate requires exactly count-matched author dispositions and independent recheck. Preserve this original candidate, manifest and review binding.",
+    "Original complete responses and native/raw/page/image evidence were not retained; independent original fidelity and completeness cannot be proved from selected conversions.",
+    "Author concordance against ephemeral original conversions is not independent source-fidelity proof.",
+    "Selected captures do not establish source silence, public accessibility, sponsor/alias continuity, origin freshness, current offering or usable application routes.",
+    "Handling/output lapses remain disclosed; final sanitization cannot erase earlier output.",
+    "Both exact standard-build failures, fresh authenticated main/target and later preservation, acceptance, publication, student/browser/CSV, monitoring and reserved-effect gates remain open at original owners and triggers.",
+    "Research review accepts no scholarship fact, identity, canonical stage, release or fullSD2 completion."
+  ],
+  "canonicalAcceptance": false, "acceptedFacts": 0, "fullSD2Complete": false, "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex implementation/evidence author", "trigger": "Receipt of this original independent review", "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-014/",
+    "action": "Preserve original review binding; remediate3medium/1low findings within existing evidence-only scope; record count-matched dispositions, freeze a replacement candidate and manifest, and request independent recheck. Do not begin another checkpoint, accept facts, start SD3 or perform external effects."
+  }
+}

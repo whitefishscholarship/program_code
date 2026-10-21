@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent local SD2 consolidation/hold-reconciliation proposal review; pilot unexecuted; not canonical acceptance/attestation",
+  "entryCommit": "37d0b041423fb9db8eb9bf63484694230e1ac12f",
+  "candidateCommit": "962f6ba8f47c249c4c4e2bdac4c20012a85b1da9",
+  "candidateTree": "fb20dddffd2455ac850c644b6adb734977a2a1f3",
+  "completeDiffSha256": "83b262fd5151203cae467efa57fdfb2a642f61f12738c72fdc1d01b6fc03eada",
+  "completeDiffBytes": 152046,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "blob": "2dd2c3ea784346f0c293d7264ff53a6beb9d7eb9",
+      "bytes": 665374,
+      "sha256": "9eb0896e6eb8c9cd610096d600d4be2886bc7d5d5a2f7fac5ad5b74efd75eab9"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "blob": "e5ef75a2a649881febd50b767e392179d3cd23f5",
+      "bytes": 136797,
+      "sha256": "b099e06b43474ff9a5cee80bbbd15c7974e739a96d402f5a77324d2299d0a660"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "blob": "97c5602922c9583278b3fe7ee33bb716557ae9a5",
+      "bytes": 67236,
+      "sha256": "cb8423509751a8c5156c21a7328b81171637f908046d1c715ebf3a56b7b8b862"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/PROPOSAL.md",
+      "mode": "100644",
+      "blob": "f4b619cc4555c3491d68009dd540530ea5bc6e64",
+      "bytes": 17366,
+      "sha256": "38e168faed6965e35a61f081be4c2244d22a59567365db8a525922bfb71da4ba"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/build.json",
+      "mode": "100644",
+      "blob": "ede8878de94c17c2d4ac99b98f8f219be12b1789",
+      "bytes": 411,
+      "sha256": "fd41c39fdf0a68b9b9d70b678ced9a4ef40bd059614bc2a5e344d81df18eb204"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/build.log",
+      "mode": "100644",
+      "blob": "c9c5c2e253cba44472a6af2eb0c4edf8db97e480",
+      "bytes": 4597,
+      "sha256": "3309ec0303fa296171ac9c73e1aab060a833dc55eb6c7d5f608929ea5c6cd2f5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/entry-audit.json",
+      "mode": "100644",
+      "blob": "bee4023461de26fd6c0129ba997efbe54c275cfa",
+      "bytes": 42543,
+      "sha256": "f7ff809cc04267fc12ead115bc52b3e3d6e0fcf5fee5f328086e6f12067de71b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/manifest-round1.json",
+      "mode": "100644",
+      "blob": "d1bb4727f6433f833d938aa4e95f92eb0d3e96dc",
+      "bytes": 6427,
+      "sha256": "fbd67e91a71d8e45d57264066bd8f673dc14298c2c6c8bea41a7a373e98d75a5"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/plan-retry.json",
+      "mode": "100644",
+      "blob": "9497da98bd4a09ac8ddb3475a826510515790aaf",
+      "bytes": 421,
+      "sha256": "bd7a4172dd3f4235d9d2a50601f739f4db83c9fdf1344f3c8b73f232919b0e18"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/plan-retry.log",
+      "mode": "100644",
+      "blob": "2b6bef746bd39049e2d253dbda1b040e5e9e3e9f",
+      "bytes": 164,
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/plan.json",
+      "mode": "100644",
+      "blob": "495c1e27c8adac16d8056a934f8fc02490d1c670",
+      "bytes": 415,
+      "sha256": "dc6b265b0dffa3c8cb0bf92dad4dfffc50347e39ef03bfe05964cb15dec04794"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/plan.log",
+      "mode": "100644",
+      "blob": "0e5427b4f6f7397be77e87b7a364b3dadd67e5da",
+      "bytes": 998,
+      "sha256": "db045942a0c4d4ca1ad17c0facde179126b5a8623871667a81e175eaf201d620"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/preservation.json",
+      "mode": "100644",
+      "blob": "c4a44abc7a962c66ed9280adb02bea2f45b4bea6",
+      "bytes": 2825,
+      "sha256": "f0d4a5956f15f40223321f30e4fdc4fcd2b458b44a151432480794f372154c09"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/remediation.json",
+      "mode": "100644",
+      "blob": "e7f62b899ed536215ab2acfbfe9f01acc5774a50",
+      "bytes": 2604,
+      "sha256": "1809980dba932785d05d8b703a553206bb4752128fd2a01b1f6b06d193d9248c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/review-round1.json",
+      "mode": "100644",
+      "blob": "945808038f98775abf498e2b15aecc8192a5725b",
+      "bytes": 9337,
+      "sha256": "54da25e6426f6c982b1d2a1e4ef15ab49db5d2fbd69ed596c31ae590bf1ea245"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/scope.json",
+      "mode": "100644",
+      "blob": "15f695482cd6cbaca7a037ce7b1c0dc8cd16a754",
+      "bytes": 6291,
+      "sha256": "367d7f53bdd4dc162156bdd89ee05791fe35629fd8a663308dd85b6ae38bf319"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/tests-retry.json",
+      "mode": "100644",
+      "blob": "e4985d726f4a09347de00ab5b000759b1dd67051",
+      "bytes": 405,
+      "sha256": "195de8ab8f3ada6205ca953054a27ef75be22eb6598384475bc056c7c9747122"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/tests-retry.log",
+      "mode": "100644",
+      "blob": "5913d3437e6d812ebe7410472f4e3a8cb4eed48d",
+      "bytes": 19755,
+      "sha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/tests.json",
+      "mode": "100644",
+      "blob": "46cb6977f89398e0cc9f1077a43467aaa56c41bc",
+      "bytes": 399,
+      "sha256": "44cd59322a1019b36885148126910e9b5b4a0f5f973f6fe2244fe70fc8bd2de4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/tests.log",
+      "mode": "100644",
+      "blob": "c39502283b35648e8fcfa126859e4fde917d5d61",
+      "bytes": 3459,
+      "sha256": "1fd9074b79d46381e14f1f7f2d8421916612772a638f04690414de1d65f414e0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.json",
+      "mode": "100644",
+      "blob": "4672926c0b11692fdd75aba05a631b480cf5fab1",
+      "bytes": 911,
+      "sha256": "ade68f1976e937bf4f8c08dcfa156d4c970076a916777277a2a6c60207f9ef7b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
+      "mode": "100644",
+      "blob": "0d7b0b56a2fd8cb1ea9902c8b20adbee8099e588",
+      "bytes": 38,
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/validation.json",
+      "mode": "100644",
+      "blob": "7a3690152cea0476df019b75b7403631f79dedb0",
+      "bytes": 7363,
+      "sha256": "9c8e6176ebe06704cbaf47a9912153164bd4c97c377c71274da6db9969129f92"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/verify.py",
+      "mode": "100644",
+      "blob": "6db7b3749aebc27011fba0814dad05954b5330f0",
+      "bytes": 9282,
+      "sha256": "2556e35cdd670111b594e860a62c7ce5b48af820b410433b4c8ebd75513f0554"
+    }
+  ],
+  "originalCandidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+  "originalManifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal/manifest-round1.json",
+  "originalReviewPath": "docs/evidence/sd2-autonomous/consolidation-proposal/review-round1.json",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "externalEffects": false
+}

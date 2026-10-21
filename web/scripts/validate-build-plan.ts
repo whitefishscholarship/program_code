@@ -1,3 +1,4 @@
+import { validateHeldAtRepo, validateClosureProofAtRepo, type ClosureProof, type HeldState } from './sd2-held-closure-governance';
 import { validateIdentityRepairAtRepo } from './r4-identity-delivery';
 import { permitsLocalR3Preparation, validateR3CatalogPolicyAt, type R3CatalogPolicy } from './r3-catalog-governance';
 import { permitsLocalCoveragePreparation } from './interview-coverage-governance';
@@ -1626,6 +1627,36 @@ if (state) {
       validateBoundAttestation(revision19.id, revision19.baselineCommit, revision19.manifestPath, revision19.reviewPath);
       revision19ContinuationValid = errors.length === startErrors;
     }
+  }
+  if (state.planRevision >= 22) {
+    const revision22 = findCanonicalAttestation('PLAN-REV22', 'docs/evidence/PLAN-REV22-manifest.json', 'docs/reviews/PLAN-REV22.json');
+    validateHeldAtRepo(repoRoot, state as unknown as HeldState, revision22?.manifest.candidateCommit).forEach(fail);
+    const closure = (state as unknown as HeldState).sd2ResearchClosure?.closureAttestation;
+    if (closure) {
+      const canonical = findCanonicalAttestation('SD2-HELD-RESEARCH', closure.manifestPath, closure.reviewPath);
+      if (!canonical) fail('SD2 closure requires its own exact independent attestation');
+      else {
+        const beforeErrors=errors.length;
+        validateBoundAttestation('SD2-HELD-RESEARCH', canonical.manifest.baselineCommit, closure.manifestPath, closure.reviewPath);
+        const proof=(canonical.manifest as unknown as {heldResearchProof:ClosureProof}).heldResearchProof;
+        if (!proof) fail('SD2 closure manifest lacks exact heldResearchProof');
+        else {
+          const main=gitText(['rev-parse','refs/remotes/origin/main'])?.trim() ?? '';
+          const candidate=canonical.manifest.candidateCommit;
+          const tree=gitBuffer(['ls-tree','-r',candidate,'--','web']);
+          const gates=gitBuffer(['show',`${candidate}:docs/evidence/sd2-consolidation-package/acceptance-gates.json`]);
+          validateClosureProofAtRepo(repoRoot,proof,{
+            revision22Delivered:!!revision22 && isAncestor(revision22.attestationCommit,main),
+            canonicalAttestation:errors.length===beforeErrors,
+            closureDelivered:isAncestor(canonical.attestationCommit,main),
+            candidateCommit:candidate,baselineCommit:canonical.manifest.baselineCommit,
+            candidateManifestSha256:sha256File(closure.manifestPath),reviewSha256:sha256File(closure.reviewPath),
+            runtimeDigest:tree?sha256Buffer(tree):'',originalGatesSha256:gates?sha256Buffer(gates):'',
+          }).forEach(fail);
+        }
+      }
+    }
+
   }
   for (const amendment of planAmendments) {
     const amendmentRevision = Number(/^PLAN-REV(\d+)$/.exec(amendment.id)?.[1] ?? 0);

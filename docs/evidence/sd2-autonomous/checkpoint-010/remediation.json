@@ -1,0 +1,25 @@
+{
+  "originalCandidate": "120bb754eec5be7e6e906f4ae8244f5d1e9d9847",
+  "originalManifestSha256": "97c044a251a0c342f09692e310e012a8cd63d73599a57dcf75d2d3a273e480b6",
+  "recordedAt": "2026-10-15T04:00:13.934874+00:00",
+  "requiredFixCount": 1,
+  "dispositions": [
+    {
+      "findingId": "SD2-010-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Replaced source-derived biographical date literals with generic structural checks and extended the scan to every new packet text file, including tooling. No scholarship record, field, source, route, coverage or matrix result changed. Original immutable candidate retains the original guard, so the exposure is disclosed rather than claimed erased; no history rewrite or external publication.",
+      "owner": "Codex implementation author",
+      "trigger": "Replacement-candidate independent recheck",
+      "target": "Replacement frozen checkpoint010 candidate"
+    }
+  ],
+  "historicalRetentionRoute": {
+    "owner": "Codex evidence/governance/delivery",
+    "trigger": "At any later authorized history-preservation, canonical-acceptance or publication review",
+    "nextAction": "Disclose original guard date-literal retention in preserved120bb75 and failed review. Verify final packet exclusion without printing values. Assess exact authorized handling before later external effect; never claim erasure or silently rewrite history."
+  },
+  "noNewSourceReadDownloadAssemblyResetOrReplay": true,
+  "acceptedFacts": 0,
+  "originalReviewSha256": "baed7c89f61c65deedca8a8b8f026b397102924de091f1a9d67cc0d07ea5e435"
+}

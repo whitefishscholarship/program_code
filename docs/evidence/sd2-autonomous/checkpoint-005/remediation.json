@@ -1,0 +1,23 @@
+{
+  "originalCandidate": "361f25e70d1456dab4b9c3176fa9c5ace45bec0e",
+  "originalManifestSha256": "f0235eb9d76e1b63da0d78b8e5c75d597c7984e2e2a1b8524fff7482ba9c6cd5",
+  "recordedAt": "2026-10-14T21:01:19.872380+00:00",
+  "requiredFixCount": 1,
+  "dispositions": [
+    {
+      "findingId": "SD2-005-M1",
+      "severity": "medium",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Retains separate explicit recommendation-format condition already present in source; no new research/acceptance or broadening.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint005 candidate",
+      "paths": [
+        "docs/evidence/sd2-autonomous/checkpoint-005.json",
+        "docs/evidence/sd2-autonomous/checkpoint-005/README.md",
+        "docs/evidence/sd2-autonomous/checkpoint-005/verify.py"
+      ],
+      "fix": "materials.recommendationsWordProgram=true with exact nativepage7 excerpt, URL/hash/locator; summary/nextaction carry it; semantic verifier requires value and evidence."
+    }
+  ],
+  "noSourceRefreshOrReplay": true
+}

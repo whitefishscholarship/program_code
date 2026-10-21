@@ -1,0 +1,91 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of one local SD2 held-research checkpoint; no canonical or fact acceptance",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint008_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": "Brief historical registry lookup only. Findings and verification rely on the current governing files, frozen candidate and retained artifacts."
+  },
+  "binding": {
+    "entryCommit": "d394d074b7e375f9bd6919a7774c9e72f84dae80",
+    "candidateCommit": "6be403829cbcf68bb075b6bfaee239c921b351b4",
+    "candidateTree": "4fc15015de4bc1c6577b8e023a9553076d00bf46",
+    "manifestSha256": "85ff9c613a90f1a0eb45daa7806aa1affb994a8bb0ab854d1ed10c0a855d9cdd",
+    "completeDiffSha256": "a23af6186550b663c3973b9fede07a0c9603e25c65b9dfbb23c0fefd5122fbf4",
+    "changedPaths": 55
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-008-M1",
+      "severity": "medium",
+      "title": "Retain Ripple parent eligibility separately from the PDF criteria",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-008.json",
+      "locator": "saved-405588227-row-146.fieldProposals.eligibility; lines 1233–1243",
+      "sourcePath": "docs/evidence/sd2-autonomous/checkpoint-008/sources/ripple.md",
+      "sourceLocator": "line 4",
+      "observation": "The retained parent page explicitly lists environmental science/studies, environmental engineering, biology and sustainability, and considers other majors demonstrating an environmental emphasis. The typed eligibility value and evidence retain only the PDF's biology/ecology/environmental-science/hydrology examples and its water-quality/WLI-approval condition. The row's next action does not identify this substantive eligibility variation.",
+      "impact": "The structured reconciliation loses observed eligibility breadth and can carry the PDF's narrower condition forward without the parent qualification. Holding acceptance does not preserve an omitted material source distinction.",
+      "requiredFix": "Add a distinct held parent-scope eligibility observation with exact ripple source evidence, preserving its named majors and other-environmental-emphasis clause. Preserve the PDF criteria separately and explicitly route the parent/PDF variation without choosing either as accepted truth. Update the row action, README and focused semantic verification as appropriate. No source refresh is needed.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint008 candidate before independent recheck"
+    },
+    {
+      "id": "SD2-008-M2",
+      "severity": "medium",
+      "title": "Retain LPA's parent funding restriction",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-008.json",
+      "locator": "saved-405588227-row-162.fieldProposals and nextAction",
+      "sourcePath": "docs/evidence/sd2-autonomous/checkpoint-008/sources/lpa.md",
+      "sourceLocator": "lines 60–62, Direct to Institution",
+      "observation": "The inspected parent source states that all funds are sent directly to the certified educational institution. Row162 preserves several parent eligibility and application requirements, but none of its typed values or next-action route preserves this payment restriction.",
+      "impact": "A material restriction on award disbursement is absent from the structured proposal and follow-up despite being observed in the retained source.",
+      "requiredFix": "Add a held, explicitly parent-scoped direct-to-certified-institution payment observation with exact source evidence and a corresponding reconciliation action. Keep the American Airlines child mapping unresolved; do not inherit or accept this parent restriction as an established fact for that saved child. Update the README and focused semantic verification as appropriate.",
+      "owner": "Codex implementation author",
+      "target": "Replacement frozen checkpoint008 candidate before independent recheck"
+    }
+  ],
+  "checksPerformed": [
+    "Read repository operating rules, canonical plan/state, current handoff, accepted P9 evidence, current kickoff, SD2 authority/policy, complete section9 and prior checkpoint007 review bindings.",
+    "Independently recomputed candidate tree, final-manifest SHA256 and complete entry-to-candidate binary-diff SHA256.",
+    "Independently verified the exact 55-path change set, every candidate blob ID, byte length, SHA256 and worktree equality. All 55 paths are additions belonging to checkpoint008.",
+    "Ran the read-only checkpoint008 verifier successfully and checked frozen-diff whitespace.",
+    "Reviewed all 26 retained selected-source artifacts against the material typed proposals, sensitive eligibility, amount, deadline, application, renewal, identity and parent/child distinctions.",
+    "Verified 109 exact evidence excerpts, artifact hashes, source URLs and allowed input-source affinities through the read-only verifier.",
+    "Verified 20 ordered inputs at offsets140–159, 160 cumulative initial dispositions, 246 unprocessed inputs, 386 new held field envelopes, 3032 cumulative autonomous held fields, 160 held identities and zero accepted facts.",
+    "Verified all37 seed dispositions and22 source-link dispositions retain owner, trigger and nextAction.",
+    "Inspected only the recorded corrected PEO page1 v3 and safe page2 images. Their visible rules agree with the retained PEO text, including the printing-versus-typing conflict.",
+    "Verified68 prior custody pins, the new PEO PDF hash and both corrected safe-view hashes without reacquisition or reconstruction.",
+    "Checked three native-Docs body/paragraph concordance receipts, zero tables and one explicitly uninspected Rotary inline object.",
+    "Verified1398 protected entry paths, seven prior ledgers, six historical checkpoint002–007 manifest/review bindings, prior section9/handoff bytes,12 M1 pins and437 unique M1 records.",
+    "Inspected required validation receipts and logs: plan/typecheck/fulltests passed after disclosed exact IPC retries; both exact standard builds fail on process/port permissions, without waiver.",
+    "Confirmed canonical stage pointers remain null, canonical/web/CI/control bytes are unchanged and SD3 remains unstarted.",
+    "Final status remained exact candidate6be4038 with only the prepared final-manifest.json untracked. No repository file was edited."
+  ],
+  "limits": [
+    "FAIL concerns two omissions in structured held-source reconciliation. No critical or high issue was found.",
+    "Unknown or inaccessible material is a valid initial held outcome. This review does not require unsafe downloads, new source reads or reversal of the automatic approval rejection.",
+    "The rejected raw batch, native-readable alternatives and Herriges/DonK material gaps remain explicitly disclosed. No applicant responses were observed in reviewed retained artifacts.",
+    "Historical streamed signed-reference, public-contact and initial wrong-mask output lapses cannot be erased by persisted sanitization. Their containment and future handling routes remain recorded.",
+    "Only PEO has new raw PDF and corrected sanitized rule-page visual proof. Other readable conversions do not establish raw/page/image completeness or source silence.",
+    "Native body concordance is a recorded source-capture receipt; no fresh connector call was performed. Rotary's inline image remains uninspected.",
+    "Source revisions, origin currency, native public/sponsor continuity and exact content-call timing remain unverified within the disclosed limits.",
+    "Temporary custody was verified locally at review time only. Later required audits must verify exact paths/hashes or report specific gaps while preserving receipts.",
+    "Both standard-build failures, fresh authenticated main/target proof and all preservation, human/canonical acceptance, publication, student, monitoring and external-effect gates remain open at their existing owners and triggers.",
+    "No current scholarship offering, accepted fact, full SD2 completion, canonical stage acceptance or release follows from this review."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "This independent review",
+    "path": "docs/evidence/sd2-autonomous/checkpoint-008/",
+    "action": "Preserve this candidate and review binding. Make two count-matched author repairs from the already retained sources, retain every existing hold and historical artifact, freeze a replacement candidate and manifest, and request this reviewer's read-only recheck. Stop before another checkpoint or SD3."
+  }
+}

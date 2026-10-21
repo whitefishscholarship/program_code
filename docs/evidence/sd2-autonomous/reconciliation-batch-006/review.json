@@ -1,0 +1,91 @@
+{
+  "outcome": "PASS",
+  "scope": "Local exact 53-field saved-evidence comparison and preservation only; no canonical acceptance",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "binding": {
+    "entryCommit": "30cc24a4a57a56e24a571e68a43805c8d230884e",
+    "selectionCheckpoint": "969c970cbbe47f374bab2b8f1267fa19b79a665f",
+    "candidateCommit": "de8d4dcd7f0bb399b0455e80d58617dd0b08eceb",
+    "candidateTree": "fc68020273b460d25cde218a212241b8ced05db7",
+    "manifestSha256": "11c5f3547bfce26f1d534c61c6c1c19556e5187296a776ee556051c49de9fbf4",
+    "completeDiffBytes": 821125,
+    "completeDiffSha256": "67b1fd8f206d7a6204f9c508d8d9fe1019ab0627eb7a44c963ce25b7129ffa95",
+    "changedPaths": 26
+  },
+  "reviewer": "/root/sd2_batch006_review",
+  "freshContext": true,
+  "authoredOrEditedCandidate": false,
+  "checks": [
+    {
+      "name": "Candidate, tree, complete binary diff and manifest",
+      "outcome": "PASS",
+      "detail": "Independently recomputed exact candidate/tree binding, all 26 changed paths, Git modes/blob IDs, byte lengths, SHA256 hashes, worktree equality, and complete diff length/hash."
+    },
+    {
+      "name": "Recovery receipt and predecessor binding",
+      "outcome": "PASS",
+      "detail": "Independently checked all 901 restored-file path/mode/blob/hash records against unchanged entry commit. Checked predecessor proposal manifest/review binding and proper successful entry receipt. Recovery and premature failed-verifier disclosures remain retained. Historical non-overwrite and ordering statements are receipt evidence, not firsthand reviewer observations."
+    },
+    {
+      "name": "Current read-only batch verifier",
+      "command": "python3 docs/evidence/sd2-autonomous/reconciliation-batch-006/verify.py",
+      "outcome": "PASS",
+      "exitCode": 0,
+      "startedAt": "2026-10-19T15:57:11.736002+00:00",
+      "completedAt": "2026-10-19T15:57:24.869406+00:00",
+      "detail": "2480 protected entry files and three exact append-only handoffs preserved; all original field envelopes, identity proposals, routes and historical review bindings retained."
+    },
+    {
+      "name": "Exact selected comparison and semantic review",
+      "outcome": "PASS",
+      "detail": "Reviewed offsets14/15/16 in order,17+19+17=53 distinct original envelopes. Categories13consistent/35applicability-identity unresolved/4unavailable/1existingKids education-stage conflict agree. Kozlowski stageOR/two2000USD slots; Murdoch HSsenior/one500USD slot; FFA/GPA/AMTOPP drift; Kids administrator/provider stage/injury/MT-work-event scopes, age wording/held endpoints, educationOR, initial-renewal checklists, FAFSA-versus-need, fund/use/payment/four-year and renewal-reapplication distinctions remain properly held."
+    },
+    {
+      "name": "Evidence/source/context/reference integrity",
+      "outcome": "PASS",
+      "detail": "Checked selected original envelope equality, evidence affinity, hashes/pointers, original qualifiers and routes, proposed minimum proof with newReadSelected:false, exact Unicode-offset saved quotations, source views, registry/artifact bindings and identity review references. Equal RHM aliases are not presented as independent corroboration."
+    },
+    {
+      "name": "Global preservation and accounting",
+      "outcome": "PASS",
+      "detail": "7406field/406identity holds remain; cursor406,nextInput:null; prior300comparisons retained,cumulative353 across17autonomous+2Jaycee,389autonomous outside comparison. Protected-entry byte/mode equality and valid predecessor receipts preserve676seed/1127link routes,365receipts,35inherited routes,628destinations including1unclosed,nineattentionrows/supplements,437M1routes/12pins/71custodyreceipts. No new custody-availability claim."
+    },
+    {
+      "name": "Required application checks",
+      "outcome": "BLOCKED_ENVIRONMENT",
+      "detail": "Inspected and hash-checked retained raw/normalized outputs for plan:check,typecheck,test,build. Each exited127 because local tsx/tsc/next commands are missing. No application suite or build PASS; requiredChecksRemainUnfulfilled:true. No reviewer npm/build invocation, installation, repair or waiver."
+    },
+    {
+      "name": "Complete candidate whitespace and scope",
+      "command": "git diff --check 30cc24a4a57a56e24a571e68a43805c8d230884e de8d4dcd7f0bb399b0455e80d58617dd0b08eceb",
+      "outcome": "PASS",
+      "exitCode": 0,
+      "detail": "Changes are confined to batch006 packet and three append-only handoffs. Runtime, dependency, canonical governance/state, CI and prior evidence paths remain unchanged."
+    }
+  ],
+  "reviewProcessIncidents": [
+    {
+      "kind": "overbroad-retained-context-output",
+      "description": "During review, the selected-context inspection emitted the retained ffa-guidelines passage at Unicode offsets0–2137, including historical purpose/criteria/materials/awardee guidance, instead of narrowing that passage further. This was reviewer output, separate from the author's immutable candidate-bound session-issues. It contained no unrelated award names, biography, contact values, applicant data or newly acquired source content.",
+      "containment": "Disclosed promptly to author. No candidate edit, raw/native access, reacquisition or expansion of factual comparison occurred. Subsequent outputs were narrowed.",
+      "owner": "Independent reviewer /root/sd2_batch006_review",
+      "trigger": "Every subsequent evidence preview or review output",
+      "nextAction": "Select the exact input/source/field sentence before output; preserve this disclosure without relabeling or editing candidate history."
+    }
+  ],
+  "limits": [
+    "PASS covers only this local saved-evidence comparison and preservation. All four required application checks remain blocked; canonical acceptance and release gates are unsatisfied.",
+    "Reviewer edited, staged and committed nothing; ran no assembler, npm command, build, historical verifier, network, workbook, raw/native-content access or external effect.",
+    "No current scholarship truth, public accessibility, complete form/source, original/native equivalence, new custody availability or authenticated current main/target claim.",
+    "Historical buildEPERM and all existing preservation, recovery, human, canonical, publication, student, M1/SD5 and external-effect gates retain their original owners/triggers.",
+    "Zero accepted facts/mappings, new identities, merges or deletions. FullSD2 remains incomplete. Stop beforeSD3.",
+    "Only final-manifest.json was untracked at reviewer entry and exit; candidate HEAD remained unchanged. A future direct-child local receipt and review-bound verification are author-owned follow-up, not asserted complete by this review."
+  ]
+}

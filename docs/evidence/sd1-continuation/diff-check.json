@@ -1,0 +1,51 @@
+{
+  "outcome": "PASS",
+  "scope": "local continuation documentation whitespace; final new receipt staged and rechecked before commit",
+  "results": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:53:41.119533+00:00",
+      "endedAt": "2026-10-13T15:53:41.134012+00:00",
+      "exitCode": 0,
+      "output": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:53:41.134019+00:00",
+      "endedAt": "2026-10-13T15:53:41.147364+00:00",
+      "exitCode": 0,
+      "output": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "3b4ce7e8ce1ccbce698f2d62a34533d6ffef13cd"
+      ],
+      "cwd": "/private/tmp/program_code-student-data-maintenance-plan",
+      "startedAt": "2026-10-13T15:53:41.147372+00:00",
+      "endedAt": "2026-10-13T15:53:41.162057+00:00",
+      "exitCode": 0,
+      "output": "",
+      "stderr": ""
+    }
+  ],
+  "stagingLimit": {
+    "initial": "Git index.lock creation EPERM in shared protected Git directory",
+    "permittedRetry": "explicit owned paths staged successfully outside sandbox"
+  }
+}

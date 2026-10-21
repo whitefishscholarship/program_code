@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "currentExecutionIncidents": [],
+  "scopeLimit": "No new output/source incident identified in this bounded execution. This does not relabel or resolve historical noncompliance.",
+  "retainedIncidentPaths": [
+    "docs/evidence/sd2-autonomous/consolidation-proposal-004/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-003/session-issues.json",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-002/session-issues.json"
+  ],
+  "owner": "Codex evidence/source governance",
+  "trigger": "Every later selected saved-source preview or authorized source dispatch",
+  "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-004/session-issues.json",
+  "nextAction": "Preselect exact source/input and sentence before output. Preserve original incidents, timing, exclusions and custody limits; no full shared-file/biography output, replay, relabeling or reacquisition."
+}

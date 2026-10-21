@@ -1,0 +1,45 @@
+{
+  "scope": "Group010-only in-memory PDF binding checks; no original edits/new reads.",
+  "recordedAt": "2026-10-19T22:35:07.176991+00:00",
+  "outcome": "PASS",
+  "checks": [
+    {
+      "case": "exact original PDF binding saved-405588227-row-204",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-208",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-212",
+      "outcome": "PASS"
+    },
+    {
+      "case": "exact original PDF binding saved-405588227-row-217",
+      "outcome": "PASS"
+    },
+    {
+      "case": "changed original record",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "same-value excerpt substitution",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "missing source registry",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "unresolved named-binding positive promotion saved-405588227-row-208",
+      "outcome": "PASS rejected"
+    },
+    {
+      "case": "unresolved named-binding positive promotion saved-405588227-row-217",
+      "outcome": "PASS rejected"
+    }
+  ],
+  "sharedEngineUnchanged": true,
+  "historicalContextsWidened": false
+}

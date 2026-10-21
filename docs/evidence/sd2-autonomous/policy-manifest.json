@@ -1,0 +1,100 @@
+{
+  "scope": "independent local prospective research-policy review; no canonical acceptance/attestation",
+  "createdAt": "2026-10-14T15:32:32.058135+00:00",
+  "entryCommit": "3f3462d26a046a25ab1a3738d4556e312b64823d",
+  "candidateCommit": "351876367b9d790f75f18584b37b3d8eb1a5861b",
+  "candidateTree": "46991a02d2338e4abe0ac93332298e118c497bd4",
+  "completeDiffSha256": "89c35fde6b3e3425d878119d7a0911bf4b746de0ef031e4f54746073e92212ad",
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "blob": "8928fd5f8c05c1b2e71b3a17562b3a84f734ccbc",
+      "bytes": 609928,
+      "sha256": "cdb1c5c9566f933f9b4c84af2623cbdfe7f6f45cea585251c9dc7cafd9fcd51e"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "blob": "171e3bf359c8f7d739b2795b4d56c7f187da4c05",
+      "bytes": 54187,
+      "sha256": "03065c9b296e4fc2e610d689ded2192fb67c67d710cc31618a5837bf2b776896"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+      "blob": "b6aa0caff2bfe13e0205a503bc35a1cc25b1bd46",
+      "bytes": 3422,
+      "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/CONTINUE.md",
+      "blob": "b13ebc82c9e8699c60b7393623cbd881ed7556c7",
+      "bytes": 2323,
+      "sha256": "d8809e0b997263f190bf2f1fb1da991a9b708ea557bb566791eda64299963040"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/POLICY.md",
+      "blob": "f44cf67e49fe6581fdbe4b7895176faa63770f9a",
+      "bytes": 7386,
+      "sha256": "6135c3950190d9983fce5eca7eb27d2a9676299fbcede912c7a562e02357d6f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "blob": "5b0b4366858c1b506aa2d204000fd822620f76ab",
+      "bytes": 19794,
+      "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/README.md",
+      "blob": "d9c2daa58e12f960d0bd440a3bde1e6501cb39d3",
+      "bytes": 2079,
+      "sha256": "806e72052da976842becdd1ea3bc74e74477513f5a6d4ec26e033f3f4cb548f9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/build-queue.py",
+      "blob": "c21bd8bc5c8c060e85aaa98cc8bb64ee17a430af",
+      "bytes": 4976,
+      "sha256": "c5d6b1d6d2318a4728c7e53e49c5d9ae1d920fda1e0115eeb2d338ce3d5450db"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "blob": "295d60e3723a81a18293c3931496049556f92b62",
+      "bytes": 10065,
+      "sha256": "b2c9a4a715e3be3fd5e31ce4b77e36b8aeac58dccc7ab2467891cf8b967767a4"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-dispositions.json",
+      "blob": "8e1da1199963afaf76e1928dfff315851117d74a",
+      "bytes": 801,
+      "sha256": "225d5bbc658d57a41d37141ecd71aa53ac8f1cc3be1ae26d0334df6410c8a882"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-manifest-round1.json",
+      "blob": "8aa00e567c7cd9680e3b27eb0cff649ff6f7876f",
+      "bytes": 2792,
+      "sha256": "af7983fb4185ea6fd628dc6cbf1946ddcb92b0effc35956beb6ffc37014d30a8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/policy-review-round1.json",
+      "blob": "baa48fa53ae71499e8619d2fa04e2b3013904f4b",
+      "bytes": 2006,
+      "sha256": "26eaeab1a3ef97902e712fd3e8fac0dd299a8da83fd5fbdafe8651e03dbf7b41"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/queue.json",
+      "blob": "83d42d1f43ea2b31db45474ba8aa962afec93031",
+      "bytes": 277302,
+      "sha256": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/resume-guard-verification.json",
+      "blob": "085c385cff8ea5a0288850dfbb94ff7aa4e7aed6",
+      "bytes": 983,
+      "sha256": "1f8243c8a69017d7ba1603f57f08d9198e31f30f6c2f0c6ab51a4c0260775912"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/verify.py",
+      "blob": "470d241c1d156d7e04d7a0cb72688bc6774190eb",
+      "bytes": 3468,
+      "sha256": "62707769fba91a1f1b40b7e977e4a18798a4cacdec96324a842d553e5553e42f"
+    }
+  ]
+}

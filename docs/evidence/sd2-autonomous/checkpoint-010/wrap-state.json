@@ -1,0 +1,41 @@
+{
+  "recordedAt": "2026-10-15T04:05:36.513965+00:00",
+  "reviewedCandidate": "e4c6a5bb441918adf7b9e8c69150bba3754c4d3a",
+  "reviewReceiptCommit": "8bba35859fe96a443972200e9a81eb7634e63703",
+  "entryCommit": "5ab4a592be5b28b62e98af39533bc26870169424",
+  "scope": "Separate author-verified handoff after independent research PASS",
+  "reviewSha256": "05e80fc920e9caea7f60367dab30756071e83cc01fb5c5f4debf705a67c9e8f3",
+  "manifestSha256": "2812667099f85bc9d91039296d2b025ff3b1f251fad983e98e335b0072add1d0",
+  "sessionWrapSha256": "4cb3afc3007de0da1088bd789c00ea2c802983d996356d5e928904b345cf7ecd",
+  "localGitRetry": {
+    "initialExitCode": 128,
+    "reason": "Shared worktree index.lock Operation not permitted",
+    "permittedExactRetryExitCode": 0,
+    "publicationOrDeployment": false,
+    "timingLimit": "Exact start/end not captured; this is a subsequent summary of observed tool exits"
+  },
+  "newSourceReadDuringWrap": false,
+  "acceptedFacts": 0,
+  "SD3Started": false,
+  "authorWrapPrecheckCorrections": [
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/checkpoint-010/verify-wrap.py",
+      "exitCode": 1,
+      "reason": "Initial helper required all seed route components inline; original checkpoint002 intentionally inherits96components from input rows.",
+      "resolution": "Verify original byte equality plus exact inherited row routes; require current checkpoint010 components explicit. No ledger changes."
+    },
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/checkpoint-010/verify-wrap.py",
+      "exitCode": 1,
+      "reason": "Initial helper required all link routes inline; original checkpoint003 has22link occurrences inheriting source routes.",
+      "resolution": "Verify original byte equality plus exact inherited source routes; require current checkpoint010 components explicit. No ledger changes."
+    },
+    {
+      "command": "python3 docs/evidence/sd2-autonomous/checkpoint-010/verify-wrap.py",
+      "exitCode": 1,
+      "reason": "Literal closure wording check was case-sensitive for Stop before SD3; the required boundary was already present.",
+      "resolution": "Compare required closure terms case-insensitively. Handoff/source/evidence unchanged. Repeated diagnostic check confirmed the same single wording-only issue."
+    }
+  ],
+  "authorWrapPrecheckTimingLimit": "Subsequent record of observed commands/exits; exact start/end not captured"
+}

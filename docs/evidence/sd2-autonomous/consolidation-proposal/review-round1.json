@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of a bounded local SD2 consolidation/hold-reconciliation proposal; pilot unexecuted",
+  "reviewer": {
+    "identity": "Codex /root/sd2_proposal_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "backendModelAndEffort": "Not exposed to this reviewer"
+  },
+  "binding": {
+    "entryCommit": "37d0b041423fb9db8eb9bf63484694230e1ac12f",
+    "entryLimit": "Local proposal baseline only; fresh authenticated origin/main and target remain open",
+    "candidateCommit": "d381c824e732c760776ca7e4b90fd61a6adedf4b",
+    "candidateTree": "06980f5aee69517d3bc9896e36ab665602eaf7aa",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal/final-manifest.json",
+    "manifestSha256": "fbd67e91a71d8e45d57264066bd8f673dc14298c2c6c8bea41a7a373e98d75a5",
+    "completeDiffSha256": "665652e379b885189ec41d4b0411801fe04834be1c4fffb3b96f619bcdf2a6bd",
+    "completeDiffBytes": 127438,
+    "changedPathCount": 21,
+    "candidateBlobsHashesBytesModesAndWorktreeEqualityVerified": true,
+    "candidateUnchangedAtReviewEnd": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Correct the premature full-candidate verification claims",
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal/validation.json",
+      "startLine": 94,
+      "endLine": 111,
+      "relatedLocations": [
+        {
+          "path": "docs/evidence/sd2-autonomous/consolidation-proposal/typecheck.log",
+          "line": 4
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/consolidation-proposal/preservation.json",
+          "line": 2
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/consolidation-proposal/verify.py",
+          "line": 128
+        }
+      ],
+      "observed": "validation.json reports exitCode 0 for the preservation verifier and diff check, and preservation.json reports PASS. Against the frozen candidate, the task-local verifier exits 1 at its final diff check. The explicit entry-to-candidate git diff --check exits 2 with: typecheck.log:4: new blank line at EOF. The earlier checks omitted then-untracked new files from Git's diff inspection, so these receipts do not establish a passing full-candidate check.",
+      "impact": "The proposed scope and preserved historical bytes are otherwise consistent, but the required candidate verification is not reproducible and the saved PASS claims overstate its coverage.",
+      "requestedChange": "Preserve this candidate, original manifest, original review and raw log provenance. Normalize the offending log with its transformation and original hash explicitly recorded, update affected log-hash references, distinguish the premature original receipts from final-candidate evidence, and run the task-local verifier plus an explicit complete entry-to-replacement-candidate diff check. Freeze a replacement candidate and obtain independent recheck without changing historical verifiers or scholarship evidence.",
+      "owner": "Codex proposal author",
+      "trigger": "Before calling this proposal locally validated or independently reviewed PASS",
+      "authoritativePath": "docs/evidence/sd2-autonomous/consolidation-proposal/validation.json",
+      "nextAction": "Author remediation followed by immutable replacement-candidate review",
+      "status": "open"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Governance and authorization boundaries",
+      "outcome": "PASS",
+      "evidence": "Reviewed repository governance, canonical plan/state, current handoff, relevant accepted-stage evidence, SD2 authority/policy, section9 routing and checkpoint021 audit/review/manifest. Canonical stage pointers remain null. The proposal requires a separate exact pilot selection and grants no new reads, acceptance, external effects or SD3."
+    },
+    {
+      "name": "Complete candidate manifest",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed the supplied manifest SHA256, candidate tree, complete127438-byte binary diff/hash, exact21-path change set and every candidate blob ID, SHA256, byte count, mode and current-file equality. Only the manifest was untracked at review end."
+    },
+    {
+      "name": "Historical preservation and bindings",
+      "outcome": "PASS_WITH_FINAL_CHECK_FAILURE",
+      "evidence": "The task-local verifier passed its assertions protecting2189 pre-entry tracked files and modes, preserving original handoff bytes as suffixes and preserving the original student-data plan after removal of the single appended supplement. It also passed saved-evidence pins and entry-audit assertions before failing at its final diff check. Historical checkpoint verifiers, packets, reviews, PRELUDE and authority records are unchanged; their reviews are not rebound."
+    },
+    {
+      "name": "Exact proposed scope and accounting",
+      "outcome": "PASS",
+      "evidence": "Checked scope.json against the actual four record pointers and packet hashes. Ordered locators45,290,40,68 retain their original candidate IDs. Their containers contain17,17,31,31 held field envelopes, totaling96 existing occurrences across three cases and four inputs. Jaycee remains outside the406-record autonomous queue. No new comparison view, second queue, identity disposition or accepted fact was created."
+    },
+    {
+      "name": "Source affinity and useful bounded comparisons",
+      "outcome": "PASS",
+      "evidence": "The proposed cases correspond to the original two SD1 app-ID holds and the saved duplicate-name Jaycee pair. Compared the proposal with selected saved Spear/Soroptimist sources, packet fields, SD1 pilot and PRELUDE decisions. Spear preserves historical250-word versus2026 brief-essay scope; Soroptimist preserves yearless annual timing, award levels and reference distinctions; Jaycee preserves separate tracks, IDs, discrete amounts, materials, GPA-basis, need/checklist and legal/replacement gaps. Limited human approvals remain distinct from formal identity/fact/publication acceptance."
+    },
+    {
+      "name": "Global holds and open-route continuity",
+      "outcome": "PASS",
+      "evidence": "Verifier assertions reconcile406/406 initial dispositions, exhausted cursor406,7406 autonomous held fields and406 held identities. Existing bytes preserve676 seed/alias routes,1127 selected-source-link routes,365 source receipts,35 inherited routes,628 converted-destination occurrences, the unclosed019 destination, prior five research inputs, nine attention rows and supplements,437 M1 routes/12pins and71 custody pins. Proposal dependency routing retains original authoritative paths, owners, triggers and next actions."
+    },
+    {
+      "name": "Recorded command evidence",
+      "outcome": "PASS_WITH_RETAINED_LIMITS",
+      "evidence": "Recomputed all six recorded command-log hashes and inspected their outcomes. Initial plan/tests IPC EPERM failures and passing retries remain recorded; typecheck passed. Exact standard build failed with Turbopack process/port Operation not permitted. The proposal retains this failure and fresh authenticated main/target as open gates without waiver. Commands were not rerun during review."
+    },
+    {
+      "name": "Required final diff and task-local verifier",
+      "outcome": "FAIL",
+      "evidence": "Read-only verify.py exits1 at line128. Explicit git diff --check 37d0b041423fb9db8eb9bf63484694230e1ac12f d381c824e732c760776ca7e4b90fd61a6adedf4b exits2 for typecheck.log:4 new blank line at EOF. See finding M1."
+    },
+    {
+      "name": "Read-only review conduct",
+      "outcome": "PASS",
+      "evidence": "No files were edited; no assembler, npm/build, historical checkpoint verifier, Git mutation, source/workbook fetch, raw-document reinspection, installation, contact, pilot or external effect was performed."
+    }
+  ],
+  "limits": [
+    "This is proposal review, not execution or semantic reconciliation of all96 envelopes.",
+    "Saved-source consistency does not establish independent original-source fidelity, complete native/visual/form inspection, source silence, current offering, public access, sponsor continuity or live route usability.",
+    "The pre-edit entry receipt records71 matching custody pins at its own timestamps; this review did not repeat temporary-file custody checks or promise future availability.",
+    "Historical review preservation was checked through unchanged bytes, exact binding artifacts and the preserved entry receipt; old verifiers were not rerun in a later invalid context.",
+    "Standard-build support and fresh authenticated main/target remain open before canonical acceptance or authorized release.",
+    "Whole-workbook preservation/version/concurrency/backup/recovery/permissions, human/canonical/publication, student/CSV/browser/fit, M1/SD5 and reserved-effect gates remain at their original owners and triggers.",
+    "No additional substantive proposal defect was established. M1 must be remediated and independently rechecked before a proposal PASS."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "pilotExecuted": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

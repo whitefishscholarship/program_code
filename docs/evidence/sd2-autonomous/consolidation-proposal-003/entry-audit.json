@@ -1,0 +1,45 @@
+{
+  "entryCommit": "db0b341283c1c65bcc02b59badb588aacbb67116",
+  "scope": "Fresh completed batch002 review-bound verification in its valid context before any new proposal path exists",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/reconciliation-batch-002/verify.py",
+    "--review-bound"
+  ],
+  "exitCode": 0,
+  "stdoutSha256": "f04cf758e3743cbf6bf71de314fc8cd83040dc840bab1f7531157554a4e4ad0a",
+  "result": {
+    "outcome": "PASS",
+    "startedAt": "2026-10-16T17:05:08.490234+00:00",
+    "completedAt": "2026-10-16T17:05:09.549052+00:00",
+    "entryCommit": "7de87a35fd292f3675fce8b4ce23e1349d1eb462",
+    "protectedEntryFiles": 2270,
+    "allPriorBytesModesHandoffsAndReviewBindingsPreserved": true,
+    "selectedInputs": 3,
+    "fieldOccurrences": 48,
+    "categoryCounts": {
+      "evidence unavailable": 25,
+      "applicability/identity unresolved": 20,
+      "existing evidence consistent": 3
+    },
+    "cumulativeComparedFieldOccurrences": 144,
+    "comparedAutonomousInputs": 5,
+    "remainingAutonomousInputsOutsideComparison": 401,
+    "autonomousFieldHolds": 7406,
+    "autonomousIdentityHolds": 406,
+    "researchCursor": 406,
+    "nextResearchInput": null,
+    "M1Records": 437,
+    "M1Pins": 12,
+    "custodyPins": 71,
+    "custodyLimit": "Original receipts and fresh predecessor verification preserved; no new raw custody-availability claim",
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "newSourceOrWorkbookReads": 0,
+    "rawContentReinspections": 0,
+    "fullSD2Complete": false,
+    "canonicalAcceptance": false,
+    "SD3Started": false,
+    "externalEffects": false
+  }
+}

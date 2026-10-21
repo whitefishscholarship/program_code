@@ -1,0 +1,109 @@
+{
+  "scope": "Already-authorized SD2-SAVED-CONTINUATION-1 group006,local saved research comparison only",
+  "createdAt": "2026-10-19T17:09:58.530226+00:00",
+  "entryCommit": "f6c8100394d5a5a3c84fd48ec8bcaad2e0e84f95",
+  "candidateCommit": "b5d26f0fddc4c2987f1b83d2eb58c8c256b29074",
+  "candidateTree": "0b4982e0f1345e1c993513aa8f849f9971a452fa",
+  "completeDiffSha256": "1a402726bd86781a1b78392c34d743d7c9ca98773fe020c339785ce8c8a578b3",
+  "completeDiffBytes": 2472165,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "blob": "da2e23fe90d7a6603492c37b462b84786f5ba7f4",
+      "bytes": 728481,
+      "sha256": "d4595007043836ed60897003fc5d8fc943b067e228b52775ff0807e0cae6daa4"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "blob": "183b89c79aa78e4846ada8e1183277c6d0f40cd0",
+      "bytes": 178381,
+      "sha256": "afdbc13812ef01624c950457387413c999acf36b75f1f2882aeb28829d594706"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "blob": "6f4a642a6ff9c227a421c71d3493bcd749b3f404",
+      "bytes": 130343,
+      "sha256": "73f2bbf4d182c8a068e4c48bc44681d20c3b55f6796bf5fcaa766c56eac5b2bf"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/README.md",
+      "mode": "100644",
+      "blob": "1f638c442c24c677efdf149b35bb68bd1ecd8816",
+      "bytes": 3724,
+      "sha256": "373e389e023b7dd019c945b427e2f1b24ed3bb1b8c5154b29c4638eb64c7ec4a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/author-decisions.json",
+      "mode": "100644",
+      "blob": "393ce7afb06165eb681713773f815ad37ddfe710",
+      "bytes": 13692,
+      "sha256": "f0671dfc1943bb1163b9c56a45b50d79a79cca33427621fc35ca190333225d3a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/comparison.json",
+      "mode": "100644",
+      "blob": "d8c2d122a0ee87eb5d2210097cca37955a5e7039",
+      "bytes": 2213600,
+      "sha256": "9a410593c76e557aec2f92f7f8175ee0a6c8555f41a472120b9a3fdb97abde55"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/config.json",
+      "mode": "100644",
+      "blob": "d34002fc3b5bf4890d9cee2390ca48e1c62c39b5",
+      "bytes": 393,
+      "sha256": "231a0cecad5b453fe8c5d139582a6fbac3f9f80a2b2d4a53371da8349d0bf63b"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/entry-audit.json",
+      "mode": "100644",
+      "blob": "40e6c09038687db248f76564215d428cec8dd2ce",
+      "bytes": 1632,
+      "sha256": "ce9fab96dd770042bd0f2097de798c2738088bc3c0794d38ec20838486da37cb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/identity-assessment.json",
+      "mode": "100644",
+      "blob": "85534fb0418422fc0525a696d15a285950f4619c",
+      "bytes": 37032,
+      "sha256": "6e737310cfb55eea1aed1032b97d8bb1bf778f2b2ff205b5f17edcbf85ece52e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/next-input.json",
+      "mode": "100644",
+      "blob": "27dda5bcdf1e3ceb932dbcae9bf76d5f69f5eded",
+      "bytes": 927,
+      "sha256": "4201dc1ea1437175943f2fefdac5d36863b6f01881db260165bd0337c432f7ff"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/session-issues.json",
+      "mode": "100644",
+      "blob": "69489fb8f7628eac7dd355f850cd78158854d246",
+      "bytes": 358,
+      "sha256": "36a59cea797bcdd1609f4725ad54445eb63675f17e23085966882699db7c3738"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/source-references.json",
+      "mode": "100644",
+      "blob": "112b2ade73fdb6f65f166b5110d6be0e9ebef022",
+      "bytes": 155576,
+      "sha256": "b05a2e526ae5051419f0eabdd8128a96e01ac10f52b9a1a9cf90ac674177fd1f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-006/verification.json",
+      "mode": "100644",
+      "blob": "6710a989c851f0c291054ae2b1b66f349c9e2140",
+      "bytes": 1052,
+      "sha256": "cea17698d79a917766c92ca46260ee16627710a73fcb01e349c207d2618d0a72"
+    }
+  ],
+  "selectedInputs": 20,
+  "fieldOccurrences": 384,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "externalEffects": false,
+  "SD3Started": false
+}

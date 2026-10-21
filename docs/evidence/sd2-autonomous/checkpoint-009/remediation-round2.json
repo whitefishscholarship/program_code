@@ -1,0 +1,19 @@
+{
+  "originalCandidate": "64aa516f7c2cee7fc1ea0e657be825103257c60f",
+  "originalManifestSha256": "09a828573af4879e399be55e114060ab691c14cf9bfe371f74aa277f29a96b2d",
+  "originalReviewSha256": "bd1f65302187fc9ab08009b98e757908fdf2162b0ce85d0c55cfbbc852f2236e",
+  "recordedAt": "2026-10-15T02:58:22.331596+00:00",
+  "requiredFixCount": 1,
+  "dispositions": [
+    {
+      "findingId": "SD2-009-L1",
+      "severity": "low",
+      "status": "author-fixed-awaiting-independent-recheck",
+      "rationale": "Restored source-ID subset assertion inside every link-disposition iteration. No source/factual/registry/hash/coverage changes.",
+      "owner": "Codex implementation author",
+      "target": "Final replacement frozen checkpoint009 candidate"
+    }
+  ],
+  "noNewSourceReadDownloadAssemblyResetOrReplay": true,
+  "acceptedFacts": 0
+}

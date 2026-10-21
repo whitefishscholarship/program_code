@@ -1,0 +1,192 @@
+{
+  "scope": "Immutable local proposal-only candidate; not canonical acceptance, release or selected comparison execution",
+  "createdAt": "2026-10-17T00:29:58.318080+00:00",
+  "entryCommit": "1e175d2f6e448591ee4747313798302845a3ce51",
+  "candidateCommit": "76e349db474b0bce8363471fff8c49084ce27b4f",
+  "candidateTree": "bbac5053cc7d43e3d2630cbb3863be25e0698dac",
+  "completeDiffSha256": "614f6c8a6eee0c692f78d543768d9ab809616ebf28d28154d72bf8ba1c6d546a",
+  "completeDiffBytes": 179524,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "blob": "98449df3eeb057dd9547e8b60795435c1a26f55f",
+      "bytes": 702689,
+      "sha256": "76ab23f55fef65bc066daf347ca737c5275a169dd6398f01163600b3535e72ce"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "blob": "b6764c991ee0e12c2f24a02f0453d010a13ac64e",
+      "bytes": 161068,
+      "sha256": "e784a01241c73a30360c30bb074782a8aec7f1a5a87a4dd6d77131e3712436cb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "blob": "efdf5ae08b342092c6f8b418d8baae7ecbcf3204",
+      "bytes": 104551,
+      "sha256": "3d13a63b279bf6b83b077435db5e93cc4028f4a3d186457a3ae90185b2bde43a"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/PROPOSAL.md",
+      "mode": "100644",
+      "blob": "d82178453d127531f8ac4410fcf9d2da83e4d8f8",
+      "bytes": 15431,
+      "sha256": "117e5289533a4babb4a8f88df721e259e0d13e780820198aa5a649bb8593107d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/build-retry.json",
+      "mode": "100644",
+      "blob": "dcdcbc8788b069a5f1ea03887460c566f8e72e0a",
+      "bytes": 5384,
+      "sha256": "13e41eefc5236f9848a141027249de0db49172a689e9cbcd701443421882ace9"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/build-retry.log",
+      "mode": "100644",
+      "blob": "1955478ed5f7e7a9b89fe7225a18b54fa22538c8",
+      "bytes": 4597,
+      "sha256": "492ef4980f66cad7cff214039725619cf3c0f141e45f9250f5b971cfd3b3b64c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/build.json",
+      "mode": "100644",
+      "blob": "b7583544c30d00b669139dbc9adf383b6f73fa0d",
+      "bytes": 5378,
+      "sha256": "e668aae77f53f16ac6cb3c456a2912b8aafb65e79549f5a524d63c8ed158a1d3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/build.log",
+      "mode": "100644",
+      "blob": "93199374319da2b660131bbe386b171b9fb1cbc3",
+      "bytes": 4597,
+      "sha256": "565b331011bfc67595cfdc0a546fd165b0279bd5d75b714ef1426967714c928d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/plan-retry.json",
+      "mode": "100644",
+      "blob": "e1b05d00dda354d7f6a78bad0e04292279940463",
+      "bytes": 865,
+      "sha256": "9d764dc6630bea2ad0a103b4238874bb622a62e391cf81a02450bfbb8ec377df"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/plan-retry.log",
+      "mode": "100644",
+      "blob": "2b6bef746bd39049e2d253dbda1b040e5e9e3e9f",
+      "bytes": 164,
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/plan.json",
+      "mode": "100644",
+      "blob": "3efe01c3d9f048c114de60f3476fd20a4578c047",
+      "bytes": 1712,
+      "sha256": "1dd0f1aa953f2400537cdcb729b9146a56581db74fba1ca6fa1bb0cdbbf8c078"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/plan.log",
+      "mode": "100644",
+      "blob": "f8caff61a5a9d057bd069c145c64450a13f82613",
+      "bytes": 998,
+      "sha256": "60eae378e78982c308f60f5940f098b7f1a76cfa8f9d8068fd288624d9ff0146"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/tests-retry.json",
+      "mode": "100644",
+      "blob": "e36cd602116eb092abd73286ab586c8faa3560d7",
+      "bytes": 20853,
+      "sha256": "ca614982135ac672ae8146038b1c6dde05b0f222c45a2239b1ca5ec95f7d51b3"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/tests-retry.log",
+      "mode": "100644",
+      "blob": "5913d3437e6d812ebe7410472f4e3a8cb4eed48d",
+      "bytes": 19755,
+      "sha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/tests.json",
+      "mode": "100644",
+      "blob": "4ce0817693e260a4439071f79165428a1122f27e",
+      "bytes": 4158,
+      "sha256": "24e12309b5cc3cb63c681324446b42dd278e45c8ebf090c1ffe62a68d7be9665"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/tests.log",
+      "mode": "100644",
+      "blob": "184f87456e4f32f26f7a2cbb4208fa1c9235c9fc",
+      "bytes": 3459,
+      "sha256": "d63aabd818d2a87bef3cd5f4d07046b79ff558456a54c655de6d6586fb76238d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/typecheck.json",
+      "mode": "100644",
+      "blob": "38f08a2bed7a1f4f43fccf6bf5bdec38f9e7f98f",
+      "bytes": 736,
+      "sha256": "e16794638f30ca353e98e8d504468cab838e3c17f094738fc98868e2a9c6821e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/checks/typecheck.log",
+      "mode": "100644",
+      "blob": "0d7b0b56a2fd8cb1ea9902c8b20adbee8099e588",
+      "bytes": 38,
+      "sha256": "7a3288c043ea255797a69e8a639f90ca14759ac1b6fbb9937b8033956cd31407"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/entry-audit.json",
+      "mode": "100644",
+      "blob": "4bf7a9e982c7f426e9f44e0f60376fdfef57968b",
+      "bytes": 1738,
+      "sha256": "b2b141dae67ff3669295cdea307a96a2ef593056df457eb363d53e793b1a3d4e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/scope.json",
+      "mode": "100644",
+      "blob": "103bfa76288eb134b0444a5fa6eb83c92be24a70",
+      "bytes": 16023,
+      "sha256": "a1e4d8c114cda84437c476880982a0bbca49cad0c996b81f9adceb3f0a552059"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/session-issues.json",
+      "mode": "100644",
+      "blob": "d6bbd1b885f7174ff4ebb8e28fd6ec778280a098",
+      "bytes": 1956,
+      "sha256": "63d591a7474d2eb3309fc00c0687e5333a96c04c2a59bae7d0d24639c7391cfa"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/validation.json",
+      "mode": "100644",
+      "blob": "e48607c6ee7a3259fb27b4f7c940bcf8da8b67c3",
+      "bytes": 40941,
+      "sha256": "d072748c9d4677709e4a4855667ad9f2a0dec681352e4e01fc0277dcd5acf9eb"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/verification.json",
+      "mode": "100644",
+      "blob": "a105fb44ab68fb5c243e2728d61f032bf98d9eba",
+      "bytes": 1072,
+      "sha256": "4c333312668fbfff92cbf1428589f81724a0fc6630c8f2cf6e5181dde17af9e8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-006/verify.py",
+      "mode": "100644",
+      "blob": "5baf210ac7daf665b8d422e4c3761338e553809a",
+      "bytes": 11916,
+      "sha256": "e4c69671f7988700740ec7ea92ae98dc97d679d4993ffbce4c401462cc33ffd6"
+    }
+  ],
+  "baselineLimit": "Complete local change set from freshly verified predecessor receipt; authenticated current origin/main and deployment target not refreshed",
+  "retainedLocalOriginMain": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "proposedInputLocators": [
+    14,
+    15,
+    16
+  ],
+  "proposedFields": 53,
+  "newComparedFields": 0,
+  "acceptedFacts": 0,
+  "canonicalAcceptance": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

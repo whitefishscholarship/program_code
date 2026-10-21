@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewerTask": "/root/closeout_final_review",
+  "reviewedAt": "2026-10-21T02:42:59.414239+00:00",
+  "outcome": "PASS",
+  "scope": "Local SD2 access-session closeout accuracy, scope preservation and no-loss handoff only; not canonical acceptance",
+  "binding": {
+    "candidateCommit": "f3e145dd4668d10613057a5f41ed0c5003ec80af",
+    "candidateTree": "6d8a10df9096f3a651b82b09bf30c67214964a52",
+    "manifestSha256": "02712dc5f29099617dbc3095a798086ef4e256492c6a394f7d77b479424614d6",
+    "completeDiffSha256": "5847c1453d569d4b2ed9e2a29c723d7507d70c4e16968bd029a1daaa8790e40e",
+    "completeDiffBytes": 101648,
+    "entryCommit": "49a978544ee158b0cc87841e0d94c30c53aa0596"
+  },
+  "independence": {
+    "freshContext": true,
+    "readOnlyRepository": true,
+    "authoredOrEditedReviewedStage": false
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "checks": [
+    {
+      "name": "Canonical grounding",
+      "result": "PASS",
+      "evidence": "Read AGENTS; canonical plan sections8/11/14; BUILD_STATE revision21/null pointers; CURRENT_HANDOFF; P9 evidence; current NEXT_SESSION; student-plan sections1/6/7/9; original SD2 AUTHORITY/POLICY and inherited14gates."
+    },
+    {
+      "name": "Frozen candidate binding and preservation",
+      "result": "PASS",
+      "evidence": "Inspected new verify.py before running its unbound read-only integrity mode. Exit0; exact direct-child candidate/tree, complete22-path101648-byte diff digest, candidate blobs/modes, prior receipt binding,3074 protected pre-entry files and3preserved histories checked. HEAD equals candidate; only new manifest untracked. Independently computed manifest SHA256 agrees."
+    },
+    {
+      "name": "No-loss attention routing",
+      "result": "PASS",
+      "evidence": "Exact inherited open-items equality verified; read13items/14gates/4dispositions/2sufficiency supplements/3readiness blockers/4old blockers and8current owner/trigger/path/action dispositions. Original source/privacy/native/custody/human-review/student/publication/M1/SD5/reserved-effect routes remain retained; resolved access overlays do not rewrite old observations."
+    },
+    {
+      "name": "Account observations and bounded claims",
+      "result": "PASS",
+      "evidence": "Saved exact Whitefish GitHub repository/main observations exit0, original account restoration recorded, SHA matches local origin/main. Isolated Vercel login/whoami and exact project/team/domain metadata are recorded; all three target hashes equal canonical pins. Timestamp precision and unverified connector/runtime/current-deployment limits explicitly disclosed."
+    },
+    {
+      "name": "Required validation evidence",
+      "result": "PASS_WITH_OPEN_BUILD_GATE",
+      "evidence": "Inspected losslessly hash-bound logs and timestamps: plan/typecheck/tests/diff/entry-diff exit0; exact unchanged npm run build exit1 with Turbopack process/port EPERM. Failure remains blocker; no waiver, install, app/config/CI/canonical change or substitute build."
+    },
+    {
+      "name": "Closure boundaries",
+      "result": "PASS",
+      "evidence": "SESSION_CLOSE/NEXT_SESSION/current supplement preserve draft-only contract, canonical section14/G6/G8/G14, source execution FAIL,397held/272quarantined/0cleared,0acceptedfacts/mappings, NOT_ESTABLISHED dispatch proof, SD2 incomplete and SD3 unstarted. New local receipt is explicitly handoff accuracy/preservation only."
+    }
+  ],
+  "limits": [
+    "No network, login, credentials, raw source traces, workbook or scholarship-source requests performed by reviewer. Account observations reviewed as saved evidence, not independently repeated live.",
+    "No old context-bound verifier or application matrix rerun. New unbound verifier only was run after inspection.",
+    "No proof of current deployment/runtime/CI identity, restored connector access, future isolated-profile validity, full historical dispatch, scholarship currency or native/source completeness.",
+    "Review PASS is restricted to local closeout integrity. Exact build remains blocked; canonical activation, release and source/fact acceptance remain prohibited pending original prerequisites.",
+    "Only /private/tmp/sd2-access-session-closeout-review.json written by reviewer; author owns attestation and any remediation."
+  ],
+  "sessionStatus": "BLOCKED",
+  "canonicalAcceptance": false,
+  "sourceExecutionStatus": "FAIL",
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

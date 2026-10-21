@@ -1,0 +1,108 @@
+{
+  "outcome": "PASS",
+  "scope": "Independent final recheck of one bounded local SD2 held-research checkpoint016",
+  "reviewedAt": "2026-10-15T19:03:29Z",
+  "reviewer": {
+    "identity": "/root/checkpoint016_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": false
+  },
+  "binding": {
+    "entryCommit": "65a5434288d458e6cfcd99dac6e6485a75c53cb7",
+    "candidateCommit": "20fbfe071e041206fb18f543ee8eb157ab9ddc18",
+    "candidateTree": "0ca6b309fc8fc24807dd718c69b02792f67f9e52",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-016/final-manifest.json",
+    "manifestSha256": "17260bf1fe224da68d4c23b83ab4d4866ac38af13226c9c56ff9c4df9de1eda8",
+    "completeDiffSha256": "aa09ac6f9108da1f6f8018a199baf29f620a07aaf7ab2dc6ddbe887f0178b0aa",
+    "completeDiffBytes": 1595459,
+    "changedPaths": 60,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1822,
+    "allPreEntryBlobIdsAndModesPreserved": true,
+    "allNewFileModes": "100644",
+    "originalCandidateCommit": "4f3bef34bc00558ae36667a3cb7201d7051f3b90",
+    "originalManifestSha256": "f78d2a16172833c6586702eb0aac7e1efa354133f6b6624770d7ea7369ee4f56",
+    "originalReviewSha256": "5b04fe51c22ac2176821b30af6ba50ce701d28f657ff947a09dbd2169cc3f8f3",
+    "originalFailedBindingPreserved": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositionsRechecked": [
+    {
+      "id": "SD2-016-M1",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "Rows316–318 now carry five explicit metadata evidence bindings with exact artifact hashes, entry/property pointers, file identities and observation times.",
+        "Native filenames and MIME strings match the retained metadata exactly.",
+        "The verifier checks metadata-property equality, field-value agreement and exact queued-file affinity.",
+        "Readable evidence remains separate; all identity/access holds remain intact."
+      ]
+    },
+    {
+      "id": "SD2-016-M2",
+      "originalSeverity": "medium",
+      "result": "fixed",
+      "checks": [
+        "Row310 now sets the shared PHS/DLS waiver-decrease assertion to true.",
+        "Its semantic assertion and assembler agree with the retained source.",
+        "The verifier checks the shared assertion across all three DHC records and the supporting source statement."
+      ]
+    },
+    {
+      "id": "SD2-016-M3",
+      "originalSeverity": "medium",
+      "result": "disclosure and prospective prevention corrected",
+      "checks": [
+        "Concurrency accounting retains the exact historical naehcy.org overlapping pair and unchanged timestamps.",
+        "Historical compliance remains explicitly false; the execution violation is not represented as repaired.",
+        "Assembly notes, README and ledger disclose the lapse with owners, triggers and next actions.",
+        "Continuation guidance requires hostname serialization and preserves the global four-read cap.",
+        "The unnecessary next-input query-locator preview is disclosed without reproducing its value.",
+        "No source reacquisition or execution-history rewrite was used."
+      ]
+    }
+  ],
+  "checksPerformed": [
+    "Completed the original governance, source and ledger review and inspected the original-to-replacement remediation diff.",
+    "Independently recomputed the replacement manifest hash, candidate tree, complete baseline-to-candidate binary-diff hash, exact60-path change set, every changed blob ID/length/hash, worktree equality and file modes.",
+    "Independently verified all1822 pre-entry tracked paths preserve exact Git blobs and modes.",
+    "Verified the original failed candidate, manifest, review and verification receipt remain bound and preserved, with three count-matched rationale/owner/trigger/target dispositions.",
+    "Verified all27 source artifacts and the complete source registry remain unchanged from the original reviewed candidate.",
+    "Verified the five new native metadata bindings directly against retained metadata.",
+    "Confirmed all unrelated field envelopes, readable evidence, outcomes, holds and coverage remain unchanged.",
+    "Reran the read-only checkpoint verifier: PASS, including171 readable evidence references,5 metadata bindings,51 seed dispositions,43 retained source-link dispositions,15 historical manifest/review bindings,1819 protected worktree paths,71 custody pins with zero gaps,12 M1 pins and437 M1 records.",
+    "Confirmed exact ordered20 inputs at offsets300:320,305 new field holds,5947 cumulative field holds,320 identity holds,86 remaining and nextoffset320/savedrow326.",
+    "Required software evidence remains intact: plan/type/fulltests pass after documented IPC retries; both exact standard builds remain process/port EPERM failures.",
+    "Full baseline-to-replacement-candidate git diff --check passed.",
+    "No files were edited, assemblers executed, sources reacquired or external systems accessed during review."
+  ],
+  "limits": [
+    "The historical same-host concurrency violation remains a recorded violation requiring the preserved later handling assessment; this PASS covers its accurate disclosure and prospective prevention.",
+    "Selected conversions and author concordance do not establish original-response fidelity, native/raw/page/image/table/form completeness, source silence, origin freshness, current offering, public access, sponsor continuity or usable routes.",
+    "Unexpected DOCX/PPTX, empty/partial native results and the cross-domain redirect retain their holds.",
+    "Final artifact sanitization does not erase earlier output exposure.",
+    "Fresh authenticated main/target, successful exact standard build and all preservation/recovery, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gates retain their existing owners and triggers.",
+    "This is local research-evidence review, not canonical scholarship-fact, identity or stage acceptance."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex checkpoint016 implementation and handoff owner",
+    "trigger": "Recording this exact final independent review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-016/",
+    "action": "Record this review and exact manifest in the authorized local research-review receipt. Preserve the original failed and all historical bindings. Prepare the separate durable section9/session handoff carrying every hold, limitation and owner/trigger/action, routing the next session to offset320/savedrow326 under existing AUTHORITY/POLICY. No additional checkpoint, fact acceptance, SD3 or external effect follows."
+  }
+}

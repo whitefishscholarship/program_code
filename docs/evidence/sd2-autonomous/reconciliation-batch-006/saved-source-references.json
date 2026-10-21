@@ -1,0 +1,746 @@
+{
+  "scope": "Reference view generated from finalized selected comparison; no new capture or authoritative registry; equal RHM alias hashes not independent corroboration",
+  "sources": [
+    {
+      "sourceId": "rh-old",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/3"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/rh-old.md",
+        "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-15",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**John Kozlowski Memorial Scholarship**\n\n(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "minimumGPA",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/minimumGPA"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "minimumGPA within selected program scope",
+            "excerpt": "**John Kozlowski Memorial Scholarship**\n\n(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "membership",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/membership"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "membership within selected program scope",
+            "excerpt": "**John Kozlowski Memorial Scholarship**\n\n(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "renewability within selected program scope",
+            "excerpt": "12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**John Kozlowski Memorial Scholarship**\n\n(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "recipientSlots within selected program scope",
+            "excerpt": "**John Kozlowski Memorial Scholarship**\n\n(2) $2,000 scholarships. HS senior or undergraduate college student, 2.0 GPA or higher, FFA member."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**Kid's Chance of Montana**\n\nAmounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**Kid's Chance of Montana**\n\nAmounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "educationStageConflict",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/educationStageConflict"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "educationStageConflict within selected program scope",
+            "excerpt": "**Kid's Chance of Montana**\n\nAmounts vary. High School Senior who has had a parent/guardian permanently injured or killed while on the job in Montana."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**Murdoch's Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "minimumGPA",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/minimumGPA"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "minimumGPA within selected program scope",
+            "excerpt": "**Murdoch's Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "membership",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/membership"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "membership within selected program scope",
+            "excerpt": "**Murdoch's Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "renewability within selected program scope",
+            "excerpt": "12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**Murdoch's Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "recipientSlots within selected program scope",
+            "excerpt": "**Murdoch's Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher."
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "rh-alias",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/4"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/rh-alias.md",
+        "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-15",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof. Alias receipt confirms redirect and the listed shared application; main eligibility facts are sourced to rh-old only.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/6"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa.md",
+        "sha256": "ba8353176fb75bfeb0dc7bff6298c24b62909a380aefa7f5842ad9523db78ec1",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-applications",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/7"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-applications.md",
+        "sha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/cycle"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "ffa-applications",
+            "sourceUrl": "https://montanaffa.org/applications/",
+            "artifactSha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+            "locator": "cycle within selected program scope",
+            "excerpt": "Applications are due March 1, 2026."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/cycle"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "ffa-applications",
+            "sourceUrl": "https://montanaffa.org/applications/",
+            "artifactSha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+            "locator": "cycle within selected program scope",
+            "excerpt": "Applications are due March 1, 2026."
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-guidelines",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/12"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-guidelines.md",
+        "sha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/cycle"
+          },
+          "evidenceIndex": 1,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "Updated: 06/28/2021 [provider phone omitted]"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-14",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/14/fieldProposals/cycle"
+          },
+          "evidenceIndex": 2,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "December 31st deadline"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/cycle"
+          },
+          "evidenceIndex": 1,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "Updated: 06/28/2021 [provider phone omitted]"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-16",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/16/fieldProposals/cycle"
+          },
+          "evidenceIndex": 2,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "December 31st deadline"
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-college-rubric",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/13"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-college-rubric.md",
+        "sha256": "49c4f33e21dab09098513f433732983a69531c1c013cc531ec7fff97f844cce4",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-leadership-rubric",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/14"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-leadership-rubric.md",
+        "sha256": "8c5a6d1bdb0317cecf5d15327977fc29bf6fb16d90d6d6e85c3d9f71a50225e6",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-14",
+        "saved-405588227-row-16"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "kids",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/8"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/kids.md",
+        "sha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-15"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "kids",
+            "sourceUrl": "https://www.kidschanceofmontana.org/scholarships",
+            "artifactSha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+            "locator": "renewability within selected program scope",
+            "excerpt": "## RENEWAL Scholarship\n\n### Eligibility\n\n- Current or past recipient of a Kids’ Chance of Montana Scholarship\n- Dependent of a parent or guardian who sustained a serious work-related injury or fatality.\n- Between 16-26 years of age.\n- Proceeds must be used for tuition, fees, room and board, books, and required supplies and will be paid directly to the educational institution.\n- Scholarship awards are contingent on the availability of funds\n- Scholarship eligibility is limited to 4 years.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/renewability"
+          },
+          "evidenceIndex": 1,
+          "originalEvidence": {
+            "sourceId": "kids",
+            "sourceUrl": "https://www.kidschanceofmontana.org/scholarships",
+            "artifactSha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+            "locator": "additional scoped statement",
+            "excerpt": "Scholarship awards are contingent on the availability of funds and may be renewed"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "deadline",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/deadline"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "kids",
+            "sourceUrl": "https://www.kidschanceofmontana.org/scholarships",
+            "artifactSha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+            "locator": "deadline within selected program scope",
+            "excerpt": "Application Deadline: **March 1, 2026**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "initialEligibility",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/initialEligibility"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "kids",
+            "sourceUrl": "https://www.kidschanceofmontana.org/scholarships",
+            "artifactSha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+            "locator": "initialEligibility within selected program scope",
+            "excerpt": "## New sCHOLARSHIPS\n\n### Eligibility\n\n- Dependent of a parent or guardian who sustained a serious work-related injury or fatality.\n- Between 16-26 years of age.\n- Must have a high school diploma, GED, HiSet, or be a high school student in good standing (who will graduate in the current academic year).\n- Proceeds must be used for tuition, fees, room and board, books, and required supplies and will be paid directly to the educational institution.\n- Scholarship awards are contingent on the availability of funds and may be renewed\n- FAFSA Not Required\n\n### Submission Requirements\n\n-  Submission of complete application and responses to essay questions\n- A transcript of the most recent grades (Unofficial transcript is okay)\n\n### Application Deadline: **March 1, 2026**\n\n* * *\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-15",
+          "field": "fafsaRequired",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/15/fieldProposals/fafsaRequired"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "kids",
+            "sourceUrl": "https://www.kidschanceofmontana.org/scholarships",
+            "artifactSha256": "231a29a17f3b08c2fdf10400fdafba250c4548637247cebd079a744b8b7f157d",
+            "locator": "fafsaRequired within selected program scope",
+            "excerpt": "FAFSA Not Required"
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-10-21T00:13:05.902320+00:00",
+  "recordedPlanningBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "entryCommit": "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4",
+  "localOriginMain": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "remoteRefreshed": false,
+  "hostedStateVerified": false,
+  "baselineAncestorOfEntry": true,
+  "completeLocalChangedPathCount": 2141,
+  "completeLocalChangedPathsSha256": "ab5f1788271ed32ec30ac142946b7b3c0eb0de4aacfc789142f8004296048fde",
+  "allChangedPathsUnderDocs": true,
+  "changedNonEvidencePaths": [
+    "docs/CURRENT_HANDOFF.md",
+    "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+    "docs/STUDENT_DATA_CONTRACT.md"
+  ],
+  "canonicalPlanRevision": 21,
+  "activeStage": null,
+  "nextCanonicalStage": null,
+  "overreachCorrected": [
+    "Observed completed events are not complete dispatch accounting.",
+    "72 theoretical targets are not cleared for reading.",
+    "Synthetic repair PASS cannot reverse historical FAIL.",
+    "Finite selected metadata review makes no all-stores absence or impossibility claim."
+  ],
+  "selfStalenessControls": [
+    "Entry receipt captured before new paths.",
+    "No old context verifier rerun after prepends.",
+    "Later review must bind new frozen candidate and manifest.",
+    "Only manifest/review in direct-child local receipt."
+  ],
+  "proofDecision": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+  "noEarlierStepChangesInputsForLaterDecision": true
+}

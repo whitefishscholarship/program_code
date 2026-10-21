@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of SD2 proposal005 only: ordered Teachers11, FVCC early-childhood12, Horse Creek13; exactly 51 existing held fields. No comparison execution, fact acceptance, canonical acceptance or release.",
+  "reviewedAt": "2026-10-16T19:24:53Z",
+  "reviewer": {"identity": "Codex /root/sd2_proposal005_review", "freshContext": true, "readOnly": true, "authoredOrEdited": false},
+  "binding": {
+    "entryCommit": "9e2e8e22a9f5b95747064baa9ca0d9328b9739d6",
+    "candidateCommit": "3f4926a6f49a047b2fa5a6cc0310863a5104447b",
+    "candidateTree": "520df69be93141db74fc8862b9bf15601beb5f7b",
+    "manifestPath": "docs/evidence/sd2-autonomous/consolidation-proposal-005/final-manifest.json",
+    "manifestSha256": "6b6dc73329509254491de6d646d633423fae50177e31e2153cd4a855923f75fa",
+    "completeDiffSha256": "9f437785edcb498525e94be206851e2d02beedac98eb5c081bf8dca13fea4838",
+    "completeDiffBytes": 177874,
+    "changedPathCount": 24,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Verified local predecessor receipt; authenticated current origin/main and deployment target were not refreshed."
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable complete candidate",
+      "outcome": "PASS",
+      "evidence": "Independently verified frozen HEAD, candidate tree, manifest SHA256, complete entry-to-candidate binary diff bytes/SHA256, exact 24-path change set, and every changed blob ID/mode/size/SHA256 and worktree equality. Tracked worktree and index are clean; only final-manifest.json is untracked. Entry-to-candidate whitespace verification passed."
+    },
+    {
+      "name": "Authority and predecessor continuity",
+      "outcome": "PASS",
+      "evidence": "Proposal preparation follows completed batch004 and its retained next-proposal delegation. Direct exact selection remains required before future execution. Independently verified batch004 candidate/tree/full diff/blob/mode/size/hash binding, matching PASS review and entry9e2e8e2 as its direct-child two-file receipt. Entry-audit records fresh predecessor review-bound PASS with matching output hash before proposal validation. No historical verifier was rerun in the expanded context."
+    },
+    {
+      "name": "Exact prospective scope and source affinity",
+      "outcome": "PASS",
+      "evidence": "Independently verified ordered offsets/locators11,12,13, saved input keys, recorded-name and whole-record canonical hashes, exact checkpoint001 pointers, existing candidate IDs, ordered17+16+18 fields and original routing. Verified every savedEvidencePin and all nine registry/artifact/hash/revision/limit references. rh-old/rh-alias apply only to Teachers/Horse; five FFA references only to Teachers; Flathead references only to FVCC. Selected retained envelope excerpts match their exact pinned artifacts. No 51-field semantic comparison was generated."
+    },
+    {
+      "name": "Teachers scope fidelity",
+      "outcome": "PASS",
+      "evidence": "Proposal preserves one500USD slot, high-school senior, GPA2.0 or higher, FFA membership and planning an AgEd-teacher career. It does not convert career plans into a degree requirement or import another child's stage rules. Copied AMTOPP minimumGPA annotation remains unchanged and expressly flagged as drift rather than evidence affinity. Historical scoring, materials and general FFA context remain distinct from current child rules."
+    },
+    {
+      "name": "FVCC scope fidelity",
+      "outcome": "PASS",
+      "evidence": "Proposal preserves exact academicworks opportunity3986 versus old awardspring433125 locator and acceptedSameIdentity:false. Both remain uninspected locators. Parent FEC1500-6000/Feb22 terms are not inherited; recorded school/major wording alone supplies no accepted eligibility. Original child amount/deadline remain unknown and held."
+    },
+    {
+      "name": "Horse Creek scope fidelity",
+      "outcome": "PASS",
+      "evidence": "Proposal preserves summary2000/detail1500 conflict without winner or invented total; six recipient slots do not become six award IDs. Montana-high-school graduation remains distinct from residence. FAFSA by yearlessApril1 remains distinct from award deadline,2027 and need threshold. At-least-half-time ANY accredited nationwide institution and business certificate/degree OR at least one business/finance course remain exact. Two-slot graduates/residents county preference does not become an all-slot restriction or invented slash operator."
+    },
+    {
+      "name": "Protected history, holds and routes",
+      "outcome": "PASS",
+      "evidence": "Read-only verifier and independent checks confirm2404protected entry files and exact append-only prior handoff/section9 bytes. Independently recounted406held identities,7406held fields,676seed-alias routes,1127links,365source receipts,35inherited source routes and628converted destinations including one unclosed. Cursor406/no nextinput remains exact. Verified12historicalM1pins and437uniqueM1records;71custody receipts and original routes remain preserved without opening temporary raw artifacts. Earlier reviews and rejected bindings remain unchanged."
+    },
+    {
+      "name": "Read-only proposal verifier",
+      "outcome": "PASS",
+      "evidence": "Inspected verify.py and independently executed it without --review-bound. PASS from2026-10-16T19:23:50.793028+00:00 through19:23:51.159564+00:00. It verifies proposal scope/preservation and explicitly does not claim51-field semantic review or scholarship truth. No reconciliation-batch-005 directory exists."
+    },
+    {
+      "name": "Seven validation receipt provenance checks",
+      "outcome": "PASS",
+      "evidence": "Independently verified all seven standalone receipts exactly equal validation.json entries; checked exact commands/cwd, timestamps before manifest creation, raw byte counts/SHA256, normalization and saved-log hashes. Plan/typecheck/tests pass after unchanged IPC retries. Two exact standard npm run build attempts fail on process creation/port binding with Operation not permitted. standardBuild correctly remains BLOCKED_ENVIRONMENT, with no alternate-build waiver or fresh-main claim."
+    },
+    {
+      "name": "Incidents, coverage and stopping boundary",
+      "outcome": "PASS",
+      "evidence": "Prior biography/shared-source/native-preview incidents remain explicitly retained without retrospective relabeling. No new preparation incident was identified in reviewed artifacts. Current coverage remains249field occurrences across11autonomous+2Jaycee inputs, leaving395autonomous inputs outside comparisons; proposal adds0. Separately selected execution would yield300occurrences across14autonomous+2Jaycee, leaving392autonomous inputs outside comparisons. Next owner is Kelsey for direct exact selection, then Codex for bounded execution/review. No automatic execution, routine preference question or SD3 is selected."
+    }
+  ],
+  "limits": [
+    "PASS covers proposal fidelity, preservation, exact scope and reviewability only. It accepts no scholarship fact, identity mapping, completed comparison, canonical stage or release.",
+    "Reviewer made no edits or Git mutations, ran no npm/build/assembler or historical verifier, and performed no network/workbook/raw-native-content access, reacquisition or external effect.",
+    "Current offerings, public access, native/visual completeness, source silence, sponsor/route continuity and provider timing remain unverified. Equal RHM alias hashes provide no independent corroboration.",
+    "All71custody receipts remain preserved; current temporary raw-material availability was not rechecked.",
+    "Exact supported standard-build PASS and fresh authenticated main/target remain with Codex validation/governance/delivery before canonical acceptance or authorized release.",
+    "Original preservation/recovery, human/canonical/publication, student/browser/CSV, M1/SD5 and external-effect gates retain their original owners, triggers, authoritative paths and next actions.",
+    "FullSD2 remains incomplete. Direct exact selection is required before proposal005 execution. Never initialize/reset/replay. Stop beforeSD3."
+  ]
+}

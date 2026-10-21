@@ -1,0 +1,68 @@
+{
+  "reviewType": "independent read-only remediation recheck",
+  "reviewer": "/root/sd2_checkpoint002_review",
+  "reviewedAt": "2026-10-14T18:27:55Z",
+  "outcome": "PASS",
+  "scope": "Local SD2 checkpoint-002 held research packet; no canonical fact/stage acceptance",
+  "binding": {
+    "entryCommit": "ec895940b0c93fcb063a357572504bcbe8e79648",
+    "candidateCommit": "485241d83244373ece3df73aa2099b8ba5f1c47d",
+    "candidateTree": "ad91ecd799c6362a2139583e924da43338573a86",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-002/final-manifest.json",
+    "manifestSha256": "3a6b6e4451b3c4eef4aed8ab1335ab2cc147d0d6b509a44b551da5b0d835ca1d",
+    "manifestLocation": "Separate untracked prospective review input; not a candidate blob",
+    "completeDiffCommand": "git diff ec895940b0c93fcb063a357572504bcbe8e79648 485241d83244373ece3df73aa2099b8ba5f1c47d",
+    "completeDiffSha256": "e83020137602861de00783b74830fd087aa97ee77a8002d284af915a5ceedc2c",
+    "changedPaths": 27,
+    "allCandidateBlobHashesSizesAndWorktreeBytesVerified": true
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "recheckedFixes": [
+    {
+      "findingId": "SD2-002-M1", "originalSeverity": "medium",
+      "status": "fixed-independently-rechecked",
+      "evidence": "Row25 schoolType is now conflict with qualifyingCampusProgramResolution=null. Parent enrollment and both separate poster sources are bound by exact excerpts and current artifact hashes. The note identifies FVCC and other campus differences, forbids source selection, union/intersection and modification-date adjudication, and preserves owner/trigger/next action. Both complete poster renderings independently confirm a genuine program-list disagreement. Dash PDF and rendering custody hashes are now included in the source registry.",
+      "acceptanceLimit": "Both variants and current campus/program applicability remain held; no qualifying list is accepted."
+    },
+    {
+      "findingId": "SD2-002-L1", "originalSeverity": "low",
+      "status": "fixed-independently-rechecked",
+      "evidence": "Every new transcript equals its original content after trailing-whitespace and EOF normalization only. All dependent artifact/evidence hashes and affected exact excerpts reconcile. The complete entry-to-final-candidate git diff --check independently exits0. New validation-remediation.json accurately preserves the original105 diagnostics and records focused remediation verification."
+    }
+  ],
+  "dispositions": {"path":"docs/evidence/sd2-autonomous/checkpoint-002/dispositions.json","countMatched":2,"exactFindingIdsMatched":true,"rationaleOwnerAndTargetPresent":true,"independentlyVerifiedFixed":2},
+  "preservedOriginalReview": {
+    "candidateCommit": "535fbc85061c768c86546e44a5f9239480cecdf8",
+    "candidateTree": "d6574d1ed8190de5dabafe094fc0950737210a2b",
+    "completeDiffSha256": "7c876dd08e98d2c1984f30369aba78c7c367f9a70aecc2c69415a233ba0a608f",
+    "reviewPath": "docs/evidence/sd2-autonomous/checkpoint-002/review-round1.json",
+    "reviewSha256": "5de5d0118b90611a0ab5558b9777524567dfdae35bbabfde0e48103fbc75850a",
+    "reviewTranscriptionVerified": true,
+    "manifestPaths": ["docs/evidence/sd2-autonomous/checkpoint-002/manifest-round1.json","docs/evidence/sd2-autonomous/checkpoint-002/manifest.json"],
+    "bothManifestCopiesSha256": "4893e206db898f29607a40b1e48e27dac9484db2244ae1854ffc3979bf60e8f2",
+    "originalBindingsRecomputedAndUnchanged": true
+  },
+  "checks": [
+    {"check":"Replacement complete manifest","result":"PASS","details":"Recomputed candidate/tree,27-path entry-to-candidate change set, complete diff digest and every listed blob, size, SHA256 and worktree equality."},
+    {"check":"Remediation semantic scope","result":"PASS","details":"Outside row25 schoolType and its next action, all claim values, states and source scopes remain unchanged. Other field-evidence changes are only normalized excerpts and hashes. Source text edits are whitespace-only."},
+    {"check":"Operative source and evidence custody","result":"PASS","details":"Verified all17 source-artifact hashes and140 field evidence references, including exact excerpts and source URLs. Verified8 raw-PDF hashes/sizes/page counts and18 render hashes against temporary local files."},
+    {"check":"Ordered denominator, holds and cursor","result":"PASS","details":"406 frozen inputs;20 new ordered inputs at offsets20:40;40 cumulative initial dispositions;366 unprocessed; next offset40/input saved-405588227-row-42. No replay or accepted distinct-award count. All400 fields and20 identities remain held:264 unverified,124 verified,11 conflict,1 unstated."},
+    {"check":"Immutable history and open routing","result":"PASS","details":"Verifier independently reproduces1055 preserved entry paths, original section9/handoff preservation, historical policy/research bindings,12 retained M1 pins and437 unique M1 records. Original nine attention rows, supplements and prior344 field/20 identity holds remain unchanged."},
+    {"check":"Focused read-only verification","result":"PASS","commands":["python3 docs/evidence/sd2-autonomous/checkpoint-002/verify.py","git diff --check ec895940b0c93fcb063a357572504bcbe8e79648 485241d83244373ece3df73aa2099b8ba5f1c47d"]},
+    {"check":"Original application checks and reserved gates","result":"Preserved","details":"Original plan/typecheck/full-test results remain recorded; runtime/test/acceptance paths are unchanged. Both standard-build EPERM failures and fresh-main/target limits remain open without waiver."},
+    {"check":"Disclosed Stockman deviation","result":"Contained historical deviation retained","details":"Guessed unpinned URL remains disclosed, excluded from sourceRegistry and all fact proposals, with no retry/search or fabricated scholarship conclusion. Original containment assessment remains applicable."}
+  ],
+  "limits": [
+    "Reviewer performed no edits, writes, network fetches, workbook/app changes or external effects.",
+    "PASS applies only to this exact frozen local held-research packet.",
+    "Fresh authenticated origin/main and delivery target remain unverified; retained main is a local pin.",
+    "Standard npm run build remains blocked by process/port EPERM; no alternate-build waiver.",
+    "Sanitized HTML captures were not remotely re-fetched. Native public accessibility and sponsor authority remain unverified where explicitly held.",
+    "Temporary raw PDFs/renderings are inspection aids; omitted recipient/photo/contact scopes do not establish source silence.",
+    "Historical capture-time receipts remain historical; the final ledger sourceRegistry is the operative artifact registry.",
+    "Later section9/current-handoff/NEXT_SESSION documentation wrap is separate from this review and does not rebind it.",
+    "Full SD2 remains incomplete; acceptedFacts=0, canonicalAcceptance=false and SD3Started=false."
+  ],
+  "nextAction": {"owner":"Codex author","trigger":"This independent PASS","authoritativePath":"docs/evidence/sd2-autonomous/checkpoint-002/final-manifest.json","action":"Save the matching local review receipt, preserve all original bindings, complete the separate documentation wrap carrying every hold/owner/trigger, and retain the hard stop before SD3."}
+}

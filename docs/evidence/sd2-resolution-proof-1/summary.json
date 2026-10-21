@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "recordedAt": "2026-10-20T19:23:02.820432+00:00",
+  "outcome": "FAIL",
+  "reason": "Three prohibited repeated public requests; historical no-replay constraint cannot be repaired retroactively.",
+  "targets": 397,
+  "triageCounts": {
+    "public": 230,
+    "retain": 103,
+    "native": 42,
+    "hold": 19,
+    "reuse": 3
+  },
+  "dispositionCounts": {
+    "held_observed_dispatch_no_replay": 50,
+    "held_original_triage_no_acquisition": 125,
+    "held_confirmed_prohibited_replay": 3,
+    "held_acquisition_suspended_dispatch_uncertain": 219
+  },
+  "observedCompletedToolCallRecords": 64,
+  "toolCounts": {
+    "firecrawl.firecrawl_scrape": 57,
+    "google_drive.get_file_metadata": 4,
+    "google_drive.fetch": 3
+  },
+  "phaseCounts": {
+    "other_selected_calls": 25,
+    "cell51": 13,
+    "cell86": 26
+  },
+  "confirmedReplayOrders": [
+    26,
+    30,
+    34
+  ],
+  "observedDistinctTargets": 53,
+  "targetsWithResultPackets": 47,
+  "allAcquisitionCandidatesQuarantined": 272,
+  "sourceAcquisitionComplete": false,
+  "unloggedInFlightDispatchPossible": true,
+  "maximumObservedExplicitToolCallConcurrency": 2,
+  "underlyingHttpRequests": "UNMEASURED",
+  "earlierInterruptedUpperBoundsSuperseded": true,
+  "earlierReplayedFalseFlagsSupersededForOrders": [
+    26,
+    30,
+    34
+  ],
+  "safeProseOrCriterionValuesEstablished": 0,
+  "priorExcludedTextIncidentDisclosed": true,
+  "sourceProseInFinalResultFiles": false,
+  "allOriginalFieldDefinitions": 7547,
+  "originalHeld": 7518,
+  "originalProposed": 29,
+  "existingComparisonOccurrences": 7468,
+  "namedInputs": 411,
+  "savedPositions": 794,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "workbookAccess": false,
+  "remoteGitDeployment": false,
+  "monitoring": false,
+  "dependencyInstallAttempts": 1,
+  "validation": {
+    "restore": 0,
+    "plan": 0,
+    "typecheck": 0,
+    "tests": 0,
+    "exactBuild": 1,
+    "buildGate": "Process/port EPERM retained; no alternative build/waiver"
+  },
+  "originalAcceptanceGates": 14,
+  "originalOwnersTriggersPathsActionsUnchanged": true,
+  "conservativeExplicitCallReservation": 68,
+  "uncertainFrontierAdditionalCalls": 4,
+  "possibleAdditionalReplayOrders": [
+    32
+  ],
+  "independentCallLedgerReviewSha256": "a9da9440f85dcfa83b44f9773ad3f26051e1567b3a90ecac4bfa5249a2fb218e"
+}

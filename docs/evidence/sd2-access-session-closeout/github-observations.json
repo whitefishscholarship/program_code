@@ -1,0 +1,83 @@
+{
+  "scope": "User clarified Whitefish separate-account requirement; existing saved login used only for exact repository/main check, original active account restored.",
+  "accountUsed": "whitefishscholarship",
+  "originalActiveAccount": "Franscale1922",
+  "originalAccountRestored": true,
+  "newLoginCreated": false,
+  "newTokenCreatedOrRead": false,
+  "repoMutations": 0,
+  "observations": [
+    {
+      "command": [
+        "gh",
+        "auth",
+        "switch",
+        "--hostname",
+        "github.com",
+        "--user",
+        "whitefishscholarship"
+      ],
+      "startedAt": "2026-10-21T02:21:30.525477+00:00",
+      "completedAt": "2026-10-21T02:21:30.758165+00:00",
+      "exitCode": 0,
+      "result": "",
+      "message": "\u2713 Switched active account for github.com to whitefishscholarship\n"
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/whitefishscholarship/program_code",
+        "--jq",
+        "{full_name,default_branch,permissions}"
+      ],
+      "startedAt": "2026-10-21T02:21:30.758218+00:00",
+      "completedAt": "2026-10-21T02:21:31.462111+00:00",
+      "exitCode": 0,
+      "observed": {
+        "default_branch": "main",
+        "full_name": "whitefishscholarship/program_code",
+        "permissions": {
+          "admin": true,
+          "maintain": true,
+          "pull": true,
+          "push": true,
+          "triage": true
+        }
+      }
+    },
+    {
+      "command": [
+        "gh",
+        "api",
+        "repos/whitefishscholarship/program_code/branches/main",
+        "--jq",
+        "{name,sha:.commit.sha,protected}"
+      ],
+      "startedAt": "2026-10-21T02:21:31.462302+00:00",
+      "completedAt": "2026-10-21T02:21:32.071376+00:00",
+      "exitCode": 0,
+      "observed": {
+        "name": "main",
+        "protected": false,
+        "sha": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392"
+      }
+    },
+    {
+      "command": [
+        "gh",
+        "auth",
+        "switch",
+        "--hostname",
+        "github.com",
+        "--user",
+        "Franscale1922"
+      ],
+      "startedAt": "2026-10-21T02:21:32.071510+00:00",
+      "completedAt": "2026-10-21T02:21:32.237727+00:00",
+      "exitCode": 0,
+      "result": "",
+      "message": "\u2713 Switched active account for github.com to Franscale1922\n"
+    }
+  ]
+}

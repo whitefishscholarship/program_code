@@ -1,0 +1,47 @@
+{
+  "recordedAt": "2026-10-14T16:20:47.816575+00:00",
+  "scope": "local autonomous SD2 research; not stage/fact acceptance",
+  "planCheck": {
+    "outcome": "PASS",
+    "restrictedAttempt": "EPERM IPC; exit1",
+    "permittedRetry": "completed exit0; see plan-check-retry.json"
+  },
+  "typecheck": {
+    "outcome": "PASS",
+    "exitCode": 0,
+    "receipt": "command-matrix.json"
+  },
+  "tests": {
+    "outcome": "PASS",
+    "exitCode": 0,
+    "command": "npm test",
+    "execution": "permitted",
+    "receipt": "docs/evidence/sd2-autonomous/test-final-verification.json",
+    "earlierCaptureLimitResolved": "Explicit final exit0 now retained; previous full retry output remains separately saved."
+  },
+  "standardBuild": {
+    "outcome": "BLOCKED",
+    "restrictedExitCode": 1,
+    "permittedRetryExitCode": 1,
+    "reason": "Turbopack creating new process / binding port: Operation not permitted (os error1)",
+    "owner": "Codex/environment operator",
+    "trigger": "permitted environment supports standard build",
+    "nextAction": "rerun exact npm run build; no Webpack waiver",
+    "authorityPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9"
+  },
+  "freshMainTarget": {
+    "outcome": "BLOCKED-preserved",
+    "owner": "Codex before later delivery",
+    "trigger": "explicit later authority plus authenticated current main/target proof",
+    "nextAction": "retain existing gate; no new remote check selected"
+  },
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "logNormalization": "ANSI colors/trailing whitespace/extra EOF blanks removed from saved logs; error/result semantics retained",
+  "protectedVerification": {
+    "command": "python3 docs/evidence/sd2-autonomous/verify.py",
+    "outcome": "PASS",
+    "initialDuringArtifactEdit": "one assertion while hashes were being refreshed; rerun after sequential refresh passed; no history drift"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "Author remediation; independent recheck required",
+  "originalCandidate": "535fbc85061c768c86546e44a5f9239480cecdf8",
+  "originalManifestArchive": "docs/evidence/sd2-autonomous/checkpoint-002/manifest-round1.json",
+  "originalReviewPath": "docs/evidence/sd2-autonomous/checkpoint-002/review-round1.json",
+  "countMatched": 2,
+  "dispositions": [
+    {"findingId":"SD2-002-M1","status":"author-fixed-awaiting-independent-recheck","rationale":"Row25 schoolType now conflict with no qualifying-campus/program resolution, bound parent enrollment plus both poster lists and representative FVCC differences. Both exact original PDFs and rendered pages corroborated; no newer-date choice/union/intersection. Owner/trigger/nextAction explicit; builder mirrors held conflict and verifier enforces it. All400fields held,0accepted.","owner":"Codex author","trigger":"Before checkpoint002 independent PASS","target":"Replacement frozen local candidate; final review.json"},
+    {"findingId":"SD2-002-L1","status":"author-fixed-awaiting-independent-recheck","rationale":"Only new checkpoint002 source transcripts/excerpts normalized; all operative registry/evidence hashes updated. Original raw byte hashes and earlier packets unchanged. Verifier now checks every new text and full entry-to-worktree diff; staged and final frozen-candidate checks additionally cover new paths. Historical105 diagnostics on original535fbc8 remain disclosed.","owner":"Codex author","trigger":"Before checkpoint002 independent PASS","target":"Replacement frozen local candidate and validation-remediation.json"}
+  ]
+}

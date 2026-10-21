@@ -1,0 +1,3935 @@
+{
+  "scope": "Derived field/source binding reference view;no new capture or authoritative registry,original source limits remain in exact registry references",
+  "occurrences": [
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "amount",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/amount/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroesfaq.md",
+          "sha256": "188012fe43b3d121d4b795fc0d0041631f4fe07c0b763b60c7180f3bea133f5a",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/8"
+          }
+        ],
+        "sourceId": "heroesfaq",
+        "originalEvidenceSha256": "2b95c5617e246782a193f92d0af39138c9d39d03c96164a94df849b8c5c45905",
+        "startCharacter": 243,
+        "endCharacter": 6563,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "eligibility",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/eligibility/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroesfaq.md",
+          "sha256": "188012fe43b3d121d4b795fc0d0041631f4fe07c0b763b60c7180f3bea133f5a",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/8"
+          }
+        ],
+        "sourceId": "heroesfaq",
+        "originalEvidenceSha256": "2b95c5617e246782a193f92d0af39138c9d39d03c96164a94df849b8c5c45905",
+        "startCharacter": 243,
+        "endCharacter": 6563,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "need",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/need/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroesfaq.md",
+          "sha256": "188012fe43b3d121d4b795fc0d0041631f4fe07c0b763b60c7180f3bea133f5a",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/8"
+          }
+        ],
+        "sourceId": "heroesfaq",
+        "originalEvidenceSha256": "6e5b9a54f5558033916351c338ed8bc29cd3ca7c1c4b35f72b7fdd45a80b40db",
+        "startCharacter": 5873,
+        "endCharacter": 6563,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "schoolType",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/schoolType/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "reapplication",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/reapplication/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "reapplication",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/reapplication/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroesfaq.md",
+          "sha256": "188012fe43b3d121d4b795fc0d0041631f4fe07c0b763b60c7180f3bea133f5a",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/8"
+          }
+        ],
+        "sourceId": "heroesfaq",
+        "originalEvidenceSha256": "2b95c5617e246782a193f92d0af39138c9d39d03c96164a94df849b8c5c45905",
+        "startCharacter": 243,
+        "endCharacter": 6563,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroes.md",
+          "sha256": "9b806aae5a556c6bedac55f7a736800890a94c83072da5eceb8c82fd53793f70",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/0"
+          }
+        ],
+        "sourceId": "heroes",
+        "originalEvidenceSha256": "cfe560a2a769b7ce3b082b6aa84b8c752d7a34154af187dbc455ab6f1c603420",
+        "startCharacter": 243,
+        "endCharacter": 4118,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-285",
+      "field": "application",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/0/fieldProposals/application/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/heroesfaq.md",
+          "sha256": "188012fe43b3d121d4b795fc0d0041631f4fe07c0b763b60c7180f3bea133f5a",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/8"
+          }
+        ],
+        "sourceId": "heroesfaq",
+        "originalEvidenceSha256": "ba12ff92e62f335536ab0fb3824b8e27bf3d0b3d98328385281a4c0a7ff6afae",
+        "startCharacter": 243,
+        "endCharacter": 7417,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "affiliation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/affiliation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-286",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/1/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nfpa.md",
+          "sha256": "9c4781247222cddf6086bc62cd61a5fecbccd4fefc87076bb223d4bd5792bb1d",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/1"
+          }
+        ],
+        "sourceId": "nfpa",
+        "originalEvidenceSha256": "5e3332c1695fb22bc170b36a5e5702da2e5aa686dbc37b1e54ca69c49116db57",
+        "startCharacter": 243,
+        "endCharacter": 2419,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "identityObservation",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/identityObservation/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmfalias.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/10"
+          }
+        ],
+        "sourceId": "gtmfalias",
+        "originalEvidenceSha256": "703daa3944756ee8d55d449911935885d236333e6bed0dfdd2d28f9e4f9bd061",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-287",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/2/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/gtmf.md",
+          "sha256": "56f7b8d3c7debd9a75f83e5ae8adac24b348d82556c01d998246c8aad338faab",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/2"
+          }
+        ],
+        "sourceId": "gtmf",
+        "originalEvidenceSha256": "9ceeda635faab2388dcdf783c38427ce47b6110b4d76c34309c4e0adbe1ac0a5",
+        "startCharacter": 243,
+        "endCharacter": 1622,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "ce4fbee89e2f1bc8327678a79d7391b137925e5c038c4ed692849a5f0b65776d",
+        "startCharacter": 243,
+        "endCharacter": 793,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "identityObservation",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/identityObservation/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duck.md",
+          "sha256": "1913566b35da23ccc03ab54191fb23dc81bd1126e9b3a60804d48281a37c1a54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/3"
+          }
+        ],
+        "sourceId": "duck",
+        "originalEvidenceSha256": "5b71f2176b5a3f9630ac0d6da0e609b131c3ed398e2d30f7091bb68143f531de",
+        "startCharacter": 243,
+        "endCharacter": 2085,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "4f37fb5482c06d834249be44dd2f9b9a726f7bdcbbb4b450299f6382b6b4445e",
+        "startCharacter": 2091,
+        "endCharacter": 3215,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "cycle",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/cycle/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "9aab6993f441dbd25945ac8f510bfbf5609042550ed871fdb7f3bd5be368a2d7",
+        "startCharacter": 17538,
+        "endCharacter": 17844,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "fa41452da7ef56730b4918838b903b01cc1cfec7986ea76b26c5469fa3a01e3e",
+        "startCharacter": 17846,
+        "endCharacter": 19515,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "e141a6cb6eab12f1003ef0e56af395d185251d0bbeacad96bffded7e970032d2",
+        "startCharacter": 795,
+        "endCharacter": 2089,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "a91a2d104cfc7e970881b126197d79b6500b1c910a33968bb3ae7b97e7c46744",
+        "startCharacter": 3217,
+        "endCharacter": 28991,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-288",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/3/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/duckrules.md",
+          "sha256": "40d5d1846b93a405772869052a01e8788c2c8dc46150fd52d350d269e0024f1e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/9"
+          }
+        ],
+        "sourceId": "duckrules",
+        "originalEvidenceSha256": "daafdb2b94510db4c2d87d68e64a3fd0178b65b54741bd4e4caa197ae6c575e3",
+        "startCharacter": 7810,
+        "endCharacter": 17844,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "affiliation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/affiliation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-289",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/4/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/nth.md",
+          "sha256": "f26ecc21244dd67ea3f06524b91b65462a298b63eb49aef13362e86e2933d4b4",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/4"
+          }
+        ],
+        "sourceId": "nth",
+        "originalEvidenceSha256": "58fd073710cceac0573844c4515bc02afe3cd03880f928f22c8df8e777200d58",
+        "startCharacter": 243,
+        "endCharacter": 699,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "schoolType",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/schoolType/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "applicantStage",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/applicantStage/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-291",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/5/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "schoolType",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/schoolType/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "applicantStage",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/applicantStage/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-292",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/6/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/hpfy.md",
+          "sha256": "c06e4a508a031b9ae44d5f5407f5e5abc5cada712ddf38d987bd058effff003e",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/5"
+          }
+        ],
+        "sourceId": "hpfy",
+        "originalEvidenceSha256": "98f198adc7815111abbbf4adde4f939cbe163b458fc880ccb9d04f0ce1028954",
+        "startCharacter": 243,
+        "endCharacter": 9932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "need",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/need/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "reapplication",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/reapplication/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-293",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/7/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/afsa.md",
+          "sha256": "6d7fa158d906c771b091fad86844690aa32ab2a63bd9299342f7cdba07f32557",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/6"
+          }
+        ],
+        "sourceId": "afsa",
+        "originalEvidenceSha256": "95edb4e62cef9cac6e60e6ebe5564db01a26cb0aa4a2ae50ee45d0216cd3ceac",
+        "startCharacter": 243,
+        "endCharacter": 2835,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "identityObservation",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/identityObservation/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "fedc5e3dfeda0b3a570f788809e0b51b3e4f4cd24629e4f44ecde0e7f28985d5",
+        "startCharacter": 1494,
+        "endCharacter": 1890,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "fedc5e3dfeda0b3a570f788809e0b51b3e4f4cd24629e4f44ecde0e7f28985d5",
+        "startCharacter": 1494,
+        "endCharacter": 1890,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "eligibility",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/eligibility/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "fedc5e3dfeda0b3a570f788809e0b51b3e4f4cd24629e4f44ecde0e7f28985d5",
+        "startCharacter": 1494,
+        "endCharacter": 1890,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "studyPath",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/studyPath/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "affiliation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/affiliation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "51967893e56e33ae212eaef810b1f9f5959e725bfdd0fc4366b0950ac1110457",
+        "startCharacter": 243,
+        "endCharacter": 2480,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "45ac1f0c0674c576d9f67a3a5fa7c2ed9bd4b26afb77d33e2a19dd702f095726",
+        "startCharacter": 243,
+        "endCharacter": 2480,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-294",
+      "field": "amountUse",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/8/fieldProposals/amountUse/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/freeland.md",
+          "sha256": "1c0d471971402f09b1d3df8ed6bf4eb38d2b845ecca34f2b1d03470d30a126a7",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/11"
+          }
+        ],
+        "sourceId": "freeland",
+        "originalEvidenceSha256": "daf59b88f29bb47972281b2396ae4f3167bc2b1ded55f09a7ba3c60ba298ed09",
+        "startCharacter": 243,
+        "endCharacter": 1731,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-295",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/9/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-295",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/9/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "06a23efb51b93d4ae4568a54acd8c99500406a9ed803656963c15cccbdff8a13",
+        "startCharacter": 265,
+        "endCharacter": 389,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "7e9401afd0edf439830634f8144ec8d36d8677425e2d7b46eaa7332fffdb200c",
+        "startCharacter": 2409,
+        "endCharacter": 2684,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "7e9401afd0edf439830634f8144ec8d36d8677425e2d7b46eaa7332fffdb200c",
+        "startCharacter": 2409,
+        "endCharacter": 2684,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "7e9401afd0edf439830634f8144ec8d36d8677425e2d7b46eaa7332fffdb200c",
+        "startCharacter": 2409,
+        "endCharacter": 2684,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-296",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/10/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-297",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/11/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-297",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/11/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "identityObservation",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/identityObservation/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "6e5559dbec921f6cb59b5198365570506e4fc5a461257e30e98a82231fbc78cf",
+        "startCharacter": 391,
+        "endCharacter": 879,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "studyPath",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/studyPath/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "ce31960f1a15f1ed58d35a32fe663a48a9515fa6dabf2a9a07e48decd731a8ab",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "430d54c4a6aabd34340eb9529f546ca48bd270fec4533847c419165895dbe1bd",
+        "startCharacter": 243,
+        "endCharacter": 2932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-298",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/12/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/baker.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/12"
+          }
+        ],
+        "sourceId": "baker",
+        "originalEvidenceSha256": "8c8b32b5c93577b1aaf0f9e9d578f8368dcba9967abcc9e41b5e93e4d44317d1",
+        "startCharacter": 243,
+        "endCharacter": 2932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "06a23efb51b93d4ae4568a54acd8c99500406a9ed803656963c15cccbdff8a13",
+        "startCharacter": 265,
+        "endCharacter": 389,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2e57b2f015864cd7db6c748477c6c4f9a4bc1dc9aa2611a4826e961616d9ab48",
+        "startCharacter": 3161,
+        "endCharacter": 3801,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2e57b2f015864cd7db6c748477c6c4f9a4bc1dc9aa2611a4826e961616d9ab48",
+        "startCharacter": 3161,
+        "endCharacter": 3801,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2e57b2f015864cd7db6c748477c6c4f9a4bc1dc9aa2611a4826e961616d9ab48",
+        "startCharacter": 3161,
+        "endCharacter": 3801,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-299",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/13/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "identityObservation",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/identityObservation/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "minimumGPA",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/minimumGPA/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "aab4ac5ee53f2112869883cb913504384b46df7e3c1a915b71bc8c6d471bb472",
+        "startCharacter": 956,
+        "endCharacter": 1417,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "studyPath",
+      "evidenceIndex": 1,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/studyPath/evidence/1"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "6e035c02a0cc6306971f79f524c891da6e63091bb29ef4e3e4496ff11a3657c5",
+        "startCharacter": 243,
+        "endCharacter": 1996,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "materials",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/materials/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "dd203ddd10d18778cf66b99ebd16b929f67f17960883f6b779fa87dd69335764",
+        "startCharacter": 243,
+        "endCharacter": 2932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-300",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/14/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/cook.md",
+          "sha256": "eaa888b2353065ac9e3d31f466f8f5714f3902fbb09187fbb31075bc6edd1dcd",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/13"
+          }
+        ],
+        "sourceId": "cook",
+        "originalEvidenceSha256": "fbedde3f01fc21764d0599dcce7ad68cc5a5f812a6ea44df942b3bc765bc555a",
+        "startCharacter": 243,
+        "endCharacter": 2932,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-301",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/15/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-301",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/15/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-302",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/16/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-302",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/16/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-303",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/17/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-303",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/17/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-304",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/18/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-304",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/18/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "identityObservation",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/identityObservation/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "cycle",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/cycle/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "06a23efb51b93d4ae4568a54acd8c99500406a9ed803656963c15cccbdff8a13",
+        "startCharacter": 265,
+        "endCharacter": 389,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "amount",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/amount/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "14abf7995bc91a8c23d51867c0afa4aa4fbb6a346554a99074ddbb6887f2ad5a",
+        "startCharacter": 5482,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "eligibility",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/eligibility/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "14abf7995bc91a8c23d51867c0afa4aa4fbb6a346554a99074ddbb6887f2ad5a",
+        "startCharacter": 5482,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "studyPath",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/studyPath/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "14abf7995bc91a8c23d51867c0afa4aa4fbb6a346554a99074ddbb6887f2ad5a",
+        "startCharacter": 5482,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    },
+    {
+      "savedInputKey": "saved-405588227-row-305",
+      "field": "application",
+      "evidenceIndex": 0,
+      "originalEvidenceReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+        "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+        "pointer": "/records/19/fieldProposals/application/evidence/0"
+      },
+      "binding": {
+        "artifactReference": {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-015/sources/aea.md",
+          "sha256": "e6834e79929486c55c05e5ea282dcdf1358a2c27a9f5d7305a1d9d16c5321c54",
+          "pointer": ""
+        },
+        "registryReferences": [
+          {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-015.json",
+            "sha256": "ffdcb85dd3695ebde262e48d5c7a88b1bede3f527a5a67fa975cb0eabe07f21b",
+            "pointer": "/sourceRegistry/7"
+          }
+        ],
+        "sourceId": "aea",
+        "originalEvidenceSha256": "2ec086b771f44875e107b30c5498c5a70d8286c03ca70e285b8f9d54d7e9ab75",
+        "startCharacter": 243,
+        "endCharacter": 5789,
+        "locatorConvention": "Zero-based Unicode codepoints in exact saved UTF8 text",
+        "bindingMode": "Original exact field excerpt; original scope retained"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "reviewPath": "docs/evidence/sd2-autonomous/policy-review-round1.json",
+  "dispositions": [
+    {
+      "findingId": "SD2-AUTO-M1",
+      "severity": "medium",
+      "disposition": "fixed",
+      "rationale": "Default and --check are read-only; --initialize refuses existing queue/checkpoint. Three actual invocations preserve both hashes.",
+      "owner": "Codex author",
+      "target": "before new source research",
+      "verificationPath": "docs/evidence/sd2-autonomous/resume-guard-verification.json"
+    },
+    {
+      "findingId": "SD2-AUTO-L1",
+      "severity": "low",
+      "disposition": "fixed",
+      "rationale": "Removed extra EOF blank line; complete candidate diff checked after freezing.",
+      "owner": "Codex author",
+      "target": "before new source research"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "typecheck"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-19T16:49:36.537473+00:00",
+  "completedAt": "2026-10-19T16:49:36.678397+00:00",
+  "exitCode": 127,
+  "logPath": "docs/evidence/sd2-autonomous/saved-continuation/checks/typecheck.log",
+  "logSha256": "acb52d3485af3fc24a164b44849b0ab1bd669305b2435c1a3ae534c41387dc9d",
+  "rawOutputUtf8": "\n> web@0.1.0 typecheck\n> tsc --noEmit\n\nsh: tsc: command not found\n",
+  "rawLogBytes": 66,
+  "rawLogSha256": "acb52d3485af3fc24a164b44849b0ab1bd669305b2435c1a3ae534c41387dc9d",
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact raw output retained in this receipt."
+}

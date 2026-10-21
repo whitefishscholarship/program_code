@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewType": "Fresh-context independent read-only final-candidate review of one selected terminal local dispatch-evidence sufficiency decision",
+  "reviewerTask": "/root/sufficiency_review",
+  "reviewedAt": "2026-10-21T00:18:13.367823+00:00",
+  "objective": "Decide whether the finite selected existing sanitized dispatch metadata establishes complete exact target-specific never-dispatched proof. If not, record the limit, retain all397 holds/all272 quarantines/0cleared, end this checkpoint, preserve every original binding and permanent source FAIL, and stop before SD3.",
+  "binding": {
+    "baselineCommit": "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4",
+    "entryCommit": "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4",
+    "recordedPlanningBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+    "candidateCommit": "e0f7ff388b59a2eb5ef9a59fdca0c0fa434499ca",
+    "candidateTree": "6c714c1737b6e7d4cfb66f9934a260c9436c576c",
+    "manifestPath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/manifest.json",
+    "manifestSha256": "b734d2f9f6726c4f50d51fc220c2adae010caf4844dc999fdd5f10c377ca2fdc",
+    "completeDiffFiles": 25,
+    "completeDiffBytes": 102292,
+    "completeDiffSha256": "fef7ebbb671f271d9c81de132271b18246f5cb18014523c0aac665d99129101b",
+    "entryToCandidateDiffFullyAccounted": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "independence": {
+    "freshContext": true,
+    "readOnlyRepository": true,
+    "authoredOrEditedReviewedStage": false,
+    "repositoryMutations": false,
+    "stagedOrCommitted": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "remoteGitCalls": 0,
+    "rawBodiesOrTracesRead": false,
+    "dependencyInstallation": false,
+    "oldVerifierReruns": false,
+    "oldReconciliationComparisonSyntheticExecution": false,
+    "queueOrJournalInitializationResetReplay": false,
+    "applicationTestsOrBuildRerun": false,
+    "outputs": [
+      "/private/tmp/sd2-dispatch-evidence-sufficiency-review.json"
+    ],
+    "permittedExecution": "Only the NEW unbound packet verifier, read-only Git checks and independent read-only metadata/hash inspection. No synthetic probes or new controls."
+  },
+  "authorityAssessment": {
+    "repositoryContractAndCanonicalReadOrderFollowed": true,
+    "latestAcceptedStageEvidence": "docs/evidence/P9.md",
+    "planRevision": 21,
+    "activeStageId": null,
+    "nextPermittedStageId": null,
+    "nextCanonicalKickoff": null,
+    "studentPlanSectionsRead": [
+      1,
+      6,
+      7,
+      9
+    ],
+    "studentProgressPointer": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "originalSd2AuthorityPolicyRead": true,
+    "repairPolicyImplementationNotesReviewRead": true,
+    "currentPacketAuthorityDecisionHandoffInputValidationManifestRead": true,
+    "scope": "Direct approval selects a single local saved-metadata sufficiency checkpoint, independent review, unchanged local validation and local evidence/commits. No canonical acceptance, source acquisition, raw inspection or later slice is selected."
+  },
+  "checks": [
+    {
+      "command": "python3 -B docs/evidence/sd2-dispatch-evidence-sufficiency-1/verify.py",
+      "exitCode": 0,
+      "result": "localObjectiveIntegrity PASS; reviewBound false; source execution FAIL;397held/272quarantined/0cleared;13items/14gates/4prior dispositions; no canonical acceptance or SD3"
+    },
+    {
+      "command": "git diff --check dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4 e0f7ff388b59a2eb5ef9a59fdca0c0fa434499ca",
+      "exitCode": 0
+    },
+    {
+      "command": "Independent read-only Git manifest, complete binary diff and candidate-tree blob inspection",
+      "result": "PASS: exact HEAD/candidate/tree,25unique complete changed paths,102292bytes,diff SHA256,all candidate blob sizes/hashes/modes and current-file equality verified"
+    },
+    {
+      "command": "Independent pre-entry object and append-history inspection",
+      "result": "PASS:3002 protected pre-entry files retain bytes/modes;2complete suffix histories and1exact section9 insertion retain all prior history and modes; scope consists only current packet plus3permitted history paths"
+    },
+    {
+      "command": "Independent immutable prior-receipt inspection without old verifier execution",
+      "result": "PASS: prior candidate c9d9367a2ec637cab0ee8d98bdd456134f6b8e66 is direct parent of entry dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4; exact two-file receipt; matching manifest/review hash; full old diff and candidate blobs/modes verified; prior PASS applies locally and preserves source FAIL"
+    },
+    {
+      "command": "Independent sanitized metadata reference/hash inspection",
+      "result": "PASS: all20selected input file hashes/sizes/entry Git objects verified;64completed and4frontier imports resolve to exact original record hashes; original audit/ledger visibility limits and synthetic-only contract inspected directly"
+    },
+    {
+      "command": "Independent original owner/trigger/path/action inspection",
+      "result": "PASS: current13items/14gates/4prior dispositions equal immutable prior objects; all14original gate reference file hashes and exact owner/trigger/authoritativePaths/nextAction fields verified against original acceptance-gates records"
+    },
+    {
+      "command": "Independent validation archive inspection; no application commands rerun",
+      "result": "PASS: all8stored/raw gzip hashes and sizes verified; initial plan/tests IPC EPERM preserved; exact unchanged plan/test retries PASS; typecheck PASS; exact standard build remains process/port EPERM; both whitespace records PASS"
+    },
+    {
+      "command": "Independent local grounding inspection without network refresh",
+      "result": "PASS: baseline ancestor;2141recorded baseline-to-entry paths all docs; path-list digest ab5f1788271ed32ec30ac142946b7b3c0eb0de4aacfc789142f8004296048fde matches; current canonical plan/state byte-preserved and both pointers null"
+    },
+    {
+      "command": "git status --porcelain and HEAD read-only snapshot",
+      "result": "HEAD exact frozen candidate; only the current manifest is untracked. No reviewer repository edits."
+    }
+  ],
+  "dispatchProofAssessment": {
+    "evidenceDecision": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "otherOriginalHolds": 125,
+    "clearedForAcquisition": 0,
+    "observedCompletedRecords": 64,
+    "recordedToolCounts": {
+      "firecrawl.firecrawl_scrape": 57,
+      "google_drive.get_file_metadata": 4,
+      "google_drive.fetch": 3
+    },
+    "frontierReservations": 4,
+    "frontierOrders": [
+      32,
+      29,
+      139,
+      143
+    ],
+    "conservativeExplicitCallReservation": 68,
+    "theoreticalUnusedExpandedTargets": 72,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "exactAttempts": "NOT_ESTABLISHED",
+    "underlyingHttpRequests": "UNMEASURED",
+    "originalConfirmedReplayOrders": [
+      26,
+      30,
+      34
+    ],
+    "originalPossibleReplayOrders": [
+      32
+    ],
+    "actualMetadataSupportsConclusion": true,
+    "completedEventPrefixIsNotCompleteDispatchVisibility": true,
+    "absenceOfCompletedEventDoesNotClearAnyTarget": true,
+    "conditionalControllerNonreachabilityDoesNotRemoveCompletenessCondition": true,
+    "laterSyntheticJournalCannotProveOriginalNoDispatch": true,
+    "noGlobalAbsenceClaimAboutOtherEvidenceStores": true,
+    "logicalCounterexampleIsLabeledReasoningNotNewObservation": true,
+    "terminalDecisionAvoidsAnotherAcquisitionOrRepairLoop": true,
+    "noNewTargetOutcomesSourceClaimsFactsOrMappings": true,
+    "historicalFailureNeverAccepted": true
+  },
+  "preservationAssessment": {
+    "protectedPreEntryFiles": 3002,
+    "appendHistories": 3,
+    "historyPaths": [
+      "docs/CURRENT_HANDOFF.md",
+      "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "docs/evidence/sd2-autonomous/NEXT_SESSION.md"
+    ],
+    "allPreEntryRecordsReviewsApprovalsAndHoldsPreserved": true,
+    "permanentSourceFailAndHistoricalReviewFindingsRetained": true,
+    "priorRejectedRepairCandidateManifestAndReviewPreservedByBlobEquality": true,
+    "noAppCatalogDependencyConfigCiCanonicalStateChange": true,
+    "originalOwnerTriggerPreservation": {
+      "outcome": "PASS",
+      "referencePath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json",
+      "referenceSha256": "99517eb1b0abbbf2dcb325f2d476dfd856a9f0525795620a6d08a4116879a451",
+      "inheritedReference": {
+        "path": "docs/evidence/sd2-control-repair-closeout/open-items.json",
+        "sha256": "e89d31c3f6189e08f84b9ad8bfa880e042c0921724dab325d6f4667dd6b782a8",
+        "pointer": ""
+      },
+      "inheritedItems": 13,
+      "originalGates": 14,
+      "additionalSessionDispositions": 4,
+      "exactOwnersTriggersAuthoritativePathsAndNextActionsRetained": true,
+      "originalCurrentDispositionsAndCompletionLimitsRetained": true,
+      "twoCheckpointDispositionsAddNoClearanceOrNewAutomaticRun": true,
+      "retainedGateGroups": [
+        "identity/source/field applicability",
+        "privacy/ten-excerpt purge/provider-erasure/native completeness limits",
+        "Kelsey named human reviewer and exact Jaycee approvals",
+        "exact build and fresh authenticated main/target",
+        "custody/preservation/recovery/permissions",
+        "student/publication",
+        "M1/SD5/routes/pins/reserved effects"
+      ]
+    }
+  },
+  "validationAssessment": {
+    "storedAndRawLogHashesSizesVerified": true,
+    "initialPlanTests": "BLOCKED_IPC_LISTEN_EPERM_BEFORE_EXECUTION",
+    "exactUnchangedPlanRetry": "PASS",
+    "exactUnchangedTestRetry": "PASS",
+    "typecheck": "PASS",
+    "exactBuildGate": "BLOCKED_EPERM",
+    "exactBuildError": "Turbopack: creating new process/binding to a port/Operation not permitted (os error1)",
+    "freshAuthenticatedMainTarget": "UNVERIFIED",
+    "localAndEntryDiffChecks": "PASS",
+    "noInstallAlternateBuildWaiverOrRemoteRefresh": true,
+    "priorHistoricalWhitespaceWarningsNotRewritten": true,
+    "requiredCommandsWereRecordedRatherThanRerunByReviewer": true
+  },
+  "limits": [
+    "PASS is solely for the immutable local evidence-sufficiency checkpoint. It does not establish the desired complete dispatch proof, clear a target, accept the original failed source execution or complete full SD2.",
+    "Available historical audit records only item_completed visibility and binds a completed-line prefix.64records plus4uncertain reservations are conservative explicit-call accounting; exact attempts and provider HTTP totals are not established.",
+    "The72theoretical remainder depends on the recorded controller reconstruction and is not an exact never-dispatched queue. A logical no-dispatch versus cancelled-before-completion ambiguity explains the proof limit without asserting any additional historical dispatch.",
+    "The later synthetic-only journal, its35tests and prior independent local PASS cannot retroactively establish original dispatch completeness or clear real-source integration. They were not rerun in this review.",
+    "This finite selected packet cannot establish that no trustworthy evidence exists elsewhere. No search of other stores, raw trace/body inspection or new source request was authorized or performed.",
+    "The recorded clean prior-entry audit predates new packet paths; its immutable prior receipt was rechecked here. The old context-bound verifier was not rerun after new prepends.",
+    "Exact build EPERM and fresh authenticated main/target remain open. Preserved source-safety/privacy/native/current-fact/human-review/custody/preservation/recovery/permissions/student/publication/M1/SD5/effect gates remain at original triggers.",
+    "The author must add only this review and the matching manifest in the direct-child local receipt, then verify the bound clean receipt. This is a local checkpoint receipt, not canonical acceptance or release authority."
+  ],
+  "openGates": [
+    {
+      "id": "dispatch-proof",
+      "owner": "Codex metadata/evidence author and independent reviewer",
+      "trigger": "Before any future source acquisition under the original finite grant; only genuinely new selected trustworthy evidence",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/reconciliation.json; summary.json; original call-ledger-review.json; docs/evidence/sd2-dispatch-evidence-sufficiency-1/decision.json",
+      "nextAction": "Retain397holds/272quarantines/0cleared. Do not repeat this insufficiency decision without genuinely new selected evidence or reacquire/replay to repair missing historical proof."
+    },
+    {
+      "id": "canonical-readiness",
+      "owner": "Codex governance; Kelsey selects scope and retains fact-review decisions",
+      "trigger": "Separately selected bounded SD2 readiness scope under original G6/G7/G8",
+      "authoritativePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json#/gates/5; docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md sections1/6/7/9",
+      "nextAction": "Assess explicit held/unknown outcomes only under the existing original canonical/build/human/publication gates. Never accept historical FAIL or beginSD3 from this local PASS."
+    },
+    {
+      "id": "all-original-items-and-gates",
+      "owner": "Every exact original owner retained in docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json",
+      "trigger": "Every exact original trigger retained in docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json",
+      "authoritativePath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json; docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+      "nextAction": "Preserve and perform original next actions only when their original scope/effect trigger is selected; no additional source, install, application, migration, monitoring, release or reserved effect follows."
+    }
+  ]
+}

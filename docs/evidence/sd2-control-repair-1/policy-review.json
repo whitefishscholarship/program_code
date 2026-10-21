@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewType": "Fresh-context independent read-only prospective local controls policy review only",
+  "reviewerTask": "/root/control_review",
+  "reviewedAt": "2026-10-20T23:26:46.140377+00:00",
+  "binding": {
+    "baselineCommit": "e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae",
+    "candidateCommit": "40c91ff83d0ec1dca17b579aa60ad234c5df4ab1",
+    "candidateTree": "4a245f597a7a5926e7744a90022b41eea7de00af",
+    "completeDiffFiles": 2,
+    "completeDiffSha256": "838994b9532abf57b1165b46dbf1045946f2ab93107cb8ff5bbc8c11548dcb54",
+    "completeDiffBytes": 6099,
+    "paths": [
+      "docs/evidence/sd2-control-repair-1/POLICY.md",
+      "docs/evidence/sd2-control-repair-1/entry-audit.json"
+    ],
+    "policyPath": "docs/evidence/sd2-control-repair-1/POLICY.md",
+    "policySha256": "c920af56e361c0f2e455b0298e8ceb04f5add35adaa3709e6db045fc85589b82"
+  },
+  "independence": {
+    "authoredOrEditedReviewedStage": false,
+    "repositoryReadOnly": true,
+    "sourceRequests": 0,
+    "workbookCalls": 0,
+    "rawTraceOrProviderBodiesRead": false,
+    "onlyOutput": "/private/tmp/sd2-control-repair-policy-review.json"
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "assessments": {
+    "entryCleanPriorHandoffReviewBoundReceiptVerified": true,
+    "canonicalPointersNullNoCanonicalKickoff": true,
+    "latestAcceptedEvidenceRead": "docs/evidence/P9.md",
+    "noSourceDispatcherOrRealTargetClearance": true,
+    "all397Held272Quarantined125OtherHolds": true,
+    "imports64Completed4Reservations68ConservativeNotExactAttempts": true,
+    "originalExecutionFailAndReplayOrdersPreserved": [
+      26,
+      30,
+      34
+    ],
+    "possibleReplayOrder32Held": true,
+    "externalContractAndHeadPinsExclusiveOExclFileAndDirectoryFsyncRequired": true,
+    "unknownPartialLostAndIncompleteRemainSpentFailClosed": true,
+    "hostAndGlobalUnresolvedLimitsRequired": true,
+    "nativeMetadataContentNotCollapsed": true,
+    "syntheticActualProcessInterruptionConcurrencyTamperingTestsRequired": true,
+    "all14OriginalGatesOwnersTriggersPathsActionsRequired": true,
+    "historicalBlobModeAnd3AppendHistoryPreservationRequired": true,
+    "exactUnusedRealTargetProof": "NOT ESTABLISHED; recorded completed-event metadata has incomplete visibility;72 remain theoretical and all real targets remain held",
+    "fullRequiredUnchangedValidationStillRequired": true,
+    "exactBuildAndFreshAuthenticatedMainTargetGatesRemain": true
+  },
+  "limits": [
+    "PASS binds only the prospective policy and entry receipt at the exact frozen candidate, not future implementation.",
+    "Final controls, adversarial tests,397-target reconciliation,preservation manifest and final candidate require fresh independent recheck.",
+    "No current scholarship truth, body privacy, native completeness, acceptance, source execution, canonical stage acceptance, SD3 or external effects are approved."
+  ]
+}

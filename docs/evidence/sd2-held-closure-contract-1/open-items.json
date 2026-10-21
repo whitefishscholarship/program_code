@@ -1,0 +1,535 @@
+{
+  "inheritedReference": {
+    "path": "docs/evidence/sd2-acceptance-readiness-1/open-items.json",
+    "sha256": "d0994197d8e0f9122a6919cb1ab4870acba12fb3fc5b1921a083741faf6b953f"
+  },
+  "items": [
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "historical-execution-failure",
+        "status": "FAIL_RETAIN_PERMANENTLY",
+        "owner": "Codex continuation/governance",
+        "trigger": "Every later use of this run",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/review.json",
+        "nextAction": "Preserve confirmed replays26/30/34, possible32 and prior privacy incident. Never waive, relabel as transport retries or accept execution. Preserve candidate f77c730 and failed record0336225."
+      },
+      "currentDisposition": "FAIL_RETAIN_PERMANENTLY",
+      "completionEvidence": null,
+      "continuedAction": "Preserve confirmed replays26/30/34, possible32 and prior privacy incident. Never waive, relabel as transport retries or accept execution. Preserve candidate f77c730 and failed record0336225."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "durable-request-controls",
+        "status": "NEXT_LOCAL_BATCH",
+        "owner": "Codex control implementer, then fresh independent read-only reviewer",
+        "trigger": "Start the requested next session after handoff integrity verification",
+        "authoritativePath": "docs/evidence/sd2-control-repair-handoff/scope.json",
+        "nextAction": "Implement and independently test exclusive durable pre-call intents/immediate results with synthetic crash/cancellation/restart and duplicate/partial-write tests. No source calls in this batch."
+      },
+      "currentDisposition": "CLOSED_FOR_SYNTHETIC_LOCAL_REPAIR_ONLY",
+      "completionEvidence": "docs/evidence/sd2-control-repair-1/review.json",
+      "continuedAction": "Actual source integration and exact-unused proof remain separately held; do not rerun completed synthetic work."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "exact-unused-proof",
+        "status": "HELD",
+        "owner": "Codex metadata reconciliation author and independent reviewer",
+        "trigger": "After durable controls pass independent review; before any future source call",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+        "nextAction": "Reconcile397 against64 completed records plus4 reservations. Keep all272 quarantines until an exact target-specific exclusion proof is independently verified.72 theoretical unused targets are not a cleared queue. Do not reconstruct missing content or infer unused from absent results."
+      },
+      "currentDisposition": "HELD",
+      "completionEvidence": null,
+      "continuedAction": "Reconcile397 against64 completed records plus4 reservations. Keep all272 quarantines until an exact target-specific exclusion proof is independently verified.72 theoretical unused targets are not a cleared queue. Do not reconstruct missing content or infer unused from absent results."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "source-safety-and-privacy",
+        "status": "HISTORICAL_INCIDENT_CONTAINED_FUTURE_GATE_OPEN",
+        "owner": "Codex source-governance author and independent safety reviewer",
+        "trigger": "Any later selected source acquisition or proposed use",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/privacy-remediation.json; safety-recheck.json; interim-review-fail.json",
+        "nextAction": "Preserve ten-excerpt purge and hash-only output limits; raw provider bodies were not inspected by final reviewer. No assertion of external-provider erasure, public/native completeness, current criteria or accepted identity. Require original independent saved preflight before future reads."
+      },
+      "currentDisposition": "HISTORICAL_INCIDENT_CONTAINED_FUTURE_GATE_OPEN",
+      "completionEvidence": null,
+      "continuedAction": "Preserve ten-excerpt purge and hash-only output limits; raw provider bodies were not inspected by final reviewer. No assertion of external-provider erasure, public/native completeness, current criteria or accepted identity. Require original independent saved preflight before future reads."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "exact-build-and-fresh-main-target",
+        "status": "BLOCKED",
+        "owner": "Codex validation/governance",
+        "trigger": "Unchanged supported execution context and original acceptance/release gate",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/validation/build.json; docs/evidence/sd2-consolidation-package/acceptance-gates.json#/gates/7",
+        "nextAction": "Keep actual EPERM gate and source/lock pins. Only exact unchanged build in permitted context; no substitute build, waiver, repeated dependency install or app/config repair. Fresh authenticated main/target remains unverified; no remote refresh is granted by this handoff."
+      },
+      "currentDisposition": "BLOCKED",
+      "completionEvidence": null,
+      "continuedAction": "Keep actual EPERM gate and source/lock pins. Only exact unchanged build in permitted context; no substitute build, waiver, repeated dependency install or app/config repair. Fresh authenticated main/target remains unverified; no remote refresh is granted by this handoff."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "historical-full-diff-whitespace",
+        "status": "DISCLOSED_PRESERVE",
+        "owner": "Codex evidence/governance",
+        "trigger": "Any future audit of the failed candidate complete diff",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/closeout-checks.json",
+        "nextAction": "Retain two original EOF warnings in hash-bound acquisition code and authentic raw typecheck log. Do not edit historical code/logs to manufacture a full-baseline PASS. Current handoff diff is checked separately."
+      },
+      "currentDisposition": "DISCLOSED_PRESERVE",
+      "completionEvidence": null,
+      "continuedAction": "Retain two original EOF warnings in hash-bound acquisition code and authentic raw typecheck log. Do not edit historical code/logs to manufacture a full-baseline PASS. Current handoff diff is checked separately."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "restored-entry-evidence",
+        "status": "RESOLVED_PRESERVE_RECEIPT",
+        "owner": "Codex continuity/evidence owner",
+        "trigger": "Future entry/preservation audit",
+        "authoritativePath": "docs/evidence/sd2-control-repair-handoff/historical-recovery-observation.json",
+        "nextAction": "Keep the original missing-file recovery observation as historical pre-selection metadata. Its PASS and then-unselected proposals do not override the later selection or source execution FAIL. No reset/replay or repeat recovery is needed."
+      },
+      "currentDisposition": "RESOLVED_PRESERVE_RECEIPT",
+      "completionEvidence": null,
+      "continuedAction": "Keep the original missing-file recovery observation as historical pre-selection metadata. Its PASS and then-unselected proposals do not override the later selection or source execution FAIL. No reset/replay or repeat recovery is needed."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "session-review-tasks",
+        "status": "COMPLETE_NO_ORPHAN_WORK",
+        "owner": "Codex next-session owner",
+        "trigger": "Read current final-review and metadata-review artifacts",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/review.json; call-ledger-review.json",
+        "nextAction": "Both session review agents completed; outputs are already durable in the failed packet. No background automation, new user chat, PR or delivery was started by this session. Do not message unrelated chats or revive completed review tasks merely to resume."
+      },
+      "currentDisposition": "NO_ORPHAN_REVIEW_WORK",
+      "completionEvidence": null,
+      "continuedAction": "Both session review agents completed; outputs are already durable in the failed packet. No background automation, new user chat, PR or delivery was started by this session. Do not message unrelated chats or revive completed review tasks merely to resume."
+    },
+    {
+      "bindingClass": "original-session-item",
+      "original": {
+        "id": "middleware-convention-warning",
+        "status": "ADJACENT_DEFERRED",
+        "owner": "Codex application/framework maintainer",
+        "trigger": "Later separately selected application/framework maintenance scope",
+        "authoritativePath": "docs/evidence/sd2-control-repair-handoff/checks/build.log.gz; validation.json",
+        "nextAction": "Assess the recorded middleware-to-proxy deprecation under future authorized compatibility/runtime review. Do not run the suggested codemod, install packages, edit app/config or chase it in the SD2 control-repair batch."
+      },
+      "currentDisposition": "ADJACENT_DEFERRED",
+      "completionEvidence": null,
+      "continuedAction": "Assess the recorded middleware-to-proxy deprecation under future authorized compatibility/runtime review. Do not run the suggested codemod, install packages, edit app/config or chase it in the SD2 control-repair batch."
+    },
+    {
+      "bindingClass": "repair-item",
+      "original": {
+        "id": "prospective-durable-controls",
+        "status": "IMPLEMENTED_PENDING_FINAL_REVIEW",
+        "owner": "Codex local control author and independent reviewer",
+        "trigger": "Matching frozen repair candidate review",
+        "authoritativePath": "docs/evidence/sd2-control-repair-1/journal.py; test_journal.py; manifest.json; review.json",
+        "nextAction": "Verify synthetic-only reservation/result durability and adversarial tests. No real source dispatcher is implemented or cleared; retain all real target holds."
+      },
+      "currentDisposition": "CLOSED_MATCHING_INDEPENDENT_PASS",
+      "completionEvidence": "docs/evidence/sd2-control-repair-1/review.json",
+      "continuedAction": "Preserve35-test/review/H1-remediation bindings; no source clearance or historical FAIL reversal."
+    },
+    {
+      "bindingClass": "repair-item",
+      "original": {
+        "id": "exact-never-dispatched-proof",
+        "status": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+        "owner": "Codex metadata/evidence author and independent reviewer",
+        "trigger": "Before any future source acquisition under the original finite grant",
+        "authoritativePath": "docs/evidence/sd2-control-repair-1/reconciliation.json; summary.json; original call-ledger-review.json",
+        "nextAction": "Obtain independently verifiable complete dispatch evidence for exact target exclusion and satisfy original safety/authority gates. Available saved completed-event metadata gives conditional controller nonreachability only. If completeness cannot be established, retain all397 holds; do not reacquire missing evidence or replay."
+      },
+      "currentDisposition": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+      "completionEvidence": null,
+      "continuedAction": "Obtain independently verifiable complete dispatch evidence for exact target exclusion and satisfy original safety/authority gates. Available saved completed-event metadata gives conditional controller nonreachability only. If completeness cannot be established, retain all397 holds; do not reacquire missing evidence or replay."
+    },
+    {
+      "bindingClass": "repair-item",
+      "original": {
+        "id": "future-acquisition-integration",
+        "status": "NOT_IMPLEMENTED_NOT_AUTHORIZED_BY_THIS_BATCH",
+        "owner": "Codex controls implementer and independent source-safety reviewer",
+        "trigger": "A later bounded continuation scope plus exact target proof and every original safety/authority gate",
+        "authoritativePath": "docs/evidence/sd2-control-repair-1/POLICY.md",
+        "nextAction": "Before any actual acquisition validate integration cannot bypass durable reservations/results and separately gate native metadata/content, privacy and accepted-use. Current journal has no live source client/callback; never use old unsafe acquisition runners."
+      },
+      "currentDisposition": "NOT_IMPLEMENTED_NOT_AUTHORIZED_BY_THIS_BATCH",
+      "completionEvidence": null,
+      "continuedAction": "Before any actual acquisition validate integration cannot bypass durable reservations/results and separately gate native metadata/content, privacy and accepted-use. Current journal has no live source client/callback; never use old unsafe acquisition runners."
+    },
+    {
+      "bindingClass": "repair-item",
+      "original": {
+        "id": "historical-failure",
+        "status": "FAIL_PERMANENT",
+        "owner": "Codex governance/evidence owner",
+        "trigger": "Every future use of historical source work",
+        "authoritativePath": "docs/evidence/sd2-resolution-proof-1/review.json; forensic-correction.json",
+        "nextAction": "Preserve confirmed replays26/30/34 and possible32, source incident limits, all272 quarantines and original FAIL. Current synthetic PASS never repairs historical dispatch uncertainty or fact acceptance."
+      },
+      "currentDisposition": "FAIL_PERMANENT",
+      "completionEvidence": null,
+      "continuedAction": "Preserve confirmed replays26/30/34 and possible32, source incident limits, all272 quarantines and original FAIL. Current synthetic PASS never repairs historical dispatch uncertainty or fact acceptance."
+    }
+  ],
+  "originalGates": [
+    {
+      "id": "G1",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/0"
+      },
+      "originalOwner": "Codex consolidation author and independent reviewer",
+      "originalTrigger": "Matching immutable package review",
+      "originalNextAction": "Confirm794savedpositions/411named/383empty,411separate app IDs,7547field definitions/7468existingcomparison occurrences and first79 definitions without invented comparison.",
+      "originalAuthoritativePaths": "summary.json; decision-ledger.json; inventory-dispositions.json; publication-crosswalk.json",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G2",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/1"
+      },
+      "originalOwner": "Original recorded identity/source owners",
+      "originalTrigger": "Original selected reconciliation/evidence trigger or separately selected proof scope",
+      "originalNextAction": "Retain each exact candidate, duplicate-name hold and missing link; proposed held outcomes may remain. No name-only mapping/merge/new ID.",
+      "originalAuthoritativePaths": "decision-ledger.json; originalRecordReference; original inventory; original first/Jaycee/autonomous packets",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G3",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/2"
+      },
+      "originalOwner": "Each original recorded evidence owner",
+      "originalTrigger": "Only selected material accepted-use claim or original evidence-arrival trigger",
+      "originalNextAction": "Use original proof/route, reconcile or explicitly retain uncertainty; complete native/current/source claims need their own evidence. No claim becomes accepted from consistency.",
+      "originalAuthoritativePaths": "field-decisions.jsonl; originalRouteReference; minimumProofReference; original evidence packets",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G4",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/3"
+      },
+      "originalOwner": "Kelsey selects exact scope; Codex executes/reviews",
+      "originalTrigger": "Direct selection of SD2-RESOLUTION-PROOF-1",
+      "originalNextAction": "At matching package receipt capture fresh review-bound PASS, then only the exact eligible locators and bounds; preflight/skip blocked locators, preserve all holds.",
+      "originalAuthoritativePaths": "PROPOSED_READ_SCOPE.json; read-targets.json",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G5",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/4"
+      },
+      "originalOwner": "Codex validation/governance/delivery",
+      "originalTrigger": "Direct selection of SD2-LOCKED-VALIDATION-1 and permitted environment",
+      "originalNextAction": "Restore exact locks only and run unchanged four commands; retain actual failures and exact standard-build gate. No installation occurred in preparation.",
+      "originalAuthoritativePaths": "PROPOSED_VALIDATION_REPAIR.json; application-checks.json; original shared validation/checks",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G6",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/5"
+      },
+      "originalOwner": "Codex governance; Kelsey retains scope/fact-review decisions",
+      "originalTrigger": "Prospective selection/amendment under existing canonical machinery if required",
+      "originalNextAction": "Keep canonical plan/state unchanged and stage pointers null. Reconcile SD slice with existing canonical contract, meet all gates and obtain independent exact-candidate review; no parallel stage system or self-acceptance.",
+      "originalAuthoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md sections1,6,7; docs/BUILD_STATE.json; AGENTS.md",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G7",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/6"
+      },
+      "originalOwner": "Kelsey Stuart; Codex determines identity from evidence",
+      "originalTrigger": "Only exact existing approval or later selected acceptance decision",
+      "originalNextAction": "Preserve already supplied reviewer designation and specific Jaycee approvals; do not ask for them again or generalize to unstated facts/mappings/publication.",
+      "originalAuthoritativePaths": "docs/evidence/sd2-autonomous/AUTHORITY.md; PRELUDE.json#/reviewerAndPell; PRELUDE.json#/jayceeLegacy",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G8",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/7"
+      },
+      "originalOwner": "Codex validation/governance/delivery",
+      "originalTrigger": "Before canonical acceptance or separately authorized release",
+      "originalNextAction": "Obtain actual current authenticated main/target and supported exact build evidence under separately permitted effects; saved local refs/provider history are not fresh proof. Preserve historical IPC failures and their successful retries; do not reopen a resolved historical IPC repair without a new failure.",
+      "originalAuthoritativePaths": "coverage-audit/SESSION_CLOSE.md; original021validation; original build/IPC receipts",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G9",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/8"
+      },
+      "originalOwner": "Every original recorded owner",
+      "originalTrigger": "Each exact original recorded trigger",
+      "originalNextAction": "Perform original next action only when selected. New package does not close or replace these routes.",
+      "originalAuthoritativePaths": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9 and every preserved supplement",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G10",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/9"
+      },
+      "originalOwner": "Original custody/source owners",
+      "originalTrigger": "Original authorized raw-use/audit trigger",
+      "originalNextAction": "Verify exact availability/hashes then or report gap; no new custody availability or raw/native reinspection claim.",
+      "originalAuthoritativePaths": "Original71custodypins and original source receipts/021audits",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G11",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/10"
+      },
+      "originalOwner": "Original migration/publication owners; Kelsey selects effects",
+      "originalTrigger": "Separately selected SD3 and exact live-effect gates",
+      "originalNextAction": "Use replacement workbook only if a future bounded read/write is selected; verify current identities/permissions/native backup/recovery before valuable-source changes. No access/migration now.",
+      "originalAuthoritativePaths": "docs/STUDENT_DATA_CONTRACT.md; section9; original preservation/recovery routes",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G12",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/11"
+      },
+      "originalOwner": "Original governance/app owners",
+      "originalTrigger": "Later selected SD3/SD4/canonical/publication scope",
+      "originalNextAction": "Preserve current runtime/unknown-aware behavior and public allowlist; verify actual student tasks then, no new runtime truth here.",
+      "originalAuthoritativePaths": "Canonical plan/state; student contract; original student/publication routes",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G13",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/12"
+      },
+      "originalOwner": "Original monitor owner; Kelsey selects reserved effects",
+      "originalTrigger": "Only exact existing M1/SD5/setup/effect selection",
+      "originalNextAction": "Retain437routes/12pins, ETV/Fund the Fish, allowance/zero-overage/sender/receipt/suppression/pilot/catchup/recovery/health; no second queue, old-runner replay or activation.",
+      "originalAuthoritativePaths": "Retained009fa57 M1 plan/evidence and original section9 routes",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    },
+    {
+      "id": "G14",
+      "reference": {
+        "path": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+        "sha256": "44127594b8ab96dd13dd7d59ebc00db3b4e88949251d762660afb4c12e19beee",
+        "pointer": "/gates/13"
+      },
+      "originalOwner": "Original governance/delivery owners; Kelsey selects effects",
+      "originalTrigger": "Direct stage-specific informed authority for exact effect and target",
+      "originalNextAction": "Inspect downstream effects and preserve current branch/local receipts; no push/PR/Preview/merge/Production/messages/contact or configuration from this package.",
+      "originalAuthoritativePaths": "AGENTS.md; canonical plan/state; original effect evidence",
+      "status": "ORIGINAL_BINDING_RETAINED",
+      "effect": "No new effect or gate clearance from this handoff. Later selection/failure records supplement G4/G5 historical proposal status without editing it."
+    }
+  ],
+  "additionalSessionDispositions": [
+    {
+      "id": "H1-head-pin-gap",
+      "status": "CLOSED_FIXED_AND_INDEPENDENTLY_RECHECKED",
+      "owner": "Codex control author and independent reviewer",
+      "trigger": "Completed final review at72e27f0; preserve for later use",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/rejected-candidate-001/review.json; remediation.json; review.json",
+      "nextAction": "No remaining fix for this local objective; preserve initial rejection and mandatory-head regressions. Do not claim a live source integration."
+    },
+    {
+      "id": "receipt-trust-and-power-loss-limits",
+      "status": "FUTURE_GATE",
+      "owner": "Codex control integrator and independent safety reviewer",
+      "trigger": "Before any future real acquisition integration",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/implementation-notes.md; POLICY.md; review.json",
+      "nextAction": "Require trusted externally preserved current receipt; fail closed on lost/stale receipt. Unpinned audit is observational. Process/fsync tests do not prove hardware power-loss durability or resistance to hostile filesystem administrators."
+    },
+    {
+      "id": "author-check-incidents",
+      "status": "CLOSED_PRESERVE",
+      "owner": "Codex evidence owner",
+      "trigger": "Future audit of this local repair",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/implementation-notes.md; validation.json",
+      "nextAction": "Preserve five null-versus-empty saved-host differences and corrected synthetic-anchor fixture permission issue, plus permitted local Git-index retry. No historical bytes were normalized and no environment/account repair remains due."
+    },
+    {
+      "id": "review-task-continuity",
+      "status": "COMPLETE_NO_ORPHAN_WORK",
+      "owner": "Codex next-session owner",
+      "trigger": "Fresh context entry",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/policy-review.json; review.json",
+      "nextAction": "Both prior review agents completed, reports are durable. No pending reply, background automation, PR, new chat, source run or deployment was created. Do not revive completed review work."
+    }
+  ],
+  "priorSufficiencyCheckpointDispositions": [
+    {
+      "id": "dispatch-evidence-sufficiency",
+      "status": "ASSESSED_PROOF_BLOCKED_PENDING_INDEPENDENT_REVIEW",
+      "owner": "Codex evidence/governance owner and independent reviewer",
+      "trigger": "Matching immutable local candidate review; later only genuinely new selected evidence",
+      "authoritativePath": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/decision.json",
+      "nextAction": "Retain397holds/272quarantines/0cleared. End this checkpoint; no repeat without new evidence and no source requests to repair history."
+    },
+    {
+      "id": "sd2-canonical-readiness",
+      "status": "UNSELECTED_ORIGINAL_GATES_RETAINED",
+      "owner": "Codex governance; Kelsey selects scope and retains fact-review decisions",
+      "trigger": "Separately selected bounded SD2 readiness scope under original G6/G7/G8",
+      "authoritativePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json#/gates/5",
+      "nextAction": "Assess explicit unknown/held outcomes under existing contract without accepting failed execution, facts or mappings; preserve build/fresh-main/human-review/publication gates. Do not beginSD3."
+    }
+  ],
+  "priorReadinessSelectionOverlay": {
+    "id": "sd2-canonical-readiness",
+    "status": "LOCAL_ASSESSMENT_SELECTED_CANONICAL_ACCEPTANCE_NOT_SELECTED",
+    "owner": "Codex governance and independent reviewer",
+    "trigger": "Current user proceed selects the previously proposed local readiness assessment",
+    "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/AUTHORITY.md",
+    "nextAction": "Complete this local readiness assessment only; original G6/G7/G8 canonical and accepted-use gates remain."
+  },
+  "priorReadinessBlockers": [
+    {
+      "id": "canonical-contract",
+      "gate": "G6",
+      "status": "OPEN_NOT_SELECTED",
+      "owner": "Codex governance; Kelsey selects canonical scope",
+      "trigger": "Separately selected prospective canonical SD2 held-outcome closure contract under existing section14 machinery",
+      "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/NEXT_ACTION_PROPOSAL.md",
+      "nextAction": "Prepare and independently review the prospective canonical acceptance contract before any canonical state transition. Preserve P0-P9, pointers and all historical attestations; do not waive G8 or accept facts/source execution."
+    },
+    {
+      "id": "supported-exact-build",
+      "gate": "G8",
+      "status": "OPEN_EPERM",
+      "owner": "Codex validation/governance",
+      "trigger": "Supported permitted execution context before canonical acceptance or selected release",
+      "authoritativePath": "docs/evidence/sd2-acceptance-readiness-1/validation.json",
+      "nextAction": "Obtain PASS for exact unchanged npm run build in supported context. Preserve actual failures; no alternate build, install, script/config/account change or waiver."
+    },
+    {
+      "id": "fresh-authenticated-main-target",
+      "gate": "G8",
+      "status": "UNVERIFIED_OUTSIDE_LOCAL_SCOPE",
+      "owner": "Codex validation/governance/delivery; Kelsey selects exact external verification effects",
+      "trigger": "Direct bounded authority for current authenticated repository/default-branch and existing target verification before acceptance/release",
+      "authoritativePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json#/gates/7",
+      "nextAction": "Verify current owner-authorized main and existing project/team/hostname through permitted authenticated read-only capability. Localrefs/provider history do not establish freshness; no remote read or release selected here."
+    }
+  ],
+  "currentBlockers": [
+    {
+      "id": "github-access",
+      "status": "BLOCKED_404_TARGET_UNVERIFIED",
+      "owner": "Kelsey restores intended repository access; Codex re-verifies exact existing target",
+      "trigger": "Connected GitHub/CLI access to whitefishscholarship/program_code restored without changing target",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/connector-observations.json; cli-observations.json",
+      "nextAction": "Restore correct repository grant/credentials through user-managed connection; then repeat only exact read-only repo/main checks. Do not infer deletion or switch accounts/targets automatically."
+    },
+    {
+      "id": "vercel-access",
+      "status": "BLOCKED_403_SCOPE_NOT_ACCESSIBLE",
+      "owner": "Kelsey grants intended team access; Codex re-verifies exact existing target",
+      "trigger": "Existing connection/CLI can read team_6CAjRq58n0WvAH49otKSQbA7",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/connector-observations.json; cli-observations.json",
+      "nextAction": "User grants access to the existing Whitefish team through connection settings. Then repeat exact project/domain reads with explicit team/project. No login/token/account/permission/link change by Codex under this selection."
+    },
+    {
+      "id": "exact-build",
+      "status": "BLOCKED_EPERM_CURRENT_PERMITTED_ATTEMPT",
+      "owner": "Codex validation/governance; user supplies supported environment if required",
+      "trigger": "An execution context capable of required process/port operations becomes available",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/validation.json",
+      "nextAction": "Run exact unchanged standard build on matching runtime/dependency bytes in supported context. Preserve failures; no substitute flags/install/configuration repair or waiver.",
+      "currentObservation": {
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 1,
+        "error": "Turbopack creating new process/binding to port:Operation not permitted",
+        "evidencePath": "docs/evidence/sd2-held-closure-contract-1/validation.json"
+      }
+    },
+    {
+      "id": "contract-activation",
+      "status": "DRAFT_ONLY_G6_G8_G14_RETAINED",
+      "owner": "Codex governance and independent reviewer; Kelsey selects reserved effects",
+      "trigger": "Actual G8 proof and normal section14 authority/review/attestation/delivery prerequisites",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/CONTRACT.md; amendment-spec.json",
+      "nextAction": "Activate only through existing canonical machinery after prerequisites. Current contract review is prospective only; do not change canonical state/validator or add an exception to bypass missing authority/build/access."
+    }
+  ],
+  "inheritedItems": 13,
+  "originalGateCount": 14,
+  "inheritedAdditionalDispositions": 4,
+  "inheritedSufficiencySupplements": 2,
+  "inheritedReadinessBlockers": 3,
+  "originalSourceExecution": "FAIL",
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "clearedForAcquisition": 0,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

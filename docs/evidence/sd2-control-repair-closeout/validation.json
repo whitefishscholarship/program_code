@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "name": "plan",
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:57:26.285964+00:00",
+      "completedAt": "2026-10-20T23:58:02.621355+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/plan.log.gz",
+      "rawSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "rawBytes": 164,
+      "storedSha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "storedBytes": 143,
+      "encoding": "gzip"
+    },
+    {
+      "name": "typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:58:02.621463+00:00",
+      "completedAt": "2026-10-20T23:58:07.063242+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/typecheck.log.gz",
+      "rawSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "rawBytes": 39,
+      "storedSha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "storedBytes": 59,
+      "encoding": "gzip"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:58:07.063320+00:00",
+      "completedAt": "2026-10-20T23:58:52.248264+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/tests.log.gz",
+      "rawSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "rawBytes": 19755,
+      "storedSha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "storedBytes": 6842,
+      "encoding": "gzip"
+    },
+    {
+      "name": "build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T23:58:52.248334+00:00",
+      "completedAt": "2026-10-20T23:58:53.263123+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/build.log.gz",
+      "rawSha256": "bb547c861bce72d99f80a09555764bce76857b4ecf4e78cd8badf6db1cb74cec",
+      "rawBytes": 4597,
+      "storedSha256": "75ebafa7810b30a7553a892447515a25786dc57b179d1b0fd8b7c3bb875cc74e",
+      "storedBytes": 1407,
+      "encoding": "gzip"
+    },
+    {
+      "name": "diff",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:58:53.263213+00:00",
+      "completedAt": "2026-10-20T23:58:53.295729+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    },
+    {
+      "name": "entry-diff",
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "ce7d094e04fc07f04d2fb267eb74affcced4a8a8"
+      ],
+      "workingDirectory": ".",
+      "startedAt": "2026-10-20T23:58:53.295834+00:00",
+      "completedAt": "2026-10-20T23:58:53.327075+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-closeout/checks/entry-diff.log.gz",
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawBytes": 0,
+      "storedSha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "storedBytes": 20,
+      "encoding": "gzip"
+    }
+  ],
+  "dependencyInstallAttempts": 0,
+  "sourceRequests": 0,
+  "requiredBuildGateRemainsOpen": true,
+  "freshAuthenticatedMainTargetVerified": false
+}

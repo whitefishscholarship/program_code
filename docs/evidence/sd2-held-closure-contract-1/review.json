@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "reviewerTask": "/root/closure_contract_review",
+  "reviewedAt": "2026-10-21T02:14:22.981421+00:00",
+  "outcome": "PASS",
+  "scope": "Frozen local prospective SD2 held-research closure contract draft and exact recorded read-only/build observations only. This is not operative amendment, stage acceptance, release or source/fact acceptance.",
+  "binding": {
+    "baselineCommit": "901040e62d871f592f5600d366b3a19b39d08d07",
+    "entryCommit": "901040e62d871f592f5600d366b3a19b39d08d07",
+    "recordedPlanningBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+    "baselineFreshAuthenticatedMainVerified": false,
+    "candidateCommit": "5ab4fa4640e8e5525fccf886827b458375090fba",
+    "candidateTree": "f7c795560138c3f6aeb1989e0a6b9c6fcfced8b8",
+    "manifestPath": "docs/evidence/sd2-held-closure-contract-1/manifest.json",
+    "manifestSha256": "5ba43773fda156233a7119d24cf54b43885b3179279e3cdae812c749c1626e1e",
+    "completeDiffSha256": "8a0b2b2a7de0daec86fe9d26eb633bed504646f6862a82fdaf0810cd123a8587",
+    "completeDiffBytes": 117358,
+    "completeDiffFiles": 25,
+    "entryToCandidateDiffFullyAccounted": true,
+    "candidateTreeBlobsModesAndWorktreeBytesVerified": true,
+    "candidateEqualsReviewedHead": true
+  },
+  "independence": {
+    "freshContext": true,
+    "readOnlyRepository": true,
+    "authoredOrEditedReviewedStage": false,
+    "reviewInstructions": "Original objective, canonical gates, immutable entry/candidate, manifest, scope, known blockers and explicit read-only constraints supplied by author; actual files independently inspected.",
+    "repositoryFilesWritten": [],
+    "onlyReviewOutput": "/private/tmp/sd2-held-closure-contract-review.json",
+    "networkOrRemoteGitPerformed": false,
+    "applicationMatrixRerun": false,
+    "oldContextVerifierRerun": false,
+    "rawProviderBodyOrTraceRead": false,
+    "sourceOrWorkbookAccess": false
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "mediumLowDispositions": [],
+  "checks": [
+    {
+      "check": "Canonical and original contract read",
+      "status": "PASS",
+      "evidence": [
+        "AGENTS.md",
+        "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md sections8,11,14",
+        "docs/BUILD_STATE.json",
+        "docs/CURRENT_HANDOFF.md current top supplement",
+        "docs/evidence/P9.md",
+        "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md sections1,6,7,9",
+        "docs/STUDENT_DATA_CONTRACT.md",
+        "docs/evidence/sd2-autonomous/AUTHORITY.md",
+        "docs/evidence/sd2-autonomous/POLICY.md",
+        "docs/evidence/sd2-consolidation-package/acceptance-gates.json"
+      ],
+      "limits": "No next permitted canonical kickoff exists: both canonical stage pointers are null. Historical handoff bodies and raw source artifacts were not traversed."
+    },
+    {
+      "check": "Frozen candidate and complete change set",
+      "status": "PASS",
+      "details": "Independently recomputed entry-to-candidate binary diff: 25 paths,117358 bytes, SHA256 8a0b2b2a7de0daec86fe9d26eb633bed504646f6862a82fdaf0810cd123a8587. Candidate equals HEAD, direct child of entry; tree and all listed candidate blob bytes/SHA256/modes match manifest and worktree. Only manifest is expected untracked."
+    },
+    {
+      "check": "Pre-entry protection and input pins",
+      "status": "PASS",
+      "details": "Independently recomputed Git blob IDs and filesystem modes for all3050 protected pre-entry files. Three histories preserve every prior byte/mode, with only prescribed prepend/section9 supplement. New unbound verifier also validates22input pins and prior immutable two-file receipt without rerunning old context verifier."
+    },
+    {
+      "check": "Entry proof and prior local receipt",
+      "status": "PASS",
+      "details": "entry-audit records clean901040e62d871f592f5600d366b3a19b39d08d07, prior --review-bound PASS before new packet paths. Prior receipt direct-child exact manifest/review addition and its frozen diff/blob hashes verified from Git. This is local integrity evidence, not fresh authenticated main proof."
+    },
+    {
+      "check": "Inherited attention and original gate preservation",
+      "status": "PASS",
+      "details": "Exact JSON equality for13original item wrappers,14original gates,4additional session dispositions,2sufficiency supplements, prior readiness selection overlay and3readiness blockers. Original nested owner/trigger/authoritativePath/nextAction values remain exact. Four current blocker rows supplement rather than replace them."
+    },
+    {
+      "check": "Stored validation receipts",
+      "status": "PASS_FOR_ACCURATE_RECORDING",
+      "commands": [
+        {
+          "command": [
+            "npm",
+            "run",
+            "plan:check"
+          ],
+          "workingDirectory": "web",
+          "exitCode": 0,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/plan.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "typecheck"
+          ],
+          "workingDirectory": "web",
+          "exitCode": 0,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/typecheck.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        },
+        {
+          "command": [
+            "npm",
+            "test"
+          ],
+          "workingDirectory": "web",
+          "exitCode": 0,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/tests.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "build"
+          ],
+          "workingDirectory": "web",
+          "exitCode": 1,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/build.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        },
+        {
+          "command": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "workingDirectory": ".",
+          "exitCode": 0,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/diff.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        },
+        {
+          "command": [
+            "git",
+            "diff",
+            "--check",
+            "901040e62d871f592f5600d366b3a19b39d08d07"
+          ],
+          "workingDirectory": ".",
+          "exitCode": 0,
+          "logPath": "docs/evidence/sd2-held-closure-contract-1/checks/entry-diff.log.gz",
+          "storedAndRawHashesAndBytesVerified": true
+        }
+      ],
+      "details": "All six gzip and decompressed hashes/byte counts independently verified; complete logs inspected. Unchanged plan/type/full test commands PASS; exact standard build exit1 with process creation/port binding Operation not permitted; both whitespace checks PASS. No alternate build, install or matrix rerun by reviewer. Build remains an unsatisfied acceptance gate."
+    },
+    {
+      "check": "Exact denied metadata observations",
+      "status": "PASS_FOR_ACCURATE_LIMITED_INTERPRETATION",
+      "details": "Four connector operations pin exact repo/main and project/team/domain-list arguments: repository404, branch Repository not found with null HTTP status, project/domains403. Existing gh exact repository read404; Vercel exact team/project inspect exits1 for scope access denial. No CLI branch read after repository denial or substitute target shown. Six explicit operations, provider-internal HTTP count unmeasured; these are not scholarship source calls. Literal update banner is untrusted command output, not upgrade authority or evidence that an upgrade ran."
+    },
+    {
+      "check": "New local verifier",
+      "status": "PASS",
+      "command": [
+        "python3",
+        "docs/evidence/sd2-held-closure-contract-1/verify.py"
+      ],
+      "exitCode": 0,
+      "reviewBound": false,
+      "details": "Reviewer inspected verifier first and executed only the new unbound read-only integrity verifier. It passed with3050protected files,3histories,13/14/4/2/3inherited groups and all held/zero-accepted/current-state invariants. No old verifier or application matrix was rerun."
+    }
+  ],
+  "contractAssessment": {
+    "status": "PASS_PROSPECTIVE_DRAFT_ONLY",
+    "meaningOfHeldResearchCompletion": "Consistent with original SD2 policy that explicit unknowns are legitimate research outcomes. Accounting closure cannot convert held/proposed facts, identity candidates, source accessibility or historical failed acquisition into accepted truth.",
+    "futureFullSD2Complete": "The proposed after-state true is explicitly conditional on separately accepted/delivered prospective policy and a separately reviewed exact closure under original gates. Current fullSD2Complete remainsfalse. SD3 remainsfalse even in the conditional after-state; there is no automatic stage-entry authority.",
+    "canonicalIntegration": "Revision22/additive sd2ResearchClosure is a specification only, with14finite future paths, preserved P0-P9/null pointers/history, and existing section14 machinery. Runtime/catalog/config/CI/dependency/lock changes excluded; package.json future delta restricted to appending one focused governance test after later policy review.",
+    "validatorConstraint": "Pinned unchanged canonical validator requires informed amendment delivery authority or an exact already-authorized local-only exception. Current selection supplies no publication grant or new exception. Draft correctly defers activation rather than suppressing diagnostics or fabricating true delivery authority.",
+    "gateTreatment": "G1-G14 meanings remain explicit, especially G6prospective canonical acceptance, G8exact build/current authenticated target and G14informed effects. Permanent sourceFAIL and397held/272quarantined/0cleared are preserved. Native/privacy/custody/freshness/fact-review/M1/SD5/workbook/student/publication routes remain held or separately selected.",
+    "notApprovalForFutureImplementation": "This review approves local draft accuracy/preservation only; it does not substitute for later prospective policy review, actual gate evidence, canonical candidate review, attestation or delivery."
+  },
+  "remainingBlockers": [
+    {
+      "id": "github-access",
+      "status": "BLOCKED_404_TARGET_UNVERIFIED",
+      "owner": "Kelsey restores intended repository access; Codex re-verifies exact existing target",
+      "trigger": "Connected GitHub/CLI access to whitefishscholarship/program_code restored without changing target",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/connector-observations.json; cli-observations.json",
+      "nextAction": "Restore correct repository grant/credentials through user-managed connection; then repeat only exact read-only repo/main checks. Do not infer deletion or switch accounts/targets automatically."
+    },
+    {
+      "id": "vercel-access",
+      "status": "BLOCKED_403_SCOPE_NOT_ACCESSIBLE",
+      "owner": "Kelsey grants intended team access; Codex re-verifies exact existing target",
+      "trigger": "Existing connection/CLI can read team_6CAjRq58n0WvAH49otKSQbA7",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/connector-observations.json; cli-observations.json",
+      "nextAction": "User grants access to the existing Whitefish team through connection settings. Then repeat exact project/domain reads with explicit team/project. No login/token/account/permission/link change by Codex under this selection."
+    },
+    {
+      "id": "exact-build",
+      "status": "BLOCKED_EPERM_CURRENT_PERMITTED_ATTEMPT",
+      "owner": "Codex validation/governance; user supplies supported environment if required",
+      "trigger": "An execution context capable of required process/port operations becomes available",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/validation.json",
+      "nextAction": "Run exact unchanged standard build on matching runtime/dependency bytes in supported context. Preserve failures; no substitute flags/install/configuration repair or waiver.",
+      "currentObservation": {
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "exitCode": 1,
+        "error": "Turbopack creating new process/binding to port:Operation not permitted",
+        "evidencePath": "docs/evidence/sd2-held-closure-contract-1/validation.json"
+      }
+    },
+    {
+      "id": "contract-activation",
+      "status": "DRAFT_ONLY_G6_G8_G14_RETAINED",
+      "owner": "Codex governance and independent reviewer; Kelsey selects reserved effects",
+      "trigger": "Actual G8 proof and normal section14 authority/review/attestation/delivery prerequisites",
+      "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/CONTRACT.md; amendment-spec.json",
+      "nextAction": "Activate only through existing canonical machinery after prerequisites. Current contract review is prospective only; do not change canonical state/validator or add an exception to bypass missing authority/build/access."
+    }
+  ],
+  "externalProofLimits": [
+    "Reviewer did not repeat external requests. Observation JSON records exact tool/CLI arguments/errors/times; it is not fresh successful authenticated target proof or independently signed provider attestation.",
+    "404 does not establish deletion or cause of access failure.403/account scope denial does not establish ownership change. Current main commit, default branch identity, project/team/domain and hosted/runtime state remain unknown.",
+    "Local origin/main1c8e33f23beb55c2ed2ebe78fe4e256722af8392 is historical local metadata only. No fresh-main baseline or canonical delivery conclusion follows from this local review.",
+    "Exact build failure is retained, not waived by passing plan/type/tests or historical hosted build. No claim of provider erasure/native/full-source completeness or new custody availability is made.",
+    "Current user selection does not authorize remoteGit mutation, publication/deployment, permission/account/token/link/configuration changes, source/workbook access orSD3."
+  ],
+  "handoff": {
+    "owner": "Codex implementation author; independent reviewer for a changed frozen candidate; Kelsey for user-managed exact access restoration and separately selected reserved effects",
+    "trigger": "This matching local PASS permits only the selected local manifest/review direct-child receipt. Operative work waits for actual external access/execution-context change and original canonical authority/gates.",
+    "authoritativePath": "docs/evidence/sd2-held-closure-contract-1/SESSION_CLOSE.md; docs/evidence/sd2-held-closure-contract-1/NEXT_SESSION.md; docs/evidence/sd2-held-closure-contract-1/open-items.json",
+    "nextAction": "Author adds exactly current manifest and this review in the candidate direct-child local receipt, then runs only NEW verify.py --review-bound at clean receipt. Keep branch local. Do not rebind old attestations or claim canonical acceptance. Recheck selected exact metadata/build only after actual access/context change; no draft/readiness loop. Any remediation needs author edits, new freeze/manifest and independent recheck."
+  },
+  "sourceExecutionStatus": "FAIL",
+  "canonicalActivation": false,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false,
+  "targetsHeld": 397,
+  "quarantinesHeld": 272,
+  "clearedForAcquisition": 0,
+  "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+  "overallExecutionStatus": "BLOCKED_BUILD_AND_ACCESS"
+}

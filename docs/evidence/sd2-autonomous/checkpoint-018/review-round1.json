@@ -1,0 +1,144 @@
+{
+  "reviewType": "independent-fresh-context-read-only-local-held-research",
+  "outcome": "FAIL",
+  "reviewedAt": "2026-10-16T01:26:14Z",
+  "reviewer": {
+    "identity": "/root/checkpoint018_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false
+  },
+  "binding": {
+    "entryCommit": "d472eb79b3eb9edcb744ac53a3f485f84f314810",
+    "candidateCommit": "75861c229b6d9b0494b7c3f65b25a2502f07b607",
+    "candidateTree": "fcb6f1ef5af35713024eb822ecf6fed436515b63",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-018/final-manifest.json",
+    "manifestSha256": "f24a18b61c7ca7b2f41fabdc22f3e52353f7550754a35d554148d179a8bcc254",
+    "completeDiffSha256": "262b2af196a9168c3fe43db555e6e277404510a72725e6bee78aea46fc34b233",
+    "completeDiffBytes": 1114591,
+    "changedPaths": 47
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-018-M1",
+      "severity": "medium",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-018.json",
+      "line": 4836,
+      "title": "Retain the RISE postsecondary enrollment requirement as a typed condition",
+      "evidence": {
+        "inputKey": "saved-405588227-row-359",
+        "sourceFile": "docs/evidence/sd2-autonomous/checkpoint-018/sources/risepdf.md",
+        "sourceLines": "42-43",
+        "sourceText": "Intend to enroll at a post-secondary educational institution in the fall of 2026",
+        "candidateObservation": "eligibility.value and schoolType.value are null. cycle.value.enrollment contains only fall2026; materials records enrollment proof for payment."
+      },
+      "rationale": "The retained source expressly states a required enrollment intention and institution scope. A seasonal label and payment-verification condition do not preserve that separate eligibility condition. POLICY requires material facts to retain typed values; preserving the passage only inside evidence does not complete that mapping.",
+      "requestedAuthorRepair": "Add a held, historical-2026 typed observation preserving intent to enroll at a postsecondary educational institution in fall 2026, with the existing exact risepdf excerpt/hash/locator, routed action, and meaningful verifier assertion. Preserve the separate affiliation and timezone conflicts, unknown future offering, and all earlier bindings. Use retained evidence only."
+    },
+    {
+      "id": "SD2-018-M2",
+      "severity": "medium",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-018.json",
+      "line": 2006,
+      "title": "Retain DECA's payment-form condition",
+      "evidence": {
+        "inputKey": "saved-405588227-row-352",
+        "sourceFile": "docs/evidence/sd2-autonomous/checkpoint-018/sources/deca.md",
+        "sourceLines": "67-69",
+        "candidateObservation": "amount.value records DECAProgramFundingDirectToCollege:true, but no typed value records completion of the form emailed in May."
+      },
+      "rationale": "The source conditions direct college payment on completing a form emailed in May. Retaining only the payment destination drops an actionable award-disbursement requirement, although the supporting passage is already retained.",
+      "requestedAuthorRepair": "Add the form-completion requirement and May email timing as a held general-DECA-program observation, explicitly scoped separately from the unvisited child application. Bind existing evidence and add a semantic verifier assertion and routed next action. Do not infer a form URL, inspect an account, or treat this as a current accepted requirement."
+    },
+    {
+      "id": "SD2-018-M3",
+      "severity": "medium",
+      "file": "docs/evidence/sd2-autonomous/checkpoint-018.json",
+      "line": 2043,
+      "title": "Retain DECA's stated selection factors separately from eligibility",
+      "evidence": {
+        "inputKey": "saved-405588227-row-352",
+        "sourceFile": "docs/evidence/sd2-autonomous/checkpoint-018/sources/deca.md",
+        "sourceLine": 13,
+        "candidateObservation": "The retained corporate-program passage names DECA involvement, leadership ability, community service and academic performance. None appears in row352's typed values; the need observation retains only merit wording."
+      },
+      "rationale": "These are explicit program-scoped selection observations. Omitting them from the typed record loses material source detail and its distinction from mandatory eligibility. The structural verifier checks existing values but cannot detect this omission.",
+      "requestedAuthorRepair": "Add a held general-DECA corporate-program selection observation retaining all four factors and donor-specific criteria, with exact existing source evidence, scope, routing and a semantic assertion. Explicitly avoid converting selection factors into mandatory child eligibility, scoring, accepted facts or hard exclusions."
+    }
+  ],
+  "checks": [
+    {
+      "check": "Frozen candidate and full manifest binding",
+      "result": "PASS",
+      "evidence": "Independently recomputed manifest SHA256, candidate tree, complete binary diff SHA256/byte length, exact 47-path set, and every declared blob/SHA256/byte count. Working files matched candidate blobs."
+    },
+    {
+      "check": "Entry and historical preservation",
+      "result": "PASS",
+      "evidence": "All 1971 entry-tree paths retain identical mode/type/blob entries in the candidate. No existing file changed. Seventeen historical manifest/review bindings verified; checkpoint017 and rejected bindings remain intact."
+    },
+    {
+      "check": "Read-only checkpoint verifier",
+      "result": "PASS",
+      "evidence": "python3 docs/evidence/sd2-autonomous/checkpoint-018/verify.py exited0 at 2026-10-16T01:24:13Z. It verified 20 inputs at offsets340-359,307 new held fields,117 evidence references,19 receipts,6560 total held fields,360 identities,611 seed-alias routes and1071 source-link routes."
+    },
+    {
+      "check": "Exact source affinity and retained excerpts",
+      "result": "PASS WITH SEMANTIC FINDINGS",
+      "evidence": "All117 evidence references have permitted input/source affinity, matching receipt/artifact hashes and retained excerpt containment. All19 selected source artifacts and non-null typed values were inspected. The three findings concern omitted typed conditions rather than failed excerpt containment."
+    },
+    {
+      "check": "Identity, conflict and scope boundaries",
+      "result": "PASS",
+      "evidence": "AEA/NTHS redacted profiles remain unassigned; national Army variants do not become Grizzly award facts; FCCLA rubric remains historical2025-26; DECA/BPA date/time conflicts, Clearwater9-versus8, RISE affiliation/timezone variants and WorkEthic unseen embedded documents remain held."
+    },
+    {
+      "check": "Measured acquisition intervals",
+      "result": "PASS WITH DISCLOSED LIMIT",
+      "evidence": "Independently recomputed18 measured intervals: maximum concurrency4 and no normalized same-host overlap. AWS exact interval remains unmeasured; sequential acquisition is author-reported, not independently established provider telemetry."
+    },
+    {
+      "check": "Custody and carried routes",
+      "result": "PASS",
+      "evidence": "All71 original custody paths/hashes matched with no gaps;12 M1 artifact pins and437 distinct M1 records verified. Existing nine attention rows, supplements, owners/triggers/actions and controls are unchanged."
+    },
+    {
+      "check": "Validation evidence",
+      "result": "PASS WITH OPEN BUILD GATE",
+      "evidence": "Recorded plan/type/full-tests success and initial IPC failures/retries inspected. Both exact npm run build receipts remain exit1 for process/port Operation not permitted. No software commands were rerun by this reviewer and no build waiver is granted."
+    },
+    {
+      "check": "Whitespace",
+      "result": "PASS",
+      "evidence": "git diff --check d472eb79b3eb9edcb744ac53a3f485f84f314810 75861c229b6d9b0494b7c3f65b25a2502f07b607 exited0."
+    },
+    {
+      "check": "Handling and pre-review correction disclosures",
+      "result": "PASS AS DISCLOSURE ONLY",
+      "evidence": "Output-handling lapses, transient masking/save issues and initial EOF correction are disclosed. Superseded pre-review3c60d3b is retained without an independent review claim. Disclosure does not erase session output or establish historical policy compliance."
+    },
+    {
+      "check": "Authority and stage boundaries",
+      "result": "PASS",
+      "evidence": "Existing AUTHORITY/POLICY and prospective policy review inspected; BUILD_STATE stage pointers remain null. No existing runtime/control bytes changed. All facts remain held,46 queue inputs remain unprocessed, and SD3 remains unstarted."
+    }
+  ],
+  "limits": [
+    "This review establishes local retained-evidence integrity and bounded semantic findings only. It does not verify original/native/visual fidelity, complete pages/images/tables/forms, source silence, public access, sponsor continuity, origin freshness or current offering.",
+    "No network, workbook, source acquisition, assembler execution, file edit, Git mutation or npm software/build execution was performed.",
+    "Source-concordance records are author assertions about selected retained conversion lines, not independent original-source proof. Synthetic BPA404 and UM hold notices are not source-fidelity evidence.",
+    "Standard-build process/port EPERM and fresh authenticated main/target verification remain open with their existing owners/triggers before canonical acceptance or authorized release.",
+    "Codex author owns all three repairs, preservation of this rejected candidate/manifest/review binding, count-matched dispositions, a newly frozen candidate and independent recheck. Reviewer performed no repair.",
+    "No signature, fact acceptance, canonical acceptance, release authority or SD2 completion is supplied."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

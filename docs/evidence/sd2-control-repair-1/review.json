@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "reviewType": "Fresh-context independent read-only full-candidate local synthetic control repair review and author-remediation recheck only",
+  "reviewerTask": "/root/final_control_review",
+  "reviewedAt": "2026-10-20T23:53:59.095981+00:00",
+  "binding": {
+    "baselineCommit": "e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae",
+    "candidateCommit": "72e27f0ed1910e194f057cb6b74d86e5a5e5c309",
+    "candidateTree": "0b43bd3bbff3c5bb347c7b72abad422bb0d2f6a2",
+    "manifestPath": "docs/evidence/sd2-control-repair-1/manifest.json",
+    "manifestSha256": "a6ddd7a938fbd4691a31a35f316154ed86b84bc8c78212d7b5e9212c923a2f40",
+    "completeDiffFiles": 36,
+    "completeDiffBytes": 1036794,
+    "completeDiffSha256": "b0614ff4e262d2df4eb7552eaddb436680ef062553231cdd60814d4fc366a27f"
+  },
+  "objective": "Complete one large LOCAL control-repair and SYNTHETIC interruption-test batch plus all397-target metadata reconciliation with independent review; preserve every original hold/binding and failed execution record; zero sources; never initialize/reset/replay old state; stop before SD3.",
+  "severityCounts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "title": "Mutating APIs allow omission of the external head pin, permitting rollback to forget a spent target",
+      "status": "REMEDIATED_IN_FINAL_CANDIDATE",
+      "path": "docs/evidence/sd2-control-repair-1/journal.py",
+      "lines": [
+        246,
+        256,
+        267
+      ],
+      "evidence": "audit/reserve/result default pinned_head to None; _state checks rollback only when non-None; synthetic_call invokes reserve/result without pins. In a NEW fictional fixture, completed synthetic_call returned sequence2 and conservativeCalls69. Deleting its complete events+receipts suffix then constructing a fresh Journal caused explicit audit(savedHead) to reject rollback, but ordinary synthetic_call for the SAME target succeeded again at sequence2/conservativeCalls69. No real targets or prior state were used or changed.",
+      "impact": "The ordinary public synthetic execution path can forget a permanently spent target and cumulative budget after complete suffix loss. The existing regression checks only opt-in pinned audit, so it does not enforce the prospective mandatory external-head requirement at mutation/dispatch boundaries. Real-source containment remains intact because all397 real targets are held and no source integration exists.",
+      "owner": "Codex local controls implementation author",
+      "trigger": "Before final local synthetic repair PASS and before any future acquisition integration",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/POLICY.md; journal.py; test_journal.py",
+      "nextAction": "Require a valid independently held current head pin for every mutating API and synthetic_call, reject omission/None/malformed/stale pins before reserving or producing work, carry the returned intent head into immediate result persistence, and add restart/suffix-loss/missing-pin mutation regressions. Preserve this candidate, manifest and finding before remediation; freeze a new candidate for independent recheck.",
+      "remediation": "Author added mandatory valid external current-head checking before reserve/result mutations, propagated supplied head through synthetic_call reservation and the returned reservation head into result, and added missing/None/malformed/stale/suffix-loss restart tests. No head refresh/reset API or real dispatcher was added.",
+      "independentRecheck": "35 tests passed. Independent NEW fictional fixture probes confirmed omitted-head reserve/result/synthetic_call deny without mutation; normal pinned synthetic_call produces two durable events; after complete events+receipts suffix loss and restart both missing and saved-final-head synthetic_call deny without redispatch. Rejected candidate manifest and exact interim FAIL review remain preserved byte-for-byte.",
+      "remediatedCandidate": "72e27f0ed1910e194f057cb6b74d86e5a5e5c309"
+    }
+  ],
+  "mediumLowDispositions": [],
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedReviewedStage": false,
+    "readOnlyRepository": true,
+    "repositoryMutations": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "rawBodiesOrTracesRead": false,
+    "dependencyInstallation": false,
+    "outputs": [
+      "/private/tmp/sd2-control-repair-review-interim.json",
+      "/private/tmp/sd2-control-repair-review.json"
+    ],
+    "syntheticProbes": "NEW temporary fictional stores only, automatically removed; no old queue/journal/comparison opened for mutation"
+  },
+  "authorityAssessment": {
+    "canonicalRulesAndCurrentHandoffRead": true,
+    "latestAcceptedStageEvidence": "docs/evidence/P9.md",
+    "activeStageId": null,
+    "nextPermittedStageId": null,
+    "nextCanonicalKickoff": null,
+    "studentProgressPointer": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "originalSd2AuthorityPolicyRead": true,
+    "priorHandoffNextSessionScopeOpenItemsReviewRead": true,
+    "prospectivePolicyReviewInspected": true,
+    "cleanMatchingPriorHandoffBeforeNewPathsEvidenceInspected": true,
+    "scope": "Local synthetic-only repair and metadata reconciliation. No new canonical stage/source access/dependency restoration or external effects."
+  },
+  "checks": [
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/verify.py",
+      "exitCode": 0,
+      "protectedPreEntryFiles": 2951,
+      "historiesPreserved": 3,
+      "gateBindings": 14
+    },
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/reconcile.py --check",
+      "exitCode": 0,
+      "targets": 397,
+      "held": 397,
+      "originalQuarantines": 272,
+      "conservativeCalls": 68,
+      "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+      "cleared": 0
+    },
+    {
+      "command": "python3 -B docs/evidence/sd2-control-repair-1/test_journal.py",
+      "exitCode": 0,
+      "testsPassed": 35
+    },
+    {
+      "command": "git diff --check e2c5ada60cabca9f7cba1c9117b5e2ff016db9ae",
+      "exitCode": 0
+    },
+    {
+      "command": "Independent NEW fictional fixture omitted-head and complete-suffix-loss restart probes",
+      "result": "PASS: all three missing-pin mutation entry points denied; pinned normal call completed; missing/saved-final-pin calls after suffix loss denied"
+    },
+    {
+      "command": "Independent final manifest and rejected-evidence hash verification",
+      "result": "PASS:36paths/1036794bytes full diff, candidate tree, all changed blobs/modes and preserved exact rejected manifest+review verified"
+    }
+  ],
+  "controlAssessment": {
+    "syntheticOnlyNoNetworkSubprocessSourceCallback": true,
+    "noRealSourceDispatchIntegration": true,
+    "all397RealTargetsDenied": true,
+    "exclusiveProcessLockAndOExclEventsReceipts": true,
+    "fileAndContainingDirectoryFsyncBeforeMutationReturn": true,
+    "mandatoryCurrentExternalHeadOnMutation": true,
+    "immutableContractImportPinsAndChainValidation": true,
+    "spentReservationPermanentAbsentAdministrativeStateLoss": true,
+    "partialMissingLostUnknownStateFailClosed": true,
+    "unknownResponsesKeepHostAndGlobalSlot": true,
+    "callCapIncludesHistorical68": true,
+    "maxFourUnresolvedOnePerHost": true,
+    "rawBodyAndErrorPayloadNotAcceptedByResultMetadataApi": true,
+    "actualProcessDeathCancellationCompetingProcessTests": true,
+    "syntheticResultWrittenImmediatelyBeforeReturn": true,
+    "hardwarePowerLossNotEmpiricallyProven": true,
+    "receiptTrustAndIndependentCustodyPrerequisite": true,
+    "unpinnedAuditObservationalOnlyNeverReplacementAuthority": true,
+    "lostOrStaleReceiptBlocksMutation": true,
+    "concurrentInterveningAppendCanBlockResultAndLeavesReservationSpent": true
+  },
+  "preservationAssessment": {
+    "complete36PathDiffManifestHashesSizesModesVerified": true,
+    "baselineProtected2951FilesBytesModesAnd3HistoriesVerified": true,
+    "historyPaths": [
+      "docs/CURRENT_HANDOFF.md",
+      "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "docs/evidence/sd2-autonomous/NEXT_SESSION.md"
+    ],
+    "all397OriginalIdentityLocatorFieldInputOwnerTriggerPathActionBindingsRetained": true,
+    "inherited9ItemsAnd14OriginalGatesByteExact": true,
+    "historical64CompletedAnd4FrontierImportedByHashes": true,
+    "historicalSourceExecutionFailAndPrivacyLimitsRetained": true,
+    "replayOrdersRetained": [
+      26,
+      30,
+      34
+    ],
+    "possibleReplayOrderRetained": 32,
+    "rejectedRepairCandidate": "964f5ffa7f03a26bd11ad82626a0b02ca9a08118",
+    "rejectedManifestSha256": "ec8f08116a13128e17c840ee16badf4613b210ee7c2f0081b206ebb7fcc44ec7",
+    "rejectedReviewSha256": "04fd1e0dc8d789c2233b1da68a28714f7c60bdf283e05754cc6a02099d145fcb",
+    "rejectedManifestAndInterimFailReviewExact": true,
+    "noAppConfigCiCanonicalSourceScopeDiff": true,
+    "oldContextBoundVerifiersNotRerunAfterTreeWidening": true
+  },
+  "dispatchProofAssessment": {
+    "observedCompletedCalls": 64,
+    "failedWithin64": 9,
+    "frontierReservations": 4,
+    "conservativeExplicitCalls": 68,
+    "observedOrFrontierTargetOrders": 55,
+    "allTargetsHeld": 397,
+    "originalQuarantines": 272,
+    "otherOriginalHolds": 125,
+    "theoreticalUnusedExpandedTargets": 72,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "clearedForAcquisition": 0,
+    "attemptAndHttpCountsExact": false,
+    "controllerNonreachabilityConditionalOnly": true,
+    "absenceOfCompletedMetadataDoesNotProveNoExternalDispatch": true,
+    "missingBodiesNotReconstructed": true,
+    "futureTargetProofAndSafetyAuthorityGatesRemainPrerequisites": true
+  },
+  "validationAssessment": {
+    "allValidationGzipStoredRawHashesSizesVerified": true,
+    "requiredCommandsUnchanged": [
+      [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      [
+        "npm",
+        "test"
+      ],
+      [
+        "npm",
+        "run",
+        "build"
+      ]
+    ],
+    "requiredRecordedExitCodes": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "requiredRecordedPlanTypeTestsPassed": true,
+    "exactBuildGate": "BLOCKED_EPERM",
+    "exactBuildError": "Turbopack creating new process/binding to a port: Operation not permitted (os error1)",
+    "freshAuthenticatedMainTarget": "UNVERIFIED",
+    "noInstallAlternativeBuildWaiver": true,
+    "finalSupplemental35TestLogsAndCodePinsVerified": true,
+    "historicalFullBaselineWhitespaceWarningsPreserved": true,
+    "preReceiptStatus": "HEAD exact frozen candidate; only current manifest untracked. Author must add only manifest+this final review in direct-child local receipt and then run --review-bound. No canonical attestation/release authority follows."
+  },
+  "limits": [
+    "PASS applies solely to the final immutable local synthetic repair candidate and metadata containment; it never accepts source execution, scholarship facts, identities, mappings, full SD2, canonical stages or external effects.",
+    "Original source execution FAIL and its two unresolved high historical findings remain permanent; they are not new findings against this contained local repair candidate.",
+    "Hardware power-loss durability and hostile filesystem administrators are outside the process-kill/fsync evidence. Caller must preserve a trustworthy current receipt outside event storage; no recovery/reset or replacement-authority path is supplied.",
+    "The prospective controls are exercised only against fictional data and all397 real targets remain held. A later source integration requires independent review against all original safety/privacy/native/authority/accepted-use gates.",
+    "No original context-bound verifier was rerun after new paths widened the tree. The fresh-entry timestamped clean-state receipt and immutable prior evidence are the continuity proof.",
+    "No source requests, native/workbook reads or raw provider bodies/traces were inspected; provider erasure, current scholarship truth and native/public completeness are not established."
+  ],
+  "openGates": [
+    {
+      "id": "exact-unused-proof",
+      "owner": "Codex metadata/evidence author and independent reviewer",
+      "trigger": "Before any future source acquisition under original finite grant",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/reconciliation.json; summary.json; original call-ledger-review.json",
+      "nextAction": "Obtain independently verifiable complete dispatch exclusion proof and all original safety/authority gates, otherwise retain all397 holds; do not reacquire or replay to repair uncertainty."
+    },
+    {
+      "id": "exact-build-fresh-main",
+      "owner": "Original Codex validation/governance/delivery owner",
+      "trigger": "Original supported-context acceptance/release trigger",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/validation.json; inherited-open-items.json; original G8",
+      "nextAction": "Retain exact unchanged build EPERM and unverified fresh authenticated main/target gates; no install/workaround/waiver or remote refresh from this batch."
+    },
+    {
+      "id": "future-integration",
+      "owner": "Codex controls implementer and independent source-safety reviewer",
+      "trigger": "Later bounded continuation plus target proof and every original gate",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/open-items.json; POLICY.md",
+      "nextAction": "Independently validate non-bypassable real dispatch integration and native metadata/content separation; none exists or is cleared by this batch."
+    },
+    {
+      "id": "all-inherited-gates",
+      "owner": "Every exact original owner retained in inherited-open-items.json",
+      "trigger": "Every exact original trigger retained in inherited-open-items.json",
+      "authoritativePath": "docs/evidence/sd2-control-repair-1/inherited-open-items.json; docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+      "nextAction": "Perform original next actions only at their original selected trigger; preserve Kelsey/Jaycee, safety/privacy/native/current-fact/human-review/custody/preservation/recovery/permission/student/publication/M1/SD5/reserved-effect bindings. Stop before SD3."
+    }
+  ]
+}

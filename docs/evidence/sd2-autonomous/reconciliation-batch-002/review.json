@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "outcome": "PASS",
+  "scope": "Fresh-context independent read-only review of the complete selected 48-field saved-evidence comparison; no canonical acceptance or release",
+  "reviewer": {"identity": "Codex /root/sd2_batch002_review", "freshContext": true, "readOnly": true, "authoredOrEdited": false},
+  "binding": {
+    "entryCommit": "7de87a35fd292f3675fce8b4ce23e1349d1eb462",
+    "candidateCommit": "a342e405e1f9c2047da1d0f18744a95c1fd2819a",
+    "candidateTree": "78afbbcc53496c7d21cd4464d52c94ddcd6a7cf6",
+    "manifestPath": "docs/evidence/sd2-autonomous/reconciliation-batch-002/final-manifest.json",
+    "manifestSha256": "59e96021b6e14486ee440be03297c242dc0ba26da3c80134bf3ad4213998d1fa",
+    "completeDiffSha256": "f0b44c46bb1b6a0de2f994d24682b806aa4cf11899f889ba62df93abde8a45da",
+    "completeDiffBytes": 471376,
+    "changedPathCount": 30,
+    "candidateBlobsModesSizesHashesAndWorktreeEqualityVerified": true,
+    "baselineLimit": "Selected local saved-evidence entry only; authenticated current remote main and target remain unverified"
+  },
+  "severityCounts": {"critical": 0, "high": 0, "medium": 0, "low": 0},
+  "findings": [],
+  "dispositions": [],
+  "checks": [
+    {
+      "name": "Immutable complete candidate",
+      "outcome": "PASS",
+      "evidence": "Independently recomputed manifest SHA256, candidate tree, complete binary diff SHA256 and 471376-byte length, exact 30-path change set, every candidate blob ID/mode/size/SHA256 and current-file equality. Entry-to-candidate git diff --check passed. Only final-manifest.json remained untracked."
+    },
+    {
+      "name": "Selected authority and predecessor entry",
+      "outcome": "PASS",
+      "evidence": "AUTHORITY.md and selection.json prospectively select exactly the reviewed proposal002 execution under the supplied direct continuation and retained delegated decisions. Original proposal remains unchanged. Independently verified predecessor manifest/review binding, exact direct-child two-file receipt7de87a3, and fresh valid-context entry-audit result digest. Historical verifiers were not rerun or modified."
+    },
+    {
+      "name": "All48 original envelopes and references",
+      "outcome": "PASS",
+      "evidence": "Verified ordered saved inputs2,3,4 and16 fields each, whole packet/canonical-record/envelope digests, recorded-name pointers/canonical-value digests, original identity candidates and held acceptance, original values/states/scope/timestamps/evidence, and explicit original owner/trigger/path/action routes. Independently resolved494 original/context/review references and checked their artifact hashes and JSON pointers. All48 minimum-proof proposals retain original routes without selecting reads."
+    },
+    {
+      "name": "Complete semantic comparison",
+      "outcome": "PASS",
+      "evidence": "Read all48 authored comparisons and minimum-proof proposals against the three selected sanitized saved Markdown sources and relevant exact original evidence/metadata. Categories reconcile to3 consistent,20 applicability/identity unresolved,25 evidence unavailable and0 new conflicts. Missing proof remains unknown and held; no current eligibility, offering, route or source-silence acceptance is inferred."
+    },
+    {
+      "name": "Ted materials and historical scope",
+      "outcome": "PASS",
+      "evidence": "Preserves historical April3,2026 deadline, three paper-clipped packets, community-service and financial-need paragraphs, athletics essay strictly less than2pages, transcript, any teacher/coach references and FAFSA SAI printout. No numerical reference minimum or athletics/GPA/need eligibility threshold is invented. Exact Ted receipt /2 agrees with sanitized source text; retained review documents the three-copy transcription restoration and unchanged native hash. SD1 mapped candidate remains distinct from accepted identity."
+    },
+    {
+      "name": "Generic ADHD identity and parent children",
+      "outcome": "PASS",
+      "evidence": "Generic input remains unidentified with no public-ID candidate. Anne Ford and Allegra Ford Thomas retain distinct amounts/durations and institution/program scopes in exact original evidence. Both documented-LD conditions and ADHD-plus-LD encouragement remain conjunctive. No ADHD-only award, deletion, substitution, merge, child creation or new stable ID is introduced."
+    },
+    {
+      "name": "Adoption academic criteria and materials",
+      "outcome": "PASS",
+      "evidence": "Academic award remains separate from sibling/adoption grants. Comparison preserves must for adopted-or-foster-care plus known adversity and4-year-college plans; should for character/achievement/high-school progress and letters/transcript wording. Transcripts and/or applicable test scores, two letters with teacher/counselor scope, and awardee willingness to share name/photo/personal statement/college update remain qualified. No applicant values are collected or mandatory-letter hard exclusion created."
+    },
+    {
+      "name": "Three identity assessments and generated source views",
+      "outcome": "PASS",
+      "evidence": "All three held identity assessments retain exact original proposals, candidates, evidence, review references and routes, with source-specific missing proof. Generated source-reference occurrences equal original comparison evidence in order, including exact excerpts, source URLs, artifact hashes, extraction limits, observation times and null revisions. They create no new source receipt or factual ledger."
+    },
+    {
+      "name": "Global preservation and coverage",
+      "outcome": "PASS",
+      "evidence": "Inspected and ran only current batch read-only verify.py: exit0, started2026-10-16T15:42:42.563107+00:00, completed2026-10-16T15:42:43.061678+00:00. Verified2270 protected entry files and modes plus exact append-only handoff/section9 preservation. All7406 field holds/406 identity holds remain held; cursor406 has no next input. Prior96 comparisons and all historical review bindings remain unchanged. Cumulative coverage is144 occurrences across5 autonomous inputs plus2 prior Jaycee inputs;401 autonomous inputs remain outside comparisons. Original routes, nine attention rows/supplements,437M1 routes/12pins and71custody receipts remain protected."
+    },
+    {
+      "name": "Validation provenance",
+      "outcome": "PASS_WITH_RETAINED_LIMITS",
+      "evidence": "Independently verified all seven standalone command receipts equal validation.json copies, exact commands/timestamps/outcomes, raw output byte counts/SHA256 values and normalized log bytes/SHA256 values. Plan and tests preserve initial IPC EPERM failures and unchanged passing retries; typecheck passed. Both exact standard builds failed creating a process/binding a port with Operation not permitted. No alternate-build waiver or build-success claim is present."
+    },
+    {
+      "name": "Handoff, incident disclosure and downstream boundary",
+      "outcome": "PASS",
+      "evidence": "Current handoffs route every retained dependency with owners/triggers/paths/actions and stop before SD3. session-issues.json preserves disclosure of the overbroad local sanitized receipt preview, exclusion from semantic processing and future exact-pointer handling; no erasure or retrospective compliance relabeling is claimed. Reviewer did not repeat the unrelated excerpts. No new source/workbook/raw-content read, fact/mapping acceptance, external effect or automatic next execution is introduced."
+    }
+  ],
+  "limits": [
+    "PASS applies to this complete bounded local comparison only. It accepts no scholarship fact or identity mapping, does not complete SD2 and does not authorize SD3 or release.",
+    "Review used selected sanitized saved Markdown, retained JSON/evidence/documentation metadata and Git objects. No original native/raw document, temporary custody content, live source or workbook was opened.",
+    "Retained receipts and hashes do not independently prove native/visual fidelity, complete source silence, present public access, publisher custody, current offering or usable application routes. Temporary custody availability was not rechecked.",
+    "Exact supported standard-build PASS and authenticated current main/target remain Codex-owned prerequisites before canonical acceptance or authorized release. All later preservation/recovery/human/publication/student-task/M1/SD5/external-effect gates retain their original owners and triggers.",
+    "No edits, Git mutations, assembler/npm/build execution, historical-verifier reruns, source fetches, workbook access or external effects occurred during review.",
+    "Memory was used only for initial orientation; all review conclusions above were verified against current local evidence."
+  ],
+  "nextAction": {
+    "owner": "Codex implementation author",
+    "trigger": "This matching immutable-candidate batch PASS",
+    "authoritativePath": "docs/evidence/sd2-autonomous/reconciliation-batch-002/final-manifest.json",
+    "action": "Add only final-manifest.json and review.json in the candidate's direct-child local research receipt, run current batch verify.py --review-bound and retain the completed-batch handoff. Stop this execution; the routed next work is a separate bounded proposal, with no automatic next comparison."
+  },
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "python3",
+    "docs/evidence/sd2-control-repair-handoff/verify.py"
+  ],
+  "exitCode": 0,
+  "result": {
+    "sessionStatus": "FAIL",
+    "handoffIntegrity": "PASS",
+    "reviewBound": false,
+    "scope": "Fresh-session preparation only; no source execution or canonical acceptance",
+    "entryCommit": "03362252704c0032ae13befc015b7376de54056b",
+    "protectedPreEntryFiles": 2933,
+    "priorAppendHistories": 3,
+    "originalGateBindings": 14,
+    "sessionItems": 9,
+    "sourceRequestsDuringWrap": 0,
+    "controlRepairImplemented": false,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "SD3Started": false,
+    "requiredChecks": "plan/typecheck/tests passed; exact build EPERM remains a gate",
+    "startedAt": "2026-10-20T22:07:54.146416+00:00",
+    "completedAt": "2026-10-20T22:07:55.920872+00:00"
+  }
+}

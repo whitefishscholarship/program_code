@@ -1,0 +1,66 @@
+{
+  "clientIntervals": 8,
+  "maximumMeasuredConcurrentReads": 1,
+  "measuredSameHostOverlaps": [],
+  "normalizedHosts": [
+    "www.aopa.org",
+    "www.montana.edu",
+    "www.montana.edu",
+    "morelli.foundation",
+    "www.montanastatefund.com",
+    "www.eaa.org",
+    "www.eaa.org",
+    "www.eaa.org"
+  ],
+  "independentProviderTelemetry": false,
+  "intervals": [
+    {
+      "sourceId": "aopa",
+      "originalUrl": "https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships",
+      "callStartedAt": "2026-10-16T02:55:17.939Z",
+      "callCompletedAt": "2026-10-16T02:55:22.307Z"
+    },
+    {
+      "sourceId": "hilleman",
+      "originalUrl": "https://www.montana.edu/hillemanscholars/apply.html",
+      "callStartedAt": "2026-10-16T02:55:40.800Z",
+      "callCompletedAt": "2026-10-16T02:55:43.384Z"
+    },
+    {
+      "sourceId": "msuMorelli",
+      "originalUrl": "https://www.montana.edu/hillemanscholars/morelli/information.html",
+      "callStartedAt": "2026-10-16T02:55:47.416Z",
+      "callCompletedAt": "2026-10-16T02:55:51.284Z"
+    },
+    {
+      "sourceId": "foundation",
+      "originalUrl": "https://morelli.foundation/scholarship-msu/",
+      "callStartedAt": "2026-10-16T02:55:51.284Z",
+      "callCompletedAt": "2026-10-16T02:55:54.213Z"
+    },
+    {
+      "sourceId": "msf",
+      "originalUrl": "https://www.montanastatefund.com/web/home/community/osh-ih-scholarship.jsf",
+      "callStartedAt": "2026-10-16T02:55:54.213Z",
+      "callCompletedAt": "2026-10-16T02:56:00.016Z"
+    },
+    {
+      "sourceId": "eaa",
+      "originalUrl": "https://www.eaa.org/eaa/eaa-chapters/eaa-chapter-resources/chapter-programs-and-activities/ray-aviation-scholarship-fund",
+      "callStartedAt": "2026-10-16T02:56:00.016Z",
+      "callCompletedAt": "2026-10-16T02:56:03.713Z"
+    },
+    {
+      "sourceId": "eaaScholar",
+      "originalUrl": "https://www.eaa.org/eaa/eaa-chapters/eaa-chapter-resources/chapter-programs-and-activities/ray-aviation-scholarship-fund/scholar-eligibility-and-requirements",
+      "callStartedAt": "2026-10-16T02:56:33.448Z",
+      "callCompletedAt": "2026-10-16T02:56:36.033Z"
+    },
+    {
+      "sourceId": "eaaChapter",
+      "originalUrl": "https://www.eaa.org/eaa/eaa-chapters/eaa-chapter-resources/chapter-programs-and-activities/ray-aviation-scholarship-fund/Chapter-Eligibility-and-Requirements",
+      "callStartedAt": "2026-10-16T02:56:36.034Z",
+      "callCompletedAt": "2026-10-16T02:56:38.520Z"
+    }
+  ]
+}

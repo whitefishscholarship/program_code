@@ -1,0 +1,129 @@
+{
+  "reviewType": "independent-local-technical-review",
+  "reviewer": "/root/sd2_jaycee_independent_review",
+  "freshContext": true,
+  "readOnly": true,
+  "recordedAt": "2026-10-13T22:13:03Z",
+  "outcome": "FAIL",
+  "outcomeScope": "The frozen local research candidate needs one medium completeness correction. Preservation, scope, document coverage and hash checks passed. This review does not accept scholarship facts, grant canonical acceptance, waive build or fresh-main gates, or authorize SD3.",
+  "candidateCommit": "8e955801461ebd97b8eb3ef3955621eee9d93120",
+  "candidateTree": "0e9ba60d99c9bd453e301ff5f365819467bd5e1a",
+  "entryBaseline": "f742890517dce0633a7a69d06214f348bc687a38",
+  "retainedMainBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "manifestPath": "docs/evidence/sd2-jaycee/candidate-manifest.json",
+  "manifestSha256": "3edbf7a07a0838e2921cff35633c9441f5bf7da053d8e421333cfa0c02036dd3",
+  "manifestFileCount": 38,
+  "diffAndHashChecks": {
+    "headAndTreeMatch": true,
+    "changedPathSetMatchesManifest": true,
+    "all38CandidateBlobIdsSizesAndSha256Match": true,
+    "trackedWorktreeBytesMatchCandidate": true,
+    "entryToCandidateBinaryDiff": {
+      "bytes": 1094370,
+      "sha256": "7ab216f1b2ea11fcbed6050818bffaec3cffd3677285609dcb41f510b72e6445",
+      "matchesManifest": true,
+      "whitespaceCheck": "PASS"
+    },
+    "retainedMainToCandidateBinaryDiff": {
+      "bytes": 4176110,
+      "sha256": "68ef0733bdd192505478b318214adbd33dc13bf61ef357961aaa3f96503350c0",
+      "matchesManifest": true,
+      "whitespaceCheck": "PASS"
+    },
+    "historicalEvidenceAndReviewBindings": "PASS",
+    "allNineAttentionRowsAndPreviousSupplementsPreserved": true,
+    "retainedM1Records": 437,
+    "runtimeAndCanonicalControlChanges": false,
+    "worktreeStatus": "Only candidate-manifest.json is untracked, as disclosed."
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-JAYCEE-M1",
+      "severity": "medium",
+      "title": "Held materials omit two explicit application prerequisites",
+      "evidence": [
+        {
+          "path": "docs/evidence/sd2-jaycee/proposals.json",
+          "lines": [
+            626,
+            646
+          ],
+          "description": "The vocational materials envelope includes detailed package preparation requirements but omits the mandatory working home email address and applicant signature."
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/proposals.json",
+          "lines": [
+            1374,
+            1394
+          ],
+          "description": "The university materials envelope has the same omission."
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/vocational-source.txt",
+          "lines": [
+            21,
+            83,
+            259
+          ],
+          "localRenderPages": [
+            1,
+            3,
+            6
+          ],
+          "description": "Instruction C requires an active working home email address; the checklist and section 6 require the signature."
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/university-source.txt",
+          "lines": [
+            19,
+            84,
+            260
+          ],
+          "localRenderPages": [
+            1,
+            3,
+            5
+          ],
+          "description": "The university document states the same requirements."
+        }
+      ],
+      "impact": "The proposed application-materials summary is incomplete despite these prerequisites being visible in both completely inspected sources. Full source evidence remains preserved, and no accepted fact or runtime behavior is affected.",
+      "requiredCorrection": "Add both requirements to each document-scoped held materials proposal, with precise supporting excerpts and local page locators. Update the corresponding evidence values and digests through author remediation. Preserve all identity holds, sources and historical bindings, refreeze the candidate, regenerate its manifest and obtain independent recheck.",
+      "owner": "Implementation author",
+      "target": "Before this selected local checkpoint receives technical PASS"
+    }
+  ],
+  "checksPerformed": [
+    "Reviewed governing operating contract, canonical plan/state, current handoff, accepted P9 evidence and selected next-read proposal.",
+    "Read complete student-data plan section 9, student-data contract, selected authority, README and continuation prompt.",
+    "Reviewed changed path set, new scripts, native receipts, source evidence, proposal values and identity comparison.",
+    "Executed the inspected read-only verify-evidence.py: PASS at 2026-10-13T22:11:13.610153Z.",
+    "Independently recomputed manifest, candidate-tree blob and both complete binary-diff hashes.",
+    "Independently ran whitespace checks against entry and retained-main baselines: PASS.",
+    "Inspected all 13 existing rendered page images: vocational 7 and university 6; no filled applicant content observed.",
+    "Independently compared all saved PDF page text against extraction receipts and all converted body/header/footer paragraphs and table counts against retained local DOCX packages.",
+    "Verified exact source DOC/PDF byte equality with retained local originals and normalized text equality with the original textutil extraction.",
+    "Verified ordered bounded identity/detail/closing receipts, two held outcomes, 62 held evidence envelopes, zero accepted facts and mappings, existing canonical/public IDs, and 406 remaining named rows without selected research.",
+    "Verified saved validation receipts agree with VALIDATION.json: plan/typecheck/tests passed after recorded IPC retries; both exact standard-build attempts failed with process/port EPERM.",
+    "Confirmed the reviewer made no file changes, network calls, workbook/source reads, publication, deployment, monitoring activation or external messages."
+  ],
+  "limitationsAndUnknowns": [
+    "Fresh authenticated remote-main and delivery proof remain unknown; origin/main is a retained local reference.",
+    "Standard npm run build remains blocked on both recorded attempts. No waiver or alternative-build acceptance is supplied.",
+    "Repository-wide validation was reviewed from saved receipts, not rerun by this strictly read-only reviewer.",
+    "HTTP and workbook observations were examined as saved evidence; their remote state was not independently refreshed.",
+    "Workbook version, atomic snapshot, server-head and whole-workbook preservation are not established.",
+    "Local conversion reflows the vocational document from stored six-page metadata to seven rendered pages; substantive text is preserved across the inspected extraction representations.",
+    "Montana sponsor relationship, state participation, old/new route continuity and present usable application route remain unresolved.",
+    "Both identity holds and every fact-acceptance hold remain intact. A named human reviewer is still required before fact acceptance.",
+    "Full canonical/public-ID collision and relationship reconciliation, full SD2 completion and SD3 remain uncompleted.",
+    "The manifest is an intentionally untracked local checkpoint artifact; this review proposes no canonical attestation."
+  ],
+  "nextAction": "The author should correct SD2-JAYCEE-M1 using the already captured sources, without additional source or workbook reads, then freeze a new candidate and request independent read-only recheck. Preserve the prior candidate and this review binding."
+}

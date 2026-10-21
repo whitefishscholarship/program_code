@@ -1,0 +1,85 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent review of one bounded local SD2 held-research checkpoint012",
+  "reviewedAt": "2026-10-15T06:28:54Z",
+  "reviewer": {
+    "identity": "/root/sd2_checkpoint012_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": true,
+    "memoryUse": "Navigation context only; findings and bindings independently verified from current retained files."
+  },
+  "binding": {
+    "entryCommit": "5e22fba162021403299555fe4c767f05eb3b5b65",
+    "candidateCommit": "4920769cc6cae3d62ca0772c2282dc6b81d0294c",
+    "candidateTree": "fd86ea06334e05d51d183a072ee62b05e21f57ba",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-012/final-manifest.json",
+    "manifestSha256": "6f2187db84bfc8093dd797f316d0d95ec7538d3744e205204ff8c11ae72b7cea",
+    "completeDiffSha256": "b01f101bd59d7c1d27279a19bf152c870bb07aa905280d693dfbf28d4ace810f",
+    "changedPaths": 29,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "preEntryTrackedPathsPreserved": 1608,
+    "preservedBlobIdsAndModes": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-012-M1",
+      "severity": "medium",
+      "title": "Preserve Epic recommendation count and recommender conditions",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-012.json",
+      "lines": [
+        7410,
+        7848
+      ],
+      "affectedInputs": [
+        "saved-405588227-row-242",
+        "saved-405588227-row-243"
+      ],
+      "field": "fieldProposals.materials.value",
+      "evidencePath": "docs/evidence/sd2-autonomous/checkpoint-012/sources/epic.md",
+      "evidenceLine": 43,
+      "rationale": "Both campus proposals assert countOfLettersUnknown=true although their retained source explicitly requires two recommendation letters. The typed materials also omit the same passage's conditions: at least one recommender must be a high-school teacher, counselor, coach or other school official; neither may be a relative, including a guardian; letters should come from adults who served in a supervisory role; reference contact information is requested. The retained FAQ expressly applies recommendation letters to both pilot and mechanic applications, so the pilot-only essay variant does not make these letter requirements unknown. Keeping the full excerpt does not correct the contradictory typed unknown.",
+      "requestedChange": "Replace the false unknown with the observed count of two and preserve each recommender condition with its original must/should/requested modality in both materials proposals. Keep acceptance held and existing identity/current-cycle limits unchanged. Add a focused verifier assertion against regression.",
+      "owner": "Codex implementation owner",
+      "trigger": "Before recording a clean checkpoint012 independent review",
+      "nextAction": "Remediate locally, retain this failed candidate/review binding, freeze a new candidate and manifest, and request independent recheck."
+    }
+  ],
+  "checksPerformed": [
+    "Read repository governance, relevant canonical plan/build state, current handoff, accepted P9 evidence, maintenance-plan section9, current continuation, autonomous AUTHORITY/POLICY and prospective policy review.",
+    "Independently recomputed manifest digest, candidate tree, complete binary-diff digest, exact29 added paths, candidate blob IDs, byte lengths and SHA256 values.",
+    "Compared complete entry/candidate Git trees: all1608 pre-entry tracked paths retain identical blobs and modes, preserving prior packets/reviews, nine attention rows, supplements, queue, governance, runtime and M1 evidence.",
+    "Ran read-only checkpoint-012/verify.py: PASS;20 ordered inputs,370 held fields,158 excerpt references,23 seed dispositions,5 source-link dispositions,11 historical manifest/review bindings,71 custody pins without gaps,12 M1 pins and437 unique M1 records.",
+    "Verified offsets220–239, savedrows224–243;14researched-held/4held-identity/2held-access; cumulative240 initial dispositions,4721 held fields,240 held identities,166 unprocessed and0 accepted facts.",
+    "Reviewed all typed field values against the four retained source artifacts, including WAI parent/child scope, redacted identity holds, Republic children, Sporty's youth/special-consideration distinction, NKL GPA/essay/citizenship qualifiers, White materials, Vertical date wording, WAI tuition variants, WMA school variants, PAPA parent/access conditions, and Epic campus/value/eligibility/material variants.",
+    "Verified retained excerpt containment, source hashes, receipt equality, capture timestamps, explicit unknown revisions, and bounded author-recorded concordance.",
+    "Inspected recorded plan/typecheck/full-test passes and both exact build failures; no full matrix rerun.",
+    "Entry-to-candidate git diff --check passed. Candidate remains HEAD; only final-manifest.json was untracked.",
+    "No files edited, no network/source/workbook calls, no initialization/reset/replay, and no external effects."
+  ],
+  "limits": [
+    "This failed review requires one author correction and independent recheck; it does not accept scholarship facts, identities, a canonical stage, release or fullSD2 completion.",
+    "Selected conversions and author-recorded concordance do not independently establish original conversion fidelity, native PDF/page/image/table/form completeness, source silence, public/sponsor continuity, origin freshness, current availability or usable application routes.",
+    "Original conversions were not reacquired or reconstructed. Source-output lapses and historical exposure remain disclosed; final-artifact sanitization does not erase earlier output.",
+    "Both exact standard builds remain process/port EPERM failures. Fresh authenticated main/target and all later preservation, human/canonical acceptance, publication, student/browser/CSV, monitoring and reserved-effect gates remain open.",
+    "All4721 field envelopes and240 identities remain held; SD3 remains unstarted."
+  ],
+  "canonicalAcceptance": false,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "nextAction": {
+    "owner": "Codex implementation owner",
+    "trigger": "Receipt of this review",
+    "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-012.json",
+    "action": "Correct SD2-012-M1 in both Epic materials envelopes, preserve the original candidate and review binding, freeze a new candidate/manifest and request read-only independent recheck. Do not advance the queue or begin SD3."
+  }
+}

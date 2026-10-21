@@ -1,0 +1,17 @@
+{
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+  "startedAt": "2026-10-19T16:08:45.912332+00:00",
+  "completedAt": "2026-10-19T16:08:46.002570+00:00",
+  "exitCode": 127,
+  "logPath": "docs/evidence/sd2-autonomous/consolidation-proposal-007/checks/build.log",
+  "logSha256": "0c1c95857a742e9b6262a3838c813363a6ca89298cedc13999c10024b5dc8c87",
+  "rawOutputUtf8": "\n> web@0.1.0 build\n> next build\n\nsh: next: command not found\n",
+  "rawLogBytes": 61,
+  "rawLogSha256": "0c1c95857a742e9b6262a3838c813363a6ca89298cedc13999c10024b5dc8c87",
+  "logNormalization": "Strip line-end whitespace and retain one final newline; exact original raw output retained in this receipt."
+}

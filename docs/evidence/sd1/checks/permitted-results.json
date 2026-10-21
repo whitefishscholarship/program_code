@@ -1,0 +1,29 @@
+[
+  {
+    "command": "npm test",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:58:51.642830+00:00",
+    "endedAt": "2026-10-13T14:59:39.085292+00:00",
+    "exitCode": 0,
+    "log": "docs/evidence/sd1/checks/test-permitted.log",
+    "mode": "permitted_process_access"
+  },
+  {
+    "command": "npm run build",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:59:39.085465+00:00",
+    "endedAt": "2026-10-13T14:59:40.259424+00:00",
+    "exitCode": 1,
+    "log": "docs/evidence/sd1/checks/build-permitted.log",
+    "mode": "permitted_process_access"
+  },
+  {
+    "command": "npm run build -- --webpack",
+    "cwd": "/private/tmp/program_code-student-data-maintenance-plan/web",
+    "startedAt": "2026-10-13T14:59:40.259742+00:00",
+    "endedAt": "2026-10-13T14:59:52.368256+00:00",
+    "exitCode": 0,
+    "log": "docs/evidence/sd1/checks/build-webpack.log.json",
+    "mode": "permitted_process_access"
+  }
+]

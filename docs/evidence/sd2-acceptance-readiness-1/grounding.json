@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-21T00:24:30.933244+00:00",
+  "entryCommit": "bfe7975edc752caae48e376e406b5ad26d8e886b",
+  "recordedPlanningBaseline": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+  "completeBaselineToEntryChangedPathCount": 2165,
+  "completeChangedPathListSha256": "5b381491b89801c501d19ff37ba435da9a1934b55120c17fa76e4284bb5d60ac",
+  "allRecordedLocalChangesUnderDocs": true,
+  "canonicalState": {
+    "revision": 21,
+    "activeStage": null,
+    "nextStage": null
+  },
+  "inventoryClaimScope": "Saved sanitized F/G/O positions only, not live workbook, distinct current awards or current facts",
+  "currentHostedOrWorkbookStateVerified": false,
+  "currentRemoteMainVerified": false,
+  "groundedAccounting": {
+    "namedInputs": 411,
+    "originalFields": 7547,
+    "heldFields": 7518,
+    "proposedFields": 29,
+    "separateAppIds": 411
+  },
+  "overreachCorrections": [
+    "Unknowns and holds do not require acquisition before a held-closure proposal can be assessed.",
+    "Held research completeness cannot establish canonical acceptance, accepted facts/mappings or publication.",
+    "Historical G4/G5 proposal statuses are preserved, supplemented by later selected failed run and spent one-time restore.",
+    "Kelsey designation and exact Jaycee approvals already exist; no re-request or bulk fact approval is assumed.",
+    "Localrefs and recorded provider targets are not freshly authenticated remote state."
+  ],
+  "selfStalenessControls": [
+    "Matching review-bound entry captured before new paths.",
+    "No prior verifier was run after changed context.",
+    "Original inputs and canonical state remain immutable; current validation decisions use recorded actual results.",
+    "Freeze new candidate, independently review, then only manifest/review in direct-child receipt."
+  ],
+  "actualModelAndEffort": "NOT_EXPOSED_TO_SESSION"
+}

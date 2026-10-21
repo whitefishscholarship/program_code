@@ -1,0 +1,582 @@
+{
+  "records": [
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-3c94a3d4fff0cf554121",
+      "order": 100,
+      "exactLocatorSha256": "3c94a3d4fff0cf554121cebca80c1c56ac29565b4579b4b5563e4e675d2a2781",
+      "host": "www.umt.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-309",
+        "saved-405588227-row-310",
+        "saved-405588227-row-311"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-309#application",
+        "saved-405588227-row-309#cycle",
+        "saved-405588227-row-309#eligibility",
+        "saved-405588227-row-309#identityObservation",
+        "saved-405588227-row-310#application",
+        "saved-405588227-row-310#cycle",
+        "saved-405588227-row-310#eligibility",
+        "saved-405588227-row-310#identityObservation",
+        "saved-405588227-row-311#application",
+        "saved-405588227-row-311#cycle",
+        "saved-405588227-row-311#eligibility",
+        "saved-405588227-row-311#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:50:03.502Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 6
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "667a85c61154936f113fb075d421890fa4512c48c112119f1cda293ebb52b339",
+      "returnedEnvelopeBytes": 35954,
+      "exactRecordedNameMatches": [
+        "Dean’s Leadership Scholarship",
+        "Presidential Leadership Scholarship",
+        "Provost’s Honors Scholarship"
+      ],
+      "sourceMarkdownSha256": "de279116c2195d56c7daa2bbdf8221d4fd0771c327b221e20ad4795aecd29a62",
+      "sourceMarkdownBytes": 12201,
+      "httpStatus": 200,
+      "returnedUrlSha256": "3c94a3d4fff0cf554121cebca80c1c56ac29565b4579b4b5563e4e675d2a2781",
+      "returnedHost": "www.umt.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:50:32.146Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-609ec378d6d927aa2778",
+      "order": 146,
+      "exactLocatorSha256": "609ec378d6d927aa2778697e7e42a9a508d5b07e0e432b6a6d90debac3c7685c",
+      "host": "www.montana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-410"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-410#application",
+        "saved-405588227-row-410#eligibility",
+        "saved-405588227-row-410#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:50:03.502Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "c4790d4d2dc2f04daebb728b94ec2f3daa734b04669d10e88aef8f065c1a3c02",
+      "returnedEnvelopeBytes": 10359,
+      "exactRecordedNameMatches": [
+        "Hilleman/Morelli Scholarship"
+      ],
+      "sourceMarkdownSha256": "b11506bc790840a5d9664f3971ca1d2ce6c8ecd52ba0a331f69ece3f0c87ca41",
+      "sourceMarkdownBytes": 2967,
+      "httpStatus": 200,
+      "returnedUrlSha256": "609ec378d6d927aa2778697e7e42a9a508d5b07e0e432b6a6d90debac3c7685c",
+      "returnedHost": "www.montana.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:50:20.003Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-b9994cd63d16a61d8a82",
+      "order": 295,
+      "exactLocatorSha256": "b9994cd63d16a61d8a82b71e6ba94f944f8bf901e8acb37c52fdbec108f5d1f8",
+      "host": "revenue.mt.gov",
+      "affectedSavedInputs": [
+        "saved-405588227-row-70"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-70#historicalApplicationMethod",
+        "saved-405588227-row-70#historicalEligibility",
+        "saved-405588227-row-70#historicalMaterials",
+        "saved-405588227-row-70#identityContinuity"
+      ],
+      "startedAt": "2026-10-20T18:50:03.502Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Alcohol Responsibility Matters Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e9d533c5cfcffe5d5ad0f83e85ff998e63e0771c4f80596bd30c49a8c2035521",
+          "quoteCharacters": 120,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4236,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Alcohol Responsibility Matters Scholarship",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "b54d737563815d78907ad604e60733daaf47d3f64ea24639190f01f06f5c731f",
+          "quoteCharacters": 91,
+          "hashOnlyEvidence": true,
+          "matchOffset": 5750,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_material_program_clause": 1,
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "9f778c455d989a0f5192ef07e9069ce423799d9fcbc0d9ba744f3e88ab6d10ab",
+      "returnedEnvelopeBytes": 21406,
+      "exactRecordedNameMatches": [
+        "Alcohol Responsibility Matters Scholarship"
+      ],
+      "sourceMarkdownSha256": "33b60ba1683253f64f854ba7e1a5255154589114962fc7db76fdf120b903eafb",
+      "sourceMarkdownBytes": 8235,
+      "httpStatus": 200,
+      "returnedUrlSha256": "b9994cd63d16a61d8a82b71e6ba94f944f8bf901e8acb37c52fdbec108f5d1f8",
+      "returnedHost": "revenue.mt.gov",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:50:12.334Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-7d1e0325681210e19ec7",
+      "order": 200,
+      "exactLocatorSha256": "7d1e0325681210e19ec7a1c2eb880e54544a440511f4e8cd6d90731751d81afd",
+      "host": "www.montana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-252#cycle",
+        "saved-405588227-row-252#eligibility",
+        "saved-405588227-row-252#materials",
+        "saved-405588227-row-252#minimumGPA"
+      ],
+      "startedAt": "2026-10-20T18:50:32.147Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Presidential Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "0ce403bae3f527ecb631d6ebc696ab63682e01a7db559de3177a69d26cdfab66",
+          "quoteCharacters": 106,
+          "hashOnlyEvidence": true,
+          "matchOffset": 123,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Presidential Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "0d3691a451981339a570bcd87ba33cb051f0993e9bbe4b983ef1a884501a3d5b",
+          "quoteCharacters": 49,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1657,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "Presidential Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "02f2fe5245f326883dbbbf320174cbbd80c67c6434ec19d494e2695622394873",
+          "quoteCharacters": 60,
+          "hashOnlyEvidence": true,
+          "matchOffset": 1709,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "90046ccdf8f4ce122fc0d2b41da5fd78bc40a8ae4077160efb2ae7b0e87c04b8",
+      "returnedEnvelopeBytes": 14992,
+      "exactRecordedNameMatches": [
+        "Presidential Scholarship"
+      ],
+      "sourceMarkdownSha256": "8795dc5720b656cb60cef9f8291edcd511c6d319cb8bfae339e2975175a19b53",
+      "sourceMarkdownBytes": 5305,
+      "httpStatus": 200,
+      "returnedUrlSha256": "7d1e0325681210e19ec7a1c2eb880e54544a440511f4e8cd6d90731751d81afd",
+      "returnedHost": "www.montana.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:50:48.754Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-8ec9b1da07f3a3a8f70d",
+      "order": 227,
+      "exactLocatorSha256": "8ec9b1da07f3a3a8f70d88b9286df5747f11716c20cf0e6c492fbe85d1f99112",
+      "host": "www.umt.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-371"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-371#eligibility",
+        "saved-405588227-row-371#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:50:32.147Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "National Merit Scholarship",
+          "purpose": "identity",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "ae36d92b965e266bf8e24d3d84d42c8ebe14c9ac7acf78dcac0d953e73a64a04",
+          "quoteCharacters": 195,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4391,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "National Merit Scholarship",
+          "purpose": "eligibility",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "531b7e7442e3ab21dd1bb3d29288031b660f3cfe3185fa4805f189e925327218",
+          "quoteCharacters": 134,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4806,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        },
+        {
+          "program": "National Merit Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "e23b37a6302388d8ae18cff436c6d960fd6ecd9b9644ac5c747c00b02858123f",
+          "quoteCharacters": 123,
+          "hashOnlyEvidence": true,
+          "matchOffset": 4659,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "3fc4136ba52c6ae3cd8eb5bac29972f21f0fede8609411e5677f1c74a9591a4f",
+      "returnedEnvelopeBytes": 26427,
+      "exactRecordedNameMatches": [
+        "National Merit Scholarship"
+      ],
+      "sourceMarkdownSha256": "b180bcfd9af786b0e6c65f5e52f8c49a3fa2bca7e3a5751b8ecf6a08b58db3ca",
+      "sourceMarkdownBytes": 8337,
+      "httpStatus": 200,
+      "returnedUrlSha256": "8ec9b1da07f3a3a8f70d88b9286df5747f11716c20cf0e6c492fbe85d1f99112",
+      "returnedHost": "www.umt.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:50:40.698Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-90d85fde284219f48eca",
+      "order": 233,
+      "exactLocatorSha256": "90d85fde284219f48eca08a4cd13fe3a5850c2077f2134276984358136c7f5f0",
+      "host": "www.montana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-366"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-366#eligibility",
+        "saved-405588227-row-366#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:50:48.755Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Hilleman Scholars Program",
+          "purpose": "application_route",
+          "scope": "selected_page_scope_unresolved",
+          "providerProposedScope": "named_program",
+          "assignmentStatus": "Named-program/parent applicability remains held",
+          "exactQuoteSha256": "fdf68560cca81a351c5c332faa6345ff7413517e044d0dd75ab331f1aaa49ed6",
+          "quoteCharacters": 21,
+          "hashOnlyEvidence": true,
+          "matchOffset": 6492,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 3
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "24ecd696477b562add26d693ede75528060b1a2bdb44e5853cd5df72e89260d6",
+      "returnedEnvelopeBytes": 17910,
+      "exactRecordedNameMatches": [
+        "Hilleman Scholars Program"
+      ],
+      "sourceMarkdownSha256": "519fba385c4bee5c3ce5141635db9600e6b9da705e20c2f384b2d4bbca336c89",
+      "sourceMarkdownBytes": 6802,
+      "httpStatus": 200,
+      "returnedUrlSha256": "90d85fde284219f48eca08a4cd13fe3a5850c2077f2134276984358136c7f5f0",
+      "returnedHost": "www.montana.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:51:00.263Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-b636edfd244c6940f9b1",
+      "order": 292,
+      "exactLocatorSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "host": "www.umt.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-372",
+        "saved-405588227-row-376"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-372#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:50:48.755Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "36081005a47d573d64df103eacd54a7e420c71813f54796302c3ae18bc1b6156",
+      "returnedEnvelopeBytes": 21857,
+      "exactRecordedNameMatches": [
+        "UM Academic Achievement Scholarship"
+      ],
+      "sourceMarkdownSha256": "71adde5a580b8f3f7f926168288bbe16c615268c63e85ef8bbcc7841241d6635",
+      "sourceMarkdownBytes": 6298,
+      "httpStatus": 200,
+      "returnedUrlSha256": "b636edfd244c6940f9b12d9776704f8ae86f401644409987bbfd9ede6daca676",
+      "returnedHost": "www.umt.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:51:09.286Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-931da39486e45635990c",
+      "order": 234,
+      "exactLocatorSha256": "931da39486e45635990c31fdfdd80e1c02e92e66e124977bbbe2edee3a932a11",
+      "host": "www.montana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252",
+        "saved-405588227-row-369",
+        "saved-405588227-row-370"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-252#identityObservation",
+        "saved-405588227-row-369#application",
+        "saved-405588227-row-369#cycle",
+        "saved-405588227-row-369#eligibility",
+        "saved-405588227-row-369#identityObservation",
+        "saved-405588227-row-370#cycle",
+        "saved-405588227-row-370#eligibility",
+        "saved-405588227-row-370#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:51:09.287Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "ef69174c7db673d63cc45942364c42f7692670123b4e0fc7165a7500a030c195",
+      "returnedEnvelopeBytes": 21577,
+      "exactRecordedNameMatches": [
+        "Presidential Scholarship",
+        "Montana Premier Scholarship",
+        "Montana Treasure State First Generation Scholarship"
+      ],
+      "sourceMarkdownSha256": "55be62ac238872fedb024bd8d0899b045a41bea321c0a7668096ee71032b4b01",
+      "sourceMarkdownBytes": 8361,
+      "httpStatus": 200,
+      "returnedUrlSha256": "b59eedb5b64d221eee72820146cb9bdb1f92099ba03ffaaa12254140a21df39d",
+      "returnedHost": "www.montana.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:51:17.852Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-dd9981c2ea3fb92c48b2",
+      "order": 348,
+      "exactLocatorSha256": "dd9981c2ea3fb92c48b25d7a1683ca50c8a83254739e89400a905b75718d9545",
+      "host": "www.montana.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-252"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-252#applicationMethod",
+        "saved-405588227-row-252#cycle",
+        "saved-405588227-row-252#eligibility",
+        "saved-405588227-row-252#materials",
+        "saved-405588227-row-252#minimumGPA",
+        "saved-405588227-row-252#reapplication"
+      ],
+      "startedAt": "2026-10-20T18:51:17.853Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 4
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "d259adc47b4e16bc4b57a5b355af9462d31dbe62b4d15eecf3c6ca14f38731f1",
+      "returnedEnvelopeBytes": 24933,
+      "exactRecordedNameMatches": [
+        "Presidential Scholarship"
+      ],
+      "sourceMarkdownSha256": "e0c8681ed3b3ea7b945855121ba9d94aa3c2c368598d86ca91e85df754eeae5d",
+      "sourceMarkdownBytes": 10097,
+      "httpStatus": 200,
+      "returnedUrlSha256": "dd9981c2ea3fb92c48b25d7a1683ca50c8a83254739e89400a905b75718d9545",
+      "returnedHost": "www.montana.edu",
+      "returnedHostMismatch": false,
+      "outcome": "held_no_safe_exact_material_excerpt",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:51:26.486Z",
+      "afterSafetyRecheck": true,
+      "preflightReference": {
+        "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+        "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+      },
+      "replayed": false
+    }
+  ]
+}

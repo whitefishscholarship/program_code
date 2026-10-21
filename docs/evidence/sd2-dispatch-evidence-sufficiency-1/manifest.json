@@ -1,0 +1,167 @@
+{
+  "scope": "Approved single local saved-metadata dispatch-evidence sufficiency decision only",
+  "entryCommit": "dec67156687ae289f3b8e1a4bddb1d0fcda5d7b4",
+  "candidateCommit": "e0f7ff388b59a2eb5ef9a59fdca0c0fa434499ca",
+  "candidateTree": "6c714c1737b6e7d4cfb66f9934a260c9436c576c",
+  "completeDiffSha256": "fef7ebbb671f271d9c81de132271b18246f5cb18014523c0aac665d99129101b",
+  "completeDiffBytes": 102292,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "f780e0c00afd723d6d3e1b51ca33378bfa6bd789860b13fb1561b11f161884df",
+      "bytes": 778272
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "99c03e083c9b40dcde7702462c9eb7481c16fbea98593020b84a3e487904fe8d",
+      "bytes": 223884
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "5a771e1cd7ebe7de3cdad2b2d78d394203dfdfa7b19421656f5a197e3037bc02",
+      "bytes": 180134
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/AUTHORITY.md",
+      "mode": "100644",
+      "sha256": "8388293dc6a882294bec3c7c9660efc378193a0837bf78fd91c917a20d4aefbf",
+      "bytes": 1264
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "105cea2f1b3160c3dfb9d39af5df908c84b0ddbd7bd7694d8bd3c5a243903e6e",
+      "bytes": 1729
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/README.md",
+      "mode": "100644",
+      "sha256": "c8743dfeea01f2da2bc284fa3896d571a44d28d216e6b6ff17e4a57420d91637",
+      "bytes": 2518
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "acd70d1537bf910f5501f44ec3c581637075f9127230e5f2bd2324d5becba53d",
+      "bytes": 2929
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "e4c92fcda91e249ccca4e19aa6a991a9ecfd073d7d589634e2cca540fea6f555",
+      "bytes": 1408
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/entry-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "7641a56619c3d9083617fd833ea4123a5ea11edece1f6ec69fa6a35fe3235bfa",
+      "bytes": 494
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/retry-plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/retry-tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "bce0a930948c4d825d76807126440b2d44342ef942be019b928178ac4548c674",
+      "bytes": 989
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/decision.json",
+      "mode": "100644",
+      "sha256": "4abca7e912b4ded1e8af9b5396629cbaa92cfeeb294da956da9076588a7c2d07",
+      "bytes": 7319
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/entry-audit.json",
+      "mode": "100644",
+      "sha256": "89515c88fca9b0daa6ee6332cebca1090a275937cdfbc8eac346aae2d573715f",
+      "bytes": 1159
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/grounding.json",
+      "mode": "100644",
+      "sha256": "f69eb0963b22298efe2be95752d9b14a67808f3d663c88fb4b60425f171d9995",
+      "bytes": 1450
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/input-inventory.json",
+      "mode": "100644",
+      "sha256": "54f6c6e87be364f5c2eda451fbaa234956ac4ca4766037bf1c3d285c54df66b7",
+      "bytes": 5134
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/open-items.json",
+      "mode": "100644",
+      "sha256": "99517eb1b0abbbf2dcb325f2d476dfd856a9f0525795620a6d08a4116879a451",
+      "bytes": 30820
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/run-validation.py",
+      "mode": "100644",
+      "sha256": "56ef3bbfe9c95e9795ae7370ebfe1ec9f746fa1029d367aa74fc4c5de80202e7",
+      "bytes": 1964
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/validation-retry.json",
+      "mode": "100644",
+      "sha256": "ccf7ff33ecf73c357e033f27de68713f28ea4b457bb5bf6f3027333f5f5683f6",
+      "bytes": 1594
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/validation.json",
+      "mode": "100644",
+      "sha256": "460303bb45d6a184a8281c49dae85fade9b18bf5947f83327afa7b7c70e15cab",
+      "bytes": 3950
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/verification.json",
+      "mode": "100644",
+      "sha256": "ac174b29a1c91fb731626bca6f91e6bafa0cf666147a692004b2e668c1c9e942",
+      "bytes": 842
+    },
+    {
+      "path": "docs/evidence/sd2-dispatch-evidence-sufficiency-1/verify.py",
+      "mode": "100644",
+      "sha256": "11284f71523105dd6b02f34964005fba90752cdf110e9b43e34f7ed1b048fe7e",
+      "bytes": 12424
+    }
+  ],
+  "evidenceDecision": "BLOCKED_NOT_ESTABLISHED_ZERO_CLEARED",
+  "originalSourceExecution": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "savedRowLocator": 45,
+      "publicIdCandidates": [
+        "award-8bce77306c27"
+      ],
+      "existingCanonicalIdCandidate": null,
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "Distinct exact file IDs, matching program/schools/USD500 support candidate continuity beyond the earlier name-only hold. Public access, publisher custody and formal mapping remain unproved.",
+      "unresolvedProof": "Publisher/source custody and formal validation of the retained app/source mapping.",
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "docs/evidence/sd1/pilot.json",
+          "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1",
+          "pointer": "/records/2"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        }
+      ],
+      "owner": "Codex identity/source reconciliation",
+      "trigger": "Applicable authorized identity evidence arrival or later selected formal identity reconciliation",
+      "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "nextAction": "Retain existing candidate and original mapping hold; propose exact missing proof without new reads.",
+      "identityAccepted": false
+    },
+    {
+      "savedRowLocator": 290,
+      "publicIdCandidates": [
+        "award-52b096183d9d"
+      ],
+      "existingCanonicalIdCandidate": null,
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "The canonical program title and organization support program identity. They do not independently validate award-52b096183d9d or bind the older app locator to a current usable route.",
+      "unresolvedProof": "Formal app/source crosswalk validation with retained aliases; current-cycle proof separately.",
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+          "pointer": "/records/1"
+        },
+        {
+          "path": "docs/evidence/sd1/pilot.json",
+          "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1",
+          "pointer": "/records/9"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+          "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/research-review.json",
+          "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413",
+          "pointer": ""
+        }
+      ],
+      "owner": "Codex identity/source reconciliation",
+      "trigger": "Applicable authorized identity evidence arrival or later selected formal identity reconciliation",
+      "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "nextAction": "Retain existing candidate and original mapping hold; propose exact missing proof without new reads.",
+      "identityAccepted": false
+    },
+    {
+      "savedRowLocator": 40,
+      "publicIdCandidates": [
+        "award-67de97a4f446"
+      ],
+      "existingCanonicalIdCandidate": "sch_67de97a4f446d534a1471806d784dc2bd79e16a5837a0d2f3ac3bef57d2df681",
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "The named current document track agrees with the corresponding legacy track in PRELUDE. Identical organizer labels do not merge the two tracks.",
+      "unresolvedProof": "Explicit official organizer-name/legal-relationship evidence if that relationship is claimed.",
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-jaycee/proposals.json",
+          "sha256": "809f6e260e0faf321655d8de973e148172c7293da0a5e683c005d1bac56647a3",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/identity-comparison.json",
+          "sha256": "276b86fd2819250e4cfe2a0829a032296ab99550f8026baee89d4e1a5c5753b4",
+          "pointer": "/records/0"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/records/0"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/materialsVersionBoundary"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/identityEvidenceDetermination"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeParent"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/humanApproval"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-jaycee/final-candidate-manifest.json",
+          "sha256": "e4bd7555555c402d34125300e432d20d3fdef31b5450b722c226f0befee161a8",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/review.json",
+          "sha256": "252f01ca48a8fa787413565fba97c00c2a37a116bb737c4b78a6bc5f328b8dc4",
+          "pointer": ""
+        }
+      ],
+      "owner": "Codex identity/source reconciliation",
+      "trigger": "Applicable authorized identity evidence arrival or later selected formal identity reconciliation",
+      "authoritativePath": "docs/evidence/sd2-jaycee/proposals.json",
+      "nextAction": "Retain existing candidate and original mapping hold; propose exact missing proof without new reads.",
+      "identityAccepted": false
+    },
+    {
+      "savedRowLocator": 68,
+      "publicIdCandidates": [
+        "award-e05338ef963f"
+      ],
+      "existingCanonicalIdCandidate": "sch_e05338ef963fa531412a774d999f7d1e82dc6ccc4251f5e72712805051fb80e7",
+      "originalIdentityAcceptance": "held",
+      "comparisonCategory": "applicability/identity unresolved",
+      "conclusion": "The named current document track agrees with the corresponding legacy track in PRELUDE. Identical organizer labels do not merge the two tracks.",
+      "unresolvedProof": "Explicit official organizer-name/legal-relationship evidence if that relationship is claimed.",
+      "evidenceReferences": [
+        {
+          "path": "docs/evidence/sd2-jaycee/proposals.json",
+          "sha256": "809f6e260e0faf321655d8de973e148172c7293da0a5e683c005d1bac56647a3",
+          "pointer": "/records/1"
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/identity-comparison.json",
+          "sha256": "276b86fd2819250e4cfe2a0829a032296ab99550f8026baee89d4e1a5c5753b4",
+          "pointer": "/records/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/records/1"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/materialsVersionBoundary"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/identityEvidenceDetermination"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeParent"
+        },
+        {
+          "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+          "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+          "pointer": "/jayceeLegacy/humanApproval"
+        }
+      ],
+      "originalReviewReferences": [
+        {
+          "path": "docs/evidence/sd2-jaycee/final-candidate-manifest.json",
+          "sha256": "e4bd7555555c402d34125300e432d20d3fdef31b5450b722c226f0befee161a8",
+          "pointer": ""
+        },
+        {
+          "path": "docs/evidence/sd2-jaycee/review.json",
+          "sha256": "252f01ca48a8fa787413565fba97c00c2a37a116bb737c4b78a6bc5f328b8dc4",
+          "pointer": ""
+        }
+      ],
+      "owner": "Codex identity/source reconciliation",
+      "trigger": "Applicable authorized identity evidence arrival or later selected formal identity reconciliation",
+      "authoritativePath": "docs/evidence/sd2-jaycee/proposals.json",
+      "nextAction": "Retain existing candidate and original mapping hold; propose exact missing proof without new reads.",
+      "identityAccepted": false
+    }
+  ],
+  "jayceePair": {
+    "comparisonCategory": "applicability/identity unresolved",
+    "decision": "Preserve two distinct candidates and their separate canonical/public IDs; do not merge the duplicate organizer names.",
+    "basis": "Legacy/current track titles and respective3.25/3.75 GPA thresholds plus distinct source routes corroborate separate same-track candidates. PRELUDE supplies historical parent/legacy support, not an explicit publisher replacement chain or a separate Montana legal sponsor.",
+    "scopeLimits": "No complete-population canonical/public-ID collision audit, current route test or formal mapping acceptance performed.",
+    "evidenceReferences": [
+      {
+        "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+        "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8",
+        "pointer": "/jayceeLegacy/identityEvidenceDetermination"
+      },
+      {
+        "path": "docs/evidence/sd2-jaycee/identity-comparison.json",
+        "sha256": "276b86fd2819250e4cfe2a0829a032296ab99550f8026baee89d4e1a5c5753b4",
+        "pointer": ""
+      }
+    ],
+    "acceptedMappings": 0
+  },
+  "acceptedMappings": 0,
+  "newStableIds": 0,
+  "SD3Started": false
+}

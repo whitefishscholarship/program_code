@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T22:05:13.949486+00:00",
+      "completedAt": "2026-10-20T22:05:52.783135+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-handoff/checks/plan.log.gz",
+      "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "logBytes": 164,
+      "logEncoding": "gzip",
+      "storedSha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "storedBytes": 143
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T22:05:52.783626+00:00",
+      "completedAt": "2026-10-20T22:05:57.433639+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-handoff/checks/typecheck.log.gz",
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "logBytes": 39,
+      "logEncoding": "gzip",
+      "storedSha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "storedBytes": 59
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T22:05:57.433771+00:00",
+      "completedAt": "2026-10-20T22:06:42.542394+00:00",
+      "exitCode": 0,
+      "logPath": "docs/evidence/sd2-control-repair-handoff/checks/tests.log.gz",
+      "logSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "logBytes": 19755,
+      "logEncoding": "gzip",
+      "storedSha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "storedBytes": 6842
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T22:06:42.542506+00:00",
+      "completedAt": "2026-10-20T22:06:43.812637+00:00",
+      "exitCode": 1,
+      "logPath": "docs/evidence/sd2-control-repair-handoff/checks/build.log.gz",
+      "logSha256": "005aad2736ed3cb410f3be9580b38b252257c537e084673522540b503fd2abd7",
+      "logBytes": 4597,
+      "logEncoding": "gzip",
+      "storedSha256": "fe86adbaf2c6733eebd9ee918325d75c3cbce010bb9ba6aeec5a264aaaaff57a",
+      "storedBytes": 1406,
+      "failureClass": "Turbopack creating process/binding port: Operation not permitted (os error1)",
+      "adjacentWarning": "Deprecated middleware file convention; defer to separately authorized application/framework maintenance."
+    }
+  ],
+  "context": "Exact unchanged required commands in permitted local execution context; no install or workaround.",
+  "requiredBuildGateRemainsOpen": true,
+  "dependencyInstallAttemptsDuringWrap": 0,
+  "allRequiredChecksPassed": false
+}

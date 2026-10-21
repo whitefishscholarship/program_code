@@ -1,0 +1,104 @@
+{
+  "outcome": "PASS",
+  "scope": "Final user-requested session closure only; no new SD2 checkpoint or rebound source review",
+  "command": [
+    "python3",
+    "docs/evidence/sd2-autonomous/checkpoint-006/verify-session-close.py",
+    "--record"
+  ],
+  "startedAt": "2026-10-14T22:17:27.525134+00:00",
+  "completedAt": "2026-10-14T22:18:00.102177+00:00",
+  "baselineBeforeCloseout": "d931b274a821cfcbf90d568e71414a356ca31ba4",
+  "reviewedCandidate": "5434035979d9465f55bd6f56fb5d042f5045ae75",
+  "localReviewReceipt": "e1f21854425e9dca7f6e285412400c82c1a418ee",
+  "originalReviewAndManifestPreserved": true,
+  "allPreCloseoutPathsPreservedExceptThreeAuthorizedHandoffPointers": 1312,
+  "allOlderPlanSupplementsAndNineAttentionRowsBytePreserved": true,
+  "oldHandoffAndPromptBytesPreserved": true,
+  "independentReviewerCompletedNoPendingRepairOrRecheck": true,
+  "twoFindingsResolvedIndependently": true,
+  "frozenInputs": 406,
+  "initialDispositions": 120,
+  "unprocessedInputs": 286,
+  "heldFields": 2262,
+  "heldIdentities": 120,
+  "factsAccepted": 0,
+  "checkpointLedgers": [
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+      "inputs": 20,
+      "heldFields": 344
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-002.json",
+      "sha256": "19b064197fc87302be79b1423a86527f03eb06fcecdd7fc81c27217a442005fb",
+      "inputs": 20,
+      "heldFields": 400
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-003.json",
+      "sha256": "2afb2153bfb645302c1257c7bb1564be37cc2360ae9f1cb0540a62dfb6297a89",
+      "inputs": 20,
+      "heldFields": 392
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-004.json",
+      "sha256": "d4070ea88b9e837d17a80b0f40244811263813ef446681356a3b7eb3f5c6fde6",
+      "inputs": 20,
+      "heldFields": 384
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-005.json",
+      "sha256": "010aca022dfc1f81942a4cb6e709f906ee63dff741dde701393a100f340e2813",
+      "inputs": 20,
+      "heldFields": 366
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-006.json",
+      "sha256": "09a61e83bddbb606e6e64e94c24d9f2312b887f95415e8259ec99ce9040d315b",
+      "inputs": 20,
+      "heldFields": 376
+    }
+  ],
+  "seedAliasDispositionOccurrences": 190,
+  "seedRoutesInheritedFromVerifiedParentRecord": 32,
+  "sourceLinkDispositionOccurrences": 720,
+  "sourceLinkRoutesInheritedFromVerifiedParentSource": 22,
+  "allOwnersTriggersNextActionsPresent": true,
+  "M1Records": 437,
+  "M1Pins": 12,
+  "temporaryCustodyHashesCurrentlyVerified": 19,
+  "selectedRenderedViewsCustodyCurrentlyVerified": 14,
+  "ClerkRawVisualProofUnavailable": true,
+  "newSourceReadOrReplay": false,
+  "newExternalEffects": false,
+  "SD3Started": false,
+  "newIssuesDisposition": {
+    "sourceReviewOmissions": "Both author-fixed/independently-rechecked; failed candidate/history preserved",
+    "outputScopeAndUnexpectedFormLapses": "Disclosed with persisted containment; next-session Codex must narrow/sanitize before permitted output and keep form facts excluded",
+    "temporaryCustodyAvailability": "Verified locally now; next evidence owner checks exact paths/hashes at next required audit or reports specific gap without reconstruction/replay",
+    "IPCAndSharedGitIndex": "Resolved via permitted execution; no remaining repair or remote effect",
+    "InitialVerificationFreezeAndAssertions": "Completed/corrected before independent source review; intermediate history preserved"
+  },
+  "limits": {
+    "standardBuild": "Both exact process/port EPERM failures open/unwaived; Codex before canonical acceptance/authorized release",
+    "freshAuthenticatedMainTarget": "Unverified; Codex at canonical acceptance/release trigger",
+    "liveWorkbookPublicSourceAuthorityNativePreservationBackupRecovery": "Not established by local research/closure",
+    "Clerk": "Raw/visual/complete official section unavailable; provider-readable200 not live byte/current offering proof",
+    "rawOriginTimingAndRevisions": "Provider windows retained; some origin times/status/version unavailable",
+    "crossHostCustody": "No permanent availability proof; check exact historical custody at required audit",
+    "humanCanonicalPublicationStudentMonitorEffects": "Original owner/trigger/gates retained"
+  },
+  "next": {
+    "owner": "Next-session Codex research/proposals",
+    "trigger": "Fresh selected session under existing AUTHORITY/POLICY",
+    "authoritativeProgressPath": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md section9",
+    "kickoffPath": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+    "offset": 120,
+    "inputKey": "saved-405588227-row-124",
+    "name": "Jean Atkinson Driggers Scholarship ($2,500)",
+    "action": "Resume one later bounded SD2 checkpoint; never initialize/reset/replay; stop beforeSD3",
+    "recommendedEffort": "High"
+  }
+}

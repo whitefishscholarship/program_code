@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "entryCommit": "7de87a35fd292f3675fce8b4ce23e1349d1eb462",
+  "branch": "codex/plan-student-data-maintenance",
+  "authority": "Direct continue after explicit next action to execute the reviewed48-field comparison; retained Kelsey delegated routine decision authority",
+  "selectedComparison": {
+    "cases": 3,
+    "savedInputOccurrences": 3,
+    "fieldEnvelopeOccurrences": 48,
+    "orderedInputs": [
+      {
+        "order": 1,
+        "displayLabel": "Ted Lund Scholarship",
+        "queueOffset": 2,
+        "savedRowLocator": 2,
+        "savedInputKey": "saved-405588227-row-2",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/2/recordedName",
+          "valueSha256": "d5a44261ae6f36052253f398493aa7e5e9c7370e3bf740d934e36c38fe9c4399"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/2",
+        "recordCanonicalSha256": "9f74c3d651e6a249af4109e78d9062551e8b9a0aba3a531b73bdec15929c59fd",
+        "publicIdCandidates": [
+          "award-577dacb8c225"
+        ],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 16,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "athleticsStatement"
+        ],
+        "sourceIds": [
+          "ted-2026"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      },
+      {
+        "order": 2,
+        "displayLabel": "Saved ADHD-labeled record",
+        "queueOffset": 3,
+        "savedRowLocator": 3,
+        "savedInputKey": "saved-405588227-row-3",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/3/recordedName",
+          "valueSha256": "188d7fd7fadffa890dacbf6e358f529997ded2099791e5d0389d0e64ee4430c5"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/3",
+        "recordCanonicalSha256": "56405ff4f86c39a10245455399f9d97dfa4305a03077ee398ec2c1523374d043",
+        "publicIdCandidates": [],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 16,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "parentDiscovery"
+        ],
+        "sourceIds": [
+          "ncld"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      },
+      {
+        "order": 3,
+        "displayLabel": "Adoption STAR Academic Scholarship",
+        "queueOffset": 4,
+        "savedRowLocator": 4,
+        "savedInputKey": "saved-405588227-row-4",
+        "recordedNameReference": {
+          "path": "docs/evidence/sd2-autonomous/queue.json",
+          "pointer": "/records/4/recordedName",
+          "valueSha256": "ca5cebbfebe7e84db7515df713d5fbd390e17f2e751badffb4937f4005a29141"
+        },
+        "packetPath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "packetSha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "recordPointer": "/records/4",
+        "recordCanonicalSha256": "3bbfbfc484f455f20638dbafc16ac3c3cba15c8d9000ee505b0ecfb3ee6d9676",
+        "publicIdCandidates": [
+          "award-2a22470d390c"
+        ],
+        "identityAcceptance": "held",
+        "fieldContainer": "fieldProposals",
+        "fieldEnvelopeOccurrences": 16,
+        "orderedFieldNames": [
+          "amount",
+          "minimumGPA",
+          "gpaBasis",
+          "schoolType",
+          "residency",
+          "membership",
+          "needRequirement",
+          "needPriority",
+          "renewability",
+          "gapYears",
+          "deadline",
+          "applicationWindow",
+          "cycle",
+          "applicationMethod",
+          "materials",
+          "eligibility"
+        ],
+        "sourceIds": [
+          "adoption"
+        ],
+        "originalRoute": {
+          "owner": "Codex research/proposals",
+          "trigger": "continue allowed official evidence reconciliation; current cycle/identity/conflict proof becomes available",
+          "authoritativePath": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+          "nextAction": "retain field-level holds; process the remaining frozen SD2 queue without routine human approval"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "sourceId": "ted-2026",
+        "registryPointer": "/sourceRegistry/17",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ted-2026.md",
+        "artifactSha256": "5feebf6ba8dc3141f9b2fd6872cd5b18aad0a459e3b2d4c9daefcf4112521ad6",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/17/extractionLimits"
+      },
+      {
+        "sourceId": "ncld",
+        "registryPointer": "/sourceRegistry/1",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/ncld.md",
+        "artifactSha256": "77579b0fe567ad56e4c649ad644ba8f4a2b8cff0c667daa78e2d79efae194cbd",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/1/extractionLimits"
+      },
+      {
+        "sourceId": "adoption",
+        "registryPointer": "/sourceRegistry/2",
+        "artifactPath": "docs/evidence/sd2-autonomous/sources/adoption.md",
+        "artifactSha256": "97d1558cfae1f65f654456d974b7eda96b2359cf82fe6a4bfdea43271c42f829",
+        "sourceRevision": null,
+        "sourceLimitsPointer": "/sourceRegistry/2/extractionLimits"
+      }
+    ],
+    "proposedOutputDirectory": "docs/evidence/sd2-autonomous/reconciliation-batch-002",
+    "allFactsAndIdentitiesRemainHeld": true
+  },
+  "proposalPins": [
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-002/PROPOSAL.md",
+      "sha256": "c1e700ed154a2a179317e1e969889813af18ca0bc436d864f2fd466c02485744"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-002/scope.json",
+      "sha256": "70aa0f25d1dc5049199b3e8768850161c4b1bbd4fe668276bcd991aef12dc337"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-002/final-manifest.json",
+      "sha256": "b4bbe596efc399362a96134e319d9f6f320381218127f06cb86ec1fb0e0f8d4d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-proposal-002/review.json",
+      "sha256": "47dc37b828974b7e112a1159b8dae17b9036e001143d7418b5763a80c0feaa08"
+    }
+  ],
+  "savedEvidencePins": [
+    {
+      "path": "docs/evidence/sd2-autonomous/queue.json",
+      "sha256": "d6c8bf0fdbc1cce2dd02d85e28cf8e0321a415548227e02bdae7841aa9450f43"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+      "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/PRELUDE.json",
+      "sha256": "0339bfa8b6261cec11aa56d3a023e2141124d5a657acd44aad6d03d24d5f5ef8"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/AUTHORITY.md",
+      "sha256": "73bab6025b438d09b263605d70f1674ff54601ea7eeacfeda2b4813a3756b3d0"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/POLICY.md",
+      "sha256": "6135c3950190d9983fce5eca7eb27d2a9676299fbcede912c7a562e02357d6f7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/native-receipts.json",
+      "sha256": "303a21645274402fc4702fe14805239b922e3f4e096454d017fb049f2afd4c54"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-manifest.json",
+      "sha256": "c65d859a32b19dd2ecec3c260f7a4a8cb806fb4e6dc2bd84ff853a8b01deb65e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-review.json",
+      "sha256": "6898af3358a3ad2eebedc0c2858b041fc2bd3541fb6a4c3946899e8c696eb413"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-manifest-round1.json",
+      "sha256": "0abc85a2cd377a7ea029d41ef4bfba4080a4adb54d266ef9b50a2f7d4ce887b6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-review-round1.json",
+      "sha256": "03515a01dfbd1485fc4abc55fa3f34128ea8035a3ccfe44d57c22512c69666f2"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/research-dispositions.json",
+      "sha256": "c25e578d0840307a956be8ffbee041b519d9bc843f651fbaf9e9970014f2e89c"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/SESSION_WRAP.md",
+      "sha256": "b2530b454a85cb92ad1563d70baf9d0dc0da24af0554fd5d4d0ac8e893444fc8"
+    },
+    {
+      "path": "docs/evidence/sd1/pilot.json",
+      "sha256": "f5385924f74f07887a32e02ab7095bef5dc4d3f30c6e19d0f8489409f4aecbc1"
+    },
+    {
+      "path": "docs/evidence/sd1/review.json",
+      "sha256": "85f6dfdef803595999efc3a17d38eaec93aa6374054f31feaa5aa747b2cc21d7"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-pilot-001/AUTHORITY.md",
+      "sha256": "763f12811f2fd614e63964243d79c12c058b366620f37d39bdbe05ea4810586e"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-pilot-001/selection.json",
+      "sha256": "22a01f9ec919defa8779ebe6ed6b9ea82baade1966465491e9cbcfcee6805cfe"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-pilot-001/README.md",
+      "sha256": "2973552ce7bf174106564d69c98751fa4a59c86b56d4cc0b2bc65f71fc5a840d"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-pilot-001/final-manifest.json",
+      "sha256": "5049c08f1d9d0f7f6d5377189a3fea97f0510208ae391fd698d43564d841c784"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/consolidation-pilot-001/review.json",
+      "sha256": "d0e5dd78ed5d2bb757eb0e7dc40fd5ce60fb0a84c872f418ed83db3a547a117f"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ted-2026.md",
+      "sha256": "5feebf6ba8dc3141f9b2fd6872cd5b18aad0a459e3b2d4c9daefcf4112521ad6"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/ncld.md",
+      "sha256": "77579b0fe567ad56e4c649ad644ba8f4a2b8cff0c667daa78e2d79efae194cbd"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/sources/adoption.md",
+      "sha256": "97d1558cfae1f65f654456d974b7eda96b2359cf82fe6a4bfdea43271c42f829"
+    }
+  ],
+  "executionSelected": true,
+  "allFactsAndIdentitiesRemainHeld": true,
+  "newSourceOrWorkbookReads": 0,
+  "acceptedFacts": 0,
+  "canonicalAcceptance": false,
+  "SD3Started": false,
+  "externalEffects": false
+}

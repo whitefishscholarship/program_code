@@ -1,0 +1,95 @@
+{
+  "outcome": "PASS",
+  "scope": "Prospective proposal007 preparation only; no comparison execution, fact acceptance, canonical acceptance or release",
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [],
+  "dispositions": [],
+  "reviewer": "/root/sd2_proposal007_review",
+  "freshContext": true,
+  "authoredOrEditedCandidate": false,
+  "binding": {
+    "entryCommit": "4c70ed280aa76090369541bf9e9e6be9a8e983ec",
+    "candidateCommit": "48c60e07c05bd5ad856c112916eac91187c699cc",
+    "candidateTree": "9f1ee494f28f10b4ca2717f1eb3edb85d013502d",
+    "manifestSha256": "ec5edd7e3c0757eb65b5695b11a96616c3edb72b2a9859f52518f0e3e49f5a1c",
+    "completeDiffBytes": 75813,
+    "completeDiffSha256": "ed4e844555247d4e7fcfd8524c4a4a0e4ad2dd6da8199f3c2a3fe6ec2a970fa3",
+    "changedPathCount": 18
+  },
+  "checks": [
+    {
+      "name": "Independent candidate and manifest binding",
+      "outcome": "PASS",
+      "details": "Verified HEAD, candidate tree, complete entry-to-candidate binary diff, exact changed-path set, and every changed blob, mode, byte count, SHA256 and working-file equality."
+    },
+    {
+      "name": "Predecessor receipt and fresh entry",
+      "outcome": "PASS",
+      "details": "Verified batch006 matching PASS review, manifest digest, candidate tree and complete diff, and exact direct-child two-file receipt at proposal007 entry. Fresh entry-audit records successful unchanged batch006 --review-bound verification before new proposal paths."
+    },
+    {
+      "name": "Current proposal verifier",
+      "outcome": "PASS",
+      "command": "python3 docs/evidence/sd2-autonomous/consolidation-proposal-007/verify.py",
+      "exitCode": 0,
+      "startedAt": "2026-10-19T16:11:19.185732+00:00",
+      "completedAt": "2026-10-19T16:11:19.763306+00:00",
+      "details": "Preserved 2505 entry files, modes, historical reviews and three append-only handoffs. Confirmed no reconciliation-batch-007 directory or executed comparison."
+    },
+    {
+      "name": "Exact prospective scope",
+      "outcome": "PASS",
+      "details": "Saved locators 17,19,20 correspond to queue offsets 17,18,19 and 18+18+17=53 held envelopes. Verified packet, record and queue-name hashes, ordered fields, existing candidate IDs, original routes, seven source references and source affinity. No overlap with earlier batch selections."
+    },
+    {
+      "name": "Prospective semantic boundaries",
+      "outcome": "PASS",
+      "details": "Odd maximum GPA3.0, scoped nonmembership, 3+/1+ recipient minima and stage variants remain unresolved. RHM2000 child preserves 50 slots, Montana-HS graduation, completed FAFSA and half-time accredited Montana institution/program without residency, need or upload substitution. Servant preserves one500 slot, HS senior, FFA, GPA2.0, copied AMTOPP annotation drift and shared-FAQ separation. Historical/shared dates, rubric basis and materials do not establish current child rules."
+    },
+    {
+      "name": "Preservation and coverage",
+      "outcome": "PASS",
+      "details": "353 existing compared-field occurrences remain unchanged. Proposal adds zero comparisons; separately selected execution would produce 406 field occurrences across20 autonomous plus2 prior Jaycee inputs, leaving386 autonomous inputs outside comparison. Initial research remains406/406, cursor406, nextnull,7406 field holds and406 identity holds. Original route, attention, supplement, M1 and custody receipts remain byte-preserved without renewed availability claims."
+    },
+    {
+      "name": "Application validation evidence",
+      "outcome": "BLOCKED_ENVIRONMENT",
+      "details": "All four actual recorded commands exited127: plan:check and tests missing tsx; typecheck missing tsc; build missing next. Verified raw and normalized logs, hashes, sizes, commands and receipt consistency. requiredChecksRemainUnfulfilled remains true. No application suite or build PASS is claimed."
+    },
+    {
+      "name": "Complete diff whitespace",
+      "outcome": "PASS",
+      "details": "git diff --check passed for the immutable entry-to-candidate range and current entry-to-worktree range."
+    }
+  ],
+  "reviewProcessIncidents": [
+    {
+      "kind": "truncated-governance-output",
+      "description": "Two combined governance reads exceeded output limits. They contained governance and handoff material, not envelope/source dumps. Relevant governing sections were subsequently read in bounded chunks.",
+      "owner": "Independent reviewer evidence governance",
+      "trigger": "Before subsequent governance output",
+      "nextAction": "Use bounded relevant sections and explicit output budgets; retain this disclosure without claiming truncated output established completeness."
+    },
+    {
+      "kind": "overbroad-reviewer-keyword-output",
+      "description": "A saved-source keyword read output repeated rubric scoring rows for4.0, duplicated a same-text child statement match and historical shared-material paragraphs. It did not output a complete source, FAQ annex, registry, biography, neighboring heading or unrelated award title.",
+      "owner": "Independent reviewer evidence/source governance",
+      "trigger": "Before every later source preview",
+      "nextAction": "Preselect the exact input/source/field sentence before output. Preserve this incident; do not infer complete source inspection, current child applicability or independent corroboration."
+    }
+  ],
+  "limits": [
+    "Scoped PASS accepts only the completed prospective proposal. Kelsey must directly select its exact53-field scope before execution.",
+    "All53 envelopes and three identities remain held; zero facts or mappings accepted.",
+    "No network, workbook, raw/native access, comparison execution, assembler, application command, dependency installation, older-verifier execution, mutation, staging or commit was performed by this reviewer.",
+    "All four application gates remain unfulfilled; historical process/port EPERM and authenticated current-main/target gates remain open. Codex validation/governance/delivery owns unchanged checks in a permitted supporting environment before canonical acceptance or authorized release.",
+    "Original source, custody, history, preservation, recovery, human, publication, student, M1, SD5 and external-effect owners and triggers remain operative.",
+    "No current offering,2027 cycle, public/native/visual completeness, source silence or renewed temporary custody availability is established.",
+    "Full SD2 remains incomplete. Stop before SD3."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "documentation closeout plan validation only; no new stage acceptance",
+  "recordedAt": {
+    "current_time": "2026-10-14 17:57:40 UTC"
+  },
+  "initial": {
+    "startedAt": {
+      "current_time": "2026-10-14 17:35:09 UTC"
+    },
+    "toolResult": {
+      "chunk_id": "019dba",
+      "wall_time_seconds": 0,
+      "exit_code": 1,
+      "original_token_count": 250,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\nnode:net:1918\n      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);\n                    ^\n\nError: listen EPERM: operation not permitted /var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/84180.pipe\n    at Server.setupListenHandle [as _listen2] (node:net:1918:21)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2119:5)\n    at file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31537\n    at new Promise (<anonymous>)\n    at createIpcServer (file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:53:31515)\n    at async file:///private/tmp/program_code-student-data-maintenance-plan/web/node_modules/tsx/dist/cli.mjs:55:459 {\n  code: 'EPERM',\n  errno: -1,\n  syscall: 'listen',\n  address: '/var/folders/my/yj0xxq9170v56wjvdxl7znyr0000gn/T/tsx-501/84180.pipe',\n  port: -1\n}\n\nNode.js v22.20.0\n"
+    }
+  },
+  "permittedRetry": {
+    "startedAt": {
+      "current_time": "2026-10-14 17:35:13 UTC"
+    },
+    "toolResult": {
+      "chunk_id": "8dd053",
+      "wall_time_seconds": 1.00206675,
+      "session_id": 81422,
+      "original_token_count": 16,
+      "output": "\n> web@0.1.0 plan:check\n> tsx scripts/validate-build-plan.ts\n\n"
+    }
+  },
+  "completion": {
+    "chunk_id": "d44321",
+    "wall_time_seconds": 0.000013584,
+    "exit_code": 0,
+    "original_token_count": 26,
+    "output": "Build-plan validation passed for 13 ordered stage contracts and the current machine-state transition.\n"
+  },
+  "outcome": "PASS-observed",
+  "exitCode": 0,
+  "limit": "Completion output confirms validator PASS; preserve any absent provider exit field as null, not an invented exit status. Original full validation matrix remains pinned separately."
+}

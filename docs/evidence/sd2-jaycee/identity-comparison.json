@@ -1,0 +1,250 @@
+{
+  "scope": "local comparison of existing canonical/public identities only",
+  "observedAt": "2026-10-13T18:26:59.147Z",
+  "records": [
+    {
+      "existingPublicId": "award-67de97a4f446",
+      "existingCanonicalId": "sch_67de97a4f446d534a1471806d784dc2bd79e16a5837a0d2f3ac3bef57d2df681",
+      "existingCanonicalName": "Montana Jaycee Foundation Scholarship",
+      "existingCanonicalSourceIds": [
+        "src_859375501363ede64154323ba92576cef87ec55edbf2a6c55d1e33ec8f45d8a8",
+        "src_f5d04be138aeba46df031d1f98624c1b446584ce86e89be399b459a32d007a6e"
+      ],
+      "currentRecordedAppAward": {
+        "publicId": "award-67de97a4f446",
+        "name": "Montana Jaycee Foundation Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "National",
+          "minimumGpa": 3.25,
+          "schoolTypes": [
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": "1/12/2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Paper or counselor-provided application",
+          "url": "https://docs.google.com/document/d/1evWdypsUxPJNAV0x5fv5l_kxknsEx68G/edit",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-859375501363",
+          "source-f5d04be138ae"
+        ]
+      },
+      "priorPublishedAward": {
+        "publicId": "award-67de97a4f446",
+        "name": "Montana Jaycee Foundation Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "$1,000",
+          "minimum": 1000,
+          "maximum": 1000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "National",
+          "minimumGpa": 3.25,
+          "schoolTypes": [
+            "trade"
+          ],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": "1/12/2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Paper or counselor-provided application",
+          "url": "https://docs.google.com/document/d/1evWdypsUxPJNAV0x5fv5l_kxknsEx68G/edit",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-859375501363",
+          "source-f5d04be138ae"
+        ]
+      },
+      "currentSourceAliases": [
+        {
+          "publicId": "source-859375501363",
+          "title": "docs.google.com",
+          "recordType": "source",
+          "architecture": "document_or_pdf",
+          "url": "https://docs.google.com/document/d/1evWdypsUxPJNAV0x5fv5l_kxknsEx68G/edit",
+          "access": "public",
+          "availability": "unknown",
+          "awardCount": 1
+        },
+        {
+          "publicId": "source-f5d04be138ae",
+          "title": "usjcisenate.org",
+          "recordType": "source",
+          "architecture": "unknown",
+          "url": "https://www.usjcisenate.org/index.php/scholarship-program",
+          "access": "public",
+          "availability": "unknown",
+          "awardCount": 2
+        }
+      ],
+      "proposedInputLocator": 40,
+      "identityState": "held",
+      "binding": "candidate only: matching recorded name, GPA and destination scope corroborate; changed route/version and Montana relationship are unresolved",
+      "sourceReadPolicy": "All older workbook-derived data used only for identity provenance, never current fact evidence. No older URL fetched."
+    },
+    {
+      "existingPublicId": "award-e05338ef963f",
+      "existingCanonicalId": "sch_e05338ef963fa531412a774d999f7d1e82dc6ccc4251f5e72712805051fb80e7",
+      "existingCanonicalName": "Montana Jaycee Foundation Scholarship",
+      "existingCanonicalSourceIds": [
+        "src_6efdd7a6462efa17f0b7ae0fd3d92c2a405b74fca629fb73e0d9a3bbe4931016",
+        "src_f5d04be138aeba46df031d1f98624c1b446584ce86e89be399b459a32d007a6e"
+      ],
+      "currentRecordedAppAward": {
+        "publicId": "award-e05338ef963f",
+        "name": "Montana Jaycee Foundation Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Up to $2,000",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "National",
+          "minimumGpa": 3.75,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": "1/12/2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Paper or counselor-provided application",
+          "url": "https://docs.google.com/document/d/1GfJDfvJOu9X-GTY90v8_DxdasLiGNawp/edit",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6efdd7a6462e",
+          "source-f5d04be138ae"
+        ]
+      },
+      "priorPublishedAward": {
+        "publicId": "award-e05338ef963f",
+        "name": "Montana Jaycee Foundation Scholarship",
+        "summary": null,
+        "amount": {
+          "label": "Up to $2,000",
+          "minimum": 2000,
+          "maximum": 2000,
+          "currency": "USD",
+          "state": "known"
+        },
+        "eligibility": {
+          "audience": "National",
+          "minimumGpa": 3.75,
+          "schoolTypes": [],
+          "focus": null
+        },
+        "cycle": {
+          "status": "unknown",
+          "label": "Availability not verified",
+          "year": null,
+          "opens": null,
+          "closes": "1/12/2026",
+          "recurrence": "unknown"
+        },
+        "application": {
+          "mode": "offline",
+          "label": "Paper or counselor-provided application",
+          "url": "https://docs.google.com/document/d/1GfJDfvJOu9X-GTY90v8_DxdasLiGNawp/edit",
+          "groupPublicId": null,
+          "supplements": "unknown"
+        },
+        "sourcePublicIds": [
+          "source-6efdd7a6462e",
+          "source-f5d04be138ae"
+        ]
+      },
+      "currentSourceAliases": [
+        {
+          "publicId": "source-6efdd7a6462e",
+          "title": "docs.google.com",
+          "recordType": "source",
+          "architecture": "document_or_pdf",
+          "url": "https://docs.google.com/document/d/1GfJDfvJOu9X-GTY90v8_DxdasLiGNawp/edit",
+          "access": "public",
+          "availability": "unknown",
+          "awardCount": 1
+        },
+        {
+          "publicId": "source-f5d04be138ae",
+          "title": "usjcisenate.org",
+          "recordType": "source",
+          "architecture": "unknown",
+          "url": "https://www.usjcisenate.org/index.php/scholarship-program",
+          "access": "public",
+          "availability": "unknown",
+          "awardCount": 2
+        }
+      ],
+      "proposedInputLocator": 68,
+      "identityState": "held",
+      "binding": "candidate only: matching recorded name, GPA and destination scope corroborate; changed route/version and Montana relationship are unresolved",
+      "sourceReadPolicy": "All older workbook-derived data used only for identity provenance, never current fact evidence. No older URL fetched."
+    }
+  ],
+  "comparedArtifacts": [
+    {
+      "path": "docs/evidence/P1-inventory.json",
+      "sha256": "3f7dda3cd9d2946a42e8dec16e5a4d3b6240218eda8b4fee0cb42fc7b32aec6a"
+    },
+    {
+      "path": "docs/evidence/P1-manifest.json",
+      "sha256": "0712c6ff782285ce4fdb933cebfa7797a7b5f10184a3974017896c0d3df76a60"
+    },
+    {
+      "path": "web/fixtures/p7/student-catalog.json",
+      "sha256": "35d7836432747710e3515010e8548ceb20ef270a9896d1f1b14c7c91693e9841"
+    },
+    {
+      "path": "web/fixtures/r3/catalog-v1.json",
+      "sha256": "9a4f8c8c0e3990fcaa182f52595710ee0404c11572f69512b4254bb0f6b72908"
+    }
+  ],
+  "preservedExistingIds": true,
+  "newIdentitySeedsAllocated": 0,
+  "acceptedMappings": 0,
+  "completeCanonicalCollisionReconciliation": false
+}

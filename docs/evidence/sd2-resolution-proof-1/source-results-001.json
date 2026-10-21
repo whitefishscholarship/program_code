@@ -1,0 +1,541 @@
+{
+  "records": [
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-000d841ae42c1c9d46e4",
+      "order": 1,
+      "exactLocatorSha256": "000d841ae42c1c9d46e413e8b5ea9ccf34e6a7e6a134c30754cbf8ddd680ff91",
+      "host": "www.umt.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-376"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-376#application",
+        "saved-405588227-row-376#eligibility",
+        "saved-405588227-row-376#identityObservation",
+        "saved-405588227-row-376#materials"
+      ],
+      "startedAt": "2026-10-20T18:32:36.198Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "3e83e73801ab68bcc729f20f27de4453e54e4d4fae2fbab5f9e5b562a3cdc31a",
+      "returnedEnvelopeBytes": 3159,
+      "outcome": "held_provider_error",
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "completedAt": "2026-10-20T18:32:36.751Z",
+      "initialRequestRejectionPreserved": true
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-001f11e34746535833cb",
+      "order": 2,
+      "exactLocatorSha256": "001f11e34746535833cb5c948c2bdcb525dc7621881a274f012d35b446fbd128",
+      "host": "lineworker.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-275"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-275#eligibility",
+        "saved-405588227-row-275#identityObservation",
+        "saved-405588227-row-275#materials"
+      ],
+      "startedAt": "2026-10-20T18:32:36.198Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "d247a510f6d472ecffadb2941181b1c7c2834a39f22ccd01cb2dd2df7a067b31",
+      "returnedEnvelopeBytes": 3159,
+      "outcome": "held_provider_error",
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "completedAt": "2026-10-20T18:32:36.399Z",
+      "initialRequestRejectionPreserved": true
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0030dc6deda8cdd8ca2c",
+      "order": 4,
+      "exactLocatorSha256": "0030dc6deda8cdd8ca2cfcd9b0000f0618fb61eda46f7dd0199f2ca014dab60b",
+      "host": "foldsofhonor.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-338"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-338#application",
+        "saved-405588227-row-338#cycle",
+        "saved-405588227-row-338#identityObservation",
+        "saved-405588227-row-338#materials",
+        "saved-405588227-row-338#reapplication"
+      ],
+      "startedAt": "2026-10-20T18:32:36.198Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "5f0b1e5cb474cc1f80c02f0bd7110cbdf792d2130cbfbcb6f6d63009805fe3ac",
+      "returnedEnvelopeBytes": 3159,
+      "outcome": "held_provider_error",
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "completedAt": "2026-10-20T18:32:36.560Z",
+      "initialRequestRejectionPreserved": true
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-01061a6b33be02787ece",
+      "order": 5,
+      "exactLocatorSha256": "01061a6b33be02787ece04416bb0f287603446675c8218ff613829930bdf4f9e",
+      "host": "www.ngpa.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-175",
+        "saved-405588227-row-176",
+        "saved-405588227-row-177",
+        "saved-405588227-row-178",
+        "saved-405588227-row-179",
+        "saved-405588227-row-180",
+        "saved-405588227-row-181",
+        "saved-405588227-row-182",
+        "saved-405588227-row-183",
+        "saved-405588227-row-184",
+        "saved-405588227-row-185",
+        "saved-405588227-row-186",
+        "saved-405588227-row-187",
+        "saved-405588227-row-188",
+        "saved-405588227-row-189"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-175#cycle",
+        "saved-405588227-row-175#materials",
+        "saved-405588227-row-176#cycle",
+        "saved-405588227-row-176#materials",
+        "saved-405588227-row-177#cycle",
+        "saved-405588227-row-177#materials",
+        "saved-405588227-row-178#cycle",
+        "saved-405588227-row-178#materials",
+        "saved-405588227-row-179#cycle",
+        "saved-405588227-row-179#materials",
+        "saved-405588227-row-180#cycle",
+        "saved-405588227-row-180#materials",
+        "saved-405588227-row-181#cycle",
+        "saved-405588227-row-181#materials",
+        "saved-405588227-row-182#cycle",
+        "saved-405588227-row-182#materials",
+        "saved-405588227-row-183#cycle",
+        "saved-405588227-row-183#materials",
+        "saved-405588227-row-184#cycle",
+        "saved-405588227-row-184#materials",
+        "saved-405588227-row-185#cycle",
+        "saved-405588227-row-185#materials",
+        "saved-405588227-row-186#cycle",
+        "saved-405588227-row-186#materials",
+        "saved-405588227-row-187#cycle",
+        "saved-405588227-row-187#materials",
+        "saved-405588227-row-188#cycle",
+        "saved-405588227-row-188#materials",
+        "saved-405588227-row-189#cycle",
+        "saved-405588227-row-189#materials"
+      ],
+      "startedAt": "2026-10-20T18:32:36.198Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "173352432385bae42b4220fa50c3fd9a90041c720172bc84acc9523f0409eaeb",
+      "returnedEnvelopeBytes": 3159,
+      "outcome": "held_provider_error",
+      "providerErrorCode": "INVALID_ARGUMENT",
+      "completedAt": "2026-10-20T18:32:37.209Z",
+      "initialRequestRejectionPreserved": true
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-045efadb26cab1da7892",
+      "order": 6,
+      "exactLocatorSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "host": "www.asianpilots.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-240",
+        "saved-405588227-row-241"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-240#applicationMethod",
+        "saved-405588227-row-240#cycle",
+        "saved-405588227-row-240#identityObservation",
+        "saved-405588227-row-241#applicationMethod",
+        "saved-405588227-row-241#cycle",
+        "saved-405588227-row-241#eligibility",
+        "saved-405588227-row-241#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:33:53.167Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [],
+      "rejectedQuoteCounts": {},
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "b49e3e729f008c4cb05dbc932502a5717c6f3d9b2e37840935dc2b4fb0efc8e5",
+      "returnedEnvelopeBytes": 14403,
+      "sourceMarkdownSha256": "08a0dca6b3f583be18cd64a7d7388a75215e1b5860aece6004e2396f368e1d07",
+      "sourceMarkdownBytes": 3885,
+      "httpStatus": 200,
+      "returnedUrlSha256": "045efadb26cab1da7892990166c9ff815d6654935cca68ae67ff5958dc2c8394",
+      "returnedHost": "www.asianpilots.org",
+      "outcome": "held_named_program_identity_unclear",
+      "completedAt": "2026-10-20T18:33:53.179Z",
+      "initialRequestRejectionPreserved": true
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-056965468430d391f5e4",
+      "order": 8,
+      "exactLocatorSha256": "056965468430d391f5e45a20d105258343d12c4a471d2046cfb8221dbb868cb0",
+      "host": "www.dawson.edu",
+      "affectedSavedInputs": [
+        "saved-405588227-row-86"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-86#applicationMethod",
+        "saved-405588227-row-86#eligibility",
+        "saved-405588227-row-86#identityContinuity",
+        "saved-405588227-row-86#materials",
+        "saved-405588227-row-86#residency",
+        "saved-405588227-row-86#schoolType"
+      ],
+      "startedAt": "2026-10-20T18:34:08.178Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Dawson Promise Endowed Scholarship",
+          "purpose": "application_route",
+          "scope": "named_program",
+          "exactQuoteSha256": "b5c714c06b13c4e457f629571984c57bb3843176388678a6a68d521d6cb59b36",
+          "matchOffset": 2032,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2,
+        "identity_or_scope": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "31938788300203aabe4158be59d740801f67bc2d02dc246a3361d3866e92902a",
+      "returnedEnvelopeBytes": 18230,
+      "sourceMarkdownSha256": "25636db0a86fe1d775d84d49e0082cc1e699e13fc35e7e9e524f58da9cfe1d6f",
+      "sourceMarkdownBytes": 5122,
+      "httpStatus": 200,
+      "returnedUrlSha256": "056965468430d391f5e45a20d105258343d12c4a471d2046cfb8221dbb868cb0",
+      "returnedHost": "www.dawson.edu",
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:34:46.217Z"
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-068b268a18d9f73f4740",
+      "order": 11,
+      "exactLocatorSha256": "068b268a18d9f73f4740c8e0cb95f508bef646ef9a3cea3ff824dd94abd1b385",
+      "host": "www.allamericanpestcontrol.com",
+      "affectedSavedInputs": [
+        "saved-405588227-row-379"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-379#application",
+        "saved-405588227-row-379#cycle",
+        "saved-405588227-row-379#eligibility",
+        "saved-405588227-row-379#identityObservation",
+        "saved-405588227-row-379#materials"
+      ],
+      "startedAt": "2026-10-20T18:34:08.178Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "All-American Pest Control STEAM Trailblazer Scholarship",
+          "purpose": "cycle_deadline",
+          "scope": "named_program",
+          "exactQuoteSha256": "1a3f5aa6a189b3f1431823088c401ff7826b3a2fa6104c51cb7d5fefbb56ae8c",
+          "matchOffset": 5329,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        },
+        {
+          "program": "All-American Pest Control STEAM Trailblazer Scholarship",
+          "purpose": "eligibility",
+          "scope": "named_program",
+          "exactQuoteSha256": "46bf6dac84f7338d971725a4506a870cf3bbc83b32984900d2b13ebf0d712ded",
+          "matchOffset": 5574,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "4cdae8c0291629f4241e347363353b5a59951f1a483925f527203dd3d27fed9e",
+      "returnedEnvelopeBytes": 28423,
+      "sourceMarkdownSha256": "7672cbb8539036ef1b4759c874a471be3762540976d3a96b6d2bdd43e7d1dece",
+      "sourceMarkdownBytes": 10845,
+      "httpStatus": 200,
+      "returnedUrlSha256": "068b268a18d9f73f4740c8e0cb95f508bef646ef9a3cea3ff824dd94abd1b385",
+      "returnedHost": "www.allamericanpestcontrol.com",
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:34:55.850Z"
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-07d061a4d9a481d32eaf",
+      "order": 15,
+      "exactLocatorSha256": "07d061a4d9a481d32eaf53aaa0e4ae39f123894143d1e14ba8c8418f1f10ea20",
+      "host": "bold.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-265"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-265#applicantStage",
+        "saved-405588227-row-265#application",
+        "saved-405588227-row-265#cycle",
+        "saved-405588227-row-265#eligibility",
+        "saved-405588227-row-265#identityObservation",
+        "saved-405588227-row-265#materials"
+      ],
+      "startedAt": "2026-10-20T18:34:08.178Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "Bulkthreads.com's \"Let's Aim Higher\" Scholarship",
+          "purpose": "eligibility",
+          "scope": "named_program",
+          "exactQuoteSha256": "93ca2d47ce8b07f974ce4383aa21a9a70b8986569b6a3c36640d9cf87ecdb750",
+          "matchOffset": 1337,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 2,
+        "not_material_program_clause": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "850c40c81f8e8e809d4caea9226e35ab19bf120c1986141e88278eca119b14a2",
+      "returnedEnvelopeBytes": 34922,
+      "sourceMarkdownSha256": "5e4006d989a973b2b74cbbf9acbc006cb5056a8d90c1940be0a7d95796e122cc",
+      "sourceMarkdownBytes": 13551,
+      "httpStatus": 200,
+      "returnedUrlSha256": "07d061a4d9a481d32eaf53aaa0e4ae39f123894143d1e14ba8c8418f1f10ea20",
+      "returnedHost": "bold.org",
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:34:37.038Z"
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-0ca56b1a92eea05539af",
+      "order": 18,
+      "exactLocatorSha256": "0ca56b1a92eea05539af6d4172a2de7d33dac00a84fb5f224e105181dbd3f494",
+      "host": "nths.org",
+      "affectedSavedInputs": [
+        "saved-405588227-row-342"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-342#application",
+        "saved-405588227-row-342#eligibility",
+        "saved-405588227-row-342#identityObservation"
+      ],
+      "startedAt": "2026-10-20T18:34:08.178Z",
+      "explicitRemoteCalls": 1,
+      "attempts": 1,
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "excerpts": [
+        {
+          "program": "NTHS TechForce Scholarship",
+          "purpose": "eligibility",
+          "scope": "named_program",
+          "exactQuoteSha256": "3ba9090829a380c85a1820ae2a3cf945aa920069b2d59c4083653e88b96e6271",
+          "matchOffset": 2415,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        },
+        {
+          "program": "NTHS TechForce Scholarship",
+          "purpose": "application_route",
+          "scope": "named_program",
+          "exactQuoteSha256": "0ba36334f276d468c504fd8819b86a8631677e3d93eef224ea1d830ae1d493e7",
+          "matchOffset": 2568,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        },
+        {
+          "program": "NTHS TechForce Scholarship",
+          "purpose": "application_route",
+          "scope": "named_program",
+          "exactQuoteSha256": "ed39086326ec5bf6444706bdfd882d7453575c5db812dde7abcacb329b5f858e",
+          "matchOffset": 2686,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        }
+      ],
+      "rejectedQuoteCounts": {
+        "not_exact_bounded_quote": 1
+      },
+      "currentOfferingEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "returnedEnvelopeSha256": "7c61b60130e136ca8edb43b0e52b053a4e038a2368dc87d5dfa1295ef28a00e9",
+      "returnedEnvelopeBytes": 17274,
+      "sourceMarkdownSha256": "65de213c763044739fec3225336c3fd1d576c48524be8a27402ccee56583f1ad",
+      "sourceMarkdownBytes": 5613,
+      "httpStatus": 200,
+      "returnedUrlSha256": "0ca56b1a92eea05539af6d4172a2de7d33dac00a84fb5f224e105181dbd3f494",
+      "returnedHost": "nths.org",
+      "outcome": "held_with_new_selected_program_excerpts",
+      "completenessLimit": "Selected main-content excerpts only; no source-silence, full-page/native/visual/current/public-origin or fact-acceptance claim. Unlisted links remain outside scope.",
+      "completedAt": "2026-10-20T18:34:28.361Z"
+    },
+    {
+      "schemaVersion": 1,
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "order": 9,
+      "host": "drive.google.com",
+      "exactLocatorSha256": "065aafdaf3e2b20cb29bad54f24fd8187646827d4e1a2729c5b2678fa4693ccc",
+      "affectedSavedInputs": [
+        "saved-405588227-row-57"
+      ],
+      "materialProofGaps": [
+        "saved-405588227-row-57#identityContinuity",
+        "saved-405588227-row-57#materials"
+      ],
+      "startedAt": "2026-10-20T18:35:21.185Z",
+      "explicitRemoteCalls": 2,
+      "attempts": 1,
+      "excerpts": [
+        {
+          "programs": [
+            "Glacier Medical Associates Scholarship Application"
+          ],
+          "purpose": "selected_native_material_clause",
+          "scope": "named_document_identity_still_held",
+          "exactQuoteSha256": "13a2b77a28ff6d5e2dc57e48fa3788ff828fb69e7eae725a5147442e6db9fbaa",
+          "matchOffset": 0,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        },
+        {
+          "programs": [
+            "Glacier Medical Associates Scholarship Application"
+          ],
+          "purpose": "selected_native_material_clause",
+          "scope": "named_document_identity_still_held",
+          "exactQuoteSha256": "93f6e7814348d7a23eab6cc8b1975e76400a5837010bbff866c4838a6d4cb203",
+          "matchOffset": 51,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        },
+        {
+          "programs": [
+            "Glacier Medical Associates Scholarship Application"
+          ],
+          "purpose": "selected_native_material_clause",
+          "scope": "named_document_identity_still_held",
+          "exactQuoteSha256": "d0735e5b79d8aa3b3962db10fc3ef8ffc3aaf285c7a5d993fa3430b7cbd8de6d",
+          "matchOffset": 1210,
+          "proposedEvidenceOnly": true,
+          "completeRuleEstablished": false,
+          "excerptQuarantined": true,
+          "quarantineReason": "Interim privacy/affinity review; hash-only retention until independent-safe material proof is established."
+        }
+      ],
+      "allOriginalHoldsRetained": true,
+      "factsAccepted": 0,
+      "mappingsAccepted": 0,
+      "currentOfferingEstablished": false,
+      "publicOriginEstablished": false,
+      "completeNativeOrVisualInspection": false,
+      "underlyingHttpRequests": "UNMEASURED",
+      "metadataEnvelopeSha256": "9f7bf67d3ebc845bc44a1169fcc23a0554c71eed5b950b72c91e06e2f343f754",
+      "nativeIdentityMatched": true,
+      "nativeMimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "nativeSize": 13583,
+      "modifiedTime": "2026-04-09T18:52:16.896Z",
+      "version": null,
+      "metadataNameSha256": "ac648ca285b7d5262cfdf5d69a2f3848e01ff116d52fb31c62b33eaab2b5cc0f",
+      "unrequestedProviderMetadataExcluded": true,
+      "metadataProgramNameOverlap": true,
+      "contentEnvelopeSha256": "8ef9dc45684e24ce113ee53347cb649cbfd5645f6ab564c34f457b98237042d7",
+      "sourceTextSha256": "c5c73f0c7ab6a36969a2406896cac9be99d7a88deb401fea895c8749e59d6e9a",
+      "sourceTextBytes": 1759,
+      "excludedLineCount": 0,
+      "completenessLimit": "Best-effort selected readable native text only, not complete text/page/table/visual inspection or public-official origin/current-offering proof. Metadata name overlap is preflight only; all identities/facts remain held.",
+      "outcome": "held_with_new_selected_native_excerpts",
+      "completedAt": "2026-10-20T18:35:21.198Z"
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "scope": "Reference view generated from finalized selected comparison; no new capture or authoritative registry; equal RHM alias hashes not independent corroboration",
+  "sources": [
+    {
+      "sourceId": "rh-old",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/3"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/rh-old.md",
+        "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-17",
+        "saved-405588227-row-19",
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**Odd Fellows and Rebekah's Scholarship**\n\n(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)\n\n#### Montana FFA Foundation Scholarships"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "membership",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/membership"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "membership within selected program scope",
+            "excerpt": "**Odd Fellows and Rebekah's Scholarship**\n\n(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)\n\n#### Montana FFA Foundation Scholarships"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "renewability within selected program scope",
+            "excerpt": "12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**Odd Fellows and Rebekah's Scholarship**\n\n(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)\n\n#### Montana FFA Foundation Scholarships"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "maximumGPA",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/maximumGPA"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "maximumGPA within selected program scope",
+            "excerpt": "**Odd Fellows and Rebekah's Scholarship**\n\n(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)\n\n#### Montana FFA Foundation Scholarships"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "recipientSlots within selected program scope",
+            "excerpt": "**Odd Fellows and Rebekah's Scholarship**\n\n(1+) $1,000 scholarships. High School senior, GPA of 3.0 or lower, planning to attend a college, university, or trade program following graduation (does not require the student or his/her parent/guardian to be a member of the Odd Fellows or Rebekahs)\n\n#### Montana FFA Foundation Scholarships"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-17",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/17/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 1,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "summary list",
+            "excerpt": "**NEW $1,000 Odd Fellows and Rebekah's Scholarship**(3+)(Seniors-College)"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**Reach Higher Montana Scholarship**\n\n(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "schoolType",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/schoolType"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "schoolType within selected program scope",
+            "excerpt": "**Reach Higher Montana Scholarship**\n\n(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "renewability within selected program scope",
+            "excerpt": "12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**Reach Higher Montana Scholarship**\n\n(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "recipientSlots within selected program scope",
+            "excerpt": "**Reach Higher Montana Scholarship**\n\n(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-19",
+          "field": "fafsaRequired",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/18/fieldProposals/fafsaRequired"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "fafsaRequired within selected program scope",
+            "excerpt": "**Reach Higher Montana Scholarship**\n\n(50) $2,000 scholarships. High School Senior who will graduate from a Montana High School, completed the FAFSA, and will attend (at least half-time) an accredited Montana post-secondary institution/program."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "amount",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/amount"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "amount within selected program scope",
+            "excerpt": "**Servant Leadership Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.\n\n01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n06. Can I submit a paper application?\n    - No, we are only able to accept applications through our online scholarship program.\n\n07. Will I have to complete separate applications for each scholarship I am eligible to apply for?\n    - Yes and no. Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.\n\n09. Do I have to submit an ‘official’ transcript for proof of grades/GPA?\n    - No, we will accept unofficial transcripts as long as the date the report was pulled, your\n\n\n       name, student ID number, and GPA are visible.\n\n12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n13. If I have previously won a scholarship and then reapply, am I more likely to receive it again?\n    - No. Every year an application is open, a new committee will evaluate submissions. They do not receive applicant names or information on any prior awards won. This ensures everyone has an equal opportunity each year they apply.\n\n14. How will I receive scholarship funds I am selected to receive?\n    - All scholarship awards will be paid directly to the school you will be attending. You will receive an email with follow-up instructions that you must complete before funds will be sent; these include provision of your final prior semester grades or transcript and an enrollment verification form that your school will have to complete on your behalf.\n\n15. How will my award be paid out?\n    - All scholarship awards are sent to your school for the full amount, the first term you are enrolled. Be aware, however, that each post-secondary institution reserves the right to determine how your award is applied to your student account. It is standard practice for schools to split the total award amount equally across two semesters or three trimesters depending on academic schedules.\n\n16. When is my scholarship awarded?\n    - This depends on how quickly you, the applicant, return the required follow-up documents that will be requested from you. Once your grades and your enrollment verification are received, funds will be disbursed within two weeks.\n    - Because checks are mailed, we cannot guarantee how long it will take for your funds to appear on your student account. Total time is dependent on many factors including the US Postal Service, how campus mail is handled, how big the financial aid staff is, how busy they are, and more. Remember, the sooner you complete your follow-up tasks, the sooner we can release your funds.\n\n19. Can I still submit an application if I missed the deadline?\n    - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the application on time."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "minimumGPA",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/minimumGPA"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "minimumGPA within selected program scope",
+            "excerpt": "**Servant Leadership Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.\n\n01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n06. Can I submit a paper application?\n    - No, we are only able to accept applications through our online scholarship program.\n\n07. Will I have to complete separate applications for each scholarship I am eligible to apply for?\n    - Yes and no. Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.\n\n09. Do I have to submit an ‘official’ transcript for proof of grades/GPA?\n    - No, we will accept unofficial transcripts as long as the date the report was pulled, your\n\n\n       name, student ID number, and GPA are visible.\n\n12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n13. If I have previously won a scholarship and then reapply, am I more likely to receive it again?\n    - No. Every year an application is open, a new committee will evaluate submissions. They do not receive applicant names or information on any prior awards won. This ensures everyone has an equal opportunity each year they apply.\n\n14. How will I receive scholarship funds I am selected to receive?\n    - All scholarship awards will be paid directly to the school you will be attending. You will receive an email with follow-up instructions that you must complete before funds will be sent; these include provision of your final prior semester grades or transcript and an enrollment verification form that your school will have to complete on your behalf.\n\n15. How will my award be paid out?\n    - All scholarship awards are sent to your school for the full amount, the first term you are enrolled. Be aware, however, that each post-secondary institution reserves the right to determine how your award is applied to your student account. It is standard practice for schools to split the total award amount equally across two semesters or three trimesters depending on academic schedules.\n\n16. When is my scholarship awarded?\n    - This depends on how quickly you, the applicant, return the required follow-up documents that will be requested from you. Once your grades and your enrollment verification are received, funds will be disbursed within two weeks.\n    - Because checks are mailed, we cannot guarantee how long it will take for your funds to appear on your student account. Total time is dependent on many factors including the US Postal Service, how campus mail is handled, how big the financial aid staff is, how busy they are, and more. Remember, the sooner you complete your follow-up tasks, the sooner we can release your funds.\n\n19. Can I still submit an application if I missed the deadline?\n    - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the application on time."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "membership",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/membership"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "membership within selected program scope",
+            "excerpt": "**Servant Leadership Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.\n\n01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n06. Can I submit a paper application?\n    - No, we are only able to accept applications through our online scholarship program.\n\n07. Will I have to complete separate applications for each scholarship I am eligible to apply for?\n    - Yes and no. Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.\n\n09. Do I have to submit an ‘official’ transcript for proof of grades/GPA?\n    - No, we will accept unofficial transcripts as long as the date the report was pulled, your\n\n\n       name, student ID number, and GPA are visible.\n\n12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n13. If I have previously won a scholarship and then reapply, am I more likely to receive it again?\n    - No. Every year an application is open, a new committee will evaluate submissions. They do not receive applicant names or information on any prior awards won. This ensures everyone has an equal opportunity each year they apply.\n\n14. How will I receive scholarship funds I am selected to receive?\n    - All scholarship awards will be paid directly to the school you will be attending. You will receive an email with follow-up instructions that you must complete before funds will be sent; these include provision of your final prior semester grades or transcript and an enrollment verification form that your school will have to complete on your behalf.\n\n15. How will my award be paid out?\n    - All scholarship awards are sent to your school for the full amount, the first term you are enrolled. Be aware, however, that each post-secondary institution reserves the right to determine how your award is applied to your student account. It is standard practice for schools to split the total award amount equally across two semesters or three trimesters depending on academic schedules.\n\n16. When is my scholarship awarded?\n    - This depends on how quickly you, the applicant, return the required follow-up documents that will be requested from you. Once your grades and your enrollment verification are received, funds will be disbursed within two weeks.\n    - Because checks are mailed, we cannot guarantee how long it will take for your funds to appear on your student account. Total time is dependent on many factors including the US Postal Service, how campus mail is handled, how big the financial aid staff is, how busy they are, and more. Remember, the sooner you complete your follow-up tasks, the sooner we can release your funds.\n\n19. Can I still submit an application if I missed the deadline?\n    - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the application on time."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "renewability",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/renewability"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "renewability within selected program scope",
+            "excerpt": "12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "applicationWindow",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/applicationWindow"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationWindow within selected program scope",
+            "excerpt": "01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "applicationMethod",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/applicationMethod"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "applicationMethod within selected program scope",
+            "excerpt": "**One Application, Mutiple Scholarships.**"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "namedEligibilityStatement",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/namedEligibilityStatement"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "namedEligibilityStatement within selected program scope",
+            "excerpt": "**Servant Leadership Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.\n\n01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n06. Can I submit a paper application?\n    - No, we are only able to accept applications through our online scholarship program.\n\n07. Will I have to complete separate applications for each scholarship I am eligible to apply for?\n    - Yes and no. Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.\n\n09. Do I have to submit an ‘official’ transcript for proof of grades/GPA?\n    - No, we will accept unofficial transcripts as long as the date the report was pulled, your\n\n\n       name, student ID number, and GPA are visible.\n\n12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n13. If I have previously won a scholarship and then reapply, am I more likely to receive it again?\n    - No. Every year an application is open, a new committee will evaluate submissions. They do not receive applicant names or information on any prior awards won. This ensures everyone has an equal opportunity each year they apply.\n\n14. How will I receive scholarship funds I am selected to receive?\n    - All scholarship awards will be paid directly to the school you will be attending. You will receive an email with follow-up instructions that you must complete before funds will be sent; these include provision of your final prior semester grades or transcript and an enrollment verification form that your school will have to complete on your behalf.\n\n15. How will my award be paid out?\n    - All scholarship awards are sent to your school for the full amount, the first term you are enrolled. Be aware, however, that each post-secondary institution reserves the right to determine how your award is applied to your student account. It is standard practice for schools to split the total award amount equally across two semesters or three trimesters depending on academic schedules.\n\n16. When is my scholarship awarded?\n    - This depends on how quickly you, the applicant, return the required follow-up documents that will be requested from you. Once your grades and your enrollment verification are received, funds will be disbursed within two weeks.\n    - Because checks are mailed, we cannot guarantee how long it will take for your funds to appear on your student account. Total time is dependent on many factors including the US Postal Service, how campus mail is handled, how big the financial aid staff is, how busy they are, and more. Remember, the sooner you complete your follow-up tasks, the sooner we can release your funds.\n\n19. Can I still submit an application if I missed the deadline?\n    - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the application on time."
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "recipientSlots",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/recipientSlots"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "rh-old",
+            "sourceUrl": "https://reachhighermontana.org/pay-for-school/scholarships",
+            "artifactSha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+            "locator": "recipientSlots within selected program scope",
+            "excerpt": "**Servant Leadership Scholarship**\n\n(1) $500 scholarship. HS Senior, FFA member, 2.0 GPA or higher.\n\n01. When can I apply for scholarships using the “It’s Scholarship Time” application?\n    - The “It’s Scholarship Time” application is open annually from January 1 thru March 1.\n\n06. Can I submit a paper application?\n    - No, we are only able to accept applications through our online scholarship program.\n\n07. Will I have to complete separate applications for each scholarship I am eligible to apply for?\n    - Yes and no. Individual scholarships will have supplemental questions that you will need to complete before you can submit each application. Because some scholarships use the same questions, you will only have to answer the question once and that answer will show up on any scholarships that use that same question. You will only have to complete the eligibility questions once per scholarship year to determine which scholarships you are eligible to apply for.\n\n09. Do I have to submit an ‘official’ transcript for proof of grades/GPA?\n    - No, we will accept unofficial transcripts as long as the date the report was pulled, your\n\n\n       name, student ID number, and GPA are visible.\n\n12. Can I reapply for a scholarship?\n    - Yes! All of the scholarships available through the “It’s Scholarship Time” application are non-renewable meaning they are awarded on a year by year basis only. Applicants are encouraged to reapply each year if they remain eligible for the application whether or not they have previously won the scholarship. Every year, applicants must complete an application for any scholarships which they are eligible for and will be re-evaluated with the current year applications.\n\n13. If I have previously won a scholarship and then reapply, am I more likely to receive it again?\n    - No. Every year an application is open, a new committee will evaluate submissions. They do not receive applicant names or information on any prior awards won. This ensures everyone has an equal opportunity each year they apply.\n\n14. How will I receive scholarship funds I am selected to receive?\n    - All scholarship awards will be paid directly to the school you will be attending. You will receive an email with follow-up instructions that you must complete before funds will be sent; these include provision of your final prior semester grades or transcript and an enrollment verification form that your school will have to complete on your behalf.\n\n15. How will my award be paid out?\n    - All scholarship awards are sent to your school for the full amount, the first term you are enrolled. Be aware, however, that each post-secondary institution reserves the right to determine how your award is applied to your student account. It is standard practice for schools to split the total award amount equally across two semesters or three trimesters depending on academic schedules.\n\n16. When is my scholarship awarded?\n    - This depends on how quickly you, the applicant, return the required follow-up documents that will be requested from you. Once your grades and your enrollment verification are received, funds will be disbursed within two weeks.\n    - Because checks are mailed, we cannot guarantee how long it will take for your funds to appear on your student account. Total time is dependent on many factors including the US Postal Service, how campus mail is handled, how big the financial aid staff is, how busy they are, and more. Remember, the sooner you complete your follow-up tasks, the sooner we can release your funds.\n\n19. Can I still submit an application if I missed the deadline?\n    - No. We have set a firm deadline of March 1st at 11:59 PM MST. Applicants are encouraged to apply early so that they have time to complete the application on time."
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "rh-alias",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/4"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/rh-alias.md",
+        "sha256": "d201227b6277a8e23e762f6e4fa3a50255cc569b6733fa1205ec56661b42dbf9",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-17",
+        "saved-405588227-row-19",
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof. Alias receipt confirms redirect and the listed shared application; main eligibility facts are sourced to rh-old only.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/6"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa.md",
+        "sha256": "ba8353176fb75bfeb0dc7bff6298c24b62909a380aefa7f5842ad9523db78ec1",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-applications",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/7"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-applications.md",
+        "sha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/cycle"
+          },
+          "evidenceIndex": 0,
+          "originalEvidence": {
+            "sourceId": "ffa-applications",
+            "sourceUrl": "https://montanaffa.org/applications/",
+            "artifactSha256": "e90e85f84b8fb453ee022aa2a89d988d6d7eabbea8015f1d997ccb9528cd23d3",
+            "locator": "cycle within selected program scope",
+            "excerpt": "Applications are due March 1, 2026."
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-guidelines",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/12"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-guidelines.md",
+        "sha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/cycle"
+          },
+          "evidenceIndex": 1,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "Updated: 06/28/2021 [provider phone omitted]"
+          }
+        },
+        {
+          "savedInputKey": "saved-405588227-row-20",
+          "field": "cycle",
+          "envelopeReference": {
+            "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+            "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+            "pointer": "/records/19/fieldProposals/cycle"
+          },
+          "evidenceIndex": 2,
+          "originalEvidence": {
+            "sourceId": "ffa-guidelines",
+            "sourceUrl": "https://montanaffa.org/wp-content/uploads/2022/11/College-Leadership-Scholarship-Guidelines.pdf",
+            "artifactSha256": "8b90ad9e0bad13847e9a551d6af0dde1b40a24a647059cc7b855ebe0f0f4aa52",
+            "locator": "additional scoped statement",
+            "excerpt": "December 31st deadline"
+          }
+        }
+      ],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-college-rubric",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/13"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-college-rubric.md",
+        "sha256": "49c4f33e21dab09098513f433732983a69531c1c013cc531ec7fff97f844cce4",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    },
+    {
+      "sourceId": "ffa-leadership-rubric",
+      "originalRegistryReference": {
+        "path": "docs/evidence/sd2-autonomous/checkpoint-001.json",
+        "sha256": "8a12c5548fb24c9eac0f2f76fb2cb9c23fe40283db961b9fb778ddf1f0149f86",
+        "pointer": "/sourceRegistry/14"
+      },
+      "artifactReference": {
+        "path": "docs/evidence/sd2-autonomous/sources/ffa-leadership-rubric.md",
+        "sha256": "8c5a6d1bdb0317cecf5d15327977fc29bf6fb16d90d6d6e85c3d9f71a50225e6",
+        "pointer": ""
+      },
+      "permittedInputKeys": [
+        "saved-405588227-row-20"
+      ],
+      "extractionLimits": "No raw HTML or excluded recipient/contact/token data retained; unrelated awards omitted; HTML service capture not retained or independently rendered; selected Markdown text inspected. No whole-page/visual HTML proof. PDF service page totals are conversion accounting, not independent image proof.",
+      "sourceRevision": null,
+      "originalSourceStatus": "observed-held",
+      "originalObservation": "2026-10-14 16:09:41 UTC",
+      "selectedEvidenceOccurrences": [],
+      "newFetchPerformed": false,
+      "newSourceReceiptCreated": false
+    }
+  ]
+}

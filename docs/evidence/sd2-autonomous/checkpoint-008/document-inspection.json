@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-10-15T00:51:38.880335+00:00",
+  "nativeDocuments": [
+    {
+      "id": "peo",
+      "rawArtifactPath": "/private/tmp/sd2-checkpoint-008-raw/peo.pdf",
+      "rawSha256": "ca5fdff76907aaf147a09c62a6a83e965e3d3d6d2fe64c14c091211516350fb5",
+      "blankDocument": true,
+      "pageCount": 2,
+      "completeLayoutTextInspected": true,
+      "selectedTextPath": "docs/evidence/sd2-autonomous/checkpoint-008/sources/peo.md",
+      "selectedTextSha256": "3f24f35b82922d856ebc96b42af9ffbdd1ad7d610e39b87872c06472292bd243"
+    }
+  ],
+  "safePageViews": [
+    {
+      "path": "/private/tmp/sd2-checkpoint-008-raw/peo-page-1-safe-v3.png",
+      "sha256": "8d23ca102c9cee6226ab7f502bef7806e8fe4936e3cd2b1ddd98b1d75c6911cd",
+      "wholeUnredactedVisualClaim": false
+    },
+    {
+      "path": "/private/tmp/sd2-checkpoint-008-raw/peo-page-2-safe.png",
+      "sha256": "5b9a6d18f928ff7dd53d3e2fe6fa9d612c9725f6c7a0c2a69e94f74c889ad08c",
+      "wholeUnredactedVisualClaim": false
+    }
+  ],
+  "correctedSafeViewsInspected": true,
+  "priorCustodyPins": 68,
+  "priorCustodyGaps": 0,
+  "rawBatchRejected": true,
+  "noRejectedBatchRetryOrBypass": true,
+  "saferAlternatives": "Native readable text and document structure; all uninspected scope explicitly held.",
+  "owner": "Next-session Codex evidence owner",
+  "trigger": "Next audit requiring original raw material",
+  "nextAction": "Verify exact temporary custody; preserve receipts/report gaps without reconstruction/reacquisition/replay."
+}

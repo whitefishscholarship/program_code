@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 21,
+  "planRevision": 22,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-09-16",
+  "lastUpdated": "2026-10-20",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -949,6 +949,22 @@
           "basis": "Direct removal request with persistent immediately preceding same-site live-publish instruction.",
           "scope": "UX2 volunteer-hours UI removal only; normal push/PR/Preview/CI/merge/Production and exact verification on existing Whitefish project web prj_LbefE2deji6nPND6iBiuofe7IABv, team team_6CAjRq58n0WvAH49otKSQbA7, web-two-gules-45.vercel.app. No source/workbook/configuration/credential/paid/monitor/email effects."
         }
+      },
+      {
+        "id": "PLAN-REV22",
+        "status": "attestation-gated",
+        "baselineCommit": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+        "evidencePath": "docs/evidence/PLAN-REV22.md",
+        "manifestPath": "docs/evidence/PLAN-REV22-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV22.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-10-20",
+          "evidencePath": "docs/evidence/PLAN-REV22.md",
+          "basis": "Direct informed user authorization quoted in the evidence; includes Preview and Production effects.",
+          "scope": "Revision22 governance-only implementation, independent review, exact branch push/PR/merge and resulting Vercel Preview/Production on web prj_LbefE2deji6nPND6iBiuofe7IABv team_6CAjRq58n0WvAH49otKSQbA7 web-two-gules-45.vercel.app. No fact/mapping acceptance, source/workbook/runtime/config/CI/dependency changes, monitoring or SD3."
+        }
       }
     ]
   },
@@ -1416,5 +1432,67 @@
     "timerContinuationCheckpoint": "11f5cad6ecd1a91b82c033d8a666d6ddd6c361a8",
     "timerContinuationWorktree": "/private/tmp/program_code-ux1-live-closeout",
     "nextWork": "unfinished timer M1 only after verified UX2 delivery; preserve current live UX"
+  },
+  "sd2ResearchClosure": {
+    "contractId": "sd2-held-research-v1",
+    "status": "blocked-external",
+    "researchDeliverableComplete": false,
+    "fullSD2Complete": false,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "SD3Started": false,
+    "originalSourceExecution": "FAIL",
+    "targetsHeld": 397,
+    "quarantinesHeld": 272,
+    "clearedForAcquisition": 0,
+    "exactNeverDispatchedProof": "NOT_ESTABLISHED",
+    "denominator": {
+      "savedPositions": 794,
+      "namedInputs": 411,
+      "emptyPositions": 383,
+      "originalFieldDefinitions": 7547,
+      "heldFields": 7518,
+      "proposedFields": 29,
+      "separateAppAwardIds": 411,
+      "separateSourceLocators": 397,
+      "quarantines": 272
+    },
+    "entryCommit": "be0cb628a44a0c02b8e84e393f6892a233c865c8",
+    "baselineCommit": "1c8e33f23beb55c2ed2ebe78fe4e256722af8392",
+    "policyCommit": "55ec5e5055aa671d2db48f85b99cd9f43243c92f",
+    "evidenceReferences": [
+      {
+        "path": "docs/evidence/sd2-consolidation-package/summary.json",
+        "sha256": "9a88e070c6a54c0e731689830880a876968d100adf987226ce3ca90a9eb0f4d7"
+      },
+      {
+        "path": "docs/evidence/sd2-consolidation-package/decision-ledger.json",
+        "sha256": "ae0157f914e0bddfa4f1b183cdac752f2f6ca8a539ad577008ff1ca86760d005"
+      },
+      {
+        "path": "docs/evidence/sd2-consolidation-package/field-decisions.jsonl",
+        "sha256": "30090e432e4214660a39d552ce03a6a28e45307926cdb87b426eeda2c8621552"
+      },
+      {
+        "path": "docs/evidence/sd2-access-session-closeout/open-items.json",
+        "sha256": "1ee9f70fa2a6cdb0f8234b4d42e00665eac285c98f0822e2c0799516fdfb150d"
+      },
+      {
+        "path": "docs/evidence/sd2-access-session-closeout/review.json",
+        "sha256": "324ed4caa4d2949a7f1da10c3d31a165e58ab3a083b381d73cece49ee947febe"
+      },
+      {
+        "path": "docs/evidence/sd2-held-closure-contract-1/CONTRACT.md",
+        "sha256": "4b1aa2a6eb9fbed649a648db4ad8a7d3de4cd2c904901572a387ea703ae31832"
+      },
+      {
+        "path": "docs/evidence/sd2-held-closure-contract-1/amendment-spec.json",
+        "sha256": "83f08bf3d9fe38849e442fbf9063f69e73a31e7d0f8b8ada4f8c53e581f8cc42"
+      }
+    ],
+    "closureAttestation": null,
+    "nextOwner": "Codex governance author and fresh independent reviewer",
+    "nextTrigger": "Revision22 delivery, then separately reviewed exact closure candidate with original gates",
+    "attentionPath": "docs/evidence/sd2-access-session-closeout/open-items.json"
   }
 }

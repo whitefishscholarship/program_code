@@ -1,0 +1,27 @@
+{
+  "outcome": "PASS",
+  "scope": "local review record and session-close preservation only",
+  "recordedAt": "2026-10-13T16:53:34.298180+00:00",
+  "candidateCommit": "cf29dde2c8c329c5c6c8b0b7551f7630a65ef770",
+  "candidateTree": "93ebbfb13a8d13b675d2faee9cbda8f2cfd1f52f",
+  "manifestSha256": "0921b3c3a51ca7a546c78fd629dbf4e73079bab279d8ef5106b3ff42bcf4fdf4",
+  "reviewSha256": "cf31c722b9de0539b6ddc2d44e9725a5e7dbb33671ed9d34216f41d8b2c92e20",
+  "reviewFindingsUnresolved": 0,
+  "frozenCandidateFilesRebound": 0,
+  "candidateStagePaths": 50,
+  "reviewedEvidenceFilesUnchanged": 47,
+  "routingOnlyUpdates": [
+    "docs/CURRENT_HANDOFF.md",
+    "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+    "docs/evidence/sd2-first-batch/CONTINUE.md"
+  ],
+  "sourceOrWorkbookReadsAfterReview": 0,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false,
+  "externalEffects": 0,
+  "allNineOwnerTriggerRowsPreserved": "verified by unchanged verify-evidence.py",
+  "primaryCheckoutUnchanged": "verified by unchanged verify-evidence.py",
+  "retainedM1Records": 437,
+  "notes": "No canonical attestation or stage acceptance. Original source/proposal/validation/candidate bindings remain immutable; review/manifest copies and closeout routing only."
+}

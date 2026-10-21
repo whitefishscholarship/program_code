@@ -1,0 +1,80 @@
+{
+  "outcome": "FAIL",
+  "supersedes": [
+    "source-results-002.json interruption coverage and call upper bounds",
+    "source-results-004.json replayed=false for orders26/30/34",
+    "Earlier controller/session-store completion assumptions and blanket no-replay descriptions",
+    "selected-expanded-targets.json claim that no completed targets were replayed",
+    "initial-timing-limit.json initial concurrency uncertainty now supplemented by observed maximum2; controller bound4, provider HTTP unmeasured"
+  ],
+  "authoritativeCumulativeLedger": "source-call-audit.json",
+  "independentReview": "call-ledger-review.json",
+  "confirmedReplayOrders": [
+    26,
+    30,
+    34
+  ],
+  "cause": "Cancellation discarded isolate state; author treated an incomplete summary as a complete dispatch ledger. Later selection omitted already dispatched targets.",
+  "historicalViolationIrreversible": true,
+  "containment": "All272 public/native candidates quarantined; no further source calls this run. Remaining125 keep original triage holds.",
+  "missingResultBodiesNotReconstructed": true,
+  "acceptedFacts": 0,
+  "owner": "Codex continuation",
+  "trigger": "Before any further selected acquisition",
+  "authoritativePath": "outcomes.json and source-call-audit.json",
+  "nextAction": "Independently verify exact unused targets and durable exclusive pre-call intent/result journal. Never infer unused from missing results, stale stores, absent notifications or termination. Hold ambiguity; no routine approval checkpoint or scope expansion.",
+  "possibleAdditionalReplayOrders": [
+    32
+  ],
+  "conservativeExplicitCallReservation": 68,
+  "uncertainFrontierReservations": [
+    {
+      "phase": "cell51_interrupted_pre_safety",
+      "order": 32,
+      "tool": "firecrawl.firecrawl_scrape",
+      "additionalExplicitCallsUpperBound": 1,
+      "basis": "Reached third group calls all four acquire functions before await. This exact public target lacks a completed event; no timestamps invented. Later cell86 callback exists, so a second acquisition is possible.",
+      "targetId": "sd2-read-119ae832d51f13b62c26",
+      "exactLocatorSha256": "119ae832d51f13b62c2630cddc1508b9d4fb41aaea1c88d1c383e2e1a94723ac",
+      "startedAtMs": null,
+      "completedAtMs": null,
+      "disposition": "QUARANTINE_NO_REPLAY"
+    },
+    {
+      "phase": "cell51_interrupted_pre_safety",
+      "order": 29,
+      "tool": "google_drive.fetch",
+      "additionalExplicitCallsUpperBound": 1,
+      "basis": "Native metadata callback is observed. Whether metadata gates admitted its content fetch cannot be inferred without inspecting the opaque result; reserve one possible content call.",
+      "targetId": "sd2-read-0f3fae09cf3cb40aa59a",
+      "exactLocatorSha256": "0f3fae09cf3cb40aa59ab8055d52f99311730d3fa76bff5fd97816de673e72bd",
+      "startedAtMs": null,
+      "completedAtMs": null,
+      "disposition": "QUARANTINE_NO_REPLAY"
+    },
+    {
+      "phase": "cell86_interrupted_expanded_pages",
+      "order": 139,
+      "tool": "firecrawl.firecrawl_scrape",
+      "additionalExplicitCallsUpperBound": 1,
+      "basis": "Reached seventh four-target group;127/136 completed,139/143 were invoked or queued by the group controller but have no completed callback record.",
+      "targetId": "sd2-read-5aa83df1d182a466c463",
+      "exactLocatorSha256": "5aa83df1d182a466c4638d78a81b08c4e36b9d53f9bce48ef8fa64ac110c89c1",
+      "startedAtMs": null,
+      "completedAtMs": null,
+      "disposition": "QUARANTINE_NO_REPLAY"
+    },
+    {
+      "phase": "cell86_interrupted_expanded_pages",
+      "order": 143,
+      "tool": "firecrawl.firecrawl_scrape",
+      "additionalExplicitCallsUpperBound": 1,
+      "basis": "Reached seventh four-target group; reserve request without inventing completion/dispatch times.",
+      "targetId": "sd2-read-5ea392d00f0785775385",
+      "exactLocatorSha256": "5ea392d00f0785775385ef2ec4bfc4d10fd3ac981d6e9ce27040f20ec7eb1315",
+      "startedAtMs": null,
+      "completedAtMs": null,
+      "disposition": "QUARANTINE_NO_REPLAY"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-10-20T18:38:45.400299+00:00",
+  "originalUncommittedSourceResultsSha256": "a3191c7f916f83cf5aa9bde582a0344a35b6397b662f212ee41f05fa0c2e9d89",
+  "excludedContactLocation": "source-results-001.json /records/9/excerpts/1",
+  "allUncommittedExcerptTextRemoved": true,
+  "sourceTextCommitted": false,
+  "reacquisition": false,
+  "originalHistoricalArtifactsChanged": false,
+  "removedExcerptHashes": [
+    {
+      "targetId": "sd2-read-056965468430d391f5e4",
+      "exactQuoteSha256": "b5c714c06b13c4e457f629571984c57bb3843176388678a6a68d521d6cb59b36",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-068b268a18d9f73f4740",
+      "exactQuoteSha256": "1a3f5aa6a189b3f1431823088c401ff7826b3a2fa6104c51cb7d5fefbb56ae8c",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-068b268a18d9f73f4740",
+      "exactQuoteSha256": "46bf6dac84f7338d971725a4506a870cf3bbc83b32984900d2b13ebf0d712ded",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-07d061a4d9a481d32eaf",
+      "exactQuoteSha256": "93ca2d47ce8b07f974ce4383aa21a9a70b8986569b6a3c36640d9cf87ecdb750",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-0ca56b1a92eea05539af",
+      "exactQuoteSha256": "3ba9090829a380c85a1820ae2a3cf945aa920069b2d59c4083653e88b96e6271",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-0ca56b1a92eea05539af",
+      "exactQuoteSha256": "0ba36334f276d468c504fd8819b86a8631677e3d93eef224ea1d830ae1d493e7",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-0ca56b1a92eea05539af",
+      "exactQuoteSha256": "ed39086326ec5bf6444706bdfd882d7453575c5db812dde7abcacb329b5f858e",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "exactQuoteSha256": "13a2b77a28ff6d5e2dc57e48fa3788ff828fb69e7eae725a5147442e6db9fbaa",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "exactQuoteSha256": "93f6e7814348d7a23eab6cc8b1975e76400a5837010bbff866c4838a6d4cb203",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    },
+    {
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "exactQuoteSha256": "d0735e5b79d8aa3b3962db10fc3ef8ffc3aaf285c7a5d993fa3430b7cbd8de6d",
+      "reason": "All new text excerpts quarantined after interim H1; excluded text not duplicated."
+    }
+  ],
+  "incident": "Interim reviewer detected excluded postal contact text; preserve hashes/incident only, never duplicate excluded content. Resume source processing only after stronger safeguards and saved-source preflight."
+}

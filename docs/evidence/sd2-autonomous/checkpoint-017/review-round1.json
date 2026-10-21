@@ -1,0 +1,79 @@
+{
+  "outcome": "FAIL",
+  "scope": "Independent read-only review of bounded SD2 checkpoint017, offsets320–339, against retained evidence and the complete entry-to-candidate diff.",
+  "reviewedAt": "2026-10-15T20:17:14Z",
+  "reviewer": {
+    "identity": "/root/checkpoint017_review",
+    "freshContext": true,
+    "readOnly": true,
+    "authoredOrEdited": false,
+    "networkOrExternalActions": false,
+    "memoryConsulted": true
+  },
+  "binding": {
+    "entryCommit": "89d84f329b065e29daf1a4f724cb8b6404b74afc",
+    "candidateCommit": "b4d62383d2610da0fd58b1c5f10d7fa9db56e911",
+    "candidateTree": "1d305c0f767d5dbadcded49881f58238952a872e",
+    "manifestPath": "docs/evidence/sd2-autonomous/checkpoint-017/final-manifest.json",
+    "manifestSha256": "46d3cb1d942e2226639bd1c17e1d8a704ce55db60251d9ff5004e6e67ee098dd",
+    "completeDiffSha256": "563e216266730fe24bc4d1cf45f5a96254c873896c81d80d9ce676c93d01258c",
+    "completeDiffBytes": 1760853,
+    "changedPaths": 54,
+    "allChangedPathsMatchManifest": true,
+    "allCandidateBlobIdsLengthsAndHashesVerified": true,
+    "allCandidateFilesMatchWorktree": true,
+    "preEntryTrackedPaths": 1893,
+    "allPreEntryBlobIdsAndModesPreserved": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "SD2-017-M1",
+      "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-017.json",
+      "preciseIssue": "Row326 fieldProposals.materials is verified and asserts initialRecommendations.confidential=true plus recommendationSelection including healthcare/long-term-care involvement. Its sole bound pizzinipdf excerpt contains neither confidentiality nor that selection criterion. The retained passage instead describes scholastic potential, personal qualities and nursing enthusiasm. The verifier checks excerpt membership but cannot detect this missing support.",
+      "requiredFix": "Restore the exact supporting paragraph from already retained authorized conversion evidence, if available, with sanitization and accurate accounting; otherwise remove or explicitly hold unsupported assertions as unverified. Refresh dependent hashes, ledger/registry bindings and semantic verification. Do not acquire another source merely to repair this review."
+    },
+    {
+      "id": "SD2-017-M2",
+      "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-017.json",
+      "preciseIssue": "Several material source qualifiers are absent from typed observations: row333 omits the gbci Eligible Student labels Current College Students and Graduating High School Seniors while applicantStage remains unknown; row339 omits the enrolled-or-planning-to-enroll alternative expressly stated in foldsmilpdf; rows338–339 omit the PDF terms allowing approved required school uniforms and qualifying fees as most fees. These facts exist in retained excerpts but are lost from the typed held proposals.",
+      "requiredFix": "Retain each exact source-specific statement in typed held fields. Preserve GBCI labels as observed labels without inventing an exclusive eligibility interpretation. Preserve military prospective-enrollment eligibility and PDF funding variants separately from general FAQ costs. Add semantic checks covering these qualifiers."
+    },
+    {
+      "id": "SD2-017-M3",
+      "severity": "medium",
+      "path": "docs/evidence/sd2-autonomous/checkpoint-017/assemble.py",
+      "preciseIssue": "The shared Folds loop transfers first-responder-specific FAQ statements into military row339: cycle.FAQ asserts no accommodations outside Feb1–Mar31 and renewal.legacyConsecutiveYears carries first-responder legacy status inside a verified military renewal envelope. Both supporting questions are explicitly under FIRST RESPONDER SCHOLARSHIP QUESTIONS in folds.md. Consequently the military cycle conflict also relies on a first-responder-only statement.",
+      "requiredFix": "Restrict those FAQ observations to row338, or retain an explicitly non-applicable cross-reference outside military rule proposals. Reassess row339 cycle state using only military-applicable passages; preserve the general annual window and military weekend extension without inferring a conflict from another family's FAQ. Add negative source-affinity checks."
+    }
+  ],
+  "checks": [
+    "Independently recomputed manifest, candidate tree and complete binary-diff hashes; verified all54 changed blobs, lengths, hashes and worktree equality.",
+    "Confirmed all54 candidate changes add files and all1893 entry paths preserve exact Git blobs and modes.",
+    "Read all26 retained source artifacts and compared material typed claims, qualifiers, cycles, amounts, materials and application observations with their bound excerpts.",
+    "Ran the read-only verifier successfully:20 ordered inputs,306 new field envelopes,6253 cumulative field holds,340 identity holds,66 remaining,199 evidence references,38 seed dispositions and27 source-link dispositions.",
+    "Verifier confirmed26 finalized source receipts, maximum4 concurrent reads, zero recorded same-host overlaps,16 historical manifest/review bindings,71 custody pins without gaps,12 M1 artifact pins and437 M1 records.",
+    "Confirmed original nine attention rows, prior supplements, historical packets/rejected bindings and protected governance/runtime files remain unchanged.",
+    "Inspected recorded validation evidence: plan/type/fulltests pass after documented IPC retries; both exact standard builds retain process/port EPERM failures.",
+    "No files edited, assemblers executed, software tests/builds rerun, sources acquired, network calls made or Git writes performed."
+  ],
+  "limits": [
+    "Selected artifacts and author concordance do not establish original-response fidelity, native/raw/page/image/table/form completeness, source silence, origin freshness, current offering, public access, sponsor continuity or route usability.",
+    "Original source acquisition/output history was not independently reconstructed; final sanitization does not erase disclosed earlier exposure.",
+    "Recorded concurrency compliance was recomputed from retained intervals; provider execution telemetry was not independently available.",
+    "Fresh authenticated main/target proof, successful exact standard build and all preservation/recovery, human/canonical/publication, student/browser/CSV, monitoring and reserved-effect gates remain open.",
+    "This review accepts no scholarship fact, identity or canonical stage and authorizes no external effect or SD3.",
+    "The implementation owner must remediate all three findings, preserve this rejected binding and submit a replacement immutable candidate for independent recheck."
+  ],
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

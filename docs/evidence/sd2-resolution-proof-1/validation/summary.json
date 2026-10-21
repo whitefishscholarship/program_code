@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "command": [
+        "npm",
+        "run",
+        "plan:check"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T18:27:52.337981+00:00",
+      "completedAt": "2026-10-20T18:28:38.509448+00:00",
+      "exitCode": 0,
+      "rawLogPath": "docs/evidence/sd2-resolution-proof-1/validation/plan.log",
+      "rawLogBytes": 164,
+      "rawLogSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T18:28:38.510498+00:00",
+      "completedAt": "2026-10-20T18:28:46.774887+00:00",
+      "exitCode": 0,
+      "rawLogPath": "docs/evidence/sd2-resolution-proof-1/validation/typecheck.log",
+      "rawLogBytes": 39,
+      "rawLogSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T18:28:46.775822+00:00",
+      "completedAt": "2026-10-20T18:29:39.371462+00:00",
+      "exitCode": 0,
+      "rawLogPath": "docs/evidence/sd2-resolution-proof-1/validation/tests.log",
+      "rawLogBytes": 19755,
+      "rawLogSha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7",
+      "result": "PASS"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "workingDirectory": "web",
+      "startedAt": "2026-10-20T18:29:39.372290+00:00",
+      "completedAt": "2026-10-20T18:29:42.228541+00:00",
+      "exitCode": 1,
+      "rawLogPath": "docs/evidence/sd2-resolution-proof-1/validation/build.log",
+      "rawLogBytes": 4599,
+      "rawLogSha256": "4316f726721564c1dd7f9eac6cc150dc3a89c8a652284ae02d563acb18f69c22",
+      "result": "FAIL_REMAINS_GATE"
+    }
+  ],
+  "allRequiredChecksPassed": false,
+  "environmentRepairExecuted": true,
+  "dependencyInstallAttempts": 1,
+  "lifecycleScriptsExecuted": false,
+  "pins": [
+    {
+      "path": "web/package.json",
+      "sha256": "1e5e0604ddcb094631c877e159489af2bf4922d5664efd9ba566f753de47cd29"
+    },
+    {
+      "path": "web/package-lock.json",
+      "sha256": "ad7a92a99c1019a5d3ce3bdb84bed519fd1a834ed4fd31a900df4aa0ffcd0765"
+    }
+  ]
+}

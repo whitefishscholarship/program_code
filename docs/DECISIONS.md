@@ -836,3 +836,13 @@ Revision21 records the narrow supersession before implementation and requires
 independent policy/final reviews and normal exact release gates. Reversal would
 be a later reviewed UI change, never history rewrite. Timer handoff remains owned
 by Codex and resumes unfinished M1 after the verified live refinement.
+
+## D-REV22 — held SD2 research accounting contract
+
+October20,2026. Direct informed authority and prospective review: PLAN-REV22.md.
+Implement existing held-closure draft through section14, with initially blocked
+maintenance state and separate reviewed/delivered closure later. Unknown/held/proposed
+outcomes can complete accounting only; no fact/identity acceptance. Repeating source
+or readiness loops cannot cure historical dispatch gaps. Preserve failed execution,
+all holds/owners/triggers and historical attestations. No SD3. Rollback requires a
+later reviewed governance amendment, never historical rewrite.

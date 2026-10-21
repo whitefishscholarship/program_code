@@ -1,0 +1,36 @@
+{
+  "priorIncidents": "Every original author/reviewer output and infrastructure incident, rejected candidate/manifest/review, remediation and final review binding remains unchanged at its original path.",
+  "auditPreparation": [
+    {
+      "kind": "read-only schema probes",
+      "detail": "Two preparatory metadata probes outside candidate paths encountered original fieldProposals versus fields and optional allowedSourceIds schema differences. No original or comparison rewritten, no false audit PASS; verifier accommodates exact original schemas. One preparatory group015 source-output incident is retained in that group session-issues and independent review."
+    }
+  ],
+  "newSourceOrWorkbookReads": 0,
+  "rawNativeReads": 0,
+  "externalEffects": false,
+  "SD3Started": false,
+  "auditAttempts": [
+    {
+      "attempt": 1,
+      "command": [
+        "python3",
+        "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verify.py"
+      ],
+      "outcome": "FAIL",
+      "exitCode": 1,
+      "nestedCheck": {
+        "command": [
+          "git",
+          "diff",
+          "--check",
+          "4a84305df8e06e799980a44f7824893dd3eed904"
+        ],
+        "exitCode": 2,
+        "output": "docs/evidence/sd2-autonomous/saved-continuation/coverage-audit/verify.py:181: trailing whitespace.\n+      reg=reference(ref);assert reg['sourceId']==ev['sourceId'] and reg['artifactSha256']==artifact['sha256'] \n"
+      },
+      "meaning": "All union/preservation assertions reached final whitespace check, which failed; no audit PASS was recorded. Author removed only trailing whitespace from new audit verifier before immutable candidate. Original comparisons/reviews unchanged.",
+      "recordedAt": "2026-10-20T00:16:56.720439+00:00"
+    }
+  ]
+}

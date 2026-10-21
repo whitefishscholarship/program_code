@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "scope": "Forensic failed SD2 execution and containment only; NOT an acceptance receipt",
+  "executionOutcome": "FAIL",
+  "entryCommit": "0336d32b930a87d458414611184ab546b00df047",
+  "candidateCommit": "f77c730dd4d93dbe349b2782330ced52829e650d",
+  "candidateTree": "d0e37fc0b730f9026d5d89a1b4ced5e8c058629b",
+  "completeDiffSha256": "90d4bcf3f2d0b6d4a781759aa872d051d749f0bd7c5b6422979171afb4f20a0c",
+  "completeDiffBytes": 5119089,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "bytes": 771358,
+      "sha256": "1a848e83d381dd10de0c7e875f7472cae5e2e414476b116eb6a4de3bffab1519"
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "bytes": 216787,
+      "sha256": "5de4772f68cb507c7875ffebc86c2e49caab61dd998bff1499cb605f59506e21"
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "bytes": 173220,
+      "sha256": "7aa8bc2b40a824c2f5a217744b11cbf388a4e302eaaadc28fc786f522e6698b8"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/README.md",
+      "mode": "100644",
+      "bytes": 4866,
+      "sha256": "d471af22810b50064994299c45a5dd9a9b94b17dbbdb7b2e604a1c0f56a5bdf3"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/SESSION_CLOSE.md",
+      "mode": "100644",
+      "bytes": 4729,
+      "sha256": "34a74a1bfb041d70df0cfac9a319964917c0ef61bd3426b697dfdfe30a66ea86"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/acquisition-incidents.json",
+      "mode": "100644",
+      "bytes": 8176,
+      "sha256": "73e0907e377e64558b19e2622ae50e7bfc2736166474393fee86c53a3aea1836"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/audit-calls.py",
+      "mode": "100644",
+      "bytes": 5108,
+      "sha256": "7d14902259b084087f789302f8c676463a054ab6a2e023305132d579e23ed655"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/author-remediation.json",
+      "mode": "100644",
+      "bytes": 1917,
+      "sha256": "e416204c91f9ab2a327ec2cbe23a2e55d2c6e47f0a1e890c85a8f2bac214b547"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+      "mode": "100644",
+      "bytes": 164748,
+      "sha256": "a9da9440f85dcfa83b44f9773ad3f26051e1567b3a90ecac4bfa5249a2fb218e"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/closeout-checks.json",
+      "mode": "100644",
+      "bytes": 1700,
+      "sha256": "64c9d0a6cae1135aab6b32f7f1c609c4a6f0f32df5aa78363fc05f91016c1082"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/entry-audit.json",
+      "mode": "100644",
+      "bytes": 1721,
+      "sha256": "5d4b75daafff34077e39cfa0fe1fe857eb60bebd24d85f1196671aca2b30c90c"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/expanded-saved-preflight-review.json",
+      "mode": "100644",
+      "bytes": 627050,
+      "sha256": "f67138b1958a99983c56a972c1c8f025f0eb9fac609298e03a225f034068fbf2"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/failure-dispositions.json",
+      "mode": "100644",
+      "bytes": 3641,
+      "sha256": "2064e3450b61b3cb6cc25efc7339e2f3d662af5b39ac532a7bae03b8e05b35bf"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json",
+      "mode": "100644",
+      "bytes": 4046,
+      "sha256": "a631b0c4d47db849bd7bcca05b60717db2dfc1cfcce9905afda1187a0d505605"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/initial-timing-limit.json",
+      "mode": "100644",
+      "bytes": 1603,
+      "sha256": "eae7dedd2c392ce7607fa0ae882181dbcde79856ebb30066db31e30690d93aef"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/interim-review-fail.json",
+      "mode": "100644",
+      "bytes": 15239,
+      "sha256": "70a805c4302380debe1f859b14480fcf756f3a3f6799a666a18822fdc8842878"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/make-manifest.py",
+      "mode": "100644",
+      "bytes": 1515,
+      "sha256": "7f30f57d63186891ae3450bbd9c9d811a321bd5c30f24fd5c8da865d9b6805a7"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/native-acquisition.js",
+      "mode": "100644",
+      "bytes": 7445,
+      "sha256": "f64ce2c29b4131165a64b5877b224b76ed1de7e8dd8b4ae181f9c9c69b9a694d"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/outcomes.json",
+      "mode": "100644",
+      "bytes": 890788,
+      "sha256": "d2a3accfd62bdc06479e1a14ba52e3262975c563e3dcbcdd4b68572290673dcf"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/preflight.json",
+      "mode": "100644",
+      "bytes": 314752,
+      "sha256": "4f8b4026a476b78ec04c29ffa1ae751ecd51aaf64937337674af7270be1c375f"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/preflight.py",
+      "mode": "100644",
+      "bytes": 3519,
+      "sha256": "050952340e81cac77f073270bb2d9375395c9e5d485c38f545c813bb462fd771"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/prepare-targets.py",
+      "mode": "100644",
+      "bytes": 4678,
+      "sha256": "983876d2e05b2bdfde01f2cee450d75042ecb80ece9660a03ab2f66edec30dc4"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/privacy-remediation.json",
+      "mode": "100644",
+      "bytes": 3228,
+      "sha256": "d9d5762ad0762897ad1afb51db1f397ec1e2b7131d43fd6885cc1acbc2afb488"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/public-acquisition.js",
+      "mode": "100644",
+      "bytes": 8535,
+      "sha256": "c62a362af1cefb7c38da02ce4dff27778d390851028a6e2d64cf21c629d74c06"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-001.json",
+      "mode": "100644",
+      "bytes": 19569,
+      "sha256": "ab54f5ddfda3f26131dc4fae269ef1ce5f2107435c90184f3aeff51de2fed123"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/retrieval-preflight-002.json",
+      "mode": "100644",
+      "bytes": 623918,
+      "sha256": "622c619af1083629da7c89151acd4006051e35fdc6f02cb85cdc77fbb888e088"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/run-validation.py",
+      "mode": "100644",
+      "bytes": 2099,
+      "sha256": "d6dd4931e84bae9dc5ebc24012871f823bc42f5568c53d54157b7663c3ce72c2"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/safety-recheck.json",
+      "mode": "100644",
+      "bytes": 33560,
+      "sha256": "85761a6b8e79016fffd17fa19a3a913df548bcb08f887459c52b7d1814bc81dc"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/safety-regression.json",
+      "mode": "100644",
+      "bytes": 599,
+      "sha256": "cdd6da1a33018f1a0ad14a8b834217cd35543d8ff340f3a1e87938ed54f255fa"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/select-expanded.py",
+      "mode": "100644",
+      "bytes": 3956,
+      "sha256": "024c238e823767fb36c0c6ac79fb4ce48cc1717bd907ebcb0782677ad59813a2"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/selected-expanded-targets.json",
+      "mode": "100644",
+      "bytes": 145979,
+      "sha256": "9db4f790155ae2ec7c05ed296f4608b962ae1ea6b4e570be02926de0cbc36c8d"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/selection.json",
+      "mode": "100644",
+      "bytes": 1034,
+      "sha256": "26087ffadf04b317b4b4066797196c20799e6b8c0b2c92df8dd96a665bb6f11f"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-call-audit.json",
+      "mode": "100644",
+      "bytes": 45544,
+      "sha256": "fc3870655938cb3fc1f63eb062706479f5a81cf9dda7db1cdba65a1b9b73145a"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-001.json",
+      "mode": "100644",
+      "bytes": 23124,
+      "sha256": "8fe02b1212ba63880fa65bb17a48dc3982a21322a50cc767f225c6d0af6ad654"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-002.json",
+      "mode": "100644",
+      "bytes": 4328,
+      "sha256": "f74db6a1b109d445c9f5920dc98fe6aa41f4f94157a32fcd55ee0c315f37cfdc"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-003.json",
+      "mode": "100644",
+      "bytes": 24840,
+      "sha256": "9788b070fc23fe505ae3f48af7e36aa02753f7a0e7f455e1a489cb58aaf282f4"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+      "mode": "100644",
+      "bytes": 39094,
+      "sha256": "f0eb4eb76596aded341f90b48e79872a7a3de2d52a45cfa098ffa3e9c6f378b2"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/source-results-005.json",
+      "mode": "100644",
+      "bytes": 38943,
+      "sha256": "21d7f6297aeb3f1cabb89fc097c892e7222d9cb7bc79a7afaf0f127fbb1899ea"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/summary.json",
+      "mode": "100644",
+      "bytes": 2390,
+      "sha256": "907396867ebb3a88d95f75b0700242f86ab7c297776265cc2d6cb35a7e5c3276"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/test-acquisition.cjs",
+      "mode": "100644",
+      "bytes": 3887,
+      "sha256": "4efba43443ef64893e282f4d67e71e89aa22568bdc7504a26ce4e6ae5f71b960"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/triage.json",
+      "mode": "100644",
+      "bytes": 1846364,
+      "sha256": "c990526811888200b7f13720439f28051473d32bc49b5b4115d5add13f7651c1"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/build.json",
+      "mode": "100644",
+      "bytes": 426,
+      "sha256": "be978d0e9ee44b5ebdd3c2721bd1139015bd77cbdb818c76efd1e1fd73648bf6"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/build.log",
+      "mode": "100644",
+      "bytes": 4599,
+      "sha256": "4316f726721564c1dd7f9eac6cc150dc3a89c8a652284ae02d563acb18f69c22"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/plan.json",
+      "mode": "100644",
+      "bytes": 416,
+      "sha256": "ca19b77b8599d0ed27f7f2f160c75c8e68999e1887356df1efda0a2035501490"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/plan.log",
+      "mode": "100644",
+      "bytes": 164,
+      "sha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/restore.json",
+      "mode": "100644",
+      "bytes": 459,
+      "sha256": "327172600ac37e5eac83f902e9c42baa20e73f6ffe5cf82f783aebfb8e431602"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/restore.log",
+      "mode": "100644",
+      "bytes": 587,
+      "sha256": "294a209c25f3741aa7ea930086a947d7b64c85966dca65ce135fd8f51be5cd4a"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/summary.json",
+      "mode": "100644",
+      "bytes": 2349,
+      "sha256": "3b669f00c4129a2a6636f121166034d3b3d7d2faa2b803025ac6f5d77d8a45ce"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/tests.json",
+      "mode": "100644",
+      "bytes": 402,
+      "sha256": "3a20c5b86e0a60446d71f74651ca8f2b225d32b2e8c006c0f03f48bde991c948"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/tests.log",
+      "mode": "100644",
+      "bytes": 19755,
+      "sha256": "5f0bbb482b9b627f6d6038017ec4dbf263992dcaa50e5e67fde63906c33d2de7"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/typecheck.json",
+      "mode": "100644",
+      "bytes": 419,
+      "sha256": "03ead5a9e4152cdf4e0cc40220bcfa21dd3e6a2d934df10e560aa89f26151a61"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/validation/typecheck.log",
+      "mode": "100644",
+      "bytes": 39,
+      "sha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/verify.py",
+      "mode": "100644",
+      "bytes": 12161,
+      "sha256": "ffc8559e32c6a6d98b8871afaf8e5a133b69e360847aaf4872a84118fce548a9"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/volatile-containment.json",
+      "mode": "100644",
+      "bytes": 459,
+      "sha256": "f3507ab6a36af275e7c3a77f27b6187fe11a77bc938b2121111d0a660a06b07d"
+    },
+    {
+      "path": "docs/evidence/sd2-resolution-proof-1/write-closeout.py",
+      "mode": "100644",
+      "bytes": 12349,
+      "sha256": "970148e75afbb67690f2ff875f2a20c601c7a04cfa71689836b52d5534033b16"
+    }
+  ],
+  "allPriorHoldsApprovalsRoutesAndReviewBindingsPreserved": true,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "fullSD2Complete": false,
+  "SD3Started": false
+}

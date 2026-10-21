@@ -1,0 +1,91 @@
+# SD2 checkpoint008 session wrap — local held-research PASS
+
+One bounded checkpoint at frozen offsets140–159 is complete and independently
+reviewed within local held-research limits. Final candidate2c59114f643ea90f84e55a43f7e73dba2b57dbba; exact local
+two-file research-review receiptde40c298624280cc671bc1134213b1e7ef0bd600. final-manifest.json/review.json control.
+Original6be4038 and manifest-round1/review-round1/verification-round1 remain exact.
+Two medium omissions author-fixed/independentlyrechecked: Ripple parent environmental
+major breadth separate from PDF water-quality approval; LPA direct-institution
+funding as separate parent-only held payment. No pending reviewer repair/recheck.
+This separate handoff never rebinds source review or accepts scholarship facts.
+
+Twenty initial dispositions:13researched-held/5held-access/2held-identity;
+26receipts/387newheldfields/20identityholds,0accepted. Cumulative160/406initial
+dispositions,246unprocessed;3,033heldfields/160identities. Acrossall8ledgers,
+272seed-alias and766source-link disposition occurrences retain owner/trigger/action.
+These counts are frozen input keys, not distinct or accepted awards.
+
+Next exact action: next-session Codex resumes one later bounded SD2 checkpoint at
+offset160/savedrow164, Elevated Access Advanced Rating Scholarship, under existing
+AUTHORITY/POLICY. Soleprogresspointer: plansection9; shortprompt:NEXT_SESSION.md.
+All original five research packets/PRELUDE and seven prior autonomous ledgers,
+every field/identity/seed/source-link/deferred-material hold, nine original attention
+rows/all supplements and437M1IDs/owners/triggers remain exact. Next-session Codex
+owns every new/prior hold at its applicable authorized evidence-arrival or SD2
+consolidation trigger. No hold closes through an initial disposition or GPTPASS.
+Existing AUTHORITY/POLICY permits routine continuation; never initialize/reset/replay.
+FullSD2incomplete; stopbeforeSD3.
+
+## Every new row's authoritative route
+
+| Input / evidence | Owner | Trigger and next action |
+| --- | --- | --- |
+| saved-405588227-row-144; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve exact Chapter D public/sponsor/native continuity/current offering. Keep one1400/seniorgirl/3.0/Montana highereducation/April15,2026, fullessay/transcript/two nonrelative references and typed-versus-print instruction conflict; financial-need discussion is not a proven numeric need threshold. |
+| saved-405588227-row-145; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Smile officialDOCX externalCDN redirect versus exact native alias/currentcycle. Keep six schools/one1000 each/2026senior/essay-first selection/April1,2026/counselor OR singlePDFemail,1–2page typed smileessay/transcript. Program-page404 cannot prove closure; no GPA cutoff from a form label. |
+| saved-405588227-row-146; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Ripple parent-versus2026filename/yearlessbody and olderPDFalias. Keep500/WHSorColumbiaFalls senior/2–4year environmentalmajor/3.0 fromPDF,300–500wordwatershedessay,transcript/two teachercontacts; postmark-versus-scanemail route and September1 subsequent award paperwork/photo publicity stay separate. Internship3000/graduateTBD not imported. Preserve parent environmental-engineering/sustainability/other-environmental-emphasis scope separately from PDF ecology/hydrology/water-quality-and-WLI-approval; resolve variation without choosing accepted criteria. |
+| saved-405588227-row-147; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Hinderman native2026 versus exact2025PDF/currentcycle/sponsor. Keep undeterminedamount/count,April17,2026 versus historicalApril18, need/SAI versus EFC,7thsemesterWHStranscript/seniorresume/twoletters/acceptanceMontanacollege-training, samegraduationyear/fulltimecontinuous/twoyearpossibledisbursement/statusupdates. No automaticrenewal or entryGPA invented. |
+| saved-405588227-row-148; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve MACD exact official program terms/currentcycle at authorized evidence arrival;403 remains unretried. Jotform untouched, no old2024 two1000 facts imported. |
+| saved-405588227-row-149; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Rotary native/publiccurrentcycle and amountminimum-versus1000payment wording; keep fullsenior-yearWHS/graduate/gapyearconfirmation, anyhighereducation, requiredschoolceremony AND Rotarylunch, schoolpayment/upto2yearhold,April17,2026 3:30pm zoneunknown, writtenortypedpersonalpage/twotypedtopicresponses/unofficialtranscript/twononfamilyletters. Inlineimage uninspected; genericparent not silence. |
+| saved-405588227-row-150; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve exact Whitefish Soroptimist Memorial versus broader organization, current terms and nomination/returning/needscope; GoogleForm untouched. Aboutpage is not program-completeness or offering proof. Original pilot identity remains held. |
+| saved-405588227-row-151; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve separate Herriges2026requirements/application native/publiccontinuity. Requirements state three3000/April20,2026/Montanaschool/transcript/seniorresume with serviceactivitiesemployment/counselor. LargePDF readabletextempty and batchrawrejection; fullapplication/fields/completeinstructions unknown. No invented GPA/need/highschool scope. |
+| saved-405588227-row-152; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve exact Stimpson2026program/public currentoffering despite providerredacted awardname. Keep two2000/USHSspring2026/accepted-and-enrolling aviationdegree/3.0on4.0,application/transcript/max2letters/750wordtypeddoublespacedessay,April24,2026receipt/electronicpreferred-versus-mail and selection. No raw-page/visual silence claim. |
+| saved-405588227-row-153; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve exact DonK application; no legacydate or criteria adopted: filetitle2026 but application/msword/readableempty/rawbatchrejected. Parent list supports namedprogram and five schoolareas only, not full eligibility. Exact native material access/sponsor/currentcycle remain held. |
+| saved-405588227-row-154; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve EvelynJohnson providerredactedidentity/current2026versusaccesscode25EJMS. Keep RainbowGirls membership/MontanaHSgraduatingsenior/2.0/accrediteddegree, need/activity/goals/motivation selection not needthreshold,typical3000/1–2/onetime/no repeat,Jan1–April30,2026/transcript/FAFSAFSS/portalcode. Portal untouched. |
+| saved-405588227-row-155; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Only SmarterSelect application locator frozen; no independent permitted programterms or host/sponsor continuity. Preserve Mike/GailDonley spouse identity/amount/date/materials unknown; no login/application read or invented providerURL. |
+| saved-405588227-row-156; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve AviationExplorer2026parent and yearlessPDFApril30/bodyFeb2026; two2500awards versus five categorytypes/sharedapplication distinct. Keep currentactivepost/under18parent/advisor+councilverification/min3nonfamilyletters, allsameemailPDFs/photo/FAAconditional/transcript,500wordeducationplan/lifeskillsrecords/talentrelease. Part141/61/training/degree/categoryredemption1yeartraining and2or4yearredemption terms distinct; reapplyno carryover,oneaward/year. Three supplementaryblankdocuments deferred, no form action. |
+| saved-405588227-row-157; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Sloan native/publiccurrentcycle; art/musiccurrently enrolled AND intended2–4yearmajor AND hardship examplesnonexhaustive. GPA notselectionfactor,amountunknown; essayfewparagraphs/artmusicportfolio/adultletter/institutionpayment/May1,2026 endofdaycounselor OR mailed route. Biographical/contactscope excluded, no exclusive hardship taxonomy. |
+| saved-405588227-row-158; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve BigSky2027heading FridayMay1 versus actualSaturdayMay1,2027 and possible intendeddate;2026–27junioronly/stateathlete/BigSkyinvolvement. No500legacyamount or fixedslots imported; trade/communitycollege allowed. Form untouched, winners excluded; amounts/materials/actualcycleopen remain unknown. |
+| saved-405588227-row-159; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve ActionAir markedAwarded2026 versus futurecycle; one2500/May12,2026/June12announcement,undergraduateHVAC atChattanoogaStateCommunityCollege. Noessay versus detailedprofilepreferred,ambitiondriveimpactselection retained. Staticlistingonly/noApply/donorlink or account; winners excluded. |
+| saved-405588227-row-160; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve Kuchenbrod exactnative/sponsor/current2026; one5000newWHSgraduate/2.5/12creditMontana2–4yeartrade,renew5000upto3additionalyears/separate2.5and12creditproof/annualfamilywrittenupdate. Approximately500wordonepageessay/1–2nonrelativeadultletters/resume/officialHStranscript/FAFSA-SAI/Montanaacceptance/May7,2026 endofdaytodisclosedschoolcontact,schoolpaymentafteracceptance+registration. WEFpriorhistoricalsource not newlyread/replayed; alloriginalroutes preserved. |
+| saved-405588227-row-161; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Combined AnneAllegraFordThomas2026 Kaleidoscope application locator only; keep Allegra child separate from Anne atrow163. No portal read/parentterms/amount/GPA/date inferred; host/program/childidentity remains held. |
+| saved-405588227-row-162; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Resolve saved AmericanAirlinesDispatcher versus current LPA DispatcherCertification program; no AApartnername observed in selectedchild, no name-onlymapping. Fall2026parentOct15–Nov5,11:59pmPT,activeLPA17+/USorTerritoriesaccreditedinstitution,parentresume/2letters/2essays/enrollmentproof,child2awards/amountvaries/FAAapproveddispatcherprogram. Parentcycle not acceptedchildopening or member-paymentauthority; membershipform untouched. Preserve parent direct-to-certified-educational-institution funding restriction as its own held payment observation; reconcile saved AmericanAirlines child applicability without inheriting accepted parent truth. |
+| saved-405588227-row-163; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Combined AnneAllegraFordThomas2026 Kaleidoscope application locator only; keep Anne child separate from Allegra atrow161. No portal read/parentterms/amount/GPA/date inferred; host/program/childidentity remains held. |
+
+## Preserved/new attention routes
+
+| Item / authoritative path | Owner | Trigger and next action |
+| --- | --- | --- |
+| Every387newfield/20identity/37seed/22source-link disposition; ../checkpoint-008.json | Codex source/identity reconciliation | Applicable authorized evidence arrival or SD2 consolidation after initial remaining-queue coverage. Use each exact field/source/row action above; none is accepted or dropped. |
+| Every earlier2,646field/140identity hold, original five packets/PRELUDE/seven ledgers and historical review bindings | Original Codex source/identity owners; Kelsey only at recorded human gates | Original applicable evidence-arrival/consolidation triggers. Preserve Pell initial/renewal, ND/Barnes, separately approved Jaycee proposals, all prior pilot/duplicate/child/GPA/need/cycle/amount/material/route distinctions and each exact next action. No completed research replay. |
+| Source-output handling; README/sourcePolicyDeviations | Next-session Codex source/evidence owner | Before every permitted source call/output, narrow selected program/minimal metadata and sanitize values/images before forwarding. No full duplicated envelopes/signedreferences/publiccontact/maintainer/unrelated scope. Preserve disclosure of streamedreference/text/wrongmask lapses; later sanitization never erases them. |
+| Temporary68prior custody pins and3newPEO PDF/two corrected images; document-inspection.json/prior-custody-audit.json | Next-session Codex evidence owner | At next required raw-material audit, verify exact recorded paths/hashes or retain original receipts/report specific gaps. No reacquisition/reconstruction/newfullinspection/research replay. Three nativeDocs body concordance is not page/image proof; Rotary inlineimage and other conversion/visual gaps stay unknown. |
+| Automatic batchrawdownload rejection; Herrigesapplication/DonK readableempty; source receipts | Codex source/evidence owner | Applicable authorized safe evidence arrival/consolidation. Retain held inaccessible scope; no deniedbatch retry, workaround, bypass or inferred complete materials. If a future necessary exact raw download remains denied, obtain required technical approval with stated risk then; no approval is needed to preserve these valid held outcomes. |
+| Prior WETraw403/Clerkrawvisual gaps, Davis recoveredparagraph/no full-envelopehash and interimnative/finalinspection labels | Original Codex evidence/reconciliation owner | Original applicable evidence/use/consolidation triggers. Preserve version/wording/access distinctions and provenance limits; no repeated failed probing, source refresh or currentbyte/visual/silence claim. |
+| Both exact standardbuild process/portEPERM; validation.json | Codex validation/governance/delivery | Before canonical acceptance/authorized release, require exact standard build pass in a permitted supporting environment; retain failures without alternatebuild waiver. |
+| Fresh authenticated main/target, plansection9 | Codex validation/governance/delivery | Before canonical acceptance/authorized release, verify current owner-authorized main/target; saved baseline is not current proof. No remote read/release selected now. |
+| Native preservation/concurrency/version/hiddenP/format/permissions/privatebackup/recovery and human/canonical/publication/student/CSV/browser gates | Original section9/contract owners | Original selected-slice/effect triggers only. Local research proves neither current workbook nor whole-copy preservation. All later gates remain open. |
+| Original437M1IDs/routes/owners/triggers at009fa57 and seasonalM1/SD5setup/effects | Original Codex monitor owner; Kelsey selects reserved effects | Original selected M1/SD5 trigger on fresh delivered-UX baseline. Preserve ETV/FundtheFish, Reviews/state adoption, allowance/zerooverage, sender/service/receipt, suppression, measuredpilot/fullsweep, recovery/catchup/schedulehealth. No second queue/activation. |
+
+## Verification and limits
+
+Plan/typecheck/fulltests PASS after permitted exact IPC retries; both exact standard
+builds remain process/portEPERM, no waiver. Focused evidence/history/source/semantic
+verification PASS after two author fixes; canonical/web/CI/control/validation bytes
+unchanged. Fresh authenticated remote main/target unverified. Final review verifies
+111exact evidence references,26receipts,387newheldfields, corrected PEO ruleviews,
+68prior custodypins and all protected history. Root whitespace checks pass.
+
+P.E.O. is the only newly materialized local raw PDF. Other native/public conversions
+have no raw/page/image completeness proof. Nativepublic/sponsor authority/source
+revisions/currentoffering/atomicity and exact content-call times stay unknown;
+publicmaxAge0 request is not origin-current proof. Rawfiles/images remain temporary.
+Automatic approval review rejected the unverifiedblankness batch; safe connector
+alternatives/held gaps completed this bounded outcome without retry/bypass. No
+applicant responses observed/retained. Prior and current output lapses remain
+disclosed; final selected artifacts omit prohibited values.
+
+Only local task-owned evidence/docs/commits. No workbookaccess/write, app/config/CI,
+login/forminteraction/contact/messages, remoteGit/release/deployment/activation or
+SD3. All later preservation/acceptance/student/monitor/effect gates remain at their
+original owners/triggers. Recommended next-session effort:High; no model switch
+or backend-effort verification is claimed.

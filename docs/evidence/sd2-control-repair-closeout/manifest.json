@@ -1,0 +1,118 @@
+{
+  "scope": "Documentation-only session closeout of completed local SD2 repair; no source clearance or canonical acceptance",
+  "entryCommit": "ce7d094e04fc07f04d2fb267eb74affcced4a8a8",
+  "candidateCommit": "c9d9367a2ec637cab0ee8d98bdd456134f6b8e66",
+  "candidateTree": "52174a7232076833f34f152085c0abba3a4b8574",
+  "completeDiffSha256": "fd7c362f6e1630bb868303ca3f2546551683b88d99fecad86fac8e561e5aa23f",
+  "completeDiffBytes": 74864,
+  "changedFiles": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "mode": "100644",
+      "sha256": "e6c43f439e51b43b19a0183470b8bd7ff31fa5bb235a1ecd4dee4fc3999038a3",
+      "bytes": 776662
+    },
+    {
+      "path": "docs/STUDENT_DATA_AND_MAINTENANCE_PLAN.md",
+      "mode": "100644",
+      "sha256": "54fdff93c8c77233bf7b53ea5aaf791609792c7484d22a13946829b654a7d4d4",
+      "bytes": 222226
+    },
+    {
+      "path": "docs/evidence/sd2-autonomous/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "c513bf4ebaa83d06722b6df442b249714a6ad7d160e4b267d9b5b9989610a823",
+      "bytes": 178524
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/NEXT_SESSION.md",
+      "mode": "100644",
+      "sha256": "905bb5a23f0b087ca8b983e0ad7d15227adc2635b678c156d9a821cd0c707f7f",
+      "bytes": 1551
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/SESSION_CLOSE.md",
+      "mode": "100644",
+      "sha256": "b4874d9c8253859a70cad62307ff9ea323618e89c5eb2aa0a1aef95348748e53",
+      "bytes": 4083
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/build.log.gz",
+      "mode": "100644",
+      "sha256": "75ebafa7810b30a7553a892447515a25786dc57b179d1b0fd8b7c3bb875cc74e",
+      "bytes": 1407
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/entry-diff.log.gz",
+      "mode": "100644",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+      "bytes": 20
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/plan.log.gz",
+      "mode": "100644",
+      "sha256": "cf3892503de0221c009851f53713d8d489d21d330319edb0e5fc468fa87c4983",
+      "bytes": 143
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/tests.log.gz",
+      "mode": "100644",
+      "sha256": "658986c3755b5ea203bf0ba6b98d2e84ce6497e60f1b3192962b41c624409fba",
+      "bytes": 6842
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/checks/typecheck.log.gz",
+      "mode": "100644",
+      "sha256": "8fa59c43eb4d70a01caef9b633fbb0efc2b0682e952da8accde8011fb356d5d1",
+      "bytes": 59
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/entry-audit.json",
+      "mode": "100644",
+      "sha256": "6f9a7de09966e1950cfaa03a0c52c6c9d2db54acf53dc366c4b856a131452445",
+      "bytes": 960
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/open-items.json",
+      "mode": "100644",
+      "sha256": "e89d31c3f6189e08f84b9ad8bfa880e042c0921724dab325d6f4667dd6b782a8",
+      "bytes": 30839
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/run-validation.py",
+      "mode": "100644",
+      "sha256": "3e347957f8e5bd4924e38dfdef3449f1990e07ec877d690d6be1b1c4792d3c51",
+      "bytes": 1688
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/validation.json",
+      "mode": "100644",
+      "sha256": "cdd1bcf43015e60a14902ddc98b0832275b286bbd26f63da05a29de13b9ecddc",
+      "bytes": 3879
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/verification.json",
+      "mode": "100644",
+      "sha256": "0acae0d8add419a4594fdaaad91e570c5cd3db26f3895a896df64a3014396192",
+      "bytes": 908
+    },
+    {
+      "path": "docs/evidence/sd2-control-repair-closeout/verify.py",
+      "mode": "100644",
+      "sha256": "94ee047e9741e988c0cbbad8d2fe53c7fe836cfda9cd2e7d5dff6e735f7de986",
+      "bytes": 7881
+    }
+  ],
+  "sessionStatus": "PASS",
+  "sourceExecutionStatus": "FAIL",
+  "canonicalAcceptance": false,
+  "acceptedFacts": 0,
+  "acceptedMappings": 0,
+  "SD3Started": false
+}

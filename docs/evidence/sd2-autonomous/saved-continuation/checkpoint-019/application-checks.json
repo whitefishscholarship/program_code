@@ -1,0 +1,13 @@
+{
+  "scope": "Retained unchanged actual application failures, no repeated attempt or PASS.",
+  "receiptReference": {
+    "path": "docs/evidence/sd2-autonomous/saved-continuation/checkpoint-010/application-checks.json",
+    "sha256": "f6de201823589f270b6ded88c8aec20efb0c2f6acc776ce62bc0a06fd7947b32"
+  },
+  "requiredChecksRemainUnfulfilled": true,
+  "repeated": false,
+  "rationale": "No app/dependency/environment change; group010 four actual unchanged commands stopped127 missingtsx/tsc/next.",
+  "owner": "Codex validation/governance/delivery",
+  "trigger": "Separately permitted exact-lockfile restoration and unchanged checks before canonical acceptance/authorized release",
+  "nextAction": "Retain missing tools and historical IPC/build/fresh-main-target gates; no app PASS claimed."
+}

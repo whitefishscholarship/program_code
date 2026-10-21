@@ -1,0 +1,37 @@
+{
+  "scope": "Exact existing repository/main and project/team only. CLI existing credentials; no account/token/link/configuration changes.",
+  "observations": [
+    {
+      "key": "github-repo",
+      "command": [
+        "gh",
+        "api",
+        "repos/whitefishscholarship/program_code",
+        "--jq",
+        "{full_name,default_branch,permissions}"
+      ],
+      "startedAt": "2026-10-21T02:02:23.340157+00:00",
+      "completedAt": "2026-10-21T02:02:24.023067+00:00",
+      "exitCode": 1,
+      "stdoutMetadataOrError": "{\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/repos#get-a-repository\",\"status\":\"404\"}",
+      "stderrMetadataOrError": "gh: Not Found (HTTP 404)\n"
+    },
+    {
+      "key": "vercel-project",
+      "command": [
+        "vercel",
+        "--scope",
+        "team_6CAjRq58n0WvAH49otKSQbA7",
+        "project",
+        "inspect",
+        "prj_LbefE2deji6nPND6iBiuofe7IABv",
+        "--non-interactive"
+      ],
+      "startedAt": "2026-10-21T02:02:24.023294+00:00",
+      "completedAt": "2026-10-21T02:02:25.334352+00:00",
+      "exitCode": 1,
+      "stdoutMetadataOrError": "",
+      "stderrMetadataOrError": "Error: You do not have access to the specified account\nLearn More: https://err.sh/vercel/scope-not-accessible\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502                     Update available! v54.1.0 \u226b v63.1.2                      \u2502\n\u2502   Changelog: https://github.com/vercel/vercel/releases/tag/vercel%4063.1.2   \u2502\n\u2502                   Run `npm i -g vercel@latest` to update.                    \u2502\n\u2502                                                                              \u2502\n\u2502             The latest update may fix any errors that occurred.              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n"
+    }
+  ]
+}

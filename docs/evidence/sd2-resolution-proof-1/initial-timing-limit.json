@@ -1,0 +1,25 @@
+{
+  "recordedAt": "2026-10-20T19:07:52.299383+00:00",
+  "capturedResponseProcessingTimings": [
+    {
+      "targetId": "sd2-read-045efadb26cab1da7892",
+      "order": 6,
+      "meaning": "Response was acquired by earlier direct tool calls and then processed from volatile memory; stored startedAt/completedAt describe processing, not a full remote-call interval."
+    },
+    {
+      "targetId": "sd2-read-065aafdaf3e2b20cb29b",
+      "order": 9,
+      "meaning": "Response was acquired by earlier direct tool calls and then processed from volatile memory; stored startedAt/completedAt describe processing, not a full remote-call interval."
+    }
+  ],
+  "initialGlobalConcurrency": "Unverified across initial public sample and separately captured native document; potential overlap cannot be reconstructed from retained results. No retrospective concurrency-compliance claim.",
+  "subsequentExecution": "After the safety recheck, one global public-page scheduler uses groups of at most4 distinct hosts and waits for all group completions before new requests; audit recorded intervals separately.",
+  "underlyingProviderHttpRequests": "UNMEASURED",
+  "originalResultBytesChanged": false,
+  "replayOrTimestampReconstruction": false,
+  "factsAccepted": 0,
+  "allOriginalHoldsRetained": true,
+  "owner": "Codex selected-run author/governance",
+  "trigger": "Before any accepted use of these observations",
+  "nextAction": "Retain initial capture/concurrency uncertainty; hashes alone never establish criterion values, origin/current proof or acceptance. Do not replay to manufacture missing timing proof."
+}

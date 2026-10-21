@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "outcome": "FAIL",
+  "reviewType": "Fresh-context independent read-only whole-candidate failed-execution closeout review",
+  "reviewerTask": "/root/sd2_final_failure_review",
+  "reviewedAt": "2026-10-20T19:28:39.356948+00:00",
+  "independence": {
+    "freshContext": true,
+    "authoredOrEditedReviewedStage": false,
+    "readOnlyRepository": true,
+    "repositoryMutations": false,
+    "externalSourceCalls": 0,
+    "workbookCalls": 0,
+    "dependencyInstallation": false,
+    "onlyOutput": "/private/tmp/sd2-final-failure-review.json"
+  },
+  "binding": {
+    "baselineCommit": "0336d32b930a87d458414611184ab546b00df047",
+    "candidateCommit": "f77c730dd4d93dbe349b2782330ced52829e650d",
+    "candidateTree": "d0e37fc0b730f9026d5d89a1b4ced5e8c058629b",
+    "manifestPath": "docs/evidence/sd2-resolution-proof-1/final-manifest.json",
+    "manifestSha256": "bbac0aa7be2939ef0d7b0095f2b8ff2e2dc98c02ae80c863ec098a719581b287",
+    "completeDiffFiles": 55
+  },
+  "originalObjective": "Follow authoritative NEXT_SESSION order; verify matching consolidated receipt before new paths, preserve every hold, approval, route and review binding, and perform only directly selected finite large-batch validation/material proof without routine checkpoint approvals. Never initialize, reset or replay; stop before SD3.",
+  "authorityAssessment": {
+    "directSelectionVerified": true,
+    "selectionPath": "docs/evidence/sd2-resolution-proof-1/selection.json",
+    "selectedScopes": [
+      "SD2-LOCKED-VALIDATION-1",
+      "SD2-RESOLUTION-PROOF-1"
+    ],
+    "entryAuditVerified": true,
+    "entryAuditPath": "docs/evidence/sd2-resolution-proof-1/entry-audit.json",
+    "historicalProposalOnlyBytesPreserved": true,
+    "canonicalPlanAndBuildStateUnchanged": true,
+    "noCanonicalStageAcceptance": true
+  },
+  "severityCounts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 1,
+    "low": 0
+  },
+  "unresolvedSeverityCounts": {
+    "critical": 0,
+    "high": 2,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": [
+    {
+      "id": "H1",
+      "severity": "high",
+      "title": "Source execution irreversibly violated the no-replay constraint",
+      "status": "UNRESOLVED_HISTORICAL_VIOLATION",
+      "evidence": "Cumulative source metadata records completed ordinary public calls for exact target orders 26, 30 and 34 in both interrupted controllers. No qualifying temporary-transport retry basis is retained. Order 32 has a possible additional earlier dispatch. Remaining resource budget does not excuse replay.",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-call-audit.json",
+        "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+        "docs/evidence/sd2-resolution-proof-1/forensic-correction.json"
+      ],
+      "owner": "Codex continuation/source governance",
+      "trigger": "This closeout and before any further source acquisition",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json",
+      "nextAction": "Keep this execution FAIL permanently; preserve all historical records and 272 acquisition quarantines. Issue no acceptance receipt. Never repeat known or possible dispatches to repair missing evidence.",
+      "remediable": false
+    },
+    {
+      "id": "H2",
+      "severity": "high",
+      "title": "Interrupted acquisition lacked durable complete dispatch accounting",
+      "status": "CONTAINED_NOT_CLEARED",
+      "evidence": "Metadata establishes 64 completed source-tool records, including 9 failed tool records: 57 public, 4 native metadata and 3 native content. Interrupted phases contain 13 and 26 completions rather than earlier snapshot bounds/results. Four frontier reservations give a conservative 68-call reservation. Exact source-attempt totals and underlying HTTP requests remain unmeasured.",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-call-audit.json",
+        "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+        "docs/evidence/sd2-resolution-proof-1/outcomes.json"
+      ],
+      "owner": "Codex acquisition/control author, followed by an independent control reviewer",
+      "trigger": "Before any future selected acquisition",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/call-ledger-review.json",
+      "nextAction": "Preserve the failed run. Independently validate an exclusive durable pre-call intent/result journal and exact never-dispatched target proof before any future unused-target continuation. Ambiguous and spent targets remain held. No further calls in this run.",
+      "remediable": "Prospective control can be repaired; historical dispatch uncertainty cannot be rewritten."
+    },
+    {
+      "id": "M1",
+      "severity": "medium",
+      "title": "Historical snapshots contain inaccurate no-replay and resource claims",
+      "status": "REMEDIATED_BY_EXPLICIT_FORENSIC_OVERLAY",
+      "evidence": "source-results-002 undercount and source-results-004 replayed:false flags, plus selected-expanded-targets completedTargetsNotReplayed, remain byte-preserved historical statements. Current README, SESSION_CLOSE, progress pointers, forensic-correction, summary and outcomes explicitly supersede them with the cumulative audit and independent ledger review.",
+      "paths": [
+        "docs/evidence/sd2-resolution-proof-1/source-results-002.json",
+        "docs/evidence/sd2-resolution-proof-1/source-results-004.json",
+        "docs/evidence/sd2-resolution-proof-1/selected-expanded-targets.json",
+        "docs/evidence/sd2-resolution-proof-1/forensic-correction.json"
+      ],
+      "owner": "Codex evidence/reconciliation author",
+      "trigger": "Before final handoff and whole-candidate review",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json",
+      "nextAction": "Continue to use the cumulative forensic overlay for counters, quarantine and failure status; preserve original bytes. No execution acceptance follows from this evidence repair.",
+      "remediable": true
+    }
+  ],
+  "mediumLowDispositions": [
+    {
+      "findingId": "M1",
+      "severity": "medium",
+      "status": "VERIFIED_REMEDIATED_EVIDENCE_OVERLAY",
+      "rationale": "Current authoritative overlays explicitly reject inaccurate historical counters and replay flags without changing historical bytes; the historical execution still fails.",
+      "owner": "Codex evidence/reconciliation author",
+      "trigger": "Before final handoff and any later use of this run",
+      "target": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json; docs/evidence/sd2-resolution-proof-1/summary.json; docs/evidence/sd2-resolution-proof-1/outcomes.json",
+      "nextAction": "Retain the overlay and failed status; preserve prior snapshots."
+    }
+  ],
+  "priorReviewDispositionAssessment": {
+    "callLedgerCounts": {
+      "critical": 0,
+      "high": 2,
+      "medium": 1,
+      "low": 0
+    },
+    "countMatchedDispositions": 3,
+    "allHaveRationaleOwnerTriggerTarget": true,
+    "path": "docs/evidence/sd2-resolution-proof-1/failure-dispositions.json",
+    "initialPrivacyReviewPreserved": true,
+    "safetyRecheckHashBindingsVerified": true,
+    "historicalPrivacyIncidentErased": false
+  },
+  "containmentAndEvidenceIntegrity": {
+    "outcome": "PASS",
+    "acceptanceMeaning": "Forensic containment and evidence integrity only. This does not accept source execution, facts, mappings, SD2, or any later stage.",
+    "protectedEntryFiles": 2879,
+    "exactAppendHistoriesPreserved": 3,
+    "all397TargetsHaveBoundForensicDispositions": true,
+    "all272AcquisitionCandidatesQuarantined": true,
+    "remaining125OriginalTriageHoldsRetained": true,
+    "observedCompletedCalls": 64,
+    "conservativeExplicitCallReservation": 68,
+    "uncertainAdditionalFrontierCalls": 4,
+    "confirmedReplayOrders": [
+      26,
+      30,
+      34
+    ],
+    "possibleAdditionalReplayOrders": [
+      32
+    ],
+    "sourceAcquisitionComplete": false,
+    "resultPacketRecords": 47,
+    "currentSourceResultFiles": 5,
+    "sourceResultForbiddenProsePayloadKeys": 0,
+    "committedHistoricalResultBlobsChecked": 19,
+    "committedHistoricalResultBlobsWithForbiddenPayloadKeys": 0,
+    "missingResultBodiesReconstructed": false,
+    "acceptedFacts": 0,
+    "acceptedMappings": 0,
+    "fullSD2Complete": false,
+    "SD3Started": false,
+    "additionalRemediableEvidenceIntegrityIssuesFound": []
+  },
+  "privacyAssessment": {
+    "observation": "Final source-result records contain hashes/counts, program affinity and fixed status/limit metadata rather than source prose or raw provider errors. All examined committed historical result blobs likewise lack source-prose/body/error payload keys. The documented initial uncommitted excluded-contact incident and its ten-excerpt purge remain visible, along with interim FAIL and independently hash-bound safety recheck.",
+    "limits": "This review did not inspect raw provider source bodies, recover deleted uncommitted prose, assert erasure from external provider systems, or establish underlying criterion values or full visual/native inspection."
+  },
+  "validationAssessment": {
+    "oneSelectedPinnedRestore": "PASS: npm ci --ignore-scripts --no-audit --no-fund; package and lockfile pins unchanged",
+    "planCheck": "PASS recorded, including final unchanged closeout rerun with permitted IPC after restricted EPERM",
+    "typecheck": "PASS recorded",
+    "fullTests": "PASS recorded",
+    "exactBuild": "FAIL_REMAINS_GATE: process/port EPERM in recorded permitted environment",
+    "currentWorkingDiffCheck": "PASS independently observed through integrity verifier",
+    "fullEntryToCandidateDiffCheck": "FAIL disclosed: two preserved EOF whitespace warnings in bound acquisition code and authentic raw typecheck log",
+    "logsAndPinsHashVerified": true,
+    "checksRerunByThisReviewer": [
+      "Read-only integrity verifier",
+      "Read-only review-bound rejection",
+      "Independent manifest/blob and preservation comparisons"
+    ],
+    "freshMainTargetProof": "Still open at original acceptance/release gate; no remote refresh performed"
+  },
+  "verificationEvidence": [
+    {
+      "command": "python3 docs/evidence/sd2-resolution-proof-1/verify.py --integrity-only",
+      "exitCode": 0,
+      "observedResult": "Execution FAIL; integrity PASS; all preservation/ledger/manifest assertions passed."
+    },
+    {
+      "command": "python3 docs/evidence/sd2-resolution-proof-1/verify.py --review-bound",
+      "exitCode": 2,
+      "observedResult": "Explicitly rejects failed source execution and acceptance receipt."
+    },
+    {
+      "command": "Read-only independent Git/blob and JSON structure comparisons",
+      "observedResult": "Frozen HEAD/tree/manifest and 55-file complete scope checked; no stage mutation; source-result payload structural scan passed."
+    }
+  ],
+  "failedRecordGovernanceAssessment": {
+    "outcome": "PASS_FOR_FAILURE_RECORD_ONLY",
+    "assessment": "A local immutable direct-child record adding exactly final-manifest.json and this FAIL review preserves the failed history without claiming canonical acceptance. The forensic-bound verifier requires matching candidate/manifest, FAIL review, direct-child topology, exactly two changed paths, clean status and unchanged candidate blobs. Its success reports execution FAIL and integrity PASS. The ordinary review-bound acceptance path rejects unconditionally. No acceptance criterion is waived.",
+    "currentReceiptStatus": "Pending: reviewer examined the immutable candidate plus untracked final manifest; no final review or direct-child failed-review record existed during review. Future exact structural binding must still be verified after recording.",
+    "acceptanceReceiptPermitted": false,
+    "canonicalAttestationPermitted": false,
+    "remoteDeliveryPermitted": false
+  },
+  "openItems": [
+    {
+      "id": "source-execution-and-controls",
+      "outcome": "FAIL",
+      "owner": "Codex continuation/control author, then independent reviewer",
+      "trigger": "Before any future selected acquisition",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/forensic-correction.json",
+      "nextAction": "Keep failure and quarantines; independently validate durable exclusive pre-call journaling and exact never-dispatched proof. No new calls this run."
+    },
+    {
+      "id": "exact-build-and-fresh-target",
+      "outcome": "BLOCKED",
+      "owner": "Codex validation/governance",
+      "trigger": "Unchanged supported execution context and original acceptance/release gate",
+      "authoritativePath": "docs/evidence/sd2-resolution-proof-1/validation/build.json",
+      "nextAction": "Preserve actual EPERM failure; perform only exact unchanged build and original fresh-main/target verification when permitted. No workaround, waiver or unrelated repair."
+    },
+    {
+      "id": "original-fourteen-acceptance-gates-and-held-routes",
+      "outcome": "BLOCKED",
+      "owner": "Original named owners unchanged, including Kelsey and limited Jaycee approval roles",
+      "trigger": "Original per-item triggers unchanged",
+      "authoritativePath": "docs/evidence/sd2-consolidation-package/acceptance-gates.json",
+      "nextAction": "Follow original exact owner/trigger/path/action bindings for human facts, identity, preservation, recovery, permissions, custody, publication, students, M1, SD5 and reserved effects. Stop before SD3."
+    }
+  ],
+  "limits": [
+    "No new source or workbook access, Git publication, deployment, contact or monitoring effect was performed.",
+    "Metadata identifies completed tool records and conservative reservations, not exact HTTP or acquisition-attempt totals.",
+    "Hash-only selected observations establish no usable criterion values or accepted factual identity.",
+    "Successful application checks do not prove current scholarship facts or excuse historical replay."
+  ]
+}
