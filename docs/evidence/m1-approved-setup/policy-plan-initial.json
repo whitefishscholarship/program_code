@@ -1,0 +1,8 @@
+{
+  "command": "npm run plan:check",
+  "cwd": "web",
+  "exitCode": 1,
+  "observedCompletedAt": "2026-10-21T19:04:19.829973+00:00",
+  "executionTimes": "Individual process start/completion not instrumented; observed receipt timestamp only",
+  "result": "Three expected new-attestation diagnostics plus handoff first-revision header mismatch; author adding current Plan revision23 header before recheck. No PASS claimed."
+}

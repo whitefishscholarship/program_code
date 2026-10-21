@@ -1,5 +1,7 @@
 # Approved M1 setup/configuration release in progress
 
+Plan revision: 23
+
 Authority docs/evidence/m1-approved-setup/authority.json; exact proposal preserved.
 Revision23 normal governance/review/attestation governs this one approved config release.
 GitHub environment provisioned main-only/reviewer/no-bypass; flags false. Key creation
