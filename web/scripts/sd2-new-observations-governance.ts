@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {isDeepStrictEqual as equal} from 'node:util';
 export const NEW_BASE='304b80c4c3e5a31a606ce547b6b3de97ab47b8df';
-export const RECEIPT='62cc97b';
+export const PACKET_PINS_SHA='b73a99cedb4d1f2309280a77061651a536eba6b5b8420a37e1693f8c48cf8363';
 export const PACKET='docs/evidence/sd2-new-research-handoff/';
 export const NEW_DIR='docs/evidence/sd2-new-observations-1/';
 export const SCOPE_SHA='d370162ae44777cd9737a83af4f76308ff0fbe737fc9e5e97b3dd416f901ac12';
@@ -35,8 +35,13 @@ export function validateNewAtRepo(root:string,current:Record<string,unknown>,can
  // Historical candidate policy remains exact; no mutable live activation flag.
  if(!equal(current.sd2NewResearchCampaign,s.sd2NewResearchCampaign))errors.push('campaign cannot be rebound or activated by mutable state');
  const scope=read(PACKET+'scope.json');if(sha(scope)!==SCOPE_SHA)errors.push('exact ordered scope digest');
- const packets=git('ls-tree','-r','--name-only',RECEIPT,'--',PACKET).toString().trim().split('\n');
- for(const p of packets)if(!read(p).equals(git('show',`${RECEIPT}:${p}`)))errors.push('imported receipt changed '+p);
+ const pinsRaw=read(NEW_DIR+'packet-pins.json');
+ if(sha(pinsRaw)!==PACKET_PINS_SHA)errors.push('exact imported packet pins');
+ const refs: Array<{path:string;mode:string;sha256:string}>=JSON.parse(pinsRaw.toString()).files;
+ const packets=refs.map(ref=>ref.path);
+ for(const ref of refs){if(sha(read(ref.path))!==ref.sha256)errors.push('imported receipt changed '+ref.path);
+ const mode=candidate?git('ls-tree',candidate,'--',ref.path).toString().split(' ')[0]:(fs.statSync(path.join(root,ref.path)).mode&0o111?'100755':'100644');if(mode!==ref.mode)errors.push('packet mode changed '+ref.path);}
+
  const changes=candidate?git('diff','--name-only',NEW_BASE,candidate).toString().split('\n'):[...git('diff','--name-only',NEW_BASE).toString().split('\n'),...git('ls-files','--others','--exclude-standard').toString().split('\n')];
  for(const p of changes.filter(Boolean))if(!NEW_ALLOW.includes(p)&&!packets.includes(p)&&!p.startsWith(NEW_DIR))errors.push('outside enabling scope '+p);
  // Any baseline path outside explicit allowance is immutable, including old controls/results.
