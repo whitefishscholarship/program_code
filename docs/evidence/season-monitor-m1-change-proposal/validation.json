@@ -1,0 +1,23 @@
+{
+  "scope": "Inactive documentation proposal only",
+  "checks": [
+    {
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "docs/evidence/season-monitor-m1-change-proposal/proposed/deployment-suppression.patch"
+      ],
+      "startedAt": "2026-10-21T18:49:24.688877+00:00",
+      "completedAt": "2026-10-21T18:49:24.702389+00:00",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "applicationMatrix": "Not rerun; no active code/config/workflow or canonical state change; retain prior historical typecheck/IPC/build evidence without claiming current PASS",
+  "patchApplied": false,
+  "sourceCalls": 0,
+  "sends": 0,
+  "installations": 0,
+  "externalWrites": 0
+}

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "planRevision": 22,
+  "planRevision": 23,
   "planPath": "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md",
-  "lastUpdated": "2026-10-20",
+  "lastUpdated": "2026-10-21",
   "repository": {
     "owner": "whitefishscholarship",
     "name": "program_code",
@@ -965,6 +965,22 @@
           "basis": "Direct informed user authorization quoted in the evidence; includes Preview and Production effects.",
           "scope": "Revision22 governance-only implementation, independent review, exact branch push/PR/merge and resulting Vercel Preview/Production on web prj_LbefE2deji6nPND6iBiuofe7IABv team_6CAjRq58n0WvAH49otKSQbA7 web-two-gules-45.vercel.app. No fact/mapping acceptance, source/workbook/runtime/config/CI/dependency changes, monitoring or SD3."
         }
+      },
+      {
+        "id": "PLAN-REV23",
+        "status": "attestation-gated",
+        "baselineCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+        "evidencePath": "docs/evidence/PLAN-REV23.md",
+        "manifestPath": "docs/evidence/PLAN-REV23-manifest.json",
+        "reviewPath": "docs/reviews/PLAN-REV23.json",
+        "deliveryAuthorization": {
+          "authorized": true,
+          "authorizedBy": "Kelsey Stuart",
+          "authorizedAt": "2026-10-21",
+          "evidencePath": "docs/evidence/PLAN-REV23.md",
+          "basis": "Direct approval of exact M1 proposal including credential provisioning, Git delivery and Vercel Preview/Production effects; verbatim authority and immutable proposal receipt in docs/evidence/m1-approved-setup/authority.json.",
+          "scope": "M1 setup only: exact domain-scoped new Resend sending key via user custody, dedicated protected GitHub environment and disabled variables, web/vercel.json exclusion only for codex/scholarship-monitor-state; reviewed codex/m1-approved-setup-release push/PR/CI/Preview/merge/Production and exact read-only verification on existing Whitefish web project prj_LbefE2deji6nPND6iBiuofe7IABv team_6CAjRq58n0WvAH49otKSQbA7 canonical web-two-gules-45.vercel.app. No M2/workflow/source/send/state-ref/activation/protection removal/paid effect orSD3."
+        }
       }
     ]
   },
@@ -1498,5 +1514,25 @@
     "nextOwner": "Codex governance author and fresh independent reviewer",
     "nextTrigger": "Revision22 delivery, then separately reviewed exact closure candidate with original gates",
     "attentionPath": "docs/evidence/sd2-access-session-closeout/open-items.json"
+  },
+  "m1Setup": {
+    "contractId": "m1-approved-setup-v1",
+    "status": "approved-implementation",
+    "authorityPath": "docs/evidence/m1-approved-setup/authority.json",
+    "proposalContractPath": "docs/evidence/season-monitor-m1-change-proposal/contract.json",
+    "setupEvidencePath": "docs/evidence/m1-approved-setup/",
+    "routesPreserved": 437,
+    "pilotPinsPreserved": 12,
+    "from": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>",
+    "to": "kelsey@waypointfranchise.com",
+    "environment": "scholarship-season-monitor",
+    "secretName": "SCHOLARSHIP_MONITOR_RESEND_API_KEY",
+    "stateBranch": "codex/scholarship-monitor-state",
+    "M2Started": false,
+    "sourceChecksAuthorized": false,
+    "emailSendsAuthorized": false,
+    "monitoringActivated": false,
+    "stateRefCreationAuthorized": false,
+    "M1Complete": false
   }
 }

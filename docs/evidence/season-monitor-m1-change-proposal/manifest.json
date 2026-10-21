@@ -1,0 +1,65 @@
+{
+  "kind": "local-M1-exact-change-proposal-no-effects-no-acceptance",
+  "baselineCommit": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+  "candidateCommit": "0e519bc43c445987f820bc0e6820bbc431185cfc",
+  "completeDiffSha256": "c827c7d692e841ce15eeb858a24eecc738f517613a948eaebff7c5ea120310bb",
+  "files": [
+    {
+      "path": "docs/CURRENT_HANDOFF.md",
+      "sha256": "3624274b540e53d41f8b076237e6c9d4cdedd7fbff0674225f017f20cd977a87",
+      "bytes": 787015
+    },
+    {
+      "path": "docs/SCHOLARSHIP_SEASON_MONITOR_PLAN.md",
+      "sha256": "dae1cdee5c2fe51bff84f028ef72f8b8656214a137c6385de463367869c0c781",
+      "bytes": 28140
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/REVIEW.md",
+      "sha256": "22c46ee3cc955e409e26a13975080af42d8ca13c64ac90a41593ae5a8b21b7d8",
+      "bytes": 10320
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/SESSION_CLOSE.md",
+      "sha256": "05c54550188a7380a36f2cefc55c2ec08d0545a0a67e5f10599012008bc7b216",
+      "bytes": 2456
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/contract.json",
+      "sha256": "cd3172fa8963edfdf6826068790b23803e1be1587a9fba58c3134ba1d72bcdb8",
+      "bytes": 5122
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/main-observation.json",
+      "sha256": "2d10c2177c21a12acea8c80f678469c3e81ccb5ab8d67b2c3b42625df47aa6a4",
+      "bytes": 409
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/preservation.json",
+      "sha256": "60b52ed5bf60cd51cfd7062d6e3acf5c8a3f39d85ccb5267bd7371b1853e473e",
+      "bytes": 8713
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/proposed/deployment-suppression.patch",
+      "sha256": "a4686358c85ff1d821876cbafdf3bc7595655cdf72662e8dcaf62b33b0fbf0e9",
+      "bytes": 281
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/proposed/web-vercel.json",
+      "sha256": "ff60caea396e33831400883528ac89cfa3313b7e6282d2e48b8e741056c5904c",
+      "bytes": 153
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/validation.json",
+      "sha256": "f8f56f2b0f4ce94aa83c42df7a7a405486415608bb8468eeb9bcf938b1f56c1e",
+      "bytes": 694
+    },
+    {
+      "path": "docs/evidence/season-monitor-m1-change-proposal/verify.py",
+      "sha256": "59636e558f6849887d138948b9e0c5144bef525e67f2f28a55632d386a08f6aa",
+      "bytes": 4673
+    }
+  ],
+  "M1Complete": false,
+  "externalEffectsAuthorized": false
+}

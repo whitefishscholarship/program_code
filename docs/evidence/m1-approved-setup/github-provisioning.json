@@ -1,0 +1,596 @@
+[
+  {
+    "command": [
+      "gh",
+      "api",
+      "user",
+      "--jq",
+      "{login,id}"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:08.174246+00:00",
+    "completedAt": "2026-10-21T18:59:08.742321+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": 199416430,
+      "login": "Franscale1922"
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "auth",
+      "switch",
+      "--hostname",
+      "github.com",
+      "--user",
+      "whitefishscholarship"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:08.742959+00:00",
+    "completedAt": "2026-10-21T18:59:08.918629+00:00",
+    "exitCode": 0,
+    "observed": "",
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "user",
+      "--jq",
+      "{login,id}"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:08.919114+00:00",
+    "completedAt": "2026-10-21T18:59:09.637388+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": 266880911,
+      "login": "whitefishscholarship"
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code",
+      "--jq",
+      "{id,full_name,visibility,default_branch,permissions,allow_merge_commit}"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:09.638525+00:00",
+    "completedAt": "2026-10-21T18:59:10.353219+00:00",
+    "exitCode": 0,
+    "observed": {
+      "allow_merge_commit": true,
+      "default_branch": "main",
+      "full_name": "whitefishscholarship/program_code",
+      "id": 1177349487,
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "visibility": "public"
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/branches/main"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:10.354422+00:00",
+    "completedAt": "2026-10-21T18:59:11.204740+00:00",
+    "exitCode": 0,
+    "observed": {
+      "name": "main",
+      "commit": {
+        "sha": "9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+        "node_id": "C_kwDORiztb9oAKDlhODVkNTQ4ODBiYmQwYmNkNjM0ZDgyYmZiZTJkODZkMGNhMGJkYzU",
+        "commit": {
+          "author": {
+            "name": "whitefishscholarship",
+            "email": "whitefishscholarship@gmail.com",
+            "date": "2026-10-21T04:06:54Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2026-10-21T04:06:54Z"
+          },
+          "message": "Merge pull request #51 from whitefishscholarship/codex/sd2-held-research-closure\n\nClose SD2 held-research accounting without accepting facts",
+          "tree": {
+            "sha": "eb2c66a6acc6843059b08da7abb1e1450573812a",
+            "url": "https://api.github.com/repos/whitefishscholarship/program_code/git/trees/eb2c66a6acc6843059b08da7abb1e1450573812a"
+          },
+          "url": "https://api.github.com/repos/whitefishscholarship/program_code/git/commits/9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq2DpeCRC1aQ7uu5UhlAAAtHkQAEhWcZCdSwNQ04elWpJojxPf\nxltP5FX7KEWXN+fhrygqSsQOMK3r92cmJUdChu2xcz4Rjftnk0Andopz1kRSstfz\nsTN1j0RQZvuTR2dYQfIlUMNyB2vjHToIOiVLL4rPq2DVgAoMfSUOX5rvdvHgnuTN\nEP4BZ3CPIhcXpb10Y0u/Ag4m/lLJj/fyfNYEZrsD3ugYN+yi2YFC2Zcz6t9bo/p1\ncW3GhWam59fHJ2PghVf3mcWvtHb6zFY6CZQ9NtJMMufimKkGm2dmO2hVjrNTjcSP\nmOuVtL+WZH+Rof1PbPwbGND4T6EtcwlxGzF0GV4M3lua9Y2iVHqPtVvi8T9nEvNR\nrd+JtkAqXVw7SfBaDr+Zps4Qw3ijb4Pxih3s0eazBsfHvpmrgsbwHiILH39pyk0z\n9UP19vAmdqY97d6zHBcAbBE61vSZxqlPtxScCuwdtxGUi5XDgmATPvKMdM+NT3FT\nWOEjhW6Tz8qKXD9lQQXKsWebpLHiPpVtPLJGhCI/YELMju/xPMPywEhjz4zsUTYm\npbKI+uBKsLZ/HQdZj0E+KIRXvZnxsZt8qjsfR0gOeWrl/MnHMLTg5YmpSDJSgwOn\n4ynBSNzvpKVCRE2I3aaA02x/9FK3XVXP+b5su9/436kT126olgKkNfAyOTk/rxn7\nI/oRuKtagQ4O+PMo+bGn\n=WGI7\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree eb2c66a6acc6843059b08da7abb1e1450573812a\nparent 3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177\nparent d5e31ec20d893c790451187f1904ae27d87988c3\nauthor whitefishscholarship <whitefishscholarship@gmail.com> 1792555614 -0600\ncommitter GitHub <noreply@github.com> 1792555614 -0600\n\nMerge pull request #51 from whitefishscholarship/codex/sd2-held-research-closure\n\nClose SD2 held-research accounting without accepting facts",
+            "verified_at": "2026-10-21T04:06:54Z"
+          }
+        },
+        "url": "https://api.github.com/repos/whitefishscholarship/program_code/commits/9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+        "html_url": "https://github.com/whitefishscholarship/program_code/commit/9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5",
+        "comments_url": "https://api.github.com/repos/whitefishscholarship/program_code/commits/9a85d54880bbd0bcd634d82bfbe2d86d0ca0bdc5/comments",
+        "author": {
+          "login": "whitefishscholarship",
+          "id": 266880911,
+          "node_id": "U_kgDOD-hHjw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/266880911?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/whitefishscholarship",
+          "html_url": "https://github.com/whitefishscholarship",
+          "followers_url": "https://api.github.com/users/whitefishscholarship/followers",
+          "following_url": "https://api.github.com/users/whitefishscholarship/following{/other_user}",
+          "gists_url": "https://api.github.com/users/whitefishscholarship/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/whitefishscholarship/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/whitefishscholarship/subscriptions",
+          "organizations_url": "https://api.github.com/users/whitefishscholarship/orgs",
+          "repos_url": "https://api.github.com/users/whitefishscholarship/repos",
+          "events_url": "https://api.github.com/users/whitefishscholarship/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/whitefishscholarship/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+            "url": "https://api.github.com/repos/whitefishscholarship/program_code/commits/3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177",
+            "html_url": "https://github.com/whitefishscholarship/program_code/commit/3f032a5d180dffc2ab5ff0eb8b85a9b84a56d177"
+          },
+          {
+            "sha": "d5e31ec20d893c790451187f1904ae27d87988c3",
+            "url": "https://api.github.com/repos/whitefishscholarship/program_code/commits/d5e31ec20d893c790451187f1904ae27d87988c3",
+            "html_url": "https://github.com/whitefishscholarship/program_code/commit/d5e31ec20d893c790451187f1904ae27d87988c3"
+          }
+        ]
+      },
+      "_links": {
+        "self": "https://api.github.com/repos/whitefishscholarship/program_code/branches/main",
+        "html": "https://github.com/whitefishscholarship/program_code/tree/main"
+      },
+      "protected": false,
+      "protection": {
+        "enabled": false,
+        "required_status_checks": {
+          "enforcement_level": "off",
+          "contexts": [],
+          "checks": []
+        }
+      },
+      "protection_url": "https://api.github.com/repos/whitefishscholarship/program_code/branches/main/protection"
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/rulesets?includes_parents=true"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:11.205608+00:00",
+    "completedAt": "2026-10-21T18:59:11.777587+00:00",
+    "exitCode": 0,
+    "observed": [],
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/branches/main/protection"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:11.778350+00:00",
+    "completedAt": "2026-10-21T18:59:12.409719+00:00",
+    "exitCode": 1,
+    "observed": {
+      "message": "Branch not protected",
+      "documentation_url": "https://docs.github.com/rest/branches/branch-protection#get-branch-protection",
+      "status": "404"
+    },
+    "error": "gh: Branch not protected (HTTP 404)\n"
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:12.411141+00:00",
+    "completedAt": "2026-10-21T18:59:12.940381+00:00",
+    "exitCode": 1,
+    "observed": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest/deployments/environments#get-an-environment",
+      "status": "404"
+    },
+    "error": "gh: Not Found (HTTP 404)\n"
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "PUT",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "wait_timer": 0,
+      "prevent_self_review": false,
+      "reviewers": [
+        {
+          "type": "User",
+          "id": 266880911
+        }
+      ],
+      "deployment_branch_policy": {
+        "protected_branches": false,
+        "custom_branch_policies": true
+      },
+      "can_admins_bypass": false
+    },
+    "startedAt": "2026-10-21T18:59:12.941937+00:00",
+    "completedAt": "2026-10-21T18:59:13.501203+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": 24952211397,
+      "node_id": "EN_kwDORiztb88AAAAFz0SHxQ",
+      "name": "scholarship-season-monitor",
+      "url": "https://api.github.com/repos/whitefishscholarship/program_code/environments/scholarship-season-monitor",
+      "html_url": "https://github.com/whitefishscholarship/program_code/deployments/activity_log?environments_filter=scholarship-season-monitor",
+      "created_at": "2026-10-21T18:59:13Z",
+      "updated_at": "2026-10-21T18:59:13Z",
+      "can_admins_bypass": false,
+      "protection_rules": [
+        {
+          "id": 69629925,
+          "node_id": "GA_kwDORiztb84EJnfl",
+          "type": "required_reviewers",
+          "prevent_self_review": false,
+          "reviewers": [
+            {
+              "type": "User",
+              "reviewer": {
+                "login": "whitefishscholarship",
+                "id": 266880911,
+                "node_id": "U_kgDOD-hHjw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/266880911?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/whitefishscholarship",
+                "html_url": "https://github.com/whitefishscholarship",
+                "followers_url": "https://api.github.com/users/whitefishscholarship/followers",
+                "following_url": "https://api.github.com/users/whitefishscholarship/following{/other_user}",
+                "gists_url": "https://api.github.com/users/whitefishscholarship/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/whitefishscholarship/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/whitefishscholarship/subscriptions",
+                "organizations_url": "https://api.github.com/users/whitefishscholarship/orgs",
+                "repos_url": "https://api.github.com/users/whitefishscholarship/repos",
+                "events_url": "https://api.github.com/users/whitefishscholarship/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/whitefishscholarship/received_events",
+                "type": "User",
+                "user_view_type": "public",
+                "site_admin": false
+              }
+            }
+          ]
+        },
+        {
+          "id": 69629926,
+          "node_id": "GA_kwDORiztb84EJnfm",
+          "type": "branch_policy"
+        }
+      ],
+      "deployment_branch_policy": {
+        "protected_branches": false,
+        "custom_branch_policies": true
+      }
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "POST",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/deployment-branch-policies",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "name": "main",
+      "type": "branch"
+    },
+    "startedAt": "2026-10-21T18:59:13.502698+00:00",
+    "completedAt": "2026-10-21T18:59:14.029523+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": 63878099,
+      "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2Mzg3ODA5OQ==",
+      "name": "main",
+      "type": "branch"
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "POST",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/variables",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "name": "SCHOLARSHIP_MONITOR_ALERT_FROM",
+      "value": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>"
+    },
+    "startedAt": "2026-10-21T18:59:14.031204+00:00",
+    "completedAt": "2026-10-21T18:59:14.535701+00:00",
+    "exitCode": 0,
+    "observed": {},
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "POST",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/variables",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "name": "SCHOLARSHIP_MONITOR_ALERT_TO",
+      "value": "kelsey@waypointfranchise.com"
+    },
+    "startedAt": "2026-10-21T18:59:14.536916+00:00",
+    "completedAt": "2026-10-21T18:59:15.047894+00:00",
+    "exitCode": 0,
+    "observed": {},
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "POST",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/variables",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "name": "SCHOLARSHIP_MONITOR_ENABLED",
+      "value": "false"
+    },
+    "startedAt": "2026-10-21T18:59:15.049327+00:00",
+    "completedAt": "2026-10-21T18:59:15.555079+00:00",
+    "exitCode": 0,
+    "observed": {},
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "--method",
+      "POST",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/variables",
+      "--input",
+      "-"
+    ],
+    "payload": {
+      "name": "SCHOLARSHIP_MONITOR_EMAIL_ENABLED",
+      "value": "false"
+    },
+    "startedAt": "2026-10-21T18:59:15.556961+00:00",
+    "completedAt": "2026-10-21T18:59:16.077695+00:00",
+    "exitCode": 0,
+    "observed": {},
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:16.079255+00:00",
+    "completedAt": "2026-10-21T18:59:16.603286+00:00",
+    "exitCode": 0,
+    "observed": {
+      "id": 24952211397,
+      "node_id": "EN_kwDORiztb88AAAAFz0SHxQ",
+      "name": "scholarship-season-monitor",
+      "url": "https://api.github.com/repos/whitefishscholarship/program_code/environments/scholarship-season-monitor",
+      "html_url": "https://github.com/whitefishscholarship/program_code/deployments/activity_log?environments_filter=scholarship-season-monitor",
+      "created_at": "2026-10-21T18:59:13Z",
+      "updated_at": "2026-10-21T18:59:13Z",
+      "can_admins_bypass": false,
+      "protection_rules": [
+        {
+          "id": 69629925,
+          "node_id": "GA_kwDORiztb84EJnfl",
+          "type": "required_reviewers",
+          "prevent_self_review": false,
+          "reviewers": [
+            {
+              "type": "User",
+              "reviewer": {
+                "login": "whitefishscholarship",
+                "id": 266880911,
+                "node_id": "U_kgDOD-hHjw",
+                "avatar_url": "https://avatars.githubusercontent.com/u/266880911?v=4",
+                "gravatar_id": "",
+                "url": "https://api.github.com/users/whitefishscholarship",
+                "html_url": "https://github.com/whitefishscholarship",
+                "followers_url": "https://api.github.com/users/whitefishscholarship/followers",
+                "following_url": "https://api.github.com/users/whitefishscholarship/following{/other_user}",
+                "gists_url": "https://api.github.com/users/whitefishscholarship/gists{/gist_id}",
+                "starred_url": "https://api.github.com/users/whitefishscholarship/starred{/owner}{/repo}",
+                "subscriptions_url": "https://api.github.com/users/whitefishscholarship/subscriptions",
+                "organizations_url": "https://api.github.com/users/whitefishscholarship/orgs",
+                "repos_url": "https://api.github.com/users/whitefishscholarship/repos",
+                "events_url": "https://api.github.com/users/whitefishscholarship/events{/privacy}",
+                "received_events_url": "https://api.github.com/users/whitefishscholarship/received_events",
+                "type": "User",
+                "user_view_type": "public",
+                "site_admin": false
+              }
+            }
+          ]
+        },
+        {
+          "id": 69629926,
+          "node_id": "GA_kwDORiztb84EJnfm",
+          "type": "branch_policy"
+        }
+      ],
+      "deployment_branch_policy": {
+        "protected_branches": false,
+        "custom_branch_policies": true
+      }
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/deployment-branch-policies"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:16.604109+00:00",
+    "completedAt": "2026-10-21T18:59:17.127574+00:00",
+    "exitCode": 0,
+    "observed": {
+      "total_count": 1,
+      "branch_policies": [
+        {
+          "id": 63878099,
+          "node_id": "MDE2OkdhdGVCcmFuY2hQb2xpY3k2Mzg3ODA5OQ==",
+          "name": "main",
+          "type": "branch"
+        }
+      ]
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/variables"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:17.129085+00:00",
+    "completedAt": "2026-10-21T18:59:17.655593+00:00",
+    "exitCode": 0,
+    "observed": {
+      "variables": [
+        {
+          "name": "SCHOLARSHIP_MONITOR_ALERT_FROM",
+          "value": "Whitefish Scholarships <scholarships@mail.waypointfranchise.com>",
+          "created_at": "2026-10-21T18:59:15Z",
+          "updated_at": "2026-10-21T18:59:15Z"
+        },
+        {
+          "name": "SCHOLARSHIP_MONITOR_ALERT_TO",
+          "value": "kelsey@waypointfranchise.com",
+          "created_at": "2026-10-21T18:59:15Z",
+          "updated_at": "2026-10-21T18:59:15Z"
+        },
+        {
+          "name": "SCHOLARSHIP_MONITOR_EMAIL_ENABLED",
+          "value": "false",
+          "created_at": "2026-10-21T18:59:16Z",
+          "updated_at": "2026-10-21T18:59:16Z"
+        },
+        {
+          "name": "SCHOLARSHIP_MONITOR_ENABLED",
+          "value": "false",
+          "created_at": "2026-10-21T18:59:16Z",
+          "updated_at": "2026-10-21T18:59:16Z"
+        }
+      ],
+      "total_count": 4
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "api",
+      "repos/whitefishscholarship/program_code/environments/scholarship-season-monitor/secrets"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:17.657162+00:00",
+    "completedAt": "2026-10-21T18:59:18.176789+00:00",
+    "exitCode": 0,
+    "observed": {
+      "total_count": 0,
+      "secrets": []
+    },
+    "error": ""
+  },
+  {
+    "command": [
+      "gh",
+      "auth",
+      "switch",
+      "--hostname",
+      "github.com",
+      "--user",
+      "Franscale1922"
+    ],
+    "payload": null,
+    "startedAt": "2026-10-21T18:59:18.177710+00:00",
+    "completedAt": "2026-10-21T18:59:18.344783+00:00",
+    "exitCode": 0,
+    "observed": "",
+    "error": ""
+  }
+]

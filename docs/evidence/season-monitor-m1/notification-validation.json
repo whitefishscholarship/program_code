@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "stepId": "M1",
+  "kind": "notification-planning-validation",
+  "recordedAt": "2026-09-15T21:47:49.445643+00:00",
+  "baselineCommit": "aeb704e69d5288c0a46e7dd43cb5f7cac0249586",
+  "scope": "Local notification proposal correction only; direct-email recipient and service remain unconfirmed",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "cwd": "web",
+      "startedAt": "2026-09-15T21:41:55.665354+00:00",
+      "completedAt": "2026-09-15T21:42:00.733849+00:00",
+      "exitCode": 0,
+      "logSha256": "de02d57b104220f1668a8d2406816731dac9f5aecfab4f95a86b9d154e65d4e2",
+      "logPath": "/private/tmp/season-monitor-notification-checks/typecheck.log"
+    },
+    {
+      "command": "npm run build",
+      "cwd": "web",
+      "startedAt": "2026-09-15T21:42:00.734042+00:00",
+      "completedAt": "2026-09-15T21:42:07.520754+00:00",
+      "exitCode": 0,
+      "logSha256": "4a72d37f4f2af4fa1feeeb73f77c68d381ae970a121479381a48a7b40ea05267",
+      "logPath": "/private/tmp/season-monitor-notification-checks/build.log"
+    },
+    {
+      "command": "git diff --check",
+      "cwd": "repository root",
+      "startedAt": "2026-09-15T21:42:07.520906+00:00",
+      "completedAt": "2026-09-15T21:42:07.543330+00:00",
+      "exitCode": 0,
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "logPath": "/private/tmp/season-monitor-notification-checks/whitespace.log"
+    },
+    {
+      "command": "npm run plan:check",
+      "cwd": "web",
+      "startedAt": "2026-09-15T21:41:55.665065+00:00",
+      "completedAt": "2026-09-15T21:42:36.859108+00:00",
+      "exitCode": 0,
+      "logSha256": "6a6f74e6acb39322e4a504393030ad4a24e8fa234b8669a157e532a6585b1578",
+      "logPath": "/private/tmp/season-monitor-notification-checks/plan.log"
+    },
+    {
+      "command": "npm test",
+      "cwd": "web",
+      "startedAt": "2026-09-15T21:41:55.665327+00:00",
+      "completedAt": "2026-09-15T21:42:47.026230+00:00",
+      "exitCode": 0,
+      "logSha256": "0cb2649a0d7da950a33fa08a5027e896fbcca7df5599fe8dbaa1a3d8fe0591d7",
+      "logPath": "/private/tmp/season-monitor-notification-checks/tests.log"
+    }
+  ],
+  "checkLimitations": [
+    "Checks ran against the uncommitted notification planning change. Two date-spacing corrections and this evidence record followed; final whitespace validation runs before commit.",
+    "Passing repository checks does not prove delivery capability, inbox receipt, account allowance, or M1 completion.",
+    "No independent review or acceptance is claimed for this later correction; the earlier review remains bound to its original candidate."
+  ],
+  "historicalFilesVerifiedUnchanged": [
+    "docs/evidence/season-monitor-m1/setup.json",
+    "docs/evidence/season-monitor-m1/inventory.json",
+    "docs/evidence/season-monitor-m1/manifest.json",
+    "docs/evidence/season-monitor-m1/review.json",
+    "docs/BUILD_STATE.json",
+    "docs/SCHOLARSHIP_SYSTEM_BUILD_PLAN.md"
+  ],
+  "priorHandoffPreservedAsExactSuffix": true,
+  "runtimeChanged": false,
+  "externalEffectsPerformed": false,
+  "nextAction": "Confirm recipient and evaluate existing delivery service read-only; finish unresolved M1 setup evidence before independent acceptance review."
+}
